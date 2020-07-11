@@ -92,7 +92,6 @@
 - (void)testManager:(id)arg1 didSwitchEndpoint:(unsigned long long)arg2;
 - (void)didRequestTurnOffOnboardingWithTestManager:(id)arg1;
 - (void)didTapResetOnboardingWithTestManager:(id)arg1;
-- (void)testManager:(id)arg1 didChangeVoiceSearchEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didChangeVoiceServiceEnabledState:(_Bool)arg2;
 - (void)setVoiceCalloutTooltipDidDisplay:(_Bool)arg1;
 - (_Bool)didDisplayVoiceCalloutTooltip;

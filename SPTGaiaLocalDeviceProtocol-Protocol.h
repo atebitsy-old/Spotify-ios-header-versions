@@ -11,6 +11,6 @@
 @protocol SPTGaiaLocalDeviceProtocol <NSObject>
 @property(readonly, nonatomic) _Bool isActive;
 @property(readonly, nonatomic) NSString *name;
-@property(readonly, nonatomic) NSString *deviceId;
+@property(readonly, nonatomic) NSString *physicalDeviceId;
 @end
 

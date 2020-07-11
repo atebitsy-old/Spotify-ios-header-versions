@@ -11,7 +11,7 @@
 }
 
 - (id)init;
-- (id)makeQuickScrollWithDragHandle:(_Bool)arg1;
+- (id)makeQuickScrollWithDragHandle:(_Bool)arg1 andStyle:(long long)arg2;
 
 @end
 

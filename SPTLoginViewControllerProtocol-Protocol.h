@@ -6,10 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError;
-
 @protocol SPTLoginViewControllerProtocol <NSObject>
-@property(copy, nonatomic) NSError *error;
 @property(nonatomic) _Bool forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout;
 @end

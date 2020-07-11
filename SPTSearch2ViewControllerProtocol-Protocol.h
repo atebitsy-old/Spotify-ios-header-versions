@@ -9,6 +9,8 @@
 @class NSString;
 
 @protocol SPTSearch2ViewControllerProtocol <NSObject>
+@property(copy, nonatomic) CDUnknownBlockType onOffsetChange;
+@property(readonly, nonatomic) struct CGPoint contentOffset;
 @property(readonly, copy, nonatomic) NSString *requestID;
 @property(nonatomic) _Bool automaticallyAdjustsInsets;
 @property(nonatomic) struct UIEdgeInsets insets;

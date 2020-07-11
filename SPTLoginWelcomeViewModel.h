@@ -45,7 +45,7 @@
 - (void).cxx_destruct;
 - (void)logDidFinishLoadImageWithError:(id)arg1;
 - (void)logDidStartLoadImageForScreenWidth:(double)arg1;
-- (void)logUserDidSeeViewWithInterfaceOrientation:(long long)arg1;
+- (void)logUserDidSeeViewWithInterfaceOrientation:(long long)arg1 fromLogout:(_Bool)arg2;
 - (void)appleAuthorizationControllerWillLogIn;
 - (void)appleAuthorizationControllerDidCompleteLoginWithError:(id)arg1;
 - (id)appleAuthorizationControllerContext;

@@ -6,9 +6,6 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTFeatureFlagSignal;
-
 @protocol _TtP20AddToPlaylistFeature23SPTAddToPlaylistService_ <SPTService>
-- (id <SPTFeatureFlagSignal>)provideAddToPlaylistFeatureEnabledSignal;
 @end
 

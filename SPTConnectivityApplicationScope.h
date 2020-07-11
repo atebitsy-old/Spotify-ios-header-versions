@@ -19,10 +19,12 @@
     SPTAuthLoginController *_singletonLoginController;
     SPTConnectivityApplicationScopeConfiguration *_configuration;
     SPTAuthController *_authController;
+    id <SPTConnectivityAsyncScheduler> _defaultScheduler;
     id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
 @property(readonly, nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(retain, nonatomic) id <SPTConnectivityAsyncScheduler> defaultScheduler; // @synthesize defaultScheduler=_defaultScheduler;
 @property(readonly, nonatomic) SPTAuthController *authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) SPTConnectivityApplicationScopeConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(retain, nonatomic) SPTAuthLoginController *singletonLoginController; // @synthesize singletonLoginController=_singletonLoginController;
@@ -37,6 +39,7 @@
 - (void)destroy;
 - (void)dealloc;
 - (id)initWithConnectivityApplicationScope:(struct ApplicationScope *)arg1 loginController:(struct LoginController *)arg2 scheduler:(id)arg3 configuration:(id)arg4;
+- (id)initWithAnalyticsDelegate:(id)arg1 connectionTypeProvider:(id)arg2 connectivityPolicyProvider:(id)arg3 credentialsStorage:(id)arg4 configuration:(id)arg5;
 - (id)initWithScheduler:(id)arg1 analyticsDelegate:(id)arg2 connectionTypeProvider:(id)arg3 connectivityPolicyProvider:(id)arg4 credentialsStorage:(id)arg5 configuration:(id)arg6;
 
 @end

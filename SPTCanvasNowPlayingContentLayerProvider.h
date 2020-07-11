@@ -39,7 +39,6 @@
 - (Class)cellClass;
 - (id)reuseIdentifier;
 - (unsigned long long)contentType;
-- (long long)priority;
 - (id)initWithCanvasContentLoader:(id)arg1 testManager:(id)arg2 logService:(id)arg3 forceArtworkManager:(id)arg4;
 
 // Remaining properties

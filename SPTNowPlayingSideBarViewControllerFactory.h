@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTNowPlayingAuxiliaryActionsHandlerImplementation, SPTNowPlayingLogger, SPTNowPlayingModeViewControllerRegistryImplementation, SPTNowPlayingModel, SPTStatefulPlayer, SPTTheme;
-@protocol SPTGaiaDevicesAvailableViewProvider, SPTLinkDispatcher, SPTLocalSettings, SPTNowPlayingPlaybackActionsHandler, SPTNowPlayingTestManager, SPTPlayer;
+@protocol SPTGaiaDevicesAvailableViewProvider, SPTLinkDispatcher, SPTLocalSettings, SPTNowPlayingPlaybackActionsHandler, SPTNowPlayingTestManager, SPTPlayer, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
 @interface SPTNowPlayingSideBarViewControllerFactory : NSObject
 {
@@ -23,8 +23,10 @@
     id <SPTPlayer> _player;
     SPTStatefulPlayer *_statefulPlayer;
     id <SPTGaiaDevicesAvailableViewProvider> _devicesAvailableViewProvider;
+    id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
 }
 
+@property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(retain, nonatomic) id <SPTGaiaDevicesAvailableViewProvider> devicesAvailableViewProvider; // @synthesize devicesAvailableViewProvider=_devicesAvailableViewProvider;
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -46,7 +48,7 @@
 - (id)providePlaybackControlsViewController;
 - (id)providePodcastInformationViewController;
 - (id)provideInformationViewController;
-- (id)initWithNowPlayingModel:(id)arg1 nowPlayingLogger:(id)arg2 auxiliaryActionsHandler:(id)arg3 playbackActionsHandler:(id)arg4 linkDispatcher:(id)arg5 testManager:(id)arg6 theme:(id)arg7 localSettings:(id)arg8 player:(id)arg9 statetfulPlayer:(id)arg10 devicesAvailableViewProvider:(id)arg11;
+- (id)initWithNowPlayingModel:(id)arg1 nowPlayingLogger:(id)arg2 auxiliaryActionsHandler:(id)arg3 playbackActionsHandler:(id)arg4 linkDispatcher:(id)arg5 testManager:(id)arg6 theme:(id)arg7 localSettings:(id)arg8 player:(id)arg9 statetfulPlayer:(id)arg10 devicesAvailableViewProvider:(id)arg11 responsiveShuffleOnboardingController:(id)arg12;
 
 @end
 

@@ -14,7 +14,7 @@
 - (UIView<SPTSortingFilteringButtonsContainer> *)createButtonsContainerWithAvailableFilterRules:(NSArray *)arg1 selectedFilterRules:(NSArray *)arg2;
 - (UIView<SPTSortingFilteringClearFiltersControl> *)createClearFiltersControlWithFilterTitles:(NSArray *)arg1;
 - (UIViewController<SPTSortingFilteringPicker> *)createSortingFilteringPickerWithAvailableFilterRules:(NSArray *)arg1 availableSortRules:(NSArray *)arg2 selectedFilterRules:(NSArray *)arg3 selectedSortRule:(id <SPTSortingFilteringSortRule>)arg4;
-- (UIView<SPTSortingFilteringFilterBar> *)createFilterBarWithPlaceholder:(NSString *)arg1;
+- (UIView<SPTSortingFilteringFilterBar> *)createFilterBarWithPlaceholder:(NSString *)arg1 buttonType:(unsigned long long)arg2;
 - (UITextField<SPTSortingFilteringSearchField> *)createSearchFieldWithFrame:(struct CGRect)arg1;
 - (id <SPTSortingFilteringTheme>)sortingFilteringTheme;
 @end

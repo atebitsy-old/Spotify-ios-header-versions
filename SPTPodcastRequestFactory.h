@@ -9,15 +9,20 @@
 #import "SPTPodcastRequestFactory-Protocol.h"
 
 @class NSString;
+@protocol SPTPodcastTestManager;
 
 @interface SPTPodcastRequestFactory : NSObject <SPTPodcastRequestFactory>
 {
+    id <SPTPodcastTestManager> _testManager;
 }
 
+@property(readonly, nonatomic) __weak id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
+- (void).cxx_destruct;
 - (id)createMarkEpisodeAsPlayedRequestWithURLs:(id)arg1 markAsUnplayed:(_Bool)arg2;
 - (id)createCollectionEpisodesRequestWithURL:(id)arg1 subscribe:(_Bool)arg2 testManager:(id)arg3;
-- (id)createPodcastEntityRequestWithURL:(id)arg1 range:(struct _NSRange)arg2 subscribe:(_Bool)arg3 testManager:(id)arg4;
+- (id)createPodcastEntityRequestWithURL:(id)arg1 filterPredicate:(id)arg2 sortDescriptor:(id)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5 testManager:(id)arg6;
 - (id)createDecorateItemsRequestWithItemURIs:(id)arg1 subscribe:(_Bool)arg2;
+- (id)initWithTestManager:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -22,7 +22,7 @@
 @property(readonly, nonatomic) NSArray *episodes;
 - (void)removeEpisode:(id)arg1;
 - (void)appendEpisode:(id)arg1;
-- (id)initWithTitle:(id)arg1 testManager:(id)arg2;
+- (id)initWithTitle:(id)arg1;
 
 @end
 

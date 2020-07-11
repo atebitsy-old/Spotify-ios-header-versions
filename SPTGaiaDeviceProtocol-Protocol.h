@@ -23,8 +23,9 @@
 @property(nonatomic, readonly) unsigned long long deviceState;
 @property(nonatomic, readonly) unsigned long long deviceType;
 @property(nonatomic, readonly) NSString *name;
+@property(nonatomic, readonly) NSString *loggingIdentifier;
 @property(nonatomic, readonly) NSString *physicalDeviceId;
-@property(nonatomic, readonly) NSString *deviceId;
+@property(nonatomic, readonly) NSString *cosmosDeviceId;
 
 // Remaining properties
 @property(nonatomic, readonly) _Bool shuffleDevice;

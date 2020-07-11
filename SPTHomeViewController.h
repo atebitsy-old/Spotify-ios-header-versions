@@ -25,6 +25,7 @@
 {
     _Bool _currentlyOffline;
     _Bool _didLoadInitialViewModel;
+    _Bool _seedASessionEnabled;
     NSString *_pageIdentifier;
     NSURL *_pageURI;
     id <SPTHomeCacheRenderDelegate> _cacheRenderDelegate;
@@ -49,6 +50,7 @@
     NSMutableDictionary *_dragDelegateHolders;
 }
 
+@property(nonatomic) _Bool seedASessionEnabled; // @synthesize seedASessionEnabled=_seedASessionEnabled;
 @property(nonatomic) _Bool didLoadInitialViewModel; // @synthesize didLoadInitialViewModel=_didLoadInitialViewModel;
 @property(nonatomic, getter=isCurrentlyOffline) _Bool currentlyOffline; // @synthesize currentlyOffline=_currentlyOffline;
 @property(retain, nonatomic) NSMutableDictionary *dragDelegateHolders; // @synthesize dragDelegateHolders=_dragDelegateHolders;
@@ -105,7 +107,7 @@
 - (void)loadView;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 loadingLogger:(id)arg7 impressionLogger:(id)arg8 viewModelProvider:(id)arg9 shareDragDelegateFactory:(id)arg10 offlineState:(id)arg11 overrides:(id)arg12;
+- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 loadingLogger:(id)arg7 impressionLogger:(id)arg8 viewModelProvider:(id)arg9 shareDragDelegateFactory:(id)arg10 offlineState:(id)arg11 overrides:(id)arg12 seedASessionEnabled:(_Bool)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

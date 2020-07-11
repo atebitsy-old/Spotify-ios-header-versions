@@ -13,8 +13,10 @@
 @interface SPTSearchFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _shouldEnableTopics;
+    _Bool _shouldEnableDebuggingLyricsRow;
 }
 
+@property(readonly, nonatomic) _Bool shouldEnableDebuggingLyricsRow; // @synthesize shouldEnableDebuggingLyricsRow=_shouldEnableDebuggingLyricsRow;
 @property(readonly, nonatomic) _Bool shouldEnableTopics; // @synthesize shouldEnableTopics=_shouldEnableTopics;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

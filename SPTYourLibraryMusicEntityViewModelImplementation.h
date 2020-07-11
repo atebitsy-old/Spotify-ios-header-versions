@@ -61,6 +61,9 @@
 - (unsigned long long)totalNumberOfItemsAccountForModalMode:(_Bool)arg1;
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType;
 @property(readonly, nonatomic, getter=isSnackBarsUsedForMessaging) _Bool snackBarsUsedForMessaging;
+- (void)logEmptyStaticFilterViewImpression;
+- (void)logEmptyTextFilterViewImpression;
+- (void)logEmptyViewImpression;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
@@ -76,7 +79,7 @@
 @property(readonly, nonatomic) unsigned long long filteredContentState;
 @property(copy, nonatomic) NSString *textFilter;
 - (_Bool)toggleCollapseForSection:(long long)arg1;
-- (id)logIdentifierForSection:(long long)arg1;
+- (unsigned long long)logIdentifierForSection:(long long)arg1;
 - (_Bool)showHeaderForSection:(long long)arg1;
 - (_Bool)collapsableSection:(long long)arg1;
 - (_Bool)collapsedSection:(long long)arg1;
@@ -87,6 +90,7 @@
 - (long long)numberOfRowsInSections:(long long)arg1;
 - (void)performItemActionAtIndexPath:(id)arg1;
 - (void)itemSelectedAtIndexPath:(id)arg1;
+- (void)logItemInteractionInSection:(unsigned long long)arg1 index:(unsigned long long)arg2 targetURL:(id)arg3;
 - (unsigned long long)modelGroupFromTableSection:(unsigned long long)arg1;
 - (unsigned long long)tableSectionFromModelGroup:(unsigned long long)arg1;
 - (id)groupLabelAtIndexPath:(id)arg1;
@@ -97,6 +101,7 @@
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (_Bool)isContentFiltered;
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
+@property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isSortingAndFilteringEnabled) _Bool sortingAndFilteringEnabled;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;

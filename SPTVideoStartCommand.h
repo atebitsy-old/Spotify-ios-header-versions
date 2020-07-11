@@ -16,17 +16,15 @@
     id <BMPlayOptions> _options;
     NSString *_playbackID;
     double _maxAllowedStallTimeout;
-    double _stopPosition;
 }
 
-@property(readonly, nonatomic) double stopPosition; // @synthesize stopPosition=_stopPosition;
 @property(readonly, nonatomic) double maxAllowedStallTimeout; // @synthesize maxAllowedStallTimeout=_maxAllowedStallTimeout;
 @property(readonly, nonatomic) _Bool deferPlayback; // @synthesize deferPlayback=_deferPlayback;
 @property(readonly, nonatomic) NSString *playbackID; // @synthesize playbackID=_playbackID;
 @property(readonly, nonatomic) id <BMPlayOptions> options; // @synthesize options=_options;
 @property(readonly, nonatomic) id <BMPlaybackRequest> request; // @synthesize request=_request;
 - (void).cxx_destruct;
-- (id)initWithRequest:(id)arg1 options:(id)arg2 playbackID:(id)arg3 deferPlayback:(_Bool)arg4 maxAllowedStallTimeout:(double)arg5 stopPosition:(double)arg6;
+- (id)initWithRequest:(id)arg1 options:(id)arg2 playbackID:(id)arg3 deferPlayback:(_Bool)arg4 maxAllowedStallTimeout:(double)arg5;
 
 @end
 

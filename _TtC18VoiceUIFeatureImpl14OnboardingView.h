@@ -9,7 +9,6 @@
 @interface _TtC18VoiceUIFeatureImpl14OnboardingView : UIView
 {
     // Error parsing type: , name: style
-    // Error parsing type: , name: $__lazy_storage_$_closeButton
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_descriptionLabel
     // Error parsing type: , name: $__lazy_storage_$_tutorialImage

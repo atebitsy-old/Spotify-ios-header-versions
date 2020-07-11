@@ -17,7 +17,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTPodcastYourLibraryDownloadsViewModel, SPTProgressView, SPTTheme, UITableView, UIView;
-@protocol SPTPageContainer, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastPlayer, SPTPodcastTestManager, SPTShowInfoViewProvider, SPTViewLogger, SPTYourLibraryPageDelegate, UIViewControllerPreviewing;
+@protocol SPTPageContainer, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastPlayer, SPTShowInfoViewProvider, SPTViewLogger, SPTYourLibraryPageDelegate, UIViewControllerPreviewing;
 
 @interface SPTPodcastYourLibraryDownloadsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTPodcastYourLibraryEpisodesViewModelDelegate, SPContentInsetViewController, SPTPodcastPlayerDelegate, SPTShowInfoViewProviderTarget, SPTPageController, SPTYourLibraryPage, SPTScrollToTopViewController>
 {
@@ -30,7 +30,6 @@
     SPTProgressView *_progressView;
     id <SPTPodcastPlayer> _player;
     id <SPTViewLogger> _viewLogger;
-    id <SPTPodcastTestManager> _testManager;
     id <SPTShowInfoViewProvider> _infoViewProvider;
     UIView *_infoView;
     NSArray *_infoViewConstraints;
@@ -43,7 +42,6 @@
 @property(copy, nonatomic) NSArray *infoViewConstraints; // @synthesize infoViewConstraints=_infoViewConstraints;
 @property(retain, nonatomic) UIView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) id <SPTShowInfoViewProvider> infoViewProvider; // @synthesize infoViewProvider=_infoViewProvider;
-@property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
@@ -91,7 +89,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 episodeCellConfigurator:(id)arg2 theme:(id)arg3 cellActionHandler:(id)arg4 player:(id)arg5 infoViewProvider:(id)arg6 viewLogger:(id)arg7 testManager:(id)arg8;
+- (id)initWithViewModel:(id)arg1 episodeCellConfigurator:(id)arg2 theme:(id)arg3 cellActionHandler:(id)arg4 player:(id)arg5 infoViewProvider:(id)arg6 viewLogger:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

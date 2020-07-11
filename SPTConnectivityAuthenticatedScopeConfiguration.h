@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSString, SPTConnectivityWebgateUserAgentParameters;
+@class NSString, SPTConnectivityWebgateUserAgentParameters;
 
 @interface SPTConnectivityAuthenticatedScopeConfiguration : NSObject
 {
@@ -14,7 +14,6 @@
     NSString *_clientVersionLong;
     NSString *_cachePath;
     NSString *_clientId;
-    NSArray *_clientOauthScopes;
     NSString *_deviceId;
     NSString *_webgateLocale;
     SPTConnectivityWebgateUserAgentParameters *_webgateUserAgentParameters;
@@ -24,7 +23,6 @@
 @property(copy, nonatomic) NSString *webgateLocale; // @synthesize webgateLocale=_webgateLocale;
 @property(nonatomic) _Bool includePayloads; // @synthesize includePayloads=_includePayloads;
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
-@property(copy, nonatomic) NSArray *clientOauthScopes; // @synthesize clientOauthScopes=_clientOauthScopes;
 @property(copy, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSString *clientVersionLong; // @synthesize clientVersionLong=_clientVersionLong;

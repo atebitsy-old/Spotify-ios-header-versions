@@ -92,9 +92,9 @@
 - (void)hideNowPlayingViewControllerAnimated:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)showNowPlayingViewControllerAnimated:(_Bool)arg1;
 - (void)showNowPlayingViewControllerAnimated:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (void)switchToLoginViewAnimated:(_Bool)arg1 showError:(id)arg2 logout:(_Bool)arg3 forgetUser:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
-- (void)switchToLoginViewForLogoutShowError:(id)arg1 forgetUser:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)switchToLoginViewAnimated:(_Bool)arg1 showError:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)switchToLoginViewAnimated:(_Bool)arg1 logout:(_Bool)arg2 forgetUser:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)switchToLoginViewForLogoutForgetUser:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)switchToLoginViewAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)switchToMainViewAnimated:(_Bool)arg1 manualLogin:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)switchFromLoginAnimated:(_Bool)arg1 manualLogin:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)switchToViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;

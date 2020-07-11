@@ -24,7 +24,6 @@
     _Bool _isContentLayerLyricsButtonEnabled;
     _Bool _isContentLayerLyricsTabEnabled;
     _Bool _isLyricsUpsellPopupEnabled;
-    _Bool _pivotsTestEnabled;
     _Bool _feedbackCardsTestEnabled;
     _Bool _podcastChaptersTestEnabled;
     _Bool _concertCardsTestEnabled;
@@ -33,7 +32,6 @@
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     SPTObserverManager *_observerManager;
-    id <SPTFeatureFlagSignal> _scrollPivotsSignal;
     id <SPTFeatureFlagSignal> _feedbackCardsSignal;
     id <SPTFeatureFlagSignal> _contextAwareEditorialTrackSharingSignal;
     id <SPTFeatureFlagSignal> _podcastChaptersSignal;
@@ -52,7 +50,6 @@
 @property(nonatomic) _Bool concertCardsTestEnabled; // @synthesize concertCardsTestEnabled=_concertCardsTestEnabled;
 @property(nonatomic) _Bool podcastChaptersTestEnabled; // @synthesize podcastChaptersTestEnabled=_podcastChaptersTestEnabled;
 @property(nonatomic) _Bool feedbackCardsTestEnabled; // @synthesize feedbackCardsTestEnabled=_feedbackCardsTestEnabled;
-@property(nonatomic) _Bool pivotsTestEnabled; // @synthesize pivotsTestEnabled=_pivotsTestEnabled;
 @property(nonatomic) _Bool isLyricsUpsellPopupEnabled; // @synthesize isLyricsUpsellPopupEnabled=_isLyricsUpsellPopupEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsUpsellPopupSignal; // @synthesize lyricsUpsellPopupSignal=_lyricsUpsellPopupSignal;
 @property(nonatomic) _Bool isContentLayerLyricsTabEnabled; // @synthesize isContentLayerLyricsTabEnabled=_isContentLayerLyricsTabEnabled;
@@ -75,7 +72,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastChaptersSignal; // @synthesize podcastChaptersSignal=_podcastChaptersSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> contextAwareEditorialTrackSharingSignal; // @synthesize contextAwareEditorialTrackSharingSignal=_contextAwareEditorialTrackSharingSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> feedbackCardsSignal; // @synthesize feedbackCardsSignal=_feedbackCardsSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> scrollPivotsSignal; // @synthesize scrollPivotsSignal=_scrollPivotsSignal;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
@@ -95,7 +91,6 @@
 - (void)setupLyricsInNPVContentLayer;
 - (void)setupLyricsNowPlayingBarLabel;
 - (void)createFeedbackCardsSignal;
-- (void)createScrollPivotsSignal;
 - (void)createConcertCardsSignal;
 - (void)createPodcastChaptersSignal;
 - (void)createNowPlayingBarImprovementsSignal;

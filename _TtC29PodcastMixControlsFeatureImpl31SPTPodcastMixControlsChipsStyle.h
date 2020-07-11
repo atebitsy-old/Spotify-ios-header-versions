@@ -12,6 +12,7 @@
     // Error parsing type: , name: featureProperties
     // Error parsing type: , name: leadingMargin
     // Error parsing type: , name: trailingMargin
+    // Error parsing type: , name: verticalMargin
     // Error parsing type: , name: spacing
 }
 

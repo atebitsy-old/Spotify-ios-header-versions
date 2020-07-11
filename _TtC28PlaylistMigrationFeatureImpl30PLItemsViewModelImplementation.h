@@ -17,6 +17,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)indexForRowId:(id)arg1;
 - (id)trackViewModelAtIndex:(long long)arg1;
 - (id)trackEntityAtIndex:(long long)arg1;
 @property(nonatomic, readonly) unsigned long long numberOfItems;

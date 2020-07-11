@@ -14,7 +14,6 @@
 @interface SPTSearch2Configuration : NSObject <NSCopying>
 {
     _Bool _offlineSearchEnabled;
-    _Bool _playRecentTracksEnabled;
     _Bool _loadingLoggingEnabled;
     _Bool _ubiLoggingEnabled;
     NSString *_recentsGroupID;
@@ -33,7 +32,6 @@
 @property(copy, nonatomic) NSString *customPageIdentifer; // @synthesize customPageIdentifer=_customPageIdentifer;
 @property(nonatomic) _Bool ubiLoggingEnabled; // @synthesize ubiLoggingEnabled=_ubiLoggingEnabled;
 @property(nonatomic) _Bool loadingLoggingEnabled; // @synthesize loadingLoggingEnabled=_loadingLoggingEnabled;
-@property(nonatomic) _Bool playRecentTracksEnabled; // @synthesize playRecentTracksEnabled=_playRecentTracksEnabled;
 @property(nonatomic) _Bool offlineSearchEnabled; // @synthesize offlineSearchEnabled=_offlineSearchEnabled;
 @property(retain, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) NSMutableDictionary *customComponentNamespaces; // @synthesize customComponentNamespaces=_customComponentNamespaces;

@@ -55,6 +55,8 @@
 - (void)ubi_logShowTrailerWithURI:(id)arg1 podcastURI:(id)arg2;
 - (void)ubi_logPauseTrailerWithURI:(id)arg1 podcastURI:(id)arg2;
 - (void)ubi_logPlayTrailerWithURI:(id)arg1 podcastURI:(id)arg2;
+- (void)ubi_logPauseEpisodeWithURI:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4 unfinishedEpisode:(_Bool)arg5;
+- (void)ubi_logPlayEpisodeWithURI:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4 unfinishedEpisode:(_Bool)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

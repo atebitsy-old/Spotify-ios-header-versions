@@ -53,9 +53,12 @@
 - (void)logEventForAdEntity:(id)arg1 action:(id)arg2;
 - (id)randomizedArrayFromArray:(id)arg1;
 - (void)logInteractionEventWithIntent:(id)arg1 pageURI:(id)arg2;
+- (id)feedBackMenuCustomActionsWithActionBlock:(CDUnknownBlockType)arg1;
+- (void)presentFeedbackMenuWithViewController:(id)arg1 sender:(id)arg2;
 - (void)performRemoveBookmarkActionForAd:(id)arg1 fromPageURI:(id)arg2;
 - (void)performBookmarkActionForAd:(id)arg1 fromPageURI:(id)arg2;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
+- (void)performMobiusNegativeActionForAd:(id)arg1 inViewController:(id)arg2 sender:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)performNegativeActionForAd:(id)arg1 inViewController:(id)arg2 sender:(id)arg3;
 - (void)performPositiveActionForAd:(id)arg1 inViewController:(id)arg2 withSender:(id)arg3;
 - (_Bool)isAdBookmarked:(id)arg1;

@@ -13,7 +13,7 @@
 #import "SPTSearchVoiceEnabledViewDelegate-Protocol.h"
 
 @class NSLayoutConstraint, NSString, NSURL, SPTFloatingVoiceSearchView, SPTSearch2ViewController, UIView;
-@protocol SPTLinkDispatcher, SPTNetworkConnectivityController, SPTPageContainer, SPTSearchLogger, SPTSearchSearchBarProtocol, SPTVoiceService;
+@protocol SPTLinkDispatcher, SPTNetworkConnectivityController, SPTPageContainer, SPTSearchLogger, SPTSearchSearchBarProtocol, _TtP14VoiceUIFeature17SPTVoiceUIService_;
 
 @interface SPTSearch2RootViewController : UIViewController <SPTSearchSearchBarDelegate, SPContentInsetViewController, SPTSearchVoiceEnabledViewDelegate, SPTSearch2RootViewControllerProtocol, SPTPageController>
 {
@@ -25,7 +25,7 @@
     SPTSearch2ViewController *_searchViewController;
     id <SPTSearchLogger> _logger;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTVoiceService> _voiceService;
+    id <_TtP14VoiceUIFeature17SPTVoiceUIService_> _voiceuiService;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
     UIView<SPTSearchSearchBarProtocol> *_searchBar;
     NSLayoutConstraint *_searchBarWidthConstraint;
@@ -39,7 +39,7 @@
 @property(readonly, nonatomic) NSLayoutConstraint *searchBarWidthConstraint; // @synthesize searchBarWidthConstraint=_searchBarWidthConstraint;
 @property(readonly, nonatomic) UIView<SPTSearchSearchBarProtocol> *searchBar; // @synthesize searchBar=_searchBar;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
-@property(readonly, nonatomic) id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
+@property(readonly, nonatomic) id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTSearchLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTSearch2ViewController *searchViewController; // @synthesize searchViewController=_searchViewController;
@@ -77,7 +77,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 @property(readonly, copy, nonatomic) NSString *requestID;
-- (id)initWithSearchViewController:(id)arg1 logger:(id)arg2 linkDispatcher:(id)arg3 voiceService:(id)arg4 connectivityController:(id)arg5;
+- (id)initWithSearchViewController:(id)arg1 logger:(id)arg2 linkDispatcher:(id)arg3 voiceuiService:(id)arg4 connectivityController:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

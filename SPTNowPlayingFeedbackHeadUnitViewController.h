@@ -12,7 +12,7 @@
 #import "SPTNowPlayingPlaybackActionsHandlerObserver-Protocol.h"
 
 @class NSString, SPTNowPlayingHeadUnitView, SPTNowPlayingModel, SPTProgressView, SPTTheme;
-@protocol SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingContainingViewController, SPTNowPlayingPlaybackActionsHandler, SPTNowPlayingTestManager;
+@protocol SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingContainingViewController, SPTNowPlayingPlaybackActionsHandler, SPTNowPlayingTestManager, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
 @interface SPTNowPlayingFeedbackHeadUnitViewController : UIViewController <SPTNowPlayingModelObserver, SPTNowPlayingPlaybackActionsHandlerObserver, SPTNowPlayingAuxiliaryActionsHandlerObserver, SPTNowPlayingContainedViewController>
 {
@@ -22,10 +22,12 @@
     id <SPTNowPlayingTestManager> _testManager;
     SPTTheme *_theme;
     SPTProgressView *_progressView;
+    id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
     double _timeBeforeRadioAction;
 }
 
 @property(nonatomic) double timeBeforeRadioAction; // @synthesize timeBeforeRadioAction=_timeBeforeRadioAction;
+@property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
@@ -51,7 +53,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)loadView;
-- (id)initWithModel:(id)arg1 playbackActionsHandler:(id)arg2 auxiliaryActionsHandler:(id)arg3 testManager:(id)arg4 theme:(id)arg5;
+- (id)initWithModel:(id)arg1 playbackActionsHandler:(id)arg2 auxiliaryActionsHandler:(id)arg3 testManager:(id)arg4 theme:(id)arg5 responsiveShuffleOnboardingController:(id)arg6;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

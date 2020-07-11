@@ -9,7 +9,7 @@
 @class NSString, NSURL;
 
 @protocol SPTShelf <NSObject>
-- (void)execute:(NSURL *)arg1 source:(NSString *)arg2 completion:(void (^)(NSString *))arg3;
+- (void)execute:(NSURL *)arg1 source:(NSString *)arg2 completion:(void (^)(long long))arg3;
 - (void)shelfView:(void (^)(SPTSwipeableTableViewCellShelf *))arg1;
 @end
 

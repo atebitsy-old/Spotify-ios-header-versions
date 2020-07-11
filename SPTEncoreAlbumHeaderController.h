@@ -8,12 +8,13 @@
 
 #import "SPTEncoreAlbumHeaderDelegate-Protocol.h"
 #import "SPTFreeTierEntityFeedbackButtonViewModelDelegate-Protocol.h"
+#import "SPTFreeTierEntityOfflineDelegate-Protocol.h"
 #import "SPTImageLoaderDelegate-Protocol.h"
 
 @class NSMutableSet, NSString, NSURL, SPTEncoreAlbumHeader, UIColor, UIImage, UIView;
 @protocol HUBComponentEventHandler, HUBComponentModel, SPTFreeTierEntityContextMenuButtonViewModel, SPTFreeTierEntityFeedbackButtonViewModel, SPTFreeTierEntityOfflineViewModel, SPTImageLoader, SPTLinkDispatcher;
 
-@interface SPTEncoreAlbumHeaderController : NSObject <SPTImageLoaderDelegate, SPTEncoreAlbumHeaderDelegate, SPTFreeTierEntityFeedbackButtonViewModelDelegate>
+@interface SPTEncoreAlbumHeaderController : NSObject <SPTImageLoaderDelegate, SPTEncoreAlbumHeaderDelegate, SPTFreeTierEntityFeedbackButtonViewModelDelegate, SPTFreeTierEntityOfflineDelegate>
 {
     UIView *_headerView;
     id <SPTFreeTierEntityFeedbackButtonViewModel> _followButtonModel;
@@ -30,11 +31,13 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     UIImage *_coverArt;
     UIColor *_extractedColor;
+    long long _currentDownloadState;
     SPTEncoreAlbumHeader *_albumHeader;
 }
 
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
 @property(retain, nonatomic) SPTEncoreAlbumHeader *albumHeader; // @synthesize albumHeader=_albumHeader;
+@property(nonatomic) long long currentDownloadState; // @synthesize currentDownloadState=_currentDownloadState;
 @property(retain, nonatomic) UIColor *extractedColor; // @synthesize extractedColor=_extractedColor;
 @property(retain, nonatomic) UIImage *coverArt; // @synthesize coverArt=_coverArt;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -51,6 +54,9 @@
 @property(retain, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> followButtonModel; // @synthesize followButtonModel=_followButtonModel;
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
 - (void).cxx_destruct;
+- (_Bool)shouldShowRemoveFromDownloadsConfirmationAlert;
+- (void)showRemoveFromDownloadsConfirmationAlertWithCompletion:(CDUnknownBlockType)arg1;
+- (void)viewModel:(id)arg1 offlineAvailabilityChanged:(unsigned long long)arg2;
 - (void)viewModel:(id)arg1 didUpdateState:(unsigned long long)arg2;
 - (void)toggleLikeWithSender:(id)arg1;
 - (void)toggleDownloadWithSender:(id)arg1;

@@ -46,6 +46,7 @@
 - (void)removeProviderFromWaitingSet:(id)arg1;
 - (_Bool)allProvidersLoaded;
 - (void)fetchPlaylistDataWithCompletion:(CDUnknownBlockType)arg1;
+- (_Bool)hasCardProviderWithIdentifier:(id)arg1;
 @property(readonly, nonatomic) unsigned long long numberOfCards;
 - (void)load;
 - (id)cardAtIndex:(unsigned long long)arg1;

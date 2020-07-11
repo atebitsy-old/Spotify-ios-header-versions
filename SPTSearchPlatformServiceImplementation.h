@@ -9,7 +9,7 @@
 #import "SPTSearchPlatformService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSearch2RequestParametersProvider;
-@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCosmosDataLoaderService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTGLUEService, SPTHubFrameworkService, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRemoteConfigurationService, SPTResolver, SPTSearch2UserTierProviding, SPTSearchPlatformTestManager, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTUBIService, SPTUBIUserBehaviourInstrumentation, SPTURIDispatchService, SPTVoiceService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCosmosDataLoaderService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTGLUEService, SPTHubFrameworkService, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRemoteConfigurationService, SPTResolver, SPTSearch2UserTierProviding, SPTSearchPlatformTestManager, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTUBIService, SPTUBIUserBehaviourInstrumentation, SPTURIDispatchService, _TtP14VoiceUIFeature17SPTVoiceUIService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTSearchPlatformServiceImplementation : NSObject <SPTSearchPlatformService>
 {
@@ -26,7 +26,7 @@
     id <SPTContainerService> _containerService;
     id <SPTHubFrameworkService> _hubFrameworkService;
     id <SPTURIDispatchService> _uriDispatchService;
-    id <SPTVoiceService> _voiceService;
+    id <_TtP14VoiceUIFeature17SPTVoiceUIService_> _voiceuiService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
@@ -62,7 +62,7 @@
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
-@property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
+@property(nonatomic) __weak id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
@@ -75,6 +75,7 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (void).cxx_destruct;
+- (id)makeOnDemandPermissionMonitor;
 - (id)makeLoadingLoggerWithConfiguration:(id)arg1;
 - (id)provideCosmosDictionaryDataLoader;
 - (id)offlineAlbumDataLoader;

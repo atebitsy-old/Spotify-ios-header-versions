@@ -6,14 +6,18 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLocalSettings, SPTPlayer;
+@protocol SPTHubInteractionLogger, SPTLocalSettings, SPTPlayer, SPTUBIHubsUtilities;
 
 @interface SPTHomeCommandHandlerFactory : NSObject
 {
     id <SPTPlayer> _player;
     id <SPTLocalSettings> _localSettings;
+    id <SPTHubInteractionLogger> _hubInteractionLogger;
+    id <SPTUBIHubsUtilities> _ubiHubsUtilities;
 }
 
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
+@property(readonly, nonatomic) id <SPTHubInteractionLogger> hubInteractionLogger; // @synthesize hubInteractionLogger=_hubInteractionLogger;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
@@ -23,7 +27,7 @@
 - (id)provideTasteOnboardingSkipCommandHandlerWithOverrides:(id)arg1;
 - (id)provideTooltipDismissalCommandHandlerWithViewModelProvider:(id)arg1;
 - (id)provideReloadCommandHandlerWithViewModelProvider:(id)arg1;
-- (id)initWithPlayer:(id)arg1 localSettings:(id)arg2;
+- (id)initWithPlayer:(id)arg1 localSettings:(id)arg2 hubInteractionLogger:(id)arg3 ubiHubsUtilities:(id)arg4;
 
 @end
 

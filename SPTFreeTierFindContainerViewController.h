@@ -17,7 +17,7 @@
 #import "SPViewController-Protocol.h"
 
 @class NSArray, NSLayoutConstraint, NSString, NSURL, SPTFreeTierFindLogger, SPTSearchUISearchControls, UILayoutGuide, UIView;
-@protocol GLUETheme, SPTFreeTierFindInterfaceFactory, SPTFreeTierFindViewController><SPTPageController, SPTPageContainer, SPTPageController, SPTScannablesService, SPTSearch2RootViewControllerProtocol><SPTPageController, SPTVoiceService;
+@protocol GLUETheme, SPTFreeTierFindInterfaceFactory, SPTFreeTierFindViewController><SPTPageController, SPTPageContainer, SPTPageController, SPTScannablesService, SPTSearch2RootViewControllerProtocol><SPTPageController, _TtP14VoiceUIFeature17SPTVoiceUIService_;
 
 @interface SPTFreeTierFindContainerViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTFreeTierFindViewControllerDelegate, SPTScrollToTopViewController, SPViewController, SPContentInsetViewController, SPTSearchUISearchControlsDelegate, SPTPageContainer, SPTPageController, SPTViewControllerContainer>
 {
@@ -27,7 +27,7 @@
     UIViewController<SPTFreeTierFindViewController><SPTPageController> *_findViewController;
     id <SPTFreeTierFindInterfaceFactory> _interfaceFactory;
     SPTFreeTierFindLogger *_logger;
-    id <SPTVoiceService> _voiceService;
+    id <_TtP14VoiceUIFeature17SPTVoiceUIService_> _voiceuiService;
     id <SPTScannablesService> _scannablesService;
     id <SPTPageController> _currentPageController;
     unsigned long long _mode;
@@ -48,7 +48,7 @@
 @property(nonatomic) unsigned long long mode; // @synthesize mode=_mode;
 @property(retain, nonatomic, getter=spt_currentPageController) id <SPTPageController> currentPageController; // @synthesize currentPageController=_currentPageController;
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
-@property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
+@property(nonatomic) __weak id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
 @property(readonly, nonatomic) SPTFreeTierFindLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTFreeTierFindInterfaceFactory> interfaceFactory; // @synthesize interfaceFactory=_interfaceFactory;
 @property(readonly, nonatomic) UIViewController<SPTFreeTierFindViewController><SPTPageController> *findViewController; // @synthesize findViewController=_findViewController;
@@ -84,7 +84,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithFindViewController:(id)arg1 interfaceFactory:(id)arg2 voiceService:(id)arg3 scannablesService:(id)arg4 logger:(id)arg5 mainContentLayoutGuide:(id)arg6 theme:(id)arg7;
+- (id)initWithFindViewController:(id)arg1 interfaceFactory:(id)arg2 voiceuiService:(id)arg3 scannablesService:(id)arg4 logger:(id)arg5 mainContentLayoutGuide:(id)arg6 theme:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

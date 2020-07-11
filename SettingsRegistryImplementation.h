@@ -10,7 +10,6 @@
 #import "SettingsRegistry-Protocol.h"
 
 @class NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, NSURL;
-@protocol SPTAbbaFeatureFlags;
 
 @interface SettingsRegistryImplementation : NSObject <SettingsRegistry, SPTFeatureSettingsPageRegistry>
 {
@@ -20,10 +19,8 @@
     NSMutableDictionary *_settingsStructure;
     NSMutableArray *_mutableFeatureSettingsPages;
     NSMutableDictionary *_mutableTitles;
-    id <SPTAbbaFeatureFlags> _abbaFeatureFlags;
 }
 
-@property(retain, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 @property(retain, nonatomic) NSMutableDictionary *mutableTitles; // @synthesize mutableTitles=_mutableTitles;
 @property(retain, nonatomic) NSMutableArray *mutableFeatureSettingsPages; // @synthesize mutableFeatureSettingsPages=_mutableFeatureSettingsPages;
 @property(readonly, nonatomic) NSMutableDictionary *rootSectionProviders; // @synthesize rootSectionProviders=_rootSectionProviders;
@@ -42,7 +39,7 @@
 - (void)registerSettingsSectionProvider:(id)arg1 withSelector:(SEL)arg2 forURI:(id)arg3;
 - (void)registerRootSettingsSectionProvider:(id)arg1 withSelector:(SEL)arg2 forURI:(id)arg3;
 - (void)registerRootSettingsURI:(id)arg1 title:(id)arg2 viewControllerClass:(Class)arg3;
-- (id)initWithABBAFeatureFlags:(id)arg1;
+- (id)init;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

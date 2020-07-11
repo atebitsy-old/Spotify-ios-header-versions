@@ -34,7 +34,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
-+ (id)recentlyPlayedEntityWithDictionary:(id)arg1 collectionTestManager:(id)arg2 featureFlags:(id)arg3 offlineNotifier:(id)arg4 linkDispatcher:(id)arg5 evaluateOfflineSyncStatus:(_Bool)arg6;
++ (id)recentlyPlayedEntityWithDictionary:(id)arg1 collectionTestManager:(id)arg2 offlineNotifier:(id)arg3 linkDispatcher:(id)arg4 evaluateOfflineSyncStatus:(_Bool)arg5;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) unsigned long long tracksInCollectionCount; // @synthesize tracksInCollectionCount=_tracksInCollectionCount;
 @property(copy, nonatomic) NSURL *collectionURL; // @synthesize collectionURL=_collectionURL;

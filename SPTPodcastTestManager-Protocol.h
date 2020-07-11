@@ -6,21 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTPodcastTestManagerObserver;
-
 @protocol SPTPodcastTestManager <NSObject>
 @property(readonly, nonatomic, getter=isPodcastDataAccessLayerEnabled) _Bool podcastDataAccessLayerEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
-@property(readonly, nonatomic, getter=isRefinedPodcastPageEnabled) _Bool refinedPodcastPageEnabled;
-@property(readonly, nonatomic, getter=isPodcastPlaybackOrderEnabled) _Bool podcastPlaybackOrderEnabled;
-@property(readonly, nonatomic, getter=isProductionisedYourLibraryEnabled) _Bool productionisedYourLibraryEnabled;
-@property(readonly, nonatomic, getter=isLikeActionEnabled) _Bool likeActionEnabled;
-@property(readonly, nonatomic, getter=isFollowActionEnabled) _Bool followActionEnabled;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
-@property(readonly, nonatomic, getter=isVideoEntityPagesEnabled) _Bool videoEntityPagesEnabled;
-@property(readonly, nonatomic, getter=isVideoFeatureEnabled) _Bool videoFeatureEnabled;
 @property(readonly, nonatomic, getter=isPodcastFeatureEnabled) _Bool podcastFeatureEnabled;
-- (void)removeObserver:(id <SPTPodcastTestManagerObserver>)arg1;
-- (void)addObserver:(id <SPTPodcastTestManagerObserver>)arg1;
 @end
 

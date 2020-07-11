@@ -11,9 +11,11 @@
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: navigationManager
     // Error parsing type: , name: instrumentationService
+    // Error parsing type: , name: navigationRoutingService
     // Error parsing type: , name: ubiObserver
     // Error parsing type: , name: instrumentationObserver
     // Error parsing type: , name: navObserver
+    // Error parsing type: , name: navigationRoutingObserver
     // Error parsing type: , name: loop
     // Error parsing type: , name: queue
 }

@@ -13,7 +13,9 @@
 @interface SPTFreeTierPlaylistFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _doubleStatePlayButton;
-    _Bool _dontOpenNowPlayingViewOnPlayback;
+    _Bool _dontOpenNowPlayingViewOnAudioPlayback;
+    _Bool _dontOpenNowPlayingViewOnVideoPlayback;
+    _Bool _dontOpenNowPlayingViewOnPlayButtonPlayback;
     _Bool _pageLoaderEnabledPlaylistView;
     _Bool _useTrackCloudCellProvider;
     _Bool _useTracksSection;
@@ -32,7 +34,9 @@
 @property(readonly, nonatomic) _Bool useTracksSection; // @synthesize useTracksSection=_useTracksSection;
 @property(readonly, nonatomic) _Bool useTrackCloudCellProvider; // @synthesize useTrackCloudCellProvider=_useTrackCloudCellProvider;
 @property(readonly, nonatomic) _Bool pageLoaderEnabledPlaylistView; // @synthesize pageLoaderEnabledPlaylistView=_pageLoaderEnabledPlaylistView;
-@property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnPlayback; // @synthesize dontOpenNowPlayingViewOnPlayback=_dontOpenNowPlayingViewOnPlayback;
+@property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnPlayButtonPlayback; // @synthesize dontOpenNowPlayingViewOnPlayButtonPlayback=_dontOpenNowPlayingViewOnPlayButtonPlayback;
+@property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnVideoPlayback; // @synthesize dontOpenNowPlayingViewOnVideoPlayback=_dontOpenNowPlayingViewOnVideoPlayback;
+@property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnAudioPlayback; // @synthesize dontOpenNowPlayingViewOnAudioPlayback=_dontOpenNowPlayingViewOnAudioPlayback;
 @property(readonly, nonatomic) _Bool doubleStatePlayButton; // @synthesize doubleStatePlayButton=_doubleStatePlayButton;
 - (void).cxx_destruct;
 - (unsigned long long)mapUnfollowShowConfirmationOverrideToEnumValue:(id)arg1;

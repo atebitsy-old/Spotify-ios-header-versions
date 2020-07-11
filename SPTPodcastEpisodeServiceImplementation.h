@@ -9,13 +9,12 @@
 #import "SPTPodcastEpisodeService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTSessionService, SPTShareFeature, SPTUIPresentationService, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
+@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUIPresentationService, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
 {
     id <_TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_> _audioPlusService;
     id <SPTContainerUIService> _containerUIService;
-    id <SPTSessionService> _clientSessionService;
     id <SPTNetworkService> _networkFeature;
     id <SPTPodcastFeature> _podcastService;
     id <SPTPodcastUIService> _podcastUIService;
@@ -27,11 +26,15 @@
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <_TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_> _podcastCreatorEntityPageService;
     id <SPTPodcastEpisodeFeaturedContentService> _podcastEpisodeFeaturedContentService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPodcastOffliningService> _podcastOffliningService;
+    id <SPTGLUEService> _glueService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTPodcastOffliningService> podcastOffliningService; // @synthesize podcastOffliningService=_podcastOffliningService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastEpisodeFeaturedContentService; // @synthesize podcastEpisodeFeaturedContentService=_podcastEpisodeFeaturedContentService;
 @property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_> podcastCreatorEntityPageService; // @synthesize podcastCreatorEntityPageService=_podcastCreatorEntityPageService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
@@ -43,11 +46,13 @@
 @property(nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
-@property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <_TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_> audioPlusService; // @synthesize audioPlusService=_audioPlusService;
 - (void).cxx_destruct;
+- (id)provideActionRowViewControllerForURI:(id)arg1 context:(id)arg2;
+- (id)provideFeatureProperties;
 - (id)provideContextPlayerParameters:(id)arg1;
+- (id)makeViewModelForURI:(id)arg1 context:(id)arg2;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (void)configureWithServices:(id)arg1;

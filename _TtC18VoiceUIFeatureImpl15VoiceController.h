@@ -17,6 +17,9 @@
     // Error parsing type: , name: collectionPlatform
     // Error parsing type: , name: ubiLogger
     // Error parsing type: , name: voicePlayerLogger
+    // Error parsing type: , name: testManager
+    // Error parsing type: , name: ttsPlaybackLogger
+    // Error parsing type: , name: voiceSourceLogger
 }
 
 @end

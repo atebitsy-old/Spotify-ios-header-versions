@@ -18,8 +18,8 @@
 - (void).cxx_destruct;
 - (_Bool)deleteObjectForDomain:(id)arg1 andKey:(id)arg2 synchronizable:(_Bool)arg3;
 - (_Bool)deleteStringForDomain:(id)arg1 andKey:(id)arg2;
-- (void)setData:(id)arg1 forDomain:(id)arg2 andKey:(id)arg3 synchronizable:(_Bool)arg4;
-- (void)setString:(id)arg1 forDomain:(id)arg2 andKey:(id)arg3;
+- (id)setData:(id)arg1 forDomain:(id)arg2 andKey:(id)arg3 synchronizable:(_Bool)arg4;
+- (id)setString:(id)arg1 forDomain:(id)arg2 andKey:(id)arg3;
 - (id)dataForDomain:(id)arg1 andKey:(id)arg2 synchronizable:(_Bool)arg3;
 - (id)stringForDomain:(id)arg1 andKey:(id)arg2;
 - (id)defaultsKey:(id)arg1 withDomain:(id)arg2;

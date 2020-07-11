@@ -8,10 +8,22 @@
 
 @interface _TtC28ResponsiveShuffleFeatureImpl22RSOnboardingController : NSObject
 {
+    // Error parsing type: , name: metaViewController
+    // Error parsing type: , name: tooltipPresenter
+    // Error parsing type: , name: topLevelViewController
+    // Error parsing type: , name: heartButton
+    // Error parsing type: , name: banButton
+    // Error parsing type: , name: eventConsumer
+    // Error parsing type: , name: shouldShowDefaultConfirmation
 }
 
+- (void).cxx_destruct;
 - (id)init;
 - (void)playInitiatedWithPlaylistURI:(id)arg1 formatListAttributes:(id)arg2;
+- (void)registerBanWithButton:(id)arg1;
+- (void)registerHeartWithButton:(id)arg1;
+- (void)registerTopLevelViewController:(id)arg1;
+@property(nonatomic) _Bool shouldShowDefaultConfirmation; // @synthesize shouldShowDefaultConfirmation;
 
 @end
 

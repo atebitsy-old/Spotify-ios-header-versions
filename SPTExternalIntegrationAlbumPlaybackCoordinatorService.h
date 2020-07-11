@@ -11,12 +11,13 @@
 #import "SPTService-Protocol.h"
 
 @class NSMutableArray, NSString, SPTAllocationContext, SPTExternalIntegrationPlaybackServiceImplementation;
-@protocol SPTNetworkService, SPTPlayer;
+@protocol SPTExternalIntegrationTestManagerService, SPTNetworkService, SPTPlayer;
 
 @interface SPTExternalIntegrationAlbumPlaybackCoordinatorService : NSObject <SPTPlayerObserver, SPTService, SPTExternalIntegrationPlaybackCoordinator>
 {
     id <SPTNetworkService> _networkService;
     SPTExternalIntegrationPlaybackServiceImplementation *_playbackService;
+    id <SPTExternalIntegrationTestManagerService> _testManagerService;
     NSMutableArray *_activeDataLoaders;
     id <SPTPlayer> _player;
     CDUnknownBlockType _completionHandler;
@@ -26,6 +27,7 @@
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) NSMutableArray *activeDataLoaders; // @synthesize activeDataLoaders=_activeDataLoaders;
+@property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationPlaybackServiceImplementation *playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 - (void).cxx_destruct;

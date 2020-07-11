@@ -13,15 +13,15 @@
 @interface SPTGaiaConnectLocalDevice : NSObject <SPTGaiaLocalDeviceProtocol>
 {
     _Bool _isActive;
-    NSString *_deviceId;
+    NSString *_physicalDeviceId;
     NSString *_name;
 }
 
 @property(nonatomic) _Bool isActive; // @synthesize isActive=_isActive;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-@property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
+@property(copy, nonatomic) NSString *physicalDeviceId; // @synthesize physicalDeviceId=_physicalDeviceId;
 - (void).cxx_destruct;
-- (id)initWithDeviceId:(id)arg1;
+- (id)deviceId;
 - (id)initWithDictionary:(id)arg1;
 
 // Remaining properties

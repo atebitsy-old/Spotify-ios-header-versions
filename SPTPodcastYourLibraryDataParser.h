@@ -7,21 +7,19 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSMutableArray;
-@protocol SPTPodcastEpisodeFactory, SPTPodcastTestManager, SPTPodcastYourLibraryDataParserDelegate;
+@protocol SPTPodcastEpisodeFactory, SPTPodcastYourLibraryDataParserDelegate;
 
 @interface SPTPodcastYourLibraryDataParser : NSObject
 {
     id <SPTPodcastYourLibraryDataParserDelegate> _delegate;
     NSMutableArray *_nextEpisodes;
     id <SPTPodcastEpisodeFactory> _podcastEpisodeFactory;
-    id <SPTPodcastTestManager> _testManager;
     NSArray *_unfinishedEpisodes;
     NSArray *_headerCollection;
 }
 
 @property(copy, nonatomic) NSArray *headerCollection; // @synthesize headerCollection=_headerCollection;
 @property(copy, nonatomic) NSArray *unfinishedEpisodes; // @synthesize unfinishedEpisodes=_unfinishedEpisodes;
-@property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeFactory> podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
 @property(retain, nonatomic) NSMutableArray *nextEpisodes; // @synthesize nextEpisodes=_nextEpisodes;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryDataParserDelegate> delegate; // @synthesize delegate=_delegate;
@@ -30,7 +28,7 @@
 - (void)addEpisodesCollectionForNextSection:(id)arg1;
 - (void)didFailParsingData;
 - (void)parseNextEpisodes:(id)arg1;
-- (id)initWithEpisodeFactory:(id)arg1 podcastTestManager:(id)arg2;
+- (id)initWithEpisodeFactory:(id)arg1;
 
 @end
 

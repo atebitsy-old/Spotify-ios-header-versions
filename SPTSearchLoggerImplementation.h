@@ -22,7 +22,6 @@
 @property(readonly, nonatomic) id <SPTSearch2DateProviding> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
-- (void)logUIImpressionVoiceFloatingMicrophoneTooltipCalloutWithSourceIdentifier:(id)arg1;
 - (void)logUIInteractionLaunchVoiceSearchViewWithSourceIdentifier:(id)arg1;
 - (void)logUIInteractionForClearCurrentSearchStringWithRequestID:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 dateProvider:(id)arg2 ubiLogger:(id)arg3;

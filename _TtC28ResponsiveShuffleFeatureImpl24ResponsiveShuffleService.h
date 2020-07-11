@@ -10,8 +10,11 @@
 
 @interface _TtC28ResponsiveShuffleFeatureImpl24ResponsiveShuffleService : NSObject
 {
+    // Error parsing type: , name: viewURI
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: playerFeature
     // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: tooltipService
     // Error parsing type: , name: mobiusController
     // Error parsing type: , name: onboardingController
 }

@@ -12,6 +12,7 @@
     // Error parsing type: , name: testManager
     // Error parsing type: , name: microphonePermissionReducer
     // Error parsing type: , name: glueTheme
+    // Error parsing type: , name: settingsPageLogger
     // Error parsing type: , name: sectionDelegate
     // Error parsing type: , name: delegate
     // Error parsing type: , name: enableVoiceDescriptionCell

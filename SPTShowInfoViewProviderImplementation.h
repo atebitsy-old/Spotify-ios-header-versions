@@ -20,7 +20,6 @@
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTShowInfoViewStringProvider> stringProvider; // @synthesize stringProvider=_stringProvider;
 - (void).cxx_destruct;
-- (void)navigateToVideoHub;
 - (void)navigateToShowsHub;
 - (id)createLinkButtonWithViewURI:(id)arg1 browseButtonTitle:(id)arg2 mediaType:(unsigned long long)arg3;
 - (void)setupEmptyCollectionInfoView:(id)arg1 title:(id)arg2 text:(id)arg3 icon:(long long)arg4 browseButtonTitle:(id)arg5 emptyViewURI:(id)arg6 mediaType:(unsigned long long)arg7;

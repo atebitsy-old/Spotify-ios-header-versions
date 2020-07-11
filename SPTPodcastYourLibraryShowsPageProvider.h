@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastYourLibraryShowsViewModel;
-@protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTGLUEImageLoaderFactory, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastLogger, SPTPodcastTestManager, SPTPodcastUIStringFormatter, SPTPodcastYourLibraryShowCellConfigurator;
+@protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTGLUEImageLoaderFactory, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastLogger, SPTPodcastUIStringFormatter, SPTPodcastYourLibraryShowCellConfigurator;
 
 @interface SPTPodcastYourLibraryShowsPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -21,7 +21,6 @@
     id <GLUETheme> _theme;
     id <SPTPodcastYourLibraryShowCellConfigurator> _cellConfigurator;
     id <SPTPodcastLogger> _logger;
-    id <SPTPodcastTestManager> _podcastTestManager;
     id <SPTCollectionPlatformDataLoader> _dataLoader;
     id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
@@ -42,7 +41,6 @@
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-@property(retain, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(retain, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTPodcastYourLibraryShowCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -54,7 +52,7 @@
 - (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithURI:(id)arg1 title:(id)arg2 pageProviderIdentifier:(unsigned long long)arg3 dataLoader:(id)arg4 theme:(id)arg5 glueImageLoaderFactory:(id)arg6 logger:(id)arg7 podcastTestManager:(id)arg8 explicitContentAccessManager:(id)arg9 collectionLogger:(id)arg10 metaViewController:(id)arg11 navigationRouter:(id)arg12 viewLoggerFactory:(id)arg13 stringFormatter:(id)arg14;
+- (id)initWithURI:(id)arg1 title:(id)arg2 pageProviderIdentifier:(unsigned long long)arg3 dataLoader:(id)arg4 theme:(id)arg5 glueImageLoaderFactory:(id)arg6 logger:(id)arg7 explicitContentAccessManager:(id)arg8 collectionLogger:(id)arg9 metaViewController:(id)arg10 navigationRouter:(id)arg11 viewLoggerFactory:(id)arg12 stringFormatter:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

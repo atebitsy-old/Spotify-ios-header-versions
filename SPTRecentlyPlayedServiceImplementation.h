@@ -10,11 +10,10 @@
 #import "SPTService-Protocol.h"
 
 @class NSMutableArray, NSString, SPTAllocationContext, SPTRecentlyPlayedEntityModel, SPTRecentlyPlayedTestManager;
-@protocol CosmosFeature, SPTAbbaService, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlagFactory, SPTFeatureFlaggingService, SPTFreeTierService, SPTRecentlyPlayedList, SPTSessionService, SPTURIDispatchService;
+@protocol CosmosFeature, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlagFactory, SPTFeatureFlaggingService, SPTFreeTierService, SPTRecentlyPlayedList, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTRecentlyPlayedServiceImplementation : NSObject <SPTService, SPTRecentlyPlayedService>
 {
-    id <SPTAbbaService> _abbaService;
     id <SPTSessionService> _clientSessionService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTCoreService> _coreService;
@@ -48,7 +47,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 - (void).cxx_destruct;
 - (void)registerAllCollectionEntityContentTypes;
 - (id)provideTestManager;

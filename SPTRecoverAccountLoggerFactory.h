@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter, SPTLoginLogger;
+@protocol SPTLogCenter, SPTUBILogger;
 
 @interface SPTRecoverAccountLoggerFactory : NSObject
 {
-    id <SPTLoginLogger> _logger;
+    id <SPTUBILogger> _logger;
     id <SPTLogCenter> _logCenter;
 }
 
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-@property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
 - (id)provideDialogLogger;
 - (id)provideSetNewPasswordLogger;

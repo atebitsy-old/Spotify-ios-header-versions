@@ -43,7 +43,6 @@
 - (unsigned long long)contentType;
 - (void)configureCell:(id)arg1 withTrack:(id)arg2 windowedContentInsets:(struct UIEdgeInsets)arg3 peekingDisallowed:(_Bool)arg4;
 - (Class)cellClass;
-- (long long)priority;
 - (id)initWithTheme:(id)arg1 surfaceFactory:(id)arg2 videoSurfaceManager:(id)arg3 imageLoaderFactory:(id)arg4 player:(id)arg5;
 
 // Remaining properties

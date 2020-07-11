@@ -9,8 +9,8 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTYourLibraryMusicRangeDataLoader-Protocol.h"
 
-@class NSArray, NSString, NSURL, SPTDataLoader;
-@protocol SPTCollectionPlatform, SPTCollectionPlatformDataLoader, SPTCollectionPlatformDataLoaderRequestToken, SPTYourLibraryMusicRangeDataLoaderDelegate, SPTYourLibraryMusicTestManager;
+@class NSArray, NSString, NSURL, SPTDataLoader, SPTYourLibraryMusicFeatureProperties;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformDataLoader, SPTCollectionPlatformDataLoaderRequestToken, SPTYourLibraryMusicRangeDataLoaderDelegate;
 
 @interface SPTYourLibraryMusicRecommendedEntitiesDataLoader : NSObject <SPTDataLoaderDelegate, SPTYourLibraryMusicRangeDataLoader>
 {
@@ -22,7 +22,7 @@
     id <SPTCollectionPlatformDataLoader> _collectionPlatformDataLoader;
     id <SPTCollectionPlatform> _collectionPlatform;
     unsigned long long _type;
-    id <SPTYourLibraryMusicTestManager> _testManager;
+    SPTYourLibraryMusicFeatureProperties *_featureProperties;
     id <SPTCollectionPlatformDataLoaderRequestToken> _collectionStateToken;
     unsigned long long _totalNumberOfItems;
     NSArray *_recommendedEntities;
@@ -36,7 +36,7 @@
 @property(nonatomic) struct _NSRange requestedRange; // @synthesize requestedRange=_requestedRange;
 @property(nonatomic) unsigned long long totalNumberOfItems; // @synthesize totalNumberOfItems=_totalNumberOfItems;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionStateToken; // @synthesize collectionStateToken=_collectionStateToken;
-@property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) SPTYourLibraryMusicFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
@@ -59,7 +59,7 @@
 - (void)loadItemsForRange:(struct _NSRange)arg1 sortRules:(id)arg2 filterRules:(id)arg3 textFilter:(id)arg4;
 @property(readonly, nonatomic) NSArray *sectionIndices;
 @property(readonly, nonatomic) NSURL *serviceURL;
-- (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2 type:(unsigned long long)arg3 testManager:(id)arg4;
+- (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2 type:(unsigned long long)arg3 featureProperties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

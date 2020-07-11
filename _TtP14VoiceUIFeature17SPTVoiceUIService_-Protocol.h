@@ -9,7 +9,7 @@
 @class NSString;
 
 @protocol _TtP14VoiceUIFeature17SPTVoiceUIService_ <SPTService>
-- (_Bool)isNewOnboardingEnabled;
+- (_Bool)isVoiceEnabled;
 - (void)launchVoiceWithReferrer:(NSString *)arg1;
 @end
 

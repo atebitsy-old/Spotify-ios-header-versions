@@ -7,7 +7,7 @@
 #import "_TtC18VoiceUIFeatureImpl14VoiceUIService.h"
 
 @interface _TtC18VoiceUIFeatureImpl14VoiceUIService (VoiceUIFeatureImpl)
-- (_Bool)isNewOnboardingEnabled;
 - (void)launchVoiceWithReferrer:(id)arg1;
+- (_Bool)isVoiceEnabled;
 @end
 

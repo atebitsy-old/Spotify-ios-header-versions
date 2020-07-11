@@ -11,12 +11,10 @@
 #import "SPTPodcastEpisodeFeaturedContentViewController-Protocol.h"
 
 @class HUBView, NSMutableSet, NSString, SPTHubViewModelProvider;
-@protocol GLUETheme, SPTHubImpressionLogger, SPTPodcastEpisodeFeaturedContentHubViewProvider, SPTPodcastEpisodeFeaturedContentViewControllerDelegate;
+@protocol GLUETheme, SPTHubImpressionLogger, SPTPodcastEpisodeFeaturedContentHubViewProvider;
 
 @interface SPTPodcastEpisodeFeaturedContentViewControllerImplementation : UIViewController <SPTHubViewModelProviderDelegate, HUBViewComponentDelegate, SPTPodcastEpisodeFeaturedContentViewController>
 {
-    _Bool _loaded;
-    id <SPTPodcastEpisodeFeaturedContentViewControllerDelegate> _delegate;
     NSMutableSet *_episodeFeaturedContentComponents;
     id <SPTPodcastEpisodeFeaturedContentHubViewProvider> _hubViewProvider;
     SPTHubViewModelProvider *_hubViewModelProvider;
@@ -27,12 +25,10 @@
 
 @property(readonly, nonatomic) id <SPTHubImpressionLogger> impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(retain, nonatomic) HUBView *hubView; // @synthesize hubView=_hubView;
-@property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTHubViewModelProvider *hubViewModelProvider; // @synthesize hubViewModelProvider=_hubViewModelProvider;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeFeaturedContentHubViewProvider> hubViewProvider; // @synthesize hubViewProvider=_hubViewProvider;
 @property(retain, nonatomic) NSMutableSet *episodeFeaturedContentComponents; // @synthesize episodeFeaturedContentComponents=_episodeFeaturedContentComponents;
-@property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)logImpressionIfNeccessary:(id)arg1;
 - (void)superScrollViewDidAppear:(id)arg1;

@@ -11,7 +11,10 @@
     // Error parsing type: , name: artworkImageView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: typeLabel
+    // Error parsing type: , name: isExplicit
+    // Error parsing type: , name: explicitAccessoryView
     // Error parsing type: , name: style
+    // Error parsing type: , name: typeLabelLeadingConstraint
 }
 
 - (void).cxx_destruct;

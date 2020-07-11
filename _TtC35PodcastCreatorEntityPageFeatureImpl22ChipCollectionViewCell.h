@@ -6,6 +6,8 @@
 
 #import <UIKit/UICollectionViewCell.h>
 
+@class NSString;
+
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl22ChipCollectionViewCell : UICollectionViewCell
 {
     // Error parsing type: , name: chipView
@@ -14,6 +16,7 @@
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+@property(nonatomic, copy) NSString *accessibilityLabel;
 
 @end
 

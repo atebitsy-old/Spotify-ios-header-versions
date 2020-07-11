@@ -8,7 +8,7 @@
 
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString, SPCore, SPTDataLoaderFactory, SPTDataLoaderFactoryManager, SPTDataLoaderKeymasterAuthoriser, SPTDataLoaderOauthAuthoriser, SPTDataLoaderRequestAccountingConsumptionObserver, SPTDataLoaderResolver, SPTDataLoaderService, SPTStartupTracer;
+@class NSString, SPCore, SPTDataLoaderFactory, SPTDataLoaderFactoryManager, SPTDataLoaderOauthAuthoriser, SPTDataLoaderRequestAccountingConsumptionObserver, SPTDataLoaderResolver, SPTDataLoaderService, SPTStartupTracer;
 @protocol SPTNetworkConnectivityController;
 
 @interface SPTHTTPService : NSObject <SPTProductStateObserver>
@@ -21,14 +21,12 @@
     SPTDataLoaderRequestAccountingConsumptionObserver *_consumptionObserver;
     SPTDataLoaderFactory *_dataLoaderFactory;
     SPTDataLoaderFactoryManager *_dataLoaderFactoryManager;
-    SPTDataLoaderKeymasterAuthoriser *_keymasterAuthoriser;
     SPTDataLoaderOauthAuthoriser *_oauthAuthoriser;
     id _productStateStreamingRulesValue;
 }
 
 @property(retain, nonatomic) id productStateStreamingRulesValue; // @synthesize productStateStreamingRulesValue=_productStateStreamingRulesValue;
 @property(retain, nonatomic) SPTDataLoaderOauthAuthoriser *oauthAuthoriser; // @synthesize oauthAuthoriser=_oauthAuthoriser;
-@property(retain, nonatomic) SPTDataLoaderKeymasterAuthoriser *keymasterAuthoriser; // @synthesize keymasterAuthoriser=_keymasterAuthoriser;
 @property(retain, nonatomic) SPTDataLoaderFactoryManager *dataLoaderFactoryManager; // @synthesize dataLoaderFactoryManager=_dataLoaderFactoryManager;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(retain, nonatomic) SPTDataLoaderRequestAccountingConsumptionObserver *consumptionObserver; // @synthesize consumptionObserver=_consumptionObserver;
@@ -43,7 +41,6 @@
 - (id)provideDataLoaderFactory;
 - (void)clientDidLogout;
 - (void)setOauthClient:(id)arg1 productState:(id)arg2;
-- (void)setHermesTransport:(id)arg1 productState:(id)arg2;
 - (id)dataLoaderServiceConfiguration;
 - (void)dealloc;
 - (id)initWithNetworkConnectivityController:(id)arg1 startupTracer:(id)arg2 core:(id)arg3;

@@ -9,6 +9,7 @@
 @interface _TtC29PodcastMixControlsFeatureImpl19PMixFilterChipsView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: cachedCellSizes
     // Error parsing type: , name: $__lazy_storage_$_collectionView
     // Error parsing type: , name: $__lazy_storage_$_collectionLayout
 }

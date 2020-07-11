@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSMutableArray, NSString, SPTAllocationContext;
-@protocol SPTCoreService, SPTExternalIntegrationContentService, SPTNetworkService, SPTSessionService;
+@protocol SPTCoreService, SPTExternalIntegrationContentService, SPTExternalIntegrationTestManagerService, SPTNetworkService, SPTSessionService;
 
 @interface SPTExternalIntegrationArtistContentProviderService : NSObject <SPTService, SPTExternalIntegrationContentProvider>
 {
@@ -18,11 +18,13 @@
     id <SPTCoreService> _coreService;
     id <SPTNetworkService> _networkFeature;
     id <SPTSessionService> _clientSessionService;
+    id <SPTExternalIntegrationTestManagerService> _testManagerService;
     NSMutableArray *_activeDataLoaders;
 }
 
 + (id)serviceIdentifier;
 @property(readonly, nonatomic) NSMutableArray *activeDataLoaders; // @synthesize activeDataLoaders=_activeDataLoaders;
+@property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(readonly, nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;

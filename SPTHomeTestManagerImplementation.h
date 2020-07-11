@@ -16,12 +16,14 @@
 {
     _Bool _consolidatedRecentlyPlayedEnabled;
     _Bool _errorSnackbarEnabled;
+    _Bool _seedASessionEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _consolidatedRecentlyPlayedEnabledSignal;
     id <SPTFeatureFlagSignal> _errorSnackbarEnabledSignal;
 }
 
+@property(nonatomic, getter=isSeedASessionEnabled) _Bool seedASessionEnabled; // @synthesize seedASessionEnabled=_seedASessionEnabled;
 @property(nonatomic, getter=isErrorSnackbarEnabled) _Bool errorSnackbarEnabled; // @synthesize errorSnackbarEnabled=_errorSnackbarEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> errorSnackbarEnabledSignal; // @synthesize errorSnackbarEnabledSignal=_errorSnackbarEnabledSignal;
 @property(nonatomic, getter=isConsolidatedRecentlyPlayedEnabled) _Bool consolidatedRecentlyPlayedEnabled; // @synthesize consolidatedRecentlyPlayedEnabled=_consolidatedRecentlyPlayedEnabled;
@@ -33,7 +35,7 @@
 - (void)setupErrorSnackbarSignal;
 - (void)setupConsolidatedRecentlyPlayedSignal;
 @property(readonly, nonatomic, getter=isProductStateNPT) _Bool productStateNPT;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2;
+- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 seedASessionEnabled:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

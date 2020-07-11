@@ -32,7 +32,7 @@
 - (void)logUserDidReceiveMixedLayout;
 - (void)logUserDidReceiveIntentLedLayout;
 - (void)logUserDidReceiveMethodLedLayout;
-- (void)logUserDidSeeView;
+- (void)logUserDidSeeViewFromLogout:(_Bool)arg1;
 - (id)initWithLogger:(id)arg1;
 
 @end

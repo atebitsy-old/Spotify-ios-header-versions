@@ -29,7 +29,7 @@
 - (id)additionalFilterString:(id)arg1;
 - (void)setupFilterPredicate:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *requestAction;
-- (id)initWithURL:(id)arg1 filterPredicate:(id)arg2 sortDescriptor:(id)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5 testManager:(id)arg6;
+- (id)initWithURL:(id)arg1 filterPredicate:(id)arg2 sortDescriptor:(id)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5 uiTestManager:(id)arg6 testManager:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

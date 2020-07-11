@@ -11,6 +11,7 @@
 
 @protocol SPTYourLibraryMusicPlaylistsViewModel <SPTYourLibraryMusicFilterableViewModel>
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
+@property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 @property(nonatomic) __weak id <SPTYourLibraryMusicPlaylistsViewModelDelegate> delegate;
@@ -20,6 +21,9 @@
 - (NSIndexPath *)indexPathForScrollSectionIndex:(unsigned long long)arg1;
 - (_Bool)showSeparatorForSection:(long long)arg1;
 - (void)createPlaylistActionInInfoView:(_Bool)arg1;
+- (void)logEmptyStaticFilterViewImpression;
+- (void)logEmptyTextFilterViewImpression;
+- (void)logEmptyViewImpression;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;

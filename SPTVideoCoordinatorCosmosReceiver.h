@@ -26,11 +26,11 @@
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <SPTVideoCoordinatorCosmosReceiverDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)handleSubtitleCommand:(id)arg1;
+- (void)handleConfig:(id)arg1;
 - (void)handleCommandWithPayload:(id)arg1;
 - (void)addHandlerForCommand:(id)arg1 block:(CDUnknownBlockType)arg2;
 - (void)addHandlersForPlayerCommands;
-- (void)addHandlerForStartCommand;
+- (void)addHandlerForSubscribedCommand;
 - (void)unsubscribe;
 - (void)subscribe;
 - (void)dealloc;

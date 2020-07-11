@@ -13,6 +13,7 @@
     // Error parsing type: , name: hugsFactory
     // Error parsing type: , name: hubsRendererFactory
     // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: urlResolver
 }
 
 - (void).cxx_destruct;

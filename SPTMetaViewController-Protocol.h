@@ -6,7 +6,7 @@
 
 #import "SPTNavigationItemsConsumer-Protocol.h"
 
-@class NSError, SPBarViewController, SPTMenuController, UIViewController;
+@class SPBarViewController, SPTMenuController, UIViewController;
 @protocol MetaViewControllerDelegate, SPTBarInteractiveTransitionParticipant, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTMetaViewControllerObserver, SPTMetaViewControllerRootViewPresenter, SPTModalPresentationController, SPTTabBarControllerProtocol;
 
 @protocol SPTMetaViewController <SPTNavigationItemsConsumer>
@@ -29,8 +29,8 @@
 - (void)hideNowPlayingViewControllerAnimated:(_Bool)arg1 completionHandler:(void (^)(void))arg2;
 - (void)showNowPlayingViewControllerAnimated:(_Bool)arg1 completionHandler:(void (^)(void))arg2;
 - (void)showNowPlayingViewControllerAnimated:(_Bool)arg1;
-- (void)switchToLoginViewForLogoutShowError:(NSError *)arg1 forgetUser:(_Bool)arg2 completion:(void (^)(void))arg3;
-- (void)switchToLoginViewAnimated:(_Bool)arg1 showError:(NSError *)arg2 completion:(void (^)(void))arg3;
+- (void)switchToLoginViewForLogoutForgetUser:(_Bool)arg1 completion:(void (^)(void))arg2;
+- (void)switchToLoginViewAnimated:(_Bool)arg1 completion:(void (^)(void))arg2;
 - (void)switchFromLoginAnimated:(_Bool)arg1 manualLogin:(_Bool)arg2 completion:(void (^)(void))arg3;
 - (void)switchToMainViewAnimated:(_Bool)arg1 manualLogin:(_Bool)arg2 completion:(void (^)(void))arg3;
 - (void)switchToViewController:(UIViewController *)arg1 animated:(_Bool)arg2 completion:(void (^)(void))arg3;

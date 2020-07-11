@@ -17,7 +17,7 @@
     // Error parsing type: , name: publisherName
     // Error parsing type: , name: publicationDate
     // Error parsing type: , name: duration
-    // Error parsing type: , name: listenedDuration
+    // Error parsing type: , name: timeLeft
     // Error parsing type: , name: url
     // Error parsing type: , name: offlineSyncStatus
     // Error parsing type: , name: imageURL
@@ -46,6 +46,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(void *)arg1;
 - (id)playerMediaTypeString;
+@property(nonatomic, readonly) double listenedDuration;
 @property(nonatomic, readonly) double listeningProgress;
 - (id)localizedDate;
 - (id)localizedDuration;
@@ -77,7 +78,6 @@
 @property(nonatomic, copy) NSURL *imageURL;
 @property(nonatomic) long long offlineSyncStatus; // @synthesize offlineSyncStatus;
 @property(nonatomic, copy) NSURL *URL;
-@property(nonatomic) double listenedDuration; // @synthesize listenedDuration;
 @property(nonatomic) double duration; // @synthesize duration;
 @property(nonatomic, copy) NSDate *publicationDate;
 @property(nonatomic, copy) NSString *publisherName;

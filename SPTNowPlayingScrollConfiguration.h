@@ -18,7 +18,6 @@
 + (id)samplesCardConfiguration;
 + (id)podcastInspectorConfiguration;
 + (id)feedbackCardsConfiguration;
-+ (id)pivotsConfiguration;
 + (id)defaultConfiguration;
 @property(copy, nonatomic) NSArray *cardsIdentifiers; // @synthesize cardsIdentifiers=_cardsIdentifiers;
 @property(nonatomic) long long identifier; // @synthesize identifier=_identifier;

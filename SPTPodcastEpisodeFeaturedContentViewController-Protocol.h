@@ -7,11 +7,8 @@
 #import "NSObject-Protocol.h"
 
 @class UIWindow;
-@protocol SPTPodcastEpisodeFeaturedContentViewControllerDelegate;
 
 @protocol SPTPodcastEpisodeFeaturedContentViewController <NSObject>
-@property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-@property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentViewControllerDelegate> delegate;
 
 @optional
 - (void)superScrollViewDidAppear:(UIWindow *)arg1;

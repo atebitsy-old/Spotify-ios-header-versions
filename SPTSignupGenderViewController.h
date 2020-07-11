@@ -7,21 +7,17 @@
 #import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTDynamicSignupFlowControllerDelegate-Protocol.h"
-#import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTSignupGenderViewModelDelegate-Protocol.h"
 #import "SPTSignupPickerContainerViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupGenderPickerDataSource, SPTSignupGenderViewModel, SPTSignupSingleInputFieldView, UIPickerView, UIViewController;
+@class NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupGenderPickerDataSource, SPTSignupGenderViewModel, SPTSignupSingleInputFieldView, UIPickerView, UIViewController;
 @protocol SPTPageContainer;
 
-@interface SPTSignupGenderViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupGenderViewModelDelegate, SPTSignupPickerContainerViewDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTSignupGenderViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupGenderViewModelDelegate, SPTSignupPickerContainerViewDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController>
 {
-    _Bool performLogout;
-    _Bool forgetUserAfterLogout;
-    NSError *error;
     SPTSignupGenderViewModel *_viewModel;
     SPTSignupGenderPickerDataSource *_pickerDataSource;
     SPTSignupAnimatedTransitioning *_animatedTransitioning;
@@ -32,9 +28,6 @@
 @property(retain, nonatomic) SPTSignupAnimatedTransitioning *animatedTransitioning; // @synthesize animatedTransitioning=_animatedTransitioning;
 @property(retain, nonatomic) SPTSignupGenderPickerDataSource *pickerDataSource; // @synthesize pickerDataSource=_pickerDataSource;
 @property(retain, nonatomic) SPTSignupGenderViewModel *viewModel; // @synthesize viewModel=_viewModel;
-@property(copy, nonatomic) NSError *error; // @synthesize error;
-@property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
-@property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
 - (void)userDidAcceptAllLicences:(id)arg1;
 @property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;

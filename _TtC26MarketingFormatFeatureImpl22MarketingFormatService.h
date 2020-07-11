@@ -13,6 +13,7 @@
     // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: hubService
+    // Error parsing type: , name: networkService
     // Error parsing type: , name: playerService
     // Error parsing type: , name: sessionService
     // Error parsing type: , name: shareService

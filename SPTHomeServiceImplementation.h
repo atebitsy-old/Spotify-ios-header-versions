@@ -73,6 +73,7 @@
 - (void).cxx_destruct;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
+- (id)createLoggerForViewURI:(id)arg1;
 - (id)providePersistentCache;
 - (void)setupHubManager;
 - (void)load;

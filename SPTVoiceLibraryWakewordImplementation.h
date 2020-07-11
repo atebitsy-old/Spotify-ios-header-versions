@@ -11,7 +11,7 @@
 #import "SPTVoiceLibraryWakeword-Protocol.h"
 
 @class NSString, SPTVoiceLibraryAudioSessionManager;
-@protocol OS_dispatch_queue, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryWakewordDelegate;
+@protocol OS_dispatch_queue, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryWakewordDelegate, SPTVoiceLibraryWakewordProviderLogger;
 
 @interface SPTVoiceLibraryWakewordImplementation : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibraryAudioSessionDelegate, SPTVoiceLibraryWakeword>
 {
@@ -24,8 +24,12 @@
     NSObject<OS_dispatch_queue> *_wakewordLoadingQueue;
     NSString *_modelPath;
     unsigned long long _state;
+    id <SPTVoiceLibraryWakewordProviderLogger> _logger;
+    NSString *_sessionIdentifier;
 }
 
+@property(copy, nonatomic) NSString *sessionIdentifier; // @synthesize sessionIdentifier=_sessionIdentifier;
+@property(retain, nonatomic) id <SPTVoiceLibraryWakewordProviderLogger> logger; // @synthesize logger=_logger;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(copy, nonatomic) NSString *modelPath; // @synthesize modelPath=_modelPath;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *wakewordLoadingQueue; // @synthesize wakewordLoadingQueue=_wakewordLoadingQueue;
@@ -37,6 +41,8 @@
 @property(nonatomic) __weak id <SPTVoiceLibraryWakewordDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;
+- (void)logErrorWithDomain:(id)arg1 andDescription:(id)arg2;
+- (id)generateSessionIdentifier;
 - (void)unload;
 - (void)loadSensoryWithCompletion:(CDUnknownBlockType)arg1;
 - (void)resume;
@@ -45,7 +51,7 @@
 - (void)start;
 - (_Bool)hasActiveAudioSessionForAudioRecording;
 - (void)dealloc;
-- (id)initWithAudioRecorder:(id)arg1 audioSessionManager:(id)arg2;
+- (id)initWithAudioRecorder:(id)arg1 audioSessionManager:(id)arg2 logger:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

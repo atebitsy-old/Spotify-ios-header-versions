@@ -12,10 +12,10 @@
 
 @interface SPTPodcastEpisodeFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _podcastHeaderVoiceoverAccessibleEnabled;
+    _Bool _useStandaloneComponents;
 }
 
-@property(readonly, nonatomic) _Bool podcastHeaderVoiceoverAccessibleEnabled; // @synthesize podcastHeaderVoiceoverAccessibleEnabled=_podcastHeaderVoiceoverAccessibleEnabled;
+@property(readonly, nonatomic) _Bool useStandaloneComponents; // @synthesize useStandaloneComponents=_useStandaloneComponents;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

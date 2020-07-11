@@ -13,13 +13,13 @@
 @interface SPTGaiaConnectDeviceIncarnation : NSObject <SPTGaiaDeviceIncarnation>
 {
     _Bool _isPreferred;
-    NSString *_deviceId;
+    NSString *_cosmosDeviceId;
     unsigned long long _type;
 }
 
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) _Bool isPreferred; // @synthesize isPreferred=_isPreferred;
-@property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
+@property(copy, nonatomic) NSString *cosmosDeviceId; // @synthesize cosmosDeviceId=_cosmosDeviceId;
 - (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 

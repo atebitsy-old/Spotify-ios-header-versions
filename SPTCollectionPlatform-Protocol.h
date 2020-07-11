@@ -15,7 +15,7 @@
 - (void)offlineStateForEntityURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;
 - (void)removeOfflineURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;
 - (void)addOfflineURL:(NSURL *)arg1 options:(SPTCollectionPlatformFetchOptions *)arg2 completion:(void (^)(_Bool, NSError *))arg3;
-- (void)playEntityURL:(NSURL *)arg1 playPolicy:(SPTCollectionPlayPolicy *)arg2 completion:(void (^)(_Bool, NSError *))arg3;
+- (void)playEntityURL:(NSURL *)arg1 playPolicy:(SPTCollectionPlayPolicy *)arg2 replyOnMainThread:(_Bool)arg3 completion:(void (^)(_Bool, NSError *))arg4;
 - (void)removeObserver:(id <SPTCollectionPlatformObserver>)arg1;
 - (void)addObserver:(id <SPTCollectionPlatformObserver>)arg1;
 - (void)removeBanURL:(NSURL *)arg1 bySource:(NSString *)arg2 fromContext:(NSURL *)arg3 showUIConfirmation:(_Bool)arg4 completion:(void (^)(_Bool))arg5;

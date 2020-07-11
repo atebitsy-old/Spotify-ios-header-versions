@@ -8,8 +8,11 @@
 
 @interface _TtC22QuickScrollFeatureImpl16QuickScrollStyle : NSObject
 {
+    // Error parsing type: , name: _indicatorStyle
+    // Error parsing type: , name: _handleStyle
 }
 
+- (void).cxx_destruct;
 - (id)init;
 - (id)copyWithZone:(void *)arg1;
 

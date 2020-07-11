@@ -11,6 +11,6 @@
 @protocol SPTGaiaDeviceIncarnation <NSObject>
 @property(nonatomic, readonly) unsigned long long type;
 @property(nonatomic, readonly) _Bool isPreferred;
-@property(nonatomic, readonly) NSString *deviceId;
+@property(nonatomic, readonly) NSString *cosmosDeviceId;
 @end
 

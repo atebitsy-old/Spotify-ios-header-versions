@@ -69,6 +69,7 @@
 - (void).cxx_destruct;
 - (_Bool)canHandleTapAtCreatorView;
 - (void)didTapCreatorRow;
+- (id)atributedTitleLabelText:(id)arg1 withFontSize:(long long)arg2;
 - (void)adjustTitleLabelFontIfNeeded;
 - (void)accessibilityHideViews:(id)arg1;
 - (void)updateAccessibilityFrame;

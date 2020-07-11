@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: videoLoader
     // Error parsing type: , name: theme
     // Error parsing type: , name: viewConnectable
 }

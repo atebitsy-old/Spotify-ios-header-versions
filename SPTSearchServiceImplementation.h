@@ -23,6 +23,7 @@
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
+- (id)makeViewController;
 - (id)searchConfiguration;
 - (id)provideSearchViewControllerForURL:(id)arg1 context:(id)arg2;
 - (void)registerSearchPage;

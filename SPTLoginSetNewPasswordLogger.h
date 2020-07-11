@@ -6,25 +6,24 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTUBILogger, SPTUBIMobileLoginResetPasswordEventFactory;
 
 @interface SPTLoginSetNewPasswordLogger : NSObject
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTUBILogger> _logger;
+    id <SPTUBIMobileLoginResetPasswordEventFactory> _eventFactory;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTUBIMobileLoginResetPasswordEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
-- (void)logImpressionWithPageURI:(id)arg1;
-- (void)logInteractionWithIntent:(id)arg1 fromSource:(id)arg2;
-- (void)logUserDidTapCancelButton;
 - (void)logUserDidTapSubmitButton;
 - (void)logUserDidInteractWithPasswordField;
 - (void)logUserDidSeeSetPasswordFailedWithNonRecoverableError:(id)arg1;
 - (void)logUserDidSeeSetPasswordFailedWithRecoverableError:(id)arg1;
 - (void)logUserDidSeeSetPasswordSucceed;
 - (void)logUserDidSeeSetNewPasswordScreen;
-- (id)initWithLogger:(id)arg1;
+- (id)initWithLogger:(id)arg1 eventFactory:(id)arg2;
 
 @end
 

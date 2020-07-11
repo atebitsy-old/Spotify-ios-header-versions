@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: name
     // Error parsing type: , name: artists
-    // Error parsing type: , name: ownerName
+    // Error parsing type: , name: addedBy
     // Error parsing type: , name: coverArt
     // Error parsing type: , name: downloadState
     // Error parsing type: , name: restriction
@@ -25,7 +25,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithName:(id)arg1 artists:(id)arg2 ownerName:(id)arg3 coverArt:(id)arg4 downloadState:(long long)arg5 restriction:(long long)arg6 isPremiumOnly:(_Bool)arg7 isPlaying:(_Bool)arg8 isPlayable:(_Bool)arg9 modifier:(long long)arg10 isPressed:(_Bool)arg11 deviceOffline:(_Bool)arg12;
+- (id)initWithName:(id)arg1 artists:(id)arg2 addedBy:(id)arg3 coverArt:(id)arg4 downloadState:(long long)arg5 restriction:(long long)arg6 isPremiumOnly:(_Bool)arg7 isPlaying:(_Bool)arg8 isPlayable:(_Bool)arg9 modifier:(long long)arg10 isPressed:(_Bool)arg11 deviceOffline:(_Bool)arg12;
 
 @end
 

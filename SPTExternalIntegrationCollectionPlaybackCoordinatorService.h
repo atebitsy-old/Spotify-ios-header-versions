@@ -10,18 +10,20 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatform, SPTCollectionPlatformService, SPTExternalIntegrationPlaybackService, SPTSessionService;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformService, SPTExternalIntegrationPlaybackService, SPTExternalIntegrationTestManagerService, SPTSessionService;
 
 @interface SPTExternalIntegrationCollectionPlaybackCoordinatorService : NSObject <SPTService, SPTExternalIntegrationPlaybackCoordinator>
 {
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTExternalIntegrationPlaybackService> _playbackService;
     id <SPTSessionService> _sessionService;
+    id <SPTExternalIntegrationTestManagerService> _testManagerService;
     id <SPTCollectionPlatform> _collectionPlatform;
 }
 
 + (id)serviceIdentifier;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
+@property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;

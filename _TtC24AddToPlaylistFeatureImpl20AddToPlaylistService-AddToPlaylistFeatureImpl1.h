@@ -6,9 +6,7 @@
 
 #import "_TtC24AddToPlaylistFeatureImpl20AddToPlaylistService.h"
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
-
-@interface _TtC24AddToPlaylistFeatureImpl20AddToPlaylistService (AddToPlaylistFeatureImpl1) <SPTFeatureFlagSignalObserver>
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
+@interface _TtC24AddToPlaylistFeatureImpl20AddToPlaylistService (AddToPlaylistFeatureImpl1)
+- (id)provideAddToPlaylistController:(id)arg1 pageContext:(id)arg2;
 @end
 

@@ -12,11 +12,12 @@
 #import "SPTPodcastEpisodeFeaturedContentTrackActionsDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentLogger, SPTPodcastEpisodeFeaturedContentPlayer;
-@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTPageContainer, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
+@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTMetaViewController, SPTPageContainer, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTPageController, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate>
 {
     _Bool _configureForEmbeddingInScrollView;
+    _Bool _shouldDisplayNowPlayingView;
     NSString *_episodeURIString;
     id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> _dataLoader;
     id <GLUEImageLoader> _imageLoader;
@@ -24,8 +25,11 @@
     SPTPodcastEpisodeFeaturedContentPlayer *_featuredContentPlayer;
     id <SPTEpisodeSegmentsModel> _episodeSegmentsModel;
     SPTPodcastEpisodeFeaturedContentLogger *_logger;
+    id <SPTMetaViewController> _metaViewController;
 }
 
+@property(nonatomic) _Bool shouldDisplayNowPlayingView; // @synthesize shouldDisplayNowPlayingView=_shouldDisplayNowPlayingView;
+@property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic, getter=shouldConfigureForEmbeddingInScrollView) _Bool configureForEmbeddingInScrollView; // @synthesize configureForEmbeddingInScrollView=_configureForEmbeddingInScrollView;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsModel> episodeSegmentsModel; // @synthesize episodeSegmentsModel=_episodeSegmentsModel;
@@ -53,7 +57,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)setUpNavigationItem;
-- (id)initWithEpisodeURI:(id)arg1 episodeSegmentsDataLoader:(id)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4 featuredContentPlayer:(id)arg5 configureForEmbeddingInScrollView:(_Bool)arg6 logger:(id)arg7;
+- (id)initWithEpisodeURI:(id)arg1 episodeSegmentsDataLoader:(id)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4 featuredContentPlayer:(id)arg5 configureForEmbeddingInScrollView:(_Bool)arg6 logger:(id)arg7 metaViewController:(id)arg8 configureToDisplayNowPlayingView:(_Bool)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

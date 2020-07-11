@@ -60,6 +60,9 @@
 - (id)indexPathForScrollSectionIndex:(unsigned long long)arg1;
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (void)removeFilterAtIndex:(long long)arg1;
+- (void)logEmptyStaticFilterViewImpression;
+- (void)logEmptyTextFilterViewImpression;
+- (void)logEmptyViewImpression;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
@@ -83,6 +86,7 @@
 - (void)loadViewModel;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
+@property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 - (void)setActiveFilterRules:(id)arg1;
 - (id)activeFilterRules;

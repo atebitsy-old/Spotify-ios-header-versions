@@ -62,12 +62,12 @@
 - (void)maybeCreateStalledTimer;
 - (void)resumeCurrentPlaybackAtPosition:(double)arg1;
 - (_Bool)shouldResumeCurrentPlaybackWithPlaybackID:(id)arg1;
-- (void)setInterruptorWithStopPosition:(double)arg1;
 - (void)setDeferredStateWithStartCommand:(id)arg1;
 - (id)coordinatorObserverFactory;
 - (void)playWithRequest:(id)arg1 options:(id)arg2;
 - (void)cosmosReceiver:(id)arg1 receivedSetStopPositionCommand:(double)arg2;
-- (void)cosmosReceiver:(id)arg1 receivedPreferredSubtitleCommand:(id)arg2;
+- (void)cosmosReceiver:(id)arg1 receivedConfigPreferredPlaybackSpeed:(id)arg2;
+- (void)cosmosReceiver:(id)arg1 receivedConfigPreferredSubtitle:(id)arg2;
 - (void)cosmosReceiver:(id)arg1 receivedSeekCommand:(double)arg2;
 - (void)cosmosReceiverReceivedResumeCommand:(id)arg1;
 - (void)cosmosReceiverReceivedPauseCommand:(id)arg1;
@@ -76,7 +76,7 @@
 - (void)unsubscribe;
 - (void)subscribe;
 - (void)dealloc;
-- (id)initWithPlayerFactory:(id)arg1 playbackStateFactory:(id)arg2 dynamicEventObserverFactory:(id)arg3 cosmosReceiver:(id)arg4 cosmosSender:(id)arg5 errorHandler:(id)arg6 carDetector:(id)arg7 appIsBackgroundedStateProvider:(CDUnknownBlockType)arg8;
+- (id)initWithPlayerFactory:(id)arg1 playbackStateFactory:(id)arg2 dynamicEventObserverFactory:(id)arg3 cosmosReceiver:(id)arg4 cosmosSender:(id)arg5 errorHandler:(id)arg6 carDetector:(id)arg7 playerInterruptor:(id)arg8 appIsBackgroundedStateProvider:(CDUnknownBlockType)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,6 +11,7 @@
 
 @protocol SPTYourLibraryMusicEntityViewModel <SPTYourLibraryMusicFilterableViewModel>
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
+@property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType;
 @property(readonly, nonatomic, getter=isSnackBarsUsedForMessaging) _Bool snackBarsUsedForMessaging;
@@ -21,6 +22,9 @@
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (void)updateModalMode:(_Bool)arg1;
+- (void)logEmptyStaticFilterViewImpression;
+- (void)logEmptyTextFilterViewImpression;
+- (void)logEmptyViewImpression;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;

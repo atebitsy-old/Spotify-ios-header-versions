@@ -8,6 +8,7 @@
 
 @interface _TtC34PodcastEpisodeAudioPlusFeatureImpl40PodcastEpisodeAudioPlusRemoteURLResolver : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: adMockerURLString
 }
 
 @end

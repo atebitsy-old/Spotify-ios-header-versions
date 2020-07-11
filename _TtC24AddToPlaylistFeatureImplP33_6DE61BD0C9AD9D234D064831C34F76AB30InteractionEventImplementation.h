@@ -14,6 +14,7 @@
 {
     // Error parsing type: , name: applicationId
     // Error parsing type: , name: specificationId
+    // Error parsing type: , name: specificationVersion
     // Error parsing type: , name: specificationCommitHash
     // Error parsing type: , name: generatorCommitHash
     // Error parsing type: , name: interactionType

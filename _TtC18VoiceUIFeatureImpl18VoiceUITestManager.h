@@ -11,12 +11,10 @@
     // Error parsing type: , name: remoteConfigurationResolver
     // Error parsing type: , name: useDevelopmentEndpointSelectorSignal
     // Error parsing type: , name: enableWakewordSignal
-    // Error parsing type: , name: enableNewOnboardingSignal
     // Error parsing type: , name: observerManager
     // Error parsing type: , name: localSettings
     // Error parsing type: , name: developmentEndpointEnabled
     // Error parsing type: , name: wakewordLocallyEnabled
-    // Error parsing type: , name: isNewOnboardingEnabled
     // Error parsing type: , name: $__lazy_storage_$_wakewordEnabled
     // Error parsing type: , name: $__lazy_storage_$_voiceEnabled
     // Error parsing type: , name: $__lazy_storage_$_ttsEnabled

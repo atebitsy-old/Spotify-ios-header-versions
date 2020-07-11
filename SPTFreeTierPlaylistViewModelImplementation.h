@@ -153,6 +153,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long numberOfLoadedItems;
 @property(readonly, nonatomic) unsigned long long numberOfItems;
+- (id)indexForRowId:(id)arg1;
 - (id)trackEntityAtIndex:(long long)arg1;
 - (id)trackViewModelAtIndex:(long long)arg1;
 - (_Bool)isTrackActive:(id)arg1;
@@ -185,6 +186,7 @@
 - (void)trackSelectedAtIndexPath:(id)arg1;
 - (void)trackCloudSelectedAtSection:(unsigned long long)arg1;
 - (void)itemSelectedAtIndexPath:(id)arg1;
+- (id)trackCloudTitle;
 - (id)cloudViewModelAtIndexPath:(id)arg1;
 - (void)deletePlaylist;
 - (id)sharingURLForTrackViewModelAtIndexPath:(id)arg1;

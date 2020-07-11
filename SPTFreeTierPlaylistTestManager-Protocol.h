@@ -10,7 +10,9 @@
 @property(readonly, nonatomic) _Bool useSwiftSponsoredSection;
 @property(readonly, nonatomic) _Bool useSwiftTrackSection;
 @property(readonly, nonatomic) _Bool useTrackCloudProvider;
-@property(readonly, nonatomic) _Bool dontOpenNPVOnPlayback;
+@property(readonly, nonatomic) _Bool dontOpenNPVOnVideoPlayback;
+@property(readonly, nonatomic) _Bool dontOpenNPVOnAudioPlayback;
+@property(readonly, nonatomic) _Bool dontOpenNPVOnPlayButtonPlayback;
 @property(readonly, nonatomic, getter=isDoubleStatePlayButtonEnabled) _Bool doubleStatePlayButtonEnabled;
 @property(readonly, nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled;
 @property(readonly, nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled;

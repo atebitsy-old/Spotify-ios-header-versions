@@ -6,15 +6,18 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class GLUEButton;
+@class GLUEButton, NSLayoutConstraint;
 
 @interface SPTFreeTierPlaylistAdditionalCallToActionCell : UITableViewCell
 {
     GLUEButton *_button;
+    NSLayoutConstraint *_bottomContraint;
 }
 
+@property(retain, nonatomic) NSLayoutConstraint *bottomContraint; // @synthesize bottomContraint=_bottomContraint;
 @property(retain, nonatomic) GLUEButton *button; // @synthesize button=_button;
 - (void).cxx_destruct;
+- (void)configureWithExtraBottomPadding:(_Bool)arg1;
 - (void)setup;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

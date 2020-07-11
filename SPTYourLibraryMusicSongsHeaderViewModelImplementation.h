@@ -37,6 +37,7 @@
 - (void)presentSortingFilterPickerInTargetViewController:(id)arg1;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)play;
+@property(readonly, nonatomic) unsigned long long filterBarButtonType;
 @property(readonly, copy, nonatomic) NSString *searchPlaceholder;
 @property(readonly, copy, nonatomic) NSString *title;
 @property(readonly, copy, nonatomic) NSString *playButtonTitle;

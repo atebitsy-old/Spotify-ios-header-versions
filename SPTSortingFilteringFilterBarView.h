@@ -46,7 +46,7 @@
 - (void)insertFiltersWithTitles:(id)arg1;
 @property(readonly, nonatomic) double filterBarHeight;
 - (void)setupConstraints;
-- (id)initWithSearchPlaceholder:(id)arg1;
+- (id)initWithSearchPlaceholder:(id)arg1 buttonTitle:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

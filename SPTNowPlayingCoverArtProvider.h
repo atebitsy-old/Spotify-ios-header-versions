@@ -29,7 +29,6 @@
 - (Class)cellClass;
 - (id)reuseIdentifier;
 - (unsigned long long)contentType;
-- (long long)priority;
 - (id)initWithTheme:(id)arg1 imageLoaderFactory:(id)arg2;
 
 // Remaining properties

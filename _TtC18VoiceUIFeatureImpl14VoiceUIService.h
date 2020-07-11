@@ -22,20 +22,25 @@
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: clientSessionService
+    // Error parsing type: , name: containerService
     // Error parsing type: , name: voiceViewController
     // Error parsing type: , name: voicePlayerEventListener
     // Error parsing type: , name: voicePlayerLogger
     // Error parsing type: , name: onboardingViewController
+    // Error parsing type: , name: tabBarViewManager
     // Error parsing type: , name: wakewordController
     // Error parsing type: , name: voiceController
-    // Error parsing type: , name: onboardingController
     // Error parsing type: , name: testManager
     // Error parsing type: , name: voiceInteractionSettingsViewModel
+    // Error parsing type: , name: ttsPlaybackLogger
+    // Error parsing type: , name: voiceSourceLogger
+    // Error parsing type: , name: $__lazy_storage_$_onboardingController
     // Error parsing type: , name: $__lazy_storage_$_player
     // Error parsing type: , name: $__lazy_storage_$_linkDispatcher
     // Error parsing type: , name: $__lazy_storage_$_glueTheme
     // Error parsing type: , name: $__lazy_storage_$_microphonePermissionReducer
     // Error parsing type: , name: $__lazy_storage_$_localSettings
+    // Error parsing type: , name: $__lazy_storage_$_eventSender
 }
 
 + (id)serviceIdentifier;

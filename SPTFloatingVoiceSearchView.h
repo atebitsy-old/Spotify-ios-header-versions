@@ -8,7 +8,7 @@
 
 #import "SPTSearchVoiceEnabledView-Protocol.h"
 
-@class GLUEButton, NSLayoutConstraint, NSString, SPTVoiceCalloutTooltipView;
+@class GLUEButton, NSLayoutConstraint, NSString;
 @protocol SPTSearchVoiceEnabledViewDelegate;
 
 @interface SPTFloatingVoiceSearchView : UIView <SPTSearchVoiceEnabledView>
@@ -16,10 +16,8 @@
     id <SPTSearchVoiceEnabledViewDelegate> _voiceDelegate;
     GLUEButton *_microphoneButton;
     NSLayoutConstraint *_bottomConstraint;
-    SPTVoiceCalloutTooltipView *_calloutTooltipView;
 }
 
-@property(retain, nonatomic) SPTVoiceCalloutTooltipView *calloutTooltipView; // @synthesize calloutTooltipView=_calloutTooltipView;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(retain, nonatomic) GLUEButton *microphoneButton; // @synthesize microphoneButton=_microphoneButton;
 @property(nonatomic) __weak id <SPTSearchVoiceEnabledViewDelegate> voiceDelegate; // @synthesize voiceDelegate=_voiceDelegate;
@@ -27,7 +25,6 @@
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)removeVoiceElement;
 - (void)showVoiceElement;
-- (void)showCalloutTooltip;
 - (_Bool)showingVoiceElement;
 - (void)microphoneButtonPressed:(id)arg1;
 - (void)setupLayout;

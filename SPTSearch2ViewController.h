@@ -24,6 +24,7 @@
     SPTSearchHubViewController *_hubViewController;
     SPTProgressView *_progressView;
     GLUEGradientView *_gradientView;
+    CDUnknownBlockType _onOffsetChange;
     id <SPTSearch2ViewModelProvider> _viewModelProvider;
     id <SPTImageLoader> _imageLoader;
     id <GLUETheme> _theme;
@@ -47,6 +48,7 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTSearch2ViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
+@property(copy, nonatomic) CDUnknownBlockType onOffsetChange; // @synthesize onOffsetChange=_onOffsetChange;
 @property(readonly, nonatomic) SPTSearchHubViewController *hubViewController; // @synthesize hubViewController=_hubViewController;
 @property(nonatomic) _Bool automaticallyAdjustsInsets; // @synthesize automaticallyAdjustsInsets=_automaticallyAdjustsInsets;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
@@ -79,6 +81,7 @@
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)sp_updateContentInsets;
 - (void)scrollToTop;
+@property(readonly, nonatomic) struct CGPoint contentOffset;
 @property(readonly, copy, nonatomic) NSString *requestID;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;

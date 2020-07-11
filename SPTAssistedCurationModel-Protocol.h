@@ -15,6 +15,7 @@
 @property(readonly, nonatomic) NSURL *playlistURI;
 @property(readonly, copy, nonatomic) NSString *playlistName;
 @property(nonatomic) __weak id <SPTAssistedCurationModelDelegate> delegate;
+- (_Bool)hasCardProviderWithIdentifier:(NSString *)arg1;
 - (id <SPTAssistedCurationCardModel>)cardAtIndex:(unsigned long long)arg1;
 - (void)load;
 @end

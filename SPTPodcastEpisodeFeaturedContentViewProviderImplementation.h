@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeFeaturedContentViewProvider-Protocol.h"
 
 @class NSString, SPTPodcastEpisodeFeaturedContentContentOperationFactory, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentLogger;
-@protocol GLUEImageLoader, GLUETheme, SPTHubsRendererFactory, SPTHugsFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
+@protocol GLUEImageLoader, GLUETheme, SPTHubsRendererFactory, SPTHugsFactory, SPTLinkDispatcher, SPTMetaViewController, SPTNowPlayingPlatformService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
 @interface SPTPodcastEpisodeFeaturedContentViewProviderImplementation : NSObject <SPTPodcastEpisodeFeaturedContentViewProvider>
 {
@@ -19,6 +19,8 @@
     id <GLUETheme> _theme;
     id <GLUEImageLoader> _imageLoader;
     id <SPTPlayerFeature> _playerService;
+    id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
+    id <SPTMetaViewController> _metaviewController;
     id <SPTPodcastEpisodeFeaturedContentTestManager> _testManager;
     SPTPodcastEpisodeFeaturedContentContentOperationFactory *_contentOperationsFactory;
     SPTPodcastEpisodeFeaturedContentContextMenuPresenter *_contextMenuPresenter;
@@ -31,6 +33,8 @@
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentContextMenuPresenter *contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentContentOperationFactory *contentOperationsFactory; // @synthesize contentOperationsFactory=_contentOperationsFactory;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeFeaturedContentTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) __weak id <SPTMetaViewController> metaviewController; // @synthesize metaviewController=_metaviewController;
+@property(readonly, nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -44,7 +48,7 @@
 - (id)featuredContentTimelineForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentTrackListForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentForEpisodeURL:(id)arg1 withContext:(id)arg2;
-- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 theme:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5 contentOperationFactory:(id)arg6 dataLoader:(id)arg7 contextMenuPresenter:(id)arg8 playerService:(id)arg9 linkDispatcher:(id)arg10 logger:(id)arg11;
+- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 theme:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5 contentOperationFactory:(id)arg6 dataLoader:(id)arg7 contextMenuPresenter:(id)arg8 playerService:(id)arg9 linkDispatcher:(id)arg10 logger:(id)arg11 metaViewController:(id)arg12 nowPlayingPlatformService:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

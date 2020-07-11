@@ -9,6 +9,7 @@
 #import "SPTVoiceLibrarySessionObserver-Protocol.h"
 
 @interface _TtC18VoiceUIFeatureImpl26VoiceLibrarySessionHandler (VoiceUIFeatureImpl) <SPTVoiceLibrarySessionObserver>
+- (void)voiceSessionWillStartListening:(id)arg1;
 - (void)voiceSession:(id)arg1 didUpdateMeanAudioLevel:(float)arg2 rmsAudioLevel:(float)arg3 cdfScaledAudioLevel:(float)arg4;
 - (void)voiceSession:(id)arg1 didReceiveFinalResponse:(id)arg2;
 - (void)voiceSession:(id)arg1 didUpdateIntermediateResponse:(id)arg2;

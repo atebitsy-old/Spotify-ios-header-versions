@@ -9,21 +9,21 @@
 #import "SPTShowEntityService-Protocol.h"
 
 @class NSString, SPTPodcastSortingService;
-@protocol SPTAbbaFeatureFlags, SPTPodcastDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory;
+@protocol SPTPodcastDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastTestManager;
 
 @interface SPTPodcastDataLoaderShowEntityService : NSObject <SPTShowEntityService>
 {
     id <SPTPodcastDataLoader> _dataLoader;
-    id <SPTAbbaFeatureFlags> _featureFlags;
     id <SPTPodcastFactory> _podcastFactory;
     id <SPTPodcastEpisodeFactory> _podcastEpisodeFactory;
     SPTPodcastSortingService *_podcastSortingService;
+    id <SPTPodcastTestManager> _testManager;
 }
 
+@property(readonly, nonatomic) __weak id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPodcastSortingService *podcastSortingService; // @synthesize podcastSortingService=_podcastSortingService;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFactory> podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
 @property(retain, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
-@property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
 - (id)errorWithDescription:(id)arg1;
@@ -35,7 +35,8 @@
 - (void)lookupEpisodeURIs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)lookupEpisodesForShowWithURI:(id)arg1 inRange:(struct _NSRange)arg2 includeEpisode:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (void)lookupShowEntityWithURI:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (id)initWithFeatureFlags:(id)arg1 sortingService:(id)arg2;
+- (id)providePodcastRequestWithRequestData:(id)arg1;
+- (id)initWithSortingService:(id)arg1 podcastFactory:(id)arg2 podcastEpisodeFactory:(id)arg3 testManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

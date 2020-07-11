@@ -7,19 +7,19 @@
 #import <UIKit/UIViewController.h>
 
 #import "HUBViewContentOffsetObserver-Protocol.h"
+#import "SPTBrowseViewControllerProtocol-Protocol.h"
 #import "SPTBrowseViewModelProviderObserver-Protocol.h"
-#import "SPTFindUIContentContainer-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
 @class NSString, NSURL, SPTHubViewController, SPTProgressView, SPTTheme;
-@protocol SPTBrowseLoadingLogger, SPTBrowseViewModelProvider, SPTFindUIContentContainerDelegate, SPTPageContainer;
+@protocol SPTBrowseLoadingLogger, SPTBrowseViewModelProvider, SPTPageContainer;
 
-@interface SPTBrowseViewController : UIViewController <SPTBrowseViewModelProviderObserver, SPTNavigationControllerNavigationBarState, HUBViewContentOffsetObserver, SPTPageController, SPTFindUIContentContainer>
+@interface SPTBrowseViewController : UIViewController <SPTBrowseViewModelProviderObserver, SPTNavigationControllerNavigationBarState, HUBViewContentOffsetObserver, SPTPageController, SPTBrowseViewControllerProtocol>
 {
     _Bool _embedded;
     SPTProgressView *_progressView;
-    id <SPTFindUIContentContainerDelegate> _findContentContainerDelegate;
+    CDUnknownBlockType _onOffsetChange;
     id <SPTBrowseViewModelProvider> _viewModelProvider;
     SPTHubViewController *_hubsViewController;
     unsigned long long _preferredNavigationBarState;
@@ -35,14 +35,14 @@
 @property(nonatomic) unsigned long long preferredNavigationBarState; // @synthesize preferredNavigationBarState=_preferredNavigationBarState;
 @property(readonly, nonatomic) SPTHubViewController *hubsViewController; // @synthesize hubsViewController=_hubsViewController;
 @property(readonly, nonatomic) id <SPTBrowseViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
-@property(nonatomic) __weak id <SPTFindUIContentContainerDelegate> findContentContainerDelegate; // @synthesize findContentContainerDelegate=_findContentContainerDelegate;
+@property(copy, nonatomic) CDUnknownBlockType onOffsetChange; // @synthesize onOffsetChange=_onOffsetChange;
 - (void).cxx_destruct;
 - (void)performIgnoringOffsetChangeCallbacks:(CDUnknownBlockType)arg1;
 - (unsigned long long)navigationBarStateForViewModel:(id)arg1;
 - (struct CGRect)statusBarFrame;
 - (void)updateFindContentContainer;
 - (void)updateWithViewModel:(id)arg1;
-@property(readonly, nonatomic) UIViewController *viewController;
+@property(readonly, nonatomic) struct CGPoint contentOffset;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

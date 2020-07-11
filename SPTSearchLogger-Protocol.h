@@ -9,7 +9,6 @@
 @class NSString;
 
 @protocol SPTSearchLogger <NSObject>
-- (void)logUIImpressionVoiceFloatingMicrophoneTooltipCalloutWithSourceIdentifier:(NSString *)arg1;
 - (void)logUIInteractionLaunchVoiceSearchViewWithSourceIdentifier:(NSString *)arg1;
 - (void)logUIInteractionForClearCurrentSearchStringWithRequestID:(NSString *)arg1;
 @end

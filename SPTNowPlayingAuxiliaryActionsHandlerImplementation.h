@@ -14,7 +14,7 @@
 #import "SPTSleepTimerTimeObserver-Protocol.h"
 
 @class NSString, SPTNowPlayingContextMenuHeaderFactory, SPTNowPlayingLogger, SPTNowPlayingModel, SPTObserverManager;
-@protocol SPContextMenuFeature, SPTContextMenuPresenter, SPTLinkDispatcher, SPTNowPlayingLegacyFeedbackCoordinator, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingTestManager, SPTPodcastContextMenuProvider, SPTPodcastSpeedControlManager, SPTQueueLogger, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTSleepTimerController, SPTSleepTimerService, SPTUIPresentationService, _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_;
+@protocol SPContextMenuFeature, SPTContextMenuPresenter, SPTLinkDispatcher, SPTNowPlayingLegacyFeedbackCoordinator, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingTestManager, SPTPodcastContextMenuProvider, SPTPodcastSpeedControlManager, SPTQueueLogger, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTSleepTimerController, SPTSleepTimerService, SPTUIPresentationService, _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
 @interface SPTNowPlayingAuxiliaryActionsHandlerImplementation : NSObject <SPTNowPlayingAuxiliaryActionsModelObserver, SPTPodcastPreferencesObserver, SPTContextMenuPresenterDelegate, SPTSleepTimerTimeObserver, SPTSleepTimerEventObserver, SPTNowPlayingAuxiliaryActionsHandler>
 {
@@ -38,8 +38,10 @@
     id <SPTSleepTimerController> _sleepTimerController;
     id <SPTShowContextMenuControllerOptions> _podcastContextMenuOptions;
     id <SPTShareFeature> _shareFeature;
+    id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
 }
 
+@property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(readonly, nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(retain, nonatomic) id <SPTShowContextMenuControllerOptions> podcastContextMenuOptions; // @synthesize podcastContextMenuOptions=_podcastContextMenuOptions;
 @property(readonly, nonatomic) id <SPTSleepTimerController> sleepTimerController; // @synthesize sleepTimerController=_sleepTimerController;
@@ -98,7 +100,7 @@
 @property(readonly, nonatomic) _Bool isCurrentTrackInCollection;
 @property(readonly, nonatomic) _Bool isCurrentTrackBanned;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 speedControlManager:(id)arg2 presentationService:(id)arg3 devicePickerPresenter:(id)arg4 contextMenuService:(id)arg5 podcastContextMenuProvider:(id)arg6 nowPlayingManager:(id)arg7 linkDispatcher:(id)arg8 feedbackCoordinator:(id)arg9 modeResolver:(id)arg10 logger:(id)arg11 queueLogger:(id)arg12 testManager:(id)arg13 sleepTimerService:(id)arg14 shareFeature:(id)arg15;
+- (id)initWithModel:(id)arg1 speedControlManager:(id)arg2 presentationService:(id)arg3 devicePickerPresenter:(id)arg4 contextMenuService:(id)arg5 podcastContextMenuProvider:(id)arg6 nowPlayingManager:(id)arg7 linkDispatcher:(id)arg8 feedbackCoordinator:(id)arg9 modeResolver:(id)arg10 logger:(id)arg11 queueLogger:(id)arg12 testManager:(id)arg13 sleepTimerService:(id)arg14 shareFeature:(id)arg15 responsiveShuffleOnboardingController:(id)arg16;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,6 +9,6 @@
 @class NSArray, NSURL, SPTHubsKitViewModel;
 
 @protocol SPTSearchRecentsViewModelBuilder <NSObject>
-- (SPTHubsKitViewModel *)buildWithItems:(NSArray *)arg1 playingTrackURI:(NSURL *)arg2 playingAlbumURI:(NSURL *)arg3;
+- (SPTHubsKitViewModel *)buildWithItems:(NSArray *)arg1 playingTrackURI:(NSURL *)arg2 playingAlbumURI:(NSURL *)arg3 allowPlayback:(_Bool)arg4;
 @end
 

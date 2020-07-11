@@ -8,6 +8,7 @@
 
 @interface _TtC7SPTTing12TrackRowView : UIView
 {
+    // Error parsing type: , name: onTrailingButtonPress
     // Error parsing type: , name: style
     // Error parsing type: , name: leadingImageView
     // Error parsing type: , name: contentView
@@ -16,10 +17,12 @@
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: subtitleAccessory
     // Error parsing type: , name: secondarySubtitleLabel
-    // Error parsing type: , name: trailingImageView
+    // Error parsing type: , name: trailingButton
 }
 
 - (void).cxx_destruct;
+- (void)trailingButtonPressed;
+- (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

@@ -9,6 +9,6 @@
 @class NSURL, SPTSwipeableTableViewCell;
 
 @protocol SPTShelves <NSObject>
-- (void)enableShelvesOnCell:(SPTSwipeableTableViewCell *)arg1 trackURL:(NSURL *)arg2 sourceURL:(NSURL *)arg3 shelfActionCompleted:(void (^)(long long))arg4;
+- (void)enableShelvesOnCell:(SPTSwipeableTableViewCell *)arg1 trackURL:(NSURL *)arg2 sourceURL:(NSURL *)arg3 shelfActionCompleted:(void (^)(long long, long long))arg4;
 @end
 

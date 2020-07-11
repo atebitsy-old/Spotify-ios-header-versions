@@ -17,6 +17,7 @@
     // Error parsing type: , name: downloadState
     // Error parsing type: , name: isPlaying
     // Error parsing type: , name: isPlayable
+    // Error parsing type: , name: isDownloadable
     // Error parsing type: , name: isLiked
     // Error parsing type: , name: minimumHeight
     // Error parsing type: , name: fullHeight
@@ -25,7 +26,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithName:(id)arg1 artists:(id)arg2 artistImage:(id)arg3 metadata:(id)arg4 coverArtImage:(id)arg5 coverArtColor:(id)arg6 downloadState:(long long)arg7 isPlaying:(_Bool)arg8 isPlayable:(_Bool)arg9 isLiked:(_Bool)arg10 minimumHeight:(double)arg11 fullHeight:(double)arg12;
+- (id)initWithName:(id)arg1 artists:(id)arg2 artistImage:(id)arg3 metadata:(id)arg4 coverArtImage:(id)arg5 coverArtColor:(id)arg6 downloadState:(long long)arg7 isPlaying:(_Bool)arg8 isPlayable:(_Bool)arg9 isDownloadable:(_Bool)arg10 isLiked:(_Bool)arg11 minimumHeight:(double)arg12 fullHeight:(double)arg13;
 
 @end
 

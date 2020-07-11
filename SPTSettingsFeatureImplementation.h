@@ -9,11 +9,10 @@
 #import "SPTSettingsFeature-Protocol.h"
 
 @class NSMapTable, NSString, SPTAllocationContext, SettingsRegistryImplementation;
-@protocol SPTAbbaService, SPTClientSettings, SPTContainerService, SPTCoreService, SPTSessionService, SPTURIDispatchService;
+@protocol SPTClientSettings, SPTContainerService, SPTCoreService, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTSettingsFeatureImplementation : NSObject <SPTSettingsFeature>
 {
-    id <SPTAbbaService> _abbaService;
     id <SPTSessionService> _clientSessionService;
     id <SPTCoreService> _coreService;
     id <SPTContainerService> _containerService;
@@ -31,7 +30,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 - (void).cxx_destruct;
 - (id)provideSettingsStructure;
 - (id)provideClientSettings;

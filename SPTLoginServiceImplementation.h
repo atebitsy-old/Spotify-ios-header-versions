@@ -11,7 +11,7 @@
 #import "SPTPageRegistryObserver-Protocol.h"
 #import "SPTPreSignupExperimentationFeatureFlagsLoaderDelegate-Protocol.h"
 
-@class NSError, NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTDynamicSignupFlowController, SPTLoginAttemptLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
+@class NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTDynamicSignupFlowController, SPTLoginAttemptLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
 @protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTFacebookIntegrationService, SPTGLUEService, SPTLoginLoggingService, SPTNetworkService, SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTPreSignupExperimentationService, SPTServiceManagerService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTLoginServiceImplementation : NSObject <SPTPageRegistryObserver, SPTPreSignupExperimentationFeatureFlagsLoaderDelegate, SPTLoginService, SPTLoginLogoutHandler>
@@ -32,7 +32,6 @@
     id <SPTUBIService> _ubiService;
     id <SPTPreSignupExperimentationFeatureFlagsLoader> _flagsLoader;
     id <SPTPreSignupExperimentationFeatureFlags> _featureFlags;
-    NSError *_autoLoginError;
     SPTLoginStateControllerImplementation *_loginStateController;
     SPTLoginKeychainManagerImplementation *_keychainManager;
     SPTObserverManager *_observerManager;
@@ -72,7 +71,6 @@
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTLoginKeychainManagerImplementation *keychainManager; // @synthesize keychainManager=_keychainManager;
 @property(retain, nonatomic) SPTLoginStateControllerImplementation *loginStateController; // @synthesize loginStateController=_loginStateController;
-@property(retain, nonatomic) NSError *autoLoginError; // @synthesize autoLoginError=_autoLoginError;
 @property(retain, nonatomic) id <SPTPreSignupExperimentationFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(retain, nonatomic) id <SPTPreSignupExperimentationFeatureFlagsLoader> flagsLoader; // @synthesize flagsLoader=_flagsLoader;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;

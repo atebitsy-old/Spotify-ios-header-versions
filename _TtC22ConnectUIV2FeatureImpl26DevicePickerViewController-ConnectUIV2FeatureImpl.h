@@ -6,14 +6,7 @@
 
 #import "_TtC22ConnectUIV2FeatureImpl26DevicePickerViewController.h"
 
-@class NSString, NSURL;
-
 @interface _TtC22ConnectUIV2FeatureImpl26DevicePickerViewController (ConnectUIV2FeatureImpl)
-- (id)spt_pageURI;
-- (id)spt_pageIdentifier;
-
-// Remaining properties
-@property(nonatomic, readonly) NSString *pageIdentifier;
-@property(nonatomic, readonly) NSURL *pageURI;
+- (unsigned long long)preferredNavigationBarState;
 @end
 

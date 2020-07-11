@@ -7,21 +7,17 @@
 #import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTDynamicSignupFlowControllerDelegate-Protocol.h"
-#import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTNavigationControllerTransitioning-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTSignupDisplayNameViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupDisplayNameView, SPTSignupDisplayNameViewModel, UIViewController;
+@class NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupDisplayNameView, SPTSignupDisplayNameViewModel, UIViewController;
 @protocol SPTPageContainer;
 
-@interface SPTSignupDisplayNameViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTNavigationControllerTransitioning, UITextFieldDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTSignupDisplayNameViewModelDelegate, SPTLoginViewControllerProtocol>
+@interface SPTSignupDisplayNameViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTNavigationControllerTransitioning, UITextFieldDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTSignupDisplayNameViewModelDelegate>
 {
-    _Bool performLogout;
-    _Bool forgetUserAfterLogout;
-    NSError *error;
     SPTSignupDisplayNameViewModel *_viewModel;
     SPTSignupAnimatedTransitioning *_animatedTransitioning;
     SPTLoginTheme *_theme;
@@ -30,9 +26,6 @@
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupAnimatedTransitioning *animatedTransitioning; // @synthesize animatedTransitioning=_animatedTransitioning;
 @property(retain, nonatomic) SPTSignupDisplayNameViewModel *viewModel; // @synthesize viewModel=_viewModel;
-@property(copy, nonatomic) NSError *error; // @synthesize error;
-@property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
-@property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPopOperationToViewController:(id)arg2;

@@ -13,6 +13,8 @@
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: browseService
     // Error parsing type: , name: glueService
+    // Error parsing type: , name: searchService
+    // Error parsing type: , name: voiceuiService
     // Error parsing type: , name: configurationProperties
 }
 

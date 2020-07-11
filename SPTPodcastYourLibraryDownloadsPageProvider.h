@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory, SPTTheme;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTOfflineManager, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastYourLibraryPageProviderDelegate;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTOfflineManager, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastUITestManager, SPTPodcastYourLibraryPageProviderDelegate;
 
 @interface SPTPodcastYourLibraryDownloadsPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -18,7 +18,6 @@
     NSString *_title;
     NSURL *_URI;
     id <SPTPodcastYourLibraryPageProviderDelegate> _delegate;
-    id <SPTPodcastTestManager> _testManager;
     id <SPTPodcastDataLoader> _dataLoader;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     SPTTheme *_theme;
@@ -49,7 +48,6 @@
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-@property(retain, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryPageProviderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
@@ -58,7 +56,7 @@
 - (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 episodeFactory:(id)arg7 testManager:(id)arg8 offlineManager:(id)arg9 explicitContentAccessManager:(id)arg10 theme:(id)arg11 glueTheme:(id)arg12 cellConfigurator:(id)arg13 cellActionHandlerFactory:(id)arg14 metaViewController:(id)arg15 navigationRouter:(id)arg16 podcastLogger:(id)arg17 viewLoggerFactory:(id)arg18 podcastUITestManager:(id)arg19;
+- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 episodeFactory:(id)arg7 offlineManager:(id)arg8 explicitContentAccessManager:(id)arg9 theme:(id)arg10 glueTheme:(id)arg11 cellConfigurator:(id)arg12 cellActionHandlerFactory:(id)arg13 metaViewController:(id)arg14 navigationRouter:(id)arg15 podcastLogger:(id)arg16 viewLoggerFactory:(id)arg17 podcastUITestManager:(id)arg18;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

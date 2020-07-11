@@ -12,12 +12,14 @@
 
 @interface SPTExternalIntegrationFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
+    _Bool _externalIntegrationCallbacksOnBackgroundThread;
     unsigned long long _externalIntegrationShowingEntityPages;
     NSString *_externalIntegrationShowingEntityPagesString;
 }
 
 @property(retain, nonatomic) NSString *externalIntegrationShowingEntityPagesString; // @synthesize externalIntegrationShowingEntityPagesString=_externalIntegrationShowingEntityPagesString;
 @property(readonly, nonatomic) unsigned long long externalIntegrationShowingEntityPages; // @synthesize externalIntegrationShowingEntityPages=_externalIntegrationShowingEntityPages;
+@property(readonly, nonatomic) _Bool externalIntegrationCallbacksOnBackgroundThread; // @synthesize externalIntegrationCallbacksOnBackgroundThread=_externalIntegrationCallbacksOnBackgroundThread;
 - (void).cxx_destruct;
 - (unsigned long long)mapExternalIntegrationShowingEntityPagesToEnumValue:(id)arg1;
 - (id)propertyModels;

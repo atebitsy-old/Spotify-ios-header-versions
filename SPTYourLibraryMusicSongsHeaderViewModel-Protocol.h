@@ -14,6 +14,7 @@
 @property(readonly, nonatomic, getter=isPlayButtonHiddenWhenFiltering) _Bool playButtonHiddenWhenFiltering;
 @property(readonly, nonatomic, getter=isPlayButtonHidden) _Bool playButtonHidden;
 @property(copy, nonatomic) NSString *textFilter;
+@property(readonly, nonatomic) unsigned long long filterBarButtonType;
 @property(readonly, copy, nonatomic) NSString *searchPlaceholder;
 @property(readonly, copy, nonatomic) NSString *title;
 @property(readonly, copy, nonatomic) NSString *playButtonTitle;

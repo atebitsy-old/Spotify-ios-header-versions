@@ -25,7 +25,6 @@
 - (Class)cellClass;
 - (id)reuseIdentifier;
 - (unsigned long long)contentType;
-- (long long)priority;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

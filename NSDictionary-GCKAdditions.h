@@ -11,7 +11,7 @@
 + (id)hub_dictionaryWithNullableDictionary:(id)arg1;
 + (id)spt_credentialsDictionaryFromCredentials:(id)arg1;
 + (id)spt_sessionStateDictionaryFromSession:(id)arg1;
-+ (id)deviceDictionaryWithDeviceId:(id)arg1 name:(id)arg2 type:(id)arg3 active:(_Bool)arg4 restricted:(_Bool)arg5 watchPairedDevice:(_Bool)arg6;
++ (id)deviceDictionaryWithDeviceId:(id)arg1 physicalId:(id)arg2 name:(id)arg3 type:(id)arg4 active:(_Bool)arg5 restricted:(_Bool)arg6 watchPairedDevice:(_Bool)arg7;
 + (id)deviceDictionaryWithLocalDevice:(id)arg1 localDeviceName:(id)arg2 isActive:(_Bool)arg3;
 + (id)deviceDictionaryWithDevice:(id)arg1 isActive:(_Bool)arg2;
 + (id)connectStateDictionaryWithDevices:(id)arg1 activeRemoteDevice:(id)arg2 localDevice:(id)arg3 localDeviceName:(id)arg4;

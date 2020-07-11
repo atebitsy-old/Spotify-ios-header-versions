@@ -19,12 +19,14 @@
     long long _actionVersion;
     NSDictionary *_actionParameters;
     NSArray *_errors;
+    NSString *_specificationVersion;
     NSString *_specificationCommitHash;
     NSString *_generatorCommitHash;
 }
 
 @property(copy, nonatomic) NSString *generatorCommitHash; // @synthesize generatorCommitHash=_generatorCommitHash;
 @property(copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
+@property(copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
 @property(copy, nonatomic) NSArray *errors; // @synthesize errors=_errors;
 @property(copy, nonatomic) NSDictionary *actionParameters; // @synthesize actionParameters=_actionParameters;
 @property(nonatomic) long long actionVersion; // @synthesize actionVersion=_actionVersion;

@@ -45,6 +45,7 @@
 + (id)stringForEventType:(long long)arg1;
 + (id)stringForLoadType:(long long)arg1;
 + (id)spt_stringValueForConsumer:(long long)arg1;
++ (id)spt_stringValueForErrorType:(long long)arg1;
 + (id)spt_DNSResolveURI;
 + (id)spt_socketCloseURIForIdentifier:(id)arg1;
 + (id)spt_socketWriteURIForIdentifier:(id)arg1;

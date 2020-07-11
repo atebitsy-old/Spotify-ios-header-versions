@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformPreferLinearPlayback <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool preferLinearPlayback;
+@property(nonatomic, readonly) _Bool preferLinearPlayback;
 @end
 

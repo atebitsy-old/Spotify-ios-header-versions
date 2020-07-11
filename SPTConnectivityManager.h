@@ -13,7 +13,7 @@
 
 @interface SPTConnectivityManager : NSObject <SPTConnectivityManager>
 {
-    struct ConnectivityManager *_connectivityManager;
+    unique_ptr_4241c33f _connectivityManager;
     struct TimerManager *_timerManager;
     NSObject<OS_dispatch_queue> *_callbackQueue;
     struct mutex _mutex;
@@ -29,7 +29,7 @@
 @property(nonatomic) __weak id <SPTConnectivityManagerDelegate> delegate; // @synthesize delegate;
 - (id).cxx_construct;
 - (void).cxx_destruct;
-- (struct ConnectivityManager *)cpp;
+@property(readonly, nonatomic) struct ConnectivityManager *cpp;
 @property _Bool keepAliveAPNetwork;
 - (void)setKeepAliveAPNetwork:(_Bool)arg1 callback:(CDUnknownBlockType)arg2;
 - (void)setAllowNetwork:(_Bool)arg1 callback:(CDUnknownBlockType)arg2;
@@ -40,7 +40,7 @@
 @property long long connectionType;
 - (void)addDeferedCallback:(CDUnknownBlockType)arg1 callbackQueue:(id)arg2;
 - (void)invalidate;
-- (id)initWithCoreConnectivityManager:(struct ConnectivityManager *)arg1 scheduler:(id)arg2 timerManager:(struct TimerManager *)arg3 callbackQueue:(id)arg4;
+- (id)initWithCoreConnectivityManager:(unique_ptr_4241c33f)arg1 scheduler:(id)arg2 timerManager:(struct TimerManager *)arg3 callbackQueue:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

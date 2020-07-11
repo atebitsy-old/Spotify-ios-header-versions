@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: voiceSession
     // Error parsing type: , name: executionQueue
+    // Error parsing type: , name: logger
     // Error parsing type: , name: delegate
 }
 

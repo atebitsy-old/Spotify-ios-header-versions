@@ -9,9 +9,9 @@
 @class NSString;
 
 @protocol SPTVoiceLibraryLogger <NSObject>
-- (void)logAudioInputWithUtteranceId:(NSString *)arg1 audioPort:(NSString *)arg2 audioPortOrientation:(NSString *)arg3;
-- (void)logStatusWithUtteranceId:(NSString *)arg1 micPermissionGranted:(_Bool)arg2 isOffline:(_Bool)arg3 connectivityType:(NSString *)arg4;
-- (void)logResultWithUtteranceId:(NSString *)arg1;
-- (void)logErrorWithUtteranceId:(NSString *)arg1 errorDomain:(NSString *)arg2 errorType:(NSString *)arg3 errorDescription:(NSString *)arg4;
+- (void)logVoiceAudioInputWithUtteranceId:(NSString *)arg1 audioPort:(NSString *)arg2 audioPortOrientation:(NSString *)arg3;
+- (void)logVoiceStatusWithUtteranceId:(NSString *)arg1 micPermissionGranted:(_Bool)arg2 isOffline:(_Bool)arg3 connectivityType:(NSString *)arg4;
+- (void)logVoiceResultWithUtteranceId:(NSString *)arg1;
+- (void)logVoiceErrorWithUtteranceId:(NSString *)arg1 errorDomain:(NSString *)arg2 errorType:(NSString *)arg3 errorDescription:(NSString *)arg4;
 @end
 

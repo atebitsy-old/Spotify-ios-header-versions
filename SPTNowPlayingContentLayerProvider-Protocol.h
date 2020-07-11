@@ -14,7 +14,6 @@
 - (_Bool)requiresOverlayForTrack:(SPTPlayerTrack *)arg1;
 - (_Bool)isActiveForTrack:(SPTPlayerTrack *)arg1 playerState:(SPTPlayerState *)arg2;
 - (void)configureCell:(UICollectionViewCell *)arg1 withTrack:(SPTPlayerTrack *)arg2 windowedContentInsets:(struct UIEdgeInsets)arg3 peekingDisallowed:(_Bool)arg4;
-- (long long)priority;
 - (Class)cellClass;
 - (NSString *)reuseIdentifier;
 - (unsigned long long)contentType;

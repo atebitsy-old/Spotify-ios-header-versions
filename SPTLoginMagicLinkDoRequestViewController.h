@@ -6,20 +6,16 @@
 
 #import "SPTLoginTraitAwareViewController.h"
 
-#import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTMagicLinkDoRequestViewModelDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginMagicLinkDoRequestView, SPTLoginMagicLinkDoRequestViewModel, SPTLoginTheme, SPTProgressView;
+@class NSString, NSURL, SPTLoginMagicLinkDoRequestView, SPTLoginMagicLinkDoRequestViewModel, SPTLoginTheme, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginMagicLinkDoRequestViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTPageController, SPTLoginViewControllerProtocol, UITextFieldDelegate, SPTMagicLinkDoRequestViewModelDelegate>
+@interface SPTLoginMagicLinkDoRequestViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTPageController, UITextFieldDelegate, SPTMagicLinkDoRequestViewModelDelegate>
 {
-    _Bool performLogout;
-    _Bool forgetUserAfterLogout;
-    NSError *error;
     SPTLoginMagicLinkDoRequestViewModel *_viewModel;
     SPTProgressView *_progressView;
     SPTLoginTheme *_theme;
@@ -28,9 +24,6 @@
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) SPTLoginMagicLinkDoRequestViewModel *viewModel; // @synthesize viewModel=_viewModel;
-@property(copy, nonatomic) NSError *error; // @synthesize error;
-@property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
-@property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
 - (void)viewModelDidSucceedRequestMagicLink:(id)arg1;
 - (void)viewModel:(id)arg1 didFailRequestMagicLinkWithError:(id)arg2;

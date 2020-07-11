@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastYourLibraryEpisodesViewModelImpl;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryPageProviderDelegate;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastUITestManager, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryPageProviderDelegate;
 
 @interface SPTPodcastYourLibraryEpisodesPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -22,7 +22,6 @@
     id <GLUETheme> _glueTheme;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTPodcastDataLoader> _dataLoader;
-    id <SPTPodcastTestManager> _testManager;
     SPTPodcastEpisodeCellActionHandlerFactory *_cellActionHandlerFactory;
     id <SPTPodcastLogger> _podcastLogger;
     id <SPTPerformanceMetricsViewLoggerFactory> _viewLoggerFactory;
@@ -45,7 +44,6 @@
 @property(retain, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
 @property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) SPTPodcastEpisodeCellActionHandlerFactory *cellActionHandlerFactory; // @synthesize cellActionHandlerFactory=_cellActionHandlerFactory;
-@property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
@@ -58,7 +56,7 @@
 - (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 unfinishedItemsProvider:(id)arg7 episodeFactory:(id)arg8 cellConfigurator:(id)arg9 testManager:(id)arg10 explicitContentAccessManager:(id)arg11 glueTheme:(id)arg12 cellActionHandlerFactory:(id)arg13 metaViewController:(id)arg14 navigationRouter:(id)arg15 podcastLogger:(id)arg16 viewLoggerFactory:(id)arg17 podcastUITestManager:(id)arg18;
+- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 unfinishedItemsProvider:(id)arg7 episodeFactory:(id)arg8 cellConfigurator:(id)arg9 explicitContentAccessManager:(id)arg10 glueTheme:(id)arg11 cellActionHandlerFactory:(id)arg12 metaViewController:(id)arg13 navigationRouter:(id)arg14 podcastLogger:(id)arg15 viewLoggerFactory:(id)arg16 podcastUITestManager:(id)arg17;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

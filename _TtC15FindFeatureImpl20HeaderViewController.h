@@ -13,11 +13,16 @@
 
 @interface _TtC15FindFeatureImpl20HeaderViewController : UIViewController <SPTFindUIHeaderContainer, SPTSearchUISearchControlsDelegate>
 {
+    // Error parsing type: , name: onTextChange
+    // Error parsing type: , name: onModeChange
+    // Error parsing type: , name: onVoiceSearchButtonPress
     // Error parsing type: , name: findHeaderContainerDelegate
     // Error parsing type: , name: theme
     // Error parsing type: , name: findHeaderContainer
     // Error parsing type: , name: searchControlsContainer
     // Error parsing type: , name: searchControls
+    // Error parsing type: , name: voiceuiService
+    // Error parsing type: , name: $__lazy_storage_$_findHeader
     // Error parsing type: , name: mode
 }
 

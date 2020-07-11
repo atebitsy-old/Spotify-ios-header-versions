@@ -6,7 +6,7 @@
 
 #import "GPBRootObject.h"
 
-@interface DeepLinkOpenRoot : GPBRootObject
+@interface DeeplinkOpenRoot : GPBRootObject
 {
 }
 

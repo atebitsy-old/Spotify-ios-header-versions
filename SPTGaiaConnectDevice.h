@@ -26,7 +26,7 @@
     _Bool _shuffleDevice;
     _Bool _supportsLogout;
     float _volume;
-    NSString *_deviceId;
+    NSString *_cosmosDeviceId;
     NSString *_physicalDeviceId;
     NSString *_attachId;
     NSString *_name;
@@ -62,12 +62,14 @@
 @property(copy, nonatomic) NSString *model; // @synthesize model=_model;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *attachId; // @synthesize attachId=_attachId;
-@property(readonly, nonatomic) NSString *physicalDeviceId; // @synthesize physicalDeviceId=_physicalDeviceId;
-@property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
+@property(copy, nonatomic) NSString *physicalDeviceId; // @synthesize physicalDeviceId=_physicalDeviceId;
+@property(copy, nonatomic) NSString *cosmosDeviceId; // @synthesize cosmosDeviceId=_cosmosDeviceId;
 - (void).cxx_destruct;
 - (void)updateVolumeToNewValue:(float)arg1;
 - (void)updateVolumeAfterVolumeDecrease;
 - (void)updateVolumeAfterVolumeIncrease;
+@property(readonly, nonatomic) NSString *loggingIdentifier;
+- (id)deviceId;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithDictionary:(id)arg1 requiresOnboarding:(_Bool)arg2;
 - (id)deviceTypeString;

@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: dimensions
     // Error parsing type: , name: backButtonAction
-    // Error parsing type: , name: imageLoader
     // Error parsing type: , name: gradientBackgroundView
     // Error parsing type: , name: contentView
     // Error parsing type: , name: navigationForegroundView

@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTRecoverAccountCoordinator;
-@protocol SPTContainerService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTRecoverAccountService, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@protocol SPTContainerService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTRecoverAccountService, SPTUBIService, _TtP16ProfileV2Feature19SPTProfileV2Service_;
 
 @interface SPTRecoverAccountSessionServiceImplementation : NSObject <SPTRecoverAccountURIHandlerObserver, SPTService>
 {
@@ -18,7 +18,7 @@
     id <SPTRecoverAccountService> _recoverAccountService;
     id <SPTNetworkService> _networkService;
     id <SPTContainerService> _containerService;
-    id <SPTLoginLoggingService> _loggerService;
+    id <SPTUBIService> _ubiService;
     id <SPTLoginService> _loginService;
     id <_TtP16ProfileV2Feature19SPTProfileV2Service_> _profileService;
     SPTRecoverAccountCoordinator *_coordinator;
@@ -28,7 +28,7 @@
 @property(retain, nonatomic) SPTRecoverAccountCoordinator *coordinator; // @synthesize coordinator=_coordinator;
 @property(nonatomic) __weak id <_TtP16ProfileV2Feature19SPTProfileV2Service_> profileService; // @synthesize profileService=_profileService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
-@property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTRecoverAccountService> recoverAccountService; // @synthesize recoverAccountService=_recoverAccountService;

@@ -10,7 +10,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, NSURL, SPTPlayOrigin;
-@protocol SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistTestManager, SPTMetaViewController, SPTPlayer;
+@protocol SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistTestManager, SPTMetaViewController, SPTPlayer;
 
 @interface SPTShowsFormatPlaylistPlayViewModel : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistPlayViewModel>
 {
@@ -22,11 +22,13 @@
     id <SPTPlayer> _player;
     id <SPTFreeTierPlaylistPlayLogger> _playLogger;
     id <SPTFreeTierPlaylistTestManager> _testManager;
+    id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTMetaViewController> _metaViewController;
 }
 
 @property(nonatomic) _Bool shouldLaunchNPV; // @synthesize shouldLaunchNPV=_shouldLaunchNPV;
 @property(readonly, nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayLogger> playLogger; // @synthesize playLogger=_playLogger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -37,14 +39,15 @@
 - (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (id)playOptions;
-- (void)launchNPV;
+- (void)launchNPVForItemWithRowId:(id)arg1;
+- (void)launchNPVForPlayButtonPlayback;
 @property(readonly, nonatomic, getter=isPlayButtonPausingPlay) _Bool playButtonPausingPlay;
 @property(readonly, nonatomic, getter=isPlayButtonUsedForPlayback) _Bool playButtonUsedForPlayback;
 - (void)playTrackEntity:(id)arg1;
 - (void)play;
 @property(readonly, nonatomic) _Bool shouldShowPlayButton;
 @property(readonly, nonatomic, getter=isPlaylistPlaying) _Bool playlistPlaying;
-- (id)initWithPlayModel:(id)arg1 playViewModel:(id)arg2 playlistURL:(id)arg3 metaViewController:(id)arg4 playOrigin:(id)arg5 player:(id)arg6 playLogger:(id)arg7 testManager:(id)arg8;
+- (id)initWithPlayModel:(id)arg1 playViewModel:(id)arg2 playlistURL:(id)arg3 metaViewController:(id)arg4 playOrigin:(id)arg5 player:(id)arg6 playLogger:(id)arg7 testManager:(id)arg8 itemsViewModel:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

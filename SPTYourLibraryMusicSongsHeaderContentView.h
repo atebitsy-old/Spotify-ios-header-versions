@@ -19,6 +19,7 @@
     id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
     SPTYourLibraryMusicSongsHeaderContentViewStyle *_style;
     NSString *_searchPlaceholder;
+    unsigned long long _filterBarButtonType;
     GLUELabel *_titleLabel;
     GLUELabel *_collapsedTitleLabel;
     UIView *_contentView;
@@ -53,6 +54,7 @@
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) GLUELabel *collapsedTitleLabel; // @synthesize collapsedTitleLabel=_collapsedTitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) unsigned long long filterBarButtonType; // @synthesize filterBarButtonType=_filterBarButtonType;
 @property(readonly, copy, nonatomic) NSString *searchPlaceholder; // @synthesize searchPlaceholder=_searchPlaceholder;
 @property(copy, nonatomic) SPTYourLibraryMusicSongsHeaderContentViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
@@ -71,7 +73,7 @@
 - (void)initializeInterface;
 @property(readonly, nonatomic) double preferredUnCollapsedHeight;
 @property(copy, nonatomic) NSString *title;
-- (id)initWithFrame:(struct CGRect)arg1 sortingFilteringUIFactory:(id)arg2 searchPlaceholder:(id)arg3;
+- (id)initWithFrame:(struct CGRect)arg1 sortingFilteringUIFactory:(id)arg2 searchPlaceholder:(id)arg3 filterBarButtonType:(unsigned long long)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

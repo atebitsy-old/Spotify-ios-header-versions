@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSData, NSString;
+@class NSData, NSError, NSString;
 
 @protocol SPTKeychainManager <NSObject>
 - (_Bool)deleteObjectForDomain:(NSString *)arg1 andKey:(NSString *)arg2 synchronizable:(_Bool)arg3;
 - (_Bool)deleteStringForDomain:(NSString *)arg1 andKey:(NSString *)arg2;
-- (void)setData:(NSData *)arg1 forDomain:(NSString *)arg2 andKey:(NSString *)arg3 synchronizable:(_Bool)arg4;
-- (void)setString:(NSString *)arg1 forDomain:(NSString *)arg2 andKey:(NSString *)arg3;
+- (NSError *)setData:(NSData *)arg1 forDomain:(NSString *)arg2 andKey:(NSString *)arg3 synchronizable:(_Bool)arg4;
+- (NSError *)setString:(NSString *)arg1 forDomain:(NSString *)arg2 andKey:(NSString *)arg3;
 - (NSData *)dataForDomain:(NSString *)arg1 andKey:(NSString *)arg2 synchronizable:(_Bool)arg3;
 - (NSString *)stringForDomain:(NSString *)arg1 andKey:(NSString *)arg2;
 @end

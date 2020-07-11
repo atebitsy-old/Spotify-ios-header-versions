@@ -9,14 +9,16 @@
 #import "SPTWatchConnectivityRequestHandler-Protocol.h"
 
 @class NSString, SPTWatchConnectivityDataLoader;
-@protocol SPTGaiaConnectAPI;
+@protocol SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI;
 
 @interface SPTWatchPlatformConnectRequestHandler : NSObject <SPTWatchConnectivityRequestHandler>
 {
     SPTWatchConnectivityDataLoader *_dataLoader;
     id <SPTGaiaConnectAPI> _connectManager;
+    id <SPTExternalIntegrationPlaybackController> _playbackController;
 }
 
+@property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) __weak SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
@@ -25,7 +27,7 @@
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;
 - (void)sendResponseForRequest:(id)arg1 body:(id)arg2 error:(id)arg3;
-- (id)initWithDataLoader:(id)arg1 connectManager:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 connectManager:(id)arg2 playbackController:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -27,7 +27,6 @@
 - (_Bool)requiresOverlayForTrack:(id)arg1;
 - (_Bool)canExpandForTrack:(id)arg1;
 - (_Bool)canHideControlsForTrack:(id)arg1;
-- (long long)priority;
 - (_Bool)isActiveForTrack:(id)arg1 playerState:(id)arg2;
 - (_Bool)displaysFullScreenContentForTrack:(id)arg1;
 - (unsigned long long)contentType;

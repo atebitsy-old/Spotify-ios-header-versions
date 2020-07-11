@@ -13,14 +13,13 @@
 #import "SPTFreeTierFindViewModelProviderObserver-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTPageController-Protocol.h"
-#import "SPTVoiceTestManagerObserver-Protocol.h"
 #import "SPViewController-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 
 @class HUBContainerView, NSLayoutConstraint, NSString, NSURL, SPTFreeTierFindHeaderView, SPTFreeTierFindHubManager, SPTFreeTierFindLogger, UIView;
-@protocol GLUETheme, SPTFreeTierFindViewControllerDelegate, SPTFreeTierFindViewModelProvider, SPTOfflineModeState, SPTPageContainer, SPTVoiceTestManager;
+@protocol GLUETheme, SPTFreeTierFindViewControllerDelegate, SPTFreeTierFindViewModelProvider, SPTOfflineModeState, SPTPageContainer, _TtP14VoiceUIFeature17SPTVoiceUIService_;
 
-@interface SPTFreeTierFindViewControllerImplementation : UIViewController <SPTFreeTierFindHeaderViewDelegate, UIScrollViewDelegate, SPTFreeTierFindViewModelProviderObserver, HUBViewComponentDelegate, HUBViewContentOffsetObserver, SPTOfflineModeStateObserver, SPViewController, SPTVoiceTestManagerObserver, SPTFreeTierFindViewController, SPTPageController>
+@interface SPTFreeTierFindViewControllerImplementation : UIViewController <SPTFreeTierFindHeaderViewDelegate, UIScrollViewDelegate, SPTFreeTierFindViewModelProviderObserver, HUBViewComponentDelegate, HUBViewContentOffsetObserver, SPTOfflineModeStateObserver, SPViewController, SPTFreeTierFindViewController, SPTPageController>
 {
     _Bool _initialViewModelLoaded;
     _Bool _podcastFeatureEnabled;
@@ -28,7 +27,7 @@
     HUBContainerView *_hubContainerView;
     id <GLUETheme> _theme;
     id <SPTFreeTierFindViewModelProvider> _viewModelProvider;
-    id <SPTVoiceTestManager> _voiceTestmanager;
+    id <_TtP14VoiceUIFeature17SPTVoiceUIService_> _voiceuiService;
     SPTFreeTierFindHeaderView *_findHeaderView;
     UIView *_statusBarBackgroundView;
     SPTFreeTierFindLogger *_logger;
@@ -52,7 +51,7 @@
 @property(readonly, nonatomic) SPTFreeTierFindLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) UIView *statusBarBackgroundView; // @synthesize statusBarBackgroundView=_statusBarBackgroundView;
 @property(retain, nonatomic) SPTFreeTierFindHeaderView *findHeaderView; // @synthesize findHeaderView=_findHeaderView;
-@property(readonly, nonatomic) id <SPTVoiceTestManager> voiceTestmanager; // @synthesize voiceTestmanager=_voiceTestmanager;
+@property(nonatomic) __weak id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
 @property(readonly, nonatomic) id <SPTFreeTierFindViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTFreeTierFindViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
@@ -72,7 +71,6 @@
 - (id)findHeaderButtonAccessibilityLabel;
 - (id)findHeaderButtonTitle;
 - (void)updateHeaderView;
-- (void)testManager:(id)arg1 didChangeVoiceSearchEnabledState:(_Bool)arg2;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)spt_scrollToTop;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;
@@ -90,7 +88,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 hubManager:(id)arg2 logger:(id)arg3 viewModelProvider:(id)arg4 offlineModeState:(id)arg5 podcastFeatureEnabled:(_Bool)arg6 voiceTestManager:(id)arg7 pageURL:(id)arg8 referrerIdentifier:(id)arg9;
+- (id)initWithTheme:(id)arg1 hubManager:(id)arg2 logger:(id)arg3 viewModelProvider:(id)arg4 offlineModeState:(id)arg5 podcastFeatureEnabled:(_Bool)arg6 voiceuiService:(id)arg7 pageURL:(id)arg8 referrerIdentifier:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

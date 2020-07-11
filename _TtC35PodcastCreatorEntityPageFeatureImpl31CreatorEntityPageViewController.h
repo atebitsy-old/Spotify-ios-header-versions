@@ -13,7 +13,6 @@
 
 - (void).cxx_destruct;
 - (id)initWithTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 initialViewModel:(id)arg9 impressionLogger:(id)arg10 loadingLogger:(id)arg11 shareDragDelegateFactory:(id)arg12;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 
 @end

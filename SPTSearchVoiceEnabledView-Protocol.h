@@ -10,7 +10,6 @@
 
 @protocol SPTSearchVoiceEnabledView <NSObject>
 @property(nonatomic) __weak id <SPTSearchVoiceEnabledViewDelegate> voiceDelegate;
-- (void)showCalloutTooltip;
 - (void)removeVoiceElement;
 - (void)showVoiceElement;
 @end

@@ -9,7 +9,7 @@
 #import "SPTEpisodeContextMenuControllerDelegate-Protocol.h"
 
 @class NSString, SPTPodcastLogger;
-@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTOfflineManager, SPTPodcastDataLoader, SPTPodcastOffliningManager, SPTPodcastTestManager, SPTShow, SPTShowEntityService;
+@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTOfflineManager, SPTPodcastDataLoader, SPTPodcastOffliningManager, SPTShow, SPTShowEntityService;
 
 @interface SPTPodcastContextMenuDelegateObject : NSObject <SPTEpisodeContextMenuControllerDelegate>
 {
@@ -20,12 +20,10 @@
     id <SPTShow> _show;
     id <SPTCollectionLogger> _collectionLogger;
     id <SPTCollectionPlatform> _collectionPlatform;
-    id <SPTPodcastTestManager> _testManager;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
 }
 
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
-@property(nonatomic) __weak id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) __weak id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTShow> show; // @synthesize show=_show;
@@ -40,7 +38,7 @@
 - (void)followPodcast:(id)arg1;
 - (void)unfollowPodcast:(id)arg1;
 - (void)loadPodcastWithURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithPodcastOffliningManager:(id)arg1 showEntityService:(id)arg2 dataLoader:(id)arg3 logger:(id)arg4 collectionLogger:(id)arg5 collectionPlatform:(id)arg6 testManager:(id)arg7;
+- (id)initWithPodcastOffliningManager:(id)arg1 showEntityService:(id)arg2 dataLoader:(id)arg3 logger:(id)arg4 collectionLogger:(id)arg5 collectionPlatform:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

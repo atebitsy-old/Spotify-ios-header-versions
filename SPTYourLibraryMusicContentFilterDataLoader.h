@@ -27,7 +27,6 @@
 }
 
 + (id)filterRuleWithName:(id)arg1 query:(id)arg2;
-+ (id)serviceURL;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionSubscriptionToken; // @synthesize collectionSubscriptionToken=_collectionSubscriptionToken;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) NSNumber *downloadFiltersAvailable; // @synthesize downloadFiltersAvailable=_downloadFiltersAvailable;
@@ -50,6 +49,7 @@
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)requestContentFilters;
 - (void)setupDownloadFilterManagement;
+- (id)serviceURL;
 - (void)loadContentFilters;
 - (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2 type:(unsigned long long)arg3 testManager:(id)arg4 productState:(id)arg5 localSettings:(id)arg6;
 

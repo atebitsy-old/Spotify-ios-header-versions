@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: dimensions
-    // Error parsing type: , name: imageView
+    // Error parsing type: , name: $__lazy_storage_$_imageView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: titleProtectionGradient

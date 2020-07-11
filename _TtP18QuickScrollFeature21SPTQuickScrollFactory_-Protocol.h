@@ -8,6 +8,6 @@
 @protocol _TtP18QuickScrollFeature18SPTQuickScrollView_;
 
 @protocol _TtP18QuickScrollFeature21SPTQuickScrollFactory_
-- (UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *)makeQuickScrollWithDragHandle:(_Bool)arg1;
+- (UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *)makeQuickScrollWithDragHandle:(_Bool)arg1 andStyle:(long long)arg2;
 @end
 

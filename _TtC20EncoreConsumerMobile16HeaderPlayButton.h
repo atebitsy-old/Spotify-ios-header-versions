@@ -8,9 +8,13 @@
 
 @interface _TtC20EncoreConsumerMobile16HeaderPlayButton : UIView
 {
+    // Error parsing type: , name: playCircle
+    // Error parsing type: , name: playButtonLayoutGuide
+    // Error parsing type: , name: isPlaying
+    // Error parsing type: , name: playButtonHidden
+    // Error parsing type: , name: shuffleBadgeHidden
     // Error parsing type: , name: tapAction
     // Error parsing type: , name: internalButton
-    // Error parsing type: , name: playCircle
     // Error parsing type: , name: playGlyphLabel
     // Error parsing type: , name: highlightedOverlay
     // Error parsing type: , name: shuffleBadge
@@ -18,13 +22,7 @@
     // Error parsing type: , name: shuffleBadgeHighlightedOverlay
     // Error parsing type: , name: glyphPauseString
     // Error parsing type: , name: glyphPlayString
-    // Error parsing type: , name: navigationBarView
-    // Error parsing type: , name: playButtonLayoutGuide
     // Error parsing type: , name: playCircleTrailingConstraint
-    // Error parsing type: , name: playCircleTrailingMargin
-    // Error parsing type: , name: isPlaying
-    // Error parsing type: , name: playButtonHidden
-    // Error parsing type: , name: shuffleBadgeHidden
 }
 
 - (void).cxx_destruct;

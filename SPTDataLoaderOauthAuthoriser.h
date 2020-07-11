@@ -9,19 +9,17 @@
 #import "SPTDataLoaderAuthorisationHostRegistration-Protocol.h"
 #import "SPTDataLoaderAuthoriser-Protocol.h"
 #import "SPTOauthTaskDelegate-Protocol.h"
-#import "SPTProductStateObserver-Protocol.h"
 
 @class NSMutableArray, NSMutableDictionary, NSString, SPTOauthClient, SPTOauthTask, SPTStartupTracer;
-@protocol SPTDataLoaderAuthoriserDelegate, SPTNetworkConnectivityController, SPTProductState;
+@protocol SPTDataLoaderAuthoriserDelegate, SPTNetworkConnectivityController;
 
-@interface SPTDataLoaderOauthAuthoriser : NSObject <SPTProductStateObserver, SPTOauthTaskDelegate, SPTDataLoaderAuthoriser, SPTDataLoaderAuthorisationHostRegistration>
+@interface SPTDataLoaderOauthAuthoriser : NSObject <SPTOauthTaskDelegate, SPTDataLoaderAuthoriser, SPTDataLoaderAuthorisationHostRegistration>
 {
     NSString *_identifier;
     id <SPTDataLoaderAuthoriserDelegate> _delegate;
     SPTOauthClient *_oauthClient;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTStartupTracer *_startupTracer;
-    id <SPTProductState> _productState;
     NSMutableArray *_pendingRequests;
     NSMutableDictionary *_authorisationHosts;
     SPTOauthTask *_task;
@@ -30,7 +28,6 @@
 @property(retain, nonatomic) SPTOauthTask *task; // @synthesize task=_task;
 @property(retain, nonatomic) NSMutableDictionary *authorisationHosts; // @synthesize authorisationHosts=_authorisationHosts;
 @property(retain, nonatomic) NSMutableArray *pendingRequests; // @synthesize pendingRequests=_pendingRequests;
-@property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
@@ -41,7 +38,6 @@
 - (void)oauthTask:(id)arg1 didReceiveToken:(id)arg2;
 - (void)unregisterAuthorisationHostsName:(id)arg1;
 - (void)registerAuthorisationHosts:(id)arg1 withName:(id)arg2;
-- (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)dealloc;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)refresh;
@@ -54,7 +50,7 @@
 - (void)handleFailure:(id)arg1 forRequests:(id)arg2;
 - (void)injectAuthorisationHeadersIntoRequest:(id)arg1 withTokenType:(id)arg2 andAccessToken:(id)arg3;
 - (id)defaultHostsToAuthenticate;
-- (id)initWithOauthClient:(id)arg1 networkConnectivityController:(id)arg2 startupTracer:(id)arg3 productState:(id)arg4;
+- (id)initWithOauthClient:(id)arg1 networkConnectivityController:(id)arg2 startupTracer:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

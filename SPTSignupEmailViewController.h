@@ -6,29 +6,22 @@
 
 #import "SPTLoginTraitAwareViewController.h"
 
-#import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTSignupEmailViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupEmailViewModel, SPTSignupSingleInputFieldView;
+@class NSString, NSURL, SPTLoginTheme, SPTSignupEmailViewModel, SPTSignupSingleInputFieldView;
 @protocol SPTPageContainer;
 
-@interface SPTSignupEmailViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupEmailViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTSignupEmailViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupEmailViewModelDelegate, SPTPageController>
 {
-    _Bool performLogout;
-    _Bool forgetUserAfterLogout;
-    NSError *error;
     SPTSignupEmailViewModel *_viewModel;
     SPTLoginTheme *_theme;
 }
 
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupEmailViewModel *viewModel; // @synthesize viewModel=_viewModel;
-@property(copy, nonatomic) NSError *error; // @synthesize error;
-@property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
-@property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
 - (void)viewModel:(id)arg1 didEndFullValidationWithError:(id)arg2;
 - (void)viewModelDidBeginFullValidation:(id)arg1;

@@ -12,14 +12,13 @@
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginContinueWithWelcomeContainerView, SPTLoginContinueWithWelcomeViewModel, SPTLoginTheme, SPTProgressView;
+@class NSString, NSURL, SPTLoginContinueWithWelcomeContainerView, SPTLoginContinueWithWelcomeViewModel, SPTLoginTheme, SPTProgressView;
 @protocol SPTPageContainer;
 
 @interface SPTLoginContinueWithWelcomeViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTLoginContinueWithWelcomeContainerViewDelegate, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
-    NSError *error;
     SPTLoginTheme *_theme;
     SPTLoginContinueWithWelcomeViewModel *_viewModel;
     SPTLoginContinueWithWelcomeContainerView *_containerView;
@@ -30,7 +29,6 @@
 @property(retain, nonatomic) SPTLoginContinueWithWelcomeContainerView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) SPTLoginContinueWithWelcomeViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-@property(copy, nonatomic) NSError *error; // @synthesize error;
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;

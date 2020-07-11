@@ -14,7 +14,6 @@
 
 @interface SPTDefaultPodcastPlayer : NSObject <SPTPlayerObserver, SPTPodcastPlayer>
 {
-    _Bool _sortPlaybackOrder;
     id <SPTPodcastPlayerDelegate> _delegate;
     id <SPTPlayer> _player;
     NSURL *_currentlyPlayingTrack;
@@ -28,7 +27,6 @@
 @property(retain, nonatomic) SPTPlayerState *lastState; // @synthesize lastState=_lastState;
 @property(retain, nonatomic) NSURL *currentlyPlayingTrack; // @synthesize currentlyPlayingTrack=_currentlyPlayingTrack;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(nonatomic) _Bool sortPlaybackOrder; // @synthesize sortPlaybackOrder=_sortPlaybackOrder;
 @property(nonatomic) __weak id <SPTPodcastPlayerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)notifyPodcastPlayerStateDidChange;

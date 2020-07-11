@@ -32,7 +32,7 @@
 - (double)timeIntervalForDuration:(long long)arg1;
 - (double)verticalMarginForArrowDirection:(unsigned long long)arg1 anchorRect:(struct CGRect)arg2 tooltip:(id)arg3 inContainerView:(id)arg4;
 - (unsigned long long)arrowDirectionWithAnchorRect:(struct CGRect)arg1 tooltip:(id)arg2 inContainerView:(id)arg3;
-- (id)defaultContentViewWithText:(id)arg1;
+- (id)defaultContentViewWithText:(id)arg1 sizedForContainer:(id)arg2;
 - (void)skipTooltipPresentation;
 - (void)hideTooltipWithCompletionBlock:(CDUnknownBlockType)arg1;
 - (void)presentationDidFinish:(id)arg1;

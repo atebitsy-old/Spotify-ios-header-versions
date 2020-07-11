@@ -8,13 +8,14 @@
 
 @interface _TtC27NavigationLoggerFeatureImpl23NavigationLoggerService : NSObject
 {
+    // Error parsing type: , name: containerService
+    // Error parsing type: , name: navigationRoutingService
+    // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: navigationManager
     // Error parsing type: , name: instrumentationService
-    // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: eventSenderService
-    // Error parsing type: , name: navigationLoggerImplementation
+    // Error parsing type: , name: navigationLogger
 }
 
 + (id)serviceIdentifier;

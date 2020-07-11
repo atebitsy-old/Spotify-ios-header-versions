@@ -6,9 +6,7 @@
 
 #import "_TtC35PodcastCreatorEntityPageFeatureImpl19ChipsViewController.h"
 
-#import "_TtP35PodcastCreatorEntityPageFeatureImpl35UICollectionViewDelegateChipsLayout_-Protocol.h"
-
-@interface _TtC35PodcastCreatorEntityPageFeatureImpl19ChipsViewController (PodcastCreatorEntityPageFeatureImpl3) <_TtP35PodcastCreatorEntityPageFeatureImpl35UICollectionViewDelegateChipsLayout_>
+@interface _TtC35PodcastCreatorEntityPageFeatureImpl19ChipsViewController (PodcastCreatorEntityPageFeatureImpl3)
 - (double)collectionView:(id)arg1 layout:(id)arg2 itemHeight:(double)arg3 widthForItemAt:(id)arg4;
 - (double)itemHeightFor:(id)arg1 layout:(id)arg2;
 @end

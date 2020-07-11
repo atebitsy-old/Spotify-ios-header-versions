@@ -9,7 +9,7 @@
 #import "SPTFreeTierFindService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierFindHubManager, SPTFreeTierFindTestManager, SPTPersistentCache;
-@protocol SPTBrowseService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTScannablesService, SPTSearchPlatformService, SPTSearchService, SPTSessionService, SPTUBIService, SPTVoiceService, _TtP11FindFeature14SPTFindService_;
+@protocol SPTBrowseService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTScannablesService, SPTSearchPlatformService, SPTSearchService, SPTSessionService, SPTUBIService, _TtP11FindFeature14SPTFindService_, _TtP14VoiceUIFeature17SPTVoiceUIService_;
 
 @interface SPTFreeTierFindServiceImplementation : NSObject <SPTFreeTierFindService>
 {
@@ -26,7 +26,7 @@
     id <SPTFreeTierService> _freeTierService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTNavigationFeature> _navigationService;
-    id <SPTVoiceService> _voiceService;
+    id <_TtP14VoiceUIFeature17SPTVoiceUIService_> _voiceuiService;
     id <SPTNetworkService> _networkService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTBrowseService> _browseService;
@@ -44,7 +44,7 @@
 @property(nonatomic) __weak id <SPTBrowseService> browseService; // @synthesize browseService=_browseService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-@property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
+@property(nonatomic) __weak id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
 @property(nonatomic) __weak id <SPTNavigationFeature> navigationService; // @synthesize navigationService=_navigationService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;

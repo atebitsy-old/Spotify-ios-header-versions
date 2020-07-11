@@ -58,6 +58,13 @@ struct AppleSignInCredential {
     struct unique_ptr<spotify::connectivity::auth::credentials::AppleSignInCredential::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::AppleSignInCredential::Impl>> _pimpl;
 };
 
+struct ApplicationConfig {
+    unsigned int _field1;
+    basic_string_90719d97 _field2;
+    basic_string_90719d97 _field3;
+    int _field4;
+};
+
 struct ApplicationScope {
     struct unique_ptr<spotify::connectivity::ApplicationScope::Impl, std::__1::default_delete<spotify::connectivity::ApplicationScope::Impl>> _field1;
 };
@@ -376,7 +383,6 @@ struct CoreCreateOptions {
     struct optional<spotify::http::ConnectionType> _field10;
     function_574b1799 _field11;
     _Bool _field12;
-    struct vector<std::__1::basic_string<char>, std::__1::allocator<std::__1::basic_string<char>>> _field13;
 };
 
 struct CriticalSection {
@@ -384,6 +390,11 @@ struct CriticalSection {
 };
 
 struct DefaultHashFunctions;
+
+struct DeviceConfig {
+    basic_string_90719d97 _field1;
+    basic_string_90719d97 _field2;
+};
 
 struct DeviceInfo {
     basic_string_90719d97 _field1;
@@ -728,6 +739,17 @@ struct NSString {
     Class _field1;
 };
 
+struct NetworkConfig {
+    _Bool _field1;
+    _Bool _field2;
+    int _field3;
+    struct optional<unsigned char> _field4;
+    struct optional<unsigned char> _field5;
+    struct optional<unsigned int> _field6;
+    basic_string_90719d97 _field7;
+    struct optional<spotify::http::ConnectionType> _field8;
+};
+
 struct NetworkInfo {
     _Bool _field1;
     _Bool _field2;
@@ -776,6 +798,10 @@ struct PendingMessageStorageImpl {
     _Bool _field10;
     _Bool _field11;
     function_84aba934 _field12;
+};
+
+struct PerformanceConfig {
+    _Bool _field1;
 };
 
 struct PlayOrigin {
@@ -830,6 +856,8 @@ struct PreparePlayOptions {
 struct ProductState;
 
 struct PropertyManager;
+
+struct ProxyAnalyticsDelegate;
 
 struct ProxyContextPlayer;
 
@@ -1161,11 +1189,6 @@ struct VISREFColorExtractionConfiguration {
     double _field8;
     double _field9;
     double _field10;
-};
-
-struct WebgateConfig {
-    basic_string_90719d97 _field1;
-    struct UserAgentParameters _field2;
 };
 
 struct _NSRange {
@@ -1879,6 +1902,11 @@ struct shared_ptr<spotify::client::ApplicationStateTracker::Impl> {
     struct __shared_weak_count *_field2;
 };
 
+struct shared_ptr<spotify::connectivity::ProxyAnalyticsDelegate> {
+    struct ProxyAnalyticsDelegate *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+};
+
 struct shared_ptr<spotify::connectivity::auth::oauth::Client> {
     struct Client *__ptr_;
     struct __shared_weak_count *__cntrl_;
@@ -2217,6 +2245,12 @@ struct unique_ptr<spotify::connectivity::ApplicationScope::Impl, std::__1::defau
 struct unique_ptr<spotify::connectivity::ConnectionTypeProvider, std::__1::default_delete<spotify::connectivity::ConnectionTypeProvider>> {
     struct __compressed_pair<spotify::connectivity::ConnectionTypeProvider *, std::__1::default_delete<spotify::connectivity::ConnectionTypeProvider>> {
         struct ConnectionTypeProvider *__value_;
+    } __ptr_;
+};
+
+struct unique_ptr<spotify::connectivity::ConnectivityManager, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> {
+    struct __compressed_pair<spotify::connectivity::ConnectivityManager *, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> {
+        struct ConnectivityManager *__value_;
     } __ptr_;
 };
 
@@ -2857,20 +2891,41 @@ typedef struct {
 } Builder_d6bb03b6;
 
 typedef struct {
+    struct AuthenticationConfig {
+        basic_string_90719d97 _field1;
+    } _field1;
+    struct CacheConfig _field2;
+    struct DeviceConfig _field3;
+    struct ApplicationConfig _field4;
+    struct NetworkConfig _field5;
+    struct PerformanceConfig _field6;
+} Configuration_3b123c39;
+
+typedef struct {
+    struct UserAgentParameters _field1;
+    basic_string_90719d97 _field2;
+} Configuration_8f369f2b;
+
+typedef struct {
     struct ClientVersionConfig _field1;
     struct CacheConfig _field2;
     struct AuthenticationConfig {
         basic_string_90719d97 _field1;
-        struct vector<std::__1::basic_string<char>, std::__1::allocator<std::__1::basic_string<char>>> _field2;
-        basic_string_90719d97 _field3;
+        basic_string_90719d97 _field2;
     } _field3;
     struct RequestAccountingConfig _field4;
-    struct WebgateConfig _field5;
-} Configuration_2d1f22a6;
+    struct Configuration {
+        struct UserAgentParameters _field1;
+        basic_string_90719d97 _field2;
+    } _field5;
+} Configuration_e2c0990e;
 
 typedef struct {
-    struct WebgateConfig _field1;
-} Configuration_39ad8b5f;
+    struct Configuration {
+        struct UserAgentParameters _field1;
+        basic_string_90719d97 _field2;
+    } _field1;
+} Configuration_5f5d6941;
 
 #endif
 
@@ -3183,6 +3238,12 @@ typedef struct span<const spotify::uri::SpotifyLink> {
     struct SpotifyLink *_field1;
     unsigned long long _field2;
 } span_60459498;
+
+typedef struct unique_ptr<spotify::connectivity::ConnectivityManager, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> {
+    struct __compressed_pair<spotify::connectivity::ConnectivityManager *, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> {
+        struct ConnectivityManager *__value_;
+    } __ptr_;
+} unique_ptr_4241c33f;
 
 typedef struct unique_ptr<spotify::connectivity::auth::AuthSession, std::__1::default_delete<spotify::connectivity::auth::AuthSession>> {
     struct __compressed_pair<spotify::connectivity::auth::AuthSession *, std::__1::default_delete<spotify::connectivity::auth::AuthSession>> {

@@ -10,18 +10,20 @@
 #import "SPTService-Protocol.h"
 
 @class NSMutableArray, NSString, SPTAllocationContext;
-@protocol SPTExternalIntegrationContentService, SPTNetworkService, SPTSessionService;
+@protocol SPTExternalIntegrationContentService, SPTExternalIntegrationTestManagerService, SPTNetworkService, SPTSessionService;
 
 @interface SPTExternalIntegrationAlbumContentProviderService : NSObject <SPTService, SPTExternalIntegrationContentProvider>
 {
     id <SPTExternalIntegrationContentService> _contentService;
     id <SPTNetworkService> _networkService;
     id <SPTSessionService> _sessionService;
+    id <SPTExternalIntegrationTestManagerService> _testManagerService;
     NSMutableArray *_activeDataLoaders;
 }
 
 + (id)serviceIdentifier;
 @property(readonly, nonatomic) NSMutableArray *activeDataLoaders; // @synthesize activeDataLoaders=_activeDataLoaders;
+@property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;

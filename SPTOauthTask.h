@@ -6,28 +6,30 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTOauthTaskDelegate;
+@protocol SPTConnectivityAsyncScheduler, SPTOauthTaskDelegate;
 
 @interface SPTOauthTask : NSObject
 {
     struct unique_ptr<spotify::connectivity::oauth::objc::SPTAuthSchedulerBridge, std::__1::default_delete<spotify::connectivity::oauth::objc::SPTAuthSchedulerBridge>> _scheduler;
     function_88b465b1 _callback;
     shared_ptr_b60d0e1e _completion;
-    CDUnknownBlockType _startOperation;
     id <SPTOauthTaskDelegate> _delegate;
+    CDUnknownBlockType _startOperation;
+    id <SPTConnectivityAsyncScheduler> _coreScheduler;
 }
 
-@property(readonly, nonatomic) __weak id <SPTOauthTaskDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) shared_ptr_b60d0e1e *completion; // @synthesize completion=_completion;
 @property(readonly, nonatomic) const function_88b465b1 *callback; // @synthesize callback=_callback;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(copy, nonatomic) CDUnknownBlockType startOperation; // @synthesize startOperation=_startOperation;
+@property(nonatomic) __weak id <SPTOauthTaskDelegate> delegate; // @synthesize delegate=_delegate;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) struct Scheduler *scheduler;
 - (void)cancel;
 - (void)start;
 - (void)setDelegate:(id)arg1 onScheduler:(id)arg2;
-- (id)initWithStartOperation:(CDUnknownBlockType)arg1;
+- (id)initWithStartOperation:(CDUnknownBlockType)arg1 coreScheduler:(id)arg2;
 
 @end
 

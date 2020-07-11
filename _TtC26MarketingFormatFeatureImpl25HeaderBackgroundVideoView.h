@@ -8,9 +8,10 @@
 
 @interface _TtC26MarketingFormatFeatureImpl25HeaderBackgroundVideoView : UIView
 {
-    // Error parsing type: , name: videoGravity
+    // Error parsing type: , name: videoLoader
     // Error parsing type: , name: queuePlayer
     // Error parsing type: , name: playerLooper
+    // Error parsing type: , name: videoURL
 }
 
 + (Class)layerClass;

@@ -43,10 +43,11 @@
 - (void)markAsUnplayed:(id)arg1 atIndexPath:(id)arg2;
 - (void)presentMarkAsPlayedSnackbarForEpisode:(id)arg1 atIndexPath:(id)arg2;
 - (void)displayContextMenuForEpisode:(id)arg1 sender:(id)arg2 indexPath:(id)arg3;
+- (void)logPlaybackToggledWithEpisode:(id)arg1 indexPath:(id)arg2 played:(_Bool)arg3 unfinishedEpisode:(_Bool)arg4;
 - (_Bool)isPlayingEpisode:(id)arg1;
 - (void)pauseEpisode:(id)arg1 indexPath:(id)arg2;
 - (void)playEpisode:(id)arg1 indexPath:(id)arg2;
-- (void)togglePlaybackForEpisode:(id)arg1 indexPath:(id)arg2;
+- (_Bool)togglePlaybackForEpisode:(id)arg1 indexPath:(id)arg2;
 - (void)didSelectHeaderForCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)didSelectDescriptionForCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)didSelectCell:(id)arg1 atIndexPath:(id)arg2;

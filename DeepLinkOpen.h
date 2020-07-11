@@ -8,7 +8,7 @@
 
 @class NSString;
 
-@interface DeepLinkOpen : GPBMessage
+@interface DeeplinkOpen : GPBMessage
 {
 }
 

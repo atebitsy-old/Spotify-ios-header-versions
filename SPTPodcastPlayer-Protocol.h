@@ -10,7 +10,6 @@
 @protocol SPTPodcastEpisode, SPTPodcastPlayerDelegate;
 
 @protocol SPTPodcastPlayer <NSObject>
-@property(nonatomic) _Bool sortPlaybackOrder;
 @property(readonly, nonatomic, getter=isPaused) _Bool paused;
 @property(readonly, nonatomic) _Bool isPlayingPodcastEpisode;
 @property(readonly, nonatomic) double currentTrackDuration;

@@ -10,6 +10,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_ContextMenuButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_ItemEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)swipeRemoveLikeWithItemNoLongerLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)swipeAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)swipeLikeWithItemToBeLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)longHitUiReveal;

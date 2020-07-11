@@ -13,7 +13,7 @@
 
 - (void).cxx_destruct;
 - (void)send_didTapPlaybackButtonWithPerformTapPlaybackButton:(CDUnknownBlockType)arg1;
-- (void)send_didTapNegativeFeedbackButtonWithFeedbackButton:(id)arg1 performNegativeFeedback:(CDUnknownBlockType)arg2;
+- (void)send_didTapNegativeFeedbackButtonWithFeedbackButton:(id)arg1;
 - (void)send_skipToNextWithPerformSkipToNext:(CDUnknownBlockType)arg1;
 - (void)send_didTapPositiveFeedbackButtonWithFeedbackButton:(id)arg1 performPositiveFeedback:(CDUnknownBlockType)arg2;
 - (void)send_adPlayerDisplayLinkDidFireWithTrack:(id)arg1 shouldEnableSkipControl:(_Bool)arg2 shouldShowSkipControl:(_Bool)arg3 nextNPVButton:(id)arg4 prevNPVButton:(id)arg5 redisplaySkipControl:(_Bool)arg6 position:(double)arg7 skipDelaySecs:(double)arg8;

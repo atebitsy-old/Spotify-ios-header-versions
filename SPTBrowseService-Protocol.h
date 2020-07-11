@@ -6,12 +6,12 @@
 
 #import "SPTService-Protocol.h"
 
-@class NSURL;
-@protocol SPTFindUIContentContainer;
+@class NSURL, UIViewController;
+@protocol SPTBrowseViewControllerProtocol;
 
 @protocol SPTBrowseService <SPTService>
 - (_Bool)ownsPageWithURI:(NSURL *)arg1;
 @property(nonatomic, readonly) CDUnknownBlockType cardsTransformer;
-- (id <SPTFindUIContentContainer>)provideBrowseContentContainer;
+- (UIViewController<SPTBrowseViewControllerProtocol> *)makeViewController;
 @end
 

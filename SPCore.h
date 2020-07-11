@@ -15,6 +15,8 @@
 
 @interface SPCore : NSObject <SPTAuthSessionDelegate, SPTAuthLoginTaskDelegate, SPTCoreLoginController>
 {
+    struct shared_ptr<spotify::connectivity::ProxyAnalyticsDelegate> _cppConnectivityProxyAnalyticsDelegate;
+    struct unique_ptr<spotify::connectivity::ApplicationScope, std::__1::default_delete<spotify::connectivity::ApplicationScope>> _cppConnectivity;
     struct unique_ptr<spotify::client::Core, std::__1::default_delete<spotify::client::Core>> _core;
     SPSession *_session;
     id <SPTCoreLoginControllerDelegate> _loginControllerDelegate;

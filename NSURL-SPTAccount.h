@@ -418,17 +418,14 @@
 @property(readonly, nonatomic, getter=spt_URLIsEmailURL) _Bool isEmailURL;
 @property(readonly, nonatomic, getter=spt_displayTimeFromURL) NSString *displayTimeFromURL;
 @property(readonly, nonatomic, getter=spt_timestampFromURL) NSNumber *timestampFromURL;
-@property(readonly, nonatomic, getter=spt_internalVideoURLFromShowURL) NSURL *internalVideoURLFromShowURL;
 @property(readonly, nonatomic, getter=spt_internalPodcastURLFromShowURL) NSURL *internalPodcastURLFromShowURL;
 @property(readonly, nonatomic, getter=spt_internalPodcastEpisodeURLFromPodcastEpisodeURL) NSURL *internalPodcastEpisodeURLFromPodcastEpisodeURL;
 - (id)spt_urlFromPodmarksURL;
-@property(readonly, nonatomic, getter=spt_isVideoShowsHubViewURI) _Bool isVideoShowsHubViewURI;
 @property(readonly, nonatomic, getter=spt_isEpisodesCollectionURL) _Bool spt_episodesCollectionURL;
 @property(readonly, nonatomic, getter=spt_isPodcastUnplayedEpisodesCollectionURL) _Bool isPodcastUnplayedEpisodesCollectionURL;
 @property(readonly, nonatomic, getter=spt_isPodcastCollectionURL) _Bool isPodcastCollectionURL;
 - (_Bool)isPodcastURLComponents;
 - (_Bool)isLegacyPodcastURLComponents;
-- (_Bool)isInternalVideoURLComponents;
 - (_Bool)isInternalPodcastURLComponents;
 - (_Bool)isInternalPodcastEpisodeURLComponents;
 - (_Bool)isPodcastEpisodeURLComponents;
@@ -439,7 +436,6 @@
 @property(readonly, nonatomic, getter=spt_podcastID) NSString *podcastID;
 @property(readonly, nonatomic, getter=spt_isCollectionDownloadsURL) _Bool isCollectionDownloadsURL;
 @property(readonly, nonatomic, getter=spt_isCollectionEpisodesURL) _Bool isCollectionEpisodesURL;
-@property(readonly, nonatomic, getter=spt_isInternalVideoURL) _Bool isInternalVideoURL;
 @property(readonly, nonatomic, getter=spt_isInternalPodcastURL) _Bool isInternalPodcastURL;
 @property(readonly, nonatomic, getter=spt_isInternalPodcastEpisodeURL) _Bool isInternalPodcastEpisodeURL;
 @property(readonly, nonatomic, getter=spt_isPodcastEpisodeURL) _Bool isPodcastEpisodeURL;
