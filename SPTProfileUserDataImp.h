@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTProfileUserData-Protocol.h"
+#import "SPTProfileUserDataLegacy-Protocol.h"
 
 @class NSHashTable, NSString, NSURL, SPTUser;
 
-@interface SPTProfileUserDataImp : NSObject <SPTProfileUserData>
+@interface SPTProfileUserDataImp : NSObject <SPTProfileUserDataLegacy>
 {
     SPTUser *_user;
     NSHashTable *_observers;

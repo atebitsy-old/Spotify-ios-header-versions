@@ -7,16 +7,20 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter, SPTViewLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileAssistedCurationEventFactory, SPTViewLogger;
 
 @interface SPTAssistedCurationLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     id <SPTViewLogger> _viewLogger;
+    id <SPTUBILogger> _ubiLogger;
+    id <SPTUBIMobileAssistedCurationEventFactory> _eventFactory;
     NSURL *_playlistURI;
 }
 
 @property(readonly, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
+@property(retain, nonatomic) id <SPTUBIMobileAssistedCurationEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
@@ -24,16 +28,16 @@
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
 - (void)logUIImpressionWithSectionId:(id)arg1 index:(long long)arg2 renderType:(id)arg3;
 - (void)logAudioPreviewTrackURI:(id)arg1 index:(long long)arg2 sectionId:(id)arg3;
-- (void)logAddTrackFromAccessoryTrackURI:(id)arg1 index:(long long)arg2 sectionId:(id)arg3;
+- (void)logAddTrackFromAccessoryTrackURI:(id)arg1 index:(long long)arg2 cardId:(id)arg3 cardPosition:(long long)arg4;
 - (void)logTapTrackURI:(id)arg1 index:(long long)arg2 sectionId:(id)arg3;
 - (void)logDidLoadCardProviderId:(id)arg1 index:(long long)arg2;
-- (void)logBackButtonTapped;
+- (void)logBackButtonTappedWhileSearching:(_Bool)arg1;
 - (void)logSearchTap;
 - (void)logViewDidFailToLoadWithPageIdentifier:(id)arg1 dataSource:(long long)arg2;
 - (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1 dataSource:(long long)arg2;
 - (void)logViewDidLoadWithPageIdentifier:(id)arg1 dataSource:(long long)arg2;
 - (void)logViewLoadingStartedWithPageIdentifier:(id)arg1 reason:(long long)arg2;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 playlistURI:(id)arg3;
+- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventFactory:(id)arg3 ubiLogger:(id)arg4 playlistURI:(id)arg5;
 
 @end
 

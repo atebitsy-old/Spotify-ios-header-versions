@@ -23,16 +23,11 @@
 @property(copy, nonatomic) NSString *languageTag; // @synthesize languageTag=_languageTag;
 @property(retain, nonatomic) NSMutableArray *languageTagComponents; // @synthesize languageTagComponents=_languageTagComponents;
 - (void).cxx_destruct;
-- (_Bool)languageTagComponentsHasClosedCaption;
-- (void)addClosedCaptionSubtitleComponentsIfNeeded;
-- (void)removeClosedCaptionSubtitleComponentsIfNeeded;
 @property(readonly, copy) NSString *description;
 @property(readonly, copy) NSString *debugDescription;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly) unsigned long long hash;
-- (id)bestMatch:(id)arg1;
 @property(readonly, nonatomic, getter=isClosedCaption) _Bool closedCaption;
-- (id)initWithLanguageTag:(id)arg1 isClosedCaption:(_Bool)arg2;
 - (id)initWithLanguageTag:(id)arg1;
 
 // Remaining properties

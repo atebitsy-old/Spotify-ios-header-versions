@@ -12,7 +12,7 @@
 #import "SPTVoiceTestManagerSettingsDelegate-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVoiceOnboardingManager, SPTVoiceSessionHandlingOptions, SPTVoiceTabBarViewManager, SPTVoiceTestManagerImplementation;
-@protocol SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTExternalIntegrationPlaybackService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRadioManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceAudioRecorderFactory, SPTVoiceLoggerProtocol, SPTVoiceOnboardingRecordPermissionsState, SPTVoiceSessionViewControllerFactory, _TtP14VoiceUIFeature17SPTVoiceUIService_;
+@protocol SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTExternalIntegrationPlaybackService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRadioManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceAudioRecorderFactory, SPTVoiceLoggerProtocol, SPTVoiceOnboardingRecordPermissionsState, SPTVoicePlayerEventsListener, SPTVoiceSessionViewControllerFactory, _TtP14VoiceUIFeature17SPTVoiceUIService_;
 
 @interface SPTVoiceServiceImplementation : NSObject <SPTVoiceTestManagerObserver, SPTVoiceTestManagerSettingsDelegate, SPTVoiceTabBarViewManagerDelegate, SPTVoiceService>
 {
@@ -43,9 +43,11 @@
     id <SPTPageRegistrationToken> _defaultVoicePageRegistration;
     id <SPTVoiceOnboardingRecordPermissionsState> _permissionsReducer;
     SPTVoiceSessionHandlingOptions *_sessionHandlingOptions;
+    id <SPTVoicePlayerEventsListener> _playerEventListener;
 }
 
 + (id)serviceIdentifier;
+@property(readonly, nonatomic) id <SPTVoicePlayerEventsListener> playerEventListener; // @synthesize playerEventListener=_playerEventListener;
 @property(retain, nonatomic) SPTVoiceSessionHandlingOptions *sessionHandlingOptions; // @synthesize sessionHandlingOptions=_sessionHandlingOptions;
 @property(retain, nonatomic) id <SPTVoiceOnboardingRecordPermissionsState> permissionsReducer; // @synthesize permissionsReducer=_permissionsReducer;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> defaultVoicePageRegistration; // @synthesize defaultVoicePageRegistration=_defaultVoicePageRegistration;
@@ -96,6 +98,7 @@
 - (_Bool)didDisplayVoiceCalloutTooltip;
 - (_Bool)didFinishVoiceOnboarding;
 - (void)provideWithRadioManager:(id)arg1;
+- (id)providePlayerEventListener;
 - (id)provideTestManager;
 - (void)launchVoiceWithReferrerIdentifier:(id)arg1;
 - (id)createViewControllerFactoryWithVoiceSessionFactory:(id)arg1 presentationOptions:(id)arg2 commandHandlingOptions:(id)arg3;

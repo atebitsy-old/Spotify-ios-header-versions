@@ -23,7 +23,7 @@
 @property(readonly, nonatomic) NSString *endpoint; // @synthesize endpoint=_endpoint;
 - (id).cxx_construct;
 - (void).cxx_destruct;
-- (struct Request)cppRequestForHost:(id)arg1;
+@property(readonly, nonatomic) struct Request cppRequest;
 - (optional_331450e3)cppTimeout;
 @property(nonatomic) double timeout;
 - (id)initWithEndpoint:(id)arg1 usingMethod:(id)arg2 withHeaders:(id)arg3 withBody:(id)arg4;

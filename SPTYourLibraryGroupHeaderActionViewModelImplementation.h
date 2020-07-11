@@ -6,23 +6,23 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierCreatePlaylistControllerDelegate-Protocol.h"
+#import "SPTCreatePlaylistControllerDelegate-Protocol.h"
 #import "SPTYourLibraryGroupHeaderActionViewModel-Protocol.h"
 
 @class NSString, SPTYourLibraryLogger;
-@protocol SPTFreeTierCreatePlaylistController;
+@protocol SPTCreatePlaylistController;
 
-@interface SPTYourLibraryGroupHeaderActionViewModelImplementation : NSObject <SPTFreeTierCreatePlaylistControllerDelegate, SPTYourLibraryGroupHeaderActionViewModel>
+@interface SPTYourLibraryGroupHeaderActionViewModelImplementation : NSObject <SPTCreatePlaylistControllerDelegate, SPTYourLibraryGroupHeaderActionViewModel>
 {
     _Bool _visible;
     NSString *_accessibilityLabel;
     long long _icon;
-    id <SPTFreeTierCreatePlaylistController> _createPlaylistController;
+    id <SPTCreatePlaylistController> _createPlaylistController;
     SPTYourLibraryLogger *_logger;
 }
 
 @property(retain, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) id <SPTFreeTierCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
+@property(retain, nonatomic) id <SPTCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
 @property(readonly, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
 @property(readonly) long long icon; // @synthesize icon=_icon;
 @property(readonly, copy) NSString *accessibilityLabel; // @synthesize accessibilityLabel=_accessibilityLabel;

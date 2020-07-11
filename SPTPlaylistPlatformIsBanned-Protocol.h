@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformIsBanned <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool isBanned;
+@property(nonatomic, readonly) _Bool isBanned;
 @end
 

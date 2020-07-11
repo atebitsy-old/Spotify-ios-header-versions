@@ -10,7 +10,7 @@
 #import "SPTPodcastTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastDataLoaderShowEntityService, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactory, SPTPodcastSortingService, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
-@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastLogger, SPTPodcastOffliningService, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTUIPresentationService, SPTURIDispatchService, SPTUserBehaviourInstrumentation, SPTVideoCoordinatorService;
+@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastLogger, SPTPodcastOffliningService, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, _TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_;
 
 @interface SPTPodcastFeatureImplementation : SPTUIPageService <SPTPodcastTestManagerObserver, SPTPodcastFeature>
 {
@@ -43,7 +43,8 @@
     id <SPTPodcastUIService> _podcastUIService;
     id <SPTPodcastOffliningService> _podcastOffliningService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTUserBehaviourInstrumentation> _ubiService;
+    id <SPTUBIUserBehaviourInstrumentation> _ubiService;
+    id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> _podcastCreatorEntityPageEntryPointsService;
     SPTPodcastFeatureProperties *_featureProperties;
     SPTPodcastDataLoaderShowEntityService *_showEntityService;
     id <SPTPodcastContextMenuProvider> _defaultContextMenuProvider;
@@ -88,7 +89,8 @@
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> defaultContextMenuProvider; // @synthesize defaultContextMenuProvider=_defaultContextMenuProvider;
 @property(retain, nonatomic) SPTPodcastDataLoaderShowEntityService *showEntityService; // @synthesize showEntityService=_showEntityService;
 @property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentation> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> podcastCreatorEntityPageEntryPointsService; // @synthesize podcastCreatorEntityPageEntryPointsService=_podcastCreatorEntityPageEntryPointsService;
+@property(nonatomic) __weak id <SPTUBIUserBehaviourInstrumentation> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastOffliningService> podcastOffliningService; // @synthesize podcastOffliningService=_podcastOffliningService;
 @property(nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;

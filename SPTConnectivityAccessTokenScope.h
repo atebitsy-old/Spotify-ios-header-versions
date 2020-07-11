@@ -20,7 +20,7 @@
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (struct ConnectionBuilder)connectionBuilder;
-- (id)initWithSession:(id)arg1 applicationScope:(id)arg2;
+- (id)initWithApplicationScope:(id)arg1 session:(id)arg2 configuration:(id)arg3;
 
 @end
 

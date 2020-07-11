@@ -10,21 +10,21 @@
 #import "SPTHiddenContentModelDelegate-Protocol.h"
 #import "SPTHiddenContentViewModel-Protocol.h"
 
-@class NSArray, NSError, NSString, SPTHiddenContentPerfLogger, SPTTheme;
+@class NSArray, NSError, NSString, SPTHiddenContentLogger, SPTTheme;
 @protocol SPTAgeVerificationProvider, SPTAudioPreviewModel, SPTAudioPreviewPlayer, SPTContextMenuActionsProvider, SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTExplicitContentAccessManager, SPTHiddenContentArtistViewModel, SPTHiddenContentModel, SPTHiddenContentTrackViewModel, SPTHiddenContentViewModelDelegate, SPTLinkDispatcher;
 
 @interface SPTHiddenContentViewModelImplementation : NSObject <SPTExplicitContentEnabledStateObserver, SPTHiddenContentViewModel, SPTHiddenContentModelDelegate>
 {
     _Bool _loadPending;
     id <SPTHiddenContentViewModelDelegate> _delegate;
-    unsigned long long _selectedTab;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTContextMenuActionsProvider> _contextMenuActionsProvider;
     id <SPTContextMenuOptionsFactory> _contextMenuOptionsFactory;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
     id <SPTHiddenContentModel> _model;
+    unsigned long long _selectedTab;
     SPTTheme *_theme;
-    SPTHiddenContentPerfLogger *_perfLogger;
+    SPTHiddenContentLogger *_logger;
     NSString *_title;
     NSArray<SPTHiddenContentTrackViewModel> *_trackViewModels;
     NSError *_trackFetchError;
@@ -46,14 +46,14 @@
 @property(copy, nonatomic) NSArray<SPTHiddenContentTrackViewModel> *trackViewModels; // @synthesize trackViewModels=_trackViewModels;
 @property(nonatomic, getter=isLoadPending) _Bool loadPending; // @synthesize loadPending=_loadPending;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-@property(retain, nonatomic) SPTHiddenContentPerfLogger *perfLogger; // @synthesize perfLogger=_perfLogger;
+@property(retain, nonatomic) SPTHiddenContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(nonatomic) unsigned long long selectedTab; // @synthesize selectedTab=_selectedTab;
 @property(retain, nonatomic) id <SPTHiddenContentModel> model; // @synthesize model=_model;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(retain, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
 @property(retain, nonatomic) id <SPTContextMenuActionsProvider> contextMenuActionsProvider; // @synthesize contextMenuActionsProvider=_contextMenuActionsProvider;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(nonatomic) unsigned long long selectedTab; // @synthesize selectedTab=_selectedTab;
 @property(nonatomic) __weak id <SPTHiddenContentViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
@@ -64,12 +64,15 @@
 - (void)hiddenContentModel:(id)arg1 didLoadArtists:(id)arg2;
 - (void)hiddenContentModel:(id)arg1 didFailToLoadTracksWithError:(id)arg2;
 - (void)hiddenContentModel:(id)arg1 didLoadTracks:(id)arg2;
+- (void)logArtistContextMenuTapped:(id)arg1;
+- (void)logTrackContextMenuTapped:(id)arg1;
+- (void)logTrackPreviewTapped:(id)arg1;
 - (long long)indexForArtistViewModel:(id)arg1;
 - (id)artistViewModelAtIndex:(long long)arg1;
 - (void)selectArtistAtIndex:(long long)arg1;
-- (long long)indexForTrackViewModel:(id)arg1;
 - (id)trackViewModelAtIndex:(long long)arg1;
 - (void)selectTrackAtIndex:(long long)arg1;
+- (void)selectTab:(unsigned long long)arg1 userInitiated:(_Bool)arg2;
 - (void)loadModel;
 - (void)stopAudioPreview;
 @property(readonly, copy, nonatomic) NSString *artistsTabAccessibilityFormat;
@@ -86,7 +89,7 @@
 @property(readonly, copy, nonatomic) NSString *selectedTabEmptyTitleMessage;
 @property(readonly, nonatomic) unsigned long long selectedTabState;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 contextMenuPresenterFactory:(id)arg3 contextMenuOptionsFactory:(id)arg4 contextMenuActionsProvider:(id)arg5 audioPreviewModelFactory:(id)arg6 audioPreviewPlayer:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 theme:(id)arg10 perfLogger:(id)arg11 title:(id)arg12;
+- (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 contextMenuPresenterFactory:(id)arg3 contextMenuOptionsFactory:(id)arg4 contextMenuActionsProvider:(id)arg5 audioPreviewModelFactory:(id)arg6 audioPreviewPlayer:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 theme:(id)arg10 logger:(id)arg11 title:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

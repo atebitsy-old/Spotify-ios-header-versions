@@ -9,7 +9,7 @@
 #import "SPTHomeService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHomeContentCache, SPTHomeHubManager;
-@protocol SPTDrivingStateDetectionService, SPTFeatureFlagFactory, SPTFeedHeartBeatManager, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeTestManager, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUserBehaviourHubsInstrumentation, SPTUserBehaviourInstrumentationService, _TtP17FollowFeedFeature20SPTFollowFeedService_;
+@protocol SPTDrivingStateDetectionService, SPTFeatureFlagFactory, SPTFeedHeartBeatManager, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeTestManager, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIHubsUtilities, SPTUBIService, _TtP17FollowFeedFeature20SPTFollowFeedService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -31,23 +31,25 @@
     id <SPTFreeTierTasteOnboardingService> _tasteOnboardingService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
+    id <SPTSeedASessionService> _seedASessionService;
     id <SPTHomeTestManager> _testManager;
     SPTHomeHubManager *_hubManager;
     SPTHomeContentCache *_homeContentCache;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeedHeartBeatManager> _feedHeartBeatManager;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(retain, nonatomic) id <SPTFeedHeartBeatManager> feedHeartBeatManager; // @synthesize feedHeartBeatManager=_feedHeartBeatManager;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(retain, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(retain, nonatomic) id <SPTHomeTestManager> testManager; // @synthesize testManager=_testManager;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTSeedASessionService> seedASessionService; // @synthesize seedASessionService=_seedASessionService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingService> tasteOnboardingService; // @synthesize tasteOnboardingService=_tasteOnboardingService;

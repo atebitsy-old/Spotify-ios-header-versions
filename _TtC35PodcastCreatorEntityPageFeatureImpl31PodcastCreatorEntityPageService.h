@@ -10,8 +10,10 @@
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl31PodcastCreatorEntityPageService : NSObject
 {
-    // Error parsing type: , name: pageRegistrationToken
+    // Error parsing type: , name: creatorPageRegistrationToken
+    // Error parsing type: , name: creatorShowPageRegistrationToken
     // Error parsing type: , name: flags
+    // Error parsing type: , name: creatorLoader
     // Error parsing type: , name: $__lazy_storage_$_viewProvider
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
@@ -21,13 +23,16 @@
     // Error parsing type: , name: browseService
     // Error parsing type: , name: podcastUiService
     // Error parsing type: , name: homeUiService
+    // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: performanceService
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
 - (id)provideFlags;
-- (id)provideFollowFeedViewControllerWith:(id)arg1 context:(id)arg2;
+- (id)provideCreatorShowsPageViewControllerWith:(id)arg1 context:(id)arg2;
+- (id)providePageLoadedViewControllerWith:(id)arg1 context:(id)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

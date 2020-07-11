@@ -6,12 +6,13 @@
 
 #import "HUBComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithChildren-Protocol.h"
 
 @class NSArray, SPTPremiumDestinationGLUETheme, UIView;
 @protocol HUBComponentViewChildDelegate;
 
-@interface SPTPremiumDestinationValueComparisonCardComponentView : HUBComponentView <HUBComponentViewWithChildren>
+@interface SPTPremiumDestinationValueComparisonCardComponentView : HUBComponentView <HUBComponentViewWithChildren, HUBComponentViewObserver>
 {
     id <HUBComponentViewChildDelegate> _childDelegate;
     SPTPremiumDestinationGLUETheme *_theme;
@@ -27,6 +28,8 @@
 - (id)constraintsForChildComponentView:(id)arg1 previousComponentView:(id)arg2 size:(struct CGSize)arg3;
 - (void)removeChildComponentViews:(id)arg1;
 - (void)setupChildComponentsForModel:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;

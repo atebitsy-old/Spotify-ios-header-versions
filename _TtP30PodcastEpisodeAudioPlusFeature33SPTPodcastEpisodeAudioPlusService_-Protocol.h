@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP30PodcastEpisodeAudioPlusFeature38SPTPodcastEpisodeAudioPlusViewProvider_;
+
 @protocol _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_ <SPTService>
+- (id <_TtP30PodcastEpisodeAudioPlusFeature38SPTPodcastEpisodeAudioPlusViewProvider_>)provideAudioPlusViewProvider;
 @end
 

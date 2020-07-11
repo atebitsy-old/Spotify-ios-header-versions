@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTNowPlayingAuxiliaryActionsHandlerImplementation, SPTNowPlayingLogger, SPTNowPlayingModeViewControllerRegistryImplementation, SPTNowPlayingModel, SPTNowPlayingTrackMetadataQueue, SPTTheme;
+@class SPTNowPlayingAuxiliaryActionsHandlerImplementation, SPTNowPlayingLogger, SPTNowPlayingModeViewControllerRegistryImplementation, SPTNowPlayingModel, SPTStatefulPlayer, SPTTheme;
 @protocol SPTGaiaDevicesAvailableViewProvider, SPTLinkDispatcher, SPTLocalSettings, SPTNowPlayingPlaybackActionsHandler, SPTNowPlayingTestManager, SPTPlayer;
 
 @interface SPTNowPlayingSideBarViewControllerFactory : NSObject
@@ -21,12 +21,12 @@
     SPTTheme *_theme;
     id <SPTLocalSettings> _localSettings;
     id <SPTPlayer> _player;
-    SPTNowPlayingTrackMetadataQueue *_trackMetadataQueue;
+    SPTStatefulPlayer *_statefulPlayer;
     id <SPTGaiaDevicesAvailableViewProvider> _devicesAvailableViewProvider;
 }
 
 @property(retain, nonatomic) id <SPTGaiaDevicesAvailableViewProvider> devicesAvailableViewProvider; // @synthesize devicesAvailableViewProvider=_devicesAvailableViewProvider;
-@property(retain, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
+@property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -46,7 +46,7 @@
 - (id)providePlaybackControlsViewController;
 - (id)providePodcastInformationViewController;
 - (id)provideInformationViewController;
-- (id)initWithNowPlayingModel:(id)arg1 nowPlayingLogger:(id)arg2 auxiliaryActionsHandler:(id)arg3 playbackActionsHandler:(id)arg4 linkDispatcher:(id)arg5 testManager:(id)arg6 theme:(id)arg7 localSettings:(id)arg8 player:(id)arg9 trackMetadataQueue:(id)arg10 devicesAvailableViewProvider:(id)arg11;
+- (id)initWithNowPlayingModel:(id)arg1 nowPlayingLogger:(id)arg2 auxiliaryActionsHandler:(id)arg3 playbackActionsHandler:(id)arg4 linkDispatcher:(id)arg5 testManager:(id)arg6 theme:(id)arg7 localSettings:(id)arg8 player:(id)arg9 statetfulPlayer:(id)arg10 devicesAvailableViewProvider:(id)arg11;
 
 @end
 

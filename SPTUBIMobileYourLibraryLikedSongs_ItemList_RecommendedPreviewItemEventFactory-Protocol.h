@@ -11,6 +11,7 @@
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendedPreviewItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)longHitUiReveal;
+- (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendedPreviewItem_HideButtonEventFactory>)hideButtonFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendedPreviewItem_HeartButtonEventFactory>)heartButtonFactory;

@@ -9,7 +9,7 @@
 #import "SPTVolumeService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSliderViewFactory, SPTVolumeSystemPopupHideEmitter, SPTVolumeUbiLogger;
-@protocol CosmosFeature, GaiaFeature, SPTAbbaService, SPTContainerService, SPTGaiaConnectAPI, SPTPlayerFeature, SPTUserBehaviourInstrumentationService, SPTVolumeAPI, SPTVolumeFlagsManager, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
+@protocol CosmosFeature, GaiaFeature, SPTAbbaService, SPTContainerService, SPTGaiaConnectAPI, SPTPlayerFeature, SPTUBIService, SPTVolumeAPI, SPTVolumeFlagsManager, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeServiceImplementation : NSObject <SPTVolumeService>
 {
@@ -18,7 +18,7 @@
     id <CosmosFeature> _cosmosService;
     id <SPTAbbaService> _abbaService;
     id <SPTPlayerFeature> _playerService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <SPTVolumeAPI> _volumeManager;
     SPTVolumeMobileToMobileCoordinator *_mobileToMobileManager;
     SPTVolumeRemotePopupPresenter *_remoteVolumePopupPresenter;
@@ -48,7 +48,7 @@
 @property(retain, nonatomic) SPTVolumeRemotePopupPresenter *remoteVolumePopupPresenter; // @synthesize remoteVolumePopupPresenter=_remoteVolumePopupPresenter;
 @property(retain, nonatomic) SPTVolumeMobileToMobileCoordinator *mobileToMobileManager; // @synthesize mobileToMobileManager=_mobileToMobileManager;
 @property(retain, nonatomic) id <SPTVolumeAPI> volumeManager; // @synthesize volumeManager=_volumeManager;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;

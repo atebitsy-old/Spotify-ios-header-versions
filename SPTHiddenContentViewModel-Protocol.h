@@ -20,15 +20,17 @@
 @property(readonly, copy, nonatomic) NSString *selectedTabEmptyTitleMessage;
 @property(readonly, nonatomic) long long selectedTabResultsCount;
 @property(readonly, nonatomic) unsigned long long selectedTabState;
-@property(nonatomic) unsigned long long selectedTab;
+@property(readonly, nonatomic) unsigned long long selectedTab;
 @property(nonatomic) __weak id <SPTHiddenContentViewModelDelegate> delegate;
-- (long long)indexForArtistViewModel:(id <SPTHiddenContentArtistViewModel>)arg1;
-- (long long)indexForTrackViewModel:(id <SPTHiddenContentTrackViewModel>)arg1;
+- (void)logArtistContextMenuTapped:(id <SPTHiddenContentArtistViewModel>)arg1;
+- (void)logTrackContextMenuTapped:(id <SPTHiddenContentTrackViewModel>)arg1;
+- (void)logTrackPreviewTapped:(id <SPTHiddenContentTrackViewModel>)arg1;
 - (id <SPTHiddenContentArtistViewModel>)artistViewModelAtIndex:(long long)arg1;
 - (id <SPTHiddenContentTrackViewModel>)trackViewModelAtIndex:(long long)arg1;
 - (void)selectArtistAtIndex:(long long)arg1;
 - (void)selectTrackAtIndex:(long long)arg1;
 - (void)loadModel;
 - (void)stopAudioPreview;
+- (void)selectTab:(unsigned long long)arg1 userInitiated:(_Bool)arg2;
 @end
 

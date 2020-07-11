@@ -7,9 +7,10 @@
 #import "SPTService-Protocol.h"
 
 @class SPTVoiceLibrarySessionHandlingOptions;
-@protocol SPTVoiceLibraryMicrophonePermissionsState, SPTVoiceLibrarySessionFactory;
+@protocol SPTVoiceLibraryMicrophonePermissionsState, SPTVoiceLibrarySessionFactory, SPTVoiceLibraryWakeword;
 
 @protocol SPTVoiceLibraryService <SPTService>
+- (id <SPTVoiceLibraryWakeword>)provideWakeword;
 - (id <SPTVoiceLibraryMicrophonePermissionsState>)provideMicrophonePermissionsReducer;
 - (id <SPTVoiceLibrarySessionFactory>)createVoiceSessionFactoryWithConsumer:(long long)arg1 sessionHandlingOptions:(SPTVoiceLibrarySessionHandlingOptions *)arg2;
 @end

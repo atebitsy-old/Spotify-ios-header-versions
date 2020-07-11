@@ -15,13 +15,12 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUEEmptyStateView, GLUELabel, NSString, NSURL, SPTHiddenContentArtistCellConfigurator, SPTHiddenContentCountedLabel, SPTHiddenContentTrackCellConfigurator, SPTSegmentedControl, UITableView;
-@protocol GLUETheme, SPTHiddenContentViewModel, SPTLogCenter, SPTPageContainer;
+@protocol GLUETheme, SPTHiddenContentViewModel, SPTPageContainer;
 
 @interface SPTHiddenContentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPContentInsetViewController, SPTHiddenContentTrackCellDelegate, SPTHiddenContentArtistCellDelegate, SPTPageController, SPTHiddenContentViewModelDelegate>
 {
     id <SPTHiddenContentViewModel> _viewModel;
     id <GLUETheme> _theme;
-    id <SPTLogCenter> _logCenter;
     SPTSegmentedControl *_tabControl;
     SPTHiddenContentCountedLabel *_tracksCountedLabel;
     SPTHiddenContentCountedLabel *_artistsCountedLabel;
@@ -40,7 +39,6 @@
 @property(retain, nonatomic) SPTHiddenContentCountedLabel *artistsCountedLabel; // @synthesize artistsCountedLabel=_artistsCountedLabel;
 @property(retain, nonatomic) SPTHiddenContentCountedLabel *tracksCountedLabel; // @synthesize tracksCountedLabel=_tracksCountedLabel;
 @property(retain, nonatomic) SPTSegmentedControl *tabControl; // @synthesize tabControl=_tabControl;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTHiddenContentViewModel> viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
@@ -63,16 +61,14 @@
 - (void)hiddenContentArtistCellContextMenuTapped:(id)arg1 tappedArtistViewModel:(id)arg2;
 - (void)hiddenContentTrackCellContextMenuTapped:(id)arg1 tappedTrackViewModel:(id)arg2;
 - (void)hiddenContentTrackCellPreviewTapped:(id)arg1;
-- (void)logTapOnArtistAtIndex:(long long)arg1;
-- (void)logTapOnTrackAtIndex:(long long)arg1;
-- (void)selectTabAtIndex:(long long)arg1;
+- (void)selectTabAtIndex:(long long)arg1 userInitiated:(_Bool)arg2;
 - (void)tabControlChanged:(id)arg1;
 - (void)addConstraints;
 - (void)initializeInterface;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 audioPreviewModelFactory:(id)arg4 audioPreviewUIFactory:(id)arg5 logCenter:(id)arg6;
+- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 audioPreviewModelFactory:(id)arg4 audioPreviewUIFactory:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

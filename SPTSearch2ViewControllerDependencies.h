@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPContextMenuFeature, SPTAgeVerificationService, SPTContainerService, SPTExplicitContentService, SPTGLUEService, SPTHubsRendererFactory, SPTLogCenter, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
+@protocol SPContextMenuFeature, SPTAgeVerificationService, SPTContainerService, SPTExplicitContentService, SPTGLUEService, SPTHubsRendererFactory, SPTLogCenter, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTSearch2ViewControllerDependencies : NSObject
 {
@@ -25,12 +25,12 @@
     id <SPContextMenuFeature> _contextMenuService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTAgeVerificationService> _ageVerificationService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <SPTURIDispatchService> _uriDispatchService;
 }
 
 @property(readonly, nonatomic) id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(readonly, nonatomic) id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(readonly, nonatomic) id <SPTAgeVerificationService> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(readonly, nonatomic) id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(readonly, nonatomic) id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;

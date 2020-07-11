@@ -6,29 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSString;
+@class NSArray, NSString, SPTConnectivityWebgateUserAgentParameters;
 
 @interface SPTConnectivityAuthenticatedScopeConfiguration : NSObject
 {
     _Bool _includePayloads;
-    _Bool _webgateSupportsCacheDirectives;
     NSString *_clientVersionLong;
     NSString *_cachePath;
     NSString *_clientId;
     NSArray *_clientOauthScopes;
     NSString *_deviceId;
     NSString *_webgateLocale;
-    NSString *_webgateUserAgentAppVersion;
-    NSString *_webgateUserAgentAppPlatform;
-    NSString *_webgateUserAgentOsVersion;
-    NSString *_webgateUserAgentExtraInformation;
+    SPTConnectivityWebgateUserAgentParameters *_webgateUserAgentParameters;
 }
 
-@property(nonatomic) _Bool webgateSupportsCacheDirectives; // @synthesize webgateSupportsCacheDirectives=_webgateSupportsCacheDirectives;
-@property(copy, nonatomic) NSString *webgateUserAgentExtraInformation; // @synthesize webgateUserAgentExtraInformation=_webgateUserAgentExtraInformation;
-@property(copy, nonatomic) NSString *webgateUserAgentOsVersion; // @synthesize webgateUserAgentOsVersion=_webgateUserAgentOsVersion;
-@property(copy, nonatomic) NSString *webgateUserAgentAppPlatform; // @synthesize webgateUserAgentAppPlatform=_webgateUserAgentAppPlatform;
-@property(copy, nonatomic) NSString *webgateUserAgentAppVersion; // @synthesize webgateUserAgentAppVersion=_webgateUserAgentAppVersion;
+@property(retain, nonatomic) SPTConnectivityWebgateUserAgentParameters *webgateUserAgentParameters; // @synthesize webgateUserAgentParameters=_webgateUserAgentParameters;
 @property(copy, nonatomic) NSString *webgateLocale; // @synthesize webgateLocale=_webgateLocale;
 @property(nonatomic) _Bool includePayloads; // @synthesize includePayloads=_includePayloads;
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;

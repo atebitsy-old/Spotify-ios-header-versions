@@ -13,6 +13,7 @@
 
 @interface SPTCollectionPlatformConfigurationImplementation : NSObject <SPTCollectionPlatformConfiguration>
 {
+    NSURL *_collectionSongsImageURL;
     id <SPTCollectionPlatformPropertiesManager> _testManager;
     SPTCollectionPlatformEntityConfirmationPresenter *_confirmationPresenter;
     UIImage *_selectedOverlayImage;
@@ -23,6 +24,7 @@
 @property(retain, nonatomic) UIImage *selectedOverlayImage; // @synthesize selectedOverlayImage=_selectedOverlayImage;
 @property(readonly, nonatomic) SPTCollectionPlatformEntityConfirmationPresenter *confirmationPresenter; // @synthesize confirmationPresenter=_confirmationPresenter;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformPropertiesManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) NSURL *collectionSongsImageURL; // @synthesize collectionSongsImageURL=_collectionSongsImageURL;
 - (void).cxx_destruct;
 - (id)trackURI;
 - (_Bool)isFollowURL:(id)arg1;
@@ -33,7 +35,8 @@
 - (id)localfilesImportDialogForPlaylistCount:(unsigned long long)arg1 songsCount:(unsigned long long)arg2;
 - (id)entityNuxTitleForType:(unsigned long long)arg1 entityName:(id)arg2;
 - (id)nuxTitleForType:(unsigned long long)arg1;
-- (id)collectionDailyMixPositiveIntentAddedToCollection:(_Bool)arg1;
+- (id)provideFreeTierCollectionActionButtonItemForEntityType:(unsigned long long)arg1 target:(id)arg2 action:(SEL)arg3;
+- (id)provideFreeTierCollectionActionButtonForEntityType:(unsigned long long)arg1 target:(id)arg2 action:(SEL)arg3;
 - (id)provideCollectionActionButtonItemForEntityType:(unsigned long long)arg1 target:(id)arg2 action:(SEL)arg3;
 - (id)provideCollectionActionButtonForEntityType:(unsigned long long)arg1 target:(id)arg2 action:(SEL)arg3;
 - (void)showCollectionConfirmationProgressViewForBannedState:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3;
@@ -52,19 +55,15 @@
 - (id)actionNameForItemWithFollowState:(_Bool)arg1 entityURL:(id)arg2;
 - (long long)actionIconForItemWithFollowState:(_Bool)arg1 entityURL:(id)arg2;
 - (id)actionNameForTrackWithCollectionState:(_Bool)arg1;
-- (id)actionNameForItemsWithCollectionState:(_Bool)arg1 entityURL:(id)arg2;
 - (id)actionNameForItemWithCollectionState:(_Bool)arg1 entityURL:(id)arg2;
 - (id)actionIconColorForItemWithCollectionState:(_Bool)arg1;
 - (long long)actionIconForItemWithCollectionState:(_Bool)arg1 entityURL:(id)arg2;
 - (long long)iconForItemInCollection:(_Bool)arg1 entityURL:(id)arg2;
-@property(readonly, nonatomic, getter=isRemoveActionPresentInPlaylist) _Bool removeActionPresentInPlaylist;
 @property(readonly, nonatomic) NSString *collectionSongsSearchPlaceholder;
-@property(readonly, nonatomic) NSURL *collectionSongsImageURL; // @dynamic collectionSongsImageURL;
 @property(readonly, nonatomic) long long collectionIcon;
 @property(readonly, nonatomic) NSString *collectionRecentlyPlayedSongsTitle;
 @property(readonly, nonatomic) NSString *collectionSongsTitle;
 @property(readonly, nonatomic) NSString *collectionPlayingFromTitle;
-@property(readonly, nonatomic) long long contentInCollectionIcon;
 @property(readonly, nonatomic) NSString *collectionTitle;
 - (id)initWithConfimationPresenter:(id)arg1 testManager:(id)arg2;
 

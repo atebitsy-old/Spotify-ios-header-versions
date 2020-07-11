@@ -21,6 +21,7 @@
     _Bool _hasMore;
     NSURL *_playlistURL;
     id <SPTFreeTierPlaylistSortingFiltering> _sortingFiltering;
+    NSPointerArray *_observers;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     id <SPTPlaylistModel> _playlistModel;
     id <SPTCollectionPlatform> _collectionPlatform;
@@ -37,12 +38,10 @@
     id <SPTPlaylistPlatformDataLoaderRequestToken> _metadataSubscription;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _followCountSubscription;
     unsigned long long _onDemandType;
-    NSPointerArray *_observers;
     struct _NSRange _currentWindow;
     struct _NSRange _loadedWindow;
 }
 
-@property(readonly, nonatomic) NSPointerArray *observers; // @synthesize observers=_observers;
 @property(nonatomic) struct _NSRange loadedWindow; // @synthesize loadedWindow=_loadedWindow;
 @property(nonatomic) struct _NSRange currentWindow; // @synthesize currentWindow=_currentWindow;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
@@ -68,6 +67,7 @@
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 - (void).cxx_destruct;
 - (void)addPlaylistModelObserver:(id)arg1;
+@property(readonly, copy, nonatomic) NSPointerArray *observers; // @synthesize observers=_observers;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
@@ -76,13 +76,9 @@
 - (id)playOptionsForShufflePlay:(_Bool)arg1 skipToTrack:(id)arg2;
 - (id)playlistPlatformPlayOptionsForShufflePlay:(_Bool)arg1 playOrigin:(id)arg2;
 - (void)addTrackURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)updateDescription:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)renamePlaylistToName:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)moveTrack:(id)arg1 before:(_Bool)arg2 targetTrack:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)removeTracks:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updateModelWithPlaylistSortingFiltering:(id)arg1;
-- (void)updateMetadataWithResponse:(id)arg1 tracksResponse:(struct SPTPlaylistPlatformDataLoaderResponse *)arg2 recommendations:(id)arg3;
-- (void)loadMetadataAndAllTracks;
+- (void)updateMetadataWithResponse:(id)arg1 tracksResponse:(SPTPlaylistPlatformDataLoaderResponse_5db64d04 *)arg2 recommendations:(id)arg3;
 - (void)loadMetadataAndTracks;
 - (_Bool)shouldIncludeEpisodes;
 - (_Bool)showOnlyPlayableTracks;
@@ -106,7 +102,6 @@
 - (void)shufflePlayWithPlayOrigin:(id)arg1;
 - (void)prepareLoad;
 - (unsigned long long)calculateOnDemandTypeWithMetadata:(id)arg1;
-- (void)loadEntirePlaylist;
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (void)dealloc;

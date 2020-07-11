@@ -6,18 +6,18 @@
 
 #import "SPTUIPageService.h"
 
-@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTFreeTierCreatePlaylistService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUIPresentationService, SPTUserBehaviourInstrumentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18FilterChipsFeature21SPTFilterChipsService_, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP21PageLoaderViewFeature24SPTPageLoaderViewService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18FilterChipsFeature21SPTFilterChipsService_, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTYourLibraryMusicUIService : SPTUIPageService
 {
     id <SPTAudioPreviewService> _audioPreviewService;
     id <SPTSessionService> _clientSessionService;
-    id <SPTFreeTierCreatePlaylistService> _createPlaylistService;
+    id <SPTCreatePlaylistService> _createPlaylistService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTContainerUIService> _containerUIService;
     id <SPContextMenuFeature> _contextMenuService;
     id <SPTCoreService> _coreService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <SPTYourLibraryMusicService> _yourLibraryMusicService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTGLUEService> _glueService;
@@ -35,13 +35,13 @@
     id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreIntegrationService;
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <_TtP18QuickScrollFeature21SPTQuickScrollService_> _quickScrollService;
-    id <_TtP21PageLoaderViewFeature24SPTPageLoaderViewService_> _pageLoaderViewService;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <_TtP18FilterChipsFeature21SPTFilterChipsService_> _filterChipsService;
 }
 
 + (id)serviceIdentifier;
 @property(nonatomic) __weak id <_TtP18FilterChipsFeature21SPTFilterChipsService_> filterChipsService; // @synthesize filterChipsService=_filterChipsService;
-@property(nonatomic) __weak id <_TtP21PageLoaderViewFeature24SPTPageLoaderViewService_> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <_TtP18QuickScrollFeature21SPTQuickScrollService_> quickScrollService; // @synthesize quickScrollService=_quickScrollService;
 @property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
@@ -59,12 +59,12 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTYourLibraryMusicService> yourLibraryMusicService; // @synthesize yourLibraryMusicService=_yourLibraryMusicService;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
-@property(nonatomic) __weak id <SPTFreeTierCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
+@property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
 - (void).cxx_destruct;

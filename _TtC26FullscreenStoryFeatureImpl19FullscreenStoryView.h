@@ -17,7 +17,6 @@
     // Error parsing type: , name: topContainerView
     // Error parsing type: , name: backgroundOverlayView
     // Error parsing type: , name: chapterContainerView
-    // Error parsing type: , name: finalFrameScreenshotImageView
     // Error parsing type: , name: containerView
     // Error parsing type: , name: activityIndicator
     // Error parsing type: , name: bottomContainerView

@@ -9,6 +9,6 @@
 @class NSDictionary;
 
 @protocol SPTPlaylistPlatformFieldFormatListAttributes <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSDictionary *formatListAttributes;
+@property(nonatomic, readonly) NSDictionary *formatListAttributes;
 @end
 

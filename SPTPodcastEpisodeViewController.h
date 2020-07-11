@@ -19,8 +19,8 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUEEntityRowTableViewCell, NSString, NSURL, SPTEntityHeaderViewController, SPTPodcastEpisodeActionsTableViewCell, SPTPodcastEpisodeCoverArtTableViewCell, SPTPodcastEpisodeDescriptionTableViewCell, SPTPodcastEpisodeEntityHeaderContentViewController, SPTPodcastEpisodeFeatureProperties, SPTPodcastEpisodeLogger, SPTPodcastEpisodeTheme, SPTPodcastEpisodeViewModel, SPTProgressView, SPTTableView, UIBarButtonItem, UITableViewCell;
-@protocol SPTImageLoaderFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTProductState, SPTRemoteConfigurationResolver, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
+@class GLUEEntityRowTableViewCell, NSString, NSURL, SPTEntityHeaderViewController, SPTPodcastEpisodeActionsTableViewCell, SPTPodcastEpisodeCoverArtTableViewCell, SPTPodcastEpisodeDescriptionTableViewCell, SPTPodcastEpisodeEntityHeaderContentViewController, SPTPodcastEpisodeLogger, SPTPodcastEpisodeTheme, SPTPodcastEpisodeViewModel, SPTProgressView, SPTTableView, UIBarButtonItem, UITableViewCell;
+@protocol SPTImageLoaderFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTProductState, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
 
 @interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, SPTPodcastRecommendationsViewControllerDelegate, SPTPodcastEpisodeFeaturedContentViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
 {
@@ -56,12 +56,8 @@
     id <SPTPodcastUIButtonsFactory> _buttonsFactory;
     SPTProgressView *_progressView;
     double _featuredContentBottomMargin;
-    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
-    SPTPodcastEpisodeFeatureProperties *_featureProperties;
 }
 
-@property(retain, nonatomic) SPTPodcastEpisodeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(nonatomic) __weak id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(nonatomic) double featuredContentBottomMargin; // @synthesize featuredContentBottomMargin=_featuredContentBottomMargin;
 @property(nonatomic) _Bool viewHasAppeared; // @synthesize viewHasAppeared=_viewHasAppeared;
 @property(nonatomic) _Bool showLoadingOverlayProgressView; // @synthesize showLoadingOverlayProgressView=_showLoadingOverlayProgressView;
@@ -135,7 +131,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 productState:(id)arg3 modalPresentationController:(id)arg4 podcastContextMenuProvider:(id)arg5 shareFeature:(id)arg6 logger:(id)arg7 viewLogger:(id)arg8 creatorLinks:(id)arg9 recommendations:(id)arg10 featuredContent:(id)arg11 trackList:(id)arg12 linkDispatcher:(id)arg13 buttonsFactory:(id)arg14 remoteConfigurationResolver:(id)arg15;
+- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 productState:(id)arg3 modalPresentationController:(id)arg4 podcastContextMenuProvider:(id)arg5 shareFeature:(id)arg6 logger:(id)arg7 viewLogger:(id)arg8 creatorLinks:(id)arg9 recommendations:(id)arg10 featuredContent:(id)arg11 trackList:(id)arg12 linkDispatcher:(id)arg13 buttonsFactory:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

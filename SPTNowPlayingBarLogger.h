@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTUBINowPlayingBarEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger, SPTUBINowPlayingBarEventFactory;
 
 @interface SPTNowPlayingBarLogger : NSObject
 {
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBINowPlayingBarEventFactory> _nowPlayingBarEventFactory;
 }
 
 @property(retain, nonatomic) id <SPTUBINowPlayingBarEventFactory> nowPlayingBarEventFactory; // @synthesize nowPlayingBarEventFactory=_nowPlayingBarEventFactory;
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (void)logBarHeartButtonTapped:(long long)arg1 playerState:(id)arg2;
 - (void)logBarTapped;

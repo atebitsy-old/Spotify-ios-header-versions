@@ -65,6 +65,7 @@
 - (id)makeOverlayViewModelWithTitle:(id)arg1 subtitle:(id)arg2 reloadButtonVisible:(_Bool)arg3 navigationBarVisible:(_Bool)arg4 viewModelType:(id)arg5;
 - (id)pageIdentifierFromURI:(id)arg1;
 - (id)makeLoadingLoggerWithURI:(id)arg1;
+- (id)makeViewControllerWithURI:(id)arg1 embedded:(_Bool)arg2;
 - (id)makeViewControllerWithURI:(id)arg1;
 - (id)makeGenreInitialViewModel;
 - (id)makeBrowseInitialViewModel;

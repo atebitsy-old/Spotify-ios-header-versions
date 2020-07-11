@@ -9,12 +9,12 @@
 @protocol SPTInstrumentationCurrentPageViewObserver, SPTInstrumentationMapper, SPTInstrumentationModalPresentationMonitor, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationTransportRegistry;
 
 @protocol SPTInstrumentationService <SPTService>
-@property(readonly, nonatomic) id <SPTInstrumentationRemotePlayingHandler> remotePlayingHandler;
 - (void)removeCurrentPageViewObserver:(id <SPTInstrumentationCurrentPageViewObserver>)arg1;
 - (void)addCurrentPageViewObserver:(id <SPTInstrumentationCurrentPageViewObserver>)arg1;
 - (id <SPTInstrumentationMapper>)provideIntentMapper;
 - (id <SPTInstrumentationMapper>)provideIDMapper;
 - (id <SPTInstrumentationModalPresentationMonitor>)provideModalPresentationMonitor;
 - (id <SPTInstrumentationTransportRegistry>)provideTransportRegistry;
+@property(nonatomic, readonly) id <SPTInstrumentationRemotePlayingHandler> remotePlayingHandler;
 @end
 

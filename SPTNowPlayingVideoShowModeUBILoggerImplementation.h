@@ -23,16 +23,16 @@
 #import "SPTNowPlayingViewUBILogger-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIMobileNowPlayingViewVideoShowEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger, SPTUBIMobileNowPlayingViewVideoShowEventFactory;
 
 @interface SPTNowPlayingVideoShowModeUBILoggerImplementation : NSObject <SPTNowPlayingViewUBILogger, SPTNowPlayingConnectButtonUBILogger, SPTNowPlayingPlayButtonUBILogger, SPTNowPlayingProgressBarUBILogger, SPTNowPlayingArtistLabelUBILogger, SPTNowPlayingTrackTitleLabelUBILogger, SPTNowPlayingCoverArtUBILogger, SPTNowPlayingContextMenuButtonUBILogger, SPTNowPlayingPlaybackSourceLabelUBILogger, SPTNowPlayingCloseButtonUBILogger, SPTNowPlayingSkip15SecondsBackwardButtonUBILogger, SPTNowPlayingSkip15SecondsForwardButtonUBILogger, SPTNowPlayingShareButtonUBILogger, SPTNowPlayingSkipNextButtonUBILogger, SPTNowPlayingSkipPreviousButtonUBILogger>
 {
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileNowPlayingViewVideoShowEventFactory> _eventFactory;
 }
 
 @property(readonly, nonatomic) id <SPTUBIMobileNowPlayingViewVideoShowEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (void)logSkipToPreviousTappedWithPlayerState:(id)arg1;
 - (void)logSkipToNextTappedWithPlayerState:(id)arg1;

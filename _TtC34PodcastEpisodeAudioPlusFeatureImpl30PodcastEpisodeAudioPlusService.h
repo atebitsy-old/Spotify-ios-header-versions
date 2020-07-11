@@ -9,12 +9,15 @@
 @interface _TtC34PodcastEpisodeAudioPlusFeatureImpl30PodcastEpisodeAudioPlusService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: hubFrameworkService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: viewProvider
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (void)unload;
+- (id)provideAudioPlusViewProvider;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

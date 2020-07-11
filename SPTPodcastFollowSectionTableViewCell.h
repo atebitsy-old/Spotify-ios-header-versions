@@ -8,11 +8,12 @@
 
 #import "SPTPodcastFollowSectionTableViewCellCommonInterface-Protocol.h"
 
-@class GLUEContextMenuAccessoryButton, NSArray, NSString, SPTPodcastFollowButton, SPTPodcastFollowSectionViewModel, UIButton;
+@class GLUEContextMenuAccessoryButton, NSArray, NSString, SPTPodcastFollowButton, SPTPodcastFollowSectionViewModel, UIButton, UIView;
 @protocol GLUETheme;
 
 @interface SPTPodcastFollowSectionTableViewCell : SPTPodcastSectionTableViewCell <SPTPodcastFollowSectionTableViewCellCommonInterface>
 {
+    UIView *_containerView;
     id <GLUETheme> _glueTheme;
     NSArray *_layoutConstraints;
     SPTPodcastFollowButton *_followButton;
@@ -27,6 +28,7 @@
 @property(retain, nonatomic) SPTPodcastFollowButton *followButton; // @synthesize followButton=_followButton;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
+@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 - (void).cxx_destruct;
 - (void)updateFollowedButtonState:(_Bool)arg1;
 - (void)contextMenuButtonTapped:(id)arg1;

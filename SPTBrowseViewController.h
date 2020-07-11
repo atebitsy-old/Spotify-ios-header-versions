@@ -8,15 +8,18 @@
 
 #import "HUBViewContentOffsetObserver-Protocol.h"
 #import "SPTBrowseViewModelProviderObserver-Protocol.h"
+#import "SPTFindUIContentContainer-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
 @class NSString, NSURL, SPTHubViewController, SPTProgressView, SPTTheme;
-@protocol SPTBrowseLoadingLogger, SPTBrowseViewModelProvider, SPTPageContainer, VISREFIntegrationManager;
+@protocol SPTBrowseLoadingLogger, SPTBrowseViewModelProvider, SPTFindUIContentContainerDelegate, SPTPageContainer, VISREFIntegrationManager;
 
-@interface SPTBrowseViewController : UIViewController <SPTBrowseViewModelProviderObserver, SPTNavigationControllerNavigationBarState, HUBViewContentOffsetObserver, SPTPageController>
+@interface SPTBrowseViewController : UIViewController <SPTBrowseViewModelProviderObserver, SPTNavigationControllerNavigationBarState, HUBViewContentOffsetObserver, SPTPageController, SPTFindUIContentContainer>
 {
+    _Bool _embedded;
     SPTProgressView *_progressView;
+    id <SPTFindUIContentContainerDelegate> _findContentContainerDelegate;
     id <SPTBrowseViewModelProvider> _viewModelProvider;
     SPTHubViewController *_hubsViewController;
     unsigned long long _preferredNavigationBarState;
@@ -27,17 +30,21 @@
 }
 
 @property(readonly, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
+@property(readonly, nonatomic) _Bool embedded; // @synthesize embedded=_embedded;
 @property(readonly, nonatomic) id <SPTBrowseLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(nonatomic) struct CGRect lastKnownHubContainerViewFrame; // @synthesize lastKnownHubContainerViewFrame=_lastKnownHubContainerViewFrame;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) unsigned long long preferredNavigationBarState; // @synthesize preferredNavigationBarState=_preferredNavigationBarState;
 @property(readonly, nonatomic) SPTHubViewController *hubsViewController; // @synthesize hubsViewController=_hubsViewController;
 @property(readonly, nonatomic) id <SPTBrowseViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
+@property(nonatomic) __weak id <SPTFindUIContentContainerDelegate> findContentContainerDelegate; // @synthesize findContentContainerDelegate=_findContentContainerDelegate;
 - (void).cxx_destruct;
 - (void)performIgnoringOffsetChangeCallbacks:(CDUnknownBlockType)arg1;
 - (unsigned long long)navigationBarStateForViewModel:(id)arg1;
 - (struct CGRect)statusBarFrame;
+- (void)updateFindContentContainer;
 - (void)updateWithViewModel:(id)arg1;
+@property(readonly, nonatomic) UIViewController *viewController;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
@@ -51,7 +58,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
-- (id)initWithViewModelProvider:(id)arg1 theme:(id)arg2 pageIdentifier:(id)arg3 pageURI:(id)arg4 componentRegistry:(id)arg5 componentLayoutManager:(id)arg6 imageLoaderFactory:(id)arg7 commandHandler:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 visualRefreshIntegrationManager:(id)arg11 shareDragDelegateFactory:(id)arg12;
+- (id)initWithViewModelProvider:(id)arg1 theme:(id)arg2 pageIdentifier:(id)arg3 pageURI:(id)arg4 componentRegistry:(id)arg5 componentLayoutManager:(id)arg6 imageLoaderFactory:(id)arg7 commandHandler:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 visualRefreshIntegrationManager:(id)arg11 shareDragDelegateFactory:(id)arg12 embedded:(_Bool)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

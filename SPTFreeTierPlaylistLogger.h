@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistPlayLogger-Protocol.h"
+#import "SPTFreeTierPlaylistTrackCloudLogger-Protocol.h"
 
 @class NSMutableSet, NSString, NSURL;
-@protocol SPTEventSender, SPTLogCenter, SPTUBIMobilePlaylistEntityEventFactory, SPTUserBehaviourInstrumentationLogger, SPTViewLogger;
+@protocol SPTEventSender, SPTLogCenter, SPTUBILogger, SPTUBIMobilePlaylistEntityEventFactory, SPTViewLogger;
 
-@interface SPTFreeTierPlaylistLogger : NSObject <SPTFreeTierPlaylistPlayLogger>
+@interface SPTFreeTierPlaylistLogger : NSObject <SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistTrackCloudLogger>
 {
     NSString *_featureId;
     NSString *_playlistViewPageIdentifier;
@@ -19,14 +20,14 @@
     id <SPTViewLogger> _viewLogger;
     id <SPTEventSender> _eventSender;
     NSURL *_pageURL;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobilePlaylistEntityEventFactory> _ubiEventFactory;
     NSMutableSet *_impressionPaths;
 }
 
 @property(retain, nonatomic) NSMutableSet *impressionPaths; // @synthesize impressionPaths=_impressionPaths;
 @property(readonly, nonatomic) id <SPTUBIMobilePlaylistEntityEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;

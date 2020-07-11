@@ -52,6 +52,7 @@
 - (id)createSignalForAnyFiveSignalsWithAbbaKey:(id)arg1 pageTitle:(id)arg2 itemTitle:(id)arg3 itemDescription:(id)arg4;
 @property(readonly, nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
+@property(readonly, nonatomic) _Bool useTrackCloudProvider;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnPlayback;
 @property(readonly, nonatomic, getter=isDoubleStatePlayButtonEnabled) _Bool doubleStatePlayButtonEnabled;
 - (void)setupEpisodesAvailable;

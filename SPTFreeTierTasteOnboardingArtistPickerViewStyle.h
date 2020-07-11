@@ -19,6 +19,7 @@
     SPTFreeTierTasteOnboardingArtistPickerCollectionViewLayoutStyle<GLUEStyle> *_collectionViewLayoutStyle;
     GLUEGradientStyle *_overlayGradientStyle;
     GLUEButtonStyle *_actionButtonStyle;
+    GLUEButtonStyle *_seedASessionActionButtonStyle;
     GLUEButtonStyle *_addToPlaylistButtonStyle;
     GLUELabelStyle *_includeSimilarArtistsLabelStyle;
     double _searchBarToCollectionViewMargin;
@@ -39,6 +40,7 @@
 @property(nonatomic) double searchBarToCollectionViewMargin; // @synthesize searchBarToCollectionViewMargin=_searchBarToCollectionViewMargin;
 @property(copy, nonatomic) GLUELabelStyle *includeSimilarArtistsLabelStyle; // @synthesize includeSimilarArtistsLabelStyle=_includeSimilarArtistsLabelStyle;
 @property(copy, nonatomic) GLUEButtonStyle *addToPlaylistButtonStyle; // @synthesize addToPlaylistButtonStyle=_addToPlaylistButtonStyle;
+@property(copy, nonatomic) GLUEButtonStyle *seedASessionActionButtonStyle; // @synthesize seedASessionActionButtonStyle=_seedASessionActionButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *actionButtonStyle; // @synthesize actionButtonStyle=_actionButtonStyle;
 @property(copy, nonatomic) GLUEGradientStyle *overlayGradientStyle; // @synthesize overlayGradientStyle=_overlayGradientStyle;
 @property(copy, nonatomic) SPTFreeTierTasteOnboardingArtistPickerCollectionViewLayoutStyle<GLUEStyle> *collectionViewLayoutStyle; // @synthesize collectionViewLayoutStyle=_collectionViewLayoutStyle;

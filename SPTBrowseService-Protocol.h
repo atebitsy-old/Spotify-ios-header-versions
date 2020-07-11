@@ -10,6 +10,6 @@
 
 @protocol SPTBrowseService <SPTService>
 - (_Bool)ownsPageWithURI:(NSURL *)arg1;
-@property(nonatomic, readonly) CDUnknownBlockType cardsTransformer;
+@property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;
 @end
 

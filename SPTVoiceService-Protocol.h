@@ -7,7 +7,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTVoiceCommandHandlingOptions, SPTVoiceSessionHandlingOptions, SPTVoiceSessionPresentationOptions;
-@protocol SPTRadioManager, SPTVoiceSessionFactory, SPTVoiceSessionViewControllerFactory, SPTVoiceTestManager;
+@protocol SPTRadioManager, SPTVoicePlayerEventsListener, SPTVoiceSessionFactory, SPTVoiceSessionViewControllerFactory, SPTVoiceTestManager;
 
 @protocol SPTVoiceService <SPTService>
 - (void)setVoiceCalloutTooltipDidDisplay:(_Bool)arg1;
@@ -15,6 +15,7 @@
 - (_Bool)didFinishVoiceOnboarding;
 - (void)provideWithRadioManager:(id <SPTRadioManager>)arg1;
 - (void)launchVoiceWithReferrerIdentifier:(NSString *)arg1;
+- (id <SPTVoicePlayerEventsListener>)providePlayerEventListener;
 - (id <SPTVoiceTestManager>)provideTestManager;
 - (id <SPTVoiceSessionViewControllerFactory>)createViewControllerFactoryWithVoiceSessionFactory:(id <SPTVoiceSessionFactory>)arg1 presentationOptions:(SPTVoiceSessionPresentationOptions *)arg2 commandHandlingOptions:(SPTVoiceCommandHandlingOptions *)arg3;
 - (id <SPTVoiceSessionFactory>)createVoiceSessionFactoryWithServiceIdentifier:(NSString *)arg1 sessionHandlingOptions:(SPTVoiceSessionHandlingOptions *)arg2;

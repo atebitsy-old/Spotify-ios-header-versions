@@ -10,7 +10,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierTasteOnboardingCompoundCuration, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkServiceImplementation, SPTFreeTierTasteOnboardingFlowCoordinator, SPTFreeTierTasteOnboardingTestManagerImplementation;
-@protocol FollowFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHomeMixUIService, SPTInstrumentationService, SPTLoginService, SPTMandatoryPremiumTrialService, SPTNetworkService, SPTPerformanceMetricsService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
+@protocol FollowFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHomeMixUIService, SPTInstrumentationService, SPTLoginService, SPTMandatoryPremiumTrialService, SPTNetworkService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
 
 @interface SPTFreeTierTasteOnboardingServiceImplementation : NSObject <SPTFreeTierTasteOnboardingService, SPTURISubtypeHandler>
 {
@@ -33,6 +33,8 @@
     SPTFreeTierTasteOnboardingDeeplinkServiceImplementation *_onboardingDeeplinkService;
     id <SPTMandatoryPremiumTrialService> _mandatoryPremiumTrialService;
     id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> _podcastOnboardingService;
+    id <SPTPlaylistPlatformService> _playlistPlatformService;
+    id <SPTContainerUIService> _containerUIService;
     SPTFreeTierTasteOnboardingCurator *_curator;
     SPTFreeTierTasteOnboardingFlowCoordinator *_flowCoordinator;
     SPTFreeTierTasteOnboardingTestManagerImplementation *_testManager;
@@ -44,6 +46,8 @@
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingFlowCoordinator *flowCoordinator; // @synthesize flowCoordinator=_flowCoordinator;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingCurator *curator; // @synthesize curator=_curator;
+@property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
+@property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> podcastOnboardingService; // @synthesize podcastOnboardingService=_podcastOnboardingService;
 @property(nonatomic) __weak id <SPTMandatoryPremiumTrialService> mandatoryPremiumTrialService; // @synthesize mandatoryPremiumTrialService=_mandatoryPremiumTrialService;
 @property(nonatomic) __weak SPTFreeTierTasteOnboardingDeeplinkServiceImplementation *onboardingDeeplinkService; // @synthesize onboardingDeeplinkService=_onboardingDeeplinkService;
@@ -64,6 +68,7 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
 - (void).cxx_destruct;
+- (id)seedASessionCurator;
 - (id)artistPickerViewControllerProvider;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;

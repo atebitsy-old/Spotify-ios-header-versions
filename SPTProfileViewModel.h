@@ -7,25 +7,25 @@
 #import "SPTBaseViewModel.h"
 
 #import "FollowModelObserver-Protocol.h"
-#import "SPTProfileUserDataChangeObserver-Protocol.h"
+#import "SPTProfileUserDataChangeObserverLegacy-Protocol.h"
 
 @class FollowModel, NSString, NSURL, SPTProfileViewModelData;
-@protocol FollowFeature, SPTProfileTestManager, SPTProfileUserData, SPTProfileViewModelDelegate;
+@protocol FollowFeature, SPTProfileTestManager, SPTProfileUserDataLegacy, SPTProfileViewModelDelegate;
 
-@interface SPTProfileViewModel : SPTBaseViewModel <FollowModelObserver, SPTProfileUserDataChangeObserver>
+@interface SPTProfileViewModel : SPTBaseViewModel <FollowModelObserver, SPTProfileUserDataChangeObserverLegacy>
 {
     NSString *_currentUsername;
     NSURL *_profileUserImageURL;
     SPTProfileViewModelData *_data;
     id <FollowFeature> _followFeature;
-    id <SPTProfileUserData> _profileUserData;
+    id <SPTProfileUserDataLegacy> _profileUserData;
     id <SPTProfileTestManager> _testManager;
     FollowModel *_followModel;
 }
 
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(retain, nonatomic) id <SPTProfileTestManager> testManager; // @synthesize testManager=_testManager;
-@property(retain, nonatomic) id <SPTProfileUserData> profileUserData; // @synthesize profileUserData=_profileUserData;
+@property(retain, nonatomic) id <SPTProfileUserDataLegacy> profileUserData; // @synthesize profileUserData=_profileUserData;
 @property(nonatomic) __weak id <FollowFeature> followFeature; // @synthesize followFeature=_followFeature;
 @property(readonly, nonatomic) SPTProfileViewModelData *data; // @synthesize data=_data;
 @property(retain, nonatomic) NSURL *profileUserImageURL; // @synthesize profileUserImageURL=_profileUserImageURL;

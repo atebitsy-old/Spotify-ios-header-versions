@@ -9,16 +9,12 @@
 #import "SPTFindUIContentContainerDelegate-Protocol.h"
 #import "SPTFindUIHeaderContainerDelegate-Protocol.h"
 
-@class NSString, NSURL;
-
 @interface SPTFindUIContainerViewController : UIViewController <SPTFindUIHeaderContainerDelegate, SPTFindUIContentContainerDelegate>
 {
     // Error parsing type: , name: mainContentLayoutGuide
     // Error parsing type: , name: headerContainer
     // Error parsing type: , name: contentContainer
     // Error parsing type: , name: headerHeightConstraint
-    // Error parsing type: , name: pageIdentifier
-    // Error parsing type: , name: pageURI
 }
 
 - (void).cxx_destruct;
@@ -26,14 +22,7 @@
 - (void)contentContainer:(id)arg1 didChangeOffset:(struct CGPoint)arg2;
 - (void)headerContainerDidChangeMetrics:(id)arg1;
 - (void)loadView;
-- (unsigned long long)preferredNavigationBarState;
-- (id)spt_pageURI;
-- (id)spt_pageIdentifier;
 - (id)initWithCoder:(id)arg1;
-
-// Remaining properties
-@property(nonatomic, readonly) NSString *pageIdentifier;
-@property(nonatomic, readonly) NSURL *pageURI;
 
 @end
 

@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter, SPTUBIMobileYourLibraryEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileYourLibraryEventFactory;
 
 @interface SPTYourLibraryLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     id <SPTUBIMobileYourLibraryEventFactory> _eventFactory;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTUBIMobileYourLibraryEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

@@ -29,15 +29,12 @@
     id <SPTFeatureFlagSignal> _podcastHeaderV2CondensedSizeSignal;
     id <SPTFeatureFlagSignal> _yourLibraryAnchorTestSignal;
     id <SPTFeatureFlagSignal> _yourLibraryAnchorTestSignalPhase2;
-    id <SPTFeatureFlagSignal> _podcastTrailersRolloutSignal;
     long long _freeTierState;
     long long _podcastHeaderV2State;
     long long _podcastHeaderV2CondensedSizeState;
     long long _podcastHeaderV2IterationsState;
-    long long _podcastTrailersRolloutState;
 }
 
-@property(nonatomic) long long podcastTrailersRolloutState; // @synthesize podcastTrailersRolloutState=_podcastTrailersRolloutState;
 @property(nonatomic) long long podcastHeaderV2IterationsState; // @synthesize podcastHeaderV2IterationsState=_podcastHeaderV2IterationsState;
 @property(nonatomic) long long podcastHeaderV2CondensedSizeState; // @synthesize podcastHeaderV2CondensedSizeState=_podcastHeaderV2CondensedSizeState;
 @property(nonatomic) long long podcastHeaderV2State; // @synthesize podcastHeaderV2State=_podcastHeaderV2State;
@@ -45,7 +42,6 @@
 @property(nonatomic, getter=isVideoEntityPagesEnabled) _Bool videoEntityPagesEnabled; // @synthesize videoEntityPagesEnabled=_videoEntityPagesEnabled;
 @property(nonatomic, getter=isVideoFeatureEnabled) _Bool videoFeatureEnabled; // @synthesize videoFeatureEnabled=_videoFeatureEnabled;
 @property(nonatomic, getter=isPodcastFeatureEnabled) _Bool podcastFeatureEnabled; // @synthesize podcastFeatureEnabled=_podcastFeatureEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastTrailersRolloutSignal; // @synthesize podcastTrailersRolloutSignal=_podcastTrailersRolloutSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> yourLibraryAnchorTestSignalPhase2; // @synthesize yourLibraryAnchorTestSignalPhase2=_yourLibraryAnchorTestSignalPhase2;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> yourLibraryAnchorTestSignal; // @synthesize yourLibraryAnchorTestSignal=_yourLibraryAnchorTestSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastHeaderV2CondensedSizeSignal; // @synthesize podcastHeaderV2CondensedSizeSignal=_podcastHeaderV2CondensedSizeSignal;
@@ -64,7 +60,6 @@
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagsDidChange:(id)arg1;
 @property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
-@property(readonly, nonatomic, getter=isPodcastTrailerEnabled) _Bool podcastTrailerEnabled;
 @property(readonly, nonatomic, getter=isPodcastHeaderV2CondensedSizeEnabled) _Bool podcastHeaderV2CondensedSizeEnabled;
 @property(readonly, nonatomic, getter=isPodcastHeaderV2Enabled) _Bool podcastHeaderV2Enabled;
 @property(readonly, nonatomic, getter=isRefinedPodcastPageEnabled) _Bool refinedPodcastPageEnabled;
@@ -77,7 +72,6 @@
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)createPodcastTrailerSignal:(id)arg1;
 - (void)createPodcastHeaderV2IterationsSignal:(id)arg1;
 - (void)dealloc;
 - (id)initWithFeatureFlags:(id)arg1 localSettings:(id)arg2 productState:(id)arg3 freeTierSignal:(id)arg4 featureFlagFactory:(id)arg5 featureProperties:(id)arg6;

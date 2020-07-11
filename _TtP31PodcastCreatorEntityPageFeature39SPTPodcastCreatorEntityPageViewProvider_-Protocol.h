@@ -5,9 +5,10 @@
 //
 
 @class NSURL, UIViewController;
-@protocol SPTPageCreationContext;
+@protocol SPTPageCreationContext, _TtP31PodcastCreatorEntityPageFeature39SPTPodcastDetailsViewControllerProtocol_;
 
 @protocol _TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_
+- (UIViewController<_TtP31PodcastCreatorEntityPageFeature39SPTPodcastDetailsViewControllerProtocol_> *)creatorLinksViewControllerWithPodcastURI:(NSURL *)arg1 pageCreationContext:(id <SPTPageCreationContext>)arg2;
 - (UIViewController *)creatorLinksViewControllerWithEpisodeURI:(NSURL *)arg1 pageCreationContext:(id <SPTPageCreationContext>)arg2;
 @end
 

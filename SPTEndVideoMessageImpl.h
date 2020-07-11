@@ -20,6 +20,7 @@
     NSString *_reasonStart;
     NSString *_reasonEnd;
     long long _msPlayed;
+    long long _msNominalPlayed;
     long long _msTotalEst;
     long long _msManifestLatency;
     long long _nSeekback;
@@ -81,6 +82,7 @@
 @property(nonatomic) long long nSeekback; // @synthesize nSeekback=_nSeekback;
 @property(nonatomic) long long msManifestLatency; // @synthesize msManifestLatency=_msManifestLatency;
 @property(nonatomic) long long msTotalEst; // @synthesize msTotalEst=_msTotalEst;
+@property(nonatomic) long long msNominalPlayed; // @synthesize msNominalPlayed=_msNominalPlayed;
 @property(nonatomic) long long msPlayed; // @synthesize msPlayed=_msPlayed;
 @property(copy, nonatomic) NSString *reasonEnd; // @synthesize reasonEnd=_reasonEnd;
 @property(copy, nonatomic) NSString *reasonStart; // @synthesize reasonStart=_reasonStart;
@@ -88,7 +90,7 @@
 @property(copy, nonatomic) NSString *sequenceId; // @synthesize sequenceId=_sequenceId;
 @property(retain, nonatomic) NSNumber *sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
 - (void).cxx_destruct;
-- (id)initWithSequenceNumber:(id)arg1 sequenceId:(id)arg2 identity:(id)arg3 reasonStart:(id)arg4 reasonEnd:(id)arg5 msPlayed:(long long)arg6 msTotalEst:(long long)arg7 msManifestLatency:(long long)arg8 nSeekback:(long long)arg9 msSeekback:(long long)arg10 nSeekfwd:(long long)arg11 msSeekfwd:(long long)arg12 msLatency:(long long)arg13 uiLatency:(long long)arg14 startOffsetMs:(long long)arg15 msInitialBuffering:(long long)arg16 msSeekRebuffering:(long long)arg17 msStalled:(long long)arg18 maxMsSeekRebuffering:(long long)arg19 maxMsStalled:(long long)arg20 nStalls:(long long)arg21 maxContinous:(long long)arg22 unionPlayed:(long long)arg23 audiocodec:(id)arg24 videocodec:(id)arg25 incognitoMode:(_Bool)arg26 streamingRule:(id)arg27 startBitrate:(long long)arg28 fullScreen:(long long)arg29 timeWeightedBitrate:(long long)arg30 keySystem:(id)arg31 msKeyLatency:(long long)arg32 totalBytes:(long long)arg33 connectionTypeStart:(id)arg34 connectionTypeEnd:(id)arg35 msPlayedBackground:(long long)arg36;
+- (id)initWithSequenceNumber:(id)arg1 sequenceId:(id)arg2 identity:(id)arg3 reasonStart:(id)arg4 reasonEnd:(id)arg5 msPlayed:(long long)arg6 msNominalPlayed:(long long)arg7 msTotalEst:(long long)arg8 msManifestLatency:(long long)arg9 nSeekback:(long long)arg10 msSeekback:(long long)arg11 nSeekfwd:(long long)arg12 msSeekfwd:(long long)arg13 msLatency:(long long)arg14 uiLatency:(long long)arg15 startOffsetMs:(long long)arg16 msInitialBuffering:(long long)arg17 msSeekRebuffering:(long long)arg18 msStalled:(long long)arg19 maxMsSeekRebuffering:(long long)arg20 maxMsStalled:(long long)arg21 nStalls:(long long)arg22 maxContinous:(long long)arg23 unionPlayed:(long long)arg24 audiocodec:(id)arg25 videocodec:(id)arg26 incognitoMode:(_Bool)arg27 streamingRule:(id)arg28 startBitrate:(long long)arg29 fullScreen:(long long)arg30 timeWeightedBitrate:(long long)arg31 keySystem:(id)arg32 msKeyLatency:(long long)arg33 totalBytes:(long long)arg34 connectionTypeStart:(id)arg35 connectionTypeEnd:(id)arg36 msPlayedBackground:(long long)arg37;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

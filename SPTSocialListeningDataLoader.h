@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTDataLoader;
-@protocol SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTSocialListeningDataLoaderDelegate, _TtP16ProfileV2Feature18SPTProfileUserData_;
+@protocol SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTProfileUserData, SPTSocialListeningDataLoaderDelegate;
 
 @interface SPTSocialListeningDataLoader : NSObject <SPTDataLoaderDelegate>
 {
@@ -17,13 +17,13 @@
     id <SPTSocialListeningDataLoaderDelegate> _delegate;
     SPTDataLoader *_dataLoader;
     id <SPTCosmosDictionaryDataLoader> _cosmosDictionaryDataLoader;
-    id <_TtP16ProfileV2Feature18SPTProfileUserData_> _currentUserData;
+    id <SPTProfileUserData> _currentUserData;
     id <SPTCosmosDictionaryDataLoaderRequestToken> _sessionStateSubscriptionToken;
 }
 
 @property _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> sessionStateSubscriptionToken; // @synthesize sessionStateSubscriptionToken=_sessionStateSubscriptionToken;
-@property(readonly, nonatomic) id <_TtP16ProfileV2Feature18SPTProfileUserData_> currentUserData; // @synthesize currentUserData=_currentUserData;
+@property(readonly, nonatomic) id <SPTProfileUserData> currentUserData; // @synthesize currentUserData=_currentUserData;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDictionaryDataLoader; // @synthesize cosmosDictionaryDataLoader=_cosmosDictionaryDataLoader;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTSocialListeningDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;

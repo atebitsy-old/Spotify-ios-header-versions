@@ -11,6 +11,7 @@
 
 @interface _TtC20ProfileV2FeatureImpl32EditProfileSelectImageController : NSObject <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
+    // Error parsing type: , name: editProfileLogger
     // Error parsing type: , name: modalPresentationController
     // Error parsing type: , name: completion
     // Error parsing type: , name: pickerViewController

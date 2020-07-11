@@ -9,17 +9,17 @@
 #import "SPTHomeRecentlyPlayedContentOperation-Protocol.h"
 
 @class NSString;
-@protocol HUBContentOperationDelegate, SPTRecentlyPlayedList, SPTUserBehaviourHubsInstrumentation;
+@protocol HUBContentOperationDelegate, SPTRecentlyPlayedList, SPTUBIHubsUtilities;
 
 @interface SPTHomeRecentlyPlayedContentOperationImplementation : NSObject <SPTHomeRecentlyPlayedContentOperation>
 {
     id <HUBContentOperationDelegate> _delegate;
     id <SPTRecentlyPlayedList> _recentlyPlayedList;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
 + (id)recentlyPlayedInfoFromViewModelBuilder:(id)arg1;
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTRecentlyPlayedList> recentlyPlayedList; // @synthesize recentlyPlayedList=_recentlyPlayedList;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;

@@ -12,6 +12,7 @@
     // Error parsing type: , name: episodeCreatorsLoader
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: logger
     // Error parsing type: , name: chipsViewController
 }
 

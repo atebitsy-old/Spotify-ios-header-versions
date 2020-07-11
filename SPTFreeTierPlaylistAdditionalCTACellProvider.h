@@ -10,12 +10,11 @@
 #import "SPTFreeTierPlaylistSectionDescription-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistButtonSectionHeaderViewStyle;
-@protocol SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistEmptyViewAdditionalCallToAction, SPTFreeTierPlaylistViewModel;
+@protocol SPTFreeTierPlaylistEmptyViewAdditionalCallToAction, SPTFreeTierPlaylistViewModel;
 
 @interface SPTFreeTierPlaylistAdditionalCTACellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescription>
 {
-    id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> _emptyCallToAction;
-    id <SPTFreeTierPlaylistAdditionalCallToAction> _additionalCallToAction;
+    id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> _additionalCallToAction;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     SPTFreeTierPlaylistButtonSectionHeaderViewStyle *_emptyListStyle;
     SPTFreeTierPlaylistButtonSectionHeaderViewStyle *_defaultStyle;
@@ -24,8 +23,7 @@
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *defaultStyle; // @synthesize defaultStyle=_defaultStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *emptyListStyle; // @synthesize emptyListStyle=_emptyListStyle;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction; // @synthesize additionalCallToAction=_additionalCallToAction;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> emptyCallToAction; // @synthesize emptyCallToAction=_emptyCallToAction;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> additionalCallToAction; // @synthesize additionalCallToAction=_additionalCallToAction;
 - (void).cxx_destruct;
 - (void)willDisplaySection;
 - (id)sectionFooter;
@@ -42,8 +40,7 @@
 - (void)configureAdditionalCTACell:(id)arg1;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
-- (void)configureWithAdditionalCallToAction:(id)arg1;
-- (id)initWithPlaylistViewModel:(id)arg1 emptyListCallToAction:(id)arg2 defaultStyle:(id)arg3 emptyListStyle:(id)arg4;
+- (id)initWithPlaylistViewModel:(id)arg1 additionalCallToActionButton:(id)arg2 defaultStyle:(id)arg3 emptyListStyle:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

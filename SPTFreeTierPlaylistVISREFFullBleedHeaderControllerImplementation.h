@@ -35,6 +35,7 @@
     VISREFCustomBackButton *_backButton;
     UIButton *_followButton;
     UIButton *_offlineButton;
+    UIButton *_additionalCTAButton;
     UIColor *_associatedColor;
     double _navigationBarGradientEndPoint;
     NSString *_playButtonAccessibilityString;
@@ -51,6 +52,7 @@
 @property(nonatomic) CDStruct_5a28e70a backButtonGlyphOffsetRange; // @synthesize backButtonGlyphOffsetRange=_backButtonGlyphOffsetRange;
 @property(nonatomic) double navigationBarGradientEndPoint; // @synthesize navigationBarGradientEndPoint=_navigationBarGradientEndPoint;
 @property(retain, nonatomic) UIColor *associatedColor; // @synthesize associatedColor=_associatedColor;
+@property(retain, nonatomic) UIButton *additionalCTAButton; // @synthesize additionalCTAButton=_additionalCTAButton;
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) VISREFCustomBackButton *backButton; // @synthesize backButton=_backButton;

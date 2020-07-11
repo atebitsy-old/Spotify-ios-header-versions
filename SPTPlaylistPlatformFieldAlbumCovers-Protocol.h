@@ -9,6 +9,6 @@
 @class NSDictionary;
 
 @protocol SPTPlaylistPlatformFieldAlbumCovers <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSDictionary *albumCovers;
+@property(nonatomic, readonly) NSDictionary *albumCovers;
 @end
 

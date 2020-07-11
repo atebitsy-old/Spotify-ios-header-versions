@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldEpisodePlayed <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool isPlayed;
+@property(nonatomic, readonly) _Bool isPlayed;
 @end
 

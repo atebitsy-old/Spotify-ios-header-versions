@@ -7,10 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "HUBContentOperation-Protocol.h"
+#import "SPTHomeViewControllerDelegate-Protocol.h"
 
+@class NSString;
 @protocol HUBContentOperationDelegate, SPTFreeTierPersistentCounter, SPTLocalSettings;
 
-@interface SPTHomeTooltipContentOperation : NSObject <HUBContentOperation>
+@interface SPTHomeTooltipContentOperation : NSObject <HUBContentOperation, SPTHomeViewControllerDelegate>
 {
     id <HUBContentOperationDelegate> delegate;
     id <SPTLocalSettings> _localSettings;
@@ -25,8 +27,15 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
+- (void)didLoadSeedASessionBarButtonItem:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithLocalSettings:(id)arg1 horizontalAnchorPosition:(double)arg2 persistentCounter:(id)arg3;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

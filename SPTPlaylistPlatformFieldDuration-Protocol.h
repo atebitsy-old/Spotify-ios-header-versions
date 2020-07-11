@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldDuration <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) double duration;
+@property(nonatomic, readonly) double duration;
 @end
 

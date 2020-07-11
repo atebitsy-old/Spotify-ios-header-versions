@@ -45,6 +45,7 @@
 @property(nonatomic) _Bool hasMsPlayed; // @dynamic hasMsPlayed;
 @property(nonatomic) _Bool hasMsPlayedBackground; // @dynamic hasMsPlayedBackground;
 @property(nonatomic) _Bool hasMsPlayedFullscreen; // @dynamic hasMsPlayedFullscreen;
+@property(nonatomic) _Bool hasMsPlayedNominal; // @dynamic hasMsPlayedNominal;
 @property(nonatomic) _Bool hasMsPlayedSubtitles; // @dynamic hasMsPlayedSubtitles;
 @property(nonatomic) _Bool hasMsStartPosition; // @dynamic hasMsStartPosition;
 @property(nonatomic) _Bool hasMsStartTime; // @dynamic hasMsStartTime;
@@ -71,6 +72,7 @@
 @property(nonatomic) long long msPlayed; // @dynamic msPlayed;
 @property(nonatomic) long long msPlayedBackground; // @dynamic msPlayedBackground;
 @property(nonatomic) long long msPlayedFullscreen; // @dynamic msPlayedFullscreen;
+@property(nonatomic) long long msPlayedNominal; // @dynamic msPlayedNominal;
 @property(nonatomic) long long msPlayedSubtitles; // @dynamic msPlayedSubtitles;
 @property(nonatomic) long long msStartPosition; // @dynamic msStartPosition;
 @property(nonatomic) long long msStartTime; // @dynamic msStartTime;

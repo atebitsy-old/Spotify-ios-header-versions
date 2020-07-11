@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSArray, NSMutableArray, NSMutableDictionary, NSMutableSet, NSString, SPTDataLoader, SPTDataLoaderRequest, SPTFreeTierTasteOnboardingArtistPickerViewLogger, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingSession, SPTFreeTierTasteOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager;
+@class NSArray, NSMutableArray, NSMutableDictionary, NSString, SPTDataLoader, SPTDataLoaderRequest, SPTFreeTierTasteOnboardingArtistPickerViewLogger, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingSession, SPTFreeTierTasteOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager;
 @protocol SPTFollowModelFactory, SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate, SPTFreeTierTasteOnboardingTestManager;
 
 @interface SPTFreeTierTasteOnboardingArtistPickerViewModel : NSObject <SPTNetworkConnectivityControllerObserver, SPTDataLoaderDelegate>
@@ -17,10 +17,10 @@
     _Bool _repeatVisit;
     _Bool _isCloseButtonPermanent;
     _Bool _podcastOnboardingScheduled;
-    _Bool _seedASessionEnabled;
     id <SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate> _delegate;
     SPTFreeTierTasteOnboardingArtistPickerViewLogger *_logger;
     SPTFreeTierTasteOnboardingSession *_session;
+    long long _seedASessionVisualTreatment;
     SPTFreeTierTasteOnboardingTheme *_theme;
     SPTDataLoader *_dataLoader;
     id <SPTFollowModelFactory> _followModelFactory;
@@ -33,10 +33,8 @@
     NSMutableArray *_expandedItems;
     NSMutableDictionary *_followModels;
     unsigned long long _selectedItemsCount;
-    NSMutableSet *_selectedArtists;
 }
 
-@property(retain, nonatomic) NSMutableSet *selectedArtists; // @synthesize selectedArtists=_selectedArtists;
 @property(nonatomic) unsigned long long selectedItemsCount; // @synthesize selectedItemsCount=_selectedItemsCount;
 @property(readonly, nonatomic) NSMutableDictionary *followModels; // @synthesize followModels=_followModels;
 @property(readonly, nonatomic) NSMutableArray *expandedItems; // @synthesize expandedItems=_expandedItems;
@@ -49,7 +47,7 @@
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingTheme *theme; // @synthesize theme=_theme;
-@property(nonatomic) _Bool seedASessionEnabled; // @synthesize seedASessionEnabled=_seedASessionEnabled;
+@property(nonatomic) long long seedASessionVisualTreatment; // @synthesize seedASessionVisualTreatment=_seedASessionVisualTreatment;
 @property(nonatomic, getter=isPodcastOnboardingScheduled) _Bool podcastOnboardingScheduled; // @synthesize podcastOnboardingScheduled=_podcastOnboardingScheduled;
 @property(nonatomic) _Bool isCloseButtonPermanent; // @synthesize isCloseButtonPermanent=_isCloseButtonPermanent;
 @property(nonatomic, getter=isRepeatVisit) _Bool repeatVisit; // @synthesize repeatVisit=_repeatVisit;
@@ -57,6 +55,8 @@
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistPickerViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool seedASessionEnabled;
+- (_Bool)canSelectSeedASessionItem;
 - (void)logPodcastInFirstTimeFlowImpression;
 - (void)logItemInteractionId:(id)arg1 forItem:(id)arg2 position:(unsigned long long)arg3 maxPosition:(unsigned long long)arg4;
 - (void)didDeselectItem:(id)arg1 atIndexPath:(id)arg2;
@@ -89,7 +89,7 @@
 @property(readonly, nonatomic) NSArray *viewItems;
 - (unsigned long long)selectedItemsRequiredCount;
 - (void)dealloc;
-- (id)initWithTheme:(id)arg1 logger:(id)arg2 session:(id)arg3 dataLoader:(id)arg4 followModelFactory:(id)arg5 popupManager:(id)arg6 networkConnectivityController:(id)arg7 testManager:(id)arg8 deeplinkStore:(id)arg9 seedASessionEnabled:(_Bool)arg10;
+- (id)initWithTheme:(id)arg1 logger:(id)arg2 session:(id)arg3 dataLoader:(id)arg4 followModelFactory:(id)arg5 popupManager:(id)arg6 networkConnectivityController:(id)arg7 testManager:(id)arg8 deeplinkStore:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

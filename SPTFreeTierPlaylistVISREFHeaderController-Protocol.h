@@ -14,6 +14,7 @@
 - (double)headerHeight;
 - (void)setSearchView:(UIView *)arg1;
 - (void)setImage:(UIImage *)arg1;
+- (void)setAdditionalCTAButton:(UIButton *)arg1;
 - (void)setOfflineButton:(UIButton *)arg1;
 - (void)setFollowButton:(UIButton *)arg1;
 - (void)setContextMenuButton:(UIButton *)arg1;

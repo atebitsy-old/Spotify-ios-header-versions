@@ -9,7 +9,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ClearFiltersButtonEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitNoAction;
+- (id <SPTUBIInteractionEvent>)hitClearFilter;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

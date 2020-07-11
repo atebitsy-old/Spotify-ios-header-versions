@@ -14,7 +14,6 @@
 {
 }
 
-- (id)createSubtitleWithLanguageTag:(id)arg1 closedCaption:(_Bool)arg2;
 - (id)createSubtitleWithLanguageTag:(id)arg1;
 
 // Remaining properties

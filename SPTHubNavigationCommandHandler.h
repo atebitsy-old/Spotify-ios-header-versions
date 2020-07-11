@@ -8,16 +8,16 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTHubInteractionLogger, SPTLinkDispatcher, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTHubInteractionLogger, SPTLinkDispatcher, SPTUBIHubsUtilities;
 
 @interface SPTHubNavigationCommandHandler : NSObject <HUBCommandHandler>
 {
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTHubInteractionLogger> _interactionLogger;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
-@property(retain, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;

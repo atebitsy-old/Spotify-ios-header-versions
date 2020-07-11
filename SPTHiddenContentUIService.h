@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHiddenContentService, SPTPerformanceMetricsService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHiddenContentService, SPTPerformanceMetricsService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTHiddenContentUIService : SPTUIPageService
 {
@@ -18,9 +18,11 @@
     id <SPTGLUEService> _glueService;
     id <SPTHiddenContentService> _hiddenContentService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
+    id <SPTUBIService> _ubiService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTHiddenContentService> hiddenContentService; // @synthesize hiddenContentService=_hiddenContentService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

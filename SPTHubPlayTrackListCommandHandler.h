@@ -8,17 +8,17 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTHubInteractionLogger, SPTHubPlayTrackListCommandHandlerDelegate, SPTPlayer, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTHubInteractionLogger, SPTHubPlayTrackListCommandHandlerDelegate, SPTPlayer, SPTUBIHubsUtilities;
 
 @interface SPTHubPlayTrackListCommandHandler : NSObject <HUBCommandHandler>
 {
     id <SPTHubPlayTrackListCommandHandlerDelegate> _delegate;
     id <SPTPlayer> _player;
     id <SPTHubInteractionLogger> _interactionLogger;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTHubPlayTrackListCommandHandlerDelegate> delegate; // @synthesize delegate=_delegate;

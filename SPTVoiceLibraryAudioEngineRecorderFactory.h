@@ -39,7 +39,7 @@
 - (void)notifyErrorWithStatusCode:(int)arg1 description:(id)arg2;
 - (void)notifyRecordedAudioChunk:(void *)arg1 ofSize:(unsigned int)arg2;
 - (void)notifyAudioLevelChanged;
-- (void)installInputTapAndDownSampler;
+- (_Bool)installInputTapAndDownSampler;
 - (_Bool)createAudioNodesIfRequired;
 - (struct AudioStreamBasicDescription)createAudioStreamDescriptionWithSampleRate:(double)arg1;
 - (_Bool)supportsLevelMonitoring;

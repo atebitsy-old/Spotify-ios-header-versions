@@ -9,16 +9,16 @@
 #import "SPTSearchLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter, SPTSearch2DateProviding, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTSearch2DateProviding, SPTUBILogger;
 
 @interface SPTSearchLoggerImplementation : NSObject <SPTSearchLogger>
 {
     id <SPTLogCenter> _logCenter;
     id <SPTSearch2DateProviding> _dateProvider;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTSearch2DateProviding> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

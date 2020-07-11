@@ -26,6 +26,7 @@
     NSArray *_currentLayoutConstraints;
     SPTTableView *_tableView;
     SPTSearchBar *_searchBar;
+    UIView *_searchBarWrapper;
     NSTimer *_searchTimer;
     UIView *_errorView;
     UILabel *_errorLabel;
@@ -37,6 +38,7 @@
 @property(retain, nonatomic) UIView *errorView; // @synthesize errorView=_errorView;
 @property(nonatomic) _Bool selectedBeforeLeavingView; // @synthesize selectedBeforeLeavingView=_selectedBeforeLeavingView;
 @property(retain, nonatomic) NSTimer *searchTimer; // @synthesize searchTimer=_searchTimer;
+@property(retain, nonatomic) UIView *searchBarWrapper; // @synthesize searchBarWrapper=_searchBarWrapper;
 @property(retain, nonatomic) SPTSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) NSArray *currentLayoutConstraints; // @synthesize currentLayoutConstraints=_currentLayoutConstraints;

@@ -7,17 +7,17 @@
 #import <objc/NSObject.h>
 
 @class SPTMobileHomeEventFactoryProvider;
-@protocol SPTLogCenter, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger;
 
 @interface SPTHomeUILogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     SPTMobileHomeEventFactoryProvider *_mobileHomeEventFactoryProvider;
 }
 
 @property(readonly, nonatomic) SPTMobileHomeEventFactoryProvider *mobileHomeEventFactoryProvider; // @synthesize mobileHomeEventFactoryProvider=_mobileHomeEventFactoryProvider;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (id)trackURIInModel:(id)arg1;

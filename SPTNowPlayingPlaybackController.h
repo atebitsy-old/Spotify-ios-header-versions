@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTNowPlayingTrackMetadataQueue, SPTNowPlayingTrackPosition, SPTStatefulPlayer;
+@class SPTNowPlayingTrackPosition, SPTStatefulPlayer;
 @protocol SPTAdsManager;
 
 @interface SPTNowPlayingPlaybackController : NSObject
@@ -14,10 +14,8 @@
     SPTNowPlayingTrackPosition *_trackPosition;
     SPTStatefulPlayer *_player;
     id <SPTAdsManager> _adsManager;
-    SPTNowPlayingTrackMetadataQueue *_trackMetadataQueue;
 }
 
-@property(readonly, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(readonly, nonatomic) SPTStatefulPlayer *player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTNowPlayingTrackPosition *trackPosition; // @synthesize trackPosition=_trackPosition;
@@ -47,7 +45,7 @@
 - (_Bool)shouldShowSkippingNextUpsell;
 - (_Bool)canShowSkippingNextUpsell;
 - (_Bool)previousButtonWouldSeekNotSkip;
-- (id)initWithPlayer:(id)arg1 trackPosition:(id)arg2 adsManager:(id)arg3 trackMetadataQueue:(id)arg4;
+- (id)initWithPlayer:(id)arg1 trackPosition:(id)arg2 adsManager:(id)arg3;
 
 @end
 

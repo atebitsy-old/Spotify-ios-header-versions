@@ -11,6 +11,7 @@
 }
 
 - (id)init;
+- (long long)trackModifierIsHidden:(_Bool)arg1 isInCollection:(_Bool)arg2;
 - (long long)trackModifierIsBanned:(_Bool)arg1 isInCollection:(_Bool)arg2;
 - (long long)downloadStateFromSyncStatus:(long long)arg1;
 

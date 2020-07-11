@@ -14,7 +14,7 @@
 + (id)mp_dataFromHexString:(id)arg1;
 + (unsigned long long)mmk_headerTypeFromFirstword:(unsigned short)arg1 secondWord:(unsigned short)arg2;
 + (id)spt_speechRecognitionMessageDataWithBoundary:(id)arg1 sampleRate:(id)arg2 playerState:(id)arg3;
-+ (id)spt_librarySpeechRecognitionMessageDataWithBoundary:(id)arg1 sampleRate:(id)arg2 playerState:(id)arg3;
++ (id)spt_librarySpeechRecognitionMessageDataWithBoundary:(id)arg1 sampleRate:(id)arg2 contentType:(unsigned long long)arg3 playerState:(id)arg4;
 - (id)adjEncodeBase64;
 - (id)base64EncodedString;
 - (long long)gckb_locationOfBytes:(const char *)arg1 length:(unsigned long long)arg2;

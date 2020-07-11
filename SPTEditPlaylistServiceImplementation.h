@@ -9,7 +9,7 @@
 #import "SPTEditPlaylistService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPerformanceMetricsService, SPTUIPresentationService, SPTUserBehaviourInstrumentationService;
+@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTSettingsFeature, SPTUBIService, SPTUIPresentationService;
 
 @interface SPTEditPlaylistServiceImplementation : NSObject <SPTEditPlaylistService>
 {
@@ -19,11 +19,15 @@
     id <SPTGLUEService> _glueService;
     id <SPTFreeTierPlaylistService> _freeTierPlaylistService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
+    id <SPTPlaylistPlatformService> _playlistPlatformService;
+    id <SPTSettingsFeature> _settingsFeature;
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
+@property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistService> freeTierPlaylistService; // @synthesize freeTierPlaylistService=_freeTierPlaylistService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
@@ -32,6 +36,7 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
 - (id)provideLoggerForURI:(id)arg1 pageIdentifier:(id)arg2;
+- (id)provideEditPlaylistModelForURL:(id)arg1;
 - (id)providePlaylistEditViewControllerForURL:(id)arg1;
 - (void)registerEditPlaylistAction;
 - (void)load;

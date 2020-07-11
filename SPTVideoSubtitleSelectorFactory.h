@@ -6,17 +6,20 @@
 
 #import <objc/NSObject.h>
 
+@class BMSubtitleMatcher;
 @protocol BMPlayerConfiguration;
 
 @interface SPTVideoSubtitleSelectorFactory : NSObject
 {
     id <BMPlayerConfiguration> _playerConfiguration;
+    BMSubtitleMatcher *_subtitleMatcher;
 }
 
+@property(retain, nonatomic) BMSubtitleMatcher *subtitleMatcher; // @synthesize subtitleMatcher=_subtitleMatcher;
 @property(retain, nonatomic) id <BMPlayerConfiguration> playerConfiguration; // @synthesize playerConfiguration=_playerConfiguration;
 - (void).cxx_destruct;
 - (id)createSubtitleSelectorWithAvailableSubtitles:(id)arg1;
-- (id)initWithPlayerConfiguration:(id)arg1;
+- (id)initWithPlayerConfiguration:(id)arg1 subtitleMatcher:(id)arg2;
 
 @end
 

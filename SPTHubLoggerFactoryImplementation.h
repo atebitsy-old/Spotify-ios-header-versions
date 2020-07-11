@@ -9,16 +9,16 @@
 #import "SPTHubLoggerFactory-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter, SPTPerformanceMetricsViewLoggerFactory, SPTUserBehaviourInstrumentation;
+@protocol SPTLogCenter, SPTPerformanceMetricsViewLoggerFactory, SPTUBIUserBehaviourInstrumentation;
 
 @interface SPTHubLoggerFactoryImplementation : NSObject <SPTHubLoggerFactory>
 {
     id <SPTLogCenter> _logCenter;
     id <SPTPerformanceMetricsViewLoggerFactory> _viewLoggerFactory;
-    id <SPTUserBehaviourInstrumentation> _userBehaviourInstrumentation;
+    id <SPTUBIUserBehaviourInstrumentation> _userBehaviourInstrumentation;
 }
 
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
+@property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(readonly, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

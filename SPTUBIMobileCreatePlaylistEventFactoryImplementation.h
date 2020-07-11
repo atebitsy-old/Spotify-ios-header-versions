@@ -19,7 +19,8 @@
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
 - (id)closeButtonFactory;
-- (id)createButtonFactory;
+- (id)createButtonNameGeneratedFactory;
+- (id)createButtonNameProvidedFactory;
 - (id)backFactory;
 - (id)_location;
 - (id)initWithPageIdentifier:(id)arg1;

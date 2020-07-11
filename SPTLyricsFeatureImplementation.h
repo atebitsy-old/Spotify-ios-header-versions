@@ -8,7 +8,7 @@
 
 #import "SPTLyricsFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTLyricsV2Service;
+@class NSString, SPTAllocationContext, SPTLyricsContentLayerContext, SPTLyricsV2Configuration, SPTLyricsV2GLUETheme, SPTLyricsV2Service, SPTVocalRemovalConfiguration;
 @protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTBannerFeature, SPTContainerService, SPTCoreService, SPTFeatureFlaggingService, SPTGLUEService, SPTInAppMessageService, SPTLyricsTrackChecker, SPTLyricsV2TestManager, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface SPTLyricsFeatureImplementation : NSObject <SPTLyricsFeature>
@@ -32,9 +32,17 @@
     id <SPTInAppMessageService> _inAppMessageService;
     id <SPTLyricsV2TestManager> _testManager;
     SPTLyricsV2Service *_lyricsV2Service;
+    SPTLyricsV2GLUETheme *_theme;
+    SPTLyricsV2Configuration *_lyricsConfiguration;
+    SPTVocalRemovalConfiguration *_vocalRemovalConfiguration;
+    SPTLyricsContentLayerContext *_contentLayerContext;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTLyricsContentLayerContext *contentLayerContext; // @synthesize contentLayerContext=_contentLayerContext;
+@property(retain, nonatomic) SPTVocalRemovalConfiguration *vocalRemovalConfiguration; // @synthesize vocalRemovalConfiguration=_vocalRemovalConfiguration;
+@property(retain, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
+@property(retain, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTLyricsV2Service *lyricsV2Service; // @synthesize lyricsV2Service=_lyricsV2Service;
 @property(retain, nonatomic) id <SPTLyricsV2TestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
@@ -56,7 +64,9 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
 - (id)provideResolver;
+- (void)registerNowPlayingContentLayerProvider;
 - (void)registerNowPlayingScrollProvider;
+- (void)setupConfigurations;
 - (id)provideLyricsV2Service;
 - (id)providePlayer;
 - (id)provideLyricsTrackChecker;

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: connectDevicePickerRedesignEnabled
     // Error parsing type: , name: connectDevicePickerMiniEnabled
+    // Error parsing type: , name: connectAttachedDestinationEnabled
 }
 
 - (id)init;

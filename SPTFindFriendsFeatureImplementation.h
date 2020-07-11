@@ -9,7 +9,7 @@
 #import "SPTFindFriendsFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFindFriendsLogger;
-@protocol FollowFeature, SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTGLUEService, SPTNetworkService, SPTSessionService, SPTURIDispatchService;
+@protocol FollowFeature, SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTGLUEService, SPTNetworkService, SPTSessionService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTFindFriendsFeatureImplementation : NSObject <SPTFindFriendsFeature>
 {
@@ -23,9 +23,11 @@
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTGLUEService> _glueService;
     id <SPContextMenuFeature> _contextMenuFeature;
+    id <SPTUBIService> _ubiService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;

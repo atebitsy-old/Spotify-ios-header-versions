@@ -12,6 +12,7 @@
 @interface SPTPodcastEpisodeSectionFilterHeaderView : UIView
 {
     id <SPTPodcastEpisodeSectionFilterHeaderViewDelegate> _delegate;
+    UIView *_containerView;
     SPTTheme *_theme;
     UILabel *_filterName;
     UIButton *_filterButton;
@@ -22,6 +23,7 @@
 @property(retain, nonatomic) UIButton *filterButton; // @synthesize filterButton=_filterButton;
 @property(retain, nonatomic) UILabel *filterName; // @synthesize filterName=_filterName;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(nonatomic) __weak id <SPTPodcastEpisodeSectionFilterHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)didTapSortOptionButton;

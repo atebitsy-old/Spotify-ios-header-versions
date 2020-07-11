@@ -9,14 +9,14 @@
 #import "SPTSearchUBILocationSerializer-Protocol.h"
 
 @class NSString;
-@protocol SPTUserBehaviourHubsInstrumentation;
+@protocol SPTUBIHubsUtilities;
 
 @interface SPTSearchUBILocationSerializerImplementation : NSObject <SPTSearchUBILocationSerializer>
 {
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubs;
+    id <SPTUBIHubsUtilities> _ubiHubs;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
 - (void).cxx_destruct;
 - (id)dictionaryRepresentationOfLocation:(id)arg1;
 - (id)initWithUBI:(id)arg1;

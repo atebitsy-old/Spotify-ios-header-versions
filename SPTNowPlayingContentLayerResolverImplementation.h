@@ -27,6 +27,7 @@
 - (id)allProviders;
 - (id)providerForTrack:(id)arg1 playerState:(id)arg2;
 - (void)refreshSortedProviders;
+- (void)refreshProviders;
 - (void)unregisterProvider:(id)arg1;
 - (void)registerProvider:(id)arg1;
 - (id)init;

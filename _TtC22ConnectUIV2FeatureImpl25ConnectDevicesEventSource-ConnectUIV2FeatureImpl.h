@@ -6,9 +6,7 @@
 
 #import "_TtC22ConnectUIV2FeatureImpl25ConnectDevicesEventSource.h"
 
-#import "SPTGaiaConnectObserver-Protocol.h"
-
-@interface _TtC22ConnectUIV2FeatureImpl25ConnectDevicesEventSource (ConnectUIV2FeatureImpl) <SPTGaiaConnectObserver>
+@interface _TtC22ConnectUIV2FeatureImpl25ConnectDevicesEventSource (ConnectUIV2FeatureImpl)
 - (void)connectAvailableDevicesDidChange:(id)arg1;
 @end
 

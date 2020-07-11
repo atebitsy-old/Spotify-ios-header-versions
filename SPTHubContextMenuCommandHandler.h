@@ -10,35 +10,33 @@
 #import "SPTContextMenuPresenterDelegate-Protocol.h"
 
 @class NSMutableSet, NSString, NSURL;
-@protocol SPTContextMenuOptions, SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTHubInteractionLogger, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTContextMenuOptions, SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTHubInteractionLogger, SPTUBIHubsUtilities;
 
 @interface SPTHubContextMenuCommandHandler : NSObject <SPTContextMenuPresenterDelegate, HUBCommandHandler>
 {
     id <SPTContextMenuOptions> _contextMenuOptions;
     NSURL *_viewURI;
-    NSString *_contextMenuLogContextIphone;
-    NSString *_contextMenuLogContextIpad;
+    NSString *_contextMenuLogContext;
     id <SPTContextMenuOptionsFactory> _contextMenuOptionsFactory;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
     id <SPTHubInteractionLogger> _interactionLogger;
     NSMutableSet *_presentedContextMenuPresenters;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
-@property(retain, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) NSMutableSet *presentedContextMenuPresenters; // @synthesize presentedContextMenuPresenters=_presentedContextMenuPresenters;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
-@property(readonly, copy, nonatomic) NSString *contextMenuLogContextIpad; // @synthesize contextMenuLogContextIpad=_contextMenuLogContextIpad;
-@property(readonly, copy, nonatomic) NSString *contextMenuLogContextIphone; // @synthesize contextMenuLogContextIphone=_contextMenuLogContextIphone;
+@property(readonly, copy, nonatomic) NSString *contextMenuLogContext; // @synthesize contextMenuLogContext=_contextMenuLogContext;
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 - (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (_Bool)showTrackContextMenuForCommand:(id)arg1 event:(id)arg2;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 @property(readonly, nonatomic) id <SPTContextMenuOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
-- (id)initWithViewURI:(id)arg1 contextMenuLogContextIphone:(id)arg2 contextMenuLogContextIpad:(id)arg3 contextMenuOptionsFactory:(id)arg4 contextMenuPresenterFactory:(id)arg5 interactionLogger:(id)arg6 ubiHubsInstrumentation:(id)arg7;
+- (id)initWithViewURI:(id)arg1 contextMenuLogContext:(id)arg2 contextMenuOptionsFactory:(id)arg3 contextMenuPresenterFactory:(id)arg4 interactionLogger:(id)arg5 ubiHubsInstrumentation:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

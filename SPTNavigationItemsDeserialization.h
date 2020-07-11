@@ -10,9 +10,8 @@
 {
 }
 
-+ (id)localizedTitleForSourceIdentifier:(id)arg1;
-+ (id)deserializeNavigationItems:(id)arg1;
-+ (id)deserializeItemsWithResourceAtURL:(id)arg1 identifier:(id)arg2;
++ (id)deserializeNavigationItems:(id)arg1 titleProvider:(id)arg2;
++ (id)deserializeItemsWithResourceAtURL:(id)arg1 identifier:(id)arg2 titleProvider:(id)arg3;
 
 @end
 

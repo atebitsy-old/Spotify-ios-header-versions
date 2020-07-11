@@ -6,17 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray;
+@class BMSubtitleMatcher, NSArray;
 
 @interface SPTVideoSubtitleSelector : NSObject
 {
     NSArray *_availableSubtitles;
+    BMSubtitleMatcher *_subtitleMatcher;
 }
 
+@property(retain, nonatomic) BMSubtitleMatcher *subtitleMatcher; // @synthesize subtitleMatcher=_subtitleMatcher;
 @property(copy, nonatomic) NSArray *availableSubtitles; // @synthesize availableSubtitles=_availableSubtitles;
 - (void).cxx_destruct;
 - (id)renderPreferredSubtitle:(id)arg1 player:(id)arg2 playerItem:(id)arg3;
-- (id)initWithAvailableSubtitles:(id)arg1;
+- (id)initWithAvailableSubtitles:(id)arg1 subtitleMatcher:(id)arg2;
 
 @end
 

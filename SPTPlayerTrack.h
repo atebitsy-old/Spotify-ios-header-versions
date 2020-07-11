@@ -59,6 +59,7 @@
 @property(readonly, nonatomic) NSString *showTitle;
 @property(readonly, nonatomic) _Bool isBackgroundable;
 @property(readonly, nonatomic) _Bool isPodcast;
+@property(readonly, nonatomic) _Bool isLiveVideo;
 @property(readonly, nonatomic) _Bool isVideo;
 @property(readonly, nonatomic) NSString *artistsString;
 @property(readonly, nonatomic) NSString *artistTitle;

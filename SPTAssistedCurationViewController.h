@@ -38,8 +38,10 @@
     SPTAssistedCurationCardCellConfigurator *_cardCellConfigurator;
     UITapGestureRecognizer *_tapGesture;
     NSMutableSet *_visibleCardIdentifiers;
+    double _lastVisibleWidth;
 }
 
+@property(nonatomic) double lastVisibleWidth; // @synthesize lastVisibleWidth=_lastVisibleWidth;
 @property(retain, nonatomic) NSMutableSet *visibleCardIdentifiers; // @synthesize visibleCardIdentifiers=_visibleCardIdentifiers;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) SPTAssistedCurationCardCellConfigurator *cardCellConfigurator; // @synthesize cardCellConfigurator=_cardCellConfigurator;
@@ -108,7 +110,9 @@
 - (void)tapGestureAction:(id)arg1;
 - (void)pageControlChanged:(id)arg1;
 - (void)setupConstraints;
+- (void)invalidateLayoutAndReload;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

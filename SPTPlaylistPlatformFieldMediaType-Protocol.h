@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTPlaylistPlatformFieldMediaType <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, copy, nonatomic) NSString *mediaType;
+@property(nonatomic, readonly) NSString *mediaType;
 @end
 

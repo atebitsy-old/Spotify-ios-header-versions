@@ -7,28 +7,26 @@
 #import <objc/NSObject.h>
 
 #import "SPTGaiaConnectObserver-Protocol.h"
-#import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTStatefulPlayerObserver-Protocol.h"
 #import "_TtP21VoiceCompanionFeature32SPTVoiceCompanionSessionObserver_-Protocol.h"
 
-@class NSString, NSURL, SPTNowPlayingModel, SPTNowPlayingTrackMetadataQueue, SPTObserverManager, SPTPlayerState, SPTPlayerTrack, SPTStatefulPlayer;
+@class NSString, NSURL, SPTNowPlayingModel, SPTObserverManager, SPTPlayerState, SPTPlayerTrack, SPTStatefulPlayer;
 @protocol SPTLinkDispatcher, SPTPlayer;
 
-@interface SPTNowPlayingBarModel : NSObject <SPTPlayerObserver, SPTNowPlayingTrackMetadataQueueObserver, SPTGaiaConnectObserver, _TtP21VoiceCompanionFeature32SPTVoiceCompanionSessionObserver_, SPTStatefulPlayerObserver>
+@interface SPTNowPlayingBarModel : NSObject <SPTPlayerObserver, SPTStatefulPlayerObserver, SPTGaiaConnectObserver, _TtP21VoiceCompanionFeature32SPTVoiceCompanionSessionObserver_>
 {
     _Bool _skippingToPreviousTrackAllowed;
     _Bool _skippingToNextTrackAllowed;
     _Bool _peekingAtNextTrackAllowed;
     _Bool _playing;
     _Bool _shouldShowVoiceCompanionButton;
-    SPTNowPlayingTrackMetadataQueue *_trackMetadataQueue;
+    SPTStatefulPlayer *_statefulPlayer;
     SPTPlayerTrack *_displayedMetadata;
     SPTPlayerTrack *_playingMetadata;
     NSURL *_contextURL;
     id <SPTPlayer> _player;
     SPTPlayerState *_lastState;
-    SPTStatefulPlayer *_statefulPlayer;
     SPTNowPlayingModel *_nowPlayingModel;
     id <SPTLinkDispatcher> _linkDispatcher;
     NSURL *_currentTrackURL;
@@ -39,7 +37,6 @@
 @property(retain, nonatomic) NSURL *currentTrackURL; // @synthesize currentTrackURL=_currentTrackURL;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
-@property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(retain, nonatomic) SPTPlayerState *lastState; // @synthesize lastState=_lastState;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(copy, nonatomic) NSURL *contextURL; // @synthesize contextURL=_contextURL;
@@ -50,7 +47,7 @@
 @property(nonatomic) _Bool skippingToPreviousTrackAllowed; // @synthesize skippingToPreviousTrackAllowed=_skippingToPreviousTrackAllowed;
 @property(retain, nonatomic) SPTPlayerTrack *playingMetadata; // @synthesize playingMetadata=_playingMetadata;
 @property(retain, nonatomic) SPTPlayerTrack *displayedMetadata; // @synthesize displayedMetadata=_displayedMetadata;
-@property(retain, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
+@property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 - (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
@@ -62,7 +59,6 @@
 - (void)didEndVoiceSession;
 - (void)didStartVoiceSession;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
-- (void)trackMetadataQueue:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)didTapVoiceCompanionView;
 - (void)metadataChanged;
 @property(readonly, nonatomic) long long numberOfNextSkips;
@@ -73,7 +69,7 @@
 - (void)pause;
 - (_Bool)shouldShowSkipNextUpsell;
 - (void)dealloc;
-- (id)initWithPlayer:(id)arg1 nowPlayingModel:(id)arg2 statefulPlayer:(id)arg3 trackMetadataQueue:(id)arg4 linkDispatcher:(id)arg5 voiceSession:(id)arg6;
+- (id)initWithPlayer:(id)arg1 nowPlayingModel:(id)arg2 statefulPlayer:(id)arg3 linkDispatcher:(id)arg4 voiceSession:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

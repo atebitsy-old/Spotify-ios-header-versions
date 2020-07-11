@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTContextMenuPresenterFactory, SPTLogCenter, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTContextMenuPresenterFactory, SPTLogCenter, SPTUBILogger;
 
 @interface SPTFreeTierTrackBarButtonFactory : NSObject
 {
@@ -14,10 +14,10 @@
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;

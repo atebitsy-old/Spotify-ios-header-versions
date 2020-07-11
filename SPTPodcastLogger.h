@@ -9,17 +9,17 @@
 #import "SPTPodcastLogger-Protocol.h"
 
 @class NSString, SPTPodcastUBIEventFactoryProvider;
-@protocol SPTLogCenter, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger;
 
 @interface SPTPodcastLogger : NSObject <SPTPodcastLogger>
 {
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     SPTPodcastUBIEventFactoryProvider *_ubiEventFactoryProvider;
 }
 
 @property(readonly, nonatomic) SPTPodcastUBIEventFactoryProvider *ubiEventFactoryProvider; // @synthesize ubiEventFactoryProvider=_ubiEventFactoryProvider;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logNavigateBrowsePodcastsPageInViewURL:(id)arg1 featureId:(id)arg2;

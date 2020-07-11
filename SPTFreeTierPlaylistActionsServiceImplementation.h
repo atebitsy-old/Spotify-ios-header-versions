@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistActionsService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTContainerUIService, SPTFreeTierPlaylistService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTUserBehaviourInstrumentationService;
+@protocol SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTContainerUIService, SPTFreeTierPlaylistService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTUBIService;
 
 @interface SPTFreeTierPlaylistActionsServiceImplementation : NSObject <SPTFreeTierPlaylistActionsService>
 {
@@ -21,13 +21,13 @@
     id <SPTPlayerFeature> _playerService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTFreeTierPlaylistService> _freeTierPlaylistService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <SPTCollectionLogger> _collectionLogger;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistService> freeTierPlaylistService; // @synthesize freeTierPlaylistService=_freeTierPlaylistService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;

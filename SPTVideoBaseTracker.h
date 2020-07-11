@@ -63,6 +63,7 @@
 - (void)startNewBufferEventWithType:(long long)arg1 timestamp:(double)arg2;
 - (void)endCurrentPlayRangeAtPosition:(double)arg1 andStartNextRangeAtPosition:(double)arg2;
 - (void)endCurrentPlayRangeAtPosition:(double)arg1;
+- (void)didChangeSeekableWindow:(id)arg1 timestamp:(double)arg2;
 - (void)didChangeSubtitle:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didDropVideoFrames:(unsigned long long)arg1 timestamp:(double)arg2;
 - (void)didTransferBytes:(long long)arg1 forBitrate:(double)arg2 withElapsedTime:(double)arg3 timestamp:(double)arg4;

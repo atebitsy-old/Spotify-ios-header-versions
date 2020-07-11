@@ -9,6 +9,6 @@
 @class NSDictionary;
 
 @protocol SPTPlaylistPlatformFieldFreezeFrames <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSDictionary *freezeFrames;
+@property(nonatomic, readonly) NSDictionary *freezeFrames;
 @end
 

@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, SPTDataLoaderFactory, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingLoggerFactory, SPTFreeTierTasteOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager;
-@protocol SPTFollowModelFactory, SPTFreeTierTasteOnboardingTestManager, SPTGLUEImageLoaderFactory, SPTInstrumentationModalPresentationMonitor, SPTLinkDispatcher, SPTModalPresentationController, SPTPerformanceMetricsViewLoggerFactory;
+@class NSString, SPTDataLoaderFactory, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingLoggerFactory, SPTFreeTierTasteOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager, SPTSeedASessionCurator;
+@protocol SPTAlertInterface, SPTFollowModelFactory, SPTFreeTierTasteOnboardingTestManager, SPTGLUEImageLoaderFactory, SPTInstrumentationModalPresentationMonitor, SPTLinkDispatcher, SPTModalPresentationController, SPTPerformanceMetricsViewLoggerFactory, SPTPlaylistModel;
 
 @interface SPTFreeTierArtistPickerConfiguration : NSObject
 {
@@ -25,10 +25,14 @@
     id <SPTInstrumentationModalPresentationMonitor> _modalPresentationMonitor;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTModalPresentationController> _modalPresentationController;
-    SPTFreeTierTasteOnboardingCurator *_curator;
+    SPTSeedASessionCurator *_curator;
+    id <SPTPlaylistModel> _playlistModel;
+    id <SPTAlertInterface> _alertInterface;
 }
 
-@property(readonly, nonatomic) SPTFreeTierTasteOnboardingCurator *curator; // @synthesize curator=_curator;
+@property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
+@property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
+@property(readonly, nonatomic) SPTSeedASessionCurator *curator; // @synthesize curator=_curator;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTInstrumentationModalPresentationMonitor> modalPresentationMonitor; // @synthesize modalPresentationMonitor=_modalPresentationMonitor;
@@ -44,7 +48,7 @@
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingLoggerFactory *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
-- (id)initWithTheme:(id)arg1 loggerFactory:(id)arg2 viewLoggerFactory:(id)arg3 popupManager:(id)arg4 dataLoaderFactory:(id)arg5 imageLoaderFactory:(id)arg6 followModelFactory:(id)arg7 networkConnectivityController:(id)arg8 testManager:(id)arg9 deeplinkStore:(id)arg10 sourceIdentifier:(id)arg11 modalPresentationMonitor:(id)arg12 linkDispatcher:(id)arg13 modalPresentationController:(id)arg14 curator:(id)arg15;
+- (id)initWithTheme:(id)arg1 loggerFactory:(id)arg2 viewLoggerFactory:(id)arg3 popupManager:(id)arg4 dataLoaderFactory:(id)arg5 imageLoaderFactory:(id)arg6 followModelFactory:(id)arg7 networkConnectivityController:(id)arg8 testManager:(id)arg9 deeplinkStore:(id)arg10 sourceIdentifier:(id)arg11 modalPresentationMonitor:(id)arg12 linkDispatcher:(id)arg13 modalPresentationController:(id)arg14 curator:(id)arg15 playlistModel:(id)arg16 alertInterface:(id)arg17;
 
 @end
 

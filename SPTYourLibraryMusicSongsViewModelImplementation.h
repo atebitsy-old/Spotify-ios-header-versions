@@ -40,8 +40,10 @@
     NSMutableDictionary *_cachedArtistsMetadata;
     SPTObserverManager *_filterChipsObserverManager;
     id <SPTAlertInterface> _alertInterface;
+    NSArray *_sectionConfiguration;
 }
 
+@property(copy, nonatomic) NSArray *sectionConfiguration; // @synthesize sectionConfiguration=_sectionConfiguration;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTObserverManager *filterChipsObserverManager; // @synthesize filterChipsObserverManager=_filterChipsObserverManager;
 @property(nonatomic, getter=isFilteringActive) _Bool filteringActive; // @synthesize filteringActive=_filteringActive;
@@ -66,6 +68,7 @@
 @property(readonly, nonatomic) id <SPTYourLibraryMusicSongsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (id)itemProxyForFilterChipItem:(id)arg1;
 - (void)filterChipsInteractionObserverClearedSelection;
 - (void)filterChipsInteractionObserverItemDeSelected:(id)arg1;
 - (void)filterChipsInteractionObserverItemSelected:(id)arg1;
@@ -81,6 +84,8 @@
 - (void)playActionForSongsHeaderViewModel:(id)arg1;
 - (void)songsModelDidUpdate:(id)arg1 itemsCountChanged:(_Bool)arg2;
 - (void)songsModel:(id)arg1 error:(id)arg2;
+- (void)notifyUpdate;
+- (_Bool)shouldShowFilterChips;
 - (_Bool)shouldShowAddSongsButton;
 - (void)deselectFilterRyle:(id)arg1;
 - (void)selectFilterRule:(id)arg1;
@@ -135,6 +140,7 @@
 - (_Bool)isRecommendedSection:(unsigned long long)arg1;
 - (_Bool)isSongsSections:(unsigned long long)arg1;
 - (long long)numberOfRowsInSections:(long long)arg1;
+- (id)currentSectionsConfiguration;
 - (_Bool)hasSectionViewModelAtIndex:(unsigned long long)arg1;
 - (id)sectionViewModelAtIndex:(unsigned long long)arg1;
 - (void)itemSelectedAtIndexPath:(id)arg1;

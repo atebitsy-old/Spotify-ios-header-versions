@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
 
 @protocol SPTFreeTierPlaylistHeaderConfiguration <NSObject>
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistPlayLogger> playLogger;
 @property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistVISREFHeaderViewModel> visrefHeaderViewModel;

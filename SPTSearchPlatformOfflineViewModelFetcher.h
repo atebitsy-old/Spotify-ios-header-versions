@@ -9,12 +9,12 @@
 #import "SPTSearchPlatformViewModelFetcher-Protocol.h"
 
 @class HUBViewModelBuilderFactory, NSString;
-@protocol SPTExplicitContentAccessManager, SPTOfflineManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchOfflineAlbumDataLoader, SPTSearchOfflineEpisodeDataLoader, SPTSearchOfflinePlaylistDataLoader, SPTSearchUBILocationSerializer, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@protocol SPTExplicitContentAccessManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchOfflineAlbumDataLoader, SPTSearchOfflineEpisodeDataLoader, SPTSearchOfflinePlaylistDataLoader, SPTSearchOfflineTrackDataLoader, SPTSearchUBILocationSerializer, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchPlatformOfflineViewModelFetcher : NSObject <SPTSearchPlatformViewModelFetcher>
 {
     NSString *_query;
-    id <SPTOfflineManager> _offlineManager;
+    id <SPTSearchOfflineTrackDataLoader> _offlineTrackDataLoader;
     id <SPTSearchOfflinePlaylistDataLoader> _playlistDataLoader;
     id <SPTSearchOfflineAlbumDataLoader> _albumDataLoader;
     id <SPTSearchOfflineEpisodeDataLoader> _episodeDataLoader;
@@ -35,13 +35,13 @@
 @property(readonly, nonatomic) id <SPTSearchOfflineEpisodeDataLoader> episodeDataLoader; // @synthesize episodeDataLoader=_episodeDataLoader;
 @property(readonly, nonatomic) id <SPTSearchOfflineAlbumDataLoader> albumDataLoader; // @synthesize albumDataLoader=_albumDataLoader;
 @property(readonly, nonatomic) id <SPTSearchOfflinePlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
-@property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
+@property(readonly, nonatomic) id <SPTSearchOfflineTrackDataLoader> offlineTrackDataLoader; // @synthesize offlineTrackDataLoader=_offlineTrackDataLoader;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
 - (id)hubsKitNavigateCommandWithURI:(id)arg1;
 - (id)rowLoggingDataWithPosition:(unsigned long long)arg1 uri:(id)arg2;
-- (_Bool)displayItemAsDisabledIsExplicit:(_Bool)arg1 is19Plus:(_Bool)arg2;
-- (id)customDataSubtitleAccessoryLabelWithExplicit:(_Bool)arg1 premium:(_Bool)arg2 is19Plus:(_Bool)arg3;
+- (_Bool)displayItemAsDisabledIsExplicit:(_Bool)arg1 mogef19:(_Bool)arg2;
+- (id)customDataSubtitleAccessoryLabelWithExplicit:(_Bool)arg1 premium:(_Bool)arg2 mogef19:(_Bool)arg3;
 - (void)addSectionHeaderWithTitle:(id)arg1 identifier:(id)arg2 toViewModelBuilder:(id)arg3;
 - (void)configureComponentModelBuilder:(id)arg1 withEpisode:(id)arg2 position:(unsigned long long)arg3;
 - (void)configureViewModelBuilder:(id)arg1 withEpisodes:(id)arg2;
@@ -62,7 +62,7 @@
 - (void)fetchPlaylistsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)addNoResultsOverlayComponentToViewModelBuilder:(id)arg1;
 - (id)fetchViewModelWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithQuery:(id)arg1 offlineManager:(id)arg2 playlistDataLoader:(id)arg3 albumDataLoader:(id)arg4 episodeDataLoder:(id)arg5 emptyStatePropertiesProvider:(id)arg6 viewModelBuilderFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11;
+- (id)initWithQuery:(id)arg1 offlineTrackDataLoader:(id)arg2 playlistDataLoader:(id)arg3 albumDataLoader:(id)arg4 episodeDataLoder:(id)arg5 emptyStatePropertiesProvider:(id)arg6 viewModelBuilderFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

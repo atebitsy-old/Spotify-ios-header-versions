@@ -66,7 +66,7 @@
 - (void)setupSkipButtonWithAnimation:(_Bool)arg1;
 - (void)skipButtonTapped;
 - (void)didTapActionButton;
-- (void)configureTextLabelWithEntity:(id)arg1;
+- (void)configureFooterLabelWithEntity:(id)arg1;
 - (void)configureSkipButtonWithEntity:(id)arg1;
 - (void)configureActionButtonWithEntity:(id)arg1;
 - (void)configureTitleLabelWithEntity:(id)arg1;

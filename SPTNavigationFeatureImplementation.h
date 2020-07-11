@@ -10,7 +10,7 @@
 #import "SPTNavigationFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTNavigationListDataLoader, SPTNavigationListStaticDataSource, SPTNavigationPageFactoryObserver, SPTNavigationSettingsRegistration;
-@protocol SPTBarButtonItemManager, SPTContainerService, SPTCrashReporterService, SPTFeatureFlagSignal, SPTFreeTierService, SPTNavigationConfiguration, SPTNavigationListIdentifierFromABTestSource, SPTNavigationListProvider, SPTNetworkService, SPTSessionService, SPTSettingsFeature, SPTTabBarControllerFactory;
+@protocol SPTBarButtonItemManager, SPTContainerService, SPTCrashReporterService, SPTFeatureFlagSignal, SPTFreeTierService, SPTNavigationConfiguration, SPTNavigationItemTitleProvider, SPTNavigationListIdentifierFromABTestSource, SPTNavigationListProvider, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTTabBarControllerFactory;
 
 @interface SPTNavigationFeatureImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTNavigationFeature>
 {
@@ -30,12 +30,16 @@
     id <SPTTabBarControllerFactory> _tabBarFactory;
     id <SPTFreeTierService> _freeTierService;
     id <SPTFeatureFlagSignal> _freeTierFeatureFlagSignal;
+    id <SPTRemoteConfigurationService> _remoteConfigService;
+    id <SPTNavigationItemTitleProvider> _navigationItemTitleProvider;
     id <SPTBarButtonItemManager> _barButtonItemManager;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(nonatomic) _Bool newExperienceEnabled; // @synthesize newExperienceEnabled=_newExperienceEnabled;
+@property(retain, nonatomic) id <SPTNavigationItemTitleProvider> navigationItemTitleProvider; // @synthesize navigationItemTitleProvider=_navigationItemTitleProvider;
+@property(retain, nonatomic) id <SPTRemoteConfigurationService> remoteConfigService; // @synthesize remoteConfigService=_remoteConfigService;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierFeatureFlagSignal; // @synthesize freeTierFeatureFlagSignal=_freeTierFeatureFlagSignal;
 @property(retain, nonatomic) id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(retain, nonatomic) id <SPTTabBarControllerFactory> tabBarFactory; // @synthesize tabBarFactory=_tabBarFactory;

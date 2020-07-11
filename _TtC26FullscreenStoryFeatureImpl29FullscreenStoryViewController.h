@@ -11,7 +11,7 @@
     // Error parsing type: , name: style
     // Error parsing type: , name: makeViewBinder
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: videoSurfaceView
+    // Error parsing type: , name: videoSurfaceViews
 }
 
 - (void).cxx_destruct;

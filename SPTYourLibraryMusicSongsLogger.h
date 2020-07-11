@@ -9,23 +9,21 @@
 #import "SPTYourLibraryMusicSortFilterLogger-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTLogCenter, SPTUBIMobileYourLibraryLikedSongsEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileYourLibraryLikedSongsEventFactory;
 
 @interface SPTYourLibraryMusicSongsLogger : NSObject <SPTYourLibraryMusicSortFilterLogger>
 {
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileYourLibraryLikedSongsEventFactory> _eventFactory;
     NSURL *_pageURL;
 }
 
 @property(retain, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(retain, nonatomic) id <SPTUBIMobileYourLibraryLikedSongsEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
-- (void)logUnlikeSongDialogInteractionAtIndex:(unsigned long long)arg1 isUnliked:(_Bool)arg2 trackURI:(id)arg3;
-- (void)logUnlikeSongDialogShownAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
 - (void)logUBIInteractionEvent:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
@@ -35,7 +33,12 @@
 - (void)logSortingIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logSortFilterPickerCanceledWithReason:(unsigned long long)arg1;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
+- (void)logFilterChipsImpression;
 - (void)logEmptyViewImpression;
+- (void)logUnlikeSongDialogInteractionAtIndex:(unsigned long long)arg1 isUnliked:(_Bool)arg2 trackURI:(id)arg3;
+- (void)logUnlikeSongDialogShownAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
+- (void)logClearFilterChips;
+- (void)logFilterChipAtIndex:(unsigned long long)arg1 identifier:(id)arg2 isSelected:(_Bool)arg3;
 - (void)logCloseExtraSongsExplanation;
 - (void)logSongsOpenEntity:(id)arg1;
 - (void)logExtraSongsWhyAction;

@@ -6,7 +6,7 @@
 
 #import "SPTFreeTierPlaylistPlayModel-Protocol.h"
 
-@class NSArray, NSString, NSURL;
+@class NSURL;
 @protocol SPTFreeTierPlaylistModelEntityTrackFields, SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistSortingFiltering;
 
 @protocol SPTFreeTierPlaylistModel <SPTFreeTierPlaylistPlayModel>
@@ -19,10 +19,6 @@
 @property(readonly, nonatomic) NSURL *playlistURL;
 - (void)playlistContainsTrackURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;
 - (void)addTrackURL:(NSURL *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)updateDescription:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)renamePlaylistToName:(NSString *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)moveTrack:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1 before:(_Bool)arg2 targetTrack:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg3 completion:(void (^)(NSError *))arg4;
-- (void)removeTracks:(NSArray *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)toggleLikedStateOnTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1;
 - (void)toggleBannedStateOnTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1;
 - (_Bool)isPlaybackRestrictedForTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1 shouldDisplayExplainingAlert:(_Bool)arg2 coverArtURL:(NSURL *)arg3;
@@ -30,7 +26,6 @@
 - (void)loadMore;
 - (void)deletePlaylist;
 - (void)changeFollowState:(_Bool)arg1;
-- (void)loadEntirePlaylist;
 - (void)load;
 - (void)addPlaylistModelObserver:(id <SPTFreeTierPlaylistModelObserver>)arg1;
 @end

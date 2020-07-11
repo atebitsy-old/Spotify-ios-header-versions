@@ -9,7 +9,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTSearchPlatformTestManager-Protocol.h"
 
-@class NSString;
+@class NSString, SPTSearchFeatureProperties;
 @protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal;
 
 @interface SPTSearchPlatformTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTSearchPlatformTestManager>
@@ -18,6 +18,7 @@
     _Bool _podcastResultCardsTopPlayedEnabled;
     _Bool _podcastResultCardsDurationEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
+    SPTSearchFeatureProperties *_properties;
     id <SPTFeatureFlagSignal> _searchKitSignal;
     id <SPTFeatureFlagSignal> _podcastResultCardsTopPlayedSignal;
     id <SPTFeatureFlagSignal> _podcastResultCardsDurationSignal;
@@ -31,8 +32,10 @@
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> podcastResultCardsTopPlayedSignal; // @synthesize podcastResultCardsTopPlayedSignal=_podcastResultCardsTopPlayedSignal;
 @property(nonatomic, getter=isSearchKitEnabled) _Bool searchKitEnabled; // @synthesize searchKitEnabled=_searchKitEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> searchKitSignal; // @synthesize searchKitSignal=_searchKitSignal;
+@property(readonly, nonatomic) SPTSearchFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
+@property(readonly, nonatomic, getter=isTopicsEnabled) _Bool topicsEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)updatePodcastRowType;
 - (void)setUpSearchKitSignal;

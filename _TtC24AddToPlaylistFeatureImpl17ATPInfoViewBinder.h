@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: infoView
     // Error parsing type: , name: eventConsumer
-    // Error parsing type: , name: logger
 }
 
 - (void)didPressButton;

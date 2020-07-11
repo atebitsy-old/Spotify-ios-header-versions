@@ -7,17 +7,17 @@
 #import <objc/NSObject.h>
 
 @class SPSession;
-@protocol SPTLogCenter, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger;
 
 @interface SPTHomeLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     SPSession *_currentSession;
 }
 
 @property(readonly, nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (double)getTimestamp;

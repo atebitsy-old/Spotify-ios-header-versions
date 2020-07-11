@@ -7,32 +7,34 @@
 #import <objc/NSObject.h>
 
 #import "SPTCollectionPlatformObserver-Protocol.h"
-#import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
+#import "SPTStatefulPlayerObserver-Protocol.h"
 
-@class NSHashTable, NSString, NSURL, SPTNowPlayingTrackMetadataQueue, SPTPlayerTrack;
+@class NSHashTable, NSString, NSURL, SPTStatefulPlayer;
 @protocol SPTAdsManager, SPTCollectionPlatform, SPTNowPlayingTestManager;
 
-@interface SPTNowPlayingAuxiliaryActionsModel : NSObject <SPTCollectionPlatformObserver, SPTNowPlayingTrackMetadataQueueObserver>
+@interface SPTNowPlayingAuxiliaryActionsModel : NSObject <SPTCollectionPlatformObserver, SPTStatefulPlayerObserver>
 {
     _Bool _inCollection;
     _Bool _inBannedCollection;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTAdsManager> _adsManager;
     id <SPTNowPlayingTestManager> _testManager;
-    SPTNowPlayingTrackMetadataQueue *_trackMetadataQueue;
+    SPTStatefulPlayer *_statefulPlayer;
     NSHashTable *_observers;
 }
 
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-@property(retain, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
+@property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(nonatomic) __weak id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(nonatomic, getter=isInBannedCollection) _Bool inBannedCollection; // @synthesize inBannedCollection=_inBannedCollection;
 @property(nonatomic, getter=isInCollection) _Bool inCollection; // @synthesize inCollection=_inCollection;
 - (void).cxx_destruct;
-- (void)trackMetadataQueue:(id)arg1 didMoveToRelativeTrack:(id)arg2;
-- (void)trackMetadataQueueDidFinishUpdating:(id)arg1;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
+- (void)playerDidFinishUpdating:(id)arg1;
 - (void)collectionPlatformDidChange:(id)arg1;
 - (void)dealloc;
 - (id)playingContextURL;
@@ -56,10 +58,10 @@
 - (void)removeFromCollectionWithConfirmation:(_Bool)arg1;
 - (void)removeFromCollection;
 @property(readonly, nonatomic) _Bool disallowAddingToCollection;
-@property(readonly, nonatomic) SPTPlayerTrack *displayedMetadata;
+- (id)currentTrack;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithCollectionPlatform:(id)arg1 adsManager:(id)arg2 testManager:(id)arg3 trackMetadataQueue:(id)arg4;
+- (id)initWithCollectionPlatform:(id)arg1 adsManager:(id)arg2 testManager:(id)arg3 statefulPlayer:(id)arg4;
 - (_Bool)updateShowFollowState;
 - (_Bool)unfollowShow;
 - (_Bool)followShow;

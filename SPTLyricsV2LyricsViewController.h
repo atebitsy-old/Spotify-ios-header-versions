@@ -74,6 +74,7 @@
 - (void)updateWithStyleProvider:(id)arg1;
 - (void)updateTextViewWithLyricsLineSet:(id)arg1;
 - (void)updateWithLyricsLineSet:(id)arg1 forTrack:(id)arg2;
+- (void)reset;
 - (void)dealloc;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidDisappear:(_Bool)arg1;

@@ -19,6 +19,7 @@
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
 - (id)longHitUiReveal;
+- (id)hitPauseWithItemToBePaused:(id)arg1;
 - (id)hitPlayWithItemToBePlayed:(id)arg1;
 - (id)hideButtonFactory;
 - (id)heartButtonFactory;

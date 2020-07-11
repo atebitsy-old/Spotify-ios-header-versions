@@ -36,6 +36,8 @@
 + (id)spt_concertEntityServiceURLWithIdentifier:(id)arg1 location:(id)arg2 transport:(long long)arg3;
 + (id)spt_ConcertsLocationSearchURLWithQuery:(id)arg1 transport:(long long)arg2;
 + (id)spt_ConcertsURLWithLocation:(id)arg1 transport:(long long)arg2;
++ (id)spt_renamePlaylistURI;
++ (id)spt_createPlaylistURI;
 + (id)spt_entitySeeAllSongsViewURIWithEmbeddedURI:(id)arg1;
 + (id)spt_externalIntegrationRecentlyPlayedURI;
 + (id)spt_abbaMakeURLWithFormatForPath:(id)arg1;
@@ -64,8 +66,6 @@
 + (id)spt_freeTierArtistContentURLForArtistIdentifier:(id)arg1 withOnDemandURLs:(id)arg2 podcastEnabled:(_Bool)arg3 videoEnabled:(_Bool)arg4 onDemandTrialEnabled:(_Bool)arg5;
 + (id)spt_artist_concertEntityViewURIFromConcertID:(id)arg1;
 + (id)spt_artist_partnerURLFromSpotifyURI:(id)arg1;
-+ (id)spt_freeTierRenamePlaylistURI;
-+ (id)spt_freeTierCreatePlaylistURI;
 + (id)spt_freeTierFindURI;
 + (id)spt_freeTierTasteOnboardingUpdateURI;
 + (id)spt_freeTierTasteOnboardingURI;
@@ -81,6 +81,9 @@
 + (id)spt_freeTierTasteOnboardingArtistPickerViewURI;
 + (id)spt_seedASessionConvertHermesURIToHttp:(id)arg1 timestamp:(id)arg2;
 + (id)spt_seedASessionLoadMoreSearchResultsURI:(id)arg1 timestamp:(id)arg2;
++ (id)spt_seedASessionArtistSearchViewURI;
++ (id)spt_seedASessionArtistPickerViewURI;
++ (id)spt_curateSeedASessionViewURI;
 + (id)spt_seedASessionCurateURL:(id)arg1 sessionId:(id)arg2;
 + (id)spt_seedASessionSearchURL:(id)arg1 searchSessionId:(id)arg2 sessionId:(id)arg3 timestamp:(id)arg4;
 + (id)spt_seedASessionQuestionnaireURL:(id)arg1 sessionId:(id)arg2;
@@ -317,8 +320,6 @@
 @property(readonly, nonatomic, getter=spt_isCollectionSongsSourceURL) _Bool isCollectionSongsSourceURL;
 - (id)spt_collectionEntityURLWithUsername:(id)arg1;
 @property(readonly, nonatomic, getter=spt_isInternalCollectionTracksHeartImageURL) _Bool isInternalCollectionTracksHeartImageURL;
-@property(readonly, nonatomic, getter=spt_isInternalCollectionEpisodesDownloadsURL) _Bool isInternalCollectionEpisodesDownloadsURL;
-@property(readonly, nonatomic, getter=spt_isInternalCollectionEpisodesURL) _Bool isInternalCollectionEpisodesURL;
 @property(readonly, nonatomic, getter=spt_isVariousArtistsURL) _Bool isVariousArtistsURL;
 @property(readonly, nonatomic, getter=spt_isInternalCollectionTracksURL) _Bool isInternalCollectionTracksURL;
 @property(readonly, nonatomic, getter=spt_isCollectionAlbumURL) _Bool isCollectionAlbumsURL;
@@ -354,8 +355,6 @@
 @property(readonly, nonatomic) _Bool spt_isFreeTierCollectionArtistViewURI;
 @property(readonly, nonatomic) _Bool spt_URIContainsFreeTierArtist;
 @property(readonly, nonatomic) _Bool spt_isFreeTierArtistViewURI;
-- (_Bool)spt_isFreeTierRenamePlaylistURI;
-- (_Bool)spt_isFreeTierCreatePlaylistURI;
 - (_Bool)spt_isFreeTierFindURI;
 - (_Bool)spt_freeTierTasteOnboardingIsMediumPaidSocial;
 @property(readonly, nonatomic) NSString *spt_freeTierTrackIdentifier;

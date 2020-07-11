@@ -11,14 +11,16 @@
 @interface SPTVideoPreferredSubtitleMessage : SPTVideoPlayerMessage
 {
     _Bool _isClosedCaption;
-    NSString *_languageTag;
+    NSString *_locale;
 }
 
-@property(readonly, nonatomic) _Bool isClosedCaption; // @synthesize isClosedCaption=_isClosedCaption;
-@property(readonly, copy, nonatomic) NSString *languageTag; // @synthesize languageTag=_languageTag;
+@property(nonatomic) _Bool isClosedCaption; // @synthesize isClosedCaption=_isClosedCaption;
+@property(copy, nonatomic) NSString *locale; // @synthesize locale=_locale;
 - (void).cxx_destruct;
 - (id)serializedDictionary;
-- (id)initWithLanguageTag:(id)arg1 isClosedCaption:(_Bool)arg2;
+- (id)languageTagSuffix;
+@property(readonly, copy, nonatomic) NSString *languageTag;
+- (id)initWithLocale:(id)arg1 isClosedCaption:(_Bool)arg2;
 
 @end
 

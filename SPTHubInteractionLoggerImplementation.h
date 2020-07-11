@@ -9,17 +9,17 @@
 #import "SPTHubInteractionLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger;
 
 @interface SPTHubInteractionLoggerImplementation : NSObject <SPTHubInteractionLogger>
 {
     id <SPTLogCenter> _logCenter;
     NSString *_featureIdentifier;
     NSString *_viewURIString;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, copy, nonatomic) NSString *viewURIString; // @synthesize viewURIString=_viewURIString;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;

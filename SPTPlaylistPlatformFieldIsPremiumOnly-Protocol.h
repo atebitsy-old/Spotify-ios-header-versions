@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldIsPremiumOnly <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool isPremiumOnly;
+@property(nonatomic, readonly) _Bool isPremiumOnly;
 @end
 

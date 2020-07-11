@@ -24,6 +24,7 @@
 @property(readonly, nonatomic) long long msPlayedSubtitles;
 @property(readonly, nonatomic) long long msPlayedFullscreen;
 @property(readonly, nonatomic) long long msPlayedBackground;
+@property(readonly, nonatomic) long long msPlayedNominal;
 @property(readonly, nonatomic) long long msPlayed;
 @property(readonly, nonatomic) long long nSeekforward;
 @property(readonly, nonatomic) long long nSeekback;

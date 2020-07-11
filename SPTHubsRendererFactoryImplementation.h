@@ -9,7 +9,7 @@
 #import "SPTHubsRendererFactory-Protocol.h"
 
 @class NSString, SPTHubContentOperationFactoryImplementation, SPTHubDefaultCommandHandlers, SPTHubLoggerFactoryImplementation;
-@protocol SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTHugsFactory, SPTImageLoaderFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTShareDragDelegateFactory, SPTUserBehaviourInstrumentation;
+@protocol SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTHugsFactory, SPTImageLoaderFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTShareDragDelegateFactory, SPTUBIUserBehaviourInstrumentation;
 
 @interface SPTHubsRendererFactoryImplementation : NSObject <SPTHubsRendererFactory>
 {
@@ -22,12 +22,12 @@
     SPTHubDefaultCommandHandlers *_commandHandlerFactory;
     SPTHubContentOperationFactoryImplementation *_contentOperationFactory;
     SPTHubLoggerFactoryImplementation *_loggerFactory;
-    id <SPTUserBehaviourInstrumentation> _userBehaviourInstrumentation;
+    id <SPTUBIUserBehaviourInstrumentation> _userBehaviourInstrumentation;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
 }
 
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
+@property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(readonly, nonatomic) SPTHubLoggerFactoryImplementation *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
 @property(readonly, nonatomic) SPTHubContentOperationFactoryImplementation *contentOperationFactory; // @synthesize contentOperationFactory=_contentOperationFactory;
 @property(readonly, nonatomic) SPTHubDefaultCommandHandlers *commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
@@ -39,13 +39,11 @@
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 - (void).cxx_destruct;
 - (id)createCommandHandlerFactoryWithFeatureIdentifier:(id)arg1 contextMenuLogContext:(id)arg2;
-- (id)createCommandHandlerFactoryWithFeatureIdentifier:(id)arg1 contextMenuLogContextIphone:(id)arg2 contextMenuLogContextIpad:(id)arg3;
 - (id)provideLoggerFactory;
 - (id)provideContentOperationFactory;
 - (id)createImageLoaderFactoryWithLogger:(id)arg1;
 - (id)provideShareDragDelegateFactory;
 - (id)provideImageLoaderFactory;
-- (id)createPageLoadableWithViewModelProvider:(id)arg1;
 - (id)initWithTheme:(id)arg1 imageLoaderFactory:(id)arg2 dataLoaderFactory:(id)arg3 offlineModeState:(id)arg4 playerService:(id)arg5 linkDispatcher:(id)arg6 hugsFactory:(id)arg7 contextMenuOptionsFactory:(id)arg8 presenterFactory:(id)arg9 logCenter:(id)arg10 viewLoggerFactory:(id)arg11 cosmosFeature:(id)arg12 userBehaviourInstrumentation:(id)arg13 shareDragDelegateFactory:(id)arg14;
 
 // Remaining properties

@@ -6,11 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCreatePlaylist_BackEventFactory, SPTUBIMobileCreatePlaylist_CloseButtonEventFactory, SPTUBIMobileCreatePlaylist_CreateButtonEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCreatePlaylist_BackEventFactory, SPTUBIMobileCreatePlaylist_CloseButtonEventFactory, SPTUBIMobileCreatePlaylist_CreateButtonNameGeneratedEventFactory, SPTUBIMobileCreatePlaylist_CreateButtonNameProvidedEventFactory;
 
 @protocol SPTUBIMobileCreatePlaylistEventFactory <NSObject>
 - (id <SPTUBIMobileCreatePlaylist_CloseButtonEventFactory>)closeButtonFactory;
-- (id <SPTUBIMobileCreatePlaylist_CreateButtonEventFactory>)createButtonFactory;
+- (id <SPTUBIMobileCreatePlaylist_CreateButtonNameGeneratedEventFactory>)createButtonNameGeneratedFactory;
+- (id <SPTUBIMobileCreatePlaylist_CreateButtonNameProvidedEventFactory>)createButtonNameProvidedFactory;
 - (id <SPTUBIMobileCreatePlaylist_BackEventFactory>)backFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

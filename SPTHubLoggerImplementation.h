@@ -9,7 +9,7 @@
 #import "SPTHubLogger-Protocol.h"
 
 @class NSString, SPTHubImageLoadingLoggerImplementation, SPTHubImpressionLoggerImplementation, SPTHubInteractionLoggerImplementation, SPTHubLoadingLoggerImplementation;
-@protocol SPTUserBehaviourHubsInstrumentation, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBIHubsUtilities, SPTUBILogger;
 
 @interface SPTHubLoggerImplementation : NSObject <SPTHubLogger>
 {
@@ -17,12 +17,12 @@
     SPTHubImpressionLoggerImplementation *_impressionLogger;
     SPTHubInteractionLoggerImplementation *_interactionLogger;
     SPTHubLoadingLoggerImplementation *_loadingLogger;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) SPTHubLoadingLoggerImplementation *loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(readonly, nonatomic) SPTHubInteractionLoggerImplementation *interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) SPTHubImpressionLoggerImplementation *impressionLogger; // @synthesize impressionLogger=_impressionLogger;

@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldPlayStateRestriction <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) unsigned long long playStateRestriction;
+@property(nonatomic, readonly) unsigned long long playStateRestriction;
 @end
 

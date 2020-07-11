@@ -8,27 +8,38 @@
 
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 #import "SPTNowPlayingInformationUnitViewModelDelegate-Protocol.h"
+#import "SPTNowPlayingLyricsButtonViewDelegate-Protocol.h"
 
-@class NSString, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingMarqueeLabel, SPTTheme;
-@protocol SPTNowPlayingContainingViewController;
+@class NSMutableArray, NSString, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
+@protocol SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager;
 
-@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingContainedViewController>
+@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewDelegate, SPTNowPlayingContainedViewController>
 {
     SPTTheme *_theme;
     long long _context;
     SPTNowPlayingMarqueeLabel *_titleLabel;
     SPTNowPlayingMarqueeLabel *_subtitleLabel;
     SPTNowPlayingFreeTierFeedbackButton *_positiveFeedbackButton;
+    SPTNowPlayingLyricsButtonView *_lyricsView;
     SPTNowPlayingInformationUnitViewModelImplementation *_viewModel;
+    NSMutableArray *_layoutConstraints;
+    id <SPTNowPlayingTestManager> _testManager;
+    id <SPTNowPlayingContentLayerResolver> _contentLayerResolver;
 }
 
+@property(retain, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
+@property(retain, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTNowPlayingInformationUnitViewModelImplementation *viewModel; // @synthesize viewModel=_viewModel;
+@property(retain, nonatomic) SPTNowPlayingLyricsButtonView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(retain, nonatomic) SPTNowPlayingFreeTierFeedbackButton *positiveFeedbackButton; // @synthesize positiveFeedbackButton=_positiveFeedbackButton;
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) long long context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+- (void)didTapLyricsView;
+- (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
 - (void)viewModelDidUpdatePositiveFeedbackButtonState:(id)arg1;
 - (void)viewModelTrackDidChange:(id)arg1;
 - (void)updateLabels;
@@ -36,8 +47,8 @@
 - (struct CGSize)preferredContentSize;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
+- (void)setupLyricsViewConstraints;
 - (void)setupPositiveFeedbackButtonConstraints;
-- (id)naturalAlignmentConstraints;
 - (void)setupDefaultConstraints;
 - (double)contextDependentPositiveFeedbackButtonTrailingMargin;
 - (double)contextDependentTitleSideMargin;
@@ -50,9 +61,12 @@
 - (void)setupPositiveFeedbackButton;
 - (void)setupSubtitleLabel;
 - (void)setupTitleLabel;
+- (void)setupLyricsViewIfNeeded;
+- (void)setupConstraints;
+- (void)resetConstraints;
 - (void)setupUI;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3;
+- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 testManager:(id)arg4 contentLayerResolver:(id)arg5;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

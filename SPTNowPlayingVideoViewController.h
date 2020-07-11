@@ -8,15 +8,15 @@
 
 #import "SPTNowPlayingDurationViewV2DataSource-Protocol.h"
 #import "SPTNowPlayingDurationViewV2Delegate-Protocol.h"
-#import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
 #import "SPTNowPlayingTrackPositionObserver-Protocol.h"
 #import "SPTNowPlayingVideoTimerDelegate-Protocol.h"
 #import "SPTNowPlayingVideoViewV2Delegate-Protocol.h"
+#import "SPTStatefulPlayerObserver-Protocol.h"
 
 @class NSString, SPTNowPlayingLogger, SPTNowPlayingSkipLimitReachedMessageRequester, SPTNowPlayingVideoHeadUnitViewController, SPTNowPlayingVideoTimer, SPTNowPlayingVideoView, SPTNowPlayingVideoViewModel, SPTStatusBarToken, SPTTheme, UIView;
 @protocol BMVideoSurfaceManager, SPTLinkDispatcher, SPTLocalSettings, SPTNowPlayingVideoViewControllerDelegate, SPTPodcastContextMenuProvider, SPTQueueLogger;
 
-@interface SPTNowPlayingVideoViewController : UIViewController <SPTNowPlayingDurationViewV2DataSource, SPTNowPlayingDurationViewV2Delegate, SPTNowPlayingTrackPositionObserver, SPTNowPlayingVideoViewV2Delegate, SPTNowPlayingVideoTimerDelegate, SPTNowPlayingTrackMetadataQueueObserver>
+@interface SPTNowPlayingVideoViewController : UIViewController <SPTNowPlayingDurationViewV2DataSource, SPTNowPlayingDurationViewV2Delegate, SPTNowPlayingTrackPositionObserver, SPTNowPlayingVideoViewV2Delegate, SPTNowPlayingVideoTimerDelegate, SPTStatefulPlayerObserver>
 {
     _Bool _shouldNotifyDismissal;
     _Bool _visible;
@@ -59,8 +59,10 @@
 - (void)videoViewSurfaceDidDetach:(id)arg1;
 - (void)videoViewSurfaceDidAttach:(id)arg1;
 - (void)videoView:(id)arg1 didChangeControlsVisibility:(_Bool)arg2;
-- (void)trackMetadataQueueDidFinishUpdating:(id)arg1;
-- (void)trackMetadataQueue:(id)arg1 didMoveToRelativeTrack:(id)arg2;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)playerDidFinishUpdating:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)nowPlayingTrackPositionDidChange:(id)arg1;
 - (void)nowPlayingDurationViewDidTapSlider:(id)arg1;
 - (void)nowPlayingDurationViewToggleTimeRemainingLabel:(id)arg1;

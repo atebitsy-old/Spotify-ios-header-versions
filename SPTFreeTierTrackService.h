@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierTrackHubManager;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTFreeTierService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTURIDispatchService, SPTUserBehaviourInstrumentationService, SPTVisualRefreshIntegrationService;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTFreeTierService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTUBIService, SPTURIDispatchService, SPTVisualRefreshIntegrationService;
 
 @interface SPTFreeTierTrackService : SPTUIPageService
 {
@@ -22,7 +22,7 @@
     id <SPTOnDemandService> _onDemandService;
     id <SPTNetworkService> _networkService;
     id <SPTPlayerFeature> _playerService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     SPTFreeTierTrackHubManager *_hubManager;
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
 }
@@ -30,7 +30,7 @@
 + (id)serviceIdentifier;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(retain, nonatomic) SPTFreeTierTrackHubManager *hubManager; // @synthesize hubManager=_hubManager;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;

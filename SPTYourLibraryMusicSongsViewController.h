@@ -80,9 +80,9 @@
 - (void)offlineSwitchCellDidAbortStateChange:(id)arg1;
 - (unsigned long long)offlineSwitchCellOfflineAvailability:(id)arg1;
 - (void)offlineSwitchCellDidChangeState:(id)arg1 isOn:(_Bool)arg2;
-- (void)updateTable;
+- (void)updateTableWithSectionConfigurationChanged:(_Bool)arg1;
 - (void)songsViewModel:(id)arg1 error:(id)arg2;
-- (void)songsViewModelDidChange:(id)arg1;
+- (void)songsViewModelDidChange:(id)arg1 sectionConfigurationChanged:(_Bool)arg2;
 - (void)handleEmptyView;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;

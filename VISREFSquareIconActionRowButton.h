@@ -15,11 +15,14 @@
 {
     id <VISREFActionRowButtonViewModel> _viewModel;
     GLUEViewAnimator *_animator;
+    NSString *_accessibilityLabelText;
 }
 
+@property(copy, nonatomic) NSString *accessibilityLabelText; // @synthesize accessibilityLabelText=_accessibilityLabelText;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(retain, nonatomic) id <VISREFActionRowButtonViewModel> viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+- (id)accessibilityLabel;
 - (struct CGSize)intrinsicContentSize;
 - (void)updateStyle:(id)arg1;
 - (void)updateTitle:(id)arg1;

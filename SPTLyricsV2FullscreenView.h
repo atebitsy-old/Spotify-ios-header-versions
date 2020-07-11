@@ -69,7 +69,7 @@
 - (void)collapseIntoCardFrame:(struct CGRect)arg1 lyricsFrame:(struct CGRect)arg2;
 - (void)collapseToCardViewFrame:(struct CGRect)arg1 lyricsViewFrame:(struct CGRect)arg2;
 - (void)expand;
-- (void)startExpadingFromCardViewFrame:(struct CGRect)arg1 lyicsViewFrame:(struct CGRect)arg2;
+- (void)startExpadingFromCardViewFrame:(struct CGRect)arg1 lyricsViewFrame:(struct CGRect)arg2;
 - (void)setupConstraints;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1 headerView:(id)arg2 footerView:(id)arg3 lyricsView:(id)arg4;

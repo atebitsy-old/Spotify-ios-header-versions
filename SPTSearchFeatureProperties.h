@@ -12,10 +12,10 @@
 
 @interface SPTSearchFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _newCarouselEnabled;
+    _Bool _shouldEnableTopics;
 }
 
-@property(readonly, nonatomic) _Bool newCarouselEnabled; // @synthesize newCarouselEnabled=_newCarouselEnabled;
+@property(readonly, nonatomic) _Bool shouldEnableTopics; // @synthesize shouldEnableTopics=_shouldEnableTopics;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

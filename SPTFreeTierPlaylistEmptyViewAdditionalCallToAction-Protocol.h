@@ -4,11 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTFreeTierPlaylistAdditionalCallToAction-Protocol.h"
+#import "NSObject-Protocol.h"
 
-@class NSString;
+@class NSString, UIControl;
 
-@protocol SPTFreeTierPlaylistEmptyViewAdditionalCallToAction <SPTFreeTierPlaylistAdditionalCallToAction>
+@protocol SPTFreeTierPlaylistEmptyViewAdditionalCallToAction <NSObject>
 @property(readonly, copy, nonatomic) NSString *educationalText;
+@property(readonly, nonatomic) _Bool enabled;
+@property(readonly, copy, nonatomic) NSString *title;
+- (void)performAction:(UIControl *)arg1;
 @end
 

@@ -19,7 +19,7 @@
 #import "SPViewController-Protocol.h"
 
 @class HUBComponentRegistry, NSMutableDictionary, NSString, NSURL, SPTHomeLocalViewModelOverrides, SPTHomeNavigationItemDecorator, SPTHomeView, SPTHomeViewModelProvider, SPTProgressView;
-@protocol GLUETheme, HUBCommandHandler, HUBComponentEventHandler, HUBComponentLayoutManager, HUBImageLoaderFactory, SPTHomeCacheRenderDelegate, SPTHubImpressionLogger, SPTHubLoadingLogger, SPTOfflineModeState, SPTPageContainer, SPTShareDragDelegateFactory;
+@protocol GLUETheme, HUBCommandHandler, HUBComponentEventHandler, HUBComponentLayoutManager, HUBImageLoaderFactory, SPTHomeCacheRenderDelegate, SPTHomeViewControllerDelegate, SPTHubImpressionLogger, SPTHubLoadingLogger, SPTOfflineModeState, SPTPageContainer, SPTShareDragDelegateFactory;
 
 @interface SPTHomeViewController : UIViewController <SPTContentBottomLayoutGuideObserver, SPTScrollToTopViewController, HUBViewContentOffsetObserver, SPTHubViewModelProviderDelegate, HUBOverlayViewComponentDelegate, HUBViewComponentDelegate, SPTOfflineModeStateObserver, SPTPageController, SPTNavigationControllerNavigationBarState, SPViewController, SPTHomeViewModelProviderDelegate>
 {
@@ -28,6 +28,7 @@
     NSString *_pageIdentifier;
     NSURL *_pageURI;
     id <SPTHomeCacheRenderDelegate> _cacheRenderDelegate;
+    id <SPTHomeViewControllerDelegate> _delegate;
     SPTHomeNavigationItemDecorator *_navigationItemDecorator;
     id <GLUETheme> _theme;
     NSURL *_viewURI;
@@ -68,6 +69,7 @@
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTHomeNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
+@property(nonatomic) __weak id <SPTHomeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTHomeCacheRenderDelegate> cacheRenderDelegate; // @synthesize cacheRenderDelegate=_cacheRenderDelegate;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 - (void).cxx_destruct;

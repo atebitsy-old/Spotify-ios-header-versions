@@ -6,15 +6,18 @@
 
 #import "HUBComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithChildren-Protocol.h"
+#import "HUBComponentViewWithRestorableUIState-Protocol.h"
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class NSLayoutConstraint, NSString, SPTPremiumDestinationCarouselStyle, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationValueCarouselFlowLayout, UICollectionView, UIPageControl;
 @protocol HUBComponentViewChildDelegate, SPTPremiumDestinationCarouselItemSizeCalculator;
 
-@interface SPTPremiumDestinationCarouselComponentView : HUBComponentView <UICollectionViewDataSource, UICollectionViewDelegate, HUBComponentViewWithChildren>
+@interface SPTPremiumDestinationCarouselComponentView : HUBComponentView <UICollectionViewDataSource, UICollectionViewDelegate, HUBComponentViewWithChildren, HUBComponentViewObserver, HUBComponentViewWithRestorableUIState>
 {
+    _Bool _isViewAppearing;
     id <HUBComponentViewChildDelegate> _childDelegate;
     id <SPTPremiumDestinationCarouselItemSizeCalculator> _itemSizeCalculator;
     SPTPremiumDestinationGLUETheme *_theme;
@@ -25,6 +28,7 @@
     NSLayoutConstraint *_collectionViewHeightConstraint;
 }
 
+@property(nonatomic) _Bool isViewAppearing; // @synthesize isViewAppearing=_isViewAppearing;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UIPageControl *pageControl; // @synthesize pageControl=_pageControl;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
@@ -37,7 +41,12 @@
 - (struct CGSize)calculateItemSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 - (double)minimumLineSpacingForItemSize:(struct CGSize)arg1 containerSize:(struct CGSize)arg2 sectionInsets:(struct UIEdgeInsets)arg3 style:(id)arg4;
 - (struct UIEdgeInsets)sectionInsetsForItemSize:(struct CGSize)arg1 containerSize:(struct CGSize)arg2;
+- (id)hubComponentViewFromCell:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
+- (void)restoreUIState:(id)arg1;
+- (id)currentUIState;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;

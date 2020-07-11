@@ -7,10 +7,14 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, UIControl;
+@protocol SPTFreeTierPlaylistAdditionalCallToActionDelegate;
 
 @protocol SPTFreeTierPlaylistAdditionalCallToAction <NSObject>
+@property(readonly, copy, nonatomic) NSString *accessibilityLabel;
 @property(readonly, nonatomic) _Bool enabled;
-@property(readonly, copy, nonatomic) NSString *title;
+@property(readonly, nonatomic) _Bool selected;
+@property(readonly, nonatomic) unsigned long long icon;
+@property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate;
 - (void)performAction:(UIControl *)arg1;
 @end
 

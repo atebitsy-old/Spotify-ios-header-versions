@@ -23,6 +23,8 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
+- (void)updateSeedASessionDidFail;
+- (void)updateSeedASessionDidComplete:(id)arg1;
 - (void)updateTasteViewModelDidComplete:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

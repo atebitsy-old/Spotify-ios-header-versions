@@ -7,12 +7,13 @@
 #import "HUGSThemableComponentView.h"
 
 #import "GLUEStyleable-Protocol.h"
+#import "HUBComponentViewContentOffsetObserver-Protocol.h"
 #import "HUBComponentViewWithEvents-Protocol.h"
 
 @class GLUELabel, NSString, UIButton, UIImageView;
 @protocol HUBComponentEventHandler;
 
-@interface SPTHomeUITooltipView : HUGSThemableComponentView <HUBComponentViewWithEvents, GLUEStyleable>
+@interface SPTHomeUITooltipView : HUGSThemableComponentView <HUBComponentViewWithEvents, HUBComponentViewContentOffsetObserver, GLUEStyleable>
 {
     id <HUBComponentEventHandler> _eventHandler;
     UIImageView *_beakImageView;
@@ -30,6 +31,7 @@
 @property(readonly, nonatomic) UIImageView *beakImageView; // @synthesize beakImageView=_beakImageView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void).cxx_destruct;
+- (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)close;
 - (void)glue_applyStyle:(id)arg1;
 - (void)horizontallyAnchorBeak:(double)arg1;

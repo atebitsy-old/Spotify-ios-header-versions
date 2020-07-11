@@ -20,6 +20,7 @@
     // Error parsing type: , name: freetierCollectionService
     // Error parsing type: , name: crashReporterService
     // Error parsing type: , name: crashReporter
+    // Error parsing type: , name: crashReporterWrapper
     // Error parsing type: , name: masterFeatureFlagSignal
     // Error parsing type: , name: freeTierSignal
     // Error parsing type: , name: shouldUseSnackBar

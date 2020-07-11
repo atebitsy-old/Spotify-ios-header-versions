@@ -6,18 +6,18 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTPlayerStagedContextObserver-Protocol.h"
+#import "SPTStatefulPlayerObserver-Protocol.h"
 
-@class NSString, SPTNowPlayingAuxiliaryActionsModel, SPTNowPlayingEntityDecorationController, SPTNowPlayingPlaybackController, SPTNowPlayingQueueMetadataModel, SPTNowPlayingTrackMetadataQueue, SPTNowPlayingTrackPosition, SPTObserverManager, SPTPlayerTrack, SPTStatefulPlayer;
+@class NSString, SPTNowPlayingAuxiliaryActionsModel, SPTNowPlayingEntityDecorationController, SPTNowPlayingPlaybackController, SPTNowPlayingQueueMetadataModel, SPTNowPlayingTrackPosition, SPTObserverManager, SPTPlayerTrack, SPTStatefulPlayer;
 @protocol SPTCollectionPlatformTestManager, SPTNowPlayingModelDelegate, SPTPlayer;
 
-@interface SPTNowPlayingModel : NSObject <SPTNowPlayingTrackMetadataQueueObserver, SPTPlayerObserver, SPTPlayerStagedContextObserver>
+@interface SPTNowPlayingModel : NSObject <SPTStatefulPlayerObserver, SPTPlayerObserver, SPTPlayerStagedContextObserver>
 {
     id <SPTNowPlayingModelDelegate> _delegate;
     unsigned long long _currentToggleMode;
-    SPTNowPlayingTrackMetadataQueue *_trackMetadataQueue;
+    SPTStatefulPlayer *_statefulPlayer;
     SPTNowPlayingTrackPosition *_trackPosition;
     SPTNowPlayingPlaybackController *_playbackController;
     SPTNowPlayingAuxiliaryActionsModel *_auxiliaryActionsModel;
@@ -25,12 +25,10 @@
     SPTNowPlayingQueueMetadataModel *_queueMetadataModel;
     id <SPTPlayer> _player;
     SPTObserverManager *_observerManager;
-    SPTStatefulPlayer *_statefulPlayer;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
 }
 
 @property(nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
-@property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTNowPlayingQueueMetadataModel *queueMetadataModel; // @synthesize queueMetadataModel=_queueMetadataModel;
@@ -38,16 +36,19 @@
 @property(retain, nonatomic) SPTNowPlayingAuxiliaryActionsModel *auxiliaryActionsModel; // @synthesize auxiliaryActionsModel=_auxiliaryActionsModel;
 @property(retain, nonatomic) SPTNowPlayingPlaybackController *playbackController; // @synthesize playbackController=_playbackController;
 @property(retain, nonatomic) SPTNowPlayingTrackPosition *trackPosition; // @synthesize trackPosition=_trackPosition;
-@property(retain, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
+@property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(readonly, nonatomic) unsigned long long currentToggleMode; // @synthesize currentToggleMode=_currentToggleMode;
 @property(nonatomic) __weak id <SPTNowPlayingModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)player:(id)arg1 didStageContext:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
-- (void)trackMetadataQueueDidSynchronizeQueue:(id)arg1;
-- (void)trackMetadataQueuePreviousTrackDidChange:(id)arg1;
-- (void)trackMetadataQueueNextTrackDidChange:(id)arg1;
-- (void)trackMetadataQueue:(id)arg1 didMoveToRelativeTrack:(id)arg2;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)playerDidFinishUpdating:(id)arg1;
+- (void)playerDidSynchronizeQueue:(id)arg1;
+- (void)playerPreviousTrackDidChange:(id)arg1;
+- (void)playerNextTrackDidChange:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)updateWithPlayerState:(id)arg1;
 - (unsigned long long)preferredToggleMode;
 - (void)setCurrentToggleMode:(unsigned long long)arg1 animated:(_Bool)arg2;
@@ -58,7 +59,7 @@
 - (void)addObserver:(id)arg1;
 @property(readonly, nonatomic) SPTPlayerTrack *displayedMetadata;
 - (void)dealloc;
-- (id)initWithPlayer:(id)arg1 collectionPlatform:(id)arg2 playlistDataLoader:(id)arg3 radioManager:(id)arg4 adsManager:(id)arg5 nowPlayingService:(id)arg6 productState:(id)arg7 queueService:(id)arg8 testManager:(id)arg9 collectionTestManager:(id)arg10 statefulPlayer:(id)arg11 trackMetadataQueue:(id)arg12;
+- (id)initWithPlayer:(id)arg1 collectionPlatform:(id)arg2 playlistDataLoader:(id)arg3 radioManager:(id)arg4 adsManager:(id)arg5 nowPlayingService:(id)arg6 productState:(id)arg7 queueService:(id)arg8 testManager:(id)arg9 collectionTestManager:(id)arg10 statefulPlayer:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

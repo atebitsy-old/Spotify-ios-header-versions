@@ -6,9 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_;
+@protocol _TtP18ConnectUIV2Feature25SPTConnectUIButtonFactory_, _TtP18ConnectUIV2Feature29SPTConnectUIButtonTestManager_, _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_;
 
 @protocol _TtP18ConnectUIV2Feature21SPTConnectUIV2Service_ <SPTService>
+- (id <_TtP18ConnectUIV2Feature25SPTConnectUIButtonFactory_>)provideButtonFactory;
+- (id <_TtP18ConnectUIV2Feature29SPTConnectUIButtonTestManager_>)provideButtonTestManager;
 - (id <_TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_>)provideDevicePresenter;
 @end
 

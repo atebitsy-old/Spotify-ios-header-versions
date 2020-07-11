@@ -6,20 +6,27 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileFindfriendsEventFactory;
 
 @interface SPTFindFriendsLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBIMobileFindfriendsEventFactory> _eventFactory;
+    id <SPTUBILogger> _ubiLogger;
 }
 
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIMobileFindfriendsEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logUIInteractionWithFeatureId:(id)arg1 pageURI:(id)arg2 sectionId:(id)arg3 itemIndex:(long long)arg4 targetURI:(id)arg5 interactionType:(id)arg6 userIntent:(id)arg7;
 - (void)logUIInteractionOnSectionId:(id)arg1 itemIndex:(long long)arg2 interactionType:(id)arg3 userIntent:(id)arg4;
+- (void)logHitFollowAllButton;
 - (void)logHitConnectToFacebookButton;
-- (void)logHitFollowButtonAtIndex:(unsigned long long)arg1 followState:(_Bool)arg2;
-- (id)initWithLogCenter:(id)arg1;
+- (void)logHitUserRowAtIndex:(unsigned long long)arg1 userURI:(id)arg2;
+- (void)logHitFollowButtonAtIndex:(unsigned long long)arg1 followState:(_Bool)arg2 userURI:(id)arg3;
+- (void)logFilterText;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
 
 @end
 

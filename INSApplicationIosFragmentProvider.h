@@ -12,11 +12,15 @@
 
 @interface INSApplicationIosFragmentProvider : NSObject <INSEventContext>
 {
+    NSString *_clientVersion;
 }
 
-+ (id)applicationIos;
+@property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
+- (void).cxx_destruct;
+- (id)applicationIos;
 @property(readonly, copy, nonatomic) NSData *contextData;
 @property(readonly, copy, nonatomic) NSString *contextName;
+- (id)initWithClientVersion:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

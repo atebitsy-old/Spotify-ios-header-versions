@@ -10,7 +10,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTCoreService, SPTEntitySeeAllSongsRegistry, SPTFeatureFlagSignal, SPTHubFrameworkService, SPTURIDispatchService, SPTUserBehaviourInstrumentation, SPTUserBehaviourInstrumentationService, _TtP21EntityAllSongsFeature24SPTEntityAllSongsService_;
+@protocol SPTCollectionPlatformService, SPTCoreService, SPTEntitySeeAllSongsRegistry, SPTFeatureFlagSignal, SPTHubFrameworkService, SPTUBIService, SPTUBIUserBehaviourInstrumentation, SPTURIDispatchService, _TtP21EntityAllSongsFeature24SPTEntityAllSongsService_;
 
 @interface SPTEntitySeeAllSongsServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTEntitySeeAllSongsService>
 {
@@ -21,16 +21,16 @@
     id <_TtP21EntityAllSongsFeature24SPTEntityAllSongsService_> _entityAllSongsService;
     id <SPTFeatureFlagSignal> _entityAllSongsSignal;
     id <SPTHubFrameworkService> _hubFrameworkService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
-    id <SPTUserBehaviourInstrumentation> _userBehaviourInstrumentation;
+    id <SPTUBIService> _ubiService;
+    id <SPTUBIUserBehaviourInstrumentation> _userBehaviourInstrumentation;
     id <SPTEntitySeeAllSongsRegistry> _registry;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTEntitySeeAllSongsRegistry> registry; // @synthesize registry=_registry;
 @property(nonatomic) _Bool isSwiftAllSongEnabled; // @synthesize isSwiftAllSongEnabled=_isSwiftAllSongEnabled;
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> entityAllSongsSignal; // @synthesize entityAllSongsSignal=_entityAllSongsSignal;
 @property(nonatomic) __weak id <_TtP21EntityAllSongsFeature24SPTEntityAllSongsService_> entityAllSongsService; // @synthesize entityAllSongsService=_entityAllSongsService;

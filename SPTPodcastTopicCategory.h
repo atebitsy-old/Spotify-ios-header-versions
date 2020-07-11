@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "_TtP31PodcastCreatorEntityPageFeature15SPTPodcastTopic_-Protocol.h"
+
 @class NSString, NSURL;
 
-@interface SPTPodcastTopicCategory : NSObject
+@interface SPTPodcastTopicCategory : NSObject <_TtP31PodcastCreatorEntityPageFeature15SPTPodcastTopic_>
 {
     NSString *_title;
     NSURL *_uri;

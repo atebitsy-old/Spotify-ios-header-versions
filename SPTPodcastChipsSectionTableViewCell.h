@@ -6,12 +6,13 @@
 
 #import "SPTPodcastSectionTableViewCell.h"
 
-@class NSArray, NSLayoutConstraint, UIStackView;
+@class NSArray, NSLayoutConstraint, UIStackView, UIView;
 @protocol GLUETheme, SPTPodcastChipsSectionTableViewCellDelegate;
 
 @interface SPTPodcastChipsSectionTableViewCell : SPTPodcastSectionTableViewCell
 {
     id <SPTPodcastChipsSectionTableViewCellDelegate> _delegate;
+    UIView *_containerView;
     id <GLUETheme> _glueTheme;
     NSArray *_layoutConstraints;
     NSLayoutConstraint *_bottomContainerConstraint;
@@ -28,6 +29,7 @@
 @property(retain, nonatomic) NSLayoutConstraint *bottomContainerConstraint; // @synthesize bottomContainerConstraint=_bottomContainerConstraint;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
+@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(nonatomic) __weak id <SPTPodcastChipsSectionTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)chipButtonTapped:(id)arg1;

@@ -22,7 +22,7 @@
 - (void).cxx_destruct;
 - (id)setUpItemDictionaryForURLs:(id)arg1 inContextURL:(id)arg2 onError:(CDUnknownBlockType)arg3;
 - (id)collectionStatesForURLs:(id)arg1 fromResponse:(id)arg2;
-- (id)collectionStateRequestURLForURL:(id)arg1 useUnstableEndpoint:(_Bool)arg2 onError:(CDUnknownBlockType)arg3;
+- (id)collectionStateRequestURLForURL:(id)arg1 onError:(CDUnknownBlockType)arg2;
 - (id)subscribeCollectionStateForURLs:(id)arg1 inContextURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)subscribeCollectionStateForURL:(id)arg1 inContextURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)collectionStateForURLs:(id)arg1 inContextURL:(id)arg2 completion:(CDUnknownBlockType)arg3;

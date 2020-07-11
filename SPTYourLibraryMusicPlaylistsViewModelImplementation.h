@@ -11,7 +11,7 @@
 #import "SPTYourLibraryMusicPlaylistsViewModel-Protocol.h"
 
 @class NSArray, NSString, SPTYourLibraryMusicGroupLabelReader, SPTYourLibraryMusicLogger;
-@protocol SPTFreeTierCreatePlaylistController, SPTLinkDispatcher, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicLikedSongsModelEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager;
+@protocol SPTCreatePlaylistController, SPTLinkDispatcher, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicLikedSongsModelEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicPlaylistsViewModelImplementation : NSObject <SPTSortingFilteringPickerDelegate, SPTYourLibraryMusicPlaylistsViewModel, SPTYourLibraryMusicPlaylistsModelDelegate>
 {
@@ -21,7 +21,7 @@
     id <SPTYourLibraryMusicPlaylistsModel> _model;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTPlaylistPlatformPlaylistSynchroniser> _playlistSynchroniser;
-    id <SPTFreeTierCreatePlaylistController> _createPlaylistController;
+    id <SPTCreatePlaylistController> _createPlaylistController;
     SPTYourLibraryMusicLogger *_logger;
     id <SPTYourLibraryMusicTestManager> _testManager;
     id <SPTYourLibraryMusicPlaylistsModelEntity> _modelEntity;
@@ -38,7 +38,7 @@
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsModelEntity> modelEntity; // @synthesize modelEntity=_modelEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTYourLibraryMusicLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) id <SPTFreeTierCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
+@property(retain, nonatomic) id <SPTCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistSynchroniser> playlistSynchroniser; // @synthesize playlistSynchroniser=_playlistSynchroniser;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsModel> model; // @synthesize model=_model;

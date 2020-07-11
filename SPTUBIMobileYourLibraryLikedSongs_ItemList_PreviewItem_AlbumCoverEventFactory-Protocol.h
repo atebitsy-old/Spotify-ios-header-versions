@@ -10,6 +10,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_AlbumCoverEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

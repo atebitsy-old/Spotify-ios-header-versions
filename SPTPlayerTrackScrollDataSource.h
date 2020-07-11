@@ -8,12 +8,12 @@
 
 #import "SPStepScrollViewDataSource-Protocol.h"
 #import "SPStepScrollViewDelegate-Protocol.h"
-#import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
+#import "SPTStatefulPlayerObserver-Protocol.h"
 
 @class NSString, NSURL, SPStepScrollView, SPTNowPlayingBarModel, SPTNowPlayingSkipLimitReachedMessageRequester;
 @protocol SPTPlayerTrackScrollDataSourceDelegate, SPTPlayerTrackScrollViewOffsetDelegate;
 
-@interface SPTPlayerTrackScrollDataSource : NSObject <SPTNowPlayingTrackMetadataQueueObserver, SPStepScrollViewDataSource, SPStepScrollViewDelegate>
+@interface SPTPlayerTrackScrollDataSource : NSObject <SPTStatefulPlayerObserver, SPStepScrollViewDataSource, SPStepScrollViewDelegate>
 {
     SPStepScrollView *_scrollView;
     id <SPTPlayerTrackScrollDataSourceDelegate> _delegate;
@@ -34,7 +34,10 @@
 @property(nonatomic) __weak id <SPTPlayerTrackScrollDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPStepScrollView *scrollView; // @synthesize scrollView=_scrollView;
 - (void).cxx_destruct;
-- (void)trackMetadataQueueDidFinishUpdating:(id)arg1;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
+- (void)playerDidFinishUpdating:(id)arg1;
 - (void)stepScrollViewDidScroll:(id)arg1;
 - (void)stepScrollView:(id)arg1 didAttemptScrollToRelativeIndex:(long long)arg2;
 - (void)stepScrollView:(id)arg1 didScrollToRelativeIndex:(long long)arg2;

@@ -9,7 +9,7 @@
 @interface _TtC26FullscreenStoryFeatureImpl16ChapterVideoView : UIView
 {
     // Error parsing type: , name: contentView
-    // Error parsing type: , name: videoSurfaceView
+    // Error parsing type: , name: videoSurfaceViews
 }
 
 - (void).cxx_destruct;

@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger;
 
 @interface SPTGaiaUbiLogger : NSObject
 {
-    id <SPTUserBehaviourInstrumentationLogger> _logger;
+    id <SPTUBILogger> _logger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
 - (void)logAttachPopupListenOnThisDeviceInteractionForDeviceId:(id)arg1;
 - (void)logAttachPopupContinueInteractionForDeviceId:(id)arg1;

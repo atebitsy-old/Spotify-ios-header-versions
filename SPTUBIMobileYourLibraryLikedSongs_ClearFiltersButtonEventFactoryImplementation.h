@@ -18,7 +18,7 @@
 + (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)hitNoAction;
+- (id)hitClearFilter;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

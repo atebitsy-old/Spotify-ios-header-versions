@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter, SPTUserBehaviourInstrumentationLogger, SPTViewLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTViewLogger;
 
 @interface SPTFreeTierFindLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     id <SPTViewLogger> _viewLogger;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

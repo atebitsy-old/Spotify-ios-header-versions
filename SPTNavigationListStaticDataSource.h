@@ -9,14 +9,16 @@
 #import "SPTNavigationListDataSource-Protocol.h"
 
 @class NSString, SPTNavigationSettingsRegistration;
-@protocol SPTNavigationListIdentifierFromABTestSource;
+@protocol SPTNavigationItemTitleProvider, SPTNavigationListIdentifierFromABTestSource;
 
 @interface SPTNavigationListStaticDataSource : NSObject <SPTNavigationListDataSource>
 {
     id <SPTNavigationListIdentifierFromABTestSource> _abTestDataSource;
     SPTNavigationSettingsRegistration *_settingsRegistration;
+    id <SPTNavigationItemTitleProvider> _navigationItemTitleProvider;
 }
 
+@property(retain, nonatomic) id <SPTNavigationItemTitleProvider> navigationItemTitleProvider; // @synthesize navigationItemTitleProvider=_navigationItemTitleProvider;
 @property(retain, nonatomic) SPTNavigationSettingsRegistration *settingsRegistration; // @synthesize settingsRegistration=_settingsRegistration;
 @property(nonatomic) __weak id <SPTNavigationListIdentifierFromABTestSource> abTestDataSource; // @synthesize abTestDataSource=_abTestDataSource;
 - (void).cxx_destruct;
@@ -25,7 +27,7 @@
 - (id)defaultNavigationResourceURL;
 - (id)createNavigationListMatchingIdentifier:(id)arg1;
 - (id)loadNavigationlists;
-- (id)initWithNavigationABTestSource:(id)arg1 settingsRegistration:(id)arg2;
+- (id)initWithNavigationABTestSource:(id)arg1 settingsRegistration:(id)arg2 navigationItemTitleProvider:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

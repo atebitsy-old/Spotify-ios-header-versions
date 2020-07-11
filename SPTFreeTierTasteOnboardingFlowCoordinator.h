@@ -33,7 +33,7 @@
 - (void).cxx_destruct;
 - (_Bool)presentBridgeViewAnimated:(_Bool)arg1 manualLogin:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateTasteViewControllerDidComplete:(id)arg1;
-- (void)artistPickerViewController:(id)arg1 didComplete:(_Bool)arg2 withSelectedArtistURIs:(id)arg3 session:(id)arg4;
+- (void)artistPickerViewController:(id)arg1 didComplete:(_Bool)arg2 withSelectedArtistURIs:(id)arg3 includeSimilarArtists:(_Bool)arg4 session:(id)arg5;
 - (void)startOnboardingFlow;
 - (_Bool)podcastOnboardingScheduled;
 - (id)viewControllerForState:(unsigned long long)arg1 withSeedURIs:(id)arg2;

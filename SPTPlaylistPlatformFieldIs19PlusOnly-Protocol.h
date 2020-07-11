@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldIs19PlusOnly <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool is19PlusOnly;
+@property(nonatomic, readonly) _Bool is19PlusOnly;
 @end
 

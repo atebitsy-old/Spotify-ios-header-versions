@@ -11,7 +11,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTInfinitePlaybackManager, SPTPersistentCache, SPTRadioHubManager, SPTRadioLogger, SPTRadioPlaybackService, SPTRadioStationsService;
-@protocol CosmosFeature, GaiaFeature, NSObject, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, SPTVoiceService;
+@protocol CosmosFeature, GaiaFeature, NSObject, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, SPTVoiceService, _TtP15AutoplayFeature18SPTAutoplayService_;
 
 @interface SPTRadioServiceImplementation : NSObject <SPTService, SPTRadioService, SPTURISubtypeHandler>
 {
@@ -40,6 +40,7 @@
     id <SPTShelfService> _shelfService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTVoiceService> _voiceService;
+    id <_TtP15AutoplayFeature18SPTAutoplayService_> _autoPlayService;
     id <NSObject> _clearPersistentCacheOnLogoutToken;
     SPTRadioHubManager *_hubManager;
     SPTInfinitePlaybackManager *_infinitePlaybackManager;
@@ -70,6 +71,7 @@
 @property(retain, nonatomic) SPTInfinitePlaybackManager *infinitePlaybackManager; // @synthesize infinitePlaybackManager=_infinitePlaybackManager;
 @property(retain, nonatomic) SPTRadioHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <NSObject> clearPersistentCacheOnLogoutToken; // @synthesize clearPersistentCacheOnLogoutToken=_clearPersistentCacheOnLogoutToken;
+@property(nonatomic) __weak id <_TtP15AutoplayFeature18SPTAutoplayService_> autoPlayService; // @synthesize autoPlayService=_autoPlayService;
 @property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;

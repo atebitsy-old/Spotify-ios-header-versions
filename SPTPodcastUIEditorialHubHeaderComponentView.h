@@ -26,9 +26,11 @@
     double _currentWidth;
     double _contentHeight;
     double _bodyHeight;
+    struct CGPoint _currentContentOffset;
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewWidth:(double)arg2 theme:(id)arg3;
+@property(nonatomic) struct CGPoint currentContentOffset; // @synthesize currentContentOffset=_currentContentOffset;
 @property(nonatomic) double bodyHeight; // @synthesize bodyHeight=_bodyHeight;
 @property(nonatomic) double contentHeight; // @synthesize contentHeight=_contentHeight;
 @property(nonatomic) double currentWidth; // @synthesize currentWidth=_currentWidth;

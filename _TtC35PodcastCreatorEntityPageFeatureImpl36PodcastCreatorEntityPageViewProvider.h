@@ -8,11 +8,14 @@
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl36PodcastCreatorEntityPageViewProvider : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: serviceIdentifier
     // Error parsing type: , name: flags
     // Error parsing type: , name: dataLoaderFactory
     // Error parsing type: , name: imageLoaderFactory
+    // Error parsing type: , name: logger
 }
 
+- (id)creatorLinksViewControllerWithPodcastURI:(id)arg1 pageCreationContext:(id)arg2;
 - (id)creatorLinksViewControllerWithEpisodeURI:(id)arg1 pageCreationContext:(id)arg2;
 
 @end

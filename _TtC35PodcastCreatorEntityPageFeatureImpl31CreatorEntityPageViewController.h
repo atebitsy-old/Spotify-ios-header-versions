@@ -4,26 +4,17 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "HUBViewController.h"
+#import "SPTHubViewController.h"
 
-@class NSURL;
-
-@interface _TtC35PodcastCreatorEntityPageFeatureImpl31CreatorEntityPageViewController : HUBViewController
+@interface _TtC35PodcastCreatorEntityPageFeatureImpl31CreatorEntityPageViewController : SPTHubViewController
 {
-    // Error parsing type: , name: pageURI
-    // Error parsing type: , name: viewModel
-    // Error parsing type: , name: theme
+    // Error parsing type: , name: logger
 }
 
 - (void).cxx_destruct;
-- (id)initWithComponentRegistry:(id)arg1 componentLayoutManager:(id)arg2 imageLoaderFactory:(id)arg3 commandHandler:(id)arg4;
-- (void)viewWillDisappear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
+- (id)initWithTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 initialViewModel:(id)arg9 impressionLogger:(id)arg10 loadingLogger:(id)arg11 shareDragDelegateFactory:(id)arg12;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)spt_pageURI;
-
-// Remaining properties
-@property(nonatomic, readonly) NSURL *pageURI;
 
 @end
 

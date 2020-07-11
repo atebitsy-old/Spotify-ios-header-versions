@@ -34,6 +34,7 @@
     UIButton *_contextMenuButton;
     UIButton *_followButton;
     UIButton *_offlineButton;
+    UIButton *_additionalCTAButton;
     UIView *_searchView;
     UIImage *_placeHolderImage;
     UIImage *_lastCreatorImage;
@@ -48,6 +49,7 @@
 @property(retain, nonatomic) UIImage *lastCreatorImage; // @synthesize lastCreatorImage=_lastCreatorImage;
 @property(retain, nonatomic) UIImage *placeHolderImage; // @synthesize placeHolderImage=_placeHolderImage;
 @property(retain, nonatomic) UIView *searchView; // @synthesize searchView=_searchView;
+@property(retain, nonatomic) UIButton *additionalCTAButton; // @synthesize additionalCTAButton=_additionalCTAButton;
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;

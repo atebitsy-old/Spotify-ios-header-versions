@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)podcastCreatorUri;
++ (id)entryPointsServiceIdentifier;
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;

@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTNetworkConnectivityControllerObserver-Protocol.h"
-
-@interface _TtC26FullscreenStoryFeatureImpl23ConnectivityEventSource : NSObject <SPTNetworkConnectivityControllerObserver>
+@interface _TtC26FullscreenStoryFeatureImpl23ConnectivityEventSource : NSObject
 {
     // Error parsing type: , name: connectivityController
     // Error parsing type: , name: subscribers

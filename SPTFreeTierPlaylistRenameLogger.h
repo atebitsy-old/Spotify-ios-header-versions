@@ -7,18 +7,18 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTUBIMobileRenamePlaylistEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger, SPTUBIMobileRenamePlaylistEventFactory;
 
 @interface SPTFreeTierPlaylistRenameLogger : NSObject
 {
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileRenamePlaylistEventFactory> _ubiEventFactory;
     NSURL *_playlistURL;
 }
 
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTUBIMobileRenamePlaylistEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (void)logCancelClicked;
 - (void)logRenameClicked;

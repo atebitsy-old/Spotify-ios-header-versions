@@ -19,6 +19,7 @@
 
 @property(readonly, nonatomic) id <SPTNowPlayingInformationUnitViewModel> viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+- (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
 - (void)viewModelDidUpdatePositiveFeedbackButtonState:(id)arg1;
 - (void)viewModelTrackDidChange:(id)arg1;
 - (void)updateLabels;

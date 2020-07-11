@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "GLUEStyle-Protocol.h"
-
-@interface _TtC20ProfileV2FeatureImpl18ProfileCountsStyle : NSObject <GLUEStyle>
+@interface _TtC20ProfileV2FeatureImpl18ProfileCountsStyle : NSObject
 {
     // Error parsing type: , name: countStyle
     // Error parsing type: , name: countStaticTextStyle

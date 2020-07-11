@@ -20,9 +20,6 @@
 @property(copy, nonatomic) NSString *domain; // @synthesize domain=_domain;
 - (void).cxx_destruct;
 - (id)accessGroup:(long long)arg1;
-- (id)setHermesAccessToken:(id)arg1;
-- (_Bool)deleteHermesAccessToken;
-- (id)hermesAccessToken;
 - (id)ESDKCredentials;
 - (_Bool)deleteESDKCredentials;
 - (id)setESDKCredentials:(id)arg1;

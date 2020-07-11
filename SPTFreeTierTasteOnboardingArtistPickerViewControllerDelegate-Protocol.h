@@ -9,6 +9,9 @@
 @class NSArray, SPTFreeTierTasteOnboardingArtistPickerViewController, SPTFreeTierTasteOnboardingSession;
 
 @protocol SPTFreeTierTasteOnboardingArtistPickerViewControllerDelegate <NSObject>
-- (void)artistPickerViewController:(SPTFreeTierTasteOnboardingArtistPickerViewController *)arg1 didComplete:(_Bool)arg2 withSelectedArtistURIs:(NSArray *)arg3 session:(SPTFreeTierTasteOnboardingSession *)arg4;
+- (void)artistPickerViewController:(SPTFreeTierTasteOnboardingArtistPickerViewController *)arg1 didComplete:(_Bool)arg2 withSelectedArtistURIs:(NSArray *)arg3 includeSimilarArtists:(_Bool)arg4 session:(SPTFreeTierTasteOnboardingSession *)arg5;
+
+@optional
+- (void)createEmptyPlaylist;
 @end
 

@@ -9,17 +9,17 @@
 #import "SPTGaiaLockScreenControlsStateObserver-Protocol.h"
 #import "SPTImageLoaderDelegate-Protocol.h"
 #import "SPTNowPlayingInfoCenterManagerProtocol-Protocol.h"
-#import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
 #import "SPTNowPlayingTrackPositionObserver-Protocol.h"
 #import "SPTPlaybackQueueInitializer-Protocol.h"
+#import "SPTStatefulPlayerObserver-Protocol.h"
 
-@class MPMediaItemArtwork, MPNowPlayingInfoCenter, NSHashTable, NSString, NSURL, SPTNowPlayingPlaybackController, SPTNowPlayingTrackMetadataQueue;
+@class MPMediaItemArtwork, MPNowPlayingInfoCenter, NSHashTable, NSString, NSURL, SPTNowPlayingPlaybackController, SPTStatefulPlayer;
 @protocol SPTGaiaConnectAPI, SPTGaiaLockScreenControlsStateProvider, SPTImageLoader, SPTPlayer;
 
-@interface SPTNowPlayingInfoCenterManager : NSObject <SPTImageLoaderDelegate, SPTNowPlayingTrackMetadataQueueObserver, SPTNowPlayingTrackPositionObserver, SPTGaiaLockScreenControlsStateObserver, SPTNowPlayingInfoCenterManagerProtocol, SPTPlaybackQueueInitializer>
+@interface SPTNowPlayingInfoCenterManager : NSObject <SPTImageLoaderDelegate, SPTStatefulPlayerObserver, SPTNowPlayingTrackPositionObserver, SPTGaiaLockScreenControlsStateObserver, SPTNowPlayingInfoCenterManagerProtocol, SPTPlaybackQueueInitializer>
 {
     SPTNowPlayingPlaybackController *_playbackController;
-    SPTNowPlayingTrackMetadataQueue *_trackMetadataQueue;
+    SPTStatefulPlayer *_statefulPlayer;
     id <SPTGaiaConnectAPI> _connectManager;
     MPNowPlayingInfoCenter *_infoCenter;
     id <SPTImageLoader> _imageLoader;
@@ -40,14 +40,16 @@
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) MPNowPlayingInfoCenter *infoCenter; // @synthesize infoCenter=_infoCenter;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
-@property(readonly, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
+@property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(readonly, nonatomic) SPTNowPlayingPlaybackController *playbackController; // @synthesize playbackController=_playbackController;
 - (void).cxx_destruct;
 - (void)lockScreenControlsEnabledChanged:(_Bool)arg1;
 - (void)initializePlaybackQueueWithCompletionHandler:(CDUnknownBlockType)arg1;
 - (void)nowPlayingTrackPositionDidChange:(id)arg1;
-- (void)trackMetadataQueueDidFinishUpdating:(id)arg1;
-- (void)trackMetadataQueue:(id)arg1 didMoveToRelativeTrack:(id)arg2;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)playerDidFinishUpdating:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)removeNowPlayingInfoCenterArtworkDecorator:(id)arg1;
 - (void)addNowPlayingInfoCenterArtworkDecorator:(id)arg1;
 - (id)infoDictionaryFromTrack:(id)arg1;
@@ -63,7 +65,7 @@
 - (void)setImage:(id)arg1 withURL:(id)arg2;
 - (id)placeholderImage;
 - (void)dealloc;
-- (id)initWithPlaybackController:(id)arg1 trackMetadataQueue:(id)arg2 connectManager:(id)arg3 infoCenter:(id)arg4 imageLoader:(id)arg5 lockScreenControlsStateProvider:(id)arg6 player:(id)arg7;
+- (id)initWithPlaybackController:(id)arg1 statefulPlayer:(id)arg2 connectManager:(id)arg3 infoCenter:(id)arg4 imageLoader:(id)arg5 lockScreenControlsStateProvider:(id)arg6 player:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTCollectionLoggerImplementation;
-@protocol CosmosFeature, SPTAbbaService, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingPlatformService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTSnackbarService;
+@protocol CosmosFeature, SPTAbbaService, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingPlatformService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSnackbarService;
 
 @interface SPTCollectionPlatformServiceImplementation : NSObject <SPTService, SPTCollectionPlatformService>
 {
@@ -20,7 +20,6 @@
     id <SPTCosmosDataLoaderService> _cosmosDataLoaderService;
     id <SPTFreeTierService> _freeTierService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
-    id <SPTSettingsFeature> _settingsFeature;
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTSnackbarService> _snackbarService;
@@ -50,7 +49,6 @@
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-@property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTCosmosDataLoaderService> cosmosDataLoaderService; // @synthesize cosmosDataLoaderService=_cosmosDataLoaderService;

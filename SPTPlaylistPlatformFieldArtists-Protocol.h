@@ -9,6 +9,6 @@
 @class NSArray;
 
 @protocol SPTPlaylistPlatformFieldArtists <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSArray *artists;
+@property(nonatomic, readonly) NSArray *artists;
 @end
 

@@ -19,6 +19,7 @@
     UIButton *_contextButton;
     UIButton *_feedbackButton;
     UIButton *_offlineButton;
+    UIButton *_additionalCTAButton;
     CDUnknownBlockType _creatorRowButtonTappedBlock;
     UIImageView *_imageView;
     UIView *_imageShadowView;
@@ -51,6 +52,7 @@
 @property(retain, nonatomic) UIView *imageShadowView; // @synthesize imageShadowView=_imageShadowView;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(copy, nonatomic) CDUnknownBlockType creatorRowButtonTappedBlock; // @synthesize creatorRowButtonTappedBlock=_creatorRowButtonTappedBlock;
+@property(retain, nonatomic) UIButton *additionalCTAButton; // @synthesize additionalCTAButton=_additionalCTAButton;
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *feedbackButton; // @synthesize feedbackButton=_feedbackButton;
 @property(retain, nonatomic) UIButton *contextButton; // @synthesize contextButton=_contextButton;

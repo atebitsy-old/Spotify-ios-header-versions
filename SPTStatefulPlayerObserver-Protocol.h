@@ -15,6 +15,7 @@
 - (void)player:(SPTStatefulPlayer *)arg1 didMoveToRelativeTrack:(NSNumber *)arg2;
 
 @optional
+- (void)playerWillSkipToNextTrack:(SPTStatefulPlayer *)arg1;
 - (void)playerDidSynchronizeQueue:(SPTStatefulPlayer *)arg1;
 - (void)playerPreviousTrackDidChange:(SPTStatefulPlayer *)arg1;
 - (void)playerNextTrackDidChange:(SPTStatefulPlayer *)arg1;

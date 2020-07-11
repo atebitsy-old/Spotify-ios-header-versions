@@ -10,7 +10,6 @@
 
 @interface _TtC18VoiceUIFeatureImpl14VoiceUIService : NSObject <SPTService>
 {
-    // Error parsing type: , name: useDevelopmentEndpointKey
     // Error parsing type: , name: voiceLibraryService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: dispatchService
@@ -20,12 +19,14 @@
     // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: collectionPlatformService
     // Error parsing type: , name: settingsService
-    // Error parsing type: , name: clientSessionService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: voiceViewController
     // Error parsing type: , name: voicePlayerEventListener
     // Error parsing type: , name: voicePlayerLogger
+    // Error parsing type: , name: wakewordController
+    // Error parsing type: , name: testManager
     // Error parsing type: , name: $__lazy_storage_$_player
-    // Error parsing type: , name: $__lazy_storage_$_localSettings
 }
 
 + (id)serviceIdentifier;

@@ -6,9 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTFreeTierTasteOnboardingUpdateTasteViewController;
+@class NSString, SPTFreeTierTasteOnboardingUpdateTasteViewController;
 
 @protocol SPTFreeTierTasteOnboardingUpdateTasteViewControllerDelegate <NSObject>
 - (void)updateTasteViewControllerDidComplete:(SPTFreeTierTasteOnboardingUpdateTasteViewController *)arg1;
+
+@optional
+- (void)updateSeedASessionDidFail;
+- (void)updateSeedASessionDidComplete:(NSString *)arg1;
 @end
 

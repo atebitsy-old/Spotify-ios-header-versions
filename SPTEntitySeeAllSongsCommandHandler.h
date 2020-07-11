@@ -8,7 +8,7 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTCollectionPlatform, SPTEntitySeeAllSongsHubsDataSource, SPTEntitySeeAllSongsRegistry, SPTHubInteractionLogger, SPTLinkDispatcher, SPTOfflineModeState, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTCollectionPlatform, SPTEntitySeeAllSongsHubsDataSource, SPTEntitySeeAllSongsRegistry, SPTHubInteractionLogger, SPTLinkDispatcher, SPTOfflineModeState, SPTUBIHubsUtilities;
 
 @interface SPTEntitySeeAllSongsCommandHandler : NSObject <HUBCommandHandler>
 {
@@ -17,12 +17,12 @@
     id <SPTEntitySeeAllSongsRegistry> _registry;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTOfflineModeState> _offlineModeState;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
     id <SPTEntitySeeAllSongsHubsDataSource> _dataSource;
 }
 
 @property(retain, nonatomic) id <SPTEntitySeeAllSongsHubsDataSource> dataSource; // @synthesize dataSource=_dataSource;
-@property(retain, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTEntitySeeAllSongsRegistry> registry; // @synthesize registry=_registry;

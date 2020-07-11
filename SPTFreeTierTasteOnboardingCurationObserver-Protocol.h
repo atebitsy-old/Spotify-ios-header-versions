@@ -6,11 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSString;
 @protocol SPTFreeTierTasteOnboardingCurationProvider;
 
 @protocol SPTFreeTierTasteOnboardingCurationObserver <NSObject>
 
 @optional
+- (void)seedASessionDidFailCuration;
+- (void)seedASessionDidFinishCuration:(NSString *)arg1;
 - (void)tasteOnboardingDidFinishCurating:(id <SPTFreeTierTasteOnboardingCurationProvider>)arg1;
 - (void)tasteOnboardingDidUpdateTaste:(id <SPTFreeTierTasteOnboardingCurationProvider>)arg1;
 @end

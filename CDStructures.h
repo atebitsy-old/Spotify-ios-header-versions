@@ -58,13 +58,6 @@ struct AppleSignInCredential {
     struct unique_ptr<spotify::connectivity::auth::credentials::AppleSignInCredential::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::AppleSignInCredential::Impl>> _pimpl;
 };
 
-struct ApplicationConfig {
-    unsigned int _field1;
-    basic_string_90719d97 _field2;
-    basic_string_90719d97 _field3;
-    int _field4;
-};
-
 struct ApplicationScope {
     struct unique_ptr<spotify::connectivity::ApplicationScope::Impl, std::__1::default_delete<spotify::connectivity::ApplicationScope::Impl>> _field1;
 };
@@ -391,12 +384,6 @@ struct CriticalSection {
 };
 
 struct DefaultHashFunctions;
-
-struct DeviceConfig {
-    basic_string_90719d97 _field1;
-    basic_string_90719d97 _field2;
-    basic_string_90719d97 _field3;
-};
 
 struct DeviceInfo {
     basic_string_90719d97 _field1;
@@ -744,17 +731,6 @@ struct NSString {
     Class _field1;
 };
 
-struct NetworkConfig {
-    _Bool _field1;
-    _Bool _field2;
-    int _field3;
-    struct optional<unsigned char> _field4;
-    struct optional<unsigned char> _field5;
-    struct optional<unsigned int> _field6;
-    basic_string_90719d97 _field7;
-    struct optional<spotify::http::ConnectionType> _field8;
-};
-
 struct NetworkInfo {
     _Bool _field1;
     _Bool _field2;
@@ -803,10 +779,6 @@ struct PendingMessageStorageImpl {
     _Bool _field10;
     _Bool _field11;
     function_84aba934 _field12;
-};
-
-struct PerformanceConfig {
-    _Bool _field1;
 };
 
 struct PlayOrigin {
@@ -1193,7 +1165,6 @@ struct VISREFColorExtractionConfiguration {
 struct WebgateConfig {
     basic_string_90719d97 _field1;
     struct UserAgentParameters _field2;
-    _Bool _field3;
 };
 
 struct _NSRange {
@@ -2807,6 +2778,10 @@ typedef struct {
     Class _field1;
 } SPTCollectionPlatformDataLoaderResponse_f5c2288a;
 
+typedef struct {
+    Class _field1;
+} SPTPlaylistPlatformDataLoaderResponse_5db64d04;
+
 typedef struct ?<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
     union {
         char _field1;
@@ -2865,17 +2840,6 @@ typedef struct {
 } Builder_d6bb03b6;
 
 typedef struct {
-    struct AuthenticationConfig {
-        basic_string_90719d97 _field1;
-    } _field1;
-    struct CacheConfig _field2;
-    struct DeviceConfig _field3;
-    struct ApplicationConfig _field4;
-    struct NetworkConfig _field5;
-    struct PerformanceConfig _field6;
-} Configuration_a09c6b4b;
-
-typedef struct {
     struct ClientVersionConfig _field1;
     struct CacheConfig _field2;
     struct AuthenticationConfig {
@@ -2885,7 +2849,11 @@ typedef struct {
     } _field3;
     struct RequestAccountingConfig _field4;
     struct WebgateConfig _field5;
-} Configuration_f7239482;
+} Configuration_2d1f22a6;
+
+typedef struct {
+    struct WebgateConfig _field1;
+} Configuration_39ad8b5f;
 
 #endif
 

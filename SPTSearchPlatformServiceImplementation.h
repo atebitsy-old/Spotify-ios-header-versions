@@ -9,7 +9,7 @@
 #import "SPTSearchPlatformService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSearch2RequestParametersProvider;
-@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCosmosDataLoaderService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTGLUEService, SPTHubFrameworkService, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRemoteConfigurationService, SPTResolver, SPTSearch2UserTierProviding, SPTSearchPlatformTestManager, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTURIDispatchService, SPTUserBehaviourInstrumentation, SPTUserBehaviourInstrumentationService, SPTVoiceService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCosmosDataLoaderService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTGLUEService, SPTHubFrameworkService, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRemoteConfigurationService, SPTResolver, SPTSearch2UserTierProviding, SPTSearchPlatformTestManager, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTUBIService, SPTUBIUserBehaviourInstrumentation, SPTURIDispatchService, SPTVoiceService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTSearchPlatformServiceImplementation : NSObject <SPTSearchPlatformService>
 {
@@ -35,25 +35,25 @@
     id <CosmosFeature> _cosmosFeature;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTResolver> _cosmosRouter;
     id <SPTSearch2UserTierProviding> _userTierProvider;
     id <SPTHubsRendererFactory> _hubsRendererFactory;
     id <SPTHugsFactory> _hugsFactory;
     id <SPTSearchPlatformTestManager> _searchTestManager;
-    id <SPTUserBehaviourInstrumentation> _userBehaviourInstrumentation;
+    id <SPTUBIUserBehaviourInstrumentation> _userBehaviourInstrumentation;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
+@property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(retain, nonatomic) id <SPTSearchPlatformTestManager> searchTestManager; // @synthesize searchTestManager=_searchTestManager;
 @property(retain, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(retain, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(retain, nonatomic) id <SPTSearch2UserTierProviding> userTierProvider; // @synthesize userTierProvider=_userTierProvider;
 @property(retain, nonatomic) id <SPTResolver> cosmosRouter; // @synthesize cosmosRouter=_cosmosRouter;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
@@ -79,6 +79,7 @@
 - (id)provideCosmosDictionaryDataLoader;
 - (id)offlineAlbumDataLoader;
 - (id)offlinePlaylistDataLoader;
+- (id)offlineTrackDataLoader;
 - (id)makeViewModelProviderWithConfiguration:(id)arg1;
 - (id)makeDefaultSearchRequestParameters;
 - (id)makeViewControllerDependencies;

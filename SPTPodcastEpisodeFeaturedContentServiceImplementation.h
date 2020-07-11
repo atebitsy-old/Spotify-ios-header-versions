@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeFeaturedContentService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPodcastEpisodeFeaturedContentContentOperationFactory;
-@protocol SPContextMenuFeature, SPTGLUEService, SPTHubFrameworkService, SPTOnDemandService, SPTOnDemandSet, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, SPTPodcastEpisodeFeaturedContentViewProvider, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService, SPTUserBehaviourInstrumentationService, _TtP29EpisodeSegmentsFetcherFeature32SPTEpisodeSegmentsFetcherService_;
+@protocol SPContextMenuFeature, SPTGLUEService, SPTHubFrameworkService, SPTOnDemandService, SPTOnDemandSet, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, SPTPodcastEpisodeFeaturedContentViewProvider, SPTRemoteConfigurationService, SPTSessionService, SPTUBIService, SPTURIDispatchService, _TtP29EpisodeSegmentsFetcherFeature32SPTEpisodeSegmentsFetcherService_;
 
 @interface SPTPodcastEpisodeFeaturedContentServiceImplementation : SPTUIPageService <SPTPodcastEpisodeFeaturedContentService>
 {
@@ -22,7 +22,7 @@
     id <SPTPlayerFeature> _playerService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTURIDispatchService> _uriDispatchService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <SPTPodcastEpisodeFeaturedContentViewProvider> _featuredContentViewProvider;
     id <SPTPodcastEpisodeFeaturedContentTestManager> _testManager;
     id <SPTOnDemandSet> _onDemandSet;
@@ -34,7 +34,7 @@
 @property(retain, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFeaturedContentTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFeaturedContentViewProvider> featuredContentViewProvider; // @synthesize featuredContentViewProvider=_featuredContentViewProvider;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;

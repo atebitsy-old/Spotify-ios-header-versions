@@ -10,6 +10,8 @@
 {
     // Error parsing type: , name: chips
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: pageUri
     // Error parsing type: , name: delegate
     // Error parsing type: , name: cellIdentifier
     // Error parsing type: , name: chipCellHeight

@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTUIPresentationService, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
+@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTSessionService, SPTShareFeature, SPTUIPresentationService, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
 {
@@ -26,15 +26,11 @@
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <_TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_> _podcastCreatorEntityPageService;
     id <SPTPodcastEpisodeFeaturedContentService> _podcastEpisodeFeaturedContentService;
-    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPodcastOffliningService> _podcastOffliningService;
-    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(nonatomic) __weak id <SPTPodcastOffliningService> podcastOffliningService; // @synthesize podcastOffliningService=_podcastOffliningService;
-@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastEpisodeFeaturedContentService; // @synthesize podcastEpisodeFeaturedContentService=_podcastEpisodeFeaturedContentService;
 @property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_> podcastCreatorEntityPageService; // @synthesize podcastCreatorEntityPageService=_podcastCreatorEntityPageService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
@@ -52,7 +48,6 @@
 - (id)provideContextPlayerParameters:(id)arg1;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
-- (void)load;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

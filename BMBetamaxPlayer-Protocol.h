@@ -9,12 +9,6 @@
 @protocol BMPlayOptions, BMPlaybackEventObserver, BMPlaybackRequest, BMSubtitle;
 
 @protocol BMBetamaxPlayer <NSObject>
-@property(nonatomic) _Bool repeat;
-@property(retain, nonatomic) id <BMSubtitle> preferredSubtitle;
-@property(nonatomic, getter=isVideoDisabled) _Bool videoDisabled;
-@property(nonatomic, getter=isAudioDisabled) _Bool audioDisabled;
-@property(nonatomic) float playbackSpeed;
-@property(readonly, nonatomic) double currentPosition;
 - (void)removePlaybackEventObserver:(id <BMPlaybackEventObserver>)arg1;
 - (void)addPlaybackEventObserver:(id <BMPlaybackEventObserver>)arg1;
 - (void)seekTo:(double)arg1 completion:(void (^)(_Bool))arg2;
@@ -23,5 +17,13 @@
 - (void)resume;
 - (void)playWithRequest:(id <BMPlaybackRequest>)arg1 options:(id <BMPlayOptions>)arg2;
 - (void)playWithRequest:(id <BMPlaybackRequest>)arg1;
+@property(nonatomic) _Bool repeat;
+@property(nonatomic, retain) id <BMSubtitle> preferredSubtitle;
+@property(nonatomic) _Bool videoDisabled;
+- (_Bool)isVideoDisabled;
+@property(nonatomic) _Bool audioDisabled;
+- (_Bool)isAudioDisabled;
+@property(nonatomic) float playbackSpeed;
+@property(nonatomic, readonly) double currentPosition;
 @end
 

@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger;
 
 @interface SPTPodcastEpisodeFeaturedContentLogger : NSObject
 {
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (void)logDidTapContextMenuWithURI:(id)arg1 index:(long long)arg2;
 - (void)logDidTapTrackItemWithURI:(id)arg1 index:(long long)arg2;

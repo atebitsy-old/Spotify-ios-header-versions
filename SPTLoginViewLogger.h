@@ -9,18 +9,18 @@
 #import "SPTLoginFormViewLoggerProtocol-Protocol.h"
 
 @class NSString, SPTLoginErrorLogger;
-@protocol SPTLoginLogger, SPTUBILoginViewEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLoginLogger, SPTUBILogger, SPTUBILoginViewEventFactory;
 
 @interface SPTLoginViewLogger : NSObject <SPTLoginFormViewLoggerProtocol>
 {
     id <SPTLoginLogger> _logger;
     id <SPTUBILoginViewEventFactory> _eventFactory;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     SPTLoginErrorLogger *_errorLogger;
 }
 
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTUBILoginViewEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;

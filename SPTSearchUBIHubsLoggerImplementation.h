@@ -9,16 +9,16 @@
 #import "SPTSearchUBIHubsLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTUserBehaviourHubsInstrumentation, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBIHubsUtilities, SPTUBILogger;
 
 @interface SPTSearchUBIHubsLoggerImplementation : NSObject <SPTSearchUBIHubsLogger>
 {
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubs;
+    id <SPTUBILogger> _ubiLogger;
+    id <SPTUBIHubsUtilities> _ubiHubs;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (id)interactionEventFactoryForEvent:(id)arg1;
 - (void)logImpressionWithComponentModel:(id)arg1;

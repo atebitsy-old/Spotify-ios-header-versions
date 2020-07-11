@@ -14,7 +14,7 @@
 #import "SPTPodcastTrailerSectionViewModelDelegate-Protocol.h"
 
 @class NSArray, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastEpisodeSectionViewModel, SPTPodcastFeatureProperties, SPTPodcastHeaderViewModel, SPTPodcastLogger, SPTPodcastTopicCategoryViewModel, SPTPodcastTrailerSectionViewModel, SPTPodcastViewSectionConfiguration;
-@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate2;
+@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastDispatcher, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate2;
 
 @interface SPTPodcastViewModel2 : NSObject <SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastTopicCategoryViewModelDelegate, SPTPodcastFollowSectionViewModelDelegate, SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTPodcastTrailerSectionViewModelDelegate>
 {
@@ -27,6 +27,7 @@
     id <SPTPodcastViewModelDelegate2> _delegate;
     NSURL *_URL;
     id <SPTPodcast> _podcast;
+    NSArray *_topics;
     SPTPodcastHeaderViewModel *_headerViewModel;
     SPTPodcastViewSectionConfiguration *_configuration;
     id <SPTPodcastDataLoaderRequestToken> _podcastRequestToken;
@@ -40,6 +41,7 @@
     id <SPTPodcastPlayer> _podcastPlayer;
     id <SPTPodcastDataLoader> _dataLoader;
     SPTPodcastLogger *_logger;
+    id <SPTPodcastDispatcher> _dispatcher;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     SPTPodcastEpisodeSectionViewModel *_episodeSectionViewModel;
@@ -53,6 +55,7 @@
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(nonatomic, getter=isInitialLoadComplete) _Bool initialLoadComplete; // @synthesize initialLoadComplete=_initialLoadComplete;
 @property(nonatomic) _Bool topicsDidLoad; // @synthesize topicsDidLoad=_topicsDidLoad;
+@property(readonly, nonatomic) id <SPTPodcastDispatcher> dispatcher; // @synthesize dispatcher=_dispatcher;
 @property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) id <SPTPodcastPlayer> podcastPlayer; // @synthesize podcastPlayer=_podcastPlayer;
@@ -67,6 +70,7 @@
 @property(readonly, nonatomic) SPTPodcastViewSectionConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic, getter=isTopicsEmpty) _Bool topicsEmpty; // @synthesize topicsEmpty=_topicsEmpty;
 @property(readonly, copy, nonatomic) SPTPodcastHeaderViewModel *headerViewModel; // @synthesize headerViewModel=_headerViewModel;
+@property(copy, nonatomic) NSArray *topics; // @synthesize topics=_topics;
 @property(retain) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
 @property(nonatomic) _Bool isLoaded; // @synthesize isLoaded=_isLoaded;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
@@ -114,7 +118,7 @@
 - (long long)numberOfRowsInSection:(long long)arg1;
 - (void)obtainDelegation;
 @property(readonly, copy, nonatomic) NSArray *viewSections;
-- (id)initWithURL:(id)arg1 headerViewModel:(id)arg2 configuration:(id)arg3 topicCategoryViewModel:(id)arg4 dataLoader:(id)arg5 collectionPlatform:(id)arg6 testManager:(id)arg7 uiTestManager:(id)arg8 explicitContentAccessManager:(id)arg9 podcastPlayer:(id)arg10 podcastLogger:(id)arg11 featureProperties:(id)arg12;
+- (id)initWithURL:(id)arg1 headerViewModel:(id)arg2 configuration:(id)arg3 topicCategoryViewModel:(id)arg4 dataLoader:(id)arg5 collectionPlatform:(id)arg6 testManager:(id)arg7 uiTestManager:(id)arg8 explicitContentAccessManager:(id)arg9 podcastPlayer:(id)arg10 podcastLogger:(id)arg11 featureProperties:(id)arg12 dispatcher:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

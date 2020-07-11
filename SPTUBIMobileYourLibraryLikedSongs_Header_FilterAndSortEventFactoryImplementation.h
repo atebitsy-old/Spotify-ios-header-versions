@@ -18,10 +18,10 @@
 + (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)filterOrSortOptionButtonFactory;
 - (id)textFilterCancelButtonFactory;
 - (id)textFilterClearButtonFactory;
 - (id)textFilterFactory;
-- (id)filterOrSortOptionButtonFactory;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

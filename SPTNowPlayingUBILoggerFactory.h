@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTUserBehaviourInstrumentation;
+@protocol SPTUBIUserBehaviourInstrumentation;
 
 @interface SPTNowPlayingUBILoggerFactory : NSObject
 {
-    id <SPTUserBehaviourInstrumentation> _ubiInstrumentation;
+    id <SPTUBIUserBehaviourInstrumentation> _ubiInstrumentation;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentation> ubiInstrumentation; // @synthesize ubiInstrumentation=_ubiInstrumentation;
+@property(readonly, nonatomic) id <SPTUBIUserBehaviourInstrumentation> ubiInstrumentation; // @synthesize ubiInstrumentation=_ubiInstrumentation;
 - (void).cxx_destruct;
 - (id)createFreeTierModeUBILogger;
 - (id)createVideoShowModeUBILogger;

@@ -57,6 +57,7 @@
 - (void)viewDidDisappear;
 - (void)viewDidLoad;
 @property(readonly, nonatomic) unsigned long long numberOfCards;
+- (unsigned long long)indexOfCardViewModel:(id)arg1;
 - (id)cardViewModelAtIndex:(unsigned long long)arg1;
 - (id)initWithAssistedCurationModel:(id)arg1 addTrackHandler:(id)arg2 sortMechanism:(id)arg3 waitForCardProviders:(id)arg4 audioPreviewPlayer:(id)arg5 audioPreviewModelFactory:(id)arg6 snackbarPresenter:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 testManager:(id)arg10;
 

@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTPlaylistPlatformFieldPreviewID <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, copy, nonatomic) NSString *previewID;
+@property(nonatomic, readonly) NSString *previewID;
 @end
 

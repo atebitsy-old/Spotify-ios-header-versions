@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTEntitySeeAllSongsService, SPTHubCommandHandlerFactory, SPTHubsRendererFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTEntitySeeAllSongsService, SPTHubCommandHandlerFactory, SPTHubsRendererFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTUBILogger;
 
 @interface SPTFreeTierTrackCommandHandlerFactory : NSObject
 {
@@ -15,10 +15,10 @@
     id <SPTHubsRendererFactory> _hubsRendererFactory;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTEntitySeeAllSongsService> _entitySeeAllSongsService;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) __weak id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) __weak id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) __weak id <SPTEntitySeeAllSongsService> entitySeeAllSongsService; // @synthesize entitySeeAllSongsService=_entitySeeAllSongsService;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) __weak id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;

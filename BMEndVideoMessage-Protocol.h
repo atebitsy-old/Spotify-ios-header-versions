@@ -40,6 +40,7 @@
 @property(readonly, nonatomic) long long nSeekback;
 @property(readonly, nonatomic) long long msManifestLatency;
 @property(readonly, nonatomic) long long msTotalEst;
+@property(readonly, nonatomic) long long msNominalPlayed;
 @property(readonly, nonatomic) long long msPlayed;
 @property(readonly, nonatomic) NSString *reasonEnd;
 @property(readonly, nonatomic) NSString *reasonStart;

@@ -7,18 +7,18 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter, SPTUBIMobileLocalFilesImportEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileLocalFilesImportEventFactory;
 
 @interface SPTLocalFilesLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     NSURL *_viewURI;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileLocalFilesImportEventFactory> _eventFactory;
 }
 
 @property(retain, nonatomic) id <SPTUBIMobileLocalFilesImportEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

@@ -6,14 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSString;
-@protocol BMSubtitle;
+@class NSString;
 
 @protocol BMSubtitle <NSObject>
 @property(readonly, nonatomic, getter=isClosedCaption) _Bool closedCaption;
 @property(readonly, nonatomic) NSString *locale;
 @property(readonly, nonatomic) NSString *language;
 @property(readonly, nonatomic) NSString *languageTag;
-- (id <BMSubtitle>)bestMatch:(NSArray *)arg1;
 @end
 

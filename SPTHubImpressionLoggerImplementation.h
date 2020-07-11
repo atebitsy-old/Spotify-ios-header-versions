@@ -9,7 +9,7 @@
 #import "SPTHubImpressionLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTHubComponentModelURIResolver, SPTLogCenter, SPTUserBehaviourHubsInstrumentation, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTHubComponentModelURIResolver, SPTLogCenter, SPTUBIHubsUtilities, SPTUBILogger;
 
 @interface SPTHubImpressionLoggerImplementation : NSObject <SPTHubImpressionLogger>
 {
@@ -17,12 +17,12 @@
     NSString *_featureIdentifier;
     id <SPTHubComponentModelURIResolver> _componentModelURIResolver;
     NSString *_viewURIString;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, copy, nonatomic) NSString *viewURIString; // @synthesize viewURIString=_viewURIString;
 @property(readonly, nonatomic) id <SPTHubComponentModelURIResolver> componentModelURIResolver; // @synthesize componentModelURIResolver=_componentModelURIResolver;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;

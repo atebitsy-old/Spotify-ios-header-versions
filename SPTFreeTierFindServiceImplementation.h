@@ -9,7 +9,7 @@
 #import "SPTFreeTierFindService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierFindHubManager, SPTFreeTierFindTestManager, SPTPersistentCache;
-@protocol SPTBrowseService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTScannablesService, SPTSearchPlatformService, SPTSearchService, SPTSessionService, SPTUserBehaviourInstrumentationService, SPTVoiceService, _TtP11FindFeature14SPTFindService_;
+@protocol SPTBrowseService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTScannablesService, SPTSearchPlatformService, SPTSearchService, SPTSessionService, SPTUBIService, SPTVoiceService, _TtP11FindFeature14SPTFindService_;
 
 @interface SPTFreeTierFindServiceImplementation : NSObject <SPTFreeTierFindService>
 {
@@ -30,7 +30,7 @@
     id <SPTNetworkService> _networkService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTBrowseService> _browseService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <_TtP11FindFeature14SPTFindService_> _findService;
     SPTFreeTierFindHubManager *_hubManager;
     SPTFreeTierFindTestManager *_testManager;
@@ -40,7 +40,7 @@
 @property(retain, nonatomic) SPTFreeTierFindTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierFindHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <_TtP11FindFeature14SPTFindService_> findService; // @synthesize findService=_findService;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTBrowseService> browseService; // @synthesize browseService=_browseService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;

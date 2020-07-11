@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldLocallyPlayable <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool isLocallyPlayable;
+@property(nonatomic, readonly) _Bool isLocallyPlayable;
 @end
 

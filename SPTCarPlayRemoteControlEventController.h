@@ -34,6 +34,7 @@
 @property(nonatomic) __weak id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isActiveForRemoteControlPolicyUpdates) _Bool activeForRemoteControlPolicyUpdates; // @synthesize activeForRemoteControlPolicyUpdates=_activeForRemoteControlPolicyUpdates;
 - (void).cxx_destruct;
+- (id)eventSourceIdentifierForEvent:(id)arg1;
 - (id)externalActionOriginForEvent:(id)arg1;
 - (_Bool)shouldSeekToBeginning;
 - (_Bool)isPodcastContext;

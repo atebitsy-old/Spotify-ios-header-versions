@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTPlaylistPlatformFieldEpisodeShowName <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, copy, nonatomic) NSString *showName;
+@property(nonatomic, readonly) NSString *showName;
 @end
 

@@ -9,18 +9,18 @@
 #import "SPTSearchHubsLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter, SPTSearch2DateProviding, SPTSearchUBIHubsLogger, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTSearch2DateProviding, SPTSearchUBIHubsLogger, SPTUBILogger;
 
 @interface SPTSearchHubsLoggerImplementation : NSObject <SPTSearchHubsLogger>
 {
     id <SPTLogCenter> _logCenter;
     id <SPTSearch2DateProviding> _dateProvider;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTSearchUBIHubsLogger> _ubiHubsLogger;
 }
 
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTSearch2DateProviding> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

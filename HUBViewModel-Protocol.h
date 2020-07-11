@@ -10,13 +10,13 @@
 @protocol HUBComponentModel, HUBViewModelBuilder;
 
 @protocol HUBViewModel <HUBSerializable>
-@property(readonly, copy, nonatomic) NSDate *buildDate;
-@property(readonly, copy, nonatomic) NSDictionary *customData;
-@property(readonly, copy, nonatomic) NSArray *overlayComponentModels;
-@property(readonly, copy, nonatomic) NSArray *bodyComponentModels;
-@property(readonly, nonatomic) id <HUBComponentModel> headerComponentModel;
-@property(readonly, copy, nonatomic) NSString *navigationBarTitle;
-@property(readonly, copy, nonatomic) NSString *identifier;
 - (id <HUBViewModelBuilder>)createBuilder;
+@property(nonatomic, readonly) NSDate *buildDate;
+@property(nonatomic, readonly) NSDictionary *customData;
+@property(nonatomic, readonly) NSArray *overlayComponentModels;
+@property(nonatomic, readonly) NSArray *bodyComponentModels;
+@property(nonatomic, readonly) id <HUBComponentModel> headerComponentModel;
+@property(nonatomic, readonly) NSString *navigationBarTitle;
+@property(nonatomic, readonly) NSString *identifier;
 @end
 

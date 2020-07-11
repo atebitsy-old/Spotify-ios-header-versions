@@ -7,19 +7,19 @@
 #import <objc/NSObject.h>
 
 @class NSString;
-@protocol SPTLogCenter, SPTUBIMobileConcertsEntityEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileConcertsEntityEventFactory;
 
 @interface SPTConcertsLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileConcertsEntityEventFactory> _concertEntityEventFactory;
     NSString *_concertURIString;
 }
 
 @property(readonly, copy, nonatomic) NSString *concertURIString; // @synthesize concertURIString=_concertURIString;
 @property(readonly, nonatomic) id <SPTUBIMobileConcertsEntityEventFactory> concertEntityEventFactory; // @synthesize concertEntityEventFactory=_concertEntityEventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (double)getTimestamp;

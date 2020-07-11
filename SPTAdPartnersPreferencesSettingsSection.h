@@ -7,7 +7,7 @@
 #import "SettingsSection.h"
 
 @class NSString, SPSession, SPTAccesspointWebTokenRequest;
-@protocol SPTLinkDispatcher, SPTLogCenter, SPTUBIMobileAdsPreferencesEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLinkDispatcher, SPTLogCenter, SPTUBILogger, SPTUBIMobileAdsPreferencesEventFactory;
 
 @interface SPTAdPartnersPreferencesSettingsSection : SettingsSection
 {
@@ -16,12 +16,12 @@
     NSString *_adPartnerPreferenceURLWithToken;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileAdsPreferencesEventFactory> _adsPreferencesEventFactory;
 }
 
 @property(readonly, nonatomic) id <SPTUBIMobileAdsPreferencesEventFactory> adsPreferencesEventFactory; // @synthesize adsPreferencesEventFactory=_adsPreferencesEventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) NSString *adPartnerPreferenceURLWithToken; // @synthesize adPartnerPreferenceURLWithToken=_adPartnerPreferenceURLWithToken;

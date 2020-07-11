@@ -7,16 +7,16 @@
 #import <objc/NSObject.h>
 
 @class NSString, NSURL;
-@protocol SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger;
 
 @interface SPTFreeTierEntityContextMenuLogger : NSObject
 {
     NSString *_featureIdentifier;
     NSURL *_pageURI;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 - (void).cxx_destruct;

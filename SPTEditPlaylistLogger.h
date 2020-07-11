@@ -7,19 +7,19 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter, SPTUBIMobileEditPlaylistEventFactory, SPTUserBehaviourInstrumentationLogger, SPTViewLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileEditPlaylistEventFactory, SPTViewLogger;
 
 @interface SPTEditPlaylistLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     id <SPTViewLogger> _viewLogger;
     id <SPTUBIMobileEditPlaylistEventFactory> _ubiEventFactory;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     NSURL *_playlistURL;
 }
 
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTUBIMobileEditPlaylistEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;

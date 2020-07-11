@@ -16,6 +16,7 @@
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(readonly, nonatomic) unsigned long long numberOfCards;
 @property(nonatomic) __weak id <SPTAssistedCurationViewModelDelegate> delegate;
+- (unsigned long long)indexOfCardViewModel:(id <SPTAssistedCurationCardViewModel>)arg1;
 - (id <SPTAssistedCurationCardViewModel>)cardViewModelAtIndex:(unsigned long long)arg1;
 - (void)viewDidDisappear;
 - (void)viewDidLoad;

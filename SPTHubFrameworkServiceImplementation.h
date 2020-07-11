@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHubsRendererFactoryImplementation;
-@protocol CosmosFeature, SPContextMenuFeature, SPTContainerService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTSessionService, SPTShareFeature, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
+@protocol CosmosFeature, SPContextMenuFeature, SPTContainerService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTSessionService, SPTShareFeature, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTHubFrameworkServiceImplementation : NSObject <SPTService, SPTHubFrameworkService>
 {
@@ -23,7 +23,7 @@
     id <SPTSessionService> _sessionService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <CosmosFeature> _cosmosFeature;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     id <SPTShareFeature> _shareService;
     SPTHubsRendererFactoryImplementation *_hubsRendererFactory;
 }
@@ -31,7 +31,7 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTHubsRendererFactoryImplementation *hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(nonatomic) __weak id <SPTShareFeature> shareService; // @synthesize shareService=_shareService;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;

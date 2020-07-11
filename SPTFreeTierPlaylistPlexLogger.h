@@ -7,18 +7,18 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTUBIMobilePlaylistExtenderEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger, SPTUBIMobilePlaylistExtenderEventFactory;
 
 @interface SPTFreeTierPlaylistPlexLogger : NSObject
 {
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobilePlaylistExtenderEventFactory> _ubiEventFactory;
     NSURL *_playlistURL;
 }
 
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTUBIMobilePlaylistExtenderEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (void)addItemToPlaylistWithTrackURI:(id)arg1;
 - (void)playItemWithTrackURI:(id)arg1;

@@ -9,16 +9,19 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTDataLoader;
+@protocol SPTNavigationItemTitleProvider;
 
 @interface SPTNavigationListDataLoader : NSObject <SPTDataLoaderDelegate>
 {
     SPTDataLoader *_dataLoader;
+    id <SPTNavigationItemTitleProvider> _navigationItemTitleProvider;
     CDUnknownBlockType _completionBlock;
 }
 
 + (id)navigationListDataLoaderURL;
 + (id)navigationListDataLoaderRequest;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
+@property(retain, nonatomic) id <SPTNavigationItemTitleProvider> navigationItemTitleProvider; // @synthesize navigationItemTitleProvider=_navigationItemTitleProvider;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
@@ -29,7 +32,7 @@
 - (id)parseError;
 - (void)deserializeResponse:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)loadNavigationListWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithDataLoader:(id)arg1;
+- (id)initWithDataLoader:(id)arg1 navigationItemTitleProvider:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

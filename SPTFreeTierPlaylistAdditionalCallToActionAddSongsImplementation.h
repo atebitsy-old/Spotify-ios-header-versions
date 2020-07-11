@@ -6,13 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierPlaylistAdditionalCallToAction-Protocol.h"
 #import "SPTFreeTierPlaylistEmptyViewAdditionalCallToAction-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistLogger;
 @protocol SPTAssistedCurationUIService, SPTFreeTierPlaylistViewModel;
 
-@interface SPTFreeTierPlaylistAdditionalCallToActionAddSongsImplementation : NSObject <SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistEmptyViewAdditionalCallToAction>
+@interface SPTFreeTierPlaylistAdditionalCallToActionAddSongsImplementation : NSObject <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction>
 {
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;

@@ -4,17 +4,15 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
-
 @class NSString, NSURL;
 @protocol SPTProfileUserDataChangeObserver;
 
-@protocol SPTProfileUserData <NSObject>
-@property(readonly, nonatomic) NSURL *imageURL;
-@property(readonly, nonatomic) NSString *shortName;
-@property(readonly, nonatomic) NSString *name;
-@property(readonly, nonatomic) NSString *username;
-- (void)removeProfileChangeObserver:(id <SPTProfileUserDataChangeObserver>)arg1;
-- (void)addProfileChangeObserver:(id <SPTProfileUserDataChangeObserver>)arg1;
+@protocol SPTProfileUserData
+- (void)removeProfileChangeObserverWithObserver:(id <SPTProfileUserDataChangeObserver>)arg1;
+- (void)addProfileChangeObserverWithObserver:(id <SPTProfileUserDataChangeObserver>)arg1;
+@property(nonatomic, readonly) _Bool isVerified;
+@property(nonatomic, readonly) NSURL *imageURL;
+@property(nonatomic, readonly) NSString *displayName;
+@property(nonatomic, readonly) NSString *username;
 @end
 

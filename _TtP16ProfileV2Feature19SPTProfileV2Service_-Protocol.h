@@ -6,9 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol _TtP16ProfileV2Feature18SPTProfileUserData_;
+@protocol SPTProfileUserData;
 
 @protocol _TtP16ProfileV2Feature19SPTProfileV2Service_ <SPTService>
-- (id <_TtP16ProfileV2Feature18SPTProfileUserData_>)provideProfileUserDataForCurrentUser;
+- (id <SPTProfileUserData>)provideProfileUserDataForCurrentUser;
 @end
 

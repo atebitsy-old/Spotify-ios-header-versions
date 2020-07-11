@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTEditPlaylistModelDelegate-Protocol.h"
 #import "SPTEditPlaylistViewModel-Protocol.h"
-#import "SPTFreeTierPlaylistModelObserver-Protocol.h"
 
 @class NSMutableArray, NSString, NSURL;
-@protocol SPTEditPlaylistViewModelDelegate, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistTestManager;
+@protocol SPTEditPlaylistModel, SPTEditPlaylistViewModelDelegate, SPTFreeTierPlaylistTestManager;
 
-@interface SPTEditPlaylistViewModelImplementation : NSObject <SPTEditPlaylistViewModel, SPTFreeTierPlaylistModelObserver>
+@interface SPTEditPlaylistViewModelImplementation : NSObject <SPTEditPlaylistViewModel, SPTEditPlaylistModelDelegate>
 {
     _Bool _renameEnabled;
     _Bool _isCollaborative;
@@ -22,7 +22,7 @@
     NSString *_editedPlaylistName;
     NSString *_originalDescription;
     NSString *_editedDescription;
-    id <SPTFreeTierPlaylistModel> _playlistModel;
+    id <SPTEditPlaylistModel> _playlistModel;
     id <SPTFreeTierPlaylistTestManager> _testManager;
     NSMutableArray *_tracks;
     NSURL *_playlistImageURL;
@@ -40,16 +40,15 @@
 @property(retain, nonatomic) NSURL *playlistImageURL; // @synthesize playlistImageURL=_playlistImageURL;
 @property(retain, nonatomic) NSMutableArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
+@property(readonly, nonatomic) id <SPTEditPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(copy, nonatomic) NSString *editedDescription; // @synthesize editedDescription=_editedDescription;
 @property(copy, nonatomic) NSString *originalDescription; // @synthesize originalDescription=_originalDescription;
 @property(copy, nonatomic) NSString *editedPlaylistName; // @synthesize editedPlaylistName=_editedPlaylistName;
 @property(copy, nonatomic) NSString *originalPlaylistName; // @synthesize originalPlaylistName=_originalPlaylistName;
 @property(nonatomic) __weak id <SPTEditPlaylistViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
-- (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
-- (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
+- (void)editPlaylistModel:(id)arg1 error:(id)arg2;
+- (void)editPlaylistModel:(id)arg1 modelEntityDidChange:(id)arg2;
 - (void)saveMovesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)saveWithCompletion:(CDUnknownBlockType)arg1;
 - (void)moveTrackAtIndexPath:(id)arg1 toIndexPath:(id)arg2;

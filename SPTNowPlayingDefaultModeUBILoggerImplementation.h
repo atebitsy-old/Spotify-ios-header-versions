@@ -25,16 +25,16 @@
 #import "SPTNowPlayingViewUBILogger-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIMobileNowPlayingViewDefaultEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTUBILogger, SPTUBIMobileNowPlayingViewDefaultEventFactory;
 
 @interface SPTNowPlayingDefaultModeUBILoggerImplementation : NSObject <SPTNowPlayingViewUBILogger, SPTNowPlayingScrollUBILogger, SPTNowPlayingQueueButtonUBILogger, SPTNowPlayingConnectButtonUBILogger, SPTNowPlayingRepeatButtonUBILogger, SPTNowPlayingSkipNextButtonUBILogger, SPTNowPlayingPlayButtonUBILogger, SPTNowPlayingSkipPreviousButtonUBILogger, SPTNowPlayingShuffleModeButtonUBILogger, SPTNowPlayingProgressBarUBILogger, SPTNowPlayingHeartButtonUBILogger, SPTNowPlayingArtistLabelUBILogger, SPTNowPlayingTrackTitleLabelUBILogger, SPTNowPlayingCoverArtUBILogger, SPTNowPlayingContextMenuButtonUBILogger, SPTNowPlayingPlaybackSourceLabelUBILogger, SPTNowPlayingCloseButtonUBILogger>
 {
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileNowPlayingViewDefaultEventFactory> _eventFactory;
 }
 
 @property(readonly, nonatomic) id <SPTUBIMobileNowPlayingViewDefaultEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (void)logCloseButtonTapped;
 - (void)logRepeatButtonTappedWithMode:(unsigned long long)arg1;

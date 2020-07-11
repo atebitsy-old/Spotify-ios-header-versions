@@ -19,6 +19,7 @@
     UIButton *_followButton;
     UIButton *_feedbackButton;
     UIButton *_offlineButton;
+    UIButton *_additionalCTAButton;
     CDUnknownBlockType _creatorRowButtonTappedBlock;
     SPTEncoreLabel *_metadataLabel;
     NSString *_metadataAccessibilityLabel;
@@ -57,6 +58,7 @@
 @property(copy, nonatomic) NSString *metadataAccessibilityLabel; // @synthesize metadataAccessibilityLabel=_metadataAccessibilityLabel;
 @property(retain, nonatomic) SPTEncoreLabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(copy, nonatomic) CDUnknownBlockType creatorRowButtonTappedBlock; // @synthesize creatorRowButtonTappedBlock=_creatorRowButtonTappedBlock;
+@property(retain, nonatomic) UIButton *additionalCTAButton; // @synthesize additionalCTAButton=_additionalCTAButton;
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *feedbackButton; // @synthesize feedbackButton=_feedbackButton;
 @property(retain, nonatomic) UIButton *followButton; // @synthesize followButton=_followButton;

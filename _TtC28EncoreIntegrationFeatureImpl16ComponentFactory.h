@@ -11,12 +11,15 @@
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: $__lazy_storage_$_trackRow
     // Error parsing type: , name: $__lazy_storage_$_artistTrackRow
+    // Error parsing type: , name: $__lazy_storage_$_playlistExtenderRow
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (id)makeArtistTrackRow:(long long)arg1;
 - (id)makeArtistTrackRow;
+- (id)makePlaylistExtenderRow:(long long)arg1;
+- (id)makePlaylistExtenderRow;
 - (id)makeTrackRowModelHelper;
 - (id)makeTrackRow:(long long)arg1;
 - (id)makeTrackRow;

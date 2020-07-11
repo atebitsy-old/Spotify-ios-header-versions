@@ -9,17 +9,17 @@
 #import "SPTEditPlaylistTrackViewModel-Protocol.h"
 
 @class NSString;
-@protocol SPTFreeTierPlaylistModelEntityTrackFields;
+@protocol SPTEditPlaylistModelEntityTrackFields;
 
 @interface SPTEditPlaylistTrackViewModelImplementation : NSObject <SPTEditPlaylistTrackViewModel>
 {
     _Bool _showTrackOwner;
     NSString *_subtitle;
-    id <SPTFreeTierPlaylistModelEntityTrackFields> _trackEntity;
+    id <SPTEditPlaylistModelEntityTrackFields> _trackEntity;
 }
 
 @property(nonatomic) _Bool showTrackOwner; // @synthesize showTrackOwner=_showTrackOwner;
-@property(retain, nonatomic) id <SPTFreeTierPlaylistModelEntityTrackFields> trackEntity; // @synthesize trackEntity=_trackEntity;
+@property(retain, nonatomic) id <SPTEditPlaylistModelEntityTrackFields> trackEntity; // @synthesize trackEntity=_trackEntity;
 - (void).cxx_destruct;
 - (id)albumName;
 - (id)artistNames;

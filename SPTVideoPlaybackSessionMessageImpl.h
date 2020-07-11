@@ -30,6 +30,7 @@
     long long _nSeekback;
     long long _nSeekforward;
     long long _msPlayed;
+    long long _msPlayedNominal;
     long long _msPlayedBackground;
     long long _msPlayedFullscreen;
     long long _msPlayedSubtitles;
@@ -66,6 +67,7 @@
 @property(nonatomic) long long msPlayedSubtitles; // @synthesize msPlayedSubtitles=_msPlayedSubtitles;
 @property(nonatomic) long long msPlayedFullscreen; // @synthesize msPlayedFullscreen=_msPlayedFullscreen;
 @property(nonatomic) long long msPlayedBackground; // @synthesize msPlayedBackground=_msPlayedBackground;
+@property(nonatomic) long long msPlayedNominal; // @synthesize msPlayedNominal=_msPlayedNominal;
 @property(nonatomic) long long msPlayed; // @synthesize msPlayed=_msPlayed;
 @property(nonatomic) long long nSeekforward; // @synthesize nSeekforward=_nSeekforward;
 @property(nonatomic) long long nSeekback; // @synthesize nSeekback=_nSeekback;
@@ -84,7 +86,7 @@
 @property(copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
 - (void).cxx_destruct;
-- (id)initWithIdentity:(id)arg1 featureIdentifier:(id)arg2 msStartPosition:(long long)arg3 startBitrate:(long long)arg4 msDuration:(long long)arg5 msStartTime:(long long)arg6 msManifestLoadTime:(long long)arg7 msEncryptionLoadTime:(long long)arg8 msInitialBuffering:(long long)arg9 msBufferingSeek:(long long)arg10 msBufferingSeekLongest:(long long)arg11 msBufferingStall:(long long)arg12 msBufferingStallLongest:(long long)arg13 nStalls:(long long)arg14 nSeekback:(long long)arg15 nSeekforward:(long long)arg16 msPlayed:(long long)arg17 msPlayedBackground:(long long)arg18 msPlayedFullscreen:(long long)arg19 msPlayedSubtitles:(long long)arg20 connectionTypeStart:(id)arg21 connectionTypeEnd:(id)arg22 kbpsAverageBandwidth:(long long)arg23 encryptionType:(id)arg24 kbytesDownloaded:(long long)arg25 nViewTransitions:(long long)arg26 nDroppedFrames:(long long)arg27 averageDeviceOrientation:(double)arg28 exitReason:(id)arg29 aspectRatio:(double)arg30 lastUsedSubtitle:(id)arg31;
+- (id)initWithIdentity:(id)arg1 featureIdentifier:(id)arg2 msStartPosition:(long long)arg3 startBitrate:(long long)arg4 msDuration:(long long)arg5 msStartTime:(long long)arg6 msManifestLoadTime:(long long)arg7 msEncryptionLoadTime:(long long)arg8 msInitialBuffering:(long long)arg9 msBufferingSeek:(long long)arg10 msBufferingSeekLongest:(long long)arg11 msBufferingStall:(long long)arg12 msBufferingStallLongest:(long long)arg13 nStalls:(long long)arg14 nSeekback:(long long)arg15 nSeekforward:(long long)arg16 msPlayed:(long long)arg17 msPlayedNominal:(long long)arg18 msPlayedBackground:(long long)arg19 msPlayedFullscreen:(long long)arg20 msPlayedSubtitles:(long long)arg21 connectionTypeStart:(id)arg22 connectionTypeEnd:(id)arg23 kbpsAverageBandwidth:(long long)arg24 encryptionType:(id)arg25 kbytesDownloaded:(long long)arg26 nViewTransitions:(long long)arg27 nDroppedFrames:(long long)arg28 averageDeviceOrientation:(double)arg29 exitReason:(id)arg30 aspectRatio:(double)arg31 lastUsedSubtitle:(id)arg32;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

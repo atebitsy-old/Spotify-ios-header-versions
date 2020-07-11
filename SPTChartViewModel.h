@@ -64,6 +64,7 @@
 - (unsigned long long)chartEntryStatusForIndex:(unsigned long long)arg1;
 - (_Bool)isPlaybackAvailableForChartEntryAtIndexPath:(id)arg1;
 - (unsigned long long)chartEntryPositionForIndex:(unsigned long long)arg1;
+- (_Bool)isTrackHiddenAtIndex:(unsigned long long)arg1;
 - (_Bool)isTrackExplicitContentPlaybackRestrictedAtIndex:(unsigned long long)arg1;
 - (_Bool)isTrackExplicitAtIndex:(long long)arg1;
 - (id)urlForTrackAtIndex:(long long)arg1;

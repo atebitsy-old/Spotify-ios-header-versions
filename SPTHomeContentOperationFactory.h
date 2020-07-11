@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTDataLoaderFactory, SPTHomeContentCache, SPTHomeFeatureProperties, SPTNetworkConnectivityController;
-@protocol SPTFeatureSettingsItemFactory, SPTFreeTierPersistentCounter, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTSnackbarService, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTFeatureSettingsItemFactory, SPTFreeTierPersistentCounter, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTSnackbarService, SPTUBIHubsUtilities;
 
 @interface SPTHomeContentOperationFactory : NSObject
 {
@@ -24,12 +24,12 @@
     id <SPTLocalSettings> _localSettings;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
     SPTHomeFeatureProperties *_featureProperties;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
     id <SPTFreeTierPersistentCounter> _persistentCounter;
 }
 
 @property(readonly, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) SPTHomeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;

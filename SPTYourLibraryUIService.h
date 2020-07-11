@@ -7,17 +7,17 @@
 #import "SPTUIPageService.h"
 
 @class SPTYourLibraryGLUETheme, SPTYourLibraryLogger, SPTYourLibraryURIManager, SPTYourLibraryViewController;
-@protocol SPTFreeTierCreatePlaylistService, SPTGLUEService, SPTOfflineService, SPTPerformanceMetricsService, SPTSessionService, SPTUserBehaviourInstrumentationService, SPTYourLibraryService, SPTYourLibraryViewModel;
+@protocol SPTCreatePlaylistService, SPTGLUEService, SPTOfflineService, SPTPerformanceMetricsService, SPTSessionService, SPTUBIService, SPTYourLibraryService, SPTYourLibraryViewModel;
 
 @interface SPTYourLibraryUIService : SPTUIPageService
 {
-    id <SPTFreeTierCreatePlaylistService> _createPlaylistService;
+    id <SPTCreatePlaylistService> _createPlaylistService;
     id <SPTGLUEService> _glueService;
     id <SPTYourLibraryService> _yourLibraryService;
     id <SPTOfflineService> _offlineService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTSessionService> _clientSessionService;
-    id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <SPTUBIService> _ubiService;
     SPTYourLibraryGLUETheme *_yourLibraryTheme;
     SPTYourLibraryLogger *_logger;
     SPTYourLibraryURIManager *_uriManager;
@@ -31,13 +31,13 @@
 @property(retain, nonatomic) SPTYourLibraryURIManager *uriManager; // @synthesize uriManager=_uriManager;
 @property(retain, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTYourLibraryGLUETheme *yourLibraryTheme; // @synthesize yourLibraryTheme=_yourLibraryTheme;
-@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(nonatomic) __weak id <SPTYourLibraryService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(nonatomic) __weak id <SPTFreeTierCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
+@property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
 - (void).cxx_destruct;
 - (id)provideViewLoggerForURI:(id)arg1;
 - (id)provideLogger;

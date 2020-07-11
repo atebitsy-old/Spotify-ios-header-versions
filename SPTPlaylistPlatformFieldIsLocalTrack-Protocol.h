@@ -7,6 +7,6 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldIsLocalTrack <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool isLocalTrack;
+@property(nonatomic, readonly) _Bool isLocalTrack;
 @end
 

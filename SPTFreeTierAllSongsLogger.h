@@ -7,18 +7,18 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter, SPTUBIMobilePlaylistAllSongsEventFactory, SPTUserBehaviourInstrumentationLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobilePlaylistAllSongsEventFactory;
 
 @interface SPTFreeTierAllSongsLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     NSURL *_pageURI;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobilePlaylistAllSongsEventFactory> _allSongEventFactory;
 }
 
 @property(readonly, nonatomic) id <SPTUBIMobilePlaylistAllSongsEventFactory> allSongEventFactory; // @synthesize allSongEventFactory=_allSongEventFactory;
-@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

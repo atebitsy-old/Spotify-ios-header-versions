@@ -11,7 +11,6 @@
 
 @protocol SPTPodcastFactory <NSObject>
 - (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1 shouldRemoveHeaders:(_Bool)arg2;
-- (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1 parseTrailer:(_Bool)arg2;
 - (id <SPTPodcast>)podcastWithDictionary:(NSDictionary *)arg1;
 @end
 

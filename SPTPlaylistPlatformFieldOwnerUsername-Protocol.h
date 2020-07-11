@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTPlaylistPlatformFieldOwnerUsername <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, copy, nonatomic) NSString *ownerUsername;
+@property(nonatomic, readonly) NSString *ownerUsername;
 @end
 

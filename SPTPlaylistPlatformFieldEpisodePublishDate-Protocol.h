@@ -9,6 +9,6 @@
 @class NSDate;
 
 @protocol SPTPlaylistPlatformFieldEpisodePublishDate <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSDate *publishDate;
+@property(nonatomic, readonly) NSDate *publishDate;
 @end
 

@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTSearchPlatformTestManager <NSObject>
+@property(readonly, nonatomic, getter=isTopicsEnabled) _Bool topicsEnabled;
 @property(readonly, nonatomic, getter=isPodcastResultCardsDurationEnabled) _Bool podcastResultCardsDurationEnabled;
 @property(readonly, nonatomic) unsigned long long podcastRowsType;
 @property(readonly, nonatomic, getter=isSearchKitEnabled) _Bool searchKitEnabled;

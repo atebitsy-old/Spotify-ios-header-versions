@@ -10,7 +10,6 @@
 @protocol BMSubtitle;
 
 @protocol BMSubtitleFactory <NSObject>
-- (id <BMSubtitle>)createSubtitleWithLanguageTag:(NSString *)arg1 closedCaption:(_Bool)arg2;
 - (id <BMSubtitle>)createSubtitleWithLanguageTag:(NSString *)arg1;
 @end
 

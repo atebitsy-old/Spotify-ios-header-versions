@@ -33,7 +33,6 @@
 - (void).cxx_destruct;
 - (id)provideCollectionLogger;
 - (id)provideAddAllTracksAlbumActionTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 contextURL:(id)arg4;
-- (id)provideCompleteAlbumActionTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3;
 - (id)provideBanActionTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 contextURL:(id)arg4;
 - (id)provideSaveRemoveActionTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 contextURL:(id)arg4;
 - (void)load;

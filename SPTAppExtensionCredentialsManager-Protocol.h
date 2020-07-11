@@ -6,13 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError, NSString, SPTAppExtensionKeychainCredentials;
+@class NSError, SPTAppExtensionKeychainCredentials;
 @protocol NSSecureCoding><SPTLoginSession;
 
 @protocol SPTAppExtensionCredentialsManager <NSObject>
-- (NSString *)hermesAccessToken;
-- (_Bool)deleteHermesAccessToken;
-- (NSError *)setHermesAccessToken:(NSString *)arg1;
 - (SPTAppExtensionKeychainCredentials *)ESDKCredentials;
 - (_Bool)deleteESDKCredentials;
 - (NSError *)setESDKCredentials:(SPTAppExtensionKeychainCredentials *)arg1;

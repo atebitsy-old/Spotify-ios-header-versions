@@ -11,7 +11,7 @@
 #import "SPTOfflineContentModelDelegate-Protocol.h"
 
 @class NSString, SPTNetworkConnectivityController;
-@protocol HUBContentOperationDelegate, SPTOfflineContentModel, SPTOfflineContentModelEntity, SPTUserBehaviourHubsInstrumentation;
+@protocol HUBContentOperationDelegate, SPTOfflineContentModel, SPTOfflineContentModelEntity, SPTUBIHubsUtilities;
 
 @interface SPTHomeDownloadsContentOperation : NSObject <SPTNetworkConnectivityControllerObserver, SPTOfflineContentModelDelegate, HUBContentOperation>
 {
@@ -21,10 +21,10 @@
     SPTNetworkConnectivityController *_networkConnectivityController;
     id <SPTOfflineContentModelEntity> _offlineMusicEntity;
     id <SPTOfflineContentModelEntity> _offlinePodcastEntity;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(retain, nonatomic) id <SPTOfflineContentModelEntity> offlinePodcastEntity; // @synthesize offlinePodcastEntity=_offlinePodcastEntity;
 @property(retain, nonatomic) id <SPTOfflineContentModelEntity> offlineMusicEntity; // @synthesize offlineMusicEntity=_offlineMusicEntity;
 @property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;

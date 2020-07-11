@@ -10,7 +10,7 @@
 #import "SPTYourLibraryViewModel-Protocol.h"
 
 @class NSArray, NSMutableArray, NSMutableDictionary, NSString, NSURL, SPTObserverManager, SPTYourLibraryLogger;
-@protocol SPTFreeTierCreatePlaylistController, SPTPageCreationContext, SPTYourLibraryGroupHeaderActionViewModel, SPTYourLibraryModel, SPTYourLibraryTestManager;
+@protocol SPTCreatePlaylistController, SPTPageCreationContext, SPTYourLibraryGroupHeaderActionViewModel, SPTYourLibraryModel, SPTYourLibraryTestManager;
 
 @interface SPTYourLibraryViewModelImplementation : NSObject <SPTYourLibraryModelObserver, SPTYourLibraryViewModel>
 {
@@ -18,7 +18,7 @@
     SPTObserverManager *_observers;
     id <SPTYourLibraryModel> _model;
     id <SPTPageCreationContext> _pageCreationContext;
-    id <SPTFreeTierCreatePlaylistController> _createPlaylistController;
+    id <SPTCreatePlaylistController> _createPlaylistController;
     SPTYourLibraryLogger *_logger;
     id <SPTYourLibraryTestManager> _testManager;
     id <SPTYourLibraryGroupHeaderActionViewModel> _groupHeaderActionViewModel;
@@ -36,7 +36,7 @@
 @property(retain, nonatomic) id <SPTYourLibraryGroupHeaderActionViewModel> groupHeaderActionViewModel; // @synthesize groupHeaderActionViewModel=_groupHeaderActionViewModel;
 @property(readonly, nonatomic) id <SPTYourLibraryTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
-@property(readonly, nonatomic) id <SPTFreeTierCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
+@property(readonly, nonatomic) id <SPTCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
 @property(retain, nonatomic) id <SPTPageCreationContext> pageCreationContext; // @synthesize pageCreationContext=_pageCreationContext;
 @property(retain, nonatomic) id <SPTYourLibraryModel> model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;

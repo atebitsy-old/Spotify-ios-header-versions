@@ -9,6 +9,6 @@
 @class NSDate;
 
 @protocol SPTPlaylistPlatformFieldAddedAt <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSDate *addedAt;
+@property(nonatomic, readonly) NSDate *addedAt;
 @end
 
