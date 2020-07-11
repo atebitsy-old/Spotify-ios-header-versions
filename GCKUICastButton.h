@@ -33,6 +33,7 @@
 - (void)setAccessibilityLabel:(id)arg1 forCastState:(unsigned long long)arg2;
 - (void)setTintColor:(id)arg1;
 - (void)setInactiveIcon:(id)arg1 activeIcon:(id)arg2 animationIcons:(id)arg3;
+- (void)traitCollectionDidChange:(id)arg1;
 - (void)dealloc;
 - (void)privateInit;
 - (id)initWithCoder:(id)arg1;

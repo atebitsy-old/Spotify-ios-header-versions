@@ -6,17 +6,17 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUEImageView, SPTBrowseUIPromoViewStyle, UIImage;
+@class GLUEImageView, SPTBrowseUIPromoStyle, UIImage;
 @protocol GLUETheme;
 
 @interface SPTBrowseUIPromoImageWithShadowContainer : UIView
 {
     GLUEImageView *_mainImageView;
     id <GLUETheme> _theme;
-    SPTBrowseUIPromoViewStyle *_style;
+    SPTBrowseUIPromoStyle *_style;
 }
 
-@property(readonly, nonatomic) SPTBrowseUIPromoViewStyle *style; // @synthesize style=_style;
+@property(readonly, nonatomic) SPTBrowseUIPromoStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEImageView *mainImageView; // @synthesize mainImageView=_mainImageView;
 - (void).cxx_destruct;

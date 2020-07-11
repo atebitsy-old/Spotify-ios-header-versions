@@ -12,6 +12,7 @@
 @interface SPTCanvasPlaylistViewCell : UICollectionViewCell
 {
     _Bool _showMetadata;
+    _Bool _isPlaylistCover;
     UIViewController *_viewController;
     GLUELabel *_artistNameLabel;
     GLUELabel *_trackTitleLabel;
@@ -27,6 +28,7 @@
 @property(retain, nonatomic) UIView<GLUEAnimationLoading><GLUEAnimationControlling> *playingAnimationView; // @synthesize playingAnimationView=_playingAnimationView;
 @property(retain, nonatomic) GLUELabel *trackTitleLabel; // @synthesize trackTitleLabel=_trackTitleLabel;
 @property(retain, nonatomic) GLUELabel *artistNameLabel; // @synthesize artistNameLabel=_artistNameLabel;
+@property(nonatomic) _Bool isPlaylistCover; // @synthesize isPlaylistCover=_isPlaylistCover;
 @property(nonatomic) _Bool showMetadata; // @synthesize showMetadata=_showMetadata;
 @property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
 - (void).cxx_destruct;
@@ -34,6 +36,8 @@
 - (void)animateWithAnimations:(CDUnknownBlockType)arg1;
 - (void)setSelected:(_Bool)arg1;
 - (void)updatePlayingAnimationView;
+- (void)layoutSubviews;
+- (void)updateBackgroundColor;
 
 @end
 

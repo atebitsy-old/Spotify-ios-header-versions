@@ -21,6 +21,7 @@
     // Error parsing type: , name: followFeature
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: containerUIService
+    // Error parsing type: , name: profileV2Service
     // Error parsing type: , name: remoteConfigurationProperties
     // Error parsing type: , name: profilePageToken
     // Error parsing type: , name: profileListPageToken

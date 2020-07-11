@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTUBIEventFactoryLocation-Protocol.h"
-
 @class NSString;
 
-@interface _TtC18VoiceUIFeatureImplP33_B857B736CCD311CA773B6E39552770CB34EventFactoryLocationImplementation : NSObject <SPTUBIEventFactoryLocation>
+@interface _TtC18VoiceUIFeatureImplP33_B857B736CCD311CA773B6E39552770CB34EventFactoryLocationImplementation : NSObject
 {
     // Error parsing type: , name: applicationId
     // Error parsing type: , name: specificationId

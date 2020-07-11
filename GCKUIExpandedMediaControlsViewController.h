@@ -70,6 +70,7 @@
 - (long long)preferredStatusBarStyle;
 - (void)dismissMediaControls;
 - (void)applyGradientEffect;
+- (void)traitCollectionDidChange:(id)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)dealloc;
 - (void)viewDidLoad;

@@ -16,7 +16,6 @@
 
 // Remaining properties
 @property(nonatomic) _Bool analyticsEnabled; // @dynamic analyticsEnabled;
-@property(retain, nonatomic) NSSet *cloudDiscoveryInfos; // @dynamic cloudDiscoveryInfos;
 @property(copy, nonatomic) NSDate *lastConnectedTime; // @dynamic lastConnectedTime;
 @property(copy, nonatomic) NSDate *lastQueryTime; // @dynamic lastQueryTime;
 @property(retain, nonatomic) NSSet *localConnections; // @dynamic localConnections;

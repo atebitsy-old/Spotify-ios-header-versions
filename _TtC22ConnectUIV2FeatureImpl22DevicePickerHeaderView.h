@@ -9,18 +9,13 @@
 @interface _TtC22ConnectUIV2FeatureImpl22DevicePickerHeaderView : UIView
 {
     // Error parsing type: , name: theme
-    // Error parsing type: , name: $__lazy_storage_$_iconImageView
-    // Error parsing type: , name: $__lazy_storage_$_contextMenuButton
-    // Error parsing type: , name: $__lazy_storage_$_touchArea
-    // Error parsing type: , name: $__lazy_storage_$_titleLabel
-    // Error parsing type: , name: $__lazy_storage_$_subtitleLabel
-    // Error parsing type: , name: $__lazy_storage_$_contentView
-    // Error parsing type: , name: $__lazy_storage_$_labelView
+    // Error parsing type: , name: $__lazy_storage_$_listeningOnView
+    // Error parsing type: , name: $__lazy_storage_$_activeDeviceTouchArea
     // Error parsing type: , name: $__lazy_storage_$_closeButton
-    // Error parsing type: , name: $__lazy_storage_$_nowPlayingAnimationView
     // Error parsing type: , name: $__lazy_storage_$_miniPickerNotchView
-    // Error parsing type: , name: isPlaying
-    // Error parsing type: , name: contextMenuWidthConstraint
+    // Error parsing type: , name: $__lazy_storage_$_separatorLabelContainerView
+    // Error parsing type: , name: $__lazy_storage_$_separatorLabel
+    // Error parsing type: , name: contentViewToSeparatorViewConstraint
 }
 
 - (void).cxx_destruct;

@@ -18,8 +18,10 @@
     NSMutableDictionary *_rowHeightCache;
     SPTFreeTierPlaylistLogger *_logger;
     NSDictionary *_sectionDescriptions;
+    NSDictionary *_reuseIdentifierToCellProviders;
 }
 
+@property(readonly, copy, nonatomic) NSDictionary *reuseIdentifierToCellProviders; // @synthesize reuseIdentifierToCellProviders=_reuseIdentifierToCellProviders;
 @property(readonly, copy, nonatomic) NSDictionary *sectionDescriptions; // @synthesize sectionDescriptions=_sectionDescriptions;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSMutableDictionary *rowHeightCache; // @synthesize rowHeightCache=_rowHeightCache;

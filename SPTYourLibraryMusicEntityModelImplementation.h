@@ -69,7 +69,6 @@
 - (void)addDataSource:(id)arg1 withItemAction:(CDUnknownBlockType)arg2;
 - (void)performItemActionAtIndex:(unsigned long long)arg1 inGroup:(unsigned long long)arg2;
 - (id)itemAtIndex:(unsigned long long)arg1 inGroup:(unsigned long long)arg2;
-- (void)willDisplayItemAtLocation:(long long)arg1;
 - (unsigned long long)locationForSectionIndex:(long long)arg1;
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (unsigned long long)numberOfItemsInGroup:(unsigned long long)arg1;

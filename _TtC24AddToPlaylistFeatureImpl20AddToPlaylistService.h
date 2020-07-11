@@ -8,6 +8,7 @@
 
 @interface _TtC24AddToPlaylistFeatureImpl20AddToPlaylistService : NSObject
 {
+    // Error parsing type: , name: ubiService
     // Error parsing type: , name: containerService
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: glueService

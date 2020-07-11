@@ -6,9 +6,12 @@
 
 #import "_TtC21FollowFeedFeatureImpl22HubComponentViewBinder.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
+#import "HUBComponentViewWithEvents-Protocol.h"
+
 @protocol HUBComponentEventHandler;
 
-@interface _TtC21FollowFeedFeatureImpl29ArtistCardComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder
+@interface _TtC21FollowFeedFeatureImpl29ArtistCardComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder <HUBComponentViewWithEvents, HUBComponentViewObserver>
 {
     // Error parsing type: , name: eventHandler
     // Error parsing type: , name: artistCardView

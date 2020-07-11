@@ -6,14 +6,16 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUEImageView, GLUELabel, NSString, SPTBrowseUIPromoBackgroundView, SPTBrowseUIPromoImageWithShadowContainer, SPTBrowseUIPromoViewStyle, UIImage, UIStackView;
+#import "GLUEStyleable-Protocol.h"
+
+@class GLUEImageView, GLUELabel, NSLayoutConstraint, NSString, SPTBrowseUIPromoBackgroundView, SPTBrowseUIPromoImageWithShadowContainer, SPTBrowseUIPromoStyle, UIImage, UIStackView;
 @protocol GLUETheme;
 
-@interface SPTBrowseUIPromoView : UIView
+@interface SPTBrowseUIPromoView : UIView <GLUEStyleable>
 {
     long long _imageDisplayState;
     id <GLUETheme> _theme;
-    SPTBrowseUIPromoViewStyle *_style;
+    SPTBrowseUIPromoStyle *_style;
     SPTBrowseUIPromoBackgroundView *_backgroundView;
     UIStackView *_stackView;
     GLUELabel *_backgroundLabel;
@@ -23,8 +25,10 @@
     GLUELabel *_titleLabel;
     GLUELabel *_subtitleLabel;
     GLUELabel *_descriptionLabel;
+    NSLayoutConstraint *_mainImageHeightConstraint;
 }
 
+@property(retain, nonatomic) NSLayoutConstraint *mainImageHeightConstraint; // @synthesize mainImageHeightConstraint=_mainImageHeightConstraint;
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -34,7 +38,7 @@
 @property(readonly, nonatomic) GLUELabel *backgroundLabel; // @synthesize backgroundLabel=_backgroundLabel;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) SPTBrowseUIPromoBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
-@property(readonly, nonatomic) SPTBrowseUIPromoViewStyle *style; // @synthesize style=_style;
+@property(copy, nonatomic) SPTBrowseUIPromoStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) long long imageDisplayState; // @synthesize imageDisplayState=_imageDisplayState;
 - (void).cxx_destruct;
@@ -49,19 +53,17 @@
 @property(retain, nonatomic) UIImage *mainImage;
 - (void)setLogoImage:(id)arg1 animated:(_Bool)arg2;
 @property(retain, nonatomic) UIImage *logoImage;
+- (void)glue_applyStyle:(id)arg1;
 - (void)prepareForReuse;
-- (id)createTitleLabel;
-- (void)updateMainColor:(id)arg1;
-- (void)updateLogoImageViewConstraintsForImage:(id)arg1;
-- (void)presentLogoImageWithoutMainImageAndTitle;
-- (void)presentTitleWithoutLogoImageAfterView:(id)arg1;
-- (void)presentOnlyTitleAfterView:(id)arg1;
-- (void)presentMainImageAndTitleWithoutLogoImage;
-- (id)createSpacerView;
-- (id)createLabelWithStyle:(id)arg1;
+- (void)updateLogoImageViewConstraintsForImage:(id)arg1 style:(id)arg2;
 - (void)setUpSubviews;
-- (void)setUpBackgroundView;
 - (id)initWithTheme:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

@@ -19,6 +19,7 @@
 @property(nonatomic) long long suspendReason; // @synthesize suspendReason=_suspendReason;
 @property(retain, nonatomic) GCKSession *session; // @synthesize session=_session;
 - (void).cxx_destruct;
+- (id)description;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithSession:(id)arg1;
 

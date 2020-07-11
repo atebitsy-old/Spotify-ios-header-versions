@@ -20,6 +20,7 @@
 - (void)removeSubtypeHandler:(id)arg1;
 - (void)addSubtypeHandler:(id)arg1;
 - (long long)handleURI:(id)arg1 context:(id)arg2;
+- (id)handleURIType:(long long)arg1 usingBlock:(CDUnknownBlockType)arg2;
 - (id)init;
 
 // Remaining properties

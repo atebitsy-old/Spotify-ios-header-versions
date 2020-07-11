@@ -11,6 +11,7 @@
     // Error parsing type: , name: dataLoader
     // Error parsing type: , name: uploadImageCompletionHandler
     // Error parsing type: , name: setImageCompletionHandler
+    // Error parsing type: , name: deleteImageCompletionHandler
     // Error parsing type: , name: requestTypeKey
     // Error parsing type: , name: contentTypeHeaderKey
     // Error parsing type: , name: contentTypeHeaderJPEGValue

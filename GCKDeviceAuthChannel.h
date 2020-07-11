@@ -23,6 +23,13 @@
 
 @property(nonatomic) __weak id <GCKDeviceAuthChannelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (id)listCertDataFromValidAuthMessage:(id)arg1;
+- (id)checkDeviceCapabilityWithAuthMessage:(id)arg1;
+- (id)checkSSLWithAuthMessage:(id)arg1;
+- (id)checkCRLWithAuthMessage:(id)arg1;
+- (id)checkCertDataWithAuthMessage:(id)arg1;
+- (id)checkNonceWithAuthMessage:(id)arg1;
+- (_Bool)canAuthenticateBinaryMessage:(id)arg1;
 - (void)didDisconnect;
 - (void)didReceiveBinaryMessage:(id)arg1;
 - (void)notifyDidAuthenticate:(_Bool)arg1 withErrorCode:(long long)arg2;

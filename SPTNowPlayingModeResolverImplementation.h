@@ -11,13 +11,14 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSArray, NSString, SPTObserverManager, SPTPlayerState;
-@protocol SPTDrivingModeController, SPTNowPlayingMode, SPTNowPlayingModesRegistry, SPTOnDemandSet, SPTPlayer;
+@protocol SPTDrivingModeController, SPTNowPlayingMode, SPTNowPlayingModesRegistry, SPTNowPlayingTestManager, SPTOnDemandSet, SPTPlayer;
 
 @interface SPTNowPlayingModeResolverImplementation : NSObject <SPTPlayerObserver, SPTDrivingModeControllerDelegate, SPTNowPlayingModeResolver>
 {
     id <SPTNowPlayingModesRegistry> _modesRegistry;
     id <SPTPlayer> _player;
     id <SPTOnDemandSet> _onDemandSet;
+    id <SPTNowPlayingTestManager> _nowPlayingTestManager;
     id <SPTDrivingModeController> _drivingModeController;
     SPTPlayerState *_playerState;
     id <SPTNowPlayingMode> _mode;
@@ -30,6 +31,7 @@
 @property(retain, nonatomic) id <SPTNowPlayingMode> mode; // @synthesize mode=_mode;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(retain, nonatomic) id <SPTDrivingModeController> drivingModeController; // @synthesize drivingModeController=_drivingModeController;
+@property(readonly, nonatomic) id <SPTNowPlayingTestManager> nowPlayingTestManager; // @synthesize nowPlayingTestManager=_nowPlayingTestManager;
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTNowPlayingModesRegistry> modesRegistry; // @synthesize modesRegistry=_modesRegistry;
@@ -42,7 +44,7 @@
 - (_Bool)isPersonalisedSet:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithModesRegistry:(id)arg1 player:(id)arg2 onDemandSet:(id)arg3;
+- (id)initWithModesRegistry:(id)arg1 player:(id)arg2 onDemandSet:(id)arg3 nowPlayingTestManager:(id)arg4;
 - (void)updateDrivingModeController:(id)arg1;
 
 // Remaining properties

@@ -24,9 +24,9 @@
 @property(readonly, nonatomic) id <SPTCanvasMetadataResolverFactory> metaDataResolverFactory; // @synthesize metaDataResolverFactory=_metaDataResolverFactory;
 @property(nonatomic) unsigned long long numberOfResolvedTracks; // @synthesize numberOfResolvedTracks=_numberOfResolvedTracks;
 - (void).cxx_destruct;
-- (void)resolvePageForTrackAtIndex:(unsigned long long)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)canvasModelAtIndex:(unsigned long long)arg1;
-- (id)trackAtIndex:(unsigned long long)arg1;
+- (void)resolvePageForTrackAtIndex:(long long)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)canvasModelAtIndex:(long long)arg1;
+- (id)trackAtIndex:(long long)arg1;
 @property(readonly, nonatomic) unsigned long long numberOfTracks;
 - (id)initWithTracks:(id)arg1 metaDataResolverFactory:(id)arg2;
 

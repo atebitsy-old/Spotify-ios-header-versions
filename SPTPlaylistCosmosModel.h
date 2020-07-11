@@ -23,7 +23,7 @@
 @property(retain, nonatomic) id <SPTCosmosDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> dictionaryDataLoader; // @synthesize dictionaryDataLoader=_dictionaryDataLoader;
 - (void).cxx_destruct;
-- (id)handleRequestPlaylistViewForPlaylistURL:(id)arg1 subscribe:(_Bool)arg2 options:(id)arg3 minimumUpdateInterval:(double)arg4 withMetadataProtocols:(id)arg5 andTrackProtocols:(id)arg6 completion:(CDUnknownBlockType)arg7 onError:(CDUnknownBlockType)arg8;
+- (id)handleRequestPlaylistViewForPlaylistURL:(id)arg1 subscribe:(_Bool)arg2 options:(id)arg3 minimumUpdateInterval:(double)arg4 withMetadataProtocols:(id)arg5 andTrackProtocols:(id)arg6 replyOnMainThread:(_Bool)arg7 completion:(CDUnknownBlockType)arg8 onError:(CDUnknownBlockType)arg9;
 - (void)offlinePlaylistsContainingItem:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updateDescriptionForPlaylistURL:(id)arg1 freeformDescription:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)synchronisePlaylistURLs:(id)arg1;
@@ -52,7 +52,7 @@
 - (void)rowIdForURL:(id)arg1 inFolderURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)rowIdsForTrackURLs:(id)arg1 inPlaylistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)makeGenericRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
-- (id)makeCancelableRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
+- (id)makeCancelableRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (void)makeRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
 - (void)handleOfflinePlaylistURL:(id)arg1 requestAction:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)removeOfflinePlaylistURL:(id)arg1 completion:(CDUnknownBlockType)arg2;

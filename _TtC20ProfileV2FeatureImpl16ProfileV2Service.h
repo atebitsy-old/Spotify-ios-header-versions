@@ -9,14 +9,14 @@
 @interface _TtC20ProfileV2FeatureImpl16ProfileV2Service : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: clientSessionService
+    // Error parsing type: , name: cosmosFeature
+    // Error parsing type: , name: cosmosDataLoaderService
+    // Error parsing type: , name: profileUserData
 }
 
-+ (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (void)unload;
-- (void)load;
-- (void)configureWithServices:(id)arg1;
 
 @end
 

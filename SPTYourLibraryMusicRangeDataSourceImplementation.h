@@ -9,7 +9,7 @@
 #import "SPTYourLibraryMusicRangeDataLoaderDelegate-Protocol.h"
 #import "SPTYourLibraryMusicRangeDataSource-Protocol.h"
 
-@class NSArray, NSMutableOrderedSet, NSString, NSTimer;
+@class NSArray, NSMutableOrderedSet, NSString;
 @protocol SPTYourLibraryMusicRangeDataLoader, SPTYourLibraryMusicRangeDataSourceDelegate;
 
 @interface SPTYourLibraryMusicRangeDataSourceImplementation : NSObject <SPTYourLibraryMusicRangeDataLoaderDelegate, SPTYourLibraryMusicRangeDataSource>
@@ -25,7 +25,6 @@
     NSArray *_sortRules;
     NSArray *_filterRules;
     NSString *_textFilter;
-    NSTimer *_updateTimer;
     NSMutableOrderedSet *_lastUnavailableIndexes;
     struct _NSRange _requestedRange;
     struct _NSRange _currentRange;
@@ -35,7 +34,6 @@
 + (id)defaultRangedDataSourceWithDataLoader:(id)arg1;
 @property(retain, nonatomic) NSMutableOrderedSet *lastUnavailableIndexes; // @synthesize lastUnavailableIndexes=_lastUnavailableIndexes;
 @property(nonatomic) _Bool forceReload; // @synthesize forceReload=_forceReload;
-@property(retain, nonatomic) NSTimer *updateTimer; // @synthesize updateTimer=_updateTimer;
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(copy, nonatomic) NSArray *filterRules; // @synthesize filterRules=_filterRules;
 @property(copy, nonatomic) NSArray *sortRules; // @synthesize sortRules=_sortRules;
@@ -55,11 +53,10 @@
 - (_Bool)isThresholdHitBottomForIndexPath:(id)arg1;
 - (_Bool)isThresholdHitTopForIndexPath:(id)arg1;
 - (void)updateDataLoaderRangeForIndexPath:(id)arg1;
-- (id)peekItemAtIndexPath:(id)arg1;
+- (void)willDisplayItemAIndex:(long long)arg1;
 - (id)itemAtIndexPath:(id)arg1;
 - (_Bool)recentlyUnavailableRequestedIndex:(long long)arg1;
 - (void)addUnavailableIndex:(long long)arg1;
-- (void)willDisplayItemAIndex:(long long)arg1;
 @property(readonly, nonatomic) NSArray *sectionIndices;
 @property(readonly, nonatomic) long long totalNumberOfItems;
 - (void)loadWithSortRules:(id)arg1 filterRules:(id)arg2 textFilter:(id)arg3;

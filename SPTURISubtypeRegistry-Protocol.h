@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTURISubtypeHandler;
+@protocol SPTURISubtypeHandler, SPTURISubtypeHandlerRegistrationToken;
 
 @protocol SPTURISubtypeRegistry <NSObject>
 - (void)removeSubtypeHandler:(id <SPTURISubtypeHandler>)arg1;
 - (void)addSubtypeHandler:(id <SPTURISubtypeHandler>)arg1;
+- (id <SPTURISubtypeHandlerRegistrationToken>)handleURIType:(long long)arg1 usingBlock:(long long (^)(NSURL *, id <SPTURIDispatchContext>))arg2;
 @end
 

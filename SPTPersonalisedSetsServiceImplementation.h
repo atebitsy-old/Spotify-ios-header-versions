@@ -9,7 +9,7 @@
 #import "SPTPersonalisedSetsService-Protocol.h"
 
 @class NSArray, NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFeedbackService, SPTFollowShelfService, SPTFormatListPlatformService, SPTGLUEService, SPTNetworkService, SPTPSXTestManager, SPTPerformanceMetricsService, SPTPersonalisedSetsNowPlayingFeedbackManagerFactory, SPTPlayerFeature, SPTPlaylistPlatformService, SPTReleaseRadarDiscoverWeeklyService, SPTSessionService, SPTShelfService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFeedbackService, SPTFollowShelfService, SPTFormatListPlatformService, SPTGLUEService, SPTNetworkService, SPTPSXTestManager, SPTPerformanceMetricsService, SPTPersonalisedSetsNowPlayingFeedbackManagerFactory, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShelfService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTPersonalisedSetsServiceImplementation : NSObject <SPTPersonalisedSetsService>
 {
@@ -31,7 +31,6 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTFollowShelfService> _followShelfService;
     id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreService;
-    id <SPTReleaseRadarDiscoverWeeklyService> _releaseRadarDiscoverWeeklyService;
     id <SPTCollectionSortingEntityManager> _personalisedSetSortingEntityManager;
     NSArray *_formatListExpressions;
     id <SPTPSXTestManager> _testManager;
@@ -44,7 +43,6 @@
 @property(retain, nonatomic) id <SPTPSXTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSArray *formatListExpressions; // @synthesize formatListExpressions=_formatListExpressions;
 @property(retain, nonatomic) id <SPTCollectionSortingEntityManager> personalisedSetSortingEntityManager; // @synthesize personalisedSetSortingEntityManager=_personalisedSetSortingEntityManager;
-@property(nonatomic) __weak id <SPTReleaseRadarDiscoverWeeklyService> releaseRadarDiscoverWeeklyService; // @synthesize releaseRadarDiscoverWeeklyService=_releaseRadarDiscoverWeeklyService;
 @property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreService; // @synthesize encoreService=_encoreService;
 @property(nonatomic) __weak id <SPTFollowShelfService> followShelfService; // @synthesize followShelfService=_followShelfService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;

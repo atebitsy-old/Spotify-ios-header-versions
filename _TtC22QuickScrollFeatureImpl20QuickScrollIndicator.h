@@ -8,16 +8,14 @@
 
 @interface _TtC22QuickScrollFeatureImpl20QuickScrollIndicator : UIView
 {
+    // Error parsing type: , name: style
     // Error parsing type: , name: label
-    // Error parsing type: , name: heightConstraint
-    // Error parsing type: , name: widthConstraint
-    // Error parsing type: , name: labelTrailingConstraint
-    // Error parsing type: , name: labelLeadingConstraint
     // Error parsing type: , name: verticalConstraint
     // Error parsing type: , name: text
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, readonly) struct CGSize intrinsicContentSize;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

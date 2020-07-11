@@ -8,8 +8,8 @@
 
 #import "SPTPodcastUIEditorialHeaderController-Protocol.h"
 
-@class NSString, SPTPodcastUIEditorialHeaderContentView, VISREFCustomBackButton, VISREFGradientBackgroundView, VISREFHeaderView, VISREFNavigationBarForegroundView;
-@protocol GLUETheme, HUBComponentEventHandler, HUBComponentModel;
+@class NSString, SPTPodcastUIEditorialHeaderContentView, VISREFGradientBackgroundView, VISREFHeaderView, VISREFNavigationBarForegroundView;
+@protocol GLUETheme, HUBComponentModel;
 
 @interface SPTPodcastUIEditorialHeaderViewController : VISREFBaseHeaderController <SPTPodcastUIEditorialHeaderController>
 {
@@ -19,24 +19,14 @@
     VISREFGradientBackgroundView *_backgroundView;
     SPTPodcastUIEditorialHeaderContentView *_contentView;
     VISREFNavigationBarForegroundView *_foregroundView;
-    VISREFCustomBackButton *_backButton;
     id <GLUETheme> _theme;
-    id <HUBComponentEventHandler> _eventHandler;
     id <HUBComponentModel> _model;
     double _navigationBarGradientEndPoint;
-    CDStruct_5a28e70a _backButtonGlyphOffsetRange;
-    CDStruct_5a28e70a _backButtonGlyphProtectionAlphaRange;
-    CDStruct_5a28e70a _backButtonFadeOutAlphaRange;
 }
 
-@property(nonatomic) CDStruct_5a28e70a backButtonFadeOutAlphaRange; // @synthesize backButtonFadeOutAlphaRange=_backButtonFadeOutAlphaRange;
-@property(nonatomic) CDStruct_5a28e70a backButtonGlyphProtectionAlphaRange; // @synthesize backButtonGlyphProtectionAlphaRange=_backButtonGlyphProtectionAlphaRange;
-@property(nonatomic) CDStruct_5a28e70a backButtonGlyphOffsetRange; // @synthesize backButtonGlyphOffsetRange=_backButtonGlyphOffsetRange;
 @property(nonatomic) double navigationBarGradientEndPoint; // @synthesize navigationBarGradientEndPoint=_navigationBarGradientEndPoint;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
-@property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) VISREFCustomBackButton *backButton; // @synthesize backButton=_backButton;
 @property(retain, nonatomic) VISREFNavigationBarForegroundView *foregroundView; // @synthesize foregroundView=_foregroundView;
 @property(retain, nonatomic) SPTPodcastUIEditorialHeaderContentView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
@@ -47,15 +37,13 @@
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)addActionRowView:(id)arg1;
 - (void)setImage:(id)arg1;
-- (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;
+- (void)configureWithModel:(id)arg1;
 - (double)minimumContentHeight;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
 @property(readonly, nonatomic) double minimumHeight;
-- (void)backButtonTapped:(id)arg1;
 - (id)extractNavigationBarGradientFromBackgroundGradient;
 - (void)updateProgressPositions;
 - (void)updateProgressPositionsIfNeeded;
-- (void)setupBackButton;
 - (void)setupForegroundView;
 - (void)setupContentView;
 - (void)setup;

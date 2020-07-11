@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTExternalIntegrationContentService, SPTExternalIntegrationTestManagerService, SPTFreeTierPlaylistService, SPTPlaylistPlatformPlaylistDataLoader, SPTPlaylistPlatformService, SPTYourLibraryMusicService;
+@protocol SPTExternalIntegrationContentService, SPTExternalIntegrationTestManagerService, SPTFreeTierPlaylistService, SPTPlaylistPlatformPlaylistDataLoader, SPTPlaylistPlatformService, SPTPodcastUIService, SPTYourLibraryMusicService;
 
 @interface SPTExternalIntegrationPlaylistContentProviderService : NSObject <SPTService, SPTExternalIntegrationContentProvider>
 {
@@ -19,11 +19,13 @@
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTYourLibraryMusicService> _yourLibraryService;
     id <SPTExternalIntegrationTestManagerService> _testManagerService;
+    id <SPTPodcastUIService> _podcastUIService;
     id <SPTPlaylistPlatformPlaylistDataLoader> _dataLoader;
 }
 
 + (id)serviceIdentifier;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(readonly, nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak id <SPTYourLibraryMusicService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
 @property(readonly, nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;

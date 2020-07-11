@@ -8,14 +8,14 @@
 
 #import "SPTURIDispatchService-Protocol.h"
 
-@class NSString, SPTActivateLinkHandler, SPTAllocationContext, SPTLinkDispatcherImplementation, SPTURISubtypeRegistryImplementation;
-@protocol SPTContainerUIService, SPTCoreService;
+@class NSString, SPTAllocationContext, SPTLinkDispatcherImplementation, SPTURISubtypeRegistryImplementation;
+@protocol SPTContainerUIService, SPTCoreService, SPTURISubtypeHandlerRegistrationToken;
 
 @interface SPTURIDispatchServiceImplementation : NSObject <SPTURIDispatchService>
 {
     id <SPTContainerUIService> _containerUIService;
     id <SPTCoreService> _coreService;
-    SPTActivateLinkHandler *_activateLinkHandler;
+    id <SPTURISubtypeHandlerRegistrationToken> _activateLinkHandlerToken;
     SPTLinkDispatcherImplementation *_linkDispatcher;
     SPTURISubtypeRegistryImplementation *_URISubtypeRegistry;
 }
@@ -23,7 +23,7 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTURISubtypeRegistryImplementation *URISubtypeRegistry; // @synthesize URISubtypeRegistry=_URISubtypeRegistry;
 @property(retain, nonatomic) SPTLinkDispatcherImplementation *linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(retain, nonatomic) SPTActivateLinkHandler *activateLinkHandler; // @synthesize activateLinkHandler=_activateLinkHandler;
+@property(retain, nonatomic) id <SPTURISubtypeHandlerRegistrationToken> activateLinkHandlerToken; // @synthesize activateLinkHandlerToken=_activateLinkHandlerToken;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 - (void).cxx_destruct;

@@ -13,6 +13,7 @@
     // Error parsing type: , name: entryPoint
     // Error parsing type: , name: fullscreenEnabledSignal
     // Error parsing type: , name: snackbarEnabledSignal
+    // Error parsing type: , name: homeThingEnabledSignal
     // Error parsing type: , name: featureFlagFactory
 }
 

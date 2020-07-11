@@ -7,20 +7,22 @@
 #import <objc/NSObject.h>
 
 @class SPSession;
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTHomeLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
     SPSession *_currentSession;
 }
 
 @property(readonly, nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (double)getTimestamp;
 - (void)logDidTapOnSettingsButton;
-- (id)initWithLogCenter:(id)arg1 currentSession:(id)arg2;
+- (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2 currentSession:(id)arg3;
 
 @end
 

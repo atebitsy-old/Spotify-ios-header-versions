@@ -8,6 +8,8 @@
 
 @interface _TtC24AddToPlaylistFeatureImpl13ATPLoggerImpl : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: ubiLogger
+    // Error parsing type: , name: ubiEventFactory
     // Error parsing type: , name: logCenter
     // Error parsing type: , name: request
     // Error parsing type: , name: pageURL

@@ -6,31 +6,23 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, SPTShareData, SPTSharePlaylistHelper, SPTShareTrackHelper;
-@protocol SPTPlayer, SPTShareDataProviderDelegate, SPTShareEntityData;
+@class SPTSharePlaylistHelper, SPTShareTrackHelper;
+@protocol SPTPlayer;
 
 @interface SPTShareDataProvider : NSObject
 {
-    id <SPTShareDataProviderDelegate> _delegate;
-    NSArray *_shareDestinations;
-    id <SPTShareEntityData> _entityData;
     id <SPTPlayer> _player;
     SPTSharePlaylistHelper *_sharePlaylistHelper;
     SPTShareTrackHelper *_shareTrackHelper;
-    SPTShareData *_shareData;
 }
 
-@property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(readonly, nonatomic) SPTShareTrackHelper *shareTrackHelper; // @synthesize shareTrackHelper=_shareTrackHelper;
 @property(readonly, nonatomic) SPTSharePlaylistHelper *sharePlaylistHelper; // @synthesize sharePlaylistHelper=_sharePlaylistHelper;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(readonly, nonatomic) id <SPTShareEntityData> entityData; // @synthesize entityData=_entityData;
-@property(readonly, nonatomic) NSArray *shareDestinations; // @synthesize shareDestinations=_shareDestinations;
-@property(nonatomic) __weak id <SPTShareDataProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)handleNormalizeCallback:(id)arg1;
-- (void)fetchData;
-- (id)initWithEntityData:(id)arg1 shareDestinations:(id)arg2 player:(id)arg3 sharePlaylistHelper:(id)arg4 shareTrackHelper:(id)arg5;
+- (id)shareDataFromShareEntity:(id)arg1 shareableURL:(id)arg2 shareID:(id)arg3;
+- (void)normalizeShareEntityData:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)initWithPlayer:(id)arg1 sharePlaylistHelper:(id)arg2 shareTrackHelper:(id)arg3;
 
 @end
 

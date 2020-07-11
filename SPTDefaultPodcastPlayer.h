@@ -10,7 +10,7 @@
 #import "SPTPodcastPlayer-Protocol.h"
 
 @class NSString, NSTimer, NSURL, SPTPlayerState;
-@protocol SPTPlayer, SPTPodcastEpisode, SPTPodcastPlayerDelegate, SPTPodcastTestManager;
+@protocol SPTPlayer, SPTPodcastPlayerDelegate, SPTPodcastTestManager;
 
 @interface SPTDefaultPodcastPlayer : NSObject <SPTPlayerObserver, SPTPodcastPlayer>
 {
@@ -21,10 +21,8 @@
     SPTPlayerState *_lastState;
     id <SPTPodcastTestManager> _testManager;
     NSTimer *_progressTimer;
-    id <SPTPodcastEpisode> _trailerEpisode;
 }
 
-@property(retain, nonatomic) id <SPTPodcastEpisode> trailerEpisode; // @synthesize trailerEpisode=_trailerEpisode;
 @property(retain, nonatomic) NSTimer *progressTimer; // @synthesize progressTimer=_progressTimer;
 @property(retain, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTPlayerState *lastState; // @synthesize lastState=_lastState;

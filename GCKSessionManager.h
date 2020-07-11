@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
+#import "GCKCastDeviceStatusGoogleOnlyListener-Protocol.h"
 #import "GCKDiscoveryManagerListener-Protocol.h"
 #import "GCKSessionDelegate-Protocol.h"
 
-@class GCKAnalyticsEventLogger, GCKBWeakListenerList, GCKCastOptions, GCKCastSession, GCKDatabase, GCKDeviceProviderRegistry, GCKDiscoveryManager, GCKNNetworkReachability, GCKSavedSessionState, GCKSession, NSMutableDictionary, NSString, NSTimer;
+@class GCKAnalyticsEventLogger, GCKBWeakListenerList, GCKCastOptions, GCKCastSession, GCKDatabase, GCKDeviceProviderRegistry, GCKDiscoveryManager, GCKNNetworkReachability, GCKSavedSessionState, GCKSession, NSMutableDictionary, NSMutableSet, NSString, NSTimer;
 
-@interface GCKSessionManager : NSObject <GCKDiscoveryManagerListener, GCKSessionDelegate>
+@interface GCKSessionManager : NSObject <GCKDiscoveryManagerListener, GCKSessionDelegate, GCKCastDeviceStatusGoogleOnlyListener>
 {
     GCKAnalyticsEventLogger *_analyticsEventLogger;
     GCKCastOptions *_castOptions;
@@ -24,8 +25,8 @@
     GCKSavedSessionState *_savedSessionState;
     NSMutableDictionary *_defaultSessionOptions;
     _Bool _isRegisteredForAppStateNotifications;
-    _Bool _startingSession;
     NSTimer *_analyticsLoggingTimer;
+    NSMutableSet *_devicesWithStartingSession;
     NSMutableDictionary *_allKnownSessions;
     NSMutableDictionary *_movingSessions;
     GCKSession *_currentSession;
@@ -52,6 +53,8 @@
 - (void)notifyDidFailToStartSession:(id)arg1 error:(id)arg2;
 - (void)notifyDidStartSession:(id)arg1;
 - (void)notifyWillStartSession:(id)arg1;
+- (void)castSession:(id)arg1 didFailToUpdateToDevices:(id)arg2 error:(id)arg3;
+- (void)castSession:(id)arg1 didUpdateDevicesWithFailedToMoveDeviceIDs:(id)arg2;
 - (void)updateGuestModeEntryWithSession:(id)arg1;
 - (id)entryWithSession:(id)arg1;
 - (void)session:(id)arg1 didFailToMoveEndpoint:(id)arg2 error:(id)arg3;
@@ -89,8 +92,11 @@
 - (_Bool)hasConnectedCastSession;
 - (_Bool)hasConnectedSession;
 - (void)handleDeviceChange:(id)arg1;
+- (void)attemptToResumeAllSessionsWithCurrentNetworkReachabilityStatus;
 - (void)attemptToResumeSavedSession;
+- (void)resumeSessionEntry:(id)arg1 reason:(int)arg2;
 - (void)attemptToResumeSession:(id)arg1 reason:(int)arg2;
+- (void)suspendAllSessionsWithReason:(long long)arg1;
 - (_Bool)suspendSessionEntry:(id)arg1 reason:(long long)arg2;
 - (_Bool)suspendSession:(id)arg1 reason:(long long)arg2;
 - (_Bool)suspendSessionWithReason:(long long)arg1;

@@ -18,9 +18,11 @@
     id <GCKRequestDelegate> _delegate;
     long long _requestID;
     GCKError *_error;
+    id <GCKRequestDelegate> _internalDelegate;
 }
 
 + (id)applicationRequest;
+@property(nonatomic) __weak id <GCKRequestDelegate> internalDelegate; // @synthesize internalDelegate=_internalDelegate;
 @property(nonatomic) _Bool external; // @synthesize external=_external;
 @property(nonatomic) _Bool inProgress; // @synthesize inProgress=_inProgress;
 @property(copy, nonatomic) GCKError *error; // @synthesize error=_error;

@@ -11,7 +11,7 @@
 #import "SPTNowPlayingRemoteEventSubtypesController-Protocol.h"
 
 @class AVAudioPlayer, MPRemoteCommandCenter, NSMapTable, NSString, NSTimer, SPTNowPlayingModel;
-@protocol SPTAudioSessionController, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy;
+@protocol SPTAudioSessionController, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy, SPTNowPlayingTestManager;
 
 @interface SPTNowPlayingRemoteControlEventDefaultController : NSObject <AVAudioPlayerDelegate, SPTNowPlayingRemoteControlEventPolicyController, SPTNowPlayingRemoteEventSubtypesController>
 {
@@ -34,10 +34,12 @@
     NSMapTable *_audioSessionActivators;
     MPRemoteCommandCenter *_remoteCommandCenter;
     CDUnknownBlockType _avAudioPlayerFactory;
+    id <SPTNowPlayingTestManager> _testManager;
 }
 
 + (id)soundsBundle;
 @property(nonatomic) _Bool playersLoaded; // @synthesize playersLoaded=_playersLoaded;
+@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) CDUnknownBlockType avAudioPlayerFactory; // @synthesize avAudioPlayerFactory=_avAudioPlayerFactory;
 @property(retain, nonatomic) MPRemoteCommandCenter *remoteCommandCenter; // @synthesize remoteCommandCenter=_remoteCommandCenter;
 @property(retain, nonatomic) NSMapTable *audioSessionActivators; // @synthesize audioSessionActivators=_audioSessionActivators;
@@ -64,10 +66,16 @@
 - (long long)dislikeButtonPressed:(id)arg1;
 - (long long)likeButtonPressed:(id)arg1;
 - (long long)handleChangePlaybackPosition:(id)arg1;
+- (long long)handleSeekForwardCommand:(id)arg1;
+- (long long)handleSeekBackwardCommand:(id)arg1;
 - (long long)handleSkipForward:(id)arg1;
 - (long long)handleSkipBackward:(id)arg1;
 - (long long)handlePreviousTrackCommand:(id)arg1;
 - (long long)handleNextTrackCommand:(id)arg1;
+- (long long)handleStopCommand:(id)arg1;
+- (long long)handleTogglePlayPauseCommand:(id)arg1;
+- (long long)handlePlayCommand:(id)arg1;
+- (long long)handlePauseCommand:(id)arg1;
 - (long long)doNothing:(id)arg1;
 - (void)applyRemoteControlPolicy:(id)arg1;
 - (void)applyPolicyToCommand:(id)arg1 shouldBeAvailable:(_Bool)arg2 shouldBeEnabled:(_Bool)arg3 action:(SEL)arg4;
@@ -77,7 +85,7 @@
 - (long long)priorityForHandlingRemoteEventSubtypes;
 - (void)dealloc;
 - (void)lazyLoadPlayers;
-- (id)initWithNowPlayingModel:(id)arg1 audioSessionController:(id)arg2 remoteCommandCenter:(id)arg3 avAudioPlayerFactory:(CDUnknownBlockType)arg4;
+- (id)initWithNowPlayingModel:(id)arg1 audioSessionController:(id)arg2 remoteCommandCenter:(id)arg3 avAudioPlayerFactory:(CDUnknownBlockType)arg4 nowPlayingTestManager:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

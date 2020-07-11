@@ -6,7 +6,7 @@
 
 #import "GLUEThemeBase.h"
 
-@class GLUEEntityRowStyle, SPTFreeTierPlaylistButtonSectionHeaderViewStyle, SPTFreeTierPlaylistEditStyle, SPTFreeTierPlaylistHeaderMetadataViewStyle, SPTFreeTierPlaylistHeaderPageContainerViewStyle, SPTFreeTierPreCurationTheme;
+@class GLUEEntityRowStyle, SPTFreeTierPlaylistButtonSectionHeaderViewStyle, SPTFreeTierPlaylistHeaderMetadataViewStyle, SPTFreeTierPlaylistHeaderPageContainerViewStyle, SPTFreeTierPreCurationTheme;
 @protocol GLUETheme;
 
 @interface SPTFreeTierPlaylistGLUETheme : GLUEThemeBase
@@ -21,8 +21,6 @@
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistHeaderMetadataViewStyle *headerMetadataViewStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistHeaderPageContainerViewStyle *headerPageContainerViewStyle;
 @property(readonly, copy, nonatomic) GLUEEntityRowStyle *trackRowPreCurationStyle;
-- (id)editCellStyle;
-@property(readonly, copy, nonatomic) SPTFreeTierPlaylistEditStyle *editStyle;
 - (_Bool)isPad;
 - (id)headerContentViewStyle;
 - (id)headerViewStyle;
@@ -30,7 +28,6 @@
 - (id)playlistRecommendationsCloudStyle;
 - (id)playlistNoTitleCloudStyle;
 - (id)playlistCloudStyle;
-- (id)renameFieldStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *sectionHeaderEmptyViewStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *sectionHeaderViewStyle;
 - (id)freeTierSponsoredLogoCellStyle;

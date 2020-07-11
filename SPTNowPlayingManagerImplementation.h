@@ -15,7 +15,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSMapTable, NSNotificationCenter, NSString, NSTimer, SPTNowPlayingModel, UIViewController;
-@protocol NSObject, SPTLocalSettings, SPTMetaViewController, SPTNowPlayingTestManager, SPTPlayer;
+@protocol NSObject, SPTAdsManager, SPTLocalSettings, SPTMetaViewController, SPTNowPlayingTestManager, SPTPlayer;
 
 @interface SPTNowPlayingManagerImplementation : NSObject <SPTPlayerObserver, MessageBarControllerDelegate, SPTMetaViewControllerObserver, SPTNowPlayingModelObserver, SPTNowPlayingTestManagerObserver, SPTNowPlayingManager, SPTURISubtypeHandler>
 {
@@ -29,8 +29,10 @@
     NSNotificationCenter *_notificationCenter;
     id <NSObject> _applicationActiveObserver;
     id <NSObject> _barShownObserver;
+    id <SPTAdsManager> _adsManager;
 }
 
+@property(retain, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(retain, nonatomic) id <NSObject> barShownObserver; // @synthesize barShownObserver=_barShownObserver;
 @property(retain, nonatomic) id <NSObject> applicationActiveObserver; // @synthesize applicationActiveObserver=_applicationActiveObserver;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
@@ -70,7 +72,7 @@
 - (void)addNotificationsObserversIfNeeded;
 - (void)nowPlayingTestManagerDidEnableBarImprovements:(id)arg1;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 metaViewController:(id)arg2 player:(id)arg3 messageBarController:(id)arg4 testManager:(id)arg5 localSettings:(id)arg6 notificationCenter:(id)arg7;
+- (id)initWithModel:(id)arg1 metaViewController:(id)arg2 player:(id)arg3 messageBarController:(id)arg4 testManager:(id)arg5 localSettings:(id)arg6 notificationCenter:(id)arg7 adsManager:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

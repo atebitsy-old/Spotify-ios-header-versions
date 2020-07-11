@@ -9,12 +9,12 @@
 #import "SPTImageLoaderDelegate-Protocol.h"
 
 @class NSString, SPTSettingsLogger, SPTSettingsTableViewCell, SPTTheme;
-@protocol SPTImageLoader, SPTLinkDispatcher, SPTProfileUserData;
+@protocol SPTImageLoader, SPTLinkDispatcher, _TtP16ProfileV2Feature18SPTProfileUserData_;
 
 @interface ProfileSettingsSection : SettingsSection <SPTImageLoaderDelegate>
 {
     _Bool _guestAccount;
-    id <SPTProfileUserData> _profileUserData;
+    id <_TtP16ProfileV2Feature18SPTProfileUserData_> _profileUserData;
     SPTSettingsTableViewCell *_tableViewCell;
     id <SPTImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
@@ -28,7 +28,7 @@
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak SPTSettingsTableViewCell *tableViewCell; // @synthesize tableViewCell=_tableViewCell;
-@property(readonly, nonatomic) id <SPTProfileUserData> profileUserData; // @synthesize profileUserData=_profileUserData;
+@property(readonly, nonatomic) id <_TtP16ProfileV2Feature18SPTProfileUserData_> profileUserData; // @synthesize profileUserData=_profileUserData;
 - (void).cxx_destruct;
 - (void)loadProfileImage;
 - (void)loadPlaceholderImage;

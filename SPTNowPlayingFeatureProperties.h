@@ -14,8 +14,10 @@
 {
     _Bool _podcastInspectorEnabled;
     _Bool _samplesEnabled;
+    _Bool _remoteControlEventSubtypeDeprecation;
 }
 
+@property(readonly, nonatomic) _Bool remoteControlEventSubtypeDeprecation; // @synthesize remoteControlEventSubtypeDeprecation=_remoteControlEventSubtypeDeprecation;
 @property(readonly, nonatomic) _Bool samplesEnabled; // @synthesize samplesEnabled=_samplesEnabled;
 @property(readonly, nonatomic) _Bool podcastInspectorEnabled; // @synthesize podcastInspectorEnabled=_podcastInspectorEnabled;
 - (id)propertyModels;

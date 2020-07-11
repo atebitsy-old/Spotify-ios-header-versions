@@ -6,19 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLoginKeychainManager;
+@protocol SPTLoginKeychainManager, SPTLoginLogger;
 
 @interface SPTSigninWithAppleHandler : NSObject
 {
     id <SPTLoginKeychainManager> _keychainManager;
+    id <SPTLoginLogger> _logger;
 }
 
+@property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
 - (void).cxx_destruct;
 - (void)storeSigninWithAppleUserId:(id)arg1;
 - (void)readSigninWithAppleUserId:(CDUnknownBlockType)arg1;
 - (void)validateSigninWithApple:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithKeychainManager:(id)arg1;
+- (id)initWithKeychainManager:(id)arg1 logger:(id)arg2;
 
 @end
 

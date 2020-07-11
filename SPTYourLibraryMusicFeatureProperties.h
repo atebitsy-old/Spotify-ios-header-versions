@@ -15,6 +15,7 @@
     _Bool _playlistsRelevanceSortAsDefaultEnabled;
     _Bool _likedSongsArtistAlbumGroupingsEnabled;
     _Bool _likedSongsUsePageLoader;
+    _Bool _offlineArtistEnabled;
     unsigned long long _artistRecommendationsSource;
     unsigned long long _quickscrollMechanismInYourLibrary;
     NSString *_artistRecommendationsSourceString;
@@ -25,6 +26,7 @@
 @property(retain, nonatomic) NSString *artistRecommendationsSourceString; // @synthesize artistRecommendationsSourceString=_artistRecommendationsSourceString;
 @property(readonly, nonatomic) unsigned long long quickscrollMechanismInYourLibrary; // @synthesize quickscrollMechanismInYourLibrary=_quickscrollMechanismInYourLibrary;
 @property(readonly, nonatomic) unsigned long long artistRecommendationsSource; // @synthesize artistRecommendationsSource=_artistRecommendationsSource;
+@property(readonly, nonatomic) _Bool offlineArtistEnabled; // @synthesize offlineArtistEnabled=_offlineArtistEnabled;
 @property(readonly, nonatomic) _Bool likedSongsUsePageLoader; // @synthesize likedSongsUsePageLoader=_likedSongsUsePageLoader;
 @property(readonly, nonatomic) _Bool likedSongsArtistAlbumGroupingsEnabled; // @synthesize likedSongsArtistAlbumGroupingsEnabled=_likedSongsArtistAlbumGroupingsEnabled;
 @property(readonly, nonatomic) _Bool playlistsRelevanceSortAsDefaultEnabled; // @synthesize playlistsRelevanceSortAsDefaultEnabled=_playlistsRelevanceSortAsDefaultEnabled;

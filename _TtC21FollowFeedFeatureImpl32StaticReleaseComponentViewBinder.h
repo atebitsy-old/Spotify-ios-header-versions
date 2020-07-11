@@ -6,12 +6,9 @@
 
 #import "_TtC21FollowFeedFeatureImpl22HubComponentViewBinder.h"
 
-#import "HUBComponentViewObserver-Protocol.h"
-#import "HUBComponentViewWithEvents-Protocol.h"
-
 @protocol HUBComponentEventHandler;
 
-@interface _TtC21FollowFeedFeatureImpl32StaticReleaseComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder <HUBComponentViewWithEvents, HUBComponentViewObserver>
+@interface _TtC21FollowFeedFeatureImpl32StaticReleaseComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder
 {
     // Error parsing type: , name: eventHandler
     // Error parsing type: , name: theme

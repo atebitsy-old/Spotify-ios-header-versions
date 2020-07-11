@@ -8,6 +8,5 @@
 
 @interface UIStackView (SPTExtensions)
 - (void)insertArrangedSubview:(id)arg1 after:(id)arg2;
-- (void)spt_insertArrangedSubview:(id)arg1 after:(id)arg2;
 @end
 

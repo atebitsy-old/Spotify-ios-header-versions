@@ -8,13 +8,15 @@
 
 #import "GCKCastDeviceControllerInternalDelegate-Protocol.h"
 #import "GCKDiscoveryManagerListener-Protocol.h"
+#import "GCKRequestDelegate-Protocol.h"
 
-@class GCKAnalyticsEventLogger, GCKApplicationMetadata, GCKBWeakListenerList, GCKCastDeviceController, GCKCastOptions, GCKDevice, GCKDiscoveryManager, GCKError, GCKPlaybackSession, GCKSessionEndpoint, NSDictionary, NSMutableArray, NSSet, NSString;
+@class GCKAnalyticsEventLogger, GCKApplicationMetadata, GCKBWeakListenerList, GCKCastDeviceController, GCKCastOptions, GCKDevice, GCKDiscoveryManager, GCKEndpointID, GCKError, GCKPlaybackSession, GCKReconnectStrategy, GCKRequest, GCKRuntimeConfiguration, GCKSessionEndpoint, GCKUpdateSessionStateController, NSDictionary, NSMutableArray, NSMutableDictionary, NSSet, NSString, NSTimer;
 
-@interface GCKCastSession : GCKSession <GCKCastDeviceControllerInternalDelegate, GCKDiscoveryManagerListener>
+@interface GCKCastSession : GCKSession <GCKCastDeviceControllerInternalDelegate, GCKDiscoveryManagerListener, GCKRequestDelegate>
 {
     GCKAnalyticsEventLogger *_analyticsEventLogger;
     GCKDiscoveryManager *_discoveryManager;
+    GCKRuntimeConfiguration *_runtimeConfiguration;
     GCKCastOptions *_castOptions;
     NSMutableArray *_remoteClients;
     GCKBWeakListenerList *_deviceStatusListenerList;
@@ -26,6 +28,13 @@
     GCKPlaybackSession *_lastValidPlaybackSession;
     NSDictionary *_transferableDevices;
     NSDictionary *_expandableDevices;
+    NSTimer *_movingRejoinApplicationTimer;
+    GCKReconnectStrategy *_reconnectStrategy;
+    NSMutableDictionary *_deviceStatuses;
+    GCKUpdateSessionStateController *_updateSessionStateController;
+    GCKRequest *_pendingUpdateSessionRequest;
+    GCKEndpointID *_groupLeadEndpointID;
+    NSMutableDictionary *_multizoneConnectedDevices;
     NSString *_applicationID;
     long long _sessionType;
     GCKCastDeviceController *_deviceController;
@@ -43,8 +52,17 @@
 @property(readonly, nonatomic) NSString *applicationID; // @synthesize applicationID=_applicationID;
 - (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
+- (void)notifyDidUpdateMultizoneDevice:(id)arg1;
+- (void)notifyDidRemoveMultizoneDeviceID:(id)arg1;
+- (void)notifyDidAddMultizoneDevice:(id)arg1;
+- (void)notifyDidFailToUpdateToDevices:(id)arg1 error:(id)arg2;
+- (void)notifyDidUpdateDevicesWithFailedToMoveDeviceIDs:(id)arg1;
 - (void)notifyDidUpdateTransferableDevices:(id)arg1;
 - (void)notifyDidUpdateExpandableDevices:(id)arg1;
+- (void)resetDeviceStatus:(id)arg1;
+- (void)request:(id)arg1 didAbortWithReason:(long long)arg2;
+- (void)request:(id)arg1 didFailWithError:(id)arg2;
+- (void)requestDidComplete:(id)arg1;
 - (void)didUpdateDeviceList;
 - (void)deviceController:(id)arg1 failedToMoveToDevices:(id)arg2 error:(id)arg3;
 - (void)deviceController:(id)arg1 didUpdateToEndpoint:(id)arg2 withFailedToMoveEndpointDeviceIDs:(id)arg3;
@@ -78,6 +96,12 @@
 @property(readonly, copy, nonatomic) GCKApplicationMetadata *applicationMetadata;
 @property(readonly, nonatomic) long long standbyStatus;
 @property(readonly, nonatomic) long long activeInputStatus;
+- (void)rejoinApplicationTimerDidFire:(id)arg1;
+- (_Bool)scheduleRejoinApplication;
+- (id)generateGroupNameWithDevices:(id)arg1;
+- (id)groupNameWithDeviceName:(id)arg1 number:(long long)arg2;
+- (id)sendUpdateSessionRequest;
+- (void)trySendingNextUpdateSessionRequest;
 - (void)startMovingToDevice:(id)arg1;
 - (void)connectToNewDevice:(id)arg1;
 - (void)notifyDidStartWithSessionID:(id)arg1;
@@ -87,6 +111,8 @@
 - (id)buildDeviceControllerWithDevice:(id)arg1 clientPackageName:(id)arg2 reconnectStrategy:(id)arg3;
 - (Class)findClientTypeForNamespace:(id)arg1;
 - (id)findClientInstanceOfType:(Class)arg1;
+@property(retain, nonatomic) NSDictionary *multizoneConnectedDevices;
+- (void)setDeviceStatuses:(id)arg1;
 - (id)deviceStatuses;
 - (id)connectedCastDevices;
 - (void)updateTransferableDevices;
@@ -95,6 +121,7 @@
 - (void)updateStreamTransferLists;
 - (id)expandableDevices;
 - (id)remoteMediaClient;
+- (id)updateSessionToAddDevices:(id)arg1 removeDevices:(id)arg2;
 - (id)updateSessionToDevices:(id)arg1;
 - (id)requestMultizoneStatus;
 - (id)setDeviceMuted:(_Bool)arg1 forMultizoneDevice:(id)arg2;
@@ -106,7 +133,7 @@
 - (void)joinAnyApplication;
 - (void)resume;
 - (void)start;
-- (id)initWithDevice:(id)arg1 sessionID:(id)arg2 sessionOptions:(struct NSDictionary *)arg3 castOptions:(id)arg4 analyticsEventLogger:(id)arg5 discoveryManager:(id)arg6;
+- (id)initWithDevice:(id)arg1 sessionID:(id)arg2 sessionOptions:(struct NSDictionary *)arg3 castOptions:(id)arg4 analyticsEventLogger:(id)arg5 discoveryManager:(id)arg6 runtimeConfiguration:(id)arg7;
 - (id)initWithDevice:(id)arg1 sessionID:(id)arg2 sessionOptions:(struct NSDictionary *)arg3 castOptions:(id)arg4;
 
 // Remaining properties

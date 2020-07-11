@@ -6,7 +6,7 @@
 
 #import <UIKit/UISlider.h>
 
-@class NSArray, NSLayoutConstraint, NSMutableArray, NSString, TooltipBorder, UIColor, UIFont, UILabel, UIView;
+@class NSArray, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, TooltipBorder, UIColor, UIFont, UILabel, UIView;
 
 @interface GCKUICastSlider : UISlider
 {
@@ -34,8 +34,10 @@
     UIView *_afterSeekableRangeTrackView;
     UIView *_thumbView;
     UILabel *_tooltipLabel;
+    NSDictionary *_adBlockWatchStatusByPosition;
 }
 
+@property(retain, nonatomic) NSDictionary *adBlockWatchStatusByPosition; // @synthesize adBlockWatchStatusByPosition=_adBlockWatchStatusByPosition;
 @property(copy, nonatomic) UILabel *tooltipLabel; // @synthesize tooltipLabel=_tooltipLabel;
 @property(copy, nonatomic) UIView *thumbView; // @synthesize thumbView=_thumbView;
 @property(copy, nonatomic) UIView *afterSeekableRangeTrackView; // @synthesize afterSeekableRangeTrackView=_afterSeekableRangeTrackView;
@@ -64,6 +66,7 @@
 @property(retain, nonatomic) UIColor *seekableProgressColor;
 @property(retain, nonatomic) UIColor *unseekableProgressColor;
 - (void)applyStyleAttributes:(id)arg1;
+- (_Bool)watchedAdBlockAtPosition:(id)arg1;
 @property(nonatomic) _Bool thumbHidden;
 - (void)updateSliderWithStreamStart:(double)arg1 seekableRangeStart:(double)arg2 seekableRangeEnd:(double)arg3;
 - (void)setValue:(float)arg1 animated:(_Bool)arg2;

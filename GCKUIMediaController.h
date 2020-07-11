@@ -38,6 +38,7 @@
     _Bool _hasLoadingQueueItem;
     _Bool _displayTimeRemainingAsNegativeValue;
     _Bool _hideStreamPositionControlsForLiveContent;
+    _Bool _isVerticallyCompact;
     id <GCKUIMediaControllerDelegate> _delegate;
     GCKSession *_session;
     UIButton *_playButton;
@@ -66,8 +67,11 @@
     GCKRequest *_currentRequest;
     GCKUICastSliderProgressModel *_progressModel;
     GCKUILiveIndicator *_liveIndicator;
+    UILabel *_castingToLabel;
 }
 
+@property(nonatomic) _Bool isVerticallyCompact; // @synthesize isVerticallyCompact=_isVerticallyCompact;
+@property(nonatomic) __weak UILabel *castingToLabel; // @synthesize castingToLabel=_castingToLabel;
 @property(nonatomic) __weak GCKUILiveIndicator *liveIndicator; // @synthesize liveIndicator=_liveIndicator;
 @property(retain, nonatomic) GCKUICastSliderProgressModel *progressModel; // @synthesize progressModel=_progressModel;
 @property(retain, nonatomic) GCKRequest *currentRequest; // @synthesize currentRequest=_currentRequest;

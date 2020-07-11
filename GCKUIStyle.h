@@ -21,9 +21,9 @@
 - (void)initDefaultImageContentModes;
 - (void)initDefaultShadowOffsets;
 - (void)initDefaultColors;
-- (void)initDefaultImages;
+- (_Bool)initDefaultImages;
 - (void)initDefaultFonts;
-- (void)initDefaults;
+- (_Bool)initDefaults;
 - (void)contentSizeDidChange:(id)arg1;
 - (void)dealloc;
 - (void)applyStyle;

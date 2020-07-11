@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTUBIInteractionEvent-Protocol.h"
-
 @class NSArray, NSDictionary, NSString;
 
-@interface _TtC18VoiceUIFeatureImplP33_B857B736CCD311CA773B6E39552770CB30InteractionEventImplementation : NSObject <SPTUBIInteractionEvent>
+@interface _TtC18VoiceUIFeatureImplP33_B857B736CCD311CA773B6E39552770CB30InteractionEventImplementation : NSObject
 {
     // Error parsing type: , name: applicationId
     // Error parsing type: , name: specificationId

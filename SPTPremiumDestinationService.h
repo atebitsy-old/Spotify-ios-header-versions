@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationSettingsPageBuilder, SPTUpsellAccountLogger;
+@class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationLogger, SPTPremiumDestinationSettingsPageBuilder, SPTUpsellAccountLogger;
 @protocol NSObject, SPTAccountService, SPTContainerUIService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLogCenter, SPTMandatoryPremiumTrialService, SPTNavigationFeature, SPTNavigationListProvider, SPTNetworkService, SPTPremiumDestinationExperiments, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
 
 @interface SPTPremiumDestinationService : SPTUIPageService
@@ -26,6 +26,7 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTLogCenter> _logCenter;
     SPTUpsellAccountLogger *_accountLogger;
+    SPTPremiumDestinationLogger *_premiumDestinationLogger;
     id <SPTFeatureFlagSignal> _freeTierFeatureFlagSignal;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTPremiumDestinationExperiments> _experiments;
@@ -48,6 +49,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierFeatureFlagSignal; // @synthesize freeTierFeatureFlagSignal=_freeTierFeatureFlagSignal;
+@property(retain, nonatomic) SPTPremiumDestinationLogger *premiumDestinationLogger; // @synthesize premiumDestinationLogger=_premiumDestinationLogger;
 @property(retain, nonatomic) SPTUpsellAccountLogger *accountLogger; // @synthesize accountLogger=_accountLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;

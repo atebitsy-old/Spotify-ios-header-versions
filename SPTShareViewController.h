@@ -11,7 +11,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUELabel, NSArray, NSLayoutConstraint, NSString, SPTShareDataProvider, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareItemView, SPTShareLogger, UIButton, UITableView, UIView;
+@class GLUELabel, NSArray, NSLayoutConstraint, NSString, SPTShareData, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareItemView, SPTShareLogger, UIButton, UITableView, UIView;
 @protocol GLUETheme, SPTContextMenuPresenterFactory, SPTImageLoader, SPTShareViewControllerDelegate;
 
 @interface SPTShareViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTImageLoaderDelegate, SPTShareViewControllerProtocol>
@@ -19,7 +19,6 @@
     _Bool _isInPopover;
     _Bool _hidden;
     id <SPTShareViewControllerDelegate> _delegate;
-    SPTShareDataProvider *_shareDataProvider;
     SPTShareLogger *_shareLogger;
     SPTShareDestinationUtility *_shareDestinationUtility;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
@@ -36,8 +35,12 @@
     UITableView *_tableView;
     NSLayoutConstraint *_mainContainerViewBottomContraint;
     SPTShareFeatureProperties *_featureProperties;
+    SPTShareData *_shareData;
+    NSArray *_shareDestinations;
 }
 
+@property(copy, nonatomic) NSArray *shareDestinations; // @synthesize shareDestinations=_shareDestinations;
+@property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerViewBottomContraint; // @synthesize mainContainerViewBottomContraint=_mainContainerViewBottomContraint;
@@ -56,7 +59,6 @@
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(retain, nonatomic) SPTShareDestinationUtility *shareDestinationUtility; // @synthesize shareDestinationUtility=_shareDestinationUtility;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
-@property(retain, nonatomic) SPTShareDataProvider *shareDataProvider; // @synthesize shareDataProvider=_shareDataProvider;
 @property(nonatomic) __weak id <SPTShareViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)performShareDestination:(id)arg1;
@@ -79,13 +81,13 @@
 - (void)animateMainContainerView:(_Bool)arg1;
 - (id)visibleCellsForDeviceType:(long long)arg1;
 - (void)setupTableView;
-- (void)setupShareItemView;
+- (void)setupShareItemViewWithShareEntity:(id)arg1;
 - (void)setupContainerViews;
 - (void)setupNavBarView;
 - (void)setupMainView;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithShareLogger:(id)arg1 shareDataProvider:(id)arg2 shareDestinationUtility:(id)arg3 contextMenuPresenterFactory:(id)arg4 imageLoader:(id)arg5 featureProperties:(id)arg6;
+- (id)initWithShareLogger:(id)arg1 shareData:(id)arg2 shareDestinations:(id)arg3 shareDestinationUtility:(id)arg4 contextMenuPresenterFactory:(id)arg5 imageLoader:(id)arg6 featureProperties:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

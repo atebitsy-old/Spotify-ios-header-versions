@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIViewController;
+@class SPTShareData, UIViewController;
 @protocol SPTShareDestination, SPTShareViewControllerProtocol;
 
 @protocol SPTShareViewControllerDelegate <NSObject>
-- (void)shareViewController:(UIViewController<SPTShareViewControllerProtocol> *)arg1 didSelectShareDestination:(id <SPTShareDestination>)arg2;
+- (void)shareViewController:(UIViewController<SPTShareViewControllerProtocol> *)arg1 shareData:(SPTShareData *)arg2 didSelectShareDestination:(id <SPTShareDestination>)arg3;
 @end
 

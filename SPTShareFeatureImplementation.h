@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTShareContainerViewControllerProtocol-Protocol.h"
 #import "SPTShareFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition;
 @protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTVideoFeature;
 
-@interface SPTShareFeatureImplementation : NSObject <SPTShareFeature>
+@interface SPTShareFeatureImplementation : NSObject <SPTShareContainerViewControllerProtocol, SPTShareFeature>
 {
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
@@ -65,7 +66,8 @@
 - (id)provideShareHandlerFactory;
 - (void)presentShareViewController:(id)arg1;
 - (id)provideShareDragDelegateFactory;
-- (id)makeSharePresenterWithShareEntityData:(id)arg1 contextViewController:(id)arg2;
+- (id)makeSharePresenterWithShareData:(id)arg1 contextViewController:(id)arg2;
+- (id)provideContainedViewControllerWithShareData:(id)arg1 shareDestinations:(id)arg2 shareContainerViewController:(id)arg3;
 - (id)provideShareViewControllerForShareEntityData:(id)arg1 withShareDestinations:(id)arg2;
 - (id)provideShareViewControllerForShareEntityData:(id)arg1;
 - (id)provideShareDestinationsForEntityURI:(id)arg1;

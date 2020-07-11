@@ -10,7 +10,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTPodcastTestManager-Protocol.h"
 
-@class NSString, SPTObserverManager;
+@class NSString, SPTObserverManager, SPTPodcastFeatureProperties;
 @protocol SPTAbbaFeatureFlags, SPTFeatureFlagSignal, SPTLocalSettings, SPTProductState;
 
 @interface SPTPodcastTestManagerImplementation : NSObject <SPTAbbaFeatureFlagsObserver, SPTFeatureFlagSignalObserver, SPTPodcastTestManager>
@@ -22,6 +22,7 @@
     id <SPTLocalSettings> _localSettings;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _freeTierSignal;
+    SPTPodcastFeatureProperties *_featureProperties;
     SPTObserverManager *_observerManager;
     id <SPTFeatureFlagSignal> _podcastYourLibrarySignal;
     id <SPTFeatureFlagSignal> _podcastHeaderV2Signal;
@@ -51,6 +52,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastHeaderV2Signal; // @synthesize podcastHeaderV2Signal=_podcastHeaderV2Signal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastYourLibrarySignal; // @synthesize podcastYourLibrarySignal=_podcastYourLibrarySignal;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(readonly, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierSignal; // @synthesize freeTierSignal=_freeTierSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -61,6 +63,7 @@
 - (_Bool)calculatePodcastFeatureEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagsDidChange:(id)arg1;
+@property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
 @property(readonly, nonatomic, getter=isPodcastTrailerEnabled) _Bool podcastTrailerEnabled;
 @property(readonly, nonatomic, getter=isPodcastHeaderV2CondensedSizeEnabled) _Bool podcastHeaderV2CondensedSizeEnabled;
 @property(readonly, nonatomic, getter=isPodcastHeaderV2Enabled) _Bool podcastHeaderV2Enabled;
@@ -77,7 +80,7 @@
 - (id)createPodcastTrailerSignal:(id)arg1;
 - (void)createPodcastHeaderV2IterationsSignal:(id)arg1;
 - (void)dealloc;
-- (id)initWithFeatureFlags:(id)arg1 localSettings:(id)arg2 productState:(id)arg3 freeTierSignal:(id)arg4 featureFlagFactory:(id)arg5;
+- (id)initWithFeatureFlags:(id)arg1 localSettings:(id)arg2 productState:(id)arg3 freeTierSignal:(id)arg4 featureFlagFactory:(id)arg5 featureProperties:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

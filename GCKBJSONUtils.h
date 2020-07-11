@@ -11,6 +11,7 @@
 }
 
 + (id)writeJSON:(id)arg1;
++ (id)clearNaNs:(id)arg1;
 + (id)clearNulls:(id)arg1;
 + (id)parseJSON:(id)arg1 error:(id *)arg2;
 + (_Bool)isJSONObject:(id)arg1 equivalentTo:(id)arg2;

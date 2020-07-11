@@ -9,7 +9,9 @@
 @class NSURL, SPTPlayerTrack;
 
 @protocol SPTQueuePlaybackRestrictionHandler <NSObject>
+- (void)preventPlaybackForAgeRestrictedPlayerTrack:(SPTPlayerTrack *)arg1;
 - (void)preventPlaybackForRestrictedPlayerTrack:(SPTPlayerTrack *)arg1 contextURI:(NSURL *)arg2;
+- (_Bool)isPlayerTrackContentAgeRestricted:(SPTPlayerTrack *)arg1;
 - (_Bool)isPlayerTrackExplicitContentRestricted:(SPTPlayerTrack *)arg1;
 - (_Bool)isPlayerTrackContentRestricted:(SPTPlayerTrack *)arg1;
 @end

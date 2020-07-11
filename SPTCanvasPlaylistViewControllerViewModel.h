@@ -13,6 +13,7 @@
 
 @interface SPTCanvasPlaylistViewControllerViewModel : NSObject <SPTPlayerObserver>
 {
+    NSString *_playlistName;
     long long _numberOfSections;
     id <SPTCanvasPlaylistViewControllerViewModelDelegate> _delegate;
     id <SPTCanvasMetadataResolverFactory> _metaDataResolverFactory;
@@ -37,6 +38,7 @@
 @property(readonly, nonatomic) id <SPTCanvasMetadataResolverFactory> metaDataResolverFactory; // @synthesize metaDataResolverFactory=_metaDataResolverFactory;
 @property(nonatomic) __weak id <SPTCanvasPlaylistViewControllerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) long long numberOfSections; // @synthesize numberOfSections=_numberOfSections;
+@property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 - (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 @property(readonly, nonatomic) long long numberOfItems;

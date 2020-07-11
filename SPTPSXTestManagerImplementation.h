@@ -9,37 +9,23 @@
 #import "SPTPSXTestManager-Protocol.h"
 
 @class NSString, SPTPSXFeatureFlagSignalObserver;
-@protocol SPTFeatureFlagFactory, SPTLocalSettings, SPTProductState, _TtP24EncoreIntegrationFeature20SPTEncoreTestManager_;
+@protocol SPTCollectionPlatformTestManager, SPTFeatureFlagFactory, SPTLocalSettings, SPTProductState, _TtP24EncoreIntegrationFeature20SPTEncoreTestManager_;
 
 @interface SPTPSXTestManagerImplementation : NSObject <SPTPSXTestManager>
 {
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
     id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> _encoreTestManager;
+    id <SPTCollectionPlatformTestManager> _collectionPlatformTestManager;
     id <SPTLocalSettings> _localSettings;
-    SPTPSXFeatureFlagSignalObserver *_publicPSXUISignalObserver;
-    SPTPSXFeatureFlagSignalObserver *_employeePSXUISignalObserver;
-    SPTPSXFeatureFlagSignalObserver *_publicPSXFeedbackSignalObserver;
-    SPTPSXFeatureFlagSignalObserver *_employeePSXFeedbackSignalObserver;
     SPTPSXFeatureFlagSignalObserver *_publicPSXCopyDiscoverWeeklySignalObserver;
     SPTPSXFeatureFlagSignalObserver *_employeePSXCopyDiscoverWeeklySignalObserver;
-    SPTPSXFeatureFlagSignalObserver *_publicMadeForAttributionSignalObserver;
-    SPTPSXFeatureFlagSignalObserver *_employeeMadeForAttributionSignalObserver;
-    SPTPSXFeatureFlagSignalObserver *_publicReleaseRadarPSXSignalObserver;
-    SPTPSXFeatureFlagSignalObserver *_employeeReleaseRadarPSXSignalObserver;
 }
 
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *employeeReleaseRadarPSXSignalObserver; // @synthesize employeeReleaseRadarPSXSignalObserver=_employeeReleaseRadarPSXSignalObserver;
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *publicReleaseRadarPSXSignalObserver; // @synthesize publicReleaseRadarPSXSignalObserver=_publicReleaseRadarPSXSignalObserver;
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *employeeMadeForAttributionSignalObserver; // @synthesize employeeMadeForAttributionSignalObserver=_employeeMadeForAttributionSignalObserver;
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *publicMadeForAttributionSignalObserver; // @synthesize publicMadeForAttributionSignalObserver=_publicMadeForAttributionSignalObserver;
 @property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *employeePSXCopyDiscoverWeeklySignalObserver; // @synthesize employeePSXCopyDiscoverWeeklySignalObserver=_employeePSXCopyDiscoverWeeklySignalObserver;
 @property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *publicPSXCopyDiscoverWeeklySignalObserver; // @synthesize publicPSXCopyDiscoverWeeklySignalObserver=_publicPSXCopyDiscoverWeeklySignalObserver;
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *employeePSXFeedbackSignalObserver; // @synthesize employeePSXFeedbackSignalObserver=_employeePSXFeedbackSignalObserver;
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *publicPSXFeedbackSignalObserver; // @synthesize publicPSXFeedbackSignalObserver=_publicPSXFeedbackSignalObserver;
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *employeePSXUISignalObserver; // @synthesize employeePSXUISignalObserver=_employeePSXUISignalObserver;
-@property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *publicPSXUISignalObserver; // @synthesize publicPSXUISignalObserver=_publicPSXUISignalObserver;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
+@property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
 @property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> encoreTestManager; // @synthesize encoreTestManager=_encoreTestManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
@@ -49,9 +35,7 @@
 @property(readonly, nonatomic, getter=isFeedbackEnabled) _Bool feedbackEnabled;
 @property(readonly, nonatomic, getter=isPersonalisedSetsUIEnabled) _Bool personalisedSetsUIEnabled;
 - (void)setupPSXCopyDiscoverWeeklyFeatureFlags;
-- (void)setupPSXFeedbackFeatureFlags;
-- (void)setupPSXUIFeatureFlags;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 encoreTestManager:(id)arg4;
+- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 encoreTestManager:(id)arg4 collectionPlatformTestManager:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

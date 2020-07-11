@@ -10,8 +10,11 @@
 {
 }
 
++ (id)generateRandomPassword;
+- (id)providePassword;
 - (id)defaultGender;
 - (id)supplyDataForHiddenScreens:(id)arg1;
+@property(readonly, nonatomic, getter=shouldHidePasswordScreen) _Bool hidePassword;
 @property(readonly, nonatomic, getter=shouldHideGenderScreen) _Bool hideGender;
 @property(readonly, nonatomic, getter=shouldHideDisplayNameScreen) _Bool hideDisplayName;
 

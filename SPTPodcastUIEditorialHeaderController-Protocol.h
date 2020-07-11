@@ -7,11 +7,11 @@
 #import "VISREFHeaderController-Protocol.h"
 
 @class UIImage, UIView;
-@protocol HUBComponentEventHandler, HUBComponentModel;
+@protocol HUBComponentModel;
 
 @protocol SPTPodcastUIEditorialHeaderController <VISREFHeaderController>
 - (void)setNavigationBarHeight:(double)arg1;
-- (void)configureWithModel:(id <HUBComponentModel>)arg1 eventHandler:(id <HUBComponentEventHandler>)arg2;
+- (void)configureWithModel:(id <HUBComponentModel>)arg1;
 - (double)headerHeight;
 
 @optional

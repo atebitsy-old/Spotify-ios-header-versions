@@ -36,6 +36,7 @@
     long long _capabilities;
     NSString *_receiverMetricsID;
     NSString *_hardwareID;
+    NSString *_rawDeviceID;
 }
 
 + (_Bool)validateDeviceCategory:(id)arg1;
@@ -43,6 +44,7 @@
 + (id)deviceCategoryForDeviceUniqueID:(id)arg1;
 + (id)uniqueIDWithCategory:(id)arg1 endpointDeviceID:(id)arg2;
 + (id)deviceForGuestModeWithEndpointDeviceID:(id)arg1;
+@property(copy, nonatomic) NSString *rawDeviceID; // @synthesize rawDeviceID=_rawDeviceID;
 @property(copy, nonatomic) NSString *hardwareID; // @synthesize hardwareID=_hardwareID;
 @property(copy, nonatomic) NSString *receiverMetricsID; // @synthesize receiverMetricsID=_receiverMetricsID;
 @property(nonatomic) long long capabilities; // @synthesize capabilities=_capabilities;

@@ -6,7 +6,7 @@
 
 #import <CoreData/NSManagedObject.h>
 
-@class GCKDBAppSupportStateInfo, GCKDBBluetoothDiscoveryInfo, GCKDBCloudDiscoveryInfo, GCKDBLocalConnectionInfo, NSDate, NSString;
+@class GCKDBAppSupportStateInfo, GCKDBBluetoothDiscoveryInfo, GCKDBLocalConnectionInfo, NSDate, NSString;
 
 @interface GCKDBDeviceInfo : NSManagedObject
 {
@@ -21,7 +21,6 @@
 @property(retain, nonatomic) GCKDBAppSupportStateInfo *appSupportStateInfo; // @dynamic appSupportStateInfo;
 @property(retain, nonatomic) GCKDBBluetoothDiscoveryInfo *bluetoothDiscoveryInfo; // @dynamic bluetoothDiscoveryInfo;
 @property(nonatomic) long long capabilities; // @dynamic capabilities;
-@property(retain, nonatomic) GCKDBCloudDiscoveryInfo *cloudDiscoveryInfo; // @dynamic cloudDiscoveryInfo;
 @property(nonatomic) int deviceVersion; // @dynamic deviceVersion;
 @property(copy, nonatomic) NSString *endpointDeviceID; // @dynamic endpointDeviceID;
 @property(copy, nonatomic) NSString *friendlyName; // @dynamic friendlyName;
@@ -32,6 +31,7 @@
 @property(retain, nonatomic) GCKDBLocalConnectionInfo *localConnectionInfo; // @dynamic localConnectionInfo;
 @property(copy, nonatomic) NSString *manufacturer; // @dynamic manufacturer;
 @property(copy, nonatomic) NSString *modelName; // @dynamic modelName;
+@property(copy, nonatomic) NSString *rawDeviceID; // @dynamic rawDeviceID;
 @property(copy, nonatomic) NSString *receiverMetricsID; // @dynamic receiverMetricsID;
 @property(nonatomic) long long status; // @dynamic status;
 @property(copy, nonatomic) NSString *statusText; // @dynamic statusText;

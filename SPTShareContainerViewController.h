@@ -7,15 +7,16 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTPageController-Protocol.h"
-#import "SPTShareDataProviderDelegate-Protocol.h"
 
-@class NSArray, NSString, NSURL, SPTShareDataProvider, SPTShareLogger, SPTShareViewController, UIView;
-@protocol SPTPageContainer;
+@class NSArray, NSString, NSURL, SPTShareDataProvider, SPTShareLogger, UIView;
+@protocol SPTPageContainer, SPTShareContainerViewControllerProtocol, SPTShareEntityData;
 
-@interface SPTShareContainerViewController : UIViewController <SPTShareDataProviderDelegate, SPTPageController>
+@interface SPTShareContainerViewController : UIViewController <SPTPageController>
 {
     UIView *_contextMenuPopOverOriginView;
-    SPTShareViewController *_shareViewController;
+    id <SPTShareContainerViewControllerProtocol> _delegate;
+    id <SPTShareEntityData> _entityData;
+    NSArray *_destinations;
     SPTShareDataProvider *_shareDataProvider;
     SPTShareLogger *_shareLogger;
     UIView *_containerView;
@@ -27,22 +28,23 @@
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(retain, nonatomic) SPTShareDataProvider *shareDataProvider; // @synthesize shareDataProvider=_shareDataProvider;
-@property(retain, nonatomic) SPTShareViewController *shareViewController; // @synthesize shareViewController=_shareViewController;
+@property(copy, nonatomic) NSArray *destinations; // @synthesize destinations=_destinations;
+@property(retain, nonatomic) id <SPTShareEntityData> entityData; // @synthesize entityData=_entityData;
+@property(nonatomic) __weak id <SPTShareContainerViewControllerProtocol> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct CGRect contextMenuPopOverOriginRect; // @synthesize contextMenuPopOverOriginRect=_contextMenuPopOverOriginRect;
 @property(retain, nonatomic) UIView *contextMenuPopOverOriginView; // @synthesize contextMenuPopOverOriginView=_contextMenuPopOverOriginView;
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-- (void)shareDataProvider:(id)arg1 didUpdateShareData:(id)arg2;
 - (void)updateViewConstraints;
-- (void)addShareViewController;
+- (void)addShareViewControllerWithShareData:(id)arg1 destinations:(id)arg2;
 - (void)resetBarButtonItemAppearance;
 - (void)setupBarButtonItemAppearance;
 - (void)setupContainerView;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithShareViewController:(id)arg1 shareDataProvider:(id)arg2 shareLogger:(id)arg3;
+- (id)initWithShareDataProvider:(id)arg1 entityData:(id)arg2 destinations:(id)arg3 shareLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

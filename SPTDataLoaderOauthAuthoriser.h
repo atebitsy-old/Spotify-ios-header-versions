@@ -47,6 +47,7 @@
 - (void)authoriseRequest:(id)arg1;
 - (_Bool)requestRequiresAuthorisation:(id)arg1;
 - (_Bool)hostInAuthorisationHosts:(id)arg1;
+- (void)resetTask;
 - (void)loadTokens:(_Bool)arg1;
 - (void)handleFailure:(id)arg1 forRequests:(id)arg2;
 - (void)injectAuthorisationHeadersIntoRequest:(id)arg1 withTokenType:(id)arg2 andAccessToken:(id)arg3;

@@ -25,6 +25,7 @@
 @property(readonly, copy, nonatomic) NSString *sessionID; // @synthesize sessionID=_sessionID;
 @property(readonly, copy, nonatomic) NSString *endpointDeviceID; // @synthesize endpointDeviceID=_endpointDeviceID;
 - (void).cxx_destruct;
+- (id)description;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

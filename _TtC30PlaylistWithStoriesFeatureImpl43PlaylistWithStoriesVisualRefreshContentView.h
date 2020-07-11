@@ -11,6 +11,7 @@
     // Error parsing type: , name: style
     // Error parsing type: , name: headerThumbnailView
     // Error parsing type: , name: tooltipView
+    // Error parsing type: , name: textTooltipView
 }
 
 - (void).cxx_destruct;

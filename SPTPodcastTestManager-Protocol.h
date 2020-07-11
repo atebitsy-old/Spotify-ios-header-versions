@@ -9,6 +9,7 @@
 @protocol SPTPodcastTestManagerObserver;
 
 @protocol SPTPodcastTestManager <NSObject>
+@property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
 @property(readonly, nonatomic, getter=isPodcastTrailerEnabled) _Bool podcastTrailerEnabled;
 @property(readonly, nonatomic, getter=isPodcastHeaderV2CondensedSizeEnabled) _Bool podcastHeaderV2CondensedSizeEnabled;
 @property(readonly, nonatomic, getter=isPodcastHeaderV2Enabled) _Bool podcastHeaderV2Enabled;

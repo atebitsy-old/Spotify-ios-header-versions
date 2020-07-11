@@ -10,9 +10,12 @@
 {
 }
 
-- (id)fieldsFactoryForFolderMetadata;
-- (id)fieldsFactoryForPlaylistMetadata;
-- (id)fieldsFactoryForPlaylistTrack;
++ (id)createFieldsFactoryForFolderMetadata;
++ (id)createFieldsFactoryForPlaylistMetadata;
++ (id)createFieldsFactoryForPlaylistTrack;
++ (id)fieldsFactoryForFolderMetadata;
++ (id)fieldsFactoryForPlaylistMetadata;
++ (id)fieldsFactoryForPlaylistTrack;
 
 @end
 

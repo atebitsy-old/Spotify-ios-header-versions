@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistTrackViewModel-Protocol.h"
 
 @class NSArray, NSDate, NSDictionary, NSString, NSURL, UIColor;
-@protocol SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistModelEntityTrackFields, SPTVISREFFlagsService;
+@protocol SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistModelEntityTrackFields;
 
 @interface SPTFreeTierPlaylistTrackViewModelImplementation : NSObject <SPTFreeTierPlaylistTrackViewModel>
 {
@@ -25,10 +25,8 @@
     NSString *_formatListTitle;
     NSArray *_artists;
     long long _offlineSyncStatus;
-    id <SPTVISREFFlagsService> _visualRefreshService;
 }
 
-@property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;
 @property(nonatomic) long long offlineSyncStatus; // @synthesize offlineSyncStatus=_offlineSyncStatus;
 @property(nonatomic) _Bool showThumbnailImage; // @synthesize showThumbnailImage=_showThumbnailImage;
 @property(nonatomic) _Bool showAlbumInSubtitle; // @synthesize showAlbumInSubtitle=_showAlbumInSubtitle;
@@ -71,7 +69,7 @@
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) NSURL *URL;
 @property(readonly, copy, nonatomic) NSString *title;
-- (id)initWithPlaylistTrackEntity:(id)arg1 collectionConfiguration:(id)arg2 isPlayingTrack:(_Bool)arg3 isPremiumOnlyFeatureEnabled:(_Bool)arg4 isCollectionMenuIconsEnabled:(_Bool)arg5 showTrackOwner:(_Bool)arg6 showAlbumInSubtitle:(_Bool)arg7 visualRefreshService:(id)arg8 showThumbnailImage:(_Bool)arg9;
+- (id)initWithPlaylistTrackEntity:(id)arg1 collectionConfiguration:(id)arg2 isPlayingTrack:(_Bool)arg3 isPremiumOnlyFeatureEnabled:(_Bool)arg4 isCollectionMenuIconsEnabled:(_Bool)arg5 showTrackOwner:(_Bool)arg6 showAlbumInSubtitle:(_Bool)arg7 showThumbnailImage:(_Bool)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

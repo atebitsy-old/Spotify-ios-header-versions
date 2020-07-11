@@ -42,6 +42,7 @@
 @property(readonly, copy, nonatomic) NSString *deviceID;
 - (id)initWithDevice:(id)arg1;
 - (id)initWithEndpointDeviceID:(id)arg1 friendlyName:(id)arg2 capabilities:(long long)arg3 IPAddress:(id)arg4 servicePort:(unsigned short)arg5;
+- (id)initWithEndpointDeviceID:(id)arg1 rawDeviceID:(id)arg2 friendlyName:(id)arg3 capabilities:(long long)arg4 IPAddress:(id)arg5 servicePort:(unsigned short)arg6;
 
 @end
 

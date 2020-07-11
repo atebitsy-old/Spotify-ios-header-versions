@@ -6,7 +6,7 @@
 
 #import <UIKit/UICollectionViewLayout.h>
 
-@class NSMutableDictionary;
+@class NSMutableDictionary, UICollectionViewCell;
 @protocol SPTCanvasPlaylistLayoutDelegate;
 
 @interface SPTCanvasPlaylistLayout : UICollectionViewLayout
@@ -14,14 +14,17 @@
     id <SPTCanvasPlaylistLayoutDelegate> _delegate;
     double _minimumLineSpacing;
     double _minimumInteritemSpacing;
+    UICollectionViewCell *_zoomedCell;
     NSMutableDictionary *_itemAttributes;
 }
 
 @property(retain, nonatomic) NSMutableDictionary *itemAttributes; // @synthesize itemAttributes=_itemAttributes;
+@property(nonatomic) __weak UICollectionViewCell *zoomedCell; // @synthesize zoomedCell=_zoomedCell;
 @property(nonatomic) double minimumInteritemSpacing; // @synthesize minimumInteritemSpacing=_minimumInteritemSpacing;
 @property(nonatomic) double minimumLineSpacing; // @synthesize minimumLineSpacing=_minimumLineSpacing;
 @property(nonatomic) __weak id <SPTCanvasPlaylistLayoutDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (_Bool)shouldInvalidateLayoutForBoundsChange:(struct CGRect)arg1;
 - (id)layoutAttributesForItemAtIndexPath:(id)arg1;
 - (id)layoutAttributesForElementsInRect:(struct CGRect)arg1;
 - (void)prepareLayout;

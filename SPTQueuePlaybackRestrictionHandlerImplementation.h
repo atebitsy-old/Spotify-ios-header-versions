@@ -20,6 +20,7 @@
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 - (void).cxx_destruct;
+- (void)preventPlaybackForAgeRestrictedPlayerTrack:(id)arg1;
 - (void)preventPlaybackForRestrictedPlayerTrack:(id)arg1 contextURI:(id)arg2;
 - (_Bool)isPlayerTrackContentAgeRestricted:(id)arg1;
 - (_Bool)isPlayerTrackExplicitContentRestricted:(id)arg1;

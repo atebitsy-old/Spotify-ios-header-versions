@@ -17,7 +17,6 @@
 @property(readonly, nonatomic) _Bool hasHiddenContent;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(nonatomic) __weak id <SPTYourLibraryMusicEntityModelDelegate> delegate;
-- (void)willDisplayItemAtLocation:(long long)arg1;
 - (unsigned long long)locationForSectionIndex:(long long)arg1;
 - (void)performItemActionAtIndex:(unsigned long long)arg1 inGroup:(unsigned long long)arg2;
 - (id <SPTYourLibraryMusicModelItemEntity>)itemAtIndex:(unsigned long long)arg1 inGroup:(unsigned long long)arg2;

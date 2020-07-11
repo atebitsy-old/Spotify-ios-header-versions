@@ -95,12 +95,10 @@
 - (id)providerFooterProviderForPlaylistURL:(id)arg1 context:(id)arg2;
 - (id)provideLoggerForURI:(id)arg1;
 - (id)provideSponsoredViewModelForURL:(id)arg1;
-- (id)providePlaylistEditViewControllerForURL:(id)arg1;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withContext:(id)arg2 formatListType:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4;
 - (id)fullbleedHeaderProvider;
 - (void)unregisterPage;
 - (void)registerPage;
-- (void)registerEditPlaylistAction;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

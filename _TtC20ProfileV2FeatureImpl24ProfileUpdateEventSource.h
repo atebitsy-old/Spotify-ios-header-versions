@@ -10,11 +10,7 @@
 {
     // Error parsing type: , name: consumer
     // Error parsing type: , name: lock
-    // Error parsing type: , name: decoder
-    // Error parsing type: , name: username
-    // Error parsing type: , name: cosmosDictionaryDataLoader
-    // Error parsing type: , name: requestToken
-    // Error parsing type: , name: cosmosRequestDataUsernamesKey
+    // Error parsing type: , name: profileUserData
 }
 
 @end

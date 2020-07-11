@@ -9,26 +9,25 @@
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 
-@class SPTBrowseUIPromoView, SPTBrowseUIPromoViewStyle;
+@class SPTBrowseUIPromoStyle, SPTBrowseUIPromoView;
 @protocol HUBComponentEventHandler;
 
 @interface SPTBrowseUIPromoComponentView : HUGSThemableComponentView <HUBComponentViewWithEvents, HUBComponentViewWithImageHandling>
 {
     _Bool _highlighted;
     id <HUBComponentEventHandler> _eventHandler;
-    SPTBrowseUIPromoViewStyle *_style;
+    SPTBrowseUIPromoStyle *_style;
     SPTBrowseUIPromoView *_promoView;
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(readonly, nonatomic) SPTBrowseUIPromoView *promoView; // @synthesize promoView=_promoView;
-@property(readonly, nonatomic) SPTBrowseUIPromoViewStyle *style; // @synthesize style=_style;
+@property(copy, nonatomic) SPTBrowseUIPromoStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)sendSelectionEvent;
-- (id)titleColorForImage:(id)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (long long)obtainImageDisplayState:(id)arg1;

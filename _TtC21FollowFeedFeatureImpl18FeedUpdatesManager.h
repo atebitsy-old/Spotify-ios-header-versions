@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: hasNewItems
     // Error parsing type: , name: feedUpdatesClient
+    // Error parsing type: , name: cache
 }
 
 - (void)fetchFeedHasNewItemsWithCompletion:(CDUnknownBlockType)arg1;

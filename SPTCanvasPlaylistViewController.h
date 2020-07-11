@@ -13,22 +13,23 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
+#import "UIGestureRecognizerDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTCanvasPlaylistViewControllerViewModel, UICollectionView, UIView;
+@class NSString, NSURL, SPTCanvasPlaylistLayout, SPTCanvasPlaylistViewControllerViewModel, UICollectionView, UIView;
 @protocol GLUETheme, SPTPageContainer;
 
-@interface SPTCanvasPlaylistViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SPTCanvasPlaylistLayoutDelegate, SPTNavigationControllerNavigationBarState, SPTPageController, SPTCanvasPlaylistViewControllerViewModelDelegate>
+@interface SPTCanvasPlaylistViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SPTCanvasPlaylistLayoutDelegate, SPTNavigationControllerNavigationBarState, UIGestureRecognizerDelegate, SPTPageController, SPTCanvasPlaylistViewControllerViewModelDelegate>
 {
-    _Bool _shouldSholdMetadata;
     SPTCanvasPlaylistViewControllerViewModel *_viewModel;
     UICollectionView *_collectionView;
-    UIView *_backButtonBackgroundView;
+    SPTCanvasPlaylistLayout *_flowLayout;
     id <GLUETheme> _theme;
+    UIView *_statusBarView;
 }
 
-@property(nonatomic) _Bool shouldSholdMetadata; // @synthesize shouldSholdMetadata=_shouldSholdMetadata;
+@property(retain, nonatomic) UIView *statusBarView; // @synthesize statusBarView=_statusBarView;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) UIView *backButtonBackgroundView; // @synthesize backButtonBackgroundView=_backButtonBackgroundView;
+@property(retain, nonatomic) SPTCanvasPlaylistLayout *flowLayout; // @synthesize flowLayout=_flowLayout;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) SPTCanvasPlaylistViewControllerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
@@ -46,17 +47,15 @@
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (long long)numberOfSectionsInCollectionView:(id)arg1;
 - (_Bool)shouldShowSquareItemAtIndexPath:(id)arg1;
-- (void)scrollViewWillBeginDragging:(id)arg1;
-- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
-- (void)updateShouldSholdMetadata;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (struct CGSize)collectionViewCellSizeForNumOfColumns:(unsigned long long)arg1;
+- (void)scrollViewDidScroll:(id)arg1;
+- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
+- (void)scrollViewWillBeginDecelerating:(id)arg1;
 - (void)collectionView:(id)arg1 didDeselectItemAtIndexPath:(id)arg2;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-- (void)viewWillDisappear:(_Bool)arg1;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;

@@ -84,7 +84,6 @@
 - (void)resetFilters;
 - (void)playWithPlayOrigin:(id)arg1 options:(id)arg2 fallbackPlayer:(id)arg3;
 - (void)playWithRecommendationsUsingPlayer:(id)arg1 options:(id)arg2;
-- (void)willDisplayItemAtLocation:(long long)arg1;
 - (void)removeObserverForTrackStateWithTrackURL:(id)arg1;
 - (void)addObserverForTrackStateWithTrackURL:(id)arg1 inCollection:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)changeTrackURL:(id)arg1 likeState:(_Bool)arg2;
@@ -103,7 +102,6 @@
 - (void)deleteRecommendedItemAtIndex:(unsigned long long)arg1;
 - (void)addSkippedRecommendedTrackURL:(id)arg1;
 - (id)recommendedItemAtIndex:(unsigned long long)arg1;
-- (id)peekItemAtIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2;
 - (id)itemAtIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2;
 - (unsigned long long)globalIndexFromIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2;
 - (unsigned long long)numberItemsInSection:(unsigned long long)arg1;

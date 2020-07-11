@@ -90,7 +90,6 @@
 - (id)itemAtIndexPath:(id)arg1;
 - (void)viewWillAppear;
 - (void)loadViewModel;
-- (void)willDisplayItemAtLocation:(long long)arg1;
 - (long long)locationForSectionIndex:(long long)arg1;
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (_Bool)isContentFiltered;

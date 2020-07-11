@@ -81,6 +81,7 @@
 - (void)createNowPlayingBarImprovementsSignal;
 - (void)createMusicSleepTimerSignal;
 - (void)createNoSkipLimitSignal;
+@property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
 - (_Bool)isSamplesTestEnabled;
 - (_Bool)isPodcastInspectorTestEnabled;
 - (void)setupRemoteConfiguration;

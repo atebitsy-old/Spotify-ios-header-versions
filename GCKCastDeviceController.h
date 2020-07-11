@@ -134,7 +134,8 @@
 - (id)setDeviceMuted:(_Bool)arg1 forMultizoneDevice:(id)arg2;
 - (id)setDeviceVolume:(float)arg1 forMultizoneDevice:(id)arg2;
 - (id)requestMultizoneStatus;
-- (id)updateSession:(id)arg1 toDevices:(id)arg2;
+- (id)updateSession:(id)arg1 addDevices:(id)arg2 removeDevices:(id)arg3 sessionName:(id)arg4;
+- (id)updateSession:(id)arg1 toDevices:(id)arg2 sessionName:(id)arg3;
 - (id)changeMuted:(_Bool)arg1;
 - (id)changeVolume:(float)arg1;
 - (id)stopApplicationWithSessionID:(id)arg1;
@@ -174,8 +175,6 @@
 - (id)multizoneStatus;
 @property(readonly, nonatomic) GCKDevice *device;
 @property(nonatomic) double reconnectTimeout;
-- (id)multizoneConnectedDevices;
-- (id)multizoneDeviceStatuses;
 @property(readonly, nonatomic) long long connectionState;
 - (void)dealloc;
 - (id)initWithConnector:(id)arg1 analyticsEventLogger:(id)arg2 database:(id)arg3;

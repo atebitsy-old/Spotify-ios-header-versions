@@ -6,9 +6,7 @@
 
 #import "_TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder.h"
 
-#import "UICollectionViewDataSource-Protocol.h"
-
-@interface _TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder (FollowFeedFeatureImpl) <UICollectionViewDataSource>
+@interface _TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder (FollowFeedFeatureImpl)
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 @end

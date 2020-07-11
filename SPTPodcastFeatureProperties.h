@@ -13,6 +13,7 @@
 @interface SPTPodcastFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _podcastEpisodeFollowEnabled;
+    _Bool _podcastEntityPageShowPlayButton;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
     NSString *_followShowConfirmationOverrideString;
@@ -23,6 +24,7 @@
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
+@property(readonly, nonatomic) _Bool podcastEntityPageShowPlayButton; // @synthesize podcastEntityPageShowPlayButton=_podcastEntityPageShowPlayButton;
 @property(readonly, nonatomic) _Bool podcastEpisodeFollowEnabled; // @synthesize podcastEpisodeFollowEnabled=_podcastEpisodeFollowEnabled;
 - (void).cxx_destruct;
 - (unsigned long long)mapUnfollowShowConfirmationOverrideToEnumValue:(id)arg1;

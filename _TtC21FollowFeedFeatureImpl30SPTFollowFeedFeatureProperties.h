@@ -9,6 +9,7 @@
 @interface _TtC21FollowFeedFeatureImpl30SPTFollowFeedFeatureProperties : NSObject
 {
     // Error parsing type: , name: enableFollowFeed
+    // Error parsing type: , name: followFeedOuterBadgeCacheTtlSecs
 }
 
 - (id)init;

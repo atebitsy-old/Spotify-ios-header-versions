@@ -37,7 +37,6 @@
 - (_Bool)showHeaderForSection:(long long)arg1;
 - (NSString *)subtitleForSection:(long long)arg1;
 - (NSString *)titleForSection:(long long)arg1;
-- (void)willDisplayItemAtLocation:(long long)arg1;
 - (long long)locationForSectionIndex:(long long)arg1;
 - (long long)numberOfRowsInSections:(long long)arg1;
 - (void)viewWillAppear;

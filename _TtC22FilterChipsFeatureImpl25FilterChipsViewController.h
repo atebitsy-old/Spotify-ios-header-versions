@@ -11,7 +11,6 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: loopController
     // Error parsing type: , name: makeViewBinder
-    // Error parsing type: , name: debugLabelRemoveWhenAddingRealViews
 }
 
 - (void).cxx_destruct;
@@ -19,7 +18,7 @@
 - (id)initWithCoder:(id)arg1;
 - (void)dealloc;
 - (void)viewWillAppear:(_Bool)arg1;
-- (void)viewDidLoad;
+- (void)loadView;
 
 @end
 

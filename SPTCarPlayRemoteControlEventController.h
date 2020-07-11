@@ -9,22 +9,25 @@
 #import "SPTExternalIntegrationCollectionControllerObserver-Protocol.h"
 #import "SPTNowPlayingRemoteControlEventPolicyController-Protocol.h"
 
-@class MPRemoteCommandCenter, NSString;
+@class MPRemoteCommandCenter, NSString, NSTimer, SPTCarPlayFeatureProperties;
 @protocol SPTExternalIntegrationPlatform, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy;
 
 @interface SPTCarPlayRemoteControlEventController : NSObject <SPTExternalIntegrationCollectionControllerObserver, SPTNowPlayingRemoteControlEventPolicyController>
 {
+    NSTimer *_seekTimer;
     _Bool _activeForRemoteControlPolicyUpdates;
     id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> _delegate;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     NSString *_accessorySessionId;
     MPRemoteCommandCenter *_remoteCommandCenter;
+    SPTCarPlayFeatureProperties *_properties;
     id <SPTNowPlayingRemoteControlPolicy> _remoteControlPolicy;
     long long _eventControllerPriority;
 }
 
 @property(nonatomic) long long eventControllerPriority; // @synthesize eventControllerPriority=_eventControllerPriority;
 @property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
+@property(readonly, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) MPRemoteCommandCenter *remoteCommandCenter; // @synthesize remoteCommandCenter=_remoteCommandCenter;
 @property(readonly, nonatomic) NSString *accessorySessionId; // @synthesize accessorySessionId=_accessorySessionId;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
@@ -49,6 +52,10 @@
 - (long long)dislikeButtonPressed:(id)arg1;
 - (long long)likeButtonPressed:(id)arg1;
 - (long long)handleChangePlaybackPosition:(id)arg1;
+- (void)seekForward;
+- (void)seekBackward;
+- (long long)handleSeekForwardCommand:(id)arg1;
+- (long long)handleSeekBackwardCommand:(id)arg1;
 - (long long)handleSkipForward:(id)arg1;
 - (long long)handleSkipBackward:(id)arg1;
 - (long long)handlePreviousTrackCommand:(id)arg1;
@@ -65,7 +72,7 @@
 - (void)disconnectedFromCarPlay;
 - (void)connectedToCarPlay;
 - (void)dealloc;
-- (id)initWithExternalIntegrationPlatform:(id)arg1 remoteCommandCenter:(id)arg2 accessorySessionId:(id)arg3;
+- (id)initWithExternalIntegrationPlatform:(id)arg1 remoteCommandCenter:(id)arg2 featureProperties:(id)arg3 accessorySessionId:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -26,6 +26,8 @@
 - (void)loadWindow;
 - (void)dismissPresentedPopupDialogAndClearQueue:(_Bool)arg1 animate:(_Bool)arg2;
 - (void)dismissPopupDialog:(id)arg1 animate:(_Bool)arg2;
+- (void)dismissPopupDialog:(id)arg1 animate:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)dismissPopupDialog:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)dismissPopupDialog:(id)arg1;
 - (_Bool)presentPopupDialog:(id)arg1;
 - (void)presentNextQueuedPopup;

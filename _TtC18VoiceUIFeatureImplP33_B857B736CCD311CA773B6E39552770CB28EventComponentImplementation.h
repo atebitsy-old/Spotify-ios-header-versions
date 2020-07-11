@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTUBIEventComponent-Protocol.h"
-
 @class NSNumber, NSString, NSURL;
 
-@interface _TtC18VoiceUIFeatureImplP33_B857B736CCD311CA773B6E39552770CB28EventComponentImplementation : NSObject <SPTUBIEventComponent>
+@interface _TtC18VoiceUIFeatureImplP33_B857B736CCD311CA773B6E39552770CB28EventComponentImplementation : NSObject
 {
     // Error parsing type: , name: name
     // Error parsing type: , name: identifier

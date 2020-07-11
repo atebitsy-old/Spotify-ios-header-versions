@@ -91,7 +91,7 @@
 - (void)didLogin;
 @property(readonly, nonatomic, getter=isLoggedIn) _Bool loggedIn;
 @property(nonatomic) _Bool allowErrorDispatch;
-- (id)initWithCore:(id)arg1 logCenter:(id)arg2 crashReporter:(id)arg3 startupTracer:(id)arg4 containerLogoutHandler:(CDUnknownBlockType)arg5 httpService:(id)arg6 imageLoaderServiceManager:(id)arg7 keychainManager:(id)arg8 metaViewController:(id)arg9 alertInterface:(id)arg10 deferredErrorDispatcher:(id)arg11 linkDispatcher:(id)arg12 errorDialogController:(id)arg13 errorDecorator:(id)arg14 loginLogger:(id)arg15;
+- (id)initWithCore:(id)arg1 logCenter:(id)arg2 crashReporter:(id)arg3 startupTracer:(id)arg4 containerLogoutHandler:(CDUnknownBlockType)arg5 httpService:(id)arg6 imageLoaderServiceManager:(id)arg7 keychainManager:(id)arg8 metaViewController:(id)arg9 alertInterface:(id)arg10 deferredErrorDispatcher:(id)arg11 linkDispatcher:(id)arg12 errorDialogController:(id)arg13 errorDecorator:(id)arg14 loginLogger:(id)arg15 appleHandler:(id)arg16;
 - (id)sessionStateAwaiter;
 - (id)waitForLoginCompletion;
 - (id)waitForLogoutCompletion;

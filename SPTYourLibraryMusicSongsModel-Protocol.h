@@ -21,7 +21,6 @@
 @property(readonly, nonatomic, getter=isPreviewsAvailable) _Bool previewsAvailable;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsModelDelegate> delegate;
-- (void)willDisplayItemAtLocation:(long long)arg1;
 - (void)removeObserverForTrackStateWithTrackURL:(NSURL *)arg1;
 - (void)addObserverForTrackStateWithTrackURL:(NSURL *)arg1 inCollection:(_Bool)arg2 completionHandler:(void (^)(_Bool))arg3;
 - (void)changeTrackURL:(NSURL *)arg1 likeState:(_Bool)arg2;
@@ -30,7 +29,6 @@
 - (void)deleteRecommendedItemAtIndex:(unsigned long long)arg1;
 - (unsigned long long)globalIndexFromIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2;
 - (id <SPTYourLibraryMusicSongEntity>)recommendedItemAtIndex:(unsigned long long)arg1;
-- (id <SPTYourLibraryMusicModelItemEntity>)peekItemAtIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2;
 - (id <SPTYourLibraryMusicModelItemEntity>)itemAtIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2;
 - (unsigned long long)numberItemsInSection:(unsigned long long)arg1;
 - (void)playTrackEntity:(id <SPTYourLibraryMusicModelItemEntity>)arg1 playOrigin:(SPTPlayOrigin *)arg2 fallbackPlayer:(id <SPTPlayer>)arg3;

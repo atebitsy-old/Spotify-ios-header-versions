@@ -9,6 +9,7 @@
 @class NSString;
 
 @interface UIColor (GCKAdditions)
++ (id)gck_unwatchedAdBlockColor;
 + (id)gck_liveIndicatorColor;
 + (id)gck_sliderTooltipBackgroundColor;
 + (id)gck_sliderSecondaryProgressColor;

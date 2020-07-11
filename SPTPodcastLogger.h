@@ -43,6 +43,8 @@
 - (id)sectionNameForSection:(long long)arg1 pageURI:(id)arg2;
 - (void)logInteractionMessageWithPageURI:(id)arg1 featureId:(id)arg2 sectionID:(id)arg3 itemIndex:(long long)arg4 targetURI:(id)arg5 userIntent:(id)arg6;
 - (id)initWithLogCenter:(id)arg1;
+- (void)logPausePodcastWithURI:(id)arg1 episodeURI:(id)arg2;
+- (void)logPlayPodcastWithURI:(id)arg1 episodeURI:(id)arg2;
 - (void)logShowTrailerWithURI:(id)arg1 showURI:(id)arg2;
 - (void)logToggleTrailerPlaybackWithURI:(id)arg1 showURI:(id)arg2;
 

@@ -10,6 +10,13 @@
 #import "SPTPlaylistPlatformFieldArtists-Protocol.h"
 #import "SPTPlaylistPlatformFieldAvailableOfflineStatus-Protocol.h"
 #import "SPTPlaylistPlatformFieldBackgroundable-Protocol.h"
+#import "SPTPlaylistPlatformFieldCovers-Protocol.h"
+#import "SPTPlaylistPlatformFieldDuration-Protocol.h"
+#import "SPTPlaylistPlatformFieldEpisodePlayed-Protocol.h"
+#import "SPTPlaylistPlatformFieldEpisodePublishDate-Protocol.h"
+#import "SPTPlaylistPlatformFieldEpisodePublisherName-Protocol.h"
+#import "SPTPlaylistPlatformFieldEpisodeTimeLeft-Protocol.h"
+#import "SPTPlaylistPlatformFieldIsEpisode-Protocol.h"
 #import "SPTPlaylistPlatformFieldIsExplicit-Protocol.h"
 #import "SPTPlaylistPlatformFieldMediaType-Protocol.h"
 #import "SPTPlaylistPlatformFieldName-Protocol.h"
@@ -17,6 +24,6 @@
 #import "SPTPlaylistPlatformFieldRowId-Protocol.h"
 #import "SPTPlaylistPlatformFieldURL-Protocol.h"
 
-@protocol SPTExternalIntegrationPlaylistTrackContentMetadata <SPTPlaylistPlatformFieldName, SPTPlaylistPlatformFieldURL, SPTPlaylistPlatformFieldAlbumName, SPTPlaylistPlatformFieldAlbumURL, SPTPlaylistPlatformFieldAlbumCovers, SPTPlaylistPlatformFieldArtists, SPTPlaylistPlatformFieldPlayable, SPTPlaylistPlatformFieldAvailableOfflineStatus, SPTPlaylistPlatformFieldIsExplicit, SPTPlaylistPlatformFieldMediaType, SPTPlaylistPlatformFieldBackgroundable, SPTPlaylistPlatformFieldRowId>
+@protocol SPTExternalIntegrationPlaylistTrackContentMetadata <SPTPlaylistPlatformFieldName, SPTPlaylistPlatformFieldURL, SPTPlaylistPlatformFieldAlbumName, SPTPlaylistPlatformFieldAlbumURL, SPTPlaylistPlatformFieldAlbumCovers, SPTPlaylistPlatformFieldArtists, SPTPlaylistPlatformFieldPlayable, SPTPlaylistPlatformFieldAvailableOfflineStatus, SPTPlaylistPlatformFieldIsExplicit, SPTPlaylistPlatformFieldMediaType, SPTPlaylistPlatformFieldBackgroundable, SPTPlaylistPlatformFieldRowId, SPTPlaylistPlatformFieldCovers, SPTPlaylistPlatformFieldEpisodePublisherName, SPTPlaylistPlatformFieldIsEpisode, SPTPlaylistPlatformFieldEpisodePlayed, SPTPlaylistPlatformFieldDuration, SPTPlaylistPlatformFieldEpisodeTimeLeft, SPTPlaylistPlatformFieldEpisodePublishDate>
 @end
 

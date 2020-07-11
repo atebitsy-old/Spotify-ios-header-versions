@@ -10,6 +10,7 @@
 {
 }
 
++ (id)extractColorFromImage:(id)arg1 minimumContrastRatio:(double)arg2;
 + (id)colorByDimmingColor:(id)arg1 toContrastWithColor:(id)arg2 minContrastRatio:(double)arg3;
 
 @end

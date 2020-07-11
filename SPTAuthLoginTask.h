@@ -15,12 +15,12 @@
     function_1d11ba22 _callback;
     id <SPTAuthLoginTaskDelegate> _delegate;
     CDUnknownBlockType _startOperation;
-    CDUnknownBlockType _cancelOperation;
     id <SPTConnectivityAsyncScheduler> _coreScheduler;
+    shared_ptr_b60d0e1e _completion;
 }
 
+@property(nonatomic) shared_ptr_b60d0e1e completion; // @synthesize completion=_completion;
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> coreScheduler; // @synthesize coreScheduler=_coreScheduler;
-@property(copy, nonatomic) CDUnknownBlockType cancelOperation; // @synthesize cancelOperation=_cancelOperation;
 @property(copy, nonatomic) CDUnknownBlockType startOperation; // @synthesize startOperation=_startOperation;
 @property(readonly, nonatomic) __weak id <SPTAuthLoginTaskDelegate> delegate; // @synthesize delegate=_delegate;
 - (id).cxx_construct;
@@ -31,7 +31,7 @@
 - (void)start;
 - (void)setDelegate:(id)arg1 onScheduler:(id)arg2;
 - (void)dealloc;
-- (id)initWithStartOperation:(CDUnknownBlockType)arg1 cancelOperation:(CDUnknownBlockType)arg2 coreScheduler:(id)arg3;
+- (id)initWithStartOperation:(CDUnknownBlockType)arg1 coreScheduler:(id)arg2;
 
 @end
 

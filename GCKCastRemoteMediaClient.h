@@ -9,7 +9,7 @@
 #import "GCKMediaControlChannelAdInfoParser-Protocol.h"
 #import "GCKMediaControlChannelDelegate-Protocol.h"
 
-@class GCKAnalyticsEventLogger, GCKCastChannel, GCKMediaControlChannel, GCKMediaStatus, NSMutableDictionary, NSString, NSTimer;
+@class GCKAnalyticsEventLogger, GCKBTimestampedObject, GCKCastChannel, GCKMediaControlChannel, NSMutableDictionary, NSString, NSTimer;
 @protocol GCKRemoteMediaClientAdInfoParserDelegate;
 
 @interface GCKCastRemoteMediaClient : GCKRemoteMediaClient <GCKMediaControlChannelDelegate, GCKMediaControlChannelAdInfoParser>
@@ -17,7 +17,7 @@
     GCKAnalyticsEventLogger *_analyticsEventLogger;
     NSMutableDictionary *_requests;
     NSTimer *_continuousStatusSyncTimer;
-    GCKMediaStatus *_lastKnownMediaStatus;
+    GCKBTimestampedObject *_lastKnownMediaStatusObject;
     id <GCKRemoteMediaClientAdInfoParserDelegate> _adInfoParserDelegate;
     GCKMediaControlChannel *_mediaControlChannel;
 }

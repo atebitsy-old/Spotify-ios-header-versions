@@ -14,12 +14,14 @@
 {
     double _currentAdBreakTime;
     double _currentAdBreakClipTime;
+    double _whenSkippable;
     NSString *_adBreakID;
     NSString *_adBreakClipID;
 }
 
 @property(retain, nonatomic) NSString *adBreakClipID; // @synthesize adBreakClipID=_adBreakClipID;
 @property(retain, nonatomic) NSString *adBreakID; // @synthesize adBreakID=_adBreakID;
+@property(nonatomic) double whenSkippable; // @synthesize whenSkippable=_whenSkippable;
 @property(nonatomic) double currentAdBreakClipTime; // @synthesize currentAdBreakClipTime=_currentAdBreakClipTime;
 @property(nonatomic) double currentAdBreakTime; // @synthesize currentAdBreakTime=_currentAdBreakTime;
 - (void).cxx_destruct;

@@ -10,6 +10,7 @@
 {
 }
 
++ (id)stringForConnectionSuspendReasonEnum:(long long)arg1;
 + (id)stringForConnectionStateEnum:(long long)arg1;
 + (id)stringForCastSessionStateEnum:(long long)arg1;
 + (id)stringForCastSessionTypeEnum:(long long)arg1;

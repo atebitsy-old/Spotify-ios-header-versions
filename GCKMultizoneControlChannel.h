@@ -8,7 +8,7 @@
 
 #import "GCKRequestTrackerDelegate-Protocol.h"
 
-@class GCKMultizoneStatus, GCKRequestTracker, NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString;
+@class GCKMultizoneStatus, GCKRequestTracker, NSMutableArray, NSString;
 @protocol GCKMultizoneControlChannelDelegate;
 
 @interface GCKMultizoneControlChannel : GCKCastChannel <GCKRequestTrackerDelegate>
@@ -19,12 +19,6 @@
     GCKRequestTracker *_setDeviceMutedRequestTracker;
     GCKRequestTracker *_updateSessionToDevicesTracker;
     NSMutableArray *_requestTrackers;
-    NSString *_queuedSessionID;
-    NSArray *_queuedDeviceList;
-    long long _queuedRequestID;
-    NSString *_groupLeadEndpointDeviceID;
-    NSMutableDictionary *_deviceStatuses;
-    NSMutableDictionary *_connectedDevices;
     id <GCKMultizoneControlChannelDelegate> _delegate;
     GCKMultizoneStatus *_multizoneStatus;
 }
@@ -42,19 +36,14 @@
 - (void)notifyStatusReceived:(id)arg1 requestID:(long long)arg2;
 - (void)didReceiveTextMessage:(id)arg1;
 - (void)notifyInvalidResponse:(long long)arg1;
-- (long long)updateSession:(id)arg1 toDevices:(id)arg2;
+- (long long)setPlaybackSession:(id)arg1 sessionName:(id)arg2 deviceList:(id)arg3 addDevices:(id)arg4 removeDevices:(id)arg5;
+- (long long)updateSession:(id)arg1 addDevices:(id)arg2 removeDevices:(id)arg3 sessionName:(id)arg4;
+- (long long)updateSession:(id)arg1 toDevices:(id)arg2 sessionName:(id)arg3;
 - (long long)setDeviceMuted:(_Bool)arg1 forDevice:(id)arg2;
 - (long long)setDeviceVolume:(float)arg1 forDevice:(id)arg2;
 - (long long)requestMultizoneStatus;
-- (id)generateGroupNameWithDevices:(id)arg1;
-- (id)groupNameWithDeviceName:(id)arg1 number:(long long)arg2;
-- (void)setConnectedDevices:(id)arg1;
-@property(readonly, copy, nonatomic) NSDictionary *connectedDevices;
-- (void)setDeviceStatuses:(id)arg1;
-@property(readonly, copy, nonatomic) NSDictionary *deviceStatuses;
 - (void)clearAllTrackers;
 - (void)dealloc;
-- (void)didConnect;
 - (id)init;
 - (id)initWithNamespace:(id)arg1;
 

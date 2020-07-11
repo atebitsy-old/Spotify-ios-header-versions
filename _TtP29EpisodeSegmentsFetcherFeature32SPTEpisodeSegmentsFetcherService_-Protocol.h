@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
+
 @protocol _TtP29EpisodeSegmentsFetcherFeature32SPTEpisodeSegmentsFetcherService_ <SPTService>
+- (id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_>)provideEpisodeSegmentsCosmosDataLoader;
 @end
 

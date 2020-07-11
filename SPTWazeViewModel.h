@@ -42,7 +42,6 @@
 @property(nonatomic) long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTWazeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)applicationDidLaunchFromWazeDeepLink;
 - (void)testManager:(id)arg1 didChangeWazeOnboardingCompleted:(_Bool)arg2;
 - (void)updateShouldShowBannerWithDrivingState:(_Bool)arg1;
 - (void)drivingStateDetector:(id)arg1 drivingStateDidChange:(id)arg2;
