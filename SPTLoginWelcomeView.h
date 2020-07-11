@@ -8,7 +8,7 @@
 
 #import "GLUEStyleable-Protocol.h"
 
-@class ASAuthorizationAppleIDButton, GLUEButton, GLUELabel, NSLayoutConstraint, NSString, UIImageView, UIStackView;
+@class ASAuthorizationAppleIDButton, GLUEButton, GLUELabel, NSLayoutConstraint, NSString, SPTLoginOptionButton, UIImageView, UIStackView;
 
 @interface SPTLoginWelcomeView : UIView <GLUEStyleable>
 {
@@ -17,6 +17,8 @@
     GLUEButton *_facebookButton;
     GLUEButton *_loginButton;
     ASAuthorizationAppleIDButton *_appleButton;
+    SPTLoginOptionButton *_outlinedFacebookButton;
+    SPTLoginOptionButton *_outlinedAppleButton;
     UIStackView *_buttonsContainerView;
     NSLayoutConstraint *_spotifyLogoTopEdge;
     NSLayoutConstraint *_buttonsContainerRegularSizeClassWidth;
@@ -47,6 +49,8 @@
 @property(retain, nonatomic) NSLayoutConstraint *buttonsContainerRegularSizeClassWidth; // @synthesize buttonsContainerRegularSizeClassWidth=_buttonsContainerRegularSizeClassWidth;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdge; // @synthesize spotifyLogoTopEdge=_spotifyLogoTopEdge;
 @property(retain, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
+@property(readonly, nonatomic) SPTLoginOptionButton *outlinedAppleButton; // @synthesize outlinedAppleButton=_outlinedAppleButton;
+@property(readonly, nonatomic) SPTLoginOptionButton *outlinedFacebookButton; // @synthesize outlinedFacebookButton=_outlinedFacebookButton;
 @property(readonly, nonatomic) ASAuthorizationAppleIDButton *appleButton; // @synthesize appleButton=_appleButton;
 @property(readonly, nonatomic) GLUEButton *loginButton; // @synthesize loginButton=_loginButton;
 @property(readonly, nonatomic) GLUEButton *facebookButton; // @synthesize facebookButton=_facebookButton;

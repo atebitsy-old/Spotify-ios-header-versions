@@ -12,6 +12,7 @@
 
 @interface SPTFreeTierPlaylistFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
+    _Bool _doubleStatePlayButton;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
     NSString *_followShowConfirmationOverrideString;
@@ -22,6 +23,7 @@
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
+@property(readonly, nonatomic) _Bool doubleStatePlayButton; // @synthesize doubleStatePlayButton=_doubleStatePlayButton;
 - (void).cxx_destruct;
 - (unsigned long long)mapUnfollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (unsigned long long)mapFollowShowConfirmationOverrideToEnumValue:(id)arg1;

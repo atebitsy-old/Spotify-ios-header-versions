@@ -9,23 +9,22 @@
 #import "INSEventSenderStatsProviderProtocol-Protocol.h"
 
 @class NSString;
-@protocol INSLogger, INSPersistentStore, INSSequenceNumberGeneratorProtocol;
+@protocol INSLogger, INSPersistentStore;
 
 @interface INSEventSenderStatsProvider : NSObject <INSEventSenderStatsProviderProtocol>
 {
     id <INSPersistentStore> _persistentStore;
     id <INSLogger> _logger;
-    id <INSSequenceNumberGeneratorProtocol> _sequenceGenerator;
 }
 
-@property(retain, nonatomic) id <INSSequenceNumberGeneratorProtocol> sequenceGenerator; // @synthesize sequenceGenerator=_sequenceGenerator;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
 - (void).cxx_destruct;
-- (id)keyMapWithEntities:(id)arg1;
-- (id)statsForEventMessageEntities:(id)arg1;
+- (_Bool)validateEntity:(id)arg1;
+- (id)sequenceNumberMapWithEntities:(id)arg1;
+- (id)statsForSequenceNumberMap:(id)arg1;
 - (void)provideStatsWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithPersistentStore:(id)arg1 sequenceGenerator:(id)arg2 logger:(id)arg3;
+- (id)initWithPersistentStore:(id)arg1 logger:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

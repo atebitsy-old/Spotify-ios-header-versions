@@ -17,6 +17,7 @@
     GLUEButtonStyle *_signupButtonStyle;
     GLUEButtonStyle *_facebookButtonStyle;
     GLUEButtonStyle *_loginButtonStyle;
+    GLUEButtonStyle *_thirdPartyButtonStyle;
     double _valuePropLabelHorizontalEdgeMargin;
     double _spotifyLogoTopEdgeMargin;
     double _spotifyLogoTopEdgeMarginIPad;
@@ -57,6 +58,7 @@
 @property(nonatomic) double spotifyLogoTopEdgeMarginIPad; // @synthesize spotifyLogoTopEdgeMarginIPad=_spotifyLogoTopEdgeMarginIPad;
 @property(nonatomic) double spotifyLogoTopEdgeMargin; // @synthesize spotifyLogoTopEdgeMargin=_spotifyLogoTopEdgeMargin;
 @property(nonatomic) double valuePropLabelHorizontalEdgeMargin; // @synthesize valuePropLabelHorizontalEdgeMargin=_valuePropLabelHorizontalEdgeMargin;
+@property(copy, nonatomic) GLUEButtonStyle *thirdPartyButtonStyle; // @synthesize thirdPartyButtonStyle=_thirdPartyButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *loginButtonStyle; // @synthesize loginButtonStyle=_loginButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *facebookButtonStyle; // @synthesize facebookButtonStyle=_facebookButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *signupButtonStyle; // @synthesize signupButtonStyle=_signupButtonStyle;

@@ -11,19 +11,20 @@
 #import "SPTEventSenderSatelliteServiceResponder-Protocol.h"
 
 @class NSString, SPTDataLoader;
-@protocol SPTNetworkService;
+@protocol OS_dispatch_queue, SPTNetworkService;
 
 @interface SPTEventSenderTransportImplementation : NSObject <SPTDataLoaderDelegate, INSTransport, SPTEventSenderSatelliteServiceResponder>
 {
-    _Bool _needsDataLoaderUpdate;
     id <SPTNetworkService> _networkService;
     SPTDataLoader *_dataLoader;
+    NSObject<OS_dispatch_queue> *_workQueue;
 }
 
-@property(nonatomic) _Bool needsDataLoaderUpdate; // @synthesize needsDataLoaderUpdate=_needsDataLoaderUpdate;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *workQueue; // @synthesize workQueue=_workQueue;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 - (void).cxx_destruct;
+- (void)reloadDataLoader;
 - (void)satelliteServiceDidUnload;
 - (void)satelliteServiceDidLoad;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

@@ -8,7 +8,7 @@
 
 #import "SPTPodcastEpisodeService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPodcastEpisodeTestManager;
+@class NSString, SPTAllocationContext;
 @protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTUIPresentationService, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
@@ -29,11 +29,9 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPodcastOffliningService> _podcastOffliningService;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
-    SPTPodcastEpisodeTestManager *_testManager;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTPodcastEpisodeTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(nonatomic) __weak id <SPTPodcastOffliningService> podcastOffliningService; // @synthesize podcastOffliningService=_podcastOffliningService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;

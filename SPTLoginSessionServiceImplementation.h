@@ -9,12 +9,13 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLoginKeychainCredentialsWriter, SPTLoginLinkAccountManager, SPTLoginSignupMarketingOptInFlashController;
-@protocol SPTCoreService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTPreSignupExperimentationService, SPTSessionService, SPTURIDispatchService;
+@protocol SPTCoreService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTPreSignupExperimentationService, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTLoginSessionServiceImplementation : NSObject <SPTService>
 {
     id <SPTCoreService> _coreService;
     id <SPTLoginService> _loginService;
+    id <SPTLoginLoggingService> _loginLoggerService;
     id <SPTSessionService> _sessionService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTNotificationsService> _notificationsService;
@@ -36,6 +37,7 @@
 @property(nonatomic) __weak id <SPTNotificationsService> notificationsService; // @synthesize notificationsService=_notificationsService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
+@property(nonatomic) __weak id <SPTLoginLoggingService> loginLoggerService; // @synthesize loginLoggerService=_loginLoggerService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 - (void).cxx_destruct;

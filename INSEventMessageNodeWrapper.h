@@ -12,18 +12,17 @@
 
 @interface INSEventMessageNodeWrapper : NSObject <INSEventMessageNode>
 {
+    NSNumber *_authenticated;
     NSString *_name;
     long long _sequenceNumber;
-    NSNumber *_authenticated;
 }
 
-+ (id)wrapperWithEnvelope:(id)arg1;
-+ (id)wrapperWithEnvelope:(id)arg1 authenticated:(id)arg2;
-@property(copy, nonatomic) NSNumber *authenticated; // @synthesize authenticated=_authenticated;
-@property(nonatomic) long long sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
-@property(copy, nonatomic) NSString *name; // @synthesize name=_name;
++ (id)wrapperWithEnvelope:(id)arg1 authenticated:(_Bool)arg2;
+@property(readonly, nonatomic) long long sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
+@property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
+@property(readonly, nonatomic) NSNumber *authenticated; // @synthesize authenticated=_authenticated;
 - (void).cxx_destruct;
-- (id)initWithEnvelope:(id)arg1 authenticated:(id)arg2;
+- (id)initWithEnvelope:(id)arg1 authenticated:(_Bool)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

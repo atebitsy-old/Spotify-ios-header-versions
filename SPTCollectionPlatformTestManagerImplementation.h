@@ -65,6 +65,7 @@
 - (id)objectForKeyedSubscript:(id)arg1;
 @property(readonly, nonatomic, getter=isPodcastYourLibraryTestEnabled) _Bool podcastYourLibraryTestEnabled;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
+@property(readonly, nonatomic, getter=isVISREFLikeCopyEnabled) _Bool visrefLikeCopyEnabled;
 @property(readonly, nonatomic, getter=isSnackbarForPremiumEnabled) _Bool snackbarForPremiumEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyEnabled) _Bool snackbarWithACMCopyEnabled;
 @property(readonly, getter=isFollowedArtistsOnlyEnabled) _Bool followedArtistsOnlyEnabled;

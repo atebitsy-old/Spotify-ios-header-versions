@@ -13,8 +13,11 @@
     // Error parsing type: , name: abbaDesignPickerRedesignKey
     // Error parsing type: , name: abbaDesignPickerRedesignEnabledGroupKey
     // Error parsing type: , name: $__lazy_storage_$_isDevicePickerRedesignEnabled
+    // Error parsing type: , name: $__lazy_storage_$_isMiniPickerEnabled
     // Error parsing type: , name: $__lazy_storage_$_isDevicePickerRedesignEnabledInABBA
     // Error parsing type: , name: $__lazy_storage_$_isDevicePickerRedesignEnabledInRemoteConfig
+    // Error parsing type: , name: $__lazy_storage_$_isMiniPickerEnabledInRemoteConfig
+    // Error parsing type: , name: $__lazy_storage_$_remoteConfigProperties
 }
 
 @end

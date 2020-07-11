@@ -6,12 +6,10 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP20EncoreConsumerMobile10EncoreView_-Protocol.h"
-
 @class UIView;
 @protocol SPTEncoreTrackRowDelegate;
 
-@interface SPTEncoreTrackRow : NSObject <_TtP20EncoreConsumerMobile10EncoreView_>
+@interface SPTEncoreTrackRow : NSObject
 {
     // Error parsing type: , name: component
     // Error parsing type: , name: delegate

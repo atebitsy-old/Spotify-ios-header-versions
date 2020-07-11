@@ -14,9 +14,9 @@
 {
 }
 
-+ (id)identifierForVendor;
 + (id)deviceType;
-+ (id)deviceIos;
+- (id)identifierForVendor;
+- (id)deviceIos;
 @property(readonly, copy, nonatomic) NSData *contextData;
 @property(readonly, copy, nonatomic) NSString *contextName;
 

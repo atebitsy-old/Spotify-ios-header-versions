@@ -9,7 +9,7 @@
 @class NSArray;
 
 @protocol BMPlaybackTimeObservable <NSObject>
-- (void)addObserver:(void (^)(double, double))arg1 forPeriodicInterval:(double)arg2;
-- (void)addObserver:(void (^)(double, double))arg1 atDurationFactors:(NSArray *)arg2;
+- (void)addObserverForPeriodicInterval:(double)arg1 observer:(void (^)(double, double))arg2;
+- (void)addObserverForMediaPositions:(NSArray *)arg1 observer:(void (^)(double, double))arg2;
 @end
 

@@ -13,14 +13,12 @@
 {
     id <BMPlaybackTimeObservable> _timeObservable;
     double _interruptionPosition;
-    double _mediaDuration;
     id <BMBetamaxPlayer> _player;
     SPTVideoCoordinatorCosmosSender *_cosmosSender;
 }
 
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
 @property(retain, nonatomic) id <BMBetamaxPlayer> player; // @synthesize player=_player;
-@property(nonatomic) double mediaDuration; // @synthesize mediaDuration=_mediaDuration;
 @property(nonatomic) double interruptionPosition; // @synthesize interruptionPosition=_interruptionPosition;
 @property(retain, nonatomic) id <BMPlaybackTimeObservable> timeObservable; // @synthesize timeObservable=_timeObservable;
 - (void).cxx_destruct;

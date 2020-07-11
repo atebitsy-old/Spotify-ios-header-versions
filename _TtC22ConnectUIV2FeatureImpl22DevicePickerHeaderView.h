@@ -18,6 +18,7 @@
     // Error parsing type: , name: $__lazy_storage_$_labelView
     // Error parsing type: , name: $__lazy_storage_$_closeButton
     // Error parsing type: , name: $__lazy_storage_$_nowPlayingAnimationView
+    // Error parsing type: , name: $__lazy_storage_$_miniPickerNotchView
     // Error parsing type: , name: isPlaying
     // Error parsing type: , name: contextMenuWidthConstraint
 }

@@ -24,6 +24,7 @@
 @property(readonly, nonatomic) SPTBrowseUIPromoViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+- (void)setImage:(id)arg1 animated:(_Bool)arg2;
 @property(retain, nonatomic) UIImage *image;
 - (id)createOverlayGradientView;
 - (id)createOverlayView;

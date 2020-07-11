@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTFreeTierPlaylistTestManager <NSObject>
+@property(readonly, nonatomic, getter=isDoubleStatePlayButtonEnabled) _Bool doubleStatePlayButtonEnabled;
 @property(readonly, nonatomic, getter=isEpisodeDownloadEnabled) _Bool episodeDownloadEnabled;
 @property(readonly, nonatomic, getter=isPlaceholderCellsEnabled) _Bool placeholderCellsEnabled;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;

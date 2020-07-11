@@ -36,7 +36,6 @@
 - (void)didEndPlaybackWithReason:(long long)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didChangeDuration:(double)arg1 timestamp:(double)arg2;
 - (void)didBecomeReadyAtPosition:(double)arg1 timestamp:(double)arg2;
-- (void)didCreatePlaybackInBackground:(_Bool)arg1 timestamp:(double)arg2;
 - (id)initWithCosmosBridge:(id)arg1 identity:(id)arg2 timeObservable:(id)arg3;
 
 // Remaining properties

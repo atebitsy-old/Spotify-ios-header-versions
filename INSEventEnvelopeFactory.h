@@ -8,22 +8,24 @@
 
 #import "INSEventEnvelopeFactoryProtocol-Protocol.h"
 
-@class INSContextRegistry, NSString;
-@protocol INSSequenceNumberGeneratorProtocol;
+@class INSContextRegistry, INSEventSequenceIDProvider, NSString;
+@protocol INSPersistentStore;
 
 @interface INSEventEnvelopeFactory : NSObject <INSEventEnvelopeFactoryProtocol>
 {
     INSContextRegistry *_contextRegistry;
-    id <INSSequenceNumberGeneratorProtocol> _sequenceNumberGenerator;
+    id <INSPersistentStore> _persistentStore;
+    INSEventSequenceIDProvider *_eventSequenceIdProvider;
 }
 
 + (id)envelopeForEntity:(id)arg1;
-@property(retain, nonatomic) id <INSSequenceNumberGeneratorProtocol> sequenceNumberGenerator; // @synthesize sequenceNumberGenerator=_sequenceNumberGenerator;
+@property(readonly, nonatomic) INSEventSequenceIDProvider *eventSequenceIdProvider; // @synthesize eventSequenceIdProvider=_eventSequenceIdProvider;
+@property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
 @property(retain, nonatomic) INSContextRegistry *contextRegistry; // @synthesize contextRegistry=_contextRegistry;
 - (void).cxx_destruct;
 - (id)messageFragmentForMessage:(id)arg1;
-- (id)envelopeForMessage:(id)arg1;
-- (id)initWithContextRegistry:(id)arg1 sequenceNumberGenerator:(id)arg2;
+- (void)envelopeForMessage:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
+- (id)initWithContextRegistry:(id)arg1 persistentStore:(id)arg2 eventSequenceIdProvider:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

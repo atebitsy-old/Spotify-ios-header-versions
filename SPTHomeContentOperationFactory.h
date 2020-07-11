@@ -7,12 +7,11 @@
 #import <objc/NSObject.h>
 
 @class SPTDataLoaderFactory, SPTHomeContentCache, SPTHomeFeatureProperties, SPTNetworkConnectivityController;
-@protocol SPTFeatureSettingsItemFactory, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTPodcastUIContinueListeningService, SPTRecentlyPlayedService, SPTSnackbarService, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTFeatureSettingsItemFactory, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTSnackbarService, SPTUserBehaviourHubsInstrumentation;
 
 @interface SPTHomeContentOperationFactory : NSObject
 {
     id <SPTOnDemandService> _onDemandService;
-    id <SPTPodcastUIContinueListeningService> _podcastUIContinueListeningService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTOfflineService> _offlineService;
     id <SPTSnackbarService> _snackbarService;
@@ -41,22 +40,19 @@
 @property(readonly, nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(readonly, nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
-@property(readonly, nonatomic) __weak id <SPTPodcastUIContinueListeningService> podcastUIContinueListeningService; // @synthesize podcastUIContinueListeningService=_podcastUIContinueListeningService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 - (void).cxx_destruct;
 - (id)provideCacheViewModelContentOperation;
-- (id)provideTimeRelativeTextContentOperation;
 - (id)provideDownloadsContentOperation;
 - (id)provideRemoteContentOperationWithSourceIdentifier:(id)arg1 contentURL:(id)arg2;
 - (id)provideErrorHandlingContentOperationSnackbarEnabled:(_Bool)arg1;
 - (id)provideCachedContentOperation;
-- (id)provideContinueListeningContentOperation;
 - (id)provideRemoveComponentContentOperationWithOverrides:(id)arg1;
 - (id)provideOnDemandExtractorContentOperation;
 - (id)provideOnDemandDecoratorContentOperation;
 - (id)provideCardAccessibilityContentOperation;
 - (id)provideRecentlyPlayedContentOperation;
-- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 podcastUIContinueListeningService:(id)arg3 offlineService:(id)arg4 snackbarService:(id)arg5 networkConnectivityController:(id)arg6 homeContentCache:(id)arg7 dataLoaderFactory:(id)arg8 testManager:(id)arg9 player:(id)arg10 tasteOnboardingCurationProvider:(id)arg11 localSettings:(id)arg12 featureSettingsItemFactory:(id)arg13 featureProperties:(id)arg14 ubiHubsInstrumentation:(id)arg15;
+- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 snackbarService:(id)arg4 networkConnectivityController:(id)arg5 homeContentCache:(id)arg6 dataLoaderFactory:(id)arg7 testManager:(id)arg8 player:(id)arg9 tasteOnboardingCurationProvider:(id)arg10 localSettings:(id)arg11 featureSettingsItemFactory:(id)arg12 featureProperties:(id)arg13 ubiHubsInstrumentation:(id)arg14;
 
 @end
 

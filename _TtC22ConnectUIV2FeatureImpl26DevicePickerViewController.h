@@ -13,6 +13,9 @@
     // Error parsing type: , name: pickerView
     // Error parsing type: , name: socialListeningIntegrationManager
     // Error parsing type: , name: notificationCenter
+    // Error parsing type: , name: loggingInterceptor
+    // Error parsing type: , name: miniPickerEnabled
+    // Error parsing type: , name: dismissClosure
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }
 

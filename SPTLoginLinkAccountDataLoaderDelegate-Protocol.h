@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTLoginLinkAccountDataLoader;
+@class NSError, SPTLoginLinkAccountDataLoader;
 
 @protocol SPTLoginLinkAccountDataLoaderDelegate <NSObject>
-- (void)dataLoaderDidFailLinkAccount:(SPTLoginLinkAccountDataLoader *)arg1;
+- (void)dataLoaderDidFailLinkAccount:(SPTLoginLinkAccountDataLoader *)arg1 error:(NSError *)arg2;
 - (void)dataLoaderDidSuccessfullyLinkAccount:(SPTLoginLinkAccountDataLoader *)arg1;
 @end
 

@@ -18,7 +18,6 @@
 
 @property(readonly, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 - (void).cxx_destruct;
-@property(readonly, nonatomic, getter=isContinueListeningLoggingEnabled) _Bool continueListeningLoggingEnabled;
 @property(readonly, nonatomic, getter=isGranularDownloadProgressEnabled) _Bool granularDownloadProgressEnabled;
 - (id)initWithFeatureFlags:(id)arg1;
 

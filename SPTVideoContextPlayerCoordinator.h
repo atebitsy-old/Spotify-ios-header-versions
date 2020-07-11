@@ -51,7 +51,6 @@
 @property(retain, nonatomic) id <BMBetamaxPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
 - (void)externalIntegrationDriverDistractionController:(id)arg1 didChangeEnabledState:(_Bool)arg2;
-- (void)didChangeDuration:(double)arg1 timestamp:(double)arg2;
 - (void)advanceWithReasonStallTimeoutExceeded:(id)arg1;
 - (void)didEndPlaybackWithReason:(long long)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didFailWithRecoverableError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
@@ -60,7 +59,10 @@
 - (void)didBecomeReadyAtPosition:(double)arg1 timestamp:(double)arg2;
 - (void)invalidateStalledTimer;
 - (void)maybeCreateStalledTimer;
-- (void)setDeferredState:(id)arg1;
+- (void)resumeCurrentPlaybackAtPosition:(double)arg1;
+- (_Bool)shouldResumeCurrentPlaybackWithPlaybackID:(id)arg1;
+- (void)setInterruptorWithStartCommand:(id)arg1;
+- (void)setDeferredStateWithStartCommand:(id)arg1;
 - (id)coordinatorObserverFactory;
 - (void)playWithRequest:(id)arg1 options:(id)arg2;
 - (void)cosmosReceiver:(id)arg1 receivedPreferredSubtitleCommand:(id)arg2;

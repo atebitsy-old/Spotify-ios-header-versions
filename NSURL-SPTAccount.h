@@ -524,29 +524,28 @@
 @property(readonly, nonatomic, getter=spt_isActivateURL) _Bool isActivateURL;
 - (id)spt_urlByReplacingUsernameWithString:(id)arg1;
 @property(readonly, nonatomic, getter=spt_cppLink) struct SpotifyLink link;
-- (id)spt_autoPlayEnabled;
-- (id)spt_URLWithAutoPlayEnabled:(_Bool)arg1;
-@property(readonly, nonatomic, getter=spt_censoredURIString) NSString *censoredURIString;
-@property(readonly, nonatomic, getter=spt_sharingContext) NSURL *sharingContext;
-- (id)spt_URLWithSharingContext:(id)arg1;
-- (id)canonicalURIforPartnerAccountsURI:(id)arg1;
-- (id)canonicalURIForAccountsURI:(id)arg1;
-- (_Bool)isSupportedAccountsURI:(id)arg1;
-- (_Bool)isSupportedPlayURIPath:(id)arg1;
-- (id)canonicalURIForPlayURI:(id)arg1;
-- (id)spotifyURIWithSlashSeparatedPath:(id)arg1 query:(id)arg2;
-- (id)canonicalURIForOpenURI:(id)arg1;
-- (id)canonicalURIForSpotifyURI:(id)arg1;
-@property(readonly, nonatomic, getter=spt_normalizedSpotifyURI) NSURL *normalizedSpotifyURI;
-@property(readonly, nonatomic, getter=spt_normalizedURI) NSURL *normalizedURI;
-@property(readonly, nonatomic, getter=spt_decodedSpotifyURIComponents) NSArray *decodedSpotifyURIComponents;
 - (id)spt_URLByMergingQueryParameters:(id)arg1;
 - (id)spt_URLByReplacingQueryParameters:(id)arg1;
-- (id)spt_URLByRemovingQuery;
 - (id)spt_queryParameters;
 - (id)spt_query;
+- (id)spt_autoPlayEnabled;
+- (id)spt_URLWithAutoPlayEnabled:(_Bool)arg1;
+- (id)spt_censoredURIString;
+- (id)spt_sharingContext;
+- (id)spt_URLWithSharingContext:(id)arg1;
+- (id)spt_normalizedSpotifyURI;
+- (id)spt_normalizedURI;
+- (id)spt_decodedSpotifyURIComponents;
+- (id)spt_URLByRemovingQuery;
 - (_Bool)spt_isTrackCreditsViewControllerURI;
 - (id)spt_UIDFromTrackURI;
 @property(readonly, nonatomic, getter=spt_isVoiceURL) _Bool isVoiceURL;
+
+// Remaining properties
+@property(nonatomic, readonly) NSString *censoredURIString;
+@property(nonatomic, readonly) NSArray *decodedSpotifyURIComponents;
+@property(nonatomic, readonly) NSURL *normalizedSpotifyURI;
+@property(nonatomic, readonly) NSURL *normalizedURI;
+@property(nonatomic, readonly) NSURL *sharingContext;
 @end
 

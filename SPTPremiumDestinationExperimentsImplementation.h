@@ -15,12 +15,16 @@
 @interface SPTPremiumDestinationExperimentsImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTPremiumDestinationExperiments>
 {
     _Bool _shouldUseDevEndpointSetting;
+    _Bool _shouldPresentImplicitNotificationAlertController;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _shouldUseDevEndpointSettingSignal;
+    id <SPTFeatureFlagSignal> _shouldPresentImplicitNotificationSignal;
 }
 
+@property(nonatomic) _Bool shouldPresentImplicitNotificationAlertController; // @synthesize shouldPresentImplicitNotificationAlertController=_shouldPresentImplicitNotificationAlertController;
+@property(retain, nonatomic) id <SPTFeatureFlagSignal> shouldPresentImplicitNotificationSignal; // @synthesize shouldPresentImplicitNotificationSignal=_shouldPresentImplicitNotificationSignal;
 @property(nonatomic) _Bool shouldUseDevEndpointSetting; // @synthesize shouldUseDevEndpointSetting=_shouldUseDevEndpointSetting;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> shouldUseDevEndpointSettingSignal; // @synthesize shouldUseDevEndpointSettingSignal=_shouldUseDevEndpointSettingSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -28,6 +32,7 @@
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
+- (void)setupImplicitNotificacion;
 - (void)setupUseDevEndpointSetting;
 - (id)featureProperties;
 - (void)loadFlags;

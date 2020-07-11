@@ -29,6 +29,7 @@
 - (void).cxx_destruct;
 - (void)configureCellForTrackItemState:(unsigned long long)arg1;
 - (void)setCellBackgroundWithSelectedState:(_Bool)arg1;
+- (id)accessibilityIdentifier;
 - (id)accessibilityLabel;
 - (void)loadImageForShelfItem:(id)arg1 imageSize:(struct CGSize)arg2 withImageLoader:(id)arg3;
 - (void)configureForShelfItem:(id)arg1 withImageLoader:(id)arg2;

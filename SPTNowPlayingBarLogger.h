@@ -18,7 +18,8 @@
 @property(retain, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (void)logBarHeartButtonTapped:(long long)arg1 playerState:(id)arg2;
-- (void)logBarSwipeToOpenWithPlayerState:(id)arg1;
+- (void)logBarTapped;
+- (void)logBarSwipeToOpen;
 - (void)logBarSwipeToPreviousWithPlayerState:(id)arg1;
 - (void)logBarSwipeToNextWithPlayerState:(id)arg1;
 - (void)logBarPlayButtonTappedWithBehavior:(long long)arg1 playerState:(id)arg2;

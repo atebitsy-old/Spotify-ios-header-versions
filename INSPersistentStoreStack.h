@@ -21,6 +21,9 @@
     id <INSLogger> _logger;
 }
 
++ (id)messageEntityDescription;
++ (id)sequenceNumberEntityDescription;
++ (id)installIdEntityDescription;
 + (id)currentCoreDataModel;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSString *storeName; // @synthesize storeName=_storeName;

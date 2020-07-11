@@ -42,6 +42,9 @@
 @property(readonly, nonatomic) long long numberOfItems;
 - (_Bool)shouldSelectIndexPath:(id)arg1;
 - (_Bool)hasCanvasAtIndexPath:(id)arg1;
+- (id)artistNameForItemAtIndexPath:(id)arg1;
+- (id)albumTitleForItemAtIndexPath:(id)arg1;
+- (id)trackTitleForItemAtIndexPath:(id)arg1;
 - (id)viewControllerForItemAtIndexPath:(id)arg1;
 - (id)canvasViewControllerForTrack:(id)arg1 withCanvasModel:(id)arg2;
 - (void)peformUpdatesUsingNumberOfTracksBefore:(unsigned long long)arg1 numberOfTracksAfter:(unsigned long long)arg2;

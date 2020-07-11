@@ -15,6 +15,7 @@
 }
 
 + (id)concertCardsConfiguration;
++ (id)samplesCardConfiguration;
 + (id)podcastInspectorConfiguration;
 + (id)feedbackCardsConfiguration;
 + (id)pivotsConfiguration;

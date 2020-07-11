@@ -27,7 +27,6 @@
 @property(retain, nonatomic) NSMutableArray *addObserverClosures; // @synthesize addObserverClosures=_addObserverClosures;
 @property(nonatomic) __weak SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
 - (void).cxx_destruct;
-- (id)cmTimesForDurationFactors:(id)arg1 withDuration:(double)arg2;
 - (double)duration;
 - (id)player;
 - (void)tryAddObserverWithClosure:(CDUnknownBlockType)arg1;
@@ -36,8 +35,8 @@
 @property(nonatomic) _Bool ready; // @synthesize ready=_ready;
 - (void)stopObserving;
 - (void)startObserving;
-- (void)addObserver:(CDUnknownBlockType)arg1 forPeriodicInterval:(double)arg2;
-- (void)addObserver:(CDUnknownBlockType)arg1 atDurationFactors:(id)arg2;
+- (void)addObserverForPeriodicInterval:(double)arg1 observer:(CDUnknownBlockType)arg2;
+- (void)addObserverForMediaPositions:(id)arg1 observer:(CDUnknownBlockType)arg2;
 - (void)refreshPlayer:(id)arg1 playerSource:(id)arg2;
 - (void)dealloc;
 - (id)initWithPlayerSource:(id)arg1 kvoControllerFactory:(id)arg2;

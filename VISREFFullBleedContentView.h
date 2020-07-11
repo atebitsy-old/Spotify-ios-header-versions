@@ -8,17 +8,18 @@
 
 #import "VISREFHeaderComponent-Protocol.h"
 
-@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UILabel, UIStackView, VISREFAlignedImageView, VISREFCreatorRowView, VISREFExpandableTextView, VISREFGradientView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
+@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UILabel, UIStackView, UIView, VISREFAlignedImageView, VISREFCreatorRowView, VISREFExpandableTextView, VISREFGradientView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
 
 @interface VISREFFullBleedContentView : VISREFTopAndBodyContentView <VISREFHeaderComponent>
 {
     UILabel *_titleLabel;
-    SPTEncoreLabel *_metadataLabel;
     UIButton *_contextButton;
     UIButton *_followButton;
     UIButton *_feedbackButton;
     UIButton *_offlineButton;
     CDUnknownBlockType _creatorRowButtonTappedBlock;
+    SPTEncoreLabel *_metadataLabel;
+    NSString *_metadataAccessibilityLabel;
     VISREFCreatorRowView *_creatorRowView;
     VISREFExpandableTextView *_descriptionTextView;
     VISREFGradientView *_titleProtectionGradient;
@@ -51,21 +52,26 @@
 @property(retain, nonatomic) VISREFGradientView *titleProtectionGradient; // @synthesize titleProtectionGradient=_titleProtectionGradient;
 @property(retain, nonatomic) VISREFExpandableTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
 @property(retain, nonatomic) VISREFCreatorRowView *creatorRowView; // @synthesize creatorRowView=_creatorRowView;
+@property(copy, nonatomic) NSString *metadataAccessibilityLabel; // @synthesize metadataAccessibilityLabel=_metadataAccessibilityLabel;
+@property(retain, nonatomic) SPTEncoreLabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(copy, nonatomic) CDUnknownBlockType creatorRowButtonTappedBlock; // @synthesize creatorRowButtonTappedBlock=_creatorRowButtonTappedBlock;
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *feedbackButton; // @synthesize feedbackButton=_feedbackButton;
 @property(retain, nonatomic) UIButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIButton *contextButton; // @synthesize contextButton=_contextButton;
-@property(retain, nonatomic) SPTEncoreLabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void).cxx_destruct;
+- (_Bool)canHandleTapAtCreatorView;
 - (void)didTapCreatorRow;
 - (void)adjustTitleLabelFontIfNeeded;
+@property(readonly, nonatomic) UIView *accessibilityContentContainer;
+- (void)updateAccessibilityFrame;
 - (void)updateAccessibilityLabels;
 - (void)setAssociatedColor:(id)arg1;
 - (void)setAttributedDescriptionText:(id)arg1;
 - (void)setDescriptionText:(id)arg1;
 - (void)setCreators:(id)arg1;
+- (void)setMetadataText:(id)arg1 withAccessibilityLabel:(id)arg2;
 - (void)setMetadataText:(id)arg1;
 - (void)setTitleText:(id)arg1;
 @property(retain, nonatomic) UIImage *image;

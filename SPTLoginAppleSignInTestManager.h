@@ -12,7 +12,8 @@
 
 @property(readonly, nonatomic, getter=isAppleAccountLinkingDisabled) _Bool appleAccountLinkingDisabled;
 @property(readonly, nonatomic, getter=isAppleSignUpDisabled) _Bool appleSignUpDisabled;
-@property(readonly, nonatomic, getter=isAppleSignInEnabled) _Bool appleSignInEnabled;
+@property(readonly, nonatomic, getter=isAppleSignInCustomButtonEnabled) _Bool appleSignInCustomDesignEnabled;
+@property(readonly, nonatomic, getter=isAppleSignInSystemButtonEnabled) _Bool appleSignInEnabled;
 
 @end
 

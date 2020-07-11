@@ -9,7 +9,7 @@
 #import "INSSchedulerDelegate-Protocol.h"
 
 @class INSContextRegistry, INSEventSenderStatsDataSource, INSEventValidator, INSPersistentStoreDataDelegate, INSPersistentStoreDataSource, INSScheduler, INSSchedulerDataSourceComposition, NSHashTable, NSString;
-@protocol INSLogger, INSTimer, INSTransport;
+@protocol INSLogger, INSMessageOwnerProvider, INSTimer, INSTransport;
 
 @interface INSEventSender : NSObject <INSSchedulerDelegate>
 {
@@ -25,9 +25,10 @@
     INSPersistentStoreDataDelegate *_persistentStoreDataDelegate;
     INSSchedulerDataSourceComposition *_composition;
     INSEventValidator *_validator;
+    id <INSMessageOwnerProvider> _messageOwnerProvider;
 }
 
-+ (id)defaultContexts:(id)arg1;
+@property(retain, nonatomic) id <INSMessageOwnerProvider> messageOwnerProvider; // @synthesize messageOwnerProvider=_messageOwnerProvider;
 @property(retain, nonatomic) INSEventValidator *validator; // @synthesize validator=_validator;
 @property(retain, nonatomic) INSSchedulerDataSourceComposition *composition; // @synthesize composition=_composition;
 @property(retain, nonatomic) INSPersistentStoreDataDelegate *persistentStoreDataDelegate; // @synthesize persistentStoreDataDelegate=_persistentStoreDataDelegate;
@@ -41,6 +42,7 @@
 @property(retain, nonatomic) INSScheduler *scheduler; // @synthesize scheduler=_scheduler;
 @property(retain, nonatomic) id <INSTransport> transport; // @synthesize transport=_transport;
 - (void).cxx_destruct;
+- (id)defaultContexts:(id)arg1;
 - (void)removeEventObserver:(id)arg1;
 - (void)addEventObserver:(id)arg1;
 - (void)schedulerDidRequestBackOff;
@@ -55,8 +57,8 @@
 - (_Bool)sendMessage:(id)arg1 error:(id *)arg2;
 - (_Bool)sendMessage:(id)arg1 authenticated:(_Bool)arg2 error:(id *)arg3;
 - (void)dealloc;
-- (id)initWithTransport:(id)arg1 clientId:(id)arg2 logger:(id)arg3 timer:(id)arg4;
-- (id)initWithTransport:(id)arg1 clientId:(id)arg2 logger:(id)arg3;
+- (id)initWithTransport:(id)arg1 store:(id)arg2 messageOwnerProvider:(id)arg3 clientId:(id)arg4 logger:(id)arg5 timer:(id)arg6;
+- (id)initWithTransport:(id)arg1 messageOwnerProvider:(id)arg2 clientId:(id)arg3 logger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

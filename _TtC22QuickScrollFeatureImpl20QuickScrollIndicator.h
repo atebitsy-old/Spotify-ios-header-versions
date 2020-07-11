@@ -13,6 +13,7 @@
     // Error parsing type: , name: widthConstraint
     // Error parsing type: , name: labelTrailingConstraint
     // Error parsing type: , name: labelLeadingConstraint
+    // Error parsing type: , name: verticalConstraint
     // Error parsing type: , name: text
 }
 

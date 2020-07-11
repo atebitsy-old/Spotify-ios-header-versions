@@ -10,7 +10,7 @@
 #import "SPTShowsFormatService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFormatListPlatformService, SPTFreeTierPlaylistUIService, SPTGLUEService, SPTNetworkService, SPTPlayerFeature, SPTPodcastFeature, SPTVideoFeature;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFormatListPlatformService, SPTFreeTierPlaylistService, SPTFreeTierPlaylistUIService, SPTGLUEService, SPTNetworkService, SPTPlayerFeature, SPTPodcastFeature, SPTVideoFeature;
 
 @interface SPTShowsFormatServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTShowsFormatService>
 {
@@ -26,6 +26,7 @@
     id <SPTPlayerFeature> _playerFeature;
     id <SPTPodcastFeature> _podcastFeature;
     id <SPTFreeTierPlaylistUIService> _playlistUIService;
+    id <SPTFreeTierPlaylistService> _playlistService;
     id <SPTVideoFeature> _videoFeature;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTFeatureFlagSignal> _betamaxPlayerSignal;
@@ -40,6 +41,7 @@
 @property(nonatomic, getter=isHandlerRegistered) _Bool handlerRegistered; // @synthesize handlerRegistered=_handlerRegistered;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTVideoFeature> videoFeature; // @synthesize videoFeature=_videoFeature;
+@property(nonatomic) __weak id <SPTFreeTierPlaylistService> playlistService; // @synthesize playlistService=_playlistService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistUIService> playlistUIService; // @synthesize playlistUIService=_playlistUIService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastFeature; // @synthesize podcastFeature=_podcastFeature;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;

@@ -11,6 +11,7 @@
 @interface INSResponse : NSObject
 {
     _Bool _shouldBackoff;
+    _Bool _authenticated;
     long long _responseCode;
     NSError *_responseError;
     NSArray *_deliveredEventEnvelopes;
@@ -31,13 +32,14 @@
 @property(retain, nonatomic) NSArray *failedEventEnvelopes; // @synthesize failedEventEnvelopes=_failedEventEnvelopes;
 @property(retain, nonatomic) NSArray *retryEventEnvelopes; // @synthesize retryEventEnvelopes=_retryEventEnvelopes;
 @property(retain, nonatomic) NSArray *deliveredEventEnvelopes; // @synthesize deliveredEventEnvelopes=_deliveredEventEnvelopes;
+@property(readonly, nonatomic) _Bool authenticated; // @synthesize authenticated=_authenticated;
 @property(readonly, nonatomic) _Bool shouldBackoff; // @synthesize shouldBackoff=_shouldBackoff;
 @property(retain, nonatomic) NSError *responseError; // @synthesize responseError=_responseError;
 @property(readonly, nonatomic) long long responseCode; // @synthesize responseCode=_responseCode;
 - (void).cxx_destruct;
 - (_Bool)responseCodeSuccessful;
 - (_Bool)errorOccured;
-- (id)initWithEnvelopes:(id)arg1 responseCode:(long long)arg2 responseHeaders:(id)arg3 responseBody:(id)arg4 responseError:(id)arg5 error:(id *)arg6;
+- (id)initWithEnvelopes:(id)arg1 responseCode:(long long)arg2 responseHeaders:(id)arg3 responseBody:(id)arg4 responseError:(id)arg5 authenticated:(_Bool)arg6 error:(id *)arg7;
 
 @end
 

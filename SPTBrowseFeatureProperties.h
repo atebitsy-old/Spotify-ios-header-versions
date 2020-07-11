@@ -13,8 +13,10 @@
 @interface SPTBrowseFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _shouldRemoveRadioButton;
+    _Bool _shouldEnableFindPromo;
 }
 
+@property(readonly, nonatomic) _Bool shouldEnableFindPromo; // @synthesize shouldEnableFindPromo=_shouldEnableFindPromo;
 @property(readonly, nonatomic) _Bool shouldRemoveRadioButton; // @synthesize shouldRemoveRadioButton=_shouldRemoveRadioButton;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

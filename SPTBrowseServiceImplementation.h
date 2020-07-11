@@ -8,13 +8,14 @@
 
 #import "SPTBrowseService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPersistentCache;
+@class NSString, SPTAllocationContext, SPTBrowseFeatureProperties, SPTPersistentCache;
 @protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTVisualRefreshIntegrationService;
 
 @interface SPTBrowseServiceImplementation : NSObject <SPTBrowseService>
 {
     id <SPTBrowseTestManager> _testManager;
     SPTPersistentCache *_browseRootPersistentCache;
+    SPTBrowseFeatureProperties *_featureProperties;
     id <SPTContainerService> _containerService;
     id <SPTGLUEService> _glueService;
     id <SPTHubFrameworkService> _hubFrameworkService;
@@ -49,6 +50,7 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTBrowseFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;
 @property(readonly, nonatomic) id <SPTBrowseTestManager> testManager; // @synthesize testManager=_testManager;
 - (id)pageIdentifierForURI:(id)arg1;

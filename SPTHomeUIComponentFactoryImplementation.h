@@ -25,8 +25,8 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
 - (id)createTappableSectionHeaderComponent;
-- (id)createHabitsCardComponent;
-- (id)createHabitsContainerComponent;
+- (id)createShortcutsCardComponent;
+- (id)createShortcutsContainerComponent;
 - (id)createSectionHeaderComponentWithType:(unsigned long long)arg1;
 - (id)createRowLargeComponent;
 - (id)createPromoV2Component;

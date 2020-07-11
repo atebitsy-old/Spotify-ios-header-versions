@@ -35,13 +35,13 @@
 @property(nonatomic) _Bool delivered; // @synthesize delivered=_delivered;
 @property(copy, nonatomic) NSDate *createdDate; // @synthesize createdDate=_createdDate;
 - (void).cxx_destruct;
-@property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithEntity:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 
 @end

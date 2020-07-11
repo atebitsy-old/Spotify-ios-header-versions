@@ -6,11 +6,17 @@
 
 #import <objc/NSObject.h>
 
+@class NSData;
+
 @interface INSEventSequenceIDProvider : NSObject
 {
+    NSData *_deviceID;
 }
 
-+ (id)eventSequenceIDWithInstallID:(id)arg1;
+@property(readonly, copy, nonatomic) NSData *deviceID; // @synthesize deviceID=_deviceID;
+- (void).cxx_destruct;
+- (id)eventSequenceIDWithInstallID:(id)arg1;
+- (id)initWithDeviceID:(id)arg1;
 
 @end
 

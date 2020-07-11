@@ -9,7 +9,7 @@
 #import "SPTHomeService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHomeContentCache, SPTHomeHubManager;
-@protocol SPTDrivingStateDetectionService, SPTFeatureFlagFactory, SPTFeedHeartBeatManager, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeTestManager, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIContinueListeningService, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUserBehaviourHubsInstrumentation, SPTUserBehaviourInstrumentationService, _TtP17FollowFeedFeature20SPTFollowFeedService_;
+@protocol SPTDrivingStateDetectionService, SPTFeatureFlagFactory, SPTFeedHeartBeatManager, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeTestManager, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUserBehaviourHubsInstrumentation, SPTUserBehaviourInstrumentationService, _TtP17FollowFeedFeature20SPTFollowFeedService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -24,7 +24,6 @@
     id <SPTPlayerFeature> _playerService;
     id <SPTPodcastUIService> _podcastUIService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
-    id <SPTPodcastUIContinueListeningService> _podcastUIContinueListeningService;
     id <SPTNetworkService> _networkFeature;
     id <_TtP17FollowFeedFeature20SPTFollowFeedService_> _followFeedService;
     id <SPTDrivingStateDetectionService> _drivingStateDetectionService;
@@ -56,7 +55,6 @@
 @property(nonatomic) __weak id <SPTDrivingStateDetectionService> drivingStateDetectionService; // @synthesize drivingStateDetectionService=_drivingStateDetectionService;
 @property(nonatomic) __weak id <_TtP17FollowFeedFeature20SPTFollowFeedService_> followFeedService; // @synthesize followFeedService=_followFeedService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
-@property(nonatomic) __weak id <SPTPodcastUIContinueListeningService> podcastUIContinueListeningService; // @synthesize podcastUIContinueListeningService=_podcastUIContinueListeningService;
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;

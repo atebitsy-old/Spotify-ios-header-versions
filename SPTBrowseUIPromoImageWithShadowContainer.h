@@ -20,6 +20,7 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEImageView *mainImageView; // @synthesize mainImageView=_mainImageView;
 - (void).cxx_destruct;
+- (void)setImage:(id)arg1 animated:(_Bool)arg2;
 @property(retain, nonatomic) UIImage *image;
 - (void)setUpSubviews;
 - (id)initWithTheme:(id)arg1;

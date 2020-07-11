@@ -19,12 +19,14 @@
 
 @interface SPTCanvasPlaylistViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SPTCanvasPlaylistLayoutDelegate, SPTNavigationControllerNavigationBarState, SPTPageController, SPTCanvasPlaylistViewControllerViewModelDelegate>
 {
+    _Bool _shouldSholdMetadata;
     SPTCanvasPlaylistViewControllerViewModel *_viewModel;
     UICollectionView *_collectionView;
     UIView *_backButtonBackgroundView;
     id <GLUETheme> _theme;
 }
 
+@property(nonatomic) _Bool shouldSholdMetadata; // @synthesize shouldSholdMetadata=_shouldSholdMetadata;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *backButtonBackgroundView; // @synthesize backButtonBackgroundView=_backButtonBackgroundView;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
@@ -44,6 +46,9 @@
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (long long)numberOfSectionsInCollectionView:(id)arg1;
 - (_Bool)shouldShowSquareItemAtIndexPath:(id)arg1;
+- (void)scrollViewWillBeginDragging:(id)arg1;
+- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
+- (void)updateShouldSholdMetadata;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (struct CGSize)collectionViewCellSizeForNumOfColumns:(unsigned long long)arg1;
 - (void)collectionView:(id)arg1 didDeselectItemAtIndexPath:(id)arg2;

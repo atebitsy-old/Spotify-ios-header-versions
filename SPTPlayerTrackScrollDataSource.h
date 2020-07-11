@@ -41,7 +41,7 @@
 - (id)stepScrollView:(id)arg1 pageViewAtRelativeIndex:(long long)arg2;
 - (void)configureAllPageViews;
 - (void)configurePageView:(id)arg1 atRelativeIndex:(long long)arg2;
-- (long long)stepScrollView:(id)arg1 numberOfStepsInDirection:(int)arg2;
+- (long long)stepScrollView:(id)arg1 numberOfStepsInDirection:(long long)arg2;
 - (void)currentTrackChanged:(id)arg1;
 - (void)contextTracksChanged;
 - (void)hibernate;

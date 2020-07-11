@@ -7,6 +7,7 @@
 #import "SPTCollectionPlatformTestManager-Protocol.h"
 
 @protocol SPTCollectionPlatformPropertiesManager <SPTCollectionPlatformTestManager>
+@property(readonly, nonatomic, getter=isVISREFLikeCopyEnabled) _Bool visrefLikeCopyEnabled;
 @property(readonly, nonatomic, getter=isSnackbarForPremiumEnabled) _Bool snackbarForPremiumEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyEnabled) _Bool snackbarWithACMCopyEnabled;
 @end

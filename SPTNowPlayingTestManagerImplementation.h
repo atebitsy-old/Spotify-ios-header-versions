@@ -81,6 +81,7 @@
 - (void)createNowPlayingBarImprovementsSignal;
 - (void)createMusicSleepTimerSignal;
 - (void)createNoSkipLimitSignal;
+- (_Bool)isSamplesTestEnabled;
 - (_Bool)isPodcastInspectorTestEnabled;
 - (void)setupRemoteConfiguration;
 - (void)removeObserver:(id)arg1;

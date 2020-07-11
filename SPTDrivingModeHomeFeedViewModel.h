@@ -24,7 +24,7 @@
 @property(nonatomic) __weak id <SPTDrivingModeHomeFeedViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSArray *shelves; // @synthesize shelves=_shelves;
 - (void).cxx_destruct;
-- (id)shelfItemWithUpdatedStateForItem:(id)arg1;
+- (void)updateStateForItem:(id)arg1;
 - (void)playContextURI:(id)arg1;
 - (void)homeFeedListDidUpdate:(id)arg1;
 - (id)shelfAtIndex:(int)arg1;

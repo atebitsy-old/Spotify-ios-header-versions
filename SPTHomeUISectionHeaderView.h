@@ -25,7 +25,7 @@
 - (void).cxx_destruct;
 - (void)applyTitleLabelStyle;
 @property(copy, nonatomic) NSString *title;
-- (id)habitsConstraintsForTitleLabel:(id)arg1;
+- (id)shortcutsConstraintsForTitleLabel:(id)arg1;
 - (id)defaultConstraintsForTitleLabel:(id)arg1;
 - (id)titleLabel:(id)arg1 constraintsForType:(unsigned long long)arg2;
 - (void)constrainTitleLabel:(id)arg1;

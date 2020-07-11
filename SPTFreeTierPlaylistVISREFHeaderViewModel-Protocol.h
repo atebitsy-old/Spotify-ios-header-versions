@@ -9,6 +9,7 @@
 @class NSAttributedString, NSString, NSURL;
 
 @protocol SPTFreeTierPlaylistVISREFHeaderViewModel <NSObject>
+@property(readonly, copy, nonatomic) NSString *metadataAccessibilityLabel;
 @property(readonly, copy, nonatomic) NSString *metadataText;
 @property(readonly, copy, nonatomic) NSAttributedString *creatorText;
 @property(readonly, nonatomic) NSURL *creatorImageURL;

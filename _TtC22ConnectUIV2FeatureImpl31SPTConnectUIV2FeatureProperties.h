@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl31SPTConnectUIV2FeatureProperties : NSObject
 {
     // Error parsing type: , name: connectDevicePickerRedesignEnabled
+    // Error parsing type: , name: connectDevicePickerMiniEnabled
 }
 
 - (id)init;

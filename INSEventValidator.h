@@ -22,8 +22,9 @@
 @property(copy, nonatomic) NSString *shortVersionString; // @synthesize shortVersionString=_shortVersionString;
 @property(nonatomic) unsigned long long maxPayloadSize; // @synthesize maxPayloadSize=_maxPayloadSize;
 - (void).cxx_destruct;
-- (id)errorInfoWithMessage:(id)arg1;
+- (id)errorInfoWithDescription:(id)arg1 messageName:(id)arg2;
 - (_Bool)validateEnvelope:(id)arg1 error:(id *)arg2;
+- (id)validationErrorForMessage:(id)arg1;
 - (_Bool)validateMessage:(id)arg1 error:(id *)arg2;
 - (id)initWithMaxPayloadSize:(unsigned long long)arg1 shortVersionString:(id)arg2 logger:(id)arg3;
 

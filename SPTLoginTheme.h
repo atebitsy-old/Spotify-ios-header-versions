@@ -23,6 +23,7 @@
 - (id)formTextFieldStyle;
 - (id)delayedSignup_signupButtonStyle;
 - (id)delayedSignup_loginButtonStyle;
+- (id)login_thirdPartyButtonStyle;
 - (id)login_facebookButtonStyle;
 - (id)login_whitePrimaryActionButtonStyle;
 - (id)login_blackOutlinePrimaryActionButtonStyle;

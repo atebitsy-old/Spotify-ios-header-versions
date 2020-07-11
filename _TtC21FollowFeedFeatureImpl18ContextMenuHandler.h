@@ -4,18 +4,24 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <swiftCore/_TtCs12_SwiftObject.h>
+#import <objc/NSObject.h>
 
-@interface _TtC21FollowFeedFeatureImpl18ContextMenuHandler : _TtCs12_SwiftObject
+@interface _TtC21FollowFeedFeatureImpl18ContextMenuHandler : NSObject
 {
     // Error parsing type: , name: kFollowFeedContextMenuLoggingContext
     // Error parsing type: , name: presenterFactory
     // Error parsing type: , name: actionsFactory
     // Error parsing type: , name: actionsProvider
     // Error parsing type: , name: optionsFactory
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: presentedItem
     // Error parsing type: , name: uiPresentationService
     // Error parsing type: , name: contributingArtistsService
+    // Error parsing type: , name: contextMenuPresenter
 }
+
+- (void).cxx_destruct;
+- (id)init;
 
 @end
 

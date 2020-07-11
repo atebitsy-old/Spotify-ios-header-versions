@@ -11,6 +11,9 @@
     // Error parsing type: , name: connectManager
     // Error parsing type: , name: modalPresentationController
     // Error parsing type: , name: devicePickerControllerFactory
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: offlineModeState
+    // Error parsing type: , name: flagsManager
     // Error parsing type: , name: presentedPicker
 }
 

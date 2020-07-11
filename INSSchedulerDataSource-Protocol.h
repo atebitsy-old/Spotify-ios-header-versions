@@ -7,6 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol INSSchedulerDataSource <NSObject>
-- (void)eventEnvelopesWithCompletion:(void (^)(NSArray *, long long))arg1;
+- (void)eventEnvelopesWithCompletion:(void (^)(NSArray *, _Bool))arg1;
 @end
 

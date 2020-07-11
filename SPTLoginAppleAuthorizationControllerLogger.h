@@ -15,6 +15,8 @@
 
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+- (void)logUserDidSeeCanNotReachAppleDialog;
+- (void)logUserDidSeeSignupDisabledDialog;
 - (void)logUserDidSeeEmailAlreadyExistsDialog;
 - (void)logUserDidTapDialogDismissButton;
 - (void)logUserDidTapDialogGoToLoginButton;

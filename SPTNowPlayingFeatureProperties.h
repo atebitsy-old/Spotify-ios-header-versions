@@ -13,8 +13,10 @@
 @interface SPTNowPlayingFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _podcastInspectorEnabled;
+    _Bool _samplesEnabled;
 }
 
+@property(readonly, nonatomic) _Bool samplesEnabled; // @synthesize samplesEnabled=_samplesEnabled;
 @property(readonly, nonatomic) _Bool podcastInspectorEnabled; // @synthesize podcastInspectorEnabled=_podcastInspectorEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

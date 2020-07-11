@@ -13,8 +13,12 @@
 @interface SPTGLUEFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _visrefHeadersWithGreenButtonEnabled;
+    _Bool _visrefLeftAlignedSectionHeaderEnabled;
+    _Bool _visrefLeftAlignedTrackCloudEnabled;
 }
 
+@property(readonly, nonatomic) _Bool visrefLeftAlignedTrackCloudEnabled; // @synthesize visrefLeftAlignedTrackCloudEnabled=_visrefLeftAlignedTrackCloudEnabled;
+@property(readonly, nonatomic) _Bool visrefLeftAlignedSectionHeaderEnabled; // @synthesize visrefLeftAlignedSectionHeaderEnabled=_visrefLeftAlignedSectionHeaderEnabled;
 @property(readonly, nonatomic) _Bool visrefHeadersWithGreenButtonEnabled; // @synthesize visrefHeadersWithGreenButtonEnabled=_visrefHeadersWithGreenButtonEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

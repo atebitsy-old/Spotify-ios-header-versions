@@ -28,6 +28,7 @@
 + (id)spt_contentIsUnknownError;
 + (id)spt_unknownErrorWithUnderlyingError:(id)arg1;
 + (id)spt_errorWithInAppMessageJSONParserCode:(long long)arg1 userInfo:(id)arg2;
++ (id)spt_loginFlowGenericError;
 + (id)spt_errorWithSecurityResultCode:(int)arg1;
 + (id)spt_persistentDataCacheErrorWithCode:(long long)arg1;
 + (id)spt_createJoinFailedError;

@@ -9,8 +9,10 @@
 @class EventEnvelope, NSString;
 
 @protocol INSPersistentStore <NSObject>
+- (void)installIdWithCompletion:(void (^)(id <INSInstallIdEntityProtocol>))arg1;
 - (void)persistEventEnvelope:(EventEnvelope *)arg1 authenticated:(_Bool)arg2 withCompletion:(void (^)(INSMessageEntityProxy *))arg3;
 - (void)saveWithCompletion:(void (^)(void))arg1;
+- (void)incrementSequenceNumberWithEventName:(NSString *)arg1 completion:(void (^)(id <INSSequenceNumberEntityProtocol>))arg2;
 - (void)messagesWithAuthenticatedStatus:(_Bool)arg1 completion:(void (^)(NSArray *))arg2;
 - (void)allMessagesWithCompletion:(void (^)(NSArray *))arg1;
 - (void)containMessageForId:(NSString *)arg1 completion:(void (^)(_Bool))arg2;

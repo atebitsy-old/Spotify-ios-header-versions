@@ -10,6 +10,6 @@
 
 @protocol SPStepScrollViewDataSource <NSObject>
 - (SPPageView *)stepScrollView:(SPStepScrollView *)arg1 pageViewAtRelativeIndex:(long long)arg2;
-- (long long)stepScrollView:(SPStepScrollView *)arg1 numberOfStepsInDirection:(int)arg2;
+- (long long)stepScrollView:(SPStepScrollView *)arg1 numberOfStepsInDirection:(long long)arg2;
 @end
 

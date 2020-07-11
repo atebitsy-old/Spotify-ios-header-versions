@@ -11,6 +11,7 @@
     // Error parsing type: , name: loopController
     // Error parsing type: , name: theme
     // Error parsing type: , name: iconManager
+    // Error parsing type: , name: loggingInterceptor
     // Error parsing type: , name: $__lazy_storage_$_contextMenuView
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }

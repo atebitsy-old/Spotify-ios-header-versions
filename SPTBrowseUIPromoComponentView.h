@@ -8,30 +8,26 @@
 
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
-#import "HUGSSelectableComponentView-Protocol.h"
 
-@class NSString, SPTBrowseUIPromoBackgroundView, SPTBrowseUIPromoContentView, SPTBrowseUIPromoViewStyle, UIGestureRecognizer, UIView;
+@class SPTBrowseUIPromoView, SPTBrowseUIPromoViewStyle;
 @protocol HUBComponentEventHandler;
 
-@interface SPTBrowseUIPromoComponentView : HUGSThemableComponentView <HUBComponentViewWithEvents, HUGSSelectableComponentView, HUBComponentViewWithImageHandling>
+@interface SPTBrowseUIPromoComponentView : HUGSThemableComponentView <HUBComponentViewWithEvents, HUBComponentViewWithImageHandling>
 {
+    _Bool _highlighted;
     id <HUBComponentEventHandler> _eventHandler;
-    UIGestureRecognizer *_selectionGestureRecognizer;
     SPTBrowseUIPromoViewStyle *_style;
-    SPTBrowseUIPromoBackgroundView *_backgroundView;
-    SPTBrowseUIPromoContentView *_contentView;
+    SPTBrowseUIPromoView *_promoView;
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
-@property(readonly, nonatomic) SPTBrowseUIPromoContentView *contentView; // @synthesize contentView=_contentView;
-@property(readonly, nonatomic) SPTBrowseUIPromoBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
+@property(nonatomic, getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
+@property(readonly, nonatomic) SPTBrowseUIPromoView *promoView; // @synthesize promoView=_promoView;
 @property(readonly, nonatomic) SPTBrowseUIPromoViewStyle *style; // @synthesize style=_style;
-@property(retain, nonatomic) UIGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)sendSelectionEvent;
-@property(readonly, nonatomic) UIView *selectionView;
 - (id)titleColorForImage:(id)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
@@ -41,12 +37,6 @@
 - (struct CGSize)preferredSizeForBackgroundImage;
 - (void)setupSubviews;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

@@ -57,6 +57,7 @@
     NSURL *_creatorImageURL;
     NSAttributedString *_creatorText;
     NSString *_metadataText;
+    NSString *_metadataAccessibilityLabel;
     unsigned long long _offlineAvailability;
     unsigned long long _type;
     NSDate *_lastModifiedTime;
@@ -119,6 +120,7 @@
 @property(retain, nonatomic) NSDate *lastModifiedTime; // @synthesize lastModifiedTime=_lastModifiedTime;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) unsigned long long offlineAvailability; // @synthesize offlineAvailability=_offlineAvailability;
+@property(copy, nonatomic) NSString *metadataAccessibilityLabel; // @synthesize metadataAccessibilityLabel=_metadataAccessibilityLabel;
 @property(copy, nonatomic) NSString *metadataText; // @synthesize metadataText=_metadataText;
 @property(copy, nonatomic) NSAttributedString *creatorText; // @synthesize creatorText=_creatorText;
 @property(retain, nonatomic) NSURL *creatorImageURL; // @synthesize creatorImageURL=_creatorImageURL;
@@ -167,6 +169,7 @@
 - (void)playlistViewModelSponsorshipDidChange:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (id)byLineFromByText:(id)arg1 followCount:(unsigned long long)arg2;
+- (id)durationTextAccessibilityLabel;
 - (id)durationText;
 - (void)updateFollowCount:(unsigned long long)arg1;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;

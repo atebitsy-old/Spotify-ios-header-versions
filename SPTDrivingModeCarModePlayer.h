@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 - (void).cxx_destruct;
+- (unsigned long long)stateForContextURI:(id)arg1;
 - (id)playOptionsForSkipTo:(id)arg1 seekTo:(id)arg2;
 - (id)resumeOptionsFor:(id)arg1;
 - (void)updatePlaybackStatusFromPlayerState:(id)arg1;
