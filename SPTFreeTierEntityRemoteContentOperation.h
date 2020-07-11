@@ -10,8 +10,8 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSError, NSString, SPTDataLoader, SPTNetworkConnectivityController, SPTPersistentCache;
-@protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTHubRemoteContentOperationURLResolver;
+@class NSError, NSString, SPTDataLoader, SPTPersistentCache;
+@protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTHubRemoteContentOperationURLResolver, SPTNetworkConnectivityController;
 
 @interface SPTFreeTierEntityRemoteContentOperation : NSObject <SPTDataLoaderDelegate, SPTNetworkConnectivityControllerObserver, HUBContentOperation>
 {
@@ -22,7 +22,7 @@
     NSString *_sourceIdentifier;
     id <HUBViewModelBuilder> _viewModelBuilder;
     NSError *_previousError;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTPersistentCache *_persistentCache;
     NSString *_contentCacheKey;
 }
@@ -30,7 +30,7 @@
 @property(nonatomic, getter=isObserving) _Bool observing; // @synthesize observing=_observing;
 @property(copy, nonatomic) NSString *contentCacheKey; // @synthesize contentCacheKey=_contentCacheKey;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) NSError *previousError; // @synthesize previousError=_previousError;
 @property(retain, nonatomic) id <HUBViewModelBuilder> viewModelBuilder; // @synthesize viewModelBuilder=_viewModelBuilder;
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;

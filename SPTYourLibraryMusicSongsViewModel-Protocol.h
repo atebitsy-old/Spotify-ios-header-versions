@@ -33,7 +33,7 @@
 - (void)logCancelRemoveDownloads;
 - (void)logCloseExtraSongsExplanation;
 - (void)logExtraSongsWhyAction;
-- (void)logSwipeCellActionForIndexPath:(NSIndexPath *)arg1;
+- (void)logSwipeCellActionForIndexPath:(NSIndexPath *)arg1 shelfPosition:(long long)arg2;
 - (void)logAudioPreviewAtIndexPath:(NSIndexPath *)arg1 playing:(_Bool)arg2 isOriginCoverItem:(_Bool)arg3;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)toggleTrackBanAtIndexPath:(NSIndexPath *)arg1;

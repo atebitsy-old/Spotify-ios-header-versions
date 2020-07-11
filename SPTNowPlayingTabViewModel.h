@@ -6,26 +6,51 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
-@protocol SPTNowPlayingTabViewModelDelegate;
+#import "SPTStatefulPlayerObserver-Protocol.h"
 
-@interface SPTNowPlayingTabViewModel : NSObject
+@class NSString, SPTStatefulPlayer;
+@protocol SPTNowPlayingContentLayerResolver, SPTNowPlayingTabViewModelDelegate;
+
+@interface SPTNowPlayingTabViewModel : NSObject <SPTStatefulPlayerObserver>
 {
+    _Bool _canvasTabVisible;
+    _Bool _lyricsTabVisible;
+    id <SPTNowPlayingTabViewModelDelegate> _delegate;
     NSString *_canvasTabTitle;
     NSString *_albumArtTabTitle;
     NSString *_lyricsTabTitle;
-    id <SPTNowPlayingTabViewModelDelegate> _delegate;
+    long long _selectedTab;
+    SPTStatefulPlayer *_player;
+    id <SPTNowPlayingContentLayerResolver> _contentLayerResolver;
 }
 
-@property(nonatomic) __weak id <SPTNowPlayingTabViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+@property(retain, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
+@property(retain, nonatomic) SPTStatefulPlayer *player; // @synthesize player=_player;
+@property(nonatomic) _Bool lyricsTabVisible; // @synthesize lyricsTabVisible=_lyricsTabVisible;
+@property(nonatomic) _Bool canvasTabVisible; // @synthesize canvasTabVisible=_canvasTabVisible;
+@property(readonly, nonatomic) long long selectedTab; // @synthesize selectedTab=_selectedTab;
 @property(readonly, nonatomic) NSString *lyricsTabTitle; // @synthesize lyricsTabTitle=_lyricsTabTitle;
 @property(readonly, nonatomic) NSString *albumArtTabTitle; // @synthesize albumArtTabTitle=_albumArtTabTitle;
 @property(readonly, nonatomic) NSString *canvasTabTitle; // @synthesize canvasTabTitle=_canvasTabTitle;
+@property(nonatomic) __weak id <SPTNowPlayingTabViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)playerDidReceiveStateUpdate:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)didTapLyricsTab;
-- (void)didTapAlbumArtTab;
+- (void)didTapCoverArtTab;
 - (void)didTapCanvasTab;
-- (id)init;
+- (void)selectActiveTab;
+- (_Bool)currentTrackHasLyrics;
+- (_Bool)currentTrackHasCanvas;
+- (id)initWithStatefulPlayer:(id)arg1 contentLayerResolver:(id)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

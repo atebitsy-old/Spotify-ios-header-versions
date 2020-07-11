@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTFreeTierTasteOnboardingDeeplinkStore;
-@protocol SPTFreeTierTasteOnboardingTestManager, SPTLoginStateController, SPTMandatoryPremiumTrialService;
+@protocol SPTFreeTierTasteOnboardingTestManager, SPTLogCenter, SPTLoginStateController, SPTMandatoryPremiumTrialService;
 
 @interface SPTFreeTierTasteOnboardingPresentationConfiguration : NSObject
 {
@@ -16,8 +16,10 @@
     id <SPTLoginStateController> _loginStateController;
     id <SPTMandatoryPremiumTrialService> _mandatoryPremiumTrialService;
     SPTFreeTierTasteOnboardingDeeplinkStore *_deeplinkStore;
+    id <SPTLogCenter> _logCenter;
 }
 
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingDeeplinkStore *deeplinkStore; // @synthesize deeplinkStore=_deeplinkStore;
 @property(readonly, nonatomic) _Bool isPaidSocialCampaign; // @synthesize isPaidSocialCampaign=_isPaidSocialCampaign;
 @property(readonly, nonatomic) __weak id <SPTMandatoryPremiumTrialService> mandatoryPremiumTrialService; // @synthesize mandatoryPremiumTrialService=_mandatoryPremiumTrialService;
@@ -25,8 +27,9 @@
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingTestManager> testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool showsTasteOnboardingFirstTimeFlowAsBridgeView;
+- (void)logPostSignUpDeeplinkPresence;
 - (_Bool)showsTasteOnboardingFirstTimeFlow;
-- (id)initWithTestManager:(id)arg1 loginStateController:(id)arg2 isPaidSocialCampaign:(_Bool)arg3 deeplinkStore:(id)arg4 mandatoryPremiumTrialService:(id)arg5;
+- (id)initWithTestManager:(id)arg1 loginStateController:(id)arg2 isPaidSocialCampaign:(_Bool)arg3 deeplinkStore:(id)arg4 mandatoryPremiumTrialService:(id)arg5 logCenter:(id)arg6;
 
 @end
 

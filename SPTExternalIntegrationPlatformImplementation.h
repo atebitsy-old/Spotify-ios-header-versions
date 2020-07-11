@@ -9,7 +9,7 @@
 #import "SPTExternalIntegrationPlatform-Protocol.h"
 
 @class NSString;
-@protocol SPTExternalIntegrationCollectionController, SPTExternalIntegrationContentController, SPTExternalIntegrationDriverDistractionController, SPTExternalIntegrationPlatformLogging, SPTExternalIntegrationPlaybackController, SPTExternalIntegrationRadioController, SPTExternalIntegrationSearchController;
+@protocol SPTExternalIntegrationCollectionController, SPTExternalIntegrationContentController, SPTExternalIntegrationDriverDistractionController, SPTExternalIntegrationPlatformLogging, SPTExternalIntegrationPlaybackController, SPTExternalIntegrationQueueController, SPTExternalIntegrationRadioController, SPTExternalIntegrationSearchController;
 
 @interface SPTExternalIntegrationPlatformImplementation : NSObject <SPTExternalIntegrationPlatform>
 {
@@ -19,10 +19,12 @@
     id <SPTExternalIntegrationPlaybackController> _playbackController;
     id <SPTExternalIntegrationRadioController> _radioController;
     id <SPTExternalIntegrationSearchController> _searchController;
+    id <SPTExternalIntegrationQueueController> _queueController;
     id <SPTExternalIntegrationPlatformLogging> _platformLogging;
 }
 
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatformLogging> platformLogging; // @synthesize platformLogging=_platformLogging;
+@property(readonly, nonatomic) id <SPTExternalIntegrationQueueController> queueController; // @synthesize queueController=_queueController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationSearchController> searchController; // @synthesize searchController=_searchController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationRadioController> radioController; // @synthesize radioController=_radioController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
@@ -30,7 +32,7 @@
 @property(readonly, nonatomic) id <SPTExternalIntegrationContentController> contentController; // @synthesize contentController=_contentController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationCollectionController> collectionController; // @synthesize collectionController=_collectionController;
 - (void).cxx_destruct;
-- (id)initWithCollectionController:(id)arg1 contentController:(id)arg2 driverDistractionController:(id)arg3 playbackController:(id)arg4 radioController:(id)arg5 searchController:(id)arg6 platformLogging:(id)arg7;
+- (id)initWithCollectionController:(id)arg1 contentController:(id)arg2 driverDistractionController:(id)arg3 playbackController:(id)arg4 radioController:(id)arg5 searchController:(id)arg6 queueController:(id)arg7 platformLogging:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

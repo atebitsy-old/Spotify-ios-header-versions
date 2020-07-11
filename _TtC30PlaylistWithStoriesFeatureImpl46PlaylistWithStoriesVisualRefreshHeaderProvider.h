@@ -8,13 +8,10 @@
 
 @interface _TtC30PlaylistWithStoriesFeatureImpl46PlaylistWithStoriesVisualRefreshHeaderProvider : NSObject
 {
-    // Error parsing type: , name: style
     // Error parsing type: , name: collectionConfiguration
-    // Error parsing type: , name: imageLoader
     // Error parsing type: , name: glueImageLoader
     // Error parsing type: , name: playlistUrl
     // Error parsing type: , name: videoPlayer
-    // Error parsing type: , name: videoSurfaceView
     // Error parsing type: , name: videoPlaybackRequestFactory
     // Error parsing type: , name: videoPlayerEventSource
     // Error parsing type: , name: fullscreenStoryService
@@ -26,7 +23,8 @@
     // Error parsing type: , name: followViewModel
     // Error parsing type: , name: fullbleedHeaderViewModel
     // Error parsing type: , name: defaultHeaderViewModel
-    // Error parsing type: , name: $__lazy_storage_$_headerController
+    // Error parsing type: , name: containsStoryThumbnail
+    // Error parsing type: , name: headerController
 }
 
 - (void).cxx_destruct;

@@ -9,6 +9,7 @@
 @interface _TtC24CarModeEngineFeatureImpl27CarModeEngineImplementation : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: state
+    // Error parsing type: , name: delegate
     // Error parsing type: , name: observerManager
 }
 

@@ -10,7 +10,7 @@
 #import "SPTShareFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition, SPTSharingSDK;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, SPTVideoFeature, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
 
 @interface SPTShareFeatureImplementation : NSObject <SPTShareContainerViewControllerProtocol, SPTShareFeature>
 {
@@ -21,7 +21,6 @@
     id <SPTPlayerFeature> _playerFeature;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTFeatureFlaggingService> _featureFlagSignalService;
-    id <SPTVideoFeature> _videoFeature;
     id <SPTCoreService> _coreService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTEventSenderService> _eventSenderService;
@@ -61,7 +60,6 @@
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-@property(nonatomic) __weak id <SPTVideoFeature> videoFeature; // @synthesize videoFeature=_videoFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlagSignalService; // @synthesize featureFlagSignalService=_featureFlagSignalService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;

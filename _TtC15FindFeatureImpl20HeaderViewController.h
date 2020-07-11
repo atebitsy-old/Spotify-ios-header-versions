@@ -24,7 +24,6 @@
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)updateSearchControlsStyle;
-- (void)buttonPressed;
 - (void)searchControlsDidPressCancelButton:(id)arg1;
 - (void)searchControlsDidPressReturnKey:(id)arg1;
 - (void)searchControlsDidPressScannablesButton:(id)arg1;

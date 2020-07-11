@@ -9,6 +9,7 @@
 @interface _TtC26MarketingFormatFeatureImpl29HeaderPlayableEntitySlideView : _TtC26MarketingFormatFeatureImpl15HeaderSlideView
 {
     // Error parsing type: , name: backgroundImageView
+    // Error parsing type: , name: backgroundVideoView
     // Error parsing type: , name: mainImageView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel

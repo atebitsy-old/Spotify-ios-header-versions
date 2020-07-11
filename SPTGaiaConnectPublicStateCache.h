@@ -11,8 +11,8 @@
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, SPTCastManager, SPTNetworkConnectivityController, SPTPlayerState;
-@protocol SPTCrashReporter, SPTGaiaConnectManager, SPTGaiaConnectPublicStateCacheObserver, SPTGaiaWirelessRoutesAPI, SPTOfflineModeState, SPTPlayer;
+@class NSString, SPTCastManager, SPTPlayerState;
+@protocol SPTCrashReporter, SPTGaiaConnectManager, SPTGaiaConnectPublicStateCacheObserver, SPTGaiaWirelessRoutesAPI, SPTNetworkConnectivityController, SPTOfflineModeState, SPTPlayer;
 
 @interface SPTGaiaConnectPublicStateCache : NSObject <SPTGaiaWirelessRoutesObserver, SPTNetworkConnectivityControllerObserver, SPTPlayerObserver, SPTGaiaConnectManagerObserver>
 {
@@ -24,7 +24,7 @@
     id <SPTGaiaConnectManager> _connectManager;
     id <SPTGaiaWirelessRoutesAPI> _wirelessRoutesManager;
     SPTCastManager *_castManager;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTPlayer> _player;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTCrashReporter> _crashReporter;
@@ -35,7 +35,7 @@
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak SPTCastManager *castManager; // @synthesize castManager=_castManager;
 @property(readonly, nonatomic) id <SPTGaiaWirelessRoutesAPI> wirelessRoutesManager; // @synthesize wirelessRoutesManager=_wirelessRoutesManager;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;

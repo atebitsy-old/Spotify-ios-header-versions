@@ -17,6 +17,7 @@
 // Remaining properties
 @property(nonatomic) _Bool explicit_p; // @dynamic explicit_p;
 @property(nonatomic) _Bool hasTrackAlbum; // @dynamic hasTrackAlbum;
+@property(nonatomic) _Bool lyricsMatch; // @dynamic lyricsMatch;
 @property(nonatomic) _Bool mogef19; // @dynamic mogef19;
 @property(nonatomic) _Bool onDemand; // @dynamic onDemand;
 @property(copy, nonatomic) NSString *onDemandPlaylistUri; // @dynamic onDemandPlaylistUri;

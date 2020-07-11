@@ -6,19 +6,18 @@
 
 #import <objc/NSObject.h>
 
-@class SPTNetworkConnectivityController;
-@protocol OS_dispatch_queue, SPTLocalSettings, SPTLogCenter;
+@protocol OS_dispatch_queue, SPTLocalSettings, SPTLogCenter, SPTNetworkConnectivityController;
 
 @interface SPTAbbaLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     id <SPTLocalSettings> _localSettings;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     NSObject<OS_dispatch_queue> *_loggingQueue;
 }
 
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *loggingQueue; // @synthesize loggingQueue=_loggingQueue;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;

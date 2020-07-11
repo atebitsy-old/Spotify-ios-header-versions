@@ -8,8 +8,10 @@
 
 @interface _TtC26MarketingFormatFeatureImpl30HeaderContextMenuEffectHandler : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: contextMenuActionFactory
     // Error parsing type: , name: contextMenuPresenterFactory
+    // Error parsing type: , name: glueImageLoader
+    // Error parsing type: , name: shareViewControllerProvider
+    // Error parsing type: , name: shareViewControllerPresenter
 }
 
 @end

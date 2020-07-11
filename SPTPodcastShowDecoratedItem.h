@@ -22,6 +22,7 @@
     unsigned long long _mediaType;
 }
 
++ (id)podcastDisplayableStringFromDictionary:(id)arg1 usingKey:(id)arg2;
 + (id)showWithDictionary:(id)arg1;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;

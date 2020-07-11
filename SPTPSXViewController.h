@@ -21,8 +21,8 @@
 #import "UIScrollViewDelegate-Protocol.h"
 #import "UISearchBarDelegate-Protocol.h"
 
-@class GLUEButton, NSArray, NSLayoutConstraint, NSNotificationCenter, NSString, NSURL, SPTEntityTableHeaderView, SPTInfoView, SPTNetworkConnectivityController, SPTPSXLogger, SPTProgressView, SPTSearchBar, SPTTableAdapter, SPTTableView, UIButton, UIView;
-@protocol GLUETheme, SPContextMenuActionsFactory, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuOptionsFactory, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTExplicitContentAccessManager, SPTFollowShelfFactory, SPTFormatListPlatformManager, SPTImageLoader, SPTPSXMetadataView, SPTPSXTestManager, SPTPSXViewModel, SPTPageContainer, SPTProductState, SPTShelves, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_;
+@class GLUEButton, NSArray, NSLayoutConstraint, NSNotificationCenter, NSString, NSURL, SPTEntityTableHeaderView, SPTInfoView, SPTPSXLogger, SPTProgressView, SPTSearchBar, SPTTableAdapter, SPTTableView, UIButton, UIView;
+@protocol GLUETheme, SPContextMenuActionsFactory, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuOptionsFactory, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTExplicitContentAccessManager, SPTFormatListPlatformManager, SPTImageLoader, SPTNetworkConnectivityController, SPTPSXMetadataView, SPTPSXTestManager, SPTPSXViewModel, SPTPageContainer, SPTProductState, SPTShelves, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_;
 
 @interface SPTPSXViewController : UIViewController <SPContentInsetViewController, UIScrollViewDelegate, UISearchBarDelegate, SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTPSXViewModelDelegate, SPTPSXViewModelBanningDelegate, SPTTableViewContinuousSwipeDelegate, SPTContextMenuViewControllerDelegate, SPTTableAdapterDataSource, SPTTableAdapterAppearanceDelegate, SPTPSXTrackRowDelegate, SPTExplicitContentEnabledStateObserver, SPTPageController>
 {
@@ -30,7 +30,7 @@
     id <SPTProductState> _productState;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
     id <SPTImageLoader> _imageLoader;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
     id <SPTPSXViewModel> _viewModel;
     id <SPTFormatListPlatformManager> _platformManager;
@@ -42,7 +42,6 @@
     NSNotificationCenter *_notificationCentre;
     id <SPTShelves> _shelves;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
-    id <SPTFollowShelfFactory> _followShelfFactory;
     SPTPSXLogger *_logger;
     id <SPTContextMenuOptions> _contextMenuOptions;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
@@ -78,7 +77,6 @@
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(retain, nonatomic) id <SPTContextMenuOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
 @property(readonly, nonatomic) SPTPSXLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) id <SPTFollowShelfFactory> followShelfFactory; // @synthesize followShelfFactory=_followShelfFactory;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCentre; // @synthesize notificationCentre=_notificationCentre;
@@ -90,7 +88,7 @@
 @property(readonly, nonatomic) id <SPTFormatListPlatformManager> platformManager; // @synthesize platformManager=_platformManager;
 @property(readonly, nonatomic) id <SPTPSXViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -123,7 +121,6 @@
 - (void)viewModelDidUpdateOfflineStatus:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateFollowStatus:(_Bool)arg2;
 - (void)viewModel:(id)arg1 didUpdateFollowerCount:(long long)arg2;
-- (void)viewModelDidUpdateArtistRecommendations:(id)arg1 withFactory:(id)arg2;
 - (void)viewModelDidUpdateMetadata:(id)arg1;
 - (void)viewModel:(id)arg1 failedToLoadDataWithError:(id)arg2;
 - (void)viewModelDidUpdateData:(id)arg1;

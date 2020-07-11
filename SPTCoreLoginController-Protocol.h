@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, SPTAuthAppleSignInCredential, SPTAuthLoginCredentials, SPTAuthLoginOptions, SPTAuthOneTimeTokenCredential, SPTAuthParentChildCredential, SPTAuthPhoneNumberIdentifier, SPTAuthSerializableCredentials;
+@class NSString, SPTAuthAppleSignInCredentials, SPTAuthLoginCredentials, SPTAuthLoginOptions, SPTAuthOneTimeTokenCredentials, SPTAuthParentChildCredentials, SPTAuthPhoneNumberIdentifier, SPTAuthSerializableCredentials;
 @protocol SPTCoreLoginControllerDelegate;
 
 @protocol SPTCoreLoginController <NSObject>
@@ -16,9 +16,9 @@
 - (_Bool)hasStoredCredentials;
 - (SPTAuthSerializableCredentials *)serializableCredentialsAndCanonicalUsername:(id *)arg1;
 - (SPTAuthLoginCredentials *)storedCredentialsAndCanonicalUsername:(id *)arg1;
-- (void)loginWithAppleSignInCredential:(SPTAuthAppleSignInCredential *)arg1 options:(SPTAuthLoginOptions *)arg2;
-- (void)loginWithParentChildCredential:(SPTAuthParentChildCredential *)arg1 options:(SPTAuthLoginOptions *)arg2;
-- (void)loginWithOneTimeTokenCredential:(SPTAuthOneTimeTokenCredential *)arg1 options:(SPTAuthLoginOptions *)arg2;
+- (void)loginWithAppleSignInCredentials:(SPTAuthAppleSignInCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2;
+- (void)loginWithParentChildCredentials:(SPTAuthParentChildCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2;
+- (void)loginWithOneTimeTokenCredentials:(SPTAuthOneTimeTokenCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2;
 - (void)loginWithCredentials:(SPTAuthLoginCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2;
 - (void)loginWithPhoneNumberIdentifier:(SPTAuthPhoneNumberIdentifier *)arg1 options:(SPTAuthLoginOptions *)arg2;
 @end

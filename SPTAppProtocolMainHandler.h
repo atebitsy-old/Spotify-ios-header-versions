@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPSession, SPTAppProtocolConnectionHandler, SPTNetworkConnectivityController;
-@protocol SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTProductState;
+@class SPSession, SPTAppProtocolConnectionHandler;
+@protocol SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkConnectivityController, SPTProductState;
 
 @interface SPTAppProtocolMainHandler : NSObject
 {
@@ -16,10 +16,10 @@
     SPSession *_currentSession;
     id <SPTProductState> _productState;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
 }
 
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;

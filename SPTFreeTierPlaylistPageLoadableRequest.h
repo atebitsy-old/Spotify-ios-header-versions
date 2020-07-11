@@ -8,8 +8,8 @@
 
 #import "SPTFreeTierPlaylistModelObserver-Protocol.h"
 
-@class NSString, NSURL, SPTNetworkConnectivityController;
-@protocol SPTAlgotorialSharingService, SPTFreeTierPlaylistModel, SPTPageCreationContext, SPTPageLoadStateHandler, SPTPlaylistPlatformPlaylistDataLoader;
+@class NSString, NSURL;
+@protocol SPTAlgotorialSharingService, SPTFreeTierPlaylistModel, SPTNetworkConnectivityController, SPTPageCreationContext, SPTPageLoadStateHandler, SPTPlaylistPlatformPlaylistDataLoader;
 
 @interface SPTFreeTierPlaylistPageLoadableRequest : NSObject <SPTFreeTierPlaylistModelObserver>
 {
@@ -19,7 +19,7 @@
     CDUnknownBlockType _playlistModelFactory;
     id <SPTFreeTierPlaylistModel> _playlistModel;
     id <SPTPageLoadStateHandler> _loadStateHandler;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     id <SPTPageCreationContext> _pageContext;
     id <SPTAlgotorialSharingService> _algotorialSharingService;
@@ -28,7 +28,7 @@
 @property(nonatomic) __weak id <SPTAlgotorialSharingService> algotorialSharingService; // @synthesize algotorialSharingService=_algotorialSharingService;
 @property(retain, nonatomic) id <SPTPageCreationContext> pageContext; // @synthesize pageContext=_pageContext;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
-@property(retain, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(retain, nonatomic) id <SPTPageLoadStateHandler> loadStateHandler; // @synthesize loadStateHandler=_loadStateHandler;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(copy, nonatomic) CDUnknownBlockType playlistModelFactory; // @synthesize playlistModelFactory=_playlistModelFactory;

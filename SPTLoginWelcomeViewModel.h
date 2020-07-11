@@ -9,7 +9,7 @@
 #import "SPTLoginAppleAuthorizationControllerDelegate-Protocol.h"
 #import "SPTLoginFacebookAuthenticationControllerDelegate-Protocol.h"
 
-@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginFacebookAuthenticationController, SPTLoginTestManager, SPTLoginWelcomeViewLogger;
+@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginFacebookAuthenticationController, SPTLoginTestManager, SPTLoginWelcomeViewImageryURLProvider, SPTLoginWelcomeViewLogger;
 @protocol SPTDialogController, SPTLoginNavigationCoordinator, SPTLoginStateController, SPTLoginThirdPartyLoginHandlerDelegate;
 
 @interface SPTLoginWelcomeViewModel : NSObject <SPTLoginFacebookAuthenticationControllerDelegate, SPTLoginAppleAuthorizationControllerDelegate>
@@ -26,8 +26,10 @@
     SPTLoginDbManager *_databaseManager;
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
     SPTLoginWelcomeViewLogger *_logger;
+    SPTLoginWelcomeViewImageryURLProvider *_imageryURLProvider;
 }
 
+@property(readonly, nonatomic) SPTLoginWelcomeViewImageryURLProvider *imageryURLProvider; // @synthesize imageryURLProvider=_imageryURLProvider;
 @property(readonly, nonatomic) SPTLoginWelcomeViewLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
@@ -41,7 +43,9 @@
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)logUserDidSeeView;
+- (void)logDidFinishLoadImageWithError:(id)arg1;
+- (void)logDidStartLoadImageForScreenWidth:(double)arg1;
+- (void)logUserDidSeeViewWithInterfaceOrientation:(long long)arg1;
 - (void)appleAuthorizationControllerWillLogIn;
 - (void)appleAuthorizationControllerDidCompleteLoginWithError:(id)arg1;
 - (id)appleAuthorizationControllerContext;
@@ -60,6 +64,7 @@
 - (void)userClickedContinueWithEmail;
 - (void)userClickedSignup;
 - (void)userClickedLogin;
+- (id)welcomeImageryURL;
 - (id)appleLogoIcon;
 - (id)facebookLogoIcon;
 - (id)facebookLogoIconWhite;
@@ -70,7 +75,7 @@
 - (id)helpText;
 - (id)loginButtonText;
 - (id)spotifyLogo:(struct CGSize)arg1;
-- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6 databaseManager:(id)arg7 navigationCoordinator:(id)arg8 testManager:(id)arg9;
+- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6 databaseManager:(id)arg7 navigationCoordinator:(id)arg8 testManager:(id)arg9 imageryURLProvider:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

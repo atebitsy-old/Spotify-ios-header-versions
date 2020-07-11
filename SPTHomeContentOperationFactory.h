@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDataLoaderFactory, SPTHomeContentCache, SPTNetworkConnectivityController;
-@protocol SPTFeatureSettingsItemFactory, SPTFreeTierPersistentCounter, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTSnackbarService, SPTUBIHubsUtilities;
+@class SPTDataLoaderFactory, SPTHomeContentCache;
+@protocol SPTFeatureSettingsItemFactory, SPTFreeTierPersistentCounter, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTNetworkConnectivityController, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTSnackbarService, SPTUBIHubsUtilities;
 
 @interface SPTHomeContentOperationFactory : NSObject
 {
@@ -15,7 +15,7 @@
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTOfflineService> _offlineService;
     id <SPTSnackbarService> _snackbarService;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTHomeContentCache *_homeContentCache;
     SPTDataLoaderFactory *_dataLoaderFactory;
     id <SPTHomeTestManager> _testManager;
@@ -36,7 +36,7 @@
 @property(readonly, nonatomic) id <SPTHomeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(readonly, nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;

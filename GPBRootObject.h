@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface GPBRootObject : NSObject
+#import "GPBMessageSignatureProtocol-Protocol.h"
+
+@interface GPBRootObject : NSObject <GPBMessageSignatureProtocol>
 {
 }
 

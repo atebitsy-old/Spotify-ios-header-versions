@@ -46,7 +46,7 @@
 - (void)fetchFolderMetadataForFolderURL:(id)arg1 withFolderPolicyProtocols:(id)arg2 completion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;
 - (void)fetchPlaylistTracksForPlaylistURL:(id)arg1 options:(id)arg2 withPolicyProtocols:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
 - (void)fetchPlaylistMetadataForPlaylistURL:(id)arg1 options:(id)arg2 withPolicyProtocols:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
-- (struct SPTPlaylistPlatformDataLoaderResponse *)responseForData:(id)arg1 items:(id)arg2;
+- (struct SPTPlaylistPlatformDataLoaderResponse *)tracksResponseForData:(id)arg1 items:(id)arg2;
 - (void)canReportAnnotationAbuseOnPlaylistURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)rowIdForURL:(id)arg1 inFolderURL:(id)arg2 flattenTree:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)rowIdForURL:(id)arg1 inFolderURL:(id)arg2 completion:(CDUnknownBlockType)arg3;

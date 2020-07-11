@@ -10,8 +10,8 @@
 #import "SPTIncognitoModeHandlerObserver-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class MessageBarController, MessageBarItem, NSDictionary, NSString, SPSession, SPTNetworkConnectivityController;
-@protocol NSObject, SPTReachabilityMonitor;
+@class MessageBarController, MessageBarItem, NSDictionary, NSString, SPSession;
+@protocol NSObject, SPTNetworkConnectivityController, SPTReachabilityMonitor;
 
 @interface SPTPlayModeMonitor : NSObject <SPTNetworkConnectivityControllerObserver, SPSessionObserver, SPTIncognitoModeHandlerObserver>
 {
@@ -22,10 +22,10 @@
     id <SPTReachabilityMonitor> _reachability;
     id <NSObject> _reachabilityObservation;
     NSDictionary *_barItems;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) NSDictionary *barItems; // @synthesize barItems=_barItems;
 @property(retain, nonatomic) id <NSObject> reachabilityObservation; // @synthesize reachabilityObservation=_reachabilityObservation;
 @property(retain, nonatomic) id <SPTReachabilityMonitor> reachability; // @synthesize reachability=_reachability;

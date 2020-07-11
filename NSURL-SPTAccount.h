@@ -111,6 +111,7 @@
 + (id)languageOnboardingAPIURLWithPathComponents:(id)arg1;
 + (id)spt_selectedLanguagesURL;
 + (id)spt_availableLanguagesURL;
++ (id)spt_loginImageryServiceBaseURL;
 + (id)spt_loginContinueWithEmailURIPrefixComponents;
 + (id)spt_continueWithEmailURI;
 + (id)spt_loginMagicLinkDoRequestURIPrefixComponents;
@@ -139,7 +140,7 @@
 + (id)spt_signupAgeInputViewURI;
 + (id)spt_signupPasswordInputViewURI;
 + (id)spt_signupEmailInputViewURI;
-+ (id)spt_signupURIWithIdentifierToken:(id)arg1 signupType:(unsigned long long)arg2 displayName:(id)arg3 email:(id)arg4;
++ (id)spt_signupURIWithIdentifierToken:(id)arg1 signupType:(unsigned long long)arg2 displayName:(id)arg3 email:(id)arg4 resetFlow:(_Bool)arg5;
 + (id)spt_loginURIWithEmail:(id)arg1 errorDescription:(id)arg2;
 + (id)spt_loginURIWithEmail:(id)arg1;
 + (id)spt_loginURI;
@@ -182,7 +183,6 @@
 + (id)spt_onboardingCoordinationFeatureURL;
 + (id)spt_PaymentCancelURL;
 + (id)spt_artistDismissRecommendationURLForDimissUri:(id)arg1;
-+ (id)spt_artistFollowRecommendationsURL;
 + (id)spt_personalisedSetsPrefixComponents;
 + (id)spt_personalisedSetURLWithPlaylistURL:(id)arg1;
 + (id)spt_phoneNumberSignupPhoneNumberEntryViewURI;

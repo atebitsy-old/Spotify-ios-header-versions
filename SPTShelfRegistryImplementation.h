@@ -17,8 +17,8 @@
 
 @property(readonly, nonatomic) NSMutableDictionary *urlPredicates; // @synthesize urlPredicates=_urlPredicates;
 - (void).cxx_destruct;
-- (id)provideShelfForURI:(id)arg1 swipeType:(long long)arg2;
-- (void)registerShelfForURIPredicate:(CDUnknownBlockType)arg1 swipeType:(long long)arg2;
+- (id)provideShelfForURI:(id)arg1 atPosition:(long long)arg2;
+- (void)registerShelfForURIPredicate:(CDUnknownBlockType)arg1 atPosition:(long long)arg2;
 - (id)init;
 
 // Remaining properties

@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTExternalIntegrationCollectionController, SPTExternalIntegrationContentController, SPTExternalIntegrationDriverDistractionController, SPTExternalIntegrationPlatformLogging, SPTExternalIntegrationPlaybackController, SPTExternalIntegrationRadioController, SPTExternalIntegrationSearchController;
+@protocol SPTExternalIntegrationCollectionController, SPTExternalIntegrationContentController, SPTExternalIntegrationDriverDistractionController, SPTExternalIntegrationPlatformLogging, SPTExternalIntegrationPlaybackController, SPTExternalIntegrationQueueController, SPTExternalIntegrationRadioController, SPTExternalIntegrationSearchController;
 
 @protocol SPTExternalIntegrationPlatform <NSObject>
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatformLogging> platformLogging;
+@property(readonly, nonatomic) id <SPTExternalIntegrationQueueController> queueController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationSearchController> searchController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationRadioController> radioController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController;

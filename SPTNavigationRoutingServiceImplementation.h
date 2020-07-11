@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
+#import "SPTNavigationRoutingService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTNavigationRoutingLogger, SPTNavigationRoutingLoginStateMonitor, SPTPageRegistryURISubtypeHandler;
+@class NSString, SPTAllocationContext, SPTNavigationRoutingLogger, SPTNavigationRoutingLoginStateMonitor, SPTObserverManager, SPTPageRegistryURISubtypeHandler;
 @protocol SPTContainerService, SPTCoreService, SPTURIDispatchService;
 
-@interface SPTNavigationRoutingServiceImplementation : NSObject <SPTService>
+@interface SPTNavigationRoutingServiceImplementation : NSObject <SPTNavigationRoutingService>
 {
     id <SPTContainerService> _containerService;
     id <SPTCoreService> _coreService;
@@ -19,9 +19,11 @@
     SPTNavigationRoutingLoginStateMonitor *_loginStateMonitor;
     SPTPageRegistryURISubtypeHandler *_URISubtypeHandler;
     SPTNavigationRoutingLogger *_logger;
+    SPTObserverManager *_ubiObserverManager;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTObserverManager *ubiObserverManager; // @synthesize ubiObserverManager=_ubiObserverManager;
 @property(retain, nonatomic) SPTNavigationRoutingLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTPageRegistryURISubtypeHandler *URISubtypeHandler; // @synthesize URISubtypeHandler=_URISubtypeHandler;
 @property(retain, nonatomic) SPTNavigationRoutingLoginStateMonitor *loginStateMonitor; // @synthesize loginStateMonitor=_loginStateMonitor;
@@ -29,6 +31,8 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
+- (void)removeObserver:(id)arg1;
+- (void)addObserver:(id)arg1;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

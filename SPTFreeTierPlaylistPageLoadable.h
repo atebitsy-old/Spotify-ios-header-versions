@@ -8,14 +8,14 @@
 
 #import "SPTPageLoadable-Protocol.h"
 
-@class NSURL, SPTFreeTierPlaylistPageLoadableRequest, SPTNetworkConnectivityController;
-@protocol SPTAlgotorialSharingService, SPTPageCreationContext, SPTPlaylistPlatformPlaylistDataLoader;
+@class NSURL, SPTFreeTierPlaylistPageLoadableRequest;
+@protocol SPTAlgotorialSharingService, SPTNetworkConnectivityController, SPTPageCreationContext, SPTPlaylistPlatformPlaylistDataLoader;
 
 @interface SPTFreeTierPlaylistPageLoadable : NSObject <SPTPageLoadable>
 {
     NSURL *_playlistURL;
     CDUnknownBlockType _playlistModelFactory;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     SPTFreeTierPlaylistPageLoadableRequest *_currentRequest;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     id <SPTPageCreationContext> _pageContext;
@@ -26,7 +26,7 @@
 @property(retain, nonatomic) id <SPTPageCreationContext> pageContext; // @synthesize pageContext=_pageContext;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) SPTFreeTierPlaylistPageLoadableRequest *currentRequest; // @synthesize currentRequest=_currentRequest;
-@property(retain, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(copy, nonatomic) CDUnknownBlockType playlistModelFactory; // @synthesize playlistModelFactory=_playlistModelFactory;
 @property(retain, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 - (void).cxx_destruct;

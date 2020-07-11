@@ -6,9 +6,7 @@
 
 #import "_TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider.h"
 
-#import "SPTFreeTierPlaylistSectionDescription-Protocol.h"
-
-@interface _TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider (PlaylistTrackCloudFeatureImpl2) <SPTFreeTierPlaylistSectionDescription>
+@interface _TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider (PlaylistTrackCloudFeatureImpl2)
 - (void)willDisplaySection;
 - (id)sectionFooter;
 - (id)sectionHeader;

@@ -9,7 +9,7 @@
 #import "VISREFIntegrationManager-Protocol.h"
 
 @class NSArray, NSString, VISREFHubComponentRegistryOverrider, VISREFNavigationBarManager;
-@protocol SPTImageLoader, SPTLinkDispatcher;
+@protocol SPTImageLoader, SPTLinkDispatcher, _TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_;
 
 @interface VISREFIntegrationManagerImplementation : NSObject <VISREFIntegrationManager>
 {
@@ -18,13 +18,17 @@
     _Bool _visualRefreshSectionHeaderEnabled;
     _Bool _visualRefreshPlaylistTrackRowArtworkEnabled;
     _Bool _visualRefreshLeftAlignedTrackCloudEnabled;
+    _Bool _encoreAlbumHeaderEnabled;
     VISREFNavigationBarManager *_navigationBarManager;
     NSArray *_headerComponents;
     VISREFHubComponentRegistryOverrider *_overriddenRegistry;
     id <SPTImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
+    id <_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_> _encoreComponentFactory;
 }
 
+@property(nonatomic) _Bool encoreAlbumHeaderEnabled; // @synthesize encoreAlbumHeaderEnabled=_encoreAlbumHeaderEnabled;
+@property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) VISREFHubComponentRegistryOverrider *overriddenRegistry; // @synthesize overriddenRegistry=_overriddenRegistry;
@@ -42,8 +46,7 @@
 - (void)viewDidAppear;
 - (void)viewWillAppear;
 - (void)configureWithViewController:(id)arg1;
-- (id)initWithVisualRefreshHeaderEnabled:(_Bool)arg1 visualRefreshGreenButtonEnabled:(_Bool)arg2 visualRefreshSectionHeaderEnabled:(_Bool)arg3 visualRefreshPlaylistTrackRowArtworkEnabled:(_Bool)arg4 visualRefreshLeftAlignedTrackCloudEnabled:(_Bool)arg5 imageLoader:(id)arg6 linkDispatcher:(id)arg7;
-- (id)initWithConfigurationFromVisualRefreshFlagsService:(id)arg1 imageLoader:(id)arg2 linkDispatcher:(id)arg3;
+- (id)initWithConfigurationFromVisualRefreshFlagsService:(id)arg1 imageLoader:(id)arg2 linkDispatcher:(id)arg3 encoreComponentFactory:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

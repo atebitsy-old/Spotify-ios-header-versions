@@ -22,12 +22,12 @@
 - (void)setRememberMeModeForUsername:(id)arg1 rememberMe:(_Bool)arg2;
 - (void)forgetStoredCredentials:(id)arg1;
 - (id)serializableCredentialsAndCanonicalUsername:(id *)arg1;
-- (id)loginTaskWithAppleSignInCredential:(id)arg1 options:(id)arg2;
-- (id)loginTaskWithParentChildCredential:(id)arg1 options:(id)arg2;
-- (id)loginTaskWithOneTimeTokenCredential:(id)arg1 options:(id)arg2;
+- (id)loginTaskWithAppleSignInCredentials:(id)arg1 options:(id)arg2;
+- (id)loginTaskWithParentChildCredentials:(id)arg1 options:(id)arg2;
+- (id)loginTaskWithOneTimeTokenCredentials:(id)arg1 options:(id)arg2;
 - (id)loginTaskWithCredentials:(id)arg1 options:(id)arg2;
 - (id)loginTaskWithPhoneNumberIdentifier:(id)arg1 options:(id)arg2;
-- (id)loginTaskWithCppCredentials:(variant_0086d13d *)arg1 options:(id)arg2;
+- (id)loginTaskWithCppCredentials:(variant_217e0f36 *)arg1 options:(id)arg2;
 - (struct LoginController *)cpp;
 - (void)destroy;
 - (void)dealloc;

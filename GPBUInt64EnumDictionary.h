@@ -18,12 +18,6 @@
     CDUnknownFunctionPointerType _validationFunc;
 }
 
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1 capacity:(unsigned long long)arg2;
-+ (id)dictionaryWithDictionary:(id)arg1;
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1 rawValues:(const int *)arg2 forKeys:(const unsigned long long *)arg3 count:(unsigned long long)arg4;
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1 rawValue:(int)arg2 forKey:(unsigned long long)arg3;
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1;
-+ (id)dictionary;
 @property(readonly, nonatomic) CDUnknownFunctionPointerType validationFunc; // @synthesize validationFunc=_validationFunc;
 - (void)setEnum:(int)arg1 forKey:(unsigned long long)arg2;
 - (void)removeAll;

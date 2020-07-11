@@ -7,14 +7,12 @@
 @class UIView;
 
 @protocol SPTEncoreAlbumHeaderDelegate
+- (void)heightChangedWithTotalHeight:(double)arg1 topAccessoryViewHeight:(double)arg2;
 - (void)backButtonTappedWithSender:(UIView *)arg1;
-- (void)pauseWithSender:(UIView *)arg1;
-- (void)playWithSender:(UIView *)arg1;
+- (void)togglePlaybackWithSender:(UIView *)arg1;
 - (void)creatorTappedWithSender:(UIView *)arg1;
-- (void)cancelDownloadWithSender:(UIView *)arg1;
-- (void)downloadWithSender:(UIView *)arg1;
-- (void)unlikeWithSender:(UIView *)arg1;
-- (void)likeWithSender:(UIView *)arg1;
+- (void)toggleDownloadWithSender:(UIView *)arg1;
+- (void)toggleLikeWithSender:(UIView *)arg1;
 - (void)contextMenuTappedWithSender:(UIView *)arg1;
 @end
 

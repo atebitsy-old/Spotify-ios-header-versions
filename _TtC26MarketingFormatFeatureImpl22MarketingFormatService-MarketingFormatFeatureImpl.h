@@ -6,7 +6,9 @@
 
 #import "_TtC26MarketingFormatFeatureImpl22MarketingFormatService.h"
 
-@interface _TtC26MarketingFormatFeatureImpl22MarketingFormatService (MarketingFormatFeatureImpl)
+#import "SPTService-Protocol.h"
+
+@interface _TtC26MarketingFormatFeatureImpl22MarketingFormatService (MarketingFormatFeatureImpl) <SPTService>
 + (id)serviceIdentifier;
 - (id)provideTestHubViewController;
 - (void)unload;

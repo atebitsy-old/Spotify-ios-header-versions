@@ -8,8 +8,8 @@
 
 #import "SPTVoiceRecognitionTaskFactory-Protocol.h"
 
-@class NSString, SPTDataLoaderFactory, SPTNetworkConnectivityController, SPTVoiceTestManagerImplementation;
-@protocol SPTOfflineModeState, SPTPlayer, SPTVoiceAudioRecorderFactory;
+@class NSString, SPTDataLoaderFactory, SPTVoiceTestManagerImplementation;
+@protocol SPTNetworkConnectivityController, SPTOfflineModeState, SPTPlayer, SPTVoiceAudioRecorderFactory;
 
 @interface SPTVoiceRecognitionTaskFactoryImplementation : NSObject <SPTVoiceRecognitionTaskFactory>
 {
@@ -17,12 +17,12 @@
     id <SPTVoiceAudioRecorderFactory> _audioRecorderFactory;
     id <SPTPlayer> _player;
     SPTVoiceTestManagerImplementation *_testManager;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTOfflineModeState> _offlineModeState;
 }
 
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) SPTVoiceTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceAudioRecorderFactory> audioRecorderFactory; // @synthesize audioRecorderFactory=_audioRecorderFactory;

@@ -20,8 +20,8 @@
 @property(retain, nonatomic) NSMapTable *shelfCompletionBlocks; // @synthesize shelfCompletionBlocks=_shelfCompletionBlocks;
 @property(readonly, nonatomic) SPTShelfRegistryImplementation *shelfRegistry; // @synthesize shelfRegistry=_shelfRegistry;
 - (void).cxx_destruct;
-- (void)executeShelfActionCompletedCompletionBlockForCell:(id)arg1;
-- (void)swipeableTableViewCell:(id)arg1 didCompleteGesture:(long long)arg2 withHorizontalVelocity:(double)arg3 triggerOffset:(double)arg4;
+- (void)executeShelfActionCompletedCompletionBlockForCell:(id)arg1 placedAt:(long long)arg2;
+- (void)swipeableTableViewCell:(id)arg1 didCompleteGestureOnAShelfPlacedAt:(long long)arg2;
 - (void)setAvailableShelvesForCell:(id)arg1 withTrackURL:(id)arg2 sourceURL:(id)arg3;
 - (void)enableShelvesOnCell:(id)arg1 trackURL:(id)arg2 sourceURL:(id)arg3 shelfActionCompleted:(CDUnknownBlockType)arg4;
 - (id)initWithShelfRegistry:(id)arg1;

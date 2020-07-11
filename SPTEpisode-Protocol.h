@@ -9,32 +9,40 @@
 @class NSDate, NSString, NSURL;
 
 @protocol SPTEpisode <NSObject>
-@property(readonly, nonatomic, getter=isVideoShowMediaType) _Bool videoShowMediaType;
-@property(readonly, nonatomic, getter=isFollowingPodcast) _Bool followingPodcast;
-@property(readonly, nonatomic, getter=isExplicit) _Bool explicit;
-@property(readonly, nonatomic) double lastPlayedAt;
-@property(readonly, nonatomic, getter=isPlayed) _Bool played;
-@property(readonly, nonatomic, getter=isAvailable) _Bool available;
-@property(readonly, nonatomic, getter=isPlayable) _Bool playable;
-@property(readonly, nonatomic) long long mediaType;
-@property(readonly, copy, nonatomic) NSString *manifestId;
-@property(readonly, copy, nonatomic) NSURL *largePodcastImageURL;
-@property(readonly, copy, nonatomic) NSURL *podcastImageURL;
-@property(readonly, copy, nonatomic) NSURL *largeImageURL;
-@property(readonly, copy, nonatomic) NSURL *imageURL;
-@property(readonly, nonatomic) long long offlineSyncStatus;
-@property(readonly, copy, nonatomic) NSURL *URL;
-@property(readonly, nonatomic) double listenedDuration;
-@property(readonly, nonatomic) double duration;
-@property(readonly, copy, nonatomic) NSDate *publicationDate;
-@property(readonly, copy, nonatomic) NSString *publisherName;
-@property(readonly, copy, nonatomic) NSString *podcastTitle;
-@property(readonly, copy, nonatomic) NSURL *podcastURL;
-@property(readonly, copy, nonatomic) NSString *longDescription;
-@property(readonly, copy, nonatomic) NSString *title;
 - (NSString *)playerMediaTypeString;
 - (NSString *)localizedDate;
 - (NSString *)localizedDuration;
 - (NSString *)localizedTime;
+- (_Bool)isVideoShowMediaType;
+- (_Bool)isFollowingPodcast;
+- (_Bool)isExplicit;
+@property(nonatomic, readonly) double lastPlayedAt;
+- (_Bool)isPlayed;
+- (_Bool)isAvailable;
+- (_Bool)isPlayable;
+@property(nonatomic, readonly) long long mediaType;
+@property(nonatomic, readonly) NSString *manifestId;
+@property(nonatomic, readonly) NSURL *largePodcastImageURL;
+@property(nonatomic, readonly) NSURL *podcastImageURL;
+@property(nonatomic, readonly) NSURL *largeImageURL;
+@property(nonatomic, readonly) NSURL *imageURL;
+@property(nonatomic, readonly) long long offlineSyncStatus;
+@property(nonatomic, readonly) NSURL *URL;
+@property(nonatomic, readonly) double listenedDuration;
+@property(nonatomic, readonly) double duration;
+@property(nonatomic, readonly) NSDate *publicationDate;
+@property(nonatomic, readonly) NSString *publisherName;
+@property(nonatomic, readonly) NSString *podcastTitle;
+@property(nonatomic, readonly) NSURL *podcastURL;
+@property(nonatomic, readonly) NSString *longDescription;
+@property(nonatomic, readonly) NSString *title;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool available;
+@property(nonatomic, readonly) _Bool explicit;
+@property(nonatomic, readonly) _Bool followingPodcast;
+@property(nonatomic, readonly) _Bool playable;
+@property(nonatomic, readonly) _Bool played;
+@property(nonatomic, readonly) _Bool videoShowMediaType;
 @end
 

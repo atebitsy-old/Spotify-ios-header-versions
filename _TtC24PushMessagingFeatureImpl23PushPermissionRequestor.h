@@ -8,7 +8,7 @@
 
 @interface _TtC24PushMessagingFeatureImpl23PushPermissionRequestor : NSObject
 {
-    // Error parsing type: , name: pushPermissionListener
+    // Error parsing type: , name: pushMessagingPermissionManager
 }
 
 - (void).cxx_destruct;

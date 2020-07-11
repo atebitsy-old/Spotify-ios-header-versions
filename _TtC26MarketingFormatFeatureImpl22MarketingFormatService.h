@@ -15,6 +15,7 @@
     // Error parsing type: , name: hubService
     // Error parsing type: , name: playerService
     // Error parsing type: , name: sessionService
+    // Error parsing type: , name: shareService
     // Error parsing type: , name: uriDispatchService
     // Error parsing type: , name: hubPageRegistrationToken
     // Error parsing type: , name: $__lazy_storage_$_dependencies

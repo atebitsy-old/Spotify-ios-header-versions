@@ -8,7 +8,7 @@
 
 #import "SPTNetworkService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTHTTPService, SPTImageLoaderService, SPTImageLoaderServiceManager, SPTNetworkConnectivityController, SPTVideoURLAssetLoaderImplementation;
+@class NSString, SPTAllocationContext, SPTHTTPService, SPTImageLoaderService, SPTImageLoaderServiceManager, SPTNetworkConnectivityControllerImplementation, SPTVideoURLAssetLoaderImplementation;
 @protocol SPTContainerService, SPTCoreService, SPTImageLoaderFactory;
 
 @interface SPTNetworkServiceImplementation : NSObject <SPTNetworkService>
@@ -16,7 +16,7 @@
     id <SPTContainerService> _containerService;
     id <SPTCoreService> _coreService;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    SPTNetworkConnectivityControllerImplementation *_networkConnectivityController;
     SPTImageLoaderService *_imageLoaderService;
     SPTImageLoaderServiceManager *_imageLoaderServiceManager;
     SPTHTTPService *_httpService;
@@ -28,7 +28,7 @@
 @property(retain, nonatomic) SPTHTTPService *httpService; // @synthesize httpService=_httpService;
 @property(retain, nonatomic) SPTImageLoaderServiceManager *imageLoaderServiceManager; // @synthesize imageLoaderServiceManager=_imageLoaderServiceManager;
 @property(retain, nonatomic) SPTImageLoaderService *imageLoaderService; // @synthesize imageLoaderService=_imageLoaderService;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) SPTNetworkConnectivityControllerImplementation *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;

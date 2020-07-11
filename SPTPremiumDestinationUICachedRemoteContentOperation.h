@@ -10,15 +10,15 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSError, NSString, SPTDataLoader, SPTNetworkConnectivityController, SPTPersistentCache;
-@protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTHubRemoteContentOperationURLResolver;
+@class NSError, NSString, SPTDataLoader, SPTPersistentCache;
+@protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTHubRemoteContentOperationURLResolver, SPTNetworkConnectivityController;
 
 @interface SPTPremiumDestinationUICachedRemoteContentOperation : NSObject <SPTDataLoaderDelegate, SPTNetworkConnectivityControllerObserver, HUBContentOperation>
 {
     _Bool _observing;
     id <HUBContentOperationDelegate> _delegate;
     SPTDataLoader *_dataLoader;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTPersistentCache *_persistentCache;
     id <SPTHubRemoteContentOperationURLResolver> _contentURLResolver;
     NSString *_sourceIdentifier;
@@ -34,7 +34,7 @@
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(readonly, nonatomic) id <SPTHubRemoteContentOperationURLResolver> contentURLResolver; // @synthesize contentURLResolver=_contentURLResolver;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;

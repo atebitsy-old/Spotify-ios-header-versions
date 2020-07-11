@@ -36,6 +36,8 @@
 @property(retain, nonatomic) UIGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void).cxx_destruct;
+- (_Bool)isAccentColorSpecifiedInModel:(id)arg1;
+- (void)applyAccentColorFromModel:(id)arg1;
 - (void)didTapPlayButtonInContentView:(id)arg1;
 - (void)sendSelectionEvent;
 @property(readonly, nonatomic) UIView *selectionView;

@@ -25,6 +25,7 @@
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingNavigationBarModel> navigationBarModel; // @synthesize navigationBarModel=_navigationBarModel;
 - (void).cxx_destruct;
+- (void)navigationBarModelDidUpdateLyricsTab:(_Bool)arg1 canvasTab:(_Bool)arg2;
 - (void)navigationBarModelStateDidChange:(id)arg1;
 - (void)rightButtonPressed:(id)arg1;
 - (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;

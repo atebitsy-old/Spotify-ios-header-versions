@@ -11,8 +11,8 @@
 #import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTVoiceOutputStreamDelegate-Protocol.h"
 
-@class NSInputStream, NSMutableData, NSString, NSTimer, SPTDataLoader, SPTDataLoaderRequest, SPTNetworkConnectivityController, SPTVoiceOutputStreamHelper, SPTVoiceTestManagerImplementation;
-@protocol SPTDataLoaderCancellationToken, SPTOfflineModeState, SPTPlayer, SPTVoiceSpeechRecognitionDataLoaderDelegate;
+@class NSInputStream, NSMutableData, NSString, NSTimer, SPTDataLoader, SPTDataLoaderRequest, SPTVoiceOutputStreamHelper, SPTVoiceTestManagerImplementation;
+@protocol SPTDataLoaderCancellationToken, SPTNetworkConnectivityController, SPTOfflineModeState, SPTPlayer, SPTVoiceSpeechRecognitionDataLoaderDelegate;
 
 @interface SPTVoiceSpeechRecognitionDataLoader : NSObject <SPTVoiceOutputStreamDelegate, SPTNetworkConnectivityControllerObserver, SPTOfflineModeStateObserver, SPTDataLoaderDelegate>
 {
@@ -31,7 +31,7 @@
     NSInputStream *_inputStream;
     NSString *_boundary;
     NSTimer *_timeoutTimer;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTOfflineModeState> _offlineModeState;
     double _noResultIntervalTimeout;
     double _isFinalIntervalTimeout;
@@ -40,7 +40,7 @@
 @property(nonatomic) double isFinalIntervalTimeout; // @synthesize isFinalIntervalTimeout=_isFinalIntervalTimeout;
 @property(nonatomic) double noResultIntervalTimeout; // @synthesize noResultIntervalTimeout=_noResultIntervalTimeout;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) NSTimer *timeoutTimer; // @synthesize timeoutTimer=_timeoutTimer;
 @property(retain, nonatomic) NSString *boundary; // @synthesize boundary=_boundary;
 @property(retain, nonatomic) NSInputStream *inputStream; // @synthesize inputStream=_inputStream;

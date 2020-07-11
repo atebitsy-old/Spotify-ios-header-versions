@@ -8,14 +8,14 @@
 
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, SPTImageLoaderService, SPTLocalAVAssetImageLoaderRequestFactory, SPTLocalIPodLibraryImageLoaderRequestFactory, SPTMosaicImageRequestFactory, SPTNetworkConnectivityController;
-@protocol SPTOfflineModeState, SPTProductState;
+@class NSString, SPTImageLoaderService, SPTLocalAVAssetImageLoaderRequestFactory, SPTLocalIPodLibraryImageLoaderRequestFactory, SPTMosaicImageRequestFactory;
+@protocol SPTNetworkConnectivityController, SPTOfflineModeState, SPTProductState;
 
 @interface SPTImageLoaderServiceManager : NSObject <SPTNetworkConnectivityControllerObserver>
 {
     id <SPTProductState> _productState;
     SPTImageLoaderService *_imageLoaderService;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTOfflineModeState> _offlineModeState;
     SPTMosaicImageRequestFactory *_mosaicImageRequestFactory;
     SPTLocalIPodLibraryImageLoaderRequestFactory *_ipodImageRequestFactory;
@@ -26,7 +26,7 @@
 @property(readonly, nonatomic) SPTLocalIPodLibraryImageLoaderRequestFactory *ipodImageRequestFactory; // @synthesize ipodImageRequestFactory=_ipodImageRequestFactory;
 @property(readonly, nonatomic) SPTMosaicImageRequestFactory *mosaicImageRequestFactory; // @synthesize mosaicImageRequestFactory=_mosaicImageRequestFactory;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTImageLoaderService *imageLoaderService; // @synthesize imageLoaderService=_imageLoaderService;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;

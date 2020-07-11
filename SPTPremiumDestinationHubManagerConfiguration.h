@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class HUBComponentRegistry, NSString, SPTDataLoaderFactory, SPTNetworkConnectivityController, SPTPersistentCache, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger;
-@protocol SPTAlertInterface, SPTHubsRendererFactory, SPTHugsFactory, SPTPremiumDestinationExperiments, SPTPremiumDestinationHubComponentsFactory;
+@class HUBComponentRegistry, NSString, SPTDataLoaderFactory, SPTPersistentCache, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger;
+@protocol SPTAlertInterface, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkConnectivityController, SPTPremiumDestinationExperiments, SPTPremiumDestinationHubComponentsFactory;
 
 @interface SPTPremiumDestinationHubManagerConfiguration : NSObject
 {
@@ -18,7 +18,7 @@
     id <SPTPremiumDestinationExperiments> _premiumDestinationExperiments;
     id <SPTPremiumDestinationHubComponentsFactory> _premiumDestinationHubComponentFactory;
     SPTPremiumDestinationGLUETheme *_GLUETheme;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTDataLoaderFactory *_dataLoaderFactory;
     SPTPersistentCache *_persistentCache;
     id <SPTAlertInterface> _alertInterface;
@@ -29,7 +29,7 @@
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTPremiumDestinationGLUETheme *GLUETheme; // @synthesize GLUETheme=_GLUETheme;
 @property(retain, nonatomic) id <SPTPremiumDestinationHubComponentsFactory> premiumDestinationHubComponentFactory; // @synthesize premiumDestinationHubComponentFactory=_premiumDestinationHubComponentFactory;
 @property(retain, nonatomic) id <SPTPremiumDestinationExperiments> premiumDestinationExperiments; // @synthesize premiumDestinationExperiments=_premiumDestinationExperiments;

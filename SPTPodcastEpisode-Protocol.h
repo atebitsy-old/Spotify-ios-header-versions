@@ -12,11 +12,15 @@
 
 @protocol SPTPodcastEpisode <NSObject, SPTEpisode, NSCopying>
 + (NSString *)stringFromTimeInterval:(double)arg1;
-@property(readonly, nonatomic) double listeningProgress;
-@property(readonly, nonatomic) unsigned long long syncProgress;
-@property(readonly, nonatomic, getter=isUnplayed) _Bool unplayedEpisode;
-@property(readonly, nonatomic, getter=isNewEpisode) _Bool newEpisode;
-@property(readonly, nonatomic) _Bool inCollection;
-@property(readonly, nonatomic) unsigned long long type;
+@property(nonatomic, readonly) double listeningProgress;
+@property(nonatomic, readonly) unsigned long long syncProgress;
+- (_Bool)isUnplayed;
+- (_Bool)isNewEpisode;
+@property(nonatomic, readonly) _Bool inCollection;
+@property(nonatomic, readonly) unsigned long long type;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool newEpisode;
+@property(nonatomic, readonly) _Bool unplayedEpisode;
 @end
 

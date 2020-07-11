@@ -14,7 +14,6 @@
 
 @interface SPTNowPlayingTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTNowPlayingTestManager>
 {
-    _Bool isContentLayerLyricsActive;
     _Bool _freeTierEnabled;
     _Bool _localBansEnabled;
     _Bool _noSkipLimitEnabled;
@@ -22,7 +21,7 @@
     _Bool _nowPlayingBarImprovementsEnabled;
     _Bool _contextAwareEditorialTrackSharingEnabled;
     _Bool _isNowPlayingBarLyricsLabelEnabled;
-    _Bool _isContentLayerLyricsEnabled;
+    _Bool _isContentLayerLyricsButtonEnabled;
     _Bool _isContentLayerLyricsTabEnabled;
     _Bool _isLyricsUpsellPopupEnabled;
     _Bool _pivotsTestEnabled;
@@ -45,7 +44,7 @@
     id <SPTLocalSettings> _localSettings;
     SPTNowPlayingScrollConfiguration *_scrollConfiguration;
     id <SPTFeatureFlagSignal> _lyricsNPBLabelSignal;
-    id <SPTFeatureFlagSignal> _lyricsContentLayerSignal;
+    id <SPTFeatureFlagSignal> _lyricsContentLayerButtonSignal;
     id <SPTFeatureFlagSignal> _contentLayerLyricsTabSignal;
     id <SPTFeatureFlagSignal> _lyricsUpsellPopupSignal;
 }
@@ -58,8 +57,8 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsUpsellPopupSignal; // @synthesize lyricsUpsellPopupSignal=_lyricsUpsellPopupSignal;
 @property(nonatomic) _Bool isContentLayerLyricsTabEnabled; // @synthesize isContentLayerLyricsTabEnabled=_isContentLayerLyricsTabEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> contentLayerLyricsTabSignal; // @synthesize contentLayerLyricsTabSignal=_contentLayerLyricsTabSignal;
-@property(nonatomic) _Bool isContentLayerLyricsEnabled; // @synthesize isContentLayerLyricsEnabled=_isContentLayerLyricsEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsContentLayerSignal; // @synthesize lyricsContentLayerSignal=_lyricsContentLayerSignal;
+@property(nonatomic) _Bool isContentLayerLyricsButtonEnabled; // @synthesize isContentLayerLyricsButtonEnabled=_isContentLayerLyricsButtonEnabled;
+@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsContentLayerButtonSignal; // @synthesize lyricsContentLayerButtonSignal=_lyricsContentLayerButtonSignal;
 @property(nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled; // @synthesize isNowPlayingBarLyricsLabelEnabled=_isNowPlayingBarLyricsLabelEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsNPBLabelSignal; // @synthesize lyricsNPBLabelSignal=_lyricsNPBLabelSignal;
 @property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
@@ -83,7 +82,6 @@
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(readonly, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) SPTNowPlayingFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
-@property(nonatomic) _Bool isContentLayerLyricsActive; // @synthesize isContentLayerLyricsActive;
 - (void).cxx_destruct;
 - (void)updateCurrentScrollConfiguration;
 - (void)updateEnabledScrollFlagsWithEnabledSignal:(id)arg1;
@@ -106,6 +104,7 @@
 @property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventLoggingEnabled) _Bool remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
+@property(readonly, nonatomic, getter=isMixedMediaEpisodeModeEnabled) _Bool mixedMediaEpisodeModeEnabled;
 - (_Bool)isSamplesTestEnabled;
 - (_Bool)isPodcastInspectorTestEnabled;
 - (void)setupRemoteConfiguration;

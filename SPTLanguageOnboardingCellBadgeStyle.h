@@ -19,11 +19,12 @@
     struct CGSize _imageIconSize;
 }
 
-@property(nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
-@property(nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
+@property(retain, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
+@property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) struct CGSize imageIconSize; // @synthesize imageIconSize=_imageIconSize;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
+- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

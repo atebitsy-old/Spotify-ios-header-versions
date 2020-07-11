@@ -8,11 +8,12 @@
 
 #import "SPTVideoURLAssetLoader-Protocol.h"
 
-@class NSString, NSURLSession, SPTNetworkConnectivityController, SPTRequestAccounting;
+@class NSString, NSURLSession, SPTRequestAccounting;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTVideoURLAssetLoaderImplementation : NSObject <SPTVideoURLAssetLoader>
 {
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTRequestAccounting *_requestAccountant;
     NSString *_serviceIdentifier;
     NSURLSession *_urlSession;
@@ -21,7 +22,7 @@
 @property(readonly, nonatomic) NSURLSession *urlSession; // @synthesize urlSession=_urlSession;
 @property(readonly, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
 @property(readonly, nonatomic) SPTRequestAccounting *requestAccountant; // @synthesize requestAccountant=_requestAccountant;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 - (void).cxx_destruct;
 - (void)prepareAssetWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)downloadAssetWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;

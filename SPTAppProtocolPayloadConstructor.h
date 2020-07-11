@@ -21,6 +21,8 @@
 + (id)propertyListRepresentationOfItems:(id)arg1 inRange:(struct _NSRange)arg2 ofTotalLength:(unsigned long long)arg3 playbackController:(id)arg4;
 + (id)searchSectionItemForTitle:(id)arg1 identifier:(id)arg2 children:(id)arg3 playbackController:(id)arg4;
 + (id)constructSearchPayloadFromSearchContent:(id)arg1 playbackController:(id)arg2;
++ (id)playerQueueItemPayloadFromPlayerTrack:(id)arg1;
++ (id)constructPlayerQueuePayloadFromPlayerQueue:(id)arg1;
 + (id)constructPlayQueuePayloadFromPlayQueue:(id)arg1 playbackController:(id)arg2;
 + (id)constructGetSavedPayloadWithURI:(id)arg1 saved:(_Bool)arg2 canSave:(_Bool)arg3;
 + (id)currentRepresentationOfUserCapabilitiesCanPlayOnDemand:(_Bool)arg1;

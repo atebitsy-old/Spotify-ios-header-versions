@@ -40,6 +40,7 @@
 + (id)glue_colorFromARGBHexString:(id)arg1;
 + (id)glue_colorFromRGBAHexString:(id)arg1;
 + (id)glue_colorFromHexString:(id)arg1 alpha:(double)arg2;
++ (_Bool)spt_isValidHexColor:(id)arg1;
 + (id)spt_colorFromHexString:(id)arg1;
 + (id)spt_colorForSeed:(unsigned long long)arg1;
 + (id)LOT_colorByLerpingFromColor:(id)arg1 toColor:(id)arg2 amount:(double)arg3;

@@ -6,8 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTNetworkConnectivityController;
-@protocol SPTAgeVerificationProvider, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTExplicitContentAccessManager, SPTFollowModelFactory, SPTFreeTierArtistTestManager, SPTHubContentOperationFactory, SPTOnDemandService, SPTOnDemandTrialService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTProductState;
+@protocol SPTAgeVerificationProvider, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTExplicitContentAccessManager, SPTFollowModelFactory, SPTFreeTierArtistTestManager, SPTHubContentOperationFactory, SPTNetworkConnectivityController, SPTOnDemandService, SPTOnDemandTrialService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTProductState;
 
 @interface SPTFreeTierArtistContentOperationFactory : NSObject
 {
@@ -15,7 +14,7 @@
     id <SPTPlayerFeature> _playerService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTOnDemandTrialService> _onDemandTrialService;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTFollowModelFactory> _followModelFactory;
     id <SPTProductState> _productState;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
@@ -34,7 +33,7 @@
 @property(readonly, nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) __weak id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
-@property(readonly, nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTOnDemandTrialService> onDemandTrialService; // @synthesize onDemandTrialService=_onDemandTrialService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;

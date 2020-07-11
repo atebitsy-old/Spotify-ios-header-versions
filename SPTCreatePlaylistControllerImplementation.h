@@ -11,7 +11,7 @@
 #import "UITextFieldDelegate-Protocol.h"
 
 @class NSString, SPTCreatePlaylistGLUETheme;
-@protocol SPTCreatePlaylistControllerDelegate, SPTCreatePlaylistTestManager, SPTCreatePlaylistViewModel, SPTFreeTierPresentationModalPresenter;
+@protocol SPTAlertInterface, SPTCreatePlaylistControllerDelegate, SPTCreatePlaylistTestManager, SPTCreatePlaylistViewModel, SPTFreeTierPresentationModalPresenter;
 
 @interface SPTCreatePlaylistControllerImplementation : NSObject <UITextFieldDelegate, SPTCreatePlaylistController, SPTCreatePlaylistViewModelDelegate>
 {
@@ -20,8 +20,12 @@
     SPTCreatePlaylistGLUETheme *_theme;
     id <SPTCreatePlaylistTestManager> _testManager;
     id <SPTFreeTierPresentationModalPresenter> _modalPresenter;
+    id <SPTAlertInterface> _alertInterface;
+    NSString *_currentTextFieldText;
 }
 
+@property(copy, nonatomic) NSString *currentTextFieldText; // @synthesize currentTextFieldText=_currentTextFieldText;
+@property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTFreeTierPresentationModalPresenter> modalPresenter; // @synthesize modalPresenter=_modalPresenter;
 @property(retain, nonatomic) id <SPTCreatePlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTCreatePlaylistGLUETheme *theme; // @synthesize theme=_theme;
@@ -34,7 +38,7 @@
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)showRenamePlaylistAlert;
 - (void)showCreatePlaylistAlert;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 testManager:(id)arg3 modalPresenter:(id)arg4;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 testManager:(id)arg3 modalPresenter:(id)arg4 alertInterface:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

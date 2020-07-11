@@ -11,8 +11,8 @@
 #import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSMutableArray, NSMutableDictionary, NSString, SPTDataLoaderExponentialTimer, SPTHermesController, SPTHermesRequest, SPTNetworkConnectivityController, SPTStartupTracer;
-@protocol SPTDataLoaderAuthoriserDelegate, SPTOfflineModeState, SPTProductState;
+@class NSMutableArray, NSMutableDictionary, NSString, SPTDataLoaderExponentialTimer, SPTHermesController, SPTHermesRequest, SPTStartupTracer;
+@protocol SPTDataLoaderAuthoriserDelegate, SPTNetworkConnectivityController, SPTOfflineModeState, SPTProductState;
 
 @interface SPTDataLoaderKeymasterAuthoriser : NSObject <SPTProductStateObserver, SPTOfflineModeStateObserver, SPTDataLoaderAuthoriser, SPTDataLoaderAuthorisationHostRegistration>
 {
@@ -21,7 +21,7 @@
     NSString *_identifier;
     id <SPTDataLoaderAuthoriserDelegate> _delegate;
     SPTHermesController *_hermesController;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTStartupTracer *_startupTracer;
     id <SPTProductState> _productState;
     id <SPTOfflineModeState> _offlineModeState;
@@ -48,7 +48,7 @@
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 @property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;

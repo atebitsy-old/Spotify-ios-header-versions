@@ -9,12 +9,12 @@
 #import "SPSessionObserver-Protocol.h"
 #import "SPTIncognitoModeHandlerObserver-Protocol.h"
 
-@class NSString, SPCore, SPSession, SPTIncognitoModeHandler, SPTNetworkConnectivityController;
-@protocol SPTAlertInterface, SPTLogCenter;
+@class NSString, SPCore, SPSession, SPTIncognitoModeHandler;
+@protocol SPTAlertInterface, SPTLogCenter, SPTNetworkConnectivityController;
 
 @interface SPTSessionObserver : NSObject <SPSessionObserver, SPTIncognitoModeHandlerObserver>
 {
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPCore *_core;
     SPSession *_session;
     SPTIncognitoModeHandler *_incognitoModeHandler;
@@ -27,7 +27,7 @@
 @property(nonatomic) __weak SPTIncognitoModeHandler *incognitoModeHandler; // @synthesize incognitoModeHandler=_incognitoModeHandler;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 - (void).cxx_destruct;
 - (void)showDialogWithTitle:(id)arg1 message:(id)arg2;
 - (void)showDialogOfflineLicenseLost;

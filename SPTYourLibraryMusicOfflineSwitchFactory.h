@@ -6,17 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@class SPTNetworkConnectivityController;
-@protocol SPTModalPresentationController, SPTProductState;
+@protocol SPTModalPresentationController, SPTNetworkConnectivityController, SPTProductState;
 
 @interface SPTYourLibraryMusicOfflineSwitchFactory : NSObject
 {
     id <SPTProductState> _productState;
     id <SPTModalPresentationController> _modalPresentationController;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;

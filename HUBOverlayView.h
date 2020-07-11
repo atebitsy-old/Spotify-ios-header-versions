@@ -31,6 +31,7 @@
 - (void)componentViewManager:(id)arg1 componentViewDidDisappear:(id)arg2;
 - (void)componentViewManager:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)updateOverlayInteractivity;
+- (void)componentViewsDidDisappear;
 - (void)componentViewsWillAppear;
 - (void)configureComponentViews;
 - (void)applyContentInsets;

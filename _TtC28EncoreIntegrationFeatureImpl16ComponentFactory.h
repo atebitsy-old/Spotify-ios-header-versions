@@ -12,10 +12,13 @@
     // Error parsing type: , name: $__lazy_storage_$_trackRow
     // Error parsing type: , name: $__lazy_storage_$_artistTrackRow
     // Error parsing type: , name: $__lazy_storage_$_playlistExtenderRow
+    // Error parsing type: , name: $__lazy_storage_$_albumHeader
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)makeAlbumHeader:(long long)arg1;
+- (id)makeAlbumHeader;
 - (id)makePlaylistExtenderRow:(long long)arg1;
 - (id)makePlaylistExtenderRow;
 - (id)makeTrackRowArtist:(long long)arg1;

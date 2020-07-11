@@ -8,13 +8,13 @@
 
 #import "SPTURISubtypeHandler-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
-@protocol SPTGoogleAppFlipAuthorizer, SPTGoogleAppFlipParameterValidator, SPTGoogleAppFlipURIManager, SPTURIDispatchService;
+@class NSString;
+@protocol SPTGoogleAppFlipAuthorizer, SPTGoogleAppFlipParameterValidator, SPTGoogleAppFlipURIManager, SPTNetworkConnectivityController, SPTURIDispatchService;
 
 @interface SPTGoogleAppFlipURISubtypeManager : NSObject <SPTURISubtypeHandler>
 {
     id <SPTURIDispatchService> _uriDispatchService;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTGoogleAppFlipParameterValidator> _validator;
     id <SPTGoogleAppFlipURIManager> _uriManager;
     id <SPTGoogleAppFlipAuthorizer> _authorizer;
@@ -23,7 +23,7 @@
 @property(retain, nonatomic) id <SPTGoogleAppFlipAuthorizer> authorizer; // @synthesize authorizer=_authorizer;
 @property(retain, nonatomic) id <SPTGoogleAppFlipURIManager> uriManager; // @synthesize uriManager=_uriManager;
 @property(retain, nonatomic) id <SPTGoogleAppFlipParameterValidator> validator; // @synthesize validator=_validator;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 - (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;

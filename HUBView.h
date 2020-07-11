@@ -47,6 +47,8 @@
 - (void)applyComponentModelDiff:(id)arg1;
 @property(nonatomic) _Bool adjustsTargetContentOffset;
 - (void)setContentOffset:(struct CGPoint)arg1 animated:(_Bool)arg2;
+- (void)componentViewsDidDisappear;
+- (void)componentViewsWillAppear;
 - (void)removeContentOffsetObserver:(id)arg1;
 - (void)addContentOffsetObserver:(id)arg1;
 - (void)setBackgroundColor:(id)arg1;

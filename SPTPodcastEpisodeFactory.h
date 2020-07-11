@@ -14,6 +14,7 @@
 {
 }
 
+- (id)podcastDisplayableStringFromDictionary:(id)arg1 usingKey:(id)arg2;
 - (unsigned long long)episodeTypeFromNumber:(id)arg1;
 - (unsigned long long)episodeTypeFromString:(id)arg1;
 - (unsigned long long)episodeTypeFromDictionary:(id)arg1;

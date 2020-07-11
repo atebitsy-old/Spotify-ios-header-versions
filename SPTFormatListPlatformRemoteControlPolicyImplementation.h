@@ -84,7 +84,6 @@
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 - (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
-- (void)logFeedbackForTrack:(id)arg1 context:(id)arg2;
 - (id)filterURL:(id)arg1 reason:(id)arg2;
 - (void)refreshState;
 - (void)notifyObserversOfChange;

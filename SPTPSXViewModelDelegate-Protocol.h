@@ -7,10 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @class NSError;
-@protocol SPTFollowShelfFactory, SPTPSXViewModel;
+@protocol SPTPSXViewModel;
 
 @protocol SPTPSXViewModelDelegate <NSObject>
-- (void)viewModelDidUpdateArtistRecommendations:(id <SPTPSXViewModel>)arg1 withFactory:(id <SPTFollowShelfFactory>)arg2;
 - (void)viewModelDidUpdateOfflineStatus:(id <SPTPSXViewModel>)arg1;
 - (void)viewModel:(id <SPTPSXViewModel>)arg1 didUpdateFollowStatus:(_Bool)arg2;
 - (void)viewModel:(id <SPTPSXViewModel>)arg1 didUpdateFollowerCount:(long long)arg2;

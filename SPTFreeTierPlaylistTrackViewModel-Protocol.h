@@ -9,31 +9,40 @@
 @class NSArray, NSDate, NSDictionary, NSString, NSURL;
 
 @protocol SPTFreeTierPlaylistTrackViewModel <NSObject>
-@property(readonly, nonatomic) NSString *ownerName;
-@property(readonly, copy, nonatomic) NSString *rowId;
-@property(readonly, copy, nonatomic) NSDictionary *formatListAttributes;
-@property(readonly, nonatomic) double duration;
-@property(readonly, nonatomic) _Bool isPlayed;
-@property(readonly, nonatomic) double timeLeft;
-@property(readonly, nonatomic) NSDate *publishDate;
-@property(readonly, copy, nonatomic) NSString *podcastTitle;
-@property(readonly, nonatomic) long long offlineSyncStatus;
-@property(readonly, nonatomic) NSString *freeformDescription;
-@property(readonly, nonatomic) NSURL *videoThumbnailURL;
-@property(readonly, nonatomic, getter=isEpisode) _Bool episode;
-@property(readonly, nonatomic, getter=isVideo) _Bool video;
-@property(readonly, nonatomic, getter=isBanned) _Bool banned;
-@property(readonly, nonatomic, getter=isLiked) _Bool liked;
-@property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
-@property(readonly, nonatomic, getter=isActive) _Bool active;
-@property(readonly, nonatomic) unsigned long long restriction;
-@property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly;
-@property(readonly, copy, nonatomic) NSArray *artistNames;
-@property(readonly, copy, nonatomic) NSArray *artists;
-@property(readonly, nonatomic) NSURL *albumURL;
-@property(readonly, copy, nonatomic) NSString *albumName;
-@property(readonly, nonatomic) NSURL *imageURL;
-@property(readonly, nonatomic) NSURL *URL;
-@property(readonly, copy, nonatomic) NSString *title;
+@property(nonatomic, readonly) NSString *ownerName;
+@property(nonatomic, readonly) NSString *rowId;
+@property(nonatomic, readonly) NSDictionary *formatListAttributes;
+@property(nonatomic, readonly) double duration;
+@property(nonatomic, readonly) _Bool isPlayed;
+@property(nonatomic, readonly) double timeLeft;
+@property(nonatomic, readonly) NSDate *publishDate;
+@property(nonatomic, readonly) NSString *podcastTitle;
+@property(nonatomic, readonly) long long offlineSyncStatus;
+@property(nonatomic, readonly) NSString *freeformDescription;
+@property(nonatomic, readonly) NSURL *videoThumbnailURL;
+- (_Bool)isEpisode;
+- (_Bool)isVideo;
+- (_Bool)isBanned;
+- (_Bool)isLiked;
+- (_Bool)isEnabled;
+- (_Bool)isActive;
+@property(nonatomic, readonly) unsigned long long restriction;
+- (_Bool)isPremiumOnly;
+@property(nonatomic, readonly) NSArray *artistNames;
+@property(nonatomic, readonly) NSArray *artists;
+@property(nonatomic, readonly) NSURL *albumURL;
+@property(nonatomic, readonly) NSString *albumName;
+@property(nonatomic, readonly) NSURL *imageURL;
+@property(nonatomic, readonly) NSURL *URL;
+@property(nonatomic, readonly) NSString *title;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool active;
+@property(nonatomic, readonly) _Bool banned;
+@property(nonatomic, readonly) _Bool enabled;
+@property(nonatomic, readonly) _Bool episode;
+@property(nonatomic, readonly) _Bool liked;
+@property(nonatomic, readonly) _Bool premiumOnly;
+@property(nonatomic, readonly) _Bool video;
 @end
 

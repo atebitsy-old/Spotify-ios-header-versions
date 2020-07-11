@@ -47,7 +47,6 @@
 - (void).cxx_destruct;
 - (void)socialListeningIntegrationManagerUpdated:(id)arg1;
 - (void)dealloc;
-- (void)logImpression;
 - (id)inactiveFontColor;
 - (id)activeFontColor;
 - (id)createColor;

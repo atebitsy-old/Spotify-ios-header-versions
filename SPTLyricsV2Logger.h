@@ -7,10 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSString;
-@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileLyricsEventFactory;
+@protocol SPTEventSender, SPTLogCenter, SPTUBILogger, SPTUBIMobileLyricsEventFactory;
 
 @interface SPTLyricsV2Logger : NSObject
 {
+    id <SPTEventSender> _eventSender;
     id <SPTLogCenter> _logCenter;
     id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileLyricsEventFactory> _ubiEventFactory;
@@ -21,7 +22,9 @@
 @property(readonly, nonatomic) id <SPTUBIMobileLyricsEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
+- (void)sendUserSawEnoughCharactersGabitoEventWithTrackURI:(id)arg1 lyricsFormat:(id)arg2;
 - (id)playPauseButtonFactoryForURI:(id)arg1;
 - (id)fullscreenViewFactoryForURI:(id)arg1;
 - (id)cardViewFactoryForURI:(id)arg1;
@@ -37,7 +40,7 @@
 - (void)logUserSawEnoughCharactersOnFullscreenWithTrackURI:(id)arg1;
 - (void)logUserSawEnoughCharactersOnCardWithTrackURI:(id)arg1;
 - (void)logUserSawFullscreenForTrackURI:(id)arg1;
-- (id)initWithFeatureId:(id)arg1 logCenter:(id)arg2 ubiEventFactory:(id)arg3 ubiLogger:(id)arg4;
+- (id)initWithFeatureId:(id)arg1 logCenter:(id)arg2 ubiEventFactory:(id)arg3 ubiLogger:(id)arg4 eventSender:(id)arg5;
 
 @end
 

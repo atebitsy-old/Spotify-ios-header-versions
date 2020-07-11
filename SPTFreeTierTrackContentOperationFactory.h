@@ -6,20 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class SPTNetworkConnectivityController;
-@protocol SPTHubContentOperationFactory, SPTOnDemandService, SPTPlayerFeature, VISREFIntegrationManager;
+@protocol SPTHubContentOperationFactory, SPTNetworkConnectivityController, SPTOnDemandService, SPTPlayerFeature, VISREFIntegrationManager;
 
 @interface SPTFreeTierTrackContentOperationFactory : NSObject
 {
     id <SPTHubContentOperationFactory> _hubContentOperationFactory;
     id <SPTOnDemandService> _onDemandService;
     id <SPTPlayerFeature> _playerService;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <VISREFIntegrationManager> _visualRefreshIntegrationManager;
 }
 
 @property(retain, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
-@property(readonly, nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;

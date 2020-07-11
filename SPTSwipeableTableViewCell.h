@@ -43,11 +43,15 @@
 - (void)resetContainerFromPoint:(struct CGPoint)arg1 subjectToInertia:(_Bool)arg2 horizontalVelocity:(double)arg3 withCompletionBlock:(CDUnknownBlockType)arg4;
 - (void)moveContainerWithHorizontalTranslation:(double)arg1 horizontalVelocity:(double)arg2;
 - (double)percentageFromOffset:(double)arg1;
+- (long long)shelfPositionFromGesture:(long long)arg1;
+- (long long)gestureFromShelfPosition:(long long)arg1;
 - (void)removeShelfForGesture:(long long)arg1;
 - (void)setShelf:(id)arg1 forGesture:(long long)arg2;
+- (void)setShelf:(id)arg1 atPosition:(long long)arg2;
 - (id)shelfForOffset:(double)arg1;
 - (id)oppositeShelfForGesture:(long long)arg1;
 - (id)shelfForGesture:(long long)arg1;
+- (id)shelfPlacedAt:(long long)arg1;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)setHighlighted:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)setBackgroundView:(id)arg1;

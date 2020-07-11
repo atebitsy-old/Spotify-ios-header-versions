@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolConnectionHandler, SPTNetworkConnectivityController;
-@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTPreferences;
+@class SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolConnectionHandler;
+@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTNetworkConnectivityController, SPTPreferences;
 
 @interface SPTAppProtocolCallMessageHandler : NSObject
 {
@@ -16,7 +16,7 @@
     SPSession *_session;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     SPTAccessory *_currentAccessory;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     SPTAppProtocolBlockBasedImageLoader *_blockBasedImageLoader;
     id <SPTPreferences> _preferences;
@@ -29,7 +29,7 @@
 @property(readonly, nonatomic) __weak id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(readonly, nonatomic) SPTAppProtocolBlockBasedImageLoader *blockBasedImageLoader; // @synthesize blockBasedImageLoader=_blockBasedImageLoader;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;

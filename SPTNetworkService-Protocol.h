@@ -6,8 +6,8 @@
 
 #import "SPTService-Protocol.h"
 
-@class SPTDataLoaderFactory, SPTDataLoaderService, SPTHTTPService, SPTHermesController, SPTImageLoaderService, SPTImageLoaderServiceManager, SPTNetworkConnectivityController;
-@protocol SPTImageLoaderFactory, SPTReachabilityMonitor, SPTVideoURLAssetLoader;
+@class SPTDataLoaderFactory, SPTDataLoaderService, SPTHTTPService, SPTHermesController, SPTImageLoaderService, SPTImageLoaderServiceManager;
+@protocol SPTImageLoaderFactory, SPTNetworkConnectivityController, SPTReachabilityMonitor, SPTVideoURLAssetLoader;
 
 @protocol SPTNetworkService <SPTService>
 - (void)invalidateSessionFactories;
@@ -19,7 +19,7 @@
 - (id <SPTVideoURLAssetLoader>)provideVideoAssetLoaderWithHTTPMaximumConnectionsPerHost:(long long)arg1 timeoutIntervalForRequest:(double)arg2 timeoutIntervalForResource:(double)arg3;
 - (id <SPTVideoURLAssetLoader>)provideVideoAssetLoader;
 - (SPTImageLoaderService *)provideImageLoaderService;
-- (SPTNetworkConnectivityController *)provideNetworkConnectivityController;
+- (id <SPTNetworkConnectivityController>)provideNetworkConnectivityController;
 - (id <SPTImageLoaderFactory>)provideImageLoaderFactory;
 - (SPTDataLoaderFactory *)provideDataLoaderFactory;
 @end

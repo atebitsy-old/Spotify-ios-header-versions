@@ -39,7 +39,7 @@
 @property(nonatomic) _Bool usesSecondaryDisplayStyle; // @synthesize usesSecondaryDisplayStyle=_usesSecondaryDisplayStyle;
 @property(nonatomic) _Bool loggedIn; // @synthesize loggedIn=_loggedIn;
 @property(nonatomic, getter=isAnimating) _Bool animating; // @synthesize animating=_animating;
-@property(nonatomic) NSURL *imageViewUrl; // @synthesize imageViewUrl=_imageViewUrl;
+@property(retain, nonatomic) NSURL *imageViewUrl; // @synthesize imageViewUrl=_imageViewUrl;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) long long imageViewIcon; // @synthesize imageViewIcon=_imageViewIcon;
 @property(nonatomic) long long subtitleAccessoryIcon; // @synthesize subtitleAccessoryIcon=_subtitleAccessoryIcon;

@@ -9,13 +9,16 @@
 @class NSString, NSURL;
 
 @protocol SPTShow <NSObject>
-@property(readonly, nonatomic) unsigned long long mediaType;
-@property(readonly, nonatomic, getter=isFollowing) _Bool following;
-@property(readonly, nonatomic) NSURL *imageURL;
-@property(readonly, nonatomic) NSURL *latestPlayedEpisodeURL;
-@property(readonly, nonatomic) NSURL *URL;
-@property(readonly, nonatomic) NSString *publisher;
-@property(readonly, nonatomic) NSString *descriptionText;
-@property(readonly, nonatomic) NSString *title;
+@property(nonatomic, readonly) unsigned long long mediaType;
+- (_Bool)isFollowing;
+@property(nonatomic, readonly) NSURL *imageURL;
+@property(nonatomic, readonly) NSURL *latestPlayedEpisodeURL;
+@property(nonatomic, readonly) NSURL *URL;
+@property(nonatomic, readonly) NSString *publisher;
+@property(nonatomic, readonly) NSString *descriptionText;
+@property(nonatomic, readonly) NSString *title;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool following;
 @end
 

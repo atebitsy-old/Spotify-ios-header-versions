@@ -9,6 +9,7 @@
 @class NSString;
 
 @protocol SPTURIDispatchContext <NSObject>
+@property(readonly, copy, nonatomic) NSString *interactionID;
 @property(readonly, nonatomic, getter=isLoggedIn) _Bool loggedIn;
 @property(readonly, nonatomic) _Bool shouldSuppressAnimations;
 @property(readonly, nonatomic) _Bool popStackIfPossible;

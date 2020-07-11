@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: loop
     // Error parsing type: , name: pushListener
-    // Error parsing type: , name: permissionListener
     // Error parsing type: , name: pushRegistrar
     // Error parsing type: , name: navRouter
     // Error parsing type: , name: broadcaster

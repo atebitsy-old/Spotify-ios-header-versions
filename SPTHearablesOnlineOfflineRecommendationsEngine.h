@@ -8,17 +8,17 @@
 
 #import "SPTHearablesRecommendationEngine-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
-@protocol SPTHearablesRecommendationEngine;
+@class NSString;
+@protocol SPTHearablesRecommendationEngine, SPTNetworkConnectivityController;
 
 @interface SPTHearablesOnlineOfflineRecommendationsEngine : NSObject <SPTHearablesRecommendationEngine>
 {
     id <SPTHearablesRecommendationEngine> _onlineRecommendations;
     id <SPTHearablesRecommendationEngine> _offlineRecommendations;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
 }
 
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(readonly, nonatomic) id <SPTHearablesRecommendationEngine> offlineRecommendations; // @synthesize offlineRecommendations=_offlineRecommendations;
 @property(readonly, nonatomic) id <SPTHearablesRecommendationEngine> onlineRecommendations; // @synthesize onlineRecommendations=_onlineRecommendations;
 - (void).cxx_destruct;

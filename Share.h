@@ -15,9 +15,11 @@
 + (id)descriptor;
 
 // Remaining properties
+@property(copy, nonatomic) NSString *capability; // @dynamic capability;
 @property(copy, nonatomic) NSString *creatorUri; // @dynamic creatorUri;
 @property(copy, nonatomic) NSString *destinationId; // @dynamic destinationId;
 @property(copy, nonatomic) NSString *entityUri; // @dynamic entityUri;
+@property(nonatomic) _Bool hasCapability; // @dynamic hasCapability;
 @property(nonatomic) _Bool hasCreatorUri; // @dynamic hasCreatorUri;
 @property(nonatomic) _Bool hasDestinationId; // @dynamic hasDestinationId;
 @property(nonatomic) _Bool hasEntityUri; // @dynamic hasEntityUri;

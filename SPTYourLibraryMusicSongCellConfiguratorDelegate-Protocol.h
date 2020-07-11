@@ -11,7 +11,7 @@
 @protocol SPTYourLibraryMusicSongCellConfiguratorDelegate <NSObject>
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 mainSectionHeaderButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 trailingSectionHeaderButton:(UIView *)arg2;
-- (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 didSwipeCell:(UITableViewCell *)arg2;
+- (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 didSwipeCell:(UITableViewCell *)arg2 shelfPosition:(long long)arg3;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 updatedAudioPreview:(GLUETrackPreview *)arg2 playing:(_Bool)arg3 isOriginCoverItem:(_Bool)arg4;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 banButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 likeButton:(UIView *)arg2;

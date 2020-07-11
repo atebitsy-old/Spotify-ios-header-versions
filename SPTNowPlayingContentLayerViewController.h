@@ -29,14 +29,14 @@
     SPTNowPlayingShowsFormatOverlayView *_overlayView;
     UIViewController *_contentDecorationViewController;
     NSMutableSet *_unconfiguredIndexPaths;
-    NSArray *_contentDecorationVerticalVideoConstraints;
-    NSArray *_contentDecorationLandscapeVideoConstraints;
+    NSArray *_contentDecorationFullscreenContentConstraints;
+    NSArray *_contentDecorationWindowedContentConstraints;
     struct UIEdgeInsets _windowedContentInsets;
 }
 
 @property(nonatomic) _Bool isScrolling; // @synthesize isScrolling=_isScrolling;
-@property(copy, nonatomic) NSArray *contentDecorationLandscapeVideoConstraints; // @synthesize contentDecorationLandscapeVideoConstraints=_contentDecorationLandscapeVideoConstraints;
-@property(copy, nonatomic) NSArray *contentDecorationVerticalVideoConstraints; // @synthesize contentDecorationVerticalVideoConstraints=_contentDecorationVerticalVideoConstraints;
+@property(copy, nonatomic) NSArray *contentDecorationWindowedContentConstraints; // @synthesize contentDecorationWindowedContentConstraints=_contentDecorationWindowedContentConstraints;
+@property(copy, nonatomic) NSArray *contentDecorationFullscreenContentConstraints; // @synthesize contentDecorationFullscreenContentConstraints=_contentDecorationFullscreenContentConstraints;
 @property(retain, nonatomic) NSMutableSet *unconfiguredIndexPaths; // @synthesize unconfiguredIndexPaths=_unconfiguredIndexPaths;
 @property(retain, nonatomic) UIViewController *contentDecorationViewController; // @synthesize contentDecorationViewController=_contentDecorationViewController;
 @property(retain, nonatomic) SPTNowPlayingShowsFormatOverlayView *overlayView; // @synthesize overlayView=_overlayView;
@@ -81,6 +81,8 @@
 - (id)cellAsCoverArtCell:(id)arg1;
 - (void)updateContentDecorationViewControllerFrame;
 - (_Bool)isShowingOverlayForCurrentPage;
+- (void)refreshContentDecorationFullscreenContentConstraints;
+- (void)refreshContentDecorationWindowedContentConstraints;
 @property(readonly, nonatomic) _Bool shouldTrackIdlePeriodChanges;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

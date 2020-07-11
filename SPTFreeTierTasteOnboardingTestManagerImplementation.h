@@ -9,7 +9,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTFreeTierTasteOnboardingTestManager-Protocol.h"
 
-@class NSString;
+@class NSString, SPTFreeTierTasteOnboardingFeatureProperties;
 @protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTLocalSettings;
 
 @interface SPTFreeTierTasteOnboardingTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTFreeTierTasteOnboardingTestManager>
@@ -17,18 +17,17 @@
     _Bool _tasteOnboardingFirstTimeFlowEnabled;
     _Bool _tasteOnboardingFirstTimeFlowForcedEnabled;
     _Bool _onboardingCoordinationEnabled;
-    _Bool _deeplinkBasedSkipEnabled;
     _Bool _deeplinkAdBasedSkipEnabled;
     _Bool _podcastInFirstTimeFlowEnabled;
     _Bool _podcastInFirstTimeFlowExperimentOn;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTLocalSettings> _localSettings;
+    SPTFreeTierTasteOnboardingFeatureProperties *_properties;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
     id <SPTFeatureFlagSignal> _tasteOnboardingFirstTimeFlowEnabledSignal;
     id <SPTFeatureFlagSignal> _tasteOnboardingFirstTimeFlowForcedEnabledSignal;
     id <SPTFeatureFlagSignal> _onboardingCoordinationEnabledFlagSignal;
     id <SPTFeatureFlagSignal> _onboardingIPadEnabledFlagSignal;
-    id <SPTFeatureFlagSignal> _deeplinkBasedSkipEnabledSignal;
     id <SPTFeatureFlagSignal> _deeplinkAdBasedSkipEnabledSignal;
     id <SPTFeatureFlagSignal> _homeMixEnabledSignal;
     id <SPTFeatureFlagSignal> _nftNewExperienceEnabledSignal;
@@ -44,8 +43,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> homeMixEnabledSignal; // @synthesize homeMixEnabledSignal=_homeMixEnabledSignal;
 @property(nonatomic, getter=isDeeplinkAdBasedSkipEnabled) _Bool deeplinkAdBasedSkipEnabled; // @synthesize deeplinkAdBasedSkipEnabled=_deeplinkAdBasedSkipEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> deeplinkAdBasedSkipEnabledSignal; // @synthesize deeplinkAdBasedSkipEnabledSignal=_deeplinkAdBasedSkipEnabledSignal;
-@property(nonatomic, getter=isDeeplinkBasedSkipEnabled) _Bool deeplinkBasedSkipEnabled; // @synthesize deeplinkBasedSkipEnabled=_deeplinkBasedSkipEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> deeplinkBasedSkipEnabledSignal; // @synthesize deeplinkBasedSkipEnabledSignal=_deeplinkBasedSkipEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> onboardingIPadEnabledFlagSignal; // @synthesize onboardingIPadEnabledFlagSignal=_onboardingIPadEnabledFlagSignal;
 @property(nonatomic, getter=isOnboardingCoordinationEnabled) _Bool onboardingCoordinationEnabled; // @synthesize onboardingCoordinationEnabled=_onboardingCoordinationEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> onboardingCoordinationEnabledFlagSignal; // @synthesize onboardingCoordinationEnabledFlagSignal=_onboardingCoordinationEnabledFlagSignal;
@@ -54,19 +51,20 @@
 @property(nonatomic, getter=isTasteOnboardingFirstTimeFlowEnabled) _Bool tasteOnboardingFirstTimeFlowEnabled; // @synthesize tasteOnboardingFirstTimeFlowEnabled=_tasteOnboardingFirstTimeFlowEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> tasteOnboardingFirstTimeFlowEnabledSignal; // @synthesize tasteOnboardingFirstTimeFlowEnabledSignal=_tasteOnboardingFirstTimeFlowEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
+@property(readonly, nonatomic) SPTFreeTierTasteOnboardingFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupDeeplinkAdBasedSkipEnabled;
-- (void)setupDeeplinkBasedSkipEnabled;
 - (void)setupOnboardingIPadEnabledFlag;
 - (void)setupOnboardingCoordinationEnabledFlag;
 - (void)setupForcedFirstTimeFlowSettingsKey;
 - (void)setupFirstTimeFlowSettingsKey;
+@property(readonly, nonatomic, getter=isDeeplinkBasedSkipEnabled) _Bool deeplinkBasedSkipEnabled;
 - (void)setupFlags;
 - (void)dealloc;
-- (id)initWithFeatureFlagFactory:(id)arg1 localSettings:(id)arg2 featureSettingsItemFactory:(id)arg3 homeMixEnabledSignal:(id)arg4 newExperienceEnabledSignal:(id)arg5 podcastInFirstTimeFlowEnabledSignal:(id)arg6 podcastInFirstTimeFlowExperimentOn:(CDUnknownBlockType)arg7;
+- (id)initWithFeatureFlagFactory:(id)arg1 localSettings:(id)arg2 properties:(id)arg3 featureSettingsItemFactory:(id)arg4 homeMixEnabledSignal:(id)arg5 newExperienceEnabledSignal:(id)arg6 podcastInFirstTimeFlowEnabledSignal:(id)arg7 podcastInFirstTimeFlowExperimentOn:(CDUnknownBlockType)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

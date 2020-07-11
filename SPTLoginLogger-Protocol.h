@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError, NSString;
+@class NSDictionary, NSError, NSString;
 
 @protocol SPTLoginLogger <NSObject>
 - (void)userDidCompleteRequestWithType:(NSString *)arg1 error:(NSError *)arg2 attemptId:(NSString *)arg3 result:(NSString *)arg4;
@@ -17,7 +17,8 @@
 - (void)trackForcedLogoutWithError:(long long)arg1;
 - (void)trackExplicitLogout;
 - (void)userDidAttemptLoginWithSuccess:(_Bool)arg1 usingEmail:(_Bool)arg2 credentialsIdentifier:(long long)arg3;
-- (void)trackEventWithName:(NSString *)arg1;
+- (void)trackGenericEventWithName:(NSString *)arg1 parameters:(NSDictionary *)arg2;
+- (void)trackGenericEventWithName:(NSString *)arg1;
 - (void)userIsAboutToSeeLoginFlow;
 - (void)userDidRegister;
 - (void)operationWithIdentifier:(NSString *)arg1 didFinishWithDuration:(double)arg2;

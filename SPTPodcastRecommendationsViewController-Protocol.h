@@ -7,11 +7,8 @@
 #import "NSObject-Protocol.h"
 
 @class UIScrollView;
-@protocol SPTPodcastRecommendationsViewControllerDelegate;
 
 @protocol SPTPodcastRecommendationsViewController <NSObject>
-@property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-@property(nonatomic) __weak id <SPTPodcastRecommendationsViewControllerDelegate> delegate;
 
 @optional
 - (void)superScrollViewDidScroll:(UIScrollView *)arg1;

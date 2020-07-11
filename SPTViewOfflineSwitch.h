@@ -8,14 +8,14 @@
 
 #import "SPTThemableViewLayoutDelegate-Protocol.h"
 
-@class GLUELabel, NSArray, NSDictionary, NSString, SPTNetworkConnectivityController, UISwitch;
-@protocol SPTModalPresentationController, SPTProductState, SPTViewOfflineSwitchDelegate;
+@class GLUELabel, NSArray, NSDictionary, NSString, UISwitch;
+@protocol SPTModalPresentationController, SPTNetworkConnectivityController, SPTProductState, SPTViewOfflineSwitchDelegate;
 
 @interface SPTViewOfflineSwitch : UIView <SPTThemableViewLayoutDelegate>
 {
     _Bool _enabled;
     id <SPTViewOfflineSwitchDelegate> _delegate;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     UIView *_textWrapper;
     UISwitch *_offlineSwitch;
     GLUELabel *_offlineTitle;
@@ -37,7 +37,7 @@
 @property(retain, nonatomic) UISwitch *offlineSwitch; // @synthesize offlineSwitch=_offlineSwitch;
 @property(retain, nonatomic) UIView *textWrapper; // @synthesize textWrapper=_textWrapper;
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTViewOfflineSwitchDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (_Bool)shouldShowRemoveFromDownloadsConfirmationAlert;

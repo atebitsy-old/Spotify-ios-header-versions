@@ -6,21 +6,27 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileScannablesEventFactory;
 
 @interface SPTScannablesLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBIMobileScannablesEventFactory> _eventFactory;
+    id <SPTUBILogger> _ubiLogger;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIMobileScannablesEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+- (void)logDidTapCloseButton;
 - (void)logDidSelectPhotoFromPhotoLibrary;
 - (void)logDidClosePhotoLibrary;
 - (void)logDidOpenPhotoLibrary;
 - (void)logDidAllowPhotoLibraryPermissions:(_Bool)arg1;
 - (void)logDidTapPhotoLibraryButton;
 - (void)logScanDidSucceedWithURL:(id)arg1 source:(id)arg2;
+- (void)logDidTapCancelCameraPermissionDisallowed;
 - (void)logDidTapPermissionsSettingsWithSource:(id)arg1;
 - (void)logDidAllowCameraPermission:(_Bool)arg1;
 - (void)logDidCompleteCameraOnboarding:(_Bool)arg1;
@@ -30,7 +36,7 @@
 - (void)logDidTapSaveToCameraRollButtonWithEntityURL:(id)arg1;
 - (void)logDidTapScannableWithEntityURL:(id)arg1;
 - (void)logDidDisplayScannableWithEntityURL:(id)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
 
 @end
 

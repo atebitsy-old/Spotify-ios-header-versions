@@ -8,13 +8,13 @@
 
 #import "SPTOfflineSwitchDelegate-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController, SPTPSXLogger;
-@protocol GLUETheme, SPTPSXViewModel, SPTProductState;
+@class NSString, SPTPSXLogger;
+@protocol GLUETheme, SPTNetworkConnectivityController, SPTPSXViewModel, SPTProductState;
 
 @interface SPTPSXOfflineRowAdapter : SPTTableRowAdapter <SPTOfflineSwitchDelegate>
 {
     id <SPTProductState> _productState;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTPSXViewModel> _viewModel;
     id <GLUETheme> _theme;
     SPTPSXLogger *_logger;
@@ -23,7 +23,7 @@
 @property(retain, nonatomic) SPTPSXLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTPSXViewModel> viewModel; // @synthesize viewModel=_viewModel;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;
 - (void)offlineSwitchCellDidChangeState:(id)arg1 isOn:(_Bool)arg2;

@@ -25,6 +25,7 @@
     // Error parsing type: , name: visualRefreshIntegrationService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: ubiService
+    // Error parsing type: , name: showsFormatService
     // Error parsing type: , name: $__lazy_storage_$_localSettings
     // Error parsing type: , name: $__lazy_storage_$_userDefaultsController
     // Error parsing type: , name: playlistHandlerRegistrationToken

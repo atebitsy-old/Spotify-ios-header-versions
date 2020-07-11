@@ -9,18 +9,19 @@
 #import "SPTBrowseConnectivityMonitor-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController, SPTObserverManager;
+@class NSString, SPTObserverManager;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTBrowseConnectivityMonitorImplementation : NSObject <SPTNetworkConnectivityControllerObserver, SPTBrowseConnectivityMonitor>
 {
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     SPTObserverManager *_observers;
     unsigned long long _state;
 }
 
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 - (void).cxx_destruct;
 - (void)updateConnectivityState;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;

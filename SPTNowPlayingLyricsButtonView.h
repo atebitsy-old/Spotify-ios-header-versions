@@ -11,18 +11,19 @@
 
 @interface SPTNowPlayingLyricsButtonView : UIView
 {
+    _Bool _selected;
     _Bool _isActive;
     id <SPTNowPlayingLyricsButtonViewDelegate> _delegate;
     UIButton *_lyricsButton;
 }
 
 @property(retain, nonatomic) UIButton *lyricsButton; // @synthesize lyricsButton=_lyricsButton;
-@property(nonatomic) __weak id <SPTNowPlayingLyricsButtonViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isActive; // @synthesize isActive=_isActive;
+@property(nonatomic) __weak id <SPTNowPlayingLyricsButtonViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic, getter=isSelected) _Bool selected; // @synthesize selected=_selected;
 - (void).cxx_destruct;
-- (void)setActiveState:(_Bool)arg1;
 - (void)handleTapGesture:(id)arg1;
-- (void)updateButtonActiveState;
+- (void)updateButtonSelectedState;
 - (void)setupLyricsButton;
 - (void)setupUI;
 - (id)init;

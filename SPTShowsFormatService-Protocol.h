@@ -6,9 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTShowsFormatVideoContextMenuProvider;
+@class NSURL;
+@protocol SPTFreeTierPlaylistConfigurationBuilder, SPTPageCreationContext, SPTShowsFormatVideoContextMenuProvider;
 
 @protocol SPTShowsFormatService <SPTService>
+- (void)configureShowsFormatPlaylistViewControllerWithURL:(NSURL *)arg1 context:(id <SPTPageCreationContext>)arg2 configurationBuilder:(id <SPTFreeTierPlaylistConfigurationBuilder>)arg3;
 - (id <SPTShowsFormatVideoContextMenuProvider>)provideContextMenuProvider;
 @end
 

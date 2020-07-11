@@ -13,6 +13,7 @@
     // Error parsing type: , name: playerFeature
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: snackbarService
+    // Error parsing type: , name: ubiService
     // Error parsing type: , name: stateMachine
     // Error parsing type: , name: trackService
 }

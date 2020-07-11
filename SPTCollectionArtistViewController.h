@@ -14,8 +14,8 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTCollectionEmptyEntityFooterView, SPTEntityTableHeaderView, SPTInfoView, SPTNetworkConnectivityController, SPTProgressView, SPTTableViewOfflineSwitchCell;
-@protocol GLUETheme, SPTBarButtonItemManager, SPTCollectionArtistModel, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTImageLoader, SPTModalPresentationController, SPTPageContainer, SPTProductState, SPTShelves;
+@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTCollectionEmptyEntityFooterView, SPTEntityTableHeaderView, SPTInfoView, SPTProgressView, SPTTableViewOfflineSwitchCell;
+@protocol GLUETheme, SPTBarButtonItemManager, SPTCollectionArtistModel, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTImageLoader, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPageContainer, SPTProductState, SPTShelves;
 
 @interface SPTCollectionArtistViewController : SPTableViewController <SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTProductStateObserver, SPTOfflineSwitchDelegate, SPTBarButtonItemManagerObserver, SPTCollectionArtistModelDelegate, SPTPageController>
 {
@@ -25,7 +25,7 @@
     id <SPTProductState> _productState;
     id <SPTShelves> _shelves;
     id <SPTImageLoader> _imageLoader;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTCollectionLogger> _logger;
     id <SPTBarButtonItemManager> _barButtonItemManager;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
@@ -56,7 +56,7 @@
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) __weak id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(readonly, nonatomic) id <SPTCollectionLogger> logger; // @synthesize logger=_logger;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) __weak id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;

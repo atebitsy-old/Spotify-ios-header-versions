@@ -8,10 +8,11 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEButtonStyle, GLUELabelStyle, NSString, UIColor;
+@class GLUEButtonStyle, GLUEGradientStyle, GLUELabelStyle, NSString, UIColor;
 
 @interface SPTLoginWelcomeViewStyle : NSObject <GLUEStyle>
 {
+    _Bool _spotifyLogoPlacementTightToTitle;
     UIColor *_backgroundColor;
     GLUELabelStyle *_titleLabelStyle;
     GLUELabelStyle *_helpLabelStyle;
@@ -30,28 +31,31 @@
     double _titleTopMargin;
     double _titleBottomMargin;
     double _helpTextBottomMargin;
-    double _helpTextLabelHeight;
     double _buttonRegularSizeClassWidth;
     double _buttonMinimumHorizontalEdgeMargin;
     double _buttonMaximumHorizontalEdgeMargin;
     double _buttonsContainerHorizontalMargin;
     double _buttonsContainerBottomEdgeMargin;
-    double _buttonsContainerBottomEdgeSmallMargin;
     double _betweenButtonsMargin;
     double _titleMessageVerticalSpacing;
     double _minTitleMessageScale;
+    GLUEGradientStyle *_gradientStyle;
+    double _compactLayoutArtworkImageAspectRatio;
+    double _spotifyLogoBottomMargin;
 }
 
+@property(nonatomic) double spotifyLogoBottomMargin; // @synthesize spotifyLogoBottomMargin=_spotifyLogoBottomMargin;
+@property(nonatomic) _Bool spotifyLogoPlacementTightToTitle; // @synthesize spotifyLogoPlacementTightToTitle=_spotifyLogoPlacementTightToTitle;
+@property(nonatomic) double compactLayoutArtworkImageAspectRatio; // @synthesize compactLayoutArtworkImageAspectRatio=_compactLayoutArtworkImageAspectRatio;
+@property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
 @property(nonatomic) double minTitleMessageScale; // @synthesize minTitleMessageScale=_minTitleMessageScale;
 @property(nonatomic) double titleMessageVerticalSpacing; // @synthesize titleMessageVerticalSpacing=_titleMessageVerticalSpacing;
 @property(nonatomic) double betweenButtonsMargin; // @synthesize betweenButtonsMargin=_betweenButtonsMargin;
-@property(nonatomic) double buttonsContainerBottomEdgeSmallMargin; // @synthesize buttonsContainerBottomEdgeSmallMargin=_buttonsContainerBottomEdgeSmallMargin;
 @property(nonatomic) double buttonsContainerBottomEdgeMargin; // @synthesize buttonsContainerBottomEdgeMargin=_buttonsContainerBottomEdgeMargin;
 @property(nonatomic) double buttonsContainerHorizontalMargin; // @synthesize buttonsContainerHorizontalMargin=_buttonsContainerHorizontalMargin;
 @property(nonatomic) double buttonMaximumHorizontalEdgeMargin; // @synthesize buttonMaximumHorizontalEdgeMargin=_buttonMaximumHorizontalEdgeMargin;
 @property(nonatomic) double buttonMinimumHorizontalEdgeMargin; // @synthesize buttonMinimumHorizontalEdgeMargin=_buttonMinimumHorizontalEdgeMargin;
 @property(nonatomic) double buttonRegularSizeClassWidth; // @synthesize buttonRegularSizeClassWidth=_buttonRegularSizeClassWidth;
-@property(nonatomic) double helpTextLabelHeight; // @synthesize helpTextLabelHeight=_helpTextLabelHeight;
 @property(nonatomic) double helpTextBottomMargin; // @synthesize helpTextBottomMargin=_helpTextBottomMargin;
 @property(nonatomic) double titleBottomMargin; // @synthesize titleBottomMargin=_titleBottomMargin;
 @property(nonatomic) double titleTopMargin; // @synthesize titleTopMargin=_titleTopMargin;

@@ -33,7 +33,6 @@
 - (struct CGSize)preferredContentSize;
 - (void)setupViewConstraints;
 - (void)setupDevicesAvailableView;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithAuxiliaryActionsHandler:(id)arg1 devicesAvailableViewProvider:(id)arg2 rightButton:(id)arg3 theme:(id)arg4;
 

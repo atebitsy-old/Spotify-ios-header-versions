@@ -9,17 +9,17 @@
 @class NSArray, NSString, NSURL, UIImage;
 
 @protocol SPTShareEntityData <NSObject>
-@property(readonly, nonatomic) NSArray *extraQueryItems;
-@property(readonly, nonatomic) NSString *freeText;
-@property(readonly, nonatomic) UIImage *fullscreenBackgroundImage;
-@property(readonly, nonatomic) NSString *logContext;
-@property(readonly, nonatomic) NSString *clipboardLinkTitle;
-@property(readonly, nonatomic) long long itemType;
-@property(readonly, nonatomic) NSURL *itemImageURL;
-@property(readonly, nonatomic) NSString *sourceName;
-@property(readonly, nonatomic) NSString *creatorName;
-@property(readonly, nonatomic) NSString *itemName;
-@property(readonly, nonatomic) NSURL *itemContextSourceURI;
-@property(readonly, nonatomic) NSURL *itemURI;
+@property(nonatomic, readonly) NSArray *extraQueryItems;
+@property(nonatomic, readonly) NSString *freeText;
+@property(nonatomic, readonly) UIImage *fullscreenBackgroundImage;
+@property(nonatomic, readonly) NSString *logContext;
+@property(nonatomic, readonly) NSString *clipboardLinkTitle;
+@property(nonatomic, readonly) long long itemType;
+@property(nonatomic, readonly) NSURL *itemImageURL;
+@property(nonatomic, readonly) NSString *sourceName;
+@property(nonatomic, readonly) NSString *creatorName;
+@property(nonatomic, readonly) NSString *itemName;
+@property(nonatomic, readonly) NSURL *itemContextSourceURI;
+@property(nonatomic, readonly) NSURL *itemURI;
 @end
 

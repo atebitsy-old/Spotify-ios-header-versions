@@ -8,17 +8,17 @@
 
 #import "SPTDataLoaderDelegate-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTNetworkConnectivityController;
-@protocol SPTPartnerIntegrationRegistry;
+@class NSString, SPTDataLoader;
+@protocol SPTNetworkConnectivityController, SPTPartnerIntegrationRegistry;
 
 @interface SPTPartnerIntegrationStateLoader : NSObject <SPTDataLoaderDelegate>
 {
     SPTDataLoader *_dataLoader;
     id <SPTPartnerIntegrationRegistry> _integrationRegistry;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTPartnerIntegrationRegistry> integrationRegistry; // @synthesize integrationRegistry=_integrationRegistry;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;

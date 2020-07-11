@@ -9,11 +9,10 @@
 #import "SPTPersonalisedSetsService-Protocol.h"
 
 @class NSArray, NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFeedbackService, SPTFollowShelfService, SPTFormatListPlatformService, SPTGLUEService, SPTNetworkService, SPTPSXTestManager, SPTPerformanceMetricsService, SPTPersonalisedSetsNowPlayingFeedbackManagerFactory, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShelfService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFeedbackService, SPTFormatListPlatformService, SPTGLUEService, SPTNetworkService, SPTPSXTestManager, SPTPerformanceMetricsService, SPTPersonalisedSetsNowPlayingFeedbackManagerFactory, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShelfService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTPersonalisedSetsServiceImplementation : NSObject <SPTPersonalisedSetsService>
 {
-    _Bool _followShelfEnabled;
     id <SPTContainerService> _containerService;
     id <SPTCoreService> _coreService;
     id <SPTPlayerFeature> _playerService;
@@ -29,7 +28,6 @@
     id <SPTFeedbackService> _feedbackService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
-    id <SPTFollowShelfService> _followShelfService;
     id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreService;
     id <SPTCollectionSortingEntityManager> _personalisedSetSortingEntityManager;
     NSArray *_formatListExpressions;
@@ -38,13 +36,11 @@
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic, getter=isFollowShelfEnabled) _Bool followShelfEnabled; // @synthesize followShelfEnabled=_followShelfEnabled;
 @property(retain, nonatomic) id <SPTPersonalisedSetsNowPlayingFeedbackManagerFactory> feedbackManagerFactory; // @synthesize feedbackManagerFactory=_feedbackManagerFactory;
 @property(retain, nonatomic) id <SPTPSXTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSArray *formatListExpressions; // @synthesize formatListExpressions=_formatListExpressions;
 @property(retain, nonatomic) id <SPTCollectionSortingEntityManager> personalisedSetSortingEntityManager; // @synthesize personalisedSetSortingEntityManager=_personalisedSetSortingEntityManager;
 @property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreService; // @synthesize encoreService=_encoreService;
-@property(nonatomic) __weak id <SPTFollowShelfService> followShelfService; // @synthesize followShelfService=_followShelfService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTFeedbackService> feedbackService; // @synthesize feedbackService=_feedbackService;
@@ -65,7 +61,7 @@
 - (id)provideSortMenuButton;
 - (id)provideFeedbackManagerFactory;
 - (id)provideTestManager;
-- (id)providePersonalisedSetViewControllerForURL:(id)arg1 referrerIdentifier:(id)arg2 isFollowShelfEnabled:(_Bool)arg3;
+- (id)providePersonalisedSetViewControllerForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

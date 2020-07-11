@@ -11,15 +11,15 @@
 #import "SPTOauthTaskDelegate-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSMutableArray, NSMutableDictionary, NSString, SPTNetworkConnectivityController, SPTOauthClient, SPTOauthTask, SPTStartupTracer;
-@protocol SPTDataLoaderAuthoriserDelegate, SPTProductState;
+@class NSMutableArray, NSMutableDictionary, NSString, SPTOauthClient, SPTOauthTask, SPTStartupTracer;
+@protocol SPTDataLoaderAuthoriserDelegate, SPTNetworkConnectivityController, SPTProductState;
 
 @interface SPTDataLoaderOauthAuthoriser : NSObject <SPTProductStateObserver, SPTOauthTaskDelegate, SPTDataLoaderAuthoriser, SPTDataLoaderAuthorisationHostRegistration>
 {
     NSString *_identifier;
     id <SPTDataLoaderAuthoriserDelegate> _delegate;
     SPTOauthClient *_oauthClient;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTStartupTracer *_startupTracer;
     id <SPTProductState> _productState;
     NSMutableArray *_pendingRequests;
@@ -32,7 +32,7 @@
 @property(retain, nonatomic) NSMutableArray *pendingRequests; // @synthesize pendingRequests=_pendingRequests;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;

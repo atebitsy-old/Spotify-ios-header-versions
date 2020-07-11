@@ -8,8 +8,8 @@
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
-@protocol BMPlaybackRequestFactory, GLUEImageLoader, GLUETheme, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTVideoCacheOptions, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
+@class NSString;
+@protocol BMPlaybackRequestFactory, GLUEImageLoader, GLUETheme, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTNetworkConnectivityController, SPTVideoCacheOptions, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
 
 @interface SPTShowsFormatVideoCellProvider : NSObject <SPTFreeTierPlaylistCellProvider>
 {
@@ -22,10 +22,10 @@
     id <SPTVideoFeaturePlayerFactory> _playerFactory;
     id <BMPlaybackRequestFactory> _playbackRequestFactory;
     id <SPTVideoCacheOptions> _videoCacheOptions;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTVideoCacheOptions> videoCacheOptions; // @synthesize videoCacheOptions=_videoCacheOptions;
 @property(readonly, nonatomic) id <BMPlaybackRequestFactory> playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
 @property(readonly, nonatomic) id <SPTVideoFeaturePlayerFactory> playerFactory; // @synthesize playerFactory=_playerFactory;

@@ -6,20 +6,20 @@
 
 #import "SettingsSection.h"
 
-@class SPTNetworkConnectivityController, SPTSettingsLogger, SettingsSwitchTableViewCell;
-@protocol SPTProductState;
+@class SPTSettingsLogger, SettingsSwitchTableViewCell;
+@protocol SPTNetworkConnectivityController, SPTProductState;
 
 @interface CellularSyncSettingsSection : SettingsSection
 {
     SettingsSwitchTableViewCell *_cell;
     id <SPTProductState> _productState;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTSettingsLogger *_logger;
 }
 
 + (_Bool)shouldDisplayInSettingsViewController:(id)arg1;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
 - (void).cxx_destruct;

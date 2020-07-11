@@ -9,8 +9,8 @@
 #import "SPTLanguageOnboardingGridViewControllerDelegate-Protocol.h"
 #import "SPTOnboardingFlowCoordinator-Protocol.h"
 
-@class NSString, SPTLanguageOnboardingDataLoader, SPTLanguageOnboardingLoggerFactory, SPTLanguageOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager, UINavigationController;
-@protocol GLUEImageLoader, SPTLanguageOnboardingTestManager, SPTLanguageOnboardingUserDefaultsController, SPTModalPresentationController, SPTOnboardingServiceFlowStateReporter;
+@class NSString, SPTLanguageOnboardingDataLoader, SPTLanguageOnboardingLoggerFactory, SPTLanguageOnboardingTheme, SPTPopupManager, UINavigationController;
+@protocol GLUEImageLoader, SPTLanguageOnboardingTestManager, SPTLanguageOnboardingUserDefaultsController, SPTModalPresentationController, SPTNetworkConnectivityController, SPTOnboardingServiceFlowStateReporter;
 
 @interface SPTLanguageOnboardingFlowCoordinator : NSObject <SPTLanguageOnboardingGridViewControllerDelegate, SPTOnboardingFlowCoordinator>
 {
@@ -20,7 +20,7 @@
     SPTLanguageOnboardingDataLoader *_languageOnboardingDataLoader;
     SPTLanguageOnboardingTheme *_languageOnboardingTheme;
     id <GLUEImageLoader> _imageLoader;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTPopupManager *_popupManager;
     id <SPTLanguageOnboardingTestManager> _testManager;
     SPTLanguageOnboardingLoggerFactory *_loggerFactory;
@@ -33,7 +33,7 @@
 @property(readonly, nonatomic) SPTLanguageOnboardingLoggerFactory *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
 @property(readonly, nonatomic) id <SPTLanguageOnboardingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTLanguageOnboardingTheme *languageOnboardingTheme; // @synthesize languageOnboardingTheme=_languageOnboardingTheme;
 @property(readonly, nonatomic) SPTLanguageOnboardingDataLoader *languageOnboardingDataLoader; // @synthesize languageOnboardingDataLoader=_languageOnboardingDataLoader;

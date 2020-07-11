@@ -10,15 +10,15 @@
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTOfflineContentModelDelegate-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
-@protocol HUBContentOperationDelegate, SPTOfflineContentModel, SPTOfflineContentModelEntity, SPTUBIHubsUtilities;
+@class NSString;
+@protocol HUBContentOperationDelegate, SPTNetworkConnectivityController, SPTOfflineContentModel, SPTOfflineContentModelEntity, SPTUBIHubsUtilities;
 
 @interface SPTHomeDownloadsContentOperation : NSObject <SPTNetworkConnectivityControllerObserver, SPTOfflineContentModelDelegate, HUBContentOperation>
 {
     id <HUBContentOperationDelegate> delegate;
     id <SPTOfflineContentModel> _offlineMusicModel;
     id <SPTOfflineContentModel> _offlinePodcastModel;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTOfflineContentModelEntity> _offlineMusicEntity;
     id <SPTOfflineContentModelEntity> _offlinePodcastEntity;
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
@@ -27,7 +27,7 @@
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(retain, nonatomic) id <SPTOfflineContentModelEntity> offlinePodcastEntity; // @synthesize offlinePodcastEntity=_offlinePodcastEntity;
 @property(retain, nonatomic) id <SPTOfflineContentModelEntity> offlineMusicEntity; // @synthesize offlineMusicEntity=_offlineMusicEntity;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTOfflineContentModel> offlinePodcastModel; // @synthesize offlinePodcastModel=_offlinePodcastModel;
 @property(readonly, nonatomic) id <SPTOfflineContentModel> offlineMusicModel; // @synthesize offlineMusicModel=_offlineMusicModel;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;

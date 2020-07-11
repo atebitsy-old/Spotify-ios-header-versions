@@ -10,7 +10,7 @@
 #import "SPTNowPlayingNavigationBarModelObserver-Protocol.h"
 
 @class NSString, SPTNowPlayingNavigationBarUnitManagerImplementation, SPTNowPlayingNavigationBarViewV2, SPTTheme;
-@protocol SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingContainingViewController, SPTNowPlayingNavigationBarModel;
+@protocol GLUETheme, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingContainingViewController, SPTNowPlayingNavigationBarModel;
 
 @interface SPTNowPlayingNavigationBarUnitViewController : UIViewController <SPTNowPlayingNavigationBarModelObserver, SPTNowPlayingContainedViewController>
 {
@@ -18,8 +18,12 @@
     id <SPTNowPlayingNavigationBarModel> _model;
     id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
     SPTTheme *_theme;
+    id <GLUETheme> _glueTheme;
+    UIViewController *_tabViewController;
 }
 
+@property(retain, nonatomic) UIViewController *tabViewController; // @synthesize tabViewController=_tabViewController;
+@property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingNavigationBarModel> model; // @synthesize model=_model;
@@ -33,9 +37,8 @@
 - (void)updateLabels;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithNavigationBarModel:(id)arg1 auxiliaryActionsHandler:(id)arg2 theme:(id)arg3;
+- (id)initWithNavigationBarModel:(id)arg1 auxiliaryActionsHandler:(id)arg2 theme:(id)arg3 glueTheme:(id)arg4 tabViewController:(id)arg5;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

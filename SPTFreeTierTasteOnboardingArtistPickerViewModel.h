@@ -9,8 +9,8 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSArray, NSMutableArray, NSMutableDictionary, NSString, SPTDataLoader, SPTDataLoaderRequest, SPTFreeTierTasteOnboardingArtistPickerViewLogger, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingSession, SPTFreeTierTasteOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager;
-@protocol SPTFollowModelFactory, SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate, SPTFreeTierTasteOnboardingTestManager;
+@class NSArray, NSMutableArray, NSMutableDictionary, NSString, SPTDataLoader, SPTDataLoaderRequest, SPTFreeTierTasteOnboardingArtistPickerViewLogger, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingSession, SPTFreeTierTasteOnboardingTheme, SPTPopupManager;
+@protocol SPTFollowModelFactory, SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate, SPTFreeTierTasteOnboardingTestManager, SPTNetworkConnectivityController;
 
 @interface SPTFreeTierTasteOnboardingArtistPickerViewModel : NSObject <SPTNetworkConnectivityControllerObserver, SPTDataLoaderDelegate>
 {
@@ -26,7 +26,7 @@
     id <SPTFollowModelFactory> _followModelFactory;
     SPTPopupManager *_popupManager;
     SPTFreeTierTasteOnboardingDeeplinkStore *_deeplinkStore;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTFreeTierTasteOnboardingTestManager> _testManager;
     SPTDataLoaderRequest *_requestUsedWhileOffline;
     NSMutableArray *_items;
@@ -41,7 +41,7 @@
 @property(readonly, nonatomic) NSMutableArray *items; // @synthesize items=_items;
 @property(retain, nonatomic) SPTDataLoaderRequest *requestUsedWhileOffline; // @synthesize requestUsedWhileOffline=_requestUsedWhileOffline;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingTestManager> testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingDeeplinkStore *deeplinkStore; // @synthesize deeplinkStore=_deeplinkStore;
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;

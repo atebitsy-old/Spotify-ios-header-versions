@@ -90,7 +90,7 @@
 - (_Bool)scrollViewShouldScrollToTop:(id)arg1;
 - (void)songCellConfigurator:(id)arg1 trailingSectionHeaderButton:(id)arg2;
 - (void)songCellConfigurator:(id)arg1 mainSectionHeaderButton:(id)arg2;
-- (void)songCellConfigurator:(id)arg1 didSwipeCell:(id)arg2;
+- (void)songCellConfigurator:(id)arg1 didSwipeCell:(id)arg2 shelfPosition:(long long)arg3;
 - (void)songCellConfigurator:(id)arg1 updatedAudioPreview:(id)arg2 playing:(_Bool)arg3 isOriginCoverItem:(_Bool)arg4;
 - (void)songCellConfigurator:(id)arg1 banButton:(id)arg2;
 - (void)songCellConfigurator:(id)arg1 likeButton:(id)arg2;

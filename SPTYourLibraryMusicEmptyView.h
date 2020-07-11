@@ -21,7 +21,7 @@
 }
 
 + (id)emptyStateView:(id)arg1 subtitle:(id)arg2 theme:(id)arg3 ctaButtonTitle:(id)arg4 linkDispatcher:(id)arg5 metaViewController:(id)arg6 navigationRouter:(id)arg7 navigateToURI:(id)arg8 navigateFromURI:(id)arg9;
-+ (id)noResultFilteringEmptyStateView:(id)arg1 filterString:(id)arg2 onAction:(CDUnknownBlockType)arg3;
++ (id)noResultFilteringEmptyStateView:(id)arg1 forFooterView:(_Bool)arg2 filterString:(id)arg3 onAction:(CDUnknownBlockType)arg4;
 + (id)songsEmptyStateView:(id)arg1 onAction:(CDUnknownBlockType)arg2;
 + (id)albumsEmptyStateViewWithTheme:(id)arg1;
 + (id)artistsEmptyStateView:(id)arg1 onAction:(CDUnknownBlockType)arg2;

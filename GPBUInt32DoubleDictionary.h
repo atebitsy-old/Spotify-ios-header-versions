@@ -17,11 +17,6 @@
     NSMutableDictionary *_dictionary;
 }
 
-+ (id)dictionaryWithCapacity:(unsigned long long)arg1;
-+ (id)dictionaryWithDictionary:(id)arg1;
-+ (id)dictionaryWithDoubles:(const double *)arg1 forKeys:(const unsigned int *)arg2 count:(unsigned long long)arg3;
-+ (id)dictionaryWithDouble:(double)arg1 forKey:(unsigned int)arg2;
-+ (id)dictionary;
 - (void)removeAll;
 - (void)removeDoubleForKey:(unsigned int)arg1;
 - (void)setDouble:(double)arg1 forKey:(unsigned int)arg2;

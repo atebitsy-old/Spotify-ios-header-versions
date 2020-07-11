@@ -7,16 +7,15 @@
 #import <objc/NSObject.h>
 
 #import "GCKDiscoveryManagerListener-Protocol.h"
-#import "GCKLoggerDelegate-Protocol.h"
 #import "GCKSessionManagerListener-Protocol.h"
 #import "SPTCastCustomChannelDelegate-Protocol.h"
 #import "SPTGaiaCastCoreInteractorDelegate-Protocol.h"
 #import "SPTGaiaConnectManagerObserver-Protocol.h"
 
-@class GCKCastContext, GCKDevice, NSArray, NSDate, NSString, SPTCastCustomChannel, SPTCastReceiverAppIDManager, SPTGaiaCastCoreInteractor, SPTObserverManager;
+@class GCKCastContext, GCKDevice, NSArray, NSDate, NSString, SPTCastCustomChannel, SPTCastReceiverAppIDManager, SPTGaiaCastCoreInteractor, SPTGaiaCastErrorLogger, SPTObserverManager;
 @protocol SPTGaiaConnectManager, SPTProductState;
 
-@interface SPTCastManager : NSObject <GCKDiscoveryManagerListener, GCKSessionManagerListener, GCKLoggerDelegate, SPTCastCustomChannelDelegate, SPTGaiaConnectManagerObserver, SPTGaiaCastCoreInteractorDelegate>
+@interface SPTCastManager : NSObject <GCKDiscoveryManagerListener, GCKSessionManagerListener, SPTCastCustomChannelDelegate, SPTGaiaConnectManagerObserver, SPTGaiaCastCoreInteractorDelegate>
 {
     float _volume;
     id <SPTProductState> _productState;
@@ -24,6 +23,7 @@
     SPTCastReceiverAppIDManager *_receiverAppManager;
     id <SPTGaiaConnectManager> _connectManager;
     SPTGaiaCastCoreInteractor *_coreInteractor;
+    SPTGaiaCastErrorLogger *_errorLogger;
     GCKDevice *_deviceToConnectAfterDisconnection;
     SPTCastCustomChannel *_castCustomChannel;
     SPTObserverManager *_observers;
@@ -36,6 +36,7 @@
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTCastCustomChannel *castCustomChannel; // @synthesize castCustomChannel=_castCustomChannel;
 @property(retain, nonatomic) GCKDevice *deviceToConnectAfterDisconnection; // @synthesize deviceToConnectAfterDisconnection=_deviceToConnectAfterDisconnection;
+@property(retain, nonatomic) SPTGaiaCastErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(retain, nonatomic) SPTGaiaCastCoreInteractor *coreInteractor; // @synthesize coreInteractor=_coreInteractor;
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) SPTCastReceiverAppIDManager *receiverAppManager; // @synthesize receiverAppManager=_receiverAppManager;
@@ -64,8 +65,6 @@
 - (void)handleConnectLoginStatusDidChange:(id)arg1 username:(id)arg2 blob:(id)arg3 clientKey:(id)arg4 tokenType:(id)arg5;
 - (void)didLogoutFromDevice;
 - (void)didLoginToDeviceWithCredentials:(id)arg1;
-- (void)logFromFunction:(const char *)arg1 message:(id)arg2;
-- (void)logMessage:(id)arg1 fromFunction:(id)arg2;
 - (void)destroyMessageChannel;
 - (void)createMessageChannel;
 - (void)createChannels;
@@ -98,7 +97,7 @@
 - (void)setupDeviceManager;
 - (void)setupCastContext;
 - (void)dealloc;
-- (id)initWithProductState:(id)arg1 castContext:(id)arg2 receiverAppManager:(id)arg3 connectManager:(id)arg4 coreInteractor:(id)arg5;
+- (id)initWithProductState:(id)arg1 castContext:(id)arg2 receiverAppManager:(id)arg3 connectManager:(id)arg4 coreInteractor:(id)arg5 errorLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

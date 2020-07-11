@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTNetworkConnectivityController;
+@protocol SPTNetworkConnectivityController;
 
 @protocol SPTNetworkConnectivityControllerObserver <NSObject>
 
 @optional
-- (void)networkConnectivityController:(SPTNetworkConnectivityController *)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
-- (void)networkConnectivityController:(SPTNetworkConnectivityController *)arg1 didChangeAllowSyncOver3G:(_Bool)arg2;
-- (void)networkConnectivityController:(SPTNetworkConnectivityController *)arg1 didChangeForcedOffline:(_Bool)arg2;
+- (void)networkConnectivityController:(id <SPTNetworkConnectivityController>)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
+- (void)networkConnectivityController:(id <SPTNetworkConnectivityController>)arg1 didChangeAllowSyncOver3G:(_Bool)arg2;
+- (void)networkConnectivityController:(id <SPTNetworkConnectivityController>)arg1 didChangeForcedOffline:(_Bool)arg2;
 @end
 

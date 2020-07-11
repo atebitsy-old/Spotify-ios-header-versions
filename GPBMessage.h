@@ -10,7 +10,6 @@
 #import "NSSecureCoding-Protocol.h"
 
 @class GPBExtensionDescriptor, GPBFieldDescriptor, GPBUnknownFieldSet, NSMutableDictionary;
-@protocol OS_dispatch_semaphore;
 
 @interface GPBMessage : NSObject <NSSecureCoding, NSCopying>
 {
@@ -20,8 +19,8 @@
     GPBMessage *autocreator_;
     GPBFieldDescriptor *autocreatorField_;
     GPBExtensionDescriptor *autocreatorExtension_;
+    // Error parsing type: A@, name: readOnlySemaphore_
     struct GPBMessage_Storage *messageStorage_;
-    NSObject<OS_dispatch_semaphore> *readOnlySemaphore_;
 }
 
 + (_Bool)accessInstanceVariablesDirectly;
@@ -55,7 +54,7 @@
 - (void)setExtension:(id)arg1 index:(unsigned long long)arg2 value:(id)arg3;
 - (void)addExtension:(id)arg1 value:(id)arg2;
 - (void)setExtension:(id)arg1 value:(id)arg2;
-- (void)writeExtensionsToCodedOutputStream:(id)arg1 range:(struct GPBExtensionRange)arg2;
+- (void)writeExtensionsToCodedOutputStream:(id)arg1 range:(struct GPBExtensionRange)arg2 sortedExtensions:(id)arg3;
 - (id)extensionsCurrentlySet;
 - (_Bool)hasExtension:(id)arg1;
 - (id)getExistingExtension:(id)arg1;

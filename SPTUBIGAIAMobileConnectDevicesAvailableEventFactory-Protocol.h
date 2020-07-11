@@ -6,11 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIGAIAMobileConnectDevicesAvailable_ContainerViewEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonAvailableEventFactory, SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonConnectedEventFactory, SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonConnectingEventFactory, SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonUnavailableEventFactory;
 
 @protocol SPTUBIGAIAMobileConnectDevicesAvailableEventFactory <NSObject>
-- (id <SPTUBIGAIAMobileConnectDevicesAvailable_ContainerViewEventFactory>)containerViewFactoryWithUri:(NSURL *)arg1;
+- (id <SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonConnectedEventFactory>)connectButtonConnectedFactory;
+- (id <SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonConnectingEventFactory>)connectButtonConnectingFactory;
+- (id <SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonAvailableEventFactory>)connectButtonAvailableFactory;
+- (id <SPTUBIGAIAMobileConnectDevicesAvailable_ConnectButtonUnavailableEventFactory>)connectButtonUnavailableFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

@@ -9,12 +9,12 @@
 #import "SPTAuthTestManagerObserver-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSNotificationCenter, NSString, SPTAuthCache, SPTNetworkConnectivityController;
-@protocol SPTAuthController, SPTAuthTestManager;
+@class NSNotificationCenter, NSString, SPTAuthCache;
+@protocol SPTAuthController, SPTAuthTestManager, SPTNetworkConnectivityController;
 
 @interface SPTAuthCacheEnvironmentObserver : NSObject <SPTNetworkConnectivityControllerObserver, SPTAuthTestManagerObserver>
 {
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTAuthController> _authController;
     SPTAuthCache *_authCache;
     id <SPTAuthTestManager> _testManager;
@@ -25,7 +25,7 @@
 @property(nonatomic) __weak id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak SPTAuthCache *authCache; // @synthesize authCache=_authCache;
 @property(nonatomic) __weak id <SPTAuthController> authController; // @synthesize authController=_authController;
-@property(nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 - (void).cxx_destruct;
 - (void)authTestManager:(id)arg1 didUpdateEnabledState:(_Bool)arg2;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;

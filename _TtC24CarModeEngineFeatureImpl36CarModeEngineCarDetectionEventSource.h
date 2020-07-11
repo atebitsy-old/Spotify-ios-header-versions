@@ -8,12 +8,9 @@
 
 @interface _TtC24CarModeEngineFeatureImpl36CarModeEngineCarDetectionEventSource : _TtC24CarModeEngineFeatureImpl24CarModeEngineEventSource
 {
-    // Error parsing type: , name: carDetector
 }
 
-- (void).cxx_destruct;
 - (id)init;
-- (void)dealloc;
 
 @end
 

@@ -6,10 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierPlaylistCellProvider-Protocol.h"
 #import "SPTFreeTierPlaylistLegacyLayout-Protocol.h"
 
-@interface _TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistLegacyLayout>
+@interface _TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider : NSObject <SPTFreeTierPlaylistLegacyLayout>
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: navigator

@@ -9,8 +9,8 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTGoogleAppFlipService-Protocol.h"
 
-@class NSString, SPSession, SPTAllocationContext, SPTGoogleAppFlipURISubtypeManager, SPTNetworkConnectivityController;
-@protocol SPTAuthService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTURIDispatchService;
+@class NSString, SPSession, SPTAllocationContext, SPTGoogleAppFlipURISubtypeManager;
+@protocol SPTAuthService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTNetworkConnectivityController, SPTURIDispatchService;
 
 @interface SPTGoogleAppFlipServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTGoogleAppFlipService>
 {
@@ -18,7 +18,7 @@
     id <SPTAuthService> _authService;
     id <SPTURIDispatchService> _uriDispatchService;
     SPSession *_session;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTFeatureFlagSignal> _featureEnabledSignal;
     SPTGoogleAppFlipURISubtypeManager *_uriSubtypeManager;
@@ -29,7 +29,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> featureEnabledSignal; // @synthesize featureEnabledSignal=_featureEnabledSignal;
 @property(readonly, nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic, getter=isFeatureEnabled) _Bool featureEnabled; // @synthesize featureEnabled=_featureEnabled;
-@property(readonly, nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;

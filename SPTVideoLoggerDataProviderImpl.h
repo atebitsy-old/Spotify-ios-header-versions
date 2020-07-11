@@ -8,16 +8,17 @@
 
 #import "BMLoggerDataProvider-Protocol.h"
 
-@class NSString, SPSession, SPTNetworkConnectivityController;
+@class NSString, SPSession;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTVideoLoggerDataProviderImpl : NSObject <BMLoggerDataProvider>
 {
     NSString *_featureIdentifier;
     SPSession *_loginSession;
-    SPTNetworkConnectivityController *_ncc;
+    id <SPTNetworkConnectivityController> _ncc;
 }
 
-@property(retain, nonatomic) SPTNetworkConnectivityController *ncc; // @synthesize ncc=_ncc;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> ncc; // @synthesize ncc=_ncc;
 @property(nonatomic) __weak SPSession *loginSession; // @synthesize loginSession=_loginSession;
 @property(copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 - (void).cxx_destruct;

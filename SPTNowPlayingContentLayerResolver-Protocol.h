@@ -10,6 +10,7 @@
 @protocol SPTNowPlayingContentLayerProvider, SPTNowPlayingContentLayerResolverDelegate;
 
 @protocol SPTNowPlayingContentLayerResolver <NSObject>
+@property(nonatomic) unsigned long long preferredContentType;
 @property(nonatomic) __weak id <SPTNowPlayingContentLayerResolverDelegate> delegate;
 - (NSArray *)allProviders;
 - (id <SPTNowPlayingContentLayerProvider>)providerForTrack:(SPTPlayerTrack *)arg1 playerState:(SPTPlayerState *)arg2;

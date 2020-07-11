@@ -9,8 +9,8 @@
 @class NSString, NSURL;
 
 @protocol SPTLinkDispatcher <NSObject>
-- (void)navigateToURI:(NSURL *)arg1 options:(long long)arg2;
-- (void)navigateToURI:(NSURL *)arg1 sourceApplication:(NSString *)arg2 annotation:(id)arg3 options:(long long)arg4 completionHandler:(void (^)(_Bool))arg5;
+- (void)navigateToURI:(NSURL *)arg1 options:(long long)arg2 interactionID:(NSString *)arg3;
+- (void)navigateToURI:(NSURL *)arg1 sourceApplication:(NSString *)arg2 annotation:(id)arg3 options:(long long)arg4 interactionID:(NSString *)arg5 completionHandler:(void (^)(_Bool))arg6;
 - (_Bool)canOpenURI:(NSURL *)arg1 allowExternalApps:(_Bool)arg2;
 @end
 

@@ -11,8 +11,8 @@
 #import "SPTPlaylistExtenderModelEffectLoop-Protocol.h"
 #import "SPTPlaylistExtenderModelEventLoop-Protocol.h"
 
-@class NSString, NSURL, SPTNetworkConnectivityController;
-@protocol SPTExplicitContentAccessManager, SPTPlayer, SPTPlaylistExtender, SPTPlaylistExtenderModel, SPTPlaylistExtenderModelDelegate, SPTPlaylistExtenderModelState, SPTPlaylistModel, SPTPlaylistPlatformPlaylistDataLoader;
+@class NSString, NSURL;
+@protocol SPTExplicitContentAccessManager, SPTNetworkConnectivityController, SPTPlayer, SPTPlaylistExtender, SPTPlaylistExtenderModel, SPTPlaylistExtenderModelDelegate, SPTPlaylistExtenderModelState, SPTPlaylistModel, SPTPlaylistPlatformPlaylistDataLoader;
 
 @interface SPTPlaylistExtenderModelImplementation : NSObject <SPTNetworkConnectivityControllerObserver, SPTPlaylistExtenderModel, SPTPlaylistExtenderModelEffectLoop, SPTPlaylistExtenderModelEventLoop>
 {
@@ -25,12 +25,12 @@
     id <SPTPlaylistModel> _playlistModel;
     unsigned long long _preferedNumberOfTracks;
     NSURL *_playlistURI;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTPlaylistExtenderModelState> _currentState;
 }
 
 @property(retain, nonatomic) id <SPTPlaylistExtenderModelState> currentState; // @synthesize currentState=_currentState;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
 @property(nonatomic) unsigned long long preferedNumberOfTracks; // @synthesize preferedNumberOfTracks=_preferedNumberOfTracks;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;

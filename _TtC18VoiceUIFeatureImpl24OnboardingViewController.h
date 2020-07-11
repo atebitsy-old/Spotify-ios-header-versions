@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: viewBinder
+    // Error parsing type: , name: loopControllerConnected
 }
 
 - (void).cxx_destruct;
@@ -17,6 +18,7 @@
 - (void)viewDidLoad;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)dealloc;
 - (id)initWithCoder:(id)arg1;
 
 @end

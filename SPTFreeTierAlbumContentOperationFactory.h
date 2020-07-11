@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDataLoaderFactory, SPTNetworkConnectivityController, SPTPersistentCache;
-@protocol HUBImageLoaderFactory, SPTAgeVerificationProvider, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTExplicitContentAccessManager, SPTFreeTierAlbumTestManager, SPTHubContentOperationFactory, SPTOnDemandService, SPTOnDemandTrialService, SPTPlayerFeature, SPTProductState, SPTSessionService, VISREFIntegrationManager;
+@class SPTDataLoaderFactory, SPTPersistentCache;
+@protocol HUBImageLoaderFactory, SPTAgeVerificationProvider, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTExplicitContentAccessManager, SPTFreeTierAlbumTestManager, SPTHubContentOperationFactory, SPTNetworkConnectivityController, SPTOnDemandService, SPTOnDemandTrialService, SPTPlayerFeature, SPTProductState, SPTSessionService, VISREFIntegrationManager;
 
 @interface SPTFreeTierAlbumContentOperationFactory : NSObject
 {
@@ -16,7 +16,7 @@
     id <SPTOnDemandService> _onDemandService;
     id <SPTOnDemandTrialService> _onDemandTrialService;
     SPTDataLoaderFactory *_dataLoaderFactory;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTSessionService> _clientSessionService;
     id <HUBImageLoaderFactory> _imageLoaderFactory;
     id <SPTProductState> _productState;
@@ -39,7 +39,7 @@
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <HUBImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-@property(readonly, nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) __weak id <SPTOnDemandTrialService> onDemandTrialService; // @synthesize onDemandTrialService=_onDemandTrialService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;

@@ -12,6 +12,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: cellBinderFactory
     // Error parsing type: , name: tableBinder
+    // Error parsing type: , name: filterChipsViewBinder
     // Error parsing type: , name: model
 }
 

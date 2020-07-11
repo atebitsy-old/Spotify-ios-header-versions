@@ -9,9 +9,9 @@
 @protocol SPTFreeTierPlaylistTrackViewModel, SPTPlaylistPlatformPlaylistTrackFields;
 
 @protocol SPTFreeTierPlaylistItemsViewModel <NSObject>
-@property(readonly, nonatomic) unsigned long long numberOfLoadedItems;
-@property(readonly, nonatomic) unsigned long long numberOfItems;
 - (id <SPTPlaylistPlatformPlaylistTrackFields>)trackEntityAtIndex:(long long)arg1;
 - (id <SPTFreeTierPlaylistTrackViewModel>)trackViewModelAtIndex:(long long)arg1;
+@property(nonatomic, readonly) unsigned long long numberOfLoadedItems;
+@property(nonatomic, readonly) unsigned long long numberOfItems;
 @end
 

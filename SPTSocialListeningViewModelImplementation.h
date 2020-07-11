@@ -63,7 +63,7 @@
 - (void)navigateToUserProfilePage:(id)arg1;
 - (void)leaveOrDeleteSession;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
-- (_Bool)showConfirmDeleteSessionDialog;
+@property(readonly, nonatomic) _Bool isSessionHost;
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
 @property(readonly, nonatomic) _Bool scanCodeButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;

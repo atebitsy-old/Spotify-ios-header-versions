@@ -28,6 +28,7 @@
 - (id)createTappableSectionHeaderComponent;
 - (id)createShortcutsCardComponent;
 - (id)createShortcutsContainerComponent;
+- (id)createSingleItemComponent;
 - (id)createSectionHeaderComponentWithType:(unsigned long long)arg1;
 - (id)createRowLargeComponent;
 - (id)createPromoV2Component;

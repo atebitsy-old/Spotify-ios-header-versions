@@ -10,19 +10,19 @@
 #import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTVoiceLibraryNetworkState-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController, SPTObserverManager;
-@protocol SPTOfflineModeState;
+@class NSString, SPTObserverManager;
+@protocol SPTNetworkConnectivityController, SPTOfflineModeState;
 
 @interface SPTVoiceLibraryNetworkHandler : NSObject <SPTNetworkConnectivityControllerObserver, SPTOfflineModeStateObserver, SPTVoiceLibraryNetworkState>
 {
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTOfflineModeState> _offlineModeState;
     SPTObserverManager *_observerManager;
 }
 
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 - (void).cxx_destruct;
 - (void)notifyErrorIfOffline;
 - (id)connectionType;

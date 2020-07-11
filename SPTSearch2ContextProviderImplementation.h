@@ -8,8 +8,8 @@
 
 #import "SPTSearch2ContextProvider-Protocol.h"
 
-@class NSString, NSURL, SPTDataLoaderFactory, SPTNetworkConnectivityController;
-@protocol SPTAgeVerificationProvider, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTPlayer, SPTSearch2ContentOperationsFactory, SPTSearch2DateProviding, SPTSearch2EmptyStatePropertiesProvider, SPTSearch2URLProviding, SPTSearch2UserTierProviding, SPTSearchOfflineAlbumDataLoader, SPTSearchOfflineEpisodeDataLoader, SPTSearchOfflinePlaylistDataLoader, SPTSearchOfflineTrackDataLoader, SPTSearchPlatformTestManager, SPTSearchRecentsDataSource, SPTSearchUBILocationSerializer;
+@class NSString, NSURL, SPTDataLoaderFactory;
+@protocol SPTAgeVerificationProvider, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkConnectivityController, SPTPlayer, SPTSearch2ContentOperationsFactory, SPTSearch2DateProviding, SPTSearch2EmptyStatePropertiesProvider, SPTSearch2URLProviding, SPTSearch2UserTierProviding, SPTSearchOfflineAlbumDataLoader, SPTSearchOfflineEpisodeDataLoader, SPTSearchOfflinePlaylistDataLoader, SPTSearchOfflineTrackDataLoader, SPTSearchPlatformTestManager, SPTSearchRecentsDataSource, SPTSearchUBILocationSerializer;
 
 @interface SPTSearch2ContextProviderImplementation : NSObject <SPTSearch2ContextProvider>
 {
@@ -20,7 +20,7 @@
     id <SPTHugsFactory> _hugsFactory;
     SPTDataLoaderFactory *_dataLoaderFactory;
     unsigned long long _entityVersion;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     id <SPTSearch2ContentOperationsFactory> _postProcessContentOperationsFactory;
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     id <SPTPlayer> _player;
@@ -61,7 +61,7 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) id <SPTSearch2ContentOperationsFactory> postProcessContentOperationsFactory; // @synthesize postProcessContentOperationsFactory=_postProcessContentOperationsFactory;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(readonly, nonatomic) unsigned long long entityVersion; // @synthesize entityVersion=_entityVersion;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;

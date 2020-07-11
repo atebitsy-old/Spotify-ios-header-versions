@@ -9,18 +9,19 @@
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTSearch2ConnectivityMonitor-Protocol.h"
 
-@class NSHashTable, NSString, SPTNetworkConnectivityController;
+@class NSHashTable, NSString;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTSearch2ConnectivityMonitorImplementation : NSObject <SPTNetworkConnectivityControllerObserver, SPTSearch2ConnectivityMonitor>
 {
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     NSHashTable *_observers;
     unsigned long long _state;
 }
 
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(readonly, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 - (void).cxx_destruct;
 - (void)updateConnectivityState;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;

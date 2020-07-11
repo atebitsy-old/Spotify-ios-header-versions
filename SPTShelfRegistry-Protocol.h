@@ -7,6 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTShelfRegistry <NSObject>
-- (void)registerShelfForURIPredicate:(id <SPTShelf> (^)(NSURL *))arg1 swipeType:(long long)arg2;
+- (void)registerShelfForURIPredicate:(id <SPTShelf> (^)(NSURL *))arg1 atPosition:(long long)arg2;
 @end
 

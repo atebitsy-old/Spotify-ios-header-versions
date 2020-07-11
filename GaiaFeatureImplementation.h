@@ -12,7 +12,7 @@
 #import "UIPopoverPresentationControllerDelegate-Protocol.h"
 
 @class GaiaLocalAudioSessionController, GaiaMessageBarController, NSString, SPNavigationController, SPTAllocationContext, SPTCastManager, SPTGaiaAudioAPKeepAliveHandler, SPTGaiaConnectCosmosResolver, SPTGaiaConnectPublicStateCache, SPTGaiaConnectStateObservingManager, SPTGaiaDependencyInjectorImplementation, SPTGaiaDeviceAppearanceMapping, SPTGaiaDevicePickerAppearanceManager, SPTGaiaDevicePickerDeviceSpecificConfigurationManager, SPTGaiaDevicePickerDevicesProvider, SPTGaiaDevicePickerViewController, SPTGaiaDevicePickerViewModel, SPTGaiaDevicesAvailableViewFactory, SPTGaiaEducationDetailModelManager, SPTGaiaFeatureFlagsManager, SPTGaiaFeatureSettingsManager, SPTGaiaHomeDeviceLocalNotificationManager, SPTGaiaHomeDeviceLogger, SPTGaiaHomeDeviceManager, SPTGaiaHomeDeviceTooltipConnectionTracker, SPTGaiaHomeDeviceTooltipManager, SPTGaiaHomeDeviceTransitionManager, SPTGaiaIconProviderImplementation, SPTGaiaInstrumentationRemotePlayingStateBinder, SPTGaiaLocalDevicePermissions, SPTGaiaLockScreenFeatureManager, SPTGaiaLogger, SPTGaiaMPMusicPlayerControllerFactory, SPTGaiaOnboardingManagerImplementation, SPTGaiaPlaybackGrabberController, SPTGaiaPopupController, SPTGaiaSettingsManager, SPTGaiaSignpostInstrumentation, SPTGaiaSilentAudioPlayerProviderDefaultImplementation, SPTGaiaSocialListeningIntegrationManager, SPTGaiaUbiLogger, SPTGaiaVolumeButtonController;
-@protocol CosmosFeature, SPTAbbaService, SPTAccountService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTGLUEService, SPTGaiaConnectAPI, SPTGaiaConnectManager, SPTGaiaDevicePickerPresenter, SPTGaiaVolumeControllerInterface, SPTGaiaWirelessRoutesAPI, SPTInstrumentationService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPushMessagingService, SPTSessionService, SPTSettingsFeature, SPTSocialListeningService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
+@protocol CosmosFeature, SPTAbbaService, SPTAccountService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTGLUEService, SPTGaiaConnectAPI, SPTGaiaConnectManager, SPTGaiaDevicePickerPresenter, SPTGaiaVolumeControllerInterface, SPTGaiaWirelessRoutesAPI, SPTInstrumentationService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPushMessagingService, SPTSessionService, SPTSettingsFeature, SPTSocialListeningService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface GaiaFeatureImplementation : NSObject <UIPopoverPresentationControllerDelegate, SPTService, GaiaFeature, SPTGaiaDevicePickerControllerProvider>
 {
@@ -34,6 +34,7 @@
     id <SPTSocialListeningService> _socialListeningService;
     id <CosmosFeature> _cosmosService;
     id <SPTUBIService> _ubiService;
+    id <SPTEventSenderService> _eventSenderService;
     GaiaLocalAudioSessionController *_localAudioSessionController;
     SPTGaiaVolumeButtonController *_volumeButtonController;
     id <SPTGaiaVolumeControllerInterface> _volumeController;
@@ -129,6 +130,7 @@
 @property(retain, nonatomic) id <SPTGaiaVolumeControllerInterface> volumeController; // @synthesize volumeController=_volumeController;
 @property(retain, nonatomic) SPTGaiaVolumeButtonController *volumeButtonController; // @synthesize volumeButtonController=_volumeButtonController;
 @property(retain, nonatomic) GaiaLocalAudioSessionController *localAudioSessionController; // @synthesize localAudioSessionController=_localAudioSessionController;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTSocialListeningService> socialListeningService; // @synthesize socialListeningService=_socialListeningService;

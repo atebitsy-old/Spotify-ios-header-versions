@@ -72,7 +72,7 @@
 - (void)playContentWithURI:(id)arg1 withOptions:(id)arg2 externalActionOrigin:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (void)playContentWithURI:(id)arg1 withOptions:(id)arg2 origin:(id)arg3 externalActionOrigin:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (_Bool)canPlayContentWithURI:(id)arg1;
-- (void)playContent:(id)arg1 withOptions:(id)arg2 externalActionOrigin:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)playContent:(id)arg1 withOptions:(id)arg2 externalActionOrigin:(id)arg3 referrer:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (_Bool)canPlayContent:(id)arg1;
 - (void)unregisterActionCoordinator:(id)arg1;
 - (void)registerActionCoordinator:(id)arg1;

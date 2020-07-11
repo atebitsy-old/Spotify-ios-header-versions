@@ -9,13 +9,13 @@
 #import "SPTThemableViewLayoutDelegate-Protocol.h"
 #import "SPTViewOfflineSwitchDelegate-Protocol.h"
 
-@class GLUETableViewCellStyle, NSArray, NSString, SPTNetworkConnectivityController, SPTViewOfflineSwitch;
-@protocol SPTModalPresentationController, SPTOfflineSwitchDelegate, SPTProductState;
+@class GLUETableViewCellStyle, NSArray, NSString, SPTViewOfflineSwitch;
+@protocol SPTModalPresentationController, SPTNetworkConnectivityController, SPTOfflineSwitchDelegate, SPTProductState;
 
 @interface SPTTableViewOfflineSwitchCell : UITableViewCell <SPTThemableViewLayoutDelegate, SPTViewOfflineSwitchDelegate>
 {
     id <SPTOfflineSwitchDelegate> _delegate;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTViewOfflineSwitch *_offlineSwitchView;
     unsigned long long _lastAvailability;
     id <SPTProductState> _productState;
@@ -30,7 +30,7 @@
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) unsigned long long lastAvailability; // @synthesize lastAvailability=_lastAvailability;
 @property(retain, nonatomic) SPTViewOfflineSwitch *offlineSwitchView; // @synthesize offlineSwitchView=_offlineSwitchView;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTOfflineSwitchDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)offlineSwitchViewDidAbortStateChange:(id)arg1;

@@ -41,7 +41,7 @@
 - (void).cxx_destruct;
 - (void)registerDefaultURISchemeHandlers;
 - (id)buildHTTPLinkHandler;
-- (id)handlerContextWithSourceApplication:(id)arg1 annotation:(id)arg2 useCurrentStack:(_Bool)arg3 popStackIfPossible:(_Bool)arg4 suppressAnimations:(_Bool)arg5;
+- (id)handlerContextWithSourceApplication:(id)arg1 annotation:(id)arg2 useCurrentStack:(_Bool)arg3 popStackIfPossible:(_Bool)arg4 suppressAnimations:(_Bool)arg5 interactionID:(id)arg6;
 - (long long)externalLinkControllerHandleCampaignURIIfRelevant:(id)arg1;
 - (_Bool)canHandleURIForExternalLinkController:(id)arg1;
 - (id)decorateErrorMessage:(id)arg1 withURI:(id)arg2;
@@ -49,9 +49,11 @@
 - (void)URISchemeDispatcher:(id)arg1 showWillOpenOnLoginForURI:(id)arg2;
 - (void)URISchemeDispatcher:(id)arg1 showInvalidSpotifyLinkMessageForURI:(id)arg2;
 - (void)URISchemeDispatcher:(id)arg1 showInvalidLinkMessageForURI:(id)arg2;
+- (void)navigateToURI:(id)arg1 options:(long long)arg2 interactionID:(id)arg3;
 - (void)navigateToURI:(id)arg1 options:(long long)arg2;
+- (void)navigateToURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4 interactionID:(id)arg5 completionHandler:(CDUnknownBlockType)arg6;
 - (void)navigateToURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4 completionHandler:(CDUnknownBlockType)arg5;
-- (_Bool)navigateToInternalURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4;
+- (_Bool)navigateToInternalURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4 interactionID:(id)arg5;
 - (_Bool)canOpenURI:(id)arg1 allowExternalApps:(_Bool)arg2;
 @property(readonly, nonatomic) id <SPTURISchemeRegistry> schemeRegistry;
 - (id)initWithCore:(id)arg1 alertInterface:(id)arg2 URISubtypeRegistry:(id)arg3 externalLinkHandler:(id)arg4;

@@ -14,5 +14,6 @@
 - (void)swipeableTableViewCell:(SPTSwipeableTableViewCell *)arg1 didActivateGesture:(long long)arg2;
 - (void)swipeableTableViewCell:(SPTSwipeableTableViewCell *)arg1 didCompleteGesture:(long long)arg2 withHorizontalVelocity:(double)arg3 triggerOffset:(double)arg4;
 - (void)swipeableTableViewCell:(SPTSwipeableTableViewCell *)arg1 didCompleteGesture:(long long)arg2;
+- (void)swipeableTableViewCell:(SPTSwipeableTableViewCell *)arg1 didCompleteGestureOnAShelfPlacedAt:(long long)arg2;
 @end
 

@@ -9,14 +9,14 @@
 #import "SPTGaiaConnectManagerObserver-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSDate, NSString, SPTGaiaHomeDeviceManager, SPTNetworkConnectivityController, UIApplication;
-@protocol SPTGaiaConnectManager, SPTGaiaHomeDeviceTriggerManagerDelegate, SPTPlayer;
+@class NSDate, NSString, SPTGaiaHomeDeviceManager, UIApplication;
+@protocol SPTGaiaConnectManager, SPTGaiaHomeDeviceTriggerManagerDelegate, SPTNetworkConnectivityController, SPTPlayer;
 
 @interface SPTGaiaHomeDeviceTriggerManager : NSObject <SPTGaiaConnectManagerObserver, SPTNetworkConnectivityControllerObserver>
 {
     _Bool _activelyWaitingForHomeDevice;
     id <SPTGaiaHomeDeviceTriggerManagerDelegate> _delegate;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTGaiaConnectManager> _connectManager;
     UIApplication *_application;
     SPTGaiaHomeDeviceManager *_homeDeviceManager;
@@ -32,7 +32,7 @@
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
 @property(readonly, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTGaiaHomeDeviceTriggerManagerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)connectManager:(id)arg1 availableDevicesDidChange:(id)arg2;

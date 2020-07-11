@@ -8,6 +8,7 @@
 
 @interface _TtC29PodcastMixControlsFeatureImpl38SPTPodcastMixControlsFeatureProperties : NSObject
 {
+    // Error parsing type: , name: pmixTopicFilter
     // Error parsing type: , name: pmixBannedDim
     // Error parsing type: , name: pmixHelpCta
     // Error parsing type: , name: pmixIconBanned

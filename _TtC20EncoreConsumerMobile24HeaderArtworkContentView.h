@@ -24,6 +24,8 @@
     // Error parsing type: , name: artworkTopConstraintWithMargin
     // Error parsing type: , name: artworkBottomConstraint
     // Error parsing type: , name: heightConstraint
+    // Error parsing type: , name: playButtonLayoutGuide
+    // Error parsing type: , name: playButton
 }
 
 @property(nonatomic, retain) UIView *uiView; // @synthesize uiView;

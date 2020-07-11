@@ -9,16 +9,17 @@
 #import "BMConnectionModeObservable-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSHashTable, NSString, SPTNetworkConnectivityController;
+@class NSHashTable, NSString;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTConnectionModeChangeForwarder : NSObject <SPTNetworkConnectivityControllerObserver, BMConnectionModeObservable>
 {
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     NSHashTable *_observers;
 }
 
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 - (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 - (void)removeObserver:(id)arg1;

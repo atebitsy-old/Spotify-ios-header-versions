@@ -11,10 +11,10 @@
 @protocol SPTPodcastEpisode;
 
 @protocol SPTPodcast <NSObject, SPTShow>
-@property(readonly, nonatomic) id <SPTPodcastEpisode> trailerEpisode;
-@property(readonly, nonatomic) NSArray *episodes;
-@property(readonly, nonatomic) unsigned long long unrangedLength;
-@property(readonly, nonatomic) long long consumptionOrder;
-@property(readonly, nonatomic) long long numberOfFollowers;
+@property(nonatomic, readonly) id <SPTPodcastEpisode> trailerEpisode;
+@property(nonatomic, readonly) NSArray *episodes;
+@property(nonatomic, readonly) unsigned long long unrangedLength;
+@property(nonatomic, readonly) long long consumptionOrder;
+@property(nonatomic, readonly) long long numberOfFollowers;
 @end
 

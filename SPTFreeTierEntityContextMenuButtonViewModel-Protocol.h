@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTFreeTierEntityContextMenuButton;
+@class UIView;
 @protocol SPTFreeTierEntityContextMenuButtonViewModelDelegate;
 
 @protocol SPTFreeTierEntityContextMenuButtonViewModel <NSObject>
 @property(readonly, nonatomic) unsigned long long state;
 @property(nonatomic) __weak id <SPTFreeTierEntityContextMenuButtonViewModelDelegate> delegate;
-- (void)tapContextMenuButton:(SPTFreeTierEntityContextMenuButton *)arg1;
+- (void)tapContextMenuButton:(UIView *)arg1;
 @end
 

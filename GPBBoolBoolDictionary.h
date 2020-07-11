@@ -18,11 +18,6 @@
     _Bool _valueSet[2];
 }
 
-+ (id)dictionaryWithCapacity:(unsigned long long)arg1;
-+ (id)dictionaryWithDictionary:(id)arg1;
-+ (id)dictionaryWithBools:(const _Bool *)arg1 forKeys:(const _Bool *)arg2 count:(unsigned long long)arg3;
-+ (id)dictionaryWithBool:(_Bool)arg1 forKey:(_Bool)arg2;
-+ (id)dictionary;
 - (void)removeAll;
 - (void)removeBoolForKey:(_Bool)arg1;
 - (void)setBool:(_Bool)arg1 forKey:(_Bool)arg2;

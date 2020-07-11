@@ -19,12 +19,6 @@
     _Bool _valueSet[2];
 }
 
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1 capacity:(unsigned long long)arg2;
-+ (id)dictionaryWithDictionary:(id)arg1;
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1 rawValues:(const int *)arg2 forKeys:(const _Bool *)arg3 count:(unsigned long long)arg4;
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1 rawValue:(int)arg2 forKey:(_Bool)arg3;
-+ (id)dictionaryWithValidationFunction:(CDUnknownFunctionPointerType)arg1;
-+ (id)dictionary;
 @property(readonly, nonatomic) CDUnknownFunctionPointerType validationFunc; // @synthesize validationFunc=_validationFunc;
 - (void)removeAll;
 - (void)removeEnumForKey:(_Bool)arg1;

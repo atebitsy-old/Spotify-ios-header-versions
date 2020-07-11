@@ -17,11 +17,6 @@
     id _values[2];
 }
 
-+ (id)dictionaryWithCapacity:(unsigned long long)arg1;
-+ (id)dictionaryWithDictionary:(id)arg1;
-+ (id)dictionaryWithObjects:(const id *)arg1 forKeys:(const _Bool *)arg2 count:(unsigned long long)arg3;
-+ (id)dictionaryWithObject:(id)arg1 forKey:(_Bool)arg2;
-+ (id)dictionary;
 - (void)removeAll;
 - (void)removeObjectForKey:(_Bool)arg1;
 - (void)setObject:(id)arg1 forKey:(_Bool)arg2;

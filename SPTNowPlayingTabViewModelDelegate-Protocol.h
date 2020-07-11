@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
+@class SPTNowPlayingTabViewModel;
+
 @protocol SPTNowPlayingTabViewModelDelegate <NSObject>
-- (void)didSelectLyricsTab;
-- (void)didSelectAlbumArtTab;
-- (void)didSelectCanvasTab;
+- (void)tabViewModel:(SPTNowPlayingTabViewModel *)arg1 didChangeSelectedTab:(long long)arg2;
+- (void)tabViewModelDidChangeTabs:(SPTNowPlayingTabViewModel *)arg1 canvasTabVisible:(_Bool)arg2 lyricsTabVisible:(_Bool)arg3;
 @end
 

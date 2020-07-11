@@ -12,20 +12,20 @@
 #import "SPTPageController-Protocol.h"
 
 @class NSError, NSString, NSURL, SPTLoginTheme, SPTLoginWelcomeView, SPTLoginWelcomeViewModel, SPTProgressView;
-@protocol SPTPageContainer;
+@protocol GLUEImageLoader, SPTPageContainer;
 
 @interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
-    _Bool _reversePager;
     NSError *error;
     SPTLoginWelcomeViewModel *_viewModel;
     SPTLoginTheme *_theme;
     SPTProgressView *_progressIndicator;
+    id <GLUEImageLoader> _imageLoader;
 }
 
-@property(nonatomic) _Bool reversePager; // @synthesize reversePager=_reversePager;
+@property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTProgressView *progressIndicator; // @synthesize progressIndicator=_progressIndicator;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginWelcomeViewModel *viewModel; // @synthesize viewModel=_viewModel;
@@ -33,6 +33,8 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
+- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)updateImageryVisibilitySetting;
 - (void)hideProgressIndicator;
 - (void)showProgressIndicator;
 - (unsigned long long)preferredNavigationBarState;
@@ -48,9 +50,10 @@
 - (void)facebookButtonTapped:(id)arg1;
 - (void)configureButtonLayout;
 - (void)viewDidAppear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 imageLoader:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

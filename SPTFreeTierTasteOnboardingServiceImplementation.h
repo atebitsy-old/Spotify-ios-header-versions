@@ -10,7 +10,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierTasteOnboardingCompoundCuration, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkServiceImplementation, SPTFreeTierTasteOnboardingFlowCoordinator, SPTFreeTierTasteOnboardingTestManagerImplementation;
-@protocol FollowFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHomeMixUIService, SPTInstrumentationService, SPTLoginService, SPTMandatoryPremiumTrialService, SPTNetworkService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
+@protocol FollowFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHomeMixUIService, SPTInstrumentationService, SPTLoginService, SPTMandatoryPremiumTrialService, SPTNetworkService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
 
 @interface SPTFreeTierTasteOnboardingServiceImplementation : NSObject <SPTFreeTierTasteOnboardingService, SPTURISubtypeHandler>
 {
@@ -32,6 +32,7 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     SPTFreeTierTasteOnboardingDeeplinkServiceImplementation *_onboardingDeeplinkService;
     id <SPTMandatoryPremiumTrialService> _mandatoryPremiumTrialService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> _podcastOnboardingService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTContainerUIService> _containerUIService;
@@ -39,9 +40,11 @@
     SPTFreeTierTasteOnboardingFlowCoordinator *_flowCoordinator;
     SPTFreeTierTasteOnboardingTestManagerImplementation *_testManager;
     SPTFreeTierTasteOnboardingCompoundCuration *_compoundCuration;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingCompoundCuration *compoundCuration; // @synthesize compoundCuration=_compoundCuration;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingFlowCoordinator *flowCoordinator; // @synthesize flowCoordinator=_flowCoordinator;
@@ -49,6 +52,7 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> podcastOnboardingService; // @synthesize podcastOnboardingService=_podcastOnboardingService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTMandatoryPremiumTrialService> mandatoryPremiumTrialService; // @synthesize mandatoryPremiumTrialService=_mandatoryPremiumTrialService;
 @property(nonatomic) __weak SPTFreeTierTasteOnboardingDeeplinkServiceImplementation *onboardingDeeplinkService; // @synthesize onboardingDeeplinkService=_onboardingDeeplinkService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;

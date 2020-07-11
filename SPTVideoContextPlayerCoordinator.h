@@ -57,6 +57,7 @@
 - (void)didFailWithFatalError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didStartBufferingAtPosition:(double)arg1 timestamp:(double)arg2;
 - (void)didBecomeReadyAtPosition:(double)arg1 timestamp:(double)arg2;
+- (_Bool)isStopPositionBeforeSeekPosition:(double)arg1;
 - (void)invalidateStalledTimer;
 - (void)maybeCreateStalledTimer;
 - (void)resumeCurrentPlaybackAtPosition:(double)arg1;

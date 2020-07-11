@@ -76,9 +76,9 @@
 - (id)serializableCredentialsAndCanonicalUsername:(id *)arg1;
 - (id)storedCredentialsAndCanonicalUsername:(id *)arg1;
 - (void)loginWithCredentials:(id)arg1 options:(id)arg2;
-- (void)loginWithAppleSignInCredential:(id)arg1 options:(id)arg2;
-- (void)loginWithParentChildCredential:(id)arg1 options:(id)arg2;
-- (void)loginWithOneTimeTokenCredential:(id)arg1 options:(id)arg2;
+- (void)loginWithAppleSignInCredentials:(id)arg1 options:(id)arg2;
+- (void)loginWithParentChildCredentials:(id)arg1 options:(id)arg2;
+- (void)loginWithOneTimeTokenCredentials:(id)arg1 options:(id)arg2;
 - (void)loginWithPhoneNumberIdentifier:(id)arg1 options:(id)arg2;
 - (void)loginWithTask:(id)arg1;
 - (void)notifyChallengeSucceededWithSignupInformation:(id)arg1;

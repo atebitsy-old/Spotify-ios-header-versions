@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTVISREFTestManager <NSObject>
+@property(readonly, nonatomic, getter=isEncoreAlbumHeaderEnabled) _Bool encoreAlbumHeaderEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshLeftAlignedTrackCloudEnabled) _Bool visualRefreshLeftAlignedTrackCloudEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshPlaylistTrackRowArtworkEnabled) _Bool visualRefreshPlaylistTrackRowArtworkEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshSectionHeaderEnabled) _Bool visualRefreshSectionHeaderEnabled;

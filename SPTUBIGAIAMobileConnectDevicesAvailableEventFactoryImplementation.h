@@ -18,7 +18,10 @@
 + (id)factory;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)containerViewFactoryWithUri:(id)arg1;
+- (id)connectButtonConnectedFactory;
+- (id)connectButtonConnectingFactory;
+- (id)connectButtonAvailableFactory;
+- (id)connectButtonUnavailableFactory;
 - (id)_location;
 - (id)init;
 

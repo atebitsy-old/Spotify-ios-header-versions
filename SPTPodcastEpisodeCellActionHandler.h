@@ -54,6 +54,7 @@
 - (void)playButtonTapped:(id)arg1;
 - (void)cellContextMenuTapped:(id)arg1;
 - (void)offlineAccessoryButtonTapped:(id)arg1;
+- (_Bool)shouldNavigateToEpisodePage:(id)arg1;
 - (void)configureForViewController:(id)arg1;
 - (id)featureId;
 - (id)URI;

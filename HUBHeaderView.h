@@ -28,6 +28,7 @@
 - (void).cxx_destruct;
 - (void)componentViewManager:(id)arg1 componentViewDidDisappear:(id)arg2;
 - (void)componentViewManager:(id)arg1 componentViewWillAppear:(id)arg2;
+- (void)componentViewDidDisappear;
 - (void)componentViewWillAppear;
 - (id)createComponentViewForComponentModel:(id)arg1;
 - (void)configureComponentView;

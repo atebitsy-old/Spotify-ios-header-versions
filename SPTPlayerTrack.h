@@ -70,7 +70,7 @@
 @property(readonly, nonatomic) NSURL *coverArtURLSmall;
 @property(readonly, nonatomic) NSURL *coverArtURL;
 @property(readonly, nonatomic) _Bool wasManuallyQueued;
-@property(readonly, nonatomic, getter=isInjectedTrack) _Bool injectedTrack;
+@property(readonly, nonatomic, getter=isMusicInjectionEpisode) _Bool isMusicInjectionEpisode;
 @property(readonly, nonatomic) _Bool isAgeRestricted;
 @property(readonly, nonatomic) _Bool isRatedExplicit;
 @property(readonly, nonatomic, getter=spt_isMetaTrack) _Bool spt_metaTrack;

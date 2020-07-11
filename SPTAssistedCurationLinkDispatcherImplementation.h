@@ -22,8 +22,11 @@
 - (void)registerPageProvider:(id)arg1;
 - (id)pageProviderForURI:(id)arg1;
 - (_Bool)canOpenURI:(id)arg1 allowExternalApps:(_Bool)arg2;
+- (void)navigateToURI:(id)arg1 options:(long long)arg2 interactionID:(id)arg3;
 - (void)navigateToURI:(id)arg1 options:(long long)arg2;
+- (void)navigateToURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4 interactionID:(id)arg5 completionHandler:(CDUnknownBlockType)arg6;
 - (void)navigateToURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4 completionHandler:(CDUnknownBlockType)arg5;
+- (_Bool)internalNavigateToURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4 interactionID:(id)arg5;
 - (_Bool)internalNavigateToURI:(id)arg1 sourceApplication:(id)arg2 annotation:(id)arg3 options:(long long)arg4;
 - (id)init;
 

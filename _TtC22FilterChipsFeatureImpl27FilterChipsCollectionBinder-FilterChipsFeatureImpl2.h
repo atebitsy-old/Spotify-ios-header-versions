@@ -6,9 +6,7 @@
 
 #import "_TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder.h"
 
-#import "UICollectionViewDelegateFlowLayout-Protocol.h"
-
-@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl2) <UICollectionViewDelegateFlowLayout>
-- (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
+@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl2)
+- (struct CGSize)collectionView:(id)arg1 sizeForItemAt:(id)arg2;
 @end
 

@@ -12,8 +12,8 @@
 #import "SPTSearchSearchBarDelegate-Protocol.h"
 #import "SPTSearchVoiceEnabledViewDelegate-Protocol.h"
 
-@class NSLayoutConstraint, NSString, NSURL, SPTFloatingVoiceSearchView, SPTNetworkConnectivityController, SPTSearch2ViewController, UIView;
-@protocol SPTLinkDispatcher, SPTPageContainer, SPTSearchLogger, SPTSearchSearchBarProtocol, SPTVoiceService;
+@class NSLayoutConstraint, NSString, NSURL, SPTFloatingVoiceSearchView, SPTSearch2ViewController, UIView;
+@protocol SPTLinkDispatcher, SPTNetworkConnectivityController, SPTPageContainer, SPTSearchLogger, SPTSearchSearchBarProtocol, SPTVoiceService;
 
 @interface SPTSearch2RootViewController : UIViewController <SPTSearchSearchBarDelegate, SPContentInsetViewController, SPTSearchVoiceEnabledViewDelegate, SPTSearch2RootViewControllerProtocol, SPTPageController>
 {
@@ -26,7 +26,7 @@
     id <SPTSearchLogger> _logger;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTVoiceService> _voiceService;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     UIView<SPTSearchSearchBarProtocol> *_searchBar;
     NSLayoutConstraint *_searchBarWidthConstraint;
     SPTFloatingVoiceSearchView *_floatingSearchView;
@@ -38,7 +38,7 @@
 @property(retain, nonatomic) SPTFloatingVoiceSearchView *floatingSearchView; // @synthesize floatingSearchView=_floatingSearchView;
 @property(readonly, nonatomic) NSLayoutConstraint *searchBarWidthConstraint; // @synthesize searchBarWidthConstraint=_searchBarWidthConstraint;
 @property(readonly, nonatomic) UIView<SPTSearchSearchBarProtocol> *searchBar; // @synthesize searchBar=_searchBar;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTSearchLogger> logger; // @synthesize logger=_logger;

@@ -6,22 +6,20 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFollowShelfFactoryDelegate-Protocol.h"
 #import "SPTFormatListPlatformManagerOfflineDelegate-Protocol.h"
 #import "SPTFormatListPlatformRemoteControlPolicyManagerObserver-Protocol.h"
 #import "SPTPSXViewModel-Protocol.h"
 #import "SPTPersonalisedSetsUnbanContextMenuActionDelegate-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSArray, NSDate, NSString, NSURL, SPSession, SPTPSXArtistRecommendationsDataLoader, SPTPSXArtistRecommendationsList, SPTPlayerState;
-@protocol SPTCollectionSortingEntityManager, SPTContextMenuPresenterFactory, SPTFeedbackManager, SPTFollowShelfFactory, SPTFollowShelfService, SPTFormatListModel, SPTFormatListPlatformManager, SPTFormatListPlatformRemoteControlPolicyManager, SPTFormatListPlatformResolver, SPTPSXTestManager, SPTPSXViewModelBanningDelegate, SPTPSXViewModelDelegate, SPTPlayer, SPTPlaylistModel, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader;
+@class NSArray, NSDate, NSString, NSURL, SPSession, SPTPlayerState;
+@protocol SPTCollectionSortingEntityManager, SPTContextMenuPresenterFactory, SPTFeedbackManager, SPTFormatListModel, SPTFormatListPlatformManager, SPTFormatListPlatformRemoteControlPolicyManager, SPTFormatListPlatformResolver, SPTPSXTestManager, SPTPSXViewModelBanningDelegate, SPTPSXViewModelDelegate, SPTPlayer, SPTPlaylistModel, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader;
 
-@interface SPTPSXViewModelImplementation : NSObject <SPTFormatListPlatformManagerOfflineDelegate, SPTPersonalisedSetsUnbanContextMenuActionDelegate, SPTPlayerObserver, SPTFormatListPlatformRemoteControlPolicyManagerObserver, SPTFollowShelfFactoryDelegate, SPTPSXViewModel>
+@interface SPTPSXViewModelImplementation : NSObject <SPTFormatListPlatformManagerOfflineDelegate, SPTPersonalisedSetsUnbanContextMenuActionDelegate, SPTPlayerObserver, SPTFormatListPlatformRemoteControlPolicyManagerObserver, SPTPSXViewModel>
 {
     _Bool _availableOffline;
     _Bool _loaded;
     _Bool _isFollowed;
-    _Bool _followShelfEnabled;
     _Bool _ascendingSortOrder;
     NSString *_name;
     NSURL *_entityURL;
@@ -43,14 +41,11 @@
     id <SPTCollectionSortingEntityManager> _sortingEntityManager;
     SPSession *_session;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistPlatformPlaylistDataLoader;
-    SPTPSXArtistRecommendationsDataLoader *_artistRecommendationsDataLoader;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
     id <SPTPSXTestManager> _testManager;
     id <SPTFormatListPlatformRemoteControlPolicyManager> _formatListPlatformRemoteControlPolicyManager;
     id <SPTPlaylistModel> _playlistModel;
     id <SPTFeedbackManager> _feedbackManager;
-    id <SPTFollowShelfService> _followShelfService;
-    id <SPTFollowShelfFactory> _followShelfFactory;
     NSString *_madeForName;
     id <SPTFormatListModel> _formatListModel;
     unsigned long long _sortColumn;
@@ -58,10 +53,8 @@
     NSArray *_tracks;
     SPTPlayerState *_currentPlayerState;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _playlistRequestToken;
-    SPTPSXArtistRecommendationsList *_recsList;
 }
 
-@property(retain, nonatomic) SPTPSXArtistRecommendationsList *recsList; // @synthesize recsList=_recsList;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> playlistRequestToken; // @synthesize playlistRequestToken=_playlistRequestToken;
 @property(retain, nonatomic) SPTPlayerState *currentPlayerState; // @synthesize currentPlayerState=_currentPlayerState;
 @property(retain, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
@@ -70,15 +63,11 @@
 @property(nonatomic) unsigned long long sortColumn; // @synthesize sortColumn=_sortColumn;
 @property(retain, nonatomic) id <SPTFormatListModel> formatListModel; // @synthesize formatListModel=_formatListModel;
 @property(copy, nonatomic) NSString *madeForName; // @synthesize madeForName=_madeForName;
-@property(nonatomic, getter=isFollowShelfEnabled) _Bool followShelfEnabled; // @synthesize followShelfEnabled=_followShelfEnabled;
-@property(retain, nonatomic) id <SPTFollowShelfFactory> followShelfFactory; // @synthesize followShelfFactory=_followShelfFactory;
-@property(readonly, nonatomic) id <SPTFollowShelfService> followShelfService; // @synthesize followShelfService=_followShelfService;
 @property(readonly, nonatomic) id <SPTFeedbackManager> feedbackManager; // @synthesize feedbackManager=_feedbackManager;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) id <SPTFormatListPlatformRemoteControlPolicyManager> formatListPlatformRemoteControlPolicyManager; // @synthesize formatListPlatformRemoteControlPolicyManager=_formatListPlatformRemoteControlPolicyManager;
 @property(readonly, nonatomic) id <SPTPSXTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
-@property(retain, nonatomic) SPTPSXArtistRecommendationsDataLoader *artistRecommendationsDataLoader; // @synthesize artistRecommendationsDataLoader=_artistRecommendationsDataLoader;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistPlatformPlaylistDataLoader; // @synthesize playlistPlatformPlaylistDataLoader=_playlistPlatformPlaylistDataLoader;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) id <SPTCollectionSortingEntityManager> sortingEntityManager; // @synthesize sortingEntityManager=_sortingEntityManager;
@@ -110,10 +99,7 @@
 - (void)remoteControlPolicyManagerDidFinishUnlikeFeedback:(id)arg1 track:(id)arg2 contextURI:(id)arg3 error:(id)arg4;
 - (void)remoteControlPolicyManagerDidFinishLikeFeedback:(id)arg1 track:(id)arg2 contextURI:(id)arg3 error:(id)arg4;
 - (void)resyncPlaylistIfNecessary:(id)arg1;
-- (void)didDismissFollowItem:(id)arg1;
-- (void)didDismissFollowItems;
 - (void)unbanContextMenuActionShouldPerformAction:(id)arg1;
-@property(readonly, nonatomic, getter=isFollowShelfAvailable) _Bool followShelfAvailable;
 @property(readonly, nonatomic, getter=isOfflineToggleAvailable) _Bool offlineToggleAvailable;
 - (_Bool)isTrackPlaying:(id)arg1;
 - (void)unbanTrack:(id)arg1;
@@ -133,9 +119,8 @@
 - (void)fillOptionsForPlaylistTracks:(id)arg1;
 - (void)reloadTracks;
 - (void)requestChangeFollowStatus:(_Bool)arg1;
-- (void)requestArtistRecommendations;
 - (void)loadPlaylist;
-- (id)initWithURL:(id)arg1 player:(id)arg2 resolver:(id)arg3 platformManager:(id)arg4 sortingEntityManager:(id)arg5 session:(id)arg6 playlistPlatformPlaylistDataLoader:(id)arg7 artistRecommendationsDataLoader:(id)arg8 contextMenuPresenterFactory:(id)arg9 testManager:(id)arg10 formatListPlatformRemoteControlPolicyManager:(id)arg11 playlistModel:(id)arg12 feedbackManager:(id)arg13 followShelfService:(id)arg14 isFollowShelfEnabled:(_Bool)arg15;
+- (id)initWithURL:(id)arg1 player:(id)arg2 resolver:(id)arg3 platformManager:(id)arg4 sortingEntityManager:(id)arg5 session:(id)arg6 playlistPlatformPlaylistDataLoader:(id)arg7 contextMenuPresenterFactory:(id)arg8 testManager:(id)arg9 formatListPlatformRemoteControlPolicyManager:(id)arg10 playlistModel:(id)arg11 feedbackManager:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

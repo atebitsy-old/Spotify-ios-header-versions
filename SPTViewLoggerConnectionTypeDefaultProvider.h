@@ -8,14 +8,15 @@
 
 #import "SPTViewLoggerConnectionTypeProvider-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
+@class NSString;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTViewLoggerConnectionTypeDefaultProvider : NSObject <SPTViewLoggerConnectionTypeProvider>
 {
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
-@property(readonly, nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) long long currentConnectionType;
 - (id)initWithNetworkConnectivityController:(id)arg1;

@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, SPTDataLoaderFactory, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingLoggerFactory, SPTFreeTierTasteOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager, SPTSeedASessionCurator;
-@protocol SPTAlertInterface, SPTFollowModelFactory, SPTFreeTierTasteOnboardingTestManager, SPTGLUEImageLoaderFactory, SPTInstrumentationModalPresentationMonitor, SPTLinkDispatcher, SPTModalPresentationController, SPTPerformanceMetricsViewLoggerFactory, SPTPlaylistModel;
+@class NSString, SPTDataLoaderFactory, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingLoggerFactory, SPTFreeTierTasteOnboardingTheme, SPTPopupManager, SPTSeedASessionCurator;
+@protocol SPTAlertInterface, SPTFollowModelFactory, SPTFreeTierTasteOnboardingTestManager, SPTGLUEImageLoaderFactory, SPTInstrumentationModalPresentationMonitor, SPTLinkDispatcher, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPerformanceMetricsViewLoggerFactory, SPTPlaylistModel;
 
 @interface SPTFreeTierArtistPickerConfiguration : NSObject
 {
@@ -18,7 +18,7 @@
     SPTDataLoaderFactory *_dataLoaderFactory;
     id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
     id <SPTFollowModelFactory> _followModelFactory;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTFreeTierTasteOnboardingTestManager> _testManager;
     SPTFreeTierTasteOnboardingDeeplinkStore *_deeplinkStore;
     NSString *_sourceIdentifier;
@@ -39,7 +39,7 @@
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingDeeplinkStore *deeplinkStore; // @synthesize deeplinkStore=_deeplinkStore;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingTestManager> testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;

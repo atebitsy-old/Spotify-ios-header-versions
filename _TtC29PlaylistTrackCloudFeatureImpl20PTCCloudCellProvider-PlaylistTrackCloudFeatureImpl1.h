@@ -6,9 +6,7 @@
 
 #import "_TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider.h"
 
-#import "SPTFreeTierPlaylistModelObserver-Protocol.h"
-
-@interface _TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider (PlaylistTrackCloudFeatureImpl1) <SPTFreeTierPlaylistModelObserver>
+@interface _TtC29PlaylistTrackCloudFeatureImpl20PTCCloudCellProvider (PlaylistTrackCloudFeatureImpl1)
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;

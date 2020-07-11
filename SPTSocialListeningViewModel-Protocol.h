@@ -12,6 +12,7 @@
 @protocol SPTSocialListeningViewModel <NSObject>
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
 @property(readonly, nonatomic) long long state;
+@property(readonly, nonatomic) _Bool isSessionHost;
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
 @property(readonly, nonatomic) _Bool scanCodeButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;

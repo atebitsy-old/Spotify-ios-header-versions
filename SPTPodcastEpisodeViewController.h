@@ -13,7 +13,6 @@
 #import "SPTPodcastEpisodeDescriptionTableViewCellDelegate-Protocol.h"
 #import "SPTPodcastEpisodeFeaturedContentViewControllerDelegate-Protocol.h"
 #import "SPTPodcastEpisodeViewModelDelegate-Protocol.h"
-#import "SPTPodcastRecommendationsViewControllerDelegate-Protocol.h"
 #import "SPTShareableContext-Protocol.h"
 #import "SPViewController-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
@@ -22,7 +21,7 @@
 @class GLUEEntityRowTableViewCell, NSString, NSURL, SPTEntityHeaderViewController, SPTPodcastEpisodeActionsTableViewCell, SPTPodcastEpisodeCoverArtTableViewCell, SPTPodcastEpisodeDescriptionTableViewCell, SPTPodcastEpisodeEntityHeaderContentViewController, SPTPodcastEpisodeLogger, SPTPodcastEpisodeTheme, SPTPodcastEpisodeViewModel, SPTProgressView, SPTTableView, UIBarButtonItem, UITableViewCell;
 @protocol SPTImageLoaderFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTProductState, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
 
-@interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, SPTPodcastRecommendationsViewControllerDelegate, SPTPodcastEpisodeFeaturedContentViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
+@interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, SPTPodcastEpisodeFeaturedContentViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
 {
     _Bool _showLoadingOverlayProgressView;
     _Bool _viewHasAppeared;
@@ -104,10 +103,11 @@
 - (void)shareButtonTapped:(id)arg1;
 - (void)setupConstraints;
 - (void)setupHeaderViewController;
+- (void)setTableViewStyle;
 - (void)initializeView;
+- (void)tableViewReload;
 - (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)featuredViewControllerUpdated:(id)arg1;
-- (void)viewControllerUpdated:(id)arg1;
 - (void)episodeDescriptionURLTapped:(id)arg1;
 - (void)episodeDescriptionTimestampTapped:(double)arg1;
 - (void)episodeDescriptionDidExpand;
@@ -119,6 +119,7 @@
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
+- (id)cellForIndex:(long long)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 estimatedHeightForRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;

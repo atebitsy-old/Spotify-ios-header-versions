@@ -8,8 +8,8 @@
 
 #import "SPTVideoFeaturePlayerFactory-Protocol.h"
 
-@class BMBetamaxPlayerFactory, NSString, SPSession, SPTNetworkConnectivityController, SPTRequestAccounting;
-@protocol BMLogger, SPTAbbaFeatureFlags, SPTAudioPlayerMediaClockService;
+@class BMBetamaxPlayerFactory, NSString, SPSession, SPTRequestAccounting;
+@protocol BMLogger, SPTAbbaFeatureFlags, SPTAudioPlayerMediaClockService, SPTNetworkConnectivityController;
 
 @interface SPTVideoFeaturePlayerFactoryImpl : NSObject <SPTVideoFeaturePlayerFactory>
 {
@@ -17,14 +17,14 @@
     id <SPTAbbaFeatureFlags> _featureFlags;
     id <BMLogger> _logger;
     SPSession *_loginSession;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTRequestAccounting *_requestAccounting;
     id <SPTAudioPlayerMediaClockService> _audioPlayerMediaClockService;
 }
 
 @property(nonatomic) __weak id <SPTAudioPlayerMediaClockService> audioPlayerMediaClockService; // @synthesize audioPlayerMediaClockService=_audioPlayerMediaClockService;
 @property(retain, nonatomic) SPTRequestAccounting *requestAccounting; // @synthesize requestAccounting=_requestAccounting;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak SPSession *loginSession; // @synthesize loginSession=_loginSession;
 @property(retain, nonatomic) id <BMLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;

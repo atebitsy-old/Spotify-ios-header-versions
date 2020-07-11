@@ -68,6 +68,7 @@
 - (void)filterChipsInteractionObserverItemSelected:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (void)updateFilterChips;
 - (void)loadItems;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)willEndFilteringSongsHeaderViewModel:(id)arg1;
@@ -76,6 +77,7 @@
 - (void)songsHeaderViewModel:(id)arg1 interactionType:(unsigned long long)arg2;
 - (void)songsHeaderViewModel:(id)arg1 textFilter:(id)arg2;
 - (void)playActionForSongsHeaderViewModel:(id)arg1;
+- (void)songsModelAvailableFiltersDidUpdate:(id)arg1;
 - (void)songsModelDidUpdate:(id)arg1 itemsCountChanged:(_Bool)arg2;
 - (void)songsModel:(id)arg1 error:(id)arg2;
 - (void)notifyUpdate;
@@ -109,7 +111,7 @@
 - (void)stopAudioPreviewViewPlayer;
 - (void)logFilterChipsImpressionIfNeeded;
 - (void)logEmptyViewImpression;
-- (void)logSwipeCellActionForIndexPath:(id)arg1;
+- (void)logSwipeCellActionForIndexPath:(id)arg1 shelfPosition:(long long)arg2;
 - (void)logAddSongsButtonAction;
 - (void)logCancelRemoveDownloads;
 - (void)logCloseExtraSongsExplanation;

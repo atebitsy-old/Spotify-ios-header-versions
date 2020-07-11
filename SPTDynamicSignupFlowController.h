@@ -47,6 +47,7 @@
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2;
 - (void)authenticateWithCredentials;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessResponse:(id)arg2;
+- (void)resetFlow;
 - (void)updateScreenForTerms:(unsigned long long)arg1 termsModel:(id)arg2 view:(id)arg3;
 - (void)createUserAndPresentMainScreen:(id)arg1 termsModel:(id)arg2 logger:(id)arg3;
 - (_Bool)isScreenLast:(unsigned long long)arg1;

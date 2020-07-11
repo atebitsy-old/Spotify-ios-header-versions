@@ -9,8 +9,8 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSMutableArray, NSString, NSURL, SPSession, SPTDataLoader, SPTInfinitePlaybackContext, SPTNetworkConnectivityController, SPTRadioAutoplayOfflineLogger, SPTRadioLogger, SPTRadioPlaybackService;
-@protocol SPTGaiaConnectAPI, SPTLocalSettings, SPTPlayer;
+@class NSMutableArray, NSString, NSURL, SPSession, SPTDataLoader, SPTInfinitePlaybackContext, SPTRadioAutoplayOfflineLogger, SPTRadioLogger, SPTRadioPlaybackService;
+@protocol SPTGaiaConnectAPI, SPTLocalSettings, SPTNetworkConnectivityController, SPTPlayer;
 
 @interface SPTInfinitePlaybackManager : NSObject <SPTDataLoaderDelegate, SPTPlayerObserver>
 {
@@ -22,7 +22,7 @@
     id <SPTLocalSettings> _localSettings;
     SPSession *_session;
     SPTDataLoader *_dataLoader;
-    SPTNetworkConnectivityController *_networkConnectivity;
+    id <SPTNetworkConnectivityController> _networkConnectivity;
     id <SPTGaiaConnectAPI> _connectManager;
     SPTRadioLogger *_logger;
     SPTRadioAutoplayOfflineLogger *_offlineLogger;
@@ -39,7 +39,7 @@
 @property(readonly, nonatomic) SPTRadioAutoplayOfflineLogger *offlineLogger; // @synthesize offlineLogger=_offlineLogger;
 @property(readonly, nonatomic) __weak SPTRadioLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
-@property(readonly, nonatomic) __weak SPTNetworkConnectivityController *networkConnectivity; // @synthesize networkConnectivity=_networkConnectivity;
+@property(readonly, nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivity; // @synthesize networkConnectivity=_networkConnectivity;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;

@@ -8,22 +8,22 @@
 
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, SPTCarPlayLoggedInDataSource, SPTNetworkConnectivityController;
-@protocol SPTCarPlayDataSource, SPTExternalIntegrationDebugLog, SPTMediaPlayerContentBridge;
+@class NSString, SPTCarPlayLoggedInDataSource;
+@protocol SPTCarPlayDataSource, SPTExternalIntegrationDebugLog, SPTMediaPlayerContentBridge, SPTNetworkConnectivityController;
 
 @interface SPTCarPlayDataSourceStateManager : NSObject <SPTNetworkConnectivityControllerObserver>
 {
     _Bool _availableForLoggedInDataSources;
     id <SPTExternalIntegrationDebugLog> _debugLog;
     id <SPTMediaPlayerContentBridge> _mediaPlayerBridge;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTCarPlayLoggedInDataSource *_loggedInDefaultDataSource;
     id <SPTCarPlayDataSource> _restrictedDataSource;
 }
 
 @property(retain, nonatomic) id <SPTCarPlayDataSource> restrictedDataSource; // @synthesize restrictedDataSource=_restrictedDataSource;
 @property(retain, nonatomic) SPTCarPlayLoggedInDataSource *loggedInDefaultDataSource; // @synthesize loggedInDefaultDataSource=_loggedInDefaultDataSource;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTMediaPlayerContentBridge> mediaPlayerBridge; // @synthesize mediaPlayerBridge=_mediaPlayerBridge;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic, getter=isAvailableForLoggedInDataSources) _Bool availableForLoggedInDataSources; // @synthesize availableForLoggedInDataSources=_availableForLoggedInDataSources;

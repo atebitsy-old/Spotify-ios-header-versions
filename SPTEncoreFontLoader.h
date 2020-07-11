@@ -17,6 +17,11 @@
 + (id)frameworkBundle;
 + (id)filesInBundleWithExtension:(id)arg1;
 + (void)loadTypeStyleFonts;
++ (_Bool)shouldUseFallbackFontForCurrentLanguage;
++ (id)circularFontStackWithWeight:(int)arg1 size:(double)arg2;
++ (id)circularBlackStackWithSize:(double)arg1;
++ (id)circularBoldStackWithSize:(double)arg1;
++ (id)circularBookStackWithSize:(double)arg1;
 
 @end
 

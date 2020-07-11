@@ -11,12 +11,10 @@
 #import "SPTPodcastRecommendationsViewController-Protocol.h"
 
 @class HUBView, NSMutableSet, NSString, SPTHubViewModelProvider;
-@protocol SPTHubImpressionLogger, SPTPodcastRecommendationsHubViewProvider, SPTPodcastRecommendationsViewControllerDelegate;
+@protocol SPTHubImpressionLogger, SPTPodcastRecommendationsHubViewProvider;
 
 @interface SPTPodcastRecommendationsViewControllerImplementation : UIViewController <SPTHubViewModelProviderDelegate, HUBViewComponentDelegate, SPTPodcastRecommendationsViewController>
 {
-    _Bool _loaded;
-    id <SPTPodcastRecommendationsViewControllerDelegate> _delegate;
     id <SPTPodcastRecommendationsHubViewProvider> _hubViewProvider;
     SPTHubViewModelProvider *_hubViewModelProvider;
     HUBView *_hubView;
@@ -27,10 +25,8 @@
 @property(retain, nonatomic) NSMutableSet *recommendationComponents; // @synthesize recommendationComponents=_recommendationComponents;
 @property(readonly, nonatomic) id <SPTHubImpressionLogger> impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(retain, nonatomic) HUBView *hubView; // @synthesize hubView=_hubView;
-@property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(readonly, nonatomic) SPTHubViewModelProvider *hubViewModelProvider; // @synthesize hubViewModelProvider=_hubViewModelProvider;
 @property(readonly, nonatomic) id <SPTPodcastRecommendationsHubViewProvider> hubViewProvider; // @synthesize hubViewProvider=_hubViewProvider;
-@property(nonatomic) __weak id <SPTPodcastRecommendationsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)superScrollViewDidScroll:(id)arg1;

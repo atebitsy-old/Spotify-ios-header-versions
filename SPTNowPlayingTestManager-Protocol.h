@@ -14,11 +14,11 @@
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
 @property(readonly, nonatomic) _Bool isLyricsUpsellPopupEnabled;
 @property(readonly, nonatomic) _Bool isContentLayerLyricsTabEnabled;
-@property(nonatomic) _Bool isContentLayerLyricsActive;
-@property(readonly, nonatomic) _Bool isContentLayerLyricsEnabled;
+@property(readonly, nonatomic) _Bool isContentLayerLyricsButtonEnabled;
 @property(readonly, nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled;
 @property(readonly, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration;
 @property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
+@property(readonly, nonatomic, getter=isMixedMediaEpisodeModeEnabled) _Bool mixedMediaEpisodeModeEnabled;
 @property(readonly, nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled;
 @property(readonly, nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled;
 @property(readonly, nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled;

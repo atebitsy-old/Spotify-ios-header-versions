@@ -8,6 +8,7 @@
 
 #import "SPTExplicitContentEnabledStateObserver-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
+#import "SPTYourLibraryMusicFilterSortManagerDelegate-Protocol.h"
 #import "SPTYourLibraryMusicRangeDataSourceDelegate-Protocol.h"
 #import "SPTYourLibraryMusicSongsDataLoaderDelegate-Protocol.h"
 #import "SPTYourLibraryMusicSongsModel-Protocol.h"
@@ -15,7 +16,7 @@
 @class NSArray, NSMutableArray, NSSet, NSString, SPTYourLibraryMusicFilterSortManager;
 @protocol SPTClientSettings, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTExplicitContentAccessManager, SPTFreeTierRecommendationsTracksDataLoader, SPTProductState, SPTSortingFilteringSortRule, SPTYourLibraryMusicRangeDataSource, SPTYourLibraryMusicSkippedRecommendedTracks, SPTYourLibraryMusicSongsModelDelegate, SPTYourLibraryMusicTestManager, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
-@interface SPTYourLibraryMusicSongsModelImplementation : NSObject <SPTExplicitContentEnabledStateObserver, SPTProductStateObserver, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicRangeDataSourceDelegate, SPTYourLibraryMusicSongsDataLoaderDelegate>
+@interface SPTYourLibraryMusicSongsModelImplementation : NSObject <SPTExplicitContentEnabledStateObserver, SPTProductStateObserver, SPTYourLibraryMusicFilterSortManagerDelegate, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicRangeDataSourceDelegate, SPTYourLibraryMusicSongsDataLoaderDelegate>
 {
     _Bool _firstLoadPerformed;
     _Bool _loaded;
@@ -68,6 +69,8 @@
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsModelDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
+- (void)filterSortManager:(id)arg1 error:(id)arg2;
+- (void)filterSortManager:(id)arg1 updatedFilterRules:(id)arg2;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)songsDataLoader:(id)arg1 didUpdateOfflineAvailability:(unsigned long long)arg2;

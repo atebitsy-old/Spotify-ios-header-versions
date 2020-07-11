@@ -9,14 +9,16 @@
 #import "SPSessionObserver-Protocol.h"
 #import "SPTExternalIntegrationCollectionControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
+#import "SPTExternalIntegrationQueueControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationRadioControllerObserver-Protocol.h"
 #import "SPTGaiaConnectObserver-Protocol.h"
+#import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString, SPSession, SPTNetworkConnectivityController;
-@protocol SPTAppProtocolSubscriptionDelegate, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTProductState;
+@class NSString, SPSession;
+@protocol SPTAppProtocolSubscriptionDelegate, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkConnectivityController, SPTProductState;
 
-@interface SPTAppProtocolSubscription : NSObject <SPSessionObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTExternalIntegrationRadioControllerObserver, SPTProductStateObserver, SPTGaiaConnectObserver>
+@interface SPTAppProtocolSubscription : NSObject <SPSessionObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTExternalIntegrationRadioControllerObserver, SPTExternalIntegrationQueueControllerObserver, SPTProductStateObserver, SPTGaiaConnectObserver, SPTNetworkConnectivityControllerObserver>
 {
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     NSString *_topic;
@@ -25,10 +27,10 @@
     id <SPTGaiaConnectAPI> _connectManager;
     unsigned long long _subscriptionID;
     id <SPTAppProtocolSubscriptionDelegate> _delegate;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
 }
 
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(nonatomic) __weak id <SPTAppProtocolSubscriptionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long subscriptionID; // @synthesize subscriptionID=_subscriptionID;
 @property(nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
@@ -47,9 +49,11 @@
 - (void)triggerSavedChanged:(id)arg1;
 - (void)triggerPlaybackSpeedChangedIfNeeded:(id)arg1 oldState:(id)arg2 force:(_Bool)arg3;
 - (void)triggerTrackElapsedIfNeeded:(id)arg1 oldState:(id)arg2 force:(_Bool)arg3;
+- (void)triggerPlayerQueueChanged:(id)arg1;
 - (void)triggerContextChangedIfNeeded:(id)arg1 oldState:(id)arg2 force:(_Bool)arg3;
 - (void)triggerRatingChanged:(id)arg1 force:(_Bool)arg2;
 - (void)handlePlayerStateChange:(id)arg1 oldState:(id)arg2 force:(_Bool)arg3;
+- (void)forceTriggerPlayerQueueNotification;
 - (void)forceTriggerAlertNotification;
 - (void)forceTriggerClientSessionNotificationChange;
 - (void)forceTriggerRatingStateChange;
@@ -58,6 +62,7 @@
 - (void)forceTriggerUserCapabilitesChange;
 - (void)forceTriggerPlayerStateChange;
 - (void)sendSubscriptionEventToSubscriberUponRegistration;
+- (void)externalIntegrationQueueController:(id)arg1 didReceiveNewPlayerQueue:(id)arg2;
 - (void)externalIntegrationRadioController:(id)arg1 didRecieveNewThumbStateForCurrentTrack:(_Bool)arg2;
 - (void)didReceiveUpdatedCollectionNotification;
 - (void)externalIntegrationCollectionController:(id)arg1 didReceiveNewCollectionStateForCurrentTrack:(_Bool)arg2;
@@ -68,7 +73,7 @@
 - (void)session:(id)arg1 temporaryConnectionError:(id)arg2;
 - (void)userCapabilitiesChanged;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
-- (void)kvo_connectionTypeChanged;
+- (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)stopObservingConnectionType;
 - (void)startObservingConnectionType;
 - (void)invalidate;

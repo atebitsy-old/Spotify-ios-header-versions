@@ -10,11 +10,12 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTCreatePlaylistTestManagerImplementation;
-@protocol PlaylistFeature, SPContextMenuFeature, SPTContainerService, SPTFeatureFlagSignal, SPTFreeTierPresentationService, SPTGLUEService, SPTInAppMessageService, SPTPageRegistrationToken, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTUBIService, SPTURIDispatchService, _TtP20AddToPlaylistFeature23SPTAddToPlaylistService_;
+@protocol PlaylistFeature, SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTFeatureFlagSignal, SPTFreeTierPresentationService, SPTGLUEService, SPTInAppMessageService, SPTPageRegistrationToken, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTUBIService, SPTURIDispatchService, _TtP20AddToPlaylistFeature23SPTAddToPlaylistService_;
 
 @interface SPTCreatePlaylistServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTCreatePlaylistService>
 {
     id <SPTContainerService> _containerService;
+    id <SPTContainerUIService> _containerUIService;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTFreeTierPresentationService> _freeTierPresentationService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
@@ -44,6 +45,7 @@
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTFreeTierPresentationService> freeTierPresentationService; // @synthesize freeTierPresentationService=_freeTierPresentationService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
+@property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

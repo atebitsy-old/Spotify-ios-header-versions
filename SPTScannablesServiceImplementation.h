@@ -9,7 +9,7 @@
 #import "SPTScannablesService-Protocol.h"
 
 @class NSMutableDictionary, NSString, SPTAllocationContext, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTScannablesImageLoaderRequestFactory, SPTScannablesScanViewModelFactory, SPTScannablesSlateFactory, SPTScannablesUserInterfaceFactoryImplementation;
-@protocol SPTBarButtonItemManager, SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTScannablesOnboardingPresenter, SPTScannablesPresenter, SPTScannablesRegistry, SPTScannablesShortcutItemProvider, SPTSessionService, SPTSettingsFeature, SPTTooltipService, SPTUIPresentationService, SPTURIDispatchService, SlateFeature;
+@protocol SPTBarButtonItemManager, SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTScannablesOnboardingPresenter, SPTScannablesPresenter, SPTScannablesRegistry, SPTScannablesShortcutItemProvider, SPTSessionService, SPTSettingsFeature, SPTTooltipService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SlateFeature;
 
 @interface SPTScannablesServiceImplementation : NSObject <SPTScannablesService>
 {
@@ -25,6 +25,7 @@
     id <SPTSettingsFeature> _settingsService;
     id <SPTGLUEService> _glueService;
     id <SPTUIPresentationService> _UIPresentationService;
+    id <SPTUBIService> _ubiService;
     SPTScannablesUserInterfaceFactoryImplementation *_userInterfaceFactory;
     id <SPTBarButtonItemManager> _barButtonItemManager;
     SPTScannablesScanViewModelFactory *_scanViewModelFactory;
@@ -52,6 +53,7 @@
 @property(retain, nonatomic) SPTScannablesScanViewModelFactory *scanViewModelFactory; // @synthesize scanViewModelFactory=_scanViewModelFactory;
 @property(retain, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(retain, nonatomic) SPTScannablesUserInterfaceFactoryImplementation *userInterfaceFactory; // @synthesize userInterfaceFactory=_userInterfaceFactory;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;

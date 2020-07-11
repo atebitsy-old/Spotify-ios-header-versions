@@ -8,16 +8,17 @@
 
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, SPTDataLoaderFactory, SPTNetworkConnectivityController;
+@class NSString, SPTDataLoaderFactory;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTDataLoaderFactoryManager : NSObject <SPTNetworkConnectivityControllerObserver>
 {
     SPTDataLoaderFactory *_factory;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
 + (id)dataLoaderFactoryManagerWithFactory:(id)arg1 networkConnectivityController:(id)arg2;
-@property(nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTDataLoaderFactory *factory; // @synthesize factory=_factory;
 - (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;

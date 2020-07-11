@@ -46,6 +46,7 @@
 @property(readonly, nonatomic) id <SPTCarPlayContentDataSource> contentDataSource; // @synthesize contentDataSource=_contentDataSource;
 @property(nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 - (void).cxx_destruct;
+- (id)referrerFromIndexPath:(id)arg1;
 - (void)activateDeviceIfRoutingToCarPlay:(_Bool)arg1;
 - (void)activateDeviceForOldPlayerState:(id)arg1 newPlayerState:(id)arg2 isRoutingToCarPlay:(_Bool)arg3;
 - (void)updateNowPlayingIdentifiersForPlayerState:(id)arg1 isRoutingToCarPlay:(_Bool)arg2;

@@ -8,12 +8,13 @@
 
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString, SPCore, SPTDataLoaderFactory, SPTDataLoaderFactoryManager, SPTDataLoaderKeymasterAuthoriser, SPTDataLoaderOauthAuthoriser, SPTDataLoaderRequestAccountingConsumptionObserver, SPTDataLoaderResolver, SPTDataLoaderService, SPTNetworkConnectivityController, SPTStartupTracer;
+@class NSString, SPCore, SPTDataLoaderFactory, SPTDataLoaderFactoryManager, SPTDataLoaderKeymasterAuthoriser, SPTDataLoaderOauthAuthoriser, SPTDataLoaderRequestAccountingConsumptionObserver, SPTDataLoaderResolver, SPTDataLoaderService, SPTStartupTracer;
+@protocol SPTNetworkConnectivityController;
 
 @interface SPTHTTPService : NSObject <SPTProductStateObserver>
 {
     SPTDataLoaderService *_dataLoaderService;
-    SPTNetworkConnectivityController *_networkController;
+    id <SPTNetworkConnectivityController> _networkController;
     SPTStartupTracer *_startupTracer;
     SPCore *_core;
     SPTDataLoaderResolver *_dataLoaderResolver;
@@ -34,7 +35,7 @@
 @property(retain, nonatomic) SPTDataLoaderResolver *dataLoaderResolver; // @synthesize dataLoaderResolver=_dataLoaderResolver;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkController; // @synthesize networkController=_networkController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkController; // @synthesize networkController=_networkController;
 @property(retain, nonatomic) SPTDataLoaderService *dataLoaderService; // @synthesize dataLoaderService=_dataLoaderService;
 - (void).cxx_destruct;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;

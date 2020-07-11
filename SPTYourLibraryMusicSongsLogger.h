@@ -51,7 +51,7 @@
 - (void)logDiscoverSongsButton:(id)arg1;
 - (void)logCancelRemoveDownloads;
 - (void)logAvailableOffline:(_Bool)arg1;
-- (void)logSwipeActionAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4;
+- (void)logSwipeActionAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 shelfPosition:(long long)arg5;
 - (void)logAudioPreviewAtIndex:(long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 playing:(_Bool)arg5 isOriginCoverItem:(_Bool)arg6;
 - (void)logTrackBanActionSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 banned:(_Bool)arg5;
 - (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 liked:(_Bool)arg5;

@@ -11,7 +11,6 @@
 @protocol SPContextMenuActionsFactory, SPTFormatListItemModel, SPTPSXViewModelBanningDelegate, SPTPSXViewModelDelegate, SPTPlayer;
 
 @protocol SPTPSXViewModel <NSObject, SPTCollectionSorting>
-@property(readonly, nonatomic, getter=isFollowShelfAvailable) _Bool followShelfAvailable;
 @property(readonly, nonatomic, getter=isOfflineToggleAvailable) _Bool offlineToggleAvailable;
 @property(readonly, nonatomic) id <SPTPlayer> player;
 @property(readonly, nonatomic) NSArray *tracks;

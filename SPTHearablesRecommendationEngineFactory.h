@@ -6,16 +6,15 @@
 
 #import <objc/NSObject.h>
 
-@class SPTNetworkConnectivityController;
-@protocol SPTExternalIntegrationPlatform;
+@protocol SPTExternalIntegrationPlatform, SPTNetworkConnectivityController;
 
 @interface SPTHearablesRecommendationEngineFactory : NSObject
 {
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
 }
 
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 - (void).cxx_destruct;
 - (id)provideOfflineRecommendationEngine;

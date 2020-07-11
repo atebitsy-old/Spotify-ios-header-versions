@@ -13,7 +13,6 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: model
-    // Error parsing type: , name: selectedItemX
     // Error parsing type: , name: lastSelectedX
     // Error parsing type: , name: lastCollectionOffset
     // Error parsing type: , name: calculationCell

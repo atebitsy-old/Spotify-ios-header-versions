@@ -9,8 +9,8 @@
 #import "SPTAuthController-Protocol.h"
 #import "SPTAuthRequestDelegate-Protocol.h"
 
-@class NSString, SPSession, SPTAuthCache, SPTAuthLogger, SPTAuthPostAuthPlayerController, SPTAuthRequest, SPTDefaultPopupPermissionManager, SPTHermesController, SPTNetworkConnectivityController, SPTObserverManager, SPTProgressView;
-@protocol SPTAlertInterface, SPTAuthTestManager, SPTContainerUIService, SPTLinkDispatcher;
+@class NSString, SPSession, SPTAuthCache, SPTAuthLogger, SPTAuthPostAuthPlayerController, SPTAuthRequest, SPTDefaultPopupPermissionManager, SPTHermesController, SPTObserverManager, SPTProgressView;
+@protocol SPTAlertInterface, SPTAuthTestManager, SPTContainerUIService, SPTLinkDispatcher, SPTNetworkConnectivityController;
 
 @interface SPTAuthControllerImplementation : NSObject <SPTAuthRequestDelegate, SPTAuthController>
 {
@@ -18,7 +18,7 @@
     SPSession *_session;
     SPTHermesController *_hermesController;
     id <SPTContainerUIService> _containerUIService;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     id <SPTAlertInterface> _alertController;
     SPTProgressView *_progressView;
     SPTObserverManager *_observerManager;
@@ -44,7 +44,7 @@
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertController; // @synthesize alertController=_alertController;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(readonly, nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(readonly, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;

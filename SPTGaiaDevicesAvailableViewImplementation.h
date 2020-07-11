@@ -40,7 +40,6 @@
 - (void)viewModelDidUpdateWithShouldAnimate:(_Bool)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)animateUpdate:(CDUnknownBlockType)arg1;
-- (void)viewDidAppear;
 - (void)updateIconSize;
 - (void)changeColor:(id)arg1;
 - (id)devicesFont;

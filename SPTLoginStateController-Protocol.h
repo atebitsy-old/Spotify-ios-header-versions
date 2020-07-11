@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError, SPTAuthAppleSignInCredential, SPTAuthLoginCredentials, SPTAuthLoginOptions, SPTAuthOneTimeTokenCredential, SPTAuthPhoneNumberIdentifier;
+@class NSError, SPTAuthAppleSignInCredentials, SPTAuthLoginCredentials, SPTAuthLoginOptions, SPTAuthOneTimeTokenCredentials, SPTAuthPhoneNumberIdentifier;
 @protocol SPTLoginAuthCredentialsWrapper, SPTLoginPhoneNumberLoginStateDelegate, SPTLoginStateControllerObserver;
 
 @protocol SPTLoginStateController <NSObject>
@@ -22,11 +22,11 @@
 - (void)reloginWithCredentials:(id <SPTLoginAuthCredentialsWrapper>)arg1 options:(SPTAuthLoginOptions *)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (void)reloginWithCompletionHandler:(void (^)(NSError *))arg1;
 - (void)logoutForgetUser:(_Bool)arg1;
-- (void)loginWithAppleIDCredentials:(SPTAuthAppleSignInCredential *)arg1 options:(SPTAuthLoginOptions *)arg2 onLoginComplete:(void (^)(NSError *))arg3 onSignupRequired:(void (^)(SPTAuthSignupInfo *))arg4;
+- (void)loginWithAppleIDCredentials:(SPTAuthAppleSignInCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2 onLoginComplete:(void (^)(NSError *))arg3 onSignupRequired:(void (^)(SPTAuthSignupInfo *))arg4;
 - (void)loginWithCredentials:(SPTAuthLoginCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2 userDidSignUp:(_Bool)arg3 completion:(void (^)(NSError *))arg4;
 - (void)loginWithCredentials:(SPTAuthLoginCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2 completion:(void (^)(NSError *))arg3;
 - (void)loginWithStoredCredentials:(SPTAuthLoginCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2 completion:(void (^)(NSError *))arg3;
 - (void)loginWithPhoneNumberIdentifier:(SPTAuthPhoneNumberIdentifier *)arg1;
-- (void)loginWithOneTimeToken:(SPTAuthOneTimeTokenCredential *)arg1 options:(SPTAuthLoginOptions *)arg2 userDidSignUp:(_Bool)arg3 completion:(void (^)(NSError *))arg4;
+- (void)loginWithOneTimeToken:(SPTAuthOneTimeTokenCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2 userDidSignUp:(_Bool)arg3 completion:(void (^)(NSError *))arg4;
 @end
 

@@ -22,8 +22,8 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTChartLogger, SPTChartMetadataView, SPTChartViewModel, SPTEntityTableHeaderView, SPTInfoView, SPTNetworkConnectivityController, SPTProgressView, SPTTableView, SPTTableViewOfflineSwitchCell;
-@protocol GLUETheme, SPContextMenuFeature, SPTBarButtonItemManager, SPTChartEntityDataSource, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuPresenter, SPTExplicitContentAccessManager, SPTFormatListPlatformManager, SPTImageLoader, SPTModalPresentationController, SPTPageContainer, SPTProductState, SPTShelves;
+@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTChartLogger, SPTChartMetadataView, SPTChartViewModel, SPTEntityTableHeaderView, SPTInfoView, SPTProgressView, SPTTableView, SPTTableViewOfflineSwitchCell;
+@protocol GLUETheme, SPContextMenuFeature, SPTBarButtonItemManager, SPTChartEntityDataSource, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuPresenter, SPTExplicitContentAccessManager, SPTFormatListPlatformManager, SPTImageLoader, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPageContainer, SPTProductState, SPTShelves;
 
 @interface SPTChartViewController : UIViewController <SPContentInsetViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTChartEntityDataSourceDelegate, SPTChartViewModelPlayerDelegate, SPViewController, SPTProductStateObserver, SPTOfflineSwitchDelegate, SPTFormatListPlatformManagerOfflineDelegate, SPTBarButtonItemManagerObserver, SPTExplicitContentEnabledStateObserver, SPTPageController>
 {
@@ -45,7 +45,7 @@
     id <SPTBarButtonItemManager> _barButtonItemManager;
     SPTChartLogger *_chartLogger;
     SPTTableViewOfflineSwitchCell *_offlineSwitchCell;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTFormatListPlatformManager> _formatListPlatformManager;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
     id <SPTModalPresentationController> _modalPresentationController;
@@ -60,7 +60,7 @@
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) id <SPTFormatListPlatformManager> formatListPlatformManager; // @synthesize formatListPlatformManager=_formatListPlatformManager;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTTableViewOfflineSwitchCell *offlineSwitchCell; // @synthesize offlineSwitchCell=_offlineSwitchCell;
 @property(readonly, nonatomic) SPTChartLogger *chartLogger; // @synthesize chartLogger=_chartLogger;
 @property(readonly, nonatomic) __weak id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;

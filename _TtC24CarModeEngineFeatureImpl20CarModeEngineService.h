@@ -10,8 +10,11 @@
 {
     // Error parsing type: , name: carDetectionService
     // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: featureFlaggingService
+    // Error parsing type: , name: settingsService
     // Error parsing type: , name: carModeEngine
     // Error parsing type: , name: loop
+    // Error parsing type: , name: debugSettingsManager
 }
 
 + (id)serviceIdentifier;

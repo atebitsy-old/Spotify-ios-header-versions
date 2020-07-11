@@ -42,7 +42,8 @@
 - (void)userClickedButton:(id)arg1 onScreen:(id)arg2;
 - (void)userAccountRecoveryCompleted:(_Bool)arg1;
 - (void)trackKeychainEventWithIdentifier:(id)arg1;
-- (void)trackEventWithName:(id)arg1;
+- (void)trackGenericEventWithName:(id)arg1 parameters:(id)arg2;
+- (void)trackGenericEventWithName:(id)arg1;
 - (void)loginLayoutReceived:(id)arg1 layout:(id)arg2;
 - (void)operationWithIdentifier:(id)arg1 didFinishWithDuration:(double)arg2;
 - (void)accountRecoveryLinkParsed;

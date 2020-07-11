@@ -6,10 +6,20 @@
 
 #import "GLUELabel.h"
 
+@class UIView;
+
 @interface SPTNowPlayingTabLabel : GLUELabel
 {
+    UIView *_lineView;
 }
 
+@property(retain, nonatomic) UIView *lineView; // @synthesize lineView=_lineView;
+- (void).cxx_destruct;
+- (_Bool)isIPhoneSE;
+- (struct UIEdgeInsets)insets;
+- (void)setupLineViewIfNeeded;
+- (void)themeUpdated:(id)arg1;
+- (void)setSelected:(_Bool)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (void)drawTextInRect:(struct CGRect)arg1;
 

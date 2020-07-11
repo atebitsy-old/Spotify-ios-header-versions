@@ -35,7 +35,7 @@
     id <SPTFreeTierPlaylistTestManager> _testManager;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
     NSString *_formatListType;
-    SPTFreeTierPlaylistModelEntityImplementation *_entity;
+    SPTFreeTierPlaylistModelEntityImplementation *_playlistEntity;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _metadataSubscription;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _followCountSubscription;
     unsigned long long _onDemandType;
@@ -50,7 +50,7 @@
 @property(nonatomic) unsigned long long onDemandType; // @synthesize onDemandType=_onDemandType;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> followCountSubscription; // @synthesize followCountSubscription=_followCountSubscription;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> metadataSubscription; // @synthesize metadataSubscription=_metadataSubscription;
-@property(retain, nonatomic) SPTFreeTierPlaylistModelEntityImplementation *entity; // @synthesize entity=_entity;
+@property(retain, nonatomic) SPTFreeTierPlaylistModelEntityImplementation *playlistEntity; // @synthesize playlistEntity=_playlistEntity;
 @property(copy, nonatomic) NSString *formatListType; // @synthesize formatListType=_formatListType;
 @property(retain, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;

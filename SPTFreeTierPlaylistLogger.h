@@ -38,6 +38,7 @@
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5 action:(id)arg6;
 - (void)logUIInteractionWithSectionId:(id)arg1 targetURI:(id)arg2 userIntent:(id)arg3;
 - (void)ubiLogImpressionOnce:(id)arg1;
+- (void)logDeeplinkingWithTrackURL:(id)arg1;
 - (void)logTextFilterCancelButtonInteraction;
 - (void)logTextFilterClearButtonInteraction;
 - (void)logTextFilterKeyStrokeInteraction;

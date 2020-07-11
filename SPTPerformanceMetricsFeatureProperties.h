@@ -12,14 +12,10 @@
 
 @interface SPTPerformanceMetricsFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _shouldUseEventsenderForViewloadIos;
-    _Bool _shouldUseEventsenderForColdstartupIos;
     _Bool _shouldCollectAppMetrics;
 }
 
 @property(readonly, nonatomic) _Bool shouldCollectAppMetrics; // @synthesize shouldCollectAppMetrics=_shouldCollectAppMetrics;
-@property(readonly, nonatomic) _Bool shouldUseEventsenderForColdstartupIos; // @synthesize shouldUseEventsenderForColdstartupIos=_shouldUseEventsenderForColdstartupIos;
-@property(readonly, nonatomic) _Bool shouldUseEventsenderForViewloadIos; // @synthesize shouldUseEventsenderForViewloadIos=_shouldUseEventsenderForViewloadIos;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

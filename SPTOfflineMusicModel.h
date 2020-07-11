@@ -33,7 +33,7 @@
 
 @property(nonatomic) struct _NSRange currentAlbumRequestRange; // @synthesize currentAlbumRequestRange=_currentAlbumRequestRange;
 @property(retain, nonatomic) SPTOfflineMusicModelEntity *currentEntity; // @synthesize currentEntity=_currentEntity;
-@property(nonatomic) NSNumber *likedSongsAvailability; // @synthesize likedSongsAvailability=_likedSongsAvailability;
+@property(copy, nonatomic) NSNumber *likedSongsAvailability; // @synthesize likedSongsAvailability=_likedSongsAvailability;
 @property(copy, nonatomic) NSArray *albums; // @synthesize albums=_albums;
 @property(copy, nonatomic) NSArray *playlists; // @synthesize playlists=_playlists;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> likedSongsSubscription; // @synthesize likedSongsSubscription=_likedSongsSubscription;

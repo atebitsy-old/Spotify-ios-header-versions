@@ -9,17 +9,17 @@
 #import "FollowModelObserver-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class FollowModel, NSString, SPTNetworkConnectivityController;
-@protocol SPTFollowModelFactory;
+@class FollowModel, NSString;
+@protocol SPTFollowModelFactory, SPTNetworkConnectivityController;
 
 @interface SPTFreeTierArtistFeedbackButtonViewModel : SPTFreeTierEntityFeedbackButtonViewModelBase <FollowModelObserver, SPTNetworkConnectivityControllerObserver>
 {
     id <SPTFollowModelFactory> _followModelFactory;
     FollowModel *_followModel;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 - (void).cxx_destruct;

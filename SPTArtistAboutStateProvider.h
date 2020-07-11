@@ -18,11 +18,11 @@
 
 @property(nonatomic) __weak id <SPTModerationServiceState> moderationServiceState; // @synthesize moderationServiceState=_moderationServiceState;
 @property(retain, nonatomic) SPTArtistAboutViewModel *viewModel; // @synthesize viewModel=_viewModel;
-@property(nonatomic) SPTArtistAboutImage *displayedGalleryImage; // @synthesize displayedGalleryImage=_displayedGalleryImage;
+@property(retain, nonatomic) SPTArtistAboutImage *displayedGalleryImage; // @synthesize displayedGalleryImage=_displayedGalleryImage;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isModerationEnabled;
 @property(readonly, nonatomic) NSURL *artistUri;
-@property(readonly, nonatomic) NSString *artistName;
+@property(readonly, copy, nonatomic) NSString *artistName;
 - (id)initWithViewModel:(id)arg1 moderationServiceState:(id)arg2;
 
 @end

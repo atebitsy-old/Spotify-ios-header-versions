@@ -8,13 +8,13 @@
 
 #import "SPTPodcastOffliningManager-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
-@protocol SPTAlertInterface, SPTLinkDispatcher, SPTOfflineManager, SPTPodcastOffliningPlaylistManager;
+@class NSString;
+@protocol SPTAlertInterface, SPTLinkDispatcher, SPTNetworkConnectivityController, SPTOfflineManager, SPTPodcastOffliningPlaylistManager;
 
 @interface SPTPodcastOffliningManagerImplementation : NSObject <SPTPodcastOffliningManager>
 {
     id <SPTOfflineManager> _offlineManager;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTAlertInterface> _alertInterface;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTPodcastOffliningPlaylistManager> _playlistManager;
@@ -23,7 +23,7 @@
 @property(readonly, nonatomic) id <SPTPodcastOffliningPlaylistManager> playlistManager; // @synthesize playlistManager=_playlistManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 - (void).cxx_destruct;
 - (void)showDeleteDownloadsAlertWithBlock:(CDUnknownBlockType)arg1;

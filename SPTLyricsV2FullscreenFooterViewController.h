@@ -9,17 +9,18 @@
 #import "SPTLyricsV2DurationController-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTNowPlayingDurationUnitViewModelDelegate-Protocol.h"
-#import "SPTPlayerObserver-Protocol.h"
+#import "SPTNowPlayingPlaybackActionsHandlerObserver-Protocol.h"
 
 @class NSString, SPTLyricsV2Configuration, SPTLyricsV2FullscreenFooterView, SPTVocalRemovalConfiguration;
-@protocol SPTLyricsV2FullscreenFooterViewControllerDelegate, SPTNowPlayingDurationUnitViewModel;
+@protocol SPTLyricsV2FullscreenFooterViewControllerDelegate, SPTNowPlayingDurationUnitViewModel, SPTNowPlayingPlaybackActionsHandler;
 
-@interface SPTLyricsV2FullscreenFooterViewController : UIViewController <SPTLyricsV2DurationController, SPTNowPlayingDurationUnitViewModelDelegate, SPTPlayerObserver, SPTNetworkConnectivityControllerObserver>
+@interface SPTLyricsV2FullscreenFooterViewController : UIViewController <SPTLyricsV2DurationController, SPTNetworkConnectivityControllerObserver, SPTNowPlayingDurationUnitViewModelDelegate, SPTNowPlayingPlaybackActionsHandlerObserver>
 {
     _Bool _didLogVocalRemovalButtonImpression;
     _Bool _forceDisablePlaybackControls;
     id <SPTLyricsV2FullscreenFooterViewControllerDelegate> _delegate;
     id <SPTNowPlayingDurationUnitViewModel> _durationViewModel;
+    id <SPTNowPlayingPlaybackActionsHandler> _playbackActionsHandler;
     SPTLyricsV2Configuration *_lyricsConfiguration;
     SPTVocalRemovalConfiguration *_vocalRemovalConfiguration;
 }
@@ -28,12 +29,12 @@
 @property(nonatomic) _Bool didLogVocalRemovalButtonImpression; // @synthesize didLogVocalRemovalButtonImpression=_didLogVocalRemovalButtonImpression;
 @property(readonly, nonatomic) SPTVocalRemovalConfiguration *vocalRemovalConfiguration; // @synthesize vocalRemovalConfiguration=_vocalRemovalConfiguration;
 @property(readonly, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
+@property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 @property(nonatomic) __weak id <SPTLyricsV2FullscreenFooterViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)toggleVocalRemovalMode;
-- (void)tapPlayPauseButton;
 - (void)updateMenuButton;
 - (void)updateVocalRemovalButton;
 - (void)updatePlayPauseButton;
@@ -41,7 +42,6 @@
 - (_Bool)isSeekingAllowed;
 - (_Bool)isResumingAllowed;
 - (_Bool)isPausingAllowed;
-- (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)playbackActionsHandlerDidPlayPause:(id)arg1;
 - (void)trackMetadataDidFinishUpdating;
 - (void)trackMetadataDidMove:(_Bool)arg1;

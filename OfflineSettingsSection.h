@@ -8,15 +8,15 @@
 
 #import "SPSessionObserver-Protocol.h"
 
-@class NSString, SPSession, SPTNetworkConnectivityController, SPTSettingsLogger, SPTSettingsTableViewCell, SettingsSwitchTableViewCell;
-@protocol SPTOfflineManager, SPTProductState;
+@class NSString, SPSession, SPTSettingsLogger, SPTSettingsTableViewCell, SettingsSwitchTableViewCell;
+@protocol SPTNetworkConnectivityController, SPTOfflineManager, SPTProductState;
 
 @interface OfflineSettingsSection : SettingsSection <SPSessionObserver>
 {
     _Bool _showingGoOnlineWithinCell;
     SettingsSwitchTableViewCell *_offlineModeCell;
     SPTSettingsTableViewCell *_goOnlineWithinCell;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTSettingsLogger *_logger;
     id <SPTOfflineManager> _offlineManager;
     SPSession *_session;
@@ -27,7 +27,7 @@
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) _Bool showingGoOnlineWithinCell; // @synthesize showingGoOnlineWithinCell=_showingGoOnlineWithinCell;
 @property(retain, nonatomic) SPTSettingsTableViewCell *goOnlineWithinCell; // @synthesize goOnlineWithinCell=_goOnlineWithinCell;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *offlineModeCell; // @synthesize offlineModeCell=_offlineModeCell;

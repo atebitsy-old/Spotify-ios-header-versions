@@ -11,8 +11,8 @@
 #import "SPTSleepTimerEventObserver-Protocol.h"
 #import "SPTSleepTimerTimeObserver-Protocol.h"
 
-@class NSHashTable, NSString, NSURL, SPTNowPlayingEntityDecorationController, SPTNowPlayingModel;
-@protocol SPTSleepTimerController;
+@class NSString, NSURL, SPTNowPlayingEntityDecorationController, SPTNowPlayingModel, SPTObserverManager;
+@protocol SPTNowPlayingTestManager, SPTSleepTimerController;
 
 @interface SPTNowPlayingNavigationBarModelImplementation : NSObject <SPTNowPlayingEntityDecorationControllerObserver, SPTSleepTimerTimeObserver, SPTSleepTimerEventObserver, SPTNowPlayingNavigationBarModel>
 {
@@ -24,14 +24,16 @@
     NSString *_entityDescription;
     NSString *_entityTimerDescription;
     NSURL *_entityClickURI;
+    id <SPTNowPlayingTestManager> _nowPlayingTestManager;
     id <SPTSleepTimerController> _sleepTimerController;
     SPTNowPlayingEntityDecorationController *_entityDecorationController;
-    NSHashTable *_observers;
+    SPTObserverManager *_observerManager;
 }
 
-@property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
+@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTNowPlayingEntityDecorationController *entityDecorationController; // @synthesize entityDecorationController=_entityDecorationController;
 @property(nonatomic) __weak id <SPTSleepTimerController> sleepTimerController; // @synthesize sleepTimerController=_sleepTimerController;
+@property(readonly, nonatomic) id <SPTNowPlayingTestManager> nowPlayingTestManager; // @synthesize nowPlayingTestManager=_nowPlayingTestManager;
 @property(retain, nonatomic) NSURL *entityClickURI; // @synthesize entityClickURI=_entityClickURI;
 @property(copy, nonatomic) NSString *entityTimerDescription; // @synthesize entityTimerDescription=_entityTimerDescription;
 @property(copy, nonatomic) NSString *entityDescription; // @synthesize entityDescription=_entityDescription;
@@ -57,7 +59,7 @@
 - (void)timer:(id)arg1 timeWasUpdated:(double)arg2;
 - (void)entityDecorationControllerDidUpdate:(id)arg1;
 - (void)dealloc;
-- (id)initWithEntityDecorationController:(id)arg1 nowPlayingModel:(id)arg2 sleepTimerController:(id)arg3;
+- (id)initWithEntityDecorationController:(id)arg1 nowPlayingModel:(id)arg2 sleepTimerController:(id)arg3 nowPlayingTestManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

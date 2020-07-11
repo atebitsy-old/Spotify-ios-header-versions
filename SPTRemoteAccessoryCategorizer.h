@@ -9,18 +9,18 @@
 #import "SPTAccessoryCategorizer-Protocol.h"
 #import "SPTDataLoaderDelegate-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTNetworkConnectivityController;
-@protocol SPTOfflineModeState;
+@class NSString, SPTDataLoader;
+@protocol SPTNetworkConnectivityController, SPTOfflineModeState;
 
 @interface SPTRemoteAccessoryCategorizer : NSObject <SPTDataLoaderDelegate, SPTAccessoryCategorizer>
 {
     SPTDataLoader *_dataLoader;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     id <SPTOfflineModeState> _offlineModeState;
 }
 
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

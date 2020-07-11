@@ -9,7 +9,7 @@
 #import "SPTExternalIntegrationPlatformService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTExternalIntegrationDebugLogServiceImplementation;
-@protocol SPTContainerService, SPTDebugService, SPTExternalIntegrationCollectionService, SPTExternalIntegrationContentService, SPTExternalIntegrationDriverDistractionService, SPTExternalIntegrationPlatform, SPTExternalIntegrationPlaybackService, SPTExternalIntegrationRadioService, SPTExternalIntegrationSearchService, SPTSessionService;
+@protocol SPTContainerService, SPTDebugService, SPTExternalIntegrationCollectionService, SPTExternalIntegrationContentService, SPTExternalIntegrationDriverDistractionService, SPTExternalIntegrationPlatform, SPTExternalIntegrationPlaybackService, SPTExternalIntegrationQueueService, SPTExternalIntegrationRadioService, SPTExternalIntegrationSearchService, SPTSessionService;
 
 @interface SPTExternalIntegrationPlatformServiceImplementation : NSObject <SPTExternalIntegrationPlatformService>
 {
@@ -20,6 +20,7 @@
     id <SPTExternalIntegrationPlaybackService> _playbackService;
     id <SPTExternalIntegrationRadioService> _radioService;
     id <SPTExternalIntegrationSearchService> _searchService;
+    id <SPTExternalIntegrationQueueService> _queueService;
     id <SPTContainerService> _containerService;
     id <SPTSessionService> _sessionService;
     SPTExternalIntegrationDebugLogServiceImplementation *_debugLogService;
@@ -31,6 +32,7 @@
 @property(readonly, nonatomic) __weak SPTExternalIntegrationDebugLogServiceImplementation *debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
+@property(readonly, nonatomic) __weak id <SPTExternalIntegrationQueueService> queueService; // @synthesize queueService=_queueService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationSearchService> searchService; // @synthesize searchService=_searchService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationRadioService> radioService; // @synthesize radioService=_radioService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;

@@ -9,8 +9,8 @@
 #import "SPTLanguageOnboardingDataLoaderDelegate-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSArray, NSMutableArray, NSMutableSet, NSString, NSURL, SPTLanguageOnboardingDataLoader, SPTLanguageOnboardingLogger, SPTNetworkConnectivityController;
-@protocol SPTLanguageOnboardingViewModelDelegate;
+@class NSArray, NSMutableArray, NSMutableSet, NSString, NSURL, SPTLanguageOnboardingDataLoader, SPTLanguageOnboardingLogger;
+@protocol SPTLanguageOnboardingViewModelDelegate, SPTNetworkConnectivityController;
 
 @interface SPTLanguageOnboardingViewModel : NSObject <SPTNetworkConnectivityControllerObserver, SPTLanguageOnboardingDataLoaderDelegate>
 {
@@ -20,14 +20,14 @@
     SPTLanguageOnboardingLogger *_logger;
     NSMutableArray *_loggedLanguages;
     SPTLanguageOnboardingDataLoader *_dataLoader;
-    SPTNetworkConnectivityController *_connectivityController;
+    id <SPTNetworkConnectivityController> _connectivityController;
     NSArray *_availableLanguages;
     NSMutableSet *_selectedLanguages;
 }
 
 @property(retain, nonatomic) NSMutableSet *selectedLanguages; // @synthesize selectedLanguages=_selectedLanguages;
 @property(copy, nonatomic) NSArray *availableLanguages; // @synthesize availableLanguages=_availableLanguages;
-@property(retain, nonatomic) SPTNetworkConnectivityController *connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(retain, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(retain, nonatomic) SPTLanguageOnboardingDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) NSMutableArray *loggedLanguages; // @synthesize loggedLanguages=_loggedLanguages;
 @property(nonatomic) _Bool didLogScroll; // @synthesize didLogScroll=_didLogScroll;

@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class HUBComponentDefaults, HUBComponentRegistry, SPTFreeTierArtistBarButtonFactory, SPTFreeTierArtistCollectionModelFactory, SPTFreeTierArtistCommandHandlerFactory, SPTFreeTierArtistContentOperationFactory, SPTNetworkConnectivityController;
-@protocol GLUETheme, SPTAgeVerificationProvider, SPTBarButtonItemManager, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTPermissionsOnDemandState, SPTShelves, SPTVisualRefreshIntegrationService;
+@class HUBComponentDefaults, HUBComponentRegistry, SPTFreeTierArtistBarButtonFactory, SPTFreeTierArtistCollectionModelFactory, SPTFreeTierArtistCommandHandlerFactory, SPTFreeTierArtistContentOperationFactory;
+@protocol GLUETheme, SPTAgeVerificationProvider, SPTBarButtonItemManager, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkConnectivityController, SPTPermissionsOnDemandState, SPTShelves, SPTVisualRefreshIntegrationService;
 
 @interface SPTFreeTierArtistHubManager : NSObject
 {
@@ -24,14 +24,14 @@
     id <SPTBarButtonItemManager> _barButtonItemManager;
     id <SPTShelves> _shelves;
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTAgeVerificationProvider> _ageVerificationProvider;
 }
 
 @property(readonly, nonatomic) __weak id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
-@property(nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;

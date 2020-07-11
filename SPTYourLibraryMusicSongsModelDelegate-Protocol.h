@@ -11,6 +11,7 @@
 
 @protocol SPTYourLibraryMusicSongsModelDelegate <NSObject>
 - (void)songsModel:(id <SPTYourLibraryMusicSongsModel>)arg1 error:(NSError *)arg2;
+- (void)songsModelAvailableFiltersDidUpdate:(id <SPTYourLibraryMusicSongsModel>)arg1;
 - (void)songsModelDidUpdate:(id <SPTYourLibraryMusicSongsModel>)arg1 itemsCountChanged:(_Bool)arg2;
 @end
 

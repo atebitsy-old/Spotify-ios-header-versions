@@ -15,12 +15,14 @@
 @interface SPTNowPlayingContentLayerResolverImplementation : NSObject <SPTNowPlayingContentLayerProviderDelegate, SPTNowPlayingContentLayerResolver>
 {
     id <SPTNowPlayingContentLayerResolverDelegate> delegate;
+    unsigned long long _preferredContentType;
     NSMutableDictionary *_providers;
     NSArray *_sortedProviders;
 }
 
 @property(copy, nonatomic) NSArray *sortedProviders; // @synthesize sortedProviders=_sortedProviders;
 @property(readonly, nonatomic) NSMutableDictionary *providers; // @synthesize providers=_providers;
+@property(nonatomic) unsigned long long preferredContentType; // @synthesize preferredContentType=_preferredContentType;
 @property(nonatomic) __weak id <SPTNowPlayingContentLayerResolverDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
 - (void)provider:(id)arg1 needsRefreshForTrack:(id)arg2;

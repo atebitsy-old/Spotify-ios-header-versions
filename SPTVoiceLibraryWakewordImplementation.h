@@ -38,7 +38,7 @@
 - (void).cxx_destruct;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;
 - (void)unload;
-- (void)loadSensory;
+- (void)loadSensoryWithCompletion:(CDUnknownBlockType)arg1;
 - (void)resume;
 - (void)pause;
 - (void)stop;

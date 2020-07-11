@@ -6,10 +6,11 @@
 
 #import "SPTLoginTraitChangingView.h"
 
-@class ASAuthorizationAppleIDButton, GLUEButton, GLUELabel, NSLayoutConstraint, SPTLoginOptionButton, UIImageView, UIStackView, UIView;
+@class ASAuthorizationAppleIDButton, GLUEButton, GLUEGradientView, GLUELabel, NSLayoutConstraint, SPTLoginOptionButton, UIImageView, UIStackView, UIView;
 
 @interface SPTLoginWelcomeView : SPTLoginTraitChangingView
 {
+    UIImageView *_artworkImageView;
     UIImageView *_spotifyLogo;
     GLUELabel *_helpTextLabel;
     GLUEButton *_continueWithEmailButton;
@@ -21,6 +22,7 @@
     UIStackView *_buttonsContainerView;
     NSLayoutConstraint *_spotifyLogoTopEdgeMinimum;
     NSLayoutConstraint *_spotifyLogoTopEdgePrefered;
+    NSLayoutConstraint *_spotifyLogoBottomEdge;
     NSLayoutConstraint *_buttonsContainerRegularSizeClassWidth;
     NSLayoutConstraint *_buttonsContainerLeadingMargin;
     NSLayoutConstraint *_buttonsContainerTrailingMargin;
@@ -28,16 +30,16 @@
     NSLayoutConstraint *_titleBottomMargin;
     NSLayoutConstraint *_mainContainerCompactWidth;
     NSLayoutConstraint *_mainContainerRegularWidth;
-    NSLayoutConstraint *_logoCenterX;
-    UIView *_titleContainer;
+    NSLayoutConstraint *_artworkAspectRatio;
     GLUELabel *_titleLabel;
     UIView *_mainContainer;
+    GLUEGradientView *_gradientView;
 }
 
+@property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(retain, nonatomic) UIView *titleContainer; // @synthesize titleContainer=_titleContainer;
-@property(retain, nonatomic) NSLayoutConstraint *logoCenterX; // @synthesize logoCenterX=_logoCenterX;
+@property(retain, nonatomic) NSLayoutConstraint *artworkAspectRatio; // @synthesize artworkAspectRatio=_artworkAspectRatio;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(retain, nonatomic) NSLayoutConstraint *titleBottomMargin; // @synthesize titleBottomMargin=_titleBottomMargin;
@@ -45,6 +47,7 @@
 @property(retain, nonatomic) NSLayoutConstraint *buttonsContainerTrailingMargin; // @synthesize buttonsContainerTrailingMargin=_buttonsContainerTrailingMargin;
 @property(retain, nonatomic) NSLayoutConstraint *buttonsContainerLeadingMargin; // @synthesize buttonsContainerLeadingMargin=_buttonsContainerLeadingMargin;
 @property(retain, nonatomic) NSLayoutConstraint *buttonsContainerRegularSizeClassWidth; // @synthesize buttonsContainerRegularSizeClassWidth=_buttonsContainerRegularSizeClassWidth;
+@property(retain, nonatomic) NSLayoutConstraint *spotifyLogoBottomEdge; // @synthesize spotifyLogoBottomEdge=_spotifyLogoBottomEdge;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgePrefered; // @synthesize spotifyLogoTopEdgePrefered=_spotifyLogoTopEdgePrefered;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgeMinimum; // @synthesize spotifyLogoTopEdgeMinimum=_spotifyLogoTopEdgeMinimum;
 @property(retain, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
@@ -56,6 +59,7 @@
 @property(readonly, nonatomic) GLUEButton *continueWithEmailButton; // @synthesize continueWithEmailButton=_continueWithEmailButton;
 @property(retain, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
 @property(readonly, nonatomic) UIImageView *spotifyLogo; // @synthesize spotifyLogo=_spotifyLogo;
+@property(readonly, nonatomic) UIImageView *artworkImageView; // @synthesize artworkImageView=_artworkImageView;
 - (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setPropLabelText:(id)arg1;

@@ -8,16 +8,16 @@
 
 #import "SPTKeepAlivePersistentConnectionsToken-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
+@class NSString, SPTNetworkConnectivityControllerImplementation;
 
 @interface SPTKeepAlivePersistentConnectionsTokenImplementation : NSObject <SPTKeepAlivePersistentConnectionsToken>
 {
     _Bool _active;
     NSString *_reason;
-    SPTNetworkConnectivityController *_owningController;
+    SPTNetworkConnectivityControllerImplementation *_owningController;
 }
 
-@property(readonly, nonatomic) __weak SPTNetworkConnectivityController *owningController; // @synthesize owningController=_owningController;
+@property(readonly, nonatomic) __weak SPTNetworkConnectivityControllerImplementation *owningController; // @synthesize owningController=_owningController;
 @property(readonly, nonatomic) _Bool active; // @synthesize active=_active;
 @property(readonly, copy, nonatomic) NSString *reason; // @synthesize reason=_reason;
 - (void).cxx_destruct;

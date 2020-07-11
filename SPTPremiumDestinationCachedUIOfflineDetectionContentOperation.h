@@ -9,18 +9,18 @@
 #import "HUBContentOperation-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, SPTNetworkConnectivityController;
-@protocol HUBContentOperationDelegate;
+@class NSString;
+@protocol HUBContentOperationDelegate, SPTNetworkConnectivityController;
 
 @interface SPTPremiumDestinationCachedUIOfflineDetectionContentOperation : NSObject <SPTNetworkConnectivityControllerObserver, HUBContentOperation>
 {
     _Bool _observing;
     id <HUBContentOperationDelegate> _delegate;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
 @property(nonatomic, getter=isObserving) _Bool observing; // @synthesize observing=_observing;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;

@@ -49,6 +49,7 @@
 - (_Bool)calculatePodcastFeatureEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagsDidChange:(id)arg1;
+@property(readonly, nonatomic, getter=isPodcastDataAccessLayerEnabled) _Bool podcastDataAccessLayerEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
 @property(readonly, nonatomic, getter=isRefinedPodcastPageEnabled) _Bool refinedPodcastPageEnabled;
 @property(readonly, nonatomic, getter=isProductionisedYourLibraryEnabled) _Bool productionisedYourLibraryEnabled;

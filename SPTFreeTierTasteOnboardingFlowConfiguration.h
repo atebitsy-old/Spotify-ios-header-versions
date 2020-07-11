@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDataLoaderFactory, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingLoggerFactory, SPTFreeTierTasteOnboardingPresentationConfiguration, SPTFreeTierTasteOnboardingTheme, SPTNetworkConnectivityController, SPTPopupManager;
-@protocol SPTAudioPreviewPlayer, SPTCollectionPlatform, SPTFollowModelFactory, SPTFreeTierTasteOnboardingTestManager, SPTGLUEImageLoaderFactory, SPTInstrumentationModalPresentationMonitor, SPTLoginStateController, SPTMetaViewController, SPTModalPresentationController, SPTPerformanceMetricsViewLoggerFactory;
+@class SPTDataLoaderFactory, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkStore, SPTFreeTierTasteOnboardingLoggerFactory, SPTFreeTierTasteOnboardingPresentationConfiguration, SPTFreeTierTasteOnboardingTheme, SPTPopupManager;
+@protocol SPTAudioPreviewPlayer, SPTCollectionPlatform, SPTFollowModelFactory, SPTFreeTierTasteOnboardingTestManager, SPTGLUEImageLoaderFactory, SPTInstrumentationModalPresentationMonitor, SPTLoginStateController, SPTMetaViewController, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPerformanceMetricsViewLoggerFactory;
 
 @interface SPTFreeTierTasteOnboardingFlowConfiguration : NSObject
 {
@@ -23,7 +23,7 @@
     id <SPTFollowModelFactory> _followModelFactory;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTAudioPreviewPlayer> _previewPlayer;
-    SPTNetworkConnectivityController *_networkConnectivityController;
+    id <SPTNetworkConnectivityController> _networkConnectivityController;
     id <SPTFreeTierTasteOnboardingTestManager> _testManager;
     id <SPTLoginStateController> _loginStateController;
     id <SPTInstrumentationModalPresentationMonitor> _modalPresentationMonitor;
@@ -36,7 +36,7 @@
 @property(readonly, nonatomic) id <SPTInstrumentationModalPresentationMonitor> modalPresentationMonitor; // @synthesize modalPresentationMonitor=_modalPresentationMonitor;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingTestManager> testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTAudioPreviewPlayer> previewPlayer; // @synthesize previewPlayer=_previewPlayer;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;

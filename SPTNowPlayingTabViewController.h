@@ -16,37 +16,34 @@
 {
     id <GLUETheme> _theme;
     SPTNowPlayingTabLabel *_canvasTabLabel;
-    SPTNowPlayingTabLabel *_albumArtTabLabel;
+    SPTNowPlayingTabLabel *_coverArtLabel;
     SPTNowPlayingTabLabel *_lyricsTabLabel;
     UIStackView *_stackView;
     UITapGestureRecognizer *_canvasLabelTapRecognizer;
-    UITapGestureRecognizer *_albumArtLabelTapRecognizer;
+    UITapGestureRecognizer *_coverArtLabelTapRecognizer;
     UITapGestureRecognizer *_lyricsLabelTapRecognizer;
     SPTNowPlayingTabViewModel *_viewModel;
 }
 
 @property(readonly, nonatomic) SPTNowPlayingTabViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) UITapGestureRecognizer *lyricsLabelTapRecognizer; // @synthesize lyricsLabelTapRecognizer=_lyricsLabelTapRecognizer;
-@property(readonly, nonatomic) UITapGestureRecognizer *albumArtLabelTapRecognizer; // @synthesize albumArtLabelTapRecognizer=_albumArtLabelTapRecognizer;
+@property(readonly, nonatomic) UITapGestureRecognizer *coverArtLabelTapRecognizer; // @synthesize coverArtLabelTapRecognizer=_coverArtLabelTapRecognizer;
 @property(readonly, nonatomic) UITapGestureRecognizer *canvasLabelTapRecognizer; // @synthesize canvasLabelTapRecognizer=_canvasLabelTapRecognizer;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) SPTNowPlayingTabLabel *lyricsTabLabel; // @synthesize lyricsTabLabel=_lyricsTabLabel;
-@property(readonly, nonatomic) SPTNowPlayingTabLabel *albumArtTabLabel; // @synthesize albumArtTabLabel=_albumArtTabLabel;
+@property(readonly, nonatomic) SPTNowPlayingTabLabel *coverArtLabel; // @synthesize coverArtLabel=_coverArtLabel;
 @property(readonly, nonatomic) SPTNowPlayingTabLabel *canvasTabLabel; // @synthesize canvasTabLabel=_canvasTabLabel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
-- (void)autoSelectLeftMostTab;
-- (void)selecteTab:(unsigned long long)arg1;
+- (void)tabViewModel:(id)arg1 didChangeSelectedTab:(long long)arg2;
+- (void)tabViewModelDidChangeTabs:(id)arg1 canvasTabVisible:(_Bool)arg2 lyricsTabVisible:(_Bool)arg3;
+- (void)selectTab:(long long)arg1;
 - (void)lyricsLabelTapped;
-- (void)albumArtLabelTapped;
+- (void)coverArtLabelTapped;
 - (void)canvasLabelTapped;
-- (void)didSelectCanvasTab;
-- (void)didSelectAlbumArtTab;
-- (void)didSelectLyricsTab;
-- (void)themeUpdated:(id)arg1;
 - (void)setLyricsTabVisible:(_Bool)arg1;
-- (void)setAlbumArtTabVisible:(_Bool)arg1;
 - (void)setCanvasTabVisible:(_Bool)arg1;
+- (void)themeUpdated:(id)arg1;
 - (void)viewDidLoad;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

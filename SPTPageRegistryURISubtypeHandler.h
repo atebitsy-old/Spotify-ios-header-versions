@@ -8,19 +8,23 @@
 
 #import "SPTURISubtypeHandler-Protocol.h"
 
-@class NSString;
+@class NSString, SPTObserverManager;
 @protocol SPTNavigationRouter;
 
 @interface SPTPageRegistryURISubtypeHandler : NSObject <SPTURISubtypeHandler>
 {
     id <SPTNavigationRouter> _navigationRouter;
+    SPTObserverManager *_ubiObserverManager;
 }
 
+@property(retain, nonatomic) SPTObserverManager *ubiObserverManager; // @synthesize ubiObserverManager=_ubiObserverManager;
 @property(retain, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 - (void).cxx_destruct;
+- (void)ubiNavigationLocationChangingWithContext:(id)arg1;
+- (void)ubiNavigationRequestedWithContext:(id)arg1;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
-- (id)initWithNavigationRouter:(id)arg1;
+- (id)initWithNavigationRouter:(id)arg1 ubiObserverManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

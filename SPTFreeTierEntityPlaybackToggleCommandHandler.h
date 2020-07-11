@@ -8,14 +8,16 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTHubInteractionLogger, SPTPlayer;
+@protocol SPTHubInteractionLogger, SPTPlayer, SPTUBILogger;
 
 @interface SPTFreeTierEntityPlaybackToggleCommandHandler : NSObject <HUBCommandHandler>
 {
     id <SPTPlayer> _player;
     id <SPTHubInteractionLogger> _logger;
+    id <SPTUBILogger> _ubiLogger;
 }
 
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
@@ -24,6 +26,7 @@
 - (void)initiatePlaybackForCommand:(id)arg1 event:(id)arg2;
 - (void)pausePlaybackForCommand:(id)arg1 event:(id)arg2;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
+- (id)initWithPlayer:(id)arg1 logger:(id)arg2 ubiLogger:(id)arg3;
 - (id)initWithPlayer:(id)arg1 logger:(id)arg2;
 
 @end

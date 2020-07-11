@@ -116,7 +116,7 @@
 - (long long)numberOfRowsInSection:(long long)arg1;
 - (void)obtainDelegation;
 @property(readonly, copy, nonatomic) NSArray *viewSections;
-- (id)initWithURL:(id)arg1 headerViewModel:(id)arg2 configuration:(id)arg3 topicCategoryViewModel:(id)arg4 dataLoader:(id)arg5 collectionPlatform:(id)arg6 testManager:(id)arg7 uiTestManager:(id)arg8 explicitContentAccessManager:(id)arg9 podcastPlayer:(id)arg10 podcastLogger:(id)arg11 featureProperties:(id)arg12 dispatcher:(id)arg13;
+- (id)initWithURL:(id)arg1 headerViewModel:(id)arg2 configuration:(id)arg3 topicCategoryViewModel:(id)arg4 dataLoader:(id)arg5 collectionPlatform:(id)arg6 testManager:(id)arg7 uiTestManager:(id)arg8 explicitContentAccessManager:(id)arg9 podcastPlayer:(id)arg10 podcastLogger:(id)arg11 featureProperties:(id)arg12 dispatcher:(id)arg13 factory:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

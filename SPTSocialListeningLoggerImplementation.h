@@ -9,13 +9,17 @@
 #import "SPTSocialListeningLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileSocialListeningEventFactory;
 
 @interface SPTSocialListeningLoggerImplementation : NSObject <SPTSocialListeningLogger>
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBIMobileSocialListeningEventFactory> _eventFactory;
+    id <SPTUBILogger> _ubiLogger;
 }
 
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(retain, nonatomic) id <SPTUBIMobileSocialListeningEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logUIImpressionWithSectionId:(id)arg1 index:(long long)arg2 renderType:(id)arg3;
@@ -24,12 +28,16 @@
 - (void)logJoinFromScannableWithURL:(id)arg1;
 - (void)logJoinFromSearchWithURL:(id)arg1;
 - (void)logParticipantListImpression;
-- (void)logLeaveButtonTapped;
+- (void)logConfirmEndSessionCancelButtonTapped;
+- (void)logConfirmEndSessionEndButtonTapped;
+- (void)logEndSessionButtonTapped;
+- (void)logLeaveSessionButtonTapped;
 - (void)logShareCodeButtonTapped;
+- (void)logFacepileTapped;
 - (void)logScanCodeButtonTapped;
 - (void)logTryAgainButtonTapped;
 - (void)logUserProfileTapped:(long long)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

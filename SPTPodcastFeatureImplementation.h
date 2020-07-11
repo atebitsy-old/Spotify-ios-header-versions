@@ -10,7 +10,7 @@
 #import "SPTPodcastTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastDataLoaderShowEntityService, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactory, SPTPodcastSortingService, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
-@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastLogger, SPTPodcastOffliningService, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, _TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_;
+@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastLogger, SPTPodcastOffliningService, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_;
 
 @interface SPTPodcastFeatureImplementation : SPTUIPageService <SPTPodcastTestManagerObserver, SPTPodcastFeature>
 {
@@ -26,7 +26,6 @@
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTResolver> _router;
     id <SPContextMenuFeature> _contextMenuFeature;
-    id <SPTVideoCoordinatorService> _videoCoordinatorService;
     id <SPTAbbaService> _abbaService;
     id <SPTContextDispatchService> _contextDispatchService;
     id <SPTGLUEService> _glueService;
@@ -45,6 +44,7 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIUserBehaviourInstrumentation> _ubiService;
     id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> _podcastCreatorEntityPageEntryPointsService;
+    id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     SPTPodcastFeatureProperties *_featureProperties;
     SPTPodcastDataLoaderShowEntityService *_showEntityService;
     id <SPTPodcastContextMenuProvider> _defaultContextMenuProvider;
@@ -63,13 +63,9 @@
     id <CosmosFeature> _cosmosService;
     SPTPodcastPreferences *_podcastPreferences;
     id <SPTPageRegistrationToken> _internalPodcastPageRegistration;
-    id <SPTPageRegistrationToken> _internalVideoPageRegistration;
-    id <SPTPageRegistrationToken> _legacyShowPageRegistration;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTPageRegistrationToken> legacyShowPageRegistration; // @synthesize legacyShowPageRegistration=_legacyShowPageRegistration;
-@property(retain, nonatomic) id <SPTPageRegistrationToken> internalVideoPageRegistration; // @synthesize internalVideoPageRegistration=_internalVideoPageRegistration;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> internalPodcastPageRegistration; // @synthesize internalPodcastPageRegistration=_internalPodcastPageRegistration;
 @property(retain, nonatomic) SPTPodcastPreferences *podcastPreferences; // @synthesize podcastPreferences=_podcastPreferences;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
@@ -89,6 +85,7 @@
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> defaultContextMenuProvider; // @synthesize defaultContextMenuProvider=_defaultContextMenuProvider;
 @property(retain, nonatomic) SPTPodcastDataLoaderShowEntityService *showEntityService; // @synthesize showEntityService=_showEntityService;
 @property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
 @property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> podcastCreatorEntityPageEntryPointsService; // @synthesize podcastCreatorEntityPageEntryPointsService=_podcastCreatorEntityPageEntryPointsService;
 @property(nonatomic) __weak id <SPTUBIUserBehaviourInstrumentation> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
@@ -107,7 +104,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContextDispatchService> contextDispatchService; // @synthesize contextDispatchService=_contextDispatchService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
-@property(nonatomic) __weak id <SPTVideoCoordinatorService> videoCoordinatorService; // @synthesize videoCoordinatorService=_videoCoordinatorService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(retain, nonatomic) id <SPTResolver> router; // @synthesize router=_router;
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
@@ -131,12 +127,8 @@
 - (id)provideTestManager;
 - (void)addSwitchToSettingsPage:(id)arg1 settingsTitle:(id)arg2 settingsDescription:(id)arg3 settingsKey:(id)arg4;
 - (id)registerPageSelector:(SEL)arg1 predicate:(CDUnknownBlockType)arg2;
-- (void)registerInternalVideoURIPage;
-- (void)registerInternalPodcastURIPage;
 - (void)updateCrashReporterValues;
-- (void)unregisterInternalPages;
-- (void)unregisterLegacyPage;
-- (void)registerShowPages;
+- (void)registerPodcastShowPage;
 - (void)registerPodcastCollectionEntityContentType;
 - (void)podcastTestManagerDidUpdate:(id)arg1;
 - (id)provideEpisodeCellConfigurator;
@@ -146,11 +138,11 @@
 - (void)setUpShowEntityServiceDataLoader:(id)arg1;
 - (id)provideShowEntityService;
 - (id)provideDefaultContextMenuProvider;
+- (id)provideInternalPodcastFactory;
 - (id)provideContextMenuDelegateObject;
 - (id)provideContextMenuProviderWithLinkDispatcher:(id)arg1;
 - (id)providePodcastViewControllerForURL:(id)arg1 context:(id)arg2;
 - (id)provideShowContextMenuControllerForLinkDispatcher:(id)arg1;
-- (id)provideVideoShowViewControllerForURL:(id)arg1 context:(id)arg2;
 - (id)provideFeatureProperties;
 - (id)provideSortingService;
 - (id)provideLocalSettings;
