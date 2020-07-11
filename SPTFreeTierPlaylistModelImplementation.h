@@ -11,7 +11,7 @@
 #import "SPTFreeTierPlaylistSortingFilteringDelegate-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString, NSURL, SPTFreeTierPlaylistFeatureProperties, SPTFreeTierPlaylistModelEntityImplementation, SPTObserverManager;
+@class NSPointerArray, NSString, NSURL, SPTFreeTierPlaylistFeatureProperties, SPTFreeTierPlaylistModelEntityImplementation;
 @protocol SPTClientSettings, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTExplicitContentAccessManager, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistTestManager, SPTOnDemandSet, SPTPlaylistModel, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTFreeTierPlaylistModelImplementation : NSObject <SPTProductStateObserver, SPTExplicitContentEnabledStateObserver, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistSortingFilteringDelegate>
@@ -37,12 +37,12 @@
     id <SPTPlaylistPlatformDataLoaderRequestToken> _metadataSubscription;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _followCountSubscription;
     unsigned long long _onDemandType;
-    SPTObserverManager *_observerManager;
+    NSPointerArray *_observers;
     struct _NSRange _currentWindow;
     struct _NSRange _loadedWindow;
 }
 
-@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(readonly, nonatomic) NSPointerArray *observers; // @synthesize observers=_observers;
 @property(nonatomic) struct _NSRange loadedWindow; // @synthesize loadedWindow=_loadedWindow;
 @property(nonatomic) struct _NSRange currentWindow; // @synthesize currentWindow=_currentWindow;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;

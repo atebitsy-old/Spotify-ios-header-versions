@@ -8,8 +8,8 @@
 
 #import "SPTInAppMessageService-Protocol.h"
 
-@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageActionsRegistryImplementation, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewBannerMessageController, SPTInAppMessagePreviewCardMessageController, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewNoteMessageController, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
-@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTExternalIntegrationDriverDistractionService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTTooltipService, SPTURIDispatchService, SlateFeature;
+@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageActionsRegistryImplementation, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewBannerMessageController, SPTInAppMessagePreviewCardMessageController, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewNoteMessageController, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
+@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTExternalIntegrationDriverDistractionService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTTooltipService, SPTURIDispatchService, SlateFeature;
 
 @interface SPTInAppMessageServiceImplementation : NSObject <SPTInAppMessageService>
 {
@@ -47,6 +47,7 @@
     id <SPTAuthService> _authService;
     id <SPTOfflineService> _offlineService;
     id <SPTEventSenderService> _eventSenderService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTInAppMessageTriggerConfigurationsController *_triggerConfigurationsController;
     SPTInAppMessageTriggerListController *_triggerListController;
     SPTInAppMessageTriggerEngine *_triggerEngine;
@@ -74,9 +75,11 @@
     SPTInAppMessageManager *_inAppMessageManager;
     SPTInAppMessageReceiverImplementation *_messageReceiver;
     SPTInAppMessageEventEmitter *_eventEmitter;
+    SPTInAppMessageFeatureProperties *_inAppMessageFeatureProperties;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTInAppMessageFeatureProperties *inAppMessageFeatureProperties; // @synthesize inAppMessageFeatureProperties=_inAppMessageFeatureProperties;
 @property(retain, nonatomic) SPTInAppMessageEventEmitter *eventEmitter; // @synthesize eventEmitter=_eventEmitter;
 @property(retain, nonatomic) SPTInAppMessageReceiverImplementation *messageReceiver; // @synthesize messageReceiver=_messageReceiver;
 @property(retain, nonatomic) SPTInAppMessageManager *inAppMessageManager; // @synthesize inAppMessageManager=_inAppMessageManager;
@@ -109,6 +112,7 @@
 @property(retain, nonatomic) SPTInAppMessageTriggerEngine *triggerEngine; // @synthesize triggerEngine=_triggerEngine;
 @property(retain, nonatomic) SPTInAppMessageTriggerListController *triggerListController; // @synthesize triggerListController=_triggerListController;
 @property(retain, nonatomic) SPTInAppMessageTriggerConfigurationsController *triggerConfigurationsController; // @synthesize triggerConfigurationsController=_triggerConfigurationsController;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;

@@ -76,6 +76,7 @@
 - (id)makeViewModelBuilderFactory;
 - (id)makeOfflineFetcherForQuery:(id)arg1;
 - (id)assistedCurationPatcher;
+- (id)errorViewModelBuilder;
 - (id)makeOnlineFetcherForQuery:(id)arg1;
 - (id)makeOfflineResultsContextForQuery:(id)arg1;
 - (id)makeOnlineResultsContextForQuery:(id)arg1;

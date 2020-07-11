@@ -9,9 +9,10 @@
 @class NSString;
 
 @protocol SPTAlertAction <NSObject>
-@property(nonatomic, getter=isEnabled) _Bool enabled;
-@property(readonly, nonatomic) CDUnknownBlockType handler;
-@property(readonly, nonatomic) long long style;
-@property(readonly, nonatomic) NSString *title;
+@property(nonatomic) _Bool enabled;
+- (_Bool)isEnabled;
+@property(nonatomic, readonly) CDUnknownBlockType handler;
+@property(nonatomic, readonly) long long style;
+@property(nonatomic, readonly) NSString *title;
 @end
 

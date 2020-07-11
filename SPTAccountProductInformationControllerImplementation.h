@@ -10,13 +10,14 @@
 #import "SPTAccountProductInformationController-Protocol.h"
 
 @class NSDate, NSString, SPTAccountCurrentProductMonitor, SPTObserverManager;
-@protocol InAppPurchaseController, SPTAccountTrialDeferredController;
+@protocol InAppPurchaseController, SPTAccountTrialDeferredController, SPTProductState;
 
 @interface SPTAccountProductInformationControllerImplementation : NSObject <SPTAccountCurrentProductMonitorObserver, SPTAccountProductInformationController>
 {
     _Bool _canActivatePremiumTrial;
     _Bool _hasCanActivatePremiumTrialValue;
     _Bool _upgradeAvailableButCantPurchase;
+    _Bool _isPremiumOnlyMarket;
     _Bool _isCheckingPremiumAvailability;
     _Bool _hasEverCheckedPremiumAvailability;
     long long _currentProduct;
@@ -27,15 +28,18 @@
     SPTAccountCurrentProductMonitor *_currentProductMonitor;
     id <InAppPurchaseController> _inAppPurchaseController;
     id <SPTAccountTrialDeferredController> _deferredTrialController;
+    id <SPTProductState> _productState;
 }
 
 + (id)keyPathsForValuesAffectingCurrentProductMarketingName;
 @property(nonatomic) _Bool hasEverCheckedPremiumAvailability; // @synthesize hasEverCheckedPremiumAvailability=_hasEverCheckedPremiumAvailability;
 @property(nonatomic) _Bool isCheckingPremiumAvailability; // @synthesize isCheckingPremiumAvailability=_isCheckingPremiumAvailability;
+@property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <SPTAccountTrialDeferredController> deferredTrialController; // @synthesize deferredTrialController=_deferredTrialController;
 @property(retain, nonatomic) id <InAppPurchaseController> inAppPurchaseController; // @synthesize inAppPurchaseController=_inAppPurchaseController;
 @property(retain, nonatomic) SPTAccountCurrentProductMonitor *currentProductMonitor; // @synthesize currentProductMonitor=_currentProductMonitor;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(nonatomic) _Bool isPremiumOnlyMarket; // @synthesize isPremiumOnlyMarket=_isPremiumOnlyMarket;
 @property(nonatomic) _Bool upgradeAvailableButCantPurchase; // @synthesize upgradeAvailableButCantPurchase=_upgradeAvailableButCantPurchase;
 @property(nonatomic) _Bool hasCanActivatePremiumTrialValue; // @synthesize hasCanActivatePremiumTrialValue=_hasCanActivatePremiumTrialValue;
 @property(nonatomic) _Bool canActivatePremiumTrial; // @synthesize canActivatePremiumTrial=_canActivatePremiumTrial;
@@ -51,6 +55,8 @@
 - (void)notifyProductInformationObserversAboutPremiumTrialIsSet;
 - (void)notifyProductInformationObserversAboutAvailableProductChange;
 - (void)notifyProductInformationObserversAboutCurrentProductChange;
+- (id)currentUserCountryCode;
+- (id)premiumOnlyMarkets;
 - (_Bool)availablePremiumProductIncludes30DayTrial;
 - (void)updateTrialEligibilityStateDidChange;
 - (void)updateIAPState;
@@ -59,7 +65,7 @@
 - (id)marketingNameForProduct:(long long)arg1;
 @property(readonly, copy, nonatomic) NSString *currentProductMarketingName;
 - (void)dealloc;
-- (id)initWithCurrentProductMonitor:(id)arg1 inAppPurchaseController:(id)arg2 deferredTrialController:(id)arg3 username:(id)arg4;
+- (id)initWithCurrentProductMonitor:(id)arg1 inAppPurchaseController:(id)arg2 deferredTrialController:(id)arg3 productState:(id)arg4 username:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

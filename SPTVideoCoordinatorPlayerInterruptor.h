@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTVideoCoordinatorCosmosSender;
-@protocol BMBetamaxPlayer, BMPlaybackTimeObservable;
+@protocol BMBetamaxPlayer, BMPlaybackTimeObservable, BMPlaybackTimeObserverCancellationToken;
 
 @interface SPTVideoCoordinatorPlayerInterruptor : NSObject
 {
@@ -15,8 +15,10 @@
     double _interruptionPosition;
     id <BMBetamaxPlayer> _player;
     SPTVideoCoordinatorCosmosSender *_cosmosSender;
+    id <BMPlaybackTimeObserverCancellationToken> _cancellationToken;
 }
 
+@property(retain, nonatomic) id <BMPlaybackTimeObserverCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
 @property(retain, nonatomic) id <BMBetamaxPlayer> player; // @synthesize player=_player;
 @property(nonatomic) double interruptionPosition; // @synthesize interruptionPosition=_interruptionPosition;

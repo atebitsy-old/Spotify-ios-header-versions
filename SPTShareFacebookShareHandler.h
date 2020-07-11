@@ -13,6 +13,11 @@
 
 @interface SPTShareFacebookShareHandler : NSObject <FBSDKSharingDelegate, SPTShareHandler>
 {
+    NSString *_utmSource;
+    NSString *_utmMedium;
+    NSString *_utmCampaign;
+    NSString *_utmContent;
+    NSString *_utmTerm;
     SPTShareLogger *_shareLogger;
     CDUnknownBlockType _shareCompletionBlock;
     SPTShareData *_shareData;
@@ -21,6 +26,11 @@
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(copy, nonatomic) CDUnknownBlockType shareCompletionBlock; // @synthesize shareCompletionBlock=_shareCompletionBlock;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
+@property(readonly, nonatomic) NSString *utmTerm; // @synthesize utmTerm=_utmTerm;
+@property(readonly, nonatomic) NSString *utmContent; // @synthesize utmContent=_utmContent;
+@property(readonly, nonatomic) NSString *utmCampaign; // @synthesize utmCampaign=_utmCampaign;
+@property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
+@property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
 - (void).cxx_destruct;
 - (void)sharerDidCancel:(id)arg1;
 - (void)sharer:(id)arg1 didFailWithError:(id)arg2;

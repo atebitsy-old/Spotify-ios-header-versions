@@ -9,6 +9,5 @@
 @protocol SPTVideoPlaybackTimeObservableInternal <BMPlaybackTimeObservable>
 - (double)duration;
 - (void)stopObserving;
-- (void)startObserving;
 @end
 

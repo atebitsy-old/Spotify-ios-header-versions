@@ -6,7 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
+@protocol SPTFreeTierPlaylistSectionFooter, SPTFreeTierPlaylistSectionHeader;
+
 @protocol SPTFreeTierPlaylistSectionDescription <NSObject>
+- (void)willDisplaySection;
+- (id <SPTFreeTierPlaylistSectionFooter>)sectionFooter;
+- (id <SPTFreeTierPlaylistSectionHeader>)sectionHeader;
 - (unsigned long long)numberOfRows;
 - (unsigned long long)section;
 @end

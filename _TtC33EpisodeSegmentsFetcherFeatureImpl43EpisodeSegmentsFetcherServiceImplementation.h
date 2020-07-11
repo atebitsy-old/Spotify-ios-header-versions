@@ -11,6 +11,7 @@
     // Error parsing type: , name: containerService
     // Error parsing type: , name: cosmosDataLoaderService
     // Error parsing type: , name: cosmosService
+    // Error parsing type: , name: remoteConfigurationService
 }
 
 + (id)serviceIdentifier;

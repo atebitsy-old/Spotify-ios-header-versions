@@ -18,10 +18,8 @@
     id <SPTYourLibraryMusicPlaylistEntity> _playlistEntity;
     id <SPTYourLibraryMusicFolderEntity> _folderEntity;
     id <SPTYourLibraryMusicLikedSongsModelEntity> _favoriteMixEntity;
-    NSString *_personalizedByline;
 }
 
-@property(copy, nonatomic) NSString *personalizedByline; // @synthesize personalizedByline=_personalizedByline;
 @property(nonatomic, getter=isOnDemand) _Bool onDemand; // @synthesize onDemand=_onDemand;
 @property(retain, nonatomic) id <SPTYourLibraryMusicLikedSongsModelEntity> favoriteMixEntity; // @synthesize favoriteMixEntity=_favoriteMixEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicFolderEntity> folderEntity; // @synthesize folderEntity=_folderEntity;

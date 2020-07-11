@@ -20,9 +20,6 @@
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
 - (void).cxx_destruct;
-- (_Bool)validateEntity:(id)arg1;
-- (id)sequenceNumberMapWithEntities:(id)arg1;
-- (id)statsForSequenceNumberMap:(id)arg1;
 - (void)provideStatsWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithPersistentStore:(id)arg1 logger:(id)arg2;
 

@@ -7,8 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSError, NSIndexPath, SPTPodcastFilterContextViewController, SPTPodcastViewModel2;
+@protocol SPTPodcastEpisode;
 
 @protocol SPTPodcastViewModelDelegate2 <NSObject>
+- (void)viewModel:(SPTPodcastViewModel2 *)arg1 showContextMenuForTrailerEpisode:(id <SPTPodcastEpisode>)arg2 atIndexPath:(NSIndexPath *)arg3;
 - (void)viewModel:(SPTPodcastViewModel2 *)arg1 scrollToLatestPlayedEpisodeAtIndexPath:(NSIndexPath *)arg2;
 - (void)podcastViewModelDidUpdatePlaybackRestrictions:(SPTPodcastViewModel2 *)arg1;
 - (void)viewModel:(SPTPodcastViewModel2 *)arg1 didUpdateFilteredState:(_Bool)arg2;

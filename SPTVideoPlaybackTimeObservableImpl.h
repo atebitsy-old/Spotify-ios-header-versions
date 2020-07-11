@@ -8,35 +8,30 @@
 
 #import "SPTVideoPlaybackTimeObservableInternal-Protocol.h"
 
-@class NSMutableArray, NSString, SPTVideoPlayerSource;
+@class NSMutableDictionary, NSString, SPTVideoPlayerSource;
 @protocol BMKVOController, OS_dispatch_queue;
 
 @interface SPTVideoPlaybackTimeObservableImpl : NSObject <SPTVideoPlaybackTimeObservableInternal>
 {
-    _Bool _ready;
     SPTVideoPlayerSource *_playerSource;
-    NSMutableArray *_addObserverClosures;
-    NSMutableArray *_registeredObserverTokens;
+    NSMutableDictionary *_registeredObserverTokens;
     NSObject<OS_dispatch_queue> *_timeObserverQueue;
     id <BMKVOController> _kvoController;
 }
 
 @property(retain, nonatomic) id <BMKVOController> kvoController; // @synthesize kvoController=_kvoController;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *timeObserverQueue; // @synthesize timeObserverQueue=_timeObserverQueue;
-@property(retain, nonatomic) NSMutableArray *registeredObserverTokens; // @synthesize registeredObserverTokens=_registeredObserverTokens;
-@property(retain, nonatomic) NSMutableArray *addObserverClosures; // @synthesize addObserverClosures=_addObserverClosures;
+@property(retain, nonatomic) NSMutableDictionary *registeredObserverTokens; // @synthesize registeredObserverTokens=_registeredObserverTokens;
 @property(nonatomic) __weak SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
 - (void).cxx_destruct;
 - (double)duration;
 - (id)player;
-- (void)tryAddObserverWithClosure:(CDUnknownBlockType)arg1;
-- (void)removeObservers;
-- (void)addObservers;
-@property(nonatomic) _Bool ready; // @synthesize ready=_ready;
+- (id)registerCancellationTokenForObserverToken:(id)arg1;
+- (void)removeObserversForPlayer:(id)arg1;
 - (void)stopObserving;
-- (void)startObserving;
-- (void)addObserverForPeriodicInterval:(double)arg1 observer:(CDUnknownBlockType)arg2;
-- (void)addObserverForMediaPositions:(id)arg1 observer:(CDUnknownBlockType)arg2;
+- (void)removeObserver:(id)arg1;
+- (id)addObserverForPeriodicInterval:(double)arg1 observer:(CDUnknownBlockType)arg2;
+- (id)addObserverForMediaPositions:(id)arg1 observer:(CDUnknownBlockType)arg2;
 - (void)refreshPlayer:(id)arg1 playerSource:(id)arg2;
 - (void)dealloc;
 - (id)initWithPlayerSource:(id)arg1 kvoControllerFactory:(id)arg2;

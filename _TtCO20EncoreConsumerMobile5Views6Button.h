@@ -4,17 +4,21 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <swiftCore/_TtCs12_SwiftObject.h>
+#import <objc/NSObject.h>
+
+#import "_TtP20EncoreConsumerMobile10EncoreView_-Protocol.h"
 
 @class UIView;
 
-@interface _TtCO20EncoreConsumerMobile5Views6Button : _TtCs12_SwiftObject
+@interface _TtCO20EncoreConsumerMobile5Views6Button : NSObject <_TtP20EncoreConsumerMobile10EncoreView_>
 {
     // Error parsing type: , name: uiView
     // Error parsing type: , name: uiButton
     // Error parsing type: , name: tapAction
 }
 
+- (void).cxx_destruct;
+- (id)init;
 - (void)performAction;
 @property(nonatomic, readonly) UIView *uiView; // @synthesize uiView;
 

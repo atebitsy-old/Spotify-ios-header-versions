@@ -6,10 +6,15 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTShareData, SPTSharePresenter;
+@class NSString, SPTShareData, SPTSharePresenter;
 @protocol SPTShareDeeplinkHandler, SPTShareDestination;
 
 @protocol SPTShareHandler <NSObject>
+@property(readonly, nonatomic) NSString *utmContent;
+@property(readonly, nonatomic) NSString *utmTerm;
+@property(readonly, nonatomic) NSString *utmCampaign;
+@property(readonly, nonatomic) NSString *utmMedium;
+@property(readonly, copy, nonatomic) NSString *utmSource;
 - (void)shareWithData:(SPTShareData *)arg1 shareDestination:(id <SPTShareDestination>)arg2 sharePresenter:(SPTSharePresenter *)arg3 deeplinkHandler:(id <SPTShareDeeplinkHandler>)arg4 completion:(void (^)(SPTShareAlertModel *))arg5;
 @end
 

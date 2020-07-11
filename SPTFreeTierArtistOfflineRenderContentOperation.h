@@ -31,6 +31,7 @@
 - (id)createPlayer;
 - (void)createPlayButton:(id)arg1;
 - (void)createHeader:(id)arg1;
+- (void)createErrorMessage:(id)arg1;
 - (void)createOfflineArtistView:(id)arg1;
 - (void)fetchArtistData:(id)arg1 previousError:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

@@ -6,10 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@class NSURL;
-@protocol SPTFormatListPlatformManager, SPTFormatListPlatformRegistry, SPTFormatListPlatformRemoteControlPolicyFactory, SPTFormatListPlatformRemoteControlPolicyManager, SPTFormatListPlatformResolver, SPTFormatListPlatformTestManager;
+@class NSURL, UIViewController;
+@protocol SPTFormatListPlatformManager, SPTFormatListPlatformRegistry, SPTFormatListPlatformRemoteControlPolicyFactory, SPTFormatListPlatformRemoteControlPolicyManager, SPTFormatListPlatformResolver, SPTFormatListPlatformTestManager, SPTPageController, SPTPageCreationContext;
 
 @protocol SPTFormatListPlatformService <SPTService>
+- (UIViewController<SPTPageController> *)provideFormatListPlatformViewController:(NSURL *)arg1 context:(id <SPTPageCreationContext>)arg2;
 - (id <SPTFormatListPlatformManager>)providePlatformManagerForFormatListURL:(NSURL *)arg1;
 - (id <SPTFormatListPlatformResolver>)providePlatformResolver;
 - (id <SPTFormatListPlatformRemoteControlPolicyManager>)provideRemoteControlPolicyManager;

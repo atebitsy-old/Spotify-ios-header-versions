@@ -21,8 +21,16 @@
     long long _vocalRemovalFlagState;
     id <SPTFeatureFlagSignal> _syllableSyncFlagSignal;
     long long _syllableSyncFlagState;
+    id <SPTFeatureFlagSignal> _lyricsNPBLabelSignal;
+    long long _lyricsNPBLabelFlagState;
+    id <SPTFeatureFlagSignal> _lyricsContentLayerSignal;
+    long long _lyricsContentLayerFlagState;
 }
 
+@property(nonatomic) long long lyricsContentLayerFlagState; // @synthesize lyricsContentLayerFlagState=_lyricsContentLayerFlagState;
+@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsContentLayerSignal; // @synthesize lyricsContentLayerSignal=_lyricsContentLayerSignal;
+@property(nonatomic) long long lyricsNPBLabelFlagState; // @synthesize lyricsNPBLabelFlagState=_lyricsNPBLabelFlagState;
+@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsNPBLabelSignal; // @synthesize lyricsNPBLabelSignal=_lyricsNPBLabelSignal;
 @property(nonatomic) long long syllableSyncFlagState; // @synthesize syllableSyncFlagState=_syllableSyncFlagState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> syllableSyncFlagSignal; // @synthesize syllableSyncFlagSignal=_syllableSyncFlagSignal;
 @property(nonatomic) long long vocalRemovalFlagState; // @synthesize vocalRemovalFlagState=_vocalRemovalFlagState;
@@ -31,12 +39,16 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsV2FlagSignal; // @synthesize lyricsV2FlagSignal=_lyricsV2FlagSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
+- (_Bool)isContentLayerLyricsEnabled;
+- (_Bool)isNowPlayingBarLyricsLabelEnabled;
 - (_Bool)isSyllableSyncEnabled;
 - (_Bool)isVocalRemovalEnabled;
 - (_Bool)isFeatureEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupSyllableSyncFlags;
 - (void)setupVocalRemovalFlags;
+- (void)setupLyricsInNPVContentLayer;
+- (void)setupLyricsNowPlayingBarLabel;
 - (void)setupLyricsV2Flags;
 - (void)setupFlags;
 - (void)dealloc;

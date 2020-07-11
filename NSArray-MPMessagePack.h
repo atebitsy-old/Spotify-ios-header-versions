@@ -19,7 +19,7 @@
 - (id)bm_filter:(CDUnknownBlockType)arg1;
 - (id)bm_compactMap:(CDUnknownBlockType)arg1;
 - (id)bm_map:(CDUnknownBlockType)arg1;
-- (id)ins_reduce:(CDUnknownBlockType)arg1;
+- (id)ins_reduce:(id)arg1 block:(CDUnknownBlockType)arg2;
 - (id)ins_flattenMap:(CDUnknownBlockType)arg1;
 - (id)ins_arraysPartitionedWithCapacity:(unsigned long long)arg1;
 - (id)safeObjectAtIndex:(unsigned long long)arg1;

@@ -200,7 +200,7 @@
 - (id)providePlaybackActionsHandler;
 - (id)createDurationUnitViewModel;
 - (id)createInformationUnitViewModel;
-- (id)createInformationUnitViewModelWithPositiveFeedback:(_Bool)arg1 centerAlignText:(_Bool)arg2;
+- (id)createInformationUnitViewModelWithPositiveFeedback:(_Bool)arg1;
 - (id)provideNavigationBarModel;
 - (id)provideNowPlayingViewController:(id)arg1;
 - (void)unload;

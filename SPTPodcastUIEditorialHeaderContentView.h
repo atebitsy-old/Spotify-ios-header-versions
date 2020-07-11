@@ -8,12 +8,12 @@
 
 #import "VISREFHeaderComponent-Protocol.h"
 
-@class GLUELabel, NSLayoutConstraint, NSString, SPTEncoreLabel, SPTPodcastUIEditorialHeaderStyle, UIImage, UILayoutGuide, UIView, VISREFAlignedImageView, VISREFGradientView;
+@class GLUELabel, NSLayoutConstraint, NSString, SPTPodcastUIEditorialHeaderStyle, UIImage, UILabel, UILayoutGuide, UIView, VISREFAlignedImageView, VISREFGradientView;
 @protocol GLUETheme;
 
 @interface SPTPodcastUIEditorialHeaderContentView : SPTPodcastUIBaseHeaderContentView <VISREFHeaderComponent>
 {
-    SPTEncoreLabel *_titleLabel;
+    UILabel *_titleLabel;
     UIView *_actionRowView;
     id <GLUETheme> _theme;
     SPTPodcastUIEditorialHeaderStyle *_headerStyle;
@@ -21,16 +21,11 @@
     VISREFGradientView *_titleProtectionGradient;
     VISREFAlignedImageView *_alignedImageView;
     UILayoutGuide *_actionRowLayoutGuide;
-    NSLayoutConstraint *_imageWidthConstraint;
     NSLayoutConstraint *_noDescriptionActionRowTopConstraint;
     NSLayoutConstraint *_descriptionActionRowTopConstraint;
-    NSLayoutConstraint *_actionRowLeadingConstraint;
     NSLayoutConstraint *_descriptionHeightConstraint;
     NSLayoutConstraint *_actionRowHeightConstraint;
-    double _lastProgress;
     double _lastWidth;
-    CDUnknownBlockType _topicTappedAtIndexBlock;
-    NSLayoutConstraint *_imageAspectConstraint;
     VISREFGradientView *_statusBarProtectionGradient;
     CDStruct_5a28e70a _imageAlphaProgressRange;
     CDStruct_5a28e70a _statusBarProtectionProgressRange;
@@ -43,24 +38,19 @@
 @property(nonatomic) CDStruct_5a28e70a statusBarProtectionProgressRange; // @synthesize statusBarProtectionProgressRange=_statusBarProtectionProgressRange;
 @property(nonatomic) CDStruct_5a28e70a imageAlphaProgressRange; // @synthesize imageAlphaProgressRange=_imageAlphaProgressRange;
 @property(retain, nonatomic) VISREFGradientView *statusBarProtectionGradient; // @synthesize statusBarProtectionGradient=_statusBarProtectionGradient;
-@property(retain, nonatomic) NSLayoutConstraint *imageAspectConstraint; // @synthesize imageAspectConstraint=_imageAspectConstraint;
-@property(copy, nonatomic) CDUnknownBlockType topicTappedAtIndexBlock; // @synthesize topicTappedAtIndexBlock=_topicTappedAtIndexBlock;
 @property(nonatomic) double lastWidth; // @synthesize lastWidth=_lastWidth;
-@property(nonatomic) double lastProgress; // @synthesize lastProgress=_lastProgress;
 @property(retain, nonatomic) NSLayoutConstraint *actionRowHeightConstraint; // @synthesize actionRowHeightConstraint=_actionRowHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *descriptionHeightConstraint; // @synthesize descriptionHeightConstraint=_descriptionHeightConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *actionRowLeadingConstraint; // @synthesize actionRowLeadingConstraint=_actionRowLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *descriptionActionRowTopConstraint; // @synthesize descriptionActionRowTopConstraint=_descriptionActionRowTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *noDescriptionActionRowTopConstraint; // @synthesize noDescriptionActionRowTopConstraint=_noDescriptionActionRowTopConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *imageWidthConstraint; // @synthesize imageWidthConstraint=_imageWidthConstraint;
-@property(retain, nonatomic) UILayoutGuide *actionRowLayoutGuide; // @synthesize actionRowLayoutGuide=_actionRowLayoutGuide;
-@property(retain, nonatomic) VISREFAlignedImageView *alignedImageView; // @synthesize alignedImageView=_alignedImageView;
-@property(retain, nonatomic) VISREFGradientView *titleProtectionGradient; // @synthesize titleProtectionGradient=_titleProtectionGradient;
-@property(retain, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
+@property(readonly, nonatomic) UILayoutGuide *actionRowLayoutGuide; // @synthesize actionRowLayoutGuide=_actionRowLayoutGuide;
+@property(readonly, nonatomic) VISREFAlignedImageView *alignedImageView; // @synthesize alignedImageView=_alignedImageView;
+@property(readonly, nonatomic) VISREFGradientView *titleProtectionGradient; // @synthesize titleProtectionGradient=_titleProtectionGradient;
+@property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) SPTPodcastUIEditorialHeaderStyle *headerStyle; // @synthesize headerStyle=_headerStyle;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *actionRowView; // @synthesize actionRowView=_actionRowView;
-@property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void).cxx_destruct;
 - (void)setAssociatedColor:(id)arg1;
 - (void)updateDescriptionConstraint;
@@ -71,7 +61,6 @@
 - (void)headerViewDidRemountHeaderComponents:(id)arg1;
 - (double)normalizeProgress:(double)arg1 minValue:(double)arg2 maxValue:(double)arg3;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
-- (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (void)layoutSubviews;
 - (void)updateProgressPositions;
 - (void)setupActionRowHeight;

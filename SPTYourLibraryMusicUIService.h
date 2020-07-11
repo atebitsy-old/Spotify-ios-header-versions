@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTFreeTierCreatePlaylistService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUIPresentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP21PageLoaderViewFeature24SPTPageLoaderViewService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTFreeTierCreatePlaylistService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUIPresentationService, SPTUserBehaviourInstrumentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP21PageLoaderViewFeature24SPTPageLoaderViewService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTYourLibraryMusicUIService : SPTUIPageService
 {
@@ -17,6 +17,7 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPContextMenuFeature> _contextMenuService;
     id <SPTCoreService> _coreService;
+    id <SPTUserBehaviourInstrumentationService> _ubiService;
     id <SPTYourLibraryMusicService> _yourLibraryMusicService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTGLUEService> _glueService;
@@ -56,6 +57,7 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTYourLibraryMusicService> yourLibraryMusicService; // @synthesize yourLibraryMusicService=_yourLibraryMusicService;
+@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
@@ -66,8 +68,7 @@
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)registerImageLoaderRequestFactory;
-- (id)loggingFeatureIdentifier;
-- (id)provideLoggerWithLogContext:(id)arg1 suggestedPageURI:(id)arg2;
+- (id)provideLoggerWithPageURI:(id)arg1;
 - (id)provideCollectionTheme;
 - (id)provideViewLoggerForURI:(id)arg1;
 - (id)providePageLoaderSongsViewControllerForURI:(id)arg1 context:(id)arg2 testManager:(id)arg3;

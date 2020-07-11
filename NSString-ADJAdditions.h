@@ -75,7 +75,7 @@
 + (id)spt_collectionItemStateURI;
 + (id)spt_authorizationRequest;
 + (id)spt_pingURI;
-+ (id)spt_sharedKeychain;
++ (id)spt_sharedKeychainTopic;
 + (id)spt_sessionStateTopic;
 + (id)spt_recentlyPlayedItemsTopic;
 + (id)spt_playingContextTopic;

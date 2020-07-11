@@ -120,7 +120,7 @@
 - (void)initializeInterface;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 styleFactoryBlock:(CDUnknownBlockType)arg4 emptyView:(id)arg5 logContext:(id)arg6 viewLogger:(id)arg7 pageIdentifier:(id)arg8 pageURI:(id)arg9 sortingFilterUIFactory:(id)arg10 snackbarPresenter:(id)arg11 shareDragDelegateFactory:(id)arg12 quickScrollFactory:(id)arg13;
+- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 styleFactoryBlock:(CDUnknownBlockType)arg4 emptyView:(id)arg5 viewLogger:(id)arg6 pageIdentifier:(id)arg7 pageURI:(id)arg8 sortingFilterUIFactory:(id)arg9 snackbarPresenter:(id)arg10 shareDragDelegateFactory:(id)arg11 quickScrollFactory:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

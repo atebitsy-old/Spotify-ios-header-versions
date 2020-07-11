@@ -11,7 +11,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUELabel, NSArray, NSLayoutConstraint, NSString, SPTShareData, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareItemView, SPTShareLogger, UIButton, UITableView, UIView;
+@class GLUELabel, NSArray, NSLayoutConstraint, NSString, SPTShareData, SPTShareDestinationUtility, SPTShareItemView, SPTShareLogger, UIButton, UITableView, UIView;
 @protocol GLUETheme, SPTContextMenuPresenterFactory, SPTImageLoader, SPTShareViewControllerDelegate;
 
 @interface SPTShareViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTImageLoaderDelegate, SPTShareViewControllerProtocol>
@@ -34,14 +34,12 @@
     UIButton *_cancelButton;
     UITableView *_tableView;
     NSLayoutConstraint *_mainContainerViewBottomContraint;
-    SPTShareFeatureProperties *_featureProperties;
     SPTShareData *_shareData;
     NSArray *_shareDestinations;
 }
 
 @property(copy, nonatomic) NSArray *shareDestinations; // @synthesize shareDestinations=_shareDestinations;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
-@property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerViewBottomContraint; // @synthesize mainContainerViewBottomContraint=_mainContainerViewBottomContraint;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
@@ -87,7 +85,7 @@
 - (void)setupMainView;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithShareLogger:(id)arg1 shareData:(id)arg2 shareDestinations:(id)arg3 shareDestinationUtility:(id)arg4 contextMenuPresenterFactory:(id)arg5 imageLoader:(id)arg6 featureProperties:(id)arg7;
+- (id)initWithShareLogger:(id)arg1 shareData:(id)arg2 shareDestinations:(id)arg3 shareDestinationUtility:(id)arg4 contextMenuPresenterFactory:(id)arg5 imageLoader:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

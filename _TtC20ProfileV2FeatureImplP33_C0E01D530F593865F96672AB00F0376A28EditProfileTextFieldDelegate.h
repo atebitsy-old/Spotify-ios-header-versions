@@ -14,6 +14,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)textFieldShouldReturn:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 
 @end

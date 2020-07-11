@@ -14,6 +14,11 @@
 
 @interface SPTShareMessagesShareHandler : NSObject <MFMessageComposeViewControllerDelegate, SPTShareHandler>
 {
+    NSString *_utmSource;
+    NSString *_utmMedium;
+    NSString *_utmCampaign;
+    NSString *_utmContent;
+    NSString *_utmTerm;
     SPTShareLogger *_shareLogger;
     id <SPTShareDeeplinkHandler> _deeplinkHandler;
     SPTShareData *_shareData;
@@ -26,6 +31,11 @@
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
+@property(readonly, nonatomic) NSString *utmTerm; // @synthesize utmTerm=_utmTerm;
+@property(readonly, nonatomic) NSString *utmContent; // @synthesize utmContent=_utmContent;
+@property(readonly, nonatomic) NSString *utmCampaign; // @synthesize utmCampaign=_utmCampaign;
+@property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
+@property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
 - (void).cxx_destruct;
 - (void)messageComposeViewController:(id)arg1 didFinishWithResult:(long long)arg2;
 - (id)generateShareTextBodyFromShareData:(id)arg1;

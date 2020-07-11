@@ -56,6 +56,7 @@
 - (void)removeTrackAtIndexPath:(id)arg1;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)viewDidLoad;
+- (id)trackURLAtIndexPath:(id)arg1;
 - (id)trackViewModelAtIndexPath:(id)arg1;
 @property(readonly, nonatomic) _Bool editAnnotationEnabled;
 @property(readonly, nonatomic) _Bool reorderEnabled;

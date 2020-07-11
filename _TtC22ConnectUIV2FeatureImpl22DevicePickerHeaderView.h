@@ -12,7 +12,7 @@
     // Error parsing type: , name: $__lazy_storage_$_listeningOnView
     // Error parsing type: , name: $__lazy_storage_$_activeDeviceTouchArea
     // Error parsing type: , name: $__lazy_storage_$_closeButton
-    // Error parsing type: , name: $__lazy_storage_$_miniPickerNotchView
+    // Error parsing type: , name: $__lazy_storage_$_notchView
     // Error parsing type: , name: $__lazy_storage_$_separatorLabelContainerView
     // Error parsing type: , name: $__lazy_storage_$_separatorLabel
     // Error parsing type: , name: contentViewToSeparatorViewConstraint

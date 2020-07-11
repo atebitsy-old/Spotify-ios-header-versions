@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class GLUEEntityRowStyle, GLUETrackCloudStyle, SPTFreeTierPlaylistButtonSectionHeaderViewStyle, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistSponsoredLogoCellStyle;
+@class GLUEEntityRowStyle, GLUETrackCloudStyle, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistSponsoredLogoCellStyle;
 @protocol SPTFreeTierPlaylistViewModel;
 
 @interface SPTFreeTierPlaylistCellConfigurator : NSObject
@@ -32,11 +32,6 @@
 - (id)currentCloudStyleWithViewModel:(id)arg1;
 - (void)configureCloudCell:(id)arg1 withCloudViewModel:(id)arg2 andContainerWidth:(double)arg3;
 - (double)preferredCellHeightAtIndexPath:(id)arg1 andContainerWidth:(double)arg2;
-@property(readonly, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *sectionHeaderViewStyle;
-- (void)configureSectionHeader:(id)arg1 section:(unsigned long long)arg2;
-- (void)configureSectionFooter:(id)arg1 section:(unsigned long long)arg2;
-- (double)preferredFooterHeightForSection:(unsigned long long)arg1;
-- (double)preferredHeaderHeightForSection:(unsigned long long)arg1;
 - (id)initWithViewModel:(id)arg1 trackRowStyle:(id)arg2 sponsorshipStyle:(id)arg3 theme:(id)arg4;
 
 @end

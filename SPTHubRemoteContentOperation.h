@@ -34,6 +34,7 @@
 - (void).cxx_destruct;
 - (void)finishAfterPerformingOperation:(_Bool)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
+- (void)dataLoader:(id)arg1 requestIsWaitingForConnectivity:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

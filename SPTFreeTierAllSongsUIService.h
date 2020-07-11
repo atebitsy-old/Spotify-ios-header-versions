@@ -10,7 +10,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPNavigationController, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTFreeTierAllSongsRegistry, SPTFreeTierAllSongsService, SPTFreeTierPreCurationService, SPTFreeTierPresentationService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSelfPresentingViewController, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
+@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTFreeTierAllSongsRegistry, SPTFreeTierAllSongsService, SPTFreeTierPreCurationService, SPTFreeTierPresentationService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSelfPresentingViewController, SPTURIDispatchService, SPTUserBehaviourInstrumentationService, _TtP21PageLoaderViewFeature24SPTPageLoaderViewService_;
 
 @interface SPTFreeTierAllSongsUIService : NSObject <SPTService, SPTURISubtypeHandler>
 {
@@ -28,6 +28,7 @@
     id <SPTPodcastFeature> _podcastService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUserBehaviourInstrumentationService> _ubiService;
+    id <_TtP21PageLoaderViewFeature24SPTPageLoaderViewService_> _pageLoaderViewService;
     id <SPTFreeTierAllSongsRegistry> _registry;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPNavigationController<SPTSelfPresentingViewController> *_navigationController;
@@ -37,6 +38,7 @@
 @property(retain, nonatomic) SPNavigationController<SPTSelfPresentingViewController> *navigationController; // @synthesize navigationController=_navigationController;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) id <SPTFreeTierAllSongsRegistry> registry; // @synthesize registry=_registry;
+@property(nonatomic) __weak id <_TtP21PageLoaderViewFeature24SPTPageLoaderViewService_> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
@@ -56,8 +58,11 @@
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (void)unregisterLinkHandler;
 - (void)registerLinkHandler;
+- (id)provideAllSongsViewControllerWithPageLoaderForURI:(id)arg1;
 - (void)dismissAllSongsModal;
 - (void)provideAllSongsViewControllerForURI:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
+- (_Bool)pageLoaderEnabled;
+- (id)provideAllSongsViewControllerForURI:(id)arg1 dataSource:(id)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class HUBComponentRegistry, NSString, SPTDataLoaderFactory, SPTNetworkConnectivityController, SPTPersistentCache, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger, SPTPremiumDestinationNavigationItemDecorator;
+@class HUBComponentRegistry, NSString, SPTDataLoaderFactory, SPTNetworkConnectivityController, SPTPersistentCache, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger;
 @protocol SPTAlertInterface, SPTHubsRendererFactory, SPTHugsFactory, SPTPremiumDestinationExperiments, SPTPremiumDestinationHubComponentsFactory;
 
 @interface SPTPremiumDestinationHubManagerConfiguration : NSObject
@@ -21,14 +21,12 @@
     SPTNetworkConnectivityController *_networkConnectivityController;
     SPTDataLoaderFactory *_dataLoaderFactory;
     SPTPersistentCache *_persistentCache;
-    SPTPremiumDestinationNavigationItemDecorator *_navigationItemDecorator;
     id <SPTAlertInterface> _alertInterface;
     SPTPremiumDestinationLogger *_premiumDestinationLogger;
 }
 
 @property(readonly, nonatomic) SPTPremiumDestinationLogger *premiumDestinationLogger; // @synthesize premiumDestinationLogger=_premiumDestinationLogger;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-@property(retain, nonatomic) SPTPremiumDestinationNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
@@ -40,7 +38,7 @@
 @property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(copy, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
 - (void).cxx_destruct;
-- (id)initWithServiceIdentifier:(id)arg1 componentRegistry:(id)arg2 hubsRendererFactory:(id)arg3 hugsFactory:(id)arg4 premiumDestinationExperiments:(id)arg5 premiumDestinationHubComponentsFactory:(id)arg6 GLUETheme:(id)arg7 networkConnectivityController:(id)arg8 dataLoaderFactory:(id)arg9 persistentCache:(id)arg10 navigationItemDecorator:(id)arg11 alertInterface:(id)arg12 premiumDestinationLogger:(id)arg13;
+- (id)initWithServiceIdentifier:(id)arg1 componentRegistry:(id)arg2 hubsRendererFactory:(id)arg3 hugsFactory:(id)arg4 premiumDestinationExperiments:(id)arg5 premiumDestinationHubComponentsFactory:(id)arg6 GLUETheme:(id)arg7 networkConnectivityController:(id)arg8 dataLoaderFactory:(id)arg9 persistentCache:(id)arg10 alertInterface:(id)arg11 premiumDestinationLogger:(id)arg12;
 
 @end
 

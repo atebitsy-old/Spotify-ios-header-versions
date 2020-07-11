@@ -34,6 +34,7 @@
 @property(copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, nonatomic) NSURL *artistUri; // @synthesize artistUri=_artistUri;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool hasPlayableItems;
 @property(readonly, nonatomic) NSURL *collectionArtistUrl;
 @property(readonly, nonatomic) unsigned long long numberOfOfflineTracks;
 - (id)artistUrl;

@@ -13,8 +13,10 @@
 @interface SPTFreeTierAllSongsFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _freeAllSongsHeaderVoiceoverAccessibleEnabled;
+    _Bool _freeAllSongsPageLoaderEnabled;
 }
 
+@property(readonly, nonatomic) _Bool freeAllSongsPageLoaderEnabled; // @synthesize freeAllSongsPageLoaderEnabled=_freeAllSongsPageLoaderEnabled;
 @property(readonly, nonatomic) _Bool freeAllSongsHeaderVoiceoverAccessibleEnabled; // @synthesize freeAllSongsHeaderVoiceoverAccessibleEnabled=_freeAllSongsHeaderVoiceoverAccessibleEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

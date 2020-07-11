@@ -8,16 +8,18 @@
 
 #import "SPTUserBehaviourInstrumentationLogger-Protocol.h"
 
-@class NSString;
+@class NSString, SPTObserverManager;
 @protocol SPTEventSender;
 
 @interface SPTUserBehaviourInstrumentationLoggerImplementation : NSObject <SPTUserBehaviourInstrumentationLogger>
 {
     id <SPTEventSender> _eventSender;
+    SPTObserverManager *_observerManager;
     CDUnknownBlockType _errorHandler;
 }
 
 @property(copy, nonatomic) CDUnknownBlockType errorHandler; // @synthesize errorHandler=_errorHandler;
+@property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) __weak id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
 - (void)addPathToEvent:(id)arg1 fromComponents:(id)arg2;
@@ -28,7 +30,7 @@
 - (id)logImpression:(id)arg1;
 - (id)logNonAuthenticatedInteraction:(id)arg1;
 - (id)logInteraction:(id)arg1;
-- (id)initWithEventSender:(id)arg1;
+- (id)initWithEventSender:(id)arg1 observerManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

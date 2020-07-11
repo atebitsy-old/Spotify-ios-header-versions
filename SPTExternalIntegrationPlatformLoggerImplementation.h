@@ -18,7 +18,7 @@
 
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
-- (void)logExternalAccessorySessionID:(id)arg1 actionType:(id)arg2 userIntent:(id)arg3 uri:(id)arg4;
+- (void)logExternalAccessorySessionID:(id)arg1 actionType:(id)arg2 userIntent:(id)arg3 uri:(id)arg4 eventSourceIdentifier:(id)arg5;
 - (void)logSetPodcastPlaybackSpeed:(id)arg1 accessorySessionID:(id)arg2;
 - (void)logSearchWithQuery:(id)arg1 accessorySessionID:(id)arg2;
 - (void)logGetItemWithUri:(id)arg1 limit:(unsigned long long)arg2 accessorySessionID:(id)arg3;

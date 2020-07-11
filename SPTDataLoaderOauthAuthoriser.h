@@ -11,7 +11,7 @@
 #import "SPTOauthTaskDelegate-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSMutableArray, NSMutableDictionary, NSString, SPTNetworkConnectivityController, SPTOauthClient, SPTOauthTask;
+@class NSMutableArray, NSMutableDictionary, NSString, SPTNetworkConnectivityController, SPTOauthClient, SPTOauthTask, SPTStartupTracer;
 @protocol SPTDataLoaderAuthoriserDelegate, SPTProductState;
 
 @interface SPTDataLoaderOauthAuthoriser : NSObject <SPTProductStateObserver, SPTOauthTaskDelegate, SPTDataLoaderAuthoriser, SPTDataLoaderAuthorisationHostRegistration>
@@ -20,6 +20,7 @@
     id <SPTDataLoaderAuthoriserDelegate> _delegate;
     SPTOauthClient *_oauthClient;
     SPTNetworkConnectivityController *_networkConnectivityController;
+    SPTStartupTracer *_startupTracer;
     id <SPTProductState> _productState;
     NSMutableArray *_pendingRequests;
     NSMutableDictionary *_authorisationHosts;
@@ -30,6 +31,7 @@
 @property(retain, nonatomic) NSMutableDictionary *authorisationHosts; // @synthesize authorisationHosts=_authorisationHosts;
 @property(retain, nonatomic) NSMutableArray *pendingRequests; // @synthesize pendingRequests=_pendingRequests;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
+@property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate; // @synthesize delegate=_delegate;
@@ -52,7 +54,7 @@
 - (void)handleFailure:(id)arg1 forRequests:(id)arg2;
 - (void)injectAuthorisationHeadersIntoRequest:(id)arg1 withTokenType:(id)arg2 andAccessToken:(id)arg3;
 - (id)defaultHostsToAuthenticate;
-- (id)initWithOauthClient:(id)arg1 networkConnectivityController:(id)arg2 productState:(id)arg3;
+- (id)initWithOauthClient:(id)arg1 networkConnectivityController:(id)arg2 startupTracer:(id)arg3 productState:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

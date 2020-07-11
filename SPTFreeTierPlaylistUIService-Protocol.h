@@ -6,10 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@class NSString, NSURL, UIViewController;
-@protocol SPTPageController, SPTPageCreationContext;
+@protocol SPTFreeTierPlaylistHandlerRegistry;
 
 @protocol SPTFreeTierPlaylistUIService <SPTService>
-- (UIViewController<SPTPageController> *)providePlaylistViewControllerForURL:(NSURL *)arg1 withContext:(id <SPTPageCreationContext>)arg2 formatListType:(NSString *)arg3 configurationBlock:(void (^)(id <SPTFreeTierPlaylistConfigurationBuilder>))arg4;
+- (id <SPTFreeTierPlaylistHandlerRegistry>)provideHandlerRegistry;
 @end
 

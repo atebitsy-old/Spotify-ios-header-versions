@@ -9,7 +9,7 @@
 #import "SPTYourLibraryMusicService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPersonalizedBylineService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTYourLibraryMusicServiceImplementation : NSObject <SPTYourLibraryMusicService>
 {
@@ -30,11 +30,9 @@
     id <SPTSettingsFeature> _settingsService;
     id <SPTYourLibraryService> _yourLibraryService;
     id <SPTYourLibraryMusicTestManager> _testManager;
-    id <SPTPersonalizedBylineService> _byLineService;
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTPersonalizedBylineService> byLineService; // @synthesize byLineService=_byLineService;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTYourLibraryService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;

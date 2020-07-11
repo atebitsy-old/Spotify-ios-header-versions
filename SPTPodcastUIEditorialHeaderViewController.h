@@ -6,12 +6,12 @@
 
 #import "VISREFBaseHeaderController.h"
 
-#import "SPTPodcastUIEditorialHeaderController-Protocol.h"
+#import "VISREFHeaderController-Protocol.h"
 
 @class NSString, SPTPodcastUIEditorialHeaderContentView, VISREFGradientBackgroundView, VISREFHeaderView, VISREFNavigationBarForegroundView;
 @protocol GLUETheme, HUBComponentModel;
 
-@interface SPTPodcastUIEditorialHeaderViewController : VISREFBaseHeaderController <SPTPodcastUIEditorialHeaderController>
+@interface SPTPodcastUIEditorialHeaderViewController : VISREFBaseHeaderController <VISREFHeaderController>
 {
     double _headerHeight;
     double _navigationBarHeight;
@@ -43,7 +43,6 @@
 @property(readonly, nonatomic) double minimumHeight;
 - (id)extractNavigationBarGradientFromBackgroundGradient;
 - (void)updateProgressPositions;
-- (void)updateProgressPositionsIfNeeded;
 - (void)setupForegroundView;
 - (void)setupContentView;
 - (void)setup;

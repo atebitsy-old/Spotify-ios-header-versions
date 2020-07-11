@@ -437,6 +437,7 @@
 @property(readonly, nonatomic, getter=spt_isInternalPodcastEpisodeURL) _Bool isInternalPodcastEpisodeURL;
 @property(readonly, nonatomic, getter=spt_isPodcastEpisodeURL) _Bool isPodcastEpisodeURL;
 @property(readonly, nonatomic, getter=spt_isPodcastURL) _Bool isPodcastURL;
+@property(readonly, nonatomic, getter=spt_podcastMixControlsForPlaylist) NSURL *podcastMixControlsForPlaylist;
 - (_Bool)spt_isPremiumDestinationPreviewURL;
 @property(readonly, nonatomic, getter=spt_isProfileSocialRelationsURL) _Bool isProfileSocialRelationsURL;
 @property(readonly, nonatomic, getter=spt_isProfileViewAllURL) _Bool isProfileViewAllURL;

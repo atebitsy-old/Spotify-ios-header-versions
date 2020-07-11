@@ -10,6 +10,7 @@
 @protocol SPTNowPlayingTestManagerObserver;
 
 @protocol SPTNowPlayingTestManager <NSObject>
+@property(readonly, nonatomic, getter=isRemoteControlEventLoggingEnabled) _Bool remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
 @property(readonly, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration;
 @property(readonly, nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled;

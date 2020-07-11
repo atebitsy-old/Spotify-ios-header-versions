@@ -11,10 +11,12 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: loopController
     // Error parsing type: , name: makeViewBinder
+    // Error parsing type: , name: viewBinder
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)presentationControllerDidAttemptToDismiss:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)dealloc;
 - (void)viewWillAppear:(_Bool)arg1;

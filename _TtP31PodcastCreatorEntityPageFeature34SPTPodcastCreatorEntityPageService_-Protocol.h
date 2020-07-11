@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol _TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_;
+@protocol _TtP31PodcastCreatorEntityPageFeature32SPTPodcastCreatorEntityPageFlags_, _TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_;
 
 @protocol _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_ <SPTService>
+- (id <_TtP31PodcastCreatorEntityPageFeature32SPTPodcastCreatorEntityPageFlags_>)provideFlags;
 @property(nonatomic, readonly) id <_TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_> viewProvider;
 @end
 

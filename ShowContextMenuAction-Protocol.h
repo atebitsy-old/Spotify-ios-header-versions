@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTPodcastEntity, UIView;
+@class UIView;
+@protocol SPTEpisodeSegmentsEntity;
 
 @protocol ShowContextMenuAction <NSObject>
-- (void)presentForEntity:(SPTPodcastEntity *)arg1 sender:(UIView *)arg2 index:(long long)arg3;
+- (void)presentForEntity:(id <SPTEpisodeSegmentsEntity>)arg1 sender:(UIView *)arg2 index:(long long)arg3;
 @end
 

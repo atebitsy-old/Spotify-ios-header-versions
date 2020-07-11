@@ -15,6 +15,7 @@
 @protocol SPTFreeTierPlaylistCloudViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTrackViewModel, SPTFreeTierPlaylistViewModelDelegate;
 
 @protocol SPTFreeTierPlaylistViewModel <SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel>
+@property(readonly, nonatomic, getter=isPlaylistExtenderEnabled) _Bool playlistExtenderEnabled;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSponsoredViewModel> sponsoredViewModel;
 @property(readonly, nonatomic) _Bool contentSupportsRadio;
 @property(readonly, nonatomic) _Bool containsOnlyTracks;
@@ -37,9 +38,6 @@
 @property(readonly, copy, nonatomic) NSURL *playlistURL;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistViewModelDelegate> delegate;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (_Bool)isRecomendationsLoading;
-- (void)refreshRecommendations;
-- (void)addRecommendationAtIndex:(long long)arg1;
 - (void)deletePlaylist;
 - (void)load;
 - (_Bool)cellProviderSupportedForSection:(long long)arg1;
@@ -53,13 +51,6 @@
 - (id <SPTFreeTierPlaylistTrackViewModel>)trackViewModelAtIndexPath:(NSIndexPath *)arg1;
 - (void)loadMoreTracksIfApproachingEndOfLoadedTracks:(NSIndexPath *)arg1;
 - (_Bool)isApproachingEndIndexPath:(NSIndexPath *)arg1;
-- (NSString *)titleOfSectionFooter:(unsigned long long)arg1;
-- (NSString *)subTitleOfSectionHeader:(unsigned long long)arg1;
-- (NSString *)titleOfSectionHeader:(unsigned long long)arg1;
-- (_Bool)shouldDisplayFooterForSection:(unsigned long long)arg1;
-- (_Bool)shouldDisplayHeaderForSection:(unsigned long long)arg1;
-- (_Bool)hasMoreInSection:(unsigned long long)arg1;
-- (void)loadMoreInSection:(unsigned long long)arg1;
 - (unsigned long long)countOfItemsInSection:(unsigned long long)arg1;
 @end
 

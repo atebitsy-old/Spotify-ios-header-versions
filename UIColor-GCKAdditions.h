@@ -35,8 +35,10 @@
 + (id)encore_colorFromARGBHexString:(id)arg1;
 + (id)encore_colorFromRGBAHexString:(id)arg1;
 + (id)encore_colorFromRGBHexString:(id)arg1;
-+ (unsigned int)rgbValueFromHexString:(id)arg1;
-+ (id)glue_colorFromHexString:(id)arg1;
++ (id)glue_rgbValueFromHexString:(id)arg1;
++ (id)glue_colorFromHexString:(id)arg1 factory:(CDUnknownBlockType)arg2;
++ (id)glue_colorFromARGBHexString:(id)arg1;
++ (id)glue_colorFromRGBAHexString:(id)arg1;
 + (id)glue_colorFromHexString:(id)arg1 alpha:(double)arg2;
 + (id)spt_colorFromHexString:(id)arg1;
 + (id)spt_colorForSeed:(unsigned long long)arg1;

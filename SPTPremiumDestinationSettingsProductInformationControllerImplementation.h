@@ -15,11 +15,13 @@
     _Bool _upgradeAvailableButCantPurchase;
     _Bool _canActivatePremiumTrial;
     _Bool _hasCanActivatePremiumTrialValue;
+    _Bool _isPremiumOnlyMarket;
     long long _currentProduct;
     long long _availableProduct;
     NSDate *_currentProductExpieryDate;
 }
 
+@property(readonly, nonatomic) _Bool isPremiumOnlyMarket; // @synthesize isPremiumOnlyMarket=_isPremiumOnlyMarket;
 @property(readonly, nonatomic) _Bool hasCanActivatePremiumTrialValue; // @synthesize hasCanActivatePremiumTrialValue=_hasCanActivatePremiumTrialValue;
 @property(readonly, nonatomic) _Bool canActivatePremiumTrial; // @synthesize canActivatePremiumTrial=_canActivatePremiumTrial;
 @property(readonly, nonatomic) NSDate *currentProductExpieryDate; // @synthesize currentProductExpieryDate=_currentProductExpieryDate;

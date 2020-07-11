@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP20EncoreConsumerMobile10EncoreView_-Protocol.h"
-
 @class UIView;
 
-@interface SPTEncoreNavigationRow : NSObject <_TtP20EncoreConsumerMobile10EncoreView_>
+@interface SPTEncoreNavigationRow : NSObject
 {
     // Error parsing type: , name: component
 }

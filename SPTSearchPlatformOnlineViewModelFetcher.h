@@ -10,7 +10,7 @@
 #import "SPTSearchPlatformViewModelFetcher-Protocol.h"
 
 @class HUBViewModelBuilderFactory, NSString, SPTDataLoader, SPTDataLoaderFactory;
-@protocol SPTSearch2DateProviding, SPTSearch2EmptyStatePropertiesProvider, SPTSearch2URLProviding, SPTSearchPlatformResponseParser, SPTSearchUBILocationSerializer;
+@protocol SPTSearch2DateProviding, SPTSearch2EmptyStatePropertiesProvider, SPTSearch2URLProviding, SPTSearchErrorViewModelBuilder, SPTSearchPlatformResponseParser;
 
 @interface SPTSearchPlatformOnlineViewModelFetcher : NSObject <SPTDataLoaderDelegate, SPTSearchPlatformViewModelFetcher>
 {
@@ -22,10 +22,10 @@
     HUBViewModelBuilderFactory *_viewModelBuilderFactory;
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     id <SPTSearchPlatformResponseParser> _responseParser;
-    id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
+    id <SPTSearchErrorViewModelBuilder> _errorViewModelBuilder;
 }
 
-@property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
+@property(readonly, nonatomic) id <SPTSearchErrorViewModelBuilder> errorViewModelBuilder; // @synthesize errorViewModelBuilder=_errorViewModelBuilder;
 @property(readonly, nonatomic) id <SPTSearchPlatformResponseParser> responseParser; // @synthesize responseParser=_responseParser;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) HUBViewModelBuilderFactory *viewModelBuilderFactory; // @synthesize viewModelBuilderFactory=_viewModelBuilderFactory;
@@ -39,20 +39,16 @@
 - (id)nextPageFetcherForViewModel:(id)arg1;
 - (void)performCompletionUnlessCancelledForRequest:(id)arg1 withViewModel:(id)arg2;
 - (void)addViewModelTypeSuccessToViewModelBuilder:(id)arg1;
-- (void)addViewModelTypeErrorToViewModelBuilder:(id)arg1;
-- (void)addEmptyStateViewWithProperties:(id)arg1 toViewModelBuilder:(id)arg2;
-- (id)errorLoggingData;
-- (void)addErrorStateOverlayComponentToViewModelBuilder:(id)arg1;
-- (void)addOfflineStateOverlayComponentToViewModelBuilder:(id)arg1;
 - (id)urlByUpdatingQueryParametersInURL:(id)arg1;
 - (void)setCancellationToken:(id)arg1 forRequest:(id)arg2;
 - (id)cancellationTokenForRequest:(id)arg1;
 - (void)setCompletionBlock:(CDUnknownBlockType)arg1 forRequest:(id)arg2;
 - (CDUnknownBlockType)completionBlockForRequest:(id)arg1;
+- (id)viewModelForErrorType:(unsigned long long)arg1;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)fetchViewModelWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithURLProvider:(id)arg1 query:(id)arg2 dataLoaderFactory:(id)arg3 viewModelBuilderFactory:(id)arg4 emptyStatePropertiesProvider:(id)arg5 dateProvider:(id)arg6 responseParser:(id)arg7 ubiLocationSerializer:(id)arg8;
+- (id)initWithURLProvider:(id)arg1 query:(id)arg2 dataLoaderFactory:(id)arg3 viewModelBuilderFactory:(id)arg4 emptyStatePropertiesProvider:(id)arg5 dateProvider:(id)arg6 responseParser:(id)arg7 errorViewModelBuilder:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

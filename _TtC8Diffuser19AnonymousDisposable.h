@@ -9,6 +9,8 @@
 @interface _TtC8Diffuser19AnonymousDisposable : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: disposeFn
+    // Error parsing type: , name: isDisposed
+    // Error parsing type: , name: queue
 }
 
 @end

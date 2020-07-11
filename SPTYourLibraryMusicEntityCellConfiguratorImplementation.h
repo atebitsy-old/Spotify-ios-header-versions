@@ -8,7 +8,7 @@
 
 #import "SPTYourLibraryMusicEntityCellConfigurator-Protocol.h"
 
-@class NSString, SPTYourLibraryMusicCollapsableHeaderStyle, SPTYourLibraryMusicEntityRowStyle, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicOverlayImageViewStyle;
+@class GLUEEntityRowStyle, NSString, SPTYourLibraryMusicCollapsableHeaderStyle, SPTYourLibraryMusicEntityRowStyle, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicOverlayImageViewStyle;
 @protocol GLUEImageLoader, SPTYourLibraryMusicEntityCellConfiguratorDelegate;
 
 @interface SPTYourLibraryMusicEntityCellConfiguratorImplementation : NSObject <SPTYourLibraryMusicEntityCellConfigurator>
@@ -18,6 +18,7 @@
     SPTYourLibraryMusicEntityRowStyle *_style;
     SPTYourLibraryMusicEntityRowStyle *_iconOverlayItemstyle;
     SPTYourLibraryMusicOverlayImageViewStyle *_solidOverlayImageViewStyle;
+    GLUEEntityRowStyle *_trailingHeartEntityRowStyle;
     SPTYourLibraryMusicCollapsableHeaderStyle *_entitySectionHeaderStyle;
     SPTYourLibraryMusicGLUETheme *_theme;
     unsigned long long _trailingAccessoryType;
@@ -26,6 +27,7 @@
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType; // @synthesize trailingAccessoryType=_trailingAccessoryType;
 @property(readonly, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTYourLibraryMusicCollapsableHeaderStyle *entitySectionHeaderStyle; // @synthesize entitySectionHeaderStyle=_entitySectionHeaderStyle;
+@property(retain, nonatomic) GLUEEntityRowStyle *trailingHeartEntityRowStyle; // @synthesize trailingHeartEntityRowStyle=_trailingHeartEntityRowStyle;
 @property(retain, nonatomic) SPTYourLibraryMusicOverlayImageViewStyle *solidOverlayImageViewStyle; // @synthesize solidOverlayImageViewStyle=_solidOverlayImageViewStyle;
 @property(retain, nonatomic) SPTYourLibraryMusicEntityRowStyle *iconOverlayItemstyle; // @synthesize iconOverlayItemstyle=_iconOverlayItemstyle;
 @property(retain, nonatomic) SPTYourLibraryMusicEntityRowStyle *style; // @synthesize style=_style;

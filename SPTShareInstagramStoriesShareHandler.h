@@ -15,6 +15,11 @@
 @interface SPTShareInstagramStoriesShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
 {
     _Bool _isRequesting;
+    NSString *_utmSource;
+    NSString *_utmMedium;
+    NSString *_utmCampaign;
+    NSString *_utmContent;
+    NSString *_utmTerm;
     SPTDataLoader *_dataLoader;
     SPTShareLogger *_shareLogger;
     CDUnknownBlockType _shareCompletionBlock;
@@ -28,6 +33,11 @@
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(readonly, nonatomic) NSString *utmTerm; // @synthesize utmTerm=_utmTerm;
+@property(readonly, nonatomic) NSString *utmContent; // @synthesize utmContent=_utmContent;
+@property(readonly, nonatomic) NSString *utmCampaign; // @synthesize utmCampaign=_utmCampaign;
+@property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
+@property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
 - (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

@@ -41,8 +41,8 @@
 - (id)seeAllRowsFromEntityTypes:(id)arg1 requestID:(id)arg2;
 - (id)renderableEntitiesPredicate;
 - (id)componentModelIdentifierWithSectionID:(id)arg1 itemIndex:(id)arg2;
-- (_Bool)drillDownShouldUseCardsForEntityType:(int)arg1;
-- (id)drillDownTitleForQuery:(id)arg1 entityType:(int)arg2;
+- (_Bool)drilldownShouldUseCardsForEntityType:(int)arg1;
+- (id)drilldownTitleForQuery:(id)arg1 entityType:(int)arg2;
 - (int)entityTypeForEntity:(id)arg1;
 - (id)sectionIDForEntityType:(int)arg1;
 - (_Bool)nftExperienceWithUserTierProvider:(id)arg1;

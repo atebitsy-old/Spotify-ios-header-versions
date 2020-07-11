@@ -13,6 +13,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: settingsViewController
     // Error parsing type: , name: devices
+    // Error parsing type: , name: shouldRefreshAfterSync
     // Error parsing type: , name: selectedDeviceID
     // Error parsing type: , name: settingsSectionsFetchingCallback
 }

@@ -9,15 +9,15 @@
 #import "SPTPodcastEpisodeFeaturedContentService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPodcastEpisodeFeaturedContentContentOperationFactory;
-@protocol SPContextMenuFeature, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTOnDemandSet, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, SPTPodcastEpisodeFeaturedContentViewProvider, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
+@protocol SPContextMenuFeature, SPTGLUEService, SPTHubFrameworkService, SPTOnDemandService, SPTOnDemandSet, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager, SPTPodcastEpisodeFeaturedContentViewProvider, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService, SPTUserBehaviourInstrumentationService, _TtP29EpisodeSegmentsFetcherFeature32SPTEpisodeSegmentsFetcherService_;
 
 @interface SPTPodcastEpisodeFeaturedContentServiceImplementation : SPTUIPageService <SPTPodcastEpisodeFeaturedContentService>
 {
     id <SPTSessionService> _clientSessionService;
     id <SPContextMenuFeature> _contextMenuService;
+    id <_TtP29EpisodeSegmentsFetcherFeature32SPTEpisodeSegmentsFetcherService_> _episodeSegmentsFetcherService;
     id <SPTHubFrameworkService> _hubFrameworkService;
     id <SPTGLUEService> _glueService;
-    id <SPTNetworkService> _networkService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTPlayerFeature> _playerService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
@@ -39,9 +39,9 @@
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
-@property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
+@property(nonatomic) __weak id <_TtP29EpisodeSegmentsFetcherFeature32SPTEpisodeSegmentsFetcherService_> episodeSegmentsFetcherService; // @synthesize episodeSegmentsFetcherService=_episodeSegmentsFetcherService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (void).cxx_destruct;

@@ -50,6 +50,7 @@
 - (void)updateWithPodcast:(id)arg1;
 - (unsigned long long)numberOfRows;
 - (long long)identifier;
+- (void)contextMenuTapped;
 - (void)didTouchUpInside;
 - (void)configureWithTrailerEpisode:(id)arg1;
 - (id)initWithExplicitContentAccessManager:(id)arg1 logger:(id)arg2;

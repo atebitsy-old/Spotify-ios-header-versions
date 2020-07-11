@@ -6,9 +6,11 @@
 
 #import "_TtC22ConnectUIV2FeatureImpl37DevicePickerContextMenuViewController.h"
 
+#import "SPTPageController-Protocol.h"
+
 @class NSString, NSURL;
 
-@interface _TtC22ConnectUIV2FeatureImpl37DevicePickerContextMenuViewController (ConnectUIV2FeatureImpl)
+@interface _TtC22ConnectUIV2FeatureImpl37DevicePickerContextMenuViewController (ConnectUIV2FeatureImpl) <SPTPageController>
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;
 

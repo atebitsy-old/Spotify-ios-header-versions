@@ -18,6 +18,7 @@
     // Error parsing type: , name: playViewModel
     // Error parsing type: , name: followViewModel
     // Error parsing type: , name: defaultHeaderViewModel
+    // Error parsing type: , name: fullbleedHeaderViewModel
     // Error parsing type: , name: userDefaultsController
 }
 

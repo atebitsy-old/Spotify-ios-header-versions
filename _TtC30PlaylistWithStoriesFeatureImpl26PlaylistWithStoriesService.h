@@ -14,7 +14,6 @@
     // Error parsing type: , name: playlistUIService
     // Error parsing type: , name: uiPresentationService
     // Error parsing type: , name: abbaService
-    // Error parsing type: , name: formatListPlatformService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: collectionPlatformService
     // Error parsing type: , name: networkService
@@ -22,15 +21,13 @@
     // Error parsing type: , name: videoService
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: settingsService
-    // Error parsing type: , name: cosmosDataLoaderService
-    // Error parsing type: , name: cosmosService
     // Error parsing type: , name: uriDispatchService
     // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: visualRefreshIntegrationService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: $__lazy_storage_$_localSettings
     // Error parsing type: , name: $__lazy_storage_$_userDefaultsController
-    // Error parsing type: , name: formatListPlatformRegistrationToken
+    // Error parsing type: , name: playlistHandlerRegistrationToken
     // Error parsing type: , name: testManager
 }
 

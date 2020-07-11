@@ -6,7 +6,7 @@
 
 #import "SPTPodcastSectionTableViewCell.h"
 
-@class SPTPodcastTrailerSectionContentView, SPTTheme;
+@class GLUEContextMenuAccessoryButton, SPTPodcastTrailerSectionContentView, SPTTheme;
 @protocol GLUEImageLoader;
 
 @interface SPTPodcastTrailerSectionTableViewCell : SPTPodcastSectionTableViewCell
@@ -23,6 +23,7 @@
 - (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)configureLayout;
 - (void)configureAppearance;
+@property(readonly, nonatomic) GLUEContextMenuAccessoryButton *contextMenuButton;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

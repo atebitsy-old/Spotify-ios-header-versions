@@ -27,6 +27,9 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction; // @synthesize additionalCallToAction=_additionalCallToAction;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> emptyCallToAction; // @synthesize emptyCallToAction=_emptyCallToAction;
 - (void).cxx_destruct;
+- (void)willDisplaySection;
+- (id)sectionFooter;
+- (id)sectionHeader;
 - (unsigned long long)section;
 - (unsigned long long)numberOfRows;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;

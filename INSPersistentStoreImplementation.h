@@ -17,22 +17,19 @@
     id <INSLogger> _logger;
 }
 
-+ (_Bool)automaticallyNotifiesObserversOfCount;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) INSPersistentStoreStack *stack; // @synthesize stack=_stack;
 - (void).cxx_destruct;
 - (unsigned long long)countInContext:(id)arg1 predicate:(id)arg2;
 - (id)installIdWithContext:(id)arg1 predicate:(id)arg2;
-- (id)sequenceNumbersWithContext:(id)arg1 predicate:(id)arg2;
-- (id)messagesWithContext:(id)arg1 predicate:(id)arg2;
-- (id)fetchMessageEntityWithContext:(id)arg1 messageId:(id)arg2;
+- (id)sequenceNumbersMatchingPredicate:(id)arg1 limit:(unsigned long long)arg2 context:(id)arg3;
+- (id)messagesMatchingPredicate:(id)arg1 sortDescriptor:(id)arg2 limit:(unsigned long long)arg3 context:(id)arg4;
 - (id)fetchInstallIdEntityWithContext:(id)arg1;
-- (id)fetchSequenceNumberEntityWithContext:(id)arg1 eventName:(id)arg2;
-- (void)fetchOrCreateEntityWithId:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)sequenceNumberWithEventName:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)fetchAllSequenceNumberEntities;
+- (id)fetchFirstMessageEntitiesWithNames:(id)arg1;
+- (void)eventSenderStatsNodesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)installIdWithCompletion:(CDUnknownBlockType)arg1;
 - (void)persistEventEnvelope:(id)arg1 authenticated:(_Bool)arg2 withCompletion:(CDUnknownBlockType)arg3;
-- (void)messagesMatchingPredicate:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)messagesWithAuthenticatedStatus:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)allMessagesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)containMessageForId:(id)arg1 completion:(CDUnknownBlockType)arg2;

@@ -9,12 +9,13 @@
 #import "SPTDrivingModeHomeFeedPageScrollerDelegate-Protocol.h"
 #import "SPTDrivingModeHomeFeedShelfViewControllerDelegate-Protocol.h"
 #import "SPTDrivingModeHomeFeedViewModelDelegate-Protocol.h"
+#import "SPTPageController-Protocol.h"
 #import "SPTSelfPresentingViewController-Protocol.h"
 
-@class NSString, SPTDrivingModeHomeFeedPageScroller, SPTDrivingModeHomeFeedTitleView, SPTDrivingModeHomeFeedViewModel, SPTDrivingModeLogger, SPTTheme, UIImpactFeedbackGenerator;
-@protocol GLUEImageLoader, SPTModalPresentationController, SPTNowPlayingDurationUnitViewModel;
+@class NSString, NSURL, SPTDrivingModeHomeFeedPageScroller, SPTDrivingModeHomeFeedTitleView, SPTDrivingModeHomeFeedViewModel, SPTDrivingModeLogger, SPTTheme, UIImpactFeedbackGenerator;
+@protocol GLUEImageLoader, SPTModalPresentationController, SPTNowPlayingDurationUnitViewModel, SPTPageContainer;
 
-@interface SPTDrivingModeHomeFeedViewController : UIViewController <SPTDrivingModeHomeFeedViewModelDelegate, SPTDrivingModeHomeFeedPageScrollerDelegate, SPTDrivingModeHomeFeedShelfViewControllerDelegate, SPTSelfPresentingViewController>
+@interface SPTDrivingModeHomeFeedViewController : UIViewController <SPTDrivingModeHomeFeedViewModelDelegate, SPTDrivingModeHomeFeedPageScrollerDelegate, SPTDrivingModeHomeFeedShelfViewControllerDelegate, SPTPageController, SPTSelfPresentingViewController>
 {
     SPTDrivingModeHomeFeedViewModel *_viewModel;
     id <SPTNowPlayingDurationUnitViewModel> _durationViewModel;
@@ -39,6 +40,8 @@
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 @property(readonly, nonatomic) SPTDrivingModeHomeFeedViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
+@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)scrollViewHapticUpdate:(long long)arg1;
 - (void)updateShelfTitleForPageIndex:(int)arg1;
 - (void)loadShelfWithIndex:(int)arg1;
@@ -63,6 +66,7 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
 
 @end

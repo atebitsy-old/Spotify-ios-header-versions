@@ -34,20 +34,19 @@
     id <SPTPodcastPlayer> _player;
     id <SPTPodcastTestManager> _testManager;
     id <SPTPodcastUITestManager> _uiTestManager;
-    SPTPodcastSortingService *_sortingService;
     id <SPTPodcastLogger> _logger;
-    id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    SPTPodcastFeatureProperties *_featureProperties;
+    SPTPodcastSortingService *_sortingService;
+    id <SPTCollectionPlatform> _collectionPlatform;
     unsigned long long _sortColumn;
     NSSortDescriptor *_sortDescriptor;
     NSString *_filter;
     NSString *_filterOnLastUpdate;
     NSPredicate *_filterPredicate;
     id <SPTPodcastDataLoaderRequestToken> _podcastRequestToken;
-    SPTPodcastFeatureProperties *_featureProperties;
 }
 
-@property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> podcastRequestToken; // @synthesize podcastRequestToken=_podcastRequestToken;
 @property(nonatomic, getter=isInitialLoadComplete) _Bool initialLoadComplete; // @synthesize initialLoadComplete=_initialLoadComplete;
 @property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
@@ -56,14 +55,15 @@
 @property(retain, nonatomic) NSSortDescriptor *sortDescriptor; // @synthesize sortDescriptor=_sortDescriptor;
 @property(nonatomic) _Bool ascendingSortOrder; // @synthesize ascendingSortOrder=_ascendingSortOrder;
 @property(nonatomic) unsigned long long sortColumn; // @synthesize sortColumn=_sortColumn;
+@property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
+@property(readonly, nonatomic) __weak SPTPodcastSortingService *sortingService; // @synthesize sortingService=_sortingService;
+@property(readonly, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
-@property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-@property(retain, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
-@property(nonatomic) __weak SPTPodcastSortingService *sortingService; // @synthesize sortingService=_sortingService;
-@property(retain, nonatomic) id <SPTPodcastUITestManager> uiTestManager; // @synthesize uiTestManager=_uiTestManager;
-@property(retain, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
-@property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
-@property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(readonly, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTPodcastUITestManager> uiTestManager; // @synthesize uiTestManager=_uiTestManager;
+@property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
+@property(readonly, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
 @property(retain) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
 @property(copy, nonatomic) NSString *appliedFilterText; // @synthesize appliedFilterText=_appliedFilterText;

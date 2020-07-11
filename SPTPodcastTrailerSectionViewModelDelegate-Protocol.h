@@ -10,6 +10,7 @@
 @protocol SPTPodcastEpisode;
 
 @protocol SPTPodcastTrailerSectionViewModelDelegate <NSObject>
+- (void)trailerSectionViewModel:(SPTPodcastTrailerSectionViewModel *)arg1 didTapContextMenuforTrailerEpisode:(id <SPTPodcastEpisode>)arg2;
 - (void)trailerSectionViewModel:(SPTPodcastTrailerSectionViewModel *)arg1 didPressPlayTrailerEpisode:(id <SPTPodcastEpisode>)arg2;
 @end
 

@@ -7,10 +7,12 @@
 #import "SPTBarInteractiveTransitionParticipant-Protocol.h"
 
 @class SPBarViewController, UIScrollView;
+@protocol SPTNowPlayingScrollViewControllerGestureDelegate;
 
 @protocol SPTBarOverlayViewController <SPTBarInteractiveTransitionParticipant>
 
 @optional
+- (void)setGestureDelegate:(id <SPTNowPlayingScrollViewControllerGestureDelegate>)arg1;
 - (UIScrollView *)scrollViewForBarTransition;
 - (void)overlayWillDismissInteractively;
 - (void)overlayWillPresentInteractively;

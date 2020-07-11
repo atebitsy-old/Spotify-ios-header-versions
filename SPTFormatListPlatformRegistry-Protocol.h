@@ -6,16 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTFormatListPlatformPlaylistRegistration, SPTFormatListPlatformRegistration;
+@class NSDictionary, NSString, NSURL, UIViewController;
+@protocol SPTFormatListPlatformRegistration, SPTPageController, SPTPageCreationContext;
 
 @protocol SPTFormatListPlatformRegistry <NSObject>
+- (UIViewController<SPTPageController> *)viewControllerForURL:(NSURL *)arg1 formatListType:(NSString *)arg2 formatListAttributes:(NSDictionary *)arg3 context:(id <SPTPageCreationContext>)arg4;
 - (void)unregisterFallbackHandler;
 - (void)unregisterHandlers;
 - (void)unregisterFallbackHandler:(id <SPTFormatListPlatformRegistration>)arg1;
-- (void)unregisterPlaylistHandler:(id <SPTFormatListPlatformPlaylistRegistration>)arg1;
 - (void)unregisterHandler:(id <SPTFormatListPlatformRegistration>)arg1;
-- (id <SPTFormatListPlatformRegistration>)registerFallbackHandler:(UIViewController<SPTPageController> * (^)(NSURL *, NSString *, id <SPTPageCreationContext>))arg1;
-- (id <SPTFormatListPlatformPlaylistRegistration>)registerPlaylistHandler:(UIViewController<SPTPageController> * (^)(NSURL *, id <SPTPageCreationContext>))arg1 predicate:(_Bool (^)(NSURL *))arg2;
-- (id <SPTFormatListPlatformRegistration>)registerHandler:(UIViewController<SPTPageController> * (^)(NSURL *, NSString *, id <SPTPageCreationContext>))arg1 predicate:(_Bool (^)(NSString *, NSDictionary *, NSURL *))arg2;
+- (id <SPTFormatListPlatformRegistration>)registerFallbackHandler:(UIViewController<SPTPageController> * (^)(NSURL *, NSString *, NSDictionary *, id <SPTPageCreationContext>))arg1;
+- (id <SPTFormatListPlatformRegistration>)registerHandler:(UIViewController<SPTPageController> * (^)(NSURL *, NSString *, NSDictionary *, id <SPTPageCreationContext>))arg1 predicate:(_Bool (^)(NSString *, NSDictionary *, NSURL *))arg2;
 @end
 

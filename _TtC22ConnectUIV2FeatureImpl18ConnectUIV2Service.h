@@ -18,6 +18,7 @@
     // Error parsing type: , name: uriService
     // Error parsing type: , name: playerService
     // Error parsing type: , name: coreService
+    // Error parsing type: , name: ubiService
     // Error parsing type: , name: $__lazy_storage_$_gaiaDevicePresenterProxy
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenter
     // Error parsing type: , name: $__lazy_storage_$_player

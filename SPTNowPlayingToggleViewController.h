@@ -11,12 +11,11 @@
 #import "SPTNowPlayingModelObserver-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
-#import "SPTSnapshotBackgroundViewController-Protocol.h"
 
-@class NSString, NSURL, SPTNavigationManager, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTPlayerState, SPTStatusBarToken, SPTTheme, UIView;
+@class NSString, NSURL, SPTNavigationManager, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTPlayerState, SPTStatusBarToken, SPTTheme;
 @protocol SPTNowPlayingContentContainingViewController, SPTPageContainer, SPTPlayer, SPTQueueEnabling, SPTQueueLogger;
 
-@interface SPTNowPlayingToggleViewController : UIViewController <SPTNowPlayingModelObserver, SPTNowPlayingModelDelegate, SPTSnapshotBackgroundViewController, SPTPlayerObserver, SPTBarOverlayViewController, SPTPageController>
+@interface SPTNowPlayingToggleViewController : UIViewController <SPTNowPlayingModelObserver, SPTNowPlayingModelDelegate, SPTPlayerObserver, SPTBarOverlayViewController, SPTPageController>
 {
     _Bool _wasPlayingAd;
     _Bool _overlayHidden;
@@ -28,8 +27,6 @@
     SPTTheme *_theme;
     SPTNavigationManager *_navigationManager;
     SPTNowPlayingScrollViewController *_scrollViewController;
-    UIView *_snapshotView;
-    UIView *_overlayView;
     UIViewController<SPTNowPlayingContentContainingViewController> *_playerViewController;
     UIViewController<SPTQueueEnabling> *_queueViewController;
     id <SPTPlayer> _player;
@@ -46,8 +43,6 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) UIViewController<SPTQueueEnabling> *queueViewController; // @synthesize queueViewController=_queueViewController;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContentContainingViewController> *playerViewController; // @synthesize playerViewController=_playerViewController;
-@property(retain, nonatomic) UIView *overlayView; // @synthesize overlayView=_overlayView;
-@property(retain, nonatomic) UIView *snapshotView; // @synthesize snapshotView=_snapshotView;
 @property(retain, nonatomic) SPTNowPlayingScrollViewController *scrollViewController; // @synthesize scrollViewController=_scrollViewController;
 @property(readonly, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -60,12 +55,10 @@
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)updateLayout;
-- (double)backgroundOverlayAlphaForCurrentVerticalPosition:(double)arg1;
-- (id)colorForBackgroundOverlay;
-- (void)addBackgroundSnapshotView:(id)arg1;
 - (_Bool)prefersHomeIndicatorAutoHidden;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
+- (void)setGestureDelegate:(id)arg1;
 - (id)scrollViewForBarTransition;
 - (_Bool)barViewControllerInteractiveTransitionEnabled:(id)arg1;
 - (void)overlayWillDismissInteractively;

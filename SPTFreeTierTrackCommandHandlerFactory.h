@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTEntitySeeAllSongsService, SPTHubCommandHandlerFactory, SPTHubsRendererFactory, SPTLinkDispatcher, SPTPlayerFeature;
+@protocol SPTEntitySeeAllSongsService, SPTHubCommandHandlerFactory, SPTHubsRendererFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTFreeTierTrackCommandHandlerFactory : NSObject
 {
@@ -15,8 +15,10 @@
     id <SPTHubsRendererFactory> _hubsRendererFactory;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTEntitySeeAllSongsService> _entitySeeAllSongsService;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
 }
 
+@property(readonly, nonatomic) __weak id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) __weak id <SPTEntitySeeAllSongsService> entitySeeAllSongsService; // @synthesize entitySeeAllSongsService=_entitySeeAllSongsService;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) __weak id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
@@ -25,7 +27,7 @@
 - (void).cxx_destruct;
 - (id)createLoggerForViewURI:(id)arg1;
 - (id)createCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3;
-- (id)initWithDefaultCommandHandlerFactory:(id)arg1 playerService:(id)arg2 hubsRendererFactory:(id)arg3 linkDispatcher:(id)arg4 allSongsService:(id)arg5;
+- (id)initWithDefaultCommandHandlerFactory:(id)arg1 playerService:(id)arg2 hubsRendererFactory:(id)arg3 linkDispatcher:(id)arg4 allSongsService:(id)arg5 ubiLogger:(id)arg6;
 
 @end
 

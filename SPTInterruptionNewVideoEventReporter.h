@@ -9,7 +9,7 @@
 #import "BMEventObserver-Protocol.h"
 
 @class NSString;
-@protocol BMPlaybackIdentity, BMPlaybackTimeObservable, OS_dispatch_queue, SPTAdsBaseCosmosBridge;
+@protocol BMPlaybackIdentity, BMPlaybackTimeObservable, BMPlaybackTimeObserverCancellationToken, OS_dispatch_queue, SPTAdsBaseCosmosBridge;
 
 @interface SPTInterruptionNewVideoEventReporter : NSObject <BMEventObserver>
 {
@@ -17,6 +17,7 @@
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
     id <BMPlaybackIdentity> _currentIdentity;
     id <BMPlaybackTimeObservable> _timeObservable;
+    id <BMPlaybackTimeObserverCancellationToken> _cancellationToken;
     double _trackDuration;
     unsigned long long _quartilesPlayed;
 }
@@ -25,6 +26,7 @@
 @property(nonatomic) _Bool started; // @synthesize started=_started;
 @property(nonatomic) unsigned long long quartilesPlayed; // @synthesize quartilesPlayed=_quartilesPlayed;
 @property(nonatomic) double trackDuration; // @synthesize trackDuration=_trackDuration;
+@property(retain, nonatomic) id <BMPlaybackTimeObserverCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(nonatomic) __weak id <BMPlaybackTimeObservable> timeObservable; // @synthesize timeObservable=_timeObservable;
 @property(retain, nonatomic) id <BMPlaybackIdentity> currentIdentity; // @synthesize currentIdentity=_currentIdentity;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;

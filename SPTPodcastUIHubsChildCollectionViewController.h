@@ -11,12 +11,14 @@
 
 @interface SPTPodcastUIHubsChildCollectionViewController : UICollectionViewController
 {
+    _Bool _shouldInsetChildrenWithinReadableContentGuide;
     HUBComponentView<HUBComponentViewWithChildren><HUBComponentViewWithEvents> *_parentComponentView;
     id <HUBComponentModel> _model;
 }
 
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak HUBComponentView<HUBComponentViewWithChildren><HUBComponentViewWithEvents> *parentComponentView; // @synthesize parentComponentView=_parentComponentView;
+@property(nonatomic) _Bool shouldInsetChildrenWithinReadableContentGuide; // @synthesize shouldInsetChildrenWithinReadableContentGuide=_shouldInsetChildrenWithinReadableContentGuide;
 - (void).cxx_destruct;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (struct UIEdgeInsets)collectionView:(id)arg1 layout:(id)arg2 insetForSectionAtIndex:(long long)arg3;
@@ -28,6 +30,7 @@
 - (id)childDelegate;
 - (id)eventHandler;
 - (id)viewForChildAtIndex:(unsigned long long)arg1;
+- (void)invalidateLayout;
 - (void)configureWithModel:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithParentComponentView:(id)arg1;

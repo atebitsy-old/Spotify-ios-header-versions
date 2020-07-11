@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTPodcastEntity;
+@protocol SPTEpisodeSegmentsEntity;
 
 @protocol SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate <NSObject>
-- (void)playerDidStopPlayingEntity:(SPTPodcastEntity *)arg1;
-- (void)playerDidUpdateWithEntityPlaying:(SPTPodcastEntity *)arg1;
+- (void)playerDidStopPlayingEntity:(id <SPTEpisodeSegmentsEntity>)arg1;
+- (void)playerDidUpdateWithEntityPlaying:(id <SPTEpisodeSegmentsEntity>)arg1;
 @end
 

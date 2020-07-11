@@ -6,8 +6,8 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
-@protocol HUBImageLoaderFactory, SPTHubCommandHandlerFactory, SPTHubContentOperationFactory, SPTHubImageLoadingLogger, SPTHubLoggerFactory, SPTShareDragDelegateFactory;
+@class NSString, SPTHubViewModelProvider;
+@protocol HUBImageLoaderFactory, SPTHubCommandHandlerFactory, SPTHubContentOperationFactory, SPTHubImageLoadingLogger, SPTHubLoggerFactory, SPTPageLoadable, SPTShareDragDelegateFactory;
 
 @protocol SPTHubsRendererFactory <NSObject>
 - (id <SPTHubCommandHandlerFactory>)createCommandHandlerFactoryWithFeatureIdentifier:(NSString *)arg1 contextMenuLogContext:(NSString *)arg2;
@@ -17,5 +17,6 @@
 - (id <SPTHubContentOperationFactory>)provideContentOperationFactory;
 - (id <HUBImageLoaderFactory>)createImageLoaderFactoryWithLogger:(id <SPTHubImageLoadingLogger>)arg1;
 - (id <HUBImageLoaderFactory>)provideImageLoaderFactory;
+- (id <SPTPageLoadable>)createPageLoadableWithViewModelProvider:(SPTHubViewModelProvider *)arg1;
 @end
 

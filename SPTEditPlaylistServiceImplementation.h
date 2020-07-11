@@ -9,7 +9,7 @@
 #import "SPTEditPlaylistService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPerformanceMetricsService, SPTUIPresentationService;
+@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPerformanceMetricsService, SPTUIPresentationService, SPTUserBehaviourInstrumentationService;
 
 @interface SPTEditPlaylistServiceImplementation : NSObject <SPTEditPlaylistService>
 {
@@ -19,9 +19,11 @@
     id <SPTGLUEService> _glueService;
     id <SPTFreeTierPlaylistService> _freeTierPlaylistService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
+    id <SPTUserBehaviourInstrumentationService> _ubiService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistService> freeTierPlaylistService; // @synthesize freeTierPlaylistService=_freeTierPlaylistService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
@@ -29,7 +31,7 @@
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
-- (id)provideLoggerForURI:(id)arg1;
+- (id)provideLoggerForURI:(id)arg1 pageIdentifier:(id)arg2;
 - (id)providePlaylistEditViewControllerForURL:(id)arg1;
 - (void)registerEditPlaylistAction;
 - (void)load;

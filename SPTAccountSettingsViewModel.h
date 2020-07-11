@@ -50,6 +50,7 @@
 - (id)userNameCellDetailText;
 - (_Bool)hasDaysLeftCell;
 - (_Bool)hasPremiumInfoCells;
+- (_Bool)hasSubscriptionCell;
 - (void)showInterstitialView;
 - (double)heightForRow:(long long)arg1 originalHeight:(double)arg2;
 - (void)didSelectRow:(long long)arg1;

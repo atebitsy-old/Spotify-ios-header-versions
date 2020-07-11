@@ -25,6 +25,7 @@
 - (id)createLoadingLoggerWithPageIdentifier:(id)arg1 pageURI:(id)arg2;
 - (id)createInteractionLoggerWithFeatureIdentifier:(id)arg1 pageURI:(id)arg2;
 - (id)createImpressionLoggerWithFeatureIdentifier:(id)arg1 pageURI:(id)arg2 componentModelURIResolver:(id)arg3;
+- (id)createLoggerWithFeatureIdentifier:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentModelURIResolver:(id)arg4 viewLogger:(id)arg5;
 - (id)createLoggerWithFeatureIdentifier:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentModelURIResolver:(id)arg4;
 - (id)initWithLogCenter:(id)arg1 viewLoggerFactory:(id)arg2 userBehaviourInstrumentation:(id)arg3;
 

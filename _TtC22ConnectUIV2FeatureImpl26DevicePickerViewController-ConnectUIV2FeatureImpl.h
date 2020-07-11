@@ -6,11 +6,9 @@
 
 #import "_TtC22ConnectUIV2FeatureImpl26DevicePickerViewController.h"
 
-#import "SPTPageController-Protocol.h"
-
 @class NSString, NSURL;
 
-@interface _TtC22ConnectUIV2FeatureImpl26DevicePickerViewController (ConnectUIV2FeatureImpl) <SPTPageController>
+@interface _TtC22ConnectUIV2FeatureImpl26DevicePickerViewController (ConnectUIV2FeatureImpl)
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;
 

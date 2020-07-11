@@ -8,20 +8,20 @@
 
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, NSTimer, SPTPodcastEntitiesModel, SPTPodcastEntity;
-@protocol SPTPlayer, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate;
+@class NSString, NSTimer;
+@protocol SPTEpisodeSegmentsEntity, SPTEpisodeSegmentsModel, SPTPlayer, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate;
 
 @interface SPTPodcastEpisodeFeaturedContentPlayer : NSObject <SPTPlayerObserver>
 {
     id <SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate> _delegate;
     id <SPTPlayer> _player;
     NSTimer *_progressTimer;
-    SPTPodcastEntitiesModel *_entitiesModel;
-    SPTPodcastEntity *_currentPlayingEntity;
+    id <SPTEpisodeSegmentsModel> _entitiesModel;
+    id <SPTEpisodeSegmentsEntity> _currentPlayingEntity;
 }
 
-@property(retain, nonatomic) SPTPodcastEntity *currentPlayingEntity; // @synthesize currentPlayingEntity=_currentPlayingEntity;
-@property(retain, nonatomic) SPTPodcastEntitiesModel *entitiesModel; // @synthesize entitiesModel=_entitiesModel;
+@property(retain, nonatomic) id <SPTEpisodeSegmentsEntity> currentPlayingEntity; // @synthesize currentPlayingEntity=_currentPlayingEntity;
+@property(retain, nonatomic) id <SPTEpisodeSegmentsModel> entitiesModel; // @synthesize entitiesModel=_entitiesModel;
 @property(retain, nonatomic) NSTimer *progressTimer; // @synthesize progressTimer=_progressTimer;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate> delegate; // @synthesize delegate=_delegate;

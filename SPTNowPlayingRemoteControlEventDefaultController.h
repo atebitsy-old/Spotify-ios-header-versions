@@ -11,7 +11,7 @@
 #import "SPTNowPlayingRemoteEventSubtypesController-Protocol.h"
 
 @class AVAudioPlayer, MPRemoteCommandCenter, NSMapTable, NSString, NSTimer, SPTNowPlayingModel;
-@protocol SPTAudioSessionController, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy, SPTNowPlayingTestManager;
+@protocol SPTAudioSessionController, SPTNowPlayingRemoteControlEventLogger, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy, SPTNowPlayingTestManager;
 
 @interface SPTNowPlayingRemoteControlEventDefaultController : NSObject <AVAudioPlayerDelegate, SPTNowPlayingRemoteControlEventPolicyController, SPTNowPlayingRemoteEventSubtypesController>
 {
@@ -35,10 +35,12 @@
     MPRemoteCommandCenter *_remoteCommandCenter;
     CDUnknownBlockType _avAudioPlayerFactory;
     id <SPTNowPlayingTestManager> _testManager;
+    id <SPTNowPlayingRemoteControlEventLogger> _logger;
 }
 
 + (id)soundsBundle;
 @property(nonatomic) _Bool playersLoaded; // @synthesize playersLoaded=_playersLoaded;
+@property(readonly, nonatomic) id <SPTNowPlayingRemoteControlEventLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) CDUnknownBlockType avAudioPlayerFactory; // @synthesize avAudioPlayerFactory=_avAudioPlayerFactory;
 @property(retain, nonatomic) MPRemoteCommandCenter *remoteCommandCenter; // @synthesize remoteCommandCenter=_remoteCommandCenter;
@@ -49,6 +51,7 @@
 @property(nonatomic) __weak id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isActiveForRemoteControlPolicyUpdates) _Bool activeForRemoteControlPolicyUpdates; // @synthesize activeForRemoteControlPolicyUpdates=_activeForRemoteControlPolicyUpdates;
 - (void).cxx_destruct;
+- (id)eventSourceIdentifierForEvent:(id)arg1;
 - (void)performSeekToStartWithCommandEvent:(id)arg1;
 - (void)performSkipToPreviousWithCommandEvent:(id)arg1 isPodcastContentWithEventOriginatingFromSiri:(_Bool)arg2;
 - (void)perfromSkipToNextWithCommandEvent:(id)arg1;
@@ -85,7 +88,7 @@
 - (long long)priorityForHandlingRemoteEventSubtypes;
 - (void)dealloc;
 - (void)lazyLoadPlayers;
-- (id)initWithNowPlayingModel:(id)arg1 audioSessionController:(id)arg2 remoteCommandCenter:(id)arg3 avAudioPlayerFactory:(CDUnknownBlockType)arg4 nowPlayingTestManager:(id)arg5;
+- (id)initWithNowPlayingModel:(id)arg1 audioSessionController:(id)arg2 remoteCommandCenter:(id)arg3 avAudioPlayerFactory:(CDUnknownBlockType)arg4 nowPlayingTestManager:(id)arg5 remoteControlEventLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

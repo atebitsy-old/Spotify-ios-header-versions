@@ -23,7 +23,6 @@
     NSURL *_URI;
     CDUnknownBlockType _styleFactoryBlock;
     CDUnknownBlockType _emptyViewBlock;
-    NSString *_logContext;
     SPTYourLibraryMusicGLUETheme *_theme;
     id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
     id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
@@ -50,7 +49,6 @@
 @property(readonly, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
-@property(readonly, copy, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(readonly, nonatomic) _Bool buttonSectionEnabled; // @synthesize buttonSectionEnabled=_buttonSectionEnabled;
 @property(readonly, copy, nonatomic) CDUnknownBlockType emptyViewBlock; // @synthesize emptyViewBlock=_emptyViewBlock;
 @property(readonly, copy, nonatomic) CDUnknownBlockType styleFactoryBlock; // @synthesize styleFactoryBlock=_styleFactoryBlock;
@@ -64,7 +62,7 @@
 - (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithModelProvider:(CDUnknownBlockType)arg1 viewModelConfiguration:(id)arg2 title:(id)arg3 searchPlaceholderText:(id)arg4 pageProviderIdentifier:(unsigned long long)arg5 URI:(id)arg6 styleFactoryBlock:(CDUnknownBlockType)arg7 emptyView:(CDUnknownBlockType)arg8 buttonSectionEnabled:(_Bool)arg9 logContext:(id)arg10 imageLoaderFactory:(id)arg11 theme:(id)arg12 sortingFilteringUIFactory:(id)arg13 logger:(id)arg14 viewLoggerFactory:(id)arg15 pageIdentifier:(id)arg16 testManager:(id)arg17 username:(id)arg18 snackbarPresenter:(id)arg19 shareDragDelegateFactory:(id)arg20 quickScrollFactory:(id)arg21;
+- (id)initWithModelProvider:(CDUnknownBlockType)arg1 viewModelConfiguration:(id)arg2 title:(id)arg3 searchPlaceholderText:(id)arg4 pageProviderIdentifier:(unsigned long long)arg5 URI:(id)arg6 styleFactoryBlock:(CDUnknownBlockType)arg7 emptyView:(CDUnknownBlockType)arg8 buttonSectionEnabled:(_Bool)arg9 imageLoaderFactory:(id)arg10 theme:(id)arg11 sortingFilteringUIFactory:(id)arg12 logger:(id)arg13 viewLoggerFactory:(id)arg14 pageIdentifier:(id)arg15 testManager:(id)arg16 username:(id)arg17 snackbarPresenter:(id)arg18 shareDragDelegateFactory:(id)arg19 quickScrollFactory:(id)arg20;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

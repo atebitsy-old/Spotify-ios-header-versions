@@ -37,7 +37,6 @@
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)setupPositiveFeedbackButtonConstraints;
-- (id)centerAlignmentConstraints;
 - (id)naturalAlignmentConstraints;
 - (void)setupDefaultConstraints;
 - (double)contextDependentPositiveFeedbackButtonTrailingMargin;

@@ -8,11 +8,13 @@
 
 #import "VISREFHeaderComponent-Protocol.h"
 
-@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UILabel, UIStackView, UIView, VISREFAlignedImageView, VISREFCreatorRowView, VISREFExpandableTextView, VISREFGradientView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
+@class NSArray, NSLayoutConstraint, NSString, SPTEncoreLabel, UIAccessibilityElement, UIButton, UIImage, UILabel, UIStackView, VISREFAlignedImageView, VISREFCreatorRowView, VISREFExpandableTextView, VISREFGradientView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
 
 @interface VISREFFullBleedContentView : VISREFTopAndBodyContentView <VISREFHeaderComponent>
 {
     UILabel *_titleLabel;
+    UIAccessibilityElement *_accessibilityContentContainer;
+    NSArray *_actionRowAccessibilityElements;
     UIButton *_contextButton;
     UIButton *_followButton;
     UIButton *_feedbackButton;
@@ -59,12 +61,14 @@
 @property(retain, nonatomic) UIButton *feedbackButton; // @synthesize feedbackButton=_feedbackButton;
 @property(retain, nonatomic) UIButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIButton *contextButton; // @synthesize contextButton=_contextButton;
+@property(readonly, copy, nonatomic) NSArray *actionRowAccessibilityElements; // @synthesize actionRowAccessibilityElements=_actionRowAccessibilityElements;
+@property(retain, nonatomic) UIAccessibilityElement *accessibilityContentContainer; // @synthesize accessibilityContentContainer=_accessibilityContentContainer;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void).cxx_destruct;
 - (_Bool)canHandleTapAtCreatorView;
 - (void)didTapCreatorRow;
 - (void)adjustTitleLabelFontIfNeeded;
-@property(readonly, nonatomic) UIView *accessibilityContentContainer;
+- (void)accessibilityHideViews:(id)arg1;
 - (void)updateAccessibilityFrame;
 - (void)updateAccessibilityLabels;
 - (void)setAssociatedColor:(id)arg1;

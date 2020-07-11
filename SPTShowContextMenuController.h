@@ -17,6 +17,7 @@
     id <SPTPodcastTestManager> _podcastTestManager;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
     id <SPTCollectionPlatform> _collectionPlatform;
+    id <SPTScannablesUserInterfaceFactory> _scannablesUIFactory;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
     id <SPTContextMenuPresenterFactory> _presenterFactory;
     id <SPContextMenuActionsFactory> _actionFactory;
@@ -24,22 +25,21 @@
     id <SPTSleepTimerContextMenuActionsProvider> _sleepTimerContextMenuActionsProvider;
     id <SPTModalPresentationController> _modalPresentationController;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTScannablesUserInterfaceFactory> _scannablesUIFactory;
     SPTPodcastFeatureProperties *_featureProperties;
 }
 
-@property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(nonatomic) __weak id <SPTScannablesUserInterfaceFactory> scannablesUIFactory; // @synthesize scannablesUIFactory=_scannablesUIFactory;
-@property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
-@property(retain, nonatomic) id <SPTSleepTimerContextMenuActionsProvider> sleepTimerContextMenuActionsProvider; // @synthesize sleepTimerContextMenuActionsProvider=_sleepTimerContextMenuActionsProvider;
-@property(retain, nonatomic) id <SPTPodcastSpeedControlManager> speedControlManager; // @synthesize speedControlManager=_speedControlManager;
-@property(retain, nonatomic) id <SPContextMenuActionsFactory> actionFactory; // @synthesize actionFactory=_actionFactory;
-@property(retain, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
+@property(readonly, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
+@property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
+@property(readonly, nonatomic) id <SPTSleepTimerContextMenuActionsProvider> sleepTimerContextMenuActionsProvider; // @synthesize sleepTimerContextMenuActionsProvider=_sleepTimerContextMenuActionsProvider;
+@property(readonly, nonatomic) id <SPTPodcastSpeedControlManager> speedControlManager; // @synthesize speedControlManager=_speedControlManager;
+@property(readonly, nonatomic) id <SPContextMenuActionsFactory> actionFactory; // @synthesize actionFactory=_actionFactory;
+@property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
-@property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-@property(nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
-@property(nonatomic) __weak id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
+@property(readonly, nonatomic) __weak id <SPTScannablesUserInterfaceFactory> scannablesUIFactory; // @synthesize scannablesUIFactory=_scannablesUIFactory;
+@property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
+@property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
+@property(readonly, nonatomic) __weak id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 - (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (_Bool)isIPad;

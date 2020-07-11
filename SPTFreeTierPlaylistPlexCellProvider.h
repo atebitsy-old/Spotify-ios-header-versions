@@ -7,25 +7,48 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+#import "SPTFreeTierPlaylistSectionDescription-Protocol.h"
+#import "SPTFreeTierPlaylistSectionFooter-Protocol.h"
+#import "SPTFreeTierPlaylistSectionHeader-Protocol.h"
 #import "SPTFreeTierPlaylistTrackCellConfiguratorDelegate-Protocol.h"
+#import "SPTPlaylistExtenderModelDelegate-Protocol.h"
 
-@class NSString;
-@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistTrackCellConfigurator, SPTFreeTierPlaylistViewModel;
+@class NSString, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistPlexLogger;
+@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistIndexPathResolver, SPTFreeTierPlaylistTrackCellConfigurator, SPTFreeTierPlaylistViewModel, SPTPlayer, SPTPlaylistExtenderModel;
 
-@interface SPTFreeTierPlaylistPlexCellProvider : NSObject <SPTFreeTierPlaylistTrackCellConfiguratorDelegate, SPTFreeTierPlaylistCellProvider>
+@interface SPTFreeTierPlaylistPlexCellProvider : NSObject <SPTFreeTierPlaylistTrackCellConfiguratorDelegate, SPTFreeTierPlaylistSectionHeader, SPTFreeTierPlaylistSectionFooter, SPTPlaylistExtenderModelDelegate, SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescription>
 {
     id <SPTFreeTierPlaylistCellProviderDelegate> _delegate;
     id <SPTFreeTierPlaylistTrackCellConfigurator> _cellConfigurator;
-    id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
+    id <SPTPlaylistExtenderModel> _playlistExtenderModel;
+    id <SPTPlayer> _player;
+    SPTFreeTierPlaylistGLUETheme *_theme;
+    SPTFreeTierPlaylistPlexLogger *_logger;
+    id <SPTFreeTierPlaylistIndexPathResolver> _indexPathResolver;
 }
 
-@property(nonatomic) __weak id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-@property(nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
-@property(retain, nonatomic) id <SPTFreeTierPlaylistTrackCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistIndexPathResolver> indexPathResolver; // @synthesize indexPathResolver=_indexPathResolver;
+@property(readonly, nonatomic) SPTFreeTierPlaylistPlexLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTFreeTierPlaylistGLUETheme *theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
+@property(readonly, nonatomic) id <SPTPlaylistExtenderModel> playlistExtenderModel; // @synthesize playlistExtenderModel=_playlistExtenderModel;
+@property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistTrackCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (id)indexPathForView:(id)arg1;
+- (void)playlistExtenderModelDidUpdate:(id)arg1;
+- (void)playlistExtenderModel:(id)arg1 didFailWithError:(id)arg2;
+- (void)refreshRecommendations;
+- (id)footerView;
+- (double)footerHeight;
+- (double)headerHeight;
+- (id)headerView;
+- (void)willDisplaySection;
+- (id)sectionFooter;
+- (id)sectionHeader;
+- (unsigned long long)section;
+- (unsigned long long)numberOfRows;
 - (void)cellConfigurator:(id)arg1 likeIconButtonTapped:(id)arg2;
 - (void)cellConfigurator:(id)arg1 contextMenuIconButtonTapped:(id)arg2;
 - (void)cellConfigurator:(id)arg1 banIconButtonTapped:(id)arg2;
@@ -35,9 +58,10 @@
 - (id)reuseIdentifiers;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
 - (double)heightForRowAtIndexPath:(id)arg1;
+- (id)plexTrackViewModelAtIndexPath:(id)arg1;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
-- (id)initWithCellConfigurator:(id)arg1 itemsViewModel:(id)arg2 playlistViewModel:(id)arg3;
+- (id)initWithCellConfigurator:(id)arg1 playlistViewModel:(id)arg2 playlistExtenderModel:(id)arg3 player:(id)arg4 theme:(id)arg5 logger:(id)arg6 indexPathResolver:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

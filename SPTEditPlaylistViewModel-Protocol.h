@@ -24,6 +24,7 @@
 - (void)saveWithCompletion:(void (^)(_Bool, _Bool))arg1;
 - (void)moveTrackAtIndexPath:(NSIndexPath *)arg1 toIndexPath:(NSIndexPath *)arg2;
 - (void)removeTrackAtIndexPath:(NSIndexPath *)arg1;
+- (NSURL *)trackURLAtIndexPath:(NSIndexPath *)arg1;
 - (id <SPTEditPlaylistTrackViewModel>)trackViewModelAtIndexPath:(NSIndexPath *)arg1;
 - (void)viewDidLoad;
 @end

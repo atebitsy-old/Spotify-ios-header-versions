@@ -9,26 +9,23 @@
 #import "HUBViewContentOffsetObserver-Protocol.h"
 
 @class SPTActivityIndicatorView, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationNavigationItemDecorator;
-@protocol SPTPremiumDestinationExperiments;
 
 @interface SPTPremiumDestinationHubViewController : SPTHubViewController <HUBViewContentOffsetObserver>
 {
     _Bool _isRootViewController;
     _Bool _shouldShowNavigationBar;
     _Bool _shouldShowLoadingIndicator;
+    SPTPremiumDestinationNavigationItemDecorator *_navigationItemDecorator;
     SPTPremiumDestinationGLUETheme *_premiumDestinationTheme;
     SPTActivityIndicatorView *_loadingIndicatorView;
-    id <SPTPremiumDestinationExperiments> _experiments;
-    SPTPremiumDestinationNavigationItemDecorator *_navigationItemDecorator;
 }
 
-@property(retain, nonatomic) SPTPremiumDestinationNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
-@property(retain, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 @property(retain, nonatomic) SPTActivityIndicatorView *loadingIndicatorView; // @synthesize loadingIndicatorView=_loadingIndicatorView;
 @property(nonatomic) _Bool shouldShowLoadingIndicator; // @synthesize shouldShowLoadingIndicator=_shouldShowLoadingIndicator;
 @property(nonatomic) _Bool shouldShowNavigationBar; // @synthesize shouldShowNavigationBar=_shouldShowNavigationBar;
 @property(nonatomic) _Bool isRootViewController; // @synthesize isRootViewController=_isRootViewController;
 @property(retain, nonatomic) SPTPremiumDestinationGLUETheme *premiumDestinationTheme; // @synthesize premiumDestinationTheme=_premiumDestinationTheme;
+@property(retain, nonatomic) SPTPremiumDestinationNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
 - (void).cxx_destruct;
 - (void)displayLoadingIndicatorIfRequiredWithDelay:(unsigned long long)arg1;
 - (void)setupLoadingIndicatorView;
@@ -40,7 +37,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithPremiumDestinationTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11 experiments:(id)arg12 navigationItemDecorator:(id)arg13;
+- (id)initWithPremiumDestinationTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11;
 
 @end
 

@@ -10,7 +10,7 @@
 #import "SPTShowsFormatService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFormatListPlatformService, SPTFreeTierPlaylistService, SPTFreeTierPlaylistUIService, SPTGLUEService, SPTNetworkService, SPTPlayerFeature, SPTPodcastFeature, SPTVideoFeature;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierPlaylistService, SPTFreeTierPlaylistUIService, SPTGLUEService, SPTNetworkService, SPTPlayerFeature, SPTPodcastFeature, SPTVideoFeature;
 
 @interface SPTShowsFormatServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTShowsFormatService>
 {
@@ -20,7 +20,6 @@
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTContainerService> _containerService;
-    id <SPTFormatListPlatformService> _formatListPlatformService;
     id <SPTGLUEService> _glueService;
     id <SPTNetworkService> _networkFeature;
     id <SPTPlayerFeature> _playerFeature;
@@ -47,7 +46,6 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(nonatomic) __weak id <SPTFormatListPlatformService> formatListPlatformService; // @synthesize formatListPlatformService=_formatListPlatformService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
@@ -58,7 +56,6 @@
 - (void)registerHandlerForShowsFormat;
 - (id)provideContextMenuProvider;
 - (void)configureShowsFormatPlaylistViewControllerWithURL:(id)arg1 context:(id)arg2 configurationBuilder:(id)arg3;
-- (id)provideShowsFormatPlaylistViewControllerForURL:(id)arg1 context:(id)arg2 formatListType:(id)arg3;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

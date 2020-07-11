@@ -8,19 +8,21 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTHubInteractionLogger, SPTLinkDispatcher;
+@protocol SPTHubInteractionLogger, SPTLinkDispatcher, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTFreeTierTrackAddToPlaylistCommandHandler : NSObject <HUBCommandHandler>
 {
     id <SPTLinkDispatcher> _linkDispatcher;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
     id <SPTHubInteractionLogger> _logger;
 }
 
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
-- (id)initWithLinkDispatcher:(id)arg1 logger:(id)arg2;
+- (id)initWithLinkDispatcher:(id)arg1 ubiLogger:(id)arg2 logger:(id)arg3;
 
 @end
 

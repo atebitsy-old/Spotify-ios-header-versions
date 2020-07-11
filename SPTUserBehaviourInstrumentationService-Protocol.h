@@ -6,9 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTUserBehaviourInstrumentation;
+@protocol SPTUserBehaviourInstrumentation, SPTUserBehaviourInstrumentationNavigationObserver;
 
 @protocol SPTUserBehaviourInstrumentationService <SPTService>
+- (void)removeObserver:(id <SPTUserBehaviourInstrumentationNavigationObserver>)arg1;
+- (void)addObserver:(id <SPTUserBehaviourInstrumentationNavigationObserver>)arg1;
 - (id <SPTUserBehaviourInstrumentation>)provideUserBehaviourInstrumentation;
 @end
 

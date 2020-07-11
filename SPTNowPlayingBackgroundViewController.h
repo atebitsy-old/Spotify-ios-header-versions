@@ -8,18 +8,23 @@
 
 #import "SPTNowPlayingBackgroundViewModelDelegate-Protocol.h"
 
-@class GLUEGradientView, NSString, SPTNowPlayingBackgroundViewModel;
+@class GLUEGradientView, NSLayoutConstraint, NSString, SPTNowPlayingBackgroundViewModel, UIView;
 
 @interface SPTNowPlayingBackgroundViewController : UIViewController <SPTNowPlayingBackgroundViewModelDelegate>
 {
     SPTNowPlayingBackgroundViewModel *_viewModel;
-    GLUEGradientView *_gradientView;
+    GLUEGradientView *_topGradientView;
+    UIView *_bottomGradientView;
+    NSLayoutConstraint *_topGradientViewHeightConstraint;
 }
 
-@property(retain, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
+@property(retain, nonatomic) NSLayoutConstraint *topGradientViewHeightConstraint; // @synthesize topGradientViewHeightConstraint=_topGradientViewHeightConstraint;
+@property(retain, nonatomic) UIView *bottomGradientView; // @synthesize bottomGradientView=_bottomGradientView;
+@property(retain, nonatomic) GLUEGradientView *topGradientView; // @synthesize topGradientView=_topGradientView;
 @property(readonly, nonatomic) SPTNowPlayingBackgroundViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
 - (void)backgroundViewModel:(id)arg1 didChangeColor:(id)arg2;
+- (void)refreshWithMainNPVHeight:(double)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

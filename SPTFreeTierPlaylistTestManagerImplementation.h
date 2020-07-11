@@ -20,8 +20,6 @@
     _Bool _contextAwareEditorialTrackSharingEnabled;
     _Bool _episodesInPlaylistDisabled;
     _Bool _scrollPerformanceTrackingEnabled;
-    _Bool _placeholderCellsEnabled;
-    _Bool _episodeDownloadEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
@@ -32,20 +30,14 @@
     id <SPTFeatureFlagSignal> _contextAwareEditorialTrackSharingSignal;
     id <SPTFeatureFlagSignal> _ignoreProductStateForEpisodesAvailableSignal;
     id <SPTFeatureFlagSignal> _scrollPerformanceSignal;
-    id <SPTFeatureFlagSignal> _placeholderCellsEnabedSignal;
-    id <SPTFeatureFlagSignal> _episodeDownloadEnabledSignal;
 }
 
-@property(nonatomic, getter=isEpisodeDownloadEnabled) _Bool episodeDownloadEnabled; // @synthesize episodeDownloadEnabled=_episodeDownloadEnabled;
-@property(nonatomic, getter=isPlaceholderCellsEnabled) _Bool placeholderCellsEnabled; // @synthesize placeholderCellsEnabled=_placeholderCellsEnabled;
 @property(nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled; // @synthesize scrollPerformanceTrackingEnabled=_scrollPerformanceTrackingEnabled;
 @property(nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled; // @synthesize episodesInPlaylistDisabled=_episodesInPlaylistDisabled;
 @property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
 @property(nonatomic, getter=isEditAnnotationEnabled) _Bool editAnnotationEnabled; // @synthesize editAnnotationEnabled=_editAnnotationEnabled;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(nonatomic, getter=isWeigthedShufflePlayDisabled) _Bool weigthedShufflePlayDisabled; // @synthesize weigthedShufflePlayDisabled=_weigthedShufflePlayDisabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> episodeDownloadEnabledSignal; // @synthesize episodeDownloadEnabledSignal=_episodeDownloadEnabledSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> placeholderCellsEnabedSignal; // @synthesize placeholderCellsEnabedSignal=_placeholderCellsEnabedSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> scrollPerformanceSignal; // @synthesize scrollPerformanceSignal=_scrollPerformanceSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> ignoreProductStateForEpisodesAvailableSignal; // @synthesize ignoreProductStateForEpisodesAvailableSignal=_ignoreProductStateForEpisodesAvailableSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> contextAwareEditorialTrackSharingSignal; // @synthesize contextAwareEditorialTrackSharingSignal=_contextAwareEditorialTrackSharingSignal;
@@ -65,8 +57,6 @@
 - (void)setupEpisodesAvailable;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
-- (void)setupEpisodeDownloadEnabledSignal;
-- (void)setupPlaceholderCellsEnabledSignal;
 - (void)setupScrollPerformanceSignal;
 - (id)editAnnotationAbbaSignal;
 - (id)editAnnotationRolloutSignal;

@@ -18,7 +18,7 @@
 #import "SPTScrollToTopViewController-Protocol.h"
 
 @class NSMutableDictionary, NSString, NSURL, SPTHubKeyboardManager, SPTHubShelvesManager, SPTHubViewModelProvider, SPTTheme;
-@protocol SPTHubImpressionLogger, SPTHubLoadingLogger, SPTPageContainer, SPTShareDragDelegateFactory;
+@protocol HUBViewModel, SPTHubImpressionLogger, SPTHubLoadingLogger, SPTPageContainer, SPTShareDragDelegateFactory;
 
 @interface SPTHubViewController : HUBViewController <SPTScrollToTopViewController, HUBViewScrollDelegate, SPTHubKeyboardManagerNavigationBarProvider, SPTHubViewModelProviderDelegate, SPContentInsetViewController, SPTPageController, SPTNavigationControllerNavigationBarState, HUBViewComponentDelegate, HUBHeaderViewComponentDelegate, HUBOverlayViewComponentDelegate>
 {
@@ -34,10 +34,12 @@
     SPTHubKeyboardManager *_keyboardManager;
     id <SPTHubImpressionLogger> _impressionLogger;
     id <SPTHubLoadingLogger> _loadingLogger;
+    id <HUBViewModel> _initialViewModel;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
 }
 
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
+@property(retain, nonatomic) id <HUBViewModel> initialViewModel; // @synthesize initialViewModel=_initialViewModel;
 @property(nonatomic) _Bool wasInitialLoadViewModelPerformed; // @synthesize wasInitialLoadViewModelPerformed=_wasInitialLoadViewModelPerformed;
 @property(readonly, nonatomic) id <SPTHubLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(readonly, nonatomic) id <SPTHubImpressionLogger> impressionLogger; // @synthesize impressionLogger=_impressionLogger;
@@ -52,6 +54,7 @@
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 - (void).cxx_destruct;
 - (id)shareDragDelegateWithModel:(id)arg1;
+- (void)installViewModel:(id)arg1;
 - (void)loadViewModel;
 - (id)provideNavigationBar;
 - (void)sp_updateContentInsets;
@@ -70,6 +73,7 @@
 - (void)viewDidLoad;
 - (void)viewWillAppear:(_Bool)arg1;
 - (id)initWithTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11;
+- (id)initWithTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 initialViewModel:(id)arg9 impressionLogger:(id)arg10 loadingLogger:(id)arg11 shareDragDelegateFactory:(id)arg12;
 - (void)spt_scrollToTopAnimated:(_Bool)arg1;
 - (void)spt_scrollToTop;
 

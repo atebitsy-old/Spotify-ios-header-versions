@@ -6,10 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSError, SPTHubViewModelProvider;
 @protocol HUBViewModel;
 
 @protocol SPTHubViewModelProviderDelegate <NSObject>
 - (void)viewModelDidLoad:(id <HUBViewModel>)arg1 dataSource:(unsigned long long)arg2;
 - (void)viewModelDidLoad:(id <HUBViewModel>)arg1;
+
+@optional
+- (void)viewModelProvider:(SPTHubViewModelProvider *)arg1 failedToLoadWithError:(NSError *)arg2;
 @end
 

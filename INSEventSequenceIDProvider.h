@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class NSData;
+#import "INSEventSequenceIDProviderProtocol-Protocol.h"
 
-@interface INSEventSequenceIDProvider : NSObject
+@class NSData, NSString;
+
+@interface INSEventSequenceIDProvider : NSObject <INSEventSequenceIDProviderProtocol>
 {
     NSData *_deviceID;
 }
@@ -17,6 +19,12 @@
 - (void).cxx_destruct;
 - (id)eventSequenceIDWithInstallID:(id)arg1;
 - (id)initWithDeviceID:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

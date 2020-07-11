@@ -20,6 +20,7 @@
     _Bool _watchAppStreamingEnabled;
     _Bool _watchAppOfflineEnabled;
     _Bool _credentialStoreSendCredentialsEnabled;
+    _Bool _watchAppStreamingSignalEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTWatchConnectivityManager *_watchConnectivityManager;
@@ -35,6 +36,7 @@
 
 @property(retain, nonatomic) SPTWatchPlatformWatchDevice *pairedDevice; // @synthesize pairedDevice=_pairedDevice;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(nonatomic) _Bool watchAppStreamingSignalEnabled; // @synthesize watchAppStreamingSignalEnabled=_watchAppStreamingSignalEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> streamingEnabledSignal; // @synthesize streamingEnabledSignal=_streamingEnabledSignal;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -69,6 +71,7 @@
 - (void)evaluateAccessoryLoggingEnabled;
 - (void)evaluateCredentialStoreSendCredentials;
 - (void)evaluateAppleWatchPubSubTransport;
+- (void)evaluateWatchAppStreamingEnabled;
 - (void)evaluateWatchAppOfflineEnabled;
 - (void)evaluateWatchIntegrationEnabledState;
 - (void)initFlagSignals;

@@ -9,7 +9,7 @@
 #import "SPTShareContainerViewControllerProtocol-Protocol.h"
 #import "SPTShareFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition;
+@class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition, SPTSharingSDK;
 @protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTVideoFeature;
 
 @interface SPTShareFeatureImplementation : NSObject <SPTShareContainerViewControllerProtocol, SPTShareFeature>
@@ -36,9 +36,11 @@
     SPTShareDestinationUtility *_shareDestinationUtility;
     SPTShareLogger *_shareLogger;
     SPTShareFeatureProperties *_featureProperties;
+    SPTSharingSDK *_sharingSDK;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(retain, nonatomic) SPTShareDestinationUtility *shareDestinationUtility; // @synthesize shareDestinationUtility=_shareDestinationUtility;
@@ -66,7 +68,8 @@
 - (id)provideShareHandlerFactory;
 - (void)presentShareViewController:(id)arg1;
 - (id)provideShareDragDelegateFactory;
-- (id)makeSharePresenterWithShareData:(id)arg1 contextViewController:(id)arg2;
+- (id)makeSharePresenterWithShareViewController:(id)arg1 contextViewController:(id)arg2;
+- (id)makeShareViewControllerWithShareData:(id)arg1 destinations:(id)arg2;
 - (id)provideContainedViewControllerWithShareData:(id)arg1 shareDestinations:(id)arg2 shareContainerViewController:(id)arg3;
 - (id)provideShareViewControllerForShareEntityData:(id)arg1 withShareDestinations:(id)arg2;
 - (id)provideShareViewControllerForShareEntityData:(id)arg1;

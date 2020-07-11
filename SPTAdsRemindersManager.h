@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSDate, SPTAdsFeatureProperties, SPTTheme;
-@protocol SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTLinkDispatcher;
+@protocol SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTLinkDispatcher, SPTLogCenter;
 
 @interface SPTAdsRemindersManager : NSObject
 {
@@ -15,12 +15,14 @@
     id <SPTBannerPresentationManager> _presentationManager;
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTAdsFeatureProperties *_featureProperties;
+    id <SPTLogCenter> _logCenter;
     NSDate *_lastSaveTimeStamp;
     id <SPTBannerPresentationManagerTicket> _bannerTicket;
 }
 
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(retain, nonatomic) NSDate *lastSaveTimeStamp; // @synthesize lastSaveTimeStamp=_lastSaveTimeStamp;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> presentationManager; // @synthesize presentationManager=_presentationManager;
@@ -31,7 +33,7 @@
 - (void)stopReminderBanner;
 - (_Bool)shouldShowReminderBanner;
 - (void)updateReminderTimeStampWithPageURI:(id)arg1;
-- (id)initTheme:(id)arg1 bannerPresentationManager:(id)arg2 linkDispatcher:(id)arg3 featureProperties:(id)arg4;
+- (id)initTheme:(id)arg1 bannerPresentationManager:(id)arg2 linkDispatcher:(id)arg3 featureProperties:(id)arg4 logCenter:(id)arg5;
 
 @end
 

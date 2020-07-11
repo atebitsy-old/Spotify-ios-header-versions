@@ -16,7 +16,6 @@
 @interface SPTNowPlayingInformationUnitViewModelImplementation : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingAuxiliaryActionsHandlerObserver, SPTNowPlayingInformationUnitViewModel>
 {
     _Bool _shouldShowPositiveFeedback;
-    _Bool _centerAlignText;
     id <SPTNowPlayingInformationUnitViewModelDelegate> _delegate;
     SPTNowPlayingModel *_model;
     NSString *_title;
@@ -27,7 +26,6 @@
     id <SPTNowPlayingTestManager> _testManager;
 }
 
-@property(nonatomic) _Bool centerAlignText; // @synthesize centerAlignText=_centerAlignText;
 @property(nonatomic) _Bool shouldShowPositiveFeedback; // @synthesize shouldShowPositiveFeedback=_shouldShowPositiveFeedback;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
@@ -52,7 +50,7 @@
 - (void)dealloc;
 - (void)stopObservers;
 - (void)startObservers;
-- (id)initWithNowPlayingModel:(id)arg1 linkDispatcher:(id)arg2 logger:(id)arg3 auxiliaryActionsHandler:(id)arg4 shouldShowPositiveFeedback:(_Bool)arg5 centerAlignText:(_Bool)arg6 testManager:(id)arg7;
+- (id)initWithNowPlayingModel:(id)arg1 linkDispatcher:(id)arg2 logger:(id)arg3 auxiliaryActionsHandler:(id)arg4 shouldShowPositiveFeedback:(_Bool)arg5 testManager:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

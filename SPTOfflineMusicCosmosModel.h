@@ -51,6 +51,7 @@
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)storeEntity:(id)arg1;
 - (void)loadLocallyStoredEntity;
+- (_Bool)allItemsDecorated;
 - (_Bool)shouldWaitForAdditionalSorting;
 - (void)updateModelEntity;
 - (void)decorcateAlbumURL:(id)arg1;

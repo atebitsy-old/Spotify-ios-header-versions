@@ -8,24 +8,24 @@
 
 #import "SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate-Protocol.h"
 
-@class GLUESectionHeaderView, NSString, SPTPodcastEntitiesModel, SPTPodcastEpisodeFeaturedContentDataLoader, SPTPodcastEpisodeFeaturedContentTrackListPreviewView;
-@protocol GLUEImageLoader, SPTLinkDispatcher;
+@class GLUESectionHeaderView, NSString, SPTPodcastEpisodeFeaturedContentTrackListPreviewView;
+@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTLinkDispatcher, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackListPreviewViewController : UIViewController <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate>
 {
     GLUESectionHeaderView *_sectionHeaderView;
     SPTPodcastEpisodeFeaturedContentTrackListPreviewView *_previewView;
     NSString *_episodeURIString;
-    SPTPodcastEpisodeFeaturedContentDataLoader *_dataLoader;
+    id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> _dataLoader;
     id <GLUEImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
-    SPTPodcastEntitiesModel *_podcastEntitiesModel;
+    id <SPTEpisodeSegmentsModel> _episodeSegmentsModel;
 }
 
-@property(retain, nonatomic) SPTPodcastEntitiesModel *podcastEntitiesModel; // @synthesize podcastEntitiesModel=_podcastEntitiesModel;
+@property(retain, nonatomic) id <SPTEpisodeSegmentsModel> episodeSegmentsModel; // @synthesize episodeSegmentsModel=_episodeSegmentsModel;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-@property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(readonly, nonatomic) id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *episodeURIString; // @synthesize episodeURIString=_episodeURIString;
 @property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentTrackListPreviewView *previewView; // @synthesize previewView=_previewView;
 @property(retain, nonatomic) GLUESectionHeaderView *sectionHeaderView; // @synthesize sectionHeaderView=_sectionHeaderView;
@@ -34,11 +34,11 @@
 - (void)podcastEpisodeFeaturedContentTrackListPreviewViewDidSelect:(id)arg1;
 - (void)setContentHidden:(_Bool)arg1;
 - (void)handleFetchedModel:(id)arg1;
-- (void)fetchPodcastInspectorModel;
+- (void)fetchEpisodeSegmentsModel;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithEpisodeURI:(id)arg1 podcastInspectorDataLoader:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;
+- (id)initWithEpisodeURI:(id)arg1 dataLoader:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

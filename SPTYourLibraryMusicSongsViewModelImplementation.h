@@ -12,7 +12,7 @@
 #import "SPTYourLibraryMusicSongsModelDelegate-Protocol.h"
 #import "SPTYourLibraryMusicSongsViewModel-Protocol.h"
 
-@class NSArray, NSMutableDictionary, NSString, NSURL, SPTPlayOrigin, SPTPlayerState, SPTYourLibraryMusicLogger, SPTYourLibraryMusicSongsHeaderViewModelImplementation;
+@class NSArray, NSMutableDictionary, NSString, NSURL, SPTPlayOrigin, SPTPlayerState, SPTYourLibraryMusicSongsHeaderViewModelImplementation, SPTYourLibraryMusicSongsLogger;
 @protocol SPContextMenuFeature, SPTAudioPreviewPlayer, SPTCollectionPlatformDataLoader, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, SPTSortingFilteringUIFactory, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicSongsViewModelDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicSongsViewModelImplementation : NSObject <SPTYourLibraryMusicSongsHeaderViewModelActionDelegate, SPTPlayerObserver, SPTSortingFilteringPickerDelegate, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicSongsModelDelegate>
@@ -27,7 +27,7 @@
     SPTPlayOrigin *_playOrigin;
     id <SPTPlayer> _player;
     id <SPTOfflineModeState> _offlineModeState;
-    SPTYourLibraryMusicLogger *_logger;
+    SPTYourLibraryMusicSongsLogger *_logger;
     SPTPlayerState *_lastPlayerState;
     SPTYourLibraryMusicSongsHeaderViewModelImplementation *_headerViewModel;
     unsigned long long _offlineAvailability;
@@ -54,7 +54,7 @@
 @property(nonatomic) unsigned long long offlineAvailability; // @synthesize offlineAvailability=_offlineAvailability;
 @property(retain, nonatomic) SPTYourLibraryMusicSongsHeaderViewModelImplementation *headerViewModel; // @synthesize headerViewModel=_headerViewModel;
 @property(retain, nonatomic) SPTPlayerState *lastPlayerState; // @synthesize lastPlayerState=_lastPlayerState;
-@property(readonly, nonatomic) SPTYourLibraryMusicLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTYourLibraryMusicSongsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
@@ -76,7 +76,8 @@
 - (void)selectFilterRule:(id)arg1;
 - (unsigned long long)globalIndexFromIndexPath:(id)arg1;
 - (id)trackURIAtIndexPath:(id)arg1;
-- (id)sectionIdForSection:(long long)arg1;
+- (unsigned long long)itemType;
+- (unsigned long long)sectionIdForSection:(long long)arg1;
 - (_Bool)isPlaying;
 - (void)didCancelSortingFilteringPicker:(id)arg1;
 - (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
@@ -103,14 +104,14 @@
 - (void)logAddSongsButtonAction;
 - (void)logCloseExtraSongsExplanation;
 - (void)logExtraSongsWhyAction;
-- (void)logPreviewWithAlbumCoverActionAtIndexPath:(id)arg1;
+- (void)logAudioPreviewAtIndexPath:(id)arg1 playing:(_Bool)arg2 isOriginCoverItem:(_Bool)arg3;
 - (void)setNeedNonCriticalModelUpdate;
 - (void)endObservingTrackStateAtIndexPath:(id)arg1;
 - (void)startObservingTrackStateAtIndexPath:(id)arg1;
 - (void)toggleTrackBanAtIndexPath:(id)arg1;
 - (void)toggleTrackLikeAtIndexPath:(id)arg1;
 - (void)presentEntitySectionViewModel:(id)arg1;
-- (void)presentMenuForSongAtIndexPath:(id)arg1 targetViewController:(id)arg2 withSenderControl:(id)arg3 andLogContext:(id)arg4;
+- (void)presentMenuForSongAtIndexPath:(id)arg1 targetViewController:(id)arg2 withSenderControl:(id)arg3;
 - (void)loadMetadataForArtistURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)artistsImageURLfromEntity:(id)arg1;
 - (void)setAvailableOffline:(_Bool)arg1;

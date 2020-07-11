@@ -16,13 +16,15 @@
     // Error parsing type: , name: underlineView
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: progressView
+    // Error parsing type: , name: modalPresentationHandler
+    // Error parsing type: , name: scrollView
+    // Error parsing type: , name: scrollViewContentView
     // Error parsing type: , name: cancelButton
     // Error parsing type: , name: saveButton
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)updateConstraints;
 - (id)initWithCoder:(id)arg1;
 
 @end

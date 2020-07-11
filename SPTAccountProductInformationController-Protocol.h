@@ -10,6 +10,7 @@
 @protocol SPTAccountProductInformationObserver;
 
 @protocol SPTAccountProductInformationController <NSObject>
+@property(readonly, nonatomic) _Bool isPremiumOnlyMarket;
 @property(readonly, nonatomic) _Bool upgradeAvailableButCantPurchase;
 @property(readonly, nonatomic) _Bool hasCanActivatePremiumTrialValue;
 @property(readonly, nonatomic) _Bool canActivatePremiumTrial;

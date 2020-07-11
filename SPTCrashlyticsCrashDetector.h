@@ -21,8 +21,10 @@
     NSMutableDictionary *_stateKeys;
     NSObject<OS_dispatch_queue> *_stateQueue;
     NSString *_appState;
+    NSString *_userIdentifier;
 }
 
+@property(retain, nonatomic) NSString *userIdentifier; // @synthesize userIdentifier=_userIdentifier;
 @property(retain, nonatomic) NSString *appState; // @synthesize appState=_appState;
 @property(nonatomic) _Bool terminated; // @synthesize terminated=_terminated;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *stateQueue; // @synthesize stateQueue=_stateQueue;
@@ -40,7 +42,6 @@
 - (void)setValue:(id)arg1 forStateKey:(id)arg2;
 - (void)setValuesForStateKeysWithDictionary:(id)arg1;
 - (void)leaveBreadcrumb:(id)arg1;
-- (void)setUserIdentifier:(id)arg1;
 - (void)appOperational;
 - (void)appShutdown;
 - (void)userDidEnterAuthenticationFlow;

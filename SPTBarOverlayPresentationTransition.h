@@ -10,14 +10,14 @@
 #import "UIViewControllerInteractiveTransitioning-Protocol.h"
 
 @class CADisplayLink, NSArray, NSString, UIView, UIViewController;
-@protocol SPTBarInteractiveTransitionParticipant, SPTBarOverlayPresentationTransitionDelegate, SPTBarOverlayViewController, UIViewControllerContextTransitioning;
+@protocol SPTBarInteractiveTransitionParticipant, SPTBarOverlayViewController, UIViewControllerContextTransitioning;
 
 @interface SPTBarOverlayPresentationTransition : NSObject <UIViewControllerAnimatedTransitioning, UIViewControllerInteractiveTransitioning>
 {
     _Bool _presenting;
     _Bool _completed;
     _Bool _interactionInProgress;
-    id <SPTBarOverlayPresentationTransitionDelegate> _delegate;
+    double _lastScrollViewOffsetY;
     UIView *_barView;
     NSArray *_barReplacementViews;
     id <UIViewControllerContextTransitioning> _transitioningContext;
@@ -25,29 +25,24 @@
     double _progressVelocity;
     double _progress;
     UIViewController<SPTBarInteractiveTransitionParticipant> *_barViewController;
-    UIView *_contentTabBar;
     UIViewController<SPTBarOverlayViewController> *_overlayViewController;
+    UIView *_tabBarView;
     UIView *_overlayCoverView;
     UIView *_barSnapshotView;
-    UIView *_backgroundSnapshotView;
-    UIView *_tabBarSnapShotView;
-    UIView *_backgroundOverlayView;
+    UIView *_tabBarSnapshotView;
     double _dismissalInitialTranslationY;
     struct CGPoint _completionTranslation;
     struct CGPoint _completionVelocity;
     struct CGRect _barFrame;
 }
 
-+ (_Bool)scrolledFastEnoughToDismiss:(struct CGPoint)arg1 scrollView:(id)arg2;
 @property(nonatomic) double dismissalInitialTranslationY; // @synthesize dismissalInitialTranslationY=_dismissalInitialTranslationY;
 @property(nonatomic) _Bool interactionInProgress; // @synthesize interactionInProgress=_interactionInProgress;
-@property(retain, nonatomic) UIView *backgroundOverlayView; // @synthesize backgroundOverlayView=_backgroundOverlayView;
-@property(retain, nonatomic) UIView *tabBarSnapShotView; // @synthesize tabBarSnapShotView=_tabBarSnapShotView;
-@property(retain, nonatomic) UIView *backgroundSnapshotView; // @synthesize backgroundSnapshotView=_backgroundSnapshotView;
+@property(retain, nonatomic) UIView *tabBarSnapshotView; // @synthesize tabBarSnapshotView=_tabBarSnapshotView;
 @property(retain, nonatomic) UIView *barSnapshotView; // @synthesize barSnapshotView=_barSnapshotView;
 @property(retain, nonatomic) UIView *overlayCoverView; // @synthesize overlayCoverView=_overlayCoverView;
+@property(retain, nonatomic) UIView *tabBarView; // @synthesize tabBarView=_tabBarView;
 @property(readonly, nonatomic) UIViewController<SPTBarOverlayViewController> *overlayViewController; // @synthesize overlayViewController=_overlayViewController;
-@property(readonly, nonatomic) UIView *contentTabBar; // @synthesize contentTabBar=_contentTabBar;
 @property(readonly, nonatomic) UIViewController<SPTBarInteractiveTransitionParticipant> *barViewController; // @synthesize barViewController=_barViewController;
 @property(nonatomic) struct CGPoint completionVelocity; // @synthesize completionVelocity=_completionVelocity;
 @property(nonatomic) struct CGPoint completionTranslation; // @synthesize completionTranslation=_completionTranslation;
@@ -59,7 +54,7 @@
 @property(nonatomic) struct CGRect barFrame; // @synthesize barFrame=_barFrame;
 @property(retain, nonatomic) NSArray *barReplacementViews; // @synthesize barReplacementViews=_barReplacementViews;
 @property(retain, nonatomic) UIView *barView; // @synthesize barView=_barView;
-@property(nonatomic) __weak id <SPTBarOverlayPresentationTransitionDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) double lastScrollViewOffsetY; // @synthesize lastScrollViewOffsetY=_lastScrollViewOffsetY;
 @property(readonly, nonatomic, getter=isPresenting) _Bool presenting; // @synthesize presenting=_presenting;
 - (void).cxx_destruct;
 - (void)completeInteractiveTransitionWithTranslation:(struct CGPoint)arg1 velocity:(struct CGPoint)arg2;
@@ -68,15 +63,16 @@
 - (void)animationEnded:(_Bool)arg1;
 - (void)animateTransition:(id)arg1;
 - (double)transitionDuration:(id)arg1;
+- (_Bool)scrolledFastEnoughToDismiss:(struct CGPoint)arg1 scrollView:(id)arg2;
+- (_Bool)scrolledFastEnoughToPresent:(struct CGPoint)arg1;
 - (_Bool)scrolledFastEnoughToDismiss:(struct CGPoint)arg1;
 - (double)progressPercent;
-@property(readonly, nonatomic) UIViewController *backgroundViewController; // @dynamic backgroundViewController;
 - (double)dampingMultiplierForProgressPercent:(double)arg1;
 - (void)update;
 - (void)startAnimatingTransition;
 - (void)destroyTransitioningContext;
 - (void)setupTransitioningContext:(id)arg1;
-- (id)initWithPresenting:(_Bool)arg1 barViewController:(id)arg2 bottomTabBar:(id)arg3 overlayViewController:(id)arg4;
+- (id)initWithPresenting:(_Bool)arg1 barViewController:(id)arg2 tabBarView:(id)arg3 overlayViewController:(id)arg4;
 
 // Remaining properties
 @property(readonly, nonatomic) long long completionCurve;

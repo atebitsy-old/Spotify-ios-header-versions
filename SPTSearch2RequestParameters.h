@@ -39,7 +39,7 @@
 @property(nonatomic) unsigned long long entityVersion; // @synthesize entityVersion=_entityVersion;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
-- (id)drillDownPathComponent;
+- (id)drilldownPathComponent;
 - (id)experienceSpecificQueryParameters;
 - (id)experiencePathComponent;
 - (_Bool)isEqualToSearchRequestParameters:(id)arg1;

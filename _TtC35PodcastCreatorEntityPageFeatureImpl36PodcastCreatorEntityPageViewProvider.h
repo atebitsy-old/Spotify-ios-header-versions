@@ -8,7 +8,7 @@
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl36PodcastCreatorEntityPageViewProvider : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: remoteConfigurationProperties
+    // Error parsing type: , name: flags
 }
 
 - (id)creatorLinksViewControllerForEpisodeURL:(id)arg1 context:(id)arg2;

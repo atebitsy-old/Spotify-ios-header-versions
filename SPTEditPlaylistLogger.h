@@ -7,16 +7,20 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter, SPTViewLogger;
+@protocol SPTLogCenter, SPTUBIMobileEditPlaylistEventFactory, SPTUserBehaviourInstrumentationLogger, SPTViewLogger;
 
 @interface SPTEditPlaylistLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     id <SPTViewLogger> _viewLogger;
+    id <SPTUBIMobileEditPlaylistEventFactory> _ubiEventFactory;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
     NSURL *_playlistURL;
 }
 
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIMobileEditPlaylistEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
@@ -25,10 +29,10 @@
 - (void)logPressedDoneInEditView;
 - (void)logUpdateDescription;
 - (void)logRenamePlaylist;
-- (void)logDeletedTrackInEditView;
-- (void)logMovedTrackInEditView;
+- (void)logDeletedTrackInEditViewWithURL:(id)arg1;
+- (void)logMovedTrackInEditViewWithURL:(id)arg1;
 - (void)logViewDidLoadWithPageIdentifier:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 playlistURL:(id)arg3;
+- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 playlistURL:(id)arg3 ubiLogger:(id)arg4 ubiEventFactory:(id)arg5;
 
 @end
 

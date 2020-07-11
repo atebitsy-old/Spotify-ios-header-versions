@@ -16,14 +16,12 @@
     _Bool shouldShowPositiveFeedback;
     _Bool feedbackButtonEnabled;
     _Bool feedbackButtonSelected;
-    _Bool centerAlignText;
     id <SPTNowPlayingInformationUnitViewModel> _trackInfoModel;
     id <SPTPlayer> _player;
 }
 
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTNowPlayingInformationUnitViewModel> trackInfoModel; // @synthesize trackInfoModel=_trackInfoModel;
-@property(readonly, nonatomic) _Bool centerAlignText; // @synthesize centerAlignText;
 @property(readonly, nonatomic, getter=isFeedbackButtonSelected) _Bool feedbackButtonSelected; // @synthesize feedbackButtonSelected;
 @property(readonly, nonatomic, getter=isFeedbackButtonEnabled) _Bool feedbackButtonEnabled; // @synthesize feedbackButtonEnabled;
 @property(readonly, nonatomic) _Bool shouldShowPositiveFeedback; // @synthesize shouldShowPositiveFeedback;

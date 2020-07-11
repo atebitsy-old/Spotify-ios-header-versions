@@ -9,7 +9,7 @@
 #import "BMEventObserver-Protocol.h"
 
 @class NSString;
-@protocol BMPlaybackIdentity, BMPlaybackTimeObservable, OS_dispatch_queue, SPTAdsBaseCosmosBridge, SPTAdsManager, SPTResolver;
+@protocol BMPlaybackIdentity, BMPlaybackTimeObservable, BMPlaybackTimeObserverCancellationToken, OS_dispatch_queue, SPTAdsBaseCosmosBridge, SPTAdsManager, SPTResolver;
 
 @interface SPTAdNewVideoEventReporter : NSObject <BMEventObserver>
 {
@@ -23,6 +23,7 @@
     unsigned long long _quartilesPlayed;
     id <BMPlaybackIdentity> _currentIdentity;
     id <BMPlaybackTimeObservable> _timeObservable;
+    id <BMPlaybackTimeObserverCancellationToken> _cancellationToken;
     double _currentPosition;
     id <SPTAdsManager> _adsManager;
 }
@@ -32,6 +33,7 @@
 @property(nonatomic) _Bool ended; // @synthesize ended=_ended;
 @property(nonatomic) _Bool started; // @synthesize started=_started;
 @property(nonatomic) double currentPosition; // @synthesize currentPosition=_currentPosition;
+@property(retain, nonatomic) id <BMPlaybackTimeObserverCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(nonatomic) __weak id <BMPlaybackTimeObservable> timeObservable; // @synthesize timeObservable=_timeObservable;
 @property(retain, nonatomic) id <BMPlaybackIdentity> currentIdentity; // @synthesize currentIdentity=_currentIdentity;
 @property(nonatomic) _Bool shouldFireImpressionOnStart; // @synthesize shouldFireImpressionOnStart=_shouldFireImpressionOnStart;

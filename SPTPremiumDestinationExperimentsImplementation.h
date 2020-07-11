@@ -10,7 +10,7 @@
 #import "SPTPremiumDestinationExperiments-Protocol.h"
 
 @class NSString;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver;
+@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTRemoteConfigurationResolver;
 
 @interface SPTPremiumDestinationExperimentsImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTPremiumDestinationExperiments>
 {
@@ -18,7 +18,6 @@
     _Bool _shouldPresentImplicitNotificationAlertController;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
-    id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _shouldUseDevEndpointSettingSignal;
     id <SPTFeatureFlagSignal> _shouldPresentImplicitNotificationSignal;
 }
@@ -27,7 +26,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> shouldPresentImplicitNotificationSignal; // @synthesize shouldPresentImplicitNotificationSignal=_shouldPresentImplicitNotificationSignal;
 @property(nonatomic) _Bool shouldUseDevEndpointSetting; // @synthesize shouldUseDevEndpointSetting=_shouldUseDevEndpointSetting;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> shouldUseDevEndpointSettingSignal; // @synthesize shouldUseDevEndpointSettingSignal=_shouldUseDevEndpointSettingSignal;
-@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
@@ -36,13 +34,11 @@
 - (void)setupUseDevEndpointSetting;
 - (id)featureProperties;
 - (void)loadFlags;
-- (id)premiumOnlyMarkets;
-@property(readonly, nonatomic) _Bool isPremiumOnlyMarket;
 @property(readonly, nonatomic) _Bool shouldShowLegacyPD;
 @property(readonly, nonatomic) _Bool shouldFetchPremiumDestinationHubsFromBackendV4;
 @property(readonly, nonatomic) _Bool shouldFetchPremiumDestinationHubsFromBackendV3;
 @property(readonly, nonatomic) _Bool shouldUseHeaderVoiceoverAccessible;
-- (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2 productState:(id)arg3;
+- (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

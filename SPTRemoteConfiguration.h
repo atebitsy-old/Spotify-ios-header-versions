@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSDictionary, SPTRawConfiguration, SPTRemoteConfigurationMessageCreator;
-@protocol SPTRemoteConfigurationContext, SPTRemoteConfigurationDebugLogger, SPTRemoteConfigurationEventLogger, SPTRemoteConfigurationPersistence, SPTRemoteConfigurationTransport;
+@protocol RCCCoreBridge, SPTRemoteConfigurationContext, SPTRemoteConfigurationDebugLogger, SPTRemoteConfigurationEventLogger, SPTRemoteConfigurationPersistence, SPTRemoteConfigurationTransport;
 
 @interface SPTRemoteConfiguration : NSObject
 {
@@ -17,12 +17,14 @@
     id <SPTRemoteConfigurationDebugLogger> _debugLogger;
     id <SPTRemoteConfigurationPersistence> _persistence;
     id <SPTRemoteConfigurationContext> _remoteConfigurationContext;
+    id <RCCCoreBridge> _coreBridge;
     NSDictionary *_localPropertyOverrides;
     SPTRemoteConfigurationMessageCreator *_messageCreator;
 }
 
 @property(retain, nonatomic) SPTRemoteConfigurationMessageCreator *messageCreator; // @synthesize messageCreator=_messageCreator;
 @property(retain, nonatomic) NSDictionary *localPropertyOverrides; // @synthesize localPropertyOverrides=_localPropertyOverrides;
+@property(readonly, nonatomic) id <RCCCoreBridge> coreBridge; // @synthesize coreBridge=_coreBridge;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationContext> remoteConfigurationContext; // @synthesize remoteConfigurationContext=_remoteConfigurationContext;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationPersistence> persistence; // @synthesize persistence=_persistence;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationDebugLogger> debugLogger; // @synthesize debugLogger=_debugLogger;
@@ -50,7 +52,7 @@
 - (void)activateFetched;
 - (void)fetchConfigurationWithFetchType:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithTransport:(id)arg1 eventLogger:(id)arg2 debugLogger:(id)arg3 clientID:(id)arg4 clientVersion:(id)arg5;
-- (id)initWithTransport:(id)arg1 eventLogger:(id)arg2 debugLogger:(id)arg3 remoteConfigurationContext:(id)arg4;
+- (id)initWithTransport:(id)arg1 eventLogger:(id)arg2 debugLogger:(id)arg3 remoteConfigurationContext:(id)arg4 coreBridge:(id)arg5;
 
 @end
 

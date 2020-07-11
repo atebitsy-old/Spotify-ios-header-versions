@@ -6,7 +6,7 @@
 
 #import "SPTService-Protocol.h"
 
-@class SPTDynamicSignupFlowController, SPTLoginDelayedSignupAccountSwitcher, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter;
+@class SPTDynamicSignupFlowController, SPTLoginDbManager, SPTLoginDelayedSignupAccountSwitcher, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter;
 @protocol SPTCredentialSource, SPTDialogController, SPTLoginKeychainManager, SPTLoginLogoutHandler, SPTLoginNavigationCoordinator, SPTLoginServiceObserver, SPTLoginStateController, SPTSignupAttemptTracker;
 
 @protocol SPTLoginService <SPTService>
@@ -19,6 +19,7 @@
 - (void)didLoginWithPhoneNumber;
 - (void)removeObserver:(id <SPTLoginServiceObserver>)arg1;
 - (void)addObserver:(id <SPTLoginServiceObserver>)arg1;
+- (SPTLoginDbManager *)provideStickyCredentialsDbManager;
 - (id <SPTCredentialSource>)provideCredentialSource;
 - (SPTLoginSlideUpModalPresenter *)provideSlideUpModalPresenter;
 - (id <SPTLoginLogoutHandler>)provideLogoutHandler;

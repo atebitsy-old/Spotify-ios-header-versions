@@ -17,15 +17,13 @@
     // Error parsing type: , name: makeViewBinder
     // Error parsing type: , name: logger
     // Error parsing type: , name: contextMenuDelegate
-    // Error parsing type: , name: loopControllerConnected
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
-- (void)dealloc;
 - (void)didPressCancelNavigationItem;
-- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 @property(nonatomic) __weak id <SPTContextMenuContentViewControllerDelegate> contextMenuDelegate; // @synthesize contextMenuDelegate;

@@ -9,6 +9,9 @@
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl44SPTPodcastCreatorEntityPageFeatureProperties : NSObject
 {
     // Error parsing type: , name: podcastCreatorEntityPageEnabled
+    // Error parsing type: , name: podcastCreatorEntityPageEntryPointSearchReroutingEnabled
+    // Error parsing type: , name: podcastCreatorEntityPageEntryPointPodcastShowPageEnabled
+    // Error parsing type: , name: podcastCreatorEntityPageEntryPointPodcastEpisodePageEnabled
 }
 
 - (id)init;

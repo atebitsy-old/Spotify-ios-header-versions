@@ -8,7 +8,7 @@
 
 #import "SPTShareViewControllerDelegate-Protocol.h"
 
-@class NSString, SPTProgressView, SPTShareHandlerFactory, SPTShareViewController, UIViewController;
+@class NSString, SPTProgressView, SPTShareFeatureProperties, SPTShareHandlerFactory, SPTShareViewController, SPTSharingSDK, UIViewController;
 @protocol SPTAlertController, SPTShareDeeplinkHandler, SPTShareHandler;
 
 @interface SPTSharePresenter : NSObject <SPTShareViewControllerDelegate>
@@ -19,12 +19,16 @@
     id <SPTAlertController> _alertController;
     id <SPTShareDeeplinkHandler> _deeplinkHandler;
     id <SPTShareHandler> _shareHandler;
+    SPTSharingSDK *_sharingSDK;
     SPTProgressView *_progressView;
+    SPTShareFeatureProperties *_featureProperties;
     struct CGRect _selectionFrame;
 }
 
 @property(nonatomic) struct CGRect selectionFrame; // @synthesize selectionFrame=_selectionFrame;
+@property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
+@property(retain, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) id <SPTShareHandler> shareHandler; // @synthesize shareHandler=_shareHandler;
 @property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(readonly, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
@@ -34,6 +38,10 @@
 - (void).cxx_destruct;
 - (_Bool)shouldShowProgressViewForShareDestination:(id)arg1;
 - (void)shareViewController:(id)arg1 shareData:(id)arg2 didSelectShareDestination:(id)arg3;
+- (id)appendUTMTagsForURL:(id)arg1 destination:(id)arg2;
+- (void)shareWithData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)shareWithBackendGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)shareWithLocalGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)performShareDestination:(id)arg1 shareData:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)presentViewController:(id)arg1;
 - (void)discardChildViewControllerIfNecessary;
@@ -41,7 +49,7 @@
 - (void)dismissWithCompletion:(CDUnknownBlockType)arg1;
 - (void)presentProgressView;
 - (void)presentAlertControllerWithModel:(id)arg1;
-- (id)initWithContextViewController:(id)arg1 shareViewController:(id)arg2 shareHandlerFactory:(id)arg3 alertController:(id)arg4 deeplinkHandler:(id)arg5;
+- (id)initWithContextViewController:(id)arg1 shareViewController:(id)arg2 shareHandlerFactory:(id)arg3 alertController:(id)arg4 deeplinkHandler:(id)arg5 featureProperties:(id)arg6 sharingSDK:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

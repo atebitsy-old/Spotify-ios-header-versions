@@ -9,7 +9,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLoginKeychainCredentialsWriter, SPTLoginLinkAccountManager, SPTLoginSignupMarketingOptInFlashController;
-@protocol SPTCoreService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTPreSignupExperimentationService, SPTSessionService, SPTURIDispatchService;
+@protocol ProfileFeature, SPTCoreService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTPreSignupExperimentationService, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTLoginSessionServiceImplementation : NSObject <SPTService>
 {
@@ -22,6 +22,7 @@
     id <SPTNetworkService> _networkService;
     id <SPTGLUEService> _glueService;
     id <SPTPreSignupExperimentationService> _psesService;
+    id <ProfileFeature> _profileService;
     SPTLoginKeychainCredentialsWriter *_credentialsWriter;
     SPTLoginSignupMarketingOptInFlashController *_marketingOptInController;
     SPTLoginLinkAccountManager *_linkAccountManager;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) SPTLoginLinkAccountManager *linkAccountManager; // @synthesize linkAccountManager=_linkAccountManager;
 @property(retain, nonatomic) SPTLoginSignupMarketingOptInFlashController *marketingOptInController; // @synthesize marketingOptInController=_marketingOptInController;
 @property(retain, nonatomic) SPTLoginKeychainCredentialsWriter *credentialsWriter; // @synthesize credentialsWriter=_credentialsWriter;
+@property(nonatomic) __weak id <ProfileFeature> profileService; // @synthesize profileService=_profileService;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationService> psesService; // @synthesize psesService=_psesService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
@@ -46,6 +48,7 @@
 - (void)unregisterLinkAccountWebgateHTTPHost;
 - (void)registerLinkAccountWebgateHTTPHost;
 - (void)unload;
+- (void)idleStateWasReached;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

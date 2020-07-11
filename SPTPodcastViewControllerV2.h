@@ -91,6 +91,7 @@
 - (void)episodeDescriptionDidCollapse;
 - (void)episodeDescriptionDidExpand;
 - (void)chipsSectionTableViewCell:(id)arg1 didSelectTopicCategory:(id)arg2;
+- (void)viewModel:(id)arg1 showContextMenuForTrailerEpisode:(id)arg2 atIndexPath:(id)arg3;
 - (void)viewModel:(id)arg1 scrollToLatestPlayedEpisodeAtIndexPath:(id)arg2;
 - (void)viewModelDidSelectContextMenuButton:(id)arg1;
 - (void)podcastViewModelDidUpdatePlaybackRestrictions:(id)arg1;

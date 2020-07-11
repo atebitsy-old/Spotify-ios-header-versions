@@ -7,6 +7,8 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTYourLibraryMusicTestManager <NSObject>
+@property(readonly, nonatomic, getter=isLikedSongsMinorTableUpdateMechanismEnabled) _Bool likedSongsMinorTableUpdateMechanismEnabled;
+@property(readonly, nonatomic, getter=isOfflineArtistEnabled) _Bool offlineArtistEnabled;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isPageLoaderEnabledForLikedSongs) _Bool pageLoaderEnabledForLikedSongs;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;

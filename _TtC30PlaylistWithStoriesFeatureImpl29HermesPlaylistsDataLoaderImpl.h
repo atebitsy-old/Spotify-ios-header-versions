@@ -10,9 +10,7 @@
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: hermesController
-    // Error parsing type: , name: cosmosDataLoader
     // Error parsing type: , name: request
-    // Error parsing type: , name: requestToken
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "SPTUserBehaviourInstrumentationService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
+@class NSString, SPTAllocationContext, SPTObserverManager;
 @protocol SPTContainerService, SPTDebugService, SPTEventSenderService;
 
 @interface SPTUserBehaviourInstrumentationServiceImplementation : NSObject <SPTUserBehaviourInstrumentationService>
@@ -16,13 +16,17 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTContainerService> _containerService;
     id <SPTDebugService> _debugService;
+    SPTObserverManager *_observerManager;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 - (void).cxx_destruct;
+- (void)removeObserver:(id)arg1;
+- (void)addObserver:(id)arg1;
 - (id)provideUserBehaviourInstrumentationStateViewController;
 - (id)provideLogger;
 - (void)unload;

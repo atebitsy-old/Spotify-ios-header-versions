@@ -13,6 +13,5 @@
 - (id <SPTFreeTierPlaylistSortingFiltering>)provideSortingFilteringForPlaylistURL:(NSURL *)arg1;
 - (id <SPTFreeTierPlaylistTestManager>)provideTestManager;
 - (id <SPTFreeTierPlaylistModel>)providePlaylistModelForURL:(NSURL *)arg1 formatListType:(NSString *)arg2;
-- (id <SPTFreeTierPlaylistModel>)providePlaylistModelForURL:(NSURL *)arg1;
 @end
 

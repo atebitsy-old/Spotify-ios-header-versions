@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistTrackViewModel-Protocol.h"
 
 @class NSArray, NSDate, NSDictionary, NSString, NSURL, UIColor;
-@protocol SPTPlaylistExtenderItem, SPTVISREFFlagsService;
+@protocol SPTPlaylistExtenderItem;
 
 @interface SPTFreeTierPlaylistExtenderTrackViewModelImplementation : NSObject <SPTFreeTierPlaylistTrackViewModel>
 {
@@ -18,10 +18,8 @@
     NSString *freeformDescription;
     NSDictionary *formatListAttributes;
     id <SPTPlaylistExtenderItem> _playlistExtenderItem;
-    id <SPTVISREFFlagsService> _visualRefreshService;
 }
 
-@property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;
 @property(nonatomic) _Bool isPlexLoading; // @synthesize isPlexLoading=_isPlexLoading;
 @property(nonatomic) _Bool isPlayingTrack; // @synthesize isPlayingTrack=_isPlayingTrack;
 @property(retain, nonatomic) id <SPTPlaylistExtenderItem> playlistExtenderItem; // @synthesize playlistExtenderItem=_playlistExtenderItem;
@@ -57,7 +55,7 @@
 @property(readonly, copy, nonatomic) NSString *title;
 @property(readonly, nonatomic) NSURL *albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName;
-- (id)initWithPlaylistExtenderItem:(id)arg1 isPlayingTrack:(_Bool)arg2 isPlexLoading:(_Bool)arg3 visualRefreshService:(id)arg4;
+- (id)initWithPlaylistExtenderItem:(id)arg1 isPlayingTrack:(_Bool)arg2 isPlexLoading:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -49,7 +49,6 @@
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
-- (void)updateAccessibilityElements;
 - (void)navigationBarHeightDidChange:(double)arg1;
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)setImage:(id)arg1;

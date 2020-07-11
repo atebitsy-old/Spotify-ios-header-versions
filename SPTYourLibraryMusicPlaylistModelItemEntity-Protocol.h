@@ -6,11 +6,9 @@
 
 #import "SPTYourLibraryMusicModelItemEntity-Protocol.h"
 
-@class NSString;
 @protocol SPTYourLibraryMusicFolderEntity, SPTYourLibraryMusicLikedSongsModelEntity, SPTYourLibraryMusicPlaylistEntity;
 
 @protocol SPTYourLibraryMusicPlaylistModelItemEntity <SPTYourLibraryMusicModelItemEntity>
-@property(readonly, copy, nonatomic) NSString *personalizedByline;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicLikedSongsModelEntity> favoriteMixEntity;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicFolderEntity> folderEntity;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicPlaylistEntity> playlistEntity;

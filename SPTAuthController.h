@@ -31,6 +31,7 @@
 - (CDUnknownBlockType)completionForTask:(id)arg1;
 - (void)removeTask:(id)arg1;
 - (void)addTask:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)authWithOneTimeTokenCredential:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)authWithCredentials:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithLoginController:(id)arg1 scheduler:(id)arg2;
 

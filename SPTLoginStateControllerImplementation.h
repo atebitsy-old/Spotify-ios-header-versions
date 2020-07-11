@@ -9,7 +9,7 @@
 #import "SPTCoreLoginControllerDelegate-Protocol.h"
 #import "SPTLoginStateController-Protocol.h"
 
-@class NSError, NSString, SPCore, SPTHTTPService, SPTImageLoaderServiceManager, SPTLoginDeferredDispatcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTObserverManager, SPTSigninWithAppleHandler, SPTStartupTracer;
+@class NSError, NSString, SPCore, SPTHTTPService, SPTImageLoaderServiceManager, SPTLogin5TestManager, SPTLoginDbManager, SPTLoginDeferredDispatcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTObserverManager, SPTSigninWithAppleHandler, SPTStartupTracer;
 @protocol SPTAlertInterface, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTLoginKeychainManager, SPTLoginLogger, SPTLoginPhoneNumberLoginStateDelegate, SPTMetaViewController;
 
 @interface SPTLoginStateControllerImplementation : NSObject <SPTCoreLoginControllerDelegate, SPTLoginStateController>
@@ -36,9 +36,13 @@
     id <SPTLoginLogger> _loginLogger;
     SPTObserverManager *_observerManager;
     SPTSigninWithAppleHandler *_appleHandler;
+    SPTLogin5TestManager *_login5TestManager;
+    SPTLoginDbManager *_databaseManager;
 }
 
 @property(nonatomic) _Bool userDidSignUp; // @synthesize userDidSignUp=_userDidSignUp;
+@property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
+@property(readonly, nonatomic) SPTLogin5TestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
 @property(readonly, nonatomic) SPTSigninWithAppleHandler *appleHandler; // @synthesize appleHandler=_appleHandler;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) id <SPTLoginLogger> loginLogger; // @synthesize loginLogger=_loginLogger;
@@ -91,7 +95,7 @@
 - (void)didLogin;
 @property(readonly, nonatomic, getter=isLoggedIn) _Bool loggedIn;
 @property(nonatomic) _Bool allowErrorDispatch;
-- (id)initWithCore:(id)arg1 logCenter:(id)arg2 crashReporter:(id)arg3 startupTracer:(id)arg4 containerLogoutHandler:(CDUnknownBlockType)arg5 httpService:(id)arg6 imageLoaderServiceManager:(id)arg7 keychainManager:(id)arg8 metaViewController:(id)arg9 alertInterface:(id)arg10 deferredErrorDispatcher:(id)arg11 linkDispatcher:(id)arg12 errorDialogController:(id)arg13 errorDecorator:(id)arg14 loginLogger:(id)arg15 appleHandler:(id)arg16;
+- (id)initWithCore:(id)arg1 logCenter:(id)arg2 crashReporter:(id)arg3 startupTracer:(id)arg4 containerLogoutHandler:(CDUnknownBlockType)arg5 httpService:(id)arg6 imageLoaderServiceManager:(id)arg7 keychainManager:(id)arg8 metaViewController:(id)arg9 alertInterface:(id)arg10 deferredErrorDispatcher:(id)arg11 linkDispatcher:(id)arg12 errorDialogController:(id)arg13 errorDecorator:(id)arg14 loginLogger:(id)arg15 appleHandler:(id)arg16 login5TestManager:(id)arg17 databaseManager:(id)arg18;
 - (id)sessionStateAwaiter;
 - (id)waitForLoginCompletion;
 - (id)waitForLogoutCompletion;

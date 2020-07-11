@@ -48,7 +48,6 @@
 - (id)provideSortingFilteringForPlaylistURL:(id)arg1;
 - (id)provideTestManager;
 - (id)providePlaylistModelForURL:(id)arg1 formatListType:(id)arg2;
-- (id)providePlaylistModelForURL:(id)arg1;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

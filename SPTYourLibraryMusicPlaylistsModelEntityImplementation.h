@@ -28,9 +28,9 @@
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) _Bool hasHiddenContent; // @synthesize hasHiddenContent=_hasHiddenContent;
 - (void).cxx_destruct;
-- (void)setUpItemsWithPlaylistFolderItems:(id)arg1 onDemandSet:(id)arg2 personalizedBylineProvider:(id)arg3;
+- (void)setUpItemsWithPlaylistFolderItems:(id)arg1 onDemandSet:(id)arg2;
 - (void)setUpFavoriteMix:(id)arg1;
-- (id)initWithPlaylistFolderItems:(id)arg1 favoriteMixEntity:(id)arg2 onDemandSet:(id)arg3 personalizedBylineProvider:(id)arg4;
+- (id)initWithPlaylistFolderItems:(id)arg1 favoriteMixEntity:(id)arg2 onDemandSet:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

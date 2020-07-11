@@ -8,6 +8,8 @@
 
 @interface _TtC22ConnectUIV2FeatureImpl36DevicePickerInstrumentationLoggerUBI : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: factory
 }
 
 @end

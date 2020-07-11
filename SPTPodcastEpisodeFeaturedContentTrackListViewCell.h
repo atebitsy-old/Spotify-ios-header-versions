@@ -6,8 +6,8 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class GLUEAccessoryIconButton, SPTPodcastEntity, UIImageView, UILabel, UIView;
-@protocol SPTPodcastEpisodeFeaturedContentTrackActionsDelegate;
+@class GLUEAccessoryIconButton, UIImageView, UILabel, UIView;
+@protocol SPTEpisodeSegmentsEntity, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackListViewCell : UITableViewCell
 {
@@ -17,14 +17,14 @@
     UILabel *_timeLabel;
     GLUEAccessoryIconButton *_contextMenuButton;
     UIView *_timelineView;
-    SPTPodcastEntity *_currentPodcastEntity;
+    id <SPTEpisodeSegmentsEntity> _currentEpisodeSegmentsEntity;
     id <SPTPodcastEpisodeFeaturedContentTrackActionsDelegate> _trackActionHandler;
 }
 
 + (long long)numberOfLinesForText:(id)arg1 containerWidth:(double)arg2;
 + (double)sizeForCellWithTitle:(id)arg1 containerWidth:(double)arg2;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentTrackActionsDelegate> trackActionHandler; // @synthesize trackActionHandler=_trackActionHandler;
-@property(retain, nonatomic) SPTPodcastEntity *currentPodcastEntity; // @synthesize currentPodcastEntity=_currentPodcastEntity;
+@property(retain, nonatomic) id <SPTEpisodeSegmentsEntity> currentEpisodeSegmentsEntity; // @synthesize currentEpisodeSegmentsEntity=_currentEpisodeSegmentsEntity;
 @property(retain, nonatomic) UIView *timelineView; // @synthesize timelineView=_timelineView;
 @property(retain, nonatomic) GLUEAccessoryIconButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(retain, nonatomic) UILabel *timeLabel; // @synthesize timeLabel=_timeLabel;
@@ -32,6 +32,7 @@
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *trackImageView; // @synthesize trackImageView=_trackImageView;
 - (void).cxx_destruct;
+- (id)formattedTrackStartTimeForEntity:(id)arg1;
 - (void)didTouchContextMenu;
 - (void)setupConstraints;
 - (void)setupLayout;

@@ -8,12 +8,14 @@
 
 #import "VISREFHeaderComponent-Protocol.h"
 
-@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UIImageView, UILayoutGuide, UIStackView, UIView, VISREFCreatorRowView, VISREFExpandableTextView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
+@class NSArray, NSLayoutConstraint, NSString, SPTEncoreLabel, UIAccessibilityElement, UIButton, UIImage, UIImageView, UILayoutGuide, UIStackView, UIView, VISREFCreatorRowView, VISREFExpandableTextView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
 
 @interface VISREFArtworkContentView : VISREFTopAndBodyContentView <VISREFHeaderComponent>
 {
     UILayoutGuide *_titlePositionLayoutGuide;
     SPTEncoreLabel *_titleLabel;
+    UIAccessibilityElement *_accessibilityContentContainer;
+    NSArray *_actionRowAccessibilityElements;
     UIButton *_contextButton;
     UIButton *_feedbackButton;
     UIButton *_offlineButton;
@@ -52,13 +54,16 @@
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *feedbackButton; // @synthesize feedbackButton=_feedbackButton;
 @property(retain, nonatomic) UIButton *contextButton; // @synthesize contextButton=_contextButton;
+@property(readonly, copy, nonatomic) NSArray *actionRowAccessibilityElements; // @synthesize actionRowAccessibilityElements=_actionRowAccessibilityElements;
+@property(retain, nonatomic) UIAccessibilityElement *accessibilityContentContainer; // @synthesize accessibilityContentContainer=_accessibilityContentContainer;
 @property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILayoutGuide *titlePositionLayoutGuide; // @synthesize titlePositionLayoutGuide=_titlePositionLayoutGuide;
 - (void).cxx_destruct;
 - (_Bool)canHandleTapAtCreatorView;
 - (void)didTapCreatorRow;
 - (void)updateTopMargin;
-@property(readonly, nonatomic) UIView *accessibilityContentContainer;
+- (void)accessibilityHideViews:(id)arg1;
+- (void)updateAccessibilityFrame;
 - (void)updateAccessibilityLabels;
 - (void)layoutSubviews;
 - (void)updateActionRow;

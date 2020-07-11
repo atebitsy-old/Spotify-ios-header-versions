@@ -9,7 +9,7 @@
 #import "SPTLoginAppleAuthorizationControllerDelegate-Protocol.h"
 #import "SPTLoginFacebookAuthenticationControllerDelegate-Protocol.h"
 
-@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginErrorDecorator, SPTLoginFacebookAuthenticationController, SPTLoginWelcomeViewLogger;
+@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginFacebookAuthenticationController, SPTLoginWelcomeViewLogger;
 @protocol SPTDialogController, SPTLoginStateController, SPTLoginWelcomeViewModelDelegate;
 
 @interface SPTLoginWelcomeViewModel : NSObject <SPTLoginFacebookAuthenticationControllerDelegate, SPTLoginAppleAuthorizationControllerDelegate>
@@ -23,8 +23,10 @@
     SPTLoginAppleAuthorizationController *_appleAuthController;
     id <SPTDialogController> _dialogController;
     SPTDynamicSignupFlowController *_flowController;
+    SPTLoginDbManager *_databaseManager;
 }
 
+@property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(nonatomic) _Bool savedCredentialsDialogShownOnce; // @synthesize savedCredentialsDialogShownOnce=_savedCredentialsDialogShownOnce;
 @property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
@@ -47,6 +49,7 @@
 - (void)showSavedCredentialsDialog;
 - (id)welcomeTitle;
 - (void)logoutForgetUser:(_Bool)arg1;
+- (void)cleanStickyCredentialsData;
 - (void)navigateToLogin;
 - (void)loginWithFacebook;
 - (void)presentSignupStepOneViewController;
@@ -58,7 +61,7 @@
 - (id)facebookButtonTextWithStyle:(id)arg1;
 - (id)loginButtonText;
 - (id)spotifyLogo;
-- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6;
+- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6 databaseManager:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

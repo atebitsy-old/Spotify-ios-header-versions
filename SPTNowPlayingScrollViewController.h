@@ -12,17 +12,18 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class GLUEGradientView, NSLayoutConstraint, NSNotificationCenter, NSString, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentCornersView, SPTNowPlayingScrollViewModel, SPTTheme, UICollectionView, UICollectionViewFlowLayout;
-@protocol SPTNowPlayingContentContainingViewController;
+@class GLUEGradientView, NSLayoutConstraint, NSNotificationCenter, NSString, SPTNowPlayingBackgroundViewController, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentCornersView, SPTNowPlayingScrollViewModel, SPTTheme, UICollectionView, UICollectionViewFlowLayout;
+@protocol SPTNowPlayingContentContainingViewController, SPTNowPlayingScrollViewControllerGestureDelegate;
 
 @interface SPTNowPlayingScrollViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, SPTNowPlayingScrollViewModelDelegate, SPTNowPlayingContentViewControllerObserver, SPTNowPlayingContainerIdleMonitorReceiving>
 {
     _Bool _isShowingScrollComponents;
     _Bool _scrollViewIsAnimating;
     UICollectionView *_collectionView;
+    id <SPTNowPlayingScrollViewControllerGestureDelegate> _gestureDelegate;
     UICollectionViewFlowLayout *_collectionViewLayout;
     UIViewController<SPTNowPlayingContentContainingViewController> *_nowPlayingViewController;
-    UIViewController *_backgroundViewController;
+    SPTNowPlayingBackgroundViewController *_backgroundViewController;
     NSLayoutConstraint *_npvHeightConstraint;
     SPTNowPlayingScrollViewModel *_scrollViewModel;
     SPTTheme *_theme;
@@ -41,9 +42,10 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTNowPlayingScrollViewModel *scrollViewModel; // @synthesize scrollViewModel=_scrollViewModel;
 @property(retain, nonatomic) NSLayoutConstraint *npvHeightConstraint; // @synthesize npvHeightConstraint=_npvHeightConstraint;
-@property(readonly, nonatomic) UIViewController *backgroundViewController; // @synthesize backgroundViewController=_backgroundViewController;
+@property(readonly, nonatomic) SPTNowPlayingBackgroundViewController *backgroundViewController; // @synthesize backgroundViewController=_backgroundViewController;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContentContainingViewController> *nowPlayingViewController; // @synthesize nowPlayingViewController=_nowPlayingViewController;
 @property(retain, nonatomic) UICollectionViewFlowLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
+@property(nonatomic) __weak id <SPTNowPlayingScrollViewControllerGestureDelegate> gestureDelegate; // @synthesize gestureDelegate=_gestureDelegate;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 - (void).cxx_destruct;
 - (struct CGSize)sizeForItemAtIndex:(unsigned long long)arg1;
@@ -86,7 +88,6 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)setupCollectionViewContentInset;
 - (void)updateNPVSize;
-- (void)setupBackgroundConstraints;
 - (void)setupBackgroundViews;
 - (void)setupUI;
 - (void)viewDidLoad;

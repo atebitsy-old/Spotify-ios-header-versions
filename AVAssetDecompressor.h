@@ -11,6 +11,7 @@
 @interface AVAssetDecompressor : NSObject
 {
     struct deque<short, std::__1::allocator<short>> _buffer;
+    struct deque<float, std::__1::allocator<float>> _float_buffer;
     AVAsset *_asset;
     AVAssetReader *_asset_reader;
     AVAssetReaderTrackOutput *_track_output;
@@ -19,13 +20,16 @@
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
+- (_Bool)scheduledReadFloatHandler:(id)arg1;
 - (_Bool)scheduledReadHandler:(id)arg1;
+- (_Bool)readSomeFloatSamples;
 - (_Bool)readSomeSamples;
 - (_Bool)prepareAssetWithUrl:(id)arg1;
 - (_Bool)prepareAssetReaderAtTime:(double)arg1;
 - (id)outputSettingsFromAudioFormat:(const struct AudioStreamBasicDescription *)arg1;
 - (double)duration;
 - (_Bool)seekTo:(double)arg1;
+- (int)decodeToFloatBuffer:(float *)arg1 numberOfFrames:(int)arg2;
 - (int)decodeToBuffer:(short *)arg1 numberOfFrames:(int)arg2;
 - (void)dealloc;
 - (id)initWithURL:(id)arg1 audioFormat:(const struct AudioStreamBasicDescription *)arg2;

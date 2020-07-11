@@ -11,14 +11,14 @@
 
 @interface SPTPodcastUIEditorialHeaderStyle : NSObject
 {
+    double _podcastUIWidescreenMetric;
     id <GLUETheme> _theme;
 }
 
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+@property(nonatomic) double podcastUIWidescreenMetric; // @synthesize podcastUIWidescreenMetric=_podcastUIWidescreenMetric;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabelStyle *subtitleLabelStyle;
-- (double)getDescriptionHeightForModel:(id)arg1 containerWidth:(double)arg2;
-- (struct CGSize)componentSizeForModel:(id)arg1 containerWidth:(double)arg2;
 - (id)initWithTheme:(id)arg1;
 
 @end

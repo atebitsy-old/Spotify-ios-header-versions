@@ -15,16 +15,17 @@
     NSArray *_components;
 }
 
-+ (id)factory;
++ (id)factoryWithPageReason:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)itemFactoryWithIdentifier:(id)arg1 position:(long long)arg2 uri:(id)arg3;
 - (id)appearsOnCarouselFactory;
 - (id)trackCloudFactory;
 - (id)shufflePlayButtonFactory;
 - (id)addToPlaylistButtonFactory;
 - (id)toolbarFactory;
 - (id)_location;
-- (id)init;
+- (id)initWithPageReason:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -7,9 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray;
+@protocol BMPlaybackTimeObserverCancellationToken;
 
 @protocol BMPlaybackTimeObservable <NSObject>
-- (void)addObserverForPeriodicInterval:(double)arg1 observer:(void (^)(double, double))arg2;
-- (void)addObserverForMediaPositions:(NSArray *)arg1 observer:(void (^)(double, double))arg2;
+- (void)removeObserver:(id <BMPlaybackTimeObserverCancellationToken>)arg1;
+- (id <BMPlaybackTimeObserverCancellationToken>)addObserverForPeriodicInterval:(double)arg1 observer:(void (^)(double, double))arg2;
+- (id <BMPlaybackTimeObserverCancellationToken>)addObserverForMediaPositions:(NSArray *)arg1 observer:(void (^)(double, double))arg2;
 @end
 

@@ -83,6 +83,7 @@
 - (void)setCustomBackButton:(id)arg1;
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)updateForegroundView;
+- (void)updatePlaylistImageWithURL:(id)arg1;
 - (void)updateContentView;
 - (void)setupForegroundView;
 - (void)setup;

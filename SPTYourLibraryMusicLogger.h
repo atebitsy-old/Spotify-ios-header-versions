@@ -6,61 +6,52 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTYourLibraryMusicSortFilterLogger-Protocol.h"
+
 @class NSString;
 @protocol SPTLogCenter;
 
-@interface SPTYourLibraryMusicLogger : NSObject
+@interface SPTYourLibraryMusicLogger : NSObject <SPTYourLibraryMusicSortFilterLogger>
 {
     id <SPTLogCenter> _logCenter;
-    NSString *_featureIdentifier;
     NSString *_pageURI;
-    NSString *_logContext;
 }
 
-@property(copy, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(copy, nonatomic) NSString *pageURI; // @synthesize pageURI=_pageURI;
-@property(copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logUIImpressionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 impressionType:(id)arg4 renderType:(id)arg5;
 - (void)logUIImpressionWithImpressionType:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
-- (void)logSectionIndexSelected;
-- (void)logDisabledItemActionSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 targetURI:(id)arg3;
 - (void)logSortingIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logClearFilterWithIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logFilterIdentifier:(id)arg1 sectionId:(id)arg2 filterAdded:(_Bool)arg3 index:(unsigned long long)arg4;
 - (void)logSortFilterPickerCanceled;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
-- (void)logAudioPreviewTrackURI:(id)arg1 sectionId:(id)arg2 index:(long long)arg3 via:(unsigned long long)arg4;
+- (void)logSectionIndexSelected;
+- (void)logDisabledItemActionSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 targetURI:(id)arg3;
 - (void)logToggleCollapseSection:(id)arg1 collapsed:(_Bool)arg2;
-- (void)logSwipeActionAtIndex:(unsigned long long)arg1 section:(id)arg2 targetURI:(id)arg3;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;
-- (void)logAddSongsButtonAction;
-- (void)logDiscoverSongsButton;
-- (void)logCloseExtraSongsExplanation;
-- (void)logSongsOpenEntity:(id)arg1;
-- (void)logExtraSongsWhyAction;
-- (void)logSongsShufflePlay;
 - (void)logDisabledItemSelectedAtIndex:(unsigned long long)arg1 targetURI:(id)arg2;
 - (void)logAddArtists;
 - (void)logAddArtistsButton;
 - (void)logCreatePlaylist;
 - (void)logCreatePlaylistButton;
-- (void)logAvailableOffline:(_Bool)arg1 pageURI:(id)arg2;
-- (void)logTabSelectedAtIndex:(unsigned long long)arg1;
 - (void)logFavoriteMixSelected;
 - (void)logHiddenContentSelected;
-- (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 trackURI:(id)arg3 liked:(_Bool)arg4;
-- (void)logTrackBanActionSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 trackURI:(id)arg3 banned:(_Bool)arg4;
-- (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 trackURI:(id)arg3;
 - (void)logItemActionSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 targetURI:(id)arg3;
 - (void)logItemSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 targetURI:(id)arg3;
 - (void)logItemSelectedAtIndex:(unsigned long long)arg1 targetURI:(id)arg2;
-- (id)initWithLogCenter:(id)arg1 logContext:(id)arg2 overrideFeatureId:(id)arg3 overridePageURI:(id)arg4;
+- (id)initWithLogCenter:(id)arg1 pageURI:(id)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

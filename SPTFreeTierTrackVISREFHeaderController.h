@@ -44,7 +44,6 @@
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
 - (id)subtitleFromModel:(id)arg1;
-- (void)updateAccessibilityElements;
 - (void)setImage:(id)arg1;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;
 - (double)minimumContentHeight;

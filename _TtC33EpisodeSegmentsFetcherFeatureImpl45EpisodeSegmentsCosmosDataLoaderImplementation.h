@@ -9,6 +9,7 @@
 @interface _TtC33EpisodeSegmentsFetcherFeatureImpl45EpisodeSegmentsCosmosDataLoaderImplementation : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: cosmosDataLoader
+    // Error parsing type: , name: remoteConfigurationProperties
     // Error parsing type: , name: currentRequest
 }
 

@@ -10,7 +10,7 @@
 #import "SPTAuthSessionDelegate-Protocol.h"
 #import "SPTCoreLoginController-Protocol.h"
 
-@class NSString, SPSession, SPTAuthLoginController, SPTAuthLoginTask, SPTAuthSession, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreCreateOptions, SPTCoreSchedulerThread, SPTEventSenderBridge, SPTPreferencesImplementation;
+@class NSString, SPSession, SPTAuthLoginController, SPTAuthLoginTask, SPTAuthSession, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreCreateOptions, SPTCoreSchedulerThread, SPTEventSenderBridge, SPTPreferencesImplementation, SPTRemoteConfigImplementation;
 @protocol SPTCoreLoginControllerDelegate, SPTCoreLoginControllerLoginDelegate, SPTOfflineModeState, SPTSessionBootstrapDelegate;
 
 @interface SPCore : NSObject <SPTAuthSessionDelegate, SPTAuthLoginTaskDelegate, SPTCoreLoginController>
@@ -20,6 +20,7 @@
     id <SPTCoreLoginControllerDelegate> _loginControllerDelegate;
     SPTConnectivityApplicationScope *_connectivityApplicationScope;
     SPTPreferencesImplementation *_preferences;
+    SPTRemoteConfigImplementation *_remoteConfig;
     SPTConnectivityManager *_connectivityManager;
     id <SPTOfflineModeState> _offlineNotifier;
     SPTAuthLoginController *_loginController;
@@ -47,6 +48,7 @@
 @property(nonatomic) __weak SPTAuthLoginController *loginController; // @synthesize loginController=_loginController;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineNotifier; // @synthesize offlineNotifier=_offlineNotifier;
 @property(retain, nonatomic) SPTConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;
+@property(retain, nonatomic) SPTRemoteConfigImplementation *remoteConfig; // @synthesize remoteConfig=_remoteConfig;
 @property(retain, nonatomic) SPTPreferencesImplementation *preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) SPTConnectivityApplicationScope *connectivityApplicationScope; // @synthesize connectivityApplicationScope=_connectivityApplicationScope;
 @property(nonatomic) __weak id <SPTCoreLoginControllerDelegate> loginControllerDelegate; // @synthesize loginControllerDelegate=_loginControllerDelegate;

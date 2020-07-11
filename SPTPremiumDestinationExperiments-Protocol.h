@@ -8,7 +8,6 @@
 
 @protocol SPTPremiumDestinationExperiments <NSObject>
 @property(readonly, nonatomic) _Bool shouldPresentImplicitNotificationAlertController;
-@property(readonly, nonatomic) _Bool isPremiumOnlyMarket;
 @property(readonly, nonatomic) _Bool shouldUseHeaderVoiceoverAccessible;
 @property(readonly, nonatomic) _Bool shouldUseDevEndpointSetting;
 @property(readonly, nonatomic) _Bool shouldShowLegacyPD;

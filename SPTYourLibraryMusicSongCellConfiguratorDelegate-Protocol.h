@@ -14,9 +14,7 @@
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 mainSectionHeaderButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 trailingSectionHeaderButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 didSwipeCell:(UITableViewCell *)arg2;
-- (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 didEndAudioPreview:(GLUETrackPreview *)arg2;
-- (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 didStartAudioPreview:(GLUETrackPreview *)arg2;
-- (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 trackPreview:(GLUETrackPreview *)arg2;
+- (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 updatedAudioPreview:(GLUETrackPreview *)arg2 playing:(_Bool)arg3 isOriginCoverItem:(_Bool)arg4;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 banButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 likeButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 contextMenuButton:(UIView *)arg2;

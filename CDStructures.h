@@ -633,8 +633,6 @@ struct LOT_Subpath {
 
 struct LifetimeStorageEntry;
 
-struct LocalTrack;
-
 struct LogMessageFilter {
     struct unordered_map<std::__1::basic_string<char>, unsigned int, std::__1::hash<std::__1::basic_string<char>>, std::__1::equal_to<std::__1::basic_string<char>>, std::__1::allocator<std::__1::pair<const std::__1::basic_string<char>, unsigned int>>> _field1;
     int _field2;
@@ -723,15 +721,12 @@ struct MultiStringHermesQuery {
 
 struct MutableState {
     struct shared_ptr<spotify::metadata::TrackInfo> _field1;
-    struct LocalTrack *_field2;
-    unsigned char _field3;
+    unsigned char _field2;
     unsigned int :2;
     unsigned int :3;
     unsigned int :2;
     unsigned int :2;
     unsigned int :4;
-    unsigned int :1;
-    unsigned int :1;
     unsigned int :1;
     unsigned int :1;
     unsigned int :1;
@@ -887,6 +882,10 @@ struct ReducedRequirementsStreamingAnalytics {
 
 struct RefreshTokenCredentials {
     struct unique_ptr<spotify::connectivity::auth::credentials::RefreshTokenCredentials::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::RefreshTokenCredentials::Impl>> _field1;
+};
+
+struct RemoteConfigStorage {
+    CDUnknownFunctionPointerType *_field1;
 };
 
 struct RequestAccountingConfig {
@@ -1382,6 +1381,21 @@ struct cmp_ctx_s {
 };
 
 struct connected_slot;
+
+struct deque<float, std::__1::allocator<float>> {
+    struct __split_buffer<float *, std::__1::allocator<float *>> {
+        float **__first_;
+        float **__begin_;
+        float **__end_;
+        struct __compressed_pair<float **, std::__1::allocator<float *>> {
+            float **__value_;
+        } __end_cap_;
+    } __map_;
+    unsigned long long __start_;
+    struct __compressed_pair<unsigned long, std::__1::allocator<float>> {
+        unsigned long long __value_;
+    } __size_;
+};
 
 struct deque<short, std::__1::allocator<short>> {
     struct __split_buffer<short *, std::__1::allocator<short *>> {

@@ -6,7 +6,7 @@
 
 #import "SPTYourLibraryMusicFilterableViewModel-Protocol.h"
 
-@class NSIndexPath, NSString, UIControl, UIViewController;
+@class NSIndexPath, UIControl, UIViewController;
 @protocol SPTYourLibraryMusicSongsHeaderViewModel, SPTYourLibraryMusicSongsSectionViewModel, SPTYourLibraryMusicSongsViewModelDelegate, SPTYourLibraryMusicTrackItemViewModel;
 
 @protocol SPTYourLibraryMusicSongsViewModel <SPTYourLibraryMusicFilterableViewModel>
@@ -29,12 +29,12 @@
 - (void)logCloseExtraSongsExplanation;
 - (void)logExtraSongsWhyAction;
 - (void)logSwipeCellActionForIndexPath:(NSIndexPath *)arg1;
-- (void)logPreviewWithAlbumCoverActionAtIndexPath:(NSIndexPath *)arg1;
+- (void)logAudioPreviewAtIndexPath:(NSIndexPath *)arg1 playing:(_Bool)arg2 isOriginCoverItem:(_Bool)arg3;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)toggleTrackBanAtIndexPath:(NSIndexPath *)arg1;
 - (void)toggleTrackLikeAtIndexPath:(NSIndexPath *)arg1;
 - (void)presentEntitySectionViewModel:(id <SPTYourLibraryMusicSongsSectionViewModel>)arg1;
-- (void)presentMenuForSongAtIndexPath:(NSIndexPath *)arg1 targetViewController:(UIViewController *)arg2 withSenderControl:(UIControl *)arg3 andLogContext:(NSString *)arg4;
+- (void)presentMenuForSongAtIndexPath:(NSIndexPath *)arg1 targetViewController:(UIViewController *)arg2 withSenderControl:(UIControl *)arg3;
 - (void)setAvailableOffline:(_Bool)arg1;
 - (_Bool)isOfflineSwitchCellAtIndex:(NSIndexPath *)arg1;
 - (_Bool)isAdditionalControlsSection:(unsigned long long)arg1;
