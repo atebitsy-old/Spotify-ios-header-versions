@@ -9,7 +9,6 @@
 @interface _TtC20ProfileV2FeatureImpl21ProfileViewController : SPViewController
 {
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: contextMenuPresenter
     // Error parsing type: , name: viewBinder
     // Error parsing type: , name: makeViewBinder
     // Error parsing type: , name: theme
@@ -19,8 +18,6 @@
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
-- (void)didTapEditButton;
-- (void)contextMenuTappedWithSender:(id)arg1;
 - (void)dealloc;
 - (void)sp_updateContentInsets;
 - (void)viewWillAppear:(_Bool)arg1;

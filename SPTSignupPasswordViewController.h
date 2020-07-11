@@ -12,7 +12,7 @@
 #import "SPTSignupPasswordFieldValidationViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginLayoutTestManager, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupPasswordViewModel, SPTSignupSingleInputFieldView;
+@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupPasswordViewModel, SPTSignupSingleInputFieldView;
 @protocol SPTPageContainer;
 
 @interface SPTSignupPasswordViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupPasswordFieldValidationViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
@@ -23,10 +23,8 @@
     SPTSignupPasswordViewModel *_viewModel;
     SPTSignupAnimatedTransitioning *_animatedTransitioning;
     SPTLoginTheme *_theme;
-    SPTLoginLayoutTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTLoginLayoutTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupAnimatedTransitioning *animatedTransitioning; // @synthesize animatedTransitioning=_animatedTransitioning;
 @property(retain, nonatomic) SPTSignupPasswordViewModel *viewModel; // @synthesize viewModel=_viewModel;
@@ -51,7 +49,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithTheme:(id)arg1 viewModel:(id)arg2 testManager:(id)arg3;
+- (id)initWithTheme:(id)arg1 viewModel:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

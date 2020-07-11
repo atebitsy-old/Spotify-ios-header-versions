@@ -37,10 +37,13 @@
 - (void)addObserver:(id)arg1;
 - (_Bool)deviceRepresentsGroup:(id)arg1;
 - (_Bool)shouldShowCastLogoForDevice:(id)arg1;
+- (void)setIncarnationAsPreferred:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
+- (void)logoutDevice:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)discoverDevices;
 - (void)renameDevice:(id)arg1 name:(id)arg2 responseBlock:(CDUnknownBlockType)arg3;
 - (void)deactivateActiveDeviceWithResponseBlock:(CDUnknownBlockType)arg1;
 - (void)activateDevice:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
+- (id)findIncarnationOnDeviceWithId:(id)arg1 incarnationId:(id)arg2;
 - (id)findDeviceWithPhysicalIdentifier:(id)arg1;
 - (id)findDeviceWithIdentifier:(id)arg1;
 @property(readonly, nonatomic) NSString *activeDeviceDisplayName;

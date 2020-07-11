@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierAlbumHubManager, SPTFreeTierTrackContextAwareURITypeManager, SPTPersistentCache;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCoreService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierAlbumTestManager, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCoreService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierAlbumTestManager, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierAlbumService : SPTUIPageService
 {
@@ -32,6 +32,7 @@
     SPTFreeTierTrackContextAwareURITypeManager *_nptTrackURITypeManager;
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
     id <SPTExplicitContentService> _explicitContentService;
+    id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTFreeTierAlbumTestManager> _testManager;
 }
@@ -39,6 +40,7 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTFreeTierAlbumTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(retain, nonatomic) SPTFreeTierTrackContextAwareURITypeManager *nptTrackURITypeManager; // @synthesize nptTrackURITypeManager=_nptTrackURITypeManager;

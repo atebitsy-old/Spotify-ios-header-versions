@@ -16,6 +16,7 @@
 @property(readonly, nonatomic) SPTGaiaConnectDevice *activeDevice;
 - (void)removeObserver:(id <SPTGaiaConnectManagerObserver>)arg1;
 - (void)addObserver:(id <SPTGaiaConnectManagerObserver>)arg1;
+- (SPTGaiaConnectDeviceIncarnation *)findIncarnationOnDeviceWithId:(NSString *)arg1 incarnationId:(NSString *)arg2;
 - (SPTGaiaConnectDevice *)findDeviceWithPhysicalIdentifier:(NSString *)arg1;
 - (SPTGaiaConnectDevice *)findDeviceWithIdentifier:(NSString *)arg1;
 - (void)updateActiveDeviceVolume:(float)arg1 responseBlock:(void (^)(SPTResponse *, _Bool, NSError *))arg2;

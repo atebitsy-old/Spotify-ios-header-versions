@@ -35,11 +35,11 @@
 - (id)recentlyPlayedCardProvider;
 - (id)topGenresCardProvider;
 - (id)likedSongsCardProvider;
-- (id)cardProvidersForURI:(id)arg1 mostPlayedCard:(_Bool)arg2;
+- (id)cardProvidersForURI:(id)arg1;
 - (id)datasourceForURI:(id)arg1;
 - (long long)collectionTypeOfURI:(id)arg1;
 - (id)provideAddTrackHandlerForURI:(id)arg1;
-- (id)provideAssistedCurationModelForURI:(id)arg1 mostPlayedCard:(_Bool)arg2;
+- (id)provideAssistedCurationModelForURI:(id)arg1;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

@@ -10,7 +10,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, SPTPlayOrigin;
-@protocol SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTMetaViewController, SPTPlayer;
+@protocol SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTMetaViewController, SPTPlayer;
 
 @interface SPTShowsFormatPlaylistPlayViewModel : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistPlayViewModel>
 {
@@ -19,11 +19,13 @@
     id <SPTFreeTierPlaylistPlayModel> _playModel;
     id <SPTFreeTierPlaylistPlayViewModel> _playViewModel;
     id <SPTPlayer> _player;
+    id <SPTFreeTierPlaylistPlayLogger> _playLogger;
     id <SPTMetaViewController> _metaViewController;
 }
 
 @property(nonatomic) _Bool shouldLaunchNPV; // @synthesize shouldLaunchNPV=_shouldLaunchNPV;
 @property(readonly, nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayLogger> playLogger; // @synthesize playLogger=_playLogger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayViewModel> playViewModel; // @synthesize playViewModel=_playViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayModel> playModel; // @synthesize playModel=_playModel;
@@ -38,7 +40,7 @@
 - (void)play;
 @property(readonly, nonatomic) _Bool shouldShowPlayButton;
 @property(readonly, nonatomic, getter=isPlaylistPlaying) _Bool playlistPlaying;
-- (id)initWithPlayModel:(id)arg1 playViewModel:(id)arg2 metaViewController:(id)arg3 playOrigin:(id)arg4 player:(id)arg5;
+- (id)initWithPlayModel:(id)arg1 playViewModel:(id)arg2 metaViewController:(id)arg3 playOrigin:(id)arg4 player:(id)arg5 playLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,7 +9,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLoginKeychainCredentialsWriter, SPTLoginLinkAccountManager, SPTLoginSignupMarketingOptInFlashController;
-@protocol SPTCoreService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTSessionService, SPTURIDispatchService;
+@protocol SPTCoreService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTPreSignupExperimentationService, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTLoginSessionServiceImplementation : NSObject <SPTService>
 {
@@ -20,6 +20,7 @@
     id <SPTNotificationsService> _notificationsService;
     id <SPTNetworkService> _networkService;
     id <SPTGLUEService> _glueService;
+    id <SPTPreSignupExperimentationService> _psesService;
     SPTLoginKeychainCredentialsWriter *_credentialsWriter;
     SPTLoginSignupMarketingOptInFlashController *_marketingOptInController;
     SPTLoginLinkAccountManager *_linkAccountManager;
@@ -29,6 +30,7 @@
 @property(retain, nonatomic) SPTLoginLinkAccountManager *linkAccountManager; // @synthesize linkAccountManager=_linkAccountManager;
 @property(retain, nonatomic) SPTLoginSignupMarketingOptInFlashController *marketingOptInController; // @synthesize marketingOptInController=_marketingOptInController;
 @property(retain, nonatomic) SPTLoginKeychainCredentialsWriter *credentialsWriter; // @synthesize credentialsWriter=_credentialsWriter;
+@property(nonatomic) __weak id <SPTPreSignupExperimentationService> psesService; // @synthesize psesService=_psesService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTNotificationsService> notificationsService; // @synthesize notificationsService=_notificationsService;

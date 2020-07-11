@@ -11,8 +11,8 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTPodcastPlaybackSpeedMenuActionDelegate-Protocol.h"
 
-@class NSArray, NSString, NSURL, SPTContextMenuView, SPTContextMenuViewTransition, SPTPodcastPreferences, SPTPodcastSpeedControlOptions;
-@protocol SPTPageContainer, SPTPodcastLogger;
+@class NSArray, NSString, NSURL, SPTContextMenuView, SPTContextMenuViewTransition, SPTPodcastLogger, SPTPodcastPreferences, SPTPodcastSpeedControlOptions;
+@protocol SPTPageContainer;
 
 @interface SPTPodcastSpeedControlViewController : UIViewController <SPTPodcastPlaybackSpeedMenuActionDelegate, SPTContextMenuViewDataSource, SPTContextMenuViewDelegate, SPTPageController>
 {
@@ -21,14 +21,14 @@
     SPTPodcastPreferences *_podcastPreferences;
     SPTContextMenuView *_contextMenuView;
     SPTContextMenuViewTransition *_transition;
-    id <SPTPodcastLogger> _podcastLogger;
+    SPTPodcastLogger *_logger;
 }
 
-@property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
+@property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTContextMenuViewTransition *transition; // @synthesize transition=_transition;
 @property(retain, nonatomic) SPTContextMenuView *contextMenuView; // @synthesize contextMenuView=_contextMenuView;
 @property(retain, nonatomic) SPTPodcastPreferences *podcastPreferences; // @synthesize podcastPreferences=_podcastPreferences;
-@property(retain, nonatomic) NSArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
+@property(copy, nonatomic) NSArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
 @property(retain, nonatomic) SPTPodcastSpeedControlOptions *speedControlOptions; // @synthesize speedControlOptions=_speedControlOptions;
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;

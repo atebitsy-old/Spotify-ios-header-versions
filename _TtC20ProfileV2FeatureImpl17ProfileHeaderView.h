@@ -15,6 +15,7 @@
     // Error parsing type: , name: collapsedTitleTopConstraint
     // Error parsing type: , name: displayName
     // Error parsing type: , name: collapsedTitleLabelAlpha
+    // Error parsing type: , name: topGradientColor
 }
 
 - (void).cxx_destruct;

@@ -9,7 +9,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLocalFilesImportManager;
-@protocol CosmosFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTNetworkService, SPTNuxService, SPTPlaylistPlatformService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
+@protocol CosmosFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTNetworkService, SPTPlaylistPlatformService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
 
 @interface SPTLocalFilesServiceImplementation : NSObject <SPTService>
 {
@@ -18,11 +18,11 @@
     id <SPTContainerService> _containerService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTNetworkService> _networkService;
-    id <SPTNuxService> _nuxService;
     id <SPTSettingsFeature> _settingsFeature;
     id <CosmosFeature> _cosmosService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTURIDispatchService> _dispatchService;
+    id <SPTUserBehaviourInstrumentationService> _ubiService;
     SPTLocalFilesImportManager *_localFilesImportManager;
     id <SPTResolver> _cosmosRouter;
 }
@@ -30,11 +30,11 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTResolver> cosmosRouter; // @synthesize cosmosRouter=_cosmosRouter;
 @property(retain, nonatomic) SPTLocalFilesImportManager *localFilesImportManager; // @synthesize localFilesImportManager=_localFilesImportManager;
+@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> dispatchService; // @synthesize dispatchService=_dispatchService;
 @property(readonly, nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(readonly, nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(readonly, nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
-@property(readonly, nonatomic) __weak id <SPTNuxService> nuxService; // @synthesize nuxService=_nuxService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(readonly, nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;

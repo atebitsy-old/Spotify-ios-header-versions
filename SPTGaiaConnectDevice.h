@@ -21,10 +21,10 @@
     _Bool _socialConnect;
     _Bool _isZeroconf;
     _Bool _supportsVolume;
-    _Bool _supportsLogout;
     _Bool _supportsRename;
     _Bool _isAvailableOnLocalNetwork;
     _Bool _shuffleDevice;
+    _Bool _supportsLogout;
     float _volume;
     NSString *_deviceId;
     NSString *_physicalDeviceId;
@@ -32,21 +32,22 @@
     NSString *_name;
     NSString *_model;
     NSString *_brand;
-    NSArray *_incarnations;
     unsigned long long _deviceType;
     unsigned long long _deviceState;
+    NSArray *_incarnations;
     NSArray *_capabilities;
     long long _volumeSteps;
 }
 
 @property(nonatomic) long long volumeSteps; // @synthesize volumeSteps=_volumeSteps;
+@property(nonatomic) _Bool supportsLogout; // @synthesize supportsLogout=_supportsLogout;
 @property(nonatomic, getter=isShuffleDevice) _Bool shuffleDevice; // @synthesize shuffleDevice=_shuffleDevice;
+@property(nonatomic) _Bool isAvailableOnLocalNetwork; // @synthesize isAvailableOnLocalNetwork=_isAvailableOnLocalNetwork;
 @property(copy, nonatomic) NSArray *capabilities; // @synthesize capabilities=_capabilities;
+@property(copy, nonatomic) NSArray *incarnations; // @synthesize incarnations=_incarnations;
 @property(nonatomic) unsigned long long deviceState; // @synthesize deviceState=_deviceState;
 @property(nonatomic) unsigned long long deviceType; // @synthesize deviceType=_deviceType;
-@property(nonatomic) _Bool isAvailableOnLocalNetwork; // @synthesize isAvailableOnLocalNetwork=_isAvailableOnLocalNetwork;
 @property(nonatomic) _Bool supportsRename; // @synthesize supportsRename=_supportsRename;
-@property(nonatomic) _Bool supportsLogout; // @synthesize supportsLogout=_supportsLogout;
 @property(nonatomic) _Bool supportsVolume; // @synthesize supportsVolume=_supportsVolume;
 @property(nonatomic) float volume; // @synthesize volume=_volume;
 @property(nonatomic) _Bool isZeroconf; // @synthesize isZeroconf=_isZeroconf;
@@ -57,7 +58,6 @@
 @property(nonatomic) _Bool requiresOnboarding; // @synthesize requiresOnboarding=_requiresOnboarding;
 @property(nonatomic) _Bool isBeingActivated; // @synthesize isBeingActivated=_isBeingActivated;
 @property(nonatomic) _Bool isActive; // @synthesize isActive=_isActive;
-@property(copy, nonatomic) NSArray *incarnations; // @synthesize incarnations=_incarnations;
 @property(copy, nonatomic) NSString *brand; // @synthesize brand=_brand;
 @property(copy, nonatomic) NSString *model; // @synthesize model=_model;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;

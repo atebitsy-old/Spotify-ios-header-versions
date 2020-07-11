@@ -16,12 +16,11 @@
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
 - (void)logUserDidSeeEmailAlreadyExistsDialog;
-- (void)logUserDidTapDismissButton;
-- (void)logUserDidTapGoToLoginButton;
+- (void)logUserDidTapDialogDismissButton;
+- (void)logUserDidTapDialogGoToLoginButton;
 - (void)logDidFailToShowCredentialsDialogWithType:(unsigned long long)arg1;
 - (void)logUserDidCancelCredentialsDialogWithType:(unsigned long long)arg1;
 - (void)logUserDidSelectCredentials;
-- (void)logUserEligibleForTest;
 - (id)initWithLogger:(id)arg1;
 
 @end

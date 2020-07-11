@@ -6,13 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTNUXModifying-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
 @class NSDate, NSString, NSURL, SPTFilePickerViewController, SPTLocalFilesImportAuthorizationRequester, SPTLocalFilesLogger;
 @protocol SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTContainerUIService, SPTImageLoaderFactory, SPTLinkDispatcher, SPTLocalFilesPlaylistsDataSource, SPTLocalFilesTracksDataSource, SPTLocalSettings, SPTNavigationRouter, SPTPlaylistModel, SPTProductState;
 
-@interface SPTLocalFilesImportManager : NSObject <SPTProductStateObserver, SPTNUXModifying>
+@interface SPTLocalFilesImportManager : NSObject <SPTProductStateObserver>
 {
     _Bool _enabled;
     id <SPTProductState> _productState;
@@ -60,7 +59,7 @@
 - (void)registerSettingsPage:(id)arg1 featureSettingsItemFactory:(id)arg2;
 - (void)registerRootSettings:(id)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
-- (void)registerInfoViewForNUX:(id)arg1 fromViewURI:(id)arg2;
+- (void)okButtonSelected;
 - (void)navigateToImportedFiles;
 - (_Bool)shouldShowDialog;
 - (void)showDialogWithSongsCount:(long long)arg1 playlistsCount:(long long)arg2;
@@ -76,12 +75,10 @@
 - (void)openSettingsApp;
 - (void)alertPermissionDenied;
 - (void)logJobFinishedWithModel:(id)arg1 success:(_Bool)arg2;
-- (void)startImportFromPlaylistsNUX;
-- (void)startImportFromNUX;
 - (void)enableIfFlagged;
 - (void)startImportWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)checkForPermissionWithResultHandler:(CDUnknownBlockType)arg1;
-- (id)initWithProductState:(id)arg1 localSettings:(id)arg2 collectionPlatform:(id)arg3 collectionTestManager:(id)arg4 playlistModel:(id)arg5 imageLoaderFactory:(id)arg6 resolver:(id)arg7 navigationRouter:(id)arg8 logCenter:(id)arg9 containerUIService:(id)arg10 linkDispatcher:(id)arg11;
+- (id)initWithProductState:(id)arg1 localSettings:(id)arg2 collectionPlatform:(id)arg3 collectionTestManager:(id)arg4 playlistModel:(id)arg5 imageLoaderFactory:(id)arg6 resolver:(id)arg7 navigationRouter:(id)arg8 logCenter:(id)arg9 containerUIService:(id)arg10 linkDispatcher:(id)arg11 ubiLogger:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,20 +6,17 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTGoogleMapsDeepLinkObserver-Protocol.h"
 #import "SPTPartnerNavigationIntegration-Protocol.h"
 
-@class NSString, SPTGoogleMapsPresenter, SPTObserverManager, UIImage;
+@class NSString, SPTObserverManager, UIImage;
 @protocol SPTLinkDispatcher;
 
-@interface SPTGoogleMapsPartnerIntegration : NSObject <SPTGoogleMapsDeepLinkObserver, SPTPartnerNavigationIntegration>
+@interface SPTGoogleMapsPartnerIntegration : NSObject <SPTPartnerNavigationIntegration>
 {
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTObserverManager *_observerManager;
-    SPTGoogleMapsPresenter *_presenter;
 }
 
-@property(retain, nonatomic) SPTGoogleMapsPresenter *presenter; // @synthesize presenter=_presenter;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;
@@ -32,7 +29,6 @@
 - (void)openApp;
 @property(readonly, copy, nonatomic) NSString *sentToReasonForLogging;
 @property(readonly, copy, nonatomic) NSString *appNameForLogging;
-@property(readonly, nonatomic) _Bool isPresentingActiveBanner;
 @property(readonly, nonatomic, getter=isNavigating) _Bool navigating;
 @property(readonly, nonatomic) UIImage *icon;
 @property(readonly, nonatomic) NSString *redirectURIPath;
@@ -41,7 +37,7 @@
 @property(readonly, nonatomic) NSString *identifier;
 @property(readonly, nonatomic) NSString *descriptionText;
 @property(readonly, nonatomic) NSString *name;
-- (id)initWithLinkDispatcher:(id)arg1 presenter:(id)arg2;
+- (id)initWithLinkDispatcher:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

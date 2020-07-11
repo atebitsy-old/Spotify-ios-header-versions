@@ -9,8 +9,9 @@
 @interface _TtC22ConnectUIV2FeatureImpl34DevicePickerContextMenuIconManager : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: iconSize
+    // Error parsing type: , name: theme
     // Error parsing type: , name: imageCache
+    // Error parsing type: , name: iconSize
 }
 
 @end

@@ -9,8 +9,11 @@
 @interface _TtC18VoiceUIFeatureImpl17VoicePlayerLogger : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: voicePlaybackActionEventName
+    // Error parsing type: , name: voicePlaybackErrorName
     // Error parsing type: , name: eventSender
     // Error parsing type: , name: utteranceID
+    // Error parsing type: , name: playbackURI
+    // Error parsing type: , name: intent
 }
 
 @end

@@ -14,7 +14,7 @@
 #import "SPTPlaylistExtenderModelDelegate-Protocol.h"
 
 @class NSArray, NSAttributedString, NSDate, NSDictionary, NSString, NSURL, SPTFreeTierPlaylistLogger, SPTPlayOrigin, SPTPlayerState, UIColor;
-@protocol SPTAlertInterface, SPTAssistedCurationUIService, SPTCollectionPlatformConfiguration, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPersonalizedBylineProvider, SPTPlayer, SPTPlaylistExtenderModel, SPTVISREFFlagsService;
+@protocol SPTAlertInterface, SPTCollectionPlatformConfiguration, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPersonalizedBylineProvider, SPTPlayer, SPTPlaylistExtenderModel, SPTVISREFFlagsService;
 
 @interface SPTFreeTierPlaylistViewModelImplementation : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistSponsoredViewModelDelegate, SPTPlaylistExtenderModelDelegate, SPTFreeTierPlaylistViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistModelObserver>
 {
@@ -47,7 +47,6 @@
     id <SPTFreeTierPlaylistPlayViewModel> _playViewModel;
     id <SPTFreeTierPlaylistModel> _playlistModel;
     SPTPlayOrigin *_playOrigin;
-    id <SPTAssistedCurationUIService> _assistedCurationUIService;
     NSURL *_playlistImageURL;
     NSString *_playlistName;
     NSString *_creatorTitle;
@@ -145,7 +144,6 @@
 @property(copy, nonatomic) NSString *creatorTitle; // @synthesize creatorTitle=_creatorTitle;
 @property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 @property(retain, nonatomic) NSURL *playlistImageURL; // @synthesize playlistImageURL=_playlistImageURL;
-@property(readonly, nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(retain, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistPlayViewModel> playViewModel; // @synthesize playViewModel=_playViewModel;
@@ -175,7 +173,6 @@
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (void)navigateToAllSongs;
-- (_Bool)showAddSongsSectionHeaderButton;
 - (id)trackEntityAtIndexPath:(id)arg1;
 - (void)playTrack:(id)arg1;
 - (_Bool)cellProviderSupportedForSection:(long long)arg1;
@@ -205,7 +202,6 @@
 - (void)showShuffleBadgeEducationDialog;
 - (void)toggleFollow;
 @property(readonly, nonatomic) long long followButtonType;
-- (void)sectionHeaderButtonTapped;
 @property(readonly, nonatomic, getter=isOfflineSyncAvailable) _Bool offlineSyncAvailable;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
@@ -214,7 +210,7 @@
 - (void)play;
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 assistedCurationUIService:(id)arg3 player:(id)arg4 linkDispatcher:(id)arg5 sponsoredViewModel:(id)arg6 offlineModeState:(id)arg7 collectionConfiguration:(id)arg8 logger:(id)arg9 testManager:(id)arg10 contextAwareEnabled:(_Bool)arg11 playlistExtenderModel:(id)arg12 visualRefreshService:(id)arg13 viewModelConfiguration:(id)arg14 bylineProvider:(id)arg15;
+- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 sponsoredViewModel:(id)arg5 offlineModeState:(id)arg6 collectionConfiguration:(id)arg7 logger:(id)arg8 testManager:(id)arg9 contextAwareEnabled:(_Bool)arg10 playlistExtenderModel:(id)arg11 visualRefreshService:(id)arg12 viewModelConfiguration:(id)arg13 bylineProvider:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

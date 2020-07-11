@@ -6,10 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, NSURL;
+#import "SPTFreeTierPlaylistPlayLogger-Protocol.h"
+
+@class NSMutableSet, NSString, NSURL;
 @protocol SPTEventSender, SPTLogCenter, SPTUBIMobilePlaylistEntityEventFactory, SPTUserBehaviourInstrumentationLogger, SPTViewLogger;
 
-@interface SPTFreeTierPlaylistLogger : NSObject
+@interface SPTFreeTierPlaylistLogger : NSObject <SPTFreeTierPlaylistPlayLogger>
 {
     NSString *_featureId;
     NSString *_playlistViewPageIdentifier;
@@ -19,8 +21,10 @@
     NSURL *_pageURL;
     id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
     id <SPTUBIMobilePlaylistEntityEventFactory> _ubiEventFactory;
+    NSMutableSet *_impressionPaths;
 }
 
+@property(retain, nonatomic) NSMutableSet *impressionPaths; // @synthesize impressionPaths=_impressionPaths;
 @property(readonly, nonatomic) id <SPTUBIMobilePlaylistEntityEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
@@ -32,11 +36,20 @@
 - (void).cxx_destruct;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5 action:(id)arg6;
 - (void)logUIInteractionWithSectionId:(id)arg1 targetURI:(id)arg2 userIntent:(id)arg3;
-- (void)logScrollPerformanceWithDuration:(double)arg1 smallFrameDropCount:(double)arg2 largeFrameDropCount:(double)arg3;
+- (void)ubiLogImpressionOnce:(id)arg1;
+- (void)logTextFilterCancelButtonInteraction;
+- (void)logTextFilterClearButtonInteraction;
+- (void)logTextFilterKeyStrokeInteraction;
+- (void)logTextFilterRevealInteraction;
+- (void)logSortFilterPickerInteraction;
 - (void)logSortingIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logSortFilterPickerCanceled;
+- (void)logEmptyViewAddSongsInteration;
+- (void)logEmptyViewImpressionOnce;
+- (void)logScrollPerformanceWithDuration:(double)arg1 smallFrameDropCount:(double)arg2 largeFrameDropCount:(double)arg3;
 - (void)logHeaderViewSlideToPage:(long long)arg1;
-- (void)logHeaderPressedPlaylistOwner;
+- (void)logHeaderCoverArtClickedToShowFullscreen;
+- (void)logHeaderPressedPlaylistOwner:(id)arg1;
 - (void)logPressedCancelInEditView;
 - (void)logPressedDoneInEditView;
 - (void)logUpdateDescription;
@@ -44,24 +57,33 @@
 - (void)logDeletedTrackInEditView;
 - (void)logMovedTrackInEditView;
 - (void)logOfflineChanged:(_Bool)arg1;
+- (void)logEpisodeOfflineAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 offline:(_Bool)arg3;
+- (void)logEpisodePlayAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 play:(_Bool)arg3;
 - (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 liked:(_Bool)arg3;
 - (void)logTrackBanActionSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 banned:(_Bool)arg3;
 - (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
 - (void)logTrackSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
 - (void)logTrackCloudSelected:(_Bool)arg1;
-- (void)logAllSongsAddSongsSelected;
 - (void)logBrowseButtonClicked;
-- (void)logAddSongsSelectedOnEmptyPlaylist:(_Bool)arg1;
+- (void)logAddSongsInteraction;
 - (void)logShuffleBadgeSelected;
 - (void)logPlayButtonPauseClicked;
 - (void)logPlayButtonPlayClicked;
 - (void)logHeaderContextMenuButton;
-- (void)logHeartButtonSelected:(_Bool)arg1;
+- (void)logHeaderFollowButtonClicked:(_Bool)arg1;
+- (void)logNavBarHeartButtonClicked:(_Bool)arg1;
+- (void)legacyLogHeartButtonSelected:(_Bool)arg1;
 - (void)logViewDidFailToLoadWithPageIdentifier:(id)arg1;
 - (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1;
 - (void)logViewDidLoadWithPageIdentifier:(id)arg1;
 - (void)logViewLoadingStartedWithPageIdentifier:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventSender:(id)arg3 pageURL:(id)arg4 playlistViewPageIdentifier:(id)arg5 featureId:(id)arg6 ubiEventFactory:(id)arg7 ubiLogger:(id)arg8;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, SPTLoginLayoutTestManager, SPTLoginMagicLinkSentConfirmationViewLogger, SPTLoginOpenEmailAppController, SPTLoginTheme;
+@class NSString, SPTLoginMagicLinkSentConfirmationViewLogger, SPTLoginOpenEmailAppController, SPTLoginTheme;
 
 @interface SPTLoginMagicLinkSentConfirmationViewModel : NSObject
 {
@@ -14,10 +14,8 @@
     SPTLoginTheme *_theme;
     NSString *_emailOrUsername;
     SPTLoginOpenEmailAppController *_emailAppController;
-    SPTLoginLayoutTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTLoginLayoutTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTLoginOpenEmailAppController *emailAppController; // @synthesize emailAppController=_emailAppController;
 @property(copy, nonatomic) NSString *emailOrUsername; // @synthesize emailOrUsername=_emailOrUsername;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
@@ -31,7 +29,7 @@
 - (id)bodyLabelText;
 - (id)upperLabelText;
 - (id)titleLabelText;
-- (id)initWithTheme:(id)arg1 emailOrUsername:(id)arg2 logger:(id)arg3 emailAppController:(id)arg4 testManager:(id)arg5;
+- (id)initWithTheme:(id)arg1 emailOrUsername:(id)arg2 logger:(id)arg3 emailAppController:(id)arg4;
 
 @end
 

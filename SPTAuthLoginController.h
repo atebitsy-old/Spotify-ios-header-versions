@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTAsyncScheduler;
+@protocol SPTConnectivityAsyncScheduler;
 
 @interface SPTAuthLoginController : NSObject
 {
     unique_ptr_97a42db5 _cppLoginController;
     struct LoginController *_cppLoginControllerPtr;
-    id <SPTAsyncScheduler> _scheduler;
+    id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (void)eraseOfflineUser:(id)arg1;

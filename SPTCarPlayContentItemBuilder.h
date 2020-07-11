@@ -6,17 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class NSCache;
+@class NSCache, SPTCarPlayFeatureProperties;
 @protocol SPTExternalIntegrationPlaybackController, SPTImageLoaderFactory;
 
 @interface SPTCarPlayContentItemBuilder : NSObject
 {
     id <SPTExternalIntegrationPlaybackController> _playbackController;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
+    SPTCarPlayFeatureProperties *_properties;
     NSCache *_iconCache;
 }
 
 @property(readonly, nonatomic) NSCache *iconCache; // @synthesize iconCache=_iconCache;
+@property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 - (void).cxx_destruct;
@@ -25,7 +27,7 @@
 - (id)errorContentItem;
 - (id)emptyListContentItemOfParent:(id)arg1;
 - (id)shuffleContentItemOfParent:(id)arg1;
-- (id)initWithPlaybackController:(id)arg1 imageLoaderFactory:(id)arg2;
+- (id)initWithPlaybackController:(id)arg1 imageLoaderFactory:(id)arg2 properties:(id)arg3;
 
 @end
 

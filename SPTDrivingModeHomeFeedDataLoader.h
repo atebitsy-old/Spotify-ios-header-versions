@@ -9,14 +9,16 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTDataLoader;
-@protocol HUBIconImageResolver;
+@protocol HUBIconImageResolver, SPTDrivingStateDetector;
 
 @interface SPTDrivingModeHomeFeedDataLoader : NSObject <SPTDataLoaderDelegate>
 {
     SPTDataLoader *_dataLoader;
     id <HUBIconImageResolver> _iconImageResolver;
+    id <SPTDrivingStateDetector> _drivingStateDetector;
 }
 
+@property(readonly, nonatomic) id <SPTDrivingStateDetector> drivingStateDetector; // @synthesize drivingStateDetector=_drivingStateDetector;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
@@ -29,7 +31,7 @@
 - (void)cancelLoading;
 @property(readonly, nonatomic, getter=isLoading) _Bool loading;
 - (void)loadHomeFeedItemsWithSuccessCallback:(CDUnknownBlockType)arg1 errorCallback:(CDUnknownBlockType)arg2;
-- (id)initWithDataLoader:(id)arg1 iconImageResolver:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 iconImageResolver:(id)arg2 drivingStateDetector:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

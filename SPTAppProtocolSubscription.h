@@ -59,6 +59,7 @@
 - (void)forceTriggerPlayerStateChange;
 - (void)sendSubscriptionEventToSubscriberUponRegistration;
 - (void)externalIntegrationRadioController:(id)arg1 didRecieveNewThumbStateForCurrentTrack:(_Bool)arg2;
+- (void)didReceiveUpdatedCollectionNotification;
 - (void)externalIntegrationCollectionController:(id)arg1 didReceiveNewCollectionStateForCurrentTrack:(_Bool)arg2;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (void)connectActiveDeviceDidChange:(id)arg1;

@@ -11,8 +11,8 @@
 }
 
 - (void).cxx_destruct;
-- (id)createViewWithFrame:(struct CGRect)arg1;
 - (id)initWithTheme:(id)arg1;
+- (id)createViewWithFrame:(struct CGRect)arg1;
 
 @end
 

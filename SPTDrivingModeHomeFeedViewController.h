@@ -25,8 +25,10 @@
     SPTDrivingModeHomeFeedTitleView *_drivingModeTitleView;
     SPTDrivingModeHomeFeedPageScroller *_pageScroller;
     UIImpactFeedbackGenerator *_feedbackGenerator;
+    unsigned long long _selectedIndex;
 }
 
+@property(nonatomic) unsigned long long selectedIndex; // @synthesize selectedIndex=_selectedIndex;
 @property(retain, nonatomic) UIImpactFeedbackGenerator *feedbackGenerator; // @synthesize feedbackGenerator=_feedbackGenerator;
 @property(retain, nonatomic) SPTDrivingModeHomeFeedPageScroller *pageScroller; // @synthesize pageScroller=_pageScroller;
 @property(retain, nonatomic) SPTDrivingModeHomeFeedTitleView *drivingModeTitleView; // @synthesize drivingModeTitleView=_drivingModeTitleView;
@@ -39,9 +41,8 @@
 - (void).cxx_destruct;
 - (void)scrollViewHapticUpdate:(long long)arg1;
 - (void)updateShelfTitleForPageIndex:(int)arg1;
-- (void)updatePageScroller;
-- (void)loadNextShelfWithIndex:(int)arg1;
-- (void)loadPreviousShelfWithIndex:(int)arg1;
+- (void)loadShelfWithIndex:(int)arg1;
+- (void)updatePageScrollerAtIndex:(int)arg1;
 - (id)controllerForShelf:(id)arg1;
 - (void)shelfItemWasTapped:(id)arg1;
 - (void)viewModelDidChangeShouldShowAd:(id)arg1;
@@ -52,9 +53,10 @@
 - (void)viewWillLayoutSubviews;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (void)setupPageScroller:(id)arg1;
+- (void)setupPageScroller;
 - (void)setupSubviews;
 - (void)viewDidLoad;
+- (id)initWithViewModel:(id)arg1 durationViewModel:(id)arg2 modalPresentationController:(id)arg3 theme:(id)arg4 logger:(id)arg5 imageLoader:(id)arg6 pageScroller:(id)arg7;
 - (id)initWithViewModel:(id)arg1 durationViewModel:(id)arg2 modalPresentationController:(id)arg3 theme:(id)arg4 logger:(id)arg5 imageLoader:(id)arg6;
 
 // Remaining properties

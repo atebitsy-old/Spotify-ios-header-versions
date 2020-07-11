@@ -6,9 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_;
+@protocol _TtP17FollowFeedFeature19SPTFollowFeedLogger_, _TtP17FollowFeedFeature21SPTFeedUpdatesManager_, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_;
 
 @protocol _TtP17FollowFeedFeature20SPTFollowFeedService_ <SPTService>
+- (id <_TtP17FollowFeedFeature19SPTFollowFeedLogger_>)provideFeedLogger;
+- (id <_TtP17FollowFeedFeature21SPTFeedUpdatesManager_>)provideFeedUpdatesManager;
 - (id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_>)provideRemoteConfigManager;
 @end
 

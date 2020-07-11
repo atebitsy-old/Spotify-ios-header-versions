@@ -6,7 +6,7 @@
 
 #import "VISREFBaseHeaderController.h"
 
-@class SPTPodcastHeaderForegroundView, UIColor, VISREFCustomBackButton, VISREFGradientBackgroundView;
+@class SPTPodcastHeaderForegroundView, VISREFGradientBackgroundView;
 @protocol GLUEImageLoader, GLUETheme, SPTPodcastHeaderContentView, SPTPodcastTestManager;
 
 @interface SPTPodcastHeaderController : VISREFBaseHeaderController
@@ -16,9 +16,6 @@
     VISREFGradientBackgroundView *_backgroundView;
     id <SPTPodcastHeaderContentView> _contentView;
     SPTPodcastHeaderForegroundView *_foregroundView;
-    VISREFCustomBackButton *_backButton;
-    UIColor *_associatedColor;
-    UIColor *_vibrantColor;
     id <GLUETheme> _theme;
     id <GLUEImageLoader> _imageLoader;
     double _navigationBarGradientEndPoint;
@@ -31,9 +28,6 @@
 @property(nonatomic) double navigationBarGradientEndPoint; // @synthesize navigationBarGradientEndPoint=_navigationBarGradientEndPoint;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) UIColor *vibrantColor; // @synthesize vibrantColor=_vibrantColor;
-@property(retain, nonatomic) UIColor *associatedColor; // @synthesize associatedColor=_associatedColor;
-@property(retain, nonatomic) VISREFCustomBackButton *backButton; // @synthesize backButton=_backButton;
 @property(retain, nonatomic) SPTPodcastHeaderForegroundView *foregroundView; // @synthesize foregroundView=_foregroundView;
 @property(retain, nonatomic) id <SPTPodcastHeaderContentView> contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
@@ -41,15 +35,15 @@
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
 - (void)updateProgressPositionsIfNeeded;
-- (void)extractColorFromImage:(id)arg1;
 - (void)updateColorsWithImage:(id)arg1;
 - (void)updateWithViewModel:(id)arg1;
-- (void)navigationBarHeightDidChange:(double)arg1;
+- (void)headerViewViewHierarchyDidChange:(id)arg1;
+- (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
 - (double)totalHeaderHeight;
 - (double)minimumContentHeight;
 - (double)minimumHeight;
-- (id)provideNavigationBarGradientOverlay;
+- (id)extractNavigationBarGradientFromBackgroundGradient;
 - (double)provideHeaderHeight;
 - (id)provideContentView;
 - (void)setup;

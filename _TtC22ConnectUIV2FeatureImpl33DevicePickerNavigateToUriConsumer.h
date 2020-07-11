@@ -8,6 +8,7 @@
 
 @interface _TtC22ConnectUIV2FeatureImpl33DevicePickerNavigateToUriConsumer : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: linkDispatcher
 }
 
 @end

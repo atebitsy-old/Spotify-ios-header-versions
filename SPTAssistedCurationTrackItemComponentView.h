@@ -9,7 +9,7 @@
 #import "HUBComponentViewWithEvents-Protocol.h"
 
 @class GLUEEntityRowCollectionViewCell, SPTAssistedCurationCardStyle, UITapGestureRecognizer;
-@protocol GLUEImageLoader, HUBComponentEventHandler, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTExplicitContentAccessManager;
+@protocol GLUEImageLoader, HUBComponentEventHandler, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTExplicitContentAccessManager, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTAssistedCurationTrackItemComponentView : HUBComponentView <HUBComponentViewWithEvents>
 {
@@ -18,6 +18,7 @@
     id <SPTAudioPreviewModelFactory> _audioPreviewModelFactory;
     id <SPTAudioPreviewUIFactory> _audioPreviewUIFactory;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
     id <GLUEImageLoader> _glueImageLoader;
     GLUEEntityRowCollectionViewCell *_trackCell;
     UITapGestureRecognizer *_tapGesture;
@@ -26,6 +27,7 @@
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) GLUEEntityRowCollectionViewCell *trackCell; // @synthesize trackCell=_trackCell;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
+@property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
 @property(readonly, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
@@ -37,13 +39,14 @@
 - (void)stopPreview;
 - (void)playPreview;
 - (_Bool)isPlaybackRestricted;
+- (_Bool)is19Plus;
 - (_Bool)isExplicit;
 - (id)trackURI;
 - (void)setupSubtitleAccessoryView;
 - (void)setupTrailingAccessoryView;
 - (void)setupLeadingAccessoryView;
 - (void)configureWithModel:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 audioPreviewModelFactory:(id)arg2 audioPreviewUIFactory:(id)arg3 explicitContentAccessManager:(id)arg4 glueImageLoader:(id)arg5 cardStyle:(id)arg6;
+- (id)initWithFrame:(struct CGRect)arg1 audioPreviewModelFactory:(id)arg2 audioPreviewUIFactory:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 glueImageLoader:(id)arg6 cardStyle:(id)arg7;
 
 @end
 

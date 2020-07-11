@@ -9,6 +9,7 @@
 @interface _TtC26AgeVerificationFeatureImpl6Logger : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: logCenter
+    // Error parsing type: , name: logTypeInterpreter
 }
 
 @end

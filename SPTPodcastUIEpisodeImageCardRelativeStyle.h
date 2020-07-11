@@ -24,7 +24,6 @@
     double _thumbnailShadowAlpha;
     double _thumbnailShadowRadius;
     double _labelStackViewMargin;
-    double _labelStackViewSpacing;
     double _placeholderTextWidthMultiplier;
     double _colorAnimationDuration;
     double _progressViewHeight;
@@ -36,7 +35,7 @@
     struct CGSize _size;
 }
 
-+ (double)componentHeightForModel:(id)arg1 componentWidth:(double)arg2 titleLabelStyle:(id)arg3 metadataLabelStyle:(id)arg4 margin:(double)arg5 textSpacing:(double)arg6;
++ (double)componentHeightForModel:(id)arg1 componentWidth:(double)arg2 titleLabelStyle:(id)arg3 metadataLabelStyle:(id)arg4 margin:(double)arg5;
 + (double)componentWidthForContainerWidth:(double)arg1 scale:(double)arg2 maxWidth:(double)arg3;
 + (struct CGSize)componentSizeForModel:(id)arg1 cardType:(long long)arg2 containerWidth:(double)arg3 theme:(id)arg4;
 @property(readonly, nonatomic) long long cardType; // @synthesize cardType=_cardType;
@@ -48,7 +47,6 @@
 @property(readonly, nonatomic) double progressViewHeight; // @synthesize progressViewHeight=_progressViewHeight;
 @property(readonly, nonatomic) double colorAnimationDuration; // @synthesize colorAnimationDuration=_colorAnimationDuration;
 @property(readonly, nonatomic) double placeholderTextWidthMultiplier; // @synthesize placeholderTextWidthMultiplier=_placeholderTextWidthMultiplier;
-@property(readonly, nonatomic) double labelStackViewSpacing; // @synthesize labelStackViewSpacing=_labelStackViewSpacing;
 @property(readonly, nonatomic) double labelStackViewMargin; // @synthesize labelStackViewMargin=_labelStackViewMargin;
 @property(readonly, nonatomic) double thumbnailShadowRadius; // @synthesize thumbnailShadowRadius=_thumbnailShadowRadius;
 @property(readonly, nonatomic) double thumbnailShadowAlpha; // @synthesize thumbnailShadowAlpha=_thumbnailShadowAlpha;

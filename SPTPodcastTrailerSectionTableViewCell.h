@@ -20,7 +20,7 @@
 @property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 - (void).cxx_destruct;
-- (void)updatewithViewModel:(id)arg1 atIndexPath:(id)arg2;
+- (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)configureLayout;
 - (void)configureAppearance;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

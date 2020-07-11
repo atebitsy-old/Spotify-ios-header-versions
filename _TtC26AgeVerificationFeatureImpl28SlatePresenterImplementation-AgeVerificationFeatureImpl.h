@@ -10,8 +10,7 @@
 
 @interface _TtC26AgeVerificationFeatureImpl28SlatePresenterImplementation (AgeVerificationFeatureImpl) <_TtP26AgeVerificationFeatureImpl14SlatePresenter_>
 - (void)dismiss;
-- (void)setLoading:(_Bool)arg1;
-- (void)updateWithError:(id)arg1;
+- (void)updateWithError:(id)arg1 animating:(_Bool)arg2;
 - (void)updateWithCoverArtURL:(id)arg1;
 - (void)updateWithColor:(id)arg1;
 - (void)presentFor:(id)arg1;

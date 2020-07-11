@@ -34,7 +34,7 @@
 - (void)openApp;
 @property(readonly, copy, nonatomic) NSString *sentToReasonForLogging;
 @property(readonly, copy, nonatomic) NSString *appNameForLogging;
-@property(readonly, nonatomic) _Bool isPresentingActiveBanner;
+- (_Bool)isPresentingActiveBanner;
 @property(readonly, nonatomic, getter=isNavigating) _Bool navigating;
 @property(readonly, nonatomic) UIImage *icon;
 @property(readonly, nonatomic) NSString *redirectURIPath;

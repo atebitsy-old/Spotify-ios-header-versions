@@ -15,8 +15,13 @@
     // Error parsing type: , name: glueService
     // Error parsing type: , name: abbaService
     // Error parsing type: , name: volumeService
+    // Error parsing type: , name: uriService
+    // Error parsing type: , name: playerService
+    // Error parsing type: , name: coreService
     // Error parsing type: , name: $__lazy_storage_$_gaiaDevicePresenterProxy
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenter
+    // Error parsing type: , name: $__lazy_storage_$_player
+    // Error parsing type: , name: $__lazy_storage_$_devicePickerContextMenuControllerFactory
     // Error parsing type: , name: $__lazy_storage_$_devicePickerControllerFactory
     // Error parsing type: , name: $__lazy_storage_$_devicePicerContextMenuIconManager
     // Error parsing type: , name: $__lazy_storage_$_devicePickerTheme

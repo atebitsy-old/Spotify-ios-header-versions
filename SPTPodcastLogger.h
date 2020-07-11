@@ -33,6 +33,7 @@
 - (void)logMarkAsPlayedUnplayedContextMenu:(id)arg1 episodeURI:(id)arg2 played:(_Bool)arg3;
 - (void)logOpenContextMenuShowInViewURL:(id)arg1;
 - (void)logOpenContextMenuEpisodeInViewURL:(id)arg1 episodeURI:(id)arg2 indexPath:(id)arg3;
+- (void)logDescriptionCollapsed:(id)arg1;
 - (void)logDescriptionExpanded:(id)arg1;
 - (void)logNavigatToTopicPage:(id)arg1 topicURI:(id)arg2;
 - (void)logShowFollowInViewURL:(id)arg1 didFollow:(_Bool)arg2 fromContextMenu:(_Bool)arg3 autoFollow:(_Bool)arg4;

@@ -17,9 +17,9 @@
     NSData *_requestBody;
 }
 
-@property(retain, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
+@property(copy, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
 @property(copy, nonatomic) NSString *requestAction; // @synthesize requestAction=_requestAction;
-@property(retain, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
+@property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *sortDescriptors;
 @property(readonly, nonatomic) NSPredicate *filterPredicate;

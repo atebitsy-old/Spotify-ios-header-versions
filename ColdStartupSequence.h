@@ -28,6 +28,8 @@
 @property(readonly, nonatomic) unsigned long long metadata_Count; // @dynamic metadata_Count;
 @property(retain, nonatomic) GPBStringInt64Dictionary *steps; // @dynamic steps;
 @property(readonly, nonatomic) unsigned long long steps_Count; // @dynamic steps_Count;
+@property(retain, nonatomic) GPBStringInt64Dictionary *subdurations; // @dynamic subdurations;
+@property(readonly, nonatomic) unsigned long long subdurations_Count; // @dynamic subdurations_Count;
 @property(copy, nonatomic) NSString *terminalApplicationState; // @dynamic terminalApplicationState;
 @property(copy, nonatomic) NSString *terminalState; // @dynamic terminalState;
 @property(copy, nonatomic) NSString *viewLoadSequenceId; // @dynamic viewLoadSequenceId;

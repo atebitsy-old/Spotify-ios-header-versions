@@ -21,7 +21,7 @@
 @property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(retain, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
-@property(retain, nonatomic) NSString *title; // @synthesize title=_title;
+@property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (void).cxx_destruct;
 - (id)performAction;
 - (_Bool)isDisabled;

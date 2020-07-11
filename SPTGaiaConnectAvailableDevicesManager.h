@@ -33,6 +33,7 @@
 - (id)findDeviceMatching:(CDUnknownBlockType)arg1;
 - (void)updateAllSpecialDevices;
 - (void)updateDevicesWithNewData:(id)arg1;
+- (id)findIncarnationOnDeviceWithId:(id)arg1 incarnationId:(id)arg2;
 - (id)findDeviceWithPhysicalIdentifier:(id)arg1;
 - (id)findDeviceWithIdentifier:(id)arg1;
 - (void)connectActiveDeviceVolumeDidUpdate:(double)arg1;

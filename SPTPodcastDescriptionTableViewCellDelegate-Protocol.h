@@ -10,6 +10,7 @@
 
 @protocol SPTPodcastDescriptionTableViewCellDelegate <NSObject>
 - (void)episodeDescriptionURLTapped:(NSURL *)arg1;
+- (void)episodeDescriptionDidCollapse;
 - (void)episodeDescriptionDidExpand;
 @end
 

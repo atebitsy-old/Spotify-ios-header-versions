@@ -13,7 +13,7 @@
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 
 @class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastFeatureProperties, SPTPodcastSortingService;
-@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTFreeTierEntityFeedbackButtonViewModel, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastFactory, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate;
+@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastFactory, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate;
 
 @interface SPTPodcastViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeProgressPolling>
 {
@@ -29,7 +29,6 @@
     NSURL *_URL;
     NSString *_appliedFilterText;
     id <SPTPodcast> _podcast;
-    id <SPTFreeTierEntityFeedbackButtonViewModel> _feedbackButtonViewModel;
     id <SPTPodcastFactory> _podcastFactory;
     id <SPTPodcastDataLoader> _dataLoader;
     id <SPTPodcastPlayer> _player;
@@ -66,9 +65,8 @@
 @property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
-@property(readonly, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> feedbackButtonViewModel; // @synthesize feedbackButtonViewModel=_feedbackButtonViewModel;
 @property(retain) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
-@property(retain, nonatomic) NSString *appliedFilterText; // @synthesize appliedFilterText=_appliedFilterText;
+@property(copy, nonatomic) NSString *appliedFilterText; // @synthesize appliedFilterText=_appliedFilterText;
 @property(nonatomic, getter=isFiltered) _Bool filtered; // @synthesize filtered=_filtered;
 @property(nonatomic) _Bool isLoaded; // @synthesize isLoaded=_isLoaded;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;

@@ -15,6 +15,10 @@
 
 @property(readonly, nonatomic) id <SPTUserBehaviourInstrumentation> ubiInstrumentation; // @synthesize ubiInstrumentation=_ubiInstrumentation;
 - (void).cxx_destruct;
+- (id)createFreeTierModeUBILogger;
+- (id)createVideoShowModeUBILogger;
+- (id)createPodcastModeUBILogger;
+- (id)createFeedbackModeUBILogger;
 - (id)createDefaultModeUBILogger;
 - (id)createUBILoggerWithMode:(id)arg1;
 - (id)initWithInstrumentation:(id)arg1;

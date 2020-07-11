@@ -7,10 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class UIButton, UIImage, UIView;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistVISREFHeaderViewModel, VISREFHeaderViewAnimationProgress;
+@protocol SPTFreeTierPlaylistHeaderConfiguration, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, VISREFHeaderViewAnimationProgress;
 
 @protocol SPTFreeTierPlaylistVISREFHeaderController <NSObject>
 @property(nonatomic) __weak id <SPTFreeTierPlaylistVISREFHeaderControllerDelegate> delegate;
+- (double)headerHeight;
 - (void)setSearchView:(UIView *)arg1;
 - (void)setImage:(UIImage *)arg1;
 - (void)setOfflineButton:(UIButton *)arg1;
@@ -18,6 +19,6 @@
 - (void)setContextMenuButton:(UIButton *)arg1;
 - (void)setCustomBackButton:(UIView<VISREFHeaderViewAnimationProgress> *)arg1;
 - (void)update;
-- (void)configureWithPlayViewModel:(id <SPTFreeTierPlaylistPlayViewModel>)arg1 followViewModel:(id <SPTFreeTierPlaylistFollowViewModel>)arg2 defaultHeaderViewModel:(id <SPTFreeTierPlaylistDefaultHeaderViewModel>)arg3 fullbleedHeaderViewModel:(id <SPTFreeTierPlaylistFullbleedHeaderViewModel>)arg4 playlistOfflineViewModel:(id <SPTFreeTierEntityOfflineViewModel>)arg5 visrefHeaderViewModel:(id <SPTFreeTierPlaylistVISREFHeaderViewModel>)arg6 filterSortBarView:(UIView *)arg7;
+- (void)configureWithHeaderConfiguration:(id <SPTFreeTierPlaylistHeaderConfiguration>)arg1 filterSortBarView:(UIView *)arg2;
 @end
 

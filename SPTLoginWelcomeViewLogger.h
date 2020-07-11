@@ -18,6 +18,7 @@
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+- (void)logIOS13IfNeeded;
 - (void)logFacebookLoginError:(id)arg1;
 - (void)logUserDidTapAppleButton;
 - (void)logUserDidTapLoginButton;

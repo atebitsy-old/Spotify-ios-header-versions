@@ -13,7 +13,6 @@
 @property(readonly, nonatomic, getter=isPodcastHeaderV2CondensedSizeEnabled) _Bool podcastHeaderV2CondensedSizeEnabled;
 @property(readonly, nonatomic, getter=isPodcastHeaderV2Enabled) _Bool podcastHeaderV2Enabled;
 @property(readonly, nonatomic, getter=isRefinedPodcastPageEnabled) _Bool refinedPodcastPageEnabled;
-@property(readonly, nonatomic, getter=isPodcast3DTouchEnabled) _Bool podcast3DTouchEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlaybackOrderEnabled) _Bool podcastPlaybackOrderEnabled;
 @property(readonly, nonatomic, getter=isProductionisedYourLibraryEnabled) _Bool productionisedYourLibraryEnabled;
 @property(readonly, nonatomic, getter=isLikeActionEnabled) _Bool likeActionEnabled;

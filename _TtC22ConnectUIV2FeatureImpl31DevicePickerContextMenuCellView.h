@@ -10,7 +10,11 @@
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: $__lazy_storage_$_iconImageView
+    // Error parsing type: , name: $__lazy_storage_$_secondaryIconImageView
     // Error parsing type: , name: $__lazy_storage_$_label
+    // Error parsing type: , name: iconImageViewWidthConstraint
+    // Error parsing type: , name: secondaryIconImageViewWidthConstraint
+    // Error parsing type: , name: iconLabelSpacingConstraint
 }
 
 - (void).cxx_destruct;

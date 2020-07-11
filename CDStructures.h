@@ -648,7 +648,18 @@ struct LogObserver {
     basic_string_90719d97 _field4;
 };
 
-struct Logger;
+struct Logger {
+    struct shared_ptr<spotify::analytics::LoggerImpl> _field1;
+    struct shared_ptr<spotify::analytics::TrackedLoggerImpl> _field2;
+    struct function<std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000000>>>()> _field3;
+    struct optional<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
+        _Bool _field1;
+        struct aligned_storage<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> _field2;
+    } _field4;
+    struct mutex _field5;
+};
+
+struct LoggerImpl;
 
 struct LoginController {
     CDUnknownFunctionPointerType *_field1;
@@ -834,7 +845,13 @@ struct PreparePlayOptions {
     struct optional<spotify::player::PlaybackId> _field1;
     _Bool _field2;
     struct SkipToTrack _field3;
-    optional_331450e3 _field4;
+    struct optional<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
+        union {
+            char _field1;
+            struct duration<long long, std::__1::ratio<1, 1000>> _field2;
+        } _field1;
+        _Bool _field2;
+    } _field4;
     _Bool _field5;
     _Bool _field6;
     struct ContextPlayerOptionOverrides _field7;
@@ -1106,6 +1123,8 @@ struct TrackInfo {
     unsigned int _field10;
 };
 
+struct TrackedLoggerImpl;
+
 struct UIEdgeInsets {
     double top;
     double left;
@@ -1285,6 +1304,13 @@ struct aligned_storage<std::__1::basic_string<char>> {
     } _field1;
 };
 
+struct aligned_storage<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
+    union dummy_u {
+        char _field1[8];
+        struct a8 _field2;
+    } _field1;
+};
+
 struct aligned_struct<40, 8> {
     unsigned char _field1[40];
 };
@@ -1436,6 +1462,13 @@ struct function<std::__1::basic_string<char>()> {
     struct __value_func<std::__1::basic_string<char>()> {
         struct type _field1;
         struct __base<std::__1::basic_string<char>()> *_field2;
+    } _field1;
+};
+
+struct function<std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000000>>>()> {
+    struct __value_func<std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000000>>>()> {
+        struct type _field1;
+        struct __base<std::__1::chrono::time_point<std::__1::chrono::steady_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000000>>>()> *_field2;
     } _field1;
 };
 
@@ -1716,14 +1749,6 @@ struct optional<spotify::player::PlayerLicense> {
     struct aligned_storage<spotify::player::PlayerLicense> _field2;
 };
 
-struct optional<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
-    union {
-        char _field1;
-        struct duration<long long, std::__1::ratio<1, 1000>> _field2;
-    } _field1;
-    _Bool _field2;
-};
-
 struct optional<unsigned char> {
     union {
         char _field1;
@@ -1841,6 +1866,16 @@ struct shared_ptr<coreobjc::LogObserver> {
 struct shared_ptr<spotify::analytics::Logger> {
     struct Logger *__ptr_;
     struct __shared_weak_count *__cntrl_;
+};
+
+struct shared_ptr<spotify::analytics::LoggerImpl> {
+    struct LoggerImpl *_field1;
+    struct __shared_weak_count *_field2;
+};
+
+struct shared_ptr<spotify::analytics::TrackedLoggerImpl> {
+    struct TrackedLoggerImpl *_field1;
+    struct __shared_weak_count *_field2;
 };
 
 struct shared_ptr<spotify::async::GenericTimerManager> {
@@ -2758,10 +2793,23 @@ typedef struct {
     Class _field1;
 } SPTCollectionPlatformDataLoaderResponse_f5c2288a;
 
+typedef struct ?<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
+    union {
+        char _field1;
+        struct duration<long long, std::__1::ratio<1, 1000>> _field2;
+    } _field1;
+    _Bool _field2;
+} optional_331450e3;
+
 typedef struct ?<std::__1::basic_string<char>> {
     _Bool _field1;
     struct aligned_storage<std::__1::basic_string<char>> _field2;
 } optional_861ab042;
+
+typedef struct ?<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
+    _Bool _field1;
+    struct aligned_storage<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> _field2;
+} optional_be93f04b;
 
 typedef struct {
     int _field1;
@@ -3027,14 +3075,6 @@ typedef struct map<std::__1::basic_string<char>, std::__1::basic_string<char>, s
     } _field1;
 } map_5554a4ce;
 
-typedef struct optional<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
-    union {
-        char _field1;
-        struct duration<long long, std::__1::ratio<1, 1000>> _field2;
-    } _field1;
-    _Bool _field2;
-} optional_331450e3;
-
 typedef struct shared_ptr<ComScore::Asset> {
     struct Asset *__ptr_;
     struct __shared_weak_count *__cntrl_;
@@ -3256,15 +3296,6 @@ union aligned_struct_wrapper<40, 8> {
     struct aligned_struct<40, 8> _field1;
     unsigned char _field2[40];
 };
-
-#if 0
-// Names with conflicting types:
-typedef union {
-    char _field1[24];
-    struct a8 _field2;
-} dummy_u_1f621ea1;
-
-#endif
 
 #pragma mark Typedef'd Unions
 

@@ -7,14 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "SPTDrivingStateObserver-Protocol.h"
-#import "SPTWazeDeepLinkObserver-Protocol.h"
 #import "SPTWazeNavigationStateObserver-Protocol.h"
 #import "SPTWazeTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAutoLockController, SPTWazeNavigationBannerViewModel, SPTWazeTransportManager;
 @protocol SPTAutoLockOverrideToken, SPTDrivingStateDetector, SPTExternalIntegrationDebugLog, SPTLinkDispatcher, SPTPartnerTestManager, SPTWazeTestManager, SPTWazeViewModelDelegate;
 
-@interface SPTWazeViewModel : NSObject <SPTDrivingStateObserver, SPTWazeNavigationStateObserver, SPTWazeTestManagerObserver, SPTWazeDeepLinkObserver>
+@interface SPTWazeViewModel : NSObject <SPTDrivingStateObserver, SPTWazeNavigationStateObserver, SPTWazeTestManagerObserver>
 {
     _Bool _shouldShowBanner;
     id <SPTWazeViewModelDelegate> _delegate;
@@ -56,7 +55,6 @@
 - (id)currentPresentationStateToString;
 - (void)evaluateBannerPresentationBannerIsShown:(_Bool)arg1;
 - (void)didRequestToCloseBanner;
-- (void)didTapStartBannerCloseButton;
 - (void)didTapConnectBannerCloseButton;
 - (void)handleBannerTap;
 - (void)didTapBanner;

@@ -19,7 +19,7 @@
 @property(copy, nonatomic) CDUnknownBlockType task; // @synthesize task=_task;
 @property(nonatomic) _Bool isTimerActivated; // @synthesize isTimerActivated=_isTimerActivated;
 @property(nonatomic) long long actionIcon; // @synthesize actionIcon=_actionIcon;
-@property(retain, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
+@property(copy, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
 - (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;

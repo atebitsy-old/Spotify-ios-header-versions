@@ -9,23 +9,28 @@
 #import "SPTSessionBootstrapDelegate-Protocol.h"
 
 @class NSData;
-@protocol SPTRemoteConfigurationContext;
+@protocol SPTEventSender, SPTRemoteConfigurationContext;
 
 @interface SPTBootstrapModule : NSObject <SPTSessionBootstrapDelegate>
 {
     id <SPTRemoteConfigurationContext> _remoteConfigurationContext;
+    id <SPTEventSender> _eventSender;
     NSData *_remoteConfigurationData;
 }
 
 @property(copy, nonatomic) NSData *remoteConfigurationData; // @synthesize remoteConfigurationData=_remoteConfigurationData;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTRemoteConfigurationContext> remoteConfigurationContext; // @synthesize remoteConfigurationContext=_remoteConfigurationContext;
 - (void).cxx_destruct;
-- (void)parseWebGateResponse:(id)arg1;
+- (void)sendNonAuthenticatedEventWithProtobuf:(id)arg1;
+- (id)createBootstrapRequestNonAuthWithErrorMessage:(id)arg1 httpCode:(int)arg2 errorReason:(id)arg3 latencyInSeconds:(double)arg4 payloadSize:(long long)arg5;
+- (id)createBootstrapRequestNonAuthSuccess:(double)arg1 payloadSize:(long long)arg2;
+- (void)parseWebGateResponse:(id)arg1 latencyInSeconds:(double)arg2;
 - (id)createBootStrapRequestPayload;
 - (id)createWebGateRequest;
 - (void)bootstrap:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)provideRemoteConfigurationPayload;
-- (id)initWithRemoteConfigurationContext:(id)arg1;
+- (id)initWithRemoteConfigurationContext:(id)arg1 eventSender:(id)arg2;
 
 @end
 

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: newProfilePageEnabled
     // Error parsing type: , name: newProfilePageEditButtonEnabled
+    // Error parsing type: , name: editProfilePageEditImageEnabled
 }
 
 - (id)init;

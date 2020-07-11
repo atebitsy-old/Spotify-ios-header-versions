@@ -12,15 +12,15 @@
 
 - (id)delayedSignupBannerStyle;
 - (id)popupContainerViewStyle;
-- (id)inputFormViewStyle:(_Bool)arg1;
+- (id)inputFormViewStyle;
 - (id)delayedSignupTermsAndConditionsTextViewStyle;
 - (id)termsAndConditionsTextViewStyle;
 - (float)adjustTopInsetsFromCurrent:(float)arg1;
 - (id)login_inputFieldDisclosureLabelStyle;
-- (id)login_inputFieldHeadingLabelStyle:(_Bool)arg1;
+- (id)login_inputFieldHeadingLabelStyle;
 - (id)login_titleHeadingLabelStyle;
 - (id)login_backgroundColor;
-- (id)formTextFieldStyle:(_Bool)arg1;
+- (id)formTextFieldStyle;
 - (id)delayedSignup_signupButtonStyle;
 - (id)delayedSignup_loginButtonStyle;
 - (id)login_facebookButtonStyle;
@@ -36,14 +36,14 @@
 - (id)continueWithEmailViewStyle;
 - (id)continueWithWelcomeViewStyle;
 - (id)welcomeViewStyleForIPad:(_Bool)arg1;
-- (id)magicLinkDoRequestViewStyle:(_Bool)arg1;
-- (id)magicLinkSentConfirmationViewStyle:(_Bool)arg1;
-- (id)singleInputFieldBaseViewStyle:(_Bool)arg1;
-- (id)setNewPasswordViewStyle:(_Bool)arg1;
-- (id)singleInputFieldSignupViewStyle:(_Bool)arg1;
+- (id)magicLinkDoRequestViewStyle;
+- (id)magicLinkSentConfirmationViewStyle;
+- (id)singleInputFieldBaseViewStyle;
+- (id)setNewPasswordViewStyle;
+- (id)singleInputFieldSignupViewStyle;
 - (id)facebookConfirmationViewStyle;
-- (id)signupViewStyle:(_Bool)arg1;
-- (id)loginViewStyle:(_Bool)arg1;
+- (id)signupViewStyle;
+- (id)loginViewStyle;
 
 @end
 

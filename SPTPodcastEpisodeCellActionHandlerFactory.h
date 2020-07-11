@@ -6,13 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPageRegistry, SPTPodcastContextMenuProvider, SPTPodcastLogger, SPTPodcastOffliningManager, SPTPodcastTestManager, SPTSnackbarConditionalPresenter;
+@class SPTPodcastLogger;
+@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPageRegistry, SPTPodcastContextMenuProvider, SPTPodcastOffliningManager, SPTPodcastTestManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTPodcastEpisodeCellActionHandlerFactory : NSObject
 {
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
-    id <SPTPodcastLogger> _logger;
+    SPTPodcastLogger *_logger;
     id <SPTPodcastTestManager> _testManager;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
     id <SPTCollectionLogger> _collectionLogger;
@@ -27,7 +28,7 @@
 @property(readonly, nonatomic) __weak id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) __weak id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
-@property(retain, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 - (void).cxx_destruct;

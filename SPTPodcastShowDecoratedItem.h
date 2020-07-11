@@ -28,9 +28,9 @@
 @property(retain, nonatomic) NSURL *latestPlayedEpisodeURL; // @synthesize latestPlayedEpisodeURL=_latestPlayedEpisodeURL;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic, getter=isFollowing) _Bool following; // @synthesize following=_following;
-@property(retain, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
-@property(retain, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
-@property(retain, nonatomic) NSString *title; // @synthesize title=_title;
+@property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
+@property(copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
+@property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (void).cxx_destruct;
 
 // Remaining properties

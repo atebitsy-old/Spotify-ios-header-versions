@@ -44,7 +44,6 @@
 - (id)sort;
 - (id)repeatDisable;
 - (id)uiNavigateWithDestination:(id)arg1;
-- (id)removeSearchItem;
 - (id)quickScroll;
 - (id)likeWithItemToBeLiked:(id)arg1;
 - (id)removeDislikeWithItemNoLongerDisliked:(id)arg1;
@@ -73,6 +72,7 @@
 - (id)refreshContent;
 - (id)setPlaylistDescriptionWithPlaylistToChangeDescriptionOn:(id)arg1;
 - (id)dislikeWithItemToBeDisliked:(id)arg1;
+- (id)removeRecentSearchesItem;
 - (id)playWithItemToBePlayed:(id)arg1;
 - (id)initWithApplicationId:(id)arg1 specificationCommitHash:(id)arg2 components:(id)arg3 interactionType:(id)arg4 errors:(id)arg5;
 

@@ -10,11 +10,12 @@
 {
     // Error parsing type: , name: pushMessagingLoggerImpressionType
     // Error parsing type: , name: pushMessagingLoggerUserIntent
-    // Error parsing type: , name: pushMessagingLoggerMetadataKey
     // Error parsing type: , name: pushMessagingLoggerCampaignIDKey
     // Error parsing type: , name: pushMessagingLoggerMessageIDKey
     // Error parsing type: , name: pushMessagingLoggerURLKey
     // Error parsing type: , name: pushMessagingLoggerTimestampKey
+    // Error parsing type: , name: pushMessagingSharedGroupKey
+    // Error parsing type: , name: pushMessagingExtensionDictionaryKey
     // Error parsing type: , name: logCenter
 }
 

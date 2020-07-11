@@ -9,26 +9,23 @@
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 
-@class GLUEEntityRowStyle, GLUEEntityRowView, SPTSearchUIChipView;
+@class GLUEEntityRowStyle, GLUEEntityRowView;
 @protocol HUBComponentEventHandler;
 
 @interface SPTSearchUIPodcastShowComponentView : HUGSThemableComponentView <HUBComponentViewWithImageHandling, HUBComponentViewWithEvents>
 {
     id <HUBComponentEventHandler> _eventHandler;
     GLUEEntityRowView *_entityRowView;
-    SPTSearchUIChipView *_chipView;
     GLUEEntityRowStyle *_rowStyle;
 }
 
 + (struct CGSize)preferredViewSizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2;
 + (id)styleForTheme:(id)arg1;
 @property(copy, nonatomic) GLUEEntityRowStyle *rowStyle; // @synthesize rowStyle=_rowStyle;
-@property(readonly, nonatomic) SPTSearchUIChipView *chipView; // @synthesize chipView=_chipView;
 @property(readonly, nonatomic) GLUEEntityRowView *entityRowView; // @synthesize entityRowView=_entityRowView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void).cxx_destruct;
 - (struct CGSize)preferredSizeForMainImage;
-- (id)chipStyle;
 - (void)sendSelectionEvent;
 - (void)applyThemeLayout;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;

@@ -9,6 +9,7 @@
 @class NSError, NSString;
 
 @protocol SPTLoginLogger <NSObject>
+- (void)userDidCompleteRequestWithType:(NSString *)arg1 error:(NSError *)arg2 attemptId:(NSString *)arg3 result:(NSString *)arg4;
 - (void)userDidCompleteRequestWithType:(NSString *)arg1 error:(NSError *)arg2 attemptId:(NSString *)arg3;
 - (NSString *)userDidStartRequestWithType:(NSString *)arg1;
 - (void)trackGuestAccountCreationFailedWithError:(long long)arg1;

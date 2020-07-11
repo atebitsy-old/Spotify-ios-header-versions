@@ -9,6 +9,9 @@
 @protocol SPTDrivingModeRemoteConfiguration <NSObject>
 @property(readonly, nonatomic, getter=isJumpstartInForegroundEnabled) _Bool jumpstartInForeground;
 @property(readonly, nonatomic, getter=isMotionBasedDetectionSurveyEnabled) _Bool motionBasedDetectionSurvey;
+@property(readonly, nonatomic, getter=isPivotEnabled) _Bool pivotEnabled;
+@property(readonly, nonatomic, getter=isInCarViewHoldback) _Bool carViewHoldbackEnabled;
+@property(readonly, nonatomic, getter=isCarViewEnabled) _Bool carViewEnabled;
 @property(readonly, nonatomic, getter=isHomeFeedEnabled) _Bool drivingCarViewHomeFeed;
 @property(readonly, nonatomic, getter=isScreenlockPreventionEnabled) _Bool screenlockPreventionEnabled;
 @property(readonly, nonatomic, getter=isSwipeToSkipEnabled) _Bool swipeToSkipEnabled;

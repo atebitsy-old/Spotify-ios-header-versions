@@ -8,18 +8,17 @@
 
 #import "SPTPodcastSpeedControlManager-Protocol.h"
 
-@class NSString, SPTPodcastPreferences, SPTTheme;
-@protocol SPTPodcastLogger;
+@class NSString, SPTPodcastLogger, SPTPodcastPreferences, SPTTheme;
 
 @interface SPTPodcastSpeedControlManagerImpl : NSObject <SPTPodcastSpeedControlManager>
 {
     SPTPodcastPreferences *_podcastPreferences;
-    id <SPTPodcastLogger> _podcastLogger;
+    SPTPodcastLogger *_logger;
     SPTTheme *_theme;
 }
 
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
+@property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTPodcastPreferences *podcastPreferences; // @synthesize podcastPreferences=_podcastPreferences;
 - (void).cxx_destruct;
 - (void)removePodcastPreferencesObserver:(id)arg1;

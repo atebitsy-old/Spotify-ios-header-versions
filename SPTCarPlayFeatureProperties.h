@@ -13,8 +13,12 @@
 @interface SPTCarPlayFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _carplayFeature;
+    _Bool _carplayDeferImageLoading;
+    _Bool _carplayDisableTrackImages;
 }
 
+@property(readonly, nonatomic) _Bool carplayDisableTrackImages; // @synthesize carplayDisableTrackImages=_carplayDisableTrackImages;
+@property(readonly, nonatomic) _Bool carplayDeferImageLoading; // @synthesize carplayDeferImageLoading=_carplayDeferImageLoading;
 @property(readonly, nonatomic) _Bool carplayFeature; // @synthesize carplayFeature=_carplayFeature;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

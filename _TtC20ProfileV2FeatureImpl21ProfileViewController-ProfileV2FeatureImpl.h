@@ -6,14 +6,7 @@
 
 #import "_TtC20ProfileV2FeatureImpl21ProfileViewController.h"
 
-@class NSString, NSURL;
-
 @interface _TtC20ProfileV2FeatureImpl21ProfileViewController (ProfileV2FeatureImpl)
-- (id)spt_pageURI;
-- (id)spt_pageIdentifier;
-
-// Remaining properties
-@property(nonatomic, readonly) NSString *pageIdentifier;
-@property(nonatomic, readonly) NSURL *pageURI;
+- (unsigned long long)preferredNavigationBarState;
 @end
 

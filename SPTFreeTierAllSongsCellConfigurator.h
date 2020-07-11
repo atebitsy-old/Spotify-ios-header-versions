@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSURL, SPTFreeTierAllSongsContextMenuPresenter, SPTFreeTierAllSongsTheme, SPTFreeTierAllSongsViewModel;
-@protocol GLUEImageLoader, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTFreeTierAllSongsCellConfiguratorDelegate, SPTLogCenter;
+@class NSURL, SPTFreeTierAllSongsContextMenuPresenter, SPTFreeTierAllSongsLogger, SPTFreeTierAllSongsTheme, SPTFreeTierAllSongsViewModel;
+@protocol GLUEImageLoader, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTFreeTierAllSongsCellConfiguratorDelegate;
 
 @interface SPTFreeTierAllSongsCellConfigurator : NSObject
 {
@@ -20,10 +20,10 @@
     id <SPTAudioPreviewUIFactory> _audioPreviewUIFactory;
     id <SPTAudioPreviewModelFactory> _audioPreviewModelFactory;
     SPTFreeTierAllSongsContextMenuPresenter *_contextMenuPresenter;
-    id <SPTLogCenter> _logCenter;
+    SPTFreeTierAllSongsLogger *_logger;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) SPTFreeTierAllSongsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTFreeTierAllSongsContextMenuPresenter *contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
 @property(readonly, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
@@ -38,7 +38,6 @@
 - (id)previewStyleForIndexPath:(id)arg1;
 - (void)presentContextMenuAtIndexPath:(id)arg1 fromView:(id)arg2;
 - (void)updatePreferredRowHeight;
-- (void)logUserInteractionForIntent:(id)arg1 withIndexPath:(id)arg2;
 - (id)indexPathForButton:(id)arg1;
 - (id)indexPathForCell:(id)arg1;
 - (void)cellImagePreviewButtonDidTouchUpInside:(id)arg1;
@@ -51,7 +50,7 @@
 - (long long)configureMultipleAccessoriesViewForCell:(id)arg1 subtitleAccessoryView:(id)arg2 indexPath:(id)arg3;
 - (void)configureCell:(id)arg1 atIndexPath:(id)arg2;
 - (Class)cellClass;
-- (id)initWithViewURI:(id)arg1 theme:(id)arg2 viewModel:(id)arg3 imageLoader:(id)arg4 audioPreviewUIFactory:(id)arg5 audioPreviewModelFactory:(id)arg6 contextMenuPresenter:(id)arg7 logCenter:(id)arg8;
+- (id)initWithViewURI:(id)arg1 theme:(id)arg2 viewModel:(id)arg3 imageLoader:(id)arg4 audioPreviewUIFactory:(id)arg5 audioPreviewModelFactory:(id)arg6 contextMenuPresenter:(id)arg7 logger:(id)arg8;
 
 @end
 

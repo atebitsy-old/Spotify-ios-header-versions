@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUETrackAccessoryLabel, NSArray, NSLayoutConstraint, NSString, SPTSearchUIChipsContainer, SPTSearchUIEpisodeViewStyle, SPTSearchUIMarginView, UIImage, UIImageView, UILabel, UIStackView;
+@class GLUETrackAccessoryLabel, NSLayoutConstraint, NSString, SPTSearchUIEpisodeViewStyle, SPTSearchUIMarginView, UIImage, UIImageView, UILabel, UIStackView;
 
 @interface SPTSearchUIEpisodeView : UIView
 {
@@ -17,33 +17,31 @@
     UILabel *_titleLabel;
     UILabel *_subtitleLabel;
     GLUETrackAccessoryLabel *_accessoryLabel;
+    UILabel *_accessoryTitleLabel;
     UIImageView *_imageView;
     UIImageView *_accessoryIconImageView;
-    SPTSearchUIChipsContainer *_chipsContainer;
     UIStackView *_mainStackView;
     SPTSearchUIMarginView *_marginView;
     UIStackView *_imageAndLabelsView;
-    UIStackView *_episodeDetailsView;
     UIStackView *_labelsContainer;
     UIStackView *_labelsVerticalStack;
     UIStackView *_imageViewContainer;
     UIStackView *_subtitleStack;
 }
 
++ (double)subtitleSpacingForStyle:(id)arg1;
 + (double)imageToLabelsSpacingForStyle:(id)arg1;
-+ (id)chipsContainerStyleForEpisodeViewStyle:(id)arg1;
-+ (struct CGSize)sizeForTitle:(id)arg1 subtitle:(id)arg2 chips:(id)arg3 accessoryIconImage:(id)arg4 explicitContent:(_Bool)arg5 style:(id)arg6 maxWidth:(double)arg7;
++ (struct CGSize)sizeForTitle:(id)arg1 subtitle:(id)arg2 accessoryTitle:(id)arg3 accessoryIconImage:(id)arg4 explicitContent:(_Bool)arg5 style:(id)arg6 maxWidth:(double)arg7;
 @property(readonly, nonatomic) UIStackView *subtitleStack; // @synthesize subtitleStack=_subtitleStack;
 @property(readonly, nonatomic) UIStackView *imageViewContainer; // @synthesize imageViewContainer=_imageViewContainer;
 @property(readonly, nonatomic) UIStackView *labelsVerticalStack; // @synthesize labelsVerticalStack=_labelsVerticalStack;
 @property(readonly, nonatomic) UIStackView *labelsContainer; // @synthesize labelsContainer=_labelsContainer;
-@property(readonly, nonatomic) UIStackView *episodeDetailsView; // @synthesize episodeDetailsView=_episodeDetailsView;
 @property(readonly, nonatomic) UIStackView *imageAndLabelsView; // @synthesize imageAndLabelsView=_imageAndLabelsView;
 @property(readonly, nonatomic) SPTSearchUIMarginView *marginView; // @synthesize marginView=_marginView;
 @property(readonly, nonatomic) UIStackView *mainStackView; // @synthesize mainStackView=_mainStackView;
-@property(readonly, nonatomic) SPTSearchUIChipsContainer *chipsContainer; // @synthesize chipsContainer=_chipsContainer;
 @property(readonly, nonatomic) UIImageView *accessoryIconImageView; // @synthesize accessoryIconImageView=_accessoryIconImageView;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
+@property(readonly, nonatomic) UILabel *accessoryTitleLabel; // @synthesize accessoryTitleLabel=_accessoryTitleLabel;
 @property(readonly, nonatomic) GLUETrackAccessoryLabel *accessoryLabel; // @synthesize accessoryLabel=_accessoryLabel;
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -58,7 +56,7 @@
 - (void)setUpViewHierarchy;
 - (void)setUpViews;
 @property(retain, nonatomic) UIImage *accessoryIconImage;
-@property(copy, nonatomic) NSArray *chips;
+@property(copy, nonatomic) NSString *accessoryTitle;
 @property(copy, nonatomic) NSString *subtitle;
 @property(copy, nonatomic) NSString *title;
 @property(retain, nonatomic) UIImage *image;

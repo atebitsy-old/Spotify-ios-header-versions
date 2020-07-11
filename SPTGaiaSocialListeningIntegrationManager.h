@@ -7,12 +7,14 @@
 #import <objc/NSObject.h>
 
 #import "SPTGaiaConnectManagerObserver-Protocol.h"
+#import "SPTGaiaDevicePickerSocialDeviceCellDelegate-Protocol.h"
+#import "SPTGaiaSocialListeningIntegrationPublicAPI-Protocol.h"
 #import "SPTSocialListeningModelObserver-Protocol.h"
 
 @class NSArray, NSDictionary, NSNotificationCenter, NSString, NSURL, SPTObserverManager, UIView, UIViewController;
 @protocol SPTGaiaConnectManager, SPTSocialListeningModel, SPTSocialListeningSessionViewController, SPTSocialListeningSocialDeviceModelEntity, SPTSocialListeningTestManager, SPTSocialListeningUserInterfaceFactory;
 
-@interface SPTGaiaSocialListeningIntegrationManager : NSObject <SPTGaiaConnectManagerObserver, SPTSocialListeningModelObserver>
+@interface SPTGaiaSocialListeningIntegrationManager : NSObject <SPTGaiaConnectManagerObserver, SPTSocialListeningModelObserver, SPTGaiaSocialListeningIntegrationPublicAPI, SPTGaiaDevicePickerSocialDeviceCellDelegate>
 {
     NSDictionary *_exposedDevices;
     id <SPTSocialListeningTestManager> _testManager;
@@ -35,6 +37,8 @@
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSDictionary *exposedDevices; // @synthesize exposedDevices=_exposedDevices;
 - (void).cxx_destruct;
+- (void)socialDeviceDidDisableSocialFeature:(id)arg1;
+- (void)socialDeviceDidEnableSocialFeature:(id)arg1;
 - (void)connectManager:(id)arg1 activeDeviceDidChange:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;
@@ -45,8 +49,10 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)notifyUpdate;
+- (void)showActivityIndicatorIfNeeded;
 - (void)joinSocialDeviceSession:(id)arg1;
 - (void)leaveSocialDeviceSession;
+- (id)socialDeviceForDeviceId:(id)arg1;
 - (void)enableSocialDevice:(id)arg1;
 - (void)disableSocialDevice:(id)arg1;
 - (void)fetchExposedDevices;

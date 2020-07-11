@@ -36,6 +36,7 @@
 - (void)update;
 - (id)navigationTitleViewWrappedInContainer;
 - (void)updateTitleView;
+- (void)traitCollectionDidChange:(id)arg1;
 - (void)headerDidAppear;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

@@ -7,22 +7,20 @@
 #import "GLUEStatefulView.h"
 
 #import "GLUEStyleable-Protocol.h"
-#import "SPTPlayerObserver-Protocol.h"
+#import "SPTHomeUIHabitsCardViewModelDelegate-Protocol.h"
 
-@class GLUEImageView, NSAttributedString, NSLayoutConstraint, NSString, SPTHomeUILabel, UIView;
-@protocol GLUEAnimationLoading><GLUEAnimationControlling, HUBComponentModel, SPTPlayer;
+@class GLUEImageView, NSAttributedString, NSLayoutConstraint, NSString, SPTHomeUIHabitsCardViewModel, SPTHomeUILabel, UIView;
+@protocol GLUEAnimationLoading><GLUEAnimationControlling, GLUETheme;
 
-@interface SPTHomeUIHabitsCardView : GLUEStatefulView <SPTPlayerObserver, GLUEStyleable>
+@interface SPTHomeUIHabitsCardView : GLUEStatefulView <GLUEStyleable, SPTHomeUIHabitsCardViewModelDelegate>
 {
-    _Bool _needsMaskUpdate;
-    id <HUBComponentModel> _model;
-    id <SPTPlayer> _player;
+    SPTHomeUIHabitsCardViewModel *_viewModel;
+    id <GLUETheme> _theme;
     SPTHomeUILabel *_titleLabel;
     GLUEImageView *_imageView;
     UIView *_accessoryView;
     GLUEImageView *_accessoryImageView;
     struct UIView *_playbackIndicatorAnimationView;
-    double _spt_cornerRadius;
     NSLayoutConstraint *_titleLabelBottomEdgeConstraint;
     NSLayoutConstraint *_titleLabelLongTrailingEdgeConstraint;
     NSLayoutConstraint *_titleLabelShortTrailingEdgeConstraint;
@@ -34,39 +32,37 @@
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelShortTrailingEdgeConstraint; // @synthesize titleLabelShortTrailingEdgeConstraint=_titleLabelShortTrailingEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelLongTrailingEdgeConstraint; // @synthesize titleLabelLongTrailingEdgeConstraint=_titleLabelLongTrailingEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelBottomEdgeConstraint; // @synthesize titleLabelBottomEdgeConstraint=_titleLabelBottomEdgeConstraint;
-@property(nonatomic) double spt_cornerRadius; // @synthesize spt_cornerRadius=_spt_cornerRadius;
-@property(nonatomic) _Bool needsMaskUpdate; // @synthesize needsMaskUpdate=_needsMaskUpdate;
 @property(retain, nonatomic) UIView<GLUEAnimationLoading><GLUEAnimationControlling> *playbackIndicatorAnimationView; // @synthesize playbackIndicatorAnimationView=_playbackIndicatorAnimationView;
 @property(retain, nonatomic) GLUEImageView *accessoryImageView; // @synthesize accessoryImageView=_accessoryImageView;
 @property(readonly, nonatomic) UIView *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) SPTHomeUILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
+@property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+@property(retain, nonatomic) SPTHomeUIHabitsCardViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
 - (void)addConstraints;
+- (void)updateAccessibilityWithModel:(id)arg1;
+- (id)paragraphStyleWithAlignment:(long long)arg1;
+- (id)attributedTitleForModel:(id)arg1 theme:(id)arg2;
 - (void)animateToHighlighted:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)applyStateStyle:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
-- (void)configureAccessoryView;
+- (void)configureAccessoryViewWithViewModel:(id)arg1;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)setAccessoryViewImage:(id)arg1;
-@property(copy, nonatomic) NSAttributedString *attributedTitle; // @dynamic attributedTitle;
+@property(copy, nonatomic) NSAttributedString *attributedTitle;
 - (void)prepareForReuse;
 - (void)hidePlaybackIndicator;
 - (void)showPlaybackIndicator;
-- (_Bool)isActiveContextURL:(id)arg1;
-- (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
-- (void)layoutSubviews;
-- (void)setBounds:(struct CGRect)arg1;
+- (void)habitsCardViewModelDidBecomeInactiveContext:(id)arg1;
+- (void)habitsCardViewModelDidBecomeActiveContext:(id)arg1;
 - (void)createPlaybackAnimationView;
 - (void)createAccessoryImageView;
 - (void)createAccessoryView;
 - (void)createImageView;
 - (void)createTitleLabel;
-- (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1 player:(id)arg2;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

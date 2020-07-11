@@ -8,40 +8,26 @@
 
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTOnDemandTrialTestManager-Protocol.h"
-#import "SPTProductStateObserver-Protocol.h"
 
 @class NSString;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState;
+@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal;
 
-@interface SPTOnDemandTrialTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTProductStateObserver, SPTOnDemandTrialTestManager>
+@interface SPTOnDemandTrialTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTOnDemandTrialTestManager>
 {
-    _Bool _isFeatureEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _onDemandUserPolicySignal;
-    id <SPTFeatureFlagSignal> _onDemandTrialSuppressDialogSignal;
     long long _onDemandUserPolicyState;
-    long long _onDemandTrialSuppressDialogFlagState;
 }
 
-@property(nonatomic) _Bool isFeatureEnabled; // @synthesize isFeatureEnabled=_isFeatureEnabled;
-@property(nonatomic) long long onDemandTrialSuppressDialogFlagState; // @synthesize onDemandTrialSuppressDialogFlagState=_onDemandTrialSuppressDialogFlagState;
 @property(nonatomic) long long onDemandUserPolicyState; // @synthesize onDemandUserPolicyState=_onDemandUserPolicyState;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> onDemandTrialSuppressDialogSignal; // @synthesize onDemandTrialSuppressDialogSignal=_onDemandTrialSuppressDialogSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> onDemandUserPolicySignal; // @synthesize onDemandUserPolicySignal=_onDemandUserPolicySignal;
-@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
-- (_Bool)shouldSuppressEndOfTrialDialog;
 - (_Bool)isInTrial;
-- (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)updateUserPolicyPresence:(id)arg1;
 - (void)setupUserPolicySignal;
-- (void)setupSuppressDialogSignal;
-- (void)setupSignals;
 - (void)dealloc;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2;
+- (id)initWithFeatureFlagFactory:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -8,35 +8,29 @@
 
 #import "SPTDrivingModeHomeFeedListObserver-Protocol.h"
 
-@class NSArray, NSString, SPTDrivingModeHomeFeedList;
-@protocol SPTDrivingModeHomeFeedViewModelDelegate, SPTExternalIntegrationPlaybackController;
+@class NSArray, NSString, SPTDrivingModeCarModePlayer, SPTDrivingModeHomeFeedList;
+@protocol SPTDrivingModeHomeFeedViewModelDelegate;
 
 @interface SPTDrivingModeHomeFeedViewModel : NSObject <SPTDrivingModeHomeFeedListObserver>
 {
     NSArray *_shelves;
     id <SPTDrivingModeHomeFeedViewModelDelegate> _delegate;
-    unsigned long long _selectedItemIndex;
-    id <SPTExternalIntegrationPlaybackController> _playbackController;
+    SPTDrivingModeCarModePlayer *_carModePlayer;
     SPTDrivingModeHomeFeedList *_homeFeedList;
 }
 
 @property(readonly, nonatomic) SPTDrivingModeHomeFeedList *homeFeedList; // @synthesize homeFeedList=_homeFeedList;
-@property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
-@property(nonatomic) unsigned long long selectedItemIndex; // @synthesize selectedItemIndex=_selectedItemIndex;
+@property(readonly, nonatomic) SPTDrivingModeCarModePlayer *carModePlayer; // @synthesize carModePlayer=_carModePlayer;
 @property(nonatomic) __weak id <SPTDrivingModeHomeFeedViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSArray *shelves; // @synthesize shelves=_shelves;
 - (void).cxx_destruct;
+- (id)shelfItemWithUpdatedStateForItem:(id)arg1;
 - (void)playContextURI:(id)arg1;
 - (void)homeFeedListDidUpdate:(id)arg1;
 - (id)shelfAtIndex:(int)arg1;
-- (id)previousShelf;
-- (id)nextShelf;
-- (id)currentShelf;
 - (void)viewWillBeDismissed;
 - (void)viewWillBePresented;
-@property(readonly, nonatomic) unsigned long long nextItemIndex;
-@property(readonly, nonatomic) unsigned long long previousItemIndex;
-- (id)initWithHomeFeedList:(id)arg1 playbackController:(id)arg2;
+- (id)initWithHomeFeedList:(id)arg1 carModePlayer:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

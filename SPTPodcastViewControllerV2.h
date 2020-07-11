@@ -18,10 +18,10 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTFreeTierEntityNavigationDecorator, SPTInfoView, SPTPodcastFilterTableFooterView, SPTPodcastHeaderController, SPTPodcastViewModel2, SPTShowContextMenuController, SPTTableView, SPTTheme, VISREFTableHeaderView;
-@protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTLinkDispatcher, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastFollowSectionTableViewCellCommonInterface, SPTPodcastLogger, SPTPodcastTestManager, SPTShareFeature, SPTUIPresentationService, SPTViewLogger;
+@class NSString, NSURL, SPTFreeTierEntityNavigationDecorator, SPTInfoView, SPTPodcastFilterTableFooterView, SPTPodcastHeaderController, SPTPodcastLogger, SPTPodcastViewModel2, SPTShowContextMenuController, SPTTableView, SPTTheme, VISREFTableHeaderView;
+@protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTLinkDispatcher, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastFollowSectionTableViewCellCommonInterface, SPTPodcastTestManager, SPTShareFeature, SPTUIPresentationService, SPTViewLogger;
 
-@interface SPTPodcastViewControllerV2 : UIViewController <SPTNavigationControllerNavigationBarState, SPTPodcastViewModelDelegate2, SPTShowContextMenuControllerDelegate, SPTShareableContext, UITableViewDelegate, UITableViewDataSource, SPTPodcastChipsSectionTableViewCellDelegate, SPTPodcastDescriptionTableViewCellDelegate, SPContentInsetViewController, SPTPageController, SPViewController>
+@interface SPTPodcastViewControllerV2 : UIViewController <SPTNavigationControllerNavigationBarState, SPTPodcastViewModelDelegate2, SPTShowContextMenuControllerDelegate, SPTShareableContext, SPTPodcastChipsSectionTableViewCellDelegate, SPTPodcastDescriptionTableViewCellDelegate, SPContentInsetViewController, SPTPageController, SPViewController, UITableViewDelegate, UITableViewDataSource>
 {
     _Bool _dataLoaded;
     SPTPodcastViewModel2 *_viewModel;
@@ -42,7 +42,7 @@
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
     id <SPTPodcastTestManager> _podcastTestManager;
     id <SPTUIPresentationService> _presentationService;
-    id <SPTPodcastLogger> _logger;
+    SPTPodcastLogger *_logger;
     id <SPTCollectionLogger> _collectionLogger;
     id <SPTViewLogger> _viewLogger;
     NSURL *_firstRowImpressionEpisode;
@@ -58,7 +58,7 @@
 @property(nonatomic, getter=isDataLoaded) _Bool dataLoaded; // @synthesize dataLoaded=_dataLoaded;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
-@property(retain, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
@@ -87,22 +87,22 @@
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic) NSURL *URI;
 - (void)episodeDescriptionURLTapped:(id)arg1;
+- (void)updateTableViewAfterEpisodeDescriptionHeightChange;
+- (void)episodeDescriptionDidCollapse;
 - (void)episodeDescriptionDidExpand;
 - (void)chipsSectionTableViewCell:(id)arg1 didSelectTopicCategory:(id)arg2;
 - (void)viewModel:(id)arg1 scrollToLatestPlayedEpisodeAtIndexPath:(id)arg2;
-- (void)viewModel:(id)arg1 requestsShowContextMenuPresentationFromSenderView:(id)arg2;
+- (void)viewModelDidSelectContextMenuButton:(id)arg1;
 - (void)podcastViewModelDidUpdatePlaybackRestrictions:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateFilteredState:(_Bool)arg2;
 - (void)showInfoViewWithError:(id)arg1;
 - (void)viewModel:(id)arg1 willPresentFilterContextViewController:(id)arg2 fromSender:(id)arg3;
 - (void)viewModel:(id)arg1 podcastDidFinishLoadingWithError:(id)arg2;
-- (void)viewModelFinishedLoadingWithoutPlayerStateChange:(id)arg1;
 - (void)viewModelPodcastDidUpdatePlayingEpisode:(id)arg1 atIndexPath:(id)arg2;
 - (unsigned long long)preferredNavigationBarState;
 - (void)didSelectResetFiltersButton:(id)arg1;
 - (void)updateTrailerCellAtIndexPath:(id)arg1 withViewModel:(id)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
-- (void)reloadActiveRow;
 - (void)setupTableView;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;

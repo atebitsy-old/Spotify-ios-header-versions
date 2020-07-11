@@ -6,12 +6,11 @@
 
 #import "VISREFTopAndBodyContentView.h"
 
-#import "VISREFExpandableTextViewDelegate-Protocol.h"
 #import "VISREFHeaderComponent-Protocol.h"
 
 @class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UILabel, UIStackView, VISREFAlignedImageView, VISREFCreatorRowView, VISREFExpandableTextView, VISREFGradientView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
 
-@interface VISREFFullBleedContentView : VISREFTopAndBodyContentView <VISREFExpandableTextViewDelegate, VISREFHeaderComponent>
+@interface VISREFFullBleedContentView : VISREFTopAndBodyContentView <VISREFHeaderComponent>
 {
     UILabel *_titleLabel;
     SPTEncoreLabel *_metadataLabel;
@@ -74,7 +73,6 @@
 - (void)headerViewDidRemountHeaderComponents:(id)arg1;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
-- (void)expandableTextViewDidTapTruncationText:(id)arg1;
 - (void)layoutSubviews;
 - (void)updateProgressPositions;
 - (void)scaleImage:(double)arg1;

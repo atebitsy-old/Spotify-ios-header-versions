@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTUBIEventFactoryInteractionLocation <SPTUBIEventFactoryLocation>
-- (NSString *)interactionType;
+@property(readonly, copy, nonatomic) NSString *interactionType;
 @end
 

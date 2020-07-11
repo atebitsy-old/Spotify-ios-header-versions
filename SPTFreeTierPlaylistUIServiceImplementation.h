@@ -32,7 +32,6 @@
     id <SPTAdsService> _adsService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
-    id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTFreeTierCreatePlaylistService> _createPlaylistService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTUIPresentationService> _presentationService;
@@ -72,7 +71,6 @@
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTFreeTierCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
-@property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTAdsService> adsService; // @synthesize adsService=_adsService;

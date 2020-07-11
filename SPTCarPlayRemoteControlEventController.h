@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTExternalIntegrationCollectionControllerObserver-Protocol.h"
 #import "SPTNowPlayingRemoteControlEventPolicyController-Protocol.h"
 
 @class MPRemoteCommandCenter, NSString;
 @protocol SPTExternalIntegrationPlatform, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy;
 
-@interface SPTCarPlayRemoteControlEventController : NSObject <SPTNowPlayingRemoteControlEventPolicyController>
+@interface SPTCarPlayRemoteControlEventController : NSObject <SPTExternalIntegrationCollectionControllerObserver, SPTNowPlayingRemoteControlEventPolicyController>
 {
     _Bool _activeForRemoteControlPolicyUpdates;
     id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> _delegate;
@@ -36,6 +37,8 @@
 - (void)perfromSkipToNextWithCommandEvent:(id)arg1;
 - (_Bool)shouldSkip15sInsteadOfChangingTrackForEvent:(id)arg1;
 - (_Bool)shouldCommandEventOverrideCustomPodcastSkipBehaviour:(id)arg1;
+- (void)didReceiveUpdatedCollectionNotification;
+- (void)externalIntegrationCollectionController:(id)arg1 didReceiveNewCollectionStateForCurrentTrack:(_Bool)arg2;
 - (long long)doNothing:(id)arg1;
 - (long long)changePlaybackRateCommandPressed:(id)arg1;
 - (long long)shuffleTypeFollowingCurrentShuffleType:(long long)arg1;
@@ -61,6 +64,7 @@
 - (long long)priorityForUpdatingRemoteControlPolicy;
 - (void)disconnectedFromCarPlay;
 - (void)connectedToCarPlay;
+- (void)dealloc;
 - (id)initWithExternalIntegrationPlatform:(id)arg1 remoteCommandCenter:(id)arg2 accessorySessionId:(id)arg3;
 
 // Remaining properties

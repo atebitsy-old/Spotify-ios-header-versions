@@ -8,7 +8,9 @@
 
 @interface _TtC17SPTPageLoaderView34PlaceholderContainerViewController : UIViewController
 {
-    // Error parsing type: , name: container
+    // Error parsing type: , name: currentChild
+    // Error parsing type: , name: childToAttach
+    // Error parsing type: , name: isLoaded
     // Error parsing type: , name: titleObservation
 }
 

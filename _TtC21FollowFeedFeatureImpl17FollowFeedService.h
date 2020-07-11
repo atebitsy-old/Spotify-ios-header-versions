@@ -18,17 +18,23 @@
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: crashReporterService
+    // Error parsing type: , name: contextMenuService
+    // Error parsing type: , name: uiPresentationService
+    // Error parsing type: , name: contributingArtistService
     // Error parsing type: , name: pageRegistrationToken
     // Error parsing type: , name: remoteConfigManager
+    // Error parsing type: , name: $__lazy_storage_$_feedUpdatesManager
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
 - (id)provideFollowFeedViewController;
-- (id)provideRemoteConfigManager;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+- (id)provideFeedLogger;
+- (id)provideFeedUpdatesManager;
+- (id)provideRemoteConfigManager;
 
 @end
 

@@ -37,6 +37,7 @@
 @property(nonatomic) double navigationBarNormalizedTitleFadeStartPosition; // @synthesize navigationBarNormalizedTitleFadeStartPosition=_navigationBarNormalizedTitleFadeStartPosition;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (void).cxx_destruct;
+- (void)updateHeaderHeight:(double)arg1;
 - (double)navigationBarHeight;
 - (void)showNavigationBar:(_Bool)arg1;
 - (void)setNavigationBarHeight:(double)arg1;

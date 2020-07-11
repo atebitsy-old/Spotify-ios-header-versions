@@ -8,9 +8,11 @@
 
 @interface _TtC22ConnectUIV2FeatureImpl27DevicePickerContextMenuView : UIView
 {
+    // Error parsing type: , name: theme
     // Error parsing type: , name: $__lazy_storage_$_tableView
     // Error parsing type: , name: $__lazy_storage_$_backgroundView
     // Error parsing type: , name: $__lazy_storage_$_closeButton
+    // Error parsing type: , name: $__lazy_storage_$_closeTouchArea
     // Error parsing type: , name: tableViewHeightConstraint
 }
 
@@ -18,7 +20,6 @@
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)layoutSubviews;
-- (id)init;
 
 @end
 

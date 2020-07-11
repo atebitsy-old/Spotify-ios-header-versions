@@ -10,7 +10,7 @@
 #import "SPTAssistedCurationUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTAssistedCurationLinkDispatcherImplementation, SPTAssistedCurationPresentationHelper;
-@protocol SPContextMenuFeature, SPTAssistedCurationService, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPerformanceMetricsService, SPTRemoteConfigurationService, SPTSearchPlatformService, SPTSettingsFeature, SPTSnackbarService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTAssistedCurationService, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPerformanceMetricsService, SPTSearchPlatformService, SPTSettingsFeature, SPTSnackbarService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTAssistedCurationUIServiceImplementation : SPTUIPageService <SPTAssistedCurationLinkDispatcherPageProvider, SPTAssistedCurationUIService>
 {
@@ -30,11 +30,9 @@
     id <SPTFreeTierService> _freeTierService;
     id <SPTSettingsFeature> _settingsService;
     id <SPTAssistedCurationUITestManager> _assistedCurationUITestManager;
-    id <SPTRemoteConfigurationService> _remoteConfigurationService;
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) id <SPTAssistedCurationUITestManager> assistedCurationUITestManager; // @synthesize assistedCurationUITestManager=_assistedCurationUITestManager;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;

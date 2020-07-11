@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class HUBComponentDefaults, HUBComponentRegistry, NSString, SPTAssistedCurationComponentModelURIResolver, SPTAssistedCurationDrillDownRemoteContentURLResolver, SPTAssistedCurationGLUETheme;
-@protocol GLUEImageLoader, HUBIconImageResolver, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTExplicitContentAccessManager, SPTHubCommandHandlerFactory, SPTHubContentOperationFactory, SPTHubsRendererFactory, SPTHugsFactory, SPTLinkDispatcher, SPTSearchRecentsDataSource;
+@protocol GLUEImageLoader, HUBIconImageResolver, SPTAgeVerificationProvider, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTExplicitContentAccessManager, SPTHubCommandHandlerFactory, SPTHubContentOperationFactory, SPTHubsRendererFactory, SPTHugsFactory, SPTLinkDispatcher, SPTSearchRecentsDataSource;
 
 @interface SPTAssistedCurationSearchResultDrillDownHubManager : NSObject
 {
@@ -19,6 +19,7 @@
     id <SPTAudioPreviewModelFactory> _audioPreviewModelFactory;
     id <SPTAudioPreviewUIFactory> _audioPreviewUIFactory;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <SPTAgeVerificationProvider> _ageVerificationProvider;
     id <GLUEImageLoader> _glueImageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTSearchRecentsDataSource> _recentDataSource;
@@ -39,6 +40,7 @@
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSource> recentDataSource; // @synthesize recentDataSource=_recentDataSource;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
+@property(readonly, nonatomic) id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
 @property(readonly, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
@@ -50,7 +52,7 @@
 - (void).cxx_destruct;
 - (id)provideCommandDispatcherWithViewURI:(id)arg1 referrerIdentifier:(id)arg2 interactionLogger:(id)arg3 commandRegistry:(id)arg4;
 - (id)provideViewControllerForURI:(id)arg1 playlistURI:(id)arg2 addTrackHandler:(id)arg3 sourceIdentifier:(id)arg4 referrerIdentifier:(id)arg5;
-- (id)initWithServiceIdentifier:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 remoteContentURLResolver:(id)arg4 theme:(id)arg5 audioPreviewModelFactory:(id)arg6 audioPreviewUIFactory:(id)arg7 explicitContentAccessManager:(id)arg8 glueImageLoader:(id)arg9 linkDispatcher:(id)arg10 recentDataSource:(id)arg11;
+- (id)initWithServiceIdentifier:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 remoteContentURLResolver:(id)arg4 theme:(id)arg5 audioPreviewModelFactory:(id)arg6 audioPreviewUIFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 glueImageLoader:(id)arg10 linkDispatcher:(id)arg11 recentDataSource:(id)arg12;
 
 @end
 

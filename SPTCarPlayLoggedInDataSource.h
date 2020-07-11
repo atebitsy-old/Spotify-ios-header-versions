@@ -7,13 +7,14 @@
 #import <objc/NSObject.h>
 
 #import "SPTCarPlayDataSource-Protocol.h"
+#import "SPTExternalIntegrationCollectionControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationContentControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 
 @class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache;
 @protocol SPTCarPlayContentDataSource, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTMediaPlayerContentBridge;
 
-@interface SPTCarPlayLoggedInDataSource : NSObject <SPTExternalIntegrationContentControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTCarPlayDataSource>
+@interface SPTCarPlayLoggedInDataSource : NSObject <SPTExternalIntegrationContentControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTCarPlayDataSource>
 {
     _Bool _rootItemsRequestInitiated;
     _Bool _fetchingRootPending;
@@ -46,6 +47,8 @@
 - (void)activateDeviceForOldPlayerState:(id)arg1 newPlayerState:(id)arg2 isRoutingToCarPlay:(_Bool)arg3;
 - (void)updateNowPlayingIdentifiersForPlayerState:(id)arg1 isRoutingToCarPlay:(_Bool)arg2;
 - (id)contentRequestOptions;
+- (void)didReceiveUpdatedCollectionNotification;
+- (void)externalIntegrationCollectionController:(id)arg1 didReceiveNewCollectionStateForCurrentTrack:(_Bool)arg2;
 - (void)willEnterForeground;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (void)didRegisterNewContentProviderInContentController:(id)arg1;
@@ -71,7 +74,7 @@
 - (void)updateOfflineOnly:(_Bool)arg1;
 - (void)carplaySessionEnded;
 - (void)dealloc;
-- (id)initWithContentDataSource:(id)arg1 contentTreeCache:(id)arg2 externalIntegrationPlatform:(id)arg3 mediaPlayerBridge:(id)arg4 connectManager:(id)arg5 imageLoaderFactory:(id)arg6 offlineOnly:(_Bool)arg7 debugLog:(id)arg8;
+- (id)initWithContentDataSource:(id)arg1 contentTreeCache:(id)arg2 externalIntegrationPlatform:(id)arg3 mediaPlayerBridge:(id)arg4 connectManager:(id)arg5 imageLoaderFactory:(id)arg6 properties:(id)arg7 offlineOnly:(_Bool)arg8 debugLog:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

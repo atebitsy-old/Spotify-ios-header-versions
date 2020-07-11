@@ -148,7 +148,8 @@
 - (void)registerSettings;
 - (id)provideLocalSettings;
 - (void)registerFeatureSettingsPage;
-- (id)provideControllerForDeeplinkURI:(id)arg1;
+- (id)provideSettingsProvider;
+- (id)provideSocialListeningIntegrationAPI;
 - (id)provideWirelessRoutesAPI;
 - (id)provideVolumeRecfactorFlags;
 - (id)provideIconProvider;

@@ -8,27 +8,33 @@
 
 #import "SPTCredentialStore-Protocol.h"
 #import "SPTWatchPlatformPublisher-Protocol.h"
+#import "SPTWatchPlatformTestManagerObserver-Protocol.h"
 
-@class NSDictionary, NSString;
+@class NSDictionary, NSString, SPTWatchPlatformTestManager;
 @protocol SPTCredentialSource, SPTWatchConnectivityPubSubMessageQueue;
 
-@interface SPTWatchPlatformCredentialStore : NSObject <SPTCredentialStore, SPTWatchPlatformPublisher>
+@interface SPTWatchPlatformCredentialStore : NSObject <SPTCredentialStore, SPTWatchPlatformPublisher, SPTWatchPlatformTestManagerObserver>
 {
+    _Bool _isPublisherReady;
     id <SPTWatchConnectivityPubSubMessageQueue> _pubSubMessageQueue;
     id <SPTCredentialSource> _credentialSource;
     NSDictionary *_lastCredentialsDictionary;
+    SPTWatchPlatformTestManager *_testManager;
 }
 
+@property(nonatomic) _Bool isPublisherReady; // @synthesize isPublisherReady=_isPublisherReady;
+@property(readonly, nonatomic) SPTWatchPlatformTestManager *testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSDictionary *lastCredentialsDictionary; // @synthesize lastCredentialsDictionary=_lastCredentialsDictionary;
 @property(readonly, nonatomic) id <SPTCredentialSource> credentialSource; // @synthesize credentialSource=_credentialSource;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
 - (void).cxx_destruct;
+- (void)testManager:(id)arg1 didUpdateCredentialStoreSendCredentialsEnabledState:(_Bool)arg2;
 - (void)handlePublisherEvent:(long long)arg1;
 - (void)sendCredentialsDictionary:(id)arg1;
 - (void)sendCredentials:(id)arg1;
 - (void)deleteCredentials;
 - (void)saveCredentials:(id)arg1;
-- (id)initWithPubSubMessageQueue:(id)arg1 credentialSource:(id)arg2;
+- (id)initWithPubSubMessageQueue:(id)arg1 credentialSource:(id)arg2 testManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -4,17 +4,18 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTVideoResourceLoader-Protocol.h"
+#import "AVAssetResourceLoaderDelegate-Protocol.h"
 
 @class NSURL, SPTVideoManifest, SPTVideoManifestProfile;
 @protocol SPTVideoResourceLoaderInternalDelegate;
 
-@protocol SPTVideoResourceLoaderInternal <SPTVideoResourceLoader>
+@protocol SPTVideoResourceLoaderInternal <AVAssetResourceLoaderDelegate>
 @property(nonatomic) __weak id <SPTVideoResourceLoaderInternalDelegate> delegate;
 @property(nonatomic) unsigned long long connectionMode;
 @property(readonly, nonatomic) NSURL *lastCDN;
 @property(readonly, nonatomic) SPTVideoManifest *manifest;
 @property(nonatomic) _Bool shouldHandleLoadingRequests;
+- (NSURL *)URLForAsset;
 - (SPTVideoManifestProfile *)videoProfileForURL:(NSURL *)arg1;
 - (SPTVideoManifestProfile *)selectedAudioProfile;
 @end

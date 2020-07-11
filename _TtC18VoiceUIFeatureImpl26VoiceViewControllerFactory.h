@@ -13,6 +13,7 @@
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: playbackController
+    // Error parsing type: , name: collectionPlatform
     // Error parsing type: , name: ubiLogger
     // Error parsing type: , name: voicePlayerLogger
 }

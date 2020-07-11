@@ -13,6 +13,5 @@
 @property(readonly, nonatomic) NSNumber *value;
 @property(readonly, nonatomic) unsigned long long option;
 - (UIImage *)iconImageWithSize:(struct CGSize)arg1 theme:(SPTTheme *)arg2;
-- (id)initWithSpeedOption:(unsigned long long)arg1;
 @end
 

@@ -58,9 +58,8 @@
 - (void)addApplicationStateObservers;
 - (void)contentViewControllerDidUpdateOverlayAlpha:(double)arg1;
 - (void)contentViewControllerDidReloadData:(id)arg1;
-- (void)nowPlayingScrollViewModelDidChangeBannerStatus:(id)arg1;
-- (void)nowPlayingScrollViewModelDidChangeScrollEnabledStatus:(id)arg1;
-- (void)nowPlayingScrollViewModel:(id)arg1 didMoveToRelativeTrack:(id)arg2 withDifferentProviders:(_Bool)arg3;
+- (void)nowPlayingScrollViewModelDidChangeScrollEnabledValue:(id)arg1;
+- (void)nowPlayingScrollViewModel:(id)arg1 didMoveToRelativeTrack:(id)arg2 withDifferentProviders:(_Bool)arg3 scrollEnabledValueChanged:(_Bool)arg4;
 - (void)nowPlayingScrollViewModelDidLoadProviderContent:(id)arg1;
 - (void)viewSafeAreaInsetsDidChange;
 - (void)updateSafeAreaInsets;

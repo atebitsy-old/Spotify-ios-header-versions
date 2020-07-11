@@ -12,12 +12,12 @@
 
 @interface SPTShareFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _nativeFacebookPopupOptionsEnabled;
+    _Bool _backendGeneratedShareableUrlEnabled;
     long long _shareDestinationsVersion;
 }
 
 @property(readonly, nonatomic) long long shareDestinationsVersion; // @synthesize shareDestinationsVersion=_shareDestinationsVersion;
-@property(readonly, nonatomic) _Bool nativeFacebookPopupOptionsEnabled; // @synthesize nativeFacebookPopupOptionsEnabled=_nativeFacebookPopupOptionsEnabled;
+@property(readonly, nonatomic) _Bool backendGeneratedShareableUrlEnabled; // @synthesize backendGeneratedShareableUrlEnabled=_backendGeneratedShareableUrlEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

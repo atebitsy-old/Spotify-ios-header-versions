@@ -12,7 +12,7 @@
 @property(readonly, nonatomic) _Bool featureEnabled;
 @property(readonly, nonatomic) _Bool featureAvailable;
 @property(readonly, copy, nonatomic) NSString *availableSessionType;
-@property(readonly, copy, nonatomic) NSString *joinSessionURI;
+@property(readonly, copy, nonatomic) NSURL *joinSessionURI;
 @property(readonly, copy, nonatomic) NSString *availabilityStatus;
 @property(readonly, copy, nonatomic) NSURL *hostAvatarURL;
 @property(readonly, copy, nonatomic) NSString *hostDisplayName;

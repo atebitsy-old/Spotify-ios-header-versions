@@ -11,10 +11,11 @@
 #import "SPTNowPlayingModelObserver-Protocol.h"
 
 @class NSMutableSet, NSString, NSURL, SPTNowPlayingLogger, SPTNowPlayingModel, SPTPlayerTrack, UIImage;
-@protocol SPTNowPlayingModeResolver, SPTNowPlayingScrollDataSource_Internal, SPTNowPlayingScrollViewModelDelegate;
+@protocol SPTNowPlayingModeResolver, SPTNowPlayingScrollDataSource_Internal, SPTNowPlayingScrollViewModelDelegate, SPTReachabilityMonitor;
 
 @interface SPTNowPlayingScrollViewModel : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingModeResolverObserver, SPTBannerPresentationObserver>
 {
+    _Bool _scrollEnabled;
     _Bool _requireScrollDisabled;
     _Bool _hasSentSwipeInteractionForCurrentTrack;
     _Bool _hasSentPageImpressionForCurrentTrack;
@@ -24,6 +25,7 @@
     id <SPTNowPlayingScrollDataSource_Internal> _dataSource;
     id <SPTNowPlayingModeResolver> _modeResolver;
     SPTNowPlayingLogger *_logger;
+    id <SPTReachabilityMonitor> _reachabilityMonitor;
     NSURL *_currentCoverImageURL;
     UIImage *_currentCoverImage;
     NSMutableSet *_componentsFullyShown;
@@ -35,10 +37,12 @@
 @property(nonatomic) _Bool hasSentSwipeInteractionForCurrentTrack; // @synthesize hasSentSwipeInteractionForCurrentTrack=_hasSentSwipeInteractionForCurrentTrack;
 @property(retain, nonatomic) UIImage *currentCoverImage; // @synthesize currentCoverImage=_currentCoverImage;
 @property(retain, nonatomic) NSURL *currentCoverImageURL; // @synthesize currentCoverImageURL=_currentCoverImageURL;
+@property(readonly, nonatomic) id <SPTReachabilityMonitor> reachabilityMonitor; // @synthesize reachabilityMonitor=_reachabilityMonitor;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(readonly, nonatomic) id <SPTNowPlayingScrollDataSource_Internal> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) _Bool requireScrollDisabled; // @synthesize requireScrollDisabled=_requireScrollDisabled;
+@property(nonatomic) _Bool scrollEnabled; // @synthesize scrollEnabled=_scrollEnabled;
 @property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(nonatomic) __weak id <SPTNowPlayingScrollViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
@@ -58,11 +62,12 @@
 - (_Bool)hasComponentProviders;
 @property(readonly, nonatomic) SPTPlayerTrack *track;
 @property(readonly, nonatomic) _Bool modeCanBeResized;
-@property(readonly, nonatomic) _Bool scrollEnabled;
+- (void)calculateScrollEnabledValueAndNotify;
+- (_Bool)calculateScrollEnabledValue;
 - (void)dealloc;
 - (void)viewWillDisappear;
 - (void)viewWillAppear;
-- (id)initWithDataSource:(id)arg1 nowPlayingModel:(id)arg2 modeResolver:(id)arg3 logger:(id)arg4 bannerPresentationManager:(id)arg5;
+- (id)initWithDataSource:(id)arg1 nowPlayingModel:(id)arg2 modeResolver:(id)arg3 logger:(id)arg4 bannerPresentationManager:(id)arg5 reachabilityMonitor:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

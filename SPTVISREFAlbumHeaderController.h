@@ -54,11 +54,13 @@
 - (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)updateAccessibilityElements;
+- (void)setImagePlaceholder;
 - (void)setImage:(id)arg1;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;
 - (void)updateCreatorComponent;
 - (double)minimumContentHeight;
 - (void)navigationBarHeightDidChange:(double)arg1;
+- (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
 @property(readonly, nonatomic) double minimumHeight;
 - (void)backButtonTapped:(id)arg1;

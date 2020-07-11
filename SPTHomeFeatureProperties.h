@@ -14,15 +14,10 @@
 {
     _Bool _homeDownloadsEnhancedConnectivityReschedulingEnabled;
     _Bool _useNewCacheLocation;
-    NSString *_habitsUiV2Treatment;
-    NSString *_habitsUiV2TreatmentFree;
 }
 
-@property(readonly, nonatomic) NSString *habitsUiV2TreatmentFree; // @synthesize habitsUiV2TreatmentFree=_habitsUiV2TreatmentFree;
-@property(readonly, nonatomic) NSString *habitsUiV2Treatment; // @synthesize habitsUiV2Treatment=_habitsUiV2Treatment;
 @property(readonly, nonatomic) _Bool useNewCacheLocation; // @synthesize useNewCacheLocation=_useNewCacheLocation;
 @property(readonly, nonatomic) _Bool homeDownloadsEnhancedConnectivityReschedulingEnabled; // @synthesize homeDownloadsEnhancedConnectivityReschedulingEnabled=_homeDownloadsEnhancedConnectivityReschedulingEnabled;
-- (void).cxx_destruct;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

@@ -7,14 +7,18 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBIMobileLocalFilesImportEventFactory, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTLocalFilesLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     NSURL *_viewURI;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBIMobileLocalFilesImportEventFactory> _eventFactory;
 }
 
+@property(retain, nonatomic) id <SPTUBIMobileLocalFilesImportEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
@@ -23,6 +27,11 @@
 - (void)logUIInteractionWithPageURI:(id)arg1 interactionType:(id)arg2 userIntent:(id)arg3;
 - (void)logUIImpressionWithSectionIndex:(long long)arg1 itemIndex:(long long)arg2 impressionType:(id)arg3;
 - (void)logUIImpressionWithPageURI:(id)arg1 impressionType:(id)arg2;
+- (id)sectionIdentifierForIndex:(long long)arg1;
+- (void)logFlowImportDialogOk;
+- (void)logFlowImportDialogGoToPageURL:(id)arg1;
+- (void)logFlowShowImportDialog;
+- (void)logFlowSection:(long long)arg1 didSelectItem:(long long)arg2;
 - (void)logJobFinishedWithNumberOfPlaylistsImported:(long long)arg1 numberOfPlaylistsFound:(long long)arg2 numberOfPlaylistsTracksImported:(long long)arg3 numberOfPlaylistsTracksFound:(long long)arg4 numberOfSongsImported:(long long)arg5 numberOfSongsFound:(long long)arg6 canceled:(_Bool)arg7 importStartedAt:(id)arg8 itemsPresentedAt:(id)arg9;
 - (void)logFlowSortContentWithSection:(long long)arg1 andColumn:(id)arg2;
 - (void)logFlowSearchContentWithSection:(long long)arg1;
@@ -31,13 +40,11 @@
 - (void)logFlowDiscardDialogContinued;
 - (void)logFlowDiscardDialogDiscarded;
 - (void)logFlowDiscardWithChanges:(_Bool)arg1;
+- (void)logSwipeToSection:(long long)arg1;
 - (void)logFlowPageChangedWithSection:(long long)arg1;
-- (void)logFlowSelectItem:(_Bool)arg1 atIndex:(long long)arg2 forSection:(long long)arg3;
-- (void)logFlowSelectAllButtonSelected:(_Bool)arg1;
+- (void)logFlowSelectAllButtonSelected:(_Bool)arg1 section:(long long)arg2;
 - (void)logFlowImportStartedWithTargetURI:(id)arg1;
-- (void)logFlowImportButtonClickedInViewURI:(id)arg1;
-- (void)logFlowImportButtonShownInViewURI:(id)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2;
 
 @end
 

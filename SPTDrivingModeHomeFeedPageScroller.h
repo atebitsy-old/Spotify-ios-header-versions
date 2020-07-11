@@ -8,7 +8,7 @@
 
 #import "UIScrollViewDelegate-Protocol.h"
 
-@class NSString, UIScrollView, UIStackView;
+@class NSMutableArray, NSString, UIScrollView, UIStackView;
 @protocol SPTDrivingModeHomeFeedPageScrollerDelegate;
 
 @interface SPTDrivingModeHomeFeedPageScroller : UIViewController <UIScrollViewDelegate>
@@ -16,17 +16,21 @@
     id <SPTDrivingModeHomeFeedPageScrollerDelegate> _delegate;
     UIScrollView *_scrollView;
     UIStackView *_stackView;
+    NSMutableArray *_shelfViewControllers;
 }
 
+@property(retain, nonatomic) NSMutableArray *shelfViewControllers; // @synthesize shelfViewControllers=_shelfViewControllers;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) __weak id <SPTDrivingModeHomeFeedPageScrollerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)scrollViewDidScroll:(id)arg1;
-- (void)updatePageScrollerWithPrevious:(id)arg1 andNextShelf:(id)arg2;
+- (void)updateShelfAtIndex:(int)arg1;
+- (void)updatePageScrollerWithShelf:(id)arg1;
 - (void)numberOfItemsInPageScroller:(unsigned long long)arg1;
 - (void)setupViews;
 - (void)viewDidLoad;
+@property(readonly, nonatomic) unsigned long long numberOfDisplayedShelves;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

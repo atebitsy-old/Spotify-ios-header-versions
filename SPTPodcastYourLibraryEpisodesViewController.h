@@ -14,14 +14,13 @@
 #import "SPTScrollToTopViewController-Protocol.h"
 #import "SPTShowInfoViewProviderTarget-Protocol.h"
 #import "SPTYourLibraryPage-Protocol.h"
-#import "UIContextMenuInteractionDelegate-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
 @class NSArray, NSMutableDictionary, NSString, NSURL, SPTPodcastYourLibraryEpisodesViewModelImpl, SPTProgressView, SPTViewLogger, UITableView, UIView;
-@protocol GLUETheme, SPTPageContainer, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastTestManager, SPTShowInfoViewProvider, SPTYourLibraryPageDelegate, UIViewControllerPreviewing;
+@protocol GLUETheme, SPTPageContainer, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastLogger, SPTPodcastPlayer, SPTShowInfoViewProvider, SPTYourLibraryPageDelegate, UIViewControllerPreviewing;
 
-@interface SPTPodcastYourLibraryEpisodesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTPodcastYourLibraryEpisodesViewModelDelegate, SPTPodcastPlayerDelegate, SPTPodcastEpisodeCellActionHandlerDelegate, SPTShowInfoViewProviderTarget, SPContentInsetViewController, UIContextMenuInteractionDelegate, SPTPageController, SPTYourLibraryPage, SPTScrollToTopViewController>
+@interface SPTPodcastYourLibraryEpisodesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTPodcastYourLibraryEpisodesViewModelDelegate, SPTPodcastPlayerDelegate, SPTPodcastEpisodeCellActionHandlerDelegate, SPTShowInfoViewProviderTarget, SPContentInsetViewController, SPTPageController, SPTYourLibraryPage, SPTScrollToTopViewController>
 {
     id <SPTYourLibraryPageDelegate> _pageDelegate;
     SPTPodcastYourLibraryEpisodesViewModelImpl *_viewModel;
@@ -34,7 +33,6 @@
     id <SPTPodcastPlayer> _player;
     SPTViewLogger *_viewLogger;
     id <SPTPodcastLogger> _podcastLogger;
-    id <SPTPodcastTestManager> _testManager;
     id <SPTShowInfoViewProvider> _infoViewProvider;
     UIView *_infoView;
     NSArray *_infoViewConstraints;
@@ -47,7 +45,6 @@
 @property(copy, nonatomic) NSArray *infoViewConstraints; // @synthesize infoViewConstraints=_infoViewConstraints;
 @property(retain, nonatomic) UIView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) id <SPTShowInfoViewProvider> infoViewProvider; // @synthesize infoViewProvider=_infoViewProvider;
-@property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) SPTViewLogger *viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
@@ -61,9 +58,6 @@
 @property(nonatomic) __weak id <SPTYourLibraryPageDelegate> pageDelegate; // @synthesize pageDelegate=_pageDelegate;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) double offscreenContentHeight;
-- (void)contextMenuInteraction:(id)arg1 willPerformPreviewActionForMenuWithConfiguration:(id)arg2 animator:(id)arg3;
-- (id)contextMenuInteraction:(id)arg1 configurationForMenuAtLocation:(struct CGPoint)arg2;
-- (id)contextMenuInteraction:(id)arg1 previewForHighlightingMenuWithConfiguration:(id)arg2;
 - (void)actionHandler:(id)arg1 didMarkEpisode:(id)arg2 atIndextPath:(id)arg3 asPlayed:(_Bool)arg4;
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;
@@ -97,13 +91,12 @@
 - (struct UIEdgeInsets)insetsForInfoViewRespectingBottomLayoutGuide;
 - (void)updateProgressWithPlayer:(id)arg1;
 - (id)idenfifierForEpisodeViewModel:(id)arg1;
-- (void)addTableViewInteraction;
 - (void)addLayoutConstraints;
 - (void)setupTableView;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 cellConfigurator:(id)arg2 theme:(id)arg3 cellActionHandler:(id)arg4 player:(id)arg5 infoViewProvider:(id)arg6 viewLogger:(id)arg7 podcastLogger:(id)arg8 testManager:(id)arg9;
+- (id)initWithViewModel:(id)arg1 cellConfigurator:(id)arg2 theme:(id)arg3 cellActionHandler:(id)arg4 player:(id)arg5 infoViewProvider:(id)arg6 viewLogger:(id)arg7 podcastLogger:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

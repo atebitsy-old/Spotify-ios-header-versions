@@ -14,8 +14,8 @@
 @optional
 + (id)new;
 @property(nonatomic) _Bool shouldTruncateDescription;
-@property(retain, nonatomic) NSArray *secondaryActionViewsRight;
-@property(retain, nonatomic) NSArray *secondaryActionViewsLeft;
+@property(copy, nonatomic) NSArray *secondaryActionViewsRight;
+@property(copy, nonatomic) NSArray *secondaryActionViewsLeft;
 @property(retain, nonatomic) UIView *mainActionView;
 @property(nonatomic) double listeningProgress;
 @property(readonly, nonatomic) UIProgressView *progressView;

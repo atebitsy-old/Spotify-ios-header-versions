@@ -8,8 +8,8 @@
 
 #import "SPTPodcastEpisodeCellActionTarget-Protocol.h"
 
-@class NSString, UIViewController;
-@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPageController><SPTPodcastPlayerDelegate, SPTPageRegistry, SPTPodcastContextMenuProvider, SPTPodcastDataLoader, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastLogger, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastTestManager, SPTSnackbarConditionalPresenter;
+@class NSString, SPTPodcastLogger, UIViewController;
+@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPageController><SPTPodcastPlayerDelegate, SPTPageRegistry, SPTPodcastContextMenuProvider, SPTPodcastDataLoader, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastTestManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTPodcastEpisodeCellActionHandler : NSObject <SPTPodcastEpisodeCellActionTarget>
 {
@@ -18,7 +18,7 @@
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTPodcastLogger> _logger;
+    SPTPodcastLogger *_logger;
     id <SPTPodcastPlayer> _player;
     id <SPTPodcastDataLoader> _dataLoader;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
@@ -42,14 +42,12 @@
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
-@property(retain, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (id)episodeViewControllerWithURI:(id)arg1;
-- (void)navigateToEpisodeViewControllerWithURI:(id)arg1;
 - (void)markAsUnplayed:(id)arg1 atIndexPath:(id)arg2;
 - (void)presentMarkAsPlayedSnackbarForEpisode:(id)arg1 atIndexPath:(id)arg2;
 - (void)displayContextMenuForEpisode:(id)arg1 sender:(id)arg2 indexPath:(id)arg3;

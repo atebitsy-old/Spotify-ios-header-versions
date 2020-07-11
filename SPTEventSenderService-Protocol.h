@@ -9,7 +9,7 @@
 @protocol SPTEventSender, SPTEventSenderSatelliteServiceResponder;
 
 @protocol SPTEventSenderService <SPTService>
-- (id <SPTEventSenderSatelliteServiceResponder>)provideEventSenderSatelliteResponder;
+- (id <SPTEventSenderSatelliteServiceResponder>)provideSatelliteResponder;
 - (id <SPTEventSender>)provideEventSender;
 @end
 

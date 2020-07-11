@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTAuthController, SPTAuthLoginController, SPTConnectivityApplicationScopeConfiguration;
-@protocol SPTAsyncScheduler;
+@protocol SPTConnectivityAsyncScheduler;
 
 @interface SPTConnectivityApplicationScope : NSObject
 {
@@ -19,10 +19,10 @@
     SPTAuthLoginController *_singletonLoginController;
     SPTConnectivityApplicationScopeConfiguration *_configuration;
     SPTAuthController *_authController;
-    id <SPTAsyncScheduler> _scheduler;
+    id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
-@property(readonly, nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(readonly, nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(readonly, nonatomic) SPTAuthController *authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) SPTConnectivityApplicationScopeConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(retain, nonatomic) SPTAuthLoginController *singletonLoginController; // @synthesize singletonLoginController=_singletonLoginController;

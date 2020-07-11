@@ -26,6 +26,7 @@
 - (void)setupLayout;
 @property(readonly, nonatomic) VISREFBaseHeaderController<SPTFreeTierPlaylistVISREFHeaderController> *playlistHeaderController;
 - (void)headerControllerViewSuperviewHierarchyDidChange:(id)arg1;
+- (void)traitCollectionDidChange:(id)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

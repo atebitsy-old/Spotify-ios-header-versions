@@ -9,9 +9,12 @@
 @class NSArray, NSString;
 
 @protocol SPTGaiaDeviceProtocol <NSObject>
+@property(nonatomic, readonly) _Bool isAvailableOnLocalNetwork;
+@property(nonatomic, readonly) NSArray *incarnations;
 @property(nonatomic, readonly) NSArray *capabilities;
 - (_Bool)isSocialConnect;
 @property(nonatomic, readonly) long long volumeSteps;
+@property(nonatomic, readonly) _Bool supportsLogout;
 @property(nonatomic, readonly) _Bool supportsVolume;
 @property(nonatomic, readonly) float volume;
 - (_Bool)isShuffleDevice;

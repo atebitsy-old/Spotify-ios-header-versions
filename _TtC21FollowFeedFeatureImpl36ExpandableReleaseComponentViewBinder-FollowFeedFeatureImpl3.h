@@ -7,8 +7,10 @@
 #import "_TtC21FollowFeedFeatureImpl36ExpandableReleaseComponentViewBinder.h"
 
 @interface _TtC21FollowFeedFeatureImpl36ExpandableReleaseComponentViewBinder (FollowFeedFeatureImpl3)
+- (void)trackContextMenuButtonClickedWithSender:(id)arg1;
+- (void)contextMenuButtonClickedWithSender:(id)arg1;
 - (void)trackClickedAt:(long long)arg1;
-- (void)playButtonClickedWithSender:(id)arg1;
+- (void)playButtonClicked;
 - (void)expansionControlTapped;
 - (void)artistAvatarClicked;
 @end

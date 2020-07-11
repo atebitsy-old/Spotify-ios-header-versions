@@ -8,7 +8,7 @@
 
 #import "SPTEntityHeaderContentController-Protocol.h"
 
-@class NSString, SPTFreeTierAllSongsHeaderContentView, SPTFreeTierAllSongsTheme;
+@class NSString, SPTFreeTierAllSongsHeaderContentView, SPTFreeTierAllSongsLogger, SPTFreeTierAllSongsTheme;
 @protocol SPTFreeTierAllSongsHeaderEntityViewModel;
 
 @interface SPTFreeTierAllSongsHeaderViewController : UIViewController <SPTEntityHeaderContentController>
@@ -16,8 +16,10 @@
     id <SPTFreeTierAllSongsHeaderEntityViewModel> _headerEntityViewModel;
     SPTFreeTierAllSongsTheme *_theme;
     SPTFreeTierAllSongsHeaderContentView *_headerView;
+    SPTFreeTierAllSongsLogger *_logger;
 }
 
+@property(retain, nonatomic) SPTFreeTierAllSongsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTFreeTierAllSongsHeaderContentView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) SPTFreeTierAllSongsTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTFreeTierAllSongsHeaderEntityViewModel> headerEntityViewModel; // @synthesize headerEntityViewModel=_headerEntityViewModel;
@@ -29,7 +31,7 @@
 - (void)headerAction:(id)arg1;
 - (void)initializeInterface;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1;
+- (id)initWithTheme:(id)arg1 logger:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -8,7 +8,7 @@
 
 #import "SPTImageLoaderDelegate-Protocol.h"
 
-@class NSCache, NSString;
+@class NSCache, NSString, SPTCarPlayFeatureProperties;
 @protocol SPTExternalIntegrationContent, SPTImageLoader;
 
 @interface SPTCarPlayContentItem : MPContentItem <SPTImageLoaderDelegate>
@@ -17,8 +17,10 @@
     id <SPTExternalIntegrationContent> _content;
     id <SPTImageLoader> _imageLoader;
     NSCache *_iconCache;
+    SPTCarPlayFeatureProperties *_properties;
 }
 
+@property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) NSCache *iconCache; // @synthesize iconCache=_iconCache;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) _Bool didLoadArtwork; // @synthesize didLoadArtwork=_didLoadArtwork;
@@ -28,9 +30,10 @@
 - (void)setArtworkImage:(id)arg1;
 - (void)configurePlaceholderArtwork;
 - (void)loadArtwork;
+- (void)didRequestContentItem;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithExternalIntegrationContent:(id)arg1 imageLoader:(id)arg2 iconCache:(id)arg3 playable:(_Bool)arg4;
+- (id)initWithExternalIntegrationContent:(id)arg1 imageLoader:(id)arg2 properties:(id)arg3 iconCache:(id)arg4 playable:(_Bool)arg5;
 - (_Bool)isErrorItem;
 - (_Bool)isShuffleItem;
 

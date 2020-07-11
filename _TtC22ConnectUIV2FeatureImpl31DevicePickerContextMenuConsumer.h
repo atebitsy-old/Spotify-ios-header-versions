@@ -10,8 +10,7 @@
 {
     // Error parsing type: , name: modalPresentationController
     // Error parsing type: , name: contextMenuControllerFactory
-    // Error parsing type: , name: theme
-    // Error parsing type: , name: iconManager
+    // Error parsing type: , name: progressViewPresenter
 }
 
 @end

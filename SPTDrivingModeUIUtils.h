@@ -10,6 +10,8 @@
 {
 }
 
++ (id)createShelfDrivePauseImage;
++ (id)createShelfDrivePlayImage;
 + (id)createCoachMarkLabel;
 + (id)createPivotCloseButton;
 + (double)preferredNavBarContentHeight;

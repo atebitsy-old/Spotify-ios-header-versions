@@ -12,6 +12,8 @@
     // Error parsing type: , name: isIPad
     // Error parsing type: , name: playlistsCacheManager
     // Error parsing type: , name: dataLoader
+    // Error parsing type: , name: visualRefreshIntegrationManager
+    // Error parsing type: , name: remoteConfigProperties
     // Error parsing type: , name: isFeatureEnabled
     // Error parsing type: , name: delegate
     // Error parsing type: , name: playlistsIdentifiers

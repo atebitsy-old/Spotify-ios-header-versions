@@ -19,7 +19,6 @@
     UIView *_contentView;
 }
 
-+ (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(copy, nonatomic) NSArray *childComponentViews; // @synthesize childComponentViews=_childComponentViews;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;

@@ -11,11 +11,12 @@
 #import "UICollectionViewDelegate-Protocol.h"
 
 @class NSLayoutConstraint, NSString, SPTPremiumDestinationUICarouselStyle, SPTPremiumDestinationUIGLUETheme, SPTPremiumDestinationUIValueCarouselFlowLayout, UICollectionView, UIPageControl;
-@protocol HUBComponentViewChildDelegate;
+@protocol HUBComponentViewChildDelegate, SPTPremiumDestinationUICarouselItemSizeCalculator;
 
 @interface SPTPremiumDestinationUICarouselComponentView : HUBComponentView <UICollectionViewDataSource, UICollectionViewDelegate, HUBComponentViewWithChildren>
 {
     id <HUBComponentViewChildDelegate> _childDelegate;
+    id <SPTPremiumDestinationUICarouselItemSizeCalculator> _itemSizeCalculator;
     SPTPremiumDestinationUIGLUETheme *_theme;
     SPTPremiumDestinationUICarouselStyle *_style;
     SPTPremiumDestinationUIValueCarouselFlowLayout *_collectionLayout;
@@ -24,16 +25,16 @@
     NSLayoutConstraint *_collectionViewHeightConstraint;
 }
 
-+ (struct CGSize)calculateItemSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
-+ (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UIPageControl *pageControl; // @synthesize pageControl=_pageControl;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) SPTPremiumDestinationUIValueCarouselFlowLayout *collectionLayout; // @synthesize collectionLayout=_collectionLayout;
 @property(retain, nonatomic) SPTPremiumDestinationUICarouselStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
+@property(nonatomic) __weak id <SPTPremiumDestinationUICarouselItemSizeCalculator> itemSizeCalculator; // @synthesize itemSizeCalculator=_itemSizeCalculator;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
 - (void).cxx_destruct;
+- (struct CGSize)calculateItemSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (double)minimumLineSpacingForItemSize:(struct CGSize)arg1 containerSize:(struct CGSize)arg2 sectionInsets:(struct UIEdgeInsets)arg3 style:(id)arg4;
 - (struct UIEdgeInsets)sectionInsetsForItemSize:(struct CGSize)arg1 containerSize:(struct CGSize)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
@@ -42,6 +43,7 @@
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)configureWithModel:(id)arg1;
+- (void)dealloc;
 - (void)setupConstraints;
 - (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;

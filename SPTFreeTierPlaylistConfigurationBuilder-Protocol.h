@@ -15,6 +15,7 @@
 @property(nonatomic) _Bool showTrackArtwork;
 @property(nonatomic) long long headerType;
 - (id <SPTFreeTierPlaylistConfiguration>)build;
+- (void)withAdditionalCallToAction:(id <SPTFreeTierPlaylistAdditionalCallToAction> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 - (void)withContextMenuPresenter:(id <SPTFreeTierPlaylistContextMenuPresenter> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 - (void)withPlayViewModel:(id <SPTFreeTierPlaylistPlayViewModel> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 - (void)withCellProvider:(id <SPTFreeTierPlaylistCellProvider> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;

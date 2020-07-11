@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: headerView
     // Error parsing type: , name: tracksView
-    // Error parsing type: , name: contentView
+    // Error parsing type: , name: playableEntityView
     // Error parsing type: , name: separatorView
     // Error parsing type: , name: expansionControl
 }

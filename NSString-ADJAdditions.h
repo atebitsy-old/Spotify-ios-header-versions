@@ -141,6 +141,7 @@
 - (id)firstCharacter;
 - (id)digitsFromString;
 - (id)spt_playCommandDictionaryFromSerializedPlayCommandURI;
+- (id)spt_actionURIStringFromPlayCommand;
 @property(readonly, nonatomic) _Bool spt_canDeserializePlayCommandString;
 @property(readonly, nonatomic) NSString *spt_sha1Representation;
 - (id)spt_stringByChangingCaseOfFirstCharacterWithLocale:(id)arg1 changer:(CDUnknownBlockType)arg2;

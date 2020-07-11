@@ -6,22 +6,21 @@
 
 #import "HUBViewController.h"
 
-@class NSString, NSURL;
+@class NSURL;
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl31CreatorEntityPageViewController : HUBViewController
 {
     // Error parsing type: , name: pageURI
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: theme
 }
 
 - (void).cxx_destruct;
 - (id)initWithComponentRegistry:(id)arg1 componentLayoutManager:(id)arg2 imageLoaderFactory:(id)arg3 commandHandler:(id)arg4;
 - (void)viewDidLoad;
-- (id)spt_pageIdentifier;
 - (id)spt_pageURI;
 
 // Remaining properties
-@property(nonatomic, readonly) NSString *pageIdentifier;
 @property(nonatomic, readonly) NSURL *pageURI;
 
 @end

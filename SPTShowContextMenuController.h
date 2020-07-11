@@ -51,6 +51,7 @@
 - (id)subtitleContextMenuActionForURI:(id)arg1 sourceURL:(id)arg2 options:(id)arg3;
 - (void)showContextMenuMetadataViewShowMore:(id)arg1;
 - (id)logContext;
+- (void)presentContextMenuForEpisode:(id)arg1 podcast:(id)arg2 URI:(id)arg3 metadata:(id)arg4 sourceURL:(id)arg5 contextMenuDelegate:(id)arg6 inViewController:(id)arg7 senderView:(id)arg8 options:(id)arg9;
 - (void)presentContextMenuForEpisode:(id)arg1 URI:(id)arg2 metadata:(id)arg3 sourceURL:(id)arg4 contextMenuDelegate:(id)arg5 inViewController:(id)arg6 senderView:(id)arg7 options:(id)arg8;
 - (id)provideGoToArtistActionTaskForTrackURL:(id)arg1 logContext:(id)arg2;
 - (id)provideGoToAlbumActionTaskForTrackURL:(id)arg1 logContext:(id)arg2;

@@ -10,8 +10,8 @@
 {
 }
 
++ (id)durationStringForAudioEpisode:(id)arg1;
 + (id)durationStringWithDuration:(unsigned long long)arg1;
-+ (id)formattedSubtitleWithType:(id)arg1 optionalString:(id)arg2;
 + (id)artistsForAlbumEntity:(id)arg1;
 + (id)artistsForTrackEntity:(id)arg1;
 + (id)subtitleForEntity:(id)arg1 subtitleType:(unsigned long long)arg2 podcastRowsType:(unsigned long long)arg3;

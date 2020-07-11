@@ -12,7 +12,7 @@
 #import "SPTSignupEmailViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginLayoutTestManager, SPTLoginTheme, SPTSignupEmailViewModel, SPTSignupSingleInputFieldView;
+@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupEmailViewModel, SPTSignupSingleInputFieldView;
 @protocol SPTPageContainer;
 
 @interface SPTSignupEmailViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupEmailViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
@@ -22,10 +22,8 @@
     NSError *error;
     SPTSignupEmailViewModel *_viewModel;
     SPTLoginTheme *_theme;
-    SPTLoginLayoutTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTLoginLayoutTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupEmailViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(copy, nonatomic) NSError *error; // @synthesize error;
@@ -46,7 +44,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithTheme:(id)arg1 viewModel:(id)arg2 testManager:(id)arg3;
+- (id)initWithTheme:(id)arg1 viewModel:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

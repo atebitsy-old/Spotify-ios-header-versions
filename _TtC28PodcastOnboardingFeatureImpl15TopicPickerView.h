@@ -12,7 +12,7 @@
     // Error parsing type: , name: $__lazy_storage_$_collectionView
     // Error parsing type: , name: overlayGradientView
     // Error parsing type: , name: $__lazy_storage_$_userInteractionBlockerView
-    // Error parsing type: , name: doneButton
+    // Error parsing type: , name: $__lazy_storage_$_doneButton
     // Error parsing type: , name: activityIndicator
     // Error parsing type: , name: skipButton
     // Error parsing type: , name: $__lazy_storage_$_titleLabel

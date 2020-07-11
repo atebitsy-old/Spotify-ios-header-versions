@@ -39,6 +39,7 @@
 @property(readonly, nonatomic) NSArray *devices; // @dynamic devices;
 @property(readonly, nonatomic) SPTGaiaConnectDevice *deviceBeingActivated; // @dynamic deviceBeingActivated;
 @property(readonly, nonatomic) SPTGaiaConnectDevice *activeDevice; // @dynamic activeDevice;
+- (id)findIncarnationOnDeviceWithId:(id)arg1 incarnationId:(id)arg2;
 - (id)findDeviceWithPhysicalIdentifier:(id)arg1;
 - (id)findDeviceWithIdentifier:(id)arg1;
 - (void)updateActiveDeviceVolume:(float)arg1 responseBlock:(CDUnknownBlockType)arg2;

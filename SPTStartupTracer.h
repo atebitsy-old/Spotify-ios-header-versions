@@ -41,6 +41,7 @@
 @property(retain, nonatomic) id <SPTColdStartupSequenceTransport> transport; // @synthesize transport=_transport;
 @property(copy, nonatomic) NSString *connectionType; // @synthesize connectionType=_connectionType;
 - (void).cxx_destruct;
+- (id)genericDurations;
 - (id)coreFeatureDurations;
 - (id)serviceDurations;
 - (id)deferredBlockDurations;
@@ -48,6 +49,9 @@
 - (id)rootUIDurations;
 - (id)metadataWithDurations;
 - (void)viewLogger:(id)arg1 didTransitionToState:(long long)arg2 after:(double)arg3;
+- (void)logLaunchedDueToIntent;
+- (void)logFinishedDurationWithName:(id)arg1;
+- (void)logStartDurationWithName:(id)arg1;
 - (void)logFinishedLoadingCoreFeature:(id)arg1 duration:(double)arg2;
 - (void)logFinishedDeferredBlockForScope:(id)arg1 identifier:(id)arg2;
 - (void)logStartDeferredBlockForScope:(id)arg1 identifier:(id)arg2;

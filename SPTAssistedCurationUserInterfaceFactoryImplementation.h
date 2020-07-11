@@ -9,7 +9,7 @@
 #import "SPTAssistedCurationUserInterfaceFactory-Protocol.h"
 
 @class NSString, UIViewController;
-@protocol SPTAssistedCurationUITestManager, SPTAssistedCurationViewModel, SPTAudioPreviewService, SPTExplicitContentService, SPTGLUEService, SPTLinkDispatcher, SPTSearch2RootViewControllerProtocol><SPTPageController, SPTSearchPlatformService;
+@protocol SPTAssistedCurationUITestManager, SPTAssistedCurationViewModel, SPTAudioPreviewService, SPTExplicitContentService, SPTGLUEService, SPTLinkDispatcher, SPTSearch2RootViewControllerProtocol><SPTPageController, SPTSearchPlatformService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTAssistedCurationUserInterfaceFactoryImplementation : NSObject <SPTAssistedCurationUserInterfaceFactory>
 {
@@ -17,6 +17,7 @@
     id <SPTGLUEService> _glueService;
     id <SPTAudioPreviewService> _audioPreviewService;
     id <SPTExplicitContentService> _explicitContentService;
+    id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     UIViewController<SPTSearch2RootViewControllerProtocol><SPTPageController> *_searchRootViewController;
     id <SPTAssistedCurationViewModel> _viewModel;
     id <SPTLinkDispatcher> _linkDispatcher;
@@ -27,6 +28,7 @@
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTAssistedCurationViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) UIViewController<SPTSearch2RootViewControllerProtocol><SPTPageController> *searchRootViewController; // @synthesize searchRootViewController=_searchRootViewController;
+@property(readonly, nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(readonly, nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(readonly, nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
 @property(readonly, nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
@@ -43,7 +45,7 @@
 - (struct NSDictionary *)customComponentsWithViewModel:(id)arg1;
 - (id)provideGLUEImageLoader;
 - (id)provideCardStyleWithViewModel:(id)arg1;
-- (id)initWithSearchPlatformService:(id)arg1 glueService:(id)arg2 audioPreviewService:(id)arg3 explicitContentService:(id)arg4 viewModel:(id)arg5 linkDispatcher:(id)arg6 testManager:(id)arg7;
+- (id)initWithSearchPlatformService:(id)arg1 glueService:(id)arg2 audioPreviewService:(id)arg3 explicitContentService:(id)arg4 ageVerificationService:(id)arg5 viewModel:(id)arg6 linkDispatcher:(id)arg7 testManager:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

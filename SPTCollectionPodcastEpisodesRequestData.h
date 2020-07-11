@@ -23,13 +23,13 @@
 }
 
 @property(copy, nonatomic) NSString *requestAction; // @synthesize requestAction=_requestAction;
-@property(retain, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
+@property(copy, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
 @property(nonatomic, getter=isGrouped) _Bool grouped; // @synthesize grouped=_grouped;
-@property(retain, nonatomic) NSArray *sortDescriptors; // @synthesize sortDescriptors=_sortDescriptors;
+@property(copy, nonatomic) NSArray *sortDescriptors; // @synthesize sortDescriptors=_sortDescriptors;
 @property(retain, nonatomic) NSURL *viewURL; // @synthesize viewURL=_viewURL;
 @property(readonly, nonatomic) NSSortDescriptor *sortDescriptor; // @synthesize sortDescriptor=_sortDescriptor;
 @property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
-@property(retain, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
+@property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
 - (void).cxx_destruct;
 - (id)additionalFilterString:(id)arg1;
 - (id)initWithURL:(id)arg1 mediaType:(long long)arg2 subscribe:(_Bool)arg3 podcastUITestManager:(id)arg4;

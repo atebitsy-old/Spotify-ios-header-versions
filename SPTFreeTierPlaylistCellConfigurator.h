@@ -28,7 +28,6 @@
 @property(readonly, nonatomic) SPTFreeTierPlaylistGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
-- (void)sectionHeaderButtonAction;
 - (void)configureSponsorshipCell:(id)arg1 withSponsoredViewModel:(id)arg2;
 - (id)currentCloudStyleWithViewModel:(id)arg1;
 - (void)configureCloudCell:(id)arg1 withCloudViewModel:(id)arg2 andContainerWidth:(double)arg3;

@@ -12,6 +12,8 @@
 {
     // Error parsing type: , name: viewSwitcher
     // Error parsing type: , name: pageLoader
+    // Error parsing type: , name: viewLogger
+    // Error parsing type: , name: currentViewExtractor
     // Error parsing type: , name: pageIdentifier
     // Error parsing type: , name: pageURI
 }
@@ -19,10 +21,12 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)initWithCoder:(id)arg1;
+- (void)viewWillDisappear:(_Bool)arg1;
 @property(nonatomic, copy) NSURL *pageURI;
 - (id)spt_pageURI;
 @property(nonatomic, copy) NSString *pageIdentifier;
 - (id)spt_pageIdentifier;
+- (unsigned long long)preferredNavigationBarState;
 
 @end
 

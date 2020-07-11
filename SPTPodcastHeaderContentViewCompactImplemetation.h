@@ -20,7 +20,6 @@
     NSLayoutConstraint *_headerHeightConstraint;
     NSLayoutConstraint *_imageTopConstraint;
     NSLayoutConstraint *_imageTopConstraintWithMargin;
-    NSLayoutConstraint *_imageBottomConstraint;
     NSLayoutConstraint *_noTitleConstraint;
     double _imageTopMargin;
     double _navigationBarGradientEndPoint;
@@ -33,7 +32,6 @@
 @property(nonatomic) CDStruct_5a28e70a imageAlphaProgressRange; // @synthesize imageAlphaProgressRange=_imageAlphaProgressRange;
 @property(nonatomic) double imageTopMargin; // @synthesize imageTopMargin=_imageTopMargin;
 @property(retain, nonatomic) NSLayoutConstraint *noTitleConstraint; // @synthesize noTitleConstraint=_noTitleConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *imageBottomConstraint; // @synthesize imageBottomConstraint=_imageBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageTopConstraintWithMargin; // @synthesize imageTopConstraintWithMargin=_imageTopConstraintWithMargin;
 @property(retain, nonatomic) NSLayoutConstraint *imageTopConstraint; // @synthesize imageTopConstraint=_imageTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *headerHeightConstraint; // @synthesize headerHeightConstraint=_headerHeightConstraint;
@@ -43,6 +41,8 @@
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) UILayoutGuide *titlePositionLayoutGuide; // @synthesize titlePositionLayoutGuide;
 - (void).cxx_destruct;
+- (id)podcastPublisherStyle;
+- (id)podcastTitleStyle;
 - (void)updateAccessibilityLabels;
 - (void)layoutSubviews;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;

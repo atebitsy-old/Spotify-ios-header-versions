@@ -12,7 +12,7 @@
 #import "SPTPageController-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginLayoutTestManager, SPTLoginTheme, SPTLoginView, SPTLoginViewModel, SPTProgressView;
+@class NSError, NSString, NSURL, SPTLoginTheme, SPTLoginView, SPTLoginViewModel, SPTProgressView;
 @protocol SPTPageContainer;
 
 @interface SPTLoginViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTLoginViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
@@ -23,10 +23,8 @@
     SPTLoginTheme *_theme;
     SPTLoginViewModel *_viewModel;
     SPTProgressView *_progressView;
-    SPTLoginLayoutTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTLoginLayoutTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) SPTLoginViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
@@ -61,7 +59,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithTheme:(id)arg1 viewModel:(id)arg2 testManager:(id)arg3;
+- (id)initWithTheme:(id)arg1 viewModel:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -22,9 +22,13 @@
 - (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 interactionType:(id)arg6 nameComponents:(id)arg7 identifierComponents:(id)arg8 positionComponents:(id)arg9 uriComponents:(id)arg10 reasonComponents:(id)arg11 impressionEnabled:(_Bool)arg12;
 
 // Remaining properties
+@property(readonly, copy, nonatomic) NSString *applicationId;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
+@property(readonly, copy, nonatomic) NSString *generatorCommitHash;
 @property(readonly) unsigned long long hash;
+@property(readonly, nonatomic) _Bool impressionEnabled;
+@property(readonly, copy, nonatomic) NSString *specificationCommitHash;
 @property(readonly) Class superclass;
 
 @end

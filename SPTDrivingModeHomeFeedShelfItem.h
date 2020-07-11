@@ -14,8 +14,10 @@
     NSString *_title;
     NSURL *_imageURL;
     NSString *_placeholderIconIdentifier;
+    unsigned long long _trackState;
 }
 
+@property(nonatomic) unsigned long long trackState; // @synthesize trackState=_trackState;
 @property(copy, nonatomic) NSString *placeholderIconIdentifier; // @synthesize placeholderIconIdentifier=_placeholderIconIdentifier;
 @property(copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;

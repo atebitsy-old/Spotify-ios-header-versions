@@ -15,6 +15,7 @@
 - (void)openMagicLinkSentConfirmationScreenWithEmail:(NSString *)arg1;
 - (void)openRequestMagicLinkScreenWithEmail:(NSString *)arg1 error:(NSError *)arg2;
 - (void)openLoginScreenWithEmail:(NSString *)arg1;
+- (void)openSignupFlowWithSignupInfo:(SPTAuthSignupInfo *)arg1 type:(unsigned long long)arg2 displayName:(NSString *)arg3 navigationCompletion:(void (^)(void))arg4;
 - (void)openSignupFlowWithSignupInfo:(SPTAuthSignupInfo *)arg1 type:(unsigned long long)arg2 navigationCompletion:(void (^)(void))arg3;
 - (void)openDisplayNameScreen;
 - (void)openGenderScreen;

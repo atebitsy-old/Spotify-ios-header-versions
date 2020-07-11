@@ -13,7 +13,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUEEntityRowStyle, NSLayoutConstraint, NSString, NSURL, SPTFreeTierPlaylistCellProviderCoordinator, SPTSearchBar, SPTTableView;
+@class GLUEEntityRowStyle, NSLayoutConstraint, NSString, NSURL, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistLogger, SPTSearchBar, SPTTableView;
 @protocol SPTFreeTierPlaylistViewModel, SPTPageContainer;
 
 @interface SPTFreeTierPlaylistSearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTNavigationControllerNavigationBarState, UISearchBarDelegate, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
@@ -23,6 +23,7 @@
     GLUEEntityRowStyle *_trackRowStyle;
     SPTFreeTierPlaylistCellProviderCoordinator *_cellProviderCoordinator;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
+    SPTFreeTierPlaylistLogger *_logger;
     NSLayoutConstraint *_bottomConstraint;
     SPTSearchBar *_searchBar;
 }
@@ -30,6 +31,7 @@
 @property(retain, nonatomic) SPTSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(nonatomic) _Bool shouldBecomeFirstResponder; // @synthesize shouldBecomeFirstResponder=_shouldBecomeFirstResponder;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
+@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) SPTFreeTierPlaylistCellProviderCoordinator *cellProviderCoordinator; // @synthesize cellProviderCoordinator=_cellProviderCoordinator;
 @property(readonly, nonatomic) GLUEEntityRowStyle *trackRowStyle; // @synthesize trackRowStyle=_trackRowStyle;
@@ -63,7 +65,7 @@
 - (long long)numberOfSectionsInTableView:(id)arg1;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-- (id)initWithPlaylistViewModel:(id)arg1 trackRowStyle:(id)arg2 cellProviderCoordinator:(id)arg3;
+- (id)initWithPlaylistViewModel:(id)arg1 trackRowStyle:(id)arg2 cellProviderCoordinator:(id)arg3 logger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

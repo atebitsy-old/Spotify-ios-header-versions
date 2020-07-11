@@ -14,11 +14,11 @@
 @interface SPTEventSenderSatelliteServiceImplementation : NSObject <SPTEventSenderSatelliteService>
 {
     id <SPTEventSenderService> _eventSenderService;
-    id <SPTEventSenderSatelliteServiceResponder> _responder;
+    id <SPTEventSenderSatelliteServiceResponder> _satelliteResponder;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTEventSenderSatelliteServiceResponder> responder; // @synthesize responder=_responder;
+@property(retain, nonatomic) id <SPTEventSenderSatelliteServiceResponder> satelliteResponder; // @synthesize satelliteResponder=_satelliteResponder;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 - (void).cxx_destruct;
 - (void)unload;

@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSString, SPTOauthClient;
-@protocol SPTAsyncScheduler, SPTAuthSessionDelegate, SPTProductState;
+@protocol SPTAuthSessionDelegate, SPTConnectivityAsyncScheduler, SPTProductState;
 
 @interface SPTAuthSession : NSObject
 {
@@ -19,10 +19,10 @@
     NSString *_verbatimUsername;
     id <SPTProductState> _productState;
     SPTOauthClient *_oauthClient;
-    id <SPTAsyncScheduler> _scheduler;
+    id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(readonly, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) NSString *verbatimUsername; // @synthesize verbatimUsername=_verbatimUsername;

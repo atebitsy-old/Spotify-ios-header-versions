@@ -12,9 +12,6 @@
     // Error parsing type: , name: headerViewController
     // Error parsing type: , name: header
     // Error parsing type: , name: tableView
-    // Error parsing type: , name: $__lazy_storage_$_errorInfoView
-    // Error parsing type: , name: $__lazy_storage_$_offlineInfoView
-    // Error parsing type: , name: progressView
 }
 
 - (void).cxx_destruct;

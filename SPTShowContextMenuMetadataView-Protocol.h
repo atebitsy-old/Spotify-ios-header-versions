@@ -13,11 +13,10 @@
 @protocol SPTShowContextMenuMetadataView <SPTContextMenuHeader, SPTThemableView>
 @property(retain, nonatomic) UIView *subtitleAccessoryView;
 @property(retain, nonatomic) UIImage *image;
-@property(retain, nonatomic) NSString *longDescription;
-@property(retain, nonatomic) NSString *imageMetadataTitle;
-@property(retain, nonatomic) NSString *metadataTitle;
-@property(retain, nonatomic) NSString *subtitle;
-@property(retain, nonatomic) NSString *title;
+@property(copy, nonatomic) NSString *longDescription;
+@property(copy, nonatomic) NSString *imageMetadataTitle;
+@property(copy, nonatomic) NSString *metadataTitle;
+@property(copy, nonatomic) NSString *subtitle;
 @property(nonatomic) __weak id <SPTShowContextMenuMetadataViewDelegate> delegate;
 @end
 

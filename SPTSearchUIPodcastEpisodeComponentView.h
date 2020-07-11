@@ -19,9 +19,8 @@
     SPTSearchUIEpisodeViewStyle *_episodeViewStyle;
 }
 
++ (id)styleForModel:(id)arg1 theme:(id)arg2;
 + (id)accessoryIconImageForTheme:(id)arg1;
-+ (double)marginForTheme:(id)arg1;
-+ (id)chipsInModel:(id)arg1;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 @property(copy, nonatomic) SPTSearchUIEpisodeViewStyle *episodeViewStyle; // @synthesize episodeViewStyle=_episodeViewStyle;
 @property(readonly, nonatomic) HUGSCustomViewControl *control; // @synthesize control=_control;

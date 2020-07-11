@@ -10,10 +10,10 @@
 
 @interface SPTSignupDataLoaderResponse : NSObject
 {
-    NSString *_phoneNumberLoginToken;
+    NSString *_oneTimeLoginToken;
 }
 
-@property(readonly, nonatomic) NSString *phoneNumberLoginToken; // @synthesize phoneNumberLoginToken=_phoneNumberLoginToken;
+@property(readonly, nonatomic) NSString *oneTimeLoginToken; // @synthesize oneTimeLoginToken=_oneTimeLoginToken;
 - (void).cxx_destruct;
 - (id)initWithResponseDictionary:(id)arg1;
 

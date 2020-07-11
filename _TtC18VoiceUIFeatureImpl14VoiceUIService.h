@@ -17,6 +17,7 @@
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: playerService
     // Error parsing type: , name: eventSenderService
+    // Error parsing type: , name: collectionPlatformService
     // Error parsing type: , name: voiceViewController
     // Error parsing type: , name: voicePlayerEventListener
     // Error parsing type: , name: voicePlayerLogger
@@ -26,7 +27,6 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (void)initialViewDidAppear;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

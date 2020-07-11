@@ -27,7 +27,6 @@
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 - (unsigned long long)categoryPosition;
-- (void)testManager:(id)arg1 didChangeDriverDistractionTestEnabled:(_Bool)arg2;
 - (void)testManager:(id)arg1 didChangeCarViewEnabled:(_Bool)arg2;
 - (void)switchValueDidChange:(id)arg1;
 - (void)dealloc;

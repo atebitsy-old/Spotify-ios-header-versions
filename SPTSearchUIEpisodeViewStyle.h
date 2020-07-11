@@ -8,47 +8,43 @@
 
 #import "NSCopying-Protocol.h"
 
-@class GLUETrackAccessoryLabelStyle, SPTSearchUIChipViewStyle, UIColor, UIFont;
+@class GLUETrackAccessoryLabelStyle, UIColor, UIFont;
 
 @interface SPTSearchUIEpisodeViewStyle : NSObject <NSCopying>
 {
-    UIColor *_backgroundColor;
-    double _cornerRadius;
     double _imageCornerRadius;
     double _spacing;
-    SPTSearchUIChipViewStyle *_chipViewStyle;
     unsigned long long _titleNumberOfLines;
-    unsigned long long _subtitleNumberOfLines;
     UIFont *_titleFont;
     UIFont *_subtitleFont;
+    UIFont *_accessoryTitleFont;
     UIColor *_titleColor;
     UIColor *_subtitleColor;
+    UIColor *_accessoryTitleColor;
     GLUETrackAccessoryLabelStyle *_accessoryLabelStyle;
     struct CGSize _imageSize;
     struct UIEdgeInsets _contentInsets;
 }
 
 @property(copy, nonatomic) GLUETrackAccessoryLabelStyle *accessoryLabelStyle; // @synthesize accessoryLabelStyle=_accessoryLabelStyle;
+@property(copy, nonatomic) UIColor *accessoryTitleColor; // @synthesize accessoryTitleColor=_accessoryTitleColor;
 @property(copy, nonatomic) UIColor *subtitleColor; // @synthesize subtitleColor=_subtitleColor;
 @property(copy, nonatomic) UIColor *titleColor; // @synthesize titleColor=_titleColor;
+@property(copy, nonatomic) UIFont *accessoryTitleFont; // @synthesize accessoryTitleFont=_accessoryTitleFont;
 @property(copy, nonatomic) UIFont *subtitleFont; // @synthesize subtitleFont=_subtitleFont;
 @property(copy, nonatomic) UIFont *titleFont; // @synthesize titleFont=_titleFont;
-@property(nonatomic) unsigned long long subtitleNumberOfLines; // @synthesize subtitleNumberOfLines=_subtitleNumberOfLines;
 @property(nonatomic) unsigned long long titleNumberOfLines; // @synthesize titleNumberOfLines=_titleNumberOfLines;
-@property(copy, nonatomic) SPTSearchUIChipViewStyle *chipViewStyle; // @synthesize chipViewStyle=_chipViewStyle;
 @property(nonatomic) double spacing; // @synthesize spacing=_spacing;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 @property(nonatomic) double imageCornerRadius; // @synthesize imageCornerRadius=_imageCornerRadius;
-@property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
-@property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 - (void).cxx_destruct;
 - (_Bool)isEqualToEpisodeViewStyle:(id)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;
-- (id)initWithBackgroundColor:(id)arg1 cornerRadius:(double)arg2 imageCornerRadius:(double)arg3 imageSize:(struct CGSize)arg4 contentInsets:(struct UIEdgeInsets)arg5 spacing:(double)arg6 chipViewStyle:(id)arg7 titleNumberOfLines:(unsigned long long)arg8 subtitleNumberOfLines:(unsigned long long)arg9 titleFont:(id)arg10 subtitleFont:(id)arg11 titleColor:(id)arg12 subtitleColor:(id)arg13 accessoryLabelStyle:(id)arg14;
+- (id)initWithImageCornerRadius:(double)arg1 imageSize:(struct CGSize)arg2 contentInsets:(struct UIEdgeInsets)arg3 spacing:(double)arg4 titleNumberOfLines:(unsigned long long)arg5 titleFont:(id)arg6 subtitleFont:(id)arg7 accessoryTitleFont:(id)arg8 titleColor:(id)arg9 subtitleColor:(id)arg10 accessoryTitleColor:(id)arg11 accessoryLabelStyle:(id)arg12;
 - (id)initWithTheme:(id)arg1;
 
 @end

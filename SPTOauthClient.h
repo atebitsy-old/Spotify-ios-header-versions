@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTAsyncScheduler;
+@protocol SPTConnectivityAsyncScheduler;
 
 @interface SPTOauthClient : NSObject
 {
     shared_ptr_e0806d77 _cppOauthClient;
-    id <SPTAsyncScheduler> _scheduler;
+    id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
 @property(readonly, nonatomic) shared_ptr_e0806d77 *cppOauthClient; // @synthesize cppOauthClient=_cppOauthClient;
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (id)loadTokenOrRenew:(_Bool)arg1;

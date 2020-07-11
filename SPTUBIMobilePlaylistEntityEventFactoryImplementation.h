@@ -22,6 +22,7 @@
 - (id)filterAndSortFactory;
 - (id)emptyViewFactory;
 - (id)trackCloudFactory;
+- (id)previewButtonFactory;
 - (id)editButtonFactory;
 - (id)downloadToggleFactory;
 - (id)addSongsButtonFactory;

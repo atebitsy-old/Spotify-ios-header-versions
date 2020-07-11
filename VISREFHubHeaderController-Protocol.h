@@ -18,6 +18,7 @@
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id <GLUETheme>)arg2 imageLoader:(id <SPTImageLoader>)arg3 linkDispatcher:(id <SPTLinkDispatcher>)arg4;
 
 @optional
+- (void)setImagePlaceholder;
 - (void)setImage:(UIImage *)arg1;
 - (void)setOfflineButtonModel:(id)arg1;
 - (void)setContextMenuButtonModel:(id)arg1;

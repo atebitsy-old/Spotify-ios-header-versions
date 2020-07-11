@@ -31,6 +31,7 @@
 @property(readonly, nonatomic, getter=isReportAbuseEnabled) _Bool reportAbuseEnabled;
 @property(readonly, nonatomic, getter=isLikeActionPlacedInsideHeader) _Bool likeActionPlacedInsideHeader;
 @property(readonly, nonatomic) _Bool isPublished;
+@property(readonly, nonatomic, getter=isCollaborative) _Bool collaborative;
 @property(readonly, nonatomic, getter=isOwnedBySelf) _Bool ownedBySelf;
 @property(readonly, copy, nonatomic) NSString *playlistName;
 @property(readonly, copy, nonatomic) NSURL *playlistURL;
@@ -39,7 +40,6 @@
 - (_Bool)isRecomendationsLoading;
 - (void)refreshRecommendations;
 - (void)addRecommendationAtIndex:(long long)arg1;
-- (void)sectionHeaderButtonTapped;
 - (void)deletePlaylist;
 - (void)load;
 - (_Bool)cellProviderSupportedForSection:(long long)arg1;

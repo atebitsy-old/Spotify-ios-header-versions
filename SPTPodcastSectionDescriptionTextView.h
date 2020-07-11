@@ -15,17 +15,20 @@
     double _lineHeight;
     GLUELabelStyle *_style;
     GLUELabelStyle *_seeMoreStyle;
+    struct _NSRange _attributionStringRange;
 }
 
 @property(retain, nonatomic) GLUELabelStyle *seeMoreStyle; // @synthesize seeMoreStyle=_seeMoreStyle;
 @property(retain, nonatomic) GLUELabelStyle *style; // @synthesize style=_style;
 @property(nonatomic) _Bool needsTextViewLayout; // @synthesize needsTextViewLayout=_needsTextViewLayout;
 @property(nonatomic) double lineHeight; // @synthesize lineHeight=_lineHeight;
+@property(nonatomic) struct _NSRange attributionStringRange; // @synthesize attributionStringRange=_attributionStringRange;
 @property(copy, nonatomic) NSString *originalText; // @synthesize originalText=_originalText;
 - (void).cxx_destruct;
+- (id)uncollapsedStringEnding;
 - (id)collapsedStringEnding;
-- (void)setAttributedText:(id)arg1;
-- (void)setText:(id)arg1;
+- (void)updateAttributedText;
+- (void)configureText:(id)arg1 withAttributionRange:(struct _NSRange)arg2;
 - (void)setNumberOfLines:(long long)arg1;
 - (void)setBounds:(struct CGRect)arg1;
 - (_Bool)canBecomeFirstResponder;

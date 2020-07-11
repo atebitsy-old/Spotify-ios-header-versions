@@ -12,11 +12,14 @@
 
 @interface SPTOfflineFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    NSString *_offlineMusicContentSortOrder;
+    unsigned long long _offlineMusicContentSortOrder;
+    NSString *_offlineMusicContentSortOrderString;
 }
 
-@property(readonly, nonatomic) NSString *offlineMusicContentSortOrder; // @synthesize offlineMusicContentSortOrder=_offlineMusicContentSortOrder;
+@property(retain, nonatomic) NSString *offlineMusicContentSortOrderString; // @synthesize offlineMusicContentSortOrderString=_offlineMusicContentSortOrderString;
+@property(readonly, nonatomic) unsigned long long offlineMusicContentSortOrder; // @synthesize offlineMusicContentSortOrder=_offlineMusicContentSortOrder;
 - (void).cxx_destruct;
+- (unsigned long long)mapOfflineMusicContentSortOrderToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

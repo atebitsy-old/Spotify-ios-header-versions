@@ -7,7 +7,7 @@
 #import "SettingsSection.h"
 
 @class NSString, SPSession, SPTAccesspointWebTokenRequest;
-@protocol SPTLinkDispatcher, SPTLogCenter;
+@protocol SPTLinkDispatcher, SPTLogCenter, SPTUBIMobileAdsPreferencesEventFactory, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTAdPartnersPreferencesSettingsSection : SettingsSection
 {
@@ -16,22 +16,26 @@
     NSString *_adPartnerPreferenceURLWithToken;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTLogCenter> _logCenter;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBIMobileAdsPreferencesEventFactory> _adsPreferencesEventFactory;
 }
 
+@property(readonly, nonatomic) id <SPTUBIMobileAdsPreferencesEventFactory> adsPreferencesEventFactory; // @synthesize adsPreferencesEventFactory=_adsPreferencesEventFactory;
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) NSString *adPartnerPreferenceURLWithToken; // @synthesize adPartnerPreferenceURLWithToken=_adPartnerPreferenceURLWithToken;
 @property(retain, nonatomic) SPTAccesspointWebTokenRequest *webAccessTokenRequest; // @synthesize webAccessTokenRequest=_webAccessTokenRequest;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 - (void).cxx_destruct;
-- (void)logAccessAdPartnerPreferencesSettings;
+- (void)logAccessAdPartnerPreferencesSettings:(id)arg1;
 - (void)startWebAccessTokenRequest;
 - (void)didSelectRow:(long long)arg1;
 - (id)footerText;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 - (unsigned long long)categoryPosition;
-- (id)initWithSettingsViewController:(id)arg1 session:(id)arg2 linkDispatcher:(id)arg3 logCenter:(id)arg4;
+- (id)initWithSettingsViewController:(id)arg1 session:(id)arg2 linkDispatcher:(id)arg3 logCenter:(id)arg4 ubiLogger:(id)arg5 adsPreferencesEventFactory:(id)arg6;
 
 @end
 

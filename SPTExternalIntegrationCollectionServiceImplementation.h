@@ -9,7 +9,7 @@
 #import "SPTExternalIntegrationCollectionService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContainerService, SPTExternalIntegrationCollectionController, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService;
+@protocol SPTCollectionPlatformService, SPTContainerService, SPTExternalIntegrationCollectionController, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTPlaylistPlatformService;
 
 @interface SPTExternalIntegrationCollectionServiceImplementation : NSObject <SPTExternalIntegrationCollectionService>
 {
@@ -18,9 +18,11 @@
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
     id <SPTExternalIntegrationPlaybackService> _playbackService;
     id <SPTContainerService> _containerService;
+    id <SPTPlaylistPlatformService> _playlistPlatformService;
 }
 
 + (id)serviceIdentifier;
+@property(readonly, nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;

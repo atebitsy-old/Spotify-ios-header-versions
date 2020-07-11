@@ -17,7 +17,7 @@
 }
 
 @property(retain, nonatomic) id <SPTPageCreationContext> context; // @synthesize context=_context;
-@property(retain, nonatomic) NSArray *pagedViewControllers; // @synthesize pagedViewControllers=_pagedViewControllers;
+@property(copy, nonatomic) NSArray *pagedViewControllers; // @synthesize pagedViewControllers=_pagedViewControllers;
 @property(nonatomic, getter=isCompactMode) _Bool compactMode; // @synthesize compactMode=_compactMode;
 - (void).cxx_destruct;
 - (id)pageViewControllerAtIndex:(unsigned long long)arg1;

@@ -36,9 +36,9 @@
 @property(nonatomic, getter=isPlayable) _Bool playable; // @synthesize playable=_playable;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSURL *showURL; // @synthesize showURL=_showURL;
-@property(retain, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
-@property(retain, nonatomic) NSString *showTitle; // @synthesize showTitle=_showTitle;
-@property(retain, nonatomic) NSString *episodeTitle; // @synthesize episodeTitle=_episodeTitle;
+@property(copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
+@property(copy, nonatomic) NSString *showTitle; // @synthesize showTitle=_showTitle;
+@property(copy, nonatomic) NSString *episodeTitle; // @synthesize episodeTitle=_episodeTitle;
 - (void).cxx_destruct;
 - (id)localizedTime;
 @property(readonly, nonatomic, getter=isPlayed) _Bool played;

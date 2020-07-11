@@ -15,6 +15,6 @@
 - (id)listenForHeightChange:(void (^)(double, double, double, double))arg1;
 
 @optional
-- (void)navigationBarHeightDidChange:(double)arg1;
+- (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 @end
 

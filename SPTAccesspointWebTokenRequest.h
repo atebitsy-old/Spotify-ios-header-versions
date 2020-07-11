@@ -7,21 +7,21 @@
 #import "SPTAccesspointRequest.h"
 
 @class NSString, NSURL;
-@protocol SPTAsyncScheduler;
+@protocol SPTConnectivityAsyncScheduler;
 
 @interface SPTAccesspointWebTokenRequest : SPTAccesspointRequest
 {
     struct shared_ptr<void *> _shutdown_sentinel;
     NSString *_type;
     NSURL *_url;
-    id <SPTAsyncScheduler> _scheduler;
+    id <SPTConnectivityAsyncScheduler> _scheduler;
     id _sentinel;
     struct ApHandler *_accesspointHandler;
 }
 
 @property(nonatomic) struct ApHandler *accesspointHandler; // @synthesize accesspointHandler=_accesspointHandler;
 @property(nonatomic) id sentinel; // @synthesize sentinel=_sentinel;
-@property(nonatomic) id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(nonatomic) id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
 - (id).cxx_construct;

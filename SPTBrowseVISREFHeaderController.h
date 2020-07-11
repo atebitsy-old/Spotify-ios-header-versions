@@ -32,7 +32,7 @@
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
 - (void)setBackButton:(id)arg1;
-- (void)navigationBarHeightDidChange:(double)arg1;
+- (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;
 - (double)minimumContentHeight;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;

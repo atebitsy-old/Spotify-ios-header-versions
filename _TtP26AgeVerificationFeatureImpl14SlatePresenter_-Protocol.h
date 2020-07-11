@@ -9,8 +9,7 @@
 
 @protocol _TtP26AgeVerificationFeatureImpl14SlatePresenter_
 - (void)dismiss;
-- (void)setLoading:(_Bool)arg1;
-- (void)updateWithError:(NSError *)arg1;
+- (void)updateWithError:(NSError *)arg1 animating:(_Bool)arg2;
 - (void)updateWithCoverArtURL:(NSURL *)arg1;
 - (void)updateWithColor:(UIColor *)arg1;
 - (void)presentFor:(NSURL *)arg1;

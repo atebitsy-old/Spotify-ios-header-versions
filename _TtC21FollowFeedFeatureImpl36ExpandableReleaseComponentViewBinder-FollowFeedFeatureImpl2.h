@@ -6,9 +6,7 @@
 
 #import "_TtC21FollowFeedFeatureImpl36ExpandableReleaseComponentViewBinder.h"
 
-#import "UITextViewDelegate-Protocol.h"
-
-@interface _TtC21FollowFeedFeatureImpl36ExpandableReleaseComponentViewBinder (FollowFeedFeatureImpl2) <UITextViewDelegate>
+@interface _TtC21FollowFeedFeatureImpl36ExpandableReleaseComponentViewBinder (FollowFeedFeatureImpl2)
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 @end
 

@@ -6,12 +6,11 @@
 
 #import "VISREFTopAndBodyContentView.h"
 
-#import "VISREFExpandableTextViewDelegate-Protocol.h"
 #import "VISREFHeaderComponent-Protocol.h"
 
 @class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UIImageView, UILayoutGuide, UIStackView, UIView, VISREFCreatorRowView, VISREFExpandableTextView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
 
-@interface VISREFArtworkContentView : VISREFTopAndBodyContentView <VISREFExpandableTextViewDelegate, VISREFHeaderComponent>
+@interface VISREFArtworkContentView : VISREFTopAndBodyContentView <VISREFHeaderComponent>
 {
     UILayoutGuide *_titlePositionLayoutGuide;
     SPTEncoreLabel *_titleLabel;
@@ -26,7 +25,6 @@
     VISREFCreatorRowView *_creatorRowView;
     _TtC20EncoreConsumerMobile19AutoLayoutStackView *_contentStackView;
     UIStackView *_actionRowStackView;
-    NSLayoutConstraint *_headerHeightConstraint;
     NSLayoutConstraint *_imageTopConstraint;
     NSLayoutConstraint *_imageTopConstraintWithMargin;
     NSLayoutConstraint *_imageBottomConstraint;
@@ -41,7 +39,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *imageBottomConstraint; // @synthesize imageBottomConstraint=_imageBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageTopConstraintWithMargin; // @synthesize imageTopConstraintWithMargin=_imageTopConstraintWithMargin;
 @property(retain, nonatomic) NSLayoutConstraint *imageTopConstraint; // @synthesize imageTopConstraint=_imageTopConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *headerHeightConstraint; // @synthesize headerHeightConstraint=_headerHeightConstraint;
 @property(retain, nonatomic) UIStackView *actionRowStackView; // @synthesize actionRowStackView=_actionRowStackView;
 @property(retain, nonatomic) _TtC20EncoreConsumerMobile19AutoLayoutStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
 @property(retain, nonatomic) VISREFCreatorRowView *creatorRowView; // @synthesize creatorRowView=_creatorRowView;
@@ -57,7 +54,6 @@
 @property(readonly, nonatomic) UILayoutGuide *titlePositionLayoutGuide; // @synthesize titlePositionLayoutGuide=_titlePositionLayoutGuide;
 - (void).cxx_destruct;
 - (void)didTapCreatorRow;
-- (void)expandableTextViewDidTapTruncationText:(id)arg1;
 - (void)updateTopMargin;
 - (void)updateAccessibilityLabels;
 - (void)layoutSubviews;

@@ -51,8 +51,8 @@
 @property(retain, nonatomic) UIControl *playControl; // @synthesize playControl=_playControl;
 @property(readonly, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
-@property(retain, nonatomic) NSArray *secondaryActionViewsRight; // @synthesize secondaryActionViewsRight=_secondaryActionViewsRight;
-@property(retain, nonatomic) NSArray *secondaryActionViewsLeft; // @synthesize secondaryActionViewsLeft=_secondaryActionViewsLeft;
+@property(copy, nonatomic) NSArray *secondaryActionViewsRight; // @synthesize secondaryActionViewsRight=_secondaryActionViewsRight;
+@property(copy, nonatomic) NSArray *secondaryActionViewsLeft; // @synthesize secondaryActionViewsLeft=_secondaryActionViewsLeft;
 @property(retain, nonatomic) UIView *mainActionView; // @synthesize mainActionView=_mainActionView;
 @property(nonatomic) _Bool editing; // @synthesize editing=_editing;
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;

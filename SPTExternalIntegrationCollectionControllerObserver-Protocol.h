@@ -9,6 +9,7 @@
 @protocol SPTExternalIntegrationCollectionController;
 
 @protocol SPTExternalIntegrationCollectionControllerObserver <NSObject>
+- (void)didReceiveUpdatedCollectionNotification;
 - (void)externalIntegrationCollectionController:(id <SPTExternalIntegrationCollectionController>)arg1 didReceiveNewCollectionStateForCurrentTrack:(_Bool)arg2;
 @end
 

@@ -12,21 +12,25 @@
 
 @interface SPTYourLibraryMusicFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _likedSongsAssistedCurationEnabled;
     _Bool _playlistsRelevanceSortAsDefaultEnabled;
     _Bool _likedSongsArtistAlbumGroupingsEnabled;
-    NSString *_likedSongsTagMechanism;
-    NSString *_artistRecommendationsSource;
-    NSString *_quickscrollMechanismInYourLibrary;
+    _Bool _likedSongsUsePageLoader;
+    unsigned long long _artistRecommendationsSource;
+    unsigned long long _quickscrollMechanismInYourLibrary;
+    NSString *_artistRecommendationsSourceString;
+    NSString *_quickscrollMechanismInYourLibraryString;
 }
 
-@property(readonly, nonatomic) NSString *quickscrollMechanismInYourLibrary; // @synthesize quickscrollMechanismInYourLibrary=_quickscrollMechanismInYourLibrary;
-@property(readonly, nonatomic) NSString *artistRecommendationsSource; // @synthesize artistRecommendationsSource=_artistRecommendationsSource;
-@property(readonly, nonatomic) NSString *likedSongsTagMechanism; // @synthesize likedSongsTagMechanism=_likedSongsTagMechanism;
+@property(retain, nonatomic) NSString *quickscrollMechanismInYourLibraryString; // @synthesize quickscrollMechanismInYourLibraryString=_quickscrollMechanismInYourLibraryString;
+@property(retain, nonatomic) NSString *artistRecommendationsSourceString; // @synthesize artistRecommendationsSourceString=_artistRecommendationsSourceString;
+@property(readonly, nonatomic) unsigned long long quickscrollMechanismInYourLibrary; // @synthesize quickscrollMechanismInYourLibrary=_quickscrollMechanismInYourLibrary;
+@property(readonly, nonatomic) unsigned long long artistRecommendationsSource; // @synthesize artistRecommendationsSource=_artistRecommendationsSource;
+@property(readonly, nonatomic) _Bool likedSongsUsePageLoader; // @synthesize likedSongsUsePageLoader=_likedSongsUsePageLoader;
 @property(readonly, nonatomic) _Bool likedSongsArtistAlbumGroupingsEnabled; // @synthesize likedSongsArtistAlbumGroupingsEnabled=_likedSongsArtistAlbumGroupingsEnabled;
 @property(readonly, nonatomic) _Bool playlistsRelevanceSortAsDefaultEnabled; // @synthesize playlistsRelevanceSortAsDefaultEnabled=_playlistsRelevanceSortAsDefaultEnabled;
-@property(readonly, nonatomic) _Bool likedSongsAssistedCurationEnabled; // @synthesize likedSongsAssistedCurationEnabled=_likedSongsAssistedCurationEnabled;
 - (void).cxx_destruct;
+- (unsigned long long)mapQuickscrollMechanismInYourLibraryToEnumValue:(id)arg1;
+- (unsigned long long)mapArtistRecommendationsSourceToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

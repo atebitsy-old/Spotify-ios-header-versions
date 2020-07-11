@@ -6,13 +6,17 @@
 
 #import <objc/NSObject.h>
 
+@protocol _TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_;
+
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl31PodcastCreatorEntityPageService : NSObject
 {
     // Error parsing type: , name: pageRegistrationToken
+    // Error parsing type: , name: $__lazy_storage_$_viewProvider
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: hubsService
+    // Error parsing type: , name: $__lazy_storage_$_remoteConfigurationProperties
 }
 
 + (id)serviceIdentifier;
@@ -22,6 +26,7 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+@property(nonatomic, retain) id <_TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_> viewProvider;
 
 @end
 

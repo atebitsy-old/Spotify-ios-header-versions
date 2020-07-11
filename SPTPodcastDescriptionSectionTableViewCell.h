@@ -27,7 +27,7 @@
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 - (void)setupConstraints;
 - (void)setupUI;
-- (void)updatewithViewModel:(id)arg1 atIndexPath:(id)arg2;
+- (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 // Remaining properties

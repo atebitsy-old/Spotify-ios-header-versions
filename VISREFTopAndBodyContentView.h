@@ -25,6 +25,7 @@
 @property(nonatomic) double naturalHeight; // @synthesize naturalHeight=_naturalHeight;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 - (void).cxx_destruct;
+- (void)updateHeaderHeight:(double)arg1;
 @property(readonly, nonatomic) double topAreaNormalizedHeight;
 @property(readonly, nonatomic) double navigationBarNormalizedHeight;
 @property(readonly, nonatomic) double bodyAreaNormalizedHeight;

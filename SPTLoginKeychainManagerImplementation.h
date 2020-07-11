@@ -9,21 +9,21 @@
 #import "SPTCredentialSource-Protocol.h"
 #import "SPTLoginKeychainManager-Protocol.h"
 
-@class NSMutableArray, NSString, SPTAuthLoginCredentials;
+@class NSMutableSet, NSString, SPTAuthLoginCredentials;
 @protocol OS_dispatch_queue, SPTKeychainManager, SPTLoginLogger;
 
 @interface SPTLoginKeychainManagerImplementation : NSObject <SPTLoginKeychainManager, SPTCredentialSource>
 {
     id <SPTKeychainManager> _keychainManager;
     id <SPTLoginLogger> _logger;
-    NSMutableArray *_externalCredentialStores;
+    NSMutableSet *_externalCredentialStores;
     NSObject<OS_dispatch_queue> *_queue;
     SPTAuthLoginCredentials *_savedCredentials;
 }
 
 @property(copy, nonatomic) SPTAuthLoginCredentials *savedCredentials; // @synthesize savedCredentials=_savedCredentials;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
-@property(retain, nonatomic) NSMutableArray *externalCredentialStores; // @synthesize externalCredentialStores=_externalCredentialStores;
+@property(retain, nonatomic) NSMutableSet *externalCredentialStores; // @synthesize externalCredentialStores=_externalCredentialStores;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
 - (void).cxx_destruct;

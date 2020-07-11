@@ -10,10 +10,10 @@
 @protocol SPTFreeTierArtistImage;
 
 @protocol SPTFreeTierArtistEntity <NSObject>
-@property(copy, nonatomic) NSString *fileId;
-@property(readonly, nonatomic) id <SPTFreeTierArtistImage> headerImage;
-@property(readonly, nonatomic) id <SPTFreeTierArtistImage> image;
-@property(readonly, copy, nonatomic) NSString *name;
-@property(readonly, nonatomic) NSURL *uri;
+@property(nonatomic, copy) NSString *fileId;
+@property(nonatomic, readonly) id <SPTFreeTierArtistImage> headerImage;
+@property(nonatomic, readonly) id <SPTFreeTierArtistImage> image;
+@property(nonatomic, readonly) NSString *name;
+@property(nonatomic, readonly) NSURL *uri;
 @end
 

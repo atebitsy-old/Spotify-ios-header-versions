@@ -71,7 +71,7 @@
 - (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)update;
-- (void)configureWithPlayViewModel:(id)arg1 followViewModel:(id)arg2 defaultHeaderViewModel:(id)arg3 fullbleedHeaderViewModel:(id)arg4 playlistOfflineViewModel:(id)arg5 visrefHeaderViewModel:(id)arg6 filterSortBarView:(id)arg7;
+- (void)configureWithHeaderConfiguration:(id)arg1 filterSortBarView:(id)arg2;
 - (void)headerViewViewHierarchyDidChange:(id)arg1;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
 - (double)totalHeaderHeight;
@@ -81,7 +81,7 @@
 - (id)extractNavigationBarGradientFromBackgroundGradient;
 - (void)setImage:(id)arg1;
 - (void)setCustomBackButton:(id)arg1;
-- (void)navigationBarHeightDidChange:(double)arg1;
+- (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)updateForegroundView;
 - (void)updateContentView;
 - (void)setupForegroundView;

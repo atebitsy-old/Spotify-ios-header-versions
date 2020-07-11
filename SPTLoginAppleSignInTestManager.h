@@ -10,7 +10,8 @@
 {
 }
 
-@property(readonly, nonatomic, getter=isPasswordAutofillEnabled) _Bool passwordAutofillEnabled;
+@property(readonly, nonatomic, getter=isAppleAccountLinkingDisabled) _Bool appleAccountLinkingDisabled;
+@property(readonly, nonatomic, getter=isAppleSignUpDisabled) _Bool appleSignUpDisabled;
 @property(readonly, nonatomic, getter=isAppleSignInEnabled) _Bool appleSignInEnabled;
 
 @end

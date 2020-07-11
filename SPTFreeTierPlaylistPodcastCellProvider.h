@@ -9,12 +9,12 @@
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
 #import "SPTPodcastEpisodeCellActionTarget-Protocol.h"
 
-@class NSString, NSURL;
-@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
+@class NSString, NSURL, SPTFreeTierPlaylistLogger;
+@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
 
-@interface SPTFreeTierPlaylistPodcastCellProvider : NSObject <SPTPodcastEpisodeCellActionTarget, SPTFreeTierPlaylistCellProvider>
+@interface SPTFreeTierPlaylistPodcastCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTPodcastEpisodeCellActionTarget>
 {
-    id <SPTFreeTierPlaylistCellProviderDelegate> _delegate;
+    id <SPTFreeTierPlaylistCellProviderDelegate> _cellProviderDelegate;
     id <SPTPodcastEpisodeCellConfigurator> _cellConfigurator;
     id <SPTFreeTierPlaylistPodcastCellStateFactory> _cellStateFactory;
     id <SPTPlayer> _player;
@@ -23,8 +23,10 @@
     id <SPTFreeTierPlaylistPlayModel> _playModel;
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
+    SPTFreeTierPlaylistLogger *_logger;
 }
 
+@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistPlayModel> playModel; // @synthesize playModel=_playModel;
@@ -33,7 +35,7 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPodcastCellStateFactory> cellStateFactory; // @synthesize cellStateFactory=_cellStateFactory;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
-@property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> cellProviderDelegate; // @synthesize cellProviderDelegate=_cellProviderDelegate;
 - (void).cxx_destruct;
 - (void)playButtonTapped:(id)arg1;
 - (void)offlineAccessoryButtonTapped:(id)arg1;
@@ -51,10 +53,11 @@
 - (void)displayEntityViewForEpisdoeAtIndexPath:(id)arg1;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
-- (id)initWithCellConfigurator:(id)arg1 cellStateFactory:(id)arg2 player:(id)arg3 itemsViewModel:(id)arg4 podcastOffliningManager:(id)arg5 linkDispatcher:(id)arg6 playlistURL:(id)arg7 playModel:(id)arg8;
+- (id)initWithCellConfigurator:(id)arg1 cellStateFactory:(id)arg2 player:(id)arg3 itemsViewModel:(id)arg4 podcastOffliningManager:(id)arg5 linkDispatcher:(id)arg6 playlistURL:(id)arg7 playModel:(id)arg8 logger:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
+@property(nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerDelegate> delegate;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;

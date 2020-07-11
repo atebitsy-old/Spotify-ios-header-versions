@@ -35,7 +35,7 @@
 - (void)updateBottomConstraint;
 - (double)addChipToContainer:(id)arg1 currentContentWidth:(double)arg2;
 - (void)constructButtonsUsingCategories:(id)arg1;
-- (void)updatewithViewModel:(id)arg1 atIndexPath:(id)arg2;
+- (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)createConstraints;
 - (void)setupUI;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

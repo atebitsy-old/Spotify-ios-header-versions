@@ -7,12 +7,11 @@
 #import <objc/NSObject.h>
 
 #import "SPTHomeRecentlyPlayedContentOperation-Protocol.h"
-#import "SPTRecentlyPlayedListObserver-Protocol.h"
 
 @class NSString;
 @protocol HUBContentOperationDelegate, SPTRecentlyPlayedList, SPTUserBehaviourHubsInstrumentation;
 
-@interface SPTHomeRecentlyPlayedContentOperationImplementation : NSObject <SPTRecentlyPlayedListObserver, SPTHomeRecentlyPlayedContentOperation>
+@interface SPTHomeRecentlyPlayedContentOperationImplementation : NSObject <SPTHomeRecentlyPlayedContentOperation>
 {
     id <HUBContentOperationDelegate> _delegate;
     id <SPTRecentlyPlayedList> _recentlyPlayedList;
@@ -32,8 +31,6 @@
 - (void)configureHomeComponent:(id)arg1 name:(id)arg2 title:(id)arg3 position:(unsigned long long)arg4;
 - (void)removeRecentlyPlayedComponentFromViewModelBuilder:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (void)recentlyPlayedListDidReload:(id)arg1;
-- (void)dealloc;
 - (id)initWithRecentlyPlayedList:(id)arg1 ubiHubsInstrumentation:(id)arg2;
 
 // Remaining properties

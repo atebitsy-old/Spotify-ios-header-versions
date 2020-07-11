@@ -6,19 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, SPTAuthSerializableCredentials;
+@class NSString, SPTAuthSerializableCredentials, SPTOauthClient;
 
 @interface SPTAuthWebgateSession : NSObject
 {
     unique_ptr_31f72f11 _authSession;
+    SPTOauthClient *_oauthClient;
 }
 
+@property(readonly, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *username;
 @property(readonly, nonatomic) SPTAuthSerializableCredentials *reusableCredentials;
-@property(readonly, nonatomic) shared_ptr_e0806d77 oauthClient;
-- (id)initWithSession:(unique_ptr_31f72f11)arg1;
+@property(readonly, nonatomic) shared_ptr_e0806d77 cppOauthClient;
+- (id)initWithSession:(unique_ptr_31f72f11)arg1 coreThreadScheduler:(id)arg2;
 
 @end
 

@@ -9,10 +9,10 @@
 @class NSArray, NSString, NSURL;
 
 @protocol SPTUBIEventFactoryLocation <NSObject>
-- (_Bool)impressionEnabled;
 - (NSArray *)eventComponentsWithPageURI:(NSURL *)arg1 pageId:(NSString *)arg2;
-- (NSString *)generatorCommitHash;
-- (NSString *)specificationCommitHash;
-- (NSString *)applicationId;
+@property(nonatomic, readonly) _Bool impressionEnabled;
+@property(nonatomic, readonly) NSString *generatorCommitHash;
+@property(nonatomic, readonly) NSString *specificationCommitHash;
+@property(nonatomic, readonly) NSString *applicationId;
 @end
 

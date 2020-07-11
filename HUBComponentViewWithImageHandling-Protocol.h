@@ -4,11 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class UIImage;
+@class NSError, UIImage;
 @protocol HUBComponentImageData, HUBComponentModel;
 
 @protocol HUBComponentViewWithImageHandling
 - (void)updateViewForLoadedImage:(UIImage *)arg1 fromData:(id <HUBComponentImageData>)arg2 model:(id <HUBComponentModel>)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id <HUBComponentImageData>)arg1 model:(id <HUBComponentModel>)arg2 containerViewSize:(struct CGSize)arg3;
+
+@optional
+- (void)updateViewForImageFailedWithError:(NSError *)arg1 fromData:(id <HUBComponentImageData>)arg2 model:(id <HUBComponentModel>)arg3;
 @end
 

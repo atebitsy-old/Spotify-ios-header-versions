@@ -7,6 +7,7 @@
 #import "_TtC18VoiceUIFeatureImpl25VoicePlayerEventsListener.h"
 
 @interface _TtC18VoiceUIFeatureImpl25VoicePlayerEventsListener (VoiceUIFeatureImpl)
+- (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 @end
 

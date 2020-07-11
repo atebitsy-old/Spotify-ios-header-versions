@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl29DevicePickerConnectCellBinder : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: cell
+    // Error parsing type: , name: model
     // Error parsing type: , name: fuserConnection
     // Error parsing type: , name: $__lazy_storage_$_diffuser
 }

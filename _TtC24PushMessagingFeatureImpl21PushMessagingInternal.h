@@ -16,6 +16,7 @@
     // Error parsing type: , name: broadcaster
     // Error parsing type: , name: logger
     // Error parsing type: , name: network
+    // Error parsing type: , name: tracer
 }
 
 @end

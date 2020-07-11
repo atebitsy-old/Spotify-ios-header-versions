@@ -19,7 +19,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPSession, SPTInfoView, SPTPlaylistCreateNewPlaylistController, SPTPlaylistGLUETheme, SPTSyncProgressView, SPTTableView, UIBarButtonItem, UITableView, UIView;
-@protocol GLUEImageLoader, GLUETheme, SPTAlertController, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTLinkDispatcher, SPTLocalSettings, SPTNUXModifying, SPTOfflineManager, SPTOfflineModeState, SPTPageContainer, SPTPlaylistFolderViewModel, SPTPlaylistModel, SPTPlaylistRootFolderViewControllerDelegate;
+@protocol GLUEImageLoader, GLUETheme, SPTAlertController, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTLinkDispatcher, SPTLocalSettings, SPTOfflineManager, SPTOfflineModeState, SPTPageContainer, SPTPlaylistFolderViewModel, SPTPlaylistModel, SPTPlaylistRootFolderViewControllerDelegate;
 
 @interface SPTPlaylistFolderViewController : UIViewController <SPContentInsetViewController, SPTSwipeableTableViewCellDelegate, SPTOfflineModeStateObserver, SPSessionObserver, SPTNavigationControllerNavigationBarState, UITableViewDelegate, UITableViewDataSource, SPTPlaylistFolderViewModelDelegate, SPTPlaylistCreateNewPlaylistControllerDelegate, SPTPlaylistRootFolderViewController, SPTPageController>
 {
@@ -47,7 +47,6 @@
     id <SPTOfflineModeState> _offlineNotifier;
     id <SPTCollectionLogger> _logger;
     id <SPTPlaylistModel> _playlistModel;
-    id <SPTNUXModifying> _NUXModifier;
     GLUEButton *_createPlaylistButton;
     UIView *_createPlaylistButtonContainer;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
@@ -73,7 +72,6 @@
 @property(nonatomic) struct CGRect lastPlaylistButtonContainerRect; // @synthesize lastPlaylistButtonContainerRect=_lastPlaylistButtonContainerRect;
 @property(retain, nonatomic) UIView *createPlaylistButtonContainer; // @synthesize createPlaylistButtonContainer=_createPlaylistButtonContainer;
 @property(retain, nonatomic) GLUEButton *createPlaylistButton; // @synthesize createPlaylistButton=_createPlaylistButton;
-@property(retain, nonatomic) id <SPTNUXModifying> NUXModifier; // @synthesize NUXModifier=_NUXModifier;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(retain, nonatomic) id <SPTCollectionLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineNotifier; // @synthesize offlineNotifier=_offlineNotifier;
@@ -166,7 +164,7 @@
 - (void)setTitle:(id)arg1;
 - (void)dealloc;
 - (void)sessionLoginModeChanged:(id)arg1;
-- (id)initWithSession:(id)arg1 offlineManager:(id)arg2 viewModel:(id)arg3 localSettings:(id)arg4 glueImageLoader:(id)arg5 offlineModeNotifier:(id)arg6 logger:(id)arg7 playlistModel:(id)arg8 NUXModifier:(id)arg9 collectionTestManager:(id)arg10 playlistGLUETheme:(id)arg11 alertController:(id)arg12 linkDispatcher:(id)arg13;
+- (id)initWithSession:(id)arg1 offlineManager:(id)arg2 viewModel:(id)arg3 localSettings:(id)arg4 glueImageLoader:(id)arg5 offlineModeNotifier:(id)arg6 logger:(id)arg7 playlistModel:(id)arg8 collectionTestManager:(id)arg9 playlistGLUETheme:(id)arg10 alertController:(id)arg11 linkDispatcher:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

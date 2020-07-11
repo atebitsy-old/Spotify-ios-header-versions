@@ -12,10 +12,10 @@
 @property(readonly, copy, nonatomic) NSString *requestAction;
 @property(readonly, nonatomic) NSArray *sortDescriptors;
 @property(readonly, nonatomic) NSPredicate *filterPredicate;
-@property(readonly, nonatomic) NSString *requestStringTemplate;
+@property(readonly, copy, nonatomic) NSString *requestStringTemplate;
 
 @optional
 @property(readonly, nonatomic, getter=isGrouped) _Bool grouped;
-@property(readonly, nonatomic) NSData *requestBody;
+@property(readonly, copy, nonatomic) NSData *requestBody;
 @end
 

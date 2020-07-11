@@ -7,11 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSMutableSet;
-@protocol OS_dispatch_queue, SPTAsyncScheduler;
+@protocol OS_dispatch_queue, SPTConnectivityAsyncScheduler;
 
 @interface SPTHermesController : NSObject
 {
-    id <SPTAsyncScheduler> _scheduler;
+    id <SPTConnectivityAsyncScheduler> _scheduler;
     struct TimerManager *_coreScheduler;
     struct HermesHandler *_hermesHandler;
     NSObject<OS_dispatch_queue> *_inFlightAccessQueue;
@@ -23,7 +23,7 @@
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *inFlightAccessQueue; // @synthesize inFlightAccessQueue=_inFlightAccessQueue;
 @property(nonatomic) struct HermesHandler *hermesHandler; // @synthesize hermesHandler=_hermesHandler;
 @property(nonatomic) struct TimerManager *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (void).cxx_destruct;
 - (void)noLongerInFlight:(id)arg1;
 - (void)invalidate;

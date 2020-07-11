@@ -22,8 +22,10 @@
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
     SPTSigninWithAppleHandler *_appleHandler;
     SPTSignupAttemptTrackerImplementation *_signupAttemptTracker;
+    NSString *_appleIDUser;
 }
 
+@property(copy, nonatomic) NSString *appleIDUser; // @synthesize appleIDUser=_appleIDUser;
 @property(readonly, nonatomic) SPTSignupAttemptTrackerImplementation *signupAttemptTracker; // @synthesize signupAttemptTracker=_signupAttemptTracker;
 @property(readonly, nonatomic) SPTSigninWithAppleHandler *appleHandler; // @synthesize appleHandler=_appleHandler;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
@@ -33,15 +35,18 @@
 @property(readonly, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(nonatomic) __weak id <SPTLoginAppleAuthorizationControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)handleUserDidAuthenticateNotification:(id)arg1;
+- (void)showAppleSignUpNotAvailable;
+- (void)showAppleSignUpDisabled;
 - (void)showAcountAlreadyExistDialogWithSignupInfo:(id)arg1;
 - (void)logEventForDialogWithType:(unsigned long long)arg1 error:(id)arg2;
 - (void)authorizationController:(id)arg1 didCompleteWithError:(id)arg2;
 - (void)authorizationController:(id)arg1 didCompleteWithAuthorization:(id)arg2;
 - (id)presentationAnchorForAuthorizationController:(id)arg1;
 - (_Bool)isAppleSignInEnabled;
-- (void)loginWithApple;
+- (id)loginWithAppleID;
 - (void)showPasswordAutofillDialog;
-- (id)initWithAuthenticationHandler:(id)arg1 navigationCoordinator:(id)arg2 testManager:(id)arg3 dialogController:(id)arg4 logger:(id)arg5 appleHandler:(id)arg6 signupAttemptTracker:(id)arg7;
+- (id)initWithAuthenticationHandler:(id)arg1 navigationCoordinator:(id)arg2 testManager:(id)arg3 dialogController:(id)arg4 logger:(id)arg5 appleHandler:(id)arg6 signupAttemptTracker:(id)arg7 notificationCenter:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -16,7 +16,6 @@
 {
     double _preferredPreviewCellHeight;
     double _preferredCellHeight;
-    double _preferredFilterButtonsCellHeight;
     id <SPTYourLibraryMusicSongCellConfiguratorDelegate> _delegate;
     id <GLUEImageLoader> _glueImageLoader;
     SPTYourLibraryMusicGLUETheme *_theme;
@@ -43,7 +42,6 @@
 @property(retain, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongCellConfiguratorDelegate> delegate; // @synthesize delegate=_delegate;
-@property(readonly, nonatomic) double preferredFilterButtonsCellHeight; // @synthesize preferredFilterButtonsCellHeight=_preferredFilterButtonsCellHeight;
 @property(readonly, nonatomic) double preferredCellHeight; // @synthesize preferredCellHeight=_preferredCellHeight;
 @property(readonly, nonatomic) double preferredPreviewCellHeight; // @synthesize preferredPreviewCellHeight=_preferredPreviewCellHeight;
 - (void).cxx_destruct;

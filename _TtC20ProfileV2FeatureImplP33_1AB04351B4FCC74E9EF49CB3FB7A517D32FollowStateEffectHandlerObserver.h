@@ -13,7 +13,6 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)followModel:(id)arg1 updateDidFailWithError:(id)arg2;
 - (void)followModel:(id)arg1 followDataDidChange:(id)arg2;
 
 @end

@@ -14,8 +14,10 @@
 {
     double _headerHeight;
     NSString *_descriptionText;
+    struct _NSRange _descriptionAttributionRange;
 }
 
+@property(nonatomic) struct _NSRange descriptionAttributionRange; // @synthesize descriptionAttributionRange=_descriptionAttributionRange;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;

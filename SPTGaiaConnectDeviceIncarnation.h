@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTGaiaDeviceIncarnation-Protocol.h"
+
 @class NSString;
 
-@interface SPTGaiaConnectDeviceIncarnation : NSObject
+@interface SPTGaiaConnectDeviceIncarnation : NSObject <SPTGaiaDeviceIncarnation>
 {
     _Bool _isPreferred;
     NSString *_deviceId;
@@ -20,6 +22,12 @@
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
 - (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

@@ -14,7 +14,7 @@
 #import "SPTSignupPickerContainerViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginLayoutTestManager, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupGenderPickerDataSource, SPTSignupGenderViewModel, SPTSignupSingleInputFieldView, UIPickerView;
+@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupGenderPickerDataSource, SPTSignupGenderViewModel, SPTSignupSingleInputFieldView, UIPickerView;
 @protocol SPTPageContainer;
 
 @interface SPTSignupGenderViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupGenderViewModelDelegate, SPTSignupPickerContainerViewDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
@@ -26,10 +26,8 @@
     SPTSignupGenderPickerDataSource *_pickerDataSource;
     SPTSignupAnimatedTransitioning *_animatedTransitioning;
     SPTLoginTheme *_theme;
-    SPTLoginLayoutTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTLoginLayoutTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupAnimatedTransitioning *animatedTransitioning; // @synthesize animatedTransitioning=_animatedTransitioning;
 @property(retain, nonatomic) SPTSignupGenderPickerDataSource *pickerDataSource; // @synthesize pickerDataSource=_pickerDataSource;
@@ -62,7 +60,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithTheme:(id)arg1 viewModel:(id)arg2 testManager:(id)arg3;
+- (id)initWithTheme:(id)arg1 viewModel:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

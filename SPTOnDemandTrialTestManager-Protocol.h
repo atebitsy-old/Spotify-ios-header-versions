@@ -10,8 +10,6 @@
 
 @protocol SPTOnDemandTrialTestManager <NSObject>
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> onDemandUserPolicySignal;
-- (_Bool)shouldSuppressEndOfTrialDialog;
 - (_Bool)isInTrial;
-- (_Bool)isFeatureEnabled;
 @end
 

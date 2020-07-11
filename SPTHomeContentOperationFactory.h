@@ -44,6 +44,7 @@
 @property(readonly, nonatomic) __weak id <SPTPodcastUIContinueListeningService> podcastUIContinueListeningService; // @synthesize podcastUIContinueListeningService=_podcastUIContinueListeningService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 - (void).cxx_destruct;
+- (id)provideCacheViewModelContentOperation;
 - (id)provideTimeRelativeTextContentOperation;
 - (id)provideDownloadsContentOperation;
 - (id)provideRemoteContentOperationWithSourceIdentifier:(id)arg1 contentURL:(id)arg2;

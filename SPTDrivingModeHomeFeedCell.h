@@ -6,7 +6,7 @@
 
 #import <UIKit/UICollectionViewCell.h>
 
-@class GLUEImageView, NSLayoutConstraint, UILabel;
+@class GLUEImageView, NSLayoutConstraint, UIImageView, UILabel;
 
 @interface SPTDrivingModeHomeFeedCell : UICollectionViewCell
 {
@@ -14,13 +14,21 @@
     GLUEImageView *_coverArtImageView;
     UILabel *_titleLabel;
     NSLayoutConstraint *_widthConstraint;
+    UIImageView *_playImage;
+    UIImageView *_pauseImage;
+    unsigned long long _state;
 }
 
+@property(nonatomic) unsigned long long state; // @synthesize state=_state;
+@property(retain, nonatomic) UIImageView *pauseImage; // @synthesize pauseImage=_pauseImage;
+@property(retain, nonatomic) UIImageView *playImage; // @synthesize playImage=_playImage;
 @property(retain, nonatomic) NSLayoutConstraint *widthConstraint; // @synthesize widthConstraint=_widthConstraint;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) GLUEImageView *coverArtImageView; // @synthesize coverArtImageView=_coverArtImageView;
 @property(nonatomic) double width; // @synthesize width=_width;
 - (void).cxx_destruct;
+- (void)configureCellForTrackItemState:(unsigned long long)arg1;
+- (void)setCellBackgroundWithSelectedState:(_Bool)arg1;
 - (id)accessibilityLabel;
 - (void)loadImageForShelfItem:(id)arg1 imageSize:(struct CGSize)arg2 withImageLoader:(id)arg3;
 - (void)configureForShelfItem:(id)arg1 withImageLoader:(id)arg2;

@@ -11,6 +11,6 @@
 
 @protocol SPTAssistedCurationService <SPTService>
 - (id <SPTAssistedCurationAddTrackHandler>)provideAddTrackHandlerForURI:(NSURL *)arg1;
-- (id <SPTAssistedCurationModel>)provideAssistedCurationModelForURI:(NSURL *)arg1 mostPlayedCard:(_Bool)arg2;
+- (id <SPTAssistedCurationModel>)provideAssistedCurationModelForURI:(NSURL *)arg1;
 @end
 

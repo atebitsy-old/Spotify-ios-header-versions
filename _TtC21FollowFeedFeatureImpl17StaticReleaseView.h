@@ -9,7 +9,7 @@
 @interface _TtC21FollowFeedFeatureImpl17StaticReleaseView : UIView
 {
     // Error parsing type: , name: headerView
-    // Error parsing type: , name: contentView
+    // Error parsing type: , name: playableEntityView
 }
 
 - (void).cxx_destruct;

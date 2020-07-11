@@ -12,7 +12,7 @@
 #import "SPTTimerDelegate-Protocol.h"
 
 @class NSHashTable, NSString, SPTTimer;
-@protocol SPTAlertController, SPTGaiaConnectAPI, SPTLogCenter, SPTPlayer;
+@protocol SPTAlertInterface, SPTGaiaConnectAPI, SPTLogCenter, SPTPlayer;
 
 @interface SPTSleepTimerControllerImpl : NSObject <SPTTimerDelegate, SPTGaiaConnectObserver, SPTPlayerObserver, SPTSleepTimerController>
 {
@@ -22,12 +22,12 @@
     id <SPTGaiaConnectAPI> _connectManager;
     NSHashTable *_timeObservers;
     NSHashTable *_eventObservers;
-    id <SPTAlertController> _alertController;
+    id <SPTAlertInterface> _alertInterface;
     id <SPTLogCenter> _logCenter;
 }
 
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-@property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
+@property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) NSHashTable *eventObservers; // @synthesize eventObservers=_eventObservers;
 @property(retain, nonatomic) NSHashTable *timeObservers; // @synthesize timeObservers=_timeObservers;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
@@ -42,6 +42,7 @@
 - (void)sendObserversStartEvent;
 - (void)logTimeOptionSelected:(id)arg1;
 - (id)formatMinuteSecondsFromTimeInterval:(double)arg1;
+- (void)showErrorWithMessage:(id)arg1 cancelTitle:(id)arg2 otherTitle:(id)arg3;
 - (void)showConnectUnavailableWithTimerAlert;
 - (void)showSleepTimerUnavailableWithConnectAlert;
 - (void)disableConnect;
@@ -63,7 +64,7 @@
 - (double)timeRemaining;
 - (id)defaultFormattedTime;
 - (void)dealloc;
-- (id)initWithPlayer:(id)arg1 connectManager:(id)arg2 alertController:(id)arg3 logCenter:(id)arg4;
+- (id)initWithPlayer:(id)arg1 connectManager:(id)arg2 alertInterface:(id)arg3 logCenter:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -57,9 +57,9 @@
 @property(retain, nonatomic) UIImageView *showImageView; // @synthesize showImageView=_showImageView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 @property(retain, nonatomic) UIView *subtitleAccessoryView; // @synthesize subtitleAccessoryView=_subtitleAccessoryView;
-@property(retain, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
-@property(retain, nonatomic) NSString *longDescription; // @synthesize longDescription=_longDescription;
-@property(retain, nonatomic) NSString *imageMetadataTitle; // @synthesize imageMetadataTitle=_imageMetadataTitle;
+@property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
+@property(copy, nonatomic) NSString *longDescription; // @synthesize longDescription=_longDescription;
+@property(copy, nonatomic) NSString *imageMetadataTitle; // @synthesize imageMetadataTitle=_imageMetadataTitle;
 @property(nonatomic) __weak id <SPTShowContextMenuMetadataViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)dealloc;
@@ -71,7 +71,7 @@
 - (void)applySubtitleStyle;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 @property(retain, nonatomic) UIImage *image;
-@property(retain, nonatomic) NSString *metadataTitle;
+@property(copy, nonatomic) NSString *metadataTitle;
 @property(retain, nonatomic) NSString *title;
 - (void)showMoreDescription;
 - (void)updateTextViewToShowAllText;

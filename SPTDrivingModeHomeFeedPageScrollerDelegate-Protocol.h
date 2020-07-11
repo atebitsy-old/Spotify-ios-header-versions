@@ -7,7 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTDrivingModeHomeFeedPageScrollerDelegate <NSObject>
-- (void)loadPreviousShelfWithIndex:(int)arg1;
-- (void)loadNextShelfWithIndex:(int)arg1;
+- (void)loadShelfWithIndex:(int)arg1;
 @end
 

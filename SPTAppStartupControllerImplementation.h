@@ -25,6 +25,7 @@
 @property(nonatomic) double idleAfterInitialViewTimeout; // @synthesize idleAfterInitialViewTimeout=_idleAfterInitialViewTimeout;
 - (void).cxx_destruct;
 - (void)scheduleIdleDelayTimerWithTimeout:(double)arg1 override:(_Bool)arg2;
+- (void)idleDelayTimerFire;
 - (void)startupDidReachTerminalState;
 - (void)initialViewDidAppear;
 - (void)dealloc;

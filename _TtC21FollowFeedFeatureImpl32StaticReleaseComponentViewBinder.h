@@ -6,9 +6,12 @@
 
 #import "_TtC21FollowFeedFeatureImpl22HubComponentViewBinder.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
+#import "HUBComponentViewWithEvents-Protocol.h"
+
 @protocol HUBComponentEventHandler;
 
-@interface _TtC21FollowFeedFeatureImpl32StaticReleaseComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder
+@interface _TtC21FollowFeedFeatureImpl32StaticReleaseComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder <HUBComponentViewWithEvents, HUBComponentViewObserver>
 {
     // Error parsing type: , name: eventHandler
     // Error parsing type: , name: theme
@@ -20,7 +23,8 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)playButtonClickedWithSender:(id)arg1;
+- (void)contextMenuButtonClickedWithSender:(id)arg1;
+- (void)playButtonClicked;
 - (void)artistAvatarClicked;
 - (void)configureWithModel:(id)arg1;
 - (void)viewDidDisappear;

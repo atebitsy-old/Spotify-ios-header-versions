@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, NSURL, SPTAllocationContext, SPTPlaylistGLUETheme, SPTPlaylistTestManager;
-@protocol SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTNuxService, SPTPlaylistPlatformService, SPTSessionService, SPTSnackbarService, SPTURIDispatchService, _TtP20AddToPlaylistFeature23SPTAddToPlaylistService_;
+@protocol SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTPlaylistPlatformService, SPTSessionService, SPTSnackbarService, SPTURIDispatchService, _TtP20AddToPlaylistFeature23SPTAddToPlaylistService_;
 
 @interface PlaylistFeatureImplementation : NSObject <SPTService, PlaylistFeature>
 {
@@ -22,7 +22,6 @@
     id <SPTGLUEService> _glueService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPContextMenuFeature> _contextMenuFeature;
-    id <SPTNuxService> _nuxService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTAbbaService> _abbaService;
@@ -42,7 +41,6 @@
 @property(retain, nonatomic) id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
-@property(nonatomic) __weak id <SPTNuxService> nuxService; // @synthesize nuxService=_nuxService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

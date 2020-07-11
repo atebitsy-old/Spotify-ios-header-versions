@@ -8,7 +8,7 @@
 
 #import "SPTFreeTierPlaylistCellProviderDelegate-Protocol.h"
 
-@class NSMutableDictionary, NSString, SPTFreeTierPlaylistLogger;
+@class NSDictionary, NSMutableDictionary, NSString, SPTFreeTierPlaylistLogger;
 @protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistViewModel;
 
 @interface SPTFreeTierPlaylistCellProviderCoordinator : NSObject <SPTFreeTierPlaylistCellProviderDelegate>
@@ -17,8 +17,10 @@
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     NSMutableDictionary *_rowHeightCache;
     SPTFreeTierPlaylistLogger *_logger;
+    NSDictionary *_sectionDescriptions;
 }
 
+@property(readonly, copy, nonatomic) NSDictionary *sectionDescriptions; // @synthesize sectionDescriptions=_sectionDescriptions;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSMutableDictionary *rowHeightCache; // @synthesize rowHeightCache=_rowHeightCache;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
@@ -29,6 +31,7 @@
 - (void)reloadCellsForCellProvider:(id)arg1;
 - (void)cellProvider:(id)arg1 playTrackAtIndexPath:(id)arg2;
 - (void)contextMenuPressedForCellProvider:(id)arg1 sender:(id)arg2;
+- (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 estimatedHeightForRowAtIndexPath:(id)arg2;
@@ -37,7 +40,7 @@
 - (id)cellProviderForCellAtIndexPath:(id)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (void)registerCellProviderCellForTableView:(id)arg1;
-- (id)initWithConfiguration:(id)arg1 playlistViewModel:(id)arg2 logger:(id)arg3;
+- (id)initWithConfiguration:(id)arg1 playlistViewModel:(id)arg2 logger:(id)arg3 sectionDescriptions:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

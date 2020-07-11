@@ -6,52 +6,39 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDrivingModeConfigurationManager-Protocol.h"
 #import "SPTDrivingModeTestManager-Protocol.h"
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString, SPTDrivingModeLogger, SPTObserverManager;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTLocalSettings, SettingsRegistry;
+@protocol SPTDrivingModeRemoteConfiguration, SPTLocalSettings, SettingsRegistry;
 
-@interface SPTDrivingModeTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTDrivingModeTestManager, SPTDrivingModeConfigurationManager>
+@interface SPTDrivingModeTestManagerImplementation : NSObject <SPTDrivingModeTestManager>
 {
     _Bool _carViewEnabled;
     _Bool _carViewFlagEnabled;
-    _Bool _pivotEnabled;
-    id <SPTFeatureFlagFactory> _featureFlagFactory;
+    id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
     id <SPTLocalSettings> _localSettings;
     id <SettingsRegistry> _settingsRegistry;
     SPTObserverManager *_observers;
     SPTDrivingModeLogger *_logger;
-    id <SPTFeatureFlagSignal> _carViewFlagSignal;
-    id <SPTFeatureFlagSignal> _pivotSignal;
 }
 
-@property(nonatomic, getter=isPivotEnabled) _Bool pivotEnabled; // @synthesize pivotEnabled=_pivotEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> pivotSignal; // @synthesize pivotSignal=_pivotSignal;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> carViewFlagSignal; // @synthesize carViewFlagSignal=_carViewFlagSignal;
 @property(nonatomic, getter=isCarViewFlagEnabled) _Bool carViewFlagEnabled; // @synthesize carViewFlagEnabled=_carViewFlagEnabled;
 @property(nonatomic, getter=isCarViewEnabled) _Bool carViewEnabled; // @synthesize carViewEnabled=_carViewEnabled;
 @property(readonly, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SettingsRegistry> settingsRegistry; // @synthesize settingsRegistry=_settingsRegistry;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
+@property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
 - (void).cxx_destruct;
-- (id)createFeatureFlagSignalWithKey:(id)arg1 enabledValue:(id)arg2 disabledValue:(id)arg3 settingsItemTitle:(id)arg4 settingsItemDescription:(id)arg5 requiresRestart:(_Bool)arg6;
-- (id)createPivotSignal;
-- (id)resolveConfiguration;
 - (id)provideCarViewSettingsSection:(id)arg1;
 - (void)registerCarViewSettingsSection;
 - (_Bool)isCarViewEnabledInSettings;
 - (void)setCarViewEnabledInSettings:(_Bool)arg1;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)dealloc;
 - (void)setupFeatureFlags;
 - (void)updateCarViewEnabledState;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithFeatureFlagFactory:(id)arg1 localSettings:(id)arg2 settingsRegistry:(id)arg3 logger:(id)arg4;
+- (id)initWithRemoteConfiguration:(id)arg1 localSettings:(id)arg2 settingsRegistry:(id)arg3 logger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

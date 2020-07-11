@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTPodcastFollowSectionViewModel, UIView;
+@class SPTPodcastFollowSectionViewModel;
 
 @protocol SPTPodcastFollowSectionViewModelDelegate <NSObject>
 - (void)followSectionViewModelDidUpdatePlaybackState:(SPTPodcastFollowSectionViewModel *)arg1;
-- (void)followSectionViewModel:(SPTPodcastFollowSectionViewModel *)arg1 didSelectContextMenuButton:(UIView *)arg2;
+- (void)followSectionViewModelDidSelectContextMenuButton:(SPTPodcastFollowSectionViewModel *)arg1;
 - (void)followSectionViewModelDidUpdateFollowedState:(SPTPodcastFollowSectionViewModel *)arg1;
 @end
 

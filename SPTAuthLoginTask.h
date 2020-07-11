@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTAsyncScheduler, SPTAuthLoginTaskDelegate;
+@protocol SPTAuthLoginTaskDelegate, SPTConnectivityAsyncScheduler;
 
 @interface SPTAuthLoginTask : NSObject
 {
@@ -16,10 +16,10 @@
     id <SPTAuthLoginTaskDelegate> _delegate;
     CDUnknownBlockType _startOperation;
     CDUnknownBlockType _cancelOperation;
-    id <SPTAsyncScheduler> _coreScheduler;
+    id <SPTConnectivityAsyncScheduler> _coreScheduler;
 }
 
-@property(nonatomic) __weak id <SPTAsyncScheduler> coreScheduler; // @synthesize coreScheduler=_coreScheduler;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(copy, nonatomic) CDUnknownBlockType cancelOperation; // @synthesize cancelOperation=_cancelOperation;
 @property(copy, nonatomic) CDUnknownBlockType startOperation; // @synthesize startOperation=_startOperation;
 @property(readonly, nonatomic) __weak id <SPTAuthLoginTaskDelegate> delegate; // @synthesize delegate=_delegate;

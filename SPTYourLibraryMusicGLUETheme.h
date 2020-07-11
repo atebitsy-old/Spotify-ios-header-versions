@@ -21,7 +21,6 @@
 - (id)smallRowStyleWithBaseStyle:(id)arg1;
 - (id)largeRowStyleWithBaseStyle:(id)arg1;
 - (id)buttonSectionHeaderViewStyle;
-- (id)filterButtonsCellStyle;
 - (id)rightAlignedEntityRowStyleWithBaseStyle:(id)arg1;
 @property(readonly, copy, nonatomic) GLUEAccessoryIconButtonStyle *quickActionIconStyle;
 @property(readonly, copy, nonatomic) SPTYourLibraryMusicFollowButtonStyle *followButtonStyle;

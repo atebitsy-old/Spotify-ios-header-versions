@@ -48,7 +48,7 @@
 - (void)setImage:(id)arg1;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;
 - (double)minimumContentHeight;
-- (void)navigationBarHeightDidChange:(double)arg1;
+- (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
 @property(readonly, nonatomic) double minimumHeight;
 - (void)backButtonTapped:(id)arg1;

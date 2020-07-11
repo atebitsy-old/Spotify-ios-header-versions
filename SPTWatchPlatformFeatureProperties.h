@@ -15,14 +15,21 @@
     _Bool _appleWatchOffline;
     _Bool _watchIosLogging;
     _Bool _watchIosIntegration;
-    NSString *_appleWatchPubsubTransport;
+    _Bool _credentialStoreSendCredentials;
+    _Bool _watchIntentsHandling;
+    unsigned long long _appleWatchPubsubTransport;
+    NSString *_appleWatchPubsubTransportString;
 }
 
-@property(readonly, nonatomic) NSString *appleWatchPubsubTransport; // @synthesize appleWatchPubsubTransport=_appleWatchPubsubTransport;
+@property(retain, nonatomic) NSString *appleWatchPubsubTransportString; // @synthesize appleWatchPubsubTransportString=_appleWatchPubsubTransportString;
+@property(readonly, nonatomic) unsigned long long appleWatchPubsubTransport; // @synthesize appleWatchPubsubTransport=_appleWatchPubsubTransport;
+@property(readonly, nonatomic) _Bool watchIntentsHandling; // @synthesize watchIntentsHandling=_watchIntentsHandling;
+@property(readonly, nonatomic) _Bool credentialStoreSendCredentials; // @synthesize credentialStoreSendCredentials=_credentialStoreSendCredentials;
 @property(readonly, nonatomic) _Bool watchIosIntegration; // @synthesize watchIosIntegration=_watchIosIntegration;
 @property(readonly, nonatomic) _Bool watchIosLogging; // @synthesize watchIosLogging=_watchIosLogging;
 @property(readonly, nonatomic) _Bool appleWatchOffline; // @synthesize appleWatchOffline=_appleWatchOffline;
 - (void).cxx_destruct;
+- (unsigned long long)mapAppleWatchPubsubTransportToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

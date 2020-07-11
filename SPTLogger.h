@@ -18,6 +18,7 @@
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
+- (struct Logger *)cpp;
 - (void)sendMessageWithSequenceNumber:(id)arg1 messageName:(id)arg2;
 - (void)updateMessageWithSequenceNumber:(id)arg1 messageName:(id)arg2 serializedMessage:(id)arg3;
 - (id)createMessage:(id)arg1;

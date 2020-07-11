@@ -37,14 +37,13 @@
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
-@property(readonly, nonatomic, getter=isAssistedCurationInLikedSongsEnabled) _Bool assistedCurationInLikedSongsEnabled;
 @property(readonly, nonatomic, getter=isFrecencySortOrderDefaultInPlaylistsEnabled) _Bool frecencySortOrderDefaultInPlaylistsEnabled;
-@property(readonly, nonatomic) unsigned long long likedSongsTagMechanism;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic) unsigned long long artistRecommendationsSource;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;
 @property(readonly, nonatomic, getter=isGroupsInLikedSongsEnabled) _Bool groupsInLikedSongsEnabled;
+@property(readonly, nonatomic, getter=isPageLoaderEnabledForLikedSongs) _Bool pageLoaderEnabledForLikedSongs;
 - (void)setupRemoteConfigurationProperties;
 - (void)handleWindowedTrackSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

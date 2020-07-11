@@ -20,14 +20,14 @@
     NSNumber *_memberCount;
     NSString *_hostDisplayName;
     NSURL *_hostAvatarURL;
-    NSString *_joinSessionURI;
+    NSURL *_joinSessionURI;
     NSString *_availableSessionType;
 }
 
 @property(readonly, nonatomic) _Bool featureAvailable; // @synthesize featureAvailable=_featureAvailable;
 @property(readonly, nonatomic) _Bool featureEnabled; // @synthesize featureEnabled=_featureEnabled;
 @property(readonly, copy, nonatomic) NSString *availableSessionType; // @synthesize availableSessionType=_availableSessionType;
-@property(readonly, copy, nonatomic) NSString *joinSessionURI; // @synthesize joinSessionURI=_joinSessionURI;
+@property(readonly, copy, nonatomic) NSURL *joinSessionURI; // @synthesize joinSessionURI=_joinSessionURI;
 @property(readonly, copy, nonatomic) NSURL *hostAvatarURL; // @synthesize hostAvatarURL=_hostAvatarURL;
 @property(readonly, copy, nonatomic) NSString *hostDisplayName; // @synthesize hostDisplayName=_hostDisplayName;
 @property(readonly, copy, nonatomic) NSNumber *memberCount; // @synthesize memberCount=_memberCount;

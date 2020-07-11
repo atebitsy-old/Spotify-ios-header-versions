@@ -11,6 +11,7 @@
 }
 
 + (id)skipToTrackForTrackUID:(id)arg1;
++ (long long)trackIconFromMetadata:(id)arg1;
 + (id)trackSubtitleFromMetadata:(id)arg1;
 + (id)playlistSubtitleFromMetadata:(id)arg1;
 + (id)folderItemsContentFromFolderItems:(id)arg1 requestOptions:(id)arg2 testManager:(id)arg3;

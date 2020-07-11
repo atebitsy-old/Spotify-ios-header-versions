@@ -16,8 +16,8 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUEEmptyStateView, NSString, NSURL, SPTEntityHeaderViewController, SPTProgressView, SPTTableViewOfflineSwitchCell, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicOfflineSwitchFactory, SPTYourLibraryMusicSongCellConfigurator, SPTYourLibraryMusicSongsHeaderViewController, SPTYourLibraryMusicSongsTableView, UITableViewCell;
-@protocol GLUEImageLoader, SPTAlertInterface, SPTAssistedCurationUIService, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringButtonsCell, SPTSortingFilteringUIFactory, SPTViewLogger, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicTestManager, UITableViewDragDelegate;
+@class GLUEEmptyStateView, NSString, NSURL, SPTEntityHeaderViewController, SPTProgressView, SPTTableViewOfflineSwitchCell, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicOfflineSwitchFactory, SPTYourLibraryMusicSongCellConfigurator, SPTYourLibraryMusicSongsHeaderViewController, SPTYourLibraryMusicSongsTableView;
+@protocol GLUEImageLoader, SPTAlertInterface, SPTAssistedCurationUIService, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTViewLogger, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicTestManager, UITableViewDragDelegate;
 
 @interface SPTYourLibraryMusicSongsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTYourLibraryMusicSongCellConfiguratorDelegate, SPTNavigationControllerNavigationBarState, SPContentInsetViewController, SPTOfflineSwitchDelegate, GLUEThemeObserver, SPTYourLibraryMusicSongsViewModelDelegate, SPTPageController>
 {
@@ -40,12 +40,10 @@
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     id <UITableViewDragDelegate> _dragDelegateHolder;
     id <SPTYourLibraryMusicTestManager> _testManager;
-    UITableViewCell<SPTSortingFilteringButtonsCell> *_filterButtonsCell;
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
 }
 
 @property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
-@property(retain, nonatomic) UITableViewCell<SPTSortingFilteringButtonsCell> *filterButtonsCell; // @synthesize filterButtonsCell=_filterButtonsCell;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <UITableViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;

@@ -8,15 +8,14 @@
 
 #import "SPTExplicitContentEnabledStateObserver-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
-#import "SPTYourLibraryMusicLikedSongsExternalFilterModelDelegate-Protocol.h"
 #import "SPTYourLibraryMusicRangeDataSourceDelegate-Protocol.h"
 #import "SPTYourLibraryMusicSongsDataLoaderDelegate-Protocol.h"
 #import "SPTYourLibraryMusicSongsModel-Protocol.h"
 
 @class NSArray, NSMutableArray, NSSet, NSString, SPTYourLibraryMusicFilterSortManager;
-@protocol SPTClientSettings, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTExplicitContentAccessManager, SPTFreeTierRecommendationsTracksDataLoader, SPTProductState, SPTSortingFilteringSortRule, SPTYourLibraryMusicLikedSongsExternalFilterModel, SPTYourLibraryMusicRangeDataSource, SPTYourLibraryMusicSkippedRecommendedTracks, SPTYourLibraryMusicSongsModelDelegate, SPTYourLibraryMusicTestManager, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@protocol SPTClientSettings, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTExplicitContentAccessManager, SPTFreeTierRecommendationsTracksDataLoader, SPTProductState, SPTSortingFilteringSortRule, SPTYourLibraryMusicRangeDataSource, SPTYourLibraryMusicSkippedRecommendedTracks, SPTYourLibraryMusicSongsModelDelegate, SPTYourLibraryMusicTestManager, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
-@interface SPTYourLibraryMusicSongsModelImplementation : NSObject <SPTExplicitContentEnabledStateObserver, SPTProductStateObserver, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicRangeDataSourceDelegate, SPTYourLibraryMusicSongsDataLoaderDelegate, SPTYourLibraryMusicLikedSongsExternalFilterModelDelegate>
+@interface SPTYourLibraryMusicSongsModelImplementation : NSObject <SPTExplicitContentEnabledStateObserver, SPTProductStateObserver, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicRangeDataSourceDelegate, SPTYourLibraryMusicSongsDataLoaderDelegate>
 {
     _Bool _firstLoadPerformed;
     _Bool _loaded;
@@ -42,12 +41,10 @@
     NSString *_currentUsername;
     id <SPTCollectionPlatformDataLoaderRequestToken> _collectionStateRequestToken;
     id <SPTYourLibraryMusicSkippedRecommendedTracks> _skippedRecommendedTracks;
-    id <SPTYourLibraryMusicLikedSongsExternalFilterModel> _externalFilterModel;
     NSArray *_availableFilters;
 }
 
 @property(copy, nonatomic) NSArray *availableFilters; // @synthesize availableFilters=_availableFilters;
-@property(retain, nonatomic) id <SPTYourLibraryMusicLikedSongsExternalFilterModel> externalFilterModel; // @synthesize externalFilterModel=_externalFilterModel;
 @property(retain, nonatomic) id <SPTYourLibraryMusicSkippedRecommendedTracks> skippedRecommendedTracks; // @synthesize skippedRecommendedTracks=_skippedRecommendedTracks;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionStateRequestToken; // @synthesize collectionStateRequestToken=_collectionStateRequestToken;
 @property(copy, nonatomic) NSString *currentUsername; // @synthesize currentUsername=_currentUsername;
@@ -73,7 +70,6 @@
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsModelDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
-- (void)likedSongsExternalFilterModel:(id)arg1 didUpdateFilterRules:(id)arg2;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)songsDataLoader:(id)arg1 didUpdateOfflineAvailability:(unsigned long long)arg2;
@@ -115,7 +111,7 @@
 @property(readonly, nonatomic) unsigned long long numberSections;
 @property(readonly, nonatomic) unsigned long long numberItems;
 - (void)dealloc;
-- (id)initWithCollectionPlatform:(id)arg1 recommendedTracksDataLoader:(id)arg2 clientSettings:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 productState:(id)arg6 currentUsername:(id)arg7 filterSortManager:(id)arg8 testManager:(id)arg9 skippedRecommendedTracks:(id)arg10 externalFilterModel:(id)arg11;
+- (id)initWithCollectionPlatform:(id)arg1 recommendedTracksDataLoader:(id)arg2 clientSettings:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 productState:(id)arg6 currentUsername:(id)arg7 filterSortManager:(id)arg8 testManager:(id)arg9 skippedRecommendedTracks:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

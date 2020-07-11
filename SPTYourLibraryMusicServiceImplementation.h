@@ -53,7 +53,6 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 - (void).cxx_destruct;
-- (id)provideLikedSongsExternalFilterModel;
 - (id)providePlaylistSortRules;
 - (id)setUpDataSourceForDataLoader:(id)arg1;
 - (id)provideTestManager;

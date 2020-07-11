@@ -10,7 +10,7 @@
 #import "SPTExternalIntegrationDriverDistractionObserver-Protocol.h"
 #import "SPTVideoCoordinatorCosmosReceiverDelegate-Protocol.h"
 
-@class NSString, NSTimer, SPTVideoCoordinatorCosmosReceiver, SPTVideoCoordinatorCosmosSender, SPTVideoPlaybackStateFactory, SPTVideoStartCommand;
+@class NSString, NSTimer, SPTVideoCoordinatorCosmosReceiver, SPTVideoCoordinatorCosmosSender, SPTVideoCoordinatorPlayerInterruptor, SPTVideoPlaybackStateFactory, SPTVideoStartCommand;
 @protocol BMBetamaxPlayer, BMEventObserverFactory, BMPlaybackIdentity, BMVideoSurfaceManager, OS_dispatch_queue, SPTExternalIntegrationDriverDistractionController, SPTVideoContextPlayerCoordinatorErrorHandler, SPTVideoFeaturePlayerFactory;
 
 @interface SPTVideoContextPlayerCoordinator : NSObject <SPTVideoCoordinatorCosmosReceiverDelegate, BMEventObserver, SPTExternalIntegrationDriverDistractionObserver>
@@ -30,8 +30,10 @@
     double _maxAllowedStallTimeout;
     NSTimer *_maxStalledTimer;
     id <BMPlaybackIdentity> _currentIdentity;
+    SPTVideoCoordinatorPlayerInterruptor *_playerInterruptor;
 }
 
+@property(retain, nonatomic) SPTVideoCoordinatorPlayerInterruptor *playerInterruptor; // @synthesize playerInterruptor=_playerInterruptor;
 @property(retain, nonatomic) id <BMPlaybackIdentity> currentIdentity; // @synthesize currentIdentity=_currentIdentity;
 @property(retain, nonatomic) NSTimer *maxStalledTimer; // @synthesize maxStalledTimer=_maxStalledTimer;
 @property(nonatomic) double maxAllowedStallTimeout; // @synthesize maxAllowedStallTimeout=_maxAllowedStallTimeout;
@@ -49,6 +51,7 @@
 @property(retain, nonatomic) id <BMBetamaxPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
 - (void)externalIntegrationDriverDistractionController:(id)arg1 didChangeEnabledState:(_Bool)arg2;
+- (void)didChangeDuration:(double)arg1 timestamp:(double)arg2;
 - (void)advanceWithReasonStallTimeoutExceeded:(id)arg1;
 - (void)didEndPlaybackWithReason:(long long)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didFailWithRecoverableError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;

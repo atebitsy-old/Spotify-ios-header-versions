@@ -13,12 +13,15 @@
 @interface SPTSiriIntentsFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _siriIntentsAddCollectionPlaylistsToUserVocabulariesEnabled;
-    NSString *_siriIntentsUnableToStreamMusicWorkaround;
+    unsigned long long _siriIntentsUnableToStreamMusicWorkaround;
+    NSString *_siriIntentsUnableToStreamMusicWorkaroundString;
 }
 
-@property(readonly, nonatomic) NSString *siriIntentsUnableToStreamMusicWorkaround; // @synthesize siriIntentsUnableToStreamMusicWorkaround=_siriIntentsUnableToStreamMusicWorkaround;
+@property(retain, nonatomic) NSString *siriIntentsUnableToStreamMusicWorkaroundString; // @synthesize siriIntentsUnableToStreamMusicWorkaroundString=_siriIntentsUnableToStreamMusicWorkaroundString;
+@property(readonly, nonatomic) unsigned long long siriIntentsUnableToStreamMusicWorkaround; // @synthesize siriIntentsUnableToStreamMusicWorkaround=_siriIntentsUnableToStreamMusicWorkaround;
 @property(readonly, nonatomic) _Bool siriIntentsAddCollectionPlaylistsToUserVocabulariesEnabled; // @synthesize siriIntentsAddCollectionPlaylistsToUserVocabulariesEnabled=_siriIntentsAddCollectionPlaylistsToUserVocabulariesEnabled;
 - (void).cxx_destruct;
+- (unsigned long long)mapSiriIntentsUnableToStreamMusicWorkaroundToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

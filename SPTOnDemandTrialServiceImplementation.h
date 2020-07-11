@@ -8,25 +8,17 @@
 
 #import "SPTOnDemandTrialService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTOnDemandTrialDialogsPresenter, SPTOnDemandTrialStateManager;
-@protocol SPTFeatureFlaggingService, SPTInAppMessageService, SPTOnDemandTrialTestManager, SPTSessionService;
+@class NSString, SPTAllocationContext;
+@protocol SPTFeatureFlaggingService, SPTOnDemandTrialTestManager;
 
 @interface SPTOnDemandTrialServiceImplementation : NSObject <SPTOnDemandTrialService>
 {
     id <SPTOnDemandTrialTestManager> _testManager;
-    SPTOnDemandTrialStateManager *_stateManager;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
-    id <SPTInAppMessageService> _inAppMessageService;
-    id <SPTSessionService> _sessionService;
-    SPTOnDemandTrialDialogsPresenter *_dialogsPresenter;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTOnDemandTrialDialogsPresenter *dialogsPresenter; // @synthesize dialogsPresenter=_dialogsPresenter;
-@property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
-@property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
-@property(retain, nonatomic) SPTOnDemandTrialStateManager *stateManager; // @synthesize stateManager=_stateManager;
 @property(retain, nonatomic) id <SPTOnDemandTrialTestManager> testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
 - (_Bool)isInTrial;

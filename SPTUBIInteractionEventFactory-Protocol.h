@@ -29,7 +29,6 @@
 - (id <SPTUBIInteractionEvent>)sort;
 - (id <SPTUBIInteractionEvent>)repeatDisable;
 - (id <SPTUBIInteractionEvent>)uiNavigateWithDestination:(NSURL *)arg1;
-- (id <SPTUBIInteractionEvent>)removeSearchItem;
 - (id <SPTUBIInteractionEvent>)quickScroll;
 - (id <SPTUBIInteractionEvent>)likeWithItemToBeLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)removeDislikeWithItemNoLongerDisliked:(NSURL *)arg1;
@@ -58,6 +57,7 @@
 - (id <SPTUBIInteractionEvent>)refreshContent;
 - (id <SPTUBIInteractionEvent>)setPlaylistDescriptionWithPlaylistToChangeDescriptionOn:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)dislikeWithItemToBeDisliked:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)removeRecentSearchesItem;
 - (id <SPTUBIInteractionEvent>)playWithItemToBePlayed:(NSURL *)arg1;
 @end
 

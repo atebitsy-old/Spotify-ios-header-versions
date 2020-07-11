@@ -19,6 +19,7 @@
     _Bool _watchIntegrationEnabled;
     _Bool _watchAppStreamingEnabled;
     _Bool _watchAppOfflineEnabled;
+    _Bool _credentialStoreSendCredentialsEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTWatchConnectivityManager *_watchConnectivityManager;
@@ -43,11 +44,13 @@
 @property(readonly, nonatomic) SPTWatchConnectivityManager *watchConnectivityManager; // @synthesize watchConnectivityManager=_watchConnectivityManager;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
+@property(readonly, nonatomic, getter=shouldCredentialStoreSendCredentials) _Bool credentialStoreSendCredentialsEnabled; // @synthesize credentialStoreSendCredentialsEnabled=_credentialStoreSendCredentialsEnabled;
 @property(readonly, nonatomic, getter=isWatchAppOfflineEnabled) _Bool watchAppOfflineEnabled; // @synthesize watchAppOfflineEnabled=_watchAppOfflineEnabled;
 @property(readonly, nonatomic, getter=isWatchAppStreamingEnabled) _Bool watchAppStreamingEnabled; // @synthesize watchAppStreamingEnabled=_watchAppStreamingEnabled;
 @property(readonly, nonatomic, getter=isWatchIntegrationEnabled) _Bool watchIntegrationEnabled; // @synthesize watchIntegrationEnabled=_watchIntegrationEnabled;
 @property(readonly, nonatomic, getter=isWatchAccessoryLoggingEnabled) _Bool watchAccessoryLoggingEnabled; // @synthesize watchAccessoryLoggingEnabled=_watchAccessoryLoggingEnabled;
 - (void).cxx_destruct;
+@property(readonly, nonatomic, getter=isWatchAppIntentsHandlingFeatureEnabled) _Bool watchAppIntentsHandlingFeatureEnabled;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 - (void)applicationStateChanged;
 - (void)handleRequest:(id)arg1;
@@ -62,7 +65,9 @@
 - (void)setWatchAppStreamingEnabled:(_Bool)arg1;
 - (void)setWatchAccessoryLoggingEnabled:(_Bool)arg1;
 - (void)setWatchIntegrationEnabled:(_Bool)arg1;
+- (void)setCredentialStoreSendCredentialsEnabled:(_Bool)arg1;
 - (void)evaluateAccessoryLoggingEnabled;
+- (void)evaluateCredentialStoreSendCredentials;
 - (void)evaluateAppleWatchPubSubTransport;
 - (void)evaluateWatchAppOfflineEnabled;
 - (void)evaluateWatchIntegrationEnabledState;

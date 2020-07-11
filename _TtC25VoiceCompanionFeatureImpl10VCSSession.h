@@ -11,7 +11,6 @@
     // Error parsing type: , name: player
     // Error parsing type: , name: connnectManager
     // Error parsing type: , name: observerManager
-    // Error parsing type: , name: forceActive
     // Error parsing type: , name: isVoiceInitiated
     // Error parsing type: , name: active
 }

@@ -9,29 +9,26 @@
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 
-@class SPTHomeUIHabitsCardView, UISelectionFeedbackGenerator, UITapGestureRecognizer;
-@protocol HUBComponentEventHandler;
+@class SPTHomeUIHabitsCardView, UITapGestureRecognizer;
+@protocol HUBComponentEventHandler, SPTPlayer;
 
 @interface SPTHomeUIHabitsCardComponentView : HUGSThemableComponentView <HUBComponentViewWithImageHandling, HUBComponentViewWithEvents>
 {
     id <HUBComponentEventHandler> _eventHandler;
+    id <SPTPlayer> _player;
     SPTHomeUIHabitsCardView *_cardView;
     UITapGestureRecognizer *_tapGestureRecognizer;
-    UISelectionFeedbackGenerator *_feedbackGenerator;
 }
 
 + (struct CGSize)preferredSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 horizontalSizeClass:(long long)arg3 theme:(id)arg4;
 + (double)cardWidthForCompactSizeWithModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 + (double)cardWidthForRegularSizeWithModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
-@property(retain, nonatomic) UISelectionFeedbackGenerator *feedbackGenerator; // @synthesize feedbackGenerator=_feedbackGenerator;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(readonly, nonatomic) SPTHomeUIHabitsCardView *cardView; // @synthesize cardView=_cardView;
+@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void).cxx_destruct;
 - (void)sendSelectionEvent;
-- (void)updateAccessibilityWithModel:(id)arg1;
-- (id)paragraphStyleWithAlignment:(long long)arg1;
-- (id)attributedTitleForModel:(id)arg1 theme:(id)arg2;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)configureWithModel:(id)arg1;

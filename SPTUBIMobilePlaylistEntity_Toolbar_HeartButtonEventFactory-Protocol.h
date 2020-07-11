@@ -10,6 +10,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePlaylistEntity_Toolbar_HeartButtonEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitRemoveLikeWithItemNoLongerLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitLikeWithItemToBeLiked:(NSURL *)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

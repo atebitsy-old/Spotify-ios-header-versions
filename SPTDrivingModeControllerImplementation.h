@@ -11,13 +11,12 @@
 #import "SPTDrivingStateObserver-Protocol.h"
 
 @class NSArray, NSString, SPTDrivingModeFactory, SPTDrivingModeNowPlayingContentLayerProvider;
-@protocol SPTDrivingModeConfigurationManager, SPTDrivingModeControllerDelegate, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationDriverDistractionController, SPTNowPlayingPlatformService;
+@protocol SPTDrivingModeControllerDelegate, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationDriverDistractionController, SPTNowPlayingPlatformService;
 
 @interface SPTDrivingModeControllerImplementation : NSObject <SPTDrivingModeController, SPTDrivingStateObserver, SPTDrivingModeOptOutHandler>
 {
     _Bool _drivingModeEnabled;
     id <SPTDrivingModeControllerDelegate> delegate;
-    id <SPTDrivingModeConfigurationManager> _configurationManager;
     id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
     id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
     SPTDrivingModeFactory *_factory;
@@ -33,7 +32,6 @@
 @property(readonly, nonatomic) SPTDrivingModeFactory *factory; // @synthesize factory=_factory;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
 @property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
-@property(readonly, nonatomic) id <SPTDrivingModeConfigurationManager> configurationManager; // @synthesize configurationManager=_configurationManager;
 @property(nonatomic) __weak id <SPTDrivingModeControllerDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
 - (void)unregisterContentLayerProvider;
@@ -47,7 +45,7 @@
 - (void)drivingStateDetector:(id)arg1 drivingStateDidChange:(id)arg2;
 - (void)userDidOptOutOfDrivingMode;
 - (void)disable;
-- (id)initWithConfigurationManager:(id)arg1 remoteConfiguration:(id)arg2 driverDistractionController:(id)arg3 factory:(id)arg4 nowPlayingPlatformService:(id)arg5;
+- (id)initWithRemoteConfiguration:(id)arg1 driverDistractionController:(id)arg2 factory:(id)arg3 nowPlayingPlatformService:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

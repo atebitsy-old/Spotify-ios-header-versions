@@ -24,7 +24,6 @@
 + (id)spt_audioPreviewCDNURLFromTrackIdentifier:(id)arg1 productState:(id)arg2;
 + (id)spt_audioPreviewViewURI;
 + (id)bm_sanitizedURLWithString:(id)arg1;
-+ (id)spt_genreURLWithGenre:(id)arg1;
 + (id)spt_browseRootURL;
 + (id)spt_canvasPlaylistURI;
 + (id)spt_chartTestURL;
@@ -132,7 +131,7 @@
 + (id)spt_signupAgeInputViewURI;
 + (id)spt_signupPasswordInputViewURI;
 + (id)spt_signupEmailInputViewURI;
-+ (id)spt_signupURIWithIdentifierToken:(id)arg1;
++ (id)spt_signupURIWithIdentifierToken:(id)arg1 signupType:(unsigned long long)arg2 displayName:(id)arg3 email:(id)arg4;
 + (id)spt_loginURIWithEmail:(id)arg1 errorDescription:(id)arg2;
 + (id)spt_loginURIWithEmail:(id)arg1;
 + (id)spt_loginURI;
@@ -183,7 +182,6 @@
 + (id)spt_podcastEpisodeURIForFeaturedContentTimelineURI:(id)arg1;
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURI:(id)arg1;
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURIString:(id)arg1;
-+ (id)spt_podcastUtteranceSurveyURL;
 + (id)spt_componentsByAppendingComponents:(id)arg1 withContext:(id)arg2;
 + (id)spt_experimentationServiceURLWithContext:(id)arg1;
 + (id)spt_preSignupExperimentationURLWithContext:(id)arg1;
@@ -300,6 +298,7 @@
 - (_Bool)spt_isAssistedCurationURL;
 @property(readonly, nonatomic, getter=spt_decodedViewURI) NSURL *decodedViewURI;
 @property(readonly, nonatomic) _Bool spt_isAssistedCurationSearchResultDrillDownURI;
+@property(readonly, nonatomic, getter=spt_isAuthAppRemoteAction) _Bool sp_authAppRemoteAction;
 @property(readonly, nonatomic, getter=spt_isAuthAction) _Bool sp_authAction;
 @property(readonly, nonatomic, getter=spt_isPairAction) _Bool spt_PairAction;
 - (id)spt_browseGenre;
@@ -364,6 +363,7 @@
 - (_Bool)spt_isSignupFacebookConfirmationURI;
 - (_Bool)spt_isRecoverAccountResetPasswordPageURI;
 - (_Bool)spt_isRecoverAccountResetPasswordConfirmationURI;
+- (_Bool)spt_isLoginRecoverAccountURIV2;
 - (_Bool)spt_isLoginRecoverAccountURI;
 - (_Bool)spt_isSignupDisplayNameInputViewURI;
 - (_Bool)spt_isSignupGenderInputViewURI;

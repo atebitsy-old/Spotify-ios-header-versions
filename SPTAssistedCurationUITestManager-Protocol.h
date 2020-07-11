@@ -7,7 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTAssistedCurationUITestManager <NSObject>
-@property(readonly, nonatomic, getter=isMostPlayedInLikedSongsEnabled) _Bool mostPlayedInLikedSongsEnabled;
 @property(readonly, nonatomic) _Bool shouldUseSnackBar;
 @end
 

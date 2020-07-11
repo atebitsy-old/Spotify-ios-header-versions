@@ -16,24 +16,26 @@
     _Bool _userAcceptTermsAndConditions;
     NSString *_email;
     NSString *_password;
-    NSString *_phoneNumberIdentifierToken;
+    NSString *_identifierToken;
     NSDate *_birthday;
     NSString *_gender;
     NSString *_displayName;
     SPTSignupMarketRestrictionsModel *_marketRestrictions;
     NSDictionary *_facebookUserInfo;
+    unsigned long long _signupType;
     NSDictionary *_configuration;
     NSCalendar *_calendar;
 }
 
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
 @property(copy, nonatomic) NSDictionary *configuration; // @synthesize configuration=_configuration;
+@property(nonatomic) unsigned long long signupType; // @synthesize signupType=_signupType;
 @property(copy, nonatomic) NSDictionary *facebookUserInfo; // @synthesize facebookUserInfo=_facebookUserInfo;
 @property(retain, nonatomic) SPTSignupMarketRestrictionsModel *marketRestrictions; // @synthesize marketRestrictions=_marketRestrictions;
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(copy, nonatomic) NSString *gender; // @synthesize gender=_gender;
 @property(copy, nonatomic) NSDate *birthday; // @synthesize birthday=_birthday;
-@property(copy, nonatomic) NSString *phoneNumberIdentifierToken; // @synthesize phoneNumberIdentifierToken=_phoneNumberIdentifierToken;
+@property(copy, nonatomic) NSString *identifierToken; // @synthesize identifierToken=_identifierToken;
 @property(copy, nonatomic) NSString *password; // @synthesize password=_password;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(nonatomic, getter=didUserAcceptTermsAndConditions) _Bool userAcceptTermsAndConditions; // @synthesize userAcceptTermsAndConditions=_userAcceptTermsAndConditions;
@@ -41,7 +43,6 @@
 - (_Bool)shouldShowMarketingOptInText;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessResponse:(id)arg2;
-@property(readonly, nonatomic) _Bool isPhoneNumberSignup;
 @property(readonly, copy, nonatomic) NSArray *allowedCallingCodes;
 @property(readonly, nonatomic, getter=isNeutralGenderOptionEnabled) _Bool neutralGenderOptionEnabled;
 @property(readonly, nonatomic) NSURL *facebookUserProfilePictureURL;

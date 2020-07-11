@@ -8,9 +8,8 @@
 
 @protocol SPTYourLibraryMusicTestManager <NSObject>
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
-@property(readonly, nonatomic, getter=isAssistedCurationInLikedSongsEnabled) _Bool assistedCurationInLikedSongsEnabled;
+@property(readonly, nonatomic, getter=isPageLoaderEnabledForLikedSongs) _Bool pageLoaderEnabledForLikedSongs;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
-@property(readonly, nonatomic) unsigned long long likedSongsTagMechanism;
 @property(readonly, nonatomic) unsigned long long artistRecommendationsSource;
 @property(readonly, nonatomic, getter=isGroupsInLikedSongsEnabled) _Bool groupsInLikedSongsEnabled;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;

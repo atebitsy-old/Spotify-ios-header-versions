@@ -18,7 +18,7 @@
 #import "SPTScrollToTopViewController-Protocol.h"
 #import "SPViewController-Protocol.h"
 
-@class HUBComponentRegistry, NSMutableDictionary, NSString, NSURL, SPTHomeFeatureProperties, SPTHomeLocalViewModelOverrides, SPTHomeNavigationItemDecorator, SPTHomeView, SPTHomeViewModelProvider, SPTProgressView;
+@class HUBComponentRegistry, NSMutableDictionary, NSString, NSURL, SPTHomeLocalViewModelOverrides, SPTHomeNavigationItemDecorator, SPTHomeView, SPTHomeViewModelProvider, SPTProgressView;
 @protocol GLUETheme, HUBCommandHandler, HUBComponentEventHandler, HUBComponentLayoutManager, HUBImageLoaderFactory, SPTHomeCacheRenderDelegate, SPTHubImpressionLogger, SPTHubLoadingLogger, SPTOfflineModeState, SPTPageContainer, SPTShareDragDelegateFactory;
 
 @interface SPTHomeViewController : UIViewController <SPTContentBottomLayoutGuideObserver, SPTScrollToTopViewController, HUBViewContentOffsetObserver, SPTHubViewModelProviderDelegate, HUBOverlayViewComponentDelegate, HUBViewComponentDelegate, SPTOfflineModeStateObserver, SPTPageController, SPTNavigationControllerNavigationBarState, SPViewController, SPTHomeViewModelProviderDelegate>
@@ -41,7 +41,6 @@
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     id <SPTOfflineModeState> _offlineState;
     SPTHomeLocalViewModelOverrides *_overrides;
-    SPTHomeFeatureProperties *_featureProperties;
     id <HUBComponentEventHandler> _componentEventHandler;
     SPTProgressView *_loadingIndicator;
     unsigned long long _dataLoadingSource;
@@ -56,7 +55,6 @@
 @property(nonatomic) unsigned long long dataLoadingSource; // @synthesize dataLoadingSource=_dataLoadingSource;
 @property(readonly, nonatomic) SPTProgressView *loadingIndicator; // @synthesize loadingIndicator=_loadingIndicator;
 @property(retain, nonatomic) id <HUBComponentEventHandler> componentEventHandler; // @synthesize componentEventHandler=_componentEventHandler;
-@property(readonly, nonatomic) SPTHomeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *overrides; // @synthesize overrides=_overrides;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
 @property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
@@ -105,7 +103,7 @@
 - (void)loadView;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 loadingLogger:(id)arg7 impressionLogger:(id)arg8 viewModelProvider:(id)arg9 shareDragDelegateFactory:(id)arg10 offlineState:(id)arg11 overrides:(id)arg12 featureProperties:(id)arg13;
+- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 loadingLogger:(id)arg7 impressionLogger:(id)arg8 viewModelProvider:(id)arg9 shareDragDelegateFactory:(id)arg10 offlineState:(id)arg11 overrides:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

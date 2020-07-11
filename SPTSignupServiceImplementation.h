@@ -41,6 +41,7 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 - (void).cxx_destruct;
+- (id)screenIdentifier:(id)arg1 signupType:(unsigned long long)arg2;
 - (void)loginServiceWillLaunchLoginUI;
 - (void)pageRegistryDidUnregisterFeaturePages:(id)arg1;
 - (void)fetchSignupConfiguration;

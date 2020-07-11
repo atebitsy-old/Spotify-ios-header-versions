@@ -24,8 +24,10 @@
     NSLayoutConstraint *_heightConstraint;
     NSURL *_lastImageURL;
     double _statusBarHeight;
+    struct CGSize _screenSize;
 }
 
+@property(nonatomic) struct CGSize screenSize; // @synthesize screenSize=_screenSize;
 @property(nonatomic) double statusBarHeight; // @synthesize statusBarHeight=_statusBarHeight;
 @property(retain, nonatomic) NSURL *lastImageURL; // @synthesize lastImageURL=_lastImageURL;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
@@ -38,6 +40,7 @@
 - (void).cxx_destruct;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
+- (void)updateViewForImageFailedWithError:(id)arg1 fromData:(id)arg2 model:(id)arg3;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)configureWithModel:(id)arg1;

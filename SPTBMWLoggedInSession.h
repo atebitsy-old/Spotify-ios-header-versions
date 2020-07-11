@@ -78,6 +78,8 @@
 - (void)handleSkipPreviousActivated;
 - (void)handleSkipNextActivated;
 - (void)handleShuffleOrThumbUpButtonActivated;
+- (unsigned long long)nextRepeatMode:(unsigned long long)arg1 restrictions:(id)arg2;
+- (unsigned long long)currentRepeatMode:(id)arg1;
 - (void)handleRepeatOrThumbDownButtonActivated;
 - (void)saveButtonActivated;
 - (void)didReceiveSelectionNotification:(id)arg1;
@@ -88,6 +90,7 @@
 - (void)screenDidInvalidateIndex:(long long)arg1;
 - (void)screen:(id)arg1 requestedPlaybackOfContent:(id)arg2 overrideShuffle:(_Bool)arg3;
 - (_Bool)screen:(id)arg1 canPlayContent:(id)arg2;
+- (void)didReceiveUpdatedCollectionNotification;
 - (void)externalIntegrationCollectionController:(id)arg1 didReceiveNewCollectionStateForCurrentTrack:(_Bool)arg2;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (void)updateNowPlayingScreenCoverArtWithImageURL:(id)arg1;
@@ -99,7 +102,7 @@
 - (void)setupSearchScreen;
 - (void)configureContentListScreenModelForContent:(id)arg1 screenKey:(id)arg2;
 - (void)dealloc;
-- (id)initWithExternalIntegrationPlatform:(id)arg1 toolbar:(id)arg2 imageLoaderFactory:(id)arg3 debugLog:(id)arg4;
+- (id)initWithExternalIntegrationPlatform:(id)arg1 toolbar:(id)arg2 imageLoaderFactory:(id)arg3 bmwAppLink:(id)arg4 debugLog:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

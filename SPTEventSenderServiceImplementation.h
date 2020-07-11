@@ -8,8 +8,8 @@
 
 #import "SPTEventSenderService-Protocol.h"
 
-@class INSEventSender, NSString, SPTAllocationContext, SPTEventSenderDebugState, SPTEventSenderImplementation, SPTEventSenderTransportImplementation;
-@protocol SPTContainerService, SPTCoreService, SPTDebugService, SPTNetworkService;
+@class INSEventSender, NSString, SPTAllocationContext, SPTEventSenderCoreImplementation, SPTEventSenderDebugState, SPTEventSenderImplementation, SPTEventSenderTransportImplementation;
+@protocol SPTContainerService, SPTCoreService, SPTDebugService, SPTNetworkService, SPTResolver;
 
 @interface SPTEventSenderServiceImplementation : NSObject <SPTEventSenderService>
 {
@@ -21,9 +21,13 @@
     INSEventSender *_sdk;
     SPTEventSenderImplementation *_eventSender;
     SPTEventSenderDebugState *_eventSenderDebugState;
+    id <SPTResolver> _cosmosResolver;
+    SPTEventSenderCoreImplementation *_eventSenderCore;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTEventSenderCoreImplementation *eventSenderCore; // @synthesize eventSenderCore=_eventSenderCore;
+@property(retain, nonatomic) id <SPTResolver> cosmosResolver; // @synthesize cosmosResolver=_cosmosResolver;
 @property(retain, nonatomic) SPTEventSenderDebugState *eventSenderDebugState; // @synthesize eventSenderDebugState=_eventSenderDebugState;
 @property(retain, nonatomic) SPTEventSenderImplementation *eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) INSEventSender *sdk; // @synthesize sdk=_sdk;
@@ -34,7 +38,7 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
 - (id)provideEventSenderStateViewController;
-- (id)provideEventSenderSatelliteResponder;
+- (id)provideSatelliteResponder;
 - (id)provideEventSender;
 - (void)unload;
 - (void)load;

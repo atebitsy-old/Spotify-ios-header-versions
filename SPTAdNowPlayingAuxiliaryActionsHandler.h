@@ -59,6 +59,7 @@
 - (void)performNegativeActionForAd:(id)arg1 inViewController:(id)arg2 sender:(id)arg3;
 - (void)performPositiveActionForAd:(id)arg1 inViewController:(id)arg2 withSender:(id)arg3;
 - (_Bool)isAdBookmarked:(id)arg1;
+- (void)startBackgroundObserver;
 - (void)dealloc;
 - (id)initWithEducationPresenter:(id)arg1 contextMenuFeature:(id)arg2 logCenter:(id)arg3 playerObserver:(id)arg4 dataLoader:(id)arg5 featureProperties:(id)arg6 reminderManager:(id)arg7;
 

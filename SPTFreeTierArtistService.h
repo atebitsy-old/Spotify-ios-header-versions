@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierArtistHubManager;
-@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTFreeTierArtistService : SPTUIPageService
 {
@@ -29,6 +29,7 @@
     id <SPTShelfService> _shelfService;
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
     id <SPTExplicitContentService> _explicitContentService;
+    id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTModerationService> _moderationFeature;
     id <SPTPodcastEpisodeFeaturedContentService> _podcastFeaturedService;
     id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreService;
@@ -42,6 +43,7 @@
 @property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreService; // @synthesize encoreService=_encoreService;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastFeaturedService; // @synthesize podcastFeaturedService=_podcastFeaturedService;
 @property(nonatomic) __weak id <SPTModerationService> moderationFeature; // @synthesize moderationFeature=_moderationFeature;
+@property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;

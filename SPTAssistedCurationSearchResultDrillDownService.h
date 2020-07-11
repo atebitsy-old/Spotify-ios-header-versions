@@ -9,7 +9,7 @@
 #import "SPTAssistedCurationLinkDispatcherPageProvider-Protocol.h"
 
 @class NSString, SPTAssistedCurationSearchResultDrillDownHubManager;
-@protocol SPTAssistedCurationService, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTSearchPlatformService;
+@protocol SPTAssistedCurationService, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTSearchPlatformService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTAssistedCurationSearchResultDrillDownService : SPTUIPageService <SPTAssistedCurationLinkDispatcherPageProvider>
 {
@@ -19,6 +19,7 @@
     id <SPTGLUEService> _glueService;
     id <SPTAudioPreviewService> _audioPreviewService;
     id <SPTExplicitContentService> _explicitContentService;
+    id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTAssistedCurationService> _assistedCurationService;
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <SPTFreeTierService> _freeTierService;
@@ -28,6 +29,7 @@
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(retain, nonatomic) id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(nonatomic) __weak id <SPTAssistedCurationService> assistedCurationService; // @synthesize assistedCurationService=_assistedCurationService;
+@property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

@@ -7,6 +7,7 @@
 #import <objc/NSObject.h>
 
 #import "SPTNowPlayingArtistLabelUBILogger-Protocol.h"
+#import "SPTNowPlayingBanButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingCloseButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingConnectButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingContextMenuButtonUBILogger-Protocol.h"
@@ -18,24 +19,35 @@
 #import "SPTNowPlayingQueueButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingRepeatButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingScrollUBILogger-Protocol.h"
+#import "SPTNowPlayingShareButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingShuffleModeButtonUBILogger-Protocol.h"
+#import "SPTNowPlayingSkip15SecondsBackwardButtonUBILogger-Protocol.h"
+#import "SPTNowPlayingSkip15SecondsForwardButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingSkipNextButtonUBILogger-Protocol.h"
 #import "SPTNowPlayingSkipPreviousButtonUBILogger-Protocol.h"
+#import "SPTNowPlayingSleepTimerButtonUBILogger-Protocol.h"
+#import "SPTNowPlayingSpeedControlUBILogger-Protocol.h"
 #import "SPTNowPlayingTrackTitleLabelUBILogger-Protocol.h"
 #import "SPTNowPlayingViewUBILogger-Protocol.h"
 
 @class NSString, SPTNowPlayingUBILoggerFactory;
 @protocol SPTNowPlayingModeResolver;
 
-@interface SPTNowPlayingUBILogger : NSObject <SPTNowPlayingPlayButtonUBILogger, SPTNowPlayingViewUBILogger, SPTNowPlayingScrollUBILogger, SPTNowPlayingQueueButtonUBILogger, SPTNowPlayingConnectButtonUBILogger, SPTNowPlayingRepeatButtonUBILogger, SPTNowPlayingSkipNextButtonUBILogger, SPTNowPlayingSkipPreviousButtonUBILogger, SPTNowPlayingShuffleModeButtonUBILogger, SPTNowPlayingProgressBarUBILogger, SPTNowPlayingHeartButtonUBILogger, SPTNowPlayingArtistLabelUBILogger, SPTNowPlayingTrackTitleLabelUBILogger, SPTNowPlayingCoverArtUBILogger, SPTNowPlayingContextMenuButtonUBILogger, SPTNowPlayingPlaybackSourceLabelUBILogger, SPTNowPlayingCloseButtonUBILogger>
+@interface SPTNowPlayingUBILogger : NSObject <SPTNowPlayingPlayButtonUBILogger, SPTNowPlayingViewUBILogger, SPTNowPlayingScrollUBILogger, SPTNowPlayingQueueButtonUBILogger, SPTNowPlayingConnectButtonUBILogger, SPTNowPlayingRepeatButtonUBILogger, SPTNowPlayingSkipNextButtonUBILogger, SPTNowPlayingSkipPreviousButtonUBILogger, SPTNowPlayingShuffleModeButtonUBILogger, SPTNowPlayingProgressBarUBILogger, SPTNowPlayingHeartButtonUBILogger, SPTNowPlayingArtistLabelUBILogger, SPTNowPlayingTrackTitleLabelUBILogger, SPTNowPlayingCoverArtUBILogger, SPTNowPlayingContextMenuButtonUBILogger, SPTNowPlayingPlaybackSourceLabelUBILogger, SPTNowPlayingCloseButtonUBILogger, SPTNowPlayingBanButtonUBILogger, SPTNowPlayingSpeedControlUBILogger, SPTNowPlayingSkip15SecondsBackwardButtonUBILogger, SPTNowPlayingSkip15SecondsForwardButtonUBILogger, SPTNowPlayingShareButtonUBILogger, SPTNowPlayingSleepTimerButtonUBILogger>
 {
     id <SPTNowPlayingModeResolver> _modeResolver;
     SPTNowPlayingUBILoggerFactory *_ubiLoggerFactory;
 }
 
 @property(readonly, nonatomic) SPTNowPlayingUBILoggerFactory *ubiLoggerFactory; // @synthesize ubiLoggerFactory=_ubiLoggerFactory;
-@property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
+@property(readonly, nonatomic) __weak id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 - (void).cxx_destruct;
+- (void)logSleepTimerButtonTapped;
+- (void)logShareButtonTapped;
+- (void)logSkip15SecondsBackwardTapped;
+- (void)logSkip15SecondsForwardTapped;
+- (void)logSpeedControlMenuButtonTapped;
+- (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
 - (void)logCloseButtonTapped;
 - (void)logGoToPlayContextButtonTappedWithContextURI:(id)arg1;
 - (void)logContextMenuButtonTapped;

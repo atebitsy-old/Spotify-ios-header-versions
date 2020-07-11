@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSString;
-@protocol SPTGaiaConnectObserver, SPTGaiaDeviceProtocol, SPTGaiaLocalDeviceProtocol;
+@protocol SPTGaiaConnectObserver, SPTGaiaDeviceIncarnation, SPTGaiaDeviceProtocol, SPTGaiaLocalDeviceProtocol;
 
 @protocol SPTGaiaConnectAPI <NSObject>
 @property(readonly, nonatomic) NSString *activeDeviceDisplayName;
@@ -23,6 +23,9 @@
 - (_Bool)deviceRepresentsGroup:(id <SPTGaiaDeviceProtocol>)arg1;
 - (_Bool)shouldShowCastLogoForDevice:(id <SPTGaiaDeviceProtocol>)arg1;
 - (void)discoverDevices;
+- (void)setIncarnationAsPreferred:(id <SPTGaiaDeviceIncarnation>)arg1 responseBlock:(void (^)(_Bool, NSError *))arg2;
+- (void)logoutDevice:(id <SPTGaiaDeviceProtocol>)arg1 responseBlock:(void (^)(_Bool, NSError *))arg2;
+- (id <SPTGaiaDeviceIncarnation>)findIncarnationOnDeviceWithId:(NSString *)arg1 incarnationId:(NSString *)arg2;
 - (id <SPTGaiaDeviceProtocol>)findDeviceWithPhysicalIdentifier:(NSString *)arg1;
 - (id <SPTGaiaDeviceProtocol>)findDeviceWithIdentifier:(NSString *)arg1;
 - (void)renameDevice:(id <SPTGaiaDeviceProtocol>)arg1 name:(NSString *)arg2 responseBlock:(void (^)(_Bool, NSError *))arg3;

@@ -9,17 +9,17 @@
 #import "SPTAuthLoginTaskDelegate-Protocol.h"
 
 @class NSMapTable, NSString, SPTAuthLoginController;
-@protocol SPTAsyncScheduler;
+@protocol SPTConnectivityAsyncScheduler;
 
 @interface SPTAuthController : NSObject <SPTAuthLoginTaskDelegate>
 {
     SPTAuthLoginController *_controller;
-    id <SPTAsyncScheduler> _scheduler;
+    id <SPTConnectivityAsyncScheduler> _scheduler;
     NSMapTable *_taskMap;
 }
 
 @property(retain, nonatomic) NSMapTable *taskMap; // @synthesize taskMap=_taskMap;
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(nonatomic) __weak SPTAuthLoginController *controller; // @synthesize controller=_controller;
 - (void).cxx_destruct;
 - (void)loginTask:(id)arg1 didRequireSignup:(id)arg2;

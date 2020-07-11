@@ -38,6 +38,7 @@
     SPTPodcastEpisodeActionsTableViewCell *_actionsCell;
     SPTPodcastEpisodeDescriptionTableViewCell *_descriptionCell;
     SPTPodcastEpisodeCoverArtTableViewCell *_coverArtCell;
+    UITableViewCell *_creatorLinksCell;
     UITableViewCell *_featuredContentCell;
     UITableViewCell *_trackListContentCell;
     GLUEEntityRowTableViewCell *_podcastCell;
@@ -46,6 +47,7 @@
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     SPTPodcastEpisodeLogger *_logger;
     id <SPTViewLogger> _viewLogger;
+    UIViewController *_creatorLinks;
     UIViewController<SPTPodcastRecommendationsViewController> *_recommendations;
     UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *_featuredContent;
     UIViewController *_trackList;
@@ -72,6 +74,7 @@
 @property(retain, nonatomic) UIViewController *trackList; // @synthesize trackList=_trackList;
 @property(retain, nonatomic) UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *featuredContent; // @synthesize featuredContent=_featuredContent;
 @property(retain, nonatomic) UIViewController<SPTPodcastRecommendationsViewController> *recommendations; // @synthesize recommendations=_recommendations;
+@property(retain, nonatomic) UIViewController *creatorLinks; // @synthesize creatorLinks=_creatorLinks;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) SPTPodcastEpisodeLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
@@ -80,6 +83,7 @@
 @property(retain, nonatomic) GLUEEntityRowTableViewCell *podcastCell; // @synthesize podcastCell=_podcastCell;
 @property(retain, nonatomic) UITableViewCell *trackListContentCell; // @synthesize trackListContentCell=_trackListContentCell;
 @property(retain, nonatomic) UITableViewCell *featuredContentCell; // @synthesize featuredContentCell=_featuredContentCell;
+@property(retain, nonatomic) UITableViewCell *creatorLinksCell; // @synthesize creatorLinksCell=_creatorLinksCell;
 @property(retain, nonatomic) SPTPodcastEpisodeCoverArtTableViewCell *coverArtCell; // @synthesize coverArtCell=_coverArtCell;
 @property(retain, nonatomic) SPTPodcastEpisodeDescriptionTableViewCell *descriptionCell; // @synthesize descriptionCell=_descriptionCell;
 @property(retain, nonatomic) SPTPodcastEpisodeActionsTableViewCell *actionsCell; // @synthesize actionsCell=_actionsCell;
@@ -133,7 +137,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 productState:(id)arg3 modalPresentationController:(id)arg4 podcastContextMenuProvider:(id)arg5 shareFeature:(id)arg6 logger:(id)arg7 viewLogger:(id)arg8 recommendations:(id)arg9 featuredContent:(id)arg10 trackList:(id)arg11 linkDispatcher:(id)arg12 buttonsFactory:(id)arg13 remoteConfigurationResolver:(id)arg14 testManager:(id)arg15;
+- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 productState:(id)arg3 modalPresentationController:(id)arg4 podcastContextMenuProvider:(id)arg5 shareFeature:(id)arg6 logger:(id)arg7 viewLogger:(id)arg8 creatorLinks:(id)arg9 recommendations:(id)arg10 featuredContent:(id)arg11 trackList:(id)arg12 linkDispatcher:(id)arg13 buttonsFactory:(id)arg14 remoteConfigurationResolver:(id)arg15 testManager:(id)arg16;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

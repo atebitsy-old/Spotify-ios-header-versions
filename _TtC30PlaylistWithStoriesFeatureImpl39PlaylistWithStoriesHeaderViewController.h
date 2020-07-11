@@ -21,6 +21,7 @@
 - (void)dealloc;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 
 @end
 

@@ -4,23 +4,19 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
+#import "SPTFreeTierPlaylistHeaderConfiguration-Protocol.h"
 
 @class GLUEEntityRowStyle, NSArray;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistTrackCellConfigurator, SPTFreeTierPlaylistVISREFHeaderViewModel;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistTrackCellConfigurator;
 
-@protocol SPTFreeTierPlaylistConfiguration <NSObject>
+@protocol SPTFreeTierPlaylistConfiguration <SPTFreeTierPlaylistHeaderConfiguration>
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> cellProviderDelegate;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistTrackCellConfigurator> trackCellConfigurator;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction;
 @property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistContextMenuPresenter> contextMenuPresenter;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistVISREFHeaderViewModel> visrefHeaderViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistFullbleedHeaderViewModel> fullbleedHeaderViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistDefaultHeaderViewModel> defaultHeaderViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistFollowViewModel> followViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayViewModel> playViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayModel> playModel;
 @property(readonly, copy, nonatomic) NSArray *cellProviders;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistHeaderProvider> headerProvider;

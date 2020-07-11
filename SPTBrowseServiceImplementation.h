@@ -9,7 +9,7 @@
 #import "SPTBrowseService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPersistentCache;
-@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTPodcastUtteranceSurveyService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTVisualRefreshIntegrationService;
+@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTVisualRefreshIntegrationService;
 
 @interface SPTBrowseServiceImplementation : NSObject <SPTBrowseService>
 {
@@ -26,7 +26,6 @@
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
     id <SPTPodcastUIService> _podcastUIService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
-    id <SPTPodcastUtteranceSurveyService> _podcastUtteranceSurveyService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTSettingsFeature> _settingsFeature;
@@ -38,7 +37,6 @@
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTPodcastUtteranceSurveyService> podcastUtteranceSurveyService; // @synthesize podcastUtteranceSurveyService=_podcastUtteranceSurveyService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;

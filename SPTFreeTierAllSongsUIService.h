@@ -10,7 +10,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPNavigationController, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTFreeTierAllSongsRegistry, SPTFreeTierAllSongsService, SPTFreeTierPreCurationService, SPTFreeTierPresentationService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSelfPresentingViewController, SPTURIDispatchService;
+@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTFreeTierAllSongsRegistry, SPTFreeTierAllSongsService, SPTFreeTierPreCurationService, SPTFreeTierPresentationService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSelfPresentingViewController, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
 
 @interface SPTFreeTierAllSongsUIService : NSObject <SPTService, SPTURISubtypeHandler>
 {
@@ -27,6 +27,7 @@
     id <SPTFreeTierPreCurationService> _preCurationService;
     id <SPTPodcastFeature> _podcastService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTUserBehaviourInstrumentationService> _ubiService;
     id <SPTFreeTierAllSongsRegistry> _registry;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPNavigationController<SPTSelfPresentingViewController> *_navigationController;
@@ -36,6 +37,7 @@
 @property(retain, nonatomic) SPNavigationController<SPTSelfPresentingViewController> *navigationController; // @synthesize navigationController=_navigationController;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) id <SPTFreeTierAllSongsRegistry> registry; // @synthesize registry=_registry;
+@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
 @property(nonatomic) __weak id <SPTFreeTierPreCurationService> preCurationService; // @synthesize preCurationService=_preCurationService;

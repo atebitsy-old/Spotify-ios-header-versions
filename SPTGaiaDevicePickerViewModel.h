@@ -14,7 +14,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, SPTCastManager, SPTGaiaConnectDevice, SPTGaiaDeviceAppearanceMapping, SPTGaiaDevicePickerAppearanceManager, SPTGaiaDevicePickerDevicesProvider, SPTGaiaEducationDetailModelManager, SPTGaiaHomeDeviceManager, SPTGaiaHomeDeviceTooltipManager, SPTGaiaLogger, SPTGaiaSocialListeningIntegrationManager, SPTPlayerState;
-@protocol SPTGaiaContextMenuModelProvider, SPTGaiaDevicePickerFlagsProvider, SPTGaiaDevicePickerViewModelDelegate, SPTGaiaWirelessRoutesAPI, SPTPlayer;
+@protocol GLUEImageLoader, SPTGaiaContextMenuModelProvider, SPTGaiaDevicePickerFlagsProvider, SPTGaiaDevicePickerViewModelDelegate, SPTGaiaWirelessRoutesAPI, SPTPlayer;
 
 @interface SPTGaiaDevicePickerViewModel : NSObject <SPTGaiaWirelessRoutesObserver, SPTGaiaDevicePickerDevicesProviderDelegate, SPTPlayerObserver, SPTCastManagerObserver, SPTGaiaHomeDeviceTooltipManagerDelegate, SPTGaiaSocialListeningIntegrationManagerObserver>
 {
@@ -36,8 +36,10 @@
     SPTGaiaHomeDeviceTooltipManager *_homeDeviceEducationManager;
     SPTGaiaHomeDeviceManager *_homeDeviceManager;
     SPTPlayerState *_lastPlayedState;
+    id <GLUEImageLoader> _glueImageLoader;
 }
 
+@property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic, getter=isPlaybackRestricted) _Bool playbackRestricted; // @synthesize playbackRestricted=_playbackRestricted;
 @property(retain, nonatomic) SPTPlayerState *lastPlayedState; // @synthesize lastPlayedState=_lastPlayedState;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
@@ -67,6 +69,11 @@
 - (void)wirelessActiveDeviceDidChange;
 - (void)wirelessRoutesDidChangeAvailability:(_Bool)arg1;
 - (void)castManager:(id)arg1 deviceConnectivityDidChange:(id)arg2;
+- (void)leaveSocialDeviceButtonClicked:(id)arg1;
+- (void)joinSocialDeviceButtonClicked:(id)arg1;
+- (void)selectSocialDevice:(id)arg1 atIndexPath:(id)arg2;
+- (long long)deviceCellTypeForRowAtIndexPathWithFrictionlessJoining:(id)arg1;
+- (id)cellProviderForDeviceWithFrictionlessJoiningFeature:(id)arg1;
 - (void)contextMenuButtonTapped:(id)arg1;
 - (void)updateContextMenuCache;
 - (_Bool)isAirplayActive;
@@ -95,7 +102,7 @@
 - (id)deviceIndexPathFromGlobalIndexPath:(id)arg1;
 - (long long)deviceSectionFromGlobalSection:(long long)arg1;
 - (void)dealloc;
-- (id)initWithWirelessRoutesManager:(id)arg1 devicesProvider:(id)arg2 contextMenuModelProvider:(id)arg3 castManager:(id)arg4 player:(id)arg5 deviceIconMapper:(id)arg6 logger:(id)arg7 flagsProvider:(id)arg8 appearanceManager:(id)arg9 educationModelManager:(id)arg10 socialListeningManager:(id)arg11 homeDeviceEducationManager:(id)arg12 homeDeviceManager:(id)arg13;
+- (id)initWithWirelessRoutesManager:(id)arg1 devicesProvider:(id)arg2 contextMenuModelProvider:(id)arg3 castManager:(id)arg4 player:(id)arg5 deviceIconMapper:(id)arg6 logger:(id)arg7 flagsProvider:(id)arg8 appearanceManager:(id)arg9 educationModelManager:(id)arg10 socialListeningManager:(id)arg11 homeDeviceEducationManager:(id)arg12 homeDeviceManager:(id)arg13 glueImageLoaderFactory:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

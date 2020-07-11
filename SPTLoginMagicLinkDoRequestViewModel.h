@@ -8,7 +8,7 @@
 
 #import "SPTLoginRecoverAccountDataLoaderDelegate-Protocol.h"
 
-@class NSString, SPTLoginLayoutTestManager, SPTLoginMagicLinkDoRequestViewLogger, SPTLoginMagicLinkRequestTracker, SPTLoginMagicLinkRequestWarningPresenter, SPTLoginRecoverAccountDataLoader, SPTLoginTheme;
+@class NSString, SPTLoginMagicLinkDoRequestViewLogger, SPTLoginMagicLinkRequestTracker, SPTLoginMagicLinkRequestWarningPresenter, SPTLoginRecoverAccountDataLoader, SPTLoginTheme;
 @protocol SPTLoginNavigationCoordinator, SPTMagicLinkDoRequestViewModelDelegate;
 
 @interface SPTLoginMagicLinkDoRequestViewModel : NSObject <SPTLoginRecoverAccountDataLoaderDelegate>
@@ -22,10 +22,8 @@
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
     SPTLoginMagicLinkRequestTracker *_magicLinkRequestTracker;
     SPTLoginMagicLinkRequestWarningPresenter *_magicLinkRequestWarningPresenter;
-    SPTLoginLayoutTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTLoginLayoutTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTLoginMagicLinkRequestWarningPresenter *magicLinkRequestWarningPresenter; // @synthesize magicLinkRequestWarningPresenter=_magicLinkRequestWarningPresenter;
 @property(readonly, nonatomic) SPTLoginMagicLinkRequestTracker *magicLinkRequestTracker; // @synthesize magicLinkRequestTracker=_magicLinkRequestTracker;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
@@ -47,7 +45,7 @@
 - (id)titleLabelText;
 - (id)preExistingDisclosureLabelErrorMessage;
 - (id)viewStyle;
-- (id)initWithTheme:(id)arg1 emailOrUsername:(id)arg2 errorMessage:(id)arg3 recoverAccountDataLoader:(id)arg4 navigationCoordinator:(id)arg5 logger:(id)arg6 magicLinkRequestTracker:(id)arg7 magicLinkWarningPresenter:(id)arg8 testManager:(id)arg9;
+- (id)initWithTheme:(id)arg1 emailOrUsername:(id)arg2 errorMessage:(id)arg3 recoverAccountDataLoader:(id)arg4 navigationCoordinator:(id)arg5 logger:(id)arg6 magicLinkRequestTracker:(id)arg7 magicLinkWarningPresenter:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

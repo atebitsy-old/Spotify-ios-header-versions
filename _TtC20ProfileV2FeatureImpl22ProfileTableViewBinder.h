@@ -10,7 +10,8 @@
 {
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: tableView
-    // Error parsing type: , name: profileData
+    // Error parsing type: , name: profileModel
+    // Error parsing type: , name: $__lazy_storage_$_emptyView
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: maxArtistRows
     // Error parsing type: , name: maxPlaylistRows

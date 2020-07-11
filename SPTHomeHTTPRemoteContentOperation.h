@@ -10,7 +10,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTFreeTierTasteOnboardingCurationObserver-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTDataLoader, SPTHomeContentCache;
+@class NSError, NSString, NSURL, SPTDataLoader;
 @protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTFreeTierTasteOnboardingCurationProvider, SPTLocalSettings;
 
 @interface SPTHomeHTTPRemoteContentOperation : NSObject <SPTDataLoaderDelegate, SPTFreeTierTasteOnboardingCurationObserver, HUBContentOperation>
@@ -21,7 +21,6 @@
     NSURL *_contentURL;
     NSString *_sourceIdentifier;
     SPTDataLoader *_dataLoader;
-    SPTHomeContentCache *_homeContentCache;
     id <SPTFreeTierTasteOnboardingCurationProvider> _tasteOnboardingCurationProvider;
     id <SPTLocalSettings> _localSettings;
     id <HUBViewModelBuilder> _viewModelBuilder;
@@ -34,7 +33,6 @@
 @property(retain, nonatomic) id <HUBViewModelBuilder> viewModelBuilder; // @synthesize viewModelBuilder=_viewModelBuilder;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingCurationProvider> tasteOnboardingCurationProvider; // @synthesize tasteOnboardingCurationProvider=_tasteOnboardingCurationProvider;
-@property(readonly, nonatomic) __weak SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(readonly, nonatomic) NSURL *contentURL; // @synthesize contentURL=_contentURL;
@@ -47,7 +45,7 @@
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (void)dealloc;
-- (id)initWithContentURL:(id)arg1 sourceIdentifier:(id)arg2 dataLoaderFactory:(id)arg3 homeContentCache:(id)arg4 tasteOnboardingCurationProvider:(id)arg5 featureSettingsItemFactory:(id)arg6 localSettings:(id)arg7;
+- (id)initWithContentURL:(id)arg1 sourceIdentifier:(id)arg2 dataLoaderFactory:(id)arg3 tasteOnboardingCurationProvider:(id)arg4 featureSettingsItemFactory:(id)arg5 localSettings:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

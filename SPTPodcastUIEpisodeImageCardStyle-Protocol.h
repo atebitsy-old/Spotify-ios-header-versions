@@ -14,7 +14,6 @@
 @property(readonly, nonatomic) double progressViewCornerRadius;
 @property(readonly, nonatomic) double progressViewHeight;
 @property(readonly, nonatomic) double colorAnimationDuration;
-@property(readonly, nonatomic) double labelStackViewSpacing;
 @property(readonly, nonatomic) double labelStackViewMargin;
 @property(readonly, nonatomic) double thumbnailShadowAlpha;
 @property(readonly, nonatomic) double thumbnailShadowRadius;

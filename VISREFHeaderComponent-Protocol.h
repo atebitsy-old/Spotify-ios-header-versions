@@ -11,6 +11,7 @@
 @protocol VISREFHeaderComponent <VISREFHeaderViewAnimationProgress>
 
 @optional
+- (void)updateHeaderHeight:(double)arg1;
 - (void)headerViewDidRemountHeaderComponents:(VISREFHeaderView *)arg1;
 @end
 

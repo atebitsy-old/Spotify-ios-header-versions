@@ -44,7 +44,7 @@
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
-- (void)navigationBarHeightDidChange:(double)arg1;
+- (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)addActionRowView:(id)arg1;
 - (void)setImage:(id)arg1;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;

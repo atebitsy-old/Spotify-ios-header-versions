@@ -6,9 +6,7 @@
 
 #import "_TtC30PlaylistWithStoriesFeatureImpl39PlaylistWithStoriesHeaderViewController.h"
 
-#import "SPTFreeTierPlaylistHeader-Protocol.h"
-
-@interface _TtC30PlaylistWithStoriesFeatureImpl39PlaylistWithStoriesHeaderViewController (PlaylistWithStoriesFeatureImpl) <SPTFreeTierPlaylistHeader>
+@interface _TtC30PlaylistWithStoriesFeatureImpl39PlaylistWithStoriesHeaderViewController (PlaylistWithStoriesFeatureImpl)
 - (void)update;
 @end
 

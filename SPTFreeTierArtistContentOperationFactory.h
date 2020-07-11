@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTNetworkConnectivityController;
-@protocol SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTExplicitContentAccessManager, SPTFollowModelFactory, SPTFreeTierArtistTestManager, SPTHubContentOperationFactory, SPTOnDemandService, SPTOnDemandTrialService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTProductState;
+@protocol SPTAgeVerificationProvider, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTExplicitContentAccessManager, SPTFollowModelFactory, SPTFreeTierArtistTestManager, SPTHubContentOperationFactory, SPTOnDemandService, SPTOnDemandTrialService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTProductState;
 
 @interface SPTFreeTierArtistContentOperationFactory : NSObject
 {
@@ -19,6 +19,7 @@
     id <SPTFollowModelFactory> _followModelFactory;
     id <SPTProductState> _productState;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <SPTAgeVerificationProvider> _ageVerificationProvider;
     id <SPTPodcastEpisodeFeaturedContentService> _podcastEpisodeFeaturedService;
     id <SPTCollectionPlatformStateProvider> _collectionPlatformStateProvider;
     id <SPTCollectionPlatformTestManager> _collectionPlatformTestManager;
@@ -29,6 +30,7 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformStateProvider> collectionPlatformStateProvider; // @synthesize collectionPlatformStateProvider=_collectionPlatformStateProvider;
 @property(readonly, nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastEpisodeFeaturedService; // @synthesize podcastEpisodeFeaturedService=_podcastEpisodeFeaturedService;
+@property(readonly, nonatomic) __weak id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) __weak id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
@@ -41,7 +43,7 @@
 - (id)createArtistReleasesContentOperationsForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignal:(id)arg3;
 - (id)createArtistViewContentOperationsForViewURI:(id)arg1 collectionModelFactory:(id)arg2 referrerIdentifier:(id)arg3 reloadPageSignal:(id)arg4;
 - (id)createContentOperationsForViewURI:(id)arg1 collectionModelFactory:(id)arg2 referrerIdentifier:(id)arg3 reloadPageSignal:(id)arg4;
-- (id)initWithHubContentOperationFactory:(id)arg1 playerService:(id)arg2 onDemandService:(id)arg3 onDemandTrialService:(id)arg4 networkConnectivityController:(id)arg5 followModelFactory:(id)arg6 productState:(id)arg7 explicitContentAccessManager:(id)arg8 collectionPlatformStateProvider:(id)arg9 collectionPlatformTestManager:(id)arg10 podcastEpisodeFeaturedService:(id)arg11 testManager:(id)arg12;
+- (id)initWithHubContentOperationFactory:(id)arg1 playerService:(id)arg2 onDemandService:(id)arg3 onDemandTrialService:(id)arg4 networkConnectivityController:(id)arg5 followModelFactory:(id)arg6 productState:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 collectionPlatformStateProvider:(id)arg10 collectionPlatformTestManager:(id)arg11 podcastEpisodeFeaturedService:(id)arg12 testManager:(id)arg13;
 
 @end
 

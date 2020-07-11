@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFormatListPlatformRegistryImplementation, SPTFormatListPlatformRemoteControlPolicyFactoryImplementation, SPTFormatListPlatformRemoteControlPolicyManagerImplementation, SPTFormatListPlatformTestManagerImplementation;
-@protocol SPTAbbaService, SPTAlgotorialSharingService, SPTContainerService, SPTCoreService, SPTFeedbackService, SPTFormatListPlatformResolver, SPTFreeTierService, SPTGLUEService, SPTLocalSettings, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService;
+@protocol SPTAbbaService, SPTAlgotorialSharingService, SPTContainerService, SPTCoreService, SPTFeedbackService, SPTFormatListPlatformResolver, SPTFreeTierService, SPTGLUEService, SPTLocalSettings, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTVisualRefreshIntegrationService, VISREFIntegrationManager;
 
 @interface SPTFormatListPlatformServiceImplementation : NSObject <SPTService, SPTFormatListPlatformService>
 {
@@ -24,6 +24,8 @@
     id <SPTPlayerFeature> _playerFeature;
     id <SPTFeedbackService> _feedbackService;
     id <SPTAlgotorialSharingService> _algotorialSharingService;
+    id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
+    id <VISREFIntegrationManager> _visualRefreshIntegrationManager;
     SPTFormatListPlatformTestManagerImplementation *_testManager;
     SPTFormatListPlatformRegistryImplementation *_registry;
     id <SPTFormatListPlatformResolver> _platformResolver;
@@ -39,6 +41,8 @@
 @property(retain, nonatomic) id <SPTFormatListPlatformResolver> platformResolver; // @synthesize platformResolver=_platformResolver;
 @property(retain, nonatomic) SPTFormatListPlatformRegistryImplementation *registry; // @synthesize registry=_registry;
 @property(retain, nonatomic) SPTFormatListPlatformTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
+@property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(nonatomic) __weak id <SPTAlgotorialSharingService> algotorialSharingService; // @synthesize algotorialSharingService=_algotorialSharingService;
 @property(nonatomic) __weak id <SPTFeedbackService> feedbackService; // @synthesize feedbackService=_feedbackService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;

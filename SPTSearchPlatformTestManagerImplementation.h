@@ -15,11 +15,11 @@
 @interface SPTSearchPlatformTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTSearchPlatformTestManager>
 {
     _Bool _searchKitEnabled;
-    _Bool _podcastResultCardsShowEnabled;
+    _Bool _podcastResultCardsTopPlayedEnabled;
     _Bool _podcastResultCardsDurationEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _searchKitSignal;
-    id <SPTFeatureFlagSignal> _podcastResultCardsShowSignal;
+    id <SPTFeatureFlagSignal> _podcastResultCardsTopPlayedSignal;
     id <SPTFeatureFlagSignal> _podcastResultCardsDurationSignal;
     unsigned long long _podcastRowsType;
 }
@@ -27,8 +27,8 @@
 @property(nonatomic) unsigned long long podcastRowsType; // @synthesize podcastRowsType=_podcastRowsType;
 @property(nonatomic, getter=isPodcastResultCardsDurationEnabled) _Bool podcastResultCardsDurationEnabled; // @synthesize podcastResultCardsDurationEnabled=_podcastResultCardsDurationEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> podcastResultCardsDurationSignal; // @synthesize podcastResultCardsDurationSignal=_podcastResultCardsDurationSignal;
-@property(nonatomic, getter=isPodcastResultCardsShowEnabled) _Bool podcastResultCardsShowEnabled; // @synthesize podcastResultCardsShowEnabled=_podcastResultCardsShowEnabled;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> podcastResultCardsShowSignal; // @synthesize podcastResultCardsShowSignal=_podcastResultCardsShowSignal;
+@property(nonatomic, getter=isPodcastResultCardsTopPlayedEnabled) _Bool podcastResultCardsTopPlayedEnabled; // @synthesize podcastResultCardsTopPlayedEnabled=_podcastResultCardsTopPlayedEnabled;
+@property(readonly, nonatomic) id <SPTFeatureFlagSignal> podcastResultCardsTopPlayedSignal; // @synthesize podcastResultCardsTopPlayedSignal=_podcastResultCardsTopPlayedSignal;
 @property(nonatomic, getter=isSearchKitEnabled) _Bool searchKitEnabled; // @synthesize searchKitEnabled=_searchKitEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> searchKitSignal; // @synthesize searchKitSignal=_searchKitSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;

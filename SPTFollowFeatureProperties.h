@@ -12,19 +12,22 @@
 
 @interface SPTFollowFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    NSString *_followShowConfirmationOverride;
-    NSString *_unfollowShowConfirmationOverride;
+    unsigned long long _followShowConfirmationOverride;
+    unsigned long long _unfollowShowConfirmationOverride;
+    NSString *_followShowConfirmationOverrideString;
+    NSString *_unfollowShowConfirmationOverrideString;
 }
 
-@property(readonly, nonatomic) NSString *unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
-@property(readonly, nonatomic) NSString *followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
+@property(retain, nonatomic) NSString *unfollowShowConfirmationOverrideString; // @synthesize unfollowShowConfirmationOverrideString=_unfollowShowConfirmationOverrideString;
+@property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
+@property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
+@property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
 - (void).cxx_destruct;
+- (unsigned long long)mapUnfollowShowConfirmationOverrideToEnumValue:(id)arg1;
+- (unsigned long long)mapFollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;
-- (unsigned long long)mapToEnum:(id)arg1;
-@property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverrideValue;
-@property(readonly, nonatomic) unsigned long long followShowConfirmationOverrideValue;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -10,9 +10,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePlaylistEntity_PlayButtonEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitResumeWithItemToBeResumed:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
-- (id <SPTUBIInteractionEvent>)hitShufflePlayWithContextToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

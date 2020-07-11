@@ -27,6 +27,7 @@
 - (void)openRequestMagicLinkScreenWithEmail:(id)arg1 error:(id)arg2;
 - (void)openLoginScreenWithEmail:(id)arg1;
 - (void)openSignupFlowWithSignupInfo:(id)arg1 type:(unsigned long long)arg2 navigationCompletion:(CDUnknownBlockType)arg3;
+- (void)openSignupFlowWithSignupInfo:(id)arg1 type:(unsigned long long)arg2 displayName:(id)arg3 navigationCompletion:(CDUnknownBlockType)arg4;
 - (void)openDisplayNameScreen;
 - (void)openAgeScreen;
 - (void)openPasswordScreen;

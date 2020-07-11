@@ -10,14 +10,16 @@
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: theme
-    // Error parsing type: , name: volumeUIFactory
-    // Error parsing type: , name: $__lazy_storage_$_pickerView
+    // Error parsing type: , name: pickerView
+    // Error parsing type: , name: socialListeningIntegrationManager
+    // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
+- (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
