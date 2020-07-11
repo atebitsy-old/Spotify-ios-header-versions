@@ -6,37 +6,26 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTSignupDataLoaderDelegate-Protocol.h"
-
-@class NSString, SPTAuthenticationHandler, SPTLoginDialogController, SPTLoginErrorDialogLogger, SPTSignupCreateUserDataLoader, SPTSignupDisplayNameViewLogger, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
+@class SPTDynamicSignupFlowController, SPTLoginErrorDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
 @protocol SPTSignupDisplayNameViewModelDelegate;
 
-@interface SPTSignupDisplayNameViewModel : NSObject <SPTSignupDataLoaderDelegate>
+@interface SPTSignupDisplayNameViewModel : NSObject
 {
-    _Bool _accountCreated;
     id <SPTSignupDisplayNameViewModelDelegate> _delegate;
     SPTSignupTermsAndPolicyViewModel *_termsAndPolicyViewModel;
-    SPTSignupDisplayNameViewLogger *_logger;
+    SPTDynamicSignupFlowController *_flowController;
+    SPTLoginSplitEmailSignupViewLogger *_logger;
     SPTSignupUserInfoModel *_userInfoModel;
-    SPTSignupCreateUserDataLoader *_createUserDataLoader;
     SPTLoginErrorDialogLogger *_dialogLogger;
-    SPTAuthenticationHandler *_authenticationHandler;
-    SPTLoginDialogController *_dialogController;
 }
 
-@property(nonatomic, getter=isAccountCreated) _Bool accountCreated; // @synthesize accountCreated=_accountCreated;
-@property(retain, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
-@property(retain, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
-@property(retain, nonatomic) SPTSignupCreateUserDataLoader *createUserDataLoader; // @synthesize createUserDataLoader=_createUserDataLoader;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
-@property(readonly, nonatomic) SPTSignupDisplayNameViewLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyViewModel *termsAndPolicyViewModel; // @synthesize termsAndPolicyViewModel=_termsAndPolicyViewModel;
 @property(nonatomic) __weak id <SPTSignupDisplayNameViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2;
-- (void)authenticateWithCredentials;
-- (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessResponse:(id)arg2;
 - (void)textFieldUpdated:(id)arg1;
 - (void)setDisplayName:(id)arg1;
 - (void)createUserAndPresentMainScreen;
@@ -46,13 +35,7 @@
 - (id)displayNameDisclosureText;
 - (id)displayNameLabelText;
 - (id)titleLabelText;
-- (id)initWithUserInfoModel:(id)arg1 createUserDataLoader:(id)arg2 logger:(id)arg3 dialogLogger:(id)arg4 termsAndPolicyViewModel:(id)arg5 authenticationHandler:(id)arg6 dialogController:(id)arg7;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)initWithUserInfoModel:(id)arg1 logger:(id)arg2 dialogLogger:(id)arg3 termsAndPolicyViewModel:(id)arg4 flowController:(id)arg5;
 
 @end
 

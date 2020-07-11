@@ -187,6 +187,13 @@ struct AudioStreamPacketDescription {
     unsigned int _field3;
 };
 
+struct AudioVolumeControlManager {
+    CDUnknownFunctionPointerType *_field1;
+    struct vector<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>, std::__1::allocator<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>>> _field2;
+    struct signal<void (spotify::playback::VolumeChangeReason), spotify::signals::optional_last_value<void>, int, std::__1::less<int>> _field3;
+    int _field4;
+};
+
 struct AuthSession;
 
 struct AutologinFromCredentialsStore;
@@ -334,12 +341,16 @@ struct ConnectionBuilder {
 
 struct ConnectionFactory;
 
+struct ConnectionTypeProvider;
+
 struct ConnectionTypeProviderBridge;
 
 struct ConnectivityManager {
     struct unique_ptr<spotify::connectivity::ConnectivityManager::Impl, std::__1::default_delete<spotify::connectivity::ConnectivityManager::Impl>> _field1;
     CDUnknownFunctionPointerType _field2;
 };
+
+struct ConnectivityPolicyProvider;
 
 struct ConnectivityPolicyProviderBridge;
 
@@ -1243,7 +1254,7 @@ struct __sbuf {
 struct __shared_weak_count;
 
 struct __tree_end_node<std::__1::__tree_node_base<void *>*> {
-    struct __tree_node_base<void *> *_field1;
+    struct __tree_node_base<void *> *__left_;
 };
 
 struct _opaque_pthread_mutex_t {
@@ -1562,6 +1573,30 @@ struct in_addr {
 
 struct less<int>;
 
+struct map<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection, std::__1::less<__weak id<SPTConnectivityConnectionTypeProviderObserver>>, std::__1::allocator<std::__1::pair<const __weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>>> {
+    struct __tree<std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>, std::__1::__map_value_compare<__weak id<SPTConnectivityConnectionTypeProviderObserver>, std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>, std::__1::less<__weak id<SPTConnectivityConnectionTypeProviderObserver>>, true>, std::__1::allocator<std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>>> {
+        struct __tree_end_node<std::__1::__tree_node_base<void *>*> *__begin_node_;
+        struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *>*>, std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>, void *>>> {
+            struct __tree_end_node<std::__1::__tree_node_base<void *>*> __value_;
+        } __pair1_;
+        struct __compressed_pair<unsigned long, std::__1::__map_value_compare<__weak id<SPTConnectivityConnectionTypeProviderObserver>, std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>, std::__1::less<__weak id<SPTConnectivityConnectionTypeProviderObserver>>, true>> {
+            unsigned long long __value_;
+        } __pair3_;
+    } __tree_;
+};
+
+struct map<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, spotify::signals::scoped_connection, std::__1::less<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>>, std::__1::allocator<std::__1::pair<const __weak id<SPTConnectivityConnectivityPolicyProviderObserver>, spotify::signals::scoped_connection>>> {
+    struct __tree<std::__1::__value_type<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, spotify::signals::scoped_connection>, std::__1::__map_value_compare<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, std::__1::__value_type<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, spotify::signals::scoped_connection>, std::__1::less<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>>, true>, std::__1::allocator<std::__1::__value_type<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, spotify::signals::scoped_connection>>> {
+        struct __tree_end_node<std::__1::__tree_node_base<void *>*> *__begin_node_;
+        struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *>*>, std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, spotify::signals::scoped_connection>, void *>>> {
+            struct __tree_end_node<std::__1::__tree_node_base<void *>*> __value_;
+        } __pair1_;
+        struct __compressed_pair<unsigned long, std::__1::__map_value_compare<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, std::__1::__value_type<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>, spotify::signals::scoped_connection>, std::__1::less<__weak id<SPTConnectivityConnectivityPolicyProviderObserver>>, true>> {
+            unsigned long long __value_;
+        } __pair3_;
+    } __tree_;
+};
+
 struct map<std::__1::basic_string<char>, long long, std::__1::less<std::__1::basic_string<char>>, std::__1::allocator<std::__1::pair<const std::__1::basic_string<char>, long long>>> {
     struct __tree<std::__1::__value_type<std::__1::basic_string<char>, long long>, std::__1::__map_value_compare<std::__1::basic_string<char>, std::__1::__value_type<std::__1::basic_string<char>, long long>, std::__1::less<std::__1::basic_string<char>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char>, long long>>> {
         struct __tree_end_node<std::__1::__tree_node_base<void *>*> *_field1;
@@ -1711,6 +1746,8 @@ struct optional<unsigned long> {
 };
 
 struct optional_last_value<void>;
+
+struct pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>;
 
 struct pair<std::__1::basic_string<char>, spotify::json::encoded_value>;
 
@@ -1993,6 +2030,14 @@ struct signal<void (spotify::facebook::ServiceEvent), spotify::signals::optional
     struct less<int> _field5;
 };
 
+struct signal<void (spotify::playback::VolumeChangeReason), spotify::signals::optional_last_value<void>, int, std::__1::less<int>> {
+    shared_ptr_b60d0e1e _field1;
+    struct mutex _field2;
+    struct slot_vector _field3;
+    struct optional_last_value<void> _field4;
+    struct less<int> _field5;
+};
+
 struct signal<void (spotify::prefs::PrefEntry *), spotify::signals::optional_last_value<void>, int, std::__1::less<int>> {
     shared_ptr_b60d0e1e _field1;
     struct mutex _field2;
@@ -2138,10 +2183,22 @@ struct unique_ptr<spotify::connectivity::ApplicationScope::Impl, std::__1::defau
     } _field1;
 };
 
+struct unique_ptr<spotify::connectivity::ConnectionTypeProvider, std::__1::default_delete<spotify::connectivity::ConnectionTypeProvider>> {
+    struct __compressed_pair<spotify::connectivity::ConnectionTypeProvider *, std::__1::default_delete<spotify::connectivity::ConnectionTypeProvider>> {
+        struct ConnectionTypeProvider *__value_;
+    } __ptr_;
+};
+
 struct unique_ptr<spotify::connectivity::ConnectivityManager::Impl, std::__1::default_delete<spotify::connectivity::ConnectivityManager::Impl>> {
     struct __compressed_pair<spotify::connectivity::ConnectivityManager::Impl *, std::__1::default_delete<spotify::connectivity::ConnectivityManager::Impl>> {
         struct Impl *_field1;
     } _field1;
+};
+
+struct unique_ptr<spotify::connectivity::ConnectivityPolicyProvider, std::__1::default_delete<spotify::connectivity::ConnectivityPolicyProvider>> {
+    struct __compressed_pair<spotify::connectivity::ConnectivityPolicyProvider *, std::__1::default_delete<spotify::connectivity::ConnectivityPolicyProvider>> {
+        struct ConnectivityPolicyProvider *__value_;
+    } __ptr_;
 };
 
 struct unique_ptr<spotify::connectivity::auth::AuthSession, std::__1::default_delete<spotify::connectivity::auth::AuthSession>> {
@@ -2600,6 +2657,14 @@ struct vector<std::__1::basic_string<char>, std::__1::allocator<std::__1::basic_
     } _field3;
 };
 
+struct vector<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>, std::__1::allocator<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>>> {
+    struct pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection> *_field1;
+    struct pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection> *_field2;
+    struct __compressed_pair<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>*, std::__1::allocator<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>>> {
+        struct pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection> *_field1;
+    } _field3;
+};
+
 struct vector<std::__1::unique_ptr<spotify::analytics::PendingMessageStorageImpl::PendingMessage, std::__1::default_delete<spotify::analytics::PendingMessageStorageImpl::PendingMessage>>, std::__1::allocator<std::__1::unique_ptr<spotify::analytics::PendingMessageStorageImpl::PendingMessage, std::__1::default_delete<spotify::analytics::PendingMessageStorageImpl::PendingMessage>>>> {
     struct unique_ptr<spotify::analytics::PendingMessageStorageImpl::PendingMessage, std::__1::default_delete<spotify::analytics::PendingMessageStorageImpl::PendingMessage>> *_field1;
     struct unique_ptr<spotify::analytics::PendingMessageStorageImpl::PendingMessage, std::__1::default_delete<spotify::analytics::PendingMessageStorageImpl::PendingMessage>> *_field2;
@@ -2960,7 +3025,7 @@ typedef struct map<std::__1::basic_string<char>, std::__1::basic_string<char>, s
             unsigned long long _field1;
         } _field3;
     } _field1;
-} map_0edfe763;
+} map_5554a4ce;
 
 typedef struct optional<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
     union {

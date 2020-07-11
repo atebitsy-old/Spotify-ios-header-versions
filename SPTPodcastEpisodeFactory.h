@@ -14,6 +14,9 @@
 {
 }
 
+- (unsigned long long)episodeTypeFromNumber:(id)arg1;
+- (unsigned long long)episodeTypeFromString:(id)arg1;
+- (unsigned long long)episodeTypeFromDictionary:(id)arg1;
 - (id)podcastEpisodeWithDictionary:(id)arg1 podcast:(id)arg2;
 
 // Remaining properties

@@ -19,16 +19,16 @@
     // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: crashReporterService
     // Error parsing type: , name: pageRegistrationToken
-    // Error parsing type: , name: remoteConfigurationResolver
+    // Error parsing type: , name: remoteConfigManager
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
 - (id)provideFollowFeedViewController;
+- (id)provideRemoteConfigManager;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
-@property(nonatomic, readonly) _Bool followFeedEnabled;
 
 @end
 

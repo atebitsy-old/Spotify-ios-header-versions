@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTNetworkConnectivityController;
-@protocol SPTHubContentOperationFactory, SPTOnDemandService, SPTPlayerFeature;
+@protocol SPTHubContentOperationFactory, SPTOnDemandService, SPTPlayerFeature, VISREFIntegrationManager;
 
 @interface SPTFreeTierTrackContentOperationFactory : NSObject
 {
@@ -15,15 +15,17 @@
     id <SPTOnDemandService> _onDemandService;
     id <SPTPlayerFeature> _playerService;
     SPTNetworkConnectivityController *_networkConnectivityController;
+    id <VISREFIntegrationManager> _visualRefreshIntegrationManager;
 }
 
+@property(retain, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
 @property(readonly, nonatomic) __weak SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;
 - (void).cxx_destruct;
 - (id)createContentOperationsForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignal:(id)arg3;
-- (id)initWithHubContentOperationFactory:(id)arg1 playerService:(id)arg2 onDemandService:(id)arg3 networkConnectivityController:(id)arg4;
+- (id)initWithHubContentOperationFactory:(id)arg1 playerService:(id)arg2 onDemandService:(id)arg3 networkConnectivityController:(id)arg4 visualRefreshIntegrationManager:(id)arg5;
 
 @end
 

@@ -13,23 +13,18 @@
 
 @interface SPTYourLibraryTestManagerImplementation : NSObject <SPTYourLibraryTestManager>
 {
-    _Bool _doubleTabYourLibraryEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTYourLibraryFeatureProperties *_remoteConfigurationProperties;
     id <SPTFeatureFlagSignal> _freeTierExperienceEnabledSignal;
-    id <SPTFeatureFlagSignal> _doubleTabYourLibraryEnabledSignal;
 }
 
-@property(nonatomic, getter=isDoubleTabYourLibraryEnabled) _Bool doubleTabYourLibraryEnabled; // @synthesize doubleTabYourLibraryEnabled=_doubleTabYourLibraryEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> doubleTabYourLibraryEnabledSignal; // @synthesize doubleTabYourLibraryEnabledSignal=_doubleTabYourLibraryEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierExperienceEnabledSignal; // @synthesize freeTierExperienceEnabledSignal=_freeTierExperienceEnabledSignal;
 @property(retain, nonatomic) SPTYourLibraryFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
 - (void)setupRemoteConfigurationProperties;
-- (void)setupMusicPodcastYourLibrarySignal;
 @property(readonly, nonatomic) long long persistActiveTabDurationHours;
 @property(readonly, nonatomic, getter=isPersistActiveTabEnabled) _Bool persistActiveTabEnabled;
 - (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2 freeTierExperienceEnabledSignal:(id)arg3;

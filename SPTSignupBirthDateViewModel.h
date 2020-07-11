@@ -6,21 +6,25 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginSplitEmailSignupViewLogger, SPTSignupAgeFieldValidator, SPTSignupUserInfoModel;
-@protocol SPTLoginNavigationCoordinator, SPTSignupBirthDateViewModelDelegate;
+@class SPTDynamicSignupFlowController, SPTLoginErrorDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupAgeFieldValidator, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
+@protocol SPTSignupBirthDateViewModelDelegate;
 
 @interface SPTSignupBirthDateViewModel : NSObject
 {
     id <SPTSignupBirthDateViewModelDelegate> _delegate;
     SPTLoginSplitEmailSignupViewLogger *_logger;
+    SPTSignupTermsAndPolicyViewModel *_termsAndPolicyViewModel;
+    SPTDynamicSignupFlowController *_flowController;
     SPTSignupAgeFieldValidator *_ageValidator;
     SPTSignupUserInfoModel *_userInfoModel;
-    id <SPTLoginNavigationCoordinator> _navigationCoordinator;
+    SPTLoginErrorDialogLogger *_dialogLogger;
 }
 
-@property(retain, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
+@property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(readonly, nonatomic) SPTSignupAgeFieldValidator *ageValidator; // @synthesize ageValidator=_ageValidator;
+@property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
+@property(readonly, nonatomic) SPTSignupTermsAndPolicyViewModel *termsAndPolicyViewModel; // @synthesize termsAndPolicyViewModel=_termsAndPolicyViewModel;
 @property(readonly, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTSignupBirthDateViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
@@ -36,7 +40,7 @@
 - (id)nextButtonText;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
-- (id)initWithAgeValidator:(id)arg1 userInfoModel:(id)arg2 logger:(id)arg3 navigationCoordinator:(id)arg4;
+- (id)initWithAgeValidator:(id)arg1 userInfoModel:(id)arg2 logger:(id)arg3 dialogLogger:(id)arg4 termsAndPolicyViewModel:(id)arg5 flowController:(id)arg6;
 
 @end
 

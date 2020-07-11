@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierTrackHubManager;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTFreeTierService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTFreeTierService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTURIDispatchService, SPTUserBehaviourInstrumentationService, SPTVisualRefreshIntegrationService;
 
 @interface SPTFreeTierTrackService : SPTUIPageService
 {
@@ -24,9 +24,11 @@
     id <SPTPlayerFeature> _playerService;
     id <SPTUserBehaviourInstrumentationService> _ubiService;
     SPTFreeTierTrackHubManager *_hubManager;
+    id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(retain, nonatomic) SPTFreeTierTrackHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;

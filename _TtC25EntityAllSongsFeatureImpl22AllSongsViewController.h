@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
-@interface _TtC25EntityAllSongsFeatureImpl22AllSongsViewController : SPViewController
+@interface _TtC25EntityAllSongsFeatureImpl22AllSongsViewController : UIViewController
 {
     // Error parsing type: , name: pageUri
     // Error parsing type: , name: theme
@@ -19,7 +19,6 @@
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
-- (void)sp_updateContentInsets;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

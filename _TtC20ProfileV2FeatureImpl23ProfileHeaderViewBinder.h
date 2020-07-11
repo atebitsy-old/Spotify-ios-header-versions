@@ -8,8 +8,9 @@
 
 @interface _TtC20ProfileV2FeatureImpl23ProfileHeaderViewBinder : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: headerContentView
+    // Error parsing type: , name: headerView
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: remoteConfigurationProperties
     // Error parsing type: , name: imageURL
 }
 

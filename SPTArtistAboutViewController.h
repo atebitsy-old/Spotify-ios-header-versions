@@ -81,7 +81,6 @@
 - (id)initWithViewModel:(id)arg1 contextMenuViewModel:(id)arg2 stateProvider:(id)arg3 glueImageLoader:(id)arg4 theme:(id)arg5 viewLogger:(id)arg6 logger:(id)arg7 linkDispatcher:(id)arg8;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

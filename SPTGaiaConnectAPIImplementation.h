@@ -10,17 +10,19 @@
 #import "SPTGaiaConnectManagerObserver-Protocol.h"
 #import "SPTGaiaConnectPublicStateCacheObserver-Protocol.h"
 
-@class NSArray, NSString, SPTGaiaConnectPublicStateCache, SPTObserverManager;
+@class NSArray, NSString, SPTCastManager, SPTGaiaConnectPublicStateCache, SPTObserverManager;
 @protocol SPTGaiaConnectManager, SPTGaiaDeviceProtocol, SPTGaiaLocalDeviceProtocol;
 
 @interface SPTGaiaConnectAPIImplementation : NSObject <SPTGaiaConnectManagerObserver, SPTGaiaConnectPublicStateCacheObserver, SPTGaiaConnectAPI>
 {
     id <SPTGaiaConnectManager> _connectManager;
     SPTGaiaConnectPublicStateCache *_connectStateCache;
+    SPTCastManager *_castManager;
     SPTObserverManager *_observers;
 }
 
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
+@property(readonly, nonatomic) SPTCastManager *castManager; // @synthesize castManager=_castManager;
 @property(readonly, nonatomic) SPTGaiaConnectPublicStateCache *connectStateCache; // @synthesize connectStateCache=_connectStateCache;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 - (void).cxx_destruct;
@@ -33,6 +35,8 @@
 - (void)connectManager:(id)arg1 availableDevicesDidChange:(id)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (_Bool)deviceRepresentsGroup:(id)arg1;
+- (_Bool)shouldShowCastLogoForDevice:(id)arg1;
 - (void)discoverDevices;
 - (void)renameDevice:(id)arg1 name:(id)arg2 responseBlock:(CDUnknownBlockType)arg3;
 - (void)deactivateActiveDeviceWithResponseBlock:(CDUnknownBlockType)arg1;
@@ -48,7 +52,7 @@
 @property(readonly, nonatomic) id <SPTGaiaDeviceProtocol> activeDevice;
 @property(readonly, nonatomic) NSArray *devices;
 - (void)dealloc;
-- (id)initWithConnectManager:(id)arg1 connectStateCache:(id)arg2;
+- (id)initWithConnectManager:(id)arg1 connectStateCache:(id)arg2 castManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

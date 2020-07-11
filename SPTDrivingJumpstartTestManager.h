@@ -6,33 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
-
-@class NSString, SPTObserverManager;
-@protocol SPTFeatureFlagSignal;
-
-@interface SPTDrivingJumpstartTestManager : NSObject <SPTFeatureFlagSignalObserver>
+@interface SPTDrivingJumpstartTestManager : NSObject
 {
     _Bool _jumpstartEnabled;
-    id <SPTFeatureFlagSignal> _jumpstartForegroundRolloutSignal;
-    SPTObserverManager *_observers;
 }
 
-@property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> jumpstartForegroundRolloutSignal; // @synthesize jumpstartForegroundRolloutSignal=_jumpstartForegroundRolloutSignal;
 @property(nonatomic) _Bool jumpstartEnabled; // @synthesize jumpstartEnabled=_jumpstartEnabled;
-- (void).cxx_destruct;
-- (void)removeObserver:(id)arg1;
-- (void)addObserver:(id)arg1;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)dealloc;
-- (id)initWithFeatureFlagFactory:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)initWithRemoteConfiguration:(id)arg1;
 
 @end
 

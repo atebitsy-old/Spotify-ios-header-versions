@@ -7,6 +7,8 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTDrivingModeRemoteConfiguration <NSObject>
+@property(readonly, nonatomic, getter=isJumpstartInForegroundEnabled) _Bool jumpstartInForeground;
+@property(readonly, nonatomic, getter=isMotionBasedDetectionSurveyEnabled) _Bool motionBasedDetectionSurvey;
 @property(readonly, nonatomic, getter=isHomeFeedEnabled) _Bool drivingCarViewHomeFeed;
 @property(readonly, nonatomic, getter=isScreenlockPreventionEnabled) _Bool screenlockPreventionEnabled;
 @property(readonly, nonatomic, getter=isSwipeToSkipEnabled) _Bool swipeToSkipEnabled;

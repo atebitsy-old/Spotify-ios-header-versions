@@ -16,10 +16,15 @@
     // Error parsing type: , name: $__lazy_storage_$_secondaryIconImageView
     // Error parsing type: , name: $__lazy_storage_$_secondaryLabel
     // Error parsing type: , name: $__lazy_storage_$_contextMenuButton
+    // Error parsing type: , name: isDisabled
     // Error parsing type: , name: contentToContextMenuButtonConstraint
     // Error parsing type: , name: contextMenuWidthConstraint
     // Error parsing type: , name: mainLabelToSecondaryViewConstraint
     // Error parsing type: , name: secondaryViewHeightConstraint
+    // Error parsing type: , name: secondaryIconViewToSecondaryLabelConstraint
+    // Error parsing type: , name: secondaryIconWidthConstraint
+    // Error parsing type: , name: mainIcon
+    // Error parsing type: , name: secondaryIcon
 }
 
 - (void).cxx_destruct;

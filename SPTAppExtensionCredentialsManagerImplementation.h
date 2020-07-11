@@ -23,12 +23,15 @@
 - (id)setHermesAccessToken:(id)arg1;
 - (_Bool)deleteHermesAccessToken;
 - (id)hermesAccessToken;
+- (id)ESDKCredentials;
+- (_Bool)deleteESDKCredentials;
+- (id)setESDKCredentials:(id)arg1;
 - (id)storedLoginSession;
 - (_Bool)deleteStoredLoginSession;
 - (id)setStoredLoginSession:(id)arg1;
-- (id)appExtensionCredentials;
-- (_Bool)deleteAppExtensionCredentials;
-- (id)setAppExtensionCredentials:(id)arg1;
+- (id)coreCredentials;
+- (_Bool)deleteCoreCredentials;
+- (id)setCoreCredentials:(id)arg1;
 - (id)initWithAccessGroup:(long long)arg1;
 
 // Remaining properties

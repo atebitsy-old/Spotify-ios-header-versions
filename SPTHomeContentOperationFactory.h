@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDataLoaderFactory, SPTHomeContentCache, SPTNetworkConnectivityController;
+@class SPTDataLoaderFactory, SPTHomeContentCache, SPTHomeFeatureProperties, SPTNetworkConnectivityController;
 @protocol SPTFeatureSettingsItemFactory, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTPodcastUIContinueListeningService, SPTRecentlyPlayedService, SPTSnackbarService, SPTUserBehaviourHubsInstrumentation;
 
 @interface SPTHomeContentOperationFactory : NSObject
@@ -24,10 +24,12 @@
     id <SPTFreeTierTasteOnboardingCurationProvider> _tasteOnboardingCurationProvider;
     id <SPTLocalSettings> _localSettings;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
+    SPTHomeFeatureProperties *_featureProperties;
     id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
 }
 
 @property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) SPTHomeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingCurationProvider> tasteOnboardingCurationProvider; // @synthesize tasteOnboardingCurationProvider=_tasteOnboardingCurationProvider;
@@ -53,7 +55,7 @@
 - (id)provideOnDemandDecoratorContentOperation;
 - (id)provideCardAccessibilityContentOperation;
 - (id)provideRecentlyPlayedContentOperation;
-- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 podcastUIContinueListeningService:(id)arg3 offlineService:(id)arg4 snackbarService:(id)arg5 networkConnectivityController:(id)arg6 homeContentCache:(id)arg7 dataLoaderFactory:(id)arg8 testManager:(id)arg9 player:(id)arg10 tasteOnboardingCurationProvider:(id)arg11 localSettings:(id)arg12 featureSettingsItemFactory:(id)arg13 ubiHubsInstrumentation:(id)arg14;
+- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 podcastUIContinueListeningService:(id)arg3 offlineService:(id)arg4 snackbarService:(id)arg5 networkConnectivityController:(id)arg6 homeContentCache:(id)arg7 dataLoaderFactory:(id)arg8 testManager:(id)arg9 player:(id)arg10 tasteOnboardingCurationProvider:(id)arg11 localSettings:(id)arg12 featureSettingsItemFactory:(id)arg13 featureProperties:(id)arg14 ubiHubsInstrumentation:(id)arg15;
 
 @end
 

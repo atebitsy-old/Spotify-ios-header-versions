@@ -29,8 +29,7 @@
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)curateWithType:(id)arg1 sourceIdentifier:(id)arg2 sessionId:(id)arg3;
 - (void)curateArtistTasteForSessionId:(id)arg1;
-@property(readonly, nonatomic, getter=isInitialCurationCompleted) _Bool initialCurationCompleted;
-- (id)initWithDataLoader:(id)arg1 localSettings:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 localSettings:(id)arg2 observerManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

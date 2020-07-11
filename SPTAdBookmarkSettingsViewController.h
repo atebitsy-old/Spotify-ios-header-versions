@@ -6,6 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPContentInsetViewController-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTSavedAdsViewModelDelegate-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
@@ -15,7 +16,7 @@
 @class GLUELabel, NSString, NSURL, SPTAdBookmarkSettingsTrailingAccessoryView, SPTFreeTierPreCurationTheme, SPTSavedAdsViewModel, SPTTableView;
 @protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTLinkDispatcher, SPTLogCenter, SPTPageContainer, SPTSnackbarConditionalPresenter;
 
-@interface SPTAdBookmarkSettingsViewController : UIViewController <SPTSavedAdsViewModelDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, SPTPageController>
+@interface SPTAdBookmarkSettingsViewController : UIViewController <SPTSavedAdsViewModelDelegate, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate, SPContentInsetViewController, SPTPageController>
 {
     SPTSavedAdsViewModel *_viewModel;
     SPTAdBookmarkSettingsTrailingAccessoryView *_trailingAccessoryView;
@@ -46,6 +47,7 @@
 - (void).cxx_destruct;
 - (void)updateUI;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
+- (void)sp_updateContentInsets;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)setupTrailingAccessoryForCell:(id)arg1 forEntity:(id)arg2;
@@ -60,6 +62,7 @@
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)addConstraints;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithViewModel:(id)arg1 glueImageLoader:(id)arg2 linkDispatcher:(id)arg3 logCenter:(id)arg4 cosmosBridge:(id)arg5 audioPreviewModelFactory:(id)arg6 audioPreviewUIFactory:(id)arg7 snackbarPresenter:(id)arg8 theme:(id)arg9;
 

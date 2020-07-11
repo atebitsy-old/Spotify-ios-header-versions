@@ -12,6 +12,5 @@
 @property(readonly, nonatomic, getter=isOnboardingCoordinationEnabled) _Bool onboardingCoordinationEnabled;
 - (id <SPTOnboardingFlowCoordinator>)provideCoordinator;
 - (id <SPTFreeTierTasteOnboardingCurationProvider>)provideCurator;
-- (_Bool)isMinimumTasteGatheringCompleted;
 @end
 

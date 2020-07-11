@@ -9,7 +9,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString, SPTObserverManager;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory;
+@protocol SPTDrivingModeRemoteConfiguration, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory;
 
 @interface SPTDrivingStateTestManager : NSObject <SPTFeatureFlagSignalObserver>
 {
@@ -18,12 +18,12 @@
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
     id <SPTFeatureFlagSignal> _debugCarConnectedSignal;
-    id <SPTFeatureFlagSignal> _drivingSurveyEnabledSignal;
     SPTObserverManager *_observers;
+    id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
 }
 
+@property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> drivingSurveyEnabledSignal; // @synthesize drivingSurveyEnabledSignal=_drivingSurveyEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> debugCarConnectedSignal; // @synthesize debugCarConnectedSignal=_debugCarConnectedSignal;
 @property(retain, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
@@ -35,7 +35,7 @@
 - (void)addObserver:(id)arg1;
 - (void)dealloc;
 - (void)setupFlags;
-- (id)initWithFeatureFlagFactory:(id)arg1 featureSettingsItemFactory:(id)arg2;
+- (id)initWithFeatureFlagFactory:(id)arg1 featureSettingsItemFactory:(id)arg2 remoteConfiguration:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

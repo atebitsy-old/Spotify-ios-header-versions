@@ -11,10 +11,11 @@
 #import "SPTService-Protocol.h"
 
 @class NSDate, NSString, SPTAccessory, SPTAllocationContext, SPTDrivingDetectionFeedbackController, SPTDrivingDetectorMiddleware, SPTDrivingMotionBasedStateDetector, SPTDrivingMotionDetectionLoaderResult, SPTDrivingStateDetectorImplementation;
-@protocol SPTAccessoryManagerService, SPTExternalIntegrationDebugLogService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTSettingsFeature, SPTUIPresentationService, SlateFeature;
+@protocol SPTAccessoryManagerService, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationDebugLogService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTRemoteConfigurationService, SPTSettingsFeature, SPTUIPresentationService, SlateFeature;
 
 @interface SPTDrivingDetectionServiceImplementation : NSObject <SPTDrivingStateTestManagerObserver, SPTService, SPTDrivingStateDetectionService>
 {
+    id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
     SPTAccessory *_debugCarAccessory;
     id <SPTAccessoryManagerService> _accessoryManagerService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
@@ -23,6 +24,7 @@
     id <SlateFeature> _slateService;
     id <SPTGLUEService> _glueService;
     id <SPTSettingsFeature> _settingsService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUIPresentationService> _UIPresentationService;
     SPTDrivingStateDetectorImplementation *_accessoryBasedDrivingDetector;
     SPTDrivingMotionBasedStateDetector *_motionBasedDrivingDetector;
@@ -40,6 +42,7 @@
 @property(retain, nonatomic) SPTDrivingMotionBasedStateDetector *motionBasedDrivingDetector; // @synthesize motionBasedDrivingDetector=_motionBasedDrivingDetector;
 @property(retain, nonatomic) SPTDrivingStateDetectorImplementation *accessoryBasedDrivingDetector; // @synthesize accessoryBasedDrivingDetector=_accessoryBasedDrivingDetector;
 @property(nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
@@ -58,6 +61,7 @@
 - (void)testManager:(id)arg1 didChangeDebugCarConnectedEnabled:(_Bool)arg2;
 - (id)provideMotionAndOrAccessoryDetector;
 - (id)provideDrivingDetector;
+@property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

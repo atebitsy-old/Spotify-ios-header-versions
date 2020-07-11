@@ -6,23 +6,27 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, SPTLoginSplitEmailSignupViewLogger, SPTSignupUserInfoModel;
-@protocol SPTLoginNavigationCoordinator, SPTSignupGenderViewModelDelegate;
+@class NSArray, SPTDynamicSignupFlowController, SPTLoginErrorDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
+@protocol SPTSignupGenderViewModelDelegate;
 
 @interface SPTSignupGenderViewModel : NSObject
 {
     id <SPTSignupGenderViewModelDelegate> _delegate;
     SPTLoginSplitEmailSignupViewLogger *_logger;
+    SPTDynamicSignupFlowController *_flowController;
+    SPTSignupTermsAndPolicyViewModel *_termsAndPolicyViewModel;
     SPTSignupUserInfoModel *_userInfoModel;
     NSArray *_localizedGenders;
     NSArray *_backendDefinedGenders;
-    id <SPTLoginNavigationCoordinator> _navigationCoordinator;
+    SPTLoginErrorDialogLogger *_dialogLogger;
 }
 
-@property(retain, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
+@property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(retain, nonatomic) NSArray *backendDefinedGenders; // @synthesize backendDefinedGenders=_backendDefinedGenders;
 @property(retain, nonatomic) NSArray *localizedGenders; // @synthesize localizedGenders=_localizedGenders;
 @property(readonly, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
+@property(retain, nonatomic) SPTSignupTermsAndPolicyViewModel *termsAndPolicyViewModel; // @synthesize termsAndPolicyViewModel=_termsAndPolicyViewModel;
+@property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTSignupGenderViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
@@ -34,7 +38,7 @@
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
 @property(nonatomic) long long selectedIndex;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 navigationCoordinator:(id)arg3;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 dialogLogger:(id)arg3 termsAndPolicyViewModel:(id)arg4 flowController:(id)arg5;
 
 @end
 

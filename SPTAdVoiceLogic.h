@@ -18,6 +18,7 @@
 + (CDUnknownBlockType)adSlotsCleared:(id)arg1;
 + (CDUnknownBlockType)speechRecognitionError:(id)arg1;
 + (CDUnknownBlockType)speechIntentRecognized:(id)arg1;
++ (CDUnknownBlockType)SpeechTranscriptReceived:(id)arg1;
 + (CDUnknownBlockType)speechResponseReceived:(id)arg1;
 + (CDUnknownBlockType)listeningPeriodStarted:(id)arg1;
 + (CDUnknownBlockType)speechSessionStarted:(id)arg1;

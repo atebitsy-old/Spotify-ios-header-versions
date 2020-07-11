@@ -6,11 +6,12 @@
 
 #import "SPTService-Protocol.h"
 
-@class SPTLoginDelayedSignupAccountSwitcher, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter;
+@class SPTDynamicSignupFlowController, SPTLoginDelayedSignupAccountSwitcher, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter;
 @protocol SPTCredentialSource, SPTDialogController, SPTLoginKeychainManager, SPTLoginLogoutHandler, SPTLoginNavigationCoordinator, SPTLoginServiceObserver, SPTLoginStateController, SPTSignupAttemptTracker;
 
 @protocol SPTLoginService <SPTService>
 @property(readonly, nonatomic) _Bool userDidAuthenticateWithGuestAccount;
+- (SPTDynamicSignupFlowController *)provideDynamicFlowController;
 - (id <SPTSignupAttemptTracker>)provideSignupAttemptTracker;
 - (id <SPTLoginNavigationCoordinator>)provideNavigationCoordinator;
 - (SPTLoginDelayedSignupAccountSwitcher *)provideAccountSwitcher;

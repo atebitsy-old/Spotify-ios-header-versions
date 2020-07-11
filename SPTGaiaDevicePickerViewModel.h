@@ -9,14 +9,17 @@
 #import "SPTCastManagerObserver-Protocol.h"
 #import "SPTGaiaDevicePickerDevicesProviderDelegate-Protocol.h"
 #import "SPTGaiaHomeDeviceTooltipManagerDelegate-Protocol.h"
+#import "SPTGaiaSocialListeningIntegrationManagerObserver-Protocol.h"
 #import "SPTGaiaWirelessRoutesObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, SPTCastManager, SPTGaiaConnectDevice, SPTGaiaDeviceAppearanceMapping, SPTGaiaDevicePickerAppearanceManager, SPTGaiaDevicePickerDevicesProvider, SPTGaiaEducationDetailModelManager, SPTGaiaHomeDeviceManager, SPTGaiaHomeDeviceTooltipManager, SPTGaiaLogger, SPTGaiaSocialListeningIntegrationManager, SPTPlayerState;
 @protocol SPTGaiaContextMenuModelProvider, SPTGaiaDevicePickerFlagsProvider, SPTGaiaDevicePickerViewModelDelegate, SPTGaiaWirelessRoutesAPI, SPTPlayer;
 
-@interface SPTGaiaDevicePickerViewModel : NSObject <SPTGaiaWirelessRoutesObserver, SPTGaiaDevicePickerDevicesProviderDelegate, SPTPlayerObserver, SPTCastManagerObserver, SPTGaiaHomeDeviceTooltipManagerDelegate>
+@interface SPTGaiaDevicePickerViewModel : NSObject <SPTGaiaWirelessRoutesObserver, SPTGaiaDevicePickerDevicesProviderDelegate, SPTPlayerObserver, SPTCastManagerObserver, SPTGaiaHomeDeviceTooltipManagerDelegate, SPTGaiaSocialListeningIntegrationManagerObserver>
 {
+    _Bool _activeDeviceSocialFlagAvailable;
+    _Bool _activeDeviceSocialFlagValue;
     _Bool _playbackRestricted;
     id <SPTGaiaDevicePickerViewModelDelegate> _delegate;
     id <SPTGaiaWirelessRoutesAPI> _wirelessRoutesManager;
@@ -51,12 +54,16 @@
 @property(readonly, nonatomic) SPTGaiaDevicePickerDevicesProvider *devicesProvider; // @synthesize devicesProvider=_devicesProvider;
 @property(readonly, nonatomic) id <SPTGaiaWirelessRoutesAPI> wirelessRoutesManager; // @synthesize wirelessRoutesManager=_wirelessRoutesManager;
 @property(nonatomic) __weak id <SPTGaiaDevicePickerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) _Bool activeDeviceSocialFlagValue; // @synthesize activeDeviceSocialFlagValue=_activeDeviceSocialFlagValue;
+@property(readonly, nonatomic) _Bool activeDeviceSocialFlagAvailable; // @synthesize activeDeviceSocialFlagAvailable=_activeDeviceSocialFlagAvailable;
 - (void).cxx_destruct;
+- (void)socialListeningIntegrationManagerUpdated:(id)arg1;
 - (void)homeDeviceEducationManagerDeviceShowingTooltipChanged:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)devicesProviderActiveItemDidChange:(id)arg1;
 - (void)devicesProviderConnectingItemDidChange:(id)arg1;
 - (void)devicesProviderItemsDidChange:(id)arg1;
+- (void)fetchSocialDevicesForLocalDevices;
 - (void)wirelessActiveDeviceDidChange;
 - (void)wirelessRoutesDidChangeAvailability:(_Bool)arg1;
 - (void)castManager:(id)arg1 deviceConnectivityDidChange:(id)arg2;

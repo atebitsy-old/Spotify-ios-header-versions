@@ -8,7 +8,7 @@
 
 #import "SPTDataLoaderDelegate-Protocol.h"
 
-@class NSNotificationCenter, NSString, SPTDataLoader;
+@class NSNotificationCenter, NSString, SPTDataLoader, SPTLogin5TestManager;
 @protocol SPTLoginRecoverAccountDataLoaderDelegate;
 
 @interface SPTLoginRecoverAccountDataLoader : NSObject <SPTDataLoaderDelegate>
@@ -16,10 +16,12 @@
     id <SPTLoginRecoverAccountDataLoaderDelegate> delegate;
     SPTDataLoader *_dataLoader;
     NSNotificationCenter *_notificationCenter;
+    SPTLogin5TestManager *_login5TestManager;
 }
 
-@property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
-@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(readonly, nonatomic) SPTLogin5TestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
+@property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
+@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTLoginRecoverAccountDataLoaderDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
@@ -29,7 +31,7 @@
 - (void)cancelRequest;
 - (void)requestLoginLinkForEmailOrUsername:(id)arg1;
 - (void)dealloc;
-- (id)initWithDataLoader:(id)arg1 notificationCenter:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 notificationCenter:(id)arg2 login5TestManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

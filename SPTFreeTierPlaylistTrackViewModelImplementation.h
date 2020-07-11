@@ -54,6 +54,7 @@
 @property(readonly, nonatomic) NSString *freeformDescription;
 @property(readonly, nonatomic) NSURL *videoThumbnailURL;
 @property(readonly, copy, nonatomic) NSString *previewID;
+@property(readonly, copy, nonatomic) NSArray *artistNames;
 @property(readonly, nonatomic) NSURL *albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName;
 @property(readonly, nonatomic, getter=isEpisode) _Bool episode;

@@ -112,7 +112,6 @@
 - (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 logger:(id)arg4 linkDispatcher:(id)arg5 alertController:(id)arg6;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

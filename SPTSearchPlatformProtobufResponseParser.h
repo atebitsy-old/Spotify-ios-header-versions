@@ -9,31 +9,29 @@
 #import "SPTSearchPlatformResponseParser-Protocol.h"
 
 @class HUBViewModelBuilderFactory, NSString, NSURL;
-@protocol SPTExplicitContentAccessManager, SPTSearch2EmptyStatePropertiesProvider, SPTUserBehaviourHubsInstrumentation, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@protocol SPTExplicitContentAccessManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchUBILocationSerializer, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchPlatformProtobufResponseParser : NSObject <SPTSearchPlatformResponseParser>
 {
     _Bool _nftExperience;
     _Bool _isDrillDown;
-    _Bool _newCarouselEnabled;
     NSURL *_pageURI;
     HUBViewModelBuilderFactory *_viewModelBuilderFactory;
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubs;
+    id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
     NSString *_query;
     unsigned long long _podcastRowsType;
     NSString *_referrerIdentifier;
 }
 
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
-@property(readonly, nonatomic) _Bool newCarouselEnabled; // @synthesize newCarouselEnabled=_newCarouselEnabled;
 @property(readonly, nonatomic) unsigned long long podcastRowsType; // @synthesize podcastRowsType=_podcastRowsType;
 @property(readonly, nonatomic) _Bool isDrillDown; // @synthesize isDrillDown=_isDrillDown;
 @property(readonly, nonatomic) _Bool nftExperience; // @synthesize nftExperience=_nftExperience;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
+@property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
@@ -62,7 +60,7 @@
 - (id)parseDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
 - (id)parseMainResponse:(id)arg1 requestID:(id)arg2 error:(id *)arg3;
 - (id)parse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
-- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 userTierProvider:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 podcastRowsType:(unsigned long long)arg9 newCarouselEnabled:(_Bool)arg10 ubiHubs:(id)arg11 referrerIdentifier:(id)arg12;
+- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 userTierProvider:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 podcastRowsType:(unsigned long long)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

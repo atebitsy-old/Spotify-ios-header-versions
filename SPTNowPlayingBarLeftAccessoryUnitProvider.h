@@ -8,7 +8,7 @@
 
 #import "SPTNowPlayingTestManagerObserver-Protocol.h"
 
-@class NSString, SPTNowPlayingBarModel, SPTNowPlayingLogger, SPTNowPlayingModel, SPTTheme, UIViewController;
+@class NSString, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingModel, SPTTheme, UIViewController;
 @protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingManager, SPTNowPlayingTestManager;
 
 @interface SPTNowPlayingBarLeftAccessoryUnitProvider : SPTNowPlayingBaseUnitProvider <SPTNowPlayingTestManagerObserver>
@@ -19,7 +19,7 @@
     UIViewController *_leftAccessoryViewController;
     SPTNowPlayingModel *_nowPlayingModel;
     id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
-    SPTNowPlayingLogger *_logger;
+    SPTNowPlayingBarLogger *_logger;
     id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
     SPTNowPlayingBarModel *_nowPlayingBarModel;
     id <BMVideoSurfaceManager> _videoSurfaceManager;
@@ -28,7 +28,7 @@
 @property(readonly, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(readonly, nonatomic) SPTNowPlayingBarModel *nowPlayingBarModel; // @synthesize nowPlayingBarModel=_nowPlayingBarModel;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-@property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTNowPlayingBarLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(retain, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(retain, nonatomic) UIViewController *leftAccessoryViewController; // @synthesize leftAccessoryViewController=_leftAccessoryViewController;

@@ -9,18 +9,20 @@
 #import "SPTImageResolveService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTImageResolveManager;
-@protocol SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService;
+@protocol CosmosFeature, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService;
 
 @interface SPTImageResolveServiceImplementation : NSObject <SPTImageResolveService>
 {
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTNetworkService> _networkService;
     id <SPTSessionService> _sessionService;
+    id <CosmosFeature> _cosmosService;
     SPTImageResolveManager *_imageResolveManager;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTImageResolveManager *imageResolveManager; // @synthesize imageResolveManager=_imageResolveManager;
+@property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;

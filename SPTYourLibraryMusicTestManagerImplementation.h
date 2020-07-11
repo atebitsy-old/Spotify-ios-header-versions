@@ -15,7 +15,6 @@
 @interface SPTYourLibraryMusicTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTYourLibraryMusicTestManager>
 {
     _Bool _premiumLabelEnabled;
-    _Bool _doubleTabYourLibraryEnabled;
     _Bool _consolidatedExperienceEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
@@ -23,17 +22,14 @@
     SPTYourLibraryMusicFeatureProperties *_remoteConfigurationProperties;
     id <SPTCollectionPlatformTestManager> _collectionPlatformTestManager;
     id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> _encoreTestManager;
-    id <SPTFeatureFlagSignal> _yourLibrarySignal;
     id <SPTFeatureFlagSignal> _windowedTrackTestSignal;
     id <SPTFeatureFlagSignal> _consolidatedExperienceSignal;
 }
 
 @property(nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled; // @synthesize consolidatedExperienceEnabled=_consolidatedExperienceEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> consolidatedExperienceSignal; // @synthesize consolidatedExperienceSignal=_consolidatedExperienceSignal;
-@property(nonatomic, getter=isDoubleTabYourLibraryEnabled) _Bool doubleTabYourLibraryEnabled; // @synthesize doubleTabYourLibraryEnabled=_doubleTabYourLibraryEnabled;
 @property(nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled; // @synthesize premiumLabelEnabled=_premiumLabelEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> windowedTrackTestSignal; // @synthesize windowedTrackTestSignal=_windowedTrackTestSignal;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> yourLibrarySignal; // @synthesize yourLibrarySignal=_yourLibrarySignal;
 @property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> encoreTestManager; // @synthesize encoreTestManager=_encoreTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
 @property(retain, nonatomic) SPTYourLibraryMusicFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
@@ -43,7 +39,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isAssistedCurationInLikedSongsEnabled) _Bool assistedCurationInLikedSongsEnabled;
 @property(readonly, nonatomic, getter=isFrecencySortOrderDefaultInPlaylistsEnabled) _Bool frecencySortOrderDefaultInPlaylistsEnabled;
-@property(readonly, nonatomic, getter=isBookmarkModelEnabled) _Bool bookmarkModelEnabled;
 @property(readonly, nonatomic) unsigned long long likedSongsTagMechanism;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
@@ -54,7 +49,7 @@
 - (void)handleWindowedTrackSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupIsPremiumOnlySignal;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 remoteConfigurationResolver:(id)arg3 collectionPlatformTestManager:(id)arg4 yourLibrarySignal:(id)arg5 consolidatedExperienceSignal:(id)arg6 encoreTestManager:(id)arg7;
+- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 remoteConfigurationResolver:(id)arg3 collectionPlatformTestManager:(id)arg4 consolidatedExperienceSignal:(id)arg5 encoreTestManager:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

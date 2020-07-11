@@ -88,7 +88,6 @@
 - (id)initWithFindViewController:(id)arg1 interfaceFactory:(id)arg2 voiceService:(id)arg3 scannablesService:(id)arg4 logger:(id)arg5 mainContentLayoutGuide:(id)arg6 theme:(id)arg7;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

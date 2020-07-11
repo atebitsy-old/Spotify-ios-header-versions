@@ -12,7 +12,7 @@
 #import "SPTProductStateObserver-Protocol.h"
 
 @class NSString, NSURL, SPTFreeTierPlaylistFeatureProperties, SPTFreeTierPlaylistModelEntityImplementation, SPTObserverManager;
-@protocol SPTClientSettings, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTExplicitContentAccessManager, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistTestManager, SPTOnDemandSet, SPTPlaylistModel, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState;
+@protocol SPTClientSettings, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTExplicitContentAccessManager, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistTestManager, SPTOnDemandSet, SPTPlaylistModel, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTFreeTierPlaylistModelImplementation : NSObject <SPTProductStateObserver, SPTExplicitContentEnabledStateObserver, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistSortingFilteringDelegate>
 {
@@ -29,6 +29,7 @@
     id <SPTClientSettings> _clientSettings;
     id <SPTProductState> _productState;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
     id <SPTFreeTierPlaylistTestManager> _testManager;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
     NSString *_formatListType;
@@ -53,6 +54,7 @@
 @property(copy, nonatomic) NSString *formatListType; // @synthesize formatListType=_formatListType;
 @property(retain, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
@@ -89,7 +91,7 @@
 - (void)playlistContainsTrackURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)toggleLikedStateOnTrackEntity:(id)arg1;
 - (void)toggleBannedStateOnTrackEntity:(id)arg1;
-- (_Bool)isPlaybackRestrictedForTrackEntity:(id)arg1 playbackPrevented:(_Bool)arg2;
+- (_Bool)isPlaybackRestrictedForTrackEntity:(id)arg1 shouldDisplayExplainingAlert:(_Bool)arg2 coverArtURL:(id)arg3;
 @property(readonly, nonatomic, getter=isOfflineSyncPermissionEnabled) _Bool offlineSyncPermissionEnabled;
 - (void)changeOffline:(_Bool)arg1;
 - (void)loadMore;
@@ -108,7 +110,7 @@
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (void)dealloc;
-- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 testManager:(id)arg11 featureProperties:(id)arg12 formatListType:(id)arg13;
+- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 ageVerificationProvider:(id)arg11 testManager:(id)arg12 featureProperties:(id)arg13 formatListType:(id)arg14;
 @property(readonly, nonatomic, getter=isCappedOverridenByXCUITest) _Bool cappedOverridenByXCUITest;
 
 // Remaining properties

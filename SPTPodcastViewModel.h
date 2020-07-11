@@ -12,7 +12,7 @@
 #import "SPTPodcastEpisodeProgressPolling-Protocol.h"
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 
-@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastSortingService;
+@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastFeatureProperties, SPTPodcastSortingService;
 @protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTFreeTierEntityFeedbackButtonViewModel, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastFactory, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate;
 
 @interface SPTPodcastViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeProgressPolling>
@@ -45,8 +45,10 @@
     NSString *_filterOnLastUpdate;
     NSPredicate *_filterPredicate;
     id <SPTPodcastDataLoaderRequestToken> _podcastRequestToken;
+    SPTPodcastFeatureProperties *_featureProperties;
 }
 
+@property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> podcastRequestToken; // @synthesize podcastRequestToken=_podcastRequestToken;
 @property(nonatomic, getter=isInitialLoadComplete) _Bool initialLoadComplete; // @synthesize initialLoadComplete=_initialLoadComplete;
 @property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
@@ -126,7 +128,7 @@
 @property(readonly, nonatomic) NSString *publisher;
 @property(readonly, nonatomic) NSString *title;
 - (void)dealloc;
-- (id)initWithPodcastURL:(id)arg1 dataLoader:(id)arg2 player:(id)arg3 sortingService:(id)arg4 logger:(id)arg5 collectionPlatform:(id)arg6 explicitContentAccessManager:(id)arg7 testManager:(id)arg8 uiTestManager:(id)arg9;
+- (id)initWithPodcastURL:(id)arg1 dataLoader:(id)arg2 player:(id)arg3 sortingService:(id)arg4 logger:(id)arg5 collectionPlatform:(id)arg6 explicitContentAccessManager:(id)arg7 testManager:(id)arg8 uiTestManager:(id)arg9 featureProperties:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -13,8 +13,8 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSNotificationCenter, NSString, NSURL, SPTGaiaDevicePickerBackgroundView, SPTGaiaDevicePickerView, SPTGaiaDevicePickerViewModel, SPTGaiaLogger, SPTGaiaSocialListeningIntegrationManager, SPTObserverManager, SPTStatusBarManager, SPTStatusBarToken, UIView;
-@protocol SPTGaiaDevicePickerDeviceSpecificConfigurationProvider, SPTGaiaDevicePickerHeader, SPTGaiaDevicePickerViewInjector, SPTModalPresentationController, SPTPageContainer;
+@class NSNotificationCenter, NSString, NSURL, SPTGaiaDependencyInjectorImplementation, SPTGaiaDevicePickerBackgroundView, SPTGaiaDevicePickerView, SPTGaiaDevicePickerViewModel, SPTGaiaLogger, SPTGaiaSocialListeningIntegrationManager, SPTObserverManager, SPTStatusBarManager, SPTStatusBarToken, UIView;
+@protocol SPTGaiaDevicePickerDeviceSpecificConfigurationProvider, SPTGaiaDevicePickerHeader, SPTModalPresentationController, SPTPageContainer;
 
 @interface SPTGaiaDevicePickerViewController : UIViewController <SPTGaiaDevicePickerViewModelDelegate, UITableViewDelegate, UITableViewDataSource, SPTGaiaContextMenuViewControllerDelegate, SPTGaiaDevicePicker, SPTPageController>
 {
@@ -27,7 +27,7 @@
     id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> _deviceConfiguration;
     SPTStatusBarManager *_statusBarManager;
     SPTGaiaSocialListeningIntegrationManager *_socialListeningManager;
-    id <SPTGaiaDevicePickerViewInjector> _viewInjector;
+    SPTGaiaDependencyInjectorImplementation *_viewInjector;
     SPTGaiaDevicePickerView *_devicePickerView;
     SPTGaiaDevicePickerBackgroundView *_devicePickerBackgroundView;
     UIView<SPTGaiaDevicePickerHeader> *_headerView;
@@ -43,7 +43,7 @@
 @property(retain, nonatomic) UIView<SPTGaiaDevicePickerHeader> *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) SPTGaiaDevicePickerBackgroundView *devicePickerBackgroundView; // @synthesize devicePickerBackgroundView=_devicePickerBackgroundView;
 @property(retain, nonatomic) SPTGaiaDevicePickerView *devicePickerView; // @synthesize devicePickerView=_devicePickerView;
-@property(readonly, nonatomic) id <SPTGaiaDevicePickerViewInjector> viewInjector; // @synthesize viewInjector=_viewInjector;
+@property(readonly, nonatomic) SPTGaiaDependencyInjectorImplementation *viewInjector; // @synthesize viewInjector=_viewInjector;
 @property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 @property(readonly, nonatomic) SPTStatusBarManager *statusBarManager; // @synthesize statusBarManager=_statusBarManager;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> deviceConfiguration; // @synthesize deviceConfiguration=_deviceConfiguration;

@@ -68,7 +68,7 @@
 - (void)viewModel:(id)arg1 didFinishLoadingWithError:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sp_updateContentInsets;
 - (void)tryAgainButtonTapped:(id)arg1;
 - (void)hideInfoView;

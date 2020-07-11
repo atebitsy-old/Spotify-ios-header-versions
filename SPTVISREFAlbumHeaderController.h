@@ -6,12 +6,13 @@
 
 #import "VISREFBaseHeaderController.h"
 
+#import "SPTImageLoaderDelegate-Protocol.h"
 #import "VISREFHubHeaderController-Protocol.h"
 
-@class NSString, VISREFArtworkContentView, VISREFCustomBackButton, VISREFGradientBackgroundView, VISREFHeaderView, VISREFPlayButtonForegroundView;
-@protocol GLUETheme, HUBComponentEventHandler, HUBComponentModel, SPTFreeTierEntityContextMenuButtonViewModel, SPTFreeTierEntityFeedbackButtonViewModel, SPTFreeTierEntityOfflineViewModel, VISREFPlayButtonTestManager;
+@class NSString, NSURL, UIImage, VISREFArtworkContentView, VISREFCustomBackButton, VISREFGradientBackgroundView, VISREFHeaderView, VISREFPlayButtonForegroundView;
+@protocol GLUETheme, HUBComponentEventHandler, HUBComponentModel, SPTFreeTierEntityContextMenuButtonViewModel, SPTFreeTierEntityFeedbackButtonViewModel, SPTFreeTierEntityOfflineViewModel, SPTImageLoader, SPTLinkDispatcher;
 
-@interface SPTVISREFAlbumHeaderController : VISREFBaseHeaderController <VISREFHubHeaderController>
+@interface SPTVISREFAlbumHeaderController : VISREFBaseHeaderController <SPTImageLoaderDelegate, VISREFHubHeaderController>
 {
     double _headerHeight;
     double _navigationBarHeight;
@@ -26,11 +27,17 @@
     id <SPTFreeTierEntityFeedbackButtonViewModel> _followButtonModel;
     id <SPTFreeTierEntityContextMenuButtonViewModel> _contextMenuButtonModel;
     id <SPTFreeTierEntityOfflineViewModel> _offlineButtonModel;
-    id <VISREFPlayButtonTestManager> _playButtonTestManager;
+    id <SPTImageLoader> _imageLoader;
+    NSURL *_lastCreatorImageURL;
+    UIImage *_creatorImage;
+    id <SPTLinkDispatcher> _linkDispatcher;
 }
 
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
-@property(retain, nonatomic) id <VISREFPlayButtonTestManager> playButtonTestManager; // @synthesize playButtonTestManager=_playButtonTestManager;
+@property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
+@property(retain, nonatomic) UIImage *creatorImage; // @synthesize creatorImage=_creatorImage;
+@property(retain, nonatomic) NSURL *lastCreatorImageURL; // @synthesize lastCreatorImageURL=_lastCreatorImageURL;
+@property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineButtonModel; // @synthesize offlineButtonModel=_offlineButtonModel;
 @property(retain, nonatomic) id <SPTFreeTierEntityContextMenuButtonViewModel> contextMenuButtonModel; // @synthesize contextMenuButtonModel=_contextMenuButtonModel;
 @property(retain, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> followButtonModel; // @synthesize followButtonModel=_followButtonModel;
@@ -45,9 +52,11 @@
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
+- (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)updateAccessibilityElements;
 - (void)setImage:(id)arg1;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;
+- (void)updateCreatorComponent;
 - (double)minimumContentHeight;
 - (void)navigationBarHeightDidChange:(double)arg1;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
@@ -59,7 +68,7 @@
 - (void)updatePlayButtonGlyph:(id)arg1;
 - (void)setupForegroundView;
 - (void)setup;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 playButtonTestManager:(id)arg3;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

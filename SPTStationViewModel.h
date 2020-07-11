@@ -38,13 +38,11 @@
 @property(readonly, nonatomic) NSURL *stationURL; // @synthesize stationURL=_stationURL;
 - (void).cxx_destruct;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
-- (void)radioStationService:(id)arg1 didUpdateStation:(id)arg2 withSavedState:(_Bool)arg3;
 - (void)radioStationService:(id)arg1 loadingTracksError:(id)arg2 forStation:(id)arg3;
 - (void)radioStationService:(id)arg1 loadedTracksForStation:(id)arg2;
 - (void)radioPlaybackService:(id)arg1 error:(id)arg2;
 - (void)radioPlaybackServiceCurrentTrackChanged:(id)arg1;
 - (void)radioPlaybackService:(id)arg1 playbackStateChanged:(unsigned long long)arg2;
-- (void)radioPlaybackService:(id)arg1 didUpdateTracksForStation:(id)arg2;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (id)parseResponse:(id)arg1 requestKey:(id)arg2 error:(id *)arg3;
 - (_Bool)isOfflineError:(id)arg1;

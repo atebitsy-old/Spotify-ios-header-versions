@@ -24,6 +24,8 @@
     // Error parsing type: , name: settingsService
     // Error parsing type: , name: cosmosDataLoaderService
     // Error parsing type: , name: cosmosService
+    // Error parsing type: , name: uriDispatchService
+    // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: $__lazy_storage_$_localSettings
     // Error parsing type: , name: $__lazy_storage_$_userDefaultsController
     // Error parsing type: , name: formatListPlatformRegistrationToken

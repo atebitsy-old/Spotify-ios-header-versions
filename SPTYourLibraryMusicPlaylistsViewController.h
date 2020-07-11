@@ -107,7 +107,7 @@
 - (void)updateTable;
 - (void)viewModel:(id)arg1 error:(id)arg2;
 - (void)viewModelDidUpdate:(id)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)applyThemeLayout;
 - (void)setupCellConfigurator;
 - (void)hideProgressViewWithError:(id)arg1;

@@ -42,7 +42,7 @@
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)configureWithModel:(id)arg1;
 - (void)didMoveToSuperview;
-- (id)initWithFrame:(struct CGRect)arg1 hubHeaderControllerClass:(Class)arg2 theme:(id)arg3 playButtonTestManager:(id)arg4;
+- (id)initWithFrame:(struct CGRect)arg1 hubHeaderControllerClass:(Class)arg2 theme:(id)arg3 imageLoader:(id)arg4 linkDispatcher:(id)arg5;
 
 @end
 

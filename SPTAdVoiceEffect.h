@@ -12,7 +12,7 @@
 
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)mapFromStartDelayTimer:(CDUnknownBlockType)arg1 speechRecognitionCommand:(CDUnknownBlockType)arg2 clearAdSlots:(CDUnknownBlockType)arg3 playContextURI:(CDUnknownBlockType)arg4 playCue:(CDUnknownBlockType)arg5 skipToNextTrack:(CDUnknownBlockType)arg6 postSpeechReceived:(CDUnknownBlockType)arg7 postSpeechError:(CDUnknownBlockType)arg8 postMicOn:(CDUnknownBlockType)arg9;
+- (id)mapFromStartDelayTimer:(CDUnknownBlockType)arg1 speechRecognitionCommand:(CDUnknownBlockType)arg2 clearAdSlots:(CDUnknownBlockType)arg3 playContextURI:(CDUnknownBlockType)arg4 playCue:(CDUnknownBlockType)arg5 skipToNextTrack:(CDUnknownBlockType)arg6 postSpeechReceived:(CDUnknownBlockType)arg7 postSpeechError:(CDUnknownBlockType)arg8 postMicOn:(CDUnknownBlockType)arg9 postAdVoiceLog:(CDUnknownBlockType)arg10 postAdVoiceLogWithPosition:(CDUnknownBlockType)arg11;
 
 @end
 

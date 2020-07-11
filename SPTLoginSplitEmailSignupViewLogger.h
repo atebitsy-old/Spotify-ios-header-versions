@@ -16,10 +16,12 @@
     id <SPTLoginLogger> _logger;
     NSString *_screenIdentifier;
     NSString *_fieldIdentifier;
+    NSString *_buttonIdentifier;
     SPTLoginErrorLogger *_errorLogger;
 }
 
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
+@property(copy, nonatomic) NSString *buttonIdentifier; // @synthesize buttonIdentifier=_buttonIdentifier;
 @property(copy, nonatomic) NSString *fieldIdentifier; // @synthesize fieldIdentifier=_fieldIdentifier;
 @property(copy, nonatomic) NSString *screenIdentifier; // @synthesize screenIdentifier=_screenIdentifier;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
@@ -28,8 +30,8 @@
 - (void)logUserDidSeeView;
 - (void)logUserDidInteractWithField:(id)arg1;
 - (void)logErrorWithCode:(unsigned long long)arg1 fieldIdentifier:(id)arg2;
-- (id)adjustIdentifierForFieldWithStringIdentifier:(id)arg1;
 - (id)initWithLogger:(id)arg1 screenIdentifier:(id)arg2 fieldIdentifier:(id)arg3;
+- (id)initWithLogger:(id)arg1 screenIdentifier:(id)arg2 fieldIdentifier:(id)arg3 buttonIdentifer:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -24,6 +24,7 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceSession> voiceSession; // @synthesize voiceSession=_voiceSession;
 - (void).cxx_destruct;
+- (void)voiceSessionDidReceiveFinalTranscription:(id)arg1;
 - (void)voiceSession:(id)arg1 didUpdateTranscriptText:(id)arg2;
 - (void)voiceSession:(id)arg1 didFailVoiceCommand:(id)arg2 withError:(id)arg3;
 - (void)voiceSession:(id)arg1 didReceiveVoiceCommand:(id)arg2;

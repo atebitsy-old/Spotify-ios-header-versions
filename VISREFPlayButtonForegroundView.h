@@ -25,6 +25,7 @@
     unsigned long long _currentPlayButtonState;
     UIView *_playButtonHighlightedOverlay;
     double _shuffleBadgeDiameter;
+    double _shuffleBadgeTranslation;
     UIView *_shuffleBadge;
     UIImageView *_shuffleBadgeLabel;
     UIView *_shuffleBadgeHighlightedOverlay;
@@ -33,6 +34,7 @@
 @property(retain, nonatomic) UIView *shuffleBadgeHighlightedOverlay; // @synthesize shuffleBadgeHighlightedOverlay=_shuffleBadgeHighlightedOverlay;
 @property(retain, nonatomic) UIImageView *shuffleBadgeLabel; // @synthesize shuffleBadgeLabel=_shuffleBadgeLabel;
 @property(retain, nonatomic) UIView *shuffleBadge; // @synthesize shuffleBadge=_shuffleBadge;
+@property(readonly, nonatomic) double shuffleBadgeTranslation; // @synthesize shuffleBadgeTranslation=_shuffleBadgeTranslation;
 @property(readonly, nonatomic) double shuffleBadgeDiameter; // @synthesize shuffleBadgeDiameter=_shuffleBadgeDiameter;
 @property(retain, nonatomic) UIView *playButtonHighlightedOverlay; // @synthesize playButtonHighlightedOverlay=_playButtonHighlightedOverlay;
 @property(nonatomic) unsigned long long currentPlayButtonState; // @synthesize currentPlayButtonState=_currentPlayButtonState;
@@ -60,8 +62,6 @@
 @property(nonatomic, getter=isPlayButtonShown) _Bool shouldShowPlayButton;
 - (void)setShuffleBadgeGlyph:(id)arg1;
 - (void)updatePlayButtonGlyphColor;
-- (void)fadePlayButtonToColor:(id)arg1;
-- (void)setPlayButtonColor:(id)arg1 adjustBrightness:(_Bool)arg2;
 - (void)setPlayButtonAccessibilityLabel:(id)arg1;
 - (void)setPlayButtonState:(unsigned long long)arg1;
 - (unsigned long long)controlStateFromPlayButtonState:(unsigned long long)arg1;

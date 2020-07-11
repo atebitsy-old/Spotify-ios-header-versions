@@ -61,6 +61,7 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAccountService> accountService; // @synthesize accountService=_accountService;
 - (void).cxx_destruct;
+- (id)provideNavigationItemDecorator;
 - (id)providePremiumDestinationGLUETheme;
 - (id)providePremiumDestinationHubManagerConfiguration;
 - (id)providePremiumDestinationHubComponentsFactory;

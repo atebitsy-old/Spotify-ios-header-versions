@@ -41,9 +41,6 @@
 - (void)removePreviousTracks:(id)arg1 fromCachedStation:(id)arg2;
 - (void)removeRadioStationsObserver:(id)arg1;
 - (void)addRadioStationsObserver:(id)arg1;
-- (void)handleThumbTrackErrorResponse:(id)arg1;
-- (void)handleThumbTrackSuccessfulResponse:(id)arg1;
-- (void)radioThumbTrackUrl:(id)arg1 isUp:(_Bool)arg2 forStation:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)handleLoadTracksErrorResponse:(id)arg1;
 - (void)handleLoadTracksSuccessfulResponse:(id)arg1;
 - (void)loadTracksForRadioStation:(id)arg1 loadMore:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
@@ -59,7 +56,6 @@
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)invokeUserSavedStationCompletion:(CDUnknownBlockType)arg1 stations:(id)arg2 error:(id)arg3;
-- (void)invokeRadioCompletion:(CDUnknownBlockType)arg1 success:(_Bool)arg2 error:(id)arg3;
 - (void)invokeStationCompletion:(CDUnknownBlockType)arg1 station:(id)arg2 error:(id)arg3;
 - (_Bool)saveStationToCache:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)getStationFromCacheWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;

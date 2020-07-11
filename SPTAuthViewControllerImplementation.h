@@ -7,41 +7,38 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTAuthViewController-Protocol.h"
-#import "UIWebViewDelegate-Protocol.h"
+#import "WKNavigationDelegate-Protocol.h"
 
-@class NSHTTPCookie, NSString, SPTAuthAccountsRequest, UIActivityIndicatorView, UIWebView;
+@class NSString, SPTAuthViewControllerViewModel, UIActivityIndicatorView, WKWebView;
 @protocol SPTAuthViewControllerDelegate;
 
-@interface SPTAuthViewControllerImplementation : UIViewController <UIWebViewDelegate, SPTAuthViewController>
+@interface SPTAuthViewControllerImplementation : UIViewController <WKNavigationDelegate, SPTAuthViewController>
 {
-    _Bool _usingStaging;
     id <SPTAuthViewControllerDelegate> delegate;
-    UIWebView *_webView;
+    WKWebView *_webView;
     UIActivityIndicatorView *_activityIndicatorView;
-    SPTAuthAccountsRequest *_request;
-    NSHTTPCookie *_cookie;
+    SPTAuthViewControllerViewModel *_viewModel;
 }
 
-@property(nonatomic) _Bool usingStaging; // @synthesize usingStaging=_usingStaging;
-@property(retain, nonatomic) NSHTTPCookie *cookie; // @synthesize cookie=_cookie;
-@property(retain, nonatomic) SPTAuthAccountsRequest *request; // @synthesize request=_request;
+@property(retain, nonatomic) SPTAuthViewControllerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
-@property(retain, nonatomic) UIWebView *webView; // @synthesize webView=_webView;
+@property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 @property(nonatomic) __weak id <SPTAuthViewControllerDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
-- (void)webViewDidStartLoad:(id)arg1;
-- (void)webView:(id)arg1 didFailLoadWithError:(id)arg2;
-- (void)webViewDidFinishLoad:(id)arg1;
-- (_Bool)webView:(id)arg1 shouldStartLoadWithRequest:(id)arg2 navigationType:(long long)arg3;
+- (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;
+- (void)webView:(id)arg1 didFinishNavigation:(id)arg2;
+- (void)webView:(id)arg1 decidePolicyForNavigationAction:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
+- (void)actOnPolicy:(long long)arg1 redirectURL:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
 - (void)spt_popupNavigationControllerCancelButtonTouched:(id)arg1;
 - (void)redirectToURL:(id)arg1;
-- (void)loadWebView;
+- (void)startNavigating;
+- (void)setupWebViewWithConfiguration:(id)arg1;
+- (void)setupAndLoadWebView;
+- (void)setupLoadingIndicator;
 - (_Bool)isModalInPresentation;
-- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (void)dealloc;
-- (id)initWithAccountsRequest:(id)arg1 cookie:(id)arg2 useStaging:(_Bool)arg3;
+- (id)initWithViewModel:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

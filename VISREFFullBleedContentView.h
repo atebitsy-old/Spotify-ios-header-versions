@@ -6,25 +6,27 @@
 
 #import "VISREFTopAndBodyContentView.h"
 
+#import "VISREFExpandableTextViewDelegate-Protocol.h"
 #import "VISREFHeaderComponent-Protocol.h"
 
-@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UIStackView, UITextView, VISREFAlignedImageView, VISREFGradientView;
+@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UILabel, UIStackView, VISREFAlignedImageView, VISREFCreatorRowView, VISREFExpandableTextView, VISREFGradientView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
 
-@interface VISREFFullBleedContentView : VISREFTopAndBodyContentView <VISREFHeaderComponent>
+@interface VISREFFullBleedContentView : VISREFTopAndBodyContentView <VISREFExpandableTextViewDelegate, VISREFHeaderComponent>
 {
-    SPTEncoreLabel *_titleLabel;
+    UILabel *_titleLabel;
     SPTEncoreLabel *_metadataLabel;
     UIButton *_contextButton;
     UIButton *_followButton;
     UIButton *_feedbackButton;
     UIButton *_offlineButton;
-    UITextView *_descriptionTextView;
+    CDUnknownBlockType _creatorRowButtonTappedBlock;
+    VISREFCreatorRowView *_creatorRowView;
+    VISREFExpandableTextView *_descriptionTextView;
     VISREFGradientView *_titleProtectionGradient;
     UIStackView *_actionRowStackView;
     VISREFAlignedImageView *_alignedImageView;
+    _TtC20EncoreConsumerMobile19AutoLayoutStackView *_contentStackView;
     NSLayoutConstraint *_imageWidthConstraint;
-    NSLayoutConstraint *_noDescriptionActionRowTopConstraint;
-    NSLayoutConstraint *_descriptionActionRowTopConstraint;
     NSLayoutConstraint *_actionRowLeadingConstraint;
     double _lastProgress;
     double _lastWidth;
@@ -43,26 +45,28 @@
 @property(nonatomic) double lastWidth; // @synthesize lastWidth=_lastWidth;
 @property(nonatomic) double lastProgress; // @synthesize lastProgress=_lastProgress;
 @property(retain, nonatomic) NSLayoutConstraint *actionRowLeadingConstraint; // @synthesize actionRowLeadingConstraint=_actionRowLeadingConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *descriptionActionRowTopConstraint; // @synthesize descriptionActionRowTopConstraint=_descriptionActionRowTopConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *noDescriptionActionRowTopConstraint; // @synthesize noDescriptionActionRowTopConstraint=_noDescriptionActionRowTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageWidthConstraint; // @synthesize imageWidthConstraint=_imageWidthConstraint;
+@property(retain, nonatomic) _TtC20EncoreConsumerMobile19AutoLayoutStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
 @property(retain, nonatomic) VISREFAlignedImageView *alignedImageView; // @synthesize alignedImageView=_alignedImageView;
 @property(retain, nonatomic) UIStackView *actionRowStackView; // @synthesize actionRowStackView=_actionRowStackView;
 @property(retain, nonatomic) VISREFGradientView *titleProtectionGradient; // @synthesize titleProtectionGradient=_titleProtectionGradient;
-@property(retain, nonatomic) UITextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
+@property(retain, nonatomic) VISREFExpandableTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
+@property(retain, nonatomic) VISREFCreatorRowView *creatorRowView; // @synthesize creatorRowView=_creatorRowView;
+@property(copy, nonatomic) CDUnknownBlockType creatorRowButtonTappedBlock; // @synthesize creatorRowButtonTappedBlock=_creatorRowButtonTappedBlock;
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *feedbackButton; // @synthesize feedbackButton=_feedbackButton;
 @property(retain, nonatomic) UIButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIButton *contextButton; // @synthesize contextButton=_contextButton;
 @property(retain, nonatomic) SPTEncoreLabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
-@property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void).cxx_destruct;
+- (void)didTapCreatorRow;
+- (void)adjustTitleLabelFontIfNeeded;
 - (void)updateAccessibilityLabels;
 - (void)setAssociatedColor:(id)arg1;
-- (void)updateActionRowTopConstraint;
-- (void)updateDescriptionStyle;
 - (void)setAttributedDescriptionText:(id)arg1;
 - (void)setDescriptionText:(id)arg1;
+- (void)setCreators:(id)arg1;
 - (void)setMetadataText:(id)arg1;
 - (void)setTitleText:(id)arg1;
 @property(retain, nonatomic) UIImage *image;
@@ -70,6 +74,7 @@
 - (void)headerViewDidRemountHeaderComponents:(id)arg1;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
+- (void)expandableTextViewDidTapTruncationText:(id)arg1;
 - (void)layoutSubviews;
 - (void)updateProgressPositions;
 - (void)scaleImage:(double)arg1;

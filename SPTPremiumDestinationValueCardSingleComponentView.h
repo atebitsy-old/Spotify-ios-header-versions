@@ -6,23 +6,33 @@
 
 #import "HUBComponentView.h"
 
-@class GLUELabel, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationValueCardSingleStyle;
+#import "HUBComponentViewWithImageHandling-Protocol.h"
 
-@interface SPTPremiumDestinationValueCardSingleComponentView : HUBComponentView
+@class GLUELabel, NSLayoutConstraint, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationValueCardSingleStyle, UIImageView;
+
+@interface SPTPremiumDestinationValueCardSingleComponentView : HUBComponentView <HUBComponentViewWithImageHandling>
 {
     SPTPremiumDestinationGLUETheme *_theme;
     SPTPremiumDestinationValueCardSingleStyle *_style;
     GLUELabel *_titleLabel;
     GLUELabel *_subtitleLabel;
+    UIImageView *_imageView;
+    NSLayoutConstraint *_imageLeadingConstraint;
+    NSLayoutConstraint *_imageWidthConstraint;
 }
 
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
 + (id)backgroundColorFromModel:(id)arg1 style:(id)arg2;
+@property(retain, nonatomic) NSLayoutConstraint *imageWidthConstraint; // @synthesize imageWidthConstraint=_imageWidthConstraint;
+@property(retain, nonatomic) NSLayoutConstraint *imageLeadingConstraint; // @synthesize imageLeadingConstraint=_imageLeadingConstraint;
+@property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) SPTPremiumDestinationValueCardSingleStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationGLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+- (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
+- (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)addLayoutConstraints;

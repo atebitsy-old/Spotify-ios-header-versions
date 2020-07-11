@@ -26,6 +26,7 @@
     NSLayoutConstraint *_descriptionActionRowTopConstraint;
     NSLayoutConstraint *_actionRowLeadingConstraint;
     NSLayoutConstraint *_descriptionHeightConstraint;
+    NSLayoutConstraint *_actionRowHeightConstraint;
     double _lastProgress;
     double _lastWidth;
     CDUnknownBlockType _topicTappedAtIndexBlock;
@@ -46,6 +47,7 @@
 @property(copy, nonatomic) CDUnknownBlockType topicTappedAtIndexBlock; // @synthesize topicTappedAtIndexBlock=_topicTappedAtIndexBlock;
 @property(nonatomic) double lastWidth; // @synthesize lastWidth=_lastWidth;
 @property(nonatomic) double lastProgress; // @synthesize lastProgress=_lastProgress;
+@property(retain, nonatomic) NSLayoutConstraint *actionRowHeightConstraint; // @synthesize actionRowHeightConstraint=_actionRowHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *descriptionHeightConstraint; // @synthesize descriptionHeightConstraint=_descriptionHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *actionRowLeadingConstraint; // @synthesize actionRowLeadingConstraint=_actionRowLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *descriptionActionRowTopConstraint; // @synthesize descriptionActionRowTopConstraint=_descriptionActionRowTopConstraint;
@@ -67,10 +69,12 @@
 @property(retain, nonatomic) UIImage *image;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)headerViewDidRemountHeaderComponents:(id)arg1;
+- (double)normalizeProgress:(double)arg1 minValue:(double)arg2 maxValue:(double)arg3;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (void)layoutSubviews;
 - (void)updateProgressPositions;
+- (void)setupActionRowHeight;
 - (void)setupLayout;
 - (void)setup;
 - (id)initWithTheme:(id)arg1 naturalHeight:(double)arg2;

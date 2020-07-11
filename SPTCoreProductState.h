@@ -32,8 +32,8 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1 on:(id)arg2;
 - (id)initWithCoreProductState:(shared_ptr_2175cb8d)arg1;
-- (map_0edfe763)mapFromValuesDict:(id)arg1;
-- (id)valuesDictFromMap:(const map_0edfe763 *)arg1;
+- (map_5554a4ce)mapFromValuesDict:(id)arg1;
+- (id)valuesDictFromMap:(const map_5554a4ce *)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

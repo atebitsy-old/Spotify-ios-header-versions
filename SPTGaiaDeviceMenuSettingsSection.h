@@ -6,15 +6,17 @@
 
 #import "SettingsSection.h"
 
-@class SPTSettingsButtonTableViewCell;
+@class SPTGaiaDependencyInjectorImplementation, SPTSettingsButtonTableViewCell;
 @protocol SPTGaiaDevicePickerPresenter;
 
 @interface SPTGaiaDeviceMenuSettingsSection : SettingsSection
 {
     SPTSettingsButtonTableViewCell *_buttonCell;
     id <SPTGaiaDevicePickerPresenter> _devicePickerPresenter;
+    SPTGaiaDependencyInjectorImplementation *_dependencyInjector;
 }
 
+@property(readonly, nonatomic) SPTGaiaDependencyInjectorImplementation *dependencyInjector; // @synthesize dependencyInjector=_dependencyInjector;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerPresenter> devicePickerPresenter; // @synthesize devicePickerPresenter=_devicePickerPresenter;
 @property(retain, nonatomic) SPTSettingsButtonTableViewCell *buttonCell; // @synthesize buttonCell=_buttonCell;
 - (void).cxx_destruct;
@@ -22,7 +24,7 @@
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 - (void)setupButtonCell;
-- (id)initWithSettingsViewController:(id)arg1 devicePickerPresenter:(id)arg2;
+- (id)initWithSettingsViewController:(id)arg1 devicePickerPresenter:(id)arg2 dependencyInjector:(id)arg3;
 
 @end
 

@@ -15,8 +15,12 @@
     _Bool _drivingCarViewScreenlockPrevention;
     _Bool _drivingCarViewSwipeToSkip;
     _Bool _drivingCarViewHomeFeed;
+    _Bool _drivingMotionBasedDetectionSurvey;
+    _Bool _drivingJumpstartForegroundRollout;
 }
 
+@property(readonly, nonatomic) _Bool drivingJumpstartForegroundRollout; // @synthesize drivingJumpstartForegroundRollout=_drivingJumpstartForegroundRollout;
+@property(readonly, nonatomic) _Bool drivingMotionBasedDetectionSurvey; // @synthesize drivingMotionBasedDetectionSurvey=_drivingMotionBasedDetectionSurvey;
 @property(readonly, nonatomic) _Bool drivingCarViewHomeFeed; // @synthesize drivingCarViewHomeFeed=_drivingCarViewHomeFeed;
 @property(readonly, nonatomic) _Bool drivingCarViewSwipeToSkip; // @synthesize drivingCarViewSwipeToSkip=_drivingCarViewSwipeToSkip;
 @property(readonly, nonatomic) _Bool drivingCarViewScreenlockPrevention; // @synthesize drivingCarViewScreenlockPrevention=_drivingCarViewScreenlockPrevention;

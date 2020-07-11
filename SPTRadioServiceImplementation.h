@@ -11,7 +11,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTInfinitePlaybackManager, SPTPersistentCache, SPTRadioHubManager, SPTRadioLogger, SPTRadioPlaybackService, SPTRadioStationsService;
-@protocol CosmosFeature, GaiaFeature, NSObject, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTNowPlayingRemoteControlPolicy, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, SPTVoiceService;
+@protocol CosmosFeature, GaiaFeature, NSObject, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, SPTVoiceService;
 
 @interface SPTRadioServiceImplementation : NSObject <SPTService, SPTRadioService, SPTURISubtypeHandler>
 {
@@ -51,7 +51,6 @@
     SPTRadioPlaybackService *_playbackService;
     id <SPTPlayer> _player;
     id <SPTRadioManager> _radioManager;
-    id <SPTNowPlayingRemoteControlPolicy> _remoteControlPolicy;
     SPTRadioStationsService *_stationsService;
     id <SPTRadioTestManager> _testManager;
 }
@@ -59,7 +58,6 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTRadioTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTRadioStationsService *stationsService; // @synthesize stationsService=_stationsService;
-@property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
 @property(retain, nonatomic) id <SPTRadioManager> radioManager; // @synthesize radioManager=_radioManager;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTRadioPlaybackService *playbackService; // @synthesize playbackService=_playbackService;
@@ -107,7 +105,6 @@
 - (id)provideCollectionLogger;
 - (id)provideRadioTestManager;
 - (id)providePersistentCache;
-- (id)provideRadioRemoteControlPolicy;
 - (void)registerRadioWithRecentlyPlayed;
 - (id)providePlayerWithReferrer:(id)arg1;
 - (id)providePlayer;

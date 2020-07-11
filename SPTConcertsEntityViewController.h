@@ -77,7 +77,6 @@
 - (id)initWithViewModel:(id)arg1 dataSource:(id)arg2 viewDelegate:(id)arg3 contextMenuActionFactory:(id)arg4 barButtonItemManager:(id)arg5 concertsLogger:(id)arg6 remoteConfigurationResolver:(id)arg7;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

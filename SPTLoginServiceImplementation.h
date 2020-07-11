@@ -11,7 +11,7 @@
 #import "SPTPageRegistryObserver-Protocol.h"
 #import "SPTPreSignupExperimentationFeatureFlagsLoaderDelegate-Protocol.h"
 
-@class NSError, NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTLoginAttemptLogger, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
+@class NSError, NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTDynamicSignupFlowController, SPTLoginAttemptLogger, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
 @protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTFacebookIntegrationService, SPTGLUEService, SPTLoginLoggingService, SPTNetworkService, SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTPreSignupExperimentationService, SPTServiceManagerService, SPTURIDispatchService, SPTUserBehaviourInstrumentationService;
 
 @interface SPTLoginServiceImplementation : NSObject <SPTPageRegistryObserver, SPTPreSignupExperimentationFeatureFlagsLoaderDelegate, SPTLoginService, SPTLoginLogoutHandler>
@@ -48,9 +48,11 @@
     SPTLoginFeatureNavigationCoordinator *_navigationCoordinator;
     SPTSigninWithAppleHandler *_siaHandler;
     SPTSignupAttemptTrackerImplementation *_signupAttemptTracker;
+    SPTDynamicSignupFlowController *_flowController;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) SPTSignupAttemptTrackerImplementation *signupAttemptTracker; // @synthesize signupAttemptTracker=_signupAttemptTracker;
 @property(retain, nonatomic) SPTSigninWithAppleHandler *siaHandler; // @synthesize siaHandler=_siaHandler;
 @property(retain, nonatomic) SPTLoginFeatureNavigationCoordinator *navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
@@ -87,6 +89,7 @@
 - (id)provideWelcomeViewControllerWithTheme:(id)arg1 mainViewLoader:(id)arg2 loginStateController:(id)arg3 performanceLogging:(id)arg4 phoneNumberEnabled:(_Bool)arg5;
 - (id)provideAccountSwitcher;
 - (id)provideNavigationRouter;
+- (id)provideDynamicFlowController;
 - (id)provideAuthenticationHandler;
 - (id)loginFailureHandler;
 - (id)mainViewLoader;

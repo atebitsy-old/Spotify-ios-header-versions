@@ -9,20 +9,19 @@
 #import "GLUEStyleable-Protocol.h"
 #import "SPTFreeTierPlaylistHeaderContent-Protocol.h"
 
-@class GLUEButton, GLUEImageView, GLUELabel, GLUEShuffleBadgeLabelView, NSLayoutConstraint, NSString, SPTFreeTierPlaylistHeaderContentViewStyle, SPTFreeTierPlaylistHeaderTapHandler, UIImage, UIStackView;
+@class GLUEButton, GLUEImageView, GLUELabel, GLUEShuffleBadgeLabelView, NSLayoutConstraint, NSString, SPTFreeTierPlaylistHeaderContentViewStyle, UIStackView;
 @protocol SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistHeaderContentViewDelegate;
 
 @interface SPTFreeTierPlaylistHeaderContentView : UIView <SPTFreeTierPlaylistHeaderContent, GLUEStyleable>
 {
     id <SPTFreeTierPlaylistHeaderContentViewDelegate> _delegate;
-    UIStackView *_stackView;
     GLUEImageView *_entityImageView;
+    UIStackView *_stackView;
     GLUELabel *_titleLabel;
     GLUELabel *_metadataLabel;
     GLUEShuffleBadgeLabelView *_shuffleBadge;
     GLUEButton *_followButton;
     NSLayoutConstraint *_entityImageViewHeightConstraint;
-    SPTFreeTierPlaylistHeaderTapHandler *_tapHandler;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     SPTFreeTierPlaylistHeaderContentViewStyle *_style;
 }
@@ -30,18 +29,16 @@
 + (_Bool)requiresConstraintBasedLayout;
 @property(retain, nonatomic) SPTFreeTierPlaylistHeaderContentViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
-@property(retain, nonatomic) SPTFreeTierPlaylistHeaderTapHandler *tapHandler; // @synthesize tapHandler=_tapHandler;
 @property(retain, nonatomic) NSLayoutConstraint *entityImageViewHeightConstraint; // @synthesize entityImageViewHeightConstraint=_entityImageViewHeightConstraint;
 @property(retain, nonatomic) GLUEButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) GLUEShuffleBadgeLabelView *shuffleBadge; // @synthesize shuffleBadge=_shuffleBadge;
 @property(retain, nonatomic) GLUELabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(retain, nonatomic) GLUEImageView *entityImageView; // @synthesize entityImageView=_entityImageView;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
+@property(retain, nonatomic) GLUEImageView *entityImageView; // @synthesize entityImageView=_entityImageView;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistHeaderContentViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (id)titleView;
-- (void)updateImageWithSize:(struct CGSize)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)followButtonTapped;
 @property(copy, nonatomic) NSString *shuffleBadgeText;
@@ -56,10 +53,9 @@
 - (void)addSpacingRowWithHeight:(double)arg1;
 @property(copy, nonatomic) NSString *title;
 - (void)setupTitleLabel;
-@property(retain, nonatomic) UIImage *image;
-- (void)setupEntityImageView;
-- (void)setup;
-- (id)initWithCollectionConfiguration:(id)arg1;
+- (void)setupEntityImageViewWithImageLoader:(id)arg1;
+- (void)setupWithImageLoader:(id)arg1;
+- (id)initWithCollectionConfiguration:(id)arg1 imageLoader:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

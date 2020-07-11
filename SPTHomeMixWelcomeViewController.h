@@ -54,7 +54,6 @@
 - (id)initWithFacePileConfigurator:(id)arg1 theme:(id)arg2 model:(id)arg3 delegate:(id)arg4 mainContentLayoutGuide:(id)arg5;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

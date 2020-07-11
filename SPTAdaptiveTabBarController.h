@@ -54,7 +54,6 @@
 - (id)initWithFriendlyName:(id)arg1 logCenter:(id)arg2 navigationConfiguration:(id)arg3;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, nonatomic) UIView *contentHeaderView;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;

@@ -4,15 +4,16 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
 #import "SPTPageController-Protocol.h"
 #import "SPTWebViewControllerDelegate-Protocol.h"
+#import "SPViewController-Protocol.h"
 
-@class NSString, NSURL, UIViewController;
+@class NSString, NSURL;
 @protocol SPTPageContainer, SPTWebViewController;
 
-@interface SPTCampaignViewController : SPViewController <SPTWebViewControllerDelegate, SPTPageController>
+@interface SPTCampaignViewController : UIViewController <SPTWebViewControllerDelegate, SPViewController, SPTPageController>
 {
     UIViewController<SPTWebViewController> *_webViewController;
     NSURL *_URL;
@@ -26,7 +27,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)webViewController:(id)arg1 didFailAuthenticationWithError:(id)arg2;
 - (_Bool)webViewController:(id)arg1 shouldAllowRequest:(id)arg2 navigationType:(long long)arg3;
-- (id)URI;
+@property(readonly, nonatomic) NSURL *URI;
 - (id)campaignURL;
 - (void)loadView;
 - (id)initWithWebViewFactory:(id)arg1 URL:(id)arg2;

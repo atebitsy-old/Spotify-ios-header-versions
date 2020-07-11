@@ -8,7 +8,7 @@
 
 #import "SPTNowPlayingAuxiliaryActionsModelObserver-Protocol.h"
 
-@class NSString, SPTNowPlayingFeedbackButton, SPTNowPlayingLogger, SPTNowPlayingModel, SPTTheme;
+@class NSString, SPTNowPlayingBarLogger, SPTNowPlayingFeedbackButton, SPTNowPlayingModel, SPTTheme;
 @protocol SPTNowPlayingAuxiliaryActionsHandler;
 
 @interface SPTNowPlayingBarHeartViewController : UIViewController <SPTNowPlayingAuxiliaryActionsModelObserver>
@@ -16,12 +16,12 @@
     SPTNowPlayingModel *_model;
     SPTTheme *_theme;
     id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
-    SPTNowPlayingLogger *_logger;
+    SPTNowPlayingBarLogger *_logger;
     SPTNowPlayingFeedbackButton *_heartButton;
 }
 
 @property(retain, nonatomic) SPTNowPlayingFeedbackButton *heartButton; // @synthesize heartButton=_heartButton;
-@property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTNowPlayingBarLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;

@@ -4,18 +4,19 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIView.h>
+#import "SPTLoginLoadingView.h"
 
 #import "GLUEStyleable-Protocol.h"
 #import "SPTSignupAnimatableViewProtocol-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, SPTLoginFormScrollView, SPTLoginInputFormView, SPTLoginTextField;
+@class GLUELabel, NSLayoutConstraint, NSString, SPTLoginFormScrollView, SPTLoginInputFormView, SPTLoginLoadingActionButton, SPTLoginTextField, SPTSignupTermsAndPolicyView, UIView;
 
-@interface SPTSignupSingleInputFieldView : UIView <GLUEStyleable, SPTSignupAnimatableViewProtocol>
+@interface SPTSignupSingleInputFieldView : SPTLoginLoadingView <GLUEStyleable, SPTSignupAnimatableViewProtocol>
 {
     NSString *_transitionContextViewKey;
+    SPTLoginLoadingActionButton *_submitButton;
     GLUELabel *_titleLabel;
-    GLUEButton *_nextButton;
+    SPTSignupTermsAndPolicyView *_termsView;
     SPTLoginFormScrollView *_scrollView;
     UIView *_contentView;
     UIView *_mainContainer;
@@ -42,8 +43,9 @@
 @property(retain, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) SPTLoginFormScrollView *scrollView; // @synthesize scrollView=_scrollView;
-@property(readonly, nonatomic) GLUEButton *nextButton; // @synthesize nextButton=_nextButton;
+@property(readonly, nonatomic) SPTSignupTermsAndPolicyView *termsView; // @synthesize termsView=_termsView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+- (id)submitButton;
 @property(retain, nonatomic) NSString *transitionContextViewKey; // @synthesize transitionContextViewKey=_transitionContextViewKey;
 - (void).cxx_destruct;
 - (void)traitsDidChange:(id)arg1;

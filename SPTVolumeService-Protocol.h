@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTVolumeAPI;
+@protocol SPTVolumeAPI, SPTVolumeUIFactory;
 
 @protocol SPTVolumeService <SPTService>
+- (id <SPTVolumeUIFactory>)provideVolumeUIFactory;
 - (id <SPTVolumeAPI>)provideVolumeAPI;
 @end
 

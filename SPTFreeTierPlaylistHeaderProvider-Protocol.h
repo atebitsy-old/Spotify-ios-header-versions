@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class UIView, UIViewController;
-@protocol SPTEntityHeaderContentController><SPTFreeTierPlaylistHeader, SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistBarButtonManagerDelegate, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel;
+@protocol SPTEntityHeaderContentController><SPTFreeTierPlaylistHeader, SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistBarButtonManagerDelegate, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
 
 @protocol SPTFreeTierPlaylistHeaderProvider <NSObject>
 @property(nonatomic, readonly) _Bool drawBottomLineLayer;
 @property(nonatomic, readonly) _Bool drawDropShadow;
 - (UIViewController<SPTEntityHeaderContentController><SPTFreeTierPlaylistHeader> *)provideHeader;
 - (void)configureBarButtonManagerDelegate:(id <SPTFreeTierPlaylistBarButtonManagerDelegate>)arg1;
-- (void)configureWithPlayViewModel:(id <SPTFreeTierPlaylistPlayViewModel>)arg1 followViewModel:(id <SPTFreeTierPlaylistFollowViewModel>)arg2 defaultHeaderViewModel:(id <SPTFreeTierPlaylistDefaultHeaderViewModel>)arg3 fullbleedHeaderViewModel:(id <SPTFreeTierPlaylistFullbleedHeaderViewModel>)arg4 playlistOfflineViewModel:(id <SPTFreeTierEntityOfflineViewModel>)arg5 filterSortBarView:(UIView *)arg6;
+- (void)configureWithPlayViewModel:(id <SPTFreeTierPlaylistPlayViewModel>)arg1 followViewModel:(id <SPTFreeTierPlaylistFollowViewModel>)arg2 defaultHeaderViewModel:(id <SPTFreeTierPlaylistDefaultHeaderViewModel>)arg3 fullbleedHeaderViewModel:(id <SPTFreeTierPlaylistFullbleedHeaderViewModel>)arg4 playlistOfflineViewModel:(id <SPTFreeTierEntityOfflineViewModel>)arg5 visrefHeaderViewModel:(id <SPTFreeTierPlaylistVISREFHeaderViewModel>)arg6 filterSortBarView:(UIView *)arg7;
 @end
 

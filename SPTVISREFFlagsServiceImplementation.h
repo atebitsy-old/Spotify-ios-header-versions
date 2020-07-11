@@ -9,8 +9,8 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTVISREFFlagsService-Protocol.h"
 
-@class NSDictionary, NSString, SPTAllocationContext;
-@protocol SPTFeatureFlagSignal, SPTFeatureFlaggingService;
+@class NSDictionary, NSString, SPTAllocationContext, SPTGLUEFeatureProperties;
+@protocol SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTRemoteConfigurationService;
 
 @interface SPTVISREFFlagsServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTVISREFFlagsService>
 {
@@ -27,6 +27,7 @@
     _Bool _offlineHeaderVariableEnabled;
     _Bool _offlineHeaderEnabledGreen;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     NSDictionary *_visualRefreshExperienceExistingUserSignals;
     NSDictionary *_visualRefreshExperienceNewUserSignals;
     NSDictionary *_headerEnabledSignals;
@@ -35,6 +36,7 @@
     id <SPTFeatureFlagSignal> _sectionHeaderEnabledSignal;
     id <SPTFeatureFlagSignal> _trackRowEnabledSignal;
     id <SPTFeatureFlagSignal> _trackCloudEnabledSignal;
+    SPTGLUEFeatureProperties *_properties;
 }
 
 + (id)serviceIdentifier;
@@ -50,6 +52,7 @@
 @property(nonatomic) _Bool fullExperienceNewUsersEnabled; // @synthesize fullExperienceNewUsersEnabled=_fullExperienceNewUsersEnabled;
 @property(nonatomic) _Bool fullExperienceExistingUsersGreenButtonEnabled; // @synthesize fullExperienceExistingUsersGreenButtonEnabled=_fullExperienceExistingUsersGreenButtonEnabled;
 @property(nonatomic) _Bool fullExperienceExistingUsersEnabled; // @synthesize fullExperienceExistingUsersEnabled=_fullExperienceExistingUsersEnabled;
+@property(retain, nonatomic) SPTGLUEFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> trackCloudEnabledSignal; // @synthesize trackCloudEnabledSignal=_trackCloudEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> trackRowEnabledSignal; // @synthesize trackRowEnabledSignal=_trackRowEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> sectionHeaderEnabledSignal; // @synthesize sectionHeaderEnabledSignal=_sectionHeaderEnabledSignal;
@@ -58,6 +61,7 @@
 @property(copy, nonatomic) NSDictionary *headerEnabledSignals; // @synthesize headerEnabledSignals=_headerEnabledSignals;
 @property(copy, nonatomic) NSDictionary *visualRefreshExperienceNewUserSignals; // @synthesize visualRefreshExperienceNewUserSignals=_visualRefreshExperienceNewUserSignals;
 @property(copy, nonatomic) NSDictionary *visualRefreshExperienceExistingUserSignals; // @synthesize visualRefreshExperienceExistingUserSignals=_visualRefreshExperienceExistingUserSignals;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

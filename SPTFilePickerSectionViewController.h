@@ -60,7 +60,6 @@
 - (id)initWithModel:(id)arg1 imageLoader:(id)arg2 logger:(id)arg3 sectionIndex:(unsigned long long)arg4;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

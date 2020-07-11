@@ -9,7 +9,7 @@
 #import "HUBComponent-Protocol.h"
 
 @class NSSet;
-@protocol GLUETheme, SPTFreeTierEntityOfflineViewModel, VISREFPlayButtonTestManager;
+@protocol GLUETheme, SPTFreeTierEntityOfflineViewModel, SPTImageLoader, SPTLinkDispatcher;
 
 @interface VISREFHubHeaderComponent : NSObject <HUBComponent>
 {
@@ -19,10 +19,12 @@
     id <SPTFreeTierEntityOfflineViewModel> _offlineButtonModel;
     Class _headerControllerClass;
     id <GLUETheme> _theme;
-    id <VISREFPlayButtonTestManager> _playButtonTestManager;
+    id <SPTImageLoader> _imageLoader;
+    id <SPTLinkDispatcher> _linkDispatcher;
 }
 
-@property(retain, nonatomic) id <VISREFPlayButtonTestManager> playButtonTestManager; // @synthesize playButtonTestManager=_playButtonTestManager;
+@property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
+@property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) Class headerControllerClass; // @synthesize headerControllerClass=_headerControllerClass;
 @property(retain, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineButtonModel; // @synthesize offlineButtonModel=_offlineButtonModel;
@@ -33,7 +35,7 @@
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
-- (id)initWithHubHeaderControllerClass:(Class)arg1 theme:(id)arg2 playButtonTestManager:(id)arg3;
+- (id)initWithHubHeaderControllerClass:(Class)arg1 theme:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;
 
 @end
 

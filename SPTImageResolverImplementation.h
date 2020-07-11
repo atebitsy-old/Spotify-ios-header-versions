@@ -9,17 +9,22 @@
 #import "SPTImageResolver-Protocol.h"
 
 @class NSString;
-@protocol SPTImageResolveProjectionMapProvider;
+@protocol SPTImageResolveCacheStatusProvider, SPTImageResolveOfflineState, SPTImageResolveProjectionMapProvider;
 
 @interface SPTImageResolverImplementation : NSObject <SPTImageResolver>
 {
     id <SPTImageResolveProjectionMapProvider> _projectionMapProvider;
+    id <SPTImageResolveOfflineState> _offlineState;
+    id <SPTImageResolveCacheStatusProvider> _cacheStatusProvider;
 }
 
+@property(readonly, nonatomic) id <SPTImageResolveCacheStatusProvider> cacheStatusProvider; // @synthesize cacheStatusProvider=_cacheStatusProvider;
+@property(readonly, nonatomic) id <SPTImageResolveOfflineState> offlineState; // @synthesize offlineState=_offlineState;
 @property(readonly, nonatomic) id <SPTImageResolveProjectionMapProvider> projectionMapProvider; // @synthesize projectionMapProvider=_projectionMapProvider;
 - (void).cxx_destruct;
+- (id)preferredProjectionForSize:(struct CGSize)arg1 forCollectionID:(id)arg2;
 - (void)resolveImageURL:(id)arg1 forSize:(struct CGSize)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)initWithProjectionMapProvider:(id)arg1;
+- (id)initWithProjectionMapProvider:(id)arg1 offlineState:(id)arg2 cacheStatusProvider:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

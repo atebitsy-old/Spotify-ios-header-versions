@@ -9,7 +9,7 @@
 #import "VISREFHubHeaderController-Protocol.h"
 
 @class NSString, VISREFCustomBackButton, VISREFFullBleedContentView, VISREFGradientBackgroundView, VISREFHeaderView, VISREFPlayButtonForegroundView;
-@protocol GLUETheme, HUBComponentEventHandler, HUBComponentModel, SPTFreeTierEntityContextMenuButtonViewModel, SPTFreeTierEntityFeedbackButtonViewModel, VISREFPlayButtonTestManager;
+@protocol GLUETheme, HUBComponentEventHandler, HUBComponentModel, SPTFreeTierEntityContextMenuButtonViewModel, SPTFreeTierEntityFeedbackButtonViewModel;
 
 @interface SPTVISREFFullBleedHeaderController : VISREFBaseHeaderController <VISREFHubHeaderController>
 {
@@ -25,7 +25,6 @@
     CDUnknownBlockType _backButtonTappedBlock;
     id <SPTFreeTierEntityFeedbackButtonViewModel> _followButtonModel;
     id <SPTFreeTierEntityContextMenuButtonViewModel> _contextMenuButtonModel;
-    id <VISREFPlayButtonTestManager> _playButtonTestManager;
     double _navigationBarGradientEndPoint;
     CDStruct_5a28e70a _backButtonGlyphOffsetRange;
     CDStruct_5a28e70a _backButtonGlyphProtectionAlphaRange;
@@ -37,7 +36,6 @@
 @property(nonatomic) CDStruct_5a28e70a backButtonGlyphProtectionAlphaRange; // @synthesize backButtonGlyphProtectionAlphaRange=_backButtonGlyphProtectionAlphaRange;
 @property(nonatomic) CDStruct_5a28e70a backButtonGlyphOffsetRange; // @synthesize backButtonGlyphOffsetRange=_backButtonGlyphOffsetRange;
 @property(nonatomic) double navigationBarGradientEndPoint; // @synthesize navigationBarGradientEndPoint=_navigationBarGradientEndPoint;
-@property(retain, nonatomic) id <VISREFPlayButtonTestManager> playButtonTestManager; // @synthesize playButtonTestManager=_playButtonTestManager;
 @property(retain, nonatomic) id <SPTFreeTierEntityContextMenuButtonViewModel> contextMenuButtonModel; // @synthesize contextMenuButtonModel=_contextMenuButtonModel;
 @property(retain, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> followButtonModel; // @synthesize followButtonModel=_followButtonModel;
 @property(copy, nonatomic) CDUnknownBlockType backButtonTappedBlock; // @synthesize backButtonTappedBlock=_backButtonTappedBlock;
@@ -66,7 +64,7 @@
 - (void)updateProgressPositions;
 - (void)setupForegroundView;
 - (void)setup;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 playButtonTestManager:(id)arg3;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

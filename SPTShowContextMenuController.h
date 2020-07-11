@@ -9,7 +9,7 @@
 #import "SPTContextMenuPresenterDelegate-Protocol.h"
 #import "SPTShowContextMenuMetadataViewDelegate-Protocol.h"
 
-@class NSString;
+@class NSString, SPTPodcastFeatureProperties;
 @protocol SPContextMenuActionsFactory, SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPodcastSpeedControlManager, SPTPodcastTestManager, SPTScannablesUserInterfaceFactory, SPTSleepTimerContextMenuActionsProvider;
 
 @interface SPTShowContextMenuController : NSObject <SPTShowContextMenuMetadataViewDelegate, SPTContextMenuPresenterDelegate>
@@ -25,8 +25,10 @@
     id <SPTModalPresentationController> _modalPresentationController;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTScannablesUserInterfaceFactory> _scannablesUIFactory;
+    SPTPodcastFeatureProperties *_featureProperties;
 }
 
+@property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) __weak id <SPTScannablesUserInterfaceFactory> scannablesUIFactory; // @synthesize scannablesUIFactory=_scannablesUIFactory;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
@@ -41,6 +43,7 @@
 - (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (_Bool)isIPad;
+- (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(id)arg2;
 - (id)provideGoToEpisodeActionForEpisode:(id)arg1 inViewController:(id)arg2;
 - (id)provideGoToShowActionForEpisode:(id)arg1 inViewController:(id)arg2;
 - (id)provideMarkAsPlayedUnplayedActionForEpisode:(id)arg1 contextMenuDelegate:(id)arg2;
@@ -56,7 +59,7 @@
 - (void)presentContexMenuForShow:(id)arg1 contextMenuDelegate:(id)arg2 inViewController:(id)arg3 senderView:(id)arg4 options:(id)arg5;
 - (void)presentContexMenuWithHeaderView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5;
 - (void)presentContexMenuWithMetaDataView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5;
-- (id)initWithPodcastTestManager:(id)arg1 collectionPlatfrom:(id)arg2 collectionTestManager:(id)arg3 speedControlManager:(id)arg4 sleepTimerContextMenuActionsProvider:(id)arg5 modalPresentationController:(id)arg6 presenterFactory:(id)arg7 actionFactory:(id)arg8 linkDispatcher:(id)arg9 scannablesUIFactory:(id)arg10;
+- (id)initWithPodcastTestManager:(id)arg1 collectionPlatfrom:(id)arg2 collectionTestManager:(id)arg3 featureProperties:(id)arg4 speedControlManager:(id)arg5 sleepTimerContextMenuActionsProvider:(id)arg6 modalPresentationController:(id)arg7 presenterFactory:(id)arg8 actionFactory:(id)arg9 linkDispatcher:(id)arg10 scannablesUIFactory:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,6 +9,7 @@
 #import "VISREFIntegrationManager-Protocol.h"
 
 @class NSArray, NSString, VISREFHubComponentRegistryOverrider, VISREFNavigationBarManager;
+@protocol SPTImageLoader, SPTLinkDispatcher;
 
 @interface VISREFIntegrationManagerImplementation : NSObject <VISREFIntegrationManager>
 {
@@ -20,8 +21,12 @@
     VISREFNavigationBarManager *_navigationBarManager;
     NSArray *_headerComponents;
     VISREFHubComponentRegistryOverrider *_overriddenRegistry;
+    id <SPTImageLoader> _imageLoader;
+    id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+@property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
+@property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) VISREFHubComponentRegistryOverrider *overriddenRegistry; // @synthesize overriddenRegistry=_overriddenRegistry;
 @property(copy, nonatomic) NSArray *headerComponents; // @synthesize headerComponents=_headerComponents;
 @property(retain, nonatomic) VISREFNavigationBarManager *navigationBarManager; // @synthesize navigationBarManager=_navigationBarManager;
@@ -31,15 +36,14 @@
 @property(readonly, nonatomic, getter=isVisualRefreshGreenButtonEnabled) _Bool visualRefreshGreenButtonEnabled; // @synthesize visualRefreshGreenButtonEnabled=_visualRefreshGreenButtonEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshHeaderEnabled) _Bool visualRefreshHeaderEnabled; // @synthesize visualRefreshHeaderEnabled=_visualRefreshHeaderEnabled;
 - (void).cxx_destruct;
-- (id)providePlayButtonTestManager;
 - (_Bool)hasOverrideForComponentId:(id)arg1;
 - (id)overriddenComponentRegistryFromRegistry:(id)arg1 sptTheme:(id)arg2 contextMenuButtonViewModel:(id)arg3 feedbackButtonViewModel:(id)arg4 offlineButtonViewModel:(id)arg5 viewController:(id)arg6 headerType:(unsigned long long)arg7;
 - (void)viewDidDisappear;
 - (void)viewDidAppear;
 - (void)viewWillAppear;
 - (void)configureWithViewController:(id)arg1;
-- (id)initWithVisualRefreshHeaderEnabled:(_Bool)arg1 visualRefreshGreenButtonEnabled:(_Bool)arg2 visualRefreshSectionHeaderEnabled:(_Bool)arg3 visualRefreshPlaylistTrackRowArtworkEnabled:(_Bool)arg4 visualRefreshLeftAlignedTrackCloudEnabled:(_Bool)arg5;
-- (id)initWithConfigurationFromVisualRefreshFlagsService:(id)arg1;
+- (id)initWithVisualRefreshHeaderEnabled:(_Bool)arg1 visualRefreshGreenButtonEnabled:(_Bool)arg2 visualRefreshSectionHeaderEnabled:(_Bool)arg3 visualRefreshPlaylistTrackRowArtworkEnabled:(_Bool)arg4 visualRefreshLeftAlignedTrackCloudEnabled:(_Bool)arg5 imageLoader:(id)arg6 linkDispatcher:(id)arg7;
+- (id)initWithConfigurationFromVisualRefreshFlagsService:(id)arg1 imageLoader:(id)arg2 linkDispatcher:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

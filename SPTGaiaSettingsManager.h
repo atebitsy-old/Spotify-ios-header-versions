@@ -8,7 +8,7 @@
 
 #import "SPTGaiaSettingsProvider-Protocol.h"
 
-@class NSString, SPTGaiaHomeDeviceManager, SPTGaiaLogger, SPTObserverManager;
+@class NSString, SPTGaiaDependencyInjectorImplementation, SPTGaiaHomeDeviceManager, SPTGaiaLogger, SPTObserverManager;
 @protocol SPTGaiaDevicePickerDeviceSpecificConfigurationProvider, SPTGaiaDevicePickerPresenter, SPTGaiaLockScreenPlayerFlagsProvider><SPTGaiaHomeDeviceFlagsProvider, SPTGaiaSettingsStorageProtocol, SPTLinkDispatcher, SPTLogCenter;
 
 @interface SPTGaiaSettingsManager : NSObject <SPTGaiaSettingsProvider>
@@ -22,9 +22,11 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTGaiaLogger *_logger;
     id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> _deviceConfiguration;
+    SPTGaiaDependencyInjectorImplementation *_dependencyInjector;
 }
 
 + (id)createDefaultSettingStorage;
+@property(readonly, nonatomic) SPTGaiaDependencyInjectorImplementation *dependencyInjector; // @synthesize dependencyInjector=_dependencyInjector;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> deviceConfiguration; // @synthesize deviceConfiguration=_deviceConfiguration;
 @property(readonly, nonatomic) SPTGaiaLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -50,7 +52,7 @@
 - (void)notifyObserversLocalDevicesOnlySettingChanged;
 - (void)notifyObserversLockScreenControlsEnabledSettingsChanged;
 - (void)registerDefaultSettingsIfNotExist;
-- (id)initWithDevicePickerPresenter:(id)arg1 storage:(id)arg2 logCenter:(id)arg3 settingsFlags:(id)arg4 savedDeviceManager:(id)arg5 linkDispatcher:(id)arg6 logger:(id)arg7 deviceConfiguration:(id)arg8;
+- (id)initWithDevicePickerPresenter:(id)arg1 storage:(id)arg2 logCenter:(id)arg3 settingsFlags:(id)arg4 savedDeviceManager:(id)arg5 linkDispatcher:(id)arg6 logger:(id)arg7 deviceConfiguration:(id)arg8 dependencyInjector:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

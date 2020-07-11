@@ -22,12 +22,12 @@
 #import "UITextFieldDelegate-Protocol.h"
 
 @class NSMutableDictionary, NSString, NSURL, SPTEntityHeaderViewController, SPTFrameDropTracker, SPTFreeTierPlaylistBarButtonManager, SPTFreeTierPlaylistCellConfigurator, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistFooterProvider, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistHeaderPlaceholder, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistOfflineSwitchFactory, SPTFreeTierPlaylistSponsoredLogoCellStyle, SPTProgressView, SPTTableView, SPTTableViewOfflineSwitchCell;
-@protocol SPContextMenuFeature, SPTAlertInterface, SPTCollectionPlatformConfiguration, SPTContextMenuPresenter, SPTFreeTierCreatePlaylistTestManager, SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistHeader><SPTEntityHeaderContentController, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModel, SPTFreeTierRecommendationsPlaylistFooterViewController, SPTImageLoader, SPTPageContainer, SPTShareDragDelegateFactory, SPTShelves, SPTSortingFilteringUIFactory, UITableViewDragDelegate;
+@protocol GLUEImageLoader, SPContextMenuFeature, SPTAlertInterface, SPTCollectionPlatformConfiguration, SPTContextMenuPresenter, SPTFreeTierCreatePlaylistTestManager, SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistHeader><SPTEntityHeaderContentController, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModel, SPTFreeTierRecommendationsPlaylistFooterViewController, SPTPageContainer, SPTShareDragDelegateFactory, SPTShelves, SPTSortingFilteringUIFactory, UITableViewDragDelegate;
 
 @interface SPTFreeTierPlaylistViewController : UIViewController <SPTFreeTierRecommendationsPlaylistFooterViewControllerDelegate, SPTNavigationControllerNavigationBarState, SPTOfflineSwitchDelegate, SPTShareableContext, SPContentInsetViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UITextFieldDelegate, SPTSortingFilteringPickerDelegate, SPTFrameDropTrackerDelegate, SPTFreeTierPlaylistBarButtonManagerDelegate, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
 {
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
-    id <SPTImageLoader> _imageLoader;
+    id <GLUEImageLoader> _imageLoader;
     SPTFreeTierPlaylistGLUETheme *_theme;
     SPTFreeTierPlaylistBarButtonManager *_playlistBarButtonManager;
     id <SPContextMenuFeature> _contextMenuService;
@@ -90,7 +90,7 @@
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(readonly, nonatomic) SPTFreeTierPlaylistBarButtonManager *playlistBarButtonManager; // @synthesize playlistBarButtonManager=_playlistBarButtonManager;
 @property(readonly, nonatomic) SPTFreeTierPlaylistGLUETheme *theme; // @synthesize theme=_theme;
-@property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
+@property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 - (void).cxx_destruct;
 - (void)addActionWithIdentifier:(id)arg1 toActions:(id)arg2;
@@ -135,7 +135,7 @@
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sp_updateContentInsets;
 - (void)addFooterIfApproachingBottomOfList;
 - (void)updateFooterViewIfLoaded;
@@ -158,7 +158,7 @@
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)whenDataIsLoadedDo:(CDUnknownBlockType)arg1;
-- (id)initWithPlaylistViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 playlistBarButtonManager:(id)arg4 contextMenuService:(id)arg5 footerProvider:(id)arg6 offlineSwitchFactory:(id)arg7 logger:(id)arg8 collectionConfiguration:(id)arg9 searchViewControllerFactory:(CDUnknownBlockType)arg10 sortingFilteringUIFactory:(id)arg11 shelves:(id)arg12 configuration:(id)arg13 glueImageLoader:(id)arg14 playlistTestManager:(id)arg15 createPlaylistTestManager:(id)arg16 alertInterface:(id)arg17 shareDragDelegateFactory:(id)arg18 frameDropTracker:(id)arg19 cellProviderCoordinator:(id)arg20;
+- (id)initWithPlaylistViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 playlistBarButtonManager:(id)arg4 contextMenuService:(id)arg5 footerProvider:(id)arg6 offlineSwitchFactory:(id)arg7 logger:(id)arg8 collectionConfiguration:(id)arg9 searchViewControllerFactory:(CDUnknownBlockType)arg10 sortingFilteringUIFactory:(id)arg11 shelves:(id)arg12 configuration:(id)arg13 playlistTestManager:(id)arg14 createPlaylistTestManager:(id)arg15 alertInterface:(id)arg16 shareDragDelegateFactory:(id)arg17 frameDropTracker:(id)arg18 cellProviderCoordinator:(id)arg19;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

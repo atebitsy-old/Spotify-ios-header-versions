@@ -8,7 +8,7 @@
 
 #import "SPTPodcastEpisodeFeaturedContentViewProvider-Protocol.h"
 
-@class NSString, SPTPodcastEpisodeFeaturedContentContentOperationFactory, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentDataLoader;
+@class NSString, SPTPodcastEpisodeFeaturedContentContentOperationFactory, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentDataLoader, SPTPodcastEpisodeFeaturedContentLogger;
 @protocol GLUEImageLoader, GLUETheme, SPTHubsRendererFactory, SPTHugsFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentTestManager;
 
 @interface SPTPodcastEpisodeFeaturedContentViewProviderImplementation : NSObject <SPTPodcastEpisodeFeaturedContentViewProvider>
@@ -23,8 +23,10 @@
     SPTPodcastEpisodeFeaturedContentContentOperationFactory *_contentOperationsFactory;
     SPTPodcastEpisodeFeaturedContentContextMenuPresenter *_contextMenuPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
+    SPTPodcastEpisodeFeaturedContentLogger *_logger;
 }
 
+@property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentContextMenuPresenter *contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentContentOperationFactory *contentOperationsFactory; // @synthesize contentOperationsFactory=_contentOperationsFactory;
@@ -42,7 +44,7 @@
 - (id)featuredContentTimelineForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentTrackListForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentForEpisodeURL:(id)arg1 withContext:(id)arg2;
-- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 theme:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5 contentOperationFactory:(id)arg6 dataLoaderFactory:(id)arg7 contextMenuPresenter:(id)arg8 playerService:(id)arg9 linkDispatcher:(id)arg10;
+- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 theme:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5 contentOperationFactory:(id)arg6 dataLoaderFactory:(id)arg7 contextMenuPresenter:(id)arg8 playerService:(id)arg9 linkDispatcher:(id)arg10 logger:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -54,6 +54,7 @@
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
 - (void)configureDragDelegateWithViewModel:(id)arg1;
+- (id)makeNavigateHandlerWithURIDispatchService:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeRemoveRecentCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeReloadCommandHandlerWithLogger:(id)arg1 ubiHubsLogger:(id)arg2;
@@ -91,7 +92,6 @@
 - (id)initWithViewModelProvider:(id)arg1 dependencies:(id)arg2 configuration:(id)arg3 loadingLogger:(id)arg4;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

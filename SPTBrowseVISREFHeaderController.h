@@ -43,7 +43,7 @@
 - (id)extractNavigationBarGradientFromBackgroundGradient;
 - (void)updateAssociatedColor:(id)arg1;
 - (void)setup;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 playButtonTestManager:(id)arg3;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

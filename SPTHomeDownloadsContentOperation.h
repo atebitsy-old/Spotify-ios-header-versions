@@ -7,12 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "HUBContentOperation-Protocol.h"
+#import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTOfflineContentModelDelegate-Protocol.h"
 
 @class NSString, SPTNetworkConnectivityController;
 @protocol HUBContentOperationDelegate, SPTOfflineContentModel, SPTOfflineContentModelEntity, SPTUserBehaviourHubsInstrumentation;
 
-@interface SPTHomeDownloadsContentOperation : NSObject <SPTOfflineContentModelDelegate, HUBContentOperation>
+@interface SPTHomeDownloadsContentOperation : NSObject <SPTNetworkConnectivityControllerObserver, SPTOfflineContentModelDelegate, HUBContentOperation>
 {
     id <HUBContentOperationDelegate> delegate;
     id <SPTOfflineContentModel> _offlineMusicModel;
@@ -31,6 +32,7 @@
 @property(readonly, nonatomic) id <SPTOfflineContentModel> offlineMusicModel; // @synthesize offlineMusicModel=_offlineMusicModel;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
+- (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (id)ubiLoggingDataForShelfWithPosition:(unsigned long long)arg1 inSectionWithIdentifier:(id)arg2 itemIndex:(unsigned long long)arg3 itemURI:(id)arg4 sourceContentIdentifier:(id)arg5;
 - (_Bool)showDownloadSections;
 - (_Bool)showEmptyDownloadsSection;
@@ -49,7 +51,7 @@
 - (void)offlineModel:(id)arg1 error:(id)arg2;
 - (void)offlineModelDidUpdate:(id)arg1 entity:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (id)initWithOfflineMusicModel:(id)arg1 offlinePodcastModel:(id)arg2 networkConnectivityController:(id)arg3 ubiHubsInstrumentation:(id)arg4;
+- (id)initWithOfflineMusicModel:(id)arg1 offlinePodcastModel:(id)arg2 networkConnectivityController:(id)arg3 featureProperties:(id)arg4 ubiHubsInstrumentation:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

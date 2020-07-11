@@ -6,7 +6,6 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPContentInsetViewController-Protocol.h"
 #import "SPTEntitySeeAllSongsCellConfiguratorDelegate-Protocol.h"
 #import "SPTEntitySeeAllSongsViewModelDelegate-Protocol.h"
 #import "SPTPageController-Protocol.h"
@@ -16,7 +15,7 @@
 @class NSString, NSURL, SPTEntitySeeAllSongsCellConfigurator, SPTEntitySeeAllSongsViewModel, SPTInfoView, SPTProgressView, SPTTableView;
 @protocol SPTPageContainer;
 
-@interface SPTEntitySeeAllSongsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPContentInsetViewController, SPTEntitySeeAllSongsCellConfiguratorDelegate, SPTPageController, SPTEntitySeeAllSongsViewModelDelegate>
+@interface SPTEntitySeeAllSongsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTEntitySeeAllSongsCellConfiguratorDelegate, SPTPageController, SPTEntitySeeAllSongsViewModelDelegate>
 {
     _Bool _contextMenuToBePresented;
     SPTTableView *_tableView;
@@ -37,8 +36,6 @@
 - (void)entitySeeAllSongsModelRequiresReloadWithViewModel:(id)arg1;
 - (void)entitySeeAllSongsModelDidFailToLoad:(id)arg1;
 - (void)entitySeeAllSongsModelDidLoadWithViewModel:(id)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
-- (void)sp_updateContentInsets;
 - (_Bool)tableView:(id)arg1 shouldHighlightRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 willSelectRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

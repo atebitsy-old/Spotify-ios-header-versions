@@ -13,7 +13,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTPlaylistExtenderModelDelegate-Protocol.h"
 
-@class NSArray, NSDate, NSDictionary, NSString, NSURL, SPTFreeTierPlaylistLogger, SPTPlayOrigin, SPTPlayerState, UIColor;
+@class NSArray, NSAttributedString, NSDate, NSDictionary, NSString, NSURL, SPTFreeTierPlaylistLogger, SPTPlayOrigin, SPTPlayerState, UIColor;
 @protocol SPTAlertInterface, SPTAssistedCurationUIService, SPTCollectionPlatformConfiguration, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPersonalizedBylineProvider, SPTPlayer, SPTPlaylistExtenderModel, SPTVISREFFlagsService;
 
 @interface SPTFreeTierPlaylistViewModelImplementation : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistSponsoredViewModelDelegate, SPTPlaylistExtenderModelDelegate, SPTFreeTierPlaylistViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistModelObserver>
@@ -55,6 +55,9 @@
     NSString *_playlistOwnerUsername;
     NSString *_numberOfLikesText;
     NSString *_madeForName;
+    NSURL *_creatorImageURL;
+    NSAttributedString *_creatorText;
+    NSString *_metadataText;
     unsigned long long _offlineAvailability;
     unsigned long long _type;
     NSDate *_lastModifiedTime;
@@ -117,6 +120,9 @@
 @property(retain, nonatomic) NSDate *lastModifiedTime; // @synthesize lastModifiedTime=_lastModifiedTime;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) unsigned long long offlineAvailability; // @synthesize offlineAvailability=_offlineAvailability;
+@property(copy, nonatomic) NSString *metadataText; // @synthesize metadataText=_metadataText;
+@property(copy, nonatomic) NSAttributedString *creatorText; // @synthesize creatorText=_creatorText;
+@property(retain, nonatomic) NSURL *creatorImageURL; // @synthesize creatorImageURL=_creatorImageURL;
 @property(nonatomic) _Bool containsOnlyVideoEpisodes; // @synthesize containsOnlyVideoEpisodes=_containsOnlyVideoEpisodes;
 @property(nonatomic) _Bool contentSupportsRadio; // @synthesize contentSupportsRadio=_contentSupportsRadio;
 @property(nonatomic) _Bool containsOnlyTracks; // @synthesize containsOnlyTracks=_containsOnlyTracks;
@@ -163,6 +169,7 @@
 - (void)playlistViewModelSponsorshipDidChange:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (id)byLineFromByText:(id)arg1 followCount:(unsigned long long)arg2;
+- (id)durationText;
 - (void)updateFollowCount:(unsigned long long)arg1;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;

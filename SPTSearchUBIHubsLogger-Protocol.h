@@ -9,6 +9,7 @@
 @class HUBComponentEvent, NSURL;
 
 @protocol SPTSearchUBIHubsLogger <NSObject>
+- (void)logNavigateWithDestination:(NSURL *)arg1 event:(HUBComponentEvent *)arg2;
 - (void)logRetryWithEvent:(HUBComponentEvent *)arg1;
 - (void)logRemoveSearchItemWithEvent:(HUBComponentEvent *)arg1;
 - (void)logClearRecentSearchesWithEvent:(HUBComponentEvent *)arg1;

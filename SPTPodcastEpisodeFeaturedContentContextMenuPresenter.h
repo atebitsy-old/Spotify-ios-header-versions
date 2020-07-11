@@ -9,7 +9,7 @@
 #import "SPTContextMenuPresenterDelegate-Protocol.h"
 #import "ShowContextMenuAction-Protocol.h"
 
-@class NSString;
+@class NSString, SPTPodcastEpisodeFeaturedContentLogger;
 @protocol SPContextMenuActionsFactory, SPTContextMenuOptionsFactory, SPTContextMenuPresenter, SPTContextMenuPresenterFactory;
 
 @interface SPTPodcastEpisodeFeaturedContentContextMenuPresenter : NSObject <SPTContextMenuPresenterDelegate, ShowContextMenuAction>
@@ -18,16 +18,18 @@
     id <SPTContextMenuOptionsFactory> _contextMenuOptionsFactory;
     id <SPContextMenuActionsFactory> _contextMenuActionsFactory;
     id <SPTContextMenuPresenter> _presenter;
+    SPTPodcastEpisodeFeaturedContentLogger *_logger;
 }
 
+@property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) id <SPContextMenuActionsFactory> contextMenuActionsFactory; // @synthesize contextMenuActionsFactory=_contextMenuActionsFactory;
 @property(retain, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 - (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
-- (void)presentForEntity:(id)arg1 sender:(id)arg2;
-- (id)initWithContextMenuPresenterFactory:(id)arg1 contextMenuOptionsFactory:(id)arg2 contextMenuActionsFactory:(id)arg3;
+- (void)presentForEntity:(id)arg1 sender:(id)arg2 index:(long long)arg3;
+- (id)initWithContextMenuPresenterFactory:(id)arg1 contextMenuOptionsFactory:(id)arg2 contextMenuActionsFactory:(id)arg3 logger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

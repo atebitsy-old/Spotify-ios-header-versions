@@ -11,12 +11,17 @@
 @interface _TtC15FindFeatureImpl18FindViewController : UIViewController
 {
     // Error parsing type: , name: mainContentLayoutGuide
+    // Error parsing type: , name: headerViewController
+    // Error parsing type: , name: contentViewController
+    // Error parsing type: , name: headerHeightConstraint
     // Error parsing type: , name: pageIdentifier
     // Error parsing type: , name: pageURI
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)contentContainer:(id)arg1 didChangeOffset:(struct CGPoint)arg2;
+- (void)headerContainerDidChangeMetrics:(id)arg1;
 - (void)loadView;
 - (unsigned long long)preferredNavigationBarState;
 - (id)spt_pageURI;

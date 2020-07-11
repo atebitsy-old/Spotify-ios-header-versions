@@ -12,6 +12,9 @@
     // Error parsing type: , name: gradientView
     // Error parsing type: , name: collapsedTitleLabel
     // Error parsing type: , name: theme
+    // Error parsing type: , name: collapsedTitleTopConstraint
+    // Error parsing type: , name: displayName
+    // Error parsing type: , name: collapsedTitleLabelAlpha
 }
 
 - (void).cxx_destruct;

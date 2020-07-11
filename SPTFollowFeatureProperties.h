@@ -22,6 +22,9 @@
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;
+- (unsigned long long)mapToEnum:(id)arg1;
+@property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverrideValue;
+@property(readonly, nonatomic) unsigned long long followShowConfirmationOverrideValue;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

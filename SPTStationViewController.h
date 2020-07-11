@@ -127,7 +127,6 @@
 - (id)initWithContextMenu:(id)arg1 stationViewModel:(id)arg2 viewLogger:(id)arg3 imageLoaderFactory:(id)arg4 shelves:(id)arg5 loggingService:(id)arg6 collectionLogger:(id)arg7 barButtonItemManager:(id)arg8 linkDispatcher:(id)arg9 referrerIdentifier:(id)arg10;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

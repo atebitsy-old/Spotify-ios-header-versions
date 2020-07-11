@@ -13,7 +13,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTSnapshotBackgroundViewController-Protocol.h"
 
-@class NSString, NSURL, SPTNavigationManager, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTPlayerState, SPTStatusBarToken, SPTTheme, UIView;
+@class NSString, NSURL, SPTNavigationManager, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTPlayerState, SPTStatusBarToken, SPTTheme, UIView;
 @protocol SPTNowPlayingContentContainingViewController, SPTPageContainer, SPTPlayer, SPTQueueEnabling, SPTQueueLogger;
 
 @interface SPTNowPlayingToggleViewController : UIViewController <SPTNowPlayingModelObserver, SPTNowPlayingModelDelegate, SPTSnapshotBackgroundViewController, SPTPlayerObserver, SPTBarOverlayViewController, SPTPageController>
@@ -22,6 +22,7 @@
     _Bool _overlayHidden;
     SPTNowPlayingContainerIdleMonitor *_idleMonitor;
     SPTNowPlayingLogger *_logger;
+    SPTNowPlayingBarLogger *_barLogger;
     id <SPTQueueLogger> _queueLogger;
     SPTStatusBarToken *_statusBarToken;
     SPTTheme *_theme;
@@ -52,6 +53,7 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
 @property(readonly, nonatomic) id <SPTQueueLogger> queueLogger; // @synthesize queueLogger=_queueLogger;
+@property(readonly, nonatomic) SPTNowPlayingBarLogger *barLogger; // @synthesize barLogger=_barLogger;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTNowPlayingContainerIdleMonitor *idleMonitor; // @synthesize idleMonitor=_idleMonitor;
 - (void).cxx_destruct;
@@ -90,7 +92,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 playerViewController:(id)arg2 queueViewController:(id)arg3 scrollViewController:(id)arg4 theme:(id)arg5 player:(id)arg6 navigationManager:(id)arg7 backgroundUnitProvider:(id)arg8 logger:(id)arg9 queueLogger:(id)arg10;
+- (id)initWithModel:(id)arg1 playerViewController:(id)arg2 queueViewController:(id)arg3 scrollViewController:(id)arg4 theme:(id)arg5 player:(id)arg6 navigationManager:(id)arg7 backgroundUnitProvider:(id)arg8 logger:(id)arg9 barLogger:(id)arg10 queueLogger:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

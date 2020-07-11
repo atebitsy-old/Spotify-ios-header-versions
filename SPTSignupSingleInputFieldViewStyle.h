@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEButtonStyle, GLUELabelStyle, NSString, SPTLoginInputFormViewStyle, UIColor;
+@class GLUEButtonStyle, GLUELabelStyle, NSString, SPTLoginInputFormViewStyle, SPTSignupTermsAndPolicyViewStyle, UIColor;
 
 @interface SPTSignupSingleInputFieldViewStyle : NSObject <GLUEStyle>
 {
@@ -22,8 +22,10 @@
     double _nextButtonTopMargin;
     double _mainContainerWidth;
     double _mainContainerIPadWidth;
+    SPTSignupTermsAndPolicyViewStyle *_termsViewStyle;
 }
 
+@property(copy, nonatomic) SPTSignupTermsAndPolicyViewStyle *termsViewStyle; // @synthesize termsViewStyle=_termsViewStyle;
 @property(nonatomic) double mainContainerIPadWidth; // @synthesize mainContainerIPadWidth=_mainContainerIPadWidth;
 @property(nonatomic) double mainContainerWidth; // @synthesize mainContainerWidth=_mainContainerWidth;
 @property(nonatomic) double nextButtonTopMargin; // @synthesize nextButtonTopMargin=_nextButtonTopMargin;

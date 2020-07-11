@@ -6,11 +6,12 @@
 
 #import "VISREFTopAndBodyContentView.h"
 
+#import "VISREFExpandableTextViewDelegate-Protocol.h"
 #import "VISREFHeaderComponent-Protocol.h"
 
-@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UIImageView, UILayoutGuide, UIStackView, UIView;
+@class NSLayoutConstraint, NSString, SPTEncoreLabel, UIButton, UIImage, UIImageView, UILayoutGuide, UIStackView, UIView, VISREFCreatorRowView, VISREFExpandableTextView, _TtC20EncoreConsumerMobile19AutoLayoutStackView;
 
-@interface VISREFArtworkContentView : VISREFTopAndBodyContentView <VISREFHeaderComponent>
+@interface VISREFArtworkContentView : VISREFTopAndBodyContentView <VISREFExpandableTextViewDelegate, VISREFHeaderComponent>
 {
     UILayoutGuide *_titlePositionLayoutGuide;
     SPTEncoreLabel *_titleLabel;
@@ -18,14 +19,17 @@
     UIButton *_contextButton;
     UIButton *_feedbackButton;
     UIButton *_offlineButton;
+    CDUnknownBlockType _creatorRowButtonTappedBlock;
     UIImageView *_imageView;
     UIView *_imageShadowView;
+    VISREFExpandableTextView *_descriptionTextView;
+    VISREFCreatorRowView *_creatorRowView;
+    _TtC20EncoreConsumerMobile19AutoLayoutStackView *_contentStackView;
     UIStackView *_actionRowStackView;
     NSLayoutConstraint *_headerHeightConstraint;
     NSLayoutConstraint *_imageTopConstraint;
     NSLayoutConstraint *_imageTopConstraintWithMargin;
     NSLayoutConstraint *_imageBottomConstraint;
-    NSLayoutConstraint *_noTitleConstraint;
     double _imageTopMargin;
     CDStruct_5a28e70a _imageAlphaProgressRange;
     CDStruct_5a28e70a _titleLabelAlphaProgressRange;
@@ -34,14 +38,17 @@
 @property(nonatomic) CDStruct_5a28e70a titleLabelAlphaProgressRange; // @synthesize titleLabelAlphaProgressRange=_titleLabelAlphaProgressRange;
 @property(nonatomic) CDStruct_5a28e70a imageAlphaProgressRange; // @synthesize imageAlphaProgressRange=_imageAlphaProgressRange;
 @property(nonatomic) double imageTopMargin; // @synthesize imageTopMargin=_imageTopMargin;
-@property(retain, nonatomic) NSLayoutConstraint *noTitleConstraint; // @synthesize noTitleConstraint=_noTitleConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageBottomConstraint; // @synthesize imageBottomConstraint=_imageBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageTopConstraintWithMargin; // @synthesize imageTopConstraintWithMargin=_imageTopConstraintWithMargin;
 @property(retain, nonatomic) NSLayoutConstraint *imageTopConstraint; // @synthesize imageTopConstraint=_imageTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *headerHeightConstraint; // @synthesize headerHeightConstraint=_headerHeightConstraint;
 @property(retain, nonatomic) UIStackView *actionRowStackView; // @synthesize actionRowStackView=_actionRowStackView;
+@property(retain, nonatomic) _TtC20EncoreConsumerMobile19AutoLayoutStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
+@property(retain, nonatomic) VISREFCreatorRowView *creatorRowView; // @synthesize creatorRowView=_creatorRowView;
+@property(retain, nonatomic) VISREFExpandableTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
 @property(retain, nonatomic) UIView *imageShadowView; // @synthesize imageShadowView=_imageShadowView;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
+@property(copy, nonatomic) CDUnknownBlockType creatorRowButtonTappedBlock; // @synthesize creatorRowButtonTappedBlock=_creatorRowButtonTappedBlock;
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *feedbackButton; // @synthesize feedbackButton=_feedbackButton;
 @property(retain, nonatomic) UIButton *contextButton; // @synthesize contextButton=_contextButton;
@@ -49,19 +56,23 @@
 @property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILayoutGuide *titlePositionLayoutGuide; // @synthesize titlePositionLayoutGuide=_titlePositionLayoutGuide;
 - (void).cxx_destruct;
+- (void)didTapCreatorRow;
+- (void)expandableTextViewDidTapTruncationText:(id)arg1;
 - (void)updateTopMargin;
 - (void)updateAccessibilityLabels;
 - (void)layoutSubviews;
 - (void)updateActionRow;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
+- (void)setCreators:(id)arg1;
 - (void)setMetadata:(id)arg1;
+- (void)setAttributedDescriptionText:(id)arg1;
+- (void)setDescriptionText:(id)arg1;
 - (void)setTitle:(id)arg1;
 @property(retain, nonatomic) UIImage *image;
 - (void)headerViewDidRemountHeaderComponents:(id)arg1;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (void)updateProgressPositions;
-- (void)updateTitleConstraint;
 - (void)setupLayout;
 - (void)setup;
 - (id)initWithNaturalHeight:(double)arg1;

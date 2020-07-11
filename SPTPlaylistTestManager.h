@@ -25,10 +25,8 @@
     id <SPTProductState> _productState;
     id <SPTLocalSettings> _localSettings;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
-    id <SPTFeatureFlagSignal> _yourLibraryEnabledSignal;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _playlistFeatureEnabledSignal;
-    id <SPTFeatureFlagSignal> _listOfPlaylistsFeatureEnabledSignal;
     id <SPTFeatureFlagSignal> _madeForSignal;
     id <SPTFeatureFlagSignal> _madeForEmployeeSignal;
     id <SPTFeatureFlagSignal> _addToPlaylistFeatureEnabledSignal;
@@ -40,10 +38,8 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> madeForEmployeeSignal; // @synthesize madeForEmployeeSignal=_madeForEmployeeSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> madeForSignal; // @synthesize madeForSignal=_madeForSignal;
 @property(readonly, nonatomic, getter=isDiscoverWeeklyMarketingCampaignOn) _Bool discoverWeeklyMarketingCampaignOn; // @synthesize discoverWeeklyMarketingCampaignOn=_discoverWeeklyMarketingCampaignOn;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> listOfPlaylistsFeatureEnabledSignal; // @synthesize listOfPlaylistsFeatureEnabledSignal=_listOfPlaylistsFeatureEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> playlistFeatureEnabledSignal; // @synthesize playlistFeatureEnabledSignal=_playlistFeatureEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> yourLibraryEnabledSignal; // @synthesize yourLibraryEnabledSignal=_yourLibraryEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -62,7 +58,7 @@
 - (_Bool)shouldShowPremiumLabel;
 - (_Bool)shouldHidePremiumOnly;
 - (void)dealloc;
-- (id)initWithFeatureFlags:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 freeTierEnabledSignal:(id)arg4 yourLibraryEnabledSignal:(id)arg5 addToPlaylistFeatureEnabledSignal:(id)arg6 featureFlagFactory:(id)arg7;
+- (id)initWithFeatureFlags:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 freeTierEnabledSignal:(id)arg4 addToPlaylistFeatureEnabledSignal:(id)arg5 featureFlagFactory:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

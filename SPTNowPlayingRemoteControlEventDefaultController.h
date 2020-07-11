@@ -37,7 +37,6 @@
 }
 
 + (id)soundsBundle;
-+ (void)initialize;
 @property(nonatomic) _Bool playersLoaded; // @synthesize playersLoaded=_playersLoaded;
 @property(copy, nonatomic) CDUnknownBlockType avAudioPlayerFactory; // @synthesize avAudioPlayerFactory=_avAudioPlayerFactory;
 @property(retain, nonatomic) MPRemoteCommandCenter *remoteCommandCenter; // @synthesize remoteCommandCenter=_remoteCommandCenter;

@@ -25,7 +25,7 @@
 - (void)removeTracks:(NSArray *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)toggleLikedStateOnTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1;
 - (void)toggleBannedStateOnTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1;
-- (_Bool)isPlaybackRestrictedForTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1 playbackPrevented:(_Bool)arg2;
+- (_Bool)isPlaybackRestrictedForTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1 shouldDisplayExplainingAlert:(_Bool)arg2 coverArtURL:(NSURL *)arg3;
 - (void)changeOffline:(_Bool)arg1;
 - (void)loadMore;
 - (void)deletePlaylist;

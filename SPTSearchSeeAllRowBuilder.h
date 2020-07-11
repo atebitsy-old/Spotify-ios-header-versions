@@ -10,14 +10,14 @@
 {
 }
 
-+ (id)seeAllLoggingDataForURI:(id)arg1 ubiHubs:(id)arg2 position:(unsigned long long)arg3;
++ (id)seeAllLoggingDataForURI:(id)arg1 ubiLocationSerializer:(id)arg2 position:(unsigned long long)arg3;
 + (void)addUIILoggingDataToComponentModel:(id)arg1 entityType:(int)arg2 requestID:(id)arg3 pageURI:(id)arg4;
 + (id)sectionIDForEntityType:(int)arg1;
 + (id)entityTypeNameForEntityType:(int)arg1;
 + (id)seeMoreTargetURIForEntityType:(int)arg1 query:(id)arg2;
 + (id)seeAllIdentifierForEntityType:(int)arg1;
 + (id)seeMoreTitleForEntityType:(int)arg1;
-+ (id)seeAllRowForEntityType:(int)arg1 query:(id)arg2 requestID:(id)arg3 pageURI:(id)arg4 ubiHubs:(id)arg5 position:(unsigned long long)arg6;
++ (id)seeAllRowForEntityType:(int)arg1 query:(id)arg2 requestID:(id)arg3 pageURI:(id)arg4 ubiLocationSerializer:(id)arg5 position:(unsigned long long)arg6;
 
 @end
 

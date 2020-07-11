@@ -113,7 +113,7 @@
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 @property(readonly, nonatomic) NSURL *URI;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)followButtonTapped;
 - (void)shuffleButtonTapped;
 - (void)dealloc;

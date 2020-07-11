@@ -10,7 +10,7 @@
 #import "SPTSearchPlatformViewModelFetcher-Protocol.h"
 
 @class HUBViewModelBuilderFactory, NSString, SPTDataLoader, SPTDataLoaderFactory;
-@protocol SPTSearch2DateProviding, SPTSearch2EmptyStatePropertiesProvider, SPTSearch2URLProviding, SPTSearchPlatformResponseParser, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTSearch2DateProviding, SPTSearch2EmptyStatePropertiesProvider, SPTSearch2URLProviding, SPTSearchPlatformResponseParser, SPTSearchUBILocationSerializer;
 
 @interface SPTSearchPlatformOnlineViewModelFetcher : NSObject <SPTDataLoaderDelegate, SPTSearchPlatformViewModelFetcher>
 {
@@ -22,10 +22,10 @@
     HUBViewModelBuilderFactory *_viewModelBuilderFactory;
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     id <SPTSearchPlatformResponseParser> _responseParser;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <SPTSearchPlatformResponseParser> responseParser; // @synthesize responseParser=_responseParser;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) HUBViewModelBuilderFactory *viewModelBuilderFactory; // @synthesize viewModelBuilderFactory=_viewModelBuilderFactory;
@@ -52,7 +52,7 @@
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)fetchViewModelWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithURLProvider:(id)arg1 query:(id)arg2 dataLoaderFactory:(id)arg3 viewModelBuilderFactory:(id)arg4 emptyStatePropertiesProvider:(id)arg5 dateProvider:(id)arg6 responseParser:(id)arg7 ubiHubsInstrumentation:(id)arg8;
+- (id)initWithURLProvider:(id)arg1 query:(id)arg2 dataLoaderFactory:(id)arg3 viewModelBuilderFactory:(id)arg4 emptyStatePropertiesProvider:(id)arg5 dateProvider:(id)arg6 responseParser:(id)arg7 ubiLocationSerializer:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

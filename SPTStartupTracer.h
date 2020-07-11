@@ -10,13 +10,13 @@
 #import "SPTViewLoggerObserver-Protocol.h"
 
 @class NSMutableDictionary, NSString, NSUUID, SPTStartupDurationTracker;
-@protocol OS_os_log, SPTLogCenter, SPTPerformanceLoggingApplicationStateProvider;
+@protocol OS_os_log, SPTColdStartupSequenceTransport, SPTPerformanceLoggingApplicationStateProvider;
 
 @interface SPTStartupTracer : NSObject <SPTColdStartObserver, SPTViewLoggerObserver>
 {
     _Bool _viewLoadingStarted;
     NSString *_connectionType;
-    id <SPTLogCenter> _logCenter;
+    id <SPTColdStartupSequenceTransport> _transport;
     NSMutableDictionary *_steps;
     NSMutableDictionary *_metadata;
     NSUUID *_viewLoadSequenceId;
@@ -38,7 +38,7 @@
 @property(retain) NSMutableDictionary *metadata; // @synthesize metadata=_metadata;
 @property(retain) NSMutableDictionary *steps; // @synthesize steps=_steps;
 @property _Bool viewLoadingStarted; // @synthesize viewLoadingStarted=_viewLoadingStarted;
-@property(nonatomic) __weak id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) id <SPTColdStartupSequenceTransport> transport; // @synthesize transport=_transport;
 @property(copy, nonatomic) NSString *connectionType; // @synthesize connectionType=_connectionType;
 - (void).cxx_destruct;
 - (id)coreFeatureDurations;
@@ -83,7 +83,8 @@
 - (void)logApplicationInitDidStart;
 - (_Bool)isStartupDurationTrackingEnabled;
 - (_Bool)isStartupTracingEnabled;
-- (id)initWithLogCenter:(id)arg1 applicationStateProvider:(id)arg2 instrumentationLog:(id)arg3 terminalStateCallback:(CDUnknownBlockType)arg4;
+- (void)injectColdStartupSequenceTransport:(id)arg1;
+- (id)initWithApplicationStateProvider:(id)arg1 instrumentationLog:(id)arg2 terminalStateCallback:(CDUnknownBlockType)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

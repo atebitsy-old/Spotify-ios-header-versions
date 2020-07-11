@@ -9,7 +9,7 @@
 #import "SPTReleaseRadarDiscoverWeeklyService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTFeedbackService, SPTFormatListPlatformService, SPTFreeTierPlaylistUIService, SPTFreeTierService, SPTGLUEService, SPTReleaseRadarDiscoverWeeklyTestManager, SPTRemoteConfigurationService;
+@protocol SPTCoreService, SPTFeedbackService, SPTFormatListPlatformService, SPTFreeTierPlaylistUIService, SPTFreeTierService, SPTGLUEService, SPTReleaseRadarDiscoverWeeklyTestManager, SPTRemoteConfigurationService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTReleaseRadarDiscoverWeeklyServiceImplementation : NSObject <SPTReleaseRadarDiscoverWeeklyService>
 {
@@ -19,11 +19,15 @@
     id <SPTFreeTierService> _freeTierService;
     id <SPTGLUEService> _glueService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreIntegrationService;
+    id <SPTCoreService> _coreService;
     id <SPTReleaseRadarDiscoverWeeklyTestManager> _testManager;
 }
 
 + (id)serviceIdentifier;
 @property(readonly, nonatomic) id <SPTReleaseRadarDiscoverWeeklyTestManager> testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
+@property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;

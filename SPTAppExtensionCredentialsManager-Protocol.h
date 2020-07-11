@@ -7,17 +7,20 @@
 #import "NSObject-Protocol.h"
 
 @class NSError, NSString, SPTAppExtensionKeychainCredentials;
-@protocol SPTLoginSession;
+@protocol NSSecureCoding><SPTLoginSession;
 
 @protocol SPTAppExtensionCredentialsManager <NSObject>
 - (NSString *)hermesAccessToken;
 - (_Bool)deleteHermesAccessToken;
 - (NSError *)setHermesAccessToken:(NSString *)arg1;
-- (id <SPTLoginSession>)storedLoginSession;
+- (SPTAppExtensionKeychainCredentials *)ESDKCredentials;
+- (_Bool)deleteESDKCredentials;
+- (NSError *)setESDKCredentials:(SPTAppExtensionKeychainCredentials *)arg1;
+- (id <NSSecureCoding><SPTLoginSession>)storedLoginSession;
 - (_Bool)deleteStoredLoginSession;
-- (NSError *)setStoredLoginSession:(id <SPTLoginSession>)arg1;
-- (SPTAppExtensionKeychainCredentials *)appExtensionCredentials;
-- (_Bool)deleteAppExtensionCredentials;
-- (NSError *)setAppExtensionCredentials:(SPTAppExtensionKeychainCredentials *)arg1;
+- (NSError *)setStoredLoginSession:(id <NSSecureCoding><SPTLoginSession>)arg1;
+- (SPTAppExtensionKeychainCredentials *)coreCredentials;
+- (_Bool)deleteCoreCredentials;
+- (NSError *)setCoreCredentials:(SPTAppExtensionKeychainCredentials *)arg1;
 @end
 

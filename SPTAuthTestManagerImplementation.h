@@ -15,22 +15,18 @@
 @interface SPTAuthTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTAuthTestManager>
 {
     _Bool _stagingEnabled;
-    _Bool _authWebViewUsingWebKit;
     _Bool _networklessAuthEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _authAccountsStagingFeatureFlagSignal;
-    id <SPTFeatureFlagSignal> _authWebKitFlagSignal;
     id <SPTFeatureFlagSignal> _authNetworklessFlagSignal;
     SPTObserverManager *_observers;
 }
 
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> authNetworklessFlagSignal; // @synthesize authNetworklessFlagSignal=_authNetworklessFlagSignal;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> authWebKitFlagSignal; // @synthesize authWebKitFlagSignal=_authWebKitFlagSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> authAccountsStagingFeatureFlagSignal; // @synthesize authAccountsStagingFeatureFlagSignal=_authAccountsStagingFeatureFlagSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic, getter=isNetworklessAuthEnabled) _Bool networklessAuthEnabled; // @synthesize networklessAuthEnabled=_networklessAuthEnabled;
-@property(nonatomic, getter=isAuthWebViewUsingWebKit) _Bool authWebViewUsingWebKit; // @synthesize authWebViewUsingWebKit=_authWebViewUsingWebKit;
 @property(nonatomic, getter=isStagingEnabled) _Bool stagingEnabled; // @synthesize stagingEnabled=_stagingEnabled;
 - (void).cxx_destruct;
 - (id)featureFlagSignalWithABBAKey:(id)arg1 settingsItemTitle:(id)arg2 settingsItemDescription:(id)arg3;

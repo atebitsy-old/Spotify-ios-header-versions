@@ -10,7 +10,7 @@
 #import "SPTRadioPlaybackObserver-Protocol.h"
 #import "SPTRadioStationsObserver-Protocol.h"
 
-@class NSHashTable, NSString, SPTRadioPlaybackService, SPTRadioStationsService;
+@class NSString, SPTRadioPlaybackService, SPTRadioStationsService;
 @protocol SPTLocalSettings, SPTProductState, SPTRadioRemoteConfigService;
 
 @interface SPTRadioManagerImplementation : NSObject <SPTRadioPlaybackObserver, SPTRadioStationsObserver, SPTRadioManager>
@@ -19,24 +19,16 @@
     SPTRadioPlaybackService *_playbackService;
     SPTRadioStationsService *_stationsService;
     id <SPTRadioRemoteConfigService> _radioRemoteConfigService;
-    NSHashTable *_observers;
     id <SPTProductState> _productState;
 }
 
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-@property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) __weak id <SPTRadioRemoteConfigService> radioRemoteConfigService; // @synthesize radioRemoteConfigService=_radioRemoteConfigService;
 @property(nonatomic) __weak SPTRadioStationsService *stationsService; // @synthesize stationsService=_stationsService;
 @property(nonatomic) __weak SPTRadioPlaybackService *playbackService; // @synthesize playbackService=_playbackService;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
-- (void)radioPlaybackService:(id)arg1 error:(id)arg2;
-- (void)radioPlaybackService:(id)arg1 playbackStateChanged:(unsigned long long)arg2;
 - (_Bool)isCarPlaySession:(_Bool)arg1;
-- (void)removeRadioObserver:(id)arg1;
-- (void)addRadioObserver:(id)arg1;
-- (long long)feedbackForTrackURL:(id)arg1;
-- (void)radioThumbTrackURL:(id)arg1 isUp:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)startRadioStationWithSeedURL:(id)arg1 startedFromElement:(id)arg2 referrerIdentifier:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (_Bool)startRadioStationWithSeedURL:(id)arg1 startedFromElement:(id)arg2 referrerIdentifier:(id)arg3;
 - (id)playbackDescriptionForURL:(id)arg1;

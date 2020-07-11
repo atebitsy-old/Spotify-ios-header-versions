@@ -9,17 +9,14 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTDataLoader;
-@protocol SPTRadioTestManager;
 
 @interface SPTRadioFormatListMapper : NSObject <SPTDataLoaderDelegate>
 {
     _Bool _errorWhenSeedsHaveNoPool;
     SPTDataLoader *_dataLoader;
-    id <SPTRadioTestManager> _testManager;
 }
 
 @property(readonly, nonatomic) _Bool errorWhenSeedsHaveNoPool; // @synthesize errorWhenSeedsHaveNoPool=_errorWhenSeedsHaveNoPool;
-@property(readonly, nonatomic) id <SPTRadioTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

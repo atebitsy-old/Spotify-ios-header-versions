@@ -63,7 +63,7 @@
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;
 - (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2;
 - (void)podcastPlayerStateDidChange:(id)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

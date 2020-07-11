@@ -9,11 +9,12 @@
 #import "SPContentInsetViewController-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate-Protocol.h"
+#import "SPTPodcastEpisodeFeaturedContentTrackActionsDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTPodcastEntitiesModel, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentDataLoader, SPTPodcastEpisodeFeaturedContentPlayer;
+@class NSString, NSURL, SPTPodcastEntitiesModel, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentDataLoader, SPTPodcastEpisodeFeaturedContentLogger, SPTPodcastEpisodeFeaturedContentPlayer;
 @protocol GLUEImageLoader, SPTPageContainer;
 
-@interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTPageController>
+@interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTPageController, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate>
 {
     _Bool _configureForEmbeddingInScrollView;
     NSString *_episodeURIString;
@@ -22,8 +23,10 @@
     SPTPodcastEpisodeFeaturedContentContextMenuPresenter *_contextMenuPresenter;
     SPTPodcastEpisodeFeaturedContentPlayer *_featuredContentPlayer;
     SPTPodcastEntitiesModel *_podcastEntitiesModel;
+    SPTPodcastEpisodeFeaturedContentLogger *_logger;
 }
 
+@property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic, getter=shouldConfigureForEmbeddingInScrollView) _Bool configureForEmbeddingInScrollView; // @synthesize configureForEmbeddingInScrollView=_configureForEmbeddingInScrollView;
 @property(retain, nonatomic) SPTPodcastEntitiesModel *podcastEntitiesModel; // @synthesize podcastEntitiesModel=_podcastEntitiesModel;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentPlayer *featuredContentPlayer; // @synthesize featuredContentPlayer=_featuredContentPlayer;
@@ -37,6 +40,7 @@
 - (void)playerDidStopPlayingEntity:(id)arg1;
 - (void)playerDidUpdateWithEntityPlaying:(id)arg1;
 - (void)sp_updateContentInsets;
+- (void)didTapContextMenuForSender:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
@@ -49,10 +53,9 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)setUpNavigationItem;
-- (id)initWithEpisodeURI:(id)arg1 podcastInspectorDataLoader:(id)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4 featuredContentPlayer:(id)arg5 configureForEmbeddingInScrollView:(_Bool)arg6;
+- (id)initWithEpisodeURI:(id)arg1 podcastInspectorDataLoader:(id)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4 featuredContentPlayer:(id)arg5 configureForEmbeddingInScrollView:(_Bool)arg6 logger:(id)arg7;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

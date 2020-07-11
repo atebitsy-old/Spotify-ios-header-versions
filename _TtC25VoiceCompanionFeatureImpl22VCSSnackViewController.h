@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
-@interface _TtC25VoiceCompanionFeatureImpl22VCSSnackViewController : SPViewController
+@interface _TtC25VoiceCompanionFeatureImpl22VCSSnackViewController : UIViewController
 {
     // Error parsing type: , name: kSnackbarViewHeight
     // Error parsing type: , name: loopController

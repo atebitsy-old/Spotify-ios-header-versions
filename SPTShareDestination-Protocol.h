@@ -9,12 +9,12 @@
 @class NSString, UIImage;
 
 @protocol SPTShareDestination <NSObject>
-@property(nonatomic, readonly) NSString *loggingKey;
-@property(nonatomic, readonly) unsigned long long capability;
-@property(nonatomic, readonly) long long destinationId;
-@property(nonatomic, readonly) NSString *URLFormat;
-@property(nonatomic, readonly) NSString *URLScheme;
-@property(nonatomic, readonly) UIImage *icon;
-@property(nonatomic, readonly) NSString *title;
+@property(readonly, nonatomic) NSString *loggingKey;
+@property(readonly, nonatomic) unsigned long long capability;
+@property(readonly, nonatomic) long long destinationId;
+@property(readonly, nonatomic) NSString *URLFormat;
+@property(readonly, nonatomic) NSString *URLScheme;
+@property(readonly, nonatomic) UIImage *icon;
+@property(readonly, nonatomic) NSString *title;
 @end
 

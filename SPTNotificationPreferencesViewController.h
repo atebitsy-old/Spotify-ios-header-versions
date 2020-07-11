@@ -56,7 +56,6 @@
 - (id)initWithNotificationBackendIntegrator:(id)arg1 offlineModeState:(id)arg2 alertController:(id)arg3 logger:(id)arg4;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

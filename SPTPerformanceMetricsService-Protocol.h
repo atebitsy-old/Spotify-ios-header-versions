@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTPerformanceMetricsViewLoggerFactory;
+@protocol SPTColdStartupSequenceTransport, SPTPerformanceMetricsViewLoggerFactory;
 
 @protocol SPTPerformanceMetricsService <SPTService>
+- (id <SPTColdStartupSequenceTransport>)provideColdStartupSequenceTransport;
 - (id <SPTPerformanceMetricsViewLoggerFactory>)provideViewLoggerFactory;
 @end
 

@@ -42,6 +42,7 @@
 - (void)contentLayerViewModelDidChangeNextTrack:(id)arg1;
 - (void)contentLayerViewModelDidChangeScrollBoundaries:(id)arg1;
 - (void)contentLayerViewModelDidMoveToTrackAtIndexPath:(id)arg1 relativeMovement:(long long)arg2;
+- (void)contentLayerResolverDidRefreshProviders:(id)arg1;
 - (void)contentLayerResolver:(id)arg1 didRefreshProviderForTrack:(id)arg2;
 - (void)contentLayerResolver:(id)arg1 didRegisterProvider:(id)arg2;
 - (void)scrollDidFinish;

@@ -7,7 +7,9 @@
 #import "_TtC28PodcastOnboardingFeatureImpl24PodcastOnboardingService.h"
 
 @interface _TtC28PodcastOnboardingFeatureImpl24PodcastOnboardingService (PodcastOnboardingFeatureImpl)
+- (CDUnknownBlockType)provideFirstTimeFlowExperimentOn;
 - (id)provideFirstTimeFlowEnabledSignal;
+- (id)provideCurator;
 - (id)provideCoordinator;
 @end
 

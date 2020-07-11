@@ -10,7 +10,7 @@
 #import "SPTPerformanceMetricsService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPerformanceMetricsAppMetricsCollector, SPTPerformanceMetricsViewLoggerFactoryImplementation, SPTStartupTracer;
-@protocol CosmosFeature, SPTContainerService, SPTEventSenderService, SPTNetworkService, SPTPerformanceKitUUIDProvider, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTViewLoggerConnectionTypeProvider;
+@protocol CosmosFeature, SPTColdStartupSequenceTransport, SPTContainerService, SPTEventSenderService, SPTNetworkService, SPTPerformanceKitUUIDProvider, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTViewLoggerConnectionTypeProvider;
 
 @interface SPTPerformanceMetricsServiceImplementation : NSObject <SPTNavigationManagerDelegate, SPTPerformanceMetricsService>
 {
@@ -26,9 +26,11 @@
     SPTPerformanceMetricsViewLoggerFactoryImplementation *_viewLoggerFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTPerformanceMetricsAppMetricsCollector *_appMetricCollector;
+    id <SPTColdStartupSequenceTransport> _coldStartupSequenceTransport;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) id <SPTColdStartupSequenceTransport> coldStartupSequenceTransport; // @synthesize coldStartupSequenceTransport=_coldStartupSequenceTransport;
 @property(retain, nonatomic) SPTPerformanceMetricsAppMetricsCollector *appMetricCollector; // @synthesize appMetricCollector=_appMetricCollector;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) SPTPerformanceMetricsViewLoggerFactoryImplementation *viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
@@ -50,6 +52,7 @@
 - (void)unload;
 - (void)idleStateWasReached;
 - (void)load;
+- (id)provideColdStartupSequenceTransport;
 - (id)provideViewLoggerFactory;
 - (id)provideResolver;
 - (void)configureWithServices:(id)arg1;

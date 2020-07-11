@@ -6,7 +6,6 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPContentInsetViewController-Protocol.h"
 #import "SPTFreeTierAllSongsCellConfiguratorDelegate-Protocol.h"
 #import "SPTFreeTierAllSongsViewModelDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
@@ -17,7 +16,7 @@
 @class NSString, NSURL, SPTEntityHeaderViewController, SPTFreeTierAllSongsCellConfigurator, SPTFreeTierAllSongsFeatureProperties, SPTFreeTierAllSongsHeaderViewController, SPTFreeTierAllSongsTheme, SPTFreeTierAllSongsViewModel, SPTInfoView, SPTProgressView, SPTTableView;
 @protocol SPTPageContainer;
 
-@interface SPTFreeTierAllSongsViewControllerImplementation : UIViewController <UITableViewDataSource, UITableViewDelegate, SPContentInsetViewController, SPTNavigationControllerNavigationBarState, SPTFreeTierAllSongsCellConfiguratorDelegate, SPTPageController, SPTFreeTierAllSongsViewModelDelegate>
+@interface SPTFreeTierAllSongsViewControllerImplementation : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTNavigationControllerNavigationBarState, SPTFreeTierAllSongsCellConfiguratorDelegate, SPTPageController, SPTFreeTierAllSongsViewModelDelegate>
 {
     _Bool _contextMenuToBePresented;
     SPTTableView *_tableView;
@@ -46,8 +45,6 @@
 - (void)freeTierAllSongsModelRequiresReloadWithViewModel:(id)arg1;
 - (void)freeTierAllSongsModelDidFailToLoad:(id)arg1;
 - (void)freeTierAllSongsModelDidLoadWithViewModel:(id)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
-- (void)sp_updateContentInsets;
 - (_Bool)tableView:(id)arg1 shouldHighlightRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 willSelectRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

@@ -6,14 +6,12 @@
 
 #import "SPTService-Protocol.h"
 
-@class SPTAppLogModel, SPTDebugLogService, SPTNavigationManager, SPTStartupTracer;
+@class SPTNavigationManager, SPTStartupTracer;
 @protocol SPTKeychainManager, SPTLogCenter, SPTMetaViewController, SPTNavigationRouter, SPTPageRegistry, SPTUICompletionNotifier;
 
 @protocol SPTContainerService <SPTService>
 - (void (^)(void))provideContainerLogoutHandler;
 - (id <SPTKeychainManager>)provideKeychainManager;
-- (SPTAppLogModel *)provideAppLogModel;
-- (SPTDebugLogService *)provideDebugLogService;
 - (id <SPTLogCenter>)provideLogCenter;
 - (id <SPTUICompletionNotifier>)provideUICompletionNotifier;
 - (id <SPTNavigationRouter>)provideNavigationRouter;

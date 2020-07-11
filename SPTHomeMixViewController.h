@@ -96,7 +96,7 @@
 - (void)homeMixViewModelUpdateTrackDisplay:(id)arg1;
 - (void)homeMixViewModel:(id)arg1 didLoadHeaderData:(id)arg2;
 - (void)homeMixViewModel:(id)arg1 didUpdateTracks:(id)arg2;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

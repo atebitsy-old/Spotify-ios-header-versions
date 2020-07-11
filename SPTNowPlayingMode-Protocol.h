@@ -24,6 +24,5 @@
 - (_Bool)requiresContentViewDisabled;
 - (_Bool)requiresScrollDisabled;
 - (UIViewController *)contentDecorationViewController;
-- (id)ubiModeLogger;
 @end
 

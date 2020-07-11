@@ -6,23 +6,24 @@
 
 #import "SPTUIBlurView.h"
 
-@class UIImageView;
+@class GLUEImageView, UIImageView;
 
 @interface SPTFreeTierPlaylistHeaderFullScreenCoverArtView : SPTUIBlurView
 {
     _Bool _exitAnimationInProgress;
     UIImageView *_imageView;
-    UIImageView *_overlayImageView;
+    GLUEImageView *_overlayImageView;
 }
 
-+ (id)coverArtViewWithFrame:(struct CGRect)arg1 imageView:(id)arg2;
++ (id)coverArtViewWithFrame:(struct CGRect)arg1 imageView:(id)arg2 imageLoader:(id)arg3 fullscreenImageURL:(id)arg4;
 @property(nonatomic) _Bool exitAnimationInProgress; // @synthesize exitAnimationInProgress=_exitAnimationInProgress;
-@property(retain, nonatomic) UIImageView *overlayImageView; // @synthesize overlayImageView=_overlayImageView;
+@property(retain, nonatomic) GLUEImageView *overlayImageView; // @synthesize overlayImageView=_overlayImageView;
 @property(nonatomic) __weak UIImageView *imageView; // @synthesize imageView=_imageView;
 - (void).cxx_destruct;
 - (void)overlayViewDismissedWithRecognizer:(id)arg1;
+- (struct CGSize)calculateOverlayImageViewSize;
 - (void)layoutSubviews;
-- (void)setup;
+- (void)setupWithImageLoader:(id)arg1 fullscreenImageURL:(id)arg2;
 
 @end
 

@@ -7,7 +7,7 @@
 #import "VISREFHeaderController-Protocol.h"
 
 @class UIImage;
-@protocol GLUETheme, HUBComponentEventHandler, HUBComponentModel, VISREFPlayButtonTestManager;
+@protocol GLUETheme, HUBComponentEventHandler, HUBComponentModel, SPTImageLoader, SPTLinkDispatcher;
 
 @protocol VISREFHubHeaderController <VISREFHeaderController>
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
@@ -15,7 +15,7 @@
 - (void)setNavigationBarHeight:(double)arg1;
 - (void)configureWithModel:(id <HUBComponentModel>)arg1 eventHandler:(id <HUBComponentEventHandler>)arg2;
 - (double)headerHeight;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id <GLUETheme>)arg2 playButtonTestManager:(id <VISREFPlayButtonTestManager>)arg3;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id <GLUETheme>)arg2 imageLoader:(id <SPTImageLoader>)arg3 linkDispatcher:(id <SPTLinkDispatcher>)arg4;
 
 @optional
 - (void)setImage:(UIImage *)arg1;

@@ -9,6 +9,7 @@
 @interface _TtC20ProfileV2FeatureImpl29SPTProfileV2FeatureProperties : NSObject
 {
     // Error parsing type: , name: newProfilePageEnabled
+    // Error parsing type: , name: newProfilePageEditButtonEnabled
 }
 
 - (id)init;

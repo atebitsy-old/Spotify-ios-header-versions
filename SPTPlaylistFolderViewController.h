@@ -169,7 +169,6 @@
 - (id)initWithSession:(id)arg1 offlineManager:(id)arg2 viewModel:(id)arg3 localSettings:(id)arg4 glueImageLoader:(id)arg5 offlineModeNotifier:(id)arg6 logger:(id)arg7 playlistModel:(id)arg8 NUXModifier:(id)arg9 collectionTestManager:(id)arg10 playlistGLUETheme:(id)arg11 alertController:(id)arg12 linkDispatcher:(id)arg13;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
-@interface _TtC25VoiceCompanionFeatureImpl28VCSEditRoutineViewController : SPViewController
+@interface _TtC25VoiceCompanionFeatureImpl28VCSEditRoutineViewController : UIViewController
 {
     // Error parsing type: , name: pageUri
     // Error parsing type: , name: mobiusController

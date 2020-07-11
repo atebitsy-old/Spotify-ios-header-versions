@@ -22,7 +22,6 @@
     id <SPTLocalSettings> _localSettings;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _freeTierSignal;
-    id <SPTFeatureFlagSignal> _yourLibrarySignal;
     SPTObserverManager *_observerManager;
     id <SPTFeatureFlagSignal> _podcastYourLibrarySignal;
     id <SPTFeatureFlagSignal> _podcastHeaderV2Signal;
@@ -31,7 +30,6 @@
     id <SPTFeatureFlagSignal> _yourLibraryAnchorTestSignalPhase2;
     id <SPTFeatureFlagSignal> _podcastTrailersRolloutSignal;
     long long _freeTierState;
-    long long _yourLibraryState;
     long long _podcastHeaderV2State;
     long long _podcastHeaderV2CondensedSizeState;
     long long _podcastHeaderV2IterationsState;
@@ -42,7 +40,6 @@
 @property(nonatomic) long long podcastHeaderV2IterationsState; // @synthesize podcastHeaderV2IterationsState=_podcastHeaderV2IterationsState;
 @property(nonatomic) long long podcastHeaderV2CondensedSizeState; // @synthesize podcastHeaderV2CondensedSizeState=_podcastHeaderV2CondensedSizeState;
 @property(nonatomic) long long podcastHeaderV2State; // @synthesize podcastHeaderV2State=_podcastHeaderV2State;
-@property(nonatomic) long long yourLibraryState; // @synthesize yourLibraryState=_yourLibraryState;
 @property(nonatomic) long long freeTierState; // @synthesize freeTierState=_freeTierState;
 @property(nonatomic, getter=isVideoEntityPagesEnabled) _Bool videoEntityPagesEnabled; // @synthesize videoEntityPagesEnabled=_videoEntityPagesEnabled;
 @property(nonatomic, getter=isVideoFeatureEnabled) _Bool videoFeatureEnabled; // @synthesize videoFeatureEnabled=_videoFeatureEnabled;
@@ -54,7 +51,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastHeaderV2Signal; // @synthesize podcastHeaderV2Signal=_podcastHeaderV2Signal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastYourLibrarySignal; // @synthesize podcastYourLibrarySignal=_podcastYourLibrarySignal;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> yourLibrarySignal; // @synthesize yourLibrarySignal=_yourLibrarySignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierSignal; // @synthesize freeTierSignal=_freeTierSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -72,7 +68,6 @@
 @property(readonly, nonatomic, getter=isProductionisedYourLibraryEnabled) _Bool productionisedYourLibraryEnabled;
 @property(readonly, nonatomic, getter=isPodcast3DTouchEnabled) _Bool podcast3DTouchEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlaybackOrderEnabled) _Bool podcastPlaybackOrderEnabled;
-- (_Bool)isPodcastYourLibraryEnabled;
 @property(readonly, nonatomic, getter=isLikeActionEnabled) _Bool likeActionEnabled;
 @property(readonly, nonatomic, getter=isFollowActionEnabled) _Bool followActionEnabled;
 @property(readonly, nonatomic, getter=isOnboardingTabBarTooltipTestEnabled) _Bool onboardingTabBarTooltipTestEnabled;
@@ -83,7 +78,7 @@
 - (id)createPodcastTrailerSignal:(id)arg1;
 - (void)createPodcastHeaderV2IterationsSignal:(id)arg1;
 - (void)dealloc;
-- (id)initWithFeatureFlags:(id)arg1 localSettings:(id)arg2 productState:(id)arg3 freeTierSignal:(id)arg4 yourLibrarySignal:(id)arg5 featureFlagFactory:(id)arg6;
+- (id)initWithFeatureFlags:(id)arg1 localSettings:(id)arg2 productState:(id)arg3 freeTierSignal:(id)arg4 featureFlagFactory:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

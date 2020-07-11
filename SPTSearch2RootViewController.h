@@ -80,7 +80,6 @@
 - (id)initWithSearchViewController:(id)arg1 logger:(id)arg2 linkDispatcher:(id)arg3 voiceService:(id)arg4 connectivityController:(id)arg5;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> presentationManager; // @synthesize presentationManager=_presentationManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+- (void)applicationDidBecomeActive:(id)arg1;
 - (void)showReminderBanner;
 - (void)stopReminderBanner;
 - (_Bool)shouldShowReminderBanner;

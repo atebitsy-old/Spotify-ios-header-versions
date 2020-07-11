@@ -11,6 +11,8 @@
     // Error parsing type: , name: style
     // Error parsing type: , name: albumArtImage
     // Error parsing type: , name: trackOverlayView
+    // Error parsing type: , name: trackOverlayBottomConstraint
+    // Error parsing type: , name: albumArtCenterYConstraint
 }
 
 - (void).cxx_destruct;

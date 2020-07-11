@@ -33,10 +33,13 @@
 @property(nonatomic) _Bool sortPlaybackOrder; // @synthesize sortPlaybackOrder=_sortPlaybackOrder;
 @property(nonatomic) __weak id <SPTPodcastPlayerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)notifyPodcastPlayerStateDidChange;
 - (void)removePreviousTrackFromQueue:(id)arg1;
+- (id)nextTracksArrayWithQueue:(id)arg1 trailerTrack:(id)arg2;
 - (void)insertAndPlayTrailerTrackInQueue:(id)arg1;
 - (id)provideDefaultPlayOptionsWithSkipTrack:(id)arg1 andPosition:(id)arg2;
 - (void)fetchProgressState:(id)arg1;
+- (void)scheduleFetchProgressTimerIfNecessary;
 @property(readonly, nonatomic, getter=isPaused) _Bool paused;
 - (id)restrictionsForPodcasts;
 - (_Bool)isActiveContextURI:(id)arg1;

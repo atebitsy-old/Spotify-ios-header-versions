@@ -102,7 +102,7 @@
 - (void)searchBarTextDidBeginEditing:(id)arg1;
 - (_Bool)continuousSwipeEnabledForTableView:(id)arg1;
 - (void)sp_updateContentInsets;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sortContextButtonTapped:(id)arg1;
 - (void)mainContextMenuButtonPressed:(id)arg1;
 - (void)followButtonPressed:(id)arg1;

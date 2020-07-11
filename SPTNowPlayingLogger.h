@@ -6,27 +6,29 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter, SPTNowPlayingModeResolver, SPTUBINowPlayingBarEventFactory, SPTUserBehaviourInstrumentationLogger;
+@class SPTNowPlayingUBILogger;
+@protocol SPTLogCenter, SPTNowPlayingModeResolver;
 
 @interface SPTNowPlayingLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
-    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
-    id <SPTUBINowPlayingBarEventFactory> _nowPlayingBarEventFactory;
     id <SPTNowPlayingModeResolver> _modeResolver;
     CDUnknownBlockType _likeActionResolver;
+    SPTNowPlayingUBILogger *_nowPlayingUBILogger;
 }
 
+@property(readonly, nonatomic) SPTNowPlayingUBILogger *nowPlayingUBILogger; // @synthesize nowPlayingUBILogger=_nowPlayingUBILogger;
 @property(readonly, copy, nonatomic) CDUnknownBlockType likeActionResolver; // @synthesize likeActionResolver=_likeActionResolver;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
-@property(retain, nonatomic) id <SPTUBINowPlayingBarEventFactory> nowPlayingBarEventFactory; // @synthesize nowPlayingBarEventFactory=_nowPlayingBarEventFactory;
-@property(retain, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
-- (id)currentUBIModeLogger;
 - (id)nowPlayingFeatureID;
 - (id)nowPlayingPageURI;
+- (void)logImpressionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 itemIndex:(unsigned long long)arg5 type:(id)arg6 renderType:(id)arg7;
 - (void)logInteractionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 targetURI:(id)arg5 type:(id)arg6 intent:(id)arg7 action:(id)arg8;
+- (void)logScrollSwipeInteractionWithPlaybackId:(id)arg1;
+- (void)logScrollComponentImpressionWithIdentifier:(id)arg1 atIndex:(unsigned long long)arg2 playbackId:(id)arg3;
+- (void)logScrollPageImpressionWithPlayer:(id)arg1;
 - (void)logSettingsPlayFeedBackSoundEnabled:(_Bool)arg1 itemIndex:(long long)arg2;
 - (void)logHideButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
 - (void)logHeartButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
@@ -60,12 +62,7 @@
 - (id)intentForShufflingState:(_Bool)arg1;
 - (id)intentForRepeatMode:(unsigned long long)arg1;
 - (id)intentForPlayButtonBehavior:(long long)arg1;
-- (id)initWithLogCenter:(id)arg1 modeResolver:(id)arg2 likeActionResolver:(CDUnknownBlockType)arg3 ubiLogger:(id)arg4 nowPlayingBarEventFactory:(id)arg5;
-- (void)ubi_logBarHeartButtonTapped:(long long)arg1 playerState:(id)arg2;
-- (void)ubi_logBarSwipeToOpenWithPlayerState:(id)arg1;
-- (void)ubi_logBarSwipeToPreviousWithPlayerState:(id)arg1;
-- (void)ubi_logBarSwipeToNextWithPlayerState:(id)arg1;
-- (void)ubi_logBarPlayButtonTappedWithBehavior:(long long)arg1 playerState:(id)arg2;
+- (id)initWithLogCenter:(id)arg1 modeResolver:(id)arg2 likeActionResolver:(CDUnknownBlockType)arg3 nowPlayingUBILogger:(id)arg4;
 
 @end
 

@@ -7,13 +7,11 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL, SPTRadioPlaybackService, UIViewController;
-@protocol SPTNowPlayingRemoteControlPolicy, SPTPageController, SPTPageCreationContext, SPTRadioAPI, SPTRadioManager, SPTRadioTestManager;
+@protocol SPTPageController, SPTPageCreationContext, SPTRadioAPI, SPTRadioManager;
 
 @protocol SPTRadioService <SPTService>
 - (UIViewController<SPTPageController> *)provideStationViewController:(NSURL *)arg1 context:(id <SPTPageCreationContext>)arg2;
 - (SPTRadioPlaybackService *)providePlaybackService;
-- (id <SPTRadioTestManager>)provideRadioTestManager;
-- (id <SPTNowPlayingRemoteControlPolicy>)provideRadioRemoteControlPolicy;
 - (id <SPTRadioManager>)provideRadioManager;
 - (id <SPTRadioAPI>)provideAPI;
 @end

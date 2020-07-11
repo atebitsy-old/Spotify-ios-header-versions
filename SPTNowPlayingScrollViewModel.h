@@ -10,7 +10,7 @@
 #import "SPTNowPlayingModeResolverObserver-Protocol.h"
 #import "SPTNowPlayingModelObserver-Protocol.h"
 
-@class NSMutableSet, NSString, NSURL, SPTNowPlayingModel, SPTNowPlayingScrollLogger, SPTPlayerTrack, UIImage;
+@class NSMutableSet, NSString, NSURL, SPTNowPlayingLogger, SPTNowPlayingModel, SPTPlayerTrack, UIImage;
 @protocol SPTNowPlayingModeResolver, SPTNowPlayingScrollDataSource_Internal, SPTNowPlayingScrollViewModelDelegate;
 
 @interface SPTNowPlayingScrollViewModel : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingModeResolverObserver, SPTBannerPresentationObserver>
@@ -23,7 +23,7 @@
     SPTNowPlayingModel *_nowPlayingModel;
     id <SPTNowPlayingScrollDataSource_Internal> _dataSource;
     id <SPTNowPlayingModeResolver> _modeResolver;
-    SPTNowPlayingScrollLogger *_logger;
+    SPTNowPlayingLogger *_logger;
     NSURL *_currentCoverImageURL;
     UIImage *_currentCoverImage;
     NSMutableSet *_componentsFullyShown;
@@ -35,7 +35,7 @@
 @property(nonatomic) _Bool hasSentSwipeInteractionForCurrentTrack; // @synthesize hasSentSwipeInteractionForCurrentTrack=_hasSentSwipeInteractionForCurrentTrack;
 @property(retain, nonatomic) UIImage *currentCoverImage; // @synthesize currentCoverImage=_currentCoverImage;
 @property(retain, nonatomic) NSURL *currentCoverImageURL; // @synthesize currentCoverImageURL=_currentCoverImageURL;
-@property(readonly, nonatomic) SPTNowPlayingScrollLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(readonly, nonatomic) id <SPTNowPlayingScrollDataSource_Internal> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) _Bool requireScrollDisabled; // @synthesize requireScrollDisabled=_requireScrollDisabled;

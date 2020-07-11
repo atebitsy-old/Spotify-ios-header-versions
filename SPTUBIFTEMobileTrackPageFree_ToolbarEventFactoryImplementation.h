@@ -18,6 +18,7 @@
 + (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)unbanButtonFactory;
 - (id)contextMenuButtonFactory;
 - (id)heartButtonFactory;
 - (id)backNavigationButtonFactory;

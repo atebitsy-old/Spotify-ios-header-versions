@@ -6,7 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_;
+
 @protocol _TtP17FollowFeedFeature20SPTFollowFeedService_ <SPTService>
-@property(nonatomic, readonly) _Bool followFeedEnabled;
+- (id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_>)provideRemoteConfigManager;
 @end
 

@@ -11,7 +11,6 @@
 @protocol SPTRadioStationsObserver <NSObject>
 
 @optional
-- (void)radioStationService:(SPTRadioStationsService *)arg1 didUpdateStation:(SPTRadioStation *)arg2 withSavedState:(_Bool)arg3;
 - (void)radioStationService:(SPTRadioStationsService *)arg1 loadingTracksError:(NSError *)arg2 forStation:(SPTRadioStation *)arg3;
 - (void)radioStationService:(SPTRadioStationsService *)arg1 loadedTracksForStation:(SPTRadioStation *)arg2;
 @end

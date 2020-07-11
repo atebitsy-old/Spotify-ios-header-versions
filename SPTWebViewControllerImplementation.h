@@ -115,7 +115,6 @@
 - (id)initWithURL:(id)arg1 session:(id)arg2 linkDispatcher:(id)arg3 modalPresentationController:(id)arg4;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

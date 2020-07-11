@@ -33,17 +33,17 @@
     NSString *_model;
     NSString *_brand;
     NSArray *_incarnations;
-    NSArray *_capabilities;
     unsigned long long _deviceType;
     unsigned long long _deviceState;
+    NSArray *_capabilities;
     long long _volumeSteps;
 }
 
 @property(nonatomic) long long volumeSteps; // @synthesize volumeSteps=_volumeSteps;
 @property(nonatomic, getter=isShuffleDevice) _Bool shuffleDevice; // @synthesize shuffleDevice=_shuffleDevice;
+@property(copy, nonatomic) NSArray *capabilities; // @synthesize capabilities=_capabilities;
 @property(nonatomic) unsigned long long deviceState; // @synthesize deviceState=_deviceState;
 @property(nonatomic) unsigned long long deviceType; // @synthesize deviceType=_deviceType;
-@property(copy, nonatomic) NSArray *capabilities; // @synthesize capabilities=_capabilities;
 @property(nonatomic) _Bool isAvailableOnLocalNetwork; // @synthesize isAvailableOnLocalNetwork=_isAvailableOnLocalNetwork;
 @property(nonatomic) _Bool supportsRename; // @synthesize supportsRename=_supportsRename;
 @property(nonatomic) _Bool supportsLogout; // @synthesize supportsLogout=_supportsLogout;

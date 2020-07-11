@@ -10,7 +10,7 @@
 #import "SPTFreeTierPlaylistConfigurationBuilder-Protocol.h"
 
 @class GLUEEntityRowStyle, NSArray, NSString, SPTFreeTierPlaylistCellProviderDelegateWrapper;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistTrackCellConfigurator;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistTrackCellConfigurator, SPTFreeTierPlaylistVISREFHeaderViewModel;
 
 @interface SPTFreeTierPlaylistConfigurationBuilderImplementation : NSObject <SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistConfigurationBuilder>
 {
@@ -19,6 +19,7 @@
     NSArray *_cellProviders;
     id <SPTFreeTierPlaylistContextMenuPresenter> _contextMenuPresenter;
     id <SPTFreeTierPlaylistDefaultHeaderViewModel> _defaultHeaderViewModel;
+    id <SPTFreeTierPlaylistVISREFHeaderViewModel> _visrefHeaderViewModel;
     id <SPTFreeTierPlaylistFollowViewModel> _followViewModel;
     id <SPTFreeTierPlaylistFullbleedHeaderViewModel> _fullbleedHeaderViewModel;
     id <SPTFreeTierPlaylistHeaderProvider> _headerProvider;
@@ -59,6 +60,7 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistHeaderProvider> headerProvider; // @synthesize headerProvider=_headerProvider;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistFullbleedHeaderViewModel> fullbleedHeaderViewModel; // @synthesize fullbleedHeaderViewModel=_fullbleedHeaderViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistFollowViewModel> followViewModel; // @synthesize followViewModel=_followViewModel;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistVISREFHeaderViewModel> visrefHeaderViewModel; // @synthesize visrefHeaderViewModel=_visrefHeaderViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistDefaultHeaderViewModel> defaultHeaderViewModel; // @synthesize defaultHeaderViewModel=_defaultHeaderViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, copy, nonatomic) NSArray *cellProviders; // @synthesize cellProviders=_cellProviders;

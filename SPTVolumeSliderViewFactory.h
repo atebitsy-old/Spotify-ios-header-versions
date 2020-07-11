@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTGaiaDevicePickerViewFactory-Protocol.h"
+#import "SPTVolumeUIFactory-Protocol.h"
 
 @class NSString, SPTVolumeLogger, SPTVolumeThrottler;
 @protocol SPTGaiaConnectAPI, SPTVolumeAPI, SPTVolumeSystemAPI;
 
-@interface SPTVolumeSliderViewFactory : NSObject <SPTGaiaDevicePickerViewFactory>
+@interface SPTVolumeSliderViewFactory : NSObject <SPTGaiaDevicePickerViewFactory, SPTVolumeUIFactory>
 {
     id <SPTVolumeAPI> _volumeController;
     id <SPTVolumeSystemAPI> _systemVolumeManager;

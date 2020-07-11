@@ -7,24 +7,24 @@
 #import <objc/NSObject.h>
 
 @class SPTHomeLogger, SPTHomeNavigationButton, SPTTheme;
-@protocol SPTBarButtonItemManager, SPTHomeTestManager, SPTLinkDispatcher;
+@protocol SPTBarButtonItemManager, SPTHomeTestManager, SPTLinkDispatcher, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_;
 
 @interface SPTHomeNavigationItemDecorator : NSObject
 {
-    _Bool _isFollowFeedEnabled;
     id <SPTBarButtonItemManager> _barButtonItemManager;
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTHomeLogger *_homeLogger;
     SPTTheme *_theme;
+    id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_> _followFeedRemoteConfig;
     id <SPTHomeTestManager> _testManager;
     SPTHomeNavigationButton *_settingsButton;
     SPTHomeNavigationButton *_feedButton;
 }
 
-@property(readonly, nonatomic) _Bool isFollowFeedEnabled; // @synthesize isFollowFeedEnabled=_isFollowFeedEnabled;
 @property(retain, nonatomic) SPTHomeNavigationButton *feedButton; // @synthesize feedButton=_feedButton;
 @property(retain, nonatomic) SPTHomeNavigationButton *settingsButton; // @synthesize settingsButton=_settingsButton;
 @property(readonly, nonatomic) __weak id <SPTHomeTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) __weak id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_> followFeedRemoteConfig; // @synthesize followFeedRemoteConfig=_followFeedRemoteConfig;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTHomeLogger *homeLogger; // @synthesize homeLogger=_homeLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -33,11 +33,11 @@
 - (void)updateFeedNavigationItemIfNeeded:(id)arg1;
 - (void)feedButtonPressed:(id)arg1;
 - (void)settingsButtonPressed;
-- (id)leftItems;
+- (id)followFeedNavBarItem;
 - (id)rightItems;
 - (void)updateNavigationItemDecoratorAlpha:(double)arg1;
 - (void)decoratePageController:(id)arg1;
-- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedEnabled:(_Bool)arg5 testManager:(id)arg6;
+- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedRemoteConfig:(id)arg5 testManager:(id)arg6;
 
 @end
 

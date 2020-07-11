@@ -12,8 +12,8 @@
 #import "SPTPodcastEpisodeSectionFilterHeaderViewDelegate-Protocol.h"
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcast, SPTPodcastEpisodeSectionFilterHeaderView, SPTPodcastFilterTableFooterView, SPTPodcastSortingService, SPTTheme;
-@protocol SPTCollectionLogger, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastTestManager;
+@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcast, SPTPodcastEpisodeSectionFilterHeaderView, SPTPodcastFilterTableFooterView, SPTPodcastLogger, SPTPodcastSortingService, SPTTheme;
+@protocol SPTCollectionLogger, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastPlayer, SPTPodcastTestManager;
 
 @interface SPTPodcastEpisodeSectionViewModel : NSObject <SPTPodcastEpisodeSectionFilterHeaderViewDelegate, SPTPodcastViewModelSection, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeProgressPolling>
 {
@@ -38,7 +38,7 @@
     id <SPTCollectionLogger> _collectionLogger;
     NSString *_appliedFilterText;
     NSString *_filter;
-    id <SPTPodcastLogger> _logger;
+    SPTPodcastLogger *_logger;
     id <SPTPodcastTestManager> _podcastTestManager;
     SPTPodcastSortingService *_sortingService;
     unsigned long long _sortColumn;
@@ -50,7 +50,7 @@
 @property(nonatomic) unsigned long long sortColumn; // @synthesize sortColumn=_sortColumn;
 @property(nonatomic) __weak SPTPodcastSortingService *sortingService; // @synthesize sortingService=_sortingService;
 @property(retain, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
-@property(retain, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *filter; // @synthesize filter=_filter;
 @property(copy, nonatomic) NSString *appliedFilterText; // @synthesize appliedFilterText=_appliedFilterText;
 @property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;

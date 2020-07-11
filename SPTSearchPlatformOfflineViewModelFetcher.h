@@ -9,7 +9,7 @@
 #import "SPTSearchPlatformViewModelFetcher-Protocol.h"
 
 @class HUBViewModelBuilderFactory, NSString;
-@protocol SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTOfflineManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchOfflineEpisodeDataLoader, SPTSearchOfflinePlaylistDataLoader, SPTUserBehaviourHubsInstrumentation, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@protocol SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTOfflineManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchOfflineEpisodeDataLoader, SPTSearchOfflinePlaylistDataLoader, SPTSearchUBILocationSerializer, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchPlatformOfflineViewModelFetcher : NSObject <SPTSearchPlatformViewModelFetcher>
 {
@@ -22,10 +22,10 @@
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
@@ -59,7 +59,7 @@
 - (void)fetchPlaylistsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)addNoResultsOverlayComponentToViewModelBuilder:(id)arg1;
 - (id)fetchViewModelWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithQuery:(id)arg1 offlineManager:(id)arg2 playlistDataLoader:(id)arg3 collectionDataLoader:(id)arg4 episodeDataLoder:(id)arg5 emptyStatePropertiesProvider:(id)arg6 viewModelBuilderFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiHubsInstrumentation:(id)arg10;
+- (id)initWithQuery:(id)arg1 offlineManager:(id)arg2 playlistDataLoader:(id)arg3 collectionDataLoader:(id)arg4 episodeDataLoder:(id)arg5 emptyStatePropertiesProvider:(id)arg6 viewModelBuilderFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -51,7 +51,7 @@
 - (SEL)selectorForNewState:(unsigned long long)arg1;
 - (void)fireDelegateMethodsForNewState:(unsigned long long)arg1;
 - (void)showSynchronousViewControllerOnMainThread:(id)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)showSynchronousViewController:(id)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;

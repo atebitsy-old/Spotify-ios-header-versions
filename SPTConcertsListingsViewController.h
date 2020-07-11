@@ -104,7 +104,6 @@
 - (id)initWithViewModel:(id)arg1 headerContentViewController:(id)arg2 glueImageLoader:(id)arg3 viewLogger:(id)arg4 concertsListingLogger:(id)arg5 navigationRouter:(id)arg6 remoteConfigurationResolver:(id)arg7;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

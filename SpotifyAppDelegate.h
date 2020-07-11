@@ -12,7 +12,7 @@
 #import "UIApplicationDelegate-Protocol.h"
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
-@class NSMutableDictionary, NSString, SPTAppLogModel, SPTApplicationDelegateLogger, SPTCommandLineProcessor, SPTCookieStorageManager, SPTDebugLogService, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
+@class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
 @protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTNavigationRouter, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
 @interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, SPTSessionServicesLoader, UIApplicationDelegate>
@@ -28,14 +28,11 @@
     id <SPTThirdPartyTrackerBroadcaster> _trackerBroadcaster;
     SPTApplicationDelegateLogger *_appDelegateLogger;
     SPTCookieStorageManager *_cookieStorageManager;
-    SPTCommandLineProcessor *_commandLineProcessor;
     id <SPTMetaViewController> _metaViewController;
     NSMutableDictionary *_deferredBlocks;
     id <SPTReminderHandlerService> _reminderHandlerService;
     SPTPerfTracingSignpostObserver *_perfTracingObserver;
     SPTServiceOrchestrator *_serviceOrchestrator;
-    SPTDebugLogService *_debugLogService;
-    SPTAppLogModel *_appLogModel;
     id <SPTLogCenter> _logCenter;
     SPTStartupTracer *_startupTracer;
 }
@@ -43,14 +40,11 @@
 + (id)appDelegate;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-@property(retain, nonatomic) SPTAppLogModel *appLogModel; // @synthesize appLogModel=_appLogModel;
-@property(retain, nonatomic) SPTDebugLogService *debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(retain, nonatomic) SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;
 @property(retain, nonatomic) SPTPerfTracingSignpostObserver *perfTracingObserver; // @synthesize perfTracingObserver=_perfTracingObserver;
 @property(nonatomic) __weak id <SPTReminderHandlerService> reminderHandlerService; // @synthesize reminderHandlerService=_reminderHandlerService;
 @property(retain, nonatomic) NSMutableDictionary *deferredBlocks; // @synthesize deferredBlocks=_deferredBlocks;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
-@property(retain, nonatomic) SPTCommandLineProcessor *commandLineProcessor; // @synthesize commandLineProcessor=_commandLineProcessor;
 @property(retain, nonatomic) SPTCookieStorageManager *cookieStorageManager; // @synthesize cookieStorageManager=_cookieStorageManager;
 @property(retain, nonatomic) SPTApplicationDelegateLogger *appDelegateLogger; // @synthesize appDelegateLogger=_appDelegateLogger;
 @property(retain, nonatomic) id <SPTThirdPartyTrackerBroadcaster> trackerBroadcaster; // @synthesize trackerBroadcaster=_trackerBroadcaster;
@@ -88,7 +82,7 @@
 - (void)setupInstanceVariables;
 - (void)configureTracing;
 - (void)setupColdStartTracking;
-- (void)setupLoggingServicesWithLogDispatcher:(id)arg1;
+- (void)setupLogging;
 - (void)userNotificationCenter:(id)arg1 didReceiveNotificationResponse:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (void)userNotificationCenter:(id)arg1 willPresentNotification:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (unsigned long long)application:(id)arg1 supportedInterfaceOrientationsForWindow:(id)arg2;

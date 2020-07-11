@@ -73,7 +73,7 @@
 - (void)viewModelDidFinishAllRequests:(id)arg1;
 - (unsigned long long)preferredNavigationBarState;
 - (void)sp_updateBottomContentInset:(double)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)settingsButtonTapped;
 - (void)navigateToFollowSuggestionsButtonTapped;
 - (void)followButtonTapped;

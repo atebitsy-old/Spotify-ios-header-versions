@@ -10,21 +10,21 @@
 #import "SPTFreeTierPlaylistHeaderContentViewDelegate-Protocol.h"
 #import "SPTFreeTierPlaylistHeaderMetadataViewDelegate-Protocol.h"
 #import "SPTFreeTierPlaylistHeaderPageContainerViewDelegate-Protocol.h"
-#import "SPTImageLoaderDelegate-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSString, NSURL, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistHeaderContentView, SPTFreeTierPlaylistHeaderGradientBackgroundView, SPTFreeTierPlaylistHeaderMetadataView, SPTFreeTierPlaylistLogger, UIView;
-@protocol SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistPlayViewModel, SPTImageLoader;
+@class GLUEButton, GLUELabel, NSString, NSURL, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistHeaderContentView, SPTFreeTierPlaylistHeaderGradientBackgroundView, SPTFreeTierPlaylistHeaderMetadataView, SPTFreeTierPlaylistHeaderTapHandler, SPTFreeTierPlaylistLogger, UIView;
+@protocol GLUEImageLoader, SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistPlayViewModel;
 
-@interface SPTFreeTierPlaylistHeaderDefaultConfigurator : NSObject <SPTImageLoaderDelegate, SPTFreeTierPlaylistHeaderContentViewDelegate, SPTFreeTierPlaylistHeaderMetadataViewDelegate, SPTFreeTierPlaylistHeaderPageContainerViewDelegate, SPTFreeTierPlaylistHeaderConfigurator>
+@interface SPTFreeTierPlaylistHeaderDefaultConfigurator : NSObject <SPTFreeTierPlaylistHeaderContentViewDelegate, SPTFreeTierPlaylistHeaderMetadataViewDelegate, SPTFreeTierPlaylistHeaderPageContainerViewDelegate, SPTFreeTierPlaylistHeaderConfigurator>
 {
     SPTFreeTierPlaylistHeaderContentView *_contentView;
     SPTFreeTierPlaylistHeaderMetadataView *_metadataView;
     SPTFreeTierPlaylistHeaderGradientBackgroundView *_gradientBackgroundView;
     GLUEButton *_playButton;
+    SPTFreeTierPlaylistHeaderTapHandler *_tapHandler;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     SPTFreeTierPlaylistGLUETheme *_theme;
     SPTFreeTierPlaylistLogger *_logger;
-    id <SPTImageLoader> _imageLoader;
+    id <GLUEImageLoader> _imageLoader;
     UIView *_filterSearchBar;
     id <SPTFreeTierPlaylistDefaultHeaderViewModel> _defaultHeaderViewModel;
     id <SPTFreeTierPlaylistPlayViewModel> _playViewModel;
@@ -41,10 +41,11 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayViewModel> playViewModel; // @synthesize playViewModel=_playViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistDefaultHeaderViewModel> defaultHeaderViewModel; // @synthesize defaultHeaderViewModel=_defaultHeaderViewModel;
 @property(readonly, nonatomic) UIView *filterSearchBar; // @synthesize filterSearchBar=_filterSearchBar;
-@property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
+@property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTFreeTierPlaylistGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
+@property(retain, nonatomic) SPTFreeTierPlaylistHeaderTapHandler *tapHandler; // @synthesize tapHandler=_tapHandler;
 @property(retain, nonatomic) GLUEButton *playButton; // @synthesize playButton=_playButton;
 @property(retain, nonatomic) SPTFreeTierPlaylistHeaderGradientBackgroundView *gradientBackgroundView; // @synthesize gradientBackgroundView=_gradientBackgroundView;
 @property(retain, nonatomic) SPTFreeTierPlaylistHeaderMetadataView *metadataView; // @synthesize metadataView=_metadataView;
@@ -54,11 +55,10 @@
 - (void)playlistMetadataView:(id)arg1 ownerViewTapped:(id)arg2 isOwnerName:(_Bool)arg3;
 - (void)contentViewDelegateDidPressFollowButton:(id)arg1;
 - (void)contentViewDelegateDidTapShuffleBadge:(id)arg1;
-- (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)headerDidScroll;
 - (void)updateHeaderPlayButton;
 - (void)updateMetadataView;
-- (void)updateContentViewWithImage:(id)arg1;
+- (void)updateContentViewWithImageURL:(id)arg1;
 - (void)updateContentView;
 - (void)updateImageInBackgroundAndContentView;
 - (void)setupTitleView;

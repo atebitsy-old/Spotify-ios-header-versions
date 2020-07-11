@@ -9,11 +9,12 @@
 #import "SPTFreeTierPlaylistFollowViewModel-Protocol.h"
 #import "SPTFreeTierPlaylistFullbleedHeaderViewModel-Protocol.h"
 #import "SPTFreeTierPlaylistItemsViewModel-Protocol.h"
+#import "SPTFreeTierPlaylistVISREFHeaderViewModel-Protocol.h"
 
 @class NSIndexPath, NSString, NSURL;
 @protocol SPTFreeTierPlaylistCloudViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTrackViewModel, SPTFreeTierPlaylistViewModelDelegate;
 
-@protocol SPTFreeTierPlaylistViewModel <SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierEntityOfflineViewModel>
+@protocol SPTFreeTierPlaylistViewModel <SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel>
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSponsoredViewModel> sponsoredViewModel;
 @property(readonly, nonatomic) _Bool contentSupportsRadio;
 @property(readonly, nonatomic) _Bool containsOnlyTracks;

@@ -28,6 +28,7 @@
     // Error parsing type: , name: videoView
     // Error parsing type: , name: segmentedProgressView
     // Error parsing type: , name: offlineErrorView
+    // Error parsing type: , name: viewCountLabel
 }
 
 - (void).cxx_destruct;

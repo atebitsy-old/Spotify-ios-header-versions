@@ -29,6 +29,7 @@
 @property(nonatomic) __weak id <SPTConnectivityManagerDelegate> delegate; // @synthesize delegate;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+- (struct ConnectivityManager *)cpp;
 @property _Bool keepAliveAPNetwork;
 - (void)setKeepAliveAPNetwork:(_Bool)arg1 callback:(CDUnknownBlockType)arg2;
 - (void)setAllowNetwork:(_Bool)arg1 callback:(CDUnknownBlockType)arg2;

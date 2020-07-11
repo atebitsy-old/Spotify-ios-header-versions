@@ -17,6 +17,7 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabelStyle *subtitleLabelStyle;
+- (double)getDescriptionHeightForModel:(id)arg1 containerWidth:(double)arg2;
 - (struct CGSize)componentSizeForModel:(id)arg1 containerWidth:(double)arg2;
 - (id)initWithTheme:(id)arg1;
 

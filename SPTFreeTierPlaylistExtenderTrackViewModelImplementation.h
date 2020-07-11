@@ -46,6 +46,7 @@
 @property(readonly, nonatomic, getter=isActive) _Bool active;
 @property(readonly, nonatomic) unsigned long long restriction;
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly;
+@property(readonly, copy, nonatomic) NSArray *artistNames;
 @property(readonly, copy, nonatomic) NSArray *artists;
 @property(readonly, nonatomic) UIColor *contextMenuIconColor;
 @property(readonly, nonatomic) long long contextMenuIcon;

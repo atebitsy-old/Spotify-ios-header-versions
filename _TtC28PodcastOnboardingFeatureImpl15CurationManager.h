@@ -12,6 +12,7 @@
     // Error parsing type: , name: dataLoader
     // Error parsing type: , name: selectedTopics
     // Error parsing type: , name: encoder
+    // Error parsing type: , name: observerManager
     // Error parsing type: , name: delegate
 }
 

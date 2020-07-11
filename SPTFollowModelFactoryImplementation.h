@@ -8,7 +8,7 @@
 
 #import "SPTFollowModelFactory-Protocol.h"
 
-@class NSString, SPTDataLoaderFactory, SPTFollowDataProvider, SPTFollowFeaturePropertiesManager, SPTFollowModelMessageManager;
+@class NSString, SPTDataLoaderFactory, SPTFollowDataProvider, SPTFollowFeatureProperties, SPTFollowModelMessageManager;
 @protocol SPTCollectionPlatformConfiguration, SPTFollowFeatureLogger;
 
 @interface SPTFollowModelFactoryImplementation : NSObject <SPTFollowModelFactory>
@@ -17,14 +17,14 @@
     SPTDataLoaderFactory *_dataLoaderFactory;
     SPTFollowDataProvider *_followDataProvider;
     SPTFollowModelMessageManager *_messageManager;
-    SPTFollowFeaturePropertiesManager *_featureProperties;
+    SPTFollowFeatureProperties *_featureProperties;
     id <SPTCollectionPlatformConfiguration> _collectionPlatformConfiguration;
     id <SPTFollowFeatureLogger> _followFeatureLogger;
 }
 
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfiguration; // @synthesize collectionPlatformConfiguration=_collectionPlatformConfiguration;
-@property(retain, nonatomic) SPTFollowFeaturePropertiesManager *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(retain, nonatomic) SPTFollowFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTFollowModelMessageManager *messageManager; // @synthesize messageManager=_messageManager;
 @property(retain, nonatomic) SPTFollowDataProvider *followDataProvider; // @synthesize followDataProvider=_followDataProvider;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;

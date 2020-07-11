@@ -17,8 +17,12 @@
 
 - (void).cxx_destruct;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
+- (void)removeArrangedSubview:(id)arg1;
+- (void)addArrangedSubview:(id)arg1 layoutSubviews:(_Bool)arg2;
+- (void)addArrangedSubviews:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithAxis:(long long)arg1 spacing:(double)arg2;
 
 @end
 

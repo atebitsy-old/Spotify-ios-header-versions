@@ -13,10 +13,14 @@
 @interface SPTWatchPlatformFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _appleWatchOffline;
+    _Bool _watchIosLogging;
+    _Bool _watchIosIntegration;
     NSString *_appleWatchPubsubTransport;
 }
 
 @property(readonly, nonatomic) NSString *appleWatchPubsubTransport; // @synthesize appleWatchPubsubTransport=_appleWatchPubsubTransport;
+@property(readonly, nonatomic) _Bool watchIosIntegration; // @synthesize watchIosIntegration=_watchIosIntegration;
+@property(readonly, nonatomic) _Bool watchIosLogging; // @synthesize watchIosLogging=_watchIosLogging;
 @property(readonly, nonatomic) _Bool appleWatchOffline; // @synthesize appleWatchOffline=_appleWatchOffline;
 - (void).cxx_destruct;
 - (id)propertyModels;

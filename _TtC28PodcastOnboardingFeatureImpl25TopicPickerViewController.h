@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
-@interface _TtC28PodcastOnboardingFeatureImpl25TopicPickerViewController : SPViewController
+@interface _TtC28PodcastOnboardingFeatureImpl25TopicPickerViewController : UIViewController
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: makeViewBinder

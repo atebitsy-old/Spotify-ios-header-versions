@@ -6,11 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError;
-
 @protocol SPTSignupDisplayNameViewModelDelegate <NSObject>
-- (void)createUserRequestDidFinishWithError:(NSError *)arg1;
-- (void)createUserRequestDidStart;
 - (void)updateSubmitButtonState:(_Bool)arg1;
 @end
 

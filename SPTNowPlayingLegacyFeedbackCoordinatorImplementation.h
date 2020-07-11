@@ -8,36 +8,30 @@
 
 #import "SPTNowPlayingLegacyFeedbackCoordinator-Protocol.h"
 
-@class NSString, SPTNowPlayingLegacyFormatListFeedbackHandlerImplementation, SPTNowPlayingLegacyRadioFeedbackHandlerImplementation;
-@protocol SPTContextMenuPresenterFactory, SPTFeedbackViewModel, SPTFormatListPlatformRemoteControlPolicyFactory, SPTNowPlayingRemoteControlPolicy, SPTPSXTestManager, SPTRadioRemoteConfigProperties;
+@class NSString, SPTNowPlayingLegacyFormatListFeedbackHandlerImplementation;
+@protocol SPTContextMenuPresenterFactory, SPTFeedbackViewModel, SPTFormatListPlatformRemoteControlPolicyFactory, SPTNowPlayingRemoteControlPolicy, SPTPSXTestManager;
 
 @interface SPTNowPlayingLegacyFeedbackCoordinatorImplementation : NSObject <SPTNowPlayingLegacyFeedbackCoordinator>
 {
-    SPTNowPlayingLegacyRadioFeedbackHandlerImplementation *_radioFeedbackHandler;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
-    id <SPTNowPlayingRemoteControlPolicy> _radioRemoteControlPolicy;
     id <SPTFormatListPlatformRemoteControlPolicyFactory> _formatListPlatformRemoteControlPolicyFactory;
     id <SPTNowPlayingRemoteControlPolicy> _formatListRemoteControlPolicy;
     id <SPTFeedbackViewModel> _feedbackViewModel;
     id <SPTPSXTestManager> _psxTestManager;
-    id <SPTRadioRemoteConfigProperties> _radioRemoteConfigProperties;
     SPTNowPlayingLegacyFormatListFeedbackHandlerImplementation *_formatListFeedbackHandler;
 }
 
 @property(retain, nonatomic) SPTNowPlayingLegacyFormatListFeedbackHandlerImplementation *formatListFeedbackHandler; // @synthesize formatListFeedbackHandler=_formatListFeedbackHandler;
-@property(retain, nonatomic) id <SPTRadioRemoteConfigProperties> radioRemoteConfigProperties; // @synthesize radioRemoteConfigProperties=_radioRemoteConfigProperties;
 @property(nonatomic) __weak id <SPTPSXTestManager> psxTestManager; // @synthesize psxTestManager=_psxTestManager;
 @property(retain, nonatomic) id <SPTFeedbackViewModel> feedbackViewModel; // @synthesize feedbackViewModel=_feedbackViewModel;
 @property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> formatListRemoteControlPolicy; // @synthesize formatListRemoteControlPolicy=_formatListRemoteControlPolicy;
 @property(retain, nonatomic) id <SPTFormatListPlatformRemoteControlPolicyFactory> formatListPlatformRemoteControlPolicyFactory; // @synthesize formatListPlatformRemoteControlPolicyFactory=_formatListPlatformRemoteControlPolicyFactory;
-@property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> radioRemoteControlPolicy; // @synthesize radioRemoteControlPolicy=_radioRemoteControlPolicy;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 - (void).cxx_destruct;
 - (id)createFormatListFeedbackManagerIfNecessary:(id)arg1;
-@property(readonly, nonatomic) SPTNowPlayingLegacyRadioFeedbackHandlerImplementation *radioFeedbackHandler; // @synthesize radioFeedbackHandler=_radioFeedbackHandler;
 - (_Bool)isFormatListFeedbackState:(id)arg1;
 - (id)feedbackHandlerForPlayerState:(id)arg1 containingViewController:(id)arg2;
-- (id)initWithContextMenuPresenterFactory:(id)arg1 radioRemoteControlPolicy:(id)arg2 formatListPlatformRemoteControlPolicyFactory:(id)arg3 feedbackViewModel:(id)arg4 psxTestManager:(id)arg5 radioRemoteConfigProperties:(id)arg6;
+- (id)initWithContextMenuPresenterFactory:(id)arg1 formatListPlatformRemoteControlPolicyFactory:(id)arg2 feedbackViewModel:(id)arg3 psxTestManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

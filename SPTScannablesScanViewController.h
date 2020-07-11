@@ -4,16 +4,17 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
 #import "SPTPageController-Protocol.h"
+#import "SPViewController-Protocol.h"
 #import "UIImagePickerControllerDelegate-Protocol.h"
 #import "UINavigationControllerDelegate-Protocol.h"
 
 @class CAGradientLayer, CALayer, GLUEButton, NSString, NSURL, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTScannablesScanViewModel, UIButton, UIFont, UILabel, UINavigationController, UIView;
 @protocol GLUEAnimationLoading><GLUEAnimationControlling, SPTPageContainer, SPTScannablesImagePickerController;
 
-@interface SPTScannablesScanViewController : SPViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, SPTPageController>
+@interface SPTScannablesScanViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, SPViewController, SPTPageController>
 {
     _Bool _captureSessionInterruptedDueToSplitView;
     SPTScannablesScanViewModel *_viewModel;
@@ -39,7 +40,6 @@
     UIFont *_privacyFont;
 }
 
-+ (id)sta_currentContext;
 @property(nonatomic, getter=isCaptureSessionInterruptedDueToSplitView) _Bool captureSessionInterruptedDueToSplitView; // @synthesize captureSessionInterruptedDueToSplitView=_captureSessionInterruptedDueToSplitView;
 @property(retain, nonatomic) UIFont *privacyFont; // @synthesize privacyFont=_privacyFont;
 @property(retain, nonatomic) UIFont *subtitleFont; // @synthesize subtitleFont=_subtitleFont;
@@ -70,7 +70,7 @@
 - (long long)preferredStatusBarStyle;
 - (void)imagePickerControllerDidCancel:(id)arg1;
 - (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
-- (id)URI;
+@property(readonly, nonatomic) NSURL *URI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)addAndLayoutViewFinderLayer;
@@ -115,7 +115,6 @@
 - (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
 - (id)initWithViewModel:(id)arg1 imagePickerController:(id)arg2 authorizationRequester:(id)arg3 dependencies:(id)arg4;
-- (_Bool)sta_pressSelectFromPhotos;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

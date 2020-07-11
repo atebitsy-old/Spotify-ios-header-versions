@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
 #import "SPTInAppMessageQAToolViewModelDelegate-Protocol.h"
 #import "SPTPageController-Protocol.h"
@@ -17,7 +17,7 @@
 @class GLUELabel, NSArray, NSMutableArray, NSString, NSURL, SPTInAppMessageQAToolViewModel, UIPickerView, UIScrollView, UITableView, UITextField, UIView;
 @protocol GLUETheme, SPTPageContainer;
 
-@interface SPTInAppMessageQAToolViewController : SPViewController <SPTPageController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate, SPTInAppMessageQAToolViewModelDelegate>
+@interface SPTInAppMessageQAToolViewController : UIViewController <SPTPageController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate, SPTInAppMessageQAToolViewModelDelegate>
 {
     SPTInAppMessageQAToolViewModel *_viewModel;
     NSMutableArray *_triggerMessages;

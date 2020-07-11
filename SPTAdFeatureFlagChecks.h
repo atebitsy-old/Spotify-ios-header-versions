@@ -43,7 +43,6 @@
 - (void)featureFlagsDidChange:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-@property(readonly, nonatomic, getter=isMoatDisabled) _Bool moatDisabled;
 @property(readonly, nonatomic, getter=isAudioPlusEnabled) _Bool audioPlusEnabled;
 @property(readonly, nonatomic, getter=isLeaveBehindTopBannerEnabled) _Bool leaveBehindTopBannerEnabled;
 @property(readonly, nonatomic, getter=isLeaveBehindCompanionBannerEnabled) _Bool leaveBehindCompanionBannerEnabled;

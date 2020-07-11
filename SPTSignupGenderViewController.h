@@ -6,6 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTDynamicSignupFlowControllerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
@@ -16,7 +17,7 @@
 @class NSError, NSString, NSURL, SPTLoginLayoutTestManager, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupGenderPickerDataSource, SPTSignupGenderViewModel, SPTSignupSingleInputFieldView, UIPickerView;
 @protocol SPTPageContainer;
 
-@interface SPTSignupGenderViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupGenderViewModelDelegate, SPTSignupPickerContainerViewDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTSignupGenderViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupGenderViewModelDelegate, SPTSignupPickerContainerViewDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -37,6 +38,11 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
+- (void)userDidAcceptAllLicences:(id)arg1;
+@property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
+@property(readonly, nonatomic) UIViewController *presentingFlowController;
+- (void)createUserRequestDidFinishWithError:(id)arg1;
+- (void)createUserRequestDidStart;
 - (void)traitCollectionDidChange:(id)arg1;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPopOperationToViewController:(id)arg2;

@@ -8,7 +8,7 @@
 
 #import "SPTFreeTierEntityContextMenuButtonViewModel-Protocol.h"
 
-@class NSDictionary, NSString, NSURL;
+@class NSDictionary, NSString, NSURL, SPTFreeTierEntityContextMenuLogger;
 @protocol SPTContextMenuPresenterFactory, SPTFreeTierEntityContextMenuButtonViewModelDelegate;
 
 @interface SPTFreeTierTrackContextMenuButtonViewModel : NSObject <SPTFreeTierEntityContextMenuButtonViewModel>
@@ -18,8 +18,10 @@
     id <SPTContextMenuPresenterFactory> _presenterFactory;
     NSURL *_viewURI;
     NSDictionary *_metadata;
+    SPTFreeTierEntityContextMenuLogger *_logger;
 }
 
+@property(readonly, nonatomic) SPTFreeTierEntityContextMenuLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(retain, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
@@ -30,7 +32,7 @@
 - (void)transitionToState:(unsigned long long)arg1;
 - (void)tapContextMenuButton:(id)arg1;
 - (void)configureWithViewURI:(id)arg1 metadata:(id)arg2;
-- (id)initWithPresenterFactory:(id)arg1;
+- (id)initWithPresenterFactory:(id)arg1 logger:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

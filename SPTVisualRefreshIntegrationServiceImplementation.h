@@ -9,16 +9,18 @@
 #import "SPTVisualRefreshIntegrationService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTGLUEService, SPTNetworkService, SPTVISREFFlagsService;
+@protocol SPTGLUEService, SPTNetworkService, SPTURIDispatchService, SPTVISREFFlagsService;
 
 @interface SPTVisualRefreshIntegrationServiceImplementation : NSObject <SPTVisualRefreshIntegrationService>
 {
     id <SPTGLUEService> _glueService;
     id <SPTNetworkService> _networkService;
     id <SPTVISREFFlagsService> _visualRefreshService;
+    id <SPTURIDispatchService> _URIDispatchService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

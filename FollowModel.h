@@ -9,7 +9,7 @@
 #import "SPTFollowModelMessageManagerObserver-Protocol.h"
 #import "SPTFollowStateDataLoaderObserver-Protocol.h"
 
-@class FollowData, NSHashTable, NSNumberFormatter, NSString, SPTFollowFeaturePropertiesManager, SPTFollowModelMessageManager, SPTFollowStateDataLoader;
+@class FollowData, NSHashTable, NSNumberFormatter, NSString, SPTFollowFeatureProperties, SPTFollowModelMessageManager, SPTFollowStateDataLoader;
 @protocol SPTCollectionPlatformConfiguration, SPTFollowFeatureLogger;
 
 @interface FollowModel : NSObject <SPTFollowStateDataLoaderObserver, SPTFollowModelMessageManagerObserver>
@@ -19,7 +19,7 @@
     SPTFollowModelMessageManager *_messageManager;
     NSHashTable *_observers;
     NSNumberFormatter *_decimalNumberFormatter;
-    SPTFollowFeaturePropertiesManager *_featureProperties;
+    SPTFollowFeatureProperties *_featureProperties;
     id <SPTCollectionPlatformConfiguration> _collectionPlatformConfiguration;
     id <SPTFollowFeatureLogger> _followFeatureLogger;
     NSString *_logContext;
@@ -28,7 +28,7 @@
 @property(retain, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfiguration; // @synthesize collectionPlatformConfiguration=_collectionPlatformConfiguration;
-@property(retain, nonatomic) SPTFollowFeaturePropertiesManager *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(retain, nonatomic) SPTFollowFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) NSNumberFormatter *decimalNumberFormatter; // @synthesize decimalNumberFormatter=_decimalNumberFormatter;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTFollowModelMessageManager *messageManager; // @synthesize messageManager=_messageManager;

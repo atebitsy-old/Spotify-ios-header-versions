@@ -8,7 +8,8 @@
 
 #import "HUBViewContentOffsetObserver-Protocol.h"
 
-@class SPTActivityIndicatorView, SPTPremiumDestinationGLUETheme;
+@class SPTActivityIndicatorView, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationNavigationItemDecorator;
+@protocol SPTPremiumDestinationExperiments;
 
 @interface SPTPremiumDestinationHubViewController : SPTHubViewController <HUBViewContentOffsetObserver>
 {
@@ -17,8 +18,12 @@
     _Bool _shouldShowLoadingIndicator;
     SPTPremiumDestinationGLUETheme *_premiumDestinationTheme;
     SPTActivityIndicatorView *_loadingIndicatorView;
+    id <SPTPremiumDestinationExperiments> _experiments;
+    SPTPremiumDestinationNavigationItemDecorator *_navigationItemDecorator;
 }
 
+@property(retain, nonatomic) SPTPremiumDestinationNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
+@property(retain, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 @property(retain, nonatomic) SPTActivityIndicatorView *loadingIndicatorView; // @synthesize loadingIndicatorView=_loadingIndicatorView;
 @property(nonatomic) _Bool shouldShowLoadingIndicator; // @synthesize shouldShowLoadingIndicator=_shouldShowLoadingIndicator;
 @property(nonatomic) _Bool shouldShowNavigationBar; // @synthesize shouldShowNavigationBar=_shouldShowNavigationBar;
@@ -35,7 +40,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithPremiumDestinationTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11;
+- (id)initWithPremiumDestinationTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11 experiments:(id)arg12 navigationItemDecorator:(id)arg13;
 
 @end
 

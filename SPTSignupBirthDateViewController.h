@@ -6,6 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTDynamicSignupFlowControllerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
@@ -16,7 +17,7 @@
 @class NSError, NSString, NSURL, SPTLoginLayoutTestManager, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupBirthDateViewModel, SPTSignupPickerContainerView, SPTSignupSingleInputFieldView;
 @protocol SPTPageContainer;
 
-@interface SPTSignupBirthDateViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTSignupPickerContainerViewDelegate, UITextFieldDelegate, SPTSignupBirthDateViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTSignupBirthDateViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTSignupPickerContainerViewDelegate, UITextFieldDelegate, SPTSignupBirthDateViewModelDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -37,6 +38,11 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
+@property(readonly, nonatomic) UIViewController *presentingFlowController;
+- (void)userDidAcceptAllLicences:(id)arg1;
+- (void)createUserRequestDidFinishWithError:(id)arg1;
+- (void)createUserRequestDidStart;
 - (void)traitCollectionDidChange:(id)arg1;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPopOperationToViewController:(id)arg2;
@@ -54,6 +60,7 @@
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)viewDidAppear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithTheme:(id)arg1 viewModel:(id)arg2 testManager:(id)arg3;

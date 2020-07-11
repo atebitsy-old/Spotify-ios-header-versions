@@ -81,6 +81,7 @@
 - (id)makeViewModelProviderWithConfiguration:(id)arg1;
 - (id)makeDefaultSearchRequestParameters;
 - (id)makeViewControllerDependencies;
+- (id)makeUBILocationSerializer;
 - (id)provideLinkDispatcher;
 - (id)provideLocalSettings;
 - (id)createSPTPlayerWithReferrerIdentifier:(id)arg1;

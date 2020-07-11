@@ -6,14 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
+@class NSArray, NSString;
 
 @protocol SPTGaiaDeviceProtocol <NSObject>
+@property(nonatomic, readonly) NSArray *capabilities;
 - (_Bool)isSocialConnect;
 @property(nonatomic, readonly) long long volumeSteps;
 @property(nonatomic, readonly) _Bool supportsVolume;
 @property(nonatomic, readonly) float volume;
 - (_Bool)isShuffleDevice;
+@property(nonatomic, readonly) _Bool isDisabled;
 @property(nonatomic, readonly) _Bool isAttached;
 @property(nonatomic, readonly) unsigned long long deviceState;
 @property(nonatomic, readonly) unsigned long long deviceType;

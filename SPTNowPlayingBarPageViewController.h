@@ -14,7 +14,7 @@
 #import "SPTPlayerTrackScrollViewOffsetDelegate-Protocol.h"
 #import "SPViewController-Protocol.h"
 
-@class NSString, NSURL, SPForegroundObserver, SPTNowPlayingBarContentView, SPTNowPlayingBarModel, SPTNowPlayingLogger, SPTNowPlayingSkipLimitReachedMessageRequester, SPTPlayerTrackScrollDataSource, SPTTheme, UIView;
+@class NSString, NSURL, SPForegroundObserver, SPTNowPlayingBarContentView, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingSkipLimitReachedMessageRequester, SPTPlayerTrackScrollDataSource, SPTTheme, UIView;
 @protocol SPTGaiaConnectAPI, SPTGaiaDevicesAvailableView, SPTNowPlayingTestManager, _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_;
 
 @interface SPTNowPlayingBarPageViewController : UIViewController <SPBarTransitableViewController, SPForegroundObserverDelegate, SPTPlayerTrackScrollDataSourceDelegate, SPTPlayerTrackScrollViewOffsetDelegate, SPTNowPlayingBarModelObserver, SPTNowPlayingBarVoiceCompanionDelegate, SPViewController>
@@ -29,10 +29,10 @@
     SPTNowPlayingBarContentView *_contentView;
     SPTPlayerTrackScrollDataSource *_playerTrackScrollDataSource;
     SPForegroundObserver *_foregroundObserver;
-    SPTNowPlayingLogger *_logger;
+    SPTNowPlayingBarLogger *_logger;
 }
 
-@property(retain, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTNowPlayingBarLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(retain, nonatomic) SPTPlayerTrackScrollDataSource *playerTrackScrollDataSource; // @synthesize playerTrackScrollDataSource=_playerTrackScrollDataSource;
 @property(retain, nonatomic) SPTNowPlayingBarContentView *contentView; // @synthesize contentView=_contentView;

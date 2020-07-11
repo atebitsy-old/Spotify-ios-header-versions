@@ -13,11 +13,16 @@
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: uiPresentationService
     // Error parsing type: , name: glueService
+    // Error parsing type: , name: abbaService
+    // Error parsing type: , name: volumeService
     // Error parsing type: , name: $__lazy_storage_$_gaiaDevicePresenterProxy
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenter
     // Error parsing type: , name: $__lazy_storage_$_devicePickerControllerFactory
+    // Error parsing type: , name: $__lazy_storage_$_devicePicerContextMenuIconManager
     // Error parsing type: , name: $__lazy_storage_$_devicePickerTheme
-    // Error parsing type: , name: $__lazy_storage_$_isDevicePickerRedesignEnabled
+    // Error parsing type: , name: $__lazy_storage_$_uriDispatcher
+    // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenterRouter
+    // Error parsing type: , name: $__lazy_storage_$_flagsManager
 }
 
 + (id)serviceIdentifier;

@@ -6,12 +6,8 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTFeatureFlagSignal;
-
 @protocol SPTYourLibraryTestManager <NSObject>
 @property(readonly, nonatomic) long long persistActiveTabDurationHours;
 @property(readonly, nonatomic, getter=isPersistActiveTabEnabled) _Bool persistActiveTabEnabled;
-@property(readonly, nonatomic, getter=isDoubleTabYourLibraryEnabled) _Bool doubleTabYourLibraryEnabled;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> doubleTabYourLibraryEnabledSignal;
 @end
 

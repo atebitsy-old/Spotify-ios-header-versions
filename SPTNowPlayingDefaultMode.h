@@ -8,18 +8,16 @@
 
 #import "SPTNowPlayingMode-Protocol.h"
 
-@class NSString, SPTNowPlayingDefaultModeUBILoggerImplementation;
+@class NSString;
 @protocol SPTNowPlayingModeLayoutDelegate, SPTNowPlayingModeViewControllerRegistry;
 
 @interface SPTNowPlayingDefaultMode : NSObject <SPTNowPlayingMode>
 {
     id <SPTNowPlayingModeLayoutDelegate> _layoutDelegate;
-    SPTNowPlayingDefaultModeUBILoggerImplementation *_ubiModeLogger;
     id <SPTNowPlayingModeViewControllerRegistry> _viewControllerRegistry;
 }
 
 @property(readonly, nonatomic) id <SPTNowPlayingModeViewControllerRegistry> viewControllerRegistry; // @synthesize viewControllerRegistry=_viewControllerRegistry;
-@property(readonly, nonatomic) SPTNowPlayingDefaultModeUBILoggerImplementation *ubiModeLogger; // @synthesize ubiModeLogger=_ubiModeLogger;
 @property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
 - (id)queueHeadUnitViewController;
@@ -29,7 +27,7 @@
 - (id)informationUnitViewController;
 - (id)navigationBarUnitViewController;
 - (id)identifier;
-- (id)initWithViewControllerRegistry:(id)arg1 ubiModeLogger:(id)arg2;
+- (id)initWithViewControllerRegistry:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

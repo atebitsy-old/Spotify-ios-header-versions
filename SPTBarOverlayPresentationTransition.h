@@ -38,6 +38,7 @@
     struct CGRect _barFrame;
 }
 
++ (_Bool)scrolledFastEnoughToDismiss:(struct CGPoint)arg1 scrollView:(id)arg2;
 @property(nonatomic) double dismissalInitialTranslationY; // @synthesize dismissalInitialTranslationY=_dismissalInitialTranslationY;
 @property(nonatomic) _Bool interactionInProgress; // @synthesize interactionInProgress=_interactionInProgress;
 @property(retain, nonatomic) UIView *backgroundOverlayView; // @synthesize backgroundOverlayView=_backgroundOverlayView;

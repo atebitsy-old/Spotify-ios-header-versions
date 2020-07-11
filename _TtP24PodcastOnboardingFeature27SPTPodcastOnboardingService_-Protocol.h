@@ -6,9 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTFeatureFlagSignal, SPTOnboardingFlowCoordinator;
+@protocol SPTFeatureFlagSignal, SPTFreeTierTasteOnboardingCurationProvider, SPTOnboardingFlowCoordinator;
 
 @protocol _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_ <SPTService>
+- (id <SPTFreeTierTasteOnboardingCurationProvider>)provideCurator;
+- (_Bool (^)(void))provideFirstTimeFlowExperimentOn;
 - (id <SPTFeatureFlagSignal>)provideFirstTimeFlowEnabledSignal;
 - (id <SPTOnboardingFlowCoordinator>)provideCoordinator;
 @end

@@ -10,7 +10,7 @@
 #import "SPTFreeTierTasteOnboardingTestManager-Protocol.h"
 
 @class NSString;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTLocalSettings, SPTProductState;
+@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTLocalSettings;
 
 @interface SPTFreeTierTasteOnboardingTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTFreeTierTasteOnboardingTestManager>
 {
@@ -22,7 +22,6 @@
     _Bool _podcastInFirstTimeFlowEnabled;
     _Bool _podcastInFirstTimeFlowExperimentOn;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTProductState> _productState;
     id <SPTLocalSettings> _localSettings;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
     id <SPTFeatureFlagSignal> _tasteOnboardingFirstTimeFlowEnabledSignal;
@@ -34,8 +33,10 @@
     id <SPTFeatureFlagSignal> _homeMixEnabledSignal;
     id <SPTFeatureFlagSignal> _nftNewExperienceEnabledSignal;
     id <SPTFeatureFlagSignal> _podcastInFirstTimeFlowEnabledSignal;
+    CDUnknownBlockType _podcastInFirstTimeFlowExperimentOnBlock;
 }
 
+@property(copy, nonatomic) CDUnknownBlockType podcastInFirstTimeFlowExperimentOnBlock; // @synthesize podcastInFirstTimeFlowExperimentOnBlock=_podcastInFirstTimeFlowExperimentOnBlock;
 @property(nonatomic, getter=isPodcastInFirstTimeFlowExperimentOn) _Bool podcastInFirstTimeFlowExperimentOn; // @synthesize podcastInFirstTimeFlowExperimentOn=_podcastInFirstTimeFlowExperimentOn;
 @property(nonatomic, getter=isPodcastInFirstTimeFlowEnabled) _Bool podcastInFirstTimeFlowEnabled; // @synthesize podcastInFirstTimeFlowEnabled=_podcastInFirstTimeFlowEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastInFirstTimeFlowEnabledSignal; // @synthesize podcastInFirstTimeFlowEnabledSignal=_podcastInFirstTimeFlowEnabledSignal;
@@ -54,7 +55,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> tasteOnboardingFirstTimeFlowEnabledSignal; // @synthesize tasteOnboardingFirstTimeFlowEnabledSignal=_tasteOnboardingFirstTimeFlowEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
@@ -66,7 +66,7 @@
 - (void)setupFirstTimeFlowSettingsKey;
 - (void)setupFlags;
 - (void)dealloc;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 featureSettingsItemFactory:(id)arg4 homeMixEnabledSignal:(id)arg5 newExperienceEnabledSignal:(id)arg6 podcastInFirstTimeFlowEnabledSignal:(id)arg7;
+- (id)initWithFeatureFlagFactory:(id)arg1 localSettings:(id)arg2 featureSettingsItemFactory:(id)arg3 homeMixEnabledSignal:(id)arg4 newExperienceEnabledSignal:(id)arg5 podcastInFirstTimeFlowEnabledSignal:(id)arg6 podcastInFirstTimeFlowExperimentOn:(CDUnknownBlockType)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

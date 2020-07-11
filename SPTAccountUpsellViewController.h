@@ -4,18 +4,19 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPViewController.h"
+#import <UIKit/UIViewController.h>
 
 #import "SPTAccountErrorDialogDelegate-Protocol.h"
 #import "SPTAccountUpsellViewModelDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTScrollToTopViewController-Protocol.h"
+#import "SPViewController-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTAccountErrorDialog, SPTAccountUpsellHeaderView, SPTAccountUpsellViewModel, SPTEntityHeaderContentViewController, SPTEntityHeaderViewController, UIScrollView;
 @protocol SPTNavigationListProvider, SPTPageContainer, SPTPremiumDestinationExperiments;
 
-@interface SPTAccountUpsellViewController : SPViewController <SPTNavigationControllerNavigationBarState, SPTAccountUpsellViewModelDelegate, SPTAccountErrorDialogDelegate, SPTPageController, SPTScrollToTopViewController>
+@interface SPTAccountUpsellViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTAccountUpsellViewModelDelegate, SPTAccountErrorDialogDelegate, SPViewController, SPTPageController, SPTScrollToTopViewController>
 {
     SPTEntityHeaderContentViewController *_headerContentViewController;
     NSArray *_content;
@@ -45,7 +46,7 @@
 - (void)errorDialogDidDismiss:(id)arg1;
 - (void)upsellViewModel:(id)arg1 displayError:(id)arg2;
 - (void)upsellViewModelShouldPopView:(id)arg1;
-- (id)URI;
+@property(readonly, nonatomic) NSURL *URI;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)spt_scrollToTop;

@@ -10,7 +10,6 @@
 
 @protocol SPTAuthTestManager <NSObject>
 @property(readonly, nonatomic, getter=isNetworklessAuthEnabled) _Bool networklessAuthEnabled;
-@property(readonly, nonatomic, getter=isAuthWebViewUsingWebKit) _Bool authWebViewUsingWebKit;
 @property(readonly, nonatomic, getter=isStagingEnabled) _Bool stagingEnabled;
 - (void)removeFeatureFlagObserver:(id <SPTAuthTestManagerObserver>)arg1;
 - (void)addFeatureFlagObserver:(id <SPTAuthTestManagerObserver>)arg1;

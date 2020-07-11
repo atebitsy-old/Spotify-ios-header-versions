@@ -9,6 +9,6 @@
 @class SPTPodcastEntity, UIView;
 
 @protocol ShowContextMenuAction <NSObject>
-- (void)presentForEntity:(SPTPodcastEntity *)arg1 sender:(UIView *)arg2;
+- (void)presentForEntity:(SPTPodcastEntity *)arg1 sender:(UIView *)arg2 index:(long long)arg3;
 @end
 

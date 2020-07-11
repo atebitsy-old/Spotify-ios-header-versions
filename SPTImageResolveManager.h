@@ -7,17 +7,22 @@
 #import <objc/NSObject.h>
 
 @class SPTImageResolveProjectionMapLoader;
+@protocol SPTImageResolveCacheStatusProvider, SPTImageResolveOfflineState;
 
 @interface SPTImageResolveManager : NSObject
 {
+    id <SPTImageResolveOfflineState> _offlineState;
+    id <SPTImageResolveCacheStatusProvider> _cacheStatusProvider;
     SPTImageResolveProjectionMapLoader *_loader;
 }
 
 @property(readonly, nonatomic) SPTImageResolveProjectionMapLoader *loader; // @synthesize loader=_loader;
+@property(readonly, nonatomic) id <SPTImageResolveCacheStatusProvider> cacheStatusProvider; // @synthesize cacheStatusProvider=_cacheStatusProvider;
+@property(readonly, nonatomic) id <SPTImageResolveOfflineState> offlineState; // @synthesize offlineState=_offlineState;
 - (void).cxx_destruct;
 - (id)createImageResolver;
 - (void)loadConfiguration;
-- (id)initWithTransport:(id)arg1 userIdentifier:(id)arg2 configurationTTL:(unsigned long long)arg3;
+- (id)initWithTransport:(id)arg1 offlineState:(id)arg2 cacheStatusProvider:(id)arg3 userIdentifier:(id)arg4 configurationTTL:(unsigned long long)arg5;
 
 @end
 

@@ -7,7 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @class HUBComponentRegistry, HUBIdentifier, SPTTheme, UIViewController;
-@protocol VISREFPlayButtonTestManager;
 
 @protocol VISREFIntegrationManager <NSObject>
 @property(readonly, nonatomic, getter=isVisualRefreshLeftAlignedTrackCloudEnabled) _Bool visualRefreshLeftAlignedTrackCloudEnabled;
@@ -15,7 +14,6 @@
 @property(readonly, nonatomic, getter=isVisualRefreshSectionHeaderEnabled) _Bool visualRefreshSectionHeaderEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshGreenButtonEnabled) _Bool visualRefreshGreenButtonEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshHeaderEnabled) _Bool visualRefreshHeaderEnabled;
-- (id <VISREFPlayButtonTestManager>)providePlayButtonTestManager;
 - (_Bool)hasOverrideForComponentId:(HUBIdentifier *)arg1;
 - (HUBComponentRegistry *)overriddenComponentRegistryFromRegistry:(HUBComponentRegistry *)arg1 sptTheme:(SPTTheme *)arg2 contextMenuButtonViewModel:(id)arg3 feedbackButtonViewModel:(id)arg4 offlineButtonViewModel:(id)arg5 viewController:(UIViewController *)arg6 headerType:(unsigned long long)arg7;
 - (void)viewDidDisappear;

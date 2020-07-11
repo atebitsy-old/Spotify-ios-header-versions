@@ -22,10 +22,8 @@
     id <SPTPlayer> _player;
     SPTRadioStationsService *_stationService;
     NSHashTable *_delegates;
-    NSString *_currentTrackFeedback;
 }
 
-@property(retain, nonatomic) NSString *currentTrackFeedback; // @synthesize currentTrackFeedback=_currentTrackFeedback;
 @property(retain, nonatomic) NSHashTable *delegates; // @synthesize delegates=_delegates;
 @property(nonatomic) __weak SPTRadioStationsService *stationService; // @synthesize stationService=_stationService;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -40,13 +38,8 @@
 - (void)addRadioPlaybackDelegate:(id)arg1;
 - (id)playbackDescriptionForURL:(id)arg1;
 - (_Bool)isStationPlaying:(id)arg1;
-- (void)updateFeedback:(long long)arg1 trackURL:(id)arg2 persistentRecord:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
-- (void)updateStation:(id)arg1 withTracks:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)handleFeedbackSuccessForTrackURL:(id)arg1 feedback:(long long)arg2 forStation:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (long long)feedbackForTrackURL:(id)arg1;
 - (void)radioStationService:(id)arg1 loadedTracksForStation:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
-- (void)broadcastChangeToTracksForStation:(id)arg1;
 - (void)broadcastCurrentTrackChanged;
 - (void)broadcastPlaybackError:(id)arg1;
 - (void)broadcastPlaybackStateChanged:(unsigned long long)arg1;

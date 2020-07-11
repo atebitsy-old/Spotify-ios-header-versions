@@ -14,12 +14,10 @@
 
 @interface SPViewController : UIViewController <SPViewController, SPContentInsetViewController>
 {
-    _Bool _automaticallyAdjustsScrollViewInsets;
     id <NSObject> _statusBarFrameObservation;
 }
 
 @property(retain, nonatomic) id <NSObject> statusBarFrameObservation; // @synthesize statusBarFrameObservation=_statusBarFrameObservation;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets; // @synthesize automaticallyAdjustsScrollViewInsets=_automaticallyAdjustsScrollViewInsets;
 - (void).cxx_destruct;
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic) NSURL *URI;

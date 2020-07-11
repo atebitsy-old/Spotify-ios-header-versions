@@ -75,7 +75,6 @@
 - (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 audioPreviewModelFactory:(id)arg4 audioPreviewUIFactory:(id)arg5 logCenter:(id)arg6;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

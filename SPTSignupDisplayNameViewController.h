@@ -6,18 +6,18 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTDynamicSignupFlowControllerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTNavigationControllerTransitioning-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTSignupDisplayNameViewModelDelegate-Protocol.h"
-#import "SPTSignupTermsAndPolicyViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
 @class NSError, NSString, NSURL, SPTLoginLayoutTestManager, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupDisplayNameView, SPTSignupDisplayNameViewModel;
 @protocol SPTPageContainer;
 
-@interface SPTSignupDisplayNameViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTNavigationControllerTransitioning, UITextFieldDelegate, SPTSignupTermsAndPolicyViewModelDelegate, SPTPageController, SPTSignupDisplayNameViewModelDelegate, SPTLoginViewControllerProtocol>
+@interface SPTSignupDisplayNameViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTNavigationControllerTransitioning, UITextFieldDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTSignupDisplayNameViewModelDelegate, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -43,7 +43,7 @@
 - (unsigned long long)preferredNavigationBarState;
 - (void)userDidAcceptAllLicences:(id)arg1;
 @property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
-@property(readonly, nonatomic) UIViewController *presentingController;
+@property(readonly, nonatomic) UIViewController *presentingFlowController;
 - (void)createUserRequestDidFinishWithError:(id)arg1;
 - (void)createUserRequestDidStart;
 - (void)updateSubmitButtonState:(_Bool)arg1;
@@ -54,6 +54,7 @@
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)nextButtonTapped:(id)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithTheme:(id)arg1 viewModel:(id)arg2 testManager:(id)arg3;

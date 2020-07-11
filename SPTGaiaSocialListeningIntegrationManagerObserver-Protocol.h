@@ -7,8 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class SPTGaiaSocialListeningIntegrationManager;
+@protocol SPTSocialListeningActiveSocialDeviceModelEntity;
 
 @protocol SPTGaiaSocialListeningIntegrationManagerObserver <NSObject>
 - (void)socialListeningIntegrationManagerUpdated:(SPTGaiaSocialListeningIntegrationManager *)arg1;
+
+@optional
+- (void)socialListeningIntegrationManager:(SPTGaiaSocialListeningIntegrationManager *)arg1 updatedSocialDeviceInformation:(id <SPTSocialListeningActiveSocialDeviceModelEntity>)arg2;
 @end
 

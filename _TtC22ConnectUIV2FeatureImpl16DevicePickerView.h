@@ -9,8 +9,14 @@
 @interface _TtC22ConnectUIV2FeatureImpl16DevicePickerView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: volumeUIFactory
     // Error parsing type: , name: $__lazy_storage_$_mainHeaderView
+    // Error parsing type: , name: $__lazy_storage_$_tableViewContainerView
     // Error parsing type: , name: $__lazy_storage_$_tableView
+    // Error parsing type: , name: $__lazy_storage_$_volumeContainerView
+    // Error parsing type: , name: $__lazy_storage_$_volumeView
+    // Error parsing type: , name: tableViewToVolumeContainerConstraint
+    // Error parsing type: , name: volumeViewVisible
 }
 
 - (void).cxx_destruct;

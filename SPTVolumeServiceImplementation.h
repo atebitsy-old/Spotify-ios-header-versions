@@ -8,7 +8,7 @@
 
 #import "SPTVolumeService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSystemPopupHideEmitter;
+@class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSliderViewFactory, SPTVolumeSystemPopupHideEmitter;
 @protocol CosmosFeature, GaiaFeature, SPTAbbaService, SPTContainerService, SPTGaiaConnectAPI, SPTPlayerFeature, SPTVolumeAPI, SPTVolumeFlagsManager, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeServiceImplementation : NSObject <SPTVolumeService>
@@ -29,9 +29,11 @@
     SPTVolumeSystemPopupHideEmitter *_systemPopupEmitter;
     SPTVolumeLogger *_logger;
     id <SPTVolumeSynchronizationManager> _synchronizationManager;
+    SPTVolumeSliderViewFactory *_volumeSliderViewFactory;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTVolumeSliderViewFactory *volumeSliderViewFactory; // @synthesize volumeSliderViewFactory=_volumeSliderViewFactory;
 @property(retain, nonatomic) id <SPTVolumeSynchronizationManager> synchronizationManager; // @synthesize synchronizationManager=_synchronizationManager;
 @property(retain, nonatomic) SPTVolumeLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTVolumeSystemPopupHideEmitter *systemPopupEmitter; // @synthesize systemPopupEmitter=_systemPopupEmitter;
@@ -49,6 +51,7 @@
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
+- (id)provideVolumeUIFactory;
 - (id)provideVolumeAPI;
 - (void)setupVolumeSliderView;
 - (void)setupRemoteVolumePopupPresenter;

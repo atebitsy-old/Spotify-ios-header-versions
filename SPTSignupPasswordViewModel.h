@@ -6,18 +6,17 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginSplitEmailSignupViewLogger, SPTSignupPasswordFieldValidationViewModel, SPTSignupUserInfoModel;
-@protocol SPTLoginNavigationCoordinator;
+@class SPTDynamicSignupFlowController, SPTLoginSplitEmailSignupViewLogger, SPTSignupPasswordFieldValidationViewModel, SPTSignupUserInfoModel;
 
 @interface SPTSignupPasswordViewModel : NSObject
 {
     SPTLoginSplitEmailSignupViewLogger *_logger;
     SPTSignupUserInfoModel *_userInfoModel;
     SPTSignupPasswordFieldValidationViewModel *_fieldViewModel;
-    id <SPTLoginNavigationCoordinator> _navigationCoordinator;
+    SPTDynamicSignupFlowController *_flowController;
 }
 
-@property(retain, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
+@property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) SPTSignupPasswordFieldValidationViewModel *fieldViewModel; // @synthesize fieldViewModel=_fieldViewModel;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(retain, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
@@ -33,7 +32,7 @@
 - (id)fieldDisclosureLabelText;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldViewModel:(id)arg3 navigationCoordinator:(id)arg4;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldViewModel:(id)arg3 flowController:(id)arg4;
 
 @end
 

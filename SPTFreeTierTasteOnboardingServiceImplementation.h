@@ -9,7 +9,7 @@
 #import "SPTFreeTierTasteOnboardingService-Protocol.h"
 #import "SPTURISubtypeHandler-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkServiceImplementation, SPTFreeTierTasteOnboardingFlowCoordinator, SPTFreeTierTasteOnboardingTestManagerImplementation;
+@class NSString, SPTAllocationContext, SPTFreeTierTasteOnboardingCompoundCuration, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkServiceImplementation, SPTFreeTierTasteOnboardingFlowCoordinator, SPTFreeTierTasteOnboardingTestManagerImplementation;
 @protocol FollowFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHomeMixUIService, SPTInstrumentationService, SPTLoginService, SPTMandatoryPremiumTrialService, SPTNetworkService, SPTPerformanceMetricsService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
 
 @interface SPTFreeTierTasteOnboardingServiceImplementation : NSObject <SPTFreeTierTasteOnboardingService, SPTURISubtypeHandler>
@@ -36,9 +36,11 @@
     SPTFreeTierTasteOnboardingCurator *_curator;
     SPTFreeTierTasteOnboardingFlowCoordinator *_flowCoordinator;
     SPTFreeTierTasteOnboardingTestManagerImplementation *_testManager;
+    SPTFreeTierTasteOnboardingCompoundCuration *_compoundCuration;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTFreeTierTasteOnboardingCompoundCuration *compoundCuration; // @synthesize compoundCuration=_compoundCuration;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingFlowCoordinator *flowCoordinator; // @synthesize flowCoordinator=_flowCoordinator;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingCurator *curator; // @synthesize curator=_curator;
@@ -72,7 +74,6 @@
 - (void)setupTestManager;
 - (id)provideCoordinator;
 - (id)provideCurator;
-- (_Bool)isMinimumTasteGatheringCompleted;
 @property(readonly, nonatomic, getter=isOnboardingCoordinationEnabled) _Bool onboardingCoordinationEnabled;
 - (void)unload;
 - (void)load;

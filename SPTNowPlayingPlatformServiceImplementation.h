@@ -9,7 +9,7 @@
 #import "SPTNowPlayingPlatformService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTNowPlayingRemoteControlEventControllerManager;
-@protocol SPTAbbaService, SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingContentLayerResolver, SPTNowPlayingModeResolver, SPTNowPlayingModeViewControllerRegistry, SPTNowPlayingModesRegistry, SPTNowPlayingRemoteControlPolicyRegistry, SPTNowPlayingScrollDataSource_Internal, SPTNowPlayingTestManager, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTRadioRemoteConfigService, SPTRemoteConfigurationService, SPTSessionService;
+@protocol SPTAbbaService, SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingContentLayerResolver, SPTNowPlayingModeResolver, SPTNowPlayingModeViewControllerRegistry, SPTNowPlayingModesRegistry, SPTNowPlayingRemoteControlPolicyRegistry, SPTNowPlayingScrollDataSource_Internal, SPTNowPlayingTestManager, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService;
 
 @interface SPTNowPlayingPlatformServiceImplementation : NSObject <SPTNowPlayingPlatformService>
 {
@@ -19,7 +19,6 @@
     id <SPTFreeTierService> _freeTierService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTOnDemandService> _onDemandService;
-    id <SPTRadioRemoteConfigService> _radioRemoteConfigService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTNowPlayingTestManager> _testManager;
     id <SPTNowPlayingModeResolver> _modeResolver;
@@ -45,7 +44,6 @@
 @property(retain, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(retain, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTRadioRemoteConfigService> radioRemoteConfigService; // @synthesize radioRemoteConfigService=_radioRemoteConfigService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;

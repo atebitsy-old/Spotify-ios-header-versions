@@ -15,12 +15,16 @@
     GLUELabelStyle *_titleLabelStyle;
     GLUELabelStyle *_subtitleLabelStyle;
     UIColor *_defaultBackgroundColor;
+    double _defaultSpacing;
+    struct CGSize _imageSize;
     struct CGSize _cardSize;
     struct UIEdgeInsets _contentInsets;
 }
 
 @property(nonatomic) struct CGSize cardSize; // @synthesize cardSize=_cardSize;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
+@property(nonatomic) double defaultSpacing; // @synthesize defaultSpacing=_defaultSpacing;
+@property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 @property(copy, nonatomic) UIColor *defaultBackgroundColor; // @synthesize defaultBackgroundColor=_defaultBackgroundColor;
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;

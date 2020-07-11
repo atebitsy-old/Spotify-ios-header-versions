@@ -136,7 +136,6 @@
 - (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 productState:(id)arg3 modalPresentationController:(id)arg4 podcastContextMenuProvider:(id)arg5 shareFeature:(id)arg6 logger:(id)arg7 viewLogger:(id)arg8 recommendations:(id)arg9 featuredContent:(id)arg10 trackList:(id)arg11 linkDispatcher:(id)arg12 buttonsFactory:(id)arg13 remoteConfigurationResolver:(id)arg14 testManager:(id)arg15;
 
 // Remaining properties
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;

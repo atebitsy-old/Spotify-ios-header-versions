@@ -83,7 +83,7 @@
 - (void)determineIfContextContainsURI:(id)arg1 responseHandler:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic) NSURL *URI;
 - (void)episodeDescriptionURLTapped:(id)arg1;
@@ -100,6 +100,7 @@
 - (void)viewModelPodcastDidUpdatePlayingEpisode:(id)arg1 atIndexPath:(id)arg2;
 - (unsigned long long)preferredNavigationBarState;
 - (void)didSelectResetFiltersButton:(id)arg1;
+- (void)updateTrailerCellAtIndexPath:(id)arg1 withViewModel:(id)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)reloadActiveRow;
 - (void)setupTableView;

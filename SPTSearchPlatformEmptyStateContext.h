@@ -14,7 +14,7 @@
 #import "_TtP22AgeVerificationFeature43SPTCanPlayAgeRestrictedContentStateObserver_-Protocol.h"
 
 @class HUBViewModelBuilderFactory, NSDate, NSString, NSURL;
-@protocol HUBViewModel, SPTExplicitContentAccessManager, SPTPlayer, SPTSearch2ConnectivityMonitor, SPTSearch2EmptyStatePropertiesProvider, SPTSearchPlatformContextDelegate, SPTSearchRecentsDataSource, SPTUserBehaviourHubsInstrumentation, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@protocol HUBViewModel, SPTExplicitContentAccessManager, SPTPlayer, SPTSearch2ConnectivityMonitor, SPTSearch2EmptyStatePropertiesProvider, SPTSearchPlatformContextDelegate, SPTSearchRecentsDataSource, SPTSearchUBILocationSerializer, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchPlatformEmptyStateContext : NSObject <SPTSearchRecentsDataSourceDelegate, SPTPlayerObserver, SPTSearch2ConnectivityMonitorObserver, SPTExplicitContentEnabledStateObserver, _TtP22AgeVerificationFeature43SPTCanPlayAgeRestrictedContentStateObserver_, SPTSearchPlatformContext>
 {
@@ -32,7 +32,7 @@
     id <SPTSearch2ConnectivityMonitor> _connectivityMonitor;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubsInstrumentation;
+    id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
     NSString *_featureID;
     NSURL *_pageURI;
     NSString *_referrerIdentifier;
@@ -43,7 +43,7 @@
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureID; // @synthesize featureID=_featureID;
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
+@property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) _Bool shouldRoundPodcastArtwork; // @synthesize shouldRoundPodcastArtwork=_shouldRoundPodcastArtwork;
@@ -73,7 +73,7 @@
 - (void)reload;
 - (void)setState:(unsigned long long)arg1;
 - (void)setViewModel:(id)arg1;
-- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 playRecentTracksEnabled:(_Bool)arg7 shouldRoundPodcastArtwork:(_Bool)arg8 explicitContentAccessManager:(id)arg9 ageVerificationProvider:(id)arg10 ubiHubsInstrumentation:(id)arg11 featureID:(id)arg12 pageURI:(id)arg13 referrerIdentifier:(id)arg14;
+- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 playRecentTracksEnabled:(_Bool)arg7 shouldRoundPodcastArtwork:(_Bool)arg8 explicitContentAccessManager:(id)arg9 ageVerificationProvider:(id)arg10 ubiLocationSerializer:(id)arg11 featureID:(id)arg12 pageURI:(id)arg13 referrerIdentifier:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

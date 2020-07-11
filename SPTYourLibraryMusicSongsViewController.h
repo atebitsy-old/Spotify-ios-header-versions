@@ -107,7 +107,7 @@
 - (void)sp_updateContentInsets;
 - (id)indexPathForCell:(id)arg1;
 - (void)hideProgressViewWithError:(id)arg1;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
+- (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)setupConstraints;
 - (void)initializeInterface;
 - (void)viewDidDisappear:(_Bool)arg1;

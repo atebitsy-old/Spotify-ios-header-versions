@@ -17,8 +17,10 @@
 // Remaining properties
 @property(copy, nonatomic) NSString *containerId; // @dynamic containerId;
 @property(nonatomic) int duration; // @dynamic duration;
+@property(copy, nonatomic) NSString *entityUri; // @dynamic entityUri;
 @property(nonatomic) _Bool hasContainerId; // @dynamic hasContainerId;
 @property(nonatomic) _Bool hasDuration; // @dynamic hasDuration;
+@property(nonatomic) _Bool hasEntityUri; // @dynamic hasEntityUri;
 @property(nonatomic) _Bool hasLargeFrameDrops; // @dynamic hasLargeFrameDrops;
 @property(nonatomic) _Bool hasSmallFrameDrops; // @dynamic hasSmallFrameDrops;
 @property(nonatomic) long long largeFrameDrops; // @dynamic largeFrameDrops;

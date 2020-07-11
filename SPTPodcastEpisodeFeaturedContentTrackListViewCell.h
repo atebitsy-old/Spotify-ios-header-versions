@@ -6,7 +6,8 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class GLUEAccessoryIconButton, SPTPodcastEntity, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, UIImageView, UILabel, UIView;
+@class GLUEAccessoryIconButton, SPTPodcastEntity, UIImageView, UILabel, UIView;
+@protocol SPTPodcastEpisodeFeaturedContentTrackActionsDelegate;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackListViewCell : UITableViewCell
 {
@@ -17,12 +18,12 @@
     GLUEAccessoryIconButton *_contextMenuButton;
     UIView *_timelineView;
     SPTPodcastEntity *_currentPodcastEntity;
-    SPTPodcastEpisodeFeaturedContentContextMenuPresenter *_contextMenuPresenter;
+    id <SPTPodcastEpisodeFeaturedContentTrackActionsDelegate> _trackActionHandler;
 }
 
 + (long long)numberOfLinesForText:(id)arg1 containerWidth:(double)arg2;
 + (double)sizeForCellWithTitle:(id)arg1 containerWidth:(double)arg2;
-@property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentContextMenuPresenter *contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
+@property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentTrackActionsDelegate> trackActionHandler; // @synthesize trackActionHandler=_trackActionHandler;
 @property(retain, nonatomic) SPTPodcastEntity *currentPodcastEntity; // @synthesize currentPodcastEntity=_currentPodcastEntity;
 @property(retain, nonatomic) UIView *timelineView; // @synthesize timelineView=_timelineView;
 @property(retain, nonatomic) GLUEAccessoryIconButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
@@ -35,7 +36,7 @@
 - (void)setupConstraints;
 - (void)setupLayout;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
-- (void)configureCellForEntity:(id)arg1 isLastVisibleTrack:(_Bool)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4;
+- (void)configureCellForEntity:(id)arg1 isLastVisibleTrack:(_Bool)arg2 imageLoader:(id)arg3 trackActionHandler:(id)arg4;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 
 @end

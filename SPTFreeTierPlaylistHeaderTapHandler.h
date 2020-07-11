@@ -6,17 +6,22 @@
 
 #import <objc/NSObject.h>
 
-@class UIImageView;
+@class NSURL, UIImageView;
+@protocol GLUEImageLoader;
 
 @interface SPTFreeTierPlaylistHeaderTapHandler : NSObject
 {
     UIImageView *_imageView;
+    id <GLUEImageLoader> _imageLoader;
+    NSURL *_fullscreenImageURL;
 }
 
+@property(readonly, nonatomic) NSURL *fullscreenImageURL; // @synthesize fullscreenImageURL=_fullscreenImageURL;
+@property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak UIImageView *imageView; // @synthesize imageView=_imageView;
 - (void).cxx_destruct;
 - (void)imageViewTapped;
-- (id)initWithImageView:(id)arg1;
+- (id)initWithImageView:(id)arg1 imageLoader:(id)arg2 fullscreenImageURL:(id)arg3;
 
 @end
 

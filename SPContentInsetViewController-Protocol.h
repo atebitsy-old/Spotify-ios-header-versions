@@ -8,6 +8,5 @@
 
 @protocol SPContentInsetViewController <NSObject>
 - (void)sp_updateContentInsets;
-@property(nonatomic) _Bool automaticallyAdjustsScrollViewInsets;
 @end
 

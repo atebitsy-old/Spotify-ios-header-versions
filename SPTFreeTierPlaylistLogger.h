@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSString, NSURL;
-@protocol SPTEventSender, SPTLogCenter, SPTOnDemandSet, SPTViewLogger;
+@protocol SPTEventSender, SPTLogCenter, SPTUBIMobilePlaylistEntityEventFactory, SPTUserBehaviourInstrumentationLogger, SPTViewLogger;
 
 @interface SPTFreeTierPlaylistLogger : NSObject
 {
@@ -17,16 +17,18 @@
     id <SPTViewLogger> _viewLogger;
     id <SPTEventSender> _eventSender;
     NSURL *_pageURL;
-    id <SPTOnDemandSet> _onDemandSet;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
+    id <SPTUBIMobilePlaylistEntityEventFactory> _ubiEventFactory;
 }
 
-@property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
+@property(readonly, nonatomic) id <SPTUBIMobilePlaylistEntityEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-@property(copy, nonatomic) NSString *playlistViewPageIdentifier; // @synthesize playlistViewPageIdentifier=_playlistViewPageIdentifier;
-@property(copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
+@property(readonly, nonatomic) NSString *playlistViewPageIdentifier; // @synthesize playlistViewPageIdentifier=_playlistViewPageIdentifier;
+@property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
 - (void).cxx_destruct;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5 action:(id)arg6;
 - (void)logUIInteractionWithSectionId:(id)arg1 targetURI:(id)arg2 userIntent:(id)arg3;
@@ -51,14 +53,15 @@
 - (void)logBrowseButtonClicked;
 - (void)logAddSongsSelectedOnEmptyPlaylist:(_Bool)arg1;
 - (void)logShuffleBadgeSelected;
-- (void)logPlayButtonStartPlaying:(_Bool)arg1;
+- (void)logPlayButtonPauseClicked;
+- (void)logPlayButtonPlayClicked;
 - (void)logHeaderContextMenuButton;
 - (void)logHeartButtonSelected:(_Bool)arg1;
 - (void)logViewDidFailToLoadWithPageIdentifier:(id)arg1;
 - (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1;
 - (void)logViewDidLoadWithPageIdentifier:(id)arg1;
 - (void)logViewLoadingStartedWithPageIdentifier:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventSender:(id)arg3 pageURL:(id)arg4 onDemandSet:(id)arg5;
+- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventSender:(id)arg3 pageURL:(id)arg4 playlistViewPageIdentifier:(id)arg5 featureId:(id)arg6 ubiEventFactory:(id)arg7 ubiLogger:(id)arg8;
 
 @end
 

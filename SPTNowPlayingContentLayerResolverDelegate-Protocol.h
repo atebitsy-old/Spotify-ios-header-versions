@@ -10,6 +10,7 @@
 @protocol SPTNowPlayingContentLayerProvider, SPTNowPlayingContentLayerResolver;
 
 @protocol SPTNowPlayingContentLayerResolverDelegate <NSObject>
+- (void)contentLayerResolverDidRefreshProviders:(id <SPTNowPlayingContentLayerResolver>)arg1;
 - (void)contentLayerResolver:(id <SPTNowPlayingContentLayerResolver>)arg1 didRefreshProviderForTrack:(SPTPlayerTrack *)arg2;
 - (void)contentLayerResolver:(id <SPTNowPlayingContentLayerResolver>)arg1 didRegisterProvider:(id <SPTNowPlayingContentLayerProvider>)arg2;
 @end

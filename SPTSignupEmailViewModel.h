@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, NSTimer, SPTLoginDialogController, SPTLoginEmailAlreadyExistsDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupDisplayNameSuggestionDataLoader, SPTSignupEmailFieldValidator, SPTSignupUserInfoModel;
-@protocol SPTLoginNavigationCoordinator, SPTSignupEmailViewModelDelegate;
+@class NSString, NSTimer, SPTDynamicSignupFlowController, SPTLoginDialogController, SPTLoginEmailAlreadyExistsDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupDisplayNameSuggestionDataLoader, SPTSignupEmailFieldValidator, SPTSignupUserInfoModel;
+@protocol SPTSignupEmailViewModelDelegate;
 
 @interface SPTSignupEmailViewModel : NSObject
 {
@@ -19,14 +19,14 @@
     NSTimer *_timer;
     SPTLoginDialogController *_dialogController;
     SPTLoginEmailAlreadyExistsDialogLogger *_dialogLogger;
-    id <SPTLoginNavigationCoordinator> _navigationCoordinator;
     SPTSignupDisplayNameSuggestionDataLoader *_displayNameDataLoader;
     NSString *_lastValidEmail;
+    SPTDynamicSignupFlowController *_flowController;
 }
 
+@property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(copy, nonatomic) NSString *lastValidEmail; // @synthesize lastValidEmail=_lastValidEmail;
 @property(retain, nonatomic) SPTSignupDisplayNameSuggestionDataLoader *displayNameDataLoader; // @synthesize displayNameDataLoader=_displayNameDataLoader;
-@property(retain, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(retain, nonatomic) SPTLoginEmailAlreadyExistsDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(retain, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
@@ -49,7 +49,7 @@
 - (id)fieldDisclosureLabelText;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldValidator:(id)arg3 displayNameDataLoader:(id)arg4 dialogController:(id)arg5 dialogLogger:(id)arg6 navigationCoordinator:(id)arg7;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldValidator:(id)arg3 displayNameDataLoader:(id)arg4 dialogController:(id)arg5 dialogLogger:(id)arg6 flowController:(id)arg7;
 
 @end
 

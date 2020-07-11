@@ -18,6 +18,7 @@
     // Error parsing type: , name: topicPickerTheme
     // Error parsing type: , name: sendTopicsTheme
     // Error parsing type: , name: presentationMode
+    // Error parsing type: , name: flowMode
     // Error parsing type: , name: navigationController
     // Error parsing type: , name: curationManager
     // Error parsing type: , name: dataLoaderFactory
@@ -25,7 +26,8 @@
     // Error parsing type: , name: logCenter
     // Error parsing type: , name: viewLoggerFactory
     // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: isEnabledInFirstTimeFlow
+    // Error parsing type: , name: isPodcastEnabledInFirstTimeFlow
+    // Error parsing type: , name: isIntentEnabledInFirstTimeFlow
     // Error parsing type: , name: $__lazy_storage_$_logConfiguration
 }
 

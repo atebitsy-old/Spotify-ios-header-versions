@@ -6,18 +6,20 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSMutableArray;
+@class NSArray, NSMutableArray, SPTPodcastLogger;
 @protocol SPTExplicitContentAccessManager;
 
 @interface SPTPodcastViewSectionConfiguration : NSObject
 {
     NSArray *_viewSections;
-    NSMutableArray *_viewSectionContainers;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    NSMutableArray *_viewSectionContainers;
+    SPTPodcastLogger *_logger;
 }
 
-@property(nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
-@property(retain, nonatomic) NSMutableArray *viewSectionContainers; // @synthesize viewSectionContainers=_viewSectionContainers;
+@property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) NSMutableArray *viewSectionContainers; // @synthesize viewSectionContainers=_viewSectionContainers;
+@property(readonly, nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(copy, nonatomic) NSArray *viewSections; // @synthesize viewSections=_viewSections;
 - (void).cxx_destruct;
 - (id)instanceForSectionIdentifier:(long long)arg1;

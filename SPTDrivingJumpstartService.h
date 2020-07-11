@@ -6,22 +6,21 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDrivingJumpstartTestManagerObserver-Protocol.h"
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDrivingJumpstartTestManager, SPTDrivingJumpstartTrigger;
-@protocol GaiaFeature, SPTContainerService, SPTDrivingStateDetectionService, SPTExternalIntegrationPlaybackService, SPTFeatureFlaggingService, SPTPlayerFeature, SPTRecentlyPlayedService;
+@protocol GaiaFeature, SPTContainerService, SPTDrivingStateDetectionService, SPTExternalIntegrationPlaybackService, SPTPlayerFeature, SPTRecentlyPlayedService, SPTRemoteConfigurationService;
 
-@interface SPTDrivingJumpstartService : NSObject <SPTDrivingJumpstartTestManagerObserver, SPTService>
+@interface SPTDrivingJumpstartService : NSObject <SPTService>
 {
     _Bool _enabled;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTDrivingStateDetectionService> _drivingDetectionService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTExternalIntegrationPlaybackService> _playbackService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <GaiaFeature> _gaiaFeature;
     id <SPTContainerService> _containerService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTDrivingJumpstartTestManager *_testManager;
     SPTDrivingJumpstartTrigger *_jumpstartTrigger;
 }
@@ -30,15 +29,14 @@
 @property(retain, nonatomic) SPTDrivingJumpstartTrigger *jumpstartTrigger; // @synthesize jumpstartTrigger=_jumpstartTrigger;
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 @property(retain, nonatomic) SPTDrivingJumpstartTestManager *testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTDrivingStateDetectionService> drivingDetectionService; // @synthesize drivingDetectionService=_drivingDetectionService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 - (void).cxx_destruct;
-- (void)testManager:(id)arg1 jumpstartStateDidChange:(_Bool)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
