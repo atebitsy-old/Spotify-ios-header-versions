@@ -9,16 +9,14 @@
 #import "SPTAuthControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 #import "SPTWazeService-Protocol.h"
-#import "SPTWazeTestManagerImplementationDataSource-Protocol.h"
 #import "SPTWazeTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTWazePartnerIntegration, SPTWazePresenter, SPTWazeTestManagerImplementation, SPTWazeTransportManager, SPTWazeViewModel;
-@protocol GaiaFeature, SPTAbbaService, SPTAuthService, SPTBannerFeature, SPTDrivingStateDetectionService, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTLocalSettings, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPartnerService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, SlateFeature;
+@protocol GaiaFeature, SPTAuthService, SPTBannerFeature, SPTDrivingStateDetectionService, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTLocalSettings, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPartnerService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService, SlateFeature;
 
-@interface SPTWazeServiceImplementation : NSObject <SPTWazeTestManagerObserver, SPTAuthControllerObserver, SPTWazeTestManagerImplementationDataSource, SPTExternalIntegrationPlaybackControllerObserver, SPTWazeService>
+@interface SPTWazeServiceImplementation : NSObject <SPTWazeTestManagerObserver, SPTAuthControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTWazeService>
 {
     _Bool _serviceEnabled;
-    id <SPTAbbaService> _abbaService;
     id <SPTAuthService> _authService;
     id <SPTBannerFeature> _bannerService;
     id <SPTSessionService> _clientSessionService;
@@ -26,12 +24,12 @@
     id <SPTDrivingStateDetectionService> _drivingDetectionService;
     id <SPTExternalIntegrationPlaybackService> _externalIntegrationPlaybackService;
     id <GaiaFeature> _gaiaFeature;
-    id <SPTSettingsFeature> _settingsService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SlateFeature> _slateService;
     id <SPTGLUEService> _glueService;
     id <SPTPartnerService> _partnerService;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTLocalSettings> _localSettings;
     SPTWazeViewModel *_viewModel;
@@ -52,12 +50,12 @@
 @property(retain, nonatomic) SPTWazeViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(readonly, nonatomic) __weak id <SPTPartnerService> partnerService; // @synthesize partnerService=_partnerService;
 @property(readonly, nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(readonly, nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-@property(readonly, nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
 @property(readonly, nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> externalIntegrationPlaybackService; // @synthesize externalIntegrationPlaybackService=_externalIntegrationPlaybackService;
 @property(readonly, nonatomic) __weak id <SPTDrivingStateDetectionService> drivingDetectionService; // @synthesize drivingDetectionService=_drivingDetectionService;
@@ -65,13 +63,11 @@
 @property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(readonly, nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;
-@property(readonly, nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 - (void).cxx_destruct;
 - (_Bool)shouldSendResumedPlaybackNotificationWithNewPlayerState:(id)arg1 oldPlayerState:(id)arg2;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (id)fragmentsParameterFromURI:(id)arg1;
 - (void)authServiceWillReturnToSourceApplicationWithURI:(id)arg1;
-- (id)providePresentationViewModel;
 - (void)testManager:(id)arg1 didChangeWazeIntegrationEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didChangeWazeFeatureEnabledState:(_Bool)arg2;
 - (id)navigationState;

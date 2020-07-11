@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: countLabel
     // Error parsing type: , name: staticTextLabel
-    // Error parsing type: , name: tapGestureRecognizer
     // Error parsing type: , name: stackView
 }
 

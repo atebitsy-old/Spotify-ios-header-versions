@@ -8,6 +8,7 @@
 
 @interface _TtC21FollowFeedFeatureImpl15DataConnectable : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: lock
     // Error parsing type: , name: consumer
     // Error parsing type: , name: dataFetchingCompletion
     // Error parsing type: , name: feedClient

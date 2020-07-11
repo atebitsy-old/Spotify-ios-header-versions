@@ -34,8 +34,8 @@
 - (void)shareEntityWithURL:(id)arg1 backgroundImage:(id)arg2;
 - (id)appendUTMQueryItemsToURL:(id)arg1;
 - (id)generateImageFromData:(id)arg1;
-- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (id)initWithShareLogger:(id)arg1 dataLoader:(id)arg2 deeplinkHandler:(id)arg3;
+- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (id)initWithShareLogger:(id)arg1 dataLoader:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

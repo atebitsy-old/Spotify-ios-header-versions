@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class HUBComponentRegistry;
+@class HUBComponentRegistry, NSDictionary;
 
 @protocol SPTPodcastUIComponentFactory <NSObject>
+- (NSDictionary *)provideBrowseImageHeaderComponents;
 - (void)unregisterPodcastComponentsFromComponentRegistry:(HUBComponentRegistry *)arg1;
 - (void)registerPodcastComponentsToComponentRegistry:(HUBComponentRegistry *)arg1;
 @end

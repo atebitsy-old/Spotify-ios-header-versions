@@ -352,7 +352,7 @@ struct ContextPlayerOptionOverrides {
 struct ContextTrack {
     basic_string_90719d97 _field1;
     basic_string_90719d97 _field2;
-    struct flat_map<std::__1::basic_string<char>, std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<char>>, void> _field3;
+    struct Metadata _field3;
 };
 
 struct Core {
@@ -651,11 +651,6 @@ struct LoginCredentials {
     struct unique_ptr<spotify::connectivity::auth::LoginCredentials::Impl, std::__1::default_delete<spotify::connectivity::auth::LoginCredentials::Impl>> _impl;
 };
 
-struct LoginFailure {
-    struct error_code _field1;
-    basic_string_90719d97 _field2;
-};
-
 struct LoginOptions {
     int _field1;
     int _field2;
@@ -672,6 +667,10 @@ struct LoginOptions {
 struct MeMetadataRequest;
 
 struct MercuryHandler;
+
+struct Metadata {
+    struct flat_map<std::__1::basic_string<char>, std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<char>>, void> _field1;
+};
 
 struct MetadataHandler {
     CDUnknownFunctionPointerType *_field1;

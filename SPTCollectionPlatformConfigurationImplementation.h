@@ -9,11 +9,11 @@
 #import "SPTCollectionPlatformConfiguration-Protocol.h"
 
 @class NSString, NSURL, SPTCollectionPlatformEntityConfirmationPresenter, UIImage;
-@protocol SPTCollectionPlatformTestManager;
+@protocol SPTCollectionPlatformPropertiesManager;
 
 @interface SPTCollectionPlatformConfigurationImplementation : NSObject <SPTCollectionPlatformConfiguration>
 {
-    id <SPTCollectionPlatformTestManager> _testManager;
+    id <SPTCollectionPlatformPropertiesManager> _testManager;
     SPTCollectionPlatformEntityConfirmationPresenter *_confirmationPresenter;
     UIImage *_selectedOverlayImage;
     UIImage *_overlayImage;
@@ -22,7 +22,7 @@
 @property(retain, nonatomic) UIImage *overlayImage; // @synthesize overlayImage=_overlayImage;
 @property(retain, nonatomic) UIImage *selectedOverlayImage; // @synthesize selectedOverlayImage=_selectedOverlayImage;
 @property(readonly, nonatomic) SPTCollectionPlatformEntityConfirmationPresenter *confirmationPresenter; // @synthesize confirmationPresenter=_confirmationPresenter;
-@property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) __weak id <SPTCollectionPlatformPropertiesManager> testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
 - (id)trackURI;
 - (_Bool)isFollowURL:(id)arg1;
@@ -39,6 +39,7 @@
 - (void)showCollectionConfirmationProgressViewForBannedState:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3;
 - (id)confirmationTitleForBannedFromCollection:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3;
 - (id)confirmationTitleForAddedToCollection:(_Bool)arg1 entityURL:(id)arg2;
+- (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(id)arg2 entityName:(id)arg3;
 - (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(id)arg2;
 - (id)provideShelfViewForItemWithCollectionState:(_Bool)arg1;
 - (id)actionNameForArtistWithBanState:(_Bool)arg1;

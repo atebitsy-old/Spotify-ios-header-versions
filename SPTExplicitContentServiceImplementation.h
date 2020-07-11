@@ -8,8 +8,8 @@
 
 #import "SPTExplicitContentService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTExplicitContentAccessManagerImplementation, SPTExplicitContentLogger, SPTExplicitContentPopupPresenter;
-@protocol SPTContainerService, SPTGLUEService, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTExplicitContentAccessManagerImplementation, SPTExplicitContentFeatureProperties, SPTExplicitContentLogger, SPTExplicitContentPopupPresenter;
+@protocol SPTContainerService, SPTGLUEService, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
 
 @interface SPTExplicitContentServiceImplementation : NSObject <SPTExplicitContentService>
 {
@@ -22,9 +22,15 @@
     SPTExplicitContentAccessManagerImplementation *_accessManager;
     SPTExplicitContentLogger *_logger;
     SPTExplicitContentPopupPresenter *_popupPresenter;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
+    SPTExplicitContentFeatureProperties *_properties;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTExplicitContentFeatureProperties *properties; // @synthesize properties=_properties;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) SPTExplicitContentPopupPresenter *popupPresenter; // @synthesize popupPresenter=_popupPresenter;
 @property(retain, nonatomic) SPTExplicitContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTExplicitContentAccessManagerImplementation *accessManager; // @synthesize accessManager=_accessManager;
@@ -38,6 +44,7 @@
 - (id)provideSettingsExplanationSection:(id)arg1;
 - (id)provideSettingsSection:(id)arg1;
 - (void)registerSettingsSection;
+@property(readonly, nonatomic, getter=isExplicitContentSettingHidden) _Bool explicitContentSettingHidden;
 - (id)provideAccessManager;
 - (void)unload;
 - (void)load;

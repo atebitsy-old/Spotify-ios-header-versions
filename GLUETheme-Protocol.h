@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class GLUEAccessoryIconButtonStyle, GLUEAccessoryIconViewStyle, GLUEButtonStyle, GLUECalendarThumbnailViewStyle, GLUECollectionViewStyle, GLUEEmptyStateViewStyle, GLUEEntityCardStyle, GLUEEntityRowStyle, GLUEGradientStyle, GLUEHeaderBackgroundStyle, GLUELabelStyle, GLUENavigationRowStyle, GLUEOfflineSyncStatusViewStyle, GLUEPressedAnimatorStyle, GLUESectionHeaderStyle, GLUETableViewCellStyle, GLUETableViewStyle, GLUETrackAccessoryLabelStyle, GLUETrackCloudStyle, GLUETrackMultipleAccessoriesViewStyle, GLUETrackPreviewStyle, GLUEVideoThumbnailViewStyle, SPTTheme, UIColor;
+@class GLUEAccessoryIconButtonStyle, GLUEAccessoryIconViewStyle, GLUEAgeRestrictionViewStyle, GLUEButtonStyle, GLUECalendarThumbnailViewStyle, GLUECollectionViewStyle, GLUEEmptyStateViewStyle, GLUEEntityCardStyle, GLUEEntityRowStyle, GLUEGradientStyle, GLUEHeaderBackgroundStyle, GLUELabelStyle, GLUENavigationRowStyle, GLUEOfflineSyncStatusViewStyle, GLUEPressedAnimatorStyle, GLUESectionHeaderStyle, GLUETableViewCellStyle, GLUETableViewStyle, GLUETrackAccessoryLabelStyle, GLUETrackCloudStyle, GLUETrackMultipleAccessoriesViewStyle, GLUETrackPreviewStyle, GLUEVideoThumbnailViewStyle, SPTTheme, UIColor;
 @protocol GLUEThemeObserver;
 
 @protocol GLUETheme <NSObject>
@@ -46,6 +46,7 @@
 - (GLUECalendarThumbnailViewStyle *)calendarViewThumbnailStyle;
 - (GLUEVideoThumbnailViewStyle *)videoThumbnailStyle;
 - (GLUETrackMultipleAccessoriesViewStyle *)trackMultipleAccessoriesDefaultStyle;
+- (GLUEAgeRestrictionViewStyle *)ageRestrictionViewDefaultstyle;
 - (GLUETrackAccessoryLabelStyle *)trackAccessoryLabelDefaultStyle;
 - (GLUEOfflineSyncStatusViewStyle *)offlineSyncStatusViewDefaultStyle;
 - (GLUETrackPreviewStyle *)trackPreviewAccessoryDefaultStyle;

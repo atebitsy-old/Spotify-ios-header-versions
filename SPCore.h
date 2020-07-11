@@ -81,9 +81,9 @@
 - (void)loginWithTask:(id)arg1;
 - (void)notifyChallengeSucceededWithSignupInformation:(id)arg1;
 - (void)notifyChallengeReceivedWithCode:(id)arg1;
-- (void)notifyFailureWithErrorCode:(struct error_code)arg1 description:(basic_string_90719d97)arg2;
+- (void)notifyFailureWithError:(id)arg1;
 - (void)loginTask:(id)arg1 didRequireBootstrapUsingWebgateSession:(id)arg2 completionCallback:(CDUnknownBlockType)arg3;
-- (void)loginTask:(id)arg1 didFailWithError:(struct LoginFailure *)arg2;
+- (void)loginTask:(id)arg1 didFailWithError:(id)arg2;
 - (void)loginTask:(id)arg1 didRequireSignup:(id)arg2;
 - (void)loginTask:(id)arg1 didRequireCode:(id)arg2;
 - (void)loginTask:(id)arg1 didFinishWithSession:(id)arg2;

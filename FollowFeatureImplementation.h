@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class FollowModel, NSString, SPTAllocationContext, SPTFollowArtistCollectionStateManager, SPTFollowDataProvider, SPTFollowFeatureLoggerImplementation, SPTFollowModelMessageManager;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFollowModelFactory, SPTNetworkService, SPTSessionService;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTFollowModelFactory, SPTNetworkService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService;
 
 @interface FollowFeatureImplementation : NSObject <SPTService, FollowFeature>
 {
@@ -19,11 +19,13 @@
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTNetworkService> _networkFeature;
     id <SPTContainerService> _containerService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTFollowModelFactory> _followModelFactory;
     SPTFollowDataProvider *_followDataProvider;
     SPTFollowModelMessageManager *_messageManager;
     SPTFollowFeatureLoggerImplementation *_followLogger;
     SPTFollowArtistCollectionStateManager *_followArtistStateManager;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     FollowModel *_lastFollowArtistTaskModel;
     FollowModel *_lastBanArtistTaskModel;
 }
@@ -31,11 +33,13 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) FollowModel *lastBanArtistTaskModel; // @synthesize lastBanArtistTaskModel=_lastBanArtistTaskModel;
 @property(retain, nonatomic) FollowModel *lastFollowArtistTaskModel; // @synthesize lastFollowArtistTaskModel=_lastFollowArtistTaskModel;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) SPTFollowArtistCollectionStateManager *followArtistStateManager; // @synthesize followArtistStateManager=_followArtistStateManager;
 @property(retain, nonatomic) SPTFollowFeatureLoggerImplementation *followLogger; // @synthesize followLogger=_followLogger;
 @property(retain, nonatomic) SPTFollowModelMessageManager *messageManager; // @synthesize messageManager=_messageManager;
 @property(retain, nonatomic) SPTFollowDataProvider *followDataProvider; // @synthesize followDataProvider=_followDataProvider;
 @property(retain, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
@@ -47,6 +51,7 @@
 - (void)provideFollowModelForTargetURI:(id)arg1 logContext:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)provideMultipleFollowModelForFollowDataList:(id)arg1 logContext:(id)arg2;
 - (id)provideFollowModelForFollowData:(id)arg1 logContext:(id)arg2;
+- (id)provideFeatureProperties;
 - (id)provideFollowLogger;
 - (id)provideFollowModelFactory;
 - (void)load;

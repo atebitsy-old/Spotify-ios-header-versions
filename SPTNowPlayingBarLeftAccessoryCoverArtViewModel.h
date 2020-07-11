@@ -8,31 +8,23 @@
 
 #import "SPTNowPlayingBarModelObserver-Protocol.h"
 
-@class NSString, NSURL, SPTNowPlayingBarModel, SPTNowPlayingLogger, SPTPlayerState;
-@protocol SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate, SPTNowPlayingManager;
+@class NSString, NSURL, SPTNowPlayingBarModel;
+@protocol SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate;
 
 @interface SPTNowPlayingBarLeftAccessoryCoverArtViewModel : NSObject <SPTNowPlayingBarModelObserver>
 {
     id <SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate> _delegate;
-    SPTNowPlayingLogger *_logger;
     SPTNowPlayingBarModel *_nowPlayingBarModel;
-    id <SPTNowPlayingManager> _nowPlayingManager;
     NSURL *_currentImageURL;
-    SPTPlayerState *_currentPlayerState;
 }
 
-@property(retain, nonatomic) SPTPlayerState *currentPlayerState; // @synthesize currentPlayerState=_currentPlayerState;
 @property(retain, nonatomic) NSURL *currentImageURL; // @synthesize currentImageURL=_currentImageURL;
-@property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 @property(readonly, nonatomic) SPTNowPlayingBarModel *nowPlayingBarModel; // @synthesize nowPlayingBarModel=_nowPlayingBarModel;
-@property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)logBarTapped;
-- (void)didTapBar;
 - (void)reloadImage;
 - (void)nowPlayingBarModelDidUpdateTrackMetaData:(id)arg1;
-- (id)initWithNowPlayingManager:(id)arg1 nowPlayingBarModel:(id)arg2 logger:(id)arg3;
+- (id)initWithNowPlayingBarModel:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

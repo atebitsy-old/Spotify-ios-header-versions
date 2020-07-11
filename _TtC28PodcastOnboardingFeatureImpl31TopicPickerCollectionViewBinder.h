@@ -12,7 +12,7 @@
     // Error parsing type: , name: view
     // Error parsing type: , name: cellBinderFactory
     // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: curationMode
+    // Error parsing type: , name: flowMode
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: visibleBinders
     // Error parsing type: , name: model

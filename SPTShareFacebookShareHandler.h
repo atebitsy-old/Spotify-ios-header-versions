@@ -25,7 +25,7 @@
 - (void)sharerDidCancel:(id)arg1;
 - (void)sharer:(id)arg1 didFailWithError:(id)arg2;
 - (void)sharer:(id)arg1 didCompleteWithResults:(id)arg2;
-- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)createAlertModel;
 - (id)initWithShareLogger:(id)arg1;
 

@@ -36,6 +36,7 @@
 - (void)showCollectionConfirmationProgressViewForBannedState:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3;
 - (id)confirmationTitleForBannedFromCollection:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3;
 - (id)confirmationTitleForAddedToCollection:(_Bool)arg1 entityURL:(id)arg2;
+- (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(id)arg2 entityName:(id)arg3;
 - (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(id)arg2;
 - (id)provideShelfViewForItemWithCollectionState:(_Bool)arg1;
 - (id)actionNameForArtistWithBanState:(_Bool)arg1;

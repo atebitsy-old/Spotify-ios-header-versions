@@ -6,12 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError;
-@protocol SPTSocialListeningModel, SPTSocialListeningSessionModelEntity, SPTSocialListeningUpdateEventModelEntity;
+@class NSArray, NSDictionary, NSError;
+@protocol SPTSocialListeningModel, SPTSocialListeningSessionModelEntity, SPTSocialListeningSocialDeviceModelEntity, SPTSocialListeningUpdateEventModelEntity;
 
 @protocol SPTSocialListeningModelObserver <NSObject>
 - (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 didDeleteSession:(id <SPTSocialListeningSessionModelEntity>)arg2;
 - (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 didReceiveError:(NSError *)arg2;
 - (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 updatedSession:(id <SPTSocialListeningSessionModelEntity>)arg2 updateEvent:(id <SPTSocialListeningUpdateEventModelEntity>)arg3;
+
+@optional
+- (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 gotExposedDevices:(NSDictionary *)arg2;
+- (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 updatedSocialDevices:(NSArray<SPTSocialListeningSocialDeviceModelEntity> *)arg2;
 @end
 

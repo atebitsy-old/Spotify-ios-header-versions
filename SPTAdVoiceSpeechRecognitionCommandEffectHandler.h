@@ -27,6 +27,7 @@
 - (void)voiceSession:(id)arg1 didUpdateTranscriptText:(id)arg2;
 - (void)voiceSession:(id)arg1 didFailVoiceCommand:(id)arg2 withError:(id)arg3;
 - (void)voiceSession:(id)arg1 didReceiveVoiceCommand:(id)arg2;
+- (void)voiceSessionDidStartListening:(id)arg1;
 - (void)voiceSessionWillStartListening:(id)arg1;
 - (void)voiceSessionDidStopListening:(id)arg1;
 - (void)handleEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;

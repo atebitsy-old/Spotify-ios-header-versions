@@ -66,6 +66,7 @@
 + (id)spt_logDebugMessageURI;
 + (id)spt_logMessageURI;
 + (id)spt_imageURI;
++ (id)spt_deviceURI;
 + (id)spt_contentChildrenURI;
 + (id)spt_connectSetActiveDeviceURI;
 + (id)spt_connectDevicesURI;
@@ -173,6 +174,7 @@
 @property(readonly, nonatomic) _Bool spt_isLogDebugMessageURI;
 @property(readonly, nonatomic) _Bool spt_isLogMessageURI;
 - (_Bool)spt_isImageURI;
+@property(readonly, nonatomic) _Bool spt_isDeviceURI;
 @property(readonly, nonatomic) _Bool spt_isContentChildrenURI;
 @property(readonly, nonatomic) _Bool spt_isConnectSetActiveDeviceURI;
 @property(readonly, nonatomic) _Bool spt_isConnectDevicesURI;

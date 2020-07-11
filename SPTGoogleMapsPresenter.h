@@ -41,7 +41,7 @@
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 - (void).cxx_destruct;
 - (_Bool)isNowPlayingViewInDrivingMode;
-- (void)nowPlayingBarContainerViewControllerWillDisappear:(id)arg1;
+- (void)nowPlayingBarViewControllerWillDisappear:(id)arg1;
 - (void)modeResolver:(id)arg1 didChangeToMode:(id)arg2 fromMode:(id)arg3;
 - (void)closeButtonTappedInBannerView:(id)arg1;
 - (void)actionButtonTappedInBannerView:(id)arg1;

@@ -6,15 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTPlayerRestrictions, UIView, UIViewController;
+@class SPTPlayerRestrictions, UIViewController;
 
 @protocol SPTNowPlayingStateObserver <NSObject>
 
 @optional
-- (void)nowPlayingBarContainerViewControllerWillDisappear:(UIViewController *)arg1;
-- (void)nowPlayingBarViewControllerDidAppearInContainerViewController:(UIViewController *)arg1;
-- (void)headUnitViewWillDisappear:(UIView *)arg1;
-- (void)headUnitViewDidAppear:(UIView *)arg1 inContainerViewController:(UIViewController *)arg2;
+- (void)nowPlayingBarViewControllerWillDisappear:(UIViewController *)arg1;
+- (void)nowPlayingBarViewControllerDidAppear:(UIViewController *)arg1;
 - (void)willSkipToNextWithPlayerRestrictions:(SPTPlayerRestrictions *)arg1;
 @end
 

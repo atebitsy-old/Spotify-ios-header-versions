@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 - (void)unregisterPodcastComponentsFromComponentRegistry:(id)arg1;
 - (void)registerPodcastComponentsToComponentRegistry:(id)arg1;
+- (id)provideBrowseImageHeaderComponents;
 - (id)providePodcastHubComponents;
 - (id)initWithTheme:(id)arg1;
 

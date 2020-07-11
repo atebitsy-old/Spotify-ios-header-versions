@@ -9,34 +9,29 @@
 #import "SPTNowPlayingBarViewControllerObserver-Protocol.h"
 #import "SPTNowPlayingStateObservable-Protocol.h"
 #import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
-#import "SPTNowPlayingUnitProviderObserver-Protocol.h"
 
-@class NSString, SPTNowPlayingBarContainerViewController, SPTNowPlayingTrackMetadataQueue, SPTObserverManager, SPTStatefulPlayer;
+@class NSString, SPTNowPlayingTrackMetadataQueue, SPTObserverManager, SPTStatefulPlayer, UIViewController;
+@protocol SPTNowPlayingBarViewControllerObservable;
 
-@interface SPTNowPlayingStateProxy : NSObject <SPTNowPlayingTrackMetadataQueueObserver, SPTNowPlayingBarViewControllerObserver, SPTNowPlayingStateObservable, SPTNowPlayingUnitProviderObserver>
+@interface SPTNowPlayingStateProxy : NSObject <SPTNowPlayingTrackMetadataQueueObserver, SPTNowPlayingBarViewControllerObserver, SPTNowPlayingStateObservable>
 {
     SPTStatefulPlayer *_statefulPlayer;
     SPTNowPlayingTrackMetadataQueue *_trackMetadataQueue;
-    SPTNowPlayingBarContainerViewController *_currentNowPlayingBarContainerViewController;
+    UIViewController<SPTNowPlayingBarViewControllerObservable> *_barViewController;
     SPTObserverManager *_observerManager;
 }
 
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(nonatomic) __weak SPTNowPlayingBarContainerViewController *currentNowPlayingBarContainerViewController; // @synthesize currentNowPlayingBarContainerViewController=_currentNowPlayingBarContainerViewController;
+@property(nonatomic) __weak UIViewController<SPTNowPlayingBarViewControllerObservable> *barViewController; // @synthesize barViewController=_barViewController;
 @property(readonly, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 - (void).cxx_destruct;
-- (void)handleBarReplacementWithNewViewController:(id)arg1;
-- (void)updateCurrentNowPlayingBarContainerViewControllerWithBarViewController:(id)arg1;
-- (id)barContainerViewControllerFromBarViewController:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (void)provider:(id)arg1 willReplaceViewController:(id)arg2 with:(id)arg3;
 - (void)nowPlayingBarViewControllerWillDisappear:(id)arg1;
 - (void)nowPlayingBarViewControllerDidAppear:(id)arg1;
 - (void)trackMetadataQueueWillSkipToNextTrack:(id)arg1;
-- (void)dealloc;
-- (id)initWithStatefulPlayer:(id)arg1 trackMetadataQueue:(id)arg2;
+- (id)initWithStatefulPlayer:(id)arg1 trackMetadataQueue:(id)arg2 barViewController:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -34,7 +34,8 @@
 - (_Bool)isPodcastContext;
 - (void)performSkipToPreviousWithCommandEvent:(id)arg1;
 - (void)perfromSkipToNextWithCommandEvent:(id)arg1;
-- (_Bool)isCommandEventOriginatingFromSiri:(id)arg1;
+- (_Bool)shouldSkip15sInsteadOfChangingTrackForEvent:(id)arg1;
+- (_Bool)shouldCommandEventOverrideCustomPodcastSkipBehaviour:(id)arg1;
 - (long long)doNothing:(id)arg1;
 - (long long)changePlaybackRateCommandPressed:(id)arg1;
 - (long long)shuffleTypeFollowingCurrentShuffleType:(long long)arg1;

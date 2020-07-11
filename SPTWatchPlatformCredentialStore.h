@@ -24,6 +24,7 @@
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
 - (void).cxx_destruct;
 - (void)handlePublisherEvent:(long long)arg1;
+- (void)sendCredentialsDictionary:(id)arg1;
 - (void)sendCredentials:(id)arg1;
 - (void)deleteCredentials;
 - (void)saveCredentials:(id)arg1;

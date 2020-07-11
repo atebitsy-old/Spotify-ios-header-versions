@@ -11,6 +11,7 @@
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl26AddCreatorContentOperation : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: transformer
 }
 
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

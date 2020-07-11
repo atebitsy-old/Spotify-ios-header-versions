@@ -10,7 +10,7 @@
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 #import "SPTPremiumDestinationFlexboxChildComponentViewControllerDataSource-Protocol.h"
 
-@class NSString, SPTPremiumDestinationFlexboxChildComponentViewController, UIImageView;
+@class NSLayoutConstraint, NSString, SPTPremiumDestinationFlexboxChildComponentViewController, UIImageView;
 @protocol HUBComponentViewChildDelegate;
 
 @interface SPTPremiumDestinationFlexboxImageComponentView : HUBComponentView <SPTPremiumDestinationFlexboxChildComponentViewControllerDataSource, HUBComponentViewWithImageHandling, HUBComponentViewWithChildren>
@@ -18,10 +18,12 @@
     id <HUBComponentViewChildDelegate> _childDelegate;
     SPTPremiumDestinationFlexboxChildComponentViewController *_childComponentViewController;
     UIImageView *_imageView;
+    NSLayoutConstraint *_imageViewHeightConstraint;
 }
 
 + (struct CGSize)imageSizeFromModel:(id)arg1;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2;
+@property(retain, nonatomic) NSLayoutConstraint *imageViewHeightConstraint; // @synthesize imageViewHeightConstraint=_imageViewHeightConstraint;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) SPTPremiumDestinationFlexboxChildComponentViewController *childComponentViewController; // @synthesize childComponentViewController=_childComponentViewController;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
@@ -34,6 +36,8 @@
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
+- (void)updateImageViewHeightConstraintIfNeeded;
+- (void)layoutSubviews;
 - (void)setupConstraints;
 - (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1;

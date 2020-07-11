@@ -48,7 +48,6 @@
 - (void)configureContextMenuPlaylistRadioHiddenFlag;
 - (void)configureContextMenuLinksFlag;
 @property(readonly, nonatomic, getter=isRadioURITransitionEnabled) _Bool radioURITransitionEnabled;
-@property(readonly, nonatomic, getter=isInfinitePlaybackEnabled) _Bool infinitePlaybackEnabled;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 - (void)dealloc;
 - (id)initWithAbbaFeature:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 freeTierEnabledSignal:(id)arg4 featureFlagFactory:(id)arg5;

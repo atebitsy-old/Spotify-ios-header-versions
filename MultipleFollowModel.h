@@ -8,7 +8,7 @@
 
 #import "FollowModelObserver-Protocol.h"
 
-@class NSHashTable, NSMutableDictionary, NSString, SPTFollowModelMessageManager, SPTFollowStateDataLoader;
+@class NSHashTable, NSMutableDictionary, NSString, SPTFollowFeaturePropertiesManager, SPTFollowModelMessageManager, SPTFollowStateDataLoader;
 @protocol SPTFollowFeatureLogger;
 
 @interface MultipleFollowModel : NSObject <FollowModelObserver>
@@ -20,8 +20,10 @@
     NSHashTable *_observers;
     id <SPTFollowFeatureLogger> _followFeatureLogger;
     NSString *_logContext;
+    SPTFollowFeaturePropertiesManager *_featureProperties;
 }
 
+@property(retain, nonatomic) SPTFollowFeaturePropertiesManager *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
@@ -39,7 +41,7 @@
 - (void)followURI:(id)arg1;
 - (void)toggleFollowStateForURI:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithCurrentUsername:(id)arg1 dataLoader:(id)arg2 followDataList:(id)arg3 messageManager:(id)arg4 followFeatureLogger:(id)arg5 logContext:(id)arg6;
+- (id)initWithCurrentUsername:(id)arg1 dataLoader:(id)arg2 followDataList:(id)arg3 messageManager:(id)arg4 featureProperties:(id)arg5 followFeatureLogger:(id)arg6 logContext:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -26,7 +26,7 @@
 - (void)loginTask:(id)arg1 didRequireCode:(id)arg2;
 - (void)loginTask:(id)arg1 didRequireBootstrapUsingWebgateSession:(id)arg2 completionCallback:(CDUnknownBlockType)arg3;
 - (void)loginTask:(id)arg1 didFinishWithSession:(id)arg2;
-- (void)loginTask:(id)arg1 didFailWithError:(struct LoginFailure *)arg2;
+- (void)loginTask:(id)arg1 didFailWithError:(id)arg2;
 - (void)loginTask:(id)arg1 didFinishWithWebgateSession:(id)arg2;
 - (CDUnknownBlockType)completionForTask:(id)arg1;
 - (void)removeTask:(id)arg1;

@@ -9,18 +9,15 @@
 #import "SPTUserTrackingService-Protocol.h"
 
 @class NSString, SPTAdjustURLSanitizer, SPTAdjustUserTracker, SPTAllocationContext, SPTTrackerBroadcaster;
-@protocol SPTContainerService, SPTCoreService, SPTDebugService, SPTPushNotificationController, SPTPushNotificationsService, SPTPushTokenUserTracker, SPTPushTokenUserTrackerService;
+@protocol SPTContainerService, SPTCoreService, SPTDebugService, SPTPushNotificationController;
 
 @interface SPTUserTrackingServiceImplementation : NSObject <SPTUserTrackingService>
 {
     SPTTrackerBroadcaster *_trackerBroadcaster;
     id <SPTPushNotificationController> _pushNotificationsController;
     SPTAdjustUserTracker *_adjustUserTracker;
-    id <SPTPushTokenUserTracker> _pushTokenUserTracker;
     id <SPTContainerService> _containerService;
     id <SPTCoreService> _coreService;
-    id <SPTPushNotificationsService> _pushNotificationsService;
-    id <SPTPushTokenUserTrackerService> _pushTokenUserTrackerService;
     id <SPTDebugService> _debugService;
     SPTAdjustURLSanitizer *_adjustURLSanitizer;
 }
@@ -28,13 +25,10 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTAdjustURLSanitizer *adjustURLSanitizer; // @synthesize adjustURLSanitizer=_adjustURLSanitizer;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
-@property(nonatomic) __weak id <SPTPushTokenUserTrackerService> pushTokenUserTrackerService; // @synthesize pushTokenUserTrackerService=_pushTokenUserTrackerService;
-@property(nonatomic) __weak id <SPTPushNotificationsService> pushNotificationsService; // @synthesize pushNotificationsService=_pushNotificationsService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-@property(retain, nonatomic) id <SPTPushTokenUserTracker> pushTokenUserTracker; // @synthesize pushTokenUserTracker=_pushTokenUserTracker;
 @property(retain, nonatomic) SPTAdjustUserTracker *adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
-@property(retain, nonatomic) id <SPTPushNotificationController> pushNotificationsController; // @synthesize pushNotificationsController=_pushNotificationsController;
+@property(readonly, nonatomic) id <SPTPushNotificationController> pushNotificationsController; // @synthesize pushNotificationsController=_pushNotificationsController;
 @property(retain, nonatomic) SPTTrackerBroadcaster *trackerBroadcaster; // @synthesize trackerBroadcaster=_trackerBroadcaster;
 - (void).cxx_destruct;
 - (void)unload;

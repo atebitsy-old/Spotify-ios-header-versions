@@ -8,21 +8,21 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTSearchLogger, SPTSearchRecentsDataSource, SPTUserBehaviourHubsInstrumentation;
+@protocol SPTSearchLogger, SPTSearchRecentsDataSource, SPTSearchUBIHubsLogger;
 
 @interface SPTSearchClearRecentsCommandHandler : NSObject <HUBCommandHandler>
 {
     id <SPTSearchRecentsDataSource> _dataSource;
     id <SPTSearchLogger> _searchLogger;
-    id <SPTUserBehaviourHubsInstrumentation> _ubiHubs;
+    id <SPTSearchUBIHubsLogger> _ubiHubsLogger;
 }
 
-@property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
+@property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTSearchLogger> searchLogger; // @synthesize searchLogger=_searchLogger;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSource> dataSource; // @synthesize dataSource=_dataSource;
 - (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
-- (id)initWithRecentsDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubs:(id)arg3;
+- (id)initWithRecentsDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 
 @end
 

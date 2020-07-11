@@ -16,7 +16,7 @@
 #import "SPTSearchPlatformColorInterpolatorDelegate-Protocol.h"
 
 @class GLUEGradientView, NSMutableDictionary, NSString, NSURL, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchPlatformColorInterpolator;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTShareDragDelegateFactory;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTShareDragDelegateFactory, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTHubPlayTrackListCommandHandlerDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
 {
@@ -31,7 +31,8 @@
     SPTSearch2Configuration *_configuration;
     SPTSearchPlatformColorInterpolator *_colorInterpolator;
     id <SPTSearchLoadingLogger> _loadingLogger;
-    id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <SPTExplicitContentAccessManager> _explicitAccessManager;
+    id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
     NSMutableDictionary *_dragDelegateHolders;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     struct UIEdgeInsets _insets;
@@ -39,7 +40,8 @@
 
 @property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) NSMutableDictionary *dragDelegateHolders; // @synthesize dragDelegateHolders=_dragDelegateHolders;
-@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
+@property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
+@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitAccessManager; // @synthesize explicitAccessManager=_explicitAccessManager;
 @property(readonly, nonatomic) id <SPTSearchLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(readonly, nonatomic) SPTSearchPlatformColorInterpolator *colorInterpolator; // @synthesize colorInterpolator=_colorInterpolator;
 @property(readonly, copy, nonatomic) SPTSearch2Configuration *configuration; // @synthesize configuration=_configuration;
@@ -52,12 +54,12 @@
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
 - (void)configureDragDelegateWithViewModel:(id)arg1;
-- (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubs:(id)arg3;
-- (id)makeRemoveRecentCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubs:(id)arg3;
-- (id)makeReloadCommandHandlerWithLogger:(id)arg1 ubiHubs:(id)arg2;
+- (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makeRemoveRecentCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makeReloadCommandHandlerWithLogger:(id)arg1 ubiHubsLogger:(id)arg2;
 - (id)makeKeyboardDismissCommandHandler;
 - (id)makeSaveToRecentsHandlerWithDataSource:(id)arg1;
-- (id)makePlayTrackHandlerWithPlayerFeature:(id)arg1 searchLogger:(id)arg2 ubiLogger:(id)arg3 ubiHubs:(id)arg4;
+- (id)makePlayTrackHandlerWithPlayerFeature:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makePlayerProviderWithPlayerFeature:(id)arg1;
 - (id)makeHUBViewControllerWithDependencies:(id)arg1 configuration:(id)arg2;
 - (void)dismissKeyboard;

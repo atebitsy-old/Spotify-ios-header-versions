@@ -10,7 +10,7 @@
 #import "SPTInstrumentationCurrentPageViewObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, SPTInAppMessageFeatureFlagChecks;
+@class NSNotificationCenter, NSString, SPTInAppMessageFeatureFlagChecks;
 @protocol SPTExternalIntegrationDriverDistractionController, SPTInAppMessageRequester;
 
 @interface SPTInAppMessageEventEmitter : NSObject <SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver, SPTInAppMessageMessageRequesterDelegate>
@@ -18,6 +18,7 @@
     id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
     SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
     id <SPTInAppMessageRequester> _messageRequester;
+    NSNotificationCenter *_notificationCenter;
     NSString *_matchingNavigationPattern;
     NSString *_matchingTrackPattern;
     NSString *_matchingClientEventPattern;
@@ -30,10 +31,12 @@
 @property(copy, nonatomic) NSString *matchingClientEventPattern; // @synthesize matchingClientEventPattern=_matchingClientEventPattern;
 @property(copy, nonatomic) NSString *matchingTrackPattern; // @synthesize matchingTrackPattern=_matchingTrackPattern;
 @property(copy, nonatomic) NSString *matchingNavigationPattern; // @synthesize matchingNavigationPattern=_matchingNavigationPattern;
+@property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) id <SPTInAppMessageRequester> messageRequester; // @synthesize messageRequester=_messageRequester;
 @property(readonly, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
 - (void).cxx_destruct;
+- (void)postCancelPresentationNotification:(id)arg1;
 - (void)compareMatchedPatternWithCurrentClientEventPattern:(id)arg1;
 - (void)compareMatchedPatternWithCurrentTrackURI:(id)arg1;
 - (void)compareMatchedPatternWithCurrentPageURI:(id)arg1;
@@ -41,7 +44,7 @@
 - (void)messageRequester:(id)arg1 didRecieveMessageRequest:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)currentPageViewUpdated:(id)arg1;
-- (id)initWithDriverDistractionController:(id)arg1 featureFlagChecker:(id)arg2 messageRequester:(id)arg3;
+- (id)initWithDriverDistractionController:(id)arg1 featureFlagChecker:(id)arg2 messageRequester:(id)arg3 notificationCenter:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

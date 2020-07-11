@@ -6,9 +6,6 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTSearchTestManager;
-
 @protocol SPTSearchService <SPTService>
-@property(readonly, nonatomic) id <SPTSearchTestManager> testManager;
 @end
 

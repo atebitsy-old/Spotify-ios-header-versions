@@ -49,7 +49,6 @@
 - (id)parseResponse:(id)arg1 requestKey:(id)arg2 error:(id *)arg3;
 - (_Bool)isOfflineError:(id)arg1;
 - (id)displayableErrorMessageForError:(id)arg1;
-@property(readonly, nonatomic, getter=hasExpandedStationMetadata) _Bool expandedStationMetadata;
 @property(readonly, nonatomic, getter=isAlbumStation) _Bool albumStation;
 @property(readonly, nonatomic, getter=isArtistStation) _Bool artistStation;
 @property(readonly, nonatomic, getter=isPlaying) _Bool playing;

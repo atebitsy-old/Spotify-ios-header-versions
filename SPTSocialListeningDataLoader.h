@@ -33,6 +33,11 @@
 - (void)setCoreSocialListeningState:(_Bool)arg1;
 - (void)subscribeToSessionUpdates;
 - (void)performRequestWithURL:(id)arg1 requestMethod:(long long)arg2 expectedResponseType:(unsigned long long)arg3;
+- (void)getExposedDevices;
+- (void)handleSocialDeviceResponse:(id)arg1 withDeviceIds:(id)arg2;
+- (void)getSocialDeviceSessions:(id)arg1;
+- (void)disableSocialDevice:(id)arg1;
+- (void)enableSocialDevice:(id)arg1;
 - (void)cancelRequests;
 - (void)leaveSession:(id)arg1;
 - (void)deleteSession:(id)arg1;

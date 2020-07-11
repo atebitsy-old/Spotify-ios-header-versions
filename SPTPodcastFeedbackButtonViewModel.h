@@ -12,15 +12,17 @@
 {
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTCollectionPlatformDataLoaderRequestToken> _collectionStateRequestToken;
+    CDUnknownBlockType _podcastTitleProvider;
 }
 
+@property(copy, nonatomic) CDUnknownBlockType podcastTitleProvider; // @synthesize podcastTitleProvider=_podcastTitleProvider;
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionStateRequestToken; // @synthesize collectionStateRequestToken=_collectionStateRequestToken;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 - (void).cxx_destruct;
 - (void)evaluateStateForCollectionState:(unsigned long long)arg1 error:(id)arg2;
 - (void)unlike;
 - (void)like;
-- (id)initWithPodcastURI:(id)arg1 collectionConfiguration:(id)arg2 logger:(id)arg3 collectionPlatform:(id)arg4;
+- (id)initWithPodcastURI:(id)arg1 collectionConfiguration:(id)arg2 logger:(id)arg3 collectionPlatform:(id)arg4 podcastTitleProvider:(CDUnknownBlockType)arg5;
 
 @end
 

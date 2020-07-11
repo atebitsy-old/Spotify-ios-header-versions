@@ -9,20 +9,17 @@
 #import "SPTShareHandler-Protocol.h"
 
 @class NSString, SPTShareLogger;
-@protocol SPTShareDeeplinkHandler;
 
 @interface SPTShareWhatsAppShareHandler : NSObject <SPTShareHandler>
 {
     SPTShareLogger *_shareLogger;
-    id <SPTShareDeeplinkHandler> _deeplinkHandler;
 }
 
-@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 - (void).cxx_destruct;
 - (id)generateShareTextBodyFromShareData:(id)arg1;
-- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (id)initWithShareLogger:(id)arg1 deeplinkHandler:(id)arg2;
+- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
+- (id)initWithShareLogger:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

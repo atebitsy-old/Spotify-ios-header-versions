@@ -9,17 +9,17 @@
 #import "SPTExternalIntegrationTestManagerService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTExternalIntegrationTestManager, SPTFeatureFlaggingService, SPTSessionService;
+@protocol SPTExternalIntegrationTestManager, SPTRemoteConfigurationService, SPTSessionService;
 
 @interface SPTExternalIntegrationTestManagerServiceImplementation : NSObject <SPTExternalIntegrationTestManagerService>
 {
     id <SPTExternalIntegrationTestManager> _sharedTestManager;
     id <SPTSessionService> _sessionService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
 }
 
 + (id)serviceIdentifier;
-@property(readonly, nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
+@property(readonly, nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationTestManager> sharedTestManager; // @synthesize sharedTestManager=_sharedTestManager;

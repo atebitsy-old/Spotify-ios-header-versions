@@ -8,7 +8,7 @@
 
 #import "SPTFollowModelFactory-Protocol.h"
 
-@class NSString, SPTDataLoaderFactory, SPTFollowDataProvider, SPTFollowModelMessageManager;
+@class NSString, SPTDataLoaderFactory, SPTFollowDataProvider, SPTFollowFeaturePropertiesManager, SPTFollowModelMessageManager;
 @protocol SPTCollectionPlatformConfiguration, SPTFollowFeatureLogger;
 
 @interface SPTFollowModelFactoryImplementation : NSObject <SPTFollowModelFactory>
@@ -17,12 +17,14 @@
     SPTDataLoaderFactory *_dataLoaderFactory;
     SPTFollowDataProvider *_followDataProvider;
     SPTFollowModelMessageManager *_messageManager;
+    SPTFollowFeaturePropertiesManager *_featureProperties;
     id <SPTCollectionPlatformConfiguration> _collectionPlatformConfiguration;
     id <SPTFollowFeatureLogger> _followFeatureLogger;
 }
 
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfiguration; // @synthesize collectionPlatformConfiguration=_collectionPlatformConfiguration;
+@property(retain, nonatomic) SPTFollowFeaturePropertiesManager *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTFollowModelMessageManager *messageManager; // @synthesize messageManager=_messageManager;
 @property(retain, nonatomic) SPTFollowDataProvider *followDataProvider; // @synthesize followDataProvider=_followDataProvider;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
@@ -31,7 +33,7 @@
 - (void)provideFollowModelForTargetURI:(id)arg1 logContext:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)createMultipleFollowModelForFollowDataList:(id)arg1 logContext:(id)arg2;
 - (id)createFollowModelForFollowData:(id)arg1 logContext:(id)arg2;
-- (id)initWithCurrentUsername:(id)arg1 dataLoaderFactory:(id)arg2 followDataProvider:(id)arg3 messageManager:(id)arg4 collectionPlatformConfiguration:(id)arg5 followFeatureLogger:(id)arg6;
+- (id)initWithCurrentUsername:(id)arg1 dataLoaderFactory:(id)arg2 followDataProvider:(id)arg3 messageManager:(id)arg4 featureProperties:(id)arg5 collectionPlatformConfiguration:(id)arg6 followFeatureLogger:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,7 +9,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTFreeTierPlaylistTestManager-Protocol.h"
 
-@class NSString;
+@class NSNumber, NSString;
 @protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, _TtP24EncoreIntegrationFeature20SPTEncoreTestManager_;
 
 @interface SPTFreeTierPlaylistTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTFreeTierPlaylistTestManager>
@@ -21,7 +21,6 @@
     _Bool _episodesInPlaylistDisabled;
     _Bool _scrollPerformanceTrackingEnabled;
     _Bool _placeholderCellsEnabled;
-    _Bool _episodeDownloadEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
@@ -33,9 +32,10 @@
     id <SPTFeatureFlagSignal> _scrollPerformanceSignal;
     id <SPTFeatureFlagSignal> _placeholderCellsEnabedSignal;
     id <SPTFeatureFlagSignal> _episodeDownloadEnabledSignal;
+    NSNumber *_episodeDownloadEnabledInitialValue;
 }
 
-@property(nonatomic, getter=isEpisodeDownloadEnabled) _Bool episodeDownloadEnabled; // @synthesize episodeDownloadEnabled=_episodeDownloadEnabled;
+@property(retain, nonatomic) NSNumber *episodeDownloadEnabledInitialValue; // @synthesize episodeDownloadEnabledInitialValue=_episodeDownloadEnabledInitialValue;
 @property(nonatomic, getter=isPlaceholderCellsEnabled) _Bool placeholderCellsEnabled; // @synthesize placeholderCellsEnabled=_placeholderCellsEnabled;
 @property(nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled; // @synthesize scrollPerformanceTrackingEnabled=_scrollPerformanceTrackingEnabled;
 @property(nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled; // @synthesize episodesInPlaylistDisabled=_episodesInPlaylistDisabled;
@@ -56,6 +56,7 @@
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
 - (id)createSignalForAnyFiveSignalsWithAbbaKey:(id)arg1 pageTitle:(id)arg2 itemTitle:(id)arg3 itemDescription:(id)arg4;
+@property(readonly, nonatomic, getter=isEpisodeDownloadEnabled) _Bool episodeDownloadEnabled;
 @property(readonly, nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupEpisodesAvailable;

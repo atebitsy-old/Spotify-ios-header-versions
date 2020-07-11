@@ -6,13 +6,14 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTWatchConnectivitySessionObserver-Protocol.h"
 #import "SPTWatchPlatformService-Protocol.h"
 #import "SPTWatchPlatformTestManagerObserver-Protocol.h"
 
-@class NSArray, NSDictionary, NSString, SPTAllocationContext, SPTWatchPlatformLogging, SPTWatchPlatformOfflineManagerImplementation, SPTWatchPlatformTestManager;
+@class NSArray, NSDictionary, NSString, SPTAllocationContext, SPTWatchConnectivityDataLoader, SPTWatchPlatformLogging, SPTWatchPlatformOfflineManagerImplementation, SPTWatchPlatformTestManager;
 @protocol GaiaFeature, SPTAccessoryManagerService, SPTCollectionPlatformService, SPTContainerService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTPodcastFeature, SPTRadioService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSiriIntentsService, SPTVolumeService;
 
-@interface SPTWatchPlatformServiceImplementation : NSObject <SPTWatchPlatformTestManagerObserver, SPTWatchPlatformService>
+@interface SPTWatchPlatformServiceImplementation : NSObject <SPTWatchPlatformTestManagerObserver, SPTWatchConnectivitySessionObserver, SPTWatchPlatformService>
 {
     id <SPTAccessoryManagerService> _accessoryManagerService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
@@ -32,6 +33,7 @@
     id <SPTLoginService> _loginService;
     id <SPTSiriIntentsService> _siriIntentsService;
     SPTWatchPlatformLogging *_logger;
+    SPTWatchConnectivityDataLoader *_watchConnectivityDataLoader;
     SPTWatchPlatformTestManager *_testManager;
     SPTWatchPlatformOfflineManagerImplementation *_offlineManager;
     NSDictionary *_requestHandlers;
@@ -43,6 +45,7 @@
 @property(retain, nonatomic) NSDictionary *requestHandlers; // @synthesize requestHandlers=_requestHandlers;
 @property(retain, nonatomic) SPTWatchPlatformOfflineManagerImplementation *offlineManager; // @synthesize offlineManager=_offlineManager;
 @property(retain, nonatomic) SPTWatchPlatformTestManager *testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) SPTWatchConnectivityDataLoader *watchConnectivityDataLoader; // @synthesize watchConnectivityDataLoader=_watchConnectivityDataLoader;
 @property(retain, nonatomic) SPTWatchPlatformLogging *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTSiriIntentsService> siriIntentsService; // @synthesize siriIntentsService=_siriIntentsService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
@@ -63,6 +66,7 @@
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
 - (void).cxx_destruct;
 - (id)watchConnectivityManager;
+- (void)sessionReachabilityDidChange:(id)arg1;
 - (void)testManager:(id)arg1 didUpdateWatchIntegrationEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didUpdateWatchAccessoryLoggingEnabledState:(_Bool)arg2;
 - (id)provideOfflineManager;

@@ -9,7 +9,7 @@
 #import "SPTSnackbarService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSnackbarAnimationView, SPTSnackbarPresenterImplementation;
-@protocol SPTContainerUIService, SPTExternalIntegrationDriverDistractionService, SPTFeatureFlaggingService, SPTFreeTierUIService, SPTGLUEService, SPTSnackbarTestManager;
+@protocol SPTContainerUIService, SPTExternalIntegrationDriverDistractionService, SPTFeatureFlaggingService, SPTFreeTierUIService, SPTGLUEService, SPTRemoteConfigurationService;
 
 @interface SPTSnackbarServiceImplementation : NSObject <SPTSnackbarService>
 {
@@ -20,11 +20,11 @@
     SPTSnackbarPresenterImplementation *_presenter;
     SPTSnackbarAnimationView *_snackbarAnimationView;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
-    id <SPTSnackbarTestManager> _snackBarTestManager;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTSnackbarTestManager> snackBarTestManager; // @synthesize snackBarTestManager=_snackBarTestManager;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(retain, nonatomic) SPTSnackbarAnimationView *snackbarAnimationView; // @synthesize snackbarAnimationView=_snackbarAnimationView;
 @property(retain, nonatomic) SPTSnackbarPresenterImplementation *presenter; // @synthesize presenter=_presenter;
@@ -33,7 +33,6 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 - (void).cxx_destruct;
-- (id)provideTestManager;
 - (id)provideSnackbarPresenterForViewURI:(id)arg1;
 - (id)provideSnackbarPresenter;
 - (void)disableSnackbarService;

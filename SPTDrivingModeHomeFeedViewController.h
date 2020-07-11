@@ -37,8 +37,11 @@
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 @property(readonly, nonatomic) SPTDrivingModeHomeFeedViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
-- (void)loadNextShelf;
-- (void)loadPreviousShelf;
+- (void)scrollViewHapticUpdate:(long long)arg1;
+- (void)updateShelfTitleForPageIndex:(int)arg1;
+- (void)updatePageScroller;
+- (void)loadNextShelfWithIndex:(int)arg1;
+- (void)loadPreviousShelfWithIndex:(int)arg1;
 - (id)controllerForShelf:(id)arg1;
 - (void)shelfItemWasTapped:(id)arg1;
 - (void)viewModelDidChangeShouldShowAd:(id)arg1;

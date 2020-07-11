@@ -8,17 +8,21 @@
 
 #import "HUBCommandHandler-Protocol.h"
 
-@protocol SPTExplicitContentAccessManager;
+@protocol SPTExplicitContentAccessManager, SPTSearchUBIHubsLogger;
 
 @interface SPTSearchExplicitContentCommandHandler : NSObject <HUBCommandHandler>
 {
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <SPTSearchUBIHubsLogger> _ubiHubsLogger;
 }
 
++ (id)defaultName;
++ (id)commandWithName:(id)arg1 entityURI:(id)arg2;
+@property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 - (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
-- (id)initWithExplicitContentAccessManager:(id)arg1;
+- (id)initWithExplicitContentAccessManager:(id)arg1 ubiHubsLogger:(id)arg2;
 
 @end
 

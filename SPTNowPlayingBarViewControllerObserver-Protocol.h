@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTNowPlayingBarViewController;
+@class UIViewController;
 
 @protocol SPTNowPlayingBarViewControllerObserver <NSObject>
 
 @optional
-- (void)nowPlayingBarViewControllerWillDisappear:(SPTNowPlayingBarViewController *)arg1;
-- (void)nowPlayingBarViewControllerDidAppear:(SPTNowPlayingBarViewController *)arg1;
+- (void)nowPlayingBarViewControllerWillDisappear:(UIViewController *)arg1;
+- (void)nowPlayingBarViewControllerDidAppear:(UIViewController *)arg1;
 @end
 

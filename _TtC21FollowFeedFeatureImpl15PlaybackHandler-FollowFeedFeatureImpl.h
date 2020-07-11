@@ -6,9 +6,7 @@
 
 #import "_TtC21FollowFeedFeatureImpl15PlaybackHandler.h"
 
-#import "SPTPlayerObserver-Protocol.h"
-
-@interface _TtC21FollowFeedFeatureImpl15PlaybackHandler (FollowFeedFeatureImpl) <SPTPlayerObserver>
+@interface _TtC21FollowFeedFeatureImpl15PlaybackHandler (FollowFeedFeatureImpl)
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;
 @end

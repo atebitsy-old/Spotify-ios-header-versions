@@ -11,7 +11,7 @@
     // Error parsing type: , name: canPlayAgeRestrictedContentSignal
     // Error parsing type: , name: useStagingServerSignal
     // Error parsing type: , name: observerManager
-    // Error parsing type: , name: canPlayAgeRestrictedContentState
+    // Error parsing type: , name: filterAgeRestrictedContent
     // Error parsing type: , name: useStagingServerState
     // Error parsing type: , name: properties
 }

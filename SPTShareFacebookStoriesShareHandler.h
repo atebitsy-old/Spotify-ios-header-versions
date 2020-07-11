@@ -10,6 +10,7 @@
 #import "SPTShareHandler-Protocol.h"
 
 @class NSString, SPTDataLoader, SPTShareData, SPTShareLogger;
+@protocol SPTShareDeeplinkHandler;
 
 @interface SPTShareFacebookStoriesShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
 {
@@ -18,8 +19,10 @@
     SPTShareLogger *_shareLogger;
     CDUnknownBlockType _shareCompletionBlock;
     SPTShareData *_shareData;
+    id <SPTShareDeeplinkHandler> _deeplinkHandler;
 }
 
+@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(copy, nonatomic) CDUnknownBlockType shareCompletionBlock; // @synthesize shareCompletionBlock=_shareCompletionBlock;
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;
@@ -28,7 +31,7 @@
 - (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
-- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)createAlertModel;
 - (void)executeCompletionWithError:(id)arg1;
 - (void)shareEntityWithURL:(id)arg1 backgroundImage:(id)arg2 stickerImage:(id)arg3 topColor:(id)arg4 bottomColor:(id)arg5;

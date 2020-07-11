@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTAuthCodeChallenge, SPTAuthLoginTask, SPTAuthSession, SPTAuthSignupInfo, SPTAuthWebgateSession;
+@class NSError, SPTAuthCodeChallenge, SPTAuthLoginTask, SPTAuthSession, SPTAuthSignupInfo, SPTAuthWebgateSession;
 
 @protocol SPTAuthLoginTaskDelegate <NSObject>
 - (void)loginTask:(SPTAuthLoginTask *)arg1 didRequireBootstrapUsingWebgateSession:(SPTAuthWebgateSession *)arg2 completionCallback:(void (^)(_Bool, NSData *))arg3;
-- (void)loginTask:(SPTAuthLoginTask *)arg1 didFailWithError:(struct LoginFailure *)arg2;
+- (void)loginTask:(SPTAuthLoginTask *)arg1 didFailWithError:(NSError *)arg2;
 - (void)loginTask:(SPTAuthLoginTask *)arg1 didRequireSignup:(SPTAuthSignupInfo *)arg2;
 - (void)loginTask:(SPTAuthLoginTask *)arg1 didRequireCode:(SPTAuthCodeChallenge *)arg2;
 - (void)loginTask:(SPTAuthLoginTask *)arg1 didFinishWithSession:(SPTAuthSession *)arg2;

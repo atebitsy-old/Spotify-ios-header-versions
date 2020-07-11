@@ -52,10 +52,12 @@
 - (void)notifyObservers;
 - (void)subscribeToCollectionChanges;
 - (void)removeURLs:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)removeURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 entityName:(id)arg6;
 - (void)removeURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)removeBanURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)banURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)addURLs:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
+- (void)addURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 entityName:(id)arg6;
 - (void)addURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (_Bool)canAddTrackWithURL:(id)arg1;
 - (id)subscribeCollectionStateForURLs:(id)arg1 completion:(CDUnknownBlockType)arg2;

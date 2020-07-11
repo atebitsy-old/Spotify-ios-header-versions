@@ -11,6 +11,7 @@
     // Error parsing type: , name: connectManager
     // Error parsing type: , name: modalPresentationController
     // Error parsing type: , name: devicePickerControllerFactory
+    // Error parsing type: , name: presentedPicker
 }
 
 - (void).cxx_destruct;

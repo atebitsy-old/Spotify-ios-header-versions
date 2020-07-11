@@ -12,15 +12,9 @@
 
 @interface SPTSearchUILabelStyle : NSObject <GLUEStyle>
 {
-    _Bool _adjustsFontSizeToFitWidth;
     long long _maximumNumberOfLines;
-    double _minimumScaleFactor;
-    long long _baselineAdjustment;
 }
 
-@property(nonatomic) long long baselineAdjustment; // @synthesize baselineAdjustment=_baselineAdjustment;
-@property(nonatomic) _Bool adjustsFontSizeToFitWidth; // @synthesize adjustsFontSizeToFitWidth=_adjustsFontSizeToFitWidth;
-@property(nonatomic) double minimumScaleFactor; // @synthesize minimumScaleFactor=_minimumScaleFactor;
 @property(nonatomic) long long maximumNumberOfLines; // @synthesize maximumNumberOfLines=_maximumNumberOfLines;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;

@@ -9,7 +9,7 @@
 #import "SPTShareViewControllerDelegate-Protocol.h"
 
 @class NSString, SPTProgressView, SPTShareDataProvider, SPTShareHandlerFactory, SPTShareViewController, UIViewController;
-@protocol SPTAlertController, SPTShareHandler;
+@protocol SPTAlertController, SPTShareDeeplinkHandler, SPTShareHandler;
 
 @interface SPTSharePresenter : NSObject <SPTShareViewControllerDelegate>
 {
@@ -19,12 +19,14 @@
     SPTShareDataProvider *_shareDataProvider;
     id <SPTAlertController> _alertController;
     id <SPTShareHandler> _shareHandler;
+    id <SPTShareDeeplinkHandler> _deeplinkHandler;
     SPTProgressView *_progressView;
     struct CGRect _selectionFrame;
 }
 
 @property(nonatomic) struct CGRect selectionFrame; // @synthesize selectionFrame=_selectionFrame;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
+@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) id <SPTShareHandler> shareHandler; // @synthesize shareHandler=_shareHandler;
 @property(readonly, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(readonly, nonatomic) SPTShareDataProvider *shareDataProvider; // @synthesize shareDataProvider=_shareDataProvider;
@@ -41,7 +43,7 @@
 - (void)dismissWithCompletion:(CDUnknownBlockType)arg1;
 - (void)presentProgressView;
 - (void)presentAlertControllerWithModel:(id)arg1;
-- (id)initWithContextViewController:(id)arg1 shareViewController:(id)arg2 shareHandlerFactory:(id)arg3 shareDataProvider:(id)arg4 alertController:(id)arg5;
+- (id)initWithContextViewController:(id)arg1 shareViewController:(id)arg2 shareHandlerFactory:(id)arg3 shareDataProvider:(id)arg4 alertController:(id)arg5 deeplinkHandler:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

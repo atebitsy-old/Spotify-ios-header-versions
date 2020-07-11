@@ -22,8 +22,8 @@
 @property(retain, nonatomic) id <SPTNowPlayingStateObservable> nowPlayingStateObservable; // @synthesize nowPlayingStateObservable=_nowPlayingStateObservable;
 @property(retain, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 - (void).cxx_destruct;
-- (void)nowPlayingBarContainerViewControllerWillDisappear:(id)arg1;
-- (void)nowPlayingBarViewControllerDidAppearInContainerViewController:(id)arg1;
+- (void)nowPlayingBarViewControllerWillDisappear:(id)arg1;
+- (void)nowPlayingBarViewControllerDidAppear:(id)arg1;
 @property(readonly, nonatomic, getter=isHidden) _Bool hidden;
 @property(readonly, copy, nonatomic) NSString *currentPageSource;
 - (void)removeObserver:(id)arg1;

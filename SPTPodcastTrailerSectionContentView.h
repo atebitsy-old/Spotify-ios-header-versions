@@ -6,7 +6,7 @@
 
 #import "GLUEStatefulView.h"
 
-@class GLUEImageView, NSURL, SPTPodcastTrailerAccessoryLabel, SPTPodcastTrailerSectionCircularProgressView, SPTTheme, UIControl, UIImageView, UILabel, UIStackView, UIView;
+@class GLUEImageView, GLUETrackAccessoryLabel, NSURL, SPTPodcastTrailerAccessoryLabel, SPTPodcastTrailerSectionCircularProgressView, SPTTheme, UIControl, UIImageView, UILabel, UIStackView, UIView;
 @protocol GLUEImageLoader;
 
 @interface SPTPodcastTrailerSectionContentView : GLUEStatefulView
@@ -24,8 +24,10 @@
     UIStackView *_metadataContainerStackView;
     UIStackView *_metadataSubContainerStackView;
     UIControl *_playControl;
+    GLUETrackAccessoryLabel *_explicitLabel;
 }
 
+@property(retain, nonatomic) GLUETrackAccessoryLabel *explicitLabel; // @synthesize explicitLabel=_explicitLabel;
 @property(retain, nonatomic) UIControl *playControl; // @synthesize playControl=_playControl;
 @property(retain, nonatomic) UIStackView *metadataSubContainerStackView; // @synthesize metadataSubContainerStackView=_metadataSubContainerStackView;
 @property(retain, nonatomic) UIStackView *metadataContainerStackView; // @synthesize metadataContainerStackView=_metadataContainerStackView;
@@ -40,6 +42,7 @@
 @property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 - (void).cxx_destruct;
+- (id)explicitLabelStyle;
 - (id)providePlaceholderImage;
 - (void)updateProgressVisibility:(_Bool)arg1;
 - (id)defineDurationTextColor:(_Bool)arg1;

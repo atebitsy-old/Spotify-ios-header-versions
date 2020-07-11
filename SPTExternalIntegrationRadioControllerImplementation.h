@@ -7,15 +7,16 @@
 #import <objc/NSObject.h>
 
 #import "SPTExternalIntegrationRadioController-Protocol.h"
-#import "SPTRadioObserver-Protocol.h"
 
 @class NSString, SPTExternalIntegrationPlatformLoggerImplementation, SPTObserverManager;
-@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlaybackController, SPTRadioManager;
+@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlaybackController, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigProperties;
 
-@interface SPTExternalIntegrationRadioControllerImplementation : NSObject <SPTRadioObserver, SPTExternalIntegrationRadioController>
+@interface SPTExternalIntegrationRadioControllerImplementation : NSObject <SPTExternalIntegrationRadioController>
 {
     SPTObserverManager *_observerManager;
     id <SPTRadioManager> _radioManager;
+    id <SPTRadioAPI> _radioAPI;
+    id <SPTRadioRemoteConfigProperties> _radioRemoteConfigProperties;
     id <SPTExternalIntegrationPlaybackController> _playbackController;
     SPTExternalIntegrationPlatformLoggerImplementation *_logger;
     id <SPTExternalIntegrationDebugLog> _debugLog;
@@ -24,10 +25,11 @@
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) SPTExternalIntegrationPlatformLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
+@property(retain, nonatomic) id <SPTRadioRemoteConfigProperties> radioRemoteConfigProperties; // @synthesize radioRemoteConfigProperties=_radioRemoteConfigProperties;
+@property(readonly, nonatomic) id <SPTRadioAPI> radioAPI; // @synthesize radioAPI=_radioAPI;
 @property(readonly, nonatomic) id <SPTRadioManager> radioManager; // @synthesize radioManager=_radioManager;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 - (void).cxx_destruct;
-- (void)radioManager:(id)arg1 thumbsFeedbackChangedForTrackURL:(id)arg2 trackFeedback:(long long)arg3;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (_Bool)thumbIsDownForTrackWithURI:(id)arg1;
@@ -38,9 +40,8 @@
 - (_Bool)isPlayingRadioInPlayerState:(id)arg1;
 - (_Bool)canStartRadioSeededByTrackURI:(id)arg1;
 - (_Bool)canStartTrackRadioSeededByPlayerState:(id)arg1;
-- (void)startRadioForTrackURI:(id)arg1 playerState:(id)arg2 accessorySessionID:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
-- (void)dealloc;
-- (id)initWithPlaybackController:(id)arg1 radioManager:(id)arg2 debugLog:(id)arg3 logger:(id)arg4;
+- (void)startRadioForTrackURI:(id)arg1 currentAccessory:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (id)initWithPlaybackController:(id)arg1 radioManager:(id)arg2 radioAPI:(id)arg3 radioRemoteConfigProperties:(id)arg4 debugLog:(id)arg5 logger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

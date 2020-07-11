@@ -37,14 +37,6 @@
 + (id)spt_concertEntityServiceURLWithIdentifier:(id)arg1 location:(id)arg2 transport:(long long)arg3;
 + (id)spt_ConcertsLocationSearchURLWithQuery:(id)arg1 transport:(long long)arg2;
 + (id)spt_ConcertsURLWithLocation:(id)arg1 transport:(long long)arg2;
-+ (id)spt_dailyMixServiceDailyMixURIs;
-+ (id)spt_dailymixApolloClusters;
-+ (id)spt_dailymixApolloDailyMixNegativeArtistFeedbackForTrack:(id)arg1 station:(id)arg2;
-+ (id)spt_dailymixApolloDailyMixNegativeSongFeedbackForTrack:(id)arg1 station:(id)arg2;
-+ (id)spt_dailymixApolloDailyMixPositiveSongFeedbackForTrack:(id)arg1 station:(id)arg2;
-+ (id)spt_feedbackURIForFeedbackTypeComponent:(id)arg1 entityTypeComponent:(id)arg2 track:(id)arg3 station:(id)arg4;
-+ (id)spt_radioApolloMixesFeedbackAll;
-+ (id)spt_radioApolloEntityForEntityURI:(id)arg1;
 + (id)spt_entitySeeAllSongsViewURIWithEmbeddedURI:(id)arg1;
 + (id)spt_externalIntegrationRecentlyPlayedURI;
 + (id)spt_abbaMakeURLWithFormatForPath:(id)arg1;
@@ -225,9 +217,6 @@
 + (id)spt_profileVolatileEndpointWithUsername:(id)arg1;
 + (id)spt_profileEndpointWithUsername:(id)arg1;
 + (id)spt_profileServiceName;
-+ (id)spt_trackEventAPIURL;
-+ (id)spt_newRegisterTokenAPIURL;
-+ (id)spt_registerTokenAPIURL;
 + (id)spt_queueURI;
 + (id)spt_radioHubURI;
 + (id)spt_stationURLWithSeed:(id)arg1;
@@ -337,11 +326,6 @@
 - (id)spt_concertsArtistIdentifier;
 - (_Bool)spt_isConcertsForArtistViewURI;
 @property(readonly, nonatomic, getter=spt_isDailyMixHub) _Bool dailyMixHub;
-@property(readonly, nonatomic, getter=spt_isDailyMixURL) _Bool dailyMixURL;
-@property(readonly, nonatomic, getter=spt_isClusterStationURL) _Bool clusterStationURL;
-@property(readonly, nonatomic) NSString *spt_dailyMixId;
-- (id)spt_dailyMixURIComponentsPrefix;
-@property(readonly, nonatomic, getter=spt_isRadioApolloEntity) _Bool radioApolloEntity;
 - (_Bool)spt_isEqualIgnoringPlaylistVersions:(id)arg1;
 @property(readonly, nonatomic, getter=spt_entitySeeAllSongsEmbeddedViewURI) NSURL *entitySeeAllSongsEmbeddedViewURI;
 @property(readonly, nonatomic, getter=spt_isEntitySeeAllSongsViewURI) _Bool isEntitySeeAllSongsViewURI;
@@ -395,7 +379,6 @@
 - (_Bool)spt_isNotificationViewControllerURI;
 - (_Bool)spt_isRadioURI;
 - (_Bool)spt_isPodcastURI;
-- (_Bool)spt_isDailyMixURI;
 @property(readonly, nonatomic, getter=spt_isNowPlayingSideBarURI) _Bool isNowPlayingSideBarURI;
 @property(readonly, nonatomic, getter=spt_isNowPlayingBarURI) _Bool isNowPlayingBarURI;
 @property(readonly, nonatomic, getter=spt_isNowPlayingViewContentsURI) _Bool isNowPlayingViewContentsURI;

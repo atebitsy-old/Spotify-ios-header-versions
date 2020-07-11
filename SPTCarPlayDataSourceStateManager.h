@@ -8,14 +8,13 @@
 
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, SPTCarPlayLoggedInDataSource, SPTCarPlayTestManager, SPTNetworkConnectivityController;
+@class NSString, SPTCarPlayLoggedInDataSource, SPTNetworkConnectivityController;
 @protocol SPTCarPlayDataSource, SPTExternalIntegrationDebugLog, SPTMediaPlayerContentBridge;
 
 @interface SPTCarPlayDataSourceStateManager : NSObject <SPTNetworkConnectivityControllerObserver>
 {
     _Bool _availableForLoggedInDataSources;
     id <SPTExternalIntegrationDebugLog> _debugLog;
-    SPTCarPlayTestManager *_testManager;
     id <SPTMediaPlayerContentBridge> _mediaPlayerBridge;
     SPTNetworkConnectivityController *_networkConnectivityController;
     SPTCarPlayLoggedInDataSource *_loggedInDefaultDataSource;
@@ -26,7 +25,6 @@
 @property(retain, nonatomic) SPTCarPlayLoggedInDataSource *loggedInDefaultDataSource; // @synthesize loggedInDefaultDataSource=_loggedInDefaultDataSource;
 @property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTMediaPlayerContentBridge> mediaPlayerBridge; // @synthesize mediaPlayerBridge=_mediaPlayerBridge;
-@property(nonatomic) __weak SPTCarPlayTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic, getter=isAvailableForLoggedInDataSources) _Bool availableForLoggedInDataSources; // @synthesize availableForLoggedInDataSources=_availableForLoggedInDataSources;
 - (void).cxx_destruct;
@@ -40,7 +38,7 @@
 - (void)carplaySessionDidDisconnect;
 - (void)applyRestricedDataSourceForReason:(unsigned long long)arg1;
 - (void)setDataSourceAccessory:(id)arg1;
-- (void)setupLoggedInDataSourcesWithTestManager:(id)arg1 externalIntegrationPlatform:(id)arg2 imageLoaderFactor:(id)arg3 connectManager:(id)arg4 networkConnectivityController:(id)arg5;
+- (void)setupLoggedInDataSourcesWithExternalIntegrationPlatform:(id)arg1 imageLoaderFactory:(id)arg2 connectManager:(id)arg3 networkConnectivityController:(id)arg4;
 - (void)tearDownForRestricedDataSource;
 - (void)dealloc;
 - (id)initWithMediaPlayerBridge:(id)arg1 debugLog:(id)arg2;

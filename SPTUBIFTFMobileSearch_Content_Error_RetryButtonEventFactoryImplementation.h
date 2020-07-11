@@ -15,11 +15,12 @@
     NSArray *_components;
 }
 
-+ (id)factoryWithReason:(id)arg1 components:(id)arg2;
++ (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)hitRetry;
 - (id)_location;
-- (id)initWithReason:(id)arg1 components:(id)arg2;
+- (id)initWithComponents:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

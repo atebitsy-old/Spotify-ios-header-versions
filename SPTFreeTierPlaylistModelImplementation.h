@@ -11,7 +11,7 @@
 #import "SPTFreeTierPlaylistSortingFilteringDelegate-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString, NSURL, SPTFreeTierPlaylistModelEntityImplementation, SPTObserverManager;
+@class NSString, NSURL, SPTFreeTierPlaylistFeatureProperties, SPTFreeTierPlaylistModelEntityImplementation, SPTObserverManager;
 @protocol SPTClientSettings, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTExplicitContentAccessManager, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistTestManager, SPTOnDemandSet, SPTPlaylistModel, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState;
 
 @interface SPTFreeTierPlaylistModelImplementation : NSObject <SPTProductStateObserver, SPTExplicitContentEnabledStateObserver, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistSortingFilteringDelegate>
@@ -30,6 +30,7 @@
     id <SPTProductState> _productState;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTFreeTierPlaylistTestManager> _testManager;
+    SPTFreeTierPlaylistFeatureProperties *_featureProperties;
     NSString *_formatListType;
     SPTFreeTierPlaylistModelEntityImplementation *_entity;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _metadataSubscription;
@@ -50,6 +51,7 @@
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> metadataSubscription; // @synthesize metadataSubscription=_metadataSubscription;
 @property(retain, nonatomic) SPTFreeTierPlaylistModelEntityImplementation *entity; // @synthesize entity=_entity;
 @property(copy, nonatomic) NSString *formatListType; // @synthesize formatListType=_formatListType;
+@property(retain, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -88,10 +90,12 @@
 - (void)toggleLikedStateOnTrackEntity:(id)arg1;
 - (void)toggleBannedStateOnTrackEntity:(id)arg1;
 - (_Bool)isPlaybackRestrictedForTrackEntity:(id)arg1 playbackPrevented:(_Bool)arg2;
-@property(readonly, nonatomic, getter=isOfflineSyncAvailable) _Bool offlineSyncAvailable;
+@property(readonly, nonatomic, getter=isOfflineSyncPermissionEnabled) _Bool offlineSyncPermissionEnabled;
 - (void)changeOffline:(_Bool)arg1;
 - (void)loadMore;
 - (void)deletePlaylist;
+- (_Bool)showUnfollowCollectionConfirmation;
+- (_Bool)showFollowCollectionConfirmation;
 - (_Bool)showCollectionConfirmation;
 - (void)changeFollowState:(_Bool)arg1;
 - (void)playWithPlayOptions:(id)arg1 andPlayOrigin:(id)arg2;
@@ -104,7 +108,7 @@
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (void)dealloc;
-- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 testManager:(id)arg11 formatListType:(id)arg12;
+- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 testManager:(id)arg11 featureProperties:(id)arg12 formatListType:(id)arg13;
 @property(readonly, nonatomic, getter=isCappedOverridenByXCUITest) _Bool cappedOverridenByXCUITest;
 
 // Remaining properties

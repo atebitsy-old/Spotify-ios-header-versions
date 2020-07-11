@@ -27,6 +27,7 @@
 - (GLUEButton *)provideCollectionActionButtonForEntityType:(unsigned long long)arg1 target:(id)arg2 action:(SEL)arg3;
 - (void)showCollectionConfirmationProgressViewForBannedState:(_Bool)arg1 entityURL:(NSURL *)arg2 inContextURL:(NSURL *)arg3;
 - (NSString *)confirmationTitleForBannedFromCollection:(_Bool)arg1 entityURL:(NSURL *)arg2 inContextURL:(NSURL *)arg3;
+- (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(NSURL *)arg2 entityName:(NSString *)arg3;
 - (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(NSURL *)arg2;
 - (NSString *)confirmationTitleForAddedToCollection:(_Bool)arg1 entityURL:(NSURL *)arg2;
 - (SPTSwipeableTableViewCellShelf *)provideShelfViewForItemWithCollectionState:(_Bool)arg1;

@@ -12,7 +12,7 @@
 #import "SPTInstrumentationCurrentPageViewObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSArray, NSMutableDictionary, NSString, SPTInAppMessageFeatureFlagChecks, SPTInAppMessagePodcastExperimentsHandler;
+@class NSArray, NSMutableDictionary, NSNotificationCenter, NSString, SPTInAppMessageFeatureFlagChecks, SPTInAppMessagePodcastExperimentsHandler;
 @protocol SPTExternalIntegrationDriverDistractionController, SPTInAppMessageTriggerEngineDelegate;
 
 @interface SPTInAppMessageTriggerEngine : NSObject <SPTInAppMessagePodcastExperimentsHandlerDelegate, SPTInAppMessageTriggerListControllerDelegate, SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver, SPTInAppMessageMessageRequesterDelegate>
@@ -23,6 +23,7 @@
     id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
     SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
     SPTInAppMessagePodcastExperimentsHandler *_podcastExperimentsHandler;
+    NSNotificationCenter *_notificationCenter;
     NSString *_matchingNavigationPattern;
     NSString *_matchingTrackPattern;
     NSString *_matchingClientEventPattern;
@@ -35,6 +36,7 @@
 @property(copy, nonatomic) NSString *matchingClientEventPattern; // @synthesize matchingClientEventPattern=_matchingClientEventPattern;
 @property(copy, nonatomic) NSString *matchingTrackPattern; // @synthesize matchingTrackPattern=_matchingTrackPattern;
 @property(copy, nonatomic) NSString *matchingNavigationPattern; // @synthesize matchingNavigationPattern=_matchingNavigationPattern;
+@property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) SPTInAppMessagePodcastExperimentsHandler *podcastExperimentsHandler; // @synthesize podcastExperimentsHandler=_podcastExperimentsHandler;
 @property(retain, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
 @property(retain, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
@@ -47,6 +49,7 @@
 - (void)setupPodcastExperiments;
 - (id)getClientEventPatternForMessageRequest:(id)arg1;
 - (id)getURIForPageView:(id)arg1;
+- (void)postCancelPresentationNotification:(id)arg1;
 - (void)compareMatchedPatternWithCurrentClientEventPattern:(id)arg1;
 - (void)compareMatchedPatternWithCurrentTrackURI:(id)arg1;
 - (void)compareMatchedPatternWithCurrentPageURI:(id)arg1;
@@ -56,7 +59,7 @@
 - (id)getMatchingTriggersForURI:(id)arg1 triggerType:(id)arg2;
 - (void)performPatternMatchingForURI:(id)arg1 triggerType:(id)arg2;
 - (void)triggerListController:(id)arg1 didFetchActiveTriggers:(id)arg2;
-- (id)initWithDriverDistractionController:(id)arg1 featureFlagChecker:(id)arg2 podcastExperimentsHandler:(id)arg3;
+- (id)initWithDriverDistractionController:(id)arg1 featureFlagChecker:(id)arg2 podcastExperimentsHandler:(id)arg3 notificationCenter:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

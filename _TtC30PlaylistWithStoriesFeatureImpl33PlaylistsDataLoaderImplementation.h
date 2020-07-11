@@ -8,15 +8,17 @@
 
 @interface _TtC30PlaylistWithStoriesFeatureImpl33PlaylistsDataLoaderImplementation : NSObject
 {
-    // Error parsing type: , name: reachabilityMonitor
+    // Error parsing type: , name: connectivityController
     // Error parsing type: , name: hermesPlaylistsDataLoader
+    // Error parsing type: , name: state
+    // Error parsing type: , name: isFeatureEnabled
+    // Error parsing type: , name: didFetchPlaylistIdentifiers
     // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (void)dealloc;
-- (void)reachabilityChanged:(id)arg1;
 
 @end
 

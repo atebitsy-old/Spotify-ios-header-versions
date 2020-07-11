@@ -22,7 +22,6 @@
 + (id)spt_search_removeRecentAtIndex:(unsigned long long)arg1;
 + (id)spt_search_contextMenuCommandWithURI:(id)arg1 track:(id)arg2;
 + (id)spt_search_navigateAndSaveToRecentsCommandWithURI:(id)arg1;
-+ (id)spt_search_playAndSaveToRecentsCommandWithURI:(id)arg1 query:(id)arg2;
 @property(copy, nonatomic) NSDictionary *dictionaryRepresentation; // @synthesize dictionaryRepresentation=_dictionaryRepresentation;
 @property(copy, nonatomic) NSDictionary *data; // @synthesize data=_data;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;

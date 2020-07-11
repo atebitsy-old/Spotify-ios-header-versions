@@ -11,7 +11,6 @@
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTPodcastEpisodeDescriptionTableViewCellDelegate-Protocol.h"
-#import "SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate-Protocol.h"
 #import "SPTPodcastEpisodeFeaturedContentViewControllerDelegate-Protocol.h"
 #import "SPTPodcastEpisodeViewModelDelegate-Protocol.h"
 #import "SPTPodcastRecommendationsViewControllerDelegate-Protocol.h"
@@ -21,9 +20,9 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUEEntityRowTableViewCell, NSString, NSURL, SPTEntityHeaderViewController, SPTPodcastEpisodeActionsTableViewCell, SPTPodcastEpisodeCoverArtTableViewCell, SPTPodcastEpisodeDescriptionTableViewCell, SPTPodcastEpisodeEntityHeaderContentViewController, SPTPodcastEpisodeFeatureProperties, SPTPodcastEpisodeLogger, SPTPodcastEpisodeTestManager, SPTPodcastEpisodeTheme, SPTPodcastEpisodeViewModel, SPTProgressView, SPTTableView, UIBarButtonItem, UITableViewCell;
-@protocol SPTImageLoaderFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentTrackListViewController, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTProductState, SPTRemoteConfigurationResolver, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
+@protocol SPTImageLoaderFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTProductState, SPTRemoteConfigurationResolver, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
 
-@interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, SPTPodcastRecommendationsViewControllerDelegate, SPTPodcastEpisodeFeaturedContentViewControllerDelegate, SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
+@interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, SPTPodcastRecommendationsViewControllerDelegate, SPTPodcastEpisodeFeaturedContentViewControllerDelegate, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
 {
     _Bool _showLoadingOverlayProgressView;
     _Bool _viewHasAppeared;
@@ -49,7 +48,7 @@
     id <SPTViewLogger> _viewLogger;
     UIViewController<SPTPodcastRecommendationsViewController> *_recommendations;
     UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *_featuredContent;
-    UIViewController<SPTPodcastEpisodeFeaturedContentTrackListViewController> *_trackList;
+    UIViewController *_trackList;
     id <SPTShowContextMenuControllerOptions> _contextMenuOptions;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTPodcastUIButtonsFactory> _buttonsFactory;
@@ -70,7 +69,7 @@
 @property(retain, nonatomic) id <SPTPodcastUIButtonsFactory> buttonsFactory; // @synthesize buttonsFactory=_buttonsFactory;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTShowContextMenuControllerOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
-@property(retain, nonatomic) UIViewController<SPTPodcastEpisodeFeaturedContentTrackListViewController> *trackList; // @synthesize trackList=_trackList;
+@property(retain, nonatomic) UIViewController *trackList; // @synthesize trackList=_trackList;
 @property(retain, nonatomic) UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *featuredContent; // @synthesize featuredContent=_featuredContent;
 @property(retain, nonatomic) UIViewController<SPTPodcastRecommendationsViewController> *recommendations; // @synthesize recommendations=_recommendations;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
@@ -104,7 +103,7 @@
 - (void)setupConstraints;
 - (void)setupHeaderViewController;
 - (void)initializeView;
-- (void)trackListViewControllerUpdated:(id)arg1;
+- (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)featuredViewControllerUpdated:(id)arg1;
 - (void)viewControllerUpdated:(id)arg1;
 - (void)episodeDescriptionURLTapped:(id)arg1;

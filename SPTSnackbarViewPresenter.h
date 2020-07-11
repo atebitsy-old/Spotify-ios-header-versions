@@ -7,11 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSLayoutConstraint, SPTSnackbarView, UILayoutGuide, UIView, UIViewController;
-@protocol SPTSnackbarTestManager;
 
 @interface SPTSnackbarViewPresenter : NSObject
 {
     _Bool _isAnimationInProgress;
+    _Bool _refreshEnabled;
     UIView *_containerView;
     NSLayoutConstraint *_bottomConstraint;
     NSLayoutConstraint *_leadingConstraint;
@@ -20,10 +20,9 @@
     double _snackBarHeight;
     UILayoutGuide *_mainLayoutGuide;
     UIViewController *_rootViewController;
-    id <SPTSnackbarTestManager> _testManager;
 }
 
-@property(retain, nonatomic) id <SPTSnackbarTestManager> testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) _Bool refreshEnabled; // @synthesize refreshEnabled=_refreshEnabled;
 @property(nonatomic) __weak UIViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
 @property(retain, nonatomic) UILayoutGuide *mainLayoutGuide; // @synthesize mainLayoutGuide=_mainLayoutGuide;
 @property(nonatomic) double snackBarHeight; // @synthesize snackBarHeight=_snackBarHeight;
@@ -50,7 +49,7 @@
 - (void)hideSnackbarWithCompletion:(CDUnknownBlockType)arg1;
 - (void)animateSnackBarLayoutShowCompletion:(CDUnknownBlockType)arg1;
 - (void)showSnackbarView:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithContainerView:(id)arg1 rootViewController:(id)arg2 mainLayoutGuide:(id)arg3 testManager:(id)arg4;
+- (id)initWithContainerView:(id)arg1 rootViewController:(id)arg2 mainLayoutGuide:(id)arg3 refreshEnabled:(_Bool)arg4;
 
 @end
 

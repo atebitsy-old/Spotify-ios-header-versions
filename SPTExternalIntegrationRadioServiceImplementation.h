@@ -9,13 +9,14 @@
 #import "SPTExternalIntegrationRadioService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTContainerService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTExternalIntegrationRadioController, SPTRadioService;
+@protocol SPTContainerService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTExternalIntegrationRadioController, SPTRadioRemoteConfigService, SPTRadioService;
 
 @interface SPTExternalIntegrationRadioServiceImplementation : NSObject <SPTExternalIntegrationRadioService>
 {
     id <SPTExternalIntegrationRadioController> _sharedController;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
     id <SPTExternalIntegrationPlaybackService> _playbackService;
+    id <SPTRadioRemoteConfigService> _radioRemoteConfigService;
     id <SPTRadioService> _radioService;
     id <SPTContainerService> _containerService;
 }
@@ -23,6 +24,7 @@
 + (id)serviceIdentifier;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(readonly, nonatomic) __weak id <SPTRadioService> radioService; // @synthesize radioService=_radioService;
+@property(readonly, nonatomic) __weak id <SPTRadioRemoteConfigService> radioRemoteConfigService; // @synthesize radioRemoteConfigService=_radioRemoteConfigService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 - (void).cxx_destruct;

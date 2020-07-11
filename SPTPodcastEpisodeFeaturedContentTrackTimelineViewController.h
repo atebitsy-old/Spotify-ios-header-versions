@@ -9,15 +9,13 @@
 #import "SPContentInsetViewController-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate-Protocol.h"
-#import "SPTPodcastEpisodeFeaturedContentTrackListViewController-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEntitiesModel, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentDataLoader, SPTPodcastEpisodeFeaturedContentPlayer;
-@protocol GLUEImageLoader, SPTPageContainer, SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate;
+@protocol GLUEImageLoader, SPTPageContainer;
 
-@interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTPodcastEpisodeFeaturedContentTrackListViewController, SPTPageController>
+@interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTPageController>
 {
     _Bool _configureForEmbeddingInScrollView;
-    id <SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate> _delegate;
     NSString *_episodeURIString;
     SPTPodcastEpisodeFeaturedContentDataLoader *_dataLoader;
     id <GLUEImageLoader> _imageLoader;
@@ -33,9 +31,7 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *episodeURIString; // @synthesize episodeURIString=_episodeURIString;
-@property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-@property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)playerDidStopPlayingEntity:(id)arg1;
@@ -49,6 +45,7 @@
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)handleFetchedModel:(id)arg1;
 - (void)fetchPodcastInspectorModel;
+- (void)viewDidLayoutSubviews;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)setUpNavigationItem;

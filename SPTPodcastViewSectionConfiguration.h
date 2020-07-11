@@ -7,23 +7,23 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSMutableArray;
-@protocol SPTPodcastUIStringFormatter;
+@protocol SPTExplicitContentAccessManager;
 
 @interface SPTPodcastViewSectionConfiguration : NSObject
 {
     NSArray *_viewSections;
     NSMutableArray *_viewSectionContainers;
-    id <SPTPodcastUIStringFormatter> _stringFormatter;
+    id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
 }
 
-@property(nonatomic) __weak id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
+@property(nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) NSMutableArray *viewSectionContainers; // @synthesize viewSectionContainers=_viewSectionContainers;
 @property(copy, nonatomic) NSArray *viewSections; // @synthesize viewSections=_viewSections;
 - (void).cxx_destruct;
 - (id)instanceForSectionIdentifier:(long long)arg1;
 - (void)enableSection:(long long)arg1;
-- (void)createViewModelSectionsFromContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandler:(id)arg4 stringFormatter:(id)arg5 collectionLogger:(id)arg6 podcastLogger:(id)arg7 podcastTestManager:(id)arg8 podcastURL:(id)arg9 sortingService:(id)arg10;
-- (id)initWithViewContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandler:(id)arg4 stringFormatter:(id)arg5 collectionLogger:(id)arg6 podcastLogger:(id)arg7 podcastTestManager:(id)arg8 podcastURL:(id)arg9 sortingService:(id)arg10;
+- (void)createViewModelSectionsFromContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandler:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingService:(id)arg9 explicitContentAccessManager:(id)arg10;
+- (id)initWithViewContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandler:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingService:(id)arg9 explicitContentAccessManager:(id)arg10;
 
 @end
 

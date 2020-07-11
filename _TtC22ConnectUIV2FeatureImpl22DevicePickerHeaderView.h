@@ -9,10 +9,12 @@
 @interface _TtC22ConnectUIV2FeatureImpl22DevicePickerHeaderView : UIView
 {
     // Error parsing type: , name: theme
-    // Error parsing type: , name: $__lazy_storage_$_labelView
     // Error parsing type: , name: $__lazy_storage_$_iconImageView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_subtitleLabel
+    // Error parsing type: , name: $__lazy_storage_$_contentView
+    // Error parsing type: , name: $__lazy_storage_$_labelView
+    // Error parsing type: , name: $__lazy_storage_$_closeButton
 }
 
 - (void).cxx_destruct;

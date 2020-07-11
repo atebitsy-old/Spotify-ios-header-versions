@@ -6,12 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileSearch_Content_Error_RetryButtonEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSearch_Content_Error_RetryButtonEventFactory;
 
 @protocol SPTUBIMobileSearch_Content_ErrorEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitRetry;
-- (id <SPTUBIMobileSearch_Content_Error_RetryButtonEventFactory>)retryButtonFactoryWithReason:(NSString *)arg1;
+- (id <SPTUBIMobileSearch_Content_Error_RetryButtonEventFactory>)retryButtonFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTContextMenuPresenterFactory, SPTLogCenter;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTContextMenuPresenterFactory, SPTLogCenter, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTFreeTierTrackBarButtonFactory : NSObject
 {
@@ -14,8 +14,10 @@
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
     id <SPTLogCenter> _logCenter;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
 }
 
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
@@ -23,7 +25,7 @@
 - (void).cxx_destruct;
 - (id)createContextMenuButtonViewModelForViewURI:(id)arg1;
 - (id)createFeedbackButtonViewModelForViewURI:(id)arg1;
-- (id)initWithCollectionConfiguration:(id)arg1 collectionPlatform:(id)arg2 contextMenuPresenterFactory:(id)arg3 logCenter:(id)arg4;
+- (id)initWithCollectionConfiguration:(id)arg1 collectionPlatform:(id)arg2 contextMenuPresenterFactory:(id)arg3 logCenter:(id)arg4 ubiLogger:(id)arg5;
 
 @end
 

@@ -8,16 +8,16 @@
 
 #import "SPTSearchPlatformViewModelFetcher-Protocol.h"
 
-@class HUBViewModelBuilderFactory, NSString, SPTSearchPlatformOfflineEpisodeDataLoader;
-@protocol SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTOfflineManager, SPTPlaylistPlatformPlaylistDataLoader, SPTSearch2EmptyStatePropertiesProvider, SPTUserBehaviourHubsInstrumentation, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@class HUBViewModelBuilderFactory, NSString;
+@protocol SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTOfflineManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchOfflineEpisodeDataLoader, SPTSearchOfflinePlaylistDataLoader, SPTUserBehaviourHubsInstrumentation, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchPlatformOfflineViewModelFetcher : NSObject <SPTSearchPlatformViewModelFetcher>
 {
     NSString *_query;
     id <SPTOfflineManager> _offlineManager;
-    id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
+    id <SPTSearchOfflinePlaylistDataLoader> _playlistDataLoader;
     id <SPTCollectionPlatformDataLoader> _collectionDataLoader;
-    SPTSearchPlatformOfflineEpisodeDataLoader *_episodeDataLoader;
+    id <SPTSearchOfflineEpisodeDataLoader> _episodeDataLoader;
     HUBViewModelBuilderFactory *_viewModelBuilderFactory;
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
@@ -30,9 +30,9 @@
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) HUBViewModelBuilderFactory *viewModelBuilderFactory; // @synthesize viewModelBuilderFactory=_viewModelBuilderFactory;
-@property(readonly, nonatomic) SPTSearchPlatformOfflineEpisodeDataLoader *episodeDataLoader; // @synthesize episodeDataLoader=_episodeDataLoader;
+@property(readonly, nonatomic) id <SPTSearchOfflineEpisodeDataLoader> episodeDataLoader; // @synthesize episodeDataLoader=_episodeDataLoader;
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;
-@property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
+@property(readonly, nonatomic) id <SPTSearchOfflinePlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
@@ -44,6 +44,7 @@
 - (void)configureViewModelBuilder:(id)arg1 withEpisodes:(id)arg2;
 - (void)fetchEpisodesWithCompletion:(CDUnknownBlockType)arg1;
 - (id)subtitleForTrack:(id)arg1;
+- (void)addAgeVerificationCommandToComponentModelBuilder:(id)arg1 withTrack:(id)arg2;
 - (void)addExplicitContentCommandToComponentModelBuilder:(id)arg1 withTrack:(id)arg2;
 - (void)addPlayCommandToComponentModelBuilder:(id)arg1 withTrack:(id)arg2;
 - (void)configureComponentModelBuilder:(id)arg1 withTrack:(id)arg2 position:(unsigned long long)arg3;

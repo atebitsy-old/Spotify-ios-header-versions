@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: containerUIService
     // Error parsing type: , name: configurationProperties
 }
 

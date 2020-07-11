@@ -6,21 +6,22 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUEAccessoryIconButton, UIImageView, UILabel;
+@class GLUEAccessoryIconView, UIImageView, UILabel, UIStackView;
 @protocol SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackListPreviewView : UIView
 {
     id <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate> _delegate;
+    UIStackView *_stackView;
     UIImageView *_mosaicImageView;
     UILabel *_titleLabel;
-    GLUEAccessoryIconButton *_contextMenuButton;
+    GLUEAccessoryIconView *_accessoryView;
 }
 
-+ (double)cellHeight;
-@property(readonly, nonatomic) GLUEAccessoryIconButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
+@property(readonly, nonatomic) GLUEAccessoryIconView *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIImageView *mosaicImageView; // @synthesize mosaicImageView=_mosaicImageView;
+@property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
@@ -30,6 +31,8 @@
 - (void)setupTitleLabelAttributedStringForEntities:(id)arg1;
 - (void)configureWithEntities:(id)arg1 imageLoader:(id)arg2;
 - (void)configureAsHighlighted:(_Bool)arg1;
+- (void)setContentViewsHidden:(_Bool)arg1;
+- (void)configureDefaults;
 - (void)setupConstraints;
 - (void)setupLayout;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -9,6 +9,10 @@
 @class HUBComponentEvent, NSURL;
 
 @protocol SPTSearchUBIHubsLogger <NSObject>
+- (void)logRetryWithEvent:(HUBComponentEvent *)arg1;
+- (void)logRemoveSearchItemWithEvent:(HUBComponentEvent *)arg1;
+- (void)logClearRecentSearchesWithEvent:(HUBComponentEvent *)arg1;
+- (void)logUIRevealWithEvent:(HUBComponentEvent *)arg1;
 - (void)logPlayWithItemToBePlayed:(NSURL *)arg1 event:(HUBComponentEvent *)arg2;
 @end
 

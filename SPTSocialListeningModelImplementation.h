@@ -10,8 +10,8 @@
 #import "SPTSocialListeningDataLoaderDelegate-Protocol.h"
 #import "SPTSocialListeningModel-Protocol.h"
 
-@class NSString, SPTObserverManager, SPTSocialListeningDataLoader, SPTSocialListeningSession, SPTSocialListeningUpdateEvent;
-@protocol GLUEImageLoader, SPTPlayer, SPTScannablesDataSource;
+@class NSArray, NSDictionary, NSString, NSURL, SPTObserverManager, SPTSocialListeningDataLoader, SPTSocialListeningSession, SPTSocialListeningUpdateEvent;
+@protocol GLUEImageLoader, SPTPlayer, SPTScannablesDataSource, SPTSocialListeningSocialDeviceModelEntity;
 
 @interface SPTSocialListeningModelImplementation : NSObject <SPTSocialListeningModel, SPTSocialListeningDataLoaderDelegate, SPTScannablesDataSourceDelegate>
 {
@@ -23,8 +23,12 @@
     id <GLUEImageLoader> _imageLoader;
     long long _state;
     id <SPTPlayer> _player;
+    NSArray<SPTSocialListeningSocialDeviceModelEntity> *_socialDevicesList;
+    NSDictionary *_exposedDevices;
 }
 
+@property(copy, nonatomic) NSDictionary *exposedDevices; // @synthesize exposedDevices=_exposedDevices;
+@property(copy, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevicesList; // @synthesize socialDevicesList=_socialDevicesList;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) long long state; // @synthesize state=_state;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
@@ -36,6 +40,10 @@
 - (void).cxx_destruct;
 - (void)scannablesDataSource:(id)arg1 didFinishFetchingScannable:(id)arg2;
 - (void)scannablesDataSource:(id)arg1 didFailFetchingScannableWithError:(id)arg2;
+- (void)socialListeningDataLoader:(id)arg1 didGetDeviceExposure:(id)arg2;
+- (void)socialListeningDataLoader:(id)arg1 didGetSocialDevices:(id)arg2;
+- (void)socialListeningDataLoader:(id)arg1 didEnableSocialDevice:(id)arg2;
+- (void)socialListeningDataLoader:(id)arg1 didDisableSocialDevice:(id)arg2;
 - (void)socialListeningDataLoader:(id)arg1 didFailWithError:(id)arg2;
 - (void)socialListeningDataLoader:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningDataLoader:(id)arg1 didEndSession:(id)arg2 updateEvent:(id)arg3;
@@ -45,8 +53,15 @@
 - (void)fetchScannablesImageForSession:(id)arg1;
 - (void)handleSession:(id)arg1 updateEvent:(id)arg2;
 - (void)notifyIfLoaded;
+@property(readonly, nonatomic) NSURL *hostAvatarURL;
+@property(readonly, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevices;
+@property(readonly, nonatomic) NSString *sessionID;
 @property(readonly, nonatomic) unsigned long long connectedParticipants;
 @property(readonly, nonatomic, getter=isSessionHost) _Bool sessionHost;
+- (void)fetchExposedDevices;
+- (void)fetchSocialDevicesWithDiscoveredDeviceIds:(id)arg1;
+- (void)enableSocialDevice:(id)arg1;
+- (void)disableSocialDevice:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)pauseCurrentPlayback;

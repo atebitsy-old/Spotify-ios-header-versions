@@ -7,9 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @class SPTShareData, SPTSharePresenter;
-@protocol SPTShareDestination;
+@protocol SPTShareDeeplinkHandler, SPTShareDestination;
 
 @protocol SPTShareHandler <NSObject>
-- (void)shareWithData:(SPTShareData *)arg1 shareDestination:(id <SPTShareDestination>)arg2 sharePresenter:(SPTSharePresenter *)arg3 completion:(void (^)(SPTShareAlertModel *))arg4;
+- (void)shareWithData:(SPTShareData *)arg1 shareDestination:(id <SPTShareDestination>)arg2 sharePresenter:(SPTSharePresenter *)arg3 deeplinkHandler:(id <SPTShareDeeplinkHandler>)arg4 completion:(void (^)(SPTShareAlertModel *))arg5;
 @end
 

@@ -13,6 +13,7 @@
 }
 
 - (id)copyWithZone:(struct _NSZone *)arg1;
+- (void)search_addDefaultUIILoggingDataWithPageURI:(id)arg1 featureID:(id)arg2 interactive:(_Bool)arg3 sectionID:(id)arg4 requestID:(id)arg5 itemIndex:(id)arg6 targetURI:(id)arg7;
 @property(readonly, nonatomic, getter=spt_search_uiinteraction5Writer) SPTHubsKitUIInteraction5Writer *uiinteraction5Writer;
 @property(readonly, nonatomic, getter=spt_search_uiimpression5Writer) SPTHubsKitUIImpression5Writer *uiimpression5Writer;
 

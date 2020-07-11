@@ -6,11 +6,6 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTDailyMixFeedbackUIModel, SPTDailyMixManager, SPTNowPlayingRemoteControlPolicy;
-
 @protocol SPTDailyMixFeature <SPTService>
-- (id <SPTDailyMixManager>)provideDailyMixManager;
-- (id <SPTDailyMixFeedbackUIModel>)provideDailyMixFeedbackUIModel;
-- (id <SPTNowPlayingRemoteControlPolicy>)provideDailyMixRemoteControlPolicy;
 @end
 

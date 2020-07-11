@@ -20,6 +20,11 @@
 @property(readonly, nonatomic) id <SPTUserBehaviourHubsInstrumentation> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
 @property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
+- (id)interactionEventFactoryForEvent:(id)arg1;
+- (void)logRetryWithEvent:(id)arg1;
+- (void)logRemoveSearchItemWithEvent:(id)arg1;
+- (void)logClearRecentSearchesWithEvent:(id)arg1;
+- (void)logUIRevealWithEvent:(id)arg1;
 - (void)logPlayWithItemToBePlayed:(id)arg1 event:(id)arg2;
 - (id)initWithUBILogger:(id)arg1 ubiHubs:(id)arg2;
 

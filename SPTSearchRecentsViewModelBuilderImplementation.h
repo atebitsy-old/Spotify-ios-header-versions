@@ -34,7 +34,6 @@
 @property(readonly, nonatomic) _Bool playTracksEnabled; // @synthesize playTracksEnabled=_playTracksEnabled;
 @property(readonly, copy, nonatomic) NSString *recentsCommandName; // @synthesize recentsCommandName=_recentsCommandName;
 - (void).cxx_destruct;
-- (void)addUIILoggingDataToComponentModel:(id)arg1 interactionType:(id)arg2 impressionType:(id)arg3 renderType:(id)arg4 itemIndex:(id)arg5 sectionID:(id)arg6 featureID:(id)arg7 requestID:(id)arg8 targetURI:(id)arg9 pageURI:(id)arg10;
 - (_Bool)shouldMarkItemAsDisabled:(id)arg1;
 - (_Bool)shouldMarkItemAsPlaying:(id)arg1 playingTrackURI:(id)arg2 playingAlbumURI:(id)arg3;
 - (id)mainImageDataForItem:(id)arg1;

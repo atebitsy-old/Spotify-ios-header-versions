@@ -22,7 +22,6 @@
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
 - (void).cxx_destruct;
 - (void)recentlyPlayedListDidReload:(id)arg1;
-- (void)startPublishing;
 - (void)handlePublisherEvent:(long long)arg1;
 - (void)publishRecentlyPlayedItems;
 - (id)initWithPubSubMessageQueue:(id)arg1 recentlyPlayedEntityList:(id)arg2;

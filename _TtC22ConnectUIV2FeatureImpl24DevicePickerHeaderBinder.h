@@ -9,7 +9,10 @@
 @interface _TtC22ConnectUIV2FeatureImpl24DevicePickerHeaderBinder : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: view
+    // Error parsing type: , name: eventConsumer
+    // Error parsing type: , name: connection
     // Error parsing type: , name: $__lazy_storage_$_diffuser
+    // Error parsing type: , name: $__lazy_storage_$_fuser
 }
 
 @end

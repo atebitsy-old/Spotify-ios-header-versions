@@ -22,9 +22,9 @@
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) __weak id <SPTDrivingModeHomeFeedPageScrollerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
-- (void)scrollViewWillBeginDragging:(id)arg1;
+- (void)scrollViewDidScroll:(id)arg1;
 - (void)updatePageScrollerWithPrevious:(id)arg1 andNextShelf:(id)arg2;
+- (void)numberOfItemsInPageScroller:(unsigned long long)arg1;
 - (void)setupViews;
 - (void)viewDidLoad;
 

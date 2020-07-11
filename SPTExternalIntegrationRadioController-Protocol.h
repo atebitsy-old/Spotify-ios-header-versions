@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL, SPTPlayerState;
+@class NSString, NSURL, SPTAccessory, SPTPlayerState;
 @protocol SPTExternalIntegrationRadioControllerObserver;
 
 @protocol SPTExternalIntegrationRadioController <NSObject>
@@ -20,6 +20,6 @@
 - (_Bool)isPlayingRadioInPlayerState:(SPTPlayerState *)arg1;
 - (_Bool)canStartRadioSeededByTrackURI:(NSURL *)arg1;
 - (_Bool)canStartTrackRadioSeededByPlayerState:(SPTPlayerState *)arg1;
-- (void)startRadioForTrackURI:(NSURL *)arg1 playerState:(SPTPlayerState *)arg2 accessorySessionID:(NSString *)arg3 completionHandler:(void (^)(NSError *))arg4;
+- (void)startRadioForTrackURI:(NSURL *)arg1 currentAccessory:(SPTAccessory *)arg2 completionHandler:(void (^)(NSError *))arg3;
 @end
 

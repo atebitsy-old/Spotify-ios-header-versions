@@ -13,7 +13,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class FollowModel, NSArray, NSString, NSURL, SPTCollectionContextMenuComponentFactory, SPTCollectionCurrentlyPlayingIndex, SPTCollectionPlatformFetchOptions, SPTPlayOrigin;
-@protocol FollowFeature, SPTClientSettings, SPTCollectionArtistCosmosMetadataFields, SPTCollectionArtistModelDelegate, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTOfflineModeState, SPTPlayer, SPTProductState;
+@protocol FollowFeature, SPTClientSettings, SPTCollectionArtistCosmosMetadataFields, SPTCollectionArtistModelDelegate, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTExplicitContentAccessManager, SPTOfflineModeState, SPTPlayer, SPTProductState, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTCollectionArtistCosmosModel : NSObject <SPTCollectionSongItemPlaying, SPTPlayerObserver, SPTOfflineModeStateObserver, FollowModelObserver, SPTCollectionArtistModel>
 {
@@ -27,6 +27,8 @@
     SPTPlayOrigin *_playOrigin;
     SPTCollectionPlatformFetchOptions *_fetchOptions;
     id <SPTOfflineModeState> _offlineNotifier;
+    id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
     id <SPTCollectionPlatformDataLoaderRequestToken> _viewSubscription;
     id <SPTCollectionPlatformDataLoaderRequestToken> _trackSubscription;
     FollowModel *_followModel;
@@ -51,6 +53,8 @@
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> trackSubscription; // @synthesize trackSubscription=_trackSubscription;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> viewSubscription; // @synthesize viewSubscription=_viewSubscription;
+@property(retain, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
+@property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineNotifier; // @synthesize offlineNotifier=_offlineNotifier;
 @property(retain, nonatomic) SPTCollectionPlatformFetchOptions *fetchOptions; // @synthesize fetchOptions=_fetchOptions;
 @property(retain, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
@@ -91,7 +95,7 @@
 - (unsigned long long)count;
 - (void)load;
 - (void)dealloc;
-- (id)initWithCollectionArtistURL:(id)arg1 collectionPlatform:(id)arg2 player:(id)arg3 playOrigin:(id)arg4 clientSettings:(id)arg5 followFeature:(id)arg6 productState:(id)arg7 contextMenuComponentFactory:(id)arg8 offlineNotifier:(id)arg9;
+- (id)initWithCollectionArtistURL:(id)arg1 collectionPlatform:(id)arg2 player:(id)arg3 playOrigin:(id)arg4 clientSettings:(id)arg5 followFeature:(id)arg6 productState:(id)arg7 contextMenuComponentFactory:(id)arg8 offlineNotifier:(id)arg9 explicitContentAccessManager:(id)arg10 ageVerificationProvider:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,14 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, NSNotificationCenter, NSUserDefaults, SPTGaiaConnectDevice, SPTGaiaHomeDeviceLogger, UIApplication, UNUserNotificationCenter;
-@protocol SPTGaiaHomeDeviceFlagsProvider, SPTGaiaHomeDeviceLocalNotificationHandler, SPTUserNotificationsRegistrar;
+#import "SPTPushMessagingExternalHandler-Protocol.h"
 
-@interface SPTGaiaHomeDeviceLocalNotificationManager : NSObject
+@class NSDictionary, NSNotificationCenter, NSUserDefaults, SPTGaiaConnectDevice, SPTGaiaHomeDeviceLogger, UIApplication, UNUserNotificationCenter;
+@protocol SPTGaiaHomeDeviceFlagsProvider, SPTGaiaHomeDeviceLocalNotificationHandler, SPTPushMessagingRegistrar;
+
+@interface SPTGaiaHomeDeviceLocalNotificationManager : NSObject <SPTPushMessagingExternalHandler>
 {
     _Bool _didRespondToNotification;
     id <SPTGaiaHomeDeviceLocalNotificationHandler> _homeDeviceLocalNotificationHandler;
-    id <SPTUserNotificationsRegistrar> _notificationsRegistrar;
+    id <SPTPushMessagingRegistrar> _pushMessagingRegistrar;
     UNUserNotificationCenter *_userNotificationCenter;
     NSNotificationCenter *_notificationCenter;
     NSUserDefaults *_userDefaults;
@@ -33,21 +35,22 @@
 @property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) UNUserNotificationCenter *userNotificationCenter; // @synthesize userNotificationCenter=_userNotificationCenter;
-@property(readonly, nonatomic) id <SPTUserNotificationsRegistrar> notificationsRegistrar; // @synthesize notificationsRegistrar=_notificationsRegistrar;
+@property(readonly, nonatomic) id <SPTPushMessagingRegistrar> pushMessagingRegistrar; // @synthesize pushMessagingRegistrar=_pushMessagingRegistrar;
 @property(nonatomic) __weak id <SPTGaiaHomeDeviceLocalNotificationHandler> homeDeviceLocalNotificationHandler; // @synthesize homeDeviceLocalNotificationHandler=_homeDeviceLocalNotificationHandler;
 - (void).cxx_destruct;
 - (unsigned long long)notificationTypeFromNotification:(id)arg1;
 - (unsigned long long)actionTypeFromNotificationResponse:(id)arg1;
-- (void)applicationDidReceiveNotificationResponse:(id)arg1;
+- (void)handleNotificationResponse:(id)arg1;
 - (void)removeLastLocalNotification;
 - (id)lastLocalNotification;
-- (void)registerNotificationSettings;
+- (id)categoriesForRegistration;
 - (id)askForTransferRequestForDevice:(id)arg1;
 - (id)automaticTransferRequestForDevice:(id)arg1;
 - (id)requestForNotifcationType:(unsigned long long)arg1 forDevice:(id)arg2;
+- (void)responseMessageReceived:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)foregroundMessageReceived:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)fireLocalNotificationWithType:(unsigned long long)arg1 forDevice:(id)arg2;
-- (void)dealloc;
-- (id)initWithUserDefaults:(id)arg1 notificationCenter:(id)arg2 notificationsRegistrar:(id)arg3 userNotificationCenter:(id)arg4 homeDeviceFlagsProvider:(id)arg5 application:(id)arg6 logger:(id)arg7;
+- (id)initWithUserDefaults:(id)arg1 notificationCenter:(id)arg2 pushMessagingRegistrar:(id)arg3 userNotificationCenter:(id)arg4 homeDeviceFlagsProvider:(id)arg5 application:(id)arg6 logger:(id)arg7;
 
 @end
 

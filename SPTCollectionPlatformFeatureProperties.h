@@ -13,8 +13,12 @@
 @interface SPTCollectionPlatformFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _localTrackHideEnabled;
+    _Bool _snackbarForPremiumEnabled;
+    _Bool _snackbarWithAcmCopyEnabled;
 }
 
+@property(readonly, nonatomic) _Bool snackbarWithAcmCopyEnabled; // @synthesize snackbarWithAcmCopyEnabled=_snackbarWithAcmCopyEnabled;
+@property(readonly, nonatomic) _Bool snackbarForPremiumEnabled; // @synthesize snackbarForPremiumEnabled=_snackbarForPremiumEnabled;
 @property(readonly, nonatomic) _Bool localTrackHideEnabled; // @synthesize localTrackHideEnabled=_localTrackHideEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

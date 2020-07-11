@@ -9,7 +9,6 @@
 @protocol SPTCollectionPlatformConfiguration;
 
 @protocol SPTCollectionPlatformTestManager <NSObject>
-@property(readonly, nonatomic, getter=isSnackbarRefreshEnabled) _Bool snackbarRefreshEnabled;
 @property(readonly, nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled;
 @property(readonly, nonatomic, getter=isMadeForAttributionEnabled) _Bool madeForAttributionEnabled;
 @property(readonly, nonatomic, getter=isIncompleteAlbumsUsedForCollectionState) _Bool incompleteAlbumsUsedForCollectionState;

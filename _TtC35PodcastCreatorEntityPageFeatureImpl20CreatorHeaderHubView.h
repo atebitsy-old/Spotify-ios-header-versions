@@ -13,6 +13,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)configureWithModel:(id)arg1;
 
 @end
 

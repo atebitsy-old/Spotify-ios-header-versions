@@ -11,7 +11,6 @@
 @property(nonatomic, getter=isContextMenuPlaylistRadioHidden) _Bool contextMenuPlaylistRadioHidden;
 @property(nonatomic, getter=isRadioContextMenuUsingFormatListLinks) _Bool radioContextMenuUsingFormatListLinks;
 @property(readonly, nonatomic, getter=isRadioURITransitionEnabled) _Bool radioURITransitionEnabled;
-@property(readonly, nonatomic, getter=isInfinitePlaybackEnabled) _Bool infinitePlaybackEnabled;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 @end
 

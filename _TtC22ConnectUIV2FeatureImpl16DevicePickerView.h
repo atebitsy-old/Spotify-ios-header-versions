@@ -8,13 +8,14 @@
 
 @interface _TtC22ConnectUIV2FeatureImpl16DevicePickerView : UIView
 {
+    // Error parsing type: , name: theme
+    // Error parsing type: , name: $__lazy_storage_$_mainHeaderView
     // Error parsing type: , name: $__lazy_storage_$_tableView
 }
 
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (id)init;
 
 @end
 

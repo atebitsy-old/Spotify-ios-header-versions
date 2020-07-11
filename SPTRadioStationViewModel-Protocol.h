@@ -12,7 +12,6 @@
 @protocol SPTRadioStationViewModel <NSObject>
 @property(readonly, copy, nonatomic) NSString *primaryActionText;
 @property(readonly, copy, nonatomic) NSString *saveToPlaylistTitle;
-@property(readonly, nonatomic, getter=hasExpandedStationMetadata) _Bool expandedStationMetadata;
 @property(readonly, nonatomic) NSURL *imageURI;
 @property(readonly, nonatomic) NSString *subtitle;
 @property(readonly, nonatomic) NSString *title;

@@ -7,12 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
+#import "SPTWatchConnectivityRequestHandler-Protocol.h"
 #import "SPTWatchConnectivitySessionObserver-Protocol.h"
 
-@class NSString, NSUserDefaults, SPTObserverManager, SPTWatchConnectivitySession;
+@class NSString, NSUserDefaults, SPTObserverManager, SPTWatchConnectivityDataLoader, SPTWatchConnectivityManager, SPTWatchConnectivitySession, SPTWatchPlatformWatchDevice;
 @protocol SPTExternalIntegrationDebugLog, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver;
 
-@interface SPTWatchPlatformTestManager : NSObject <SPTFeatureFlagSignalObserver, SPTWatchConnectivitySessionObserver>
+@interface SPTWatchPlatformTestManager : NSObject <SPTFeatureFlagSignalObserver, SPTWatchConnectivitySessionObserver, SPTWatchConnectivityRequestHandler>
 {
     _Bool _watchAccessoryLoggingEnabled;
     _Bool _watchIntegrationEnabled;
@@ -23,7 +24,9 @@
     _Bool _watchIntegrationSignalEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
+    SPTWatchConnectivityManager *_watchConnectivityManager;
     SPTWatchConnectivitySession *_watchConnectivitySession;
+    SPTWatchConnectivityDataLoader *_watchConnectivityDataLoader;
     NSUserDefaults *_userDefaults;
     id <SPTProductState> _productState;
     id <SPTExternalIntegrationDebugLog> _debugLog;
@@ -33,8 +36,10 @@
     id <SPTFeatureFlagSignal> _watchAppLibraryEnabledSignal;
     id <SPTFeatureFlagSignal> _watchAppLibraryOnboardingEnabledSignal;
     SPTObserverManager *_observerManager;
+    SPTWatchPlatformWatchDevice *_pairedDevice;
 }
 
+@property(retain, nonatomic) SPTWatchPlatformWatchDevice *pairedDevice; // @synthesize pairedDevice=_pairedDevice;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> watchAppLibraryOnboardingEnabledSignal; // @synthesize watchAppLibraryOnboardingEnabledSignal=_watchAppLibraryOnboardingEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> watchAppLibraryEnabledSignal; // @synthesize watchAppLibraryEnabledSignal=_watchAppLibraryEnabledSignal;
@@ -45,7 +50,9 @@
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
+@property(readonly, nonatomic) SPTWatchConnectivityDataLoader *watchConnectivityDataLoader; // @synthesize watchConnectivityDataLoader=_watchConnectivityDataLoader;
 @property(readonly, nonatomic) __weak SPTWatchConnectivitySession *watchConnectivitySession; // @synthesize watchConnectivitySession=_watchConnectivitySession;
+@property(readonly, nonatomic) SPTWatchConnectivityManager *watchConnectivityManager; // @synthesize watchConnectivityManager=_watchConnectivityManager;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(readonly, nonatomic, getter=isWatchAppOfflineEnabled) _Bool watchAppOfflineEnabled; // @synthesize watchAppOfflineEnabled=_watchAppOfflineEnabled;
@@ -57,6 +64,8 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 - (void)applicationStateChanged;
+- (void)handleRequest:(id)arg1;
+- (_Bool)canHandleRequest:(id)arg1;
 - (void)sessionWatchStateDidChange:(id)arg1;
 - (void)sessionReachabilityDidChange:(id)arg1;
 - (void)session:(id)arg1 activationDidCompleteWithState:(long long)arg2 error:(id)arg3;
@@ -69,10 +78,11 @@
 - (void)setWatchAppStreamingEnabled:(_Bool)arg1;
 - (void)setWatchAccessoryLoggingEnabled:(_Bool)arg1;
 - (void)setWatchIntegrationEnabled:(_Bool)arg1;
+- (void)evaluateAppleWatchPubSubTransport;
 - (void)evaluateWatchAppOfflineEnabled;
 - (void)evaluateWatchIntegrationEnabledState;
 - (void)initFlagSignals;
-- (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2 watchConnectivityManager:(id)arg3 userDefaults:(id)arg4 productState:(id)arg5 externalIntegrationDebugLog:(id)arg6;
+- (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2 watchConnectivityManager:(id)arg3 watchConnectivityDataLoader:(id)arg4 userDefaults:(id)arg5 productState:(id)arg6 externalIntegrationDebugLog:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

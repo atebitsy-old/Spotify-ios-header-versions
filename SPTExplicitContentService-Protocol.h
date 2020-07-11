@@ -9,6 +9,10 @@
 @protocol SPTExplicitContentAccessManager;
 
 @protocol SPTExplicitContentService <SPTService>
+- (_Bool)isExplicitContentSettingHidden;
 - (id <SPTExplicitContentAccessManager>)provideAccessManager;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool explicitContentSettingHidden;
 @end
 

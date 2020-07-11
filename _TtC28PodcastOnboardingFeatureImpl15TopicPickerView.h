@@ -19,7 +19,7 @@
     // Error parsing type: , name: $__lazy_storage_$_titleView
     // Error parsing type: , name: $__lazy_storage_$_offlineView
     // Error parsing type: , name: theme
-    // Error parsing type: , name: curationMode
+    // Error parsing type: , name: flowMode
 }
 
 - (void).cxx_destruct;

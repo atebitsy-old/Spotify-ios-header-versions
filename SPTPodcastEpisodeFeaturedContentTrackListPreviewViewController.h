@@ -7,14 +7,14 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate-Protocol.h"
-#import "SPTPodcastEpisodeFeaturedContentTrackListViewController-Protocol.h"
 
-@class NSString, SPTPodcastEntitiesModel, SPTPodcastEpisodeFeaturedContentDataLoader, SPTPodcastEpisodeFeaturedContentTrackListPreviewView;
-@protocol GLUEImageLoader, SPTLinkDispatcher, SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate;
+@class GLUESectionHeaderView, NSString, SPTPodcastEntitiesModel, SPTPodcastEpisodeFeaturedContentDataLoader, SPTPodcastEpisodeFeaturedContentTrackListPreviewView;
+@protocol GLUEImageLoader, SPTLinkDispatcher;
 
-@interface SPTPodcastEpisodeFeaturedContentTrackListPreviewViewController : UIViewController <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate, SPTPodcastEpisodeFeaturedContentTrackListViewController>
+@interface SPTPodcastEpisodeFeaturedContentTrackListPreviewViewController : UIViewController <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate>
 {
-    id <SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate> delegate;
+    GLUESectionHeaderView *_sectionHeaderView;
+    SPTPodcastEpisodeFeaturedContentTrackListPreviewView *_previewView;
     NSString *_episodeURIString;
     SPTPodcastEpisodeFeaturedContentDataLoader *_dataLoader;
     id <GLUEImageLoader> _imageLoader;
@@ -27,14 +27,15 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *episodeURIString; // @synthesize episodeURIString=_episodeURIString;
-@property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentTrackListViewControllerDelegate> delegate; // @synthesize delegate;
+@property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentTrackListPreviewView *previewView; // @synthesize previewView=_previewView;
+@property(retain, nonatomic) GLUESectionHeaderView *sectionHeaderView; // @synthesize sectionHeaderView=_sectionHeaderView;
 - (void).cxx_destruct;
-@property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (void)navigateToTimeline;
 - (void)podcastEpisodeFeaturedContentTrackListPreviewViewDidSelect:(id)arg1;
+- (void)setContentHidden:(_Bool)arg1;
 - (void)handleFetchedModel:(id)arg1;
 - (void)fetchPodcastInspectorModel;
-@property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentTrackListPreviewView *previewView;
+- (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithEpisodeURI:(id)arg1 podcastInspectorDataLoader:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;

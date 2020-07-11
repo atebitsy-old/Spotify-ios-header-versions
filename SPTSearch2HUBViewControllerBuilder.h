@@ -22,10 +22,10 @@
 @property(copy, nonatomic) NSDictionary *customComponentNamespaceRegistry; // @synthesize customComponentNamespaceRegistry=_customComponentNamespaceRegistry;
 @property(copy, nonatomic) NSDictionary *customCommandsRegistry; // @synthesize customCommandsRegistry=_customCommandsRegistry;
 - (void).cxx_destruct;
-- (id)makeUBIHubsInstrumentation;
 - (id)referrerIdentifier;
 - (id)viewURI;
 - (struct NSDictionary *)defaultCommandRegistry;
+- (id)makeUBIHubsLogger;
 - (id)makeSearchLogger;
 - (id)makeSearchHubViewController;
 @property(readonly, nonatomic) id <HUBCommandHandler> contextMenuCommandHandler;

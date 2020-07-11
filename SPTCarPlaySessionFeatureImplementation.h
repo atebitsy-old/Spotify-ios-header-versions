@@ -6,27 +6,25 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTCarPlayFeatureFlagStateObserver-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSString, SPTAccessory, SPTAllocationContext, SPTCarPlayDataSourceStateManager, SPTCarPlayRemoteControlEventController, SPTCarPlayTestManager;
-@protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryStateManager, SPTCarPlayAppFeature, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTNetworkService, SPTNowPlayingPlatformService, SPTSessionService;
+@class NSString, SPTAccessory, SPTAllocationContext, SPTCarPlayDataSourceStateManager, SPTCarPlayFeatureProperties, SPTCarPlayRemoteControlEventController;
+@protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryStateManager, SPTCarPlayAppFeature, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTNetworkService, SPTNowPlayingPlatformService, SPTRemoteConfigurationService;
 
-@interface SPTCarPlaySessionFeatureImplementation : NSObject <SPTCarPlayFeatureFlagStateObserver, SPTService>
+@interface SPTCarPlaySessionFeatureImplementation : NSObject <SPTService>
 {
     id <SPTAccessoryManagerService> _accessoryManagerService;
-    id <SPTSessionService> _clientSessionService;
     id <SPTExternalIntegrationPlatformService> _externalIntegrationPlatformService;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTNetworkService> _networkService;
     id <GaiaFeature> _gaiaFeature;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     SPTCarPlayDataSourceStateManager *_stateManager;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTAccessoryStateManager> _accessoryStateManager;
     SPTAccessory *_currentAccessory;
-    SPTCarPlayTestManager *_testManager;
     SPTCarPlayRemoteControlEventController *_remoteControlEventController;
+    SPTCarPlayFeatureProperties *_properties;
     id <SPTExternalIntegrationDebugLog> _debugLog;
     id <SPTCarPlayAppFeature> _carPlayAppFeature;
 }
@@ -34,22 +32,19 @@
 + (id)serviceIdentifier;
 @property(nonatomic) __weak id <SPTCarPlayAppFeature> carPlayAppFeature; // @synthesize carPlayAppFeature=_carPlayAppFeature;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
+@property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) SPTCarPlayRemoteControlEventController *remoteControlEventController; // @synthesize remoteControlEventController=_remoteControlEventController;
-@property(retain, nonatomic) SPTCarPlayTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(readonly, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak SPTCarPlayDataSourceStateManager *stateManager; // @synthesize stateManager=_stateManager;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(readonly, nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-@property(readonly, nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlatformService> externalIntegrationPlatformService; // @synthesize externalIntegrationPlatformService=_externalIntegrationPlatformService;
-@property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(readonly, nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
 - (void).cxx_destruct;
-- (void)carPlayFeatureEnabledStateChanged:(_Bool)arg1;
-- (void)setupCarPlayTestManager;
 - (void)handleRouteChangeWithNotification:(id)arg1 audioSession:(id)arg2;
 - (void)audioRouteChanged:(id)arg1;
 - (void)stopObservingAudioOutputRoute;

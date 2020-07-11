@@ -11,7 +11,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: makeViewBinder
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: curationMode
+    // Error parsing type: , name: flowMode
     // Error parsing type: , name: instrumentationMediatorColleague
 }
 

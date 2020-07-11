@@ -34,6 +34,7 @@
     _Bool _containsOnlyEpisodes;
     _Bool _containsOnlyTracks;
     _Bool _contentSupportsRadio;
+    _Bool _containsOnlyVideoEpisodes;
     _Bool _shouldShowPlayButton;
     _Bool _shouldShowPlaylistOwnerPage;
     _Bool _contextAwareEnabled;
@@ -116,6 +117,7 @@
 @property(retain, nonatomic) NSDate *lastModifiedTime; // @synthesize lastModifiedTime=_lastModifiedTime;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) unsigned long long offlineAvailability; // @synthesize offlineAvailability=_offlineAvailability;
+@property(nonatomic) _Bool containsOnlyVideoEpisodes; // @synthesize containsOnlyVideoEpisodes=_containsOnlyVideoEpisodes;
 @property(nonatomic) _Bool contentSupportsRadio; // @synthesize contentSupportsRadio=_contentSupportsRadio;
 @property(nonatomic) _Bool containsOnlyTracks; // @synthesize containsOnlyTracks=_containsOnlyTracks;
 @property(nonatomic) _Bool containsOnlyEpisodes; // @synthesize containsOnlyEpisodes=_containsOnlyEpisodes;

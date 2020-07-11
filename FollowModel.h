@@ -9,7 +9,7 @@
 #import "SPTFollowModelMessageManagerObserver-Protocol.h"
 #import "SPTFollowStateDataLoaderObserver-Protocol.h"
 
-@class FollowData, NSHashTable, NSNumberFormatter, NSString, SPTFollowModelMessageManager, SPTFollowStateDataLoader;
+@class FollowData, NSHashTable, NSNumberFormatter, NSString, SPTFollowFeaturePropertiesManager, SPTFollowModelMessageManager, SPTFollowStateDataLoader;
 @protocol SPTCollectionPlatformConfiguration, SPTFollowFeatureLogger;
 
 @interface FollowModel : NSObject <SPTFollowStateDataLoaderObserver, SPTFollowModelMessageManagerObserver>
@@ -19,6 +19,7 @@
     SPTFollowModelMessageManager *_messageManager;
     NSHashTable *_observers;
     NSNumberFormatter *_decimalNumberFormatter;
+    SPTFollowFeaturePropertiesManager *_featureProperties;
     id <SPTCollectionPlatformConfiguration> _collectionPlatformConfiguration;
     id <SPTFollowFeatureLogger> _followFeatureLogger;
     NSString *_logContext;
@@ -27,6 +28,7 @@
 @property(retain, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfiguration; // @synthesize collectionPlatformConfiguration=_collectionPlatformConfiguration;
+@property(retain, nonatomic) SPTFollowFeaturePropertiesManager *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) NSNumberFormatter *decimalNumberFormatter; // @synthesize decimalNumberFormatter=_decimalNumberFormatter;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTFollowModelMessageManager *messageManager; // @synthesize messageManager=_messageManager;
@@ -41,6 +43,8 @@
 - (void)invokeObserversWithData:(id)arg1;
 - (void)broadcastUpdatedFollowData:(id)arg1;
 - (void)followModelMessageManager:(id)arg1 followDataDidUpdate:(id)arg2;
+- (_Bool)shouldShowUnfollowConfimationWithDefaultValue:(_Bool)arg1;
+- (_Bool)shouldShowFollowConfimationWithDefaultValue:(_Bool)arg1;
 - (void)updateFollowState:(id)arg1;
 @property(readonly, nonatomic) NSString *followingsFormattedString;
 @property(readonly, nonatomic) NSString *followersFormattedString;
@@ -51,7 +55,7 @@
 - (void)toggleBanStateAndShowConfirmation:(_Bool)arg1;
 - (void)toggleFollowStateAndShowConfirmation:(_Bool)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithFollowStateDataLoader:(id)arg1 followData:(id)arg2 messageManager:(id)arg3 collectionPlatformConfiguration:(id)arg4 followFeatureLogger:(id)arg5 logContext:(id)arg6;
+- (id)initWithFollowStateDataLoader:(id)arg1 followData:(id)arg2 messageManager:(id)arg3 featureProperties:(id)arg4 collectionPlatformConfiguration:(id)arg5 followFeatureLogger:(id)arg6 logContext:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTCollectionPlatformTestManager-Protocol.h"
+#import "SPTCollectionPlatformPropertiesManager-Protocol.h"
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString, SPTCollectionPlatformFeatureProperties;
-@protocol SPTAbbaFeatureFlags, SPTCollectionPlatformConfiguration, SPTEntityService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTLocalSettings, SPTNowPlayingTestManager, SPTProductState, SPTRemoteConfigurationResolver, SPTSnackbarConditionalPresenter, SPTSnackbarTestManager, SettingsRegistry;
+@protocol SPTAbbaFeatureFlags, SPTCollectionPlatformConfiguration, SPTEntityService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTLocalSettings, SPTNowPlayingTestManager, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState, SPTRemoteConfigurationResolver, SPTSnackbarConditionalPresenter, SettingsRegistry;
 
-@interface SPTCollectionPlatformTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTCollectionPlatformTestManager>
+@interface SPTCollectionPlatformTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTCollectionPlatformPropertiesManager>
 {
     _Bool _incompleteAlbumsUsedForCollectionState;
     _Bool _freeTierEnabled;
@@ -30,14 +30,13 @@
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     id <SPTEntityService> _entityService;
+    id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     id <SPTFeatureFlagSignal> _madeForPublicSignal;
     id <SPTFeatureFlagSignal> _madeForEmployeeSignal;
     id <SPTNowPlayingTestManager> _nowPlayingTestManager;
-    id <SPTSnackbarTestManager> _snackbarTestManager;
 }
 
-@property(retain, nonatomic) id <SPTSnackbarTestManager> snackbarTestManager; // @synthesize snackbarTestManager=_snackbarTestManager;
 @property(retain, nonatomic) id <SPTNowPlayingTestManager> nowPlayingTestManager; // @synthesize nowPlayingTestManager=_nowPlayingTestManager;
 @property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
 @property(nonatomic, getter=isMadeForEmployeeEnabled) _Bool madeForEmployeeEnabled; // @synthesize madeForEmployeeEnabled=_madeForEmployeeEnabled;
@@ -47,6 +46,7 @@
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(nonatomic, getter=isIncompleteAlbumsUsedForCollectionState) _Bool incompleteAlbumsUsedForCollectionState; // @synthesize incompleteAlbumsUsedForCollectionState=_incompleteAlbumsUsedForCollectionState;
+@property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) __weak id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
@@ -65,14 +65,15 @@
 - (id)objectForKeyedSubscript:(id)arg1;
 @property(readonly, nonatomic, getter=isPodcastYourLibraryTestEnabled) _Bool podcastYourLibraryTestEnabled;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
-@property(readonly, nonatomic, getter=isSnackbarRefreshEnabled) _Bool snackbarRefreshEnabled;
+@property(readonly, nonatomic, getter=isSnackbarForPremiumEnabled) _Bool snackbarForPremiumEnabled;
+@property(readonly, nonatomic, getter=isSnackbarWithACMCopyEnabled) _Bool snackbarWithACMCopyEnabled;
 @property(readonly, getter=isFollowedArtistsOnlyEnabled) _Bool followedArtistsOnlyEnabled;
 - (void)updateLocalBans;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupRemoteConfigurationProperties;
 @property(readonly, nonatomic, getter=isYourLibraryFeatureEnabled) _Bool yourLibraryFeatureEnabled;
 - (void)dealloc;
-- (id)initWithProductState:(id)arg1 abbaFeatureFlags:(id)arg2 remoteConfigurationResolver:(id)arg3 localSettings:(id)arg4 settingsRegistry:(id)arg5 featureSettingsItemFactory:(id)arg6 featureFlagFactory:(id)arg7 freeTierEnabledSignal:(id)arg8 snackbarPresenter:(id)arg9 nowPlayingTestManager:(id)arg10 snackbarTestManager:(id)arg11 entityService:(id)arg12;
+- (id)initWithProductState:(id)arg1 abbaFeatureFlags:(id)arg2 remoteConfigurationResolver:(id)arg3 localSettings:(id)arg4 settingsRegistry:(id)arg5 featureSettingsItemFactory:(id)arg6 featureFlagFactory:(id)arg7 freeTierEnabledSignal:(id)arg8 snackbarPresenter:(id)arg9 nowPlayingTestManager:(id)arg10 entityService:(id)arg11 playlistDataLoader:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -7,10 +7,9 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL;
-@protocol SPTSnackbarConditionalPresenter, SPTSnackbarTestManager;
+@protocol SPTSnackbarConditionalPresenter;
 
 @protocol SPTSnackbarService <SPTService>
-- (id <SPTSnackbarTestManager>)provideTestManager;
 - (id <SPTSnackbarConditionalPresenter>)provideSnackbarPresenterForViewURI:(NSURL *)arg1;
 @end
 

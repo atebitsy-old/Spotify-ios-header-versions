@@ -7,36 +7,23 @@
 #import <objc/NSObject.h>
 
 #import "SPTExternalIntegrationTestManager-Protocol.h"
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
 
-@class NSString;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTLocalSettings, SPTProductState;
+@class NSString, SPTExternalIntegrationFeatureProperties;
+@protocol SPTProductState;
 
-@interface SPTExternalIntegrationTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTExternalIntegrationTestManager>
+@interface SPTExternalIntegrationTestManagerImplementation : NSObject <SPTExternalIntegrationTestManager>
 {
-    _Bool _showingEntityPagesEverywhereEnabled;
-    _Bool _notShowingEntityPagesEnabled;
-    id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTLocalSettings> _localSettings;
+    SPTExternalIntegrationFeatureProperties *_properties;
     id <SPTProductState> _productState;
-    id <SPTFeatureFlagSignal> _showingEntityPageEverywhereFlagSignal;
-    id <SPTFeatureFlagSignal> _showingEntityPageNowhereFlagSignal;
 }
 
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> showingEntityPageNowhereFlagSignal; // @synthesize showingEntityPageNowhereFlagSignal=_showingEntityPageNowhereFlagSignal;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> showingEntityPageEverywhereFlagSignal; // @synthesize showingEntityPageEverywhereFlagSignal=_showingEntityPageEverywhereFlagSignal;
-@property(nonatomic, getter=isNotShowingEntityPagesEnabled) _Bool notShowingEntityPagesEnabled; // @synthesize notShowingEntityPagesEnabled=_notShowingEntityPagesEnabled;
-@property(nonatomic, getter=isShowingEntityPagesEverywhereEnabled) _Bool showingEntityPagesEverywhereEnabled; // @synthesize showingEntityPagesEverywhereEnabled=_showingEntityPagesEverywhereEnabled;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(readonly, nonatomic) __weak id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
+@property(readonly, nonatomic) SPTExternalIntegrationFeatureProperties *properties; // @synthesize properties=_properties;
 - (void).cxx_destruct;
-- (id)multipleChoiseFeatureFlagSignalsWithABBAKey:(id)arg1 withOptions:(id)arg2 settingsItemTitle:(id)arg3 settingsItemDescription:(id)arg4;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)dealloc;
-- (void)setupFeatureFlags;
-- (id)initWithFeatureFlagFactory:(id)arg1 localSettings:(id)arg2 productState:(id)arg3;
+@property(readonly, nonatomic, getter=isNotShowingEntityPagesEnabled) _Bool notShowingEntityPagesEnabled;
+@property(readonly, nonatomic, getter=isShowingEntityPagesEverywhereEnabled) _Bool showingEntityPagesEverywhereEnabled;
+- (id)initWithProperties:(id)arg1 productState:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

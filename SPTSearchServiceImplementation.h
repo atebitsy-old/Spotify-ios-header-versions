@@ -9,24 +9,20 @@
 #import "SPTSearchService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTContainerService, SPTFeatureFlaggingService, SPTScannablesService, SPTSearchPlatformService, SPTSearchTestManager;
+@protocol SPTContainerService, SPTScannablesService, SPTSearchPlatformService;
 
 @interface SPTSearchServiceImplementation : NSObject <SPTSearchService>
 {
-    id <SPTSearchTestManager> _testManager;
     id <SPTContainerService> _containerService;
     id <SPTScannablesService> _scannablesService;
     id <SPTSearchPlatformService> _searchPlatformService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTSearchTestManager> testManager; // @synthesize testManager=_testManager;
 - (id)searchConfiguration;
 - (id)provideSearchViewControllerForURL:(id)arg1 context:(id)arg2;
 - (void)registerSearchPage;

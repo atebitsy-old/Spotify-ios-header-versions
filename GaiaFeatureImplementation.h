@@ -12,7 +12,7 @@
 #import "UIPopoverPresentationControllerDelegate-Protocol.h"
 
 @class GaiaLocalAudioSessionController, GaiaMessageBarController, NSString, SPNavigationController, SPTAllocationContext, SPTCastManager, SPTGaiaAudioAPKeepAliveHandler, SPTGaiaConnectCosmosResolver, SPTGaiaConnectPublicStateCache, SPTGaiaConnectStateObservingManager, SPTGaiaDeviceAppearanceMapping, SPTGaiaDevicePickerAppearanceManager, SPTGaiaDevicePickerDeviceSpecificConfigurationManager, SPTGaiaDevicePickerDevicesProvider, SPTGaiaDevicePickerViewController, SPTGaiaDevicePickerViewModel, SPTGaiaDevicesAvailableViewFactory, SPTGaiaEducationDetailModelManager, SPTGaiaFeatureFlagsManager, SPTGaiaFeatureSettingsManager, SPTGaiaHomeDeviceLocalNotificationManager, SPTGaiaHomeDeviceLogger, SPTGaiaHomeDeviceManager, SPTGaiaHomeDeviceTooltipConnectionTracker, SPTGaiaHomeDeviceTooltipManager, SPTGaiaHomeDeviceTransitionManager, SPTGaiaIconProviderImplementation, SPTGaiaInstrumentationRemotePlayingStateBinder, SPTGaiaLocalDevicePermissions, SPTGaiaLockScreenFeatureManager, SPTGaiaLogger, SPTGaiaMPMusicPlayerControllerFactory, SPTGaiaOnboardingManagerImplementation, SPTGaiaPlaybackGrabberController, SPTGaiaPopupController, SPTGaiaSettingsManager, SPTGaiaSignpostInstrumentation, SPTGaiaSilentAudioPlayerProviderDefaultImplementation, SPTGaiaSocialListeningIntegrationManager, SPTGaiaVolumeButtonController;
-@protocol CosmosFeature, SPTAbbaService, SPTAccountService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTGLUEService, SPTGaiaConnectAPI, SPTGaiaConnectManager, SPTGaiaDevicePickerPresenter, SPTGaiaDevicePickerViewInjector, SPTGaiaVolumeControllerInterface, SPTGaiaWirelessRoutesAPI, SPTInstrumentationService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPushNotificationSessionService, SPTSessionService, SPTSettingsFeature, SPTSocialListeningService, SPTUIPresentationService, SPTURIDispatchService;
+@protocol CosmosFeature, SPTAbbaService, SPTAccountService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTGLUEService, SPTGaiaConnectAPI, SPTGaiaConnectManager, SPTGaiaDevicePickerPresenter, SPTGaiaDevicePickerViewInjector, SPTGaiaVolumeControllerInterface, SPTGaiaWirelessRoutesAPI, SPTInstrumentationService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPushMessagingService, SPTSessionService, SPTSettingsFeature, SPTSocialListeningService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface GaiaFeatureImplementation : NSObject <UIPopoverPresentationControllerDelegate, SPTService, GaiaFeature, SPTGaiaDevicePickerControllerProvider>
 {
@@ -26,7 +26,7 @@
     id <SPTAbbaService> _abbaService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTUIPresentationService> _UIPresentationService;
-    id <SPTPushNotificationSessionService> _pushNotificationSessionService;
+    id <SPTPushMessagingService> _pushMessagingService;
     id <SPTInstrumentationService> _instrumentationService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTCrashReporterService> _crashReporterService;
@@ -132,7 +132,7 @@
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTInstrumentationService> instrumentationService; // @synthesize instrumentationService=_instrumentationService;
-@property(nonatomic) __weak id <SPTPushNotificationSessionService> pushNotificationSessionService; // @synthesize pushNotificationSessionService=_pushNotificationSessionService;
+@property(nonatomic) __weak id <SPTPushMessagingService> pushMessagingService; // @synthesize pushMessagingService=_pushMessagingService;
 @property(nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;

@@ -19,7 +19,6 @@
 
 @interface SPTStationViewController : SPTableViewController <SPTNavigationControllerNavigationBarState, SPTImageLoaderDelegate, SPTStationViewModelDelegate, SPContentInsetViewController, SPTThemableView, SPTBarButtonItemManagerObserver, SPTPageController>
 {
-    _Bool _haveExpandedHeader;
     id <SPTThemableViewLayoutDelegate> _layoutDelegate;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTShelves> _shelves;
@@ -52,7 +51,6 @@
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTStationEntityPullToRefreshView *footerView; // @synthesize footerView=_footerView;
-@property(readonly, nonatomic, getter=shouldHaveExpandedHeader) _Bool haveExpandedHeader; // @synthesize haveExpandedHeader=_haveExpandedHeader;
 @property(retain, nonatomic) SPTStationEntityTableHeaderView *entityHeaderView; // @synthesize entityHeaderView=_entityHeaderView;
 @property(retain, nonatomic) UITableViewCell *relatedArtistsCell; // @synthesize relatedArtistsCell=_relatedArtistsCell;
 @property(readonly, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
@@ -117,7 +115,6 @@
 - (void)trackContextMenuButtonTapped:(id)arg1;
 - (void)didPressPlayButton;
 - (void)sp_updateContentInsets;
-- (void)viewWillLayoutSubviews;
 - (void)updateFooterViewFrameWithOffset:(double)arg1;
 - (void)setupFooterView;
 - (void)setupHeaderView;

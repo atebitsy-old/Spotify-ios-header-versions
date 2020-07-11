@@ -9,25 +9,27 @@
 #import "SPTPodcastViewModelSection-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTPodcastEpisode, SPTPodcastTrailerSectionViewModelDelegate, SPTPodcastUIStringFormatter;
+@protocol SPTExplicitContentAccessManager, SPTPodcastEpisode, SPTPodcastTrailerSectionViewModelDelegate;
 
 @interface SPTPodcastTrailerSectionViewModel : NSObject <SPTPodcastViewModelSection>
 {
     _Bool _playing;
     _Bool _enabled;
+    _Bool _explicitContent;
     double _headerHeight;
     NSString *_title;
     NSString *_durationString;
     NSURL *_imageURL;
     double _progress;
     id <SPTPodcastTrailerSectionViewModelDelegate> _delegate;
-    id <SPTPodcastUIStringFormatter> _stringFormatter;
+    id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTPodcastEpisode> _trailerEpisode;
 }
 
 @property(retain, nonatomic) id <SPTPodcastEpisode> trailerEpisode; // @synthesize trailerEpisode=_trailerEpisode;
-@property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
+@property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(nonatomic) __weak id <SPTPodcastTrailerSectionViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic, getter=isExplicit) _Bool explicitContent; // @synthesize explicitContent=_explicitContent;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
 @property(nonatomic, getter=isPlaying) _Bool playing; // @synthesize playing=_playing;
 @property(nonatomic) double progress; // @synthesize progress=_progress;
@@ -36,6 +38,7 @@
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
+- (id)formattedStringWithDuration:(double)arg1;
 - (id)header;
 - (void)updateWithPodcastPlayer:(id)arg1;
 - (void)updateWithPodcast:(id)arg1;
@@ -43,7 +46,7 @@
 - (long long)identifier;
 - (void)didTouchUpInside;
 - (void)configureWithTrailerEpisode:(id)arg1;
-- (id)initWithStringFormatter:(id)arg1;
+- (id)initWithExplicitContentAccessManager:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

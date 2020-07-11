@@ -14,7 +14,7 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering;
 @property(readonly, nonatomic) _Bool hasMore;
 @property(readonly, nonatomic) _Bool loadError;
-@property(readonly, nonatomic, getter=isOfflineSyncAvailable) _Bool offlineSyncAvailable;
+@property(readonly, nonatomic, getter=isOfflineSyncPermissionEnabled) _Bool offlineSyncPermissionEnabled;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(readonly, nonatomic) NSURL *playlistURL;
 - (void)playlistContainsTrackURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;

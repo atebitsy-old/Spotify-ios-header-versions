@@ -29,9 +29,9 @@
 - (void).cxx_destruct;
 - (void)messageComposeViewController:(id)arg1 didFinishWithResult:(long long)arg2;
 - (id)generateShareTextBodyFromShareData:(id)arg1;
-- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)createAlertModel;
-- (id)initWithShareLogger:(id)arg1 deeplinkHandler:(id)arg2;
+- (id)initWithShareLogger:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
