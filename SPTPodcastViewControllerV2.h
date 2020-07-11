@@ -19,7 +19,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTFreeTierEntityNavigationDecorator, SPTInfoView, SPTPodcastFilterTableFooterView, SPTPodcastHeaderController, SPTPodcastLogger, SPTPodcastViewModel2, SPTShowContextMenuController, SPTTableView, SPTTheme, VISREFTableHeaderView;
-@protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTLinkDispatcher, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastFollowSectionTableViewCellCommonInterface, SPTPodcastTestManager, SPTShareFeature, SPTUIPresentationService, SPTViewLogger;
+@protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTLinkDispatcher, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastFollowSectionTableViewCellCommonInterface, SPTPodcastTestManager, SPTShareFeature, SPTUIPresentationService, SPTViewLogger;
 
 @interface SPTPodcastViewControllerV2 : UIViewController <SPTNavigationControllerNavigationBarState, SPTPodcastViewModelDelegate2, SPTShowContextMenuControllerDelegate, SPTShareableContext, SPTPodcastChipsSectionTableViewCellDelegate, SPTPodcastDescriptionTableViewCellDelegate, SPContentInsetViewController, SPTPageController, SPViewController, UITableViewDelegate, UITableViewDataSource>
 {
@@ -31,7 +31,6 @@
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     SPTShowContextMenuController *_showContextMenuController;
     id <SPTPodcastEpisodeCellConfigurator> _cellConfigurator;
-    id <SPTPodcastEpisodeCellActionTarget> _cellActionHandler;
     SPTTableView *_tableView;
     SPTInfoView *_infoView;
     SPTPodcastFilterTableFooterView *_filterResetTableFooterView;
@@ -69,7 +68,6 @@
 @property(retain, nonatomic) SPTPodcastFilterTableFooterView *filterResetTableFooterView; // @synthesize filterResetTableFooterView=_filterResetTableFooterView;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
-@property(retain, nonatomic) id <SPTPodcastEpisodeCellActionTarget> cellActionHandler; // @synthesize cellActionHandler=_cellActionHandler;
 @property(retain, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) SPTShowContextMenuController *showContextMenuController; // @synthesize showContextMenuController=_showContextMenuController;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
@@ -99,10 +97,10 @@
 - (void)showInfoViewWithError:(id)arg1;
 - (void)viewModel:(id)arg1 willPresentFilterContextViewController:(id)arg2 fromSender:(id)arg3;
 - (void)viewModel:(id)arg1 podcastDidFinishLoadingWithError:(id)arg2;
-- (void)viewModelPodcastDidUpdatePlayingEpisode:(id)arg1 atIndexPath:(id)arg2;
+- (void)viewModel:(id)arg1 didUpdateSectionAtIndexPath:(id)arg2;
 - (unsigned long long)preferredNavigationBarState;
 - (void)didSelectResetFiltersButton:(id)arg1;
-- (void)updateTrailerCellAtIndexPath:(id)arg1 withViewModel:(id)arg2;
+- (void)updateSectionCellWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)setupTableView;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
@@ -121,7 +119,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithPodcastViewModel:(id)arg1 glueImageLoader:(id)arg2 logger:(id)arg3 collectionLogger:(id)arg4 showContextMenuController:(id)arg5 episodeCellConfigurator:(id)arg6 collectionTestManager:(id)arg7 podcastTestManager:(id)arg8 podcastContextMenuProvider:(id)arg9 shareFeature:(id)arg10 linkDispatcher:(id)arg11 navigationDecorator:(id)arg12 cellActionHandler:(id)arg13 presentationService:(id)arg14 viewLogger:(id)arg15;
+- (id)initWithPodcastViewModel:(id)arg1 glueImageLoader:(id)arg2 logger:(id)arg3 collectionLogger:(id)arg4 showContextMenuController:(id)arg5 episodeCellConfigurator:(id)arg6 collectionTestManager:(id)arg7 podcastTestManager:(id)arg8 podcastContextMenuProvider:(id)arg9 shareFeature:(id)arg10 linkDispatcher:(id)arg11 navigationDecorator:(id)arg12 presentationService:(id)arg13 viewLogger:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,8 +6,8 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL, SPTAccessory, SPTPlayerState;
-@protocol SPTExternalIntegrationRadioControllerObserver;
+@class NSURL, SPTPlayerState;
+@protocol SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationRadioControllerObserver;
 
 @protocol SPTExternalIntegrationRadioController <NSObject>
 - (void)removeObserver:(id <SPTExternalIntegrationRadioControllerObserver>)arg1;
@@ -15,11 +15,11 @@
 - (_Bool)thumbIsDownForTrackWithURI:(NSURL *)arg1;
 - (_Bool)thumbIsUpForTrackWithURI:(NSURL *)arg1;
 - (_Bool)canThumbTrackInPlayerState:(SPTPlayerState *)arg1;
-- (void)thumbDownTrackInPlayerState:(SPTPlayerState *)arg1 accessorySessionID:(NSString *)arg2 completionHandler:(void (^)(NSError *))arg3;
-- (void)thumbUpTrackInPlayerState:(SPTPlayerState *)arg1 accessorySessionID:(NSString *)arg2 completionHandler:(void (^)(NSError *))arg3;
+- (void)thumbDownTrackInPlayerState:(SPTPlayerState *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
+- (void)thumbUpTrackInPlayerState:(SPTPlayerState *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (_Bool)isPlayingRadioInPlayerState:(SPTPlayerState *)arg1;
 - (_Bool)canStartRadioSeededByTrackURI:(NSURL *)arg1;
 - (_Bool)canStartTrackRadioSeededByPlayerState:(SPTPlayerState *)arg1;
-- (void)startRadioForTrackURI:(NSURL *)arg1 currentAccessory:(SPTAccessory *)arg2 completionHandler:(void (^)(NSError *))arg3;
+- (void)startRadioForTrackURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
 @end
 

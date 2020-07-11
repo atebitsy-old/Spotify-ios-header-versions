@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSObject, NSString, NSURL, SPTAddToQueueOptions, SPTCommandOptions, SPTPauseOptions, SPTPlayOptions, SPTPlayOrigin, SPTPlayerContext, SPTPlayerOptionOverrides, SPTPlayerQueue, SPTPlayerState, SPTPlayerTrack, SPTSeekOptions, SPTSkipOptions, SPTask;
+@class NSObject, NSString, NSURL, SPTAddToQueueOptions, SPTCommandOptions, SPTLoggingParams, SPTPauseOptions, SPTPlayOptions, SPTPlayOrigin, SPTPlayerContext, SPTPlayerOptionOverrides, SPTPlayerQueue, SPTPlayerState, SPTPlayerTrack, SPTSeekOptions, SPTSkipOptions, SPTask;
 @protocol OS_dispatch_queue, SPTPlayerObserver, SPTPlayerPlay, SPTPlayerQueueObserver, SPTPlayerStagedContextObserver;
 
 @protocol SPTPlayer <NSObject>
@@ -22,8 +22,10 @@
 - (void)addPlayerObserver:(id <SPTPlayerObserver>)arg1;
 - (void)removePlayerQueueObserver:(id <SPTPlayerQueueObserver>)arg1;
 - (void)addPlayerQueueObserver:(id <SPTPlayerQueueObserver>)arg1;
+- (SPTask *)addToQueue:(SPTPlayerTrack *)arg1 options:(SPTAddToQueueOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
 - (SPTask *)addToQueue:(SPTPlayerTrack *)arg1 options:(SPTAddToQueueOptions *)arg2;
 - (SPTask *)addToQueue:(SPTPlayerTrack *)arg1;
+- (SPTask *)setQueue:(SPTPlayerQueue *)arg1 options:(SPTCommandOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
 - (SPTask *)setQueue:(SPTPlayerQueue *)arg1 options:(SPTCommandOptions *)arg2;
 - (SPTask *)setQueue:(SPTPlayerQueue *)arg1;
 - (void)fetchQueue:(void (^)(SPTPlayerQueue *))arg1 on:(NSObject<OS_dispatch_queue> *)arg2;
@@ -42,9 +44,11 @@
 - (SPTask *)resume;
 - (SPTask *)stop;
 - (id <SPTPlayerPlay>)preparePlaybackOfContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 viewURI:(NSURL *)arg3;
+- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3 origin:(SPTPlayOrigin *)arg4;
 - (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 origin:(SPTPlayOrigin *)arg3;
 - (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 externalReferrer:(NSString *)arg3;
 - (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 viewURI:(NSURL *)arg3;
+- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
 - (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2;
 @end
 

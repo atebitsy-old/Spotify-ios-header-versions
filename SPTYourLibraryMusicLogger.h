@@ -27,7 +27,7 @@
 - (void)logSortingIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logClearFilterWithIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logFilterIdentifier:(id)arg1 sectionId:(id)arg2 filterAdded:(_Bool)arg3 index:(unsigned long long)arg4;
-- (void)logSortFilterPickerCanceled;
+- (void)logSortFilterPickerCanceledWithReason:(unsigned long long)arg1;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)logSectionIndexSelected;
 - (void)logDisabledItemActionSelectedAtIndex:(unsigned long long)arg1 section:(id)arg2 targetURI:(id)arg3;

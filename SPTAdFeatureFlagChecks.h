@@ -11,13 +11,15 @@
 #import "SPTProductStateObserver-Protocol.h"
 
 @class NSArray, NSMutableDictionary, NSString, SPTObserverManager;
-@protocol SPTAbbaFeatureFlags, SPTLocalSettings, SPTProductState;
+@protocol SPTAbbaFeatureFlags, SPTLocalSettings, SPTProductState, SPTResolver;
 
 @interface SPTAdFeatureFlagChecks : NSObject <SPTProductStateObserver, SPTLocalSettingsObserver, SPTAbbaFeatureFlagsObserver>
 {
+    _Bool _noOfferCardEnabled;
     id <SPTProductState> _productState;
     id <SPTLocalSettings> _localSettings;
     id <SPTAbbaFeatureFlags> _abbaFeatureFlags;
+    id <SPTResolver> _resolver;
     SPTObserverManager *_observerManager;
     NSArray *_observedFeatureFlagsKeys;
     NSArray *_observedLocalSettingsKeys;
@@ -32,9 +34,11 @@
 @property(readonly, nonatomic) NSArray *observedLocalSettingsKeys; // @synthesize observedLocalSettingsKeys=_observedLocalSettingsKeys;
 @property(readonly, nonatomic) NSArray *observedFeatureFlagsKeys; // @synthesize observedFeatureFlagsKeys=_observedFeatureFlagsKeys;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 @property(readonly, nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
+@property(nonatomic) _Bool noOfferCardEnabled; // @synthesize noOfferCardEnabled=_noOfferCardEnabled;
 - (void).cxx_destruct;
 - (void)notifyObserversOfLoad;
 - (void)notifyObserversOfChange;
@@ -56,10 +60,11 @@
 @property(readonly, nonatomic, getter=isPrerollEnabled) _Bool prerollEnabled;
 @property(readonly, nonatomic, getter=isMobiusVoiceEnabled) _Bool mobiusVoiceEnabled;
 @property(readonly, nonatomic, getter=isVoiceEnabled) _Bool voiceEnabled;
+- (void)requestNoOfferCardFlagValueFromCore;
 @property(readonly, nonatomic, getter=isComscoreEnabled) _Bool comscoreEnabled;
 @property(readonly, nonatomic, getter=isCosmosWatchNowEnabled) _Bool cosmosWatchNowEnabled;
 - (void)dealloc;
-- (id)initWithProductState:(id)arg1 localSetting:(id)arg2 abbaService:(id)arg3;
+- (id)initWithProductState:(id)arg1 localSetting:(id)arg2 abbaService:(id)arg3 resolver:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

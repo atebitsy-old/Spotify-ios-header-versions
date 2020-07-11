@@ -9,8 +9,8 @@
 #import "SPTYourLibraryModelObserver-Protocol.h"
 #import "SPTYourLibraryViewModel-Protocol.h"
 
-@class NSArray, NSMutableArray, NSMutableDictionary, NSString, NSURL, SPTObserverManager;
-@protocol SPTPageCreationContext, SPTYourLibraryModel;
+@class NSArray, NSMutableArray, NSMutableDictionary, NSString, NSURL, SPTObserverManager, SPTYourLibraryLogger;
+@protocol SPTFreeTierCreatePlaylistController, SPTPageCreationContext, SPTYourLibraryGroupHeaderActionViewModel, SPTYourLibraryModel, SPTYourLibraryTestManager;
 
 @interface SPTYourLibraryViewModelImplementation : NSObject <SPTYourLibraryModelObserver, SPTYourLibraryViewModel>
 {
@@ -18,6 +18,10 @@
     SPTObserverManager *_observers;
     id <SPTYourLibraryModel> _model;
     id <SPTPageCreationContext> _pageCreationContext;
+    id <SPTFreeTierCreatePlaylistController> _createPlaylistController;
+    SPTYourLibraryLogger *_logger;
+    id <SPTYourLibraryTestManager> _testManager;
+    id <SPTYourLibraryGroupHeaderActionViewModel> _groupHeaderActionViewModel;
     NSMutableArray *_sections;
     NSMutableDictionary *_viewControllers;
     NSArray *_groupData;
@@ -29,6 +33,10 @@
 @property(copy, nonatomic) NSArray *groupData; // @synthesize groupData=_groupData;
 @property(retain, nonatomic) NSMutableDictionary *viewControllers; // @synthesize viewControllers=_viewControllers;
 @property(retain, nonatomic) NSMutableArray *sections; // @synthesize sections=_sections;
+@property(retain, nonatomic) id <SPTYourLibraryGroupHeaderActionViewModel> groupHeaderActionViewModel; // @synthesize groupHeaderActionViewModel=_groupHeaderActionViewModel;
+@property(readonly, nonatomic) id <SPTYourLibraryTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
 @property(retain, nonatomic) id <SPTPageCreationContext> pageCreationContext; // @synthesize pageCreationContext=_pageCreationContext;
 @property(retain, nonatomic) id <SPTYourLibraryModel> model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
@@ -44,11 +52,12 @@
 - (void)yourLibraryModel:(id)arg1 didUpdatePageProviders:(id)arg2 groupData:(id)arg3;
 - (_Bool)stateRestoreToURI:(id)arg1;
 - (id)pageViewControllerAtIndexPath:(id)arg1;
+- (id)pageURIAtIndexPath:(id)arg1;
 - (id)groupTitleForSection:(unsigned long long)arg1;
 - (id)pageTitleAtIndexPath:(id)arg1;
 - (unsigned long long)numberPagesForSection:(unsigned long long)arg1;
 - (unsigned long long)numberOfSections;
-- (id)initWithModel:(id)arg1 pageCreationContext:(id)arg2;
+- (id)initWithModel:(id)arg1 pageCreationContext:(id)arg2 testManager:(id)arg3 createPlaylistController:(id)arg4 logger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

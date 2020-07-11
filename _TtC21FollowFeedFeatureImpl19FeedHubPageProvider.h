@@ -14,6 +14,7 @@
     // Error parsing type: , name: hubCommandTranslator
     // Error parsing type: , name: paginationHandler
     // Error parsing type: , name: logger
+    // Error parsing type: , name: remoteConfigManager
 }
 
 @end

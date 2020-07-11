@@ -12,13 +12,14 @@
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 
 @class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache;
-@protocol SPTCarPlayContentDataSource, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTMediaPlayerContentBridge;
+@protocol SPTCarPlayContentDataSource, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTMediaPlayerContentBridge;
 
 @interface SPTCarPlayLoggedInDataSource : NSObject <SPTExternalIntegrationContentControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTCarPlayDataSource>
 {
     _Bool _rootItemsRequestInitiated;
     _Bool _fetchingRootPending;
     _Bool _offlineOnly;
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     SPTAccessory *_currentAccessory;
     id <SPTCarPlayContentDataSource> _contentDataSource;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
@@ -73,6 +74,7 @@
 - (void)beginLoadingChildItemsAtIndexPath:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)updateOfflineOnly:(_Bool)arg1;
 - (void)carplaySessionEnded;
+@property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 - (void)dealloc;
 - (id)initWithContentDataSource:(id)arg1 contentTreeCache:(id)arg2 externalIntegrationPlatform:(id)arg3 mediaPlayerBridge:(id)arg4 connectManager:(id)arg5 imageLoaderFactory:(id)arg6 properties:(id)arg7 offlineOnly:(_Bool)arg8 debugLog:(id)arg9;
 

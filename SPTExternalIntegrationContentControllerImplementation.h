@@ -36,9 +36,9 @@
 - (void)addObserver:(id)arg1;
 - (id)contentProviderForChildContentWithParentURI:(id)arg1;
 - (id)contentProviderForContentWithURI:(id)arg1;
-- (void)requestRecommendedRootItemsFromSpacesWithIdentifier:(id)arg1 accessorySessionID:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
-- (void)resolveChildContentAsFlatListOfParentsWithURIs:(id)arg1 options:(id)arg2 accessorySessionID:(id)arg3 withCompletionHandler:(CDUnknownBlockType)arg4;
-- (void)resolveChildContentOfParentWithURI:(id)arg1 options:(id)arg2 accessorySessionID:(id)arg3 withCompletionHandler:(CDUnknownBlockType)arg4;
+- (void)requestRecommendedRootItemsFromSpacesWithIdentifier:(id)arg1 externalActionOrigin:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
+- (void)resolveChildContentAsFlatListOfParentsWithURIs:(id)arg1 options:(id)arg2 externalActionOrigin:(id)arg3 withCompletionHandler:(CDUnknownBlockType)arg4;
+- (void)resolveChildContentOfParentWithURI:(id)arg1 options:(id)arg2 externalActionOrigin:(id)arg3 withCompletionHandler:(CDUnknownBlockType)arg4;
 - (_Bool)canResolveChildContentWithParentURI:(id)arg1;
 - (id)sorterdArrayOfContent:(id)arg1 byRequestedURIs:(id)arg2;
 - (void)resolveContentWithURIs:(id)arg1 options:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;

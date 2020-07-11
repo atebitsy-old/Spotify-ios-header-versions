@@ -9,7 +9,7 @@
 #import "SPTCollectionPlatform-Protocol.h"
 
 @class NSHashTable, NSString;
-@protocol SPTAlertController, SPTCollectionLogger, SPTCollectionPlatformConfiguration, SPTCollectionPlatformDataLoader, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTMetaViewController;
+@protocol SPTAlertInterface, SPTCollectionLogger, SPTCollectionPlatformConfiguration, SPTCollectionPlatformDataLoader, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTMetaViewController;
 
 @interface SPTCollectionPlatformImplementation : NSObject <SPTCollectionPlatform>
 {
@@ -22,12 +22,12 @@
     id <SPTCollectionPlatformDataLoader> _dataLoader;
     id <SPTCollectionPlatformStateProvider> _stateProvider;
     id <SPTMetaViewController> _metaViewController;
-    id <SPTAlertController> _alertController;
+    id <SPTAlertInterface> _alertInterface;
     CDUnknownBlockType _timeGetter;
 }
 
 @property(copy, nonatomic) CDUnknownBlockType timeGetter; // @synthesize timeGetter=_timeGetter;
-@property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
+@property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <SPTCollectionPlatformStateProvider> stateProvider; // @synthesize stateProvider=_stateProvider;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -65,7 +65,7 @@
 - (void)collectionStateForURLs:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)collectionStateForURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)dealloc;
-- (id)initWithCosmosDataLoader:(id)arg1 collectionLogger:(id)arg2 collectionStateProvider:(id)arg3 collectionTestManager:(id)arg4 metaViewController:(id)arg5 alertController:(id)arg6;
+- (id)initWithCosmosDataLoader:(id)arg1 collectionLogger:(id)arg2 collectionStateProvider:(id)arg3 collectionTestManager:(id)arg4 metaViewController:(id)arg5 alertInterface:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

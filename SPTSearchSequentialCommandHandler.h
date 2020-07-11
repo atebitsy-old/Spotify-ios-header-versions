@@ -15,7 +15,8 @@
     id <HUBCommandHandler> _commandHandler;
 }
 
-+ (id)commandWithName:(id)arg1 commands:(id)arg2;
++ (id)defaultName;
++ (id)commandWithCommands:(id)arg1;
 @property(nonatomic) __weak id <HUBCommandHandler> commandHandler; // @synthesize commandHandler=_commandHandler;
 - (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;

@@ -21,6 +21,7 @@
 @property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
 - (id)interactionEventFactoryForEvent:(id)arg1;
+- (void)logImpressionWithComponentModel:(id)arg1;
 - (void)logNavigateWithDestination:(id)arg1 event:(id)arg2;
 - (void)logRetryWithEvent:(id)arg1;
 - (void)logRemoveSearchItemWithEvent:(id)arg1;

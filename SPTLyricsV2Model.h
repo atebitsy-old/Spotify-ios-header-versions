@@ -11,10 +11,12 @@
 @interface SPTLyricsV2Model : NSObject
 {
     _Bool _isVocalRemovalAvailable;
+    _Bool _isLyricsEastAsian;
     SPTLyricsV2Colors *_colors;
     SPTLyricsLineSet *_lyrics;
 }
 
+@property(readonly, nonatomic) _Bool isLyricsEastAsian; // @synthesize isLyricsEastAsian=_isLyricsEastAsian;
 @property(readonly, nonatomic) _Bool isVocalRemovalAvailable; // @synthesize isVocalRemovalAvailable=_isVocalRemovalAvailable;
 @property(readonly, nonatomic) SPTLyricsLineSet *lyrics; // @synthesize lyrics=_lyrics;
 @property(readonly, nonatomic) SPTLyricsV2Colors *colors; // @synthesize colors=_colors;

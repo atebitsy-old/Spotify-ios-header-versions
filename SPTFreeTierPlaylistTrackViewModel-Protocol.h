@@ -16,7 +16,7 @@
 @property(readonly, nonatomic) _Bool isPlayed;
 @property(readonly, nonatomic) double timeLeft;
 @property(readonly, nonatomic) NSDate *publishDate;
-@property(readonly, copy, nonatomic) NSString *publisherName;
+@property(readonly, copy, nonatomic) NSString *podcastTitle;
 @property(readonly, nonatomic, getter=isImageEnabled) _Bool imageEnabled;
 @property(readonly, nonatomic) long long offlineSyncStatus;
 @property(readonly, nonatomic) NSString *freeformDescription;
@@ -38,7 +38,7 @@
 @property(readonly, copy, nonatomic) NSString *albumName;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) NSURL *URL;
-@property(readonly, copy, nonatomic) NSString *subtitle;
+@property(readonly, copy, nonatomic) NSString *glueAudioTrackSubtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 @end
 

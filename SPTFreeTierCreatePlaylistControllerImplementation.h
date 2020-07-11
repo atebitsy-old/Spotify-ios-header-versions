@@ -28,6 +28,7 @@
 @property(retain, nonatomic) id <SPTFreeTierCreatePlaylistViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTFreeTierCreatePlaylistControllerDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
+- (void)createPlaylistViewModelDidCancel:(id)arg1;
 - (void)createPlaylistViewModel:(id)arg1 didRenamePlaylistWithURL:(id)arg2;
 - (void)createPlaylistViewModel:(id)arg1 didCreatePlaylistWithURL:(id)arg2;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;

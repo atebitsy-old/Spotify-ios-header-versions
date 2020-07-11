@@ -29,6 +29,10 @@
 - (_Bool)shouldSeekBackwardCommandBeAvailable;
 - (_Bool)shouldSeekForwardCommandBeEnabled;
 - (_Bool)shouldSeekForwardCommandBeAvailable;
+- (void)skipForwardWithInterval:(double)arg1;
+- (void)skipBackwardWithInterval:(double)arg1;
+- (_Bool)shouldSkipForwardCommandBeAvailable;
+- (_Bool)shouldSkipBackwardCommandBeAvailable;
 - (_Bool)shouldPreviousTrackCommandBeEnabled;
 - (_Bool)shouldPreviousTrackCommandBeAvailable;
 - (_Bool)shouldNextTrackCommandBeEnabled;

@@ -6,10 +6,7 @@
 
 #import "_TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder.h"
 
-#import "UICollectionViewDelegate-Protocol.h"
-#import "UICollectionViewDelegateFlowLayout-Protocol.h"
-
-@interface _TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder (FollowFeedFeatureImpl1) <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface _TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder (FollowFeedFeatureImpl1)
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;

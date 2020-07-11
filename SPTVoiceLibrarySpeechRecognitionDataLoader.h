@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTVoiceLibraryOutputStreamDelegate-Protocol.h"
 
-@class NSInputStream, NSMutableData, NSString, SPTDataLoader, SPTDataLoaderRequest, SPTVoiceLibraryOutputStreamHelper, SPTVoiceLibrarySpeechProxyRequest;
+@class NSInputStream, NSMutableData, NSString, SPTDataLoader, SPTDataLoaderRequest, SPTVoiceLibraryJSONObjectDecoder, SPTVoiceLibraryOutputStreamHelper, SPTVoiceLibrarySpeechProxyRequest;
 @protocol SPTDataLoaderCancellationToken, SPTPlayer, SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate;
 
 @interface SPTVoiceLibrarySpeechRecognitionDataLoader : NSObject <SPTVoiceLibraryOutputStreamDelegate, SPTDataLoaderDelegate>
@@ -26,8 +26,10 @@
     SPTVoiceLibraryOutputStreamHelper *_outputStreamHelper;
     NSInputStream *_inputStream;
     NSString *_boundary;
+    SPTVoiceLibraryJSONObjectDecoder *_jsonObjectDecoder;
 }
 
+@property(retain, nonatomic) SPTVoiceLibraryJSONObjectDecoder *jsonObjectDecoder; // @synthesize jsonObjectDecoder=_jsonObjectDecoder;
 @property(copy, nonatomic) NSString *boundary; // @synthesize boundary=_boundary;
 @property(retain, nonatomic) NSInputStream *inputStream; // @synthesize inputStream=_inputStream;
 @property(retain, nonatomic) SPTVoiceLibraryOutputStreamHelper *outputStreamHelper; // @synthesize outputStreamHelper=_outputStreamHelper;

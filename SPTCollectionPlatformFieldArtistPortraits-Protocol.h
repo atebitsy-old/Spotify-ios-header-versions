@@ -9,6 +9,6 @@
 @class NSDictionary;
 
 @protocol SPTCollectionPlatformFieldArtistPortraits <SPTCollectionPlatformDataLoaderField>
-@property(readonly, nonatomic) NSDictionary *artistPortraits;
+@property(readonly, copy, nonatomic) NSDictionary *artistPortraits;
 @end
 

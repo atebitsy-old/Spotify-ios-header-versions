@@ -8,7 +8,7 @@
 
 #import "SPTGaiaSettingsProvider-Protocol.h"
 
-@class NSString, SPTGaiaDependencyInjectorImplementation, SPTGaiaHomeDeviceManager, SPTGaiaLogger, SPTObserverManager;
+@class NSString, SPTGaiaDependencyInjectorImplementation, SPTGaiaHomeDeviceManager, SPTGaiaLogger, SPTGaiaUbiLogger, SPTObserverManager;
 @protocol SPTGaiaDevicePickerDeviceSpecificConfigurationProvider, SPTGaiaDevicePickerPresenter, SPTGaiaLockScreenPlayerFlagsProvider><SPTGaiaHomeDeviceFlagsProvider, SPTGaiaSettingsStorageProtocol, SPTLinkDispatcher, SPTLogCenter;
 
 @interface SPTGaiaSettingsManager : NSObject <SPTGaiaSettingsProvider>
@@ -21,6 +21,7 @@
     SPTGaiaHomeDeviceManager *_savedDeviceManager;
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTGaiaLogger *_logger;
+    SPTGaiaUbiLogger *_ubiLogger;
     id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> _deviceConfiguration;
     SPTGaiaDependencyInjectorImplementation *_dependencyInjector;
 }
@@ -28,6 +29,7 @@
 + (id)createDefaultSettingStorage;
 @property(readonly, nonatomic) SPTGaiaDependencyInjectorImplementation *dependencyInjector; // @synthesize dependencyInjector=_dependencyInjector;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> deviceConfiguration; // @synthesize deviceConfiguration=_deviceConfiguration;
+@property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTGaiaLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *savedDeviceManager; // @synthesize savedDeviceManager=_savedDeviceManager;
@@ -52,7 +54,7 @@
 - (void)notifyObserversLocalDevicesOnlySettingChanged;
 - (void)notifyObserversLockScreenControlsEnabledSettingsChanged;
 - (void)registerDefaultSettingsIfNotExist;
-- (id)initWithDevicePickerPresenter:(id)arg1 storage:(id)arg2 logCenter:(id)arg3 settingsFlags:(id)arg4 savedDeviceManager:(id)arg5 linkDispatcher:(id)arg6 logger:(id)arg7 deviceConfiguration:(id)arg8 dependencyInjector:(id)arg9;
+- (id)initWithDevicePickerPresenter:(id)arg1 storage:(id)arg2 logCenter:(id)arg3 settingsFlags:(id)arg4 savedDeviceManager:(id)arg5 linkDispatcher:(id)arg6 logger:(id)arg7 ubiLogger:(id)arg8 deviceConfiguration:(id)arg9 dependencyInjector:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

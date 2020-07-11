@@ -8,22 +8,23 @@
 
 #import "SPTVoiceLibraryAudioRecorder-Protocol.h"
 
-@class NSString, SPTVoiceLibraryAudioEngineRecorderFactory;
-@protocol SPTVoiceLibraryAudioRecorderDelegate;
+@class NSString, SPTObserverManager, SPTVoiceLibraryAudioEngineRecorderFactory;
 
 @interface SPTVoiceLibraryAudioUnitRecorder : NSObject <SPTVoiceLibraryAudioRecorder>
 {
     _Bool _recording;
     _Bool _supportsLevelMonitoring;
-    id <SPTVoiceLibraryAudioRecorderDelegate> _delegate;
+    SPTObserverManager *_observerManager;
     SPTVoiceLibraryAudioEngineRecorderFactory *_factory;
 }
 
 @property(readonly, nonatomic) __weak SPTVoiceLibraryAudioEngineRecorderFactory *factory; // @synthesize factory=_factory;
 @property(readonly, nonatomic) _Bool supportsLevelMonitoring; // @synthesize supportsLevelMonitoring=_supportsLevelMonitoring;
-@property(nonatomic) __weak id <SPTVoiceLibraryAudioRecorderDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic, getter=isRecording) _Bool recording; // @synthesize recording=_recording;
 - (void).cxx_destruct;
+- (void)removeObserver:(id)arg1;
+- (void)addObserver:(id)arg1;
 @property(readonly, nonatomic) double sampleRate;
 - (void)stopRecording;
 - (void)startRecording;

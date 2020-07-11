@@ -21,6 +21,8 @@
 @property(readonly, copy, nonatomic) NSURL *collectionURI; // @synthesize collectionURI=_collectionURI;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 - (void).cxx_destruct;
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
 - (id)initWithName:(id)arg1 collectionURI:(id)arg2 imageURL:(id)arg3 artistNames:(id)arg4;
 
 @end

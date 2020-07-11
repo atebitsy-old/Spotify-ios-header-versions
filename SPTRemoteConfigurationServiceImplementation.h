@@ -8,25 +8,29 @@
 
 #import "SPTRemoteConfigurationService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTRemoteConfigurationFeatureProperties;
-@protocol SPTBootstrapService, SPTEventSenderService, SPTNetworkService, SPTRemoteConfigurationIntegration, SPTRemoteConfigurationResolver;
+@class NSString, SPTAllocationContext, SPTRemoteConfigurationCoreBridgeImplementation, SPTRemoteConfigurationFeatureProperties;
+@protocol SPTBootstrapService, SPTCoreService, SPTEventSenderService, SPTNetworkService, SPTRemoteConfigurationIntegration, SPTRemoteConfigurationResolver;
 
 @interface SPTRemoteConfigurationServiceImplementation : NSObject <SPTRemoteConfigurationService>
 {
     id <SPTBootstrapService> _bootstrapService;
+    id <SPTCoreService> _coreService;
     id <SPTNetworkService> _networkService;
     id <SPTEventSenderService> _eventSenderService;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     id <SPTRemoteConfigurationIntegration> _remoteConfigurationIntegration;
     SPTRemoteConfigurationFeatureProperties *_properties;
+    SPTRemoteConfigurationCoreBridgeImplementation *_coreBridge;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTRemoteConfigurationCoreBridgeImplementation *coreBridge; // @synthesize coreBridge=_coreBridge;
 @property(retain, nonatomic) SPTRemoteConfigurationFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) id <SPTRemoteConfigurationIntegration> remoteConfigurationIntegration; // @synthesize remoteConfigurationIntegration=_remoteConfigurationIntegration;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
+@property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTBootstrapService> bootstrapService; // @synthesize bootstrapService=_bootstrapService;
 - (void).cxx_destruct;
 - (void)setupRemoteConfiguration;

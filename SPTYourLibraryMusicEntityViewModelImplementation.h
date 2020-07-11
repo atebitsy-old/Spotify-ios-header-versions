@@ -52,7 +52,7 @@
 - (void).cxx_destruct;
 - (void)entityModelDidUpdate:(id)arg1 itemsCountChanged:(_Bool)arg2;
 - (void)entityModel:(id)arg1 error:(id)arg2;
-- (void)didCancelSortingFilteringPicker:(id)arg1;
+- (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;
 - (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedSortRule:(id)arg2;
@@ -69,6 +69,9 @@
 - (void)removeFilterAtIndex:(long long)arg1;
 - (void)resetFilters;
 - (id)sortingAndFilteringPickerViewController;
+- (void)setActiveFilterRules:(id)arg1;
+- (id)activeFilterRules;
+- (id)availableFilterRules;
 @property(readonly, nonatomic) NSArray *activeFilterTitles;
 @property(readonly, nonatomic) unsigned long long filteredContentState;
 @property(copy, nonatomic) NSString *textFilter;

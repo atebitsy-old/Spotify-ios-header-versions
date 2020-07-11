@@ -10,19 +10,22 @@
 #import "SPTNowPlayingAdUnitViewController-Protocol.h"
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, NSURL, SPTAdPlayerObservable, SPTTheme;
+@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, NSURL, SPTAdFeatureFlagChecks, SPTAdPlayerObservable, SPTTheme;
 @protocol GLUETheme, SPTAdsManager, SPTNowPlayingContainingViewController, SPTNowPlayingVideoControlsVisibilityDelegate;
 
 @interface SPTNowPlayingVideoAdInfoUnitViewController : UIViewController <SPTAdPlayerObserver, SPTNowPlayingContainedViewController, SPTNowPlayingAdUnitViewController>
 {
     _Bool _verticalVideo;
+    _Bool _noOfferCardMessageVisible;
     UIViewController<SPTNowPlayingContainingViewController> *container;
     id <SPTNowPlayingVideoControlsVisibilityDelegate> _visibilityDelegate;
+    GLUELabel *_footerLabel;
     GLUELabel *_titleLabel;
     GLUEButton *_actionButton;
     GLUEButton *_skipButton;
     SPTTheme *_theme;
     id <GLUETheme> _glueTheme;
+    SPTAdFeatureFlagChecks *_featureChecker;
     id <SPTAdsManager> _adsManager;
     NSURL *_clickthroughURL;
     unsigned long long _skipDelaySeconds;
@@ -32,6 +35,7 @@
     SPTAdPlayerObservable *_observer;
 }
 
+@property(nonatomic) _Bool noOfferCardMessageVisible; // @synthesize noOfferCardMessageVisible=_noOfferCardMessageVisible;
 @property(nonatomic) _Bool verticalVideo; // @synthesize verticalVideo=_verticalVideo;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observer; // @synthesize observer=_observer;
 @property(nonatomic) double animationDuration; // @synthesize animationDuration=_animationDuration;
@@ -40,11 +44,13 @@
 @property(nonatomic) unsigned long long skipDelaySeconds; // @synthesize skipDelaySeconds=_skipDelaySeconds;
 @property(retain, nonatomic) NSURL *clickthroughURL; // @synthesize clickthroughURL=_clickthroughURL;
 @property(readonly, nonatomic) __weak id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
+@property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) __weak SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEButton *skipButton; // @synthesize skipButton=_skipButton;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) GLUELabel *footerLabel; // @synthesize footerLabel=_footerLabel;
 @property(nonatomic) __weak id <SPTNowPlayingVideoControlsVisibilityDelegate> visibilityDelegate; // @synthesize visibilityDelegate=_visibilityDelegate;
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container; // @synthesize container;
 - (void).cxx_destruct;
@@ -60,13 +66,14 @@
 - (void)setupSkipButtonWithAnimation:(_Bool)arg1;
 - (void)skipButtonTapped;
 - (void)didTapActionButton;
+- (void)configureTextLabelWithEntity:(id)arg1;
 - (void)configureSkipButtonWithEntity:(id)arg1;
 - (void)configureActionButtonWithEntity:(id)arg1;
 - (void)configureTitleLabelWithEntity:(id)arg1;
 - (void)configureSubviewsWithEntity:(id)arg1;
 - (void)setupConstraints;
 - (void)dealloc;
-- (id)initWithAdManager:(id)arg1 playerObservable:(id)arg2 theme:(id)arg3;
+- (id)initWithAdManager:(id)arg1 playerObservable:(id)arg2 theme:(id)arg3 featureChecker:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

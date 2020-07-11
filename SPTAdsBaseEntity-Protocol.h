@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) id <SPTAdsBaseReward> reward;
 @property(readonly, nonatomic, getter=isPhysicalButtonsSupported) _Bool physicalButtonsSupported;
 @property(readonly, nonatomic) id <SPTAdsBaseFeaturedAction> featuredAction;
+@property(readonly, nonatomic) _Bool inAppBrowser;
 @property(readonly, nonatomic) NSURL *clickthroughURL;
 @property(readonly, copy, nonatomic) NSString *actionText;
 @property(readonly, nonatomic) double duration;

@@ -17,7 +17,7 @@
 }
 
 + (id)defaultName;
-+ (id)commandWithName:(id)arg1 entityURI:(id)arg2;
++ (id)commandWithEntityURI:(id)arg1;
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 - (void).cxx_destruct;

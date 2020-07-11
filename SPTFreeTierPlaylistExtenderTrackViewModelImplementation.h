@@ -32,7 +32,7 @@
 @property(readonly, nonatomic) double timeLeft;
 @property(readonly, nonatomic) double duration;
 @property(readonly, nonatomic) NSDate *publishDate;
-@property(readonly, copy, nonatomic) NSString *publisherName;
+@property(readonly, copy, nonatomic) NSString *podcastTitle;
 @property(readonly, nonatomic) NSURL *videoThumbnailURL;
 @property(readonly, nonatomic, getter=isImageEnabled) _Bool imageEnabled;
 @property(readonly, nonatomic) long long offlineSyncStatus;
@@ -51,7 +51,7 @@
 @property(readonly, copy, nonatomic) NSString *previewID;
 @property(readonly, nonatomic) NSURL *URL;
 @property(readonly, nonatomic) NSURL *imageURL;
-@property(readonly, copy, nonatomic) NSString *subtitle;
+@property(readonly, copy, nonatomic) NSString *glueAudioTrackSubtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 @property(readonly, nonatomic) NSURL *albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName;

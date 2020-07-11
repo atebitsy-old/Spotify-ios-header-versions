@@ -26,11 +26,9 @@
 - (id)viewURI;
 - (struct NSDictionary *)defaultCommandRegistry;
 - (id)makeUBIHubsLogger;
-- (id)makeSearchLogger;
+- (id)makeSearchHubsLogger;
 - (id)makeSearchHubViewController;
 @property(readonly, nonatomic) id <HUBCommandHandler> contextMenuCommandHandler;
-@property(readonly, nonatomic) id <HUBCommandHandler> navigateCommandHandler;
-@property(readonly, nonatomic) id <HUBCommandHandler> playCommandHandler;
 - (id)initWithDependencies:(id)arg1 configuration:(id)arg2;
 
 @end

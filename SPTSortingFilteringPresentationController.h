@@ -7,14 +7,17 @@
 #import <UIKit/UIPresentationController.h>
 
 @class SPTSortingFilteringGLUETheme, UIView;
+@protocol SPTSortingFilteringPresentationControllerDelegate;
 
 @interface SPTSortingFilteringPresentationController : UIPresentationController
 {
     UIView *_dimmingView;
+    id <SPTSortingFilteringPresentationControllerDelegate> presentationControllerDelegate;
     SPTSortingFilteringGLUETheme *_theme;
 }
 
 @property(readonly, nonatomic) SPTSortingFilteringGLUETheme *theme; // @synthesize theme=_theme;
+@property(nonatomic) __weak id <SPTSortingFilteringPresentationControllerDelegate> presentationControllerDelegate; // @synthesize presentationControllerDelegate;
 - (void).cxx_destruct;
 - (void)onTapGesture:(id)arg1;
 - (void)containerViewDidLayoutSubviews;

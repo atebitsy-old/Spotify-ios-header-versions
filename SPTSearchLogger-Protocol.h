@@ -4,12 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTHubImpressionLogger-Protocol.h"
-#import "SPTHubInteractionLogger-Protocol.h"
+#import "NSObject-Protocol.h"
 
 @class NSString;
 
-@protocol SPTSearchLogger <SPTHubImpressionLogger, SPTHubInteractionLogger>
+@protocol SPTSearchLogger <NSObject>
 - (void)logUIImpressionVoiceFloatingMicrophoneTooltipCalloutWithSourceIdentifier:(NSString *)arg1;
 - (void)logUIInteractionLaunchVoiceSearchViewWithSourceIdentifier:(NSString *)arg1;
 - (void)logUIInteractionForClearCurrentSearchStringWithRequestID:(NSString *)arg1;

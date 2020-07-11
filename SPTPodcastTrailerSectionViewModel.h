@@ -29,6 +29,7 @@
     id <SPTPodcastEpisode> _trailerEpisode;
 }
 
++ (_Bool)isTrailerEpisodeValid:(id)arg1 errorMessage:(id *)arg2;
 @property(retain, nonatomic) id <SPTPodcastEpisode> trailerEpisode; // @synthesize trailerEpisode=_trailerEpisode;
 @property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;

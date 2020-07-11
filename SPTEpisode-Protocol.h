@@ -9,6 +9,7 @@
 @class NSDate, NSString, NSURL;
 
 @protocol SPTEpisode <NSObject>
+@property(readonly, nonatomic, getter=isVideoShowMediaType) _Bool videoShowMediaType;
 @property(readonly, nonatomic, getter=isFollowingPodcast) _Bool followingPodcast;
 @property(readonly, nonatomic, getter=isExplicit) _Bool explicit;
 @property(readonly, nonatomic) double lastPlayedAt;

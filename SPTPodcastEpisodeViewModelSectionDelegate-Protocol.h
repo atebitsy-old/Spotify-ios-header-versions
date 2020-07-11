@@ -9,7 +9,7 @@
 @class NSIndexPath, SPTPodcastEpisodeSectionViewModel, SPTPodcastFilterContextViewController;
 
 @protocol SPTPodcastEpisodeViewModelSectionDelegate <NSObject>
-- (void)viewModelPodcastDidUpdatePlayingEpisode:(SPTPodcastEpisodeSectionViewModel *)arg1 atIndexPath:(NSIndexPath *)arg2;
+- (void)viewModel:(SPTPodcastEpisodeSectionViewModel *)arg1 didUpdatePlayingEpisodeAtIndexPath:(NSIndexPath *)arg2;
 - (void)viewModel:(SPTPodcastEpisodeSectionViewModel *)arg1 willPresentFilterContextViewController:(SPTPodcastFilterContextViewController *)arg2 fromSender:(id)arg3;
 - (void)sectionViewModelDidUpdateFilterSorting:(SPTPodcastEpisodeSectionViewModel *)arg1;
 @end

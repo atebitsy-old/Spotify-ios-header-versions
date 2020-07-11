@@ -6,25 +6,21 @@
 
 #import "GLUEThemeBase.h"
 
-@class SPTLyricsV2Colors;
-
 @interface SPTLyricsV2GLUETheme : GLUEThemeBase
 {
-    _Bool _isLyricsEastAsian;
-    SPTLyricsV2Colors *_colors;
+    _Bool _isDefaultScreen;
 }
 
-@property(nonatomic) _Bool isLyricsEastAsian; // @synthesize isLyricsEastAsian=_isLyricsEastAsian;
-@property(retain, nonatomic) SPTLyricsV2Colors *colors; // @synthesize colors=_colors;
-- (void).cxx_destruct;
-- (id)vocalRemovalFeedbackBannerStyle;
-- (id)fullscreenFooterViewStyle:(_Bool)arg1;
-- (id)fullscreenHeaderViewStyle:(_Bool)arg1;
-- (id)fullscreenLyricsViewStyleProvider:(_Bool)arg1;
-- (id)fullscreenViewStyle:(_Bool)arg1;
-- (id)nowPlayingCardLyricsViewStyleProvider;
-- (id)nowPlayingCardViewStyle;
-- (void)switchToDefaultColors;
+@property(nonatomic) _Bool isDefaultScreen; // @synthesize isDefaultScreen=_isDefaultScreen;
+- (id)vocalRemovalFeedbackBannerStyleWithColors:(id)arg1;
+- (id)fullscreenFooterViewStyle:(_Bool)arg1 withColors:(id)arg2;
+- (id)fullscreenHeaderViewStyle:(_Bool)arg1 withColors:(id)arg2;
+- (id)fullscreenLyricsViewStyleProvider:(_Bool)arg1 withColors:(id)arg2 isLyricsEastAsian:(_Bool)arg3;
+- (id)fullscreenViewStyle:(_Bool)arg1 withColors:(id)arg2;
+- (id)nowPlayingCardLyricsViewStyleProviderWithColors:(id)arg1 isLyricsEastAsian:(_Bool)arg2;
+- (id)nowPlayingCardViewStyleWithColors:(id)arg1;
+- (_Bool)isDefaultScreenClass;
+- (_Bool)isIPad;
 - (id)initWithParentTheme:(id)arg1;
 
 @end

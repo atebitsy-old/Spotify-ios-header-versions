@@ -9,11 +9,12 @@
 #import "SPTBMWListScreen-Protocol.h"
 
 @class NSDictionary, NSString, NSTimer, SPTAccessory;
-@protocol SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationSearchController;
+@protocol SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationSearchController;
 
 @interface SPTBMWSearchScreen : NSObject <SPTBMWListScreen>
 {
     id <SPTBMWListScreenDelegate> _delegate;
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     id <SPTExternalIntegrationSearchController> _searchController;
     NSDictionary *_searchResult;
     NSTimer *_bounceTimer;
@@ -54,6 +55,7 @@
 - (void)updateSearchRequest:(CDUnknownBlockType)arg1;
 - (void)update:(CDUnknownBlockType)arg1;
 - (void)didChangeSearchString:(id)arg1;
+@property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 - (id)initWithSearchController:(id)arg1 debugLog:(id)arg2 delegate:(id)arg3 currentAccessory:(id)arg4;
 
 // Remaining properties

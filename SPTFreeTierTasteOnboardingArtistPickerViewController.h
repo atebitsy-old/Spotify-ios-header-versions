@@ -52,6 +52,7 @@
 @property(retain, nonatomic) UIBarButtonItem *closeButtonItem; // @synthesize closeButtonItem=_closeButtonItem;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistPickerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)updateSeedASessionElementsAppearance;
 - (void)updateActionButtonAppearance;
 - (void)didTapActionButton:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;

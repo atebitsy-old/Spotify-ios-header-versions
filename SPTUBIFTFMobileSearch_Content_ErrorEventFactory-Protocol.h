@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIFTFMobileSearch_Content_Error_RetryButtonEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIFTFMobileSearch_Content_Error_RetryButtonEventFactory, SPTUBIImpressionEvent;
 
 @protocol SPTUBIFTFMobileSearch_Content_ErrorEventFactory <NSObject>
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIFTFMobileSearch_Content_Error_RetryButtonEventFactory>)retryButtonFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

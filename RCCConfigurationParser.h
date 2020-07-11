@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)stringFromConfigurationData:(id)arg1 error:(id *)arg2;
++ (id)parseData:(id)arg1 error:(id *)arg2;
 
 @end
 

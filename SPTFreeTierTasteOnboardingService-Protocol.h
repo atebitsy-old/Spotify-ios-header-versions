@@ -6,10 +6,12 @@
 
 #import "SPTService-Protocol.h"
 
+@class SPTArtistPickerViewControllerProvider;
 @protocol SPTFreeTierTasteOnboardingCurationProvider, SPTOnboardingFlowCoordinator;
 
 @protocol SPTFreeTierTasteOnboardingService <SPTService>
 @property(readonly, nonatomic, getter=isOnboardingCoordinationEnabled) _Bool onboardingCoordinationEnabled;
+- (SPTArtistPickerViewControllerProvider *)artistPickerViewControllerProvider;
 - (id <SPTOnboardingFlowCoordinator>)provideCoordinator;
 - (id <SPTFreeTierTasteOnboardingCurationProvider>)provideCurator;
 @end

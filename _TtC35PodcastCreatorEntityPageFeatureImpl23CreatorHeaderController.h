@@ -9,6 +9,7 @@
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl23CreatorHeaderController : VISREFBaseHeaderController
 {
     // Error parsing type: , name: dimensions
+    // Error parsing type: , name: backButtonAction
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: gradientBackgroundView
     // Error parsing type: , name: contentView
@@ -18,6 +19,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)callBackButtonAction;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
 @property(nonatomic, readonly) double minimumHeight;
 

@@ -27,6 +27,6 @@
 - (void)loginWithCredentials:(SPTAuthLoginCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2 completion:(void (^)(NSError *))arg3;
 - (void)loginWithStoredCredentials:(SPTAuthLoginCredentials *)arg1 options:(SPTAuthLoginOptions *)arg2 completion:(void (^)(NSError *))arg3;
 - (void)loginWithPhoneNumberIdentifier:(SPTAuthPhoneNumberIdentifier *)arg1;
-- (void)loginWithOneTimeToken:(SPTAuthOneTimeTokenCredential *)arg1 userDidSignUp:(_Bool)arg2 completion:(void (^)(NSError *))arg3;
+- (void)loginWithOneTimeToken:(SPTAuthOneTimeTokenCredential *)arg1 options:(SPTAuthLoginOptions *)arg2 userDidSignUp:(_Bool)arg3 completion:(void (^)(NSError *))arg4;
 @end
 

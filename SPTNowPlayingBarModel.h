@@ -9,12 +9,13 @@
 #import "SPTGaiaConnectObserver-Protocol.h"
 #import "SPTNowPlayingTrackMetadataQueueObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
+#import "SPTStatefulPlayerObserver-Protocol.h"
 #import "_TtP21VoiceCompanionFeature32SPTVoiceCompanionSessionObserver_-Protocol.h"
 
 @class NSString, NSURL, SPTNowPlayingModel, SPTNowPlayingTrackMetadataQueue, SPTObserverManager, SPTPlayerState, SPTPlayerTrack, SPTStatefulPlayer;
 @protocol SPTLinkDispatcher, SPTPlayer;
 
-@interface SPTNowPlayingBarModel : NSObject <SPTPlayerObserver, SPTNowPlayingTrackMetadataQueueObserver, SPTGaiaConnectObserver, _TtP21VoiceCompanionFeature32SPTVoiceCompanionSessionObserver_>
+@interface SPTNowPlayingBarModel : NSObject <SPTPlayerObserver, SPTNowPlayingTrackMetadataQueueObserver, SPTGaiaConnectObserver, _TtP21VoiceCompanionFeature32SPTVoiceCompanionSessionObserver_, SPTStatefulPlayerObserver>
 {
     _Bool _skippingToPreviousTrackAllowed;
     _Bool _skippingToNextTrackAllowed;
@@ -51,6 +52,10 @@
 @property(retain, nonatomic) SPTPlayerTrack *displayedMetadata; // @synthesize displayedMetadata=_displayedMetadata;
 @property(retain, nonatomic) SPTNowPlayingTrackMetadataQueue *trackMetadataQueue; // @synthesize trackMetadataQueue=_trackMetadataQueue;
 - (void).cxx_destruct;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)playerDidFinishUpdating:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)didReceiveVoiceRequest:(id)arg1;

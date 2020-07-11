@@ -19,6 +19,7 @@
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
 - (id)hitUiReveal;
+- (id)impression;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

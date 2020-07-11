@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL, SPTAccessory;
+@class NSURL;
+@protocol SPTExternalIntegrationExternalActionOrigin;
 
 @protocol SPTExternalIntegrationActionCoordinator <NSObject>
-- (void)performActionWithURI:(NSURL *)arg1 currentAccessory:(SPTAccessory *)arg2 completionHandler:(void (^)(NSError *))arg3;
+- (void)performActionWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (_Bool)canPerformActionWithURI:(NSURL *)arg1;
 @end
 

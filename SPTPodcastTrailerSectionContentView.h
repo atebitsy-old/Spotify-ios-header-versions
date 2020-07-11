@@ -6,14 +6,13 @@
 
 #import "GLUEStatefulView.h"
 
-@class GLUEContextMenuAccessoryButton, GLUEImageView, GLUETrackAccessoryLabel, NSURL, SPTPodcastTrailerAccessoryLabel, SPTPodcastTrailerSectionCircularProgressView, SPTTheme, UIControl, UIImageView, UILabel, UIStackView, UIView;
+@class GLUEContextMenuAccessoryButton, GLUEImageView, GLUETrackAccessoryLabel, NSURL, SPTPodcastTrailerAccessoryLabel, SPTPodcastTrailerSectionCircularProgressView, UIControl, UIImageView, UILabel, UIStackView, UIView;
 @protocol GLUEImageLoader, GLUETheme;
 
 @interface SPTPodcastTrailerSectionContentView : GLUEStatefulView
 {
     id <GLUEImageLoader> _imageLoader;
     GLUEContextMenuAccessoryButton *_contextMenuButton;
-    SPTTheme *_catTheme;
     id <GLUETheme> _glueTheme;
     NSURL *_imageURL;
     GLUEImageView *_imageView;
@@ -42,7 +41,6 @@
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
-@property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
 @property(retain, nonatomic) GLUEContextMenuAccessoryButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 - (void).cxx_destruct;

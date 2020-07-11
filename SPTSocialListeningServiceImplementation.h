@@ -11,7 +11,7 @@
 #import "SPTSocialListeningService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
-@protocol CosmosFeature, ProfileFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTURIDispatchService, SlateFeature;
+@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
 
 @interface SPTSocialListeningServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTOfflineModeStateObserver, SPTSocialListeningService>
 {
@@ -28,7 +28,7 @@
     id <SPTShareFeature> _shareFeature;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTURIDispatchService> _URIDispatchService;
-    id <ProfileFeature> _profileFeature;
+    id <_TtP16ProfileV2Feature19SPTProfileV2Service_> _profileService;
     id <SlateFeature> _slateService;
     id <SPTSnackbarService> _snackbarService;
     SPTSocialListeningTestManagerImplementation *_testManager;
@@ -55,7 +55,7 @@
 @property(retain, nonatomic) SPTSocialListeningTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
-@property(nonatomic) __weak id <ProfileFeature> profileFeature; // @synthesize profileFeature=_profileFeature;
+@property(nonatomic) __weak id <_TtP16ProfileV2Feature19SPTProfileV2Service_> profileService; // @synthesize profileService=_profileService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;

@@ -19,7 +19,7 @@
     NSDictionary *_artistPortraits;
 }
 
-@property(retain, nonatomic) NSDictionary *artistPortraits; // @synthesize artistPortraits=_artistPortraits;
+@property(copy, nonatomic) NSDictionary *artistPortraits; // @synthesize artistPortraits=_artistPortraits;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 - (void).cxx_destruct;

@@ -10,7 +10,7 @@
 #import "SPTYourLibraryMusicTestManager-Protocol.h"
 
 @class NSString, SPTYourLibraryMusicFeatureProperties;
-@protocol SPTCollectionPlatformTestManager, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver, _TtP24EncoreIntegrationFeature20SPTEncoreTestManager_;
+@protocol SPTCollectionPlatformTestManager, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver, SPTYourLibraryTestManager, _TtP24EncoreIntegrationFeature20SPTEncoreTestManager_;
 
 @interface SPTYourLibraryMusicTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTYourLibraryMusicTestManager>
 {
@@ -22,6 +22,7 @@
     SPTYourLibraryMusicFeatureProperties *_remoteConfigurationProperties;
     id <SPTCollectionPlatformTestManager> _collectionPlatformTestManager;
     id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> _encoreTestManager;
+    id <SPTYourLibraryTestManager> _yourLibraryTestManager;
     id <SPTFeatureFlagSignal> _windowedTrackTestSignal;
     id <SPTFeatureFlagSignal> _consolidatedExperienceSignal;
 }
@@ -30,6 +31,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> consolidatedExperienceSignal; // @synthesize consolidatedExperienceSignal=_consolidatedExperienceSignal;
 @property(nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled; // @synthesize premiumLabelEnabled=_premiumLabelEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> windowedTrackTestSignal; // @synthesize windowedTrackTestSignal=_windowedTrackTestSignal;
+@property(readonly, nonatomic) id <SPTYourLibraryTestManager> yourLibraryTestManager; // @synthesize yourLibraryTestManager=_yourLibraryTestManager;
 @property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> encoreTestManager; // @synthesize encoreTestManager=_encoreTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
 @property(retain, nonatomic) SPTYourLibraryMusicFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
@@ -42,7 +44,10 @@
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic) unsigned long long artistRecommendationsSource;
+@property(readonly, nonatomic, getter=isFilterChipsEnabled) _Bool filterChipsEnabled;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;
+@property(readonly, nonatomic, getter=isUnlikeDialogEnabled) _Bool unlikeDialogEnabled;
+@property(readonly, nonatomic, getter=isHideCreatePlaylistEnabled) _Bool hideCreatePlaylistEnabled;
 @property(readonly, nonatomic, getter=isLikedSongsMinorTableUpdateMechanismEnabled) _Bool likedSongsMinorTableUpdateMechanismEnabled;
 @property(readonly, nonatomic, getter=isGroupsInLikedSongsEnabled) _Bool groupsInLikedSongsEnabled;
 @property(readonly, nonatomic, getter=isPageLoaderEnabledForLikedSongs) _Bool pageLoaderEnabledForLikedSongs;
@@ -50,7 +55,7 @@
 - (void)handleWindowedTrackSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupIsPremiumOnlySignal;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 remoteConfigurationResolver:(id)arg3 collectionPlatformTestManager:(id)arg4 consolidatedExperienceSignal:(id)arg5 encoreTestManager:(id)arg6;
+- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 remoteConfigurationResolver:(id)arg3 collectionPlatformTestManager:(id)arg4 consolidatedExperienceSignal:(id)arg5 encoreTestManager:(id)arg6 yourLibraryTestManager:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

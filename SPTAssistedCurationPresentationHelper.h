@@ -25,6 +25,7 @@
 - (void)didReceiveURIOpenAttemptNotification:(id)arg1;
 - (void)removeSpotifyURIObserver;
 - (void)addSpotifyURIObserver;
+- (_Bool)isIPad;
 - (void)dismissAssistedCurationPresenter;
 - (void)assistedCurationNavigationController:(id)arg1 dismiss:(_Bool)arg2;
 - (void)presentAssistedCurationViewController:(id)arg1;

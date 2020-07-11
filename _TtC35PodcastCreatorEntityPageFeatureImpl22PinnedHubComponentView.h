@@ -8,7 +8,6 @@
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl22PinnedHubComponentView : HUBComponentView
 {
-    // Error parsing type: , name: headerView
     // Error parsing type: , name: pinnedView
     // Error parsing type: , name: binder
 }

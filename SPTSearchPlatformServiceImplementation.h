@@ -77,6 +77,7 @@
 - (void).cxx_destruct;
 - (id)makeLoadingLoggerWithConfiguration:(id)arg1;
 - (id)provideCosmosDictionaryDataLoader;
+- (id)offlineAlbumDataLoader;
 - (id)offlinePlaylistDataLoader;
 - (id)makeViewModelProviderWithConfiguration:(id)arg1;
 - (id)makeDefaultSearchRequestParameters;

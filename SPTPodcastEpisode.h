@@ -20,6 +20,7 @@
     _Bool _played;
     _Bool _explicit;
     _Bool _followingPodcast;
+    _Bool _videoShowMediaType;
     NSString *_title;
     NSString *_longDescription;
     NSString *_podcastTitle;
@@ -41,6 +42,7 @@
 }
 
 + (id)stringFromTimeInterval:(double)arg1;
+@property(nonatomic, getter=isVideoShowMediaType) _Bool videoShowMediaType; // @synthesize videoShowMediaType=_videoShowMediaType;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic, getter=isFollowingPodcast) _Bool followingPodcast; // @synthesize followingPodcast=_followingPodcast;
 @property(nonatomic, getter=isExplicit) _Bool explicit; // @synthesize explicit=_explicit;

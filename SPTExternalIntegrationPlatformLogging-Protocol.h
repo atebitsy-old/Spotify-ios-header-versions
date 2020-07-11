@@ -7,23 +7,24 @@
 #import "NSObject-Protocol.h"
 
 @class NSNumber, NSString, NSURL;
+@protocol SPTExternalIntegrationExternalActionOrigin;
 
 @protocol SPTExternalIntegrationPlatformLogging <NSObject>
-- (void)logSetPodcastPlaybackSpeed:(NSNumber *)arg1 accessorySessionID:(NSString *)arg2;
-- (void)logSearchWithQuery:(NSString *)arg1 accessorySessionID:(NSString *)arg2;
-- (void)logGetItemWithUri:(NSURL *)arg1 limit:(unsigned long long)arg2 accessorySessionID:(NSString *)arg3;
-- (void)logEnqueueItemWithURI:(NSURL *)arg1 accessorySessionID:(NSString *)arg2;
-- (void)logPlayItemWithURI:(NSURL *)arg1 accessorySessionID:(NSString *)arg2;
-- (void)logResumeWithAccessorySessionID:(NSString *)arg1;
-- (void)logPauseWithAccessorySessionID:(NSString *)arg1;
-- (void)logSkipPrevWithAccessorySessionID:(NSString *)arg1;
-- (void)logSkipNextWithAccessorySessionID:(NSString *)arg1;
-- (void)logRepeatDisabledWithAccessorySessionID:(NSString *)arg1;
-- (void)logRepeatAllWithAccessorySessionID:(NSString *)arg1;
-- (void)logRepeatOneWithAccessorySessionID:(NSString *)arg1;
-- (void)logShuffle:(_Bool)arg1 accessorySessionID:(NSString *)arg2;
-- (void)logRating:(_Bool)arg1 accessorySessionID:(NSString *)arg2;
-- (void)logStartRadioWithURI:(NSURL *)arg1 accessorySessionID:(NSString *)arg2;
-- (void)logSaved:(_Bool)arg1 forItemWithURI:(NSURL *)arg2 accessorySessionID:(NSString *)arg3;
+- (void)logSetPodcastPlaybackSpeed:(NSNumber *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2;
+- (void)logSearchWithQuery:(NSString *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2;
+- (void)logGetItemWithUri:(NSURL *)arg1 limit:(unsigned long long)arg2 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg3;
+- (void)logEnqueueItemWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2;
+- (void)logPlayItemWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2;
+- (void)logResumeWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1;
+- (void)logPauseWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1;
+- (void)logSkipPrevWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1;
+- (void)logSkipNextWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1;
+- (void)logRepeatDisabledWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1;
+- (void)logRepeatAllWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1;
+- (void)logRepeatOneWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1;
+- (void)logShuffle:(_Bool)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2;
+- (void)logRating:(_Bool)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2;
+- (void)logStartRadioWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2;
+- (void)logSaved:(_Bool)arg1 forItemWithURI:(NSURL *)arg2 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg3;
 @end
 

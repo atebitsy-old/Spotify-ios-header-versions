@@ -4,11 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "_TtC21FollowFeedFeatureImpl22HubComponentViewBinder.h"
+#import "HUBComponentView.h"
 
 @protocol HUBComponentEventHandler;
 
-@interface _TtC21FollowFeedFeatureImpl36ExpandableReleaseComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder
+@interface _TtC21FollowFeedFeatureImpl36ExpandableReleaseComponentViewBinder : HUBComponentView
 {
     // Error parsing type: , name: eventHandler
     // Error parsing type: , name: theme

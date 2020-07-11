@@ -12,7 +12,7 @@
 - (void)logSortingIdentifier:(NSString *)arg1 index:(unsigned long long)arg2;
 - (void)logClearFilterWithIdentifier:(NSString *)arg1 index:(unsigned long long)arg2;
 - (void)logFilterIdentifier:(NSString *)arg1 sectionId:(NSString *)arg2 filterAdded:(_Bool)arg3 index:(unsigned long long)arg4;
-- (void)logSortFilterPickerCanceled;
+- (void)logSortFilterPickerCanceledWithReason:(unsigned long long)arg1;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 @end
 

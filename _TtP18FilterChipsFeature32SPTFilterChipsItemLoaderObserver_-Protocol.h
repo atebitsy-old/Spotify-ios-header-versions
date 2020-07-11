@@ -5,8 +5,10 @@
 //
 
 @class NSArray;
+@protocol _TtP18FilterChipsFeature18SPTFilterChipsItem_;
 
 @protocol _TtP18FilterChipsFeature32SPTFilterChipsItemLoaderObserver_
+- (void)filterChipsItemSelected:(id <_TtP18FilterChipsFeature18SPTFilterChipsItem_>)arg1;
 - (void)filterChipsItemsLoaderObserverItemsUpdated:(NSArray *)arg1;
 @end
 

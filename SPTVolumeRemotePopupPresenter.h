@@ -10,7 +10,7 @@
 #import "SPTGaiaWirelessRoutesObserver-Protocol.h"
 #import "SPTVolumeObserver-Protocol.h"
 
-@class NSNotificationCenter, NSString, SPTVolumeAnimationConfig, SPTVolumeDeviceHelper, SPTVolumeRemotePopupView, UIApplication;
+@class NSNotificationCenter, NSString, SPTVolumeAnimationConfig, SPTVolumeDeviceHelper, SPTVolumeRemotePopupView, SPTVolumeUbiLogger, UIApplication;
 @protocol SPTGaiaConnectAPI, SPTGaiaIconProvider, SPTGaiaWirelessRoutesAPI, SPTVolumeAPI, SPTVolumeSystemPopupHider;
 
 @interface SPTVolumeRemotePopupPresenter : NSObject <SPTVolumeObserver, SPTGaiaConnectObserver, SPTGaiaWirelessRoutesObserver>
@@ -26,12 +26,14 @@
     id <SPTVolumeSystemPopupHider> _systemPopupHider;
     NSNotificationCenter *_notificationCenter;
     SPTVolumeDeviceHelper *_deviceHelper;
+    SPTVolumeUbiLogger *_ubiLogger;
     SPTVolumeRemotePopupView *_volumeView;
 }
 
 @property(nonatomic) _Bool devicePickerVisible; // @synthesize devicePickerVisible=_devicePickerVisible;
 @property(nonatomic) _Bool volumeUpdatedSinceHide; // @synthesize volumeUpdatedSinceHide=_volumeUpdatedSinceHide;
 @property(retain, nonatomic) SPTVolumeRemotePopupView *volumeView; // @synthesize volumeView=_volumeView;
+@property(readonly, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTVolumeDeviceHelper *deviceHelper; // @synthesize deviceHelper=_deviceHelper;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) id <SPTVolumeSystemPopupHider> systemPopupHider; // @synthesize systemPopupHider=_systemPopupHider;
@@ -60,7 +62,7 @@
 - (void)triggerVolumeViewUpdate;
 - (void)dealloc;
 - (void)setupObserving;
-- (id)initWithVolumeManager:(id)arg1 connectManager:(id)arg2 wirelessRoutesManager:(id)arg3 iconProvider:(id)arg4 application:(id)arg5 animationConfig:(id)arg6 systemPopupHider:(id)arg7 notificationCenter:(id)arg8 deviceHelper:(id)arg9;
+- (id)initWithVolumeManager:(id)arg1 connectManager:(id)arg2 wirelessRoutesManager:(id)arg3 iconProvider:(id)arg4 application:(id)arg5 animationConfig:(id)arg6 systemPopupHider:(id)arg7 notificationCenter:(id)arg8 deviceHelper:(id)arg9 ubiLogger:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,7 +9,7 @@
 @protocol SPTSortingFilteringFilterRule, SPTSortingFilteringPicker, SPTSortingFilteringSortRule;
 
 @protocol SPTSortingFilteringPickerDelegate <NSObject>
-- (void)didCancelSortingFilteringPicker:(id <SPTSortingFilteringPicker>)arg1;
+- (void)didCancelSortingFilteringPicker:(id <SPTSortingFilteringPicker>)arg1 reason:(unsigned long long)arg2;
 - (void)sortingFilteringPicker:(id <SPTSortingFilteringPicker>)arg1 deselectedFilterRule:(id <SPTSortingFilteringFilterRule>)arg2;
 - (void)sortingFilteringPicker:(id <SPTSortingFilteringPicker>)arg1 selectedFilterRule:(id <SPTSortingFilteringFilterRule>)arg2;
 - (void)sortingFilteringPicker:(id <SPTSortingFilteringPicker>)arg1 selectedSortRule:(id <SPTSortingFilteringSortRule>)arg2;

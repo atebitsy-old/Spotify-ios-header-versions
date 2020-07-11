@@ -45,6 +45,7 @@
     NSString *_previewID;
     NSDictionary *_displayCovers;
     NSString *_publisherName;
+    NSString *_showName;
     NSDate *_publishDate;
     double _duration;
     double _timeLeft;
@@ -55,6 +56,7 @@
 @property(nonatomic) double duration; // @synthesize duration=_duration;
 @property(nonatomic) _Bool isEpisode; // @synthesize isEpisode=_isEpisode;
 @property(retain, nonatomic) NSDate *publishDate; // @synthesize publishDate=_publishDate;
+@property(copy, nonatomic) NSString *showName; // @synthesize showName=_showName;
 @property(copy, nonatomic) NSString *publisherName; // @synthesize publisherName=_publisherName;
 @property(retain, nonatomic) NSDictionary *displayCovers; // @synthesize displayCovers=_displayCovers;
 @property(copy, nonatomic) NSString *previewID; // @synthesize previewID=_previewID;

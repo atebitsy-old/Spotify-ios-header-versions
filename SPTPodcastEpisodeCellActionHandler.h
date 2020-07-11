@@ -9,43 +9,35 @@
 #import "SPTPodcastEpisodeCellActionTarget-Protocol.h"
 
 @class NSString, SPTPodcastLogger, UIViewController;
-@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPageController><SPTPodcastPlayerDelegate, SPTPageRegistry, SPTPodcastContextMenuProvider, SPTPodcastDataLoader, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastTestManager, SPTSnackbarConditionalPresenter;
+@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPageController><SPTPodcastPlayerDelegate, SPTPodcastContextMenuProvider, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTSnackbarConditionalPresenter;
 
 @interface SPTPodcastEpisodeCellActionHandler : NSObject <SPTPodcastEpisodeCellActionTarget>
 {
     _Bool _reversePlaybackOrder;
     id <SPTPodcastEpisodeCellActionHandlerDelegate> _delegate;
+    id <SPTPodcastEpisodeCellActionHandlerEpisodeProvider> _episodeProvider;
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTPodcastLogger *_logger;
     id <SPTPodcastPlayer> _player;
-    id <SPTPodcastDataLoader> _dataLoader;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
-    id <SPTPodcastTestManager> _testManager;
     UIViewController<SPTPageController><SPTPodcastPlayerDelegate> *_viewController;
     id <SPTCollectionLogger> _collectionLogger;
-    CDUnknownBlockType _episodeForIndexPathBlock;
-    CDUnknownBlockType _episodesBlock;
-    id <SPTPageRegistry> _pageRegistry;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
 }
 
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
-@property(nonatomic) __weak id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
 @property(nonatomic) _Bool reversePlaybackOrder; // @synthesize reversePlaybackOrder=_reversePlaybackOrder;
-@property(copy, nonatomic) CDUnknownBlockType episodesBlock; // @synthesize episodesBlock=_episodesBlock;
-@property(copy, nonatomic) CDUnknownBlockType episodeForIndexPathBlock; // @synthesize episodeForIndexPathBlock=_episodeForIndexPathBlock;
 @property(readonly, nonatomic) __weak id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(nonatomic) __weak UIViewController<SPTPageController><SPTPodcastPlayerDelegate> *viewController; // @synthesize viewController=_viewController;
-@property(nonatomic) __weak id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
-@property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
+@property(readonly, nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerEpisodeProvider> episodeProvider; // @synthesize episodeProvider=_episodeProvider;
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)markAsUnplayed:(id)arg1 atIndexPath:(id)arg2;
@@ -65,7 +57,7 @@
 - (void)configureForViewController:(id)arg1;
 - (id)featureId;
 - (id)URI;
-- (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 testManager:(id)arg4 podcastOffliningManager:(id)arg5 collectionLogger:(id)arg6 player:(id)arg7 explicitContentAccessManager:(id)arg8 linkDispatcher:(id)arg9 episodeForIndexPathBlock:(CDUnknownBlockType)arg10 episodesBlock:(CDUnknownBlockType)arg11 dataLoader:(id)arg12 pageProvider:(id)arg13;
+- (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 podcastOffliningManager:(id)arg4 collectionLogger:(id)arg5 player:(id)arg6 explicitContentAccessManager:(id)arg7 linkDispatcher:(id)arg8 episodeProvider:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

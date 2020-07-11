@@ -7,10 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSMutableDictionary, NSURL, SPTPlayerState;
-@protocol SPTExternalIntegrationPlaybackController, SPTOnDemandSet;
+@protocol SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTOnDemandSet;
 
 @interface SPTDrivingModeCarModePlayer : NSObject
 {
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     id <SPTExternalIntegrationPlaybackController> _playbackController;
     id <SPTOnDemandSet> _onDemandSet;
     NSMutableDictionary *_resumePoints;
@@ -33,6 +34,7 @@
 - (void)clearQueuedURI;
 - (void)togglePlaybackForContextURI:(id)arg1;
 @property(readonly, nonatomic) SPTPlayerState *playerState;
+@property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 - (id)initWithPlaybackController:(id)arg1 onDemandSet:(id)arg2;
 
 @end

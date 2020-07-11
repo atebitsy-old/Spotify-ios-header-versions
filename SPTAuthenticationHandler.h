@@ -31,6 +31,7 @@
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 - (void).cxx_destruct;
 - (void)storeStickyCredentialsUserInfoForScreen:(unsigned long long)arg1;
+- (id)authLogin5Options;
 - (id)provideLoginOptionsForCredentials:(id)arg1;
 - (void)didLoginWithPhoneNumber;
 - (void)switchAccountWithCredentials:(id)arg1 fromScreen:(unsigned long long)arg2 userDidSignup:(_Bool)arg3 completionBlock:(CDUnknownBlockType)arg4;

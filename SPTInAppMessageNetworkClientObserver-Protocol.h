@@ -11,7 +11,7 @@
 @protocol SPTInAppMessageNetworkClientObserver <NSObject>
 
 @optional
-- (void)networkClient:(SPTInAppMessageNetworkClient *)arg1 didFetchMessage:(NSData *)arg2 messageFormat:(NSString *)arg3 triggers:(NSArray *)arg4 triggerType:(NSString *)arg5;
+- (void)networkClient:(SPTInAppMessageNetworkClient *)arg1 didFetchMessage:(NSData *)arg2 triggers:(NSArray *)arg3 triggerType:(NSString *)arg4;
 - (void)networkClient:(SPTInAppMessageNetworkClient *)arg1 didFetchTriggers:(NSData *)arg2;
 @end
 

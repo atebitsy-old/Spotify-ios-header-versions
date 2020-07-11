@@ -17,7 +17,8 @@
     id <SPTSearchUBIHubsLogger> _ubiHubsLogger;
 }
 
-+ (id)commandWithName:(id)arg1 trackURI:(id)arg2 viewURI:(id)arg3 featureIdentifier:(id)arg4 referrerIdentifier:(id)arg5 contextDescription:(id)arg6 contextLongDescription:(id)arg7;
++ (id)defaultName;
++ (id)commandWithTrackURI:(id)arg1 viewURI:(id)arg2 featureIdentifier:(id)arg3 referrerIdentifier:(id)arg4 contextDescription:(id)arg5 contextLongDescription:(id)arg6;
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTSearchPlayerProvider> playerProvider; // @synthesize playerProvider=_playerProvider;

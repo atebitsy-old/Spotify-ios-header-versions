@@ -18,25 +18,25 @@
 
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
-- (void)logExternalAccessorySessionID:(id)arg1 actionType:(id)arg2 userIntent:(id)arg3 uri:(id)arg4 eventSourceIdentifier:(id)arg5;
-- (void)logSetPodcastPlaybackSpeed:(id)arg1 accessorySessionID:(id)arg2;
-- (void)logSearchWithQuery:(id)arg1 accessorySessionID:(id)arg2;
-- (void)logGetItemWithUri:(id)arg1 limit:(unsigned long long)arg2 accessorySessionID:(id)arg3;
-- (void)logEnqueueItemWithURI:(id)arg1 accessorySessionID:(id)arg2;
-- (void)logPlayItemWithURI:(id)arg1 accessorySessionID:(id)arg2;
-- (void)logResumeWithAccessorySessionID:(id)arg1;
-- (void)logPauseWithAccessorySessionID:(id)arg1;
-- (void)logSkip:(id)arg1 accessorySessionID:(id)arg2;
-- (void)logSkipPrevWithAccessorySessionID:(id)arg1;
-- (void)logSkipNextWithAccessorySessionID:(id)arg1;
-- (void)logRepeat:(id)arg1 accessorySessionID:(id)arg2;
-- (void)logRepeatDisabledWithAccessorySessionID:(id)arg1;
-- (void)logRepeatAllWithAccessorySessionID:(id)arg1;
-- (void)logRepeatOneWithAccessorySessionID:(id)arg1;
-- (void)logShuffle:(_Bool)arg1 accessorySessionID:(id)arg2;
-- (void)logRating:(_Bool)arg1 accessorySessionID:(id)arg2;
-- (void)logStartRadioWithURI:(id)arg1 accessorySessionID:(id)arg2;
-- (void)logSaved:(_Bool)arg1 forItemWithURI:(id)arg2 accessorySessionID:(id)arg3;
+- (void)logExternalActionOrigin:(id)arg1 actionType:(id)arg2 userIntent:(id)arg3 uri:(id)arg4;
+- (void)logSetPodcastPlaybackSpeed:(id)arg1 externalActionOrigin:(id)arg2;
+- (void)logSearchWithQuery:(id)arg1 externalActionOrigin:(id)arg2;
+- (void)logGetItemWithUri:(id)arg1 limit:(unsigned long long)arg2 externalActionOrigin:(id)arg3;
+- (void)logEnqueueItemWithURI:(id)arg1 externalActionOrigin:(id)arg2;
+- (void)logPlayItemWithURI:(id)arg1 externalActionOrigin:(id)arg2;
+- (void)logResumeWithExternalActionOrigin:(id)arg1;
+- (void)logPauseWithExternalActionOrigin:(id)arg1;
+- (void)logSkip:(id)arg1 externalActionOrigin:(id)arg2;
+- (void)logSkipPrevWithExternalActionOrigin:(id)arg1;
+- (void)logSkipNextWithExternalActionOrigin:(id)arg1;
+- (void)logRepeat:(id)arg1 externalActionOrigin:(id)arg2;
+- (void)logRepeatDisabledWithExternalActionOrigin:(id)arg1;
+- (void)logRepeatAllWithExternalActionOrigin:(id)arg1;
+- (void)logRepeatOneWithExternalActionOrigin:(id)arg1;
+- (void)logShuffle:(_Bool)arg1 externalActionOrigin:(id)arg2;
+- (void)logRating:(_Bool)arg1 externalActionOrigin:(id)arg2;
+- (void)logStartRadioWithURI:(id)arg1 externalActionOrigin:(id)arg2;
+- (void)logSaved:(_Bool)arg1 forItemWithURI:(id)arg2 externalActionOrigin:(id)arg3;
 - (id)initWithLogCenter:(id)arg1;
 
 // Remaining properties

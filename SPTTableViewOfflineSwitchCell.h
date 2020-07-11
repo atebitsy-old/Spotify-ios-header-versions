@@ -33,6 +33,7 @@
 @property(retain, nonatomic) SPTNetworkConnectivityController *networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTOfflineSwitchDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)offlineSwitchViewDidAbortStateChange:(id)arg1;
 - (unsigned long long)offlineSwitchViewOfflineAvailability:(id)arg1;
 - (void)offlineSwitchViewDidChangeState:(id)arg1 isOn:(_Bool)arg2;
 - (void)configureAutoLayouts;

@@ -14,8 +14,8 @@
 @property(readonly, nonatomic) long long terminalConnectionType;
 @property(readonly, nonatomic) long long initialConnectionType;
 @property(readonly, nonatomic) long long terminalState;
-@property(readonly, nonatomic) NSString *uri;
-@property(readonly, nonatomic) NSString *pageId;
-@property(readonly, nonatomic) NSString *sequenceId;
+@property(readonly, nonatomic) NSString *URI;
+@property(readonly, nonatomic) NSString *pageIdentifier;
+@property(readonly, nonatomic) NSString *sequenceID;
 @end
 

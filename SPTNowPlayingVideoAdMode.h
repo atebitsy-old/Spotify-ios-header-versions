@@ -8,13 +8,14 @@
 
 #import "SPTNowPlayingMode-Protocol.h"
 
-@class NSPointerArray, NSString, SPTAdNowPlayingManager, SPTAdPlayerObservable, SPTTheme, UIViewController;
+@class NSPointerArray, NSString, SPTAdFeatureFlagChecks, SPTAdNowPlayingManager, SPTAdPlayerObservable, SPTTheme, UIViewController;
 @protocol SPTAdsManager, SPTNowPlayingAdUnitViewController, SPTNowPlayingContainedViewController, SPTNowPlayingModeLayoutDelegate;
 
 @interface SPTNowPlayingVideoAdMode : NSObject <SPTNowPlayingMode>
 {
     id <SPTNowPlayingModeLayoutDelegate> _layoutDelegate;
     NSPointerArray *_unitViewControllers;
+    SPTAdFeatureFlagChecks *_featureChecker;
     id <SPTAdsManager> _adsManager;
     SPTAdNowPlayingManager *_adNowPlayingManager;
     SPTAdPlayerObservable *_playerObserver;
@@ -39,6 +40,7 @@
 @property(retain, nonatomic) SPTAdPlayerObservable *playerObserver; // @synthesize playerObserver=_playerObserver;
 @property(retain, nonatomic) SPTAdNowPlayingManager *adNowPlayingManager; // @synthesize adNowPlayingManager=_adNowPlayingManager;
 @property(retain, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
+@property(retain, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(retain, nonatomic) NSPointerArray *unitViewControllers; // @synthesize unitViewControllers=_unitViewControllers;
 @property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
@@ -51,7 +53,7 @@
 - (id)informationUnitViewController;
 - (id)navigationBarUnitViewController;
 - (id)identifier;
-- (id)initWithAdManager:(id)arg1 playerObserver:(id)arg2 theme:(id)arg3 adNowPlayingManager:(id)arg4;
+- (id)initWithAdManager:(id)arg1 playerObserver:(id)arg2 theme:(id)arg3 adNowPlayingManager:(id)arg4 featureChecker:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

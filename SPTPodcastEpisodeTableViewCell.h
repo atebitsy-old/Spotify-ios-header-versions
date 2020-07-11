@@ -6,8 +6,8 @@
 
 #import "SPTPodcastSectionTableViewCell.h"
 
-@class GLUEStatefulView, NSArray, NSIndexPath, NSString, NSURL, SPTPodcastEpisodeContentViewStyle, SPTTheme, UIView;
-@protocol GLUEImageLoader, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeView;
+@class GLUEStatefulView, NSArray, NSIndexPath, NSString, NSURL, SPTPodcastEpisodeContentViewStyle, UIView;
+@protocol GLUEImageLoader, GLUETheme, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeView;
 
 @interface SPTPodcastEpisodeTableViewCell : SPTPodcastSectionTableViewCell
 {
@@ -18,10 +18,10 @@
     SPTPodcastEpisodeContentViewStyle *_contentViewStyle;
     NSIndexPath *_indexPath;
     GLUEStatefulView<SPTPodcastEpisodeView> *_episodeView;
-    SPTTheme *_catTheme;
+    id <GLUETheme> _glueTheme;
 }
 
-@property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
+@property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) GLUEStatefulView<SPTPodcastEpisodeView> *episodeView; // @synthesize episodeView=_episodeView;
 @property(nonatomic) _Bool shouldTruncateDescription; // @synthesize shouldTruncateDescription=_shouldTruncateDescription;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;

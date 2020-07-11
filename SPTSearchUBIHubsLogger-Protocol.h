@@ -7,8 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class HUBComponentEvent, NSURL;
+@protocol HUBComponentModel;
 
 @protocol SPTSearchUBIHubsLogger <NSObject>
+- (void)logImpressionWithComponentModel:(id <HUBComponentModel>)arg1;
 - (void)logNavigateWithDestination:(NSURL *)arg1 event:(HUBComponentEvent *)arg2;
 - (void)logRetryWithEvent:(HUBComponentEvent *)arg1;
 - (void)logRemoveSearchItemWithEvent:(HUBComponentEvent *)arg1;

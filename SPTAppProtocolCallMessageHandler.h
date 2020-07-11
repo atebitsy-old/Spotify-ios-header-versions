@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolConnectionHandler, SPTNetworkConnectivityController;
-@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTPreferences;
+@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTPreferences;
 
 @interface SPTAppProtocolCallMessageHandler : NSObject
 {
@@ -20,10 +20,12 @@
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     SPTAppProtocolBlockBasedImageLoader *_blockBasedImageLoader;
     id <SPTPreferences> _preferences;
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
+@property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 @property(readonly, nonatomic) __weak id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(readonly, nonatomic) SPTAppProtocolBlockBasedImageLoader *blockBasedImageLoader; // @synthesize blockBasedImageLoader=_blockBasedImageLoader;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;

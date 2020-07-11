@@ -23,7 +23,7 @@
 
 @property(retain, nonatomic) NSDate *latestPublishedEpisodeDate; // @synthesize latestPublishedEpisodeDate=_latestPublishedEpisodeDate;
 @property(nonatomic) _Bool hasNewEpisodes; // @synthesize hasNewEpisodes=_hasNewEpisodes;
-@property(retain, nonatomic) NSDictionary *podcastCovers; // @synthesize podcastCovers=_podcastCovers;
+@property(copy, nonatomic) NSDictionary *podcastCovers; // @synthesize podcastCovers=_podcastCovers;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
 @property(copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;

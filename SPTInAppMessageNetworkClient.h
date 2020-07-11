@@ -15,8 +15,12 @@
     NSTimer *_triggerListRefreshTimer;
     SPTObserverManager *_observerManager;
     NSArray *_supportedFormats;
+    NSArray *_supportedActions;
+    NSArray *_supportedTriggerTypes;
 }
 
+@property(copy, nonatomic) NSArray *supportedTriggerTypes; // @synthesize supportedTriggerTypes=_supportedTriggerTypes;
+@property(copy, nonatomic) NSArray *supportedActions; // @synthesize supportedActions=_supportedActions;
 @property(copy, nonatomic) NSArray *supportedFormats; // @synthesize supportedFormats=_supportedFormats;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) NSTimer *triggerListRefreshTimer; // @synthesize triggerListRefreshTimer=_triggerListRefreshTimer;
@@ -30,7 +34,7 @@
 @property(readonly, nonatomic) id <SPTInAppMessageNetworkClientObserver> observerNotifierProxy;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithDataLoader:(id)arg1 supportedFormats:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 supportedFormats:(id)arg2 supportedActions:(id)arg3 supportedTriggerTypes:(id)arg4;
 
 @end
 

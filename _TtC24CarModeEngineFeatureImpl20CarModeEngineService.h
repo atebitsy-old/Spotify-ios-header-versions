@@ -9,6 +9,7 @@
 @interface _TtC24CarModeEngineFeatureImpl20CarModeEngineService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: carModeEngine
 }
 
 + (id)serviceIdentifier;
@@ -17,6 +18,7 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+- (id)provideEngine;
 
 @end
 

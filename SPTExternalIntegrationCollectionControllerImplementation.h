@@ -43,8 +43,8 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> configuration;
-- (void)removeContentFromCollectionWithURI:(id)arg1 accessorySessionID:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)addContentToCollectionWithURI:(id)arg1 fromContext:(id)arg2 accessorySessionID:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)removeContentFromCollectionWithURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)addContentToCollectionWithURI:(id)arg1 fromContext:(id)arg2 externalActionOrigin:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (_Bool)canAddTrackToCollectionWithURI:(id)arg1;
 - (void)collectionContainsContentWithURI:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)setupSubscriptions;

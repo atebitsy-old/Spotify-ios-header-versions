@@ -10,22 +10,26 @@
 #import "SPTVolumeRemoteCoordinatorDelegate-Protocol.h"
 #import "SPTVolumeSystemObserver-Protocol.h"
 
-@class NSNumber, NSString, SPTObserverManager, SPTVolumeLogger;
-@protocol SPTVolumeRemoteCoordinator, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
+@class NSNumber, NSString, SPTObserverManager, SPTVolumeLogger, SPTVolumeUbiLogger;
+@protocol SPTGaiaConnectAPI, SPTVolumeRemoteCoordinator, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeManager : NSObject <SPTVolumeRemoteCoordinatorDelegate, SPTVolumeSystemObserver, SPTVolumeAPI>
 {
     id <SPTVolumeSystemAPI> _systemVolumeManager;
     id <SPTVolumeRemoteCoordinator> _remoteVolumeCoordinator;
     id <SPTVolumeSynchronizationManager> _volumeSynchronizationManager;
+    id <SPTGaiaConnectAPI> _connectManager;
     SPTVolumeLogger *_logger;
+    SPTVolumeUbiLogger *_ubiLogger;
     SPTObserverManager *_observers;
     double _internalVolume;
 }
 
 @property(nonatomic) double internalVolume; // @synthesize internalVolume=_internalVolume;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
+@property(readonly, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTVolumeLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTVolumeSynchronizationManager> volumeSynchronizationManager; // @synthesize volumeSynchronizationManager=_volumeSynchronizationManager;
 @property(readonly, nonatomic) id <SPTVolumeRemoteCoordinator> remoteVolumeCoordinator; // @synthesize remoteVolumeCoordinator=_remoteVolumeCoordinator;
 @property(readonly, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
@@ -40,7 +44,7 @@
 - (void)requestVolumeUpdate:(double)arg1;
 @property(readonly, nonatomic) NSNumber *volume; // @dynamic volume;
 - (void)setupObserving;
-- (id)initWithSystemVolumeManager:(id)arg1 remoteVolumeCoordinator:(id)arg2 volumeSynchronizationManager:(id)arg3 logger:(id)arg4;
+- (id)initWithSystemVolumeManager:(id)arg1 remoteVolumeCoordinator:(id)arg2 volumeSynchronizationManager:(id)arg3 connectManager:(id)arg4 logger:(id)arg5 ubiLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

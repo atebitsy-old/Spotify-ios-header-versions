@@ -9,13 +9,14 @@
 #import "SPTCollectionFiltering-Protocol.h"
 #import "SPTCollectionSorting-Protocol.h"
 #import "SPTExplicitContentEnabledStateObserver-Protocol.h"
+#import "SPTPodcastEpisodeCellActionHandlerEpisodeProvider-Protocol.h"
 #import "SPTPodcastEpisodeProgressPolling-Protocol.h"
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 
 @class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastFeatureProperties, SPTPodcastSortingService;
 @protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastFactory, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate;
 
-@interface SPTPodcastViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeProgressPolling>
+@interface SPTPodcastViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
     _Bool contentFiltered;
     _Bool _isLoading;
@@ -76,6 +77,8 @@
 @property(readonly, nonatomic, getter=isContentFiltered) _Bool contentFiltered; // @synthesize contentFiltered;
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter;
 - (void).cxx_destruct;
+- (id)cellActionHandler:(id)arg1 episodeForIndexPath:(id)arg2;
+- (id)cellActionHandler:(id)arg1 allEpisodesInSection:(long long)arg2;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (id)additionalFilters;
 - (id)filterDataWithTitle:(id)arg1 filter:(id)arg2 position:(long long)arg3;

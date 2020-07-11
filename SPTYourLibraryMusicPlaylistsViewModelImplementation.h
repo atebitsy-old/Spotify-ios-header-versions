@@ -44,7 +44,7 @@
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicPlaylistsViewModelDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
-- (void)didCancelSortingFilteringPicker:(id)arg1;
+- (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;
 - (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedSortRule:(id)arg2;
@@ -84,6 +84,9 @@
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
+- (void)setActiveFilterRules:(id)arg1;
+- (id)activeFilterRules;
+- (id)availableFilterRules;
 @property(readonly, nonatomic) NSArray *activeFilterTitles;
 @property(readonly, nonatomic) unsigned long long filteredContentState;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;

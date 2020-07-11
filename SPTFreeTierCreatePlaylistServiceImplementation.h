@@ -10,7 +10,7 @@
 #import "SPTFreeTierCreatePlaylistService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierCreatePlaylistTestManagerImplementation;
-@protocol PlaylistFeature, SPContextMenuFeature, SPTContainerService, SPTFeatureFlagSignal, SPTFreeTierPresentationService, SPTGLUEService, SPTInAppMessageService, SPTPageRegistrationToken, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTURIDispatchService, _TtP20AddToPlaylistFeature23SPTAddToPlaylistService_;
+@protocol PlaylistFeature, SPContextMenuFeature, SPTContainerService, SPTFeatureFlagSignal, SPTFreeTierPresentationService, SPTGLUEService, SPTInAppMessageService, SPTPageRegistrationToken, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTURIDispatchService, SPTUserBehaviourInstrumentationService, _TtP20AddToPlaylistFeature23SPTAddToPlaylistService_;
 
 @interface SPTFreeTierCreatePlaylistServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTFreeTierCreatePlaylistService>
 {
@@ -24,6 +24,7 @@
     id <SPTInAppMessageService> _inAppMessageService;
     id <_TtP20AddToPlaylistFeature23SPTAddToPlaylistService_> _addToPlaylistService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTUserBehaviourInstrumentationService> _ubiService;
     SPTFreeTierCreatePlaylistTestManagerImplementation *_testManager;
     id <SPTPageRegistrationToken> _createPlaylistServiceRegistrationToken;
     id <SPTFeatureFlagSignal> _addToPlaylistFeatureEnabledSignal;
@@ -33,6 +34,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> addToPlaylistFeatureEnabledSignal; // @synthesize addToPlaylistFeatureEnabledSignal=_addToPlaylistFeatureEnabledSignal;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> createPlaylistServiceRegistrationToken; // @synthesize createPlaylistServiceRegistrationToken=_createPlaylistServiceRegistrationToken;
 @property(retain, nonatomic) SPTFreeTierCreatePlaylistTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <SPTUserBehaviourInstrumentationService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <_TtP20AddToPlaylistFeature23SPTAddToPlaylistService_> addToPlaylistService; // @synthesize addToPlaylistService=_addToPlaylistService;
 @property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
@@ -47,7 +49,7 @@
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)registerContextMenuActions;
 - (id)provideTestManager;
-- (id)provideLogger;
+- (id)provideLoggerForURL:(id)arg1 playlistURI:(id)arg2;
 - (id)provideFreeTierCreatePlaylistTheme;
 - (id)provideAddToPlaylistController:(id)arg1 context:(id)arg2;
 - (id)provideRenamePlaylistControllerForPlaylistURL:(id)arg1 currentName:(id)arg2;

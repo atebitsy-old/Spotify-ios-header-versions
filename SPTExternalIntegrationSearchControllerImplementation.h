@@ -32,7 +32,7 @@
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
-- (void)searchWithQuery:(id)arg1 limit:(unsigned long long)arg2 offset:(unsigned long long)arg3 accessorySessionID:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
+- (void)searchWithQuery:(id)arg1 limit:(unsigned long long)arg2 offset:(unsigned long long)arg3 externalActionOrigin:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (id)initWithDataLoaderFactory:(id)arg1 debugLog:(id)arg2 logger:(id)arg3;
 
 // Remaining properties

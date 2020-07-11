@@ -20,6 +20,8 @@
     _Bool _musicSleepTimerEnabled;
     _Bool _nowPlayingBarImprovementsEnabled;
     _Bool _contextAwareEditorialTrackSharingEnabled;
+    _Bool _isNowPlayingBarLyricsLabelEnabled;
+    _Bool _isContentLayerLyricsEnabled;
     _Bool _pivotsTestEnabled;
     _Bool _feedbackCardsTestEnabled;
     _Bool _podcastChaptersTestEnabled;
@@ -39,12 +41,18 @@
     id <SPTFeatureFlagSignal> _nowPlayingBarImprovementsSignal;
     id <SPTLocalSettings> _localSettings;
     SPTNowPlayingScrollConfiguration *_scrollConfiguration;
+    id <SPTFeatureFlagSignal> _lyricsNPBLabelSignal;
+    id <SPTFeatureFlagSignal> _lyricsContentLayerSignal;
 }
 
 @property(nonatomic) _Bool concertCardsTestEnabled; // @synthesize concertCardsTestEnabled=_concertCardsTestEnabled;
 @property(nonatomic) _Bool podcastChaptersTestEnabled; // @synthesize podcastChaptersTestEnabled=_podcastChaptersTestEnabled;
 @property(nonatomic) _Bool feedbackCardsTestEnabled; // @synthesize feedbackCardsTestEnabled=_feedbackCardsTestEnabled;
 @property(nonatomic) _Bool pivotsTestEnabled; // @synthesize pivotsTestEnabled=_pivotsTestEnabled;
+@property(nonatomic) _Bool isContentLayerLyricsEnabled; // @synthesize isContentLayerLyricsEnabled=_isContentLayerLyricsEnabled;
+@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsContentLayerSignal; // @synthesize lyricsContentLayerSignal=_lyricsContentLayerSignal;
+@property(nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled; // @synthesize isNowPlayingBarLyricsLabelEnabled=_isNowPlayingBarLyricsLabelEnabled;
+@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsNPBLabelSignal; // @synthesize lyricsNPBLabelSignal=_lyricsNPBLabelSignal;
 @property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
 @property(retain, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration; // @synthesize scrollConfiguration=_scrollConfiguration;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -74,6 +82,8 @@
 - (_Bool)isPodcast:(id)arg1;
 @property(readonly, nonatomic, getter=isShowsFormatContextAwareSharingEnabled) _Bool showsFormatContextAwareSharingEnabled;
 - (void)createContextAwareEditorialTrackSharingSignal;
+- (void)setupLyricsInNPVContentLayer;
+- (void)setupLyricsNowPlayingBarLabel;
 - (void)createFeedbackCardsSignal;
 - (void)createScrollPivotsSignal;
 - (void)createConcertCardsSignal;

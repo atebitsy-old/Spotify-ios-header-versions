@@ -12,8 +12,8 @@
 #import "SPTYourLibraryMusicSongsModelDelegate-Protocol.h"
 #import "SPTYourLibraryMusicSongsViewModel-Protocol.h"
 
-@class NSArray, NSMutableDictionary, NSString, NSURL, SPTPlayOrigin, SPTPlayerState, SPTYourLibraryMusicSongsHeaderViewModelImplementation, SPTYourLibraryMusicSongsLogger;
-@protocol SPContextMenuFeature, SPTAudioPreviewPlayer, SPTCollectionPlatformDataLoader, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, SPTSortingFilteringUIFactory, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicSongsViewModelDelegate, SPTYourLibraryMusicTestManager;
+@class NSArray, NSMutableDictionary, NSString, NSURL, SPTObserverManager, SPTPlayOrigin, SPTPlayerState, SPTYourLibraryMusicSongsHeaderViewModelImplementation, SPTYourLibraryMusicSongsLogger;
+@protocol SPContextMenuFeature, SPTAlertInterface, SPTAudioPreviewPlayer, SPTCollectionPlatformDataLoader, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, SPTSortingFilteringUIFactory, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicSongsViewModelDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicSongsViewModelImplementation : NSObject <SPTYourLibraryMusicSongsHeaderViewModelActionDelegate, SPTPlayerObserver, SPTSortingFilteringPickerDelegate, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicSongsModelDelegate>
 {
@@ -38,8 +38,12 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTCollectionPlatformDataLoader> _collectionPlatformDataLoader;
     NSMutableDictionary *_cachedArtistsMetadata;
+    SPTObserverManager *_filterChipsObserverManager;
+    id <SPTAlertInterface> _alertInterface;
 }
 
+@property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
+@property(retain, nonatomic) SPTObserverManager *filterChipsObserverManager; // @synthesize filterChipsObserverManager=_filterChipsObserverManager;
 @property(nonatomic, getter=isFilteringActive) _Bool filteringActive; // @synthesize filteringActive=_filteringActive;
 @property(retain, nonatomic) NSMutableDictionary *cachedArtistsMetadata; // @synthesize cachedArtistsMetadata=_cachedArtistsMetadata;
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
@@ -62,6 +66,12 @@
 @property(readonly, nonatomic) id <SPTYourLibraryMusicSongsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)filterChipsInteractionObserverClearedSelection;
+- (void)filterChipsInteractionObserverItemDeSelected:(id)arg1;
+- (void)filterChipsInteractionObserverItemSelected:(id)arg1;
+- (void)removeObserver:(id)arg1;
+- (void)addObserver:(id)arg1;
+- (void)loadItems;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)willEndFilteringSongsHeaderViewModel:(id)arg1;
 - (void)willStartFilteringSongsHeaderViewModel:(id)arg1;
@@ -79,7 +89,7 @@
 - (unsigned long long)itemType;
 - (unsigned long long)sectionIdForSection:(long long)arg1;
 - (_Bool)isPlaying;
-- (void)didCancelSortingFilteringPicker:(id)arg1;
+- (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;
 - (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedSortRule:(id)arg2;
@@ -87,8 +97,6 @@
 - (void)willStartScrolling;
 - (void)didScrollToTop;
 - (void)willScrollToTop;
-- (id)activeFilterRules;
-- (id)availableFilterRules;
 - (id)sortingAndFilteringPickerViewController;
 @property(readonly, nonatomic) NSArray *activeFilterTitles;
 @property(readonly, nonatomic) unsigned long long filteredContentState;
@@ -100,8 +108,10 @@
 - (_Bool)isSnackBarsUsedForMessaging;
 - (void)stopAudioPreviewViewPlayerForTrackURI:(id)arg1;
 - (void)stopAudioPreviewViewPlayer;
+- (void)logEmptyViewImpression;
 - (void)logSwipeCellActionForIndexPath:(id)arg1;
 - (void)logAddSongsButtonAction;
+- (void)logCancelRemoveDownloads;
 - (void)logCloseExtraSongsExplanation;
 - (void)logExtraSongsWhyAction;
 - (void)logAudioPreviewAtIndexPath:(id)arg1 playing:(_Bool)arg2 isOriginCoverItem:(_Bool)arg3;
@@ -109,6 +119,7 @@
 - (void)endObservingTrackStateAtIndexPath:(id)arg1;
 - (void)startObservingTrackStateAtIndexPath:(id)arg1;
 - (void)toggleTrackBanAtIndexPath:(id)arg1;
+- (void)unlikeTrackAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 songName:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)toggleTrackLikeAtIndexPath:(id)arg1;
 - (void)presentEntitySectionViewModel:(id)arg1;
 - (void)presentMenuForSongAtIndexPath:(id)arg1 targetViewController:(id)arg2 withSenderControl:(id)arg3;
@@ -120,6 +131,7 @@
 - (_Bool)showOfflineSyncControl;
 - (id)modelItemAtIndexPath:(id)arg1;
 - (long long)modelItemsSectionFromViewModelSection:(long long)arg1;
+- (_Bool)isFilterChipsSection:(unsigned long long)arg1;
 - (_Bool)isRecommendedSection:(unsigned long long)arg1;
 - (_Bool)isSongsSections:(unsigned long long)arg1;
 - (long long)numberOfRowsInSections:(long long)arg1;
@@ -135,7 +147,7 @@
 @property(readonly, nonatomic, getter=isGroupingEnabled) _Bool groupingEnabled;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (id)initWithModel:(id)arg1 contextMenuFeature:(id)arg2 playOrigin:(id)arg3 player:(id)arg4 offlineModeState:(id)arg5 logger:(id)arg6 testManager:(id)arg7 sortingFilteringPickerFactory:(id)arg8 audioPreviewPlayer:(id)arg9 collectionPlatformConfigurator:(id)arg10 linkDispatcher:(id)arg11 collectionPlatformDataLoader:(id)arg12;
+- (id)initWithModel:(id)arg1 contextMenuFeature:(id)arg2 playOrigin:(id)arg3 player:(id)arg4 offlineModeState:(id)arg5 logger:(id)arg6 testManager:(id)arg7 sortingFilteringPickerFactory:(id)arg8 audioPreviewPlayer:(id)arg9 collectionPlatformConfigurator:(id)arg10 linkDispatcher:(id)arg11 collectionPlatformDataLoader:(id)arg12 alertInterface:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

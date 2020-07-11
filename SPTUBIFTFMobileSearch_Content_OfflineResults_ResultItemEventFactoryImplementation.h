@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 - (id)hitUiNavigateWithDestination:(id)arg1;
 - (id)hitPlayWithItemToBePlayed:(id)arg1;
+- (id)impression;
 - (id)_location;
 - (id)initWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
 

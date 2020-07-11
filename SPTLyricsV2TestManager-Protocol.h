@@ -7,8 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTLyricsV2TestManager <NSObject>
-- (_Bool)isContentLayerLyricsEnabled;
-- (_Bool)isNowPlayingBarLyricsLabelEnabled;
 - (_Bool)isSyllableSyncEnabled;
 - (_Bool)isVocalRemovalEnabled;
 - (_Bool)isFeatureEnabled;

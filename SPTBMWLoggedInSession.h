@@ -13,13 +13,14 @@
 #import "SPTImageLoaderDelegate-Protocol.h"
 
 @class NSDictionary, NSMutableDictionary, NSString, RAPIEntertainmentAppLink, SPTAccessory, SPTAudioSessionActivator, SPTBMWToolbar;
-@protocol SPTExternalIntegrationPlatform, SPTImageLoader;
+@protocol SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTImageLoader;
 
 @interface SPTBMWLoggedInSession : NSObject <SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTExternalIntegrationContentControllerObserver, SPTImageLoaderDelegate, SPTBMWListScreenDelegate>
 {
     _Bool _appLinkIsConnected;
     _Bool _vehicleIsID5;
     NSDictionary *_expectedViewModels;
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     SPTAccessory *_currentAccessory;
     RAPIEntertainmentAppLink *_bmwAppLink;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
@@ -102,6 +103,7 @@
 - (void)setupSearchScreen;
 - (void)configureContentListScreenModelForContent:(id)arg1 screenKey:(id)arg2;
 - (void)dealloc;
+@property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 - (id)initWithExternalIntegrationPlatform:(id)arg1 toolbar:(id)arg2 imageLoaderFactory:(id)arg3 bmwAppLink:(id)arg4 debugLog:(id)arg5;
 
 // Remaining properties

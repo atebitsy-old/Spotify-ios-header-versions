@@ -9,7 +9,7 @@
 #import "MMKPlaybackDelegate-Protocol.h"
 
 @class NSString, SPTAccessory, SPTMobileMediaKitAPKeepAliveHandler, SPTPlayerState;
-@protocol MMKLogging, SPTExternalIntegrationCollectionController, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI;
+@protocol MMKLogging, SPTExternalIntegrationCollectionController, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI;
 
 @interface SPTMobileMediaKitAudioPlaybackManager : NSObject <MMKPlaybackDelegate>
 {
@@ -21,6 +21,7 @@
     SPTMobileMediaKitAPKeepAliveHandler *_keepAliveHandler;
     id <MMKLogging> _logger;
     SPTAccessory *_currentAccessory;
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     id <SPTGaiaConnectAPI> _connectManager;
     unsigned long long _pullContextBackgroundTask;
     unsigned long long _playbackBackgroundTask;
@@ -31,6 +32,7 @@
 @property(nonatomic) unsigned long long playbackBackgroundTask; // @synthesize playbackBackgroundTask=_playbackBackgroundTask;
 @property(nonatomic) unsigned long long pullContextBackgroundTask; // @synthesize pullContextBackgroundTask=_pullContextBackgroundTask;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
+@property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 @property(retain, nonatomic) SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(retain, nonatomic) id <MMKLogging> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTMobileMediaKitAPKeepAliveHandler *keepAliveHandler; // @synthesize keepAliveHandler=_keepAliveHandler;

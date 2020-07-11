@@ -9,14 +9,12 @@
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl22CreatorEntityPageFlags : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: isPageEnabled
-    // Error parsing type: , name: isSearchEntryPointEnabled
     // Error parsing type: , name: isPodcastShowPageEntryPointEnabled
     // Error parsing type: , name: isPodcastEpisodeEntryPointEnabled
 }
 
 @property(nonatomic) _Bool isPodcastEpisodeEntryPointEnabled; // @synthesize isPodcastEpisodeEntryPointEnabled;
 @property(nonatomic) _Bool isPodcastShowPageEntryPointEnabled; // @synthesize isPodcastShowPageEntryPointEnabled;
-@property(nonatomic) _Bool isSearchEntryPointEnabled; // @synthesize isSearchEntryPointEnabled;
 @property(nonatomic) _Bool isPageEnabled; // @synthesize isPageEnabled;
 
 @end

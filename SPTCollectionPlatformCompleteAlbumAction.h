@@ -6,12 +6,10 @@
 
 #import "SPAction.h"
 
-#import "UIAlertViewDelegate-Protocol.h"
-
-@class NSString, NSURL;
+@class NSURL;
 @protocol SPTCollectionPlatform;
 
-@interface SPTCollectionPlatformCompleteAlbumAction : SPAction <UIAlertViewDelegate>
+@interface SPTCollectionPlatformCompleteAlbumAction : SPAction
 {
     id <SPTCollectionPlatform> _collectionPlatform;
     NSURL *_link;
@@ -28,12 +26,6 @@
 - (id)logEventName;
 - (id)title;
 - (id)initWithLink:(id)arg1 collectionPlatform:(id)arg2 logContext:(id)arg3 sourceURL:(id)arg4;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

@@ -15,6 +15,6 @@
 @property(readonly, nonatomic) unsigned long long initialApplicationState;
 @property(readonly, nonatomic) NSString *connectionType;
 @property(readonly, nonatomic) NSString *terminalState;
-@property(readonly, nonatomic) NSString *viewLoadSequenceId;
+@property(readonly, nonatomic) NSString *viewLoadSequenceID;
 @end
 

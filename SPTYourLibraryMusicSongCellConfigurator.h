@@ -10,7 +10,7 @@
 #import "SPTEncoreTrackRowDelegate-Protocol.h"
 
 @class GLUEEntityRowStyle, SPTFreeTierPreCurationChunkyRowStyle, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle;
-@protocol GLUEImageLoader, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTCollectionPlatformConfiguration, SPTShelves, SPTYourLibraryMusicSongCellConfiguratorDelegate, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_;
+@protocol GLUEImageLoader, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTCollectionPlatformConfiguration, SPTModalPresentationController, SPTShelves, SPTYourLibraryMusicSongCellConfiguratorDelegate, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_;
 
 @interface SPTYourLibraryMusicSongCellConfigurator : NSObject <GLUEThemeObserver, SPTEncoreTrackRowDelegate>
 {
@@ -28,8 +28,10 @@
     SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *_songsAlbumSectionHeaderStyle;
     SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *_songsArtistSectionHeaderStyle;
     id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> _trackRowFactory;
+    id <SPTModalPresentationController> _modalPresentationController;
 }
 
+@property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
 @property(retain, nonatomic) SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *songsArtistSectionHeaderStyle; // @synthesize songsArtistSectionHeaderStyle=_songsArtistSectionHeaderStyle;
 @property(retain, nonatomic) SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *songsAlbumSectionHeaderStyle; // @synthesize songsAlbumSectionHeaderStyle=_songsAlbumSectionHeaderStyle;

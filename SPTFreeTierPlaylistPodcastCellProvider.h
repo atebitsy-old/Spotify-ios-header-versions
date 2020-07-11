@@ -10,7 +10,7 @@
 #import "SPTPodcastEpisodeCellActionTarget-Protocol.h"
 
 @class NSString, NSURL, SPTFreeTierPlaylistLogger;
-@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
+@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
 
 @interface SPTFreeTierPlaylistPodcastCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTPodcastEpisodeCellActionTarget>
 {
@@ -59,6 +59,7 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerDelegate> delegate;
 @property(readonly, copy) NSString *description;
+@property(readonly, nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerEpisodeProvider> episodeProvider;
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 

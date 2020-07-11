@@ -19,6 +19,7 @@
     long long _type;
 }
 
++ (id)songsSectionHeaderViewModelForFilterChips;
 + (id)songsSectionHeaderViewModelForButtonWithTitle:(id)arg1;
 + (id)songsSectionHeaderViewModelForEmptyTopPadding;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;

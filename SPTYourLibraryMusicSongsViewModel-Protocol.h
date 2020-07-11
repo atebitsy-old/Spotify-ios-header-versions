@@ -5,11 +5,13 @@
 //
 
 #import "SPTYourLibraryMusicFilterableViewModel-Protocol.h"
+#import "_TtP18FilterChipsFeature24SPTFilterChipsItemLoader_-Protocol.h"
+#import "_TtP18FilterChipsFeature33SPTFilterChipsInteractionObserver_-Protocol.h"
 
 @class NSIndexPath, UIControl, UIViewController;
 @protocol SPTYourLibraryMusicSongsHeaderViewModel, SPTYourLibraryMusicSongsSectionViewModel, SPTYourLibraryMusicSongsViewModelDelegate, SPTYourLibraryMusicTrackItemViewModel;
 
-@protocol SPTYourLibraryMusicSongsViewModel <SPTYourLibraryMusicFilterableViewModel>
+@protocol SPTYourLibraryMusicSongsViewModel <SPTYourLibraryMusicFilterableViewModel, _TtP18FilterChipsFeature24SPTFilterChipsItemLoader_, _TtP18FilterChipsFeature33SPTFilterChipsInteractionObserver_>
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(readonly, nonatomic, getter=isContentFiltered) _Bool contentFiltered;
@@ -24,8 +26,10 @@
 - (void)willScrollToTop;
 - (void)endObservingTrackStateAtIndexPath:(NSIndexPath *)arg1;
 - (void)startObservingTrackStateAtIndexPath:(NSIndexPath *)arg1;
+- (void)logEmptyViewImpression;
 - (void)stopAudioPreviewViewPlayer;
 - (void)logAddSongsButtonAction;
+- (void)logCancelRemoveDownloads;
 - (void)logCloseExtraSongsExplanation;
 - (void)logExtraSongsWhyAction;
 - (void)logSwipeCellActionForIndexPath:(NSIndexPath *)arg1;

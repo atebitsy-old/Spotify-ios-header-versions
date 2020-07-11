@@ -46,7 +46,10 @@
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)configureWithModel:(id)arg1;
 - (double)getImageHeight;
+- (void)layoutSubviews;
 - (void)didMoveToSuperview;
+- (void)setUpViewHierarchy;
+- (void)setUpViews;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 
 @end

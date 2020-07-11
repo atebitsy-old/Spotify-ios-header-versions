@@ -15,7 +15,8 @@
     id <SPTSearchRecentsDataSource> _recentsDataSource;
 }
 
-+ (id)commandWithName:(id)arg1 uri:(id)arg2 title:(id)arg3 subtitle:(id)arg4 placeholderIconIdentifier:(id)arg5 imageURI:(id)arg6 explicitContent:(_Bool)arg7 mogef19:(_Bool)arg8;
++ (id)defaultName;
++ (id)commandWithURI:(id)arg1 title:(id)arg2 subtitle:(id)arg3 placeholderIconIdentifier:(id)arg4 imageURI:(id)arg5 explicitContent:(_Bool)arg6 mogef19:(_Bool)arg7;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSource> recentsDataSource; // @synthesize recentsDataSource=_recentsDataSource;
 - (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;

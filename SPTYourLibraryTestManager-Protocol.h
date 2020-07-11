@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTYourLibraryTestManager <NSObject>
+@property(readonly, nonatomic, getter=isCreateButtonInHeaderEnabled) _Bool createButtonInHeaderEnabled;
 @property(readonly, nonatomic) long long persistActiveTabDurationHours;
 @property(readonly, nonatomic, getter=isPersistActiveTabEnabled) _Bool persistActiveTabEnabled;
 @end

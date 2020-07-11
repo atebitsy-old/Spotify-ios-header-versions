@@ -12,10 +12,6 @@
     // Error parsing type: , name: dimensions
     // Error parsing type: , name: imageView
     // Error parsing type: , name: titleLabel
-    // Error parsing type: , name: subtitleLabel
-    // Error parsing type: , name: $__lazy_storage_$_followButton
-    // Error parsing type: , name: $__lazy_storage_$_shareButton
-    // Error parsing type: , name: $__lazy_storage_$_contextButton
     // Error parsing type: , name: descriptionLabel
     // Error parsing type: , name: titleProtectionGradient
     // Error parsing type: , name: $__lazy_storage_$_statusBarProtectionGradient

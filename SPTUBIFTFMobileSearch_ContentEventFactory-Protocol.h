@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIFTFMobileSearch_Content_ErrorEventFactory, SPTUBIFTFMobileSearch_Content_OfflineResultsEventFactory, SPTUBIFTFMobileSearch_Content_OnlineResultsEventFactory, SPTUBIFTFMobileSearch_Content_RecentsEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIFTFMobileSearch_Content_ErrorEventFactory, SPTUBIFTFMobileSearch_Content_OfflineResultsEventFactory, SPTUBIFTFMobileSearch_Content_OnlineResultsEventFactory, SPTUBIFTFMobileSearch_Content_RecentsEventFactory, SPTUBIImpressionEvent;
 
 @protocol SPTUBIFTFMobileSearch_ContentEventFactory <NSObject>
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIFTFMobileSearch_Content_ErrorEventFactory>)errorFactory;
 - (id <SPTUBIFTFMobileSearch_Content_OfflineResultsEventFactory>)offlineResultsFactory;
 - (id <SPTUBIFTFMobileSearch_Content_OnlineResultsEventFactory>)onlineResultsFactory;

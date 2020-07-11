@@ -37,7 +37,7 @@
     NSString *_previewId;
 }
 
-@property(retain, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
+@property(copy, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
 @property(nonatomic) _Bool isPremiumOnly; // @synthesize isPremiumOnly=_isPremiumOnly;
 @property(nonatomic) _Bool isPlayStatePlayable; // @synthesize isPlayStatePlayable=_isPlayStatePlayable;
 @property(nonatomic) _Bool isLocallyPlayable; // @synthesize isLocallyPlayable=_isLocallyPlayable;
@@ -49,12 +49,12 @@
 @property(nonatomic) _Bool inCollection; // @synthesize inCollection=_inCollection;
 @property(nonatomic) unsigned long long playStateRestriction; // @synthesize playStateRestriction=_playStateRestriction;
 @property(nonatomic) unsigned long long offlineState; // @synthesize offlineState=_offlineState;
-@property(retain, nonatomic) NSDictionary *albumCovers; // @synthesize albumCovers=_albumCovers;
+@property(copy, nonatomic) NSDictionary *albumCovers; // @synthesize albumCovers=_albumCovers;
 @property(retain, nonatomic) NSURL *albumURL; // @synthesize albumURL=_albumURL;
 @property(retain, nonatomic) NSURL *albumArtistURL; // @synthesize albumArtistURL=_albumArtistURL;
 @property(copy, nonatomic) NSString *albumArtistName; // @synthesize albumArtistName=_albumArtistName;
 @property(copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
-@property(retain, nonatomic) NSArray *artists; // @synthesize artists=_artists;
+@property(copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(nonatomic) unsigned long long trackNumber; // @synthesize trackNumber=_trackNumber;
 @property(nonatomic) unsigned long long discNumber; // @synthesize discNumber=_discNumber;
 @property(retain, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;

@@ -26,11 +26,11 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 - (void).cxx_destruct;
-- (void)performActionWithURI:(id)arg1 currentAccessory:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (_Bool)canPerformActionWithURI:(id)arg1;
-- (void)handlePullContextIntentFromAction:(id)arg1 currentAccessory:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)handlePlayIntentFromAction:(id)arg1 currentAccessory:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)performAction:(id)arg1 currentAccessory:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)handlePullContextIntentFromAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)handlePlayIntentFromAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)performAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

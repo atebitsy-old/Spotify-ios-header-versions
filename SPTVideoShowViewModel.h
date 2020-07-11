@@ -9,12 +9,13 @@
 #import "SPTCollectionFiltering-Protocol.h"
 #import "SPTCollectionSorting-Protocol.h"
 #import "SPTExplicitContentEnabledStateObserver-Protocol.h"
+#import "SPTPodcastEpisodeCellActionHandlerEpisodeProvider-Protocol.h"
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 
 @class NSArray, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastContextMenuDelegateObject, SPTPodcastSortingService;
 @protocol SPTAbbaFeatureFlags, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTFreeTierEntityFeedbackButtonViewModel, SPTOfflineManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastFactory, SPTPodcastFeature, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastUITestManager, SPTVideoShowViewModelDelegate;
 
-@interface SPTVideoShowViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTCollectionSorting, SPTCollectionFiltering>
+@interface SPTVideoShowViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
     _Bool _isLoading;
     _Bool _isLoaded;
@@ -81,6 +82,8 @@
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTVideoShowViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (id)cellActionHandler:(id)arg1 episodeForIndexPath:(id)arg2;
+- (id)cellActionHandler:(id)arg1 allEpisodesInSection:(long long)arg2;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (id)additionalFilters;
 @property(readonly, nonatomic) _Bool shouldHaveDownloadFilter;

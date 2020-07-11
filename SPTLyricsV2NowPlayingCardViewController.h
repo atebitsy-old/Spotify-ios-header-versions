@@ -9,18 +9,19 @@
 #import "SPTLyricsV2LyricsViewControllerDelegate-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, NSURL, SPTLyricsLineSet, SPTLyricsV2Configuration, SPTLyricsV2FullscreenViewController, SPTLyricsV2GLUETheme, SPTLyricsV2LyricsViewController, SPTLyricsV2NowPlayingCardView, SPTPlayerTrack, SPTVocalRemovalConfiguration, UITapGestureRecognizer;
+@class NSString, NSURL, SPTLyricsV2Colors, SPTLyricsV2Configuration, SPTLyricsV2FullscreenViewController, SPTLyricsV2GLUETheme, SPTLyricsV2LyricsViewController, SPTLyricsV2Model, SPTLyricsV2NowPlayingCardView, SPTPlayerTrack, SPTVocalRemovalConfiguration, UITapGestureRecognizer;
 @protocol SPTNowPlayingService;
 
 @interface SPTLyricsV2NowPlayingCardViewController : UIViewController <SPTLyricsV2LyricsViewControllerDelegate, SPTNetworkConnectivityControllerObserver>
 {
     NSString *_cardTitle;
+    SPTLyricsV2Colors *_defaultColors;
     SPTLyricsV2Configuration *_lyricsConfiguration;
     SPTLyricsV2GLUETheme *_theme;
     SPTLyricsV2LyricsViewController *_lyricsViewController;
     SPTVocalRemovalConfiguration *_vocalRemovalConfiguration;
     NSURL *_imageURL;
-    SPTLyricsLineSet *_lyricsLineSet;
+    SPTLyricsV2Model *_lyricsModel;
     SPTLyricsV2FullscreenViewController *_fullscreenViewController;
     SPTPlayerTrack *_track;
     UITapGestureRecognizer *_tapRecognizer;
@@ -31,12 +32,13 @@
 @property(retain, nonatomic) UITapGestureRecognizer *tapRecognizer; // @synthesize tapRecognizer=_tapRecognizer;
 @property(retain, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(retain, nonatomic) SPTLyricsV2FullscreenViewController *fullscreenViewController; // @synthesize fullscreenViewController=_fullscreenViewController;
-@property(retain, nonatomic) SPTLyricsLineSet *lyricsLineSet; // @synthesize lyricsLineSet=_lyricsLineSet;
+@property(retain, nonatomic) SPTLyricsV2Model *lyricsModel; // @synthesize lyricsModel=_lyricsModel;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) SPTVocalRemovalConfiguration *vocalRemovalConfiguration; // @synthesize vocalRemovalConfiguration=_vocalRemovalConfiguration;
 @property(readonly, nonatomic) SPTLyricsV2LyricsViewController *lyricsViewController; // @synthesize lyricsViewController=_lyricsViewController;
 @property(readonly, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
+@property(readonly, nonatomic) SPTLyricsV2Colors *defaultColors; // @synthesize defaultColors=_defaultColors;
 @property(readonly, nonatomic) NSString *cardTitle; // @synthesize cardTitle=_cardTitle;
 - (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
@@ -51,6 +53,7 @@
 - (void)handleSuccessForTrackWithLyricsModel:(id)arg1;
 - (void)handleErrorState;
 - (void)fetchLyricsModelForTrack;
+- (id)currentColors;
 - (void)prepareForNewTrack;
 - (void)closeFullscreenIfNecessary:(CDUnknownBlockType)arg1;
 - (void)buildFullscreenLyricsViewController;

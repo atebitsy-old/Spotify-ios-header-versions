@@ -5,6 +5,7 @@
 //
 
 @protocol _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_
+@property(nonatomic, readonly) _Bool fullSizeCardsEnabled;
 @property(nonatomic, readonly) _Bool followFeedEnabled;
 @end
 

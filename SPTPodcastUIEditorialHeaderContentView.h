@@ -9,21 +9,17 @@
 #import "VISREFHeaderComponent-Protocol.h"
 
 @class GLUELabel, NSLayoutConstraint, NSString, SPTPodcastUIEditorialHeaderStyle, UIImage, UILabel, UILayoutGuide, UIView, VISREFAlignedImageView, VISREFGradientView;
-@protocol GLUETheme;
 
 @interface SPTPodcastUIEditorialHeaderContentView : SPTPodcastUIBaseHeaderContentView <VISREFHeaderComponent>
 {
-    UILabel *_titleLabel;
     UIView *_actionRowView;
-    id <GLUETheme> _theme;
-    SPTPodcastUIEditorialHeaderStyle *_headerStyle;
+    SPTPodcastUIEditorialHeaderStyle *_style;
+    UILabel *_titleLabel;
     GLUELabel *_descriptionLabel;
     VISREFGradientView *_titleProtectionGradient;
     VISREFAlignedImageView *_alignedImageView;
     UILayoutGuide *_actionRowLayoutGuide;
-    NSLayoutConstraint *_noDescriptionActionRowTopConstraint;
-    NSLayoutConstraint *_descriptionActionRowTopConstraint;
-    NSLayoutConstraint *_descriptionHeightConstraint;
+    NSLayoutConstraint *_actionRowTopConstraint;
     NSLayoutConstraint *_actionRowHeightConstraint;
     double _lastWidth;
     VISREFGradientView *_statusBarProtectionGradient;
@@ -40,32 +36,29 @@
 @property(retain, nonatomic) VISREFGradientView *statusBarProtectionGradient; // @synthesize statusBarProtectionGradient=_statusBarProtectionGradient;
 @property(nonatomic) double lastWidth; // @synthesize lastWidth=_lastWidth;
 @property(retain, nonatomic) NSLayoutConstraint *actionRowHeightConstraint; // @synthesize actionRowHeightConstraint=_actionRowHeightConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *descriptionHeightConstraint; // @synthesize descriptionHeightConstraint=_descriptionHeightConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *descriptionActionRowTopConstraint; // @synthesize descriptionActionRowTopConstraint=_descriptionActionRowTopConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *noDescriptionActionRowTopConstraint; // @synthesize noDescriptionActionRowTopConstraint=_noDescriptionActionRowTopConstraint;
+@property(retain, nonatomic) NSLayoutConstraint *actionRowTopConstraint; // @synthesize actionRowTopConstraint=_actionRowTopConstraint;
 @property(readonly, nonatomic) UILayoutGuide *actionRowLayoutGuide; // @synthesize actionRowLayoutGuide=_actionRowLayoutGuide;
 @property(readonly, nonatomic) VISREFAlignedImageView *alignedImageView; // @synthesize alignedImageView=_alignedImageView;
 @property(readonly, nonatomic) VISREFGradientView *titleProtectionGradient; // @synthesize titleProtectionGradient=_titleProtectionGradient;
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
-@property(readonly, nonatomic) SPTPodcastUIEditorialHeaderStyle *headerStyle; // @synthesize headerStyle=_headerStyle;
-@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) UIView *actionRowView; // @synthesize actionRowView=_actionRowView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) SPTPodcastUIEditorialHeaderStyle *style; // @synthesize style=_style;
+@property(retain, nonatomic) UIView *actionRowView; // @synthesize actionRowView=_actionRowView;
 - (void).cxx_destruct;
 - (void)setAssociatedColor:(id)arg1;
-- (void)updateDescriptionConstraint;
-- (void)setDescriptionText:(id)arg1;
-- (void)setTitleText:(id)arg1;
+@property(copy, nonatomic) NSString *descriptionText;
+@property(copy, nonatomic) NSString *titleText;
 @property(retain, nonatomic) UIImage *image;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
+- (double)getTitleLabelNormalizedHeight;
 - (void)headerViewDidRemountHeaderComponents:(id)arg1;
 - (double)normalizeProgress:(double)arg1 minValue:(double)arg2 maxValue:(double)arg3;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
-- (void)layoutSubviews;
 - (void)updateProgressPositions;
-- (void)setupActionRowHeight;
-- (void)setupLayout;
-- (void)setup;
+- (void)layoutSubviews;
+- (void)setUpActionRowHeight;
+- (void)setUpLayout;
+- (void)setUp;
 - (id)initWithTheme:(id)arg1 naturalHeight:(double)arg2;
 
 // Remaining properties

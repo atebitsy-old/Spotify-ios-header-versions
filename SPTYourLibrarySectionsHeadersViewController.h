@@ -11,7 +11,7 @@
 #import "SPTYourLibrarySectionHeaderViewControllerDelegate-Protocol.h"
 #import "SPTYourLibraryViewModelObserver-Protocol.h"
 
-@class NSMutableDictionary, NSString, SPTYourLibraryGLUETheme, SPTYourLibraryLogger, SPTYourLibraryPageViewController;
+@class NSMutableDictionary, NSString, SPTYourLibraryGLUETheme, SPTYourLibraryPageViewController;
 @protocol SPTYourLibrarySectionsHeadersViewControllerDelegate, SPTYourLibraryViewModel;
 
 @interface SPTYourLibrarySectionsHeadersViewController : UIViewController <SPTYourLibraryPageViewControllerDelegate, SPTYourLibraryPageViewControllerDataSource, SPTYourLibrarySectionHeaderViewControllerDelegate, SPTYourLibraryViewModelObserver>
@@ -20,12 +20,10 @@
     id <SPTYourLibraryViewModel> _viewModel;
     SPTYourLibraryGLUETheme *_theme;
     SPTYourLibraryPageViewController *_sectionHeaderPageViewController;
-    SPTYourLibraryLogger *_logger;
     NSMutableDictionary *_cachedViewControllers;
 }
 
 @property(retain, nonatomic) NSMutableDictionary *cachedViewControllers; // @synthesize cachedViewControllers=_cachedViewControllers;
-@property(retain, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTYourLibraryPageViewController *sectionHeaderPageViewController; // @synthesize sectionHeaderPageViewController=_sectionHeaderPageViewController;
 @property(retain, nonatomic) SPTYourLibraryGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTYourLibraryViewModel> viewModel; // @synthesize viewModel=_viewModel;
@@ -47,7 +45,7 @@
 - (void)setSelectedFromSection:(double)arg1 toSection:(double)arg2 fromSegment:(double)arg3 toSegment:(double)arg4;
 - (void)scrollToSection:(unsigned long long)arg1;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 logger:(id)arg3;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

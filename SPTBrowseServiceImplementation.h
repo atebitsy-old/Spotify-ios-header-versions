@@ -53,6 +53,7 @@
 @property(readonly, nonatomic) SPTBrowseFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;
 @property(readonly, nonatomic) id <SPTBrowseTestManager> testManager; // @synthesize testManager=_testManager;
+- (_Bool)ownsPageWithURI:(id)arg1;
 - (id)pageIdentifierForURI:(id)arg1;
 - (void)setNavigationBarVisible:(_Bool)arg1 inViewModelBuilder:(id)arg2;
 - (id)makeGenreErrorStateViewModel;

@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTVoiceLibraryAudioRecorderDelegate-Protocol.h"
+#import "SPTVoiceLibraryAudioRecorderObserver-Protocol.h"
 #import "SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTVoiceLibrarySpeechRecognitionDataLoader;
 @protocol SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryRecognitionTaskDelegate;
 
-@interface SPTVoiceLibraryRecognitionTask : NSObject <SPTVoiceLibraryAudioRecorderDelegate, SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate>
+@interface SPTVoiceLibraryRecognitionTask : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate>
 {
     id <SPTVoiceLibraryRecognitionTaskDelegate> _delegate;
     unsigned long long _state;

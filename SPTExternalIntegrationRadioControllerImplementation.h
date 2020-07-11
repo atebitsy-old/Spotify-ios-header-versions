@@ -35,12 +35,12 @@
 - (_Bool)thumbIsDownForTrackWithURI:(id)arg1;
 - (_Bool)thumbIsUpForTrackWithURI:(id)arg1;
 - (_Bool)canThumbTrackInPlayerState:(id)arg1;
-- (void)thumbDownTrackInPlayerState:(id)arg1 accessorySessionID:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)thumbUpTrackInPlayerState:(id)arg1 accessorySessionID:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)thumbDownTrackInPlayerState:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)thumbUpTrackInPlayerState:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (_Bool)isPlayingRadioInPlayerState:(id)arg1;
 - (_Bool)canStartRadioSeededByTrackURI:(id)arg1;
 - (_Bool)canStartTrackRadioSeededByPlayerState:(id)arg1;
-- (void)startRadioForTrackURI:(id)arg1 currentAccessory:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)startRadioForTrackURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (id)initWithPlaybackController:(id)arg1 radioManager:(id)arg2 radioAPI:(id)arg3 radioRemoteConfigProperties:(id)arg4 debugLog:(id)arg5 logger:(id)arg6;
 
 // Remaining properties

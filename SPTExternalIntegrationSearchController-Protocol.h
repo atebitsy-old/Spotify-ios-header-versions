@@ -7,8 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
+@protocol SPTExternalIntegrationExternalActionOrigin;
 
 @protocol SPTExternalIntegrationSearchController <NSObject>
-- (void)searchWithQuery:(NSString *)arg1 limit:(unsigned long long)arg2 offset:(unsigned long long)arg3 accessorySessionID:(NSString *)arg4 completionHandler:(void (^)(NSDictionary *, NSError *))arg5;
+- (void)searchWithQuery:(NSString *)arg1 limit:(unsigned long long)arg2 offset:(unsigned long long)arg3 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg4 completionHandler:(void (^)(NSDictionary *, NSError *))arg5;
 @end
 

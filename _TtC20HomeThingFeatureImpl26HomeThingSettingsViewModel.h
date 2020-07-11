@@ -8,6 +8,7 @@
 
 @interface _TtC20HomeThingFeatureImpl26HomeThingSettingsViewModel : NSObject
 {
+    // Error parsing type: , name: lastUnsupportedVersionRemoveDevice
     // Error parsing type: , name: dataLoader
     // Error parsing type: , name: userDevices
     // Error parsing type: , name: theme

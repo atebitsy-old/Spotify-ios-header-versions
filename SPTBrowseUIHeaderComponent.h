@@ -6,11 +6,13 @@
 
 #import "HUGSThemableComponent.h"
 
+#import "HUBComponent-Protocol.h"
 #import "HUBComponentWithChildren-Protocol.h"
 
+@class NSSet;
 @protocol HUBComponentChildDelegate;
 
-@interface SPTBrowseUIHeaderComponent : HUGSThemableComponent <HUBComponentWithChildren>
+@interface SPTBrowseUIHeaderComponent : HUGSThemableComponent <HUBComponent, HUBComponentWithChildren>
 {
     id <HUBComponentChildDelegate> _childDelegate;
 }
@@ -19,7 +21,7 @@
 - (void).cxx_destruct;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
-- (id)layoutTraits;
+@property(readonly, copy, nonatomic) NSSet *layoutTraits;
 
 @end
 

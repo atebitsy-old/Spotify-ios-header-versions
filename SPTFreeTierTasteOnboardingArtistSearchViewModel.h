@@ -20,6 +20,7 @@
 {
     _Bool _repeatVisit;
     _Bool _isLoadingMore;
+    _Bool _seedASessionEnabled;
     id <SPTFreeTierTasteOnboardingArtistSearchViewModelDelegate> _delegate;
     SPTFreeTierTasteOnboardingArtistSearchViewLogger *_logger;
     SPTFreeTierTasteOnboardingSession *_session;
@@ -36,6 +37,7 @@
     struct CGRect _keyboardFrame;
 }
 
+@property(nonatomic) _Bool seedASessionEnabled; // @synthesize seedASessionEnabled=_seedASessionEnabled;
 @property(nonatomic) _Bool isLoadingMore; // @synthesize isLoadingMore=_isLoadingMore;
 @property(copy, nonatomic) NSString *searchNextPageURI; // @synthesize searchNextPageURI=_searchNextPageURI;
 @property(copy, nonatomic) NSString *searchSessionId; // @synthesize searchSessionId=_searchSessionId;
@@ -77,7 +79,7 @@
 - (void)performSearch:(id)arg1;
 - (void)registerWithCollectionView:(id)arg1;
 - (id)viewStyleForTraitCollection:(id)arg1;
-- (id)initWithTheme:(id)arg1 logger:(id)arg2 session:(id)arg3 dataLoader:(id)arg4 imageLoader:(id)arg5;
+- (id)initWithTheme:(id)arg1 logger:(id)arg2 session:(id)arg3 dataLoader:(id)arg4 imageLoader:(id)arg5 seedASessionEnabled:(_Bool)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -17,7 +17,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUEEmptyStateView, NSString, NSURL, SPTEntityHeaderViewController, SPTProgressView, SPTTableViewOfflineSwitchCell, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicOfflineSwitchFactory, SPTYourLibraryMusicSongCellConfigurator, SPTYourLibraryMusicSongsHeaderViewController, SPTYourLibraryMusicSongsTableView;
-@protocol GLUEImageLoader, SPTAlertInterface, SPTAssistedCurationUIService, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTViewLogger, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicTestManager, UITableViewDragDelegate;
+@protocol GLUEImageLoader, SPTAlertInterface, SPTAssistedCurationUIService, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTViewLogger, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicTestManager, UITableViewDragDelegate, _TtP18FilterChipsFeature21SPTFilterChipsFactory_;
 
 @interface SPTYourLibraryMusicSongsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTYourLibraryMusicSongCellConfiguratorDelegate, SPTNavigationControllerNavigationBarState, SPContentInsetViewController, SPTOfflineSwitchDelegate, GLUEThemeObserver, SPTYourLibraryMusicSongsViewModelDelegate, SPTPageController>
 {
@@ -41,8 +41,12 @@
     id <UITableViewDragDelegate> _dragDelegateHolder;
     id <SPTYourLibraryMusicTestManager> _testManager;
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
+    id <_TtP18FilterChipsFeature21SPTFilterChipsFactory_> _filterChipsFactory;
+    UIViewController *_filterChipsViewController;
 }
 
+@property(retain, nonatomic) UIViewController *filterChipsViewController; // @synthesize filterChipsViewController=_filterChipsViewController;
+@property(readonly, nonatomic) id <_TtP18FilterChipsFeature21SPTFilterChipsFactory_> filterChipsFactory; // @synthesize filterChipsFactory=_filterChipsFactory;
 @property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <UITableViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
@@ -65,6 +69,7 @@
 @property(retain, nonatomic) SPTYourLibraryMusicSongsTableView *tableView; // @synthesize tableView=_tableView;
 - (void).cxx_destruct;
 - (void)configureCell:(id)arg1 atIndexPath:(id)arg2;
+- (id)filterChipsSectionHeaderWithViewModel:(id)arg1;
 - (id)buttonSectionHeaderWithViewModel:(id)arg1;
 - (id)defaultSectionHeaderWithViewModel:(id)arg1;
 - (id)entitySectionHeaderWithViewModel:(id)arg1;
@@ -72,6 +77,7 @@
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (unsigned long long)preferredNavigationBarState;
+- (void)offlineSwitchCellDidAbortStateChange:(id)arg1;
 - (unsigned long long)offlineSwitchCellOfflineAvailability:(id)arg1;
 - (void)offlineSwitchCellDidChangeState:(id)arg1 isOn:(_Bool)arg2;
 - (void)updateTable;
@@ -106,12 +112,13 @@
 - (void)hideProgressViewWithError:(id)arg1;
 - (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)setupConstraints;
+- (void)setupFilterChips;
 - (void)initializeInterface;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 collectionConfiguration:(id)arg3 imageLoader:(id)arg4 audioPreviewModelFactory:(id)arg5 audioPreviewUIFactory:(id)arg6 emptyView:(id)arg7 viewLogger:(id)arg8 alertInterface:(id)arg9 offlineSwitchFactory:(id)arg10 sortingFilteringUIFactory:(id)arg11 shelves:(id)arg12 shareDragDelegateFactory:(id)arg13 testManager:(id)arg14 trackRowFactory:(id)arg15 assistedCurationUIService:(id)arg16;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 collectionConfiguration:(id)arg3 imageLoader:(id)arg4 audioPreviewModelFactory:(id)arg5 audioPreviewUIFactory:(id)arg6 emptyView:(id)arg7 viewLogger:(id)arg8 alertInterface:(id)arg9 offlineSwitchFactory:(id)arg10 sortingFilteringUIFactory:(id)arg11 shelves:(id)arg12 shareDragDelegateFactory:(id)arg13 testManager:(id)arg14 trackRowFactory:(id)arg15 assistedCurationUIService:(id)arg16 filterChipsFactory:(id)arg17;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

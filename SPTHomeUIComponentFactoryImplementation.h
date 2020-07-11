@@ -24,6 +24,7 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+- (id)createTooltipComponent;
 - (id)createTappableSectionHeaderComponent;
 - (id)createShortcutsCardComponent;
 - (id)createShortcutsContainerComponent;

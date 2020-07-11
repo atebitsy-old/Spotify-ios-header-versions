@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTFreeTierCreatePlaylistService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUIPresentationService, SPTUserBehaviourInstrumentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP21PageLoaderViewFeature24SPTPageLoaderViewService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTFreeTierCreatePlaylistService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUIPresentationService, SPTUserBehaviourInstrumentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18FilterChipsFeature21SPTFilterChipsService_, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP21PageLoaderViewFeature24SPTPageLoaderViewService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
 
 @interface SPTYourLibraryMusicUIService : SPTUIPageService
 {
@@ -36,9 +36,11 @@
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <_TtP18QuickScrollFeature21SPTQuickScrollService_> _quickScrollService;
     id <_TtP21PageLoaderViewFeature24SPTPageLoaderViewService_> _pageLoaderViewService;
+    id <_TtP18FilterChipsFeature21SPTFilterChipsService_> _filterChipsService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <_TtP18FilterChipsFeature21SPTFilterChipsService_> filterChipsService; // @synthesize filterChipsService=_filterChipsService;
 @property(nonatomic) __weak id <_TtP21PageLoaderViewFeature24SPTPageLoaderViewService_> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <_TtP18QuickScrollFeature21SPTQuickScrollService_> quickScrollService; // @synthesize quickScrollService=_quickScrollService;
 @property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;

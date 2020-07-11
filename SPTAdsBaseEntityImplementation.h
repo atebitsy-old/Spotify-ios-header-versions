@@ -16,6 +16,7 @@
     _Bool _dummy;
     _Bool _preview;
     _Bool _skippable;
+    _Bool _inAppBrowser;
     _Bool _physicalButtonsSupported;
     NSString *_identifier;
     NSString *_adPlaybackID;
@@ -58,6 +59,7 @@
 @property(readonly, nonatomic) id <SPTAdsBaseReward> reward; // @synthesize reward=_reward;
 @property(readonly, nonatomic, getter=isPhysicalButtonsSupported) _Bool physicalButtonsSupported; // @synthesize physicalButtonsSupported=_physicalButtonsSupported;
 @property(readonly, nonatomic) id <SPTAdsBaseFeaturedAction> featuredAction; // @synthesize featuredAction=_featuredAction;
+@property(readonly, nonatomic) _Bool inAppBrowser; // @synthesize inAppBrowser=_inAppBrowser;
 @property(readonly, nonatomic) NSURL *clickthroughURL; // @synthesize clickthroughURL=_clickthroughURL;
 @property(readonly, copy, nonatomic) NSString *actionText; // @synthesize actionText=_actionText;
 @property(readonly, nonatomic) double duration; // @synthesize duration=_duration;

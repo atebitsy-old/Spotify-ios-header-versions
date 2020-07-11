@@ -9,7 +9,7 @@
 #import "SPTHearablesSpotifyGoAPI-Protocol.h"
 
 @class NSString, SPTAccessory;
-@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI, SPTHearablesRecommendationEngine;
+@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI, SPTHearablesRecommendationEngine;
 
 @interface SPTHearablesPlaybackController : NSObject <SPTHearablesSpotifyGoAPI>
 {
@@ -17,10 +17,12 @@
     id <SPTGaiaConnectAPI> _connectApi;
     id <SPTExternalIntegrationDebugLog> _debugLog;
     SPTAccessory *_accessory;
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     id <SPTHearablesRecommendationEngine> _recommendationEngine;
 }
 
 @property(retain, nonatomic) id <SPTHearablesRecommendationEngine> recommendationEngine; // @synthesize recommendationEngine=_recommendationEngine;
+@property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 @property(retain, nonatomic) SPTAccessory *accessory; // @synthesize accessory=_accessory;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectApi; // @synthesize connectApi=_connectApi;

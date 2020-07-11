@@ -25,9 +25,6 @@
 - (void)logUIImpressionVoiceFloatingMicrophoneTooltipCalloutWithSourceIdentifier:(id)arg1;
 - (void)logUIInteractionLaunchVoiceSearchViewWithSourceIdentifier:(id)arg1;
 - (void)logUIInteractionForClearCurrentSearchStringWithRequestID:(id)arg1;
-- (id)logInteraction:(id)arg1;
-- (void)logInteractionWithURI:(id)arg1 event:(id)arg2 userIntent:(id)arg3;
-- (void)logImpressionWithComponentModel:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 dateProvider:(id)arg2 ubiLogger:(id)arg3;
 
 // Remaining properties

@@ -9,7 +9,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLoginKeychainCredentialsWriter, SPTLoginLinkAccountManager, SPTLoginSignupMarketingOptInFlashController;
-@protocol ProfileFeature, SPTCoreService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTPreSignupExperimentationService, SPTSessionService, SPTURIDispatchService;
+@protocol SPTCoreService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTNotificationsService, SPTPreSignupExperimentationService, SPTSessionService, SPTURIDispatchService, _TtP16ProfileV2Feature19SPTProfileV2Service_;
 
 @interface SPTLoginSessionServiceImplementation : NSObject <SPTService>
 {
@@ -22,7 +22,7 @@
     id <SPTNetworkService> _networkService;
     id <SPTGLUEService> _glueService;
     id <SPTPreSignupExperimentationService> _psesService;
-    id <ProfileFeature> _profileService;
+    id <_TtP16ProfileV2Feature19SPTProfileV2Service_> _profileService;
     SPTLoginKeychainCredentialsWriter *_credentialsWriter;
     SPTLoginSignupMarketingOptInFlashController *_marketingOptInController;
     SPTLoginLinkAccountManager *_linkAccountManager;
@@ -32,7 +32,7 @@
 @property(retain, nonatomic) SPTLoginLinkAccountManager *linkAccountManager; // @synthesize linkAccountManager=_linkAccountManager;
 @property(retain, nonatomic) SPTLoginSignupMarketingOptInFlashController *marketingOptInController; // @synthesize marketingOptInController=_marketingOptInController;
 @property(retain, nonatomic) SPTLoginKeychainCredentialsWriter *credentialsWriter; // @synthesize credentialsWriter=_credentialsWriter;
-@property(nonatomic) __weak id <ProfileFeature> profileService; // @synthesize profileService=_profileService;
+@property(nonatomic) __weak id <_TtP16ProfileV2Feature19SPTProfileV2Service_> profileService; // @synthesize profileService=_profileService;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationService> psesService; // @synthesize psesService=_psesService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;

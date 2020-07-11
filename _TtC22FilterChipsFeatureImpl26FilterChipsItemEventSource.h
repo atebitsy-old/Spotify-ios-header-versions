@@ -14,6 +14,7 @@
     // Error parsing type: , name: items
 }
 
+- (void)filterChipsItemSelected:(id)arg1;
 - (void)filterChipsItemsLoaderObserverItemsUpdated:(id)arg1;
 
 @end

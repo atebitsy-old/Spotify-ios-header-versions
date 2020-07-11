@@ -7,9 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSearch_Content_Recents_ClearRecentsEventFactory, SPTUBIMobileSearch_Content_Recents_RecentItemEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileSearch_Content_Recents_ClearRecentsEventFactory, SPTUBIMobileSearch_Content_Recents_RecentItemEventFactory;
 
 @protocol SPTUBIMobileSearch_Content_RecentsEventFactory <NSObject>
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileSearch_Content_Recents_ClearRecentsEventFactory>)clearRecentsFactory;
 - (id <SPTUBIMobileSearch_Content_Recents_RecentItemEventFactory>)recentItemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIEventFactoryLocation>)_location;

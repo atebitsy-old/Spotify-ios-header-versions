@@ -24,10 +24,10 @@
 @property(readonly, nonatomic) id <SPTInAppMessageLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessageReceiver> messageReceiver; // @synthesize messageReceiver=_messageReceiver;
 - (void).cxx_destruct;
-- (id)unlockMessageDictionary:(id)arg1 triggers:(id)arg2 messageFormat:(id)arg3;
+- (id)unlockMessageDictionary:(id)arg1 triggers:(id)arg2;
 - (id)clickActionFromDictionary:(id)arg1;
-- (id)modelObjectFromJSONData:(id)arg1 messageFormat:(id)arg2 triggers:(id)arg3 error:(out id *)arg4;
-- (void)networkClient:(id)arg1 didFetchMessage:(id)arg2 messageFormat:(id)arg3 triggers:(id)arg4 triggerType:(id)arg5;
+- (id)modelObjectFromJSONData:(id)arg1 triggers:(id)arg2 error:(out id *)arg3;
+- (void)networkClient:(id)arg1 didFetchMessage:(id)arg2 triggers:(id)arg3 triggerType:(id)arg4;
 - (id)initWithMessageReceiver:(id)arg1 actionHandlers:(id)arg2 logger:(id)arg3;
 
 // Remaining properties

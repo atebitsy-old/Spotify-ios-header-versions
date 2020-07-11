@@ -6,21 +6,26 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBIMobileYourLibraryEventFactory, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTYourLibraryLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBIMobileYourLibraryEventFactory> _eventFactory;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIMobileYourLibraryEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIImpressionWithSectionId:(id)arg1 index:(long long)arg2 renderType:(id)arg3;
-- (void)logImpressionForPage:(id)arg1 index:(long long)arg2;
-- (void)logSelectedTabIndex:(unsigned long long)arg1 groupIndex:(unsigned long long)arg2;
+- (void)logImpressionForPageURI:(id)arg1 index:(long long)arg2;
+- (void)logCreatePlaylistAction:(unsigned long long)arg1;
+- (void)logSelectedTabIndex:(unsigned long long)arg1 groupIndex:(unsigned long long)arg2 pageURI:(id)arg3;
 - (void)logSelectedGroupIndex:(unsigned long long)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
 
 @end
 

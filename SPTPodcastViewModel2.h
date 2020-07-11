@@ -14,7 +14,7 @@
 #import "SPTPodcastTrailerSectionViewModelDelegate-Protocol.h"
 
 @class NSArray, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastEpisodeSectionViewModel, SPTPodcastFeatureProperties, SPTPodcastHeaderViewModel, SPTPodcastLogger, SPTPodcastTopicCategoryViewModel, SPTPodcastTrailerSectionViewModel, SPTPodcastViewSectionConfiguration;
-@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate2;
+@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate2;
 
 @interface SPTPodcastViewModel2 : NSObject <SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastTopicCategoryViewModelDelegate, SPTPodcastFollowSectionViewModelDelegate, SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTPodcastTrailerSectionViewModelDelegate>
 {
@@ -80,7 +80,7 @@
 - (void)followSectionViewModelDidUpdatePlaybackState:(id)arg1;
 - (void)followSectionViewModelDidSelectContextMenuButton:(id)arg1;
 - (void)followSectionViewModelDidUpdateFollowedState:(id)arg1;
-- (void)viewModelPodcastDidUpdatePlayingEpisode:(id)arg1 atIndexPath:(id)arg2;
+- (void)viewModel:(id)arg1 didUpdatePlayingEpisodeAtIndexPath:(id)arg2;
 - (void)viewModel:(id)arg1 willPresentFilterContextViewController:(id)arg2 fromSender:(id)arg3;
 - (void)sectionViewModelDidUpdateFilterSorting:(id)arg1;
 - (void)trailerSectionViewModel:(id)arg1 didTapContextMenuforTrailerEpisode:(id)arg2;
@@ -89,6 +89,7 @@
 - (void)followedStateWasUpdated;
 - (void)resetFilters;
 - (_Bool)canPlayEpisode:(id)arg1;
+- (void)updateFollowSectionLayoutWithPlayerIfNeeded:(id)arg1;
 - (void)updateTrailerSectionLayoutWithPlayer:(id)arg1;
 - (_Bool)isPlayingTrailer:(id)arg1;
 - (_Bool)isPlayingAnyEpisode;
@@ -100,14 +101,14 @@
 - (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2;
 - (id)deserializationQueue;
 - (void)handleFirstLoadUpdates;
+@property(readonly, nonatomic) id <SPTPodcastEpisodeCellActionTarget> cellActionHandler;
 - (void)didReachEndOfContent;
 - (void)viewDidDisappear;
 - (void)logTrailerWasShownIfNecessaryForSection:(long long)arg1;
 - (void)viewWillDisplayCellAtIndexPath:(id)arg1;
+- (void)configureTrailerEpisodeForPodcast:(id)arg1;
 - (void)loadAndSubscribe;
-- (id)allEpisodes;
 - (id)sectionViewModelForIndexPath:(id)arg1;
-- (id)episodeForIndexPath:(id)arg1;
 - (id)titleForSection:(long long)arg1;
 - (long long)numberOfSections;
 - (long long)numberOfRowsInSection:(long long)arg1;

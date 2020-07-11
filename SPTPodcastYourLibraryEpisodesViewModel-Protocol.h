@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSIndexPath, NSString, NSURL;
+@class NSIndexPath, NSString, NSURL;
 @protocol SPTPodcastEpisode, SPTPodcastYourLibraryEpisodesViewModelDelegate;
 
 @protocol SPTPodcastYourLibraryEpisodesViewModel <NSObject>
@@ -21,7 +21,6 @@
 - (_Bool)isEpisodeDisabledAtIndexPath:(NSIndexPath *)arg1;
 - (void)unsubscribe;
 - (void)loadAndSubscribe;
-- (NSArray *)allEpisodesInSection:(unsigned long long)arg1;
 - (id <SPTPodcastEpisode>)episodeAtIndexPath:(NSIndexPath *)arg1;
 - (unsigned long long)numberOfEntriesInSection:(unsigned long long)arg1;
 - (unsigned long long)numberOfEntrySections;

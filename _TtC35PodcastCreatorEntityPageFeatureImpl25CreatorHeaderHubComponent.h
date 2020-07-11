@@ -11,6 +11,7 @@
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl25CreatorHeaderHubComponent : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: layoutTraits
+    // Error parsing type: , name: backButtonAction
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageLoader
 }

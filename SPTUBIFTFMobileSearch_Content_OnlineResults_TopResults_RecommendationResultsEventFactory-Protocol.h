@@ -7,9 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIFTFMobileSearch_Content_OnlineResults_TopResults_RecommendationResults_RecommendationItemEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIFTFMobileSearch_Content_OnlineResults_TopResults_RecommendationResults_RecommendationItemEventFactory, SPTUBIImpressionEvent;
 
 @protocol SPTUBIFTFMobileSearch_Content_OnlineResults_TopResults_RecommendationResultsEventFactory <NSObject>
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIFTFMobileSearch_Content_OnlineResults_TopResults_RecommendationResults_RecommendationItemEventFactory>)recommendationItemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

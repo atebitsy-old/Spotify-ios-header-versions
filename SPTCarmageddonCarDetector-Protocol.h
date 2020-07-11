@@ -10,8 +10,8 @@
 @protocol SPTCarmageddonCarDetectionStateObserver;
 
 @protocol SPTCarmageddonCarDetector <NSObject>
-@property(readonly, nonatomic) SPTCarmageddonCarDetectionState *currentState;
 - (void)removeObserver:(id <SPTCarmageddonCarDetectionStateObserver>)arg1;
 - (void)addObserver:(id <SPTCarmageddonCarDetectionStateObserver>)arg1;
+@property(nonatomic, readonly) SPTCarmageddonCarDetectionState *currentState;
 @end
 

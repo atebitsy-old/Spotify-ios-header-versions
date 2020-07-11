@@ -47,6 +47,7 @@
 @property(readonly, copy, nonatomic) NSString *format;
 @property(readonly) unsigned long long hash;
 @property(readonly, copy, nonatomic) NSString *identifier;
+@property(readonly, nonatomic) _Bool inAppBrowser;
 @property(readonly, nonatomic) _Bool isAudio;
 @property(readonly, nonatomic) _Bool isVideo;
 @property(readonly, copy, nonatomic) NSString *lineItemID;

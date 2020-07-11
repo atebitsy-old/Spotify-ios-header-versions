@@ -17,7 +17,7 @@
 - (void)send_skipToNextWithPerformSkipToNext:(CDUnknownBlockType)arg1;
 - (void)send_didTapPositiveFeedbackButtonWithFeedbackButton:(id)arg1 performPositiveFeedback:(CDUnknownBlockType)arg2;
 - (void)send_adPlayerDisplayLinkDidFireWithTrack:(id)arg1 shouldEnableSkipControl:(_Bool)arg2 shouldShowSkipControl:(_Bool)arg3 nextNPVButton:(id)arg4 prevNPVButton:(id)arg5 redisplaySkipControl:(_Bool)arg6 position:(double)arg7 skipDelaySecs:(double)arg8;
-- (void)send_adPlayerStateDidChangeToTrackWithTrack:(id)arg1 playerState:(id)arg2 isVideoCompanionAd:(_Bool)arg3 isVideoInProgress:(_Bool)arg4;
+- (void)send_adPlayerStateDidChangeToTrackWithTrack:(id)arg1 playerState:(id)arg2 isVideoCompanionAd:(_Bool)arg3 isVideoInProgress:(_Bool)arg4 performDidChangeTrack:(CDUnknownBlockType)arg5;
 - (void)send_reloadViewControllerWithAdEntityWithIsVideoCompanionAd:(_Bool)arg1 isVideoInProgress:(_Bool)arg2 playerState:(id)arg3 shouldEnableSkipControl:(_Bool)arg4 nextNPVButton:(id)arg5 prevNPVButton:(id)arg6 redisplaySkipControl:(_Bool)arg7;
 - (void)subscribeWithSubscriber:(CDUnknownBlockType)arg1;
 - (id)init;

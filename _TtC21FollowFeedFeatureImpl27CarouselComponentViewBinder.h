@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "_TtC21FollowFeedFeatureImpl22HubComponentViewBinder.h"
+#import "HUBComponentView.h"
 
 #import "HUBComponentViewWithChildren-Protocol.h"
 #import "HUBComponentViewWithRestorableUIState-Protocol.h"
 
 @protocol HUBComponentViewChildDelegate;
 
-@interface _TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder <HUBComponentViewWithChildren, HUBComponentViewWithRestorableUIState>
+@interface _TtC21FollowFeedFeatureImpl27CarouselComponentViewBinder : HUBComponentView <HUBComponentViewWithChildren, HUBComponentViewWithRestorableUIState>
 {
     // Error parsing type: , name: childDelegate
     // Error parsing type: , name: carouselView

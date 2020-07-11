@@ -79,6 +79,11 @@
 + (id)spt_freeTierTasteOnboardingUpdateTasteViewURI;
 + (id)spt_freeTierTasteOnboardingArtistSearchViewURI;
 + (id)spt_freeTierTasteOnboardingArtistPickerViewURI;
++ (id)spt_seedASessionConvertHermesURIToHttp:(id)arg1 timestamp:(id)arg2;
++ (id)spt_seedASessionLoadMoreSearchResultsURI:(id)arg1 timestamp:(id)arg2;
++ (id)spt_seedASessionCurateURL:(id)arg1 sessionId:(id)arg2;
++ (id)spt_seedASessionSearchURL:(id)arg1 searchSessionId:(id)arg2 sessionId:(id)arg3 timestamp:(id)arg4;
++ (id)spt_seedASessionQuestionnaireURL:(id)arg1 sessionId:(id)arg2;
 + (id)spt_freeTierTrackContentURLForTrackIdentifier:(id)arg1;
 + (id)spt_hiddenContentURI;
 + (id)spt_urlForFetchingCreativeUsingDevEnabled:(_Bool)arg1 creativeID:(id)arg2 triggerType:(id)arg3 triggerURI:(id)arg4;
@@ -226,11 +231,9 @@
 + (unsigned long long)spt_optimalCDNImageSizeForSideInPoints:(double)arg1;
 + (unsigned long long)spt_optimalCDNImageSizeForSideInPixels:(double)arg1;
 + (id)spt_availableSPTCDNImageSizes;
-+ (void)createQueryParametersWithTriggerPatterns:(id)arg1 triggerType:(id)arg2 forUrlString:(id)arg3;
-+ (id)spt_inAppMessageFetchNoteMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
-+ (id)spt_inAppMessageFetchBannerMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
-+ (id)spt_inAppMessageFetchCardMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
-+ (id)spt_inAppMessageFetchTriggersURLUsingDevEnabled:(_Bool)arg1;
++ (void)createQueryParametersWithTriggerPatterns:(id)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3 actions:(id)arg4 forUrlString:(id)arg5;
++ (id)spt_inAppMessageFetchMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3 actions:(id)arg4 devEnabled:(_Bool)arg5;
++ (id)spt_inAppMessageFetchTriggersURLUsingDevEnabled:(_Bool)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3;
 + (id)spt_inAppMessageBaseURLComponentsWhenDevEnabled:(_Bool)arg1;
 + (id)spt_jsonFormatQueryItem;
 + (id)spt_plainScannablesURLWithFormat:(unsigned long long)arg1 backgroundColor:(id)arg2 barColor:(unsigned long long)arg3 pixelWidth:(unsigned long long)arg4 uri:(id)arg5;

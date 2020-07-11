@@ -45,9 +45,10 @@
 - (void)setSpotifyLogoAccessibilityElement:(_Bool)arg1;
 - (void)setSpotifyLogoImage:(id)arg1;
 - (void)setMessageLabelText:(id)arg1;
-- (void)setContinueWithEmailButtonTitle:(id)arg1;
-- (void)setContinueWithFacebookButtonTitle:(id)arg1;
-- (void)setContinueWithPhoneButtonTitle:(id)arg1;
+- (void)updateButton:(id)arg1 withTitle:(id)arg2 icon:(id)arg3;
+- (void)setContinueWithEmailButtonTitle:(id)arg1 icon:(id)arg2;
+- (void)setContinueWithFacebookButtonTitle:(id)arg1 icon:(id)arg2;
+- (void)setContinueWithPhoneButtonTitle:(id)arg1 icon:(id)arg2;
 - (void)setContinueWithLabelText:(id)arg1;
 - (void)layoutSubviews;
 - (void)setupDelegate;

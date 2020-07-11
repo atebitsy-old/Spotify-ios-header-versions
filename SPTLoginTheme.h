@@ -36,7 +36,7 @@
 - (id)autosendLinkDialogViewStyle;
 - (id)continueWithEmailViewStyle;
 - (id)continueWithWelcomeViewStyle;
-- (id)welcomeViewStyleForIPad:(_Bool)arg1;
+- (id)welcomeViewStyle;
 - (id)magicLinkDoRequestViewStyle;
 - (id)magicLinkSentConfirmationViewStyle;
 - (id)singleInputFieldBaseViewStyle;

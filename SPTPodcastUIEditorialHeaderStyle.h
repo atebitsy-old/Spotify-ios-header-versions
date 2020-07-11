@@ -6,20 +6,35 @@
 
 #import <objc/NSObject.h>
 
-@class GLUELabelStyle;
-@protocol GLUETheme;
+@class GLUELabelStyle, UIColor;
 
 @interface SPTPodcastUIEditorialHeaderStyle : NSObject
 {
+    GLUELabelStyle *_subtitleLabelStyle;
     double _podcastUIWidescreenMetric;
-    id <GLUETheme> _theme;
+    double _titleProtectionColorAlpha;
+    double _statusBarProtectionColorAlpha;
+    UIColor *_statusBarProtectionGradientFromColor;
+    UIColor *_statusBarProtectionGradientToColor;
+    struct CGPoint _titleProtectionGradientCurveStartPoint;
+    struct CGPoint _titleProtectionGradientCurveEndPoint;
+    struct CGPoint _statusBarProtectionGradientCurveStartPoint;
+    struct CGPoint _statusBarProtectionGradientCurveEndPoint;
 }
 
-@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
++ (id)defaultStyleWithTheme:(id)arg1;
+@property(copy, nonatomic) UIColor *statusBarProtectionGradientToColor; // @synthesize statusBarProtectionGradientToColor=_statusBarProtectionGradientToColor;
+@property(copy, nonatomic) UIColor *statusBarProtectionGradientFromColor; // @synthesize statusBarProtectionGradientFromColor=_statusBarProtectionGradientFromColor;
+@property(nonatomic) struct CGPoint statusBarProtectionGradientCurveEndPoint; // @synthesize statusBarProtectionGradientCurveEndPoint=_statusBarProtectionGradientCurveEndPoint;
+@property(nonatomic) struct CGPoint statusBarProtectionGradientCurveStartPoint; // @synthesize statusBarProtectionGradientCurveStartPoint=_statusBarProtectionGradientCurveStartPoint;
+@property(nonatomic) struct CGPoint titleProtectionGradientCurveEndPoint; // @synthesize titleProtectionGradientCurveEndPoint=_titleProtectionGradientCurveEndPoint;
+@property(nonatomic) struct CGPoint titleProtectionGradientCurveStartPoint; // @synthesize titleProtectionGradientCurveStartPoint=_titleProtectionGradientCurveStartPoint;
+@property(nonatomic) double statusBarProtectionColorAlpha; // @synthesize statusBarProtectionColorAlpha=_statusBarProtectionColorAlpha;
+@property(nonatomic) double titleProtectionColorAlpha; // @synthesize titleProtectionColorAlpha=_titleProtectionColorAlpha;
 @property(nonatomic) double podcastUIWidescreenMetric; // @synthesize podcastUIWidescreenMetric=_podcastUIWidescreenMetric;
+@property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) GLUELabelStyle *subtitleLabelStyle;
-- (id)initWithTheme:(id)arg1;
+- (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end
 

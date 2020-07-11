@@ -6,21 +6,27 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBIMobileCreatePlaylistEventFactory, SPTUBIPLCMobileRenamePlaylistEventFactory, SPTUserBehaviourInstrumentationLogger;
 
 @interface SPTFreeTierCreatePlaylistLogging : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBIMobileCreatePlaylistEventFactory> _createPlaylistEventFactory;
+    id <SPTUBIPLCMobileRenamePlaylistEventFactory> _renamePlaylistEventFactory;
+    id <SPTUserBehaviourInstrumentationLogger> _ubiLogger;
 }
 
+@property(retain, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(retain, nonatomic) id <SPTUBIPLCMobileRenamePlaylistEventFactory> renamePlaylistEventFactory; // @synthesize renamePlaylistEventFactory=_renamePlaylistEventFactory;
+@property(retain, nonatomic) id <SPTUBIMobileCreatePlaylistEventFactory> createPlaylistEventFactory; // @synthesize createPlaylistEventFactory=_createPlaylistEventFactory;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logUIInteractionWithUserIntent:(id)arg1 featureIdValue:(id)arg2 pageURI:(id)arg3;
-- (void)logRenameButtonSelected;
+- (void)logRenameButtonSelectedWithPlaylistURI:(id)arg1;
 - (void)logRenameCancelButtonSelected;
 - (void)logCreateButtonSelectedWithDefaultName:(_Bool)arg1;
 - (void)logCreateCancelButtonSelected;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 createPlaylistEventFactory:(id)arg2 renamePlaylistEventFactory:(id)arg3 ubiLogger:(id)arg4;
 
 @end
 

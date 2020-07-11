@@ -6,12 +6,13 @@
 
 #import "GLUEStatefulView.h"
 
-@class NSString, SPTBrowseUICardStyle, SPTBrowseUICardTextView, UIImage, UIImageView;
+@class NSString, SPTBrowseUICardStyle, SPTBrowseUICardTextView, UIImage, UIImageView, UIView;
 
 @interface SPTBrowseUICardView : GLUEStatefulView
 {
     _Bool _shouldDisplayImage;
     _Bool _canReuseLayout;
+    UIView *_imageViewContainer;
     UIImageView *_imageView;
     SPTBrowseUICardTextView *_textView;
     SPTBrowseUICardStyle *_stateStyle;
@@ -21,6 +22,7 @@
 @property(copy, nonatomic) SPTBrowseUICardStyle *stateStyle; // @synthesize stateStyle=_stateStyle;
 @property(readonly, nonatomic) SPTBrowseUICardTextView *textView; // @synthesize textView=_textView;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
+@property(readonly, nonatomic) UIView *imageViewContainer; // @synthesize imageViewContainer=_imageViewContainer;
 @property(nonatomic) _Bool shouldDisplayImage; // @synthesize shouldDisplayImage=_shouldDisplayImage;
 - (void).cxx_destruct;
 - (void)invalidateLayout;

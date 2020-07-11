@@ -12,6 +12,7 @@
     // Error parsing type: , name: delegate
 }
 
+@property(nonatomic, readonly) _Bool fullSizeCardsEnabled;
 @property(nonatomic, readonly) _Bool followFeedEnabled;
 
 @end

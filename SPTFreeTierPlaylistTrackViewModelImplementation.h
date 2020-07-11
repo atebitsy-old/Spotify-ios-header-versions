@@ -22,7 +22,6 @@
     id <SPTFreeTierPlaylistModelEntityTrackFields> _trackEntity;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     NSString *_subtitle;
-    NSString *_formatListTitle;
     NSArray *_artists;
     long long _offlineSyncStatus;
 }
@@ -35,7 +34,6 @@
 @property(readonly, nonatomic, getter=isPremiumOnlyFeatureEnabled) _Bool premiumOnlyFeatureEnabled; // @synthesize premiumOnlyFeatureEnabled=_premiumOnlyFeatureEnabled;
 @property(nonatomic, getter=isPlayingTrack) _Bool playingTrack; // @synthesize playingTrack=_playingTrack;
 @property(copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
-@property(copy, nonatomic) NSString *formatListTitle; // @synthesize formatListTitle=_formatListTitle;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModelEntityTrackFields> trackEntity; // @synthesize trackEntity=_trackEntity;
@@ -47,7 +45,7 @@
 @property(readonly, nonatomic) double timeLeft;
 @property(readonly, nonatomic) double duration;
 @property(readonly, nonatomic) NSDate *publishDate;
-@property(readonly, copy, nonatomic) NSString *publisherName;
+@property(readonly, copy, nonatomic) NSString *podcastTitle;
 - (void)setUpOfflineSyncStatus;
 @property(readonly, nonatomic) NSString *freeformDescription;
 @property(readonly, nonatomic) NSURL *videoThumbnailURL;
@@ -68,6 +66,7 @@
 @property(readonly, nonatomic) long long contextMenuIcon;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) NSURL *URL;
+@property(readonly, copy, nonatomic) NSString *glueAudioTrackSubtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 - (id)initWithPlaylistTrackEntity:(id)arg1 collectionConfiguration:(id)arg2 isPlayingTrack:(_Bool)arg3 isPremiumOnlyFeatureEnabled:(_Bool)arg4 isCollectionMenuIconsEnabled:(_Bool)arg5 showTrackOwner:(_Bool)arg6 showAlbumInSubtitle:(_Bool)arg7 showThumbnailImage:(_Bool)arg8;
 

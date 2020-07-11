@@ -6,13 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTVoiceLibraryAudioRecorderDelegate;
+@class SPTObserverManager;
+@protocol SPTVoiceLibraryAudioRecorderObserver;
 
 @protocol SPTVoiceLibraryAudioRecorder <NSObject>
 @property(readonly, nonatomic) double sampleRate;
 @property(readonly, nonatomic, getter=isRecording) _Bool recording;
-@property(nonatomic) __weak id <SPTVoiceLibraryAudioRecorderDelegate> delegate;
+@property(readonly, nonatomic) SPTObserverManager *observerManager;
 - (void)stopRecording;
 - (void)startRecording;
+- (void)removeObserver:(id <SPTVoiceLibraryAudioRecorderObserver>)arg1;
+- (void)addObserver:(id <SPTVoiceLibraryAudioRecorderObserver>)arg1;
 @end
 

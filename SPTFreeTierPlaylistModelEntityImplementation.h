@@ -26,6 +26,8 @@
 @property(copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModelEntityMetadataFields> metadata; // @synthesize metadata=_metadata;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSArray *__recommendations;
+@property(readonly, copy, nonatomic) NSArray *__tracks;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

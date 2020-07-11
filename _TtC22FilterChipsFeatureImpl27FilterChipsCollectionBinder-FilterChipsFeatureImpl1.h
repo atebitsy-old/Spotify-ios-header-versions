@@ -6,8 +6,9 @@
 
 #import "_TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder.h"
 
-@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl1)
-- (void)collectionView:(id)arg1 didDeselectItemAtIndexPath:(id)arg2;
+#import "UICollectionViewDelegate-Protocol.h"
+
+@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl1) <UICollectionViewDelegate>
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 @end
 

@@ -56,7 +56,6 @@
 - (_Bool)isLoginAlreadyPerformed;
 - (_Bool)isDevice:(id)arg1 sameAsCastDevice:(id)arg2;
 - (void)connectManager:(id)arg1 activeDeviceDidChange:(id)arg2;
-- (void)loadDummyMedia;
 - (id)castDiscoveredDeviceFromGCKDevice:(id)arg1;
 - (void)removeDeviceFromCore:(id)arg1;
 - (void)injectDeviceToCore:(id)arg1;

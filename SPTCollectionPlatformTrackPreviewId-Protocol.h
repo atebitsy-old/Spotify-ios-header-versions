@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTCollectionPlatformTrackPreviewId <SPTCollectionPlatformDataLoaderField>
-@property(readonly, nonatomic) NSString *previewId;
+@property(readonly, copy, nonatomic) NSString *previewId;
 @end
 

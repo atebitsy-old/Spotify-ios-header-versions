@@ -6,6 +6,7 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTPodcastEpisodeCellActionHandlerEpisodeProvider-Protocol.h"
 #import "SPTPodcastEpisodeProgressPolling-Protocol.h"
 #import "SPTPodcastUnfinishedItemsProviderObserver-Protocol.h"
 #import "SPTPodcastYourLibraryDataParserDelegate-Protocol.h"
@@ -14,7 +15,7 @@
 @class NSArray, NSCache, NSString, NSURL, SPTPodcastYourLibraryDataParser;
 @protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryEpisodesViewModelDelegate;
 
-@interface SPTPodcastYourLibraryEpisodesViewModelImpl : NSObject <SPTPodcastYourLibraryDataParserDelegate, SPTPodcastUnfinishedItemsProviderObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling>
+@interface SPTPodcastYourLibraryEpisodesViewModelImpl : NSObject <SPTPodcastYourLibraryDataParserDelegate, SPTPodcastUnfinishedItemsProviderObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
     NSURL *_URL;
     id <SPTPodcastYourLibraryEpisodesViewModelDelegate> _delegate;
@@ -53,6 +54,8 @@
 @property(nonatomic) __weak id <SPTPodcastYourLibraryEpisodesViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 - (void).cxx_destruct;
+- (id)cellActionHandler:(id)arg1 episodeForIndexPath:(id)arg2;
+- (id)cellActionHandler:(id)arg1 allEpisodesInSection:(long long)arg2;
 - (void)didFailParsingData:(id)arg1;
 - (void)dataParser:(id)arg1 didFinishParsingUnfinishedEpisodes:(id)arg2;
 - (void)dataParser:(id)arg1 didFinishParsingNextEpisodes:(id)arg2 withHeaderItems:(id)arg3;

@@ -6,13 +6,15 @@
 
 #import "GPBMessage.h"
 
-@class NSString, SPTSearchProtoAlbum, SPTSearchProtoArtist, SPTSearchProtoAudioEpisode, SPTSearchProtoAudioShow, SPTSearchProtoGenre, SPTSearchProtoPlaylist, SPTSearchProtoProfile, SPTSearchProtoTrack;
+@class NSString, SPTSearchProtoAlbum, SPTSearchProtoArtist, SPTSearchProtoAudioEpisode, SPTSearchProtoAudioShow, SPTSearchProtoGenre, SPTSearchProtoPlaylist, SPTSearchProtoProfile, SPTSearchProtoTopic, SPTSearchProtoTrack;
 
 @interface SPTSearchProtoEntity : GPBMessage
 {
 }
 
 + (id)descriptor;
+@property(readonly, nonatomic) _Bool search_explicit;
+@property(readonly, nonatomic) _Bool search_mogef19;
 
 // Remaining properties
 @property(retain, nonatomic) SPTSearchProtoAlbum *album; // @dynamic album;
@@ -25,6 +27,7 @@
 @property(copy, nonatomic) NSString *name; // @dynamic name;
 @property(retain, nonatomic) SPTSearchProtoPlaylist *playlist; // @dynamic playlist;
 @property(retain, nonatomic) SPTSearchProtoProfile *profile; // @dynamic profile;
+@property(retain, nonatomic) SPTSearchProtoTopic *topic; // @dynamic topic;
 @property(retain, nonatomic) SPTSearchProtoTrack *track; // @dynamic track;
 @property(copy, nonatomic) NSString *uri; // @dynamic uri;
 

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: tableView
     // Error parsing type: , name: theme
+    // Error parsing type: , name: profileListLogger
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: cellBinder
     // Error parsing type: , name: model

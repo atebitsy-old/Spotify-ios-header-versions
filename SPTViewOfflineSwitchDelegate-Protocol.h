@@ -11,5 +11,8 @@
 @protocol SPTViewOfflineSwitchDelegate <NSObject>
 - (unsigned long long)offlineSwitchViewOfflineAvailability:(SPTViewOfflineSwitch *)arg1;
 - (void)offlineSwitchViewDidChangeState:(SPTViewOfflineSwitch *)arg1 isOn:(_Bool)arg2;
+
+@optional
+- (void)offlineSwitchViewDidAbortStateChange:(SPTViewOfflineSwitch *)arg1;
 @end
 

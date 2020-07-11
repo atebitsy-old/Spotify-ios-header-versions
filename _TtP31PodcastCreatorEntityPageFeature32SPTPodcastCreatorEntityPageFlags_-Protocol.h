@@ -7,7 +7,6 @@
 @protocol _TtP31PodcastCreatorEntityPageFeature32SPTPodcastCreatorEntityPageFlags_
 @property(nonatomic, readonly) _Bool isPodcastEpisodeEntryPointEnabled;
 @property(nonatomic, readonly) _Bool isPodcastShowPageEntryPointEnabled;
-@property(nonatomic, readonly) _Bool isSearchEntryPointEnabled;
 @property(nonatomic, readonly) _Bool isPageEnabled;
 @end
 

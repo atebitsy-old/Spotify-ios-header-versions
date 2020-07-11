@@ -19,13 +19,13 @@
     NSArray *_sections;
 }
 
-@property(retain, nonatomic) NSArray *sections; // @synthesize sections=_sections;
-@property(retain, nonatomic) NSArray *sectionIndices; // @synthesize sectionIndices=_sectionIndices;
+@property(copy, nonatomic) NSArray *sections; // @synthesize sections=_sections;
+@property(copy, nonatomic) NSArray *sectionIndices; // @synthesize sectionIndices=_sectionIndices;
 @property(nonatomic) unsigned long long availableOfflineStatus; // @synthesize availableOfflineStatus=_availableOfflineStatus;
 @property(nonatomic) unsigned long long length; // @synthesize length=_length;
 @property(nonatomic) unsigned long long unrangedLength; // @synthesize unrangedLength=_unrangedLength;
 @property(nonatomic) unsigned long long unfilteredLength; // @synthesize unfilteredLength=_unfilteredLength;
-@property(retain, nonatomic) NSArray *items; // @synthesize items=_items;
+@property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 - (void).cxx_destruct;
 
 @end

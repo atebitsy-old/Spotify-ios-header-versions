@@ -12,13 +12,14 @@
 #import "SPTWatchConnectivityPubSubRegistry-Protocol.h"
 #import "SPTWatchConnectivitySessionObserver-Protocol.h"
 
-@class NSMutableArray, NSMutableDictionary, NSString, SPTWatchConnectivityPubSubMessageTransport, SPTWatchConnectivitySession;
+@class NSMutableArray, NSMutableDictionary, NSString, NSUserDefaults, SPTWatchConnectivityPubSubMessageTransport, SPTWatchConnectivitySession;
 
 @interface SPTWatchConnectivityPubSubManager : NSObject <SPTWatchConnectivitySessionObserver, SPTWatchConnectivityPubSubMessageTransportDelegate, SPTWatchConnectivityPubSub, SPTWatchConnectivityPubSubMessageQueue, SPTWatchConnectivityPubSubRegistry>
 {
     unsigned long long transportType;
     SPTWatchConnectivitySession *_session;
     SPTWatchConnectivityPubSubMessageTransport *_messageTransport;
+    NSUserDefaults *_userDefaults;
     NSMutableArray *_subscriptions;
     NSMutableDictionary *_latestTopicIDs;
     unsigned long long _receivingTransportType;
@@ -27,6 +28,7 @@
 @property(nonatomic) unsigned long long receivingTransportType; // @synthesize receivingTransportType=_receivingTransportType;
 @property(readonly, nonatomic) NSMutableDictionary *latestTopicIDs; // @synthesize latestTopicIDs=_latestTopicIDs;
 @property(readonly, nonatomic) NSMutableArray *subscriptions; // @synthesize subscriptions=_subscriptions;
+@property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(readonly, nonatomic) SPTWatchConnectivityPubSubMessageTransport *messageTransport; // @synthesize messageTransport=_messageTransport;
 @property(readonly, nonatomic) SPTWatchConnectivitySession *session; // @synthesize session=_session;
 @property(nonatomic) unsigned long long transportType; // @synthesize transportType;
@@ -42,7 +44,8 @@
 - (id)publishMessage:(id)arg1 toTopic:(id)arg2;
 - (id)provideMessageQueue;
 - (id)provideRegistry;
-- (id)initWithSession:(id)arg1 messageTransport:(id)arg2;
+- (void)load;
+- (id)initWithSession:(id)arg1 messageTransport:(id)arg2 userDefaults:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

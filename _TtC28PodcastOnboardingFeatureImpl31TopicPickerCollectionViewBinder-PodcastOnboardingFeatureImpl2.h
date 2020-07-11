@@ -6,7 +6,9 @@
 
 #import "_TtC28PodcastOnboardingFeatureImpl31TopicPickerCollectionViewBinder.h"
 
-@interface _TtC28PodcastOnboardingFeatureImpl31TopicPickerCollectionViewBinder (PodcastOnboardingFeatureImpl2)
+#import "SPTInstrumentationInteractionMediatorColleague-Protocol.h"
+
+@interface _TtC28PodcastOnboardingFeatureImpl31TopicPickerCollectionViewBinder (PodcastOnboardingFeatureImpl2) <SPTInstrumentationInteractionMediatorColleague>
 - (void)mediator:(id)arg1 requiresDataForBuilder:(id)arg2 forInteractionInformation:(id)arg3;
 @end
 

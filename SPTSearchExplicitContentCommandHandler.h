@@ -17,7 +17,7 @@
 }
 
 + (id)defaultName;
-+ (id)commandWithName:(id)arg1 entityURI:(id)arg2;
++ (id)commandWithEntityURI:(id)arg1;
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 - (void).cxx_destruct;

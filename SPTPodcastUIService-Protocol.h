@@ -9,9 +9,9 @@
 @protocol SPTPodcastUIButtonsFactory, SPTPodcastUIComponentFactory, SPTPodcastUIStringFormatter, SPTPodcastUITestManager;
 
 @protocol SPTPodcastUIService <SPTService>
-@property(readonly, nonatomic) id <SPTPodcastUIButtonsFactory> buttonsFactory;
-@property(readonly, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter;
-@property(readonly, nonatomic) id <SPTPodcastUIComponentFactory> componentFactory;
 - (id <SPTPodcastUITestManager>)provideTestManager;
+@property(nonatomic, readonly) id <SPTPodcastUIButtonsFactory> buttonsFactory;
+@property(nonatomic, readonly) id <SPTPodcastUIStringFormatter> stringFormatter;
+@property(nonatomic, readonly) id <SPTPodcastUIComponentFactory> componentFactory;
 @end
 

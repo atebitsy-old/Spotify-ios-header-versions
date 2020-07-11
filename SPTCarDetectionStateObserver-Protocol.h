@@ -4,12 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
-
-@class SPTCarDetectionState;
 @protocol SPTCarDetector;
 
-@protocol SPTCarDetectionStateObserver <NSObject>
-- (void)carDetector:(id <SPTCarDetector>)arg1 carDetectionStateDidChange:(SPTCarDetectionState *)arg2;
+@protocol SPTCarDetectionStateObserver
+- (void)carDetector:(id <SPTCarDetector>)arg1 didChangeCarConnected:(_Bool)arg2;
 @end
 

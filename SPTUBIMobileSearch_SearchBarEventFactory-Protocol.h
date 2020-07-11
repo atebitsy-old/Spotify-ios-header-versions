@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSearch_SearchBar_CancelButtonEventFactory, SPTUBIMobileSearch_SearchBar_InputFieldEventFactory, SPTUBIMobileSearch_SearchBar_ScannablesButtonEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileSearch_SearchBar_CancelButtonEventFactory, SPTUBIMobileSearch_SearchBar_InputFieldEventFactory, SPTUBIMobileSearch_SearchBar_ScannablesButtonEventFactory;
 
 @protocol SPTUBIMobileSearch_SearchBarEventFactory <NSObject>
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileSearch_SearchBar_ScannablesButtonEventFactory>)scannablesButtonFactory;
 - (id <SPTUBIMobileSearch_SearchBar_CancelButtonEventFactory>)cancelButtonFactory;
 - (id <SPTUBIMobileSearch_SearchBar_InputFieldEventFactory>)inputFieldFactory;

@@ -18,7 +18,7 @@
 }
 
 + (id)defaultName;
-+ (id)commandWithName:(id)arg1 destinationURI:(id)arg2;
++ (id)commandWithDestinationURI:(id)arg1;
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;

@@ -12,9 +12,9 @@
 
 @interface SPTViewLoadSequenceImplementation : NSObject <SPTViewLoadSequence>
 {
-    NSString *_sequenceId;
-    NSString *_pageId;
-    NSString *_uri;
+    NSString *_sequenceID;
+    NSString *_pageIdentifier;
+    NSString *_URI;
     long long _terminalState;
     long long _initialConnectionType;
     long long _terminalConnectionType;
@@ -27,11 +27,11 @@
 @property(readonly, nonatomic) long long terminalConnectionType; // @synthesize terminalConnectionType=_terminalConnectionType;
 @property(readonly, nonatomic) long long initialConnectionType; // @synthesize initialConnectionType=_initialConnectionType;
 @property(readonly, nonatomic) long long terminalState; // @synthesize terminalState=_terminalState;
-@property(readonly, nonatomic) NSString *uri; // @synthesize uri=_uri;
-@property(readonly, nonatomic) NSString *pageId; // @synthesize pageId=_pageId;
-@property(readonly, nonatomic) NSString *sequenceId; // @synthesize sequenceId=_sequenceId;
+@property(readonly, nonatomic) NSString *URI; // @synthesize URI=_URI;
+@property(readonly, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
+@property(readonly, nonatomic) NSString *sequenceID; // @synthesize sequenceID=_sequenceID;
 - (void).cxx_destruct;
-- (id)initWithSequenceId:(id)arg1 pageId:(id)arg2 uri:(id)arg3 terminalState:(long long)arg4 initialConnectionType:(long long)arg5 terminalConnectionType:(long long)arg6 steps:(id)arg7 metadata:(id)arg8;
+- (id)initWithSequenceID:(id)arg1 pageIdentifier:(id)arg2 URI:(id)arg3 terminalState:(long long)arg4 initialConnectionType:(long long)arg5 terminalConnectionType:(long long)arg6 steps:(id)arg7 metadata:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -27,7 +27,7 @@
 - (void)updateAdModeWithAdEntity:(id)arg1;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)dealloc;
-- (id)initWithNowPlayingManager:(id)arg1 adManager:(id)arg2 playerObserver:(id)arg3 actionsHandler:(id)arg4 featureChecker:(id)arg5 animationView:(id)arg6 theme:(id)arg7 linkDispatcher:(id)arg8 cosmosBridge:(id)arg9 adRegistry:(id)arg10 modeRegistry:(id)arg11 featureProperties:(id)arg12 snackbarPresenter:(id)arg13 reminderManager:(id)arg14;
+- (id)initWithNowPlayingManager:(id)arg1 adManager:(id)arg2 playerObserver:(id)arg3 actionsHandler:(id)arg4 featureChecker:(id)arg5 animationView:(id)arg6 theme:(id)arg7 linkDispatcher:(id)arg8 cosmosBridge:(id)arg9 adRegistry:(id)arg10 modeRegistry:(id)arg11 featureProperties:(id)arg12 snackbarPresenter:(id)arg13 reminderManager:(id)arg14 logCenter:(id)arg15;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,7 +11,7 @@
 #import "SPTVolumeSystemObserver-Protocol.h"
 #import "SPTVolumeThrottlerDelegate-Protocol.h"
 
-@class NSString, SPTVolumeLogger, SPTVolumeThrottler;
+@class NSString, SPTVolumeLogger, SPTVolumeThrottler, SPTVolumeUbiLogger;
 @protocol SPTGaiaConnectAPI, SPTVolumeAPI, SPTVolumeSliderViewModelDelegate, SPTVolumeSystemAPI;
 
 @interface SPTVolumeSliderViewModel : NSObject <SPTVolumeObserver, SPTGaiaConnectObserver, SPTVolumeSystemObserver, SPTVolumeThrottlerDelegate>
@@ -24,11 +24,13 @@
     id <SPTGaiaConnectAPI> _connectManager;
     SPTVolumeThrottler *_commandThrottler;
     SPTVolumeLogger *_logger;
+    SPTVolumeUbiLogger *_ubiLogger;
     double _sliderValue;
 }
 
 @property(nonatomic) _Bool isPlayingRemotely; // @synthesize isPlayingRemotely=_isPlayingRemotely;
 @property(nonatomic) double sliderValue; // @synthesize sliderValue=_sliderValue;
+@property(retain, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) SPTVolumeLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTVolumeThrottler *commandThrottler; // @synthesize commandThrottler=_commandThrottler;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
@@ -48,7 +50,7 @@
 - (void)observePlayingRemotely;
 - (void)observeLocalVolume;
 - (void)observeRemoteVolume;
-- (id)initWithVolumeController:(id)arg1 systemVolumeManager:(id)arg2 connectManager:(id)arg3 commandThrottler:(id)arg4 logger:(id)arg5;
+- (id)initWithVolumeController:(id)arg1 systemVolumeManager:(id)arg2 connectManager:(id)arg3 commandThrottler:(id)arg4 logger:(id)arg5 ubiLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

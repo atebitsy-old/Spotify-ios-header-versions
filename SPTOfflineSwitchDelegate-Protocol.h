@@ -11,5 +11,8 @@
 @protocol SPTOfflineSwitchDelegate <NSObject>
 - (unsigned long long)offlineSwitchCellOfflineAvailability:(SPTTableViewOfflineSwitchCell *)arg1;
 - (void)offlineSwitchCellDidChangeState:(SPTTableViewOfflineSwitchCell *)arg1 isOn:(_Bool)arg2;
+
+@optional
+- (void)offlineSwitchCellDidAbortStateChange:(SPTTableViewOfflineSwitchCell *)arg1;
 @end
 

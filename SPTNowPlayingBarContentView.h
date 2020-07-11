@@ -23,10 +23,14 @@
     UIView<SPTGaiaDevicesAvailableView> *_devicesAvailableView;
     id <SPTNowPlayingTestManager> _testManager;
     UIView *_voiceCompanionView;
+    UIView *_lyricsView;
     NSLayoutConstraint *_voiceCompanionWidthLayoutConstraint;
+    NSLayoutConstraint *_lyricsLabelWidthLayoutConstraint;
 }
 
+@property(retain, nonatomic) NSLayoutConstraint *lyricsLabelWidthLayoutConstraint; // @synthesize lyricsLabelWidthLayoutConstraint=_lyricsLabelWidthLayoutConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *voiceCompanionWidthLayoutConstraint; // @synthesize voiceCompanionWidthLayoutConstraint=_voiceCompanionWidthLayoutConstraint;
+@property(retain, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(retain, nonatomic) UIView *voiceCompanionView; // @synthesize voiceCompanionView=_voiceCompanionView;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) UIView<SPTGaiaDevicesAvailableView> *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
@@ -38,16 +42,19 @@
 @property(readonly, nonatomic) UIButton<SPTNowPlayingBarPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(readonly, nonatomic) SPStepScrollView *stepScrollView; // @synthesize stepScrollView=_stepScrollView;
 - (void).cxx_destruct;
+- (void)setLyricsLabelVisible:(_Bool)arg1;
+- (void)createLyricsViewIfNeeded;
 - (void)voiceCompanionViewTapped:(id)arg1;
 - (void)showVoiceCompanionButton:(_Bool)arg1;
 - (void)removeVoiceCompanionViewIfNeeded;
+- (id)createLyricsView;
 - (void)addVoiceCompanionViewIfNeeded;
 - (void)nowPlayingTestManagerDidEnableBarImprovements:(id)arg1;
 - (void)layoutSubviews;
 - (void)setEnabled:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)forceLayout;
 - (void)resetConstraints;
-- (id)layoutConstraintsForContentView:(id)arg1 playButton:(id)arg2 voiceCompanionButton:(id)arg3;
+- (id)layoutConstraintsForContentView:(id)arg1 playButton:(id)arg2 voiceCompanionButton:(id)arg3 lyricsView:(id)arg4;
 - (id)devicesAvailableViewConstraints;
 - (void)updateConstraints;
 - (void)setupSubviews;

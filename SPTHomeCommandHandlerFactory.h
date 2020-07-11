@@ -6,19 +6,22 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTPlayer;
+@protocol SPTLocalSettings, SPTPlayer;
 
 @interface SPTHomeCommandHandlerFactory : NSObject
 {
     id <SPTPlayer> _player;
+    id <SPTLocalSettings> _localSettings;
 }
 
+@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
 - (id)provideNavigateAndPlayCommandHandler:(id)arg1;
 - (id)provideTasteOnboardingSkipCommandHandlerWithOverrides:(id)arg1;
+- (id)provideTooltipDismissalCommandHandlerWithViewModelProvider:(id)arg1;
 - (id)provideReloadCommandHandlerWithViewModelProvider:(id)arg1;
-- (id)initWithPlayer:(id)arg1;
+- (id)initWithPlayer:(id)arg1 localSettings:(id)arg2;
 
 @end
 

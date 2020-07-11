@@ -41,10 +41,10 @@
 - (id)continueWithPhoneButtonTitle;
 - (id)millionsOfSongsFreeMessage;
 - (id)continueWithLabelText;
-- (id)continueWithFacebookButtonTextWithStyle:(id)arg1;
-- (id)continueWithEmailButtonTextWithStyle:(id)arg1;
-- (id)continueWithPhoneButtonTextWithStyle:(id)arg1;
-- (id)spotifyLogo;
+- (id)phoneIcon;
+- (id)emailIcon;
+- (id)facebookLogoIcon;
+- (id)spotifyLogoForSize:(struct CGSize)arg1;
 - (id)initWithNavigationCoordinator:(id)arg1 logger:(id)arg2 loginStateController:(id)arg3 facebookAuthController:(id)arg4;
 
 // Remaining properties

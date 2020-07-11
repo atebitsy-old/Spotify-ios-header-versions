@@ -13,13 +13,14 @@
 #import "SPTVocalRemovalFeedbackBannerPresenterDelegate-Protocol.h"
 #import "SPTVocalRemovalMenuButtonViewModelDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTLyricsV2Configuration, SPTLyricsV2FullscreenFooterViewController, SPTLyricsV2FullscreenHeaderViewController, SPTLyricsV2FullscreenView, SPTLyricsV2GLUETheme, SPTLyricsV2LyricsViewController, SPTPlayerTrack, SPTProgressView, SPTVocalRemovalConfiguration, SPTVocalRemovalFeedbackBannerPresenter, UIButton;
+@class NSString, NSURL, SPTLyricsV2Configuration, SPTLyricsV2FullscreenFooterViewController, SPTLyricsV2FullscreenHeaderViewController, SPTLyricsV2FullscreenView, SPTLyricsV2GLUETheme, SPTLyricsV2LyricsViewController, SPTLyricsV2Model, SPTPlayerTrack, SPTProgressView, SPTVocalRemovalConfiguration, SPTVocalRemovalFeedbackBannerPresenter, UIButton;
 @protocol SPTAutoLockOverrideToken, SPTContextMenuPresenter, SPTPageContainer;
 
 @interface SPTLyricsV2FullscreenViewController : UIViewController <SPTLyricsV2FullscreenFooterViewControllerDelegate, SPTLyricsV2LyricsViewControllerDelegate, SPTVocalRemovalMenuButtonViewModelDelegate, SPTVocalRemovalFeedbackBannerPresenterDelegate, SPTGaiaConnectObserver, SPTPageController>
 {
     _Bool _wasVocalRemovalEnabledAtLeastOnce;
     NSString *_cardTitle;
+    SPTLyricsV2Model *_lyricsModel;
     SPTLyricsV2Configuration *_lyricsConfiguration;
     SPTLyricsV2GLUETheme *_theme;
     SPTPlayerTrack *_track;
@@ -51,6 +52,7 @@
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(readonly, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
+@property(readonly, nonatomic) SPTLyricsV2Model *lyricsModel; // @synthesize lyricsModel=_lyricsModel;
 @property(readonly, nonatomic) NSString *cardTitle; // @synthesize cardTitle=_cardTitle;
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
@@ -95,7 +97,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithTheme:(id)arg1 title:(id)arg2 track:(id)arg3 lyricsLineSet:(id)arg4 cardViewFrameCallback:(CDUnknownBlockType)arg5 lyricsViewFrameCallback:(CDUnknownBlockType)arg6 lyricsConfiguration:(id)arg7 vocalRemovalConfiguration:(id)arg8;
+- (id)initWithTheme:(id)arg1 title:(id)arg2 track:(id)arg3 lyricsModel:(id)arg4 cardViewFrameCallback:(CDUnknownBlockType)arg5 lyricsViewFrameCallback:(CDUnknownBlockType)arg6 lyricsConfiguration:(id)arg7 vocalRemovalConfiguration:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -10,6 +10,7 @@
 @protocol SPTFreeTierCreatePlaylistViewModel;
 
 @protocol SPTFreeTierCreatePlaylistViewModelDelegate <NSObject>
+- (void)createPlaylistViewModelDidCancel:(id <SPTFreeTierCreatePlaylistViewModel>)arg1;
 - (void)createPlaylistViewModel:(id <SPTFreeTierCreatePlaylistViewModel>)arg1 didRenamePlaylistWithURL:(NSURL *)arg2;
 - (void)createPlaylistViewModel:(id <SPTFreeTierCreatePlaylistViewModel>)arg1 didCreatePlaylistWithURL:(NSURL *)arg2;
 @end

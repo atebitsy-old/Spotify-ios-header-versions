@@ -29,8 +29,8 @@
 @property(nonatomic) unsigned long long albumTracksCount; // @synthesize albumTracksCount=_albumTracksCount;
 @property(nonatomic) unsigned long long collectionAlbumTracksCount; // @synthesize collectionAlbumTracksCount=_collectionAlbumTracksCount;
 @property(retain, nonatomic) NSURL *collectionURL; // @synthesize collectionURL=_collectionURL;
-@property(retain, nonatomic) NSArray *artists; // @synthesize artists=_artists;
-@property(retain, nonatomic) NSDictionary *albumCovers; // @synthesize albumCovers=_albumCovers;
+@property(copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
+@property(copy, nonatomic) NSDictionary *albumCovers; // @synthesize albumCovers=_albumCovers;
 @property(retain, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;
 - (void).cxx_destruct;
 

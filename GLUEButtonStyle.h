@@ -8,10 +8,11 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEPressedAnimatorStyle, NSString, UIColor, UIFont;
+@class GLUEPressedAnimatorStyle, NSString, SPTEncoreTypeStyle, UIColor, UIFont;
 
 @interface GLUEButtonStyle : NSObject <GLUEStyle>
 {
+    SPTEncoreTypeStyle *_textStyle;
     double _height;
     UIFont *_textfont;
     long long _lineBreakMode;
@@ -42,6 +43,7 @@
 @property(nonatomic) long long lineBreakMode; // @synthesize lineBreakMode=_lineBreakMode;
 @property(copy, nonatomic) UIFont *textfont; // @synthesize textfont=_textfont;
 @property(nonatomic) double height; // @synthesize height=_height;
+@property(retain, nonatomic) SPTEncoreTypeStyle *textStyle; // @synthesize textStyle=_textStyle;
 - (void).cxx_destruct;
 - (id)borderColorForState:(unsigned long long)arg1;
 - (id)backgroundColorForState:(unsigned long long)arg1;

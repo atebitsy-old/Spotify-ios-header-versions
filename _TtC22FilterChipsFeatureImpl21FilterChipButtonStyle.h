@@ -12,13 +12,15 @@
     // Error parsing type: , name: contentMargin
     // Error parsing type: , name: topMargin
     // Error parsing type: , name: bottomMargin
-    // Error parsing type: , name: iconStyle
+    // Error parsing type: , name: normalIconStyle
     // Error parsing type: , name: _selectedTextColor
     // Error parsing type: , name: _selectedBorderColor
     // Error parsing type: , name: _selectedBackgroundColor
+    // Error parsing type: , name: _selectedIconStyle
     // Error parsing type: , name: _highlightedSelectedTextColor
     // Error parsing type: , name: _highlightedSelectedBorderColor
     // Error parsing type: , name: _highlightedSelectedBackgroundColor
+    // Error parsing type: , name: _highlightedIconStyle
 }
 
 - (void).cxx_destruct;

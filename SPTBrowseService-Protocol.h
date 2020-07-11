@@ -6,7 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
+@class NSURL;
+
 @protocol SPTBrowseService <SPTService>
-@property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;
+- (_Bool)ownsPageWithURI:(NSURL *)arg1;
+@property(nonatomic, readonly) CDUnknownBlockType cardsTransformer;
 @end
 

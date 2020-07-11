@@ -6,18 +6,18 @@
 
 #import "SPTPodcastSectionTableViewCell.h"
 
-@class GLUEContextMenuAccessoryButton, SPTPodcastTrailerSectionContentView, SPTTheme;
-@protocol GLUEImageLoader;
+@class GLUEContextMenuAccessoryButton, SPTPodcastTrailerSectionContentView;
+@protocol GLUEImageLoader, GLUETheme;
 
 @interface SPTPodcastTrailerSectionTableViewCell : SPTPodcastSectionTableViewCell
 {
     id <GLUEImageLoader> _imageLoader;
-    SPTTheme *_catTheme;
+    id <GLUETheme> _glueTheme;
     SPTPodcastTrailerSectionContentView *_trailerContentView;
 }
 
 @property(retain, nonatomic) SPTPodcastTrailerSectionContentView *trailerContentView; // @synthesize trailerContentView=_trailerContentView;
-@property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
+@property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 - (void).cxx_destruct;
 - (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;

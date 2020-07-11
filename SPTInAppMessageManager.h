@@ -21,10 +21,14 @@
     SPTInAppMessageSDKMessageController *_messageController;
     NSDictionary *_actionHandlers;
     NSArray *_supportedFormats;
+    NSArray *_supportedActions;
+    NSArray *_supportedTriggerTypes;
 }
 
-@property(copy, nonatomic) NSArray *supportedFormats; // @synthesize supportedFormats=_supportedFormats;
-@property(copy, nonatomic) NSDictionary *actionHandlers; // @synthesize actionHandlers=_actionHandlers;
+@property(readonly, copy, nonatomic) NSArray *supportedTriggerTypes; // @synthesize supportedTriggerTypes=_supportedTriggerTypes;
+@property(readonly, copy, nonatomic) NSArray *supportedActions; // @synthesize supportedActions=_supportedActions;
+@property(readonly, copy, nonatomic) NSArray *supportedFormats; // @synthesize supportedFormats=_supportedFormats;
+@property(readonly, copy, nonatomic) NSDictionary *actionHandlers; // @synthesize actionHandlers=_actionHandlers;
 @property(retain, nonatomic) SPTInAppMessageSDKMessageController *messageController; // @synthesize messageController=_messageController;
 @property(retain, nonatomic) SPTInAppMessageSDKTriggerListController *triggerListController; // @synthesize triggerListController=_triggerListController;
 @property(retain, nonatomic) SPTInAppMessageEngine *engine; // @synthesize engine=_engine;
@@ -34,14 +38,14 @@
 @property(readonly, nonatomic) id <SPTInAppMessageLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTInAppMessageDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
-- (void)startTriggerEngineWithSupportedFormats:(id)arg1 actionHandlers:(id)arg2 messageReceiver:(id)arg3;
+- (void)startTriggerEngine;
 - (id)createMessageController;
 - (id)createTriggerListController;
 - (id)createNetworkClient;
 - (id)createSDKEngine;
 - (id)provideMessageRequester;
 - (void)dealloc;
-- (id)initWithDataLoader:(id)arg1 logger:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 logger:(id)arg2 supportedFormats:(id)arg3 supportedTriggerTypes:(id)arg4 actionHandlers:(id)arg5 messageReceiver:(id)arg6;
 
 @end
 

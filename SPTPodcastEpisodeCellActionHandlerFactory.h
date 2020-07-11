@@ -7,33 +7,29 @@
 #import <objc/NSObject.h>
 
 @class SPTPodcastLogger;
-@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPageRegistry, SPTPodcastContextMenuProvider, SPTPodcastOffliningManager, SPTPodcastTestManager, SPTSnackbarConditionalPresenter;
+@protocol SPTCollectionLogger, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPodcastContextMenuProvider, SPTPodcastOffliningManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTPodcastEpisodeCellActionHandlerFactory : NSObject
 {
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     SPTPodcastLogger *_logger;
-    id <SPTPodcastTestManager> _testManager;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
     id <SPTCollectionLogger> _collectionLogger;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTPageRegistry> _pageRegistry;
 }
 
-@property(nonatomic) __weak id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) __weak id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
-@property(nonatomic) __weak id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 - (void).cxx_destruct;
-- (id)provideCellActionHandlerWithEpisodeForIndexPathBlock:(CDUnknownBlockType)arg1 episodesBlock:(CDUnknownBlockType)arg2 dataLoader:(id)arg3 player:(id)arg4 URI:(id)arg5;
-- (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 testManager:(id)arg4 podcastOffliningManager:(id)arg5 collectionLogger:(id)arg6 explicitContentAccessManager:(id)arg7 linkDispatcher:(id)arg8 pageProvider:(id)arg9;
+- (id)provideCellActionHandlerWithEpisodeProvider:(id)arg1 player:(id)arg2;
+- (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 podcastOffliningManager:(id)arg4 collectionLogger:(id)arg5 explicitContentAccessManager:(id)arg6 linkDispatcher:(id)arg7;
 
 @end
 

@@ -23,6 +23,8 @@
     double _buttonsContainerViewSpacing;
     double _spotifyLogoTopMargin;
     double _spotifyLogoBottomMargin;
+    double _spotifyLogoWidth;
+    double _spotifyLogoHeight;
     double _messageLabelContainerBottomMargin;
     double _messageLabelContainerEdgeMargins;
     double _buttonsContainerViewBottomMargin;
@@ -39,6 +41,8 @@
 @property(nonatomic) double buttonsContainerViewBottomMargin; // @synthesize buttonsContainerViewBottomMargin=_buttonsContainerViewBottomMargin;
 @property(nonatomic) double messageLabelContainerEdgeMargins; // @synthesize messageLabelContainerEdgeMargins=_messageLabelContainerEdgeMargins;
 @property(nonatomic) double messageLabelContainerBottomMargin; // @synthesize messageLabelContainerBottomMargin=_messageLabelContainerBottomMargin;
+@property(nonatomic) double spotifyLogoHeight; // @synthesize spotifyLogoHeight=_spotifyLogoHeight;
+@property(nonatomic) double spotifyLogoWidth; // @synthesize spotifyLogoWidth=_spotifyLogoWidth;
 @property(nonatomic) double spotifyLogoBottomMargin; // @synthesize spotifyLogoBottomMargin=_spotifyLogoBottomMargin;
 @property(nonatomic) double spotifyLogoTopMargin; // @synthesize spotifyLogoTopMargin=_spotifyLogoTopMargin;
 @property(nonatomic) double buttonsContainerViewSpacing; // @synthesize buttonsContainerViewSpacing=_buttonsContainerViewSpacing;

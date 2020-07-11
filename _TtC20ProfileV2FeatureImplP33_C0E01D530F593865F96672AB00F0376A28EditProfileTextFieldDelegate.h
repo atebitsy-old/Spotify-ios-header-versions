@@ -8,12 +8,12 @@
 
 @interface _TtC20ProfileV2FeatureImplP33_C0E01D530F593865F96672AB00F0376A28EditProfileTextFieldDelegate : NSObject
 {
-    // Error parsing type: , name: sendHandler
     // Error parsing type: , name: theme
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)textFieldShouldBeginEditing:(id)arg1;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 

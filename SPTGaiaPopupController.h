@@ -10,7 +10,7 @@
 #import "SPTGaiaPopupPresenter-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSNotificationCenter, NSString, SPTGaiaDeviceAppearanceMapping, SPTGaiaLogger, SPTGaiaPopupContentViewController, SPTGaiaSocialListeningIntegrationManager, SPTPopupDialog, SPTTheme, UIApplication;
+@class NSNotificationCenter, NSString, SPTGaiaDeviceAppearanceMapping, SPTGaiaLogger, SPTGaiaPopupContentViewController, SPTGaiaSocialListeningIntegrationManager, SPTGaiaUbiLogger, SPTPopupDialog, SPTTheme, UIApplication;
 @protocol SPTAlertInterface, SPTGaiaAttachPopupControllerDelegate, SPTGaiaConnectManager, SPTPlayer, SPTProductState;
 
 @interface SPTGaiaPopupController : NSObject <SPTPlayerObserver, SPTGaiaConnectManagerObserver, SPTGaiaPopupPresenter>
@@ -24,6 +24,7 @@
     SPTGaiaDeviceAppearanceMapping *_deviceIconMapper;
     NSNotificationCenter *_notificationCenter;
     SPTGaiaLogger *_logger;
+    SPTGaiaUbiLogger *_ubiLogger;
     id <SPTGaiaConnectManager> _connectManager;
     SPTGaiaSocialListeningIntegrationManager *_socialListeningManager;
     UIApplication *_application;
@@ -42,6 +43,7 @@
 @property(readonly, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
+@property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTGaiaLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) SPTGaiaDeviceAppearanceMapping *deviceIconMapper; // @synthesize deviceIconMapper=_deviceIconMapper;
@@ -74,7 +76,7 @@
 - (void)devicePickerDidAppear:(id)arg1;
 - (void)applicationDidEnterBackground;
 - (void)dealloc;
-- (id)initWithAlertInterface:(id)arg1 player:(id)arg2 productState:(id)arg3 theme:(id)arg4 deviceIconMapper:(id)arg5 notificationCenter:(id)arg6 logger:(id)arg7 connectManager:(id)arg8 socialListeningManager:(id)arg9 application:(id)arg10;
+- (id)initWithAlertInterface:(id)arg1 player:(id)arg2 productState:(id)arg3 theme:(id)arg4 deviceIconMapper:(id)arg5 notificationCenter:(id)arg6 logger:(id)arg7 ubiLogger:(id)arg8 connectManager:(id)arg9 socialListeningManager:(id)arg10 application:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -14,8 +14,10 @@
 {
     _Bool _creamMobileOverlayInAppBrowserIos;
     _Bool _creamBookmarkAudioAdsIos;
+    _Bool _audioAdsSwiftNpvEnabled;
 }
 
+@property(readonly, nonatomic) _Bool audioAdsSwiftNpvEnabled; // @synthesize audioAdsSwiftNpvEnabled=_audioAdsSwiftNpvEnabled;
 @property(readonly, nonatomic) _Bool creamBookmarkAudioAdsIos; // @synthesize creamBookmarkAudioAdsIos=_creamBookmarkAudioAdsIos;
 @property(readonly, nonatomic) _Bool creamMobileOverlayInAppBrowserIos; // @synthesize creamMobileOverlayInAppBrowserIos=_creamMobileOverlayInAppBrowserIos;
 - (id)propertyModels;

@@ -10,6 +10,9 @@
 {
 }
 
++ (id)navigateCommandForEntity:(id)arg1;
++ (id)saveToHistoryCommandForEntity:(id)arg1 podcastRowsType:(unsigned long long)arg2;
++ (id)sequentialCommandWithCommands:(id)arg1;
 + (id)loggingDataForEntity:(id)arg1 drilldown:(_Bool)arg2 position:(unsigned long long)arg3 ubiLocationSerializer:(id)arg4;
 + (id)metadataForEntity:(id)arg1;
 + (id)customDataForEntity:(id)arg1 podcastRowsType:(unsigned long long)arg2;

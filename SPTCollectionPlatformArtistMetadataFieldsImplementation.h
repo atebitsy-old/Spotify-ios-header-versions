@@ -26,7 +26,7 @@
 @property(nonatomic) unsigned long long artistTracksCount; // @synthesize artistTracksCount=_artistTracksCount;
 @property(nonatomic) _Bool isBanned; // @synthesize isBanned=_isBanned;
 @property(nonatomic) _Bool isFollowed; // @synthesize isFollowed=_isFollowed;
-@property(retain, nonatomic) NSDictionary *artistPortraits; // @synthesize artistPortraits=_artistPortraits;
+@property(copy, nonatomic) NSDictionary *artistPortraits; // @synthesize artistPortraits=_artistPortraits;
 @property(retain, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;
 - (void).cxx_destruct;
 

@@ -17,8 +17,7 @@
 + (long long)accessoryIconRightForEntity:(id)arg1 nftExperience:(_Bool)arg2;
 + (id)customDataForEntity:(id)arg1 nftExperience:(_Bool)arg2 explicitContentEnabled:(_Bool)arg3 ageRestrictedContentEnabled:(_Bool)arg4 podcastRowsType:(unsigned long long)arg5;
 + (id)metadataForEntity:(id)arg1 explicitContentEnabled:(_Bool)arg2;
-+ (_Bool)mogef19FlagForEntity:(id)arg1;
-+ (_Bool)explicitContentFlagForEntity:(id)arg1;
++ (id)navigateCommandForEntity:(id)arg1;
 + (id)saveToHistoryCommandForEntity:(id)arg1 podcastRowsType:(unsigned long long)arg2;
 + (id)playTrackCommandForEntity:(id)arg1 query:(id)arg2 referrerIdentifier:(id)arg3;
 + (id)sequentialCommandWithCommands:(id)arg1;

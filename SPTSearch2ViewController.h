@@ -8,7 +8,6 @@
 
 #import "HUBViewContentOffsetObserver-Protocol.h"
 #import "SPContentInsetViewController-Protocol.h"
-#import "SPTHubPlayTrackListCommandHandlerDelegate-Protocol.h"
 #import "SPTImageLoaderDelegate-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTSearch2ViewControllerProtocol-Protocol.h"
@@ -18,7 +17,7 @@
 @class GLUEGradientView, NSMutableDictionary, NSString, NSURL, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchPlatformColorInterpolator;
 @protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTShareDragDelegateFactory, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
-@interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTHubPlayTrackListCommandHandlerDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
+@interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
 {
     _Bool _automaticallyAdjustsInsets;
     NSString *_query;
@@ -54,13 +53,12 @@
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
 - (void)configureDragDelegateWithViewModel:(id)arg1;
-- (id)makeNavigateHandlerWithURIDispatchService:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
-- (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
-- (id)makeRemoveRecentCommandHandlerWithDataSource:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
-- (id)makeReloadCommandHandlerWithLogger:(id)arg1 ubiHubsLogger:(id)arg2;
+- (id)makeNavigateHandlerWithURIDispatchService:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makeRemoveRecentCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makeReloadCommandHandlerWithUbiHubsLogger:(id)arg1;
 - (id)makeKeyboardDismissCommandHandler;
-- (id)makeSaveToRecentsHandlerWithDataSource:(id)arg1;
-- (id)makePlayTrackHandlerWithPlayerFeature:(id)arg1 searchLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makePlayTrackHandlerWithPlayerFeature:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makePlayerProviderWithPlayerFeature:(id)arg1;
 - (id)makeHUBViewControllerWithDependencies:(id)arg1 configuration:(id)arg2;
 - (void)dismissKeyboard;
@@ -73,7 +71,6 @@
 - (void)layoutGradientView;
 - (void)layoutSubviews;
 - (void)colorInterpolatorDidChangeColor:(id)arg1;
-- (id)playTrackListHandler:(id)arg1 providePlayerContextForCommand:(id)arg2 event:(id)arg3;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;
 - (void)viewModelProvider:(id)arg1 didUpdateStateFrom:(unsigned long long)arg2;

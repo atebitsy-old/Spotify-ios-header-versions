@@ -7,13 +7,14 @@
 #import <objc/NSObject.h>
 
 #import "SPTExplicitContentEnabledStateObserver-Protocol.h"
+#import "SPTPodcastEpisodeCellActionHandlerEpisodeProvider-Protocol.h"
 #import "SPTPodcastEpisodeProgressPolling-Protocol.h"
 #import "SPTPodcastYourLibraryEpisodesViewModel-Protocol.h"
 
 @class NSCache, NSDictionary, NSMutableArray, NSString, NSURL;
 @protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUITestManager, SPTPodcastYourLibraryEpisodesViewModelDelegate;
 
-@interface SPTPodcastYourLibraryDownloadsViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling>
+@interface SPTPodcastYourLibraryDownloadsViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
     _Bool _isLoading;
     _Bool _isLoaded;
@@ -46,12 +47,13 @@
 @property(readonly, nonatomic) NSCache *progressCache; // @synthesize progressCache=_progressCache;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryEpisodesViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (id)cellActionHandler:(id)arg1 episodeForIndexPath:(id)arg2;
+- (id)cellActionHandler:(id)arg1 allEpisodesInSection:(long long)arg2;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (id)parseJSONDictionary:(id)arg1;
 - (id)cachedProgressForEpisode:(id)arg1;
 - (void)updateCurrentProgress:(double)arg1 position:(double)arg2 duration:(double)arg3 forEpisode:(id)arg4;
 - (_Bool)showSeparatorForSection:(long long)arg1;
-- (id)allEpisodesInSection:(unsigned long long)arg1;
 - (id)titleForSection:(unsigned long long)arg1;
 - (unsigned long long)numberOfEntriesInSection:(unsigned long long)arg1;
 - (unsigned long long)numberOfEntrySections;

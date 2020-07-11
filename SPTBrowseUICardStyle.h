@@ -17,6 +17,7 @@
     UIFont *_font;
     UIColor *_textColor;
     double _cornerRadius;
+    double _artworkCornerRadius;
     double _imageAngle;
     UIColor *_imageShadowColor;
     double _gradientAngle;
@@ -35,6 +36,7 @@
 @property(nonatomic) double gradientAngle; // @synthesize gradientAngle=_gradientAngle;
 @property(copy, nonatomic) UIColor *imageShadowColor; // @synthesize imageShadowColor=_imageShadowColor;
 @property(nonatomic) double imageAngle; // @synthesize imageAngle=_imageAngle;
+@property(nonatomic) double artworkCornerRadius; // @synthesize artworkCornerRadius=_artworkCornerRadius;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) struct UIEdgeInsets textInsets; // @synthesize textInsets=_textInsets;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;

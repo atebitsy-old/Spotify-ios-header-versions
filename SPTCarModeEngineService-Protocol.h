@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol SPTCarModeEngine;
+
 @protocol SPTCarModeEngineService <SPTService>
+- (id <SPTCarModeEngine>)provideEngine;
 @end
 

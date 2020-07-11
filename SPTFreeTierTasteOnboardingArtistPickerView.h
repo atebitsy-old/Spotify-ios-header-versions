@@ -8,7 +8,7 @@
 
 #import "GLUEStyleable-Protocol.h"
 
-@class GLUEButton, GLUEGradientView, NSLayoutConstraint, NSString, SPTFreeTierTasteOnboardingArtistPickerCollectionViewLayout, SPTFreeTierTasteOnboardingArtistPickerHeaderView, SPTFreeTierTasteOnboardingArtistPickerViewStyle, UICollectionView;
+@class GLUEButton, GLUEGradientView, NSLayoutConstraint, NSString, SPTFreeTierTasteOnboardingArtistPickerCollectionViewLayout, SPTFreeTierTasteOnboardingArtistPickerHeaderView, SPTFreeTierTasteOnboardingArtistPickerViewStyle, UICollectionView, UIStackView;
 
 @interface SPTFreeTierTasteOnboardingArtistPickerView : UIView <GLUEStyleable>
 {
@@ -24,8 +24,10 @@
     NSLayoutConstraint *_actionButtonTopConstraint;
     NSLayoutConstraint *_headerViewTopConstraint;
     SPTFreeTierTasteOnboardingArtistPickerViewStyle *_style;
+    UIStackView *_similarArtistsStackView;
 }
 
+@property(retain, nonatomic) UIStackView *similarArtistsStackView; // @synthesize similarArtistsStackView=_similarArtistsStackView;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistPickerViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) NSLayoutConstraint *headerViewTopConstraint; // @synthesize headerViewTopConstraint=_headerViewTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *actionButtonTopConstraint; // @synthesize actionButtonTopConstraint=_actionButtonTopConstraint;
@@ -41,6 +43,8 @@
 - (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)activateConstraints;
+- (void)updateSeedASessionElementsAppearance:(_Bool)arg1;
+- (void)createSeedASessionElements;
 - (void)updateHeaderViewTopConstraintWith:(double)arg1;
 - (void)updateContentInset;
 - (void)updateHeaderWithOffset:(struct CGPoint)arg1;

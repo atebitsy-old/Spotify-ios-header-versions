@@ -9,10 +9,8 @@
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl22CreatorHeaderViewModel : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: title
-    // Error parsing type: , name: subtitle
     // Error parsing type: , name: description
     // Error parsing type: , name: imageURL
-    // Error parsing type: , name: isUserFollowing
 }
 
 @end

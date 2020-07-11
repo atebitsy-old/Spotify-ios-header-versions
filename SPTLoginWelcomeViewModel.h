@@ -42,8 +42,6 @@
 - (id)appleAuthorizationControllerContext;
 - (void)controller:(id)arg1 didCompleteFacebookLoginWithError:(id)arg2;
 - (void)loginWithApple;
-- (_Bool)isFacebookSignInCustomStyleEnabled;
-- (_Bool)isFacebookSignInSystemStyleEnabled;
 - (_Bool)isAppleSignInCustomStyleEnabled;
 - (_Bool)isAppleSignInSystemStyleEnabled;
 - (void)showSavedCredentialsDialog;
@@ -55,12 +53,12 @@
 - (void)presentSignupStepOneViewController;
 - (id)appleLogoIcon;
 - (id)facebookLogoIcon;
+- (id)facebookLogoIconWhite;
 - (id)appleButtonText;
 - (id)facebookButtonText;
 - (id)signupButtonText;
-- (id)facebookButtonTextWithStyle:(id)arg1;
 - (id)loginButtonText;
-- (id)spotifyLogo;
+- (id)spotifyLogo:(struct CGSize)arg1;
 - (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6 databaseManager:(id)arg7;
 
 // Remaining properties

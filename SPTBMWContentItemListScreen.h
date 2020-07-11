@@ -9,7 +9,7 @@
 #import "SPTBMWListScreen-Protocol.h"
 
 @class NSArray, NSString, SPTAccessory;
-@protocol SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationPlatform;
+@protocol SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform;
 
 @interface SPTBMWContentItemListScreen : NSObject <SPTBMWListScreen>
 {
@@ -17,6 +17,7 @@
     id <SPTBMWListScreenDelegate> _delegate;
     id <SPTExternalIntegrationContent> _containerContent;
     unsigned long long _level;
+    id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     NSArray *_content;
     SPTAccessory *_currentAccessory;
@@ -45,6 +46,7 @@
 @property(readonly, nonatomic) NSString *emptyListTitle;
 @property(readonly, nonatomic) NSString *title;
 @property(readonly, nonatomic) unsigned long long groupCount;
+@property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 - (id)initWithContent:(id)arg1 externalIntegrationPlatform:(id)arg2 level:(unsigned long long)arg3 delegate:(id)arg4 currentAccessory:(id)arg5;
 
 // Remaining properties

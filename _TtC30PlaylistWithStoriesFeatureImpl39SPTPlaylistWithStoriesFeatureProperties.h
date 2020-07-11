@@ -9,6 +9,7 @@
 @interface _TtC30PlaylistWithStoriesFeatureImpl39SPTPlaylistWithStoriesFeatureProperties : NSObject
 {
     // Error parsing type: , name: enablePlaylistsWithStoriesVisrefHeader
+    // Error parsing type: , name: enablePlaylistsWithStories
 }
 
 - (id)init;

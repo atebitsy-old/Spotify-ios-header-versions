@@ -24,6 +24,8 @@
 @property(readonly, nonatomic) id <SPTUserBehaviourInstrumentationLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+- (void)logUnlikeSongDialogInteractionAtIndex:(unsigned long long)arg1 isUnliked:(_Bool)arg2 trackURI:(id)arg3;
+- (void)logUnlikeSongDialogShownAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
 - (void)logUBIInteractionEvent:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
@@ -31,14 +33,16 @@
 - (void)logClearFilterWithIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logFilterIdentifier:(id)arg1 sectionId:(id)arg2 filterAdded:(_Bool)arg3 index:(unsigned long long)arg4;
 - (void)logSortingIdentifier:(id)arg1 index:(unsigned long long)arg2;
-- (void)logSortFilterPickerCanceled;
+- (void)logSortFilterPickerCanceledWithReason:(unsigned long long)arg1;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
+- (void)logEmptyViewImpression;
 - (void)logCloseExtraSongsExplanation;
 - (void)logSongsOpenEntity:(id)arg1;
 - (void)logExtraSongsWhyAction;
 - (void)logSongsShufflePlay;
 - (void)logAddSongsButtonAction;
 - (void)logDiscoverSongsButton:(id)arg1;
+- (void)logCancelRemoveDownloads;
 - (void)logAvailableOffline:(_Bool)arg1;
 - (void)logSwipeActionAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4;
 - (void)logAudioPreviewAtIndex:(long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 playing:(_Bool)arg5 isOriginCoverItem:(_Bool)arg6;

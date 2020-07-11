@@ -51,6 +51,8 @@
 - (void)didMoveToSuperview;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)updateFullHeaderProgress:(double)arg1;
+- (void)updateHeaderHeight:(double)arg1;
 @property(nonatomic) double topAccessoryViewVerticalOffset; // @synthesize topAccessoryViewVerticalOffset;
 @property(nonatomic, retain) id <_TtP20EncoreConsumerMobile18HeaderViewDelegate_> delegate; // @synthesize delegate;
 

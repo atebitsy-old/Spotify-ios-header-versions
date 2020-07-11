@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "_TtC21FollowFeedFeatureImpl22HubComponentViewBinder.h"
+#import "HUBComponentView.h"
 
-@interface _TtC21FollowFeedFeatureImpl29EmptyStateComponentViewBinder : _TtC21FollowFeedFeatureImpl22HubComponentViewBinder
+@interface _TtC21FollowFeedFeatureImpl29EmptyStateComponentViewBinder : HUBComponentView
 {
     // Error parsing type: , name: emptyStateView
     // Error parsing type: , name: theme

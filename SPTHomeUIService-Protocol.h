@@ -9,7 +9,7 @@
 @protocol HUBComponentLayoutManager, SPTHomeUIComponentFactory;
 
 @protocol SPTHomeUIService <SPTService>
-@property(readonly, nonatomic) id <SPTHomeUIComponentFactory> componentFactory;
 - (id <HUBComponentLayoutManager>)provideHomeComponentLayoutManager;
+@property(nonatomic, readonly) id <SPTHomeUIComponentFactory> componentFactory;
 @end
 

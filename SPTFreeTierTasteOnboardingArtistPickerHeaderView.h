@@ -8,31 +8,44 @@
 
 #import "GLUEStyleable-Protocol.h"
 
-@class GLUELabel, NSLayoutConstraint, NSString, UISearchBar;
+@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, SPTFreeTierTasteOnboardingArtistPickerHeaderViewStyle, UISearchBar;
 @protocol SPTFreeTierTasteOnboardingArtistPickerHeaderViewDelegate;
 
 @interface SPTFreeTierTasteOnboardingArtistPickerHeaderView : UIView <GLUEStyleable>
 {
     GLUELabel *_titleLabel;
     UISearchBar *_searchBar;
+    GLUEButton *_addSongsToPlaylistButton;
     id <SPTFreeTierTasteOnboardingArtistPickerHeaderViewDelegate> _delegate;
     UIView *_searchBarContainerView;
     NSLayoutConstraint *_titleLabelVerticalCenterConstraint;
     NSLayoutConstraint *_titleLabelLeftConstraint;
     NSLayoutConstraint *_titleLabelRightConstraint;
     NSLayoutConstraint *_searchBarContainerViewHeightConstraint;
+    NSLayoutConstraint *_searchBarContainerViewBottomConstraint;
+    NSLayoutConstraint *_addSongsToPlaylistButtonTopConstraint;
+    NSLayoutConstraint *_addSongsToPlaylistButtonBottomConstraint;
+    NSLayoutConstraint *_addSongsToPlaylistButtonCenterXConstraint;
+    SPTFreeTierTasteOnboardingArtistPickerHeaderViewStyle *_style;
 }
 
+@property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistPickerHeaderViewStyle *style; // @synthesize style=_style;
+@property(nonatomic) __weak NSLayoutConstraint *addSongsToPlaylistButtonCenterXConstraint; // @synthesize addSongsToPlaylistButtonCenterXConstraint=_addSongsToPlaylistButtonCenterXConstraint;
+@property(nonatomic) __weak NSLayoutConstraint *addSongsToPlaylistButtonBottomConstraint; // @synthesize addSongsToPlaylistButtonBottomConstraint=_addSongsToPlaylistButtonBottomConstraint;
+@property(nonatomic) __weak NSLayoutConstraint *addSongsToPlaylistButtonTopConstraint; // @synthesize addSongsToPlaylistButtonTopConstraint=_addSongsToPlaylistButtonTopConstraint;
+@property(nonatomic) __weak NSLayoutConstraint *searchBarContainerViewBottomConstraint; // @synthesize searchBarContainerViewBottomConstraint=_searchBarContainerViewBottomConstraint;
 @property(nonatomic) __weak NSLayoutConstraint *searchBarContainerViewHeightConstraint; // @synthesize searchBarContainerViewHeightConstraint=_searchBarContainerViewHeightConstraint;
 @property(nonatomic) __weak NSLayoutConstraint *titleLabelRightConstraint; // @synthesize titleLabelRightConstraint=_titleLabelRightConstraint;
 @property(nonatomic) __weak NSLayoutConstraint *titleLabelLeftConstraint; // @synthesize titleLabelLeftConstraint=_titleLabelLeftConstraint;
 @property(nonatomic) __weak NSLayoutConstraint *titleLabelVerticalCenterConstraint; // @synthesize titleLabelVerticalCenterConstraint=_titleLabelVerticalCenterConstraint;
 @property(readonly, nonatomic) UIView *searchBarContainerView; // @synthesize searchBarContainerView=_searchBarContainerView;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistPickerHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) GLUEButton *addSongsToPlaylistButton; // @synthesize addSongsToPlaylistButton=_addSongsToPlaylistButton;
 @property(retain, nonatomic) UISearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
+- (void)createSeedASessionElements;
 - (void)collapseWithOffset:(struct CGPoint)arg1;
 - (void)updateSearchBarFrame;
 - (void)didTapSearchBarContainer;

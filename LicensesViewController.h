@@ -6,17 +6,17 @@
 
 #import <UIKit/UIViewController.h>
 
-@class UIWebView;
+@class WKWebView;
 
 @interface LicensesViewController : UIViewController
 {
-    UIWebView *_webView;
+    WKWebView *_webView;
 }
 
-@property(retain, nonatomic) UIWebView *webView; // @synthesize webView=_webView;
+@property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 - (void).cxx_destruct;
 - (_Bool)shouldAutorotate;
-- (void)viewDidLoad;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)loadView;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 

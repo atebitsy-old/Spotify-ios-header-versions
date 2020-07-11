@@ -74,6 +74,9 @@
 - (void)loadViewModel;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
+- (void)setActiveFilterRules:(id)arg1;
+- (id)activeFilterRules;
+- (id)availableFilterRules;
 @property(readonly, nonatomic) NSArray *activeFilterTitles;
 @property(readonly, nonatomic) unsigned long long filteredContentState;
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;

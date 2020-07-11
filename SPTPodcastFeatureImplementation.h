@@ -139,7 +139,6 @@
 - (void)podcastTestManagerDidUpdate:(id)arg1;
 - (id)provideEpisodeCellConfigurator;
 - (id)provideResolverForPodcast;
-- (id)providePodcastPreferences;
 - (id)providePodcastNowPlayingTitlePresenter;
 - (id)providePodcastSpeedControlManager;
 - (void)setUpShowEntityServiceDataLoader:(id)arg1;

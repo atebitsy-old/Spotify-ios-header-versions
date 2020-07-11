@@ -8,6 +8,6 @@
 @protocol SPTPageCreationContext;
 
 @protocol _TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_
-- (UIViewController *)creatorLinksViewControllerForEpisodeURL:(NSURL *)arg1 context:(id <SPTPageCreationContext>)arg2;
+- (UIViewController *)creatorLinksViewControllerWithEpisodeURI:(NSURL *)arg1 pageCreationContext:(id <SPTPageCreationContext>)arg2;
 @end
 

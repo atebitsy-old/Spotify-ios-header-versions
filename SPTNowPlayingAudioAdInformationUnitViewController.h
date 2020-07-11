@@ -10,7 +10,7 @@
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
 @class NSString, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdsFeatureProperties, SPTAdsRemindersManager, SPTNowPlayingAudioAdInfoUnitView, SPTTheme;
-@protocol SPTAdsBaseEntity, SPTAdsManager, SPTLinkDispatcher, SPTNowPlayingContainingViewController, SPTSnackbarConditionalPresenter;
+@protocol SPTAdsBaseEntity, SPTAdsManager, SPTLinkDispatcher, SPTLogCenter, SPTNowPlayingContainingViewController, SPTSnackbarConditionalPresenter;
 
 @interface SPTNowPlayingAudioAdInformationUnitViewController : UIViewController <SPTNowPlayingContainedViewController, SPTNowPlayingAdUnitViewController>
 {
@@ -22,8 +22,10 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTAdsRemindersManager *_reminderManager;
     id <SPTAdsBaseEntity> _adEntity;
+    id <SPTLogCenter> _logCenter;
 }
 
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(readonly, nonatomic) SPTAdsRemindersManager *reminderManager; // @synthesize reminderManager=_reminderManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -43,7 +45,7 @@
 - (void)viewDidLoad;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)loadView;
-- (id)initWithAdsManager:(id)arg1 theme:(id)arg2 actionsHandler:(id)arg3 featureProperties:(id)arg4 snackbarPresenter:(id)arg5 linkDispatcher:(id)arg6 reminderManager:(id)arg7;
+- (id)initWithAdsManager:(id)arg1 theme:(id)arg2 actionsHandler:(id)arg3 featureProperties:(id)arg4 snackbarPresenter:(id)arg5 linkDispatcher:(id)arg6 reminderManager:(id)arg7 logCenter:(id)arg8;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

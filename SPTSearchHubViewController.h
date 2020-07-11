@@ -13,7 +13,7 @@
 - (void)handleTouchDownGesture:(id)arg1;
 - (void)configureOverlayView;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 searchLogger:(id)arg7 shareDragDelegateFactory:(id)arg8;
+- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 searchHubsLogger:(id)arg7 shareDragDelegateFactory:(id)arg8;
 
 @end
 

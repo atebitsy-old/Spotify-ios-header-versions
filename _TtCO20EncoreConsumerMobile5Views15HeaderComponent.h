@@ -10,6 +10,7 @@
 
 @interface _TtCO20EncoreConsumerMobile5Views15HeaderComponent : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: heightConstraint
     // Error parsing type: , name: uiView
     // Error parsing type: , name: onProgress
     // Error parsing type: , name: onFullHeaderProgress

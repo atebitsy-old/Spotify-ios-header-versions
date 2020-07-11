@@ -7,15 +7,16 @@
 #import "SPViewController.h"
 
 #import "SPTPageController-Protocol.h"
-#import "UIWebViewDelegate-Protocol.h"
+#import "WKNavigationDelegate-Protocol.h"
+#import "WKUIDelegate-Protocol.h"
 
-@class NSString, NSURL, NSURLRequest, SPTProgressView, UIWebView;
+@class NSString, NSURL, NSURLRequest, SPTProgressView, WKWebView;
 @protocol SPTAlertController, SPTPageContainer;
 
-@interface TermsViewController : SPViewController <UIWebViewDelegate, SPTPageController>
+@interface TermsViewController : SPViewController <WKNavigationDelegate, WKUIDelegate, SPTPageController>
 {
     _Bool _hasLoadedFirstPage;
-    UIWebView *_webView;
+    WKWebView *_webView;
     NSURL *_viewURI;
     NSURLRequest *_initialRequest;
     SPTProgressView *_progressView;
@@ -26,16 +27,17 @@
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) NSURLRequest *initialRequest; // @synthesize initialRequest=_initialRequest;
 @property(retain, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
-@property(retain, nonatomic) UIWebView *webView; // @synthesize webView=_webView;
+@property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (id)URI;
 - (_Bool)automaticallyAdjustsScrollViewInsets;
-- (_Bool)webView:(id)arg1 shouldStartLoadWithRequest:(id)arg2 navigationType:(long long)arg3;
-- (void)webView:(id)arg1 didFailLoadWithError:(id)arg2;
-- (void)webViewDidFinishLoad:(id)arg1;
-- (void)webViewDidStartLoad:(id)arg1;
+- (id)webView:(id)arg1 createWebViewWithConfiguration:(id)arg2 forNavigationAction:(id)arg3 windowFeatures:(id)arg4;
+- (void)webView:(id)arg1 decidePolicyForNavigationAction:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
+- (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;
+- (void)webView:(id)arg1 didFinishNavigation:(id)arg2;
+- (void)webView:(id)arg1 didStartProvisionalNavigation:(id)arg2;
 - (void)refresh;
 - (void)loadURL:(id)arg1;
 - (void)showSCTAInformation;

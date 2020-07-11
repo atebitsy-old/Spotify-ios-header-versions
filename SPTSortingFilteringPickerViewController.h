@@ -7,6 +7,7 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTSortingFilteringPicker-Protocol.h"
+#import "SPTSortingFilteringPresentationControllerDelegate-Protocol.h"
 #import "SPTSortingFilteringViewModelDelegate-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
@@ -15,7 +16,7 @@
 @class GLUEButton, NSString, SPTSortingFilteringCellConfigurator, SPTSortingFilteringGLUETheme, SPTSortingFilteringViewModel, SPTTableView;
 @protocol SPTSortingFilteringPickerDelegate;
 
-@interface SPTSortingFilteringPickerViewController : UIViewController <UIViewControllerTransitioningDelegate, UITableViewDataSource, UITableViewDelegate, SPTSortingFilteringPicker, SPTSortingFilteringViewModelDelegate>
+@interface SPTSortingFilteringPickerViewController : UIViewController <UIViewControllerTransitioningDelegate, UITableViewDataSource, UITableViewDelegate, SPTSortingFilteringPicker, SPTSortingFilteringViewModelDelegate, SPTSortingFilteringPresentationControllerDelegate>
 {
     _Bool _userPickedRule;
     id <SPTSortingFilteringPickerDelegate> _delegate;
@@ -51,6 +52,7 @@
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (id)presentationControllerForPresentedViewController:(id)arg1 presentingViewController:(id)arg2 sourceViewController:(id)arg3;
 - (void)calculatePreferedContentSize;
+- (void)dismissDetectedOnPresentationController:(id)arg1;
 - (void)dismissViewControllerAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)viewSafeAreaInsetsDidChange;
 - (void)viewDidLayoutSubviews;
