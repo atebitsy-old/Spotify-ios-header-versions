@@ -14,7 +14,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class CALayer, GLUEEntityRowStyle, NSArray, NSString, NSURL, SPTTableView, UIImage, UIView;
+@class CALayer, GLUEEntityRowStyle, NSArray, NSString, NSURL, SPTContextMenuGradientMaskView, SPTTableView, UIImage, UIView;
 @protocol GLUEImageLoader, GLUETheme, SPTContextMenuHeader, SPTContextMenuViewControllerIPadDelegate, SPTImageLoader, SPTPageContainer;
 
 @interface SPTContextMenuViewControllerIPad : UIViewController <SPTImageLoaderDelegate, UITableViewDataSource, UITableViewDelegate, SPTNavigationControllerNavigationBarState, SPTContextMenuContentViewControllerDelegate, SPTContextMenuTaskActionDelegate, SPTPageController>
@@ -22,6 +22,7 @@
     id <SPTContextMenuViewControllerIPadDelegate> _delegate;
     long long _contextMenuSubtitleStyle;
     UIView *_containerView;
+    SPTContextMenuGradientMaskView *_gradientMaskView;
     SPTTableView *_tableView;
     NSURL *_contextMenuHeaderImageURL;
     UIImage *_contextMenuHeaderImagePlaceholder;
@@ -56,6 +57,7 @@
 @property(retain, nonatomic) UIImage *contextMenuHeaderImagePlaceholder; // @synthesize contextMenuHeaderImagePlaceholder=_contextMenuHeaderImagePlaceholder;
 @property(retain, nonatomic) NSURL *contextMenuHeaderImageURL; // @synthesize contextMenuHeaderImageURL=_contextMenuHeaderImageURL;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
+@property(retain, nonatomic) SPTContextMenuGradientMaskView *gradientMaskView; // @synthesize gradientMaskView=_gradientMaskView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(nonatomic) long long contextMenuSubtitleStyle; // @synthesize contextMenuSubtitleStyle=_contextMenuSubtitleStyle;
 @property(nonatomic) __weak id <SPTContextMenuViewControllerIPadDelegate> delegate; // @synthesize delegate=_delegate;

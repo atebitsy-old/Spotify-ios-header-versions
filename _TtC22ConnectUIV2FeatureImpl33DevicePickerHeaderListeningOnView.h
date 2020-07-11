@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl33DevicePickerHeaderListeningOnView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: imageFactory
     // Error parsing type: , name: $__lazy_storage_$_labelView
     // Error parsing type: , name: $__lazy_storage_$_subtitleView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel

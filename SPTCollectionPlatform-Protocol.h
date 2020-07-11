@@ -29,7 +29,6 @@
 - (_Bool)canAddTrackWithURL:(NSURL *)arg1;
 - (id <SPTCollectionPlatformDataLoaderRequestToken>)subscribeCollectionStateForURLs:(NSArray *)arg1 completion:(void (^)(NSArray *, NSError *))arg2;
 - (id <SPTCollectionPlatformDataLoaderRequestToken>)subscribeCollectionStateForURL:(NSURL *)arg1 completion:(void (^)(unsigned long long, NSError *))arg2;
-- (void)collectionStateForURLs:(NSArray *)arg1 completion:(void (^)(NSArray *, NSError *))arg2;
 - (void)collectionStateForURL:(NSURL *)arg1 completion:(void (^)(unsigned long long, NSError *))arg2;
 @end
 

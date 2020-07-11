@@ -18,6 +18,8 @@
 + (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)swipeRightUiReveal;
+- (id)swipeLeftUiReveal;
 - (id)cardFactoryWithIdentifier:(id)arg1 position:(long long)arg2;
 - (id)cardNavigatorFactoryWithPosition:(long long)arg1;
 - (id)_location;

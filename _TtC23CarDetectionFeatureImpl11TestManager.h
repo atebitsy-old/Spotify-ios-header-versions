@@ -11,6 +11,7 @@
     // Error parsing type: , name: accessoryManager
     // Error parsing type: , name: debugCarConnectedSignal
     // Error parsing type: , name: $__lazy_storage_$_debugCarAccessory
+    // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;

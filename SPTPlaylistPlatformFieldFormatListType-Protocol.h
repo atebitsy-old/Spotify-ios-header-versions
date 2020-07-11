@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTPlaylistPlatformFieldFormatListType <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, copy, nonatomic) NSString *formatListType;
+@property(nonatomic, readonly) NSString *formatListType;
 @end
 

@@ -14,6 +14,7 @@
 {
     UIColor *_backgroundColor;
     GLUELabelStyle *_titleLabelStyle;
+    GLUELabelStyle *_helpLabelStyle;
     GLUEButtonStyle *_signupButtonStyle;
     GLUEButtonStyle *_facebookButtonStyle;
     GLUEButtonStyle *_loginButtonStyle;
@@ -28,6 +29,8 @@
     double _spotifyLogoHeight;
     double _titleTopMargin;
     double _titleBottomMargin;
+    double _helpTextBottomMargin;
+    double _helpTextLabelHeight;
     double _titleBottomSmallMargin;
     double _buttonRegularSizeClassWidth;
     double _buttonMinimumHorizontalEdgeMargin;
@@ -50,6 +53,8 @@
 @property(nonatomic) double buttonMinimumHorizontalEdgeMargin; // @synthesize buttonMinimumHorizontalEdgeMargin=_buttonMinimumHorizontalEdgeMargin;
 @property(nonatomic) double buttonRegularSizeClassWidth; // @synthesize buttonRegularSizeClassWidth=_buttonRegularSizeClassWidth;
 @property(nonatomic) double titleBottomSmallMargin; // @synthesize titleBottomSmallMargin=_titleBottomSmallMargin;
+@property(nonatomic) double helpTextLabelHeight; // @synthesize helpTextLabelHeight=_helpTextLabelHeight;
+@property(nonatomic) double helpTextBottomMargin; // @synthesize helpTextBottomMargin=_helpTextBottomMargin;
 @property(nonatomic) double titleBottomMargin; // @synthesize titleBottomMargin=_titleBottomMargin;
 @property(nonatomic) double titleTopMargin; // @synthesize titleTopMargin=_titleTopMargin;
 @property(nonatomic) double spotifyLogoHeight; // @synthesize spotifyLogoHeight=_spotifyLogoHeight;
@@ -64,6 +69,7 @@
 @property(copy, nonatomic) GLUEButtonStyle *loginButtonStyle; // @synthesize loginButtonStyle=_loginButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *facebookButtonStyle; // @synthesize facebookButtonStyle=_facebookButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *signupButtonStyle; // @synthesize signupButtonStyle=_signupButtonStyle;
+@property(copy, nonatomic) GLUELabelStyle *helpLabelStyle; // @synthesize helpLabelStyle=_helpLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 - (void).cxx_destruct;

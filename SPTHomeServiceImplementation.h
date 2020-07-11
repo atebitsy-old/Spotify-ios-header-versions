@@ -9,7 +9,7 @@
 #import "SPTHomeService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHomeContentCache, SPTHomeHubManager;
-@protocol SPTDrivingStateDetectionService, SPTFeatureFlagFactory, SPTFeedHeartBeatManager, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeTestManager, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIHubsUtilities, SPTUBIService, _TtP17FollowFeedFeature20SPTFollowFeedService_;
+@protocol SPTCreatePlaylistService, SPTFeatureFlagFactory, SPTFeedHeartBeatManager, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeTestManager, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIHubsUtilities, SPTUBIService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -26,13 +26,14 @@
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTNetworkService> _networkFeature;
     id <_TtP17FollowFeedFeature20SPTFollowFeedService_> _followFeedService;
-    id <SPTDrivingStateDetectionService> _drivingStateDetectionService;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTShareFeature> _shareService;
     id <SPTFreeTierTasteOnboardingService> _tasteOnboardingService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIService> _ubiService;
     id <SPTSeedASessionService> _seedASessionService;
+    id <SPTCreatePlaylistService> _createPlaylistService;
     id <SPTHomeTestManager> _testManager;
     SPTHomeHubManager *_hubManager;
     SPTHomeContentCache *_homeContentCache;
@@ -48,13 +49,14 @@
 @property(retain, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(retain, nonatomic) id <SPTHomeTestManager> testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
 @property(nonatomic) __weak id <SPTSeedASessionService> seedASessionService; // @synthesize seedASessionService=_seedASessionService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingService> tasteOnboardingService; // @synthesize tasteOnboardingService=_tasteOnboardingService;
 @property(nonatomic) __weak id <SPTShareFeature> shareService; // @synthesize shareService=_shareService;
-@property(nonatomic) __weak id <SPTDrivingStateDetectionService> drivingStateDetectionService; // @synthesize drivingStateDetectionService=_drivingStateDetectionService;
+@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(nonatomic) __weak id <_TtP17FollowFeedFeature20SPTFollowFeedService_> followFeedService; // @synthesize followFeedService=_followFeedService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;

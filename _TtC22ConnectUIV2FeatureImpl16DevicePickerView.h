@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl16DevicePickerView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: imageFactory
     // Error parsing type: , name: volumeUIFactory
     // Error parsing type: , name: $__lazy_storage_$_mainHeaderView
     // Error parsing type: , name: $__lazy_storage_$_tableViewContainerView

@@ -8,7 +8,7 @@
 
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, SPTObserverManager;
+@class NSString, SPTObserverManager, SPTPlayerState;
 @protocol SPTPlayer;
 
 @interface SPTNowPlayingSideBarModeResolver : NSObject <SPTPlayerObserver>
@@ -16,8 +16,10 @@
     long long _currentMode;
     id <SPTPlayer> _player;
     SPTObserverManager *_observerManager;
+    SPTPlayerState *_playerState;
 }
 
+@property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) long long currentMode; // @synthesize currentMode=_currentMode;

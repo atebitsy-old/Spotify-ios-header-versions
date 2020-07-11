@@ -8,7 +8,7 @@
 
 #import "SPTUBIService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTObserverManager;
+@class NSString, SPTAllocationContext, SPTObserverManager, SPTUBIPageInstanceIdentifierProvider;
 @protocol SPTContainerService, SPTDebugService, SPTEventSenderService;
 
 @interface SPTUBIServiceImplementation : NSObject <SPTUBIService>
@@ -16,17 +16,21 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTContainerService> _containerService;
     id <SPTDebugService> _debugService;
+    SPTUBIPageInstanceIdentifierProvider *_pageInstanceIdProvider;
     SPTObserverManager *_observerManager;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(retain, nonatomic) SPTUBIPageInstanceIdentifierProvider *pageInstanceIdProvider; // @synthesize pageInstanceIdProvider=_pageInstanceIdProvider;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 - (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (id)currentPageInstanceId;
+- (void)invalidatePageInstanceId;
 - (id)provideUserBehaviourInstrumentationStateViewController;
 - (id)provideLogger;
 - (void)unload;

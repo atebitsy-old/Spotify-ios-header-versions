@@ -7,13 +7,15 @@
 #import <objc/NSObject.h>
 
 #import "SPTVoiceLibraryAudioRecorderObserver-Protocol.h"
+#import "SPTVoiceLibraryAudioSessionDelegate-Protocol.h"
 #import "SPTVoiceLibraryWakeword-Protocol.h"
 
 @class NSString, SPTVoiceLibraryAudioSessionManager;
 @protocol OS_dispatch_queue, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryWakewordDelegate;
 
-@interface SPTVoiceLibraryWakewordImplementation : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibraryWakeword>
+@interface SPTVoiceLibraryWakewordImplementation : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibraryAudioSessionDelegate, SPTVoiceLibraryWakeword>
 {
+    _Bool _isWakewordRunning;
     id <SPTVoiceLibraryWakewordDelegate> _delegate;
     struct SnsrSession_ *_session;
     struct SnsrStream_ *_audioStream;
@@ -24,6 +26,7 @@
     NSString *_modelPath;
 }
 
+@property(nonatomic) _Bool isWakewordRunning; // @synthesize isWakewordRunning=_isWakewordRunning;
 @property(copy, nonatomic) NSString *modelPath; // @synthesize modelPath=_modelPath;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *wakewordLoadingQueue; // @synthesize wakewordLoadingQueue=_wakewordLoadingQueue;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *wakewordDetectionQueue; // @synthesize wakewordDetectionQueue=_wakewordDetectionQueue;
@@ -40,6 +43,8 @@
 - (void)pause;
 - (void)stop;
 - (void)start;
+- (_Bool)hasActiveAudioSessionForAudioRecording;
+- (void)dealloc;
 - (id)initWithAudioRecorder:(id)arg1 audioSessionManager:(id)arg2;
 
 // Remaining properties

@@ -6,34 +6,30 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTNowPlayingBarViewControllerObserver-Protocol.h"
 #import "SPTNowPlayingStateObservable-Protocol.h"
 #import "SPTStatefulPlayerObserver-Protocol.h"
 
-@class NSString, SPTObserverManager, SPTStatefulPlayer, UIViewController;
-@protocol SPTNowPlayingBarViewControllerObservable;
+@class NSString, SPTObserverManager, SPTStatefulPlayer;
 
-@interface SPTNowPlayingStateProxy : NSObject <SPTStatefulPlayerObserver, SPTNowPlayingBarViewControllerObserver, SPTNowPlayingStateObservable>
+@interface SPTNowPlayingStateProxy : NSObject <SPTStatefulPlayerObserver, SPTNowPlayingStateObservable>
 {
     SPTStatefulPlayer *_statefulPlayer;
-    UIViewController<SPTNowPlayingBarViewControllerObservable> *_barViewController;
     SPTObserverManager *_observerManager;
 }
 
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(nonatomic) __weak UIViewController<SPTNowPlayingBarViewControllerObservable> *barViewController; // @synthesize barViewController=_barViewController;
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 - (void).cxx_destruct;
+- (void)nowPlayingViewWillAppear:(id)arg1;
+- (void)nowPlayingViewWillDisappear:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (void)nowPlayingBarViewControllerWillDisappear:(id)arg1;
-- (void)nowPlayingBarViewControllerDidAppear:(id)arg1;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
-- (void)playerDidFinishUpdating:(id)arg1;
+- (void)playerDidReceiveStateUpdate:(id)arg1;
 - (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)playerWillSkipToNextTrack:(id)arg1;
-- (id)initWithStatefulPlayer:(id)arg1 barViewController:(id)arg2;
+- (id)initWithStatefulPlayer:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

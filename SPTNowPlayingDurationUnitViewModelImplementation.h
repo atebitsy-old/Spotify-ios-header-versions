@@ -40,7 +40,7 @@
 - (void)updateObservers:(_Bool)arg1;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
-- (void)playerDidFinishUpdating:(id)arg1;
+- (void)playerDidReceiveStateUpdate:(id)arg1;
 - (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)nowPlayingTrackPositionDidChange:(id)arg1;
 - (void)scrubbedToPosition:(double)arg1;

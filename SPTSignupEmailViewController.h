@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIViewController.h>
+#import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
@@ -15,7 +15,7 @@
 @class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupEmailViewModel, SPTSignupSingleInputFieldView;
 @protocol SPTPageContainer;
 
-@interface SPTSignupEmailViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupEmailViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTSignupEmailViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTSignupEmailViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -30,7 +30,6 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
-- (void)traitCollectionDidChange:(id)arg1;
 - (void)viewModel:(id)arg1 didEndFullValidationWithError:(id)arg2;
 - (void)viewModelDidBeginFullValidation:(id)arg1;
 - (void)viewModel:(id)arg1 didValidateLocalyWithResult:(_Bool)arg2;

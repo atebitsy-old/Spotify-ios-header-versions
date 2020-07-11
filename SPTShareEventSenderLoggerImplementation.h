@@ -18,6 +18,9 @@
 
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
+- (void)logPlaybackFromDeepLinkWithEntityURI:(id)arg1 contextURI:(id)arg2 playbackId:(id)arg3 deeplinkSessionIdentifier:(id)arg4;
+- (void)logDeepLinkOpenEventWithEntityURI:(id)arg1 sourceAppIdentifier:(id)arg2 externalLink:(id)arg3 deeplinkSessionIdentifier:(id)arg4;
+- (void)logShareWithEntityURI:(id)arg1 destinationId:(id)arg2 shareId:(id)arg3 sourcePageUri:(id)arg4 sourcePage:(id)arg5 systemDestination:(id)arg6;
 - (id)initWithEventSender:(id)arg1;
 
 // Remaining properties

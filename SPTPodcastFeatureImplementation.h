@@ -148,9 +148,8 @@
 - (id)provideDefaultContextMenuProvider;
 - (id)provideContextMenuDelegateObject;
 - (id)provideContextMenuProviderWithLinkDispatcher:(id)arg1;
-- (id)providePodcastViewController2ForURL:(id)arg1 context:(id)arg2;
-- (id)provideShowContextMenuControllerForLinkDispatcher:(id)arg1;
 - (id)providePodcastViewControllerForURL:(id)arg1 context:(id)arg2;
+- (id)provideShowContextMenuControllerForLinkDispatcher:(id)arg1;
 - (id)provideVideoShowViewControllerForURL:(id)arg1 context:(id)arg2;
 - (id)provideFeatureProperties;
 - (id)provideSortingService;

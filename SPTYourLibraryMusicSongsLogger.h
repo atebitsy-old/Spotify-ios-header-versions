@@ -8,7 +8,7 @@
 
 #import "SPTYourLibraryMusicSortFilterLogger-Protocol.h"
 
-@class NSString, NSURL;
+@class NSMutableDictionary, NSString, NSURL;
 @protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileYourLibraryLikedSongsEventFactory;
 
 @interface SPTYourLibraryMusicSongsLogger : NSObject <SPTYourLibraryMusicSortFilterLogger>
@@ -17,8 +17,10 @@
     id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileYourLibraryLikedSongsEventFactory> _eventFactory;
     NSURL *_pageURL;
+    NSMutableDictionary *_impressionTracking;
 }
 
+@property(retain, nonatomic) NSMutableDictionary *impressionTracking; // @synthesize impressionTracking=_impressionTracking;
 @property(retain, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(retain, nonatomic) id <SPTUBIMobileYourLibraryLikedSongsEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
@@ -33,6 +35,9 @@
 - (void)logSortingIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logSortFilterPickerCanceledWithReason:(unsigned long long)arg1;
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
+- (void)clearTrackedImpression:(unsigned long long)arg1;
+- (void)trackImpression:(unsigned long long)arg1;
+- (_Bool)isTrackedImpressionOpen:(unsigned long long)arg1;
 - (void)logFilterChipsImpression;
 - (void)logEmptyViewImpression;
 - (void)logUnlikeSongDialogInteractionAtIndex:(unsigned long long)arg1 isUnliked:(_Bool)arg2 trackURI:(id)arg3;
@@ -40,7 +45,6 @@
 - (void)logClearFilterChips;
 - (void)logFilterChipAtIndex:(unsigned long long)arg1 identifier:(id)arg2 isSelected:(_Bool)arg3;
 - (void)logCloseExtraSongsExplanation;
-- (void)logSongsOpenEntity:(id)arg1;
 - (void)logExtraSongsWhyAction;
 - (void)logSongsShufflePlay;
 - (void)logAddSongsButtonAction;

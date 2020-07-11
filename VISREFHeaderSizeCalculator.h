@@ -10,7 +10,7 @@
 {
 }
 
-+ (double)calculateFullBleedHeaderHeightWithWindowSize:(struct CGSize)arg1 traitCollection:(id)arg2 hasDescription:(_Bool)arg3 hasCreatorRow:(_Bool)arg4;
++ (double)calculateFullBleedHeaderHeightWithWindowSize:(struct CGSize)arg1 traitCollection:(id)arg2 contentComponent:(long long)arg3;
 + (double)calculateHeaderHeightWithWindowSize:(struct CGSize)arg1 traitCollection:(id)arg2 hasDescription:(_Bool)arg3 hasCreatorRow:(_Bool)arg4;
 + (_Bool)useMediumHeaderForFullBleed:(struct CGSize)arg1;
 + (_Bool)useMediumHeader:(struct CGSize)arg1;

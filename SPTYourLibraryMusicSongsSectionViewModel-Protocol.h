@@ -6,12 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL;
+@class NSString;
 
 @protocol SPTYourLibraryMusicSongsSectionViewModel <NSObject>
 @property(readonly, nonatomic) long long type;
-@property(readonly, copy, nonatomic) NSURL *entityURL;
-@property(readonly, copy, nonatomic) NSURL *imageURL;
 @property(readonly, copy, nonatomic) NSString *actionTitle;
 @property(readonly, copy, nonatomic) NSString *title;
 @end

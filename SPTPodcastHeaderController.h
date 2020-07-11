@@ -6,30 +6,28 @@
 
 #import "VISREFBaseHeaderController.h"
 
-@class SPTPodcastHeaderForegroundView, VISREFGradientBackgroundView;
-@protocol GLUEImageLoader, GLUETheme, SPTPodcastHeaderContentView, SPTPodcastTestManager;
+@class SPTPodcastHeaderContentView, SPTPodcastHeaderForegroundView, VISREFGradientBackgroundView;
+@protocol GLUEImageLoader, GLUETheme;
 
 @interface SPTPodcastHeaderController : VISREFBaseHeaderController
 {
     double _headerHeight;
     double _navigationBarHeight;
     VISREFGradientBackgroundView *_backgroundView;
-    id <SPTPodcastHeaderContentView> _contentView;
+    SPTPodcastHeaderContentView *_contentView;
     SPTPodcastHeaderForegroundView *_foregroundView;
     id <GLUETheme> _theme;
     id <GLUEImageLoader> _imageLoader;
     double _navigationBarGradientEndPoint;
     double _currentProgress;
-    id <SPTPodcastTestManager> _podcastTestManager;
 }
 
-@property(nonatomic) __weak id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(nonatomic) double currentProgress; // @synthesize currentProgress=_currentProgress;
 @property(nonatomic) double navigationBarGradientEndPoint; // @synthesize navigationBarGradientEndPoint=_navigationBarGradientEndPoint;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPodcastHeaderForegroundView *foregroundView; // @synthesize foregroundView=_foregroundView;
-@property(retain, nonatomic) id <SPTPodcastHeaderContentView> contentView; // @synthesize contentView=_contentView;
+@property(retain, nonatomic) SPTPodcastHeaderContentView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
@@ -44,10 +42,8 @@
 - (double)minimumContentHeight;
 - (double)minimumHeight;
 - (id)extractNavigationBarGradientFromBackgroundGradient;
-- (double)provideHeaderHeight;
-- (id)provideContentView;
 - (void)setup;
-- (id)initWithTheme:(id)arg1 glueImageLoader:(id)arg2 podcastTestManager:(id)arg3;
+- (id)initWithTheme:(id)arg1 glueImageLoader:(id)arg2;
 
 @end
 

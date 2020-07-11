@@ -11,11 +11,11 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSNotificationCenter, NSString, SPTInAppMessageFeatureFlagChecks;
-@protocol SPTExternalIntegrationDriverDistractionController, SPTInAppMessageRequester;
+@protocol SPTCarDetector, SPTInAppMessageRequester;
 
 @interface SPTInAppMessageEventEmitter : NSObject <SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver, SPTInAppMessageMessageRequesterDelegate>
 {
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
     id <SPTInAppMessageRequester> _messageRequester;
     NSNotificationCenter *_notificationCenter;
@@ -34,7 +34,7 @@
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) id <SPTInAppMessageRequester> messageRequester; // @synthesize messageRequester=_messageRequester;
 @property(readonly, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
-@property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 - (void).cxx_destruct;
 - (void)postCancelPresentationNotification:(id)arg1;
 - (void)compareMatchedPatternWithCurrentClientEventPattern:(id)arg1;
@@ -44,7 +44,7 @@
 - (void)messageRequester:(id)arg1 didRecieveMessageRequest:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)currentPageViewUpdated:(id)arg1;
-- (id)initWithDriverDistractionController:(id)arg1 featureFlagChecker:(id)arg2 messageRequester:(id)arg3 notificationCenter:(id)arg4;
+- (id)initWithCarDetector:(id)arg1 featureFlagChecker:(id)arg2 messageRequester:(id)arg3 notificationCenter:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

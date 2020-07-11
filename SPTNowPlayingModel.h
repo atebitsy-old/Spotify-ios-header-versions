@@ -44,7 +44,7 @@
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
-- (void)playerDidFinishUpdating:(id)arg1;
+- (void)playerDidReceiveStateUpdate:(id)arg1;
 - (void)playerDidSynchronizeQueue:(id)arg1;
 - (void)playerPreviousTrackDidChange:(id)arg1;
 - (void)playerNextTrackDidChange:(id)arg1;
@@ -57,7 +57,7 @@
 @property(readonly, nonatomic) _Bool isCurrentTrackInCollection;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-@property(readonly, nonatomic) SPTPlayerTrack *displayedMetadata;
+@property(readonly, nonatomic) SPTPlayerTrack *currentTrack;
 - (void)dealloc;
 - (id)initWithPlayer:(id)arg1 collectionPlatform:(id)arg2 playlistDataLoader:(id)arg3 radioManager:(id)arg4 adsManager:(id)arg5 nowPlayingService:(id)arg6 productState:(id)arg7 queueService:(id)arg8 testManager:(id)arg9 collectionTestManager:(id)arg10 statefulPlayer:(id)arg11;
 

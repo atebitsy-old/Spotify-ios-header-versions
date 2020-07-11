@@ -38,7 +38,7 @@
 - (void)carplaySessionDidDisconnect;
 - (void)applyRestricedDataSourceForReason:(unsigned long long)arg1;
 - (void)setDataSourceAccessory:(id)arg1;
-- (void)setupLoggedInDataSourcesWithExternalIntegrationPlatform:(id)arg1 imageLoaderFactory:(id)arg2 connectManager:(id)arg3 networkConnectivityController:(id)arg4 properties:(id)arg5;
+- (void)setupLoggedInDataSourcesWithExternalIntegrationPlatform:(id)arg1 imageLoaderFactory:(id)arg2 connectManager:(id)arg3 networkConnectivityController:(id)arg4 properties:(id)arg5 logger:(id)arg6;
 - (void)tearDownForRestricedDataSource;
 - (void)dealloc;
 - (id)initWithMediaPlayerBridge:(id)arg1 debugLog:(id)arg2;

@@ -65,7 +65,7 @@
 - (void)setManualUpdatesEnabled:(_Bool)arg1;
 - (void)setUserInteractionEnabled:(_Bool)arg1;
 - (void)updateProgressToSyllable:(unsigned long long)arg1 forLine:(long long)arg2;
-- (void)deselectAllRowsAndScrollToLine:(long long)arg1 shouldSelectLine:(_Bool)arg2 animated:(_Bool)arg3;
+- (void)deselectAllRowsAndScrollToLine:(long long)arg1 animated:(_Bool)arg2;
 - (long long)lengthOfTextToLine:(long long)arg1;
 - (void)enableAutoScrollIfUserInVisibleAreaForOffset:(long long)arg1;
 - (void)conditionallyDisableUserIntractedFlag;

@@ -6,12 +6,12 @@
 
 #import <UIKit/UIViewController.h>
 
-@protocol _TtP30PodcastEpisodeAudioPlusFeature45PodcastEpisodeAudioPlusViewControllerDelegate_;
-
 @interface _TtC34PodcastEpisodeAudioPlusFeatureImpl51PodcastEpisodeAudioPlusViewControllerImplementation : UIViewController
 {
-    // Error parsing type: , name: delegate
     // Error parsing type: , name: audioPlusHubViewModel
+    // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: componentManager
+    // Error parsing type: , name: componentRegistry
 }
 
 - (void).cxx_destruct;
@@ -19,7 +19,6 @@
 - (void)viewModelDidLoad:(id)arg1 dataSource:(unsigned long long)arg2;
 - (void)viewModelDidLoad:(id)arg1;
 - (id)initWithCoder:(id)arg1;
-@property(nonatomic) __weak id <_TtP30PodcastEpisodeAudioPlusFeature45PodcastEpisodeAudioPlusViewControllerDelegate_> delegate; // @synthesize delegate;
 
 @end
 

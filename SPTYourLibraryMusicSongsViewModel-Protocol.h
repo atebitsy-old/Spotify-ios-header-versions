@@ -26,6 +26,7 @@
 - (void)willScrollToTop;
 - (void)endObservingTrackStateAtIndexPath:(NSIndexPath *)arg1;
 - (void)startObservingTrackStateAtIndexPath:(NSIndexPath *)arg1;
+- (void)logFilterChipsImpressionIfNeeded;
 - (void)logEmptyViewImpression;
 - (void)stopAudioPreviewViewPlayer;
 - (void)logAddSongsButtonAction;
@@ -37,12 +38,10 @@
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)toggleTrackBanAtIndexPath:(NSIndexPath *)arg1;
 - (void)toggleTrackLikeAtIndexPath:(NSIndexPath *)arg1;
-- (void)presentEntitySectionViewModel:(id <SPTYourLibraryMusicSongsSectionViewModel>)arg1;
 - (void)presentMenuForSongAtIndexPath:(NSIndexPath *)arg1 targetViewController:(UIViewController *)arg2 withSenderControl:(UIControl *)arg3;
 - (void)setAvailableOffline:(_Bool)arg1;
 - (_Bool)isOfflineSwitchCellAtIndex:(NSIndexPath *)arg1;
 - (_Bool)isAdditionalControlsSection:(unsigned long long)arg1;
-- (_Bool)hasSectionViewModelAtIndex:(unsigned long long)arg1;
 - (id <SPTYourLibraryMusicSongsSectionViewModel>)sectionViewModelAtIndex:(unsigned long long)arg1;
 - (void)itemSelectedAtIndexPath:(NSIndexPath *)arg1;
 - (id <SPTYourLibraryMusicTrackItemViewModel>)itemAtIndexPath:(NSIndexPath *)arg1;

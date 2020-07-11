@@ -6,25 +6,38 @@
 
 #import <objc/NSObject.h>
 
-@class AVAudioPlayer, NSDate;
+#import "AVAudioPlayerDelegate-Protocol.h"
+
+@class AVAudioPlayer, NSDate, NSString, SPSession;
 @protocol SPTEventSender;
 
-@interface SPTTrackAutoplayAnnouncer : NSObject
+@interface SPTTrackAutoplayAnnouncer : NSObject <AVAudioPlayerDelegate>
 {
     id <SPTEventSender> _eventSender;
+    SPSession *_session;
     NSDate *_lastAnnounceTime;
     AVAudioPlayer *_soundPlayer;
 }
 
 @property(retain, nonatomic) AVAudioPlayer *soundPlayer; // @synthesize soundPlayer=_soundPlayer;
 @property(retain, nonatomic) NSDate *lastAnnounceTime; // @synthesize lastAnnounceTime=_lastAnnounceTime;
+@property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
+- (void)audioPlayerDecodeErrorDidOccur:(id)arg1 error:(id)arg2;
+- (void)audioPlayerDidFinishPlaying:(id)arg1 successfully:(_Bool)arg2;
 - (_Bool)isTooSoonAfterLastAnnouncement;
-- (void)lowerMusicVolumeTemporarily:(id)arg1;
+- (void)restoreMusicVolume;
+- (void)lowerMusicVolumeTemporarily;
 - (void)logAnnounceWithId:(long long)arg1;
-- (void)announce:(id)arg1;
-- (id)initWithEventSender:(id)arg1;
+- (void)announce;
+- (id)initWithEventSender:(id)arg1 session:(id)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

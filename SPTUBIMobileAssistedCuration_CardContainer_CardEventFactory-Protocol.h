@@ -7,10 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRowEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRowEventFactory;
 
 @protocol SPTUBIMobileAssistedCuration_CardContainer_CardEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)swipeUiReveal;
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRowEventFactory>)trackRowFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIEventFactoryLocation>)_location;

@@ -21,6 +21,7 @@
     SPTTheme *_theme;
     NSArray *_layoutConstraints;
     UIView<SPTGaiaDevicesAvailableView> *_devicesAvailableView;
+    UIView *_connectButtonView;
     id <SPTNowPlayingTestManager> _testManager;
     UIView *_voiceCompanionView;
     UIView *_lyricsView;
@@ -33,6 +34,7 @@
 @property(retain, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(retain, nonatomic) UIView *voiceCompanionView; // @synthesize voiceCompanionView=_voiceCompanionView;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) UIView *connectButtonView; // @synthesize connectButtonView=_connectButtonView;
 @property(retain, nonatomic) UIView<SPTGaiaDevicesAvailableView> *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -54,11 +56,11 @@
 - (void)setEnabled:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)forceLayout;
 - (void)resetConstraints;
-- (id)layoutConstraintsForContentView:(id)arg1 playButton:(id)arg2 voiceCompanionButton:(id)arg3 lyricsView:(id)arg4;
+- (id)layoutConstraintsForContentView:(id)arg1 playButton:(id)arg2 voiceCompanionButton:(id)arg3 lyricsView:(id)arg4 connectButtonView:(id)arg5;
 - (id)devicesAvailableViewConstraints;
 - (void)updateConstraints;
 - (void)setupSubviews;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 connectDevicesView:(id)arg3 testManager:(id)arg4;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 connectDevicesView:(id)arg3 connectButtonView:(id)arg4 testManager:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

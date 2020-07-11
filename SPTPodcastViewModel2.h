@@ -31,8 +31,6 @@
     SPTPodcastHeaderViewModel *_headerViewModel;
     SPTPodcastViewSectionConfiguration *_configuration;
     id <SPTPodcastDataLoaderRequestToken> _podcastRequestToken;
-    NSPredicate *_filterPredicate;
-    NSSortDescriptor *_sortDescriptor;
     SPTPodcastTopicCategoryViewModel *_topicCategoryViewModel;
     id <SPTPodcastTestManager> _testManager;
     id <SPTPodcastUITestManager> _uiTestManager;
@@ -64,8 +62,6 @@
 @property(readonly, nonatomic) id <SPTPodcastUITestManager> uiTestManager; // @synthesize uiTestManager=_uiTestManager;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPodcastTopicCategoryViewModel *topicCategoryViewModel; // @synthesize topicCategoryViewModel=_topicCategoryViewModel;
-@property(retain, nonatomic) NSSortDescriptor *sortDescriptor; // @synthesize sortDescriptor=_sortDescriptor;
-@property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> podcastRequestToken; // @synthesize podcastRequestToken=_podcastRequestToken;
 @property(readonly, nonatomic) SPTPodcastViewSectionConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic, getter=isTopicsEmpty) _Bool topicsEmpty; // @synthesize topicsEmpty=_topicsEmpty;
@@ -79,10 +75,12 @@
 - (void).cxx_destruct;
 - (id)indexPathForEpisodeIndex:(long long)arg1;
 - (id)indexForEpisodeURL:(id)arg1;
+@property(readonly, nonatomic) NSSortDescriptor *sortDescriptor;
+@property(readonly, nonatomic) NSPredicate *filterPredicate;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)didFinishLoadingTopicsViewModel:(id)arg1 withError:(id)arg2;
 - (void)followSectionViewModelDidUpdatePlaybackState:(id)arg1;
-- (void)followSectionViewModelDidSelectContextMenuButton:(id)arg1;
+- (void)followSectionViewModelDidSelectContextMenuButton:(id)arg1 senderView:(id)arg2;
 - (void)followSectionViewModelDidUpdateFollowedState:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdatePlayingEpisodeAtIndexPath:(id)arg2;
 - (void)viewModel:(id)arg1 willPresentFilterContextViewController:(id)arg2 fromSender:(id)arg3;

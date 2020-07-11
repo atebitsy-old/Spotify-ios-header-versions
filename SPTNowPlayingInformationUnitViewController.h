@@ -10,8 +10,8 @@
 #import "SPTNowPlayingInformationUnitViewModelDelegate-Protocol.h"
 #import "SPTNowPlayingLyricsButtonViewDelegate-Protocol.h"
 
-@class NSMutableArray, NSString, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
-@protocol SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager;
+@class NSMutableArray, NSString, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
+@protocol SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewDelegate, SPTNowPlayingContainedViewController>
 {
@@ -25,8 +25,12 @@
     NSMutableArray *_layoutConstraints;
     id <SPTNowPlayingTestManager> _testManager;
     id <SPTNowPlayingContentLayerResolver> _contentLayerResolver;
+    SPTNowPlayingLogger *_nowPlayingLogger;
+    id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
 }
 
+@property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
+@property(retain, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 @property(retain, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
 @property(retain, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
@@ -38,6 +42,8 @@
 @property(readonly, nonatomic) long long context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+- (void)presentLyricsUpsellPopup;
+- (void)toggleContentLayerLyricsView;
 - (void)didTapLyricsView;
 - (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
 - (void)viewModelDidUpdatePositiveFeedbackButtonState:(id)arg1;
@@ -66,7 +72,7 @@
 - (void)resetConstraints;
 - (void)setupUI;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 testManager:(id)arg4 contentLayerResolver:(id)arg5;
+- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 testManager:(id)arg4 contentLayerResolver:(id)arg5 nowPlayingLogger:(id)arg6 snackbarPresenter:(id)arg7;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

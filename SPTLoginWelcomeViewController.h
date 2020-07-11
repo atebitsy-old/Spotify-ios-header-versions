@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIViewController.h>
+#import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTLoginWelcomeViewModelDelegate-Protocol.h"
@@ -14,7 +14,7 @@
 @class NSError, NSString, NSURL, SPTLoginTheme, SPTLoginWelcomeView, SPTLoginWelcomeViewModel, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginWelcomeViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTLoginWelcomeViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginWelcomeViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -33,7 +33,6 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
-- (void)traitCollectionDidChange:(id)arg1;
 - (void)hideProgressIndicator;
 - (void)showProgressIndicator;
 - (unsigned long long)preferredNavigationBarState;
@@ -45,8 +44,10 @@
 - (void)didCompleteFacebookLoginWithError:(id)arg1;
 - (void)appleButtonTapped:(id)arg1;
 - (void)signupButtonTapped:(id)arg1;
+- (void)continueWithEmailButtonTapped:(id)arg1;
 - (void)loginButtonTapped:(id)arg1;
 - (void)facebookButtonTapped:(id)arg1;
+- (void)configureButtonLayout;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;

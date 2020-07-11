@@ -22,8 +22,11 @@
 @property(readonly, nonatomic) id <SPTLyricsTrackChecker> lyricsChecker; // @synthesize lyricsChecker=_lyricsChecker;
 @property(readonly, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+- (void)setCell:(id)arg1 expanded:(_Bool)arg2 insets:(struct UIEdgeInsets)arg3 forTrack:(id)arg4;
 - (id)reuseIdentifier;
 - (_Bool)requiresOverlayForTrack:(id)arg1;
+- (_Bool)canExpandForTrack:(id)arg1;
+- (_Bool)canHideControlsForTrack:(id)arg1;
 - (long long)priority;
 - (_Bool)isActiveForTrack:(id)arg1 playerState:(id)arg2;
 - (_Bool)displaysFullScreenContentForTrack:(id)arg1;

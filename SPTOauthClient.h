@@ -10,16 +10,16 @@
 
 @interface SPTOauthClient : NSObject
 {
-    shared_ptr_e0806d77 _cppOauthClient;
+    shared_ptr_8d7bf210 _cppOauthClient;
     id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
-@property(readonly, nonatomic) shared_ptr_e0806d77 *cppOauthClient; // @synthesize cppOauthClient=_cppOauthClient;
+@property(readonly, nonatomic) shared_ptr_8d7bf210 *cppOauthClient; // @synthesize cppOauthClient=_cppOauthClient;
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (id)loadTokenOrRenew:(_Bool)arg1;
-- (id)initWithOauthClient:(shared_ptr_e0806d77)arg1 scheduler:(id)arg2;
+- (id)initWithOauthClient:(shared_ptr_8d7bf210)arg1 scheduler:(id)arg2;
 
 @end
 

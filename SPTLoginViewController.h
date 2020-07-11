@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIViewController.h>
+#import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTLoginViewModelDelegate-Protocol.h"
@@ -15,7 +15,7 @@
 @class NSError, NSString, NSURL, SPTLoginTheme, SPTLoginView, SPTLoginViewModel, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginViewController : UIViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTLoginViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTLoginViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTLoginViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -32,7 +32,6 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
-- (void)traitCollectionDidChange:(id)arg1;
 - (void)hideRequestLoginLinkInProgressState;
 - (void)showRequestLoginLinkInProgressState;
 - (void)loginWithoutPasswordButtonTap:(id)arg1;

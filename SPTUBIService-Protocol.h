@@ -6,9 +6,12 @@
 
 #import "SPTService-Protocol.h"
 
+@class NSString;
 @protocol SPTUBINavigationObserver, SPTUBIUserBehaviourInstrumentation;
 
 @protocol SPTUBIService <SPTService>
+- (NSString *)currentPageInstanceId;
+- (void)invalidatePageInstanceId;
 - (void)removeObserver:(id <SPTUBINavigationObserver>)arg1;
 - (void)addObserver:(id <SPTUBINavigationObserver>)arg1;
 - (id <SPTUBIUserBehaviourInstrumentation>)provideUserBehaviourInstrumentation;

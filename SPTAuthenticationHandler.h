@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAuthenticationHandlerLogger, SPTLogin5TestManager, SPTLoginDbManager, SPTLoginDelayedSignupAccountSwitcher, SPTLoginErrorDecorator, SPTLoginMainViewLoader, SPTLoginPerformanceLogging;
+@class SPTAuthenticationHandlerLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountSwitcher, SPTLoginErrorDecorator, SPTLoginMainViewLoader, SPTLoginPerformanceLogging, SPTLoginTestManager;
 @protocol SPTLoginStateController;
 
 @interface SPTAuthenticationHandler : NSObject
@@ -17,12 +17,12 @@
     SPTLoginPerformanceLogging *_performanceLogging;
     SPTLoginMainViewLoader *_mainViewLoader;
     SPTLoginDelayedSignupAccountSwitcher *_accountSwitcher;
-    SPTLogin5TestManager *_login5TestManager;
+    SPTLoginTestManager *_login5TestManager;
     SPTLoginDbManager *_databaseManager;
 }
 
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
-@property(readonly, nonatomic) SPTLogin5TestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
+@property(readonly, nonatomic) SPTLoginTestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
 @property(readonly, nonatomic) SPTLoginDelayedSignupAccountSwitcher *accountSwitcher; // @synthesize accountSwitcher=_accountSwitcher;
 @property(readonly, nonatomic) SPTLoginMainViewLoader *mainViewLoader; // @synthesize mainViewLoader=_mainViewLoader;
 @property(readonly, nonatomic) SPTLoginPerformanceLogging *performanceLogging; // @synthesize performanceLogging=_performanceLogging;

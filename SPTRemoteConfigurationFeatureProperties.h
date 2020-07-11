@@ -13,7 +13,6 @@
 @interface SPTRemoteConfigurationFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _exampleBoolean;
-    _Bool _coreIsEnabled;
     long long _exampleInteger;
     unsigned long long _remoteconfigSystemTestPropertyEnum;
     unsigned long long _simpleMessage;
@@ -30,7 +29,6 @@
 @property(readonly, nonatomic) unsigned long long simpleMessage; // @synthesize simpleMessage=_simpleMessage;
 @property(readonly, nonatomic) unsigned long long remoteconfigSystemTestPropertyEnum; // @synthesize remoteconfigSystemTestPropertyEnum=_remoteconfigSystemTestPropertyEnum;
 @property(readonly, nonatomic) long long exampleInteger; // @synthesize exampleInteger=_exampleInteger;
-@property(readonly, nonatomic) _Bool coreIsEnabled; // @synthesize coreIsEnabled=_coreIsEnabled;
 @property(readonly, nonatomic) _Bool exampleBoolean; // @synthesize exampleBoolean=_exampleBoolean;
 - (void).cxx_destruct;
 - (unsigned long long)mapRcAaTestPropertyToEnumValue:(id)arg1;

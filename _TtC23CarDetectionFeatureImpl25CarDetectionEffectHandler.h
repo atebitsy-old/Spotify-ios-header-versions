@@ -9,6 +9,7 @@
 @interface _TtC23CarDetectionFeatureImpl25CarDetectionEffectHandler : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: publisher
+    // Error parsing type: , name: popupManager
 }
 
 @end

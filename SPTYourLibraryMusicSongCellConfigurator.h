@@ -9,7 +9,7 @@
 #import "GLUEThemeObserver-Protocol.h"
 #import "SPTEncoreTrackRowDelegate-Protocol.h"
 
-@class GLUEEntityRowStyle, SPTFreeTierPreCurationChunkyRowStyle, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle;
+@class SPTFreeTierPreCurationChunkyRowStyle, SPTYourLibraryMusicGLUETheme;
 @protocol GLUEImageLoader, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTCollectionPlatformConfiguration, SPTModalPresentationController, SPTShelves, SPTYourLibraryMusicSongCellConfiguratorDelegate, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_;
 
 @interface SPTYourLibraryMusicSongCellConfigurator : NSObject <GLUEThemeObserver, SPTEncoreTrackRowDelegate>
@@ -24,18 +24,12 @@
     id <SPTShelves> _shelves;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     SPTFreeTierPreCurationChunkyRowStyle *_chunkRowStyle;
-    GLUEEntityRowStyle *_songEntityRowStyle;
-    SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *_songsAlbumSectionHeaderStyle;
-    SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *_songsArtistSectionHeaderStyle;
     id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> _trackRowFactory;
     id <SPTModalPresentationController> _modalPresentationController;
 }
 
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
-@property(retain, nonatomic) SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *songsArtistSectionHeaderStyle; // @synthesize songsArtistSectionHeaderStyle=_songsArtistSectionHeaderStyle;
-@property(retain, nonatomic) SPTYourLibraryMusicSongsEntitySectionHeaderViewStyle *songsAlbumSectionHeaderStyle; // @synthesize songsAlbumSectionHeaderStyle=_songsAlbumSectionHeaderStyle;
-@property(retain, nonatomic) GLUEEntityRowStyle *songEntityRowStyle; // @synthesize songEntityRowStyle=_songEntityRowStyle;
 @property(retain, nonatomic) SPTFreeTierPreCurationChunkyRowStyle *chunkRowStyle; // @synthesize chunkRowStyle=_chunkRowStyle;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(retain, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
@@ -52,9 +46,6 @@
 - (void)unbanWithSender:(id)arg1;
 - (void)tappedWithSender:(id)arg1;
 - (void)contextMenuTappedWithSender:(id)arg1;
-- (id)previewStyleForEntityRow:(id)arg1;
-- (id)styleForEntityRow:(id)arg1;
-- (void)styleEntityRow:(id)arg1;
 - (void)themeUpdated:(id)arg1;
 - (void)cellImagePreviewButtonDidTouchUpInside:(id)arg1;
 - (void)sectionHeaderButtonAction:(id)arg1;
@@ -67,10 +58,8 @@
 - (void)setupContentViewForCell:(id)arg1;
 - (void)handleAudioPreviewOnCell:(id)arg1;
 - (void)configureButtonSectionHeader:(id)arg1 withViewModel:(id)arg2;
-- (void)configureEntitySectionHeader:(id)arg1 withViewModel:(id)arg2;
 - (void)configureSectionHeader:(id)arg1 withViewModel:(id)arg2;
 - (void)configurePreviewCell:(id)arg1 withViewModel:(id)arg2;
-- (void)configureCell:(id)arg1 withViewModel:(id)arg2;
 - (id)encoreModelForTrackViewModel:(id)arg1 isPressed:(_Bool)arg2;
 - (void)configureEncoreCell:(id)arg1 withViewModel:(id)arg2;
 - (void)dealloc;

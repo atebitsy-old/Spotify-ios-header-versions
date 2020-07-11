@@ -27,10 +27,13 @@
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
 - (void)logUIImpressionWithSectionId:(id)arg1 index:(long long)arg2 renderType:(id)arg3;
-- (void)logAudioPreviewTrackURI:(id)arg1 index:(long long)arg2 sectionId:(id)arg3;
-- (void)logAddTrackFromAccessoryTrackURI:(id)arg1 index:(long long)arg2 cardId:(id)arg3 cardPosition:(long long)arg4;
-- (void)logTapTrackURI:(id)arg1 index:(long long)arg2 sectionId:(id)arg3;
+- (void)logEmptyViewImpression;
+- (void)logOfflineViewImpression;
 - (void)logDidLoadCardProviderId:(id)arg1 index:(long long)arg2;
+- (void)logNavigateToNextCard:(_Bool)arg1 navigationType:(unsigned long long)arg2;
+- (void)logAudioPreviewTrackURI:(id)arg1 index:(long long)arg2 cardId:(id)arg3 cardPosition:(long long)arg4 startPlaying:(_Bool)arg5;
+- (void)logAddTrackFromAccessoryTrackURI:(id)arg1 index:(long long)arg2 cardId:(id)arg3 cardPosition:(long long)arg4;
+- (void)logTapTrackURI:(id)arg1 index:(long long)arg2 cardId:(id)arg3 cardPosition:(long long)arg4 startPlaying:(_Bool)arg5;
 - (void)logBackButtonTappedWhileSearching:(_Bool)arg1;
 - (void)logSearchTap;
 - (void)logViewDidFailToLoadWithPageIdentifier:(id)arg1 dataSource:(long long)arg2;

@@ -75,7 +75,7 @@
 - (void)viewDidLoad;
 - (void)setFocusValueTargeting:(_Bool)arg1;
 - (void)dealloc;
-- (id)initWithCosmosBridge:(id)arg1 testingHandler:(id)arg2 adsViewModel:(id)arg3 adSettingsController:(id)arg4 mobileOverlayController:(id)arg5 debugUIPresenter:(id)arg6 mftRules:(id)arg7 linkDispatcher:(id)arg8 containerService:(id)arg9 adInformationManager:(id)arg10 cellStyle:(id)arg11;
+- (id)initWithCosmosBridge:(id)arg1 testingHandler:(id)arg2 adsViewModel:(id)arg3 adSettingsController:(id)arg4 mobileOverlayController:(id)arg5 closeMenuBlock:(CDUnknownBlockType)arg6 mftRules:(id)arg7 linkDispatcher:(id)arg8 containerService:(id)arg9 adInformationManager:(id)arg10 cellStyle:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

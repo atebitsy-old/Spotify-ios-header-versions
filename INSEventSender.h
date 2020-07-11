@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
+#import "INSInternalErrorEventDelegate-Protocol.h"
 #import "INSSchedulerDelegate-Protocol.h"
 
 @class INSContextRegistry, INSEventSenderStatsDataSource, INSEventValidator, INSPersistentStoreDataDelegate, INSPersistentStoreDataSource, INSScheduler, INSSchedulerDataSourceComposition, NSHashTable, NSString;
 @protocol INSLogger, INSMessageOwnerProvider, INSTimer, INSTransport;
 
-@interface INSEventSender : NSObject <INSSchedulerDelegate>
+@interface INSEventSender : NSObject <INSSchedulerDelegate, INSInternalErrorEventDelegate>
 {
     id <INSTransport> _transport;
     INSScheduler *_scheduler;
@@ -42,6 +43,7 @@
 @property(retain, nonatomic) INSScheduler *scheduler; // @synthesize scheduler=_scheduler;
 @property(retain, nonatomic) id <INSTransport> transport; // @synthesize transport=_transport;
 - (void).cxx_destruct;
+- (void)internalErrorEventOccuredWithMessage:(id)arg1;
 - (id)defaultContexts:(id)arg1 clientVersion:(id)arg2;
 - (void)removeEventObserver:(id)arg1;
 - (void)addEventObserver:(id)arg1;

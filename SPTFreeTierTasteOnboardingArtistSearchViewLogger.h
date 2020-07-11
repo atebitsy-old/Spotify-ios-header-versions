@@ -14,8 +14,10 @@
     id <SPTLogCenter> _logCenter;
     id <SPTViewLogger> _viewLogger;
     NSString *_sessionId;
+    NSString *_featureIdentifier;
 }
 
+@property(readonly, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
@@ -31,7 +33,7 @@
 - (void)logSearchSelectArtistInteractionWithTargetUri:(id)arg1 searchSessionId:(id)arg2 interactionId:(id)arg3 isExtendedSearchItem:(_Bool)arg4;
 - (void)logBackButtonInteractionWithSearchSessionId:(id)arg1;
 - (void)logClearButtonInteractionWithSearchSessionId:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 sessionId:(id)arg3;
+- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 sessionId:(id)arg3 featureIdentifier:(id)arg4;
 
 @end
 

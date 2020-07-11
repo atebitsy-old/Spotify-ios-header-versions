@@ -9,16 +9,18 @@
 #import "SPTUBILogger-Protocol.h"
 
 @class NSString, SPTObserverManager;
-@protocol SPTEventSender;
+@protocol SPTEventSender, SPTUBIPageInstanceIdentifierProviding;
 
 @interface SPTUBILoggerImplementation : NSObject <SPTUBILogger>
 {
     id <SPTEventSender> _eventSender;
     SPTObserverManager *_observerManager;
+    id <SPTUBIPageInstanceIdentifierProviding> _pageInstanceIdentifierProvider;
     CDUnknownBlockType _errorHandler;
 }
 
 @property(copy, nonatomic) CDUnknownBlockType errorHandler; // @synthesize errorHandler=_errorHandler;
+@property(nonatomic) __weak id <SPTUBIPageInstanceIdentifierProviding> pageInstanceIdentifierProvider; // @synthesize pageInstanceIdentifierProvider=_pageInstanceIdentifierProvider;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) __weak id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
@@ -30,7 +32,7 @@
 - (id)logImpression:(id)arg1;
 - (id)logNonAuthenticatedInteraction:(id)arg1;
 - (id)logInteraction:(id)arg1;
-- (id)initWithEventSender:(id)arg1 observerManager:(id)arg2;
+- (id)initWithEventSender:(id)arg1 pageInstanceIdentifierProvider:(id)arg2 observerManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

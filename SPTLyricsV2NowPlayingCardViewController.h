@@ -7,12 +7,13 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTLyricsV2LyricsViewControllerDelegate-Protocol.h"
+#import "SPTLyricsV2ServiceCallback-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
 @class NSString, NSURL, SPTLyricsV2Colors, SPTLyricsV2Configuration, SPTLyricsV2FullscreenViewController, SPTLyricsV2GLUETheme, SPTLyricsV2LyricsViewController, SPTLyricsV2Model, SPTLyricsV2NowPlayingCardView, SPTPlayerTrack, SPTVocalRemovalConfiguration, UITapGestureRecognizer;
 @protocol SPTNowPlayingService;
 
-@interface SPTLyricsV2NowPlayingCardViewController : UIViewController <SPTLyricsV2LyricsViewControllerDelegate, SPTNetworkConnectivityControllerObserver>
+@interface SPTLyricsV2NowPlayingCardViewController : UIViewController <SPTLyricsV2LyricsViewControllerDelegate, SPTNetworkConnectivityControllerObserver, SPTLyricsV2ServiceCallback>
 {
     NSString *_cardTitle;
     SPTLyricsV2Colors *_defaultColors;
@@ -41,6 +42,8 @@
 @property(readonly, nonatomic) SPTLyricsV2Colors *defaultColors; // @synthesize defaultColors=_defaultColors;
 @property(readonly, nonatomic) NSString *cardTitle; // @synthesize cardTitle=_cardTitle;
 - (void).cxx_destruct;
+- (void)lyricsService:(id)arg1 didFailWithError:(id)arg2 forTrack:(id)arg3;
+- (void)lyricsService:(id)arg1 didFetch:(id)arg2 forTrack:(id)arg3;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)lyricsViewControllerDidTapSyncTheseLyricsLink:(id)arg1;
 - (void)lyricsViewController:(id)arg1 didShowNumberOfCharacters:(long long)arg2;

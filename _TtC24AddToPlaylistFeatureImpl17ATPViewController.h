@@ -6,27 +6,20 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTContextMenuContentViewController-Protocol.h"
-
-@protocol SPTContextMenuContentViewControllerDelegate;
-
-@interface _TtC24AddToPlaylistFeatureImpl17ATPViewController : UIViewController <SPTContextMenuContentViewController>
+@interface _TtC24AddToPlaylistFeatureImpl17ATPViewController : UIViewController
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: loopController
     // Error parsing type: , name: makeViewBinder
     // Error parsing type: , name: logger
-    // Error parsing type: , name: contextMenuDelegate
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
-- (void)didPressCancelNavigationItem;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-@property(nonatomic) __weak id <SPTContextMenuContentViewControllerDelegate> contextMenuDelegate; // @synthesize contextMenuDelegate;
 
 @end
 

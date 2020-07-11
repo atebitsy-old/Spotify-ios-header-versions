@@ -12,6 +12,7 @@
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: theme
     // Error parsing type: , name: viewControllerFactory
+    // Error parsing type: , name: pageViewController
     // Error parsing type: , name: viewConnectable
 }
 
@@ -19,6 +20,8 @@
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)viewWillLayoutSubviews;
 - (void)viewDidDisappear:(_Bool)arg1;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;

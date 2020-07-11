@@ -7,12 +7,11 @@
 #import "SPTFreeTierPlaylistHeaderConfiguration-Protocol.h"
 
 @class GLUEEntityRowStyle, NSArray;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistTrackCellConfigurator;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel;
 
 @protocol SPTFreeTierPlaylistConfiguration <SPTFreeTierPlaylistHeaderConfiguration>
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> cellProviderDelegate;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistTrackCellConfigurator> trackCellConfigurator;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistContextMenuPresenter> contextMenuPresenter;

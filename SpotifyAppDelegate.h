@@ -91,6 +91,7 @@
 - (void)application:(id)arg1 willChangeStatusBarOrientation:(long long)arg2 duration:(double)arg3;
 - (void)applicationWillTerminate:(id)arg1;
 - (void)application:(id)arg1 didUpdateUserActivity:(id)arg2;
+- (void)handlePotentialDeepLinkEventWithURL:(id)arg1 sourceApplication:(id)arg2;
 - (_Bool)application:(id)arg1 continueUserActivity:(id)arg2 restorationHandler:(CDUnknownBlockType)arg3;
 - (_Bool)application:(id)arg1 openURL:(id)arg2 options:(id)arg3;
 - (void)application:(id)arg1 didFailToRegisterForRemoteNotificationsWithError:(id)arg2;

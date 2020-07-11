@@ -12,7 +12,7 @@
 #import "SPTWazeTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTWazePartnerIntegration, SPTWazePresenter, SPTWazeTestManagerImplementation, SPTWazeTransportManager, SPTWazeViewModel;
-@protocol GaiaFeature, SPTAuthService, SPTBannerFeature, SPTDrivingStateDetectionService, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTLocalSettings, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPartnerService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService, SlateFeature;
+@protocol GaiaFeature, SPTAuthService, SPTBannerFeature, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTLocalSettings, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPartnerService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTWazeServiceImplementation : NSObject <SPTWazeTestManagerObserver, SPTAuthControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTWazeService>
 {
@@ -21,7 +21,7 @@
     id <SPTBannerFeature> _bannerService;
     id <SPTSessionService> _clientSessionService;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
-    id <SPTDrivingStateDetectionService> _drivingDetectionService;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTExternalIntegrationPlaybackService> _externalIntegrationPlaybackService;
     id <GaiaFeature> _gaiaFeature;
     id <SPTURIDispatchService> _uriDispatchService;
@@ -58,7 +58,7 @@
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(readonly, nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> externalIntegrationPlaybackService; // @synthesize externalIntegrationPlaybackService=_externalIntegrationPlaybackService;
-@property(readonly, nonatomic) __weak id <SPTDrivingStateDetectionService> drivingDetectionService; // @synthesize drivingDetectionService=_drivingDetectionService;
+@property(readonly, nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(readonly, nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;

@@ -6,6 +6,7 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTVoiceLibraryAudioSessionDelegate-Protocol.h"
 #import "SPTVoiceLibraryNetworkStateObserver-Protocol.h"
 #import "SPTVoiceLibraryRecognitionTaskDelegate-Protocol.h"
 #import "SPTVoiceLibrarySession-Protocol.h"
@@ -13,7 +14,7 @@
 @class NSString, SPTObserverManager, SPTVoiceLibraryRecognitionTask, SPTVoiceLibrarySessionHandlingOptions;
 @protocol SPTPlayer, SPTVoiceLibraryAudioSession, SPTVoiceLibraryLogger, SPTVoiceLibraryMicrophonePermissionsState><SPTVoiceLibraryAudioRoute, SPTVoiceLibraryNetworkState, SPTVoiceLibraryRecognitionTaskFactory, SPTVoiceLibraryUtteranceIdentifierProvider;
 
-@interface SPTVoiceLibrarySessionImplementation : NSObject <SPTVoiceLibraryRecognitionTaskDelegate, SPTVoiceLibraryNetworkStateObserver, SPTVoiceLibrarySession>
+@interface SPTVoiceLibrarySessionImplementation : NSObject <SPTVoiceLibraryRecognitionTaskDelegate, SPTVoiceLibraryNetworkStateObserver, SPTVoiceLibraryAudioSessionDelegate, SPTVoiceLibrarySession>
 {
     _Bool _activeSession;
     id <SPTVoiceLibraryRecognitionTaskFactory> _voiceRecognitionTaskFactory;
@@ -57,6 +58,8 @@
 - (void)startListening;
 - (_Bool)checkSessionPrerequisites;
 - (id)currentUtteranceId;
+- (_Bool)hasActiveAudioSessionForAudioRecording;
+- (void)dealloc;
 - (id)initWithVoiceRecognitionTaskFactory:(id)arg1 audioSessionManager:(id)arg2 player:(id)arg3 utteranceIdProvider:(id)arg4 sessionHandlingOptions:(id)arg5 audioRouteHandler:(id)arg6 networkHandler:(id)arg7 logger:(id)arg8;
 
 // Remaining properties

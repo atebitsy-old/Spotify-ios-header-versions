@@ -8,14 +8,14 @@
 
 #import "SPTPreSignupExperimentationFeatureFlags-Protocol.h"
 
-@class NSDictionary, NSString;
+@class NSArray, NSString;
 
 @interface SPTPreSignupExperimentationFeatureFlagsImplementation : NSObject <SPTPreSignupExperimentationFeatureFlags>
 {
-    NSDictionary *_flags;
+    NSArray *_flags;
 }
 
-@property(retain, nonatomic) NSDictionary *flags; // @synthesize flags=_flags;
+@property(copy, nonatomic) NSArray *flags; // @synthesize flags=_flags;
 - (void).cxx_destruct;
 - (long long)stateForFlag:(id)arg1;
 - (id)initWithFlags:(id)arg1;

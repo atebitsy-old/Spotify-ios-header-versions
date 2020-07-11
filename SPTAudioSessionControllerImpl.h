@@ -21,6 +21,7 @@
     _Bool _interrupted;
     _Bool _shouldResumePlaybackAfterInterruption;
     _Bool _avFoundationDriverEnabled;
+    _Bool _enableAudioSessionForWakeword;
     id <SPTAudioSessionControllerDelegate> _delegate;
     id <SPTPlayer> _player;
     id <SPTAudioDriverController> _audioDriverController;
@@ -34,6 +35,7 @@
     id <SPTFeatureFlagSignal> _avFoundationDriverEnabledSignal;
 }
 
+@property(nonatomic, setter=wakewordModeEnabled:) _Bool enableAudioSessionForWakeword; // @synthesize enableAudioSessionForWakeword=_enableAudioSessionForWakeword;
 @property(nonatomic, getter=isAVFoundationDriverEnabled) _Bool avFoundationDriverEnabled; // @synthesize avFoundationDriverEnabled=_avFoundationDriverEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> avFoundationDriverEnabledSignal; // @synthesize avFoundationDriverEnabledSignal=_avFoundationDriverEnabledSignal;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;

@@ -9,7 +9,7 @@
 @class NSIndexPath, SPTAssistedCurationCardCell;
 
 @protocol SPTAssistedCurationCardCellLogDelegate <NSObject>
-- (void)logAssistedCurationCardCell:(SPTAssistedCurationCardCell *)arg1 tapTrackAtIndexPath:(NSIndexPath *)arg2;
+- (void)logAssistedCurationCardCell:(SPTAssistedCurationCardCell *)arg1 tapTrackAtIndexPath:(NSIndexPath *)arg2 startPlaying:(_Bool)arg3;
 - (void)logAssistedCurationCardCell:(SPTAssistedCurationCardCell *)arg1 tapAddTrackAtIndexPath:(NSIndexPath *)arg2;
 @end
 

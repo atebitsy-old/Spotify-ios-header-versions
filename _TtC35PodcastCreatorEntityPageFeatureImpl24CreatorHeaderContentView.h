@@ -20,6 +20,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithNaturalHeight:(double)arg1;
+- (struct CGSize)systemLayoutSizeFittingSize:(struct CGSize)arg1 withHorizontalFittingPriority:(float)arg2 verticalFittingPriority:(float)arg3;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (id)initWithCoder:(id)arg1;
 

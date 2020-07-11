@@ -13,7 +13,7 @@
 #import "SPTPageController-Protocol.h"
 
 @class NSString, NSURL, SPTHubViewController, SPTProgressView, SPTTheme;
-@protocol SPTBrowseLoadingLogger, SPTBrowseViewModelProvider, SPTFindUIContentContainerDelegate, SPTPageContainer, VISREFIntegrationManager;
+@protocol SPTBrowseLoadingLogger, SPTBrowseViewModelProvider, SPTFindUIContentContainerDelegate, SPTPageContainer;
 
 @interface SPTBrowseViewController : UIViewController <SPTBrowseViewModelProviderObserver, SPTNavigationControllerNavigationBarState, HUBViewContentOffsetObserver, SPTPageController, SPTFindUIContentContainer>
 {
@@ -25,11 +25,9 @@
     unsigned long long _preferredNavigationBarState;
     SPTTheme *_theme;
     id <SPTBrowseLoadingLogger> _loadingLogger;
-    id <VISREFIntegrationManager> _visualRefreshIntegrationManager;
     struct CGRect _lastKnownHubContainerViewFrame;
 }
 
-@property(readonly, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
 @property(readonly, nonatomic) _Bool embedded; // @synthesize embedded=_embedded;
 @property(readonly, nonatomic) id <SPTBrowseLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(nonatomic) struct CGRect lastKnownHubContainerViewFrame; // @synthesize lastKnownHubContainerViewFrame=_lastKnownHubContainerViewFrame;
@@ -54,11 +52,9 @@
 - (void)viewDidLoad;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewDidLayoutSubviews;
-- (void)viewDidDisappear:(_Bool)arg1;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
-- (id)initWithViewModelProvider:(id)arg1 theme:(id)arg2 pageIdentifier:(id)arg3 pageURI:(id)arg4 componentRegistry:(id)arg5 componentLayoutManager:(id)arg6 imageLoaderFactory:(id)arg7 commandHandler:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 visualRefreshIntegrationManager:(id)arg11 shareDragDelegateFactory:(id)arg12 embedded:(_Bool)arg13;
+- (id)initWithViewModelProvider:(id)arg1 theme:(id)arg2 pageIdentifier:(id)arg3 pageURI:(id)arg4 componentRegistry:(id)arg5 componentLayoutManager:(id)arg6 imageLoaderFactory:(id)arg7 commandHandler:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11 embedded:(_Bool)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

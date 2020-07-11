@@ -9,14 +9,13 @@
 #import "SPTYourLibraryMusicService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTYourLibraryMusicServiceImplementation : NSObject <SPTYourLibraryMusicService>
 {
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTSessionService> _clientSessionService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreIntegrationService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <FollowFeature> _followService;
@@ -46,7 +45,6 @@
 @property(nonatomic) __weak id <FollowFeature> followService; // @synthesize followService=_followService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
-@property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;

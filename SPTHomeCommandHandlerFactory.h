@@ -17,7 +17,8 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
-- (id)provideNavigateAndPlayCommandHandler:(id)arg1;
+- (id)providePlayAndNavigateCommandHandler:(id)arg1;
+- (id)providePlayThenNavigateCommandHandler:(id)arg1;
 - (id)provideTasteOnboardingSkipCommandHandlerWithOverrides:(id)arg1;
 - (id)provideTooltipDismissalCommandHandlerWithViewModelProvider:(id)arg1;
 - (id)provideReloadCommandHandlerWithViewModelProvider:(id)arg1;

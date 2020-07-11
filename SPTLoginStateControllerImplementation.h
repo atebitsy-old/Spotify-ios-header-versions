@@ -9,7 +9,7 @@
 #import "SPTCoreLoginControllerDelegate-Protocol.h"
 #import "SPTLoginStateController-Protocol.h"
 
-@class NSError, NSString, SPCore, SPTHTTPService, SPTImageLoaderServiceManager, SPTLogin5TestManager, SPTLoginDbManager, SPTLoginDeferredDispatcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTObserverManager, SPTSigninWithAppleHandler, SPTStartupTracer;
+@class NSError, NSString, SPCore, SPTHTTPService, SPTImageLoaderServiceManager, SPTLoginDbManager, SPTLoginDeferredDispatcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginTestManager, SPTObserverManager, SPTSigninWithAppleHandler, SPTStartupTracer;
 @protocol SPTAlertInterface, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTLoginKeychainManager, SPTLoginLogger, SPTLoginPhoneNumberLoginStateDelegate, SPTMetaViewController;
 
 @interface SPTLoginStateControllerImplementation : NSObject <SPTCoreLoginControllerDelegate, SPTLoginStateController>
@@ -36,13 +36,13 @@
     id <SPTLoginLogger> _loginLogger;
     SPTObserverManager *_observerManager;
     SPTSigninWithAppleHandler *_appleHandler;
-    SPTLogin5TestManager *_login5TestManager;
+    SPTLoginTestManager *_login5TestManager;
     SPTLoginDbManager *_databaseManager;
 }
 
 @property(nonatomic) _Bool userDidSignUp; // @synthesize userDidSignUp=_userDidSignUp;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
-@property(readonly, nonatomic) SPTLogin5TestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
+@property(readonly, nonatomic) SPTLoginTestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
 @property(readonly, nonatomic) SPTSigninWithAppleHandler *appleHandler; // @synthesize appleHandler=_appleHandler;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) id <SPTLoginLogger> loginLogger; // @synthesize loginLogger=_loginLogger;

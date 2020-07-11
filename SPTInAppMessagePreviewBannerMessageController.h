@@ -9,7 +9,7 @@
 #import "SPTInAppMessagePreviewViewModelObserver-Protocol.h"
 
 @class NSString, SPTInAppMessageActionFactory, SPTInAppMessageBannerMessageParser, SPTInAppMessageBannerMessageViewModel, SPTInAppMessageBannerPresentationController, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation;
-@protocol SPTAlertInterface, SPTBannerPresentationManager, SPTExternalIntegrationDriverDistractionController, SPTOfflineModeState;
+@protocol SPTAlertInterface, SPTBannerPresentationManager, SPTCarDetector, SPTOfflineModeState;
 
 @interface SPTInAppMessagePreviewBannerMessageController : NSObject <SPTInAppMessagePreviewViewModelObserver>
 {
@@ -17,7 +17,7 @@
     SPTInAppMessageBannerMessageParser *_bannerMessageParser;
     SPTInAppMessageActionFactory *_actionFactory;
     SPTInAppMessageBannerMessageViewModel *_bannerMessageViewModel;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     SPTInAppMessageBannerPresentationController *_bannerPresentationController;
     SPTInAppMessageNowPlayingManagerRegistryImplementation *_nowPlayingManagerRegistry;
     id <SPTOfflineModeState> _offlineModeState;
@@ -30,14 +30,14 @@
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
 @property(retain, nonatomic) SPTInAppMessageBannerPresentationController *bannerPresentationController; // @synthesize bannerPresentationController=_bannerPresentationController;
-@property(retain, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) SPTInAppMessageBannerMessageViewModel *bannerMessageViewModel; // @synthesize bannerMessageViewModel=_bannerMessageViewModel;
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(retain, nonatomic) SPTInAppMessageBannerMessageParser *bannerMessageParser; // @synthesize bannerMessageParser=_bannerMessageParser;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 - (void).cxx_destruct;
 - (void)previewViewModel:(id)arg1 didFetchBannerCreativeData:(id)arg2;
-- (id)initWithBannerPresentationManager:(id)arg1 bannerMessageParser:(id)arg2 actionFactory:(id)arg3 driverDistractionController:(id)arg4 nowPlayingManagerRegistry:(id)arg5 offlineModeState:(id)arg6 notePresentationManager:(id)arg7 alertInterface:(id)arg8;
+- (id)initWithBannerPresentationManager:(id)arg1 bannerMessageParser:(id)arg2 actionFactory:(id)arg3 carDetector:(id)arg4 nowPlayingManagerRegistry:(id)arg5 offlineModeState:(id)arg6 notePresentationManager:(id)arg7 alertInterface:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,20 +6,20 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginDelayedSignupGuestAccountTracker, SPTLoginDelayedSignupTestManager;
+@class SPTLoginDelayedSignupGuestAccountTracker, SPTLoginTestManager;
 @protocol SPTLocalSettings, SPTRemoteConfigurationResolver;
 
 @interface SPTDelayedSignupExperimentController : NSObject
 {
     id <SPTRemoteConfigurationResolver> _configurationResolver;
-    SPTLoginDelayedSignupTestManager *_testManager;
+    SPTLoginTestManager *_testManager;
     id <SPTLocalSettings> _localSettings;
     SPTLoginDelayedSignupGuestAccountTracker *_accounTracker;
 }
 
 @property(retain, nonatomic) SPTLoginDelayedSignupGuestAccountTracker *accounTracker; // @synthesize accounTracker=_accounTracker;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(retain, nonatomic) SPTLoginDelayedSignupTestManager *testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> configurationResolver; // @synthesize configurationResolver=_configurationResolver;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldShutDownTheTest;

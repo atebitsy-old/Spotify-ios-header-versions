@@ -9,14 +9,14 @@
 #import "SPTSignupDataLoaderDelegate-Protocol.h"
 #import "SPTSignupTermsAndPolicyViewModelDelegate-Protocol.h"
 
-@class NSArray, NSString, SPTAuthenticationHandler, SPTLoginDialogController, SPTLoginDynamicFlowTestManager, SPTLoginErrorDialogLogger, SPTSignupCreateUserDataLoader, SPTSignupUserInfoModel, UIViewController;
+@class NSArray, NSString, SPTAuthenticationHandler, SPTLoginDialogController, SPTLoginErrorDialogLogger, SPTLoginHiddenSignupScreenDataProvider, SPTLoginTestManager, SPTSignupCreateUserDataLoader, SPTSignupUserInfoModel, UIViewController;
 @protocol SPTDynamicSignupFlowControllerDelegate, SPTLoginLogger, SPTLoginNavigationCoordinator;
 
 @interface SPTDynamicSignupFlowController : NSObject <SPTSignupDataLoaderDelegate, SPTSignupTermsAndPolicyViewModelDelegate>
 {
     _Bool _accountCreated;
     id <SPTDynamicSignupFlowControllerDelegate> _delegate;
-    SPTLoginDynamicFlowTestManager *_testManager;
+    SPTLoginTestManager *_testManager;
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
     NSArray *_flow;
     SPTAuthenticationHandler *_authenticationHandler;
@@ -25,8 +25,10 @@
     SPTSignupUserInfoModel *_userInfoModel;
     id <SPTLoginLogger> _logger;
     SPTLoginErrorDialogLogger *_dialogLogger;
+    SPTLoginHiddenSignupScreenDataProvider *_missingUserInfoProvider;
 }
 
+@property(readonly, nonatomic) SPTLoginHiddenSignupScreenDataProvider *missingUserInfoProvider; // @synthesize missingUserInfoProvider=_missingUserInfoProvider;
 @property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
@@ -36,7 +38,7 @@
 @property(readonly, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(readonly, copy, nonatomic) NSArray *flow; // @synthesize flow=_flow;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
-@property(readonly, nonatomic) SPTLoginDynamicFlowTestManager *testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTDynamicSignupFlowControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)userDidAcceptAllLicences:(id)arg1;
@@ -59,7 +61,7 @@
 - (_Bool)goToPreviousScreenFromScreen:(unsigned long long)arg1;
 - (_Bool)goToNextScreenFromScreen:(unsigned long long)arg1;
 - (void)loadFlow;
-- (id)initWithTestManager:(id)arg1 createUserDataLoader:(id)arg2 navigationCoordinator:(id)arg3 authenticationHandler:(id)arg4 dialogController:(id)arg5;
+- (id)initWithTestManager:(id)arg1 createUserDataLoader:(id)arg2 navigationCoordinator:(id)arg3 authenticationHandler:(id)arg4 dialogController:(id)arg5 missingUserInfoProvider:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

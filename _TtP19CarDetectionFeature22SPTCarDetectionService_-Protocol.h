@@ -6,10 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTCarDetectionLegacyController, SPTCarDetector;
+@protocol SPTCarDetector;
 
 @protocol _TtP19CarDetectionFeature22SPTCarDetectionService_ <SPTService>
-- (id <SPTCarDetectionLegacyController>)provideLegacyController;
 - (id <SPTCarDetector>)provideCarDetector;
 @end
 

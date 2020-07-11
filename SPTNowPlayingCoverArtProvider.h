@@ -22,6 +22,7 @@
 - (void).cxx_destruct;
 - (_Bool)displaysFullScreenContentForTrack:(id)arg1;
 - (_Bool)requiresOverlayForTrack:(id)arg1;
+- (_Bool)canHideControlsForTrack:(id)arg1;
 - (_Bool)isActiveForTrack:(id)arg1 playerState:(id)arg2;
 - (void)configurePlaceholderCell:(id)arg1 windowedContentInsets:(struct UIEdgeInsets)arg2;
 - (void)configureCell:(id)arg1 withTrack:(id)arg2 windowedContentInsets:(struct UIEdgeInsets)arg3 peekingDisallowed:(_Bool)arg4;

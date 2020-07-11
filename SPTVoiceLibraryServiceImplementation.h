@@ -9,7 +9,7 @@
 #import "SPTVoiceLibraryService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVoiceLibraryWakewordImplementation;
-@protocol SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTEventSenderService, SPTNetworkService, SPTPlayerFeature, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryAudioRecorderFactory;
+@protocol SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTEventSenderService, SPTNetworkService, SPTPlayerFeature, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryAudioRecorderFactory, SPTVoiceLibraryAudioSession;
 
 @interface SPTVoiceLibraryServiceImplementation : NSObject <SPTVoiceLibraryService>
 {
@@ -20,11 +20,13 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTDataLoaderAuthorisationHostRegistration> _authoriser;
     id <SPTVoiceLibraryAudioRecorder> _audioRecorder;
+    id <SPTVoiceLibraryAudioSession> _audioSessionManager;
     SPTVoiceLibraryWakewordImplementation *_wakewordImplementation;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTVoiceLibraryWakewordImplementation *wakewordImplementation; // @synthesize wakewordImplementation=_wakewordImplementation;
+@property(retain, nonatomic) id <SPTVoiceLibraryAudioSession> audioSessionManager; // @synthesize audioSessionManager=_audioSessionManager;
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
 @property(nonatomic) __weak id <SPTDataLoaderAuthorisationHostRegistration> authoriser; // @synthesize authoriser=_authoriser;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;

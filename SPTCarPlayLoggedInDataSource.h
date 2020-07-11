@@ -11,7 +11,7 @@
 #import "SPTExternalIntegrationContentControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 
-@class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache;
+@class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache, SPTCarPlayUBILogger;
 @protocol SPTCarPlayContentDataSource, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTMediaPlayerContentBridge;
 
 @interface SPTCarPlayLoggedInDataSource : NSObject <SPTExternalIntegrationContentControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTCarPlayDataSource>
@@ -26,6 +26,7 @@
     id <SPTMediaPlayerContentBridge> _mediaPlayerBridge;
     id <SPTGaiaConnectAPI> _connectManager;
     NSArray *_rootItems;
+    SPTCarPlayUBILogger *_logger;
     SPTCarPlayContentItemBuilder *_contentItemBuilder;
     SPTCarPlayContentTreeCache *_contentTreeCache;
     id _debugLog;
@@ -37,6 +38,7 @@
 @property(nonatomic) _Bool rootItemsRequestInitiated; // @synthesize rootItemsRequestInitiated=_rootItemsRequestInitiated;
 @property(readonly, nonatomic) SPTCarPlayContentTreeCache *contentTreeCache; // @synthesize contentTreeCache=_contentTreeCache;
 @property(readonly, nonatomic) SPTCarPlayContentItemBuilder *contentItemBuilder; // @synthesize contentItemBuilder=_contentItemBuilder;
+@property(retain, nonatomic) SPTCarPlayUBILogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSArray *rootItems; // @synthesize rootItems=_rootItems;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) id <SPTMediaPlayerContentBridge> mediaPlayerBridge; // @synthesize mediaPlayerBridge=_mediaPlayerBridge;
@@ -76,7 +78,7 @@
 - (void)carplaySessionEnded;
 @property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 - (void)dealloc;
-- (id)initWithContentDataSource:(id)arg1 contentTreeCache:(id)arg2 externalIntegrationPlatform:(id)arg3 mediaPlayerBridge:(id)arg4 connectManager:(id)arg5 imageLoaderFactory:(id)arg6 properties:(id)arg7 offlineOnly:(_Bool)arg8 debugLog:(id)arg9;
+- (id)initWithContentDataSource:(id)arg1 contentTreeCache:(id)arg2 externalIntegrationPlatform:(id)arg3 mediaPlayerBridge:(id)arg4 connectManager:(id)arg5 imageLoaderFactory:(id)arg6 properties:(id)arg7 offlineOnly:(_Bool)arg8 debugLog:(id)arg9 logger:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

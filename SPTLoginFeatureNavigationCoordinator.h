@@ -20,6 +20,7 @@
 @property(readonly, nonatomic) SPTSignupAttemptTrackerImplementation *signupAttemptTracker; // @synthesize signupAttemptTracker=_signupAttemptTracker;
 @property(readonly, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 - (void).cxx_destruct;
+- (void)openMethodLedStartScreen:(unsigned long long)arg1;
 - (void)openPhoneNumberScreen;
 - (void)openPhoneNumberContinueWithEmailScreen;
 - (void)openFacebookConfirmationScreenWithUserInfo:(id)arg1;

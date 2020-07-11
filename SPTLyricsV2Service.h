@@ -8,35 +8,38 @@
 
 #import "SPTDataLoaderDelegate-Protocol.h"
 
-@class NSCache, NSString, SPTDataLoader;
+@class NSCache, NSMutableDictionary, NSString, SPTDataLoader;
 @protocol SPTLyricsV2TestManager;
 
 @interface SPTLyricsV2Service : NSObject <SPTDataLoaderDelegate>
 {
     SPTDataLoader *_dataLoader;
     id <SPTLyricsV2TestManager> _testManager;
-    CDUnknownBlockType _callback;
+    NSMutableDictionary *_observers;
+    NSMutableDictionary *_cancellationTokens;
     NSCache *_lyricsModelsCache;
     NSCache *_noLyricsCache;
 }
 
 @property(readonly, nonatomic) NSCache *noLyricsCache; // @synthesize noLyricsCache=_noLyricsCache;
 @property(readonly, nonatomic) NSCache *lyricsModelsCache; // @synthesize lyricsModelsCache=_lyricsModelsCache;
-@property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
+@property(readonly, nonatomic) NSMutableDictionary *cancellationTokens; // @synthesize cancellationTokens=_cancellationTokens;
+@property(readonly, nonatomic) NSMutableDictionary *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTLyricsV2TestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
 - (id)trackIdentifierFromTrack:(id)arg1;
-- (void)fetchLyricsFromServerForTrackId:(id)arg1 imageURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)fetchLyricsFromServerForTrack:(id)arg1 withId:(id)arg2 imageURL:(id)arg3 callback:(id)arg4;
 - (id)errorWithCode:(long long)arg1 description:(id)arg2;
 - (id)boolToString:(_Bool)arg1;
-- (void)flushCallbackWithSuccess:(_Bool)arg1 result:(id)arg2 error:(id)arg3;
+- (void)flushCallbackWithResult:(id)arg1 error:(id)arg2 forTrack:(id)arg3 withId:(id)arg4;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (_Bool)lyricsCachedForTrack:(id)arg1;
 - (_Bool)lyricsAvailableForTrack:(id)arg1;
-- (void)fetchForTrack:(id)arg1 imageURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)removeCallback:(id)arg1 forTrack:(id)arg2;
+- (void)fetchForTrack:(id)arg1 imageURL:(id)arg2 callback:(id)arg3;
 - (void)cancelAllLoads;
 - (void)dealloc;
 - (id)initWithDataLoaderFactory:(id)arg1 testManager:(id)arg2;

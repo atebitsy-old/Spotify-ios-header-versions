@@ -9,7 +9,7 @@
 #import "SPTInAppMessageSDKMessageReceiver-Protocol.h"
 
 @class NSString, SPTInAppMessageCardPresentationController, SPTInAppMessageNoteOverlayController, SPTInAppMessageNotePresentationController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageSDKBannerPresentationController, SPTInAppMessageServiceLogger;
-@protocol SPTAuthController, SPTBannerPresentationManager, SPTCrashReporter, SPTExternalIntegrationDriverDistractionController, SPTFreeTierTooltipConditionalPresenter, SPTOfflineModeState, SPTSlateBuilderProvider, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
+@protocol SPTAuthController, SPTBannerPresentationManager, SPTCarDetector, SPTCrashReporter, SPTFreeTierTooltipConditionalPresenter, SPTOfflineModeState, SPTSlateBuilderProvider, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
 
 @interface SPTInAppMessageReceiverImplementation : NSObject <SPTInAppMessageSDKMessageReceiver>
 {
@@ -19,7 +19,7 @@
     id <SPTSlateManager> _slateManager;
     id <SPTSlateBuilderProvider> _slateBuilderProvider;
     id <SPTOfflineModeState> _offlineModeState;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     SPTInAppMessageServiceLogger *_serviceLogger;
     id <SPTCrashReporter> _crashReporter;
     SPTInAppMessageNowPlayingManagerRegistryImplementation *_nowPlayingManagerRegistry;
@@ -40,7 +40,7 @@
 @property(readonly, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(readonly, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
-@property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
@@ -49,7 +49,7 @@
 @property(retain, nonatomic) SPTInAppMessageCardPresentationController *cardPresentationController; // @synthesize cardPresentationController=_cardPresentationController;
 - (void).cxx_destruct;
 - (void)didReceiveMessageViewModel:(id)arg1 matchedPattern:(id)arg2 triggerType:(id)arg3;
-- (id)initWithSlateManager:(id)arg1 slateBuilderProvider:(id)arg2 noteOverlayController:(id)arg3 bannerPresentationManager:(id)arg4 tooltipPresentationManager:(id)arg5 freeTierTooltipPresenter:(id)arg6 snackbarPresenter:(id)arg7 nowPlayingManagerRegistry:(id)arg8 offlineModeState:(id)arg9 driverDistractionController:(id)arg10 serviceLogger:(id)arg11 crashReporter:(id)arg12 authController:(id)arg13;
+- (id)initWithSlateManager:(id)arg1 slateBuilderProvider:(id)arg2 noteOverlayController:(id)arg3 bannerPresentationManager:(id)arg4 tooltipPresentationManager:(id)arg5 freeTierTooltipPresenter:(id)arg6 snackbarPresenter:(id)arg7 nowPlayingManagerRegistry:(id)arg8 offlineModeState:(id)arg9 carDetector:(id)arg10 serviceLogger:(id)arg11 crashReporter:(id)arg12 authController:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

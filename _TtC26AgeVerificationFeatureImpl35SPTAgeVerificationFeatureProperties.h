@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTRemoteConfigurationProperties-Protocol.h"
-
-@interface _TtC26AgeVerificationFeatureImpl35SPTAgeVerificationFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
+@interface _TtC26AgeVerificationFeatureImpl35SPTAgeVerificationFeatureProperties : NSObject
 {
     // Error parsing type: , name: ageVerificationEnabled
 }

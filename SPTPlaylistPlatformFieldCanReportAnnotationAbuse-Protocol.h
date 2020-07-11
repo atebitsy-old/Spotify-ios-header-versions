@@ -7,6 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldCanReportAnnotationAbuse <NSObject>
-@property(readonly, nonatomic) _Bool canReportAnnotationAbuse;
+@property(nonatomic, readonly) _Bool canReportAnnotationAbuse;
 @end
 

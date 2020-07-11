@@ -9,7 +9,7 @@
 #import "SPTHomeUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTHomeUITestManager, SPTPlayerFeature, SPTSeedASessionService, SPTSessionService, SPTSettingsFeature, SPTUBIService;
+@protocol SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTHomeUITestManager, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTUBIService;
 
 @interface SPTHomeUIServiceImplementation : NSObject <SPTHomeUIService>
 {
@@ -20,13 +20,11 @@
     id <SPTPlayerFeature> _playerFeature;
     id <SPTSessionService> _sessionService;
     id <SPTUBIService> _ubiService;
-    id <SPTSeedASessionService> _seedASessionService;
     id <SPTHomeUITestManager> _testManager;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTHomeUITestManager> testManager; // @synthesize testManager=_testManager;
-@property(nonatomic) __weak id <SPTSeedASessionService> seedASessionService; // @synthesize seedASessionService=_seedASessionService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;

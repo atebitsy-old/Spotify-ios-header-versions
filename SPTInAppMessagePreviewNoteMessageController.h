@@ -9,7 +9,7 @@
 #import "SPTInAppMessagePreviewViewModelObserver-Protocol.h"
 
 @class NSString, SPTInAppMessageActionFactory, SPTInAppMessageNoteMessageParser, SPTInAppMessageNoteMessagePresentationController, SPTInAppMessageNoteMessageViewModel, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation;
-@protocol SPTAlertInterface, SPTBannerPresentationManager, SPTExternalIntegrationDriverDistractionController, SPTFreeTierTooltipConditionalPresenter, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
+@protocol SPTAlertInterface, SPTBannerPresentationManager, SPTCarDetector, SPTFreeTierTooltipConditionalPresenter, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
 
 @interface SPTInAppMessagePreviewNoteMessageController : NSObject <SPTInAppMessagePreviewViewModelObserver>
 {
@@ -21,7 +21,7 @@
     id <SPTFreeTierTooltipConditionalPresenter> _freeTierTooltipPresenter;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     SPTInAppMessageActionFactory *_actionFactory;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     SPTInAppMessageNoteMessageViewModel *_noteMessageViewModel;
     SPTInAppMessageNoteMessagePresentationController *_notePresentationController;
     id <SPTOfflineModeState> _offlineModeState;
@@ -34,7 +34,7 @@
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) SPTInAppMessageNoteMessagePresentationController *notePresentationController; // @synthesize notePresentationController=_notePresentationController;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageViewModel *noteMessageViewModel; // @synthesize noteMessageViewModel=_noteMessageViewModel;
-@property(retain, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTFreeTierTooltipConditionalPresenter> freeTierTooltipPresenter; // @synthesize freeTierTooltipPresenter=_freeTierTooltipPresenter;
@@ -45,7 +45,7 @@
 @property(retain, nonatomic) SPTInAppMessageNoteMessageParser *noteMessageParser; // @synthesize noteMessageParser=_noteMessageParser;
 - (void).cxx_destruct;
 - (void)previewViewModel:(id)arg1 didFetchNoteCreativeData:(id)arg2;
-- (id)initWithNoteMessageParser:(id)arg1 slateManager:(id)arg2 notePresentationManager:(id)arg3 bannerPresentationManager:(id)arg4 tooltipPresentationManager:(id)arg5 freeTierTooltipPresenter:(id)arg6 snackbarPresenter:(id)arg7 actionFactory:(id)arg8 driverDistractionController:(id)arg9 offlineModeState:(id)arg10 nowPlayingManagerRegistry:(id)arg11 alertInterface:(id)arg12;
+- (id)initWithNoteMessageParser:(id)arg1 slateManager:(id)arg2 notePresentationManager:(id)arg3 bannerPresentationManager:(id)arg4 tooltipPresentationManager:(id)arg5 freeTierTooltipPresenter:(id)arg6 snackbarPresenter:(id)arg7 actionFactory:(id)arg8 carDetector:(id)arg9 offlineModeState:(id)arg10 nowPlayingManagerRegistry:(id)arg11 alertInterface:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

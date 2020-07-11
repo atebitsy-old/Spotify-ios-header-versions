@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTPlaylistPlatformFieldGroupLabel <NSObject>
-@property(readonly, copy, nonatomic) NSString *groupLabel;
+@property(nonatomic, readonly) NSString *groupLabel;
 @end
 

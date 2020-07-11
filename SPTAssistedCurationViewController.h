@@ -64,11 +64,11 @@
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)logDidLoadCardAtIndex:(unsigned long long)arg1 isUserInteractionEnabled:(_Bool)arg2;
 - (void)cardCellConfigurator:(id)arg1 previewTrackURI:(id)arg2 atIndex:(long long)arg3 locationInCollection:(struct CGPoint)arg4;
-- (void)logAssistedCurationCardCell:(id)arg1 tapTrackAtIndexPath:(id)arg2;
+- (void)logAssistedCurationCardCell:(id)arg1 tapTrackAtIndexPath:(id)arg2 startPlaying:(_Bool)arg3;
 - (void)logAssistedCurationCardCell:(id)arg1 tapAddTrackAtIndexPath:(id)arg2;
 - (void)openSearchWhenTapped:(id)arg1;
 - (void)dismissSearchAssistedCurationViewModel:(id)arg1;
-- (void)assistedCurationViewModel:(id)arg1 showInfoViewWithMessage:(id)arg2 andSubMessage:(id)arg3;
+- (void)assistedCurationViewModel:(id)arg1 noCardsBecauseOffline:(_Bool)arg2;
 - (void)assistedCurationViewModel:(id)arg1 error:(id)arg2;
 - (void)assistedCurationViewModel:(id)arg1 scrollToCardAtIndex:(long long)arg2;
 - (void)assistedCurationViewModel:(id)arg1 removedCardAtIndex:(long long)arg2;

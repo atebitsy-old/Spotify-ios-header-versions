@@ -9,6 +9,7 @@
 @interface _TtC24AddToPlaylistFeatureImpl24ATPViewControllerWrapper : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: viewController
+    // Error parsing type: , name: dismissViewController
 }
 
 @end

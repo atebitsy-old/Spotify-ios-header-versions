@@ -22,7 +22,7 @@
     _Bool _playing;
     _Bool _shouldShowVoiceCompanionButton;
     SPTStatefulPlayer *_statefulPlayer;
-    SPTPlayerTrack *_displayedMetadata;
+    SPTPlayerTrack *_currentTrack;
     SPTPlayerTrack *_playingMetadata;
     NSURL *_contextURL;
     id <SPTPlayer> _player;
@@ -46,12 +46,12 @@
 @property(nonatomic) _Bool skippingToNextTrackAllowed; // @synthesize skippingToNextTrackAllowed=_skippingToNextTrackAllowed;
 @property(nonatomic) _Bool skippingToPreviousTrackAllowed; // @synthesize skippingToPreviousTrackAllowed=_skippingToPreviousTrackAllowed;
 @property(retain, nonatomic) SPTPlayerTrack *playingMetadata; // @synthesize playingMetadata=_playingMetadata;
-@property(retain, nonatomic) SPTPlayerTrack *displayedMetadata; // @synthesize displayedMetadata=_displayedMetadata;
+@property(retain, nonatomic) SPTPlayerTrack *currentTrack; // @synthesize currentTrack=_currentTrack;
 @property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 - (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
-- (void)playerDidFinishUpdating:(id)arg1;
+- (void)playerDidReceiveStateUpdate:(id)arg1;
 - (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

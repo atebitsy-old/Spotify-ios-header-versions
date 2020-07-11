@@ -11,22 +11,22 @@
 @interface SPTAuthLoginTask : NSObject
 {
     struct once_flag _startOnceFlag;
-    struct unique_ptr<spotify::connectivity::auth::objc::impl::SPTAuthSchedulerBridge, std::__1::default_delete<spotify::connectivity::auth::objc::impl::SPTAuthSchedulerBridge>> _scheduler;
-    function_1d11ba22 _callback;
+    struct shared_ptr<spotify::connectivity::auth::objc::impl::SPTAuthSchedulerBridge> _scheduler;
+    struct mutex _sharedCompletionMutex;
+    struct shared_ptr<std::__1::shared_ptr<void>> _sharedCompletion;
     id <SPTAuthLoginTaskDelegate> _delegate;
     CDUnknownBlockType _startOperation;
     id <SPTConnectivityAsyncScheduler> _coreScheduler;
-    shared_ptr_b60d0e1e _completion;
 }
 
-@property(nonatomic) shared_ptr_b60d0e1e completion; // @synthesize completion=_completion;
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(copy, nonatomic) CDUnknownBlockType startOperation; // @synthesize startOperation=_startOperation;
 @property(readonly, nonatomic) __weak id <SPTAuthLoginTaskDelegate> delegate; // @synthesize delegate=_delegate;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+- (void)setCompletion:(shared_ptr_b60d0e1e)arg1;
 @property(readonly, nonatomic) struct Scheduler *scheduler;
-@property(readonly, nonatomic) const function_1d11ba22 *callback;
+@property(readonly, nonatomic) function_6e82c99d callback;
 - (void)cancel;
 - (void)start;
 - (void)setDelegate:(id)arg1 onScheduler:(id)arg2;

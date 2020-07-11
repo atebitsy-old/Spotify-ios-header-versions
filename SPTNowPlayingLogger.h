@@ -26,6 +26,8 @@
 - (id)nowPlayingPageURI;
 - (void)logImpressionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 itemIndex:(unsigned long long)arg5 type:(id)arg6 renderType:(id)arg7;
 - (void)logInteractionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 targetURI:(id)arg5 type:(id)arg6 intent:(id)arg7 action:(id)arg8;
+- (void)logLyricsCellImpressionForIndexPath:(long long)arg1;
+- (void)logLyricsButtonTappedInteraction;
 - (void)logSleepTimerButtonTapped;
 - (void)logScrollSwipeInteractionWithPlaybackId:(id)arg1;
 - (void)logScrollComponentImpressionWithIdentifier:(id)arg1 atIndex:(unsigned long long)arg2 playbackId:(id)arg3;

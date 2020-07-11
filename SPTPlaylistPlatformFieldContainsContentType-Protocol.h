@@ -7,8 +7,8 @@
 #import "SPTPlaylistPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTPlaylistPlatformFieldContainsContentType <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool containsAudioEpisodes;
-@property(readonly, nonatomic) _Bool containsEpisodes;
-@property(readonly, nonatomic) _Bool containsTracks;
+@property(nonatomic, readonly) _Bool containsAudioEpisodes;
+@property(nonatomic, readonly) _Bool containsEpisodes;
+@property(nonatomic, readonly) _Bool containsTracks;
 @end
 

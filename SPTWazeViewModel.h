@@ -6,21 +6,21 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDrivingStateObserver-Protocol.h"
+#import "SPTCarDetectionStateObserver-Protocol.h"
 #import "SPTWazeNavigationStateObserver-Protocol.h"
 #import "SPTWazeTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAutoLockController, SPTWazeNavigationBannerViewModel, SPTWazeTransportManager;
-@protocol SPTAutoLockOverrideToken, SPTDrivingStateDetector, SPTExternalIntegrationDebugLog, SPTLinkDispatcher, SPTPartnerTestManager, SPTWazeTestManager, SPTWazeViewModelDelegate;
+@protocol SPTAutoLockOverrideToken, SPTCarDetector, SPTExternalIntegrationDebugLog, SPTLinkDispatcher, SPTPartnerTestManager, SPTWazeTestManager, SPTWazeViewModelDelegate;
 
-@interface SPTWazeViewModel : NSObject <SPTDrivingStateObserver, SPTWazeNavigationStateObserver, SPTWazeTestManagerObserver>
+@interface SPTWazeViewModel : NSObject <SPTCarDetectionStateObserver, SPTWazeNavigationStateObserver, SPTWazeTestManagerObserver>
 {
     _Bool _shouldShowBanner;
     id <SPTWazeViewModelDelegate> _delegate;
     long long _state;
     SPTWazeNavigationBannerViewModel *_navigationViewModel;
     SPTWazeTransportManager *_wazeTransportManager;
-    id <SPTDrivingStateDetector> _drivingStateDetector;
+    id <SPTCarDetector> _carDetector;
     id <SPTPartnerTestManager> _partnerTestManager;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTExternalIntegrationDebugLog> _debugLog;
@@ -36,7 +36,7 @@
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) __weak id <SPTPartnerTestManager> partnerTestManager; // @synthesize partnerTestManager=_partnerTestManager;
-@property(readonly, nonatomic) __weak id <SPTDrivingStateDetector> drivingStateDetector; // @synthesize drivingStateDetector=_drivingStateDetector;
+@property(readonly, nonatomic) __weak id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) SPTWazeTransportManager *wazeTransportManager; // @synthesize wazeTransportManager=_wazeTransportManager;
 @property(retain, nonatomic) SPTWazeNavigationBannerViewModel *navigationViewModel; // @synthesize navigationViewModel=_navigationViewModel;
 @property(nonatomic) long long state; // @synthesize state=_state;
@@ -44,7 +44,7 @@
 - (void).cxx_destruct;
 - (void)testManager:(id)arg1 didChangeWazeOnboardingCompleted:(_Bool)arg2;
 - (void)updateShouldShowBannerWithDrivingState:(_Bool)arg1;
-- (void)drivingStateDetector:(id)arg1 drivingStateDidChange:(id)arg2;
+- (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
 - (void)wazeNavigationDidEnd;
 - (void)wazeNavigationDidStart;
 - (void)openWazeInAppStore;
@@ -62,7 +62,7 @@
 - (long long)evaluateNewState;
 - (void)updateState;
 - (void)dealloc;
-- (id)initWithWazeTransportManager:(id)arg1 drivingStateDetector:(id)arg2 linkDispatcher:(id)arg3 debugLog:(id)arg4 testManager:(id)arg5 showBannerInitally:(_Bool)arg6 autoLockController:(id)arg7 partnerTestManager:(id)arg8;
+- (id)initWithWazeTransportManager:(id)arg1 carDetector:(id)arg2 linkDispatcher:(id)arg3 debugLog:(id)arg4 testManager:(id)arg5 showBannerInitally:(_Bool)arg6 autoLockController:(id)arg7 partnerTestManager:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

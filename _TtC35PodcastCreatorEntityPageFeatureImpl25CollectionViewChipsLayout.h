@@ -12,15 +12,18 @@
     // Error parsing type: , name: interitemSpacing
     // Error parsing type: , name: inset
     // Error parsing type: , name: cache
+    // Error parsing type: , name: notificationCenter
 }
 
 - (void).cxx_destruct;
-- (id)initWithCoder:(id)arg1;
 - (id)init;
+- (void)invalidateLayoutWithContext:(id)arg1;
 @property(nonatomic, readonly) struct CGSize collectionViewContentSize;
 - (id)layoutAttributesForItemAtIndexPath:(id)arg1;
 - (id)layoutAttributesForElementsInRect:(struct CGRect)arg1;
 - (void)prepareLayout;
+- (void)dealloc;
+- (id)initWithCoder:(id)arg1;
 
 @end
 

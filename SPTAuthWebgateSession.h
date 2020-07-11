@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *username;
 @property(readonly, nonatomic) SPTAuthSerializableCredentials *reusableCredentials;
-@property(readonly, nonatomic) shared_ptr_e0806d77 cppOauthClient;
+@property(readonly, nonatomic) shared_ptr_8d7bf210 cppOauthClient;
 - (id)initWithSession:(unique_ptr_31f72f11)arg1 coreThreadScheduler:(id)arg2;
 
 @end

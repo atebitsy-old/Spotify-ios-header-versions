@@ -9,6 +9,6 @@
 @class NSNumber;
 
 @protocol SPTPlaylistPlatformFieldFollowers <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSNumber *followers;
+@property(nonatomic, readonly) NSNumber *followers;
 @end
 

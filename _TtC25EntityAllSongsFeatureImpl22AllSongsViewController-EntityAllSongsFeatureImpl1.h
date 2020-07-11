@@ -6,9 +6,7 @@
 
 #import "_TtC25EntityAllSongsFeatureImpl22AllSongsViewController.h"
 
-#import "SPTNavigationControllerNavigationBarState-Protocol.h"
-
-@interface _TtC25EntityAllSongsFeatureImpl22AllSongsViewController (EntityAllSongsFeatureImpl1) <SPTNavigationControllerNavigationBarState>
+@interface _TtC25EntityAllSongsFeatureImpl22AllSongsViewController (EntityAllSongsFeatureImpl1)
 - (unsigned long long)preferredNavigationBarState;
 @end
 

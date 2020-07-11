@@ -48,6 +48,7 @@
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)registerContextMenuActions;
+- (id)provideCommandHandlerFactory;
 - (id)provideTestManager;
 - (id)provideLoggerForURL:(id)arg1 playlistURI:(id)arg2;
 - (id)provideCreatePlaylistTheme;

@@ -9,7 +9,7 @@
 @class NSNumber, SPTStatefulPlayer;
 
 @protocol SPTStatefulPlayerObserver <NSObject>
-- (void)playerDidFinishUpdating:(SPTStatefulPlayer *)arg1;
+- (void)playerDidReceiveStateUpdate:(SPTStatefulPlayer *)arg1;
 - (void)playerDidUpdatePlaybackControls:(SPTStatefulPlayer *)arg1;
 - (void)playerDidUpdateTrackPosition:(SPTStatefulPlayer *)arg1;
 - (void)player:(SPTStatefulPlayer *)arg1 didMoveToRelativeTrack:(NSNumber *)arg2;

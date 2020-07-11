@@ -4,15 +4,15 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIView.h>
+#import "SPTLoginTraitChangingView.h"
 
-#import "GLUEStyleable-Protocol.h"
+@class ASAuthorizationAppleIDButton, GLUEButton, GLUELabel, NSLayoutConstraint, SPTLoginOptionButton, UIImageView, UIStackView, UIView;
 
-@class ASAuthorizationAppleIDButton, GLUEButton, GLUELabel, NSLayoutConstraint, NSString, SPTLoginOptionButton, UIImageView, UIStackView;
-
-@interface SPTLoginWelcomeView : UIView <GLUEStyleable>
+@interface SPTLoginWelcomeView : SPTLoginTraitChangingView
 {
     UIImageView *_spotifyLogo;
+    GLUELabel *_helpTextLabel;
+    GLUEButton *_continueWithEmailButton;
     GLUEButton *_signupButton;
     GLUEButton *_loginButton;
     ASAuthorizationAppleIDButton *_appleButton;
@@ -53,19 +53,14 @@
 @property(readonly, nonatomic) ASAuthorizationAppleIDButton *appleButton; // @synthesize appleButton=_appleButton;
 @property(readonly, nonatomic) GLUEButton *loginButton; // @synthesize loginButton=_loginButton;
 @property(readonly, nonatomic) GLUEButton *signupButton; // @synthesize signupButton=_signupButton;
+@property(readonly, nonatomic) GLUEButton *continueWithEmailButton; // @synthesize continueWithEmailButton=_continueWithEmailButton;
+@property(retain, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
 @property(readonly, nonatomic) UIImageView *spotifyLogo; // @synthesize spotifyLogo=_spotifyLogo;
 - (void).cxx_destruct;
-- (void)traitsDidChange:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setPropLabelText:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
 - (id)initWithTheme:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

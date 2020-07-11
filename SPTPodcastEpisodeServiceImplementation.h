@@ -9,10 +9,11 @@
 #import "SPTPodcastEpisodeService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTSessionService, SPTShareFeature, SPTUIPresentationService, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
+@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTSessionService, SPTShareFeature, SPTUIPresentationService, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
 {
+    id <_TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_> _audioPlusService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTSessionService> _clientSessionService;
     id <SPTNetworkService> _networkFeature;
@@ -44,6 +45,7 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
+@property(nonatomic) __weak id <_TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_> audioPlusService; // @synthesize audioPlusService=_audioPlusService;
 - (void).cxx_destruct;
 - (id)provideContextPlayerParameters:(id)arg1;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;

@@ -12,13 +12,14 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class GLUEGradientView, NSLayoutConstraint, NSNotificationCenter, NSString, SPTNowPlayingBackgroundViewController, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentCornersView, SPTNowPlayingScrollViewModel, SPTTheme, UICollectionView, UICollectionViewFlowLayout;
+@class CAShapeLayer, GLUEGradientView, NSLayoutConstraint, NSNotificationCenter, NSString, SPTNowPlayingBackgroundViewController, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingScrollViewModel, SPTTheme, UICollectionView, UICollectionViewFlowLayout;
 @protocol SPTNowPlayingContentContainingViewController, SPTNowPlayingScrollViewControllerGestureDelegate;
 
 @interface SPTNowPlayingScrollViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, SPTNowPlayingScrollViewModelDelegate, SPTNowPlayingContentViewControllerObserver, SPTNowPlayingContainerIdleMonitorReceiving>
 {
     _Bool _isShowingScrollComponents;
     _Bool _scrollViewIsAnimating;
+    _Bool _isDismissing;
     UICollectionView *_collectionView;
     id <SPTNowPlayingScrollViewControllerGestureDelegate> _gestureDelegate;
     UICollectionViewFlowLayout *_collectionViewLayout;
@@ -30,11 +31,12 @@
     NSNotificationCenter *_notificationCenter;
     SPTNowPlayingContainerIdleMonitor *_idleMonitor;
     GLUEGradientView *_scrollBackgroundGradientLayer;
-    SPTNowPlayingContentCornersView *_contentCornersView;
+    CAShapeLayer *_roundedCornersMaskLayer;
 }
 
-@property(retain, nonatomic) SPTNowPlayingContentCornersView *contentCornersView; // @synthesize contentCornersView=_contentCornersView;
+@property(retain, nonatomic) CAShapeLayer *roundedCornersMaskLayer; // @synthesize roundedCornersMaskLayer=_roundedCornersMaskLayer;
 @property(retain, nonatomic) GLUEGradientView *scrollBackgroundGradientLayer; // @synthesize scrollBackgroundGradientLayer=_scrollBackgroundGradientLayer;
+@property(nonatomic) _Bool isDismissing; // @synthesize isDismissing=_isDismissing;
 @property(nonatomic) _Bool scrollViewIsAnimating; // @synthesize scrollViewIsAnimating=_scrollViewIsAnimating;
 @property(nonatomic) _Bool isShowingScrollComponents; // @synthesize isShowingScrollComponents=_isShowingScrollComponents;
 @property(nonatomic) __weak SPTNowPlayingContainerIdleMonitor *idleMonitor; // @synthesize idleMonitor=_idleMonitor;
@@ -49,7 +51,6 @@
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 - (void).cxx_destruct;
 - (struct CGSize)sizeForItemAtIndex:(unsigned long long)arg1;
-- (void)updateCornerRadius;
 - (void)updateLayout;
 - (double)viewWidth;
 - (double)nowPlayingViewHeight;
@@ -85,6 +86,7 @@
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)setRoundedCornersIfNeeded:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)setupCollectionViewContentInset;
 - (void)updateNPVSize;

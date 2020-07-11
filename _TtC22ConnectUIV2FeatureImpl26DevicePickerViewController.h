@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: theme
+    // Error parsing type: , name: imageFactory
     // Error parsing type: , name: pickerView
     // Error parsing type: , name: socialListeningIntegrationManager
     // Error parsing type: , name: notificationCenter

@@ -47,7 +47,7 @@
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 - (void).cxx_destruct;
-- (void)nowPlayingBarViewControllerWillDisappear:(id)arg1;
+- (void)nowPlayingViewWillAppear:(id)arg1;
 - (void)modeResolver:(id)arg1 didChangeToMode:(id)arg2 fromMode:(id)arg3;
 - (void)viewModelDidReceiveWazeDeepLink:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateState:(long long)arg2;

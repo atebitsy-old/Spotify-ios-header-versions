@@ -6,7 +6,15 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSHashTable;
+@protocol SPTVoiceLibraryAudioSessionDelegate;
+
 @protocol SPTVoiceLibraryAudioSession <NSObject>
+@property(retain, nonatomic) NSHashTable *delegates;
+- (void)removeDelegate:(id <SPTVoiceLibraryAudioSessionDelegate>)arg1;
+- (void)addDelegate:(id <SPTVoiceLibraryAudioSessionDelegate>)arg1;
+- (void)disableAudioSessionForWakeword;
+- (void)enableAudioSessionForWakeword;
 - (void)relinquishSupportForAudioRecording;
 - (void)requestSupportForAudioRecording;
 - (void)deactiveAudioSession;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDateFormatter, NSString, SPTLoginStickyCredentialsTestManager;
+@class NSDateFormatter, NSString, SPTLoginTestManager;
 
 @interface SPTLoginDbManager : NSObject
 {
@@ -15,13 +15,13 @@
     NSString *_databaseDirectoryPath;
     NSString *_databaseFilename;
     NSString *_databaseFileFullPath;
-    SPTLoginStickyCredentialsTestManager *_testManager;
+    SPTLoginTestManager *_testManager;
     NSDateFormatter *_formatter;
 }
 
 + (id)methodFromSourceScreen:(unsigned long long)arg1;
 @property(readonly, nonatomic) NSDateFormatter *formatter; // @synthesize formatter=_formatter;
-@property(readonly, nonatomic) SPTLoginStickyCredentialsTestManager *testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) NSString *databaseFileFullPath; // @synthesize databaseFileFullPath=_databaseFileFullPath;
 @property(readonly, nonatomic) NSString *databaseFilename; // @synthesize databaseFilename=_databaseFilename;
 @property(readonly, nonatomic) NSString *databaseDirectoryPath; // @synthesize databaseDirectoryPath=_databaseDirectoryPath;

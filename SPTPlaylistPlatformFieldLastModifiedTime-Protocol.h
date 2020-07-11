@@ -9,6 +9,6 @@
 @class NSDate;
 
 @protocol SPTPlaylistPlatformFieldLastModifiedTime <SPTPlaylistPlatformDataLoaderField>
-@property(readonly, nonatomic) NSDate *lastModifiedTime;
+@property(nonatomic, readonly) NSDate *lastModifiedTime;
 @end
 

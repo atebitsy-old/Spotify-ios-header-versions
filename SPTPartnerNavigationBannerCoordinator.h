@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDrivingStateObserver-Protocol.h"
+#import "SPTCarDetectionStateObserver-Protocol.h"
 #import "SPTPartnerNavigationBannerViewModelActionHandler-Protocol.h"
 #import "SPTPartnerNavigationIntegrationObserver-Protocol.h"
 
 @class NSString, SPTPartnerIntegrationStateLoader, SPTPartnerNavigationBannerPresentationContext, SPTPartnerTestManagerImplementation;
-@protocol SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTDrivingStateDetector, SPTLinkDispatcher, SPTNowPlayingManager, SPTNowPlayingStateObservable, SPTPartnerLogger;
+@protocol SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTCarDetector, SPTLinkDispatcher, SPTNowPlayingManager, SPTNowPlayingStateObservable, SPTPartnerLogger;
 
-@interface SPTPartnerNavigationBannerCoordinator : NSObject <SPTPartnerNavigationIntegrationObserver, SPTDrivingStateObserver, SPTPartnerNavigationBannerViewModelActionHandler>
+@interface SPTPartnerNavigationBannerCoordinator : NSObject <SPTPartnerNavigationIntegrationObserver, SPTCarDetectionStateObserver, SPTPartnerNavigationBannerViewModelActionHandler>
 {
-    id <SPTDrivingStateDetector> _drivingDetector;
+    id <SPTCarDetector> _carDetector;
     SPTPartnerIntegrationStateLoader *_integrationLoader;
     id <SPTBannerPresentationManager> _bannerPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
@@ -36,18 +36,18 @@
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresenter; // @synthesize bannerPresenter=_bannerPresenter;
 @property(readonly, nonatomic) SPTPartnerIntegrationStateLoader *integrationLoader; // @synthesize integrationLoader=_integrationLoader;
-@property(readonly, nonatomic) id <SPTDrivingStateDetector> drivingDetector; // @synthesize drivingDetector=_drivingDetector;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 - (void).cxx_destruct;
 - (void)selectIntegration:(id)arg1 forViewModel:(id)arg2;
 - (void)selectMoreOptionsForViewModel:(id)arg1;
 - (void)dismissBannerForViewModel:(id)arg1;
 - (void)navigationIntegration:(id)arg1 didChangeNavigationStatus:(_Bool)arg2;
-- (void)drivingStateDetector:(id)arg1 drivingStateDidChange:(id)arg2;
+- (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
 - (void)dismissIntegrationPickerBanner;
 - (void)handleTicketStatusChangeForTicket:(id)arg1 viewModel:(id)arg2;
 - (void)presentIntegrationPickerBannerWithIntegrations:(id)arg1;
 - (void)fetchIntegrationsAndPresentIntegrationPickerBanner;
-- (id)initWithDrivingDetector:(id)arg1 integrationLoader:(id)arg2 bannerPresenter:(id)arg3 linkDispatcher:(id)arg4 nowPlayingManager:(id)arg5 nowPlayingStateObservable:(id)arg6 testManager:(id)arg7 logger:(id)arg8;
+- (id)initWithCarDetector:(id)arg1 integrationLoader:(id)arg2 bannerPresenter:(id)arg3 linkDispatcher:(id)arg4 nowPlayingManager:(id)arg5 nowPlayingStateObservable:(id)arg6 testManager:(id)arg7 logger:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

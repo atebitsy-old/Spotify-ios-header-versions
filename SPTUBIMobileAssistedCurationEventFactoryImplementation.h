@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 - (id)swipeUiNavigateBack;
 - (id)pageControlContainerFactory;
+- (id)emptyViewFactory;
 - (id)offlineViewFactory;
 - (id)cardContainerFactory;
 - (id)searchBoxFactory;

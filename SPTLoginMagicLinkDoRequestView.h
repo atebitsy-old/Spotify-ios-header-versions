@@ -4,13 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIView.h>
+#import "SPTLoginTraitChangingView.h"
 
-#import "GLUEStyleable-Protocol.h"
+@class GLUEButton, GLUELabel, NSLayoutConstraint, SPTLoginTextField, UIScrollView, UIView;
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, SPTLoginTextField, UIScrollView;
-
-@interface SPTLoginMagicLinkDoRequestView : UIView <GLUEStyleable>
+@interface SPTLoginMagicLinkDoRequestView : SPTLoginTraitChangingView
 {
     GLUELabel *_titleLabel;
     GLUELabel *_inputFieldTitleLabel;
@@ -59,16 +57,9 @@
 @property(readonly, nonatomic) GLUELabel *inputFieldTitleLabel; // @synthesize inputFieldTitleLabel=_inputFieldTitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void).cxx_destruct;
-- (void)traitsDidChange:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
 - (id)initWithStyle:(id)arg1 frame:(struct CGRect)arg2;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

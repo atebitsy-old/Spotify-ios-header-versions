@@ -12,7 +12,6 @@
 @protocol SPTPlayer, SPTYourLibraryMusicModelItemEntity, SPTYourLibraryMusicSongEntity, SPTYourLibraryMusicSongsModelDelegate;
 
 @protocol SPTYourLibraryMusicSongsModel <NSObject, SPTSortingFilteringFilterableModel, SPTSortingFilteringSortableModel>
-@property(readonly, nonatomic) long long dataGroupType;
 @property(readonly, nonatomic) unsigned long long offlineAvailability;
 @property(readonly, nonatomic) unsigned long long numberRecommendedItems;
 @property(readonly, nonatomic) unsigned long long numberSections;

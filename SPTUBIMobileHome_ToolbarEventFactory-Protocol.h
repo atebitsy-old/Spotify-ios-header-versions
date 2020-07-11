@@ -7,9 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHome_Toolbar_FeedIconEventFactory, SPTUBIMobileHome_Toolbar_SettingsIconEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHome_Toolbar_FeedIconEventFactory, SPTUBIMobileHome_Toolbar_SeedASessionButtonEventFactory, SPTUBIMobileHome_Toolbar_SettingsIconEventFactory;
 
 @protocol SPTUBIMobileHome_ToolbarEventFactory <NSObject>
+- (id <SPTUBIMobileHome_Toolbar_SeedASessionButtonEventFactory>)seedASessionButtonFactoryWithIdentifier:(NSString *)arg1;
 - (id <SPTUBIMobileHome_Toolbar_FeedIconEventFactory>)feedIconFactoryWithUri:(NSURL *)arg1 reason:(NSString *)arg2;
 - (id <SPTUBIMobileHome_Toolbar_SettingsIconEventFactory>)settingsIconFactoryWithReason:(NSString *)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;

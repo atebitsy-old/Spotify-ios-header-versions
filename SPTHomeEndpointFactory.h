@@ -6,22 +6,22 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTDrivingStateDetector, SPTProductState;
+@protocol SPTCarDetector, SPTProductState;
 
 @interface SPTHomeEndpointFactory : NSObject
 {
     id <SPTProductState> _productState;
-    id <SPTDrivingStateDetector> _drivingStateDetector;
+    id <SPTCarDetector> _carDetector;
 }
 
-@property(readonly, nonatomic) id <SPTDrivingStateDetector> drivingStateDetector; // @synthesize drivingStateDetector=_drivingStateDetector;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;
 - (_Bool)isPodcastFeatureEnabled;
 - (_Bool)isVideoFeatureEnabled;
 - (id)queryParameters;
 - (id)endpointForHome;
-- (id)initWithProductState:(id)arg1 drivingStateDetector:(id)arg2;
+- (id)initWithProductState:(id)arg1 carDetector:(id)arg2;
 
 @end
 

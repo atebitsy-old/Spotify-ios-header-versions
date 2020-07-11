@@ -12,6 +12,7 @@
 @protocol SPTAudioSessionController <NSObject>
 @property(readonly, getter=isActive) _Bool active;
 @property(nonatomic) __weak id <SPTAudioSessionControllerDelegate> delegate;
+- (void)wakewordModeEnabled:(_Bool)arg1;
 - (_Bool)refreshAudioSessionConfiguration:(id *)arg1;
 - (void)noteExplictPauseCommandIssued;
 - (void)removeObserver:(id <SPTAudioSessionControllerObserver>)arg1;

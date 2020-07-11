@@ -10,7 +10,7 @@
 #import "SPTSnackbarPresenter-Protocol.h"
 
 @class NSMutableArray, NSString, NSTimer, SPTSnackbarTheme, SPTSnackbarViewPresenter, UISwipeGestureRecognizer;
-@protocol SPTExternalIntegrationDriverDistractionController;
+@protocol SPTCarDetector;
 
 @interface SPTSnackbarPresenterImplementation : NSObject <SPTSnackbarPresenter, SPTSnackbarAnimationViewActionHanderDelegate>
 {
@@ -20,10 +20,10 @@
     SPTSnackbarTheme *_theme;
     NSTimer *_presentationTimer;
     UISwipeGestureRecognizer *_swipeRecognizer;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
 }
 
-@property(retain, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) UISwipeGestureRecognizer *swipeRecognizer; // @synthesize swipeRecognizer=_swipeRecognizer;
 @property(retain, nonatomic) NSTimer *presentationTimer; // @synthesize presentationTimer=_presentationTimer;
 @property(retain, nonatomic) SPTSnackbarTheme *theme; // @synthesize theme=_theme;
@@ -45,7 +45,7 @@
 - (void)presentSnackbarWithText:(id)arg1 buttonIcon:(long long)arg2 actionBlock:(CDUnknownBlockType)arg3;
 - (void)presentSnackbarWithText:(id)arg1 buttonTitle:(id)arg2 actionBlock:(CDUnknownBlockType)arg3;
 - (void)presentSnackbarWithText:(id)arg1;
-- (id)initWithTheme:(id)arg1 driverDistractionController:(id)arg2 viewPresenter:(id)arg3;
+- (id)initWithTheme:(id)arg1 carDetector:(id)arg2 viewPresenter:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

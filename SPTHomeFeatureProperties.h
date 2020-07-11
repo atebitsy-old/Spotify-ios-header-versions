@@ -12,12 +12,10 @@
 
 @interface SPTHomeFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _homeDownloadsEnhancedConnectivityReschedulingEnabled;
     _Bool _useNewCacheLocation;
 }
 
 @property(readonly, nonatomic) _Bool useNewCacheLocation; // @synthesize useNewCacheLocation=_useNewCacheLocation;
-@property(readonly, nonatomic) _Bool homeDownloadsEnhancedConnectivityReschedulingEnabled; // @synthesize homeDownloadsEnhancedConnectivityReschedulingEnabled=_homeDownloadsEnhancedConnectivityReschedulingEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

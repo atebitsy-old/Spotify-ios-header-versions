@@ -13,7 +13,6 @@
 @interface SPTYourLibraryMusicFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _playlistsRelevanceSortAsDefaultEnabled;
-    _Bool _likedSongsArtistAlbumGroupingsEnabled;
     _Bool _likedSongsUsePageLoader;
     _Bool _offlineArtistEnabled;
     _Bool _likedSongsMinorTableUpdateMechanismEnabled;
@@ -34,7 +33,6 @@
 @property(readonly, nonatomic) _Bool likedSongsMinorTableUpdateMechanismEnabled; // @synthesize likedSongsMinorTableUpdateMechanismEnabled=_likedSongsMinorTableUpdateMechanismEnabled;
 @property(readonly, nonatomic) _Bool offlineArtistEnabled; // @synthesize offlineArtistEnabled=_offlineArtistEnabled;
 @property(readonly, nonatomic) _Bool likedSongsUsePageLoader; // @synthesize likedSongsUsePageLoader=_likedSongsUsePageLoader;
-@property(readonly, nonatomic) _Bool likedSongsArtistAlbumGroupingsEnabled; // @synthesize likedSongsArtistAlbumGroupingsEnabled=_likedSongsArtistAlbumGroupingsEnabled;
 @property(readonly, nonatomic) _Bool playlistsRelevanceSortAsDefaultEnabled; // @synthesize playlistsRelevanceSortAsDefaultEnabled=_playlistsRelevanceSortAsDefaultEnabled;
 - (void).cxx_destruct;
 - (unsigned long long)mapQuickscrollMechanismInYourLibraryToEnumValue:(id)arg1;

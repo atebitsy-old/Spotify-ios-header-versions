@@ -13,12 +13,8 @@
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: collapsedTitleLabel
     // Error parsing type: , name: gradientView
-    // Error parsing type: , name: contentLeadingContraint
-    // Error parsing type: , name: contentTrailingContraint
     // Error parsing type: , name: contentTopContraint
     // Error parsing type: , name: collapsedTitleTopConstraint
-    // Error parsing type: , name: collapsedTitleLeadingConstraint
-    // Error parsing type: , name: collapsedTitleTrailingConstraint
     // Error parsing type: , name: style
 }
 

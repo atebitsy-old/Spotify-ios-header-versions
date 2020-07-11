@@ -21,6 +21,9 @@
 
 @optional
 @property(nonatomic) __weak id <SPTNowPlayingContentLayerProviderDelegate> delegate;
+- (void)setCell:(UICollectionViewCell *)arg1 expanded:(_Bool)arg2 insets:(struct UIEdgeInsets)arg3 forTrack:(SPTPlayerTrack *)arg4;
+- (_Bool)canExpandForTrack:(SPTPlayerTrack *)arg1;
+- (_Bool)canHideControlsForTrack:(SPTPlayerTrack *)arg1;
 - (void)configurePlaceholderCell:(UICollectionViewCell *)arg1 windowedContentInsets:(struct UIEdgeInsets)arg2;
 - (void)didSelectCell:(UICollectionViewCell *)arg1 withProvider:(id <SPTNowPlayingContentLayerProvider>)arg2 withTrack:(SPTPlayerTrack *)arg3 containerViewController:(UIViewController *)arg4;
 - (void)didEndDisplayingCell:(UICollectionViewCell *)arg1 withTrack:(SPTPlayerTrack *)arg2 containerViewController:(UIViewController *)arg3;

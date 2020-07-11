@@ -72,7 +72,6 @@
 - (id)filterChipsSectionHeaderWithViewModel:(id)arg1;
 - (id)buttonSectionHeaderWithViewModel:(id)arg1;
 - (id)defaultSectionHeaderWithViewModel:(id)arg1;
-- (id)entitySectionHeaderWithViewModel:(id)arg1;
 - (void)themeUpdated:(id)arg1;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
@@ -91,13 +90,13 @@
 - (_Bool)scrollViewShouldScrollToTop:(id)arg1;
 - (void)songCellConfigurator:(id)arg1 trailingSectionHeaderButton:(id)arg2;
 - (void)songCellConfigurator:(id)arg1 mainSectionHeaderButton:(id)arg2;
-- (void)songCellConfigurator:(id)arg1 didTapOnEntitySectionHeader:(id)arg2 withViewModel:(id)arg3;
 - (void)songCellConfigurator:(id)arg1 didSwipeCell:(id)arg2;
 - (void)songCellConfigurator:(id)arg1 updatedAudioPreview:(id)arg2 playing:(_Bool)arg3 isOriginCoverItem:(_Bool)arg4;
 - (void)songCellConfigurator:(id)arg1 banButton:(id)arg2;
 - (void)songCellConfigurator:(id)arg1 likeButton:(id)arg2;
 - (void)songCellConfigurator:(id)arg1 contextMenuButton:(id)arg2;
 - (id)indexPathOfSubview:(id)arg1;
+- (void)tableView:(id)arg1 willDisplayHeaderView:(id)arg2 forSection:(long long)arg3;
 - (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (id)tableView:(id)arg1 viewForFooterInSection:(long long)arg2;

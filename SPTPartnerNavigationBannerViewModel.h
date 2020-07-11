@@ -35,7 +35,7 @@
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (void).cxx_destruct;
 - (id)appNamesFromIntegrations:(id)arg1;
-- (void)nowPlayingBarViewControllerWillDisappear:(id)arg1;
+- (void)nowPlayingViewWillAppear:(id)arg1;
 - (void)selectIntegrationAtIndex:(long long)arg1;
 - (void)tapBannerBackground;
 - (void)tapMoreOptionsButton;

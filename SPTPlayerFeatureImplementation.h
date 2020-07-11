@@ -47,7 +47,6 @@
 - (id)playerSubscription;
 - (id)resolver;
 - (void)loadLazily;
-- (void)loadTAUtilities;
 - (id)providePlaybackErrorDialogs;
 - (void)loadAudioSessionController;
 - (id)cosmosRouter;

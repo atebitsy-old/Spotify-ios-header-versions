@@ -51,7 +51,7 @@
 - (void)offlineModel:(id)arg1 error:(id)arg2;
 - (void)offlineModelDidUpdate:(id)arg1 entity:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (id)initWithOfflineMusicModel:(id)arg1 offlinePodcastModel:(id)arg2 networkConnectivityController:(id)arg3 featureProperties:(id)arg4 ubiHubsInstrumentation:(id)arg5;
+- (id)initWithOfflineMusicModel:(id)arg1 offlinePodcastModel:(id)arg2 networkConnectivityController:(id)arg3 ubiHubsInstrumentation:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

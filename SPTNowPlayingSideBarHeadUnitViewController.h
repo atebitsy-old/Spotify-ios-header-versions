@@ -30,6 +30,7 @@
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)updateUI;
 - (void)nowPlayingModelDidUpdateMetadata:(id)arg1;
+- (void)updateEnabledAccessibilityTraitsForButton:(id)arg1;
 - (void)updateSkipButtons;
 - (void)updatePlayPauseButton;
 - (double)viewControllerPriority;

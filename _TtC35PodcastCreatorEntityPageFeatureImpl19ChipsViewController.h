@@ -14,8 +14,7 @@
     // Error parsing type: , name: pageUri
     // Error parsing type: , name: delegate
     // Error parsing type: , name: cellIdentifier
-    // Error parsing type: , name: chipCellHeight
-    // Error parsing type: , name: $__lazy_storage_$_prototypeCell
+    // Error parsing type: , name: $__lazy_storage_$_prototypeChipView
 }
 
 - (void).cxx_destruct;

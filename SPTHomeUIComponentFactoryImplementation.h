@@ -8,7 +8,7 @@
 
 #import "SPTHomeUIComponentFactory-Protocol.h"
 
-@class NSString, SPTHomeUILogger, SPTSeedASessionConfiguration;
+@class NSString, SPTHomeUILogger;
 @protocol GLUETheme, SPTHomeUITestManager, SPTPlayer;
 
 @interface SPTHomeUIComponentFactoryImplementation : NSObject <SPTHomeUIComponentFactory>
@@ -17,10 +17,8 @@
     id <SPTPlayer> _player;
     SPTHomeUILogger *_logger;
     id <SPTHomeUITestManager> _testManager;
-    SPTSeedASessionConfiguration *_seedASessionConfiguration;
 }
 
-@property(readonly, nonatomic) SPTSeedASessionConfiguration *seedASessionConfiguration; // @synthesize seedASessionConfiguration=_seedASessionConfiguration;
 @property(readonly, nonatomic) id <SPTHomeUITestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTHomeUILogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -41,7 +39,7 @@
 - (void)unregisterHomeComponentsFromComponentRegistry:(id)arg1;
 - (void)registerHomeComponentsToComponentRegistry:(id)arg1;
 - (id)provideHomeHubComponents;
-- (id)initWithTheme:(id)arg1 player:(id)arg2 logger:(id)arg3 testManager:(id)arg4 seedASessionConfiguration:(id)arg5;
+- (id)initWithTheme:(id)arg1 player:(id)arg2 logger:(id)arg3 testManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

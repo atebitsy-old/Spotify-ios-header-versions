@@ -8,7 +8,7 @@
 
 @interface _TtC26MarketingFormatFeatureImpl19HubComponentFactory : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: theme
+    // Error parsing type: , name: dependencies
     // Error parsing type: , name: createControllerClosure
 }
 

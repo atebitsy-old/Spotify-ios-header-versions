@@ -10,19 +10,17 @@
 
 @interface SPTPodcastHeaderForegroundView : VISREFNavigationBarForegroundView
 {
-    _Bool _isCondensedHeaderEnabled;
     VISREFGradientView *_darkGradientView;
 }
 
-@property(readonly, nonatomic) _Bool isCondensedHeaderEnabled; // @synthesize isCondensedHeaderEnabled=_isCondensedHeaderEnabled;
 @property(retain, nonatomic) VISREFGradientView *darkGradientView; // @synthesize darkGradientView=_darkGradientView;
 - (void).cxx_destruct;
 - (void)showNavigationBar:(_Bool)arg1;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (void)setNavigationBarOverlayGradient:(id)arg1;
 - (void)setupGradientOverlay:(id)arg1;
-- (id)createGradientVersion:(_Bool)arg1;
-- (id)initWithCondensedHeaderEnabled:(_Bool)arg1;
+- (id)createGradient;
+- (id)init;
 
 @end
 

@@ -10,15 +10,11 @@
 
 @protocol SPTPodcastTestManager <NSObject>
 @property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
-@property(readonly, nonatomic, getter=isPodcastHeaderV2CondensedSizeEnabled) _Bool podcastHeaderV2CondensedSizeEnabled;
-@property(readonly, nonatomic, getter=isPodcastHeaderV2Enabled) _Bool podcastHeaderV2Enabled;
 @property(readonly, nonatomic, getter=isRefinedPodcastPageEnabled) _Bool refinedPodcastPageEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlaybackOrderEnabled) _Bool podcastPlaybackOrderEnabled;
 @property(readonly, nonatomic, getter=isProductionisedYourLibraryEnabled) _Bool productionisedYourLibraryEnabled;
 @property(readonly, nonatomic, getter=isLikeActionEnabled) _Bool likeActionEnabled;
 @property(readonly, nonatomic, getter=isFollowActionEnabled) _Bool followActionEnabled;
-@property(readonly, nonatomic, getter=isOnboardingTabBarTooltipTestEnabled) _Bool onboardingTabBarTooltipTestEnabled;
-@property(readonly, nonatomic, getter=isOnboardingShowcaseTestEnabled) _Bool onboardingShowcaseTestEnabled;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 @property(readonly, nonatomic, getter=isVideoEntityPagesEnabled) _Bool videoEntityPagesEnabled;
 @property(readonly, nonatomic, getter=isVideoFeatureEnabled) _Bool videoFeatureEnabled;

@@ -8,7 +8,7 @@
 
 @interface _TtC7SPTTing11EpisodeView : UIView
 {
-    // Error parsing type: , name: background
+    // Error parsing type: , name: model
     // Error parsing type: , name: style
     // Error parsing type: , name: textLabelContainer
     // Error parsing type: , name: textLabel
@@ -18,9 +18,11 @@
     // Error parsing type: , name: imageView
     // Error parsing type: , name: linguisticTagger
     // Error parsing type: , name: extractedColor
+    // Error parsing type: , name: needsUpdateSubviews
 }
 
 - (void).cxx_destruct;
+- (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

@@ -9,14 +9,15 @@
 #import "SPTLoginAppleAuthorizationControllerDelegate-Protocol.h"
 #import "SPTLoginFacebookAuthenticationControllerDelegate-Protocol.h"
 
-@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginFacebookAuthenticationController, SPTLoginWelcomeViewLogger;
-@protocol SPTDialogController, SPTLoginStateController, SPTLoginWelcomeViewModelDelegate;
+@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginFacebookAuthenticationController, SPTLoginTestManager, SPTLoginWelcomeViewLogger;
+@protocol SPTDialogController, SPTLoginNavigationCoordinator, SPTLoginStateController, SPTLoginWelcomeViewModelDelegate;
 
 @interface SPTLoginWelcomeViewModel : NSObject <SPTLoginFacebookAuthenticationControllerDelegate, SPTLoginAppleAuthorizationControllerDelegate>
 {
     _Bool _savedCredentialsDialogShownOnce;
     id <SPTLoginWelcomeViewModelDelegate> _delegate;
     SPTLoginWelcomeViewLogger *_logger;
+    SPTLoginTestManager *_testManager;
     id <SPTLoginStateController> _loginStateController;
     SPTLoginErrorDecorator *_errorDecorator;
     SPTLoginFacebookAuthenticationController *_facebookAuthController;
@@ -24,8 +25,10 @@
     id <SPTDialogController> _dialogController;
     SPTDynamicSignupFlowController *_flowController;
     SPTLoginDbManager *_databaseManager;
+    id <SPTLoginNavigationCoordinator> _navigationCoordinator;
 }
 
+@property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(nonatomic) _Bool savedCredentialsDialogShownOnce; // @synthesize savedCredentialsDialogShownOnce=_savedCredentialsDialogShownOnce;
@@ -34,6 +37,7 @@
 @property(readonly, nonatomic) SPTLoginFacebookAuthenticationController *facebookAuthController; // @synthesize facebookAuthController=_facebookAuthController;
 @property(readonly, nonatomic) SPTLoginErrorDecorator *errorDecorator; // @synthesize errorDecorator=_errorDecorator;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
+@property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTLoginWelcomeViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTLoginWelcomeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
@@ -51,15 +55,18 @@
 - (void)navigateToLogin;
 - (void)loginWithFacebook;
 - (void)presentSignupStepOneViewController;
+- (void)presentEmailMethodLedViewController;
 - (id)appleLogoIcon;
 - (id)facebookLogoIcon;
 - (id)facebookLogoIconWhite;
 - (id)appleButtonText;
 - (id)facebookButtonText;
 - (id)signupButtonText;
+- (id)continueWithEmailButtonText;
+- (id)helpText;
 - (id)loginButtonText;
 - (id)spotifyLogo:(struct CGSize)arg1;
-- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6 databaseManager:(id)arg7;
+- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6 databaseManager:(id)arg7 navigationCoordinator:(id)arg8 testManager:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

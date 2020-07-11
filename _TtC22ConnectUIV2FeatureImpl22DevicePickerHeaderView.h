@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl22DevicePickerHeaderView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: imageFactory
     // Error parsing type: , name: $__lazy_storage_$_listeningOnView
     // Error parsing type: , name: $__lazy_storage_$_activeDeviceTouchArea
     // Error parsing type: , name: $__lazy_storage_$_closeButton

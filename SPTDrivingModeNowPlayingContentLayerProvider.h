@@ -17,6 +17,7 @@
 
 - (void)populateCell:(id)arg1 withTrack:(id)arg2;
 - (_Bool)requiresOverlayForTrack:(id)arg1;
+- (_Bool)canHideControlsForTrack:(id)arg1;
 - (_Bool)displaysFullScreenContentForTrack:(id)arg1;
 - (_Bool)isActiveForTrack:(id)arg1 playerState:(id)arg2;
 - (void)didEndDisplayingCell:(id)arg1 withTrack:(id)arg2 containerViewController:(id)arg3;

@@ -9,12 +9,12 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDrivingJumpstartTestManager, SPTDrivingJumpstartTrigger;
-@protocol GaiaFeature, SPTContainerService, SPTDrivingStateDetectionService, SPTExternalIntegrationPlaybackService, SPTPlayerFeature, SPTRecentlyPlayedService, SPTRemoteConfigurationService;
+@protocol GaiaFeature, SPTContainerService, SPTExternalIntegrationPlaybackService, SPTPlayerFeature, SPTRecentlyPlayedService, SPTRemoteConfigurationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTDrivingJumpstartService : NSObject <SPTService>
 {
     _Bool _enabled;
-    id <SPTDrivingStateDetectionService> _drivingDetectionService;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTExternalIntegrationPlaybackService> _playbackService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
@@ -35,7 +35,7 @@
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
-@property(nonatomic) __weak id <SPTDrivingStateDetectionService> drivingDetectionService; // @synthesize drivingDetectionService=_drivingDetectionService;
+@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 - (void).cxx_destruct;
 - (void)unload;
 - (void)load;

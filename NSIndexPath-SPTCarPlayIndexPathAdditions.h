@@ -7,6 +7,7 @@
 #import <Foundation/NSIndexPath.h>
 
 @interface NSIndexPath (SPTCarPlayIndexPathAdditions)
+- (unsigned long long)spt_indexForDeepestPosition;
 - (id)spt_indexesJoinedToString;
 - (id)spt_indexPathByRemovingFirstIndex;
 @property(readonly, nonatomic) long long spt_rootIndex;

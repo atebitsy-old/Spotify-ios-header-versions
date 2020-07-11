@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPlaybackPreferencesObserver, SPTSettingsLogger;
-@protocol CosmosFeature, SPTAbbaFeatureFlags, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceService, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@protocol CosmosFeature, SPTAbbaFeatureFlags, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTDebugUIService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceService, _TtP16ProfileV2Feature19SPTProfileV2Service_;
 
 @interface SPTBuiltInSettingsFeatureImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTService>
 {
@@ -25,6 +25,7 @@
     id <SPTSessionService> _clientSessionService;
     id <SPTCoreService> _coreService;
     id <SPTDebugService> _debugService;
+    id <SPTDebugUIService> _debugUIService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTVoiceService> _voiceService;
     id <SPTFreeTierService> _freeTierService;
@@ -60,6 +61,7 @@
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
+@property(nonatomic) __weak id <SPTDebugUIService> debugUIService; // @synthesize debugUIService=_debugUIService;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;

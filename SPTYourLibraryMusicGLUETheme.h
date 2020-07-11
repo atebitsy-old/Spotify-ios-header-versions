@@ -32,9 +32,6 @@
 - (id)songEntityRowStyle;
 - (id)emptySongsSectionHeaderStyle;
 - (id)entitySectionHeaderStyle;
-- (id)songsAlbumEntitySectionHeaderStyle;
-- (id)songsArtistEntitySectionHeaderStyle;
-- (id)songsEntitySectionHeaderStyleWithEntityRowStyle:(id)arg1;
 - (id)songsSectionHeaderStyle;
 - (id)artistEntityRowStyleWithRowSize:(long long)arg1;
 - (id)albumEntityRowStyleWithRowSize:(long long)arg1;

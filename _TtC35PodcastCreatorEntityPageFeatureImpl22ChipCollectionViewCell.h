@@ -8,14 +8,10 @@
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl22ChipCollectionViewCell : UICollectionViewCell
 {
-    // Error parsing type: , name: imageView
-    // Error parsing type: , name: label
-    // Error parsing type: , name: imageViewHiddenConstraints
-    // Error parsing type: , name: imageViewVisibleConstraints
+    // Error parsing type: , name: chipView
 }
 
 - (void).cxx_destruct;
-- (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

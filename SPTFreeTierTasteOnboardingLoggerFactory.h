@@ -6,19 +6,22 @@
 
 #import <objc/NSObject.h>
 
+@class NSString;
 @protocol SPTLogCenter;
 
 @interface SPTFreeTierTasteOnboardingLoggerFactory : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    NSString *_featureIdentifier;
 }
 
+@property(readonly, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (id)provideSkipDialogLogger;
 - (id)provideArtistSearchViewLoggerWithViewLogger:(id)arg1 sessionId:(id)arg2;
 - (id)provideArtistPickerViewLoggerWithViewLogger:(id)arg1 sessionId:(id)arg2;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 featureIdentifier:(id)arg2;
 
 @end
 

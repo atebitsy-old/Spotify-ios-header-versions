@@ -10,8 +10,7 @@
 {
     // Error parsing type: , name: timer
     // Error parsing type: , name: lock
-    // Error parsing type: , name: isDisposed
-    // Error parsing type: , name: isTimerRunning
+    // Error parsing type: , name: isTimerSuspended
 }
 
 @end

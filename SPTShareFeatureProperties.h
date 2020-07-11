@@ -13,10 +13,14 @@
 @interface SPTShareFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _backendGeneratedShareableUrlEnabled;
+    _Bool _shareDeepLinkLoggingEnabled;
+    _Bool _shareDeepLinkLoggingAllowAllUris;
     long long _shareDestinationsVersion;
 }
 
 @property(readonly, nonatomic) long long shareDestinationsVersion; // @synthesize shareDestinationsVersion=_shareDestinationsVersion;
+@property(readonly, nonatomic) _Bool shareDeepLinkLoggingAllowAllUris; // @synthesize shareDeepLinkLoggingAllowAllUris=_shareDeepLinkLoggingAllowAllUris;
+@property(readonly, nonatomic) _Bool shareDeepLinkLoggingEnabled; // @synthesize shareDeepLinkLoggingEnabled=_shareDeepLinkLoggingEnabled;
 @property(readonly, nonatomic) _Bool backendGeneratedShareableUrlEnabled; // @synthesize backendGeneratedShareableUrlEnabled=_backendGeneratedShareableUrlEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTPreSignupExperimentationFeatureFlagsLoader-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTPreSignupExperimentationCacheManager, SPTPreSignupExperimentationContext, SPTPreSignupExperimentationLogger;
+@class NSString, SPTDataLoader, SPTPreSignupExperimentationCacheManager, SPTPreSignupExperimentationLogger;
 @protocol SPTPreSignupExperimentationFeatureFlagsLoaderDelegate;
 
 @interface SPTPreSignupExperimentationFeatureFlagsLoaderImplementation : NSObject <SPTDataLoaderDelegate, SPTPreSignupExperimentationFeatureFlagsLoader>
@@ -17,12 +17,10 @@
     id <SPTPreSignupExperimentationFeatureFlagsLoaderDelegate> delegate;
     SPTDataLoader *_dataLoader;
     SPTPreSignupExperimentationCacheManager *_cacheManager;
-    SPTPreSignupExperimentationContext *_context;
     SPTPreSignupExperimentationLogger *_logger;
 }
 
 @property(readonly, nonatomic) SPTPreSignupExperimentationLogger *logger; // @synthesize logger=_logger;
-@property(readonly, nonatomic) SPTPreSignupExperimentationContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTPreSignupExperimentationCacheManager *cacheManager; // @synthesize cacheManager=_cacheManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationFeatureFlagsLoaderDelegate> delegate; // @synthesize delegate;
@@ -35,7 +33,7 @@
 - (id)provideFeatureFlags;
 - (void)fetchFeatureFlags;
 - (void)loadFeatureFlags;
-- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 context:(id)arg3 logger:(id)arg4;
+- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 logger:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

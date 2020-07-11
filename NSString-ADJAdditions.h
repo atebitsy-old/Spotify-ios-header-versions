@@ -73,7 +73,6 @@
 + (id)spt_collectionRemoveURI;
 + (id)spt_collectionAddURI;
 + (id)spt_collectionItemStateURI;
-+ (id)spt_authorizationRequest;
 + (id)spt_pingURI;
 + (id)spt_sharedKeychainTopic;
 + (id)spt_sessionStateTopic;
@@ -182,7 +181,6 @@
 @property(readonly, nonatomic) _Bool spt_isCollectionRemoveURI;
 @property(readonly, nonatomic) _Bool spt_isCollectionAddURI;
 @property(readonly, nonatomic) _Bool spt_isCollectionItemStateURI;
-- (_Bool)spt_isAuthorizationRequest;
 @property(readonly, nonatomic) _Bool spt_isPingURI;
 @end
 

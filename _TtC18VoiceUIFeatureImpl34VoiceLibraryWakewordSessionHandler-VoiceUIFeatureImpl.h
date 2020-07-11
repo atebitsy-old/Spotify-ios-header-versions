@@ -9,6 +9,7 @@
 #import "SPTVoiceLibraryWakewordDelegate-Protocol.h"
 
 @interface _TtC18VoiceUIFeatureImpl34VoiceLibraryWakewordSessionHandler (VoiceUIFeatureImpl) <SPTVoiceLibraryWakewordDelegate>
+- (void)wakewordFailedToLoad;
 - (void)wakewordDetected;
 @end
 

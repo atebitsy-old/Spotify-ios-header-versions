@@ -9,9 +9,12 @@
 @protocol SPTDataLoaderCancellationTokenDelegate;
 
 @protocol SPTDataLoaderCancellationToken <NSObject>
-@property(readonly, nonatomic) id objectToCancel;
-@property(readonly, nonatomic) __weak id <SPTDataLoaderCancellationTokenDelegate> delegate;
-@property(readonly, nonatomic, getter=isCancelled) _Bool cancelled;
 - (void)cancel;
+@property(nonatomic, readonly) id objectToCancel;
+@property(nonatomic, readonly) id <SPTDataLoaderCancellationTokenDelegate> delegate;
+- (_Bool)isCancelled;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool cancelled;
 @end
 

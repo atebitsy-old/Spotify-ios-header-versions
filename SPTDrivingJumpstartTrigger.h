@@ -6,28 +6,25 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDrivingStateObserver-Protocol.h"
+#import "SPTCarDetectionStateObserver-Protocol.h"
 
-@class NSString, UIApplication;
-@protocol SPTDrivingJumpstartHandler;
+@class UIApplication;
+@protocol SPTCarDetector, SPTDrivingJumpstartHandler;
 
-@interface SPTDrivingJumpstartTrigger : NSObject <SPTDrivingStateObserver>
+@interface SPTDrivingJumpstartTrigger : NSObject <SPTCarDetectionStateObserver>
 {
     id <SPTDrivingJumpstartHandler> _jumpstartHandler;
+    id <SPTCarDetector> _carDetector;
     UIApplication *_application;
 }
 
 @property(readonly, nonatomic) __weak UIApplication *application; // @synthesize application=_application;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) id <SPTDrivingJumpstartHandler> jumpstartHandler; // @synthesize jumpstartHandler=_jumpstartHandler;
 - (void).cxx_destruct;
-- (void)drivingStateDetector:(id)arg1 drivingStateDidChange:(id)arg2;
-- (id)initWithJumpstartHandler:(id)arg1 application:(id)arg2;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
+- (void)unload;
+- (id)initWithJumpstartHandler:(id)arg1 carDetector:(id)arg2 application:(id)arg3;
 
 @end
 

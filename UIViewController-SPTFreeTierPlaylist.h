@@ -21,7 +21,6 @@
 - (_Bool)isRootParentBeingDismissed;
 - (void)spt_performIdleAnimations:(CDUnknownBlockType)arg1 completion:(CDUnknownBlockType)arg2 theme:(id)arg3;
 - (void)spt_performIdleAnimations:(CDUnknownBlockType)arg1 theme:(id)arg2;
-- (_Bool)spt_isForceTouchAvailable;
 @property(readonly, nonatomic, getter=spt_share_currentPopoverPresentationController) UIPopoverPresentationController *currentPopoverPresentationController;
 @property(readonly, nonatomic, getter=spt_share_isPresentedInPopover) _Bool presentedInPopover;
 - (id)sp_barViewController;

@@ -8,10 +8,8 @@
 
 @interface SPTYourLibraryMusicSongsSortRule : SPTYourLibraryMusicCosmosSortRule
 {
-    long long dataGroupType;
 }
 
-@property(nonatomic) long long dataGroupType; // @synthesize dataGroupType;
 - (id)initWithIdentifier:(id)arg1 title:(id)arg2 ascendingOrder:(_Bool)arg3 applyRule:(CDUnknownBlockType)arg4;
 
 @end

@@ -12,7 +12,7 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, NSURL, SPTNavigationManager, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTPlayerState, SPTStatusBarToken, SPTTheme;
+@class NSString, NSURL, SPTNavigationManager, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTNowPlayingStateProxy, SPTPlayerState, SPTStatusBarToken, SPTTheme;
 @protocol SPTNowPlayingContentContainingViewController, SPTPageContainer, SPTPlayer, SPTQueueEnabling, SPTQueueLogger;
 
 @interface SPTNowPlayingToggleViewController : UIViewController <SPTNowPlayingModelObserver, SPTNowPlayingModelDelegate, SPTPlayerObserver, SPTBarOverlayViewController, SPTPageController>
@@ -23,6 +23,7 @@
     SPTNowPlayingLogger *_logger;
     SPTNowPlayingBarLogger *_barLogger;
     id <SPTQueueLogger> _queueLogger;
+    SPTNowPlayingStateProxy *_stateProxy;
     SPTStatusBarToken *_statusBarToken;
     SPTTheme *_theme;
     SPTNavigationManager *_navigationManager;
@@ -47,6 +48,7 @@
 @property(readonly, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
+@property(readonly, nonatomic) SPTNowPlayingStateProxy *stateProxy; // @synthesize stateProxy=_stateProxy;
 @property(readonly, nonatomic) id <SPTQueueLogger> queueLogger; // @synthesize queueLogger=_queueLogger;
 @property(readonly, nonatomic) SPTNowPlayingBarLogger *barLogger; // @synthesize barLogger=_barLogger;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
@@ -85,7 +87,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 playerViewController:(id)arg2 queueViewController:(id)arg3 scrollViewController:(id)arg4 theme:(id)arg5 player:(id)arg6 navigationManager:(id)arg7 backgroundUnitProvider:(id)arg8 logger:(id)arg9 barLogger:(id)arg10 queueLogger:(id)arg11;
+- (id)initWithModel:(id)arg1 playerViewController:(id)arg2 queueViewController:(id)arg3 scrollViewController:(id)arg4 theme:(id)arg5 player:(id)arg6 navigationManager:(id)arg7 backgroundUnitProvider:(id)arg8 logger:(id)arg9 barLogger:(id)arg10 queueLogger:(id)arg11 stateProxy:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

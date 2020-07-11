@@ -9,7 +9,7 @@
 #import "SPTInAppMessagePreviewViewModelObserver-Protocol.h"
 
 @class NSString, SPTInAppMessageActionFactory, SPTInAppMessageCardMessageParser, SPTInAppMessageCardMessagePresentationController, SPTInAppMessageCardMessageViewModel;
-@protocol SPTAlertInterface, SPTExternalIntegrationDriverDistractionController, SPTOfflineModeState, SPTSlateBuilderProvider, SPTSlateManager;
+@protocol SPTAlertInterface, SPTCarDetector, SPTOfflineModeState, SPTSlateBuilderProvider, SPTSlateManager;
 
 @interface SPTInAppMessagePreviewCardMessageController : NSObject <SPTInAppMessagePreviewViewModelObserver>
 {
@@ -17,7 +17,7 @@
     id <SPTSlateManager> _slateManager;
     id <SPTSlateBuilderProvider> _slateBuilderProvider;
     SPTInAppMessageActionFactory *_actionFactory;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTAlertInterface> _alertInterface;
     SPTInAppMessageCardMessageViewModel *_cardMessageViewModel;
@@ -28,7 +28,7 @@
 @property(retain, nonatomic) SPTInAppMessageCardMessageViewModel *cardMessageViewModel; // @synthesize cardMessageViewModel=_cardMessageViewModel;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(retain, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(retain, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
@@ -36,7 +36,7 @@
 - (void).cxx_destruct;
 - (void)presentMessage:(id)arg1;
 - (void)previewViewModel:(id)arg1 didFetchCardCreativeData:(id)arg2;
-- (id)initWithCardMessageParser:(id)arg1 slateManager:(id)arg2 slateBuilderProvider:(id)arg3 actionFactory:(id)arg4 driverDistractionController:(id)arg5 offlineModeState:(id)arg6 alertInterface:(id)arg7;
+- (id)initWithCardMessageParser:(id)arg1 slateManager:(id)arg2 slateBuilderProvider:(id)arg3 actionFactory:(id)arg4 carDetector:(id)arg5 offlineModeState:(id)arg6 alertInterface:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

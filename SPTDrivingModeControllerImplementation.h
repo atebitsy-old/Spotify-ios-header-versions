@@ -6,19 +6,19 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTCarDetectionStateObserver-Protocol.h"
 #import "SPTDrivingModeController-Protocol.h"
 #import "SPTDrivingModeOptOutHandler-Protocol.h"
-#import "SPTDrivingStateObserver-Protocol.h"
 
 @class NSArray, NSString, SPTDrivingModeFactory, SPTDrivingModeNowPlayingContentLayerProvider;
-@protocol SPTDrivingModeControllerDelegate, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationDriverDistractionController, SPTNowPlayingPlatformService;
+@protocol SPTCarDetector, SPTDrivingModeControllerDelegate, SPTDrivingModeRemoteConfiguration, SPTNowPlayingPlatformService;
 
-@interface SPTDrivingModeControllerImplementation : NSObject <SPTDrivingModeController, SPTDrivingStateObserver, SPTDrivingModeOptOutHandler>
+@interface SPTDrivingModeControllerImplementation : NSObject <SPTCarDetectionStateObserver, SPTDrivingModeController, SPTDrivingModeOptOutHandler>
 {
     _Bool _drivingModeEnabled;
     id <SPTDrivingModeControllerDelegate> delegate;
+    id <SPTCarDetector> _carDetector;
     id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
     SPTDrivingModeFactory *_factory;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     NSArray *_registeredModes;
@@ -30,8 +30,8 @@
 @property(nonatomic) _Bool drivingModeEnabled; // @synthesize drivingModeEnabled=_drivingModeEnabled;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(readonly, nonatomic) SPTDrivingModeFactory *factory; // @synthesize factory=_factory;
-@property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
 @property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(nonatomic) __weak id <SPTDrivingModeControllerDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
 - (void)unregisterContentLayerProvider;
@@ -42,10 +42,10 @@
 @property(readonly, nonatomic) NSString *drivingFeedbackModeIdentifier;
 @property(readonly, nonatomic) NSString *drivingPodcastModeIdentifier;
 @property(readonly, nonatomic) NSString *drivingDefaultModeIdentifier;
-- (void)drivingStateDetector:(id)arg1 drivingStateDidChange:(id)arg2;
+- (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
 - (void)userDidOptOutOfDrivingMode;
 - (void)disable;
-- (id)initWithRemoteConfiguration:(id)arg1 driverDistractionController:(id)arg2 factory:(id)arg3 nowPlayingPlatformService:(id)arg4;
+- (id)initWithCarDetector:(id)arg1 remoteConfiguration:(id)arg2 factory:(id)arg3 nowPlayingPlatformService:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -36,6 +36,8 @@
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (_Bool)displaysFullScreenContentForTrack:(id)arg1;
 - (_Bool)requiresOverlayForTrack:(id)arg1;
+- (_Bool)canHideControlsForTrack:(id)arg1;
+- (_Bool)isNotAdOrInterruptionVideo:(id)arg1;
 - (_Bool)isActiveForTrack:(id)arg1 playerState:(id)arg2;
 - (id)reuseIdentifier;
 - (unsigned long long)contentType;

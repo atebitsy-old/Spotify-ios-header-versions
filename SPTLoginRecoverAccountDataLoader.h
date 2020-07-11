@@ -8,7 +8,7 @@
 
 #import "SPTDataLoaderDelegate-Protocol.h"
 
-@class NSNotificationCenter, NSString, SPTDataLoader, SPTLogin5TestManager;
+@class NSNotificationCenter, NSString, SPTDataLoader, SPTLoginTestManager;
 @protocol SPTLoginRecoverAccountDataLoaderDelegate;
 
 @interface SPTLoginRecoverAccountDataLoader : NSObject <SPTDataLoaderDelegate>
@@ -16,10 +16,10 @@
     id <SPTLoginRecoverAccountDataLoaderDelegate> delegate;
     SPTDataLoader *_dataLoader;
     NSNotificationCenter *_notificationCenter;
-    SPTLogin5TestManager *_login5TestManager;
+    SPTLoginTestManager *_login5TestManager;
 }
 
-@property(readonly, nonatomic) SPTLogin5TestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
+@property(readonly, nonatomic) SPTLoginTestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTLoginRecoverAccountDataLoaderDelegate> delegate; // @synthesize delegate;

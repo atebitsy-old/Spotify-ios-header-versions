@@ -9,7 +9,7 @@
 #import "SPTBrowseService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTBrowseFeatureProperties, SPTPersistentCache;
-@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTVisualRefreshIntegrationService;
+@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature;
 
 @interface SPTBrowseServiceImplementation : NSObject <SPTBrowseService>
 {
@@ -24,7 +24,6 @@
     id <SPTFreeTierService> _freeTierService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTRadioService> _radioService;
-    id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
     id <SPTPodcastUIService> _podcastUIService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
@@ -40,7 +39,6 @@
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
-@property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(nonatomic) __weak id <SPTRadioService> radioService; // @synthesize radioService=_radioService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;

@@ -13,14 +13,14 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSArray, NSMutableDictionary, NSNotificationCenter, NSString, SPTInAppMessageFeatureFlagChecks, SPTInAppMessagePodcastExperimentsHandler;
-@protocol SPTExternalIntegrationDriverDistractionController, SPTInAppMessageTriggerEngineDelegate;
+@protocol SPTCarDetector, SPTInAppMessageTriggerEngineDelegate;
 
 @interface SPTInAppMessageTriggerEngine : NSObject <SPTInAppMessagePodcastExperimentsHandlerDelegate, SPTInAppMessageTriggerListControllerDelegate, SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver, SPTInAppMessageMessageRequesterDelegate>
 {
     NSArray *_triggerList;
     id <SPTInAppMessageTriggerEngineDelegate> _delegate;
     NSMutableDictionary *_triggerRegularExpressionCache;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
     SPTInAppMessagePodcastExperimentsHandler *_podcastExperimentsHandler;
     NSNotificationCenter *_notificationCenter;
@@ -39,7 +39,7 @@
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) SPTInAppMessagePodcastExperimentsHandler *podcastExperimentsHandler; // @synthesize podcastExperimentsHandler=_podcastExperimentsHandler;
 @property(retain, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
-@property(retain, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) NSMutableDictionary *triggerRegularExpressionCache; // @synthesize triggerRegularExpressionCache=_triggerRegularExpressionCache;
 @property(nonatomic) __weak id <SPTInAppMessageTriggerEngineDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSArray *triggerList; // @synthesize triggerList=_triggerList;
@@ -59,7 +59,7 @@
 - (id)getMatchingTriggersForURI:(id)arg1 triggerType:(id)arg2;
 - (void)performPatternMatchingForURI:(id)arg1 triggerType:(id)arg2;
 - (void)triggerListController:(id)arg1 didFetchActiveTriggers:(id)arg2;
-- (id)initWithDriverDistractionController:(id)arg1 featureFlagChecker:(id)arg2 podcastExperimentsHandler:(id)arg3 notificationCenter:(id)arg4;
+- (id)initWithCarDetector:(id)arg1 featureFlagChecker:(id)arg2 podcastExperimentsHandler:(id)arg3 notificationCenter:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

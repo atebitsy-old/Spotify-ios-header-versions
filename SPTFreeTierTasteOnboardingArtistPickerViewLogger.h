@@ -14,8 +14,10 @@
     id <SPTLogCenter> _logCenter;
     id <SPTViewLogger> _viewLogger;
     NSString *_sessionId;
+    NSString *_featureIdentifier;
 }
 
+@property(readonly, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
@@ -33,6 +35,7 @@
 - (void)logSelectArtistInteractionWithIdentifier:(id)arg1 contentSource:(id)arg2 contentSourceUri:(id)arg3 section:(id)arg4 position:(unsigned long long)arg5 maxPosition:(unsigned long long)arg6 sequenceNumber:(unsigned long long)arg7 interactionId:(id)arg8;
 - (void)logPresentationMode:(unsigned long long)arg1;
 - (void)logPodcastInFirstTimeFlowEnabled:(_Bool)arg1;
+- (void)logAddSongsToPlaylistButtonInteraction;
 - (void)logAfterSignUpInteraction;
 - (void)logNextImpression;
 - (void)logNextInteraction;
@@ -41,7 +44,7 @@
 - (void)logItemDeselectionInteractionWithIdentifier:(id)arg1 position:(unsigned long long)arg2;
 - (void)logItemSelectionInteractionWithIdentifier:(id)arg1 position:(unsigned long long)arg2;
 - (void)logItemImpressionWithIdentifier:(id)arg1 position:(unsigned long long)arg2;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 sessionId:(id)arg3;
+- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 sessionId:(id)arg3 featureIdentifier:(id)arg4;
 
 @end
 

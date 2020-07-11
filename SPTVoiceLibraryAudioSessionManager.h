@@ -9,13 +9,14 @@
 #import "SPTAudioSessionControllerDelegate-Protocol.h"
 #import "SPTVoiceLibraryAudioSession-Protocol.h"
 
-@class NSString, SPTAudioSessionActivator;
+@class NSHashTable, NSString, SPTAudioSessionActivator;
 @protocol SPTAudioSessionController;
 
 @interface SPTVoiceLibraryAudioSessionManager : NSObject <SPTAudioSessionControllerDelegate, SPTVoiceLibraryAudioSession>
 {
     _Bool _sessionConfigured;
     _Bool _shouldRequestRecording;
+    NSHashTable *delegates;
     id <SPTAudioSessionController> _audioSessionController;
     SPTAudioSessionActivator *_audioSessionActivator;
 }
@@ -24,11 +25,16 @@
 @property(retain, nonatomic) SPTAudioSessionActivator *audioSessionActivator; // @synthesize audioSessionActivator=_audioSessionActivator;
 @property(readonly, nonatomic) __weak id <SPTAudioSessionController> audioSessionController; // @synthesize audioSessionController=_audioSessionController;
 @property(nonatomic, getter=isSessionConfigured) _Bool sessionConfigured; // @synthesize sessionConfigured=_sessionConfigured;
+@property(retain, nonatomic) NSHashTable *delegates; // @synthesize delegates;
 - (void).cxx_destruct;
 - (_Bool)audioSessionShouldSupportBluetooth:(id)arg1;
 - (_Bool)audioSessionShouldSupportRecording:(id)arg1;
 - (_Bool)shouldModifyAudioSession:(id)arg1;
 - (void)refreshAudioSessionConfiguration;
+- (void)removeDelegate:(id)arg1;
+- (void)addDelegate:(id)arg1;
+- (void)disableAudioSessionForWakeword;
+- (void)enableAudioSessionForWakeword;
 - (void)relinquishSupportForAudioRecording;
 - (void)requestSupportForAudioRecording;
 - (void)deactiveAudioSession;

@@ -9,7 +9,7 @@
 #import "SPTVideoCoordinatorService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVideoContextPlayerCoordinator, SPTVideoCoordinatorFeatureFlags, SPTVideoDynamicEventObserverFactory, SPTVideoPreferredSubtitleMessageFactory, SPTVideoSubtitleProvider;
-@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTDebugService, SPTExternalIntegrationDriverDistractionService, SPTPlayer, SPTPlayerFeature, SPTUIPresentationService, SPTURIDispatchService, SPTVideoFeature;
+@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTDebugService, SPTPlayer, SPTPlayerFeature, SPTUIPresentationService, SPTURIDispatchService, SPTVideoFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTVideoCoordinatorServiceImplementation : NSObject <SPTVideoCoordinatorService>
 {
@@ -18,7 +18,7 @@
     id <CosmosFeature> _cosmosService;
     id <SPTBannerFeature> _bannerFeature;
     id <SPTContainerUIService> _containerUIService;
-    id <SPTExternalIntegrationDriverDistractionService> _driverDistractionService;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTUIPresentationService> _presentationService;
     id <SPTContainerService> _containerService;
@@ -46,7 +46,7 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
-@property(nonatomic) __weak id <SPTExternalIntegrationDriverDistractionService> driverDistractionService; // @synthesize driverDistractionService=_driverDistractionService;
+@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTBannerFeature> bannerFeature; // @synthesize bannerFeature=_bannerFeature;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;

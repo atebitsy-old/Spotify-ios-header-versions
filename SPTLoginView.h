@@ -45,7 +45,6 @@
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (id)submitButton;
 - (void).cxx_destruct;
-- (void)traitsDidChange:(id)arg1;
 @property(readonly, nonatomic) SPTActionButton *onePasswordLoginButton;
 - (void)setOnePasswordLoginEnabled:(_Bool)arg1;
 - (void)glue_applyStyle:(id)arg1;

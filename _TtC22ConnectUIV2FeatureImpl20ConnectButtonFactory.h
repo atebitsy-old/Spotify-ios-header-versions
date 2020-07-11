@@ -8,6 +8,10 @@
 
 @interface _TtC22ConnectUIV2FeatureImpl20ConnectButtonFactory : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: connectManager
+    // Error parsing type: , name: devicePickerPresenter
+    // Error parsing type: , name: theme
+    // Error parsing type: , name: imageFactory
 }
 
 - (id)provideConnectButtonView;

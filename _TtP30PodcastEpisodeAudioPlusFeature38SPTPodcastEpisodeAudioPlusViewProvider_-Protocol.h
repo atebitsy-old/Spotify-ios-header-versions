@@ -4,10 +4,10 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class NSURL;
-@protocol SPTPageCreationContext, _TtP30PodcastEpisodeAudioPlusFeature37PodcastEpisodeAudioPlusViewController_;
+@class NSURL, UIViewController;
+@protocol SPTPageCreationContext;
 
 @protocol _TtP30PodcastEpisodeAudioPlusFeature38SPTPodcastEpisodeAudioPlusViewProvider_
-- (id <_TtP30PodcastEpisodeAudioPlusFeature37PodcastEpisodeAudioPlusViewController_>)audioPlusForEpisodeURIWithUri:(NSURL *)arg1 context:(id <SPTPageCreationContext>)arg2;
+- (UIViewController *)audioPlusForEpisodeURIWithUri:(NSURL *)arg1 context:(id <SPTPageCreationContext>)arg2;
 @end
 

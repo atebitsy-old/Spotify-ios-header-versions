@@ -9,14 +9,14 @@
 #import "SPTSnackbarService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSnackbarAnimationView, SPTSnackbarPresenterImplementation;
-@protocol SPTContainerUIService, SPTExternalIntegrationDriverDistractionService, SPTFeatureFlaggingService, SPTFreeTierUIService, SPTGLUEService, SPTRemoteConfigurationService;
+@protocol SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierUIService, SPTGLUEService, SPTRemoteConfigurationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTSnackbarServiceImplementation : NSObject <SPTSnackbarService>
 {
     id <SPTGLUEService> _glueService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTFreeTierUIService> _freeTierUIService;
-    id <SPTExternalIntegrationDriverDistractionService> _driverDistractionService;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     SPTSnackbarPresenterImplementation *_presenter;
     SPTSnackbarAnimationView *_snackbarAnimationView;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
@@ -28,7 +28,7 @@
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(retain, nonatomic) SPTSnackbarAnimationView *snackbarAnimationView; // @synthesize snackbarAnimationView=_snackbarAnimationView;
 @property(retain, nonatomic) SPTSnackbarPresenterImplementation *presenter; // @synthesize presenter=_presenter;
-@property(nonatomic) __weak id <SPTExternalIntegrationDriverDistractionService> driverDistractionService; // @synthesize driverDistractionService=_driverDistractionService;
+@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(nonatomic) __weak id <SPTFreeTierUIService> freeTierUIService; // @synthesize freeTierUIService=_freeTierUIService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

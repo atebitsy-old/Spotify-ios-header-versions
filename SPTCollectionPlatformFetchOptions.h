@@ -15,10 +15,7 @@
     _Bool _showsOnlyOfflinedContent;
     _Bool _showOnlyLocalFiles;
     _Bool _showOnlyPlayable;
-    _Bool _showsOnlyCompleteContainers;
-    _Bool _showsOnlySavedAlbums;
     _Bool _groupByName;
-    _Bool _groupByFullField;
     double _minimumUpdateInterval;
     NSArray *_sort;
     NSString *_textFilter;
@@ -28,11 +25,8 @@
 }
 
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
-@property(nonatomic) _Bool groupByFullField; // @synthesize groupByFullField=_groupByFullField;
 @property(nonatomic) _Bool groupByName; // @synthesize groupByName=_groupByName;
 @property(nonatomic) unsigned long long followedArtistFilter; // @synthesize followedArtistFilter=_followedArtistFilter;
-@property(nonatomic) _Bool showsOnlySavedAlbums; // @synthesize showsOnlySavedAlbums=_showsOnlySavedAlbums;
-@property(nonatomic) _Bool showsOnlyCompleteContainers; // @synthesize showsOnlyCompleteContainers=_showsOnlyCompleteContainers;
 @property(nonatomic) _Bool showOnlyPlayable; // @synthesize showOnlyPlayable=_showOnlyPlayable;
 @property(nonatomic) _Bool showOnlyLocalFiles; // @synthesize showOnlyLocalFiles=_showOnlyLocalFiles;
 @property(nonatomic) _Bool showsOnlyOfflinedContent; // @synthesize showsOnlyOfflinedContent=_showsOnlyOfflinedContent;

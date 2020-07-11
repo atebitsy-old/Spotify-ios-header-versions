@@ -24,7 +24,6 @@
     NSArray *_activeFilters;
     id <SPTSortingFilteringSortRule> _selectedSortRule;
     NSArray *_availableSortRules;
-    long long _dataGroupType;
     id <SPTYourLibraryMusicRangeDataSource> _rangeDataSource;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTFreeTierRecommendationsTracksDataLoader> _recommendationsTracksDataLoader;
@@ -63,7 +62,6 @@
 @property(retain, nonatomic) id <SPTFreeTierRecommendationsTracksDataLoader> recommendationsTracksDataLoader; // @synthesize recommendationsTracksDataLoader=_recommendationsTracksDataLoader;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) id <SPTYourLibraryMusicRangeDataSource> rangeDataSource; // @synthesize rangeDataSource=_rangeDataSource;
-@property(nonatomic) long long dataGroupType; // @synthesize dataGroupType=_dataGroupType;
 @property(readonly, copy, nonatomic) NSArray *availableSortRules; // @synthesize availableSortRules=_availableSortRules;
 @property(copy, nonatomic) id <SPTSortingFilteringSortRule> selectedSortRule; // @synthesize selectedSortRule=_selectedSortRule;
 @property(copy, nonatomic) NSArray *activeFilters; // @synthesize activeFilters=_activeFilters;

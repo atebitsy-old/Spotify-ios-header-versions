@@ -7,9 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAssistedCuration_CardContainer_CardEventFactory, SPTUBIMobileAssistedCuration_CardContainer_CardNavigatorEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileAssistedCuration_CardContainer_CardEventFactory, SPTUBIMobileAssistedCuration_CardContainer_CardNavigatorEventFactory;
 
 @protocol SPTUBIMobileAssistedCuration_CardContainerEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)swipeRightUiReveal;
+- (id <SPTUBIInteractionEvent>)swipeLeftUiReveal;
 - (id <SPTUBIMobileAssistedCuration_CardContainer_CardEventFactory>)cardFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
 - (id <SPTUBIMobileAssistedCuration_CardContainer_CardNavigatorEventFactory>)cardNavigatorFactoryWithPosition:(long long)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;

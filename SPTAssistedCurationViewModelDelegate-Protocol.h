@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError, NSString;
+@class NSError;
 @protocol SPTAssistedCurationViewModel;
 
 @protocol SPTAssistedCurationViewModelDelegate <NSObject>
 - (void)dismissSearchAssistedCurationViewModel:(id <SPTAssistedCurationViewModel>)arg1;
-- (void)assistedCurationViewModel:(id <SPTAssistedCurationViewModel>)arg1 showInfoViewWithMessage:(NSString *)arg2 andSubMessage:(NSString *)arg3;
+- (void)assistedCurationViewModel:(id <SPTAssistedCurationViewModel>)arg1 noCardsBecauseOffline:(_Bool)arg2;
 - (void)assistedCurationViewModel:(id <SPTAssistedCurationViewModel>)arg1 error:(NSError *)arg2;
 - (void)assistedCurationViewModel:(id <SPTAssistedCurationViewModel>)arg1 removedCardAtIndex:(long long)arg2;
 - (void)assistedCurationViewModel:(id <SPTAssistedCurationViewModel>)arg1 scrollToCardAtIndex:(long long)arg2;

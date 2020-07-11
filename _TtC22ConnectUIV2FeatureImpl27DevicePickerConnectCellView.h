@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl27DevicePickerConnectCellView : UITableViewCell
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: imageFactory
     // Error parsing type: , name: $__lazy_storage_$_contentContainer
     // Error parsing type: , name: $__lazy_storage_$_secondaryViewContainer
     // Error parsing type: , name: $__lazy_storage_$_mainIconImageView

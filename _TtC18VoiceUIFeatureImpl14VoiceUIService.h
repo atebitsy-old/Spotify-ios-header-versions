@@ -24,6 +24,7 @@
     // Error parsing type: , name: voiceViewController
     // Error parsing type: , name: voicePlayerEventListener
     // Error parsing type: , name: voicePlayerLogger
+    // Error parsing type: , name: onboardingViewController
     // Error parsing type: , name: wakewordController
     // Error parsing type: , name: testManager
     // Error parsing type: , name: $__lazy_storage_$_player
@@ -32,6 +33,7 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (void)idleStateWasReached;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

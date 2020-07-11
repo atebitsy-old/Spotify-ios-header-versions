@@ -18,6 +18,7 @@
 @property(readonly, nonatomic) NSArray *children;
 @property(readonly, copy, nonatomic) NSString *emptyContainerDescription;
 @property(readonly, nonatomic, getter=isContainer) _Bool container;
+@property(readonly, copy, nonatomic) NSString *source;
 @property(readonly, copy, nonatomic) NSString *uniqueId;
 @property(readonly, nonatomic) float playbackProgress;
 @property(readonly, nonatomic) long long placeholderIcon;

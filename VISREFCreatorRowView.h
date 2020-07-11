@@ -17,6 +17,7 @@
     NSLayoutConstraint *_textLabelLeadingConstraint;
 }
 
++ (void)updateLabelsAttributedText:(id)arg1 withCreators:(id)arg2 availableWidth:(double)arg3;
 @property(retain, nonatomic) NSLayoutConstraint *textLabelLeadingConstraint; // @synthesize textLabelLeadingConstraint=_textLabelLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *textLabelImageLeadingConstraint; // @synthesize textLabelImageLeadingConstraint=_textLabelImageLeadingConstraint;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
@@ -25,6 +26,8 @@
 - (void).cxx_destruct;
 - (id)lastBaselineAnchor;
 - (id)firstLineHeightAnchor;
+- (void)updateCreatorsLabelText;
+- (void)layoutSubviews;
 - (void)hideImage:(_Bool)arg1;
 - (id)init;
 

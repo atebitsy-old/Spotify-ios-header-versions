@@ -10,7 +10,7 @@
 #import "SPTFreeTierPlaylistTestManager-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistFeatureProperties;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, _TtP24EncoreIntegrationFeature20SPTEncoreTestManager_;
+@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState;
 
 @interface SPTFreeTierPlaylistTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTFreeTierPlaylistTestManager>
 {
@@ -23,7 +23,6 @@
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
-    id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> _encoreTestManager;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
     id <SPTFeatureFlagSignal> _weigthedShufflePlaySignal;
     id <SPTFeatureFlagSignal> _editAnnotationSignal;
@@ -44,7 +43,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> editAnnotationSignal; // @synthesize editAnnotationSignal=_editAnnotationSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> weigthedShufflePlaySignal; // @synthesize weigthedShufflePlaySignal=_weigthedShufflePlaySignal;
 @property(readonly, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> encoreTestManager; // @synthesize encoreTestManager=_encoreTestManager;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
@@ -57,14 +55,13 @@
 @property(readonly, nonatomic, getter=isDoubleStatePlayButtonEnabled) _Bool doubleStatePlayButtonEnabled;
 - (void)setupEpisodesAvailable;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
-@property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
 - (void)setupScrollPerformanceSignal;
 - (id)editAnnotationAbbaSignal;
 - (id)editAnnotationRolloutSignal;
 - (void)setupContextAwareEditorialTrackSharingSignal;
 - (void)setupEditAnnotationSignal;
 - (void)setupWeightedShufflePlay;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 freeTierEnabledSignal:(id)arg3 encoreTestManager:(id)arg4 featureProperties:(id)arg5;
+- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 freeTierEnabledSignal:(id)arg3 featureProperties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

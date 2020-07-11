@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierPlaylistFeatureProperties;
-@protocol SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierPlaylistTestManager, SPTFreeTierService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSortingFilteringService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierPlaylistTestManager, SPTFreeTierService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSortingFilteringService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierPlaylistServiceImplementation : NSObject <SPTFreeTierPlaylistService>
 {
@@ -24,7 +24,6 @@
     id <SPTSortingFilteringService> _sortingFilteringService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTFreeTierPlaylistTestManager> _testManager;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreIntegrationService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
 }
@@ -32,7 +31,6 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTSortingFilteringService> sortingFilteringService; // @synthesize sortingFilteringService=_sortingFilteringService;

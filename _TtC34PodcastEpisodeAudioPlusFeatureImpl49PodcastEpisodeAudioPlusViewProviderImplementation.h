@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: contentOpsFactory
     // Error parsing type: , name: hugsFactory
+    // Error parsing type: , name: hubsRendererFactory
 }
 
 - (void).cxx_destruct;

@@ -71,7 +71,6 @@
 @property(readonly, nonatomic) GLUEImageView *profilePicture; // @synthesize profilePicture=_profilePicture;
 - (id)submitButton;
 - (void).cxx_destruct;
-- (void)traitsDidChange:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)layoutProfilePicture;
 - (void)setupConstraintsWithStyle:(id)arg1;

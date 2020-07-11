@@ -100,8 +100,6 @@
 - (id)hugs_accessibilityLabelForGroupName:(id)arg1;
 - (id)hugs_mainAccessibilityHint;
 - (id)hugs_mainAccessibilityLabel;
-- (_Bool)spt_isFlagEnabled:(id)arg1;
-- (id)spt_enabledFlagsString;
 - (unsigned long long)spt_premiumDestinationCacheTTLFromHTTPResponseHeaders;
 - (id)spt_premiumDestinationGradientDirectionValue;
 - (id)spt_premiumDestinationGradientColorArray;

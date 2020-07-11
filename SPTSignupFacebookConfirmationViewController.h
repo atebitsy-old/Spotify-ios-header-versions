@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIViewController.h>
+#import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
@@ -12,10 +12,10 @@
 #import "SPTSignupFacebookConfirmationViewModelDelegate-Protocol.h"
 #import "SPTSignupTermsAndPolicyViewModelDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupFacebookConfirmationView, SPTSignupFacebookConfirmationViewModel;
+@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupFacebookConfirmationView, SPTSignupFacebookConfirmationViewModel, UIViewController;
 @protocol SPTPageContainer;
 
-@interface SPTSignupFacebookConfirmationViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTSignupFacebookConfirmationViewModelDelegate, SPTSignupTermsAndPolicyViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTSignupFacebookConfirmationViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTSignupFacebookConfirmationViewModelDelegate, SPTSignupTermsAndPolicyViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -30,7 +30,6 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
-- (void)traitCollectionDidChange:(id)arg1;
 - (void)userDidAcceptAllLicences:(id)arg1;
 @property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
 @property(readonly, nonatomic) UIViewController *presentingController;

@@ -28,7 +28,9 @@
     // Error parsing type: , name: $__lazy_storage_$_devicePickerTheme
     // Error parsing type: , name: $__lazy_storage_$_devicePickerLogger
     // Error parsing type: , name: $__lazy_storage_$_devicePickerLoggingInterceptor
+    // Error parsing type: , name: $__lazy_storage_$_connectButtonTheme
     // Error parsing type: , name: $__lazy_storage_$_connectButtonFactory
+    // Error parsing type: , name: $__lazy_storage_$_connectImageFactory
     // Error parsing type: , name: $__lazy_storage_$_uriDispatcher
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenterRouter
     // Error parsing type: , name: $__lazy_storage_$_flagsManager

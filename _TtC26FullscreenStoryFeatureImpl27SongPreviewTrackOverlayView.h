@@ -9,6 +9,7 @@
 @interface _TtC26FullscreenStoryFeatureImpl27SongPreviewTrackOverlayView : UIView
 {
     // Error parsing type: , name: style
+    // Error parsing type: , name: trackOverlayButton
     // Error parsing type: , name: thumbnailImageView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel

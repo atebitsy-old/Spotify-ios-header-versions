@@ -10,7 +10,7 @@
 #import "SPTPartnerTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPartnerIntegrationStateLoader, SPTPartnerNavigationBannerCoordinator;
-@protocol SPTAuthService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTDrivingStateDetectionService, SPTFeatureFlaggingService, SPTLogCenter, SPTLoginDelayedSignupService, SPTNetworkService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPartnerIntegrationRegistry, SPTPartnerTestManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
+@protocol SPTAuthService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTLogCenter, SPTLoginDelayedSignupService, SPTNetworkService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPartnerIntegrationRegistry, SPTPartnerTestManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTPartnerServiceImplementation : NSObject <SPTPartnerTestManagerObserver, SPTPartnerService>
 {
@@ -20,7 +20,7 @@
     id <SPTSettingsFeature> _settingsService;
     id <SPTNetworkService> _networkService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
-    id <SPTDrivingStateDetectionService> _drivingDetectionService;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTBannerFeature> _bannerService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTAuthService> _authService;
@@ -46,7 +46,7 @@
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(readonly, nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;
-@property(readonly, nonatomic) __weak id <SPTDrivingStateDetectionService> drivingDetectionService; // @synthesize drivingDetectionService=_drivingDetectionService;
+@property(readonly, nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(readonly, nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(readonly, nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;

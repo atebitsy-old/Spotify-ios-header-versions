@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIViewController.h>
+#import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTDynamicSignupFlowControllerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
@@ -14,10 +14,10 @@
 #import "SPTSignupPickerContainerViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupBirthDateViewModel, SPTSignupPickerContainerView, SPTSignupSingleInputFieldView;
+@class NSError, NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupBirthDateViewModel, SPTSignupPickerContainerView, SPTSignupSingleInputFieldView, UIViewController;
 @protocol SPTPageContainer;
 
-@interface SPTSignupBirthDateViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTSignupPickerContainerViewDelegate, UITextFieldDelegate, SPTSignupBirthDateViewModelDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTSignupBirthDateViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTSignupPickerContainerViewDelegate, UITextFieldDelegate, SPTSignupBirthDateViewModelDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -41,7 +41,6 @@
 - (void)userDidAcceptAllLicences:(id)arg1;
 - (void)createUserRequestDidFinishWithError:(id)arg1;
 - (void)createUserRequestDidStart;
-- (void)traitCollectionDidChange:(id)arg1;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPopOperationToViewController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPushOperationFromViewController:(id)arg2;

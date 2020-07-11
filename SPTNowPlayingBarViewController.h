@@ -7,16 +7,15 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTBarInteractiveTransitionParticipant-Protocol.h"
-#import "SPTNowPlayingBarViewControllerObservable-Protocol.h"
 #import "SPTNowPlayingDurationUnitViewModelDelegate-Protocol.h"
 #import "SPTNowPlayingDurationViewV2DataSource-Protocol.h"
 #import "SPTNowPlayingUnitProviderObserver-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSString, NSURL, SPTNowPlayingBarLeftAccessoryUnitProvider, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingDurationViewV2, SPTNowPlayingLogger, SPTObserverManager, SPTTheme, UIView;
+@class NSString, NSURL, SPTNowPlayingBarLeftAccessoryUnitProvider, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingDurationViewV2, SPTNowPlayingLogger, SPTTheme, UIView;
 @protocol SPTNowPlayingDurationUnitViewModel, SPTNowPlayingManager, SPTNowPlayingTestManager, SPTPageContainer;
 
-@interface SPTNowPlayingBarViewController : UIViewController <SPTNowPlayingUnitProviderObserver, SPTNowPlayingDurationViewV2DataSource, SPTNowPlayingDurationUnitViewModelDelegate, SPTBarInteractiveTransitionParticipant, SPTPageController, SPTNowPlayingBarViewControllerObservable>
+@interface SPTNowPlayingBarViewController : UIViewController <SPTNowPlayingUnitProviderObserver, SPTNowPlayingDurationViewV2DataSource, SPTNowPlayingDurationUnitViewModelDelegate, SPTBarInteractiveTransitionParticipant, SPTPageController>
 {
     SPTTheme *_theme;
     SPTNowPlayingBarModel *_model;
@@ -33,10 +32,8 @@
     UIView *_contentView;
     UIView *_leadingView;
     UIView *_bottomSeparatorView;
-    SPTObserverManager *_observerManager;
 }
 
-@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) UIView *bottomSeparatorView; // @synthesize bottomSeparatorView=_bottomSeparatorView;
 @property(retain, nonatomic) UIView *leadingView; // @synthesize leadingView=_leadingView;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
@@ -53,8 +50,6 @@
 @property(readonly, nonatomic) SPTNowPlayingBarModel *model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
-- (void)removeNowPlayingBarViewControllerObserver:(id)arg1;
-- (void)addNowPlayingBarViewControllerObserver:(id)arg1;
 - (struct CGSize)preferredContentSize;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
@@ -83,8 +78,6 @@
 - (void)setupConstraints;
 - (void)setupUI;
 - (void)viewDidDisappear:(_Bool)arg1;
-- (void)viewWillDisappear:(_Bool)arg1;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithTheme:(id)arg1 model:(id)arg2 nowPlayingManager:(id)arg3 barViewController:(id)arg4 leftAccessoryUnitProvider:(id)arg5 animationView:(id)arg6 durationViewModel:(id)arg7 testManager:(id)arg8 logger:(id)arg9 barLogger:(id)arg10;

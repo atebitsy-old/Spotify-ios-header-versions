@@ -10,7 +10,7 @@
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
 @class NSDictionary, NSString, SPTInAppMessageNoteOverlayController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
-@protocol SPTAuthController, SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTCrashReporter, SPTExternalIntegrationDriverDistractionController, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState;
+@protocol SPTAuthController, SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTCarDetector, SPTCrashReporter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState;
 
 @interface SPTInAppMessageSDKBannerPresentationController : NSObject <SPTOfflineModeStateObserver, SPTInAppMessagePresenter>
 {
@@ -20,7 +20,7 @@
     id <SPTBannerPresentationManager> _bannerPresentationManager;
     id <SPTOfflineModeState> _offlineModeState;
     SPTInAppMessageNowPlayingManagerRegistryImplementation *_nowPlayingManagerRegistry;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     SPTInAppMessageServiceLogger *_serviceLogger;
     id <SPTBannerPresentationManagerTicket> _bannerTicket;
     NSDictionary *_cancelationInfo;
@@ -40,7 +40,7 @@
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(readonly, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
-@property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
@@ -54,7 +54,7 @@
 - (void)cancelBannerMessagePresentation:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dealloc;
-- (id)initWithBannerPresentationManager:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 offlineModeState:(id)arg5 driverDistractionController:(id)arg6 nowPlayingManagerRegistry:(id)arg7 serviceLogger:(id)arg8 noteOverlayController:(id)arg9 crashReporter:(id)arg10 authController:(id)arg11;
+- (id)initWithBannerPresentationManager:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 offlineModeState:(id)arg5 carDetector:(id)arg6 nowPlayingManagerRegistry:(id)arg7 serviceLogger:(id)arg8 noteOverlayController:(id)arg9 crashReporter:(id)arg10 authController:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

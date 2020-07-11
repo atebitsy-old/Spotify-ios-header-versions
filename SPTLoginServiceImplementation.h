@@ -98,6 +98,7 @@
 - (id)loginFailureHandler;
 - (id)mainViewLoader;
 - (id)provideContinueWithEmailViewController;
+- (id)provideMethodLedStartViewControllerForMethod:(unsigned long long)arg1;
 - (id)provideWelcomeViewController;
 - (id)provideLoginViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideMagicLinkSentConfirmationViewControllerForURI:(id)arg1 context:(id)arg2;
@@ -106,6 +107,7 @@
 - (void)registerMagicLinkSentConfirmationViewController;
 - (void)registerMagicLinkDoRequestViewController;
 - (void)registerLoginViewController;
+- (void)registerMethodLedStartViewController;
 - (void)registerWelcomeViewController;
 - (void)registerViewControllers;
 - (void)showLoginView;

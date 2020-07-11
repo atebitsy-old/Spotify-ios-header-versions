@@ -11,7 +11,7 @@
 @interface SPTOauthTask : NSObject
 {
     struct unique_ptr<spotify::connectivity::oauth::objc::SPTAuthSchedulerBridge, std::__1::default_delete<spotify::connectivity::oauth::objc::SPTAuthSchedulerBridge>> _scheduler;
-    function_5bec9669 _callback;
+    function_88b465b1 _callback;
     shared_ptr_b60d0e1e _completion;
     CDUnknownBlockType _startOperation;
     id <SPTOauthTaskDelegate> _delegate;
@@ -19,7 +19,7 @@
 
 @property(readonly, nonatomic) __weak id <SPTOauthTaskDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) shared_ptr_b60d0e1e *completion; // @synthesize completion=_completion;
-@property(readonly, nonatomic) const function_5bec9669 *callback; // @synthesize callback=_callback;
+@property(readonly, nonatomic) const function_88b465b1 *callback; // @synthesize callback=_callback;
 @property(copy, nonatomic) CDUnknownBlockType startOperation; // @synthesize startOperation=_startOperation;
 - (id).cxx_construct;
 - (void).cxx_destruct;

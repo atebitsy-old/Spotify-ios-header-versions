@@ -94,7 +94,7 @@
 - (void)chipsSectionTableViewCell:(id)arg1 didSelectTopicCategory:(id)arg2;
 - (void)viewModel:(id)arg1 showContextMenuForTrailerEpisode:(id)arg2 atIndexPath:(id)arg3;
 - (void)viewModel:(id)arg1 scrollToLatestPlayedEpisodeAtIndexPath:(id)arg2;
-- (void)viewModelDidSelectContextMenuButton:(id)arg1;
+- (void)viewModelDidSelectContextMenuButton:(id)arg1 senderView:(id)arg2;
 - (void)podcastViewModelDidUpdatePlaybackRestrictions:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateFilteredState:(_Bool)arg2;
 - (void)showInfoViewWithError:(id)arg1;

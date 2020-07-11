@@ -9,7 +9,7 @@
 #import "SPTInAppMessageService-Protocol.h"
 
 @class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageActionsRegistryImplementation, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewBannerMessageController, SPTInAppMessagePreviewCardMessageController, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewNoteMessageController, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
-@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTExternalIntegrationDriverDistractionService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTTooltipService, SPTURIDispatchService, SlateFeature;
+@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTTooltipService, SPTURIDispatchService, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTInAppMessageServiceImplementation : NSObject <SPTInAppMessageService>
 {
@@ -25,7 +25,7 @@
     id <SlateFeature> _slateFeature;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTInstrumentationService> _instrumentationService;
-    id <SPTExternalIntegrationDriverDistractionService> _driverDistractionService;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTBannerFeature> _bannerFeature;
@@ -134,7 +134,7 @@
 @property(nonatomic) __weak id <SPTBannerFeature> bannerFeature; // @synthesize bannerFeature=_bannerFeature;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-@property(nonatomic) __weak id <SPTExternalIntegrationDriverDistractionService> driverDistractionService; // @synthesize driverDistractionService=_driverDistractionService;
+@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(nonatomic) __weak id <SPTInstrumentationService> instrumentationService; // @synthesize instrumentationService=_instrumentationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SlateFeature> slateFeature; // @synthesize slateFeature=_slateFeature;

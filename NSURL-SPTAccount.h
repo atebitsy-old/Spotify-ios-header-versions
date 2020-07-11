@@ -144,6 +144,8 @@
 + (id)spt_loginURIWithEmail:(id)arg1;
 + (id)spt_loginURI;
 + (id)spt_loginURIPrefixComponents;
++ (id)spt_loginMethodLedURIPrefixComponents;
++ (id)spt_loginMethodLedURI:(unsigned long long)arg1;
 + (id)spt_loginWelcomeURI;
 + (id)spt_setPasswordURLFromVersion:(id)arg1;
 + (id)spt_setPasswordURLV2;
@@ -190,9 +192,7 @@
 + (id)spt_podcastEpisodeURIForFeaturedContentTimelineURI:(id)arg1;
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURI:(id)arg1;
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURIString:(id)arg1;
-+ (id)spt_componentsByAppendingComponents:(id)arg1 withContext:(id)arg2;
-+ (id)spt_experimentationServiceURLWithContext:(id)arg1;
-+ (id)spt_preSignupExperimentationURLWithContext:(id)arg1;
++ (id)spt_preSignupExperimentationURL;
 + (id)spt_localPremiumDestinationHubsResponseFileURLWithLocaleIdentifier:(id)arg1;
 + (id)spt_localPremiumDestinationHubsResponseFileURL;
 + (id)spt_premiumDestinationHubsServiceURLWithPathComponents:(id)arg1 usingDevEnabled:(_Bool)arg2;
@@ -376,6 +376,7 @@
 - (_Bool)spt_isSignupPasswordInputViewURI;
 - (_Bool)spt_isSignupEmailInputViewURI;
 - (_Bool)spt_isLoginURI;
+- (_Bool)spt_isLoginMethodLedURI;
 - (_Bool)spt_isLoginWelcomeURI;
 @property(readonly, nonatomic) _Bool spt_isMadeForYouHub;
 - (id)spt_imageIdentifier;
@@ -539,6 +540,7 @@
 - (id)spt_URLByRemovingQuery;
 - (_Bool)spt_isTrackCreditsViewControllerURI;
 - (id)spt_UIDFromTrackURI;
+@property(readonly, nonatomic) _Bool spt_isPlaylistGenerationIntentURI;
 @property(readonly, nonatomic, getter=spt_isVoiceURL) _Bool isVoiceURL;
 
 // Remaining properties

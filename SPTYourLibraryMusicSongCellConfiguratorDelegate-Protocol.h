@@ -6,11 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class GLUETrackPreview, SPTYourLibraryMusicSongCellConfigurator, SPTYourLibraryMusicSongsEntitySectionHeaderView, UITableViewCell, UIView;
-@protocol SPTYourLibraryMusicSongsSectionViewModel;
+@class GLUETrackPreview, SPTYourLibraryMusicSongCellConfigurator, UITableViewCell, UIView;
 
 @protocol SPTYourLibraryMusicSongCellConfiguratorDelegate <NSObject>
-- (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 didTapOnEntitySectionHeader:(SPTYourLibraryMusicSongsEntitySectionHeaderView *)arg2 withViewModel:(id <SPTYourLibraryMusicSongsSectionViewModel>)arg3;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 mainSectionHeaderButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 trailingSectionHeaderButton:(UIView *)arg2;
 - (void)songCellConfigurator:(SPTYourLibraryMusicSongCellConfigurator *)arg1 didSwipeCell:(UITableViewCell *)arg2;

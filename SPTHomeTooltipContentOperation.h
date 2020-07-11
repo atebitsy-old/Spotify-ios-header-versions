@@ -14,6 +14,7 @@
 
 @interface SPTHomeTooltipContentOperation : NSObject <HUBContentOperation, SPTHomeViewControllerDelegate>
 {
+    _Bool _operationPerformed;
     id <HUBContentOperationDelegate> delegate;
     id <SPTLocalSettings> _localSettings;
     double _horizontalAnchorPosition;
@@ -21,6 +22,7 @@
     unsigned long long _presentationCount;
 }
 
+@property(nonatomic) _Bool operationPerformed; // @synthesize operationPerformed=_operationPerformed;
 @property(nonatomic) unsigned long long presentationCount; // @synthesize presentationCount=_presentationCount;
 @property(readonly, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
 @property(readonly, nonatomic) double horizontalAnchorPosition; // @synthesize horizontalAnchorPosition=_horizontalAnchorPosition;
@@ -28,6 +30,7 @@
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
 - (void)didLoadSeedASessionBarButtonItem:(id)arg1;
+- (_Bool)shouldHideTooltip;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithLocalSettings:(id)arg1 horizontalAnchorPosition:(double)arg2 persistentCounter:(id)arg3;
 

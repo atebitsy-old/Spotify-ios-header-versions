@@ -12,7 +12,7 @@
 #import "SPTSlateDelegate-Protocol.h"
 
 @class NSDictionary, NSString, SPTInAppMessageServiceLogger, UIView;
-@protocol SPTAuthController, SPTCrashReporter, SPTExternalIntegrationDriverDistractionController, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager;
+@protocol SPTAuthController, SPTCarDetector, SPTCrashReporter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager;
 
 @interface SPTInAppMessageCardPresentationController : NSObject <SPTSlateDelegate, SPTSlateDataSource, SPTOfflineModeStateObserver, SPTInAppMessagePresenter>
 {
@@ -25,7 +25,7 @@
     id <SPTSlateBuilderProvider> _slateBuilderProvider;
     id <SPTSlate> _slate;
     id <SPTOfflineModeState> _offlineModeState;
-    id <SPTExternalIntegrationDriverDistractionController> _driverDistractionController;
+    id <SPTCarDetector> _carDetector;
     SPTInAppMessageServiceLogger *_serviceLogger;
     NSDictionary *_cancelationInfo;
     id <SPTCrashReporter> _crashReporter;
@@ -39,7 +39,7 @@
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(readonly, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
-@property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
 @property(readonly, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
@@ -67,7 +67,7 @@
 - (void)cancelMessagePresentation:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 matchedPattern:(id)arg2 triggerType:(id)arg3 slateManager:(id)arg4 slateBuilderProvider:(id)arg5 offlineModeState:(id)arg6 driverDistractionController:(id)arg7 serviceLogger:(id)arg8 crashReporter:(id)arg9 authController:(id)arg10;
+- (id)initWithViewModel:(id)arg1 matchedPattern:(id)arg2 triggerType:(id)arg3 slateManager:(id)arg4 slateBuilderProvider:(id)arg5 offlineModeState:(id)arg6 carDetector:(id)arg7 serviceLogger:(id)arg8 crashReporter:(id)arg9 authController:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

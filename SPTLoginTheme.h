@@ -16,6 +16,7 @@
 - (id)delayedSignupTermsAndConditionsTextViewStyle;
 - (id)termsAndConditionsTextViewStyle;
 - (float)adjustTopInsetsFromCurrent:(float)arg1;
+- (id)login_smallTextLabel;
 - (id)login_inputFieldDisclosureLabelStyle;
 - (id)login_inputFieldHeadingLabelStyle;
 - (id)login_titleHeadingLabelStyle;
@@ -36,6 +37,7 @@
 - (id)autosendLinkDialogViewStyle;
 - (id)continueWithEmailViewStyle;
 - (id)continueWithWelcomeViewStyle;
+- (id)methodLedStartScreenStyle;
 - (id)welcomeViewStyle;
 - (id)magicLinkDoRequestViewStyle;
 - (id)magicLinkSentConfirmationViewStyle;

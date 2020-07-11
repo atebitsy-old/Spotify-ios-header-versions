@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIViewController.h>
+#import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTMagicLinkDoRequestViewModelDelegate-Protocol.h"
@@ -15,7 +15,7 @@
 @class NSError, NSString, NSURL, SPTLoginMagicLinkDoRequestView, SPTLoginMagicLinkDoRequestViewModel, SPTLoginTheme, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginMagicLinkDoRequestViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTPageController, SPTLoginViewControllerProtocol, UITextFieldDelegate, SPTMagicLinkDoRequestViewModelDelegate>
+@interface SPTLoginMagicLinkDoRequestViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTPageController, SPTLoginViewControllerProtocol, UITextFieldDelegate, SPTMagicLinkDoRequestViewModelDelegate>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -32,7 +32,6 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
-- (void)traitCollectionDidChange:(id)arg1;
 - (void)viewModelDidSucceedRequestMagicLink:(id)arg1;
 - (void)viewModel:(id)arg1 didFailRequestMagicLinkWithError:(id)arg2;
 - (void)viewModelDidStartRequestMagicLink:(id)arg1;

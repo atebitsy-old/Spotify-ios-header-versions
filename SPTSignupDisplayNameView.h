@@ -54,7 +54,6 @@
 - (id)submitButton;
 @property(retain, nonatomic) NSString *transitionContextViewKey; // @synthesize transitionContextViewKey=_transitionContextViewKey;
 - (void).cxx_destruct;
-- (void)traitsDidChange:(id)arg1;
 @property(readonly, nonatomic) UIView *animatableContentView;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints:(id)arg1;

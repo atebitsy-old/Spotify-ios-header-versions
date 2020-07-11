@@ -14,7 +14,7 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class NSArray, NSMutableSet, NSNotificationCenter, NSString, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentLayerViewModel, SPTNowPlayingShowsFormatOverlayView, SPTObserverManager, SPTTheme, UICollectionView;
+@class NSArray, NSMutableSet, NSNotificationCenter, NSString, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentLayerViewModel, SPTNowPlayingLogger, SPTNowPlayingShowsFormatOverlayView, SPTObserverManager, SPTTheme, UICollectionView;
 
 @interface SPTNowPlayingContentLayerViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, SPTNowPlayingContentLayerViewModelDelegate, SPTNowPlayingContentLayerResolverDelegate, SPTNowPlayingContainerIdleMonitorObserver, SPTNowPlayingContentViewController, SPTNowPlayingContainerIdleMonitorReceiving>
 {
@@ -25,6 +25,7 @@
     SPTNowPlayingContainerIdleMonitor *_idleMonitor;
     SPTObserverManager *_observerManager;
     NSNotificationCenter *_notificationCenter;
+    SPTNowPlayingLogger *_nowPlayingLogger;
     SPTNowPlayingShowsFormatOverlayView *_overlayView;
     UIViewController *_contentDecorationViewController;
     NSMutableSet *_unconfiguredIndexPaths;
@@ -39,6 +40,7 @@
 @property(retain, nonatomic) NSMutableSet *unconfiguredIndexPaths; // @synthesize unconfiguredIndexPaths=_unconfiguredIndexPaths;
 @property(retain, nonatomic) UIViewController *contentDecorationViewController; // @synthesize contentDecorationViewController=_contentDecorationViewController;
 @property(retain, nonatomic) SPTNowPlayingShowsFormatOverlayView *overlayView; // @synthesize overlayView=_overlayView;
+@property(readonly, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTNowPlayingContainerIdleMonitor *idleMonitor; // @synthesize idleMonitor=_idleMonitor;
@@ -71,8 +73,10 @@
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
+- (void)configureCell:(id)arg1 atIndexPath:(id)arg2 withProvider:(id)arg3 forTrack:(id)arg4;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)refreshLeftInset;
+- (void)reloadCurrentItemIfNeeded;
 - (void)reloadDataMovingToIndexPath:(id)arg1 relativeMovement:(long long)arg2;
 - (id)cellAsCoverArtCell:(id)arg1;
 - (void)updateContentDecorationViewControllerFrame;
@@ -92,7 +96,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 notificationCenter:(id)arg3;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 notificationCenter:(id)arg3 nowPlayingLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
