@@ -12,5 +12,6 @@
 @property(nonatomic) struct CGSize iconSize;
 @property(nonatomic) _Bool hidesTextWhenDisconnected;
 @property(nonatomic) __weak id <SPTGaiaDevicesAvailableViewDelegate> delegate;
+- (void)viewDidAppear;
 @end
 

@@ -49,6 +49,7 @@
 - (void).cxx_destruct;
 - (void)editPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)editPlaylistModel:(id)arg1 modelEntityDidChange:(id)arg2;
+- (void)updateWithModelEntity:(id)arg1;
 - (void)saveMovesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)saveWithCompletion:(CDUnknownBlockType)arg1;
 - (void)moveTrackAtIndexPath:(id)arg1 toIndexPath:(id)arg2;

@@ -26,7 +26,7 @@
 - (void).cxx_destruct;
 - (void)setCompletion:(shared_ptr_b60d0e1e)arg1;
 @property(readonly, nonatomic) struct Scheduler *scheduler;
-@property(readonly, nonatomic) function_6e82c99d callback;
+@property(readonly, nonatomic) function_05dfbad0 callback;
 - (void)cancel;
 - (void)start;
 - (void)setDelegate:(id)arg1 onScheduler:(id)arg2;

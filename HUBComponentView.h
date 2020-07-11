@@ -8,21 +8,26 @@
 
 #import "HUBComponentViewAccessibility-Protocol.h"
 
-@class NSString;
+@class NSString, UILongPressGestureRecognizer;
 @protocol HUBComponent, HUBComponentModel;
 
 @interface HUBComponentView : UIView <HUBComponentViewAccessibility>
 {
     id <HUBComponentModel> _model;
+    UILongPressGestureRecognizer *_longPressGestureRecognizer;
     id <HUBComponent> _component;
 }
 
 @property(retain, nonatomic) id <HUBComponent> component; // @synthesize component=_component;
+@property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
 - (void).cxx_destruct;
 - (struct CGSize)preferredSizeForContainerViewSize:(struct CGSize)arg1;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
+- (void)didLongPressView;
+- (void)setUpGestureRecognizers;
+- (id)initWithFrame:(struct CGRect)arg1;
 - (void)hub_setupAccessibility;
 
 // Remaining properties

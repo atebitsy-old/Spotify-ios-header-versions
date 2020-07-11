@@ -7,13 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTPlayerObserver-Protocol.h"
-#import "SPTPlayerStagedContextObserver-Protocol.h"
 #import "SPTStatefulPlayerObserver-Protocol.h"
 
 @class NSString, SPTNowPlayingAuxiliaryActionsModel, SPTNowPlayingEntityDecorationController, SPTNowPlayingPlaybackController, SPTNowPlayingQueueMetadataModel, SPTNowPlayingTrackPosition, SPTObserverManager, SPTPlayerTrack, SPTStatefulPlayer;
 @protocol SPTCollectionPlatformTestManager, SPTNowPlayingModelDelegate, SPTPlayer;
 
-@interface SPTNowPlayingModel : NSObject <SPTStatefulPlayerObserver, SPTPlayerObserver, SPTPlayerStagedContextObserver>
+@interface SPTNowPlayingModel : NSObject <SPTStatefulPlayerObserver, SPTPlayerObserver>
 {
     id <SPTNowPlayingModelDelegate> _delegate;
     unsigned long long _currentToggleMode;
@@ -40,7 +39,6 @@
 @property(readonly, nonatomic) unsigned long long currentToggleMode; // @synthesize currentToggleMode=_currentToggleMode;
 @property(nonatomic) __weak id <SPTNowPlayingModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)player:(id)arg1 didStageContext:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
@@ -59,7 +57,7 @@
 - (void)addObserver:(id)arg1;
 @property(readonly, nonatomic) SPTPlayerTrack *currentTrack;
 - (void)dealloc;
-- (id)initWithPlayer:(id)arg1 collectionPlatform:(id)arg2 playlistDataLoader:(id)arg3 radioManager:(id)arg4 adsManager:(id)arg5 nowPlayingService:(id)arg6 productState:(id)arg7 queueService:(id)arg8 testManager:(id)arg9 collectionTestManager:(id)arg10 statefulPlayer:(id)arg11;
+- (id)initWithPlayer:(id)arg1 collectionPlatform:(id)arg2 playlistDataLoader:(id)arg3 radioManager:(id)arg4 adsManager:(id)arg5 productState:(id)arg6 queueService:(id)arg7 testManager:(id)arg8 collectionTestManager:(id)arg9 statefulPlayer:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

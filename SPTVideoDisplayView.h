@@ -8,7 +8,7 @@
 
 #import "SPTVideoApplicationStateObserver-Protocol.h"
 
-@class AVPlayer, NSString, SPTVideoApplicationStateObservable, SPTVideoPlayerSource;
+@class AVPlayer, BMSubtitleLayouter, NSString, SPTVideoApplicationStateObservable, SPTVideoPlayerSource;
 @protocol BMKVOController, SPTVideoDisplayViewDelegate;
 
 @interface SPTVideoDisplayView : UIView <SPTVideoApplicationStateObserver>
@@ -18,10 +18,12 @@
     SPTVideoPlayerSource *_playerSource;
     SPTVideoApplicationStateObservable *_appStateObservable;
     id <BMKVOController> _kvoController;
+    BMSubtitleLayouter *_subtitleLayouter;
     struct CGRect _videoRect;
 }
 
 + (Class)layerClass;
+@property(retain, nonatomic) BMSubtitleLayouter *subtitleLayouter; // @synthesize subtitleLayouter=_subtitleLayouter;
 @property(retain, nonatomic) id <BMKVOController> kvoController; // @synthesize kvoController=_kvoController;
 @property(retain, nonatomic) SPTVideoApplicationStateObservable *appStateObservable; // @synthesize appStateObservable=_appStateObservable;
 @property(nonatomic) __weak SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
@@ -29,6 +31,8 @@
 @property(nonatomic) struct CGRect videoRect; // @synthesize videoRect=_videoRect;
 @property(nonatomic, getter=isVideoDisabled) _Bool videoDisabled; // @synthesize videoDisabled=_videoDisabled;
 - (void).cxx_destruct;
+- (void)updateAvPlayerItem:(id)arg1 withSubtitleWidthPercentage:(double)arg2 fontPercentage:(double)arg3;
+- (void)layoutSubtitles;
 @property(readonly, copy) NSString *description;
 - (id)playerLayer;
 @property(nonatomic) long long gravity;
@@ -39,8 +43,9 @@
 - (void)didBecomeActive;
 - (void)didChangeBackgroundState:(_Bool)arg1;
 - (void)refreshVideoRect;
+- (void)layoutSubviews;
 - (void)dealloc;
-- (id)initWithPlayerSource:(id)arg1 kvoControllerFactory:(id)arg2 appStateObservable:(id)arg3;
+- (id)initWithPlayerSource:(id)arg1 kvoControllerFactory:(id)arg2 appStateObservable:(id)arg3 subtitleLayouter:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

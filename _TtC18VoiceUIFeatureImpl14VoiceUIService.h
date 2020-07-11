@@ -26,14 +26,17 @@
     // Error parsing type: , name: voicePlayerLogger
     // Error parsing type: , name: onboardingViewController
     // Error parsing type: , name: wakewordController
+    // Error parsing type: , name: voiceController
+    // Error parsing type: , name: onboardingController
     // Error parsing type: , name: testManager
     // Error parsing type: , name: $__lazy_storage_$_player
+    // Error parsing type: , name: $__lazy_storage_$_linkDispatcher
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (void)idleStateWasReached;
+- (void)initialViewDidAppear;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -12,8 +12,6 @@
 
 @interface SPTFreeTierPlaylistViewModelConfigurationNPT : NSObject <SPTFreeTierPlaylistViewModelConfiguration>
 {
-    _Bool _albumTitleIncludedInItemSubtitles;
-    _Bool _collectionMenuIconsEnabled;
     _Bool _likeActionPlacedInsideHeader;
     _Bool _playButtonPausingPlay;
     _Bool _playlistOwnerPageEnabled;
@@ -32,8 +30,6 @@
 @property(readonly, nonatomic, getter=isPlaylistOwnerPageEnabled) _Bool playlistOwnerPageEnabled; // @synthesize playlistOwnerPageEnabled=_playlistOwnerPageEnabled;
 @property(readonly, nonatomic, getter=isPlayButtonPausingPlay) _Bool playButtonPausingPlay; // @synthesize playButtonPausingPlay=_playButtonPausingPlay;
 @property(readonly, nonatomic, getter=isLikeActionPlacedInsideHeader) _Bool likeActionPlacedInsideHeader; // @synthesize likeActionPlacedInsideHeader=_likeActionPlacedInsideHeader;
-@property(readonly, nonatomic, getter=isCollectionMenuIconsEnabled) _Bool collectionMenuIconsEnabled; // @synthesize collectionMenuIconsEnabled=_collectionMenuIconsEnabled;
-@property(readonly, nonatomic, getter=isAlbumTitleIncludedInItemSubtitles) _Bool albumTitleIncludedInItemSubtitles; // @synthesize albumTitleIncludedInItemSubtitles=_albumTitleIncludedInItemSubtitles;
 - (id)init;
 
 // Remaining properties

@@ -8,8 +8,9 @@
 
 @interface _TtC18VoiceUIFeatureImpl18WakewordController : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: delegate
     // Error parsing type: , name: provider
-    // Error parsing type: , name: $__lazy_storage_$_wakewordLoopController
+    // Error parsing type: , name: loop
 }
 
 @end

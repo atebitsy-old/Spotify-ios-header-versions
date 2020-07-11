@@ -16,6 +16,7 @@
 {
     _Bool _showTrackArtwork;
     _Bool _useBarButtons;
+    _Bool _excludeAllEpisodes;
     NSArray *_cellProviders;
     id <SPTFreeTierPlaylistContextMenuPresenter> _contextMenuPresenter;
     id <SPTFreeTierPlaylistDefaultHeaderViewModel> _defaultHeaderViewModel;
@@ -46,14 +47,14 @@
 @property(copy, nonatomic) CDUnknownBlockType playViewModelBlock; // @synthesize playViewModelBlock=_playViewModelBlock;
 @property(copy, nonatomic) NSArray *cellProviderBlocks; // @synthesize cellProviderBlocks=_cellProviderBlocks;
 @property(copy, nonatomic) CDUnknownBlockType headerProviderBlock; // @synthesize headerProviderBlock=_headerProviderBlock;
+@property(nonatomic) _Bool excludeAllEpisodes; // @synthesize excludeAllEpisodes=_excludeAllEpisodes;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistPlayLogger> playLogger; // @synthesize playLogger=_playLogger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction; // @synthesize additionalCallToAction=_additionalCallToAction;
 @property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 - (void)setUseBarButtons:(_Bool)arg1;
 @property(readonly, nonatomic) _Bool useBarButtons;
-- (void)setShowTrackArtwork:(_Bool)arg1;
-@property(readonly, nonatomic) _Bool showTrackArtwork;
+@property(nonatomic) _Bool showTrackArtwork; // @synthesize showTrackArtwork=_showTrackArtwork;
 - (void)setRowStyle:(id)arg1;
 @property(readonly, copy, nonatomic) GLUEEntityRowStyle *rowStyle;
 - (void)setHeaderType:(long long)arg1;
@@ -76,7 +77,7 @@
 - (void)withCellProvider:(CDUnknownBlockType)arg1;
 - (id)build;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> cellProviderDelegate;
-- (id)initWithPlaylistViewModel:(id)arg1 playViewModel:(id)arg2 model:(id)arg3 offlineViewModel:(id)arg4 rowStyle:(id)arg5 logger:(id)arg6 delegate:(id)arg7;
+- (id)initWithPlaylistViewModel:(id)arg1 itemsViewModel:(id)arg2 playViewModel:(id)arg3 model:(id)arg4 offlineViewModel:(id)arg5 rowStyle:(id)arg6 logger:(id)arg7 delegate:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

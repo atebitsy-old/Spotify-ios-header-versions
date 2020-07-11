@@ -31,12 +31,14 @@
 + (id)black20;
 + (id)white90;
 + (id)white70;
++ (id)white60;
 + (id)white50;
 + (id)white30;
 + (id)white10;
 + (id)white0;
 + (id)black90;
 + (id)black70;
++ (id)black60;
 + (id)black50;
 + (id)black30;
 + (id)black10;

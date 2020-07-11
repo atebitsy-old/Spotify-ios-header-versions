@@ -9,7 +9,7 @@
 @interface _TtC18VoiceUIFeatureImpl28VoiceStopIntentEffectHandler : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: playbackController
-    // Error parsing type: , name: dismissHandler
+    // Error parsing type: , name: controllerDelegate
 }
 
 @end

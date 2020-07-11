@@ -9,14 +9,14 @@
 #import "HUBComponent-Protocol.h"
 
 @class NSSet;
-@protocol _TtP24EncoreIntegrationFeature24SPTArtistTrackRowFactory_;
+@protocol _TtP24EncoreIntegrationFeature24SPTTrackRowArtistFactory_;
 
 @interface SPTFreeTierArtistTrackRowComponent : HUGSThemableComponent <HUBComponent>
 {
-    id <_TtP24EncoreIntegrationFeature24SPTArtistTrackRowFactory_> _artistComponentFactory;
+    id <_TtP24EncoreIntegrationFeature24SPTTrackRowArtistFactory_> _artistComponentFactory;
 }
 
-@property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature24SPTArtistTrackRowFactory_> artistComponentFactory; // @synthesize artistComponentFactory=_artistComponentFactory;
+@property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature24SPTTrackRowArtistFactory_> artistComponentFactory; // @synthesize artistComponentFactory=_artistComponentFactory;
 - (void).cxx_destruct;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;

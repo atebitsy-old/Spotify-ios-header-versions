@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: viewBinder
-    // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: loopControllerConnected
 }
 

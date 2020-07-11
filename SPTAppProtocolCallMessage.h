@@ -46,6 +46,8 @@
 @property(readonly, nonatomic) long long setPlaybackSpeed_playbackSpeed;
 - (_Bool)seekToPosition_hasPositionParameter;
 - (long long)seekToPosition_position;
+- (_Bool)spt_setPlaybackPositionHasPositionParameter;
+- (long long)spt_setPlaybackPositionPosition;
 @property(readonly, nonatomic) _Bool setRepeat_hasRepeatParameter;
 @property(readonly, nonatomic) long long setRepeat_repeat;
 @property(readonly, copy, nonatomic) NSString *getRecommendedItems_contentType;

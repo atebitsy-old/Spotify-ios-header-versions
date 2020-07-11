@@ -6,16 +6,23 @@
 
 #import <UIKit/UIViewController.h>
 
-@interface _TtC34PodcastEpisodeAudioPlusFeatureImpl51PodcastEpisodeAudioPlusViewControllerImplementation : UIViewController
+#import "HUBViewComponentDelegate-Protocol.h"
+
+@interface _TtC34PodcastEpisodeAudioPlusFeatureImpl51PodcastEpisodeAudioPlusViewControllerImplementation : UIViewController <HUBViewComponentDelegate>
 {
     // Error parsing type: , name: audioPlusHubViewModel
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: componentManager
     // Error parsing type: , name: componentRegistry
+    // Error parsing type: , name: eventHandler
+    // Error parsing type: , name: dataLoader
+    // Error parsing type: , name: firedImpressions
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)hubView:(id)arg1 componentViewDidDisappear:(id)arg2;
+- (void)hubView:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)viewModelDidLoad:(id)arg1 dataSource:(unsigned long long)arg2;
 - (void)viewModelDidLoad:(id)arg1;
 - (id)initWithCoder:(id)arg1;

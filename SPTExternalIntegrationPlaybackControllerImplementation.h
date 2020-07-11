@@ -64,6 +64,7 @@
 - (void)setPodcastPlaybackSpeed:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)resumeWithExternalActionOrigin:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)pauseWithExternalActionOrigin:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 externalParameterProvider:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (_Bool)canPerformActionWithURI:(id)arg1;
 - (void)initiatePlaybackWithURI:(id)arg1 options:(id)arg2 origin:(id)arg3 requestOptions:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;

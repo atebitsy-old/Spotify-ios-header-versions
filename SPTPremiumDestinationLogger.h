@@ -15,9 +15,9 @@
 
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
-- (void)logInteractionWithuserIntent:(id)arg1 position:(id)arg2;
+- (void)logInteractionWithuserIntent:(id)arg1 position:(id)arg2 pageURIString:(id)arg3;
 - (void)logInteractionWithuserIntent:(id)arg1;
-- (void)logDidUserScrollAtPosition:(id)arg1;
+- (void)logDidUserScrollAtPosition:(id)arg1 pageURIString:(id)arg2;
 - (void)logDidTapDismissAlert;
 - (void)logDidTapToShowAlert;
 - (id)initWithLogCenter:(id)arg1;

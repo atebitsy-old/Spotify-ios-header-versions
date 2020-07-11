@@ -9,7 +9,7 @@
 #import "SPTGaiaConnectObserver-Protocol.h"
 #import "SPTGaiaSocialListeningIntegrationManagerObserver-Protocol.h"
 
-@class NSNotificationCenter, NSString, SPTGaiaDevicePickerAppearanceManager, SPTGaiaSocialListeningIntegrationManager, SPTTheme, UIColor, UIImage;
+@class NSNotificationCenter, NSString, SPTGaiaDevicePickerAppearanceManager, SPTGaiaSocialListeningIntegrationManager, SPTGaiaUbiLogger, SPTTheme, UIColor, UIImage;
 @protocol SPTGaiaConnectAPI, SPTGaiaDevicesAvailableViewModelDelegate;
 
 @interface SPTGaiaDevicesAvailableViewModel : NSObject <SPTGaiaConnectObserver, SPTGaiaSocialListeningIntegrationManagerObserver>
@@ -26,9 +26,11 @@
     NSNotificationCenter *_notificationCenter;
     long long _appearanceRules;
     SPTGaiaSocialListeningIntegrationManager *_socialListeningManager;
+    SPTGaiaUbiLogger *_ubiLogger;
     struct CGSize _iconSize;
 }
 
+@property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 @property(readonly, nonatomic) long long appearanceRules; // @synthesize appearanceRules=_appearanceRules;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
@@ -45,6 +47,7 @@
 - (void).cxx_destruct;
 - (void)socialListeningIntegrationManagerUpdated:(id)arg1;
 - (void)dealloc;
+- (void)logImpression;
 - (id)inactiveFontColor;
 - (id)activeFontColor;
 - (id)createColor;
@@ -64,7 +67,7 @@
 - (void)addThemeLayoutObserver;
 - (void)setupSocialListeningManager;
 - (void)setupGaiaManager;
-- (id)initWithConnectManager:(id)arg1 theme:(id)arg2 appearanceManager:(id)arg3 notificationCenter:(id)arg4 appearanceRules:(long long)arg5 socialListeningManager:(id)arg6;
+- (id)initWithConnectManager:(id)arg1 theme:(id)arg2 appearanceManager:(id)arg3 notificationCenter:(id)arg4 appearanceRules:(long long)arg5 socialListeningManager:(id)arg6 ubiLogger:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

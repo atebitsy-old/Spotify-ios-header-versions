@@ -18,13 +18,14 @@
 @property(readonly, nonatomic) SPTPsesCommandLineArguments *psesCommandLineArguments; // @synthesize psesCommandLineArguments=_psesCommandLineArguments;
 @property(readonly, nonatomic) id <SPTPreSignupExperimentationFeatureFlagsLoader> featureFlagsLoader; // @synthesize featureFlagsLoader=_featureFlagsLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic, getter=isStartScreenImageryEnabled) _Bool startScreenImageryEnabled;
+- (unsigned long long)welcomeViewImageryCell;
 @property(readonly, nonatomic, getter=isPhoneNumberEnabled) _Bool phoneNumberEnabled;
 @property(readonly, nonatomic, getter=isDelayedSignupSecondCellEnabled) _Bool delayedSignupSecondCellEnabled;
 @property(readonly, nonatomic, getter=isDelayedSignupFirstCellEnabled) _Bool delayedSignupFirstCellEnabled;
 @property(readonly, nonatomic, getter=isDelayedSignupExperimentEnabled) _Bool delayedSignupExperimentEnabled;
 @property(readonly, nonatomic, getter=isLogin5MagicLinkEnabled) _Bool login5MagicLinkEnabled;
 @property(readonly, nonatomic, getter=isLogin5BootstrapEnabled) _Bool login5BootstrapEnabled;
-@property(readonly, nonatomic, getter=isLogin5Enabled) _Bool login5Enabled;
 @property(readonly, nonatomic, getter=isIntentLedWelcomeEnabled) _Bool intentLedWelcomeEnabled;
 @property(readonly, nonatomic, getter=isMethodLedWelcomeEnabled) _Bool methodLedWelcomeEnabled;
 @property(readonly, nonatomic, getter=shouldHidePasswordScreen) _Bool hidePassword;

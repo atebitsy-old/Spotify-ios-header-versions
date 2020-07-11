@@ -6,21 +6,23 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDynamicSignupFlowController;
+@class SPTDynamicSignupFlowController, SPTLoginMethodLedStartViewLogger;
 
 @interface SPTLoginMethodLedStartScreenViewModel : NSObject
 {
+    SPTLoginMethodLedStartViewLogger *_logger;
     SPTDynamicSignupFlowController *_flowController;
 }
 
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
+@property(readonly, nonatomic) SPTLoginMethodLedStartViewLogger *logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
 - (void)userClickedSignup;
 - (void)userClickedLogin;
 - (id)buttonContainerHeadingText;
 - (id)signupButtonText;
 - (id)loginButtonText;
-- (id)initWithFlowController:(id)arg1;
+- (id)initWithFlowController:(id)arg1 logger:(id)arg2;
 
 @end
 

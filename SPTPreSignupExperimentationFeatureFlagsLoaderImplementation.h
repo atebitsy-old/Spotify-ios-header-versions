@@ -14,12 +14,14 @@
 
 @interface SPTPreSignupExperimentationFeatureFlagsLoaderImplementation : NSObject <SPTDataLoaderDelegate, SPTPreSignupExperimentationFeatureFlagsLoader>
 {
+    _Bool _useNewEndpoint;
     id <SPTPreSignupExperimentationFeatureFlagsLoaderDelegate> delegate;
     SPTDataLoader *_dataLoader;
     SPTPreSignupExperimentationCacheManager *_cacheManager;
     SPTPreSignupExperimentationLogger *_logger;
 }
 
+@property(readonly, nonatomic) _Bool useNewEndpoint; // @synthesize useNewEndpoint=_useNewEndpoint;
 @property(readonly, nonatomic) SPTPreSignupExperimentationLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTPreSignupExperimentationCacheManager *cacheManager; // @synthesize cacheManager=_cacheManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -31,9 +33,9 @@
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)provideFeatureFlags;
-- (void)fetchFeatureFlags;
+- (void)fetchFeatureFlagsWithNewEndpoint:(_Bool)arg1;
 - (void)loadFeatureFlags;
-- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 logger:(id)arg3;
+- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 logger:(id)arg3 useNewEndpoint:(_Bool)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

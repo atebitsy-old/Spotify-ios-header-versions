@@ -60,7 +60,7 @@
 - (void)glue_applyStyle:(id)arg1;
 - (void)setPropLabelText:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
-- (id)initWithTheme:(id)arg1;
+- (id)initWithStyle:(id)arg1;
 
 @end
 

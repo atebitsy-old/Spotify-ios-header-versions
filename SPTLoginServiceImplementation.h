@@ -91,6 +91,8 @@
 - (id)provideWelcomeViewControllerWithTheme:(id)arg1 mainViewLoader:(id)arg2 loginStateController:(id)arg3 performanceLogging:(id)arg4 phoneNumberEnabled:(_Bool)arg5;
 - (void)refreshStickyCredentialsDatabaseManager;
 - (id)provideStickyCredentialsDbManager;
+- (id)provideAppleAuthController;
+- (id)provideFacebookAuthController:(_Bool)arg1;
 - (id)provideAccountSwitcher;
 - (id)provideNavigationRouter;
 - (id)provideDynamicFlowController;
@@ -98,7 +100,8 @@
 - (id)loginFailureHandler;
 - (id)mainViewLoader;
 - (id)provideContinueWithEmailViewController;
-- (id)provideMethodLedStartViewControllerForMethod:(unsigned long long)arg1;
+- (id)provideIntentLedStartViewControllerForURI:(id)arg1 context:(id)arg2;
+- (id)provideMethodLedStartViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideWelcomeViewController;
 - (id)provideLoginViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideMagicLinkSentConfirmationViewControllerForURI:(id)arg1 context:(id)arg2;
@@ -107,6 +110,7 @@
 - (void)registerMagicLinkSentConfirmationViewController;
 - (void)registerMagicLinkDoRequestViewController;
 - (void)registerLoginViewController;
+- (void)registerIntentLedStartViewController;
 - (void)registerMethodLedStartViewController;
 - (void)registerWelcomeViewController;
 - (void)registerViewControllers;

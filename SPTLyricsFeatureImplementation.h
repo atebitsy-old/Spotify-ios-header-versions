@@ -9,7 +9,7 @@
 #import "SPTLyricsFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLyricsContentLayerContext, SPTLyricsV2Configuration, SPTLyricsV2GLUETheme, SPTLyricsV2Service, SPTVocalRemovalConfiguration;
-@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTBannerFeature, SPTContainerService, SPTCoreService, SPTFeatureFlaggingService, SPTGLUEService, SPTInAppMessageService, SPTLyricsTrackChecker, SPTLyricsV2TestManager, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTUIPresentationService, SPTURIDispatchService;
+@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTBannerFeature, SPTContainerService, SPTCoreService, SPTFeatureFlaggingService, SPTGLUEService, SPTInAppMessageService, SPTLyricsTrackChecker, SPTLyricsV2TestManager, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface SPTLyricsFeatureImplementation : NSObject <SPTLyricsFeature>
 {
@@ -22,6 +22,7 @@
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     id <SPTPlayerFeature> _playerService;
+    id <SPTUBIService> _ubiService;
     id <SPTUIPresentationService> _uiPresentationService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTPlayer> _player;
@@ -53,6 +54,7 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTUIPresentationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;

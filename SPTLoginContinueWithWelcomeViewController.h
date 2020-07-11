@@ -7,7 +7,7 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTLoginContinueWithWelcomeContainerViewDelegate-Protocol.h"
-#import "SPTLoginContinueWithWelcomeViewModelDelegate-Protocol.h"
+#import "SPTLoginThirdPartyLoginHandlerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
@@ -15,7 +15,7 @@
 @class NSError, NSString, NSURL, SPTLoginContinueWithWelcomeContainerView, SPTLoginContinueWithWelcomeViewModel, SPTLoginTheme, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginContinueWithWelcomeViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTLoginContinueWithWelcomeContainerViewDelegate, SPTLoginContinueWithWelcomeViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTLoginContinueWithWelcomeViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTLoginContinueWithWelcomeContainerViewDelegate, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -34,7 +34,9 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
-- (void)didCompleteFacebookLoginWithError:(id)arg1;
+- (id)contextViewForThirdPartyLoginHandler:(id)arg1;
+- (void)handlerDidFinishThirdPartyLogin:(id)arg1;
+- (void)handlerDidStartThirdPartyLogin:(id)arg1;
 - (unsigned long long)preferredNavigationBarState;
 - (void)continueWithEmailPressed:(id)arg1;
 - (void)continueWithFacebookPressed:(id)arg1;

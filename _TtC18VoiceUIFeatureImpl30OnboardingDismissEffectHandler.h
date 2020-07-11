@@ -8,7 +8,7 @@
 
 @interface _TtC18VoiceUIFeatureImpl30OnboardingDismissEffectHandler : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: dismissHandler
+    // Error parsing type: , name: delegate
 }
 
 @end

@@ -8,6 +8,8 @@
 
 @interface _TtC18VoiceUIFeatureImpl41OnboardingTermsAndConditionsEffectHandler : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: termsAndConditionsURL
+    // Error parsing type: , name: linkDispatcher
 }
 
 @end

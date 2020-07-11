@@ -27,6 +27,7 @@
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 - (void).cxx_destruct;
 - (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 externalParameterProvider:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (_Bool)canPerformActionWithURI:(id)arg1;
 - (void)handlePullContextIntentFromAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)handlePlayIntentFromAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;

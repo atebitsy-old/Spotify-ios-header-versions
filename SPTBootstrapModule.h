@@ -9,16 +9,18 @@
 #import "SPTSessionBootstrapDelegate-Protocol.h"
 
 @class NSData;
-@protocol SPTEventSender, SPTRemoteConfigurationContext;
+@protocol SPTEventSender, SPTRemoteConfigurationContext, SPTRemoteConfigurationCore;
 
 @interface SPTBootstrapModule : NSObject <SPTSessionBootstrapDelegate>
 {
     id <SPTRemoteConfigurationContext> _remoteConfigurationContext;
     id <SPTEventSender> _eventSender;
+    id <SPTRemoteConfigurationCore> _remoteConfigurationCore;
     NSData *_remoteConfigurationData;
 }
 
 @property(copy, nonatomic) NSData *remoteConfigurationData; // @synthesize remoteConfigurationData=_remoteConfigurationData;
+@property(retain, nonatomic) id <SPTRemoteConfigurationCore> remoteConfigurationCore; // @synthesize remoteConfigurationCore=_remoteConfigurationCore;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTRemoteConfigurationContext> remoteConfigurationContext; // @synthesize remoteConfigurationContext=_remoteConfigurationContext;
 - (void).cxx_destruct;
@@ -30,7 +32,7 @@
 - (id)createWebGateRequest;
 - (void)bootstrap:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)provideRemoteConfigurationPayload;
-- (id)initWithRemoteConfigurationContext:(id)arg1 eventSender:(id)arg2;
+- (id)initWithRemoteConfigurationContext:(id)arg1 eventSender:(id)arg2 remoteConfigurationCore:(id)arg3;
 
 @end
 

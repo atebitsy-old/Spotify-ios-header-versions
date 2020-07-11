@@ -19,6 +19,7 @@
     double _minimumUpdateInterval;
     NSArray *_sort;
     NSString *_textFilter;
+    NSString *_customContentFilter;
     unsigned long long _followedArtistFilter;
     unsigned long long _mediaType;
     struct _NSRange _range;
@@ -30,6 +31,7 @@
 @property(nonatomic) _Bool showOnlyPlayable; // @synthesize showOnlyPlayable=_showOnlyPlayable;
 @property(nonatomic) _Bool showOnlyLocalFiles; // @synthesize showOnlyLocalFiles=_showOnlyLocalFiles;
 @property(nonatomic) _Bool showsOnlyOfflinedContent; // @synthesize showsOnlyOfflinedContent=_showsOnlyOfflinedContent;
+@property(copy, nonatomic) NSString *customContentFilter; // @synthesize customContentFilter=_customContentFilter;
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(copy, nonatomic) NSArray *sort; // @synthesize sort=_sort;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;

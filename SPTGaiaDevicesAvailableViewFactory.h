@@ -8,7 +8,7 @@
 
 #import "SPTGaiaDevicesAvailableViewProvider-Protocol.h"
 
-@class NSString, SPTGaiaDevicePickerAppearanceManager, SPTGaiaSocialListeningIntegrationManager, SPTTheme;
+@class NSString, SPTGaiaDevicePickerAppearanceManager, SPTGaiaSocialListeningIntegrationManager, SPTGaiaUbiLogger, SPTTheme;
 @protocol SPTGaiaConnectAPI;
 
 @interface SPTGaiaDevicesAvailableViewFactory : NSObject <SPTGaiaDevicesAvailableViewProvider>
@@ -17,15 +17,17 @@
     SPTTheme *_theme;
     SPTGaiaDevicePickerAppearanceManager *_appearanceManager;
     SPTGaiaSocialListeningIntegrationManager *_socialListeningManager;
+    SPTGaiaUbiLogger *_ubiLogger;
 }
 
+@property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
-@property(retain, nonatomic) SPTGaiaDevicePickerAppearanceManager *appearanceManager; // @synthesize appearanceManager=_appearanceManager;
-@property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
+@property(readonly, nonatomic) SPTGaiaDevicePickerAppearanceManager *appearanceManager; // @synthesize appearanceManager=_appearanceManager;
+@property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 - (void).cxx_destruct;
 - (id)createGaiaDevicesAvailableViewWithRules:(long long)arg1;
-- (id)initWithConnectManager:(id)arg1 theme:(id)arg2 appearanceManager:(id)arg3 socialListeningManager:(id)arg4;
+- (id)initWithConnectManager:(id)arg1 theme:(id)arg2 appearanceManager:(id)arg3 socialListeningManager:(id)arg4 ubiLogger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

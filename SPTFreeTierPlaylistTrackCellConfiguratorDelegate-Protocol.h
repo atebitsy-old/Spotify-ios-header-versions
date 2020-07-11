@@ -6,12 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIButton;
-@protocol SPTFreeTierPlaylistTrackCellConfigurator;
+@class SPTFreeTierPlaylistDefaultTrackCellConfigurator, UIButton;
 
 @protocol SPTFreeTierPlaylistTrackCellConfiguratorDelegate <NSObject>
-- (void)cellConfigurator:(id <SPTFreeTierPlaylistTrackCellConfigurator>)arg1 likeIconButtonTapped:(UIButton *)arg2;
-- (void)cellConfigurator:(id <SPTFreeTierPlaylistTrackCellConfigurator>)arg1 banIconButtonTapped:(UIButton *)arg2;
-- (void)cellConfigurator:(id <SPTFreeTierPlaylistTrackCellConfigurator>)arg1 contextMenuIconButtonTapped:(UIButton *)arg2;
+- (void)cellConfigurator:(SPTFreeTierPlaylistDefaultTrackCellConfigurator *)arg1 contextMenuIconButtonTapped:(UIButton *)arg2;
 @end
 

@@ -38,6 +38,7 @@
 @property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
 - (void).cxx_destruct;
 - (void)messageComposeViewController:(id)arg1 didFinishWithResult:(long long)arg2;
+- (id)provideShareAlertModelForError:(id)arg1;
 - (id)generateShareTextBodyFromShareData:(id)arg1;
 - (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)createAlertModel;

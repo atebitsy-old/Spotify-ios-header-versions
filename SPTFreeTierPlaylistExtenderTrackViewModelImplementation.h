@@ -6,62 +6,34 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierPlaylistTrackViewModel-Protocol.h"
-
-@class NSArray, NSDate, NSDictionary, NSString, NSURL, UIColor;
+@class NSString, NSURL;
 @protocol SPTPlaylistExtenderItem;
 
-@interface SPTFreeTierPlaylistExtenderTrackViewModelImplementation : NSObject <SPTFreeTierPlaylistTrackViewModel>
+@interface SPTFreeTierPlaylistExtenderTrackViewModelImplementation : NSObject
 {
     _Bool _isPlayingTrack;
     _Bool _isPlexLoading;
-    NSString *freeformDescription;
-    NSDictionary *formatListAttributes;
+    NSURL *_imageURL;
     id <SPTPlaylistExtenderItem> _playlistExtenderItem;
 }
 
 @property(nonatomic) _Bool isPlexLoading; // @synthesize isPlexLoading=_isPlexLoading;
 @property(nonatomic) _Bool isPlayingTrack; // @synthesize isPlayingTrack=_isPlayingTrack;
 @property(retain, nonatomic) id <SPTPlaylistExtenderItem> playlistExtenderItem; // @synthesize playlistExtenderItem=_playlistExtenderItem;
-@property(readonly, copy, nonatomic) NSDictionary *formatListAttributes; // @synthesize formatListAttributes;
-@property(readonly, nonatomic) NSString *freeformDescription; // @synthesize freeformDescription;
+@property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSString *ownerName;
-@property(readonly, copy, nonatomic) NSString *rowId;
-@property(readonly, nonatomic) _Bool isPlayed;
-@property(readonly, nonatomic) double timeLeft;
-@property(readonly, nonatomic) double duration;
-@property(readonly, nonatomic) NSDate *publishDate;
-@property(readonly, copy, nonatomic) NSString *podcastTitle;
-@property(readonly, nonatomic) NSURL *videoThumbnailURL;
 @property(readonly, nonatomic, getter=isImageEnabled) _Bool imageEnabled;
 @property(readonly, nonatomic) long long offlineSyncStatus;
-@property(readonly, nonatomic, getter=isEpisode) _Bool episode;
-@property(readonly, nonatomic, getter=isVideo) _Bool video;
-@property(readonly, nonatomic, getter=isBanned) _Bool banned;
-@property(readonly, nonatomic, getter=isLiked) _Bool liked;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 @property(readonly, nonatomic, getter=isActive) _Bool active;
 @property(readonly, nonatomic) unsigned long long restriction;
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly;
-@property(readonly, copy, nonatomic) NSArray *artistNames;
-@property(readonly, copy, nonatomic) NSArray *artists;
-@property(readonly, nonatomic) UIColor *contextMenuIconColor;
+- (id)artistNames;
 @property(readonly, nonatomic) long long contextMenuIcon;
-@property(readonly, copy, nonatomic) NSString *previewID;
 @property(readonly, nonatomic) NSURL *URL;
-@property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, copy, nonatomic) NSString *glueAudioTrackSubtitle;
 @property(readonly, copy, nonatomic) NSString *title;
-@property(readonly, nonatomic) NSURL *albumURL;
-@property(readonly, copy, nonatomic) NSString *albumName;
 - (id)initWithPlaylistExtenderItem:(id)arg1 isPlayingTrack:(_Bool)arg2 isPlexLoading:(_Bool)arg3;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

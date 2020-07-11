@@ -70,7 +70,6 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (_Bool)sta_scannablesPressAcceptButton;
 
 @end
 

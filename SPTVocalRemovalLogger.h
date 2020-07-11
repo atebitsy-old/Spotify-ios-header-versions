@@ -7,17 +7,25 @@
 #import <objc/NSObject.h>
 
 @class NSString;
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileLyricsEventFactory;
 
 @interface SPTVocalRemovalLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBILogger> _ubiLogger;
+    id <SPTUBIMobileLyricsEventFactory> _ubiEventFactory;
     NSString *_featureId;
 }
 
 @property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
+@property(readonly, nonatomic) id <SPTUBIMobileLyricsEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+- (id)footerViewFactoryWithURI:(id)arg1;
+- (id)fullscreenViewFactoryWithURI:(id)arg1;
+- (void)logUBIInteraction:(id)arg1;
+- (void)logUBIImpression:(id)arg1;
 - (void)logUserInteractionMessageWithTrackURI:(id)arg1 sectionId:(id)arg2 interactionType:(id)arg3 userIntent:(id)arg4;
 - (void)logUserImpressionMessageWithTrackURI:(id)arg1 sectionId:(id)arg2 impressionType:(id)arg3;
 - (void)logBannerCloseButtonTapForTrackURI:(id)arg1;
@@ -30,7 +38,7 @@
 - (void)logUserSawContextMenuButtonForTrackURI:(id)arg1;
 - (void)logUserSawReportBannerForTrackURI:(id)arg1;
 - (void)logUserSawVocalRemovalButtonForTrackURI:(id)arg1;
-- (id)initWithFeatureId:(id)arg1 logCenter:(id)arg2;
+- (id)initWithFeatureId:(id)arg1 logCenter:(id)arg2 ubiEventFactory:(id)arg3 ubiLogger:(id)arg4;
 
 @end
 

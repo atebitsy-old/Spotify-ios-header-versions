@@ -389,7 +389,6 @@ struct DeviceInfo {
     basic_string_90719d97 _field1;
     basic_string_90719d97 _field2;
     basic_string_90719d97 _field3;
-    basic_string_90719d97 _field4;
 };
 
 struct Disc;
@@ -659,16 +658,14 @@ struct LoginCredentials {
 };
 
 struct LoginOptions {
-    int _field1;
-    int _field2;
+    basic_string_90719d97 _field1;
+    basic_string_90719d97 _field2;
     basic_string_90719d97 _field3;
     basic_string_90719d97 _field4;
-    basic_string_90719d97 _field5;
-    basic_string_90719d97 _field6;
-    _Bool _field7;
-    _Bool _field8;
-    basic_string_90719d97 _field9;
-    struct ProxySettings _field10;
+    _Bool _field5;
+    _Bool _field6;
+    basic_string_90719d97 _field7;
+    struct ProxySettings _field8;
 };
 
 struct MeMetadataRequest;
@@ -1506,10 +1503,10 @@ struct function<void (std::__1::optional<spotify::connectivity::auth::oauth::Acc
     } __f_;
 };
 
-struct function<void (std::__1::variant<spotify::connectivity::auth::LoginAuthSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::LoginCodeRequired, spotify::connectivity::auth::LoginSignupRequired, spotify::connectivity::auth::LoginFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
-    struct __value_func<void (std::__1::variant<spotify::connectivity::auth::LoginAuthSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::LoginCodeRequired, spotify::connectivity::auth::LoginSignupRequired, spotify::connectivity::auth::LoginFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
+struct function<void (std::__1::variant<spotify::connectivity::auth::AuthenticateSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::AuthenticateCodeRequired, spotify::connectivity::auth::AuthenticateSignupRequired, spotify::connectivity::auth::AuthenticateFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
+    struct __value_func<void (std::__1::variant<spotify::connectivity::auth::AuthenticateSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::AuthenticateCodeRequired, spotify::connectivity::auth::AuthenticateSignupRequired, spotify::connectivity::auth::AuthenticateFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
         struct type _field1;
-        struct __base<void (std::__1::variant<spotify::connectivity::auth::LoginAuthSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::LoginCodeRequired, spotify::connectivity::auth::LoginSignupRequired, spotify::connectivity::auth::LoginFailure, spotify::connectivity::auth::LoginBootstrap>&&)> *_field2;
+        struct __base<void (std::__1::variant<spotify::connectivity::auth::AuthenticateSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::AuthenticateCodeRequired, spotify::connectivity::auth::AuthenticateSignupRequired, spotify::connectivity::auth::AuthenticateFailure, spotify::connectivity::auth::LoginBootstrap>&&)> *_field2;
     } _field1;
 };
 
@@ -3042,12 +3039,12 @@ typedef struct function<void (std::__1::optional<spotify::connectivity::auth::oa
     } __f_;
 } function_88b465b1;
 
-typedef struct function<void (std::__1::variant<spotify::connectivity::auth::LoginAuthSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::LoginCodeRequired, spotify::connectivity::auth::LoginSignupRequired, spotify::connectivity::auth::LoginFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
-    struct __value_func<void (std::__1::variant<spotify::connectivity::auth::LoginAuthSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::LoginCodeRequired, spotify::connectivity::auth::LoginSignupRequired, spotify::connectivity::auth::LoginFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
+typedef struct function<void (std::__1::variant<spotify::connectivity::auth::AuthenticateSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::AuthenticateCodeRequired, spotify::connectivity::auth::AuthenticateSignupRequired, spotify::connectivity::auth::AuthenticateFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
+    struct __value_func<void (std::__1::variant<spotify::connectivity::auth::AuthenticateSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::AuthenticateCodeRequired, spotify::connectivity::auth::AuthenticateSignupRequired, spotify::connectivity::auth::AuthenticateFailure, spotify::connectivity::auth::LoginBootstrap>&&)> {
         struct type _field1;
-        struct __base<void (std::__1::variant<spotify::connectivity::auth::LoginAuthSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::LoginCodeRequired, spotify::connectivity::auth::LoginSignupRequired, spotify::connectivity::auth::LoginFailure, spotify::connectivity::auth::LoginBootstrap>&&)> *_field2;
+        struct __base<void (std::__1::variant<spotify::connectivity::auth::AuthenticateSuccess, spotify::connectivity::auth::LoginSuccess, spotify::connectivity::auth::AuthenticateCodeRequired, spotify::connectivity::auth::AuthenticateSignupRequired, spotify::connectivity::auth::AuthenticateFailure, spotify::connectivity::auth::LoginBootstrap>&&)> *_field2;
     } _field1;
-} function_6e82c99d;
+} function_05dfbad0;
 
 typedef struct map<std::__1::basic_string<char>, std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<char>>, std::__1::allocator<std::__1::pair<const std::__1::basic_string<char>, std::__1::basic_string<char>>>> {
     struct __tree<std::__1::__value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, std::__1::__map_value_compare<std::__1::basic_string<char>, std::__1::__value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, std::__1::less<std::__1::basic_string<char>>, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>>> {

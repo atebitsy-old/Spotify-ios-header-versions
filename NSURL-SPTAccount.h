@@ -144,6 +144,8 @@
 + (id)spt_loginURIWithEmail:(id)arg1;
 + (id)spt_loginURI;
 + (id)spt_loginURIPrefixComponents;
++ (id)spt_loginIntentLedURIPrefixComponents;
++ (id)spt_loginIntentLedURI:(unsigned long long)arg1;
 + (id)spt_loginMethodLedURIPrefixComponents;
 + (id)spt_loginMethodLedURI:(unsigned long long)arg1;
 + (id)spt_loginWelcomeURI;
@@ -192,7 +194,8 @@
 + (id)spt_podcastEpisodeURIForFeaturedContentTimelineURI:(id)arg1;
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURI:(id)arg1;
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURIString:(id)arg1;
-+ (id)spt_preSignupExperimentationURL;
++ (id)spt_preSignupExperimentationScreenConfigurationURL;
++ (id)spt_preSignupExperimentationFeatureFlagsURL;
 + (id)spt_localPremiumDestinationHubsResponseFileURLWithLocaleIdentifier:(id)arg1;
 + (id)spt_localPremiumDestinationHubsResponseFileURL;
 + (id)spt_premiumDestinationHubsServiceURLWithPathComponents:(id)arg1 usingDevEnabled:(_Bool)arg2;
@@ -376,6 +379,7 @@
 - (_Bool)spt_isSignupPasswordInputViewURI;
 - (_Bool)spt_isSignupEmailInputViewURI;
 - (_Bool)spt_isLoginURI;
+- (_Bool)spt_isLoginIntentLedURI;
 - (_Bool)spt_isLoginMethodLedURI;
 - (_Bool)spt_isLoginWelcomeURI;
 @property(readonly, nonatomic) _Bool spt_isMadeForYouHub;
@@ -441,6 +445,7 @@
 @property(readonly, nonatomic, getter=spt_isPodcastEpisodeURL) _Bool isPodcastEpisodeURL;
 @property(readonly, nonatomic, getter=spt_isPodcastURL) _Bool isPodcastURL;
 @property(readonly, nonatomic, getter=spt_podcastMixControlsForPlaylist) NSURL *podcastMixControlsForPlaylist;
+- (_Bool)spt_isPreSignupExperimentationScreenConfigurationURL;
 - (_Bool)spt_isPremiumDestinationPreviewURL;
 @property(readonly, nonatomic, getter=spt_isProfileSocialRelationsURL) _Bool isProfileSocialRelationsURL;
 @property(readonly, nonatomic, getter=spt_isProfileViewAllURL) _Bool isProfileViewAllURL;

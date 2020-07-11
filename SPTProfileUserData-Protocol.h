@@ -10,6 +10,7 @@
 @protocol SPTProfileUserData
 - (void)removeProfileChangeObserverWithObserver:(id <SPTProfileUserDataChangeObserver>)arg1;
 - (void)addProfileChangeObserverWithObserver:(id <SPTProfileUserDataChangeObserver>)arg1;
+@property(nonatomic, readonly) _Bool hasAnnotatedImage;
 @property(nonatomic, readonly) _Bool isVerified;
 @property(nonatomic, readonly) NSURL *imageURL;
 @property(nonatomic, readonly) NSString *displayName;

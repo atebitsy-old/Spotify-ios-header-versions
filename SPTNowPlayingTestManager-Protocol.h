@@ -18,6 +18,7 @@
 @property(readonly, nonatomic) _Bool isContentLayerLyricsEnabled;
 @property(readonly, nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled;
 @property(readonly, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration;
+@property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
 @property(readonly, nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled;
 @property(readonly, nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled;
 @property(readonly, nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled;

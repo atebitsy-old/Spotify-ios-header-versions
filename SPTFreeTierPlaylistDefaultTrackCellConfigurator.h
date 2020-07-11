@@ -6,12 +6,10 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierPlaylistTrackCellConfigurator-Protocol.h"
-
-@class GLUEEntityRowStyle, GLUETrackMultipleAccessoriesViewStyle, NSString, SPTFreeTierPlaylistButtonSectionHeaderViewStyle, SPTFreeTierPlaylistGLUETheme, UIImage;
+@class GLUEEntityRowStyle, GLUETrackMultipleAccessoriesViewStyle, SPTFreeTierPlaylistButtonSectionHeaderViewStyle, SPTFreeTierPlaylistGLUETheme, UIImage;
 @protocol GLUEImageLoader, SPTFreeTierPlaylistTrackCellConfiguratorDelegate, SPTFreeTierPlaylistViewModel, SPTShelves;
 
-@interface SPTFreeTierPlaylistDefaultTrackCellConfigurator : NSObject <SPTFreeTierPlaylistTrackCellConfigurator>
+@interface SPTFreeTierPlaylistDefaultTrackCellConfigurator : NSObject
 {
     id <SPTFreeTierPlaylistTrackCellConfiguratorDelegate> _delegate;
     id <SPTFreeTierPlaylistViewModel> _viewModel;
@@ -48,12 +46,6 @@
 - (void)configureCell:(id)arg1 withTrackViewModel:(id)arg2 configureContent:(_Bool)arg3 configureLeadingAccessory:(_Bool)arg4 configureTrailingAccessory:(_Bool)arg5 swipeableCell:(id)arg6;
 - (double)preferredCellHeight;
 - (id)initWithViewModel:(id)arg1 trackRowStyle:(id)arg2 shelves:(id)arg3 theme:(id)arg4 glueImageLoader:(id)arg5;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

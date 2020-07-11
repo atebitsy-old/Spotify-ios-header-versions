@@ -15,6 +15,8 @@
 
 @property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+- (void)logDevicesAvailableImpressionFromNPV;
+- (id)devicesAvailableFactory;
 - (void)logAttachPopupListenOnThisDeviceInteractionForDeviceId:(id)arg1;
 - (void)logAttachPopupContinueInteractionForDeviceId:(id)arg1;
 - (void)logAttachPopupImpressionForDeviceId:(id)arg1;

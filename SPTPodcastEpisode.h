@@ -39,9 +39,11 @@
     unsigned long long _syncProgress;
     double _lastPlayedAt;
     unsigned long long _type;
+    long long _mediaType;
 }
 
 + (id)stringFromTimeInterval:(double)arg1;
+@property(nonatomic) long long mediaType; // @synthesize mediaType=_mediaType;
 @property(nonatomic, getter=isVideoShowMediaType) _Bool videoShowMediaType; // @synthesize videoShowMediaType=_videoShowMediaType;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic, getter=isFollowingPodcast) _Bool followingPodcast; // @synthesize followingPodcast=_followingPodcast;
@@ -74,11 +76,11 @@
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToPodcastEntity:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
-@property(readonly, nonatomic, getter=isAudioMediaType) _Bool audioMediaType;
-@property(readonly, nonatomic, getter=isVideoMediaType) _Bool videoMediaType;
+- (id)playerMediaTypeString;
 - (id)localizedDate;
 - (id)localizedTime;
 - (id)localizedDuration;
+- (id)init;
 @property(readonly, nonatomic) double listeningProgress;
 
 // Remaining properties

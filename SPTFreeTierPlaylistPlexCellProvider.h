@@ -13,13 +13,13 @@
 #import "SPTFreeTierPlaylistTrackCellConfiguratorDelegate-Protocol.h"
 #import "SPTPlaylistExtenderModelDelegate-Protocol.h"
 
-@class NSString, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistPlexLogger;
-@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistIndexPathResolver, SPTFreeTierPlaylistTrackCellConfigurator, SPTFreeTierPlaylistViewModel, SPTPlayer, SPTPlaylistExtenderModel;
+@class NSString, SPTFreeTierPlaylistDefaultTrackCellConfigurator, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistPlexLogger;
+@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistIndexPathResolver, SPTFreeTierPlaylistViewModel, SPTPlayer, SPTPlaylistExtenderModel;
 
 @interface SPTFreeTierPlaylistPlexCellProvider : NSObject <SPTFreeTierPlaylistTrackCellConfiguratorDelegate, SPTFreeTierPlaylistSectionHeader, SPTFreeTierPlaylistSectionFooter, SPTPlaylistExtenderModelDelegate, SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescription>
 {
     id <SPTFreeTierPlaylistCellProviderDelegate> _delegate;
-    id <SPTFreeTierPlaylistTrackCellConfigurator> _cellConfigurator;
+    SPTFreeTierPlaylistDefaultTrackCellConfigurator *_cellConfigurator;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     id <SPTPlaylistExtenderModel> _playlistExtenderModel;
     id <SPTPlayer> _player;
@@ -34,7 +34,7 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTPlaylistExtenderModel> playlistExtenderModel; // @synthesize playlistExtenderModel=_playlistExtenderModel;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistTrackCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
+@property(readonly, nonatomic) SPTFreeTierPlaylistDefaultTrackCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)playlistExtenderModelDidUpdate:(id)arg1;
@@ -49,9 +49,7 @@
 - (id)sectionHeader;
 - (unsigned long long)section;
 - (unsigned long long)numberOfRows;
-- (void)cellConfigurator:(id)arg1 likeIconButtonTapped:(id)arg2;
 - (void)cellConfigurator:(id)arg1 contextMenuIconButtonTapped:(id)arg2;
-- (void)cellConfigurator:(id)arg1 banIconButtonTapped:(id)arg2;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;

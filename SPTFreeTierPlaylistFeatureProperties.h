@@ -16,6 +16,7 @@
     _Bool _dontOpenNowPlayingViewOnPlayback;
     _Bool _pageLoaderEnabledPlaylistView;
     _Bool _useTrackCloudCellProvider;
+    _Bool _useTracksSection;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
     NSString *_followShowConfirmationOverrideString;
@@ -26,6 +27,7 @@
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
+@property(readonly, nonatomic) _Bool useTracksSection; // @synthesize useTracksSection=_useTracksSection;
 @property(readonly, nonatomic) _Bool useTrackCloudCellProvider; // @synthesize useTrackCloudCellProvider=_useTrackCloudCellProvider;
 @property(readonly, nonatomic) _Bool pageLoaderEnabledPlaylistView; // @synthesize pageLoaderEnabledPlaylistView=_pageLoaderEnabledPlaylistView;
 @property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnPlayback; // @synthesize dontOpenNowPlayingViewOnPlayback=_dontOpenNowPlayingViewOnPlayback;

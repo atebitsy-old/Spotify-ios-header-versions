@@ -38,7 +38,7 @@
 - (void).cxx_destruct;
 - (void)auxiliaryActionsHandlerDidToggleCollectionState:(id)arg1;
 - (id)getCurrentSubtitleWithNowPlayingModel:(id)arg1;
-- (void)updateWithNowPlayingModel:(id)arg1;
+- (void)updateWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)navigateToCurrentArtist;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)nowPlayingModelDidUpdateMetadata:(id)arg1;

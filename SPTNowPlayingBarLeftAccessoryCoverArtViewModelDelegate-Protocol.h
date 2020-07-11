@@ -9,6 +9,6 @@
 @class SPTNowPlayingBarLeftAccessoryCoverArtViewModel, SPTPlayerTrack;
 
 @protocol SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate <NSObject>
-- (void)nowPlayingBarLeftAccessoryCoverArtViewModel:(SPTNowPlayingBarLeftAccessoryCoverArtViewModel *)arg1 updateImageWithTrack:(SPTPlayerTrack *)arg2;
+- (void)nowPlayingBarLeftAccessoryCoverArtViewModel:(SPTNowPlayingBarLeftAccessoryCoverArtViewModel *)arg1 trackDidChange:(SPTPlayerTrack *)arg2;
 @end
 

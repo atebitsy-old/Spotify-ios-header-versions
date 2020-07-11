@@ -33,9 +33,6 @@
 - (double)preferredHeight;
 - (void)layoutSubviews;
 - (id)initWithTitle:(id)arg1 subtitle:(id)arg2 entityURL:(id)arg3 imageURL:(id)arg4 dataSource:(id)arg5 onboardingPresenter:(id)arg6 authorizationRequester:(id)arg7 dependencies:(id)arg8 alertController:(id)arg9;
-- (_Bool)sta_isScannablesTooltipVisible;
-- (void)sta_forceHideScannablesTooltip;
-- (_Bool)sta_isScannableVisible;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,7 +9,7 @@
 #import "SPTBrowseService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTBrowseFeatureProperties, SPTPersistentCache;
-@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature;
+@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, _TtP22MarketingFormatFeature25SPTMarketingFormatService_;
 
 @interface SPTBrowseServiceImplementation : NSObject <SPTBrowseService>
 {
@@ -30,9 +30,11 @@
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTSessionService> _clientSessionService;
+    id <_TtP22MarketingFormatFeature25SPTMarketingFormatService_> _marketingFormatService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <_TtP22MarketingFormatFeature25SPTMarketingFormatService_> marketingFormatService; // @synthesize marketingFormatService=_marketingFormatService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
@@ -52,6 +54,7 @@
 @property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;
 @property(readonly, nonatomic) id <SPTBrowseTestManager> testManager; // @synthesize testManager=_testManager;
 - (_Bool)ownsPageWithURI:(id)arg1;
+- (id)provideBrowseContentContainer;
 - (id)pageIdentifierForURI:(id)arg1;
 - (void)setNavigationBarVisible:(_Bool)arg1 inViewModelBuilder:(id)arg2;
 - (id)makeGenreErrorStateViewModel;

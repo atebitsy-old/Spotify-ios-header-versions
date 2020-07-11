@@ -8,8 +8,8 @@
 
 #import "SPTEditPlaylistService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTSettingsFeature, SPTUBIService, SPTUIPresentationService;
+@class NSString, SPTAllocationContext, SPTEditPlaylistFeatureProperties;
+@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSettingsFeature, SPTUBIService, SPTUIPresentationService;
 
 @interface SPTEditPlaylistServiceImplementation : NSObject <SPTEditPlaylistService>
 {
@@ -22,9 +22,15 @@
     id <SPTUBIService> _ubiService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTSettingsFeature> _settingsFeature;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    SPTEditPlaylistFeatureProperties *_featureProperties;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTEditPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -37,6 +43,8 @@
 - (void).cxx_destruct;
 - (id)provideLoggerForURI:(id)arg1 pageIdentifier:(id)arg2;
 - (id)provideEditPlaylistModelForURL:(id)arg1;
+- (id)provideEditPlaylistViewControllerForURL:(id)arg1 model:(id)arg2;
+- (id)providePageLoaderViewControllerForURL:(id)arg1 model:(id)arg2;
 - (id)providePlaylistEditViewControllerForURL:(id)arg1;
 - (void)registerEditPlaylistAction;
 - (void)load;

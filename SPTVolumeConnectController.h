@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) SPTVolumeCosmosResolver *resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <SPTVolumeRemoteDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *debugLoggingIdentifier;
 @property(readonly, nonatomic) double volumeStep; // @dynamic volumeStep;
 - (void)sendVolumeUpdate:(double)arg1;
 @property(readonly, nonatomic) NSNumber *lastKnownVolumeForActiveDevice;

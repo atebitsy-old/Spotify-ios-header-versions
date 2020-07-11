@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTArtistTrackRowFactory;
+@protocol SPTTrackRowArtistFactory;
 
 @interface SPTFreeTierEncoreArtistHubComponentsFactory : NSObject
 {
-    id <SPTArtistTrackRowFactory> _encoreComponentFactory;
+    id <SPTTrackRowArtistFactory> _encoreComponentFactory;
 }
 
-@property(retain, nonatomic) id <SPTArtistTrackRowFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
+@property(retain, nonatomic) id <SPTTrackRowArtistFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 - (void).cxx_destruct;
 - (id)createComponentsWithBaseTheme:(id)arg1;
 - (id)initWithArtistEncoreComponentFactory:(id)arg1;

@@ -17,7 +17,6 @@
     NSString *_clientId;
     NSString *_cachePath;
     NSString *_deviceId;
-    NSString *_deviceIdOld;
     NSString *_deviceHardwareModel;
     NSString *_clientVersionLong;
     NSString *_accesspointLanguage;
@@ -36,7 +35,6 @@
 @property(copy, nonatomic) NSString *clientVersionLong; // @synthesize clientVersionLong=_clientVersionLong;
 @property(nonatomic) unsigned int clientRevision; // @synthesize clientRevision=_clientRevision;
 @property(copy, nonatomic) NSString *deviceHardwareModel; // @synthesize deviceHardwareModel=_deviceHardwareModel;
-@property(copy, nonatomic) NSString *deviceIdOld; // @synthesize deviceIdOld=_deviceIdOld;
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;

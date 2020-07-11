@@ -77,6 +77,7 @@
 - (void)handleSetPodcastPlaybackSpeedCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleGetPlaybackSpeedCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleSeekToPositionCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
+- (void)handleSetPlaybackPositionCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleSetPlaybackSpeedCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (id)protocolErrorForError:(id)arg1;
 - (void)handleSkipPreviousCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;

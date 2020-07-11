@@ -6,13 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileConnectOnboardingPopup_CloseEventFactory, SPTUBIMobileConnectOnboardingPopup_LaterButtonEventFactory, SPTUBIMobileConnectOnboardingPopup_ListenNowButtonEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobileConnectOnboardingPopup_ContainerViewEventFactory;
 
 @protocol SPTUBIMobileConnectOnboardingPopupEventFactory <NSObject>
-- (id <SPTUBIMobileConnectOnboardingPopup_CloseEventFactory>)closeFactoryWithReason:(NSString *)arg1;
-- (id <SPTUBIMobileConnectOnboardingPopup_LaterButtonEventFactory>)laterButtonFactory;
-- (id <SPTUBIMobileConnectOnboardingPopup_ListenNowButtonEventFactory>)listenNowButtonFactory;
+- (id <SPTUBIMobileConnectOnboardingPopup_ContainerViewEventFactory>)containerViewFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

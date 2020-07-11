@@ -10,7 +10,7 @@
 #import "SPTVolumeRemoteCoordinatorDelegate-Protocol.h"
 #import "SPTVolumeSystemObserver-Protocol.h"
 
-@class NSNumber, NSString, SPTObserverManager, SPTVolumeLogger, SPTVolumeUbiLogger;
+@class NSNumber, NSString, SPTObserverManager, SPTVolumeDebugInstrumentation, SPTVolumeLogger, SPTVolumeUbiLogger;
 @protocol SPTGaiaConnectAPI, SPTVolumeRemoteCoordinator, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeManager : NSObject <SPTVolumeRemoteCoordinatorDelegate, SPTVolumeSystemObserver, SPTVolumeAPI>
@@ -21,12 +21,14 @@
     id <SPTGaiaConnectAPI> _connectManager;
     SPTVolumeLogger *_logger;
     SPTVolumeUbiLogger *_ubiLogger;
+    SPTVolumeDebugInstrumentation *_debugLogger;
     SPTObserverManager *_observers;
     double _internalVolume;
 }
 
 @property(nonatomic) double internalVolume; // @synthesize internalVolume=_internalVolume;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
+@property(readonly, nonatomic) SPTVolumeDebugInstrumentation *debugLogger; // @synthesize debugLogger=_debugLogger;
 @property(readonly, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTVolumeLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
@@ -44,7 +46,7 @@
 - (void)requestVolumeUpdate:(double)arg1;
 @property(readonly, nonatomic) NSNumber *volume; // @dynamic volume;
 - (void)setupObserving;
-- (id)initWithSystemVolumeManager:(id)arg1 remoteVolumeCoordinator:(id)arg2 volumeSynchronizationManager:(id)arg3 connectManager:(id)arg4 logger:(id)arg5 ubiLogger:(id)arg6;
+- (id)initWithSystemVolumeManager:(id)arg1 remoteVolumeCoordinator:(id)arg2 volumeSynchronizationManager:(id)arg3 connectManager:(id)arg4 logger:(id)arg5 ubiLogger:(id)arg6 debugLogger:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

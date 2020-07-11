@@ -26,8 +26,8 @@
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
-- (void)nowPlayingBarLeftAccessoryCoverArtViewModel:(id)arg1 updateImageWithTrack:(id)arg2;
-- (void)updateCoverArtImageFromTrack:(id)arg1;
+- (void)nowPlayingBarLeftAccessoryCoverArtViewModel:(id)arg1 trackDidChange:(id)arg2;
+- (void)loadCoverArtImageForTrack:(id)arg1;
 - (void)setupUI;
 - (void)viewDidLoad;
 - (id)initWithTheme:(id)arg1 imageLoaderFactory:(id)arg2 viewModel:(id)arg3;

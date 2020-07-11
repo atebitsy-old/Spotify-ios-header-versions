@@ -63,7 +63,6 @@
 - (void)spt_scrollToTop;
 @property(readonly, nonatomic) UIViewController<SPTSearch2RootViewControllerProtocol><SPTPageController> *searchViewController; // @synthesize searchViewController=_searchViewController;
 - (void)resetSearch;
-- (struct CGRect)statusBarFrame;
 - (void)updateSearchControlsStyle;
 - (void)loadSearchControlsContainer;
 - (void)scannablesButtonPressed;

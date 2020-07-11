@@ -17,6 +17,7 @@
 @interface SPTFreeTierPlaylistModelImplementation : NSObject <SPTProductStateObserver, SPTExplicitContentEnabledStateObserver, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistSortingFilteringDelegate>
 {
     _Bool _formatList;
+    _Bool _excludeAllEpisodesOverride;
     _Bool _loadError;
     _Bool _hasMore;
     NSURL *_playlistURL;
@@ -62,6 +63,7 @@
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
+@property(nonatomic) _Bool excludeAllEpisodesOverride; // @synthesize excludeAllEpisodesOverride=_excludeAllEpisodesOverride;
 @property(readonly, nonatomic, getter=isFormatList) _Bool formatList; // @synthesize formatList=_formatList;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering; // @synthesize sortingFiltering=_sortingFiltering;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
@@ -97,7 +99,9 @@
 - (_Bool)showCollectionConfirmation;
 - (void)changeFollowState:(_Bool)arg1;
 - (void)playWithPlayOptions:(id)arg1 andPlayOrigin:(id)arg2;
+- (void)playTrack:(id)arg1 andPlayOrigin:(id)arg2;
 - (void)playTrackEntity:(id)arg1 andPlayOrigin:(id)arg2;
+- (void)playTrackURL:(id)arg1 andPlayOrigin:(id)arg2;
 - (void)playWithPlayOrigin:(id)arg1;
 - (void)shufflePlayWithPlayOrigin:(id)arg1;
 - (void)prepareLoad;

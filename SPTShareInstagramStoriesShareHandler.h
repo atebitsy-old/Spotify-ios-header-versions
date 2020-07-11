@@ -45,6 +45,7 @@
 - (void)executeCompletionWithError:(id)arg1;
 - (void)shareEntityWithURL:(id)arg1 backgroundImage:(id)arg2 stickerImage:(id)arg3 topColor:(id)arg4 bottomColor:(id)arg5;
 - (void)requestStickerImageForEntityURL:(id)arg1;
+- (id)provideShareAlertModelForError:(id)arg1;
 - (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)initWithDataLoader:(id)arg1 shareLogger:(id)arg2;
 

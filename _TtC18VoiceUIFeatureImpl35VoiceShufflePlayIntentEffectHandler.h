@@ -9,7 +9,7 @@
 @interface _TtC18VoiceUIFeatureImpl35VoiceShufflePlayIntentEffectHandler : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: playbackController
-    // Error parsing type: , name: handler
+    // Error parsing type: , name: controllerDelegate
     // Error parsing type: , name: voicePlayerLogger
 }
 

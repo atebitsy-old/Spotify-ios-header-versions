@@ -13,7 +13,7 @@
     // Error parsing type: , name: lock
 }
 
-- (void)applicationDidEnterForeground;
+- (void)applicationDidEnterBackground;
 - (void)applicationWillEnterForeground;
 
 @end

@@ -8,10 +8,25 @@
 
 @interface _TtC18VoiceUIFeatureImpl14OnboardingView : UIView
 {
+    // Error parsing type: , name: style
+    // Error parsing type: , name: $__lazy_storage_$_closeButton
+    // Error parsing type: , name: $__lazy_storage_$_titleLabel
+    // Error parsing type: , name: $__lazy_storage_$_descriptionLabel
+    // Error parsing type: , name: $__lazy_storage_$_tutorialImage
+    // Error parsing type: , name: $__lazy_storage_$_disclaimerLabel
+    // Error parsing type: , name: $__lazy_storage_$_termsAndConditionsButton
+    // Error parsing type: , name: $__lazy_storage_$_nextPageButton
+    // Error parsing type: , name: $__lazy_storage_$_laterButton
+    // Error parsing type: , name: $__lazy_storage_$_firstInstructionLabel
+    // Error parsing type: , name: $__lazy_storage_$_firstInstructionImage
+    // Error parsing type: , name: $__lazy_storage_$_secondInstructionLabel
+    // Error parsing type: , name: $__lazy_storage_$_secondInstructionImage
+    // Error parsing type: , name: $__lazy_storage_$_micButton
 }
 
-- (id)initWithCoder:(id)arg1;
+- (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithCoder:(id)arg1;
 
 @end
 

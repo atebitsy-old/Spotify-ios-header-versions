@@ -31,7 +31,6 @@
     double _titleBottomMargin;
     double _helpTextBottomMargin;
     double _helpTextLabelHeight;
-    double _titleBottomSmallMargin;
     double _buttonRegularSizeClassWidth;
     double _buttonMinimumHorizontalEdgeMargin;
     double _buttonMaximumHorizontalEdgeMargin;
@@ -52,7 +51,6 @@
 @property(nonatomic) double buttonMaximumHorizontalEdgeMargin; // @synthesize buttonMaximumHorizontalEdgeMargin=_buttonMaximumHorizontalEdgeMargin;
 @property(nonatomic) double buttonMinimumHorizontalEdgeMargin; // @synthesize buttonMinimumHorizontalEdgeMargin=_buttonMinimumHorizontalEdgeMargin;
 @property(nonatomic) double buttonRegularSizeClassWidth; // @synthesize buttonRegularSizeClassWidth=_buttonRegularSizeClassWidth;
-@property(nonatomic) double titleBottomSmallMargin; // @synthesize titleBottomSmallMargin=_titleBottomSmallMargin;
 @property(nonatomic) double helpTextLabelHeight; // @synthesize helpTextLabelHeight=_helpTextLabelHeight;
 @property(nonatomic) double helpTextBottomMargin; // @synthesize helpTextBottomMargin=_helpTextBottomMargin;
 @property(nonatomic) double titleBottomMargin; // @synthesize titleBottomMargin=_titleBottomMargin;

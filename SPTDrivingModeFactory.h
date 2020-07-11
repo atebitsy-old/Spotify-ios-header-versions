@@ -9,13 +9,14 @@
 #import "SPTDrivingModeViewControllerFactory-Protocol.h"
 
 @class NSString, SPTDrivingModeLogger;
-@protocol SPTContainerService, SPTDrivingModeRemoteConfiguration, SPTDrivingStateDetectionService, SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService;
+@protocol SPTContainerService, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTDrivingModeFactory : NSObject <SPTDrivingModeViewControllerFactory>
 {
     id <SPTPlayer> _player;
     SPTDrivingModeLogger *_logger;
     id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTSettingsFeature> _settingsService;
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
@@ -23,7 +24,6 @@
     id <SPTGLUEService> _glueService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTExternalIntegrationPlaybackService> _playbackService;
-    id <SPTDrivingStateDetectionService> _drivingStateDetectionService;
     id <SPTExternalIntegrationContentService> _externalIntegrationContentService;
     id <SPTContainerService> _containerService;
     id <SPTNetworkService> _networkService;
@@ -42,7 +42,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTExternalIntegrationContentService> externalIntegrationContentService; // @synthesize externalIntegrationContentService=_externalIntegrationContentService;
-@property(nonatomic) __weak id <SPTDrivingStateDetectionService> drivingStateDetectionService; // @synthesize drivingStateDetectionService=_drivingStateDetectionService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(readonly, nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
@@ -50,6 +49,7 @@
 @property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
+@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 - (void).cxx_destruct;
 - (id)createViewControllerForUnit:(unsigned long long)arg1 session:(id)arg2;
 - (id)createFooterUnitViewControllerForSession:(id)arg1;

@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSNumber, NSURL, SPTPlayOptions, SPTPlayOrigin, SPTPlayerOptionOverrides, SPTPlayerState;
-@protocol SPTAudioSessionController, SPTExternalIntegrationActionCoordinator, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationPlaybackCoordinator;
+@protocol SPTAudioSessionController, SPTExternalIntegrationActionCoordinator, SPTExternalIntegrationAdditionalParameterProvider, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationPlaybackCoordinator;
 
 @protocol SPTExternalIntegrationPlaybackController <NSObject>
 @property(readonly, nonatomic) id <SPTAudioSessionController> audioSessionController;
@@ -30,6 +30,7 @@
 - (void)resumeWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1 completionHandler:(void (^)(NSError *))arg2;
 - (void)pauseWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1 completionHandler:(void (^)(NSError *))arg2;
 - (void)performActionWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
+- (void)performActionWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 externalParameterProvider:(id <SPTExternalIntegrationAdditionalParameterProvider>)arg3 completionHandler:(void (^)(NSError *))arg4;
 - (_Bool)canPerformActionWithURI:(NSURL *)arg1;
 - (void)playContentWithURI:(NSURL *)arg1 withOptions:(SPTPlayOptions *)arg2 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg3 completionHandler:(void (^)(NSError *))arg4;
 - (void)playContentWithURI:(NSURL *)arg1 withOptions:(SPTPlayOptions *)arg2 origin:(SPTPlayOrigin *)arg3 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg4 completionHandler:(void (^)(NSError *))arg5;

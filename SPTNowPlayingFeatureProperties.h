@@ -16,8 +16,10 @@
     _Bool _samplesEnabled;
     _Bool _remoteControlEventSubtypeDeprecation;
     _Bool _remoteControlEventLoggingEnabled;
+    _Bool _animatedHeartEnabled;
 }
 
+@property(readonly, nonatomic) _Bool animatedHeartEnabled; // @synthesize animatedHeartEnabled=_animatedHeartEnabled;
 @property(readonly, nonatomic) _Bool remoteControlEventLoggingEnabled; // @synthesize remoteControlEventLoggingEnabled=_remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic) _Bool remoteControlEventSubtypeDeprecation; // @synthesize remoteControlEventSubtypeDeprecation=_remoteControlEventSubtypeDeprecation;
 @property(readonly, nonatomic) _Bool samplesEnabled; // @synthesize samplesEnabled=_samplesEnabled;

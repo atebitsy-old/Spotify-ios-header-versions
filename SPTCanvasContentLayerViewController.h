@@ -9,7 +9,7 @@
 #import "SPTCanvasContentLayerViewControllerViewModelDelegate-Protocol.h"
 #import "SPTCanvasTapArtistAttributionDelegate-Protocol.h"
 
-@class NSString, SPTCanvasActivityIndicatorView, SPTCanvasAttributionView, SPTCanvasContentLayerViewControllerViewModel, SPTCanvasNowPlayingOverlayView, UIImageView, UIView;
+@class NSString, SPTCanvasActivityIndicatorView, SPTCanvasAttributionView, SPTCanvasContentLayerViewControllerViewModel, SPTCanvasNowPlayingOverlayView, UIImageView, UILabel, UIView;
 
 @interface SPTCanvasContentLayerViewController : UIViewController <SPTCanvasTapArtistAttributionDelegate, SPTCanvasContentLayerViewControllerViewModelDelegate>
 {
@@ -20,9 +20,11 @@
     SPTCanvasNowPlayingOverlayView *_overlayView;
     SPTCanvasAttributionView *_attributionView;
     SPTCanvasActivityIndicatorView *_activityIndicatorView;
+    UILabel *_qaDebugLabel;
 }
 
 @property(nonatomic) _Bool showsAttributionView; // @synthesize showsAttributionView=_showsAttributionView;
+@property(retain, nonatomic) UILabel *qaDebugLabel; // @synthesize qaDebugLabel=_qaDebugLabel;
 @property(readonly, nonatomic) SPTCanvasActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 @property(readonly, nonatomic) SPTCanvasAttributionView *attributionView; // @synthesize attributionView=_attributionView;
 @property(retain, nonatomic) SPTCanvasNowPlayingOverlayView *overlayView; // @synthesize overlayView=_overlayView;
@@ -45,11 +47,13 @@
 - (void)hideOverlay;
 - (void)showOverlay;
 - (void)didTapArtistAttribution;
+- (void)didReceiveLoggerNotification:(id)arg1;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (void)dealloc;
 - (id)init;
 
 // Remaining properties

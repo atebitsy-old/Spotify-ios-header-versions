@@ -11,7 +11,6 @@
 
 @interface SPTFindUIContainerViewController : UIViewController <SPTFindUIHeaderContainerDelegate, SPTFindUIContentContainerDelegate>
 {
-    // Error parsing type: , name: mainContentLayoutGuide
     // Error parsing type: , name: headerContainer
     // Error parsing type: , name: contentContainer
     // Error parsing type: , name: headerHeightConstraint
@@ -21,7 +20,7 @@
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)contentContainer:(id)arg1 didChangeOffset:(struct CGPoint)arg2;
 - (void)headerContainerDidChangeMetrics:(id)arg1;
-- (void)loadView;
+- (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
 
 @end

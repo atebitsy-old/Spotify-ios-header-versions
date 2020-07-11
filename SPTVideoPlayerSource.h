@@ -48,6 +48,7 @@
 @property(retain, nonatomic) AVQueuePlayer *player; // @synthesize player=_player;
 @property(retain, nonatomic) AVPlayerItem *playerItem; // @synthesize playerItem=_playerItem;
 - (void).cxx_destruct;
+- (void)refreshCurrentlyRenderedSubtitle;
 - (void)playerItemNewAccessLogEntry:(id)arg1;
 - (void)playerItemNewErrorLogEntry:(id)arg1;
 - (void)playerItemFailedToPlayToEndTime:(id)arg1 withError:(id)arg2;

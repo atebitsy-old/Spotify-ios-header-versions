@@ -47,6 +47,7 @@
 - (void)skipToNextTrack;
 @property(readonly, nonatomic, getter=isQueueInSync) _Bool queueInSync;
 @property(readonly, nonatomic) SPTPlayerTrack *playingTrack;
+@property(readonly, nonatomic) SPTPlayerTrack *nextTrack;
 @property(readonly, nonatomic) SPTPlayerTrack *currentTrack;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

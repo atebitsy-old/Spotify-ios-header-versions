@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSDate, NSString;
+
 @interface SPTAccessToken : NSObject
 {
     struct AccessToken _accessToken;
@@ -13,9 +15,9 @@
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
-- (id)tokenType;
-- (id)expiresAt;
-- (id)accessToken;
+@property(readonly, nonatomic) NSString *tokenType;
+@property(readonly, nonatomic) NSDate *expiresAt;
+@property(readonly, nonatomic) NSString *accessToken;
 - (id)initWithAccessToken:(struct AccessToken *)arg1;
 
 @end

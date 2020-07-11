@@ -7,12 +7,11 @@
 #import <objc/NSObject.h>
 
 #import "SPTPlayerObserver-Protocol.h"
-#import "SPTPlayerStagedContextObserver-Protocol.h"
 
 @class NSHashTable, NSString;
 @protocol SPTPlayer;
 
-@interface SPTNowPlayingLiveVideoViewModel : NSObject <SPTPlayerObserver, SPTPlayerStagedContextObserver>
+@interface SPTNowPlayingLiveVideoViewModel : NSObject <SPTPlayerObserver>
 {
     NSHashTable *_observers;
     id <SPTPlayer> _player;
@@ -22,7 +21,6 @@
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 - (void).cxx_destruct;
 - (void)notifyObserversUsingBlock:(CDUnknownBlockType)arg1;
-- (void)player:(id)arg1 didStageContext:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)updateWithPlayerState:(id)arg1;
 @property(readonly, nonatomic, getter=isPlaying) _Bool playing;

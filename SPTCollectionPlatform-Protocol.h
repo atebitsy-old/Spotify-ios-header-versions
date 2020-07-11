@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTCollectionPlatformFetchOptions, SPTCollectionPlayPolicy;
-@protocol SPTCollectionPlatformDataLoader, SPTCollectionPlatformDataLoaderRequestToken, SPTCollectionPlatformObserver, SPTCollectionPlatformStateProvider;
+@protocol SPTCollectionPlatformDataLoader, SPTCollectionPlatformObserver, SPTCollectionPlatformStateProvider;
 
 @protocol SPTCollectionPlatform <NSObject>
 @property(readonly, nonatomic) id <SPTCollectionPlatformStateProvider> stateProvider;
@@ -27,8 +27,5 @@
 - (void)addURL:(NSURL *)arg1 bySource:(NSString *)arg2 fromContext:(NSURL *)arg3 showUIConfirmation:(_Bool)arg4 completion:(void (^)(_Bool))arg5 entityName:(NSString *)arg6;
 - (void)addURL:(NSURL *)arg1 bySource:(NSString *)arg2 fromContext:(NSURL *)arg3 showUIConfirmation:(_Bool)arg4 completion:(void (^)(_Bool))arg5;
 - (_Bool)canAddTrackWithURL:(NSURL *)arg1;
-- (id <SPTCollectionPlatformDataLoaderRequestToken>)subscribeCollectionStateForURLs:(NSArray *)arg1 completion:(void (^)(NSArray *, NSError *))arg2;
-- (id <SPTCollectionPlatformDataLoaderRequestToken>)subscribeCollectionStateForURL:(NSURL *)arg1 completion:(void (^)(unsigned long long, NSError *))arg2;
-- (void)collectionStateForURL:(NSURL *)arg1 completion:(void (^)(unsigned long long, NSError *))arg2;
 @end
 

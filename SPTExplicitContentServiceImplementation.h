@@ -9,7 +9,7 @@
 #import "SPTExplicitContentService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTExplicitContentAccessManagerImplementation, SPTExplicitContentFeatureProperties, SPTExplicitContentLogger, SPTExplicitContentPopupPresenter;
-@protocol SPTContainerService, SPTGLUEService, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
+@protocol SPTContainerService, SPTGLUEService, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBILogger, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTExplicitContentServiceImplementation : NSObject <SPTExplicitContentService>
 {
@@ -19,10 +19,12 @@
     id <SPTSessionService> _sessionService;
     id <SPTSettingsFeature> _settingsService;
     id <SPTURIDispatchService> _uriDispatchService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTUBIService> _ubiService;
     SPTExplicitContentAccessManagerImplementation *_accessManager;
     SPTExplicitContentLogger *_logger;
     SPTExplicitContentPopupPresenter *_popupPresenter;
-    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTUBILogger> _ubiLogger;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTExplicitContentFeatureProperties *_properties;
 }
@@ -30,10 +32,12 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTExplicitContentFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) SPTExplicitContentPopupPresenter *popupPresenter; // @synthesize popupPresenter=_popupPresenter;
 @property(retain, nonatomic) SPTExplicitContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTExplicitContentAccessManagerImplementation *accessManager; // @synthesize accessManager=_accessManager;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;

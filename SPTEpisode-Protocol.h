@@ -16,8 +16,7 @@
 @property(readonly, nonatomic, getter=isPlayed) _Bool played;
 @property(readonly, nonatomic, getter=isAvailable) _Bool available;
 @property(readonly, nonatomic, getter=isPlayable) _Bool playable;
-@property(readonly, nonatomic, getter=isVideoMediaType) _Bool videoMediaType;
-@property(readonly, nonatomic, getter=isAudioMediaType) _Bool audioMediaType;
+@property(readonly, nonatomic) long long mediaType;
 @property(readonly, copy, nonatomic) NSString *manifestId;
 @property(readonly, copy, nonatomic) NSURL *largePodcastImageURL;
 @property(readonly, copy, nonatomic) NSURL *podcastImageURL;
@@ -33,6 +32,7 @@
 @property(readonly, copy, nonatomic) NSURL *podcastURL;
 @property(readonly, copy, nonatomic) NSString *longDescription;
 @property(readonly, copy, nonatomic) NSString *title;
+- (NSString *)playerMediaTypeString;
 - (NSString *)localizedDate;
 - (NSString *)localizedDuration;
 - (NSString *)localizedTime;

@@ -14,12 +14,14 @@
     // Error parsing type: , name: displayName
     // Error parsing type: , name: imageURL
     // Error parsing type: , name: isVerified
+    // Error parsing type: , name: hasAnnotatedImage
     // Error parsing type: , name: cosmosDictionaryDataLoader
     // Error parsing type: , name: requestToken
     // Error parsing type: , name: cosmosRequestDataUsernamesKey
     // Error parsing type: , name: observers
 }
 
+@property(nonatomic) _Bool hasAnnotatedImage; // @synthesize hasAnnotatedImage;
 @property(nonatomic) _Bool isVerified; // @synthesize isVerified;
 @property(nonatomic, copy) NSURL *imageURL;
 @property(nonatomic, copy) NSString *displayName;

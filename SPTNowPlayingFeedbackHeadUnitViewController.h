@@ -38,6 +38,7 @@
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)updateUI;
 - (void)nowPlayingModelDidUpdateMetadata:(id)arg1;
+- (unsigned long long)negativeFeedbackType;
 - (void)updateBanButton;
 - (void)updateHeartButton;
 - (void)updateSkipButtons;

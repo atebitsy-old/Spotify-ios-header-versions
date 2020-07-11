@@ -103,6 +103,7 @@
 - (void)createNowPlayingBarImprovementsSignal;
 - (void)createMusicSleepTimerSignal;
 - (void)createNoSkipLimitSignal;
+@property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventLoggingEnabled) _Bool remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
 - (_Bool)isSamplesTestEnabled;

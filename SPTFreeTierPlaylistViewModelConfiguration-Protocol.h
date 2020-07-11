@@ -12,10 +12,8 @@
 @property(readonly, nonatomic, getter=isYouMightAlsoLikeEnabled) _Bool youMightAlsoLikeEnabled;
 @property(readonly, nonatomic, getter=isEditModeSupported) _Bool editModeSupported;
 @property(readonly, nonatomic, getter=isPlaylistOwnerPageEnabled) _Bool playlistOwnerPageEnabled;
-@property(readonly, nonatomic, getter=isCollectionMenuIconsEnabled) _Bool collectionMenuIconsEnabled;
 @property(readonly, nonatomic, getter=isPlayButtonPausingPlay) _Bool playButtonPausingPlay;
 @property(readonly, nonatomic, getter=isTappingUnavailableTracksAllowed) _Bool tappingUnavailableTracksAllowed;
-@property(readonly, nonatomic, getter=isAlbumTitleIncludedInItemSubtitles) _Bool albumTitleIncludedInItemSubtitles;
 @property(readonly, nonatomic, getter=isLikeActionPlacedInsideHeader) _Bool likeActionPlacedInsideHeader;
 @end
 

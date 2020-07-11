@@ -8,13 +8,12 @@
 
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTPlayerQueueObserver-Protocol.h"
-#import "SPTPlayerStagedContextObserver-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
 @class NSHashTable, NSString, SPTPlayerState;
 @protocol SPTNowPlayingManager, SPTNowPlayingTestManager, SPTPlayer, SPTProductState, SPTQueueService;
 
-@interface SPTNowPlayingQueueMetadataModel : NSObject <SPTPlayerObserver, SPTPlayerQueueObserver, SPTProductStateObserver, SPTPlayerStagedContextObserver>
+@interface SPTNowPlayingQueueMetadataModel : NSObject <SPTPlayerObserver, SPTPlayerQueueObserver, SPTProductStateObserver>
 {
     id <SPTNowPlayingManager> _nowPlayingManager;
     NSHashTable *_observers;
@@ -35,7 +34,6 @@
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 - (void).cxx_destruct;
-- (void)player:(id)arg1 didStageContext:(id)arg2;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)player:(id)arg1 queueDidChange:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

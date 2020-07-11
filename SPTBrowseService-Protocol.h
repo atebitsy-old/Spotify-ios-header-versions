@@ -7,9 +7,11 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL;
+@protocol SPTFindUIContentContainer;
 
 @protocol SPTBrowseService <SPTService>
 - (_Bool)ownsPageWithURI:(NSURL *)arg1;
-@property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;
+@property(nonatomic, readonly) CDUnknownBlockType cardsTransformer;
+- (id <SPTFindUIContentContainer>)provideBrowseContentContainer;
 @end
 

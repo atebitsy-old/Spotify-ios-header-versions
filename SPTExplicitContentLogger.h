@@ -6,20 +6,26 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileExplicitcontentEventFactory;
 
 @interface SPTExplicitContentLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBIMobileExplicitcontentEventFactory> _eventFactory;
+    id <SPTUBILogger> _ubiLogger;
 }
 
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTUBIMobileExplicitcontentEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (double)timestamp;
 - (void)logSettingsMenuInteractionEnabled:(_Bool)arg1 contentURI:(id)arg2;
+- (void)logPlaybackPreventedByLockPopUpCloseButtonInteraction;
+- (void)logPlaybackPreventedPopUpNotNowButtonInteraction;
 - (void)logPlaybackPreventedPopUpGoToSettingsInteraction:(id)arg1 pageURI:(id)arg2;
-- (void)logPlaybackPreventedPopUpImpressionContentURI:(id)arg1 pageURI:(id)arg2;
-- (id)initWithLogCenter:(id)arg1;
+- (void)logPlaybackPreventedPopUpImpressionContentURI:(id)arg1 pageURI:(id)arg2 lockedState:(_Bool)arg3;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
 
 @end
 

@@ -6,8 +6,8 @@
 
 #import "SPTFreeTierPlaylistPlayModel-Protocol.h"
 
-@class NSURL;
-@protocol SPTFreeTierPlaylistModelEntityTrackFields, SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistSortingFiltering;
+@class NSURL, SPTPlayOrigin;
+@protocol SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistSortingFiltering, SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldPlayStatePlayable><SPTPlaylistPlatformFieldPlayStateRestriction, SPTPlaylistPlatformInCollection><SPTPlaylistPlatformFieldURL, SPTPlaylistPlatformIsBanned><SPTPlaylistPlatformFieldURL;
 
 @protocol SPTFreeTierPlaylistModel <SPTFreeTierPlaylistPlayModel>
 @property(readonly, nonatomic, getter=isFormatList) _Bool formatList;
@@ -16,12 +16,14 @@
 @property(readonly, nonatomic) _Bool loadError;
 @property(readonly, nonatomic, getter=isOfflineSyncPermissionEnabled) _Bool offlineSyncPermissionEnabled;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
+@property(nonatomic) _Bool excludeAllEpisodesOverride;
 @property(readonly, nonatomic) NSURL *playlistURL;
+- (void)playTrackURL:(NSURL *)arg1 andPlayOrigin:(SPTPlayOrigin *)arg2;
 - (void)playlistContainsTrackURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;
 - (void)addTrackURL:(NSURL *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)toggleLikedStateOnTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1;
-- (void)toggleBannedStateOnTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1;
-- (_Bool)isPlaybackRestrictedForTrackEntity:(id <SPTFreeTierPlaylistModelEntityTrackFields>)arg1 shouldDisplayExplainingAlert:(_Bool)arg2 coverArtURL:(NSURL *)arg3;
+- (void)toggleLikedStateOnTrackEntity:(id <SPTPlaylistPlatformInCollection><SPTPlaylistPlatformFieldURL>)arg1;
+- (void)toggleBannedStateOnTrackEntity:(id <SPTPlaylistPlatformIsBanned><SPTPlaylistPlatformFieldURL>)arg1;
+- (_Bool)isPlaybackRestrictedForTrackEntity:(id <SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldPlayStatePlayable><SPTPlaylistPlatformFieldPlayStateRestriction>)arg1 shouldDisplayExplainingAlert:(_Bool)arg2 coverArtURL:(NSURL *)arg3;
 - (void)changeOffline:(_Bool)arg1;
 - (void)loadMore;
 - (void)deletePlaylist;

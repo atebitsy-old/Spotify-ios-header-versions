@@ -8,7 +8,7 @@
 
 #import "SPTNowPlayingTestManagerObserver-Protocol.h"
 
-@class NSString, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingModel, SPTTheme, UIViewController;
+@class NSString, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingModel, SPTStatefulPlayer, SPTTheme, UIViewController;
 @protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingManager, SPTNowPlayingTestManager;
 
 @interface SPTNowPlayingBarLeftAccessoryUnitProvider : SPTNowPlayingBaseUnitProvider <SPTNowPlayingTestManagerObserver>
@@ -23,8 +23,10 @@
     id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
     SPTNowPlayingBarModel *_nowPlayingBarModel;
     id <BMVideoSurfaceManager> _videoSurfaceManager;
+    SPTStatefulPlayer *_statefulPlayer;
 }
 
+@property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(readonly, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(readonly, nonatomic) SPTNowPlayingBarModel *nowPlayingBarModel; // @synthesize nowPlayingBarModel=_nowPlayingBarModel;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
@@ -43,7 +45,7 @@
 - (void)createHeartUnit;
 - (void)createOpenUnit;
 - (void)createEmptyUnit;
-- (id)initWithPlayer:(id)arg1 nowPlayingManager:(id)arg2 theme:(id)arg3 nowPlayingModel:(id)arg4 auxiliaryActionsHandler:(id)arg5 logger:(id)arg6 testManager:(id)arg7 imageLoaderFactory:(id)arg8 nowPlayingBarModel:(id)arg9 videoSurfaceManager:(id)arg10;
+- (id)initWithPlayer:(id)arg1 nowPlayingManager:(id)arg2 theme:(id)arg3 nowPlayingModel:(id)arg4 auxiliaryActionsHandler:(id)arg5 logger:(id)arg6 testManager:(id)arg7 imageLoaderFactory:(id)arg8 nowPlayingBarModel:(id)arg9 videoSurfaceManager:(id)arg10 statefulPlayer:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

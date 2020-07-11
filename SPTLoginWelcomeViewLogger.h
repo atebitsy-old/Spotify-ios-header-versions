@@ -24,6 +24,10 @@
 - (void)logUserDidTapLoginButton;
 - (void)logUserDidTapFacebookButton;
 - (void)logUserDidTapSignupButton;
+- (void)logUserDidTapEmailButton;
+- (void)logUserDidReceiveMixedLayout;
+- (void)logUserDidReceiveIntentLedLayout;
+- (void)logUserDidReceiveMethodLedLayout;
 - (void)logUserDidSeeView;
 - (id)initWithLogger:(id)arg1;
 

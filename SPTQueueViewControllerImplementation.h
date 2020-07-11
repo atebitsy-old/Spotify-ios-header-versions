@@ -9,9 +9,7 @@
 #import "SPTNowPlayingModeResolverObserver-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
-#import "SPTQueueAnimation-Protocol.h"
 #import "SPTQueueEnabling-Protocol.h"
-#import "SPTQueueFooter-Protocol.h"
 #import "SPTQueueSelectableLeadingViewDelegate-Protocol.h"
 #import "SPTQueueTableViewSectionHeaderViewDelegate-Protocol.h"
 #import "SPTQueueViewModelDelegate-Protocol.h"
@@ -21,9 +19,8 @@
 @class GLUEEntityRowStyle, NSIndexPath, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSNotificationCenter, NSObject, NSString, NSURL, SPTQueueTableViewSectionHeaderView, SPTQueueTheme, SPTQueueViewModelDataSource, SPTTableView, UIButton, UIView;
 @protocol GLUEImageLoader, OS_dispatch_queue, OS_dispatch_semaphore, SPTCrashReporter, SPTNowPlayingModeResolver, SPTPageContainer, SPTQueueLogger, SPTQueuePlaybackRestrictionHandler, SPTQueueViewControllerDelegate, SPTQueueViewModel, SPTShowEntityService;
 
-@interface SPTQueueViewControllerImplementation : UIViewController <UITableViewDataSource, SPTUITableViewExtendedDelegate, SPTQueueSelectableLeadingViewDelegate, SPTQueueTableViewSectionHeaderViewDelegate, SPTQueueViewModelDelegate, SPTProductStateObserver, SPTNowPlayingModeResolverObserver, SPTQueueAnimation, SPTQueueEnabling, SPTQueueFooter, SPTPageController>
+@interface SPTQueueViewControllerImplementation : UIViewController <UITableViewDataSource, SPTUITableViewExtendedDelegate, SPTQueueSelectableLeadingViewDelegate, SPTQueueTableViewSectionHeaderViewDelegate, SPTQueueViewModelDelegate, SPTProductStateObserver, SPTNowPlayingModeResolverObserver, SPTQueueEnabling, SPTPageController>
 {
-    _Bool _footerHidden;
     _Bool _hideNowPlayingCoverArt;
     _Bool _updatesEnabled;
     _Bool _draggingRows;
@@ -100,7 +97,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) __weak id <SPTQueueViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <SPTQueueViewModel> viewModel; // @synthesize viewModel=_viewModel;
-@property(nonatomic, getter=isFooterHidden) _Bool footerHidden; // @synthesize footerHidden=_footerHidden;
 - (void).cxx_destruct;
 - (void)setNavBarViewController:(id)arg1;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
@@ -151,14 +147,6 @@
 - (_Bool)tableView:(id)arg1 shouldIndentWhileEditingRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
-- (void)reloadPlayingTrackCell;
-- (void)animationDidFinish;
-- (void)animationDidStart;
-@property(readonly, nonatomic) UIView *queueTableView;
-@property(readonly, nonatomic) UIView *queueNavigationBarButtonsView;
-@property(readonly, nonatomic) UIView *queueNavigationBarView;
-@property(readonly, nonatomic) struct CGSize nowPlayingCoverArtSize;
-@property(readonly, nonatomic) UIView *nowPlayingCoverArtView;
 - (id)gradientMaskWithFrame:(struct CGRect)arg1 location:(double)arg2 length:(double)arg3;
 - (void)updateMaskForCell:(id)arg1 forSection:(long long)arg2;
 - (void)updateMaskForCell:(id)arg1 atIndexPath:(id)arg2;

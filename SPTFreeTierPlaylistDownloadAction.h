@@ -7,7 +7,7 @@
 #import "SPAction.h"
 
 @class NSURL, UIColor;
-@protocol SPTCollectionLogger, SPTPlaylistModel;
+@protocol SPTAlertInterface, SPTCollectionLogger, SPTPlaylistModel;
 
 @interface SPTFreeTierPlaylistDownloadAction : SPAction
 {
@@ -17,8 +17,10 @@
     NSURL *_playlistURL;
     id <SPTCollectionLogger> _logger;
     UIColor *_selectedActionIconColor;
+    id <SPTAlertInterface> _alertInterface;
 }
 
+@property(nonatomic) __weak id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(readonly, nonatomic) UIColor *selectedActionIconColor; // @synthesize selectedActionIconColor=_selectedActionIconColor;
 @property(readonly, nonatomic) id <SPTCollectionLogger> logger; // @synthesize logger=_logger;
 @property(nonatomic, getter=isFollowed) _Bool followed; // @synthesize followed=_followed;
@@ -26,13 +28,14 @@
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 - (void).cxx_destruct;
+- (void)showRemoveFromDownloadsConfirmationAlertWithCompletion:(CDUnknownBlockType)arg1;
 - (id)execute:(id)arg1;
 - (id)iconColor;
 - (long long)style;
 - (id)logEventName;
 - (long long)icon;
 - (id)title;
-- (id)initWithPlaylistURL:(id)arg1 playlistModel:(id)arg2 isOffline:(_Bool)arg3 isFollowed:(_Bool)arg4 logContext:(id)arg5 logger:(id)arg6 selectedActionIconColor:(id)arg7;
+- (id)initWithPlaylistURL:(id)arg1 playlistModel:(id)arg2 isOffline:(_Bool)arg3 isFollowed:(_Bool)arg4 logContext:(id)arg5 logger:(id)arg6 selectedActionIconColor:(id)arg7 alertInterface:(id)arg8;
 
 @end
 

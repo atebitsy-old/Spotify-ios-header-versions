@@ -9,6 +9,7 @@
 @class NSDictionary, NSError, NSString, SPTAuthSignupInfo;
 
 @protocol SPTLoginNavigationCoordinator <NSObject>
+- (void)openIntentLedStartScreen:(unsigned long long)arg1;
 - (void)openMethodLedStartScreen:(unsigned long long)arg1;
 - (void)openPhoneNumberScreen;
 - (void)openPhoneNumberContinueWithEmailScreen;

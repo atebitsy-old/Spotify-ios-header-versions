@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSNumber;
+@class NSNumber, NSString;
 @protocol SPTVolumeRemoteDelegate;
 
 @protocol SPTVolumeRemoteController <NSObject>
+@property(readonly, copy, nonatomic) NSString *debugLoggingIdentifier;
 @property(nonatomic) __weak id <SPTVolumeRemoteDelegate> delegate;
 @property(readonly, nonatomic) double volumeStep;
 @property(readonly, nonatomic) NSNumber *lastKnownVolumeForActiveDevice;

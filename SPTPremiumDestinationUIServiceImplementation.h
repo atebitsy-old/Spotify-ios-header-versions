@@ -8,21 +8,17 @@
 
 #import "SPTPremiumDestinationUIService-Protocol.h"
 
-@class HUBComponentRegistry, NSString, SPTAllocationContext;
-@protocol SPTGLUEService, SPTHugsFactory, SPTPremiumDestinationUIHubComponentFactory;
+@class NSString, SPTAllocationContext;
+@protocol SPTGLUEService, SPTPremiumDestinationUIHubComponentFactory;
 
 @interface SPTPremiumDestinationUIServiceImplementation : NSObject <SPTPremiumDestinationUIService>
 {
     id <SPTGLUEService> _glueService;
-    id <SPTHugsFactory> _hugsFactory;
-    HUBComponentRegistry *_componentRegistry;
     id <SPTPremiumDestinationUIHubComponentFactory> _componentFactory;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTPremiumDestinationUIHubComponentFactory> componentFactory; // @synthesize componentFactory=_componentFactory;
-@property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
-@property(nonatomic) __weak id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 - (void).cxx_destruct;
 - (id)providePremiumDestinationUIGLUETheme;

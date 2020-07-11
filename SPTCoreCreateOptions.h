@@ -24,7 +24,6 @@
     NSString *_deviceDescription;
     NSString *_deviceDescriptionShort;
     NSString *_deviceId;
-    NSString *_deviceId2;
     NSString *_clientVersionLong;
     NSString *_clientVersionShort;
     NSString *_buildId;
@@ -52,7 +51,6 @@
 @property(copy, nonatomic) NSString *clientVersionShort; // @synthesize clientVersionShort=_clientVersionShort;
 @property(copy, nonatomic) NSString *clientVersionLong; // @synthesize clientVersionLong=_clientVersionLong;
 @property(nonatomic) unsigned int clientRevision; // @synthesize clientRevision=_clientRevision;
-@property(copy, nonatomic) NSString *deviceId2; // @synthesize deviceId2=_deviceId2;
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
 @property(copy, nonatomic) NSString *deviceDescriptionShort; // @synthesize deviceDescriptionShort=_deviceDescriptionShort;
 @property(copy, nonatomic) NSString *deviceDescription; // @synthesize deviceDescription=_deviceDescription;

@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: playbackController
     // Error parsing type: , name: collectionPlatform
-    // Error parsing type: , name: dismissHandler
+    // Error parsing type: , name: controllerDelegate
 }
 
 @end

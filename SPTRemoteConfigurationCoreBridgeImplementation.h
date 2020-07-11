@@ -12,15 +12,13 @@
 
 @interface SPTRemoteConfigurationCoreBridgeImplementation : NSObject <RCCCoreBridge>
 {
-    _Bool _isBootstrap;
     id <SPTRemoteConfigurationCore> _remoteConfigurationCore;
 }
 
-@property(readonly, nonatomic) _Bool isBootstrap; // @synthesize isBootstrap=_isBootstrap;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationCore> remoteConfigurationCore; // @synthesize remoteConfigurationCore=_remoteConfigurationCore;
 - (void).cxx_destruct;
 - (_Bool)passConfigurationData:(id)arg1 error:(id *)arg2;
-- (id)initWithRemoteConfigurationCore:(id)arg1 isBootstrap:(_Bool)arg2;
+- (id)initWithRemoteConfigurationCore:(id)arg1;
 
 @end
 

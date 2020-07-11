@@ -6,12 +6,13 @@
 
 #import "HUBComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithChildren-Protocol.h"
 
 @class GLUEGradientView, NSArray, UIStackView;
 @protocol HUBComponentViewChildDelegate;
 
-@interface SPTPremiumDestinationUIGradientComponentView : HUBComponentView <HUBComponentViewWithChildren>
+@interface SPTPremiumDestinationUIGradientComponentView : HUBComponentView <HUBComponentViewWithChildren, HUBComponentViewObserver>
 {
     id <HUBComponentViewChildDelegate> childDelegate;
     GLUEGradientView *_gradientView;
@@ -25,6 +26,8 @@
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;
 - (void).cxx_destruct;
 - (void)setupChildComponentsForModel:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)setupConstraints;

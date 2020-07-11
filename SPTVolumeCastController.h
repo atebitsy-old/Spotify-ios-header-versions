@@ -25,6 +25,7 @@
 - (void).cxx_destruct;
 - (void)sessionManager:(id)arg1 castSession:(id)arg2 didReceiveDeviceVolume:(float)arg3 muted:(_Bool)arg4;
 - (void)sendVolumeUpdate:(double)arg1;
+@property(readonly, copy, nonatomic) NSString *debugLoggingIdentifier;
 @property(readonly, nonatomic) NSNumber *lastKnownVolumeForActiveDevice;
 @property(readonly, nonatomic) double volumeStep;
 @property(readonly, nonatomic) _Bool activeDeviceSupportsVolume;

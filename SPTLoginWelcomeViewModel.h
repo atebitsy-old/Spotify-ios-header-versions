@@ -10,13 +10,12 @@
 #import "SPTLoginFacebookAuthenticationControllerDelegate-Protocol.h"
 
 @class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginFacebookAuthenticationController, SPTLoginTestManager, SPTLoginWelcomeViewLogger;
-@protocol SPTDialogController, SPTLoginNavigationCoordinator, SPTLoginStateController, SPTLoginWelcomeViewModelDelegate;
+@protocol SPTDialogController, SPTLoginNavigationCoordinator, SPTLoginStateController, SPTLoginThirdPartyLoginHandlerDelegate;
 
 @interface SPTLoginWelcomeViewModel : NSObject <SPTLoginFacebookAuthenticationControllerDelegate, SPTLoginAppleAuthorizationControllerDelegate>
 {
     _Bool _savedCredentialsDialogShownOnce;
-    id <SPTLoginWelcomeViewModelDelegate> _delegate;
-    SPTLoginWelcomeViewLogger *_logger;
+    id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
     SPTLoginTestManager *_testManager;
     id <SPTLoginStateController> _loginStateController;
     SPTLoginErrorDecorator *_errorDecorator;
@@ -26,8 +25,10 @@
     SPTDynamicSignupFlowController *_flowController;
     SPTLoginDbManager *_databaseManager;
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
+    SPTLoginWelcomeViewLogger *_logger;
 }
 
+@property(readonly, nonatomic) SPTLoginWelcomeViewLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
@@ -38,13 +39,14 @@
 @property(readonly, nonatomic) SPTLoginErrorDecorator *errorDecorator; // @synthesize errorDecorator=_errorDecorator;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) SPTLoginWelcomeViewLogger *logger; // @synthesize logger=_logger;
-@property(nonatomic) __weak id <SPTLoginWelcomeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)logUserDidSeeView;
 - (void)appleAuthorizationControllerWillLogIn;
 - (void)appleAuthorizationControllerDidCompleteLoginWithError:(id)arg1;
 - (id)appleAuthorizationControllerContext;
 - (void)controller:(id)arg1 didCompleteFacebookLoginWithError:(id)arg2;
+- (void)controllerDidStartFacebookLogin:(id)arg1;
 - (void)loginWithApple;
 - (_Bool)isAppleSignInCustomStyleEnabled;
 - (_Bool)isAppleSignInSystemStyleEnabled;
@@ -55,7 +57,9 @@
 - (void)navigateToLogin;
 - (void)loginWithFacebook;
 - (void)presentSignupStepOneViewController;
-- (void)presentEmailMethodLedViewController;
+- (void)userClickedContinueWithEmail;
+- (void)userClickedSignup;
+- (void)userClickedLogin;
 - (id)appleLogoIcon;
 - (id)facebookLogoIcon;
 - (id)facebookLogoIconWhite;

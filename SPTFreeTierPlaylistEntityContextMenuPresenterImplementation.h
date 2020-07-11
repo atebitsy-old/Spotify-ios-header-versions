@@ -9,11 +9,12 @@
 #import "SPTFreeTierPlaylistEntityContextMenuPresenter-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistLogger;
-@protocol SPContextMenuFeature, SPTAlertInterface, SPTContextMenuPresenter, SPTCreatePlaylistTestManager, SPTFreeTierPlaylistViewModel;
+@protocol SPContextMenuFeature, SPTAlertInterface, SPTContextMenuPresenter, SPTCreatePlaylistTestManager, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel;
 
 @interface SPTFreeTierPlaylistEntityContextMenuPresenterImplementation : NSObject <SPTFreeTierPlaylistEntityContextMenuPresenter>
 {
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
+    id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPContextMenuFeature> _contextMenuService;
     SPTFreeTierPlaylistLogger *_logger;
     id <SPTCreatePlaylistTestManager> _createPlaylistTestManager;
@@ -26,11 +27,12 @@
 @property(retain, nonatomic) id <SPTCreatePlaylistTestManager> createPlaylistTestManager; // @synthesize createPlaylistTestManager=_createPlaylistTestManager;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 - (void).cxx_destruct;
 - (void)addActionWithIdentifier:(id)arg1 toActions:(id)arg2;
 - (void)presentContextMenuInViewController:(id)arg1 sender:(id)arg2;
-- (id)initWithPlaylistViewModel:(id)arg1 contextMenuService:(id)arg2 logger:(id)arg3 createPlaylistTestManager:(id)arg4 alertInterface:(id)arg5;
+- (id)initWithPlaylistViewModel:(id)arg1 itemsViewModel:(id)arg2 contextMenuService:(id)arg3 logger:(id)arg4 createPlaylistTestManager:(id)arg5 alertInterface:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

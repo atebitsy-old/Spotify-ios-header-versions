@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTFreeTierPlaylistTestManager <NSObject>
+@property(readonly, nonatomic) _Bool useSwiftTrackSection;
 @property(readonly, nonatomic) _Bool useTrackCloudProvider;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnPlayback;
 @property(readonly, nonatomic, getter=isDoubleStatePlayButtonEnabled) _Bool doubleStatePlayButtonEnabled;

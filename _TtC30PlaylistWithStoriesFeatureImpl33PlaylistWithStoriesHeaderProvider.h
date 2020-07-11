@@ -20,6 +20,7 @@
     // Error parsing type: , name: defaultHeaderViewModel
     // Error parsing type: , name: fullbleedHeaderViewModel
     // Error parsing type: , name: userDefaultsController
+    // Error parsing type: , name: logger
 }
 
 - (void).cxx_destruct;

@@ -17,14 +17,12 @@
     _Bool _drivingCarViewHomeFeed;
     _Bool _drivingCarViewRollout;
     _Bool _drivingCarViewPivotRollout;
-    _Bool _drivingMotionBasedDetectionSurvey;
     _Bool _drivingJumpstartForegroundRollout;
     _Bool _drivingCarViewHoldback;
 }
 
 @property(readonly, nonatomic) _Bool drivingCarViewHoldback; // @synthesize drivingCarViewHoldback=_drivingCarViewHoldback;
 @property(readonly, nonatomic) _Bool drivingJumpstartForegroundRollout; // @synthesize drivingJumpstartForegroundRollout=_drivingJumpstartForegroundRollout;
-@property(readonly, nonatomic) _Bool drivingMotionBasedDetectionSurvey; // @synthesize drivingMotionBasedDetectionSurvey=_drivingMotionBasedDetectionSurvey;
 @property(readonly, nonatomic) _Bool drivingCarViewPivotRollout; // @synthesize drivingCarViewPivotRollout=_drivingCarViewPivotRollout;
 @property(readonly, nonatomic) _Bool drivingCarViewRollout; // @synthesize drivingCarViewRollout=_drivingCarViewRollout;
 @property(readonly, nonatomic) _Bool drivingCarViewHomeFeed; // @synthesize drivingCarViewHomeFeed=_drivingCarViewHomeFeed;

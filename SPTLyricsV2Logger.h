@@ -7,17 +7,26 @@
 #import <objc/NSObject.h>
 
 @class NSString;
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileLyricsEventFactory;
 
 @interface SPTLyricsV2Logger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBILogger> _ubiLogger;
+    id <SPTUBIMobileLyricsEventFactory> _ubiEventFactory;
     NSString *_featureId;
 }
 
 @property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
+@property(readonly, nonatomic) id <SPTUBIMobileLyricsEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+- (id)playPauseButtonFactoryForURI:(id)arg1;
+- (id)fullscreenViewFactoryForURI:(id)arg1;
+- (id)cardViewFactoryForURI:(id)arg1;
+- (void)logUBIInteraction:(id)arg1;
+- (void)logUBIImpression:(id)arg1;
 - (void)logUserInteractionMessageWithTrackURI:(id)arg1 sectionId:(id)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUserImpressionMessageWithTrackURI:(id)arg1 sectionId:(id)arg2 targetURI:(id)arg3 impressionType:(id)arg4 renderType:(id)arg5;
 - (void)logSyncTheseLyricsLinkTapForTrackURI:(id)arg1;
@@ -27,7 +36,8 @@
 - (void)logCardTapForTrackURI:(id)arg1;
 - (void)logUserSawEnoughCharactersOnFullscreenWithTrackURI:(id)arg1;
 - (void)logUserSawEnoughCharactersOnCardWithTrackURI:(id)arg1;
-- (id)initWithFeatureId:(id)arg1 logCenter:(id)arg2;
+- (void)logUserSawFullscreenForTrackURI:(id)arg1;
+- (id)initWithFeatureId:(id)arg1 logCenter:(id)arg2 ubiEventFactory:(id)arg3 ubiLogger:(id)arg4;
 
 @end
 

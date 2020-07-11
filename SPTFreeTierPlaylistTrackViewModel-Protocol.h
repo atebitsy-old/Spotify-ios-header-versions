@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSDate, NSDictionary, NSString, NSURL, UIColor;
+@class NSArray, NSDate, NSDictionary, NSString, NSURL;
 
 @protocol SPTFreeTierPlaylistTrackViewModel <NSObject>
 @property(readonly, nonatomic) NSString *ownerName;
@@ -17,7 +17,6 @@
 @property(readonly, nonatomic) double timeLeft;
 @property(readonly, nonatomic) NSDate *publishDate;
 @property(readonly, copy, nonatomic) NSString *podcastTitle;
-@property(readonly, nonatomic, getter=isImageEnabled) _Bool imageEnabled;
 @property(readonly, nonatomic) long long offlineSyncStatus;
 @property(readonly, nonatomic) NSString *freeformDescription;
 @property(readonly, nonatomic) NSURL *videoThumbnailURL;
@@ -31,14 +30,10 @@
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly;
 @property(readonly, copy, nonatomic) NSArray *artistNames;
 @property(readonly, copy, nonatomic) NSArray *artists;
-@property(readonly, nonatomic) UIColor *contextMenuIconColor;
-@property(readonly, nonatomic) long long contextMenuIcon;
-@property(readonly, copy, nonatomic) NSString *previewID;
 @property(readonly, nonatomic) NSURL *albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) NSURL *URL;
-@property(readonly, copy, nonatomic) NSString *glueAudioTrackSubtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 @end
 

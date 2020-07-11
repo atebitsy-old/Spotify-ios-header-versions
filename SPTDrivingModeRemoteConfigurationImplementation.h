@@ -19,7 +19,6 @@
 @property(readonly, nonatomic) SPTDrivingFeatureProperties *remoteProperties; // @synthesize remoteProperties=_remoteProperties;
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isJumpstartInForegroundEnabled) _Bool jumpstartInForeground;
-@property(readonly, nonatomic, getter=isMotionBasedDetectionSurveyEnabled) _Bool motionBasedDetectionSurvey;
 @property(readonly, nonatomic, getter=isPivotEnabled) _Bool pivotEnabled;
 @property(readonly, nonatomic, getter=isInCarViewHoldback) _Bool carViewHoldbackEnabled;
 @property(readonly, nonatomic, getter=isCarViewEnabled) _Bool carViewEnabled;

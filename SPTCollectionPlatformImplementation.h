@@ -60,9 +60,6 @@
 - (void)addURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 entityName:(id)arg6;
 - (void)addURL:(id)arg1 bySource:(id)arg2 fromContext:(id)arg3 showUIConfirmation:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (_Bool)canAddTrackWithURL:(id)arg1;
-- (id)subscribeCollectionStateForURLs:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)subscribeCollectionStateForURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)collectionStateForURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)dealloc;
 - (id)initWithCosmosDataLoader:(id)arg1 collectionLogger:(id)arg2 collectionStateProvider:(id)arg3 collectionTestManager:(id)arg4 metaViewController:(id)arg5 alertInterface:(id)arg6;
 

@@ -10,9 +10,10 @@
 
 @interface _TtC15FindFeatureImpl18FindViewController : UIViewController
 {
-    // Error parsing type: , name: contentViewController
     // Error parsing type: , name: pageIdentifier
     // Error parsing type: , name: pageURI
+    // Error parsing type: , name: mainContentLayoutGuide
+    // Error parsing type: , name: contentViewController
 }
 
 - (void).cxx_destruct;
@@ -20,7 +21,7 @@
 - (unsigned long long)preferredNavigationBarState;
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;
-- (void)viewDidLoad;
+- (void)loadView;
 - (id)initWithCoder:(id)arg1;
 
 // Remaining properties

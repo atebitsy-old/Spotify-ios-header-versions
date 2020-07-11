@@ -15,7 +15,6 @@
 
 @interface SPTVoiceLibraryWakewordImplementation : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibraryAudioSessionDelegate, SPTVoiceLibraryWakeword>
 {
-    _Bool _isWakewordRunning;
     id <SPTVoiceLibraryWakewordDelegate> _delegate;
     struct SnsrSession_ *_session;
     struct SnsrStream_ *_audioStream;
@@ -24,9 +23,10 @@
     NSObject<OS_dispatch_queue> *_wakewordDetectionQueue;
     NSObject<OS_dispatch_queue> *_wakewordLoadingQueue;
     NSString *_modelPath;
+    unsigned long long _state;
 }
 
-@property(nonatomic) _Bool isWakewordRunning; // @synthesize isWakewordRunning=_isWakewordRunning;
+@property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(copy, nonatomic) NSString *modelPath; // @synthesize modelPath=_modelPath;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *wakewordLoadingQueue; // @synthesize wakewordLoadingQueue=_wakewordLoadingQueue;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *wakewordDetectionQueue; // @synthesize wakewordDetectionQueue=_wakewordDetectionQueue;

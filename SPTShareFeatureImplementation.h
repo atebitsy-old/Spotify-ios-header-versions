@@ -10,7 +10,7 @@
 #import "SPTShareFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition, SPTSharingSDK;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, SPTVideoFeature;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, SPTVideoFeature, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
 
 @interface SPTShareFeatureImplementation : NSObject <SPTShareContainerViewControllerProtocol, SPTShareFeature>
 {
@@ -25,6 +25,7 @@
     id <SPTCoreService> _coreService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTEventSenderService> _eventSenderService;
+    id <_TtP21SocialOnDemandFeature24SPTSocialOnDemandService_> _socialOnDemandService;
     SPTSharePlaylistHelper *_sharePlaylistHelper;
     SPTShareTrackHelper *_shareTrackHelper;
     NSString *_logContext;
@@ -56,6 +57,7 @@
 @property(retain, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(retain, nonatomic) SPTShareTrackHelper *shareTrackHelper; // @synthesize shareTrackHelper=_shareTrackHelper;
 @property(retain, nonatomic) SPTSharePlaylistHelper *sharePlaylistHelper; // @synthesize sharePlaylistHelper=_sharePlaylistHelper;
+@property(nonatomic) __weak id <_TtP21SocialOnDemandFeature24SPTSocialOnDemandService_> socialOnDemandService; // @synthesize socialOnDemandService=_socialOnDemandService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
@@ -70,6 +72,9 @@
 - (void).cxx_destruct;
 - (id)provideShareDemoViewControllerWithURI:(id)arg1 context:(id)arg2;
 - (id)provideShareHandlerFactory;
+- (id)retrieveTopLevelNavigationPageController;
+- (id)retrieveModallyPresentedPageController;
+- (id)visiblePageController;
 - (void)presentShareViewController:(id)arg1;
 - (id)provideShareDragDelegateFactory;
 - (id)makeSharePresenterWithShareViewController:(id)arg1 contextViewController:(id)arg2;

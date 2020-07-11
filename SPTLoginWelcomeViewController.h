@@ -6,15 +6,15 @@
 
 #import "SPTLoginTraitAwareViewController.h"
 
+#import "SPTLoginThirdPartyLoginHandlerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
-#import "SPTLoginWelcomeViewModelDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
 @class NSError, NSString, NSURL, SPTLoginTheme, SPTLoginWelcomeView, SPTLoginWelcomeViewModel, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginWelcomeViewModelDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -38,10 +38,9 @@
 - (unsigned long long)preferredNavigationBarState;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
-- (void)viewModelDidFinishLogin:(id)arg1;
-- (void)viewModelDidStartLogin:(id)arg1;
-- (id)contextViewForWithModel:(id)arg1;
-- (void)didCompleteFacebookLoginWithError:(id)arg1;
+- (void)handlerDidFinishThirdPartyLogin:(id)arg1;
+- (void)handlerDidStartThirdPartyLogin:(id)arg1;
+- (id)contextViewForThirdPartyLoginHandler:(id)arg1;
 - (void)appleButtonTapped:(id)arg1;
 - (void)signupButtonTapped:(id)arg1;
 - (void)continueWithEmailButtonTapped:(id)arg1;

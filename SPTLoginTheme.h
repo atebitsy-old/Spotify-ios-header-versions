@@ -37,8 +37,9 @@
 - (id)autosendLinkDialogViewStyle;
 - (id)continueWithEmailViewStyle;
 - (id)continueWithWelcomeViewStyle;
+- (id)intentLedStartViewStyle;
 - (id)methodLedStartScreenStyle;
-- (id)welcomeViewStyle;
+- (id)welcomeViewStyleWithTestManager:(id)arg1;
 - (id)magicLinkDoRequestViewStyle;
 - (id)magicLinkSentConfirmationViewStyle;
 - (id)singleInputFieldBaseViewStyle;

@@ -6,10 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSIndexPath;
-@protocol SPTFreeTierPlaylistTrackViewModel;
+@protocol SPTFreeTierPlaylistTrackViewModel, SPTPlaylistPlatformPlaylistTrackFields;
 
 @protocol SPTFreeTierPlaylistItemsViewModel <NSObject>
-- (id <SPTFreeTierPlaylistTrackViewModel>)trackViewModelAtIndexPath:(NSIndexPath *)arg1;
+@property(readonly, nonatomic) unsigned long long numberOfLoadedItems;
+@property(readonly, nonatomic) unsigned long long numberOfItems;
+- (id <SPTPlaylistPlatformPlaylistTrackFields>)trackEntityAtIndex:(long long)arg1;
+- (id <SPTFreeTierPlaylistTrackViewModel>)trackViewModelAtIndex:(long long)arg1;
 @end
 

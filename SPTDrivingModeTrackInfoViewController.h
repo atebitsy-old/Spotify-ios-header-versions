@@ -21,7 +21,7 @@
 - (void).cxx_destruct;
 - (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
 - (void)viewModelDidUpdatePositiveFeedbackButtonState:(id)arg1;
-- (void)viewModelTrackDidChange:(id)arg1;
+- (void)viewModelDidUpdate:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)updateLabels;
 - (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;

@@ -22,10 +22,12 @@
     GLUEButton *_leaveSessionButton;
     UIActivityIndicatorView *_activityIndicatorView;
     UIStackView *_facepileStackView;
+    UIStackView *_headerStackView;
     UIStackView *_stackView;
 }
 
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
+@property(readonly, nonatomic) UIStackView *headerStackView; // @synthesize headerStackView=_headerStackView;
 @property(readonly, nonatomic) UIStackView *facepileStackView; // @synthesize facepileStackView=_facepileStackView;
 @property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 @property(readonly, nonatomic) GLUEButton *leaveSessionButton; // @synthesize leaveSessionButton=_leaveSessionButton;
@@ -49,6 +51,7 @@
 - (void)setupScannableView;
 - (void)setupDescriptionLabel;
 - (void)setupTitleLabel;
+- (void)setupHeaderStackView;
 - (void)setupStackView;
 - (id)initWithFrame:(struct CGRect)arg1;
 

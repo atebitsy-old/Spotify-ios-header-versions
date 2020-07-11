@@ -12,7 +12,7 @@
 
 @optional
 - (void)nowPlayingViewWillAppear:(UIViewController *)arg1;
-- (void)nowPlayingViewWillDisappear:(UIViewController *)arg1;
+- (void)nowPlayingViewDidDisappear:(UIViewController *)arg1;
 - (void)willSkipToNextWithPlayerRestrictions:(SPTPlayerRestrictions *)arg1;
 @end
 

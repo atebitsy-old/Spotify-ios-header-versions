@@ -20,6 +20,8 @@
     // Error parsing type: , name: gaiaService
     // Error parsing type: , name: dispatchService
     // Error parsing type: , name: coreService
+    // Error parsing type: , name: eventSenderService
+    // Error parsing type: , name: ubiService
     // Error parsing type: , name: fullscreenStoryViewController
     // Error parsing type: , name: $__lazy_storage_$_userDefaultsController
 }

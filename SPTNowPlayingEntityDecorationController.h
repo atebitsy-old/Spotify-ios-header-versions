@@ -6,14 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class NSHashTable, NSString, NSURL, SPTPlayerContext, SPTPlayerState, SPTUser;
-@protocol SPTCollectionPlatformTestManager, SPTNowPlayingService, SPTPlaylistPlatformPlaylistDataLoader, SPTRadioManager;
+@class NSHashTable, NSString, NSURL, SPTPlayerState, SPTUser;
+@protocol SPTCollectionPlatformTestManager, SPTPlaylistPlatformPlaylistDataLoader, SPTRadioManager;
 
 @interface SPTNowPlayingEntityDecorationController : NSObject
 {
     _Bool _contextAwareSharing;
     SPTPlayerState *_playerState;
-    SPTPlayerContext *_stagedContext;
     unsigned long long _entityType;
     NSString *_entityName;
     NSString *_entityDescription;
@@ -21,7 +20,6 @@
     NSURL *_entityClickURI;
     NSHashTable *_observers;
     id <SPTRadioManager> _radioManager;
-    id <SPTNowPlayingService> _nowPlayingService;
     SPTUser *_entityUser;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
@@ -30,7 +28,6 @@
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) SPTUser *entityUser; // @synthesize entityUser=_entityUser;
-@property(readonly, nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(readonly, nonatomic) id <SPTRadioManager> radioManager; // @synthesize radioManager=_radioManager;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSURL *entityClickURI; // @synthesize entityClickURI=_entityClickURI;
@@ -39,11 +36,8 @@
 @property(retain, nonatomic) NSString *entityDescription; // @synthesize entityDescription=_entityDescription;
 @property(retain, nonatomic) NSString *entityName; // @synthesize entityName=_entityName;
 @property(nonatomic) unsigned long long entityType; // @synthesize entityType=_entityType;
-@property(retain, nonatomic) SPTPlayerContext *stagedContext; // @synthesize stagedContext=_stagedContext;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 - (void).cxx_destruct;
-- (void)entityUserDisplayableNameChanged;
-- (void)updateEntityInformationWithPlayerContext:(id)arg1;
 - (void)updateEntityInformationWithPlayerState:(id)arg1 contextNameAndDescription:(id)arg2 formatListType:(id)arg3;
 - (void)updateEntityInformationWithPlayerState:(id)arg1;
 - (id)entityNameAndDescriptionFromPlayerState:(id)arg1 name:(id)arg2 description:(id)arg3;
@@ -55,7 +49,7 @@
 @property(readonly, nonatomic) NSURL *viewURI;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithRadioManager:(id)arg1 nowPlayingService:(id)arg2 playlistDataLoader:(id)arg3 collectionTestManager:(id)arg4;
+- (id)initWithRadioManager:(id)arg1 playlistDataLoader:(id)arg2 collectionTestManager:(id)arg3;
 
 @end
 

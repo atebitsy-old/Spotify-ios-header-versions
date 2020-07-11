@@ -60,7 +60,9 @@
 - (_Bool)textFieldShouldBeginEditing:(id)arg1;
 - (void)updateViewConstraints;
 @property(readonly, nonatomic, getter=isActive) _Bool active;
+- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)endSearching;
+- (void)endSearchingWithTransitionCoordinator:(CDUnknownBlockType)arg1;
 - (void)startSearching;
 - (void)contextMenuButtonTapped:(id)arg1;
 - (void)viewWillLayoutSubviews;

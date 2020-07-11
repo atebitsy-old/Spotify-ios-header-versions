@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class GLUEAccessoryIconButtonStyle, GLUETrackMultipleAccessoriesViewStyle, NSString, NSURL, UIColor;
+@class GLUEAccessoryIconButtonStyle, GLUETrackMultipleAccessoriesViewStyle, NSString, NSURL;
 @protocol GLUEStyle;
 
 @interface SPTShowsFormatCellViewModel : NSObject
@@ -17,8 +17,6 @@
     NSString *_title;
     NSString *_subtitle;
     long long _status;
-    long long _icon;
-    UIColor *_iconColor;
     NSURL *_imageURL;
     NSURL *_videoThumbnailURL;
     NSString *_sourceName;
@@ -41,8 +39,6 @@
 @property(retain, nonatomic) NSString *sourceName; // @synthesize sourceName=_sourceName;
 @property(retain, nonatomic) NSURL *videoThumbnailURL; // @synthesize videoThumbnailURL=_videoThumbnailURL;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-@property(retain, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
-@property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(nonatomic) long long status; // @synthesize status=_status;
 @property(nonatomic) _Bool showQuickActions; // @synthesize showQuickActions=_showQuickActions;
 @property(nonatomic) _Bool explicit; // @synthesize explicit=_explicit;

@@ -8,34 +8,26 @@
 
 #import "SPTFreeTierPlaylistTrackViewModel-Protocol.h"
 
-@class NSArray, NSDate, NSDictionary, NSString, NSURL, UIColor;
-@protocol SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistModelEntityTrackFields;
+@class NSArray, NSDate, NSDictionary, NSString, NSURL;
+@protocol SPTFreeTierPlaylistModelEntityTrackFields;
 
 @interface SPTFreeTierPlaylistTrackViewModelImplementation : NSObject <SPTFreeTierPlaylistTrackViewModel>
 {
     _Bool _playingTrack;
     _Bool _premiumOnlyFeatureEnabled;
-    _Bool _collectionMenuIconsEnabled;
     _Bool _showTrackOwner;
-    _Bool _showAlbumInSubtitle;
-    _Bool _showThumbnailImage;
     id <SPTFreeTierPlaylistModelEntityTrackFields> _trackEntity;
-    id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     NSString *_subtitle;
     NSArray *_artists;
     long long _offlineSyncStatus;
 }
 
 @property(nonatomic) long long offlineSyncStatus; // @synthesize offlineSyncStatus=_offlineSyncStatus;
-@property(nonatomic) _Bool showThumbnailImage; // @synthesize showThumbnailImage=_showThumbnailImage;
-@property(nonatomic) _Bool showAlbumInSubtitle; // @synthesize showAlbumInSubtitle=_showAlbumInSubtitle;
 @property(nonatomic) _Bool showTrackOwner; // @synthesize showTrackOwner=_showTrackOwner;
-@property(readonly, nonatomic, getter=isCollectionMenuIconsEnabled) _Bool collectionMenuIconsEnabled; // @synthesize collectionMenuIconsEnabled=_collectionMenuIconsEnabled;
 @property(readonly, nonatomic, getter=isPremiumOnlyFeatureEnabled) _Bool premiumOnlyFeatureEnabled; // @synthesize premiumOnlyFeatureEnabled=_premiumOnlyFeatureEnabled;
 @property(nonatomic, getter=isPlayingTrack) _Bool playingTrack; // @synthesize playingTrack=_playingTrack;
 @property(copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
-@property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModelEntityTrackFields> trackEntity; // @synthesize trackEntity=_trackEntity;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *ownerName;
@@ -49,26 +41,21 @@
 - (void)setUpOfflineSyncStatus;
 @property(readonly, nonatomic) NSString *freeformDescription;
 @property(readonly, nonatomic) NSURL *videoThumbnailURL;
-@property(readonly, copy, nonatomic) NSString *previewID;
 @property(readonly, copy, nonatomic) NSArray *artistNames;
 @property(readonly, nonatomic) NSURL *albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName;
 @property(readonly, nonatomic, getter=isEpisode) _Bool episode;
 @property(readonly, nonatomic, getter=isVideo) _Bool video;
-@property(readonly, nonatomic, getter=isImageEnabled) _Bool imageEnabled;
 @property(readonly, nonatomic, getter=isBanned) _Bool banned;
 @property(readonly, nonatomic, getter=isLiked) _Bool liked;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 @property(readonly, nonatomic, getter=isActive) _Bool active;
 @property(readonly, nonatomic) unsigned long long restriction;
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly;
-@property(readonly, nonatomic) UIColor *contextMenuIconColor;
-@property(readonly, nonatomic) long long contextMenuIcon;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) NSURL *URL;
-@property(readonly, copy, nonatomic) NSString *glueAudioTrackSubtitle;
 @property(readonly, copy, nonatomic) NSString *title;
-- (id)initWithPlaylistTrackEntity:(id)arg1 collectionConfiguration:(id)arg2 isPlayingTrack:(_Bool)arg3 isPremiumOnlyFeatureEnabled:(_Bool)arg4 isCollectionMenuIconsEnabled:(_Bool)arg5 showTrackOwner:(_Bool)arg6 showAlbumInSubtitle:(_Bool)arg7 showThumbnailImage:(_Bool)arg8;
+- (id)initWithPlaylistTrackEntity:(id)arg1 isPlayingTrack:(_Bool)arg2 isPremiumOnlyFeatureEnabled:(_Bool)arg3 showTrackOwner:(_Bool)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

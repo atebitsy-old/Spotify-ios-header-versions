@@ -16,12 +16,13 @@
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
 }
 
++ (CDUnknownBlockType)enforceSingleCallOfBlock:(CDUnknownBlockType)arg1 queue:(id)arg2;
 @property(readonly, nonatomic) __weak id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformPropertiesManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 - (void).cxx_destruct;
-- (CDUnknownBlockType)enforceSingleCallOfBlock:(CDUnknownBlockType)arg1 queue:(id)arg2;
+- (void)entityNameFromContextURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (CDUnknownBlockType)safeSnackBarPresentationBlockWithIdentifier:(id)arg1;
 - (void)scheduleCancellationOfToken:(id)arg1;
 - (id)showMessageForAddedState:(_Bool)arg1 playlistURL:(id)arg2 snackbarPresenter:(CDUnknownBlockType)arg3;
@@ -31,7 +32,7 @@
 - (void)presentSnackbarWithIdentifier:(id)arg1 message:(id)arg2;
 - (void)showCollectionConfirmationProgressViewForBannedState:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3;
 - (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(id)arg2 entityName:(id)arg3;
-- (id)confirmationTitleForBannedFromCollection:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3;
+- (void)confirmationTitleForBannedFromCollection:(_Bool)arg1 entityURL:(id)arg2 inContextURL:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)confirmationTitleForAddedToCollection:(_Bool)arg1 entityURL:(id)arg2;
 - (id)initWithSnackbarPresenter:(id)arg1 entityService:(id)arg2 testManager:(id)arg3 playlistDataLoader:(id)arg4;
 

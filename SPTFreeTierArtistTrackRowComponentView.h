@@ -7,21 +7,21 @@
 #import "HUGSThemableComponentView.h"
 
 #import "HUBComponentViewWithEvents-Protocol.h"
-#import "SPTArtistTrackRowDelegate-Protocol.h"
 #import "SPTHubSwipeableTableViewCellComponentView-Protocol.h"
+#import "SPTTrackRowArtistDelegate-Protocol.h"
 
-@class NSString, SPTArtistTrackRow, SPTEncoreSwipeableTableViewCell, SPTSwipeableTableViewCell;
+@class NSString, SPTEncoreSwipeableTableViewCell, SPTSwipeableTableViewCell, SPTTrackRowArtist;
 @protocol HUBComponentEventHandler, HUBComponentModel;
 
-@interface SPTFreeTierArtistTrackRowComponentView : HUGSThemableComponentView <SPTArtistTrackRowDelegate, HUBComponentViewWithEvents, SPTHubSwipeableTableViewCellComponentView>
+@interface SPTFreeTierArtistTrackRowComponentView : HUGSThemableComponentView <SPTTrackRowArtistDelegate, HUBComponentViewWithEvents, SPTHubSwipeableTableViewCellComponentView>
 {
     id <HUBComponentEventHandler> _eventHandler;
     id <HUBComponentModel> _model;
     SPTEncoreSwipeableTableViewCell *_tableCell;
-    SPTArtistTrackRow *_trackRow;
+    SPTTrackRowArtist *_trackRow;
 }
 
-@property(retain, nonatomic) SPTArtistTrackRow *trackRow; // @synthesize trackRow=_trackRow;
+@property(retain, nonatomic) SPTTrackRowArtist *trackRow; // @synthesize trackRow=_trackRow;
 @property(readonly, nonatomic) SPTEncoreSwipeableTableViewCell *tableCell; // @synthesize tableCell=_tableCell;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;

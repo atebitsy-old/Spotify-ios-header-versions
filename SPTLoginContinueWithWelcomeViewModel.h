@@ -9,11 +9,11 @@
 #import "SPTLoginFacebookAuthenticationControllerDelegate-Protocol.h"
 
 @class NSString, SPTLoginContinueWithWelcomeViewLogger, SPTLoginFacebookAuthenticationController;
-@protocol SPTLoginContinueWithWelcomeViewModelDelegate, SPTLoginNavigationCoordinator, SPTLoginStateController;
+@protocol SPTLoginNavigationCoordinator, SPTLoginStateController, SPTLoginThirdPartyLoginHandlerDelegate;
 
 @interface SPTLoginContinueWithWelcomeViewModel : NSObject <SPTLoginFacebookAuthenticationControllerDelegate>
 {
-    id <SPTLoginContinueWithWelcomeViewModelDelegate> _delegate;
+    id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
     id <SPTLoginStateController> _loginStateController;
     SPTLoginContinueWithWelcomeViewLogger *_logger;
@@ -24,13 +24,10 @@
 @property(retain, nonatomic) SPTLoginContinueWithWelcomeViewLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(retain, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
-@property(nonatomic) __weak id <SPTLoginContinueWithWelcomeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)controller:(id)arg1 didCompleteFacebookLoginWithError:(id)arg2;
-- (void)logFacebookLoginError:(id)arg1;
-- (void)logUserDidTapEmailButton;
-- (void)logUserDidTapFacebookButton;
-- (void)logUserDidTapPhoneButton;
+- (void)controllerDidStartFacebookLogin:(id)arg1;
 - (void)logUserDidSeeView;
 - (void)logoutForgetUser:(_Bool)arg1;
 - (void)continueWithFacebookPressed;

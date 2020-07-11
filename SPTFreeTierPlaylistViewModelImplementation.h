@@ -6,18 +6,19 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTFreeTierPlaylistIsTrackActive-Protocol.h"
+#import "SPTFreeTierPlaylistItemsViewModel-Protocol.h"
 #import "SPTFreeTierPlaylistModelObserver-Protocol.h"
 #import "SPTFreeTierPlaylistPlayViewModel-Protocol.h"
 #import "SPTFreeTierPlaylistSponsoredViewModelDelegate-Protocol.h"
 #import "SPTFreeTierPlaylistViewModel-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSArray, NSAttributedString, NSDate, NSString, NSURL, SPTFreeTierPlaylistLogger, SPTPlayOrigin, SPTPlayerState, UIColor;
-@protocol SPTAlertInterface, SPTCollectionPlatformConfiguration, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, SPTVISREFFlagsService;
+@class NSArray, NSAttributedString, NSDate, NSDictionary, NSString, NSURL, SPTFreeTierPlaylistLogger, SPTPlayOrigin, SPTPlayerState, UIColor;
+@protocol SPTAlertInterface, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, SPTVISREFFlagsService, _TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_;
 
-@interface SPTFreeTierPlaylistViewModelImplementation : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistSponsoredViewModelDelegate, SPTFreeTierPlaylistViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistModelObserver>
+@interface SPTFreeTierPlaylistViewModelImplementation : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistSponsoredViewModelDelegate, SPTFreeTierPlaylistViewModel, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistIsTrackActive>
 {
-    _Bool _showTrackThumbnail;
     _Bool _formatList;
     _Bool _ownedBySelf;
     _Bool _collaborative;
@@ -43,6 +44,7 @@
     id <SPTFreeTierEntityOfflineDelegate> _offlineDelegate;
     id <SPTAlertInterface> alertInterface;
     id <SPTFreeTierPlaylistPlayViewModel> _playViewModel;
+    id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTFreeTierPlaylistModel> _playlistModel;
     SPTPlayOrigin *_playOrigin;
     NSURL *_playlistImageURL;
@@ -64,6 +66,7 @@
     NSString *_ownerUsername;
     NSURL *_ownerImageURL;
     NSURL *_ownerLink;
+    NSDictionary *_formatListAttributes;
     NSString *_formatListSubtitle;
     NSURL *_formatListImageURL;
     UIColor *_formatListPrimaryColor;
@@ -75,21 +78,21 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTFreeTierPlaylistSponsoredViewModel> _sponsoredViewModel;
     id <SPTOfflineModeState> _offlineModeState;
-    id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     SPTFreeTierPlaylistLogger *_logger;
     id <SPTFreeTierPlaylistTestManager> _testManager;
     id <SPTVISREFFlagsService> _visualRefreshService;
     id <SPTFreeTierPlaylistViewModelConfiguration> _viewModelConfiguration;
+    id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> _playInitiatedNotifier;
 }
 
 + (_Bool)isRecommendationContext:(id)arg1 forPlaylist:(id)arg2;
+@property(nonatomic) __weak id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> playInitiatedNotifier; // @synthesize playInitiatedNotifier=_playInitiatedNotifier;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModelConfiguration> viewModelConfiguration; // @synthesize viewModelConfiguration=_viewModelConfiguration;
 @property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;
 @property(nonatomic, getter=isPlaylistExtenderEnabled) _Bool playlistExtenderEnabled; // @synthesize playlistExtenderEnabled=_playlistExtenderEnabled;
 @property(nonatomic, getter=isContextAwareEnabled) _Bool contextAwareEnabled; // @synthesize contextAwareEnabled=_contextAwareEnabled;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(readonly, nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistSponsoredViewModel> sponsoredViewModel; // @synthesize sponsoredViewModel=_sponsoredViewModel;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -103,6 +106,7 @@
 @property(retain, nonatomic) UIColor *formatListPrimaryColor; // @synthesize formatListPrimaryColor=_formatListPrimaryColor;
 @property(retain, nonatomic) NSURL *formatListImageURL; // @synthesize formatListImageURL=_formatListImageURL;
 @property(copy, nonatomic) NSString *formatListSubtitle; // @synthesize formatListSubtitle=_formatListSubtitle;
+@property(copy, nonatomic) NSDictionary *formatListAttributes; // @synthesize formatListAttributes=_formatListAttributes;
 @property(retain, nonatomic) NSURL *ownerLink; // @synthesize ownerLink=_ownerLink;
 @property(retain, nonatomic) NSURL *ownerImageURL; // @synthesize ownerImageURL=_ownerImageURL;
 @property(copy, nonatomic) NSString *ownerUsername; // @synthesize ownerUsername=_ownerUsername;
@@ -139,14 +143,19 @@
 @property(retain, nonatomic) NSURL *playlistImageURL; // @synthesize playlistImageURL=_playlistImageURL;
 @property(retain, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
+@property(nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistPlayViewModel> playViewModel; // @synthesize playViewModel=_playViewModel;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface;
 @property(nonatomic) __weak id <SPTFreeTierEntityOfflineDelegate> offlineDelegate; // @synthesize offlineDelegate=_offlineDelegate;
 @property(nonatomic, getter=isFormatList) _Bool formatList; // @synthesize formatList=_formatList;
-@property(nonatomic) _Bool showTrackThumbnail; // @synthesize showTrackThumbnail=_showTrackThumbnail;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) unsigned long long numberOfLoadedItems;
+@property(readonly, nonatomic) unsigned long long numberOfItems;
+- (id)trackEntityAtIndex:(long long)arg1;
+- (id)trackViewModelAtIndex:(long long)arg1;
+- (_Bool)isTrackActive:(id)arg1;
 @property(readonly, nonatomic, getter=isPlaylistPlaying) _Bool playlistPlaying;
 @property(readonly, nonatomic, getter=isPlayButtonPausingPlay) _Bool playButtonPausingPlay;
 - (void)playTrackEntity:(id)arg1;
@@ -164,13 +173,12 @@
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (void)navigateToAllSongs;
-- (id)trackEntityAtIndexPath:(id)arg1;
 - (void)playTrack:(id)arg1;
+- (void)playTrackURL:(id)arg1;
 - (_Bool)cellProviderSupportedForSection:(long long)arg1;
 - (void)navigateToPlaylistOwnerPage;
 - (void)loadMoreTracksIfApproachingEndOfLoadedTracks:(id)arg1;
-- (_Bool)isApproachingEndIndexPath:(id)arg1;
-@property(readonly, nonatomic) unsigned long long countOfTracks;
+- (_Bool)isApproachingEndIndexPath:(id)arg1 countOfItemsInSection:(long long)arg2;
 - (unsigned long long)countOfItemsInSection:(unsigned long long)arg1;
 - (void)toggleTrackLikeAtIndexPath:(id)arg1;
 - (void)toggleTrackBanAtIndexPath:(id)arg1;
@@ -180,8 +188,6 @@
 - (id)cloudViewModelAtIndexPath:(id)arg1;
 - (void)deletePlaylist;
 - (id)sharingURLForTrackViewModelAtIndexPath:(id)arg1;
-- (id)trackViewModelAtIndexPath:(id)arg1;
-- (id)indexPathForItemURI:(id)arg1;
 - (void)changeOffline:(_Bool)arg1;
 - (void)showShuffleBadgeEducationDialog;
 - (void)toggleFollow;
@@ -191,7 +197,7 @@
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 sponsoredViewModel:(id)arg5 offlineModeState:(id)arg6 collectionConfiguration:(id)arg7 logger:(id)arg8 testManager:(id)arg9 contextAwareEnabled:(_Bool)arg10 visualRefreshService:(id)arg11 viewModelConfiguration:(id)arg12;
+- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 sponsoredViewModel:(id)arg5 offlineModeState:(id)arg6 logger:(id)arg7 testManager:(id)arg8 contextAwareEnabled:(_Bool)arg9 visualRefreshService:(id)arg10 viewModelConfiguration:(id)arg11 playInitiatedNotifier:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,9 +9,7 @@
 @class NSError, SPTLoginFacebookAuthenticationController;
 
 @protocol SPTLoginFacebookAuthenticationControllerDelegate <NSObject>
+- (void)controllerDidStartFacebookLogin:(SPTLoginFacebookAuthenticationController *)arg1;
 - (void)controller:(SPTLoginFacebookAuthenticationController *)arg1 didCompleteFacebookLoginWithError:(NSError *)arg2;
-
-@optional
-- (void)controllerDidStartSpotifyAuthentication:(SPTLoginFacebookAuthenticationController *)arg1;
 @end
 

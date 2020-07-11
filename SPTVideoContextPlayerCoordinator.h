@@ -61,10 +61,11 @@
 - (void)maybeCreateStalledTimer;
 - (void)resumeCurrentPlaybackAtPosition:(double)arg1;
 - (_Bool)shouldResumeCurrentPlaybackWithPlaybackID:(id)arg1;
-- (void)setInterruptorWithStartCommand:(id)arg1;
+- (void)setInterruptorWithStopPosition:(double)arg1;
 - (void)setDeferredStateWithStartCommand:(id)arg1;
 - (id)coordinatorObserverFactory;
 - (void)playWithRequest:(id)arg1 options:(id)arg2;
+- (void)cosmosReceiver:(id)arg1 receivedSetStopPositionCommand:(double)arg2;
 - (void)cosmosReceiver:(id)arg1 receivedPreferredSubtitleCommand:(id)arg2;
 - (void)cosmosReceiver:(id)arg1 receivedSeekCommand:(double)arg2;
 - (void)cosmosReceiverReceivedResumeCommand:(id)arg1;

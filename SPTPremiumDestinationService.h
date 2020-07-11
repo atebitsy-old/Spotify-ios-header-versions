@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationLogger, SPTPremiumDestinationSettingsPageBuilder, SPTUpsellAccountLogger;
-@protocol NSObject, SPTAccountService, SPTContainerUIService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLogCenter, SPTMandatoryPremiumTrialService, SPTNavigationFeature, SPTNavigationListProvider, SPTNetworkService, SPTPremiumDestinationExperiments, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
+@protocol NSObject, SPTAccountService, SPTContainerUIService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLogCenter, SPTMandatoryPremiumTrialService, SPTNavigationFeature, SPTNavigationListProvider, SPTNetworkService, SPTPremiumDestinationExperiments, SPTPremiumDestinationUIService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
 
 @interface SPTPremiumDestinationService : SPTUIPageService
 {
@@ -24,6 +24,7 @@
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTContainerUIService> _containerUIService;
+    id <SPTPremiumDestinationUIService> _premiumDestinationUIService;
     id <SPTLogCenter> _logCenter;
     SPTUpsellAccountLogger *_accountLogger;
     SPTPremiumDestinationLogger *_premiumDestinationLogger;
@@ -52,6 +53,7 @@
 @property(retain, nonatomic) SPTPremiumDestinationLogger *premiumDestinationLogger; // @synthesize premiumDestinationLogger=_premiumDestinationLogger;
 @property(retain, nonatomic) SPTUpsellAccountLogger *accountLogger; // @synthesize accountLogger=_accountLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(nonatomic) __weak id <SPTPremiumDestinationUIService> premiumDestinationUIService; // @synthesize premiumDestinationUIService=_premiumDestinationUIService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;

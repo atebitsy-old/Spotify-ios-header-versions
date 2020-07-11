@@ -7,10 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSString, NSURL;
-@protocol SPTEditPlaylistModelDelegate, SPTEditPlaylistModelEntityTrackFields, SPTFreeTierPlaylistSortingFiltering;
+@protocol SPTEditPlaylistModelDelegate, SPTEditPlaylistModelEntity, SPTEditPlaylistModelEntityTrackFields, SPTFreeTierPlaylistSortingFiltering;
 
 @protocol SPTEditPlaylistModel <NSObject>
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering;
+@property(readonly, nonatomic) id <SPTEditPlaylistModelEntity> entity;
 @property(nonatomic) __weak id <SPTEditPlaylistModelDelegate> delegate;
 @property(readonly, nonatomic) NSURL *playlistURL;
 - (void)updateDescription:(NSString *)arg1 completion:(void (^)(NSError *))arg2;

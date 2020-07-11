@@ -32,6 +32,7 @@
 @property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
 @property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
 - (void).cxx_destruct;
+- (id)provideShareAlertModelForError:(id)arg1;
 - (void)sharerDidCancel:(id)arg1;
 - (void)sharer:(id)arg1 didFailWithError:(id)arg2;
 - (void)sharer:(id)arg1 didCompleteWithResults:(id)arg2;

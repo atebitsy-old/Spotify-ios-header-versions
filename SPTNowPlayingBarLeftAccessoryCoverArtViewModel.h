@@ -6,25 +6,33 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTNowPlayingBarModelObserver-Protocol.h"
+#import "SPTStatefulPlayerObserver-Protocol.h"
 
-@class NSString, NSURL, SPTNowPlayingBarModel;
-@protocol SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate;
+@class NSString, NSURL, SPTStatefulPlayer, SPTTheme;
+@protocol GLUEImageLoader, SPTGLUEImageLoaderFactory, SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate;
 
-@interface SPTNowPlayingBarLeftAccessoryCoverArtViewModel : NSObject <SPTNowPlayingBarModelObserver>
+@interface SPTNowPlayingBarLeftAccessoryCoverArtViewModel : NSObject <SPTStatefulPlayerObserver>
 {
     id <SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate> _delegate;
-    SPTNowPlayingBarModel *_nowPlayingBarModel;
+    SPTStatefulPlayer *_statefulPlayer;
+    id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
+    SPTTheme *_theme;
+    id <GLUEImageLoader> _nextTrackImageLoader;
     NSURL *_currentImageURL;
 }
 
 @property(retain, nonatomic) NSURL *currentImageURL; // @synthesize currentImageURL=_currentImageURL;
-@property(readonly, nonatomic) SPTNowPlayingBarModel *nowPlayingBarModel; // @synthesize nowPlayingBarModel=_nowPlayingBarModel;
+@property(readonly, nonatomic) id <GLUEImageLoader> nextTrackImageLoader; // @synthesize nextTrackImageLoader=_nextTrackImageLoader;
+@property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
+@property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(nonatomic) __weak id <SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)reloadImage;
-- (void)nowPlayingBarModelDidUpdateTrackMetaData:(id)arg1;
-- (id)initWithNowPlayingBarModel:(id)arg1;
+- (void)playerDidUpdateTrackPosition:(id)arg1;
+- (void)playerDidUpdatePlaybackControls:(id)arg1;
+- (void)playerDidReceiveStateUpdate:(id)arg1;
+- (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;
+- (id)initWithStatefulPlayer:(id)arg1 imageLoaderFactory:(id)arg2 theme:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

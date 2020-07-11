@@ -11,7 +11,9 @@
     // Error parsing type: , name: containerService
     // Error parsing type: , name: hubFrameworkService
     // Error parsing type: , name: glueService
+    // Error parsing type: , name: networkService
     // Error parsing type: , name: viewProvider
+    // Error parsing type: , name: uriService
 }
 
 + (id)serviceIdentifier;

@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "MMKPlaybackDelegate-Protocol.h"
+#import "SPTExternalIntegrationAdditionalParameterProvider-Protocol.h"
 
 @class NSString, SPTAccessory, SPTMobileMediaKitAPKeepAliveHandler, SPTPlayerState;
 @protocol MMKLogging, SPTExternalIntegrationCollectionController, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI;
 
-@interface SPTMobileMediaKitAudioPlaybackManager : NSObject <MMKPlaybackDelegate>
+@interface SPTMobileMediaKitAudioPlaybackManager : NSObject <SPTExternalIntegrationAdditionalParameterProvider, MMKPlaybackDelegate>
 {
     SPTPlayerState *_currentPlayerState;
     SPTPlayerState *_oldPlayerState;
@@ -42,6 +43,7 @@
 @property(retain, nonatomic) SPTPlayerState *oldPlayerState; // @synthesize oldPlayerState=_oldPlayerState;
 @property(retain, nonatomic) SPTPlayerState *currentPlayerState; // @synthesize currentPlayerState=_currentPlayerState;
 - (void).cxx_destruct;
+- (id)parameterDictionary;
 - (void)playContentWithURI:(id)arg1 options:(id)arg2 header:(id)arg3 context:(id)arg4;
 - (void)endPlaybackBackgroundTask;
 - (void)startPlaybackBackgroundTask;
@@ -76,6 +78,12 @@
 - (void)playWithMessage:(id)arg1;
 - (void)genericCompletionHandlerWithHeader:(id)arg1 context:(id)arg2 error:(id)arg3;
 - (id)initWithPlaybackController:(id)arg1 connectManager:(id)arg2 collectionController:(id)arg3 logger:(id)arg4 keepAliveHandler:(id)arg5;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

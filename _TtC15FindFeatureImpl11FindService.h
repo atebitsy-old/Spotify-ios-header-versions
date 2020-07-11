@@ -12,6 +12,7 @@
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: browseService
+    // Error parsing type: , name: glueService
     // Error parsing type: , name: configurationProperties
 }
 

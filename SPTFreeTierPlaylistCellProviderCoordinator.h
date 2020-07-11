@@ -9,22 +9,28 @@
 #import "SPTFreeTierPlaylistCellProviderDelegate-Protocol.h"
 
 @class NSDictionary, NSMutableDictionary, NSString, SPTFreeTierPlaylistLogger;
-@protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistViewModel;
+@protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTShareDragDelegateFactory, UITableViewDragDelegate;
 
 @interface SPTFreeTierPlaylistCellProviderCoordinator : NSObject <SPTFreeTierPlaylistCellProviderDelegate>
 {
     id <SPTFreeTierPlaylistConfiguration> _configuration;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
+    id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
+    id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     NSMutableDictionary *_rowHeightCache;
     SPTFreeTierPlaylistLogger *_logger;
     NSDictionary *_sectionDescriptions;
     NSDictionary *_reuseIdentifierToCellProviders;
+    id <UITableViewDragDelegate> _dragDelegateHolder;
 }
 
+@property(retain, nonatomic) id <UITableViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
 @property(readonly, copy, nonatomic) NSDictionary *reuseIdentifierToCellProviders; // @synthesize reuseIdentifierToCellProviders=_reuseIdentifierToCellProviders;
 @property(readonly, copy, nonatomic) NSDictionary *sectionDescriptions; // @synthesize sectionDescriptions=_sectionDescriptions;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSMutableDictionary *rowHeightCache; // @synthesize rowHeightCache=_rowHeightCache;
+@property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistConfiguration> configuration; // @synthesize configuration=_configuration;
 - (void).cxx_destruct;
@@ -45,8 +51,9 @@
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (id)cellProviderForCellAtIndexPath:(id)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
+- (void)setupDragDelegateOnTableView:(id)arg1 pageURI:(id)arg2;
 - (void)registerCellProviderCellForTableView:(id)arg1;
-- (id)initWithConfiguration:(id)arg1 playlistViewModel:(id)arg2 logger:(id)arg3 sectionDescriptions:(id)arg4;
+- (id)initWithConfiguration:(id)arg1 playlistViewModel:(id)arg2 itemsViewModel:(id)arg3 logger:(id)arg4 shareDragDelegateFactory:(id)arg5 sectionDescriptions:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

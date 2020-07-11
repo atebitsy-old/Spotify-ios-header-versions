@@ -80,9 +80,6 @@
 - (id)initWithHeaderImageURL:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 imageLoader:(id)arg4 headerView:(id)arg5 modalPresentationController:(id)arg6 options:(id)arg7 theme:(id)arg8 notificationCenter:(id)arg9;
 - (id)initWithHeaderImageURL:(id)arg1 entityURL:(id)arg2 imageLoader:(id)arg3 headerView:(id)arg4 modalPresentationController:(id)arg5 options:(id)arg6 theme:(id)arg7 notificationCenter:(id)arg8;
 - (id)initWithHeaderView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 imageLoader:(id)arg4 modalPresentationController:(id)arg5 options:(id)arg6 theme:(id)arg7 notificationCenter:(id)arg8;
-- (_Bool)sta_isScannablesTooltipVisible;
-- (void)sta_forceHideScannablesTooltip;
-- (_Bool)sta_isScannableVisible;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

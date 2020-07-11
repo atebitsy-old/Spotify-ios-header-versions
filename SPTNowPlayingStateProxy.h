@@ -21,7 +21,7 @@
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 - (void).cxx_destruct;
 - (void)nowPlayingViewWillAppear:(id)arg1;
-- (void)nowPlayingViewWillDisappear:(id)arg1;
+- (void)nowPlayingViewDidDisappear:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)playerDidUpdateTrackPosition:(id)arg1;

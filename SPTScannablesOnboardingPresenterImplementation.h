@@ -31,8 +31,6 @@
 - (void)presentScannerOnboardingSlateWithDelegate:(id)arg1;
 @property(readonly, nonatomic, getter=isPresentingContextMenuOnboarding) _Bool presentingContextMenuOnboarding;
 - (id)initWithTooltipManager:(id)arg1 slateManager:(id)arg2 slateFactory:(id)arg3 localSettings:(id)arg4;
-- (_Bool)sta_isScannablesTooltipVisible;
-- (void)sta_forceHideScannablesTooltip;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -13,12 +13,8 @@
     // Error parsing type: , name: instrumentationService
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: ubiObserver
-    // Error parsing type: , name: navObserver
-    // Error parsing type: , name: instrumentationObserver
-    // Error parsing type: , name: effectHandler
     // Error parsing type: , name: eventSenderService
-    // Error parsing type: , name: $__lazy_storage_$_loop
+    // Error parsing type: , name: navigationLoggerImplementation
 }
 
 + (id)serviceIdentifier;

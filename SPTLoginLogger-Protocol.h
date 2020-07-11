@@ -23,6 +23,7 @@
 - (void)operationWithIdentifier:(NSString *)arg1 didFinishWithDuration:(double)arg2;
 - (void)userDidAuthenticateFromScreen:(NSString *)arg1;
 - (void)userAccountRecoveryCompleted:(_Bool)arg1;
+- (void)loginLayoutReceived:(NSString *)arg1 layout:(NSString *)arg2;
 - (void)accountRecoveryLinkParsed;
 - (void)trackKeychainEventWithIdentifier:(NSString *)arg1;
 - (void)userExperiencedError:(NSString *)arg1 withCode:(long long)arg2 onScreen:(NSString *)arg3;

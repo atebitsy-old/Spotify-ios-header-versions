@@ -9,6 +9,7 @@
 @class SPTVideoCoordinatorCosmosReceiver, SPTVideoPreferredSubtitleMessage, SPTVideoStartCommand;
 
 @protocol SPTVideoCoordinatorCosmosReceiverDelegate <NSObject>
+- (void)cosmosReceiver:(SPTVideoCoordinatorCosmosReceiver *)arg1 receivedSetStopPositionCommand:(double)arg2;
 - (void)cosmosReceiver:(SPTVideoCoordinatorCosmosReceiver *)arg1 receivedPreferredSubtitleCommand:(SPTVideoPreferredSubtitleMessage *)arg2;
 - (void)cosmosReceiver:(SPTVideoCoordinatorCosmosReceiver *)arg1 receivedSeekCommand:(double)arg2;
 - (void)cosmosReceiverReceivedResumeCommand:(SPTVideoCoordinatorCosmosReceiver *)arg1;

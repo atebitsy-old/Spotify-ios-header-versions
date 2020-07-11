@@ -43,6 +43,7 @@
 - (void)userAccountRecoveryCompleted:(_Bool)arg1;
 - (void)trackKeychainEventWithIdentifier:(id)arg1;
 - (void)trackEventWithName:(id)arg1;
+- (void)loginLayoutReceived:(id)arg1 layout:(id)arg2;
 - (void)operationWithIdentifier:(id)arg1 didFinishWithDuration:(double)arg2;
 - (void)accountRecoveryLinkParsed;
 - (id)initWithAdjustUserTracker:(id)arg1;

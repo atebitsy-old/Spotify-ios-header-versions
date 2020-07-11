@@ -23,7 +23,7 @@
 @property(retain, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 - (void).cxx_destruct;
 - (void)nowPlayingViewWillAppear:(id)arg1;
-- (void)nowPlayingViewWillDisappear:(id)arg1;
+- (void)nowPlayingViewDidDisappear:(id)arg1;
 @property(readonly, nonatomic, getter=isHidden) _Bool hidden;
 @property(readonly, copy, nonatomic) NSString *currentPageSource;
 - (void)removeObserver:(id)arg1;

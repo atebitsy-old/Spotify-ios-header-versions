@@ -18,9 +18,7 @@
 + (id)factoryWithPageIdentifier:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)closeFactoryWithReason:(id)arg1;
-- (id)listenOnThisDeviceButtonFactory;
-- (id)continueButtonFactory;
+- (id)containerViewFactory;
 - (id)_location;
 - (id)initWithPageIdentifier:(id)arg1;
 

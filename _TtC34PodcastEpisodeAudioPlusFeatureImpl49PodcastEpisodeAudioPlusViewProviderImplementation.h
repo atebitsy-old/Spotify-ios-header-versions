@@ -9,8 +9,10 @@
 @interface _TtC34PodcastEpisodeAudioPlusFeatureImpl49PodcastEpisodeAudioPlusViewProviderImplementation : NSObject
 {
     // Error parsing type: , name: contentOpsFactory
+    // Error parsing type: , name: dataLoader
     // Error parsing type: , name: hugsFactory
     // Error parsing type: , name: hubsRendererFactory
+    // Error parsing type: , name: linkDispatcher
 }
 
 - (void).cxx_destruct;

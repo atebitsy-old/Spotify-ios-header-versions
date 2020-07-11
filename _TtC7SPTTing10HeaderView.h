@@ -8,13 +8,15 @@
 
 @interface _TtC7SPTTing10HeaderView : UIView
 {
+    // Error parsing type: , name: clippingView
     // Error parsing type: , name: contentView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: collapsedTitleLabel
     // Error parsing type: , name: gradientView
-    // Error parsing type: , name: contentTopContraint
+    // Error parsing type: , name: clippingViewTopConstraint
     // Error parsing type: , name: collapsedTitleTopConstraint
+    // Error parsing type: , name: currentExtraHeight
     // Error parsing type: , name: style
 }
 

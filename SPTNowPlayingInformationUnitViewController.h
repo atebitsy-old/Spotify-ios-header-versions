@@ -10,7 +10,7 @@
 #import "SPTNowPlayingInformationUnitViewModelDelegate-Protocol.h"
 #import "SPTNowPlayingLyricsButtonViewDelegate-Protocol.h"
 
-@class NSMutableArray, NSString, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
+@class NSMutableArray, NSString, SPTNowPlayingAnimatedLikeButton, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
 @protocol SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewDelegate, SPTNowPlayingContainedViewController>
@@ -20,6 +20,7 @@
     SPTNowPlayingMarqueeLabel *_titleLabel;
     SPTNowPlayingMarqueeLabel *_subtitleLabel;
     SPTNowPlayingFreeTierFeedbackButton *_positiveFeedbackButton;
+    SPTNowPlayingAnimatedLikeButton *_animatedLikeButton;
     SPTNowPlayingLyricsButtonView *_lyricsView;
     SPTNowPlayingInformationUnitViewModelImplementation *_viewModel;
     NSMutableArray *_layoutConstraints;
@@ -36,6 +37,7 @@
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTNowPlayingInformationUnitViewModelImplementation *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTNowPlayingLyricsButtonView *lyricsView; // @synthesize lyricsView=_lyricsView;
+@property(retain, nonatomic) SPTNowPlayingAnimatedLikeButton *animatedLikeButton; // @synthesize animatedLikeButton=_animatedLikeButton;
 @property(retain, nonatomic) SPTNowPlayingFreeTierFeedbackButton *positiveFeedbackButton; // @synthesize positiveFeedbackButton=_positiveFeedbackButton;
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -47,13 +49,14 @@
 - (void)didTapLyricsView;
 - (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
 - (void)viewModelDidUpdatePositiveFeedbackButtonState:(id)arg1;
-- (void)viewModelTrackDidChange:(id)arg1;
+- (void)viewModelDidUpdate:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)updateLabels;
 - (void)updateFeedbackButton;
 - (struct CGSize)preferredContentSize;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)setupLyricsViewConstraints;
+- (void)setupAnimatedLikeButtonConstraints;
 - (void)setupPositiveFeedbackButtonConstraints;
 - (void)setupDefaultConstraints;
 - (double)contextDependentPositiveFeedbackButtonTrailingMargin;
@@ -64,6 +67,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)setupAnimatedLikeButton;
 - (void)setupPositiveFeedbackButton;
 - (void)setupSubtitleLabel;
 - (void)setupTitleLabel;
