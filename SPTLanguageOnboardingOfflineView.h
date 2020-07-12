@@ -16,9 +16,9 @@
     GLUELabel *_subtitleLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
 - (void)setupView;

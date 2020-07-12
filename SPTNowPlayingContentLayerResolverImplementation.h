@@ -20,11 +20,11 @@
     NSArray *_sortedProviders;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *sortedProviders; // @synthesize sortedProviders=_sortedProviders;
 @property(readonly, nonatomic) NSMutableDictionary *providers; // @synthesize providers=_providers;
 @property(nonatomic) unsigned long long preferredContentType; // @synthesize preferredContentType=_preferredContentType;
 @property(nonatomic) __weak id <SPTNowPlayingContentLayerResolverDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)provider:(id)arg1 needsRefreshForTrack:(id)arg2;
 - (id)allProviders;
 - (id)providerForTrack:(id)arg1 playerState:(id)arg2;

@@ -18,12 +18,12 @@
     UIStackView *_secondaryActionsStackView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *secondaryActionsStackView; // @synthesize secondaryActionsStackView=_secondaryActionsStackView;
 @property(retain, nonatomic) UIView *mainActionContainer; // @synthesize mainActionContainer=_mainActionContainer;
 @property(retain, nonatomic) GLUEAccessoryIconButton<SPTPodcastUIDownloadButton> *downloadButton; // @synthesize downloadButton=_downloadButton;
 @property(retain, nonatomic) GLUEAccessoryIconButton *shareButton; // @synthesize shareButton=_shareButton;
 @property(retain, nonatomic) GLUEButton *mainActionButton; // @synthesize mainActionButton=_mainActionButton;
-- (void).cxx_destruct;
 - (id)initWithGlueTheme:(id)arg1 buttonsFactory:(id)arg2;
 
 @end

@@ -16,8 +16,8 @@
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
 }
 
-@property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 - (void)disableAds:(_Bool)arg1 onSlot:(id)arg2 reason:(id)arg3;
 - (void)delete:(id)arg1 path:(id)arg2 shouldRefresh:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)put:(id)arg1 path:(id)arg2 value:(id)arg3 shouldRefresh:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;

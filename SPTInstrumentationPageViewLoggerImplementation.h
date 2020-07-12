@@ -17,9 +17,9 @@
     SPTInstrumentationPageViewData *_currentData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInstrumentationPageViewData *currentData; // @synthesize currentData=_currentData;
 @property(retain, nonatomic) id <SPTInstrumentationTransport> transport; // @synthesize transport=_transport;
-- (void).cxx_destruct;
 - (void)sendPageViewExitForCurrentDataWithTimestamp:(long long)arg1;
 - (void)exitCurrentPageWithTimestamp:(long long)arg1;
 - (void)sendPageViewEnterWithPageIdentifier:(id)arg1 URI:(id)arg2 timestamp:(long long)arg3 navigationRootIdentifier:(id)arg4;

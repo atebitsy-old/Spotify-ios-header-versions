@@ -14,8 +14,8 @@
     id <GLUETheme> _theme;
 }
 
-@property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (id)renameFieldStyle;
 - (id)editCellStyle;
 @property(readonly, copy, nonatomic) SPTEditPlaylistEditStyle *editStyle;

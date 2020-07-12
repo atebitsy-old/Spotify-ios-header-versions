@@ -17,9 +17,9 @@
     SPTQueueUBILogger *_queueUBILogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTQueueUBILogger *queueUBILogger; // @synthesize queueUBILogger=_queueUBILogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logInteractionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 targetURI:(id)arg5 type:(id)arg6 intent:(id)arg7;
 - (id)featureId;
 - (void)logSpeedControlMenuButtonTapped;

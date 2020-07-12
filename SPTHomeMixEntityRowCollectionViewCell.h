@@ -13,8 +13,8 @@
     SPTHomeMixTrackCellInteractionListener *_interactionListener;
 }
 
-@property(retain, nonatomic) SPTHomeMixTrackCellInteractionListener *interactionListener; // @synthesize interactionListener=_interactionListener;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTHomeMixTrackCellInteractionListener *interactionListener; // @synthesize interactionListener=_interactionListener;
 - (id)preferredLayoutAttributesFittingAttributes:(id)arg1;
 
 @end

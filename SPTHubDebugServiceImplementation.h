@@ -20,11 +20,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubsRendererFrameworkService; // @synthesize hubsRendererFrameworkService=_hubsRendererFrameworkService;
-- (void).cxx_destruct;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

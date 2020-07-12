@@ -49,6 +49,7 @@
     NSMutableDictionary *_overrides;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *overrides; // @synthesize overrides=_overrides;
 @property(retain, nonatomic) id <SPTFormatListModel> model; // @synthesize model=_model;
 @property(readonly, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
@@ -82,7 +83,6 @@
 @property(readonly, nonatomic) id <SPTFormatListPlatformResolver> resolver; // @synthesize resolver=_resolver;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (id)filterURL:(id)arg1 reason:(id)arg2;
 - (void)refreshState;

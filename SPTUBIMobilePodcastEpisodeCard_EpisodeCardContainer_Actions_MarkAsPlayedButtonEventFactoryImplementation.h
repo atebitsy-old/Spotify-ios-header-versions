@@ -16,9 +16,10 @@
 }
 
 + (id)factoryWithComponents:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)hitUiHide;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)hitMarkAsUnplayedWithItemUnplayed:(id)arg1;
+- (id)hitMarkAsPlayedWithItemPlayed:(id)arg1;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

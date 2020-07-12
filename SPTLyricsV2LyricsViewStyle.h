@@ -16,9 +16,9 @@
     double _styleAnimationDuration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double styleAnimationDuration; // @synthesize styleAnimationDuration=_styleAnimationDuration;
 @property(copy, nonatomic) SPTLyricsV2TextViewStyle *lyricsTextViewStyle; // @synthesize lyricsTextViewStyle=_lyricsTextViewStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -16,8 +16,8 @@
     id <SPTLocalSettings> _localSettings;
 }
 
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (id)collectionSortingEntityManagerRetrieveSortingDictionary;
 - (void)collectionSortingEntityManagerStoreSortingDictionary:(id)arg1;
 - (_Bool)handleSortingEntityURL:(id)arg1;

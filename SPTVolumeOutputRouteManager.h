@@ -15,10 +15,10 @@
     NSMutableDictionary *_resetVolumeMap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *resetVolumeMap; // @synthesize resetVolumeMap=_resetVolumeMap;
 @property(copy, nonatomic) NSString *currentOutputRouteDescriptor; // @synthesize currentOutputRouteDescriptor=_currentOutputRouteDescriptor;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
-- (void).cxx_destruct;
 - (_Bool)hasCurrentOutputRouteChanged;
 - (void)clearResetVolume;
 - (void)setResetVolumeForCurrentOutputRoute:(double)arg1;

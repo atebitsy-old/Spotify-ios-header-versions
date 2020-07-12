@@ -19,10 +19,10 @@
     NSTimer *_timer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(readonly, nonatomic) SPTVolumeBuffer *buffer; // @synthesize buffer=_buffer;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (unsigned long long)eventForBuffering:(_Bool)arg1;
 - (void)volumeBufferStateDidChange:(id)arg1;
 - (id)initWithBuffer:(id)arg1;

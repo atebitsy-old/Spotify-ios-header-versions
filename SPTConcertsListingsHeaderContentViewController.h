@@ -30,6 +30,7 @@
     SPTActionButton *_locationButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTActionButton *locationButton; // @synthesize locationButton=_locationButton;
 @property(retain, nonatomic) NSLayoutConstraint *navigationBarTitleLabelTopLayoutConstraint; // @synthesize navigationBarTitleLabelTopLayoutConstraint=_navigationBarTitleLabelTopLayoutConstraint;
 @property(retain, nonatomic) UILabel *navigationBarTitleLabel; // @synthesize navigationBarTitleLabel=_navigationBarTitleLabel;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTConcertsListingsHeaderData *headerData; // @synthesize headerData=_headerData;
 @property(nonatomic) __weak id <SPTConcertsListingsHeaderContentViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (double)entityHeaderViewControllerMinimumHeight:(id)arg1;
 - (void)entityHeaderViewController:(id)arg1 didUpdateVisibleRect:(struct CGRect)arg2;

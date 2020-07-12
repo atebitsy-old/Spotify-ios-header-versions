@@ -16,9 +16,9 @@
     id <HUBComponentLayoutManager> _hugsLayoutManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUBComponentLayoutManager> hugsLayoutManager; // @synthesize hugsLayoutManager=_hugsLayoutManager;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (double)containerMaxWidthForComponentWithLayoutTraits:(id)arg1;
 - (unsigned long long)containerAlignmentForComponentWithLayoutTraits:(id)arg1;
 - (double)horizontalOffsetForComponentsWithLayoutTraits:(id)arg1 firstComponentLeadingHorizontalOffset:(double)arg2 lastComponentTrailingHorizontalOffset:(double)arg3;

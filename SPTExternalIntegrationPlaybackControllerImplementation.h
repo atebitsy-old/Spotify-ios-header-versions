@@ -28,6 +28,7 @@
     NSMutableSet *_actionCoordinatorRegistry;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableSet *actionCoordinatorRegistry; // @synthesize actionCoordinatorRegistry=_actionCoordinatorRegistry;
 @property(readonly, nonatomic) NSMutableSet *playbackCoordinatorRegistry; // @synthesize playbackCoordinatorRegistry=_playbackCoordinatorRegistry;
 @property(retain, nonatomic) NSUUID *lastPlaybackPreparationID; // @synthesize lastPlaybackPreparationID=_lastPlaybackPreparationID;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) SPTExternalIntegrationPlatformLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTAudioSessionController> audioSessionController; // @synthesize audioSessionController=_audioSessionController;
-- (void).cxx_destruct;
 - (id)actionCoordinatorForURI:(id)arg1;
 - (id)playbackCoordinatorForURI:(id)arg1;
 - (void)getFilteredPlayQueueWithCompletionHandler:(CDUnknownBlockType)arg1;

@@ -15,10 +15,10 @@
     NSDictionary *_loggingData;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *loggingData; // @synthesize loggingData=_loggingData;
 @property(readonly, nonatomic) unsigned long long index; // @synthesize index=_index;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 index:(unsigned long long)arg2 loggingData:(id)arg3;
 
 @end

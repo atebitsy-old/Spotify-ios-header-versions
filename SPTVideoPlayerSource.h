@@ -31,6 +31,7 @@
     id <BMSubtitle> _selectedSubtitle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <BMSubtitle> selectedSubtitle; // @synthesize selectedSubtitle=_selectedSubtitle;
 @property(retain, nonatomic) SPTVideoSubtitleSelector *subtitleSelector; // @synthesize subtitleSelector=_subtitleSelector;
 @property(retain, nonatomic) SPTVideoSubtitleSelectorFactory *subtitleSelectorFactory; // @synthesize subtitleSelectorFactory=_subtitleSelectorFactory;
@@ -47,7 +48,6 @@
 @property(nonatomic) _Bool repeat; // @synthesize repeat=_repeat;
 @property(retain, nonatomic) AVQueuePlayer *player; // @synthesize player=_player;
 @property(retain, nonatomic) AVPlayerItem *playerItem; // @synthesize playerItem=_playerItem;
-- (void).cxx_destruct;
 - (void)refreshCurrentlyRenderedSubtitle;
 - (void)playerItemNewAccessLogEntry:(id)arg1;
 - (void)playerItemNewErrorLogEntry:(id)arg1;

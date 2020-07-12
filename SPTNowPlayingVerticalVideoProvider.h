@@ -23,6 +23,7 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isShowsFormat; // @synthesize isShowsFormat=_isShowsFormat;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTNowPlayingContentLayerProviderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)didEndDisplayingCell:(id)arg1 withTrack:(id)arg2 containerViewController:(id)arg3;
 - (void)willDisplayCell:(id)arg1 withTrack:(id)arg2 containerViewController:(id)arg3;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;

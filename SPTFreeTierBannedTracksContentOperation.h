@@ -24,6 +24,7 @@
     NSSet *_subscribedURLs;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *subscribedURLs; // @synthesize subscribedURLs=_subscribedURLs;
 @property(copy, nonatomic) NSDictionary *URLBanMap; // @synthesize URLBanMap=_URLBanMap;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> requestToken; // @synthesize requestToken=_requestToken;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatformStateProvider> collectionPlaformStateProvider; // @synthesize collectionPlaformStateProvider=_collectionPlaformStateProvider;
 @property(copy, nonatomic) NSArray *trackRowKeys; // @synthesize trackRowKeys=_trackRowKeys;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (void)subscribeCollectionStateChangesForURLS:(id)arg1;
 - (id)initWithContextURL:(id)arg1 collectionPlaformStateProvider:(id)arg2 componentModelURIResolver:(id)arg3 collectionPlaformTestManager:(id)arg4;

@@ -32,6 +32,7 @@
     SPTAdsFeatureProperties *_featureProperties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTAdVoicePermissions *voicePermission; // @synthesize voicePermission=_voicePermission;
 @property(retain, nonatomic) SPTAdsInAppBrowserController *inAppBrowserController; // @synthesize inAppBrowserController=_inAppBrowserController;
@@ -49,7 +50,6 @@
 @property(nonatomic) __weak SPTAdsViewModel *adsViewModel; // @synthesize adsViewModel=_adsViewModel;
 @property(nonatomic) __weak SPTAdNowPlayingManager *adNowPlayingManager; // @synthesize adNowPlayingManager=_adNowPlayingManager;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (void)updateNowPlayingNavigationBar;
 - (id)provideRemoteControlPolicy;

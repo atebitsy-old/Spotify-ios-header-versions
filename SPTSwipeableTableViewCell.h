@@ -29,6 +29,7 @@
 
 + (long long)gestureFromTranslation:(double)arg1;
 + (long long)gestureFromPercentage:(double)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *shelvesForGesture; // @synthesize shelvesForGesture=_shelvesForGesture;
 @property(retain, nonatomic) NSMutableDictionary *shelveModelsForGesture; // @synthesize shelveModelsForGesture=_shelveModelsForGesture;
 @property(nonatomic, getter=isGestureActivated) _Bool gestureActivated; // @synthesize gestureActivated=_gestureActivated;
@@ -41,7 +42,6 @@
 @property(nonatomic) struct CGPoint initialTranslation; // @synthesize initialTranslation=_initialTranslation;
 @property(nonatomic) long long ongoingGesture; // @synthesize ongoingGesture=_ongoingGesture;
 @property(nonatomic) __weak id <SPTSwipeableTableViewCellDelegate> swipeDelegate; // @synthesize swipeDelegate=_swipeDelegate;
-- (void).cxx_destruct;
 - (_Bool)supportsSwiping;
 - (void)handlePanGestureRecognizer:(id)arg1;
 - (void)resetContainerFromPoint:(struct CGPoint)arg1 subjectToInertia:(_Bool)arg2 horizontalVelocity:(double)arg3 withCompletionBlock:(CDUnknownBlockType)arg4;

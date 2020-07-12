@@ -26,6 +26,7 @@
     struct CGSize _disclosureViewSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double cellMaximumWidth; // @synthesize cellMaximumWidth=_cellMaximumWidth;
 @property(nonatomic) struct CGSize disclosureViewSize; // @synthesize disclosureViewSize=_disclosureViewSize;
 @property(copy, nonatomic) SPTFreeTierArtistPinnedItemCommentStyle *commentStyle; // @synthesize commentStyle=_commentStyle;
@@ -38,7 +39,6 @@
 @property(copy, nonatomic) GLUEImageStyle *backgroundImageStyle; // @synthesize backgroundImageStyle=_backgroundImageStyle;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) double heightToWidthScaleFactor; // @synthesize heightToWidthScaleFactor=_heightToWidthScaleFactor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

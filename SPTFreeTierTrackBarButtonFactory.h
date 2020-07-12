@@ -17,12 +17,12 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
-- (void).cxx_destruct;
 - (id)createContextMenuButtonViewModelForViewURI:(id)arg1;
 - (id)createFeedbackButtonViewModelForViewURI:(id)arg1;
 - (id)initWithCollectionConfiguration:(id)arg1 collectionPlatform:(id)arg2 contextMenuPresenterFactory:(id)arg3 logCenter:(id)arg4 ubiLogger:(id)arg5;

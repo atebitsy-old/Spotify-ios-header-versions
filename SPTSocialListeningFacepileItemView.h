@@ -6,22 +6,24 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUEImageView, GLUELabel;
+@class GLUEImageView, GLUELabel, NSArray;
 
 @interface SPTSocialListeningFacepileItemView : UIView
 {
     GLUELabel *_textLabel;
     GLUEImageView *_imageView;
+    NSArray *_imageViewMarginConstraints;
 }
 
+- (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *imageViewMarginConstraints; // @synthesize imageViewMarginConstraints=_imageViewMarginConstraints;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) GLUELabel *textLabel; // @synthesize textLabel=_textLabel;
-- (void).cxx_destruct;
 - (void)addViewConstraints;
 - (void)setupImageView;
 - (void)setupTextLabel;
 - (void)glue_applyStyle:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)init;
 
 @end
 

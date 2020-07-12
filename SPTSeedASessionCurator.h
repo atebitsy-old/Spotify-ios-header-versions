@@ -14,9 +14,9 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)curateSeedASessionWithType:(id)arg1 sourceIdentifier:(id)arg2 artistURIs:(id)arg3 includeSimilarArtists:(_Bool)arg4 sessionId:(id)arg5;

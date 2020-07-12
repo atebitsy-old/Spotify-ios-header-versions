@@ -9,19 +9,23 @@
 @class NSDate, NSString, NSURL;
 
 @protocol SPTFreeTierPlaylistDefaultHeaderViewModel <NSObject>
-@property(readonly, nonatomic, getter=isFormatList) _Bool formatList;
-@property(readonly, copy, nonatomic) NSString *creatorTitle;
-@property(readonly, nonatomic) NSDate *lastModifiedTime;
-@property(readonly, copy, nonatomic) NSString *playlistOwnerName;
-@property(readonly, nonatomic) NSURL *ownerImageURL;
-@property(readonly, nonatomic) double totalDuration;
-@property(readonly, nonatomic) _Bool shouldShowPlaylistOwnerPage;
-@property(readonly, nonatomic) _Bool showSearchBar;
-@property(readonly, nonatomic, getter=isShuffleBadgeEducationAvailable) _Bool shuffleBadgeEducationAvailable;
-@property(readonly, nonatomic) NSURL *playlistImageURL;
-@property(readonly, copy, nonatomic) NSString *playlistDescription;
-@property(readonly, copy, nonatomic) NSString *playlistName;
 - (void)navigateToPlaylistOwnerPage;
+- (_Bool)isFormatList;
+@property(nonatomic, readonly) NSString *creatorTitle;
+@property(nonatomic, readonly) NSDate *lastModifiedTime;
+@property(nonatomic, readonly) NSString *playlistOwnerName;
+@property(nonatomic, readonly) NSURL *ownerImageURL;
+@property(nonatomic, readonly) double totalDuration;
+@property(nonatomic, readonly) _Bool shouldShowPlaylistOwnerPage;
+@property(nonatomic, readonly) _Bool showSearchBar;
+- (_Bool)isShuffleBadgeEducationAvailable;
 - (void)showShuffleBadgeEducationDialog;
+@property(nonatomic, readonly) NSURL *playlistImageURL;
+@property(nonatomic, readonly) NSString *playlistDescription;
+@property(nonatomic, readonly) NSString *playlistName;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool formatList;
+@property(nonatomic, readonly) _Bool shuffleBadgeEducationAvailable;
 @end
 

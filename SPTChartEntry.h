@@ -29,6 +29,7 @@
     unsigned long long _previousPosition;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isBanned) _Bool banned; // @synthesize banned=_banned;
 @property(nonatomic, getter=isInCollection) _Bool inCollection; // @synthesize inCollection=_inCollection;
 @property(nonatomic, getter=isLocallyPlayable) _Bool locallyPlayable; // @synthesize locallyPlayable=_locallyPlayable;
@@ -46,7 +47,6 @@
 @property(nonatomic) unsigned long long rank; // @synthesize rank=_rank;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 
 @end
 

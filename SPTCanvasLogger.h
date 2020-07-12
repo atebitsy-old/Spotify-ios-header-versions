@@ -32,6 +32,7 @@
 
 + (id)appStateForForegroundObserver:(id)arg1;
 + (id)logDescriptionForNotification:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *currentPageSource; // @synthesize currentPageSource=_currentPageSource;
 @property(retain, nonatomic) NSURL *currentTrackURI; // @synthesize currentTrackURI=_currentTrackURI;
 @property(retain, nonatomic) NSString *currentAudioState; // @synthesize currentAudioState=_currentAudioState;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) SPTCanvasLoadStateTracker *loadStateTracker; // @synthesize loadStateTracker=_loadStateTracker;
 @property(readonly, nonatomic) SPTCanvasTrackCheckerImplementation *trackChecker; // @synthesize trackChecker=_trackChecker;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (id)audioStateForPlayerState:(id)arg1;
 - (id)canvasIdForPlayerState:(id)arg1;
 - (_Bool)isPlayerStatePlaying:(id)arg1;

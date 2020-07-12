@@ -21,10 +21,10 @@
     SPTLoginTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupAnimatedTransitioning *animatedTransitioning; // @synthesize animatedTransitioning=_animatedTransitioning;
 @property(retain, nonatomic) SPTSignupPasswordViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPopOperationToViewController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPushOperationFromViewController:(id)arg2;

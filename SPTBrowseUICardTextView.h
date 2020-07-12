@@ -24,6 +24,7 @@
 }
 
 + (id)sharedCache;
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTBrowseUICardTextViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) NSTextContainer *sizingTextContainer; // @synthesize sizingTextContainer=_sizingTextContainer;
 @property(readonly, nonatomic) NSLayoutManager *sizingLayoutManager; // @synthesize sizingLayoutManager=_sizingLayoutManager;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) NSTextStorage *textStorage; // @synthesize textStorage=_textStorage;
 @property(copy, nonatomic) NSArray *exclusionPaths; // @synthesize exclusionPaths=_exclusionPaths;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (id)cacheKey;
 - (double)maxTextBoundingHeightForStyle:(unsigned long long)arg1;
 - (double)maxTextWidth;

@@ -15,8 +15,8 @@
     SPTGaiaSocialListeningIntegrationManager *_socialListeningManager;
 }
 
-@property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 - (id)cellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (id)initWithSocialListeningManager:(id)arg1;
 

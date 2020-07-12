@@ -21,10 +21,10 @@
     SPTProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) SPTLoginViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)hideRequestLoginLinkInProgressState;
 - (void)showRequestLoginLinkInProgressState;
 - (void)loginWithoutPasswordButtonTap:(id)arg1;

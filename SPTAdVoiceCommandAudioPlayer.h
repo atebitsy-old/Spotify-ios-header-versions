@@ -18,10 +18,10 @@
 }
 
 + (id)soundsBundle;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(copy, nonatomic) NSDictionary *responsePlayers; // @synthesize responsePlayers=_responsePlayers;
 @property(retain, nonatomic) AVAudioPlayer *audioPlayer; // @synthesize audioPlayer=_audioPlayer;
-- (void).cxx_destruct;
 - (void)playAudioResponseWithPlayer:(id)arg1;
 - (id)newPlayerNamed:(id)arg1;
 - (id)audioResponsePlayers;

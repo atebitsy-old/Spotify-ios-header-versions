@@ -22,13 +22,13 @@
     unsigned long long _presentationMode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long presentationMode; // @synthesize presentationMode=_presentationMode;
 @property(retain, nonatomic) id <SPTOnboardingFlowCoordinator> currentFlowCoordinator; // @synthesize currentFlowCoordinator=_currentFlowCoordinator;
 @property(retain, nonatomic) NSMutableArray *flowCoordinators; // @synthesize flowCoordinators=_flowCoordinators;
 @property(retain, nonatomic) UINavigationController *coordinationNavigationController; // @synthesize coordinationNavigationController=_coordinationNavigationController;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
-- (void).cxx_destruct;
 - (_Bool)presentBridgeViewAnimated:(_Bool)arg1 manualLogin:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)provideNavigationControllerWithRootViewController:(id)arg1;
 - (void)onboardingFlowDidSkip;

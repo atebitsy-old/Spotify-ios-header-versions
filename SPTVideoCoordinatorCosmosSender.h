@@ -13,8 +13,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void)sendMessage:(id)arg1 toCPEndpoint:(id)arg2 withRequestAction:(id)arg3;
 - (void)postMessage:(id)arg1 toCPEndpoint:(id)arg2;
 - (void)putMessage:(id)arg1 toCPEndpoint:(id)arg2;

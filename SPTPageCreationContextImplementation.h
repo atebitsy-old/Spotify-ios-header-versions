@@ -18,10 +18,10 @@
     NSDictionary *_queryParameters;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *queryParameters; // @synthesize queryParameters=_queryParameters;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (id)initWithLinkDispatcher:(id)arg1 referrerIdentifier:(id)arg2 queryParameters:(id)arg3;
 
 // Remaining properties

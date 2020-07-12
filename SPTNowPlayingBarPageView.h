@@ -28,6 +28,7 @@
     struct CGRect _coverArtAreaBounds;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *bottomLabel; // @synthesize bottomLabel=_bottomLabel;
 @property(retain, nonatomic) UILabel *topLabel; // @synthesize topLabel=_topLabel;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -39,7 +40,6 @@
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) NSURL *trackURL; // @synthesize trackURL=_trackURL;
-- (void).cxx_destruct;
 - (void)calculateLabelTexts;
 - (id)bottomLabelTextAttributes;
 - (id)topLabelTextAttributes;

@@ -14,9 +14,9 @@
     CDUnknownBlockType _itemAction;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType itemAction; // @synthesize itemAction=_itemAction;
 @property(retain, nonatomic) id <SPTYourLibraryMusicRangeDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 
 @end
 

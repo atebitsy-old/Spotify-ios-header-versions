@@ -15,8 +15,8 @@
     SPTRequestLifetime *_lifetime;
 }
 
-@property(readonly, nonatomic) SPTRequestLifetime *lifetime; // @synthesize lifetime=_lifetime;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTRequestLifetime *lifetime; // @synthesize lifetime=_lifetime;
 - (void)acquire;
 - (void)cancel;
 - (id)initWithLifetime:(id)arg1;

@@ -24,13 +24,13 @@
     NSNumber *_volumeFeatureEnabledOptionalFlag;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *volumeFeatureEnabledOptionalFlag; // @synthesize volumeFeatureEnabledOptionalFlag=_volumeFeatureEnabledOptionalFlag;
 @property(readonly, nonatomic) SPTGaiaLocalDevicePermissions *localDevicePermissions; // @synthesize localDevicePermissions=_localDevicePermissions;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) SPTGaiaFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(readonly, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
-- (void).cxx_destruct;
 - (_Bool)freeTierEducationPickerDesignEnabled;
 - (_Bool)lockScreenPlayerFeatureEnabled;
 - (id)homeDeviceLocalForcedSettingsKey;

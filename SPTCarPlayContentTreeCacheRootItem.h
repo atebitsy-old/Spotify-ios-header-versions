@@ -16,11 +16,11 @@
     NSMutableDictionary *_childReferences;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldReload; // @synthesize shouldReload=_shouldReload;
 @property(retain, nonatomic) NSMutableDictionary *childReferences; // @synthesize childReferences=_childReferences;
 @property(retain, nonatomic) NSMutableDictionary *childContentTree; // @synthesize childContentTree=_childContentTree;
 @property(readonly, nonatomic) SPTCarPlayContentItem *contentItem; // @synthesize contentItem=_contentItem;
-- (void).cxx_destruct;
 - (id)contentSetWithoutUnplayableContainersForChildrenOfIndexPath:(id)arg1;
 - (void)emptyCache;
 - (unsigned long long)countChildReferences:(id)arg1 withoutErrors:(_Bool)arg2;

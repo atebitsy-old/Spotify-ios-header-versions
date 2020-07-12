@@ -18,11 +18,11 @@
     NSLayoutConstraint *_heightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(readonly, nonatomic) UIView *containedView; // @synthesize containedView=_containedView;
 @property(nonatomic) unsigned long long containedViewAlignment; // @synthesize containedViewAlignment=_containedViewAlignment;
-- (void).cxx_destruct;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (void)updateContainedViewConstraints;
 - (void)updateHeightConstraint;

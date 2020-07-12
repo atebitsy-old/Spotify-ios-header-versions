@@ -20,13 +20,13 @@
     GLUELabel *_textLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) GLUELabel *rankLabel; // @synthesize rankLabel=_rankLabel;
 @property(retain, nonatomic) UIView *textContainerView; // @synthesize textContainerView=_textContainerView;
 @property(retain, nonatomic) NSLayoutConstraint *circleViewWidthConstraint; // @synthesize circleViewWidthConstraint=_circleViewWidthConstraint;
 @property(retain, nonatomic) UIView *circleView; // @synthesize circleView=_circleView;
 @property(retain, nonatomic) NSNumberFormatter *numberFormatter; // @synthesize numberFormatter=_numberFormatter;
-- (void).cxx_destruct;
 - (unsigned long long)accessibilityTraits;
 - (id)accessibilityIdentifier;
 - (id)accessibilityLabel;

@@ -20,12 +20,12 @@
     SPTStorylinesEntityLoadEventLogger *_loadEventLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStorylinesEntityLoadEventLogger *loadEventLogger; // @synthesize loadEventLogger=_loadEventLogger;
 @property(readonly, nonatomic) SPTStorylinesDataCache *storylinesCache; // @synthesize storylinesCache=_storylinesCache;
 @property(retain, nonatomic) SPTStorylinesCardImageLoader *imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTStorylinesDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTStorylinesLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didLoadImage:(id)arg1 forStorylinesCard:(id)arg2;
 - (_Bool)validStorylines:(id)arg1 forTrack:(id)arg2;
 - (void)fetchImageForStorylines:(id)arg1 atCardIndex:(unsigned long long)arg2;

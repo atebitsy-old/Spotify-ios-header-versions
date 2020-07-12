@@ -28,6 +28,7 @@
 + (double)labelHeightForContainerViewSize:(struct CGSize)arg1 labelContent:(id)arg2 labelStyle:(id)arg3 theme:(id)arg4;
 + (double)heightForViewFromContainerViewSize:(struct CGSize)arg1 labelHeight:(double)arg2 theme:(id)arg3;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(retain, nonatomic) HUBComponentEvent *tapEvent; // @synthesize tapEvent=_tapEvent;
 @property(retain, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) GLUEImageView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler;
-- (void).cxx_destruct;
 - (void)sendTapEvent;
 - (void)setupGestureRecognizers;
 - (void)highlightGestureRecognizerChangedState:(id)arg1;

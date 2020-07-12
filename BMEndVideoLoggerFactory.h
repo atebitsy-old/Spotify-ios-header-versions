@@ -17,9 +17,9 @@
     id <BMLoggerDataProvider> _loggerDataProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <BMLoggerDataProvider> loggerDataProvider; // @synthesize loggerDataProvider=_loggerDataProvider;
 @property(retain, nonatomic) id <BMLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (id)createPlaybackEventObserverForPlaybackIdentity:(id)arg1 options:(id)arg2 timeObservable:(id)arg3;
 - (id)initWithLogger:(id)arg1 loggerDataProvider:(id)arg2;
 

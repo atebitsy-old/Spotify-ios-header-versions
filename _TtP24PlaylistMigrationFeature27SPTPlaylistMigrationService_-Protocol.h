@@ -7,9 +7,11 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL;
-@protocol SPTFreeTierPlaylistCellProvider><SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistIsTrackActive, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription;
+@protocol SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProvider><SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistIsTrackActive, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription;
 
 @protocol _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_ <SPTService>
+- (id <SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription>)provideUnloadedTracksSection;
+- (id <SPTFreeTierPlaylistCellProvider>)providePlaceholderCellProvider;
 - (id <SPTFreeTierPlaylistCellProvider><SPTFreeTierPlaylistSectionDescription>)provideSponsoredCellProviderWithPlaylistURL:(NSURL *)arg1 cellProviderDelegate:(id <SPTFreeTierPlaylistCellProviderDelegate>)arg2;
 - (id <SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver>)provideItemsViewModelWithPremiumOnlyFeatureEnabled:(_Bool)arg1 isTrackActive:(id <SPTFreeTierPlaylistIsTrackActive>)arg2;
 - (id <SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription>)provideTrackSectionWithItemsViewModel:(id <SPTFreeTierPlaylistItemsViewModel>)arg1;

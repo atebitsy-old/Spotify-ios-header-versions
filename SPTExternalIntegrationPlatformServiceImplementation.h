@@ -28,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationDebugLogServiceImplementation *debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationCollectionService> collectionService; // @synthesize collectionService=_collectionService;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> sharedPlatform; // @synthesize sharedPlatform=_sharedPlatform;
-- (void).cxx_destruct;
 - (id)providePlatform;
 - (void)unload;
 - (void)load;

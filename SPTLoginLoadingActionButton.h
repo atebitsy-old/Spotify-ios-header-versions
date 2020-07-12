@@ -15,15 +15,15 @@
     unsigned long long _loadingState;
     NSString *_initialTitle;
     NSLayoutConstraint *_widthConstraint;
-    struct UIView *_spinnerAnimationView;
+    UIView<GLUEAnimationLoading><GLUEAnimationControlling> *_spinnerAnimationView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView<GLUEAnimationLoading><GLUEAnimationControlling> *spinnerAnimationView; // @synthesize spinnerAnimationView=_spinnerAnimationView;
 @property(retain, nonatomic) NSLayoutConstraint *widthConstraint; // @synthesize widthConstraint=_widthConstraint;
 @property(copy, nonatomic) NSString *initialTitle; // @synthesize initialTitle=_initialTitle;
 @property(nonatomic) unsigned long long loadingState; // @synthesize loadingState=_loadingState;
 @property(nonatomic) double initialHeight; // @synthesize initialHeight=_initialHeight;
-- (void).cxx_destruct;
 - (void)stopSpinnerAnimation;
 - (void)setupSpinnerAnimation;
 - (void)restoreState;

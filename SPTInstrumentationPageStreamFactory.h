@@ -16,10 +16,10 @@
     id <SPTNavigationListProvider> _navigationListProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNavigationListProvider> navigationListProvider; // @synthesize navigationListProvider=_navigationListProvider;
 @property(retain, nonatomic) SPTInstrumentationNavigationObserver *navigationManagerObserver; // @synthesize navigationManagerObserver=_navigationManagerObserver;
 @property(retain, nonatomic) SPTInstrumentationDeviceClock *clock; // @synthesize clock=_clock;
-- (void).cxx_destruct;
 - (id)initialViewControllerFromViewController:(id)arg1;
 - (id)pageContainerForViewController:(id)arg1 messageHandler:(id)arg2;
 - (id)containerPageStreamWithInitialViewController:(id)arg1 messageHandler:(id)arg2;

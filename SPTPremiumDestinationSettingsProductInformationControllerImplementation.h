@@ -21,6 +21,7 @@
     NSDate *_currentProductExpieryDate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isPremiumOnlyMarket; // @synthesize isPremiumOnlyMarket=_isPremiumOnlyMarket;
 @property(readonly, nonatomic) _Bool hasCanActivatePremiumTrialValue; // @synthesize hasCanActivatePremiumTrialValue=_hasCanActivatePremiumTrialValue;
 @property(readonly, nonatomic) _Bool canActivatePremiumTrial; // @synthesize canActivatePremiumTrial=_canActivatePremiumTrial;
@@ -28,7 +29,6 @@
 @property(nonatomic) _Bool upgradeAvailableButCantPurchase; // @synthesize upgradeAvailableButCantPurchase=_upgradeAvailableButCantPurchase;
 @property(nonatomic) long long availableProduct; // @synthesize availableProduct=_availableProduct;
 @property(nonatomic) long long currentProduct; // @synthesize currentProduct=_currentProduct;
-- (void).cxx_destruct;
 - (void)removeProductInformationObserver:(id)arg1;
 - (void)addProductInformationObserver:(id)arg1;
 - (id)marketingNameForProduct:(long long)arg1;

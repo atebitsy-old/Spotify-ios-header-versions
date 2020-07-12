@@ -25,6 +25,7 @@
     id <SPTYourLibraryPagesViewControllerFullPosition> _fullPositionConverter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTYourLibraryPagesViewControllerFullPosition> fullPositionConverter; // @synthesize fullPositionConverter=_fullPositionConverter;
 @property(retain, nonatomic) SPTYourLibraryPageViewControllerScrollToSectionDatasource *scrollToSectionDatasource; // @synthesize scrollToSectionDatasource=_scrollToSectionDatasource;
 @property(copy, nonatomic) NSDictionary *indexMap; // @synthesize indexMap=_indexMap;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) SPTYourLibraryPageViewController *pageViewController; // @synthesize pageViewController=_pageViewController;
 @property(nonatomic) __weak id <SPTYourLibraryPagesViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTYourLibraryPagesViewControllerDatasource> datasource; // @synthesize datasource=_datasource;
-- (void).cxx_destruct;
 - (struct Position)fullPositionFromPage:(double)arg1 toPage:(double)arg2;
 - (id)pageViewController:(id)arg1 viewControllerAtIndex:(unsigned long long)arg2;
 - (unsigned long long)numberPagesForPageViewController:(id)arg1;

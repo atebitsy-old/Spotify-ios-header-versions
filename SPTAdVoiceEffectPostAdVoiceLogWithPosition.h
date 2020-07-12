@@ -14,9 +14,9 @@
     double _position;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double position; // @synthesize position=_position;
 @property(readonly, nonatomic) NSString *eventType; // @synthesize eventType=_eventType;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithEventType:(id)arg1 position:(double)arg2;
 

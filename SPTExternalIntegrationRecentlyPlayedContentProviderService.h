@@ -23,12 +23,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *completionHandlers; // @synthesize completionHandlers=_completionHandlers;
 @property(readonly, nonatomic) SPTExternalIntegrationRecentlyPlayedContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;
-- (void).cxx_destruct;
 - (void)recentlyPlayedList:(id)arg1 didFailWithError:(id)arg2;
 - (void)recentlyPlayedListDidReload:(id)arg1;
 - (id)createPlaceholderContentItemForURI:(id)arg1;

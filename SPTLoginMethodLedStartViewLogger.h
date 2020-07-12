@@ -16,10 +16,10 @@
     unsigned long long _method;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long method; // @synthesize method=_method;
 @property(readonly, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logUserDidTapLoginButton;
 - (void)logUserDidTapSignupButton;
 - (void)logUserDidSeeView;

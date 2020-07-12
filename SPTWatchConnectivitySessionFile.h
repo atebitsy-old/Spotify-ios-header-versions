@@ -14,9 +14,9 @@
     NSDictionary *_metadata;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(readonly, nonatomic) NSURL *fileURL; // @synthesize fileURL=_fileURL;
-- (void).cxx_destruct;
 - (id)initWithFileURL:(id)arg1 metadata:(id)arg2;
 
 @end

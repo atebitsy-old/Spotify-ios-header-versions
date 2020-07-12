@@ -10,7 +10,6 @@
 
 @interface UIImage (GCKAdditions)
 + (id)spt_starImageForSPTIcon:(long long)arg1 iconSize:(struct CGSize)arg2 iconOffset:(struct CGPoint)arg3 innerCircleSize:(struct CGSize)arg4 outerCircleSize:(struct CGSize)arg5 circleColor:(id)arg6 circleLineWidth:(double)arg7 iconColor:(id)arg8 points:(unsigned long long)arg9;
-+ (id)spt_connectIconAnimationImageWithSize:(struct CGSize)arg1 foregroundColor:(id)arg2 backgroundColor:(id)arg3 duration:(double)arg4;
 + (id)encore_imageForIcon:(unsigned long long)arg1 size:(struct CGSize)arg2 color:(id)arg3 backgroundColor:(id)arg4 insets:(struct UIEdgeInsets)arg5;
 + (id)encore_imageForIcon:(unsigned long long)arg1 size:(struct CGSize)arg2 color:(id)arg3 backgroundColor:(id)arg4;
 + (id)encore_imageForIcon:(unsigned long long)arg1 size:(struct CGSize)arg2 color:(id)arg3;
@@ -83,7 +82,6 @@
 - (id)idNormalize;
 - (struct CGAffineTransform)idTransformForOrientation:(struct CGSize)arg1;
 - (id)idResizedImage:(struct CGSize)arg1 transform:(struct CGAffineTransform)arg2 drawTransposed:(_Bool)arg3 interpolationQuality:(int)arg4;
-- (id)spt_tintedImageWithColor:(id)arg1 size:(struct CGSize)arg2;
 - (unsigned int)uint32FromRgba:(struct SPTEncore_RGBA)arg1;
 - (struct SPTEncore_RGBA)rgbaFromUint32:(unsigned int)arg1;
 - (id)encore_imageByBlendingWithImage:(id)arg1 usingRgbaBlock:(CDUnknownBlockType)arg2;

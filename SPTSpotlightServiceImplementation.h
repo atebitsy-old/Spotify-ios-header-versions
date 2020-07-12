@@ -25,6 +25,7 @@
 
 + (_Bool)isSpotlightIndexingSupportedByOS;
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTSpotlightIndexGatekeeper> gatekeeper; // @synthesize gatekeeper=_gatekeeper;
 @property(retain, nonatomic) SPTSpotlightIndexImplementation *index; // @synthesize index=_index;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTUserActivityService> userActivityService; // @synthesize userActivityService=_userActivityService;
-- (void).cxx_destruct;
 - (void)registerSettings;
 - (void)registerUpdateIndexSetting;
 - (void)registerDropIndexSetting;

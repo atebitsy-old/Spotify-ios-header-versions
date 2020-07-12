@@ -18,10 +18,10 @@
     id <SPTFeatureFlagSignal> _onDemandTestSignal;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> onDemandTestSignal; // @synthesize onDemandTestSignal=_onDemandTestSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic, getter=isOnDemandDebuggingEnabled) _Bool onDemandDebuggingEnabled; // @synthesize onDemandDebuggingEnabled=_onDemandDebuggingEnabled;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupOnDemandDebbugingFlag;
 - (id)initWithFeatureFlagFactory:(id)arg1;

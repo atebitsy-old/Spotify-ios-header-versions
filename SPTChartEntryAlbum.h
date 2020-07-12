@@ -15,10 +15,10 @@
     NSURL *_imageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

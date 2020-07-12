@@ -23,6 +23,7 @@
     id <NSObject> _logoutObserver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <NSObject> logoutObserver; // @synthesize logoutObserver=_logoutObserver;
 @property(retain, nonatomic) id <NSObject> reachabilityObserver; // @synthesize reachabilityObserver=_reachabilityObserver;
 @property(readonly, nonatomic) id <SPTSpotlightIndexGatekeeper> gatekeeper; // @synthesize gatekeeper=_gatekeeper;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) SPTSpotlightTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) CSSearchableIndex *index; // @synthesize index=_index;
 @property(readonly, nonatomic) NSArray *itemsProviders; // @synthesize itemsProviders=_itemsProviders;
-- (void).cxx_destruct;
 - (void)decorateUserActivity:(id)arg1 withThumbnailImage:(id)arg2;
 - (void)decorateUserActivity:(id)arg1 asPublic:(_Bool)arg2 title:(id)arg3 description:(id)arg4 thumbnail:(id)arg5 keywords:(id)arg6 webpageURL:(id)arg7;
 - (void)createContentAttributeSetForUserActivity:(id)arg1;

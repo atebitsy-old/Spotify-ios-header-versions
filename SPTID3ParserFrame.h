@@ -15,10 +15,10 @@
     long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) NSData *data; // @synthesize data=_data;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 data:(id)arg2 type:(long long)arg3;
 
 @end

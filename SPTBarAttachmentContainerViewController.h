@@ -17,10 +17,10 @@
     NSMutableArray *_controllers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *controllers; // @synthesize controllers=_controllers;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(nonatomic) double totalHeight; // @synthesize totalHeight=_totalHeight;
-- (void).cxx_destruct;
 - (id)replacementViewsForBarTransition:(id)arg1;
 - (id)backgroundViewForBarTransition:(id)arg1;
 - (_Bool)containsViewController:(id)arg1;

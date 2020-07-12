@@ -15,9 +15,9 @@
     NSMutableDictionary *_inFlightDurations;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *inFlightDurations; // @synthesize inFlightDurations=_inFlightDurations;
 @property(readonly, nonatomic) NSMutableDictionary *durations; // @synthesize durations=_durations;
-- (void).cxx_destruct;
 - (id)longestDurationsForType:(id)arg1 maxDurations:(long long)arg2;
 - (id)durationsForType:(id)arg1;
 - (void)addDuration:(double)arg1 type:(id)arg2 key:(id)arg3;

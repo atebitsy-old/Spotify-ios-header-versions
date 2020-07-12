@@ -17,9 +17,9 @@
     id <SPTAsyncScheduler> _scheduler;
 }
 
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (void)prefsSetStringAsync:(const char *)arg1 string:(id)arg2 callback:(CDUnknownBlockType)arg3;
 - (long long)prefsGetInt:(const char *)arg1;
 - (void)prefsSetInt:(const char *)arg1 val:(long long)arg2;

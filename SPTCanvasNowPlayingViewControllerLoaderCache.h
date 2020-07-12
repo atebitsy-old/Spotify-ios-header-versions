@@ -16,10 +16,10 @@
     SPTCanvasViewControllerViewModelFactory *_canvasViewModelFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasViewControllerViewModelFactory *canvasViewModelFactory; // @synthesize canvasViewModelFactory=_canvasViewModelFactory;
 @property(retain, nonatomic) NSCache *preloadedModels; // @synthesize preloadedModels=_preloadedModels;
 @property(nonatomic) __weak id <SPTCanvasViewControllerViewModelLoadDelegate> loadDelegate; // @synthesize loadDelegate=_loadDelegate;
-- (void).cxx_destruct;
 - (void)clear;
 - (void)preloadCanvasViewControllerViewModelForTrack:(id)arg1;
 - (id)canvasViewControllerViewModelForTrack:(id)arg1;

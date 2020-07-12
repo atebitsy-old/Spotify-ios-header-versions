@@ -16,8 +16,8 @@
     id <SPTShareVideoDataProvider> _videoDataProvider;
 }
 
-@property(retain, nonatomic) id <SPTShareVideoDataProvider> videoDataProvider; // @synthesize videoDataProvider=_videoDataProvider;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTShareVideoDataProvider> videoDataProvider; // @synthesize videoDataProvider=_videoDataProvider;
 - (id)registeredVideoDataProvider;
 - (void)deregisterCurrentVideoDataProvider;
 - (void)registerVideoDataProvider:(id)arg1;

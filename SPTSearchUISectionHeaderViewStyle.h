@@ -20,12 +20,12 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long titleNumberOfLines; // @synthesize titleNumberOfLines=_titleNumberOfLines;
 @property(copy, nonatomic) UIColor *titleColor; // @synthesize titleColor=_titleColor;
 @property(copy, nonatomic) UIFont *titleFont; // @synthesize titleFont=_titleFont;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (_Bool)isEqualToSectionHeaderViewStyle:(id)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

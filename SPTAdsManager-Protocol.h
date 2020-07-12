@@ -10,18 +10,6 @@
 @protocol SPTAdNowPlayingRemoteControlPolicy, SPTAdsBaseEntity, SPTNowPlayingManager, SPTNowPlayingNavigationBarModel;
 
 @protocol SPTAdsManager <NSObject>
-@property(readonly, nonatomic) _Bool shouldDisallowPause;
-@property(readonly, nonatomic) _Bool shouldEnableSkipControl;
-@property(readonly, nonatomic) _Bool shouldShowSkipControl;
-@property(readonly, nonatomic, getter=isVideoInProgress) _Bool videoInProgress;
-@property(readonly, nonatomic) _Bool isVideoCompanionAd;
-@property(readonly, nonatomic) _Bool isNowPlayingViewForcedOpen;
-@property(readonly, nonatomic) id <SPTAdsBaseEntity> activeAdEntity;
-@property(readonly, copy, nonatomic) NSString *actionMessage;
-@property(readonly, nonatomic) _Bool isEndOfWatchNow;
-@property(readonly, nonatomic, getter=isOptOutAvailable) _Bool optOutAvailable;
-@property(readonly, nonatomic, getter=isOptInAvailable) _Bool optInAvailable;
-@property(readonly, nonatomic, getter=isBreakInProgress) _Bool breakInProgress;
 - (id <SPTAdNowPlayingRemoteControlPolicy>)provideRemoteControlPolicy;
 - (void)skipCurrentAd;
 - (void)setNowPlayingNavigationBarModel:(id <SPTNowPlayingNavigationBarModel>)arg1;
@@ -31,5 +19,23 @@
 - (_Bool)handleSkip;
 - (void)handleAdTap:(NSURL *)arg1;
 - (double)skipDelayRemaining:(double)arg1;
+@property(nonatomic, readonly) _Bool shouldDisallowPause;
+@property(nonatomic, readonly) _Bool shouldEnableSkipControl;
+@property(nonatomic, readonly) _Bool shouldShowSkipControl;
+- (_Bool)isVideoInProgress;
+@property(nonatomic, readonly) _Bool isVideoCompanionAd;
+@property(nonatomic, readonly) _Bool isNowPlayingViewForcedOpen;
+@property(nonatomic, readonly) NSString *actionMessage;
+@property(nonatomic, readonly) _Bool isEndOfWatchNow;
+- (_Bool)isOptOutAvailable;
+- (_Bool)isOptInAvailable;
+- (_Bool)isBreakInProgress;
+@property(readonly, nonatomic) id <SPTAdsBaseEntity> activeAdEntity;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool breakInProgress;
+@property(nonatomic, readonly) _Bool optInAvailable;
+@property(nonatomic, readonly) _Bool optOutAvailable;
+@property(nonatomic, readonly) _Bool videoInProgress;
 @end
 

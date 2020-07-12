@@ -13,8 +13,8 @@
     NSMutableOrderedSet *_rootItems;
 }
 
-@property(retain, nonatomic) NSMutableOrderedSet *rootItems; // @synthesize rootItems=_rootItems;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableOrderedSet *rootItems; // @synthesize rootItems=_rootItems;
 - (void)removeDeletedRootItemsWithNewRootItems:(id)arg1;
 - (id)contentTreeCacheDescription;
 - (void)setRootItemsShouldRefreshOnUpdate:(id)arg1;

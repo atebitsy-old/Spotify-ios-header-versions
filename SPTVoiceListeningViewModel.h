@@ -40,6 +40,7 @@
     unsigned long long _listeningMode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long listeningMode; // @synthesize listeningMode=_listeningMode;
 @property(retain, nonatomic) SPTVoiceAudioRouteDetector *audioRouteDetector; // @synthesize audioRouteDetector=_audioRouteDetector;
 @property(nonatomic) double noUtteranceIntervalTimeout; // @synthesize noUtteranceIntervalTimeout=_noUtteranceIntervalTimeout;
@@ -65,7 +66,6 @@
 @property(readonly, nonatomic) _Bool microphoneButtonHidden; // @synthesize microphoneButtonHidden=_microphoneButtonHidden;
 @property(nonatomic) __weak id <SPTVoiceListeningViewModelPresentationDelegate> presentationDelegate; // @synthesize presentationDelegate=_presentationDelegate;
 @property(nonatomic) __weak id <SPTVoiceListeningViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)timerFired;
 - (void)scheduleFirstUtteranceTimer;
 - (void)cancelFirstUtteranceTimer;

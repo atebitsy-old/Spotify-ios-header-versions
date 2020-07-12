@@ -20,10 +20,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTRadioPlaybackService *radioPlaybackService; // @synthesize radioPlaybackService=_radioPlaybackService;
 @property(readonly, nonatomic) __weak id <SPTRadioService> radioService; // @synthesize radioService=_radioService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
-- (void).cxx_destruct;
 - (void)playContentWithURI:(id)arg1 withOptions:(id)arg2 origin:(id)arg3 requestOptions:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (_Bool)canPlayContentWithURI:(id)arg1;
 - (void)unload;

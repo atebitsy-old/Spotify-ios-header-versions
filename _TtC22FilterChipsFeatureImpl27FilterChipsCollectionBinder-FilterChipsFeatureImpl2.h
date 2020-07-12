@@ -6,7 +6,9 @@
 
 #import "_TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder.h"
 
-@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl2)
+#import "_TtP22FilterChipsFeatureImpl33FilterChipsCollectionViewDelegate_-Protocol.h"
+
+@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl2) <_TtP22FilterChipsFeatureImpl33FilterChipsCollectionViewDelegate_>
 - (struct CGSize)collectionView:(id)arg1 sizeForItemAt:(id)arg2;
 @end
 

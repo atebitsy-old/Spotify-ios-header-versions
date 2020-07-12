@@ -14,9 +14,9 @@
     SPTSignupMarketRestrictionsModel *_marketRestrictions;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSignupMarketRestrictionsModel *marketRestrictions; // @synthesize marketRestrictions=_marketRestrictions;
 @property(copy, nonatomic) NSString *countryCode; // @synthesize countryCode=_countryCode;
-- (void).cxx_destruct;
 - (id)specificTermsAndPolicyLicenseDialogText;
 @property(readonly, nonatomic) NSString *policyLicenseDetailsButtonTitle;
 @property(readonly, nonatomic) NSString *termsLicenseDetailsButtonTitle;

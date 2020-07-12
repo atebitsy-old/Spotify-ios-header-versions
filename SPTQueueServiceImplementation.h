@@ -9,11 +9,10 @@
 #import "SPTQueueService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTQueueFeatureProperties, SPTQueueUBILogger;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTCoreService, SPTCrashReporterService, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastEntityDataLoader, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTCrashReporterService, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastEntityDataLoader, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTQueueServiceImplementation : NSObject <SPTQueueService>
 {
-    id <SPTCoreService> _coreService;
     id <SPTShelfService> _shelfService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTContextMenuOptions> _contextMenuOptions;
@@ -44,6 +43,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTQueueLogger> queueLogger; // @synthesize queueLogger=_queueLogger;
 @property(retain, nonatomic) id <SPTQueuePlaybackDelegateRegistry> playbackDelegateRegistry; // @synthesize playbackDelegateRegistry=_playbackDelegateRegistry;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -71,8 +71,6 @@
 @property(retain, nonatomic) id <SPTContextMenuOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
-@property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-- (void).cxx_destruct;
 - (void)registerQueueShelf;
 - (id)provideContextMenuOptions;
 - (void)presentContextMenuForRegularTrack:(id)arg1 inViewController:(id)arg2 senderView:(id)arg3;
@@ -86,7 +84,7 @@
 - (id)provideQueueLogger;
 - (id)provideQueuePlaybackDelegateRegistry;
 - (id)provideQueueInteractor;
-- (struct UIViewController *)createQueueViewControllerWithDelegate:(id)arg1 modeResolver:(id)arg2 navigationBarViewControllerV2:(id)arg3 queueInteractor:(id)arg4 entityDecorationController:(id)arg5;
+- (id)createQueueViewControllerWithDelegate:(id)arg1 modeResolver:(id)arg2 navigationBarViewControllerV2:(id)arg3 queueInteractor:(id)arg4 entityDecorationController:(id)arg5;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

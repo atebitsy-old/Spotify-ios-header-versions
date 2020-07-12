@@ -25,6 +25,7 @@
     id <SPTNowPlayingTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTQueueService> queueService; // @synthesize queueService=_queueService;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
-- (void).cxx_destruct;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)player:(id)arg1 queueDidChange:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

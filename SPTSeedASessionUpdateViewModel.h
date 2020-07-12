@@ -19,13 +19,13 @@
     unsigned long long _minCompleteTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long minCompleteTime; // @synthesize minCompleteTime=_minCompleteTime;
 @property(readonly, nonatomic) _Bool includeSimilarArtists; // @synthesize includeSimilarArtists=_includeSimilarArtists;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) long long seedASessionVisualTreatment; // @synthesize seedASessionVisualTreatment=_seedASessionVisualTreatment;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) SPTSeedASessionCurator *curator; // @synthesize curator=_curator;
-- (void).cxx_destruct;
 - (void)seedASessionDidFailCuration;
 - (void)seedASessionDidFinishCuration:(id)arg1;
 - (void)completeSeedASessionAt:(unsigned long long)arg1 withPlaylistURI:(id)arg2;

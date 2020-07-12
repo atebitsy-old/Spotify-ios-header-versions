@@ -18,13 +18,13 @@
     SPTBrowseUICardStyle *_stateStyle;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool canReuseLayout; // @synthesize canReuseLayout=_canReuseLayout;
 @property(copy, nonatomic) SPTBrowseUICardStyle *stateStyle; // @synthesize stateStyle=_stateStyle;
 @property(readonly, nonatomic) SPTBrowseUICardTextView *textView; // @synthesize textView=_textView;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) UIView *imageViewContainer; // @synthesize imageViewContainer=_imageViewContainer;
 @property(nonatomic) _Bool shouldDisplayImage; // @synthesize shouldDisplayImage=_shouldDisplayImage;
-- (void).cxx_destruct;
 - (void)invalidateLayout;
 - (struct UIEdgeInsets)textViewInsets;
 - (struct CGSize)imageViewSize;

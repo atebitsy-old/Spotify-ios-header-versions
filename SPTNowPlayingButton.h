@@ -35,11 +35,11 @@
 + (id)nextTrackButton;
 + (id)previousTrackButton;
 + (id)button;
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(nonatomic) unsigned long long buttonState; // @synthesize buttonState=_buttonState;
-- (void).cxx_destruct;
 - (void)updateIconSize:(struct CGSize)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)applyIcon;

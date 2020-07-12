@@ -16,11 +16,11 @@
     NSHashTable *_completionHandlers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSHashTable *completionHandlers; // @synthesize completionHandlers=_completionHandlers;
 @property(readonly, nonatomic) unsigned long long offset; // @synthesize offset=_offset;
 @property(readonly, nonatomic) unsigned long long limit; // @synthesize limit=_limit;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToSPTExternalIntegrationSearchRequest:(id)arg1;

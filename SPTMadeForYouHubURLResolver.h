@@ -17,10 +17,10 @@
     NSString *_clientVersion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
 @property(copy, nonatomic) NSString *timeZone; // @synthesize timeZone=_timeZone;
 @property(copy, nonatomic) NSString *locale; // @synthesize locale=_locale;
-- (void).cxx_destruct;
 - (id)resolveContentURL;
 - (id)initWithLocale:(id)arg1 timeZone:(id)arg2 clientVersion:(id)arg3;
 

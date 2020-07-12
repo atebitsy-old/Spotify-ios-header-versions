@@ -21,9 +21,9 @@
 + (long long)accessoryRightIconForComponentModel:(id)arg1;
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEntityRowView *entityRowView; // @synthesize entityRowView=_entityRowView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (_Bool)modelContainsCalendarWithModel:(id)arg1;
 - (void)configureCalendarView:(id)arg1 withModel:(id)arg2;
 - (void)configureTrailingViewWithModel:(id)arg1;

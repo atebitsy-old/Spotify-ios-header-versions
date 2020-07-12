@@ -15,8 +15,8 @@
     SPTFreeTierArtistGLUETheme *_theme;
 }
 
-@property(retain, nonatomic) SPTFreeTierArtistGLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTFreeTierArtistGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;

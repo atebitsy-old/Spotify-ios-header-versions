@@ -31,6 +31,7 @@
     NSMutableSet *_componentsFullyShown;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool bannerPresented; // @synthesize bannerPresented=_bannerPresented;
 @property(retain, nonatomic) NSMutableSet *componentsFullyShown; // @synthesize componentsFullyShown=_componentsFullyShown;
 @property(nonatomic) _Bool hasSentPageImpressionForCurrentTrack; // @synthesize hasSentPageImpressionForCurrentTrack=_hasSentPageImpressionForCurrentTrack;
@@ -45,7 +46,6 @@
 @property(nonatomic) _Bool scrollEnabled; // @synthesize scrollEnabled=_scrollEnabled;
 @property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(nonatomic) __weak id <SPTNowPlayingScrollViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)modeResolver:(id)arg1 didChangeToMode:(id)arg2 fromMode:(id)arg3;
 - (void)resetInstrumentationStatus;
 - (void)didDismissBannerFromManager:(id)arg1;

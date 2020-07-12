@@ -17,9 +17,9 @@
     id <GLUETheme> _glueTheme;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isLyricsEastAsian; // @synthesize isLyricsEastAsian=_isLyricsEastAsian;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
-- (void).cxx_destruct;
 - (id)lyricsViewStyle;
 - (id)initWithTheme:(id)arg1 isLyricsEastAsian:(_Bool)arg2;
 

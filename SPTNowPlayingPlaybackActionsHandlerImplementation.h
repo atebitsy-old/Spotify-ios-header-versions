@@ -20,12 +20,12 @@
     id <SPTQueueLogger> _queueLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTQueueLogger> queueLogger; // @synthesize queueLogger=_queueLogger;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTNowPlayingSkipLimitReachedMessageRequester *skipLimitReachedMessageRequester; // @synthesize skipLimitReachedMessageRequester=_skipLimitReachedMessageRequester;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)toggleRepeat:(id)arg1;
 - (void)toggleShuffle:(id)arg1;
 - (void)skip15SecondsForward:(id)arg1;

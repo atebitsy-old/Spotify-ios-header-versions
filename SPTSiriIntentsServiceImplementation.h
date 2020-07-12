@@ -29,6 +29,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSiriIntentsKeepAliveHandler *keepAliveHandler; // @synthesize keepAliveHandler=_keepAliveHandler;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
@@ -40,7 +41,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(retain, nonatomic) id <SPTSiriIntentsHandler> intentsHandler; // @synthesize intentsHandler=_intentsHandler;
-- (void).cxx_destruct;
 - (long long)deferralModeForRemoteConfigValue:(id)arg1;
 - (id)provideSiriIntentsHandler;
 @property(readonly, nonatomic) SPTSiriIntentsVocabularyManager *vocabularyManager; // @synthesize vocabularyManager=_vocabularyManager;

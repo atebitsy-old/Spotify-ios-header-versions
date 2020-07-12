@@ -19,12 +19,12 @@
     UIColor *_separatorColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *separatorColor; // @synthesize separatorColor=_separatorColor;
 @property(copy, nonatomic) GLUEAccessoryIconButtonStyle *shareCodeButtonStyle; // @synthesize shareCodeButtonStyle=_shareCodeButtonStyle;
 @property(copy, nonatomic) GLUEImageStyle *scannablesImageViewStyle; // @synthesize scannablesImageViewStyle=_scannablesImageViewStyle;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningSessionViewScannableViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

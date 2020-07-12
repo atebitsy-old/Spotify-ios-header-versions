@@ -22,8 +22,8 @@
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)configureWithModel:(id)arg1;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)dealloc;
 @property(nonatomic) __weak id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler;
 

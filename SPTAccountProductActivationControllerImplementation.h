@@ -22,12 +22,12 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(copy, nonatomic) NSArray *productsBeingActivated; // @synthesize productsBeingActivated=_productsBeingActivated;
 @property(retain, nonatomic) NSMutableArray *productActivationOrders; // @synthesize productActivationOrders=_productActivationOrders;
 @property(retain, nonatomic) id <SPTAccountTrialDeferredController> deferredTrialController; // @synthesize deferredTrialController=_deferredTrialController;
 @property(retain, nonatomic) id <InAppPurchaseController> inAppPurchaseController; // @synthesize inAppPurchaseController=_inAppPurchaseController;
-- (void).cxx_destruct;
 - (void)accountDeferredTrialControllerTrialTaskActivationDidFailWithError:(id)arg1;
 - (void)accountDeferredTrialControllerDidFinishTrialTaskActivation;
 - (void)accountDeferredTrialControllerDidStartTrialTaskActivation;

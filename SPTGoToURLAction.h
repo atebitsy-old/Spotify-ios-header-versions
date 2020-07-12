@@ -17,11 +17,11 @@
     NSString *_actionLogEventName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *actionLogEventName; // @synthesize actionLogEventName=_actionLogEventName;
 @property(readonly, copy, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)icon;

@@ -25,6 +25,7 @@
     GLUEAccessoryIconButton<SPTPodcastUIDownloadButton> *_downloadButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEAccessoryIconButton<SPTPodcastUIDownloadButton> *downloadButton; // @synthesize downloadButton=_downloadButton;
 @property(retain, nonatomic) GLUEAccessoryIconButton *shareButton; // @synthesize shareButton=_shareButton;
 @property(retain, nonatomic) UIStackView *secondaryActionsStackView; // @synthesize secondaryActionsStackView=_secondaryActionsStackView;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPodcastEpisodeLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTPodcastEpisodeViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)viewModelUpdatedPlaybackState:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateWithError:(id)arg2;
 - (void)downloadButtonTapped:(id)arg1;

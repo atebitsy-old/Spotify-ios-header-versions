@@ -49,6 +49,7 @@
     id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> _quickScrollFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
 @property(retain, nonatomic) UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *quickScrollView; // @synthesize quickScrollView=_quickScrollView;
 @property(nonatomic) _Bool fadeInTrackRowsOnReload; // @synthesize fadeInTrackRowsOnReload=_fadeInTrackRowsOnReload;
@@ -73,7 +74,6 @@
 @property(retain, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTYourLibraryMusicSongsTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (void)animateVisibleTrackRowsFadeOutWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fadeInCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)configureCell:(id)arg1 atIndexPath:(id)arg2;

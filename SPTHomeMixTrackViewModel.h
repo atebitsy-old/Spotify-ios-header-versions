@@ -23,6 +23,7 @@
     NSArray *_memberShortNames;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isRatedExplicit) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
 @property(readonly, copy, nonatomic) NSArray *memberShortNames; // @synthesize memberShortNames=_memberShortNames;
 @property(readonly, copy, nonatomic) NSArray *affinities; // @synthesize affinities=_affinities;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) NSURL *albumImageURL; // @synthesize albumImageURL=_albumImageURL;
 @property(readonly, nonatomic) NSURL *albumURL; // @synthesize albumURL=_albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 - (id)constructMemberShortNamesFromAffinities:(id)arg1 homeMixMembers:(id)arg2;
 - (id)constructMemberViewModelsFromAffinities:(id)arg1 homeMixMembers:(id)arg2;

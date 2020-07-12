@@ -16,10 +16,10 @@
     id <SPTVoicePlayerEventsListener> _playerEventsListener;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTVoicePlayerEventsListener> playerEventsListener; // @synthesize playerEventsListener=_playerEventsListener;
 @property(retain, nonatomic) NSURL *artworkImageURI; // @synthesize artworkImageURI=_artworkImageURI;
 @property(nonatomic) __weak id <SPTVoiceNowPlayingArtworkViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateViewModelWithPlayerState:(id)arg1;
 - (id)initWithPlayerEventsListener:(id)arg1;
 

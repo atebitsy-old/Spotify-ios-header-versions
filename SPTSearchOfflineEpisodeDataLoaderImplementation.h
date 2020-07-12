@@ -16,8 +16,8 @@
     id <SPTCosmosDictionaryDataLoader> _cosmosDataLoader;
 }
 
-@property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 - (id)policy;
 - (id)urlForQuery:(id)arg1 limit:(id)arg2;
 - (void)fetchEpisodesWithQuery:(id)arg1 limit:(unsigned long long)arg2 onCompletion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;

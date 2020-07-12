@@ -19,10 +19,10 @@
 }
 
 + (id)ignoredAutoEquatablePropertyNames;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isPlaceholder; // @synthesize isPlaceholder=_isPlaceholder;
 @property(readonly, nonatomic) id <HUBIconImageResolver> imageResolver; // @synthesize imageResolver=_imageResolver;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)imageWithSize:(struct CGSize)arg1 color:(id)arg2;
 - (id)initWithIdentifier:(id)arg1 imageResolver:(id)arg2 isPlaceholder:(_Bool)arg3;
 

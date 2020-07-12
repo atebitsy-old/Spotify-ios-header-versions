@@ -9,29 +9,27 @@
 #import "SPTFeatureSettingsUIProvider-Protocol.h"
 
 @class NSString, SPTPremiumDestinationHubManager;
-@protocol SPTFeatureSettingsItemFactory, SPTLinkDispatcher, SPTNavigationListProvider, SPTPremiumDestinationExperiments;
+@protocol SPTFeatureSettingsItemFactory, SPTLinkDispatcher, SPTPremiumDestinationExperiments;
 
 @interface SPTPremiumDestinationSettingsPageBuilder : NSObject <SPTFeatureSettingsUIProvider>
 {
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
-    id <SPTNavigationListProvider> _navigationListProvider;
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTPremiumDestinationHubManager *_hubManager;
     id <SPTPremiumDestinationExperiments> _experiments;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 @property(readonly, nonatomic) SPTPremiumDestinationHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(readonly, nonatomic) id <SPTNavigationListProvider> navigationListProvider; // @synthesize navigationListProvider=_navigationListProvider;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
-- (void).cxx_destruct;
 - (id)featureSettingsPresentation:(id)arg1 cellForRow:(unsigned long long)arg2;
-- (id)showUpsell:(long long)arg1 availableProduct:(long long)arg2 upgradeAvailableButCantPurchase:(_Bool)arg3;
+- (id)showUpsell:(long long)arg1;
 - (id)itemForLegacyPremiumDestination;
 - (id)itemForPremiumDestination;
 - (void)itemizeSettingsPage:(id)arg1;
-- (id)initWithNavigationListProvider:(id)arg1 featureSettingsItemFactory:(id)arg2 linkDispatcher:(id)arg3 hubManager:(id)arg4 experiments:(id)arg5;
+- (id)initWithFeatureSettingsItemFactory:(id)arg1 linkDispatcher:(id)arg2 hubManager:(id)arg3 experiments:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

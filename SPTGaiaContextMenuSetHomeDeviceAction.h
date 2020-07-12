@@ -22,12 +22,12 @@
 
 + (id)featureIdentifier;
 + (id)featureTitle;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *iconImageUnSet; // @synthesize iconImageUnSet=_iconImageUnSet;
 @property(retain, nonatomic) UIImage *iconImageSet; // @synthesize iconImageSet=_iconImageSet;
 @property(retain, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
 @property(retain, nonatomic) SPTGaiaConnectDevice *connectDevice; // @synthesize connectDevice=_connectDevice;
 @property(nonatomic) __weak id <SPTGaiaContextMenuActionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)deviceIsHomeDevice;
 @property(readonly, nonatomic) _Bool supportsAutomaticFiltering;
 - (id)iconColor;

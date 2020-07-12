@@ -20,6 +20,7 @@
     SPTNRFItemLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNRFItemLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTNRFContextMenuController *contextMenuController; // @synthesize contextMenuController=_contextMenuController;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -27,7 +28,6 @@
 @property(readonly, copy, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, nonatomic) NSString *eventText; // @synthesize eventText=_eventText;
 @property(readonly, nonatomic) SPTNRFItemCreator *creator; // @synthesize creator=_creator;
-- (void).cxx_destruct;
 - (void)contextMenuButtonTapped:(id)arg1;
 - (void)didSelectCell;
 - (id)tableCell;

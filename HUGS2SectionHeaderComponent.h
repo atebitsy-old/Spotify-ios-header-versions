@@ -16,8 +16,8 @@
     id <HUBComponentModel> _componentModel;
 }
 
-@property(retain, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;

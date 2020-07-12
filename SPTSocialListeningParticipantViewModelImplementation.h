@@ -16,9 +16,9 @@
     SPTSocialListeningParticipantModel *_participantModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSocialListeningParticipantModel *participantModel; // @synthesize participantModel=_participantModel;
 @property(readonly, nonatomic, getter=isListenTogetherEnabled) _Bool listenTogetherEnabled; // @synthesize listenTogetherEnabled=_listenTogetherEnabled;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, copy, nonatomic) NSString *displayName;
 @property(readonly, copy, nonatomic) NSString *username;

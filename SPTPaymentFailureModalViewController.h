@@ -22,6 +22,7 @@
     NSLayoutConstraint *_containerTopMargin;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *containerTopMargin; // @synthesize containerTopMargin=_containerTopMargin;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTActionButton *actionButton; // @synthesize actionButton=_actionButton;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) id <SPTPaymentFailureModalViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)animateOut:(CDUnknownBlockType)arg1;
 - (void)animateIn;
 - (void)setupConstraints;

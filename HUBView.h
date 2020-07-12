@@ -27,6 +27,7 @@
     HUBCollectionViewLayout *_collectionViewLayout;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBCollectionViewLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
 @property(readonly, nonatomic) NSHashTable *contentOffsetObservers; // @synthesize contentOffsetObservers=_contentOffsetObservers;
 @property(readonly, nonatomic) NSHashTable *visibleContentOffsetObservingComponentViews; // @synthesize visibleContentOffsetObservingComponentViews=_visibleContentOffsetObservingComponentViews;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <HUBViewComponentDelegate> componentDelegate; // @synthesize componentDelegate=_componentDelegate;
 @property(readonly, nonatomic) UICollectionView *contentView; // @synthesize contentView=_contentView;
 @property(nonatomic) _Bool useDiffingOnComponentModelChanges; // @synthesize useDiffingOnComponentModelChanges=_useDiffingOnComponentModelChanges;
-- (void).cxx_destruct;
 - (void)componentViewManager:(id)arg1 componentViewDidDisappear:(id)arg2;
 - (void)componentViewManager:(id)arg1 componentViewWillAppear:(id)arg2;
 - (struct CGRect)contentRectForScrollView:(id)arg1;
@@ -48,6 +48,8 @@
 @property(nonatomic) _Bool adjustsTargetContentOffset;
 - (void)setContentOffset:(struct CGPoint)arg1 animated:(_Bool)arg2;
 - (void)componentViewsDidDisappear;
+- (void)componentViewsWillDisappear;
+- (void)componentViewsDidAppear;
 - (void)componentViewsWillAppear;
 - (void)removeContentOffsetObserver:(id)arg1;
 - (void)addContentOffsetObserver:(id)arg1;

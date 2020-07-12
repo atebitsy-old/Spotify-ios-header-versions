@@ -17,10 +17,10 @@
 }
 
 + (id)button;
+- (void).cxx_destruct;
 - (id)iconColor;
 - (void)setIconSize:(struct CGSize)arg1;
 - (struct CGSize)iconSize;
-- (void).cxx_destruct;
 - (id)accessibilityValue;
 - (id)accessibilityIdentifier;
 - (id)accessibilityHint;

@@ -23,6 +23,7 @@
     SPTAbbaLogger *_abbaLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAbbaLogger *abbaLogger; // @synthesize abbaLogger=_abbaLogger;
 @property(nonatomic) double cacheLifetimeInterval; // @synthesize cacheLifetimeInterval=_cacheLifetimeInterval;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) NSDate *lastSuccessfulResponseTimestamp; // @synthesize lastSuccessfulResponseTimestamp=_lastSuccessfulResponseTimestamp;
 @property(nonatomic) double requestLaunchTimestamp; // @synthesize requestLaunchTimestamp=_requestLaunchTimestamp;
 @property(nonatomic) __weak id <SPTAbbaDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

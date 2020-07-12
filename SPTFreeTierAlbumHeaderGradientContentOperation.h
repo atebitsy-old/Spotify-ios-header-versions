@@ -20,11 +20,11 @@
     UIColor *_backgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(retain, nonatomic) NSURL *mainImageURL; // @synthesize mainImageURL=_mainImageURL;
 @property(retain, nonatomic) id <HUBImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)extractColorFromImage:(id)arg1;
 - (void)imageLoader:(id)arg1 didFailLoadingImageForURL:(id)arg2 error:(id)arg3;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3;

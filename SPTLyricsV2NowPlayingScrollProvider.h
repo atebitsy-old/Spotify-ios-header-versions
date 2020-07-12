@@ -19,12 +19,12 @@
     SPTVocalRemovalConfiguration *_vocalRemovalConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTVocalRemovalConfiguration *vocalRemovalConfiguration; // @synthesize vocalRemovalConfiguration=_vocalRemovalConfiguration;
 @property(retain, nonatomic) SPTLyricsV2NowPlayingCardViewController *nowPlayingCardViewController; // @synthesize nowPlayingCardViewController=_nowPlayingCardViewController;
 @property(readonly, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)createCardViewController;
 - (id)componentViewForTrack:(id)arg1;
 - (void)loadContentForTrack:(id)arg1;

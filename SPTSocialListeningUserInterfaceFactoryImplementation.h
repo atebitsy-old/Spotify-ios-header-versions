@@ -27,6 +27,7 @@
     SPTSocialListeningListenTogetherStateManagerImplementation *_listenTogetherStateManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSocialListeningListenTogetherStateManagerImplementation *listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) SPTSocialListeningLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTSocialListeningModelImplementation *model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)createSocialListeningSessionView;
 - (id)initWithTheme:(id)arg1 scannablesPresenter:(id)arg2 containerUIService:(id)arg3 offlineModeState:(id)arg4 shareFeature:(id)arg5 model:(id)arg6 logger:(id)arg7 dialogPresenter:(id)arg8 imageLoader:(id)arg9 linkDispatcher:(id)arg10 testManager:(id)arg11;
 

@@ -17,10 +17,10 @@
     long long _icon;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSArray *actions; // @synthesize actions=_actions;
-- (void).cxx_destruct;
 - (void)removeActionAtIndex:(unsigned long long)arg1;
 - (void)insertAction:(id)arg1 atIndex:(unsigned long long)arg2;
 - (id)actionAtIndex:(unsigned long long)arg1;

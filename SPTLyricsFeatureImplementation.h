@@ -22,13 +22,13 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLyricsV2Service *lyricsV2Service; // @synthesize lyricsV2Service=_lyricsV2Service;
 @property(retain, nonatomic) id <SPTLyricsV2TestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTLyricsTrackChecker> trackChecker; // @synthesize trackChecker=_trackChecker;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
-- (void).cxx_destruct;
 - (id)provideLyricsV2Service;
 - (id)provideTestManager;
 - (id)provideLyricsTrackChecker;

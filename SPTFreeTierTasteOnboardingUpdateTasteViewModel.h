@@ -24,6 +24,7 @@
     unsigned long long _minCompleteTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long minCompleteTime; // @synthesize minCompleteTime=_minCompleteTime;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSArray *selectedArtistURIs; // @synthesize selectedArtistURIs=_selectedArtistURIs;
 @property(nonatomic, getter=isRepeatVisit) _Bool repeatVisit; // @synthesize repeatVisit=_repeatVisit;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingUpdateTasteViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)tasteOnboardingDidFinishCurating:(id)arg1;
 - (void)completeUpdateTasteAt:(unsigned long long)arg1;
 - (void)startUpdate;

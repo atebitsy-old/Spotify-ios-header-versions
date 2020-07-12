@@ -17,10 +17,10 @@
     NSString *_eventOriginID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *eventOriginID; // @synthesize eventOriginID=_eventOriginID;
 @property(readonly, nonatomic) NSString *clientID; // @synthesize clientID=_clientID;
 @property(readonly, nonatomic) NSString *accessorySessionID; // @synthesize accessorySessionID=_accessorySessionID;
-- (void).cxx_destruct;
 - (id)initWithAccessorySessionID:(id)arg1 clientID:(id)arg2 eventOriginID:(id)arg3;
 
 // Remaining properties

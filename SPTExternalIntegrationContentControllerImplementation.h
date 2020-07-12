@@ -23,6 +23,7 @@
     id <SPTExplicitContentAccessManager> _explicitContentManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentManager; // @synthesize explicitContentManager=_explicitContentManager;
 @property(readonly, nonatomic) SPTExternalIntegrationPlatformLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSMutableDictionary *activeChildContentRequests; // @synthesize activeChildContentRequests=_activeChildContentRequests;
 @property(retain, nonatomic) NSMutableDictionary *activeContentRequests; // @synthesize activeContentRequests=_activeContentRequests;
 @property(retain, nonatomic) NSSet *contentProviderRegistry; // @synthesize contentProviderRegistry=_contentProviderRegistry;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (id)contentProviderForChildContentWithParentURI:(id)arg1;

@@ -20,12 +20,12 @@
     id <SPTPodcastOffliningPlaylistManager> _playlistManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastOffliningPlaylistManager> playlistManager; // @synthesize playlistManager=_playlistManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
-- (void).cxx_destruct;
 - (void)showDeleteDownloadsAlertWithBlock:(CDUnknownBlockType)arg1;
 - (void)showDownloadsOnCellularAlert;
 - (void)removeOfflineWithConfirmationForEpisodeWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;

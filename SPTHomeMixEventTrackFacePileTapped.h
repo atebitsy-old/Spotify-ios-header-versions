@@ -14,9 +14,9 @@
     long long _trackIndex;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long trackIndex; // @synthesize trackIndex=_trackIndex;
 @property(readonly, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
-- (void).cxx_destruct;
 - (id)initWithTrackURI:(id)arg1 trackIndex:(long long)arg2;
 
 @end

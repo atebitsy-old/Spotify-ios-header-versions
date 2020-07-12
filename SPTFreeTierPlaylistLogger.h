@@ -28,6 +28,7 @@
     NSMutableSet *_impressionPaths;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *impressionPaths; // @synthesize impressionPaths=_impressionPaths;
 @property(copy, nonatomic) NSString *requestId; // @synthesize requestId=_requestId;
 @property(readonly, copy, nonatomic) NSString *requestSource; // @synthesize requestSource=_requestSource;
@@ -39,14 +40,13 @@
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) NSString *playlistViewPageIdentifier; // @synthesize playlistViewPageIdentifier=_playlistViewPageIdentifier;
 @property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
-- (void).cxx_destruct;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5 action:(id)arg6;
 - (void)logUIInteractionWithSectionId:(id)arg1 targetURI:(id)arg2 userIntent:(id)arg3;
 - (void)ubiLogImpressionOnce:(id)arg1;
-- (void)logDeeplinkingWithTrackURL:(id)arg1;
+- (id)logDeeplinkingWithTrackURL:(id)arg1;
 - (void)logTextFilterCancelButtonInteraction;
 - (void)logTextFilterClearButtonInteraction;
 - (void)logTextFilterKeyStrokeInteraction;
@@ -59,7 +59,7 @@
 - (void)logScrollPerformanceWithDuration:(double)arg1 smallFrameDropCount:(double)arg2 largeFrameDropCount:(double)arg3;
 - (void)logHeaderViewSlideToPage:(long long)arg1;
 - (void)logHeaderCoverArtClickedToShowFullscreen;
-- (void)logHeaderPressedPlaylistOwner:(id)arg1;
+- (id)logHeaderPressedPlaylistOwner:(id)arg1;
 - (void)logPressedCancelInEditView;
 - (void)logPressedDoneInEditView;
 - (void)logUpdateDescription;
@@ -68,20 +68,20 @@
 - (void)logMovedTrackInEditView;
 - (void)logOfflineChanged:(_Bool)arg1;
 - (void)logEpisodeOfflineAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 offline:(_Bool)arg3;
-- (void)logEpisodePlayAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 play:(_Bool)arg3;
+- (id)logEpisodePlayAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 play:(_Bool)arg3;
 - (void)logSwipeItemToAddToQueueAtIndex:(unsigned long long)arg1 itemURL:(id)arg2;
 - (void)logSwipeItemToRemoveLikeAtIndex:(unsigned long long)arg1 itemURL:(id)arg2;
 - (void)logSwipeItemToLikeAtIndex:(unsigned long long)arg1 itemURL:(id)arg2;
 - (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 liked:(_Bool)arg3;
 - (void)logTrackBanActionSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 banned:(_Bool)arg3;
 - (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
-- (void)logTrackSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
-- (void)logTrackCloudSelected:(_Bool)arg1;
+- (id)logTrackSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
+- (id)logTrackCloudSelected:(_Bool)arg1;
 - (void)logBrowseButtonClicked;
 - (void)logAddSongsInteraction;
 - (void)logShuffleBadgeSelected;
-- (void)logPlayButtonPauseClicked;
-- (void)logPlayButtonPlayClicked;
+- (id)logPlayButtonPauseClicked;
+- (id)logPlayButtonPlayClicked;
 - (void)logHeaderContextMenuButton;
 - (void)logHeaderFollowButtonClicked:(_Bool)arg1;
 - (void)logNavBarHeartButtonClicked:(_Bool)arg1;

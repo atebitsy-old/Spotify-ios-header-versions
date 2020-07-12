@@ -17,10 +17,10 @@
     NSDictionary *_headers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(readonly, copy, nonatomic) NSData *body; // @synthesize body=_body;
 @property(readonly, nonatomic) long long responseCode; // @synthesize responseCode=_responseCode;
-- (void).cxx_destruct;
 - (id)initWithDataLoaderResponse:(id)arg1;
 
 // Remaining properties

@@ -16,11 +16,11 @@
     CDUnknownBlockType _completionHandler;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isCompleted) _Bool completed; // @synthesize completed=_completed;
 @property(readonly, copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(readonly, nonatomic) __weak id <SPTSlate> slate; // @synthesize slate=_slate;
 @property(readonly, nonatomic) __weak id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
-- (void).cxx_destruct;
 - (void)completeWithResponse:(unsigned long long)arg1;
 - (void)dismiss:(_Bool)arg1;
 - (id)initWithSlateManager:(id)arg1 slate:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;

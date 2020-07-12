@@ -21,12 +21,12 @@
     NSString *_username;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(readonly, nonatomic) id <SPTHubComponentModelURIResolver> componentModelURIResolver; // @synthesize componentModelURIResolver=_componentModelURIResolver;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (long long)glueOfflineSyncStatusForURL:(id)arg1;
 - (long long)offlineSyncStatusForURL:(id)arg1;
 - (void)recursivelyUpdateOfflineStateForComponentModelBuilder:(id)arg1;

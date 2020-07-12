@@ -27,6 +27,7 @@
 }
 
 + (id)messageWithPlaybackId:(id)arg1 canvasId:(id)arg2 entityUri:(id)arg3 timestamp:(double)arg4 trackTime:(double)arg5 trackTotalTime:(double)arg6 visualState:(id)arg7 audioState:(id)arg8 appFocusState:(id)arg9 controlsState:(id)arg10 loadState:(id)arg11 pageSource:(id)arg12 isRemote:(_Bool)arg13 dataSave:(_Bool)arg14;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool dataSaveValue; // @synthesize dataSaveValue=_dataSaveValue;
 @property(nonatomic) _Bool isRemoteValue; // @synthesize isRemoteValue=_isRemoteValue;
 @property(copy, nonatomic) NSString *pageSourceValue; // @synthesize pageSourceValue=_pageSourceValue;
@@ -41,7 +42,6 @@
 @property(copy, nonatomic) NSString *entityUriValue; // @synthesize entityUriValue=_entityUriValue;
 @property(copy, nonatomic) NSString *canvasIdValue; // @synthesize canvasIdValue=_canvasIdValue;
 @property(copy, nonatomic) NSData *playbackIdValue; // @synthesize playbackIdValue=_playbackIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

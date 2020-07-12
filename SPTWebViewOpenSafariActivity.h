@@ -15,9 +15,9 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (void)activityDidFinish:(_Bool)arg1;
 - (void)performActivity;
 - (void)prepareWithActivityItems:(id)arg1;

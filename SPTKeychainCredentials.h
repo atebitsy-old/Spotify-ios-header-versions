@@ -15,8 +15,8 @@
     SPTAuthSerializableCredentials *_credentials;
 }
 
-@property(retain, nonatomic) SPTAuthSerializableCredentials *credentials; // @synthesize credentials=_credentials;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTAuthSerializableCredentials *credentials; // @synthesize credentials=_credentials;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)createLoginCredentials;

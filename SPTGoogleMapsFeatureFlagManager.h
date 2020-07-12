@@ -19,11 +19,11 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> googleMapsFeatureFlagSignal; // @synthesize googleMapsFeatureFlagSignal=_googleMapsFeatureFlagSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic, getter=isGoogleMapsFeatureEnabled) _Bool googleMapsFeatureEnabled; // @synthesize googleMapsFeatureEnabled=_googleMapsFeatureEnabled;
-- (void).cxx_destruct;
 - (id)featureFlagSignalWithABBAKey:(id)arg1 settingsItemTitle:(id)arg2 settingsItemDescription:(id)arg3;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)removeFeatureFlagObserver:(id)arg1;

@@ -18,13 +18,13 @@
     struct UIEdgeInsets _insets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *trailingConstraint; // @synthesize trailingConstraint=_trailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leadingConstraint; // @synthesize leadingConstraint=_leadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(retain, nonatomic) UIView *arrangedView; // @synthesize arrangedView=_arrangedView;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
-- (void).cxx_destruct;
 - (void)updateConstraintConstants;
 
 @end

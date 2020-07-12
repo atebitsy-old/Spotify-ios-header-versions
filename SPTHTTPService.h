@@ -25,6 +25,7 @@
     id _productStateStreamingRulesValue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id productStateStreamingRulesValue; // @synthesize productStateStreamingRulesValue=_productStateStreamingRulesValue;
 @property(retain, nonatomic) SPTDataLoaderOauthAuthoriser *oauthAuthoriser; // @synthesize oauthAuthoriser=_oauthAuthoriser;
 @property(retain, nonatomic) SPTDataLoaderFactoryManager *dataLoaderFactoryManager; // @synthesize dataLoaderFactoryManager=_dataLoaderFactoryManager;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkController; // @synthesize networkController=_networkController;
 @property(retain, nonatomic) SPTDataLoaderService *dataLoaderService; // @synthesize dataLoaderService=_dataLoaderService;
-- (void).cxx_destruct;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (id)provideAuthoriser;
 - (id)provideDataLoaderFactory;

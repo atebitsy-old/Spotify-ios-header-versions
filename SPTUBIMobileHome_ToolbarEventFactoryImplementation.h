@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithComponents:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)seedASessionButtonFactoryWithIdentifier:(id)arg1;
 - (id)feedIconFactoryWithUri:(id)arg1 reason:(id)arg2;
 - (id)settingsIconFactoryWithReason:(id)arg1;

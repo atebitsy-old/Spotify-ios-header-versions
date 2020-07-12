@@ -22,6 +22,7 @@
     NSArray *_storedRightBarButtonItems;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *storedRightBarButtonItems; // @synthesize storedRightBarButtonItems=_storedRightBarButtonItems;
 @property(copy, nonatomic) NSArray *storedLeftBarButtonItems; // @synthesize storedLeftBarButtonItems=_storedLeftBarButtonItems;
 @property(nonatomic) _Bool shouldAnimateNavigationBarAlpha; // @synthesize shouldAnimateNavigationBarAlpha=_shouldAnimateNavigationBarAlpha;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
 @property(retain, nonatomic) VISREFTouchForwardingView *touchForwardingView; // @synthesize touchForwardingView=_touchForwardingView;
-- (void).cxx_destruct;
 - (id)touchFowardingView:(id)arg1 didReceiveHitTest:(struct CGPoint)arg2 withEvent:(id)arg3;
 - (void)interactivePopGestureRecognizerChanged:(id)arg1;
 - (void)addTouchForwardingView;

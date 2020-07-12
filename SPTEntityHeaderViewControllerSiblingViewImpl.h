@@ -24,6 +24,7 @@
     struct UIEdgeInsets _bounceOffsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *bottomLineLayer; // @synthesize bottomLineLayer=_bottomLineLayer;
 @property(nonatomic) double entityHeaderScrollIndicatorInsetAdjustmentMetric; // @synthesize entityHeaderScrollIndicatorInsetAdjustmentMetric=_entityHeaderScrollIndicatorInsetAdjustmentMetric;
 @property(nonatomic) double entityHeaderBottomGradientHeight; // @synthesize entityHeaderBottomGradientHeight=_entityHeaderBottomGradientHeight;
@@ -35,7 +36,6 @@
 @property(nonatomic) struct UIEdgeInsets bounceOffsets; // @synthesize bounceOffsets=_bounceOffsets;
 @property(nonatomic) struct CGRect visibleRect; // @synthesize visibleRect=_visibleRect;
 @property(nonatomic, getter=isAtMinimumHeight) _Bool atMinimumHeight; // @synthesize atMinimumHeight=_atMinimumHeight;
-- (void).cxx_destruct;
 - (id)supplementaryView;
 - (struct CGRect)bottomLineLayerFrame;
 - (struct CGRect)dropShadowFrame;

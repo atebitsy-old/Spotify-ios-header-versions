@@ -22,13 +22,13 @@
     HUBViewModelBuilderImplementation *_initialViewModelBuilderImplementation;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBViewModelBuilderImplementation *initialViewModelBuilderImplementation; // @synthesize initialViewModelBuilderImplementation=_initialViewModelBuilderImplementation;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
 @property(readonly, nonatomic) NSMutableDictionary *customData; // @synthesize customData=_customData;
 @property(readonly, nonatomic) NSMutableOrderedSet *actionIdentifiers; // @synthesize actionIdentifiers=_actionIdentifiers;
 @property(copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (id)getOrCreateInitialViewModelBuilder;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)addJSONDictionary:(id)arg1;

@@ -16,9 +16,9 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *dictionary; // @synthesize dictionary=_dictionary;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)removeAllObjects;

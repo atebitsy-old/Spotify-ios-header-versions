@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) SPTAccessoryEndStreamTracker *endStreamTracker; // @synthesize endStreamTracker=_endStreamTracker;
 @property(retain, nonatomic) SPTAccessoryManagerLogging *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTAccessoryStateManagerImplementation *stateManager; // @synthesize stateManager=_stateManager;
-- (void).cxx_destruct;
 - (id)provideAccessoryStateManager;
 - (void)unloadAccessoryManagerSessionService:(id)arg1;
 - (void)loadAccessoryManagerSessionService:(id)arg1 player:(id)arg2;

@@ -25,6 +25,7 @@
     struct CGSize _requestedSize;
 }
 
+- (void).cxx_destruct;
 @property(retain) AVAsset *asset; // @synthesize asset=_asset;
 @property _Bool cancelled; // @synthesize cancelled=_cancelled;
 @property(nonatomic) _Bool allowUpscaling; // @synthesize allowUpscaling=_allowUpscaling;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTImageLoaderRequestDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSString *persistenceKey; // @synthesize persistenceKey;
-- (void).cxx_destruct;
 - (void)dispatchError:(id)arg1;
 - (void)dispatchSuccess:(id)arg1;
 - (id)optimalImageForResizingTo:(struct CGSize)arg1 fromImages:(id)arg2;

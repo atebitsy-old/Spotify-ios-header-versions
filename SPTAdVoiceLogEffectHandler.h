@@ -16,11 +16,11 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
-- (void).cxx_destruct;
 - (void)logVoiceAdLogEvent:(id)arg1 position:(double)arg2;
 - (id)getActiveConnectedDevice;
 - (void)handlePostAdVoiceLog:(id)arg1 eventSink:(CDUnknownBlockType)arg2;

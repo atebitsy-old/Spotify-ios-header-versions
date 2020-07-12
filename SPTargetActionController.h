@@ -13,8 +13,8 @@
     NSMutableDictionary *_targets;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *targets; // @synthesize targets=_targets;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *targets; // @synthesize targets=_targets;
 - (void)sendActionWithObject:(id)arg1 withObject:(id)arg2;
 - (void)sendActionWithObject:(id)arg1;
 - (void)sendAction;

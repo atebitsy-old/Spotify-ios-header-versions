@@ -16,11 +16,11 @@
     id <SPTFreeTierPlaylistCellProviderDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)reloadCellsForCellProvider:(id)arg1;
 - (void)contextMenuPressedForCellProvider:(id)arg1 sender:(id)arg2;
-- (void)cellProvider:(id)arg1 playTrackAtIndexPath:(id)arg2;
+- (void)cellProvider:(id)arg1 playTrackAtIndexPath:(id)arg2 interactionId:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -16,9 +16,9 @@
     NSString *_minPrice;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *minPrice; // @synthesize minPrice=_minPrice;
 @property(readonly, copy, nonatomic) NSString *maxPrice; // @synthesize maxPrice=_maxPrice;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)copyWithZone:(struct _NSZone *)arg1;

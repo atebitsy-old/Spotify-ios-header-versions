@@ -17,11 +17,11 @@
     SPTVideoSubtitleConfigurator *_subtitleConfigurator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoSubtitleConfigurator *subtitleConfigurator; // @synthesize subtitleConfigurator=_subtitleConfigurator;
 @property(retain, nonatomic) SPTVideoSubtitlesMenuActionFactory *subtitlesMenuActionFactory; // @synthesize subtitlesMenuActionFactory=_subtitlesMenuActionFactory;
 @property(retain, nonatomic) SPTVideoSubtitleProvider *subtitleProvider; // @synthesize subtitleProvider=_subtitleProvider;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (_Bool)isEnabled;
 - (long long)icon;

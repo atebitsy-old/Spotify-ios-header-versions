@@ -18,13 +18,13 @@
     long long _instruction;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long instruction; // @synthesize instruction=_instruction;
 @property(readonly, nonatomic) NSNumber *exitNumber; // @synthesize exitNumber=_exitNumber;
 @property(readonly, nonatomic, getter=isDrivingOnLeft) _Bool drivingOnLeft; // @synthesize drivingOnLeft=_drivingOnLeft;
 @property(retain, nonatomic) NSString *distanceDisplay; // @synthesize distanceDisplay=_distanceDisplay;
 @property(readonly, nonatomic) NSNumber *distance; // @synthesize distance=_distance;
 @property(readonly, nonatomic) NSNumber *eta; // @synthesize eta=_eta;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

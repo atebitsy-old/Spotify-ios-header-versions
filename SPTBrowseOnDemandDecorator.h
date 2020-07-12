@@ -13,8 +13,8 @@
     id <SPTOnDemandSet> _onDemandSet;
 }
 
-@property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 - (void)applyOnDemandDecorationToViewModelBuilder:(id)arg1;
 - (void)decorateComponentModelBuilders:(id)arg1;
 - (id)initWithOnDemandSet:(id)arg1;

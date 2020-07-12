@@ -20,12 +20,12 @@
     id <SPTPodcastLogger> _podcastLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (id)provideInfoViewWithError:(id)arg1 target:(id)arg2;
 - (id)provideInfoViewForURI:(id)arg1 mediaType:(unsigned long long)arg2;
 - (id)provideInfoViewForURI:(id)arg1;

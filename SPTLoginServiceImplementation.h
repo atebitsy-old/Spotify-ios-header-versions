@@ -52,6 +52,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginDbManager *stickyCredentialsDbManager; // @synthesize stickyCredentialsDbManager=_stickyCredentialsDbManager;
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) SPTSignupAttemptTrackerImplementation *signupAttemptTracker; // @synthesize signupAttemptTracker=_signupAttemptTracker;
@@ -85,7 +86,6 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)buttonActionHandlerForScreenWithIdentifier:(id)arg1;
 - (void)refreshStickyCredentialsDatabaseManager;
 - (id)provideStickyCredentialsDbManager;

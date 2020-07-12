@@ -19,6 +19,7 @@
 + (id)skipForwardButton;
 + (id)skipBackButton;
 + (id)button;
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isForward) _Bool forward; // @synthesize forward=_forward;
 - (void)setIconColor:(id)arg1;
 - (id)iconColor;
@@ -26,7 +27,6 @@
 - (struct CGSize)iconSize;
 - (void)setIcon:(long long)arg1;
 - (long long)icon;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (id)initWithFrame:(struct CGRect)arg1 forward:(_Bool)arg2;
 

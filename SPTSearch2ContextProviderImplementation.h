@@ -41,6 +41,7 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureID; // @synthesize featureID=_featureID;
@@ -67,7 +68,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) id <SPTSearch2URLProviding> urlProvider; // @synthesize urlProvider=_urlProvider;
-- (void).cxx_destruct;
 - (id)makeProtobufResponseParserWithQuery:(id)arg1 isDrillDown:(_Bool)arg2;
 - (id)makeAssistedCurationHubsResponseParser;
 - (id)makePostProcessContentOperations;

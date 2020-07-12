@@ -24,6 +24,7 @@
     UITapGestureRecognizer *_tapGesture;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) GLUEEntityRowCollectionViewCell *trackCell; // @synthesize trackCell=_trackCell;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
 @property(readonly, nonatomic) SPTAssistedCurationCardStyle *cardStyle; // @synthesize cardStyle=_cardStyle;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)didClickAddButton;
 - (void)onTapGesture:(id)arg1;
 - (void)stopPreview;

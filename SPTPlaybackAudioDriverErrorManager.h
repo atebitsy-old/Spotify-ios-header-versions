@@ -20,10 +20,10 @@
 }
 
 + (id)playbackAudioDriverErrorManagerWithAudioDriverController:(id)arg1 bannerPresentationManager:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(nonatomic) __weak id <SPTAudioDriverController> audioDriverController; // @synthesize audioDriverController=_audioDriverController;
-- (void).cxx_destruct;
 - (void)audioDriverDidStartRunning:(id)arg1;
 - (void)audioDriver:(id)arg1 didFailWithError:(id)arg2;
 - (id)errorCodesForError:(id)arg1;

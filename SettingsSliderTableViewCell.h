@@ -15,10 +15,10 @@
     UILabel *_rightLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *rightLabel; // @synthesize rightLabel=_rightLabel;
 @property(readonly, nonatomic) UILabel *leftLabel; // @synthesize leftLabel=_leftLabel;
 @property(readonly, nonatomic) SPTSliderWithLabel *slider; // @synthesize slider=_slider;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)setupConstraints;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2 animationView:(id)arg3;

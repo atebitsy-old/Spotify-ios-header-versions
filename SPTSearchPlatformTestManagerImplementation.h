@@ -25,6 +25,7 @@
     unsigned long long _podcastRowsType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long podcastRowsType; // @synthesize podcastRowsType=_podcastRowsType;
 @property(nonatomic, getter=isPodcastResultCardsDurationEnabled) _Bool podcastResultCardsDurationEnabled; // @synthesize podcastResultCardsDurationEnabled=_podcastResultCardsDurationEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> podcastResultCardsDurationSignal; // @synthesize podcastResultCardsDurationSignal=_podcastResultCardsDurationSignal;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> searchKitSignal; // @synthesize searchKitSignal=_searchKitSignal;
 @property(readonly, nonatomic) SPTSearchFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isLyricsRowDebuggingEnabled) _Bool lyricsRowDebuggingEnabled;
 @property(readonly, nonatomic, getter=isTopicsEnabled) _Bool topicsEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

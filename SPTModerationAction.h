@@ -19,13 +19,13 @@
     id <SPTOfflineModeState> _offlineModeState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) SPTModerationWebViewURLProviderFactory *urlProviderFactory; // @synthesize urlProviderFactory=_urlProviderFactory;
 @property(readonly, nonatomic) SPTModerationWebViewControllerFactory *webviewFactory; // @synthesize webviewFactory=_webviewFactory;
 @property(readonly, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
-- (void).cxx_destruct;
 - (_Bool)isEnabled;
 - (id)execute:(id)arg1;
 - (id)logEventName;

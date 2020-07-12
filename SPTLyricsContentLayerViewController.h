@@ -19,12 +19,12 @@
     SPTPlayerTrack *_track;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(readonly, nonatomic) SPTNowPlayingCoverArtImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) SPTLyricsContentLayerContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLyricsV2LyricsViewController *lyricsViewController; // @synthesize lyricsViewController=_lyricsViewController;
-- (void).cxx_destruct;
 - (void)lyricsService:(id)arg1 didFailWithError:(id)arg2 forTrack:(id)arg3;
 - (void)lyricsService:(id)arg1 didFetch:(id)arg2 forTrack:(id)arg3;
 - (void)animateWithAnimations:(CDUnknownBlockType)arg1;

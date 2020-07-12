@@ -16,9 +16,9 @@
     CDUnknownBlockType _completionBlock;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(readonly, nonatomic) NSUUID *uuid; // @synthesize uuid=_uuid;
-- (void).cxx_destruct;
 - (void)cancelTask;
 - (id)initWithCompletionBlock:(CDUnknownBlockType)arg1;
 

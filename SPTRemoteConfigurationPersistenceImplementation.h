@@ -15,8 +15,8 @@
     NSDictionary *_typeDictionary;
 }
 
-@property(retain, nonatomic) NSDictionary *typeDictionary; // @synthesize typeDictionary=_typeDictionary;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSDictionary *typeDictionary; // @synthesize typeDictionary=_typeDictionary;
 - (id)applicationDocumentsDirectory;
 - (id)fileURLWithName:(id)arg1;
 - (void)clearFileWithKey:(id)arg1;

@@ -20,11 +20,11 @@
     id <SPTFeatureFlagSignal> _churnLockEnabledSignal;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> churnLockEnabledSignal; // @synthesize churnLockEnabledSignal=_churnLockEnabledSignal;
 @property(readonly, nonatomic) id <SPTUICompletionNotifier> UICompletionNotifier; // @synthesize UICompletionNotifier=_UICompletionNotifier;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic) __weak id <SPTChurnLockObservationInteractorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)isBlockedForTA;
 - (void)loggedInUIDidBecomeLoaded;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

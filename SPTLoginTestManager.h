@@ -15,9 +15,9 @@
     SPTPsesCommandLineArguments *_psesCommandLineArguments;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPsesCommandLineArguments *psesCommandLineArguments; // @synthesize psesCommandLineArguments=_psesCommandLineArguments;
 @property(readonly, nonatomic) id <SPTPreSignupExperimentationFeatureFlagsLoader> featureFlagsLoader; // @synthesize featureFlagsLoader=_featureFlagsLoader;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isStartScreenImageryEnabled) _Bool startScreenImageryEnabled;
 - (unsigned long long)welcomeViewImageryCell;
 @property(readonly, nonatomic, getter=isPhoneNumberEnabled) _Bool phoneNumberEnabled;

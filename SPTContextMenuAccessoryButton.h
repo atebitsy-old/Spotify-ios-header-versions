@@ -22,12 +22,12 @@
 }
 
 + (id)contextMenuAccessoryButton;
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(retain, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 @property(nonatomic, getter=isDisabled) _Bool disabled; // @synthesize disabled=_disabled;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (struct CGSize)SPTCellAccessoryViewPositionAdjustment;
 - (void)layoutSubviews;

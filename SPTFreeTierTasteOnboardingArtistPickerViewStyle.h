@@ -31,6 +31,7 @@
     UIColor *_navigationBarBackgroundViewColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *navigationBarBackgroundViewColor; // @synthesize navigationBarBackgroundViewColor=_navigationBarBackgroundViewColor;
 @property(copy, nonatomic) SPTFreeTierTasteOnboardingArtistPickerHeaderViewStyle<GLUEStyle> *headerViewStyle; // @synthesize headerViewStyle=_headerViewStyle;
 @property(nonatomic) double actionButtonAppearanceAnimationSpringVelocity; // @synthesize actionButtonAppearanceAnimationSpringVelocity=_actionButtonAppearanceAnimationSpringVelocity;
@@ -47,7 +48,6 @@
 @property(copy, nonatomic) GLUECollectionViewStyle *collectionViewStyle; // @synthesize collectionViewStyle=_collectionViewStyle;
 @property(copy, nonatomic) UIColor *backgroundOverlayColor; // @synthesize backgroundOverlayColor=_backgroundOverlayColor;
 @property(copy, nonatomic) GLUELabelStyle *navigationItemTitleLabelStyle; // @synthesize navigationItemTitleLabelStyle=_navigationItemTitleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

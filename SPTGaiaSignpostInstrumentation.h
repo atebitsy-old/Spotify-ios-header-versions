@@ -19,11 +19,11 @@
     SPTGaiaConnectDevice *_currentDevice;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaConnectDevice *currentDevice; // @synthesize currentDevice=_currentDevice;
 @property(nonatomic) unsigned long long playingRemoteSignpostID; // @synthesize playingRemoteSignpostID=_playingRemoteSignpostID;
 @property(readonly, nonatomic) NSObject<OS_os_log> *instrumentationLog; // @synthesize instrumentationLog=_instrumentationLog;
 @property(readonly, nonatomic) __weak id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
-- (void).cxx_destruct;
 - (void)connectManager:(id)arg1 didReceiveTransferError:(id)arg2;
 - (void)connectManager:(id)arg1 activeDeviceVolumeDidChange:(double)arg2;
 - (void)connectManager:(id)arg1 activeDeviceDidChange:(id)arg2;

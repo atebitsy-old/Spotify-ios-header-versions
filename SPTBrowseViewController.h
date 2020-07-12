@@ -28,6 +28,7 @@
     struct CGRect _lastKnownHubContainerViewFrame;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool embedded; // @synthesize embedded=_embedded;
 @property(readonly, nonatomic) id <SPTBrowseLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(nonatomic) struct CGRect lastKnownHubContainerViewFrame; // @synthesize lastKnownHubContainerViewFrame=_lastKnownHubContainerViewFrame;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) SPTHubViewController *hubsViewController; // @synthesize hubsViewController=_hubsViewController;
 @property(readonly, nonatomic) id <SPTBrowseViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 @property(copy, nonatomic) CDUnknownBlockType onOffsetChange; // @synthesize onOffsetChange=_onOffsetChange;
-- (void).cxx_destruct;
 - (void)performIgnoringOffsetChangeCallbacks:(CDUnknownBlockType)arg1;
 - (unsigned long long)navigationBarStateForViewModel:(id)arg1;
 - (struct CGRect)statusBarFrame;

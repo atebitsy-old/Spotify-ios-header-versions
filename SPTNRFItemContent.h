@@ -17,12 +17,12 @@
     NSDate *_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *ownerName; // @synthesize ownerName=_ownerName;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1 timestamp:(id)arg2;
 
 @end

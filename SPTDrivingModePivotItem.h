@@ -24,6 +24,7 @@
 + (id)pivotItemWithURI:(id)arg1 title:(id)arg2 subtitle:(id)arg3 identifier:(id)arg4;
 + (id)pivotItemWithURI:(id)arg1 title:(id)arg2 subtitle:(id)arg3;
 + (id)pivotItemWithURI:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long subtitleIcon; // @synthesize subtitleIcon=_subtitleIcon;
 @property(readonly, nonatomic) long long placeholderIcon; // @synthesize placeholderIcon=_placeholderIcon;
 @property(readonly, nonatomic) NSURL *imageUrl; // @synthesize imageUrl=_imageUrl;
@@ -31,7 +32,6 @@
 @property(readonly, copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
-- (void).cxx_destruct;
 - (_Bool)isEqualToPivotItem:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;

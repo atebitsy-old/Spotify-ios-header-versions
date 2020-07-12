@@ -23,11 +23,11 @@
 
 + (struct CGSize)imageSizeFromModel:(id)arg1;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewHeightConstraint; // @synthesize imageViewHeightConstraint=_imageViewHeightConstraint;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) SPTPremiumDestinationUIFlexboxChildComponentViewController *childComponentViewController; // @synthesize childComponentViewController=_childComponentViewController;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (_Bool)inverseLayout;
 - (id)childComponentModelsForLayout;
 - (id)childDelegateForLayout;

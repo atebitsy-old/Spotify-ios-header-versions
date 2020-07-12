@@ -27,6 +27,7 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isRecordingAudio; // @synthesize isRecordingAudio=_isRecordingAudio;
 @property(nonatomic) _Bool hasWirelessConnection; // @synthesize hasWirelessConnection=_hasWirelessConnection;
 @property(nonatomic) _Bool systemPopupDisabled; // @synthesize systemPopupDisabled=_systemPopupDisabled;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) NSArray *volumeEventEmitters; // @synthesize volumeEventEmitters=_volumeEventEmitters;
 @property(nonatomic) _Bool shouldSyncRemoteVolume; // @synthesize shouldSyncRemoteVolume=_shouldSyncRemoteVolume;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (void)eventEmitter:(id)arg1 didEmitEvent:(unsigned long long)arg2;
 - (void)removeObserver:(id)arg1;

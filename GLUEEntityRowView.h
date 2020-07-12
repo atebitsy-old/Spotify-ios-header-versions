@@ -32,6 +32,7 @@
     NSLayoutConstraint *_trailingAccessoryViewMaxWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldHideTrailingView; // @synthesize shouldHideTrailingView=_shouldHideTrailingView;
 @property(retain, nonatomic) NSLayoutConstraint *trailingAccessoryViewMaxWidthConstraint; // @synthesize trailingAccessoryViewMaxWidthConstraint=_trailingAccessoryViewMaxWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leadingAccessoryViewMaxWidthConstraint; // @synthesize leadingAccessoryViewMaxWidthConstraint=_leadingAccessoryViewMaxWidthConstraint;
@@ -49,7 +50,6 @@
 @property(retain, nonatomic) UIView *trailingAccessoryView; // @synthesize trailingAccessoryView=_trailingAccessoryView;
 @property(retain, nonatomic) UIView *leadingAccessoryView; // @synthesize leadingAccessoryView=_leadingAccessoryView;
 @property(retain, nonatomic) UIView<GLUEEntityRowContent> *entityContentView; // @synthesize entityContentView=_entityContentView;
-- (void).cxx_destruct;
 - (void)setTrailingViewHidden:(_Bool)arg1;
 - (_Bool)isAccessibilityElement;
 - (void)prepareForReuse;

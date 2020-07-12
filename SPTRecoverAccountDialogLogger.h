@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logInteractionWithIntent:(id)arg1;
 - (void)logSetPasswordButtonInteraction;
 - (void)logCloseButtonInteraction;

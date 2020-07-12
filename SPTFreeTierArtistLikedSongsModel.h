@@ -18,12 +18,12 @@
     NSURL *_artistUri;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *artistUri; // @synthesize artistUri=_artistUri;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> trackToken; // @synthesize trackToken=_trackToken;
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) NSURL *collectionArtistUri; // @synthesize collectionArtistUri=_collectionArtistUri;
 @property(nonatomic) unsigned long long likedTrackCount; // @synthesize likedTrackCount=_likedTrackCount;
-- (void).cxx_destruct;
 - (void)fetchLikedTracks:(CDUnknownBlockType)arg1;
 - (void)dealloc;
 - (id)initWithCollectionPlatform:(id)arg1 artistUri:(id)arg2 username:(id)arg3;

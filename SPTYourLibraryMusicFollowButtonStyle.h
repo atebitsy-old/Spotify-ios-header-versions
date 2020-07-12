@@ -15,10 +15,10 @@
     double _minWidth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double minWidth; // @synthesize minWidth=_minWidth;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
 @property(nonatomic) double height; // @synthesize height=_height;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

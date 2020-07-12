@@ -9,47 +9,40 @@
 #import "GLUEStyleable-Protocol.h"
 #import "SPTHomeUIShortcutsCardViewModelDelegate-Protocol.h"
 
-@class GLUEImageView, NSAttributedString, NSLayoutConstraint, NSString, SPTHomeUIColorExtractionGradientView, SPTHomeUILabel, SPTHomeUIRemoteConfigPropertyResolver, SPTHomeUIShortcutsCardViewModel, UIColor, UIView;
+@class GLUEImageView, GLUELabel, NSLayoutConstraint, NSString, SPTHomeUIColorExtractionGradientView, SPTHomeUIFeatureProperties, SPTHomeUIShortcutsCardViewModel, UIView;
 @protocol GLUEAnimationLoading><GLUEAnimationControlling, GLUETheme;
 
 @interface SPTHomeUIShortcutsCardView : GLUEStatefulView <GLUEStyleable, SPTHomeUIShortcutsCardViewModelDelegate>
 {
     SPTHomeUIShortcutsCardViewModel *_viewModel;
     id <GLUETheme> _theme;
-    SPTHomeUIRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
-    SPTHomeUILabel *_titleLabel;
-    UIColor *_titleFontColor;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     SPTHomeUIColorExtractionGradientView *_gradientView;
+    GLUELabel *_titleLabel;
     GLUEImageView *_imageView;
     UIView *_accessoryView;
     GLUEImageView *_accessoryImageView;
-    struct UIView *_playbackIndicatorAnimationView;
-    NSLayoutConstraint *_titleLabelBottomEdgeConstraint;
+    UIView<GLUEAnimationLoading><GLUEAnimationControlling> *_playbackIndicatorAnimationView;
     NSLayoutConstraint *_titleLabelLongTrailingEdgeConstraint;
     NSLayoutConstraint *_titleLabelShortTrailingEdgeConstraint;
     NSLayoutConstraint *_accessoryViewWidthConstraint;
 }
 
-+ (struct CGSize)sizeForAttributedTitle:(id)arg1 maxWidth:(double)arg2 style:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *accessoryViewWidthConstraint; // @synthesize accessoryViewWidthConstraint=_accessoryViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelShortTrailingEdgeConstraint; // @synthesize titleLabelShortTrailingEdgeConstraint=_titleLabelShortTrailingEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelLongTrailingEdgeConstraint; // @synthesize titleLabelLongTrailingEdgeConstraint=_titleLabelLongTrailingEdgeConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *titleLabelBottomEdgeConstraint; // @synthesize titleLabelBottomEdgeConstraint=_titleLabelBottomEdgeConstraint;
 @property(retain, nonatomic) UIView<GLUEAnimationLoading><GLUEAnimationControlling> *playbackIndicatorAnimationView; // @synthesize playbackIndicatorAnimationView=_playbackIndicatorAnimationView;
 @property(retain, nonatomic) GLUEImageView *accessoryImageView; // @synthesize accessoryImageView=_accessoryImageView;
 @property(readonly, nonatomic) UIView *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
+@property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) SPTHomeUIColorExtractionGradientView *gradientView; // @synthesize gradientView=_gradientView;
-@property(readonly, nonatomic) UIColor *titleFontColor; // @synthesize titleFontColor=_titleFontColor;
-@property(readonly, nonatomic) SPTHomeUILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(readonly, nonatomic) SPTHomeUIRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTHomeUIShortcutsCardViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)addConstraints;
 - (void)updateAccessibilityWithModel:(id)arg1;
-- (id)paragraphStyleWithAlignment:(long long)arg1;
-- (id)attributedTitleForModel:(id)arg1 theme:(id)arg2;
 - (void)animateToHighlighted:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)applyStateStyle:(id)arg1;
@@ -58,7 +51,6 @@
 - (void)updateGradientViewWithImage:(id)arg1;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)setAccessoryViewImage:(id)arg1;
-@property(copy, nonatomic) NSAttributedString *attributedTitle;
 - (void)prepareForReuse;
 - (void)hidePlaybackIndicator;
 - (void)showPlaybackIndicator;
@@ -70,7 +62,7 @@
 - (void)createImageView;
 - (void)createTitleLabel;
 - (void)createGradientView;
-- (id)initWithTheme:(id)arg1 remoteConfigPropertyResolver:(id)arg2 frame:(struct CGRect)arg3;
+- (id)initWithTheme:(id)arg1 remoteConfigProperties:(id)arg2 frame:(struct CGRect)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

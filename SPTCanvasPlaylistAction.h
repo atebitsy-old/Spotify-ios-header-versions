@@ -15,9 +15,9 @@
     NSURL *_sourceURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (id)logEventName;
 - (long long)icon;
 - (id)title;

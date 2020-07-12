@@ -16,11 +16,11 @@
     NSArray *_progressBars;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *progressBars; // @synthesize progressBars=_progressBars;
 @property(retain, nonatomic) UIStackView *progressStackView; // @synthesize progressStackView=_progressStackView;
 @property(retain, nonatomic) SPTStorylinesInteractiveView *interactiveView; // @synthesize interactiveView=_interactiveView;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)addProgressBars:(unsigned long long)arg1;
 - (void)removeProgressBars:(unsigned long long)arg1;
 - (void)updateProgressBarWithProgress:(double)arg1 atIndex:(unsigned long long)arg2 animated:(_Bool)arg3;

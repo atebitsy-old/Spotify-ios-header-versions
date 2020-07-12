@@ -14,9 +14,9 @@
     UIView *_listeningView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *listeningView; // @synthesize listeningView=_listeningView;
 @property(readonly, nonatomic) SPTVoiceListeningViewModel *listeningViewModel; // @synthesize listeningViewModel=_listeningViewModel;
-- (void).cxx_destruct;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;

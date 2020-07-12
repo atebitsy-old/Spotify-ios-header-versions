@@ -14,9 +14,9 @@
     id <SPTEventSenderCore> _eventSender;
 }
 
-@property(nonatomic) __weak id <SPTEventSenderCore> eventSender; // @synthesize eventSender=_eventSender;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTEventSenderCore> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) shared_ptr_dca46e91 cppEventSender;
 - (id)initWithEventSender:(id)arg1;
 - (void)invalidate;

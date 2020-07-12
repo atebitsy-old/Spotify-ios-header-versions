@@ -15,9 +15,9 @@
     SPTPaymentFailureNotificationRetryManager *_retryManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPaymentFailureNotificationRetryManager *retryManager; // @synthesize retryManager=_retryManager;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)sendLogMessageWithType:(id)arg1;
 - (void)logPaymentFailureNotificationWasDismissedBySystem;
 - (void)logPaymentFailureNotificationWasDismissedByUser;

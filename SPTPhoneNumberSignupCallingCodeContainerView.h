@@ -19,12 +19,12 @@
     GLUEGradientView *_backgroundOverlayGradientView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientView *backgroundOverlayGradientView; // @synthesize backgroundOverlayGradientView=_backgroundOverlayGradientView;
 @property(readonly, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(retain, nonatomic) SPTPhoneNumberSignupSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)setTableViewAccessibilityIdentifier:(id)arg1;
 - (void)setSearchBarAccessibilityIdentifier:(id)arg1;
 - (void)setSearchBarDelegate:(id)arg1;

@@ -18,9 +18,9 @@
     SPTContextMenuViewController *_contextMenuViewController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTContextMenuViewController *contextMenuViewController; // @synthesize contextMenuViewController=_contextMenuViewController;
 @property(nonatomic) __weak id <SPTContextMenuPresenterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)contextMenuViewController:(id)arg1 didSelectAction:(id)arg2;
 - (void)contextMenuViewControllerDidDismiss:(id)arg1 dismissalStyle:(long long)arg2;
 @property(readonly, nonatomic, getter=isPresenting) _Bool presenting;

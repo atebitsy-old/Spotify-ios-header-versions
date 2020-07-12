@@ -18,10 +18,10 @@
     NSURL *_viewURI;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(copy, nonatomic) NSString *counterIdentifier; // @synthesize counterIdentifier=_counterIdentifier;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (void)setCount:(unsigned long long)arg1 forIdentifier:(id)arg2;
 - (unsigned long long)countForIdentifier:(id)arg1;
 - (id)settingsKeyForViewURI:(id)arg1 identifier:(id)arg2;

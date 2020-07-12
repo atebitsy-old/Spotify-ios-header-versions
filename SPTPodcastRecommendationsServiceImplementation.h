@@ -20,11 +20,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastRecommendationsViewProvider> recommendationsViewProvider; // @synthesize recommendationsViewProvider=_recommendationsViewProvider;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)provideRecommendationsViewProvider;
 - (void)unload;
 - (void)load;

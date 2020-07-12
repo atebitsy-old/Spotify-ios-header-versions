@@ -15,10 +15,10 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTUBIMobileYourLibraryEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIImpressionWithSectionId:(id)arg1 index:(long long)arg2 renderType:(id)arg3;
 - (void)logImpressionForPageURI:(id)arg1 index:(long long)arg2;

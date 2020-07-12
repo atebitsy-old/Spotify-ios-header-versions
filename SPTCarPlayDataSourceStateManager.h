@@ -21,13 +21,13 @@
     id <SPTCarPlayDataSource> _restrictedDataSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCarPlayDataSource> restrictedDataSource; // @synthesize restrictedDataSource=_restrictedDataSource;
 @property(retain, nonatomic) SPTCarPlayLoggedInDataSource *loggedInDefaultDataSource; // @synthesize loggedInDefaultDataSource=_loggedInDefaultDataSource;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTMediaPlayerContentBridge> mediaPlayerBridge; // @synthesize mediaPlayerBridge=_mediaPlayerBridge;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic, getter=isAvailableForLoggedInDataSources) _Bool availableForLoggedInDataSources; // @synthesize availableForLoggedInDataSources=_availableForLoggedInDataSources;
-- (void).cxx_destruct;
 - (id)restrictedDataSourceForReason:(unsigned long long)arg1;
 - (id)debugStringForReason:(unsigned long long)arg1;
 - (void)applyDataSource:(id)arg1;

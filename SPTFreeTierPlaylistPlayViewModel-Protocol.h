@@ -6,16 +6,21 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTPlayOrigin;
-@protocol SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldRowId;
+@class NSString, SPTPlayOrigin;
+@protocol SPTPlaylistPlatformFieldRowId><SPTPlaylistPlatformFieldURL;
 
 @protocol SPTFreeTierPlaylistPlayViewModel <NSObject>
-@property(readonly, nonatomic) SPTPlayOrigin *playOrigin;
-@property(readonly, nonatomic, getter=isPlaylistPlaying) _Bool playlistPlaying;
-@property(readonly, nonatomic) _Bool shouldShowPlayButton;
-@property(readonly, nonatomic, getter=isPlayButtonPausingPlay) _Bool playButtonPausingPlay;
-@property(readonly, nonatomic, getter=isPlayButtonUsedForPlayback) _Bool playButtonUsedForPlayback;
-- (void)playTrackEntity:(id <SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldRowId>)arg1;
+@property(nonatomic, readonly) SPTPlayOrigin *playOrigin;
+- (_Bool)isPlaylistPlaying;
+@property(nonatomic, readonly) _Bool shouldShowPlayButton;
+- (_Bool)isPlayButtonPausingPlay;
+- (_Bool)isPlayButtonUsedForPlayback;
+- (void)playTrackEntity:(id <SPTPlaylistPlatformFieldRowId><SPTPlaylistPlatformFieldURL>)arg1 interactionId:(NSString *)arg2;
 - (void)play;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool playButtonPausingPlay;
+@property(nonatomic, readonly) _Bool playButtonUsedForPlayback;
+@property(nonatomic, readonly) _Bool playlistPlaying;
 @end
 

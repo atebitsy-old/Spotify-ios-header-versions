@@ -22,12 +22,12 @@
     SPTDrivingModeHomeFeedShelfView *_shelfView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDrivingModeHomeFeedShelfView *shelfView; // @synthesize shelfView=_shelfView;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTDrivingModeHomeFeedShelf *shelf; // @synthesize shelf=_shelf;
 @property(nonatomic) __weak id <SPTDrivingModeHomeFeedShelfViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (double)widthForCell;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)collectionView:(id)arg1 didDeselectItemAtIndexPath:(id)arg2;

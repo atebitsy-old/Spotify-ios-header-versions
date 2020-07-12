@@ -19,11 +19,11 @@
     NSString *_headerCategory;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *headerCategory; // @synthesize headerCategory=_headerCategory;
 @property(copy, nonatomic) NSString *headerName; // @synthesize headerName=_headerName;
 @property(copy, nonatomic) NSString *headerNamespace; // @synthesize headerNamespace=_headerNamespace;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)copyComponentModelBuilderFrom:(id)arg1 to:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithHeaderComponentNamespace:(id)arg1 name:(id)arg2 category:(id)arg3;

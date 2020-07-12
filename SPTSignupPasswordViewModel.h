@@ -16,11 +16,11 @@
     SPTDynamicSignupFlowController *_flowController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) SPTSignupPasswordFieldValidationViewModel *fieldViewModel; // @synthesize fieldViewModel=_fieldViewModel;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(retain, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)openNextScreenWithPassword:(id)arg1;
 - (void)userDidTapNextButtonWithValue:(id)arg1;
 - (void)userDidTapReturnButtonWithValue:(id)arg1;

@@ -18,11 +18,11 @@
     NSLayoutConstraint *_stackViewWidthMarginConstraint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak NSLayoutConstraint *stackViewWidthMarginConstraint; // @synthesize stackViewWidthMarginConstraint=_stackViewWidthMarginConstraint;
 @property(retain, nonatomic) GLUELabel *bodyLabel; // @synthesize bodyLabel=_bodyLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (void)setupView;

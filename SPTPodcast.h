@@ -14,6 +14,7 @@
 @interface SPTPodcast : NSObject <SPTPodcast>
 {
     _Bool _following;
+    NSString *rawDescription;
     NSString *_title;
     NSString *_descriptionText;
     NSString *_publisher;
@@ -28,6 +29,7 @@
     id <SPTPodcastEpisode> _trailerEpisode;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastEpisode> trailerEpisode; // @synthesize trailerEpisode=_trailerEpisode;
 @property(nonatomic) unsigned long long unrangedLength; // @synthesize unrangedLength=_unrangedLength;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
@@ -41,7 +43,7 @@
 @property(copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *rawDescription; // @synthesize rawDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToPodcast:(id)arg1;

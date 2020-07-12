@@ -11,8 +11,10 @@
 @protocol SPTNowPlayingPlayButton <NSObject>
 @property(nonatomic) struct UIEdgeInsets touchInsets;
 @property(nonatomic) struct CGSize circleSize;
-@property(retain, nonatomic) UIColor *fillColor;
-@property(nonatomic, getter=isFilled) _Bool filled;
-@property(nonatomic, getter=isPlaying) _Bool playing;
+@property(nonatomic, retain) UIColor *fillColor;
+@property(nonatomic) _Bool filled;
+- (_Bool)isFilled;
+@property(nonatomic) _Bool playing;
+- (_Bool)isPlaying;
 @end
 

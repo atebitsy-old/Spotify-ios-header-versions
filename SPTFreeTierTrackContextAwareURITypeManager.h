@@ -16,8 +16,8 @@
     id <SPTEntityService> _entityService;
 }
 
-@property(retain, nonatomic) id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 - (void)resolveDefaultContextForURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (_Bool)typeManagerRecognizesURI:(id)arg1;
 - (id)initWithEntityService:(id)arg1;

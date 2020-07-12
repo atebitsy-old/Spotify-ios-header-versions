@@ -21,12 +21,12 @@
     id <SPTContextMenuPresenter> _contextMenuPresenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
 @property(retain, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic) id <SPTShowsFormatVideoContextMenuProvider> videoContextMenuProvider; // @synthesize videoContextMenuProvider=_videoContextMenuProvider;
 @property(readonly, nonatomic) _Bool contextAwareSharingEnabled; // @synthesize contextAwareSharingEnabled=_contextAwareSharingEnabled;
-- (void).cxx_destruct;
 - (_Bool)presentContextMenuForItemAtIndexPath:(id)arg1 itemsViewModel:(id)arg2 sender:(id)arg3 viewController:(id)arg4;
 - (id)initWithVideoContextMenuPresenter:(id)arg1 presenterFactory:(id)arg2 contextAwareSharingEnabled:(_Bool)arg3 pageURI:(id)arg4;
 

@@ -21,12 +21,12 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) __weak SPTAdFeatureFlagChecks *featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) __weak id <SPTAdsBaseGlobalSettingsController> settingsController; // @synthesize settingsController=_settingsController;
-- (void).cxx_destruct;
 - (void)adsFeatureFlagsDidLoad:(id)arg1;
 - (void)adsFeatureFlagsDidChange:(id)arg1;
 - (void)foregroundObserverDidHibernate:(id)arg1;

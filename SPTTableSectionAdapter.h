@@ -16,10 +16,10 @@
     NSArray *_rowAdapters;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *rowAdapters; // @synthesize rowAdapters=_rowAdapters;
 @property(nonatomic) long long section; // @synthesize section=_section;
 @property(nonatomic) __weak id <SPTTableContext> tableContext; // @synthesize tableContext=_tableContext;
-- (void).cxx_destruct;
 - (id)initWithRowAdapters:(id)arg1;
 
 @end

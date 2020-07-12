@@ -14,9 +14,9 @@
     NSArray *_gyroscopeMeasurements;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *gyroscopeMeasurements; // @synthesize gyroscopeMeasurements=_gyroscopeMeasurements;
 @property(readonly, nonatomic) NSArray *accelerometerMeasurements; // @synthesize accelerometerMeasurements=_accelerometerMeasurements;
-- (void).cxx_destruct;
 - (id)initWithAccelerometerMeasurements:(id)arg1 gyroscopeMeasurements:(id)arg2;
 
 @end

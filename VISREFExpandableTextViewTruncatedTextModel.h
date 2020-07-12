@@ -14,9 +14,9 @@
     struct _NSRange _truncationTextRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange truncationTextRange; // @synthesize truncationTextRange=_truncationTextRange;
 @property(copy, nonatomic) NSAttributedString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 
 @end
 

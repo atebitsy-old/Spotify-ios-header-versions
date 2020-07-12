@@ -17,9 +17,9 @@
     id <SPTBrowseDateProvider> _dateProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTBrowseDateProvider> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logInteractionWithURI:(id)arg1 event:(id)arg2 userIntent:(id)arg3;
 - (void)logImpressionWithComponentModel:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 dateProvider:(id)arg2;

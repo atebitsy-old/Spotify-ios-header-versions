@@ -17,10 +17,10 @@
     GLUELabelStyle *_titleLabelStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(retain, nonatomic) GLUELabelStyle *countLabelStyle; // @synthesize countLabelStyle=_countLabelStyle;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

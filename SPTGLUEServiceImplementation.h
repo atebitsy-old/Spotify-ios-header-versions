@@ -21,11 +21,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHugsFactoryImplementation *hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
-- (void).cxx_destruct;
 - (id)provideHugsFactory;
 - (id)provideImageLoaderFactory;
 - (id)provideTheme;

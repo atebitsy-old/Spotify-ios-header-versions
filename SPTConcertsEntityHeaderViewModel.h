@@ -28,6 +28,7 @@
     NSDateFormatter *_dateTextDateFormatter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDateFormatter *dateTextDateFormatter; // @synthesize dateTextDateFormatter=_dateTextDateFormatter;
 @property(retain, nonatomic) NSDateFormatter *timeTextDateFormatter; // @synthesize timeTextDateFormatter=_timeTextDateFormatter;
 @property(retain, nonatomic) SPTConcertsArtistNameFormatter *nameFormatter; // @synthesize nameFormatter=_nameFormatter;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) UIImage *primaryImage; // @synthesize primaryImage=_primaryImage;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTConcertsEntityHeaderViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)themeUpdated:(id)arg1;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;

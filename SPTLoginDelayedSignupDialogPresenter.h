@@ -25,6 +25,7 @@
     SPTDelayedSignupExperimentController *_experimentController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDelayedSignupExperimentController *experimentController; // @synthesize experimentController=_experimentController;
 @property(retain, nonatomic) SPTLoginDelayedSignupDialogLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTLoginDelayedSignupDialogFactory *dialogFactory; // @synthesize dialogFactory=_dialogFactory;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) SPTLoginSlideUpModalPresenter *modalPresenter; // @synthesize modalPresenter=_modalPresenter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak id <SPTLoginDelayedSignupDialogPresenterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (void)presentShutDownDialogIfNeeded;
 @property(readonly, nonatomic) UIViewController *presentingController;

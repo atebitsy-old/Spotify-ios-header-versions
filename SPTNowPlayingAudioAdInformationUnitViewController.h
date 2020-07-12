@@ -25,6 +25,7 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(readonly, nonatomic) SPTAdsRemindersManager *reminderManager; // @synthesize reminderManager=_reminderManager;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) SPTAdsFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (struct CGSize)preferredContentSize;
 - (double)viewControllerPriority;

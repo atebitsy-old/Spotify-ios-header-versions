@@ -29,6 +29,7 @@
     unsigned long long _selectedIndex;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long selectedIndex; // @synthesize selectedIndex=_selectedIndex;
 @property(retain, nonatomic) UIImpactFeedbackGenerator *feedbackGenerator; // @synthesize feedbackGenerator=_feedbackGenerator;
 @property(retain, nonatomic) SPTDrivingModeHomeFeedPageScroller *pageScroller; // @synthesize pageScroller=_pageScroller;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 @property(readonly, nonatomic) SPTDrivingModeHomeFeedViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)scrollViewHapticUpdate:(long long)arg1;

@@ -15,10 +15,10 @@
     NSArray *_controlPoints;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *controlPoints; // @synthesize controlPoints=_controlPoints;
 @property(nonatomic) double endPoint; // @synthesize endPoint=_endPoint;
 @property(nonatomic) double startPoint; // @synthesize startPoint=_startPoint;
-- (void).cxx_destruct;
 
 @end
 

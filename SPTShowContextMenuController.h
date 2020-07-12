@@ -28,6 +28,7 @@
     SPTPodcastFeatureProperties *_featureProperties;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) __weak id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
-- (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (_Bool)isIPad;
 - (id)providePodcastMixActionForEpisode:(id)arg1 sourcePlaylistUri:(id)arg2 logContext:(id)arg3;

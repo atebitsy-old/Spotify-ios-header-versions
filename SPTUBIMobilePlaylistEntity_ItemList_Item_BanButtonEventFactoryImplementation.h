@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithComponents:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)hitRemoveDislikeWithItemNoLongerDisliked:(id)arg1;
 - (id)hitDislikeWithItemToBeDisliked:(id)arg1;
 - (id)_location;

@@ -15,10 +15,10 @@
     NSTimer *_animationTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *animationTimer; // @synthesize animationTimer=_animationTimer;
 @property(nonatomic) _Bool continuousProgress; // @synthesize continuousProgress=_continuousProgress;
 @property(nonatomic, getter=isSimulatingProgress) _Bool simulatingProgress; // @synthesize simulatingProgress=_simulatingProgress;
-- (void).cxx_destruct;
 - (float)nextProgressValue;
 - (void)incrementProgress;
 - (void)endContinuousProgress;

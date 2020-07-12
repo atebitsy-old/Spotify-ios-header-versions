@@ -24,6 +24,7 @@
     id <SPTSortingFilteringButtonsContainerStyle> filterButtonsContainerStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) id <SPTSortingFilteringButtonsContainerStyle> filterButtonsContainerStyle; // @synthesize filterButtonsContainerStyle;
 @property(copy, nonatomic) id <SPTSortingFilteringButtonsContainerStyle> clearFiltersControlStyle; // @synthesize clearFiltersControlStyle;
 @property(copy, nonatomic) id <SPTSortingFilteringSearchFieldStyle> searchFieldStyle; // @synthesize searchFieldStyle;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) id <SPTSortingFilteringFilterBarSortButtonStyle> contextMenuButtonStyle; // @synthesize contextMenuButtonStyle;
 @property(nonatomic) double height; // @synthesize height;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

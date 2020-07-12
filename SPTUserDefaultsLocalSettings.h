@@ -20,13 +20,13 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool dispatchedSave; // @synthesize dispatchedSave=_dispatchedSave;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) NSMapTable *observers; // @synthesize observers=_observers;
 @property(copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, nonatomic) NSString *identifier;
 - (id)allKeys;

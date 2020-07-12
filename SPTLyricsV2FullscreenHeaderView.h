@@ -25,6 +25,7 @@
     NSLayoutConstraint *_subtitleTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleTrailingConstraint; // @synthesize subtitleTrailingConstraint=_subtitleTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleLeadingConstraint; // @synthesize subtitleLeadingConstraint=_subtitleLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleHeightConstraint; // @synthesize subtitleHeightConstraint=_subtitleHeightConstraint;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *imageHeightCompactConstraint; // @synthesize imageHeightCompactConstraint=_imageHeightCompactConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageWidthCompactConstraint; // @synthesize imageWidthCompactConstraint=_imageWidthCompactConstraint;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateLayout:(_Bool)arg1;

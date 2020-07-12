@@ -25,6 +25,7 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTStorylinesFailedView *failedView; // @synthesize failedView=_failedView;
 @property(retain, nonatomic) SPTStorylinesLoadingView *loadingView; // @synthesize loadingView=_loadingView;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) SPTStorylinesTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTStorylinesViewBinder *viewBinder; // @synthesize viewBinder=_viewBinder;
 @property(retain, nonatomic) SPTStorylinesViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)getStorylinesViewControllerView;
 - (void)updateStorylinesFollowText:(id)arg1;
 - (void)updateProgressBarForStorylinesWithProgress:(double)arg1 atIndex:(unsigned long long)arg2 animated:(_Bool)arg3;

@@ -21,6 +21,7 @@
     NSString *_shortName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *shortName; // @synthesize shortName=_shortName;
 @property(readonly, nonatomic, getter=isTasteOnboardingRequired) _Bool tasteOnboardingRequired; // @synthesize tasteOnboardingRequired=_tasteOnboardingRequired;
 @property(readonly, nonatomic, getter=isPresent) _Bool present; // @synthesize present=_present;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) NSURL *avatarImageURLLarge; // @synthesize avatarImageURLLarge=_avatarImageURLLarge;
 @property(readonly, nonatomic) NSURL *avatarImageURL; // @synthesize avatarImageURL=_avatarImageURL;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

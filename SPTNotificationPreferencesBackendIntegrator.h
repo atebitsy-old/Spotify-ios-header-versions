@@ -22,13 +22,13 @@
     SPTNotificationGroupDeserializer *_notificationGroupDeserializer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNotificationGroupDeserializer *notificationGroupDeserializer; // @synthesize notificationGroupDeserializer=_notificationGroupDeserializer;
 @property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 @property(retain, nonatomic) NSMutableDictionary *requestCallbacks; // @synthesize requestCallbacks=_requestCallbacks;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
-- (void).cxx_destruct;
 - (id)notificationsErrorWithCode:(long long)arg1 description:(id)arg2;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

@@ -23,12 +23,12 @@
     id <SPTPhoneNumberSignupPhoneNumberEntryViewControllerDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTPhoneNumberSignupPhoneNumberEntryViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
 @property(readonly, nonatomic) SPTPhoneNumberSignupTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryContainerView *containerView; // @synthesize containerView=_containerView;
-- (void).cxx_destruct;
 - (void)didMoveToParentViewController:(id)arg1;
 - (unsigned long long)preferredNavigationBarState;
 - (void)textFieldDidChange:(id)arg1;

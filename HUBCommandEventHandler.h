@@ -15,8 +15,8 @@
     id <HUBCommandHandler> _commandHandler;
 }
 
-@property(retain, nonatomic) id <HUBCommandHandler> commandHandler; // @synthesize commandHandler=_commandHandler;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <HUBCommandHandler> commandHandler; // @synthesize commandHandler=_commandHandler;
 - (void)handleEvent:(id)arg1;
 - (id)initWithCommandHandler:(id)arg1;
 

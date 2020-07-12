@@ -54,6 +54,7 @@
     GLUEEntityRowStyle *_trackRowStyle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEntityRowStyle *trackRowStyle; // @synthesize trackRowStyle=_trackRowStyle;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -79,7 +80,6 @@
 @property(nonatomic) __weak id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(retain, nonatomic) SPTChartMetadataView *metadataView; // @synthesize metadataView=_metadataView;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;

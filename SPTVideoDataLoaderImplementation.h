@@ -16,8 +16,8 @@
     SPTDataLoader *_dataLoader;
 }
 
-@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (long long)mapMethod:(unsigned long long)arg1;
 - (void)requestWithURL:(id)arg1 method:(unsigned long long)arg2 headers:(id)arg3 body:(id)arg4 success:(CDUnknownBlockType)arg5 failure:(CDUnknownBlockType)arg6;
 - (void)dataLoader:(id)arg1 didReceiveDataChunk:(id)arg2 forResponse:(id)arg3;

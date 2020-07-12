@@ -19,11 +19,11 @@
     SPTRequestLifetime *_lifetime;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRequestLifetime *lifetime; // @synthesize lifetime=_lifetime;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) unsigned long long volume; // @synthesize volume=_volume;
 @property(nonatomic) _Bool isVocalRemovalEnabled; // @synthesize isVocalRemovalEnabled=_isVocalRemovalEnabled;
-- (void).cxx_destruct;
 - (double)volumeValue;
 - (void)changeVocalsVolume:(double)arg1;
 - (void)enableVocalRemovalMode:(_Bool)arg1;

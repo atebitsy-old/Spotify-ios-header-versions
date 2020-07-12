@@ -20,13 +20,13 @@
     GLUEImageStyle *_imageViewStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEImageStyle *imageViewStyle; // @synthesize imageViewStyle=_imageViewStyle;
 @property(copy, nonatomic) GLUELabelStyle *textLabelStyle; // @synthesize textLabelStyle=_textLabelStyle;
 @property(copy, nonatomic) UIColor *overflowBackgroundColor; // @synthesize overflowBackgroundColor=_overflowBackgroundColor;
 @property(copy, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(nonatomic) double height; // @synthesize height=_height;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningSessionPopupViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

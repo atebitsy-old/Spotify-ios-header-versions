@@ -22,13 +22,13 @@
     id <SPTYourLibraryTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTYourLibraryTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSMutableSet *groupIdentifiers; // @synthesize groupIdentifiers=_groupIdentifiers;
 @property(retain, nonatomic) NSMutableArray *pageProviders; // @synthesize pageProviders=_pageProviders;
-- (void).cxx_destruct;
 - (long long)hoursBetweenDate:(id)arg1 andDate:(id)arg2;
 - (id)groupData;
 - (void)savePageURI:(id)arg1 visitedAt:(id)arg2;

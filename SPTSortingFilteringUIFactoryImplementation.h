@@ -15,8 +15,8 @@
     SPTSortingFilteringGLUETheme *_theme;
 }
 
-@property(readonly, nonatomic) SPTSortingFilteringGLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTSortingFilteringGLUETheme *theme; // @synthesize theme=_theme;
 - (id)createButtonsTableViewCell;
 - (id)createClearFiltersControlWithFilterTitles:(id)arg1;
 - (id)createButtonsContainerWithAvailableFilterRules:(id)arg1 selectedFilterRules:(id)arg2;

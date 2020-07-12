@@ -16,8 +16,8 @@
 + (id)keyPathsForValuesAffectingPageURI;
 + (id)keyPathsForValuesAffectingPageIdentifier;
 + (id)keyPathsForValuesAffectingResolved;
-@property(readonly, nonatomic) SPTInstrumentationPageView *underlyingPageView; // @synthesize underlyingPageView=_underlyingPageView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTInstrumentationPageView *underlyingPageView; // @synthesize underlyingPageView=_underlyingPageView;
 - (id)navigationRootIdentifier;
 - (id)pageName;
 - (id)pageURI;

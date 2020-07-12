@@ -15,10 +15,10 @@
     id <SPTFollowModelFactory> _followModelFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <SPTStorylinesAttributionLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)fetchFollowModelForArtist:(id)arg1;
 - (void)fetchStorylinesArtistImage:(id)arg1 forArtist:(id)arg2;
 - (id)initWithImageLoader:(id)arg1 followModelFactory:(id)arg2;

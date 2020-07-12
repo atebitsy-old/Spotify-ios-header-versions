@@ -20,12 +20,12 @@
     SPTHomeMixUserToggleMembersHelper *_membersHelper;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeMixUserToggleMembersHelper *membersHelper; // @synthesize membersHelper=_membersHelper;
 @property(nonatomic) __weak UITableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SPTHomeMixFamilyPileConfigurator *facePilesConfigurator; // @synthesize facePilesConfigurator=_facePilesConfigurator;
 @property(retain, nonatomic) SPTHomeMixUserToggleViewModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)memberBlacklist;
 - (void)switchFlipped:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

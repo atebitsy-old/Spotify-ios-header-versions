@@ -8,6 +8,7 @@
 @protocol _TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_;
 
 @protocol _TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_
+- (void)changeOfflineStateFor:(NSURL *)arg1;
 - (unsigned long long)offlineStateOf:(NSURL *)arg1;
 - (_Bool)isAvailableOffline:(NSURL *)arg1;
 - (void)remove:(NSURL *)arg1;

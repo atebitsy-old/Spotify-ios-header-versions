@@ -24,6 +24,7 @@
     NSLayoutConstraint *_subtitleToAccessoryViewConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleToAccessoryViewConstraint; // @synthesize subtitleToAccessoryViewConstraint=_subtitleToAccessoryViewConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleCenterYAnchorConstraint; // @synthesize titleCenterYAnchorConstraint=_titleCenterYAnchorConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleTopAnchorConstraint; // @synthesize titleTopAnchorConstraint=_titleTopAnchorConstraint;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) UIView *subtitleAccessoryView; // @synthesize subtitleAccessoryView=_subtitleAccessoryView;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)glue_applyStyle:(id)arg1;
 - (void)layoutSubviews;

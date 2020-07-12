@@ -15,10 +15,10 @@
     NSNumber *_duration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *duration; // @synthesize duration=_duration;
 @property(retain, nonatomic) NSNumber *position; // @synthesize position=_position;
 @property(retain, nonatomic) NSNumber *progress; // @synthesize progress=_progress;
-- (void).cxx_destruct;
 - (id)initWithProgress:(id)arg1 position:(id)arg2 duration:(id)arg3;
 
 @end

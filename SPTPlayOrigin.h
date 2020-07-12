@@ -22,6 +22,7 @@
 }
 
 + (id)entityPagelessRadioPlayOriginForStationURI:(id)arg1 startedFromElement:(id)arg2 referrerIdentifier:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *featureClasses; // @synthesize featureClasses=_featureClasses;
 @property(readonly, copy, nonatomic) NSString *deviceIdentifier; // @synthesize deviceIdentifier=_deviceIdentifier;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
@@ -29,7 +30,6 @@
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, copy, nonatomic) NSString *featureVersion; // @synthesize featureVersion=_featureVersion;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

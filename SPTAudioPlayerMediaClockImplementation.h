@@ -25,6 +25,7 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) _Bool trackingPosition; // @synthesize trackingPosition=_trackingPosition;
 @property(nonatomic) float playbackSpeed; // @synthesize playbackSpeed=_playbackSpeed;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) NSTimer *pollingTimer; // @synthesize pollingTimer=_pollingTimer;
 @property(retain, nonatomic) id <SPTResolver> cosmosResolver; // @synthesize cosmosResolver=_cosmosResolver;
 @property(readonly, nonatomic) NSURL *audioTrackURI; // @synthesize audioTrackURI=_audioTrackURI;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)finishSyncPolling;
 - (void)startSyncPolling;

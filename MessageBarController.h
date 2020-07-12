@@ -26,6 +26,7 @@
     NSTimer *_updateMessageBarTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *updateMessageBarTimer; // @synthesize updateMessageBarTimer=_updateMessageBarTimer;
 @property(retain, nonatomic) MessageBarView *messageBarView; // @synthesize messageBarView=_messageBarView;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
@@ -35,7 +36,6 @@
 @property(copy, nonatomic) CDUnknownBlockType didReceiveKeyCommandAction; // @synthesize didReceiveKeyCommandAction=_didReceiveKeyCommandAction;
 @property(readonly, nonatomic) UIViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
 @property(readonly, nonatomic) NSMutableArray *messageBarItems; // @synthesize messageBarItems=_messageBarItems;
-- (void).cxx_destruct;
 - (_Bool)canBecomeFirstResponder;
 - (id)topViewController;
 - (void)setContentViewController:(id)arg1 animation:(long long)arg2 completion:(CDUnknownBlockType)arg3;

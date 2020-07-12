@@ -13,8 +13,8 @@
     SPTTheme *_catTheme;
 }
 
-@property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
 - (struct CGSize)intrinsicContentSize;
 - (id)initWithTheme:(id)arg1;
 

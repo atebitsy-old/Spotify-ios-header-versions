@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVoiceLibraryWakewordImplementation *wakewordImplementation; // @synthesize wakewordImplementation=_wakewordImplementation;
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioSession> audioSessionManager; // @synthesize audioSessionManager=_audioSessionManager;
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (id)provideAudioRouteHandler;
 - (id)provideMicrophonePermissionsReducer;
 @property(readonly, nonatomic) id <SPTVoiceLibraryAudioRecorderFactory> audioRecorderFactory; // @synthesize audioRecorderFactory=_audioRecorderFactory;

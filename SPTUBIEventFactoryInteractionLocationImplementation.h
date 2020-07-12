@@ -15,8 +15,8 @@
     NSString *_interactionType;
 }
 
-@property(readonly, copy, nonatomic) NSString *interactionType; // @synthesize interactionType=_interactionType;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *interactionType; // @synthesize interactionType=_interactionType;
 - (id)initWithLocation:(id)arg1 interactionType:(id)arg2;
 - (id)initWithInteractionLocation:(id)arg1;
 - (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 interactionType:(id)arg6 specificationVersion:(id)arg7 nameComponents:(id)arg8 identifierComponents:(id)arg9 positionComponents:(id)arg10 uriComponents:(id)arg11 reasonComponents:(id)arg12 impressionEnabled:(_Bool)arg13;

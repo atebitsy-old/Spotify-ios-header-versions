@@ -21,12 +21,12 @@
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) __weak id <SPTContributingArtistsService> contributingArtistService; // @synthesize contributingArtistService=_contributingArtistService;
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
 @property(readonly, nonatomic) id <SPContextMenuActionsFactory> actionsFactory; // @synthesize actionsFactory=_actionsFactory;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)actionsDictionaryForTrackURL:(id)arg1 name:(id)arg2 metadata:(id)arg3 playable:(_Bool)arg4 imageURL:(id)arg5 artists:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 viewURL:(id)arg9 logContext:(id)arg10 contextSourceURL:(id)arg11;
 - (id)generateCorrectTaskArrayWithTaskOrder:(id)arg1 actionDictionary:(id)arg2;

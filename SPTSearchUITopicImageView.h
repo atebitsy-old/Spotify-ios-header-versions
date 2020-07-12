@@ -22,6 +22,7 @@
 
 + (struct CGSize)sizeForStyle:(id)arg1;
 + (struct CGSize)imageSizeForStyle:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *backImageViewCenterYConstraint; // @synthesize backImageViewCenterYConstraint=_backImageViewCenterYConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *backImageViewWidthConstraint; // @synthesize backImageViewWidthConstraint=_backImageViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *frontImageContainerWidthConstraint; // @synthesize frontImageContainerWidthConstraint=_frontImageContainerWidthConstraint;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) UIImageView *frontImageView; // @synthesize frontImageView=_frontImageView;
 @property(readonly, nonatomic) UIView *frontImageContainer; // @synthesize frontImageContainer=_frontImageContainer;
 @property(copy, nonatomic) SPTSearchUITopicImageStyle *style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)updateShadow;
 - (void)updateAppearance;
 - (void)addConstraints;

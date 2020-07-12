@@ -15,8 +15,9 @@
     SPTPodcastEpisodeFeaturedContentFeatureProperties *_remoteConfigurationProperties;
 }
 
-@property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
+@property(readonly, nonatomic, getter=isLinkedPageNPV) _Bool linkedPageNPV;
 @property(readonly, nonatomic, getter=isTrackListModeLinkedPage) _Bool trackListModeLinkedPage;
 @property(readonly, nonatomic, getter=isTrackListEnabled) _Bool trackListEnabled;
 @property(readonly, nonatomic, getter=isFeaturedContentEnabled) _Bool featuredContentEnabled;

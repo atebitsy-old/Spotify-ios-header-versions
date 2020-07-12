@@ -14,9 +14,9 @@
     id <SPTHiddenContentTrackViewModel> _trackViewModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTHiddenContentTrackViewModel> trackViewModel; // @synthesize trackViewModel=_trackViewModel;
 @property(nonatomic) __weak id <SPTHiddenContentTrackCellDelegate> cellDelegate; // @synthesize cellDelegate=_cellDelegate;
-- (void).cxx_destruct;
 - (void)trackPreviewButtonTouchedUpInside:(id)arg1;
 - (void)contextMenuTapped:(id)arg1;
 - (id)initWithCellDelegate:(id)arg1 trackViewModel:(id)arg2;

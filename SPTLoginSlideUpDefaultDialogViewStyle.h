@@ -25,6 +25,7 @@
     double contentHorizontalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double contentHorizontalMargin; // @synthesize contentHorizontalMargin;
 @property(nonatomic) double secondaryActionButtonBottomMargin; // @synthesize secondaryActionButtonBottomMargin;
 @property(nonatomic) double secondaryActionButtonTopMargin; // @synthesize secondaryActionButtonTopMargin;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) GLUEButtonStyle *mainActionButtonStyle; // @synthesize mainActionButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *messageLabelStyle; // @synthesize messageLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

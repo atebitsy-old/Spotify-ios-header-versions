@@ -19,12 +19,12 @@
 }
 
 + (id)overflowTextWithCount:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) _Bool useLargeImageWhenAvailable; // @synthesize useLargeImageWhenAvailable=_useLargeImageWhenAvailable;
 @property(copy, nonatomic) SPTHomeMixMemberPileViewStyle *currentMemberPileViewStyle; // @synthesize currentMemberPileViewStyle=_currentMemberPileViewStyle;
 @property(nonatomic) unsigned long long maxNumberOfVisibleElements; // @synthesize maxNumberOfVisibleElements=_maxNumberOfVisibleElements;
-- (void).cxx_destruct;
 - (id)memberImageView;
 - (id)avatarImageWithBackgroundColor:(id)arg1 size:(struct CGSize)arg2;
 - (id)avatarViewWithBackgroundColor:(id)arg1;

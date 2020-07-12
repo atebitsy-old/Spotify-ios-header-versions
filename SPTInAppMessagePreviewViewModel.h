@@ -25,6 +25,7 @@
     NSString *_playbackURI;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool useDevEndpoint; // @synthesize useDevEndpoint=_useDevEndpoint;
 @property(copy, nonatomic) NSString *playbackURI; // @synthesize playbackURI=_playbackURI;
 @property(copy, nonatomic) NSString *pageURI; // @synthesize pageURI=_pageURI;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)presentAlertWithTitle:(id)arg1 message:(id)arg2;
 - (id)getURIForPageView:(id)arg1;
 - (void)handleSuccessfulResponse:(id)arg1;

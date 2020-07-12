@@ -23,6 +23,7 @@
 }
 
 + (id)messageWithRequestId:(id)arg1 featureId:(id)arg2 pageUri:(id)arg3 sectionId:(id)arg4 blockIndex:(long long)arg5 itemIndex:(long long)arg6 targetUri:(id)arg7 impressionType:(id)arg8 msSinceEpoch:(double)arg9 renderType:(id)arg10;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *renderTypeValue; // @synthesize renderTypeValue=_renderTypeValue;
 @property(nonatomic) double msSinceEpochValue; // @synthesize msSinceEpochValue=_msSinceEpochValue;
 @property(copy, nonatomic) NSString *impressionTypeValue; // @synthesize impressionTypeValue=_impressionTypeValue;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSString *pageUriValue; // @synthesize pageUriValue=_pageUriValue;
 @property(copy, nonatomic) NSString *featureIdValue; // @synthesize featureIdValue=_featureIdValue;
 @property(copy, nonatomic) NSString *requestIdValue; // @synthesize requestIdValue=_requestIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

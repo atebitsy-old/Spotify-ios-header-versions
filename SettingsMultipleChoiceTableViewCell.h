@@ -14,9 +14,9 @@
     UILabel *_subtitleLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)setAccessoryView:(id)arg1;
 - (void)setupConstraints;
 - (void)applyThemeLayout;

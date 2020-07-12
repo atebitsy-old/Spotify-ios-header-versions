@@ -6,11 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent;
 
 @protocol SPTUBIMobileCarplayTabs_Tabs_HomeEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

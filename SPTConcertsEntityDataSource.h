@@ -21,12 +21,12 @@
 }
 
 + (void)registerClassesForReuseWithCollectionView:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTConcertsEntityAlbumCarouselViewModel *albumCarouselViewModel; // @synthesize albumCarouselViewModel=_albumCarouselViewModel;
 @property(retain, nonatomic) UICollectionView *albumCarouselCollectionView; // @synthesize albumCarouselCollectionView=_albumCarouselCollectionView;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTConcertsEntityViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)reuseIdentifierForCellAtIndexPath:(id)arg1;
 - (id)createArtistAdornmentForRowAtIndexPath:(id)arg1;
 - (id)createCalendarAdornmentForRowAtIndexPath:(id)arg1;

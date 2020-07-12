@@ -15,9 +15,9 @@
     SPTCastDebugMenuHelper *_debugMenuHelper;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCastDebugMenuHelper *debugMenuHelper; // @synthesize debugMenuHelper=_debugMenuHelper;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (_Bool)receiverIsJS:(id)arg1;
 - (id)receiverJSAppIDs;
 - (void)updateCustomReceiverAppID:(id)arg1;

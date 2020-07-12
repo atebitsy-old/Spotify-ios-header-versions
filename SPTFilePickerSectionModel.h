@@ -31,6 +31,7 @@
     unsigned long long _defaultSortColumn;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long defaultSortColumn; // @synthesize defaultSortColumn=_defaultSortColumn;
 @property(retain, nonatomic) NSDictionary *sortColumns; // @synthesize sortColumns=_sortColumns;
 @property(copy, nonatomic) NSArray *currentItems; // @synthesize currentItems=_currentItems;
@@ -45,7 +46,6 @@
 @property(nonatomic) _Bool showsOnlyOfflinedContent; // @synthesize showsOnlyOfflinedContent;
 @property(nonatomic, getter=isContentFiltered) _Bool contentFiltered; // @synthesize contentFiltered;
 @property(nonatomic) unsigned long long sortColumn; // @synthesize sortColumn=_sortColumn;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *supportedSortColumns;
 - (void)setSortOrderWithColumn:(unsigned long long)arg1 ascending:(_Bool)arg2;
 - (void)resetFilters;

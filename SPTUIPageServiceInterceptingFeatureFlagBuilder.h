@@ -17,9 +17,9 @@
     id <SPTFeatureFlagBuilder> _underlyingFeatureFlagBuilder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFeatureFlagBuilder> underlyingFeatureFlagBuilder; // @synthesize underlyingFeatureFlagBuilder=_underlyingFeatureFlagBuilder;
 @property(nonatomic) _Bool hasBeenModified; // @synthesize hasBeenModified=_hasBeenModified;
-- (void).cxx_destruct;
 - (id)swift_withDefaultState:(long long)arg1;
 - (id)swift_withDependencies:(id)arg1;
 - (id)swift_withBaseSignal:(id)arg1;

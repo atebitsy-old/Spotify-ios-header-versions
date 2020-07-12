@@ -9,20 +9,22 @@
 #import "SPTSearchService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTContainerService, SPTScannablesService, SPTSearchPlatformService;
+@protocol SPTContainerService, SPTRemoteConfigurationService, SPTScannablesService, SPTSearchPlatformService;
 
 @interface SPTSearchServiceImplementation : NSObject <SPTSearchService>
 {
     id <SPTContainerService> _containerService;
     id <SPTScannablesService> _scannablesService;
     id <SPTSearchPlatformService> _searchPlatformService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)makeViewController;
 - (id)searchConfiguration;
 - (id)provideSearchViewControllerForURL:(id)arg1 context:(id)arg2;

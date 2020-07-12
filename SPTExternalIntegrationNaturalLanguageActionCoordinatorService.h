@@ -21,11 +21,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTExternalIntegrationNaturalLanguageActionResolver *resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
-- (void).cxx_destruct;
 - (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 externalParameterProvider:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (_Bool)canPerformActionWithURI:(id)arg1;

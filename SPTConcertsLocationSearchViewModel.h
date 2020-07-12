@@ -22,6 +22,7 @@
     SPTConcertsLocalDataManager *_localDataManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTConcertsLocalDataManager *localDataManager; // @synthesize localDataManager=_localDataManager;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) SPTConcertsLocationModel *currentLocation; // @synthesize currentLocation=_currentLocation;
 @property(retain, nonatomic) NSArray *locations; // @synthesize locations=_locations;
 @property(nonatomic) __weak id <SPTConcertsLocationSearchViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

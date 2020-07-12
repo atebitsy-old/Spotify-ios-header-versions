@@ -22,12 +22,12 @@
 }
 
 + (id)fallbackConfiguration;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSignupRequestProvider *requestProvider; // @synthesize requestProvider=_requestProvider;
 @property(retain, nonatomic) SPTSignupResponseProcessor *responseProcessor; // @synthesize responseProcessor=_responseProcessor;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSDictionary *configurationDictionary; // @synthesize configurationDictionary=_configurationDictionary;
 @property(nonatomic) __weak id <SPTSignupDataLoaderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)handleFallbackResponse;
 - (void)handleResponseWithError:(id)arg1;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

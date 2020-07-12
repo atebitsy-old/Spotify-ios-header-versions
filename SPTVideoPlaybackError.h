@@ -17,10 +17,10 @@
     NSError *_videoError;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSError *videoError; // @synthesize videoError=_videoError;
 @property(readonly, nonatomic, getter=isUnrecoverable) _Bool unrecoverable; // @synthesize unrecoverable=_unrecoverable;
 @property(readonly, nonatomic, getter=isManifestError) _Bool manifestError; // @synthesize manifestError=_manifestError;
-- (void).cxx_destruct;
 - (id)initWithVideoError:(id)arg1 manifestError:(_Bool)arg2 unrecoverable:(_Bool)arg3;
 
 // Remaining properties

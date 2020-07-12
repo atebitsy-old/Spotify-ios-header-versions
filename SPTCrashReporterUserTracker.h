@@ -28,6 +28,7 @@
     NSString *_UIModeString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *UIModeString; // @synthesize UIModeString=_UIModeString;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic, getter=shouldEnableUserTracker) _Bool enableUserTracker; // @synthesize enableUserTracker=_enableUserTracker;
 @property(readonly, nonatomic) NSString *trackerUserID; // @synthesize trackerUserID=_trackerUserID;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;

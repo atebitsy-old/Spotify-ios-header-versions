@@ -16,10 +16,10 @@
     SPTPodcastRecommendationsSectionTitleContentOperation *_titleContentOperation;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPodcastRecommendationsSectionTitleContentOperation *titleContentOperation; // @synthesize titleContentOperation=_titleContentOperation;
 @property(readonly, nonatomic) id <SPTHubRemoteContentOperationURLResolver> URLResolver; // @synthesize URLResolver=_URLResolver;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;
-- (void).cxx_destruct;
 - (id)createContentOperationsForReferrerIdentifier:(id)arg1;
 - (id)initWithHubContentOperationFactory:(id)arg1 URLResolver:(id)arg2 titleContentOperation:(id)arg3;
 

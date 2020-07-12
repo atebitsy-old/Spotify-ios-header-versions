@@ -16,8 +16,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logExternalActionType:(id)arg1 userIntent:(id)arg2 uri:(id)arg3 eventSourceIdentifier:(id)arg4;
 - (void)logResumeForTrackURI:(id)arg1 withEventSourceIdentifier:(id)arg2;
 - (void)logPauseForTrackURI:(id)arg1 withEventSourceIdentifier:(id)arg2;

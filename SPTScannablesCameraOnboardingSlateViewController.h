@@ -23,6 +23,7 @@
     UIButton *_cancelButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) GLUEButton *scanButton; // @synthesize scanButton=_scanButton;
 @property(retain, nonatomic) UILabel *bodyLabel; // @synthesize bodyLabel=_bodyLabel;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(readonly, nonatomic) __weak id <SPTScannablesCameraOnboardingSlateViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTScannablesDependencies *dependencies; // @synthesize dependencies=_dependencies;
-- (void).cxx_destruct;
 - (void)didTapDismissButton;
 - (void)didTapScanButton;
 - (void)addCancelButton;

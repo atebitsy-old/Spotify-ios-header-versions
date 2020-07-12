@@ -10,14 +10,6 @@
 @protocol SPTGaiaConnectObserver, SPTGaiaDeviceIncarnation, SPTGaiaDeviceProtocol, SPTGaiaLocalDeviceProtocol;
 
 @protocol SPTGaiaConnectAPI <NSObject>
-@property(readonly, nonatomic) NSString *activeDeviceDisplayName;
-@property(readonly, nonatomic) long long connectionState;
-@property(readonly, nonatomic) long long activeConnectionType;
-@property(readonly, nonatomic) _Bool canConnectToAnyDevice;
-@property(readonly, nonatomic) id <SPTGaiaDeviceProtocol> deviceBeingActivated;
-@property(readonly, nonatomic) id <SPTGaiaLocalDeviceProtocol> localDevice;
-@property(readonly, nonatomic) id <SPTGaiaDeviceProtocol> activeDevice;
-@property(readonly, nonatomic) NSArray *devices;
 - (void)removeObserver:(id <SPTGaiaConnectObserver>)arg1;
 - (void)addObserver:(id <SPTGaiaConnectObserver>)arg1;
 - (_Bool)deviceRepresentsGroup:(id <SPTGaiaDeviceProtocol>)arg1;
@@ -31,5 +23,13 @@
 - (void)renameDevice:(id <SPTGaiaDeviceProtocol>)arg1 name:(NSString *)arg2 responseBlock:(void (^)(_Bool, NSError *))arg3;
 - (void)deactivateActiveDeviceWithResponseBlock:(void (^)(_Bool, NSError *))arg1;
 - (void)activateDevice:(id <SPTGaiaDeviceProtocol>)arg1 responseBlock:(void (^)(_Bool, NSError *))arg2;
+@property(nonatomic, readonly) NSString *activeDeviceDisplayName;
+@property(nonatomic, readonly) long long connectionState;
+@property(nonatomic, readonly) long long activeConnectionType;
+@property(nonatomic, readonly) _Bool canConnectToAnyDevice;
+@property(nonatomic, readonly) id <SPTGaiaDeviceProtocol> deviceBeingActivated;
+@property(nonatomic, readonly) id <SPTGaiaLocalDeviceProtocol> localDevice;
+@property(nonatomic, readonly) id <SPTGaiaDeviceProtocol> activeDevice;
+@property(nonatomic, readonly) NSArray *devices;
 @end
 

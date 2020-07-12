@@ -17,10 +17,10 @@
     NSMutableArray *_queuedRequests;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *queuedRequests; // @synthesize queuedRequests=_queuedRequests;
 @property(readonly, nonatomic) NSMutableDictionary *responseHandlers; // @synthesize responseHandlers=_responseHandlers;
 @property(readonly, nonatomic) NSMutableDictionary *requestHandlers; // @synthesize requestHandlers=_requestHandlers;
-- (void).cxx_destruct;
 - (void)processQueuedRequests;
 - (void)registerResponseHandler:(id)arg1 forRequest:(id)arg2;
 - (void)deregisterRequestHandlerForURI:(id)arg1;

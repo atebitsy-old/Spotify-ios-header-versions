@@ -19,6 +19,7 @@
     NSLayoutConstraint *_cellWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *cellWidthConstraint; // @synthesize cellWidthConstraint=_cellWidthConstraint;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIView *backdropView; // @synthesize backdropView=_backdropView;
 @property(retain, nonatomic) SPTPartnerIntegrationSettingsItemViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 @property(nonatomic) double contentWidth;
 - (void)didTapActionButton:(id)arg1;
 - (void)setupConstraints;

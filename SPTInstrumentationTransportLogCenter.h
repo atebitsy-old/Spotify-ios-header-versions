@@ -17,9 +17,9 @@
     id <SPTEventSender> _eventSender;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)send:(id)arg1;
 - (void)legacySend:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 eventSender:(id)arg2;

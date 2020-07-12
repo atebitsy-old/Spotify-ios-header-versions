@@ -16,9 +16,9 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(retain, nonatomic) GLUEButtonStyle *buttonStyle; // @synthesize buttonStyle=_buttonStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

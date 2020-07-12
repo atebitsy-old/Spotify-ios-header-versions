@@ -13,8 +13,8 @@
     UISwitch *_switchControl;
 }
 
-@property(retain, nonatomic) UISwitch *switchControl; // @synthesize switchControl=_switchControl;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UISwitch *switchControl; // @synthesize switchControl=_switchControl;
 - (void)layoutSubviews;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

@@ -23,6 +23,7 @@
 
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
 + (id)backgroundColorFromModel:(id)arg1 style:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *imageWidthConstraint; // @synthesize imageWidthConstraint=_imageWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageLeadingConstraint; // @synthesize imageLeadingConstraint=_imageLeadingConstraint;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) SPTPremiumDestinationUIValueCardSingleStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)prepareForReuse;

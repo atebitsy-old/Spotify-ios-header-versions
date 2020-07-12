@@ -19,9 +19,9 @@
 
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUETrackCloudView *trackCloudView; // @synthesize trackCloudView=_trackCloudView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)sendSelectionEvent;
 - (void)applyThemeLayout;
 - (void)prepareForReuse;

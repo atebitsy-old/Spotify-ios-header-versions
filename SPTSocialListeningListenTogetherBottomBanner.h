@@ -23,6 +23,7 @@
     NSArray *_currentConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *currentConstraints; // @synthesize currentConstraints=_currentConstraints;
 @property(readonly, nonatomic) UIStackView *buttonContainerView; // @synthesize buttonContainerView=_buttonContainerView;
 @property(readonly, nonatomic) GLUELabel *privacyDisclaimerLabel; // @synthesize privacyDisclaimerLabel=_privacyDisclaimerLabel;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) GLUEButton *queueButton; // @synthesize queueButton=_queueButton;
 @property(readonly, nonatomic) GLUEButton *addSongsButton; // @synthesize addSongsButton=_addSongsButton;
 @property(readonly, nonatomic) GLUEButton *inviteButton; // @synthesize inviteButton=_inviteButton;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (id)horizontallyConstrainView:(id)arg1;
 - (void)updateViewConstraintsWithPrivacyLabel;

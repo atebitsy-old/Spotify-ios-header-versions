@@ -15,10 +15,10 @@
     SPTRadioLogger *_loggingService;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRadioLogger *loggingService; // @synthesize loggingService=_loggingService;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
 @property(readonly, nonatomic) __weak SPTInfinitePlaybackManager *infinitePlaybackManager; // @synthesize infinitePlaybackManager=_infinitePlaybackManager;
-- (void).cxx_destruct;
 - (void)settingChanged:(id)arg1;
 - (id)footerText;
 - (id)cellForRow:(long long)arg1;

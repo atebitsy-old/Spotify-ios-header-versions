@@ -20,13 +20,13 @@
     NSArray *_errors;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *errors; // @synthesize errors=_errors;
 @property(readonly, copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
 @property(readonly, copy, nonatomic) NSString *interactionType; // @synthesize interactionType=_interactionType;
 @property(readonly, copy, nonatomic) NSArray *components; // @synthesize components=_components;
 @property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
 @property(readonly, copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
-- (void).cxx_destruct;
 - (id)deletePlaylistWithPlaylistToBeDeleted:(id)arg1;
 - (id)addItemToQueueWithItemToAddToQueue:(id)arg1;
 - (id)shuffleDisable;

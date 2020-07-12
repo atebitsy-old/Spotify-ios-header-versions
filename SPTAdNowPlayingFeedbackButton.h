@@ -23,6 +23,7 @@
 }
 
 + (id)button;
+- (void).cxx_destruct;
 @property(nonatomic) long long type; // @synthesize type=_type;
 @property(retain, nonatomic) UIImage *inactiveButtonImage; // @synthesize inactiveButtonImage=_inactiveButtonImage;
 @property(retain, nonatomic) UIImage *activeButtonImage; // @synthesize activeButtonImage=_activeButtonImage;
@@ -34,7 +35,6 @@
 - (struct CGSize)iconSize;
 - (void)setIcon:(long long)arg1;
 - (long long)icon;
-- (void).cxx_destruct;
 - (void)setSelected:(_Bool)arg1;
 - (void)bounce;
 - (void)updateAccessibility;

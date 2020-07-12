@@ -18,9 +18,9 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEmptyStateView *emptyStateView; // @synthesize emptyStateView=_emptyStateView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)buttonTapped:(id)arg1;
 - (void)applyStyle;
 - (void)applyThemeLayout;

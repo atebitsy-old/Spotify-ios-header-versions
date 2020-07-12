@@ -22,6 +22,7 @@
     double _horizontalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double horizontalMargin; // @synthesize horizontalMargin=_horizontalMargin;
 @property(copy, nonatomic) UIFont *linkFont; // @synthesize linkFont=_linkFont;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(nonatomic) long long textAlignment; // @synthesize textAlignment=_textAlignment;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

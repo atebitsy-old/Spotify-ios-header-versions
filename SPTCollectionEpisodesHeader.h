@@ -14,9 +14,9 @@
     NSMutableArray *_headerEpisodes;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *headerEpisodes; // @synthesize headerEpisodes=_headerEpisodes;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)sortEpisodesWithDescriptor:(id)arg1;
 @property(readonly, nonatomic) unsigned long long episodeCount;
 @property(readonly, nonatomic) NSArray *episodes;

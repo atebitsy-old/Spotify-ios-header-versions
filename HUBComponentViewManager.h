@@ -19,18 +19,18 @@
     id <HUBComponentEventHandler> _componentEventHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUBComponentEventHandler> componentEventHandler; // @synthesize componentEventHandler=_componentEventHandler;
 @property(readonly, nonatomic) HUBComponentUIStateManager *UIStateManager; // @synthesize UIStateManager=_UIStateManager;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(nonatomic) __weak id <HUBComponentViewManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)componentView:(id)arg1 didEndDisplayingChildComponentView:(id)arg2;
 - (void)componentView:(id)arg1 willDisplayChildComponentView:(id)arg2;
 - (id)componentView:(id)arg1 childComponentViewForModel:(id)arg2;
 - (void)restoreComponentUIStateForComponentView:(id)arg1;
 - (void)saveComponentUIStateForComponentView:(id)arg1;
-- (void)componentViewDidDisappear:(id)arg1;
-- (void)componentViewWillAppear:(id)arg1;
+- (void)componentViewDidDisappear:(id)arg1 withContext:(id)arg2;
+- (void)componentViewWillAppear:(id)arg1 withContext:(id)arg2;
 - (id)createComponentViewForModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)initWithComponentRegistry:(id)arg1 componentEventHandler:(id)arg2;
 

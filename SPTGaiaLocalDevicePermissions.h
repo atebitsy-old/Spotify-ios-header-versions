@@ -13,8 +13,8 @@
     id <SPTProductState> _productState;
 }
 
-@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (_Bool)isLocalDeviceShuffleOnly;
 - (id)initWithProductState:(id)arg1;
 

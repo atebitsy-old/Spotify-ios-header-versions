@@ -17,10 +17,10 @@
     AVAssetExportSession *_exportSession;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AVAssetExportSession *exportSession; // @synthesize exportSession=_exportSession;
 @property(readonly, nonatomic) double assetDuration; // @synthesize assetDuration=_assetDuration;
 @property(readonly, nonatomic) NSURL *assetURL; // @synthesize assetURL=_assetURL;
-- (void).cxx_destruct;
 - (void)didFailToLoadVideoForTrackWithError:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)didLoadVideoForTrackWithVideoData:(id)arg1 outputURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)load:(CDUnknownBlockType)arg1;

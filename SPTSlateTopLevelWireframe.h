@@ -17,9 +17,9 @@
     UIWindow *_window;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIWindow *window; // @synthesize window=_window;
 @property(nonatomic) __weak id <SPTSlateWireframeCustomPresentationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dismissSlateViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)presentSlateViewController:(id)arg1 animated:(_Bool)arg2;
 

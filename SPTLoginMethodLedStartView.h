@@ -19,6 +19,7 @@
     NSLayoutConstraint *_mainContainerRegularWidth;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(readonly, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) GLUEButton *loginButton; // @synthesize loginButton=_loginButton;
 @property(readonly, nonatomic) GLUEButton *signupButton; // @synthesize signupButton=_signupButton;
 @property(readonly, nonatomic) GLUELabel *buttonsHeading; // @synthesize buttonsHeading=_buttonsHeading;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
 - (id)initWithStyle:(id)arg1;

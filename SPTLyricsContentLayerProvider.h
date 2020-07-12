@@ -18,10 +18,10 @@
     SPTLyricsContentLayerContext *_context;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLyricsContentLayerContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) id <SPTLyricsTrackChecker> lyricsChecker; // @synthesize lyricsChecker=_lyricsChecker;
 @property(readonly, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)setCell:(id)arg1 expanded:(_Bool)arg2 insets:(struct UIEdgeInsets)arg3 forTrack:(id)arg4;
 - (id)reuseIdentifier;
 - (_Bool)requiresOverlayForTrack:(id)arg1;

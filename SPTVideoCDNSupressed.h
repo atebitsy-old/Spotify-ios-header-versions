@@ -14,9 +14,9 @@
     unsigned long long _failCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long failCount; // @synthesize failCount=_failCount;
 @property(retain, nonatomic) NSDate *lastFailed; // @synthesize lastFailed=_lastFailed;
-- (void).cxx_destruct;
 
 @end
 

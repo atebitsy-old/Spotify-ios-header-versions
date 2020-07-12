@@ -8,8 +8,8 @@
 
 #import "SPTAssistedCurationService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol CosmosFeature, SPTAddToSpotifyPlaylistExperimentService, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService;
+@class NSArray, NSDictionary, NSString, SPTAllocationContext;
+@protocol CosmosFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationContextHandler, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService;
 
 @interface SPTAssistedCurationServiceImplementation : NSObject <SPTAssistedCurationService>
 {
@@ -23,9 +23,16 @@
     id <SPTFreeTierRecommendationsService> _recommendationsService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTPlayer> _player;
+    NSArray *_contextHandlers;
+    id <SPTAssistedCurationContextHandler> _contextHandlerFallback;
+    NSDictionary *_providersFactory;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *providersFactory; // @synthesize providersFactory=_providersFactory;
+@property(retain, nonatomic) id <SPTAssistedCurationContextHandler> contextHandlerFallback; // @synthesize contextHandlerFallback=_contextHandlerFallback;
+@property(copy, nonatomic) NSArray *contextHandlers; // @synthesize contextHandlers=_contextHandlers;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTFreeTierRecommendationsService> recommendationsService; // @synthesize recommendationsService=_recommendationsService;
@@ -36,17 +43,23 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
-- (void).cxx_destruct;
-- (id)mostPlayedCardProviderForURI:(id)arg1;
+- (id)mostPlayedCardProviderWithContextManager:(id)arg1 andURI:(id)arg2;
 - (id)recentlyPlayedCardProvider;
-- (id)topGenresCardProviderUsingPlaylistName:(_Bool)arg1;
+- (id)topGenresCardProviderWithContextManager:(id)arg1;
 - (id)likedSongsCardProvider;
+- (id)similarToCardProvider;
+- (id)recommendedTracksCardProvider:(id)arg1;
 - (id)cardProvidersForURI:(id)arg1;
-- (id)datasourceForURI:(id)arg1;
-- (long long)assistedCurationContextTypeForURI:(id)arg1;
+- (id)contextHandlerForURI:(id)arg1;
+- (void)setupProvidersFactory;
+- (void)setupContextHandlers;
+- (id)queueContextHandler;
+- (id)likedSongsContextHandler;
+- (id)playlistContextHandler;
 - (id)providerCardsSortMechanismForURI:(id)arg1;
 - (id)provideAddTrackHandlerForURI:(id)arg1;
 - (id)provideAssistedCurationModelForURI:(id)arg1;
+- (void)load;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

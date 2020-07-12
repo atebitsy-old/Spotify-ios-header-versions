@@ -15,18 +15,18 @@
 {
     _Bool _granularDownloadProgressEnabled;
     long long _currentStatus;
-    struct UIView *_animationView;
+    UIView<GLUEStatefulAnimationLoading><GLUEStatefulAnimationControlling><GLUEAnimationControlling> *_animationView;
     id <GLUETheme> _theme;
     double _currentProgress;
 }
 
 + (id)accessibilityLabelForStatus:(long long)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double currentProgress; // @synthesize currentProgress=_currentProgress;
 @property(nonatomic) _Bool granularDownloadProgressEnabled; // @synthesize granularDownloadProgressEnabled=_granularDownloadProgressEnabled;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView<GLUEStatefulAnimationLoading><GLUEStatefulAnimationControlling><GLUEAnimationControlling> *animationView; // @synthesize animationView=_animationView;
 @property(nonatomic) long long currentStatus; // @synthesize currentStatus=_currentStatus;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)applicationWillEnterForeground;
 - (void)applicationDidEnterBackground;

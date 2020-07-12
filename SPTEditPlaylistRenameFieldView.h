@@ -16,9 +16,9 @@
     UIView *_textFieldUnderlineView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *textFieldUnderlineView; // @synthesize textFieldUnderlineView=_textFieldUnderlineView;
 @property(retain, nonatomic) UITextField *textField; // @synthesize textField=_textField;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addViewConstraints;
 - (void)makeEditable;

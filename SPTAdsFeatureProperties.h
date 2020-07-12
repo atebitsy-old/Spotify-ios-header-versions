@@ -18,11 +18,11 @@
     NSString *_adsInAppBrowserIosString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *adsInAppBrowserIosString; // @synthesize adsInAppBrowserIosString=_adsInAppBrowserIosString;
 @property(readonly, nonatomic) unsigned long long adsInAppBrowserIos; // @synthesize adsInAppBrowserIos=_adsInAppBrowserIos;
 @property(readonly, nonatomic) _Bool audioAdsSwiftNpvEnabled; // @synthesize audioAdsSwiftNpvEnabled=_audioAdsSwiftNpvEnabled;
 @property(readonly, nonatomic) _Bool creamBookmarkAudioAdsIos; // @synthesize creamBookmarkAudioAdsIos=_creamBookmarkAudioAdsIos;
-- (void).cxx_destruct;
 - (unsigned long long)mapAdsInAppBrowserIosToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

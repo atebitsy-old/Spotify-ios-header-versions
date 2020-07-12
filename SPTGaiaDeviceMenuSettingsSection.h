@@ -16,10 +16,10 @@
     SPTGaiaDependencyInjectorImplementation *_dependencyInjector;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaDependencyInjectorImplementation *dependencyInjector; // @synthesize dependencyInjector=_dependencyInjector;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerPresenter> devicePickerPresenter; // @synthesize devicePickerPresenter=_devicePickerPresenter;
 @property(retain, nonatomic) SPTSettingsButtonTableViewCell *buttonCell; // @synthesize buttonCell=_buttonCell;
-- (void).cxx_destruct;
 - (void)didSelectRow:(long long)arg1;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

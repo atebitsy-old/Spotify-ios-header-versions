@@ -25,11 +25,11 @@
 + (double)preferredViewHeightForDisplayingModel:(id)arg1 theme:(id)arg2;
 + (id)buttonModelFromModel:(id)arg1;
 + (id)defaultHeaderStyleForModel:(id)arg1 theme:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *gradientBackgroundColor; // @synthesize gradientBackgroundColor=_gradientBackgroundColor;
 @property(readonly, nonatomic) SPTBrowseUIHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)headerButtonTapped;

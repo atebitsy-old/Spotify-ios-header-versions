@@ -14,8 +14,8 @@
     id <HUBComponentModel> _componentModel;
 }
 
-@property(readonly, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
 @property(readonly, nonatomic) NSDictionary *uiimpression5;
 - (id)uiimpression5LogMessageWithTimestamp:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *impressionType;

@@ -9,7 +9,7 @@
 #import "SPTLyricsUIFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLyricsContentLayerContext, SPTLyricsFeatureImplementation, SPTLyricsV2Configuration, SPTLyricsV2GLUETheme, SPTVocalRemovalConfiguration;
-@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTBannerFeature, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTGLUEService, SPTInAppMessageService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
+@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTBannerFeature, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface SPTLyricsUIFeatureImplementation : NSObject <SPTLyricsUIFeature>
 {
@@ -17,7 +17,6 @@
     id <SPContextMenuFeature> _contextMenuService;
     id <SPTCoreService> _coreService;
     id <SPTEventSenderService> _eventSenderService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTGLUEService> _glueService;
     id <SPTNetworkService> _networkService;
     id <SPTNowPlayingService> _nowPlayingService;
@@ -39,6 +38,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTLyricsFeatureImplementation *lyricsService; // @synthesize lyricsService=_lyricsService;
 @property(retain, nonatomic) SPTLyricsContentLayerContext *contentLayerContext; // @synthesize contentLayerContext=_contentLayerContext;
 @property(retain, nonatomic) SPTVocalRemovalConfiguration *vocalRemovalConfiguration; // @synthesize vocalRemovalConfiguration=_vocalRemovalConfiguration;
@@ -57,12 +57,10 @@
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideResolver;
 - (void)registerNowPlayingContentLayerProvider;
 - (void)registerNowPlayingScrollProvider;

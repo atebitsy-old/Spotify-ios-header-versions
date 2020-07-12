@@ -17,10 +17,10 @@
     NSNumber *_repeatingTrack;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *repeatingTrack; // @synthesize repeatingTrack=_repeatingTrack;
 @property(retain, nonatomic) NSNumber *repeatingContext; // @synthesize repeatingContext=_repeatingContext;
 @property(retain, nonatomic) NSNumber *shufflingContext; // @synthesize shufflingContext=_shufflingContext;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

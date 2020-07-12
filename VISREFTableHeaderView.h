@@ -18,10 +18,10 @@
     id <VISREFHeaderController> _visrefHeaderController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <VISREFHeaderController> visrefHeaderController; // @synthesize visrefHeaderController=_visrefHeaderController;
 @property(nonatomic) double suggestedScrollViewOffset; // @synthesize suggestedScrollViewOffset=_suggestedScrollViewOffset;
 @property(nonatomic) __weak id <VISREFTableHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)headerHeightDidChangeWithTotalHeaderHeight:(double)arg1 safeAreaTopInset:(double)arg2 contentHeight:(double)arg3 topAccessoryViewHeight:(double)arg4;
 - (void)dealloc;
 - (void)setupLayout;

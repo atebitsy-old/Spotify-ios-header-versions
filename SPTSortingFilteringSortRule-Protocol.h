@@ -9,8 +9,8 @@
 @class NSString;
 
 @protocol SPTSortingFilteringSortRule <NSObject>
-@property(readonly, nonatomic) _Bool ascendingOrder;
-@property(readonly, copy, nonatomic) NSString *title;
-@property(readonly, copy, nonatomic) NSString *identifier;
+@property(nonatomic, readonly) _Bool ascendingOrder;
+@property(nonatomic, readonly) NSString *title;
+@property(nonatomic, readonly) NSString *identifier;
 @end
 

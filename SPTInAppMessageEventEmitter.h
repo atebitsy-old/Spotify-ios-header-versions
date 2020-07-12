@@ -10,13 +10,13 @@
 #import "SPTInstrumentationCurrentPageViewObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSNotificationCenter, NSString, SPTInAppMessageFeatureFlagChecks;
+@class NSNotificationCenter, NSString, SPTInAppMessageFeatureProperties;
 @protocol SPTCarDetector, SPTInAppMessageRequester;
 
 @interface SPTInAppMessageEventEmitter : NSObject <SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver, SPTInAppMessageMessageRequesterDelegate>
 {
     id <SPTCarDetector> _carDetector;
-    SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
+    SPTInAppMessageFeatureProperties *_featureProperties;
     id <SPTInAppMessageRequester> _messageRequester;
     NSNotificationCenter *_notificationCenter;
     NSString *_matchingNavigationPattern;
@@ -26,6 +26,7 @@
     NSString *_previousPageName;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *previousPageName; // @synthesize previousPageName=_previousPageName;
 @property(copy, nonatomic) NSString *previousPageURI; // @synthesize previousPageURI=_previousPageURI;
 @property(copy, nonatomic) NSString *matchingClientEventPattern; // @synthesize matchingClientEventPattern=_matchingClientEventPattern;
@@ -33,9 +34,8 @@
 @property(copy, nonatomic) NSString *matchingNavigationPattern; // @synthesize matchingNavigationPattern=_matchingNavigationPattern;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) id <SPTInAppMessageRequester> messageRequester; // @synthesize messageRequester=_messageRequester;
-@property(readonly, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
+@property(readonly, nonatomic) SPTInAppMessageFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
-- (void).cxx_destruct;
 - (void)postCancelPresentationNotification:(id)arg1;
 - (void)compareMatchedPatternWithCurrentClientEventPattern:(id)arg1;
 - (void)compareMatchedPatternWithCurrentTrackURI:(id)arg1;
@@ -44,7 +44,7 @@
 - (void)messageRequester:(id)arg1 didRecieveMessageRequest:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)currentPageViewUpdated:(id)arg1;
-- (id)initWithCarDetector:(id)arg1 featureFlagChecker:(id)arg2 messageRequester:(id)arg3 notificationCenter:(id)arg4;
+- (id)initWithCarDetector:(id)arg1 featureProperties:(id)arg2 messageRequester:(id)arg3 notificationCenter:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

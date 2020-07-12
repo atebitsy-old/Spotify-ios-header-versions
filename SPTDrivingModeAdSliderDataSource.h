@@ -16,8 +16,8 @@
     id <SPTNowPlayingDurationUnitViewModel> _durationViewModel;
 }
 
-@property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 - (_Bool)nowPlayingSliderDisallowSeeking:(id)arg1;
 - (double)nowPlayingSliderCurrentPosition:(id)arg1;
 - (double)nowPlayingSliderCurrentDuration:(id)arg1;

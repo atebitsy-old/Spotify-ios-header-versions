@@ -14,8 +14,8 @@
     id <SPTAdPreviewToolPreview> _preview;
 }
 
-@property(retain, nonatomic) id <SPTAdPreviewToolPreview> preview; // @synthesize preview=_preview;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTAdPreviewToolPreview> preview; // @synthesize preview=_preview;
 - (id)provideMetadataFor:(long long)arg1;
 - (id)provideSubtitle;
 - (id)provideURI;

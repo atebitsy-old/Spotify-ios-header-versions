@@ -17,8 +17,8 @@
     id <HUBContentOperationDelegate> delegate;
 }
 
-@property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
 - (void)next:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithReloadSignal:(id)arg1;

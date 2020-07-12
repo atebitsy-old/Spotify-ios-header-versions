@@ -15,10 +15,10 @@
     struct UIEdgeInsets _windowedContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *windowedContentViewConstraints; // @synthesize windowedContentViewConstraints=_windowedContentViewConstraints;
 @property(retain, nonatomic) SPTDrivingModeTrackInfoView *trackInfoView; // @synthesize trackInfoView=_trackInfoView;
 @property(nonatomic) struct UIEdgeInsets windowedContentInsets; // @synthesize windowedContentInsets=_windowedContentInsets;
-- (void).cxx_destruct;
 - (void)clear;
 - (void)setTitle:(id)arg1 subtitle:(id)arg2;
 - (void)setupUI;

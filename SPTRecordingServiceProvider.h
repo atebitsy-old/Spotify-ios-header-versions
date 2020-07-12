@@ -17,9 +17,9 @@
     NSMutableSet *_providedServices;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *providedServices; // @synthesize providedServices=_providedServices;
 @property(retain, nonatomic) id <SPTServiceProvider> parentServiceProvider; // @synthesize parentServiceProvider=_parentServiceProvider;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSSet *recordedDependencies;
 - (id)provideOptionalServiceForIdentifier:(id)arg1;
 - (id)provideServiceForIdentifier:(id)arg1;

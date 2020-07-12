@@ -18,11 +18,11 @@
     double _margin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double margin; // @synthesize margin=_margin;
 @property(nonatomic) double radius; // @synthesize radius=_radius;
 @property(copy, nonatomic) UIColor *placeholderColor; // @synthesize placeholderColor=_placeholderColor;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningSessionViewPlaceholderCellStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

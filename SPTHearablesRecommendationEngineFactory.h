@@ -14,9 +14,9 @@
     id <SPTNetworkConnectivityController> _connectivityController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
-- (void).cxx_destruct;
 - (id)provideOfflineRecommendationEngine;
 - (id)provideOnlineRecommendationEngine;
 - (id)provideRecommendationEngine;

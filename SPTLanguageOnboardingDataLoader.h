@@ -17,9 +17,9 @@
     SPTDataLoader *_dataLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTLanguageOnboardingDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)decorateRequest:(id)arg1 withIdentifier:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

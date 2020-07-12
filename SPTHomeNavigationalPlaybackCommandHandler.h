@@ -20,12 +20,12 @@
     id <HUBCommandHandler> _navigateCommand;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUBCommandHandler> navigateCommand; // @synthesize navigateCommand=_navigateCommand;
 @property(readonly, nonatomic) id <HUBCommandHandler> playCommand; // @synthesize playCommand=_playCommand;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (void)playUrl:(id)arg1 withCommand:(id)arg2 event:(id)arg3;
 - (void)handlePlayThenNavigateEventWithUrl:(id)arg1 command:(id)arg2 event:(id)arg3;
 - (void)handlePlayAndNavigateEventWithUrl:(id)arg1 command:(id)arg2 event:(id)arg3;

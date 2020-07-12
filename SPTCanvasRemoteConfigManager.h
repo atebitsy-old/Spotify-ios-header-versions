@@ -6,16 +6,26 @@
 
 #import <objc/NSObject.h>
 
-@class SPTCanvasFeatureProperties;
-
 @interface SPTCanvasRemoteConfigManager : NSObject
 {
-    SPTCanvasFeatureProperties *_remoteConfigProperties;
+    _Bool _canvasStateGabitoEnabled;
+    _Bool _canvasNoCacheEnabled;
+    _Bool _canvasPlaylistEnabled;
+    _Bool _canvasAbSettingsEnabled;
+    _Bool _canvasAbTapEnabled;
+    _Bool _canvasAbToggleEnabled;
+    _Bool _canvasAbBlankToggleEnabled;
+    _Bool _canvasEnabled;
 }
 
-@property(readonly, nonatomic) SPTCanvasFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
-- (void).cxx_destruct;
-@property(readonly, nonatomic, getter=isCanvasStateGabitoEnabled) _Bool canvasStateGabitoEnabled;
+@property(readonly, nonatomic, getter=isCanvasEnabled) _Bool canvasEnabled; // @synthesize canvasEnabled=_canvasEnabled;
+@property(readonly, nonatomic, getter=isCanvasAbBlankToggleEnabled) _Bool canvasAbBlankToggleEnabled; // @synthesize canvasAbBlankToggleEnabled=_canvasAbBlankToggleEnabled;
+@property(readonly, nonatomic, getter=isCanvasAbToggleEnabled) _Bool canvasAbToggleEnabled; // @synthesize canvasAbToggleEnabled=_canvasAbToggleEnabled;
+@property(readonly, nonatomic, getter=isCanvasAbTapEnabled) _Bool canvasAbTapEnabled; // @synthesize canvasAbTapEnabled=_canvasAbTapEnabled;
+@property(readonly, nonatomic, getter=isCanvasAbSettingsEnabled) _Bool canvasAbSettingsEnabled; // @synthesize canvasAbSettingsEnabled=_canvasAbSettingsEnabled;
+@property(readonly, nonatomic, getter=isCanvasPlaylistEnabled) _Bool canvasPlaylistEnabled; // @synthesize canvasPlaylistEnabled=_canvasPlaylistEnabled;
+@property(readonly, nonatomic, getter=isCanvasNoCacheEnabled) _Bool canvasNoCacheEnabled; // @synthesize canvasNoCacheEnabled=_canvasNoCacheEnabled;
+@property(readonly, nonatomic, getter=isCanvasStateGabitoEnabled) _Bool canvasStateGabitoEnabled; // @synthesize canvasStateGabitoEnabled=_canvasStateGabitoEnabled;
 - (id)initWithRemoteConfigProperties:(id)arg1;
 
 @end

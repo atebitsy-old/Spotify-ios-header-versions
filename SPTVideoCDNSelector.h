@@ -13,8 +13,8 @@
     NSMutableDictionary *_suppressedCDNs;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *suppressedCDNs; // @synthesize suppressedCDNs=_suppressedCDNs;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *suppressedCDNs; // @synthesize suppressedCDNs=_suppressedCDNs;
 - (id)failCountsForURLsInOrder:(id)arg1;
 - (id)choseURL:(id)arg1 force:(_Bool)arg2;
 - (long long)intervalForEntry:(id)arg1;

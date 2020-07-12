@@ -33,6 +33,7 @@
     NSString *_triggerType;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *triggerType; // @synthesize triggerType=_triggerType;
 @property(copy, nonatomic) NSString *matchedPattern; // @synthesize matchedPattern=_matchedPattern;
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
@@ -49,7 +50,6 @@
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessageViewModel> messageViewModel; // @synthesize messageViewModel=_messageViewModel;
 @property(readonly, nonatomic) SPTInAppMessageNoteOverlayController *noteOverlayController; // @synthesize noteOverlayController=_noteOverlayController;
-- (void).cxx_destruct;
 - (void)noteMessageSwipedAway;
 - (void)cancelNoteMessagePresentation:(id)arg1;
 - (_Bool)canPresentNote;

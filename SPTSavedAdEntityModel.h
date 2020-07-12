@@ -18,13 +18,13 @@
     NSString *_actionText;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *actionText; // @synthesize actionText=_actionText;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) NSString *advertiser; // @synthesize advertiser=_advertiser;
 @property(readonly, nonatomic) NSURL *coverArtURL; // @synthesize coverArtURL=_coverArtURL;
 @property(readonly, nonatomic) NSURL *clickThroughURL; // @synthesize clickThroughURL=_clickThroughURL;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

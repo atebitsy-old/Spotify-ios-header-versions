@@ -25,6 +25,7 @@
     struct CGSize _shadowOffset;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double maxScreenUsage; // @synthesize maxScreenUsage=_maxScreenUsage;
 @property(readonly, nonatomic) double sectionHeaderHeight; // @synthesize sectionHeaderHeight=_sectionHeaderHeight;
 @property(readonly, nonatomic) UIColor *dimmingViewBackgroundColor; // @synthesize dimmingViewBackgroundColor=_dimmingViewBackgroundColor;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) double bottomMargin; // @synthesize bottomMargin=_bottomMargin;
 @property(readonly, nonatomic) double verticalMargin; // @synthesize verticalMargin=_verticalMargin;
 @property(readonly, nonatomic) double horizontalMargin; // @synthesize horizontalMargin=_horizontalMargin;
-- (void).cxx_destruct;
 - (id)tagFilterButtonStyle;
 - (id)clearFilterButtonStyle;
 - (id)filterButtonsCellStyle;

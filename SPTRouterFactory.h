@@ -14,8 +14,8 @@
 }
 
 + (id)routerFactoryWithResolve:(const struct Resolve *)arg1 scheduler:(struct Scheduler *)arg2;
-@property(retain, nonatomic) SPTCppResolver *concreteResolver; // @synthesize concreteResolver=_concreteResolver;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTCppResolver *concreteResolver; // @synthesize concreteResolver=_concreteResolver;
 - (id)provideRouter;
 - (void)dealloc;
 - (id)initWithResolve:(const struct Resolve *)arg1 scheduler:(struct Scheduler *)arg2;

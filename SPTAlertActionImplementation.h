@@ -18,11 +18,11 @@
     CDUnknownBlockType _handler;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic) CDUnknownBlockType handler; // @synthesize handler=_handler;
 @property(readonly, nonatomic) long long style; // @synthesize style=_style;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 style:(long long)arg2 handler:(CDUnknownBlockType)arg3;
 
 // Remaining properties

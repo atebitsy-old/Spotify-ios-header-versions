@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTInstrumentationCurrentPageViewObserver-Protocol.h"
-
-@interface _TtC27NavigationLoggerFeatureImplP33_B6D2AB38AA2A93655E8016EEFF67EC6E23InstrumentationObserver : NSObject <SPTInstrumentationCurrentPageViewObserver>
+@interface _TtC27NavigationLoggerFeatureImplP33_B6D2AB38AA2A93655E8016EEFF67EC6E23InstrumentationObserver : NSObject
 {
     // Error parsing type: , name: callback
 }

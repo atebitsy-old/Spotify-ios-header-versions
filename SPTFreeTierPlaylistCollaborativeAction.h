@@ -16,10 +16,10 @@
     NSURL *_playlistURL;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isCollaborative) _Bool collaborative; // @synthesize collaborative=_collaborative;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)style;
 - (id)logEventName;

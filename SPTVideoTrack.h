@@ -16,11 +16,11 @@
     NSString *_contextURI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *contextURI; // @synthesize contextURI=_contextURI;
 @property(readonly, nonatomic) NSString *playbackID; // @synthesize playbackID=_playbackID;
 @property(readonly, nonatomic) SPTPlayOrigin *origin; // @synthesize origin=_origin;
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isBackgroundable;
 - (unsigned long long)hash;

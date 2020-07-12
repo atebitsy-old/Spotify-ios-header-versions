@@ -17,11 +17,11 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTAccesspointWebTokenRequest *webTokenRequest; // @synthesize webTokenRequest=_webTokenRequest;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (void)abortRequestWebAccessToken;
 - (void)showAbuseReportForURL:(id)arg1;
 - (void)dealloc;

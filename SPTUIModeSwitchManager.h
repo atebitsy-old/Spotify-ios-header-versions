@@ -24,6 +24,7 @@
     id <SPTCrashReporter> _crashReporter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(retain, nonatomic) id <SPTUIModeTransitionCoordinator> transitionCoordinator; // @synthesize transitionCoordinator=_transitionCoordinator;
 @property(retain) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(nonatomic) long long currentState; // @synthesize currentState=_currentState;
 @property(nonatomic) __weak id <SPTFeatureFlagSignal> theNewExperienceEnabledSignal; // @synthesize theNewExperienceEnabledSignal=_theNewExperienceEnabledSignal;
-- (void).cxx_destruct;
 - (void)completeUIModeSwitching;
 - (void)relogin;
 - (void)performUIModeSwitch;

@@ -22,11 +22,11 @@
     SPTPopupDialog *_dialog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPopupDialog *dialog; // @synthesize dialog=_dialog;
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
 @property(readonly, nonatomic) SPTLanguageOnboardingTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLanguageOnboardingViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)presentRequiredNumberOfLanguagesErrorDialog;
 - (void)presentErrorDialogWithRetryHandler:(CDUnknownBlockType)arg1 cancelHandler:(CDUnknownBlockType)arg2;
 - (void)fetchLanguages;

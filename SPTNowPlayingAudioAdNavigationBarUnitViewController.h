@@ -18,9 +18,9 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTAdNowPlayingManager *nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
-- (void).cxx_destruct;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (struct CGSize)preferredContentSize;
 - (double)viewControllerPriority;

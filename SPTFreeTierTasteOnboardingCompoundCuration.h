@@ -17,9 +17,9 @@
     SPTObserverManager *_tasteOnboardingCurationObserver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *tasteOnboardingCurationObserver; // @synthesize tasteOnboardingCurationObserver=_tasteOnboardingCurationObserver;
 @property(retain, nonatomic) id <SPTFreeTierTasteOnboardingCurationProvider> podcastOnboardingCurationProvider; // @synthesize podcastOnboardingCurationProvider=_podcastOnboardingCurationProvider;
-- (void).cxx_destruct;
 - (void)tasteOnboardingDidFinishCurating:(id)arg1;
 - (void)tasteOnboardingDidUpdateTaste:(id)arg1;
 - (void)dealloc;

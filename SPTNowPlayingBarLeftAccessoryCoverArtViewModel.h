@@ -21,13 +21,13 @@
     NSURL *_currentImageURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *currentImageURL; // @synthesize currentImageURL=_currentImageURL;
 @property(readonly, nonatomic) id <GLUEImageLoader> nextTrackImageLoader; // @synthesize nextTrackImageLoader=_nextTrackImageLoader;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(nonatomic) __weak id <SPTNowPlayingBarLeftAccessoryCoverArtViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
 - (void)playerDidReceiveStateUpdate:(id)arg1;

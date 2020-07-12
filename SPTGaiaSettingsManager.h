@@ -27,6 +27,7 @@
 }
 
 + (id)createDefaultSettingStorage;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaDependencyInjectorImplementation *dependencyInjector; // @synthesize dependencyInjector=_dependencyInjector;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> deviceConfiguration; // @synthesize deviceConfiguration=_deviceConfiguration;
 @property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTGaiaSettingsStorageProtocol> settingsStorage; // @synthesize settingsStorage=_settingsStorage;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerPresenter> devicePickerPresenter; // @synthesize devicePickerPresenter=_devicePickerPresenter;
-- (void).cxx_destruct;
 - (id)provideHomeDeviceResetSectionWithSettingsViewController:(id)arg1;
 - (id)provideHomeDeviceHeaderSectionWithSettingsViewController:(id)arg1;
 - (id)provideLockScreenControlsSectionWithSettingsViewController:(id)arg1;

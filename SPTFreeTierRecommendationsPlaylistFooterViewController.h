@@ -22,12 +22,12 @@
     HUBView *_hubView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBView *hubView; // @synthesize hubView=_hubView;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(readonly, nonatomic) SPTHubViewModelProvider *hubViewModelProvider; // @synthesize hubViewModelProvider=_hubViewModelProvider;
 @property(readonly, nonatomic) id <SPTFreeTierRecommendationsPlaylistHubViewProvider> hubViewProvider; // @synthesize hubViewProvider=_hubViewProvider;
 @property(nonatomic) __weak id <SPTFreeTierRecommendationsPlaylistFooterViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)hubView:(id)arg1 componentViewDidDisappear:(id)arg2;
 - (void)hubView:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)viewModelDidLoad:(id)arg1 dataSource:(unsigned long long)arg2;

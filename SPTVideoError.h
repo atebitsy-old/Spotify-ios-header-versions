@@ -14,9 +14,9 @@
     NSString *_extra;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *extra; // @synthesize extra=_extra;
 @property(readonly, nonatomic) int code; // @synthesize code=_code;
-- (void).cxx_destruct;
 - (id)serializedDictionary;
 - (id)initWithCode:(int)arg1 extra:(id)arg2;
 

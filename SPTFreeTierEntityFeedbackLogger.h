@@ -17,11 +17,11 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
-- (void).cxx_destruct;
 - (void)logInteractionWithIntent:(id)arg1 entityURI:(id)arg2 action:(id)arg3;
 - (void)logUnbanForEntityURI:(id)arg1;
 - (void)logUnlikeForEntityURI:(id)arg1;

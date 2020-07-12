@@ -15,10 +15,10 @@
     NSArray *_users;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *users; // @synthesize users=_users;
 @property(readonly, copy, nonatomic) NSString *colorHex; // @synthesize colorHex=_colorHex;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

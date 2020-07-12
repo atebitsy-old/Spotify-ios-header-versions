@@ -20,12 +20,12 @@
 
 + (id)productState;
 + (void)setProductState:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) _Bool dataSaverActivated; // @synthesize dataSaverActivated=_dataSaverActivated;
 @property(readonly, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTInAppMessageMessageRequester> inAppMessageRequester; // @synthesize inAppMessageRequester=_inAppMessageRequester;
-- (void).cxx_destruct;
 - (_Bool)shouldCellBeDisabledForIndex:(long long)arg1;
 - (unsigned long long)indexForBitrateSetting:(long long)arg1;
 - (long long)bitrateSettingForIndex:(unsigned long long)arg1;

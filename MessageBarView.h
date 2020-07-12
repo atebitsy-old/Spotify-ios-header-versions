@@ -15,10 +15,10 @@
     MessageBarItem *_messageBarItem;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MessageBarItem *messageBarItem; // @synthesize messageBarItem=_messageBarItem;
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
-- (void).cxx_destruct;
 - (void)setAttributedMessage:(id)arg1 orMessage:(id)arg2;
 - (void)setMessageBarItem:(id)arg1 animationDirection:(long long)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;

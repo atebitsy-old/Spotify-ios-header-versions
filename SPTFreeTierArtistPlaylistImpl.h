@@ -17,8 +17,8 @@
     unsigned long long _numberOfFollowers;
 }
 
-@property(nonatomic) unsigned long long numberOfFollowers; // @synthesize numberOfFollowers=_numberOfFollowers;
 - (void).cxx_destruct;
+@property(nonatomic) unsigned long long numberOfFollowers; // @synthesize numberOfFollowers=_numberOfFollowers;
 - (_Bool)isPreviewable;
 @property(readonly, nonatomic) NSURL *imageURL;
 - (id)actionURL;

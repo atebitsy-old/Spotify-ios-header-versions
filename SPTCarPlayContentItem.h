@@ -21,13 +21,13 @@
     SPTCarPlayFeatureProperties *_properties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) NSCache *iconCache; // @synthesize iconCache=_iconCache;
 @property(retain, nonatomic) SPTCarPlayGradientImageBuilder *imageBuilder; // @synthesize imageBuilder=_imageBuilder;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) _Bool didLoadArtwork; // @synthesize didLoadArtwork=_didLoadArtwork;
 @property(readonly, nonatomic) id <SPTExternalIntegrationContent> content; // @synthesize content=_content;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)setArtworkImage:(id)arg1;
 - (void)configurePlaceholderArtwork;

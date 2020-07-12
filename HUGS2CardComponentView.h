@@ -20,9 +20,9 @@
 
 + (double)widthForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2 model:(id)arg3;
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEntityCardView *cardView; // @synthesize cardView=_cardView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (struct CGSize)mainImageSizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2;
 - (void)configurePlaceholderWithIcon:(id)arg1;
 - (void)sendSelectionEvent;

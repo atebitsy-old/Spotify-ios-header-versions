@@ -18,11 +18,11 @@
     NSString *_siriIntentsUnableToStreamMusicWorkaroundString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *siriIntentsUnableToStreamMusicWorkaroundString; // @synthesize siriIntentsUnableToStreamMusicWorkaroundString=_siriIntentsUnableToStreamMusicWorkaroundString;
 @property(readonly, nonatomic) unsigned long long siriIntentsUnableToStreamMusicWorkaround; // @synthesize siriIntentsUnableToStreamMusicWorkaround=_siriIntentsUnableToStreamMusicWorkaround;
 @property(readonly, nonatomic) _Bool shouldSendPerformanceMeasurements; // @synthesize shouldSendPerformanceMeasurements=_shouldSendPerformanceMeasurements;
 @property(readonly, nonatomic) _Bool siriIntentsAddCollectionPlaylistsToUserVocabulariesEnabled; // @synthesize siriIntentsAddCollectionPlaylistsToUserVocabulariesEnabled=_siriIntentsAddCollectionPlaylistsToUserVocabulariesEnabled;
-- (void).cxx_destruct;
 - (unsigned long long)mapSiriIntentsUnableToStreamMusicWorkaroundToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

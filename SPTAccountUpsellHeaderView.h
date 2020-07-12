@@ -8,7 +8,7 @@
 
 #import "SPTThemableView-Protocol.h"
 
-@class GLUEButton, GLUEGradientView, NSArray, NSString, UILabel;
+@class GLUEGradientView, NSArray, NSString, UILabel;
 @protocol GLUETheme, SPTThemableViewLayoutDelegate;
 
 @interface SPTAccountUpsellHeaderView : UIView <SPTThemableView>
@@ -16,7 +16,6 @@
     id <SPTThemableViewLayoutDelegate> _layoutDelegate;
     UILabel *_titleLabel;
     UILabel *_subtitleLabel;
-    GLUEButton *_buyButton;
     UIView *_contentView;
     GLUEGradientView *_backgroundGradientView;
     NSArray *_layout;
@@ -24,16 +23,14 @@
 }
 
 + (_Bool)requiresConstraintBasedLayout;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(copy, nonatomic) NSArray *layout; // @synthesize layout=_layout;
 @property(readonly, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
-@property(readonly, nonatomic) GLUEButton *buyButton; // @synthesize buyButton=_buyButton;
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
-- (void)setBuyButtonHidden:(_Bool)arg1;
 - (void)setSubtitleText:(id)arg1;
 - (void)setHeaderText:(id)arg1;
 - (id)layoutForView;

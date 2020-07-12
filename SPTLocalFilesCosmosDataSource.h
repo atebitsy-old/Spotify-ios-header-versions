@@ -19,10 +19,10 @@
     NSMutableDictionary *_allTracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *allTracks; // @synthesize allTracks=_allTracks;
 @property(readonly, nonatomic) id <SPTLocalFilesPlaylistsDataSource> playlistsDataSource; // @synthesize playlistsDataSource=_playlistsDataSource;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
-- (void).cxx_destruct;
 - (void)waitOnScannerStatus:(CDUnknownBlockType)arg1;
 - (void)registerSource:(CDUnknownBlockType)arg1;
 - (void)fetchSpotifyPlaylistList:(CDUnknownBlockType)arg1;

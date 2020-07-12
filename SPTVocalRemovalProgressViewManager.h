@@ -15,9 +15,9 @@
     SPTProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)dismissProgressView;
 - (void)showFailureViewInView:(id)arg1;
 - (void)showLoadingViewInView:(id)arg1;

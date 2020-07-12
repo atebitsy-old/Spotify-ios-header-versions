@@ -15,10 +15,10 @@
     NSString *_predictionID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) float confidence; // @synthesize confidence=_confidence;
 @property(readonly, nonatomic, getter=isCarDetected) _Bool carDetected; // @synthesize carDetected=_carDetected;
 @property(readonly, nonatomic) NSString *predictionID; // @synthesize predictionID=_predictionID;
-- (void).cxx_destruct;
 - (id)initWithPredictionID:(id)arg1 carDetectedPrediction:(_Bool)arg2 confidence:(float)arg3;
 
 @end

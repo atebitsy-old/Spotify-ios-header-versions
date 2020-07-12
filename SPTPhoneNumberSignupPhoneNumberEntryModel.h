@@ -15,10 +15,10 @@
     NSString *_nationalPhoneNumber;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *nationalPhoneNumber; // @synthesize nationalPhoneNumber=_nationalPhoneNumber;
 @property(copy, nonatomic) NSString *selectedCountryCode; // @synthesize selectedCountryCode=_selectedCountryCode;
 @property(readonly, copy, nonatomic) NSDictionary *allowedCallingCodes; // @synthesize allowedCallingCodes=_allowedCallingCodes;
-- (void).cxx_destruct;
 - (void)verifyCountryCodeInCountries;
 - (id)initWithAllowedCallingCodes:(id)arg1 selectedCountryCode:(id)arg2;
 

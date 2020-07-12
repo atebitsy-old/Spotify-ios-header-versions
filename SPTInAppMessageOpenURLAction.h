@@ -16,8 +16,8 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
-@property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void)executeActionWithURL:(id)arg1;
 - (id)initWithLinkDispatcher:(id)arg1;
 

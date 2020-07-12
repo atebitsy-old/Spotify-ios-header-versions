@@ -16,8 +16,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logUIImpressionOnPageURI:(id)arg1 identifier:(id)arg2 impressionType:(id)arg3;
 - (void)logAlertOnPageURI:(id)arg1 alertId:(id)arg2;
 - (void)logCollectionUserIntent:(unsigned long long)arg1 pageURI:(id)arg2 targetURI:(id)arg3;

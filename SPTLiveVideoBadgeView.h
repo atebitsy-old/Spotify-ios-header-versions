@@ -14,9 +14,9 @@
     UILabel *_liveLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *liveLabel; // @synthesize liveLabel=_liveLabel;
 @property(retain, nonatomic) UIView *dotView; // @synthesize dotView=_dotView;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupLabel;
 - (void)setupDot;

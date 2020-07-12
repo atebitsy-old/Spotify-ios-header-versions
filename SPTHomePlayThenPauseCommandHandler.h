@@ -16,9 +16,9 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <HUBCommandHandler> playCommand; // @synthesize playCommand=_playCommand;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithPlayer:(id)arg1 defaultCommands:(id)arg2;
 

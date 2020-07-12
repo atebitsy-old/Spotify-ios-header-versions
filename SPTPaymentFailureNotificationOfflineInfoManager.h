@@ -13,8 +13,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (long long)numberOfOfflineListsFromResponse:(id)arg1;
 - (void)fetchNumberOfOfflineLists:(CDUnknownBlockType)arg1;
 - (id)initWithResolver:(id)arg1;

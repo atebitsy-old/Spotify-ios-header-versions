@@ -17,9 +17,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPaidSocialCampaign; // @synthesize isPaidSocialCampaign=_isPaidSocialCampaign;
 @property(retain, nonatomic) NSURL *deeplinkURI; // @synthesize deeplinkURI=_deeplinkURI;
-- (void).cxx_destruct;
 - (void)didUnloadTasteOnboardingService;
 - (void)didLoadTasteOnboardingService;
 - (void)didReceiveURIOpenAttemptNotification:(id)arg1;

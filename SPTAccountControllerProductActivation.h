@@ -14,9 +14,9 @@
     id <SPTAccountControllerProductActivationDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTAccountControllerProductActivationDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) long long product; // @synthesize product=_product;
-- (void).cxx_destruct;
 - (void)start;
 - (id)initWithAvailableProduct:(long long)arg1 delegate:(id)arg2;
 

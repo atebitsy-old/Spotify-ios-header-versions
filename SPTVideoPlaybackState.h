@@ -19,6 +19,7 @@
     double _playbackSpeed;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isBuffering) _Bool buffering; // @synthesize buffering=_buffering;
 @property(readonly, nonatomic) double playbackSpeed; // @synthesize playbackSpeed=_playbackSpeed;
 @property(readonly, nonatomic, getter=isPaused) _Bool paused; // @synthesize paused=_paused;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) double position; // @synthesize position=_position;
 @property(readonly, nonatomic) double timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, copy, nonatomic) NSString *playbackId; // @synthesize playbackId=_playbackId;
-- (void).cxx_destruct;
 - (id)stateBySettingTimestamp:(double)arg1;
 - (id)stateBySettingDuration:(double)arg1;
 - (id)stateBySettingPosition:(double)arg1;

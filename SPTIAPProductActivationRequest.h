@@ -17,9 +17,9 @@
 
 + (id)requestWithReceiptData:(id)arg1 dataLoaderFactory:(id)arg2 applicationVersionString:(id)arg3;
 + (id)requestWithReceiptData:(id)arg1 hermesController:(id)arg2 applicationVersionString:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSData *receiptData; // @synthesize receiptData=_receiptData;
 @property(nonatomic) __weak id <SPTIAPProductActivationRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)parseResponseData:(id)arg1 error:(id *)arg2;
 - (void)start;
 - (id)initWithReceiptData:(id)arg1;

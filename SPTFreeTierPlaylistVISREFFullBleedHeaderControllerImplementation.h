@@ -46,6 +46,7 @@
     CDStruct_5a28e70a _backButtonGlyphProtectionAlphaRange;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <VISREFIntegrationManager> visrefIntegrationManager; // @synthesize visrefIntegrationManager=_visrefIntegrationManager;
 @property(copy, nonatomic) NSString *pauseButtonAccessibilityString; // @synthesize pauseButtonAccessibilityString=_pauseButtonAccessibilityString;
 @property(copy, nonatomic) NSString *shufflePlayButtonAccessibilityString; // @synthesize shufflePlayButtonAccessibilityString=_shufflePlayButtonAccessibilityString;
@@ -76,7 +77,6 @@
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double naturalHeaderHeight; // @synthesize naturalHeaderHeight=_naturalHeaderHeight;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistVISREFHeaderControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (double)headerHeight;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)setImage:(id)arg1;

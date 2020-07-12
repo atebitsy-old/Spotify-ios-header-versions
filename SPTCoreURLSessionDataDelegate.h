@@ -16,9 +16,9 @@
     weak_ptr_746914f4 _connectionFactory;
 }
 
-@property(readonly, nonatomic) weak_ptr_746914f4 connectionFactory; // @synthesize connectionFactory=_connectionFactory;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) weak_ptr_746914f4 connectionFactory; // @synthesize connectionFactory=_connectionFactory;
 - (void)URLSession:(id)arg1 task:(id)arg2 needNewBodyStream:(CDUnknownBlockType)arg3;
 - (void)URLSession:(id)arg1 task:(id)arg2 willPerformHTTPRedirection:(id)arg3 newRequest:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (void)URLSession:(id)arg1 task:(id)arg2 didCompleteWithError:(id)arg3;

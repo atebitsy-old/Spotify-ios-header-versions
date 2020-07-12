@@ -21,6 +21,7 @@
     NSLayoutConstraint *_bottomEdgeConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *bottomEdgeConstraint; // @synthesize bottomEdgeConstraint=_bottomEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *trailingEdgeConstraint; // @synthesize trailingEdgeConstraint=_trailingEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leadingEdgeConstraint; // @synthesize leadingEdgeConstraint=_leadingEdgeConstraint;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) SPTYourLibraryMusicSongsSectionHeaderViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUEButton *trailingButton; // @synthesize trailingButton=_trailingButton;
 @property(retain, nonatomic) GLUELabel *leadingLabel; // @synthesize leadingLabel=_leadingLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupLayoutConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

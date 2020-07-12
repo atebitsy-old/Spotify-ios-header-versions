@@ -16,8 +16,8 @@
 }
 
 + (double)heightForTrackCloudWithTitle:(id)arg1 data:(id)arg2 containerWidth:(double)arg3 style:(id)arg4;
-@property(readonly, nonatomic) GLUETrackCloudView *trackCloudView; // @synthesize trackCloudView=_trackCloudView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) GLUETrackCloudView *trackCloudView; // @synthesize trackCloudView=_trackCloudView;
 - (void)updateContentWithData:(id)arg1 andContainerWidth:(double)arg2;
 - (void)glue_applyStyle:(id)arg1;
 @property(nonatomic, getter=isActive) _Bool active;

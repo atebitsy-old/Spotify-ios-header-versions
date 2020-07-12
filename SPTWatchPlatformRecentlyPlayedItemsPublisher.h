@@ -18,9 +18,9 @@
     id <SPTRecentlyPlayedList> _recentlyPlayedEntityList;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedList> recentlyPlayedEntityList; // @synthesize recentlyPlayedEntityList=_recentlyPlayedEntityList;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (void)recentlyPlayedListDidReload:(id)arg1;
 - (void)handlePublisherEvent:(long long)arg1;
 - (void)publishRecentlyPlayedItems;

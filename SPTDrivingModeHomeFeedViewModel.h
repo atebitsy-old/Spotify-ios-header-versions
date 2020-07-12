@@ -19,11 +19,11 @@
     SPTDrivingModeHomeFeedList *_homeFeedList;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDrivingModeHomeFeedList *homeFeedList; // @synthesize homeFeedList=_homeFeedList;
 @property(readonly, nonatomic) SPTDrivingModeCarModePlayer *carModePlayer; // @synthesize carModePlayer=_carModePlayer;
 @property(nonatomic) __weak id <SPTDrivingModeHomeFeedViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSArray *shelves; // @synthesize shelves=_shelves;
-- (void).cxx_destruct;
 - (void)updateStateForItem:(id)arg1;
 - (void)playContextURI:(id)arg1;
 - (void)homeFeedListDidUpdate:(id)arg1;

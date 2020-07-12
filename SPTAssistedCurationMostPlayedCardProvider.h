@@ -23,13 +23,13 @@
 }
 
 + (id)identifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *excludeURI; // @synthesize excludeURI=_excludeURI;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) id <SPTAssistedCurationMostPlayedDataLoader> mostPlayedDataLoader; // @synthesize mostPlayedDataLoader=_mostPlayedDataLoader;
 @property(retain, nonatomic) SPTAssistedCurationCardModelImplementation *currentCard; // @synthesize currentCard=_currentCard;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)provideCardsForCurrentTracks:(id)arg1 andContextName:(id)arg2;
 - (id)initWithMostPlayedDataLoader:(id)arg1 excludeURI:(id)arg2 offlineModeState:(id)arg3;
 

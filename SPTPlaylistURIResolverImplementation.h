@@ -16,8 +16,8 @@
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
 }
 
-@property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 - (void)resolvePlaylistV1URIForPlaylistURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithPlaylistPlatformDataLoader:(id)arg1;
 

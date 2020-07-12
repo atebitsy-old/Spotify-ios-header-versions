@@ -40,6 +40,7 @@
 }
 
 + (id)soundsBundle;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool playersLoaded; // @synthesize playersLoaded=_playersLoaded;
 @property(readonly, nonatomic) SPTNowPlayingLockScreenUBILogger *lockScreenUBILogger; // @synthesize lockScreenUBILogger=_lockScreenUBILogger;
 @property(readonly, nonatomic) id <SPTNowPlayingRemoteControlEventLogger> logger; // @synthesize logger=_logger;
@@ -52,7 +53,6 @@
 @property(readonly, nonatomic) id <SPTNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
 @property(nonatomic) __weak id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isActiveForRemoteControlPolicyUpdates) _Bool activeForRemoteControlPolicyUpdates; // @synthesize activeForRemoteControlPolicyUpdates=_activeForRemoteControlPolicyUpdates;
-- (void).cxx_destruct;
 - (id)eventSourceIdentifierForEvent:(id)arg1;
 - (void)performSeekToStartWithCommandEvent:(id)arg1;
 - (void)performSkipToPreviousWithCommandEvent:(id)arg1 isPodcastContentWithEventOriginatingFromSiri:(_Bool)arg2;

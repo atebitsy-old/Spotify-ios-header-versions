@@ -20,13 +20,13 @@
     UIImageView *_iconImageView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILabel *roundaboutExitLabel; // @synthesize roundaboutExitLabel=_roundaboutExitLabel;
 @property(readonly, nonatomic) UIImageView *instructionImageView; // @synthesize instructionImageView=_instructionImageView;
 @property(readonly, nonatomic) UIButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) SPTWazeNavigationBannerViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)actionButtonTap;
 - (void)viewModelDidUpdate:(id)arg1;
 - (void)applyThemeLayout;

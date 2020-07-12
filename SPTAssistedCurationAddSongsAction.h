@@ -17,9 +17,9 @@
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(retain, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (_Bool)shouldDismissContextMenuBeforePerformingAction;
 - (id)execute:(id)arg1;
 - (long long)style;

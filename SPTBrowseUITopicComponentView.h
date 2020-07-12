@@ -14,8 +14,8 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
-@property(readonly, nonatomic) SPTBrowseUITopicView *topicView; // @synthesize topicView=_topicView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTBrowseUITopicView *topicView; // @synthesize topicView=_topicView;
 - (void)applyThemeLayout;
 - (void)configureWithModel:(id)arg1;
 - (id)accessibilityLabel;

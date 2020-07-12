@@ -23,10 +23,10 @@
 }
 
 + (id)equalizerViewControllerWithModel:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(retain, nonatomic) SPTEqualizerView *equalizerView; // @synthesize equalizerView=_equalizerView;
 @property(retain, nonatomic) SPTEqualizerModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

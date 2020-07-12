@@ -30,6 +30,7 @@
     id <SPTHubRemoteContentOperationURLResolver> _urlResolver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTHubRemoteContentOperationURLResolver> urlResolver; // @synthesize urlResolver=_urlResolver;
 @property(retain, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
 @property(retain, nonatomic) id <HUBIconImageResolver> iconResolver; // @synthesize iconResolver=_iconResolver;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, copy, nonatomic) NSString *featureID; // @synthesize featureID=_featureID;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
-- (void).cxx_destruct;
 - (id)makeViewModelProvider;
 - (id)makeCommandHandler;
 - (id)makeDailyMixHubViewController;

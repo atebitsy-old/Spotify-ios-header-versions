@@ -19,10 +19,10 @@
     id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
-- (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)followModel:(id)arg1 remoteFollowDataDidChange:(id)arg2;
 - (void)followModel:(id)arg1 updateDidFailWithError:(id)arg2;

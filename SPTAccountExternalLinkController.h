@@ -13,8 +13,8 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
-@property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (id)campaignURL:(id)arg1;
 - (long long)externalLinkControllerHandleCampaignURIIfRelevant:(id)arg1;
 - (_Bool)canHandleURIForExternalLinkController:(id)arg1;

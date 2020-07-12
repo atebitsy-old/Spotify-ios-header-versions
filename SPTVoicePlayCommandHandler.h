@@ -17,9 +17,9 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
-- (void).cxx_destruct;
 - (id)handleVoiceCommand:(id)arg1;
 - (_Bool)canHandleVoiceCommand:(id)arg1;
 - (id)initWithPlaybackController:(id)arg1 referrerIdentifier:(id)arg2;

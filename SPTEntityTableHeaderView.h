@@ -56,6 +56,7 @@
 }
 
 + (id)entityHeaderViewWithSize:(long long)arg1 forTableView:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool layoutWithoutPrimaryAction; // @synthesize layoutWithoutPrimaryAction=_layoutWithoutPrimaryAction;
 @property(retain, nonatomic) UIImageView *overlayImageView; // @synthesize overlayImageView=_overlayImageView;
 @property(retain, nonatomic) SPTUIBlurView *overlayView; // @synthesize overlayView=_overlayView;
@@ -94,7 +95,6 @@
 @property(nonatomic) long long size; // @synthesize size=_size;
 @property(retain, nonatomic) UINavigationItem *stickyHeaderNavigationItem; // @synthesize stickyHeaderNavigationItem=_stickyHeaderNavigationItem;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)pageControlChanged:(id)arg1;
 - (void)stickyHeaderViewButtonTapped;

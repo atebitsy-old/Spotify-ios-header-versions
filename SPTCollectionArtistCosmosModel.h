@@ -43,6 +43,7 @@
 }
 
 + (long long)trackRowRestrictionFromEntity:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) __weak id <FollowFeature> followFeature; // @synthesize followFeature=_followFeature;
 @property(retain, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
@@ -66,7 +67,6 @@
 @property(retain, nonatomic) SPTCollectionContextMenuComponentFactory *contextMenuComponentFactory; // @synthesize contextMenuComponentFactory=_contextMenuComponentFactory;
 @property(nonatomic, getter=isSessionOffline) _Bool sessionOffline; // @synthesize sessionOffline=_sessionOffline;
 @property(nonatomic) __weak id <SPTCollectionArtistModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (long long)numberOfItemsInSection:(long long)arg1;

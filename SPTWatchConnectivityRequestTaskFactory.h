@@ -13,8 +13,8 @@
     SPTWatchConnectivityManager *_connectivityManager;
 }
 
-@property(readonly, nonatomic) SPTWatchConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTWatchConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;
 - (id)createTaskWithRequest:(id)arg1 responseHandler:(id)arg2;
 - (id)initWithConnectivityManager:(id)arg1;
 

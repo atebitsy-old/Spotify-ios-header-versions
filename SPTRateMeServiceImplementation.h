@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRateMeController *rateMeController; // @synthesize rateMeController=_rateMeController;
 @property(nonatomic) __weak id <SPTPartnerService> partnerService; // @synthesize partnerService=_partnerService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAccountService> accountService; // @synthesize accountService=_accountService;
-- (void).cxx_destruct;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

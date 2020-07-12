@@ -22,6 +22,7 @@
     unsigned long long _quartilesPlayed;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didRequestFireVideoEventsFlag; // @synthesize didRequestFireVideoEventsFlag=_didRequestFireVideoEventsFlag;
 @property(nonatomic) _Bool didProcessVideoFinishEvent; // @synthesize didProcessVideoFinishEvent=_didProcessVideoFinishEvent;
 @property(nonatomic) _Bool shouldFireVideoEvents; // @synthesize shouldFireVideoEvents=_shouldFireVideoEvents;
@@ -29,7 +30,6 @@
 @property(nonatomic) double trackDuration; // @synthesize trackDuration=_trackDuration;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 - (_Bool)isSASInterruption:(id)arg1;
 - (void)logCompleteEventForInterruption:(id)arg1 eventData:(id)arg2;
 - (id)interruptionIdForIdentity:(id)arg1;

@@ -16,8 +16,8 @@
     id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
 }
 
-@property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 - (void)auxiliaryActionsHandlerDidToggleCollectionState:(id)arg1;
 - (void)dislikeButtonPressedWithCompletion:(CDUnknownBlockType)arg1 identifier:(id)arg2;
 - (_Bool)shouldDislikeCommandBeSelected;

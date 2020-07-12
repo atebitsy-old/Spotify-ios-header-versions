@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTContextMenuAction-Protocol.h"
-
-@interface _TtCC26FullscreenStoryFeatureImpl28ShowVideoContextMenuConsumerP33_A77F439B449C6469AD7E9ADEB8F1D4AF15EmptyMenuAction : NSObject <SPTContextMenuAction>
+@interface _TtCC26FullscreenStoryFeatureImpl28ShowVideoContextMenuConsumerP33_A77F439B449C6469AD7E9ADEB8F1D4AF15EmptyMenuAction : NSObject
 {
 }
 

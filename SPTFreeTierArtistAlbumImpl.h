@@ -18,10 +18,10 @@
     unsigned long long _trackCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long trackCount; // @synthesize trackCount=_trackCount;
 @property(copy, nonatomic) NSString *releaseDate; // @synthesize releaseDate=_releaseDate;
 @property(copy, nonatomic) NSString *year; // @synthesize year=_year;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 
 // Remaining properties

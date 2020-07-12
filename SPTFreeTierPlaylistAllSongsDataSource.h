@@ -32,6 +32,7 @@
     NSNumber *_numberBannedTracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *numberBannedTracks; // @synthesize numberBannedTracks=_numberBannedTracks;
 @property(retain, nonatomic) NSNumber *numberTracks; // @synthesize numberTracks=_numberTracks;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionSubscriptionToken; // @synthesize collectionSubscriptionToken=_collectionSubscriptionToken;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTFreeTierAllSongsDataSourceDelegate> dataSourceDelegate; // @synthesize dataSourceDelegate=_dataSourceDelegate;
-- (void).cxx_destruct;
 - (id)contextURLForSection:(unsigned long long)arg1;
 - (_Bool)isRecommendedSection:(unsigned long long)arg1;
 - (id)trackEntityAtIndexPath:(id)arg1;

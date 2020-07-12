@@ -18,9 +18,9 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-- (void).cxx_destruct;
 - (void)fetchTrackMetadata;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

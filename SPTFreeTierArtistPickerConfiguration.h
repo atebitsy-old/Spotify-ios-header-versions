@@ -30,6 +30,7 @@
     id <SPTAlertInterface> _alertInterface;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) SPTSeedASessionCurator *curator; // @synthesize curator=_curator;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingLoggerFactory *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)initWithTheme:(id)arg1 loggerFactory:(id)arg2 viewLoggerFactory:(id)arg3 popupManager:(id)arg4 dataLoaderFactory:(id)arg5 imageLoaderFactory:(id)arg6 followModelFactory:(id)arg7 networkConnectivityController:(id)arg8 testManager:(id)arg9 deeplinkStore:(id)arg10 sourceIdentifier:(id)arg11 modalPresentationMonitor:(id)arg12 linkDispatcher:(id)arg13 modalPresentationController:(id)arg14 curator:(id)arg15 playlistModel:(id)arg16 alertInterface:(id)arg17;
 
 @end

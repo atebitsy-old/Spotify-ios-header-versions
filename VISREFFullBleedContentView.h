@@ -40,6 +40,7 @@
     CDStruct_5a28e70a _titleProtectionProgressRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) CDStruct_5a28e70a titleProtectionProgressRange; // @synthesize titleProtectionProgressRange=_titleProtectionProgressRange;
 @property(nonatomic) CDStruct_5a28e70a titleLabelAlphaProgressRange; // @synthesize titleLabelAlphaProgressRange=_titleLabelAlphaProgressRange;
 @property(nonatomic) CDStruct_5a28e70a statusBarProtectionProgressRange; // @synthesize statusBarProtectionProgressRange=_statusBarProtectionProgressRange;
@@ -66,7 +67,6 @@
 @property(readonly, copy, nonatomic) NSArray *actionRowAccessibilityElements; // @synthesize actionRowAccessibilityElements=_actionRowAccessibilityElements;
 @property(retain, nonatomic) UIAccessibilityElement *accessibilityContentContainer; // @synthesize accessibilityContentContainer=_accessibilityContentContainer;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (_Bool)canHandleTapAtCreatorView;
 - (void)didTapCreatorRow;
 - (id)atributedTitleLabelText:(id)arg1 withFontSize:(long long)arg2;

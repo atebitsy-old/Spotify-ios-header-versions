@@ -15,11 +15,11 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(nonatomic) double height; // @synthesize height=_height;
 - (void)setDebugName:(id)arg1;
 - (id)debugName;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (unsigned long long)hash;
 - (_Bool)isEqualToNavigationRowStyle:(id)arg1;

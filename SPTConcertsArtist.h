@@ -19,12 +19,12 @@
     unsigned long long _monthlyListeners;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long monthlyListeners; // @synthesize monthlyListeners=_monthlyListeners;
 @property(readonly, nonatomic) _Bool hasAffinity; // @synthesize hasAffinity=_hasAffinity;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;

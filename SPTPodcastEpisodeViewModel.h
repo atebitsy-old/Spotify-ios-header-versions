@@ -40,6 +40,7 @@
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(retain, nonatomic) id <SPTPodcastEpisodePlayerContextParameters> playerContextParameters; // @synthesize playerContextParameters=_playerContextParameters;
 @property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
@@ -65,7 +66,6 @@
 @property(nonatomic) _Bool sectionsHasChanges; // @synthesize sectionsHasChanges=_sectionsHasChanges;
 @property(copy, nonatomic) NSArray *sections; // @synthesize sections=_sections;
 @property(nonatomic) __weak id <SPTPodcastEpisodeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
 - (void)autoPlayEpisodeIfNeeded;
 @property(readonly, nonatomic) double syncProgress;
@@ -85,6 +85,7 @@
 - (void)playEpisode;
 - (void)togglePlayback;
 - (_Bool)isActive;
+@property(readonly, nonatomic) _Bool isMusicInjectionEpisode;
 @property(readonly, nonatomic) _Bool isExplicit;
 @property(readonly, nonatomic) _Bool isPlayed;
 @property(readonly, nonatomic) double duration;

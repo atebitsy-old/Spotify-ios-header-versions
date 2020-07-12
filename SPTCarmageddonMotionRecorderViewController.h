@@ -22,11 +22,11 @@
     UITableView *_logsTableView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITableView *logsTableView; // @synthesize logsTableView=_logsTableView;
 @property(readonly, nonatomic) SPTCarmageddonMotionRecorderViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
-- (void).cxx_destruct;
 - (void)updateAndScrollTableView;
 - (void)scrollToBottomAnimated:(_Bool)arg1;
 - (long long)numberOfSectionsInTableView:(id)arg1;

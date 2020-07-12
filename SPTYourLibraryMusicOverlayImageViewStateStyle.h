@@ -21,6 +21,7 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
 @property(copy, nonatomic) GLUEImageStyle *imageViewStyle; // @synthesize imageViewStyle=_imageViewStyle;
 @property(copy, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
@@ -28,7 +29,6 @@
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) UIColor *overlayColor; // @synthesize overlayColor=_overlayColor;
 @property(nonatomic) double overlayOpacity; // @synthesize overlayOpacity=_overlayOpacity;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

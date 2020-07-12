@@ -19,10 +19,10 @@
     SPTFormatListPlatformConfiguratorDelegate *_defaultConfigurationDelegate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFormatListPlatformConfiguratorDelegate *defaultConfigurationDelegate; // @synthesize defaultConfigurationDelegate=_defaultConfigurationDelegate;
 @property(retain, nonatomic) NSMutableDictionary *cellClassesForTypes; // @synthesize cellClassesForTypes=_cellClassesForTypes;
 @property(nonatomic) __weak id <SPTFormatListTableViewConfiguratorDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)registerCellsInTableView:(id)arg1;
 - (void)decorateTableViewCell:(id)arg1 indexPath:(id)arg2 formatListItemModel:(id)arg3;
 - (void)decorateTableViewCell:(id)arg1 withAccessoryButton:(id)arg2 indexPath:(id)arg3 formatListItemModel:(id)arg4;

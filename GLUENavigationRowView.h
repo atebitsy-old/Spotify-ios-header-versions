@@ -26,6 +26,7 @@
     NSLayoutConstraint *_disclosureTrailingMarginConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *disclosureTrailingMarginConstraint; // @synthesize disclosureTrailingMarginConstraint=_disclosureTrailingMarginConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleToDisclosureMarginConstraint; // @synthesize titleToDisclosureMarginConstraint=_titleToDisclosureMarginConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleToAccessoryIconViewConstraint; // @synthesize titleToAccessoryIconViewConstraint=_titleToAccessoryIconViewConstraint;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) GLUEStatefulView *navigationContentView; // @synthesize navigationContentView=_navigationContentView;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 @property(nonatomic, getter=isActive) _Bool active;
 @property(nonatomic, getter=isSelected) _Bool selected;

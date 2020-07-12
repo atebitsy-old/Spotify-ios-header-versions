@@ -20,13 +20,13 @@
     struct CGSize _cardSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double contentMargin; // @synthesize contentMargin=_contentMargin;
 @property(nonatomic) struct CGSize cardSize; // @synthesize cardSize=_cardSize;
 @property(retain, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(retain, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(retain, nonatomic) UIImage *backgroundImage; // @synthesize backgroundImage=_backgroundImage;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

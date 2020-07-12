@@ -19,11 +19,11 @@
     id <SPTAdsBaseGlobalSettingsController> _adsSettingsController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAdsBaseGlobalSettingsController> adsSettingsController; // @synthesize adsSettingsController=_adsSettingsController;
 @property(retain, nonatomic) SPTAdContextManager *adContextManager; // @synthesize adContextManager=_adContextManager;
 @property(retain, nonatomic) SPTAdRulesManager *adRulesManager; // @synthesize adRulesManager=_adRulesManager;
 @property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 - (void)adContextManager:(id)arg1 didChangePlayOrigin:(id)arg2 fromPlayOrigin:(id)arg3;
 - (void)adContextManager:(id)arg1 didChangeNavigationContext:(id)arg2 fromNavigationContext:(id)arg3;
 - (void)dealloc;

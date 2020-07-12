@@ -16,10 +16,10 @@
     SPTCanvasLoggingService *_logService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasLoggingService *logService; // @synthesize logService=_logService;
 @property(readonly, nonatomic) SPTCanvasTooltipPresentationManager *tooltipPresentationManager; // @synthesize tooltipPresentationManager=_tooltipPresentationManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (id)actionForTrack:(id)arg1;
 - (id)initWithLinkDispatcher:(id)arg1 logService:(id)arg2 tooltipPresentationManager:(id)arg3;
 

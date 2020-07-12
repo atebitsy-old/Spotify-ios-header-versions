@@ -24,6 +24,7 @@
     UIImage *_selectedImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *selectedImage; // @synthesize selectedImage=_selectedImage;
 @property(retain, nonatomic) UIImage *selectorImage; // @synthesize selectorImage=_selectorImage;
 @property(retain, nonatomic) UIButton *selector; // @synthesize selector=_selector;
@@ -32,7 +33,6 @@
 @property(nonatomic, getter=isTrackSelected) _Bool trackSelected; // @synthesize trackSelected=_trackSelected;
 @property(nonatomic) __weak id <SPTQueueSelectableLeadingViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) id <SPTQueueTrack> track; // @synthesize track=_track;
-- (void).cxx_destruct;
 - (void)setupSelectorButton;
 - (void)touchUpInside:(id)arg1;
 - (void)updateSelectorAccessibilityLabel:(_Bool)arg1;

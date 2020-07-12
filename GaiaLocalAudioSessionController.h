@@ -30,6 +30,7 @@
     id <SPTGaiaSilentAudioPlayer> _silentAudioPlayer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool lockScreenControlTakenOver; // @synthesize lockScreenControlTakenOver=_lockScreenControlTakenOver;
 @property(nonatomic) _Bool remoteDisabled; // @synthesize remoteDisabled=_remoteDisabled;
 @property(retain, nonatomic) id <SPTGaiaSilentAudioPlayer> silentAudioPlayer; // @synthesize silentAudioPlayer=_silentAudioPlayer;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(nonatomic) __weak id <SPTAudioSessionController> audioSessionController; // @synthesize audioSessionController=_audioSessionController;
 @property(nonatomic) __weak id <SPTGaiaSilentAudioObserveProtocol> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)audioSessionController:(id)arg1 willReleaseLockForAudioSessionConfiguration:(id)arg2;
 - (void)audioSessionController:(id)arg1 willAttemptLockForAudioSessionConfiguration:(id)arg2;
 - (_Bool)lockScreenControlIsAvailable;

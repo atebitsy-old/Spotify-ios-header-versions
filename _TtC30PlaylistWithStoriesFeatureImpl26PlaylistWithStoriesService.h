@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
-
-@interface _TtC30PlaylistWithStoriesFeatureImpl26PlaylistWithStoriesService : NSObject <SPTService>
+@interface _TtC30PlaylistWithStoriesFeatureImpl26PlaylistWithStoriesService : NSObject
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: playlistUIService

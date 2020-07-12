@@ -14,8 +14,8 @@
 }
 
 + (id)messageWithError:(id)arg1;
-@property(copy, nonatomic) NSString *errorValue; // @synthesize errorValue=_errorValue;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *errorValue; // @synthesize errorValue=_errorValue;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

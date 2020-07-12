@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTKeyboardShortcutsKeyCommandHandler *keyCommandHandler; // @synthesize keyCommandHandler=_keyCommandHandler;
 @property(retain, nonatomic) id <SPTKeyboardShortcutsTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)didReceivePreviousCommand;
 - (void)didReceiveNextCommand;
 - (void)didReceivePlayPauseCommand;

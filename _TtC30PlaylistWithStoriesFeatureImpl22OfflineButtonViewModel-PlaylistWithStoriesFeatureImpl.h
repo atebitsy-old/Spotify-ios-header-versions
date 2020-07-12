@@ -6,9 +6,7 @@
 
 #import "_TtC30PlaylistWithStoriesFeatureImpl22OfflineButtonViewModel.h"
 
-#import "SPTFreeTierEntityOfflineDelegate-Protocol.h"
-
-@interface _TtC30PlaylistWithStoriesFeatureImpl22OfflineButtonViewModel (PlaylistWithStoriesFeatureImpl) <SPTFreeTierEntityOfflineDelegate>
+@interface _TtC30PlaylistWithStoriesFeatureImpl22OfflineButtonViewModel (PlaylistWithStoriesFeatureImpl)
 - (void)viewModel:(id)arg1 offlineAvailabilityChanged:(unsigned long long)arg2;
 @end
 

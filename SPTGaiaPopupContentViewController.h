@@ -17,12 +17,12 @@
     SPTGaiaDeviceAppearanceMapping *_appearanceMapping;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaDeviceAppearanceMapping *appearanceMapping; // @synthesize appearanceMapping=_appearanceMapping;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTGaiaPopupContentView *contentView; // @synthesize contentView=_contentView;
 @property(nonatomic) long long type; // @synthesize type=_type;
 @property(retain, nonatomic) SPTGaiaConnectDevice *device; // @synthesize device=_device;
-- (void).cxx_destruct;
 - (id)deviceNameForPopupType:(long long)arg1;
 - (void)loadView;
 - (id)imageForDevice:(id)arg1;

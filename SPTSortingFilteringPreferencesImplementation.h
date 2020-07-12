@@ -17,9 +17,9 @@
     id <SPTLocalSettings> _localSettings;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
-- (void).cxx_destruct;
 - (id)filterRulesKey;
 - (id)sortRuleKey;
 - (id)preferredFilterRulesFromAvailableFilterRules:(id)arg1;

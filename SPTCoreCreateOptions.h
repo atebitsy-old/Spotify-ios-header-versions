@@ -11,6 +11,9 @@
 
 @interface SPTCoreCreateOptions : NSObject
 {
+    _Bool _enableIPv6;
+    _Bool _enableOldNetworkImplementation;
+    _Bool _forceOffline;
     _Bool _isTablet;
     _Bool _perfTracingEnabled;
     unsigned int _clientRevision;
@@ -29,6 +32,7 @@
     NSString *_clientId;
     NSString *_httpUserAgent;
     long long _streamingRulesSupported;
+    long long _reconnectPolicy;
     CDUnknownBlockType _assertionHandlerCallback;
     CDUnknownBlockType _acceptLanguageCallback;
     id <SPTAudioDriverController> _audioDriverController;
@@ -36,12 +40,17 @@
 }
 
 + (id)iosCoreCreateOptionsWithCachePath:(id)arg1 volatileCachePath:(id)arg2 settingsPath:(id)arg3 audioDriverController:(id)arg4;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *clientLanguage; // @synthesize clientLanguage=_clientLanguage;
 @property(nonatomic) _Bool perfTracingEnabled; // @synthesize perfTracingEnabled=_perfTracingEnabled;
 @property(retain, nonatomic) id <SPTAudioDriverController> audioDriverController; // @synthesize audioDriverController=_audioDriverController;
 @property(copy, nonatomic) CDUnknownBlockType acceptLanguageCallback; // @synthesize acceptLanguageCallback=_acceptLanguageCallback;
 @property(nonatomic) _Bool isTablet; // @synthesize isTablet=_isTablet;
 @property(copy, nonatomic) CDUnknownBlockType assertionHandlerCallback; // @synthesize assertionHandlerCallback=_assertionHandlerCallback;
+@property(nonatomic) long long reconnectPolicy; // @synthesize reconnectPolicy=_reconnectPolicy;
+@property(nonatomic) _Bool forceOffline; // @synthesize forceOffline=_forceOffline;
+@property(nonatomic) _Bool enableOldNetworkImplementation; // @synthesize enableOldNetworkImplementation=_enableOldNetworkImplementation;
+@property(nonatomic) _Bool enableIPv6; // @synthesize enableIPv6=_enableIPv6;
 @property(nonatomic) long long streamingRulesSupported; // @synthesize streamingRulesSupported=_streamingRulesSupported;
 @property(copy, nonatomic) NSString *httpUserAgent; // @synthesize httpUserAgent=_httpUserAgent;
 @property(copy, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;
@@ -58,7 +67,6 @@
 @property(copy, nonatomic) NSString *settingsPath; // @synthesize settingsPath=_settingsPath;
 @property(copy, nonatomic) NSString *volatileCachePath; // @synthesize volatileCachePath=_volatileCachePath;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CoreCreateOptions cppCreateOptions;
 
 @end

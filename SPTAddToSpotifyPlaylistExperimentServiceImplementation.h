@@ -9,11 +9,10 @@
 #import "SPTAddToSpotifyPlaylistExperimentService-Protocol.h"
 
 @class NSString, SPTAddToSpotifyPlaylistExperimentFeatureProperties, SPTAllocationContext, SPTShadowPlaylistURIResolver;
-@protocol SPContextMenuFeature, SPTAbbaService, SPTContainerService, SPTEncoreIntegrationService, SPTGLUEService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService;
+@protocol SPContextMenuFeature, SPTAbbaService, SPTEncoreIntegrationService, SPTGLUEService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService;
 
 @interface SPTAddToSpotifyPlaylistExperimentServiceImplementation : NSObject <SPTAddToSpotifyPlaylistExperimentService>
 {
-    id <SPTContainerService> _containerService;
     id <SPTRemoteConfigurationService> _configService;
     id <SPContextMenuFeature> _contextMenuService;
     id <SPTGLUEService> _glueService;
@@ -29,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
@@ -41,13 +41,12 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> configService; // @synthesize configService=_configService;
-@property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)imageURIForContextURI:(id)arg1;
 - (id)provideAssistedCurationSubtitleViewForURI:(id)arg1;
 - (id)decorateItemsViewModel:(id)arg1 forPlaylistURI:(id)arg2;
 - (id)providePlaylistRouteForURI:(id)arg1;
-- (id)provideCellProviderWithOriginalPlaylistViewModel:(id)arg1 player:(id)arg2 playlistURI:(id)arg3 origin:(id)arg4 logger:(id)arg5 viewModelFactory:(CDUnknownBlockType)arg6;
+- (id)provideCellProviderWithOriginalPlaylistViewModel:(id)arg1 player:(id)arg2 playlistURI:(id)arg3 origin:(id)arg4 logger:(id)arg5 itemsViewModel:(id)arg6 viewModelFactory:(CDUnknownBlockType)arg7;
+- (_Bool)removeRecentlyPlayedDuplicatesEnabled;
 - (_Bool)addToSpotifyPlaylistEnabledForURI:(id)arg1;
 - (_Bool)addToSpotifyPlaylistEnabled;
 - (id)provideAddToSpotifyPlaylistDataLoader;

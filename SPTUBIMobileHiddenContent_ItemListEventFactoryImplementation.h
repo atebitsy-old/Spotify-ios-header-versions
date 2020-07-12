@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithIdentifier:(id)arg1 components:(id)arg2;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)impression;
 - (id)songItemFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)artistItemFactoryWithPosition:(long long)arg1 uri:(id)arg2;

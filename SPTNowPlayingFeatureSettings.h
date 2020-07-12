@@ -14,9 +14,9 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTFeatureSettingsItemFactory> settingsItemFactory; // @synthesize settingsItemFactory=_settingsItemFactory;
-- (void).cxx_destruct;
 - (void)registerSettings;
 - (id)initWithSettingsItemFactory:(id)arg1 player:(id)arg2;
 

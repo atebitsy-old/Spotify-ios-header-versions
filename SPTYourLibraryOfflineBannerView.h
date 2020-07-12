@@ -20,13 +20,13 @@
     UIView *_contentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) SPTYourLibraryOfflineBannerStyle *glueStyle; // @synthesize glueStyle=_glueStyle;
 @property(readonly, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) GLUELabel *detailLabel; // @synthesize detailLabel=_detailLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)applyStyle;
 - (void)setupConstraints;

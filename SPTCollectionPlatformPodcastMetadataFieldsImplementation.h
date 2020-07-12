@@ -21,6 +21,7 @@
     NSDate *_latestPublishedEpisodeDate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *latestPublishedEpisodeDate; // @synthesize latestPublishedEpisodeDate=_latestPublishedEpisodeDate;
 @property(nonatomic) _Bool hasNewEpisodes; // @synthesize hasNewEpisodes=_hasNewEpisodes;
 @property(copy, nonatomic) NSDictionary *podcastCovers; // @synthesize podcastCovers=_podcastCovers;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

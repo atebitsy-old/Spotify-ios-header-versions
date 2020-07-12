@@ -60,6 +60,7 @@
     SPTInfoView *_infoView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) id <SPTPSXTestManager> psxTestManager; // @synthesize psxTestManager=_psxTestManager;
 @property(retain, nonatomic) SPTTableAdapter *tableAdapter; // @synthesize tableAdapter=_tableAdapter;
@@ -92,7 +93,6 @@
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)trackRowAdapterWantsBouncedShuffleButton:(id)arg1;
 - (void)searchBarSearchButtonClicked:(id)arg1;

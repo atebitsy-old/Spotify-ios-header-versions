@@ -14,8 +14,8 @@
 }
 
 + (id)policyWithHostsAndCertificatePaths:(id)arg1;
-@property(retain, nonatomic) NSDictionary *trustedHostsAndCertificates; // @synthesize trustedHostsAndCertificates=_trustedHostsAndCertificates;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSDictionary *trustedHostsAndCertificates; // @synthesize trustedHostsAndCertificates=_trustedHostsAndCertificates;
 - (id)initWithHostsAndCertificatePaths:(id)arg1;
 - (_Bool)validateWithTrust:(struct __SecTrust *)arg1 host:(id)arg2;
 - (id)certificatesForHost:(id)arg1;

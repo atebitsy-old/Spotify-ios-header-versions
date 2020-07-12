@@ -15,8 +15,8 @@
     GLUELabel *_titleLabel;
 }
 
-@property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setUpConstraintsWithStyle:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 style:(id)arg2;

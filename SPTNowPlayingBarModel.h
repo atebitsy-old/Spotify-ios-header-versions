@@ -33,6 +33,7 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) NSURL *currentTrackURL; // @synthesize currentTrackURL=_currentTrackURL;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -48,7 +49,6 @@
 @property(retain, nonatomic) SPTPlayerTrack *playingMetadata; // @synthesize playingMetadata=_playingMetadata;
 @property(retain, nonatomic) SPTPlayerTrack *currentTrack; // @synthesize currentTrack=_currentTrack;
 @property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
-- (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
 - (void)playerDidReceiveStateUpdate:(id)arg1;

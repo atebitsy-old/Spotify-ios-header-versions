@@ -17,11 +17,11 @@
     SPTCanvasTooltipPresentationManager *_tooltipManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasTooltipPresentationManager *tooltipManager; // @synthesize tooltipManager=_tooltipManager;
 @property(readonly, nonatomic) SPTCanvasLoggingService *logService; // @synthesize logService=_logService;
 @property(readonly, nonatomic) SPTCanvasForceArtworkManager *forceArtworkManager; // @synthesize forceArtworkManager=_forceArtworkManager;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)createViewController;
 - (id)initWithTheme:(id)arg1 forceArtworkManager:(id)arg2 logService:(id)arg3 tooltipManager:(id)arg4;
 

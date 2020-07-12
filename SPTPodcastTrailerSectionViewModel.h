@@ -30,6 +30,7 @@
 }
 
 + (_Bool)isTrailerEpisodeValid:(id)arg1 errorMessage:(id *)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastEpisode> trailerEpisode; // @synthesize trailerEpisode=_trailerEpisode;
 @property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -44,7 +45,6 @@
 @property(readonly, copy, nonatomic) NSURL *showURI; // @synthesize showURI=_showURI;
 @property(readonly, copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (id)formattedStringWithDuration:(double)arg1;
 - (id)header;
 - (void)updateWithPodcastPlayer:(id)arg1;

@@ -23,6 +23,7 @@
     SPTStatefulPlayer *_statefulPlayer;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(readonly, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(readonly, nonatomic) SPTNowPlayingBarModel *nowPlayingBarModel; // @synthesize nowPlayingBarModel=_nowPlayingBarModel;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) UIViewController *leftAccessoryViewController; // @synthesize leftAccessoryViewController=_leftAccessoryViewController;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
-- (void).cxx_destruct;
 - (void)processPlayerStateChange:(id)arg1 toggleMode:(unsigned long long)arg2;
 - (void)createVideoUnit;
 - (void)createCoverArtUnit;

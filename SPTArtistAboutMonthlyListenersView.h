@@ -19,12 +19,12 @@
     GLUELabel *_listenersTextLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *listenersTextLabel; // @synthesize listenersTextLabel=_listenersTextLabel;
 @property(retain, nonatomic) GLUELabel *listenersCountLabel; // @synthesize listenersCountLabel=_listenersCountLabel;
 @property(retain, nonatomic) UIView *listenersTextContainerView; // @synthesize listenersTextContainerView=_listenersTextContainerView;
 @property(retain, nonatomic) NSNumberFormatter *numberFormatter; // @synthesize numberFormatter=_numberFormatter;
 @property(retain, nonatomic) SPTArtistAboutGlobalChartPositionView *globalChartPositionView; // @synthesize globalChartPositionView=_globalChartPositionView;
-- (void).cxx_destruct;
 - (void)setMonthlyListenersCount:(unsigned long long)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addLayoutConstraints;

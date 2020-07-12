@@ -16,9 +16,9 @@
 }
 
 + (id)observerForPageContainer:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *pendingObservers; // @synthesize pendingObservers=_pendingObservers;
 @property(readonly, nonatomic) __weak id <SPTPageContainer> pageContainer; // @synthesize pageContainer=_pageContainer;
-- (void).cxx_destruct;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)addObservationBlock:(CDUnknownBlockType)arg1;
 - (id)initWithPageContainer:(id)arg1;

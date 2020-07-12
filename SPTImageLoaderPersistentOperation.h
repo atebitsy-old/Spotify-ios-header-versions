@@ -22,13 +22,13 @@
 }
 
 + (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
+- (void).cxx_destruct;
 @property _Bool isExecuting; // @synthesize isExecuting=_isExecuting;
 @property _Bool isFinished; // @synthesize isFinished=_isFinished;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(retain, nonatomic) NSString *key; // @synthesize key=_key;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)init;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;

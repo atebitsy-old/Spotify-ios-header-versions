@@ -21,13 +21,13 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)createEpisodeCellConfiguratorWithStringFormatter:(id)arg1 buttonsFactory:(id)arg2;
 - (id)initWithTheme:(id)arg1 glueTheme:(id)arg2 imageLoaderFactory:(id)arg3 explicitContentAccessManager:(id)arg4 podcastTestManager:(id)arg5;
 

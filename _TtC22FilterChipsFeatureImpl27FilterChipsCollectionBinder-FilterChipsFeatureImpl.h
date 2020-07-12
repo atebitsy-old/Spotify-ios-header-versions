@@ -6,9 +6,7 @@
 
 #import "_TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder.h"
 
-#import "UICollectionViewDataSource-Protocol.h"
-
-@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl) <UICollectionViewDataSource>
+@interface _TtC22FilterChipsFeatureImpl27FilterChipsCollectionBinder (FilterChipsFeatureImpl)
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 @end

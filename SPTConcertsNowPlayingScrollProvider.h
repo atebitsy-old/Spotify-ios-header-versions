@@ -15,8 +15,8 @@
     SPTConcertsScrollViewController *_concertsViewController;
 }
 
-@property(retain, nonatomic) SPTConcertsScrollViewController *concertsViewController; // @synthesize concertsViewController=_concertsViewController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTConcertsScrollViewController *concertsViewController; // @synthesize concertsViewController=_concertsViewController;
 - (_Bool)needsLayoutUpdateAfterLoadForTrack:(id)arg1;
 - (double)preferredContentHeightForWidth:(double)arg1;
 - (id)componentViewForTrack:(id)arg1;

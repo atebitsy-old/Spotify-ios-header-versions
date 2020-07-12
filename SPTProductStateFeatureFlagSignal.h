@@ -19,11 +19,11 @@
     SPTProductStateExposureLogger *_exposureLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTProductStateExposureLogger *exposureLogger; // @synthesize exposureLogger=_exposureLogger;
 @property(readonly, copy, nonatomic) CDUnknownBlockType mapper; // @synthesize mapper=_mapper;
 @property(readonly, copy, nonatomic) NSString *key; // @synthesize key=_key;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)logExposure;
 - (long long)calculateState;

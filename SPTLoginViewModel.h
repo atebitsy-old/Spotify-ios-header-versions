@@ -28,6 +28,7 @@
     SPTLoginAttemptLogger *_loginAttemptLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginAttemptLogger *loginAttemptLogger; // @synthesize loginAttemptLogger=_loginAttemptLogger;
 @property(retain, nonatomic) SPTLoginRecoverAccountDataLoader *recoverAccountDataLoader; // @synthesize recoverAccountDataLoader=_recoverAccountDataLoader;
 @property(retain, nonatomic) SPTLoginFailureHandler *loginFailureHandler; // @synthesize loginFailureHandler=_loginFailureHandler;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) SPTLoginOnePasswordHandler *onePassword; // @synthesize onePassword=_onePassword;
 @property(readonly, nonatomic) SPTLoginViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTLoginViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)failureHandlerWillShowAutoSendConfirmationView:(id)arg1;
 - (id)localizedDescriptionForError:(id)arg1;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2 forEmail:(id)arg3;

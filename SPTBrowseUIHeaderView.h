@@ -33,6 +33,7 @@
 + (double)statusBarHeight;
 + (double)extraHeightWithStyle:(id)arg1 includesButton:(_Bool)arg2;
 + (double)buttonExtraHeightWithStyle:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *collapsedTitleHeightConstraint; // @synthesize collapsedTitleHeightConstraint=_collapsedTitleHeightConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *collapsedTitleTopMarginConstraint; // @synthesize collapsedTitleTopMarginConstraint=_collapsedTitleTopMarginConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *collapsedTitleTrailingMarginConstraint; // @synthesize collapsedTitleTrailingMarginConstraint=_collapsedTitleTrailingMarginConstraint;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIView *clippingView; // @synthesize clippingView=_clippingView;
 @property(retain, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
-- (void).cxx_destruct;
 - (double)minimiumHeight;
 - (void)glue_applyStyle:(id)arg1;
 - (double)collapsedTitleTopMargin;

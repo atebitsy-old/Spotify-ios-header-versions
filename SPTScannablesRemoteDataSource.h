@@ -21,12 +21,12 @@
     id <SPTDataLoaderCancellationToken> _cancellationToken;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *requestQueue; // @synthesize requestQueue=_requestQueue;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTScannablesDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
@@ -35,7 +35,7 @@
 - (void)requestScannableWithFormat:(unsigned long long)arg1 backgroundColor:(id)arg2 barColor:(unsigned long long)arg3 pixelWidth:(unsigned long long)arg4 uri:(id)arg5;
 - (void)requestOnlyScannableForURL:(id)arg1 imageSize:(struct CGSize)arg2;
 - (void)requestScannableForURL:(id)arg1 imageSize:(struct CGSize)arg2;
-- (void)requestURLForScannableID:(struct NSString *)arg1;
+- (void)requestURLForScannableID:(id)arg1;
 - (id)initWithDataLoader:(id)arg1;
 
 // Remaining properties

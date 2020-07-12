@@ -20,11 +20,11 @@
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool useNewEmptyStateView; // @synthesize useNewEmptyStateView=_useNewEmptyStateView;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)initWithLocalSettings:(id)arg1 abbaFeatureFlags:(id)arg2 freeTierEnabledSignal:(id)arg3;
 

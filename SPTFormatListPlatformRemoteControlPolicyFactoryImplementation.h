@@ -21,13 +21,13 @@
     id <SPTFeedbackManager> _feedbackManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeedbackManager> feedbackManager; // @synthesize feedbackManager=_feedbackManager;
 @property(readonly, nonatomic) SPTFormatListPlatformRemoteControlPolicyManagerImplementation *remoteControlPolicyManager; // @synthesize remoteControlPolicyManager=_remoteControlPolicyManager;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(readonly, nonatomic) id <SPTFormatListPlatformResolver> resolver; // @synthesize resolver=_resolver;
-- (void).cxx_destruct;
 - (id)initWithResolver:(id)arg1 playerFeature:(id)arg2 logCenter:(id)arg3 remoteControlPolicyManager:(id)arg4 feedbackManager:(id)arg5;
 - (id)createRemoteControlPolicyForURI:(id)arg1;
 

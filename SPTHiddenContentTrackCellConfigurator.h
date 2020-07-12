@@ -20,6 +20,7 @@
     GLUETrackMultipleAccessoriesViewStyle *_trackRowSubtitleAccessoryStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUETrackMultipleAccessoriesViewStyle *trackRowSubtitleAccessoryStyle; // @synthesize trackRowSubtitleAccessoryStyle=_trackRowSubtitleAccessoryStyle;
 @property(retain, nonatomic) GLUEEntityRowStyle *trackRowStyle; // @synthesize trackRowStyle=_trackRowStyle;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -27,7 +28,6 @@
 @property(nonatomic) __weak id <SPTHiddenContentTrackCellDelegate> cellDelegate; // @synthesize cellDelegate=_cellDelegate;
 @property(retain, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
 @property(retain, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
-- (void).cxx_destruct;
 - (id)trackRowStyleWithTheme:(id)arg1;
 - (void)setUpSubtitleAccessoryForCell:(id)arg1 viewModel:(id)arg2;
 - (void)setUpLeadingAccessoryForCell:(id)arg1 viewModel:(id)arg2 oldInteractionListener:(id)arg3;

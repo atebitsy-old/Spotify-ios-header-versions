@@ -17,10 +17,10 @@
     NSURL *_uri;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, nonatomic) long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) long long delay; // @synthesize delay=_delay;
-- (void).cxx_destruct;
 - (long long)parseIntent:(id)arg1;
 - (id)initWithDelay:(long long)arg1 intent:(id)arg2 uri:(id)arg3;
 

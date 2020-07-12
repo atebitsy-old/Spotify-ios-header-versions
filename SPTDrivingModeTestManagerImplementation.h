@@ -23,6 +23,7 @@
     id <SPTCarModeEngine> _carModeEngine;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isCarViewFlagEnabled) _Bool carViewFlagEnabled; // @synthesize carViewFlagEnabled=_carViewFlagEnabled;
 @property(nonatomic, getter=isCarViewEnabled) _Bool carViewEnabled; // @synthesize carViewEnabled=_carViewEnabled;
 @property(readonly, nonatomic) id <SPTCarModeEngine> carModeEngine; // @synthesize carModeEngine=_carModeEngine;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SettingsRegistry> settingsRegistry; // @synthesize settingsRegistry=_settingsRegistry;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
-- (void).cxx_destruct;
 - (id)provideCarViewSettingsSection:(id)arg1;
 - (void)registerCarViewSettingsSection;
 - (_Bool)isCarViewEnabledInSettings;

@@ -22,6 +22,7 @@
     double _inputFieldDisclosureLabelHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double inputFieldDisclosureLabelHeight; // @synthesize inputFieldDisclosureLabelHeight=_inputFieldDisclosureLabelHeight;
 @property(nonatomic) double secondFieldTitleLabelTopMargin; // @synthesize secondFieldTitleLabelTopMargin=_secondFieldTitleLabelTopMargin;
 @property(nonatomic) double verticalSpacing; // @synthesize verticalSpacing=_verticalSpacing;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) SPTLoginTextFieldStyle *inputFieldStyle; // @synthesize inputFieldStyle=_inputFieldStyle;
 @property(copy, nonatomic) GLUELabelStyle *disclosureLabelStyle; // @synthesize disclosureLabelStyle=_disclosureLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

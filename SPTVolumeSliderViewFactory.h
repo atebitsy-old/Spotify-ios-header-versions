@@ -22,13 +22,13 @@
     SPTVolumeUbiLogger *_ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) SPTVolumeLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTVolumeThrottler *commandThrottler; // @synthesize commandThrottler=_commandThrottler;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(retain, nonatomic) id <SPTVolumeAPI> volumeController; // @synthesize volumeController=_volumeController;
-- (void).cxx_destruct;
 - (id)createView;
 - (id)createVolumeSliderView;
 - (id)initWithVolumeController:(id)arg1 systemVolumeManager:(id)arg2 connectManager:(id)arg3 commandThrottler:(id)arg4 logger:(id)arg5 ubiLogger:(id)arg6;

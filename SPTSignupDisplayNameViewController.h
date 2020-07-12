@@ -13,7 +13,7 @@
 #import "SPTSignupDisplayNameViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupDisplayNameView, SPTSignupDisplayNameViewModel, UIViewController;
+@class NSString, NSURL, SPTLoginTheme, SPTSignupAnimatedTransitioning, SPTSignupDisplayNameViewModel, SPTSignupSingleInputFieldView, UIViewController;
 @protocol SPTPageContainer;
 
 @interface SPTSignupDisplayNameViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTNavigationControllerTransitioning, UITextFieldDelegate, SPTDynamicSignupFlowControllerDelegate, SPTPageController, SPTSignupDisplayNameViewModelDelegate>
@@ -23,10 +23,10 @@
     SPTLoginTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupAnimatedTransitioning *animatedTransitioning; // @synthesize animatedTransitioning=_animatedTransitioning;
 @property(retain, nonatomic) SPTSignupDisplayNameViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPopOperationToViewController:(id)arg2;
 - (id)navigationController:(id)arg1 animationControllerForPushOperationFromViewController:(id)arg2;
@@ -55,7 +55,7 @@
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
-@property(retain, nonatomic) SPTSignupDisplayNameView *view; // @dynamic view;
+@property(retain, nonatomic) SPTSignupSingleInputFieldView *view; // @dynamic view;
 
 @end
 

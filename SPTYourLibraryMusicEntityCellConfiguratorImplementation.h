@@ -24,6 +24,7 @@
     unsigned long long _trailingAccessoryType;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType; // @synthesize trailingAccessoryType=_trailingAccessoryType;
 @property(readonly, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTYourLibraryMusicCollapsableHeaderStyle *entitySectionHeaderStyle; // @synthesize entitySectionHeaderStyle=_entitySectionHeaderStyle;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) SPTYourLibraryMusicEntityRowStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) __weak id <SPTYourLibraryMusicEntityCellConfiguratorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)createQuickActionButton;
 - (void)setupIconOverlayLeadingAccessoryForCell:(id)arg1 withViewModel:(id)arg2;
 - (void)setupLeadingAccessoryForCell:(id)arg1 withViewModel:(id)arg2;

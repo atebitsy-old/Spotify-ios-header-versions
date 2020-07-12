@@ -20,10 +20,10 @@
 }
 
 + (id)createSessionForAccessory:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) EASession *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTHearablesConnectionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) EAAccessory *accessory; // @synthesize accessory=_accessory;
-- (void).cxx_destruct;
 - (void)accessoryDidDisconnect:(id)arg1;
 - (void)readFromInputStream;
 - (void)stream:(id)arg1 handleEvent:(unsigned long long)arg2;

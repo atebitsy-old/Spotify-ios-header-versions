@@ -20,11 +20,11 @@
     SPTWazePresenter *_presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTWazePresenter *presenter; // @synthesize presenter=_presenter;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTWazeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTWazeViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)wazeNavigationDidEnd;
 - (void)wazeNavigationDidStart;
 @property(readonly, nonatomic, getter=isInstalled) _Bool installed;

@@ -15,8 +15,8 @@
     NSLayoutConstraint *_heightConstraint;
 }
 
-@property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 - (void)statusBarManager:(id)arg1 didChangeStatusBarHeight:(double)arg2;
 - (void)statusBarManager:(id)arg1 didToggleStatusBarState:(_Bool)arg2;
 - (void)establishConstraintsWithSuperView:(id)arg1;

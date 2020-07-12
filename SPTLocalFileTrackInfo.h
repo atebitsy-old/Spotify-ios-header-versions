@@ -20,13 +20,13 @@
     long long _playbackDuration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long playbackDuration; // @synthesize playbackDuration=_playbackDuration;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(retain, nonatomic) NSString *albumTitle; // @synthesize albumTitle=_albumTitle;
 @property(retain, nonatomic) NSString *artist; // @synthesize artist=_artist;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *UUID;
 
 // Remaining properties

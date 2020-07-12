@@ -9,7 +9,7 @@
 #import "SPTSnackbarService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSnackbarAnimationView, SPTSnackbarPresenterImplementation;
-@protocol SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierUIService, SPTGLUEService, SPTRemoteConfigurationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol SPTContainerUIService, SPTFreeTierUIService, SPTGLUEService, SPTRemoteConfigurationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTSnackbarServiceImplementation : NSObject <SPTSnackbarService>
 {
@@ -19,20 +19,18 @@
     id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     SPTSnackbarPresenterImplementation *_presenter;
     SPTSnackbarAnimationView *_snackbarAnimationView;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(retain, nonatomic) SPTSnackbarAnimationView *snackbarAnimationView; // @synthesize snackbarAnimationView=_snackbarAnimationView;
 @property(retain, nonatomic) SPTSnackbarPresenterImplementation *presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(nonatomic) __weak id <SPTFreeTierUIService> freeTierUIService; // @synthesize freeTierUIService=_freeTierUIService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-- (void).cxx_destruct;
 - (id)provideSnackbarPresenterForViewURI:(id)arg1;
 - (id)provideSnackbarPresenter;
 - (void)disableSnackbarService;

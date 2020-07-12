@@ -32,6 +32,7 @@
     SPTDefaultPopupPermissionManager *_popupPermissionsManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isAuthRequestInProgress) _Bool authRequestInProgress; // @synthesize authRequestInProgress=_authRequestInProgress;
 @property(nonatomic) __weak SPTDefaultPopupPermissionManager *popupPermissionsManager; // @synthesize popupPermissionsManager=_popupPermissionsManager;
 @property(retain, nonatomic) SPTAuthPostAuthPlayerController *postAuthPlayerController; // @synthesize postAuthPlayerController=_postAuthPlayerController;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(readonly, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (void)authRequest:(id)arg1 didCompleteForAccountsRequest:(id)arg2 withResponseURI:(id)arg3;
 - (void)authRequestDidStart:(id)arg1;
 - (void)handleAuthorizationResultWithResponseURI:(id)arg1 silent:(_Bool)arg2;

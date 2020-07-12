@@ -16,10 +16,10 @@
     id <SPTPlayerQueue> _playerQueue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlayerQueue> playerQueue; // @synthesize playerQueue=_playerQueue;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)icon;

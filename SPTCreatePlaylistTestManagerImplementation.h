@@ -17,9 +17,9 @@
     SPTCreatePlaylistFeatureProperties *_remoteConfigurationProperties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCreatePlaylistFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-- (void).cxx_destruct;
 - (void)setupRemoteConfigurationProperties;
 @property(readonly, nonatomic, getter=isCreatePlaylistEnabled) _Bool createPlaylistEnabled;
 - (id)initWithRemoteConfigurationResolver:(id)arg1;

@@ -15,8 +15,8 @@
     SPTLyricsV2Service *_lyricsService;
 }
 
-@property(readonly, nonatomic) SPTLyricsV2Service *lyricsService; // @synthesize lyricsService=_lyricsService;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTLyricsV2Service *lyricsService; // @synthesize lyricsService=_lyricsService;
 - (_Bool)lyricsAvailableForTrack:(id)arg1;
 - (id)initWithLyricsService:(id)arg1;
 

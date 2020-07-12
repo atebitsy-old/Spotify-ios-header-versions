@@ -14,9 +14,9 @@
     id <SPTAbbaFeatureFlags> _featureFlags;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(retain, nonatomic) id <SPTUserActivityController> userActivityController; // @synthesize userActivityController=_userActivityController;
-- (void).cxx_destruct;
 - (_Bool)isSpotlightEnabled;
 - (id)initWithUserActivityController:(id)arg1 featureFlags:(id)arg2;
 

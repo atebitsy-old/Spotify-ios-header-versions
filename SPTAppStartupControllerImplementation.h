@@ -19,11 +19,11 @@
     NSTimer *_idleDelayTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *idleDelayTimer; // @synthesize idleDelayTimer=_idleDelayTimer;
 @property(readonly, nonatomic) __weak id <SPTAppStartupControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) double idleAfterTerminalStateDelay; // @synthesize idleAfterTerminalStateDelay=_idleAfterTerminalStateDelay;
 @property(nonatomic) double idleAfterInitialViewTimeout; // @synthesize idleAfterInitialViewTimeout=_idleAfterInitialViewTimeout;
-- (void).cxx_destruct;
 - (void)scheduleIdleDelayTimerWithTimeout:(double)arg1 override:(_Bool)arg2;
 - (void)idleDelayTimerFire;
 - (void)startupDidReachTerminalState;

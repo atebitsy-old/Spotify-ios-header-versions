@@ -24,6 +24,7 @@
 }
 
 + (id)albumWithAlbumInfo:(const struct AlbumInfo *)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *imageURLs; // @synthesize imageURLs=_imageURLs;
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly; // @synthesize premiumOnly=_premiumOnly;
 @property(nonatomic) long long tracksCount; // @synthesize tracksCount=_tracksCount;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SPTArtist *artist; // @synthesize artist=_artist;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *coverImageLink;
 - (id)imageURLForSize:(int)arg1;
 - (id)initWithURL:(id)arg1 name:(id)arg2 artist:(id)arg3 imageURLs:(id)arg4 isAvailable:(_Bool)arg5 year:(long long)arg6 month:(long long)arg7 day:(long long)arg8 albumType:(BOOL)arg9 tracksCount:(long long)arg10 isPremiumOnly:(_Bool)arg11;

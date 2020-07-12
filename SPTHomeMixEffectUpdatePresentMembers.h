@@ -13,8 +13,8 @@
     NSArray *_memberBlacklist;
 }
 
-@property(copy, nonatomic) NSArray *memberBlacklist; // @synthesize memberBlacklist=_memberBlacklist;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *memberBlacklist; // @synthesize memberBlacklist=_memberBlacklist;
 - (id)initWithMemberBlacklist:(id)arg1;
 
 @end

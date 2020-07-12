@@ -19,11 +19,11 @@
     NSString *_deviceID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) NSString *trackerUserID; // @synthesize trackerUserID=_trackerUserID;
 @property(readonly, nonatomic, getter=shouldEnableUserTracker) _Bool enableUserTracker; // @synthesize enableUserTracker=_enableUserTracker;
-- (void).cxx_destruct;
 - (void)userDidLoginWithProductState:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 deviceID:(id)arg2;
 

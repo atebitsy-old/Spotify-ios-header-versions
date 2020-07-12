@@ -19,11 +19,11 @@
     NSString *_pageIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
-- (void).cxx_destruct;
 - (void)logLoadingCancelled;
 - (void)logLoadingFailed;
 - (void)logLoadingCompleted;

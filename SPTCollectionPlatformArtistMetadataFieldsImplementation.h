@@ -21,6 +21,7 @@
     NSString *_groupLabel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(retain, nonatomic) NSURL *collectionURL; // @synthesize collectionURL=_collectionURL;
 @property(nonatomic) unsigned long long artistTracksCount; // @synthesize artistTracksCount=_artistTracksCount;
@@ -28,7 +29,6 @@
 @property(nonatomic) _Bool isFollowed; // @synthesize isFollowed=_isFollowed;
 @property(copy, nonatomic) NSDictionary *artistPortraits; // @synthesize artistPortraits=_artistPortraits;
 @property(retain, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, nonatomic) NSURL *URL;

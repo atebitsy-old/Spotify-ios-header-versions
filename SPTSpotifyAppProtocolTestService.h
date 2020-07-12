@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak SPTSpotifyAppProtocolServiceImplementation *appProtocolService; // @synthesize appProtocolService=_appProtocolService;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

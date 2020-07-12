@@ -18,12 +18,12 @@
     id <SPTOfflineModeState> _offlineModeState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) SPTModerationWebViewURLProviderFactory *urlProviderFactory; // @synthesize urlProviderFactory=_urlProviderFactory;
 @property(readonly, nonatomic) SPTModerationWebViewControllerFactory *webViewFactory; // @synthesize webViewFactory=_webViewFactory;
 @property(readonly, nonatomic) SPTModerationTestManager *testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 - (id)actionForEntityURL:(id)arg1 sourceURL:(id)arg2 logContext:(id)arg3;
 - (id)actionForEntityURL:(id)arg1 sourceURL:(id)arg2 logContext:(id)arg3 forceEnabled:(_Bool)arg4;
 - (id)initWithTestManager:(id)arg1 webviewFactory:(id)arg2 urlProviderFactory:(id)arg3 modalPresentationController:(id)arg4 offlineModeState:(id)arg5;

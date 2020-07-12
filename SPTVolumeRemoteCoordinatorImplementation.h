@@ -25,6 +25,7 @@
     SPTVolumeDebugInstrumentation *_debugLogger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasActiveConnection; // @synthesize hasActiveConnection=_hasActiveConnection;
 @property(readonly, nonatomic) SPTVolumeDebugInstrumentation *debugLogger; // @synthesize debugLogger=_debugLogger;
 @property(readonly, nonatomic) id <SPTVolumeSynchronizationManager> volumeSynchronizationManager; // @synthesize volumeSynchronizationManager=_volumeSynchronizationManager;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) SPTVolumeRemoteControllerRouter *remoteVolumeManager; // @synthesize remoteVolumeManager=_remoteVolumeManager;
 @property(readonly, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(nonatomic) __weak id <SPTVolumeRemoteCoordinatorDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (_Bool)hasActiveRemoteVolumeController;
 - (_Bool)shouldResetSystemVolume;
 - (void)stopRemoteVolumeSynchronization;

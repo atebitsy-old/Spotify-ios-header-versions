@@ -15,10 +15,10 @@
     struct CGRect _keyboardFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long keyboardState; // @synthesize keyboardState=_keyboardState;
 @property(nonatomic) struct CGRect keyboardFrame; // @synthesize keyboardFrame=_keyboardFrame;
 @property(nonatomic) __weak id <SPTSearchKeyboardManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setUpOverlayWithTheKeyboardNotification:(id)arg1;
 - (void)handleKeyboardWillChangeNotification:(id)arg1;
 - (void)unregisterNotificationObservers;

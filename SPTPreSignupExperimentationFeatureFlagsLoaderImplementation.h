@@ -20,15 +20,19 @@
     SPTPreSignupExperimentationCacheManager *_cacheManager;
     SPTPreSignupExperimentationLogger *_logger;
     SPTPreSignupExperimentationConfigurationRequestPayloadProvider *_requestPayloadProvider;
+    NSString *_currentLoggerAttemptID;
 }
 
+- (void).cxx_destruct;
+@property(copy, nonatomic) NSString *currentLoggerAttemptID; // @synthesize currentLoggerAttemptID=_currentLoggerAttemptID;
 @property(readonly, nonatomic) SPTPreSignupExperimentationConfigurationRequestPayloadProvider *requestPayloadProvider; // @synthesize requestPayloadProvider=_requestPayloadProvider;
 @property(readonly, nonatomic) _Bool useNewEndpoint; // @synthesize useNewEndpoint=_useNewEndpoint;
 @property(readonly, nonatomic) SPTPreSignupExperimentationLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTPreSignupExperimentationCacheManager *cacheManager; // @synthesize cacheManager=_cacheManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationFeatureFlagsLoaderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
+- (void)resetCurrentLoggerAttemptID;
+- (void)reportResponse:(id)arg1;
 - (void)reportSuccessLoadingFlags:(id)arg1 fromCache:(_Bool)arg2;
 - (void)reportFailureLoadingFlags;
 - (void)reportUsingCachedData;

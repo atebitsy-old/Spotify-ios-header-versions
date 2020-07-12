@@ -14,9 +14,9 @@
     id <SPTLoginLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
-- (void).cxx_destruct;
 - (void)storeSigninWithAppleUserId:(id)arg1;
 - (void)readSigninWithAppleUserId:(CDUnknownBlockType)arg1;
 - (void)validateSigninWithApple:(id)arg1 completion:(CDUnknownBlockType)arg2;

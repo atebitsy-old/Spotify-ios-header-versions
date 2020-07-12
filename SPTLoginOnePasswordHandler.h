@@ -15,10 +15,10 @@
     SPTLoginErrorDialogLogger *_dialogLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(readonly, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(readonly, nonatomic) OnePasswordExtension *onePasswordExtension; // @synthesize onePasswordExtension=_onePasswordExtension;
-- (void).cxx_destruct;
 - (void)handleError:(id)arg1;
 - (void)getLoginDetailsWithViewController:(id)arg1 sender:(id)arg2 onSuccess:(CDUnknownBlockType)arg3;
 - (_Bool)isOnePasswordLoginAvailable;

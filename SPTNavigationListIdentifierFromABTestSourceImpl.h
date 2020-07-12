@@ -21,13 +21,13 @@
     SPTNavigationSettingsRegistration *_registration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool newExperienceEnabled; // @synthesize newExperienceEnabled=_newExperienceEnabled;
 @property(retain, nonatomic) SPTNavigationSettingsRegistration *registration; // @synthesize registration=_registration;
 @property(copy, nonatomic) NSString *navigationMenuUserPolicyListIdentifier; // @synthesize navigationMenuUserPolicyListIdentifier=_navigationMenuUserPolicyListIdentifier;
 @property(copy, nonatomic) NSString *navigationMenuUserPolicyValue; // @synthesize navigationMenuUserPolicyValue=_navigationMenuUserPolicyValue;
 @property(retain, nonatomic) id <SPTNavigationListProvider> listProvider; // @synthesize listProvider=_listProvider;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (id)navigationSettingsListIdentifierValue;
 - (id)initWithProductState:(id)arg1 settingsRegistration:(id)arg2 newExperienceEnabled:(_Bool)arg3;
 

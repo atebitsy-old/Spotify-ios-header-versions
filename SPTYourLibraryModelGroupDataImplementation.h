@@ -16,9 +16,9 @@
     unsigned long long _identifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 identifier:(unsigned long long)arg2;
 
 // Remaining properties

@@ -18,9 +18,9 @@
     id <SPTFreeTierEntityContextMenuButtonViewModel> _viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierEntityContextMenuButtonViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak GLUEButton<VISREFActionRowButtonViewModelDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)viewModel:(id)arg1 didUpdateState:(unsigned long long)arg2;
 - (id)imageForState:(unsigned long long)arg1;
 - (id)initWithViewModel:(id)arg1;

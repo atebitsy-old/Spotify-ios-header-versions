@@ -25,6 +25,7 @@
     NSURL *_url;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) unsigned long long contentType; // @synthesize contentType=_contentType;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (id)layoutForInformationType;
 - (id)layoutForSectionHeaderType;
 - (void)updateConstraints;

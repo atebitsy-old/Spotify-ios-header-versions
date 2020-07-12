@@ -17,11 +17,11 @@
     long long _ctaIcon;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long ctaIcon; // @synthesize ctaIcon=_ctaIcon;
 @property(copy, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (id)title;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (_Bool)isEnabled;
 - (id)logEntityURL;

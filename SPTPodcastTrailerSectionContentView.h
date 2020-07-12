@@ -28,6 +28,7 @@
     GLUETrackAccessoryLabel *_explicitLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUETrackAccessoryLabel *explicitLabel; // @synthesize explicitLabel=_explicitLabel;
 @property(retain, nonatomic) UIControl *playControl; // @synthesize playControl=_playControl;
 @property(retain, nonatomic) UIStackView *metadataSubContainerStackView; // @synthesize metadataSubContainerStackView=_metadataSubContainerStackView;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) GLUEContextMenuAccessoryButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-- (void).cxx_destruct;
 - (id)explicitLabelStyle;
 - (id)providePlaceholderImage;
 - (void)updateProgressVisibility:(_Bool)arg1;

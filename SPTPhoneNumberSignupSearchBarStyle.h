@@ -30,6 +30,7 @@
     struct CGSize _searchIconSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *searchFieldPlaceholderTextColor; // @synthesize searchFieldPlaceholderTextColor=_searchFieldPlaceholderTextColor;
 @property(nonatomic) long long keyboardReturnKeyType; // @synthesize keyboardReturnKeyType=_keyboardReturnKeyType;
 @property(retain, nonatomic) UIColor *searchIconColor; // @synthesize searchIconColor=_searchIconColor;
@@ -46,7 +47,6 @@
 @property(copy, nonatomic) UIColor *searchFieldTextColor; // @synthesize searchFieldTextColor=_searchFieldTextColor;
 @property(copy, nonatomic) UIColor *searchFieldBackgroundColor; // @synthesize searchFieldBackgroundColor=_searchFieldBackgroundColor;
 @property(copy, nonatomic) UIColor *searchBarBackgroundColor; // @synthesize searchBarBackgroundColor=_searchBarBackgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

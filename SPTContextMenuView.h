@@ -39,6 +39,7 @@
 }
 
 + (id)contextMenuViewWithInteractionTarget:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool underlyingBlurViewUpdated; // @synthesize underlyingBlurViewUpdated=_underlyingBlurViewUpdated;
 @property(nonatomic) struct CGPoint lastGesturePoint; // @synthesize lastGesturePoint=_lastGesturePoint;
 @property(nonatomic) _Bool interactionRunning; // @synthesize interactionRunning=_interactionRunning;
@@ -60,7 +61,6 @@
 @property(nonatomic) long long presentationStyle; // @synthesize presentationStyle=_presentationStyle;
 @property(nonatomic) __weak id <SPTContextMenuViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTContextMenuViewDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 @property(nonatomic) long long themeStyle;
 - (void)setContentOffset:(struct CGPoint)arg1 animated:(_Bool)arg2;
 - (void)updateHeaderViewHeightAnimated:(_Bool)arg1;

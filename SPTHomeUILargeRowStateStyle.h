@@ -17,9 +17,9 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1 state:(unsigned long long)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;
 

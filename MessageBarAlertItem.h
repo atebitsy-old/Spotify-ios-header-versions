@@ -15,9 +15,9 @@
     long long _heightMode;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long heightMode; // @synthesize heightMode=_heightMode;
 @property(nonatomic) long long alertItemMode; // @synthesize alertItemMode=_alertItemMode;
-- (void).cxx_destruct;
 - (long long)itemHeightMode;
 - (id)textColor;
 - (id)backgroundColor;

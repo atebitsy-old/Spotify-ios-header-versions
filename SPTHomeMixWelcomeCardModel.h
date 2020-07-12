@@ -15,10 +15,10 @@
     NSArray *_facePiles;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *facePiles; // @synthesize facePiles=_facePiles;
 @property(readonly, copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 backgroundColor:(id)arg2 facePiles:(id)arg3;
 
 @end

@@ -33,6 +33,7 @@
     NSLayoutConstraint *_tableViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *tableViewHeightConstraint; // @synthesize tableViewHeightConstraint=_tableViewHeightConstraint;
 @property(readonly, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryContainerViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UITableViewCell *countrySelectorCell; // @synthesize countrySelectorCell=_countrySelectorCell;
@@ -48,7 +49,6 @@
 @property(nonatomic) _Bool isCountrySelectionEnabled; // @synthesize isCountrySelectionEnabled=_isCountrySelectionEnabled;
 @property(readonly, nonatomic) double animatableContentViewOriginalX; // @synthesize animatableContentViewOriginalX=_animatableContentViewOriginalX;
 @property(retain, nonatomic) NSString *transitionContextViewKey; // @synthesize transitionContextViewKey=_transitionContextViewKey;
-- (void).cxx_destruct;
 - (void)updateScrollViewWithInsets:(struct UIEdgeInsets)arg1;
 @property(readonly, nonatomic) double bottomViewY;
 @property(readonly, nonatomic) UIScrollView *animatingScrollView;

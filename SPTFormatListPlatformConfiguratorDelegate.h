@@ -15,8 +15,8 @@
     NSDictionary *_defaultCellClassesForTypes;
 }
 
-@property(retain, nonatomic) NSDictionary *defaultCellClassesForTypes; // @synthesize defaultCellClassesForTypes=_defaultCellClassesForTypes;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSDictionary *defaultCellClassesForTypes; // @synthesize defaultCellClassesForTypes=_defaultCellClassesForTypes;
 - (void)formatListTableViewConfigurator:(id)arg1 decorateTableViewCell:(id)arg2 withContextMenuButton:(id)arg3 indexPath:(id)arg4 formatListItemModel:(id)arg5;
 - (void)formatListTableViewConfigurator:(id)arg1 decorateTableViewCell:(id)arg2 indexPath:(id)arg3 formatListItemModel:(id)arg4;
 - (id)formatListTableViewConfigurator:(id)arg1 cellIdentifierForIndexPath:(id)arg2 formatListItemModel:(id)arg3;

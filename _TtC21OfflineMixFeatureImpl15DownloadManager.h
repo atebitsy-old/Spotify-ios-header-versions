@@ -11,10 +11,12 @@
     // Error parsing type: , name: observerManager
     // Error parsing type: , name: offlineState
     // Error parsing type: , name: dispatchWorkItems
+    // Error parsing type: , name: dialogPresenter
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)changeOfflineStateFor:(id)arg1;
 - (unsigned long long)offlineStateOf:(id)arg1;
 - (_Bool)isAvailableOffline:(id)arg1;
 - (void)remove:(id)arg1;

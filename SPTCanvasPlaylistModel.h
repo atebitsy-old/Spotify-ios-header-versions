@@ -16,11 +16,11 @@
     NSArray *_tracks;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 @property(readonly, copy, nonatomic) NSURL *playistURI; // @synthesize playistURI=_playistURI;
-- (void).cxx_destruct;
 - (id)initWithPlayistURI:(id)arg1 playlistName:(id)arg2 imageURL:(id)arg3 tracks:(id)arg4;
 
 @end

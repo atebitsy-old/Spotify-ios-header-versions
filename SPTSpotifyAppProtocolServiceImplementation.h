@@ -16,7 +16,7 @@
 #import "SPTSpotifyAppProtocolService-Protocol.h"
 
 @class NSMapTable, NSString, SPSession, SPTAllocationContext, SPTAppProtocolBackgroundController, SPTAppProtocolCallForwarder, SPTAppProtocolEAConnector, SPTAppProtocolFeatureFlagManager;
-@protocol SPTAccessoryManagerService, SPTAccessoryStateManager, SPTAppProtocolConnector, SPTAuthController, SPTAuthService, SPTCoreService, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkService, SPTProductState;
+@protocol SPTAccessoryActionLogger, SPTAccessoryManagerService, SPTAccessoryStateManager, SPTAppProtocolConnector, SPTAuthController, SPTAuthService, SPTCoreService, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkService, SPTProductState;
 
 @interface SPTSpotifyAppProtocolServiceImplementation : NSObject <NSNetServiceDelegate, SPTAppProtocolConnectionHandlerDelegate, SPTAppProtocolConnectorDelegate, SPTExternalIntegrationPlaybackControllerObserver, SPTAppProtocolBackgroundControllerDelegate, SPTAppProtocolFeatureFlagManagerObserver, SPTService, SPTSpotifyAppProtocolService>
 {
@@ -28,6 +28,7 @@
     id <SPTProductState> _productState;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     SPTAppProtocolFeatureFlagManager *_featureFlagManager;
+    id <SPTAccessoryActionLogger> _actionLogger;
     id <SPTAccessoryManagerService> _accessoryManagerService;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
     id <SPTNetworkService> _networkFeature;
@@ -42,6 +43,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSMapTable *activeConnectionHandlers; // @synthesize activeConnectionHandlers=_activeConnectionHandlers;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
@@ -54,13 +56,13 @@
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
+@property(nonatomic) __weak id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(retain, nonatomic) SPTAppProtocolFeatureFlagManager *featureFlagManager; // @synthesize featureFlagManager=_featureFlagManager;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
 @property(nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(nonatomic) __weak id <SPTAuthController> authController; // @synthesize authController=_authController;
-- (void).cxx_destruct;
 - (void)unregisterExternalHandler:(id)arg1;
 - (void)registerExternalHandler:(id)arg1;
 - (_Bool)hasAllBackgroundControllerDependencies;

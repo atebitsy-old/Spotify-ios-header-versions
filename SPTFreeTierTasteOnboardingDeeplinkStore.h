@@ -14,8 +14,8 @@
     id <SPTLocalSettings> _localSettings;
 }
 
-@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(copy, nonatomic) NSString *deeplink;
 - (id)initWithLocalSettings:(id)arg1 currentDeeplink:(id)arg2;
 

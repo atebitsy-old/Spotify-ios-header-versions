@@ -14,9 +14,9 @@
     GLUELabel *_offlineSublabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *offlineSublabel; // @synthesize offlineSublabel=_offlineSublabel;
 @property(retain, nonatomic) GLUELabel *offlineLabel; // @synthesize offlineLabel=_offlineLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (void)setupViews;

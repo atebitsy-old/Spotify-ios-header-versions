@@ -19,10 +19,10 @@
 + (id)titleLabelAttributesForTheme:(id)arg1;
 + (double)verticalMarginsForType:(unsigned long long)arg1 theme:(id)arg2;
 + (double)heightForSectionHeaderWithTitle:(id)arg1 containerWidth:(double)arg2 theme:(id)arg3 type:(unsigned long long)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)applyTitleLabelStyle;
 @property(copy, nonatomic) NSString *title;
 - (id)shortcutsConstraintsForTitleLabel:(id)arg1;

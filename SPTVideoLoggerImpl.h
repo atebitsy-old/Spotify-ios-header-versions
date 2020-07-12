@@ -17,9 +17,9 @@
     id <SPTEventSender> _eventSender;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)mapToGabitoPlaybackSessionMessage:(id)arg1;
 - (id)mapToGabitoPlaybackErrorMessage:(id)arg1;
 - (id)mapToEndVideoMessage:(id)arg1;

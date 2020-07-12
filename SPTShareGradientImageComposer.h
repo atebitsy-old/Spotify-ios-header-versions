@@ -19,6 +19,7 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double aspectRatioHeight; // @synthesize aspectRatioHeight=_aspectRatioHeight;
 @property(nonatomic) double aspectRatio; // @synthesize aspectRatio=_aspectRatio;
 @property(copy, nonatomic) UIImage *gradientBgImage; // @synthesize gradientBgImage=_gradientBgImage;
@@ -26,7 +27,6 @@
 @property(copy, nonatomic) UIColor *topColor; // @synthesize topColor=_topColor;
 @property(nonatomic) double scale; // @synthesize scale=_scale;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
-- (void).cxx_destruct;
 - (struct CGRect)rectForSize:(struct CGSize)arg1 insideSize:(struct CGSize)arg2 marginRatio:(double)arg3 vAlignedCenterRatio:(double)arg4;
 - (id)gradientImageComposedWith:(id)arg1 marginRatio:(double)arg2 verticalAlignCenterRatio:(double)arg3;
 - (struct CGRect)scaleRect:(struct CGRect)arg1 scale:(double)arg2;

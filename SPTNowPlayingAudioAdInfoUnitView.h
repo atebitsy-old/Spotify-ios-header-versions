@@ -16,11 +16,11 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTAdNowPlayingBookmarkButton *bookmarkButton; // @synthesize bookmarkButton=_bookmarkButton;
 @property(readonly, nonatomic) SPTActionButton *optOutButton; // @synthesize optOutButton=_optOutButton;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
-- (void).cxx_destruct;
 - (void)updateActionButtonWithTitle:(id)arg1 isOptOut:(_Bool)arg2;
 - (void)setupConstraints;
 - (id)createBookmarkButton;

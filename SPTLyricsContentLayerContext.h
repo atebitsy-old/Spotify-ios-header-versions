@@ -19,13 +19,13 @@
     SPTLyricsV2Service *_lyricsService;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLyricsV2Service *lyricsService; // @synthesize lyricsService=_lyricsService;
 @property(retain, nonatomic) SPTLyricsLineProgressManagerFactory *progressManagerFactory; // @synthesize progressManagerFactory=_progressManagerFactory;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTNowPlayingTestManager> nowPlayingTestManager; // @synthesize nowPlayingTestManager=_nowPlayingTestManager;
 @property(retain, nonatomic) id <SPTLyricsV2TestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-- (void).cxx_destruct;
 
 @end
 

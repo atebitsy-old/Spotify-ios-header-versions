@@ -17,10 +17,10 @@
     GLUELabelStyle *_notificationSwitchTextStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabelStyle *notificationSwitchTextStyle; // @synthesize notificationSwitchTextStyle=_notificationSwitchTextStyle;
 @property(retain, nonatomic) GLUELabelStyle *notificationDescriptionStyle; // @synthesize notificationDescriptionStyle=_notificationDescriptionStyle;
 @property(retain, nonatomic) GLUELabelStyle *notificationTitleStyle; // @synthesize notificationTitleStyle=_notificationTitleStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

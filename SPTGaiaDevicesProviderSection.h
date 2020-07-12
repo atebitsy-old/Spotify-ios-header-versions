@@ -14,9 +14,9 @@
     NSArray *_devices;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *devices; // @synthesize devices=_devices;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)initWithDevices:(id)arg1 type:(long long)arg2;
 
 @end

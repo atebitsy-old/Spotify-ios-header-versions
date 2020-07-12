@@ -20,11 +20,11 @@
     NSMutableSet *_waitForProviderIdentifiers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *waitForProviderIdentifiers; // @synthesize waitForProviderIdentifiers=_waitForProviderIdentifiers;
 @property(retain, nonatomic) id <SPTPageLoadStateHandler> handler; // @synthesize handler=_handler;
 @property(retain, nonatomic) id <SPTAssistedCurationModel> currentModel; // @synthesize currentModel=_currentModel;
 @property(copy, nonatomic) CDUnknownBlockType modelFactory; // @synthesize modelFactory=_modelFactory;
-- (void).cxx_destruct;
 - (void)assistedCurationModel:(id)arg1 removedCard:(id)arg2;
 - (void)assistedCurationModel:(id)arg1 notAddedToContextDuplicatedTrackURI:(id)arg2;
 - (void)assistedCurationModel:(id)arg1 error:(id)arg2 addingToContextTrackURI:(id)arg3;

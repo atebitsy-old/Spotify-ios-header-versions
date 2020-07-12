@@ -33,6 +33,7 @@
     id _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
 @property _Bool offlineOnly; // @synthesize offlineOnly=_offlineOnly;
 @property _Bool fetchingRootPending; // @synthesize fetchingRootPending=_fetchingRootPending;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(readonly, nonatomic) id <SPTCarPlayContentDataSource> contentDataSource; // @synthesize contentDataSource=_contentDataSource;
 @property(nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
-- (void).cxx_destruct;
 - (id)referrerFromIndexPath:(id)arg1;
 - (void)activateDeviceIfRoutingToCarPlay:(_Bool)arg1;
 - (void)activateDeviceForOldPlayerState:(id)arg1 newPlayerState:(id)arg2 isRoutingToCarPlay:(_Bool)arg3;

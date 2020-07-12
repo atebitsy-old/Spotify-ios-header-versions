@@ -31,6 +31,7 @@
 }
 
 + (id)defaultBuilder;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isJoinPending) _Bool joinPending; // @synthesize joinPending=_joinPending;
 @property(nonatomic, getter=isSettingsChangePending) _Bool settingsChangePending; // @synthesize settingsChangePending=_settingsChangePending;
 @property(nonatomic, getter=isPendingMoodChange) _Bool pendingMoodChange; // @synthesize pendingMoodChange=_pendingMoodChange;
@@ -49,7 +50,6 @@
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(copy, nonatomic) NSURL *homeMixURI; // @synthesize homeMixURI=_homeMixURI;
-- (void).cxx_destruct;
 - (id)toModel;
 
 @end

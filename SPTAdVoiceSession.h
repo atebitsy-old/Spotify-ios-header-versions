@@ -27,6 +27,7 @@
     id <SPTEventSender> _eventSender;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
 @property(retain, nonatomic) SPTAdFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
@@ -39,7 +40,6 @@
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic) __weak id <SPTAdsBaseRegistry> adRegistry; // @synthesize adRegistry=_adRegistry;
-- (void).cxx_destruct;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)dealloc;
 - (id)initWithAdRegistry:(id)arg1 voiceSession:(id)arg2 voiceLibrarySession:(id)arg3 linkDispatcher:(id)arg4 cosmosBridge:(id)arg5 audioAdMode:(id)arg6 playerObserver:(id)arg7 featureFlagChecker:(id)arg8 accessoryStateManager:(id)arg9 eventSender:(id)arg10;

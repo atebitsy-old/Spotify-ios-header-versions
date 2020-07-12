@@ -10,12 +10,16 @@
 @protocol SPTExplicitContentEnabledStateObserver, SPTExplicitContentLockedStateObserver;
 
 @protocol SPTExplicitContentAccessManager <NSObject>
-@property(readonly, nonatomic, getter=isExplicitContentLocked) _Bool explicitContentLocked;
-@property(readonly, nonatomic, getter=isExplicitContentRestricted) _Bool explicitContentRestricted;
 - (void)contentPlaybackPrevented:(NSURL *)arg1 contextURI:(NSURL *)arg2;
 - (void)removeLockedStateObserver:(id <SPTExplicitContentLockedStateObserver>)arg1;
 - (void)addLockedStateObserver:(id <SPTExplicitContentLockedStateObserver>)arg1;
 - (void)removeEnabledStateObserver:(id <SPTExplicitContentEnabledStateObserver>)arg1;
 - (void)addEnabledStateObserver:(id <SPTExplicitContentEnabledStateObserver>)arg1;
+- (_Bool)isExplicitContentLocked;
+- (_Bool)isExplicitContentRestricted;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool explicitContentLocked;
+@property(nonatomic, readonly) _Bool explicitContentRestricted;
 @end
 

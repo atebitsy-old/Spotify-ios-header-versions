@@ -21,13 +21,13 @@
     SPTNRFItemLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNRFItemLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) long long itemType; // @synthesize itemType=_itemType;
 @property(readonly, nonatomic) SPTNRFItemContent *content; // @synthesize content=_content;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)playContent;

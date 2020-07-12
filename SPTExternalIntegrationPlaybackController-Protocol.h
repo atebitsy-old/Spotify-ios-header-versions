@@ -10,10 +10,9 @@
 @protocol SPTAudioSessionController, SPTExternalIntegrationActionCoordinator, SPTExternalIntegrationAdditionalParameterProvider, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationPlaybackCoordinator;
 
 @protocol SPTExternalIntegrationPlaybackController <NSObject>
-@property(readonly, nonatomic) id <SPTAudioSessionController> audioSessionController;
-@property(readonly, nonatomic) SPTPlayerState *playerState;
 - (void)removeObserver:(id <SPTExternalIntegrationPlaybackControllerObserver>)arg1;
 - (void)addObserver:(id <SPTExternalIntegrationPlaybackControllerObserver>)arg1;
+@property(nonatomic, readonly) SPTPlayerState *playerState;
 - (void)getFilteredPlayQueueWithCompletionHandler:(void (^)(NSArray *))arg1;
 - (void)enqueueTrackWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (void)seekTo:(double)arg1 completionHandler:(void (^)(NSError *))arg2;
@@ -41,5 +40,6 @@
 - (void)registerActionCoordinator:(id <SPTExternalIntegrationActionCoordinator>)arg1;
 - (void)unregisterPlaybackCoordinator:(id <SPTExternalIntegrationPlaybackCoordinator>)arg1;
 - (void)registerPlaybackCoordinator:(id <SPTExternalIntegrationPlaybackCoordinator>)arg1;
+@property(readonly, nonatomic) id <SPTAudioSessionController> audioSessionController;
 @end
 

@@ -11,13 +11,13 @@
 @protocol SPTWatchPlatformTestManagerObserver <NSObject>
 
 @optional
+- (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateBitrateSetting:(unsigned long long)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateConnectManagerXEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWebAPIIntegrationEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateCredentialStoreSendCredentialsEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWatchAppOfflineEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWatchAppLibraryOnboardingEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWatchAppLibraryEnabledState:(_Bool)arg2;
-- (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWatchForceStreamingEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWatchStreamingEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWatchIntegrationEnabledState:(_Bool)arg2;
 - (void)testManager:(SPTWatchPlatformTestManager *)arg1 didUpdateWatchAccessoryLoggingEnabledState:(_Bool)arg2;

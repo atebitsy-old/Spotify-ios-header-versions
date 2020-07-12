@@ -14,8 +14,8 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
-@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 - (id)notifierProxy;
 - (id)initWithProtocol:(id)arg1;
 - (id)initWithDispatchQueue:(id)arg1 forProtocol:(id)arg2;

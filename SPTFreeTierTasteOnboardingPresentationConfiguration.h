@@ -19,13 +19,13 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingDeeplinkStore *deeplinkStore; // @synthesize deeplinkStore=_deeplinkStore;
 @property(readonly, nonatomic) _Bool isPaidSocialCampaign; // @synthesize isPaidSocialCampaign=_isPaidSocialCampaign;
 @property(readonly, nonatomic) __weak id <SPTMandatoryPremiumTrialService> mandatoryPremiumTrialService; // @synthesize mandatoryPremiumTrialService=_mandatoryPremiumTrialService;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingTestManager> testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool showsTasteOnboardingFirstTimeFlowAsBridgeView;
 - (void)logPostSignUpDeeplinkPresence;
 - (_Bool)showsTasteOnboardingFirstTimeFlow;

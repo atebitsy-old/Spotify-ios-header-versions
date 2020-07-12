@@ -20,6 +20,7 @@
     SPTAppProtocolCallForwarder *_appProtocolForwarder;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
@@ -27,7 +28,6 @@
 @property(nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) SPTAppProtocolConnectionHandler *connectionHandler; // @synthesize connectionHandler=_connectionHandler;
-- (void).cxx_destruct;
 - (void)handleUnsubscribeMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleSubscribeMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;

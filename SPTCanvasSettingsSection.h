@@ -18,11 +18,11 @@
     NSString *_settingsCellFooterText;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *settingsCellFooterText; // @synthesize settingsCellFooterText=_settingsCellFooterText;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *settingsCell; // @synthesize settingsCell=_settingsCell;
 @property(retain, nonatomic) SPTCanvasLoggingService *canvasLoggingService; // @synthesize canvasLoggingService=_canvasLoggingService;
 @property(retain, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 - (void)updateSettingsCellWithTestManager:(id)arg1;
 - (void)didChangeCanvasEnabled:(id)arg1;
 - (void)settingChanged:(id)arg1;

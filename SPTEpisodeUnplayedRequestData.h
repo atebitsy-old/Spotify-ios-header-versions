@@ -17,10 +17,10 @@
     NSData *_requestBody;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
 @property(copy, nonatomic) NSString *requestAction; // @synthesize requestAction=_requestAction;
 @property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *sortDescriptors;
 @property(readonly, nonatomic) NSPredicate *filterPredicate;
 - (id)initWithURLs:(id)arg1 markAsUnplayed:(_Bool)arg2;

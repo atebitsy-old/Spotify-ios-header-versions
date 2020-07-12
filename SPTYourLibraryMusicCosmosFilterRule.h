@@ -20,11 +20,11 @@
 }
 
 + (id)ruleWithIdentifier:(id)arg1 title:(id)arg2 applyRule:(CDUnknownBlockType)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType applyRule; // @synthesize applyRule=_applyRule;
 @property(readonly, nonatomic, getter=isExclusive) _Bool exclusive; // @synthesize exclusive=_exclusive;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)applyRuleToOptions:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 title:(id)arg2 applyRule:(CDUnknownBlockType)arg3;
 

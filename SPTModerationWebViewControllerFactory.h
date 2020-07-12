@@ -16,10 +16,10 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTModerationWebViewAuthoriserFactory *webviewAuthoriserFactory; // @synthesize webviewAuthoriserFactory=_webviewAuthoriserFactory;
-- (void).cxx_destruct;
 - (id)createWebViewControllerWithUrlProvider:(id)arg1 forPageURI:(id)arg2 pageIdentifier:(id)arg3;
 - (id)initWithWebviewAuthoriserFactory:(id)arg1 linkDispatcher:(id)arg2 theme:(id)arg3;
 

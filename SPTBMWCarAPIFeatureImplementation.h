@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIWindow *rapiDebugWindow; // @synthesize rapiDebugWindow=_rapiDebugWindow;
 @property(retain, nonatomic) UIViewController *rapiDebugViewController; // @synthesize rapiDebugViewController=_rapiDebugViewController;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
 @property(retain, nonatomic) SPTBMWSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (id)provideBMWSession;
 - (void)unload;
 - (void)registerURISchemeHandler;

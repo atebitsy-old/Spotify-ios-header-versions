@@ -33,6 +33,7 @@
 }
 
 + (id)defaultModelWithHomeMixURI:(id)arg1 username:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isJoinPending) _Bool joinPending; // @synthesize joinPending=_joinPending;
 @property(readonly, nonatomic, getter=isSettingsChangePending) _Bool settingsChangePending; // @synthesize settingsChangePending=_settingsChangePending;
 @property(readonly, nonatomic, getter=isPendingMoodChange) _Bool pendingMoodChange; // @synthesize pendingMoodChange=_pendingMoodChange;
@@ -51,7 +52,6 @@
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) NSURL *homeMixURI; // @synthesize homeMixURI=_homeMixURI;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

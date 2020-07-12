@@ -22,13 +22,13 @@
     UITableView *_tableView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UITableView *tableView; // @synthesize tableView=_tableView;
 @property _Bool firstAccessibilityElementDidFocus; // @synthesize firstAccessibilityElementDidFocus=_firstAccessibilityElementDidFocus;
 @property(retain, nonatomic) SPTHomeMixFamilyPileConfigurator *facePilesConfigurator; // @synthesize facePilesConfigurator=_facePilesConfigurator;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTHomeMixTrackViewModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (void)registerCellsForTableView:(id)arg1;

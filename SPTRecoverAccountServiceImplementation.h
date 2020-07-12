@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *usernameOrEmail; // @synthesize usernameOrEmail=_usernameOrEmail;
 @property(retain, nonatomic) SPTRecoverAccountURIHandler *recoverAccountURIHandler; // @synthesize recoverAccountURIHandler=_recoverAccountURIHandler;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)handleDidSendLoginLinkNotification:(id)arg1;
 - (id)provideLinkErrorHandler;
 - (id)provideAuthenticationHandler;

@@ -19,13 +19,13 @@
 }
 
 + (id)messageWithUtteranceId:(id)arg1 referrer:(id)arg2 pagesViewed:(long long)arg3 totalPages:(long long)arg4 onboardingVersion:(id)arg5 exitMethod:(id)arg6;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *exitMethodValue; // @synthesize exitMethodValue=_exitMethodValue;
 @property(copy, nonatomic) NSString *onboardingVersionValue; // @synthesize onboardingVersionValue=_onboardingVersionValue;
 @property(nonatomic) long long totalPagesValue; // @synthesize totalPagesValue=_totalPagesValue;
 @property(nonatomic) long long pagesViewedValue; // @synthesize pagesViewedValue=_pagesViewedValue;
 @property(copy, nonatomic) NSString *referrerValue; // @synthesize referrerValue=_referrerValue;
 @property(copy, nonatomic) NSString *utteranceIdValue; // @synthesize utteranceIdValue=_utteranceIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

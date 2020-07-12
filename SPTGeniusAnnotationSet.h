@@ -18,13 +18,13 @@
     double _cachedTimestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double cachedTimestamp; // @synthesize cachedTimestamp=_cachedTimestamp;
 @property(copy, nonatomic) NSArray *annotations; // @synthesize annotations=_annotations;
 @property(copy, nonatomic) NSString *trackTitle; // @synthesize trackTitle=_trackTitle;
 @property(copy, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
 @property(nonatomic) long long geniusSongId; // @synthesize geniusSongId=_geniusSongId;
 @property(copy, nonatomic) NSString *trackId; // @synthesize trackId=_trackId;
-- (void).cxx_destruct;
 - (id)objectRepresentation;
 - (_Bool)restoreWithObjectRepresentation:(id)arg1;
 

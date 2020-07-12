@@ -26,6 +26,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCarmageddonFeedbackController *surveyController; // @synthesize surveyController=_surveyController;
 @property(retain, nonatomic) SPTCarmageddonMotionBasedStateDetector *motionBasedCarDetector; // @synthesize motionBasedCarDetector=_motionBasedCarDetector;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (id)createFeedbackPresenter;
 - (id)createMotionBasedDetectorWithDetectionLoader:(id)arg1;
 - (id)createFeedbackLoader;

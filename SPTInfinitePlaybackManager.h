@@ -31,6 +31,7 @@
     SPTInfinitePlaybackContext *_autoplayContext;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInfinitePlaybackContext *autoplayContext; // @synthesize autoplayContext=_autoplayContext;
 @property(nonatomic, getter=isLaunchingAutoplay) _Bool launchingAutoplay; // @synthesize launchingAutoplay=_launchingAutoplay;
 @property(nonatomic) _Bool trackHasPlayed; // @synthesize trackHasPlayed=_trackHasPlayed;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) __weak SPTRadioPlaybackService *radioPlaybackService; // @synthesize radioPlaybackService=_radioPlaybackService;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
-- (void).cxx_destruct;
 - (void)logOfflineAutoplaySkippedWithSeedUri:(id)arg1;
 - (void)startPlayerContextURI:(id)arg1 fromPlayerState:(id)arg2;
 - (void)startRadioStationWithSeedURI:(id)arg1 fromPlayerState:(id)arg2;

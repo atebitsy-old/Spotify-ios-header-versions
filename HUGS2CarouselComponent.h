@@ -18,9 +18,9 @@
     Class _collectionViewClass;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) Class collectionViewClass; // @synthesize collectionViewClass=_collectionViewClass;
 @property(nonatomic) __weak id <HUBComponentChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (struct CGSize)calculateFirstChildSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;

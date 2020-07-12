@@ -18,12 +18,12 @@
 }
 
 + (id)stringFromChannel:(long long)arg1;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isSubscribedToPush) _Bool subscribedPush; // @synthesize subscribedPush=_subscribedPush;
 @property(nonatomic, getter=isSubscribedToEmail) _Bool subscribedEmail; // @synthesize subscribedEmail=_subscribedEmail;
 @property(retain, nonatomic) NSString *theDescription; // @synthesize theDescription=_theDescription;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)updateChannel:(long long)arg1 toValue:(_Bool)arg2;
 - (id)initNotificationWithIdentifier:(id)arg1 name:(id)arg2 description:(id)arg3 subscribedToEmail:(_Bool)arg4 subscribedToPush:(_Bool)arg5;
 

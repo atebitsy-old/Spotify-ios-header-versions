@@ -17,19 +17,21 @@
     NSString *_drilldownEntityType;
     unsigned long long _offset;
     unsigned long long _limit;
+    unsigned long long _endpointVersion;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) unsigned long long endpointVersion; // @synthesize endpointVersion=_endpointVersion;
 @property(readonly, nonatomic) unsigned long long limit; // @synthesize limit=_limit;
 @property(readonly, nonatomic) unsigned long long offset; // @synthesize offset=_offset;
 @property(readonly, copy, nonatomic) NSString *drilldownEntityType; // @synthesize drilldownEntityType=_drilldownEntityType;
 @property(readonly, nonatomic) SPTSearch2RequestParametersProvider *parametersProvider; // @synthesize parametersProvider=_parametersProvider;
-- (void).cxx_destruct;
 - (_Bool)isDrillDown;
 @property(readonly, nonatomic) id <SPTSearch2URLProviding> nextPageURLProvider;
 @property(readonly, nonatomic) unsigned long long responseFormat;
 - (id)urlForQuery:(id)arg1;
-- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 offset:(unsigned long long)arg3 limit:(unsigned long long)arg4;
-- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3;
+- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 offset:(unsigned long long)arg3 limit:(unsigned long long)arg4 endpointVersion:(unsigned long long)arg5;
+- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

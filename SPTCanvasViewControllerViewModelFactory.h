@@ -6,22 +6,24 @@
 
 #import <objc/NSObject.h>
 
-@class SPTCanvasImageResolverFactory;
+@class BMPlaybackRequestFactory, SPTCanvasImageResolverFactory;
 @protocol SPTCanvasTrackChecker, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
 
 @interface SPTCanvasViewControllerViewModelFactory : NSObject
 {
     id <SPTCanvasTrackChecker> _canvasTrackChecker;
     id <SPTVideoFeaturePlayerFactory> _videoPlayerFactory;
+    BMPlaybackRequestFactory *_playbackRequestFactory;
     id <SPTVideoURLAssetLoader> _videoAssetLoader;
     SPTCanvasImageResolverFactory *_imageResolverFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasImageResolverFactory *imageResolverFactory; // @synthesize imageResolverFactory=_imageResolverFactory;
 @property(readonly, nonatomic) id <SPTVideoURLAssetLoader> videoAssetLoader; // @synthesize videoAssetLoader=_videoAssetLoader;
+@property(readonly, nonatomic) BMPlaybackRequestFactory *playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
 @property(readonly, nonatomic) id <SPTVideoFeaturePlayerFactory> videoPlayerFactory; // @synthesize videoPlayerFactory=_videoPlayerFactory;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
-- (void).cxx_destruct;
 - (id)createViewModelForTrack:(id)arg1 withCanvasModel:(id)arg2 usingVideoExporterProvider:(CDUnknownBlockType)arg3;
 - (id)createViewModelForTrack:(id)arg1 withCanvasModel:(id)arg2;
 - (id)createViewModelForTrack:(id)arg1 usingVideoExporterProvider:(CDUnknownBlockType)arg2;
@@ -32,7 +34,7 @@
 - (CDUnknownBlockType)albumCoverPreloaderProvider;
 - (CDUnknownBlockType)imagePreloaderProvider;
 - (_Bool)canCreateViewModelForTrack:(id)arg1;
-- (id)initWithCanvasTrackChecker:(id)arg1 videoPlayerFactory:(id)arg2 videoAssetLoader:(id)arg3 imageResolverFactory:(id)arg4;
+- (id)initWithCanvasTrackChecker:(id)arg1 videoPlayerFactory:(id)arg2 playbackRequestFactory:(id)arg3 videoAssetLoader:(id)arg4 imageResolverFactory:(id)arg5;
 
 @end
 

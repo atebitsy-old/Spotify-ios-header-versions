@@ -18,11 +18,11 @@
     NSRunLoop *_coreRunLoop;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSRunLoop *coreRunLoop; // @synthesize coreRunLoop=_coreRunLoop;
 @property(retain, nonatomic) NSTimer *coreTimer; // @synthesize coreTimer=_coreTimer;
 @property(retain, nonatomic) NSThread *coreThread; // @synthesize coreThread=_coreThread;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)coreTimerFunc:(id)arg1;
 - (void)coreTimerNotify;
 - (int)runCoreDispatch;

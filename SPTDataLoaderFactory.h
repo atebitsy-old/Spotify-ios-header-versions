@@ -23,12 +23,12 @@
 }
 
 + (id)dataLoaderFactoryWithRequestResponseHandlerDelegate:(id)arg1 authorisers:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *requestTimeoutQueue; // @synthesize requestTimeoutQueue=_requestTimeoutQueue;
 @property(retain, nonatomic) NSMapTable *requestToRequestResponseHandler; // @synthesize requestToRequestResponseHandler=_requestToRequestResponseHandler;
 @property(readonly, copy, nonatomic) NSArray *authorisers; // @synthesize authorisers=_authorisers;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(readonly, nonatomic) __weak id <SPTDataLoaderRequestResponseHandlerDelegate> requestResponseHandlerDelegate; // @synthesize requestResponseHandlerDelegate=_requestResponseHandlerDelegate;
-- (void).cxx_destruct;
 - (void)dataLoaderAuthoriser:(id)arg1 didFailToAuthoriseRequest:(id)arg2 withError:(id)arg3;
 - (void)dataLoaderAuthoriser:(id)arg1 authorisedRequest:(id)arg2;
 - (void)requestResponseHandler:(id)arg1 cancelRequest:(id)arg2;

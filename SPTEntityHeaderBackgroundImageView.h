@@ -15,10 +15,10 @@
     SPTImageBlurView *_blurImageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTImageBlurView *blurImageView; // @synthesize blurImageView=_blurImageView;
 @property(retain, nonatomic) UIImageView *clearImageView; // @synthesize clearImageView=_clearImageView;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 @property(nonatomic) double blurAmount;
 - (void)setContentMode:(long long)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -27,6 +27,7 @@
     unsigned long long _state;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(readonly, nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) _Bool shouldAutoPlay; // @synthesize shouldAutoPlay=_shouldAutoPlay;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) NSDictionary *queryParameters; // @synthesize queryParameters=_queryParameters;
 @property(retain, nonatomic) NSURL *targetURI; // @synthesize targetURI=_targetURI;
 @property(nonatomic) __weak SPTAsyncLoadingViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)presentOfflineView;
 - (void)presentError:(unsigned long long)arg1;

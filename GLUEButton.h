@@ -20,10 +20,10 @@
 + (id)retryActionButton;
 + (id)playActionButton;
 + (id)shuffleActionButton;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *accessibilityTitles; // @synthesize accessibilityTitles=_accessibilityTitles;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(copy, nonatomic) GLUEButtonStyle *glueStyle; // @synthesize glueStyle=_glueStyle;
-- (void).cxx_destruct;
 - (void)bounce;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (struct CGSize)intrinsicContentSize;
@@ -36,6 +36,7 @@
 - (void)updateStyleForState;
 - (void)glue_applyStyle:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (struct UIEdgeInsets)directionalInsetsWithInsets:(struct UIEdgeInsets)arg1;
 - (void)setTextWithImageButtonStyle:(id)arg1;
 - (void)setTitle:(id)arg1;
 

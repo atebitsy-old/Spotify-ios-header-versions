@@ -16,8 +16,8 @@
     id <SPTLoginLogoutHandler> _logoutHandler;
 }
 
-@property(readonly, nonatomic) __weak id <SPTLoginLogoutHandler> logoutHandler; // @synthesize logoutHandler=_logoutHandler;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTLoginLogoutHandler> logoutHandler; // @synthesize logoutHandler=_logoutHandler;
 - (void)logoutWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithLogoutHandler:(id)arg1;
 

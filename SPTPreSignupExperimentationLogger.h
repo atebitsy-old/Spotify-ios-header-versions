@@ -6,19 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTAdjustUserTrackerProtocol;
+@protocol SPTLoginLogger;
 
 @interface SPTPreSignupExperimentationLogger : NSObject
 {
-    id <SPTAdjustUserTrackerProtocol> _adjustTracker;
+    id <SPTLoginLogger> _loginLogger;
 }
 
-@property(retain, nonatomic) id <SPTAdjustUserTrackerProtocol> adjustTracker; // @synthesize adjustTracker=_adjustTracker;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLoginLogger> loginLogger; // @synthesize loginLogger=_loginLogger;
+- (void)logDidCompleteRequestForFeatureFlagsWithError:(id)arg1 attemptID:(id)arg2;
+- (id)logDidStartRequestForFeatureFlags;
 - (void)logWillFetchFeatureFlags;
 - (void)logDidFailToFetchFeatureFlags;
 - (void)logDidFetchFeatureFlags:(id)arg1 fromCache:(_Bool)arg2;
-- (id)initWithAdjustTracker:(id)arg1;
+- (id)initWithLoginLogger:(id)arg1;
 
 @end
 

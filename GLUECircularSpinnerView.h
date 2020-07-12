@@ -18,11 +18,11 @@
     NSLayoutConstraint *_contentViewWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *contentViewWidthConstraint; // @synthesize contentViewWidthConstraint=_contentViewWidthConstraint;
 @property(retain, nonatomic) CAShapeLayer *circleLayer; // @synthesize circleLayer=_circleLayer;
 @property(copy, nonatomic) GLUECircularSpinnerViewStyle *style; // @synthesize style=_style;
 @property(nonatomic) double progress; // @synthesize progress=_progress;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateSpinner;
 - (id)initWithFrame:(struct CGRect)arg1;

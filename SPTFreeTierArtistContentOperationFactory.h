@@ -25,6 +25,7 @@
     id <SPTFreeTierArtistTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierArtistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformStateProvider> collectionPlatformStateProvider; // @synthesize collectionPlatformStateProvider=_collectionPlatformStateProvider;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;
-- (void).cxx_destruct;
 - (id)createArtistReleasesContentOperationsForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignal:(id)arg3;
 - (id)createArtistViewContentOperationsForViewURI:(id)arg1 collectionModelFactory:(id)arg2 referrerIdentifier:(id)arg3 reloadPageSignal:(id)arg4;
 - (id)createContentOperationsForViewURI:(id)arg1 collectionModelFactory:(id)arg2 referrerIdentifier:(id)arg3 reloadPageSignal:(id)arg4;

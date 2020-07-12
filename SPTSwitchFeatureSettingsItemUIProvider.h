@@ -18,11 +18,11 @@
     CDUnknownBlockType _action;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(nonatomic) _Bool state; // @synthesize state=_state;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
 @property(nonatomic) __weak SPTFeatureSettingsItem *featureSettingsItem; // @synthesize featureSettingsItem=_featureSettingsItem;
-- (void).cxx_destruct;
 - (void)switchStateChanged:(_Bool)arg1;
 - (void)switchChanged:(id)arg1;
 - (void)featureSettingsItem:(id)arg1 changedValueFrom:(id)arg2 to:(id)arg3;

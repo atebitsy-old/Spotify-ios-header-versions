@@ -16,8 +16,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTMediaPlayerContentBridgeImplementation *bridge; // @synthesize bridge=_bridge;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTMediaPlayerContentBridgeImplementation *bridge; // @synthesize bridge=_bridge;
 - (id)provideContentBridge;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

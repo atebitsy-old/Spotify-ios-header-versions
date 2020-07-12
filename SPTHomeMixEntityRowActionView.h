@@ -17,9 +17,9 @@
     SPTHomeMixEntityRowActionButton *_facePileButton;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTHomeMixEntityRowActionButton *facePileButton; // @synthesize facePileButton=_facePileButton;
 @property(readonly, nonatomic) __weak GLUEContextMenuAccessoryButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupViews;

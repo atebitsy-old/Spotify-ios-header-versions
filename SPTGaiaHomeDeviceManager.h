@@ -20,6 +20,7 @@
     id <SPTGaiaConnectManager> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceNotificationPermissionManager *notificationPermissionManager; // @synthesize notificationPermissionManager=_notificationPermissionManager;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceAlertPresenter *alertPresenter; // @synthesize alertPresenter=_alertPresenter;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) NSUserDefaults *cache; // @synthesize cache=_cache;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(nonatomic) __weak id <SPTGaiaHomeDeviceManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)savedDeviceNameKey;
 - (id)savedDeviceIdKey;
 - (void)logHomeDeviceCleared:(unsigned long long)arg1;

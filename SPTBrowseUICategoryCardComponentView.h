@@ -20,10 +20,10 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIImageView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)didTapView;
 - (void)reduceTitleLabelFontSizeIfNeeded;

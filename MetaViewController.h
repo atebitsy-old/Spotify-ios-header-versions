@@ -37,6 +37,7 @@
     SPTNavigationManager *_navigationManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(retain, nonatomic) id <SPTLinkDispatcher> defaultLinkDispatcher; // @synthesize defaultLinkDispatcher=_defaultLinkDispatcher;
 @property(retain, nonatomic) NSURL *welcomeViewControllerURL; // @synthesize welcomeViewControllerURL=_welcomeViewControllerURL;
@@ -58,7 +59,6 @@
 @property(retain, nonatomic) SPBarViewController *barViewController; // @synthesize barViewController=_barViewController;
 @property(nonatomic) __weak id <MetaViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTNavigationItemsDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (id)findExistingViewControllerForViewURI:(id)arg1;
 - (_Bool)nowPlayingBarHidden;
 - (void)closeNowPlayingViewAnimated:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2;

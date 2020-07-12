@@ -13,8 +13,8 @@
     UIActivityIndicatorView *_spinner;
 }
 
-@property(readonly, nonatomic) UIActivityIndicatorView *spinner; // @synthesize spinner=_spinner;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UIActivityIndicatorView *spinner; // @synthesize spinner=_spinner;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

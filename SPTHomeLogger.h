@@ -16,10 +16,10 @@
     SPSession *_currentSession;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)mapSeedASessionButtonTypeToIdentifier:(long long)arg1;
 - (double)getTimestamp;
 - (void)logDidTapOnSeedASessionButton:(long long)arg1;

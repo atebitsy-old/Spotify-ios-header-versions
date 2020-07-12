@@ -15,10 +15,12 @@
     SPTPremiumDestinationUIOfferCardRibbonStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationUIOfferCardRibbonStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIView *labelView; // @synthesize labelView=_labelView;
 @property(retain, nonatomic) GLUELabel *label; // @synthesize label=_label;
-- (void).cxx_destruct;
+- (void)addRightToLeftTriangleWithContext:(struct CGContext *)arg1;
+- (void)addLeftToRightTriangleWithContext:(struct CGContext *)arg1;
 - (void)drawRect:(struct CGRect)arg1;
 - (void)setupConstraints;
 - (void)setupViews;

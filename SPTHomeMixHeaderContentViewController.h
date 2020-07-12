@@ -29,6 +29,7 @@
     NSURL *_currentlyDisplayImageURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *currentlyDisplayImageURL; // @synthesize currentlyDisplayImageURL=_currentlyDisplayImageURL;
 @property(retain, nonatomic) SPTHomeMixHeaderViewModel *headerViewModel; // @synthesize headerViewModel=_headerViewModel;
 @property(nonatomic) __weak SPTHomeMixHeaderActionBarAuxView *upbeatAuxView; // @synthesize upbeatAuxView=_upbeatAuxView;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) UILayoutGuide *parentSafeAreaLayoutGuide; // @synthesize parentSafeAreaLayoutGuide=_parentSafeAreaLayoutGuide;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)setupForReJoin;
 - (void)setupForTasteOnboarding;
 - (id)playButton;

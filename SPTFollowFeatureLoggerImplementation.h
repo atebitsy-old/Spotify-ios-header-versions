@@ -16,8 +16,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logFollowIntent:(unsigned long long)arg1 feature:(id)arg2 entityURI:(id)arg3;
 - (id)initWithLogCenter:(id)arg1;
 

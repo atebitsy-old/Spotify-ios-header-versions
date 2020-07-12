@@ -21,12 +21,12 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
 @property(retain, nonatomic) NSURL *navigationContextURL; // @synthesize navigationContextURL=_navigationContextURL;
-- (void).cxx_destruct;
 - (_Bool)hasURI:(id)arg1;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

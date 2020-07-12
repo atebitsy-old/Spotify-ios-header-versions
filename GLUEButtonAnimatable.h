@@ -11,15 +11,15 @@
 
 @interface GLUEButtonAnimatable : GLUEButton
 {
-    struct UIView *_animationView;
+    UIView<GLUEStatefulAnimationLoading><GLUEStatefulAnimationControlling><GLUEAnimationControlling> *_animationView;
     NSLayoutConstraint *_animationWidthConstraint;
     NSLayoutConstraint *_animationHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *animationHeightConstraint; // @synthesize animationHeightConstraint=_animationHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *animationWidthConstraint; // @synthesize animationWidthConstraint=_animationWidthConstraint;
 @property(readonly, nonatomic) UIView<GLUEStatefulAnimationLoading><GLUEStatefulAnimationControlling><GLUEAnimationControlling> *animationView; // @synthesize animationView=_animationView;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setAnimationSize:(struct CGSize)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -15,8 +15,8 @@
     id <HUBContentOperationDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)updateTracks:(id)arg1 headerModelBuilder:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 

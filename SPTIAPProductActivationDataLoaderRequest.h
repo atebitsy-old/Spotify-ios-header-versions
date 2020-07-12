@@ -20,11 +20,11 @@
 }
 
 + (id)requestWithReceiptData:(id)arg1 dataLoaderFactory:(id)arg2 applicationVersionString:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) NSString *applicationVersionString; // @synthesize applicationVersionString=_applicationVersionString;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

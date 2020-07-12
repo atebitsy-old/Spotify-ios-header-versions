@@ -17,9 +17,9 @@
 }
 
 + (_Bool)rawMessageFormatIsValid:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *options; // @synthesize options=_options;
 @property(readonly, nonatomic) unsigned long long callRequestID; // @synthesize callRequestID=_callRequestID;
-- (void).cxx_destruct;
 - (_Bool)populateWithRawMessage:(id)arg1 error:(id *)arg2;
 - (id)rawMessage;
 - (long long)messageType;

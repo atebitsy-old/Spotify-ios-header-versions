@@ -36,6 +36,7 @@
     struct CGRect _keyboardFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool seedASessionEnabled; // @synthesize seedASessionEnabled=_seedASessionEnabled;
 @property(nonatomic) _Bool isLoadingMore; // @synthesize isLoadingMore=_isLoadingMore;
 @property(copy, nonatomic) NSString *searchNextPageURI; // @synthesize searchNextPageURI=_searchNextPageURI;
@@ -53,7 +54,6 @@
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistSearchViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistSearchViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)performLoadMoreRequest;
 - (void)logSelectedArtistWithCollectionView:(id)arg1 atIndexPath:(id)arg2;
 - (void)resetContentOffset;

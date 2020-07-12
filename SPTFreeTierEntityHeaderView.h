@@ -26,6 +26,7 @@
     double _contentOffSetY;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double contentOffSetY; // @synthesize contentOffSetY=_contentOffSetY;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) UIImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
 @property(retain, nonatomic) UIView *secondaryButton; // @synthesize secondaryButton=_secondaryButton;
 @property(retain, nonatomic) UIView *mainbutton; // @synthesize mainbutton=_mainbutton;
-- (void).cxx_destruct;
 - (double)calculateMinimumHeight;
 - (void)scrollViewContentOffsetDidChange:(struct CGPoint)arg1 originalFrameHeight:(double)arg2;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;

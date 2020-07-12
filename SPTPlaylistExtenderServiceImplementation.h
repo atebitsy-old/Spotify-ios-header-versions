@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlaylistExtenderImplementation *playlistExtender; // @synthesize playlistExtender=_playlistExtender;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (id)provideCellProviderWithDataLoader:(id)arg1 player:(id)arg2 playlistURI:(id)arg3 preferredNumberOfTracks:(unsigned long long)arg4 pageIdentifier:(id)arg5 trackActivePredicate:(id)arg6;

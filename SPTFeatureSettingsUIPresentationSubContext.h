@@ -17,9 +17,9 @@
     id <SPTFeatureSettingsUIPresentationContext> _parentContext;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeatureSettingsUIPresentationContext> parentContext; // @synthesize parentContext=_parentContext;
 @property(readonly, nonatomic) SPTFeatureSettingsItem *item; // @synthesize item=_item;
-- (void).cxx_destruct;
 - (void)reloadData;
 - (id)dequeueReusableCellWithIdentifier:(id)arg1;
 @property(readonly, nonatomic) UINavigationController *navigationController;

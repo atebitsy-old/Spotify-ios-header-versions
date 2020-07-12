@@ -17,8 +17,8 @@
 }
 
 + (id)fullScreenAccessoryButton;
-@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (id)accessibilityLabel;
 - (void)applyThemeLayout;
 - (void)dealloc;

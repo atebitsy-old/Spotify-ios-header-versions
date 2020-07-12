@@ -18,10 +18,10 @@
     id <SPTExternalIntegrationPlaybackController> _playbackController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) __weak SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)handleActivateDeviceRequest:(id)arg1;
 - (void)handleDevicesRequest:(id)arg1;
 - (void)handleRequest:(id)arg1;

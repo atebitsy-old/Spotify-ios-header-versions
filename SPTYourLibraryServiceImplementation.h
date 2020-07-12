@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryModelImplementation *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTYourLibraryTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <_TtP19YourLibraryXFeature22SPTYourLibraryXService_> yourLibraryXService; // @synthesize yourLibraryXService=_yourLibraryXService;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlagService; // @synthesize featureFlagService=_featureFlagService;
-- (void).cxx_destruct;
 - (id)provideYourLibraryModel;
 - (id)providePageProviderRegistry;
 - (id)provideTestManager;

@@ -15,10 +15,10 @@
     SPTInAppMessageCardMessageViewModel *_viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageCardMessageViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(retain, nonatomic) UIView *feedbackView; // @synthesize feedbackView=_feedbackView;
-- (void).cxx_destruct;
 - (struct CGSize)preferredContentSize;
 - (void)updateContentInsetAdjustmentBehaviorForScrollview:(id)arg1;
 - (void)updateAntialiasing:(id)arg1;

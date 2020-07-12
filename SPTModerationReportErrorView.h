@@ -17,10 +17,10 @@
     GLUEButton *_button;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEButton *button; // @synthesize button=_button;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (void)setupView;

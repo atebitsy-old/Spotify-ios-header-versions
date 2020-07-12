@@ -22,12 +22,12 @@
     id <SPTScannablesSlateFactoryDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTScannablesSlateFactoryDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
 @property(retain, nonatomic) SPTScannablesDependencies *dependencies; // @synthesize dependencies=_dependencies;
 @property(readonly, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
-- (void).cxx_destruct;
 - (void)dismissSlateWithResult:(_Bool)arg1;
 - (void)didTapCancelButton;
 - (void)didTapScanButton;

@@ -18,11 +18,11 @@
     UIProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
 @property(nonatomic) _Bool isShowing; // @synthesize isShowing=_isShowing;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)hideWithDelay:(double)arg1;
 - (void)showWithDelay;
 - (void)glue_applyStyle:(id)arg1;

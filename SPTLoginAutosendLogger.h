@@ -13,8 +13,8 @@
     id <SPTLoginLogger> _logger;
 }
 
-@property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void)logUserDidTapTryAnotherPasswordButton;
 - (void)logUserDidTapOpenEmailButton;
 - (void)logUserDidSeeDualButtonSlideUp;

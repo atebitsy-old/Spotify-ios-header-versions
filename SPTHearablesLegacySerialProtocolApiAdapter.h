@@ -13,8 +13,8 @@
     id <SPTHearablesSpotifyGoAPI> _adaptee;
 }
 
-@property(retain, nonatomic) id <SPTHearablesSpotifyGoAPI> adaptee; // @synthesize adaptee=_adaptee;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTHearablesSpotifyGoAPI> adaptee; // @synthesize adaptee=_adaptee;
 - (id)parseData:(id)arg1;
 - (id)executeMessage:(id)arg1;
 - (id)initWithImplementation:(id)arg1;

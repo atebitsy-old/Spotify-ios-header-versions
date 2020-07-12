@@ -16,10 +16,10 @@
     SPTPerformanceMetricsFeatureProperties *_remoteConfigurationProperties;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPerformanceMetricsFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) SPTMetricCollector *metricCollector; // @synthesize metricCollector=_metricCollector;
-- (void).cxx_destruct;
 - (void)handleMetricKitPayloads:(id)arg1;
 - (void)stopCollecting;
 - (void)startCollecting;

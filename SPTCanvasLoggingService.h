@@ -14,9 +14,9 @@
     id <SPTEventSender> _eventSender;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logCanvasTapTooltipImpression;
 - (void)logTapArtwork;
 - (void)logTapVisuals;

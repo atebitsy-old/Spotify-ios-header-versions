@@ -19,13 +19,13 @@
     double _addToCollectionButtonAlpha;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double addToCollectionButtonAlpha; // @synthesize addToCollectionButtonAlpha=_addToCollectionButtonAlpha;
 @property(retain, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> feedbackButtonViewModel; // @synthesize feedbackButtonViewModel=_feedbackButtonViewModel;
 @property(retain, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(retain, nonatomic) UIButton<SPTFreeTierAddToCollectionButton> *addToCollectionButton; // @synthesize addToCollectionButton=_addToCollectionButton;
 @property(retain, nonatomic) id <SPTFreeTierEntityContextMenuButtonViewModel> contextMenuButtonViewModel; // @synthesize contextMenuButtonViewModel=_contextMenuButtonViewModel;
 @property(retain, nonatomic) SPTFreeTierEntityContextMenuButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
-- (void).cxx_destruct;
 - (id)createItemsWithFeedbackButtonViewModel:(id)arg1 contextMenuButtonViewModel:(id)arg2;
 - (void)updateNavigationItemDecoratorAlpha:(double)arg1;
 - (void)decoratePageController:(id)arg1;

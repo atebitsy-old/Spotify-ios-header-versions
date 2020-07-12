@@ -19,10 +19,10 @@
     unsigned long long _method;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long method; // @synthesize method=_method;
 @property(readonly, nonatomic) SPTLoginMethodLedStartScreenViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (unsigned long long)preferredNavigationBarState;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;

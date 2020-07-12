@@ -15,8 +15,8 @@
     FBKVOController *_kvoController;
 }
 
-@property(retain, nonatomic) FBKVOController *kvoController; // @synthesize kvoController=_kvoController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) FBKVOController *kvoController; // @synthesize kvoController=_kvoController;
 - (void)observe:(id)arg1 keyPaths:(id)arg2 options:(unsigned long long)arg3 action:(SEL)arg4;
 - (void)observe:(id)arg1 keyPath:(id)arg2 options:(unsigned long long)arg3 action:(SEL)arg4;
 - (void)unobserveAll;

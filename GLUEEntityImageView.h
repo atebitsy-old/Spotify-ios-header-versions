@@ -25,6 +25,7 @@
     NSLayoutConstraint *_iconImageTopOffsetConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *iconImageTopOffsetConstraint; // @synthesize iconImageTopOffsetConstraint=_iconImageTopOffsetConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *iconImageLeftOffsetConstraint; // @synthesize iconImageLeftOffsetConstraint=_iconImageLeftOffsetConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *iconImageHeightConstraint; // @synthesize iconImageHeightConstraint=_iconImageHeightConstraint;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) UIView *badgeView; // @synthesize badgeView=_badgeView;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(copy, nonatomic) GLUEEntityImageStyle *style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)updateBadgeViewWithIcon:(long long)arg1;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)updateBadgeView;

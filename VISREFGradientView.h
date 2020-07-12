@@ -18,12 +18,12 @@
     CAGradientLayer *_gradientLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
 @property(retain, nonatomic) id <TKNCurve> curve; // @synthesize curve=_curve;
 @property(retain, nonatomic) UIColor *toColor; // @synthesize toColor=_toColor;
 @property(retain, nonatomic) UIColor *fromColor; // @synthesize fromColor=_fromColor;
 @property(nonatomic) unsigned long long curveSamples; // @synthesize curveSamples=_curveSamples;
-- (void).cxx_destruct;
 - (double)lerpStart:(double)arg1 end:(double)arg2 progress:(double)arg3;
 - (id)blendedColorFromBaseColor:(id)arg1 andColor:(id)arg2 withAmount:(double)arg3;
 - (id)colorRefsFromUIColors:(id)arg1;

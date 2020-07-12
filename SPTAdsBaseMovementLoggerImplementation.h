@@ -17,10 +17,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) CMMotionManager *motionManager; // @synthesize motionManager=_motionManager;
 @property(nonatomic) _Bool isMoving; // @synthesize isMoving;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (_Bool)isMovingWithCMDeviceMotion:(id)arg1;

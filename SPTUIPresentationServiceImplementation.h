@@ -22,12 +22,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPopoverPresentationController> popoverPresentationController; // @synthesize popoverPresentationController=_popoverPresentationController;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(nonatomic) __weak id <SPTInstrumentationService> instrumentationService; // @synthesize instrumentationService=_instrumentationService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-- (void).cxx_destruct;
 - (id)provideMessageBarController;
 - (id)providePopoverPresentationController;
 - (id)provideModalPresentationController;

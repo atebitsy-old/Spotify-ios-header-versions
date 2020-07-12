@@ -16,9 +16,9 @@
     GLUELabelStyle *_subtitleLabelStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToEntityRowContentStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

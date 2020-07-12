@@ -11,11 +11,12 @@
 #import "SPTWatchPlatformTestManagerObserver-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, SPTAllocationContext, SPTWatchConnectivityDataLoader, SPTWatchPlatformLogging, SPTWatchPlatformOfflineManagerImplementation, SPTWatchPlatformTestManager, SPTWatchPlatformWatchApplicationLogSubscriber;
-@protocol GaiaFeature, SPTAccessoryManagerService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTPodcastFeature, SPTRadioService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSiriIntentsService, SPTUIPresentationService, SPTVolumeService;
+@protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryManagerSessionService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTPodcastFeature, SPTRadioService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSiriIntentsService, SPTUIPresentationService, SPTVolumeService;
 
 @interface SPTWatchPlatformServiceImplementation : NSObject <SPTWatchPlatformTestManagerObserver, SPTWatchConnectivitySessionObserver, SPTWatchPlatformService>
 {
     id <SPTAccessoryManagerService> _accessoryManagerService;
+    id <SPTAccessoryManagerSessionService> _accessorySessionService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
@@ -44,6 +45,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTWatchPlatformWatchApplicationLogSubscriber *applicationDebugLogSubscriber; // @synthesize applicationDebugLogSubscriber=_applicationDebugLogSubscriber;
 @property(retain, nonatomic) NSArray *publishers; // @synthesize publishers=_publishers;
 @property(retain, nonatomic) NSDictionary *requestHandlers; // @synthesize requestHandlers=_requestHandlers;
@@ -69,8 +71,8 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
+@property(nonatomic) __weak id <SPTAccessoryManagerSessionService> accessorySessionService; // @synthesize accessorySessionService=_accessorySessionService;
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
-- (void).cxx_destruct;
 - (id)watchConnectivityManager;
 - (void)sessionReachabilityDidChange:(id)arg1;
 - (void)testManager:(id)arg1 didUpdateWatchIntegrationEnabledState:(_Bool)arg2;
@@ -83,6 +85,7 @@
 - (void)enableLogging;
 - (void)updateEnablement;
 - (void)unload;
+- (void)idleStateWasReached;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

@@ -38,6 +38,7 @@
 
 + (_Bool)isDailyMixContext:(id)arg1;
 + (_Bool)isCarMixContext:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *dictionary; // @synthesize dictionary=_dictionary;
 @property(readonly, nonatomic) NSDictionary *pageMetadata; // @synthesize pageMetadata=_pageMetadata;
 @property(readonly, nonatomic) NSDictionary *contextMetadata; // @synthesize contextMetadata=_contextMetadata;
@@ -60,7 +61,6 @@
 @property(readonly, nonatomic) NSURL *contextURL; // @synthesize contextURL=_contextURL;
 @property(retain, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 @property(retain, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;
@@ -70,6 +70,7 @@
 - (_Bool)spt_hasDifferentTrackOptionsOrContextThanState:(id)arg1;
 - (id)filterEmptyRestrictions:(id)arg1;
 - (id)preprocessForDisplay;
+- (_Bool)spt_isPodcastAdvertisement;
 @property(readonly, nonatomic) double position;
 
 @end

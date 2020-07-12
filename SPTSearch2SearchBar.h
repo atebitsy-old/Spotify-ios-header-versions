@@ -20,11 +20,11 @@
     UIStackView *_stackView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) UIButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(readonly, nonatomic) UISearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(nonatomic) __weak id <SPTSearchSearchBarDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)searchBarSearchButtonClicked:(id)arg1;
 - (void)searchBar:(id)arg1 textDidChange:(id)arg2;
 - (_Bool)searchBarShouldEndEditing:(id)arg1;

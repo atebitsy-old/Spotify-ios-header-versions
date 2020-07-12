@@ -7,9 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTFreeTierPlaylistTestManager <NSObject>
+@property(readonly, nonatomic) _Bool enableConsistentFreePlayBehaviour;
+@property(readonly, nonatomic) _Bool enableConsistentPremiumPlayBehaviour;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnVideoPlayback;
-@property(readonly, nonatomic) _Bool dontOpenNPVOnAudioPlayback;
-@property(readonly, nonatomic) _Bool dontOpenNPVOnPlayButtonPlayback;
 @property(readonly, nonatomic, getter=isDoubleStatePlayButtonEnabled) _Bool doubleStatePlayButtonEnabled;
 @property(readonly, nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled;
 @property(readonly, nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled;

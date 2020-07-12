@@ -15,9 +15,9 @@
 }
 
 + (id)initWithTypeStyle:(id)arg1 andBlock:(CDUnknownBlockType)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 @property(retain, nonatomic) SPTEncoreTypeStyle *typeStyle; // @synthesize typeStyle=_typeStyle;
-- (void).cxx_destruct;
 
 @end
 

@@ -16,8 +16,8 @@
     NSDictionary *_fallbackComponents;
 }
 
-@property(readonly, copy, nonatomic) NSDictionary *fallbackComponents; // @synthesize fallbackComponents=_fallbackComponents;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSDictionary *fallbackComponents; // @synthesize fallbackComponents=_fallbackComponents;
 @property(readonly, copy, nonatomic) NSDictionary *fallbackComponentNames; // @synthesize fallbackComponentNames=_fallbackComponentNames;
 - (id)fallbackComponentForCategory:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *defaultComponentCategory;

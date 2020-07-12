@@ -15,10 +15,10 @@
     struct CGSize _arrowSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) struct CGSize arrowSize; // @synthesize arrowSize=_arrowSize;
 @property(retain, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
-- (void).cxx_destruct;
 - (void)updateViewWithViewModel:(id)arg1;
 - (void)drawRect:(struct CGRect)arg1;
 - (void)setupLayout;

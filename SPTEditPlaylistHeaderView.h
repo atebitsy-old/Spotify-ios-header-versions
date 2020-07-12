@@ -18,12 +18,12 @@
     SPTEditPlaylistHeaderViewStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEditPlaylistHeaderViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIImageView *imageIconView; // @synthesize imageIconView=_imageIconView;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) SPTEditPlaylistRenameFieldView *textFieldContainer; // @synthesize textFieldContainer=_textFieldContainer;
 @property(nonatomic) __weak id <SPTEditPlaylistHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapImage;
 - (void)setImageURL:(id)arg1;
 - (void)setupTitleView;

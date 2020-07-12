@@ -28,8 +28,8 @@
 - (void)artistAvatarClicked;
 - (void)configureWithModel:(id)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 @property(nonatomic) __weak id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler;
 
 @end

@@ -23,6 +23,7 @@
     id <SPTCollectionPlatformTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTCosmosDataLoaderFieldsFactory> podcastMetadataFieldsFactory; // @synthesize podcastMetadataFieldsFactory=_podcastMetadataFieldsFactory;
 @property(retain, nonatomic) id <SPTCosmosDataLoaderFieldsFactory> sectionIndexFactory; // @synthesize sectionIndexFactory=_sectionIndexFactory;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) id <SPTCosmosDataLoaderFieldsFactory> albumMetadataFieldsFactory; // @synthesize albumMetadataFieldsFactory=_albumMetadataFieldsFactory;
 @property(retain, nonatomic) SPTCollectionPlatformDataLoaderFieldsFactory *dataLoaderFieldsFactory; // @synthesize dataLoaderFieldsFactory=_dataLoaderFieldsFactory;
 @property(nonatomic) __weak id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
-- (void).cxx_destruct;
 - (id)subscribePodcastsMetadataWithPolicyProtocols:(id)arg1 options:(id)arg2 completion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;
 - (void)fetchPodcastsMetadataWithPolicyProtocols:(id)arg1 options:(id)arg2 replyOnMainThread:(_Bool)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
 - (id)subscribeBansWithWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2 onError:(CDUnknownBlockType)arg3;
@@ -57,10 +57,10 @@
 - (void)decorateArtistURL:(id)arg1 withPolicyProtocols:(id)arg2 completion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;
 - (void)decorateTrackURLs:(id)arg1 withPolicyProtocols:(id)arg2 completion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;
 - (void)decorateTrackURL:(id)arg1 withPolicyProtocols:(id)arg2 completion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;
-- (SPTCollectionPlatformDataLoaderResponse_3cfdded1 *)responseForData:(id)arg1 withItemBuilder:(id)arg2 itemKey:(id)arg3;
+- (id)responseForData:(id)arg1 withItemBuilder:(id)arg2 itemKey:(id)arg3;
 - (id)sectionIndexForData:(id)arg1 withItemBuilder:(id)arg2;
-- (SPTCollectionPlatformDataLoaderResponse_3cfdded1 *)responseForData:(id)arg1 withItemBuilder:(id)arg2;
-- (SPTCollectionPlatformDataLoaderResponse_3cfdded1 *)responseForData:(id)arg1 items:(id)arg2;
+- (id)responseForData:(id)arg1 withItemBuilder:(id)arg2;
+- (id)responseForData:(id)arg1 items:(id)arg2;
 - (id)makeCancelableRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (void)makeRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (id)initWithCosmosDataLoader:(id)arg1 testManager:(id)arg2;

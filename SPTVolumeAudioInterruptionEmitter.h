@@ -18,10 +18,10 @@
     AVAudioSession *_audioSession;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)audioSessionInterruptionNotification:(id)arg1;
 - (_Bool)restartAudioSession;
 - (void)dealloc;

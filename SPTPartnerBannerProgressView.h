@@ -17,10 +17,10 @@
     CDUnknownBlockType _completionHandler;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(retain, nonatomic) CAShapeLayer *backgroundStrokeShapeLayer; // @synthesize backgroundStrokeShapeLayer=_backgroundStrokeShapeLayer;
 @property(retain, nonatomic) CAShapeLayer *shapeLayer; // @synthesize shapeLayer=_shapeLayer;
-- (void).cxx_destruct;
 - (void)animationDidStop:(id)arg1 finished:(_Bool)arg2;
 - (void)beginAnimatingWithDuration:(double)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)layoutSubviews;

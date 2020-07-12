@@ -15,10 +15,10 @@
     NSArray *_sources;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *sources; // @synthesize sources=_sources;
 @property(readonly, nonatomic) NSArray *roles; // @synthesize roles=_roles;
 @property(readonly, nonatomic) NSString *trackTitle; // @synthesize trackTitle=_trackTitle;
-- (void).cxx_destruct;
 - (void)setValuesFromDictionary:(id)arg1;
 - (id)initWithDictionary:(id)arg1;
 

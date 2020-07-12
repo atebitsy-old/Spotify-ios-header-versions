@@ -28,6 +28,7 @@
     unsigned long long _likedSongsFiltersAbbaSource;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long likedSongsFiltersAbbaSource; // @synthesize likedSongsFiltersAbbaSource=_likedSongsFiltersAbbaSource;
 @property(copy, nonatomic) NSDictionary *likedSongsFiltersSignals; // @synthesize likedSongsFiltersSignals=_likedSongsFiltersSignals;
 @property(nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled; // @synthesize consolidatedExperienceEnabled=_consolidatedExperienceEnabled;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (id)unionOfMultipleChoiceSignalsForAllFlags:(id)arg1 andSignalsForOneFlag:(id)arg2;
 @property(readonly, nonatomic, getter=isOfflineArtistEnabled) _Bool offlineArtistEnabled;
 @property(readonly, nonatomic, getter=isFrecencySortOrderDefaultInPlaylistsEnabled) _Bool frecencySortOrderDefaultInPlaylistsEnabled;

@@ -17,9 +17,9 @@
     SPTHubsKitViewModel *_hubsViewModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isUpdating) _Bool updating; // @synthesize updating=_updating;
 @property(copy, nonatomic) SPTHubsKitViewModel *hubsViewModel; // @synthesize hubsViewModel=_hubsViewModel;
-- (void).cxx_destruct;
 - (_Bool)isEqualToViewModel:(id)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

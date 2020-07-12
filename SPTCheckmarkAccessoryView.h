@@ -20,10 +20,10 @@
 }
 
 + (id)checkmarkAccessoryView;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *checkmarkView; // @synthesize checkmarkView=_checkmarkView;
 @property(nonatomic, getter=isDisabled) _Bool disabled; // @synthesize disabled=_disabled;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (struct CGSize)SPTCellAccessoryViewPositionAdjustment;
 - (void)layoutSubviews;

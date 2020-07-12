@@ -16,9 +16,9 @@
 
 + (id)imageNewType;
 + (id)accessibilityLabelForType:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)imageForType:(unsigned long long)arg1;
 - (void)activateConstraints;
 - (id)initWithType:(unsigned long long)arg1;

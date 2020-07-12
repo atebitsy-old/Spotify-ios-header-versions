@@ -21,12 +21,12 @@
     HUGSCustomViewControl *_control;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUGSCustomViewControl *control; // @synthesize control=_control;
 @property(readonly, nonatomic) GLUEAgeRestrictionView *ageRestrictionView; // @synthesize ageRestrictionView=_ageRestrictionView;
 @property(readonly, nonatomic) GLUETrackAccessoryLabel *trackAccessoryLabel; // @synthesize trackAccessoryLabel=_trackAccessoryLabel;
 @property(readonly, nonatomic) GLUEEntityRowTableViewCell *cell; // @synthesize cell=_cell;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (struct CGSize)imageSize;
 - (void)deleteButtonPressed;
 - (void)sendSelectionEvent;

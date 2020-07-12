@@ -14,9 +14,9 @@
     id <NSCopying> _callback;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) id <NSCopying> callback; // @synthesize callback=_callback;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *callbackQueue; // @synthesize callbackQueue=_callbackQueue;
-- (void).cxx_destruct;
 - (void)executeFinallyAsync:(_Bool)arg1;
 - (void)executeErrbackAsync:(id)arg1;
 - (void)executeCallbackAsync:(id)arg1 parent:(id)arg2;

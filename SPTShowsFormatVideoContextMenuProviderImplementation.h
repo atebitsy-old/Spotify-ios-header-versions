@@ -21,13 +21,13 @@
     id <SPTContextMenuPresenter> _contextMenuPresenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(readonly, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(readonly, nonatomic) id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)presentContextMenuForEpisodeWithURI:(id)arg1 episode:(id)arg2 episodeMetadata:(id)arg3 viewController:(id)arg4 sourceView:(id)arg5 sourceURL:(id)arg6 displayContext:(long long)arg7 logContext:(id)arg8;
 - (void)presentContextMenuForEpisodeWithURI:(id)arg1 episodeMetadata:(id)arg2 viewController:(id)arg3 sourceView:(id)arg4 sourceURL:(id)arg5 displayContext:(long long)arg6 logContext:(id)arg7;
 - (id)initWithContextMenuFeature:(id)arg1 podcastEntityDataLoader:(id)arg2 theme:(id)arg3 podcastTestManager:(id)arg4 collectionPlatform:(id)arg5;

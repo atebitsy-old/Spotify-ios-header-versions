@@ -21,6 +21,7 @@
     NSURL *_resolvedURI;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *resolvedURI; // @synthesize resolvedURI=_resolvedURI;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) SPTRadioFormatListMapper *mapper; // @synthesize mapper=_mapper;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) NSURL *seedURI; // @synthesize seedURI=_seedURI;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 - (id)title;
-- (void).cxx_destruct;
 - (void)navigateToResolvedURI;
 - (void)showError;
 - (void)fetchFormatListURI;

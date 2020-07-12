@@ -37,6 +37,7 @@
     CDStruct_5a28e70a _titleLabelAlphaProgressRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) CDStruct_5a28e70a titleLabelAlphaProgressRange; // @synthesize titleLabelAlphaProgressRange=_titleLabelAlphaProgressRange;
 @property(nonatomic) CDStruct_5a28e70a imageAlphaProgressRange; // @synthesize imageAlphaProgressRange=_imageAlphaProgressRange;
 @property(nonatomic) double imageTopMargin; // @synthesize imageTopMargin=_imageTopMargin;
@@ -60,7 +61,6 @@
 @property(retain, nonatomic) UIAccessibilityElement *accessibilityContentContainer; // @synthesize accessibilityContentContainer=_accessibilityContentContainer;
 @property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILayoutGuide *titlePositionLayoutGuide; // @synthesize titlePositionLayoutGuide=_titlePositionLayoutGuide;
-- (void).cxx_destruct;
 - (_Bool)canHandleTapAtCreatorView;
 - (void)didTapCreatorRow;
 - (void)updateTopMargin;

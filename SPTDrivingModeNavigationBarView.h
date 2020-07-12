@@ -15,10 +15,10 @@
     UIButton *_rightButton;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIButton *rightButton; // @synthesize rightButton=_rightButton;
 @property(readonly, nonatomic) UIButton *leftButton; // @synthesize leftButton=_leftButton;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupRightButton;
 - (void)setupLeftButton;

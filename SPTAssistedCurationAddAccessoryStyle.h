@@ -19,12 +19,12 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(retain, nonatomic) UIColor *disabledIconColor; // @synthesize disabledIconColor=_disabledIconColor;
 @property(retain, nonatomic) UIColor *normalIconColor; // @synthesize normalIconColor=_normalIconColor;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

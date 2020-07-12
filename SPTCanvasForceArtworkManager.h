@@ -21,13 +21,13 @@
     NSMutableArray *_forceArtworkTracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *forceArtworkTracks; // @synthesize forceArtworkTracks=_forceArtworkTracks;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(readonly, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) _Bool forceArtwork; // @synthesize forceArtwork=_forceArtwork;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

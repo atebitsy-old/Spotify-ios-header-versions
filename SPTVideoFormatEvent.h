@@ -15,10 +15,10 @@
     double _length;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double length; // @synthesize length=_length;
 @property(nonatomic) double position; // @synthesize position=_position;
 @property(readonly, nonatomic) id <BMVideoFormat> format; // @synthesize format=_format;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)copyWithNewStartPosition:(double)arg1 format:(id)arg2;
 - (void)endAtPosition:(double)arg1;

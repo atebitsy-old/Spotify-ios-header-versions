@@ -20,6 +20,7 @@
     id <SPTPodcastUIStringFormatter> _stringFormatter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(retain, nonatomic) NSDate *publishDate; // @synthesize publishDate=_publishDate;
 @property(copy, nonatomic) NSString *loggingContext; // @synthesize loggingContext=_loggingContext;
@@ -27,7 +28,6 @@
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *descriptionText;
 @property(readonly, copy, nonatomic) NSURL *URL;
 - (id)composeDescriptionText;

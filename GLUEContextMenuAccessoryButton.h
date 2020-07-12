@@ -15,8 +15,8 @@
     NSIndexPath *_indexPath;
 }
 
-@property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

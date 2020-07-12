@@ -18,9 +18,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(retain, nonatomic) id <SPTOnDemandTrialTestManager> testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 - (_Bool)isInTrial;
 - (id)provideTrialEnabledSignal;
 - (void)unload;

@@ -30,6 +30,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(retain, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
 @property(retain, nonatomic) id <SPTContextMenuActionsProvider> actionsProvider; // @synthesize actionsProvider=_actionsProvider;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
-- (void).cxx_destruct;
 - (id)provideContextMenuOptionsFactory;
 - (id)providePresenterFactory;
 - (id)provideViewControllerFactory;

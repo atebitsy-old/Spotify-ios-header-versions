@@ -28,6 +28,7 @@
     NSString *_appleIDUser;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *appleIDUser; // @synthesize appleIDUser=_appleIDUser;
 @property(readonly, nonatomic) SPTLoginASAuthorizationControllerFactory *appleAuthControllerFactory; // @synthesize appleAuthControllerFactory=_appleAuthControllerFactory;
 @property(readonly, nonatomic) SPTSigninWithAppleCompatibilityProvider *compatibilityProvider; // @synthesize compatibilityProvider=_compatibilityProvider;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginControllerDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)handleUserDidAuthenticateNotification:(id)arg1;
 - (void)showAppleSignUpNotAvailable;
 - (void)showAppleSignUpDisabled;

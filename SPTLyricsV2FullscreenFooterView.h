@@ -22,6 +22,7 @@
     NSLayoutConstraint *_playPauseButtonHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *playPauseButtonHeightConstraint; // @synthesize playPauseButtonHeightConstraint=_playPauseButtonHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *durationViewHeightConstraint; // @synthesize durationViewHeightConstraint=_durationViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *controlsContainerViewTrailingConstraint; // @synthesize controlsContainerViewTrailingConstraint=_controlsContainerViewTrailingConstraint;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) SPTVocalRemovalMenuButton *menuButton; // @synthesize menuButton=_menuButton;
 @property(retain, nonatomic) SPTVocalRemovalToggleButton *vocalRemovalButton; // @synthesize vocalRemovalButton=_vocalRemovalButton;
 @property(retain, nonatomic) SPTNowPlayingButton<SPTNowPlayingPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
-- (void).cxx_destruct;
 - (void)setupDurationView:(id)arg1;
 - (void)setupMenuButton:(id)arg1;
 - (void)setupVocalRemovalButton:(id)arg1;

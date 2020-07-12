@@ -19,11 +19,11 @@
     UINotificationFeedbackGenerator *_feedbackGenerator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UINotificationFeedbackGenerator *feedbackGenerator; // @synthesize feedbackGenerator=_feedbackGenerator;
 @property(retain, nonatomic) id <GLUEAnimationLottieStyling> heartAnimationStyler; // @synthesize heartAnimationStyler=_heartAnimationStyler;
 @property(nonatomic) _Bool isUserInitiatedTransitionInProgress; // @synthesize isUserInitiatedTransitionInProgress=_isUserInitiatedTransitionInProgress;
 @property(retain, nonatomic) id <VISREFActionRowButtonViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)updateAccessibilityLabel:(id)arg1;
 - (void)updateSelectedState:(_Bool)arg1 userInitiated:(_Bool)arg2;
 - (struct CGSize)intrinsicContentSize;

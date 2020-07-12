@@ -21,6 +21,7 @@
 
 + (id)contentStyleWithTheme:(id)arg1 state:(unsigned long long)arg2;
 + (id)styleWithTheme:(id)arg1 state:(unsigned long long)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEEntityImageStyle *imageViewStyle; // @synthesize imageViewStyle=_imageViewStyle;
 @property(retain, nonatomic) UIColor *imageOverlayColor; // @synthesize imageOverlayColor=_imageOverlayColor;
 @property(retain, nonatomic) GLUETrackAccessoryLabelStyle *trackAccessoryLabelStyle; // @synthesize trackAccessoryLabelStyle=_trackAccessoryLabelStyle;
@@ -28,7 +29,6 @@
 @property(nonatomic) double imageAlpha; // @synthesize imageAlpha=_imageAlpha;
 @property(nonatomic) double textAlpha; // @synthesize textAlpha=_textAlpha;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

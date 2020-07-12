@@ -14,8 +14,8 @@
 }
 
 + (id)internalFeaturesViewControllerWithSettingsRegistry:(id)arg1 bannerPresentationManager:(id)arg2 navigationRouter:(id)arg3 linkDispatcher:(id)arg4;
-@property(readonly, nonatomic) NSArray *cellsAndActions; // @synthesize cellsAndActions=_cellsAndActions;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *cellsAndActions; // @synthesize cellsAndActions=_cellsAndActions;
 - (void)didSelectRow:(long long)arg1;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

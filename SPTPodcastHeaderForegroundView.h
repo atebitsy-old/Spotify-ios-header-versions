@@ -13,8 +13,8 @@
     VISREFGradientView *_darkGradientView;
 }
 
-@property(retain, nonatomic) VISREFGradientView *darkGradientView; // @synthesize darkGradientView=_darkGradientView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) VISREFGradientView *darkGradientView; // @synthesize darkGradientView=_darkGradientView;
 - (void)showNavigationBar:(_Bool)arg1;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (void)setNavigationBarOverlayGradient:(id)arg1;

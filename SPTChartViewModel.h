@@ -29,6 +29,7 @@
     NSArray *_playerTracks;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool playlistHasLoaded; // @synthesize playlistHasLoaded=_playlistHasLoaded;
 @property(retain, nonatomic) NSArray *playerTracks; // @synthesize playerTracks=_playerTracks;
 @property(retain, nonatomic) SPTPlayerContext *playerContext; // @synthesize playerContext=_playerContext;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak id <SPTChartViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSURL *URIForTrackCurrentlyPlayed; // @synthesize URIForTrackCurrentlyPlayed=_URIForTrackCurrentlyPlayed;
 @property(retain, nonatomic) NSIndexPath *indexPathForTrackCurrentlyPlaying; // @synthesize indexPathForTrackCurrentlyPlaying=_indexPathForTrackCurrentlyPlaying;
-- (void).cxx_destruct;
 - (id)contextMenuActionsForCurrentViewWithFactory:(id)arg1 logContext:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)playlistDidLoad;

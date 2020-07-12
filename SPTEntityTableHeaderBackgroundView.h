@@ -21,12 +21,12 @@
 }
 
 + (id)headerBackgroundViewWithSize:(struct CGSize)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(readonly, nonatomic) UIImageView *imageBlurView; // @synthesize imageBlurView=_imageBlurView;
 @property(retain, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
 @property(readonly, nonatomic) UIView *tintView; // @synthesize tintView=_tintView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 @property(nonatomic) double imageViewVerticalOffset;
 - (void)setupBlurImageView;

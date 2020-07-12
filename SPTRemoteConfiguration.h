@@ -23,6 +23,7 @@
     RCCURLCreator *_urlCreator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) RCCURLCreator *urlCreator; // @synthesize urlCreator=_urlCreator;
 @property(retain, nonatomic) SPTRemoteConfigurationMessageCreator *messageCreator; // @synthesize messageCreator=_messageCreator;
 @property(retain, nonatomic) NSDictionary *localPropertyOverrides; // @synthesize localPropertyOverrides=_localPropertyOverrides;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) id <SPTRemoteConfigurationEventLogger> eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationTransport> transport; // @synthesize transport=_transport;
 @property(retain, nonatomic) SPTRawConfiguration *activeConfiguration; // @synthesize activeConfiguration=_activeConfiguration;
-- (void).cxx_destruct;
 - (void)logMessage:(id)arg1 level:(unsigned long long)arg2;
 - (void)handleFetchSuccessWithData:(id)arg1;
 - (void)handleFetchSuccessNoData;

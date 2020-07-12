@@ -20,6 +20,7 @@
     NSString *_text;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, copy, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, nonatomic) SPTNRFItemContent *content; // @synthesize content=_content;
@@ -28,7 +29,6 @@
 @property(readonly, copy, nonatomic) NSString *recommendationReason; // @synthesize recommendationReason=_recommendationReason;
 @property(readonly, nonatomic) long long itemType; // @synthesize itemType=_itemType;
 @property(readonly, copy, nonatomic) NSString *itemID; // @synthesize itemID=_itemID;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

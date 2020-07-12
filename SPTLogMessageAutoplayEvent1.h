@@ -22,6 +22,7 @@
 }
 
 + (id)messageWithType:(id)arg1 seedEntity:(id)arg2 offline:(long long)arg3 forcedOffline:(long long)arg4 activeConnectionType:(long long)arg5 datasaverSetting:(long long)arg6 offlineListsCount:(long long)arg7 sessionEventCount:(long long)arg8 deviceFreeSpaceMB:(long long)arg9;
+- (void).cxx_destruct;
 @property(nonatomic) long long deviceFreeSpaceMBValue; // @synthesize deviceFreeSpaceMBValue=_deviceFreeSpaceMBValue;
 @property(nonatomic) long long sessionEventCountValue; // @synthesize sessionEventCountValue=_sessionEventCountValue;
 @property(nonatomic) long long offlineListsCountValue; // @synthesize offlineListsCountValue=_offlineListsCountValue;
@@ -31,7 +32,6 @@
 @property(nonatomic) long long offlineValue; // @synthesize offlineValue=_offlineValue;
 @property(copy, nonatomic) NSString *seedEntityValue; // @synthesize seedEntityValue=_seedEntityValue;
 @property(copy, nonatomic) NSString *typeValue; // @synthesize typeValue=_typeValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

@@ -19,9 +19,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationTestManager> sharedTestManager; // @synthesize sharedTestManager=_sharedTestManager;
 - (id)provideTestManager;
 - (void)configureWithServices:(id)arg1;

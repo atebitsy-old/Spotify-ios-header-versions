@@ -16,8 +16,8 @@
     NSURL *_pageURI;
 }
 
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 - (void).cxx_destruct;
+@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)viewDidLoad;
 - (id)initWithURI:(id)arg1;

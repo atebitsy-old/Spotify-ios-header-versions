@@ -21,13 +21,13 @@
     struct CGPoint _originalCenter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double draggingDownThreshold; // @synthesize draggingDownThreshold=_draggingDownThreshold;
 @property(nonatomic) struct CGPoint originalCenter; // @synthesize originalCenter=_originalCenter;
 @property(retain, nonatomic) UIPanGestureRecognizer *panGestureRecognizer; // @synthesize panGestureRecognizer=_panGestureRecognizer;
 @property(retain, nonatomic) NSLayoutConstraint *noteViewBottomConstraint; // @synthesize noteViewBottomConstraint=_noteViewBottomConstraint;
 @property(retain, nonatomic) UIView *noteView; // @synthesize noteView=_noteView;
 @property(nonatomic) __weak id <SPTInAppMessageNoteOverlayViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)handleSwipeDownGestureRecognizer:(id)arg1;
 - (void)dismissNoteViewWithCompletion:(CDUnknownBlockType)arg1;

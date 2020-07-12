@@ -23,6 +23,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTLyricsLineProgressManager> progressManager; // @synthesize progressManager=_progressManager;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) SPTLyricsV2Logger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) SPTAutoLockController *autoLockController; // @synthesize autoLockController=_autoLockController;
-- (void).cxx_destruct;
 
 @end
 

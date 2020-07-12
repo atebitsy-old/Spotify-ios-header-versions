@@ -15,10 +15,10 @@
     id <SPTCanvasModel> _canvasModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
 @property(readonly, copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(readonly, nonatomic) long long resolverType; // @synthesize resolverType=_resolverType;
-- (void).cxx_destruct;
 - (id)initWithResolverType:(long long)arg1 canvasModel:(id)arg2 completionBlock:(CDUnknownBlockType)arg3;
 
 @end

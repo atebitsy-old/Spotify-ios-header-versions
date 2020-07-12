@@ -20,10 +20,10 @@
     UITapGestureRecognizer *_tapGestureRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(retain, nonatomic) SPTPodcastUIEpisodeImageCardView *imageCardView; // @synthesize imageCardView=_imageCardView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (void)sendSelectionEvent;

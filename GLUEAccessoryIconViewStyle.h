@@ -18,10 +18,10 @@
 }
 
 + (id)iconImageForIcon:(long long)arg1 usingStyle:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToAccessoryIconViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

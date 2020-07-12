@@ -17,10 +17,10 @@
     NSString *_pageId;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *pageId; // @synthesize pageId=_pageId;
 @property(readonly, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSDictionary *interactionTypesMap; // @synthesize interactionTypesMap=_interactionTypesMap;
-- (void).cxx_destruct;
 - (id)impressionFromLocation:(id)arg1;
 - (id)interactionFactoryFromLocation:(id)arg1;
 - (id)initWithInteractionTypesMap:(id)arg1 pageURI:(id)arg2 pageId:(id)arg3;

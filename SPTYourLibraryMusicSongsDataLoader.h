@@ -23,6 +23,7 @@
     id <SPTCollectionPlatformDataLoaderRequestToken> _subscription;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> subscription; // @synthesize subscription=_subscription;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
@@ -31,7 +32,6 @@
 @property(copy, nonatomic) NSArray *sectionIndices; // @synthesize sectionIndices;
 @property(nonatomic) unsigned long long totalNumberOfItems; // @synthesize totalNumberOfItems;
 @property(nonatomic) __weak id <SPTYourLibraryMusicRangeDataLoaderDelegate> rangeDataLoaderDelegate; // @synthesize rangeDataLoaderDelegate;
-- (void).cxx_destruct;
 - (void)loadItemsForRange:(struct _NSRange)arg1 sortRules:(id)arg2 filterRules:(id)arg3 textFilter:(id)arg4;
 - (id)initWithCollectionDataLoader:(id)arg1 clientSettings:(id)arg2 testManager:(id)arg3;
 

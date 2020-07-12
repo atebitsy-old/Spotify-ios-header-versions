@@ -14,9 +14,9 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSArray *cells; // @synthesize cells=_cells;
-- (void).cxx_destruct;
 - (void)didSelectRow:(long long)arg1;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

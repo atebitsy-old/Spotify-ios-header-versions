@@ -10,10 +10,6 @@
 @protocol SPTNowPlayingAuxiliaryActionsHandlerObserver;
 
 @protocol SPTNowPlayingAuxiliaryActionsHandler <NSObject>
-@property(readonly, nonatomic) _Bool isHeartActionAllowed;
-@property(readonly, nonatomic) _Bool isBanActionAllowed;
-@property(readonly, nonatomic) _Bool isCurrentTrackInCollection;
-@property(readonly, nonatomic) _Bool isCurrentTrackBanned;
 - (void)presentSleepTimerMenuFromView:(UIButton *)arg1 inViewController:(UIViewController *)arg2;
 - (void)goToNowPlayingView:(UIButton *)arg1;
 - (void)goToQueue:(UIButton *)arg1;
@@ -30,5 +26,9 @@
 - (void)toggleCollectionStateFromViewController:(UIViewController *)arg1 andActionControl:(UIButton *)arg2;
 - (void)removeObserver:(id <SPTNowPlayingAuxiliaryActionsHandlerObserver>)arg1;
 - (void)addObserver:(id <SPTNowPlayingAuxiliaryActionsHandlerObserver>)arg1;
+@property(nonatomic, readonly) _Bool isHeartActionAllowed;
+@property(nonatomic, readonly) _Bool isBanActionAllowed;
+@property(nonatomic, readonly) _Bool isCurrentTrackInCollection;
+@property(nonatomic, readonly) _Bool isCurrentTrackBanned;
 @end
 

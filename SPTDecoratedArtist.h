@@ -20,11 +20,11 @@
 + (id)albumsFromGroups:(span_c9060bd8)arg1;
 + (id)decoratedArtistWithArtist:(id)arg1;
 + (id)decoratedArtistWithMetadata:(const struct ArtistMetadata *)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *topTrackURLs; // @synthesize topTrackURLs=_topTrackURLs;
 @property(retain, nonatomic) NSArray *singles; // @synthesize singles=_singles;
 @property(retain, nonatomic) NSArray *albums; // @synthesize albums=_albums;
 @property(retain, nonatomic) SPTArtist *artist; // @synthesize artist=_artist;
-- (void).cxx_destruct;
 - (id)initWithArtist:(id)arg1 albums:(id)arg2 topTrackURLs:(id)arg3 singles:(id)arg4;
 
 @end

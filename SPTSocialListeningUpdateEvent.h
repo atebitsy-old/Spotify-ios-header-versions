@@ -17,9 +17,9 @@
     id <SPTSocialListeningParticipantModelEntity> _participant;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSocialListeningParticipantModelEntity> participant; // @synthesize participant=_participant;
 @property(readonly, nonatomic) unsigned long long updateReason; // @synthesize updateReason=_updateReason;
-- (void).cxx_destruct;
 - (id)initWithReasonString:(id)arg1 participant:(id)arg2;
 
 // Remaining properties

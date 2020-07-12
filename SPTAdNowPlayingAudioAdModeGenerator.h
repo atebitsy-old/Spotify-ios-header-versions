@@ -19,11 +19,11 @@
     SPTAdNowPlayingAuxiliaryActionsHandler *_actionsHandler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAdNowPlayingAuxiliaryActionsHandler *actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 @property(nonatomic) __weak id <SPTNowPlayingModesRegistry> npvModeRegistry; // @synthesize npvModeRegistry=_npvModeRegistry;
 @property(retain, nonatomic) id <SPTAdsBaseRegistry> adRegistry; // @synthesize adRegistry=_adRegistry;
 @property(readonly, nonatomic) id <SPTNowPlayingMode> npvAdMode; // @synthesize npvAdMode=_npvAdMode;
-- (void).cxx_destruct;
 - (void)updateAdModeWithAdEntity:(id)arg1;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)dealloc;

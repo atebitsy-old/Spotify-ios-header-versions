@@ -15,9 +15,9 @@
     NSString *_topic;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *topic; // @synthesize topic=_topic;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivitySubscriber> subscriber; // @synthesize subscriber=_subscriber;
-- (void).cxx_destruct;
 - (id)initWithSubscriber:(id)arg1 topic:(id)arg2;
 
 @end

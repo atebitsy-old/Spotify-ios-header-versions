@@ -16,9 +16,9 @@
     NSString *_upsellNavigationItemTitleString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *upsellNavigationItemTitleString; // @synthesize upsellNavigationItemTitleString=_upsellNavigationItemTitleString;
 @property(readonly, nonatomic) unsigned long long upsellNavigationItemTitle; // @synthesize upsellNavigationItemTitle=_upsellNavigationItemTitle;
-- (void).cxx_destruct;
 - (unsigned long long)mapUpsellNavigationItemTitleToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

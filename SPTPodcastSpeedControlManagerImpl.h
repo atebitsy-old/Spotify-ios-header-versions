@@ -19,11 +19,11 @@
     id <SPTPodcastTestManager> _podcastTestManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTPodcastPreferences *podcastPreferences; // @synthesize podcastPreferences=_podcastPreferences;
-- (void).cxx_destruct;
 - (void)removePodcastPreferencesObserver:(id)arg1;
 - (void)addPodcastPreferencesObserver:(id)arg1;
 - (id)currentPodcastPlaybackSpeed;

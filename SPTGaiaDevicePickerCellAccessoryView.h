@@ -15,10 +15,10 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTContextMenuAccessoryButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupContextMenuButton;
 - (id)initWithIndexPath:(id)arg1;

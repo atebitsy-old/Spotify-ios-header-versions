@@ -23,6 +23,7 @@
     struct CGSize _maximumImageSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTImageLoaderRemoteImplementation *basicLoader; // @synthesize basicLoader=_basicLoader;
 @property(readonly, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) struct CGSize maximumImageSize; // @synthesize maximumImageSize=_maximumImageSize;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) SPTImageLoaderEntityImageTracker *offlineEntityTracker; // @synthesize offlineEntityTracker=_offlineEntityTracker;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(nonatomic) __weak id <SPTImageLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)imageLoaded:(id)arg1 withDataKey:(id)arg2 forURL:(id)arg3 startTime:(id)arg4 forEntity:(id)arg5;
 - (void)imageLoadError:(id)arg1 forURL:(id)arg2 context:(id)arg3;
 - (void)imageLoaded:(id)arg1 forURL:(id)arg2 startTime:(id)arg3 context:(id)arg4;

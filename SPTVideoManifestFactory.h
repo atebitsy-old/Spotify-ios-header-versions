@@ -6,19 +6,18 @@
 
 #import <objc/NSObject.h>
 
-@class SPTVideoManifestProfileFactory;
-@protocol BMSubtitleFactory;
+@class BMSubtitleFactory, SPTVideoManifestProfileFactory;
 
 @interface SPTVideoManifestFactory : NSObject
 {
     SPTVideoManifestProfileFactory *_manifestProfileFactory;
-    id <BMSubtitleFactory> _subtitleFactory;
+    BMSubtitleFactory *_subtitleFactory;
 }
 
 + (id)errorWithCode:(long long)arg1 underlyingError:(id)arg2;
-@property(retain, nonatomic) id <BMSubtitleFactory> subtitleFactory; // @synthesize subtitleFactory=_subtitleFactory;
-@property(retain, nonatomic) SPTVideoManifestProfileFactory *manifestProfileFactory; // @synthesize manifestProfileFactory=_manifestProfileFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) BMSubtitleFactory *subtitleFactory; // @synthesize subtitleFactory=_subtitleFactory;
+@property(retain, nonatomic) SPTVideoManifestProfileFactory *manifestProfileFactory; // @synthesize manifestProfileFactory=_manifestProfileFactory;
 - (id)sanitizeTemplateString:(id)arg1;
 - (id)createWithDictionary:(id)arg1 error:(id *)arg2;
 - (id)createFromJSONData:(id)arg1 error:(id *)arg2;

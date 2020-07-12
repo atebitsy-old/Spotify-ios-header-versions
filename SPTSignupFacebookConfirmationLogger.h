@@ -15,9 +15,9 @@
     SPTLoginErrorLogger *_errorLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logErrorWithCode:(unsigned long long)arg1;
 - (void)logUserDidTapLoginWithEmailButton;
 - (void)logUserDidTapCreateAccountButton;

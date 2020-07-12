@@ -26,6 +26,7 @@
     NSNumber *_followerCount;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumber *followerCount; // @synthesize followerCount=_followerCount;
 @property(nonatomic) _Bool isFollowed; // @synthesize isFollowed=_isFollowed;
 @property(retain, nonatomic) NSArray *items; // @synthesize items=_items;
@@ -38,7 +39,6 @@
 @property(copy, nonatomic) NSString *freeformDescription; // @synthesize freeformDescription=_freeformDescription;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSDictionary *formatListAttributes; // @synthesize formatListAttributes=_formatListAttributes;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

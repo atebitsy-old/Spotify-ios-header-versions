@@ -20,12 +20,12 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTNowPlayingLiveVideoViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingModeViewControllerRegistry> viewControllerRegistry; // @synthesize viewControllerRegistry=_viewControllerRegistry;
 @property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (id)queueHeadUnitViewController;
 - (id)footerUnitViewController;
 - (id)headUnitViewController;

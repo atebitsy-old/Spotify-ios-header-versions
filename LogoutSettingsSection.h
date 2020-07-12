@@ -15,9 +15,9 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginLogoutHandler> logoutHandler; // @synthesize logoutHandler=_logoutHandler;
-- (void).cxx_destruct;
 - (void)logoutUser;
 - (void)showLogoutAlert;
 - (void)didSelectRow:(long long)arg1;

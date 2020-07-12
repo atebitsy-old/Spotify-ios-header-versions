@@ -22,13 +22,13 @@
     SPTLoginIntentLedStartViewLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginIntentLedStartViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) unsigned long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTLoginButtonActionHandler *actionButtonHandler; // @synthesize actionButtonHandler=_actionButtonHandler;
 @property(readonly, nonatomic) NSArray *actionButtons; // @synthesize actionButtons=_actionButtons;
-- (void).cxx_destruct;
 - (void)logUserDidSeeView;
 - (void)performActionForButtonWithTag:(unsigned long long)arg1;
 - (id)contextViewForThirdPartyLoginController:(id)arg1;

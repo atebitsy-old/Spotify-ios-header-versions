@@ -19,11 +19,11 @@
     NSMutableArray *_whenLoggedIn;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *whenLoggedIn; // @synthesize whenLoggedIn=_whenLoggedIn;
 @property(nonatomic) _Bool haveInvokedURISchemeHandlers; // @synthesize haveInvokedURISchemeHandlers=_haveInvokedURISchemeHandlers;
 @property(retain, nonatomic) NSMutableDictionary *uriSchemeHandlers; // @synthesize uriSchemeHandlers=_uriSchemeHandlers;
 @property(nonatomic) __weak id <SPTURISchemeDispatcherMessagingDelegate> messagingDelegate; // @synthesize messagingDelegate=_messagingDelegate;
-- (void).cxx_destruct;
 - (void)openDeferredLinks;
 - (void)performWhenLoggedIn:(CDUnknownBlockType)arg1;
 - (_Bool)hasRegisteredHandlerForURIScheme:(id)arg1;

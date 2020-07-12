@@ -27,6 +27,7 @@
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) _Bool reversePlaybackOrder; // @synthesize reversePlaybackOrder=_reversePlaybackOrder;
 @property(readonly, nonatomic) __weak id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 @property(readonly, nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerEpisodeProvider> episodeProvider; // @synthesize episodeProvider=_episodeProvider;
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionHandlerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)markAsUnplayed:(id)arg1 atIndexPath:(id)arg2;
 - (void)presentMarkAsPlayedSnackbarForEpisode:(id)arg1 atIndexPath:(id)arg2;
 - (void)displayContextMenuForEpisode:(id)arg1 sender:(id)arg2 indexPath:(id)arg3;

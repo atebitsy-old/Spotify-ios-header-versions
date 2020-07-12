@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierRecommendationsPlaylistViewProvider> playlistProvider; // @synthesize playlistProvider=_playlistProvider;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
-- (void).cxx_destruct;
 - (id)provideRecommendedTracksDataLoader;
 - (id)recommenedPlaylistViewProvider;
 - (void)configureWithServices:(id)arg1;

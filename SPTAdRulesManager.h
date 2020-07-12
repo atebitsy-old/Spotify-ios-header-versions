@@ -19,6 +19,7 @@
     NSMutableDictionary *_adhocSlotDisabledReasonsDictionary;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *adhocSlotDisabledReasonsDictionary; // @synthesize adhocSlotDisabledReasonsDictionary=_adhocSlotDisabledReasonsDictionary;
 @property(readonly, nonatomic) NSMutableSet *midrollDisablePlayOriginContextPrefixes; // @synthesize midrollDisablePlayOriginContextPrefixes=_midrollDisablePlayOriginContextPrefixes;
 @property(readonly, nonatomic) NSArray *prerollDisabledFeatureOriginPrefixes; // @synthesize prerollDisabledFeatureOriginPrefixes=_prerollDisabledFeatureOriginPrefixes;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) NSArray *midrollDisabledNavigationContextPrefixes; // @synthesize midrollDisabledNavigationContextPrefixes=_midrollDisabledNavigationContextPrefixes;
 @property(nonatomic) __weak SPTAdContextManager *adContextManager; // @synthesize adContextManager=_adContextManager;
 @property(nonatomic) __weak SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isContextResumeEnabled) _Bool contextResumeEnabled;
 - (_Bool)isPrerollFeatureEnabled;
 - (_Bool)isMidrollFeatureEnabled;

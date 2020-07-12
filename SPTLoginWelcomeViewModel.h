@@ -30,6 +30,7 @@
     SPTLoginWelcomeViewImageryURLProvider *_imageryURLProvider;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isGuestModeEnabled) _Bool guestModeEnabled; // @synthesize guestModeEnabled=_guestModeEnabled;
 @property(nonatomic) _Bool didLogViewLaunchTime; // @synthesize didLogViewLaunchTime=_didLogViewLaunchTime;
 @property(readonly, nonatomic) SPTLoginWelcomeViewImageryURLProvider *imageryURLProvider; // @synthesize imageryURLProvider=_imageryURLProvider;
@@ -44,8 +45,9 @@
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTLoginButtonActionHandler *actionButtonHandler; // @synthesize actionButtonHandler=_actionButtonHandler;
 @property(readonly, nonatomic) NSArray *actionButtons; // @synthesize actionButtons=_actionButtons;
-- (void).cxx_destruct;
 - (void)performActionForButtonWithTag:(unsigned long long)arg1;
+- (void)logUserDidSwipeImage;
+- (void)logUserDidTapImage;
 - (void)logDidFinishLoadImageWithError:(id)arg1;
 - (void)logDidStartLoadImageForScreenWidth:(double)arg1;
 - (void)logUserDidSeeViewWithInterfaceOrientation:(long long)arg1 fromLogout:(_Bool)arg2;

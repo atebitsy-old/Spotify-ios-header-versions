@@ -20,10 +20,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTExternalIntegrationPodcastContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
 @property(readonly, nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationPlaybackServiceImplementation *playbackService; // @synthesize playbackService=_playbackService;
-- (void).cxx_destruct;
 - (id)jsonParsingError:(id)arg1;
 - (void)playEpisodes:(id)arg1 withUri:(id)arg2 origin:(id)arg3 skipToTrack:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (id)getStartEpisodeUrl:(id)arg1 withEpisodes:(id)arg2;

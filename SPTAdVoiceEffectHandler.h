@@ -18,13 +18,13 @@
     SPTAdVoiceStartDelayTimerEffectHandler *_startDelayTimerEffectHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAdVoiceStartDelayTimerEffectHandler *startDelayTimerEffectHandler; // @synthesize startDelayTimerEffectHandler=_startDelayTimerEffectHandler;
 @property(readonly, nonatomic) SPTAdVoiceSpeechRecognitionCommandEffectHandler *speechRecognitionEffectHandler; // @synthesize speechRecognitionEffectHandler=_speechRecognitionEffectHandler;
 @property(readonly, nonatomic) SPTAdVoicePlayerEffectHandler *playerEffectHandler; // @synthesize playerEffectHandler=_playerEffectHandler;
 @property(readonly, nonatomic) SPTAdVoicePlayCueEffectHandler *playCueEffectHandler; // @synthesize playCueEffectHandler=_playCueEffectHandler;
 @property(readonly, nonatomic) SPTAdVoiceLogEffectHandler *voiceLogEffectHandler; // @synthesize voiceLogEffectHandler=_voiceLogEffectHandler;
 @property(readonly, nonatomic) SPTAdVoiceCosmosEffectHandler *cosmosEffectHandler; // @synthesize cosmosEffectHandler=_cosmosEffectHandler;
-- (void).cxx_destruct;
 - (CDUnknownBlockType)postAdVoiceLogWithPositionWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)postAdVoiceLogWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)postMicOnWithEventSink:(CDUnknownBlockType)arg1;

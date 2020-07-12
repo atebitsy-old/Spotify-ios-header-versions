@@ -15,8 +15,8 @@
     SPTInAppMessageActionsRegistryImplementation *_registry;
 }
 
-@property(readonly, nonatomic) SPTInAppMessageActionsRegistryImplementation *registry; // @synthesize registry=_registry;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTInAppMessageActionsRegistryImplementation *registry; // @synthesize registry=_registry;
 - (void)executeActionWithURL:(id)arg1;
 - (id)initWithActionsRegistry:(id)arg1;
 

@@ -20,11 +20,11 @@
     SPTPlayerState *_playerState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) SPTAccessoryManagerFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (id)logUiNavigateWithDestination:(id)arg1 fromAccessory:(id)arg2;
 - (id)logAddItemToQueueWithItemToAddToQueue:(id)arg1 fromAccessory:(id)arg2;

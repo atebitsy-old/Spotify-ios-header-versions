@@ -18,10 +18,10 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool inCollection; // @synthesize inCollection=_inCollection;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicAlbumEntity> albumEntity; // @synthesize albumEntity=_albumEntity;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isOnDemand) _Bool onDemand;
 - (id)initWithAlbumEntity:(id)arg1 inCollection:(_Bool)arg2;
 

@@ -18,10 +18,10 @@
     id <SPTReachabilityMonitor> _reachability;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isIndexing; // @synthesize isIndexing=_isIndexing;
 @property(readonly, nonatomic) id <SPTReachabilityMonitor> reachability; // @synthesize reachability=_reachability;
 @property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
-- (void).cxx_destruct;
 - (void)indexDidDrop:(id)arg1;
 - (void)indexDidEndIndexing:(id)arg1 error:(id)arg2;
 - (void)indexDidStartIndexing:(id)arg1;

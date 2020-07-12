@@ -38,6 +38,7 @@
     struct CGSize _profilePictureSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double termsViewBottomMargin; // @synthesize termsViewBottomMargin=_termsViewBottomMargin;
 @property(nonatomic) double termsViewTopMargin; // @synthesize termsViewTopMargin=_termsViewTopMargin;
 @property(copy, nonatomic) SPTSignupTermsAndPolicyViewStyle *termsViewStyle; // @synthesize termsViewStyle=_termsViewStyle;
@@ -62,7 +63,6 @@
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double mainContainerIPadWidth; // @synthesize mainContainerIPadWidth=_mainContainerIPadWidth;
 @property(nonatomic) double mainContainerWidth; // @synthesize mainContainerWidth=_mainContainerWidth;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

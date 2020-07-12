@@ -18,9 +18,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPermissionsOnDemandState> onDemandPermissionState; // @synthesize onDemandPermissionState=_onDemandPermissionState;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
-- (void).cxx_destruct;
 - (id)provideOnDemandPermissionState;
 - (void)configureWithServices:(id)arg1;
 

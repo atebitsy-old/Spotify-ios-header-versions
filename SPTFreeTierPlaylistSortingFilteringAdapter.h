@@ -25,6 +25,7 @@
     id <SPTCollectionSortingEntityManager> _sortingEntityManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCollectionSortingEntityManager> sortingEntityManager; // @synthesize sortingEntityManager=_sortingEntityManager;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTSortingFilteringPreferences> sortingFilteringPreferences; // @synthesize sortingFilteringPreferences=_sortingFilteringPreferences;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(copy, nonatomic) id <SPTSortingFilteringSortRule> selectedSortRule; // @synthesize selectedSortRule=_selectedSortRule;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistSortingFilteringDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)recentlyAddedSortRule;
 - (id)albumSortRule;
 - (id)artistSortRule;

@@ -22,6 +22,7 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isGuestAccount) _Bool guestAccount; // @synthesize guestAccount=_guestAccount;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak SPTSettingsTableViewCell *tableViewCell; // @synthesize tableViewCell=_tableViewCell;
 @property(readonly, nonatomic) id <SPTProfileUserData> profileUserData; // @synthesize profileUserData=_profileUserData;
-- (void).cxx_destruct;
 - (void)loadProfileImage;
 - (void)loadPlaceholderImage;
 - (id)croppedAvatarImage:(id)arg1;

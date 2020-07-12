@@ -22,13 +22,13 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> authNetworklessFlagSignal; // @synthesize authNetworklessFlagSignal=_authNetworklessFlagSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> authAccountsStagingFeatureFlagSignal; // @synthesize authAccountsStagingFeatureFlagSignal=_authAccountsStagingFeatureFlagSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic, getter=isNetworklessAuthEnabled) _Bool networklessAuthEnabled; // @synthesize networklessAuthEnabled=_networklessAuthEnabled;
 @property(nonatomic, getter=isStagingEnabled) _Bool stagingEnabled; // @synthesize stagingEnabled=_stagingEnabled;
-- (void).cxx_destruct;
 - (id)featureFlagSignalWithABBAKey:(id)arg1 settingsItemTitle:(id)arg2 settingsItemDescription:(id)arg3;
 - (void)removeFeatureFlagObserver:(id)arg1;
 - (void)addFeatureFlagObserver:(id)arg1;

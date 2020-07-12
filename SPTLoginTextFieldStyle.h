@@ -29,6 +29,7 @@
     struct CGSize _rightViewSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long numberOfLines; // @synthesize numberOfLines=_numberOfLines;
 @property(retain, nonatomic) UIColor *invalidPasswordToggleTintColor; // @synthesize invalidPasswordToggleTintColor=_invalidPasswordToggleTintColor;
 @property(retain, nonatomic) UIColor *passwordToggleTintColor; // @synthesize passwordToggleTintColor=_passwordToggleTintColor;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) UIColor *invalidTextColor; // @synthesize invalidTextColor=_invalidTextColor;
 @property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(retain, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -20,12 +20,12 @@
     long long _lastTransactionState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long lastTransactionState; // @synthesize lastTransactionState=_lastTransactionState;
 @property(retain, nonatomic) SKPaymentQueue *paymentQueue; // @synthesize paymentQueue=_paymentQueue;
 @property(retain, nonatomic) SKPayment *payment; // @synthesize payment=_payment;
 @property(retain, nonatomic) SKPaymentTransaction *transaction; // @synthesize transaction=_transaction;
 @property(nonatomic) __weak id <SPTIAPTransactionRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)paymentQueue:(id)arg1 updatedTransactions:(id)arg2;
 - (void)transactionDidUpdate:(id)arg1;
 - (void)finishTransaction;

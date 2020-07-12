@@ -18,9 +18,9 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEThemeFeatureController *featureController; // @synthesize featureController=_featureController;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)enableModernFeatures;
 - (void)resetRolloutStatuses;
 @property _Bool leftAlignedTrackCloudEnabled;

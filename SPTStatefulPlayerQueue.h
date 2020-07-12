@@ -17,11 +17,11 @@
     long long _playerQueueOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long playerQueueOffset; // @synthesize playerQueueOffset=_playerQueueOffset;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)resynchronizeQueue;
 - (_Bool)verifyAndHandleSkipToRelativeIndex:(id)arg1;
 - (void)expectSkipToRelativeIndex:(id)arg1;

@@ -16,10 +16,10 @@
     SPTFeatureSettingsPage *_page;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFeatureSettingsPage *page; // @synthesize page=_page;
 @property(retain, nonatomic) id <InAppPurchaseController> legacyController; // @synthesize legacyController=_legacyController;
 @property(retain, nonatomic) id <SPTIAPController> iapController; // @synthesize iapController=_iapController;
-- (void).cxx_destruct;
 - (id)inAppPurchaseModel;
 - (void)addItem:(id)arg1;
 - (void)createItems:(id)arg1 alertController:(id)arg2;

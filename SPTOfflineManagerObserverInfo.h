@@ -15,10 +15,10 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(readonly, nonatomic) id entity; // @synthesize entity=_entity;
 @property(readonly, nonatomic) __weak id <SPTOfflineObserver> observer; // @synthesize observer=_observer;
-- (void).cxx_destruct;
 - (id)description;
 - (id)initWithObserver:(id)arg1 entity:(id)arg2 queue:(id)arg3;
 

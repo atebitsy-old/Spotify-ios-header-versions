@@ -17,10 +17,10 @@
     NSArray *_playlistTracks;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *playlistTracks; // @synthesize playlistTracks=_playlistTracks;
 @property(readonly, nonatomic) unsigned long long numberOfRecs; // @synthesize numberOfRecs=_numberOfRecs;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (void)processWithLoop:(id)arg1;
 - (id)initWithPlaylistURL:(id)arg1 numberOfRecs:(unsigned long long)arg2 playlistTracks:(id)arg3;
 

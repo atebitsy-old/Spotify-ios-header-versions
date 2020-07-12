@@ -17,9 +17,9 @@
     id <SPTCollectionPlatformConfiguration> _collectionPlatformConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfiguration; // @synthesize collectionPlatformConfiguration=_collectionPlatformConfiguration;
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (void)removeTrack:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)addTrack:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)hasTracks:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;

@@ -23,6 +23,7 @@
 }
 
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType backButtonTappedBlock; // @synthesize backButtonTappedBlock=_backButtonTappedBlock;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (void)setBackButton:(id)arg1;
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;

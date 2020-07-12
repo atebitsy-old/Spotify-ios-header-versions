@@ -19,12 +19,12 @@
     double _bottomGradientOpacity;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double bottomGradientOpacity; // @synthesize bottomGradientOpacity=_bottomGradientOpacity;
 @property(nonatomic) double middleGradientOpacity; // @synthesize middleGradientOpacity=_middleGradientOpacity;
 @property(nonatomic) double topGradientOpacity; // @synthesize topGradientOpacity=_topGradientOpacity;
 @property(nonatomic) double topGradientHeight; // @synthesize topGradientHeight=_topGradientHeight;
 @property(retain, nonatomic) UIColor *gradientColor; // @synthesize gradientColor=_gradientColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

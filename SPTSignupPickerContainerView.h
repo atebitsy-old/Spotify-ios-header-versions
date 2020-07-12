@@ -19,11 +19,11 @@
     UIBarButtonItem *_doneButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIBarButtonItem *doneButton; // @synthesize doneButton=_doneButton;
 @property(retain, nonatomic) UIToolbar *toolbar; // @synthesize toolbar=_toolbar;
 @property(nonatomic) __weak id <SPTSignupPickerContainerViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) UIView *pickerView; // @synthesize pickerView=_pickerView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)doneButtonTapped:(id)arg1;
 - (struct CGSize)intrinsicContentSize;

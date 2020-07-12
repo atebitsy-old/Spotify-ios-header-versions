@@ -13,8 +13,8 @@
     SPTConnectivityAccessTokenScope *_accessTokenScope;
 }
 
-@property(readonly, nonatomic) SPTConnectivityAccessTokenScope *accessTokenScope; // @synthesize accessTokenScope=_accessTokenScope;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTConnectivityAccessTokenScope *accessTokenScope; // @synthesize accessTokenScope=_accessTokenScope;
 - (id)callForRequest:(id)arg1 success:(CDUnknownBlockType)arg2 failure:(CDUnknownBlockType)arg3;
 - (id)initWithAccessTokenScope:(id)arg1;
 

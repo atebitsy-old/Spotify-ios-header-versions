@@ -41,6 +41,7 @@
     id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(readonly, nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(retain, nonatomic) id <SPTShowContextMenuControllerOptions> podcastContextMenuOptions; // @synthesize podcastContextMenuOptions=_podcastContextMenuOptions;
@@ -62,7 +63,6 @@
 @property(readonly, nonatomic) id <SPTPodcastSpeedControlManager> speedControlManager; // @synthesize speedControlManager=_speedControlManager;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 @property(nonatomic) __weak SPTNowPlayingContextMenuHeaderFactory *contextMenuHeaderFactory; // @synthesize contextMenuHeaderFactory=_contextMenuHeaderFactory;
-- (void).cxx_destruct;
 - (void)logSleepTimerButtonTapped;
 - (void)presentSleepTimerMenuFromView:(id)arg1 inViewController:(id)arg2;
 - (void)timerDidCancel:(id)arg1;

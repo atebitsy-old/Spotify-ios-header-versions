@@ -24,6 +24,7 @@
     NSString *_otherUserDisplayName;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *otherUserDisplayName; // @synthesize otherUserDisplayName=_otherUserDisplayName;
 @property(nonatomic) _Bool isHost; // @synthesize isHost=_isHost;
 @property(retain, nonatomic) GLUEButton *okButton; // @synthesize okButton=_okButton;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTSocialListeningEducationSlateViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapActionButton;
 - (void)setTitleLabelText;
 - (void)addConstraints;

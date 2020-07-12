@@ -23,6 +23,7 @@
     id <GLUEImageLoader> _imageLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTGaiaDeviceAppearanceMapping *iconMapper; // @synthesize iconMapper=_iconMapper;
 @property(copy, nonatomic) NSArray *filteredActions; // @synthesize filteredActions=_filteredActions;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) id <SPTGaiaDevicePickerContextMenuFlagsProvider><SPTGaiaHomeDeviceFlagsProvider> flagsProvider; // @synthesize flagsProvider=_flagsProvider;
 @property(readonly, nonatomic) SPTGaiaConnectDevice *device; // @synthesize device=_device;
 @property(nonatomic) __weak id <SPTGaiaContextMenuModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)enabledActionsInArray:(id)arg1;
 - (void)action:(id)arg1 isPerformedWithEventVersion:(id)arg2 logData:(id)arg3;
 - (void)action:(id)arg1 wantsToPresentViewController:(id)arg2;

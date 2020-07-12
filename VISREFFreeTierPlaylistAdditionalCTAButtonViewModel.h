@@ -18,9 +18,9 @@
     id <SPTFreeTierPlaylistAdditionalCallToAction> _additionalCTA;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCTA; // @synthesize additionalCTA=_additionalCTA;
 @property(nonatomic) __weak GLUEButton<VISREFActionRowButtonViewModelDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)additionalCallToActionDidChange:(id)arg1;
 - (id)createImage;
 - (void)update;

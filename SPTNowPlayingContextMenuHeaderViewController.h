@@ -22,12 +22,12 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTStatefulPlayer *player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidReceiveStateUpdate:(id)arg1;
 - (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;

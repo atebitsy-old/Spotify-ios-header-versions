@@ -21,11 +21,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> UIPageServicePageRegistrationToken; // @synthesize UIPageServicePageRegistrationToken=_UIPageServicePageRegistrationToken;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> masterEnabledSignal; // @synthesize masterEnabledSignal=_masterEnabledSignal;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)unregisterUIPageServicePage;
 - (void)registerUIPageServicePage;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

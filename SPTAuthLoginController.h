@@ -15,9 +15,9 @@
     id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
-@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (void)eraseOfflineUser:(id)arg1;
 - (void)setRememberMeModeForUsername:(id)arg1 rememberMe:(_Bool)arg2;
 - (void)forgetStoredCredentials:(id)arg1;

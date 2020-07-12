@@ -16,9 +16,9 @@
     NSData *_authBlob;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSData *authBlob; // @synthesize authBlob=_authBlob;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithUsername:(id)arg1 authBlob:(id)arg2;

@@ -16,10 +16,10 @@
     SPTDrivingModeLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTDrivingModePivotCoachMarkView *coachMarkView; // @synthesize coachMarkView=_coachMarkView;
-- (void).cxx_destruct;
 - (_Bool)userHasDismissedCoachMarks;
 - (void)closeCoachMarkIfShowing;
 - (void)dismissCoachMarkIfShowing;

@@ -36,6 +36,7 @@
     NSArray *_cachedSectionIndexTitles;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *cachedSectionIndexTitles; // @synthesize cachedSectionIndexTitles=_cachedSectionIndexTitles;
 @property(retain, nonatomic) NSMutableArray *dataSources; // @synthesize dataSources=_dataSources;
 @property(retain, nonatomic) id <SPTYourLibraryMusicAvailableContentMonitor> availableContentMonitor; // @synthesize availableContentMonitor=_availableContentMonitor;
@@ -53,7 +54,6 @@
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(nonatomic) _Bool hasHiddenContent; // @synthesize hasHiddenContent;
 @property(nonatomic) __weak id <SPTYourLibraryMusicEntityModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)notifyModelUpdateIfLoaded;
 - (void)availableContentMonitorChanged:(id)arg1;
 - (void)didChangeExternalSort:(id)arg1;

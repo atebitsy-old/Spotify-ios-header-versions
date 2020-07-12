@@ -13,8 +13,8 @@
     id <SPTLocalSettings> _localSettings;
 }
 
-@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (_Bool)shouldChurnLockBeActive;
 - (_Bool)isDate:(id)arg1 lessThan24hoursThanSavedTimeStamp:(id)arg2;
 - (void)saveTimeStampWithDate:(id)arg1;

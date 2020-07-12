@@ -23,9 +23,9 @@
 + (_Bool)trailingButtonForComponentModel:(id)arg1;
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUETrackRowTableViewCell *trackCell; // @synthesize trackCell=_trackCell;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)configureSubtitleAccessoryViewWithModel:(id)arg1;
 - (void)configureTrailingViewWithModel:(id)arg1;
 - (void)configureLeadingViewWithModel:(id)arg1;

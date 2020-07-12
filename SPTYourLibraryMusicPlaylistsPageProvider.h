@@ -31,6 +31,7 @@
     id <SPTQuickScrollFactory> _quickScrollFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTQuickScrollFactory> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) unsigned long long providerIdentifier; // @synthesize providerIdentifier=_providerIdentifier;
 @property(readonly, nonatomic) unsigned long long groupIdentifier; // @synthesize groupIdentifier=_groupIdentifier;
-- (void).cxx_destruct;
 - (id)playlistViewModel:(id)arg1 context:(id)arg2 model:(id)arg3;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;

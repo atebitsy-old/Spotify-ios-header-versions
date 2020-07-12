@@ -19,11 +19,11 @@
     id <SPTOnDemandTrialService> _onDemandTrialService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTOnDemandTrialService> onDemandTrialService; // @synthesize onDemandTrialService=_onDemandTrialService;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
-- (void).cxx_destruct;
 - (_Bool)isOnDemandTrialEnabled;
 - (_Bool)isVideoFeatureEnabled;
 - (_Bool)isShowsCollectionFeatureEnabled;

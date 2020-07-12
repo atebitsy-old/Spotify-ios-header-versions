@@ -16,8 +16,8 @@
     id <GLUETheme> _theme;
 }
 
-@property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (id)buttonModelFromModel:(id)arg1;
 - (double)preferredViewHeightForDisplayingModel:(id)arg1;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;

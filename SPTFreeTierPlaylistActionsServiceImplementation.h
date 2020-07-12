@@ -27,6 +27,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistService> freeTierPlaylistService; // @synthesize freeTierPlaylistService=_freeTierPlaylistService;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) id <SPTCollectionSortingEntityManager> collectionSortingEntityManager; // @synthesize collectionSortingEntityManager=_collectionSortingEntityManager;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
-- (void).cxx_destruct;
 - (id)playlistModelWithShadow;
 - (id)playlistDataLoaderWithShadow;
 - (id)selectedActionIconColor;

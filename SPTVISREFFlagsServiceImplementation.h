@@ -18,9 +18,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGLUEFeatureProperties *properties; // @synthesize properties=_properties;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isVisualRefreshAnimatedHeartEnabled) _Bool visualRefreshAnimatedHeartEnabled;
 @property(readonly, nonatomic, getter=isEncorePlaylistHeaderEnabled) _Bool encorePlaylistHeaderEnabled;
 @property(readonly, nonatomic, getter=isEncoreAlbumHeaderEnabled) _Bool encoreAlbumHeaderEnabled;

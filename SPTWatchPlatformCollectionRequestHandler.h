@@ -17,9 +17,9 @@
     id <SPTCollectionPlatform> _collectionPlatform;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)stringFromCollectionPlatformState:(unsigned long long)arg1;
 - (void)handleCollectionRemoveRequest:(id)arg1;
 - (void)handleCollectionAddRequest:(id)arg1;

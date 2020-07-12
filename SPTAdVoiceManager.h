@@ -20,12 +20,12 @@
     SPTAdVoiceModel *_model;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAdVoiceModel *model; // @synthesize model=_model;
 @property(nonatomic) _Bool tornDown; // @synthesize tornDown=_tornDown;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTAdVoiceEffectHandler *effectHandler; // @synthesize effectHandler=_effectHandler;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)ctaClicked;
 - (void)tearDown;

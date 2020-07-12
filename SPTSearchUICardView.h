@@ -22,13 +22,13 @@
 
 + (struct CGSize)sizeForAttributedTitle:(id)arg1 maxWidth:(double)arg2 style:(id)arg3;
 + (struct CGSize)imageSizeForMaxWidth:(double)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelRightEdgeConstraint; // @synthesize titleLabelRightEdgeConstraint=_titleLabelRightEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelLeftEdgeConstraint; // @synthesize titleLabelLeftEdgeConstraint=_titleLabelLeftEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelBottomEdgeConstraint; // @synthesize titleLabelBottomEdgeConstraint=_titleLabelBottomEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelTopEdgeConstraint; // @synthesize titleLabelTopEdgeConstraint=_titleLabelTopEdgeConstraint;
 @property(readonly, nonatomic) SPTSearchUILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)addConstraints;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)applyStateStyle:(id)arg1;

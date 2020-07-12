@@ -18,12 +18,12 @@
     id <SPTAlertController> _alertController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool trackIsAvailable; // @synthesize trackIsAvailable=_trackIsAvailable;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) id <SPTPlayerQueue> playerQueue; // @synthesize playerQueue=_playerQueue;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
-- (void).cxx_destruct;
 - (void)startAddToQueueTask;
 - (void)startPlayContextWithTheCurrentTrack;
 - (id)execute:(id)arg1;

@@ -23,6 +23,7 @@
     SPTVoiceTestManagerImplementation *_testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTVoiceTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTVoiceSessionHandlingOptions *sessionHandlingOptions; // @synthesize sessionHandlingOptions=_sessionHandlingOptions;
 @property(readonly, nonatomic) SPTVoiceDynamicCommandSuggestionsGenerator *suggestionGenerator; // @synthesize suggestionGenerator=_suggestionGenerator;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceCommandHandler> voiceCommandHandler; // @synthesize voiceCommandHandler=_voiceCommandHandler;
 @property(readonly, nonatomic) id <SPTVoiceRecognitionTaskFactory> voiceRecognitionTaskFactory; // @synthesize voiceRecognitionTaskFactory=_voiceRecognitionTaskFactory;
-- (void).cxx_destruct;
 - (id)createVoiceSessionWithInitialUtteranceId:(id)arg1;
 - (id)createVoiceSession;
 - (id)initWithVoiceRecognitionTaskFactory:(id)arg1 audioSessionManager:(id)arg2 voiceCommandHandler:(id)arg3 player:(id)arg4 utteranceIdProvider:(id)arg5 suggestionGenerator:(id)arg6 sessionHandlingOptions:(id)arg7 testManager:(id)arg8;

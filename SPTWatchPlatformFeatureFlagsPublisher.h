@@ -19,15 +19,14 @@
     NSString *_topic;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *topic; // @synthesize topic=_topic;
 @property(readonly, nonatomic) SPTWatchPlatformTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (id)featureFlagsDictionary;
 - (void)testManager:(id)arg1 didUpdateWatchAppOfflineEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didUpdateWatchAppLibraryOnboardingEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didUpdateWatchAppLibraryEnabledState:(_Bool)arg2;
-- (void)testManager:(id)arg1 didUpdateWatchForceStreamingEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didUpdateWatchStreamingEnabledState:(_Bool)arg2;
 - (void)handlePublisherEvent:(long long)arg1;
 - (void)publishFeatureFlags;

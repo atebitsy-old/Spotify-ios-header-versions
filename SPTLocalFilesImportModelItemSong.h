@@ -16,9 +16,9 @@
     NSURL *_URL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(retain, nonatomic) SPTLocalFilesImportModelItemAlbum *album; // @synthesize album=_album;
-- (void).cxx_destruct;
 - (id)parent;
 - (long long)numberOfTracks;
 - (id)children;

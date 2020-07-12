@@ -19,12 +19,12 @@
     GLUELabel *_commentLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *commentLabel; // @synthesize commentLabel=_commentLabel;
 @property(retain, nonatomic) NSLayoutConstraint *artistImageViewHeightConstraint; // @synthesize artistImageViewHeightConstraint=_artistImageViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *artistImageViewWidthConstraint; // @synthesize artistImageViewWidthConstraint=_artistImageViewWidthConstraint;
 @property(retain, nonatomic) GLUEImageView *artistImageView; // @synthesize artistImageView=_artistImageView;
 @property(copy, nonatomic) NSString *commentText; // @synthesize commentText=_commentText;
-- (void).cxx_destruct;
 - (void)setArtistImage:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addLayoutConstraints;

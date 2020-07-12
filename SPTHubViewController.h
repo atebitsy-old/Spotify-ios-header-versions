@@ -38,6 +38,7 @@
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(retain, nonatomic) id <HUBViewModel> initialViewModel; // @synthesize initialViewModel=_initialViewModel;
 @property(nonatomic) _Bool wasInitialLoadViewModelPerformed; // @synthesize wasInitialLoadViewModelPerformed=_wasInitialLoadViewModelPerformed;
@@ -52,7 +53,6 @@
 @property(readonly, nonatomic) SPTHubViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
-- (void).cxx_destruct;
 - (id)shareDragDelegateWithModel:(id)arg1;
 - (void)installViewModel:(id)arg1;
 - (void)loadViewModel;

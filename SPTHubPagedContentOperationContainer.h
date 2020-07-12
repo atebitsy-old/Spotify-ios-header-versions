@@ -23,13 +23,13 @@
     id <HUBViewModelBuilder> _previousViewModelBuilder;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isLoading) _Bool loading; // @synthesize loading=_loading;
 @property(nonatomic) _Bool morePagesAvailable; // @synthesize morePagesAvailable=_morePagesAvailable;
 @property(retain, nonatomic) id <HUBViewModelBuilder> previousViewModelBuilder; // @synthesize previousViewModelBuilder=_previousViewModelBuilder;
 @property(nonatomic) unsigned long long currentPage; // @synthesize currentPage=_currentPage;
 @property(readonly, nonatomic) id <SPTHubPagedContentOperation> pagedContentOperation; // @synthesize pagedContentOperation=_pagedContentOperation;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)loadNextPage;
 - (void)pagedContentOperation:(id)arg1 didFailWithError:(id)arg2;
 - (void)pagedContentOperation:(id)arg1 didSucceedWithViewModelBuilder:(id)arg2 morePagesAvailable:(_Bool)arg3;

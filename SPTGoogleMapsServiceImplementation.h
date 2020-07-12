@@ -10,36 +10,28 @@
 #import "SPTGoogleMapsService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTGoogleMapsFeatureFlagManager, SPTGoogleMapsLogger, SPTGoogleMapsPartnerIntegration;
-@protocol SPTBannerFeature, SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPartnerService, SPTURIDispatchService;
+@protocol SPTContainerService, SPTFeatureFlaggingService, SPTPartnerService, SPTURIDispatchService;
 
 @interface SPTGoogleMapsServiceImplementation : NSObject <SPTGoogleMapsFeatureFlagManagerObserver, SPTGoogleMapsService>
 {
     SPTGoogleMapsFeatureFlagManager *_featureFlagManager;
     id <SPTContainerService> _containerService;
-    id <SPTBannerFeature> _bannerService;
-    id <SPTGLUEService> _glueService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTPartnerService> _partnerService;
-    id <SPTNowPlayingService> _nowPlayingService;
-    id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     SPTGoogleMapsLogger *_logger;
     SPTGoogleMapsPartnerIntegration *_partnerIntegration;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGoogleMapsPartnerIntegration *partnerIntegration; // @synthesize partnerIntegration=_partnerIntegration;
 @property(retain, nonatomic) SPTGoogleMapsLogger *logger; // @synthesize logger=_logger;
-@property(readonly, nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
-@property(readonly, nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(readonly, nonatomic) __weak id <SPTPartnerService> partnerService; // @synthesize partnerService=_partnerService;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(readonly, nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
-@property(readonly, nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(readonly, nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(retain, nonatomic) SPTGoogleMapsFeatureFlagManager *featureFlagManager; // @synthesize featureFlagManager=_featureFlagManager;
-- (void).cxx_destruct;
 - (void)googleMapsFeatureFlagManager:(id)arg1 didUpdateEnabled:(_Bool)arg2;
 - (void)disable;
 - (void)enable;

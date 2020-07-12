@@ -22,14 +22,14 @@
     id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(readonly, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) NSString *verbatimUsername; // @synthesize verbatimUsername=_verbatimUsername;
 @property(readonly, nonatomic) NSString *canonicalUsername; // @synthesize canonicalUsername=_canonicalUsername;
 @property(nonatomic) __weak id <SPTAuthSessionDelegate> delegate; // @synthesize delegate=_delegate;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (id)webTokenRequestForURL:(id)arg1;
 - (void)acceptLicenses:(id)arg1;
 - (void)unacceptedLicencesWithCallback:(CDUnknownBlockType)arg1;

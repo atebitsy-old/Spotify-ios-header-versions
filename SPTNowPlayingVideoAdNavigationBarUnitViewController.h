@@ -24,6 +24,7 @@
     SPTAdPlayerObservable *_observable;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observable; // @synthesize observable=_observable;
 @property(nonatomic) double animationDuration; // @synthesize animationDuration=_animationDuration;
 @property(readonly, nonatomic) SPTAdNowPlayingManager *adNowPlayingManager; // @synthesize adNowPlayingManager=_adNowPlayingManager;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) SPTNowPlayingMarqueeLabel *navigationBarLabel; // @synthesize navigationBarLabel=_navigationBarLabel;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTNowPlayingVideoControlsVisibilityDelegate> visibilityDelegate; // @synthesize visibilityDelegate=_visibilityDelegate;
-- (void).cxx_destruct;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (void)didTapVideoView:(id)arg1;
 - (void)setShowsVideoControls:(_Bool)arg1 animated:(_Bool)arg2;

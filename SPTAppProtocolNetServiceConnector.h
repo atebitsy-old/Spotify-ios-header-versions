@@ -20,11 +20,11 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(retain, nonatomic) NSNetService *publishedService; // @synthesize publishedService=_publishedService;
 @property(readonly, nonatomic, getter=isAcceptingConnections) _Bool acceptingConnections; // @synthesize acceptingConnections=_acceptingConnections;
 @property(nonatomic) __weak id <SPTAppProtocolConnectorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)netService:(id)arg1 didAcceptConnectionWithInputStream:(id)arg2 outputStream:(id)arg3;
 - (void)netServiceDidStop:(id)arg1;
 - (void)netService:(id)arg1 didNotPublish:(id)arg2;

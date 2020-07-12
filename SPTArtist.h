@@ -19,13 +19,13 @@
 }
 
 + (id)artistWithArtistInfo:(const struct ArtistInfo *)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *imageURLs; // @synthesize imageURLs=_imageURLs;
 @property(readonly, nonatomic, getter=isVariousArtists) _Bool variousArtists; // @synthesize variousArtists=_variousArtists;
 @property(retain, nonatomic) NSURL *portraitImageURL; // @synthesize portraitImageURL=_portraitImageURL;
 @property(nonatomic, getter=isBlocked) _Bool blocked; // @synthesize blocked=_blocked;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)imageURLForSize:(int)arg1;
 - (id)initWithURL:(id)arg1 name:(id)arg2 imageURLs:(id)arg3 isBlocked:(_Bool)arg4 portraitImageURL:(id)arg5 variousArtists:(_Bool)arg6;
 

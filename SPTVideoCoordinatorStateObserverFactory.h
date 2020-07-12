@@ -16,9 +16,9 @@
     SPTVideoPlaybackStateFactory *_playbackStateFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoPlaybackStateFactory *playbackStateFactory; // @synthesize playbackStateFactory=_playbackStateFactory;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
-- (void).cxx_destruct;
 - (id)createPlaybackEventObserverForPlaybackIdentity:(id)arg1 options:(id)arg2 timeObservable:(id)arg3;
 - (id)initWithCosmosSender:(id)arg1 playbackStateFactory:(id)arg2;
 

@@ -21,6 +21,7 @@
     UILabel *_subtitleLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) SPTScannablesImageView *imageView; // @synthesize imageView=_imageView;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) SPTScannablesDependencies *dependencies; // @synthesize dependencies=_dependencies;
 @property(readonly, nonatomic) NSString *headerSubtitle; // @synthesize headerSubtitle=_headerSubtitle;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (struct CGSize)preferredImageSize;
 - (double)preferredHeight;
 - (void)layoutSubviews;

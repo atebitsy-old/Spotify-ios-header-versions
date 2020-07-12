@@ -22,6 +22,7 @@
     id <SPTGaiaConnectManager> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTGaiaHomeDeviceManager *savedDeviceManager; // @synthesize savedDeviceManager=_savedDeviceManager;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSDictionary *modelsDictionary; // @synthesize modelsDictionary=_modelsDictionary;
 @property(readonly, nonatomic) SPTGaiaDeviceAppearanceMapping *iconMapper; // @synthesize iconMapper=_iconMapper;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerContextMenuFlagsProvider><SPTGaiaHomeDeviceFlagsProvider> flagsProvider; // @synthesize flagsProvider=_flagsProvider;
-- (void).cxx_destruct;
 - (id)contextMenuModelsForDevices:(id)arg1;
 - (id)contextModelForDevice:(id)arg1;
 - (void)setDevices:(id)arg1;

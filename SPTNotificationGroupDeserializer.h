@@ -13,8 +13,8 @@
     SPTNotificationTypeDeserializer *_notificationTypeDeserializer;
 }
 
-@property(retain, nonatomic) SPTNotificationTypeDeserializer *notificationTypeDeserializer; // @synthesize notificationTypeDeserializer=_notificationTypeDeserializer;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTNotificationTypeDeserializer *notificationTypeDeserializer; // @synthesize notificationTypeDeserializer=_notificationTypeDeserializer;
 - (id)deserialize:(id)arg1;
 - (id)initWithNotificationTypeDeserializer:(id)arg1;
 

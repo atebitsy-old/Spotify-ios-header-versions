@@ -25,6 +25,7 @@
     NSMutableDictionary *_offlineStates;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *offlineStates; // @synthesize offlineStates=_offlineStates;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) _Bool loaded; // @synthesize loaded=_loaded;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSub> pubSub; // @synthesize pubSub=_pubSub;
 @property(readonly, nonatomic) __weak SPTWatchPlatformTestManager *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic, getter=isOfflineEnabled) _Bool offlineEnabled; // @synthesize offlineEnabled=_offlineEnabled;
-- (void).cxx_destruct;
 - (void)testManager:(id)arg1 didUpdateWatchAppOfflineEnabledState:(_Bool)arg2;
 - (void)handleMessage:(id)arg1 fromTopic:(id)arg2;
 - (void)handlePublisherEvent:(long long)arg1;

@@ -17,10 +17,10 @@
     UIColor *_borderColor19;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *borderColor19; // @synthesize borderColor19=_borderColor19;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToAgeRestrictionViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

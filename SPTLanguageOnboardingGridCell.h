@@ -28,6 +28,7 @@
     NSLayoutConstraint *_badgeImageViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *badgeImageViewHeightConstraint; // @synthesize badgeImageViewHeightConstraint=_badgeImageViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *badgeImageViewWidthConstraint; // @synthesize badgeImageViewWidthConstraint=_badgeImageViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *languageNameLabelTrailingMarginConstraint; // @synthesize languageNameLabelTrailingMarginConstraint=_languageNameLabelTrailingMarginConstraint;
@@ -42,7 +43,6 @@
 @property(nonatomic, getter=isPicked) _Bool picked; // @synthesize picked=_picked;
 @property(readonly, nonatomic) GLUELabel *languageNameLabel; // @synthesize languageNameLabel=_languageNameLabel;
 @property(readonly, nonatomic) GLUEImageView *coverImageView; // @synthesize coverImageView=_coverImageView;
-- (void).cxx_destruct;
 - (id)badgeImageWithStyle:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updatePicked;

@@ -23,6 +23,7 @@
 }
 
 + (id)contributingArtistsContextMenuActionsForArtistEntities:(id)arg1 linkDispatcher:(id)arg2 logCenter:(id)arg3 theme:(id)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -30,7 +31,6 @@
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)logInteractionEvent;
 - (id)accessoryView;
 - (id)imageStyle;

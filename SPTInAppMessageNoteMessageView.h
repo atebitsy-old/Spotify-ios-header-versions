@@ -14,9 +14,9 @@
     WKWebView *_webView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 @property(nonatomic) double height; // @synthesize height=_height;
-- (void).cxx_destruct;
 - (void)updateStyle;
 - (void)updateContentInsetAdjustmentBehaviorForScrollview:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;

@@ -19,11 +19,11 @@
     NSMutableArray *_shelfViewControllers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *shelfViewControllers; // @synthesize shelfViewControllers=_shelfViewControllers;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(nonatomic) __weak id <SPTDrivingModeHomeFeedPageScrollerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)updateShelfAtIndex:(int)arg1;
 - (void)updatePageScrollerWithShelf:(id)arg1;

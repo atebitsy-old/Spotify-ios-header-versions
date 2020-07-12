@@ -22,6 +22,7 @@
     NSString *_rcAaTestPropertyString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *rcAaTestPropertyString; // @synthesize rcAaTestPropertyString=_rcAaTestPropertyString;
 @property(retain, nonatomic) NSString *simpleMessageString; // @synthesize simpleMessageString=_simpleMessageString;
 @property(retain, nonatomic) NSString *remoteconfigSystemTestPropertyEnumString; // @synthesize remoteconfigSystemTestPropertyEnumString=_remoteconfigSystemTestPropertyEnumString;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) unsigned long long remoteconfigSystemTestPropertyEnum; // @synthesize remoteconfigSystemTestPropertyEnum=_remoteconfigSystemTestPropertyEnum;
 @property(readonly, nonatomic) long long exampleInteger; // @synthesize exampleInteger=_exampleInteger;
 @property(readonly, nonatomic) _Bool exampleBoolean; // @synthesize exampleBoolean=_exampleBoolean;
-- (void).cxx_destruct;
 - (unsigned long long)mapRcAaTestPropertyToEnumValue:(id)arg1;
 - (unsigned long long)mapSimpleMessageToEnumValue:(id)arg1;
 - (unsigned long long)mapRemoteconfigSystemTestPropertyEnumToEnumValue:(id)arg1;

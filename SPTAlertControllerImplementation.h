@@ -15,8 +15,8 @@
     SPTAlertQueueImplementation *_alertInterface;
 }
 
-@property(retain, nonatomic) SPTAlertQueueImplementation *alertInterface; // @synthesize alertInterface=_alertInterface;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTAlertQueueImplementation *alertInterface; // @synthesize alertInterface=_alertInterface;
 - (void)queueAlert:(id)arg1;
 - (void)showAlertWithTitle:(id)arg1 message:(id)arg2 buttonsAndHandlers:(id)arg3 cancelButtonIndex:(long long)arg4;
 - (void)showAlertWithTitle:(id)arg1 message:(id)arg2 target:(id)arg3 acceptSelector:(SEL)arg4 cancelSelector:(SEL)arg5 acceptButtonText:(id)arg6 cancelButtonText:(id)arg7;

@@ -17,10 +17,10 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, copy, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (unsigned long long)hash;

@@ -19,11 +19,11 @@
     SPTGaiaDeviceAppearanceMapping *_iconMapper;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaDeviceAppearanceMapping *iconMapper; // @synthesize iconMapper=_iconMapper;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> internalConnectManager; // @synthesize internalConnectManager=_internalConnectManager;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)animatedIconBackgroundColorForContext:(unsigned long long)arg1;
 - (id)iconColorForContext:(unsigned long long)arg1;
 - (id)deviceIconForCurrentConnectionState:(struct CGSize)arg1;

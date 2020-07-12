@@ -17,11 +17,11 @@
     id <SPTPlaylistExtenderItem> _playlistExtenderItem;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPlexLoading; // @synthesize isPlexLoading=_isPlexLoading;
 @property(nonatomic) _Bool isPlayingTrack; // @synthesize isPlayingTrack=_isPlayingTrack;
 @property(retain, nonatomic) id <SPTPlaylistExtenderItem> playlistExtenderItem; // @synthesize playlistExtenderItem=_playlistExtenderItem;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isImageEnabled) _Bool imageEnabled;
 @property(readonly, nonatomic) long long offlineSyncStatus;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;

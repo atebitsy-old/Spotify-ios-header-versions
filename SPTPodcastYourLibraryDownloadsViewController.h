@@ -37,6 +37,7 @@
     id <UIViewControllerPreviewing> _previewingContext;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <UIViewControllerPreviewing> previewingContext; // @synthesize previewingContext=_previewingContext;
 @property(nonatomic) double cellHeight; // @synthesize cellHeight=_cellHeight;
 @property(copy, nonatomic) NSArray *infoViewConstraints; // @synthesize infoViewConstraints=_infoViewConstraints;
@@ -51,7 +52,6 @@
 @property(retain, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) SPTPodcastYourLibraryDownloadsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTYourLibraryPageDelegate> pageDelegate; // @synthesize pageDelegate=_pageDelegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double offscreenContentHeight;
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;

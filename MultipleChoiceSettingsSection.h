@@ -14,9 +14,9 @@
     NSArray *_cells;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *cells; // @synthesize cells=_cells;
 @property(nonatomic) long long selectedChoiceIndex; // @synthesize selectedChoiceIndex=_selectedChoiceIndex;
-- (void).cxx_destruct;
 - (void)setAvailabilityState:(_Bool)arg1 onCell:(id)arg2;
 - (void)setSelectionState:(_Bool)arg1 onCell:(id)arg2;
 - (void)didSelectRow:(long long)arg1;

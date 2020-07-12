@@ -37,6 +37,7 @@
     SPTNowPlayingVideoHeadUnitViewController *_headUnitViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNowPlayingVideoHeadUnitViewController *headUnitViewController; // @synthesize headUnitViewController=_headUnitViewController;
 @property(nonatomic) _Bool visible; // @synthesize visible=_visible;
 @property(nonatomic) _Bool shouldNotifyDismissal; // @synthesize shouldNotifyDismissal=_shouldNotifyDismissal;
@@ -54,7 +55,6 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *animationView; // @synthesize animationView=_animationView;
 @property(nonatomic) __weak id <SPTNowPlayingVideoViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)videoTimerDidFire:(id)arg1;
 - (void)videoViewSurfaceDidDetach:(id)arg1;
 - (void)videoViewSurfaceDidAttach:(id)arg1;

@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *featureSettingsPages; // @synthesize featureSettingsPages=_featureSettingsPages;
 @property(retain, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
 @property(retain, nonatomic) SettingsRegistryImplementation *settingsRegistry; // @synthesize settingsRegistry=_settingsRegistry;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)provideSettingsStructure;
 - (id)provideClientSettings;
 - (id)provideSettingsDataSourceForServiceIdentifier:(id)arg1;

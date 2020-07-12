@@ -19,11 +19,11 @@
     id <SPTPodcastOffliningPopupDialogPresenter> _popupDialogPresenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastOffliningPopupDialogPresenter> popupDialogPresenter; // @synthesize popupDialogPresenter=_popupDialogPresenter;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
-- (void).cxx_destruct;
 - (void)askUserForPermissionToResetOfflineForAllPlaylistsContainingEpisodeWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithOfflineManager:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 popupDialogPresenter:(id)arg4;
 

@@ -18,12 +18,12 @@
     NSError *_lastError;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *lastError; // @synthesize lastError=_lastError;
 @property(retain, nonatomic) SPTLoginMainViewLoader *mainViewLoader; // @synthesize mainViewLoader=_mainViewLoader;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(retain, nonatomic) SPTLoginStateControllerImplementation *loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(retain, nonatomic) id <SPTUIModeTransitionUIHandler> transitionHandler; // @synthesize transitionHandler=_transitionHandler;
-- (void).cxx_destruct;
 - (id)buildErrorFromCredentials:(id)arg1 originalError:(id)arg2;
 - (void)completeUIModeSwitching;
 - (void)reloginWithCredentials:(id)arg1 userDidSignup:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;

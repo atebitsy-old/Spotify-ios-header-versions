@@ -19,11 +19,11 @@
     SKProductsResponse *_returnedResponse;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SKProductsResponse *returnedResponse; // @synthesize returnedResponse=_returnedResponse;
 @property(retain, nonatomic) SKProductsRequest *productRequest; // @synthesize productRequest=_productRequest;
 @property(readonly, nonatomic) NSSet *productIdentifiers; // @synthesize productIdentifiers=_productIdentifiers;
 @property(nonatomic) __weak id <SPTIAPItunesProductRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)requestDidFinish:(id)arg1;
 - (void)request:(id)arg1 didFailWithError:(id)arg2;
 - (void)productsRequest:(id)arg1 didReceiveResponse:(id)arg2;

@@ -13,6 +13,7 @@
 @interface SPTPodcastShowDecoratedItem : NSObject <SPTShow>
 {
     _Bool _following;
+    NSString *rawDescription;
     NSString *_title;
     NSString *_publisher;
     NSString *_descriptionText;
@@ -24,6 +25,7 @@
 
 + (id)podcastDisplayableStringFromDictionary:(id)arg1 usingKey:(id)arg2;
 + (id)showWithDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSURL *latestPlayedEpisodeURL; // @synthesize latestPlayedEpisodeURL=_latestPlayedEpisodeURL;
@@ -32,7 +34,7 @@
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *rawDescription; // @synthesize rawDescription;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -16,8 +16,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(nonatomic) __weak id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (id)resolve:(id)arg1 onValue:(CDUnknownBlockType)arg2 onClose:(CDUnknownBlockType)arg3;
 - (id)initWithResolver:(id)arg1;
 

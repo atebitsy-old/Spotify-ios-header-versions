@@ -15,10 +15,10 @@
     NSURL *_contextURI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 @property(readonly, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
 @property(readonly, nonatomic) SPTReportContentReporter *reporter; // @synthesize reporter=_reporter;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)icon;

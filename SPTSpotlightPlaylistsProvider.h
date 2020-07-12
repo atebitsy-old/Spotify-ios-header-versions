@@ -22,13 +22,13 @@
     long long _numberOfWindowedRequests;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long numberOfWindowedRequests; // @synthesize numberOfWindowedRequests=_numberOfWindowedRequests;
 @property(nonatomic) long long currentWindowedRequest; // @synthesize currentWindowedRequest=_currentWindowedRequest;
 @property(retain, nonatomic) NSMutableArray *windowItems; // @synthesize windowItems=_windowItems;
 @property(readonly, nonatomic) SPTSpotlightItemsImageLoader *imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(nonatomic) __weak id <SPTSpotlightItemsProviderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)itemsImageLoader:(id)arg1 didLoadImagesForItems:(id)arg2;
 - (void)windowItemsLoaded;
 - (void)preparePlaylistsToBeIndexedWithResponse:(id)arg1;

@@ -16,8 +16,8 @@
     id <SPTCrashReporter> _crashReporter;
 }
 
-@property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 - (void)send:(id)arg1;
 - (void)legacySend:(id)arg1;
 - (id)initWithCrashReporter:(id)arg1;

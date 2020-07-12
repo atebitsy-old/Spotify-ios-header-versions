@@ -16,9 +16,9 @@
     UIImage *_image;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
-- (void).cxx_destruct;
 - (id)initWithURL:(id)arg1 withData:(id)arg2;
 - (id)initWithDictionary:(id)arg1;
 

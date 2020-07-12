@@ -21,12 +21,12 @@
     NSUserDefaults *_userDefaults;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(readonly, nonatomic) __weak id <SPTAlertInterface> alertController; // @synthesize alertController=_alertController;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSub> pubSub; // @synthesize pubSub=_pubSub;
-- (void).cxx_destruct;
 - (void)mailComposeController:(id)arg1 didFinishWithResult:(long long)arg2 error:(id)arg3;
 - (id)emailBodyWithMessage:(id)arg1;
 - (id)emailSubject;

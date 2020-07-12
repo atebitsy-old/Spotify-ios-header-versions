@@ -19,10 +19,10 @@
     id <SPTFreeTierEntityOfflineViewModel> _viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierEntityOfflineViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak GLUEButton<VISREFDownloadButtonView> *downloadButton; // @synthesize downloadButton=_downloadButton;
 @property(nonatomic) __weak GLUEButton<VISREFActionRowButtonViewModelDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)viewModel:(id)arg1 offlineAvailabilityChanged:(unsigned long long)arg2;
 - (_Bool)shouldShowRemoveFromDownloadsConfirmationAlert;
 - (void)showRemoveFromDownloadsConfirmationAlertWithCompletion:(CDUnknownBlockType)arg1;

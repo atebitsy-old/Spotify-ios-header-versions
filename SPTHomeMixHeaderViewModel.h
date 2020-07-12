@@ -24,6 +24,7 @@
     SPTHomeMixDomainModel *_domainModel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTHomeMixDomainModel *domainModel; // @synthesize domainModel=_domainModel;
 @property(copy, nonatomic) NSString *madeForName; // @synthesize madeForName=_madeForName;
 @property(retain, nonatomic) UIColor *primaryColor; // @synthesize primaryColor=_primaryColor;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(nonatomic) __weak id <SPTHomeMixHeaderViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isUpbeatButtonSelected) _Bool upbeatButtonSelected;
 @property(readonly, nonatomic, getter=isChillButtonSelected) _Bool chillButtonSelected;
 @property(readonly, nonatomic, getter=shouldDisableTuneButtons) _Bool disableTuneButtons;

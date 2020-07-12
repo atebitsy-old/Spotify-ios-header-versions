@@ -25,6 +25,7 @@
     NSString *_lastState;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *lastState; // @synthesize lastState=_lastState;
 @property(nonatomic) _Bool gaiaIsPlayingRemotely; // @synthesize gaiaIsPlayingRemotely=_gaiaIsPlayingRemotely;
 @property(nonatomic) _Bool playerIsPlaying; // @synthesize playerIsPlaying=_playerIsPlaying;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) SPTInstrumentationDeviceClock *clock; // @synthesize clock=_clock;
 @property(retain, nonatomic) id <SPTInstrumentationTransport> transport; // @synthesize transport=_transport;
-- (void).cxx_destruct;
 - (void)remotePlayingStateChanged:(_Bool)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)willTerminateOrLogOutNotification:(id)arg1;

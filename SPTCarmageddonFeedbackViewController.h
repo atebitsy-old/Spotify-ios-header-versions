@@ -23,6 +23,7 @@
     CDUnknownBlockType _denyHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType denyHandler; // @synthesize denyHandler=_denyHandler;
 @property(readonly, copy, nonatomic) CDUnknownBlockType confirmHandler; // @synthesize confirmHandler=_confirmHandler;
 @property(readonly, nonatomic) GLUEButton *denyButton; // @synthesize denyButton=_denyButton;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)denyButtonTapped;
 - (void)confirmButtonTapped;

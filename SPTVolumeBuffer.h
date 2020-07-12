@@ -18,12 +18,12 @@
     NSTimer *_timer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(readonly, nonatomic) NSRunLoop *runloop; // @synthesize runloop=_runloop;
 @property(readonly, nonatomic) double bufferInterval; // @synthesize bufferInterval=_bufferInterval;
 @property(nonatomic) __weak id <SPTVolumeBufferDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool isBuffering; // @synthesize isBuffering=_isBuffering;
-- (void).cxx_destruct;
 - (id)createTimer;
 - (void)clearTimer;
 - (void)timerFired;

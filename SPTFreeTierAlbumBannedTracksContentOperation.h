@@ -19,11 +19,11 @@
     id <SPTCollectionPlatformDataLoaderRequestToken> _requestToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> requestToken; // @synthesize requestToken=_requestToken;
 @property(copy, nonatomic) NSDictionary *URLBanMap; // @synthesize URLBanMap=_URLBanMap;
 @property(readonly, nonatomic) id <SPTCollectionPlatformStateProvider> collectionPlatformStateProvider; // @synthesize collectionPlatformStateProvider=_collectionPlatformStateProvider;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)updateTrackComponentBuilders:(id)arg1 withCollectionStates:(id)arg2;
 - (id)artistListFromTrackComponentBuilders:(id)arg1;
 - (void)subscribeCollectionStateChangesForURLS:(id)arg1;

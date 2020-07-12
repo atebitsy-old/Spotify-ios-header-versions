@@ -25,6 +25,7 @@
     NSString *_logContext;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfiguration; // @synthesize collectionPlatformConfiguration=_collectionPlatformConfiguration;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) SPTFollowModelMessageManager *messageManager; // @synthesize messageManager=_messageManager;
 @property(retain, nonatomic) SPTFollowStateDataLoader *followStateDataLoader; // @synthesize followStateDataLoader=_followStateDataLoader;
 @property(retain, nonatomic) FollowData *data; // @synthesize data=_data;
-- (void).cxx_destruct;
 - (void)followStateDataLoader:(id)arg1 followFailedWithError:(id)arg2 followData:(id)arg3 requestContext:(id)arg4;
 - (void)followStateDataLoader:(id)arg1 changedOptimistically:(id)arg2 requestContext:(id)arg3;
 - (void)followStateDataLoader:(id)arg1 changed:(id)arg2 requestContext:(id)arg3;

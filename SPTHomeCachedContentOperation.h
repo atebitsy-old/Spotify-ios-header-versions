@@ -19,11 +19,11 @@
     NSError *_previousError;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *previousError; // @synthesize previousError=_previousError;
 @property(retain, nonatomic) id <HUBViewModelBuilder> viewModelBuilder; // @synthesize viewModelBuilder=_viewModelBuilder;
 @property(readonly, nonatomic) __weak SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)modifyContentIdentifierToIndicateCacheSource:(id)arg1;
 - (id)makeUnknownError;
 - (void)finishWithOperationStatus:(unsigned long long)arg1;

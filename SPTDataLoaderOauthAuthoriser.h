@@ -25,6 +25,7 @@
     id <SPTOauthTask> _task;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTOauthTask> task; // @synthesize task=_task;
 @property(retain, nonatomic) NSMutableDictionary *authorisationHosts; // @synthesize authorisationHosts=_authorisationHosts;
 @property(retain, nonatomic) NSMutableArray *pendingRequests; // @synthesize pendingRequests=_pendingRequests;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)oauthTask:(id)arg1 didFailWithError:(id)arg2;
 - (void)oauthTask:(id)arg1 didReceiveToken:(id)arg2;
 - (void)unregisterAuthorisationHostsName:(id)arg1;

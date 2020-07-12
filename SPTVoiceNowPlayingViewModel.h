@@ -26,6 +26,7 @@
     id <SPTVoiceSession> _voiceSession;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceSession> voiceSession; // @synthesize voiceSession=_voiceSession;
 @property(readonly, nonatomic) id <SPTVoiceCommandAudioCuePlayer> audioCuePlayer; // @synthesize audioCuePlayer=_audioCuePlayer;
 @property(readonly, nonatomic) id <SPTVoicePlayerEventsListener> playerEventListener; // @synthesize playerEventListener=_playerEventListener;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) SPTVoiceNowPlayingSuggestionViewModel *suggestionViewModel; // @synthesize suggestionViewModel=_suggestionViewModel;
 @property(retain, nonatomic) SPTVoiceNowPlayingTrackInfoViewModel *trackInfoViewModel; // @synthesize trackInfoViewModel=_trackInfoViewModel;
 @property(retain, nonatomic) SPTVoiceNowPlayingControlViewModel *controlViewModel; // @synthesize controlViewModel=_controlViewModel;
-- (void).cxx_destruct;
 - (void)voiceSession:(id)arg1 didUpdateQuerySuggestion:(id)arg2;
 - (void)voiceSession:(id)arg1 didFailVoiceCommand:(id)arg2 withError:(id)arg3;
 - (void)voiceSession:(id)arg1 didHandleVoiceCommand:(id)arg2;

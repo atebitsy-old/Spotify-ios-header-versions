@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logVolumeHardwareButtonPressedWithDirection:(id)arg1;
 - (void)logVolumeSliderDraggedToVolume:(double)arg1;
 - (id)initWithLogCenter:(id)arg1;

@@ -15,8 +15,8 @@
     NSHashTable *_delegates;
 }
 
-@property(retain, nonatomic) NSHashTable *delegates; // @synthesize delegates=_delegates;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSHashTable *delegates; // @synthesize delegates=_delegates;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (void)removeAllDelegates;
 - (void)removeManagerDelegate:(id)arg1;

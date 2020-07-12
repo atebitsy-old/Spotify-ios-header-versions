@@ -17,10 +17,10 @@
     id <SPTSearchUBIHubsLogger> _ubiHubsLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTSearchHubsLogger> searchHubsLogger; // @synthesize searchHubsLogger=_searchHubsLogger;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithRecentsDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 

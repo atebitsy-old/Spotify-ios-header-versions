@@ -19,11 +19,11 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) GLUEEntityRowStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-- (void).cxx_destruct;
 - (id)rowStyle;
 - (void)setupLeadingAccessoryForCell:(id)arg1 withViewModel:(id)arg2;
 - (void)setupContentViewForCell:(id)arg1;

@@ -16,10 +16,10 @@
 }
 
 + (id)friendsDataArrayFromArray:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

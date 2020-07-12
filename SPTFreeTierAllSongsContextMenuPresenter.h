@@ -21,6 +21,7 @@
     id <SPTContextMenuPresenter> _presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) id <SPTShowContextMenuControllerOptions> podcastMenuOptions; // @synthesize podcastMenuOptions=_podcastMenuOptions;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
 @property(readonly, nonatomic) id <SPContextMenuActionsFactory> contextMenuActionsFactory; // @synthesize contextMenuActionsFactory=_contextMenuActionsFactory;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
-- (void).cxx_destruct;
 - (void)presentContextMenuAtIndexPath:(id)arg1 fromView:(id)arg2;
 - (id)initWithViewURI:(id)arg1 contextMenuPresenterFactory:(id)arg2 contextMenuOptionsFactory:(id)arg3 contextMenuActionsFactory:(id)arg4 viewModel:(id)arg5 podcastMenuPresenter:(id)arg6;
 

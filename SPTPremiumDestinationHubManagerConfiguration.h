@@ -24,6 +24,7 @@
     SPTPremiumDestinationLogger *_premiumDestinationLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPremiumDestinationLogger *premiumDestinationLogger; // @synthesize premiumDestinationLogger=_premiumDestinationLogger;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(copy, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
-- (void).cxx_destruct;
 - (id)initWithServiceIdentifier:(id)arg1 componentRegistry:(id)arg2 hubsRendererFactory:(id)arg3 hugsFactory:(id)arg4 premiumDestinationExperiments:(id)arg5 GLUETheme:(id)arg6 networkConnectivityController:(id)arg7 dataLoaderFactory:(id)arg8 persistentCache:(id)arg9 alertInterface:(id)arg10 premiumDestinationLogger:(id)arg11;
 
 @end

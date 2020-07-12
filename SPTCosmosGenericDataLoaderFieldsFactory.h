@@ -16,9 +16,9 @@
     CDUnknownBlockType _buildFieldSet;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType buildFieldSet; // @synthesize buildFieldSet=_buildFieldSet;
 @property(readonly, nonatomic) NSArray *fields; // @synthesize fields=_fields;
-- (void).cxx_destruct;
 - (id)policyForProtocolList:(id)arg1;
 - (id)itemBuilderForProtocolList:(id)arg1;
 - (id)initWithFields:(id)arg1 fieldSetBuilder:(CDUnknownBlockType)arg2;

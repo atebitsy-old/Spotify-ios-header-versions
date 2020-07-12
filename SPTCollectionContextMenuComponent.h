@@ -23,6 +23,7 @@
     id <SPTContextMenuOptions> _contextMenuOptions;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
 @property(readonly, nonatomic) __weak id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) __weak id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) UIImage *headerImagePlaceholder; // @synthesize headerImagePlaceholder=_headerImagePlaceholder;
 @property(readonly, nonatomic) NSURL *headerImageURL; // @synthesize headerImageURL=_headerImageURL;
-- (void).cxx_destruct;
 - (id)provideContextMenuOptions;
 - (id)presentContextMenuInViewController:(id)arg1 senderView:(id)arg2;
 - (id)initWithHeaderImageURL:(id)arg1 headerImagePlaceholder:(id)arg2 title:(id)arg3 subtitle:(id)arg4 tasks:(id)arg5 entityURL:(id)arg6 trackURL:(id)arg7 contextMenu:(id)arg8;

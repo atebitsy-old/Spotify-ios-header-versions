@@ -24,6 +24,7 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(retain, nonatomic) SPTPlayerState *currentState; // @synthesize currentState=_currentState;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) SPTCanvasNowPlayingViewControllerReloaderCache *contentReloaderCache; // @synthesize contentReloaderCache=_contentReloaderCache;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
-- (void).cxx_destruct;
 - (void)contentDidLoadForTrack:(id)arg1;
 - (_Bool)trackHasCanvasMetadata:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;

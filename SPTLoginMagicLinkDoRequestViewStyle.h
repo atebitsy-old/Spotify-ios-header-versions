@@ -30,6 +30,7 @@
     double _lowerLabelTopMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double lowerLabelTopMargin; // @synthesize lowerLabelTopMargin=_lowerLabelTopMargin;
 @property(nonatomic) double openEmailButtonTopMargin; // @synthesize openEmailButtonTopMargin=_openEmailButtonTopMargin;
 @property(nonatomic) double horizontalMargin; // @synthesize horizontalMargin=_horizontalMargin;
@@ -46,7 +47,6 @@
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double mainContainerIPadWidth; // @synthesize mainContainerIPadWidth=_mainContainerIPadWidth;
 @property(nonatomic) double mainContainerWidth; // @synthesize mainContainerWidth=_mainContainerWidth;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

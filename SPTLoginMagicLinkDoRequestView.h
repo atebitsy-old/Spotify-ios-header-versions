@@ -34,6 +34,7 @@
     NSLayoutConstraint *_mainContainerRegularWidth;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(retain, nonatomic) NSLayoutConstraint *nextButtonTopMargin; // @synthesize nextButtonTopMargin=_nextButtonTopMargin;
@@ -56,7 +57,6 @@
 @property(readonly, nonatomic) SPTLoginTextField *inputField; // @synthesize inputField=_inputField;
 @property(readonly, nonatomic) GLUELabel *inputFieldTitleLabel; // @synthesize inputFieldTitleLabel=_inputFieldTitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
 - (id)initWithStyle:(id)arg1 frame:(struct CGRect)arg2;

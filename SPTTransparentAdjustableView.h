@@ -14,9 +14,9 @@
     UIColor *_sideBackgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *sideBackgroundColor; // @synthesize sideBackgroundColor=_sideBackgroundColor;
 @property(nonatomic) double transparenBackgroundOffset; // @synthesize transparenBackgroundOffset=_transparenBackgroundOffset;
-- (void).cxx_destruct;
 - (void)clearSideBackgroundColor;
 - (void)setSideBackgroundColor:(id)arg1 forTransparentBackgroundOffset:(double)arg2;
 - (id)backgroundColor;

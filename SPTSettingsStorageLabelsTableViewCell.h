@@ -17,12 +17,12 @@
     UILabel *_freeLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *freeLabel; // @synthesize freeLabel=_freeLabel;
 @property(readonly, nonatomic) UILabel *cacheLabel; // @synthesize cacheLabel=_cacheLabel;
 @property(readonly, nonatomic) UILabel *downloadsLabel; // @synthesize downloadsLabel=_downloadsLabel;
 @property(readonly, nonatomic) UILabel *othersLabel; // @synthesize othersLabel=_othersLabel;
 @property(readonly, nonatomic) UIStackView *labelsContainer; // @synthesize labelsContainer=_labelsContainer;
-- (void).cxx_destruct;
 - (void)updateStatsWithTotalSpaceMb:(long long)arg1 freeSpaceMb:(long long)arg2 appDataSizeMb:(long long)arg3 downloadsSizeMb:(long long)arg4;
 - (id)createLabel;
 - (id)createIconWithColor:(id)arg1;

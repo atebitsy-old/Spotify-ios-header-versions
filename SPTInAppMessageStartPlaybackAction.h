@@ -17,9 +17,9 @@
     id <SPTOnDemandSet> _onDemandSet;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (_Bool)isValidURL:(id)arg1;
 - (void)executeActionWithURL:(id)arg1;
 - (id)initWithPlayer:(id)arg1 onDemandSet:(id)arg2;

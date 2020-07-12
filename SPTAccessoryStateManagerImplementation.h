@@ -19,11 +19,11 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSSet *accessories; // @synthesize accessories=_accessories;
 @property(readonly, nonatomic) SPTAccessoryManagerLogging *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
-- (void).cxx_destruct;
 - (void)notifyAccessoryDisconnected:(id)arg1;
 - (void)notifyAccessoryConnected:(id)arg1;
 - (void)notifyCrashReporterForAccessory:(id)arg1 forState:(id)arg2;

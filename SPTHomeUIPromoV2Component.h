@@ -19,10 +19,10 @@
     SPTHomeUILogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUILogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTHomeUIPromoV2Player> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)logPlayerAction:(unsigned long long)arg1 withModel:(id)arg2 loggingData:(id)arg3;
 - (void)didTapPlayInComponentView:(id)arg1 withModel:(id)arg2 loggingData:(id)arg3;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;

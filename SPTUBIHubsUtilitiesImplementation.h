@@ -16,9 +16,9 @@
     NSString *_pageId;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *pageId; // @synthesize pageId=_pageId;
 @property(readonly, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
-- (void).cxx_destruct;
 - (id)interactionTypesMap;
 - (id)locationForLoggingData:(id)arg1;
 - (_Bool)loggingDataContainsInstrumentationData:(id)arg1;

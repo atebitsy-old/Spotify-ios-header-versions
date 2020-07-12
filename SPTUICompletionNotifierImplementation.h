@@ -18,10 +18,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic, getter=isLoadingUIComplete) _Bool loadingUIComplete; // @synthesize loadingUIComplete=_loadingUIComplete;
 @property(retain, nonatomic) NSMutableArray *deferredBlocks; // @synthesize deferredBlocks=_deferredBlocks;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)sendInitialValueToObserver:(id)arg1;
 - (void)addObserver:(id)arg1 sendInitial:(_Bool)arg2;

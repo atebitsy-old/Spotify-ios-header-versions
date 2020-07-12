@@ -16,9 +16,9 @@
     SPTPersistentCache *_persistentCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (id)cacheKey;
 - (void)loadFeedDataWithCompletion:(CDUnknownBlockType)arg1;
 - (void)cacheFeedData:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;

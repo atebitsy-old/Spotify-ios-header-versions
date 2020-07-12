@@ -17,8 +17,8 @@
 }
 
 + (id)cacheWithVideoCache:(id)arg1;
-@property(retain, nonatomic) id <BMCache> persistentCache; // @synthesize persistentCache=_persistentCache;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <BMCache> persistentCache; // @synthesize persistentCache=_persistentCache;
 - (void)saveContentInformationWithKey:(id)arg1 contentType:(id)arg2 contentLength:(unsigned long long)arg3 byteRangeAccessSupported:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onQueue:(id)arg6;
 - (void)readContentInformationWithKey:(id)arg1 completion:(CDUnknownBlockType)arg2 onQueue:(id)arg3;
 - (void)readDataChunkWithKey:(id)arg1 startPosition:(unsigned long long)arg2 length:(unsigned long long)arg3 completion:(CDUnknownBlockType)arg4 onQueue:(id)arg5;

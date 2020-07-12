@@ -29,6 +29,7 @@
     id <SPTPlaylistExtenderModelState> _currentState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistExtenderModelState> currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) id <SPTPlaylistExtender> playlistExtender; // @synthesize playlistExtender=_playlistExtender;
 @property(retain, nonatomic) id subscriptionToken; // @synthesize subscriptionToken;
 @property(nonatomic) __weak id <SPTPlaylistExtenderModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 @property(readonly, nonatomic) NSString *sectionFooterButtonTitle;

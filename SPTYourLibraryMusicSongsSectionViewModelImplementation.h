@@ -20,10 +20,10 @@
 + (id)songsSectionHeaderViewModelForFilterChips;
 + (id)songsSectionHeaderViewModelForButtonWithTitle:(id)arg1;
 + (id)songsSectionHeaderViewModelForEmptyTopPadding;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 actionTitle:(id)arg2;
 - (id)initWithTitle:(id)arg1 actionTitle:(id)arg2 type:(long long)arg3;
 

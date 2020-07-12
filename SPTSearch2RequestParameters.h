@@ -8,7 +8,7 @@
 
 #import "NSCopying-Protocol.h"
 
-@class NSDate, NSString, NSURLComponents;
+@class NSArray, NSDate, NSString, NSURLComponents;
 
 @interface SPTSearch2RequestParameters : NSObject <NSCopying>
 {
@@ -17,8 +17,10 @@
     NSString *_catalogue;
     NSString *_clientVersion;
     NSString *_country;
+    NSArray *_entityTypes;
     NSString *_locale;
     NSDate *_timestamp;
+    NSString *_requestId;
     unsigned long long _offset;
     unsigned long long _limit;
     unsigned long long _experience;
@@ -26,26 +28,30 @@
     unsigned long long _endpointVersion;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long endpointVersion; // @synthesize endpointVersion=_endpointVersion;
 @property(copy, nonatomic) NSString *drilldownEntityType; // @synthesize drilldownEntityType=_drilldownEntityType;
 @property(nonatomic) unsigned long long experience; // @synthesize experience=_experience;
 @property(nonatomic) unsigned long long limit; // @synthesize limit=_limit;
 @property(nonatomic) unsigned long long offset; // @synthesize offset=_offset;
+@property(copy, nonatomic) NSString *requestId; // @synthesize requestId=_requestId;
 @property(copy, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(copy, nonatomic) NSString *locale; // @synthesize locale=_locale;
+@property(copy, nonatomic) NSArray *entityTypes; // @synthesize entityTypes=_entityTypes;
 @property(copy, nonatomic) NSString *country; // @synthesize country=_country;
 @property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
 @property(copy, nonatomic) NSString *catalogue; // @synthesize catalogue=_catalogue;
 @property(nonatomic) unsigned long long entityVersion; // @synthesize entityVersion=_entityVersion;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
-- (void).cxx_destruct;
 - (id)drilldownPathComponent;
+- (void)addDeprecatedPathComponents:(id)arg1;
+- (void)addDeprecatedQueryParameters:(id)arg1;
 - (id)experiencePathComponent;
 - (_Bool)isEqualToSearchRequestParameters:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSURLComponents *urlComponents;
-- (id)initWithQuery:(id)arg1 entityVersion:(unsigned long long)arg2 clientVersion:(id)arg3 catalogue:(id)arg4 country:(id)arg5 locale:(id)arg6 timestamp:(id)arg7 experience:(unsigned long long)arg8 offset:(unsigned long long)arg9 limit:(unsigned long long)arg10 drilldownEntityType:(id)arg11 endpointVersion:(unsigned long long)arg12;
+- (id)initWithQuery:(id)arg1 entityVersion:(unsigned long long)arg2 clientVersion:(id)arg3 catalogue:(id)arg4 country:(id)arg5 locale:(id)arg6 timestamp:(id)arg7 requestId:(id)arg8 experience:(unsigned long long)arg9 offset:(unsigned long long)arg10 limit:(unsigned long long)arg11 drilldownEntityType:(id)arg12 endpointVersion:(unsigned long long)arg13 entityTypes:(id)arg14;
 
 @end
 

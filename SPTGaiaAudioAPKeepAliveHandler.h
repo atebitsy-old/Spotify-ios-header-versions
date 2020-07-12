@@ -17,9 +17,9 @@
     id <SPTKeepAlivePersistentConnectionsToken> _keepAliveToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTKeepAlivePersistentConnectionsToken> keepAliveToken; // @synthesize keepAliveToken=_keepAliveToken;
 @property(nonatomic) __weak id <SPTNetworkConnectivityController> networkController; // @synthesize networkController=_networkController;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)silentAudioPlayingStateChangedTo:(_Bool)arg1;
 - (id)initWithNetworkConnectivityController:(id)arg1;

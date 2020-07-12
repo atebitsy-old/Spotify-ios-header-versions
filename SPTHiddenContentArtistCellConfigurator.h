@@ -17,11 +17,11 @@
     GLUEEntityRowStyle *_artistRowStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEEntityRowStyle *artistRowStyle; // @synthesize artistRowStyle=_artistRowStyle;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) __weak id <SPTHiddenContentArtistCellDelegate> cellDelegate; // @synthesize cellDelegate=_cellDelegate;
-- (void).cxx_destruct;
 - (void)setUpLeadingAccessoryForCell:(id)arg1 viewModel:(id)arg2;
 - (void)setUpTrailingAccessoryForCell:(id)arg1 viewModel:(id)arg2 oldInteractionListener:(id)arg3;
 - (void)setUpContentViewForCell:(id)arg1;

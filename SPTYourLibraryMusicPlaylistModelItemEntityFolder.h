@@ -23,6 +23,7 @@
     unsigned long long _availableOfflineStatus;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
 @property(readonly, nonatomic, getter=isOnDemand) _Bool onDemand; // @synthesize onDemand=_onDemand;
 @property(readonly, nonatomic) unsigned long long availableOfflineStatus; // @synthesize availableOfflineStatus=_availableOfflineStatus;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) NSString *itemDescription; // @synthesize itemDescription=_itemDescription;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithFolder:(id)arg1;
 
 // Remaining properties

@@ -26,6 +26,7 @@
 + (id)albumsEmptyStateViewWithTheme:(id)arg1;
 + (id)artistsEmptyStateView:(id)arg1 onAction:(CDUnknownBlockType)arg2;
 + (id)playlistsEmptyStateView:(id)arg1 URI:(id)arg2 onAction:(CDUnknownBlockType)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType onActionBlock; // @synthesize onActionBlock=_onActionBlock;
 @property(retain, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) NSURL *navigateFromURI; // @synthesize navigateFromURI=_navigateFromURI;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)onAction:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;

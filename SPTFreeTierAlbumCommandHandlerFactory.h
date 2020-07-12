@@ -16,11 +16,11 @@
     id <SPTEntitySeeAllSongsService> _allSongsService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTEntitySeeAllSongsService> allSongsService; // @synthesize allSongsService=_allSongsService;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> defaultCommandHandlerFactory; // @synthesize defaultCommandHandlerFactory=_defaultCommandHandlerFactory;
-- (void).cxx_destruct;
 - (id)createLoggerForViewURI:(id)arg1;
 - (id)createCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 offlineModel:(id)arg3 reloadPageSignalSource:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6;
 - (id)initWithDefaultCommandHandlerFactory:(id)arg1 playerService:(id)arg2 hubsRendererFactory:(id)arg3 allSongsService:(id)arg4;

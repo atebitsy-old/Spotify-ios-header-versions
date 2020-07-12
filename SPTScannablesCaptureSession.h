@@ -23,6 +23,7 @@
     SPTaskCompletionSource *_addCaptureLayerCompletionSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTaskCompletionSource *addCaptureLayerCompletionSource; // @synthesize addCaptureLayerCompletionSource=_addCaptureLayerCompletionSource;
 @property(retain, nonatomic) SPTaskCompletionSource *setupCompletionSource; // @synthesize setupCompletionSource=_setupCompletionSource;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *captureSessionQueue; // @synthesize captureSessionQueue=_captureSessionQueue;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) AVCaptureDevice *captureDevice; // @synthesize captureDevice=_captureDevice;
 @property(retain, nonatomic) AVCaptureSession *captureSession; // @synthesize captureSession=_captureSession;
 @property(nonatomic) __weak id <AVCaptureVideoDataOutputSampleBufferDelegate> captureSessionDelegate; // @synthesize captureSessionDelegate=_captureSessionDelegate;
-- (void).cxx_destruct;
 - (void)focusOnPoint:(struct CGPoint)arg1;
 - (id)stopSession;
 - (id)startSession;

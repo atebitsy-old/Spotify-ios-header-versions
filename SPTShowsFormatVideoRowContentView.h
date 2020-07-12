@@ -35,6 +35,7 @@
     NSURL *_thumbnailURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *thumbnailURL; // @synthesize thumbnailURL=_thumbnailURL;
 @property(nonatomic) _Bool didSetupConstraints; // @synthesize didSetupConstraints=_didSetupConstraints;
 @property(retain, nonatomic) SPTShowsFormatCellViewModel *viewModel; // @synthesize viewModel=_viewModel;
@@ -53,7 +54,6 @@
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) UIView *subtitleAccessoryView; // @synthesize subtitleAccessoryView;
-- (void).cxx_destruct;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)setImage:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;

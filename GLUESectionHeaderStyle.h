@@ -22,6 +22,7 @@
     struct GLUESideMargins _margins;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double subtitleBaselineFromTitleBaseline; // @synthesize subtitleBaselineFromTitleBaseline=_subtitleBaselineFromTitleBaseline;
 @property(nonatomic) double contentBaselineToContentBottomEdge; // @synthesize contentBaselineToContentBottomEdge=_contentBaselineToContentBottomEdge;
 @property(nonatomic) double titleBaselineFromContentTopEdge; // @synthesize titleBaselineFromContentTopEdge=_titleBaselineFromContentTopEdge;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSectionHeaderStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

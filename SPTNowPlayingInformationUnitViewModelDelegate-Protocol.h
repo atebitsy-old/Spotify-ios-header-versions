@@ -10,6 +10,7 @@
 
 @protocol SPTNowPlayingInformationUnitViewModelDelegate <NSObject>
 - (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
+- (void)viewModelDidUpdateDownloadButtonState:(id <SPTNowPlayingInformationUnitViewModel>)arg1;
 - (void)viewModelDidUpdatePositiveFeedbackButtonState:(id <SPTNowPlayingInformationUnitViewModel>)arg1;
 - (void)viewModelDidUpdate:(id <SPTNowPlayingInformationUnitViewModel>)arg1 trackDidChange:(_Bool)arg2;
 @end

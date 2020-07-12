@@ -23,6 +23,7 @@
     UIColor *_placeholderTextColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *placeholderTextColor; // @synthesize placeholderTextColor=_placeholderTextColor;
 @property(nonatomic) double bottomMargin; // @synthesize bottomMargin=_bottomMargin;
 @property(nonatomic) double topMargin; // @synthesize topMargin=_topMargin;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) UIColor *tintColor; // @synthesize tintColor=_tintColor;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

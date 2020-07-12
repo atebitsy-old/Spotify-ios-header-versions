@@ -27,6 +27,7 @@
     NSDictionary *_customTitles;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *customTitles; // @synthesize customTitles=_customTitles;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
@@ -39,7 +40,6 @@
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTViewOfflineSwitchDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)shouldShowRemoveFromDownloadsConfirmationAlert;
 - (void)showRemoveFromDownloadsConfirmationAlertWithCompletion:(CDUnknownBlockType)arg1;
 - (void)updateTitlesWithAvailability:(unsigned long long)arg1;

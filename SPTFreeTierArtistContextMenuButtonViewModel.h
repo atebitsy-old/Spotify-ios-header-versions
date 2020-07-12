@@ -29,6 +29,7 @@
     id <SPTModerationServiceState> _moderationFeatureState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTModerationServiceState> moderationFeatureState; // @synthesize moderationFeatureState=_moderationFeatureState;
 @property(readonly, nonatomic) id <SPTModerationReportDecorationRegistry> decorationRegistry; // @synthesize decorationRegistry=_decorationRegistry;
 @property(nonatomic, getter=isArtistBanned) _Bool artistBanned; // @synthesize artistBanned=_artistBanned;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTFreeTierEntityContextMenuButtonViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)followModel:(id)arg1 followDataDidChange:(id)arg2;
 - (void)registerArtistModerationDecorator;
 - (id)createRadioTask;

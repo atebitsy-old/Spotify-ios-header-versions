@@ -14,8 +14,8 @@
     UIView<GLUEEntityCard> *_entityCardView;
 }
 
-@property(retain, nonatomic) UIView<GLUEEntityCard> *entityCardView; // @synthesize entityCardView=_entityCardView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView<GLUEEntityCard> *entityCardView; // @synthesize entityCardView=_entityCardView;
 - (void)prepareForReuse;
 - (void)loadCardView;
 

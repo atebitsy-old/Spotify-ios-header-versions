@@ -29,6 +29,7 @@
     CDStruct_5a28e70a _titleProtectionProgressRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) CDStruct_5a28e70a titleProtectionProgressRange; // @synthesize titleProtectionProgressRange=_titleProtectionProgressRange;
 @property(nonatomic) CDStruct_5a28e70a titleLabelAlphaProgressRange; // @synthesize titleLabelAlphaProgressRange=_titleLabelAlphaProgressRange;
 @property(nonatomic) CDStruct_5a28e70a statusBarProtectionProgressRange; // @synthesize statusBarProtectionProgressRange=_statusBarProtectionProgressRange;
@@ -44,7 +45,6 @@
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) SPTPodcastUIEditorialHeaderStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIView *actionRowView; // @synthesize actionRowView=_actionRowView;
-- (void).cxx_destruct;
 - (void)setAssociatedColor:(id)arg1;
 @property(copy, nonatomic) NSString *descriptionText;
 @property(copy, nonatomic) NSString *titleText;

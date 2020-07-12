@@ -21,13 +21,13 @@
     NSArray *_endLocation;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *endLocation; // @synthesize endLocation=_endLocation;
 @property(readonly, nonatomic) NSArray *startLocation; // @synthesize startLocation=_startLocation;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
 @property(retain, nonatomic) GLUEImageView *coverArtImageView; // @synthesize coverArtImageView=_coverArtImageView;
 @property(retain, nonatomic) NSURL *lastCoverArtImageURL; // @synthesize lastCoverArtImageURL=_lastCoverArtImageURL;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 @property(retain, nonatomic) NSURL *coverArtImageURL;

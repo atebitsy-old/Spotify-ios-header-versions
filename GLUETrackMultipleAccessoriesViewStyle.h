@@ -18,11 +18,11 @@
     double _margin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double margin; // @synthesize margin=_margin;
 @property(copy, nonatomic) GLUEAgeRestrictionViewStyle *ageRestrictionViewStyle; // @synthesize ageRestrictionViewStyle=_ageRestrictionViewStyle;
 @property(copy, nonatomic) GLUEOfflineSyncStatusViewStyle *offlineSyncStatusViewStyle; // @synthesize offlineSyncStatusViewStyle=_offlineSyncStatusViewStyle;
 @property(copy, nonatomic) GLUETrackAccessoryLabelStyle *trackAccessoryLabelStyle; // @synthesize trackAccessoryLabelStyle=_trackAccessoryLabelStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToMultipleAccessoryViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

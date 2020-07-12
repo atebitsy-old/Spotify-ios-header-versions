@@ -26,6 +26,7 @@
     NSMutableArray *_overlayComponentIdentifierOrder;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *overlayComponentIdentifierOrder; // @synthesize overlayComponentIdentifierOrder=_overlayComponentIdentifierOrder;
 @property(readonly, nonatomic) NSMutableArray *bodyComponentIdentifierOrder; // @synthesize bodyComponentIdentifierOrder=_bodyComponentIdentifierOrder;
 @property(readonly, nonatomic) NSMutableDictionary *overlayComponentModelBuilders; // @synthesize overlayComponentModelBuilders=_overlayComponentModelBuilders;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) NSMutableDictionary *customData; // @synthesize customData=_customData;
 @property(copy, nonatomic) NSString *navigationBarTitle; // @synthesize navigationBarTitle=_navigationBarTitle;
 @property(copy, nonatomic) NSString *viewIdentifier; // @synthesize viewIdentifier=_viewIdentifier;
-- (void).cxx_destruct;
 - (_Bool)enumerateComponentModelBuilders:(id)arg1 identifierOrder:(id)arg2 withBlock:(CDUnknownBlockType)arg3;
 - (_Bool)enumerateOverlayComponentModelBuildersWithBlock:(CDUnknownBlockType)arg1;
 - (_Bool)enumerateBodyComponentModelBuildersWithBlock:(CDUnknownBlockType)arg1;

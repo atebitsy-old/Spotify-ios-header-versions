@@ -22,6 +22,7 @@
     HUBComponentDefaults *_componentDefaults;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
 @property(retain, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
-- (void).cxx_destruct;
 - (id)createViewModelLoaderForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignal:(id)arg3;
 - (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2;
 - (_Bool)canCreateViewControllerForViewURI:(id)arg1;

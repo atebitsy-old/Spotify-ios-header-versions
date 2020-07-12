@@ -9,6 +9,7 @@
 @interface _TtC24PushMessagingFeatureImpl33SPTPushMessagingFeatureProperties : NSObject
 {
     // Error parsing type: , name: iosPermissionAskIam
+    // Error parsing type: , name: iosPushMessageFeatureEnabled
     // Error parsing type: , name: iosPermissionAskDelay
     // Error parsing type: , name: iosPermissionIamSelection
 }

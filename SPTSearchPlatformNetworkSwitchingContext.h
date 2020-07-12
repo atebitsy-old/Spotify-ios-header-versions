@@ -23,13 +23,13 @@
     id <SPTSearch2ConnectivityMonitor> _connectivityMonitor;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearch2ConnectivityMonitor> connectivityMonitor; // @synthesize connectivityMonitor=_connectivityMonitor;
 @property(readonly, nonatomic) id <SPTSearchPlatformContext> offlineContext; // @synthesize offlineContext=_offlineContext;
 @property(readonly, nonatomic) id <SPTSearchPlatformContext> onlineContext; // @synthesize onlineContext=_onlineContext;
 @property(readonly, nonatomic) id <HUBViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTSearchPlatformContextDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)currentContext;
 - (void)connectivityMonitorDidChangeState:(id)arg1;
 - (void)context:(id)arg1 didUpdateStateFrom:(unsigned long long)arg2;

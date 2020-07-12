@@ -14,9 +14,9 @@
     HUBComponentView *_componentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBComponentView *componentView; // @synthesize componentView=_componentView;
 @property(readonly, nonatomic) NSUUID *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -7,24 +7,25 @@
 #import <objc/NSObject.h>
 
 #import "BMEventObserver-Protocol.h"
-#import "SPTCarDetectionStateObserver-Protocol.h"
+#import "SPTDistractionControlObserver-Protocol.h"
 #import "SPTVideoCoordinatorCosmosReceiverDelegate-Protocol.h"
 
-@class NSString, NSTimer, SPTVideoCoordinatorCosmosReceiver, SPTVideoCoordinatorCosmosSender, SPTVideoCoordinatorPlayerInterruptor, SPTVideoPlaybackStateFactory, SPTVideoStartCommand;
-@protocol BMBetamaxPlayer, BMEventObserverFactory, BMPlaybackIdentity, BMVideoSurfaceManager, OS_dispatch_queue, SPTCarDetector, SPTVideoContextPlayerCoordinatorErrorHandler, SPTVideoFeaturePlayerFactory;
+@class BMSubtitleFactory, NSString, NSTimer, SPTVideoCoordinatorCosmosReceiver, SPTVideoCoordinatorCosmosSender, SPTVideoCoordinatorPlayerInterruptor, SPTVideoPlaybackStateFactory, SPTVideoStartCommand;
+@protocol BMBetamaxPlayer, BMEventObserverFactory, BMPlaybackIdentity, BMVideoSurfaceManager, OS_dispatch_queue, SPTDistractionControl, SPTVideoContextPlayerCoordinatorErrorHandler, SPTVideoFeaturePlayerFactory;
 
-@interface SPTVideoContextPlayerCoordinator : NSObject <SPTVideoCoordinatorCosmosReceiverDelegate, BMEventObserver, SPTCarDetectionStateObserver>
+@interface SPTVideoContextPlayerCoordinator : NSObject <SPTVideoCoordinatorCosmosReceiverDelegate, BMEventObserver, SPTDistractionControlObserver>
 {
     _Bool _stalled;
     id <BMBetamaxPlayer> _player;
     id <BMVideoSurfaceManager> _surfaceManager;
     id <SPTVideoFeaturePlayerFactory> _playerFactory;
+    BMSubtitleFactory *_subtitleFactory;
     id <BMEventObserverFactory> _dynamicEventObserverFactory;
     SPTVideoCoordinatorCosmosReceiver *_cosmosReceiver;
     SPTVideoCoordinatorCosmosSender *_cosmosSender;
     SPTVideoPlaybackStateFactory *_playbackStateFactory;
     id <SPTVideoContextPlayerCoordinatorErrorHandler> _errorHandler;
-    id <SPTCarDetector> _carDetector;
+    id <SPTDistractionControl> _distractionControl;
     CDUnknownBlockType _appIsBackgroundedStateProvider;
     SPTVideoStartCommand *_deferredStartCommand;
     double _maxAllowedStallTimeout;
@@ -33,6 +34,7 @@
     SPTVideoCoordinatorPlayerInterruptor *_playerInterruptor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoCoordinatorPlayerInterruptor *playerInterruptor; // @synthesize playerInterruptor=_playerInterruptor;
 @property(retain, nonatomic) id <BMPlaybackIdentity> currentIdentity; // @synthesize currentIdentity=_currentIdentity;
 @property(retain, nonatomic) NSTimer *maxStalledTimer; // @synthesize maxStalledTimer=_maxStalledTimer;
@@ -40,17 +42,17 @@
 @property(nonatomic, getter=isStalled) _Bool stalled; // @synthesize stalled=_stalled;
 @property(retain, nonatomic) SPTVideoStartCommand *deferredStartCommand; // @synthesize deferredStartCommand=_deferredStartCommand;
 @property(copy, nonatomic) CDUnknownBlockType appIsBackgroundedStateProvider; // @synthesize appIsBackgroundedStateProvider=_appIsBackgroundedStateProvider;
-@property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
+@property(retain, nonatomic) id <SPTDistractionControl> distractionControl; // @synthesize distractionControl=_distractionControl;
 @property(retain, nonatomic) id <SPTVideoContextPlayerCoordinatorErrorHandler> errorHandler; // @synthesize errorHandler=_errorHandler;
 @property(retain, nonatomic) SPTVideoPlaybackStateFactory *playbackStateFactory; // @synthesize playbackStateFactory=_playbackStateFactory;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosReceiver *cosmosReceiver; // @synthesize cosmosReceiver=_cosmosReceiver;
 @property(retain, nonatomic) id <BMEventObserverFactory> dynamicEventObserverFactory; // @synthesize dynamicEventObserverFactory=_dynamicEventObserverFactory;
+@property(retain, nonatomic) BMSubtitleFactory *subtitleFactory; // @synthesize subtitleFactory=_subtitleFactory;
 @property(retain, nonatomic) id <SPTVideoFeaturePlayerFactory> playerFactory; // @synthesize playerFactory=_playerFactory;
 @property(retain, nonatomic) id <BMVideoSurfaceManager> surfaceManager; // @synthesize surfaceManager=_surfaceManager;
 @property(retain, nonatomic) id <BMBetamaxPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
-- (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
+- (void)distractionControlStateChanged:(_Bool)arg1;
 - (void)advanceWithReasonStallTimeoutExceeded:(id)arg1;
 - (void)didEndPlaybackWithReason:(long long)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didFailWithRecoverableError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
@@ -76,7 +78,7 @@
 - (void)unsubscribe;
 - (void)subscribe;
 - (void)dealloc;
-- (id)initWithPlayerFactory:(id)arg1 playbackStateFactory:(id)arg2 dynamicEventObserverFactory:(id)arg3 cosmosReceiver:(id)arg4 cosmosSender:(id)arg5 errorHandler:(id)arg6 carDetector:(id)arg7 playerInterruptor:(id)arg8 appIsBackgroundedStateProvider:(CDUnknownBlockType)arg9;
+- (id)initWithPlayerFactory:(id)arg1 playbackStateFactory:(id)arg2 dynamicEventObserverFactory:(id)arg3 subtitleFactory:(id)arg4 cosmosReceiver:(id)arg5 cosmosSender:(id)arg6 errorHandler:(id)arg7 distractionControl:(id)arg8 playerInterruptor:(id)arg9 appIsBackgroundedStateProvider:(CDUnknownBlockType)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

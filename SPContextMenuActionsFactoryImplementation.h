@@ -23,6 +23,7 @@
     NSMutableDictionary *_carThingPredicates;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *carThingPredicates; // @synthesize carThingPredicates=_carThingPredicates;
 @property(readonly, nonatomic) NSMutableDictionary *containerPredicates; // @synthesize containerPredicates=_containerPredicates;
 @property(readonly, nonatomic) NSMutableDictionary *tracksPredicates; // @synthesize tracksPredicates=_tracksPredicates;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) NSMutableDictionary *shortURLPredicates; // @synthesize shortURLPredicates=_shortURLPredicates;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)registerActionForPredicate:(id)arg1 actionIdentifier:(id)arg2 in:(id)arg3;
 - (id)actionForURI:(id)arg1 logContext:(id)arg2 title:(id)arg3 imageURL:(id)arg4 actionIdentifier:(id)arg5;
 - (id)actionForURIs:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 containerURL:(id)arg4 playlistName:(id)arg5 actionIdentifier:(id)arg6 contextSourceURL:(id)arg7;

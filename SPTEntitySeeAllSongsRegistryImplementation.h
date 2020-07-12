@@ -15,8 +15,8 @@
     NSMapTable *_dataSources;
 }
 
-@property(readonly, nonatomic) NSMapTable *dataSources; // @synthesize dataSources=_dataSources;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMapTable *dataSources; // @synthesize dataSources=_dataSources;
 - (id)init;
 - (id)dataSourceForURL:(id)arg1;
 - (void)unregisterDataSourceForURL:(id)arg1;

@@ -18,9 +18,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(retain, nonatomic) SPTShelfRegistryImplementation *shelfRegistry; // @synthesize shelfRegistry=_shelfRegistry;
-- (void).cxx_destruct;
 - (id)provideShelves;
 - (id)provideShelfRegistry;
 - (void)load;

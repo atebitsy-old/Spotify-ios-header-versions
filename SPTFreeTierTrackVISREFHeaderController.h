@@ -30,6 +30,7 @@
 }
 
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineButtonModel; // @synthesize offlineButtonModel=_offlineButtonModel;
 @property(retain, nonatomic) id <SPTFreeTierEntityContextMenuButtonViewModel> contextMenuButtonModel; // @synthesize contextMenuButtonModel=_contextMenuButtonModel;
 @property(retain, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> followButtonModel; // @synthesize followButtonModel=_followButtonModel;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (id)subtitleFromModel:(id)arg1;
 - (void)setImage:(id)arg1;
 - (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;

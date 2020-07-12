@@ -18,10 +18,10 @@
     UIView *_accessoryViewCache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *accessoryViewCache; // @synthesize accessoryViewCache=_accessoryViewCache;
 @property(retain, nonatomic) UIImage *imageCache; // @synthesize imageCache=_imageCache;
 @property(retain, nonatomic) id <SPTPodcastFilterContextAction> action; // @synthesize action=_action;
-- (void).cxx_destruct;
 - (id)accessoryView;
 - (id)subtitle;
 - (id)iconImage;

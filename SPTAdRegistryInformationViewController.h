@@ -21,13 +21,13 @@
     id <SPTAdsBaseEntity> _currentEntity;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> currentEntity; // @synthesize currentEntity=_currentEntity;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(readonly, nonatomic) __weak id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
-- (void).cxx_destruct;
 - (void)setupLeadingAccessoryForCell:(id)arg1 forEntity:(id)arg2;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;

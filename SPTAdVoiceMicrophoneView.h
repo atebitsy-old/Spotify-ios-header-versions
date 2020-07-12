@@ -18,13 +18,13 @@
     UIImageView *_imageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) UIImage *animationImage; // @synthesize animationImage=_animationImage;
 @property(retain, nonatomic) UIImage *defaultImage; // @synthesize defaultImage=_defaultImage;
 @property(retain, nonatomic) CAShapeLayer *outterCircle; // @synthesize outterCircle=_outterCircle;
 @property(retain, nonatomic) CAShapeLayer *middleCircle; // @synthesize middleCircle=_middleCircle;
 @property(retain, nonatomic) CAShapeLayer *innerCircle; // @synthesize innerCircle=_innerCircle;
-- (void).cxx_destruct;
 - (void)stopAnimations;
 - (id)createCircleShapesWithKeyTimes:(id)arg1 layer:(id)arg2 size:(struct CGSize)arg3 alpha:(double)arg4;
 - (void)setupCirclesWithSize:(struct CGSize)arg1;

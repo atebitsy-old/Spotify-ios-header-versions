@@ -24,12 +24,12 @@
     UIView *_animationView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *animationView; // @synthesize animationView=_animationView;
 @property(retain, nonatomic) SPTNowPlayingDurationViewV2 *durationView; // @synthesize durationView=_durationView;
 @property(nonatomic) _Bool hasShownLabelsAfterTrackChange; // @synthesize hasShownLabelsAfterTrackChange=_hasShownLabelsAfterTrackChange;
 @property(readonly, nonatomic) SPTNowPlayingDurationUnitViewModelImplementation *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)trackMetadataDidFinishUpdating;
 - (void)trackMetadataDidMove:(_Bool)arg1;
 - (void)trackPositionDidChange;

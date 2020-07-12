@@ -31,6 +31,7 @@
 + (void)shuffleTracks:(id)arg1;
 + (id)stationFromCreateStationResponsePOST:(id)arg1;
 + (id)stationFromData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *seeds; // @synthesize seeds=_seeds;
 @property(copy, nonatomic) NSArray *subtitles; // @synthesize subtitles=_subtitles;
 @property(retain, nonatomic) SPTPlayerTrack *lastPlayedTrack; // @synthesize lastPlayedTrack=_lastPlayedTrack;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) NSURL *titleURI; // @synthesize titleURI=_titleURI;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSString *stationId; // @synthesize stationId=_stationId;
-- (void).cxx_destruct;
 - (id)GDPRSafeRepresentation;
 - (void)addTracks:(id)arg1;
 - (id)identifier;

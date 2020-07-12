@@ -35,6 +35,7 @@
     struct CGSize _imageShadowOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(nonatomic) double collapsedTitleFadeHeight; // @synthesize collapsedTitleFadeHeight=_collapsedTitleFadeHeight;
 @property(nonatomic) double collapsedHeaderOverlayAlpha; // @synthesize collapsedHeaderOverlayAlpha=_collapsedHeaderOverlayAlpha;
@@ -56,7 +57,6 @@
 @property(nonatomic) double headerViewCollapsedTitleLabelHorizontalMargin; // @synthesize headerViewCollapsedTitleLabelHorizontalMargin=_headerViewCollapsedTitleLabelHorizontalMargin;
 @property(nonatomic) double contentBottomMargin; // @synthesize contentBottomMargin=_contentBottomMargin;
 @property(nonatomic) double contentMargin; // @synthesize contentMargin=_contentMargin;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

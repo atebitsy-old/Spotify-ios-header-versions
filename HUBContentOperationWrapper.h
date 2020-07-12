@@ -18,11 +18,11 @@
     id <HUBContentOperation> _contentOperation;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isExecuting; // @synthesize isExecuting=_isExecuting;
 @property(readonly, nonatomic) id <HUBContentOperation> contentOperation; // @synthesize contentOperation=_contentOperation;
 @property(readonly, nonatomic) unsigned long long index; // @synthesize index=_index;
 @property(nonatomic) __weak id <HUBContentOperationWrapperDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)finishWithError:(id)arg1;
 - (void)contentOperationRequiresRescheduling:(id)arg1;
 - (void)contentOperation:(id)arg1 didFailWithError:(id)arg2;

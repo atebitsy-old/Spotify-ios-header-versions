@@ -23,6 +23,7 @@
     struct CGSize _maximumImageSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool offline; // @synthesize offline=_offline;
 @property(retain, nonatomic) NSHashTable *loaders; // @synthesize loaders=_loaders;
 @property(readonly, nonatomic) struct CGSize maximumImageSize; // @synthesize maximumImageSize=_maximumImageSize;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) SPTPersistentCache *dataCache; // @synthesize dataCache=_dataCache;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) SPTImageLoaderEntityImageTracker *offlineEntityTracker; // @synthesize offlineEntityTracker=_offlineEntityTracker;
-- (void).cxx_destruct;
 - (id)init;
 - (void)unregisterImageRequestFactories;
 - (void)registerImageRequestFactory:(id)arg1 predicate:(CDUnknownBlockType)arg2;

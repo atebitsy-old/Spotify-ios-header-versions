@@ -16,11 +16,11 @@
     double _secondsInBackground;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double secondsInBackground; // @synthesize secondsInBackground=_secondsInBackground;
 @property(retain, nonatomic) NSDate *backgroundDate; // @synthesize backgroundDate=_backgroundDate;
 @property(retain, nonatomic) SPTPartnerDateProvider *dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(retain, nonatomic) NSDate *startDate; // @synthesize startDate=_startDate;
-- (void).cxx_destruct;
 - (double)secondsSinceStart;
 - (void)appDidEnterForeground;
 - (void)appDidEnterBackground;

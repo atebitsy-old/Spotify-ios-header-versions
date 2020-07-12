@@ -16,10 +16,10 @@
     NSDate *_expiryDate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *expiryDate; // @synthesize expiryDate=_expiryDate;
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (long long)ID;
 - (long long)expiryPeriod;
 - (long long)daysFromDate:(id)arg1;

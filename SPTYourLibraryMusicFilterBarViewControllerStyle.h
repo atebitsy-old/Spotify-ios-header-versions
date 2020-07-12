@@ -17,9 +17,9 @@
     SPTYourLibraryMusicSearchViewStyle *_searchViewStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTYourLibraryMusicSearchViewStyle *searchViewStyle; // @synthesize searchViewStyle=_searchViewStyle;
 @property(copy, nonatomic) id <SPTSortingFilteringFilterBarStyle> filterBarViewStyle; // @synthesize filterBarViewStyle=_filterBarViewStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -23,6 +23,7 @@
     id <SPTHubCommandHandlerFactory> _commandHandlerFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentContentOperationFactory *contentOperationFactory; // @synthesize contentOperationFactory=_contentOperationFactory;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
-- (void).cxx_destruct;
 - (id)commandDispatcherForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)hubViewWithFrame:(struct CGRect)arg1;
 - (id)viewModelProvider;

@@ -28,13 +28,13 @@
 + (id)spt_continueWithAppleSystemButtonWithAccessibilityIdentifierPrefix:(id)arg1;
 + (id)spt_appleCustomButtonWithAccessibilityIdentifierPrefix:(id)arg1;
 + (id)spt_continueWithAppleCustomButtonWithAccessibilityIdentifierPrefix:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *accessibilityIdentifier; // @synthesize accessibilityIdentifier=_accessibilityIdentifier;
 @property(readonly, nonatomic) unsigned long long style; // @synthesize style=_style;
 @property(readonly, nonatomic) unsigned long long action; // @synthesize action=_action;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) UIImage *icon; // @synthesize icon=_icon;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 icon:(id)arg2 type:(unsigned long long)arg3 action:(unsigned long long)arg4 style:(unsigned long long)arg5 accessibilityIdentifier:(id)arg6;
 
 // Remaining properties

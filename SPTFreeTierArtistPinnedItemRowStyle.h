@@ -22,6 +22,7 @@
     struct CGSize _disclosureViewSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize disclosureViewSize; // @synthesize disclosureViewSize=_disclosureViewSize;
 @property(copy, nonatomic) SPTFreeTierArtistPinnedItemCommentStyle *commentStyle; // @synthesize commentStyle=_commentStyle;
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 @property(nonatomic) double height; // @synthesize height=_height;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

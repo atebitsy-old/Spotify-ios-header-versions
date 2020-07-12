@@ -25,6 +25,7 @@
     unsigned long long _receivingTransportType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long receivingTransportType; // @synthesize receivingTransportType=_receivingTransportType;
 @property(readonly, nonatomic) NSMutableDictionary *latestTopicIDs; // @synthesize latestTopicIDs=_latestTopicIDs;
 @property(readonly, nonatomic) NSMutableArray *subscriptions; // @synthesize subscriptions=_subscriptions;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) SPTWatchConnectivityPubSubMessageTransport *messageTransport; // @synthesize messageTransport=_messageTransport;
 @property(readonly, nonatomic) SPTWatchConnectivitySession *session; // @synthesize session=_session;
 @property(nonatomic) unsigned long long transportType; // @synthesize transportType;
-- (void).cxx_destruct;
 - (id)receivedPubSubDictionary;
 - (void)pubSubMessageTransport:(id)arg1 didUpdateReceivedPubSubDictionary:(id)arg2;
 - (void)session:(id)arg1 didReceiveApplicationContext:(id)arg2;

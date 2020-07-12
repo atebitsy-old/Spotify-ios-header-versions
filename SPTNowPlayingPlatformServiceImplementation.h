@@ -32,6 +32,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
 @property(retain, nonatomic) id <SPTNowPlayingScrollDataSource_Internal> scrollDataSource; // @synthesize scrollDataSource=_scrollDataSource;
@@ -48,7 +49,6 @@
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
-- (void).cxx_destruct;
 - (id)provideContentLayerResolver;
 - (id)provideScrollDataSource;
 - (id)provideRemoteControlEventControllerRegistry;

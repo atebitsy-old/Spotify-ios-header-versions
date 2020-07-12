@@ -10,7 +10,6 @@
 @protocol GLUEThemeObserver;
 
 @protocol GLUETheme <NSObject>
-@property(readonly, nonatomic) SPTTheme *sptTheme;
 - (void)notifyObservers;
 - (void)removeObserver:(id <GLUEThemeObserver>)arg1;
 - (void)addObserver:(id <GLUEThemeObserver>)arg1;
@@ -103,5 +102,6 @@
 - (GLUELabelStyle *)heroSmallLabelStyle;
 - (GLUELabelStyle *)heroMediumLabelStyle;
 - (GLUELabelStyle *)heroLargeLabelStyle;
+@property(nonatomic, readonly) SPTTheme *sptTheme;
 @end
 

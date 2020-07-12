@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logImpressionWithType:(id)arg1 sectionId:(id)arg2 renderType:(id)arg3;
 - (void)logInteractionWithType:(id)arg1 sectionId:(id)arg2 userIntent:(id)arg3 targetURI:(id)arg4;
 - (void)logBannerShown;

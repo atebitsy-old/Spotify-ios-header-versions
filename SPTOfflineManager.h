@@ -23,10 +23,10 @@
     NSMutableDictionary *_observersByURL;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *observersByURL; // @synthesize observersByURL=_observersByURL;
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *observersByURL; // @synthesize observersByURL=_observersByURL;
+@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (void)fetchNumberOfOfflineLists:(CDUnknownBlockType)arg1;
 - (void)fetchTimeIntervalBeforeOfflineExpire:(CDUnknownBlockType)arg1;
 - (void)findShowsMatchingQuery:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;

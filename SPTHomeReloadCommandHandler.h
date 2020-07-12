@@ -15,8 +15,8 @@
     SPTHomeViewModelProvider *_viewModelProvider;
 }
 
-@property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithViewModelProvider:(id)arg1;
 

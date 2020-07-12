@@ -13,8 +13,8 @@
     WKWebView *_webview;
 }
 
-@property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 - (void).cxx_destruct;
+@property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 - (void)updateContentInsetAdjustmentBehaviorForScrollview:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)layoutSubviews;

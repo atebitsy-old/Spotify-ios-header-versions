@@ -18,9 +18,9 @@
     id <SPTVoiceDeeplinkURIResolver> _deeplinkURIResolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceDeeplinkURIResolver> deeplinkURIResolver; // @synthesize deeplinkURIResolver=_deeplinkURIResolver;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (id)handleDeeplinkURI:(id)arg1 externally:(_Bool)arg2;
 - (id)handleVoiceCommand:(id)arg1;
 - (_Bool)canHandleVoiceCommand:(id)arg1;

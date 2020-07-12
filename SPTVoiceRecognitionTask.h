@@ -21,12 +21,12 @@
     SPTVoiceSpeechRecognitionDataLoader *_speechRecognitionDataLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTVoiceSpeechRecognitionDataLoader *speechRecognitionDataLoader; // @synthesize speechRecognitionDataLoader=_speechRecognitionDataLoader;
 @property(readonly, nonatomic) id <SPTVoiceAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
 @property(retain, nonatomic) SPTVoiceTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTVoiceRecognitionTaskDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)audioRecorder:(id)arg1 didChangeMeanAudioLevel:(float)arg2 peakLevel:(float)arg3;
 - (void)audioRecorder:(id)arg1 didFailWithError:(id)arg2;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;

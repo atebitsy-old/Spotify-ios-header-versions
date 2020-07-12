@@ -9,9 +9,12 @@
 @class UIView, UIViewController;
 
 @protocol SPTGaiaSocialListeningIntegrationPublicAPI <NSObject>
-@property(readonly, nonatomic) UIView *contentView;
-@property(readonly, nonatomic) UIViewController *viewController;
-@property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 - (void)showActivityIndicatorIfNeeded;
+@property(nonatomic, readonly) UIView *contentView;
+@property(nonatomic, readonly) UIViewController *viewController;
+- (_Bool)isEnabled;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool enabled;
 @end
 

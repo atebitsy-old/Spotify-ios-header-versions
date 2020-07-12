@@ -16,8 +16,8 @@
     id <SPTGaiaSilentAudioPlayer> _silentAudioPlayer;
 }
 
-@property(retain, nonatomic) id <SPTGaiaSilentAudioPlayer> silentAudioPlayer; // @synthesize silentAudioPlayer=_silentAudioPlayer;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTGaiaSilentAudioPlayer> silentAudioPlayer; // @synthesize silentAudioPlayer=_silentAudioPlayer;
 - (id)silentAudioSession;
 - (id)newSilentAudioPlayer;
 - (id)provideSilentAudioPlayer;

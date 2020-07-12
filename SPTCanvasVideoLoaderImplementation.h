@@ -26,6 +26,7 @@
 + (id)errorExporting;
 + (id)errorInsertingVideoTrack;
 + (id)errorNoVideoTrack;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTaskCompletionSource *completionSource; // @synthesize completionSource=_completionSource;
 @property(readonly, copy, nonatomic) CDUnknownBlockType exporterBlock; // @synthesize exporterBlock=_exporterBlock;
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) id <SPTCanvasMetadataResolver> metadataResolver; // @synthesize metadataResolver=_metadataResolver;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
 @property(retain, nonatomic) SPTCanvasContentLayerVideoPreloader *videoLoader; // @synthesize videoLoader=_videoLoader;
-- (void).cxx_destruct;
 - (void)didFailToLoadVideoForTrackWithError:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)didLoadVideoForTrackWithVideoData:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)exportVideoWithURL:(id)arg1 assetDuration:(double)arg2 completionSource:(id)arg3;

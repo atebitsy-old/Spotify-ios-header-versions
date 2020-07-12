@@ -17,12 +17,12 @@
     NSData *_encapsulatedData;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSData *encapsulatedData; // @synthesize encapsulatedData=_encapsulatedData;
 @property(readonly, nonatomic) NSString *contentDescription; // @synthesize contentDescription=_contentDescription;
 @property(readonly, nonatomic) NSString *file; // @synthesize file=_file;
 @property(readonly, nonatomic) NSString *MIME; // @synthesize MIME=_MIME;
 @property(readonly, nonatomic) long long encoding; // @synthesize encoding=_encoding;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 data:(id)arg2 type:(long long)arg3;
 
 @end

@@ -20,11 +20,11 @@
     UIView<SPTGaiaDevicesAvailableView> *_devicesAvailableView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView<SPTGaiaDevicesAvailableView> *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTGaiaDevicesAvailableViewProvider> devicesAvailableViewProvider; // @synthesize devicesAvailableViewProvider=_devicesAvailableViewProvider;
-- (void).cxx_destruct;
 - (void)didUpdateDevicesAvailableText:(id)arg1 withAccessibilityLabel:(id)arg2;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;

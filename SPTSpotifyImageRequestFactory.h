@@ -16,8 +16,8 @@
     id <SPTProductState> _productState;
 }
 
-@property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (id)initWithProductState:(id)arg1;
 - (id)provideImageLoaderRequestForURL:(id)arg1 sourceIdentifier:(id)arg2 downloadSize:(struct CGSize)arg3 requestedSize:(struct CGSize)arg4 allowUpscaling:(_Bool)arg5 context:(id)arg6 callback:(id)arg7 dataLoader:(id)arg8 delegate:(id)arg9 baseImageLoader:(id)arg10;
 

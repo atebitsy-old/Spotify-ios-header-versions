@@ -26,6 +26,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDrivingJumpstartTrigger *jumpstartTrigger; // @synthesize jumpstartTrigger=_jumpstartTrigger;
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 @property(retain, nonatomic) SPTDrivingJumpstartTestManager *testManager; // @synthesize testManager=_testManager;
@@ -36,7 +37,6 @@
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

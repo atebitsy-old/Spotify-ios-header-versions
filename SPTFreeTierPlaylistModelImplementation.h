@@ -35,6 +35,7 @@
     id <SPTFreeTierPlaylistTestManager> _testManager;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
     NSString *_formatListType;
+    CDUnknownBlockType _navigationIdFactory;
     SPTFreeTierPlaylistModelEntityImplementation *_playlistEntity;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _metadataSubscription;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _followCountSubscription;
@@ -43,6 +44,7 @@
     struct _NSRange _loadedWindow;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange loadedWindow; // @synthesize loadedWindow=_loadedWindow;
 @property(nonatomic) struct _NSRange currentWindow; // @synthesize currentWindow=_currentWindow;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
@@ -51,6 +53,7 @@
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> followCountSubscription; // @synthesize followCountSubscription=_followCountSubscription;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> metadataSubscription; // @synthesize metadataSubscription=_metadataSubscription;
 @property(retain, nonatomic) SPTFreeTierPlaylistModelEntityImplementation *playlistEntity; // @synthesize playlistEntity=_playlistEntity;
+@property(readonly, copy, nonatomic) CDUnknownBlockType navigationIdFactory; // @synthesize navigationIdFactory=_navigationIdFactory;
 @property(copy, nonatomic) NSString *formatListType; // @synthesize formatListType=_formatListType;
 @property(retain, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
@@ -67,20 +70,19 @@
 @property(readonly, nonatomic, getter=isFormatList) _Bool formatList; // @synthesize formatList=_formatList;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering; // @synthesize sortingFiltering=_sortingFiltering;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (void)addPlaylistModelObserver:(id)arg1;
 @property(readonly, copy, nonatomic) NSPointerArray *observers; // @synthesize observers=_observers;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)fetchPlayContextWithCompletion:(CDUnknownBlockType)arg1;
-- (void)playWithWithPlayOptions:(id)arg1 platformPlayOptions:(id)arg2;
+- (void)playWithWithPlayOptions:(id)arg1 platformPlayOptions:(id)arg2 interactionId:(id)arg3;
 - (id)playOptionsWithShuffleOverride:(id)arg1 skipToTrack:(id)arg2;
 - (id)playlistPlatformPlayOptionsForShufflePlay:(_Bool)arg1 playOrigin:(id)arg2;
 - (void)addTrackURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)removeTracks:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updateModelWithPlaylistSortingFiltering:(id)arg1;
-- (void)updateMetadataWithResponse:(id)arg1 tracksResponse:(SPTPlaylistPlatformDataLoaderResponse_5db64d04 *)arg2 recommendations:(id)arg3;
+- (void)updateMetadataWithResponse:(id)arg1 tracksResponse:(id)arg2 recommendations:(id)arg3;
 - (void)loadMetadataAndTracks;
 - (_Bool)shouldIncludeEpisodes;
 - (_Bool)showOnlyPlayableTracks;
@@ -98,18 +100,18 @@
 - (_Bool)showFollowCollectionConfirmation;
 - (_Bool)showCollectionConfirmation;
 - (void)changeFollowState:(_Bool)arg1;
-- (void)playWithPlayOptions:(id)arg1 andPlayOrigin:(id)arg2;
-- (void)playTrack:(id)arg1 andPlayOrigin:(id)arg2 shuffleOverride:(id)arg3;
-- (void)playTrackEntity:(id)arg1 andPlayOrigin:(id)arg2 shuffleOverride:(id)arg3;
-- (void)playTrackURL:(id)arg1 andPlayOrigin:(id)arg2;
-- (void)playWithPlayOrigin:(id)arg1;
-- (void)shufflePlayWithPlayOrigin:(id)arg1;
+- (void)playWithPlayOptions:(id)arg1 andPlayOrigin:(id)arg2 interactionId:(id)arg3;
+- (void)playTrack:(id)arg1 andPlayOrigin:(id)arg2 shuffleOverride:(id)arg3 interactionId:(id)arg4;
+- (void)playTrackEntity:(id)arg1 andPlayOrigin:(id)arg2 shuffleOverride:(id)arg3 interactionId:(id)arg4;
+- (void)playTrackURL:(id)arg1 andPlayOrigin:(id)arg2 interactionId:(id)arg3;
+- (void)playWithPlayOrigin:(id)arg1 interactionId:(id)arg2;
+- (void)shufflePlayWithPlayOrigin:(id)arg1 interactionId:(id)arg2;
 - (void)prepareLoad;
 - (unsigned long long)calculateOnDemandTypeWithMetadata:(id)arg1;
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (void)dealloc;
-- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 ageVerificationProvider:(id)arg11 testManager:(id)arg12 featureProperties:(id)arg13 formatListType:(id)arg14;
+- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 ageVerificationProvider:(id)arg11 testManager:(id)arg12 featureProperties:(id)arg13 formatListType:(id)arg14 navigationIdFactory:(CDUnknownBlockType)arg15;
 @property(readonly, nonatomic, getter=isCappedOverridenByXCUITest) _Bool cappedOverridenByXCUITest;
 
 // Remaining properties

@@ -20,12 +20,12 @@
     UIColor *_color;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *color; // @synthesize color=_color;
 @property(nonatomic) double contentHeight; // @synthesize contentHeight=_contentHeight;
 @property(nonatomic) double viewControllerPriority; // @synthesize viewControllerPriority=_viewControllerPriority;
 @property(nonatomic) unsigned long long leadingEdge; // @synthesize leadingEdge=_leadingEdge;
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container; // @synthesize container;
-- (void).cxx_destruct;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithColor:(id)arg1;

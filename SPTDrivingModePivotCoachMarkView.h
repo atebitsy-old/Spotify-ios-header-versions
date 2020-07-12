@@ -17,12 +17,12 @@
     CAShapeLayer *_contentViewLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAShapeLayer *contentViewLayer; // @synthesize contentViewLayer=_contentViewLayer;
 @property(retain, nonatomic) CAShapeLayer *arrowLayer; // @synthesize arrowLayer=_arrowLayer;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, copy, nonatomic) CDUnknownBlockType dismissHandler; // @synthesize dismissHandler=_dismissHandler;
-- (void).cxx_destruct;
 - (void)arrangeLayers;
 - (void)layoutSublayersOfLayer:(id)arg1;
 - (void)handleCoachMarkTap:(id)arg1;

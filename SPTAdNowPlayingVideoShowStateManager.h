@@ -21,12 +21,12 @@
     id <SPTAdsManager> _adsManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observable; // @synthesize observable=_observable;
 @property(readonly, nonatomic) SPTNowPlayingVideoAdMode *videoAdMode; // @synthesize videoAdMode=_videoAdMode;
 @property(retain, nonatomic) _TtC19SPTAdsNowPlayingKit20SPTAdNowPlayingTrack *currentTrack; // @synthesize currentTrack=_currentTrack;
 @property(nonatomic) _Bool currentShowControlsState; // @synthesize currentShowControlsState=_currentShowControlsState;
-- (void).cxx_destruct;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (void)npvUnitTapEvent;
 - (_Bool)shouldToggleUnitVisibility;

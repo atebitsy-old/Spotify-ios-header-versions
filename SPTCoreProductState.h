@@ -18,10 +18,10 @@
     NSString *_previousStreamingRules;
 }
 
-@property(copy, nonatomic) NSString *previousStreamingRules; // @synthesize previousStreamingRules=_previousStreamingRules;
-@property(readonly, copy, nonatomic) NSMapTable *observers; // @synthesize observers=_observers;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *previousStreamingRules; // @synthesize previousStreamingRules=_previousStreamingRules;
+@property(readonly, copy, nonatomic) NSMapTable *observers; // @synthesize observers=_observers;
 - (shared_ptr_2175cb8d)cppProductState;
 @property(nonatomic) __weak NSDictionary *overrides;
 @property(nonatomic) __weak NSDictionary *originalValues;

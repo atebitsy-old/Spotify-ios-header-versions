@@ -16,9 +16,9 @@
     CDUnknownBlockType _actionBlock;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isDisabledOffline) _Bool disabledOffline; // @synthesize disabledOffline=_disabledOffline;
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
-- (void).cxx_destruct;
 - (void)callActionBlock;
 - (id)initWithFrame:(struct CGRect)arg1;
 

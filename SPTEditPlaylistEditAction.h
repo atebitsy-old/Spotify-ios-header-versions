@@ -14,9 +14,9 @@
     CDUnknownBlockType _createEditViewController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType createEditViewController; // @synthesize createEditViewController=_createEditViewController;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresenter; // @synthesize modalPresenter=_modalPresenter;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)icon;
 - (id)title;

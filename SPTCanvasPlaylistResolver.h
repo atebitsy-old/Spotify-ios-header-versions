@@ -20,13 +20,13 @@
 }
 
 + (id)resolverError;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlaylistPlatformDataLoaderResponse<SPTCanvasPlaylistTracksResolverFields> *playlistTracksMetadata; // @synthesize playlistTracksMetadata=_playlistTracksMetadata;
 @property(retain, nonatomic) id <SPTCanvasPlaylistResolverFields> playlistMetadata; // @synthesize playlistMetadata=_playlistMetadata;
 @property(retain, nonatomic) NSError *resolveError; // @synthesize resolveError=_resolveError;
 @property(retain, nonatomic) SPTaskCompletionSource *completionSource; // @synthesize completionSource=_completionSource;
 @property(readonly, copy, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
-- (void).cxx_destruct;
 - (id)metadataDictionaryForTrackItem:(id)arg1;
 - (void)updateCompletionSource;
 - (void)loadPlaylistURLs;

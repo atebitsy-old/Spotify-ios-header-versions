@@ -19,11 +19,11 @@
     SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater *_lastSeenDateUpdater;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater *lastSeenDateUpdater; // @synthesize lastSeenDateUpdater=_lastSeenDateUpdater;
 @property(retain, nonatomic) SPTPremiumDestinationTabBarBadgeDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 @property(nonatomic) __weak UIViewController *tabBarBadgeViewController; // @synthesize tabBarBadgeViewController=_tabBarBadgeViewController;
-- (void).cxx_destruct;
 - (void)updateTabBarItemForViewController:(id)arg1 badgeDisplayed:(_Bool)arg2;
 - (_Bool)shouldShowBadgeFromModel:(id)arg1 currentDate:(id)arg2 lastSeenDate:(id)arg3;
 - (void)lastSeenDateDidChange;

@@ -31,6 +31,7 @@
     NSDictionary *_rawJSON;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isLoaded; // @synthesize isLoaded=_isLoaded;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(copy, nonatomic) NSDictionary *rawJSON; // @synthesize rawJSON=_rawJSON;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) NSCache *progressCache; // @synthesize progressCache=_progressCache;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryEpisodesViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)cellActionHandler:(id)arg1 episodeForIndexPath:(id)arg2;
 - (id)cellActionHandler:(id)arg1 allEpisodesInSection:(long long)arg2;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;

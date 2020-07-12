@@ -19,10 +19,10 @@
     SPTAccessoryManagerLogging *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAccessoryManagerLogging *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)accessoryStateManager:(id)arg1 accessoryDidDisconnect:(id)arg2;
 - (void)accessoryStateManager:(id)arg1 accessoryDidConnect:(id)arg2;
 - (void)logStreamEndedForPlaybackID:(id)arg1;

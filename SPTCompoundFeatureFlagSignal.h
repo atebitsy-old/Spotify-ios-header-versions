@@ -15,8 +15,8 @@
     NSMapTable *_signals;
 }
 
-@property(readonly, nonatomic) NSMapTable *signals; // @synthesize signals=_signals;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMapTable *signals; // @synthesize signals=_signals;
 - (void)logExposure;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (long long)compoundStateForStates:(id)arg1;

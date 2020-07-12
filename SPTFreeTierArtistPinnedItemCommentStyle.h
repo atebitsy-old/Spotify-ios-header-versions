@@ -20,13 +20,13 @@
     struct CGSize _artistImageSize;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *placeholderLabelStyle; // @synthesize placeholderLabelStyle=_placeholderLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *labelStyle; // @synthesize labelStyle=_labelStyle;
 @property(copy, nonatomic) GLUEImageStyle *artistImageStyle; // @synthesize artistImageStyle=_artistImageStyle;
 @property(nonatomic) struct CGSize artistImageSize; // @synthesize artistImageSize=_artistImageSize;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

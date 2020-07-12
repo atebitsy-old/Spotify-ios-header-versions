@@ -17,12 +17,12 @@
     NSDate *_logoutTime;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *logoutTime; // @synthesize logoutTime=_logoutTime;
 @property(copy, nonatomic) NSString *imageURL; // @synthesize imageURL=_imageURL;
 @property(copy, nonatomic) NSString *loginMethod; // @synthesize loginMethod=_loginMethod;
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(copy, nonatomic) NSString *userName; // @synthesize userName=_userName;
-- (void).cxx_destruct;
 
 @end
 

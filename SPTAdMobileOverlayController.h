@@ -44,6 +44,7 @@
     double _inactivityThreshold;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowTopBanner; // @synthesize shouldShowTopBanner=_shouldShowTopBanner;
 @property(nonatomic) _Bool shouldForceDisplay; // @synthesize shouldForceDisplay=_shouldForceDisplay;
 @property(nonatomic) _Bool shouldAnimateSlate; // @synthesize shouldAnimateSlate=_shouldAnimateSlate;
@@ -67,7 +68,6 @@
 @property(readonly, nonatomic) __weak SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(readonly, nonatomic) __weak id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
-- (void).cxx_destruct;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (void)closeButtonTappedInBannerView:(id)arg1;
 - (void)actionButtonTappedInBannerView:(id)arg1;

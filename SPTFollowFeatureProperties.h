@@ -18,11 +18,11 @@
     NSString *_unfollowShowConfirmationOverrideString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *unfollowShowConfirmationOverrideString; // @synthesize unfollowShowConfirmationOverrideString=_unfollowShowConfirmationOverrideString;
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
-- (void).cxx_destruct;
 - (unsigned long long)mapUnfollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (unsigned long long)mapFollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (id)propertyModels;

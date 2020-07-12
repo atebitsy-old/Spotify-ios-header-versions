@@ -19,10 +19,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 queueDidChange:(id)arg2;
 - (void)getPlayQueueWithCompletionHandler:(CDUnknownBlockType)arg1;
 - (void)removeObserver:(id)arg1;

@@ -16,11 +16,11 @@
     SPTResubModalPresenter *_presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTResubModalPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) SPTResubModalEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) SPTResubModalShowManager *showManager; // @synthesize showManager=_showManager;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (void)dismiss:(id)arg1;
 - (void)logActionModalDismissedBySystem;
 - (void)logActionModalDismissedByUser;

@@ -24,6 +24,7 @@
     SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(copy, nonatomic) CDUnknownBlockType shareCompletionBlock; // @synthesize shareCompletionBlock=_shareCompletionBlock;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) NSString *utmCampaign; // @synthesize utmCampaign=_utmCampaign;
 @property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
 @property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
-- (void).cxx_destruct;
 - (id)provideShareAlertModelForError:(id)arg1;
 - (void)sharerDidCancel:(id)arg1;
 - (void)sharer:(id)arg1 didFailWithError:(id)arg2;

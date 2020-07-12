@@ -9,13 +9,14 @@
 #import "SPTLoginThirdPartyLoginHandlerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
 #import "SPTLoginViewControllerWithManagedActionButtons-Protocol.h"
+#import "SPTLoginWelcomeViewImageInteractionHandler-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
 @class NSString, NSURL, SPTLoginActionButtonManager, SPTLoginTheme, SPTLoginWelcomeView, SPTLoginWelcomeViewModel, SPTProgressView;
 @protocol GLUEImageLoader, SPTPageContainer;
 
-@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerProtocol, SPTLoginViewControllerWithManagedActionButtons>
+@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTLoginWelcomeViewImageInteractionHandler, SPTPageController, SPTLoginViewControllerProtocol, SPTLoginViewControllerWithManagedActionButtons>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -26,6 +27,7 @@
     id <GLUEImageLoader> _imageLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTProgressView *progressIndicator; // @synthesize progressIndicator=_progressIndicator;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
@@ -33,7 +35,8 @@
 @property(readonly, nonatomic) SPTLoginActionButtonManager *actionButtonManager; // @synthesize actionButtonManager=_actionButtonManager;
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
-- (void).cxx_destruct;
+- (void)userDidSwipeImage;
+- (void)userDidTapImage;
 - (void)viewRequiresStyleApplyingToButtons;
 - (void)userDidTapButtonWithTag:(unsigned long long)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;

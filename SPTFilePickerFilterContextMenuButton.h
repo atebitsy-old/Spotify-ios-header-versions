@@ -17,8 +17,8 @@
 }
 
 + (id)filterContextMenuButton;
-@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void)applyThemeLayout;
 - (struct CGSize)SPTCellAccessoryViewPositionAdjustment;
 - (void)layoutSubviews;

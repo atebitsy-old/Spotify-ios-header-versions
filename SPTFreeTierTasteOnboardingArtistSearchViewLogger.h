@@ -17,11 +17,11 @@
     NSString *_featureIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logViewDataDidCancel;
 - (void)logViewDataDidLoad;
 - (void)logViewDataDidFailToLoad;

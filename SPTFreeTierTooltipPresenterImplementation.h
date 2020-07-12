@@ -20,13 +20,13 @@
     UITapGestureRecognizer *_tapRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isTooltipPresented) _Bool tooltipPresented; // @synthesize tooltipPresented=_tooltipPresented;
 @property(retain, nonatomic) UITapGestureRecognizer *tapRecognizer; // @synthesize tapRecognizer=_tapRecognizer;
 @property(retain, nonatomic) SPTFreeTierTooltipView *currentTooltipView; // @synthesize currentTooltipView=_currentTooltipView;
 @property(retain, nonatomic) NSTimer *presentationTimer; // @synthesize presentationTimer=_presentationTimer;
 @property(retain, nonatomic) NSLayoutConstraint *verticalAlignmentConstraint; // @synthesize verticalAlignmentConstraint=_verticalAlignmentConstraint;
 @property(retain, nonatomic) SPTFreeTierTooltipTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)userDidTapTooltipView:(id)arg1;
 - (_Bool)canFitTooltip:(id)arg1 inContainer:(id)arg2;
 - (double)timeIntervalForDuration:(long long)arg1;

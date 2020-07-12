@@ -10,7 +10,9 @@
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: theme
-    // Error parsing type: , name: header
+    // Error parsing type: , name: yourLibraryView
+    // Error parsing type: , name: makeViewBinder
+    // Error parsing type: , name: viewBinder
 }
 
 - (void).cxx_destruct;
@@ -18,6 +20,7 @@
 - (id)initWithCoder:(id)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (void)loadView;
 
 @end
 

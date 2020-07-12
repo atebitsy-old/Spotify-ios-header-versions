@@ -14,8 +14,8 @@
 }
 
 + (id)messageWithAuthId:(id)arg1;
-@property(copy, nonatomic) NSString *authIdValue; // @synthesize authIdValue=_authIdValue;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *authIdValue; // @synthesize authIdValue=_authIdValue;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

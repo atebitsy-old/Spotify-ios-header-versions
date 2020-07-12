@@ -22,6 +22,7 @@
     long long _doubleLinePriority;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long doubleLinePriority; // @synthesize doubleLinePriority=_doubleLinePriority;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double subtitleLabelBottomMargin; // @synthesize subtitleLabelBottomMargin=_subtitleLabelBottomMargin;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToCardDetailsStyle:(id)arg1;

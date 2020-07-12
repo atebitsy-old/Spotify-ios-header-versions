@@ -22,6 +22,7 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIColor *selectedColor; // @synthesize selectedColor=_selectedColor;
@@ -31,7 +32,6 @@
 - (long long)icon;
 - (void)setIconSize:(struct CGSize)arg1;
 - (struct CGSize)iconSize;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)setSelected:(_Bool)arg1;
 - (void)updateForSelected;

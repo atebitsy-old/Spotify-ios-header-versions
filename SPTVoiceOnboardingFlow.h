@@ -18,12 +18,12 @@
     id <SPTVoiceLoggerProtocol> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceLoggerProtocol> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTVoiceOnboardingFlowState> stateHandler; // @synthesize stateHandler=_stateHandler;
 @property(readonly, nonatomic) NSString *version; // @synthesize version=_version;
 @property(nonatomic) __weak id <SPTVoiceOnboardingFlowSessionIdProvider> sessionIdProvider; // @synthesize sessionIdProvider=_sessionIdProvider;
 @property(readonly, nonatomic) NSArray *pages; // @synthesize pages=_pages;
-- (void).cxx_destruct;
 - (void)resetOnboardingPageVisits;
 - (void)setOnboardingFlowFinished:(_Bool)arg1 withUserFinishMethod:(id)arg2 withCompletion:(CDUnknownBlockType)arg3;
 - (void)setCompleted:(_Bool)arg1;

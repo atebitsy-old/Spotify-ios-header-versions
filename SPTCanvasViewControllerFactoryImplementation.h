@@ -15,8 +15,8 @@
     SPTCanvasViewControllerViewModelFactory *_viewModelFactory;
 }
 
-@property(readonly, nonatomic) SPTCanvasViewControllerViewModelFactory *viewModelFactory; // @synthesize viewModelFactory=_viewModelFactory;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTCanvasViewControllerViewModelFactory *viewModelFactory; // @synthesize viewModelFactory=_viewModelFactory;
 - (id)createCanvasLowResViewControllerForTrack:(id)arg1 withCanvasModel:(id)arg2;
 - (id)createCanvasViewControllerForTrack:(id)arg1 withCanvasModel:(id)arg2;
 - (CDUnknownBlockType)canvasLowResVideoExporterProvider;

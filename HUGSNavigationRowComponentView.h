@@ -20,10 +20,10 @@
 
 + (id)styleForTheme:(id)arg1;
 + (id)styleForModel:(id)arg1 theme:(id)arg2 styleOverrider:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 @property(readonly, nonatomic) GLUENavigationCollectionViewCell *navigationCell; // @synthesize navigationCell=_navigationCell;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)prepareForReuse;
 - (void)sendSelectionEvent;

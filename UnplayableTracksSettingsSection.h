@@ -16,10 +16,10 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
 @property(readonly, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
-- (void).cxx_destruct;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 - (void)hideUnplayableTracksChanged:(id)arg1;

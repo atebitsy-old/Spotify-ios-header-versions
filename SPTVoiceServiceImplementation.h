@@ -12,7 +12,7 @@
 #import "SPTVoiceTestManagerSettingsDelegate-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVoiceOnboardingManager, SPTVoiceSessionHandlingOptions, SPTVoiceTabBarViewManager, SPTVoiceTestManagerImplementation;
-@protocol SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTExternalIntegrationPlaybackService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRadioManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceAudioRecorderFactory, SPTVoiceLoggerProtocol, SPTVoiceOnboardingRecordPermissionsState, SPTVoicePlayerEventsListener, SPTVoiceSessionViewControllerFactory, _TtP14VoiceUIFeature17SPTVoiceUIService_;
+@protocol SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTExternalIntegrationPlaybackService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRadioManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceAudioRecorderFactory, SPTVoiceLoggerProtocol, SPTVoiceOnboardingRecordPermissionsState, SPTVoicePlayerEventsListener, SPTVoiceSessionViewControllerFactory;
 
 @interface SPTVoiceServiceImplementation : NSObject <SPTVoiceTestManagerObserver, SPTVoiceTestManagerSettingsDelegate, SPTVoiceTabBarViewManagerDelegate, SPTVoiceService>
 {
@@ -33,7 +33,6 @@
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTFreeTierService> _freeTierService;
     id <SPTBannerFeature> _bannerService;
-    id <_TtP14VoiceUIFeature17SPTVoiceUIService_> _voiceUIService;
     id <SPTDataLoaderAuthorisationHostRegistration> _authoriser;
     id <SPTVoiceSessionViewControllerFactory> _defaultViewControllerFactory;
     SPTVoiceTestManagerImplementation *_testManager;
@@ -47,6 +46,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoicePlayerEventsListener> playerEventListener; // @synthesize playerEventListener=_playerEventListener;
 @property(retain, nonatomic) SPTVoiceSessionHandlingOptions *sessionHandlingOptions; // @synthesize sessionHandlingOptions=_sessionHandlingOptions;
 @property(retain, nonatomic) id <SPTVoiceOnboardingRecordPermissionsState> permissionsReducer; // @synthesize permissionsReducer=_permissionsReducer;
@@ -57,7 +57,6 @@
 @property(readonly, nonatomic) SPTVoiceTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTVoiceSessionViewControllerFactory> defaultViewControllerFactory; // @synthesize defaultViewControllerFactory=_defaultViewControllerFactory;
 @property(nonatomic) __weak id <SPTDataLoaderAuthorisationHostRegistration> authoriser; // @synthesize authoriser=_authoriser;
-@property(nonatomic) __weak id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceUIService; // @synthesize voiceUIService=_voiceUIService;
 @property(nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
@@ -74,7 +73,6 @@
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(readonly, nonatomic) id <SPTRadioManager> radioManager; // @synthesize radioManager=_radioManager;
-- (void).cxx_destruct;
 - (void)tabBarViewManager:(id)arg1 didTriggerGesture:(id)arg2 referrerIdentifer:(id)arg3;
 - (id)resolveReferrerIdentiferForContext:(id)arg1;
 - (id)authorisationHosts;

@@ -38,6 +38,7 @@
     NSArray *_shareDestinations;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *shareDestinations; // @synthesize shareDestinations=_shareDestinations;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
@@ -58,7 +59,6 @@
 @property(retain, nonatomic) SPTShareDestinationUtility *shareDestinationUtility; // @synthesize shareDestinationUtility=_shareDestinationUtility;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(nonatomic) __weak id <SPTShareViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)performShareDestination:(id)arg1;
 - (id)provideDestinationTaskWithShareDestinationId:(long long)arg1 title:(id)arg2 icon:(id)arg3;
 - (id)provideFacebookShareDestinationTasks;

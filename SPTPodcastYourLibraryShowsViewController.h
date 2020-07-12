@@ -36,6 +36,7 @@
     NSArray *_infoViewConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *infoViewConstraints; // @synthesize infoViewConstraints=_infoViewConstraints;
 @property(retain, nonatomic) UIView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) id <SPTShowInfoViewProvider> infoViewProvider; // @synthesize infoViewProvider=_infoViewProvider;
@@ -49,7 +50,6 @@
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SPTPodcastYourLibraryShowsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTYourLibraryPageDelegate> pageDelegate; // @synthesize pageDelegate=_pageDelegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double offscreenContentHeight;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;

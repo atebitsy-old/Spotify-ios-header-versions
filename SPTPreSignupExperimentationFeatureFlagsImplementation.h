@@ -15,8 +15,8 @@
     NSArray *_flags;
 }
 
-@property(copy, nonatomic) NSArray *flags; // @synthesize flags=_flags;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *flags; // @synthesize flags=_flags;
 - (long long)stateForFlag:(id)arg1;
 - (id)initWithFlags:(id)arg1;
 

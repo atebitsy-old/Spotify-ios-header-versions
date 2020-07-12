@@ -17,9 +17,9 @@
     id <GLUETheme> _glueTheme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)contextMenuButtonForIndexPath:(id)arg1 target:(id)arg2;
 - (id)checkmarkButtonForIndexPath:(id)arg1 target:(id)arg2;
 - (id)playButton:(_Bool)arg1 indexPath:(id)arg2 target:(id)arg3;

@@ -19,11 +19,11 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, copy, nonatomic) NSString *viewURIString; // @synthesize viewURIString=_viewURIString;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)logInteraction:(id)arg1;
 - (void)logInteractionWithURI:(id)arg1 event:(id)arg2 userIntent:(id)arg3;
 - (id)initWithLogCenter:(id)arg1 featureIdentifier:(id)arg2 pageURI:(id)arg3 ubiLogger:(id)arg4;

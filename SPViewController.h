@@ -17,8 +17,8 @@
     id <NSObject> _statusBarFrameObservation;
 }
 
-@property(retain, nonatomic) id <NSObject> statusBarFrameObservation; // @synthesize statusBarFrameObservation=_statusBarFrameObservation;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <NSObject> statusBarFrameObservation; // @synthesize statusBarFrameObservation=_statusBarFrameObservation;
 - (void)sp_updateContentInsets;
 @property(readonly, nonatomic) NSURL *URI;
 - (void)viewWillDisappear:(_Bool)arg1;

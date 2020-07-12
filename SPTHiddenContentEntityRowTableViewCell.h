@@ -11,8 +11,8 @@
     id _interactionListener;
 }
 
-@property(retain, nonatomic) id interactionListener; // @synthesize interactionListener=_interactionListener;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id interactionListener; // @synthesize interactionListener=_interactionListener;
 
 @end
 

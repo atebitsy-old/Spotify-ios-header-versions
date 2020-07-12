@@ -12,10 +12,10 @@
 @class NSString, UILayoutGuide;
 
 @interface UIView (EncoreConsumerMobile) <SPTInstrumentationInteractable, SPTInstrumentationInteractionItemIDUtilities>
-+ (id)glue_lottieAnimationStylerForAnimationView:(struct UIView *)arg1;
-+ (struct UIView *)glue_createStatefulAnimationView;
-+ (struct UIView *)glue_createAnimationViewWithName:(id)arg1;
-+ (struct UIView *)glue_createAnimationView;
++ (id)glue_lottieAnimationStylerForAnimationView:(id)arg1;
++ (id)glue_createStatefulAnimationView;
++ (id)glue_createAnimationViewWithName:(id)arg1;
++ (id)glue_createAnimationView;
 + (void)glue_animateWithDuration:(double)arg1 animations:(CDUnknownBlockType)arg2 degradationPolicy:(unsigned long long)arg3;
 + (void)glue_animateWithDuration:(double)arg1 animations:(CDUnknownBlockType)arg2 completion:(CDUnknownBlockType)arg3 degradationPolicy:(unsigned long long)arg4;
 + (void)glue_animateWithDuration:(double)arg1 delay:(double)arg2 options:(unsigned long long)arg3 animations:(CDUnknownBlockType)arg4 completion:(CDUnknownBlockType)arg5 degradationPolicy:(unsigned long long)arg6;

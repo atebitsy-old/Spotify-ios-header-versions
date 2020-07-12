@@ -17,9 +17,9 @@
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)initWithFreeTierService:(id)arg1 featureFlagFactory:(id)arg2;
 

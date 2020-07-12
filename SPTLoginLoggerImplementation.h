@@ -19,11 +19,11 @@
     NSString *_deviceID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
 @property(retain, nonatomic) SPTLoginUUIDProvider *sessionIDProvider; // @synthesize sessionIDProvider=_sessionIDProvider;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTAdjustUserTrackerProtocol> adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
-- (void).cxx_destruct;
 - (id)timestamp;
 - (void)userDidCompleteRequestWithType:(id)arg1 error:(id)arg2 attemptId:(id)arg3 result:(id)arg4;
 - (void)userDidCompleteRequestWithType:(id)arg1 error:(id)arg2 attemptId:(id)arg3;

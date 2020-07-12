@@ -16,8 +16,8 @@
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
 + (void)configureHeaderView:(id)arg1 withModel:(id)arg2 theme:(id)arg3;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
-@property(readonly, nonatomic) GLUESectionHeaderView *headerView; // @synthesize headerView=_headerView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) GLUESectionHeaderView *headerView; // @synthesize headerView=_headerView;
 - (void)applyThemeLayout;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;

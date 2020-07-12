@@ -16,8 +16,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logExternalActionOrigin:(id)arg1 actionType:(id)arg2 userIntent:(id)arg3 uri:(id)arg4;
 - (void)logSetPodcastPlaybackSpeed:(id)arg1 externalActionOrigin:(id)arg2;
 - (void)logSearchWithQuery:(id)arg1 externalActionOrigin:(id)arg2;

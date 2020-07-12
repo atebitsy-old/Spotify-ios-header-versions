@@ -15,8 +15,8 @@
 
 + (id)getGradientColorsForColor:(id)arg1;
 + (id)gradientStyleForColor:(id)arg1;
-@property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void)updateColorForImage:(id)arg1;
 - (id)initWithTheme:(id)arg1;
 

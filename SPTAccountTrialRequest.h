@@ -18,12 +18,12 @@
     SPTHermesRequest *_request;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHermesRequest *request; // @synthesize request=_request;
 @property(retain, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 @property(retain, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
 @property(retain, nonatomic) NSString *country; // @synthesize country=_country;
 @property(nonatomic) __weak id <SPTAccountTrialRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)startTrialResponseFailure:(id)arg1;
 - (void)startTrialResponseSuccess;
 - (void)cancel;

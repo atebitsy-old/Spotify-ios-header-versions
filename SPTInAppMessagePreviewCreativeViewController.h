@@ -28,6 +28,7 @@
     NSString *_selectedType;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *selectedType; // @synthesize selectedType=_selectedType;
 @property(copy, nonatomic) NSArray *triggerTypes; // @synthesize triggerTypes=_triggerTypes;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) GLUEButton *submitButton; // @synthesize submitButton=_submitButton;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTInAppMessagePreviewCreativeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)getUserSelectedTriggerType;
 - (void)cancelButtonPressed;
 - (void)submitButtonPressed;

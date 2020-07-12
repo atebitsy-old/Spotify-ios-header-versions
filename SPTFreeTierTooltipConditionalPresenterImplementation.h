@@ -18,10 +18,10 @@
     NSString *_presentedTooltipIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *presentedTooltipIdentifier; // @synthesize presentedTooltipIdentifier=_presentedTooltipIdentifier;
 @property(retain, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
 @property(retain, nonatomic) id <SPTFreeTierTooltipPresenter> tooltipPresenter; // @synthesize tooltipPresenter=_tooltipPresenter;
-- (void).cxx_destruct;
 - (_Bool)isBlockedForTA;
 - (void)dismissTooltipWithIdentifier:(id)arg1;
 - (_Bool)isTooltipPresented;

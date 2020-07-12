@@ -17,10 +17,10 @@
     GLUEGradientView *_gradientOverlay;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientView *gradientOverlay; // @synthesize gradientOverlay=_gradientOverlay;
 @property(readonly, nonatomic) UIView *fadeOverlay; // @synthesize fadeOverlay=_fadeOverlay;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
-- (void).cxx_destruct;
 - (_Bool)isBackgroundColorOpaque;
 - (_Bool)isOpaque;
 - (void)glue_applyStyle:(id)arg1;

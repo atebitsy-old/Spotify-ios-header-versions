@@ -17,10 +17,10 @@
     long long _icon;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
-- (void).cxx_destruct;
 - (id)performAction;
 - (id)initWithTitle:(id)arg1 action:(CDUnknownBlockType)arg2;
 

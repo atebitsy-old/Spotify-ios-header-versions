@@ -27,6 +27,7 @@
     unsigned long long _collectionPodcastCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long collectionPodcastCount; // @synthesize collectionPodcastCount=_collectionPodcastCount;
 @property(nonatomic) unsigned long long collectionPlaylistCount; // @synthesize collectionPlaylistCount=_collectionPlaylistCount;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> playlistPlatformRequestToken; // @synthesize playlistPlatformRequestToken=_playlistPlatformRequestToken;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (void)collectionPlatformDidChange:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

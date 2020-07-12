@@ -17,12 +17,12 @@
     NSURL *_imageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isExplicit; // @synthesize isExplicit=_isExplicit;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, copy, nonatomic) NSString *showName; // @synthesize showName=_showName;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 showName:(id)arg2 uri:(id)arg3 imageURL:(id)arg4 isExplicit:(_Bool)arg5;
 
 @end

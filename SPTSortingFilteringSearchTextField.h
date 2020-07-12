@@ -18,10 +18,10 @@
     id <SPTSortingFilteringSearchFieldStyle> _style;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) id <SPTSortingFilteringSearchFieldStyle> style; // @synthesize style=_style;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
-- (void).cxx_destruct;
 - (void)updateRightViewButton;
 - (void)setText:(id)arg1;
 - (void)clearText:(id)arg1;

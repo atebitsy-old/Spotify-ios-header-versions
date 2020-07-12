@@ -20,15 +20,17 @@
     HUBComponentView *_headerComponentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBComponentView *headerComponentView; // @synthesize headerComponentView=_headerComponentView;
 @property(readonly, nonatomic) HUBComponentViewManager *componentViewManager; // @synthesize componentViewManager=_componentViewManager;
 @property(readonly, nonatomic) HUBComponentViewImageLoader *componentViewImageLoader; // @synthesize componentViewImageLoader=_componentViewImageLoader;
 @property(nonatomic) __weak id <HUBHeaderViewComponentDelegate> componentDelegate; // @synthesize componentDelegate=_componentDelegate;
 @property(retain, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
-- (void).cxx_destruct;
 - (void)componentViewManager:(id)arg1 componentViewDidDisappear:(id)arg2;
 - (void)componentViewManager:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)componentViewDidDisappear;
+- (void)componentViewWillDisappear;
+- (void)componentViewDidAppear;
 - (void)componentViewWillAppear;
 - (id)createComponentViewForComponentModel:(id)arg1;
 - (void)configureComponentView;

@@ -15,8 +15,8 @@
     NSMutableDictionary *_modes;
 }
 
-@property(readonly, nonatomic) NSMutableDictionary *modes; // @synthesize modes=_modes;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableDictionary *modes; // @synthesize modes=_modes;
 - (void)unregisterAllModes;
 - (void)deregisterMode:(id)arg1;
 - (void)registerMode:(id)arg1;

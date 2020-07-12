@@ -20,12 +20,12 @@
     NSMutableArray *_contextTracks;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool finishedRequest; // @synthesize finishedRequest=_finishedRequest;
 @property(retain, nonatomic) NSMutableArray *contextTracks; // @synthesize contextTracks=_contextTracks;
 @property(retain, nonatomic) id <SPTFreeTierArtistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierArtistOfflineModel *offlineModel; // @synthesize offlineModel=_offlineModel;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)createAlbumsSection:(id)arg1;
 - (void)createLikedSongsSection:(id)arg1;
 - (id)createPlayer;

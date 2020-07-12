@@ -15,8 +15,8 @@
     SPTFreeTierAlbumOfflineModel *_albumOfflineModel;
 }
 
-@property(readonly, nonatomic) SPTFreeTierAlbumOfflineModel *albumOfflineModel; // @synthesize albumOfflineModel=_albumOfflineModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTFreeTierAlbumOfflineModel *albumOfflineModel; // @synthesize albumOfflineModel=_albumOfflineModel;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithAlbumOfflineModel:(id)arg1;
 

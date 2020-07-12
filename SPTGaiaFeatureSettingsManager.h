@@ -21,6 +21,7 @@
     id <SPTAlertInterface> _alertInterface;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTGaiaConnectQAManager *connectQAManager; // @synthesize connectQAManager=_connectQAManager;
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(retain, nonatomic) SPTGaiaHomeDeviceManager *savedDeviceManager; // @synthesize savedDeviceManager=_savedDeviceManager;
 @property(retain, nonatomic) SPTGaiaFeatureFlagsManager *featureFlagsManager; // @synthesize featureFlagsManager=_featureFlagsManager;
-- (void).cxx_destruct;
 - (id)customAppIdItem;
 - (void)showClearNewlyDiscoveredErrorAlert:(id)arg1;
 - (void)showCustomReceiverAlert;

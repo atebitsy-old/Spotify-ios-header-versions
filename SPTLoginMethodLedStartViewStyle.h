@@ -23,6 +23,7 @@
     double _mainContainerIPadWidth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double mainContainerIPadWidth; // @synthesize mainContainerIPadWidth=_mainContainerIPadWidth;
 @property(nonatomic) double mainContainerWidth; // @synthesize mainContainerWidth=_mainContainerWidth;
 @property(nonatomic) double buttonsEdgeMargin; // @synthesize buttonsEdgeMargin=_buttonsEdgeMargin;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) GLUEButtonStyle *signupButtonStyle; // @synthesize signupButtonStyle=_signupButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *buttonHeadingLabelStyle; // @synthesize buttonHeadingLabelStyle=_buttonHeadingLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

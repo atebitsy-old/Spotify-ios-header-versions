@@ -19,11 +19,11 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
-- (void).cxx_destruct;
 - (id)recommendedPlaylistFooterForURL:(id)arg1 withContext:(id)arg2;
 - (id)providePlaylistHubManager;
 - (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 onDemandService:(id)arg3 productState:(id)arg4;

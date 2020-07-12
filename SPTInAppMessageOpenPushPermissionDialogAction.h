@@ -16,8 +16,8 @@
     id <SPTPushMessagingPermissionRequestor> _pushPermissionRequestor;
 }
 
-@property(readonly, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
 - (void)executeActionWithURL:(id)arg1;
 - (id)initWithPushPermissionRequestor:(id)arg1;
 

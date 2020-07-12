@@ -551,8 +551,6 @@ struct GPBOutputBufferState {
     NSOutputStream *output;
 };
 
-struct GenericTimerManager;
-
 struct GoogleSignInCredential {
     struct unique_ptr<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl>> _pimpl;
 };
@@ -753,10 +751,6 @@ struct NSDictionary {
 };
 
 struct NSMutableDictionary {
-    Class _field1;
-};
-
-struct NSString {
     Class _field1;
 };
 
@@ -1155,21 +1149,9 @@ struct UIEdgeInsets {
     double right;
 };
 
-struct UIImage {
-    Class _field1;
-};
-
 struct UIOffset {
     double horizontal;
     double vertical;
-};
-
-struct UIView {
-    Class _field1;
-};
-
-struct UIViewController {
-    Class _field1;
 };
 
 struct UInt8Range {
@@ -1296,6 +1278,12 @@ struct __tree_end_node<std::__1::__tree_node_base<void *>*> {
 struct _opaque_pthread_mutex_t {
     long long __sig;
     char __opaque[56];
+};
+
+struct _opaque_pthread_t {
+    long long _field1;
+    struct __darwin_pthread_handler_rec *_field2;
+    char _field3[8176];
 };
 
 struct a8;
@@ -1946,11 +1934,6 @@ struct shared_ptr<spotify::analytics::LoggerImpl> {
 struct shared_ptr<spotify::analytics::TrackedLoggerImpl> {
     struct TrackedLoggerImpl *_field1;
     struct __shared_weak_count *_field2;
-};
-
-struct shared_ptr<spotify::async::GenericTimerManager> {
-    struct GenericTimerManager *__ptr_;
-    struct __shared_weak_count *__cntrl_;
 };
 
 struct shared_ptr<spotify::async::Timer::Impl> {
@@ -2947,25 +2930,6 @@ struct weak_ptr<spotify::social::SocialManager> {
 
 #if 0
 // Names with conflicting types:
-typedef struct {
-    Class _field1;
-    id _field2;
-    unsigned long long _field3;
-    unsigned long long _field4;
-    unsigned long long _field5;
-    unsigned long long _field6;
-    id _field7;
-    id _field8;
-} SPTCollectionPlatformDataLoaderResponse_3cfdded1;
-
-typedef struct {
-    Class _field1;
-} SPTCollectionPlatformDataLoaderResponse_f5c2288a;
-
-typedef struct {
-    Class _field1;
-} SPTPlaylistPlatformDataLoaderResponse_5db64d04;
-
 typedef struct ?<std::__1::chrono::duration<long long, std::__1::ratio<1, 1000>>> {
     union {
         char _field1;

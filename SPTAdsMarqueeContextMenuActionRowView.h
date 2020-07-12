@@ -16,11 +16,11 @@
     SPTAdsContextMenuCustomAction *_contextMenuAction;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAdsContextMenuCustomAction *contextMenuAction; // @synthesize contextMenuAction=_contextMenuAction;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(readonly, nonatomic) GLUELabel *actionTitleLabel; // @synthesize actionTitleLabel=_actionTitleLabel;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;

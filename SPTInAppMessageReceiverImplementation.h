@@ -31,6 +31,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool cancelPresentation; // @synthesize cancelPresentation=_cancelPresentation;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) SPTInAppMessageNotePresentationController *notePresentationController; // @synthesize notePresentationController=_notePresentationController;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) SPTInAppMessageNoteOverlayController *noteOverlayController; // @synthesize noteOverlayController=_noteOverlayController;
 @property(retain, nonatomic) SPTInAppMessageSDKBannerPresentationController *bannerPresentationController; // @synthesize bannerPresentationController=_bannerPresentationController;
 @property(retain, nonatomic) SPTInAppMessageCardPresentationController *cardPresentationController; // @synthesize cardPresentationController=_cardPresentationController;
-- (void).cxx_destruct;
 - (void)cancelMessagePresentation:(id)arg1;
 - (void)didReceiveMessageViewModel:(id)arg1 matchedPattern:(id)arg2 triggerType:(id)arg3;
 - (id)initWithSlateManager:(id)arg1 slateBuilderProvider:(id)arg2 noteOverlayController:(id)arg3 bannerPresentationManager:(id)arg4 freeTierTooltipPresenter:(id)arg5 snackbarPresenter:(id)arg6 nowPlayingManagerRegistry:(id)arg7 offlineModeState:(id)arg8 carDetector:(id)arg9 serviceLogger:(id)arg10 crashReporter:(id)arg11 authController:(id)arg12;

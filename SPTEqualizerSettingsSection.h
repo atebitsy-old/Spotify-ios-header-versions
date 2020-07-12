@@ -16,10 +16,10 @@
     SPTEqualizerLogger *_equalizerLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEqualizerLogger *equalizerLogger; // @synthesize equalizerLogger=_equalizerLogger;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTSettingsTableViewCell *cell; // @synthesize cell=_cell;
-- (void).cxx_destruct;
 - (void)didSelectRow:(long long)arg1;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

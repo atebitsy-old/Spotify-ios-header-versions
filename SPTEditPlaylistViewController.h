@@ -32,6 +32,7 @@
     SPTEditPlaylistEditStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) SPTEditPlaylistEditStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) NSIndexPath *indexPathForDescriptionCell; // @synthesize indexPathForDescriptionCell=_indexPathForDescriptionCell;
 @property(retain, nonatomic) SPTEditPlaylistHeaderView *headerView; // @synthesize headerView=_headerView;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) SPTEditPlaylistCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(readonly, nonatomic) id <SPTEditPlaylistViewModel> editViewModel; // @synthesize editViewModel=_editViewModel;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (void)keyboardWillHideNotification:(id)arg1;
 - (void)keyboardWillShowNotification:(id)arg1;
 - (_Bool)textFieldShouldReturn:(id)arg1;

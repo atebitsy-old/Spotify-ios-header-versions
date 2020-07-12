@@ -27,6 +27,7 @@
     id <SPTOfflineModeState> _offlineModeState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler; // @synthesize addTrackHandler=_addTrackHandler;
 @property(retain, nonatomic) NSMutableArray *cards; // @synthesize cards=_cards;
@@ -37,7 +38,6 @@
 @property(copy, nonatomic) NSString *contextName; // @synthesize contextName=_contextName;
 @property(nonatomic) __weak id <SPTAssistedCurationModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
-- (void).cxx_destruct;
 - (void)assistedCurationCardModelActions:(id)arg1 addTrack:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)cardProvider:(id)arg1 filterTracks:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)cardProvider:(id)arg1 newCards:(id)arg2;

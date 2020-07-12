@@ -16,11 +16,11 @@
     NSObject<OS_dispatch_queue> *_loggingQueue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *loggingQueue; // @synthesize loggingQueue=_loggingQueue;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (_Bool)isCacheAvailable;
 - (void)logAccessForFlagName:(id)arg1 variant:(id)arg2;
 - (void)logRequestTime:(double)arg1 payloadSize:(long long)arg2;

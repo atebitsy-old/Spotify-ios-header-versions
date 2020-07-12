@@ -16,11 +16,11 @@
     NSString *_eventVersion;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *eventVersion; // @synthesize eventVersion=_eventVersion;
 @property(readonly, copy, nonatomic) NSString *eventID; // @synthesize eventID=_eventID;
 @property(readonly, copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
 @property(readonly, copy, nonatomic) NSString *featureName; // @synthesize featureName=_featureName;
-- (void).cxx_destruct;
 - (id)initWithFeatureName:(id)arg1 eventName:(id)arg2 eventID:(id)arg3 eventVersion:(id)arg4;
 
 @end

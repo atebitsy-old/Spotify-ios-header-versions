@@ -17,8 +17,8 @@
 
 + (void)applyStyle:(id)arg1 toLabel:(id)arg2;
 + (struct CGSize)sizeForAttributedText:(id)arg1 style:(id)arg2 maxWidth:(double)arg3;
-@property(readonly, nonatomic) UILabel *label; // @synthesize label=_label;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UILabel *label; // @synthesize label=_label;
 - (void)addConstraints;
 - (void)glue_applyStyle:(id)arg1;
 @property(copy, nonatomic) NSAttributedString *attributedText;

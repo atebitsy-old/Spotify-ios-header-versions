@@ -15,10 +15,10 @@
     id <SPTPodcastUIStringFormatter> _stringFormatter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(readonly, nonatomic) id <SPTExternalIntegrationTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> configuration; // @synthesize configuration=_configuration;
-- (void).cxx_destruct;
 - (id)createCollectionPodcastEpisodes;
 - (id)createCollectionArtistChildContentFromMetadata:(id)arg1 collectionURI:(id)arg2 requestOptions:(id)arg3;
 - (id)createCollectionArtistContentFromMetadata:(id)arg1 requestOptions:(id)arg2;

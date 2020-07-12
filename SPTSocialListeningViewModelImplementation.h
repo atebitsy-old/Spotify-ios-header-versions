@@ -35,6 +35,7 @@
     unsigned long long _participantListHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSessionHost; // @synthesize isSessionHost=_isSessionHost;
 @property(nonatomic) unsigned long long participantListHeight; // @synthesize participantListHeight=_participantListHeight;
 @property(nonatomic) unsigned long long maxNumberOfUsers; // @synthesize maxNumberOfUsers=_maxNumberOfUsers;
@@ -53,7 +54,6 @@
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTSocialListeningListenTogetherStateManager> listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 - (_Bool)isListenTogetherEnabled;
 - (void)presenterDidConfirmDeleteSession:(id)arg1;
 - (void)removeObserver:(id)arg1;

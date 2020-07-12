@@ -18,11 +18,11 @@
     UIColor *_dayBackgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *dayBackgroundColor; // @synthesize dayBackgroundColor=_dayBackgroundColor;
 @property(copy, nonatomic) UIColor *monthBackgroundColor; // @synthesize monthBackgroundColor=_monthBackgroundColor;
 @property(copy, nonatomic) GLUELabelStyle *calendarDayLabelStyle; // @synthesize calendarDayLabelStyle=_calendarDayLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *calendarMonthLabelStyle; // @synthesize calendarMonthLabelStyle=_calendarMonthLabelStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToCalendarThumbnailViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

@@ -22,6 +22,7 @@
     id <SPTFollowFeatureLogger> _followFeatureLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfiguration; // @synthesize collectionPlatformConfiguration=_collectionPlatformConfiguration;
 @property(retain, nonatomic) SPTFollowFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) SPTFollowDataProvider *followDataProvider; // @synthesize followDataProvider=_followDataProvider;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(retain, nonatomic) NSString *currentUsername; // @synthesize currentUsername=_currentUsername;
-- (void).cxx_destruct;
 - (void)provideFollowModelForTargetURI:(id)arg1 logContext:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)createMultipleFollowModelForFollowDataList:(id)arg1 logContext:(id)arg2;
 - (id)createFollowModelForFollowData:(id)arg1 logContext:(id)arg2;

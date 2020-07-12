@@ -29,6 +29,7 @@
     id <SPTChartFreeTierCloudViewModel> _cloudViewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTChartFreeTierCloudViewModel> cloudViewModel; // @synthesize cloudViewModel=_cloudViewModel;
 @property(retain, nonatomic) SPTChart *chart; // @synthesize chart=_chart;
 @property(readonly, nonatomic) SPTChartLogger *logger; // @synthesize logger=_logger;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) id <SPTChartEntityDataSource> chartEntityDataSource; // @synthesize chartEntityDataSource=_chartEntityDataSource;
 @property(nonatomic) __weak id <SPTChartFreeTierViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTFreeTierAllSongsDataSourceDelegate> dataSourceDelegate; // @synthesize dataSourceDelegate=_dataSourceDelegate;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)trackStatusIconForType:(unsigned long long)arg1;
 - (unsigned long long)iconViewTypeForEntryStatus:(unsigned long long)arg1;

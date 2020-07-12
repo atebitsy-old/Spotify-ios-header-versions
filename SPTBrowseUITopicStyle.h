@@ -20,13 +20,13 @@
     GLUELabelStyle *_titleLabelStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(nonatomic) double topicItemLabelVerticalPadding; // @synthesize topicItemLabelVerticalPadding=_topicItemLabelVerticalPadding;
 @property(nonatomic) double topicItemLabelHorizontalPadding; // @synthesize topicItemLabelHorizontalPadding=_topicItemLabelHorizontalPadding;
 @property(nonatomic) double topicItemHeight; // @synthesize topicItemHeight=_topicItemHeight;
-- (void).cxx_destruct;
 - (_Bool)isEqualToTopicViewStyle:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

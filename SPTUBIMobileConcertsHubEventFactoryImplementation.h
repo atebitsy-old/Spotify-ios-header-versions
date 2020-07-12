@@ -16,8 +16,8 @@
 }
 
 + (id)factory;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)recommendedFactoryWithUri:(id)arg1;
 - (id)headerFactoryWithUri:(id)arg1;
 - (id)_location;

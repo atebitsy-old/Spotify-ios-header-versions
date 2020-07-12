@@ -31,6 +31,7 @@
     UIView *_placeholderBackgroundView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *placeholderBackgroundView; // @synthesize placeholderBackgroundView=_placeholderBackgroundView;
 @property(nonatomic) _Bool shouldHaveTransparentBackground; // @synthesize shouldHaveTransparentBackground=_shouldHaveTransparentBackground;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
@@ -47,7 +48,6 @@
 @property(nonatomic, getter=isReorderable) _Bool reorderable; // @synthesize reorderable=_reorderable;
 @property(nonatomic, getter=isEditing) _Bool editing; // @synthesize editing=_editing;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (struct CGRect)frameForAccessoryView;
 - (void)layoutSubviews;

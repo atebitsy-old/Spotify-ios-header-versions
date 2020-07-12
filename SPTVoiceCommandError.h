@@ -14,9 +14,9 @@
     NSString *_friendlyError;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *friendlyError; // @synthesize friendlyError=_friendlyError;
 @property(readonly, nonatomic) NSString *error; // @synthesize error=_error;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 - (id)initWithError:(id)arg1 friendlyError:(id)arg2;
 

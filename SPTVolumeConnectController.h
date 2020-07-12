@@ -20,12 +20,12 @@
     id <SPTGaiaDeviceProtocol> _cachedDevice;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTGaiaDeviceProtocol> cachedDevice; // @synthesize cachedDevice=_cachedDevice;
 @property(nonatomic) double cachedVolume; // @synthesize cachedVolume=_cachedVolume;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) SPTVolumeCosmosResolver *resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <SPTVolumeRemoteDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *debugLoggingIdentifier;
 @property(readonly, nonatomic) double volumeStep; // @dynamic volumeStep;
 - (void)sendVolumeUpdate:(double)arg1;

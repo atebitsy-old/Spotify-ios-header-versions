@@ -20,12 +20,12 @@
     NSString *_actionTitle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
 @property(readonly, copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) __weak id <SPTFreeTierAllSongsHeaderEntityViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 actionTitle:(id)arg2;
 - (id)initWithTitle:(id)arg1 subtitle:(id)arg2;
 

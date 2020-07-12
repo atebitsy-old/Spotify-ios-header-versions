@@ -17,10 +17,10 @@
     CDUnknownBlockType _actionBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
 @property(copy, nonatomic) NSString *buttonTitle; // @synthesize buttonTitle=_buttonTitle;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (void)actionButtonTapped:(id)arg1;
 - (unsigned long long)snackbarType;
 - (void)bindView:(id)arg1;

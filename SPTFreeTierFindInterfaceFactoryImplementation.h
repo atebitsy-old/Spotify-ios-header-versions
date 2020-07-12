@@ -20,12 +20,12 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) _Bool podcastFeatureEnabled; // @synthesize podcastFeatureEnabled=_podcastFeatureEnabled;
 @property(readonly, nonatomic) _Bool nftExperience; // @synthesize nftExperience=_nftExperience;
 @property(readonly, nonatomic) __weak id <SPTSearchService> searchService; // @synthesize searchService=_searchService;
 @property(readonly, nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
-- (void).cxx_destruct;
 - (id)makeURLProvider;
 - (id)makeDefaultConfiguration;
 - (id)makeNonNFTSearchViewController;

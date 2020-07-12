@@ -36,6 +36,7 @@
 
 + (id)progressView;
 + (void)showGaiaContextMenuProgressViewWithTitle:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool loadingViewShown; // @synthesize loadingViewShown=_loadingViewShown;
 @property(copy, nonatomic) NSArray *indicatorViewLayoutConstraints; // @synthesize indicatorViewLayoutConstraints=_indicatorViewLayoutConstraints;
 @property(retain, nonatomic) NSLayoutConstraint *containerViewEdgeInsetLeftConstraint; // @synthesize containerViewEdgeInsetLeftConstraint=_containerViewEdgeInsetLeftConstraint;
@@ -55,7 +56,6 @@
 @property(nonatomic) long long customIcon; // @synthesize customIcon=_customIcon;
 @property(nonatomic) long long mode; // @synthesize mode=_mode;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)createConstraints;
 - (void)updateIndicatorViewConstraints;

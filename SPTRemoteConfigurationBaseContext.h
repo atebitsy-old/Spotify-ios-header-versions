@@ -19,11 +19,11 @@
 }
 
 + (id)createInstallationID;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *installationID; // @synthesize installationID=_installationID;
 @property(copy, nonatomic) NSString *propertySetKey; // @synthesize propertySetKey=_propertySetKey;
 @property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
 @property(copy, nonatomic) NSString *clientID; // @synthesize clientID=_clientID;
-- (void).cxx_destruct;
 - (id)initWithClientID:(id)arg1 clientVersion:(id)arg2;
 
 @end

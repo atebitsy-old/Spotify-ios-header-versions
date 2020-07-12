@@ -20,12 +20,12 @@
 }
 
 + (id)freetierfind_styleForTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double padding; // @synthesize padding=_padding;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
 @property(copy, nonatomic) UIColor *contentColor; // @synthesize contentColor=_contentColor;
 @property(nonatomic) double backgroundVibrancyIntensity; // @synthesize backgroundVibrancyIntensity=_backgroundVibrancyIntensity;
-- (void).cxx_destruct;
 - (_Bool)isEqualToSearchBarStyle:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

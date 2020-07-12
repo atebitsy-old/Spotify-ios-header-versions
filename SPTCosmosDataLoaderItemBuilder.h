@@ -16,9 +16,9 @@
     CDUnknownBlockType _itemInitializer;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType itemInitializer; // @synthesize itemInitializer=_itemInitializer;
 @property(retain, nonatomic) NSArray *fields; // @synthesize fields=_fields;
-- (void).cxx_destruct;
 - (id)itemWithDictionary:(id)arg1;
 - (id)initWithFields:(id)arg1 itemInitializer:(CDUnknownBlockType)arg2;
 

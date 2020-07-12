@@ -26,6 +26,7 @@
     id <SPTPageController> _currentPageController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic, getter=spt_currentPageController) id <SPTPageController> currentPageController; // @synthesize currentPageController=_currentPageController;
 @property(retain, nonatomic) GLUEAccessoryIconButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) SPTAssistedCurationLogger *logger; // @synthesize logger=_logger;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) UIViewController<SPTSearch2RootViewControllerProtocol><SPTPageController> *searchViewController; // @synthesize searchViewController=_searchViewController;
 @property(retain, nonatomic) SPTAssistedCurationViewController *assistedCurationViewController; // @synthesize assistedCurationViewController=_assistedCurationViewController;
 @property(nonatomic) __weak id <SPTAssistedCurationNavigationControllerDelegate> navigationDelegate; // @synthesize navigationDelegate;
-- (void).cxx_destruct;
 - (void)barBackButtonTapped:(id)arg1;
 - (void)dismissSearchViewControllerFor:(id)arg1;
 - (void)openSearchFor:(id)arg1;

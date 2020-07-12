@@ -25,6 +25,7 @@
     struct CGSize _imageSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double defaultContentViewAlpha; // @synthesize defaultContentViewAlpha=_defaultContentViewAlpha;
 @property(nonatomic) double highlightedContentViewAlpha; // @synthesize highlightedContentViewAlpha=_highlightedContentViewAlpha;
 @property(nonatomic) double nameToSubtitlePadding; // @synthesize nameToSubtitlePadding=_nameToSubtitlePadding;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *nameLabelStyle; // @synthesize nameLabelStyle=_nameLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *imageViewStyle; // @synthesize imageViewStyle=_imageViewStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

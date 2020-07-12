@@ -22,6 +22,7 @@
     unsigned long long _checkmark;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long checkmark; // @synthesize checkmark=_checkmark;
 @property(readonly, copy, nonatomic) NSString *imageColorCode; // @synthesize imageColorCode=_imageColorCode;
 @property(readonly, copy, nonatomic) NSString *relatedMedia; // @synthesize relatedMedia=_relatedMedia;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isExtendedItem;
 - (id)createItemWithLogging:(id)arg1;

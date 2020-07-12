@@ -31,6 +31,7 @@
     id <SPTGaiaConnectAPI> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isFullscreenVideoPresented) _Bool fullscreenVideoPresented; // @synthesize fullscreenVideoPresented=_fullscreenVideoPresented;
 @property(nonatomic) _Bool wantsFullscreenVideoDismissal; // @synthesize wantsFullscreenVideoDismissal=_wantsFullscreenVideoDismissal;
 @property(nonatomic) _Bool fullscreenVideoDismissalProhibited; // @synthesize fullscreenVideoDismissalProhibited=_fullscreenVideoDismissalProhibited;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) SPTNowPlayingVideoViewController *videoViewController; // @synthesize videoViewController=_videoViewController;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTNowPlayingFullscreenVideoRegistry> fullscreenRegistry; // @synthesize fullscreenRegistry=_fullscreenRegistry;
-- (void).cxx_destruct;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)presentAnimated:(_Bool)arg1;
 - (void)dismissAnimated:(_Bool)arg1;

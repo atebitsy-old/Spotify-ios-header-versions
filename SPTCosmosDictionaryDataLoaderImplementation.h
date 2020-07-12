@@ -16,8 +16,8 @@
     id <SPTCosmosDataLoader> _dataLoader;
 }
 
-@property(readonly, nonatomic) id <SPTCosmosDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTCosmosDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (id)internalMakeRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (void)makeRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (id)makeCancelableRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;

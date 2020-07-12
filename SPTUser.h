@@ -20,6 +20,8 @@
     NSURL *_profilePictureThumbnailURL;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool loaded; // @synthesize loaded=_loaded;
 @property(readonly, nonatomic) NSURL *profilePictureThumbnailURL; // @synthesize profilePictureThumbnailURL=_profilePictureThumbnailURL;
 @property(readonly, nonatomic) NSURL *profilePictureURL; // @synthesize profilePictureURL=_profilePictureURL;
@@ -27,8 +29,6 @@
 @property(readonly, nonatomic) NSString *displayableShortName; // @synthesize displayableShortName=_displayableShortName;
 @property(readonly, nonatomic) NSString *displayableName; // @synthesize displayableName=_displayableName;
 @property(readonly, nonatomic) NSString *username; // @synthesize username=_username;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)updateWithDataFrom:(id)arg1;

@@ -20,9 +20,9 @@
     SPTLoginTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupEmailViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)viewModel:(id)arg1 didEndFullValidationWithError:(id)arg2;
 - (void)viewModelDidBeginFullValidation:(id)arg1;
 - (void)viewModel:(id)arg1 didValidateLocalyWithResult:(_Bool)arg2;

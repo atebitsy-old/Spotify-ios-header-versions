@@ -16,9 +16,9 @@
     NSMapTable *_objectInfosMap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *objectInfosMap; // @synthesize objectInfosMap=_objectInfosMap;
 @property(nonatomic) __weak id observer; // @synthesize observer=_observer;
-- (void).cxx_destruct;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)unobserve:(id)arg1 info:(id)arg2;
 - (void)observe:(id)arg1 info:(id)arg2;

@@ -18,11 +18,11 @@
     struct UIEdgeInsets _insets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

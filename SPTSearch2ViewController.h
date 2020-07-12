@@ -15,8 +15,8 @@
 #import "SPTSearchPlatformColorInterpolatorDelegate-Protocol.h"
 #import "SPTSearchVoiceEnabledViewDelegate-Protocol.h"
 
-@class GLUEGradientView, NSMutableDictionary, NSString, NSURL, SPTFloatingVoiceSearchView, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchPlatformColorInterpolator;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTSearchLogger, SPTShareDragDelegateFactory, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@class GLUEGradientView, NSString, NSURL, SPTFloatingVoiceSearchView, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchPlatformColorInterpolator;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTSearchLogger, UICollectionViewDragDelegate, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTSearchVoiceEnabledViewDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
 {
@@ -37,13 +37,12 @@
     SPTFloatingVoiceSearchView *_floatingSearchView;
     id <SPTSearchLogger> _searchLogger;
     CDUnknownBlockType _onVoiceButtonPress;
-    NSMutableDictionary *_dragDelegateHolders;
-    id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
+    id <UICollectionViewDragDelegate> _dragDelegateObject;
     struct UIEdgeInsets _insets;
 }
 
-@property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
-@property(readonly, nonatomic) NSMutableDictionary *dragDelegateHolders; // @synthesize dragDelegateHolders=_dragDelegateHolders;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <UICollectionViewDragDelegate> dragDelegateObject; // @synthesize dragDelegateObject=_dragDelegateObject;
 @property(readonly, copy, nonatomic) CDUnknownBlockType onVoiceButtonPress; // @synthesize onVoiceButtonPress=_onVoiceButtonPress;
 @property(readonly, nonatomic) id <SPTSearchLogger> searchLogger; // @synthesize searchLogger=_searchLogger;
 @property(retain, nonatomic) SPTFloatingVoiceSearchView *floatingSearchView; // @synthesize floatingSearchView=_floatingSearchView;
@@ -60,15 +59,14 @@
 @property(nonatomic) _Bool automaticallyAdjustsInsets; // @synthesize automaticallyAdjustsInsets=_automaticallyAdjustsInsets;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
-- (void).cxx_destruct;
 - (void)voiceEnabledView:(id)arg1 didSelectElementWithSourceIdentifier:(id)arg2;
-- (void)configureDragDelegateWithViewModel:(id)arg1;
 - (id)makeNavigateHandlerWithURIDispatchService:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeRemoveRecentCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeReloadCommandHandlerWithUbiHubsLogger:(id)arg1;
 - (id)makeKeyboardDismissCommandHandler;
 - (id)makePlayTrackHandlerWithPlayerFeature:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)urlForDraggableItemAtIndexPath:(id)arg1;
 - (id)makePlayerProviderWithPlayerFeature:(id)arg1;
 - (id)makeHUBViewControllerWithDependencies:(id)arg1 configuration:(id)arg2;
 - (void)dismissKeyboard;

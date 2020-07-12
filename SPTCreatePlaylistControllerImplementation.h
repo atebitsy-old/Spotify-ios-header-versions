@@ -24,6 +24,7 @@
     NSString *_currentTextFieldText;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *currentTextFieldText; // @synthesize currentTextFieldText=_currentTextFieldText;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTFreeTierPresentationModalPresenter> modalPresenter; // @synthesize modalPresenter=_modalPresenter;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) SPTCreatePlaylistGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTCreatePlaylistViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTCreatePlaylistControllerDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)createPlaylistViewModelDidCancel:(id)arg1;
 - (void)createPlaylistViewModel:(id)arg1 didRenamePlaylistWithURL:(id)arg2;
 - (void)createPlaylistViewModel:(id)arg1 didCreatePlaylistWithURL:(id)arg2;

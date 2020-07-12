@@ -17,9 +17,9 @@
     id <SPTContextMenuSectionHeaderDelegate> _sectionHeaderDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowScannable; // @synthesize shouldShowScannable=_shouldShowScannable;
 @property(retain, nonatomic) id <SPTContextMenuSectionHeaderDelegate> sectionHeaderDelegate; // @synthesize sectionHeaderDelegate=_sectionHeaderDelegate;
-- (void).cxx_destruct;
 - (id)init;
 
 // Remaining properties

@@ -16,9 +16,9 @@
     NSString *_namePart;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *namePart; // @synthesize namePart=_namePart;
 @property(readonly, copy, nonatomic) NSString *namespacePart; // @synthesize namespacePart=_namespacePart;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

@@ -22,6 +22,7 @@
     NSDictionary *_metadata;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(readonly, nonatomic) NSDictionary *steps; // @synthesize steps=_steps;
 @property(readonly, nonatomic) long long terminalConnectionType; // @synthesize terminalConnectionType=_terminalConnectionType;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) NSString *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(readonly, nonatomic) NSString *sequenceID; // @synthesize sequenceID=_sequenceID;
-- (void).cxx_destruct;
 - (id)initWithSequenceID:(id)arg1 pageIdentifier:(id)arg2 URI:(id)arg3 terminalState:(long long)arg4 initialConnectionType:(long long)arg5 terminalConnectionType:(long long)arg6 steps:(id)arg7 metadata:(id)arg8;
 
 // Remaining properties

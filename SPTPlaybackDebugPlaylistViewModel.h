@@ -17,9 +17,9 @@
 
 + (id)musicTrackWithURI:(id)arg1 albumURI:(id)arg2 artistURI:(id)arg3 tite:(id)arg4;
 + (id)videoTrackWithManifestId:(id)arg1 title:(id)arg2 album:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPlayerContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)selectItemAtIndex:(long long)arg1;
 - (id)subtitleForItemAtIndex:(long long)arg1;
 - (id)titleForItemAtIndex:(long long)arg1;

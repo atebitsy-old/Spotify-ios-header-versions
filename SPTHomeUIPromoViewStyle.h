@@ -23,6 +23,7 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double metadataToSubtitleMargin; // @synthesize metadataToSubtitleMargin=_metadataToSubtitleMargin;
 @property(nonatomic) double subtitleToTitleMargin; // @synthesize subtitleToTitleMargin=_subtitleToTitleMargin;
 @property(nonatomic) double titleHorizontalMargin; // @synthesize titleHorizontalMargin=_titleHorizontalMargin;
@@ -31,7 +32,6 @@
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -24,6 +24,7 @@
     NSArray *_supportedSchemes;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *supportedSchemes; // @synthesize supportedSchemes=_supportedSchemes;
 @property(retain, nonatomic) NSMutableSet *requests; // @synthesize requests=_requests;
 @property(retain, nonatomic) id <SPTVideoResourceRequestFactory> resourceRequestFactory; // @synthesize resourceRequestFactory=_resourceRequestFactory;
@@ -33,7 +34,6 @@
 @property(nonatomic) _Bool shouldHandleLoadingRequests; // @synthesize shouldHandleLoadingRequests;
 @property(readonly, nonatomic) SPTVideoManifest *manifest; // @synthesize manifest;
 @property(readonly, nonatomic) NSURL *lastCDN; // @synthesize lastCDN=_lastCDN;
-- (void).cxx_destruct;
 - (id)loadingURLForRequest:(id)arg1;
 - (_Bool)resourceLoader:(id)arg1 shouldWaitForLoadingOfRequestedResource:(id)arg2;
 - (id)videoProfileForURL:(id)arg1;

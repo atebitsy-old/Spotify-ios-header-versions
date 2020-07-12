@@ -13,8 +13,8 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
-@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void)logDidTapContextMenuWithURI:(id)arg1 index:(long long)arg2;
 - (void)logDidTapTrackItemWithURI:(id)arg1 index:(long long)arg2;
 - (id)initWithUbiLogger:(id)arg1;

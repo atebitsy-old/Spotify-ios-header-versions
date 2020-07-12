@@ -13,9 +13,25 @@
 @interface SPTCanvasFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _canvasstateGabitoEnabled;
+    _Bool _canvasNoCacheEnabled;
+    _Bool _canvasPlaylistEnabled;
+    _Bool _canvasAbSettingsEnabled;
+    _Bool _canvasAbTapEnabled;
+    _Bool _canvasEnabled;
+    unsigned long long _canvasAbToggle;
+    NSString *_canvasAbToggleString;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) NSString *canvasAbToggleString; // @synthesize canvasAbToggleString=_canvasAbToggleString;
+@property(readonly, nonatomic) unsigned long long canvasAbToggle; // @synthesize canvasAbToggle=_canvasAbToggle;
+@property(readonly, nonatomic) _Bool canvasEnabled; // @synthesize canvasEnabled=_canvasEnabled;
+@property(readonly, nonatomic) _Bool canvasAbTapEnabled; // @synthesize canvasAbTapEnabled=_canvasAbTapEnabled;
+@property(readonly, nonatomic) _Bool canvasAbSettingsEnabled; // @synthesize canvasAbSettingsEnabled=_canvasAbSettingsEnabled;
+@property(readonly, nonatomic) _Bool canvasPlaylistEnabled; // @synthesize canvasPlaylistEnabled=_canvasPlaylistEnabled;
+@property(readonly, nonatomic) _Bool canvasNoCacheEnabled; // @synthesize canvasNoCacheEnabled=_canvasNoCacheEnabled;
 @property(readonly, nonatomic) _Bool canvasstateGabitoEnabled; // @synthesize canvasstateGabitoEnabled=_canvasstateGabitoEnabled;
+- (unsigned long long)mapCanvasAbToggleToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

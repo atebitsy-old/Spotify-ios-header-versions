@@ -22,13 +22,13 @@
     NSURL *_trackURI;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
 @property(copy, nonatomic) NSString *trackIdentifier; // @synthesize trackIdentifier=_trackIdentifier;
 @property(readonly, nonatomic) id <SPTAudioPreviewPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) NSNumber *maximumPlayTime; // @synthesize maximumPlayTime=_maximumPlayTime;
 @property(nonatomic, getter=isLoopingEnabled) _Bool loopingEnabled; // @synthesize loopingEnabled=_loopingEnabled;
 @property(nonatomic) __weak id <SPTAudioPreviewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)audioPreviewPlayerDidStop:(id)arg1;
 - (void)audioPreviewPlayerDidPause:(id)arg1;

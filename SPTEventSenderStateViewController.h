@@ -20,6 +20,7 @@
     unsigned long long _counter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long counter; // @synthesize counter=_counter;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) GLUELabel *debugTextLabel; // @synthesize debugTextLabel=_debugTextLabel;
 @property(retain, nonatomic) GLUEButton *triggerButton; // @synthesize triggerButton=_triggerButton;
 @property(retain, nonatomic) SPTEventSenderDebugState *eventSenderDebugState; // @synthesize eventSenderDebugState=_eventSenderDebugState;
-- (void).cxx_destruct;
 - (void)displayResponse:(id)arg1;
 - (void)didTapTrigger;
 - (void)setupConstraints;

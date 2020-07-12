@@ -16,10 +16,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(retain, nonatomic) NSNumber *currentPodcastPlaybackSpeed; // @synthesize currentPodcastPlaybackSpeed=_currentPodcastPlaybackSpeed;
-- (void).cxx_destruct;
 - (id)newPlaybackSpeed:(id)arg1 toJSON:(id *)arg2;
 - (void)save:(id)arg1 oldSpeed:(id)arg2;
 - (void)updateCurrentPodcastPlaybackSpeed:(id)arg1;

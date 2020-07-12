@@ -10,20 +10,24 @@
 @protocol SPTAudioPreviewPlayerObserver;
 
 @protocol SPTAudioPreviewPlayer <NSObject>
-@property(readonly, nonatomic) SPTAudioPreview *preview;
-@property(readonly, nonatomic) NSURL *trackURI;
-@property(readonly, nonatomic) NSString *trackIdentifier;
-@property(readonly, nonatomic) long long origin;
-@property(readonly, nonatomic) double endTime;
-@property(readonly, nonatomic) double startTime;
-@property(readonly, nonatomic) double playTime;
-@property(readonly, nonatomic, getter=isPaused) _Bool paused;
-@property(readonly, nonatomic, getter=isPlaying) _Bool playing;
 - (void)play:(void (^)(_Bool, NSError *))arg1;
 - (void)removeObserver:(id <SPTAudioPreviewPlayerObserver>)arg1;
 - (void)addObserver:(id <SPTAudioPreviewPlayerObserver>)arg1;
 - (void)stop;
 - (void)pause:(void (^)(_Bool, NSError *))arg1;
 - (void)play:(void (^)(_Bool, NSError *))arg1 trackIdentifier:(NSString *)arg2 trackURI:(NSURL *)arg3 maximumPlayTime:(NSNumber *)arg4 shouldLoop:(_Bool)arg5 origin:(long long)arg6;
+@property(nonatomic, readonly) NSURL *trackURI;
+@property(nonatomic, readonly) NSString *trackIdentifier;
+@property(nonatomic, readonly) long long origin;
+@property(nonatomic, readonly) double endTime;
+@property(nonatomic, readonly) double startTime;
+@property(nonatomic, readonly) double playTime;
+- (_Bool)isPaused;
+- (_Bool)isPlaying;
+@property(readonly, nonatomic) SPTAudioPreview *preview;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool paused;
+@property(nonatomic, readonly) _Bool playing;
 @end
 

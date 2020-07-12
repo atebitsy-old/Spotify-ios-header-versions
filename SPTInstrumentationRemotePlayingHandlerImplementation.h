@@ -16,9 +16,9 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) _Bool playingRemotely; // @synthesize playingRemotely=_playingRemotely;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)remotePlayingStateChanged:(_Bool)arg1;

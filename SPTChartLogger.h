@@ -15,9 +15,9 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, copy, nonatomic) NSString *chartURIString; // @synthesize chartURIString=_chartURIString;
-- (void).cxx_destruct;
 - (double)msSinceEpoch;
 - (void)logFreeTierContextMenuUnlikeInteraction;
 - (void)logFreeTierContextMenuLikeInteraction;

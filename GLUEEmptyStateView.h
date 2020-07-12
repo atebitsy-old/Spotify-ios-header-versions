@@ -27,6 +27,7 @@
 }
 
 + (id)offlineViewWithTheme:(id)arg1 target:(id)arg2 action:(SEL)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEEmptyStateViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) GLUEGradientView *gradientOverlayView; // @synthesize gradientOverlayView=_gradientOverlayView;
 @property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) GLUEButton *ctaButton; // @synthesize ctaButton=_ctaButton;
 @property(readonly, nonatomic) GLUELabel *bodyLabel; // @synthesize bodyLabel=_bodyLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)applyCtaButtonConstraints:(id)arg1;
 - (void)setupConstraints;

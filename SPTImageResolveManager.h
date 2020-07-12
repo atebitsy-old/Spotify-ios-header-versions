@@ -15,9 +15,9 @@
     SPTImageResolveProjectionMapLoader *_loader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTImageResolveProjectionMapLoader *loader; // @synthesize loader=_loader;
 @property(readonly, nonatomic) id <SPTImageResolveCacheStatusProvider> cacheStatusProvider; // @synthesize cacheStatusProvider=_cacheStatusProvider;
-- (void).cxx_destruct;
 - (id)createImageResolver;
 - (void)loadConfiguration;
 - (id)initWithTransport:(id)arg1 cacheStatusProvider:(id)arg2 userIdentifier:(id)arg3 configurationTTL:(unsigned long long)arg4;

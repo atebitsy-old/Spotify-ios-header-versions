@@ -31,6 +31,7 @@
     HUBComponentDefaults *_componentDefaults;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
 @property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(retain, nonatomic) id <HUBComponentLayoutManager> layoutManager; // @synthesize layoutManager=_layoutManager;
@@ -49,7 +50,6 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
-- (void).cxx_destruct;
 - (id)makeViewModelProvider;
 - (id)makeCommandHandler;
 - (id)buildMadeForYouHubViewController;

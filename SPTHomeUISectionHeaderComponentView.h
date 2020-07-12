@@ -15,9 +15,9 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3 type:(unsigned long long)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUISectionHeaderView *sectionHeaderView; // @synthesize sectionHeaderView=_sectionHeaderView;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 type:(unsigned long long)arg3;
 

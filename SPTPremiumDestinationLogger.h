@@ -15,10 +15,10 @@
     id <SPTUBIMobilePremiumDestinationEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIMobilePremiumDestinationEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)getLegalTextFactory;
 - (void)logInteractionWithuserIntent:(id)arg1 position:(id)arg2 pageURIString:(id)arg3;
 - (void)logInteractionWithuserIntent:(id)arg1 ubiInteraction:(id)arg2;

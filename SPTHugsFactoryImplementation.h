@@ -19,11 +19,11 @@
     HUGSComponentFallbackHandler *_componentFallbackHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUGSComponentFallbackHandler *componentFallbackHandler; // @synthesize componentFallbackHandler=_componentFallbackHandler;
 @property(readonly, nonatomic) HUGSComponentLayoutManager *componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
 @property(readonly, nonatomic) HUGSIconImageResolver *iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)createHugs2Components;
 - (id)createHugsComponentsWithStyleOverrider:(id)arg1;
 - (id)provideSimpleComponentFallbackHandler;

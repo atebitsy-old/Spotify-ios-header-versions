@@ -17,9 +17,9 @@
     id <SPTInstrumentationServiceMessagingHandler> _messagingHandler;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTInstrumentationServiceMessagingHandler> messagingHandler; // @synthesize messagingHandler=_messagingHandler;
 @property(retain, nonatomic, getter=spt_currentPageController) id <SPTPageController> currentPageController; // @synthesize currentPageController=_currentPageController;
-- (void).cxx_destruct;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (id)updatePageViewControllerToViewController:(id)arg1;
 - (id)initWithInitialViewController:(id)arg1 messagingHandler:(id)arg2;

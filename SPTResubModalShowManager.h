@@ -24,6 +24,7 @@
     long long _enabledState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool UIReady; // @synthesize UIReady=_UIReady;
 @property(nonatomic) long long enabledState; // @synthesize enabledState=_enabledState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> enabledSignal; // @synthesize enabledSignal=_enabledSignal;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(retain, nonatomic) SPTResubModalProductExpiry *expiry; // @synthesize expiry=_expiry;
 @property(nonatomic) __weak id <SPTResubModalShowManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)loggedInUIDidBecomeUnloaded;
 - (void)loggedInUIDidBecomeLoaded;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

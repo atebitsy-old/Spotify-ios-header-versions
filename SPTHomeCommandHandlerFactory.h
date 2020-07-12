@@ -18,12 +18,12 @@
     id <SPTUBIHubsUtilities> _ubiHubsUtilities;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> hubInteractionLogger; // @synthesize hubInteractionLogger=_hubInteractionLogger;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (void).cxx_destruct;
 - (id)provideListeningHistoryCommandHandler:(id)arg1;
 - (id)providePlayThenPauseCommandHandler:(id)arg1;
 - (id)providePlayAndNavigateCommandHandler:(id)arg1;

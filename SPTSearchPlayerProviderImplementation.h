@@ -15,8 +15,8 @@
     CDUnknownBlockType _block;
 }
 
-@property(readonly, copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 - (id)providerPlayerWithViewURI:(id)arg1 featureIdentifier:(id)arg2 referrerIdentifier:(id)arg3;
 - (id)initWithBlock:(CDUnknownBlockType)arg1;
 

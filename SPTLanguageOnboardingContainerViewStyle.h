@@ -22,6 +22,7 @@
     double _offlineViewWidth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double offlineViewWidth; // @synthesize offlineViewWidth=_offlineViewWidth;
 @property(copy, nonatomic) SPTLanguageOnboardingOfflineViewStyle *offlineViewStyle; // @synthesize offlineViewStyle=_offlineViewStyle;
 @property(copy, nonatomic) SPTLanguageOnboardingGridViewStyle<GLUEStyle> *gridViewStyle; // @synthesize gridViewStyle=_gridViewStyle;
@@ -29,7 +30,6 @@
 @property(nonatomic) double headerViewLeadingMargin; // @synthesize headerViewLeadingMargin=_headerViewLeadingMargin;
 @property(copy, nonatomic) SPTLanguageOnboardingHeaderViewStyle<GLUEStyle> *headerViewStyle; // @synthesize headerViewStyle=_headerViewStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundOverlayGradientStyle; // @synthesize backgroundOverlayGradientStyle=_backgroundOverlayGradientStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

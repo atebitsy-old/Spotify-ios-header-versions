@@ -13,8 +13,8 @@
     id <SPTSnackbarAnimationViewActionHanderDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <SPTSnackbarAnimationViewActionHanderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTSnackbarAnimationViewActionHanderDelegate> delegate; // @synthesize delegate=_delegate;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (id)init;
 

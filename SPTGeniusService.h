@@ -28,6 +28,7 @@
     NSTimer *_refreshEnabledURIsTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *refreshEnabledURIsTimer; // @synthesize refreshEnabledURIsTimer=_refreshEnabledURIsTimer;
 @property(nonatomic, getter=isAllowedToRefreshCache) _Bool allowedToRefreshCache; // @synthesize allowedToRefreshCache=_allowedToRefreshCache;
 @property(readonly, nonatomic) SPTGeniusServiceEnabledResourcesLoadingState *enabledResourcesLoadingState; // @synthesize enabledResourcesLoadingState=_enabledResourcesLoadingState;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) SPTGeniusDiskCache *diskCache; // @synthesize diskCache=_diskCache;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)geniusErrorWithCode:(long long)arg1 description:(id)arg2;
 - (void)fireFailureCallbacksForTrackId:(id)arg1 withError:(id)arg2;

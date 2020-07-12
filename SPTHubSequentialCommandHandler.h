@@ -15,8 +15,8 @@
     NSArray *_commandHandlers;
 }
 
-@property(readonly, copy, nonatomic) NSArray *commandHandlers; // @synthesize commandHandlers=_commandHandlers;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSArray *commandHandlers; // @synthesize commandHandlers=_commandHandlers;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithCommandHandlers:(id)arg1;
 

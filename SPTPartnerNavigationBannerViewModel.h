@@ -24,6 +24,7 @@
     id <SPTPartnerLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPartnerLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPartnerNavigationBannerViewModelActionHandler> actionHandler; // @synthesize actionHandler=_actionHandler;
 @property(nonatomic) __weak id <SPTPartnerNavigationBannerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
@@ -33,7 +34,6 @@
 @property(readonly, copy, nonatomic) NSString *dismissButtonAccessibilityLabel; // @synthesize dismissButtonAccessibilityLabel=_dismissButtonAccessibilityLabel;
 @property(readonly, copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)appNamesFromIntegrations:(id)arg1;
 - (void)nowPlayingViewWillAppear:(id)arg1;
 - (void)selectIntegrationAtIndex:(long long)arg1;

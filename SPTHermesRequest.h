@@ -16,10 +16,10 @@
 }
 
 + (id)hermesRequestWithRequestURL:(id)arg1 usingMethod:(id)arg2 payload:(id)arg3 whenDone:(CDUnknownBlockType)arg4 controller:(id)arg5;
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTHermesController *controller; // @synthesize controller=_controller;
 @property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 @property(nonatomic) struct MultiStringHermesQuery *query; // @synthesize query=_query;
-- (void).cxx_destruct;
 - (void)done;
 - (void)start;
 - (void)invalidateForDealloc:(_Bool)arg1;

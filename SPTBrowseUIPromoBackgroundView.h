@@ -21,13 +21,13 @@
     NSArray *_overlayGradientConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *overlayGradientConstraints; // @synthesize overlayGradientConstraints=_overlayGradientConstraints;
 @property(readonly, nonatomic) GLUEGradientView *overlayGradientView; // @synthesize overlayGradientView=_overlayGradientView;
 @property(readonly, nonatomic) UIView *overlayView; // @synthesize overlayView=_overlayView;
 @property(readonly, nonatomic) GLUEImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
 @property(copy, nonatomic) SPTBrowseUIPromoStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 @property(retain, nonatomic) UIImage *image;
 - (void)glue_applyStyle:(id)arg1;

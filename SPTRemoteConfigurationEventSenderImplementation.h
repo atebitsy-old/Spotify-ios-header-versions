@@ -16,8 +16,8 @@
     id <SPTEventSender> _eventSender;
 }
 
-@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)logMessage:(id)arg1;
 - (id)initWithEventSender:(id)arg1;
 

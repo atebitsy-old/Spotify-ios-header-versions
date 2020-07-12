@@ -17,9 +17,9 @@
     SPTOfflineFeatureProperties *_remoteConfigurationProperties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTOfflineFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long musicModelContentOrder;
 - (void)setupRemoteConfigurationProperties;
 - (id)initWithRemoteConfigurationResolver:(id)arg1;

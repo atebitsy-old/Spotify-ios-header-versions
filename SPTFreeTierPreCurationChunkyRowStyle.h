@@ -15,10 +15,10 @@
     double _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) GLUETrackPreviewStyle *previewStyle; // @synthesize previewStyle=_previewStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqualToEntityRowStyle:(id)arg1;

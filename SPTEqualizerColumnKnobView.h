@@ -19,10 +19,10 @@
 }
 
 + (id)equalizerColumnKnobView;
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAShapeLayer *circleLayer; // @synthesize circleLayer=_circleLayer;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 @property(nonatomic) __weak SPTEqualizerColumnView *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)accessibilityDecrement;
 - (void)accessibilityIncrement;

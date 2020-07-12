@@ -26,6 +26,7 @@
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(readonly, nonatomic) SPTHubLoggerFactoryImplementation *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
-- (void).cxx_destruct;
 - (id)createCommandHandlerFactoryWithFeatureIdentifier:(id)arg1 contextMenuLogContext:(id)arg2;
 - (id)provideLoggerFactory;
 - (id)provideContentOperationFactory;

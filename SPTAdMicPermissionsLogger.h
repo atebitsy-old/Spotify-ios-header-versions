@@ -18,10 +18,10 @@
     SPTAdFocusManager *_focusManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool micPermGranted; // @synthesize micPermGranted=_micPermGranted;
 @property(retain, nonatomic) SPTAdFocusManager *focusManager; // @synthesize focusManager=_focusManager;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (void)logMicPermissions:(_Bool)arg1;
 - (id)voiceAdLogForPermissions:(_Bool)arg1;
 - (_Bool)isRecordingAllowed;

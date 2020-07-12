@@ -23,6 +23,7 @@
 
 + (long long)numberOfLinesForText:(id)arg1 containerWidth:(double)arg2;
 + (double)sizeForCellWithTitle:(id)arg1 containerWidth:(double)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentTrackActionsDelegate> trackActionHandler; // @synthesize trackActionHandler=_trackActionHandler;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsEntity> currentEpisodeSegmentsEntity; // @synthesize currentEpisodeSegmentsEntity=_currentEpisodeSegmentsEntity;
 @property(retain, nonatomic) UIView *timelineView; // @synthesize timelineView=_timelineView;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *trackImageView; // @synthesize trackImageView=_trackImageView;
-- (void).cxx_destruct;
 - (id)formattedTrackStartTimeForEntity:(id)arg1;
 - (void)didTouchContextMenu;
 - (void)setupConstraints;

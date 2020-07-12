@@ -4,18 +4,17 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTShadowPlaylistProxy.h"
+#import "SPTDecoratorProxy.h"
 
 @class NSString;
 
-@interface SPTShadowPlaylistTrackEntity : SPTShadowPlaylistProxy
+@interface SPTShadowPlaylistTrackEntity : SPTDecoratorProxy
 {
     NSString *_rowId;
 }
 
-@property(copy, nonatomic) NSString *rowId; // @synthesize rowId=_rowId;
 - (void).cxx_destruct;
-- (_Bool)shadowsSelector:(SEL)arg1;
+@property(copy, nonatomic) NSString *rowId; // @synthesize rowId=_rowId;
 
 @end
 

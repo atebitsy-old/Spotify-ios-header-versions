@@ -16,10 +16,10 @@
     long long _row;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long row; // @synthesize row=_row;
 @property(nonatomic) __weak SPTTableSectionAdapter *sectionAdapter; // @synthesize sectionAdapter=_sectionAdapter;
 @property(nonatomic) __weak id <SPTTableContext> tableContext; // @synthesize tableContext=_tableContext;
-- (void).cxx_destruct;
 - (void)didSelectCell;
 - (_Bool)shouldHighlightCell:(id)arg1;
 - (void)didEndDisplayingCell:(id)arg1;

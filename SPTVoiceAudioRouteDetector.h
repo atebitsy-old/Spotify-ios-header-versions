@@ -13,8 +13,8 @@
     AVAudioSession *_audioSession;
 }
 
-@property(retain, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 - (void).cxx_destruct;
+@property(retain, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 - (id)stringFromInputDataSourceOrientation:(id)arg1;
 - (id)stringFromAudioRouteIOPortType:(id)arg1;
 - (id)stringFromAudioRouteInputPortType:(id)arg1;

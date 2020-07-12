@@ -55,6 +55,7 @@
     id <SPTPlaylistPlatformDataLoaderRequestToken> _playlistRequestToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> playlistRequestToken; // @synthesize playlistRequestToken=_playlistRequestToken;
 @property(retain, nonatomic) SPTPlayerState *currentPlayerState; // @synthesize currentPlayerState=_currentPlayerState;
 @property(retain, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
@@ -91,7 +92,6 @@
 @property(nonatomic) _Bool availableOffline; // @synthesize availableOffline=_availableOffline;
 @property(retain, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (void)remoteControlPolicyManagerDislikeButtonPressed:(id)arg1 track:(id)arg2 contextURI:(id)arg3 identifier:(id)arg4;
 - (void)remoteControlPolicyManagerUnlikeButtonPressed:(id)arg1 track:(id)arg2 contextURI:(id)arg3;
 - (void)remoteControlPolicyManagerLikeButtonPressed:(id)arg1 track:(id)arg2 contextURI:(id)arg3;

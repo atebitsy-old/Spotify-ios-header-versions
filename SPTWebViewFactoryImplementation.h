@@ -18,10 +18,10 @@
     id <SPTModalPresentationController> _modalPresentationController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (id)createWebViewControllerWithURL:(id)arg1 authenticate:(_Bool)arg2 pageURI:(id)arg3 pageIdentifier:(id)arg4 hideNavigationContentAndControls:(_Bool)arg5;
 - (id)createWebViewControllerWithURL:(id)arg1 authenticate:(_Bool)arg2 pageURI:(id)arg3 pageIdentifier:(id)arg4 navigationItemsType:(long long)arg5;
 - (id)createWebViewControllerWithURL:(id)arg1 authenticate:(_Bool)arg2;

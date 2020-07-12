@@ -13,8 +13,8 @@
     NSDictionary *_nluResponse;
 }
 
-@property(readonly, nonatomic) NSDictionary *nluResponse; // @synthesize nluResponse=_nluResponse;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSDictionary *nluResponse; // @synthesize nluResponse=_nluResponse;
 - (id)initWithDictionary:(id)arg1;
 
 @end

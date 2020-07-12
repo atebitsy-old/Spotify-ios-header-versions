@@ -19,9 +19,9 @@
 + (struct UIEdgeInsets)contentViewInsets;
 + (double)arrowBase;
 + (_Bool)wantsDefaultContentAppearance;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *dimmingView; // @synthesize dimmingView=_dimmingView;
 @property(retain, nonatomic) SPTArrowPopoverView *arrowView; // @synthesize arrowView=_arrowView;
-- (void).cxx_destruct;
 - (double)arrowOffset;
 - (void)setArrowOffset:(double)arg1;
 - (unsigned long long)arrowDirection;

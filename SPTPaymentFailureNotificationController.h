@@ -25,6 +25,7 @@
     id <SPTBannerPresentationManagerTicket> _bannerTicket;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(readonly, nonatomic) SPTPaymentFailureNotificationOfflineInfoManager *offlineInfoManager; // @synthesize offlineInfoManager=_offlineInfoManager;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(readonly, nonatomic) id <SPTAccountProductInformationController> productInformationController; // @synthesize productInformationController=_productInformationController;
 @property(readonly, nonatomic) id <SPTPaymentStateController> paymentStateController; // @synthesize paymentStateController=_paymentStateController;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)paymentStateControllerDidUpdatePaymentState:(id)arg1;
 - (void)applicationDidBecomeActive;

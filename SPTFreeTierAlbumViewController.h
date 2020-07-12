@@ -21,11 +21,11 @@
     SPTProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTFreeTierAlbumContextMenuButtonViewModel *contextMenuButtonViewModel; // @synthesize contextMenuButtonViewModel=_contextMenuButtonViewModel;
 @property(readonly, nonatomic) SPTFreeTierAlbumFeedbackButtonViewModel *feedbackButtonViewModel; // @synthesize feedbackButtonViewModel=_feedbackButtonViewModel;
-- (void).cxx_destruct;
 - (unsigned long long)preferredNavigationBarState;
 - (void)hubView:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)playURIInContext:(id)arg1;

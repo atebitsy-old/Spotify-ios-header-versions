@@ -17,9 +17,9 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
-- (void).cxx_destruct;
 - (void)nowPlayingViewWillAppear:(id)arg1;
 - (void)nowPlayingViewDidDisappear:(id)arg1;
 - (void)removeObserver:(id)arg1;

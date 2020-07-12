@@ -14,8 +14,8 @@
     id <HUBComponentModel> _componentModel;
 }
 
-@property(readonly, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
 @property(readonly, copy, nonatomic) NSDictionary *uiinteraction5;
 - (id)uiinteraction5LogMessageWithTimestamp:(id)arg1 targetURI:(id)arg2 userIntent:(id)arg3;
 @property(readonly, copy, nonatomic) NSString *interactionType;

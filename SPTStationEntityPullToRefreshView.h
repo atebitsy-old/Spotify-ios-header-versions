@@ -22,6 +22,7 @@
     UIActivityIndicatorView *_activityIndicator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIActivityIndicatorView *activityIndicator; // @synthesize activityIndicator=_activityIndicator;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) UILabel *message; // @synthesize message=_message;
@@ -29,7 +30,6 @@
 @property(nonatomic) double scrollOffset; // @synthesize scrollOffset=_scrollOffset;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)configureForLoadingState;
 - (void)configureForActiveState;

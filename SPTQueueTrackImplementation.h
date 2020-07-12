@@ -21,6 +21,7 @@
     unsigned long long _index;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long index; // @synthesize index=_index;
 @property(readonly) _Bool isTapPlayable; // @synthesize isTapPlayable=_isTapPlayable;
 @property(readonly) _Bool isRemovable; // @synthesize isRemovable=_isRemovable;
@@ -28,7 +29,6 @@
 @property(readonly) _Bool isDraggable; // @synthesize isDraggable=_isDraggable;
 @property(readonly) _Bool isGrayedOut; // @synthesize isGrayedOut=_isGrayedOut;
 @property(readonly) SPTPlayerTrack *track; // @synthesize track=_track;
-- (void).cxx_destruct;
 @property(readonly) _Bool isAgeRestricted;
 @property(readonly) _Bool isRatedExplicit;
 @property(readonly, nonatomic) _Bool wasManuallyQueued;

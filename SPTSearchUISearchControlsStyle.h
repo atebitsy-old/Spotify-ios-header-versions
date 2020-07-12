@@ -19,11 +19,11 @@
 }
 
 + (id)freetierfind_styleForTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double spacing; // @synthesize spacing=_spacing;
 @property(copy, nonatomic) UIFont *controlsFont; // @synthesize controlsFont=_controlsFont;
 @property(copy, nonatomic) UIColor *controlsColor; // @synthesize controlsColor=_controlsColor;
 @property(copy, nonatomic) SPTSearchUISearchBarStyle *searchBarStyle; // @synthesize searchBarStyle=_searchBarStyle;
-- (void).cxx_destruct;
 - (_Bool)isEqualToSearchControlsStyle:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

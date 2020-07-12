@@ -17,10 +17,10 @@
     NSURL *_URI;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isCancelled) _Bool cancelled; // @synthesize cancelled=_cancelled;
 @property(nonatomic, getter=isCompleted) _Bool completed; // @synthesize completed=_completed;
 @property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (void)cancel;
 
 // Remaining properties

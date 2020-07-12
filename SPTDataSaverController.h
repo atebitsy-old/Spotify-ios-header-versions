@@ -18,12 +18,12 @@
     SPTDataSaverLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDataSaverLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(nonatomic) _Bool lowDataModeActive; // @synthesize lowDataModeActive=_lowDataModeActive;
 @property(nonatomic) __weak NSObject<SPTDataSaverControllerDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)dataSaverIsActive;
 - (void)updateDelegate;
 - (_Bool)updateDataSaverState;

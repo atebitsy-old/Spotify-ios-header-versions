@@ -31,6 +31,7 @@
     SPTFreeTierAllSongsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isContextMenuToBePresented) _Bool contextMenuToBePresented; // @synthesize contextMenuToBePresented=_contextMenuToBePresented;
 @property(readonly, nonatomic) SPTFreeTierAllSongsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTFreeTierAllSongsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTFreeTierAllSongsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (void)cellConfiguratorWillPresentContextMenu:(id)arg1;
 - (void)freeTierAllSongsModelRequiresReloadWithViewModel:(id)arg1;
 - (void)freeTierAllSongsModelDidFailToLoad:(id)arg1;

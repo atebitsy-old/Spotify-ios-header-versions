@@ -14,9 +14,9 @@
     NSMutableArray *_vectors;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *vectors; // @synthesize vectors=_vectors;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)initWithType:(unsigned long long)arg1 vectors:(id)arg2;
 - (id)initWithVector:(id)arg1;
 

@@ -27,6 +27,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAbbaFeatureAATestLogger *aaTestLogger; // @synthesize aaTestLogger=_aaTestLogger;
 @property(retain, nonatomic) NSObject<OS_dispatch_semaphore> *abbaFlagsSemaphore; // @synthesize abbaFlagsSemaphore=_abbaFlagsSemaphore;
 @property(retain, nonatomic) SPTAbbaFlagDataConfigLoader *abbaDataConfigLoader; // @synthesize abbaDataConfigLoader=_abbaDataConfigLoader;
@@ -37,7 +38,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (id)provideAbbaFlagDataConfigLoader;
 - (void)featureFlagsDidChange:(id)arg1;

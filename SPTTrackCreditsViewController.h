@@ -21,13 +21,13 @@
     GLUEEmptyStateView *_emptyStateView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEEmptyStateView *emptyStateView; // @synthesize emptyStateView=_emptyStateView;
 @property(retain, nonatomic) SPTTrackCreditsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTTrackCreditsDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) NSString *UID; // @synthesize UID=_UID;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (_Bool)tableView:(id)arg1 shouldHighlightRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 willSelectRowAtIndexPath:(id)arg2;

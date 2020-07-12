@@ -15,9 +15,9 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> deviceConfiguration; // @synthesize deviceConfiguration=_deviceConfiguration;
-- (void).cxx_destruct;
 - (void)setupBackgroundColor;
 - (id)initWithDeviceConfiguration:(id)arg1;
 

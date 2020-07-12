@@ -24,6 +24,7 @@
 }
 
 + (id)ignoredAutoEquatablePropertyNames;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) HUBViewModelBuilderImplementation *builder; // @synthesize builder=_builder;
 @property(readonly, copy, nonatomic) NSDate *buildDate; // @synthesize buildDate=_buildDate;
 @property(readonly, copy, nonatomic) NSDictionary *customData; // @synthesize customData=_customData;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) id <HUBComponentModel> headerComponentModel; // @synthesize headerComponentModel=_headerComponentModel;
 @property(readonly, copy, nonatomic) NSString *navigationBarTitle; // @synthesize navigationBarTitle=_navigationBarTitle;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)serializeComponentModels:(id)arg1;
 - (id)serialize;
 @property(readonly, copy) NSString *debugDescription;

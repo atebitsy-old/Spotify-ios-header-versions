@@ -25,6 +25,7 @@
     SPTSortingFilteringFilterButtonCollectionViewCell *_calculationCell;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSortingFilteringFilterButtonCollectionViewCell *calculationCell; // @synthesize calculationCell=_calculationCell;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UICollectionViewFlowLayout *collectionLayout; // @synthesize collectionLayout=_collectionLayout;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <SPTSortingFilteringClearFiltersControlDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupCollectionView;
 - (void)glue_applyStyle:(id)arg1;

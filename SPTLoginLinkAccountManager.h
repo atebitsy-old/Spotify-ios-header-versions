@@ -19,12 +19,12 @@
     SPTLoginLinkAccountLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginLinkAccountLogger *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *identifierToken; // @synthesize identifierToken=_identifierToken;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginSlideUpModalPresenter *modalPresenter; // @synthesize modalPresenter=_modalPresenter;
 @property(readonly, nonatomic) SPTLoginLinkAccountDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)dataLoaderDidFailLinkAccount:(id)arg1 error:(id)arg2;
 - (void)dataLoaderDidSuccessfullyLinkAccount:(id)arg1;
 - (void)cancelButtonTapped:(id)arg1;

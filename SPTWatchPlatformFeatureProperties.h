@@ -21,10 +21,15 @@
     _Bool _appleWatchMockingbird;
     _Bool _appleWatchHoneyBees;
     unsigned long long _appleWatchPubsubTransport;
+    unsigned long long _appleWatchBitrate;
     NSString *_appleWatchPubsubTransportString;
+    NSString *_appleWatchBitrateString;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) NSString *appleWatchBitrateString; // @synthesize appleWatchBitrateString=_appleWatchBitrateString;
 @property(retain, nonatomic) NSString *appleWatchPubsubTransportString; // @synthesize appleWatchPubsubTransportString=_appleWatchPubsubTransportString;
+@property(readonly, nonatomic) unsigned long long appleWatchBitrate; // @synthesize appleWatchBitrate=_appleWatchBitrate;
 @property(readonly, nonatomic) unsigned long long appleWatchPubsubTransport; // @synthesize appleWatchPubsubTransport=_appleWatchPubsubTransport;
 @property(readonly, nonatomic) _Bool appleWatchHoneyBees; // @synthesize appleWatchHoneyBees=_appleWatchHoneyBees;
 @property(readonly, nonatomic) _Bool appleWatchMockingbird; // @synthesize appleWatchMockingbird=_appleWatchMockingbird;
@@ -34,7 +39,7 @@
 @property(readonly, nonatomic) _Bool watchIosIntegration; // @synthesize watchIosIntegration=_watchIosIntegration;
 @property(readonly, nonatomic) _Bool watchIosLogging; // @synthesize watchIosLogging=_watchIosLogging;
 @property(readonly, nonatomic) _Bool appleWatchOffline; // @synthesize appleWatchOffline=_appleWatchOffline;
-- (void).cxx_destruct;
+- (unsigned long long)mapAppleWatchBitrateToEnumValue:(id)arg1;
 - (unsigned long long)mapAppleWatchPubsubTransportToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

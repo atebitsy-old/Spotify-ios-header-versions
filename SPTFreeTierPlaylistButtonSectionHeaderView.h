@@ -21,6 +21,7 @@
     NSLayoutConstraint *_sectionHeaderButtonTopConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *sectionHeaderButtonTopConstraint; // @synthesize sectionHeaderButtonTopConstraint=_sectionHeaderButtonTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *educationalTextRightEdgeConstraint; // @synthesize educationalTextRightEdgeConstraint=_educationalTextRightEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *educationalTextLeftEdgeConstraint; // @synthesize educationalTextLeftEdgeConstraint=_educationalTextLeftEdgeConstraint;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUELabel *educationalText; // @synthesize educationalText=_educationalText;
 @property(retain, nonatomic) GLUEButton *sectionHeaderButton; // @synthesize sectionHeaderButton=_sectionHeaderButton;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addViewConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

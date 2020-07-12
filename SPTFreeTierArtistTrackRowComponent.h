@@ -16,8 +16,8 @@
     id <SPTTrackRowArtistFactory> _artistComponentFactory;
 }
 
-@property(retain, nonatomic) id <SPTTrackRowArtistFactory> artistComponentFactory; // @synthesize artistComponentFactory=_artistComponentFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTTrackRowArtistFactory> artistComponentFactory; // @synthesize artistComponentFactory=_artistComponentFactory;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;

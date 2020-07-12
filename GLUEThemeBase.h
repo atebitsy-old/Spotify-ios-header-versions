@@ -20,9 +20,9 @@
 
 + (id)themeWithSPTTheme:(id)arg1;
 + (id)new;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) id <GLUETheme> parent; // @synthesize parent=_parent;
-- (void).cxx_destruct;
 - (void)notifyObservers;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

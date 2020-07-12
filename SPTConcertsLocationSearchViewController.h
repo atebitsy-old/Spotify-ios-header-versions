@@ -33,6 +33,7 @@
     SPTProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) UILabel *errorLabel; // @synthesize errorLabel=_errorLabel;
 @property(retain, nonatomic) UIView *errorView; // @synthesize errorView=_errorView;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) SPTConcertsLocationSearchViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTConcertsLocationSearchViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (unsigned long long)preferredNavigationBarState;

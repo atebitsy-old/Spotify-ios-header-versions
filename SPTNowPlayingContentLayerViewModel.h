@@ -23,6 +23,7 @@
     NSMapTable *_cellToProviderMap;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMapTable *cellToProviderMap; // @synthesize cellToProviderMap=_cellToProviderMap;
 @property(nonatomic) long long movementOffset; // @synthesize movementOffset=_movementOffset;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSIndexPath *currentItemIndexPath; // @synthesize currentItemIndexPath=_currentItemIndexPath;
 @property(readonly, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
 @property(nonatomic) __weak id <SPTNowPlayingContentLayerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)providerForCell:(id)arg1;
 - (void)mapCell:(id)arg1 toProvider:(id)arg2;
 - (double)overlayAlphaForCurrentCell:(id)arg1 currentIndexPath:(id)arg2 nextCell:(id)arg3 nextIndexPath:(id)arg4 value:(double)arg5;

@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithUri:(id)arg1 components:(id)arg2;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)impression;
 - (id)undoButtonFactory;
 - (id)_location;

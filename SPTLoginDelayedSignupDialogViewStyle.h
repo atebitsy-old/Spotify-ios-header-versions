@@ -28,6 +28,7 @@
     double _termsViewBottomMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double termsViewBottomMargin; // @synthesize termsViewBottomMargin=_termsViewBottomMargin;
 @property(nonatomic) double buttonsTopMargin; // @synthesize buttonsTopMargin=_buttonsTopMargin;
 @property(nonatomic) double contentHorizontalMargin; // @synthesize contentHorizontalMargin=_contentHorizontalMargin;
@@ -42,7 +43,6 @@
 @property(copy, nonatomic) GLUEButtonStyle *thirdButtonStyle; // @synthesize thirdButtonStyle=_thirdButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *secondButtonStyle; // @synthesize secondButtonStyle=_secondButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *firstButtonStyle; // @synthesize firstButtonStyle=_firstButtonStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

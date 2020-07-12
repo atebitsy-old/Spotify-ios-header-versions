@@ -17,9 +17,9 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)resumeCurrentPlayer;
 - (void)pauseCurrentPlayer;

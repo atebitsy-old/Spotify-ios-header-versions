@@ -17,8 +17,8 @@
 + (id)URLsFromStrings:(id)arg1;
 + (id)objectsRepresentationFromList:(id)arg1;
 + (id)objectsWithDictionaryList:(id)arg1;
-@property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 - (id)description;
 - (_Bool)restoreWithObjectRepresentation:(id)arg1;
 - (id)objectRepresentation;

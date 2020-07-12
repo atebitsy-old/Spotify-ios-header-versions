@@ -13,8 +13,8 @@
     NSMutableDictionary *_externalHandlers;
 }
 
-@property(readonly, nonatomic) NSMutableDictionary *externalHandlers; // @synthesize externalHandlers=_externalHandlers;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableDictionary *externalHandlers; // @synthesize externalHandlers=_externalHandlers;
 - (id)externalHandlerFor:(id)arg1;
 - (void)unregisterExternalHandler:(id)arg1;
 - (void)registerExternalHandler:(id)arg1;

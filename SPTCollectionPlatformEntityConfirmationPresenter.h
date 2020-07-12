@@ -17,11 +17,11 @@
 }
 
 + (CDUnknownBlockType)enforceSingleCallOfBlock:(CDUnknownBlockType)arg1 queue:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformPropertiesManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
-- (void).cxx_destruct;
 - (void)entityNameFromContextURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (CDUnknownBlockType)safeSnackBarPresentationBlockWithIdentifier:(id)arg1;
 - (void)scheduleCancellationOfToken:(id)arg1;

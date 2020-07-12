@@ -14,9 +14,9 @@
     NSUserDefaults *_cache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUserDefaults *cache; // @synthesize cache=_cache;
 @property(retain, nonatomic) SPTGaiaHomeDeviceTooltipConnectionHistory *connectionHistory; // @synthesize connectionHistory=_connectionHistory;
-- (void).cxx_destruct;
 - (id)oldestValidDateForHistory;
 - (void)logConnectionWithDeviceIdentifier:(id)arg1;
 - (void)updateCacheStorage;

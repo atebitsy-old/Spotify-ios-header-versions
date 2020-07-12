@@ -23,6 +23,8 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)isEqual:(id)arg1;
+@property(nonatomic, readonly) long long hash;
 @property(nonatomic, copy) NSArray *artists;
 @property(nonatomic, readonly) NSString *ownerName;
 @property(nonatomic, readonly) NSString *rowId;

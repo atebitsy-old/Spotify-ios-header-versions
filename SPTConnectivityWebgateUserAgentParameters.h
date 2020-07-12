@@ -16,11 +16,11 @@
     NSString *_extraInformation;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *extraInformation; // @synthesize extraInformation=_extraInformation;
 @property(copy, nonatomic) NSString *osVersion; // @synthesize osVersion=_osVersion;
 @property(copy, nonatomic) NSString *appPlatform; // @synthesize appPlatform=_appPlatform;
 @property(copy, nonatomic) NSString *appVersion; // @synthesize appVersion=_appVersion;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct UserAgentParameters cpp;
 - (id)init;
 

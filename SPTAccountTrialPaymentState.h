@@ -15,10 +15,10 @@
     NSDate *_expirationDate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *expirationDate; // @synthesize expirationDate=_expirationDate;
 @property(nonatomic) _Bool expired; // @synthesize expired=_expired;
 @property(nonatomic) _Bool started; // @synthesize started=_started;
-- (void).cxx_destruct;
 - (void)setup:(id)arg1;
 - (id)initWithPaymentState:(id)arg1;
 

@@ -17,12 +17,12 @@
     long long _orientation;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) float playbackSpeed; // @synthesize playbackSpeed=_playbackSpeed;
 @property(nonatomic) long long orientation; // @synthesize orientation=_orientation;
 @property(retain, nonatomic) id <BMSubtitle> subtitle; // @synthesize subtitle=_subtitle;
 @property(nonatomic) _Bool fullscreen; // @synthesize fullscreen=_fullscreen;
 @property(nonatomic) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
-- (void).cxx_destruct;
 - (id)description;
 - (_Bool)isValidForTolerableEndPosition:(double)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

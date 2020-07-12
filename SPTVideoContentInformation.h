@@ -19,11 +19,11 @@
 }
 
 + (id)videoContentInformationWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool byteRangeAccessSupported; // @synthesize byteRangeAccessSupported=_byteRangeAccessSupported;
 @property(nonatomic) unsigned long long contentLength; // @synthesize contentLength=_contentLength;
 @property(copy, nonatomic) NSString *contentType; // @synthesize contentType=_contentType;
 @property(copy, nonatomic) NSString *key; // @synthesize key=_key;
-- (void).cxx_destruct;
 - (id)toData;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

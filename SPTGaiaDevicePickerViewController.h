@@ -36,6 +36,7 @@
     SPTStatusBarToken *_statusBarToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
 @property(nonatomic, getter=isPickerVisible) _Bool pickerVisible; // @synthesize pickerVisible=_pickerVisible;
 @property(nonatomic) long long pickerContext; // @synthesize pickerContext=_pickerContext;
@@ -52,7 +53,6 @@
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) SPTObserverManager *contentOffsetObserverManager; // @synthesize contentOffsetObserverManager=_contentOffsetObserverManager;
 @property(readonly, nonatomic) SPTGaiaDevicePickerViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)removeContentOffsetObserver:(id)arg1;
 - (void)addContentOffsetObserver:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;

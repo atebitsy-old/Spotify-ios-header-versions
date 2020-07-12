@@ -20,12 +20,12 @@
     id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_> _yourLibraryXTestManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_> yourLibraryXTestManager; // @synthesize yourLibraryXTestManager=_yourLibraryXTestManager;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierExperienceEnabledSignal; // @synthesize freeTierExperienceEnabledSignal=_freeTierExperienceEnabledSignal;
 @property(retain, nonatomic) SPTYourLibraryFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (void)setupRemoteConfigurationProperties;
 @property(readonly, nonatomic, getter=isYourLibraryXEnabled) _Bool yourLibraryXEnabled;
 @property(readonly, nonatomic, getter=isCreateButtonInHeaderEnabled) _Bool createButtonInHeaderEnabled;

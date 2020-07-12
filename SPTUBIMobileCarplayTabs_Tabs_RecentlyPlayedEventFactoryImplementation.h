@@ -16,9 +16,9 @@
 }
 
 + (id)factoryWithComponents:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)hitUiNavigateWithDestination:(id)arg1;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)impression;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

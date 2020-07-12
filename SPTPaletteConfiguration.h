@@ -18,10 +18,10 @@
 }
 
 + (id)defaultConfiguration;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *filters; // @synthesize filters=_filters;
 @property(nonatomic) unsigned long long maxColorCount; // @synthesize maxColorCount=_maxColorCount;
 @property(readonly, nonatomic) NSMutableOrderedSet *targets; // @synthesize targets=_targets;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithTargets:(id)arg1 maxColorCount:(unsigned long long)arg2 filters:(id)arg3;
 - (id)init;

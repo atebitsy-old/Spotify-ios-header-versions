@@ -32,6 +32,7 @@
 + (double)subtitleSpacingForStyle:(id)arg1;
 + (double)imageToLabelsSpacingForStyle:(id)arg1;
 + (struct CGSize)sizeForTitle:(id)arg1 subtitle:(id)arg2 accessoryTitle:(id)arg3 accessoryIconImage:(id)arg4 explicitContent:(_Bool)arg5 style:(id)arg6 maxWidth:(double)arg7;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIStackView *subtitleStack; // @synthesize subtitleStack=_subtitleStack;
 @property(readonly, nonatomic) UIStackView *imageViewContainer; // @synthesize imageViewContainer=_imageViewContainer;
 @property(readonly, nonatomic) UIStackView *labelsVerticalStack; // @synthesize labelsVerticalStack=_labelsVerticalStack;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(copy, nonatomic) SPTSearchUIEpisodeViewStyle *style; // @synthesize style=_style;
 @property(nonatomic) _Bool explicitContent; // @synthesize explicitContent=_explicitContent;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *imageViewWidthConstraint; // @synthesize imageViewWidthConstraint=_imageViewWidthConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *imageViewHeightConstraint; // @synthesize imageViewHeightConstraint=_imageViewHeightConstraint;
 - (void)updateAccessibilityLabel;

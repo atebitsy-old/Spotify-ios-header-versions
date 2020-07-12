@@ -32,6 +32,7 @@
     struct CGSize _downloadSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTImageLoaderRequest> request; // @synthesize request=_request;
 @property(nonatomic) _Bool cancelled; // @synthesize cancelled=_cancelled;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) NSDate *creationDate; // @synthesize creationDate=_creationDate;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) _Bool allowUpscaling; // @synthesize allowUpscaling=_allowUpscaling;
-- (void).cxx_destruct;
 - (void)imageLoaded:(id)arg1 withDataKey:(id)arg2 forURL:(id)arg3 startTime:(id)arg4 forEntity:(id)arg5;
 - (void)imageLoadError:(id)arg1 forURL:(id)arg2 context:(id)arg3;
 - (void)imageLoaded:(id)arg1 forURL:(id)arg2 startTime:(id)arg3 context:(id)arg4;

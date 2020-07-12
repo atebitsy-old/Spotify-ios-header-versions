@@ -17,9 +17,9 @@
     id <SPTBannerViewDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTBannerViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTPartnerNavigationBannerView *bannerView; // @synthesize bannerView=_bannerView;
-- (void).cxx_destruct;
 - (double)presentationDuration;
 - (id)initWithBannerView:(id)arg1;
 

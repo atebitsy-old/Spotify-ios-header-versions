@@ -18,12 +18,12 @@
     id <SPTCosmosDictionaryDataLoaderRequestToken> _requestToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> requestToken; // @synthesize requestToken=_requestToken;
 @property(nonatomic) __weak id <SPTCollectionPlatformTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSMutableDictionary *subscription; // @synthesize subscription=_subscription;
 @property(retain, nonatomic) NSMutableArray *additionalContentTypes; // @synthesize additionalContentTypes=_additionalContentTypes;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
-- (void).cxx_destruct;
 - (id)setupRequestBody;
 - (id)setupRequestString;
 - (_Bool)enableContentType:(unsigned long long)arg1;

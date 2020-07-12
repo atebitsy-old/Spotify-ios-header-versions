@@ -19,9 +19,9 @@
 }
 
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationUIFlexboxChildComponentViewController *childComponentViewController; // @synthesize childComponentViewController=_childComponentViewController;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (id)backgroundColorFromModel:(id)arg1;
 - (id)childComponentModelsForLayout;
 - (id)childDelegateForLayout;

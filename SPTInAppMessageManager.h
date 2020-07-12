@@ -25,6 +25,7 @@
     NSArray *_supportedTriggerTypes;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *supportedTriggerTypes; // @synthesize supportedTriggerTypes=_supportedTriggerTypes;
 @property(readonly, copy, nonatomic) NSArray *supportedActions; // @synthesize supportedActions=_supportedActions;
 @property(readonly, copy, nonatomic) NSArray *supportedFormats; // @synthesize supportedFormats=_supportedFormats;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTInAppMessageRequester> messageRequester; // @synthesize messageRequester=_messageRequester;
 @property(readonly, nonatomic) id <SPTInAppMessageLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTInAppMessageDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)startTriggerEngine;
 - (id)createMessageController;
 - (id)createTriggerListController;

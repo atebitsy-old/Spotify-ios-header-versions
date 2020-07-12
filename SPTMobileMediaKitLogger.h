@@ -17,9 +17,9 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic) unsigned long long logLevel; // @synthesize logLevel;
-- (void).cxx_destruct;
 - (void)logFatal:(id)arg1;
 - (void)logError:(id)arg1;
 - (void)logWarn:(id)arg1;

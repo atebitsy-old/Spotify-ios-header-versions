@@ -16,10 +16,10 @@
     NSURL *_playlistURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTUBIMobileRenamePlaylistEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (void)logCancelClicked;
 - (void)logRenameClicked;
 - (id)initWithUBIEventFactory:(id)arg1 ubiLogger:(id)arg2;

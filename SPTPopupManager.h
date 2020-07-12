@@ -18,11 +18,11 @@
 }
 
 + (id)sharedManager;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPopupDialog *presentedPopup; // @synthesize presentedPopup=_presentedPopup;
 @property(readonly, nonatomic) NSMutableArray *presentationQueue; // @synthesize presentationQueue=_presentationQueue;
 @property(retain, nonatomic) SPTPopupWindow *window; // @synthesize window=_window;
 @property(retain, nonatomic) id <SPTPopupTheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)loadWindow;
 - (void)dismissPresentedPopupDialogAndClearQueue:(_Bool)arg1 animate:(_Bool)arg2;
 - (void)dismissPopupDialog:(id)arg1 animate:(_Bool)arg2;

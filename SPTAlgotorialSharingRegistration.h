@@ -21,13 +21,13 @@
     CDUnknownBlockType _completion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSString *promotedID; // @synthesize promotedID=_promotedID;
 @property(copy, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)start;

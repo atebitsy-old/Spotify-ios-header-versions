@@ -18,11 +18,11 @@
     SPTInAppMessageReceiverImplementation *_messageReceiverImplementation;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTInAppMessageReceiverImplementation *messageReceiverImplementation; // @synthesize messageReceiverImplementation=_messageReceiverImplementation;
 @property(readonly, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
 @property(readonly, nonatomic) SPTInAppMessageBannerMessageController *bannerMessageController; // @synthesize bannerMessageController=_bannerMessageController;
 @property(readonly, nonatomic) SPTInAppMessageCardMessageController *cardMessageController; // @synthesize cardMessageController=_cardMessageController;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isPresentingInAppMessage) _Bool presentingInAppMessage;
 @property(readonly, nonatomic, getter=isPresentingInAppMessageNote) _Bool presentingInAppMessageNote;
 @property(readonly, nonatomic, getter=isPresentingInAppMessageBanner) _Bool presentingInAppMessageBanner;

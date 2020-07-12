@@ -6,29 +6,34 @@
 
 #import "SPTFreeTierPlaylistPlayModel-Protocol.h"
 
-@class NSURL, SPTPlayOrigin;
-@protocol SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistSortingFiltering, SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldPlayStatePlayable><SPTPlaylistPlatformFieldPlayStateRestriction, SPTPlaylistPlatformInCollection><SPTPlaylistPlatformFieldURL, SPTPlaylistPlatformIsBanned><SPTPlaylistPlatformFieldURL;
+@class NSString, NSURL, SPTPlayOrigin;
+@protocol SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistSortingFiltering, SPTPlaylistPlatformFieldPlayStatePlayable><SPTPlaylistPlatformFieldPlayStateRestriction><SPTPlaylistPlatformFieldURL, SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformInCollection, SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformIsBanned;
 
 @protocol SPTFreeTierPlaylistModel <SPTFreeTierPlaylistPlayModel>
-@property(readonly, nonatomic, getter=isFormatList) _Bool formatList;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering;
-@property(readonly, nonatomic) _Bool hasMore;
-@property(readonly, nonatomic) _Bool loadError;
-@property(readonly, nonatomic, getter=isOfflineSyncPermissionEnabled) _Bool offlineSyncPermissionEnabled;
-@property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-@property(nonatomic) _Bool excludeAllEpisodesOverride;
-@property(readonly, nonatomic) NSURL *playlistURL;
-- (void)playTrackURL:(NSURL *)arg1 andPlayOrigin:(SPTPlayOrigin *)arg2;
+- (void)playTrackURL:(NSURL *)arg1 andPlayOrigin:(SPTPlayOrigin *)arg2 interactionId:(NSString *)arg3;
 - (void)playlistContainsTrackURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;
 - (void)addTrackURL:(NSURL *)arg1 completion:(void (^)(NSError *))arg2;
-- (void)toggleLikedStateOnTrackEntity:(id <SPTPlaylistPlatformInCollection><SPTPlaylistPlatformFieldURL>)arg1;
-- (void)toggleBannedStateOnTrackEntity:(id <SPTPlaylistPlatformIsBanned><SPTPlaylistPlatformFieldURL>)arg1;
-- (_Bool)isPlaybackRestrictedForTrackEntity:(id <SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldPlayStatePlayable><SPTPlaylistPlatformFieldPlayStateRestriction>)arg1 shouldDisplayExplainingAlert:(_Bool)arg2 coverArtURL:(NSURL *)arg3;
+- (void)toggleLikedStateOnTrackEntity:(id <SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformInCollection>)arg1;
+- (void)toggleBannedStateOnTrackEntity:(id <SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformIsBanned>)arg1;
+- (_Bool)isPlaybackRestrictedForTrackEntity:(id <SPTPlaylistPlatformFieldPlayStatePlayable><SPTPlaylistPlatformFieldPlayStateRestriction><SPTPlaylistPlatformFieldURL>)arg1 shouldDisplayExplainingAlert:(_Bool)arg2 coverArtURL:(NSURL *)arg3;
 - (void)changeOffline:(_Bool)arg1;
 - (void)loadMore;
 - (void)deletePlaylist;
 - (void)changeFollowState:(_Bool)arg1;
+- (_Bool)isFormatList;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering;
+@property(nonatomic, readonly) _Bool hasMore;
+@property(nonatomic, readonly) _Bool loadError;
+- (_Bool)isOfflineSyncPermissionEnabled;
+- (_Bool)isLoaded;
 - (void)load;
 - (void)addPlaylistModelObserver:(id <SPTFreeTierPlaylistModelObserver>)arg1;
+@property(nonatomic) _Bool excludeAllEpisodesOverride;
+@property(nonatomic, readonly) NSURL *playlistURL;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool formatList;
+@property(nonatomic, readonly) _Bool loaded;
+@property(nonatomic, readonly) _Bool offlineSyncPermissionEnabled;
 @end
 

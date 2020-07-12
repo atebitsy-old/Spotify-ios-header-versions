@@ -28,6 +28,7 @@
     id <SPTNowPlayingTestManager> _testManger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManger; // @synthesize testManger=_testManger;
 @property(readonly, nonatomic) SPTNowPlayingTabViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) UITapGestureRecognizer *videoLabelTapRecognizer; // @synthesize videoLabelTapRecognizer=_videoLabelTapRecognizer;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) SPTNowPlayingTabLabel *coverArtLabel; // @synthesize coverArtLabel=_coverArtLabel;
 @property(readonly, nonatomic) SPTNowPlayingTabLabel *canvasTabLabel; // @synthesize canvasTabLabel=_canvasTabLabel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)tabViewModel:(id)arg1 didChangeSelectedTab:(long long)arg2;
 - (void)tabViewModelDidChangeTabs:(id)arg1 canvasTabVisible:(_Bool)arg2 lyricsTabVisible:(_Bool)arg3 videoTabVisible:(_Bool)arg4;
 - (void)selectTab:(long long)arg1;

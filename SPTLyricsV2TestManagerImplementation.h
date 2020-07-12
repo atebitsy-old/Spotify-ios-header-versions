@@ -20,11 +20,11 @@
     long long _lyricsV2FlagState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long lyricsV2FlagState; // @synthesize lyricsV2FlagState=_lyricsV2FlagState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsV2FlagSignal; // @synthesize lyricsV2FlagSignal=_lyricsV2FlagSignal;
 @property(readonly, nonatomic) SPTLyricsFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (_Bool)isSyllableSyncEnabled;
 - (_Bool)isVocalRemovalEnabled;
 - (_Bool)isFeatureEnabled;

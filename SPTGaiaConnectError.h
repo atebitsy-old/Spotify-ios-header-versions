@@ -14,9 +14,9 @@
     SPTGaiaConnectDevice *_originDevice;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaConnectDevice *originDevice; // @synthesize originDevice=_originDevice;
 @property(nonatomic) unsigned long long errorCode; // @synthesize errorCode=_errorCode;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *localizedErrorDescription;
 - (id)initWithErrorCode:(unsigned long long)arg1 device:(id)arg2;
 

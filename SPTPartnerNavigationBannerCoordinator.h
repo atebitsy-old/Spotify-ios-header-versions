@@ -27,6 +27,7 @@
     id <SPTPartnerLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPartnerLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak SPTPartnerTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresenter; // @synthesize bannerPresenter=_bannerPresenter;
 @property(readonly, nonatomic) SPTPartnerIntegrationStateLoader *integrationLoader; // @synthesize integrationLoader=_integrationLoader;
 @property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
-- (void).cxx_destruct;
 - (void)selectIntegration:(id)arg1 forViewModel:(id)arg2;
 - (void)selectMoreOptionsForViewModel:(id)arg1;
 - (void)dismissBannerForViewModel:(id)arg1;

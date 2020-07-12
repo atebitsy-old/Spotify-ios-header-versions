@@ -15,8 +15,8 @@
     SPTYourLibraryMusicGLUETheme *_theme;
 }
 
-@property(readonly, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 - (id)provideImageLoaderRequestForURL:(id)arg1 sourceIdentifier:(id)arg2 downloadSize:(struct CGSize)arg3 requestedSize:(struct CGSize)arg4 allowUpscaling:(_Bool)arg5 context:(id)arg6 callback:(id)arg7 dataLoader:(id)arg8 delegate:(id)arg9 baseImageLoader:(id)arg10;
 - (id)initWithTheme:(id)arg1;
 

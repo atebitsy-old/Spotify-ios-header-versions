@@ -33,6 +33,7 @@
     NSLayoutConstraint *_bannerViewBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *bannerViewBottomConstraint; // @synthesize bannerViewBottomConstraint=_bannerViewBottomConstraint;
 @property(retain, nonatomic) SPTPhoneNumberSignupBannerView *bannerView; // @synthesize bannerView=_bannerView;
 @property(retain, nonatomic) SPTPhoneNumberSignupInputFieldStackView *inputFieldStackView; // @synthesize inputFieldStackView=_inputFieldStackView;
@@ -48,7 +49,6 @@
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(readonly, nonatomic) double animatableContentViewOriginalX; // @synthesize animatableContentViewOriginalX=_animatableContentViewOriginalX;
 @property(retain, nonatomic) NSString *transitionContextViewKey; // @synthesize transitionContextViewKey=_transitionContextViewKey;
-- (void).cxx_destruct;
 - (void)setPasswordInputFieldAccessibilityIdentifier:(id)arg1;
 - (void)setSubtitleLabelAccessibilityIdentifier:(id)arg1;
 - (void)setEditPhoneNumberButtonAccessibilityIdentifier:(id)arg1;

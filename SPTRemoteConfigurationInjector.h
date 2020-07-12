@@ -13,8 +13,8 @@
     id <SPTRemoteConfigurationPersistence> _persistence;
 }
 
-@property(retain, nonatomic) id <SPTRemoteConfigurationPersistence> persistence; // @synthesize persistence=_persistence;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTRemoteConfigurationPersistence> persistence; // @synthesize persistence=_persistence;
 - (_Bool)injectConfiguration:(id)arg1 error:(id *)arg2;
 - (id)init;
 

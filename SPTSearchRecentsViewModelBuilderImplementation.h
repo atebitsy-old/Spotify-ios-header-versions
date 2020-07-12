@@ -23,6 +23,7 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureID; // @synthesize featureID=_featureID;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) _Bool explicitContentPlaybackAllowed; // @synthesize explicitContentPlaybackAllowed=_explicitContentPlaybackAllowed;
 @property(readonly, nonatomic) _Bool shouldRoundPodcastArtwork; // @synthesize shouldRoundPodcastArtwork=_shouldRoundPodcastArtwork;
 @property(readonly, copy, nonatomic) NSString *recentsCommandName; // @synthesize recentsCommandName=_recentsCommandName;
-- (void).cxx_destruct;
 - (id)dismissKeyboardCommand;
 - (_Bool)shouldMarkItemAsDisabled:(id)arg1;
 - (_Bool)shouldMarkItemAsPlaying:(id)arg1 playingTrackURI:(id)arg2 playingAlbumURI:(id)arg3;

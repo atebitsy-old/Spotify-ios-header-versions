@@ -31,6 +31,7 @@
     SPTVideoObserverManager *_playbackEventObserverManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool allowRoyaltyMedia; // @synthesize allowRoyaltyMedia=_allowRoyaltyMedia;
 @property(nonatomic) _Bool shouldResumeOnActive; // @synthesize shouldResumeOnActive=_shouldResumeOnActive;
 @property(retain, nonatomic) SPTVideoObserverManager *playbackEventObserverManager; // @synthesize playbackEventObserverManager=_playbackEventObserverManager;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) id <BMVideoSurfaceManager> surfaceManager; // @synthesize surfaceManager=_surfaceManager;
 @property(retain, nonatomic) SPTVideoPlaybackSessionFactory *sessionFactory; // @synthesize sessionFactory=_sessionFactory;
 @property(nonatomic) float playbackSpeed; // @synthesize playbackSpeed=_playbackSpeed;
-- (void).cxx_destruct;
 - (void)surfaceManager:(id)arg1 didRemoveSurface:(id)arg2;
 - (void)surfaceManager:(id)arg1 didChangePriorityForSurface:(id)arg2;
 - (void)surfaceManager:(id)arg1 didAddSurface:(id)arg2;

@@ -14,9 +14,9 @@
     GLUELabel *_subtitleLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 

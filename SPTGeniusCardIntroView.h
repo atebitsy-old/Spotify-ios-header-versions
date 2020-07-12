@@ -16,11 +16,11 @@
     UIImageView *_logoImageView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UIImageView *btlImageView; // @synthesize btlImageView=_btlImageView;
 @property(readonly, nonatomic) UIImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
-- (void).cxx_destruct;
 - (void)activateConstraints;
 - (void)customizeAppearance;
 - (void)buildHierarchy;

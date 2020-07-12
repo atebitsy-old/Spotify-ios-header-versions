@@ -28,6 +28,7 @@
     NSArray *_cachedSections;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *cachedSections; // @synthesize cachedSections=_cachedSections;
 @property(retain, nonatomic) id <SPTGaiaSettingsProvider> settingsProvider; // @synthesize settingsProvider=_settingsProvider;
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
@@ -36,7 +37,6 @@
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(nonatomic) __weak id <SPTGaiaDevicePickerDevicesProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)localDevicesOnlySettingsChanged:(_Bool)arg1;
 - (void)lockScreenControlsSettingsChanged:(_Bool)arg1;
 - (void)currentProductDidChangeForProductInformationController:(id)arg1;

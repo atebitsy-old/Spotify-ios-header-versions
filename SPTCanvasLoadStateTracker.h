@@ -16,9 +16,9 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) NSMapTable *states; // @synthesize states=_states;
-- (void).cxx_destruct;
 - (void)loadStateWillNoLongerUpdateForCanvasId:(id)arg1;
 - (void)loadStateUpdater:(id)arg1 didUpdateforCanvasId:(id)arg2;
 - (void)removeObserver:(id)arg1;

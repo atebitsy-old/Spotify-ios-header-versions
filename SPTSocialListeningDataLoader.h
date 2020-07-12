@@ -24,6 +24,7 @@
     unsigned long long _requestQueued;
 }
 
+- (void).cxx_destruct;
 @property unsigned long long requestQueued; // @synthesize requestQueued=_requestQueued;
 @property(copy, nonatomic) NSString *physicalDeviceID; // @synthesize physicalDeviceID=_physicalDeviceID;
 @property _Bool isLoading; // @synthesize isLoading=_isLoading;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDictionaryDataLoader; // @synthesize cosmosDictionaryDataLoader=_cosmosDictionaryDataLoader;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTSocialListeningDataLoaderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)loadJoinConfirmationWithToken:(id)arg1;
 - (void)getExposedDevices;
 - (void)handleSocialDeviceResponse:(id)arg1 withDeviceIds:(id)arg2;

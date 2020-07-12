@@ -17,10 +17,10 @@
     unsigned long long _count;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long count; // @synthesize count=_count;
 @property(nonatomic) unsigned long long location; // @synthesize location=_location;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

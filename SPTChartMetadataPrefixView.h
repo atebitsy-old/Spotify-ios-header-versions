@@ -21,12 +21,12 @@
 }
 
 + (id)metadataViewWithType:(unsigned long long)arg1 positionNumber:(unsigned long long)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UILabel *numberLabel; // @synthesize numberLabel=_numberLabel;
 @property(nonatomic) unsigned long long entryType; // @synthesize entryType=_entryType;
 @property(retain, nonatomic) SPTChartPrefixIconView *iconView; // @synthesize iconView=_iconView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)applyThemeLayout;
 - (void)addViewConstraints;

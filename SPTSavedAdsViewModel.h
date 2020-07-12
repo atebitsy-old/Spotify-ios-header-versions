@@ -19,11 +19,11 @@
     NSMutableArray *_savedAds;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *savedAds; // @synthesize savedAds=_savedAds;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(nonatomic) __weak id <SPTSavedAdsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)requestURLToDeleteBookmarkedAdWithIdentifier:(id)arg1;

@@ -26,6 +26,7 @@
     SPTPlayerState *_playerState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTNowPlayingRemoteControlPolicyRegistry> remoteControlPolicyRegistry; // @synthesize remoteControlPolicyRegistry=_remoteControlPolicyRegistry;
 @property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)resolveRemoteControlPolicy;
 - (id)initWithPlayer:(id)arg1 model:(id)arg2 remoteControlManager:(id)arg3 adsManager:(id)arg4 remoteControlPolicyFactory:(id)arg5 testManager:(id)arg6 psxTestManager:(id)arg7 remoteControlPolicyRegistry:(id)arg8 auxiliaryActionsHandler:(id)arg9;

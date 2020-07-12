@@ -22,6 +22,7 @@
     GLUELabelStyle *_titleLabelStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(nonatomic) double accessoryIconViewMargin; // @synthesize accessoryIconViewMargin=_accessoryIconViewMargin;
 @property(copy, nonatomic) GLUEAccessoryIconViewStyle *accessoryIconViewStyle; // @synthesize accessoryIconViewStyle=_accessoryIconViewStyle;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToNavigationRowUIStateStyle:(id)arg1;

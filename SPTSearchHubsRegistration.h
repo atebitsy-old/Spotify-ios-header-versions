@@ -15,9 +15,9 @@
     HUBComponentRegistry *_componentRegistry;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)unregisterSearchComponents;
 - (void)registerSearchComponents;
 - (id)initWithTheme:(id)arg1 componentRegistry:(id)arg2;

@@ -13,8 +13,8 @@
     NSArray *_playbackSpeeds;
 }
 
-@property(copy, nonatomic) NSArray *playbackSpeeds; // @synthesize playbackSpeeds=_playbackSpeeds;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *playbackSpeeds; // @synthesize playbackSpeeds=_playbackSpeeds;
 - (id)initWithPlaybackSpeeds:(id)arg1;
 
 @end

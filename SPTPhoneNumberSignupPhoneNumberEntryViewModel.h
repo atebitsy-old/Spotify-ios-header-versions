@@ -23,6 +23,7 @@
     SPTPhoneNumberSignupUtils *_phoneNumberSignupUtils;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPhoneNumberSignupUtils *phoneNumberSignupUtils; // @synthesize phoneNumberSignupUtils=_phoneNumberSignupUtils;
 @property(nonatomic) _Bool didUserEditPhoneNumber; // @synthesize didUserEditPhoneNumber=_didUserEditPhoneNumber;
 @property(readonly, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryViewLogger *logger; // @synthesize logger=_logger;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSString *callingCode; // @synthesize callingCode=_callingCode;
 @property(nonatomic) _Bool isNextButtonEnabled; // @synthesize isNextButtonEnabled=_isNextButtonEnabled;
 @property(readonly, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)disableNextButtonLoadingWithDelay;
 @property(readonly, nonatomic) _Bool isCountrySelectionEnabled;

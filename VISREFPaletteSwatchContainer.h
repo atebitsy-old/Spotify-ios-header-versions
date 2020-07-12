@@ -15,9 +15,9 @@
 }
 
 + (id)containerWithSwatch:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double colorSortingScore; // @synthesize colorSortingScore=_colorSortingScore;
 @property(readonly, nonatomic) SPTPaletteSwatch *swatch; // @synthesize swatch=_swatch;
-- (void).cxx_destruct;
 - (id)initWithSwatch:(id)arg1;
 
 @end

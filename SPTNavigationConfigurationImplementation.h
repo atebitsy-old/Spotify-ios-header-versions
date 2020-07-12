@@ -18,10 +18,10 @@
     NSSet *_tabBarFlagValuesFindEnabled;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *tabBarFlagValuesFindEnabled; // @synthesize tabBarFlagValuesFindEnabled=_tabBarFlagValuesFindEnabled;
 @property(copy, nonatomic) NSSet *validTabBarAbbaFlagValues; // @synthesize validTabBarAbbaFlagValues=_validTabBarAbbaFlagValues;
 @property(retain, nonatomic) id <SPTNavigationListProvider> listProvider; // @synthesize listProvider=_listProvider;
-- (void).cxx_destruct;
 - (id)tabBarABFlagValue;
 - (_Bool)isValidTabBarABFlagValue:(id)arg1;
 - (id)defaultConfigurationFlagIdentifierMapping;

@@ -18,10 +18,10 @@
     SPTFreeTierAllSongsPageLoadableRequest *_currentRequest;
 }
 
+- (void).cxx_destruct;
 @property(retain) SPTFreeTierAllSongsPageLoadableRequest *currentRequest; // @synthesize currentRequest=_currentRequest;
 @property(readonly, nonatomic) NSURL *viewURL; // @synthesize viewURL=_viewURL;
 @property(readonly, nonatomic) id <SPTFreeTierAllSongsRegistry> allSongsRegistry; // @synthesize allSongsRegistry=_allSongsRegistry;
-- (void).cxx_destruct;
 - (void)loadWithResultHandler:(id)arg1;
 - (void)cancel;
 - (id)initWithViewURL:(id)arg1 allSongsRegistry:(id)arg2;

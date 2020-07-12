@@ -20,12 +20,12 @@
     CDUnknownBlockType _errorHandler;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType errorHandler; // @synthesize errorHandler=_errorHandler;
 @property(retain, nonatomic) id <SPTUBIPlaybackIdProvider> playbackIdProvider; // @synthesize playbackIdProvider=_playbackIdProvider;
 @property(nonatomic) __weak id <SPTUBIPageInstanceIdentifierProvider> pageInstanceIdentifierProvider; // @synthesize pageInstanceIdentifierProvider=_pageInstanceIdentifierProvider;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) __weak id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (void)addPathToEvent:(id)arg1 fromComponents:(id)arg2;
 - (void)addActionParametersToEvent:(id)arg1 fromInteraction:(id)arg2;
 - (id)addDataToMessage:(id)arg1 fromImpression:(id)arg2;

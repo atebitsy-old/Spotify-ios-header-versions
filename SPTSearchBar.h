@@ -18,9 +18,9 @@
 }
 
 + (id)searchBar;
+- (void).cxx_destruct;
 @property(nonatomic) long long keyboardAppearance; // @synthesize keyboardAppearance=_keyboardAppearance;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)layoutSubviews;
 - (void)didMoveToSuperview;

@@ -16,8 +16,8 @@
     id <SPTUBIHubsUtilities> _ubiHubs;
 }
 
-@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
 - (id)dictionaryRepresentationOfLocation:(id)arg1;
 - (id)initWithUBI:(id)arg1;
 

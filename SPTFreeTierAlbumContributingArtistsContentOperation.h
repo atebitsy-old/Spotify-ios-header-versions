@@ -17,9 +17,9 @@
     UIFont *_subtitleFont;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIFont *subtitleFont; // @synthesize subtitleFont=_subtitleFont;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)init;
 

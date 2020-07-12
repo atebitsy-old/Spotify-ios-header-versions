@@ -20,11 +20,11 @@
     SPTFreeTierPlaylistButtonSectionHeaderViewStyle *_defaultStyle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *defaultStyle; // @synthesize defaultStyle=_defaultStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPlaylistButtonSectionHeaderViewStyle *emptyListStyle; // @synthesize emptyListStyle=_emptyListStyle;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> additionalCallToAction; // @synthesize additionalCallToAction=_additionalCallToAction;
-- (void).cxx_destruct;
 - (void)willDisplaySection;
 - (id)sectionFooter;
 - (id)sectionHeader;
@@ -35,7 +35,7 @@
 - (id)reuseIdentifiers;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
 - (double)heightForRowAtIndexPath:(id)arg1;
-- (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)configureEmptyListCTACell:(id)arg1;
 - (void)configureAdditionalCTACell:(id)arg1;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;

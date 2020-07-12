@@ -44,6 +44,7 @@
     NSArray *_availableFilters;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *availableFilters; // @synthesize availableFilters=_availableFilters;
 @property(retain, nonatomic) id <SPTYourLibraryMusicSkippedRecommendedTracks> skippedRecommendedTracks; // @synthesize skippedRecommendedTracks=_skippedRecommendedTracks;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionStateRequestToken; // @synthesize collectionStateRequestToken=_collectionStateRequestToken;
@@ -68,7 +69,6 @@
 @property(copy, nonatomic) NSArray *activeFilters; // @synthesize activeFilters=_activeFilters;
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)filterSortManager:(id)arg1 error:(id)arg2;
 - (void)filterSortManager:(id)arg1 updatedFilterRules:(id)arg2;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;

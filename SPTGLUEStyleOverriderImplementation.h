@@ -18,8 +18,8 @@
 + (id)entityCardStyleForTheme:(id)arg1 imageStyle:(id)arg2;
 + (id)entityRowStyleForTheme:(id)arg1 targetURI:(id)arg2;
 + (id)entityCardStyleForTheme:(id)arg1 targetURI:(id)arg2;
-@property(readonly, nonatomic) id <SPTHubComponentModelURIResolver> componentModelURIResolver; // @synthesize componentModelURIResolver=_componentModelURIResolver;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTHubComponentModelURIResolver> componentModelURIResolver; // @synthesize componentModelURIResolver=_componentModelURIResolver;
 - (id)styleForComponentModel:(id)arg1 withDefaultStyle:(id)arg2 usingTheme:(id)arg3;
 - (id)initWithComponentModelURIResolver:(id)arg1;
 

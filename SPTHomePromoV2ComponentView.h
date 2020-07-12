@@ -27,6 +27,7 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <HUBCommandModel> playCommandModel; // @synthesize playCommandModel=_playCommandModel;
 @property(readonly, nonatomic) SPTHomeUIPromoV2ContentView *contentView; // @synthesize contentView=_contentView;
 @property(readonly, nonatomic) SPTHomeUIPromoV2BackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
@@ -35,7 +36,6 @@
 @property(nonatomic) __weak id <SPTHomePromoV2ComponentViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UIGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (_Bool)isAccentColorSpecifiedInModel:(id)arg1;
 - (void)applyAccentColorFromModel:(id)arg1;
 - (void)didTapPlayButtonInContentView:(id)arg1;

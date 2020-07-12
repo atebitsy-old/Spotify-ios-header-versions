@@ -15,9 +15,12 @@
     SPTLoginErrorLogger *_errorLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
+- (void)logImageInteractionWithName:(id)arg1;
+- (void)logUserDidSwipeImage;
+- (void)logUserDidTapImage;
 - (void)logDidFailLoadImage;
 - (void)logDidFinishLoadImage;
 - (void)logDidStartLoadImageWithName:(id)arg1 size:(id)arg2 forScreenWidth:(double)arg3;

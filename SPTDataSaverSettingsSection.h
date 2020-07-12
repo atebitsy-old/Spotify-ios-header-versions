@@ -17,10 +17,10 @@
     SPTDataSaverController *_dataSaverController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDataSaverController *dataSaverController; // @synthesize dataSaverController=_dataSaverController;
 @property(nonatomic) _Bool canvasEnabled; // @synthesize canvasEnabled=_canvasEnabled;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *dataSaverCell; // @synthesize dataSaverCell=_dataSaverCell;
-- (void).cxx_destruct;
 - (void)dataSaverControllerStateDidChange;
 - (void)updateDataSaverState;
 - (void)updateDataSaverCellTitleWithActivatedState:(_Bool)arg1;

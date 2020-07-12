@@ -15,11 +15,17 @@
     _Bool _mercuryPremiumHubsPageShowLegacyIos;
     _Bool _premiumHeaderVoiceoverAccessibleEnabled;
     _Bool _premiumDestinationTabbarBadgeEnabled;
+    unsigned long long _premiumDestinationTrialOfferRibbon;
+    NSString *_premiumDestinationTrialOfferRibbonString;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) NSString *premiumDestinationTrialOfferRibbonString; // @synthesize premiumDestinationTrialOfferRibbonString=_premiumDestinationTrialOfferRibbonString;
+@property(readonly, nonatomic) unsigned long long premiumDestinationTrialOfferRibbon; // @synthesize premiumDestinationTrialOfferRibbon=_premiumDestinationTrialOfferRibbon;
 @property(readonly, nonatomic) _Bool premiumDestinationTabbarBadgeEnabled; // @synthesize premiumDestinationTabbarBadgeEnabled=_premiumDestinationTabbarBadgeEnabled;
 @property(readonly, nonatomic) _Bool premiumHeaderVoiceoverAccessibleEnabled; // @synthesize premiumHeaderVoiceoverAccessibleEnabled=_premiumHeaderVoiceoverAccessibleEnabled;
 @property(readonly, nonatomic) _Bool mercuryPremiumHubsPageShowLegacyIos; // @synthesize mercuryPremiumHubsPageShowLegacyIos=_mercuryPremiumHubsPageShowLegacyIos;
+- (unsigned long long)mapPremiumDestinationTrialOfferRibbonToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

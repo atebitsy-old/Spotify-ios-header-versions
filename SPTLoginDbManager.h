@@ -20,6 +20,7 @@
 }
 
 + (id)methodFromSourceScreen:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDateFormatter *formatter; // @synthesize formatter=_formatter;
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) NSString *databaseFileFullPath; // @synthesize databaseFileFullPath=_databaseFileFullPath;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) NSString *databaseDirectoryPath; // @synthesize databaseDirectoryPath=_databaseDirectoryPath;
 @property(readonly, nonatomic) NSString *documentsDirectoryPath; // @synthesize documentsDirectoryPath=_documentsDirectoryPath;
 @property(readonly, nonatomic) _Bool isReady; // @synthesize isReady=_isReady;
-- (void).cxx_destruct;
 - (_Bool)shouldRun;
 - (void)cleanOldRecords;
 - (id)readUserFromRecord:(struct sqlite3_stmt *)arg1;

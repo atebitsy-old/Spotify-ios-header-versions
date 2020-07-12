@@ -42,6 +42,7 @@
     NSLayoutConstraint *_heightLayoutConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *heightLayoutConstraint; // @synthesize heightLayoutConstraint=_heightLayoutConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *backgroundHeightConstraint; // @synthesize backgroundHeightConstraint=_backgroundHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *collapsedTitleTrailingLayoutConstraint; // @synthesize collapsedTitleTrailingLayoutConstraint=_collapsedTitleTrailingLayoutConstraint;
@@ -69,7 +70,6 @@
 @property(nonatomic, getter=isTitleHiddenWhenCollapsed) _Bool titleHiddenWhenCollapsed; // @synthesize titleHiddenWhenCollapsed=_titleHiddenWhenCollapsed;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(nonatomic) __weak id <SPTPodcastEpisodeEntityHeaderContentViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateOffset:(double)arg1;
 - (void)updateMinimumHeight:(double)arg1;

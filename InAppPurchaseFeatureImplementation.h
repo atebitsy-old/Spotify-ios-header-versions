@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol InAppPurchaseController, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTIAPController, SPTIAPFeatureFlags, SPTLocalSettings, SPTNetworkService, SPTSessionService, SPTSettingsFeature;
+@protocol InAppPurchaseController, SPTContainerUIService, SPTCoreService, SPTIAPController, SPTIAPFeatureFlags, SPTLocalSettings, SPTNetworkService, SPTSessionService, SPTSettingsFeature;
 
 @interface InAppPurchaseFeatureImplementation : NSObject <SPTService, InAppPurchaseFeature>
 {
@@ -18,7 +18,6 @@
     id <SPTCoreService> _coreService;
     id <SPTNetworkService> _networkService;
     id <SPTSettingsFeature> _settingsFeature;
-    id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
     id <InAppPurchaseController> _inAppPurchaseController;
     id <SPTIAPController> _iapController;
@@ -27,17 +26,16 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTIAPFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTIAPController> iapController; // @synthesize iapController=_iapController;
 @property(retain, nonatomic) id <InAppPurchaseController> inAppPurchaseController; // @synthesize inAppPurchaseController=_inAppPurchaseController;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-@property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (void)tearDownInAppPurchaseFunctionality;
 - (void)setupInAppPurchaseController;
 - (id)provideInAppPurchaseController;

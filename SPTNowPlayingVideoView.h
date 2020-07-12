@@ -39,6 +39,7 @@
     NSLayoutConstraint *_durationViewWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *durationViewWidthConstraint; // @synthesize durationViewWidthConstraint=_durationViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *durationViewHeightConstraint; // @synthesize durationViewHeightConstraint=_durationViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *headUnitWidthConstraint; // @synthesize headUnitWidthConstraint=_headUnitWidthConstraint;
@@ -60,7 +61,6 @@
 @property(readonly, nonatomic) SPTNowPlayingNavigationBarView *headerTitleView; // @synthesize headerTitleView=_headerTitleView;
 @property(nonatomic) __weak id <SPTNowPlayingVideoViewV2Delegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)videoSurfaceDidDetachVideo:(id)arg1;
 - (void)videoSurfaceDidAttachVideo:(id)arg1;
 - (id)buttonWithIcon:(long long)arg1 iconSize:(struct CGSize)arg2;

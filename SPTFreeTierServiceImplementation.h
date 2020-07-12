@@ -31,6 +31,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) SPTUIModeSwitchManager *modeSwitcher; // @synthesize modeSwitcher=_modeSwitcher;
 @property(nonatomic) long long theNewExperienceFlagPreviousState; // @synthesize theNewExperienceFlagPreviousState=_theNewExperienceFlagPreviousState;
@@ -45,7 +46,6 @@
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideNewExperienceEnabledSignal;
 - (void)unload;
 - (void)load;

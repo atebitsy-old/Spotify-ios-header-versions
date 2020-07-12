@@ -26,6 +26,7 @@
 }
 
 + (id)spt_imageWithEllipseSize:(struct CGSize)arg1 color:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) float uncompensatedTrackingValue; // @synthesize uncompensatedTrackingValue=_uncompensatedTrackingValue;
 @property(nonatomic) struct CGPoint startTrackingPoint; // @synthesize startTrackingPoint=_startTrackingPoint;
 @property(nonatomic) double animationSpeed; // @synthesize animationSpeed=_animationSpeed;
@@ -38,7 +39,6 @@
 @property(nonatomic) struct CGPoint thumbPosition; // @synthesize thumbPosition=_thumbPosition;
 @property(retain, nonatomic) UIColor *trackingMinimumColour; // @synthesize trackingMinimumColour=_trackingMinimumColour;
 @property(nonatomic) __weak id <SPTNowPlayingSliderV2DataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (id)timeIntervalToAccessibilityString:(double)arg1;
 - (id)accessibilityValue;
 - (id)accessibilityLabel;

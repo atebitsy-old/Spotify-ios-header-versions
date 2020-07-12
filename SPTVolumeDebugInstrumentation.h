@@ -17,11 +17,11 @@
     id <SPTEventSender> _eventSender;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTGaiaLockScreenControlsStateProvider> lockscreenControlStateProvider; // @synthesize lockscreenControlStateProvider=_lockscreenControlStateProvider;
 @property(readonly, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
-- (void).cxx_destruct;
 - (void)sendEventWithAction:(id)arg1 parameter:(id)arg2 deviceId:(id)arg3 volume:(id)arg4 appState:(id)arg5;
 - (id)currentAppState;
 - (id)activeDeviceId;

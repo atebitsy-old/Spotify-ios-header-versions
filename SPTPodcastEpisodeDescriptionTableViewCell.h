@@ -23,6 +23,7 @@
     GLUELabel *_metadataLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) SPTPodcastEpisodeDescriptionTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
 @property(retain, nonatomic) NSLayoutConstraint *bottomEdgeConstraint; // @synthesize bottomEdgeConstraint=_bottomEdgeConstraint;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *topEdgeConstraint; // @synthesize topEdgeConstraint=_topEdgeConstraint;
 @property(retain, nonatomic) UIStackView *contentStack; // @synthesize contentStack=_contentStack;
 @property(nonatomic) __weak id <SPTPodcastEpisodeDescriptionTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 @property(nonatomic) double episodeDuration;
 @property(copy, nonatomic) NSURL *episodeURL;

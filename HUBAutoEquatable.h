@@ -11,7 +11,7 @@
 }
 
 + (id)ignoredAutoEquatablePropertyNames;
-- (struct NSDictionary *)getOrCreateComparisonMap;
+- (id)getOrCreateComparisonMap;
 - (_Bool)isEqual:(id)arg1;
 
 @end

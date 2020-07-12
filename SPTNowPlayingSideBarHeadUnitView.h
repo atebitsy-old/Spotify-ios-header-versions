@@ -18,12 +18,12 @@
     NSMutableArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIButton *rightSecondaryButton; // @synthesize rightSecondaryButton=_rightSecondaryButton;
 @property(retain, nonatomic) UIButton *leftSecondaryButton; // @synthesize leftSecondaryButton=_leftSecondaryButton;
 @property(retain, nonatomic) SPTNowPlayingButton<SPTNowPlayingPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
-- (void).cxx_destruct;
 - (void)forceUpdateConstraints;
 - (void)updateConstraints;
 - (void)willMoveToSuperview:(id)arg1;

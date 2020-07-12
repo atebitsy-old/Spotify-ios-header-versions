@@ -13,8 +13,8 @@
     SPTDataLoaderFactory *_dataLoaderFactory;
 }
 
-@property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 - (id)createProductActivationRequestWithReceiptData:(id)arg1;
 - (id)createTransactionRequestForPayment:(id)arg1;
 - (id)createItunesProductRequestForProductIdentifiers:(id)arg1;

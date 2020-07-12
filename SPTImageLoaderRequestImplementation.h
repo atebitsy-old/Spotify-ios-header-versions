@@ -32,6 +32,7 @@
     struct CGSize _requestedSize;
 }
 
+- (void).cxx_destruct;
 @property(retain) id <SPTDataLoaderCancellationToken> cancelToken; // @synthesize cancelToken=_cancelToken;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) _Bool allowUpscaling; // @synthesize allowUpscaling=_allowUpscaling;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(retain, nonatomic) NSString *persistenceKey; // @synthesize persistenceKey=_persistenceKey;
 @property(nonatomic) __weak id <SPTImageLoaderRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)cancelled;
 - (void)cancel;
 - (void)load;

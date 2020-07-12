@@ -33,6 +33,7 @@
     double _trailingMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double trailingMargin; // @synthesize trailingMargin=_trailingMargin;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleTrailingConstraint; // @synthesize subtitleTrailingConstraint=_subtitleTrailingConstraint;
@@ -52,7 +53,6 @@
 @property(copy, nonatomic) CDUnknownBlockType collapseToggle; // @synthesize collapseToggle=_collapseToggle;
 @property(nonatomic, getter=isNotCollapsable) _Bool notCollapsable; // @synthesize notCollapsable=_notCollapsable;
 @property(nonatomic) _Bool collapsed; // @synthesize collapsed=_collapsed;
-- (void).cxx_destruct;
 - (void)collapseButtonAction:(id)arg1;
 - (void)tapGesture:(id)arg1;
 - (void)dispatchCollapseToggleAction;

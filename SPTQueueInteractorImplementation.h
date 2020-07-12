@@ -16,8 +16,8 @@
     id <SPTQueueInteractorTarget> _target;
 }
 
-@property(nonatomic) __weak id <SPTQueueInteractorTarget> target; // @synthesize target=_target;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTQueueInteractorTarget> target; // @synthesize target=_target;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

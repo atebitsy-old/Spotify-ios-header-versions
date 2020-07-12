@@ -24,6 +24,7 @@
     SPTArtistAbout *_artistAbout;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTArtistAbout *artistAbout; // @synthesize artistAbout=_artistAbout;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) SPTArtistAboutDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -33,7 +34,6 @@
 @property(nonatomic, getter=isLoading) _Bool loading; // @synthesize loading=_loading;
 @property(nonatomic) __weak id <SPTArtistAboutViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSURL *artistURI; // @synthesize artistURI=_artistURI;
-- (void).cxx_destruct;
 - (id)urlForSocialLinkType:(unsigned long long)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)setupSocialLinkViewModelsWithSocialLinks:(id)arg1;

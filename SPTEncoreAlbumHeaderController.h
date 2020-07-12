@@ -36,6 +36,7 @@
 }
 
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEncoreAlbumHeader *albumHeader; // @synthesize albumHeader=_albumHeader;
 @property(nonatomic) long long currentDownloadState; // @synthesize currentDownloadState=_currentDownloadState;
 @property(retain, nonatomic) UIColor *extractedColor; // @synthesize extractedColor=_extractedColor;
@@ -53,7 +54,6 @@
 @property(retain, nonatomic) id <SPTFreeTierEntityContextMenuButtonViewModel> contextMenuButtonModel; // @synthesize contextMenuButtonModel=_contextMenuButtonModel;
 @property(retain, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> followButtonModel; // @synthesize followButtonModel=_followButtonModel;
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
-- (void).cxx_destruct;
 - (_Bool)shouldShowRemoveFromDownloadsConfirmationAlert;
 - (void)showRemoveFromDownloadsConfirmationAlertWithCompletion:(CDUnknownBlockType)arg1;
 - (void)viewModel:(id)arg1 offlineAvailabilityChanged:(unsigned long long)arg2;

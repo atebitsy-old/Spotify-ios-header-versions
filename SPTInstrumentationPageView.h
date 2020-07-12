@@ -21,13 +21,13 @@
 }
 
 + (id)keyPathsForValuesAffectingResolved;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *pendingContinuations; // @synthesize pendingContinuations=_pendingContinuations;
 @property(retain, nonatomic) NSString *navigationRootIdentifier; // @synthesize navigationRootIdentifier=_navigationRootIdentifier;
 @property(retain, nonatomic) NSString *pageName; // @synthesize pageName=_pageName;
 @property(retain, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(retain, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(readonly, nonatomic) long long entryTimestamp; // @synthesize entryTimestamp=_entryTimestamp;
-- (void).cxx_destruct;
 - (void)addCompletePageViewResolutionContinuation;
 - (void)whenResolvedDo:(CDUnknownBlockType)arg1;
 - (void)resolveWithPageIdentifier:(id)arg1 pageURI:(id)arg2 pageName:(id)arg3 navigationRootIdentifier:(id)arg4;

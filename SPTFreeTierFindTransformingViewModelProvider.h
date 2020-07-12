@@ -20,11 +20,11 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) id <HUBViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, copy, nonatomic) CDUnknownBlockType transformer; // @synthesize transformer=_transformer;
 @property(readonly, nonatomic) id <SPTFreeTierFindViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
-- (void).cxx_destruct;
 - (void)transformAndSetViewModel:(id)arg1;
 - (void)viewModelProvider:(id)arg1 didUpdateFromViewModel:(id)arg2 toViewModel:(id)arg3;
 - (void)removeObserver:(id)arg1;

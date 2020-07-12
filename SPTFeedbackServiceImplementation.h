@@ -9,24 +9,22 @@
 #import "SPTFeedbackService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol CosmosFeature, SPTFeatureFlaggingService, SPTFeedbackManager, SPTFeedbackViewModel, SPTSessionService;
+@protocol CosmosFeature, SPTFeatureFlaggingService, SPTFeedbackManager, SPTFeedbackViewModel;
 
 @interface SPTFeedbackServiceImplementation : NSObject <SPTFeedbackService>
 {
     id <CosmosFeature> _cosmosService;
-    id <SPTSessionService> _clientSessionService;
     id <SPTFeatureFlaggingService> _featureFlagService;
     id <SPTFeedbackManager> _feedbackManager;
     id <SPTFeedbackViewModel> _feedbackViewModel;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFeedbackViewModel> feedbackViewModel; // @synthesize feedbackViewModel=_feedbackViewModel;
 @property(retain, nonatomic) id <SPTFeedbackManager> feedbackManager; // @synthesize feedbackManager=_feedbackManager;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlagService; // @synthesize featureFlagService=_featureFlagService;
-@property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
-- (void).cxx_destruct;
 - (id)provideFeedbackViewModel;
 - (id)provideFeedbackManager;
 - (void)unload;

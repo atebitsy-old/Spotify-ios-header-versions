@@ -9,13 +9,6 @@
 @class GLUEButton, NSString, NSURL, UIBarButtonItem, UIColor;
 
 @protocol SPTCollectionPlatformConfiguration <NSObject>
-@property(readonly, nonatomic) NSString *collectionSongsSearchPlaceholder;
-@property(readonly, nonatomic) NSURL *collectionSongsImageURL;
-@property(readonly, nonatomic) long long collectionIcon;
-@property(readonly, nonatomic) NSString *collectionRecentlyPlayedSongsTitle;
-@property(readonly, nonatomic) NSString *collectionSongsTitle;
-@property(readonly, nonatomic) NSString *collectionPlayingFromTitle;
-@property(readonly, nonatomic) NSString *collectionTitle;
 - (unsigned long long)banActionTypeForURL:(NSURL *)arg1 contextURL:(NSURL *)arg2;
 - (NSString *)localfilesImportDialogForPlaylistCount:(unsigned long long)arg1 songsCount:(unsigned long long)arg2;
 - (NSString *)entityNuxTitleForType:(unsigned long long)arg1 entityName:(NSString *)arg2;
@@ -41,5 +34,12 @@
 - (UIColor *)actionIconColorForItemWithCollectionState:(_Bool)arg1;
 - (long long)actionIconForItemWithCollectionState:(_Bool)arg1 entityURL:(NSURL *)arg2;
 - (long long)iconForItemInCollection:(_Bool)arg1 entityURL:(NSURL *)arg2;
+@property(nonatomic, readonly) NSString *collectionSongsSearchPlaceholder;
+@property(nonatomic, readonly) NSURL *collectionSongsImageURL;
+@property(nonatomic, readonly) long long collectionIcon;
+@property(nonatomic, readonly) NSString *collectionRecentlyPlayedSongsTitle;
+@property(nonatomic, readonly) NSString *collectionSongsTitle;
+@property(nonatomic, readonly) NSString *collectionPlayingFromTitle;
+@property(nonatomic, readonly) NSString *collectionTitle;
 @end
 

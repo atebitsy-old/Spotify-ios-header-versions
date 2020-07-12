@@ -28,6 +28,7 @@
     NSURL *_pendingStateRestoreURI;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) NSURL *pendingStateRestoreURI; // @synthesize pendingStateRestoreURI=_pendingStateRestoreURI;
 @property(copy, nonatomic) NSArray *groupData; // @synthesize groupData=_groupData;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) id <SPTPageCreationContext> pageCreationContext; // @synthesize pageCreationContext=_pageCreationContext;
 @property(retain, nonatomic) id <SPTYourLibraryModel> model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)notifyObserversNavigateToGroup:(unsigned long long)arg1 index:(unsigned long long)arg2;

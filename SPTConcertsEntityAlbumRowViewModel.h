@@ -18,11 +18,11 @@
     NSString *subtitleText;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *subtitleText; // @synthesize subtitleText;
 @property(readonly, copy, nonatomic) NSString *titleText; // @synthesize titleText;
 @property(readonly, copy, nonatomic) NSString *adornmentSubtitleText; // @synthesize adornmentSubtitleText;
 @property(readonly, copy, nonatomic) NSString *adornmentTitleText; // @synthesize adornmentTitleText;
-- (void).cxx_destruct;
 - (void)handleAccessoryTap;
 - (void)handleTap;
 @property(readonly, nonatomic) _Bool canBeTapped;

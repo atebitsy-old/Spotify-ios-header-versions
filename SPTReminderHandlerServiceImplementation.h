@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTReminder *reminder; // @synthesize reminder=_reminder;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTReminderHandler> reminderHandler;
 - (void)unload;
 - (void)load;

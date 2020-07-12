@@ -17,10 +17,10 @@
     double _verticalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double verticalMargin; // @synthesize verticalMargin=_verticalMargin;
 @property(copy, nonatomic) GLUELabelStyle *messageLabelStyle; // @synthesize messageLabelStyle=_messageLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningSessionPopupViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

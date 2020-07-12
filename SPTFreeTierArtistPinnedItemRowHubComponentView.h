@@ -21,12 +21,12 @@
     SPTFreeTierArtistGLUETheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierArtistGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTFreeTierArtistPinnedItemRowView *pinnedItemView; // @synthesize pinnedItemView=_pinnedItemView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)didTapView;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;

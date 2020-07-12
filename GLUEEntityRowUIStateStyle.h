@@ -25,6 +25,7 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEEntityRowContentStyle *contentViewStyle; // @synthesize contentViewStyle=_contentViewStyle;
 @property(nonatomic) double trailingAccessoryViewMaximumWidth; // @synthesize trailingAccessoryViewMaximumWidth=_trailingAccessoryViewMaximumWidth;
 @property(nonatomic) double leadingAccessoryViewMaximumWidth; // @synthesize leadingAccessoryViewMaximumWidth=_leadingAccessoryViewMaximumWidth;
@@ -36,7 +37,6 @@
 @property(nonatomic) double leadingAccessoryViewAlpha; // @synthesize leadingAccessoryViewAlpha=_leadingAccessoryViewAlpha;
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 - (_Bool)hasAlphaOverrides;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;

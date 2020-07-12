@@ -13,8 +13,8 @@
     id <SPTAbbaFeatureFlags> _abbaFeatureFlags;
 }
 
-@property(retain, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 - (id)uriPrefixesToExclude;
 - (id)initWithAbbaFlags:(id)arg1;
 

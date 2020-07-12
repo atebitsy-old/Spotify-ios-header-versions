@@ -9,12 +9,13 @@
 #import "SPTLoginViewWithActionButtonsConfigurable-Protocol.h"
 
 @class GLUEGradientView, GLUELabel, NSLayoutConstraint, NSString, UIImageView, UIStackView, UIView;
-@protocol SPTLoginViewWithActionButtonsDelegate;
+@protocol SPTLoginViewWithActionButtonsDelegate, SPTLoginWelcomeViewImageInteractionHandler;
 
 @interface SPTLoginWelcomeView : SPTLoginTraitChangingView <SPTLoginViewWithActionButtonsConfigurable>
 {
     UIStackView *_buttonsContainerView;
     id <SPTLoginViewWithActionButtonsDelegate> delegate;
+    id <SPTLoginWelcomeViewImageInteractionHandler> _imageInteractionHandler;
     UIImageView *_artworkImageView;
     UIImageView *_spotifyLogo;
     GLUELabel *_helpTextLabel;
@@ -35,6 +36,7 @@
     UIView *_opaqueButtonBackgroundView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIView *opaqueButtonBackgroundView; // @synthesize opaqueButtonBackgroundView=_opaqueButtonBackgroundView;
 @property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
@@ -53,9 +55,13 @@
 @property(readonly, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
 @property(readonly, nonatomic) UIImageView *spotifyLogo; // @synthesize spotifyLogo=_spotifyLogo;
 @property(readonly, nonatomic) UIImageView *artworkImageView; // @synthesize artworkImageView=_artworkImageView;
+@property(nonatomic) __weak id <SPTLoginWelcomeViewImageInteractionHandler> imageInteractionHandler; // @synthesize imageInteractionHandler=_imageInteractionHandler;
 @property(nonatomic) __weak id <SPTLoginViewWithActionButtonsDelegate> delegate; // @synthesize delegate;
 @property(readonly, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
-- (void).cxx_destruct;
+- (_Bool)isImageInteraction:(id)arg1;
+- (void)userDidSwipeImage:(id)arg1;
+- (void)userDidTapImage:(id)arg1;
+- (void)setupGestureRecognizers;
 - (void)updateImageAspectRatio:(double)arg1;
 - (void)actionButtonTapped:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;

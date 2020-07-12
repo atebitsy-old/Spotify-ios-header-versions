@@ -17,9 +17,9 @@
     id <SPTContextMenuViewControllerFactory> _contextMenuViewControllerFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isRunningOnIphone) _Bool runningOnIphone; // @synthesize runningOnIphone=_runningOnIphone;
 @property(readonly, nonatomic) id <SPTContextMenuViewControllerFactory> contextMenuViewControllerFactory; // @synthesize contextMenuViewControllerFactory=_contextMenuViewControllerFactory;
-- (void).cxx_destruct;
 - (id)contextMenuPresenterForHeaderView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 options:(id)arg4;
 - (id)contextMenuPresenterForTrackWithTrackURL:(id)arg1 trackName:(id)arg2 trackMetadata:(id)arg3 playable:(_Bool)arg4 imageURL:(id)arg5 artists:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 viewURL:(id)arg9 contextSourceURL:(id)arg10 metadataTitle:(id)arg11 logContextIphone:(id)arg12 logContextIpad:(id)arg13 senderView:(id)arg14 options:(id)arg15 extraTasks:(id)arg16;
 - (id)contextMenuPresenterForTrackWithTrackURL:(id)arg1 trackName:(id)arg2 trackMetadata:(id)arg3 playable:(_Bool)arg4 imageURL:(id)arg5 artists:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 viewURL:(id)arg9 contextSourceURL:(id)arg10 metadataTitle:(id)arg11 logContextIphone:(id)arg12 logContextIpad:(id)arg13 senderView:(id)arg14 options:(id)arg15;

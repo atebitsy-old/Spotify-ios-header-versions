@@ -26,6 +26,7 @@
     double _timeBeforeRadioAction;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double timeBeforeRadioAction; // @synthesize timeBeforeRadioAction=_timeBeforeRadioAction;
 @property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)auxiliaryActionsHandlerDidToggleCollectionState:(id)arg1;
 - (void)playbackActionsHandlerDidPlayPause:(id)arg1;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;

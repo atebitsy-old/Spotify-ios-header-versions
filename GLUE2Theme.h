@@ -16,9 +16,9 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) SPTTheme *sptTheme; // @synthesize sptTheme=_sptTheme;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

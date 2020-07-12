@@ -20,9 +20,9 @@
 + (_Bool)shouldSwatch:(id)arg1 beScoredForTarget:(id)arg2 usedColors:(id)arg3;
 + (id)maxScoredSwatchForTarget:(id)arg1 swatches:(id)arg2 usedColors:(id)arg3;
 + (id)dominantSwatchFromSwatches:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *selectedSwatches; // @synthesize selectedSwatches=_selectedSwatches;
 @property(readonly, copy, nonatomic) NSSet *allSwatches; // @synthesize allSwatches=_allSwatches;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqualToPalette:(id)arg1;

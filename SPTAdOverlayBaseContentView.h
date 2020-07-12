@@ -18,11 +18,11 @@
     GLUEGradientView *_gradientOverlayView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientView *gradientOverlayView; // @synthesize gradientOverlayView=_gradientOverlayView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView; // @synthesize contentImageView=_contentImageView;
-- (void).cxx_destruct;
 - (void)addConstraints;
 - (id)initWithTheme:(id)arg1 glueImageLoader:(id)arg2;
 

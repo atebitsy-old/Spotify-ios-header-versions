@@ -30,6 +30,7 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTNowPlayingEntityDecorationController *entityDecorationController; // @synthesize entityDecorationController=_entityDecorationController;
 @property(nonatomic) __weak id <SPTSleepTimerController> sleepTimerController; // @synthesize sleepTimerController=_sleepTimerController;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 @property(nonatomic) _Bool shouldDisableRightBarButton; // @synthesize shouldDisableRightBarButton=_shouldDisableRightBarButton;
 @property(nonatomic) _Bool shouldDisableNavBarButtons; // @synthesize shouldDisableNavBarButtons=_shouldDisableNavBarButtons;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isEntityRadio;
 @property(readonly, nonatomic) NSString *showsFormatNavigationBarTitle;
 - (id)defaultNavigationBarTitle;

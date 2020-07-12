@@ -15,10 +15,10 @@
     NSURL *_podcastImageURL;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *podcastImageURL; // @synthesize podcastImageURL=_podcastImageURL;
 @property(copy, nonatomic) NSString *publisherName; // @synthesize publisherName=_publisherName;
 @property(copy, nonatomic) NSString *podcastTitle; // @synthesize podcastTitle=_podcastTitle;
-- (void).cxx_destruct;
 - (void)updateWithPodcast:(id)arg1;
 
 @end

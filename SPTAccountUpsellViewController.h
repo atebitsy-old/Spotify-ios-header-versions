@@ -6,65 +6,47 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTAccountErrorDialogDelegate-Protocol.h"
-#import "SPTAccountUpsellViewModelDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "SPTScrollToTopViewController-Protocol.h"
 #import "SPViewController-Protocol.h"
 
-@class NSArray, NSString, NSURL, SPTAccountErrorDialog, SPTAccountUpsellHeaderView, SPTAccountUpsellViewModel, SPTEntityHeaderContentViewController, SPTEntityHeaderViewController, UIScrollView;
-@protocol SPTNavigationListProvider, SPTPageContainer, SPTPremiumDestinationExperiments;
+@class NSArray, NSString, NSURL, SPTAccountUpsellHeaderView, SPTAccountUpsellViewModel, SPTEntityHeaderContentViewController, SPTEntityHeaderViewController, UIScrollView;
+@protocol SPTPageContainer, SPTPremiumDestinationExperiments;
 
-@interface SPTAccountUpsellViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTAccountUpsellViewModelDelegate, SPTAccountErrorDialogDelegate, SPViewController, SPTPageController, SPTScrollToTopViewController>
+@interface SPTAccountUpsellViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPViewController, SPTPageController, SPTScrollToTopViewController>
 {
     SPTEntityHeaderContentViewController *_headerContentViewController;
-    NSArray *_content;
     SPTAccountUpsellViewModel *_viewModel;
     SPTEntityHeaderViewController *_headerViewController;
     UIScrollView *_scrollView;
     NSArray *_contentLayoutConstraints;
     NSArray *_contentViews;
     SPTAccountUpsellHeaderView *_headerView;
-    SPTAccountErrorDialog *_presentedErrorDialog;
-    id <SPTNavigationListProvider> _navigationListProvider;
     id <SPTPremiumDestinationExperiments> _experiments;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
-@property(readonly, nonatomic) id <SPTNavigationListProvider> navigationListProvider; // @synthesize navigationListProvider=_navigationListProvider;
-@property(retain, nonatomic) SPTAccountErrorDialog *presentedErrorDialog; // @synthesize presentedErrorDialog=_presentedErrorDialog;
 @property(retain, nonatomic) SPTAccountUpsellHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(copy, nonatomic) NSArray *contentViews; // @synthesize contentViews=_contentViews;
 @property(copy, nonatomic) NSArray *contentLayoutConstraints; // @synthesize contentLayoutConstraints=_contentLayoutConstraints;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(retain, nonatomic) SPTEntityHeaderViewController *headerViewController; // @synthesize headerViewController=_headerViewController;
 @property(retain, nonatomic) SPTAccountUpsellViewModel *viewModel; // @synthesize viewModel=_viewModel;
-@property(copy, nonatomic) NSArray *content; // @synthesize content=_content;
 @property(retain, nonatomic) SPTEntityHeaderContentViewController *headerContentViewController; // @synthesize headerContentViewController=_headerContentViewController;
-- (void).cxx_destruct;
-- (void)errorDialogDidDismiss:(id)arg1;
-- (void)upsellViewModel:(id)arg1 displayError:(id)arg2;
-- (void)upsellViewModelShouldPopView:(id)arg1;
 @property(readonly, nonatomic) NSURL *URI;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)spt_scrollToTop;
 - (void)applyThemeLayout;
-- (void)upsellPageHeaderDidChange;
-- (void)upsellInformationTableContentDidChange;
-- (void)getPremiumButtonChange;
-- (void)getTitleChange;
-- (void)headerActionButtonTouched;
 - (void)setupHeaderView;
 - (void)reloadScrollData;
 - (void)setupScrollView;
 - (id)createHeaderView;
-- (void)viewDidDisappear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
 - (void)dealloc;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 navigationListProvider:(id)arg2 experiments:(id)arg3;
+- (id)initWithViewModel:(id)arg1 experiments:(id)arg2;
 - (unsigned long long)preferredNavigationBarState;
 
 // Remaining properties

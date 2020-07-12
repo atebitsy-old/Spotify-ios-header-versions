@@ -42,6 +42,7 @@
     SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
 @property(nonatomic) _Bool activeFiltersChanged; // @synthesize activeFiltersChanged=_activeFiltersChanged;
 @property(copy, nonatomic) NSArray *sectionConfiguration; // @synthesize sectionConfiguration=_sectionConfiguration;
@@ -65,7 +66,6 @@
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicSongsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)filterReasonForPlaybackLogging;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;

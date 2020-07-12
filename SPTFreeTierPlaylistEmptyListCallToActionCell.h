@@ -14,9 +14,9 @@
     GLUEButton *_button;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEButton *button; // @synthesize button=_button;
 @property(retain, nonatomic) GLUELabel *educationalText; // @synthesize educationalText=_educationalText;
-- (void).cxx_destruct;
 - (void)setup;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

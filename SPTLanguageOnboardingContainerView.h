@@ -24,6 +24,7 @@
     NSLayoutConstraint *_offlineViewWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *offlineViewWidthConstraint; // @synthesize offlineViewWidthConstraint=_offlineViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *headerViewTrailingConstraint; // @synthesize headerViewTrailingConstraint=_headerViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *headerViewLeadingConstraint; // @synthesize headerViewLeadingConstraint=_headerViewLeadingConstraint;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) SPTLanguageOnboardingHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(readonly, nonatomic) GLUEGradientView *backgroundOverlayGradientView; // @synthesize backgroundOverlayGradientView=_backgroundOverlayGradientView;
 @property(nonatomic) long long containerViewState; // @synthesize containerViewState=_containerViewState;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setNextButtonTitle:(id)arg1;
 - (void)setHeaderTitle:(id)arg1;

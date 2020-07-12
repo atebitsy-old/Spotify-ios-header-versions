@@ -18,10 +18,10 @@
     FollowModel *_followModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(retain, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (void)executeActionWithURL:(id)arg1;
 - (id)initWithCollectionPlatform:(id)arg1 followModelFactory:(id)arg2;
 

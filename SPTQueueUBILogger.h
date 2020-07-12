@@ -14,9 +14,9 @@
     id <SPTUBIMobileQueueEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileQueueEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (void)logRemoveTrackFromQueue:(id)arg1;
 - (void)logAddTrackToQueue:(id)arg1;
 - (void)logPlaybackSpeedButtonTapped;

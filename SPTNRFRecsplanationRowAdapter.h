@@ -13,8 +13,8 @@
     NSString *_recsplanationString;
 }
 
-@property(readonly, copy, nonatomic) NSString *recsplanationString; // @synthesize recsplanationString=_recsplanationString;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *recsplanationString; // @synthesize recsplanationString=_recsplanationString;
 - (id)tableCell;
 - (double)tableCellHeight;
 - (id)initWithRecsplanationString:(id)arg1;

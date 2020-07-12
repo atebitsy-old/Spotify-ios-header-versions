@@ -25,6 +25,7 @@
     id <SPTSearchErrorViewModelBuilder> _errorViewModelBuilder;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearchErrorViewModelBuilder> errorViewModelBuilder; // @synthesize errorViewModelBuilder=_errorViewModelBuilder;
 @property(readonly, nonatomic) id <SPTSearchPlatformResponseParser> responseParser; // @synthesize responseParser=_responseParser;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) id <SPTSearch2DateProviding> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
 @property(readonly, nonatomic) id <SPTSearch2URLProviding> urlProvider; // @synthesize urlProvider=_urlProvider;
-- (void).cxx_destruct;
 - (id)makeFetcherWithURLProvider:(id)arg1;
 - (id)nextPageFetcherForViewModel:(id)arg1;
 - (void)performCompletionUnlessCancelledForRequest:(id)arg1 withViewModel:(id)arg2;

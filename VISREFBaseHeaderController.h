@@ -18,10 +18,10 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) VISREFHeaderView *view; // @synthesize view=_view;
 @property(nonatomic, getter=isHeaderSetupDone) _Bool headerSetupDone; // @synthesize headerSetupDone=_headerSetupDone;
-- (void).cxx_destruct;
 - (void)headerViewViewHierarchyDidChange:(id)arg1;
 @property(readonly, nonatomic) double minimumHeight;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;

@@ -16,11 +16,11 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIButton *rightBarButton; // @synthesize rightBarButton=_rightBarButton;
 @property(retain, nonatomic) NSArray *leftBarButtons; // @synthesize leftBarButtons=_leftBarButtons;
-- (void).cxx_destruct;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)setupConstraints;
 - (void)forceUpdateConstraints;

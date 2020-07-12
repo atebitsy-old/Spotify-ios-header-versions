@@ -17,10 +17,10 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(retain, nonatomic) id context; // @synthesize context=_context;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (struct CGSize)intrinsicContentSize;

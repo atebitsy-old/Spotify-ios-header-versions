@@ -18,10 +18,10 @@
     NSString *_groupHeader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *groupHeader; // @synthesize groupHeader=_groupHeader;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistMetadataFields> playlist; // @synthesize playlist=_playlist;
 @property(retain, nonatomic) id <SPTPlaylistPlatformFolderMetadataFields> folder; // @synthesize folder=_folder;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

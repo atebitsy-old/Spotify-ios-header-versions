@@ -16,11 +16,11 @@
     SPTStorylinesEntityLoadEventLogger *_loadEventLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTStorylinesEntityLoadEventLogger *loadEventLogger; // @synthesize loadEventLogger=_loadEventLogger;
 @property(readonly, nonatomic) SPTStorylinesEnabledManager *enabledManager; // @synthesize enabledManager=_enabledManager;
 @property(readonly, nonatomic) NSCache *memoryCache; // @synthesize memoryCache=_memoryCache;
 @property(readonly, nonatomic) SPTStorylinesPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
-- (void).cxx_destruct;
 - (_Bool)validStorylines:(id)arg1 forIdentifier:(id)arg2;
 - (void)loadStorylinesDataForEntityUri:(id)arg1 withStorylineId:(id)arg2 withCallback:(CDUnknownBlockType)arg3;
 - (void)removeCachedStorylines:(id)arg1;

@@ -17,9 +17,9 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool useNewEmptyStateView; // @synthesize useNewEmptyStateView=_useNewEmptyStateView;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)viewDidLoad;

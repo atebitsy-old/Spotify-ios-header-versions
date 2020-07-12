@@ -20,12 +20,12 @@
     NSString *_username;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic) __weak id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
 @property(nonatomic) __weak SPTAdsViewModel *adsViewModel; // @synthesize adsViewModel=_adsViewModel;
-- (void).cxx_destruct;
 - (void)mailComposeController:(id)arg1 didFinishWithResult:(long long)arg2 error:(id)arg3;
 - (void)mail;
 - (void)viewDidLoad;

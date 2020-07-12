@@ -22,6 +22,7 @@
 }
 
 + (id)colorMixedFrom:(id)arg1 and:(id)arg2 atRatio:(double)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long leadingEdge; // @synthesize leadingEdge=_leadingEdge;
 @property(nonatomic) double triggerInterval; // @synthesize triggerInterval=_triggerInterval;
 @property(nonatomic) double triggerPercentage; // @synthesize triggerPercentage=_triggerPercentage;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UIColor *hintBackgroundColor; // @synthesize hintBackgroundColor=_hintBackgroundColor;
 @property(nonatomic) double currentPercentage; // @synthesize currentPercentage=_currentPercentage;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
-- (void).cxx_destruct;
 - (id)preferredBackgroundColorForPercentage:(double)arg1 actionTriggered:(_Bool)arg2;
 - (double)adjustPercentageFrom:(double)arg1;
 - (void)layoutForPercentage:(double)arg1 actionTriggered:(_Bool)arg2;

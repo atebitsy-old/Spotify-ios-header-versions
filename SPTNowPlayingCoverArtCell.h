@@ -17,12 +17,12 @@
     struct UIEdgeInsets _windowedContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *windowedContentViewConstraints; // @synthesize windowedContentViewConstraints=_windowedContentViewConstraints;
 @property(retain, nonatomic) UIView *windowedContentView; // @synthesize windowedContentView=_windowedContentView;
 @property(retain, nonatomic) SPTNowPlayingCoverArtImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) struct UIEdgeInsets windowedContentInsets; // @synthesize windowedContentInsets=_windowedContentInsets;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)setupUI;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -13,8 +13,8 @@
     UIColor *_tintColor;
 }
 
-@property(retain, nonatomic) UIColor *tintColor; // @synthesize tintColor=_tintColor;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIColor *tintColor; // @synthesize tintColor=_tintColor;
 - (id)seedASessionButtonImage;
 - (id)createSeedASessionButtonWithTitle:(id)arg1;
 - (id)buttonForType:(long long)arg1;

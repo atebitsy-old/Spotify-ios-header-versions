@@ -16,9 +16,9 @@
     id <SPTHubImageLoadingLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTHubImageLoadingLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-- (void).cxx_destruct;
 - (id)createImageLoader;
 - (id)initWithImageLoaderFactory:(id)arg1 logger:(id)arg2;
 

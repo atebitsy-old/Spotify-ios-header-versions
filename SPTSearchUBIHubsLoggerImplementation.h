@@ -17,9 +17,9 @@
     id <SPTUBIHubsUtilities> _ubiHubs;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubs; // @synthesize ubiHubs=_ubiHubs;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (id)interactionEventFactoryForEvent:(id)arg1;
 - (void)logImpressionWithComponentModel:(id)arg1;
 - (void)logNavigateWithDestination:(id)arg1 event:(id)arg2;

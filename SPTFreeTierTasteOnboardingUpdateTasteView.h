@@ -22,6 +22,7 @@
     NSLayoutConstraint *_messageLabelCenterYConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *messageLabelCenterYConstraint; // @synthesize messageLabelCenterYConstraint=_messageLabelCenterYConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *messageLabelTopConstraint; // @synthesize messageLabelTopConstraint=_messageLabelTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *messageLabelTrailingConstraint; // @synthesize messageLabelTrailingConstraint=_messageLabelTrailingConstraint;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) UILayoutGuide *bottomSpacerGuide; // @synthesize bottomSpacerGuide=_bottomSpacerGuide;
 @property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 @property(readonly, nonatomic) GLUELabel *messageLabel; // @synthesize messageLabel=_messageLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)activateConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -16,9 +16,9 @@
     SPTConcertsLocalDataManager *_localDataManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTConcertsLocalDataManager *localDataManager; // @synthesize localDataManager=_localDataManager;
 @property(readonly, copy, nonatomic) NSString *artistIdentifier; // @synthesize artistIdentifier=_artistIdentifier;
-- (void).cxx_destruct;
 - (id)resolveContentURL;
 - (id)initWithArtistIdentifier:(id)arg1 localDataManager:(id)arg2;
 

@@ -24,13 +24,13 @@
     SPTPodcastLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTContextMenuViewTransition *transition; // @synthesize transition=_transition;
 @property(retain, nonatomic) SPTContextMenuView *contextMenuView; // @synthesize contextMenuView=_contextMenuView;
 @property(retain, nonatomic) SPTPodcastPreferences *podcastPreferences; // @synthesize podcastPreferences=_podcastPreferences;
 @property(copy, nonatomic) NSArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
 @property(retain, nonatomic) SPTPodcastSpeedControlOptions *speedControlOptions; // @synthesize speedControlOptions=_speedControlOptions;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)didSelectSpeedOptionWithPlaybackSpeed:(id)arg1;

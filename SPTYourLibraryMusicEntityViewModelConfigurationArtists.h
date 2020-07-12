@@ -18,10 +18,10 @@
     id <SPTYourLibraryMusicTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) _Bool collapsed; // @synthesize collapsed=_collapsed;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType;
 - (_Bool)readLocallyStoredCollapsedState;
 - (void)persistCollapsed:(_Bool)arg1 forSection:(long long)arg2;

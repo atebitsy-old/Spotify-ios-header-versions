@@ -32,6 +32,7 @@
 }
 
 + (id)dataLoaderRequestTaskHandlerWithTask:(id)arg1 request:(id)arg2 requestResponseHandler:(id)arg3 rateLimiter:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *retryQueue; // @synthesize retryQueue=_retryQueue;
 @property(nonatomic) _Bool started; // @synthesize started=_started;
 @property(nonatomic) _Bool calledCancelledRequest; // @synthesize calledCancelledRequest=_calledCancelledRequest;
@@ -50,7 +51,6 @@
 @property(nonatomic, getter=isCancelled) _Bool cancelled; // @synthesize cancelled=_cancelled;
 @property(retain, nonatomic) SPTDataLoaderRequest *request; // @synthesize request=_request;
 @property(retain) NSURLSessionTask *task; // @synthesize task=_task;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)completeIfInFlight;
 - (void)checkRetryLimiterAndExecute;

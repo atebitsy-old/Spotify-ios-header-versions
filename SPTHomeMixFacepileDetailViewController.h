@@ -23,6 +23,7 @@
     GLUEEntityCardView *_albumHeaderView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEEntityCardView *albumHeaderView; // @synthesize albumHeaderView=_albumHeaderView;
 @property(retain, nonatomic) SPTHomeMixFacepileDetailCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTHomeMixFamilyPileConfigurator *facePilesConfigurator; // @synthesize facePilesConfigurator=_facePilesConfigurator;
 @property(readonly, nonatomic) SPTHomeMixTrackViewModel *trackViewModel; // @synthesize trackViewModel=_trackViewModel;
-- (void).cxx_destruct;
 - (void)updateHeader;
 - (void)setupConstraints;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

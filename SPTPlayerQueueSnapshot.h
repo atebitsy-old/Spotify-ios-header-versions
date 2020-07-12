@@ -14,9 +14,9 @@
     NSString *_revision;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *revision; // @synthesize revision=_revision;
 @property(readonly, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
-- (void).cxx_destruct;
 - (id)initWithTracks:(id)arg1 revision:(id)arg2;
 
 @end

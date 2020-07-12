@@ -17,10 +17,10 @@
     UIColor *_borderColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(nonatomic) double size; // @synthesize size=_size;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToCircularSpinnerViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

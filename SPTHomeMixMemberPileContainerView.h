@@ -21,12 +21,12 @@
     NSLayoutConstraint *_maxWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *maxWidthConstraint; // @synthesize maxWidthConstraint=_maxWidthConstraint;
 @property(nonatomic) __weak UIStackView *facePileContainer; // @synthesize facePileContainer=_facePileContainer;
 @property(copy, nonatomic) SPTHomeMixMemberPileContainerViewStyle *currentStyle; // @synthesize currentStyle=_currentStyle;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(copy, nonatomic) NSArray *entities; // @synthesize entities=_entities;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupViews;

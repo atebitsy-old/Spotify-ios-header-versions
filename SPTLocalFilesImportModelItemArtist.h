@@ -16,9 +16,9 @@
     SPTLocalFilesImportModelItem *parent;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLocalFilesImportModelItem *parent; // @synthesize parent;
 @property(retain, nonatomic) NSMutableArray *children; // @synthesize children;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1;
 
 // Remaining properties

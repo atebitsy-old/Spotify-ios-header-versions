@@ -18,9 +18,9 @@
     id <SPTAdsBaseEntity> _adEntity;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(retain, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
-- (void).cxx_destruct;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)didTapCoverArt;

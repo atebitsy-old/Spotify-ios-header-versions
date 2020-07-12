@@ -16,9 +16,9 @@
     id <SPTHubInteractionLogger> _interactionLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTRadioManager> radioManager; // @synthesize radioManager=_radioManager;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithRadioManager:(id)arg1 interactionLogger:(id)arg2;
 

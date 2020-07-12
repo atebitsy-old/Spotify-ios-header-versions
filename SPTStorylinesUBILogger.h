@@ -21,6 +21,7 @@
     NSMutableSet *_impressionsCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableSet *impressionsCache; // @synthesize impressionsCache=_impressionsCache;
 @property(copy, nonatomic) NSString *currentPlaybackId; // @synthesize currentPlaybackId=_currentPlaybackId;
 @property(readonly, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) SPTStorylinesLogger *legacyLogger; // @synthesize legacyLogger=_legacyLogger;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldSendMessage;
 @property(readonly, nonatomic) _Bool isAwake;
 @property(readonly, nonatomic) _Bool isNowPlayingViewHidden;

@@ -17,10 +17,10 @@
     double _textLabelEdgeMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double textLabelEdgeMargin; // @synthesize textLabelEdgeMargin=_textLabelEdgeMargin;
 @property(copy, nonatomic) GLUELabelStyle *textLabelStyle; // @synthesize textLabelStyle=_textLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *imageViewStyle; // @synthesize imageViewStyle=_imageViewStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

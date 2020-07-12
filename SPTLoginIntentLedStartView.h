@@ -21,13 +21,13 @@
     NSLayoutConstraint *_mainContainerRegularWidth;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(readonly, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
 @property(readonly, nonatomic) GLUELabel *buttonsHeading; // @synthesize buttonsHeading=_buttonsHeading;
 @property(nonatomic) __weak id <SPTLoginViewWithActionButtonsDelegate> delegate; // @synthesize delegate;
 @property(readonly, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
-- (void).cxx_destruct;
 - (void)actionButtonTapped:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;

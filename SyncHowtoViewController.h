@@ -14,9 +14,9 @@
     NSMutableArray *_stepTextLabels;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *stepTextLabels; // @synthesize stepTextLabels=_stepTextLabels;
 @property(retain, nonatomic) UILabel *titleTextLabel; // @synthesize titleTextLabel=_titleTextLabel;
-- (void).cxx_destruct;
 - (void)viewWillLayoutSubviews;
 - (void)layoutCenteredWithViews:(id)arg1 innerPadding:(double)arg2;
 - (void)viewDidLoad;

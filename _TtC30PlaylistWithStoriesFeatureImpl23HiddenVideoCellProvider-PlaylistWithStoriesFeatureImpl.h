@@ -9,7 +9,7 @@
 @interface _TtC30PlaylistWithStoriesFeatureImpl23HiddenVideoCellProvider (PlaylistWithStoriesFeatureImpl)
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
-- (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;

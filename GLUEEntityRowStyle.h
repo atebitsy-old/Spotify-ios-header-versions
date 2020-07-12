@@ -15,11 +15,11 @@
     GLUEEntityImageStyle *_imageViewStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEEntityImageStyle *imageViewStyle; // @synthesize imageViewStyle=_imageViewStyle;
 @property(nonatomic) double height; // @synthesize height=_height;
 - (void)setDebugName:(id)arg1;
 - (id)debugName;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqualToEntityRowStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

@@ -20,6 +20,7 @@
     id <SPTContributingArtistsService> _contributingArtistsService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTContributingArtistsService> contributingArtistsService; // @synthesize contributingArtistsService=_contributingArtistsService;
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
 @property(readonly, nonatomic) id <SPTContextMenuOptionsFactory> optionsFactory; // @synthesize optionsFactory=_optionsFactory;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) id <SPContextMenuActionsFactory> actionsFactory; // @synthesize actionsFactory=_actionsFactory;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
 @property(readonly, nonatomic) SPTNRFItem *feedItem; // @synthesize feedItem=_feedItem;
-- (void).cxx_destruct;
 - (id)contextMenuTasks;
 - (void)presentContextMenuInViewController:(id)arg1 fromSenderView:(id)arg2;
 - (id)initWithFeedItem:(id)arg1 presenterFactory:(id)arg2 actionsFactory:(id)arg3 actionsProvider:(id)arg4 optionsFactory:(id)arg5 UIPresentationService:(id)arg6 contributingArtistsService:(id)arg7;

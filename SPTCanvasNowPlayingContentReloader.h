@@ -23,6 +23,7 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(retain, nonatomic) SPTPlayerState *currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) NSCache *tracksToReload; // @synthesize tracksToReload=_tracksToReload;
-- (void).cxx_destruct;
 - (_Bool)trackHasCanvasMetadata:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

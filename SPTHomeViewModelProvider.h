@@ -21,12 +21,12 @@
     unsigned long long _lastLoadedSource;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long lastLoadedSource; // @synthesize lastLoadedSource=_lastLoadedSource;
 @property(readonly, nonatomic) id <HUBViewModelLoader> remoteViewModelLoader; // @synthesize remoteViewModelLoader=_remoteViewModelLoader;
 @property(readonly, nonatomic) id <HUBViewModelLoader> cachedViewModelLoader; // @synthesize cachedViewModelLoader=_cachedViewModelLoader;
 @property(nonatomic) __weak id <SPTHomeViewModelProviderDelegate> viewModelProviderDelegate; // @synthesize viewModelProviderDelegate=_viewModelProviderDelegate;
 @property(nonatomic) __weak id <SPTHubViewModelProviderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)viewModelLoader:(id)arg1 didFailLoadingWithError:(id)arg2;
 - (void)viewModelLoader:(id)arg1 didLoadViewModel:(id)arg2;
 - (void)overridesDidChange:(id)arg1;

@@ -17,9 +17,9 @@
     id <SPTAbbaFeatureFlags> _featureFlags;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) _Bool subtitlesEnabled; // @synthesize subtitlesEnabled=_subtitlesEnabled;
-- (void).cxx_destruct;
 - (void)updateSubtitlesFlag;
 - (void)updateFeatureFlags;
 - (void)featureFlagsDidChange:(id)arg1;

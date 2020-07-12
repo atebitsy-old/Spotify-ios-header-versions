@@ -15,10 +15,10 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTUBIMobileScannablesEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logDidTapCloseButton;
 - (void)logDidSelectPhotoFromPhotoLibrary;
 - (void)logDidClosePhotoLibrary;

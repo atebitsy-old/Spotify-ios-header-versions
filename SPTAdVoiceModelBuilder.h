@@ -16,11 +16,11 @@
     long long _timerID;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSpeechReceived; // @synthesize isSpeechReceived=_isSpeechReceived;
 @property(nonatomic) long long timerID; // @synthesize timerID=_timerID;
 @property(retain, nonatomic) SPTAdVoiceMetadata *voiceAdMetadata; // @synthesize voiceAdMetadata=_voiceAdMetadata;
 @property(nonatomic) long long voiceState; // @synthesize voiceState=_voiceState;
-- (void).cxx_destruct;
 - (id)build;
 - (id)initWithModel:(id)arg1;
 

@@ -26,6 +26,7 @@
     CALayer *_captureLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *captureLayer; // @synthesize captureLayer=_captureLayer;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) id <SPTScannablesDataSource> dataSource; // @synthesize dataSource=_dataSource;
@@ -36,13 +37,12 @@
 @property(retain, nonatomic) id <SPTScannablesScanViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(nonatomic) unsigned long long scannerStatus; // @synthesize scannerStatus=_scannerStatus;
-- (void).cxx_destruct;
 - (void)captureOutput:(id)arg1 didOutputSampleBuffer:(struct opaqueCMSampleBuffer *)arg2 fromConnection:(id)arg3;
 - (void)scannablesDataSource:(id)arg1 didFailFetchingScannableWithError:(id)arg2;
 - (void)scannablesDataSource:(id)arg1 didFinishFetchingScannable:(id)arg2;
 - (void)notifyDelegateOfFailureWithError:(id)arg1;
 - (void)notifyDelegateOfSuccessWithScannable:(id)arg1;
-- (void)fetchScannableWithID:(struct NSString *)arg1;
+- (void)fetchScannableWithID:(id)arg1;
 - (void)scanFromImage:(id)arg1;
 - (void)focusOnPoint:(struct CGPoint)arg1;
 - (id)stopSession;

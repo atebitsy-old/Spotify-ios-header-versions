@@ -17,10 +17,10 @@
     NSArray *_tracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

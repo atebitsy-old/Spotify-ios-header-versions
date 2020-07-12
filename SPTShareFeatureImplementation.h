@@ -43,6 +43,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareVideoDataProviderRegistry> videoDataProviderRegistry; // @synthesize videoDataProviderRegistry=_videoDataProviderRegistry;
 @property(retain, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
@@ -69,7 +70,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideShareDemoViewControllerWithURI:(id)arg1 context:(id)arg2;
 - (id)provideShareHandlerFactory;
 - (id)retrieveTopLevelNavigationPageController;

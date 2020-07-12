@@ -21,6 +21,7 @@
     GLUELabelStyle *_labelStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *labelStyle; // @synthesize labelStyle=_labelStyle;
 @property(nonatomic) unsigned long long spacing; // @synthesize spacing=_spacing;
 @property(nonatomic) double strokeWidth; // @synthesize strokeWidth=_strokeWidth;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) UIColor *iconBackgroundColor; // @synthesize iconBackgroundColor=_iconBackgroundColor;
 @property(copy, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) double height; // @synthesize height=_height;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

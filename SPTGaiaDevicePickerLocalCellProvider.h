@@ -22,6 +22,7 @@
     SPTGaiaDevicePickerAppearanceManager *_appearanceManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaDevicePickerAppearanceManager *appearanceManager; // @synthesize appearanceManager=_appearanceManager;
 @property(readonly, nonatomic) SPTGaiaDeviceAppearanceMapping *deviceIconMapper; // @synthesize deviceIconMapper=_deviceIconMapper;
 @property(readonly, nonatomic) _Bool playbackRestricted; // @synthesize playbackRestricted=_playbackRestricted;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTGaiaActiveDeviceProvider> activeDeviceProvider; // @synthesize activeDeviceProvider=_activeDeviceProvider;
 @property(readonly, nonatomic) id <SPTGaiaWirelessRoutesAPI> wirelessRoutesManager; // @synthesize wirelessRoutesManager=_wirelessRoutesManager;
 @property(readonly, nonatomic) UIDevice *localDevice; // @synthesize localDevice=_localDevice;
-- (void).cxx_destruct;
 - (id)cellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (long long)accessoryIcon;
 - (long long)icon;

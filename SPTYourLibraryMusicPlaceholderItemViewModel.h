@@ -29,6 +29,7 @@
     unsigned long long _placeholderType;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long placeholderType; // @synthesize placeholderType=_placeholderType;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic) long long offlineStatus; // @synthesize offlineStatus=_offlineStatus;
@@ -44,7 +45,6 @@
 @property(readonly, nonatomic, getter=isOfflineAvailable) _Bool offlineAvailable; // @synthesize offlineAvailable;
 @property(readonly, nonatomic, getter=isFolder) _Bool folder; // @synthesize folder;
 @property(readonly, nonatomic) _Bool showDecorationOverlay; // @synthesize showDecorationOverlay;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isQuickActionsEnabled) _Bool quickActionsEnabled;
 - (id)initWithPlaceholderType:(unsigned long long)arg1 testManager:(id)arg2 enabled:(_Bool)arg3;
 

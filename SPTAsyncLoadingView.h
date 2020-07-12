@@ -15,8 +15,8 @@
     SPTProgressView *_progressView;
 }
 
-@property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 - (void)asyncLoadingWillComplete;
 - (void)asyncLoadingViewWillAppear;
 - (id)initWithFrame:(struct CGRect)arg1;

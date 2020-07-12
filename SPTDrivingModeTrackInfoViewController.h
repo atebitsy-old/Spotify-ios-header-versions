@@ -17,9 +17,10 @@
     id <SPTNowPlayingInformationUnitViewModel> _viewModel;
 }
 
-@property(readonly, nonatomic) id <SPTNowPlayingInformationUnitViewModel> viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTNowPlayingInformationUnitViewModel> viewModel; // @synthesize viewModel=_viewModel;
 - (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
+- (void)viewModelDidUpdateDownloadButtonState:(id)arg1;
 - (void)viewModelDidUpdatePositiveFeedbackButtonState:(id)arg1;
 - (void)viewModelDidUpdate:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)updateLabels;

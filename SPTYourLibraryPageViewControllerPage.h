@@ -14,9 +14,9 @@
     long long _index;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long index; // @synthesize index=_index;
 @property(retain, nonatomic) UIViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 
 @end
 

@@ -39,12 +39,12 @@
 + (id)mergeParagraphStyle:(id)arg1 withParagraphStyle:(id)arg2;
 + (id)mergedStringAttributes:(id)arg1;
 + (id)diff:(id)arg1 with:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool upperCaseLayout; // @synthesize upperCaseLayout=_upperCaseLayout;
 @property(readonly, nonatomic) CDStruct_b9b47a9c lineHeightRange; // @synthesize lineHeightRange=_lineHeightRange;
 @property(readonly, nonatomic) CDStruct_b9b47a9c trackingRange; // @synthesize trackingRange=_trackingRange;
 @property(readonly, nonatomic) CDStruct_b9b47a9c fontSizeRange; // @synthesize fontSizeRange=_fontSizeRange;
 @property(readonly, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)copyWithZone:(struct _NSZone *)arg1;

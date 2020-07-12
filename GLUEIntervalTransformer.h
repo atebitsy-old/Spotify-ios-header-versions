@@ -16,10 +16,10 @@
 + (id)pointWithConstant:(double)arg1;
 + (id)createWithLow:(double)arg1 high:(double)arg2;
 + (id)create;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType operation; // @synthesize operation=_operation;
 @property(readonly, nonatomic) double high; // @synthesize high=_high;
 @property(readonly, nonatomic) double low; // @synthesize low=_low;
-- (void).cxx_destruct;
 - (id)unlerp;
 - (id)lerpWithLow:(double)arg1 high:(double)arg2;
 - (id)interpolateWithInterpolator:(id)arg1;

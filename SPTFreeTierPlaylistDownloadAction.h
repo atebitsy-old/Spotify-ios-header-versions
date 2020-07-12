@@ -20,6 +20,7 @@
     id <SPTAlertInterface> _alertInterface;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(readonly, nonatomic) UIColor *selectedActionIconColor; // @synthesize selectedActionIconColor=_selectedActionIconColor;
 @property(readonly, nonatomic) id <SPTCollectionLogger> logger; // @synthesize logger=_logger;
@@ -27,7 +28,6 @@
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
-- (void).cxx_destruct;
 - (void)showRemoveFromDownloadsConfirmationAlertWithCompletion:(CDUnknownBlockType)arg1;
 - (id)execute:(id)arg1;
 - (id)iconColor;

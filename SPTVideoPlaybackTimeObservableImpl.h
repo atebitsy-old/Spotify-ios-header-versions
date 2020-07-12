@@ -19,11 +19,11 @@
     id <BMKVOController> _kvoController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <BMKVOController> kvoController; // @synthesize kvoController=_kvoController;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *timeObserverQueue; // @synthesize timeObserverQueue=_timeObserverQueue;
 @property(retain, nonatomic) NSMutableDictionary *registeredObserverTokens; // @synthesize registeredObserverTokens=_registeredObserverTokens;
 @property(nonatomic) __weak SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
-- (void).cxx_destruct;
 - (double)duration;
 - (id)player;
 - (id)registerCancellationTokenForObserverToken:(id)arg1;

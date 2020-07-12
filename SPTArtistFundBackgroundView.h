@@ -16,10 +16,10 @@
     GLUEImageView *_backgroundImageView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
 @property(readonly, nonatomic) SPTArtistFundViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *image;
 - (id)createBackgroundView;
 - (void)setupSubviews;

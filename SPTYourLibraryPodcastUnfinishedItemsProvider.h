@@ -20,6 +20,7 @@
     id <SPTYourLibraryPodcastDispatcher> _dispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTYourLibraryPodcastDispatcher> dispatcher; // @synthesize dispatcher=_dispatcher;
 @property(readonly, nonatomic) id <SPTPodcastRequestFactory> podcastRequestFactory; // @synthesize podcastRequestFactory=_podcastRequestFactory;
 @property(copy) NSArray *unfinishedEpisodeItems; // @synthesize unfinishedEpisodeItems=_unfinishedEpisodeItems;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> unfinishedEpisodesRequestToken; // @synthesize unfinishedEpisodesRequestToken=_unfinishedEpisodesRequestToken;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)removeUnfinishedItemsProviderObserver:(id)arg1;
 - (void)addUnfinishedItemsProviderObserver:(id)arg1;
 - (void)notifyObservers;

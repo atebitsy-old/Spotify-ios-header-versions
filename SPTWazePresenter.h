@@ -32,6 +32,7 @@
     id <SPTPartnerService> _partnerService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTPartnerService> partnerService; // @synthesize partnerService=_partnerService;
 @property(readonly, nonatomic) id <SPTPartnerLogger> partnerLogger; // @synthesize partnerLogger=_partnerLogger;
 @property(readonly, nonatomic) id <SPTPartnerTestManager> partnerTestManager; // @synthesize partnerTestManager=_partnerTestManager;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
-- (void).cxx_destruct;
 - (void)nowPlayingViewWillAppear:(id)arg1;
 - (void)modeResolver:(id)arg1 didChangeToMode:(id)arg2 fromMode:(id)arg3;
 - (void)viewModelDidReceiveWazeDeepLink:(id)arg1;

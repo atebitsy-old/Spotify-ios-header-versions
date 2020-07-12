@@ -17,11 +17,11 @@
     GLUEImageView *_iconImageView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(readonly, nonatomic) UIView *iconBackgroundView; // @synthesize iconBackgroundView=_iconBackgroundView;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEEntityImageView *mainImageView; // @synthesize mainImageView=_mainImageView;
-- (void).cxx_destruct;
 - (void)setAttachedIcon:(long long)arg1;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)layoutSubviews;

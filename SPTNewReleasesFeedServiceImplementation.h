@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTContributingArtistsService> contributingArtistsService; // @synthesize contributingArtistsService=_contributingArtistsService;
 @property(nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> GLUEService; // @synthesize GLUEService=_GLUEService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideNRFViewController:(id)arg1 context:(id)arg2;
 - (void)registerNRFPage;
 - (void)load;

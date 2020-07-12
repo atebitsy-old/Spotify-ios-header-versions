@@ -14,9 +14,9 @@
     long long _index;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long index; // @synthesize index=_index;
 @property(retain, nonatomic) NSString *reuseIdentifier; // @synthesize reuseIdentifier=_reuseIdentifier;
-- (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1 reuseIdentifier:(id)arg2;
 
 @end

@@ -20,11 +20,11 @@
     id <SPTDataLoaderCancellationToken> _currentRequestCancellationToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> currentRequestCancellationToken; // @synthesize currentRequestCancellationToken=_currentRequestCancellationToken;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
 @property(nonatomic) __weak id <SPTAccountEligibilityRequestDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)failWithError:(id)arg1;

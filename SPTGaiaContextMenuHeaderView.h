@@ -15,10 +15,10 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)configureConstraints;
 - (id)initWithTheme:(id)arg1 title:(id)arg2 icon:(long long)arg3;
 

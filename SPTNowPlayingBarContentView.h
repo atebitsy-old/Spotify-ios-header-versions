@@ -29,6 +29,7 @@
     NSLayoutConstraint *_lyricsLabelWidthLayoutConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *lyricsLabelWidthLayoutConstraint; // @synthesize lyricsLabelWidthLayoutConstraint=_lyricsLabelWidthLayoutConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *voiceCompanionWidthLayoutConstraint; // @synthesize voiceCompanionWidthLayoutConstraint=_voiceCompanionWidthLayoutConstraint;
 @property(retain, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
@@ -43,7 +44,6 @@
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic) UIButton<SPTNowPlayingBarPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(readonly, nonatomic) SPTStepScrollView *stepScrollView; // @synthesize stepScrollView=_stepScrollView;
-- (void).cxx_destruct;
 - (void)shouldUpdateConnectStateViewVisibilityWithVisible:(_Bool)arg1;
 - (void)setLyricsLabelVisible:(_Bool)arg1;
 - (void)createLyricsViewIfNeeded;

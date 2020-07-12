@@ -20,11 +20,11 @@
     id <SPTRadioRemoteConfigProperties> _radioConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTRadioRemoteConfigProperties> radioConfiguration; // @synthesize radioConfiguration=_radioConfiguration;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic, getter=isUserOnFreeProduct) _Bool userOnFreeProduct; // @synthesize userOnFreeProduct;
-- (void).cxx_destruct;
 - (_Bool)isNPTUser;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 @property(readonly, nonatomic, getter=isRadioURITransitionEnabled) _Bool radioURITransitionEnabled;

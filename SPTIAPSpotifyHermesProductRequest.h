@@ -13,8 +13,8 @@
     SPTHermesController *_hermesController;
 }
 
-@property(retain, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 - (void)didComplete;
 - (void)start;
 - (id)initWithHermesController:(id)arg1;

@@ -19,11 +19,11 @@
     NSURL *_initialURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *initialURL; // @synthesize initialURL=_initialURL;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) UIViewController<SPTWebViewController> *webViewController; // @synthesize webViewController=_webViewController;
 @property(retain, nonatomic) id <SPTWebViewFactory> webViewFactory; // @synthesize webViewFactory=_webViewFactory;
-- (void).cxx_destruct;
 - (void)logError:(id)arg1;
 - (id)jsonErrorStringWithError:(id)arg1;
 - (void)sendMessageWithEventName:(id)arg1 jsonData:(id)arg2;

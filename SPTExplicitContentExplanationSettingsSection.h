@@ -13,8 +13,8 @@
     SPTExplicitContentExplanationSettingsTableViewCell *_explicitContentCell;
 }
 
-@property(retain, nonatomic) SPTExplicitContentExplanationSettingsTableViewCell *explicitContentCell; // @synthesize explicitContentCell=_explicitContentCell;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTExplicitContentExplanationSettingsTableViewCell *explicitContentCell; // @synthesize explicitContentCell=_explicitContentCell;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 

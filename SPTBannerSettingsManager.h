@@ -19,11 +19,11 @@
     id <SPTFeatureFlagSignal> _shakeGestureSettingSignal;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> shakeGestureSettingSignal; // @synthesize shakeGestureSettingSignal=_shakeGestureSettingSignal;
 @property(retain, nonatomic) MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) id <SPTFeatureFlagBuilder> featureFlagBuilder; // @synthesize featureFlagBuilder=_featureFlagBuilder;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)initWithFeatureFlagBuilder:(id)arg1 bannerPresentationManager:(id)arg2 messageBarController:(id)arg3;
 

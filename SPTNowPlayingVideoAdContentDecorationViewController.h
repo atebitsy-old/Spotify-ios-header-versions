@@ -24,6 +24,7 @@
     double _animationDuration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double animationDuration; // @synthesize animationDuration=_animationDuration;
 @property(retain, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(nonatomic) _Bool skippable; // @synthesize skippable=_skippable;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(nonatomic) __weak id <SPTNowPlayingVideoControlsVisibilityDelegate> visibilityDelegate; // @synthesize visibilityDelegate=_visibilityDelegate;
-- (void).cxx_destruct;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (id)playPauseButtonAccessiblityLabel;

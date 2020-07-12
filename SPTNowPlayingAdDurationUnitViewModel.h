@@ -18,10 +18,10 @@
     SPTAdPlayerObservable *_playerObservable;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool visible; // @synthesize visible=_visible;
 @property(readonly, nonatomic) SPTAdPlayerObservable *playerObservable; // @synthesize playerObservable=_playerObservable;
 @property(nonatomic) __weak id <SPTNowPlayingAdDurationUnitViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (id)timeIntervalToString:(double)arg1;
 - (_Bool)disallowsSeeking;

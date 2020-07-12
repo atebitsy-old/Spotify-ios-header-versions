@@ -17,10 +17,10 @@
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (id)obtainPlayOptionsFromCommand:(id)arg1;
 - (id)obtainPlayerContextFromCommand:(id)arg1;
 - (void)handleCommand:(id)arg1 event:(id)arg2;

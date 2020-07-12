@@ -23,6 +23,7 @@
     SPTVideoPlayRange *_uiLatencyTimeRange;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoPlayRange *uiLatencyTimeRange; // @synthesize uiLatencyTimeRange=_uiLatencyTimeRange;
 @property(copy, nonatomic) NSString *connectionTypeEnd; // @synthesize connectionTypeEnd=_connectionTypeEnd;
 @property(copy, nonatomic) NSString *connectionTypeStart; // @synthesize connectionTypeStart=_connectionTypeStart;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <BMPlaybackTimeObservable> timeObservable; // @synthesize timeObservable=_timeObservable;
 @property(retain, nonatomic) id <BMLoggerDataProvider> loggerDataProvider; // @synthesize loggerDataProvider=_loggerDataProvider;
 @property(retain, nonatomic) id <BMLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (long long)timeWeightedBitrate;
 - (id)keySystem;
 - (id)audioCodec;

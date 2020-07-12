@@ -16,8 +16,8 @@
     id <SPTNowPlayingModeResolver> _modeResolver;
 }
 
-@property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 - (_Bool)shouldPresentFullscreenVideo;
 - (id)initWithViewModeResolver:(id)arg1;
 

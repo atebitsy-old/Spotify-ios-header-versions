@@ -18,10 +18,10 @@
     SPTLyricsV2Colors *_colors;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isLyricsEastAsian; // @synthesize isLyricsEastAsian=_isLyricsEastAsian;
 @property(retain, nonatomic) SPTLyricsV2Colors *colors; // @synthesize colors=_colors;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
-- (void).cxx_destruct;
 - (id)lyricsViewStyle;
 - (id)initWithTheme:(id)arg1 colors:(id)arg2 isLyricsEastAsian:(_Bool)arg3;
 

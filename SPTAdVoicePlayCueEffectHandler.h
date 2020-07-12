@@ -13,8 +13,8 @@
     SPTAdVoiceCommandAudioPlayer *_voiceCommandPlayer;
 }
 
-@property(retain, nonatomic) SPTAdVoiceCommandAudioPlayer *voiceCommandPlayer; // @synthesize voiceCommandPlayer=_voiceCommandPlayer;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTAdVoiceCommandAudioPlayer *voiceCommandPlayer; // @synthesize voiceCommandPlayer=_voiceCommandPlayer;
 - (void)handleEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;
 - (id)initWithVoiceCommandPlayer:(id)arg1;
 

@@ -14,9 +14,9 @@
     id <SPTUBIMobileIosLockScreenEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileIosLockScreenEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (void)logSkip15SecondsBackwardTapped;
 - (void)logSkip15SecondsForwardTapped;
 - (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;

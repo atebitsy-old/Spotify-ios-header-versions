@@ -21,6 +21,7 @@
     double _cornerRadius;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) double footerHeight; // @synthesize footerHeight=_footerHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
@@ -28,7 +29,6 @@
 @property(nonatomic) double durationViewHorizontalMargin; // @synthesize durationViewHorizontalMargin=_durationViewHorizontalMargin;
 @property(nonatomic) double contentHorizontalMargin; // @synthesize contentHorizontalMargin=_contentHorizontalMargin;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

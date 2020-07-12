@@ -13,8 +13,8 @@
     id <SPTAuthController> _authController;
 }
 
-@property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 - (id)authenticationURLForIntegration:(id)arg1;
 - (void)authorizeIntegration:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)initWithAuthController:(id)arg1;

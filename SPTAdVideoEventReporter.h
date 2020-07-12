@@ -25,6 +25,7 @@
     CDStruct_1b6d18a9 _currentTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) CDStruct_1b6d18a9 currentTime; // @synthesize currentTime=_currentTime;
 @property(retain, nonatomic) id <BMPlaybackIdentity> currentIdentity; // @synthesize currentIdentity=_currentIdentity;
 @property(nonatomic) _Bool shouldFireImpressionOnStart; // @synthesize shouldFireImpressionOnStart=_shouldFireImpressionOnStart;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 - (_Bool)isAd:(id)arg1;
 - (void)logCompleteEventForAdID:(id)arg1 eventData:(id)arg2 time:(CDStruct_1b6d18a9)arg3;
 - (id)adIdForIdentity:(id)arg1;

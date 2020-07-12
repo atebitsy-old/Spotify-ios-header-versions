@@ -17,10 +17,10 @@
     CDUnknownBlockType _completion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) AVAssetResourceLoadingRequest *request; // @synthesize request=_request;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)runCompletion;
 - (void)redirectRequest;
 - (_Bool)start;

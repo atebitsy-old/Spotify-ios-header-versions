@@ -15,8 +15,8 @@
     GLUEButtonStyle *_buttonStyle;
 }
 
-@property(retain, nonatomic) GLUEButtonStyle *buttonStyle; // @synthesize buttonStyle=_buttonStyle;
 - (void).cxx_destruct;
+@property(retain, nonatomic) GLUEButtonStyle *buttonStyle; // @synthesize buttonStyle=_buttonStyle;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

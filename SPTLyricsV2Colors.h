@@ -16,10 +16,10 @@
 }
 
 + (id)defaultColorsWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *darkColor; // @synthesize darkColor=_darkColor;
 @property(retain, nonatomic) UIColor *brightColor; // @synthesize brightColor=_brightColor;
 @property(retain, nonatomic) UIColor *activeColor; // @synthesize activeColor=_activeColor;
-- (void).cxx_destruct;
 - (id)initWithActiveColor:(id)arg1 brightColor:(id)arg2 darkColor:(id)arg3;
 - (id)initWithDictionary:(id)arg1;
 

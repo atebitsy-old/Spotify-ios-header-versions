@@ -15,9 +15,9 @@
     SPTEditPlaylistCellStyle *_editCellStyle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTEditPlaylistCellStyle *editCellStyle; // @synthesize editCellStyle=_editCellStyle;
 @property(nonatomic) __weak id <SPTEditPlaylistEditCellConfiguratorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (Class)cellClass;
 - (void)deletePressed:(id)arg1;
 - (void)configureCell:(id)arg1 withTrackViewModel:(id)arg2;

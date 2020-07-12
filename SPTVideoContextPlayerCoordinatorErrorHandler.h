@@ -18,10 +18,10 @@
     id <SPTBannerPresentationManagerTicket> _bannerTicket;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
-- (void).cxx_destruct;
 - (id)messageForError:(id)arg1 recoverable:(_Bool)arg2;
 - (_Bool)canPresentErrorAsBanner;
 - (void)presentErrorModalForPlayer:(id)arg1 withTitle:(id)arg2 message:(id)arg3 allowReload:(_Bool)arg4;

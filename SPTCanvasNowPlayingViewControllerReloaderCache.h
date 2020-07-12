@@ -16,10 +16,10 @@
     NSCache *_reloadingModels;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSCache *reloadingModels; // @synthesize reloadingModels=_reloadingModels;
 @property(readonly, nonatomic) SPTCanvasViewControllerViewModelFactory *canvasViewModelFactory; // @synthesize canvasViewModelFactory=_canvasViewModelFactory;
 @property(nonatomic) __weak id <SPTCanvasNowPlayingViewControllerReloaderCacheDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)clear;
 - (void)reloadContentForTrack:(id)arg1;
 - (id)initWithCanvasViewModelFactory:(id)arg1;

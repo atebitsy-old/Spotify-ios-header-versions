@@ -20,11 +20,11 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSNumber *mobileToMobileEnabledOptionalFlag; // @synthesize mobileToMobileEnabledOptionalFlag=_mobileToMobileEnabledOptionalFlag;
 @property(retain, nonatomic) NSNumber *volumeFeatureEnabledOptionalFlag; // @synthesize volumeFeatureEnabledOptionalFlag=_volumeFeatureEnabledOptionalFlag;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
-- (void).cxx_destruct;
 - (void)featureFlagsDidChange:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

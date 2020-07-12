@@ -19,9 +19,9 @@
     NSURL *_URL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(retain, nonatomic) UIViewController<SPTWebViewController> *webViewController; // @synthesize webViewController=_webViewController;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)viewDidLayoutSubviews;

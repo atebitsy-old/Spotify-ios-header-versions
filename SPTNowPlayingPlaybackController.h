@@ -16,10 +16,10 @@
     id <SPTAdsManager> _adsManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(readonly, nonatomic) SPTStatefulPlayer *player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTNowPlayingTrackPosition *trackPosition; // @synthesize trackPosition=_trackPosition;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool seekingAllowed;
 @property(readonly, nonatomic) _Bool disallowTogglingRepeat;
 @property(readonly, nonatomic) _Bool disallowTogglingShuffle;

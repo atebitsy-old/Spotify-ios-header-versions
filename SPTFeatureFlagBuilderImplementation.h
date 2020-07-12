@@ -34,6 +34,7 @@
     id <SPTFeatureSettingsItemFactory> _featureSettingsFactory;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=hasUsedBuilder) _Bool builderUsed; // @synthesize builderUsed=_builderUsed;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsFactory; // @synthesize featureSettingsFactory=_featureSettingsFactory;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
@@ -53,7 +54,6 @@
 @property(copy, nonatomic) NSString *abbaDisabledValue; // @synthesize abbaDisabledValue=_abbaDisabledValue;
 @property(copy, nonatomic) NSString *abbaEnabledValue; // @synthesize abbaEnabledValue=_abbaEnabledValue;
 @property(copy, nonatomic) NSString *abbaKey; // @synthesize abbaKey=_abbaKey;
-- (void).cxx_destruct;
 - (CDUnknownBlockType)provideProductStateSignalMapper;
 - (void)setupSettingsPageWithSwitchItem:(id)arg1;
 - (id)provideFeatureSettingsSwitch;

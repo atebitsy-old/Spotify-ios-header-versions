@@ -26,6 +26,7 @@
     id <SPTFeatureSettingsItemFactory> _featureSettingsFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsFactory; // @synthesize featureSettingsFactory=_featureSettingsFactory;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(copy, nonatomic) NSString *defaultValue; // @synthesize defaultValue=_defaultValue;
@@ -37,7 +38,6 @@
 @property(copy, nonatomic) NSString *settingsPageTitle; // @synthesize settingsPageTitle=_settingsPageTitle;
 @property(copy, nonatomic) NSString *localSettingsKey; // @synthesize localSettingsKey=_localSettingsKey;
 @property(copy, nonatomic) NSString *abbaKey; // @synthesize abbaKey=_abbaKey;
-- (void).cxx_destruct;
 - (void)setupSettingsPageWithItem:(id)arg1;
 - (id)provideFeatureSettingsItem;
 - (CDUnknownBlockType)provideMultipleChoiceSignalMapperForKey:(id)arg1;

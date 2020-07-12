@@ -10,7 +10,7 @@
 @protocol SPTPlaylistRoute;
 
 @protocol SPTShadowPlaylistURIResolverObserver <NSObject>
-- (void)uriResolver:(SPTShadowPlaylistURIResolver *)arg1 didRegenerateReadListForRoute:(id <SPTPlaylistRoute>)arg2;
+- (void)uriResolver:(SPTShadowPlaylistURIResolver *)arg1 didUpdateRoute:(id <SPTPlaylistRoute>)arg2;
 - (void)uriResolver:(SPTShadowPlaylistURIResolver *)arg1 didCreateShadow:(id <SPTPlaylistRoute>)arg2;
 @end
 

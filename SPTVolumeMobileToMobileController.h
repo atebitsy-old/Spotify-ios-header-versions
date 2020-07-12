@@ -20,12 +20,12 @@
     id <SPTVolumeFlagsManager> _flagManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isSetup; // @synthesize isSetup=_isSetup;
 @property(readonly, nonatomic) id <SPTVolumeFlagsManager> flagManager; // @synthesize flagManager=_flagManager;
 @property(readonly, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(readonly, nonatomic) SPTVolumeCosmosResolver *resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <SPTVolumeMobileToMobileDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)bodyFromDictionary:(id)arg1;
 - (void)mobileToMobileEnabledChanged;
 - (void)sendVolumeUpdate:(double)arg1;

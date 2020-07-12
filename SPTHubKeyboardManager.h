@@ -15,9 +15,9 @@
     HUBContainerView *_containerView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUBContainerView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) __weak id <SPTHubKeyboardManagerNavigationBarProvider> navigationBarProvider; // @synthesize navigationBarProvider=_navigationBarProvider;
-- (void).cxx_destruct;
 - (unsigned long long)animationOptionsWithCurve:(long long)arg1;
 - (void)setUpOverlayWithTheKeyboardNotification:(id)arg1;
 - (void)handleKeyboardWillChangeNotification:(id)arg1;

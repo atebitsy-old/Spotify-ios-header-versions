@@ -22,13 +22,13 @@
     unsigned long long _numberOfCompletedItems;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long numberOfCompletedItems; // @synthesize numberOfCompletedItems=_numberOfCompletedItems;
 @property(nonatomic) unsigned long long totalNumberOfItems; // @synthesize totalNumberOfItems=_totalNumberOfItems;
 @property(retain, nonatomic) id <SPTOfflineSyncModel> offlineSyncModel; // @synthesize offlineSyncModel=_offlineSyncModel;
 @property(nonatomic) float percentCompleted; // @synthesize percentCompleted=_percentCompleted;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(nonatomic) __weak id <SPTYourLibraryOfflineBannerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateProgress:(id)arg1;
 - (void)offlineSyncModel:(id)arg1 error:(id)arg2;
 - (void)offlineSyncModelDidUpdate:(id)arg1;

@@ -32,6 +32,7 @@
 + (id)dataLoaderServiceWithUserAgent:(id)arg1 rateLimiter:(id)arg2 resolver:(id)arg3 customURLProtocolClasses:(id)arg4 qualityOfService:(long long)arg5;
 + (id)dataLoaderServiceWithConfiguration:(id)arg1 rateLimiter:(id)arg2 resolver:(id)arg3;
 + (id)dataLoaderServiceWithUserAgent:(id)arg1 rateLimiter:(id)arg2 resolver:(id)arg3 customURLProtocolClasses:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTDataLoaderServiceSessionSelector> sessionSelector; // @synthesize sessionSelector=_sessionSelector;
 @property(nonatomic) __weak Class dataClass; // @synthesize dataClass=_dataClass;
 @property(nonatomic) __weak NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) SPTDataLoaderResolver *resolver; // @synthesize resolver=_resolver;
 @property(retain, nonatomic) SPTDataLoaderRateLimiter *rateLimiter; // @synthesize rateLimiter=_rateLimiter;
 @property(nonatomic, getter=areAllCertificatesAllowed) _Bool allCertificatesAllowed; // @synthesize allCertificatesAllowed=_allCertificatesAllowed;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)URLSession:(id)arg1 downloadTask:(id)arg2 didFinishDownloadingToURL:(id)arg3;
 - (void)URLSession:(id)arg1 taskIsWaitingForConnectivity:(id)arg2;

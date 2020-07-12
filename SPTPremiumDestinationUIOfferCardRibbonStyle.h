@@ -20,13 +20,13 @@
     struct UIEdgeInsets _labelContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *shadowColor; // @synthesize shadowColor=_shadowColor;
 @property(nonatomic) struct CGSize shadowOffset; // @synthesize shadowOffset=_shadowOffset;
 @property(nonatomic) double shadowRadius; // @synthesize shadowRadius=_shadowRadius;
 @property(nonatomic) struct UIEdgeInsets labelContentInsets; // @synthesize labelContentInsets=_labelContentInsets;
 @property(nonatomic) double ribbonOffset; // @synthesize ribbonOffset=_ribbonOffset;
 @property(retain, nonatomic) GLUELabelStyle *labelStyle; // @synthesize labelStyle=_labelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

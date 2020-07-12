@@ -13,8 +13,8 @@
     UNUserNotificationCenter *_notificationCenter;
 }
 
-@property(retain, nonatomic) UNUserNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UNUserNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 - (void)userHasPushNotificationsEnabled:(CDUnknownBlockType)arg1;
 - (id)initWithNotificationCenter:(id)arg1;
 

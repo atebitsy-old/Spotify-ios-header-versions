@@ -17,11 +17,11 @@
     UIButton *_lyricsButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *lyricsButton; // @synthesize lyricsButton=_lyricsButton;
 @property(nonatomic) _Bool isActive; // @synthesize isActive=_isActive;
 @property(nonatomic) __weak id <SPTNowPlayingLyricsButtonViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isSelected) _Bool selected; // @synthesize selected=_selected;
-- (void).cxx_destruct;
 - (void)handleTapGesture:(id)arg1;
 - (void)updateButtonSelectedState;
 - (void)setupLyricsButton;

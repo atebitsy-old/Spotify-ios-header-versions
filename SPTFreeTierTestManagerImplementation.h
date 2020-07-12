@@ -20,12 +20,12 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> actualNewExperienceEnabledSignal; // @synthesize actualNewExperienceEnabledSignal=_actualNewExperienceEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> shadowNewExperienceEnabledSignal; // @synthesize shadowNewExperienceEnabledSignal=_shadowNewExperienceEnabledSignal;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool theNewExperienceEnabled;
 - (id)provideLiveNewExperienceEnabledSignal;
 - (id)provideShadowNewExperienceEnabledSignal;

@@ -20,11 +20,11 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTFeedbackManager> feedbackManager; // @synthesize feedbackManager=_feedbackManager;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) id <SPTFormatListPlatformRemoteControlPolicyManager> remoteControlPolicyManager; // @synthesize remoteControlPolicyManager=_remoteControlPolicyManager;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)remoteControlPolicyManagerDidFinishDislikeFeedback:(id)arg1 track:(id)arg2 contextURI:(id)arg3 identifier:(id)arg4 error:(id)arg5;
 - (void)remoteControlPolicyManagerDidFinishUnlikeFeedback:(id)arg1 track:(id)arg2 contextURI:(id)arg3 error:(id)arg4;

@@ -25,6 +25,7 @@
     double _lowerLabelTopMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double lowerLabelTopMargin; // @synthesize lowerLabelTopMargin=_lowerLabelTopMargin;
 @property(nonatomic) double upperLabelTopMargin; // @synthesize upperLabelTopMargin=_upperLabelTopMargin;
 @property(nonatomic) double openEmailButtonTopMargin; // @synthesize openEmailButtonTopMargin=_openEmailButtonTopMargin;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) GLUELabelStyle *upperTextStyle; // @synthesize upperTextStyle=_upperTextStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleHeaderStyle; // @synthesize titleHeaderStyle=_titleHeaderStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

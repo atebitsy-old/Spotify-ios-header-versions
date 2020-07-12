@@ -15,9 +15,9 @@
     id <SPTCreatePlaylistController> _createPlaylistController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
 @property(retain, nonatomic) UIAlertAction *createAction; // @synthesize createAction=_createAction;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)style;
 - (id)logEventName;

@@ -25,6 +25,7 @@
     NSURL *_lastImageURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *lastImageURL; // @synthesize lastImageURL=_lastImageURL;
 @property(retain, nonatomic) UIColor *backgroundGradientColor; // @synthesize backgroundGradientColor=_backgroundGradientColor;
 @property(nonatomic) __weak SPTPodcastEpisodeLogger *logger; // @synthesize logger=_logger;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) SPTPodcastEpisodeTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPodcastEpisodeViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-- (void).cxx_destruct;
 - (void)didTapSubtitle;
 - (void)didTapImage;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;

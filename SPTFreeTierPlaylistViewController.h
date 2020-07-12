@@ -49,6 +49,7 @@
     CDUnknownBlockType _whenDataIsLoaded;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType whenDataIsLoaded; // @synthesize whenDataIsLoaded=_whenDataIsLoaded;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistEntityContextMenuPresenter> entityContextMenuPresenter; // @synthesize entityContextMenuPresenter=_entityContextMenuPresenter;
 @property(readonly, nonatomic) SPTFreeTierPlaylistCellProviderCoordinator *cellProviderCoordinator; // @synthesize cellProviderCoordinator=_cellProviderCoordinator;
@@ -70,7 +71,6 @@
 @property(readonly, nonatomic) SPTFreeTierPlaylistGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-- (void).cxx_destruct;
 - (void)statusBarManager:(id)arg1 didToggleStatusBarState:(_Bool)arg2;
 - (void)statusBarManager:(id)arg1 didChangeStatusBarHeight:(double)arg2;
 - (void)didTapContextMenuButton:(id)arg1;

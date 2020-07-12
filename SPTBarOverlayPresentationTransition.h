@@ -36,6 +36,7 @@
     struct CGRect _barFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double dismissalInitialTranslationY; // @synthesize dismissalInitialTranslationY=_dismissalInitialTranslationY;
 @property(nonatomic) _Bool interactionInProgress; // @synthesize interactionInProgress=_interactionInProgress;
 @property(retain, nonatomic) UIView *tabBarSnapshotView; // @synthesize tabBarSnapshotView=_tabBarSnapshotView;
@@ -56,7 +57,6 @@
 @property(retain, nonatomic) UIView *barView; // @synthesize barView=_barView;
 @property(nonatomic) double lastScrollViewOffsetY; // @synthesize lastScrollViewOffsetY=_lastScrollViewOffsetY;
 @property(readonly, nonatomic, getter=isPresenting) _Bool presenting; // @synthesize presenting=_presenting;
-- (void).cxx_destruct;
 - (void)completeInteractiveTransitionWithTranslation:(struct CGPoint)arg1 velocity:(struct CGPoint)arg2;
 - (void)updateInteractiveTransitionWithTranslation:(struct CGPoint)arg1 velocity:(struct CGPoint)arg2;
 - (void)startInteractiveTransition:(id)arg1;

@@ -40,6 +40,7 @@
     struct CGRect _lastKnownHubContainerViewFrame;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(readonly, nonatomic) SPTFreeTierFindHubManager *hubManager; // @synthesize hubManager=_hubManager;
@@ -56,7 +57,6 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTFreeTierFindViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic) NSURL *URI;

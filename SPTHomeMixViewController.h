@@ -52,6 +52,7 @@
     id <UICollectionViewDragDelegate> _dragDelegateHolder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <UICollectionViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
 @property(retain, nonatomic) UIBarButtonItem *contextMenuBarButton; // @synthesize contextMenuBarButton=_contextMenuBarButton;
 @property(retain, nonatomic) GLUELabel *emptyTracklistLabel; // @synthesize emptyTracklistLabel=_emptyTracklistLabel;
@@ -81,7 +82,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTHomeMixViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;

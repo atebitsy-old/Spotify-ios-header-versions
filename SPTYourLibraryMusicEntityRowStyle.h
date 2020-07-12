@@ -18,11 +18,11 @@
     struct CGSize _placeholderSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEAccessoryIconViewStyle *disclosureStyle; // @synthesize disclosureStyle=_disclosureStyle;
 @property(retain, nonatomic) GLUEEntityRowStyle *entityRowStyle; // @synthesize entityRowStyle=_entityRowStyle;
 @property(nonatomic) struct CGSize placeholderSize; // @synthesize placeholderSize=_placeholderSize;
 @property(retain, nonatomic) UIImage *placeholderImage; // @synthesize placeholderImage=_placeholderImage;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

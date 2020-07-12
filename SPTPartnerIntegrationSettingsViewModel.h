@@ -19,13 +19,13 @@
     id <SPTPartnerIntegrationRegistry> _integrationRegistry;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPartnerIntegrationRegistry> integrationRegistry; // @synthesize integrationRegistry=_integrationRegistry;
 @property(readonly, nonatomic) SPTPartnerTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPartnerIntegrationAuthorizer *authorizer; // @synthesize authorizer=_authorizer;
 @property(readonly, nonatomic) SPTPartnerIntegrationStateLoader *stateLoader; // @synthesize stateLoader=_stateLoader;
 @property(copy, nonatomic) NSArray *sections; // @synthesize sections=_sections;
 @property(nonatomic) __weak id <SPTPartnerIntegrationSettingsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)isOffline;
 - (id)sectionsFromCategories:(id)arg1;
 - (void)loadData;

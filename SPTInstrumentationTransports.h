@@ -17,8 +17,8 @@
 }
 
 + (id)defaultTransportsWithLogCenter:(id)arg1 eventSender:(id)arg2;
-@property(copy, nonatomic) NSSet *transports; // @synthesize transports=_transports;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSSet *transports; // @synthesize transports=_transports;
 - (void)removeTransport:(id)arg1;
 - (void)addTransport:(id)arg1;
 - (id)initWithTransports:(id)arg1;

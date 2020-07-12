@@ -22,6 +22,7 @@
     double _requestStartTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double requestStartTime; // @synthesize requestStartTime=_requestStartTime;
 @property(retain, nonatomic) NSHashTable *childContentCallbacks; // @synthesize childContentCallbacks=_childContentCallbacks;
 @property(retain, nonatomic) NSHashTable *contentCallbacks; // @synthesize contentCallbacks=_contentCallbacks;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTExternalIntegrationContentRequestOptions> requestOptions; // @synthesize requestOptions=_requestOptions;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) id <SPTExternalIntegrationContentProvider> contentProvider; // @synthesize contentProvider=_contentProvider;
-- (void).cxx_destruct;
 - (void)executeChildContentCallbacksWithContent:(id)arg1 error:(id)arg2;
 - (void)executeChildContentRequestWithRetryCount:(unsigned long long)arg1;
 - (void)resolveChildContentOfParentWithCompletionHandler:(CDUnknownBlockType)arg1;

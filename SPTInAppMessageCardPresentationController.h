@@ -33,6 +33,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
@@ -48,7 +49,6 @@
 @property(copy, nonatomic) NSString *matchedPattern; // @synthesize matchedPattern=_matchedPattern;
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessageViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic, getter=isPresentingCard) _Bool presentingCard; // @synthesize presentingCard=_presentingCard;
-- (void).cxx_destruct;
 - (void)logDismissEventWithDismissType:(long long)arg1;
 - (void)dismissCardMessageIfAdPlaying;
 - (_Bool)canPresentSlate;

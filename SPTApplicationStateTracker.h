@@ -12,9 +12,9 @@
     struct ApplicationStateTracker *_applicationStateTracker;
 }
 
-@property(nonatomic) struct ApplicationStateTracker *applicationStateTracker; // @synthesize applicationStateTracker=_applicationStateTracker;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) struct ApplicationStateTracker *applicationStateTracker; // @synthesize applicationStateTracker=_applicationStateTracker;
 - (void)setApplicationState:(long long)arg1;
 - (void)invalidate;
 - (id)initWithApplicationStateTracker:(struct ApplicationStateTracker *)arg1;

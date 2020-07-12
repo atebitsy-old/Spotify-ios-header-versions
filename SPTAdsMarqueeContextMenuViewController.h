@@ -29,6 +29,7 @@
     NSLayoutConstraint *_bottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) double popoverHeight; // @synthesize popoverHeight=_popoverHeight;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) UIButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(readonly, nonatomic) NSString *contextMenuTitle; // @synthesize contextMenuTitle=_contextMenuTitle;
 @property(readonly, nonatomic) UIVisualEffectView *blurView; // @synthesize blurView=_blurView;
-- (void).cxx_destruct;
 - (void)sendEventWithEventName:(id)arg1 reason:(id)arg2;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

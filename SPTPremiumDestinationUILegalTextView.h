@@ -17,10 +17,10 @@
 
 + (id)attributedLegalTextFromModel:(id)arg1 style:(id)arg2;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 style:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) GLUELabel *legalTextLabel; // @synthesize legalTextLabel=_legalTextLabel;
 @property(retain, nonatomic) SPTPremiumDestinationUILegalTextStyle *style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)addLayoutConstraints;

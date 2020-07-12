@@ -17,11 +17,11 @@
     id <SPTUBIMobilePlaylistAllSongsEventFactory> _allSongEventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobilePlaylistAllSongsEventFactory> allSongEventFactory; // @synthesize allSongEventFactory=_allSongEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUserInteractionForIntent:(id)arg1 itemIndex:(long long)arg2 pageURI:(id)arg3 targetURI:(id)arg4;
 - (void)logAddSongButtonHit;
 - (void)logCloseButtonHit;

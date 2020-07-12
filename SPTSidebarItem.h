@@ -21,11 +21,11 @@
 
 + (void)setNavigationConfiguration:(id)arg1;
 + (id)navigationConfiguration;
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isBadgeDisplayed) _Bool badgeDisplayed; // @synthesize badgeDisplayed=_badgeDisplayed;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithIcon:(long long)arg1 title:(id)arg2 identifier:(id)arg3 badgeDisplayed:(_Bool)arg4;
 

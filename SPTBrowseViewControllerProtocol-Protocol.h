@@ -9,8 +9,8 @@
 @class UIGestureRecognizer;
 
 @protocol SPTBrowseViewControllerProtocol <NSObject>
-@property(readonly, nonatomic) UIGestureRecognizer *scrollViewPanGestureRecognizer;
-@property(copy, nonatomic) CDUnknownBlockType onOffsetChange;
-@property(readonly, nonatomic) struct CGPoint contentOffset;
+@property(nonatomic, readonly) UIGestureRecognizer *scrollViewPanGestureRecognizer;
+@property(nonatomic, copy) CDUnknownBlockType onOffsetChange;
+@property(nonatomic, readonly) struct CGPoint contentOffset;
 @end
 

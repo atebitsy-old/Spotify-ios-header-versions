@@ -23,6 +23,7 @@
     SPTAccessory *_currentAccessory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(nonatomic) _Bool didLoadContent; // @synthesize didLoadContent=_didLoadContent;
 @property(retain, nonatomic) NSArray *content; // @synthesize content=_content;
@@ -30,7 +31,6 @@
 @property(nonatomic) unsigned long long level; // @synthesize level=_level;
 @property(readonly, nonatomic) id <SPTExternalIntegrationContent> containerContent; // @synthesize containerContent=_containerContent;
 @property(readonly, nonatomic) __weak id <SPTBMWListScreenDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldShowShuffleHeader;
 - (id)contentForRow:(long long)arg1;
 - (_Bool)rowIsShuffleHeader:(long long)arg1;

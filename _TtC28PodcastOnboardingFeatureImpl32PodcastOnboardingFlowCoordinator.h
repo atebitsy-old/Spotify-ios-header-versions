@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTOnboardingFlowCoordinator-Protocol.h"
-
 @protocol SPTOnboardingServiceFlowStateReporter;
 
-@interface _TtC28PodcastOnboardingFeatureImpl32PodcastOnboardingFlowCoordinator : NSObject <SPTOnboardingFlowCoordinator>
+@interface _TtC28PodcastOnboardingFeatureImpl32PodcastOnboardingFlowCoordinator : NSObject
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: modalPresentationController

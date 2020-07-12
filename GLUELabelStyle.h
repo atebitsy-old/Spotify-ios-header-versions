@@ -27,6 +27,7 @@
 }
 
 + (id)labelStyleFromTypeStyle:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEncoreTypeStyle *typeStyle; // @synthesize typeStyle=_typeStyle;
 @property(nonatomic) double hyphenationFactor; // @synthesize hyphenationFactor=_hyphenationFactor;
 @property(nonatomic) double lineSpacing; // @synthesize lineSpacing=_lineSpacing;
@@ -39,7 +40,6 @@
 @property(nonatomic) long long textAlignment; // @synthesize textAlignment=_textAlignment;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToLabelStyle:(id)arg1;

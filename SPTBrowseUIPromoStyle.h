@@ -34,6 +34,7 @@
 + (double)componentHorizontalMargin;
 + (double)componentHeight;
 + (id)defaultStyleWithTheme:(id)arg1 image:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) double logoImageHeight; // @synthesize logoImageHeight=_logoImageHeight;
 @property(nonatomic) double mainImageShadowOpacity; // @synthesize mainImageShadowOpacity=_mainImageShadowOpacity;
 @property(nonatomic) struct CGSize mainImageShadowOffsetSize; // @synthesize mainImageShadowOffsetSize=_mainImageShadowOffsetSize;
@@ -51,7 +52,6 @@
 @property(copy, nonatomic) GLUEImageStyle *mainImageStyle; // @synthesize mainImageStyle=_mainImageStyle;
 @property(copy, nonatomic) GLUEImageStyle *backgroundImageStyle; // @synthesize backgroundImageStyle=_backgroundImageStyle;
 @property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

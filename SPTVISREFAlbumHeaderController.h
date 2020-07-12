@@ -35,6 +35,7 @@
 }
 
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) UIImage *creatorImage; // @synthesize creatorImage=_creatorImage;
 @property(retain, nonatomic) NSURL *lastCreatorImageURL; // @synthesize lastCreatorImageURL=_lastCreatorImageURL;
@@ -53,7 +54,6 @@
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)setImagePlaceholder;
 - (void)setImage:(id)arg1;

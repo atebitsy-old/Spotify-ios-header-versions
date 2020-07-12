@@ -21,13 +21,13 @@
     UIColor *_backgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) id <GLUEStyle> contentViewStyle; // @synthesize contentViewStyle=_contentViewStyle;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(nonatomic) double arrowHeight; // @synthesize arrowHeight=_arrowHeight;
 @property(nonatomic) double contentVerticalInset; // @synthesize contentVerticalInset=_contentVerticalInset;
 @property(nonatomic) double contentHorizontalInset; // @synthesize contentHorizontalInset=_contentHorizontalInset;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

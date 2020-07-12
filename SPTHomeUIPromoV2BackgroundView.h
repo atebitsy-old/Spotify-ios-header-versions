@@ -18,12 +18,12 @@
     GLUEGradientView *_overlayGradientView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientView *overlayGradientView; // @synthesize overlayGradientView=_overlayGradientView;
 @property(readonly, nonatomic) UIView *overlayView; // @synthesize overlayView=_overlayView;
 @property(readonly, nonatomic) GLUEImageView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
 @property(readonly, nonatomic) SPTHomeUIPromoV2ViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *image;
 - (id)createOverlayGradientView;
 - (id)createOverlayView;

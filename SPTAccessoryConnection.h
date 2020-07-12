@@ -14,9 +14,9 @@
     double _timestamp;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, nonatomic) EAAccessory *accessory; // @synthesize accessory=_accessory;
-- (void).cxx_destruct;
 - (id)initWithAccessory:(id)arg1 timestamp:(double)arg2;
 
 @end

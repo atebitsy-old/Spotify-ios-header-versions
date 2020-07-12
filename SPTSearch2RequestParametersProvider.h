@@ -16,11 +16,12 @@
     id <SPTFeatureFlagSignal> _freeTierSignal;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool topicsEnabled; // @synthesize topicsEnabled=_topicsEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierSignal; // @synthesize freeTierSignal=_freeTierSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
-- (void).cxx_destruct;
+- (id)entityTypes;
 - (unsigned long long)entityVersion;
 - (id)makeDefaultSearchRequestParameters;
 - (id)initWithPodcastService:(id)arg1 sessionService:(id)arg2 topicsEnabled:(_Bool)arg3;

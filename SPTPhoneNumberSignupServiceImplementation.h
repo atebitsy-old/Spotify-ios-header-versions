@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPhoneNumberSignupUtils *phoneNumberSignupUtils; // @synthesize phoneNumberSignupUtils=_phoneNumberSignupUtils;
 @property(retain, nonatomic) SPTPhoneNumberSignupFlowCoordinator *flowCoordinator; // @synthesize flowCoordinator=_flowCoordinator;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggingService; // @synthesize loggingService=_loggingService;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)willChangeRootViewOfMetaViewController:(id)arg1;
 - (id)provideMetaViewController;
 - (id)provideAllowedCallingCodes;

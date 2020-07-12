@@ -22,6 +22,7 @@
     SPTStorylinesEnabledTracks *_enabledTracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStorylinesEnabledTracks *enabledTracks; // @synthesize enabledTracks=_enabledTracks;
 @property(retain, nonatomic) SPTStorylinesTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTStorylinesEntitiesLoadEventLogger *entitiesLogger; // @synthesize entitiesLogger=_entitiesLogger;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) SPTStorylinesDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) SPTStorylinesEnabledTracksLoadingState *loadingState; // @synthesize loadingState=_loadingState;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)storylinesIdentifierForTrack:(id)arg1;
 - (void)loadEntitiesListWithCompletion:(CDUnknownBlockType)arg1;

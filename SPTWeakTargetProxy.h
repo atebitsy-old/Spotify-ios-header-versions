@@ -13,8 +13,8 @@
 }
 
 + (id)proxyWithTarget:(id)arg1;
-@property(readonly, nonatomic) __weak id target; // @synthesize target=_target;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id target; // @synthesize target=_target;
 - (void)forwardInvocation:(id)arg1;
 - (id)methodSignatureForSelector:(SEL)arg1;
 - (id)forwardingTargetForSelector:(SEL)arg1;

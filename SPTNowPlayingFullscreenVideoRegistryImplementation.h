@@ -17,9 +17,9 @@
     NSHashTable *_registrants;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *registrants; // @synthesize registrants=_registrants;
 @property(readonly, nonatomic) id <SPTInAppMessagePresentationMonitor> inAppMessagePresentationMonitor; // @synthesize inAppMessagePresentationMonitor=_inAppMessagePresentationMonitor;
-- (void).cxx_destruct;
 - (void)removeRegistrant:(id)arg1;
 - (void)addRegistrant:(id)arg1;
 - (_Bool)shouldPresentFullscreenVideo;

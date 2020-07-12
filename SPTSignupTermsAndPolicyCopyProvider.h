@@ -13,8 +13,8 @@
     id <SPTSignupTermsAndPolicyViewConfiguration> _termsViewConfiguration;
 }
 
-@property(readonly, nonatomic) id <SPTSignupTermsAndPolicyViewConfiguration> termsViewConfiguration; // @synthesize termsViewConfiguration=_termsViewConfiguration;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTSignupTermsAndPolicyViewConfiguration> termsViewConfiguration; // @synthesize termsViewConfiguration=_termsViewConfiguration;
 - (id)linksForTermsAndConditionsText;
 - (id)termsAndConditionsAttributedTextWithStyle:(id)arg1;
 - (id)termsAndConditionsText;

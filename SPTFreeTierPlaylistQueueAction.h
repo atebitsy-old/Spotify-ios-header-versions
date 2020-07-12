@@ -18,12 +18,12 @@
     id <SPTFreeTierPlaylistSortingFiltering> _sortingFiltering;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering; // @synthesize sortingFiltering=_sortingFiltering;
 @property(readonly, nonatomic) id <SPTPlayerQueue> playerQueue; // @synthesize playerQueue=_playerQueue;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)style;
 - (id)logEventName;

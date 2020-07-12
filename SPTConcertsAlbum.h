@@ -18,11 +18,11 @@
     NSURL *_albumImageUri;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *albumImageUri; // @synthesize albumImageUri=_albumImageUri;
 @property(readonly, copy, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, copy, nonatomic) NSURL *uri; // @synthesize uri=_uri;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;

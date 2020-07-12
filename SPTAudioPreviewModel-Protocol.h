@@ -10,20 +10,25 @@
 @protocol SPTAudioPreviewModelDelegate;
 
 @protocol SPTAudioPreviewModel <NSObject>
-@property(retain, nonatomic) NSNumber *maximumPlayTime;
-@property(nonatomic, getter=isLoopingEnabled) _Bool loopingEnabled;
-@property(readonly, copy, nonatomic) NSURL *trackURI;
-@property(readonly, copy, nonatomic) NSString *trackIdentifier;
-@property(nonatomic) __weak id <SPTAudioPreviewModelDelegate> delegate;
-@property(readonly, nonatomic) long long origin;
-@property(readonly, nonatomic) double endTime;
-@property(readonly, nonatomic) double startTime;
-@property(readonly, nonatomic) double playTime;
-@property(readonly, nonatomic, getter=isPaused) _Bool paused;
-@property(readonly, nonatomic, getter=isPlaying) _Bool playing;
 - (void)setTrackIdentifier:(NSString *)arg1 andTrackURI:(NSURL *)arg2;
 - (void)stop;
 - (void)pause:(void (^)(_Bool, NSError *))arg1;
 - (void)play:(void (^)(_Bool, NSError *))arg1;
+@property(nonatomic, retain) NSNumber *maximumPlayTime;
+@property(nonatomic) _Bool loopingEnabled;
+- (_Bool)isLoopingEnabled;
+@property(nonatomic, readonly) NSURL *trackURI;
+@property(nonatomic, readonly) NSString *trackIdentifier;
+@property(nonatomic) __weak id <SPTAudioPreviewModelDelegate> delegate;
+@property(nonatomic, readonly) long long origin;
+@property(nonatomic, readonly) double endTime;
+@property(nonatomic, readonly) double startTime;
+@property(nonatomic, readonly) double playTime;
+- (_Bool)isPaused;
+- (_Bool)isPlaying;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool paused;
+@property(nonatomic, readonly) _Bool playing;
 @end
 

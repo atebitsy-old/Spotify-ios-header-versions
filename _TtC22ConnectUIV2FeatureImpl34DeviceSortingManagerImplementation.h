@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: flagsProvider
     // Error parsing type: , name: store
+    // Error parsing type: , name: observers
     // Error parsing type: , name: lastUsedTable
 }
 

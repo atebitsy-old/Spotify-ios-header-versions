@@ -17,11 +17,11 @@
     SPTGaiaLocalDevicePermissions *_localDevicePermissions;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaLocalDevicePermissions *localDevicePermissions; // @synthesize localDevicePermissions=_localDevicePermissions;
 @property(retain, nonatomic) id <SPTAccountProductInformationController> productInformationController; // @synthesize productInformationController=_productInformationController;
 @property(retain, nonatomic) id <SPTGaiaDevicePickerFlagsProvider> flagsProvider; // @synthesize flagsProvider=_flagsProvider;
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldShowActiveDeviceAsShuffleOnly;
 - (_Bool)shouldDeviceBeShownAsShuffleOnly:(id)arg1;
 @property(readonly, nonatomic) _Bool shouldShowLocalDeviceAsShuffleOnly;

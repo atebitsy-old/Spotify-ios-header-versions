@@ -18,10 +18,10 @@
     NSString *_suggestion;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *suggestion; // @synthesize suggestion=_suggestion;
 @property(retain, nonatomic) SPTVoiceDynamicSuggestionDataSource *dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <SPTVoiceDynamicCommandSuggestionsGeneratorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dynamicSuggestion:(id)arg1 didFail:(id)arg2;
 - (void)dynamicSuggestion:(id)arg1 didUpdate:(id)arg2;
 - (void)cancelFetchingSuggestions;

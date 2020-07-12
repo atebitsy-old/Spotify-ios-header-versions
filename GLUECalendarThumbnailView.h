@@ -20,13 +20,13 @@
     UIView *_dayLabelContainerView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIView *dayLabelContainerView; // @synthesize dayLabelContainerView=_dayLabelContainerView;
 @property(readonly, nonatomic) UIView *monthLabelContainerView; // @synthesize monthLabelContainerView=_monthLabelContainerView;
 @property(retain, nonatomic) GLUECalendarThumbnailViewStyle *style; // @synthesize style=_style;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, copy, nonatomic) GLUELabel *calendarDayLabel; // @synthesize calendarDayLabel=_calendarDayLabel;
 @property(readonly, copy, nonatomic) GLUELabel *calendarMonthLabel; // @synthesize calendarMonthLabel=_calendarMonthLabel;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)glue_applyStyle:(id)arg1;

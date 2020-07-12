@@ -18,10 +18,10 @@
     SPNavigationController *_navigationController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPNavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(retain, nonatomic) id <SPTAssistedCurationLinkDispatcher> assistedCurationLinkDispatcher; // @synthesize assistedCurationLinkDispatcher=_assistedCurationLinkDispatcher;
 @property(readonly, nonatomic) id <SPTFreeTierPresentationModalPresenter> modalPresenter; // @synthesize modalPresenter=_modalPresenter;
-- (void).cxx_destruct;
 - (void)didReceiveURIOpenAttemptNotification:(id)arg1;
 - (void)removeSpotifyURIObserver;
 - (void)addSpotifyURIObserver;

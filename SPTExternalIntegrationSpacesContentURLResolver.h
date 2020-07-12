@@ -13,8 +13,8 @@
     id <SPTProductState> _productState;
 }
 
-@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (id)signalsFromViewURIQueryParameters:(id)arg1;
 - (id)remoteHubContentURLForEndpointPath:(id)arg1 queryParameters:(id)arg2 forExternalData:(_Bool)arg3 includeDynamicComponents:(_Bool)arg4;
 - (id)remoteHubContentURLWithoutDynamicComponentsForViewURI:(id)arg1;

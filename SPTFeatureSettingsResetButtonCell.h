@@ -11,8 +11,8 @@
     CDUnknownBlockType _resetAction;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType resetAction; // @synthesize resetAction=_resetAction;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType resetAction; // @synthesize resetAction=_resetAction;
 - (id)resetSettingsButtonStyle;
 - (void)resetButtonPressed;
 - (void)applyThemeLayout;

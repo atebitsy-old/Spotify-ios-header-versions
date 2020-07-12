@@ -14,9 +14,9 @@
     NSString *_username;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) long long affinityType; // @synthesize affinityType=_affinityType;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

@@ -29,6 +29,7 @@
 }
 
 + (_Bool)isAd:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(nonatomic) _Bool ended; // @synthesize ended=_ended;
 @property(nonatomic) _Bool started; // @synthesize started=_started;
@@ -42,7 +43,6 @@
 @property(nonatomic) _Bool firedOnThreshold; // @synthesize firedOnThreshold=_firedOnThreshold;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 - (void)logSkipEventAtPosition:(double)arg1;
 - (void)logCompleteEventAtPosition:(double)arg1;
 - (void)logErrorAndTerminatedEventAtPosition:(double)arg1;

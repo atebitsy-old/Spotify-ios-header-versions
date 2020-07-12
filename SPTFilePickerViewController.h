@@ -33,6 +33,7 @@
     UIBarButtonItem *_importBarButtonItem;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIBarButtonItem *importBarButtonItem; // @synthesize importBarButtonItem=_importBarButtonItem;
 @property(nonatomic) _Bool filtering; // @synthesize filtering=_filtering;
 @property(retain, nonatomic) SPTLocalFilesLogger *logger; // @synthesize logger=_logger;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) SPTLocalFilesImportModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTTabControl *tabControl; // @synthesize tabControl=_tabControl;
 @property(nonatomic) long long selectedSection; // @synthesize selectedSection=_selectedSection;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)promote:(_Bool)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;

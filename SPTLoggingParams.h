@@ -18,10 +18,10 @@
     NSString *_interactionId;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *interactionId; // @synthesize interactionId=_interactionId;
 @property(copy, nonatomic) NSString *navigationId; // @synthesize navigationId=_navigationId;
 @property(copy, nonatomic) NSNumber *commandInitiatedTime; // @synthesize commandInitiatedTime=_commandInitiatedTime;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

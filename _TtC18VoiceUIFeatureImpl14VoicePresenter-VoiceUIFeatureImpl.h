@@ -6,9 +6,7 @@
 
 #import "_TtC18VoiceUIFeatureImpl14VoicePresenter.h"
 
-#import "_TtP18VoiceUIFeatureImpl9Presenter_-Protocol.h"
-
-@interface _TtC18VoiceUIFeatureImpl14VoicePresenter (VoiceUIFeatureImpl) <_TtP18VoiceUIFeatureImpl9Presenter_>
+@interface _TtC18VoiceUIFeatureImpl14VoicePresenter (VoiceUIFeatureImpl)
 - (void)dismissWithAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)presentWithViewController:(id)arg1 animated:(_Bool)arg2;
 @end

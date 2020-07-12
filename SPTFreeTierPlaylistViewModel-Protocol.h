@@ -33,15 +33,15 @@
 @property(readonly, copy, nonatomic) NSURL *playlistURL;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistViewModelDelegate> delegate;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (void)playTrackURL:(NSURL *)arg1;
+- (void)playTrackURL:(NSURL *)arg1 interactionId:(NSString *)arg2;
 - (void)deletePlaylist;
 - (void)load;
 - (void)changeOffline:(_Bool)arg1;
 - (void)toggleTrackBanAtIndexPath:(NSIndexPath *)arg1;
 - (void)toggleTrackLikeAtIndexPath:(NSIndexPath *)arg1;
-- (void)trackSelectedAtIndexPath:(NSIndexPath *)arg1;
+- (void)trackSelectedAtIndexPath:(NSIndexPath *)arg1 interactionId:(NSString *)arg2;
 - (NSURL *)sharingURLForTrackViewModelAtIndexPath:(NSIndexPath *)arg1;
-- (void)loadMoreTracksIfApproachingEndOfLoadedTracks:(NSIndexPath *)arg1;
+- (void)loadMoreTracks;
 - (_Bool)isApproachingEndIndexPath:(NSIndexPath *)arg1 countOfItemsInSection:(long long)arg2;
 @end
 

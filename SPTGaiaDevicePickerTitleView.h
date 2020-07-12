@@ -19,12 +19,12 @@
     double _offsetChange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double offsetChange; // @synthesize offsetChange=_offsetChange;
 @property(nonatomic) double thresholdOffset; // @synthesize thresholdOffset=_thresholdOffset;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)didUpdateContentOffset:(double)arg1;
 - (void)addTitleLabelConstraints;
 - (void)addTitleLabel;

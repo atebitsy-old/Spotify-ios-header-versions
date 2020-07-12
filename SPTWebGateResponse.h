@@ -16,10 +16,10 @@
 }
 
 + (id)responseFromCppResponse:(const struct Response *)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSData *body; // @synthesize body=_body;
 @property(readonly, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(readonly, nonatomic) long long status; // @synthesize status=_status;
-- (void).cxx_destruct;
 - (id)initFromCppResponse:(const struct Response *)arg1;
 
 @end

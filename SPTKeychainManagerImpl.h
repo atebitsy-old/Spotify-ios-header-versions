@@ -16,9 +16,9 @@
     NSString *_keychainClass;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *keychainClass; // @synthesize keychainClass=_keychainClass;
 @property(readonly, nonatomic) SPTKeychainWrapper *keychainWrapper; // @synthesize keychainWrapper=_keychainWrapper;
-- (void).cxx_destruct;
 - (id)deleteAllData;
 - (_Bool)deleteObjectForDomain:(id)arg1 andKey:(id)arg2 accessGroup:(id)arg3 accessAttr:(id)arg4 synchronizable:(_Bool)arg5;
 - (_Bool)deleteStringForDomain:(id)arg1 andKey:(id)arg2 accessGroup:(id)arg3 accessAttr:(id)arg4;

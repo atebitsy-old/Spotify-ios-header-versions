@@ -6,12 +6,10 @@
 
 #import "HUGSThemableComponentView.h"
 
-#import "SPTHubSwipeableTableViewCellComponentView-Protocol.h"
-
-@class NSString, SPTSwipeableTableViewCell, SPTTingSwipeableTrackRow;
+@class SPTTingSwipeableTrackRow;
 @protocol HUBComponentEventHandler;
 
-@interface SPTTingTrackRowComponentView : HUGSThemableComponentView <SPTHubSwipeableTableViewCellComponentView>
+@interface SPTTingTrackRowComponentView : HUGSThemableComponentView
 {
     // Error parsing type: , name: trackRowView
     // Error parsing type: , name: control
@@ -27,13 +25,6 @@
 - (void)configureWithModel:(id)arg1;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 @property(nonatomic, readonly) SPTTingSwipeableTrackRow *trackRowView; // @synthesize trackRowView;
-@property(readonly, nonatomic) SPTSwipeableTableViewCell *tableViewCell;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

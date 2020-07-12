@@ -29,6 +29,7 @@
     UIViewController<SPTNowPlayingContainedViewController> *_queueViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *queueViewController; // @synthesize queueViewController=_queueViewController;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingAdUnitViewController> *decorationViewController; // @synthesize decorationViewController=_decorationViewController;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *footerViewController; // @synthesize footerViewController=_footerViewController;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(retain, nonatomic) NSPointerArray *unitViewControllers; // @synthesize unitViewControllers=_unitViewControllers;
 @property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (_Bool)requiresScrollDisabled;
 - (id)queueHeadUnitViewController;
 - (id)contentDecorationViewController;

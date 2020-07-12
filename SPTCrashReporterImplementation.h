@@ -9,7 +9,7 @@
 #import "SPTCrashDetectorDelegate-Protocol.h"
 #import "SPTCrashReporter-Protocol.h"
 
-@class NSMutableArray, NSString;
+@class NSMutableArray, NSString, SPTANRDetector;
 @protocol SPTCrashDetector, SPTCrashReporterPersistentStore><SPTCrashReporterURLPoster;
 
 @interface SPTCrashReporterImplementation : NSObject <SPTCrashDetectorDelegate, SPTCrashReporter>
@@ -17,18 +17,23 @@
     _Bool _haveSentSummaryReports;
     _Bool _echoBreadcrumbsToLog;
     id <SPTCrashDetector> _crashDetector;
+    SPTANRDetector *_anrDetector;
     NSMutableArray *_crashSummaryObservers;
     NSString *_userName;
     id <SPTCrashReporterPersistentStore><SPTCrashReporterURLPoster> _provider;
+    struct _opaque_pthread_t *_mainThread;
 }
 
+- (void).cxx_destruct;
+@property(nonatomic) struct _opaque_pthread_t *mainThread; // @synthesize mainThread=_mainThread;
 @property(retain, nonatomic) id <SPTCrashReporterPersistentStore><SPTCrashReporterURLPoster> provider; // @synthesize provider=_provider;
 @property(retain, nonatomic) NSString *userName; // @synthesize userName=_userName;
 @property(nonatomic) _Bool echoBreadcrumbsToLog; // @synthesize echoBreadcrumbsToLog=_echoBreadcrumbsToLog;
 @property(nonatomic) _Bool haveSentSummaryReports; // @synthesize haveSentSummaryReports=_haveSentSummaryReports;
 @property(readonly, nonatomic) NSMutableArray *crashSummaryObservers; // @synthesize crashSummaryObservers=_crashSummaryObservers;
+@property(retain, nonatomic) SPTANRDetector *anrDetector; // @synthesize anrDetector=_anrDetector;
 @property(retain, nonatomic) id <SPTCrashDetector> crashDetector; // @synthesize crashDetector=_crashDetector;
-- (void).cxx_destruct;
+- (void)unload;
 - (void)crashDetector:(id)arg1 detectedCrashAtDate:(id)arg2 clientVersion:(id)arg3 OSVersion:(id)arg4 userName:(id)arg5 UUID:(id)arg6;
 - (void)recordCustomExceptionName:(id)arg1 reason:(id)arg2 callStack:(id)arg3;
 - (id)lastCrashURL;
@@ -46,7 +51,8 @@
 - (void)registerForNavigationNotifications;
 - (void)didReceiveNavigationNotification:(id)arg1;
 - (void)dealloc;
-- (id)initWithCrashDetector:(id)arg1 coreLoginController:(id)arg2 deviceID:(id)arg3 cachePath:(id)arg4 requestAccounting:(id)arg5;
+- (void)updateWithAnrReportingEnabled:(_Bool)arg1;
+- (id)initWithCrashDetector:(id)arg1 coreLoginController:(id)arg2 deviceID:(id)arg3 cachePath:(id)arg4 requestAccounting:(id)arg5 mainThread:(struct _opaque_pthread_t *)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

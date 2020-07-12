@@ -16,10 +16,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTHomeMixEffectHandler> effectHandler; // @synthesize effectHandler=_effectHandler;
 @property(copy, nonatomic) SPTHomeMixDomainModel *domainModel; // @synthesize domainModel=_domainModel;
-- (void).cxx_destruct;
 - (void)addModelObserver:(id)arg1;
 - (void)eventOccurred:(id)arg1;
 - (id)initWithDomainModel:(id)arg1 effectHandler:(id)arg2;

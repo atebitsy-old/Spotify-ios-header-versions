@@ -15,8 +15,8 @@
     CDUnknownBlockType _action;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 - (void)executeCreatePlaylistAction;
 - (void)setCreatePlaylistAction:(CDUnknownBlockType)arg1;
 

@@ -29,6 +29,7 @@
     struct CGSize _screenSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEncoreAlbumHeader *header; // @synthesize header=_header;
 @property(nonatomic) struct CGSize screenSize; // @synthesize screenSize=_screenSize;
 @property(nonatomic) double statusBarHeight; // @synthesize statusBarHeight=_statusBarHeight;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) id followButtonModel; // @synthesize followButtonModel=_followButtonModel;
 @property(copy, nonatomic) CDUnknownBlockType backButtonTappedBlock; // @synthesize backButtonTappedBlock=_backButtonTappedBlock;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)updateViewForImageFailedWithError:(id)arg1 fromData:(id)arg2 model:(id)arg3;

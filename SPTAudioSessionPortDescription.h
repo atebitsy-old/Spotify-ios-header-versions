@@ -14,9 +14,9 @@
     NSString *_portName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *portName; // @synthesize portName=_portName;
 @property(readonly, copy, nonatomic) NSString *portType; // @synthesize portType=_portType;
-- (void).cxx_destruct;
 - (id)initWithPortType:(id)arg1 portName:(id)arg2;
 
 @end

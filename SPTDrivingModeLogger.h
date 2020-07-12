@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logInteractionWithType:(id)arg1 sectionId:(id)arg2 intent:(id)arg3 pageUri:(id)arg4 itemIndex:(int)arg5;
 - (void)logDismissCoachMarks;
 - (void)logSelectScrollPivotListWithSectionId:(id)arg1 itemIndex:(int)arg2;

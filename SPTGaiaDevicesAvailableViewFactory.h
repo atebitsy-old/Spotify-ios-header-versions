@@ -20,12 +20,12 @@
     SPTGaiaUbiLogger *_ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 @property(readonly, nonatomic) SPTGaiaDevicePickerAppearanceManager *appearanceManager; // @synthesize appearanceManager=_appearanceManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
-- (void).cxx_destruct;
 - (id)createGaiaDevicesAvailableViewWithRules:(long long)arg1;
 - (id)initWithConnectManager:(id)arg1 theme:(id)arg2 appearanceManager:(id)arg3 socialListeningManager:(id)arg4 ubiLogger:(id)arg5;
 

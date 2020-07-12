@@ -25,6 +25,7 @@
     SPTSocialListeningFacepileItemViewConfigurator *_itemConfigurator;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSocialListeningFacepileItemViewConfigurator *itemConfigurator; // @synthesize itemConfigurator=_itemConfigurator;
 @property(readonly, nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) SPTSocialListeningLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTSocialListeningViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)reloadFacepileItems;
 - (void)socialListeningViewModelWillLeaveSession:(id)arg1;
 - (void)socialListeningViewModelDidDeleteSession:(id)arg1;

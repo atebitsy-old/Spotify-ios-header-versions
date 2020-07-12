@@ -31,6 +31,7 @@
     NSString *_previousAudioOutput;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isNowPlayingViewHiddenBeforeAdStart) _Bool nowPlayingViewHiddenBeforeAdStart; // @synthesize nowPlayingViewHiddenBeforeAdStart=_nowPlayingViewHiddenBeforeAdStart;
 @property(retain, nonatomic) NSString *previousAudioOutput; // @synthesize previousAudioOutput=_previousAudioOutput;
 @property(nonatomic) float previousVolume; // @synthesize previousVolume=_previousVolume;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic, getter=isInAdBreak) _Bool inAdBreak; // @synthesize inAdBreak=_inAdBreak;
 @property(nonatomic) __weak id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
-- (void).cxx_destruct;
 - (void)systemVolumeDidUpdate:(double)arg1;
 - (void)adFocusManagerDidEnterBackground:(id)arg1;
 - (void)adFocusManagerWillEnterForeground:(id)arg1;

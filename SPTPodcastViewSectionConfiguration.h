@@ -17,15 +17,15 @@
     SPTPodcastLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSMutableArray *viewSectionContainers; // @synthesize viewSectionContainers=_viewSectionContainers;
 @property(readonly, nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(copy, nonatomic) NSArray *viewSections; // @synthesize viewSections=_viewSections;
-- (void).cxx_destruct;
 - (id)instanceForSectionIdentifier:(long long)arg1;
 - (void)enableSection:(long long)arg1;
-- (void)createViewModelSectionsFromContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandlerFactory:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingService:(id)arg9 explicitContentAccessManager:(id)arg10;
-- (id)initWithViewContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandlerFactory:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingService:(id)arg9 explicitContentAccessManager:(id)arg10;
+- (void)createViewModelSectionsFromContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandlerFactory:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingProvider:(id)arg9 explicitContentAccessManager:(id)arg10;
+- (id)initWithViewContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandlerFactory:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingProvider:(id)arg9 explicitContentAccessManager:(id)arg10;
 
 @end
 

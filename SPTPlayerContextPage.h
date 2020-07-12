@@ -17,10 +17,10 @@
     NSArray *_tracks;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(copy, nonatomic) NSURL *nextPageURL; // @synthesize nextPageURL=_nextPageURL;
 @property(copy, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
-- (void).cxx_destruct;
 - (id)init;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

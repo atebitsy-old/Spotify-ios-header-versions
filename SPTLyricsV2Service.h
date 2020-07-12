@@ -21,13 +21,13 @@
     NSCache *_noLyricsCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSCache *noLyricsCache; // @synthesize noLyricsCache=_noLyricsCache;
 @property(readonly, nonatomic) NSCache *lyricsModelsCache; // @synthesize lyricsModelsCache=_lyricsModelsCache;
 @property(readonly, nonatomic) NSMutableDictionary *cancellationTokens; // @synthesize cancellationTokens=_cancellationTokens;
 @property(readonly, nonatomic) NSMutableDictionary *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTLyricsV2TestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)trackIdentifierFromTrack:(id)arg1;
 - (void)fetchLyricsFromServerForTrack:(id)arg1 withId:(id)arg2 imageURL:(id)arg3 callback:(id)arg4;
 - (id)errorWithCode:(long long)arg1 description:(id)arg2;

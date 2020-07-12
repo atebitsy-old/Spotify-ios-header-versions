@@ -27,6 +27,7 @@
     double _startCloseLocationY;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double startCloseLocationY; // @synthesize startCloseLocationY=_startCloseLocationY;
 @property(retain, nonatomic) UIPanGestureRecognizer *swipeDownGesture; // @synthesize swipeDownGesture=_swipeDownGesture;
 @property(retain, nonatomic) CAGradientLayer *intermediateGradientLayer; // @synthesize intermediateGradientLayer=_intermediateGradientLayer;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) SPTVoiceNowPlayingControlView *controlView; // @synthesize controlView=_controlView;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTVoiceNowPlayingViewModel *voiceNowPlayingViewModel; // @synthesize voiceNowPlayingViewModel=_voiceNowPlayingViewModel;
-- (void).cxx_destruct;
 - (void)didTapMicButton;
 - (void)didTapCloseButton;
 - (id)createVerticalGradientView;

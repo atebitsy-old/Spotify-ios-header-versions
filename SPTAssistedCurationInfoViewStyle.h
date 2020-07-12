@@ -18,11 +18,11 @@
     double _margin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double margin; // @synthesize margin=_margin;
 @property(nonatomic) double spacing; // @synthesize spacing=_spacing;
 @property(retain, nonatomic) GLUELabelStyle *sublMessageStyle; // @synthesize sublMessageStyle=_sublMessageStyle;
 @property(retain, nonatomic) GLUELabelStyle *messageStyle; // @synthesize messageStyle=_messageStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

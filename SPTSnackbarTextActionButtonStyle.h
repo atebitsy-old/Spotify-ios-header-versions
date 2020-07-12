@@ -19,12 +19,12 @@
     UIFont *_textFont;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIFont *textFont; // @synthesize textFont=_textFont;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) UIColor *disabledTextColor; // @synthesize disabledTextColor=_disabledTextColor;
 @property(copy, nonatomic) UIColor *highlightedTextColor; // @synthesize highlightedTextColor=_highlightedTextColor;
 @property(copy, nonatomic) UIColor *normalTextColor; // @synthesize normalTextColor=_normalTextColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

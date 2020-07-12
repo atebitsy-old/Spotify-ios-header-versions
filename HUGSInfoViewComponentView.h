@@ -19,10 +19,10 @@
     id <HUBComponentModel> _buttonModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <HUBComponentModel> buttonModel; // @synthesize buttonModel=_buttonModel;
 @property(readonly, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)buttonPressed;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;

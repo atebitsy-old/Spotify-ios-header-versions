@@ -21,11 +21,11 @@
     NSMutableDictionary *_mutableTitles;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *mutableTitles; // @synthesize mutableTitles=_mutableTitles;
 @property(retain, nonatomic) NSMutableArray *mutableFeatureSettingsPages; // @synthesize mutableFeatureSettingsPages=_mutableFeatureSettingsPages;
 @property(readonly, nonatomic) NSMutableDictionary *rootSectionProviders; // @synthesize rootSectionProviders=_rootSectionProviders;
 @property(readonly, nonatomic) NSMutableDictionary *rootSections; // @synthesize rootSections=_rootSections;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *settingsRootURL;
 - (id)settingsSectionForURL:(id)arg1;
 - (id)containerInTree:(id)arg1 withURI:(id)arg2;

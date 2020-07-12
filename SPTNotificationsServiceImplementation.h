@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNotificationLogger *notificationLogger; // @synthesize notificationLogger=_notificationLogger;
 @property(retain, nonatomic) id <SPTNotificationPreferencesBackendIntegrator> notificationsBackendIntegrator; // @synthesize notificationsBackendIntegrator=_notificationsBackendIntegrator;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -31,7 +32,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideNotificationsBackendIntegrator;
 - (id)provideNotificationPreferenceViewController;
 - (void)registerPages;

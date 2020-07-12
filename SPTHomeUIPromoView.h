@@ -31,6 +31,7 @@
     NSLayoutConstraint *_titleToBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *titleToBottomConstraint; // @synthesize titleToBottomConstraint=_titleToBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleToBottomConstraint; // @synthesize subtitleToBottomConstraint=_subtitleToBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *metadataToBottomConstraint; // @synthesize metadataToBottomConstraint=_metadataToBottomConstraint;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) GLUELabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateConstraints;

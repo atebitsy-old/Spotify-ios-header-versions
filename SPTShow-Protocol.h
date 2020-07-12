@@ -15,6 +15,7 @@
 @property(nonatomic, readonly) NSURL *latestPlayedEpisodeURL;
 @property(nonatomic, readonly) NSURL *URL;
 @property(nonatomic, readonly) NSString *publisher;
+@property(nonatomic, readonly) NSString *rawDescription;
 @property(nonatomic, readonly) NSString *descriptionText;
 @property(nonatomic, readonly) NSString *title;
 

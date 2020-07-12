@@ -15,10 +15,10 @@
     NSString *_componentCategory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *componentCategory; // @synthesize componentCategory=_componentCategory;
 @property(readonly, copy, nonatomic) NSString *componentName; // @synthesize componentName=_componentName;
 @property(readonly, copy, nonatomic) NSString *componentNamespace; // @synthesize componentNamespace=_componentNamespace;
-- (void).cxx_destruct;
 - (id)initWithComponentNamespace:(id)arg1 componentName:(id)arg2 componentCategory:(id)arg3;
 
 @end

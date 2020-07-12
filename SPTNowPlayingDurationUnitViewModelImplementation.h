@@ -26,6 +26,7 @@
     id <SPTLocalSettings> _localSettings;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
@@ -35,7 +36,6 @@
 @property(nonatomic) _Bool scrubbing; // @synthesize scrubbing=_scrubbing;
 @property(nonatomic) _Bool showLabels; // @synthesize showLabels=_showLabels;
 @property(nonatomic) __weak id <SPTNowPlayingDurationUnitViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(nonatomic) _Bool timeRemainingLabelShowsDuration;
 - (void)updateObservers:(_Bool)arg1;
 - (void)playerDidUpdateTrackPosition:(id)arg1;

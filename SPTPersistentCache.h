@@ -19,6 +19,7 @@
     SPTPersistentCachePosixWrapper *_posixWrapper;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPersistentCachePosixWrapper *posixWrapper; // @synthesize posixWrapper=_posixWrapper;
 @property(readonly, nonatomic) SPTPersistentCacheGarbageCollector *garbageCollector; // @synthesize garbageCollector=_garbageCollector;
 @property(readonly, nonatomic) SPTPersistentCacheFileManager *dataCacheFileManager; // @synthesize dataCacheFileManager=_dataCacheFileManager;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) NSOperationQueue *workQueue; // @synthesize workQueue=_workQueue;
 @property(readonly, copy, nonatomic) CDUnknownBlockType debugOutput; // @synthesize debugOutput=_debugOutput;
 @property(readonly, copy, nonatomic) SPTPersistentCacheOptions *options; // @synthesize options=_options;
-- (void).cxx_destruct;
 - (void)logTimingForKey:(id)arg1 method:(unsigned long long)arg2 type:(unsigned long long)arg3;
 - (void)doWork:(CDUnknownBlockType)arg1 priority:(long long)arg2 qos:(long long)arg3;
 @property(readonly, nonatomic) double currentDateTimeInterval;

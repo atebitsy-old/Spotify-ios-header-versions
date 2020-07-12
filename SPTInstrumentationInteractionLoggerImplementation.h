@@ -16,8 +16,8 @@
     id <SPTInstrumentationTransport> _transport;
 }
 
-@property(retain, nonatomic) id <SPTInstrumentationTransport> transport; // @synthesize transport=_transport;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTInstrumentationTransport> transport; // @synthesize transport=_transport;
 - (void)logInteractionWithItemID:(id)arg1 interactionID:(id)arg2 interactionType:(id)arg3 interactionIntent:(id)arg4 pageIdentifier:(id)arg5 pageURI:(id)arg6;
 - (id)initWithTransport:(id)arg1;
 

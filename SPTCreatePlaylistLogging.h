@@ -16,11 +16,11 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTUBIPLCMobileRenamePlaylistEventFactory> renamePlaylistEventFactory; // @synthesize renamePlaylistEventFactory=_renamePlaylistEventFactory;
 @property(retain, nonatomic) id <SPTUBIMobileCreatePlaylistEventFactory> createPlaylistEventFactory; // @synthesize createPlaylistEventFactory=_createPlaylistEventFactory;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIInteractionWithUserIntent:(id)arg1 featureIdValue:(id)arg2 pageURI:(id)arg3;
 - (void)logRenameButtonSelectedWithPlaylistURI:(id)arg1;
 - (void)logRenameCancelButtonSelected;

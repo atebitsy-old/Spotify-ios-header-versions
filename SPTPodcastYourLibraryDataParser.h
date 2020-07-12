@@ -18,12 +18,12 @@
     NSArray *_headerCollection;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *headerCollection; // @synthesize headerCollection=_headerCollection;
 @property(copy, nonatomic) NSArray *unfinishedEpisodes; // @synthesize unfinishedEpisodes=_unfinishedEpisodes;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeFactory> podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
 @property(retain, nonatomic) NSMutableArray *nextEpisodes; // @synthesize nextEpisodes=_nextEpisodes;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryDataParserDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)parseUnfinishedEpisodes:(id)arg1;
 - (void)addEpisodesCollectionForNextSection:(id)arg1;
 - (void)didFailParsingData;

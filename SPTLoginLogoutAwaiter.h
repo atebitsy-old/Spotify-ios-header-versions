@@ -14,9 +14,9 @@
     NSMutableArray *_handlers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *handlers; // @synthesize handlers=_handlers;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
-- (void).cxx_destruct;
 - (void)loggedInStateChanged:(_Bool)arg1;
 - (void)sessionStateChanged;
 - (void)awaitLogoutWithHandler:(CDUnknownBlockType)arg1;

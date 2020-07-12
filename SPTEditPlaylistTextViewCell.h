@@ -29,6 +29,7 @@
     unsigned long long _nextState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long nextState; // @synthesize nextState=_nextState;
 @property(nonatomic) unsigned long long currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) SPTEditPlaylistTextViewCellStyle *style; // @synthesize style=_style;
@@ -42,7 +43,6 @@
 @property(copy, nonatomic) NSString *placeholderText; // @synthesize placeholderText=_placeholderText;
 @property(copy, nonatomic) NSString *originalText; // @synthesize originalText=_originalText;
 @property(nonatomic) __weak id <SPTEditPlaylistTextViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)textViewDidEndEditing:(id)arg1;
 - (_Bool)textView:(id)arg1 shouldChangeTextInRange:(struct _NSRange)arg2 replacementText:(id)arg3;

@@ -9,6 +9,7 @@
 @interface _TtC23YourLibraryXFeatureImpl19YourLibraryXService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: collectionPlatformService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: profileService

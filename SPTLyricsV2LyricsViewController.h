@@ -32,6 +32,7 @@
     double _minYOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double minYOffset; // @synthesize minYOffset=_minYOffset;
 @property(nonatomic) double maxYOffset; // @synthesize maxYOffset=_maxYOffset;
 @property(nonatomic) long long syllableIndex; // @synthesize syllableIndex=_syllableIndex;
@@ -48,7 +49,6 @@
 @property(nonatomic, getter=isLoggingEnabled) _Bool loggingEnabled; // @synthesize loggingEnabled=_loggingEnabled;
 @property(nonatomic, getter=isExpanded) _Bool expanded; // @synthesize expanded=_expanded;
 @property(nonatomic) __weak id <SPTLyricsV2LyricsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)openSyncTheseLyricsLink;
 - (void)notifyNumberOfCharactersSeen;
 - (void)recalculateMinAndMaxYOffsetsWithContentOffset:(struct CGPoint)arg1;

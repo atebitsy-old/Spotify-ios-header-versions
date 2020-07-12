@@ -12,21 +12,26 @@
 
 @interface SPTPlaylistRouteImplementation : NSObject <SPTPlaylistRoute>
 {
+    _Bool _isRouted;
     NSURL *_basePlaylistURI;
     NSURL *_basePlaylistImageURI;
     NSURL *_writeURI;
     NSURL *_readURI;
 }
 
-@property(retain, nonatomic) NSURL *readURI; // @synthesize readURI=_readURI;
-@property(retain, nonatomic) NSURL *writeURI; // @synthesize writeURI=_writeURI;
-@property(retain, nonatomic) NSURL *basePlaylistImageURI; // @synthesize basePlaylistImageURI=_basePlaylistImageURI;
-@property(retain, nonatomic) NSURL *basePlaylistURI; // @synthesize basePlaylistURI=_basePlaylistURI;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isRouted; // @synthesize isRouted=_isRouted;
+@property(copy, nonatomic) NSURL *readURI; // @synthesize readURI=_readURI;
+@property(copy, nonatomic) NSURL *writeURI; // @synthesize writeURI=_writeURI;
+@property(copy, nonatomic) NSURL *basePlaylistImageURI; // @synthesize basePlaylistImageURI=_basePlaylistImageURI;
+@property(copy, nonatomic) NSURL *basePlaylistURI; // @synthesize basePlaylistURI=_basePlaylistURI;
+- (_Bool)isEqual:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
-@property(readonly, nonatomic) _Bool isRouted;
-- (id)initWith:(id)arg1 baseImageURI:(id)arg2 writeURI:(id)arg3 readURI:(id)arg4;
+- (id)withRouted:(_Bool)arg1;
+- (id)withImageURI:(id)arg1;
+- (id)initWithBaseURI:(id)arg1 baseImageURI:(id)arg2 writeURI:(id)arg3 readURI:(id)arg4 routed:(_Bool)arg5;
+- (id)initWithBaseURI:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

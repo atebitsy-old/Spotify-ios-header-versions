@@ -17,10 +17,10 @@
     UIColor *_backgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;

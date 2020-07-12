@@ -15,9 +15,9 @@
     id <SPTSignupParameterShuffler> _parameterShuffler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTSignupParameterShuffler> parameterShuffler; // @synthesize parameterShuffler=_parameterShuffler;
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
-- (void).cxx_destruct;
 - (id)encodeString:(id)arg1;
 - (id)valueKeyPairsStringWithRequestBodyDictionary:(id)arg1;
 - (id)dataFromRequestBodyDictionary:(id)arg1;

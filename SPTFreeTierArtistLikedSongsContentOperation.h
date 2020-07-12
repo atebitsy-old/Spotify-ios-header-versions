@@ -18,10 +18,10 @@
     SPTFreeTierArtistLikedSongsModel *_likedSongsModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasFetchedLikedTracks; // @synthesize hasFetchedLikedTracks=_hasFetchedLikedTracks;
 @property(copy, nonatomic) SPTFreeTierArtistLikedSongsModel *likedSongsModel; // @synthesize likedSongsModel=_likedSongsModel;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)updateComponentWithLikedData:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithLikedSongsModel:(id)arg1;

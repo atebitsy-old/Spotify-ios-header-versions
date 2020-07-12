@@ -25,6 +25,7 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(copy, nonatomic) GLUEPressedAnimatorStyle *pressedAnimatorStyle; // @synthesize pressedAnimatorStyle=_pressedAnimatorStyle;
 @property(nonatomic) _Bool showNumberedList; // @synthesize showNumberedList=_showNumberedList;
@@ -39,7 +40,6 @@
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 - (void)setDebugName:(id)arg1;
 - (id)debugName;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

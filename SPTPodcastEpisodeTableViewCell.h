@@ -21,6 +21,7 @@
     id <GLUETheme> _glueTheme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) GLUEStatefulView<SPTPodcastEpisodeView> *episodeView; // @synthesize episodeView=_episodeView;
 @property(nonatomic) _Bool shouldTruncateDescription; // @synthesize shouldTruncateDescription=_shouldTruncateDescription;
@@ -29,7 +30,6 @@
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionTarget> target; // @synthesize target=_target;
 @property(nonatomic, getter=isDisabled) _Bool disabled; // @synthesize disabled=_disabled;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-- (void).cxx_destruct;
 - (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)addTapGestureRecognizerForView:(id)arg1 withSelector:(SEL)arg2;
 - (void)didTapHeader;

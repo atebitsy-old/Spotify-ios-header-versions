@@ -30,6 +30,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAccountExternalLinkController *externalLinkController; // @synthesize externalLinkController=_externalLinkController;
 @property(retain, nonatomic) SPTAccountProductActivationUserFeedbackController *productActivationUserFeedbackController; // @synthesize productActivationUserFeedbackController=_productActivationUserFeedbackController;
 @property(retain, nonatomic) SPTAccountCurrentProductMonitor *currentProductMonitor; // @synthesize currentProductMonitor=_currentProductMonitor;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak id <InAppPurchaseFeature> inAppPurchaseFeature; // @synthesize inAppPurchaseFeature=_inAppPurchaseFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (long long)externalLinkControllerHandleCampaignURIIfRelevant:(id)arg1;
 - (_Bool)canHandleURIForExternalLinkController:(id)arg1;
 - (id)provideHolidayCampaignViewController;

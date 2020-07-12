@@ -14,9 +14,9 @@
     NSString *_identifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, copy, nonatomic) CDUnknownBlockType provider; // @synthesize provider=_provider;
-- (void).cxx_destruct;
 - (id)initWithProvider:(CDUnknownBlockType)arg1 identifier:(id)arg2;
 
 @end

@@ -23,6 +23,7 @@
     NSString *_groupLabel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(nonatomic) unsigned long long year; // @synthesize year=_year;
 @property(nonatomic) _Bool isComplete; // @synthesize isComplete=_isComplete;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(copy, nonatomic) NSDictionary *albumCovers; // @synthesize albumCovers=_albumCovers;
 @property(retain, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, nonatomic) NSURL *URL;

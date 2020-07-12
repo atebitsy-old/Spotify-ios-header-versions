@@ -16,8 +16,8 @@
     id <SPTURIDispatchContext> _underlyingContext;
 }
 
-@property(readonly, nonatomic) id <SPTURIDispatchContext> underlyingContext; // @synthesize underlyingContext=_underlyingContext;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTURIDispatchContext> underlyingContext; // @synthesize underlyingContext=_underlyingContext;
 @property(readonly, copy, nonatomic) NSString *interactionID;
 @property(readonly, nonatomic, getter=isLoggedIn) _Bool loggedIn;
 @property(readonly, nonatomic) _Bool shouldSuppressAnimations;

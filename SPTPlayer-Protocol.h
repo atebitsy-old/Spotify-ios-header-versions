@@ -6,49 +6,49 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSObject, NSString, NSURL, SPTAddToQueueOptions, SPTCommandOptions, SPTLoggingParams, SPTPauseOptions, SPTPlayOptions, SPTPlayOrigin, SPTPlayerContext, SPTPlayerOptionOverrides, SPTPlayerQueue, SPTPlayerState, SPTPlayerTrack, SPTSeekOptions, SPTSkipOptions, SPTask;
-@protocol OS_dispatch_queue, SPTPlayerObserver, SPTPlayerPlay, SPTPlayerQueueObserver, SPTPlayerStagedContextObserver;
+@class NSString, NSURL, OS_dispatch_queue, SPTAddToQueueOptions, SPTCommandOptions, SPTLoggingParams, SPTPauseOptions, SPTPlayOptions, SPTPlayOrigin, SPTPlayerContext, SPTPlayerOptionOverrides, SPTPlayerQueue, SPTPlayerState, SPTPlayerTrack, SPTSeekOptions, SPTSkipOptions;
+@protocol SPTPlayerObserver, SPTPlayerPlay, SPTPlayerQueueObserver, SPTPlayerStagedContextObserver;
 
 @protocol SPTPlayer <NSObject>
-@property(readonly, copy, nonatomic) SPTPlayerState *state;
-@property(readonly, copy, nonatomic) NSString *referrerIdentifier;
-@property(readonly, copy, nonatomic) NSString *featureIdentifier;
-@property(readonly, copy, nonatomic) NSURL *viewURI;
-@property(retain, nonatomic) SPTPlayerContext *stagedContext;
+@property(nonatomic, readonly) SPTPlayerState *state;
+@property(nonatomic, readonly) NSString *referrerIdentifier;
+@property(nonatomic, readonly) NSString *featureIdentifier;
+@property(nonatomic, readonly) NSURL *viewURI;
 - (void)addStagedContextObserver:(id <SPTPlayerStagedContextObserver>)arg1;
-- (void)fetchState:(void (^)(SPTPlayerState *))arg1 reverseCap:(long long)arg2 futureCap:(long long)arg3 on:(NSObject<OS_dispatch_queue> *)arg4;
-- (void)fetchState:(void (^)(SPTPlayerState *))arg1 on:(NSObject<OS_dispatch_queue> *)arg2;
+@property(nonatomic, retain) SPTPlayerContext *stagedContext;
+- (void)fetchState:(void (^)(SPTPlayerState *))arg1 reverseCap:(long long)arg2 futureCap:(long long)arg3 on:(OS_dispatch_queue *)arg4;
+- (void)fetchState:(void (^)(SPTPlayerState *))arg1 on:(OS_dispatch_queue *)arg2;
 - (void)removePlayerObserver:(id <SPTPlayerObserver>)arg1;
 - (void)addPlayerObserver:(id <SPTPlayerObserver>)arg1;
 - (void)removePlayerQueueObserver:(id <SPTPlayerQueueObserver>)arg1;
 - (void)addPlayerQueueObserver:(id <SPTPlayerQueueObserver>)arg1;
-- (SPTask *)addToQueue:(SPTPlayerTrack *)arg1 options:(SPTAddToQueueOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
-- (SPTask *)addToQueue:(SPTPlayerTrack *)arg1 options:(SPTAddToQueueOptions *)arg2;
-- (SPTask *)addToQueue:(SPTPlayerTrack *)arg1;
-- (SPTask *)setQueue:(SPTPlayerQueue *)arg1 options:(SPTCommandOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
-- (SPTask *)setQueue:(SPTPlayerQueue *)arg1 options:(SPTCommandOptions *)arg2;
-- (SPTask *)setQueue:(SPTPlayerQueue *)arg1;
-- (void)fetchQueue:(void (^)(SPTPlayerQueue *))arg1 on:(NSObject<OS_dispatch_queue> *)arg2;
-- (SPTask *)updateWithContext:(SPTPlayerContext *)arg1;
-- (SPTask *)seekTo:(double)arg1 options:(SPTSeekOptions *)arg2;
-- (SPTask *)seekTo:(double)arg1;
-- (SPTask *)setOptions:(SPTPlayerOptionOverrides *)arg1;
-- (SPTask *)setRepeatingTrack:(_Bool)arg1;
-- (SPTask *)setRepeatingContext:(_Bool)arg1;
-- (SPTask *)setShufflingContext:(_Bool)arg1;
-- (SPTask *)skipToNextTrackWithOptions:(SPTSkipOptions *)arg1 track:(SPTPlayerTrack *)arg2;
-- (SPTask *)skipToPreviousTrackWithOptions:(SPTSkipOptions *)arg1 track:(SPTPlayerTrack *)arg2;
-- (SPTask *)skipToNextTrackWithOptions:(SPTSkipOptions *)arg1;
-- (SPTask *)skipToPreviousTrackWithOptions:(SPTSkipOptions *)arg1;
-- (SPTask *)pause:(SPTPauseOptions *)arg1;
-- (SPTask *)resume;
-- (SPTask *)stop;
+- (id)addToQueue:(SPTPlayerTrack *)arg1 options:(SPTAddToQueueOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
+- (id)addToQueue:(SPTPlayerTrack *)arg1 options:(SPTAddToQueueOptions *)arg2;
+- (id)addToQueue:(SPTPlayerTrack *)arg1;
+- (id)setQueue:(SPTPlayerQueue *)arg1 options:(SPTCommandOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
+- (id)setQueue:(SPTPlayerQueue *)arg1 options:(SPTCommandOptions *)arg2;
+- (id)setQueue:(SPTPlayerQueue *)arg1;
+- (void)fetchQueue:(void (^)(SPTPlayerQueue *))arg1 on:(OS_dispatch_queue *)arg2;
+- (id)updateWithContext:(SPTPlayerContext *)arg1;
+- (id)seekTo:(double)arg1 options:(SPTSeekOptions *)arg2;
+- (id)seekTo:(double)arg1;
+- (id)setOptions:(SPTPlayerOptionOverrides *)arg1;
+- (id)setRepeatingTrack:(_Bool)arg1;
+- (id)setRepeatingContext:(_Bool)arg1;
+- (id)setShufflingContext:(_Bool)arg1;
+- (id)skipToNextTrackWithOptions:(SPTSkipOptions *)arg1 track:(SPTPlayerTrack *)arg2;
+- (id)skipToPreviousTrackWithOptions:(SPTSkipOptions *)arg1 track:(SPTPlayerTrack *)arg2;
+- (id)skipToNextTrackWithOptions:(SPTSkipOptions *)arg1;
+- (id)skipToPreviousTrackWithOptions:(SPTSkipOptions *)arg1;
+- (id)pause:(SPTPauseOptions *)arg1;
+- (id)resume;
+- (id)stop;
 - (id <SPTPlayerPlay>)preparePlaybackOfContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 viewURI:(NSURL *)arg3;
-- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3 origin:(SPTPlayOrigin *)arg4;
-- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 origin:(SPTPlayOrigin *)arg3;
-- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 externalReferrer:(NSString *)arg3;
-- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 viewURI:(NSURL *)arg3;
-- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
-- (SPTask *)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2;
+- (id)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3 origin:(SPTPlayOrigin *)arg4;
+- (id)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 origin:(SPTPlayOrigin *)arg3;
+- (id)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 externalReferrer:(NSString *)arg3;
+- (id)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 viewURI:(NSURL *)arg3;
+- (id)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2 loggingParams:(SPTLoggingParams *)arg3;
+- (id)playContext:(SPTPlayerContext *)arg1 options:(SPTPlayOptions *)arg2;
 @end
 

@@ -7,9 +7,15 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTInAppMessagePresentationMonitor <NSObject>
-@property(readonly, nonatomic, getter=isPresentingInAppMessage) _Bool presentingInAppMessage;
-@property(readonly, nonatomic, getter=isPresentingInAppMessageNote) _Bool presentingInAppMessageNote;
-@property(readonly, nonatomic, getter=isPresentingInAppMessageBanner) _Bool presentingInAppMessageBanner;
-@property(readonly, nonatomic, getter=isPresentingInAppMessageCard) _Bool presentingInAppMessageCard;
+- (_Bool)isPresentingInAppMessage;
+- (_Bool)isPresentingInAppMessageNote;
+- (_Bool)isPresentingInAppMessageBanner;
+- (_Bool)isPresentingInAppMessageCard;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool presentingInAppMessage;
+@property(nonatomic, readonly) _Bool presentingInAppMessageBanner;
+@property(nonatomic, readonly) _Bool presentingInAppMessageCard;
+@property(nonatomic, readonly) _Bool presentingInAppMessageNote;
 @end
 

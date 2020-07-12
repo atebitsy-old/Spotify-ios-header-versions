@@ -22,13 +22,13 @@
     SPSession *_currentSession;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
 @property(nonatomic) long long lastLoginMode; // @synthesize lastLoginMode=_lastLoginMode;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
 @property(nonatomic, getter=isSatisfied) _Bool satisfied; // @synthesize satisfied=_satisfied;
-- (void).cxx_destruct;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)checkPrerequisitesSatisfiedState;

@@ -22,6 +22,7 @@
     struct CGSize _lastSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isReapplyingStyle; // @synthesize isReapplyingStyle=_isReapplyingStyle;
 @property(nonatomic) struct CGSize lastSize; // @synthesize lastSize=_lastSize;
 @property(retain, nonatomic) NSLayoutConstraint *firstCapHeightLayoutConstraint; // @synthesize firstCapHeightLayoutConstraint=_firstCapHeightLayoutConstraint;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) UILayoutGuide *firstAscenderLayoutGuide; // @synthesize firstAscenderLayoutGuide=_firstAscenderLayoutGuide;
 @property(retain, nonatomic) SPTEncoreTypeStyle *style; // @synthesize style=_style;
 @property(nonatomic, getter=isUsingDynamicType) _Bool usingDynamicType; // @synthesize usingDynamicType=_usingDynamicType;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutYAxisAnchor *firstCapHeightAnchor;
 @property(readonly, nonatomic) NSLayoutYAxisAnchor *firstLineHeightAnchor;
 @property(readonly, nonatomic) NSLayoutYAxisAnchor *firstAscenderAnchor;

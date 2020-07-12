@@ -9,7 +9,7 @@
 #import "RAPIEntertainmentAppLinkDelegate-Protocol.h"
 
 @class NSString, RAPICarDescription, RAPIEntertainmentAppLink, SPTAccessory, SPTBMWLoggedInSession, SPTBMWToolbar;
-@protocol SPTAccessoryStateManager, SPTAutoLockOverrideToken, SPTExternalIntegrationPlatform, SPTImageLoaderFactory;
+@protocol SPTAccessoryActionLogger, SPTAccessoryStateManager, SPTAutoLockOverrideToken, SPTExternalIntegrationPlatform, SPTImageLoaderFactory;
 
 @interface SPTBMWSession : NSObject <RAPIEntertainmentAppLinkDelegate>
 {
@@ -18,6 +18,7 @@
     _Bool _isBMWSupported;
     RAPIEntertainmentAppLink *_bmwAppLink;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
+    id <SPTAccessoryActionLogger> _actionLogger;
     SPTBMWLoggedInSession *_loggedInSession;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     RAPICarDescription *_descriptionFromOnConnectedToCar;
@@ -28,6 +29,7 @@
     id _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
 @property(retain, nonatomic) SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryManager; // @synthesize accessoryManager=_accessoryManager;
@@ -39,9 +41,9 @@
 @property(retain, nonatomic) RAPICarDescription *descriptionFromOnConnectedToCar; // @synthesize descriptionFromOnConnectedToCar=_descriptionFromOnConnectedToCar;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) SPTBMWLoggedInSession *loggedInSession; // @synthesize loggedInSession=_loggedInSession;
+@property(nonatomic) __weak id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(retain, nonatomic) RAPIEntertainmentAppLink *bmwAppLink; // @synthesize bmwAppLink=_bmwAppLink;
-- (void).cxx_destruct;
 - (void)onTextLog:(id)arg1 source:(long long)arg2;
 - (void)onDisconnectedFromCar;
 - (void)onConnectedToCar:(id)arg1;
@@ -81,7 +83,7 @@
 - (void)switchToLoggedInSession;
 - (void)disableBMWSession;
 - (void)logout;
-- (void)loginWithPlatform:(id)arg1;
+- (void)loginWithPlatform:(id)arg1 actionLogger:(id)arg2;
 - (void)noteActivatedByBMWURI:(id)arg1;
 - (void)dealloc;
 - (id)screenConfigWithDebugName:(id)arg1 showImage:(_Bool)arg2 showGroupLabels:(_Bool)arg3 masterOptionButton:(_Bool)arg4 numberOfLinesPerRow:(long long)arg5;

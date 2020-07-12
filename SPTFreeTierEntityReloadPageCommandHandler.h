@@ -15,8 +15,8 @@
     SPTFreeTierEntitySignalSource *_reloadPageSignalSource;
 }
 
-@property(readonly, nonatomic) SPTFreeTierEntitySignalSource *reloadPageSignalSource; // @synthesize reloadPageSignalSource=_reloadPageSignalSource;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTFreeTierEntitySignalSource *reloadPageSignalSource; // @synthesize reloadPageSignalSource=_reloadPageSignalSource;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithReloadPageSignalSource:(id)arg1;
 

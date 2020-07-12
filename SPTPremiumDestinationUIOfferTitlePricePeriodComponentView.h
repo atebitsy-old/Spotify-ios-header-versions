@@ -20,13 +20,13 @@
 
 + (struct CGSize)labelSizeForContainerViewSize:(struct CGSize)arg1 labelStyle:(id)arg2 text:(id)arg3;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *accessoryLabel; // @synthesize accessoryLabel=_accessoryLabel;
 @property(retain, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UILayoutGuide *layoutGuide; // @synthesize layoutGuide=_layoutGuide;
 @property(retain, nonatomic) SPTPremiumDestinationUIOfferTitlePricePeriodStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)configureWithModel:(id)arg1;
 - (void)setupConstraints;
 - (void)setupViews;

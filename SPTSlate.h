@@ -25,6 +25,7 @@
     struct CGSize _shadowOffset;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *userInfo; // @synthesize userInfo=_userInfo;
 @property(readonly, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(readonly, nonatomic) double shadowRadius; // @synthesize shadowRadius=_shadowRadius;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) struct CGSize slateSize; // @synthesize slateSize=_slateSize;
 @property(nonatomic) __weak id <SPTSlateDataSource> dataSource; // @synthesize dataSource;
 @property(nonatomic) __weak id <SPTSlateDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (id)initWithSlateSize:(struct CGSize)arg1 cornerRadius:(double)arg2 shadowAlpha:(double)arg3 shadowColor:(id)arg4 shadowOffset:(struct CGSize)arg5 shadowRadius:(double)arg6 backgroundColor:(id)arg7;
 
 // Remaining properties

@@ -21,12 +21,12 @@
 }
 
 + (id)provideTestArtistEntities:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *fileId; // @synthesize fileId=_fileId;
 @property(readonly, nonatomic) id <SPTFreeTierArtistImage> headerImage; // @synthesize headerImage=_headerImage;
 @property(readonly, nonatomic) id <SPTFreeTierArtistImage> image; // @synthesize image=_image;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 URI:(id)arg2 imageURL:(id)arg3;
 
 // Remaining properties

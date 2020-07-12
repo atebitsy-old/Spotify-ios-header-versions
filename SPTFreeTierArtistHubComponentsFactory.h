@@ -13,8 +13,8 @@
     id <SPTArtistAboutHubComponentFactory> _aboutHubComponentFactory;
 }
 
-@property(retain, nonatomic) id <SPTArtistAboutHubComponentFactory> aboutHubComponentFactory; // @synthesize aboutHubComponentFactory=_aboutHubComponentFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTArtistAboutHubComponentFactory> aboutHubComponentFactory; // @synthesize aboutHubComponentFactory=_aboutHubComponentFactory;
 - (id)createComponentsWithBaseTheme:(id)arg1;
 - (id)initWithArtistAboutHubComponentFactory:(id)arg1;
 

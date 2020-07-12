@@ -30,6 +30,7 @@
 + (long long)trackOfflineSyncStatusForSPTOfflineAvailability:(unsigned long long)arg1;
 + (long long)trackRowRestrictionFromEntity:(id)arg1;
 + (id)subtitleFromEntity:(id)arg1 showAlbumNameOnSubtitle:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(readonly, nonatomic) long long trackRowRestriction; // @synthesize trackRowRestriction=_trackRowRestriction;
 @property(readonly, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic, getter=isActive) _Bool active; // @synthesize active=_active;
 @property(readonly, nonatomic, getter=isBanned) _Bool banned; // @synthesize banned=_banned;
-- (void).cxx_destruct;
 - (id)initWithSongEntity:(id)arg1 isPlayingTrack:(_Bool)arg2 isPremiumOnlyFeatureEnabled:(_Bool)arg3 showAlbumNameOnSubtitle:(_Bool)arg4;
 
 // Remaining properties

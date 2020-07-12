@@ -22,13 +22,13 @@
 }
 
 + (id)speedControlContextMenuActionsForOptions:(id)arg1 withNumberFormatter:(id)arg2 podcastPreferences:(id)arg3 delegate:(id)arg4;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTPodcastPlaybackSpeedMenuActionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UIView *accessoryViewCache; // @synthesize accessoryViewCache=_accessoryViewCache;
 @property(retain, nonatomic) SPTPodcastPreferences *podcastPreferences; // @synthesize podcastPreferences=_podcastPreferences;
 @property(readonly, nonatomic) NSNumberFormatter *speedNumberFormatter; // @synthesize speedNumberFormatter=_speedNumberFormatter;
 @property(readonly, nonatomic) NSNumber *playbackSpeed; // @synthesize playbackSpeed=_playbackSpeed;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)accessoryView;
 - (id)performAction;
 - (id)initWithPlaybackSpeed:(id)arg1 title:(id)arg2 numberFormatter:(id)arg3 podcastPreferences:(id)arg4 delegate:(id)arg5;

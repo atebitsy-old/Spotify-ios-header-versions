@@ -10,7 +10,7 @@
 #import "SPTNowPlayingTestManager-Protocol.h"
 
 @class NSString, SPTNowPlayingFeatureProperties, SPTNowPlayingScrollConfiguration, SPTObserverManager;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTLocalSettings;
+@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal;
 
 @interface SPTNowPlayingTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTNowPlayingTestManager>
 {
@@ -21,18 +21,11 @@
     _Bool _isContentLayerLyricsButtonEnabled;
     _Bool _isContentLayerLyricsTabEnabled;
     _Bool _isLyricsUpsellPopupEnabled;
-    _Bool _feedbackCardsTestEnabled;
-    _Bool _podcastChaptersTestEnabled;
-    _Bool _concertCardsTestEnabled;
     SPTNowPlayingFeatureProperties *_remoteConfigurationProperties;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     SPTObserverManager *_observerManager;
-    id <SPTFeatureFlagSignal> _feedbackCardsSignal;
     id <SPTFeatureFlagSignal> _contextAwareEditorialTrackSharingSignal;
-    id <SPTFeatureFlagSignal> _podcastChaptersSignal;
-    id <SPTFeatureFlagSignal> _concertCardsSignal;
-    id <SPTLocalSettings> _localSettings;
     SPTNowPlayingScrollConfiguration *_scrollConfiguration;
     id <SPTFeatureFlagSignal> _lyricsNPBLabelSignal;
     id <SPTFeatureFlagSignal> _lyricsContentLayerButtonSignal;
@@ -40,9 +33,7 @@
     id <SPTFeatureFlagSignal> _lyricsUpsellPopupSignal;
 }
 
-@property(nonatomic) _Bool concertCardsTestEnabled; // @synthesize concertCardsTestEnabled=_concertCardsTestEnabled;
-@property(nonatomic) _Bool podcastChaptersTestEnabled; // @synthesize podcastChaptersTestEnabled=_podcastChaptersTestEnabled;
-@property(nonatomic) _Bool feedbackCardsTestEnabled; // @synthesize feedbackCardsTestEnabled=_feedbackCardsTestEnabled;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isLyricsUpsellPopupEnabled; // @synthesize isLyricsUpsellPopupEnabled=_isLyricsUpsellPopupEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsUpsellPopupSignal; // @synthesize lyricsUpsellPopupSignal=_lyricsUpsellPopupSignal;
 @property(nonatomic) _Bool isContentLayerLyricsTabEnabled; // @synthesize isContentLayerLyricsTabEnabled=_isContentLayerLyricsTabEnabled;
@@ -53,21 +44,14 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsNPBLabelSignal; // @synthesize lyricsNPBLabelSignal=_lyricsNPBLabelSignal;
 @property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
 @property(retain, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration; // @synthesize scrollConfiguration=_scrollConfiguration;
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> concertCardsSignal; // @synthesize concertCardsSignal=_concertCardsSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastChaptersSignal; // @synthesize podcastChaptersSignal=_podcastChaptersSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> contextAwareEditorialTrackSharingSignal; // @synthesize contextAwareEditorialTrackSharingSignal=_contextAwareEditorialTrackSharingSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> feedbackCardsSignal; // @synthesize feedbackCardsSignal=_feedbackCardsSignal;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(readonly, nonatomic) SPTNowPlayingFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
-- (void).cxx_destruct;
 - (void)updateCurrentScrollConfiguration;
-- (void)updateEnabledScrollFlagsWithEnabledSignal:(id)arg1;
-- (_Bool)isScrollSignal:(id)arg1;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (_Bool)isPodcast:(id)arg1;
 @property(readonly, nonatomic, getter=isShowsFormatContextAwareSharingEnabled) _Bool showsFormatContextAwareSharingEnabled;
@@ -76,9 +60,6 @@
 - (void)setupContentLayerLyricsTabSignal;
 - (void)setupLyricsInNPVContentLayer;
 - (void)setupLyricsNowPlayingBarLabel;
-- (void)createFeedbackCardsSignal;
-- (void)createConcertCardsSignal;
-- (void)createPodcastChaptersSignal;
 @property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;
 @property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;
 @property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;

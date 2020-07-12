@@ -16,8 +16,8 @@
 }
 
 + (id)factory;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)hitUiNavigateWithDestination:(id)arg1;
 - (id)hitAddItemToQueueWithItemToAddToQueue:(id)arg1;
 - (id)hitSeekByTimeWithMsSeekedOffset:(long long)arg1;

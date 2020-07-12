@@ -23,13 +23,13 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTScannablesShortcutItemProvider> scannablesShortcutItemProvider; // @synthesize scannablesShortcutItemProvider=_scannablesShortcutItemProvider;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTRecentlyPlayedShortcutItemsProvider> recentlyPlayedItemsProvider; // @synthesize recentlyPlayedItemsProvider=_recentlyPlayedItemsProvider;
 @property(retain, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(retain, nonatomic) NSURL *searchURL; // @synthesize searchURL=_searchURL;
-- (void).cxx_destruct;
 - (void)logActionForShortcutItem:(id)arg1 index:(unsigned long long)arg2 targetURIString:(id)arg3;
 - (void)updateScannablesShortcutItem;
 - (void)recentlyPlayedShortcutItemsProviderItemsDidUpdate:(id)arg1;

@@ -15,8 +15,8 @@
     NSMapTable *_handlersAndAllocationContexts;
 }
 
-@property(retain, nonatomic) NSMapTable *handlersAndAllocationContexts; // @synthesize handlersAndAllocationContexts=_handlersAndAllocationContexts;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMapTable *handlersAndAllocationContexts; // @synthesize handlersAndAllocationContexts=_handlersAndAllocationContexts;
 - (void)removeSubtypeHandler:(id)arg1;
 - (void)addSubtypeHandler:(id)arg1;
 - (long long)handleURI:(id)arg1 context:(id)arg2;

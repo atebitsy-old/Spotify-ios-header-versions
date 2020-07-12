@@ -21,13 +21,13 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) SPTAdNowPlayingAuxiliaryActionsHandler *actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 @property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) __weak id <SPTAdsManager> manager; // @synthesize manager=_manager;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)removeRemoteControlStateUpdateObserver:(id)arg1;
 - (void)addRemoteControlStateUpdateObserver:(id)arg1;
 - (void)bookmarkButtonPressedWithCompletion:(CDUnknownBlockType)arg1;

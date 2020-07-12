@@ -15,8 +15,8 @@
     id <SPTLogDispatcher> _logDispatcher;
 }
 
-@property(retain, nonatomic) id <SPTLogDispatcher> logDispatcher; // @synthesize logDispatcher=_logDispatcher;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLogDispatcher> logDispatcher; // @synthesize logDispatcher=_logDispatcher;
 - (void)log:(id)arg1 wroteLine:(const char *)arg2 fromModule:(const char *)arg3 file:(const char *)arg4 line:(long long)arg5 threadId:(unsigned long long)arg6 at:(id)arg7 logLevel:(int)arg8;
 - (void)dealloc;
 - (id)initWithIdentifier:(id)arg1;

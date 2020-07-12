@@ -17,10 +17,10 @@
     UITableView *_tableView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(readonly, nonatomic) UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(readonly, nonatomic) SPTFeatureSettingsItem *item; // @synthesize item=_item;
-- (void).cxx_destruct;
 - (void)reloadData;
 - (id)dequeueReusableCellWithIdentifier:(id)arg1;
 - (id)initWithFeatureSettingsItem:(id)arg1 tableView:(id)arg2 navigationController:(id)arg3;

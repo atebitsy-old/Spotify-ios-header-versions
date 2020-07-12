@@ -29,6 +29,7 @@
     NSLayoutConstraint *_titleTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *titleTrailingConstraint; // @synthesize titleTrailingConstraint=_titleTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLeadingConstraint; // @synthesize titleLeadingConstraint=_titleLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleTopMarginConstraint; // @synthesize titleTopMarginConstraint=_titleTopMarginConstraint;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) SPTAssistedCurationCardCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) id <SPTAssistedCurationCardViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTAssistedCurationCardCellLogDelegate> logDelegate; // @synthesize logDelegate=_logDelegate;
-- (void).cxx_destruct;
 - (void)assistedCurationCardViewModel:(id)arg1 deletedRow:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)assistedCurationCardViewModel:(id)arg1 newRows:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)didLoadMoreTracksAssistedCurationCardViewModel:(id)arg1;

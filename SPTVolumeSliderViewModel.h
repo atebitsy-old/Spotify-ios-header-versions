@@ -28,6 +28,7 @@
     double _sliderValue;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPlayingRemotely; // @synthesize isPlayingRemotely=_isPlayingRemotely;
 @property(nonatomic) double sliderValue; // @synthesize sliderValue=_sliderValue;
 @property(retain, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) id <SPTVolumeAPI> volumeController; // @synthesize volumeController=_volumeController;
 @property(nonatomic) double volume; // @synthesize volume=_volume;
 @property(nonatomic) __weak id <SPTVolumeSliderViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)shouldPerformThrottledAction:(id)arg1;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)systemVolumeDidUpdate:(double)arg1;

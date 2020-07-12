@@ -13,8 +13,8 @@
     SPTLogMessage *_logMessage;
 }
 
-@property(readonly, nonatomic) SPTLogMessage *logMessage; // @synthesize logMessage=_logMessage;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTLogMessage *logMessage; // @synthesize logMessage=_logMessage;
 - (id)initWithLogMessage:(id)arg1;
 
 @end

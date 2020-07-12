@@ -23,6 +23,7 @@
     id <SPTCollectionPlatformConfiguration> _collectionPlatformConfigurator;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionPlatformConfigurator; // @synthesize collectionPlatformConfigurator=_collectionPlatformConfigurator;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic, getter=isFilterAndSortingHidden) _Bool filterAndSortingHidden; // @synthesize filterAndSortingHidden=_filterAndSortingHidden;
@@ -31,7 +32,6 @@
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsHeaderViewModelActionDelegate> actionDelegate; // @synthesize actionDelegate;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsHeaderViewModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)willEndFiltering;
 - (void)willStartFiltering;
 - (void)presentSortingFilterPickerInTargetViewController:(id)arg1;

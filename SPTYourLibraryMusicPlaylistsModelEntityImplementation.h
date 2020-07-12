@@ -22,6 +22,7 @@
     NSArray *_itemFilters;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *itemFilters; // @synthesize itemFilters=_itemFilters;
 @property(copy, nonatomic) NSArray *sectionTitles; // @synthesize sectionTitles=_sectionTitles;
 @property(copy, nonatomic) NSArray *sectionIndexes; // @synthesize sectionIndexes=_sectionIndexes;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> favoriteEntity; // @synthesize favoriteEntity=_favoriteEntity;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) _Bool hasHiddenContent; // @synthesize hasHiddenContent=_hasHiddenContent;
-- (void).cxx_destruct;
 - (_Bool)shouldAddEntity:(id)arg1;
 - (void)setUpItemsWithPlaylistFolderItems:(id)arg1 onDemandSet:(id)arg2;
 - (void)setUpOfflineMix:(id)arg1 onDemandSet:(id)arg2;

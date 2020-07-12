@@ -31,6 +31,7 @@
     SPTConcertsListingLogger *_concertsListingLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTConcertsListingLogger *concertsListingLogger; // @synthesize concertsListingLogger=_concertsListingLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak SPTConcertsDateFormatter *dateFormatter; // @synthesize dateFormatter=_dateFormatter;
@@ -46,7 +47,6 @@
 @property(nonatomic) unsigned long long concertsCount; // @synthesize concertsCount=_concertsCount;
 @property(retain, nonatomic) SPTConcertsLocationModel *currentLocation; // @synthesize currentLocation=_currentLocation;
 @property(nonatomic) __weak id <SPTConcertsListingsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

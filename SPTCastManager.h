@@ -29,6 +29,7 @@
     NSArray *_devices;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *devices; // @synthesize devices=_devices;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTCastCustomChannel *castCustomChannel; // @synthesize castCustomChannel=_castCustomChannel;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) SPTCastReceiverAppIDManager *receiverAppManager; // @synthesize receiverAppManager=_receiverAppManager;
 @property(retain, nonatomic) GCKCastContext *castContext; // @synthesize castContext=_castContext;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)refreshLocalDevices;
 - (void)disconnectCastFromDevice;
 @property(readonly, nonatomic) GCKDevice *connectedCastDevice;

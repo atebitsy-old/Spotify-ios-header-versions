@@ -15,8 +15,8 @@
     UIApplication *_application;
 }
 
-@property(readonly, nonatomic) __weak UIApplication *application; // @synthesize application=_application;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak UIApplication *application; // @synthesize application=_application;
 @property(readonly, nonatomic) unsigned long long currentApplicationState;
 - (id)initWithApplication:(id)arg1;
 

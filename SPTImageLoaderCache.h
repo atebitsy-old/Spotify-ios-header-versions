@@ -17,9 +17,9 @@
     NSCache *_cache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSCache *cache; // @synthesize cache=_cache;
 @property(nonatomic) __weak id <SPTImageLoaderCacheDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)cache:(id)arg1 willEvictObject:(id)arg2;
 - (void)removeAllObjects;
 - (id)imageURLKey:(id)arg1 size:(struct CGSize)arg2;

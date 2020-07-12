@@ -6,9 +6,7 @@
 
 #import "_TtC19AutoplayFeatureImpl32AutoplayForcedOfflineEventSource.h"
 
-#import "SPTNetworkConnectivityControllerObserver-Protocol.h"
-
-@interface _TtC19AutoplayFeatureImpl32AutoplayForcedOfflineEventSource (AutoplayFeatureImpl) <SPTNetworkConnectivityControllerObserver>
+@interface _TtC19AutoplayFeatureImpl32AutoplayForcedOfflineEventSource (AutoplayFeatureImpl)
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 @end
 

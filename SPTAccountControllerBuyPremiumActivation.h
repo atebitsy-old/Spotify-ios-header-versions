@@ -13,8 +13,8 @@
     id <InAppPurchaseController> _inAppPurchaseController;
 }
 
-@property(retain, nonatomic) id <InAppPurchaseController> inAppPurchaseController; // @synthesize inAppPurchaseController=_inAppPurchaseController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <InAppPurchaseController> inAppPurchaseController; // @synthesize inAppPurchaseController=_inAppPurchaseController;
 - (void)start;
 - (id)initWithInAppPurchaseController:(id)arg1 delegate:(id)arg2;
 

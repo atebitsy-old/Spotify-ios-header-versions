@@ -21,6 +21,7 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTRequestLifetime *deleteCacheRequestLifetime; // @synthesize deleteCacheRequestLifetime=_deleteCacheRequestLifetime;
 @property(retain, nonatomic) SPTRequestLifetime *getStatsRequestLifetime; // @synthesize getStatsRequestLifetime=_getStatsRequestLifetime;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) SPTSettingsButtonTableViewCell *deleteCacheButtonCell; // @synthesize deleteCacheButtonCell=_deleteCacheButtonCell;
 @property(retain, nonatomic) SPTSettingsStorageLabelsTableViewCell *labelsCell; // @synthesize labelsCell=_labelsCell;
 @property(retain, nonatomic) SPTSettingsStorageBarTableViewCell *storageBarCell; // @synthesize storageBarCell=_storageBarCell;
-- (void).cxx_destruct;
 - (void)deleteCache;
 - (void)deleteCacheSelected;
 - (void)didUpdateStatsWithTotalSpaceMb:(long long)arg1 freeSpaceMb:(long long)arg2 appDataSizeMb:(long long)arg3 downloadsSizeMb:(long long)arg4;

@@ -28,6 +28,7 @@
     SPTHTTPLinkHandler *_httpLinkHandler;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool suppressErrorMessages; // @synthesize suppressErrorMessages=_suppressErrorMessages;
 @property(readonly, nonatomic) SPTHTTPLinkHandler *httpLinkHandler; // @synthesize httpLinkHandler=_httpLinkHandler;
 @property(readonly, nonatomic) SPTSpotifyLinkHandler *spotifyLinkHandler; // @synthesize spotifyLinkHandler=_spotifyLinkHandler;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(nonatomic, getter=isLoggedIn) _Bool loggedIn; // @synthesize loggedIn=_loggedIn;
 @property(nonatomic) __weak id <SPTExternalLinkControllerCampaignDelegate> campaignDelegate; // @synthesize campaignDelegate=_campaignDelegate;
-- (void).cxx_destruct;
 - (void)registerDefaultURISchemeHandlers;
 - (id)buildHTTPLinkHandler;
 - (id)handlerContextWithSourceApplication:(id)arg1 annotation:(id)arg2 useCurrentStack:(_Bool)arg3 popStackIfPossible:(_Bool)arg4 suppressAnimations:(_Bool)arg5 interactionID:(id)arg6;

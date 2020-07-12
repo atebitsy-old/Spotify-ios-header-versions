@@ -25,6 +25,7 @@
     NSArray *_sideBarConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *sideBarConstraints; // @synthesize sideBarConstraints=_sideBarConstraints;
 @property(copy, nonatomic) NSArray *barViewControllerConstraints; // @synthesize barViewControllerConstraints=_barViewControllerConstraints;
 @property(nonatomic) __weak SPBarViewController *barViewController; // @synthesize barViewController=_barViewController;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(readonly, nonatomic) UIView *rootView; // @synthesize rootView=_rootView;
 @property(retain, nonatomic) UILayoutGuide *layoutGuide; // @synthesize layoutGuide=_layoutGuide;
-- (void).cxx_destruct;
 - (void)updateSideBarConstraints;
 - (void)updateBarViewControllerConstraints;
 - (void)updateMenuContentHeaderConstraints;

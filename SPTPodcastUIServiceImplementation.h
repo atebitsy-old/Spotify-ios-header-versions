@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastUIButtonsFactory> buttonsFactory; // @synthesize buttonsFactory=_buttonsFactory;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(retain, nonatomic) SPTPodcastUITestHubManager *hubManager; // @synthesize hubManager=_hubManager;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)registerSettingsPage:(id)arg1 featureSettingsItemFactory:(id)arg2 linkDispatcher:(id)arg3;
 - (id)providePodcastUITestViewControllerWithURI:(id)arg1 context:(id)arg2;
 @property(readonly, nonatomic) id <SPTPodcastUIComponentFactory> componentFactory;

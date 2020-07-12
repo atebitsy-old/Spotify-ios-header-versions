@@ -9,8 +9,11 @@
 @protocol SPTOfflineModeStateObserver;
 
 @protocol SPTOfflineModeState <NSObject>
-@property(readonly, nonatomic, getter=isOffline) _Bool offline;
 - (void)removeOfflineModeObserver:(id <SPTOfflineModeStateObserver>)arg1;
 - (void)addOfflineModeObserver:(id <SPTOfflineModeStateObserver>)arg1;
+- (_Bool)isOffline;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool offline;
 @end
 

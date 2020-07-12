@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class HUBComponentRegistry, SPTHomeCommandHandlerFactory, SPTHomeEndpointFactory, SPTHomeLocalViewModelOverrides, SPTHomeRemoteConfigPropertyResolver, SPTHomeViewModelLoaderFactory, SPTHomeViewModelProvider;
+@class HUBComponentRegistry, SPTHomeCommandHandlerFactory, SPTHomeEndpointFactory, SPTHomeFeatureProperties, SPTHomeLocalViewModelOverrides, SPTHomeViewModelLoaderFactory, SPTHomeViewModelProvider;
 @protocol GLUETheme, SPTCreatePlaylistCommandHandlerFactory, SPTHomeUIService, SPTHubsRendererFactory, SPTLinkDispatcher, SPTOfflineModeState, SPTShareDragDelegateFactory, SPTViewLogger, _TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_;
 
 @interface SPTHomeHubManager : NSObject
@@ -25,14 +25,15 @@
     id <SPTCreatePlaylistCommandHandlerFactory> _playlistCreationCommandHandlerFactory;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <_TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_> _musicVideoCommandHandlerFactory;
-    SPTHomeRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
+    SPTHomeFeatureProperties *_remoteConfigProperties;
     id <SPTViewLogger> _viewLogger;
     SPTHomeLocalViewModelOverrides *_localViewModelOverrides;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *localViewModelOverrides; // @synthesize localViewModelOverrides=_localViewModelOverrides;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
-@property(readonly, nonatomic) SPTHomeRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
+@property(readonly, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(readonly, nonatomic) id <_TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_> musicVideoCommandHandlerFactory; // @synthesize musicVideoCommandHandlerFactory=_musicVideoCommandHandlerFactory;
 @property(readonly, nonatomic) _Bool isSeedASessionEnabled; // @synthesize isSeedASessionEnabled=_isSeedASessionEnabled;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -47,11 +48,10 @@
 @property(readonly, nonatomic) SPTHomeEndpointFactory *endpointFactory; // @synthesize endpointFactory=_endpointFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
-- (void).cxx_destruct;
 - (id)makeCommandDispatcherWithURL:(id)arg1 referrerIdentifier:(id)arg2 hubLogger:(id)arg3 viewModelProvider:(id)arg4 overrides:(id)arg5;
 - (id)makeViewModelProviderForSourceIdentifier:(id)arg1 overrides:(id)arg2;
 - (id)provideHubViewControllerForURL:(id)arg1 initialViewModel:(id)arg2 referrerIdentifier:(id)arg3 viewLogger:(id)arg4;
-- (id)initWithHubsRendererFactory:(id)arg1 endpointFactory:(id)arg2 commandHandlerFactory:(id)arg3 componentRegistry:(id)arg4 GLUETheme:(id)arg5 offlineModeState:(id)arg6 homeUIService:(id)arg7 shareDragDelegateFactory:(id)arg8 viewModelLoaderFactory:(id)arg9 playlistCreationCommandHandlerFactory:(id)arg10 linkDispatcher:(id)arg11 seedASessionEnabled:(_Bool)arg12 musicVideoCommandHandlerFactory:(id)arg13 remoteConfigPropertyResolver:(id)arg14 sourceIdentifier:(id)arg15;
+- (id)initWithHubsRendererFactory:(id)arg1 endpointFactory:(id)arg2 commandHandlerFactory:(id)arg3 componentRegistry:(id)arg4 GLUETheme:(id)arg5 offlineModeState:(id)arg6 homeUIService:(id)arg7 shareDragDelegateFactory:(id)arg8 viewModelLoaderFactory:(id)arg9 playlistCreationCommandHandlerFactory:(id)arg10 linkDispatcher:(id)arg11 seedASessionEnabled:(_Bool)arg12 musicVideoCommandHandlerFactory:(id)arg13 remoteConfigProperties:(id)arg14 sourceIdentifier:(id)arg15;
 
 @end
 

@@ -28,6 +28,7 @@
     struct CGSize _requestedSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *callbackQueue; // @synthesize callbackQueue=_callbackQueue;
 @property _Bool requestCanceled; // @synthesize requestCanceled=_requestCanceled;
 @property(retain, nonatomic) id <SPTImageResolver> imageResolver; // @synthesize imageResolver=_imageResolver;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTImageLoaderRequestDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSString *persistenceKey; // @synthesize persistenceKey=_persistenceKey;
-- (void).cxx_destruct;
 - (_Bool)cancelled;
 - (void)cancel;
 - (void)dispatchError:(id)arg1;

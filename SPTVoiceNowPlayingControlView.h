@@ -18,11 +18,11 @@
     UIImageView *_controlImageView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isAnimatingControlImage; // @synthesize isAnimatingControlImage=_isAnimatingControlImage;
 @property(nonatomic) _Bool isPausedState; // @synthesize isPausedState=_isPausedState;
 @property(retain, nonatomic) UIImageView *controlImageView; // @synthesize controlImageView=_controlImageView;
 @property(readonly, nonatomic) SPTVoiceNowPlayingControlViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)voiceNowPlayingControlViewModelDidUpdate:(id)arg1;
 - (void)togglePlayback;
 - (void)animateControl:(id)arg1;

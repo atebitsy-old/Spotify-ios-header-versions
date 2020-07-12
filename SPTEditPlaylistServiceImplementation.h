@@ -28,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEditPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
@@ -40,7 +41,6 @@
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideLoggerForURI:(id)arg1 pageIdentifier:(id)arg2;
 - (id)provideEditPlaylistModelForURL:(id)arg1;
 - (id)provideEditPlaylistViewControllerForURL:(id)arg1 model:(id)arg2;

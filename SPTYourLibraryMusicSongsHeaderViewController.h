@@ -30,6 +30,7 @@
     SPTTableView *_tableView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) __weak UIViewController *targetViewController; // @synthesize targetViewController=_targetViewController;
 @property(nonatomic) __weak SPTEntityHeaderViewController *entityHeaderViewController; // @synthesize entityHeaderViewController=_entityHeaderViewController;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
 @property(retain, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTYourLibraryMusicSongsHeaderViewModel> headerViewModel; // @synthesize headerViewModel=_headerViewModel;
-- (void).cxx_destruct;
 - (void)searchViewController:(id)arg1 removedFilterAtIndex:(long long)arg2;
 - (void)searchViewControllerDidCancel:(id)arg1;
 - (void)searchViewController:(id)arg1 textDidChange:(id)arg2;

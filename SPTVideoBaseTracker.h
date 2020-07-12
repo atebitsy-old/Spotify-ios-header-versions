@@ -34,6 +34,7 @@
     NSMutableArray *_seekEvents;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool seekOngoing; // @synthesize seekOngoing=_seekOngoing;
 @property(retain, nonatomic) NSMutableArray *seekEvents; // @synthesize seekEvents=_seekEvents;
 @property(retain, nonatomic) NSMutableArray *bufferEvents; // @synthesize bufferEvents=_bufferEvents;
@@ -51,7 +52,6 @@
 @property(retain, nonatomic) NSMutableArray *playedRanges; // @synthesize playedRanges=_playedRanges;
 @property(retain, nonatomic) SPTVideoPlayRangeState *currentPlayRangeState; // @synthesize currentPlayRangeState=_currentPlayRangeState;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
-- (void).cxx_destruct;
 - (long long)currentDeviceOrientation;
 - (void)endCurrentAudioFormatEventAtPosition:(double)arg1;
 - (void)endCurrentVideoFormatEventAtPosition:(double)arg1;

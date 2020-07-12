@@ -19,11 +19,11 @@
     id <SPTPartnerTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPartnerTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTPartnerTimeTracker *timeTracker; // @synthesize timeTracker=_timeTracker;
 @property(copy, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logBannerSessionEventWithEventType:(id)arg1 eventReason:(id)arg2 sessionType:(id)arg3 shownApps:(id)arg4 connectedApp:(id)arg5;
 - (void)startNewSession;
 - (id)initWithLogCenter:(id)arg1 testManager:(id)arg2;

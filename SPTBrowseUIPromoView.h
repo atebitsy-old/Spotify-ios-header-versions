@@ -28,6 +28,7 @@
     NSLayoutConstraint *_mainImageHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *mainImageHeightConstraint; // @synthesize mainImageHeightConstraint=_mainImageHeightConstraint;
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
@@ -41,7 +42,6 @@
 @property(copy, nonatomic) SPTBrowseUIPromoStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) long long imageDisplayState; // @synthesize imageDisplayState=_imageDisplayState;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 @property(copy, nonatomic) NSString *descriptionText;
 @property(copy, nonatomic) NSString *subtitleText;

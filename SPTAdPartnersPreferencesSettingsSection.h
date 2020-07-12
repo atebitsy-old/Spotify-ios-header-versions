@@ -20,6 +20,7 @@
     id <SPTUBIMobileAdsPreferencesEventFactory> _adsPreferencesEventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileAdsPreferencesEventFactory> adsPreferencesEventFactory; // @synthesize adsPreferencesEventFactory=_adsPreferencesEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) NSString *adPartnerPreferenceURLWithToken; // @synthesize adPartnerPreferenceURLWithToken=_adPartnerPreferenceURLWithToken;
 @property(retain, nonatomic) SPTAccesspointWebTokenRequest *webAccessTokenRequest; // @synthesize webAccessTokenRequest=_webAccessTokenRequest;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (void)logAccessAdPartnerPreferencesSettings:(id)arg1;
 - (void)startWebAccessTokenRequest;
 - (void)didSelectRow:(long long)arg1;

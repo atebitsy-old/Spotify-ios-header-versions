@@ -15,10 +15,10 @@
     NSSet *_prideURIs;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *prideURIs; // @synthesize prideURIs=_prideURIs;
 @property(retain, nonatomic) UINotificationFeedbackGenerator *feedbackGenerator; // @synthesize feedbackGenerator=_feedbackGenerator;
 @property(nonatomic) _Bool isUserInitiatedTransitionInProgress; // @synthesize isUserInitiatedTransitionInProgress=_isUserInitiatedTransitionInProgress;
-- (void).cxx_destruct;
 - (id)pridePlaylists;
 - (void)setSelected:(_Bool)arg1 isUserInitated:(_Bool)arg2;
 - (void)dealloc;

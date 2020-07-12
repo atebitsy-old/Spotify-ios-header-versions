@@ -18,10 +18,10 @@
 }
 
 + (id)styleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *offlineSublabelStyle; // @synthesize offlineSublabelStyle=_offlineSublabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *offlineLabelStyle; // @synthesize offlineLabelStyle=_offlineLabelStyle;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

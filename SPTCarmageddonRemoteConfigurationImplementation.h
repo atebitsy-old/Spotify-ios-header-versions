@@ -16,8 +16,8 @@
 }
 
 + (id)resolveConfigurationFromService:(id)arg1;
-@property(readonly, nonatomic) SPTCarmageddonFeatureProperties *remoteProperties; // @synthesize remoteProperties=_remoteProperties;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTCarmageddonFeatureProperties *remoteProperties; // @synthesize remoteProperties=_remoteProperties;
 @property(readonly, nonatomic, getter=isMotionDataLoggingForTrainingEnabled) _Bool motionDataLoggingForTraining;
 @property(readonly, nonatomic, getter=isMotionBasedSurveyEnabled) _Bool motionBasedSurvey;
 @property(readonly, nonatomic, getter=isMotionBasedCarDetectorEnabled) _Bool motionBasedCarDetector;

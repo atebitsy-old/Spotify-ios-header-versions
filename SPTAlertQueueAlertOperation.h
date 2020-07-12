@@ -19,11 +19,11 @@
     id <SPTAlertQueuePresenter> _presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAlertQueuePresenter> presenter; // @synthesize presenter=_presenter;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(readonly, nonatomic) FBKVOController *KVOController; // @synthesize KVOController=_KVOController;
 @property(readonly, nonatomic) id <SPTAlert> alert; // @synthesize alert=_alert;
-- (void).cxx_destruct;
 - (id)createUIAlertActionForAction:(id)arg1;
 - (id)createUIAlertController;
 - (void)complete;

@@ -16,8 +16,8 @@
     id <SPTFreeTierPresentationModalPresenter> _presenter;
 }
 
-@property(retain, nonatomic) id <SPTFreeTierPresentationModalPresenter> presenter; // @synthesize presenter=_presenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTFreeTierPresentationModalPresenter> presenter; // @synthesize presenter=_presenter;
 - (void)dismissWithCompletion:(CDUnknownBlockType)arg1;
 - (void)presentWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithRootViewController:(id)arg1 presenter:(id)arg2;

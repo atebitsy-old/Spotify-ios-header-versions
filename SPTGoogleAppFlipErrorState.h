@@ -17,10 +17,10 @@
 
 + (id)errorStateWithErrorString:(id)arg1 description:(id)arg2;
 + (id)stringForErrorRecoverability:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *errorString; // @synthesize errorString=_errorString;
 @property(nonatomic) unsigned long long recoverability; // @synthesize recoverability=_recoverability;
 @property(copy, nonatomic) NSString *errorDescription; // @synthesize errorDescription=_errorDescription;
-- (void).cxx_destruct;
 - (void)attemptAnalyzeError:(id)arg1 description:(id)arg2;
 - (id)initWithErrorString:(id)arg1 description:(id)arg2;
 

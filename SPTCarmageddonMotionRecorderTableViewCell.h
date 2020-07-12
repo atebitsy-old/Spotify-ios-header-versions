@@ -13,8 +13,8 @@
     UILabel *_messageLabel;
 }
 
-@property(readonly, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 - (void)setMessage:(id)arg1;
 - (void)addMessageLabel;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

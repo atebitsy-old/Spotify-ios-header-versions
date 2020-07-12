@@ -19,13 +19,13 @@
 }
 
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *topEdgeLayoutConstraint; // @synthesize topEdgeLayoutConstraint=_topEdgeLayoutConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleRightEdgeLayoutConstraint; // @synthesize subtitleRightEdgeLayoutConstraint=_subtitleRightEdgeLayoutConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleLeftEdgeLayoutConstraint; // @synthesize subtitleLeftEdgeLayoutConstraint=_subtitleLeftEdgeLayoutConstraint;
 @property(retain, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) SPTPremiumDestinationUIValueCardStyle *style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)configureLabel:(id)arg1 labelStyle:(id)arg2 text:(id)arg3;
 - (void)configureWithModel:(id)arg1;
 - (void)setupConstraints;

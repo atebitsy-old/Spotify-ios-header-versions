@@ -25,6 +25,7 @@
     GLUELabel *_subtitleLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) SPTArtistFundImageWithShadowContainer *mainImageContainer; // @synthesize mainImageContainer=_mainImageContainer;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(nonatomic) long long imageDisplayState; // @synthesize imageDisplayState=_imageDisplayState;
 @property(copy, nonatomic) NSString *metadataText; // @synthesize metadataText=_metadataText;
-- (void).cxx_destruct;
 - (void)insertArrangedSubview:(id)arg1 after:(id)arg2 inStackView:(id)arg3;
 @property(copy, nonatomic) NSString *subtitleText;
 @property(copy, nonatomic) NSString *titleText;

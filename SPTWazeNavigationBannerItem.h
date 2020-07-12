@@ -17,9 +17,9 @@
     id <SPTBannerViewDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTBannerViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTWazeNavigationBannerViewModel *bannerViewModel; // @synthesize bannerViewModel=_bannerViewModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
 - (id)initWithDelegate:(id)arg1 bannerViewModel:(id)arg2;
 

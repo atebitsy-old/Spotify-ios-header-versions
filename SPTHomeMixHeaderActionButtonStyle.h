@@ -25,6 +25,7 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool clipToBounds; // @synthesize clipToBounds=_clipToBounds;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(retain, nonatomic) UIColor *selectedBackgroundColor; // @synthesize selectedBackgroundColor=_selectedBackgroundColor;
@@ -36,7 +37,6 @@
 @property(nonatomic) long long normalIcon; // @synthesize normalIcon=_normalIcon;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

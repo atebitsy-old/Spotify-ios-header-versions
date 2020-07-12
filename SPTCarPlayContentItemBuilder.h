@@ -18,12 +18,12 @@
     NSCache *_iconCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSCache *iconCache; // @synthesize iconCache=_iconCache;
 @property(retain, nonatomic) SPTCarPlayGradientImageBuilder *imageBuilder; // @synthesize imageBuilder=_imageBuilder;
 @property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
-- (void).cxx_destruct;
 - (id)contentItemFromExternalIntegrationContent:(id)arg1;
 - (id)errorIsOfflineContentItem;
 - (id)errorContentItem;

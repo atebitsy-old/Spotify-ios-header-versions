@@ -36,6 +36,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPersonalisedSetsNowPlayingFeedbackManagerFactory> feedbackManagerFactory; // @synthesize feedbackManagerFactory=_feedbackManagerFactory;
 @property(retain, nonatomic) id <SPTPSXTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSArray *formatListExpressions; // @synthesize formatListExpressions=_formatListExpressions;
@@ -56,7 +57,6 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideFormatListExpressions;
 - (id)provideSortMenuButton;
 - (id)provideFeedbackManagerFactory;

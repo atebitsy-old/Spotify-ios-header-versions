@@ -22,13 +22,13 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTShareDeepLinkEventHandler> deepLinkEventHandler; // @synthesize deepLinkEventHandler=_deepLinkEventHandler;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
-- (void).cxx_destruct;
 - (id)provideShareDeepLinkEventHandler;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

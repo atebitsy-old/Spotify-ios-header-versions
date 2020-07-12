@@ -20,13 +20,13 @@
     GLUETableViewCellStyle *_basicCellStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUETableViewCellStyle *basicCellStyle; // @synthesize basicCellStyle=_basicCellStyle;
 @property(copy, nonatomic) GLUELabelStyle *counterStyle; // @synthesize counterStyle=_counterStyle;
 @property(nonatomic) unsigned long long characterCountThreshold; // @synthesize characterCountThreshold=_characterCountThreshold;
 @property(nonatomic) unsigned long long maximumNumberOfCharacters; // @synthesize maximumNumberOfCharacters=_maximumNumberOfCharacters;
 @property(copy, nonatomic) SPTEditPlaylistTextInputStyle *textInputStyle; // @synthesize textInputStyle=_textInputStyle;
 @property(copy, nonatomic) GLUEButtonStyle *buttonStyle; // @synthesize buttonStyle=_buttonStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

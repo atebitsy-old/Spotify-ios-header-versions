@@ -13,8 +13,8 @@
     NSURL *_trackURI;
 }
 
-@property(readonly, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
 - (id)initWithTrackURI:(id)arg1;
 
 @end

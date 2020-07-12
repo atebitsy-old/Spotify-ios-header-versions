@@ -17,9 +17,9 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) SPTExternalIntegrationFeatureProperties *properties; // @synthesize properties=_properties;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isCallbacksOnBackgroundThreadEnabled) _Bool callbacksOnBackgroundThreadEnabled;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 @property(readonly, nonatomic, getter=isNotShowingEntityPagesEnabled) _Bool notShowingEntityPagesEnabled;

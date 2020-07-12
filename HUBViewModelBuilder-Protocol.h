@@ -10,14 +10,6 @@
 @protocol HUBComponentModelBuilder, HUBViewModel, HUBViewModelBuilder;
 
 @protocol HUBViewModelBuilder <HUBJSONCompatibleBuilder>
-@property(readonly, nonatomic) NSMutableDictionary *customData;
-@property(readonly, nonatomic) _Bool headerComponentModelBuilderExists;
-@property(readonly, nonatomic) id <HUBComponentModelBuilder> headerComponentModelBuilder;
-@property(copy, nonatomic) NSString *navigationBarTitle;
-@property(copy, nonatomic) NSString *viewIdentifier;
-@property(readonly, nonatomic) unsigned long long numberOfOverlayComponentModelBuilders;
-@property(readonly, nonatomic) unsigned long long numberOfBodyComponentModelBuilders;
-@property(readonly, nonatomic) _Bool isEmpty;
 - (void)removeAllComponentModelBuilders;
 - (void)removeBuilderForOverlayComponentModelWithIdentifier:(NSString *)arg1;
 - (void)removeBuilderForBodyComponentModelWithIdentifier:(NSString *)arg1;
@@ -32,6 +24,14 @@
 - (NSArray *)allBodyComponentModelBuilders;
 - (_Bool)builderExistsForOverlayComponentModelWithIdentifier:(NSString *)arg1;
 - (_Bool)builderExistsForBodyComponentModelWithIdentifier:(NSString *)arg1;
+@property(nonatomic, readonly) NSMutableDictionary *customData;
+@property(nonatomic, readonly) _Bool headerComponentModelBuilderExists;
+@property(nonatomic, readonly) id <HUBComponentModelBuilder> headerComponentModelBuilder;
+@property(nonatomic, copy) NSString *navigationBarTitle;
+@property(nonatomic, copy) NSString *viewIdentifier;
+@property(nonatomic, readonly) unsigned long long numberOfOverlayComponentModelBuilders;
+@property(nonatomic, readonly) unsigned long long numberOfBodyComponentModelBuilders;
+@property(nonatomic, readonly) _Bool isEmpty;
 - (id <HUBViewModel>)build;
 @end
 

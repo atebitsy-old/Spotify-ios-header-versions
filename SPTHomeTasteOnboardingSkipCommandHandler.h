@@ -18,10 +18,10 @@
     id <SPTUBIHubsUtilities> _ubiHubsUtilities;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> hubInteractionLogger; // @synthesize hubInteractionLogger=_hubInteractionLogger;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *overrides; // @synthesize overrides=_overrides;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithViewModelWithOverrides:(id)arg1 hubInteractionLogger:(id)arg2 ubiHubsUtilities:(id)arg3;
 

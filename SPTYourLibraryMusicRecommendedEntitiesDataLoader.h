@@ -30,6 +30,7 @@
     struct _NSRange _requestedRange;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *responseItemKey; // @synthesize responseItemKey=_responseItemKey;
 @property(nonatomic) _Bool filtersActive; // @synthesize filtersActive=_filtersActive;
 @property(copy, nonatomic) NSArray *recommendedEntities; // @synthesize recommendedEntities=_recommendedEntities;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
 @property(nonatomic) _Bool requested; // @synthesize requested=_requested;
 @property(nonatomic) __weak id <SPTYourLibraryMusicRangeDataLoaderDelegate> rangeDataLoaderDelegate; // @synthesize rangeDataLoaderDelegate=_rangeDataLoaderDelegate;
-- (void).cxx_destruct;
 - (id)artistNameFromRecommendedItem:(id)arg1;
 - (id)nameFromRecommendedItem:(id)arg1;
 - (_Bool)containsOneOfFilterWords:(id)arg1 inText:(id)arg2;

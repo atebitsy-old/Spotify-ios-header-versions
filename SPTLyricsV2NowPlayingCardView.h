@@ -24,6 +24,7 @@
     SPTLyricsV2LoadingView *_loadingView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLyricsV2LoadingView *loadingView; // @synthesize loadingView=_loadingView;
 @property(retain, nonatomic) SPTLyricsV2NowPlayingCardViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) NSLayoutConstraint *titleLabelTrailingConstraint; // @synthesize titleLabelTrailingConstraint=_titleLabelTrailingConstraint;
@@ -34,7 +35,6 @@
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(readonly, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)switchToEmptyView;
 - (void)switchToLyricsView;
 - (void)switchToLoadingView;

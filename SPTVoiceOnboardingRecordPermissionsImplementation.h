@@ -17,9 +17,9 @@
     id <SPTVoiceLoggerProtocol> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceLoggerProtocol> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
-- (void).cxx_destruct;
 - (unsigned long long)recordPermission;
 - (void)requestMicrophonePermissionsWithCompletion:(CDUnknownBlockType)arg1;
 @property(nonatomic, getter=isCompleted) _Bool completed;

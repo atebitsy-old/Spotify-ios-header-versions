@@ -11,20 +11,20 @@
 
 @interface SPTSearch2HUBViewControllerBuilder : NSObject
 {
-    struct NSDictionary *_customCommandsRegistry;
-    struct NSDictionary *_customComponentNamespaceRegistry;
+    NSDictionary *_customCommandsRegistry;
+    NSDictionary *_customComponentNamespaceRegistry;
     SPTSearch2ViewControllerDependencies *_dependencies;
     SPTSearch2Configuration *_configuration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSearch2Configuration *configuration; // @synthesize configuration=_configuration;
 @property(readonly, nonatomic) SPTSearch2ViewControllerDependencies *dependencies; // @synthesize dependencies=_dependencies;
 @property(copy, nonatomic) NSDictionary *customComponentNamespaceRegistry; // @synthesize customComponentNamespaceRegistry=_customComponentNamespaceRegistry;
 @property(copy, nonatomic) NSDictionary *customCommandsRegistry; // @synthesize customCommandsRegistry=_customCommandsRegistry;
-- (void).cxx_destruct;
 - (id)referrerIdentifier;
 - (id)viewURI;
-- (struct NSDictionary *)defaultCommandRegistry;
+- (id)defaultCommandRegistry;
 - (id)makeUBIHubsLogger;
 - (id)makeSearchHubsLogger;
 - (id)makeSearchHubViewController;

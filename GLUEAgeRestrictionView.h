@@ -16,9 +16,9 @@
     GLUEAgeRestrictionViewStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEAgeRestrictionViewStyle *style; // @synthesize style=_style;
 @property(nonatomic) long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)refreshType;

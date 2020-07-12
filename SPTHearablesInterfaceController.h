@@ -17,10 +17,10 @@
     SPTHearablesLegacySerialProtocolApiAdapter *_serialProtocolAdapter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHearablesLegacySerialProtocolApiAdapter *serialProtocolAdapter; // @synthesize serialProtocolAdapter=_serialProtocolAdapter;
 @property(readonly, nonatomic) SPTHearablesPlaybackController *playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) SPTHearablesAccessoryManager *accessoryManager; // @synthesize accessoryManager=_accessoryManager;
-- (void).cxx_destruct;
 - (void)connection:(id)arg1 didReceiveData:(id)arg2;
 - (void)didCloseConnectionToHearable:(id)arg1;
 - (void)didOpenConnectionToHearable:(id)arg1;

@@ -15,10 +15,10 @@
     UICollectionViewFlowLayout *_collectionViewLayout;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UICollectionViewFlowLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupSubviews;
 - (id)initWithTheme:(id)arg1;

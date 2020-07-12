@@ -27,6 +27,7 @@
     SPTCanvasPlaylistPageManager *_pageManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCanvasPlaylistPageManager *pageManager; // @synthesize pageManager=_pageManager;
 @property(copy, nonatomic) NSURL *currentTrackURI; // @synthesize currentTrackURI=_currentTrackURI;
 @property(retain, nonatomic) SPTCanvasPlaylistModel *canvasPlaylistModel; // @synthesize canvasPlaylistModel=_canvasPlaylistModel;
@@ -39,7 +40,6 @@
 @property(nonatomic) __weak id <SPTCanvasPlaylistViewControllerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) long long numberOfSections; // @synthesize numberOfSections=_numberOfSections;
 @property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 @property(readonly, nonatomic) long long numberOfItems;
 - (_Bool)shouldSelectIndexPath:(id)arg1;

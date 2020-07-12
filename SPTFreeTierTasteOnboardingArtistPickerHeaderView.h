@@ -29,6 +29,7 @@
     SPTFreeTierTasteOnboardingArtistPickerHeaderViewStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistPickerHeaderViewStyle *style; // @synthesize style=_style;
 @property(nonatomic) __weak NSLayoutConstraint *addSongsToPlaylistButtonCenterXConstraint; // @synthesize addSongsToPlaylistButtonCenterXConstraint=_addSongsToPlaylistButtonCenterXConstraint;
 @property(nonatomic) __weak NSLayoutConstraint *addSongsToPlaylistButtonBottomConstraint; // @synthesize addSongsToPlaylistButtonBottomConstraint=_addSongsToPlaylistButtonBottomConstraint;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) GLUEButton *addSongsToPlaylistButton; // @synthesize addSongsToPlaylistButton=_addSongsToPlaylistButton;
 @property(retain, nonatomic) UISearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)createSeedASessionElements;
 - (void)collapseWithOffset:(struct CGPoint)arg1;

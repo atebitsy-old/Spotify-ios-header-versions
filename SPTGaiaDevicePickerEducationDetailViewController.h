@@ -25,6 +25,7 @@
     id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> _deviceConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> deviceConfiguration; // @synthesize deviceConfiguration=_deviceConfiguration;
 @property(readonly, nonatomic) SPTGaiaLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) GLUEButton *doneButton; // @synthesize doneButton=_doneButton;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) UIScrollView *scrollView; // @synthesize scrollView=_scrollView;
 @property(retain, nonatomic) SPTGaiaEducationDetailModel *educationDetailModel; // @synthesize educationDetailModel=_educationDetailModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)doneButtonPressed;

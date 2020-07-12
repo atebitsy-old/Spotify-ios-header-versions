@@ -39,6 +39,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTChartFeatureTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTChartHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
@@ -61,7 +62,6 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTNavigationFeature> navigationService; // @synthesize navigationService=_navigationService;
-- (void).cxx_destruct;
 - (void)loadHubsRendererWithTheme:(id)arg1;
 - (id)createEntityLoader;
 - (id)dataSourceForURL:(id)arg1;

@@ -13,8 +13,8 @@
     UIFont *_boldMessageFont;
 }
 
-@property(copy, nonatomic) UIFont *boldMessageFont; // @synthesize boldMessageFont=_boldMessageFont;
 - (void).cxx_destruct;
+@property(copy, nonatomic) UIFont *boldMessageFont; // @synthesize boldMessageFont=_boldMessageFont;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

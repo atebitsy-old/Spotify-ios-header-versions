@@ -21,6 +21,7 @@
     GLUEViewAnimator *_animator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(retain, nonatomic) NSMutableDictionary *iconImages; // @synthesize iconImages=_iconImages;
 @property(retain, nonatomic) NSMutableDictionary *accessibilityTitles; // @synthesize accessibilityTitles=_accessibilityTitles;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) UILabel *title; // @synthesize title=_title;
 @property(copy, nonatomic) GLUEButtonStyle *style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (id)iconImageForState:(unsigned long long)arg1;
 - (id)titleForState:(unsigned long long)arg1;
 - (id)titleColorForState:(unsigned long long)arg1;

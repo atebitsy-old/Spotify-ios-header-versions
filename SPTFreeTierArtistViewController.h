@@ -19,11 +19,11 @@
     SPTProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) SPTFreeTierEntityNavigationDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
 @property(readonly, nonatomic) SPTFreeTierArtistContextMenuButtonViewModel *contextMenuButtonViewModel; // @synthesize contextMenuButtonViewModel=_contextMenuButtonViewModel;
 @property(readonly, nonatomic) SPTFreeTierArtistFeedbackButtonViewModel *feedbackButtonViewModel; // @synthesize feedbackButtonViewModel=_feedbackButtonViewModel;
-- (void).cxx_destruct;
 - (unsigned long long)preferredNavigationBarState;
 - (id)URI;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;

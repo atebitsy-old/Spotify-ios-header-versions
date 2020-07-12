@@ -20,13 +20,13 @@
     UIColor *_separatorColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *separatorColor; // @synthesize separatorColor=_separatorColor;
 @property(nonatomic) long long separatorStyle; // @synthesize separatorStyle=_separatorStyle;
 @property(nonatomic) double estimatedRowHeight; // @synthesize estimatedRowHeight=_estimatedRowHeight;
 @property(nonatomic) double rowHeight; // @synthesize rowHeight=_rowHeight;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) long long scrollIndicatorStyle; // @synthesize scrollIndicatorStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToTableViewStyle:(id)arg1;

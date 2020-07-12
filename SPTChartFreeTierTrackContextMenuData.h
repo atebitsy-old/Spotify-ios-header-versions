@@ -19,12 +19,12 @@
     NSURL *_trackURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *trackURL; // @synthesize trackURL=_trackURL;
 @property(readonly, copy, nonatomic) NSString *trackName; // @synthesize trackName=_trackName;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
-- (void).cxx_destruct;
 - (id)initWithTrackURL:(id)arg1 trackName:(id)arg2 imageURL:(id)arg3 albumName:(id)arg4 artists:(id)arg5;
 
 // Remaining properties

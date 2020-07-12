@@ -21,6 +21,7 @@
     double _digitTextFieldWidth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double digitTextFieldWidth; // @synthesize digitTextFieldWidth=_digitTextFieldWidth;
 @property(nonatomic) double digitTextFieldHeight; // @synthesize digitTextFieldHeight=_digitTextFieldHeight;
 @property(nonatomic) double codeInputFieldStackViewMinSpacing; // @synthesize codeInputFieldStackViewMinSpacing=_codeInputFieldStackViewMinSpacing;
@@ -28,7 +29,6 @@
 @property(nonatomic) long long codeInputFieldStackViewDistribution; // @synthesize codeInputFieldStackViewDistribution=_codeInputFieldStackViewDistribution;
 @property(nonatomic) long long codeInputFieldStackViewAxis; // @synthesize codeInputFieldStackViewAxis=_codeInputFieldStackViewAxis;
 @property(copy, nonatomic) SPTPhoneNumberSignupCodeInputFieldStyle *codeInputFieldStyle; // @synthesize codeInputFieldStyle=_codeInputFieldStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

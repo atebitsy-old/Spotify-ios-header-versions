@@ -13,8 +13,8 @@
     SPTDataLoader *_dataLoader;
 }
 
-@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)temporarilyShowConfirmationView;
 - (void)reportTrackURI:(id)arg1 contextURI:(id)arg2;
 - (id)initWithDataLoaderFactory:(id)arg1;

@@ -24,6 +24,7 @@
     id <SPTAssistedCurationUITestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAssistedCurationUITestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTAssistedCurationViewModel> viewModel; // @synthesize viewModel=_viewModel;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
 @property(readonly, nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(readonly, nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
-- (void).cxx_destruct;
 - (id)createAssistedCurationSearchViewControllerForEntityType:(id)arg1 query:(id)arg2 pageIdentifier:(id)arg3 pageURI:(id)arg4;
 - (id)createAssistedCurationSearchViewControllerWithPageIdentifier:(id)arg1 pageURI:(id)arg2;
 - (id)createSearchConfigurationWithURLProvider:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3;
@@ -42,7 +42,7 @@
 - (id)makeSaveToRecentsCommandHandler;
 - (id)makeNavigateCommandHandler;
 - (id)addTrackCommandHandlerWithViewModel:(id)arg1;
-- (struct NSDictionary *)customComponentsWithViewModel:(id)arg1;
+- (id)customComponentsWithViewModel:(id)arg1;
 - (id)provideGLUEImageLoader;
 - (id)provideCardStyleWithViewModel:(id)arg1;
 - (id)initWithSearchPlatformService:(id)arg1 glueService:(id)arg2 audioPreviewService:(id)arg3 explicitContentService:(id)arg4 ageVerificationService:(id)arg5 viewModel:(id)arg6 linkDispatcher:(id)arg7 testManager:(id)arg8;

@@ -43,6 +43,7 @@
     SPTFreeTierPlaylistCellProviderDelegateWrapper *_strongReferenceDelegateWrapper;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierPlaylistCellProviderDelegateWrapper *strongReferenceDelegateWrapper; // @synthesize strongReferenceDelegateWrapper=_strongReferenceDelegateWrapper;
 @property(copy, nonatomic) CDUnknownBlockType additionalCallToActionBlock; // @synthesize additionalCallToActionBlock=_additionalCallToActionBlock;
 @property(copy, nonatomic) NSArray *contextMenuPresenterBlocks; // @synthesize contextMenuPresenterBlocks=_contextMenuPresenterBlocks;
@@ -55,7 +56,7 @@
 @property(nonatomic) _Bool excludeAllEpisodes; // @synthesize excludeAllEpisodes=_excludeAllEpisodes;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistPlayLogger> playLogger; // @synthesize playLogger=_playLogger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction; // @synthesize additionalCallToAction=_additionalCallToAction;
-@property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
+@property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel; // @synthesize offlineViewModel=_offlineViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 - (void)setUseBarButtons:(_Bool)arg1;
 @property(readonly, nonatomic) _Bool useBarButtons;
@@ -74,7 +75,6 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistDefaultHeaderViewModel> defaultHeaderViewModel; // @synthesize defaultHeaderViewModel=_defaultHeaderViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, copy, nonatomic) NSArray *cellProviders; // @synthesize cellProviders=_cellProviders;
-- (void).cxx_destruct;
 - (void)withPlayObserver:(CDUnknownBlockType)arg1;
 - (void)withAdditionalCallToAction:(CDUnknownBlockType)arg1;
 - (void)withHeaderProvider:(CDUnknownBlockType)arg1;

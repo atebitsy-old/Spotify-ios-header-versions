@@ -16,9 +16,9 @@
     NSDictionary *_data;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *data; // @synthesize data=_data;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)initWithName:(id)arg1 data:(id)arg2;
 

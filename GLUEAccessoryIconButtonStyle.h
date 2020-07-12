@@ -17,10 +17,10 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToAccessoryIconButtonStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

@@ -17,10 +17,10 @@
 }
 
 + (double)preferredHeightForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabel *sectionHeaderLabel; // @synthesize sectionHeaderLabel=_sectionHeaderLabel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEButton *sectionHeaderButton; // @synthesize sectionHeaderButton=_sectionHeaderButton;
-- (void).cxx_destruct;
 - (id)constraintsForSectionHeaderButton:(id)arg1;
 - (void)constraintSectionHeaderButton:(id)arg1;
 - (id)constraintsForSectionHeaderLabel:(id)arg1;

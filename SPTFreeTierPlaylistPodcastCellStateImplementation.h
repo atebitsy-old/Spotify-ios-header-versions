@@ -17,9 +17,9 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistTrackViewModel> trackViewModel; // @synthesize trackViewModel=_trackViewModel;
-- (void).cxx_destruct;
 - (_Bool)isEpisodeUnfinished;
 - (_Bool)isEpisodePlaying;
 - (_Bool)isEpisodeActive;

@@ -17,11 +17,11 @@
     id <SPTVoiceSession> _voiceSession;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTVoiceSession> voiceSession; // @synthesize voiceSession=_voiceSession;
 @property(retain, nonatomic) id <SPTVoiceLoggerProtocol> logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTVoiceNowPlayingSuggestionViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSString *suggestionText; // @synthesize suggestionText=_suggestionText;
-- (void).cxx_destruct;
 - (void)logSuggestionImpression;
 - (void)didUpdateQuerySuggestion:(id)arg1;
 - (void)didAppear;

@@ -20,11 +20,11 @@
     unsigned long long _availableOfflineStatus;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long availableOfflineStatus; // @synthesize availableOfflineStatus=_availableOfflineStatus;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

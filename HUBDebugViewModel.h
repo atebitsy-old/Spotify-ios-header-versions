@@ -20,6 +20,7 @@
     NSString *_eventsDataDescription;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *eventsDataDescription; // @synthesize eventsDataDescription=_eventsDataDescription;
 @property(readonly, copy, nonatomic) NSString *customDataDescription; // @synthesize customDataDescription=_customDataDescription;
 @property(readonly, copy, nonatomic) NSString *fullDescription; // @synthesize fullDescription=_fullDescription;
@@ -28,7 +29,6 @@
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *componentNamespace; // @synthesize componentNamespace=_componentNamespace;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)prettyStringForDictionary:(id)arg1;
 - (id)descriptionForKey:(id)arg1 withModel:(id)arg2;
 - (id)fullDescriptionForModel:(id)arg1;

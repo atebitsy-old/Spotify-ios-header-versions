@@ -27,6 +27,7 @@
     NSDictionary *_languagesAndCountries;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *languagesAndCountries; // @synthesize languagesAndCountries=_languagesAndCountries;
 @property(copy, nonatomic) NSString *messageLocale; // @synthesize messageLocale=_messageLocale;
 @property(retain, nonatomic) NSMutableDictionary *campaignLocales; // @synthesize campaignLocales=_campaignLocales;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) SPTInAppMessageQAToolNoteMessageParser *parser; // @synthesize parser=_parser;
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(nonatomic) __weak id <SPTInAppMessageQAToolFormatMessageControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dismissCurrentNote;
 - (void)prepareQueueForNextMessage;
 - (void)noteMessageViewControllerDidCancelReviewOfCreative:(id)arg1;

@@ -28,6 +28,7 @@
     double _positionBase;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double positionBase; // @synthesize positionBase=_positionBase;
 @property(nonatomic) double positionTimestamp; // @synthesize positionTimestamp=_positionTimestamp;
 @property(nonatomic) double seekedAtTimestamp; // @synthesize seekedAtTimestamp=_seekedAtTimestamp;
@@ -41,7 +42,6 @@
 @property(nonatomic) float playbackSpeed; // @synthesize playbackSpeed=_playbackSpeed;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)playerQueue:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)maybeNotifyTrackPositionChange;
 - (_Bool)isNoticeablePositionChange:(double)arg1 from:(double)arg2;

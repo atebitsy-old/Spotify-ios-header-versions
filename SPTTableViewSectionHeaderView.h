@@ -28,13 +28,13 @@
 + (double)preferredHeight;
 + (id)shuffleIncludesHeaderCellForTableView:(id)arg1;
 + (void)registerShuffleIncludeHeaderViewOnTableView:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *managedConstraints; // @synthesize managedConstraints=_managedConstraints;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic) long long style; // @synthesize style=_style;
 @property(nonatomic) long long tableViewThemeStyle; // @synthesize tableViewThemeStyle=_tableViewThemeStyle;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyBackgroundColor;
 - (void)applyStyling;
 - (void)removeViewConstraints;

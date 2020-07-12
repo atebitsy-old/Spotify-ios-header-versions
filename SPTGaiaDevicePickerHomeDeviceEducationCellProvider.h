@@ -17,10 +17,10 @@
     SPTGaiaHomeDeviceManager *_homeDeviceManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceTooltipManager *homeDeviceEducationManager; // @synthesize homeDeviceEducationManager=_homeDeviceEducationManager;
 @property(readonly, nonatomic) SPTGaiaConnectDevice *device; // @synthesize device=_device;
-- (void).cxx_destruct;
 - (id)cellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (_Bool)deviceIsHomeDevice:(id)arg1;
 - (id)initWithDevice:(id)arg1 homeDeviceEducationManager:(id)arg2 homeDeviceManager:(id)arg3;

@@ -42,6 +42,7 @@
     double _topAccessoryViewHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isRemounting; // @synthesize isRemounting=_isRemounting;
 @property(nonatomic) double topAccessoryViewHeight; // @synthesize topAccessoryViewHeight=_topAccessoryViewHeight;
 @property(nonatomic) double contentViewHeight; // @synthesize contentViewHeight=_contentViewHeight;
@@ -71,7 +72,6 @@
 @property(retain, nonatomic) UIView<VISREFHeaderComponent> *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) UIView<VISREFHeaderComponent> *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIView<VISREFHeaderComponent> *topAccessoryView; // @synthesize topAccessoryView=_topAccessoryView;
-- (void).cxx_destruct;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (struct CGSize)systemLayoutSizeFittingSize:(struct CGSize)arg1;
 - (void)updateTopAccessoryViewProgressForHeaderHeight:(double)arg1;

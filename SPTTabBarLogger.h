@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (id)tabBar_pageURIFromViewController:(id)arg1;
 - (void)logAppearEventForFriendlyName:(id)arg1 viewController:(id)arg2 index:(unsigned long long)arg3;
 - (void)logOpenEventForTargetViewController:(id)arg1 fromViewController:(id)arg2 index:(unsigned long long)arg3;

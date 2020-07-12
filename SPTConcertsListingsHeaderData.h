@@ -14,9 +14,9 @@
     NSString *_locationName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *locationName; // @synthesize locationName=_locationName;
 @property(readonly, nonatomic) NSURL *backgroundImageURL; // @synthesize backgroundImageURL=_backgroundImageURL;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

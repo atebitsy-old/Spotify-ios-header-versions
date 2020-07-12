@@ -15,8 +15,8 @@
     NSArray *_loggers;
 }
 
-@property(copy, nonatomic) NSArray *loggers; // @synthesize loggers=_loggers;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *loggers; // @synthesize loggers=_loggers;
 - (void)exitCurrentPageWithTimestamp:(long long)arg1;
 - (void)enterPageWithIdentifier:(id)arg1 URI:(id)arg2 timestamp:(long long)arg3 navigationRootIdentifier:(id)arg4;
 - (id)initWithLoggers:(id)arg1;

@@ -20,10 +20,10 @@
     long long _seedASessionVisualTreatment;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long seedASessionVisualTreatment; // @synthesize seedASessionVisualTreatment=_seedASessionVisualTreatment;
 @property(nonatomic) __weak id <SPTArtistPickerViewControllerProviderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTFreeTierArtistPickerConfiguration *configuration; // @synthesize configuration=_configuration;
-- (void).cxx_destruct;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)updateSeedASessionDidFail;
 - (void)updateSeedASessionDidComplete:(id)arg1;

@@ -19,13 +19,13 @@
 }
 
 + (id)messageWithMessageFormat:(id)arg1 messageIdentifier:(id)arg2 uuid:(id)arg3 eventType:(id)arg4 uiElement:(id)arg5 metadata:(id)arg6;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *metadataValue; // @synthesize metadataValue=_metadataValue;
 @property(copy, nonatomic) NSString *uiElementValue; // @synthesize uiElementValue=_uiElementValue;
 @property(copy, nonatomic) NSString *eventTypeValue; // @synthesize eventTypeValue=_eventTypeValue;
 @property(copy, nonatomic) NSString *uuidValue; // @synthesize uuidValue=_uuidValue;
 @property(copy, nonatomic) NSString *messageIdentifierValue; // @synthesize messageIdentifierValue=_messageIdentifierValue;
 @property(copy, nonatomic) NSString *messageFormatValue; // @synthesize messageFormatValue=_messageFormatValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

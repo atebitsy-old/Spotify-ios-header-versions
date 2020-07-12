@@ -31,6 +31,7 @@
     SPTAppProtocolCallForwarder *_appProtocolForwarder;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(nonatomic) __weak id <SPTAppProtocolSubscriptionDelegate> delegate; // @synthesize delegate=_delegate;
@@ -40,7 +41,6 @@
 @property(nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
 @property(retain, nonatomic) NSString *topic; // @synthesize topic=_topic;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
-- (void).cxx_destruct;
 - (void)triggerNotificationSubscriptionWithMessage:(id)arg1;
 - (void)triggerSessionStateChanged:(id)arg1;
 - (void)triggerPlayerState:(id)arg1 tokenLost:(_Bool)arg2;

@@ -41,6 +41,7 @@
     double _spotifyLogoBottomMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double spotifyLogoBottomMargin; // @synthesize spotifyLogoBottomMargin=_spotifyLogoBottomMargin;
 @property(nonatomic) _Bool spotifyLogoPlacementTightToTitle; // @synthesize spotifyLogoPlacementTightToTitle=_spotifyLogoPlacementTightToTitle;
 @property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
@@ -67,7 +68,6 @@
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) NSDictionary *buttonStyles; // @synthesize buttonStyles;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

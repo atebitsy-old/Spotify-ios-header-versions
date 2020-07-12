@@ -19,11 +19,11 @@
     id <SPTLocalSettings> _localSettings;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool useDevEndpoint; // @synthesize useDevEndpoint=_useDevEndpoint;
 @property(retain) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTInAppMessageQAToolConfigurationsControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)deserializeData:(id)arg1;
 - (void)handleFetchedData:(id)arg1;
 - (void)handleSuccessfulResponse:(id)arg1;

@@ -12,14 +12,14 @@
 @interface SPTNowPlayingBarVoiceCompanionView : UIView
 {
     UIView *_circleView;
-    struct UIView *_animationView;
+    UIView<GLUEAnimationLoading><GLUEAnimationControlling> *_animationView;
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView<GLUEAnimationLoading><GLUEAnimationControlling> *animationView; // @synthesize animationView=_animationView;
 @property(retain, nonatomic) UIView *circleView; // @synthesize circleView=_circleView;
-- (void).cxx_destruct;
 - (void)setup;
 - (id)initWithTheme:(id)arg1;
 

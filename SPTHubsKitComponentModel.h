@@ -35,6 +35,7 @@
 + (id)spt_search_recentsClearAllWithIdentifier:(id)arg1 title:(id)arg2 onTapCommand:(id)arg3;
 + (id)spt_search_sectionHeaderWithIdentifier:(id)arg1 title:(id)arg2;
 + (id)spt_search_recentsRowWithIdentifier:(id)arg1 title:(id)arg2 subtitle:(id)arg3 mainImageData:(id)arg4 shouldMarkAsPlaying:(_Bool)arg5 shouldMarkAsDisabled:(_Bool)arg6 shouldMarkAsExplicit:(_Bool)arg7 shouldMarkAsMogef19:(_Bool)arg8 shouldRoundImage:(_Bool)arg9 trailingViewAccessibilityLabel:(id)arg10 onTapCommand:(id)arg11 onAccessoryTapCommand:(id)arg12;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *children; // @synthesize children=_children;
 @property(copy, nonatomic) NSDictionary *events; // @synthesize events=_events;
 @property(copy, nonatomic) NSDictionary *customData; // @synthesize customData=_customData;
@@ -51,7 +52,6 @@
 @property(copy, nonatomic) NSString *componentName; // @synthesize componentName=_componentName;
 @property(copy, nonatomic) NSString *componentNamespace; // @synthesize componentNamespace=_componentNamespace;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (_Bool)isEqualToComponentModel:(id)arg1;
 @property(readonly, copy, nonatomic) NSDictionary *dictionaryRepresentation;
 - (unsigned long long)hash;

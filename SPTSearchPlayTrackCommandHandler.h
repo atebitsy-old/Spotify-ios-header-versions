@@ -19,10 +19,10 @@
 
 + (id)defaultName;
 + (id)commandWithTrackURI:(id)arg1 viewURI:(id)arg2 featureIdentifier:(id)arg3 referrerIdentifier:(id)arg4 contextDescription:(id)arg5 contextLongDescription:(id)arg6;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTSearchPlayerProvider> playerProvider; // @synthesize playerProvider=_playerProvider;
-- (void).cxx_destruct;
 - (void)playTrackWithURI:(id)arg1 viewURI:(id)arg2 featureIdentifier:(id)arg3 referrerIdentifier:(id)arg4 contextDescription:(id)arg5 contextLongDescription:(id)arg6;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithPlayerProvider:(id)arg1 logger:(id)arg2 ubiHubsLogger:(id)arg3;

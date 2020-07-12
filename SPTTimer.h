@@ -17,11 +17,11 @@
     NSDate *_endDate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *endDate; // @synthesize endDate=_endDate;
 @property(retain, nonatomic) NSTimer *countdownTimer; // @synthesize countdownTimer=_countdownTimer;
 @property(retain, nonatomic) NSTimer *scheduledTimer; // @synthesize scheduledTimer=_scheduledTimer;
 @property(nonatomic) __weak id <SPTTimerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)reportTimeRemaining;
 - (void)scheduledTimerEnded;
 - (double)timeRemaining;

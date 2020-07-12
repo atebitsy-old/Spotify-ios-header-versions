@@ -17,11 +17,11 @@
     struct CGSize _contentSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize contentSize; // @synthesize contentSize=_contentSize;
 @property(readonly, nonatomic) NSMutableDictionary *layoutAttributesByIndexPath; // @synthesize layoutAttributesByIndexPath=_layoutAttributesByIndexPath;
 @property(readonly, nonatomic) id <HUBComponentLayoutManager> componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
 @property(nonatomic) _Bool adjustsTargetContentOffset; // @synthesize adjustsTargetContentOffset=_adjustsTargetContentOffset;
-- (void).cxx_destruct;
 - (id)layoutTraitsForComponentAtIndexPath:(id)arg1;
 - (struct CGSize)preferredSizeForComponentAtIndexPath:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (void)updateLayoutAttributesForComponentsTraits:(id)arg1 horizontalAdjustment:(double)arg2 lastComponentIndex:(long long)arg3;

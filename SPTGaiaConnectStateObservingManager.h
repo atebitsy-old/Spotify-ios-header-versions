@@ -15,10 +15,10 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isObservingChanges; // @synthesize isObservingChanges=_isObservingChanges;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) SPTGaiaConnectCosmosResolver *resolver; // @synthesize resolver=_resolver;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)observeVolume;

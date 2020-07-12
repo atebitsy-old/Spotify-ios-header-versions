@@ -14,9 +14,9 @@
     id <SPTUBINowPlayingBarEventFactory> _nowPlayingBarEventFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBINowPlayingBarEventFactory> nowPlayingBarEventFactory; // @synthesize nowPlayingBarEventFactory=_nowPlayingBarEventFactory;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (void)logBarHeartButtonTapped:(long long)arg1 playerState:(id)arg2;
 - (void)logBarTapped;
 - (void)logBarSwipeToOpen;

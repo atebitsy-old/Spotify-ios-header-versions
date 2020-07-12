@@ -16,8 +16,8 @@
     id <CosmosFeature> _cosmosFeature;
 }
 
-@property(readonly, nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 - (void)clearCache:(CDUnknownBlockType)arg1;
 - (id)initWithCosmosFeature:(id)arg1;
 

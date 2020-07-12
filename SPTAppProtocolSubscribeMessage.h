@@ -18,10 +18,10 @@
 }
 
 + (_Bool)rawMessageFormatIsValid:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *topic; // @synthesize topic=_topic;
 @property(readonly, nonatomic) NSDictionary *options; // @synthesize options=_options;
 @property(readonly, nonatomic) unsigned long long requestID; // @synthesize requestID=_requestID;
-- (void).cxx_destruct;
 - (_Bool)populateWithRawMessage:(id)arg1 error:(id *)arg2;
 @property(readonly, nonatomic) NSArray *rawMessage;
 @property(readonly, nonatomic) long long messageType;

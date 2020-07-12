@@ -24,13 +24,13 @@
     NSURL *_prerollContextURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *prerollContextURL; // @synthesize prerollContextURL=_prerollContextURL;
 @property(nonatomic) __weak id <SPTAdsBaseMovementLogger> movementLogger; // @synthesize movementLogger=_movementLogger;
 @property(nonatomic) __weak SPTAdFocusManager *adFocusManager; // @synthesize adFocusManager=_adFocusManager;
 @property(nonatomic) __weak id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic) __weak SPTAdContextManager *adContextManager; // @synthesize adContextManager=_adContextManager;
-- (void).cxx_destruct;
 - (void)passAccessoryStateToCosmos;
 - (id)convertSPTAccessoryToJsonWithObj:(id)arg1;
 - (void)didReceiveDeviceMotionUpdate:(_Bool)arg1;

@@ -18,10 +18,10 @@
     NSArray *_pageProviders;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *pageProviders; // @synthesize pageProviders=_pageProviders;
 @property(retain, nonatomic) id <SPTYourLibraryTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTYourLibraryModel> model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)yourLibraryModel:(id)arg1 didUpdatePageProviders:(id)arg2 groupData:(id)arg3;
 - (_Bool)claimsURI:(id)arg1;
 - (id)initWithModel:(id)arg1 testManager:(id)arg2;

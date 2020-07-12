@@ -15,8 +15,8 @@
     NSMutableOrderedSet *_observerFactories;
 }
 
-@property(retain, nonatomic) NSMutableOrderedSet *observerFactories; // @synthesize observerFactories=_observerFactories;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableOrderedSet *observerFactories; // @synthesize observerFactories=_observerFactories;
 - (id)createPlaybackEventObserverForPlaybackIdentity:(id)arg1 options:(id)arg2 timeObservable:(id)arg3;
 - (void)registerPlaybackEventObserverFactory:(id)arg1;
 - (void)unregisterPlaybackEventObserverFactory:(id)arg1;

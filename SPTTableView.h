@@ -30,6 +30,7 @@
     NSLayoutConstraint *_scrollIndexContentTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *scrollIndexContentTrailingConstraint; // @synthesize scrollIndexContentTrailingConstraint=_scrollIndexContentTrailingConstraint;
 @property(retain, nonatomic) UILayoutGuide *scrollIndexContentLayoutGuide; // @synthesize scrollIndexContentLayoutGuide=_scrollIndexContentLayoutGuide;
 @property(nonatomic) _Bool horizontalSwipeActive; // @synthesize horizontalSwipeActive=_horizontalSwipeActive;
@@ -43,7 +44,6 @@
 @property(nonatomic) long long themeStyle; // @synthesize themeStyle=_themeStyle;
 @property(retain, nonatomic) SPTSwipeGestureRecognizer *swipeGestureRecognizer; // @synthesize swipeGestureRecognizer=_swipeGestureRecognizer;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)willRemoveSubview:(id)arg1;
 - (void)didAddSubview:(id)arg1;
 @property(readonly, nonatomic) struct CGRect scrollIndexFrame;

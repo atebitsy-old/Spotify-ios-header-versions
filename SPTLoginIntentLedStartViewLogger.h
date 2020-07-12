@@ -14,9 +14,9 @@
     unsigned long long _intent;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logUserDidSeeView;
 - (id)initWithLogger:(id)arg1 intent:(unsigned long long)arg2;
 

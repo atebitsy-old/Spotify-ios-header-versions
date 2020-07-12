@@ -22,7 +22,8 @@
 + (id)searchSectionItemForTitle:(id)arg1 identifier:(id)arg2 children:(id)arg3 playbackController:(id)arg4;
 + (id)constructSearchPayloadFromSearchContent:(id)arg1 playbackController:(id)arg2;
 + (id)playerQueueItemPayloadFromPlayerTrack:(id)arg1;
-+ (id)constructPlayerQueuePayloadFromPlayerQueue:(id)arg1;
++ (id)tracksWithoutDelimitersAndDuplicates:(id)arg1 repeatingContext:(_Bool)arg2;
++ (id)constructPlayerQueuePayloadFromPlayerQueue:(id)arg1 playerState:(id)arg2;
 + (id)constructPlayQueuePayloadFromPlayQueue:(id)arg1 playbackController:(id)arg2;
 + (id)constructGetSavedPayloadWithURI:(id)arg1 saved:(_Bool)arg2 canSave:(_Bool)arg3;
 + (id)currentRepresentationOfUserCapabilitiesCanPlayOnDemand:(_Bool)arg1;

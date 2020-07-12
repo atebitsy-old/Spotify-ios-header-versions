@@ -16,10 +16,10 @@
     SPTModerationLegacyReportAbuseManager *_legacyReportAbuseManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTModerationLegacyReportAbuseManager *legacyReportAbuseManager; // @synthesize legacyReportAbuseManager=_legacyReportAbuseManager;
 @property(readonly, nonatomic) id <SPContextMenuActionsFactory> contextMenuActionsFactory; // @synthesize contextMenuActionsFactory=_contextMenuActionsFactory;
 @property(readonly, nonatomic) SPTModerationReportActionFactory *reportActionFactory; // @synthesize reportActionFactory=_reportActionFactory;
-- (void).cxx_destruct;
 - (void)registerReportAction;
 - (void)registerLegacyReportAbuseAction;
 - (id)initWithReportActionFactory:(id)arg1 contextMenuActionsFactory:(id)arg2 legacyReportAbuseManager:(id)arg3;

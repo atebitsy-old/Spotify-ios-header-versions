@@ -46,6 +46,7 @@
     NSArray *_sectionIndexTitles;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *sectionIndexTitles; // @synthesize sectionIndexTitles=_sectionIndexTitles;
 @property(readonly, nonatomic) id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
 @property(retain, nonatomic) UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *quickScrollView; // @synthesize quickScrollView=_quickScrollView;
@@ -66,7 +67,6 @@
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(nonatomic) __weak id <SPTYourLibraryPageDelegate> pageDelegate; // @synthesize pageDelegate;
-- (void).cxx_destruct;
 - (void)didEndUserScrollingWithQuickScrollView:(id)arg1;
 - (void)didStartUserScrollingWithQuickScrollView:(id)arg1;
 - (void)didBecomeVisibleQuickScrollView:(id)arg1;

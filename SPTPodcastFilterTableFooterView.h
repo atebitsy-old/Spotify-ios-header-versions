@@ -17,10 +17,10 @@
 }
 
 + (double)podcastFilterTableFooterViewPreferredHeight;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
-- (void).cxx_destruct;
 - (void)logFilterResetButton;
 - (id)initWithWidth:(double)arg1 target:(id)arg2 selector:(SEL)arg3 pageURI:(id)arg4 collectionLogger:(id)arg5;
 

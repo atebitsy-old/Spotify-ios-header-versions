@@ -19,11 +19,11 @@
     NSHashTable *_registeredTransactions;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *registeredTransactions; // @synthesize registeredTransactions=_registeredTransactions;
 @property(retain, nonatomic) NSHashTable *registeredPayments; // @synthesize registeredPayments=_registeredPayments;
 @property(retain, nonatomic) SKPaymentQueue *paymentQueue; // @synthesize paymentQueue=_paymentQueue;
 @property(nonatomic) __weak id <SPTIAPRestoredTransactionsObserverDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)paymentQueue:(id)arg1 removedTransactions:(id)arg2;
 - (void)paymentQueue:(id)arg1 updatedTransactions:(id)arg2;
 - (void)registerTransaction:(id)arg1;

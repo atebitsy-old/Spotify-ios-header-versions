@@ -25,6 +25,7 @@
     id <SPTBannerPresentationManager> _bannerPresentationManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) SPTVocalRemovalProgressViewManager *progressViewManager; // @synthesize progressViewManager=_progressViewManager;
 @property(retain, nonatomic) id <SPTInAppMessageMessageRequester> messageRequester; // @synthesize messageRequester=_messageRequester;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) SPTVocalRemovalMenuButtonViewModel *menuViewModel; // @synthesize menuViewModel=_menuViewModel;
 @property(retain, nonatomic) id <SPTVocalRemovalCoreManager> coreManager; // @synthesize coreManager=_coreManager;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
-- (void).cxx_destruct;
 
 @end
 

@@ -25,6 +25,7 @@
     NSLayoutConstraint *_secondaryActionButtonBottomGap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *secondaryActionButtonBottomGap; // @synthesize secondaryActionButtonBottomGap=_secondaryActionButtonBottomGap;
 @property(retain, nonatomic) NSLayoutConstraint *secondaryActionButtonTopGap; // @synthesize secondaryActionButtonTopGap=_secondaryActionButtonTopGap;
 @property(retain, nonatomic) NSLayoutConstraint *mainActionButtonTopGap; // @synthesize mainActionButtonTopGap=_mainActionButtonTopGap;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) GLUEButton *mainActionButton; // @synthesize mainActionButton=_mainActionButton;
 @property(readonly, nonatomic) GLUELabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1 ignoreMessageLabelStyle:(_Bool)arg2;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;

@@ -18,10 +18,10 @@
     NSUserDefaults *_defaults;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
 @property(retain, nonatomic) id <SPTKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
-- (void).cxx_destruct;
 @property(nonatomic) _Bool hideUnplayableTracks;
 @property(nonatomic) _Bool shuffle;
 - (id)initWithCore:(id)arg1 keychainManager:(id)arg2 defaults:(id)arg3;

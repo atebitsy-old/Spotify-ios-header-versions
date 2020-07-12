@@ -16,10 +16,10 @@
     id <SPTPageCreationContext> _context;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPageCreationContext> context; // @synthesize context=_context;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTFreeTierRecommendationsPlaylistViewProvider> recommenedPlaylistViewProvider; // @synthesize recommenedPlaylistViewProvider=_recommenedPlaylistViewProvider;
-- (void).cxx_destruct;
 - (id)recommendedPlaylistFooterViewController;
 - (id)initWithRecommenedPlaylistViewProvider:(id)arg1 playlistURL:(id)arg2 context:(id)arg3;
 

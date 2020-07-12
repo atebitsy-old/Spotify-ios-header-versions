@@ -11,7 +11,7 @@
 @protocol SPTFreeTierPlaylistCellProvider <NSObject>
 - (void)didEndDisplayingPlaylistCell:(UITableViewCell *)arg1 forRowAtIndexPath:(NSIndexPath *)arg2;
 - (void)willDisplayPlaylistCell:(UITableViewCell *)arg1 forRowAtIndexPath:(NSIndexPath *)arg2;
-- (_Bool)didSelectPlaylistCell:(UITableViewCell *)arg1 atIndexPath:(NSIndexPath *)arg2;
+- (void)didSelectPlaylistCell:(UITableViewCell *)arg1 atIndexPath:(NSIndexPath *)arg2;
 - (void)configurePlaylistCell:(UITableViewCell *)arg1 forRowAtIndexPath:(NSIndexPath *)arg2;
 - (double)heightForRowAtIndexPath:(NSIndexPath *)arg1;
 - (NSString *)identifierForCellForRowAtIndexPath:(NSIndexPath *)arg1;

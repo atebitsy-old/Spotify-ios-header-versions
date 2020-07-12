@@ -14,9 +14,9 @@
     CDUnknownBlockType _setter;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType setter; // @synthesize setter=_setter;
 @property(copy, nonatomic) CDUnknownBlockType getter; // @synthesize getter=_getter;
-- (void).cxx_destruct;
 - (void)mutateUIInteraction5:(CDUnknownBlockType)arg1;
 @property(copy, nonatomic, setter=setUIInteraction5:) NSDictionary *uiinteraction5;
 @property(copy, nonatomic) NSString *interactionType;

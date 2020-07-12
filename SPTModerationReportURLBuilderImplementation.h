@@ -19,12 +19,12 @@
     NSMutableArray *_otherEntityURLs;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *otherEntityURLs; // @synthesize otherEntityURLs=_otherEntityURLs;
 @property(nonatomic) double entityTimestamp; // @synthesize entityTimestamp=_entityTimestamp;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) NSURL *baseURL; // @synthesize baseURL=_baseURL;
-- (void).cxx_destruct;
 - (id)urisItem;
 - (id)entityURLStringWithTimestamp;
 @property(readonly, nonatomic) NSURL *URL;

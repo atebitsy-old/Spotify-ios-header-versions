@@ -18,10 +18,10 @@
     NSMapTable *_loadStates;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *loadStates; // @synthesize loadStates=_loadStates;
 @property(retain, nonatomic) SPTCanvasLoadStateTracker *loadStateTracker; // @synthesize loadStateTracker=_loadStateTracker;
 @property(retain, nonatomic) SPTCanvasLoadEventLogger *loadEventLogger; // @synthesize loadEventLogger=_loadEventLogger;
-- (void).cxx_destruct;
 - (void)didFailToLoadViewModel:(id)arg1 withError:(id)arg2;
 - (void)didLoadViewModel:(id)arg1;
 - (void)willLoadViewModel:(id)arg1;

@@ -18,9 +18,9 @@
     id <SPTGaiaWirelessRoutesAPI> _wirelessRoutesManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaWirelessRoutesAPI> wirelessRoutesManager; // @synthesize wirelessRoutesManager=_wirelessRoutesManager;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (unsigned long long)eventForCurrentRoutes;
 - (void)wirelessActiveDeviceDidChange;
 - (void)wirelessRoutesDidChangeAvailability:(_Bool)arg1;

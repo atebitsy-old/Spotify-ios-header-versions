@@ -28,6 +28,7 @@
     id <SPTInAppMessageMessageRequester> _inAppMessageRequester;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTInAppMessageMessageRequester> inAppMessageRequester; // @synthesize inAppMessageRequester=_inAppMessageRequester;
 @property(retain, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
 @property(nonatomic) _Bool videoTabVisible; // @synthesize videoTabVisible=_videoTabVisible;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) NSString *albumArtTabTitle; // @synthesize albumArtTabTitle=_albumArtTabTitle;
 @property(readonly, nonatomic) NSString *canvasTabTitle; // @synthesize canvasTabTitle=_canvasTabTitle;
 @property(nonatomic) __weak id <SPTNowPlayingTabViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
 - (void)playerDidReceiveStateUpdate:(id)arg1;

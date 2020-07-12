@@ -20,12 +20,12 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTConcertsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSNumberFormatter *monthlyListenersFormatter; // @synthesize monthlyListenersFormatter=_monthlyListenersFormatter;
 @property(readonly, copy, nonatomic) NSArray *performingArtistsViewModels; // @synthesize performingArtistsViewModels=_performingArtistsViewModels;
 @property(readonly, copy, nonatomic) NSString *titleText; // @synthesize titleText=_titleText;
-- (void).cxx_destruct;
 - (id)viewModelForRow:(long long)arg1;
 @property(readonly, nonatomic) _Bool nestedRows;
 @property(readonly, nonatomic) long long rows;

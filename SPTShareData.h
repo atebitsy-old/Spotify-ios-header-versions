@@ -19,13 +19,13 @@
     NSString *_shareSessionID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *shareSessionID; // @synthesize shareSessionID=_shareSessionID;
 @property(readonly, nonatomic) NSURL *currentlyPlayingTrackURI; // @synthesize currentlyPlayingTrackURI=_currentlyPlayingTrackURI;
 @property(readonly, nonatomic) id <SPTShareEntityData> entityData; // @synthesize entityData=_entityData;
 @property(readonly, nonatomic) NSArray *itemDescriptionComponents; // @synthesize itemDescriptionComponents=_itemDescriptionComponents;
 @property(copy, nonatomic) NSString *shareBrowselinkId; // @synthesize shareBrowselinkId=_shareBrowselinkId;
 @property(retain, nonatomic) NSURL *shareableURL; // @synthesize shareableURL=_shareableURL;
-- (void).cxx_destruct;
 - (id)generateShareId;
 - (id)generateShareableURL;
 - (id)cleanedEntityURI;

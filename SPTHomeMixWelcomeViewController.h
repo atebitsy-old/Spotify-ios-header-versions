@@ -28,6 +28,7 @@
     SPTHomeMixWelcomeCellConfigurator *_cellConfigurator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeMixWelcomeCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) SPTHomeMixFamilyPileConfigurator *facePilesConfigurator; // @synthesize facePilesConfigurator=_facePilesConfigurator;
 @property(retain, nonatomic) SPTHomeMixWelcomeFooter *footerView; // @synthesize footerView=_footerView;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <SPTHomeMixWelcomeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTHomeMixWelcomeViewModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)didPressLearnMore;
 - (void)didListenNow;
 - (void)sp_updateContentInsets;

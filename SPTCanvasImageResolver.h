@@ -18,10 +18,10 @@
     NSCache *_imageCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSCache *imageCache; // @synthesize imageCache=_imageCache;
 @property(readonly, nonatomic) SPTCanvasArtistAvatarResolver *avatarResolver; // @synthesize avatarResolver=_avatarResolver;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)requestImageWithType:(long long)arg1 forCanvas:(id)arg2 completion:(CDUnknownBlockType)arg3;

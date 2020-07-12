@@ -19,13 +19,13 @@
     SPTLoginErrorDialogLogger *_dialogLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(readonly, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyViewModel *termsAndPolicyViewModel; // @synthesize termsAndPolicyViewModel=_termsAndPolicyViewModel;
 @property(nonatomic) __weak id <SPTSignupDisplayNameViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)textFieldUpdated:(id)arg1;
 - (void)setDisplayName:(id)arg1;
 - (void)createUserAndPresentMainScreen;

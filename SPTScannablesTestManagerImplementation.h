@@ -19,11 +19,11 @@
     SPTFeatureSettingsPage *_settingsPage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFeatureSettingsPage *settingsPage; // @synthesize settingsPage=_settingsPage;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
-- (void).cxx_destruct;
 - (_Bool)isEnabled;
 - (id)initWithFeatureSettingsItemFactory:(id)arg1 localSettings:(id)arg2 alertController:(id)arg3;
 

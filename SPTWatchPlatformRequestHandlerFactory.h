@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPTHermesController, SPTWatchConnectivityDataLoader, SPTWatchConnectivitySession, SPTWatchPlatformTestManager;
-@protocol GLUEImageLoader, SPTCollectionPlatform, SPTExternalIntegrationContentController, SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI, SPTLogCenter, SPTPodcastSpeedControlManager, SPTSiriIntentsHandler, SPTUICompletionNotifier, SPTVolumeAPI, SPTWatchConnectivityMessageHandlerRegistry;
+@class SPTHermesController, SPTWatchConnectivityDataLoader, SPTWatchConnectivitySession, SPTWatchPlatformLogging, SPTWatchPlatformTestManager;
+@protocol GLUEImageLoader, SPTAccessoryActionLogger, SPTCollectionPlatform, SPTExternalIntegrationContentController, SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI, SPTLogCenter, SPTPodcastSpeedControlManager, SPTSiriIntentsHandler, SPTUICompletionNotifier, SPTVolumeAPI, SPTWatchConnectivityMessageHandlerRegistry;
 
 @interface SPTWatchPlatformRequestHandlerFactory : NSObject
 {
@@ -25,12 +25,17 @@
     id <SPTWatchConnectivityMessageHandlerRegistry> _messageHandlerRegistry;
     SPTWatchPlatformTestManager *_testManager;
     SPTHermesController *_hermesController;
+    SPTWatchPlatformLogging *_watchPlatformLogging;
+    id <SPTAccessoryActionLogger> _actionLogger;
     id <SPTExternalIntegrationDebugLog> _externalIntegrationDebugLog;
     id <SPTSiriIntentsHandler> _intentsHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTSiriIntentsHandler> intentsHandler; // @synthesize intentsHandler=_intentsHandler;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> externalIntegrationDebugLog; // @synthesize externalIntegrationDebugLog=_externalIntegrationDebugLog;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
+@property(readonly, nonatomic) SPTWatchPlatformLogging *watchPlatformLogging; // @synthesize watchPlatformLogging=_watchPlatformLogging;
 @property(readonly, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 @property(readonly, nonatomic) __weak SPTWatchPlatformTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityMessageHandlerRegistry> messageHandlerRegistry; // @synthesize messageHandlerRegistry=_messageHandlerRegistry;
@@ -45,9 +50,8 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)createRequestHandlers;
-- (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2 playbackController:(id)arg3 connectManager:(id)arg4 glueImageLoader:(id)arg5 watchConnectivitySession:(id)arg6 volumeController:(id)arg7 podcastSpeedControlManager:(id)arg8 logCenter:(id)arg9 contentController:(id)arg10 UICompletionNotifier:(id)arg11 messageHandlerRegistry:(id)arg12 testManager:(id)arg13 hermesController:(id)arg14 externalIntegrationDebugLog:(id)arg15 intentsHandler:(id)arg16;
+- (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2 playbackController:(id)arg3 connectManager:(id)arg4 glueImageLoader:(id)arg5 watchConnectivitySession:(id)arg6 volumeController:(id)arg7 podcastSpeedControlManager:(id)arg8 logCenter:(id)arg9 contentController:(id)arg10 UICompletionNotifier:(id)arg11 messageHandlerRegistry:(id)arg12 testManager:(id)arg13 hermesController:(id)arg14 watchPlatformLogging:(id)arg15 actionLogger:(id)arg16 externalIntegrationDebugLog:(id)arg17 intentsHandler:(id)arg18;
 
 @end
 

@@ -6,15 +6,13 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTPageController-Protocol.h"
-#import "SPViewController-Protocol.h"
 #import "UIImagePickerControllerDelegate-Protocol.h"
 #import "UINavigationControllerDelegate-Protocol.h"
 
-@class CAGradientLayer, CALayer, GLUEButton, NSString, NSURL, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTScannablesScanViewModel, UIButton, UIFont, UILabel, UINavigationController, UIView;
-@protocol GLUEAnimationLoading><GLUEAnimationControlling, SPTPageContainer, SPTScannablesImagePickerController;
+@class CAGradientLayer, CALayer, GLUEButton, NSString, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTScannablesScanViewModel, UIButton, UIFont, UILabel, UINavigationController, UIView;
+@protocol GLUEAnimationLoading><GLUEAnimationControlling, SPTScannablesImagePickerController;
 
-@interface SPTScannablesScanViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, SPViewController, SPTPageController>
+@interface SPTScannablesScanViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 {
     _Bool _captureSessionInterruptedDueToSplitView;
     SPTScannablesScanViewModel *_viewModel;
@@ -25,7 +23,7 @@
     UIView *_captureView;
     UIButton *_closeButton;
     GLUEButton *_photoLibraryButton;
-    struct UIView *_scanningAnimationView;
+    UIView<GLUEAnimationLoading><GLUEAnimationControlling> *_scanningAnimationView;
     UILabel *_subtitleLabel;
     UILabel *_privacyLabel;
     UILabel *_captureSessionInterruptedLabel;
@@ -40,6 +38,7 @@
     UIFont *_privacyFont;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isCaptureSessionInterruptedDueToSplitView) _Bool captureSessionInterruptedDueToSplitView; // @synthesize captureSessionInterruptedDueToSplitView=_captureSessionInterruptedDueToSplitView;
 @property(retain, nonatomic) UIFont *privacyFont; // @synthesize privacyFont=_privacyFont;
 @property(retain, nonatomic) UIFont *subtitleFont; // @synthesize subtitleFont=_subtitleFont;
@@ -62,7 +61,6 @@
 @property(readonly, nonatomic) SPTScannablesAuthorizationRequester *authorizationRequester; // @synthesize authorizationRequester=_authorizationRequester;
 @property(readonly, nonatomic) UINavigationController<SPTScannablesImagePickerController> *imagePickerController; // @synthesize imagePickerController=_imagePickerController;
 @property(readonly, nonatomic) SPTScannablesScanViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (_Bool)currentCaptureSessionIsInterrupted;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (_Bool)isSourceCardView;
@@ -70,9 +68,6 @@
 - (long long)preferredStatusBarStyle;
 - (void)imagePickerControllerDidCancel:(id)arg1;
 - (void)imagePickerController:(id)arg1 didFinishPickingMediaWithInfo:(id)arg2;
-@property(readonly, nonatomic) NSURL *URI;
-@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)addAndLayoutViewFinderLayer;
 - (void)layoutOverlayView;
 - (void)layoutCaptureSessionInterruptedLabel;
@@ -120,7 +115,6 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
 
 @end

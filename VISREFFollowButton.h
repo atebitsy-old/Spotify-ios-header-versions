@@ -17,9 +17,9 @@
     NSString *_accessibilityLabelText;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *accessibilityLabelText; // @synthesize accessibilityLabelText=_accessibilityLabelText;
 @property(retain, nonatomic) id <VISREFActionRowButtonViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (struct CGSize)intrinsicContentSize;
 - (void)updateStyle:(id)arg1;

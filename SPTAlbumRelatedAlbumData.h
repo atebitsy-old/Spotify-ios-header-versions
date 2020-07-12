@@ -17,12 +17,12 @@
     NSURL *_albumImageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *albumImageURL; // @synthesize albumImageURL=_albumImageURL;
 @property(readonly, copy, nonatomic) NSString *albumMetadata; // @synthesize albumMetadata=_albumMetadata;
 @property(readonly, copy, nonatomic) NSURL *albumViewURL; // @synthesize albumViewURL=_albumViewURL;
 @property(readonly, copy, nonatomic) NSURL *albumURL; // @synthesize albumURL=_albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *title;
 - (id)initWithAlbumName:(id)arg1 albumURL:(id)arg2 albumViewURL:(id)arg3 albumImageURL:(id)arg4 albumMetadata:(id)arg5;
 

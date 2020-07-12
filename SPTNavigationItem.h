@@ -17,12 +17,12 @@
     NSString *_layoutIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *layoutIdentifier; // @synthesize layoutIdentifier=_layoutIdentifier;
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) long long icon; // @synthesize icon=_icon;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithTitle:(id)arg1 icon:(long long)arg2 viewURI:(id)arg3 sourceIdentifier:(id)arg4 layoutIdentifier:(id)arg5;

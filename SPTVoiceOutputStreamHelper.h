@@ -20,12 +20,12 @@
     NSMutableArray *_dataBuffer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *dataBuffer; // @synthesize dataBuffer=_dataBuffer;
 @property(nonatomic) unsigned long long totalBytesWritten; // @synthesize totalBytesWritten=_totalBytesWritten;
 @property(nonatomic) _Bool canBeWrittenDirectly; // @synthesize canBeWrittenDirectly=_canBeWrittenDirectly;
 @property(readonly, nonatomic) NSOutputStream *outputStream; // @synthesize outputStream=_outputStream;
 @property(nonatomic) __weak id <SPTVoiceOutputStreamDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)stream:(id)arg1 handleEvent:(unsigned long long)arg2;
 - (void)writeDataToStream;
 - (void)closeStream;

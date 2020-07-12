@@ -24,6 +24,7 @@
     NSMutableSet *_registeredCellClasses;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *registeredCellClasses; // @synthesize registeredCellClasses=_registeredCellClasses;
 @property(retain, nonatomic) NSArray *sectionAdapters; // @synthesize sectionAdapters=_sectionAdapters;
 @property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
@@ -31,7 +32,6 @@
 @property(nonatomic) __weak id <SPTTableAdapterAppearanceDelegate> tableAdapterDelegate; // @synthesize tableAdapterDelegate=_tableAdapterDelegate;
 @property(nonatomic) __weak id <UIScrollViewDelegate> scrollDelegate; // @synthesize scrollDelegate=_scrollDelegate;
 @property(nonatomic) __weak id <SPTTableAdapterDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (id)indexPathForRowAdapter:(id)arg1;
 - (id)rowAdapterAtIndexPath:(id)arg1;
 - (id)sectionAdapterAtIndex:(long long)arg1;

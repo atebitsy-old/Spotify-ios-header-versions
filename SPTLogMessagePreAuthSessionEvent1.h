@@ -15,9 +15,9 @@
 }
 
 + (id)messageWithSessionId:(id)arg1 deviceId:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *deviceIdValue; // @synthesize deviceIdValue=_deviceIdValue;
 @property(copy, nonatomic) NSString *sessionIdValue; // @synthesize sessionIdValue=_sessionIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

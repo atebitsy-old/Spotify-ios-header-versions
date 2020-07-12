@@ -20,11 +20,11 @@
     id <SPTOfflineModeState> _offlineModeState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(readonly, nonatomic) id <SPTHubRemoteContentOperationURLResolver> contentURLResolver; // @synthesize contentURLResolver=_contentURLResolver;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleResponse:(id)arg1 withViewModelBuilder:(id)arg2;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

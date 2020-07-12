@@ -25,6 +25,7 @@
     NSString *_messageLocale;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *messageLocale; // @synthesize messageLocale=_messageLocale;
 @property(retain, nonatomic) NSMutableDictionary *campaignLocales; // @synthesize campaignLocales=_campaignLocales;
 @property(retain, nonatomic) NSMutableArray *cardMessagesQueue; // @synthesize cardMessagesQueue=_cardMessagesQueue;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTInAppMessageQAToolCardMessageControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTInAppMessageQAToolFormatMessageControllerDelegate> formatMessageControllerDelegate; // @synthesize formatMessageControllerDelegate=_formatMessageControllerDelegate;
 @property(retain, nonatomic) SPTInAppMessageCardMessageViewModel *cardMessageViewModel; // @synthesize cardMessageViewModel=_cardMessageViewModel;
-- (void).cxx_destruct;
 - (void)presentationControllerDidDismissContentUnit:(id)arg1 approved:(_Bool)arg2 image:(id)arg3 currentDateAndTime:(id)arg4;
 - (void)presentationControllerDidChangeContentUnitPosition:(id)arg1 approvedDirection:(_Bool)arg2;
 - (void)presentFirstMessageInQueue;

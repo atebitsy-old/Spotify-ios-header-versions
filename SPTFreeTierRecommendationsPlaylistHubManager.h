@@ -22,6 +22,7 @@
     HUBCommandDispatcher *_commandDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBCommandDispatcher *commandDispatcher; // @synthesize commandDispatcher=_commandDispatcher;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, copy, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
-- (void).cxx_destruct;
 - (void)setupCommandDispatcherForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)hubViewWithFrame:(struct CGRect)arg1;
 - (id)viewModelProviderForURL:(id)arg1 referrerIdentifier:(id)arg2;

@@ -20,12 +20,12 @@
     NSMapTable *_delegates;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMapTable *delegates; // @synthesize delegates=_delegates;
 @property(readonly, nonatomic) unsigned long long maxItemsCount; // @synthesize maxItemsCount=_maxItemsCount;
 @property(readonly, copy, nonatomic) NSString *storageKey; // @synthesize storageKey=_storageKey;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) NSMutableArray *mutableItems; // @synthesize mutableItems=_mutableItems;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)keyForDelegate:(id)arg1;
 - (unsigned long long)indexOfItemWithOriginURI:(id)arg1;

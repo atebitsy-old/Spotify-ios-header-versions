@@ -17,12 +17,12 @@
     long long _featureSettingValue;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long featureSettingValue; // @synthesize featureSettingValue=_featureSettingValue;
 @property(nonatomic) _Bool requiresRerender; // @synthesize requiresRerender=_requiresRerender;
 @property(nonatomic) _Bool requiresRestart; // @synthesize requiresRestart=_requiresRestart;
 @property(readonly, nonatomic) NSMutableArray *mutableItems; // @synthesize mutableItems=_mutableItems;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 @property(readonly, nonatomic) __weak NSArray *items;
 - (void)removeAllItems;

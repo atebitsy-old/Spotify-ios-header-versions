@@ -20,11 +20,11 @@
     SPTSocialListeningFeatureProperties *_remoteConfigurationProperties;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSocialListeningFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> socialDeviceEnabledSignal; // @synthesize socialDeviceEnabledSignal=_socialDeviceEnabledSignal;
 @property(nonatomic, getter=isSocialDeviceEnabled) _Bool socialDeviceEnabled; // @synthesize socialDeviceEnabled=_socialDeviceEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupSocialDeviceEnabledSignal;
 @property(readonly, nonatomic) unsigned long long maxMemberCount;

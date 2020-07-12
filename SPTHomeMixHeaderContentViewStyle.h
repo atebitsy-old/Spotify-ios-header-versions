@@ -29,6 +29,7 @@
     struct CGSize _entityImageShadowOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=shouldShowSubtitle) _Bool showSubtitle; // @synthesize showSubtitle=_showSubtitle;
 @property(nonatomic) double subtitleMargin; // @synthesize subtitleMargin=_subtitleMargin;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double actionButtonOverflowHeight; // @synthesize actionButtonOverflowHeight=_actionButtonOverflowHeight;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

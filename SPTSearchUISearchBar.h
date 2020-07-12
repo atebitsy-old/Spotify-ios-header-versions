@@ -30,6 +30,7 @@
 
 + (struct CGSize)iconSizeForStyle:(id)arg1;
 + (struct CGSize)sizeForText:(id)arg1 placeholderText:(id)arg2 searchIconImage:(id)arg3 clearButtonImage:(id)arg4 style:(id)arg5;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSearchUITintView *tintView; // @synthesize tintView=_tintView;
 @property(readonly, nonatomic) UIVisualEffectView *vibrancyView; // @synthesize vibrancyView=_vibrancyView;
 @property(readonly, nonatomic) UIButton *clearButton; // @synthesize clearButton=_clearButton;
@@ -42,7 +43,6 @@
 @property(nonatomic) __weak id <SPTSearchUISearchBarDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSString *placeholderText; // @synthesize placeholderText=_placeholderText;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *textFieldHeightConstraint; // @synthesize textFieldHeightConstraint=_textFieldHeightConstraint;
 - (void)clearButtonPressed;
 - (void)textChanged;

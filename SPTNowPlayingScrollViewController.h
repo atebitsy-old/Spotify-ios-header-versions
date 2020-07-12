@@ -34,6 +34,7 @@
     CAShapeLayer *_roundedCornersMaskLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAShapeLayer *roundedCornersMaskLayer; // @synthesize roundedCornersMaskLayer=_roundedCornersMaskLayer;
 @property(retain, nonatomic) GLUEGradientView *scrollBackgroundGradientLayer; // @synthesize scrollBackgroundGradientLayer=_scrollBackgroundGradientLayer;
 @property(nonatomic) _Bool isDismissing; // @synthesize isDismissing=_isDismissing;
@@ -49,7 +50,6 @@
 @property(retain, nonatomic) UICollectionViewFlowLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
 @property(nonatomic) __weak id <SPTNowPlayingScrollViewControllerGestureDelegate> gestureDelegate; // @synthesize gestureDelegate=_gestureDelegate;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
-- (void).cxx_destruct;
 - (struct CGSize)sizeForItemAtIndex:(unsigned long long)arg1;
 - (void)updateLayout;
 - (double)viewWidth;

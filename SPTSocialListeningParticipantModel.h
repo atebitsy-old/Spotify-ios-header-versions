@@ -21,6 +21,7 @@
     NSURL *_largeImageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isHost) _Bool host; // @synthesize host=_host;
 @property(readonly, nonatomic) NSURL *largeImageURL; // @synthesize largeImageURL=_largeImageURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
@@ -28,7 +29,6 @@
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, copy, nonatomic) NSString *participantID; // @synthesize participantID=_participantID;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToParticipantModel:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

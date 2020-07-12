@@ -27,6 +27,7 @@
     NSLayoutConstraint *_clearFiltersTopConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *clearFiltersTopConstraint; // @synthesize clearFiltersTopConstraint=_clearFiltersTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *clearFiltersTrailingConstraint; // @synthesize clearFiltersTrailingConstraint=_clearFiltersTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *clearFiltersLeadingConstraint; // @synthesize clearFiltersLeadingConstraint=_clearFiltersLeadingConstraint;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) SPTSortingFilteringSortButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(nonatomic) _Bool contextMenuButtonDisabled; // @synthesize contextMenuButtonDisabled=_contextMenuButtonDisabled;
 @property(nonatomic) _Bool backgroundViewHidden; // @synthesize backgroundViewHidden=_backgroundViewHidden;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setClearFiltersHidden:(_Bool)arg1;
 - (void)insertFiltersWithTitles:(id)arg1;

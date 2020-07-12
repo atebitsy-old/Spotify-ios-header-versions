@@ -24,6 +24,7 @@
     struct UIEdgeInsets leadingIconMargins;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets leadingIconMargins; // @synthesize leadingIconMargins;
 @property(copy, nonatomic) GLUEAccessoryIconViewStyle *trailingIconStyle; // @synthesize trailingIconStyle;
 @property(copy, nonatomic) GLUEAccessoryIconViewStyle *leadingIconStyle; // @synthesize leadingIconStyle;
@@ -34,7 +35,6 @@
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor;
 @property(copy, nonatomic) UIFont *textFont; // @synthesize textFont;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

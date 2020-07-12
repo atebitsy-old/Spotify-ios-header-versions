@@ -15,10 +15,10 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTGLUELegacyTrackAccessoryLabel *trackAccessoryLabel; // @synthesize trackAccessoryLabel=_trackAccessoryLabel;
 @property(retain, nonatomic) SPTOfflineSyncStatusView *offlineSyncStatusView; // @synthesize offlineSyncStatusView=_offlineSyncStatusView;
-- (void).cxx_destruct;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 @property(nonatomic) long long syncStatus;
 @property(nonatomic) long long accessoryLabelType;

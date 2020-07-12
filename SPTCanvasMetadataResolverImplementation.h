@@ -21,11 +21,11 @@
 
 + (id)canvasMetatadataUsingCanvasDictionary:(id)arg1;
 + (id)bodyDataForTracks:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
-- (void).cxx_destruct;
 - (void)didReceiveResponse:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)didFailToLoadMetadataWithError:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)didLoadMetadataWithCanvasModels:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;

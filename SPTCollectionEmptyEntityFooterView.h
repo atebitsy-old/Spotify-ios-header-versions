@@ -19,10 +19,10 @@
 }
 
 + (id)emptyEntityFooterViewForArtistWithName:(id)arg1 width:(double)arg2 offline:(_Bool)arg3 unplayableTracks:(_Bool)arg4 followedByUser:(_Bool)arg5 collectionTestManager:(id)arg6;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(nonatomic) unsigned long long emptyReason; // @synthesize emptyReason=_emptyReason;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)layoutSubviews;
 - (id)initWithWidth:(double)arg1;

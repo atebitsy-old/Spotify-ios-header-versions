@@ -15,20 +15,20 @@
 @interface SPTWatchPlatformLogging : NSObject <SPTWatchConnectivitySessionObserver, SPTWatchConnectivitySubscriber>
 {
     _Bool _loggingEnabled;
+    SPTAccessory *_accessory;
     SPTWatchConnectivitySession *_session;
     id <SPTWatchConnectivityPubSub> _pubSub;
     id <SPTAccessoryStateManager> _accessoryStateManager;
     NSString *_topic;
-    SPTAccessory *_accessory;
 }
 
-@property(retain, nonatomic) SPTAccessory *accessory; // @synthesize accessory=_accessory;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *topic; // @synthesize topic=_topic;
 @property(nonatomic) __weak id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
 @property(nonatomic) __weak id <SPTWatchConnectivityPubSub> pubSub; // @synthesize pubSub=_pubSub;
 @property(nonatomic) __weak SPTWatchConnectivitySession *session; // @synthesize session=_session;
+@property(retain, nonatomic, getter=currentAccessory) SPTAccessory *accessory; // @synthesize accessory=_accessory;
 @property(nonatomic, getter=isLoggingEnabled) _Bool loggingEnabled; // @synthesize loggingEnabled=_loggingEnabled;
-- (void).cxx_destruct;
 - (id)accessoryForReceivedDeviceMessage:(id)arg1;
 - (id)accessoryForSessionWithoutWatchAppInstalled;
 - (void)handleMessage:(id)arg1 fromTopic:(id)arg2;

@@ -14,9 +14,9 @@
     SPTFreeTierTasteOnboardingArtistSearchResultsViewController *_resultsViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistSearchResultsViewController *resultsViewController; // @synthesize resultsViewController=_resultsViewController;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistSearchViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)resultsControllerView;
 - (void)setIsOffline:(_Bool)arg1;
 - (void)viewDidLoad;

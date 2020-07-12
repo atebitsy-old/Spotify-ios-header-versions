@@ -16,10 +16,10 @@
     SPTLoginOpenEmailAppDialogLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginOpenEmailAppDialogLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (id)emailAppsURLStrings;
 - (id)installedEmailApps;
 - (void)navigateToAppWithURI:(id)arg1;

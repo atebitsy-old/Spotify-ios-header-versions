@@ -21,13 +21,13 @@
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(retain, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(retain, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (_Bool)isSaveAlbumOrTrackAction:(id)arg1;
 - (_Bool)isFollowPodcastAction:(id)arg1;
 - (void)executeActionWithURL:(id)arg1;

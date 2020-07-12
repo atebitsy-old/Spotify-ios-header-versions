@@ -30,6 +30,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(retain, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageParser *noteMessageParser; // @synthesize noteMessageParser=_noteMessageParser;
-- (void).cxx_destruct;
 - (void)noteMessagePriorityDeciderDidFetchMessage:(id)arg1 forTrigger:(id)arg2;
 - (id)initWithNoteMessageParser:(id)arg1 slateManager:(id)arg2 notePresentationManager:(id)arg3 bannerPresentationManager:(id)arg4 freeTierTooltipPresenter:(id)arg5 snackbarPresenter:(id)arg6 actionFactory:(id)arg7 serviceLogger:(id)arg8 carDetector:(id)arg9 offlineModeState:(id)arg10 nowPlayingManagerRegistry:(id)arg11 crashReporter:(id)arg12 authController:(id)arg13;
 

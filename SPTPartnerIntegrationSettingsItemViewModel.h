@@ -16,10 +16,10 @@
     CDUnknownBlockType _updateHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType updateHandler; // @synthesize updateHandler=_updateHandler;
 @property(readonly, nonatomic) SPTPartnerIntegrationAuthorizer *authorizer; // @synthesize authorizer=_authorizer;
 @property(readonly, nonatomic) id <SPTPartnerNavigationIntegration><SPTPartnerIntegrationAuthorizable> integration; // @synthesize integration=_integration;
-- (void).cxx_destruct;
 - (void)tapButton;
 @property(readonly, nonatomic, getter=isButtonEnabled) _Bool buttonEnabled;
 @property(readonly, copy, nonatomic) NSString *buttonTitle;

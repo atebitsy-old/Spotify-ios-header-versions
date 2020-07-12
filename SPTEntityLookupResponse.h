@@ -18,12 +18,12 @@
 }
 
 + (id)responseWithResult:(unsigned long long)arg1 object:(id)arg2 error:(id)arg3 token:(id)arg4 itemFromCache:(_Bool)arg5;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool itemFromCache; // @synthesize itemFromCache=_itemFromCache;
 @property(readonly, nonatomic) SPTEntityCancelationToken *token; // @synthesize token=_token;
 @property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
 @property(readonly, nonatomic) id object; // @synthesize object=_object;
 @property(readonly, nonatomic) unsigned long long result; // @synthesize result=_result;
-- (void).cxx_destruct;
 - (id)initWithResult:(unsigned long long)arg1 object:(id)arg2 error:(id)arg3 token:(id)arg4 itemFromCache:(_Bool)arg5;
 
 @end

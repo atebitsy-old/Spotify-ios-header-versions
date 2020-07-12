@@ -15,8 +15,8 @@
     SPTAccountSettingsViewModel *_viewModel;
 }
 
-@property(retain, nonatomic) SPTAccountSettingsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTAccountSettingsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void)viewControllerWantsPush:(id)arg1 animated:(_Bool)arg2;
 - (void)cellsDidUpdate;
 - (double)heightForRow:(long long)arg1;

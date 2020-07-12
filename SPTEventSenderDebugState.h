@@ -23,6 +23,7 @@
     NSSet *_failedMessages;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *failedMessages; // @synthesize failedMessages=_failedMessages;
 @property(copy, nonatomic) NSSet *delayedMessages; // @synthesize delayedMessages=_delayedMessages;
 @property(copy, nonatomic) NSSet *deliveredMessages; // @synthesize deliveredMessages=_deliveredMessages;
@@ -32,7 +33,6 @@
 @property(nonatomic) unsigned long long numberOfDeliveredBatches; // @synthesize numberOfDeliveredBatches=_numberOfDeliveredBatches;
 @property(nonatomic) unsigned long long numberOfStartedBatches; // @synthesize numberOfStartedBatches=_numberOfStartedBatches;
 @property(retain, nonatomic) INSEventSender *eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (id)identifierForMessageNode:(id)arg1;
 - (void)didRetryBatch:(id)arg1;
 - (void)didFailBatch:(id)arg1;

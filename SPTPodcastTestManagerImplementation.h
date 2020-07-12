@@ -19,12 +19,13 @@
     SPTPodcastFeatureProperties *_featureProperties;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isPodcastFeatureEnabled) _Bool podcastFeatureEnabled; // @synthesize podcastFeatureEnabled=_podcastFeatureEnabled;
 @property(readonly, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (_Bool)calculatePodcastFeatureEnabled;
+@property(readonly, nonatomic, getter=isPodcastShowPageHTMLDescriptionEnabled) _Bool podcastShowPageHTMLDescriptionEnabled;
 @property(readonly, nonatomic, getter=isPodcastShowPageSearchEnabled) _Bool podcastShowPageSearchEnabled;
 @property(readonly, nonatomic, getter=isPodcastNewPlaybackSpeedsEnabled) _Bool podcastNewPlaybackSpeedsEnabled;
 @property(readonly, nonatomic, getter=isPodcastDataAccessLayerPodcastRequestEnabled) _Bool podcastDataAccessLayerPodcastRequestEnabled;

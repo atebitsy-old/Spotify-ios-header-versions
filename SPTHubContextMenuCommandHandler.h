@@ -24,6 +24,7 @@
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) NSMutableSet *presentedContextMenuPresenters; // @synthesize presentedContextMenuPresenters=_presentedContextMenuPresenters;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
 @property(readonly, copy, nonatomic) NSString *contextMenuLogContext; // @synthesize contextMenuLogContext=_contextMenuLogContext;
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
-- (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (_Bool)showTrackContextMenuForCommand:(id)arg1 event:(id)arg2;
 - (void)handleCommand:(id)arg1 event:(id)arg2;

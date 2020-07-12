@@ -19,11 +19,11 @@
     id <SPTNavigationList> _list;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNavigationList> list; // @synthesize list=_list;
 @property(retain, nonatomic) SPTNavigationListDataLoader *listDataLoader; // @synthesize listDataLoader=_listDataLoader;
 @property(retain, nonatomic) id <SPTNavigationListIdentifierFromABTestSource> navigationABTestSource; // @synthesize navigationABTestSource=_navigationABTestSource;
 @property(readonly, nonatomic) NSMutableDictionary *listMap; // @synthesize listMap=_listMap;
-- (void).cxx_destruct;
 - (id)userPolicyValue;
 - (id)settingsValue;
 - (id)defaultList;

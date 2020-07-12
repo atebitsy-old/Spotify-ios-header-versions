@@ -20,11 +20,11 @@
     id <SPTAlertInterface> _alertController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAlertInterface> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(copy, nonatomic) NSURLRequest *request; // @synthesize request=_request;
 @property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)webView:(id)arg1 didFailProvisionalNavigation:(id)arg2 withError:(id)arg3;

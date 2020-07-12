@@ -22,6 +22,7 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) SPTExternalIntegrationPlatformLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTRadioAPI> radioAPI; // @synthesize radioAPI=_radioAPI;
 @property(readonly, nonatomic) id <SPTRadioManager> radioManager; // @synthesize radioManager=_radioManager;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (_Bool)thumbIsDownForTrackWithURI:(id)arg1;

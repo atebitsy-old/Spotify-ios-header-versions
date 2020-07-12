@@ -16,11 +16,11 @@
     SPTLyricsLineSet *_lyrics;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isLyricsEastAsian; // @synthesize isLyricsEastAsian=_isLyricsEastAsian;
 @property(readonly, nonatomic) _Bool isVocalRemovalAvailable; // @synthesize isVocalRemovalAvailable=_isVocalRemovalAvailable;
 @property(readonly, nonatomic) SPTLyricsLineSet *lyrics; // @synthesize lyrics=_lyrics;
 @property(readonly, nonatomic) SPTLyricsV2Colors *colors; // @synthesize colors=_colors;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

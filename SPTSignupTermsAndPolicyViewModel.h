@@ -22,12 +22,12 @@
     SPTSignupTermsAndPolicyCopyProvider *_termsAndPolicyMessageProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyCopyProvider *termsAndPolicyMessageProvider; // @synthesize termsAndPolicyMessageProvider=_termsAndPolicyMessageProvider;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTSignupTermsAndPolicyViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTSignupTermsAndPolicyManager *termsAndPolicyManager; // @synthesize termsAndPolicyManager=_termsAndPolicyManager;
 @property(nonatomic) __weak id <SPTSignupTermsAndPolicyViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)safariViewControllerDidFinish:(id)arg1;
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 - (void)showTermsAndPolicyDialog;

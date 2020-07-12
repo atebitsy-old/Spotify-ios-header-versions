@@ -18,10 +18,10 @@
     id <SPTViewLogger> _viewLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, copy, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logLoadingCancelledWithDataSource:(unsigned long long)arg1;
 - (void)logLoadingFailedWithDataSource:(unsigned long long)arg1;
 - (void)logLoadingCompletedWithDataSource:(unsigned long long)arg1;

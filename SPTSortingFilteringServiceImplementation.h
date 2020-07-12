@@ -18,9 +18,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-- (void).cxx_destruct;
 - (id)provideSortingFilteringUIFactory;
 - (id)provideSortingFilteringPreferencesForEntityURL:(id)arg1;
 - (void)configureWithServices:(id)arg1;

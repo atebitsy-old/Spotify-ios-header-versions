@@ -16,11 +16,11 @@
     NSString *_deviceModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *deviceModel; // @synthesize deviceModel=_deviceModel;
 @property(readonly, nonatomic) NSString *deviceBrand; // @synthesize deviceBrand=_deviceBrand;
 @property(readonly, nonatomic) unsigned long long commandType; // @synthesize commandType=_commandType;
 @property(readonly, nonatomic) unsigned long long commandName; // @synthesize commandName=_commandName;
-- (void).cxx_destruct;
 - (id)initWithCommandName:(unsigned long long)arg1 commandType:(unsigned long long)arg2 deviceBrand:(id)arg3 deviceModel:(id)arg4;
 
 @end

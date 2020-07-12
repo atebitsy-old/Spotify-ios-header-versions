@@ -17,12 +17,12 @@
     long long _type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isFollowing; // @synthesize isFollowing=_isFollowing;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) NSURL *imageUrl; // @synthesize imageUrl=_imageUrl;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)description;
 - (id)initWithDictionary:(id)arg1;
 

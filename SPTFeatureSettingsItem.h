@@ -24,6 +24,7 @@
 }
 
 + (id)keyPathsForValuesAffectingRequiresRestart;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeatureSettingsUIProvider> UIProvider; // @synthesize UIProvider=_UIProvider;
 @property(copy, nonatomic) CDUnknownBlockType resetAction; // @synthesize resetAction=_resetAction;
 @property(nonatomic) _Bool hasChangeRequiringRestart; // @synthesize hasChangeRequiringRestart=_hasChangeRequiringRestart;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) id value; // @synthesize value=_value;
 @property(readonly, copy, nonatomic) NSString *label; // @synthesize label=_label;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)description;
 @property(readonly, nonatomic) _Bool requiresRestart;
 - (void)reset;

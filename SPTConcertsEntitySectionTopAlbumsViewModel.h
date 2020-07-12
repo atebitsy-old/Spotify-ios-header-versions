@@ -21,13 +21,13 @@
     SPTConcertsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTConcertsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTConcertsEntityAlbumRowViewModel *albumRowViewModel; // @synthesize albumRowViewModel=_albumRowViewModel;
 @property(retain, nonatomic) NSArray *topAlbums; // @synthesize topAlbums=_topAlbums;
 @property(readonly, copy, nonatomic) NSString *titleText; // @synthesize titleText=_titleText;
-- (void).cxx_destruct;
 - (id)provideAlbumCarouselViewModel;
 - (id)viewModelForRow:(long long)arg1;
 @property(readonly, nonatomic) _Bool nestedRows;

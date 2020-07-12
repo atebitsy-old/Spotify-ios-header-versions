@@ -13,8 +13,8 @@
     NSString *_sectionId;
 }
 
-@property(readonly, copy, nonatomic) NSString *sectionId; // @synthesize sectionId=_sectionId;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *sectionId; // @synthesize sectionId=_sectionId;
 - (id)initWithSectionId:(id)arg1;
 
 @end

@@ -20,13 +20,13 @@
 }
 
 + (id)collectionButtonWithTestManager:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(retain, nonatomic) UIColor *addedIconColor; // @synthesize addedIconColor=_addedIconColor;
 - (void)setIconColor:(id)arg1;
 - (id)iconColor;
 - (void)setIconSize:(struct CGSize)arg1;
 - (struct CGSize)iconSize;
-- (void).cxx_destruct;
 - (id)accessibilityHint;
 - (id)accessibilityValue;
 - (id)accessibilityLabel;

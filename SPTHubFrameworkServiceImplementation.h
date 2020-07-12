@@ -29,6 +29,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHubsRendererFactoryImplementation *hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(nonatomic) __weak id <SPTShareFeature> shareService; // @synthesize shareService=_shareService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -41,7 +42,6 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-- (void).cxx_destruct;
 - (id)provideHubsRendererFactory;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

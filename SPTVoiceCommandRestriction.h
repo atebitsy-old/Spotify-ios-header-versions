@@ -14,9 +14,9 @@
     NSString *_heading;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *heading; // @synthesize heading=_heading;
 @property(readonly, nonatomic) NSString *detail; // @synthesize detail=_detail;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 - (id)initWithDetail:(id)arg1 heading:(id)arg2;
 

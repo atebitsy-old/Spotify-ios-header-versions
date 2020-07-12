@@ -17,9 +17,9 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (void)applicationDidLaunchFromGoogleMapsDeepLink;
 - (id)externalURL;
 @property(readonly, nonatomic, getter=isInstalled) _Bool installed;

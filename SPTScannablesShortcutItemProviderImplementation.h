@@ -21,12 +21,12 @@
     UIViewController *_scanViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController *scanViewController; // @synthesize scanViewController=_scanViewController;
 @property(retain, nonatomic) id <SPTScannablesUserInterfaceFactory> userInterfaceFactory; // @synthesize userInterfaceFactory=_userInterfaceFactory;
 @property(retain, nonatomic) SPTScannablesAuthorizationRequester *authorizationRequester; // @synthesize authorizationRequester=_authorizationRequester;
 @property(retain, nonatomic) id <SPTScannablesTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTScannablesShortcutItemProviderUpdateDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)cameraAuthorizationStatusDidChange:(_Bool)arg1;
 - (id)targetURIForQuickActionItem;
 - (_Bool)handleShortcutItem;

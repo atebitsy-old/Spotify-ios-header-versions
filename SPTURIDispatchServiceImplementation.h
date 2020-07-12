@@ -21,12 +21,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTURISubtypeRegistryImplementation *URISubtypeRegistry; // @synthesize URISubtypeRegistry=_URISubtypeRegistry;
 @property(retain, nonatomic) SPTLinkDispatcherImplementation *linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTURISubtypeHandlerRegistrationToken> activateLinkHandlerToken; // @synthesize activateLinkHandlerToken=_activateLinkHandlerToken;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-- (void).cxx_destruct;
 - (id)provideURISubtypeRegistry;
 - (id)provideLinkDispatcher;
 - (id)provideDefaultLinkDispatcher;

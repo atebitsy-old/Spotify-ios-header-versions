@@ -24,6 +24,7 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double iconMargin; // @synthesize iconMargin=_iconMargin;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(nonatomic) long long lineBreakMode; // @synthesize lineBreakMode=_lineBreakMode;
 @property(retain, nonatomic) SPTEncoreTypeStyle *textStyle; // @synthesize textStyle=_textStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

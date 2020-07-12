@@ -21,13 +21,13 @@
     SPTCarmageddonMotionDetectionLoaderResult *_predictionResult;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCarmageddonMotionDetectionLoaderResult *predictionResult; // @synthesize predictionResult=_predictionResult;
 @property(readonly, nonatomic) __weak UIApplication *application; // @synthesize application=_application;
 @property(readonly, nonatomic) NSUserDefaults *standardUserDefaults; // @synthesize standardUserDefaults=_standardUserDefaults;
 @property(readonly, nonatomic) SPTCarmageddonFeedbackPresenter *surveyPresenter; // @synthesize surveyPresenter=_surveyPresenter;
 @property(readonly, nonatomic) SPTCarmageddonFeedbackLoader *feedbackLoader; // @synthesize feedbackLoader=_feedbackLoader;
 @property(readonly, nonatomic) SPTCarmageddonMotionBasedStateDetector *motionBasedCarDetector; // @synthesize motionBasedCarDetector=_motionBasedCarDetector;
-- (void).cxx_destruct;
 - (void)carDetector:(id)arg1 didReceivePredictionResult:(id)arg2;
 - (void)carDetector:(id)arg1 carDetectionStateDidChange:(id)arg2;
 - (_Bool)hasEnoughTimePassedSinceLastSurveyPresentation;

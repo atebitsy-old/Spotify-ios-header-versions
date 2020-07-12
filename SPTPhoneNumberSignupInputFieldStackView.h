@@ -20,11 +20,11 @@
     SPTPhoneNumberSignupInputFieldStackViewStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPhoneNumberSignupInputFieldStackViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) __weak id <SPTPhoneNumberSignupInputFieldStackViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSMutableArray *codeInputFields; // @synthesize codeInputFields=_codeInputFields;
 @property(nonatomic) _Bool inErrorMode; // @synthesize inErrorMode=_inErrorMode;
-- (void).cxx_destruct;
 - (void)codeInputFieldDidChangeText:(id)arg1;
 - (void)didEndEditing;
 - (void)didUpdateInputFields;

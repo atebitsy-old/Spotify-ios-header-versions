@@ -20,6 +20,7 @@
 }
 
 + (id)messageWithBannerSessionId:(id)arg1 eventType:(id)arg2 eventReason:(id)arg3 sessionLengthSeconds:(long long)arg4 sessionType:(id)arg5 shownApps:(id)arg6 connectedApp:(id)arg7;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *connectedAppValue; // @synthesize connectedAppValue=_connectedAppValue;
 @property(copy, nonatomic) NSArray *shownAppsValue; // @synthesize shownAppsValue=_shownAppsValue;
 @property(copy, nonatomic) NSString *sessionTypeValue; // @synthesize sessionTypeValue=_sessionTypeValue;
@@ -27,7 +28,6 @@
 @property(copy, nonatomic) NSString *eventReasonValue; // @synthesize eventReasonValue=_eventReasonValue;
 @property(copy, nonatomic) NSString *eventTypeValue; // @synthesize eventTypeValue=_eventTypeValue;
 @property(copy, nonatomic) NSString *bannerSessionIdValue; // @synthesize bannerSessionIdValue=_bannerSessionIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

@@ -13,8 +13,8 @@
     SPTTrackCreditsModel *_creditsModel;
 }
 
-@property(retain, nonatomic) SPTTrackCreditsModel *creditsModel; // @synthesize creditsModel=_creditsModel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTTrackCreditsModel *creditsModel; // @synthesize creditsModel=_creditsModel;
 - (id)editURL;
 - (_Bool)isEditCell:(id)arg1;
 - (id)urlForItem:(id)arg1;

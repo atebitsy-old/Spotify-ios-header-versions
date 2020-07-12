@@ -6,19 +6,20 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSObject, UIViewController;
-@protocol OS_dispatch_queue, SPTNowPlayingManagerObserver;
+@class OS_dispatch_queue, UIViewController;
+@protocol SPTNowPlayingManagerObserver;
 
 @protocol SPTNowPlayingManager <NSObject>
-@property(nonatomic, getter=isHidden) _Bool hidden;
-@property(readonly, nonatomic) UIViewController *nowPlayingViewController;
-@property(readonly, nonatomic) _Bool barHidden;
-@property(readonly, nonatomic) _Bool shouldHideBar;
 - (void)setCurrentToggleMode:(unsigned long long)arg1 animated:(_Bool)arg2;
 - (unsigned long long)currentToggleMode;
+@property(nonatomic) _Bool hidden;
+- (_Bool)isHidden;
 - (void)setHidden:(_Bool)arg1 animated:(_Bool)arg2 completion:(void (^)(void))arg3;
 - (void)removeObserver:(id <SPTNowPlayingManagerObserver>)arg1;
-- (void)addObserver:(id <SPTNowPlayingManagerObserver>)arg1 on:(NSObject<OS_dispatch_queue> *)arg2;
+- (void)addObserver:(id <SPTNowPlayingManagerObserver>)arg1 on:(OS_dispatch_queue *)arg2;
 - (void)setHidden:(_Bool)arg1 animated:(_Bool)arg2;
+@property(nonatomic, readonly) UIViewController *nowPlayingViewController;
+@property(nonatomic, readonly) _Bool barHidden;
+@property(nonatomic, readonly) _Bool shouldHideBar;
 @end
 

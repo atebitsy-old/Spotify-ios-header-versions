@@ -25,6 +25,7 @@
     long long _wirelessConnectionType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long wirelessConnectionType; // @synthesize wirelessConnectionType=_wirelessConnectionType;
 @property(copy, nonatomic) NSString *activeDeviceName; // @synthesize activeDeviceName=_activeDeviceName;
 @property(nonatomic, getter=isAvailable) _Bool available; // @synthesize available=_available;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) AVRouteDetector *routeDetector; // @synthesize routeDetector=_routeDetector;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

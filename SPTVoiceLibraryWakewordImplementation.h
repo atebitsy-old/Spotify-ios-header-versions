@@ -28,6 +28,7 @@
     NSString *_sessionIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *sessionIdentifier; // @synthesize sessionIdentifier=_sessionIdentifier;
 @property(retain, nonatomic) id <SPTVoiceLibraryWakewordProviderLogger> logger; // @synthesize logger=_logger;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
@@ -39,7 +40,6 @@
 @property(nonatomic) struct SnsrStream_ *audioStream; // @synthesize audioStream=_audioStream;
 @property(nonatomic) struct SnsrSession_ *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTVoiceLibraryWakewordDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(id)arg2;
 - (void)audioRecorderDidStartRecording:(id)arg1;
 - (void)audioRecorder:(id)arg1 didFailWithError:(id)arg2;

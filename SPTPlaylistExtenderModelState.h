@@ -24,6 +24,7 @@
     NSError *_error;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(nonatomic) _Bool offline; // @synthesize offline=_offline;
 @property(nonatomic) _Bool gotSubscription; // @synthesize gotSubscription=_gotSubscription;
@@ -34,7 +35,6 @@
 @property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 @property(copy, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(nonatomic) unsigned long long preferredNumberOfTracks; // @synthesize preferredNumberOfTracks=_preferredNumberOfTracks;
-- (void).cxx_destruct;
 - (id)initWithPlaylistName:(id)arg1 playlistTracks:(id)arg2 recommendations:(id)arg3 replaceCurrentItems:(_Bool)arg4 loading:(_Bool)arg5 gotSubscription:(_Bool)arg6 preferredNumberOfTracks:(unsigned long long)arg7 playlistURL:(id)arg8 error:(id)arg9 offline:(_Bool)arg10;
 - (id)initWithState:(id)arg1;
 

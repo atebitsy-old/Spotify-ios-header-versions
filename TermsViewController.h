@@ -23,12 +23,12 @@
     id <SPTAlertController> _alertController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) NSURLRequest *initialRequest; // @synthesize initialRequest=_initialRequest;
 @property(retain, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (id)URI;

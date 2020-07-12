@@ -16,10 +16,10 @@
     long long _index;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long index; // @synthesize index=_index;
 @property(readonly, nonatomic) SPTNRFItem *feedItem; // @synthesize feedItem=_feedItem;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logInteractionWithInteractionType:(id)arg1 userIntent:(id)arg2;
 - (void)logUserPausedPlaybackInteraction;
 - (void)logUserStartedPlaybackInteraction;

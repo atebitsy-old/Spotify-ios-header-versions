@@ -23,6 +23,7 @@
     UILabel *_queueLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *queueLabel; // @synthesize queueLabel=_queueLabel;
 @property(retain, nonatomic) UILabel *repeatLabel; // @synthesize repeatLabel=_repeatLabel;
 @property(retain, nonatomic) UILabel *shuffleLabel; // @synthesize shuffleLabel=_shuffleLabel;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) UIButton *queueButton; // @synthesize queueButton=_queueButton;
 @property(retain, nonatomic) SPTNowPlayingButton<SPTNowPlayingRepeatButton> *repeatButton; // @synthesize repeatButton=_repeatButton;
 @property(retain, nonatomic) SPTNowPlayingButton<SPTNowPlayingShuffleButton> *shuffleButton; // @synthesize shuffleButton=_shuffleButton;
-- (void).cxx_destruct;
 - (double)contextMenuHeight;
 - (void)updateRepeatButtonWithRepeatMode:(unsigned long long)arg1 isRadio:(_Bool)arg2;
 - (void)updateShuffleButton:(_Bool)arg1 disallowsToggleShuffle:(_Bool)arg2;

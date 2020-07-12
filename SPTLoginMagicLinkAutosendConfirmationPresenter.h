@@ -17,12 +17,12 @@
     SPTLoginSlideUpModalPresenter *_modalPresenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginSlideUpModalPresenter *modalPresenter; // @synthesize modalPresenter=_modalPresenter;
 @property(retain, nonatomic) SPTLoginSlideUpModalViewController *controller; // @synthesize controller=_controller;
 @property(readonly, nonatomic) SPTLoginAutosendLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTLoginOpenEmailAppController *emailAppController; // @synthesize emailAppController=_emailAppController;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)dismissDialog;
 - (void)didTapTryAnotherPasswordButton:(id)arg1;
 - (void)didTapOpenEmailButton:(id)arg1;

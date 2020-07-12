@@ -18,10 +18,10 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) id <SPTVideoTimestamper> timestamper; // @synthesize timestamper=_timestamper;
 @property(copy, nonatomic) NSArray *eventObservers; // @synthesize eventObservers=_eventObservers;
-- (void).cxx_destruct;
 - (void)didChangeSeekableWindow:(id)arg1;
 - (void)didChangeSubtitle:(id)arg1 atPosition:(double)arg2;
 - (void)didDropVideoFrames:(unsigned long long)arg1;

@@ -14,9 +14,9 @@
     double _verticalButtonMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double verticalButtonMargin; // @synthesize verticalButtonMargin=_verticalButtonMargin;
 @property(readonly, copy, nonatomic) NSArray *buttons; // @synthesize buttons=_buttons;
-- (void).cxx_destruct;
 - (void)rebuildConstraints;
 - (id)initWithButtons:(id)arg1;
 

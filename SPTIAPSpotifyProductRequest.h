@@ -15,8 +15,8 @@
 
 + (id)productRequestWithDataLoaderFactory:(id)arg1;
 + (id)productRequestWithHermesController:(id)arg1;
-@property(nonatomic) __weak id <SPTIAPSpotifyProductRequestDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTIAPSpotifyProductRequestDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)productIdentifiersFromResponseData:(id)arg1 error:(id *)arg2;
 - (void)start;
 

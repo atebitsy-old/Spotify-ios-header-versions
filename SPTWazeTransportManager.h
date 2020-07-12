@@ -19,11 +19,11 @@
     NSMutableDictionary *_customInfo;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *customInfo; // @synthesize customInfo=_customInfo;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic, getter=isConnected) _Bool connected; // @synthesize connected=_connected;
 @property(nonatomic) __weak id <SPTWazeTransportManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)wazeTransportDidReceiveWazeVersion:(id)arg1;
 - (void)wazeTransportDidUpdateConnection:(_Bool)arg1;
 - (void)wazeTransportDidReceiveMessage:(id)arg1;

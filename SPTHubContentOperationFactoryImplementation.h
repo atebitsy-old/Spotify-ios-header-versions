@@ -19,11 +19,11 @@
     id <CosmosFeature> _cosmosFeature;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(readonly, nonatomic) id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
-- (void).cxx_destruct;
 - (id)createHubs2MigrationContentOperation;
 - (id)createContentOperationContainerWithPagedContentOperation:(id)arg1;
 - (id)createPlaybackHighlightingContentOperationWithComponentModelURIResolver:(id)arg1;

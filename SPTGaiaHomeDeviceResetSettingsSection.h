@@ -20,6 +20,7 @@
     NSArray *_servedCells;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *servedCells; // @synthesize servedCells=_servedCells;
 @property(readonly, nonatomic) id <SPTGaiaHomeDeviceFlagsProvider> homeDeviceFlagProvider; // @synthesize homeDeviceFlagProvider=_homeDeviceFlagProvider;
 @property(readonly, nonatomic) id <SPTGaiaSettingsProvider> settingsProvider; // @synthesize settingsProvider=_settingsProvider;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
 @property(readonly, nonatomic) SPTSettingsTableViewCell *deviceInfoCell; // @synthesize deviceInfoCell=_deviceInfoCell;
 @property(readonly, nonatomic) SPTSettingsButtonTableViewCell *buttonCell; // @synthesize buttonCell=_buttonCell;
-- (void).cxx_destruct;
 - (void)automaticallyTransferOptionChanged:(id)arg1;
 - (void)didSelectRow:(long long)arg1;
 - (id)footerText;

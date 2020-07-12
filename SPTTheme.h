@@ -40,9 +40,9 @@
 + (void)preloadCatTheme;
 + (id)catThemeConfiguration;
 + (id)catTheme;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTReaderWriterMutableDictionary *resolvedFonts; // @synthesize resolvedFonts=_resolvedFonts;
 @property(retain, nonatomic) id <SPTThemeConfigurationResolver> fontResolver; // @synthesize fontResolver=_fontResolver;
-- (void).cxx_destruct;
 - (id)intervalForKey:(id)arg1 reportErrors:(_Bool)arg2;
 - (id)resolveIntervalForKey:(id)arg1;
 - (id)edgeInsetsForKey:(id)arg1 reportErrors:(_Bool)arg2;

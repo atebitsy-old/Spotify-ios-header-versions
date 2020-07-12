@@ -36,6 +36,7 @@
     NSString *_selectedReviewStatus;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *selectedReviewStatus; // @synthesize selectedReviewStatus=_selectedReviewStatus;
 @property(copy, nonatomic) NSArray *reviewStatus; // @synthesize reviewStatus=_reviewStatus;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
@@ -51,7 +52,6 @@
 @property(retain, nonatomic) UITextField *campaignIdTextField; // @synthesize campaignIdTextField=_campaignIdTextField;
 @property(retain, nonatomic) NSMutableArray *triggerMessages; // @synthesize triggerMessages=_triggerMessages;
 @property(retain, nonatomic) SPTInAppMessageQAToolViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;

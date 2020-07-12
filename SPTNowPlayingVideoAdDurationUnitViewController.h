@@ -23,13 +23,13 @@
     double _safeAreaBottomMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double safeAreaBottomMargin; // @synthesize safeAreaBottomMargin=_safeAreaBottomMargin;
 @property(nonatomic) double animationDuration; // @synthesize animationDuration=_animationDuration;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observer; // @synthesize observer=_observer;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIProgressView *durationProgressView; // @synthesize durationProgressView=_durationProgressView;
 @property(nonatomic) __weak id <SPTNowPlayingVideoControlsVisibilityDelegate> visibilityDelegate; // @synthesize visibilityDelegate=_visibilityDelegate;
-- (void).cxx_destruct;
 - (id)timeIntervalToAccessibilityString:(double)arg1;
 - (id)durationAccessibilityValue;
 - (void)adPlayerDisplayLinkFiredWithTrack:(id)arg1;

@@ -19,10 +19,10 @@
     long long _onDemandUserPolicyState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long onDemandUserPolicyState; // @synthesize onDemandUserPolicyState=_onDemandUserPolicyState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> onDemandUserPolicySignal; // @synthesize onDemandUserPolicySignal=_onDemandUserPolicySignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (_Bool)isInTrial;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupUserPolicySignal;

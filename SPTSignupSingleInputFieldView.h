@@ -31,6 +31,7 @@
     NSLayoutConstraint *_mainContainerRegularWidth;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(retain, nonatomic) NSLayoutConstraint *nextButtonTopMargin; // @synthesize nextButtonTopMargin=_nextButtonTopMargin;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (id)submitButton;
 @property(retain, nonatomic) NSString *transitionContextViewKey; // @synthesize transitionContextViewKey=_transitionContextViewKey;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 @property(readonly, nonatomic) UIView *animatableContentView;
 @property(readonly, nonatomic) GLUELabel *inputFieldDisclosureLabel;

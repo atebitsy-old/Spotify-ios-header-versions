@@ -20,10 +20,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *URITypeRegistries; // @synthesize URITypeRegistries=_URITypeRegistries;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)typeManagerForURI:(id)arg1;
 - (void)registerContextAwareURITypeManager:(id)arg1;
 - (id)provideContextDispatchPageForURI:(id)arg1 context:(id)arg2;

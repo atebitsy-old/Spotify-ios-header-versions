@@ -15,8 +15,8 @@
     NSMutableDictionary *_handlers;
 }
 
-@property(readonly, nonatomic) NSMutableDictionary *handlers; // @synthesize handlers=_handlers;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableDictionary *handlers; // @synthesize handlers=_handlers;
 - (id)decorateURLBuilder:(id)arg1;
 - (void)removeDecorationHandlerWithIdentifier:(id)arg1;
 - (void)addDecorationHandler:(CDUnknownBlockType)arg1 withIdentifier:(id)arg2;

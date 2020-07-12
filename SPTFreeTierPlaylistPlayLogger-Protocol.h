@@ -6,8 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSString, NSURL;
+
 @protocol SPTFreeTierPlaylistPlayLogger <NSObject>
-- (void)logPlayButtonPauseClicked;
-- (void)logPlayButtonPlayClicked;
+- (NSString *)logTrackSelectedAtIndex:(unsigned long long)arg1 trackURI:(NSURL *)arg2;
+- (NSString *)logPlayButtonPauseClicked;
+- (NSString *)logPlayButtonPlayClicked;
 @end
 

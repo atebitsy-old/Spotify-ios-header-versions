@@ -14,9 +14,9 @@
     double _moduleViewMaxWidth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double moduleViewMaxWidth; // @synthesize moduleViewMaxWidth=_moduleViewMaxWidth;
 @property(retain, nonatomic) UIView *moduleView; // @synthesize moduleView=_moduleView;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)prepareForReuse;
 

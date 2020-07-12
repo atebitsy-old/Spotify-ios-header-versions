@@ -18,11 +18,11 @@
     GLUEGradientStyle *_gradientOverlayStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEGradientStyle *gradientOverlayStyle; // @synthesize gradientOverlayStyle=_gradientOverlayStyle;
 @property(copy, nonatomic) UIColor *fadeOverlayColor; // @synthesize fadeOverlayColor=_fadeOverlayColor;
 @property(copy, nonatomic) UIColor *tintColor; // @synthesize tintColor=_tintColor;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToHeaderBackgroundStyle:(id)arg1;

@@ -17,9 +17,9 @@
     id <SPTPlaylistPlatformDataLoaderRequestToken> _tracksToken;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> tracksToken; // @synthesize tracksToken=_tracksToken;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> metadataToken; // @synthesize metadataToken=_metadataToken;
-- (void).cxx_destruct;
 - (void)cancel;
 - (void)dealloc;
 - (id)initWithMetadataToken:(id)arg1 tracksToken:(id)arg2;

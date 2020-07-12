@@ -15,10 +15,10 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *URLTemplate; // @synthesize URLTemplate=_URLTemplate;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, nonatomic) NSData *projectionID; // @synthesize projectionID=_projectionID;
-- (void).cxx_destruct;
 - (_Bool)isEqualToProjection:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;

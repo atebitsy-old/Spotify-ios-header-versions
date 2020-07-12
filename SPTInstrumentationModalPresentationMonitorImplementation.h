@@ -19,11 +19,11 @@
     NSMapTable *_modalPageStreams;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *modalPageStreams; // @synthesize modalPageStreams=_modalPageStreams;
 @property(nonatomic) __weak id <SPTInstrumentationServiceMessagingHandler> messageHandler; // @synthesize messageHandler=_messageHandler;
 @property(retain, nonatomic) SPTInstrumentationPageStreamFactory *pageStreamFactory; // @synthesize pageStreamFactory=_pageStreamFactory;
 @property(retain, nonatomic) SPTInstrumentationStackedPageStream *pageStream; // @synthesize pageStream=_pageStream;
-- (void).cxx_destruct;
 - (void)didDismissModalViewController:(id)arg1;
 - (void)didPresentModalViewController:(id)arg1;
 - (id)initWithStackedPageStream:(id)arg1 pageStreamFactory:(id)arg2 messageHandler:(id)arg3;

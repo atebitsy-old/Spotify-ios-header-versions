@@ -26,6 +26,7 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUETrackAccessoryLabelStyle *accessoryLabelStyle; // @synthesize accessoryLabelStyle=_accessoryLabelStyle;
 @property(copy, nonatomic) UIColor *accessoryTitleColor; // @synthesize accessoryTitleColor=_accessoryTitleColor;
 @property(copy, nonatomic) UIColor *subtitleColor; // @synthesize subtitleColor=_subtitleColor;
@@ -38,7 +39,6 @@
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 @property(nonatomic) double imageCornerRadius; // @synthesize imageCornerRadius=_imageCornerRadius;
-- (void).cxx_destruct;
 - (_Bool)isEqualToEpisodeViewStyle:(id)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

@@ -11,6 +11,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageFactory
     // Error parsing type: , name: volumeUIFactory
+    // Error parsing type: , name: canShowNotch
     // Error parsing type: , name: $__lazy_storage_$_mainHeaderView
     // Error parsing type: , name: $__lazy_storage_$_tableViewContainerView
     // Error parsing type: , name: $__lazy_storage_$_tableView

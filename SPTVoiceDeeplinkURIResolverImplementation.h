@@ -17,9 +17,9 @@
     id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(readonly, nonatomic) id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
-- (void).cxx_destruct;
 - (void)resolveDeeplinkWithCommand:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)initWithEntityService:(id)arg1 podcastEntityDataLoader:(id)arg2;
 

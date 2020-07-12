@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTRecoverAccountCoordinator;
-@protocol SPTContainerService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTRecoverAccountService, SPTUBIService, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@protocol SPTContainerService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTRecoverAccountService, SPTUBIService, _TtP14ProfileFeature17SPTProfileService_;
 
 @interface SPTRecoverAccountSessionServiceImplementation : NSObject <SPTRecoverAccountURIHandlerObserver, SPTService>
 {
@@ -20,20 +20,20 @@
     id <SPTContainerService> _containerService;
     id <SPTUBIService> _ubiService;
     id <SPTLoginService> _loginService;
-    id <_TtP16ProfileV2Feature19SPTProfileV2Service_> _profileService;
+    id <_TtP14ProfileFeature17SPTProfileService_> _profileService;
     SPTRecoverAccountCoordinator *_coordinator;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRecoverAccountCoordinator *coordinator; // @synthesize coordinator=_coordinator;
-@property(nonatomic) __weak id <_TtP16ProfileV2Feature19SPTProfileV2Service_> profileService; // @synthesize profileService=_profileService;
+@property(nonatomic) __weak id <_TtP14ProfileFeature17SPTProfileService_> profileService; // @synthesize profileService=_profileService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTRecoverAccountService> recoverAccountService; // @synthesize recoverAccountService=_recoverAccountService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-- (void).cxx_destruct;
 - (void)URIHandler:(id)arg1 didFinishLoggingInWithURI:(id)arg2;
 - (void)unload;
 - (void)load;

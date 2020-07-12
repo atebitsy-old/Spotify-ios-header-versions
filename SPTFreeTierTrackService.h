@@ -28,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(retain, nonatomic) SPTFreeTierTrackHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -42,7 +43,6 @@
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
-- (void).cxx_destruct;
 - (void)configureMasterFeatureFlag:(id)arg1;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;

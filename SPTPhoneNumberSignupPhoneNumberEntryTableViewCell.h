@@ -18,11 +18,11 @@
     SPTPhoneNumberSignupPhoneNumberEntryTableViewCellStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryTableViewCellStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIView *verticalSeparator; // @synthesize verticalSeparator=_verticalSeparator;
 @property(retain, nonatomic) UITextField *phoneNumberTextField; // @synthesize phoneNumberTextField=_phoneNumberTextField;
 @property(retain, nonatomic) GLUELabel *callingCodeLabel; // @synthesize callingCodeLabel=_callingCodeLabel;
-- (void).cxx_destruct;
 - (void)setPhoneNumberTextFieldAccessibilityIdentifier:(id)arg1;
 - (void)setCallingCodeAccessibilityIdentifier:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;

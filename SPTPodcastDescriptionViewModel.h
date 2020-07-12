@@ -17,10 +17,10 @@
     struct _NSRange _descriptionAttributionRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange descriptionAttributionRange; // @synthesize descriptionAttributionRange=_descriptionAttributionRange;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (void)configureDescriptionTextForPodcast:(id)arg1;
 - (long long)identifier;
 - (void)updateWithPodcastPlayer:(id)arg1;

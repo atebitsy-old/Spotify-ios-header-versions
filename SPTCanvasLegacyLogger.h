@@ -37,6 +37,7 @@
 }
 
 + (id)appStateForForegroundObserver:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isDataSaverEnabled) _Bool dataSaverEnabled; // @synthesize dataSaverEnabled=_dataSaverEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> dataSaverFeatureFlagSignal; // @synthesize dataSaverFeatureFlagSignal=_dataSaverFeatureFlagSignal;
 @property(nonatomic) _Bool isPlayingRemotely; // @synthesize isPlayingRemotely=_isPlayingRemotely;
@@ -52,7 +53,6 @@
 @property(readonly, nonatomic) SPTCanvasLoadStateTracker *loadStateTracker; // @synthesize loadStateTracker=_loadStateTracker;
 @property(readonly, nonatomic) SPTCanvasTrackCheckerImplementation *trackChecker; // @synthesize trackChecker=_trackChecker;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)audioStateForPlayerState:(id)arg1;
 - (id)canvasIdForPlayerState:(id)arg1;
 - (_Bool)isPlayerStatePlaying:(id)arg1;

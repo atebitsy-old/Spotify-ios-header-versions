@@ -22,6 +22,7 @@
     struct CGSize _verifiedCheckSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double verifiedCheckShadowOpacity; // @synthesize verifiedCheckShadowOpacity=_verifiedCheckShadowOpacity;
 @property(nonatomic) unsigned long long verifiedCheckStarPoints; // @synthesize verifiedCheckStarPoints=_verifiedCheckStarPoints;
 @property(retain, nonatomic) UIColor *verifiedCheckShadowColor; // @synthesize verifiedCheckShadowColor=_verifiedCheckShadowColor;
@@ -30,7 +31,6 @@
 @property(nonatomic) struct CGSize verifiedCheckSize; // @synthesize verifiedCheckSize=_verifiedCheckSize;
 @property(nonatomic) struct CGSize verifiedCheckInnerSize; // @synthesize verifiedCheckInnerSize=_verifiedCheckInnerSize;
 @property(nonatomic) struct CGSize verifiedCheckIconSize; // @synthesize verifiedCheckIconSize=_verifiedCheckIconSize;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

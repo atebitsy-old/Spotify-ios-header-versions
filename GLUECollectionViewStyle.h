@@ -16,9 +16,9 @@
     UIColor *_backgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) long long scrollIndicatorStyle; // @synthesize scrollIndicatorStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

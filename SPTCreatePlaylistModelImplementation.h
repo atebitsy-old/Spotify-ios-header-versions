@@ -20,12 +20,12 @@
     id <SPTPlaylistPlatformDataLoaderRequestToken> _numberOfPlaylistsSubscription;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> numberOfPlaylistsSubscription; // @synthesize numberOfPlaylistsSubscription=_numberOfPlaylistsSubscription;
 @property(retain, nonatomic) NSURL *folderURL; // @synthesize folderURL=_folderURL;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(nonatomic) __weak id <SPTCreatePlaylistModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long playlistNameMaxLength;
 - (void)renamePlaylistURL:(id)arg1 name:(id)arg2;
 - (void)createPlaylistWithName:(id)arg1;

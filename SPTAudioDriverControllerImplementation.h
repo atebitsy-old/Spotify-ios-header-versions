@@ -17,9 +17,9 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSMutableArray *mutableAudioDrivers; // @synthesize mutableAudioDrivers=_mutableAudioDrivers;
-- (void).cxx_destruct;
 - (void)audioDriverDidEnd:(id)arg1;
 - (id)createAudioDriverWithAudioDriverType:(long long)arg1;
 - (void)removeObserver:(id)arg1;

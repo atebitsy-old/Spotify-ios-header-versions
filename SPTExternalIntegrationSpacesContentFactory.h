@@ -14,14 +14,14 @@
     id <SPTExternalIntegrationPlaybackController> _playbackController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
-- (void).cxx_destruct;
 - (id)backgroundColorForSpacesItem:(id)arg1;
 - (id)sourceUriForSpacesItem:(id)arg1;
 - (id)sourceForSpacesItem:(id)arg1;
 - (_Bool)isSpacesBlockTrack:(id)arg1;
-- (_Bool)isSpacesBlockHeader:(id)arg1;
+- (_Bool)isSpacesBlockHeaderOrRow:(id)arg1;
 - (_Bool)isSpacesBlockPlayable:(id)arg1;
 - (id)rootItemTitleForURI:(id)arg1;
 - (id)imageDictionaryForSpaceItem:(id)arg1;
@@ -32,7 +32,7 @@
 - (id)contentFromSpacesItem:(id)arg1 onDemandSet:(id)arg2 testManager:(id)arg3;
 - (id)contentFromSpacesBlock:(id)arg1 identifier:(id)arg2 URI:(id)arg3 onDemandSet:(id)arg4 testManager:(id)arg5;
 - (id)contentListFromSpacesBlock:(id)arg1 onDemandSet:(id)arg2 testManager:(id)arg3;
-- (id)contentListFromSpacesList:(id)arg1 URI:(id)arg2 flattenBlocks:(_Bool)arg3 onDemandSet:(id)arg4 withTestManager:(id)arg5;
+- (id)contentListFromSpacesList:(id)arg1 URI:(id)arg2 onDemandSet:(id)arg3 withTestManager:(id)arg4;
 - (id)createPlaceholderSpacesContentForURI:(id)arg1;
 - (id)createSpacesContentForURI:(id)arg1 fromSpacesList:(id)arg2 onDemandSet:(id)arg3 withTestManager:(id)arg4;
 - (id)initWithOfflineManager:(id)arg1 playbackController:(id)arg2;

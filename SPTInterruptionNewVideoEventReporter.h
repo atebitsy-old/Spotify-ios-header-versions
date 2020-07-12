@@ -23,6 +23,7 @@
 }
 
 + (_Bool)isSASInterruption:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool started; // @synthesize started=_started;
 @property(nonatomic) unsigned long long quartilesPlayed; // @synthesize quartilesPlayed=_quartilesPlayed;
 @property(nonatomic) double trackDuration; // @synthesize trackDuration=_trackDuration;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <BMPlaybackTimeObservable> timeObservable; // @synthesize timeObservable=_timeObservable;
 @property(retain, nonatomic) id <BMPlaybackIdentity> currentIdentity; // @synthesize currentIdentity=_currentIdentity;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 - (void)logCompleteEvent;
 - (id)eventData;
 - (void)logEvent:(id)arg1;

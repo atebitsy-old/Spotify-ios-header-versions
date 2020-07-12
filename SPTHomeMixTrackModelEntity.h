@@ -21,6 +21,7 @@
 }
 
 + (id)parseTrackAffinities:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isRatedExplicit) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) NSURL *albumURL; // @synthesize albumURL=_albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, nonatomic) NSURL *albumImageURI; // @synthesize albumImageURI=_albumImageURI;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

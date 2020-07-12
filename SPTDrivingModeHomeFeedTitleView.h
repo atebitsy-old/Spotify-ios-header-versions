@@ -17,12 +17,12 @@
     NSString *_title;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) CAGradientLayer *gradient; // @synthesize gradient=_gradient;
 @property(retain, nonatomic) UIView *titleGradientView; // @synthesize titleGradientView=_titleGradientView;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)animateUpdateTitle:(id)arg1;
 - (void)setupTitleText:(id)arg1;

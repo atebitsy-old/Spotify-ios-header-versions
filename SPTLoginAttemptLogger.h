@@ -15,9 +15,9 @@
     NSMutableOrderedSet *_credentialsSet;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableOrderedSet *credentialsSet; // @synthesize credentialsSet=_credentialsSet;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logLoginAttemptWithUser:(id)arg1 success:(_Bool)arg2;
 - (void)userDidFailLoggingInWithUser:(id)arg1;
 - (void)userDidSucceedLoggingInWithUser:(id)arg1;

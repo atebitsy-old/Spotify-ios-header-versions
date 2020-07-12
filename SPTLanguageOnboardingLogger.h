@@ -17,11 +17,11 @@
     NSString *_renderType;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *renderType; // @synthesize renderType=_renderType;
 @property(retain, nonatomic) NSURL *errorDialogUri; // @synthesize errorDialogUri=_errorDialogUri;
 @property(retain, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logToggleInteractionWithIdentifier:(id)arg1 position:(unsigned long long)arg2 didSelect:(_Bool)arg3;
 - (void)logDialogInteractionWithTargetUri:(id)arg1;
 - (void)logInteractionWithTargetUri:(id)arg1 interactionType:(id)arg2 userIntent:(id)arg3;

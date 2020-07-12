@@ -15,8 +15,8 @@
     NSMapTable *_predicateToDelegate;
 }
 
-@property(retain, nonatomic) NSMapTable *predicateToDelegate; // @synthesize predicateToDelegate=_predicateToDelegate;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMapTable *predicateToDelegate; // @synthesize predicateToDelegate=_predicateToDelegate;
 - (id)delegateForURI:(id)arg1;
 - (void)registerDelegate:(id)arg1 withPredicate:(CDUnknownBlockType)arg2;
 - (id)init;

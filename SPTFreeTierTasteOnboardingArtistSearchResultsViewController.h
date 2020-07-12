@@ -16,8 +16,8 @@
     SPTFreeTierTasteOnboardingArtistSearchViewModel *_viewModel;
 }
 
-@property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistSearchViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistSearchViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)traitCollectionDidChange:(id)arg1;

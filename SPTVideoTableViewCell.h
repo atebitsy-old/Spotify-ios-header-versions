@@ -21,10 +21,10 @@
 }
 
 + (double)preferredHeight;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoCellContentView *videoCellView; // @synthesize videoCellView=_videoCellView;
 @property(nonatomic) long long tableViewThemeStyle; // @synthesize tableViewThemeStyle=_tableViewThemeStyle;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)layoutSubviews;
 - (void)setHighlighted:(_Bool)arg1 animated:(_Bool)arg2;

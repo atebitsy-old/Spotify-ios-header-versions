@@ -13,8 +13,8 @@
     NSString *_eventType;
 }
 
-@property(readonly, nonatomic) NSString *eventType; // @synthesize eventType=_eventType;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *eventType; // @synthesize eventType=_eventType;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithEventType:(id)arg1;
 

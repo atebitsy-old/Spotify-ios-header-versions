@@ -18,12 +18,12 @@
     NSString *_featureId;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
 @property(readonly, nonatomic) id <SPTUBIMobileLyricsEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (void)sendUserSawEnoughCharactersGabitoEventWithTrackURI:(id)arg1 lyricsFormat:(id)arg2;
 - (id)syncTheseLyricsFactoryForURI:(id)arg1;
 - (id)playPauseButtonFactoryForURI:(id)arg1;

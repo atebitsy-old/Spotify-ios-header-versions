@@ -16,9 +16,9 @@
     SPTGeniusCardsViewController *_cardsViewController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGeniusCardsViewController *cardsViewController; // @synthesize cardsViewController=_cardsViewController;
 @property(readonly, nonatomic) SPTGeniusService *geniusService; // @synthesize geniusService=_geniusService;
-- (void).cxx_destruct;
 - (id)componentViewForTrack:(id)arg1;
 - (void)loadContentForTrack:(id)arg1;
 - (_Bool)isEnabledForTrack:(id)arg1;

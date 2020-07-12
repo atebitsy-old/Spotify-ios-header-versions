@@ -27,6 +27,7 @@
     NSLayoutConstraint *_clearFiltersControlTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *clearFiltersControlTrailingConstraint; // @synthesize clearFiltersControlTrailingConstraint=_clearFiltersControlTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *clearFiltersControlLeadingConstraint; // @synthesize clearFiltersControlLeadingConstraint=_clearFiltersControlLeadingConstraint;
 @property(retain, nonatomic) UIView<SPTSortingFilteringClearFiltersControl> *clearFiltersControl; // @synthesize clearFiltersControl=_clearFiltersControl;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) SPTYourLibraryMusicSearchPassthroughView *containerView; // @synthesize containerView=_containerView;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSearchViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UITextField *searchField; // @synthesize searchField=_searchField;
-- (void).cxx_destruct;
 - (void)clearFiltersControl:(id)arg1 didSelectFilterRuleAtIndex:(long long)arg2;
 - (id)animationControllerForDismissedController:(id)arg1;
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;

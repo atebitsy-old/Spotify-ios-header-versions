@@ -28,6 +28,8 @@
     SPTCoreClientFeatures *_clientFeatures;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCoreClientFeatures *clientFeatures; // @synthesize clientFeatures=_clientFeatures;
 @property(readonly, nonatomic) SPTOfflineModeNotifier *offlineNotifier; // @synthesize offlineNotifier=_offlineNotifier;
 @property(readonly, nonatomic) __weak SPTAuthSession *session; // @synthesize session=_session;
@@ -37,8 +39,6 @@
 @property(nonatomic) _Bool isLoggedIn; // @synthesize isLoggedIn=_isLoggedIn;
 @property(nonatomic) _Bool isOffline; // @synthesize isOffline=_isOffline;
 @property(nonatomic) _Bool isOnline; // @synthesize isOnline=_isOnline;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (id)webTokenRequestForURL:(id)arg1;
 - (void)addObserver:(id)arg1 forKeyPath:(id)arg2 options:(unsigned long long)arg3 context:(void *)arg4;
 @property(readonly, nonatomic) NSString *currentAP;

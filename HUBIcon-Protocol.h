@@ -7,7 +7,7 @@
 @class NSString, UIColor, UIImage;
 
 @protocol HUBIcon
-@property(readonly, copy, nonatomic) NSString *identifier;
 - (UIImage *)imageWithSize:(struct CGSize)arg1 color:(UIColor *)arg2;
+@property(nonatomic, readonly) NSString *identifier;
 @end
 

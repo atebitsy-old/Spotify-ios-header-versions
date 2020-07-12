@@ -17,9 +17,9 @@
     SPTAccountProductStateMonitorController *_productStateMonitorController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAccountProductStateMonitorController *productStateMonitorController; // @synthesize productStateMonitorController=_productStateMonitorController;
 @property(retain, nonatomic) id <SPTAccountProductActivationController> productActivationController; // @synthesize productActivationController=_productActivationController;
-- (void).cxx_destruct;
 - (void)productActivationController:(id)arg1 didFailActivatingProduct:(long long)arg2 error:(id)arg3;
 - (void)productActivationController:(id)arg1 didFinishActivatingProduct:(long long)arg2;
 - (void)productActivationController:(id)arg1 didStartActivatingProduct:(long long)arg2;

@@ -26,6 +26,7 @@
     SPTHomeUIPromoV2PlayButton *_playButton;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUIPromoV2PlayButton *playButton; // @synthesize playButton=_playButton;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEImageStyle *logoImageStyle; // @synthesize logoImageStyle=_logoImageStyle;
@@ -39,7 +40,6 @@
 @property(nonatomic) long long imageDisplayState; // @synthesize imageDisplayState=_imageDisplayState;
 @property(nonatomic) _Bool showsPlayButton; // @synthesize showsPlayButton=_showsPlayButton;
 @property(nonatomic) __weak id <SPTHomeUIPromoV2PlayableInfoViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateAccessibility:(unsigned long long)arg1;
 @property(nonatomic) unsigned long long playButtonMode;
 @property(retain, nonatomic) UIImage *logoImage;

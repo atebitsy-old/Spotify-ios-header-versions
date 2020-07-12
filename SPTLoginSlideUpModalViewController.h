@@ -21,13 +21,13 @@
     UITapGestureRecognizer *_tapRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapRecognizer; // @synthesize tapRecognizer=_tapRecognizer;
 @property(retain, nonatomic) NSLayoutConstraint *containerViewYOffsetConstraint; // @synthesize containerViewYOffsetConstraint=_containerViewYOffsetConstraint;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIView *contentContainer; // @synthesize contentContainer=_contentContainer;
 @property(retain, nonatomic) UIView *dimmedBackground; // @synthesize dimmedBackground=_dimmedBackground;
 @property(nonatomic) __weak id <SPTLoginAutosendLinkModalViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)animationControllerForDismissedController:(id)arg1;
 - (id)animationControllerForPresentedController:(id)arg1 presentingController:(id)arg2 sourceController:(id)arg3;
 - (void)didTapDimmedBackground:(id)arg1;

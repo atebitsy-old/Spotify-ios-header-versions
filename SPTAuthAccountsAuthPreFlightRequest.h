@@ -20,12 +20,12 @@
     NSMutableData *_responseData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableData *responseData; // @synthesize responseData=_responseData;
 @property(retain, nonatomic) NSHTTPCookie *cookie; // @synthesize cookie=_cookie;
 @property(copy, nonatomic) CDUnknownBlockType callback; // @synthesize callback=_callback;
 @property(readonly, nonatomic) NSURL *authURL; // @synthesize authURL=_authURL;
 @property(readonly, nonatomic) NSString *redirectURI; // @synthesize redirectURI=_redirectURI;
-- (void).cxx_destruct;
 - (id)getErrorUrl:(id)arg1;
 - (void)URLSession:(id)arg1 task:(id)arg2 didCompleteWithError:(id)arg3;
 - (void)URLSession:(id)arg1 dataTask:(id)arg2 didReceiveData:(id)arg3;

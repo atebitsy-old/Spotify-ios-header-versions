@@ -24,13 +24,13 @@
 
 + (id)actionsFromTasks:(id)arg1;
 + (id)actionFromTask:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPAction *action; // @synthesize action=_action;
 @property(nonatomic) __weak id <SPTContextMenuTaskActionDelegate> taskActionDelegate; // @synthesize taskActionDelegate=_taskActionDelegate;
 @property(nonatomic, getter=isWaitingForUpdates) _Bool waitingForUpdates; // @synthesize waitingForUpdates=_waitingForUpdates;
 @property(nonatomic, getter=isValid) _Bool valid; // @synthesize valid=_valid;
 @property(nonatomic) __weak id senderObject; // @synthesize senderObject=_senderObject;
 @property(retain, nonatomic) SPTask *task; // @synthesize task=_task;
-- (void).cxx_destruct;
 - (_Bool)shouldDismissContextMenuBeforePerformingAction;
 - (id)performAction;
 - (id)logEventName;

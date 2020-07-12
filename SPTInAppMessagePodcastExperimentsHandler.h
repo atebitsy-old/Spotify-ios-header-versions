@@ -23,6 +23,7 @@
     unsigned long long _podcastDownloadCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long podcastDownloadCount; // @synthesize podcastDownloadCount=_podcastDownloadCount;
 @property(nonatomic) unsigned long long podcastFollowCount; // @synthesize podcastFollowCount=_podcastFollowCount;
 @property(nonatomic) _Bool initialDownloadCountLoaded; // @synthesize initialDownloadCountLoaded=_initialDownloadCountLoaded;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> token; // @synthesize token=_token;
 @property(retain, nonatomic) id <SPTOfflineContentModel> offlineContentModel; // @synthesize offlineContentModel=_offlineContentModel;
 @property(nonatomic) __weak id <SPTInAppMessagePodcastExperimentsHandlerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)offlineModel:(id)arg1 error:(id)arg2;
 - (void)offlineModelDidUpdate:(id)arg1 entity:(id)arg2;
 - (id)parseResponseItems:(id)arg1;

@@ -29,6 +29,7 @@
     unsigned long long _reconnectsCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long reconnectsCount; // @synthesize reconnectsCount=_reconnectsCount;
 @property(nonatomic, getter=isCacheLoadCompleted) _Bool cacheLoadCompleted; // @synthesize cacheLoadCompleted=_cacheLoadCompleted;
 @property(nonatomic, getter=hasLoadedRemoteContent) _Bool loadedRemoteContent; // @synthesize loadedRemoteContent=_loadedRemoteContent;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) HUBViewModelBuilderFactory *viewModelBuilderFactory; // @synthesize viewModelBuilderFactory=_viewModelBuilderFactory;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <HUBViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)updateWithRemoteViewModel:(id)arg1 resultType:(unsigned long long)arg2;
 - (void)loadViewModelFromRemoteWithCompletion:(CDUnknownBlockType)arg1;
 - (void)callCompletionForRequest:(id)arg1 withViewModel:(id)arg2 resultType:(unsigned long long)arg3;

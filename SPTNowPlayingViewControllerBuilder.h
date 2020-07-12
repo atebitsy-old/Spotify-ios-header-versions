@@ -15,9 +15,9 @@
     CDUnknownBlockType _builderBlock;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) CDUnknownBlockType builderBlock; // @synthesize builderBlock=_builderBlock;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (id)initWithViewControllerBuilderBlock:(CDUnknownBlockType)arg1;
 
 @end

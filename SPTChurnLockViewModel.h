@@ -27,6 +27,7 @@
     NSString *_localizedAlertOKButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *localizedAlertOKButton; // @synthesize localizedAlertOKButton=_localizedAlertOKButton;
 @property(retain, nonatomic) NSString *localizedAlertCancelButton; // @synthesize localizedAlertCancelButton=_localizedAlertCancelButton;
 @property(retain, nonatomic) NSString *localizedAlertSubtitle; // @synthesize localizedAlertSubtitle=_localizedAlertSubtitle;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) SPTChurnLockEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) id <SPTModalPresentationController> presentationController; // @synthesize presentationController=_presentationController;
 @property(nonatomic) __weak id <SPTChurnLockViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)actionButtonPressed;
 - (void)viewDidAppear;
 - (void)alertOkButtonPressed;

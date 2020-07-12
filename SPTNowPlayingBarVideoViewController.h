@@ -19,11 +19,11 @@
     NSLayoutConstraint *_aspectRatioConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *aspectRatioConstraint; // @synthesize aspectRatioConstraint=_aspectRatioConstraint;
 @property(retain, nonatomic) UIView<BMVideoSurface> *videoSurface; // @synthesize videoSurface=_videoSurface;
 @property(readonly, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)videoSurfaceDidChangeVideoRect:(id)arg1;
 - (void)setupConstraints;
 - (void)setupVideoSurface;

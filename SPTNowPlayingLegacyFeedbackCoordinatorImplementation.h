@@ -21,13 +21,13 @@
     SPTNowPlayingLegacyFormatListFeedbackHandlerImplementation *_formatListFeedbackHandler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNowPlayingLegacyFormatListFeedbackHandlerImplementation *formatListFeedbackHandler; // @synthesize formatListFeedbackHandler=_formatListFeedbackHandler;
 @property(nonatomic) __weak id <SPTPSXTestManager> psxTestManager; // @synthesize psxTestManager=_psxTestManager;
 @property(retain, nonatomic) id <SPTFeedbackViewModel> feedbackViewModel; // @synthesize feedbackViewModel=_feedbackViewModel;
 @property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> formatListRemoteControlPolicy; // @synthesize formatListRemoteControlPolicy=_formatListRemoteControlPolicy;
 @property(retain, nonatomic) id <SPTFormatListPlatformRemoteControlPolicyFactory> formatListPlatformRemoteControlPolicyFactory; // @synthesize formatListPlatformRemoteControlPolicyFactory=_formatListPlatformRemoteControlPolicyFactory;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
-- (void).cxx_destruct;
 - (id)createFormatListFeedbackManagerIfNecessary:(id)arg1;
 - (_Bool)isFormatListFeedbackState:(id)arg1;
 - (id)feedbackHandlerForPlayerState:(id)arg1 containingViewController:(id)arg2;

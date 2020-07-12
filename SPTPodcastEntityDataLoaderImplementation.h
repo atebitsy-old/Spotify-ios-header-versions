@@ -8,24 +8,24 @@
 
 #import "SPTPodcastEntityDataLoader-Protocol.h"
 
-@class NSString, SPTPodcastSortingService;
-@protocol SPTPodcastDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastTestManager;
+@class NSString;
+@protocol SPTPodcastDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastSortingProvider, SPTPodcastTestManager;
 
 @interface SPTPodcastEntityDataLoaderImplementation : NSObject <SPTPodcastEntityDataLoader>
 {
     id <SPTPodcastDataLoader> _dataLoader;
     id <SPTPodcastFactory> _podcastFactory;
     id <SPTPodcastEpisodeFactory> _podcastEpisodeFactory;
-    SPTPodcastSortingService *_podcastSortingService;
+    id <SPTPodcastSortingProvider> _podcastSortingProvider;
     id <SPTPodcastTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) SPTPodcastSortingService *podcastSortingService; // @synthesize podcastSortingService=_podcastSortingService;
+@property(readonly, nonatomic) id <SPTPodcastSortingProvider> podcastSortingProvider; // @synthesize podcastSortingProvider=_podcastSortingProvider;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFactory> podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
 @property(retain, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)errorWithDescription:(id)arg1;
 - (id)jsonParsingError;
 - (id)nonEpisodeURLError;
@@ -35,7 +35,7 @@
 - (void)lookupEpisodesForShowWithURI:(id)arg1 inRange:(struct _NSRange)arg2 includeEpisode:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (void)lookupShowEntityWithURI:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)providePodcastRequestWithRequestData:(id)arg1;
-- (id)initWithSortingService:(id)arg1 podcastFactory:(id)arg2 podcastEpisodeFactory:(id)arg3 testManager:(id)arg4;
+- (id)initWithSortingProvider:(id)arg1 podcastFactory:(id)arg2 podcastEpisodeFactory:(id)arg3 testManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

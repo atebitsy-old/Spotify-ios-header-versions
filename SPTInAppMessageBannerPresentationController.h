@@ -29,6 +29,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) SPTInAppMessageBannerMessageViewModel *bannerViewModel; // @synthesize bannerViewModel=_bannerViewModel;
 @property(nonatomic, getter=isPresentingBanner) _Bool presentingBanner; // @synthesize presentingBanner=_presentingBanner;
-- (void).cxx_destruct;
 - (void)cancelBannerMessagePresentation:(id)arg1;
 - (void)logMessageDiscardedWithReason:(id)arg1;
 - (_Bool)canPresentBanner;

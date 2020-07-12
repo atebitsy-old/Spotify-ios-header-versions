@@ -25,12 +25,12 @@
     struct CGRect _previousFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGRect previousFrame; // @synthesize previousFrame=_previousFrame;
 @property(retain, nonatomic) NSMutableDictionary *queuedPageViews; // @synthesize queuedPageViews=_queuedPageViews;
 @property(retain, nonatomic) NSMutableSet *loadedPageViews; // @synthesize loadedPageViews=_loadedPageViews;
 @property(nonatomic) __weak id <SPTStepScrollViewDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) __weak id <SPTStepScrollViewDelegate> stepDelegate; // @synthesize stepDelegate=_stepDelegate;
-- (void).cxx_destruct;
 - (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;

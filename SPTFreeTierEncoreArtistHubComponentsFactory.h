@@ -13,8 +13,8 @@
     id <SPTTrackRowArtistFactory> _encoreComponentFactory;
 }
 
-@property(retain, nonatomic) id <SPTTrackRowArtistFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTTrackRowArtistFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 - (id)createComponentsWithBaseTheme:(id)arg1;
 - (id)initWithArtistEncoreComponentFactory:(id)arg1;
 

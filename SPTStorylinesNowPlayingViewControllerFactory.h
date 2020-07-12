@@ -16,10 +16,10 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTStorylinesTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTStorylinesViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)createStorylinesNowPlayingViewController;
 - (id)initWithViewModel:(id)arg1 testManager:(id)arg2 theme:(id)arg3;
 

@@ -16,10 +16,10 @@
 }
 
 + (id)messageWithContextUri:(id)arg1 currentTrackUri:(id)arg2 targetTracksUri:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *targetTracksUriValue; // @synthesize targetTracksUriValue=_targetTracksUriValue;
 @property(copy, nonatomic) NSString *currentTrackUriValue; // @synthesize currentTrackUriValue=_currentTrackUriValue;
 @property(copy, nonatomic) NSString *contextUriValue; // @synthesize contextUriValue=_contextUriValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

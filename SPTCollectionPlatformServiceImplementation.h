@@ -36,6 +36,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTResolver> collectionCosmosRouter; // @synthesize collectionCosmosRouter=_collectionCosmosRouter;
 @property(retain, nonatomic) SPTCollectionPlatformLoggerImplementation *collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformStateProvider> collectionPlatformState; // @synthesize collectionPlatformState=_collectionPlatformState;
@@ -55,7 +56,6 @@
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
-- (void).cxx_destruct;
 - (id)provideCollectionResolver;
 - (id)provideCollectionLogger;
 - (id)provideCollectionPlatform;

@@ -16,8 +16,8 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
-@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, copy, nonatomic) NSDictionary *queryParameters;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier;
 - (id)initWithLinkDispatcher:(id)arg1;

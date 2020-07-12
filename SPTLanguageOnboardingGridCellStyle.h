@@ -27,6 +27,7 @@
     struct CGSize _badgeImageViewSize;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTLanguageOnboardingCellBadgeStyle *badgeStyle; // @synthesize badgeStyle=_badgeStyle;
 @property(nonatomic) struct CGSize badgeImageViewSize; // @synthesize badgeImageViewSize=_badgeImageViewSize;
 @property(nonatomic) double badgeImageViewTrailingMargin; // @synthesize badgeImageViewTrailingMargin=_badgeImageViewTrailingMargin;
@@ -40,7 +41,6 @@
 @property(nonatomic) double coverImageViewCornerRadius; // @synthesize coverImageViewCornerRadius=_coverImageViewCornerRadius;
 @property(copy, nonatomic) UIColor *coverImageViewBackgroundColor; // @synthesize coverImageViewBackgroundColor=_coverImageViewBackgroundColor;
 @property(copy, nonatomic) GLUEImageStyle *coverImageViewStyle; // @synthesize coverImageViewStyle=_coverImageViewStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

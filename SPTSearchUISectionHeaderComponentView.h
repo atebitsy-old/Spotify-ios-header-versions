@@ -15,9 +15,9 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTSearchUISectionHeaderViewStyle *sectionHeaderViewStyle; // @synthesize sectionHeaderViewStyle=_sectionHeaderViewStyle;
 @property(readonly, nonatomic) SPTSearchUISectionHeaderView *sectionHeaderView; // @synthesize sectionHeaderView=_sectionHeaderView;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;

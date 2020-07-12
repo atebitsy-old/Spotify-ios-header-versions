@@ -9,9 +9,9 @@
 @class NSString, SPTFeatureSettingsItem, UINavigationController;
 
 @protocol SPTFeatureSettingsUIPresentationContext <NSObject>
-@property(readonly, nonatomic) UINavigationController *navigationController;
-@property(readonly, nonatomic) SPTFeatureSettingsItem *item;
 - (void)reloadData;
 - (id)dequeueReusableCellWithIdentifier:(NSString *)arg1;
+@property(nonatomic, readonly) UINavigationController *navigationController;
+@property(nonatomic, readonly) SPTFeatureSettingsItem *item;
 @end
 

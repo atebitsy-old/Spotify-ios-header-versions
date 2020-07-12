@@ -16,11 +16,11 @@
     NSString *_avatarURL;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *avatarURL; // @synthesize avatarURL=_avatarURL;
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
 @property(copy, nonatomic) NSString *spotifyId; // @synthesize spotifyId=_spotifyId;
 @property(nonatomic) _Bool verified; // @synthesize verified=_verified;
-- (void).cxx_destruct;
 - (id)objectRepresentation;
 - (_Bool)restoreWithObjectRepresentation:(id)arg1;
 

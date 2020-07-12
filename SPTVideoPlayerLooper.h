@@ -15,9 +15,9 @@
     id <BMKVOController> _kvoController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <BMKVOController> kvoController; // @synthesize kvoController=_kvoController;
 @property(readonly, nonatomic) AVQueuePlayer *playerQueue; // @synthesize playerQueue=_playerQueue;
-- (void).cxx_destruct;
 - (void)currentItemDidChange:(id)arg1 playerQueue:(id)arg2;
 - (void)dealloc;
 - (void)disableLooping;

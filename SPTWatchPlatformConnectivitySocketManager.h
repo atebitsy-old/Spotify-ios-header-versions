@@ -21,12 +21,12 @@
     NSMutableDictionary *_sockets;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *sockets; // @synthesize sockets=_sockets;
 @property(readonly, nonatomic) SPTWatchPlatformTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTWatchPlatformGCDAsyncSocketFactory *socketFactory; // @synthesize socketFactory=_socketFactory;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityMessageHandlerRegistry> messageHandlerRegistry; // @synthesize messageHandlerRegistry=_messageHandlerRegistry;
 @property(readonly, nonatomic) __weak SPTWatchConnectivitySession *connectivitySession; // @synthesize connectivitySession=_connectivitySession;
-- (void).cxx_destruct;
 - (void)socket:(id)arg1 didCloseWithError:(id)arg2;
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;

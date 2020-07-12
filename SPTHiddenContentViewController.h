@@ -31,6 +31,7 @@
     SPTHiddenContentArtistCellConfigurator *_artistCellConfigurator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHiddenContentArtistCellConfigurator *artistCellConfigurator; // @synthesize artistCellConfigurator=_artistCellConfigurator;
 @property(retain, nonatomic) SPTHiddenContentTrackCellConfigurator *trackCellConfigurator; // @synthesize trackCellConfigurator=_trackCellConfigurator;
 @property(retain, nonatomic) GLUELabel *emptyTextLabel; // @synthesize emptyTextLabel=_emptyTextLabel;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) SPTSegmentedControl *tabControl; // @synthesize tabControl=_tabControl;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTHiddenContentViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)errorEmptyStateViewStyle;
 - (id)noResultsEmptyStateViewStyle;
 - (id)provideEmptyViewForCurrentlySelectedTab;

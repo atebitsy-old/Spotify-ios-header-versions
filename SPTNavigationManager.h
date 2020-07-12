@@ -20,12 +20,12 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) NSPointerArray *modalViewControllers; // @synthesize modalViewControllers=_modalViewControllers;
 @property(nonatomic) __weak id <SPTNavigationControllerProtocol> preModalNavigationController; // @synthesize preModalNavigationController=_preModalNavigationController;
 @property(nonatomic) __weak id <SPTNavigationControllerProtocol> lastSelectedNavigationController; // @synthesize lastSelectedNavigationController=_lastSelectedNavigationController;
 @property(retain, nonatomic) NSMapTable *lastSelectedVCInNavigationContexts; // @synthesize lastSelectedVCInNavigationContexts=_lastSelectedVCInNavigationContexts;
-- (void).cxx_destruct;
 - (id)keyForNavigationController:(id)arg1;
 - (void)navigationController:(id)arg1 didNavigateToViewController:(id)arg2;
 - (void)navigationController:(id)arg1 willNavigateToViewController:(id)arg2;

@@ -26,6 +26,7 @@
     SPTSortingFilteringFilterButtonCollectionViewCell *_calculationCell;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSortingFilteringFilterButtonCollectionViewCell *calculationCell; // @synthesize calculationCell=_calculationCell;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UICollectionViewFlowLayout *collectionLayout; // @synthesize collectionLayout=_collectionLayout;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) id <SPTSortingFilteringButtonsContainerStyle> style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTSortingFilteringViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTSortingFilteringButtonsContainerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)sortingFilteringViewModel:(id)arg1 selectedSortRule:(id)arg2 atIndexPath:(id)arg3;
 - (void)sortingFilteringViewModel:(id)arg1 deselectedFilterRule:(id)arg2 atIndexPath:(id)arg3;
 - (void)sortingFilteringViewModel:(id)arg1 selectedFilterRule:(id)arg2 atIndexPath:(id)arg3;

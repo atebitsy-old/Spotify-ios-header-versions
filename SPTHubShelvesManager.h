@@ -21,13 +21,13 @@
     SPTSwipeGestureRecognizer *_swipeGestureRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSwipeGestureRecognizer *swipeGestureRecognizer; // @synthesize swipeGestureRecognizer=_swipeGestureRecognizer;
 @property(readonly, nonatomic) id <SPTHubComponentModelURIResolver> componentModelURIResolver; // @synthesize componentModelURIResolver=_componentModelURIResolver;
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) UICollectionView *hubContentView; // @synthesize hubContentView=_hubContentView;
 @property(readonly, nonatomic) __weak id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(nonatomic) __weak HUBComponentView<SPTHubSwipeableTableViewCellComponentView> *activeComponentView; // @synthesize activeComponentView=_activeComponentView;
-- (void).cxx_destruct;
 - (id)swipeableComponentViewInParentView:(id)arg1 atLocation:(struct CGPoint)arg2;
 - (id)swipeableComponentViewForLocation:(struct CGPoint)arg1;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRequireFailureOfGestureRecognizer:(id)arg2;

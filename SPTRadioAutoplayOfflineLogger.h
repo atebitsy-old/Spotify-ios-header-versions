@@ -17,11 +17,11 @@
     unsigned long long _sessionEventCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long sessionEventCount; // @synthesize sessionEventCount=_sessionEventCount;
 @property(retain, nonatomic) id <SPTLocalSettings> dataSaverSettings; // @synthesize dataSaverSettings=_dataSaverSettings;
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(retain, nonatomic) SPTRadioLogger *logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (long long)deviceFreeSpaceMB;
 - (long long)numberOfOfflineListsFromResponse:(id)arg1;
 - (void)fetchNumberOfOfflineLists:(CDUnknownBlockType)arg1;

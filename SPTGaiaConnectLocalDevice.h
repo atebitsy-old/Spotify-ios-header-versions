@@ -17,10 +17,10 @@
     NSString *_name;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isActive; // @synthesize isActive=_isActive;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *physicalDeviceId; // @synthesize physicalDeviceId=_physicalDeviceId;
-- (void).cxx_destruct;
 - (id)deviceId;
 - (id)initWithDictionary:(id)arg1;
 

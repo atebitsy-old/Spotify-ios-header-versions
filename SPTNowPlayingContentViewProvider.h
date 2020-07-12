@@ -28,6 +28,7 @@
     SPTNowPlayingYoutubeVideoProvider *_youtubeVideoProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNowPlayingYoutubeVideoProvider *youtubeVideoProvider; // @synthesize youtubeVideoProvider=_youtubeVideoProvider;
 @property(retain, nonatomic) SPTNowPlayingHorizontalVideoProvider *horizontalVideoProvider; // @synthesize horizontalVideoProvider=_horizontalVideoProvider;
 @property(retain, nonatomic) SPTNowPlayingVerticalVideoProvider *verticalVideoProvider; // @synthesize verticalVideoProvider=_verticalVideoProvider;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> glueImageLoaderFactory; // @synthesize glueImageLoaderFactory=_glueImageLoaderFactory;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
-- (void).cxx_destruct;
 - (void)registerYoutubeVideoProvider;
 - (void)registerHorizontalVideoProvider;
 - (void)registerVerticalVideoProvider;

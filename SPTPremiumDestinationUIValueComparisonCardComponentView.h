@@ -20,16 +20,16 @@
     UIView *_contentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(copy, nonatomic) NSArray *childComponentViews; // @synthesize childComponentViews=_childComponentViews;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (id)constraintsForChildComponentView:(id)arg1 previousComponentView:(id)arg2 size:(struct CGSize)arg3;
 - (void)removeChildComponentViews:(id)arg1;
 - (void)setupChildComponentsForModel:(id)arg1;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;

@@ -29,6 +29,7 @@
     id <SPTQueueInteractor> _queueInteractor;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTQueueInteractor> queueInteractor; // @synthesize queueInteractor=_queueInteractor;
 @property(readonly, nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -45,7 +46,6 @@
 @property(readonly, nonatomic) id <SPTNowPlayingNavigationBarModel> navigationBarModel; // @synthesize navigationBarModel=_navigationBarModel;
 @property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
-- (void).cxx_destruct;
 - (id)createQueueViewController;
 - (id)createNowPlayingViewController;
 - (id)initWithNowPlayingModel:(id)arg1 navigationBarModel:(id)arg2 queueNavigationBarViewController:(id)arg3 queueViewControllerDelegate:(id)arg4 player:(id)arg5 notificationCenter:(id)arg6 nowPlayingManager:(id)arg7 theme:(id)arg8 logger:(id)arg9 queueLogger:(id)arg10 shareFeature:(id)arg11 queueService:(id)arg12 queueInteractor:(id)arg13 modeResolver:(id)arg14 contentViewProvider:(id)arg15 linkDispatcher:(id)arg16;

@@ -23,12 +23,12 @@
     id <SPTSlate> _slate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
 @property(nonatomic, getter=isPresented) _Bool presented; // @synthesize presented=_presented;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(retain, nonatomic) SPTInAppMessageQAToolCardMessageController *cardMessageController; // @synthesize cardMessageController=_cardMessageController;
-- (void).cxx_destruct;
 - (id)provideSlate;
 - (void)actionReceivedWithValue:(id)arg1;
 - (void)dismissTriggerMessageContentUnit;

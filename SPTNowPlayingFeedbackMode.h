@@ -17,9 +17,9 @@
     id <SPTNowPlayingModeViewControllerRegistry> _viewControllerRegistry;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNowPlayingModeViewControllerRegistry> viewControllerRegistry; // @synthesize viewControllerRegistry=_viewControllerRegistry;
 @property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (id)queueHeadUnitViewController;
 - (id)footerUnitViewController;
 - (id)headUnitViewController;

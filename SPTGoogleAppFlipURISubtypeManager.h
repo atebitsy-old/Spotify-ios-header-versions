@@ -20,12 +20,12 @@
     id <SPTGoogleAppFlipAuthorizer> _authorizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTGoogleAppFlipAuthorizer> authorizer; // @synthesize authorizer=_authorizer;
 @property(retain, nonatomic) id <SPTGoogleAppFlipURIManager> uriManager; // @synthesize uriManager=_uriManager;
 @property(retain, nonatomic) id <SPTGoogleAppFlipParameterValidator> validator; // @synthesize validator=_validator;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-- (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (void)deregisterSubtypeHandler;

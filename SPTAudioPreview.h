@@ -51,6 +51,7 @@
     unsigned long long _junkSampleCount;
 }
 
+- (void).cxx_destruct;
 @property unsigned long long junkSampleCount; // @synthesize junkSampleCount=_junkSampleCount;
 @property unsigned long long framesDecoded; // @synthesize framesDecoded=_framesDecoded;
 @property(getter=isAudioPipelineSetup) _Bool audioPipelineSetup; // @synthesize audioPipelineSetup=_audioPipelineSetup;
@@ -75,7 +76,6 @@
 @property double volume; // @synthesize volume=_volume;
 @property(nonatomic, getter=isPlaying) _Bool playing; // @synthesize playing=_playing;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)id3Parser:(id)arg1 didEncounterError:(id)arg2;
 - (void)id3ParserDidFinishLoading:(id)arg1;
 - (void)setupAudioPipelineUnsafe;

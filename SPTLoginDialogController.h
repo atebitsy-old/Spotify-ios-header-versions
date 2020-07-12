@@ -16,9 +16,9 @@
     SPTLoginTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
-- (void).cxx_destruct;
 - (void)dismissAllPresentedPopupDialogsAndClearQueue;
 - (void)showDialogWithTitle:(id)arg1 message:(id)arg2 buttons:(id)arg3;
 - (void)showDialogWithTitle:(id)arg1 message:(id)arg2;

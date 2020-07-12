@@ -17,9 +17,9 @@
     id <HUBCommandHandler> _unmappedCommandHandler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <HUBCommandHandler> unmappedCommandHandler; // @synthesize unmappedCommandHandler=_unmappedCommandHandler;
 @property(copy, nonatomic) NSDictionary *commandRegister; // @synthesize commandRegister=_commandRegister;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithCommandRegister:(id)arg1 unmappedCommandHandler:(id)arg2;
 

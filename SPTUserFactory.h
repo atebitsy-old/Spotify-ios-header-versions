@@ -19,13 +19,13 @@
     NSString *_currentUsername;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasUpdatedCurrentUserOnce; // @synthesize hasUpdatedCurrentUserOnce=_hasUpdatedCurrentUserOnce;
 @property(retain, nonatomic) NSString *currentUsername; // @synthesize currentUsername=_currentUsername;
 @property(nonatomic) struct SocialManager *socialManager; // @synthesize socialManager=_socialManager;
 @property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(retain, nonatomic) SPTUser *currentUser; // @synthesize currentUser=_currentUser;
 @property(nonatomic) _Bool online; // @synthesize online=_online;
-- (void).cxx_destruct;
 - (id)userWithUsernameInternal:(basic_string_90719d97)arg1;
 - (void)internalUserWithUsername:(basic_string_90719d97)arg1 callback:(CDUnknownBlockType)arg2;
 - (void)userWithUsername:(id)arg1 callback:(CDUnknownBlockType)arg2;

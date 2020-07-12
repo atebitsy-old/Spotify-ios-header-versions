@@ -29,6 +29,7 @@
     struct UIEdgeInsets _edgeInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isErrorOutlineEnabled) _Bool errorOutlineEnabled; // @synthesize errorOutlineEnabled=_errorOutlineEnabled;
 @property(retain, nonatomic) CALayer *outlineBorderLayer; // @synthesize outlineBorderLayer=_outlineBorderLayer;
 @property(nonatomic) struct CGSize rightViewSize; // @synthesize rightViewSize=_rightViewSize;
@@ -44,7 +45,6 @@
 @property(nonatomic, getter=shouldDisableInputCaret) _Bool disableInputCaret; // @synthesize disableInputCaret=_disableInputCaret;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(nonatomic) unsigned long long validationState; // @synthesize validationState=_validationState;
-- (void).cxx_destruct;
 - (struct CGRect)caretRectForPosition:(id)arg1;
 - (void)toggleSecureEntryButtonTapped:(id)arg1;
 - (id)secureTextEntryToggleButton;

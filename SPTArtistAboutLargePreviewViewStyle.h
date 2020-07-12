@@ -36,6 +36,7 @@
     double _imageViewCornerRadius;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double imageViewCornerRadius; // @synthesize imageViewCornerRadius=_imageViewCornerRadius;
 @property(nonatomic) double verifiedLabelLeftMargin; // @synthesize verifiedLabelLeftMargin=_verifiedLabelLeftMargin;
 @property(nonatomic) double verifiedCheckTopMargin; // @synthesize verifiedCheckTopMargin=_verifiedCheckTopMargin;
@@ -58,7 +59,6 @@
 @property(nonatomic) double biographyLabelHeight; // @synthesize biographyLabelHeight=_biographyLabelHeight;
 @property(copy, nonatomic) GLUELabelStyle *biographyLabelStyle; // @synthesize biographyLabelStyle=_biographyLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

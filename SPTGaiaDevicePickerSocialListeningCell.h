@@ -14,9 +14,9 @@
     UIView *_socialListeningView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *socialListeningView; // @synthesize socialListeningView=_socialListeningView;
 @property(retain, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

@@ -24,6 +24,7 @@
     NSLayoutConstraint *_spinnerWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *spinnerWidthConstraint; // @synthesize spinnerWidthConstraint=_spinnerWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *accessoryWidthConstraint; // @synthesize accessoryWidthConstraint=_accessoryWidthConstraint;
 @property(readonly, nonatomic) UIButton *playButton; // @synthesize playButton=_playButton;
@@ -34,7 +35,6 @@
 @property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic) _Bool playing; // @synthesize playing=_playing;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setEnabled:(_Bool)arg1;
 - (void)updateWithProgress:(double)arg1;

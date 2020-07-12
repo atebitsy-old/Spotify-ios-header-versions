@@ -18,12 +18,12 @@
 }
 
 + (id)messageWithDeviceLanguage:(id)arg1 isScreenReaderOn:(_Bool)arg2 hasPushNotificationsEnabled:(_Bool)arg3 pushNotificationsAuthStatus:(id)arg4 pushNotificationsSettings:(id)arg5;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *pushNotificationsSettingsValue; // @synthesize pushNotificationsSettingsValue=_pushNotificationsSettingsValue;
 @property(copy, nonatomic) NSString *pushNotificationsAuthStatusValue; // @synthesize pushNotificationsAuthStatusValue=_pushNotificationsAuthStatusValue;
 @property(nonatomic) _Bool hasPushNotificationsEnabledValue; // @synthesize hasPushNotificationsEnabledValue=_hasPushNotificationsEnabledValue;
 @property(nonatomic) _Bool isScreenReaderOnValue; // @synthesize isScreenReaderOnValue=_isScreenReaderOnValue;
 @property(copy, nonatomic) NSString *deviceLanguageValue; // @synthesize deviceLanguageValue=_deviceLanguageValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

@@ -15,10 +15,10 @@
     NSDictionary *_headers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(readonly, copy, nonatomic) NSData *body; // @synthesize body=_body;
 @property(readonly, nonatomic) int status; // @synthesize status=_status;
-- (void).cxx_destruct;
 - (void)getCppResponse:(struct Response *)arg1;
 - (id)description;
 @property(readonly, nonatomic, getter=isSuccessful) _Bool successful;

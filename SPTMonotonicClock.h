@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface SPTMonotonicClock : NSObject
+#import "SPTTimestampProvider-Protocol.h"
+
+@interface SPTMonotonicClock : NSObject <SPTTimestampProvider>
 {
 }
 

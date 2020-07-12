@@ -16,9 +16,9 @@
     NSLayoutConstraint *_navigationBarHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *navigationBarHeightConstraint; // @synthesize navigationBarHeightConstraint=_navigationBarHeightConstraint;
 @property(retain, nonatomic) VISREFNavigationBarView *navigationBarView; // @synthesize navigationBarView=_navigationBarView;
-- (void).cxx_destruct;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
 - (void)showNavigationBar:(_Bool)arg1;
 @property(nonatomic) double navigationBarHeight;

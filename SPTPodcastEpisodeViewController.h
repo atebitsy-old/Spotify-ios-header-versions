@@ -18,7 +18,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUEEntityRowTableViewCell, NSString, NSURL, SPTEntityHeaderViewController, SPTPodcastEpisodeActionsTableViewCell, SPTPodcastEpisodeCoverArtTableViewCell, SPTPodcastEpisodeDescriptionTableViewCell, SPTPodcastEpisodeEntityHeaderContentViewController, SPTPodcastEpisodeFeatureProperties, SPTPodcastEpisodeLogger, SPTPodcastEpisodeTheme, SPTPodcastEpisodeViewModel, SPTProgressView, SPTTableView, UIBarButtonItem, UITableViewCell;
-@protocol SPTImageLoaderFactory, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
+@protocol SPTImageLoaderFactory, SPTMetaViewController, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
 
 @interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
 {
@@ -47,10 +47,12 @@
     SPTPodcastEpisodeLogger *_logger;
     id <SPTViewLogger> _viewLogger;
     UIViewController *_actionRow;
+    UIViewController *_descriptionView;
     UIViewController *_audioPlus;
     UIViewController *_creatorLinks;
     UIViewController<SPTPodcastRecommendationsViewController> *_recommendations;
     UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *_featuredContent;
+    id <SPTMetaViewController> _metaViewController;
     UIViewController *_trackList;
     id <SPTShowContextMenuControllerOptions> _contextMenuOptions;
     id <SPTPodcastUIButtonsFactory> _buttonsFactory;
@@ -59,6 +61,7 @@
     SPTPodcastEpisodeFeatureProperties *_featureProperties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastEpisodeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) double featuredContentBottomMargin; // @synthesize featuredContentBottomMargin=_featuredContentBottomMargin;
 @property(nonatomic) _Bool viewHasAppeared; // @synthesize viewHasAppeared=_viewHasAppeared;
@@ -67,10 +70,12 @@
 @property(retain, nonatomic) id <SPTPodcastUIButtonsFactory> buttonsFactory; // @synthesize buttonsFactory=_buttonsFactory;
 @property(retain, nonatomic) id <SPTShowContextMenuControllerOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
 @property(retain, nonatomic) UIViewController *trackList; // @synthesize trackList=_trackList;
+@property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *featuredContent; // @synthesize featuredContent=_featuredContent;
 @property(retain, nonatomic) UIViewController<SPTPodcastRecommendationsViewController> *recommendations; // @synthesize recommendations=_recommendations;
 @property(retain, nonatomic) UIViewController *creatorLinks; // @synthesize creatorLinks=_creatorLinks;
 @property(retain, nonatomic) UIViewController *audioPlus; // @synthesize audioPlus=_audioPlus;
+@property(retain, nonatomic) UIViewController *descriptionView; // @synthesize descriptionView=_descriptionView;
 @property(retain, nonatomic) UIViewController *actionRow; // @synthesize actionRow=_actionRow;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) SPTPodcastEpisodeLogger *logger; // @synthesize logger=_logger;
@@ -94,7 +99,7 @@
 @property(readonly, nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-- (void).cxx_destruct;
+- (void)showNPVIfNeeded;
 - (void)scrollViewDidChangeAdjustedContentInset:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)playURIInContext:(id)arg1;
@@ -140,7 +145,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 creatorLinks:(id)arg9 recommendations:(id)arg10 featuredContent:(id)arg11 trackList:(id)arg12 audioPlus:(id)arg13 buttonsFactory:(id)arg14 featureProperties:(id)arg15;
+- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 descriptionView:(id)arg9 creatorLinks:(id)arg10 recommendations:(id)arg11 featuredContent:(id)arg12 trackList:(id)arg13 audioPlus:(id)arg14 buttonsFactory:(id)arg15 featureProperties:(id)arg16 metaViewController:(id)arg17;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

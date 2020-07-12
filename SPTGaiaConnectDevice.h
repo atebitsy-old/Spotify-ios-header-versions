@@ -39,6 +39,7 @@
     long long _volumeSteps;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long volumeSteps; // @synthesize volumeSteps=_volumeSteps;
 @property(nonatomic) _Bool supportsLogout; // @synthesize supportsLogout=_supportsLogout;
 @property(nonatomic, getter=isShuffleDevice) _Bool shuffleDevice; // @synthesize shuffleDevice=_shuffleDevice;
@@ -64,7 +65,6 @@
 @property(copy, nonatomic) NSString *attachId; // @synthesize attachId=_attachId;
 @property(copy, nonatomic) NSString *physicalDeviceId; // @synthesize physicalDeviceId=_physicalDeviceId;
 @property(copy, nonatomic) NSString *cosmosDeviceId; // @synthesize cosmosDeviceId=_cosmosDeviceId;
-- (void).cxx_destruct;
 - (void)updateVolumeToNewValue:(float)arg1;
 - (void)updateVolumeAfterVolumeDecrease;
 - (void)updateVolumeAfterVolumeIncrease;

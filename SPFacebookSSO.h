@@ -13,8 +13,8 @@
     id <SPTFacebookSDK> _facebookSDK;
 }
 
-@property(retain, nonatomic) id <SPTFacebookSDK> facebookSDK; // @synthesize facebookSDK=_facebookSDK;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTFacebookSDK> facebookSDK; // @synthesize facebookSDK=_facebookSDK;
 - (id)errorForFacebookSDKError:(id)arg1;
 - (void)attemptFacebookSSOWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithFacebookSDK:(id)arg1;

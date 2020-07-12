@@ -26,10 +26,10 @@
 + (struct UIEdgeInsets)sectionInsetsForModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)calculateChildItemSizeToSatisfyDesignRules:(struct CGSize)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 + (struct CGSize)calculateItemSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 firstChildSize:(struct CGSize)arg3 theme:(id)arg4;
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize itemSize; // @synthesize itemSize=_itemSize;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (struct CGSize)calculateFirstChildSizeForModel:(id)arg1;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
@@ -41,8 +41,8 @@
 @property(nonatomic) __weak id <UICollectionViewDragDelegate> dragDelegate;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;

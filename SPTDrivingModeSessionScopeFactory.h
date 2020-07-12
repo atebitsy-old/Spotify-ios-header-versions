@@ -24,6 +24,7 @@
     id <SPTExternalIntegrationPlaybackService> _playbackService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
 @property(retain, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
-- (void).cxx_destruct;
 - (id)createContextMenuViewController;
 - (id)createPivotViewViewController;
 - (id)initWithSession:(id)arg1 remoteConfiguration:(id)arg2 presentationService:(id)arg3 nowPlayingService:(id)arg4 player:(id)arg5 logger:(id)arg6 glueService:(id)arg7 playbackService:(id)arg8;

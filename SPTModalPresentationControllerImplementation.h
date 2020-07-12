@@ -18,9 +18,9 @@
     id <SPTInstrumentationModalPresentationMonitor> _presentationMonitor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTInstrumentationModalPresentationMonitor> presentationMonitor; // @synthesize presentationMonitor=_presentationMonitor;
 @property(nonatomic) __weak id <SPTPresenterViewControllerProvider> presenterProvider; // @synthesize presenterProvider=_presenterProvider;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)messageBarController:(id)arg1 willChangeToContentViewController:(id)arg2;
 - (id)presentedViewControllersForViewControllerBeingDismissed:(id)arg1;

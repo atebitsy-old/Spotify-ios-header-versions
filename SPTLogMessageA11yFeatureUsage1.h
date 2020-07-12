@@ -17,11 +17,11 @@
 }
 
 + (id)messageWithAny:(id)arg1 inputAlternatives:(id)arg2 displayModified:(id)arg3 audioCues:(id)arg4;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *audioCuesValue; // @synthesize audioCuesValue=_audioCuesValue;
 @property(copy, nonatomic) NSString *displayModifiedValue; // @synthesize displayModifiedValue=_displayModifiedValue;
 @property(copy, nonatomic) NSString *inputAlternativesValue; // @synthesize inputAlternativesValue=_inputAlternativesValue;
 @property(copy, nonatomic) NSString *anyValue; // @synthesize anyValue=_anyValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

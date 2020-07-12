@@ -20,12 +20,12 @@
 }
 
 + (id)incognitoModeHandlerWithIncognitoModeHandler:(struct IncognitoModeHandler *)arg1 productState:(id)arg2 scheduler:(id)arg3;
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic, getter=isIncognitoModeEnabled) _Bool incognitoModeEnabled; // @synthesize incognitoModeEnabled=_incognitoModeEnabled;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double incognitoModeTimeout;
 - (void)processIncognitoModeEvent:(_Bool)arg1 timeout:(_Bool)arg2;
 - (void)disableIncognitoMode;

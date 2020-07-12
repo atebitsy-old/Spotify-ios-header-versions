@@ -21,6 +21,7 @@
     UIColor *_customBackgroundColor;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIColor *customBackgroundColor; // @synthesize customBackgroundColor=_customBackgroundColor;
 @property(readonly, copy, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(readonly, copy, nonatomic) NSString *localizedActionButtonTitle; // @synthesize localizedActionButtonTitle=_localizedActionButtonTitle;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) double presentationDuration; // @synthesize presentationDuration=_presentationDuration;
 @property(readonly, nonatomic) unsigned long long priority; // @synthesize priority=_priority;
 @property(readonly, nonatomic) long long style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (id)description;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;

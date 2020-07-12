@@ -19,11 +19,11 @@
     SPTPlayerState *_playerState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) long long currentMode; // @synthesize currentMode=_currentMode;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)alertObserversOfModeDidChange;
 - (void)removeObserver:(id)arg1;

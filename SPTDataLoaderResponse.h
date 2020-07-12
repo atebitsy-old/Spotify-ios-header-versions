@@ -21,6 +21,7 @@
 }
 
 + (id)dataLoaderResponseWithRequest:(id)arg1 response:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURLResponse *response; // @synthesize response=_response;
 @property(readonly, nonatomic) long long statusCode; // @synthesize statusCode=_statusCode;
 @property(nonatomic) double requestTime; // @synthesize requestTime=_requestTime;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) NSDictionary *responseHeaders; // @synthesize responseHeaders=_responseHeaders;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(readonly, nonatomic) SPTDataLoaderRequest *request; // @synthesize request=_request;
-- (void).cxx_destruct;
 - (id)description;
 - (id)retryAfterForHeaders:(id)arg1;
 - (_Bool)shouldRetry;

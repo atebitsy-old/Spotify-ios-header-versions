@@ -17,9 +17,9 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) id <SPTAssistedCurationDatasource> datasource; // @synthesize datasource=_datasource;
-- (void).cxx_destruct;
 - (void)postNotification:(id)arg1 trackURI:(id)arg2 userInfo:(id)arg3;
 - (void)isDuplicatedTrack:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)addTrackURI:(id)arg1 fromContext:(unsigned long long)arg2 withCompletion:(CDUnknownBlockType)arg3;

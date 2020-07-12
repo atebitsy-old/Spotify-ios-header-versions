@@ -21,12 +21,12 @@
     id <SPTUICompletionNotifier> _uiCompletionNotifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUICompletionNotifier> uiCompletionNotifier; // @synthesize uiCompletionNotifier=_uiCompletionNotifier;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTRecentlyPlayedList> recentlyPlayedList; // @synthesize recentlyPlayedList=_recentlyPlayedList;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
-- (void).cxx_destruct;
 - (void)recentlyPlayedListDidReload:(id)arg1;
 - (void)attemptPlayingRecentlyPlayedContextAtIndex:(unsigned long long)arg1;
 - (void)attemptPlayingMostRecentlyPlayedContext;

@@ -18,10 +18,10 @@
 }
 
 + (id)styleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEButtonStyle *followButtonStyle; // @synthesize followButtonStyle=_followButtonStyle;
 @property(copy, nonatomic) SPTStorylinesAttributionStyle *attributionStyle; // @synthesize attributionStyle=_attributionStyle;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

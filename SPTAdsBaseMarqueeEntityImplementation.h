@@ -22,6 +22,7 @@
     NSString *_disclosure;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *disclosure; // @synthesize disclosure=_disclosure;
 @property(readonly, nonatomic) NSString *tag; // @synthesize tag=_tag;
 @property(readonly, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) NSURL *albumImageURI; // @synthesize albumImageURI=_albumImageURI;
 @property(readonly, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, nonatomic) NSURL *albumURI; // @synthesize albumURI=_albumURI;
-- (void).cxx_destruct;
 - (id)initWithMetadata:(id)arg1 slot:(id)arg2;
 
 // Remaining properties

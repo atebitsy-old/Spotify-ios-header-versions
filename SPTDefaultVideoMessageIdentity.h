@@ -16,9 +16,9 @@
     NSNumber *sequenceNumber;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNumber *sequenceNumber; // @synthesize sequenceNumber;
 @property(readonly, nonatomic) NSString *sequenceId; // @synthesize sequenceId;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

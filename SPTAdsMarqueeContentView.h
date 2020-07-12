@@ -24,6 +24,7 @@
     NSArray *_adsEnabledConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *adsEnabledConstraints; // @synthesize adsEnabledConstraints=_adsEnabledConstraints;
 @property(copy, nonatomic) NSArray *adsDisabledConstraints; // @synthesize adsDisabledConstraints=_adsDisabledConstraints;
 @property(readonly, nonatomic) UIStackView *informationContainerView; // @synthesize informationContainerView=_informationContainerView;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *albumImageView; // @synthesize albumImageView=_albumImageView;
 @property(readonly, nonatomic) UIButton *optOutButton; // @synthesize optOutButton=_optOutButton;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
-- (void).cxx_destruct;
 - (_Bool)isAccessibilityElement;
 - (void)applyThemeLayout;
 - (void)addConstraintsWithAdsEnabled:(_Bool)arg1;

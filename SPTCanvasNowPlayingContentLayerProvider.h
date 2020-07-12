@@ -21,12 +21,12 @@
     SPTCanvasLoggingService *_logService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasLoggingService *logService; // @synthesize logService=_logService;
 @property(readonly, nonatomic) SPTCanvasForceArtworkManager *forceArtworkManager; // @synthesize forceArtworkManager=_forceArtworkManager;
 @property(readonly, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTCanvasNowPlayingViewContentLoader> contentLoader; // @synthesize contentLoader=_contentLoader;
 @property(nonatomic) __weak id <SPTNowPlayingContentLayerProviderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)contentNeedsReloadForTrack:(id)arg1;
 - (void)didSelectCell:(id)arg1 withProvider:(id)arg2 withTrack:(id)arg3 containerViewController:(id)arg4;
 - (_Bool)displaysFullScreenContentForTrack:(id)arg1;

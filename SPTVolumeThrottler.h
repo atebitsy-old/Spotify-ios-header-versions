@@ -18,12 +18,12 @@
     NSTimer *_timer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldPerformActionAfterTimer; // @synthesize shouldPerformActionAfterTimer=_shouldPerformActionAfterTimer;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(readonly, nonatomic) NSRunLoop *runloop; // @synthesize runloop=_runloop;
 @property(readonly, nonatomic) double throttleInterval; // @synthesize throttleInterval=_throttleInterval;
 @property(nonatomic) __weak id <SPTVolumeThrottlerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)createTimer;
 - (void)scheduleTimer;
 - (void)timerFired;

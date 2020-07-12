@@ -30,6 +30,7 @@
 + (id)completedTask:(id)arg1;
 + (id)delay:(double)arg1;
 + (id)delay:(double)arg1 completeValue:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *completedError; // @synthesize completedError=_completedError;
 @property(retain, nonatomic) id completedValue; // @synthesize completedValue=_completedValue;
 @property(nonatomic, getter=isCancelled) _Bool cancelled; // @synthesize cancelled=_cancelled;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) NSMutableArray *finallys; // @synthesize finallys=_finallys;
 @property(retain, nonatomic) NSMutableArray *errbacks; // @synthesize errbacks=_errbacks;
 @property(retain, nonatomic) NSMutableArray *callbacks; // @synthesize callbacks=_callbacks;
-- (void).cxx_destruct;
 - (void)failWithError:(id)arg1;
 - (void)completeWithValue:(id)arg1;
 - (id)addFinallyCallback:(CDUnknownBlockType)arg1;

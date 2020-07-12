@@ -25,6 +25,7 @@
 }
 
 + (id)contextMenuViewControllerFactoryWithViewURI:(id)arg1 actionsProvider:(id)arg2 imageLoaderFactory:(id)arg3 glueImageLoaderFactory:(id)arg4 scannablesUserInterfaceFactory:(id)arg5 modalPresentationController:(id)arg6 player:(id)arg7 theme:(id)arg8 notificationCenter:(id)arg9;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) id <SPTContextMenuActionsProvider> actionsProvider; // @synthesize actionsProvider=_actionsProvider;
 @property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
-- (void).cxx_destruct;
 - (id)createContextMenuHeaderWithPlaceholderImage:(id)arg1 imageStyle:(long long)arg2 title:(id)arg3 subtitle:(id)arg4 metadataTitle:(id)arg5 entityURL:(id)arg6 imageURL:(id)arg7 options:(id)arg8;
 - (id)provideContextMenuViewControllerWithHeaderView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 options:(id)arg4;
 - (id)provideContextMenuViewControllerWithHeaderImageURL:(id)arg1 headerImagePlaceholder:(id)arg2 imageStyle:(long long)arg3 title:(id)arg4 subtitle:(id)arg5 metadataTitle:(id)arg6 tasks:(id)arg7 entityURL:(id)arg8 options:(id)arg9;

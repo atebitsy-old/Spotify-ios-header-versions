@@ -23,6 +23,7 @@
     NSURL *_pendingUri;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *pendingUri; // @synthesize pendingUri=_pendingUri;
 @property(retain, nonatomic) NSCache *followModelCache; // @synthesize followModelCache=_followModelCache;
 @property(retain, nonatomic) SPTStorylinesUBILogger *logger; // @synthesize logger=_logger;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTStorylinesAttributionViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)followModel:(id)arg1 followDataDidChange:(id)arg2;
 - (void)didLoadFollowModel:(id)arg1;
 - (void)didLoadAvatarImage:(id)arg1 forArtist:(id)arg2;

@@ -20,6 +20,7 @@
 }
 
 + (id)defaultLoginOptions;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool authOnly; // @synthesize authOnly=_authOnly;
 @property(nonatomic) _Bool bootstrapRequired; // @synthesize bootstrapRequired=_bootstrapRequired;
 @property(nonatomic) long long login5Setting; // @synthesize login5Setting=_login5Setting;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) NSString *xResolveHostOverride; // @synthesize xResolveHostOverride=_xResolveHostOverride;
 @property(retain, nonatomic) NSString *APHostOverride; // @synthesize APHostOverride=_APHostOverride;
 @property(retain, nonatomic) NSString *APSRVHostOverride; // @synthesize APSRVHostOverride=_APSRVHostOverride;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct LoginOptions cppLoginOptions;
 - (void)persistGlobalApHostOverride:(id)arg1;
 

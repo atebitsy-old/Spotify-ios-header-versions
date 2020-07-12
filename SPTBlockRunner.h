@@ -12,8 +12,8 @@
 }
 
 + (id)createRunnerWithBlock:(CDUnknownBlockType)arg1;
-@property(copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 - (struct dl_info)blockInfo;
 - (void)debugDescribe;
 - (void)run;

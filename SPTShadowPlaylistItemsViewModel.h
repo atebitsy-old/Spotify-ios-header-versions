@@ -4,42 +4,44 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTFreeTierPlaylistPlaylistItemsViewModelDecorator.h"
+#import "SPTDecoratorProxy.h"
 
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTShadowPlaylistURIResolverObserver-Protocol.h"
 
 @class NSArray, NSString, SPTPlayerState, SPTPlaylistRouteImplementation, SPTShadowPlaylistURIResolver;
-@protocol SPTClientSettings, SPTPlaylistPlatformPlaylistDataLoader;
+@protocol SPTClientSettings, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader;
 
-@interface SPTShadowPlaylistItemsViewModel : SPTFreeTierPlaylistPlaylistItemsViewModelDecorator <SPTShadowPlaylistURIResolverObserver, SPTPlayerObserver>
+@interface SPTShadowPlaylistItemsViewModel : SPTDecoratorProxy <SPTShadowPlaylistURIResolverObserver, SPTPlayerObserver>
 {
+    NSArray *_writePlaylistTracks;
+    NSArray *_readPlaylistTracks;
     SPTPlaylistRouteImplementation *_route;
     id <SPTClientSettings> _clientSettings;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     SPTPlayerState *_lastPlayerState;
     NSArray *_currentSorting;
     SPTShadowPlaylistURIResolver *_uriResolver;
-    NSArray *_writePlaylistTracks;
-    NSArray *_readPlaylistTracks;
+    id <SPTPlaylistPlatformDataLoaderRequestToken> _playlistSubscriptionToken;
 }
 
-@property(copy, nonatomic) NSArray *readPlaylistTracks; // @synthesize readPlaylistTracks=_readPlaylistTracks;
-@property(copy, nonatomic) NSArray *writePlaylistTracks; // @synthesize writePlaylistTracks=_writePlaylistTracks;
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> playlistSubscriptionToken; // @synthesize playlistSubscriptionToken=_playlistSubscriptionToken;
 @property(nonatomic) __weak SPTShadowPlaylistURIResolver *uriResolver; // @synthesize uriResolver=_uriResolver;
 @property(copy, nonatomic) NSArray *currentSorting; // @synthesize currentSorting=_currentSorting;
 @property(retain, nonatomic) SPTPlayerState *lastPlayerState; // @synthesize lastPlayerState=_lastPlayerState;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
 @property(retain, nonatomic) SPTPlaylistRouteImplementation *route; // @synthesize route=_route;
-- (void).cxx_destruct;
-- (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
-- (void)updateTracks;
+@property(copy, nonatomic) NSArray *readPlaylistTracks; // @synthesize readPlaylistTracks=_readPlaylistTracks;
+@property(copy, nonatomic) NSArray *writePlaylistTracks; // @synthesize writePlaylistTracks=_writePlaylistTracks;
+- (void)playlistSubscription;
 - (id)readPlaylistTracksForIndex:(long long)arg1;
 - (id)trackViewModelAtIndex:(long long)arg1;
 - (id)trackEntityAtIndex:(long long)arg1;
 - (id)indexForRowId:(id)arg1;
-- (void)uriResolver:(id)arg1 didRegenerateReadListForRoute:(id)arg2;
+- (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
+- (void)uriResolver:(id)arg1 didUpdateRoute:(id)arg2;
 - (void)uriResolver:(id)arg1 didCreateShadow:(id)arg2;
 - (id)sortingArrayFromSortingFiltering:(id)arg1;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;

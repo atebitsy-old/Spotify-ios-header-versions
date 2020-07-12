@@ -23,6 +23,7 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *statusBarProtectionGradientToColor; // @synthesize statusBarProtectionGradientToColor=_statusBarProtectionGradientToColor;
 @property(copy, nonatomic) UIColor *statusBarProtectionGradientFromColor; // @synthesize statusBarProtectionGradientFromColor=_statusBarProtectionGradientFromColor;
 @property(nonatomic) struct CGPoint statusBarProtectionGradientCurveEndPoint; // @synthesize statusBarProtectionGradientCurveEndPoint=_statusBarProtectionGradientCurveEndPoint;
@@ -33,7 +34,6 @@
 @property(nonatomic) double titleProtectionColorAlpha; // @synthesize titleProtectionColorAlpha=_titleProtectionColorAlpha;
 @property(nonatomic) double podcastUIWidescreenMetric; // @synthesize podcastUIWidescreenMetric=_podcastUIWidescreenMetric;
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

@@ -22,6 +22,7 @@
     SPTPSXFeatureFlagSignalObserver *_employeePSXCopyDiscoverWeeklySignalObserver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *employeePSXCopyDiscoverWeeklySignalObserver; // @synthesize employeePSXCopyDiscoverWeeklySignalObserver=_employeePSXCopyDiscoverWeeklySignalObserver;
 @property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *publicPSXCopyDiscoverWeeklySignalObserver; // @synthesize publicPSXCopyDiscoverWeeklySignalObserver=_publicPSXCopyDiscoverWeeklySignalObserver;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTEncoreTestManager> encoreTestManager; // @synthesize encoreTestManager=_encoreTestManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
 @property(readonly, nonatomic, getter=isFeedbackEnabled) _Bool feedbackEnabled;
 @property(readonly, nonatomic, getter=isPersonalisedSetsUIEnabled) _Bool personalisedSetsUIEnabled;

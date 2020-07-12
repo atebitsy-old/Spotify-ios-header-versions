@@ -27,6 +27,7 @@
     long long _retryCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isStagingEnabled; // @synthesize isStagingEnabled=_isStagingEnabled;
 @property(nonatomic) _Bool isCancelled; // @synthesize isCancelled=_isCancelled;
 @property(nonatomic) long long retryCount; // @synthesize retryCount=_retryCount;
@@ -39,7 +40,6 @@
 @property(nonatomic) _Bool shouldDoSilentAuth; // @synthesize shouldDoSilentAuth=_shouldDoSilentAuth;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(nonatomic) __weak id <SPTAccountsAuthRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (_Bool)canSendRequestNow;
 - (void)redirectToURL:(id)arg1;

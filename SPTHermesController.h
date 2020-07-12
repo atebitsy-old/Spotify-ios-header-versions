@@ -19,12 +19,12 @@
 }
 
 + (id)hermesControllerWithScheduler:(id)arg1 internalCoreScheduler:(struct TimerManager *)arg2 hermesHandler:(struct HermesHandler *)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *inFlight; // @synthesize inFlight=_inFlight;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *inFlightAccessQueue; // @synthesize inFlightAccessQueue=_inFlightAccessQueue;
 @property(nonatomic) struct HermesHandler *hermesHandler; // @synthesize hermesHandler=_hermesHandler;
 @property(nonatomic) struct TimerManager *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
-- (void).cxx_destruct;
 - (void)noLongerInFlight:(id)arg1;
 - (void)invalidate;
 - (id)request:(id)arg1 usingMethod:(id)arg2 payload:(id)arg3 whenDone:(CDUnknownBlockType)arg4;

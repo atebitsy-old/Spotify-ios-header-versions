@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFacebookSDKImplementation *facebookSDK; // @synthesize facebookSDK=_facebookSDK;
 @property(retain, nonatomic) id <SPTURISchemeRegistry> uriSchemeRegistry; // @synthesize uriSchemeRegistry=_uriSchemeRegistry;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-- (void).cxx_destruct;
 - (void)registerFacebookURISchemeHandler;
 - (id)provideFacebookSDK;
 - (void)load;

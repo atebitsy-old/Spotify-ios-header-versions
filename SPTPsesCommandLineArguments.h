@@ -13,8 +13,8 @@
     NSDictionary *_flags;
 }
 
-@property(copy, nonatomic) NSDictionary *flags; // @synthesize flags=_flags;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *flags; // @synthesize flags=_flags;
 - (_Bool)hasOverrideForFlag:(id)arg1;
 - (_Bool)isFlagEnabled:(id)arg1;
 - (id)initWithCommandLineArguments:(id)arg1;

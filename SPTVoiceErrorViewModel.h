@@ -29,6 +29,7 @@
     double _dismissalTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, setter=setDismissalTime:) double dismissalTime; // @synthesize dismissalTime=_dismissalTime;
 @property(retain, nonatomic) NSTimer *automaticDismissalTimer; // @synthesize automaticDismissalTimer=_automaticDismissalTimer;
 @property(readonly, nonatomic) id <SPTVoiceLoggerProtocol> logger; // @synthesize logger=_logger;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) NSString *headerLabelText; // @synthesize headerLabelText=_headerLabelText;
 @property(nonatomic) __weak id <SPTVoiceErrorViewModelPresentationDelegate> presentationDelegate; // @synthesize presentationDelegate=_presentationDelegate;
 @property(nonatomic) __weak id <SPTVoiceErrorViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)logError:(id)arg1 utteranceId:(id)arg2;
 - (void)voiceSession:(id)arg1 didFailVoiceCommand:(id)arg2 withError:(id)arg3;
 - (void)voiceSessionWillStartListening:(id)arg1;

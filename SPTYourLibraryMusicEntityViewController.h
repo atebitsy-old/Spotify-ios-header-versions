@@ -46,6 +46,7 @@
     id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> _quickScrollFactory;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isScrollingToTop) _Bool scrollingToTop; // @synthesize scrollingToTop=_scrollingToTop;
 @property(readonly, nonatomic) id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
 @property(retain, nonatomic) UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *quickScrollView; // @synthesize quickScrollView=_quickScrollView;
@@ -67,7 +68,6 @@
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) __weak id <SPTYourLibraryPageDelegate> pageDelegate; // @synthesize pageDelegate;
-- (void).cxx_destruct;
 - (void)didEndUserScrollingWithQuickScrollView:(id)arg1;
 - (void)didStartUserScrollingWithQuickScrollView:(id)arg1;
 - (void)didBecomeVisibleQuickScrollView:(id)arg1;

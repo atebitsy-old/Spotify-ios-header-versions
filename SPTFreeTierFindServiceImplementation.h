@@ -37,6 +37,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierFindTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierFindHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <_TtP11FindFeature14SPTFindService_> findService; // @synthesize findService=_findService;
@@ -57,7 +58,6 @@
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubService; // @synthesize hubService=_hubService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)makeViewModelProviderForURL:(id)arg1;
 - (id)makeURLResolver;
 - (id)makeViewModelBuilderFactory;

@@ -15,9 +15,9 @@
     NSCalendar *_calendar;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (void)reset;
 - (long long)bannersSeen;
 - (void)bannerWasShown;

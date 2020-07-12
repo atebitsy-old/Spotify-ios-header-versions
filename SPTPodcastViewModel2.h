@@ -43,6 +43,7 @@
     SPTPodcastTrailerSectionViewModel *_trailerSectionViewModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTPodcastTrailerSectionViewModel *trailerSectionViewModel; // @synthesize trailerSectionViewModel=_trailerSectionViewModel;
 @property(nonatomic) __weak SPTPodcastEpisodeSectionViewModel *episodeSectionViewModel; // @synthesize episodeSectionViewModel=_episodeSectionViewModel;
 @property(nonatomic) _Bool initialLoadComplete; // @synthesize initialLoadComplete=_initialLoadComplete;
@@ -66,7 +67,6 @@
 @property(retain) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTPodcastViewModelDelegate2> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)indexPathForEpisodeIndex:(long long)arg1;
 - (id)indexForEpisodeURL:(id)arg1;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
@@ -100,14 +100,17 @@
 @property(readonly, nonatomic) id <SPTPodcastEpisodeCellActionTarget> cellActionHandler;
 - (void)didReachEndOfContent;
 - (void)viewDidDisappear;
+- (void)viewDidLoad;
 - (void)logTrailerWasShownIfNecessaryForSection:(long long)arg1;
 - (void)viewWillDisplayCellAtIndexPath:(id)arg1;
 - (void)configureTrailerEpisodeForPodcast:(id)arg1;
 - (void)updateLoadStateAndNotifyDelegate;
+- (void)handleParsedPodcast:(id)arg1 wasPlaying:(_Bool)arg2;
 - (CDUnknownBlockType)provideParsePodcastResponseCallbackWithData:(id)arg1 wasPlaying:(_Bool)arg2;
 - (CDUnknownBlockType)providePodcastRequestSuccessCallbackWithPlayState:(_Bool)arg1;
 - (CDUnknownBlockType)providePodcastRequestErrorCallback;
-- (void)loadAndSubscribe;
+- (void)updateSubscriptionWithRange:(struct _NSRange)arg1;
+- (void)updateSubscriptionShouldPaginate:(_Bool)arg1;
 - (id)sectionViewModelForIndexPath:(id)arg1;
 - (long long)numberOfSections;
 - (long long)numberOfRowsInSection:(long long)arg1;

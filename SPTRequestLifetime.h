@@ -14,9 +14,9 @@
     CDUnknownBlockType _cancelBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType cancelBlock; // @synthesize cancelBlock=_cancelBlock;
 @property(nonatomic) _Bool acquired; // @synthesize acquired=_acquired;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)cancel;
 - (void)acquire;

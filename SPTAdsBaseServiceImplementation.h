@@ -22,13 +22,13 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAdsBaseGlobalSettingsController> adsBaseSettingsController; // @synthesize adsBaseSettingsController=_adsBaseSettingsController;
 @property(retain, nonatomic) id <SPTAdsBaseRegistry> adsBaseRegistry; // @synthesize adsBaseRegistry=_adsBaseRegistry;
 @property(retain, nonatomic) id <SPTAdsBaseMovementLogger> adsBaseMovementLogger; // @synthesize adsBaseMovementLogger=_adsBaseMovementLogger;
 @property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> adsBaseCosmosBridge; // @synthesize adsBaseCosmosBridge=_adsBaseCosmosBridge;
 @property(retain, nonatomic) id <SPTResolver> adsBaseResolver; // @synthesize adsBaseResolver=_adsBaseResolver;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
-- (void).cxx_destruct;
 - (id)provideAdsSettingsController;
 - (id)provideAdRegistry;
 - (id)provideAdsMovementLogger;

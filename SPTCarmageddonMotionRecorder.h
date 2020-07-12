@@ -19,13 +19,13 @@
     NSMutableArray *_gyroscopeMeasurements;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *gyroscopeMeasurements; // @synthesize gyroscopeMeasurements=_gyroscopeMeasurements;
 @property(retain, nonatomic) NSMutableArray *accelerometerMeasurements; // @synthesize accelerometerMeasurements=_accelerometerMeasurements;
 @property(retain, nonatomic) NSTimer *recordingTimer; // @synthesize recordingTimer=_recordingTimer;
 @property(readonly, nonatomic) NSOperationQueue *coreMotionQueue; // @synthesize coreMotionQueue=_coreMotionQueue;
 @property(readonly, nonatomic) CMMotionManager *coreMotionManager; // @synthesize coreMotionManager=_coreMotionManager;
 @property(nonatomic) __weak id <SPTCarmageddonMotionRecorderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)stopRecordingWithAbortedStatus:(_Bool)arg1;
 - (void)recordingTimerDidFire;
 - (void)didReceiveGyroscopeData:(id)arg1 error:(id)arg2;

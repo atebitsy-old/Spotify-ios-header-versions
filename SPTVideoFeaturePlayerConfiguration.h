@@ -7,28 +7,33 @@
 #import <objc/NSObject.h>
 
 #import "BMPlayerConfiguration-Protocol.h"
+#import "BMSpotifyVideoConfiguration-Protocol.h"
 #import "SPTAbbaFeatureFlagsObserver-Protocol.h"
 
-@class NSString, NSURL;
+@class NSString, NSURL, SPTVideoFeatureProperties;
 @protocol SPTAbbaFeatureFlags;
 
-@interface SPTVideoFeaturePlayerConfiguration : NSObject <SPTAbbaFeatureFlagsObserver, BMPlayerConfiguration>
+@interface SPTVideoFeaturePlayerConfiguration : NSObject <SPTAbbaFeatureFlagsObserver, BMPlayerConfiguration, BMSpotifyVideoConfiguration>
 {
     _Bool _subtitlesEnabled;
     _Bool _cachingFlatFilesEnabled;
     _Bool _preventDisplaySleepDuringVideoPlayback;
     unsigned long long _videoCDNLoggingOption;
     id <SPTAbbaFeatureFlags> _featureFlags;
+    SPTVideoFeatureProperties *_videoFeatureProperties;
     NSString *_manifestURLTemplate;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *manifestURLTemplate; // @synthesize manifestURLTemplate=_manifestURLTemplate;
+@property(retain, nonatomic) SPTVideoFeatureProperties *videoFeatureProperties; // @synthesize videoFeatureProperties=_videoFeatureProperties;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) _Bool preventDisplaySleepDuringVideoPlayback; // @synthesize preventDisplaySleepDuringVideoPlayback=_preventDisplaySleepDuringVideoPlayback;
 @property(readonly, nonatomic) _Bool cachingFlatFilesEnabled; // @synthesize cachingFlatFilesEnabled=_cachingFlatFilesEnabled;
 @property(readonly, nonatomic) _Bool subtitlesEnabled; // @synthesize subtitlesEnabled=_subtitlesEnabled;
 @property(readonly, nonatomic) unsigned long long videoCDNLoggingOption; // @synthesize videoCDNLoggingOption=_videoCDNLoggingOption;
-- (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool spotifyVideoHLSEnabled;
+- (id)mediaURLForManifestID:(id)arg1;
 @property(readonly, nonatomic) NSURL *fairplayLicenseURL;
 @property(readonly, nonatomic) NSURL *fairplayApplicationCertificateURL;
 - (id)remoteManifestURLForManifestID:(id)arg1;
@@ -39,7 +44,7 @@
 - (void)updateFeatureFlagsTemplates;
 - (void)dealloc;
 - (void)updateFeatureFlags;
-- (id)initWithFeatureFlags:(id)arg1 preventDisplaySleepDuringVideoPlayback:(_Bool)arg2;
+- (id)initWithFeatureFlags:(id)arg1 videoFeatureProperties:(id)arg2 preventDisplaySleepDuringVideoPlayback:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

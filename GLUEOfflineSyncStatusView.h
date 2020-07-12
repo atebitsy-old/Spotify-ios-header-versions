@@ -22,6 +22,7 @@
     NSLayoutConstraint *_contentViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *contentViewHeightConstraint; // @synthesize contentViewHeightConstraint=_contentViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *contentViewWidthConstraint; // @synthesize contentViewWidthConstraint=_contentViewWidthConstraint;
 @property(readonly, nonatomic) UIActivityIndicatorView *activityIndicator; // @synthesize activityIndicator=_activityIndicator;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) UIView *offlineStatusContentView; // @synthesize offlineStatusContentView=_offlineStatusContentView;
 @property(copy, nonatomic) GLUEOfflineSyncStatusViewStyle *style; // @synthesize style=_style;
 @property(nonatomic) long long status; // @synthesize status=_status;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateActivityIndicatorTransform;

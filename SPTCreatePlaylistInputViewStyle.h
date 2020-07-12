@@ -24,6 +24,7 @@
     GLUEGradientStyle *_backgroundGradientStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) UIColor *textFieldUnderlineViewBackgroundColor; // @synthesize textFieldUnderlineViewBackgroundColor=_textFieldUnderlineViewBackgroundColor;
@@ -34,7 +35,6 @@
 @property(copy, nonatomic) GLUEButtonStyle *secondaryButtonStyle; // @synthesize secondaryButtonStyle=_secondaryButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *primaryButtonStyle; // @synthesize primaryButtonStyle=_primaryButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

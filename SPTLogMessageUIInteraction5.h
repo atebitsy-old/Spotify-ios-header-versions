@@ -32,6 +32,7 @@
 + (id)hiddenContentMessageForArtistTabTapped;
 + (id)hiddenContentMessageForTracksTabTapped;
 + (id)hiddenContentMessageForAddMoreTapped;
+- (void).cxx_destruct;
 @property(nonatomic) double timestampValue; // @synthesize timestampValue=_timestampValue;
 @property(copy, nonatomic) NSString *userIntentValue; // @synthesize userIntentValue=_userIntentValue;
 @property(copy, nonatomic) NSString *interactionTypeValue; // @synthesize interactionTypeValue=_interactionTypeValue;
@@ -41,7 +42,6 @@
 @property(copy, nonatomic) NSString *pageuriValue; // @synthesize pageuriValue=_pageuriValue;
 @property(copy, nonatomic) NSString *featureIdValue; // @synthesize featureIdValue=_featureIdValue;
 @property(copy, nonatomic) NSString *requestIdValue; // @synthesize requestIdValue=_requestIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

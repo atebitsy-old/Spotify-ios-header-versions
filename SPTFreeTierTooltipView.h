@@ -24,6 +24,7 @@
     struct CGPoint _arrowPosition;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGPoint arrowPosition; // @synthesize arrowPosition=_arrowPosition;
 @property(retain, nonatomic) CAShapeLayer *viewBoxLayer; // @synthesize viewBoxLayer=_viewBoxLayer;
 @property(retain, nonatomic) CAShapeLayer *arrowLayer; // @synthesize arrowLayer=_arrowLayer;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *trailingConstraint; // @synthesize trailingConstraint=_trailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leadingConstraint; // @synthesize leadingConstraint=_leadingConstraint;
-- (void).cxx_destruct;
 - (void)animateLayerScale:(id)arg1 baseTransform:(struct CATransform3D)arg2 fromValue:(double)arg3 toValue:(double)arg4 delay:(double)arg5;
 - (void)animateLayerTransform:(id)arg1 from:(struct CATransform3D)arg2 to:(struct CATransform3D)arg3 delay:(double)arg4;
 - (void)animateLayer:(id)arg1 withKeyPath:(id)arg2 from:(double)arg3 to:(double)arg4 delay:(double)arg5;

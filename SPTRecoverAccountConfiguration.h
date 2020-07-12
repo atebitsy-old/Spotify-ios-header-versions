@@ -18,12 +18,12 @@
     id <SPTContainerService> _containerService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) SPTLoginSlideUpModalPresenter *slideUpModalPresenter; // @synthesize slideUpModalPresenter=_slideUpModalPresenter;
 @property(readonly, nonatomic) SPTRecoverAccountLoggerFactory *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPageRegistry> pageRegistry;
 @property(readonly, nonatomic) id <SPTNavigationRouter> navigationRouter;
 - (id)provideDataLoader;

@@ -17,10 +17,10 @@
     UIImageView *_imageView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(copy, nonatomic) GLUEAccessoryIconViewStyle *style; // @synthesize style=_style;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateIconWithStyle:(id)arg1;
 - (struct CGSize)intrinsicContentSize;

@@ -14,9 +14,9 @@
     NSArray *_preferences;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 preferences:(id)arg2;
 
 @end

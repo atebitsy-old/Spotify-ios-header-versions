@@ -27,6 +27,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) SPTInAppMessageBannerMessageParser *bannerMessageParser; // @synthesize bannerMessageParser=_bannerMessageParser;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) SPTInAppMessageBannerPresentationController *bannerPresentationController; // @synthesize bannerPresentationController=_bannerPresentationController;
-- (void).cxx_destruct;
 - (void)bannerMessagePriorityDeciderDidFetchMessage:(id)arg1 forTrigger:(id)arg2;
 - (id)initWithBannerPresentationManager:(id)arg1 bannerMessageParser:(id)arg2 actionFactory:(id)arg3 serviceLogger:(id)arg4 carDetector:(id)arg5 nowPlayingManagerRegistry:(id)arg6 offlineModeState:(id)arg7 notePresentationManager:(id)arg8 crashReporter:(id)arg9 authController:(id)arg10;
 

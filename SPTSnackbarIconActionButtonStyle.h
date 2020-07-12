@@ -21,6 +21,7 @@
     struct CGSize _defaultIconSize;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *iconDisabledColor; // @synthesize iconDisabledColor=_iconDisabledColor;
 @property(copy, nonatomic) UIColor *iconHighlightedColor; // @synthesize iconHighlightedColor=_iconHighlightedColor;
 @property(copy, nonatomic) UIColor *iconNormalColor; // @synthesize iconNormalColor=_iconNormalColor;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) UIColor *iconHighlightedBackgroundColor; // @synthesize iconHighlightedBackgroundColor=_iconHighlightedBackgroundColor;
 @property(copy, nonatomic) UIColor *iconNormalBackgroundColor; // @synthesize iconNormalBackgroundColor=_iconNormalBackgroundColor;
 @property(nonatomic) struct CGSize defaultIconSize; // @synthesize defaultIconSize=_defaultIconSize;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

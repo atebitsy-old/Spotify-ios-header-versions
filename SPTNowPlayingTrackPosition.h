@@ -16,9 +16,9 @@
     SPTStatefulPlayer *_player;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStatefulPlayer *player; // @synthesize player=_player;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 - (void)statefulPlayer:(id)arg1 didStageContext:(id)arg2;
 - (void)playerDidReceiveStateUpdate:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;

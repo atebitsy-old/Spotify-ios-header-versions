@@ -16,10 +16,10 @@
     NSCalendar *_calendar;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
 @property(retain, nonatomic) NSDateFormatter *dateFormatter; // @synthesize dateFormatter=_dateFormatter;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (long long)daysFromDate:(id)arg1;
 - (long long)daysLeft;
 - (_Bool)hasPrepaid;

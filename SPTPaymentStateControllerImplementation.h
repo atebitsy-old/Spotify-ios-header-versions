@@ -19,10 +19,10 @@
     SPTPaymentState *_paymentState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPaymentState *paymentState; // @synthesize paymentState=_paymentState;
 @property(retain, nonatomic) NSMapTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1 queue:(id)arg2;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;

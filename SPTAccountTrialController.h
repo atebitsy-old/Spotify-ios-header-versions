@@ -21,12 +21,12 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTAccountTrialControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSDate *expirationDate; // @synthesize expirationDate=_expirationDate;
 @property(readonly, nonatomic) long long state; // @synthesize state=_state;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)sessionUserDidLogoutNotification;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;

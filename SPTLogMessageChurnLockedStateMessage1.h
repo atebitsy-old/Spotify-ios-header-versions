@@ -17,11 +17,11 @@
 }
 
 + (id)messageWithEvent:(id)arg1 testName:(id)arg2 testVariant:(id)arg3 extras:(id)arg4;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *extrasValue; // @synthesize extrasValue=_extrasValue;
 @property(copy, nonatomic) NSString *testVariantValue; // @synthesize testVariantValue=_testVariantValue;
 @property(copy, nonatomic) NSString *testNameValue; // @synthesize testNameValue=_testNameValue;
 @property(copy, nonatomic) NSString *eventValue; // @synthesize eventValue=_eventValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

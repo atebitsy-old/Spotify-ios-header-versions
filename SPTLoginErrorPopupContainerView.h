@@ -18,11 +18,11 @@
     UIStackView *_stackView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) GLUELabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

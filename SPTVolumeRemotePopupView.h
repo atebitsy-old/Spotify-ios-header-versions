@@ -20,13 +20,13 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIImageView *deviceImageView; // @synthesize deviceImageView=_deviceImageView;
 @property(retain, nonatomic) UILabel *listeningOnLabel; // @synthesize listeningOnLabel=_listeningOnLabel;
 @property(retain, nonatomic) UIProgressView *volumeView; // @synthesize volumeView=_volumeView;
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(readonly, nonatomic) SPTVolumeRemotePopupViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)activeDeviceDidUpdate;
 - (void)volumeDidUpdate;
 - (void)setupAccessability;

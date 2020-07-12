@@ -24,6 +24,7 @@
 
 + (id)policy;
 + (id)requestURL;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTOfflinePodcastModelEntity *currentEntity; // @synthesize currentEntity=_currentEntity;
 @property(copy, nonatomic) NSDictionary *currentResponse; // @synthesize currentResponse=_currentResponse;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> requestToken; // @synthesize requestToken=_requestToken;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 @property(nonatomic) __weak id <SPTOfflineContentModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)updateModelEntity;
 - (void)loadOfflinePodcastEpisodes;

@@ -13,8 +13,8 @@
     id <SPTLoginLogger> _logger;
 }
 
-@property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (id)adjustErrorIdentifierForErrorCode:(unsigned long long)arg1;
 - (void)logFacebookErrorWithCode:(unsigned long long)arg1 screenIdentifier:(id)arg2;
 - (void)logErrorWithCode:(unsigned long long)arg1 fieldIdentifier:(id)arg2 screenIdentifier:(id)arg3;

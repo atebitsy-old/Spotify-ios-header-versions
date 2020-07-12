@@ -21,11 +21,11 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) SPTCastManager *castManager; // @synthesize castManager=_castManager;
 @property(readonly, nonatomic) SPTGaiaConnectPublicStateCache *connectStateCache; // @synthesize connectStateCache=_connectStateCache;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
-- (void).cxx_destruct;
 - (void)connectDidChangeCurrentConnectionType:(id)arg1;
 - (void)connectDidChangeRemoteConnectionState:(id)arg1;
 - (void)connectDidChangeActiveDeviceName:(id)arg1;

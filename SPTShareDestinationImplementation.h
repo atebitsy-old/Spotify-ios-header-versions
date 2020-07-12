@@ -21,6 +21,7 @@
     NSString *_loggingKey;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *loggingKey; // @synthesize loggingKey=_loggingKey;
 @property(readonly, nonatomic) unsigned long long capability; // @synthesize capability=_capability;
 @property(readonly, nonatomic) long long destinationId; // @synthesize destinationId=_destinationId;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) NSString *URLScheme; // @synthesize URLScheme=_URLScheme;
 @property(readonly, nonatomic) UIImage *icon; // @synthesize icon=_icon;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)setupOtherPropertiesWith:(long long)arg1;
 - (id)localizationMapping;
 - (id)initWithDictionary:(id)arg1;

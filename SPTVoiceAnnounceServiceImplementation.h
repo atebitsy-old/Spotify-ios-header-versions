@@ -10,13 +10,12 @@
 #import "SPTVoicePlayerEventsObserver-Protocol.h"
 
 @class AVAudioPlayer, NSString, NSURL, SPTAllocationContext, SPTTrackAutoplayAnnouncer, SPTVoiceAnnounceFeatureProperties;
-@protocol GaiaFeature, SPTEventSenderService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTVoiceService;
+@protocol GaiaFeature, SPTEventSenderService, SPTRemoteConfigurationService, SPTSessionService, SPTVoiceService;
 
 @interface SPTVoiceAnnounceServiceImplementation : NSObject <SPTVoicePlayerEventsObserver, SPTVoiceAnnounceService>
 {
     id <GaiaFeature> _gaiaService;
     id <SPTEventSenderService> _eventSenderService;
-    id <SPTPlayerFeature> _playerService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTSessionService> _sessionService;
     id <SPTVoiceService> _voiceService;
@@ -28,6 +27,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *lastObservedNonAutoplayTrackURI; // @synthesize lastObservedNonAutoplayTrackURI=_lastObservedNonAutoplayTrackURI;
 @property(copy, nonatomic) NSURL *lastAnnouncedContextURI; // @synthesize lastAnnouncedContextURI=_lastAnnouncedContextURI;
 @property(retain, nonatomic) SPTVoiceAnnounceFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
@@ -36,10 +36,8 @@
 @property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
-- (void).cxx_destruct;
 - (void)playerEventsListener:(id)arg1 didFailWithError:(id)arg2;
 - (_Bool)shouldTriggerAnnouncement:(id)arg1;
 - (void)playerEventsListener:(id)arg1 didUpdatePlayerState:(id)arg2;

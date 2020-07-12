@@ -22,11 +22,11 @@
 
 + (double)widthForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2;
 + (id)styleForComponentModel:(id)arg1 styleOverrider:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUGSCustomViewControl *control; // @synthesize control=_control;
 @property(readonly, nonatomic) GLUEEntityCardView *cardView; // @synthesize cardView=_cardView;
 @property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (id)metadataCardSubtitleLabelStyle;
 - (struct CGSize)mainImageSizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2;
 - (void)configurePlaceholderWithIcon:(id)arg1;

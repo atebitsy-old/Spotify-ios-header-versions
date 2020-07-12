@@ -34,6 +34,7 @@
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) __weak id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(readonly, nonatomic) id <SPContextMenuActionsFactory> contextMenuActionFactory; // @synthesize contextMenuActionFactory=_contextMenuActionFactory;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) SPTConcertsEntityViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTConcertsEntityViewDelegate *viewDelegate; // @synthesize viewDelegate=_viewDelegate;
 @property(readonly, nonatomic) SPTConcertsEntityDataSource *dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (unsigned long long)preferredNavigationBarState;

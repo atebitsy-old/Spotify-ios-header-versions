@@ -17,10 +17,10 @@
 
 + (double)titleLabelHeightForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 style:(id)arg3 labelStyle:(id)arg4;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) SPTPremiumDestinationUIHeaderTitleStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)addLayoutConstraints;

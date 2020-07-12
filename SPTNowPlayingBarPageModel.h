@@ -17,10 +17,10 @@
     id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> _connectIntegration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> connectIntegration; // @synthesize connectIntegration=_connectIntegration;
 @property(nonatomic, getter=isRemoteDevicesVisible) _Bool remoteDevicesVisible; // @synthesize remoteDevicesVisible=_remoteDevicesVisible;
 @property(nonatomic) __weak id <SPTNowPlayingBarPageModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)shouldUpdateConnectStateViewVisibilityWithVisible:(_Bool)arg1;
 - (id)initWithConnectIntegration:(id)arg1;

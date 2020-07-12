@@ -22,6 +22,7 @@
     SPTYourLibraryMusicContentFilterDataLoader *_contentFiltersDataLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryMusicContentFilterDataLoader *contentFiltersDataLoader; // @synthesize contentFiltersDataLoader=_contentFiltersDataLoader;
 @property(readonly, nonatomic) unsigned long long defaultSortRuleIndex; // @synthesize defaultSortRuleIndex=_defaultSortRuleIndex;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
@@ -29,7 +30,6 @@
 @property(nonatomic) __weak id <SPTYourLibraryMusicFilterSortManagerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSArray *filterRules; // @synthesize filterRules=_filterRules;
 @property(copy, nonatomic) NSArray *sortRules; // @synthesize sortRules=_sortRules;
-- (void).cxx_destruct;
 - (void)contentFilterDataLoader:(id)arg1 filtersLoaded:(id)arg2;
 - (void)contentFilterDataLoader:(id)arg1 error:(id)arg2;
 - (void)loadContentFilters;

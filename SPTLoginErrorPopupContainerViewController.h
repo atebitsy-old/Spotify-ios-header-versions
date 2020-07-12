@@ -15,10 +15,10 @@
     SPTLoginTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(copy, nonatomic) NSString *messageString; // @synthesize messageString=_messageString;
 @property(copy, nonatomic) NSString *titleString; // @synthesize titleString=_titleString;
-- (void).cxx_destruct;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithTitle:(id)arg1 message:(id)arg2 theme:(id)arg3;

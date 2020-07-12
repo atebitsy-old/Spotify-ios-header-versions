@@ -17,9 +17,9 @@
     NSMutableDictionary *_data;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *data; // @synthesize data=_data;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)addJSONDictionary:(id)arg1;
 - (_Bool)addJSONData:(id)arg1 error:(id *)arg2;

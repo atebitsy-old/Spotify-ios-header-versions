@@ -15,9 +15,9 @@
     UIApplication *_application;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(retain, nonatomic) id <SPTAlertInterface> alertController; // @synthesize alertController=_alertController;
-- (void).cxx_destruct;
 - (void)navigateToPushNotificationsSettings;
 - (void)showNoPushNotificationsAlert;
 - (void)showHomeDeviceRemovedAlertWithDeviceName:(id)arg1;

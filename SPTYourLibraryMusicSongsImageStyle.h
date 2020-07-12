@@ -17,10 +17,10 @@
     GLUEGradientStyle *_backgroundGradientStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
 @property(copy, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

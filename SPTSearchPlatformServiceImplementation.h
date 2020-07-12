@@ -46,6 +46,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(retain, nonatomic) id <SPTSearchPlatformTestManager> searchTestManager; // @synthesize searchTestManager=_searchTestManager;
 @property(retain, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
@@ -74,7 +75,6 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)makeSearchLogger;
 - (id)makeOnDemandPermissionMonitor;
 - (id)makeLoadingLoggerWithConfiguration:(id)arg1;
@@ -92,7 +92,7 @@
 - (unsigned long long)entityVersionForPodcastFeature:(id)arg1;
 @property(readonly, nonatomic) SPTSearch2RequestParametersProvider *searchRequestParametersProvider; // @synthesize searchRequestParametersProvider=_searchRequestParametersProvider;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSourceProviding> recentsDataSourceProvider; // @synthesize recentsDataSourceProvider=_recentsDataSourceProvider;
-- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3;
+- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4;
 - (id)makeEmptyStatePropertiesProviderWithOfflineSearchEnabled:(_Bool)arg1;
 - (id)makeConfiguration;
 - (id)makeRootViewControllerWithConfiguration:(id)arg1;

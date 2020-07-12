@@ -15,10 +15,10 @@
     NSURL *_imageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, copy, nonatomic) NSString *languageCode; // @synthesize languageCode=_languageCode;
 @property(readonly, copy, nonatomic) NSString *languageName; // @synthesize languageName=_languageName;
-- (void).cxx_destruct;
 - (id)initWithLanguageName:(id)arg1 languageCode:(id)arg2 imageURL:(id)arg3;
 
 @end

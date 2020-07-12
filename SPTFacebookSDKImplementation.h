@@ -16,9 +16,9 @@
     unsigned long long _facebookAuthKeepAliveBackgroundTask;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long facebookAuthKeepAliveBackgroundTask; // @synthesize facebookAuthKeepAliveBackgroundTask=_facebookAuthKeepAliveBackgroundTask;
 @property(retain, nonatomic) FBSDKLoginManager *facebookLoginManager; // @synthesize facebookLoginManager=_facebookLoginManager;
-- (void).cxx_destruct;
 - (id)errorForFacebookError:(id)arg1;
 - (id)errorForUserCanceledAttempt;
 - (void)endAuthBackgroundTask;

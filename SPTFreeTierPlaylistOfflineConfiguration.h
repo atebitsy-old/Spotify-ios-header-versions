@@ -18,10 +18,10 @@
     id <SPTAlertInterface> _alertInterface;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(nonatomic) __weak id <SPTFreeTierEntityOfflineDelegate> offlineDelegate; // @synthesize offlineDelegate=_offlineDelegate;
-- (void).cxx_destruct;
 - (_Bool)isOfflineSyncAvailable;
 - (void)setEntityOffline:(_Bool)arg1;
 - (_Bool)isEntityOffline;

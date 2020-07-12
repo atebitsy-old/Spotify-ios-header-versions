@@ -20,11 +20,11 @@
 }
 
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEButton *button; // @synthesize button=_button;
 @property(retain, nonatomic) SPTPremiumDestinationUIFlexboxButtonStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)buttonTapped:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)setupConstraints;

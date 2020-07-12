@@ -22,13 +22,13 @@
     NSTimer *_progressTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *progressTimer; // @synthesize progressTimer=_progressTimer;
 @property(retain, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTPlayerState *lastState; // @synthesize lastState=_lastState;
 @property(retain, nonatomic) NSURL *currentlyPlayingTrack; // @synthesize currentlyPlayingTrack=_currentlyPlayingTrack;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTPodcastPlayerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)notifyPodcastPlayerStateDidChange;
 - (void)removePreviousTrackFromQueue:(id)arg1;
 - (id)nextTracksArrayWithQueue:(id)arg1 trailerTrack:(id)arg2;
@@ -48,6 +48,7 @@
 - (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 withOrigin:(id)arg3 startEpisodeUrl:(id)arg4 fromTimestamp:(id)arg5 resetPlay:(_Bool)arg6 completionHandler:(CDUnknownBlockType)arg7;
 - (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 startEpisodeUrl:(id)arg3 fromTimestamp:(id)arg4 resetPlay:(_Bool)arg5;
 - (void)pausePodcast:(id)arg1 startEpisodeUrl:(id)arg2;
+@property(readonly, nonatomic) _Bool isMusicInjectionTrack;
 @property(readonly, nonatomic) _Bool isPlayingPodcastEpisode;
 @property(readonly, nonatomic) double currentTrackDuration;
 - (_Bool)seekInPodcast:(id)arg1 episodeUrl:(id)arg2 toPosition:(double)arg3;

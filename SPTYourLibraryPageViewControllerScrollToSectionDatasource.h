@@ -19,10 +19,10 @@
     NSArray *_indexPaths;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *indexPaths; // @synthesize indexPaths=_indexPaths;
 @property(nonatomic) __weak id <SPTYourLibraryPagesViewControllerDatasource> datasource; // @synthesize datasource=_datasource;
 @property(nonatomic) __weak SPTYourLibraryPagesViewController *parent; // @synthesize parent=_parent;
-- (void).cxx_destruct;
 - (struct Position)fullPositionFromPage:(double)arg1 toPage:(double)arg2;
 - (id)pageViewController:(id)arg1 viewControllerAtIndex:(unsigned long long)arg2;
 - (unsigned long long)numberPagesForPageViewController:(id)arg1;

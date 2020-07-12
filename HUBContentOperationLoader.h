@@ -27,6 +27,7 @@
     NSObject<OS_dispatch_queue> *_contentOperationDispatchQueue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *contentOperationDispatchQueue; // @synthesize contentOperationDispatchQueue=_contentOperationDispatchQueue;
 @property(retain, nonatomic) HUBViewModelBuilderImplementation *currentBuilder; // @synthesize currentBuilder=_currentBuilder;
 @property(readonly, nonatomic) NSMutableDictionary *errorSnapshots; // @synthesize errorSnapshots=_errorSnapshots;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) NSMutableDictionary *contentOperationWrappers; // @synthesize contentOperationWrappers=_contentOperationWrappers;
 @property(readonly, copy, nonatomic) NSArray *contentOperations; // @synthesize contentOperations=_contentOperations;
 @property(nonatomic) __weak id <HUBViewModelLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)getOrCreateWrapperForContentOperationAtIndex:(unsigned long long)arg1;
 - (void)contentOperationQueueDidBecomeEmpty;
 - (void)performFirstContentOperationInQueue;

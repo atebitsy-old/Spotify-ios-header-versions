@@ -30,6 +30,7 @@
     SPTInAppMessageNotePresentationManager *_notePresentationManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
 @property(retain, nonatomic) SPTInAppMessageQAToolNoteMessageController *noteMessageController; // @synthesize noteMessageController=_noteMessageController;
 @property(retain, nonatomic) SPTInAppMessageQAToolCardMessageController *cardMessageController; // @synthesize cardMessageController=_cardMessageController;
@@ -45,7 +46,6 @@
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(readonly, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
-- (void).cxx_destruct;
 - (void)removeQAToolViewModelObservers;
 - (void)addQAToolViewModelObservers;
 - (void)connectDelegates;

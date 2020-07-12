@@ -18,10 +18,10 @@
 }
 
 + (id)ticketWithBannerItem:(id)arg1 statusChangeBlock:(CDUnknownBlockType)arg2;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType statusChangeBlock; // @synthesize statusChangeBlock=_statusChangeBlock;
 @property(nonatomic) long long status; // @synthesize status=_status;
 @property(readonly, nonatomic) SPTBannerItem *bannerItem; // @synthesize bannerItem=_bannerItem;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly) unsigned long long hash;

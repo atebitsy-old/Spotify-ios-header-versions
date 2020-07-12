@@ -30,6 +30,7 @@
     NSLayoutConstraint *_timeRemainingCenterYConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *timeRemainingCenterYConstraint; // @synthesize timeRemainingCenterYConstraint=_timeRemainingCenterYConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *timeTakenCenterYConstraint; // @synthesize timeTakenCenterYConstraint=_timeTakenCenterYConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *sliderCenterYConstraint; // @synthesize sliderCenterYConstraint=_sliderCenterYConstraint;
@@ -47,7 +48,6 @@
 @property(nonatomic) long long sliderAppearance; // @synthesize sliderAppearance=_sliderAppearance;
 @property(nonatomic) _Bool liveViewHidden; // @synthesize liveViewHidden=_liveViewHidden;
 @property(nonatomic) _Bool labelsHidden; // @synthesize labelsHidden=_labelsHidden;
-- (void).cxx_destruct;
 - (id)viewForLastBaselineLayout;
 - (id)viewForFirstBaselineLayout;
 - (id)description;

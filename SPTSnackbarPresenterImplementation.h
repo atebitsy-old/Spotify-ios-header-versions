@@ -23,6 +23,7 @@
     id <SPTCarDetector> _carDetector;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) UISwipeGestureRecognizer *swipeRecognizer; // @synthesize swipeRecognizer=_swipeRecognizer;
 @property(retain, nonatomic) NSTimer *presentationTimer; // @synthesize presentationTimer=_presentationTimer;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) SPTSnackbarViewPresenter *viewPresenter; // @synthesize viewPresenter=_viewPresenter;
 @property(nonatomic) _Bool isPresentationInProgress; // @synthesize isPresentationInProgress=_isPresentationInProgress;
 @property(retain, nonatomic) NSMutableArray *modelQueue; // @synthesize modelQueue=_modelQueue;
-- (void).cxx_destruct;
 - (void)userDidSwipeSnackbar:(id)arg1;
 - (_Bool)animationView:(id)arg1 shouldHandleTouchAtPoint:(struct CGPoint)arg2;
 - (void)invalidateTimer;

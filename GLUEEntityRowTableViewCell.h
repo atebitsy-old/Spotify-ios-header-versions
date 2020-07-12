@@ -19,11 +19,11 @@
     NSLayoutConstraint *_rowViewNormalLeadingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *rowViewNormalLeadingConstraint; // @synthesize rowViewNormalLeadingConstraint=_rowViewNormalLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leadingAccessoryViewEditingConstraint; // @synthesize leadingAccessoryViewEditingConstraint=_leadingAccessoryViewEditingConstraint;
 @property(copy, nonatomic) NSArray *leadingAccessoryLayoutConstraints; // @synthesize leadingAccessoryLayoutConstraints=_leadingAccessoryLayoutConstraints;
 @property(readonly, nonatomic) GLUEEntityRowView *rowView; // @synthesize rowView=_rowView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 @property(nonatomic, getter=isActive) _Bool active;
 @property(nonatomic, getter=isSelected) _Bool selected;

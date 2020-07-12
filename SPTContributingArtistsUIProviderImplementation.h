@@ -20,12 +20,12 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> glueImageLoaderFactory; // @synthesize glueImageLoaderFactory=_glueImageLoaderFactory;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) NSArray *artistsEntities; // @synthesize artistsEntities=_artistsEntities;
-- (void).cxx_destruct;
 - (id)provideContributingArtistsListViewController;
 - (id)initWithArtistEntities:(id)arg1 linkDispatcher:(id)arg2 glueImageLoaderFactory:(id)arg3 logCenter:(id)arg4 theme:(id)arg5;
 

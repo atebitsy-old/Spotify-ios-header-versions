@@ -20,12 +20,12 @@
     NSArray *_content;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didLoadContent; // @synthesize didLoadContent=_didLoadContent;
 @property(retain, nonatomic) NSArray *content; // @synthesize content=_content;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(readonly, nonatomic) unsigned long long level; // @synthesize level=_level;
 @property(readonly, nonatomic) __weak id <SPTBMWListScreenDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)update:(CDUnknownBlockType)arg1;
 - (id)titleForGroupIndex:(long long)arg1;
 - (id)titleForLine:(long long)arg1 row:(long long)arg2 groupIndex:(long long)arg3;

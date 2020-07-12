@@ -17,8 +17,8 @@
     SPTLoginMagicLinkSentConfirmationViewModel *_viewModel;
 }
 
-@property(readonly, nonatomic) SPTLoginMagicLinkSentConfirmationViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTLoginMagicLinkSentConfirmationViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (unsigned long long)preferredNavigationBarState;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;

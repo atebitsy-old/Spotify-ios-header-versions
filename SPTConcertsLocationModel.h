@@ -15,9 +15,9 @@
 }
 
 + (id)locationsWithDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSNumber *geonameId; // @synthesize geonameId=_geonameId;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithDictionary:(id)arg1;

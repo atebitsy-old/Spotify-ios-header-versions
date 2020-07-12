@@ -33,6 +33,7 @@
     double _currentSafeAreaMinY;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double currentSafeAreaMinY; // @synthesize currentSafeAreaMinY=_currentSafeAreaMinY;
 @property(retain, nonatomic) UILayoutGuide *parentSafeAreaLayoutGuide; // @synthesize parentSafeAreaLayoutGuide=_parentSafeAreaLayoutGuide;
 @property(retain, nonatomic) NSLayoutConstraint *topMarginLayoutConstraint; // @synthesize topMarginLayoutConstraint=_topMarginLayoutConstraint;
@@ -52,7 +53,6 @@
 @property(readonly, nonatomic) __weak GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) __weak GLUEImageView *entityImageView; // @synthesize entityImageView=_entityImageView;
 @property(readonly, nonatomic) __weak UIView *contentView; // @synthesize contentView=_contentView;
-- (void).cxx_destruct;
 - (void)enableImageShaddowIfNeeded;
 - (void)entityHeaderViewControllerDidUpdateBounceOffsets:(struct UIEdgeInsets)arg1;
 - (void)entityHeaderViewControllerDidUpdateVisibleRect:(struct CGRect)arg1;

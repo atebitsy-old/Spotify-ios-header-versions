@@ -24,6 +24,7 @@
     WKWebViewConfiguration *_webViewConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) WKWebViewConfiguration *webViewConfiguration; // @synthesize webViewConfiguration=_webViewConfiguration;
 @property(retain, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) SPTInAppMessageBannerMessage *bannerMessage; // @synthesize bannerMessage=_bannerMessage;
 @property(readonly, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(nonatomic) __weak id <SPTInAppMessageBannerMessageWebViewContentDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)logDismissEvent;
 - (void)logTriggerMessagePresentationPerformance;
 - (void)didReceiveWebviewEvent:(id)arg1;

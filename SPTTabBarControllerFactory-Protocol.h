@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class UIViewController;
-@protocol SPTLogCenter, SPTTabBarContainer;
+@protocol SPTLogCenter, SPTTabBarContainer, SPTTabBarControllerProtocol><SPContentInsetViewController;
 
 @protocol SPTTabBarControllerFactory <NSObject>
-- (UIViewController<SPTTabBarContainer> *)createTabBarContainerWithTabBarController:(struct UIViewController *)arg1 logCenter:(id <SPTLogCenter>)arg2;
-- (struct UIViewController *)createTabBarControllerWithLogCenter:(id <SPTLogCenter>)arg1;
+- (UIViewController<SPTTabBarContainer> *)createTabBarContainerWithTabBarController:(UIViewController<SPTTabBarControllerProtocol><SPContentInsetViewController> *)arg1 logCenter:(id <SPTLogCenter>)arg2;
+- (UIViewController<SPTTabBarControllerProtocol><SPContentInsetViewController> *)createTabBarControllerWithLogCenter:(id <SPTLogCenter>)arg1;
 @end
 

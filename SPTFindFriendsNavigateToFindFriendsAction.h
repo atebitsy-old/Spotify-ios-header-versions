@@ -13,8 +13,8 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
-@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)icon;

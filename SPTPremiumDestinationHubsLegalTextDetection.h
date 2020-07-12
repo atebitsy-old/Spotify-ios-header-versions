@@ -17,9 +17,9 @@
     SPTPremiumDestinationExperimentsImplementation *_experiments;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationExperimentsImplementation *experiments; // @synthesize experiments=_experiments;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)legalTextDictionaryFromComponentModelBuilder:(id)arg1;
 - (void)checkLegalTextForBodyComponentModelBuilders:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

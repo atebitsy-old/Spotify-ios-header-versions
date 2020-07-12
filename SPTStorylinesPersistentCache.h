@@ -13,8 +13,8 @@
     SPTPersistentCache *_diskCache;
 }
 
-@property(readonly, nonatomic) SPTPersistentCache *diskCache; // @synthesize diskCache=_diskCache;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTPersistentCache *diskCache; // @synthesize diskCache=_diskCache;
 - (id)parseData:(id)arg1;
 - (void)loadDataForIdentifier:(id)arg1 withCallback:(CDUnknownBlockType)arg2;
 - (void)removeCachedDataForIdentifier:(id)arg1;

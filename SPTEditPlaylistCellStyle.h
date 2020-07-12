@@ -16,9 +16,9 @@
     GLUEAccessoryIconButtonStyle *_deleteButtonStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEAccessoryIconButtonStyle *deleteButtonStyle; // @synthesize deleteButtonStyle=_deleteButtonStyle;
 @property(retain, nonatomic) GLUEEntityRowStyle *rowStyle; // @synthesize rowStyle=_rowStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

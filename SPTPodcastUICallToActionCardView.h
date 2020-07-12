@@ -19,13 +19,13 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPodcastUIRoundedView *roundedView; // @synthesize roundedView=_roundedView;
 @property(retain, nonatomic) SPTPodcastUIRoundedImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) GLUELabel *actionTextLabel; // @synthesize actionTextLabel=_actionTextLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) SPTPodcastUICallToActionCardStyle *cardStyle; // @synthesize cardStyle=_cardStyle;
-- (void).cxx_destruct;
 - (void)applyStyle;
 - (void)setUpLabels;
 - (void)setupViews;

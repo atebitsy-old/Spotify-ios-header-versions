@@ -7,8 +7,8 @@
 @protocol HUBViewModelLoaderDelegate;
 
 @protocol HUBViewModelLoader
-@property(readonly, nonatomic) _Bool isLoading;
-@property(nonatomic) __weak id <HUBViewModelLoaderDelegate> delegate;
 - (void)loadViewModel;
+@property(nonatomic, readonly) _Bool isLoading;
+@property(nonatomic) __weak id <HUBViewModelLoaderDelegate> delegate;
 @end
 

@@ -25,6 +25,7 @@
     long long _priority;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long priority; // @synthesize priority=_priority;
 @property(copy, nonatomic) CDUnknownBlockType shouldDisplayVideoBlock; // @synthesize shouldDisplayVideoBlock=_shouldDisplayVideoBlock;
 @property(nonatomic, getter=isEligibleForAttachment) _Bool eligibleForAttachment; // @synthesize eligibleForAttachment=_eligibleForAttachment;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <BMVideoSurfaceContextDelegate> contextDelegate; // @synthesize contextDelegate=_contextDelegate;
 @property(nonatomic) __weak id <BMVideoSurfaceDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) long long gravity; // @synthesize gravity=_gravity;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (void)didDetatch;
 - (void)didAttach;

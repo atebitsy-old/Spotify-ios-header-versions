@@ -15,10 +15,10 @@
     double _screenScale;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isRegularLayout) _Bool regularLayout; // @synthesize regularLayout=_regularLayout;
 @property(readonly, nonatomic) double screenScale; // @synthesize screenScale=_screenScale;
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 - (id)imageName;
 - (id)imageSize;
 - (id)imageShortNameForCell:(unsigned long long)arg1;

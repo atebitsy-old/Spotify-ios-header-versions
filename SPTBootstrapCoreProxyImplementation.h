@@ -15,8 +15,8 @@
     id <SPTSessionBootstrapDelegate> _bootstrapModule;
 }
 
-@property(nonatomic) __weak id <SPTSessionBootstrapDelegate> bootstrapModule; // @synthesize bootstrapModule=_bootstrapModule;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTSessionBootstrapDelegate> bootstrapModule; // @synthesize bootstrapModule=_bootstrapModule;
 - (void)bootstrap:(id)arg1 completion:(CDUnknownBlockType)arg2;
 
 @end

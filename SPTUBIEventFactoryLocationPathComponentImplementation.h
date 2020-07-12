@@ -19,12 +19,12 @@
     NSString *_reason;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *reason; // @synthesize reason=_reason;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, copy, nonatomic) NSNumber *position; // @synthesize position=_position;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 identifier:(id)arg2 position:(id)arg3 uri:(id)arg4 reason:(id)arg5;
 
 // Remaining properties

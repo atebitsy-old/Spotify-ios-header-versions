@@ -19,12 +19,12 @@
     NSString *_content;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *content; // @synthesize content=_content;
 @property(readonly, copy, nonatomic) NSString *term; // @synthesize term=_term;
 @property(readonly, copy, nonatomic) NSString *campaign; // @synthesize campaign=_campaign;
 @property(readonly, copy, nonatomic) NSString *medium; // @synthesize medium=_medium;
 @property(readonly, copy, nonatomic) NSString *source; // @synthesize source=_source;
-- (void).cxx_destruct;
 - (id)initWithSource:(id)arg1 medium:(id)arg2 campaign:(id)arg3 term:(id)arg4 content:(id)arg5;
 
 // Remaining properties

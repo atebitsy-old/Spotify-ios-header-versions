@@ -33,6 +33,7 @@
 }
 
 + (_Bool)hasVideoContent:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCanvasColorExtractor *colorExtractor; // @synthesize colorExtractor=_colorExtractor;
 @property(retain, nonatomic) id <SPTCanvasVideoExporter> videoExporter; // @synthesize videoExporter=_videoExporter;
 @property(retain, nonatomic) SPTCanvasContentLayerVideoPlayerLoader *videoPlayerLoader; // @synthesize videoPlayerLoader=_videoPlayerLoader;
@@ -48,7 +49,6 @@
 @property(nonatomic) __weak id <SPTCanvasViewControllerViewModelUIDelegate> uiDelegate; // @synthesize uiDelegate=_uiDelegate;
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool hasVideoContent;
 - (void)didFailToPreloadImageForCanvasModel:(id)arg1 withError:(id)arg2;
 - (void)didPreloadImageForCanvasModel:(id)arg1;

@@ -15,8 +15,8 @@
     NSArray *_recommendations;
 }
 
-@property(readonly, nonatomic) NSArray *recommendations; // @synthesize recommendations=_recommendations;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *recommendations; // @synthesize recommendations=_recommendations;
 - (void)processWithState:(id)arg1 loop:(id)arg2;
 - (id)initWithRecommendations:(id)arg1;
 

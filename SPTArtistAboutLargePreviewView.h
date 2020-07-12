@@ -33,6 +33,7 @@
     NSNumberFormatter *_numberFormatter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumberFormatter *numberFormatter; // @synthesize numberFormatter=_numberFormatter;
 @property(retain, nonatomic) NSLayoutConstraint *disclosureViewMonthlyListenersLabelConstraint; // @synthesize disclosureViewMonthlyListenersLabelConstraint=_disclosureViewMonthlyListenersLabelConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *disclosureViewBiographyLabelConstraint; // @synthesize disclosureViewBiographyLabelConstraint=_disclosureViewBiographyLabelConstraint;
@@ -52,7 +53,6 @@
 @property(copy, nonatomic) NSString *biography; // @synthesize biography=_biography;
 @property(readonly, nonatomic) SPTArtistAboutGlobalChartPositionView *globalChartPositionView; // @synthesize globalChartPositionView=_globalChartPositionView;
 @property(readonly, nonatomic) GLUELabel *monthlyListenersLabel; // @synthesize monthlyListenersLabel=_monthlyListenersLabel;
-- (void).cxx_destruct;
 - (void)setMonthlyListenersCount:(unsigned long long)arg1;
 - (void)layoutSubviews;
 - (void)applyStyleToImageView:(id)arg1;

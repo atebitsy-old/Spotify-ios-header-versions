@@ -21,13 +21,13 @@
     id <GLUEImageLoader> _glueImageLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) GLUELabel *advertiserTitle; // @synthesize advertiserTitle=_advertiserTitle;
 @property(readonly, nonatomic) UIView *backgroundOverlayView; // @synthesize backgroundOverlayView=_backgroundOverlayView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView; // @synthesize contentImageView=_contentImageView;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)addConstraints;
 - (id)initWithAdvertiserTitle:(id)arg1 theme:(id)arg2 glueImageLoader:(id)arg3;

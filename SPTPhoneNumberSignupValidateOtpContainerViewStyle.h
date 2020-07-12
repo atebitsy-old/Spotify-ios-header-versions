@@ -33,6 +33,7 @@
     double _bannerViewHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double bannerViewHeight; // @synthesize bannerViewHeight=_bannerViewHeight;
 @property(copy, nonatomic) SPTPhoneNumberSignupBannerViewStyle *bannerViewStyle; // @synthesize bannerViewStyle=_bannerViewStyle;
 @property(copy, nonatomic) SPTPhoneNumberSignupInputFieldStackViewStyle *stackViewStyle; // @synthesize stackViewStyle=_stackViewStyle;
@@ -52,7 +53,6 @@
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

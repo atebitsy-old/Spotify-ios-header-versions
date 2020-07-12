@@ -30,6 +30,7 @@
     SPTInAppMessageActionsRegistryImplementation *_actionsRegistry;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(retain, nonatomic) SPTInAppMessageActionsRegistryImplementation *actionsRegistry; // @synthesize actionsRegistry=_actionsRegistry;
 @property(retain, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(retain, nonatomic) id <SPTUIModeTransitionCoordinator> transitionCoordinator; // @synthesize transitionCoordinator=_transitionCoordinator;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)createActionForClickActionType:(long long)arg1;
 - (void)dealloc;

@@ -18,12 +18,12 @@
     NSString *_artistName;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool artistNameHidden; // @synthesize artistNameHidden=_artistNameHidden;
 @property(nonatomic) _Bool trackTitleHidden; // @synthesize trackTitleHidden=_trackTitleHidden;
 @property(copy, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
 @property(copy, nonatomic) NSString *trackTitle; // @synthesize trackTitle=_trackTitle;
 @property(nonatomic) __weak id <SPTVoiceNowPlayingTrackInfoViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateViewModelWithPlayerState:(id)arg1;
 
 @end

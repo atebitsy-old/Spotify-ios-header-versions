@@ -31,6 +31,7 @@
     id <SPTVoiceCommandAudioCuePlayer> _audioCuePlayer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldShowNPVAfterError; // @synthesize shouldShowNPVAfterError=_shouldShowNPVAfterError;
 @property(retain, nonatomic) id <SPTVoiceCommandAudioCuePlayer> audioCuePlayer; // @synthesize audioCuePlayer=_audioCuePlayer;
 @property(readonly, nonatomic) id <SPTVoiceTestManager> testManager; // @synthesize testManager=_testManager;
@@ -44,7 +45,6 @@
 @property(readonly, nonatomic) SPTVoiceListeningViewModel *listeningViewModel; // @synthesize listeningViewModel=_listeningViewModel;
 @property(readonly, nonatomic) SPTVoiceErrorViewModel *errorViewModel; // @synthesize errorViewModel=_errorViewModel;
 @property(nonatomic) __weak id <SPTVoiceSessionViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (CDUnknownBlockType)provideCompletionHandler;
 - (void)voiceNowPlayingWantsToPresentAdvertisement:(id)arg1;
 - (void)voiceNowPlayingWantsToPresentListening:(id)arg1;

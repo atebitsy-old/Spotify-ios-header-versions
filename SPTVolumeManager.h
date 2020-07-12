@@ -26,6 +26,7 @@
     double _internalVolume;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double internalVolume; // @synthesize internalVolume=_internalVolume;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) SPTVolumeDebugInstrumentation *debugLogger; // @synthesize debugLogger=_debugLogger;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <SPTVolumeSynchronizationManager> volumeSynchronizationManager; // @synthesize volumeSynchronizationManager=_volumeSynchronizationManager;
 @property(readonly, nonatomic) id <SPTVolumeRemoteCoordinator> remoteVolumeCoordinator; // @synthesize remoteVolumeCoordinator=_remoteVolumeCoordinator;
 @property(readonly, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)notifyObserversOfVolumeChange;

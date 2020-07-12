@@ -19,12 +19,12 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToTrackAccessoryLabelStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

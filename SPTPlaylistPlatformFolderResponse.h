@@ -19,11 +19,11 @@
     NSString *_name;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSString *groupHeader; // @synthesize groupHeader;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistMetadataFields> playlist; // @synthesize playlist;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformFolderMetadataFields> folder; // @synthesize folder;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

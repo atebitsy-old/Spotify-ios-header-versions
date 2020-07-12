@@ -16,10 +16,10 @@
     NSURL *_assetURL;
 }
 
+- (void).cxx_destruct;
 @property(retain) NSURL *assetURL; // @synthesize assetURL=_assetURL;
 @property(retain) NSObject<OS_dispatch_queue> *bufferQueue; // @synthesize bufferQueue=_bufferQueue;
 @property(getter=isLooping) _Bool looping; // @synthesize looping=_looping;
-- (void).cxx_destruct;
 - (id)videoTrackAssetReaderForAsset:(id)arg1;
 - (void)stop;
 - (void)dealloc;

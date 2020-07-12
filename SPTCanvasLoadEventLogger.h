@@ -15,9 +15,9 @@
     NSString *_eventSource;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *eventSource; // @synthesize eventSource=_eventSource;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (void)downloadDidFinishWithErrorForCanvasWithId:(id)arg1 entityUri:(id)arg2 error:(id)arg3;
 - (void)downloadDidFinishForCanvasWithId:(id)arg1 entityUri:(id)arg2;
 - (void)downloadDidStartWithCanvasId:(id)arg1 entityUri:(id)arg2;

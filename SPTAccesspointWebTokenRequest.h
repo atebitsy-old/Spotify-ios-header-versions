@@ -19,13 +19,13 @@
     struct ApHandler *_accesspointHandler;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(nonatomic) struct ApHandler *accesspointHandler; // @synthesize accesspointHandler=_accesspointHandler;
 @property(nonatomic) id sentinel; // @synthesize sentinel=_sentinel;
 @property(nonatomic) id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)startInternal;
 - (void)start;
 - (void)dealloc;

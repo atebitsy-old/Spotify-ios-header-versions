@@ -19,13 +19,13 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) UIButton *filterButton; // @synthesize filterButton=_filterButton;
 @property(retain, nonatomic) UILabel *filterName; // @synthesize filterName=_filterName;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(nonatomic) __weak id <SPTPodcastEpisodeSectionFilterHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapSortOptionButton;
 - (void)updateWithFilter:(id)arg1;
 - (void)setupConstraints;

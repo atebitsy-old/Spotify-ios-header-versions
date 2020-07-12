@@ -20,12 +20,12 @@
     id <GLUEImageLoader> _glueImageLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(retain, nonatomic) SPTVoiceNowPlayingRadialGradientView *radialGradientView; // @synthesize radialGradientView=_radialGradientView;
 @property(retain, nonatomic) GLUEGradientView *linearGradientView; // @synthesize linearGradientView=_linearGradientView;
 @property(retain, nonatomic) GLUEImageView *artworkImageView; // @synthesize artworkImageView=_artworkImageView;
 @property(retain, nonatomic) SPTVoiceNowPlayingArtworkViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)createRadialGradientView;
 - (id)createVerticalGradientView;
 - (void)voiceNowPlayingArtworkViewModelDidUpdate:(id)arg1;

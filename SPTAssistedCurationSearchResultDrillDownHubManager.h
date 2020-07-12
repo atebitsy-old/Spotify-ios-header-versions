@@ -31,6 +31,7 @@
     HUBComponentRegistry *_componentRegistry;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> contentOperationFactory; // @synthesize contentOperationFactory=_contentOperationFactory;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
@@ -49,7 +50,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, copy, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
-- (void).cxx_destruct;
 - (id)provideCommandDispatcherWithViewURI:(id)arg1 referrerIdentifier:(id)arg2 interactionLogger:(id)arg3 commandRegistry:(id)arg4;
 - (id)provideViewControllerForURI:(id)arg1 contextURI:(id)arg2 addTrackHandler:(id)arg3 sourceIdentifier:(id)arg4 referrerIdentifier:(id)arg5;
 - (id)initWithServiceIdentifier:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 remoteContentURLResolver:(id)arg4 theme:(id)arg5 audioPreviewModelFactory:(id)arg6 audioPreviewUIFactory:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 glueImageLoader:(id)arg10 linkDispatcher:(id)arg11 recentDataSource:(id)arg12;

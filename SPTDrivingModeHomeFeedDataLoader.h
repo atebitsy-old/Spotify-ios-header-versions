@@ -9,19 +9,17 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTDataLoader;
-@protocol HUBIconImageResolver, SPTCarDetector;
+@protocol HUBIconImageResolver;
 
 @interface SPTDrivingModeHomeFeedDataLoader : NSObject <SPTDataLoaderDelegate>
 {
     SPTDataLoader *_dataLoader;
     id <HUBIconImageResolver> _iconImageResolver;
-    id <SPTCarDetector> _carDetector;
 }
 
-@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)shelfItemsForHubModels:(id)arg1;
 - (id)shelvesForHubModels:(id)arg1;
 - (id)extractComponentModelsFromJSONData:(id)arg1 error:(id *)arg2;
@@ -31,7 +29,7 @@
 - (void)cancelLoading;
 @property(readonly, nonatomic, getter=isLoading) _Bool loading;
 - (void)loadHomeFeedItemsWithSuccessCallback:(CDUnknownBlockType)arg1 errorCallback:(CDUnknownBlockType)arg2;
-- (id)initWithDataLoader:(id)arg1 iconImageResolver:(id)arg2 carDetector:(id)arg3;
+- (id)initWithDataLoader:(id)arg1 iconImageResolver:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

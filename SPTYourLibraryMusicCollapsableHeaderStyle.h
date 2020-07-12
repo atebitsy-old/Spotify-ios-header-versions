@@ -22,6 +22,7 @@
     struct GLUESideMargins _margins;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double subtitleBaselineFromTitleBaseline; // @synthesize subtitleBaselineFromTitleBaseline=_subtitleBaselineFromTitleBaseline;
 @property(nonatomic) double contentBaselineToContentBottomEdge; // @synthesize contentBaselineToContentBottomEdge=_contentBaselineToContentBottomEdge;
 @property(nonatomic) double titleBaselineFromContentTopEdge; // @synthesize titleBaselineFromContentTopEdge=_titleBaselineFromContentTopEdge;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) SPTYourLibraryMusicCollapsableHeaderButtonStyle *collapseButtonStyle; // @synthesize collapseButtonStyle=_collapseButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *subtitleStyle; // @synthesize subtitleStyle=_subtitleStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleStyle; // @synthesize titleStyle=_titleStyle;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginUUIDProvider *sessionIDProvider; // @synthesize sessionIDProvider=_sessionIDProvider;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUserTrackingService> userTrackingService; // @synthesize userTrackingService=_userTrackingService;
-- (void).cxx_destruct;
 - (id)provideLogger;
 - (void)configureWithServices:(id)arg1;
 

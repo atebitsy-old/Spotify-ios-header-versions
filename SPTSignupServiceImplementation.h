@@ -29,6 +29,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginPerformanceLogging *performanceLogging; // @synthesize performanceLogging=_performanceLogging;
 @property(retain, nonatomic) SPTSignupConfigurationDataLoader *configurationDataLoader; // @synthesize configurationDataLoader=_configurationDataLoader;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
@@ -40,7 +41,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
-- (void).cxx_destruct;
 - (id)screenIdentifier:(id)arg1 signupType:(unsigned long long)arg2;
 - (void)loginServiceWillLaunchLoginUI;
 - (void)pageRegistryDidUnregisterFeaturePages:(id)arg1;

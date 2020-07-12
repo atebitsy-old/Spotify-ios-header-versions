@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logCarmageddonSensorSamples:(id)arg1 measurementReason:(id)arg2;
 - (void)logProcessedSequence:(CDStruct_3412e649)arg1 sensorType:(id)arg2 measurementReason:(id)arg3;
 - (void)logProcessedSensorSample:(id)arg1 reason:(id)arg2;

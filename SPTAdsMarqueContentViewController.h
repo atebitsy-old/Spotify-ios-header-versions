@@ -17,11 +17,11 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTAdsMarqueeContentView *marqueeContentView; // @synthesize marqueeContentView=_marqueeContentView;
 @property(nonatomic) __weak id <SPTAdsMarqueContentViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapInformationText:(id)arg1;
 - (void)navigateToAlbum:(id)arg1;
 - (id)initWithTheme:(id)arg1 marqueeEntity:(id)arg2 albumImage:(id)arg3 productState:(id)arg4;

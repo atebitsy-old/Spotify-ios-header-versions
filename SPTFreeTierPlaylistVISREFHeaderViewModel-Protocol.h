@@ -9,9 +9,9 @@
 @class NSAttributedString, NSString, NSURL;
 
 @protocol SPTFreeTierPlaylistVISREFHeaderViewModel <NSObject>
-@property(readonly, copy, nonatomic) NSString *metadataAccessibilityLabel;
-@property(readonly, copy, nonatomic) NSString *metadataText;
-@property(readonly, copy, nonatomic) NSAttributedString *creatorText;
-@property(readonly, nonatomic) NSURL *creatorImageURL;
+@property(nonatomic, readonly) NSString *metadataAccessibilityLabel;
+@property(nonatomic, readonly) NSString *metadataText;
+@property(nonatomic, readonly) NSAttributedString *creatorText;
+@property(nonatomic, readonly) NSURL *creatorImageURL;
 @end
 

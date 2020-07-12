@@ -19,9 +19,9 @@
     id <SPTContainerUIService> _containerUIService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
-- (void).cxx_destruct;
 - (void)allowErrorDialogsAfterShortDelay;
 - (void)allowErrorDialogs;
 - (_Bool)blockErrorDialogs;

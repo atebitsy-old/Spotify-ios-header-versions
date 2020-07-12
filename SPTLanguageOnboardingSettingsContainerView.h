@@ -18,11 +18,11 @@
     SPTActivityIndicatorView *_activityIndicatorView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 @property(retain, nonatomic) SPTLanguageOnboardingOfflineView *offlineView; // @synthesize offlineView=_offlineView;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) long long containerViewState; // @synthesize containerViewState=_containerViewState;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setUpConstraintsWithStyle:(id)arg1;
 - (void)updateContainerViewState;

@@ -17,19 +17,19 @@
     VISREFEntityOfflineButtonViewModel *_viewModel;
     GLUEViewAnimator *_animator;
     unsigned long long _currentStatus;
-    struct UIView *_animationView;
+    UIView<GLUEStatefulAnimationLoading><GLUEStatefulAnimationControlling><GLUEAnimationControlling> *_animationView;
     id <GLUETheme> _theme;
     double _currentProgress;
 }
 
 + (id)accessibilityLabelForStatus:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double currentProgress; // @synthesize currentProgress=_currentProgress;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView<GLUEStatefulAnimationLoading><GLUEStatefulAnimationControlling><GLUEAnimationControlling> *animationView; // @synthesize animationView=_animationView;
 @property(nonatomic) unsigned long long currentStatus; // @synthesize currentStatus=_currentStatus;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(retain, nonatomic) VISREFEntityOfflineButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)updateOfflineAvailability:(unsigned long long)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (void)updateTitle:(id)arg1;

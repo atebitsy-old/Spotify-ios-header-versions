@@ -40,15 +40,6 @@
 - (id)initWithCoder:(id)arg1;
 @property(nonatomic) __weak id <_TtP18QuickScrollFeature26SPTQuickScrollViewDelegate_> delegate; // @synthesize delegate;
 @property(nonatomic) __weak id <_TtP18QuickScrollFeature28SPTQuickScrollViewDatasource_> datasource; // @synthesize datasource;
-- (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
-- (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
-- (void)touchesBegan:(id)arg1 withEvent:(id)arg2;
-- (void)onPanGesture:(id)arg1;
-- (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
-- (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
-- (void)reset;
-- (void)attachScrollView:(id)arg1;
-@property(nonatomic) _Bool isActive;
 
 @end
 

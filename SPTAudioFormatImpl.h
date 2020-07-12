@@ -16,9 +16,9 @@
     AVPlayerItemAccessLogEvent *_accessLogEvent;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AVPlayerItemAccessLogEvent *accessLogEvent; // @synthesize accessLogEvent=_accessLogEvent;
 @property(retain, nonatomic) SPTVideoManifestProfile *audioProfile; // @synthesize audioProfile=_audioProfile;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic) NSString *audioCodec;

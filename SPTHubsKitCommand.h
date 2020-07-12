@@ -21,10 +21,10 @@
 + (id)spt_search_clearRecents;
 + (id)spt_search_removeRecentAtIndex:(unsigned long long)arg1;
 + (id)spt_search_contextMenuCommandWithURI:(id)arg1 track:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *dictionaryRepresentation; // @synthesize dictionaryRepresentation=_dictionaryRepresentation;
 @property(copy, nonatomic) NSDictionary *data; // @synthesize data=_data;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (_Bool)isEqualToCommand:(id)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

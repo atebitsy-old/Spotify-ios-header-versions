@@ -17,10 +17,10 @@
     double _contentPadding;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double contentPadding; // @synthesize contentPadding=_contentPadding;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) GLUELabelStyle *textLabelStyle; // @synthesize textLabelStyle=_textLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

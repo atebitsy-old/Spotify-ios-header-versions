@@ -22,13 +22,13 @@
     id <HUBIconImageResolver> _iconImageResolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(nonatomic) __weak NSBundle *bundle; // @synthesize bundle=_bundle;
 @property(readonly, nonatomic) NSMutableDictionary *customData; // @synthesize customData=_customData;
 @property(retain, nonatomic) UIImage *localImage; // @synthesize localImage=_localImage;
 @property(copy, nonatomic) NSString *placeholderIconIdentifier; // @synthesize placeholderIconIdentifier=_placeholderIconIdentifier;
 @property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)buildPlaceholderIcon;
 - (id)buildWithIdentifier:(id)arg1 type:(long long)arg2;
 - (id)copyWithZone:(struct _NSZone *)arg1;

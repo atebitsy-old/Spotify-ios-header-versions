@@ -18,13 +18,13 @@
     struct UIEdgeInsets _windowedContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLyricsContentLayerViewController *contentLayerViewController; // @synthesize contentLayerViewController=_contentLayerViewController;
 @property(copy, nonatomic) NSArray *windowedContentViewConstraints; // @synthesize windowedContentViewConstraints=_windowedContentViewConstraints;
 @property(retain, nonatomic) UIView *windowedContentView; // @synthesize windowedContentView=_windowedContentView;
 @property(nonatomic) struct UIEdgeInsets windowedContentInsets; // @synthesize windowedContentInsets=_windowedContentInsets;
 @property(retain, nonatomic) SPTLyricsContentLayerContext *context; // @synthesize context=_context;
 @property(retain, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)setupUI;
 - (id)initWithFrame:(struct CGRect)arg1;
 

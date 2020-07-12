@@ -9,10 +9,10 @@
 @class NSString, NSURL, UIColor;
 
 @protocol SPTFreeTierPlaylistFullbleedHeaderViewModel <NSObject>
-@property(readonly, nonatomic) UIColor *formatListPrimaryColor;
-@property(readonly, nonatomic) NSURL *formatListImageURL;
-@property(readonly, copy, nonatomic) NSString *formatListSubtitle;
-@property(readonly, copy, nonatomic) NSString *playlistDescription;
-@property(readonly, copy, nonatomic) NSString *playlistName;
+@property(nonatomic, readonly) UIColor *formatListPrimaryColor;
+@property(nonatomic, readonly) NSURL *formatListImageURL;
+@property(nonatomic, readonly) NSString *formatListSubtitle;
+@property(nonatomic, readonly) NSString *playlistDescription;
+@property(nonatomic, readonly) NSString *playlistName;
 @end
 

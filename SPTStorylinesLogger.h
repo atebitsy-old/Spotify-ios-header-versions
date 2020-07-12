@@ -18,10 +18,10 @@
     NSString *_currentPlaybackId;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *currentPlaybackId; // @synthesize currentPlaybackId=_currentPlaybackId;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logStorylinesCardImpressionForTrackUri:(id)arg1 currentCardIndex:(long long)arg2 percentInView:(double)arg3;
 - (void)logArtistNavigationInteractionForSpotifyUri:(id)arg1 trackUri:(id)arg2 currentCardIndex:(long long)arg3 percentInView:(double)arg4;
 - (void)logUnfollowButtonInteractionForSpotifyUri:(id)arg1 trackUri:(id)arg2 currentCardIndex:(long long)arg3;

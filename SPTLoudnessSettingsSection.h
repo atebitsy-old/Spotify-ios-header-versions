@@ -22,11 +22,11 @@
 + (id)productState;
 + (void)setProductState:(id)arg1;
 + (_Bool)shouldDisplayInSettingsViewController:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak SPTPlaybackPreferencesObserver *playbackPreferencesObserver; // @synthesize playbackPreferencesObserver=_playbackPreferencesObserver;
 @property(readonly, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)settingsSection:(id)arg1 didUpdatePreferences:(id)arg2;
 - (long long)numberOfRows;
 - (id)cellForRow:(long long)arg1;

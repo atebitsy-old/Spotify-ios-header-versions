@@ -10,19 +10,21 @@
 #import "SPTInAppMessageLogger-Protocol.h"
 
 @class NSString, SPTDataLoader;
-@protocol SPTEventSender, SPTLogCenter;
+@protocol SPTEventSender, SPTLogCenter, SPTUBILogger;
 
 @interface SPTInAppMessageServiceLogger : NSObject <SPTDataLoaderDelegate, SPTInAppMessageLogger>
 {
     SPTDataLoader *_dataLoader;
     id <SPTLogCenter> _logCenter;
     id <SPTEventSender> _eventSender;
+    id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)dismissType:(long long)arg1;
 - (id)parserTypeStringFromType:(long long)arg1;
 - (id)requestTypeStringFromType:(long long)arg1;
@@ -30,7 +32,7 @@
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)logInAppMessageDismissEventWithMessageID:(id)arg1 uuid:(id)arg2 dismissType:(long long)arg3;
 - (void)logInAppMessageWebviewEventWithMessageFormat:(id)arg1 messageId:(id)arg2 uuid:(id)arg3 eventType:(id)arg4 UIElement:(id)arg5 metadata:(id)arg6;
-- (void)logInAppMessageInteractionWithMessageUUID:(id)arg1 actionType:(id)arg2;
+- (void)logInAppMessageInteractionWithMessageUUID:(id)arg1 actionType:(id)arg2 actionUrl:(id)arg3;
 - (void)logInAppMessagePresentedWithMessageUUID:(id)arg1 messageFormat:(id)arg2;
 - (void)logInAppMessageTriggerMessageDiscardedWithReason:(id)arg1 triggerPattern:(id)arg2 triggerType:(id)arg3 messageFormat:(id)arg4 messsageID:(id)arg5 uuid:(id)arg6;
 - (void)logInAppMessageTriggerMessagePresentationPerformanceWithTriggerMessageId:(id)arg1 performanceTime:(id)arg2 messageFormat:(id)arg3 triggerPattern:(id)arg4 triggerType:(id)arg5;
@@ -44,7 +46,7 @@
 - (void)logInteractionWithInAppMessageWithTrackingURL:(id)arg1 messageFormat:(id)arg2;
 - (void)logImpressionOfInAppMessageWithImpressionUrl:(id)arg1 messageFormat:(id)arg2;
 - (void)performLogRequestForURL:(id)arg1 type:(long long)arg2 messageFormat:(id)arg3;
-- (id)initWithDataLoader:(id)arg1 logCenter:(id)arg2 eventSender:(id)arg3;
+- (id)initWithDataLoader:(id)arg1 logCenter:(id)arg2 eventSender:(id)arg3 ubiLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

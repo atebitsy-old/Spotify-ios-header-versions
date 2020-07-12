@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistService> freeTierPlaylistService; // @synthesize freeTierPlaylistService=_freeTierPlaylistService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;
-- (void).cxx_destruct;
 - (id)SPTEISPlaylistFolderFetchOptionsFromRequestOptions:(id)arg1 URI:(id)arg2;
 - (id)SPTEISPlaylistTrackFetchOptionsFromRequestOptions:(id)arg1 URI:(id)arg2;
 - (id)createPlaceholderContentItemForURI:(id)arg1;

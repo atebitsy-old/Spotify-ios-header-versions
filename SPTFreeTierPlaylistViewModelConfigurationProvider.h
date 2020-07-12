@@ -14,9 +14,9 @@
     id <SPTFreeTierPlaylistTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (id)provideViewModelConfiguration;
 - (id)initWithProductState:(id)arg1 testManager:(id)arg2;
 

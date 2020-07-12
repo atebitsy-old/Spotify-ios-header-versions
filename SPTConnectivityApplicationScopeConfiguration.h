@@ -25,6 +25,7 @@
     NSString *_defaultHTTPUserAgent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool enablePerformanceTracing; // @synthesize enablePerformanceTracing=_enablePerformanceTracing;
 @property(copy, nonatomic) NSString *defaultHTTPUserAgent; // @synthesize defaultHTTPUserAgent=_defaultHTTPUserAgent;
 @property(nonatomic) long long reconnectPolicy; // @synthesize reconnectPolicy=_reconnectPolicy;
@@ -38,7 +39,6 @@
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct Configuration cpp;
 - (id)initWithConfiguration:(struct Configuration)arg1;
 - (id)init;

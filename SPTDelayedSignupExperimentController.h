@@ -17,11 +17,11 @@
     SPTLoginDelayedSignupGuestAccountTracker *_accounTracker;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginDelayedSignupGuestAccountTracker *accounTracker; // @synthesize accounTracker=_accounTracker;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> configurationResolver; // @synthesize configurationResolver=_configurationResolver;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldShutDownTheTest;
 @property(readonly, nonatomic, getter=isSecondCellEnabled) _Bool secondCellEnabled;
 @property(readonly, nonatomic, getter=isFirstCellEnabled) _Bool firstCellEnabled;

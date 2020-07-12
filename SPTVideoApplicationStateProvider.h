@@ -14,9 +14,9 @@
     UIApplication *_application;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(readonly, nonatomic) long long state; // @synthesize state=_state;
-- (void).cxx_destruct;
 - (id)initWithApplication:(id)arg1;
 - (id)init;
 

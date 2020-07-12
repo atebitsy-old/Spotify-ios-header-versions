@@ -21,12 +21,12 @@
     id <SPTUIModeTransitionToken> _transitionToken;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(retain, nonatomic) id <SPTUIModeTransitionToken> transitionToken; // @synthesize transitionToken=_transitionToken;
 @property(retain, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
 @property(retain, nonatomic) id <SPTAccountProductActivationController> productActivationController; // @synthesize productActivationController=_productActivationController;
 @property(retain, nonatomic) id <SPTUIModeTransitionCoordinator> transitionCoordinator; // @synthesize transitionCoordinator=_transitionCoordinator;
-- (void).cxx_destruct;
 - (void)productActivationController:(id)arg1 didFailActivatingProduct:(long long)arg2 error:(id)arg3;
 - (void)showLoginFailureErrorView;
 - (void)handleResult:(long long)arg1;

@@ -13,8 +13,8 @@
     NSMutableDictionary *_requestHistory;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *requestHistory; // @synthesize requestHistory=_requestHistory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *requestHistory; // @synthesize requestHistory=_requestHistory;
 - (_Bool)hasMadeRequestForEmail:(id)arg1 withinTheLastSeconds:(double)arg2 currentTime:(id)arg3;
 - (void)trackRequestForEmail:(id)arg1 withCurrentTime:(id)arg2;
 - (id)init;

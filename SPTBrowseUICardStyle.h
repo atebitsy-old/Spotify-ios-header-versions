@@ -29,6 +29,7 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
 @property(nonatomic) double minFontSize; // @synthesize minFontSize=_minFontSize;
 @property(nonatomic) double hyphenationFontSizeThreshold; // @synthesize hyphenationFontSizeThreshold=_hyphenationFontSizeThreshold;
@@ -43,7 +44,6 @@
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
 @property(copy, nonatomic) UIColor *gradientEndColor; // @synthesize gradientEndColor=_gradientEndColor;
 @property(copy, nonatomic) UIColor *gradientStartColor; // @synthesize gradientStartColor=_gradientStartColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;
 

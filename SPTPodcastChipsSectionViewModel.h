@@ -16,9 +16,9 @@
     NSArray *_topics;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *topics; // @synthesize topics=_topics;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (long long)identifier;
 - (void)updateWithTopics:(id)arg1;
 - (void)updateWithPodcastPlayer:(id)arg1;

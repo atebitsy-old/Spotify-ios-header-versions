@@ -14,9 +14,9 @@
     SPTWatchConnectivityRequestTaskFactory *_requestTaskFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTWatchConnectivityRequestTaskFactory *requestTaskFactory; // @synthesize requestTaskFactory=_requestTaskFactory;
 @property(nonatomic) __weak SPTWatchConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;
-- (void).cxx_destruct;
 - (void)sendResponse:(id)arg1;
 - (void)sendRequest:(id)arg1 responseHandler:(id)arg2;
 - (id)initWithConnectivityManager:(id)arg1 requestTaskFactory:(id)arg2;

@@ -35,6 +35,7 @@
     GLUEAccessoryIconViewStyle *iconStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEAccessoryIconViewStyle *iconStyle; // @synthesize iconStyle;
 @property(copy, nonatomic) GLUEPressedAnimatorStyle *pressedAnimatorStyle; // @synthesize pressedAnimatorStyle=_pressedAnimatorStyle;
 @property(copy, nonatomic) UIColor *selectedBorderColor; // @synthesize selectedBorderColor;
@@ -56,7 +57,6 @@
 @property(nonatomic) long long lineBreakMode; // @synthesize lineBreakMode=_lineBreakMode;
 @property(copy, nonatomic) UIFont *textfont; // @synthesize textfont=_textfont;
 @property(nonatomic) double height; // @synthesize height=_height;
-- (void).cxx_destruct;
 - (id)borderColorForState:(unsigned long long)arg1;
 - (id)backgroundColorForState:(unsigned long long)arg1;
 @property(readonly) unsigned long long hash;

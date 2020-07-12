@@ -13,8 +13,8 @@
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
 }
 
-@property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 - (void)overrideRequestCountry:(id)arg1 callback:(CDUnknownBlockType)arg2;
 - (void)changeFocusValue:(_Bool)arg1 callback:(CDUnknownBlockType)arg2;
 - (void)addStreamTime:(double)arg1 callback:(CDUnknownBlockType)arg2;

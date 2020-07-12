@@ -17,11 +17,11 @@
     UILabel *_captionLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *captionLabel; // @synthesize captionLabel=_captionLabel;
 @property(readonly, nonatomic) GLUEGradientView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(readonly, nonatomic) SPTCanvasNowPlayingAccessoryView *imageAccessory; // @synthesize imageAccessory=_imageAccessory;
 @property(nonatomic) __weak id <SPTCanvasTapArtistAttributionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)artistTapped:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)updateCaptionWithName:(id)arg1;

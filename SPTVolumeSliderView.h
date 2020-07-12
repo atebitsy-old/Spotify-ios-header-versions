@@ -19,12 +19,12 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) MPVolumeView *systemVolumeView; // @synthesize systemVolumeView=_systemVolumeView;
 @property(retain, nonatomic) UIImageView *volumeIconView; // @synthesize volumeIconView=_volumeIconView;
 @property(retain, nonatomic) UISlider *volumeSlider; // @synthesize volumeSlider=_volumeSlider;
 @property(retain, nonatomic) SPTVolumeSliderViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)setupSystemVolumeView;
 - (void)volumeSliderValueChanged:(id)arg1;
 - (void)volumeDidUpdate:(double)arg1;

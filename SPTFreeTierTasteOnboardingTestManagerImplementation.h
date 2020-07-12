@@ -35,6 +35,7 @@
     CDUnknownBlockType _podcastInFirstTimeFlowExperimentOnBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType podcastInFirstTimeFlowExperimentOnBlock; // @synthesize podcastInFirstTimeFlowExperimentOnBlock=_podcastInFirstTimeFlowExperimentOnBlock;
 @property(nonatomic, getter=isPodcastInFirstTimeFlowExperimentOn) _Bool podcastInFirstTimeFlowExperimentOn; // @synthesize podcastInFirstTimeFlowExperimentOn=_podcastInFirstTimeFlowExperimentOn;
 @property(nonatomic, getter=isPodcastInFirstTimeFlowEnabled) _Bool podcastInFirstTimeFlowEnabled; // @synthesize podcastInFirstTimeFlowEnabled=_podcastInFirstTimeFlowEnabled;
@@ -54,7 +55,6 @@
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupDeeplinkAdBasedSkipEnabled;
 - (void)setupOnboardingIPadEnabledFlag;

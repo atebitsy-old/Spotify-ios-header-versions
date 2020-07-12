@@ -15,8 +15,8 @@
     NSURL *_URL;
 }
 
-@property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

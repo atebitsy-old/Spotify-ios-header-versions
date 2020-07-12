@@ -16,8 +16,8 @@
     id <SPTAudioPreviewPlayer> _audioPreviewPlayer;
 }
 
-@property(readonly, nonatomic) id <SPTAudioPreviewPlayer> audioPreviewPlayer; // @synthesize audioPreviewPlayer=_audioPreviewPlayer;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAudioPreviewPlayer> audioPreviewPlayer; // @synthesize audioPreviewPlayer=_audioPreviewPlayer;
 - (id)initWithAudioPreviewPlayer:(id)arg1;
 - (id)createAudioPreviewModel:(id)arg1 trackURI:(id)arg2 creationType:(long long)arg3;
 

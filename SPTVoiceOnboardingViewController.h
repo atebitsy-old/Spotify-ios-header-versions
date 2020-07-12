@@ -34,6 +34,7 @@
     struct CGPoint _scrollDraggingStartOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long currentPageIndex; // @synthesize currentPageIndex=_currentPageIndex;
 @property(retain, nonatomic) NSString *exitMethod; // @synthesize exitMethod=_exitMethod;
 @property(nonatomic) struct CGPoint scrollDraggingStartOffset; // @synthesize scrollDraggingStartOffset=_scrollDraggingStartOffset;
@@ -49,7 +50,6 @@
 @property(readonly, copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(readonly, nonatomic) __weak id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTVoiceOnboardingFlow *onboardingFlow; // @synthesize onboardingFlow=_onboardingFlow;
-- (void).cxx_destruct;
 - (id)provideSessionId;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;

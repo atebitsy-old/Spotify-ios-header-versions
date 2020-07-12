@@ -20,10 +20,10 @@
 
 + (id)cellStyleWithTheme:(id)arg1;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITableViewCell *cell; // @synthesize cell=_cell;
 @property(readonly, nonatomic) HUGSCustomViewControl *control; // @synthesize control=_control;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)onTap;
 - (void)applyThemeLayout;
 - (void)prepareForReuse;

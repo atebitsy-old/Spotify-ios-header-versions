@@ -33,6 +33,7 @@
     SPTGaiaSocialListeningIntegrationManager *_socialListeningManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool socialDeviceFlagEnabled; // @synthesize socialDeviceFlagEnabled=_socialDeviceFlagEnabled;
 @property(retain, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
@@ -51,7 +52,6 @@
 @property(nonatomic) SEL joinButtonActionSelector; // @synthesize joinButtonActionSelector=_joinButtonActionSelector;
 @property(nonatomic) __weak id joinButtonActionTarget; // @synthesize joinButtonActionTarget=_joinButtonActionTarget;
 @property(retain, nonatomic) SPTGaiaDevicePickerSocialDeviceCellAccessoryView *joinButton; // @synthesize joinButton=_joinButton;
-- (void).cxx_destruct;
 - (void)setTargetForContextMenuAction:(id)arg1 action:(SEL)arg2;
 - (void)setTargetForLeaveButtonAction:(id)arg1 action:(SEL)arg2;
 - (void)setTargetForJoinButtonAction:(id)arg1 action:(SEL)arg2;

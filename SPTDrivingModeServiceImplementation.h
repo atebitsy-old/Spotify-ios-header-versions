@@ -10,24 +10,21 @@
 #import "SPTDrivingModeTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDrivingModeControllerImplementation, SPTDrivingModeFactory, SPTDrivingModeTestManagerImplementation;
-@protocol _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTDrivingModeServiceImplementation : NSObject <SPTDrivingModeTestManagerObserver, SPTDrivingModeService>
 {
     _Bool _carViewEnabled;
-    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     SPTDrivingModeTestManagerImplementation *_testManager;
     SPTDrivingModeControllerImplementation *_drivingModeController;
     SPTDrivingModeFactory *_drivingModeFactory;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDrivingModeFactory *drivingModeFactory; // @synthesize drivingModeFactory=_drivingModeFactory;
 @property(nonatomic) _Bool carViewEnabled; // @synthesize carViewEnabled=_carViewEnabled;
 @property(retain, nonatomic) SPTDrivingModeControllerImplementation *drivingModeController; // @synthesize drivingModeController=_drivingModeController;
 @property(retain, nonatomic) SPTDrivingModeTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
-@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
-- (void).cxx_destruct;
 - (void)testManager:(id)arg1 didChangeCarViewEnabled:(_Bool)arg2;
 - (void)disableDrivingMode;
 - (void)enableDrivingMode;

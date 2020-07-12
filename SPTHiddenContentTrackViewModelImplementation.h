@@ -33,6 +33,7 @@
 }
 
 + (long long)trackRowRestrictionFromEntity:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long playStateRestriction; // @synthesize playStateRestriction=_playStateRestriction;
 @property(readonly, nonatomic, getter=isBanned) _Bool banned; // @synthesize banned=_banned;
 @property(readonly, nonatomic, getter=isPlayable) _Bool playable; // @synthesize playable=_playable;
@@ -50,7 +51,6 @@
 @property(readonly, nonatomic) UIColor *feedbackIconColor; // @synthesize feedbackIconColor=_feedbackIconColor;
 @property(readonly, nonatomic) long long feedbackIcon; // @synthesize feedbackIcon=_feedbackIcon;
 @property(readonly, nonatomic) NSURL *albumImageURL; // @synthesize albumImageURL=_albumImageURL;
-- (void).cxx_destruct;
 - (void)stopPreviewTrack;
 - (void)previewTrack;
 - (void)presentContextMenuInViewController:(id)arg1 senderView:(id)arg2;

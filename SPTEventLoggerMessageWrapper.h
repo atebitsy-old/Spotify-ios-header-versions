@@ -16,8 +16,8 @@
     GPBMessage *_message;
 }
 
-@property(retain, nonatomic) GPBMessage *message; // @synthesize message=_message;
 - (void).cxx_destruct;
+@property(retain, nonatomic) GPBMessage *message; // @synthesize message=_message;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly, copy, nonatomic) NSString *name;
 @property(readonly, copy, nonatomic) NSData *data;

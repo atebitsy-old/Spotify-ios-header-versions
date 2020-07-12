@@ -21,12 +21,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistSynchroniser> playlistSynchroniser; // @synthesize playlistSynchroniser=_playlistSynchroniser;
 @property(retain, nonatomic) id <SPTResolver> playlistCosmosRouter; // @synthesize playlistCosmosRouter=_playlistCosmosRouter;
 @property(retain, nonatomic) id <SPTCosmosDataLoaderService> cosmosDataLoaderService; // @synthesize cosmosDataLoaderService=_cosmosDataLoaderService;
 @property(retain, nonatomic) id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(copy, nonatomic) CDUnknownBlockType timeGetter; // @synthesize timeGetter=_timeGetter;
-- (void).cxx_destruct;
 - (id)provideResolverPlaylist;
 - (id)providePlaylistURIResolver;
 - (id)providePlaylistSynchroniser;

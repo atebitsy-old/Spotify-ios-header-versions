@@ -16,9 +16,9 @@
     CDUnknownBlockType _fallbackHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType fallbackHandler; // @synthesize fallbackHandler=_fallbackHandler;
 @property(readonly, nonatomic) NSMutableArray *entries; // @synthesize entries=_entries;
-- (void).cxx_destruct;
 - (CDUnknownBlockType)configurationBlockForContext:(id)arg1;
 - (void)unregisterPlaylistHandlerWithToken:(id)arg1;
 - (id)registerPlaylistHandlerWithPriority:(unsigned long long)arg1 forPredicate:(CDUnknownBlockType)arg2 configurationBlock:(CDUnknownBlockType)arg3;

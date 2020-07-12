@@ -14,8 +14,8 @@
 }
 
 + (struct UIEdgeInsets)edgeInsetsForComponentModel:(id)arg1;
-@property(nonatomic) __weak id <SPTPremiumDestinationUIFlexboxChildComponentViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTPremiumDestinationUIFlexboxChildComponentViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
 - (void)dealloc;
 - (id)constraintForLayoutGuide:(id)arg1 previousLayoutGuide:(id)arg2 parentComponentView:(id)arg3 inverse:(_Bool)arg4;
 - (void)configureChildComponentView:(id)arg1 forLayoutInParentComponentView:(id)arg2 withModel:(id)arg3 childDelegate:(id)arg4;

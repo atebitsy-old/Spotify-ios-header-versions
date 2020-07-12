@@ -15,8 +15,8 @@
     SPTWatchConnectivityDataLoader *_dataLoader;
 }
 
-@property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;
 - (id)initWithDataLoader:(id)arg1;

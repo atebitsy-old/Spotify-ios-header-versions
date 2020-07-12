@@ -24,6 +24,7 @@
     NSString *_userIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *userIdentifier; // @synthesize userIdentifier=_userIdentifier;
 @property(retain, nonatomic) NSString *appState; // @synthesize appState=_appState;
 @property(nonatomic) _Bool terminated; // @synthesize terminated=_terminated;
@@ -32,7 +33,6 @@
 @property(readonly, copy, nonatomic) NSString *clientVersionString; // @synthesize clientVersionString=_clientVersionString;
 @property(readonly, copy, nonatomic) NSString *coreVersionString; // @synthesize coreVersionString=_coreVersionString;
 @property(nonatomic) __weak id <SPTCrashDetectorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)crashlyticsDidDetectReportForLastExecution:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (CDUnknownBlockType)provideProductionAssertionHandler;
 - (void)recordNonFatalError:(id)arg1;

@@ -20,6 +20,7 @@
     SPTLoginErrorDialogLogger *_dialogLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(readonly, nonatomic) SPTSignupAgeFieldValidator *ageValidator; // @synthesize ageValidator=_ageValidator;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyViewModel *termsAndPolicyViewModel; // @synthesize termsAndPolicyViewModel=_termsAndPolicyViewModel;
 @property(readonly, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTSignupBirthDateViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)navigateToNextPageWithBirthDate:(id)arg1;
 - (void)validateBirthDate:(id)arg1 withCompletionBlock:(CDUnknownBlockType)arg2;
 - (void)userDidDismissPickerViewWithValue:(id)arg1 shouldValidate:(_Bool)arg2;

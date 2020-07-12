@@ -16,11 +16,11 @@
     NSURL *_wikipedia;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *wikipedia; // @synthesize wikipedia=_wikipedia;
 @property(retain, nonatomic) NSURL *instagram; // @synthesize instagram=_instagram;
 @property(retain, nonatomic) NSURL *facebook; // @synthesize facebook=_facebook;
 @property(retain, nonatomic) NSURL *twitter; // @synthesize twitter=_twitter;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)hasFacebook;
 - (_Bool)hasInstagram;

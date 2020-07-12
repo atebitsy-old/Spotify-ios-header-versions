@@ -26,6 +26,7 @@
     id <SPTAdsBaseEntity> _adEntity;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(retain, nonatomic) id <SPTAdNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observable; // @synthesize observable=_observable;
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
-- (void).cxx_destruct;
 - (void)adPlayerDisplayLinkFiredWithTrack:(id)arg1;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (void)updateSkipDelayLabel;

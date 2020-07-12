@@ -13,8 +13,8 @@
     NSMutableDictionary *_countDictionary;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *countDictionary; // @synthesize countDictionary=_countDictionary;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *countDictionary; // @synthesize countDictionary=_countDictionary;
 - (unsigned long long)failureCountForUser:(id)arg1;
 - (void)incrementFailureCountForUser:(id)arg1;
 - (id)init;

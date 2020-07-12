@@ -13,8 +13,8 @@
     id <SPTAuthTestManager> _testManager;
 }
 
-@property(retain, nonatomic) id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 - (id)createAuthViewControllerWithAccountsRequest:(id)arg1 cookie:(id)arg2 useStaging:(_Bool)arg3;
 - (id)initWithTestManager:(id)arg1;
 

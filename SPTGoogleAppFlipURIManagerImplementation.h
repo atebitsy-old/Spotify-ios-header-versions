@@ -17,9 +17,9 @@
     id <SPTGoogleAppFlipParameterValidator> _validator;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTGoogleAppFlipParameterValidator> validator; // @synthesize validator=_validator;
 @property(readonly, nonatomic) __weak UIApplication *application; // @synthesize application=_application;
-- (void).cxx_destruct;
 - (id)scopesParameter:(id)arg1;
 - (long long)sendResponseURL:(id)arg1;
 - (id)parameter:(id)arg1 fromFragment:(id)arg2;

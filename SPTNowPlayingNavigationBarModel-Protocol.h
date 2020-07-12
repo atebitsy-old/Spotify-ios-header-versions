@@ -12,15 +12,15 @@
 @protocol SPTNowPlayingNavigationBarModel <NSObject>
 @property(nonatomic) _Bool shouldDisableRightBarButton;
 @property(nonatomic) _Bool shouldDisableNavBarButtons;
-@property(readonly, nonatomic) _Bool isEntityRadio;
-@property(readonly, nonatomic) NSString *showsFormatNavigationBarTitle;
-@property(readonly, nonatomic) NSString *navigationBarSubtitle;
-@property(readonly, nonatomic) NSString *navigationBarTitle;
-@property(readonly, nonatomic) NSURL *entityClickURI;
-@property(readonly, copy, nonatomic) NSString *entityTimerDescription;
-@property(readonly, copy, nonatomic) NSString *entityDescription;
-@property(readonly, copy, nonatomic) NSString *entityName;
-@property(readonly, nonatomic) NSURL *contextURI;
+@property(nonatomic, readonly) _Bool isEntityRadio;
+@property(nonatomic, readonly) NSString *showsFormatNavigationBarTitle;
+@property(nonatomic, readonly) NSString *navigationBarSubtitle;
+@property(nonatomic, readonly) NSString *navigationBarTitle;
+@property(nonatomic, readonly) NSURL *entityClickURI;
+@property(nonatomic, readonly) NSString *entityTimerDescription;
+@property(nonatomic, readonly) NSString *entityDescription;
+@property(nonatomic, readonly) NSString *entityName;
+@property(nonatomic, readonly) NSURL *contextURI;
 - (void)removeObserver:(id <SPTNowPlayingNavigationBarModelObserver>)arg1;
 - (void)addObserver:(id <SPTNowPlayingNavigationBarModelObserver>)arg1;
 @end

@@ -15,8 +15,8 @@
     SPTNowPlayingModel *_model;
 }
 
-@property(retain, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)nowPlayingModelDidUpdateMetadata:(id)arg1;
 - (_Bool)shouldPlaybackSpeedControlBeEnabled;

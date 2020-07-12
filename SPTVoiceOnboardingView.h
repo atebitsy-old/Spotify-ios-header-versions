@@ -23,6 +23,7 @@
     UIButton *_additionalLinkButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *additionalLinkButton; // @synthesize additionalLinkButton=_additionalLinkButton;
 @property(retain, nonatomic) GLUEButton *microphoneAccessButton; // @synthesize microphoneAccessButton=_microphoneAccessButton;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) __weak id <SPTVoiceOnboardingViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) id <SPTVoiceOnboardingPageElements> pageElement; // @synthesize pageElement=_pageElement;
-- (void).cxx_destruct;
 - (void)didTapAdditionalLinkButton:(id)arg1;
 - (void)didTapActionButton:(id)arg1;
 - (void)setupLayout;

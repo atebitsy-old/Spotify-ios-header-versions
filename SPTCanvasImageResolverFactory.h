@@ -17,11 +17,11 @@
     NSCache *_canvasImageCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSCache *canvasImageCache; // @synthesize canvasImageCache=_canvasImageCache;
 @property(readonly, nonatomic) NSCache *avatarURICache; // @synthesize avatarURICache=_avatarURICache;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) __weak id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
-- (void).cxx_destruct;
 - (id)createCanvasImageResolver;
 - (id)initWithImageLoaderFactory:(id)arg1 entityService:(id)arg2;
 

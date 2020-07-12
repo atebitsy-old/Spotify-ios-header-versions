@@ -18,12 +18,12 @@
     GLUEAccessoryIconView *_accessoryView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEAccessoryIconView *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIImageView *mosaicImageView; // @synthesize mosaicImageView=_mosaicImageView;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)mosaicImageURLFromEntities:(id)arg1;
 - (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
 - (void)touchesEnded:(id)arg1 withEvent:(id)arg2;

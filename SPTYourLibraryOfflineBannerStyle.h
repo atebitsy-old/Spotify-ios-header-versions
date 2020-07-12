@@ -23,6 +23,7 @@
     double _verticalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double verticalMargin; // @synthesize verticalMargin=_verticalMargin;
 @property(nonatomic) double horizontalMargin; // @synthesize horizontalMargin=_horizontalMargin;
 @property(nonatomic) double minimumHeight; // @synthesize minimumHeight=_minimumHeight;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) UIColor *progressColor; // @synthesize progressColor=_progressColor;
 @property(copy, nonatomic) GLUELabelStyle *labelStyle; // @synthesize labelStyle=_labelStyle;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -15,9 +15,9 @@
     NSString *_screenIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *screenIdentifier; // @synthesize screenIdentifier=_screenIdentifier;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logUserDidTapEmailButton;
 - (void)logUserDidTapPhoneNumberButton;
 - (void)logUserDidTapFacebookButton;

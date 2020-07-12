@@ -16,10 +16,10 @@
     NSDictionary *_data;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *data; // @synthesize data=_data;
 @property(retain, nonatomic) id <HUBComponentModel> componentModel; // @synthesize componentModel=_componentModel;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 componentModel:(id)arg2;
 - (id)initWithName:(id)arg1 componentModel:(id)arg2 data:(id)arg3;
 

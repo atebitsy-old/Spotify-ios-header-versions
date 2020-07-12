@@ -28,6 +28,7 @@
     id <SPTFreeTierAlbumTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierAlbumTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;
-- (void).cxx_destruct;
 - (id)createContentOperationsForViewURI:(id)arg1 referrerIdentifier:(id)arg2 offlineModel:(id)arg3 reloadPageSignal:(id)arg4;
 - (id)initWithHubContentOperationFactory:(id)arg1 playerService:(id)arg2 onDemandService:(id)arg3 onDemandTrialService:(id)arg4 clientSessionService:(id)arg5 dataLoaderFactory:(id)arg6 networkConnectivityController:(id)arg7 imageLoaderFactory:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 ageVerificationProvider:(id)arg11 collectionPlaformStateProvider:(id)arg12 collectionPlatformTestManager:(id)arg13 persistantCache:(id)arg14 testManager:(id)arg15;
 

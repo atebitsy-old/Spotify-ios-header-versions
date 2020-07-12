@@ -15,9 +15,9 @@
     id <SPTSortingFilteringTheme> _sortingFilteringTheme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTSortingFilteringTheme> sortingFilteringTheme; // @synthesize sortingFilteringTheme=_sortingFilteringTheme;
 @property(retain, nonatomic) SPTFreeTierPreCurationTheme *preCurationTheme; // @synthesize preCurationTheme=_preCurationTheme;
-- (void).cxx_destruct;
 - (id)smallRowStyleWithBaseStyle:(id)arg1;
 - (id)largeRowStyleWithBaseStyle:(id)arg1;
 - (id)buttonSectionHeaderViewStyle;

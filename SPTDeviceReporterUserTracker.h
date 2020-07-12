@@ -18,10 +18,10 @@
     id <SPTEventSender> _eventSender;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic, getter=shouldEnableUserTracker) _Bool enableUserTracker; // @synthesize enableUserTracker;
 @property(readonly, nonatomic) NSString *trackerUserID; // @synthesize trackerUserID;
-- (void).cxx_destruct;
 - (id)getDeviceType;
 - (void)userDidLoginWithProductState:(id)arg1;
 - (id)initWithEventSender:(id)arg1;

@@ -17,10 +17,10 @@
     struct CGSize _entitySize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double overlapLength; // @synthesize overlapLength=_overlapLength;
 @property(nonatomic) struct CGSize entitySize; // @synthesize entitySize=_entitySize;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

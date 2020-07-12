@@ -25,6 +25,7 @@
     SPTNotificationLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNotificationLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) NSArray *preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) SPTNotificationPreferencesBackendIntegrator *notificationBackendIntegrator; // @synthesize notificationBackendIntegrator=_notificationBackendIntegrator;
 @property(retain, nonatomic) SPTNotificationsStyle *notificationsStyle; // @synthesize notificationsStyle=_notificationsStyle;
-- (void).cxx_destruct;
 - (void)unsubscribe:(id)arg1 channel:(long long)arg2;
 - (void)subscribe:(id)arg1 channel:(long long)arg2;
 - (id)notificationTypeAtIndexPath:(id)arg1;

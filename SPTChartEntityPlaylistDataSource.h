@@ -19,11 +19,11 @@
     id <SPTPlaylistPlatformDataLoaderRequestToken> _subscriptionToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> subscriptionToken; // @synthesize subscriptionToken=_subscriptionToken;
 @property(retain, nonatomic) id <SPTFormatListPlatformResolver> formatListPlatformResolver; // @synthesize formatListPlatformResolver=_formatListPlatformResolver;
 @property(retain, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(nonatomic) __weak id <SPTChartEntityDataSourceDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)loadChart;
 - (void)dealloc;
 - (id)initWithPlaylistURL:(id)arg1 formatListPlatformResolver:(id)arg2;

@@ -16,8 +16,8 @@
     NSString *_playbackId;
 }
 
-@property(copy, nonatomic) NSString *playbackId; // @synthesize playbackId=_playbackId;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *playbackId; // @synthesize playbackId=_playbackId;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (id)init;
 

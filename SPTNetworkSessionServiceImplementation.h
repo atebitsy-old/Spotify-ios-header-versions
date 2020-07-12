@@ -21,11 +21,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkController; // @synthesize networkController=_networkController;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
-- (void).cxx_destruct;
 - (void)userWillLogout:(id)arg1;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 - (void)unload;

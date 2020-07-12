@@ -20,12 +20,12 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) UILabel *warningTitleLabel; // @synthesize warningTitleLabel=_warningTitleLabel;
 @property(readonly, nonatomic) UILabel *warningLabel; // @synthesize warningLabel=_warningLabel;
 @property(readonly, nonatomic) UIButton *dismissButton; // @synthesize dismissButton=_dismissButton;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (id)createLayout;
 - (void)removeViewConstraints;

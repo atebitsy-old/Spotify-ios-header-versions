@@ -15,10 +15,10 @@
     SPTPersistentCacheRecord *_record;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPersistentCacheRecord *record; // @synthesize record=_record;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(nonatomic) long long result; // @synthesize result=_result;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)description;
 - (id)initWithResult:(long long)arg1 error:(id)arg2 record:(id)arg3;

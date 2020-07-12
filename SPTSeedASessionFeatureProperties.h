@@ -16,9 +16,9 @@
     NSString *_seedASessionButtonString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *seedASessionButtonString; // @synthesize seedASessionButtonString=_seedASessionButtonString;
 @property(readonly, nonatomic) unsigned long long seedASessionButton; // @synthesize seedASessionButton=_seedASessionButton;
-- (void).cxx_destruct;
 - (unsigned long long)mapSeedASessionButtonToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

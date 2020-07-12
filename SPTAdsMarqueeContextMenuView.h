@@ -16,11 +16,11 @@
     NSArray *_contextMenuActions;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) UIStackView *contextStackView; // @synthesize contextStackView=_contextStackView;
 @property(readonly, nonatomic) UITextView *headerTextView; // @synthesize headerTextView=_headerTextView;
-- (void).cxx_destruct;
 - (double)preferredHeight;
 - (void)addConstraintsForActionRowView:(id)arg1;
 - (id)initWithTheme:(id)arg1 headerTitle:(id)arg2 actions:(id)arg3;

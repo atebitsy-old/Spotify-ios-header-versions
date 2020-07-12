@@ -19,10 +19,10 @@
     CDUnknownBlockType _errorPredicate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool cacheContentHasRendered; // @synthesize cacheContentHasRendered=_cacheContentHasRendered;
 @property(readonly, copy, nonatomic) CDUnknownBlockType errorPredicate; // @synthesize errorPredicate=_errorPredicate;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)configureOverlayForServerError:(id)arg1;
 - (void)configureOverlayForOfflineError:(id)arg1;
 - (void)addOverlayForError:(id)arg1 toViewModelBuilder:(id)arg2;

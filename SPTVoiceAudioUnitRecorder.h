@@ -19,11 +19,11 @@
     SPTVoiceAudioUnitRecorderFactory *_factory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTVoiceAudioUnitRecorderFactory *factory; // @synthesize factory=_factory;
 @property(readonly, nonatomic) _Bool supportsLevelMonitoring; // @synthesize supportsLevelMonitoring=_supportsLevelMonitoring;
 @property(nonatomic) __weak id <SPTVoiceAudioRecorderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic, getter=isRecording) _Bool recording; // @synthesize recording=_recording;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double sampleRate;
 - (void)stopRecording;
 - (void)startRecording;

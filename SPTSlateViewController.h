@@ -28,6 +28,7 @@
     struct CGPoint _dragDirection;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIPanGestureRecognizer *panGestureRecognizer; // @synthesize panGestureRecognizer=_panGestureRecognizer;
 @property(retain, nonatomic) NSLayoutConstraint *contentAspectRatioConstraint; // @synthesize contentAspectRatioConstraint=_contentAspectRatioConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *contentHorizontalRightMarginConstraint; // @synthesize contentHorizontalRightMarginConstraint=_contentHorizontalRightMarginConstraint;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(nonatomic) __weak id <SPTSlateViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTSlateViewDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (void)enableGestureRecognizers:(_Bool)arg1 forView:(id)arg2;
 - (void)resetCardPosition:(struct CGPoint)arg1;
 - (void)resetContentViewPosition;

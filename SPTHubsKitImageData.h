@@ -18,10 +18,10 @@
     NSDictionary *_customData;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *customData; // @synthesize customData=_customData;
 @property(copy, nonatomic) NSString *placeholderIconIdentifier; // @synthesize placeholderIconIdentifier=_placeholderIconIdentifier;
 @property(copy, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (_Bool)isEqualToImageData:(id)arg1;
 @property(readonly, nonatomic) NSDictionary *dictionaryRepresentation;
 - (unsigned long long)hash;

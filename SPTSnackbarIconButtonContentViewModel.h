@@ -18,11 +18,11 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (void)actionButtonTapped:(id)arg1;
 - (unsigned long long)snackbarType;
 - (void)bindView:(id)arg1;

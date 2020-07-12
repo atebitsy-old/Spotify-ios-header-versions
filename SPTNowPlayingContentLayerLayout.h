@@ -13,8 +13,8 @@
     SPTNowPlayingContentLayerViewModel *_viewModel;
 }
 
-@property(readonly, nonatomic) SPTNowPlayingContentLayerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTNowPlayingContentLayerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (struct CGSize)collectionViewContentSize;
 - (id)initWithViewModel:(id)arg1;
 

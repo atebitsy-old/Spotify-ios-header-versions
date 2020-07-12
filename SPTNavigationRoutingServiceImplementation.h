@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *ubiObserverManager; // @synthesize ubiObserverManager=_ubiObserverManager;
 @property(retain, nonatomic) SPTNavigationRoutingLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTPageRegistryURISubtypeHandler *URISubtypeHandler; // @synthesize URISubtypeHandler=_URISubtypeHandler;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)load;

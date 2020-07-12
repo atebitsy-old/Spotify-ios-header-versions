@@ -26,6 +26,7 @@
     id <SPTAutoLockOverrideToken> _autoLockOverride;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAutoLockOverrideToken> autoLockOverride; // @synthesize autoLockOverride=_autoLockOverride;
 @property(retain, nonatomic) SPTAutoLockController *autoLockController; // @synthesize autoLockController=_autoLockController;
 @property(nonatomic) _Bool isShowing; // @synthesize isShowing=_isShowing;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) SPTDrivingModePivotPlayer *pivotPlayer; // @synthesize pivotPlayer=_pivotPlayer;
 @property(retain, nonatomic) SPTDrivingModeHomeFeedList *homeFeedList; // @synthesize homeFeedList=_homeFeedList;
 @property(retain, nonatomic) SPTDrivingModePivotList *pivotList; // @synthesize pivotList=_pivotList;
-- (void).cxx_destruct;
 - (_Bool)isNowPlayingViewShown;
 - (void)metaViewControllerWillHideNowPlaying:(id)arg1;
 - (void)metaViewControllerWillShowNowPlaying:(id)arg1;

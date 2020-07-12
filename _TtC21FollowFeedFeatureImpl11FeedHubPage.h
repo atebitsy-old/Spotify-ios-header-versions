@@ -20,6 +20,7 @@
 }
 
 - (void).cxx_destruct;
+- (id)initWithContainerViewFactory:(CDUnknownBlockType)arg1;
 - (id)initWithComponentRegistry:(id)arg1 componentLayoutManager:(id)arg2 imageLoaderFactory:(id)arg3 commandHandler:(id)arg4;
 - (void)turnOffHubsModelDiffingWithNotification:(id)arg1;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;

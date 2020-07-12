@@ -40,6 +40,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <_TtP18FilterChipsFeature21SPTFilterChipsService_> filterChipsService; // @synthesize filterChipsService=_filterChipsService;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <_TtP18QuickScrollFeature21SPTQuickScrollService_> quickScrollService; // @synthesize quickScrollService=_quickScrollService;
@@ -67,7 +68,6 @@
 @property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)registerImageLoaderRequestFactory;
 - (id)provideLoggerWithPageURI:(id)arg1;

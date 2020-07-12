@@ -6,10 +6,7 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTFindUIContentContainerDelegate-Protocol.h"
-#import "SPTFindUIHeaderContainerDelegate-Protocol.h"
-
-@interface SPTFindUIContainerViewController : UIViewController <SPTFindUIHeaderContainerDelegate, SPTFindUIContentContainerDelegate>
+@interface SPTFindUIContainerViewController : UIViewController
 {
     // Error parsing type: , name: headerContainer
     // Error parsing type: , name: contentContainer

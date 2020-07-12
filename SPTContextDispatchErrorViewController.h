@@ -17,9 +17,9 @@
     unsigned long long _error;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long error; // @synthesize error=_error;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI; // @synthesize pageURI=_pageURI;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (id)messageForError:(unsigned long long)arg1;
 - (void)viewDidLoad;

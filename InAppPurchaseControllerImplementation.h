@@ -34,6 +34,7 @@
     NSString *_clientLoggingSource;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *clientLoggingSource; // @synthesize clientLoggingSource=_clientLoggingSource;
 @property(nonatomic) _Bool displayedVerificationError; // @synthesize displayedVerificationError=_displayedVerificationError;
 @property(nonatomic, getter=isVerifyingReceipt) _Bool verifyingReceipt; // @synthesize verifyingReceipt=_verifyingReceipt;
@@ -49,7 +50,6 @@
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) SKProductsRequest *productsRequest; // @synthesize productsRequest=_productsRequest;
 @property(retain, nonatomic) InAppPurchaseModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) long long currentTransport;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

@@ -13,8 +13,8 @@
     SPTFreeTierPreCurationTheme *_preCurationTheme;
 }
 
-@property(readonly, nonatomic) SPTFreeTierPreCurationTheme *preCurationTheme; // @synthesize preCurationTheme=_preCurationTheme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTFreeTierPreCurationTheme *preCurationTheme; // @synthesize preCurationTheme=_preCurationTheme;
 @property(readonly, copy, nonatomic) SPTFreeTierPreCurationChunkyRowStyle *bannedChunkyRowTrackStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPreCurationChunkyRowStyle *defaultChunkyRowTrackStyle;
 - (id)initWithParentTheme:(id)arg1 andPreCurationTheme:(id)arg2;

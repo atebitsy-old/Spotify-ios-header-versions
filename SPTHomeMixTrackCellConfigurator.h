@@ -20,13 +20,13 @@
 }
 
 + (id)actionViewStyleFromTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeMixFamilyPileConfigurator *pileConfigurator; // @synthesize pileConfigurator=_pileConfigurator;
 @property(readonly, nonatomic) GLUEEntityRowStyle *trackRowStyle; // @synthesize trackRowStyle=_trackRowStyle;
 @property(nonatomic, getter=isFacepileDetailEnabled) _Bool facepileDetailEnabled; // @synthesize facepileDetailEnabled=_facepileDetailEnabled;
 @property(readonly, nonatomic) __weak id <SPTHomeMixTrackCellDelegate> cellDelegate; // @synthesize cellDelegate=_cellDelegate;
 @property(readonly, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-- (void).cxx_destruct;
 - (void)configureCell:(id)arg1 activeState:(_Bool)arg2 enabledState:(_Bool)arg3;
 - (void)setUpTrailingAccessoryForCell:(id)arg1 viewModel:(id)arg2 oldInteractionListener:(id)arg3;
 - (void)setUpLeadingAccessoryForCell:(id)arg1 viewModel:(id)arg2 oldInteractionListener:(id)arg3;

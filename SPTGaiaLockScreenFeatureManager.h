@@ -19,10 +19,10 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTGaiaSettingsProvider> settingsProvider; // @synthesize settingsProvider=_settingsProvider;
 @property(readonly, nonatomic) id <SPTGaiaLockScreenPlayerFlagsProvider> lockScreenFlagsProvider; // @synthesize lockScreenFlagsProvider=_lockScreenFlagsProvider;
-- (void).cxx_destruct;
 - (void)updateObservers;
 - (void)localDevicesOnlySettingsChanged:(_Bool)arg1;
 - (void)lockScreenControlsSettingsChanged:(_Bool)arg1;

@@ -18,11 +18,11 @@
     long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) NSURL *previewURL; // @synthesize previewURL=_previewURL;
 @property(readonly, nonatomic) long long identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 identifier:(long long)arg2 previewURL:(id)arg3;
 
 // Remaining properties

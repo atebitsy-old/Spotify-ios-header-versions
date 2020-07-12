@@ -20,12 +20,12 @@
     id <SPTCosmosDictionaryDataLoaderRequestToken> _requestToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> requestToken; // @synthesize requestToken=_requestToken;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) SPTOfflineSyncData *currentSyncData; // @synthesize currentSyncData=_currentSyncData;
 @property(nonatomic) __weak id <SPTOfflineSyncModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) long long syncedTracks;
 @property(readonly, nonatomic) long long totalTracks;
 @property(readonly, nonatomic, getter=isSyncing) _Bool syncing;

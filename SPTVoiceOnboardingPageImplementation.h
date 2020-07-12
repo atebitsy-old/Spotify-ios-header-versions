@@ -24,6 +24,7 @@
     NSString *_navigationLinkTitle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isPagedView; // @synthesize isPagedView=_isPagedView;
 @property(readonly, nonatomic) NSString *navigationLinkTitle; // @synthesize navigationLinkTitle=_navigationLinkTitle;
 @property(nonatomic) _Bool didViewPage; // @synthesize didViewPage=_didViewPage;
@@ -34,7 +35,6 @@
 @property(readonly, copy, nonatomic) NSString *pageTitle; // @synthesize pageTitle=_pageTitle;
 @property(readonly, nonatomic) NSString *onboardingImageAccessibilityLabel; // @synthesize onboardingImageAccessibilityLabel=_onboardingImageAccessibilityLabel;
 @property(readonly, nonatomic) UIImage *onboardingImage; // @synthesize onboardingImage=_onboardingImage;
-- (void).cxx_destruct;
 - (id)initWithOnboardingImage:(id)arg1 onboardingImageAccessibilityLabel:(id)arg2 pageTitle:(id)arg3 pageDescription:(id)arg4 actionButtonTitle:(id)arg5 additionalLink:(id)arg6 additionalLinkTitle:(id)arg7;
 - (id)initWithOnboardingImage:(id)arg1 onboardingImageAccessibilityLabel:(id)arg2 pageTitle:(id)arg3 pageDescription:(id)arg4 additionalLink:(id)arg5 additionalLinkTitle:(id)arg6;
 - (id)initWithOnboardingImage:(id)arg1 onboardingImageAccessibilityLabel:(id)arg2 pageTitle:(id)arg3 pageDescription:(id)arg4;

@@ -25,6 +25,7 @@
     UIView *_ctaButtonWeakReferenceForTooltip;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIView *ctaButtonWeakReferenceForTooltip; // @synthesize ctaButtonWeakReferenceForTooltip=_ctaButtonWeakReferenceForTooltip;
 @property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 @property(nonatomic) unsigned long long ctaIcon; // @synthesize ctaIcon=_ctaIcon;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate; // @synthesize delegate;
 @property(copy, nonatomic) NSString *accessibilityLabel; // @synthesize accessibilityLabel=_accessibilityLabel;
-- (void).cxx_destruct;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;

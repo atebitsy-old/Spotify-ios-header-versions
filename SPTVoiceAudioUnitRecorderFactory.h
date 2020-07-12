@@ -27,6 +27,7 @@
     struct AudioStreamBasicDescription _audioFormat;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *recorders; // @synthesize recorders=_recorders;
 @property(retain, nonatomic) SPTVoiceAudioLevelMonitor *audioLevelMonitor; // @synthesize audioLevelMonitor=_audioLevelMonitor;
 @property(nonatomic) struct AudioBufferList *inputAudioBufferList; // @synthesize inputAudioBufferList=_inputAudioBufferList;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *delegateQueue; // @synthesize delegateQueue=_delegateQueue;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *audioSetupQueue; // @synthesize audioSetupQueue=_audioSetupQueue;
 @property(readonly, nonatomic) double sampleRate; // @synthesize sampleRate=_sampleRate;
-- (void).cxx_destruct;
 - (struct AudioBufferList *)createAudioBufferListWithFormat:(struct AudioStreamBasicDescription)arg1 frameCount:(long long)arg2;
 - (struct AudioStreamBasicDescription)createAudioStreamDescriptionWithSampleRate:(double)arg1;
 - (_Bool)updateAudioStreamFormatIfNeeded;

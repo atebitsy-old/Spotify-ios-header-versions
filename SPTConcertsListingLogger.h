@@ -16,11 +16,11 @@
     id <SPTUBIMobileConcertsArtistConcertsEventFactory> _concertArtistEventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileConcertsArtistConcertsEventFactory> concertArtistEventFactory; // @synthesize concertArtistEventFactory=_concertArtistEventFactory;
 @property(readonly, nonatomic) id <SPTUBIMobileConcertsHubEventFactory> concertHubEventFactory; // @synthesize concertHubEventFactory=_concertHubEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (double)getTimestamp;
 - (void)logPopularNearYouConcertInteractionForConcertURI:(id)arg1 withIndex:(int)arg2;
 - (void)logRecommendedConcertInteractionForConcertURI:(id)arg1 withIndex:(int)arg2;

@@ -19,10 +19,10 @@
     CDUnknownBlockType _playerStateDidUpdateBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType playerStateDidUpdateBlock; // @synthesize playerStateDidUpdateBlock=_playerStateDidUpdateBlock;
 @property(copy, nonatomic) NSURL *currentPlayingContextURI; // @synthesize currentPlayingContextURI=_currentPlayingContextURI;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)updatePlayButtonUIForPlayerState:(id)arg1;
 - (id)obtainPlayerDataWithKey:(id)arg1 fromCommand:(id)arg2;

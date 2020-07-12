@@ -27,6 +27,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEmbeddedProvisionReporterUserTracker *embeddedProvisionReporterUserTracker; // @synthesize embeddedProvisionReporterUserTracker=_embeddedProvisionReporterUserTracker;
 @property(retain, nonatomic) SPTDeviceReporterUserTracker *deviceReporterUserTracker; // @synthesize deviceReporterUserTracker=_deviceReporterUserTracker;
 @property(retain, nonatomic) SPTClientReporterUserTracker *clientReporterUserTracker; // @synthesize clientReporterUserTracker=_clientReporterUserTracker;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

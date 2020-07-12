@@ -16,9 +16,9 @@
     HUBDebugInfoView *_infoView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUBDebugInfoView *infoView; // @synthesize infoView=_infoView;
 @property(readonly, nonatomic) HUBDebugViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)didChangeSelectedSegment:(id)arg1;
 - (void)layoutTextView;
 - (void)layoutSegmentedControl;

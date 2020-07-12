@@ -26,6 +26,7 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) NSHashTable *eventObservers; // @synthesize eventObservers=_eventObservers;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTTimer *sleepTimer; // @synthesize sleepTimer=_sleepTimer;
 @property(nonatomic, getter=shouldEndAfterEpisode) _Bool endAfterEpisode; // @synthesize endAfterEpisode=_endAfterEpisode;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)sendObserversTime:(double)arg1;
 - (void)sendObserversCancelEvent;

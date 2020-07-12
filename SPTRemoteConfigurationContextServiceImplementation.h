@@ -16,8 +16,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTRemoteConfigurationAppContext *remoteConfigurationAppContext; // @synthesize remoteConfigurationAppContext=_remoteConfigurationAppContext;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTRemoteConfigurationAppContext *remoteConfigurationAppContext; // @synthesize remoteConfigurationAppContext=_remoteConfigurationAppContext;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 - (id)provideRemoteConfigurationContext;

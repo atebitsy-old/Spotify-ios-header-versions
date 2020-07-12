@@ -26,11 +26,11 @@
 
 + (double)spacingWithTheme:(id)arg1;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2 model:(id)arg3 childSizingDelegate:(id)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTSearchUICarouselChildSizingDelegate> childSizingDelegate; // @synthesize childSizingDelegate=_childSizingDelegate;
 @property(readonly, nonatomic) SPTSearchUICarouselLayout *layout; // @synthesize layout=_layout;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (id)componentViewAtIndexPath:(id)arg1;
 - (double)inset;
 - (double)spacing;
@@ -42,8 +42,8 @@
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)layoutSubviews;

@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierArtistHubManager;
-@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEncoreIntegrationService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEncoreIntegrationService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTInAppMessageService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierArtistService : SPTUIPageService
 {
@@ -34,11 +34,14 @@
     id <SPTPodcastEpisodeFeaturedContentService> _podcastFeaturedService;
     id <SPTEncoreIntegrationService> _encoreService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTInAppMessageService> _inAppMessageService;
     SPTFreeTierArtistHubManager *_hubManager;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierArtistHubManager *hubManager; // @synthesize hubManager=_hubManager;
+@property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreService; // @synthesize encoreService=_encoreService;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastFeaturedService; // @synthesize podcastFeaturedService=_podcastFeaturedService;
@@ -62,7 +65,6 @@
 @property(nonatomic) __weak id <SPTFreeTierUIService> freeTierUIService; // @synthesize freeTierUIService=_freeTierUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
-- (void).cxx_destruct;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (void)load;

@@ -13,8 +13,8 @@
     GLUEButton *_button;
 }
 
-@property(readonly, nonatomic) GLUEButton *button; // @synthesize button=_button;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) GLUEButton *button; // @synthesize button=_button;
 - (void)setText:(id)arg1;
 - (id)text;
 - (id)initWithButton:(id)arg1;

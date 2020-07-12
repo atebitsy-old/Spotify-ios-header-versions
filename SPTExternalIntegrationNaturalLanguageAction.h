@@ -17,11 +17,11 @@
 }
 
 + (id)actionWithDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPlayOptions *playOptions; // @synthesize playOptions=_playOptions;
 @property(readonly, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) unsigned long long intent; // @synthesize intent=_intent;
-- (void).cxx_destruct;
 - (id)initWithIntent:(unsigned long long)arg1 URI:(id)arg2 playOrigin:(id)arg3 playOptions:(id)arg4;
 
 @end

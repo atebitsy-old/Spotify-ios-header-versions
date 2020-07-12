@@ -20,12 +20,12 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) FBKVOController *kvoController; // @synthesize kvoController=_kvoController;
 @property(readonly, nonatomic) SPTask *urlProvider; // @synthesize urlProvider=_urlProvider;
 @property(readonly, nonatomic) SPTModerationWebViewAuthoriser *authoriser; // @synthesize authoriser=_authoriser;
 @property(nonatomic) __weak id <SPTModerationWebViewControllerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleWebViewError:(id)arg1;
 - (void)webView:(id)arg1 decidePolicyForNavigationAction:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
 - (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;

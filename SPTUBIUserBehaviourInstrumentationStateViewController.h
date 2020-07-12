@@ -14,9 +14,9 @@
     UITextView *_textView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
 @property(retain, nonatomic) SPTUBIUserBehaviourInstrumentationDebugStateLogger *debugStateLogger; // @synthesize debugStateLogger=_debugStateLogger;
-- (void).cxx_destruct;
 - (void)viewDidLoad;
 - (id)initWithDebugStateLogger:(id)arg1;
 

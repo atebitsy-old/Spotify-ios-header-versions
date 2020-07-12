@@ -20,13 +20,13 @@
     double _sectionHeaderButtonTopMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double sectionHeaderButtonTopMargin; // @synthesize sectionHeaderButtonTopMargin=_sectionHeaderButtonTopMargin;
 @property(nonatomic) double educationalLabelTopMargin; // @synthesize educationalLabelTopMargin=_educationalLabelTopMargin;
 @property(nonatomic) double educationalLabelMargin; // @synthesize educationalLabelMargin=_educationalLabelMargin;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(copy, nonatomic) GLUEButtonStyle *sectionHeaderButtonStyle; // @synthesize sectionHeaderButtonStyle=_sectionHeaderButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *educationalLabelStyle; // @synthesize educationalLabelStyle=_educationalLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

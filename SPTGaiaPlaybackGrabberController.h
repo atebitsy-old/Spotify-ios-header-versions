@@ -22,6 +22,7 @@
     id <SPTGaiaConnectManager> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(retain, nonatomic) id <SPTGaiaLockScreenControlsStateProvider> lockScreenControlsStateProvider; // @synthesize lockScreenControlsStateProvider=_lockScreenControlsStateProvider;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSArray *grabbingRouteTypes; // @synthesize grabbingRouteTypes=_grabbingRouteTypes;
 @property(retain, nonatomic) GaiaMessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(nonatomic) __weak id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)grabPlayback;
 - (_Bool)activeDeviceIsCar;
 - (_Bool)activeDeviceExists;

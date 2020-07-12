@@ -42,6 +42,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool debugToolEnabled; // @synthesize debugToolEnabled=_debugToolEnabled;
 @property(retain, nonatomic) SPTInstrumentationFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
@@ -65,7 +66,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(retain, nonatomic) id <SPTInstrumentationRemotePlayingHandler> remotePlayingHandler; // @synthesize remotePlayingHandler=_remotePlayingHandler;
 @property(nonatomic) __weak id <SPTInstrumentationServiceMessagingHandler> messagingHandler; // @synthesize messagingHandler=_messagingHandler;
-- (void).cxx_destruct;
 - (void)featureFlagsDidChange:(id)arg1;
 - (id)provideInteractionMediator;
 - (void)instrumentationServiceObservedUninstrumentedPage:(id)arg1;

@@ -24,6 +24,7 @@
     NSTimer *_accessoryCollectionTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *accessoryCollectionTimer; // @synthesize accessoryCollectionTimer=_accessoryCollectionTimer;
 @property(retain, nonatomic) NSSet *pendingAccessories; // @synthesize pendingAccessories=_pendingAccessories;
 @property(retain, nonatomic) AVAudioSessionRouteDescription *currentRoute; // @synthesize currentRoute=_currentRoute;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 @property(readonly, nonatomic) EAAccessoryManager *eaAccessoryManager; // @synthesize eaAccessoryManager=_eaAccessoryManager;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
-- (void).cxx_destruct;
 - (id)outputPortsInAudioRoute:(id)arg1 notPresentInAudioRoute:(id)arg2;
 - (void)applicationDidBecomeActive:(id)arg1;
 - (void)updateWithAudioRoute:(id)arg1;

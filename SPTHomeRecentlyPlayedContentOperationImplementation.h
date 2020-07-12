@@ -20,11 +20,11 @@
 }
 
 + (id)recentlyPlayedInfoFromViewModelBuilder:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool listeningHistoryEnabled; // @synthesize listeningHistoryEnabled=_listeningHistoryEnabled;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTRecentlyPlayedList> recentlyPlayedList; // @synthesize recentlyPlayedList=_recentlyPlayedList;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)styleForEntityURL:(id)arg1;
 - (id)ubiLoggingDataForRecentlyPlayedShelfWithPosition:(unsigned long long)arg1 itemIndex:(unsigned long long)arg2 sourceContentIdentifier:(id)arg3;
 - (void)addLoggingForItemAtIndex:(unsigned long long)arg1 toItemComponentModelBuilder:(id)arg2 usingRecentlyPlayedInfo:(id)arg3;

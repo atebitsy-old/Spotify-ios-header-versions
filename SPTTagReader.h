@@ -10,7 +10,7 @@
 {
 }
 
-- (id)findTagsInImage:(struct UIImage *)arg1 scanSize:(struct CGSize)arg2 error:(id *)arg3;
+- (id)findTagsInImage:(id)arg1 scanSize:(struct CGSize)arg2 error:(id *)arg3;
 - (id)findTagsInVideo:(struct opaqueCMSampleBuffer *)arg1 scanSize:(struct CGSize)arg2 error:(id *)arg3;
 
 @end

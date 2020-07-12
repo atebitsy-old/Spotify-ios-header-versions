@@ -22,13 +22,13 @@
     SPTSignupRequestProvider *_requestProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSignupRequestProvider *requestProvider; // @synthesize requestProvider=_requestProvider;
 @property(retain, nonatomic) SPTSignupResponseProcessor *responseProcessor; // @synthesize responseProcessor=_responseProcessor;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(copy, nonatomic) NSString *displayNameSuggestion; // @synthesize displayNameSuggestion=_displayNameSuggestion;
 @property(nonatomic) __weak id <SPTSignupDataLoaderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)cancelRequest;

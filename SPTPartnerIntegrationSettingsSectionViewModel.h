@@ -21,6 +21,7 @@
     SPTPartnerTestManagerImplementation *_testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPartnerTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPartnerIntegrationAuthorizer *authorizer; // @synthesize authorizer=_authorizer;
 @property(readonly, nonatomic) SPTPartnerIntegrationCategory *category; // @synthesize category=_category;
@@ -30,7 +31,6 @@
 @property(readonly, copy, nonatomic) NSString *disclaimerText; // @synthesize disclaimerText=_disclaimerText;
 @property(readonly, copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)toggleSwitchToState:(_Bool)arg1;
 - (id)initWithCategory:(id)arg1 authorizer:(id)arg2 testManager:(id)arg3 updateHandler:(CDUnknownBlockType)arg4;
 

@@ -17,9 +17,9 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (_Bool)isUIImpression5MessageRequest:(id)arg1;
 - (_Bool)isInteractionMessageRequest:(id)arg1;
 - (void)logUIImpression5MessageWithRequest:(id)arg1;

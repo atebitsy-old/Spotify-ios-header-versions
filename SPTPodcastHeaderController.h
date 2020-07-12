@@ -21,6 +21,7 @@
     double _currentProgress;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double currentProgress; // @synthesize currentProgress=_currentProgress;
 @property(nonatomic) double navigationBarGradientEndPoint; // @synthesize navigationBarGradientEndPoint=_navigationBarGradientEndPoint;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) SPTPodcastHeaderContentView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
-- (void).cxx_destruct;
 - (void)updateProgressPositionsIfNeeded;
 - (void)updateColorsWithImage:(id)arg1;
 - (void)updateWithViewModel:(id)arg1;

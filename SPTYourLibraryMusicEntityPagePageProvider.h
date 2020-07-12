@@ -37,6 +37,7 @@
     id <SPTQuickScrollFactory> _quickScrollFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTQuickScrollFactory> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
@@ -59,7 +60,6 @@
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) unsigned long long providerIdentifier; // @synthesize providerIdentifier=_providerIdentifier;
 @property(readonly, nonatomic) unsigned long long groupIdentifier; // @synthesize groupIdentifier=_groupIdentifier;
-- (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
 - (id)initWithModelProvider:(CDUnknownBlockType)arg1 viewModelConfiguration:(id)arg2 title:(id)arg3 searchPlaceholderText:(id)arg4 pageProviderIdentifier:(unsigned long long)arg5 URI:(id)arg6 styleFactoryBlock:(CDUnknownBlockType)arg7 emptyView:(CDUnknownBlockType)arg8 buttonSectionEnabled:(_Bool)arg9 imageLoaderFactory:(id)arg10 theme:(id)arg11 sortingFilteringUIFactory:(id)arg12 logger:(id)arg13 viewLoggerFactory:(id)arg14 pageIdentifier:(id)arg15 testManager:(id)arg16 username:(id)arg17 snackbarPresenter:(id)arg18 shareDragDelegateFactory:(id)arg19 quickScrollFactory:(id)arg20;

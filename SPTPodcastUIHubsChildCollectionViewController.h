@@ -16,10 +16,10 @@
     id <HUBComponentModel> _model;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak HUBComponentView<HUBComponentViewWithChildren><HUBComponentViewWithEvents> *parentComponentView; // @synthesize parentComponentView=_parentComponentView;
 @property(nonatomic) _Bool shouldInsetChildrenWithinReadableContentGuide; // @synthesize shouldInsetChildrenWithinReadableContentGuide=_shouldInsetChildrenWithinReadableContentGuide;
-- (void).cxx_destruct;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (struct UIEdgeInsets)collectionView:(id)arg1 layout:(id)arg2 insetForSectionAtIndex:(long long)arg3;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;

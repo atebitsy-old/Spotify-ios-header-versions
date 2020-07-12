@@ -24,6 +24,7 @@
     struct CGSize _maximumImageSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTImageLoaderRegistry *imageLoaderRegistry; // @synthesize imageLoaderRegistry=_imageLoaderRegistry;
 @property(nonatomic) struct CGSize maximumImageSize; // @synthesize maximumImageSize=_maximumImageSize;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, copy, nonatomic) CDUnknownBlockType persistentKeyBlock; // @synthesize persistentKeyBlock=_persistentKeyBlock;
 @property(getter=isOffline) _Bool offline; // @synthesize offline=_offline;
-- (void).cxx_destruct;
 - (id)init;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

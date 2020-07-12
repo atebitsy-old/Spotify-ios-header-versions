@@ -17,9 +17,9 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
-- (void).cxx_destruct;
 - (id)providePremiumDestinationUIComponents;
 - (void)registerPremiumDestinationUIHubsComponents;
 - (id)provideHubsComponentRegistry;

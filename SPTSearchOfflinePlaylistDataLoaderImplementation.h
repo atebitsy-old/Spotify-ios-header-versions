@@ -16,8 +16,8 @@
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
 }
 
-@property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 - (CDUnknownBlockType)itemToPlaylistBlock;
 - (void)fetchPlaylistsForQuery:(id)arg1 limit:(unsigned long long)arg2 onCompletion:(CDUnknownBlockType)arg3;
 - (id)initWithPlaylistPlatformPlaylistDataLoader:(id)arg1;

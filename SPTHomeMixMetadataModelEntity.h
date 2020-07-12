@@ -36,6 +36,7 @@
 + (id)parseTaste:(id)arg1;
 + (id)parseMembers:(id)arg1;
 + (unsigned long long)parsePlanType:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *secondaryColorHex; // @synthesize secondaryColorHex=_secondaryColorHex;
 @property(readonly, copy, nonatomic) NSString *primaryColorHex; // @synthesize primaryColorHex=_primaryColorHex;
 @property(readonly, nonatomic) unsigned long long planType; // @synthesize planType=_planType;
@@ -56,7 +57,6 @@
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *madeForName; // @synthesize madeForName=_madeForName;
-- (void).cxx_destruct;
 - (id)description;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

@@ -19,11 +19,11 @@
 
 + (struct CGSize)preferredSizeForImage;
 + (double)preferredHeightForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) GLUELabel *lowerLabel; // @synthesize lowerLabel=_lowerLabel;
 @property(readonly, nonatomic) GLUELabel *upperLabel; // @synthesize upperLabel=_upperLabel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *image;
 - (void)activateConstraints;
 - (id)imageStyleWithModel:(id)arg1;

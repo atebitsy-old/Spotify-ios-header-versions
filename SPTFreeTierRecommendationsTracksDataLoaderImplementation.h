@@ -18,9 +18,9 @@
     id <SPTCollectionPlatformDataLoader> _collectionPlatformDataloader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataloader; // @synthesize collectionPlatformDataloader=_collectionPlatformDataloader;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)fetchRecommendTracksForPlaylistName:(id)arg1 currentTracks:(id)arg2 skipTracks:(id)arg3 minResults:(unsigned long long)arg4 decorationPolicy:(id)arg5 completion:(CDUnknownBlockType)arg6;

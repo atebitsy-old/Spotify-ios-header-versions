@@ -16,8 +16,8 @@
     NSArray *_items;
 }
 
-@property(readonly, nonatomic) NSArray *items; // @synthesize items=_items;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *items; // @synthesize items=_items;
 - (id)entityItemsFromItemDictionaries:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

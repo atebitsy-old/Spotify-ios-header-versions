@@ -22,9 +22,9 @@
 }
 
 + (void)load;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRequestAccounting *requestAccounting; // @synthesize requestAccounting=_requestAccounting;
 @property(retain, nonatomic) NSURL *crashDirectory; // @synthesize crashDirectory=_crashDirectory;
-- (void).cxx_destruct;
 - (void)sendPendingCrashReportsInternal;
 - (void)clearAllCrashReports;
 - (void)rescheduleUpload;

@@ -18,11 +18,11 @@
     NSDictionary *_metadata;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isAudioOnlyAllowed) _Bool audioOnlyAllowed; // @synthesize audioOnlyAllowed=_audioOnlyAllowed;
 @property(nonatomic, getter=isRoyaltyMedia) _Bool royaltyMedia; // @synthesize royaltyMedia=_royaltyMedia;
 @property(copy, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(retain, nonatomic) NSURL *mediaURL; // @synthesize mediaURL=_mediaURL;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly) unsigned long long hash;
 - (id)copyWithZone:(struct _NSZone *)arg1;

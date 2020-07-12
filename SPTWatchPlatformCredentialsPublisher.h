@@ -23,13 +23,13 @@
     NSDictionary *_lastCredentialsDictionary;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
 @property(copy, nonatomic) NSDictionary *lastCredentialsDictionary; // @synthesize lastCredentialsDictionary=_lastCredentialsDictionary;
 @property(retain, nonatomic) SPTAuthLoginCredentials *loginCredentials; // @synthesize loginCredentials=_loginCredentials;
 @property(readonly, nonatomic) SPTWatchPlatformTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTCredentialSource> credentialSource; // @synthesize credentialSource=_credentialSource;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (void)publishCredentials:(id)arg1;
 - (void)publishLatestCredentials;
 - (void)testManager:(id)arg1 didUpdateCredentialStoreSendCredentialsEnabledState:(_Bool)arg2;

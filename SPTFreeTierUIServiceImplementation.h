@@ -21,12 +21,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierUIServiceComponentFactory> componentFactory; // @synthesize componentFactory=_componentFactory;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-- (void).cxx_destruct;
 - (id)provideHubsComponentRegistry;
 - (id)providePersistentCounterWithIdentifier:(id)arg1 viewURI:(id)arg2;
 - (void)unload;

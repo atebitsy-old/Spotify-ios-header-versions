@@ -18,12 +18,12 @@
 }
 
 + (id)messageWithErrorType:(id)arg1 errorKey:(id)arg2 errorValue:(id)arg3 triggerId:(id)arg4 triggerMessageFormat:(id)arg5;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *triggerMessageFormatValue; // @synthesize triggerMessageFormatValue=_triggerMessageFormatValue;
 @property(copy, nonatomic) NSString *triggerIdValue; // @synthesize triggerIdValue=_triggerIdValue;
 @property(copy, nonatomic) NSString *errorValueValue; // @synthesize errorValueValue=_errorValueValue;
 @property(copy, nonatomic) NSString *errorKeyValue; // @synthesize errorKeyValue=_errorKeyValue;
 @property(copy, nonatomic) NSString *errorTypeValue; // @synthesize errorTypeValue=_errorTypeValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

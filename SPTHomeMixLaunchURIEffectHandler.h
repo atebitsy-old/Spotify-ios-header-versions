@@ -16,8 +16,8 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
-@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void)acceptNext:(id)arg1;
 - (void)acceptEffect:(id)arg1 model:(id)arg2;
 - (_Bool)canAcceptEffect:(id)arg1;

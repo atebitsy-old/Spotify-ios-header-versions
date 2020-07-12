@@ -24,6 +24,7 @@
     id <SPTPodcastRequestFactory> _requestFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastRequestFactory> requestFactory; // @synthesize requestFactory=_requestFactory;
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
-- (void).cxx_destruct;
 - (void)markEpisodeAsPlayed:(id)arg1 played:(_Bool)arg2;
 - (void)updateFollowedState:(_Bool)arg1 forShow:(id)arg2;
 - (void)toggleOfflineEpisode:(id)arg1 completion:(CDUnknownBlockType)arg2;

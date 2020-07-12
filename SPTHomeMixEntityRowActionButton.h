@@ -16,8 +16,8 @@
     UIView<GLUEReusable> *_customView;
 }
 
-@property(nonatomic) __weak UIView<GLUEReusable> *customView; // @synthesize customView=_customView;
 - (void).cxx_destruct;
+@property(nonatomic) __weak UIView<GLUEReusable> *customView; // @synthesize customView=_customView;
 - (void)prepareForReuse;
 
 @end

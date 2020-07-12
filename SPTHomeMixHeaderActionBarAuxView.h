@@ -16,11 +16,11 @@
     NSLayoutConstraint *_labelButtonConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *labelButtonConstraint; // @synthesize labelButtonConstraint=_labelButtonConstraint;
 @property(copy, nonatomic) SPTHomeMixHeaderActionBarAuxViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) __weak SPTHomeMixHeaderActionButton *button; // @synthesize button=_button;
 @property(readonly, nonatomic) __weak GLUELabel *label; // @synthesize label=_label;
-- (void).cxx_destruct;
 @property(nonatomic, getter=isEnabled) _Bool enabled;
 @property(nonatomic, getter=isSelected) _Bool selected;
 - (void)glue_applyStyle:(id)arg1;

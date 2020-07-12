@@ -15,8 +15,8 @@
     NSString *_text;
 }
 
-@property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 - (unsigned long long)snackbarType;
 - (void)bindView:(id)arg1;
 - (id)initWithText:(id)arg1;

@@ -14,9 +14,9 @@
     id <SPTUBIMobileLoginResetPasswordEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileLoginResetPasswordEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logUserDidTapSubmitButton;
 - (void)logUserDidInteractWithPasswordField;
 - (void)logUserDidSeeSetPasswordFailedWithNonRecoverableError:(id)arg1;

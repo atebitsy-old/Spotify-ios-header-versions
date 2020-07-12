@@ -17,9 +17,9 @@
     NSString *_queueName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *queueName; // @synthesize queueName=_queueName;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)removeTrack:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)hasTracks:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)hasTrack:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;

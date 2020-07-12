@@ -28,6 +28,7 @@
     MultipleFollowModel *_multipleFollowModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MultipleFollowModel *multipleFollowModel; // @synthesize multipleFollowModel=_multipleFollowModel;
 @property(readonly, nonatomic) __weak id <FollowFeature> followFeature; // @synthesize followFeature=_followFeature;
 @property(retain, nonatomic) NSArray *allFriends; // @synthesize allFriends=_allFriends;
@@ -38,7 +39,6 @@
 @property(nonatomic, getter=isLoading) _Bool loading; // @synthesize loading=_loading;
 @property(retain, nonatomic) NSArray *friends; // @synthesize friends=_friends;
 @property(nonatomic) __weak id <SPTFindFriendsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)networkConnectionManager:(id)arg1 hasDisconnectedFromNetworkType:(long long)arg2;
 - (void)networkConnectionManager:(id)arg1 hasConnectedToNetworkType:(long long)arg2;

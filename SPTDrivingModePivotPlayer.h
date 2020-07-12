@@ -18,12 +18,12 @@
     NSMutableDictionary *_resumeURIs;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *resumeURIs; // @synthesize resumeURIs=_resumeURIs;
 @property(readonly, nonatomic) NSMutableDictionary *resumePoints; // @synthesize resumePoints=_resumePoints;
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(retain, nonatomic) NSURL *queuedURI; // @synthesize queuedURI=_queuedURI;
-- (void).cxx_destruct;
 - (id)playOptionsForSkipTo:(id)arg1 seekTo:(id)arg2;
 - (id)resumeOptionsFor:(id)arg1;
 - (void)updatePlaybackStatusFromPlayerState:(id)arg1;

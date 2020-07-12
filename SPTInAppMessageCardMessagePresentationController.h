@@ -32,6 +32,7 @@
     SPTInAppMessageCardMessageViewController *_contentUnit;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageCardMessageViewController *contentUnit; // @synthesize contentUnit=_contentUnit;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageCardMessageViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic, getter=isPresentingCard) _Bool presentingCard; // @synthesize presentingCard=_presentingCard;
-- (void).cxx_destruct;
 - (void)authDidStart;
 - (void)logDismissEventWithDismissType:(long long)arg1;
 - (id)messageFormat;

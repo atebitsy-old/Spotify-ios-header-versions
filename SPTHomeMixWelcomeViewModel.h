@@ -19,6 +19,7 @@
     SPTHomeMixDomainMediator *_domainMediator;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeMixDomainMediator *domainMediator; // @synthesize domainMediator=_domainMediator;
 @property(readonly, nonatomic) SPTHomeMixDomainModel *domainModel; // @synthesize domainModel=_domainModel;
 @property(readonly, nonatomic) UIColor *titleColor; // @synthesize titleColor=_titleColor;
@@ -26,7 +27,6 @@
 @property(readonly, copy, nonatomic) NSString *localizedMixName; // @synthesize localizedMixName=_localizedMixName;
 @property(readonly, nonatomic, getter=shouldShowWelcomeLayout) _Bool showWelcomeLayout; // @synthesize showWelcomeLayout=_showWelcomeLayout;
 @property(readonly, copy, nonatomic) NSArray *genres; // @synthesize genres=_genres;
-- (void).cxx_destruct;
 - (void)logGenreTapped:(unsigned long long)arg1;
 - (void)listenNowTapped;
 - (void)openSupportWebPage;

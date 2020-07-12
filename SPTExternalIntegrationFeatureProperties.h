@@ -17,10 +17,10 @@
     NSString *_externalIntegrationShowingEntityPagesString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *externalIntegrationShowingEntityPagesString; // @synthesize externalIntegrationShowingEntityPagesString=_externalIntegrationShowingEntityPagesString;
 @property(readonly, nonatomic) unsigned long long externalIntegrationShowingEntityPages; // @synthesize externalIntegrationShowingEntityPages=_externalIntegrationShowingEntityPages;
 @property(readonly, nonatomic) _Bool externalIntegrationCallbacksOnBackgroundThread; // @synthesize externalIntegrationCallbacksOnBackgroundThread=_externalIntegrationCallbacksOnBackgroundThread;
-- (void).cxx_destruct;
 - (unsigned long long)mapExternalIntegrationShowingEntityPagesToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

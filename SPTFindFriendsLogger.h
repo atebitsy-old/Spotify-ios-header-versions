@@ -15,10 +15,10 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTUBIMobileFindfriendsEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIInteractionWithFeatureId:(id)arg1 pageURI:(id)arg2 sectionId:(id)arg3 itemIndex:(long long)arg4 targetURI:(id)arg5 interactionType:(id)arg6 userIntent:(id)arg7;
 - (void)logUIInteractionOnSectionId:(id)arg1 itemIndex:(long long)arg2 interactionType:(id)arg3 userIntent:(id)arg4;
 - (void)logHitFollowAllButton;

@@ -6,23 +6,27 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTRecentlyPlayedListObserver-Protocol.h"
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTAddToSpotifyPlaylistExperimentService, SPTFreeTierPlaylistService, SPTRecentlyPlayedService;
+@protocol SPTAddToSpotifyPlaylistExperimentService, SPTFreeTierPlaylistService, SPTRecentlyPlayedList, SPTRecentlyPlayedService;
 
-@interface SPTAddToSpotifyPlaylistExperimentUIService : NSObject <SPTService>
+@interface SPTAddToSpotifyPlaylistExperimentUIService : NSObject <SPTRecentlyPlayedListObserver, SPTService>
 {
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <SPTFreeTierPlaylistService> _freeTierPlaylistService;
+    id <SPTRecentlyPlayedList> _recentlyPlayedList;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTRecentlyPlayedList> recentlyPlayedList; // @synthesize recentlyPlayedList=_recentlyPlayedList;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistService> freeTierPlaylistService; // @synthesize freeTierPlaylistService=_freeTierPlaylistService;
 @property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
-- (void).cxx_destruct;
+- (void)recentlyPlayedListDidReload:(id)arg1;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

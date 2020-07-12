@@ -16,10 +16,10 @@
 }
 
 + (id)messageWithUtteranceId:(id)arg1 portType:(id)arg2 portOrientation:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *portOrientationValue; // @synthesize portOrientationValue=_portOrientationValue;
 @property(copy, nonatomic) NSString *portTypeValue; // @synthesize portTypeValue=_portTypeValue;
 @property(copy, nonatomic) NSString *utteranceIdValue; // @synthesize utteranceIdValue=_utteranceIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

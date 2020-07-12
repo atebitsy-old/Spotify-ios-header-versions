@@ -6,11 +6,9 @@
 
 #import <swiftCore/_TtCs12_SwiftObject.h>
 
-#import "HUBComponent-Protocol.h"
-
 @class NSSet;
 
-@interface _TtC21FollowFeedFeatureImpl19ArtistCardComponent : _TtCs12_SwiftObject <HUBComponent>
+@interface _TtC21FollowFeedFeatureImpl19ArtistCardComponent : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: layoutTraits
     // Error parsing type: , name: theme

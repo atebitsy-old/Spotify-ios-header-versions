@@ -19,12 +19,12 @@
     GLUEAccessoryIconButtonStyle *_actionButtonStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEAccessoryIconButtonStyle *actionButtonStyle; // @synthesize actionButtonStyle=_actionButtonStyle;
 @property(nonatomic) double contentInsetMargin; // @synthesize contentInsetMargin=_contentInsetMargin;
 @property(nonatomic) double bottomMargin; // @synthesize bottomMargin=_bottomMargin;
 @property(nonatomic) double topMargin; // @synthesize topMargin=_topMargin;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

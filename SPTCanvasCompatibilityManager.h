@@ -6,35 +6,15 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
-
-@class NSString, SPTObserverManager;
-@protocol SPTFeatureFlagSignal;
-
-@interface SPTCanvasCompatibilityManager : NSObject <SPTFeatureFlagSignalObserver>
+@interface SPTCanvasCompatibilityManager : NSObject
 {
     _Bool _enableCanvasForDevice;
-    id <SPTFeatureFlagSignal> _featureFlagSignal;
-    SPTObserverManager *_observers;
 }
 
-+ (id)createFeatureFlagSignalWithFactory:(id)arg1;
 + (_Bool)isLegacyOS;
 + (_Bool)shouldEnableCanvasForDevice;
-@property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> featureFlagSignal; // @synthesize featureFlagSignal=_featureFlagSignal;
 @property(nonatomic) _Bool enableCanvasForDevice; // @synthesize enableCanvasForDevice=_enableCanvasForDevice;
-- (void).cxx_destruct;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)removeObserver:(id)arg1;
-- (void)addObserver:(id)arg1;
-- (id)initWithFeatureFlagFactory:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)init;
 
 @end
 

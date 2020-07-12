@@ -9,14 +9,14 @@
 #import "SPTDrivingModeViewControllerFactory-Protocol.h"
 
 @class NSString, SPTDrivingModeLogger;
-@protocol SPTCarModeEngineService, SPTContainerService, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol SPTCarModeEngineService, SPTContainerService, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService;
 
 @interface SPTDrivingModeFactory : NSObject <SPTDrivingModeViewControllerFactory>
 {
     id <SPTPlayer> _player;
     SPTDrivingModeLogger *_logger;
     id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
-    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
+    id <SPTCarModeEngineService> _carModeEngineService;
     id <SPTSettingsFeature> _settingsService;
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
@@ -32,10 +32,9 @@
     id <SPTOnDemandService> _onDemandSetService;
     id <SPTService> _drivingModeService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTCarModeEngineService> _carModeEngineService;
 }
 
-@property(readonly, nonatomic) __weak id <SPTCarModeEngineService> carModeEngineService; // @synthesize carModeEngineService=_carModeEngineService;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak id <SPTService> drivingModeService; // @synthesize drivingModeService=_drivingModeService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandSetService; // @synthesize onDemandSetService=_onDemandSetService;
@@ -51,8 +50,7 @@
 @property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
-@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
-- (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTCarModeEngineService> carModeEngineService; // @synthesize carModeEngineService=_carModeEngineService;
 - (id)createViewControllerForUnit:(unsigned long long)arg1 session:(id)arg2;
 - (id)createFooterUnitViewControllerForSession:(id)arg1;
 - (id)createAdsHeadUnitViewController;
@@ -69,7 +67,7 @@
 - (id)createPivotPlayer;
 - (id)createNowPlayingModesWithOptOutHandler:(id)arg1;
 - (id)createSessionWithOptOutHandler:(id)arg1;
-- (id)createDrivingModeControllerWithCarDetector:(id)arg1;
+- (id)createDrivingModeController;
 - (id)createTestManagerForService:(id)arg1;
 @property(readonly, nonatomic) id <SPTDrivingModeRemoteConfiguration> remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
 @property(readonly, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;

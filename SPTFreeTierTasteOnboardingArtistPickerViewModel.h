@@ -35,6 +35,7 @@
     unsigned long long _selectedItemsCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long selectedItemsCount; // @synthesize selectedItemsCount=_selectedItemsCount;
 @property(readonly, nonatomic) NSMutableDictionary *followModels; // @synthesize followModels=_followModels;
 @property(readonly, nonatomic) NSMutableArray *expandedItems; // @synthesize expandedItems=_expandedItems;
@@ -54,7 +55,6 @@
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistPickerViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool seedASessionEnabled;
 - (_Bool)canSelectSeedASessionItem;
 - (void)logPodcastInFirstTimeFlowImpression;

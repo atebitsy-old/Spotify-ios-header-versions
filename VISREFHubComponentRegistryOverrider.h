@@ -11,8 +11,8 @@
     HUBComponentRegistry *_baseComponentRegistry;
 }
 
-@property(readonly, nonatomic) HUBComponentRegistry *baseComponentRegistry; // @synthesize baseComponentRegistry=_baseComponentRegistry;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) HUBComponentRegistry *baseComponentRegistry; // @synthesize baseComponentRegistry=_baseComponentRegistry;
 - (_Bool)hasOverrideForComponentWithName:(id)arg1 inNameSpace:(id)arg2;
 - (_Bool)hasOverrideForComponentId:(id)arg1;
 - (id)componentForModel:(id)arg1;

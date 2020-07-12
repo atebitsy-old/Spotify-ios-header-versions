@@ -17,11 +17,11 @@
     NSString *_concertURIString;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *concertURIString; // @synthesize concertURIString=_concertURIString;
 @property(readonly, nonatomic) id <SPTUBIMobileConcertsEntityEventFactory> concertEntityEventFactory; // @synthesize concertEntityEventFactory=_concertEntityEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (double)getTimestamp;
 - (void)logRelatedRecommendedShowsInteractionWithConcertURI:(id)arg1;
 - (void)logRelatedArtistShowsInteractionWithConcertURI:(id)arg1;

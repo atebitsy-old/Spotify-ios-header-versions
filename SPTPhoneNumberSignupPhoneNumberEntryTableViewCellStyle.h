@@ -27,6 +27,7 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double defaultMargin; // @synthesize defaultMargin=_defaultMargin;
@@ -40,7 +41,6 @@
 @property(nonatomic) double verticalSeparatorWidth; // @synthesize verticalSeparatorWidth=_verticalSeparatorWidth;
 @property(copy, nonatomic) UIColor *verticalSeparatorColor; // @synthesize verticalSeparatorColor=_verticalSeparatorColor;
 @property(copy, nonatomic) GLUELabelStyle *callingCodeLabelStyle; // @synthesize callingCodeLabelStyle=_callingCodeLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

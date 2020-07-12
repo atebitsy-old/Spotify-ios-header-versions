@@ -20,11 +20,11 @@
     id <SPTFeatureFlagSignal> _browseMockEnabledSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isBrowseMockEnabled) _Bool browseMockEnabled; // @synthesize browseMockEnabled=_browseMockEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> browseMockEnabledSignal; // @synthesize browseMockEnabledSignal=_browseMockEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupBrowseMockSignal;
 - (id)initWithFeatureFlagFactory:(id)arg1 featureSettingsItemFactory:(id)arg2;

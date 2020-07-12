@@ -17,9 +17,9 @@
     NSMutableSet *_sessions;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *sessions; // @synthesize sessions=_sessions;
 @property(retain, nonatomic) NSMapTable *completions; // @synthesize completions=_completions;
-- (void).cxx_destruct;
 - (void)postURL:(id)arg1 timeout:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)setObject:(id)arg1 forKeyedSubscript:(id)arg2;
 - (id)objectForKeyedSubscript:(id)arg1;

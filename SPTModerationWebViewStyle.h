@@ -18,11 +18,11 @@
     struct CGSize _navigationItemIconSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTModerationReportErrorViewStyle *errorViewStyle; // @synthesize errorViewStyle=_errorViewStyle;
 @property(nonatomic) struct CGSize navigationItemIconSize; // @synthesize navigationItemIconSize=_navigationItemIconSize;
 @property(retain, nonatomic) UIColor *navigationItemColor; // @synthesize navigationItemColor=_navigationItemColor;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithTheme:(id)arg1;
 

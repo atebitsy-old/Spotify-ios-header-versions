@@ -34,6 +34,7 @@
     SPTInfoView *_infoView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) UIRefreshControl *refreshControl; // @synthesize refreshControl=_refreshControl;
@@ -51,7 +52,6 @@
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTNRFDataLoader *feedLoader; // @synthesize feedLoader=_feedLoader;
-- (void).cxx_destruct;
 - (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint)arg2 targetContentOffset:(inout struct CGPoint *)arg3;
 - (void)scrollViewDidScroll:(id)arg1;
 - (id)sectionAdaptersForTableAdapter:(id)arg1;

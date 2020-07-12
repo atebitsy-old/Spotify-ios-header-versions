@@ -22,13 +22,13 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTUBIPageInstanceIdentifierProviderImplementation *pageInstanceIdProvider; // @synthesize pageInstanceIdProvider=_pageInstanceIdProvider;
 @property(retain, nonatomic) SPTUBISessionServiceResponderImplementation *sessionServiceResponder; // @synthesize sessionServiceResponder=_sessionServiceResponder;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (id)currentPageInstanceId;

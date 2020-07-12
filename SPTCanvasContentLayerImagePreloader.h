@@ -19,12 +19,12 @@
 }
 
 + (id)preloadError;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTaskCompletionSource *completionSource; // @synthesize completionSource=_completionSource;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
 @property(readonly, nonatomic) long long imageResolverType; // @synthesize imageResolverType=_imageResolverType;
 @property(readonly, nonatomic) SPTCanvasImageResolver *imageResolver; // @synthesize imageResolver=_imageResolver;
 @property(nonatomic) __weak id <SPTCanvasContentLayerImagePreloaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)completeLoadImageWithImage:(id)arg1;
 - (void)loadImageRequest;
 - (id)loadImage;

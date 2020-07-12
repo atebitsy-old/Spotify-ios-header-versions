@@ -16,9 +16,9 @@
     CDUnknownBlockType _predicate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType predicate; // @synthesize predicate=_predicate;
 @property(readonly, copy, nonatomic) CDUnknownBlockType handler; // @synthesize handler=_handler;
-- (void).cxx_destruct;
 - (id)initWithHandler:(CDUnknownBlockType)arg1 predicate:(CDUnknownBlockType)arg2;
 
 // Remaining properties

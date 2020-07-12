@@ -17,10 +17,10 @@
     NSString *_contentSourceUri;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *contentSourceUri; // @synthesize contentSourceUri=_contentSourceUri;
 @property(readonly, copy, nonatomic) NSString *contentSource; // @synthesize contentSource=_contentSource;
 @property(readonly, copy, nonatomic) NSString *section; // @synthesize section=_section;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithDictionary:(id)arg1;
 - (id)initWithSection:(id)arg1 contentSource:(id)arg2 contentSourceUri:(id)arg3;

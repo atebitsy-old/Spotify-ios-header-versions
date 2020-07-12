@@ -21,11 +21,11 @@
 }
 
 + (id)userActivitySourceWithType:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType restorationHandler; // @synthesize restorationHandler=_restorationHandler;
 @property(retain, nonatomic) NSURL *restorationViewURI; // @synthesize restorationViewURI=_restorationViewURI;
 @property(readonly, nonatomic) NSMapTable *activityURIs; // @synthesize activityURIs=_activityURIs;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (_Bool)restoreCustomViewUserActivity:(id)arg1 restorationHandler:(CDUnknownBlockType)arg2;
 - (id)sanitizedWebURLForURL:(id)arg1;
 - (void)restoreWebBrowsingURL:(id)arg1 restorationHandler:(CDUnknownBlockType)arg2;

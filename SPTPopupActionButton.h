@@ -11,8 +11,8 @@
     CDUnknownBlockType _popupActionHandlerBlock;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType popupActionHandlerBlock; // @synthesize popupActionHandlerBlock=_popupActionHandlerBlock;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType popupActionHandlerBlock; // @synthesize popupActionHandlerBlock=_popupActionHandlerBlock;
 - (void)forwardActionToPopupActionHandlerBlock;
 
 @end

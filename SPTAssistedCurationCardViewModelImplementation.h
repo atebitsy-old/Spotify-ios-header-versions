@@ -22,12 +22,12 @@
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTAudioPreviewModel> audioPreviewModel; // @synthesize audioPreviewModel=_audioPreviewModel;
 @property(readonly, nonatomic) id <SPTAssistedCurationCardModel> cardModel; // @synthesize cardModel=_cardModel;
 @property(nonatomic) __weak id <SPTAssistedCurationCardViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)assistedCurationCardModel:(id)arg1 deletedTrack:(id)arg2 atIndex:(unsigned long long)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)assistedCurationCardModel:(id)arg1 insertedTracks:(id)arg2 atIndex:(unsigned long long)arg3 completion:(CDUnknownBlockType)arg4;

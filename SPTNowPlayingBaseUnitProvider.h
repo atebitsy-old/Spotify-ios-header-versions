@@ -23,13 +23,13 @@
     unsigned long long _viewMode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long viewMode; // @synthesize viewMode=_viewMode;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> manager; // @synthesize manager=_manager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) UIViewController *currentViewController; // @synthesize currentViewController=_currentViewController;
-- (void).cxx_destruct;
 - (void)nowPlayingManager:(id)arg1 didChangeCurrentMode:(unsigned long long)arg2;
 - (id)provideUnitViewController;
 - (void)removeObserver:(id)arg1;

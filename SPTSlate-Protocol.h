@@ -10,14 +10,14 @@
 @protocol SPTSlateDataSource, SPTSlateDelegate;
 
 @protocol SPTSlate <NSObject>
-@property(readonly, nonatomic) NSMutableDictionary *userInfo;
-@property(readonly, nonatomic) UIColor *backgroundColor;
-@property(readonly, nonatomic) double shadowRadius;
-@property(readonly, nonatomic) struct CGSize shadowOffset;
-@property(readonly, nonatomic) UIColor *shadowColor;
-@property(readonly, nonatomic) double shadowAlpha;
-@property(readonly, nonatomic) double cornerRadius;
-@property(readonly, nonatomic) struct CGSize slateSize;
+@property(nonatomic, readonly) NSMutableDictionary *userInfo;
+@property(nonatomic, readonly) UIColor *backgroundColor;
+@property(nonatomic, readonly) double shadowRadius;
+@property(nonatomic, readonly) struct CGSize shadowOffset;
+@property(nonatomic, readonly) UIColor *shadowColor;
+@property(nonatomic, readonly) double shadowAlpha;
+@property(nonatomic, readonly) double cornerRadius;
+@property(nonatomic, readonly) struct CGSize slateSize;
 @property(nonatomic) __weak id <SPTSlateDelegate> delegate;
 @property(nonatomic) __weak id <SPTSlateDataSource> dataSource;
 @end

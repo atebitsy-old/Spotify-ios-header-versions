@@ -16,9 +16,9 @@
     NSString *_offlineMusicContentSortOrderString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *offlineMusicContentSortOrderString; // @synthesize offlineMusicContentSortOrderString=_offlineMusicContentSortOrderString;
 @property(readonly, nonatomic) unsigned long long offlineMusicContentSortOrder; // @synthesize offlineMusicContentSortOrder=_offlineMusicContentSortOrder;
-- (void).cxx_destruct;
 - (unsigned long long)mapOfflineMusicContentSortOrderToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

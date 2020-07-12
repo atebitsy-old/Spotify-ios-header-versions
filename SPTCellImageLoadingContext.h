@@ -18,10 +18,10 @@
 
 + (id)contextForCell:(id)arg1 indexPath:(id)arg2 context:(void *)arg3;
 + (id)contextForCell:(id)arg1 indexPath:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) void *context; // @synthesize context=_context;
 @property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 @property(nonatomic) __weak id <SPTCellImageLoadingContextCompatibleCell> cell; // @synthesize cell=_cell;
-- (void).cxx_destruct;
 - (id)cellForUpdatingInCollectionView:(id)arg1;
 - (void)setImage:(id)arg1 forCellInCollectionView:(id)arg2 animated:(_Bool)arg3;
 - (void)setImage:(id)arg1 forCellInCollectionView:(id)arg2;

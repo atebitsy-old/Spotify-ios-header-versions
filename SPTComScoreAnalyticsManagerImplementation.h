@@ -15,8 +15,8 @@
     NSOperationQueue *_workerQueue;
 }
 
-@property(readonly, nonatomic) NSOperationQueue *workerQueue; // @synthesize workerQueue=_workerQueue;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSOperationQueue *workerQueue; // @synthesize workerQueue=_workerQueue;
 - (void)userTargetingUpdated:(id)arg1;
 - (void)playbackEnded;
 - (void)playbackStarted;

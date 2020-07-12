@@ -10,8 +10,10 @@
 {
     // Error parsing type: , name: linkSource
     // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: logger
     // Error parsing type: , name: webViewFactory
     // Error parsing type: , name: containerUIService
+    // Error parsing type: , name: queue
 }
 
 @end

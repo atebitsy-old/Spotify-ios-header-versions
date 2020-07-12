@@ -22,12 +22,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTThirdPartyDeepLinkFeatureFlagManager *fetaureFlagManager; // @synthesize fetaureFlagManager=_fetaureFlagManager;
 @property(nonatomic) __weak id <SPTGaiaConnectAPI> connectApi; // @synthesize connectApi=_connectApi;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(nonatomic) _Bool hasRetriedToGetDevices; // @synthesize hasRetriedToGetDevices=_hasRetriedToGetDevices;
-- (void).cxx_destruct;
 - (void)disableService;
 - (void)enableService;
 - (void)connectActiveDeviceDidChange:(id)arg1;

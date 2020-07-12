@@ -23,11 +23,11 @@
     SPTProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTLoginSetNewPasswordLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTLoginSetNewPasswordViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (unsigned long long)preferredNavigationBarState;

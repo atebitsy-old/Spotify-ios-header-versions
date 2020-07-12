@@ -23,6 +23,7 @@
     id <SPTExternalIntegrationPlatformLogging> _platformLogging;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatformLogging> platformLogging; // @synthesize platformLogging=_platformLogging;
 @property(readonly, nonatomic) id <SPTExternalIntegrationQueueController> queueController; // @synthesize queueController=_queueController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationSearchController> searchController; // @synthesize searchController=_searchController;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTExternalIntegrationDriverDistractionController> driverDistractionController; // @synthesize driverDistractionController=_driverDistractionController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationContentController> contentController; // @synthesize contentController=_contentController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationCollectionController> collectionController; // @synthesize collectionController=_collectionController;
-- (void).cxx_destruct;
 - (id)initWithCollectionController:(id)arg1 contentController:(id)arg2 driverDistractionController:(id)arg3 playbackController:(id)arg4 radioController:(id)arg5 searchController:(id)arg6 queueController:(id)arg7 platformLogging:(id)arg8;
 
 // Remaining properties

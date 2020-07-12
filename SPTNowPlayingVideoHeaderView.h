@@ -18,10 +18,10 @@
     CAGradientLayer *_backgroundLayer;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) CAGradientLayer *backgroundLayer; // @synthesize backgroundLayer=_backgroundLayer;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (struct CGSize)intrinsicContentSize;
 - (void)applyThemeLayout;

@@ -19,11 +19,11 @@
     SPTPodcastFeatureProperties *_featureProperties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) __weak id <SPTEpisodeContextMenuControllerDelegate> contextMenuDelegate; // @synthesize contextMenuDelegate=_contextMenuDelegate;
 @property(retain, nonatomic) SPTShowContextMenuController *contextMenuController; // @synthesize contextMenuController=_contextMenuController;
 @property(nonatomic) __weak id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
-- (void).cxx_destruct;
 - (id)provideShowContextMenuControllerOptions;
 - (void)dismissContextMenuAnimated:(_Bool)arg1;
 - (void)presentContextMenuForEpisodeURI:(id)arg1 withMetadata:(id)arg2 sourceContextURI:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5 options:(id)arg6;

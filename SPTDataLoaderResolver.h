@@ -14,9 +14,9 @@
     NSHashTable *_addresses;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *addresses; // @synthesize addresses=_addresses;
 @property(retain, nonatomic) NSMutableDictionary *resolverHost; // @synthesize resolverHost=_resolverHost;
-- (void).cxx_destruct;
 - (id)init;
 - (id)resolverAddressForAddress:(id)arg1;
 - (void)markAddressAsUnreachable:(id)arg1;

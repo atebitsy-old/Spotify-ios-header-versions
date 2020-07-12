@@ -19,11 +19,11 @@
     NSMutableDictionary *_availableTracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *availableTracks; // @synthesize availableTracks=_availableTracks;
 @property(retain, nonatomic) NSMutableDictionary *returnedTracks; // @synthesize returnedTracks=_returnedTracks;
 @property(retain, nonatomic) NSMutableDictionary *cachedTracks; // @synthesize cachedTracks=_cachedTracks;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)tracksFromResponse:(id)arg1;

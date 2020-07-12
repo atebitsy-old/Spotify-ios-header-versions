@@ -16,8 +16,8 @@
     id <SPTUBILogger> _logger;
 }
 
-@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (id)provideHubsInstrumentationWithPageURI:(id)arg1 pageId:(id)arg2;
 - (id)provideLogger;
 - (id)initWithLogger:(id)arg1;

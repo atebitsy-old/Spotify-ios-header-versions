@@ -9,6 +9,8 @@
 @class NSArray, NSError, NSString, NSURL;
 
 @protocol SPTCrashReporter <NSObject>
+- (void)unload;
+- (void)updateWithAnrReportingEnabled:(_Bool)arg1;
 - (void)recordCustomExceptionName:(NSString *)arg1 reason:(NSString *)arg2 callStack:(NSArray *)arg3;
 - (NSURL *)lastCrashURL;
 - (NSString *)lastCrashIdentifier;

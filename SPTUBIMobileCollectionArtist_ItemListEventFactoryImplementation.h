@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithComponents:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)albumItemFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)itemFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)downloadToggleFactoryWithUri:(id)arg1;

@@ -19,10 +19,10 @@
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(copy, nonatomic) NSArray *trackRowKeys; // @synthesize trackRowKeys=_trackRowKeys;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)didChangeCanPlayAgeRestrictedContent:(_Bool)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (void)dealloc;

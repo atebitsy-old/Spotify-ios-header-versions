@@ -18,10 +18,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) id <SPTNowPlayingStateObservable> nowPlayingStateObservable; // @synthesize nowPlayingStateObservable=_nowPlayingStateObservable;
 @property(retain, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
-- (void).cxx_destruct;
 - (void)nowPlayingViewWillAppear:(id)arg1;
 - (void)nowPlayingViewDidDisappear:(id)arg1;
 @property(readonly, nonatomic, getter=isHidden) _Bool hidden;

@@ -18,9 +18,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierAllSongsRegistry> registry; // @synthesize registry=_registry;
 @property(nonatomic) __weak id <SPTFormatListPlatformService> formatListPlatformService; // @synthesize formatListPlatformService=_formatListPlatformService;
-- (void).cxx_destruct;
 - (id)provideRegistry;
 - (void)unload;
 - (void)configureWithServices:(id)arg1;

@@ -13,8 +13,8 @@
     NSString *_logContext;
 }
 
-@property(readonly, copy, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 - (id)execute:(id)arg1;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 @property(readonly, nonatomic) long long style;

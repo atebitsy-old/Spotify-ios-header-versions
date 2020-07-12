@@ -55,6 +55,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTRadioTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTRadioStationsService *stationsService; // @synthesize stationsService=_stationsService;
 @property(retain, nonatomic) id <SPTRadioManager> radioManager; // @synthesize radioManager=_radioManager;
@@ -92,7 +93,6 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (id)provideInfinitePlaybackSettingsSection:(id)arg1;

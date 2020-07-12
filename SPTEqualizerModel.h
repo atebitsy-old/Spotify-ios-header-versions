@@ -32,6 +32,7 @@
 
 + (id)defaultValues;
 + (id)equalizerModelWithLocalSettings:(id)arg1 audioDriverController:(id)arg2 connectManager:(id)arg3 audioSession:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *bands; // @synthesize bands=_bands;
 @property(retain, nonatomic) NSArray *presetCurves; // @synthesize presetCurves=_presetCurves;
 @property(nonatomic) __weak AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
@@ -45,7 +46,6 @@
 @property(nonatomic) _Bool nonMusicBypass; // @synthesize nonMusicBypass=_nonMusicBypass;
 @property(nonatomic) _Bool on; // @synthesize on=_on;
 @property(nonatomic) __weak id <SPTEqualizerModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)dealloc;
 - (void)audioDriverDidBegin:(id)arg1;

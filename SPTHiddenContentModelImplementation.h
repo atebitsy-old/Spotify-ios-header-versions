@@ -22,16 +22,16 @@
 
 + (id)artistEntitiesFromCollectionPlatformItems:(id)arg1 filter:(CDUnknownBlockType)arg2;
 + (id)trackEntitiesFromCollectionPlatformItems:(id)arg1 filter:(CDUnknownBlockType)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSOrderedSet *bannedArtists; // @synthesize bannedArtists=_bannedArtists;
 @property(copy, nonatomic) NSOrderedSet *bannedTracks; // @synthesize bannedTracks=_bannedTracks;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> bansSubscription; // @synthesize bansSubscription=_bansSubscription;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
 @property(nonatomic) __weak id <SPTHiddenContentModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleBannedTracks:(id)arg1;
 - (void)handleBannedArtists:(id)arg1;
-- (void)handleSuccessfulBannedArtistsResponse:(SPTCollectionPlatformDataLoaderResponse_f5c2288a *)arg1;
-- (void)handleSuccessfulBannedTracksResponse:(SPTCollectionPlatformDataLoaderResponse_f5c2288a *)arg1;
+- (void)handleSuccessfulBannedArtistsResponse:(id)arg1;
+- (void)handleSuccessfulBannedTracksResponse:(id)arg1;
 - (void)handleFailedBanSubscription:(id)arg1;
 - (void)loadTrackAndArtistBans;
 - (void)loadModel;

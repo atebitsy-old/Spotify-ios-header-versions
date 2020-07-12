@@ -19,13 +19,14 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)logStreamEndedForPlaybackID:(id)arg1 withAccessory:(id)arg2;
+- (_Bool)applyExtraValidationForAudioOutputRouteMessage:(id)arg1;
 - (id)stringFromAudioRoutePortType:(id)arg1;
 - (void)logAudioRoute:(id)arg1 withPlaybackId:(id)arg2;
 - (void)logAudioRoute:(id)arg1;

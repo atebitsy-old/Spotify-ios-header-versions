@@ -22,6 +22,7 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTUBIMobileYourLibraryArtistsEventFactory> artistsEventFactory; // @synthesize artistsEventFactory=_artistsEventFactory;
 @property(readonly, nonatomic) id <SPTUBIMobileYourLibraryPlaylistsEventFactory> playlistsEventFactory; // @synthesize playlistsEventFactory=_playlistsEventFactory;
 @property(readonly, copy, nonatomic) NSString *pageURI; // @synthesize pageURI=_pageURI;
-- (void).cxx_destruct;
 - (void)logUBIPlaylistImpression:(CDUnknownBlockType)arg1 artistImpression:(CDUnknownBlockType)arg2 albumImpression:(CDUnknownBlockType)arg3;
 - (void)logUBIImpressionEvent:(id)arg1;
 - (void)logUBIPlaylistEvent:(CDUnknownBlockType)arg1 artistEvent:(CDUnknownBlockType)arg2 albumEvent:(CDUnknownBlockType)arg3;

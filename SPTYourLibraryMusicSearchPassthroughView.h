@@ -13,8 +13,8 @@
     NSArray *_passthroughViews;
 }
 
-@property(copy, nonatomic) NSArray *passthroughViews; // @synthesize passthroughViews=_passthroughViews;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *passthroughViews; // @synthesize passthroughViews=_passthroughViews;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 
 @end

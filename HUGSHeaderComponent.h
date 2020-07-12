@@ -18,9 +18,9 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(nonatomic) __weak id <HUBComponentChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (double)preferredHeightForDisplayingModel:(id)arg1;
 - (id)createViewWithFrame:(struct CGRect)arg1;

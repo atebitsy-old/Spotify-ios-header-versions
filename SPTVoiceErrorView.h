@@ -20,13 +20,13 @@
     UIButton *_microphoneButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *microphoneButton; // @synthesize microphoneButton=_microphoneButton;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) UIButton *okButton; // @synthesize okButton=_okButton;
 @property(retain, nonatomic) UILabel *bodyLabel; // @synthesize bodyLabel=_bodyLabel;
 @property(retain, nonatomic) UILabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(readonly, nonatomic) SPTVoiceErrorViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)errorViewModelDidUpdate:(id)arg1;
 - (void)didTapMicrophoneButton;
 - (void)didTapCloseButton;

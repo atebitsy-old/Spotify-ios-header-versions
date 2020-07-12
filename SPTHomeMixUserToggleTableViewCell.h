@@ -15,10 +15,10 @@
     UISwitch *_userPresent;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UISwitch *userPresent; // @synthesize userPresent=_userPresent;
 @property(readonly, nonatomic) SPTHomeMixMemberPileContainerView *facePileView; // @synthesize facePileView=_facePileView;
 @property(readonly, nonatomic) GLUELabel *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)setupConstraints;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

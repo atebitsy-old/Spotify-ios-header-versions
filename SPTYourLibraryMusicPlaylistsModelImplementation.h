@@ -45,6 +45,7 @@
     struct _NSRange _currentWindow;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *itemFilters; // @synthesize itemFilters=_itemFilters;
 @property(nonatomic) _Bool offline; // @synthesize offline=_offline;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
@@ -72,7 +73,6 @@
 @property(readonly, copy, nonatomic) NSArray *availableFilters; // @synthesize availableFilters=_availableFilters;
 @property(copy, nonatomic) NSArray *activeFilters; // @synthesize activeFilters=_activeFilters;
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
-- (void).cxx_destruct;
 - (_Bool)isPlaylistFolder;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;

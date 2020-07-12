@@ -17,11 +17,11 @@
     NSString *_featureId;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
 @property(readonly, nonatomic) id <SPTUBIMobileLyricsEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)contextMenuFactoryWithURI:(id)arg1;
 - (id)vocalRemovalButtonFactoryWithURI:(id)arg1;
 - (id)footerViewFactoryWithURI:(id)arg1;

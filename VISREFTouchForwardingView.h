@@ -13,8 +13,8 @@
     id <VISREFTouchForwardingViewDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <VISREFTouchForwardingViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <VISREFTouchForwardingViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 
 @end

@@ -16,9 +16,9 @@
     NSUserDefaults *_standardUserDefaults;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSUserDefaults *standardUserDefaults; // @synthesize standardUserDefaults=_standardUserDefaults;
 @property(retain, nonatomic) SPTRemoteConfiguration *remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
-- (void).cxx_destruct;
 - (void)clearPersistentStorage;
 - (void)activateFetched;
 - (void)fetchConfigurationWithCompletion:(CDUnknownBlockType)arg1;

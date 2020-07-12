@@ -16,10 +16,10 @@
 }
 
 + (id)builderWithMessageID:(id)arg1 version:(long long)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableString *message; // @synthesize message=_message;
 @property(nonatomic) const char *alsoEscape; // @synthesize alsoEscape=_alsoEscape;
 @property(nonatomic) BOOL curSeparator; // @synthesize curSeparator=_curSeparator;
-- (void).cxx_destruct;
 - (void)appendDictionary:(id)arg1;
 - (void)appendData:(id)arg1;
 - (void)appendListItem:(id)arg1 forAggregateType:(id)arg2;

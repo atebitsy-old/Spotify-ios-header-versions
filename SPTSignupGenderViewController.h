@@ -24,11 +24,11 @@
     SPTLoginTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSignupAnimatedTransitioning *animatedTransitioning; // @synthesize animatedTransitioning=_animatedTransitioning;
 @property(retain, nonatomic) SPTSignupGenderPickerDataSource *pickerDataSource; // @synthesize pickerDataSource=_pickerDataSource;
 @property(retain, nonatomic) SPTSignupGenderViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)userDidAcceptAllLicences:(id)arg1;
 @property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
 @property(readonly, nonatomic) UIViewController *presentingFlowController;

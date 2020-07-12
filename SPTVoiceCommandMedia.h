@@ -14,9 +14,9 @@
     NSString *_imagePlaceholder;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *imagePlaceholder; // @synthesize imagePlaceholder=_imagePlaceholder;
 @property(readonly, nonatomic) NSURL *imageURI; // @synthesize imageURI=_imageURI;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 - (id)initWithURI:(id)arg1 placeholder:(id)arg2;
 

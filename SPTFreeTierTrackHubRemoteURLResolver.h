@@ -15,8 +15,8 @@
     NSString *_trackIdentifier;
 }
 
-@property(readonly, copy, nonatomic) NSString *trackIdentifier; // @synthesize trackIdentifier=_trackIdentifier;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *trackIdentifier; // @synthesize trackIdentifier=_trackIdentifier;
 - (id)resolveContentURL;
 - (id)initWithTrackIdentifier:(id)arg1;
 

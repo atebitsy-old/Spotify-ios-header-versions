@@ -19,10 +19,10 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTRecentlyPlayedList> recentlyPlayedModel; // @synthesize recentlyPlayedModel=_recentlyPlayedModel;
-- (void).cxx_destruct;
 - (void)notifyObservers;
 - (void)recentlyPlayedListDidReload:(id)arg1;
 - (id)createItemAtIndex:(id)arg1 fromEntityList:(id)arg2;

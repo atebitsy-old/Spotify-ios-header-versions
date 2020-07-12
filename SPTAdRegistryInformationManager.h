@@ -22,6 +22,7 @@
     UIButton *_logAdButton;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isQueueButtonVisible) _Bool queueButtonVisible; // @synthesize queueButtonVisible=_queueButtonVisible;
 @property(retain, nonatomic) UIButton *logAdButton; // @synthesize logAdButton=_logAdButton;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> currentEntity; // @synthesize currentEntity=_currentEntity;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(readonly, nonatomic) __weak id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
-- (void).cxx_destruct;
 - (id)windowToPresentFrom;
 - (void)didTapInformationButton;
 - (void)hideInformationButton;

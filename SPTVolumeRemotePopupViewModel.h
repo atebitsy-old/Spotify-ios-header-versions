@@ -24,6 +24,7 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTGaiaIconProvider> iconProvider; // @synthesize iconProvider=_iconProvider;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) NSString *deviceString; // @synthesize deviceString=_deviceString;
 @property(nonatomic) double volumePercentage; // @synthesize volumePercentage=_volumePercentage;
 @property(nonatomic) __weak id <SPTVolumeRemotePopupViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)volumeUpdated:(id)arg1;
 - (void)updateIcon;

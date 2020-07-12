@@ -25,10 +25,10 @@
 }
 
 + (void)deferCallback:(CDUnknownBlockType)arg1 forConnectivityManager:(id)arg2 callbackQueue:(id)arg3;
-@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
-@property(nonatomic) __weak id <SPTConnectivityManagerDelegate> delegate; // @synthesize delegate;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
+@property(nonatomic) __weak id <SPTConnectivityManagerDelegate> delegate; // @synthesize delegate;
 @property(readonly, nonatomic) struct ConnectivityManager *cpp;
 @property _Bool keepAliveAPNetwork;
 - (void)setKeepAliveAPNetwork:(_Bool)arg1 callback:(CDUnknownBlockType)arg2;

@@ -9,22 +9,22 @@
 #import "SPTPreSignupExperimentationService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPreSignupExperimentationFeatureFlagsLoaderImplementation;
-@protocol SPTDebugService, SPTNetworkService, SPTUserTrackingService;
+@protocol SPTDebugService, SPTLoginLoggingService, SPTNetworkService;
 
 @interface SPTPreSignupExperimentationServiceImplementation : NSObject <SPTPreSignupExperimentationService>
 {
     id <SPTNetworkService> _networkService;
-    id <SPTUserTrackingService> _userTrackingService;
+    id <SPTLoginLoggingService> _loginLoggingService;
     id <SPTDebugService> _debugService;
     SPTPreSignupExperimentationFeatureFlagsLoaderImplementation *_featureFlagsLoader;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPreSignupExperimentationFeatureFlagsLoaderImplementation *featureFlagsLoader; // @synthesize featureFlagsLoader=_featureFlagsLoader;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
-@property(nonatomic) __weak id <SPTUserTrackingService> userTrackingService; // @synthesize userTrackingService=_userTrackingService;
+@property(nonatomic) __weak id <SPTLoginLoggingService> loginLoggingService; // @synthesize loginLoggingService=_loginLoggingService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (id)provideFeatureFlagsLoader;
 - (void)unload;
 - (void)load;

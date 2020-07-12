@@ -16,9 +16,9 @@
     CDUnknownBlockType _factory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType factory; // @synthesize factory=_factory;
 @property(retain, nonatomic) SPTSettingsButtonTableViewCell *cell; // @synthesize cell=_cell;
-- (void).cxx_destruct;
 - (void)featureSettingsPresentation:(id)arg1 didSelectRow:(unsigned long long)arg2;
 - (id)featureSettingsPresentation:(id)arg1 cellForRow:(unsigned long long)arg2;
 - (id)initWithFactory:(CDUnknownBlockType)arg1;

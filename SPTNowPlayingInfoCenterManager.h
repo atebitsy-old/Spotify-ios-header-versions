@@ -31,6 +31,7 @@
     MPMediaItemArtwork *_artwork;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) MPMediaItemArtwork *artwork; // @synthesize artwork=_artwork;
 @property(retain, nonatomic) NSURL *requestedImageURL; // @synthesize requestedImageURL=_requestedImageURL;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(readonly, nonatomic) SPTNowPlayingPlaybackController *playbackController; // @synthesize playbackController=_playbackController;
-- (void).cxx_destruct;
 - (void)lockScreenControlsEnabledChanged:(_Bool)arg1;
 - (void)initializePlaybackQueueWithCompletionHandler:(CDUnknownBlockType)arg1;
 - (void)nowPlayingTrackPositionDidChange:(id)arg1;

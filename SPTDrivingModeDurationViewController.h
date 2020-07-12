@@ -22,10 +22,10 @@
     id <SPTNowPlayingDurationUnitViewModel> _viewModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool timeLabelsHidden; // @synthesize timeLabelsHidden=_timeLabelsHidden;
 @property(nonatomic) _Bool scrubbing; // @synthesize scrubbing=_scrubbing;
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)trackMetadataDidFinishUpdating;
 - (void)trackMetadataDidMove:(_Bool)arg1;
 - (void)trackPositionDidChange;

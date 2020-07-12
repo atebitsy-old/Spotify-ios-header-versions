@@ -16,9 +16,9 @@
     id <SPTOnDemandSet> _onDemandSet;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)prefixForURI:(id)arg1;
 - (_Bool)isOnDemandSet:(id)arg1;
 - (id)createPlayer:(id)arg1 trackUri:(id)arg2;

@@ -21,13 +21,13 @@
     double _playbackSpeed;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double playbackSpeed; // @synthesize playbackSpeed=_playbackSpeed;
 @property(retain, nonatomic) SPTVideoPlaybackState *state; // @synthesize state=_state;
 @property(retain, nonatomic) id <BMPlayOptions> options; // @synthesize options=_options;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
 @property(retain, nonatomic) SPTVideoPlaybackStateFactory *playbackStateFactory; // @synthesize playbackStateFactory=_playbackStateFactory;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
-- (void).cxx_destruct;
 - (void)didEndPlaybackWithReason:(long long)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didFailWithRecoverableError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didFailWithFatalError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;

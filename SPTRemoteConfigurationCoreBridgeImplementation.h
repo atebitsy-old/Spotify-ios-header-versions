@@ -15,8 +15,8 @@
     id <SPTRemoteConfigurationCore> _remoteConfigurationCore;
 }
 
-@property(readonly, nonatomic) id <SPTRemoteConfigurationCore> remoteConfigurationCore; // @synthesize remoteConfigurationCore=_remoteConfigurationCore;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTRemoteConfigurationCore> remoteConfigurationCore; // @synthesize remoteConfigurationCore=_remoteConfigurationCore;
 - (_Bool)passConfigurationData:(id)arg1 error:(id *)arg2;
 - (id)initWithRemoteConfigurationCore:(id)arg1;
 

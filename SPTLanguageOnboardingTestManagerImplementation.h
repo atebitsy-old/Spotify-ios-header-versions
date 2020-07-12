@@ -19,10 +19,10 @@
     long long _languageOnboardingProductStateState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long languageOnboardingProductStateState; // @synthesize languageOnboardingProductStateState=_languageOnboardingProductStateState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> languageOnboardingProductStateSignal; // @synthesize languageOnboardingProductStateSignal=_languageOnboardingProductStateSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isFeatureEnabled) _Bool featureEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupProductStateFlag;

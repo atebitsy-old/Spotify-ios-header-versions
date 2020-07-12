@@ -9,8 +9,8 @@
 #import "SPTService-Protocol.h"
 #import "SPTVideoFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTVideoCDNLogger;
-@protocol SPTAbbaService, SPTAudioPlayerMediaClockService, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTNetworkService, SPTSessionService, SPTVideoFeaturePlayerFactory;
+@class BMPlaybackRequestFactory, NSString, SPTAllocationContext, SPTVideoCDNLogger;
+@protocol SPTAbbaService, SPTAudioPlayerMediaClockService, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTVideoFeaturePlayerFactory;
 
 @interface SPTVideoFeatureImplementation : NSObject <SPTService, SPTVideoFeature>
 {
@@ -21,13 +21,18 @@
     id <SPTNetworkService> _networkFeature;
     id <SPTAudioPlayerMediaClockService> _audioPlayerMediaClockService;
     id <SPTEventSenderService> _eventSenderService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTVideoFeaturePlayerFactory> _playerFactory;
+    BMPlaybackRequestFactory *_playbackRequestFactory;
     SPTVideoCDNLogger *_videoCDNLogger;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoCDNLogger *videoCDNLogger; // @synthesize videoCDNLogger=_videoCDNLogger;
+@property(retain, nonatomic) BMPlaybackRequestFactory *playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
 @property(retain, nonatomic) id <SPTVideoFeaturePlayerFactory> playerFactory; // @synthesize playerFactory=_playerFactory;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTAudioPlayerMediaClockService> audioPlayerMediaClockService; // @synthesize audioPlayerMediaClockService=_audioPlayerMediaClockService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
@@ -35,10 +40,10 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
-- (void).cxx_destruct;
+- (id)providePlaybackRequestFactory;
 - (id)providePlayerFactory;
 - (id)provideVideoCacheOptionsFactory;
-- (id)playerConfigurationWithPreventDisplaySleepDuringVideoPlayback:(_Bool)arg1;
+- (id)playerConfigurationWithPreventDisplaySleepDuringVideoPlayback:(_Bool)arg1 videoFeatureProperties:(id)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

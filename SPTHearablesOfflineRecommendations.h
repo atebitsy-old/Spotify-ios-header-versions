@@ -16,8 +16,8 @@
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
 }
 
-@property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 - (id)offlineCollectionsURIs;
 - (void)fetchRecommendationWithSessionIdentifier:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)initWithExternalIntegrationPlatform:(id)arg1;

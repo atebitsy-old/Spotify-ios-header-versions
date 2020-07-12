@@ -16,9 +16,9 @@
     double _horizontalItemSpacing;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double horizontalItemSpacing; // @synthesize horizontalItemSpacing=_horizontalItemSpacing;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

@@ -25,6 +25,7 @@
     NSLayoutConstraint *_topConstraint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(nonatomic) _Bool updateHeaderOffset; // @synthesize updateHeaderOffset=_updateHeaderOffset;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) SPTYourLibraryGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTYourLibraryHeaderViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)isScrollViewShort:(id)arg1;
 - (void)setHeaderState:(unsigned long long)arg1;
 - (_Bool)shouldMoveHeaderAfterScroll:(id)arg1;

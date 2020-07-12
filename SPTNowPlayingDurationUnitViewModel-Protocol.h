@@ -10,7 +10,6 @@
 @protocol SPTNowPlayingDurationUnitViewModelDelegate;
 
 @protocol SPTNowPlayingDurationUnitViewModel <NSObject>
-@property(nonatomic) __weak id <SPTNowPlayingDurationUnitViewModelDelegate> delegate;
 - (void)updateObservers:(_Bool)arg1;
 - (void)scrubbedToPosition:(double)arg1;
 - (_Bool)disallowsSeeking;
@@ -19,5 +18,6 @@
 - (NSString *)currentTrackProgressTextWithSliderValue:(float)arg1;
 - (double)currentTrackLength;
 - (double)currentTrackProgress;
+@property(nonatomic) __weak id <SPTNowPlayingDurationUnitViewModelDelegate> delegate;
 @end
 

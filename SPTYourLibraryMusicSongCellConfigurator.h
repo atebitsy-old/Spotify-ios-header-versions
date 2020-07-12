@@ -28,6 +28,7 @@
     id <SPTModalPresentationController> _modalPresentationController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTEncoreTrackRowFactory> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
 @property(retain, nonatomic) SPTFreeTierPreCurationChunkyRowStyle *chunkRowStyle; // @synthesize chunkRowStyle=_chunkRowStyle;
@@ -40,7 +41,6 @@
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongCellConfiguratorDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) double preferredCellHeight; // @synthesize preferredCellHeight=_preferredCellHeight;
 @property(readonly, nonatomic) double preferredPreviewCellHeight; // @synthesize preferredPreviewCellHeight=_preferredPreviewCellHeight;
-- (void).cxx_destruct;
 - (void)unlikeWithSender:(id)arg1;
 - (void)unhideWithSender:(id)arg1;
 - (void)unbanWithSender:(id)arg1;

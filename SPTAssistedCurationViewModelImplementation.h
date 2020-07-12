@@ -28,6 +28,7 @@
     id <SPTAssistedCurationUITestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAssistedCurationUITestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) id <SPTAssistedCurationModel> assistedCurationModel; // @synthesize assistedCurationModel=_assistedCurationModel;
 @property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler; // @synthesize addTrackHandler=_addTrackHandler;
 @property(nonatomic) __weak id <SPTAssistedCurationViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)assistedCurationModel:(id)arg1 notAddedToContextDuplicatedTrackURI:(id)arg2;
 - (void)assistedCurationModel:(id)arg1 error:(id)arg2 addingToContextTrackURI:(id)arg3;
 - (void)assistedCurationModel:(id)arg1 addedTrackURI:(id)arg2;

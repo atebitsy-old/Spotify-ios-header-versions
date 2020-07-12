@@ -20,12 +20,12 @@
 }
 
 + (_Bool)rawMessageFormatIsValid:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *namedArguments; // @synthesize namedArguments=_namedArguments;
 @property(readonly, nonatomic) NSArray *arguments; // @synthesize arguments=_arguments;
 @property(readonly, copy, nonatomic) NSString *procedure; // @synthesize procedure=_procedure;
 @property(readonly, nonatomic) NSDictionary *options; // @synthesize options=_options;
 @property(readonly, nonatomic) unsigned long long requestID; // @synthesize requestID=_requestID;
-- (void).cxx_destruct;
 - (_Bool)populateWithRawMessage:(id)arg1 error:(id *)arg2;
 @property(readonly, nonatomic) NSArray *rawMessage;
 @property(readonly, copy) NSString *description;

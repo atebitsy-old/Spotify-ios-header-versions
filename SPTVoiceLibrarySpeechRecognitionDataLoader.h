@@ -29,6 +29,7 @@
     SPTVoiceLibraryJSONObjectDecoder *_jsonObjectDecoder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVoiceLibraryJSONObjectDecoder *jsonObjectDecoder; // @synthesize jsonObjectDecoder=_jsonObjectDecoder;
 @property(copy, nonatomic) NSString *boundary; // @synthesize boundary=_boundary;
 @property(retain, nonatomic) NSInputStream *inputStream; // @synthesize inputStream=_inputStream;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didEncounterEndOfOutputStream;
 - (void)outputStream:(id)arg1 didFailWithError:(id)arg2;
 - (_Bool)dataLoaderShouldSupportChunks:(id)arg1;

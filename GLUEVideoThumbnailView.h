@@ -18,11 +18,11 @@
     UIView *_labelContainerView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIView *labelContainerView; // @synthesize labelContainerView=_labelContainerView;
 @property(retain, nonatomic) GLUEVideoThumbnailViewStyle *style; // @synthesize style=_style;
 @property(readonly, copy, nonatomic) GLUEImageView *videoThumbnailImageView; // @synthesize videoThumbnailImageView=_videoThumbnailImageView;
 @property(readonly, copy, nonatomic) GLUELabel *timeStampLabel; // @synthesize timeStampLabel=_timeStampLabel;
-- (void).cxx_destruct;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addViewConstraints;

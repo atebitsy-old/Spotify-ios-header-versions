@@ -13,8 +13,8 @@
     LAContext *_context;
 }
 
-@property(readonly, nonatomic) LAContext *context; // @synthesize context=_context;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) LAContext *context; // @synthesize context=_context;
 - (void)authenticateWithReason:(id)arg1 completion:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic, getter=isAvailable) _Bool available;
 - (id)initWithContext:(id)arg1;

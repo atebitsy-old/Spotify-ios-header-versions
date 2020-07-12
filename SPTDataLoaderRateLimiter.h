@@ -17,11 +17,11 @@
 }
 
 + (id)rateLimiterWithDefaultRequestsPerSecond:(double)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *serviceEndpointRetryAt; // @synthesize serviceEndpointRetryAt=_serviceEndpointRetryAt;
 @property(retain, nonatomic) NSMutableDictionary *serviceEndpointLastExecution; // @synthesize serviceEndpointLastExecution=_serviceEndpointLastExecution;
 @property(retain, nonatomic) NSMutableDictionary *serviceEndpointRequestsPerSecond; // @synthesize serviceEndpointRequestsPerSecond=_serviceEndpointRequestsPerSecond;
 @property(nonatomic) double requestsPerSecond; // @synthesize requestsPerSecond=_requestsPerSecond;
-- (void).cxx_destruct;
 - (id)serviceKeyFromURL:(id)arg1;
 - (double)requestsPerSecondForServiceKey:(id)arg1;
 - (void)setRetryAfter:(double)arg1 forURL:(id)arg2;

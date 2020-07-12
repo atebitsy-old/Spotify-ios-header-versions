@@ -25,6 +25,7 @@
     NSURL *_contextURI;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 @property(retain, nonatomic) NSDictionary *attributes; // @synthesize attributes=_attributes;
 @property(retain, nonatomic) UILabel *seperatorLabel; // @synthesize seperatorLabel=_seperatorLabel;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *entityNameLabel; // @synthesize entityNameLabel=_entityNameLabel;
 @property(retain, nonatomic) UILabel *entityDescriptionLabel; // @synthesize entityDescriptionLabel=_entityDescriptionLabel;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)statusBarOrientationDidChange:(id)arg1;
 @property(readonly, copy) NSString *description;
 - (void)dealloc;

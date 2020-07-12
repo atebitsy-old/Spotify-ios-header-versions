@@ -15,10 +15,10 @@
     SPTVocalRemovalFeedbackBannerViewStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVocalRemovalFeedbackBannerViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) GLUEButton *closeButton; // @synthesize closeButton=_closeButton;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)setupConstraints;
 - (void)setupCloseButton;

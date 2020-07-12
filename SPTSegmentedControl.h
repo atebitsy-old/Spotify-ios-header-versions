@@ -20,6 +20,7 @@
     CALayer *_indicatorLayer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool skipNextRepositionAnimation; // @synthesize skipNextRepositionAnimation=_skipNextRepositionAnimation;
 @property(retain, nonatomic) CALayer *indicatorLayer; // @synthesize indicatorLayer=_indicatorLayer;
 @property(nonatomic) __weak UIView *lastTappedView; // @synthesize lastTappedView=_lastTappedView;
@@ -28,7 +29,6 @@
 @property(nonatomic) unsigned long long selectionIndicatorWidthPolicy; // @synthesize selectionIndicatorWidthPolicy=_selectionIndicatorWidthPolicy;
 @property(nonatomic) double selectionIndicatorHeight; // @synthesize selectionIndicatorHeight=_selectionIndicatorHeight;
 @property(retain, nonatomic) UIColor *selectionIndicatorColor; // @synthesize selectionIndicatorColor=_selectionIndicatorColor;
-- (void).cxx_destruct;
 - (_Bool)isAccessibilityElement;
 - (unsigned long long)accessibilityTraits;
 - (id)accessibilityElements;

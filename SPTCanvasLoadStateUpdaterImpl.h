@@ -18,10 +18,10 @@
     id <SPTCanvasLoadStateTrackerObserver> _canvasLoadObserver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTCanvasLoadStateTrackerObserver> canvasLoadObserver; // @synthesize canvasLoadObserver=_canvasLoadObserver;
 @property(readonly, nonatomic) NSString *canvasId; // @synthesize canvasId=_canvasId;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (id)initWithCanvasId:(id)arg1 canvasLoadObserver:(id)arg2;
 

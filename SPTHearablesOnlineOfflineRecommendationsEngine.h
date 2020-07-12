@@ -18,10 +18,10 @@
     id <SPTNetworkConnectivityController> _connectivityController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(readonly, nonatomic) id <SPTHearablesRecommendationEngine> offlineRecommendations; // @synthesize offlineRecommendations=_offlineRecommendations;
 @property(readonly, nonatomic) id <SPTHearablesRecommendationEngine> onlineRecommendations; // @synthesize onlineRecommendations=_onlineRecommendations;
-- (void).cxx_destruct;
 - (_Bool)isOffline;
 - (void)fetchRecommendationWithSessionIdentifier:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)initWithOfflineRecommendation:(id)arg1 onlineRecommendations:(id)arg2 connectivityController:(id)arg3;

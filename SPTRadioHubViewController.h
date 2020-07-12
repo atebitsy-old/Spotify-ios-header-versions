@@ -16,9 +16,9 @@
     SPTRadioPlaybackService *_playbackService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTRadioPlaybackService *playbackService; // @synthesize playbackService=_playbackService;
 @property(retain, nonatomic) NSDate *lastUpdate; // @synthesize lastUpdate=_lastUpdate;
-- (void).cxx_destruct;
 - (void)radioPlaybackService:(id)arg1 playbackStateChanged:(unsigned long long)arg2;
 - (void)viewModelDidLoad:(id)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

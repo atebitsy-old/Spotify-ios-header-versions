@@ -16,8 +16,8 @@
     GLUEEntityRowView *_rowView;
 }
 
-@property(readonly, nonatomic) GLUEEntityRowView *rowView; // @synthesize rowView=_rowView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) GLUEEntityRowView *rowView; // @synthesize rowView=_rowView;
 - (void)glue_applyStyle:(id)arg1;
 @property(nonatomic, getter=isActive) _Bool active;
 @property(nonatomic, getter=isSelected) _Bool selected;

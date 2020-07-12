@@ -16,9 +16,9 @@
     NSNumber *_sequenceNumber;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNumber *sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
 @property(readonly, nonatomic) NSString *sequenceId; // @synthesize sequenceId=_sequenceId;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 // Remaining properties

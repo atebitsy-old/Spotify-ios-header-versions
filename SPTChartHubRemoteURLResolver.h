@@ -16,8 +16,8 @@
 }
 
 + (id)apiPathForURI:(id)arg1;
-@property(readonly, nonatomic) NSURL *chartURI; // @synthesize chartURI=_chartURI;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *chartURI; // @synthesize chartURI=_chartURI;
 - (id)resolveContentURL;
 - (id)initWithURI:(id)arg1;
 

@@ -22,13 +22,13 @@
 }
 
 + (id)dataLoaderWithRequestResponseHandlerDelegate:(id)arg1 cancellationTokenFactory:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTDataLoaderCancellationTokenFactory> cancellationTokenFactory; // @synthesize cancellationTokenFactory=_cancellationTokenFactory;
 @property(readonly, nonatomic) NSMutableArray *requests; // @synthesize requests=_requests;
 @property(readonly, nonatomic) NSMutableArray *cancellationTokens; // @synthesize cancellationTokens=_cancellationTokens;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *delegateQueue; // @synthesize delegateQueue=_delegateQueue;
 @property(nonatomic) __weak id <SPTDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)requestResponseHandlerDelegate;
-- (void).cxx_destruct;
 - (void)cancellationTokenDidCancel:(id)arg1;
 - (void)needsNewBodyStream:(CDUnknownBlockType)arg1 forRequest:(id)arg2;
 - (void)requestIsWaitingForConnectivity:(id)arg1;

@@ -15,9 +15,9 @@
     SPTPodcastMixFeatureProperties *_remoteConfigurationProperties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastMixFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long customizeIcon;
 @property(readonly, nonatomic) long long tooltipMaximumShowTimes;
 @property(readonly, nonatomic) unsigned long long episodeContextMenuAction;

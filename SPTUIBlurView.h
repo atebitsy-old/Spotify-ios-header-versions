@@ -15,9 +15,9 @@
 }
 
 + (id)blurViewWithBlurEffectStyle:(long long)arg1 frame:(struct CGRect)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIVisualEffectView *blurView; // @synthesize blurView=_blurView;
 @property(nonatomic) long long blurEffectStyle; // @synthesize blurEffectStyle=_blurEffectStyle;
-- (void).cxx_destruct;
 - (void)setFrame:(struct CGRect)arg1;
 - (id)initWithBlurEffectStyle:(long long)arg1 frame:(struct CGRect)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;

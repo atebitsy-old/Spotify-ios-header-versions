@@ -16,9 +16,9 @@
     struct UIEdgeInsets _descriptionLabelInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets descriptionLabelInsets; // @synthesize descriptionLabelInsets=_descriptionLabelInsets;
 @property(copy, nonatomic) GLUELabelStyle *descriptionLabelStyle; // @synthesize descriptionLabelStyle=_descriptionLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

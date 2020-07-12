@@ -21,12 +21,12 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> partnerFeatureFlagSignal; // @synthesize partnerFeatureFlagSignal=_partnerFeatureFlagSignal;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic, getter=isPartnerFeatureEnabled) _Bool partnerFeatureEnabled; // @synthesize partnerFeatureEnabled=_partnerFeatureEnabled;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)removeFeatureFlagObserver:(id)arg1;
 - (void)addFeatureFlagObserver:(id)arg1;

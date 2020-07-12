@@ -16,9 +16,9 @@
     id <SPTHubCommandHandlerCondition> _condition;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerCondition> condition; // @synthesize condition=_condition;
 @property(readonly, nonatomic) id <HUBCommandHandler> commandHandler; // @synthesize commandHandler=_commandHandler;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithCommandHandler:(id)arg1 condition:(id)arg2;
 

@@ -18,9 +18,9 @@
     id <SPTFreeTierEntityFeedbackButtonViewModel> _viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak GLUEButton<VISREFActionRowButtonViewModelDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)viewModel:(id)arg1 didUpdateState:(unsigned long long)arg2;
 - (_Bool)selectedStateForFeedbackState:(unsigned long long)arg1;
 - (_Bool)enabledStateForFeedbackState:(unsigned long long)arg1;

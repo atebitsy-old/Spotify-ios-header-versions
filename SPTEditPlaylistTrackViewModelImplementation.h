@@ -18,9 +18,9 @@
     id <SPTEditPlaylistModelEntityTrackFields> _trackEntity;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool showTrackOwner; // @synthesize showTrackOwner=_showTrackOwner;
 @property(retain, nonatomic) id <SPTEditPlaylistModelEntityTrackFields> trackEntity; // @synthesize trackEntity=_trackEntity;
-- (void).cxx_destruct;
 - (id)albumName;
 - (id)artistNames;
 @property(readonly, copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;

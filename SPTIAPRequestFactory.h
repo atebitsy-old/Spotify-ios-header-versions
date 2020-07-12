@@ -16,9 +16,9 @@
     NSString *_applicationVersionString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *applicationVersionString; // @synthesize applicationVersionString=_applicationVersionString;
 @property(retain, nonatomic) SKPaymentQueue *paymentQueue; // @synthesize paymentQueue=_paymentQueue;
-- (void).cxx_destruct;
 - (id)createProductActivationRequestWithReceiptData:(id)arg1;
 - (id)createTransactionRequestForPayment:(id)arg1;
 - (id)createItunesProductRequestForProductIdentifiers:(id)arg1;

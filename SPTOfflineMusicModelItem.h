@@ -21,12 +21,12 @@
 }
 
 + (id)likedSongsItem:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *freeformDescription; // @synthesize freeformDescription=_freeformDescription;
 @property(retain, nonatomic) NSURL *entityImageURL; // @synthesize entityImageURL=_entityImageURL;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

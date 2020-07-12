@@ -16,9 +16,9 @@
     CDUnknownBlockType _callbackHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType callbackHandler; // @synthesize callbackHandler=_callbackHandler;
 @property(readonly, nonatomic) MXMetricManager *metricManager; // @synthesize metricManager=_metricManager;
-- (void).cxx_destruct;
 - (void)didReceiveMetricPayloads:(id)arg1;
 - (void)stopCollecting;
 - (void)startCollecting;

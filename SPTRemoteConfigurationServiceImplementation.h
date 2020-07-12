@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRemoteConfigurationCoreBridgeImplementation *coreBridge; // @synthesize coreBridge=_coreBridge;
 @property(retain, nonatomic) SPTRemoteConfigurationFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) id <SPTRemoteConfigurationIntegration> remoteConfigurationIntegration; // @synthesize remoteConfigurationIntegration=_remoteConfigurationIntegration;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTBootstrapService> bootstrapService; // @synthesize bootstrapService=_bootstrapService;
-- (void).cxx_destruct;
 - (void)setupRemoteConfiguration;
 - (void)idleStateWasReached;
 - (void)userWillLogoutNotificationReceived:(id)arg1;

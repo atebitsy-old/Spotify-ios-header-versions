@@ -22,12 +22,12 @@
 }
 
 + (id)identifier;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
 @property(nonatomic) struct _NSRange currentRange; // @synthesize currentRange=_currentRange;
 @property(retain, nonatomic) SPTAssistedCurationCardModelImplementation *currentCard; // @synthesize currentCard=_currentCard;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)loadMoreTracksForCard:(id)arg1;
 - (_Bool)hasMoreTracksForCard:(id)arg1;
 - (void)fetchTrackInRange:(struct _NSRange)arg1 withCompletion:(CDUnknownBlockType)arg2;

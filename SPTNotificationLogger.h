@@ -14,9 +14,9 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)getSpotifyUpdatesSectionFactory;
 - (id)getMusicSectionFactory;
 - (void)logNotificationSettingsKey:(id)arg1 enabled:(_Bool)arg2 itemIndex:(int)arg3;

@@ -22,6 +22,7 @@
     SPTVoiceCommand *_mostRecentCommand;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVoiceCommand *mostRecentCommand; // @synthesize mostRecentCommand=_mostRecentCommand;
 @property(retain, nonatomic) SPTNowPlayingEntityDecorationController *entityDecorationController; // @synthesize entityDecorationController=_entityDecorationController;
 @property(nonatomic) _Bool entityDescriptionHidden; // @synthesize entityDescriptionHidden=_entityDescriptionHidden;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSString *entityDescription; // @synthesize entityDescription=_entityDescription;
 @property(copy, nonatomic) NSString *entityName; // @synthesize entityName=_entityName;
 @property(nonatomic) __weak id <SPTVoiceNowPlayingContentInfoViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)entityDecorationControllerDidUpdate:(id)arg1;
 - (void)updateViewModelState;
 - (void)updateViewModelStateWithVoiceCommand:(id)arg1;

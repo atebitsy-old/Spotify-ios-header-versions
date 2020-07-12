@@ -16,7 +16,9 @@
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: sessionService
     // Error parsing type: , name: testManager
-    // Error parsing type: , name: $__lazy_storage_$_dataLoader
+    // Error parsing type: , name: dataLoader
+    // Error parsing type: , name: $__lazy_storage_$_offlineMixPlaylistDataLoader
+    // Error parsing type: , name: $__lazy_storage_$_dialogPresenter
     // Error parsing type: , name: $__lazy_storage_$_downloadManager
     // Error parsing type: , name: $__lazy_storage_$_modelProvider
     // Error parsing type: , name: $__lazy_storage_$_playlistFilter

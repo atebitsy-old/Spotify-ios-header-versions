@@ -23,13 +23,13 @@
     UIPanGestureRecognizer *_dismissPanGestureRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIPanGestureRecognizer *dismissPanGestureRecognizer; // @synthesize dismissPanGestureRecognizer=_dismissPanGestureRecognizer;
 @property(retain, nonatomic) UIPanGestureRecognizer *scrollGestureRecognizer; // @synthesize scrollGestureRecognizer=_scrollGestureRecognizer;
 @property(retain, nonatomic) SPTBarOverlayPresentationTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
 @property(readonly, nonatomic) UIPanGestureRecognizer *presentPanGestureRecognizer; // @synthesize presentPanGestureRecognizer=_presentPanGestureRecognizer;
 @property(retain, nonatomic) UIViewController<SPTBarOverlayViewController> *overlayViewController; // @synthesize overlayViewController=_overlayViewController;
 @property(nonatomic) __weak id <SPTBarInteractivePresentationControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)nowPlayingScrollViewControllerDidScroll:(id)arg1;
 - (void)nowPlayingScrollViewControllerDidAppear:(id)arg1;
 - (_Bool)overlayViewControllerIsMoving;

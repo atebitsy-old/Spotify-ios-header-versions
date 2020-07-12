@@ -8,9 +8,22 @@
 
 @interface _TtC20SuperbirdFeatureImpl23VoiceAppProtocolHandler : NSObject
 {
+    // Error parsing type: , name: voiceSession
+    // Error parsing type: , name: thingViewIntentsHandler
+    // Error parsing type: , name: playbackController
+    // Error parsing type: , name: audioRecorder
+    // Error parsing type: , name: appProtocolPayloadBuilder
+    // Error parsing type: , name: earconPlayer
+    // Error parsing type: , name: ttsPlayer
+    // Error parsing type: , name: voiceResponse
+    // Error parsing type: , name: voiceSessionUpdates
+    // Error parsing type: , name: voiceSessionId
+    // Error parsing type: , name: shouldUnpause
 }
 
+- (void).cxx_destruct;
 - (id)init;
+- (void)dealloc;
 
 @end
 

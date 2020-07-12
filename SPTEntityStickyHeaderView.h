@@ -28,6 +28,7 @@
 }
 
 + (id)stickyHeaderViewForHeaderView:(id)arg1 withFrame:(struct CGRect)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTEntityTableHeaderView *entityTableHeaderView; // @synthesize entityTableHeaderView=_entityTableHeaderView;
 @property(retain, nonatomic) CAGradientLayer *bottomViewGradientLayer; // @synthesize bottomViewGradientLayer=_bottomViewGradientLayer;
 @property(retain, nonatomic) UIView *bottomGradientView; // @synthesize bottomGradientView=_bottomGradientView;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) UILabel *alternateTitleLabel; // @synthesize alternateTitleLabel=_alternateTitleLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)actionButtonTapped;
 - (void)applyThemeLayout;
 @property(readonly, nonatomic) struct CGSize stickyHeaderBackgroundViewSize;

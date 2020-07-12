@@ -17,9 +17,9 @@
     id <BMSubtitle> _activeSubtitle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <BMSubtitle> activeSubtitle; // @synthesize activeSubtitle=_activeSubtitle;
 @property(readonly, copy, nonatomic) NSArray *availableSubtitles; // @synthesize availableSubtitles=_availableSubtitles;
-- (void).cxx_destruct;
 - (void)didChangeSubtitle:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didLoadManifestWithAvailableSubtitles:(id)arg1 timestamp:(double)arg2;
 

@@ -15,8 +15,8 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
 }
 
-@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithExplicitAccessManager:(id)arg1;
 

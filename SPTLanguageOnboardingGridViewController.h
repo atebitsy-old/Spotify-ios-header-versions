@@ -25,13 +25,13 @@
     SPTPopupDialog *_dialog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPopupDialog *dialog; // @synthesize dialog=_dialog;
 @property(nonatomic) __weak id <SPTLanguageOnboardingGridViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTLanguageOnboardingTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLanguageOnboardingViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
-- (void).cxx_destruct;
 - (unsigned long long)preferredNavigationBarState;
 - (void)handleFinish;
 - (void)handleSkip;

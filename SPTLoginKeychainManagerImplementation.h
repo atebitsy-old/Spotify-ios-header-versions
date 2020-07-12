@@ -21,12 +21,12 @@
     SPTAuthLoginCredentials *_savedCredentials;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTAuthLoginCredentials *savedCredentials; // @synthesize savedCredentials=_savedCredentials;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) NSMutableSet *externalCredentialStores; // @synthesize externalCredentialStores=_externalCredentialStores;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
-- (void).cxx_destruct;
 - (void)readStoredCredentialsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)deleteSiAUserId;
 - (void)deleteCredentialsFromExternalStores;

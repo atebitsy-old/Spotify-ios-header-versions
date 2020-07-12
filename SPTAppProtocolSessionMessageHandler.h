@@ -19,11 +19,11 @@
     id <SPTAppProtocolAuthenticator> _activeAuthenticator;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAppProtocolAuthenticator> activeAuthenticator; // @synthesize activeAuthenticator=_activeAuthenticator;
 @property(readonly, nonatomic) __weak id <SPTAppProtocolSessionHandler> sessionHandler; // @synthesize sessionHandler=_sessionHandler;
 @property(readonly, nonatomic) NSArray *authenticators; // @synthesize authenticators=_authenticators;
 @property(retain, nonatomic) SPTAppProtocolConnectionHandler *connectionHandler; // @synthesize connectionHandler=_connectionHandler;
-- (void).cxx_destruct;
 - (void)authenticator:(id)arg1 didFailWithReason:(id)arg2 description:(id)arg3 andReply:(CDUnknownBlockType)arg4;
 - (void)authenticationDidSucceedWithAuthenticator:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)startSessionAndReply:(CDUnknownBlockType)arg1;

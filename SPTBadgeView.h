@@ -15,8 +15,8 @@
 
 + (id)badgeViewWithRadius:(double)arg1 icon:(long long)arg2 iconOffset:(struct CGSize)arg3 iconColor:(id)arg4 backgroundColor:(id)arg5;
 + (id)verifiedBadgeForEntityImageWithSize:(struct CGSize)arg1;
-@property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 - (void)setBackgroundColor:(id)arg1;
 - (void)setOriginRelativeToView:(id)arg1;
 

@@ -103,9 +103,9 @@
 + (id)spt_urlForFetchingLocales:(_Bool)arg1;
 + (id)spt_urlForFetchingCreativesUsingDevEnabled:(_Bool)arg1 withCampaignID:(id)arg2 status:(long long)arg3 type:(id)arg4 andLocale:(id)arg5;
 + (void)createQueryParameterWithTriggerPatterns:(id)arg1 triggerType:(id)arg2 forUrlString:(id)arg3;
-+ (id)spt_inAppMessageFeatureFetchNoteMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3 V3Enabled:(_Bool)arg4;
-+ (id)spt_inAppMessageFeatureFetchBannerMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3 V3Enabled:(_Bool)arg4;
-+ (id)spt_inAppMessageFeatureFetchCardMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3 V3Enabled:(_Bool)arg4;
++ (id)spt_inAppMessageFeatureFetchNoteMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
++ (id)spt_inAppMessageFeatureFetchBannerMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
++ (id)spt_inAppMessageFeatureFetchCardMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
 + (id)spt_inAppMessageFeatureFetchTriggersURLUsingDevEnabled:(_Bool)arg1;
 + (id)spt_inAppMessageFeatureBaseURLComponentsForEndpoint:(id)arg1 devEnabled:(_Bool)arg2;
 + (id)spt_PaymentIAPVerifyURLWithAppVersion:(id)arg1 transport:(long long)arg2;
@@ -212,8 +212,6 @@
 + (id)spt_premiumDestinationHubsV2ServiceURL;
 + (id)spt_premiumDestinationPreviewToolNavURL;
 + (id)spt_premiumDestinationPreviewURL;
-+ (id)spt_encodeUsername:(id)arg1;
-+ (id)spt_profileURIForUsername:(id)arg1;
 + (id)spt_queueURI;
 + (id)spt_radioHubURI;
 + (id)spt_stationURLWithSeed:(id)arg1;
@@ -249,8 +247,6 @@
 + (id)spt_appendSnapchatUTMTagsForURI:(id)arg1;
 + (id)createURLWithScheme:(id)arg1 host:(id)arg2 path:(id)arg3 queries:(id)arg4;
 + (id)spt_participantListURL;
-+ (id)spt_speakerCompanionPageURLWithRequestIdentifier:(id)arg1;
-+ (id)spt_speakerCompanionEntityFeedbackURLWithRequestIdentifier:(id)arg1;
 + (id)spt_iapImageURLForIcon:(long long)arg1;
 + (id)spt_URLWithComponents:(id)arg1;
 + (id)spt_URLWithImageID:(id)arg1;
@@ -337,11 +333,11 @@
 @property(readonly, nonatomic, getter=spt_isEntitySeeAllSongsViewURI) _Bool isEntitySeeAllSongsViewURI;
 @property(readonly, nonatomic, getter=spt_isNaturalLanguageQueryURI) _Bool isNaturalLanguageQueryURI;
 @property(readonly, nonatomic) _Bool spt_isExternalIntegrationRecentlyPlayedURI;
-- (id)spt_externalIntegrationURIWithoutSpacesBlockIdentifier;
 - (id)spt_externalIntegrationURIWithSpacesBlockIdentifier:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *spt_externalIntegrationSpacesBlockIdentifier;
 @property(readonly, nonatomic) _Bool spt_isExternalIntegrationGenreURI;
 @property(readonly, nonatomic) _Bool spt_isExternalIntegrationSpacesURI;
+@property(readonly, nonatomic, getter=spt_isSmartDeeplinkURI) _Bool isSmartDeeplinkURI;
 - (id)spt_albumID;
 - (id)spt_freeTierCollectionAlbumRedirectURI;
 @property(readonly, nonatomic) NSString *spt_freeTierAlbumIdentifier;

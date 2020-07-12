@@ -17,12 +17,12 @@
     NSURL *_actionURI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *actionURI; // @synthesize actionURI=_actionURI;
 @property(readonly, nonatomic) long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) NSString *adID; // @synthesize adID=_adID;
 @property(readonly, nonatomic) double microphoneListeningPeriod; // @synthesize microphoneListeningPeriod=_microphoneListeningPeriod;
 @property(readonly, nonatomic) double delay; // @synthesize delay=_delay;
-- (void).cxx_destruct;
 - (id)initWithDelay:(double)arg1 adID:(id)arg2 intent:(long long)arg3 actionURI:(id)arg4;
 
 @end

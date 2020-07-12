@@ -25,6 +25,7 @@
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) SPTUser *entityUser; // @synthesize entityUser=_entityUser;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) NSString *entityName; // @synthesize entityName=_entityName;
 @property(nonatomic) unsigned long long entityType; // @synthesize entityType=_entityType;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)updateEntityInformationWithPlayerState:(id)arg1 contextNameAndDescription:(id)arg2 formatListType:(id)arg3;
 - (void)updateEntityInformationWithPlayerState:(id)arg1;
 - (id)entityNameAndDescriptionFromPlayerState:(id)arg1 name:(id)arg2 description:(id)arg3;

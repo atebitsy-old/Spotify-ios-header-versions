@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGoogleAppFlipURISubtypeManager *uriSubtypeManager; // @synthesize uriSubtypeManager=_uriSubtypeManager;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> featureEnabledSignal; // @synthesize featureEnabledSignal=_featureEnabledSignal;
 @property(readonly, nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)disable;
 - (void)enable;

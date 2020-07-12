@@ -27,6 +27,7 @@
     SPTPlaylistExtenderLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isEnabled; // @synthesize isEnabled=_isEnabled;
 @property(readonly, nonatomic) SPTPlaylistExtenderLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistIsTrackActive> trackActivePredicate; // @synthesize trackActivePredicate=_trackActivePredicate;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTEncoreTrackRowPlaylistExtenderFactory> rowFactory; // @synthesize rowFactory=_rowFactory;
 @property(copy, nonatomic) CDUnknownBlockType testIndexPathResolver; // @synthesize testIndexPathResolver=_testIndexPathResolver;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
@@ -61,7 +61,7 @@
 - (double)heightForRowAtIndexPath:(id)arg1;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
-- (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)enableSwipeGesturesOnCell:(id)arg1 withItem:(id)arg2;
 - (long long)encoreRestrictionForItem:(id)arg1;
 - (id)encoreModelForItem:(id)arg1 isPressed:(_Bool)arg2;

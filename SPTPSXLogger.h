@@ -16,10 +16,10 @@
     id <SPTViewLogger> _viewLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, copy, nonatomic) NSString *setURIString; // @synthesize setURIString=_setURIString;
-- (void).cxx_destruct;
 - (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1;
 - (void)logViewDataDidFailToLoadWithPageIdentifier:(id)arg1;
 - (void)logViewDataDidLoadWithPageIdentifier:(id)arg1;

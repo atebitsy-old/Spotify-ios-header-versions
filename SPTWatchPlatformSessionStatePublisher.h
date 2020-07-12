@@ -20,11 +20,11 @@
     NSDictionary *_lastPublishedSessionStateDictionary;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *lastPublishedSessionStateDictionary; // @synthesize lastPublishedSessionStateDictionary=_lastPublishedSessionStateDictionary;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (void)session:(id)arg1 temporaryConnectionError:(id)arg2;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (void)handlePublisherEvent:(long long)arg1;

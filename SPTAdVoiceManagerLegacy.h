@@ -31,6 +31,7 @@
     NSTimer *_timer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool initialSpeechLogged; // @synthesize initialSpeechLogged=_initialSpeechLogged;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(readonly, nonatomic) double recordSeconds; // @synthesize recordSeconds=_recordSeconds;
@@ -46,7 +47,6 @@
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(retain, nonatomic) id <SPTVoiceLibrarySession> voiceSession; // @synthesize voiceSession=_voiceSession;
-- (void).cxx_destruct;
 - (void)logVoiceAdLogEvent:(id)arg1;
 - (id)getActiveConnectedDevice;
 - (void)skipToNextTrack;

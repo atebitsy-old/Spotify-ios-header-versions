@@ -13,8 +13,10 @@
 @interface SPTPodcastEpisodeFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _useStandaloneComponents;
+    _Bool _openNpvPlaybuttonEnabled;
 }
 
+@property(readonly, nonatomic) _Bool openNpvPlaybuttonEnabled; // @synthesize openNpvPlaybuttonEnabled=_openNpvPlaybuttonEnabled;
 @property(readonly, nonatomic) _Bool useStandaloneComponents; // @synthesize useStandaloneComponents=_useStandaloneComponents;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

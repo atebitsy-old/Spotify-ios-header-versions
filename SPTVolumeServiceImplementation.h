@@ -37,6 +37,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVolumeSliderViewFactory *volumeSliderViewFactory; // @synthesize volumeSliderViewFactory=_volumeSliderViewFactory;
 @property(retain, nonatomic) id <SPTVolumeSynchronizationManager> synchronizationManager; // @synthesize synchronizationManager=_synchronizationManager;
 @property(retain, nonatomic) SPTVolumeDebugInstrumentation *debugLogger; // @synthesize debugLogger=_debugLogger;
@@ -58,7 +59,6 @@
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideVolumeSystemAPI;
 - (id)provideVolumeUIFactory;
 - (id)provideVolumeAPI;

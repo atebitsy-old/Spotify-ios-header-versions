@@ -17,11 +17,11 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
 @property(readonly, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(nonatomic) __weak id <SPTPlaybackPreferencesProtocol> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 - (void)audioNormalisedChanged:(id)arg1;

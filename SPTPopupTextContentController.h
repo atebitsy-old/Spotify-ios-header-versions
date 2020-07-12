@@ -14,8 +14,8 @@
 }
 
 + (id)createTextLabelUsingTheme:(id)arg1;
-@property(readonly, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 - (void)viewDidLoad;
 - (id)initWithText:(id)arg1;
 

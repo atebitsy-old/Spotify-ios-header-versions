@@ -14,9 +14,9 @@
     NSSet *_effects;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSSet *effects; // @synthesize effects=_effects;
 @property(readonly, nonatomic) SPTAdVoiceModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (id)initWithModel:(id)arg1 effects:(id)arg2;
 
 @end

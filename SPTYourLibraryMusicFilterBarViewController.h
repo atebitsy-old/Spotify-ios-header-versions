@@ -32,6 +32,7 @@
     NSArray *_currentLayoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *currentLayoutConstraints; // @synthesize currentLayoutConstraints=_currentLayoutConstraints;
 @property(copy, nonatomic) NSArray *filterTitles; // @synthesize filterTitles=_filterTitles;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
@@ -45,7 +46,6 @@
 @property(nonatomic) __weak UITableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) _Bool disableContextMenu; // @synthesize disableContextMenu=_disableContextMenu;
 @property(nonatomic) __weak id <SPTYourLibraryMusicFilterBarViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)clearFiltersControl:(id)arg1 didSelectFilterRuleAtIndex:(long long)arg2;
 - (void)sp_updateContentInsets;
 - (void)snapAtTopAnimated:(_Bool)arg1;

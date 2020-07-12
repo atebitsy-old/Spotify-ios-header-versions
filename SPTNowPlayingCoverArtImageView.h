@@ -16,10 +16,10 @@
     id <GLUEImageLoader> _imageLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)setupImageLoaderWithImageLoaderFactory:(id)arg1;
 - (void)loadImageForURI:(id)arg1 trackURI:(id)arg2 imageSize:(struct CGSize)arg3 peekingDisallowed:(_Bool)arg4 imageLoaderFactory:(id)arg5 showPlaceholder:(_Bool)arg6;
 - (void)showPlaceholderImageWithSize:(struct CGSize)arg1;

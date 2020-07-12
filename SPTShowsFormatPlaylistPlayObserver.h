@@ -24,6 +24,7 @@
     SPTPlayOrigin *_playOrigin;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
 @property(nonatomic) _Bool shouldLaunchNPV; // @synthesize shouldLaunchNPV=_shouldLaunchNPV;
 @property(nonatomic) unsigned long long onDemandType; // @synthesize onDemandType=_onDemandType;
@@ -31,13 +32,11 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (void)launchNPVForItemWithRowId:(id)arg1;
-- (void)launchNPVForPlayButtonPlayback;
 - (void)freetierPlaylistWillPlayTrackWithRowId:(id)arg1;
 - (void)freetierPlaylistWillPlay;
 - (id)initWithItemsViewModel:(id)arg1 metaViewController:(id)arg2 testManager:(id)arg3 playViewModel:(id)arg4;

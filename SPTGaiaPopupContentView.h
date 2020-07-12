@@ -22,13 +22,13 @@
 }
 
 + (id)viewWithType:(long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *deviceLabel; // @synthesize deviceLabel=_deviceLabel;
 @property(retain, nonatomic) UILabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 @property(nonatomic) long long type; // @synthesize type=_type;
 @property(retain, nonatomic) UIImage *deviceImage; // @synthesize deviceImage=_deviceImage;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *deviceName;
 - (void)updateConstraints;
 - (void)applyThemeLayout;

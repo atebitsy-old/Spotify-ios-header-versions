@@ -18,6 +18,8 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)isEqual:(id)arg1;
+- (id)initWithIdentifier:(id)arg1 featureID:(id)arg2 timestamp:(id)arg3 duration:(id)arg4;
 @property(nonatomic, readonly) NSNumber *duration; // @synthesize duration;
 @property(nonatomic, readonly) NSNumber *timestamp; // @synthesize timestamp;
 @property(nonatomic, readonly) NSString *featureId;

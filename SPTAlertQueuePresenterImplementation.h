@@ -16,9 +16,9 @@
     UIWindow *_previousKeyWindow;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIWindow *previousKeyWindow; // @synthesize previousKeyWindow=_previousKeyWindow;
 @property(readonly, nonatomic) UIWindow *blankingWindow; // @synthesize blankingWindow=_blankingWindow;
-- (void).cxx_destruct;
 - (void)dismissViewControllerAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)presentViewController:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 @property(readonly, nonatomic, getter=isPresenting) _Bool presenting;

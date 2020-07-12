@@ -13,8 +13,8 @@
     SPTAdVoiceModel *_model;
 }
 
-@property(readonly, nonatomic) SPTAdVoiceModel *model; // @synthesize model=_model;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTAdVoiceModel *model; // @synthesize model=_model;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithModel:(id)arg1;
 

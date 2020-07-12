@@ -22,6 +22,7 @@
     struct CGPoint _headerViewComponentContentOffset;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(retain, nonatomic) id <HUBComponentLayoutManager> componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
 @property(nonatomic) struct CGPoint headerViewComponentContentOffset; // @synthesize headerViewComponentContentOffset=_headerViewComponentContentOffset;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) HUBOverlayView *overlayView; // @synthesize overlayView=_overlayView;
 @property(readonly, nonatomic) HUBView *hubView; // @synthesize hubView=_hubView;
 @property(readonly, nonatomic) HUBHeaderView *headerView; // @synthesize headerView=_headerView;
-- (void).cxx_destruct;
 - (_Bool)isAccessibilityElement;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;
 - (double)verticalMarginBetweenHeaderAndFirstBodyComponent;
@@ -37,6 +37,11 @@
 - (void)layoutContainerView;
 @property(nonatomic) _Bool useDiffingOnViewModelChanges;
 - (void)setBackgroundColor:(id)arg1;
+- (void)containerViewDidDisappear;
+- (void)containerViewWillDisappear;
+- (void)containerViewDidAppear;
+- (void)containerViewWillAppear;
+- (id)initWithFrame:(struct CGRect)arg1 imageLoaderFactory:(id)arg2 componentLayoutManager:(id)arg3 componentRegistry:(id)arg4 commandHandler:(id)arg5;
 - (id)initWithFrame:(struct CGRect)arg1 imageLoaderFactory:(id)arg2 componentLayoutManager:(id)arg3 componentRegistry:(id)arg4 componentEventHandler:(id)arg5;
 
 @end

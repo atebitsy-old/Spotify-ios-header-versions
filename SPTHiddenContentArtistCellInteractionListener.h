@@ -14,9 +14,9 @@
     id <SPTHiddenContentArtistViewModel> _artistViewModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTHiddenContentArtistViewModel> artistViewModel; // @synthesize artistViewModel=_artistViewModel;
 @property(nonatomic) __weak id <SPTHiddenContentArtistCellDelegate> cellDelegate; // @synthesize cellDelegate=_cellDelegate;
-- (void).cxx_destruct;
 - (void)contextMenuTapped:(id)arg1;
 - (id)initWithCellDelegate:(id)arg1 artistViewModel:(id)arg2;
 

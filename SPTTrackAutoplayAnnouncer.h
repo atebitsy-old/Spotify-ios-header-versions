@@ -19,11 +19,11 @@
     AVAudioPlayer *_soundPlayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AVAudioPlayer *soundPlayer; // @synthesize soundPlayer=_soundPlayer;
 @property(retain, nonatomic) NSDate *lastAnnounceTime; // @synthesize lastAnnounceTime=_lastAnnounceTime;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (void)audioPlayerDecodeErrorDidOccur:(id)arg1 error:(id)arg2;
 - (void)audioPlayerDidFinishPlaying:(id)arg1 successfully:(_Bool)arg2;
 - (_Bool)isTooSoonAfterLastAnnouncement;

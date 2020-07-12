@@ -15,10 +15,10 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;
-- (void).cxx_destruct;
 - (id)createSubtitleDecoratorContentOperation;
 - (id)createContentOperationsForViewURI:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)initWithHubContentOperationFactory:(id)arg1 onDemandSet:(id)arg2 productState:(id)arg3;

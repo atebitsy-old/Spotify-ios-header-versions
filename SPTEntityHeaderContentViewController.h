@@ -24,6 +24,7 @@
     UIViewController *_contentViewController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
 @property(nonatomic) __weak NSLayoutConstraint *topOffsetConstraint; // @synthesize topOffsetConstraint=_topOffsetConstraint;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
@@ -34,7 +35,6 @@
 @property(nonatomic) double minimumHeight; // @synthesize minimumHeight=_minimumHeight;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIImage *backgroundImage; // @synthesize backgroundImage=_backgroundImage;
-- (void).cxx_destruct;
 - (double)defaultHeaderMinimumHeight;
 - (id)supplementaryViewForEntityHeaderViewController:(id)arg1;
 - (double)entityHeaderViewControllerMinimumHeight:(id)arg1;

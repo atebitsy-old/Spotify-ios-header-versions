@@ -15,10 +15,10 @@
     NSError *_error;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
 @property(readonly, nonatomic) double assetDuration; // @synthesize assetDuration=_assetDuration;
 @property(readonly, nonatomic) NSURL *assetURL; // @synthesize assetURL=_assetURL;
-- (void).cxx_destruct;
 - (id)initWithAssetURL:(id)arg1 assetDuration:(double)arg2 error:(id)arg3;
 
 @end

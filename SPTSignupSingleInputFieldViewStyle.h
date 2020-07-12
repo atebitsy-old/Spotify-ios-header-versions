@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEButtonStyle, GLUELabelStyle, NSString, SPTLoginInputFormViewStyle, SPTSignupTermsAndPolicyViewStyle, UIColor;
+@class GLUEButtonStyle, GLUELabelStyle, NSString, SPTLoginInputFormViewStyle, SPTSignupTermsAndPolicyViewStyle, UIColor, UIFont;
 
 @interface SPTSignupSingleInputFieldViewStyle : NSObject <GLUEStyle>
 {
@@ -23,8 +23,13 @@
     double _mainContainerWidth;
     double _mainContainerIPadWidth;
     SPTSignupTermsAndPolicyViewStyle *_termsViewStyle;
+    UIColor *_customPickerButtonColor;
+    UIFont *_customPickerButtonFont;
 }
 
+- (void).cxx_destruct;
+@property(copy, nonatomic) UIFont *customPickerButtonFont; // @synthesize customPickerButtonFont=_customPickerButtonFont;
+@property(copy, nonatomic) UIColor *customPickerButtonColor; // @synthesize customPickerButtonColor=_customPickerButtonColor;
 @property(copy, nonatomic) SPTSignupTermsAndPolicyViewStyle *termsViewStyle; // @synthesize termsViewStyle=_termsViewStyle;
 @property(nonatomic) double mainContainerIPadWidth; // @synthesize mainContainerIPadWidth=_mainContainerIPadWidth;
 @property(nonatomic) double mainContainerWidth; // @synthesize mainContainerWidth=_mainContainerWidth;
@@ -36,7 +41,6 @@
 @property(copy, nonatomic) SPTLoginInputFormViewStyle *inputFormStyle; // @synthesize inputFormStyle=_inputFormStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -29,6 +29,7 @@
     id <HUBViewModel> _errorViewModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isCacheLoadCompleted) _Bool cacheLoadCompleted; // @synthesize cacheLoadCompleted=_cacheLoadCompleted;
 @property(nonatomic, getter=hasLoadedRemoteContent) _Bool loadedRemoteContent; // @synthesize loadedRemoteContent=_loadedRemoteContent;
 @property(nonatomic, getter=isRefreshDisallowed) _Bool refreshDisallowed; // @synthesize refreshDisallowed=_refreshDisallowed;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTBrowseViewModelFetcher> viewModelFetcher; // @synthesize viewModelFetcher=_viewModelFetcher;
 @property(retain, nonatomic) id <HUBViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)viewModelByAppendingViewModel:(id)arg1 toViewModel:(id)arg2;
 - (void)cancelLoadingNextPage;
 - (void)connectivityMonitorDidChangeState:(id)arg1;

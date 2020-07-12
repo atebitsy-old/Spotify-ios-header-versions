@@ -9,7 +9,7 @@
 @protocol SPTContextMenuSectionHeaderDelegate;
 
 @protocol SPTContextMenuOptions <NSObject>
-@property(retain, nonatomic) id <SPTContextMenuSectionHeaderDelegate> sectionHeaderDelegate;
+@property(nonatomic, retain) id <SPTContextMenuSectionHeaderDelegate> sectionHeaderDelegate;
 @property(nonatomic) _Bool shouldShowScannable;
 @end
 

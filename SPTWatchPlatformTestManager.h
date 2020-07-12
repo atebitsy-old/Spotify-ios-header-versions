@@ -10,7 +10,7 @@
 #import "SPTWatchConnectivityRequestHandler-Protocol.h"
 #import "SPTWatchConnectivitySessionObserver-Protocol.h"
 
-@class NSString, NSUserDefaults, SPTObserverManager, SPTWatchConnectivityDataLoader, SPTWatchConnectivityManager, SPTWatchConnectivitySession, SPTWatchPlatformWatchDevice;
+@class NSString, NSUserDefaults, SPTObserverManager, SPTWatchConnectivityDataLoader, SPTWatchConnectivityManager, SPTWatchConnectivitySession, SPTWatchPlatformFeatureProperties, SPTWatchPlatformWatchDevice;
 @protocol SPTExternalIntegrationDebugLog, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver;
 
 @interface SPTWatchPlatformTestManager : NSObject <SPTWatchConnectivitySessionObserver, SPTWatchConnectivityRequestHandler, SPTFeatureFlagSignalObserver>
@@ -18,13 +18,12 @@
     _Bool _watchAccessoryLoggingEnabled;
     _Bool _watchIntegrationEnabled;
     _Bool _watchAppStreamingEnabled;
-    _Bool _watchAppForceStreamingEnabled;
     _Bool _watchAppOfflineEnabled;
     _Bool _credentialStoreSendCredentialsEnabled;
     _Bool _webAPIIntegrationEnabled;
     _Bool _connectManagerXEnabled;
     _Bool _watchAppStreamingSignalEnabled;
-    _Bool _watchAppForceStreamingSignalEnabled;
+    unsigned long long _bitrateSetting;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTWatchConnectivityManager *_watchConnectivityManager;
@@ -34,16 +33,16 @@
     id <SPTProductState> _productState;
     id <SPTExternalIntegrationDebugLog> _debugLog;
     id <SPTFeatureFlagSignal> _streamingEnabledSignal;
-    id <SPTFeatureFlagSignal> _forceStreamingEnabledSignal;
+    SPTWatchPlatformFeatureProperties *_remoteConfigurationProperties;
     SPTObserverManager *_observerManager;
     SPTWatchPlatformWatchDevice *_pairedDevice;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTWatchPlatformWatchDevice *pairedDevice; // @synthesize pairedDevice=_pairedDevice;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(nonatomic) _Bool watchAppForceStreamingSignalEnabled; // @synthesize watchAppForceStreamingSignalEnabled=_watchAppForceStreamingSignalEnabled;
+@property(readonly, nonatomic) SPTWatchPlatformFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(nonatomic) _Bool watchAppStreamingSignalEnabled; // @synthesize watchAppStreamingSignalEnabled=_watchAppStreamingSignalEnabled;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> forceStreamingEnabledSignal; // @synthesize forceStreamingEnabledSignal=_forceStreamingEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> streamingEnabledSignal; // @synthesize streamingEnabledSignal=_streamingEnabledSignal;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -53,15 +52,14 @@
 @property(readonly, nonatomic) SPTWatchConnectivityManager *watchConnectivityManager; // @synthesize watchConnectivityManager=_watchConnectivityManager;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
+@property(readonly, nonatomic) unsigned long long bitrateSetting; // @synthesize bitrateSetting=_bitrateSetting;
 @property(readonly, nonatomic, getter=isConnectManagerXEnabled) _Bool connectManagerXEnabled; // @synthesize connectManagerXEnabled=_connectManagerXEnabled;
 @property(readonly, nonatomic, getter=isWebAPIIntegrationEnabled) _Bool webAPIIntegrationEnabled; // @synthesize webAPIIntegrationEnabled=_webAPIIntegrationEnabled;
 @property(readonly, nonatomic, getter=shouldCredentialStoreSendCredentials) _Bool credentialStoreSendCredentialsEnabled; // @synthesize credentialStoreSendCredentialsEnabled=_credentialStoreSendCredentialsEnabled;
 @property(readonly, nonatomic, getter=isWatchAppOfflineEnabled) _Bool watchAppOfflineEnabled; // @synthesize watchAppOfflineEnabled=_watchAppOfflineEnabled;
-@property(readonly, nonatomic, getter=isWatchAppForceStreamingEnabled) _Bool watchAppForceStreamingEnabled; // @synthesize watchAppForceStreamingEnabled=_watchAppForceStreamingEnabled;
 @property(readonly, nonatomic, getter=isWatchAppStreamingEnabled) _Bool watchAppStreamingEnabled; // @synthesize watchAppStreamingEnabled=_watchAppStreamingEnabled;
 @property(readonly, nonatomic, getter=isWatchIntegrationEnabled) _Bool watchIntegrationEnabled; // @synthesize watchIntegrationEnabled=_watchIntegrationEnabled;
 @property(readonly, nonatomic, getter=isWatchAccessoryLoggingEnabled) _Bool watchAccessoryLoggingEnabled; // @synthesize watchAccessoryLoggingEnabled=_watchAccessoryLoggingEnabled;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isWatchAppIntentsHandlingFeatureEnabled) _Bool watchAppIntentsHandlingFeatureEnabled;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 - (void)applicationStateChanged;
@@ -73,20 +71,20 @@
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (void)setBitrateSetting:(unsigned long long)arg1;
 - (void)setConnectManagerXEnabled:(_Bool)arg1;
 - (void)setWebAPIIntegrationEnabled:(_Bool)arg1;
 - (void)setWatchAppOfflineEnabled:(_Bool)arg1;
-- (void)setWatchAppForceStreamingEnabled:(_Bool)arg1;
 - (void)setWatchAppStreamingEnabled:(_Bool)arg1;
 - (void)setWatchAccessoryLoggingEnabled:(_Bool)arg1;
 - (void)setWatchIntegrationEnabled:(_Bool)arg1;
 - (void)setCredentialStoreSendCredentialsEnabled:(_Bool)arg1;
+- (void)evaluateBitrateSetting;
 - (void)evaluateConnectManagerXEnabled;
 - (void)evaluateWebAPIIntegrationEnabled;
 - (void)evaluateAccessoryLoggingEnabled;
 - (void)evaluateCredentialStoreSendCredentials;
 - (void)evaluateAppleWatchPubSubTransport;
-- (void)evaluateWatchAppForceStreamingEnabled;
 - (void)evaluateWatchAppStreamingEnabled;
 - (void)evaluateWatchAppOfflineEnabled;
 - (void)evaluateWatchIntegrationEnabledState;

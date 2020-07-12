@@ -32,6 +32,7 @@
 }
 
 + (id)messageWithRequestId:(id)arg1 featureId:(id)arg2 pageuri:(id)arg3 sectionId:(id)arg4 itemIndex:(long long)arg5 targetUri:(id)arg6 impressionType:(id)arg7 renderType:(id)arg8 timestamp:(double)arg9 mixType:(id)arg10 globalExplicitOn:(_Bool)arg11 userExplicitOn:(_Bool)arg12 userInMix:(_Bool)arg13 isFamilyMember:(_Bool)arg14 mixTrackFilter:(id)arg15 algorithmId:(id)arg16 excludedUserIds:(id)arg17 excludedGenres:(id)arg18 testData:(id)arg19;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *testDataValue; // @synthesize testDataValue=_testDataValue;
 @property(copy, nonatomic) NSArray *excludedGenresValue; // @synthesize excludedGenresValue=_excludedGenresValue;
 @property(copy, nonatomic) NSArray *excludedUserIdsValue; // @synthesize excludedUserIdsValue=_excludedUserIdsValue;
@@ -51,7 +52,6 @@
 @property(copy, nonatomic) NSString *pageuriValue; // @synthesize pageuriValue=_pageuriValue;
 @property(copy, nonatomic) NSString *featureIdValue; // @synthesize featureIdValue=_featureIdValue;
 @property(copy, nonatomic) NSString *requestIdValue; // @synthesize requestIdValue=_requestIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

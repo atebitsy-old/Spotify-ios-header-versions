@@ -17,10 +17,10 @@
     CDUnknownBlockType _handler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType handler; // @synthesize handler=_handler;
 @property(readonly, nonatomic) NSDate *expirationDate; // @synthesize expirationDate=_expirationDate;
 @property(readonly, nonatomic) __weak SPTUIModeTransitionCoordinatorImplementation *parent; // @synthesize parent=_parent;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (id)initWithParent:(id)arg1 expirationDate:(id)arg2 handler:(CDUnknownBlockType)arg3;
 

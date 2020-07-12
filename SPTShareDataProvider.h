@@ -16,10 +16,10 @@
     SPTShareTrackHelper *_shareTrackHelper;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTShareTrackHelper *shareTrackHelper; // @synthesize shareTrackHelper=_shareTrackHelper;
 @property(readonly, nonatomic) SPTSharePlaylistHelper *sharePlaylistHelper; // @synthesize sharePlaylistHelper=_sharePlaylistHelper;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (id)shareDataFromShareEntity:(id)arg1 shareableURL:(id)arg2 shareID:(id)arg3;
 - (void)normalizeShareEntityData:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithPlayer:(id)arg1 sharePlaylistHelper:(id)arg2 shareTrackHelper:(id)arg3;

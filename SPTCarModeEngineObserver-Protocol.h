@@ -5,6 +5,6 @@
 //
 
 @protocol SPTCarModeEngineObserver
-- (void)carModeEngineStateChangedWithState:(long long)arg1;
+- (void)carModeEngineStateChanged:(long long)arg1;
 @end
 

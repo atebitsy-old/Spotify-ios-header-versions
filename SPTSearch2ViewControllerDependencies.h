@@ -29,6 +29,7 @@
     id <SPTURIDispatchService> _uriDispatchService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(readonly, nonatomic) id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(readonly, nonatomic) id <SPTAgeVerificationService> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(readonly, nonatomic) id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(readonly, nonatomic) id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (id)initWithNetworkService:(id)arg1 sessionService:(id)arg2 glueService:(id)arg3 playlistPlatformService:(id)arg4 hubsRendererFactory:(id)arg5 playerService:(id)arg6 containerService:(id)arg7 podcastService:(id)arg8 shelfService:(id)arg9 recentsDataSourceProvider:(id)arg10 onDemandService:(id)arg11 logCenter:(id)arg12 contextMenuService:(id)arg13 explicitContentService:(id)arg14 ageVerificationService:(id)arg15 ubiService:(id)arg16 uriDispatchService:(id)arg17;
 
 @end

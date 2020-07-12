@@ -19,11 +19,11 @@
     SPTVoiceLibrarySpeechProxyRequest *_speechProxyRequest;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTVoiceLibrarySpeechProxyRequest *speechProxyRequest; // @synthesize speechProxyRequest=_speechProxyRequest;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceLibraryAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
-- (void).cxx_destruct;
 - (id)createVoiceRecognitionTask;
 - (id)initWithDataLoaderFactory:(id)arg1 audioRecorder:(id)arg2 player:(id)arg3 speechProxyRequest:(id)arg4;
 

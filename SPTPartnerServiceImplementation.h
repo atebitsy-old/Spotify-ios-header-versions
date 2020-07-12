@@ -35,6 +35,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> settingsPageRegistrationToken; // @synthesize settingsPageRegistrationToken=_settingsPageRegistrationToken;
 @property(retain, nonatomic) SPTPartnerNavigationBannerCoordinator *navigationBannerCoordinator; // @synthesize navigationBannerCoordinator=_navigationBannerCoordinator;
@@ -53,7 +54,6 @@
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(readonly, nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)partnerTestManager:(id)arg1 didUpdateEnabledState:(_Bool)arg2;
 - (id)provideTestManager;
 - (id)providePartnerIntegrationRegistry;

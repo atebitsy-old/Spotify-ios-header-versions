@@ -21,13 +21,13 @@
     id <GLUECancellableTask> _task;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUECancellableTask> task; // @synthesize task=_task;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(retain, nonatomic) UIColor *color; // @synthesize color=_color;
 @property(nonatomic) __weak id <SPTNowPlayingBackgroundViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)nowPlayingModelDidUpdateMetadata:(id)arg1;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)updatedBackgroundColorForTrack:(id)arg1 nowPlayingModel:(id)arg2;

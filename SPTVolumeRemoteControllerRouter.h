@@ -18,10 +18,10 @@
     id <SPTGaiaConnectAPI> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) NSArray *volumeManagers; // @synthesize volumeManagers=_volumeManagers;
 @property(nonatomic) __weak id <SPTRemoteVolumeMasterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)shouldRespondToVolumeEventFromController:(id)arg1;
 - (void)volumeController:(id)arg1 remoteVolumeDidChange:(double)arg2;
 @property(readonly, nonatomic) double volumeStep;

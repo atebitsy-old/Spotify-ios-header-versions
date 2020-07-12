@@ -16,10 +16,10 @@
     id <SPTUIPresentationService> _presentationService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(retain, nonatomic) id <SPTContributingArtistsUIProvider> contributingArtistsUIProvider; // @synthesize contributingArtistsUIProvider=_contributingArtistsUIProvider;
 - (id)logEventName;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)icon;
 - (id)title;

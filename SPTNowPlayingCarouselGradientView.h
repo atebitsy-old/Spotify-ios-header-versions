@@ -14,9 +14,9 @@
     CAGradientLayer *_backgroundViewGradient;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *backgroundViewGradient; // @synthesize backgroundViewGradient=_backgroundViewGradient;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 

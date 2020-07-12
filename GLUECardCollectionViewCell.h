@@ -17,9 +17,9 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) UIView<GLUEStatefulItem><GLUEReusable><GLUEStyleable> *cardView; // @synthesize cardView=_cardView;
-- (void).cxx_destruct;
 @property(nonatomic, getter=isDisabled) _Bool disabled;
 @property(nonatomic, getter=isActive) _Bool active;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted;

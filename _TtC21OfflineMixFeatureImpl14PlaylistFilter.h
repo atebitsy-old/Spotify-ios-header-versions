@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTYourLibraryMusicPlaylistFilter-Protocol.h"
-
-@interface _TtC21OfflineMixFeatureImpl14PlaylistFilter : NSObject <SPTYourLibraryMusicPlaylistFilter>
+@interface _TtC21OfflineMixFeatureImpl14PlaylistFilter : NSObject
 {
     // Error parsing type: , name: formatListType
 }

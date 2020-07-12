@@ -43,6 +43,7 @@
     NSDictionary *_metadata;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(readonly, copy, nonatomic) NSString *format; // @synthesize format=_format;
 @property(readonly, nonatomic) id <SPTAdsBaseVoiceModel> voice; // @synthesize voice=_voice;
@@ -71,7 +72,6 @@
 @property(readonly, nonatomic, getter=isDummy) _Bool dummy; // @synthesize dummy=_dummy;
 @property(readonly, copy, nonatomic) NSString *adPlaybackID; // @synthesize adPlaybackID=_adPlaybackID;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)adProductName;
 - (_Bool)isEqualToAdsBaseEntity:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

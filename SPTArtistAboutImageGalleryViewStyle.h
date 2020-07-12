@@ -17,10 +17,10 @@
     double _horizontalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double horizontalMargin; // @synthesize horizontalMargin=_horizontalMargin;
 @property(nonatomic) double imageMaxWidth; // @synthesize imageMaxWidth=_imageMaxWidth;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

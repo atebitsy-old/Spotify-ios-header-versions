@@ -40,6 +40,7 @@
     SPTInfoView *_offlineView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasSetupContentOffset; // @synthesize hasSetupContentOffset=_hasSetupContentOffset;
 @property(nonatomic, getter=isDataLoaded) _Bool dataLoaded; // @synthesize dataLoaded=_dataLoaded;
 @property(retain, nonatomic) SPTInfoView *offlineView; // @synthesize offlineView=_offlineView;
@@ -59,7 +60,6 @@
 @property(readonly, nonatomic) __weak id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <SPTCollectionArtistModel> artistModel; // @synthesize artistModel=_artistModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)updateRightBarButtonItems;

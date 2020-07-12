@@ -26,6 +26,7 @@
     UIButton *_negativeFeedbackButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *negativeFeedbackButton; // @synthesize negativeFeedbackButton=_negativeFeedbackButton;
 @property(retain, nonatomic) UIButton *heartButton; // @synthesize heartButton=_heartButton;
 @property(retain, nonatomic) UIButton *nextTrackButton; // @synthesize nextTrackButton=_nextTrackButton;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
-- (void).cxx_destruct;
 - (void)updateNegativeFeedbackButton;
 - (void)updateHeartButton;
 - (void)updateSkipButtons;

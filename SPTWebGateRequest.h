@@ -17,12 +17,12 @@
     NSData *_body;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSData *body; // @synthesize body=_body;
 @property(readonly, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(readonly, nonatomic) NSString *method; // @synthesize method=_method;
 @property(readonly, nonatomic) NSString *endpoint; // @synthesize endpoint=_endpoint;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct Request cppRequest;
 - (optional_331450e3)cppTimeout;
 @property(nonatomic) double timeout;

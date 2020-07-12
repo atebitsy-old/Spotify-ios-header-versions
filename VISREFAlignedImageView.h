@@ -18,13 +18,13 @@
     NSLayoutConstraint *_imageAspectConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *imageAspectConstraint; // @synthesize imageAspectConstraint=_imageAspectConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageCenterYConstraint; // @synthesize imageCenterYConstraint=_imageCenterYConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageBottomConstraint; // @synthesize imageBottomConstraint=_imageBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageTopConstraint; // @synthesize imageTopConstraint=_imageTopConstraint;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic) unsigned long long imageAlignment; // @synthesize imageAlignment=_imageAlignment;
-- (void).cxx_destruct;
 - (void)updateImageAlignmentConstraints;
 @property(retain, nonatomic) UIImage *image;
 - (void)setup;

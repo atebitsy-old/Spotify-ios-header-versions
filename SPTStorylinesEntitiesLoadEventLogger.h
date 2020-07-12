@@ -13,8 +13,8 @@
     SPTStorylinesLoadEventLogger *_loadEventLogger;
 }
 
-@property(retain, nonatomic) SPTStorylinesLoadEventLogger *loadEventLogger; // @synthesize loadEventLogger=_loadEventLogger;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTStorylinesLoadEventLogger *loadEventLogger; // @synthesize loadEventLogger=_loadEventLogger;
 - (void)logEntitiesLoadEventForType:(long long)arg1 fromSource:(long long)arg2 withDetails:(id)arg3;
 - (void)logEntitiesLoadErrorEventFromSource:(long long)arg1 withDetails:(id)arg2;
 - (void)logEntitiesLoadSuccessEventFromSource:(long long)arg1;

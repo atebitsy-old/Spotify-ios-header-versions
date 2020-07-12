@@ -26,6 +26,7 @@
     UIImage *_entityImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *entityImage; // @synthesize entityImage=_entityImage;
 @property(retain, nonatomic) UIImageView *entityImageView; // @synthesize entityImageView=_entityImageView;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) id item; // @synthesize item=_item;
 @property(nonatomic) unsigned long long selection; // @synthesize selection=_selection;
 @property(nonatomic) __weak id <SPTFilePickerItemCell> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)setImage:(id)arg1;
 - (void)selectorAction:(id)arg1;

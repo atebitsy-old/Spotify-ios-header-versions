@@ -30,6 +30,7 @@
     SPTNowPlayingBarLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNowPlayingBarLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(retain, nonatomic) SPTPlayerTrackScrollDataSource *playerTrackScrollDataSource; // @synthesize playerTrackScrollDataSource=_playerTrackScrollDataSource;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> connectIntegration; // @synthesize connectIntegration=_connectIntegration;
 @property(readonly, nonatomic) SPTNowPlayingSkipLimitReachedMessageRequester *skipLimitReachedMessageRequester; // @synthesize skipLimitReachedMessageRequester=_skipLimitReachedMessageRequester;
 @property(retain, nonatomic) SPTNowPlayingBarModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
-- (void).cxx_destruct;
 - (void)didTapVoiceCompanionView;
 - (void)playerTrackScrollView:(id)arg1 scrolledToRelativeIndex:(long long)arg2;
 - (void)playerTrackScrollViewChangedOffset:(id)arg1;

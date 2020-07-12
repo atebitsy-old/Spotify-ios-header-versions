@@ -18,11 +18,11 @@
     UIViewController *_pendingViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController *pendingViewController; // @synthesize pendingViewController=_pendingViewController;
 @property(retain, nonatomic) UIViewController *currentViewController; // @synthesize currentViewController=_currentViewController;
 @property(nonatomic) __weak UIViewController *containerViewController; // @synthesize containerViewController=_containerViewController;
 @property(nonatomic) __weak SPTNowPlayingNavigationBarViewV2 *navigationBarView; // @synthesize navigationBarView=_navigationBarView;
-- (void).cxx_destruct;
 - (void)replaceBarUnitWithViewController:(id)arg1;
 - (void)replaceBarUnitIfNeeded;
 

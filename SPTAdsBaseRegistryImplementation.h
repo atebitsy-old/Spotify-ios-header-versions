@@ -18,10 +18,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) NSMutableArray *entities; // @synthesize entities=_entities;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 - (long long)adEventFromString:(id)arg1;
 - (id)adEntityFromMetadata:(id)arg1 format:(id)arg2 slot:(id)arg3;
 - (void)notifyObserversOfAdEntity:(id)arg1 event:(long long)arg2;

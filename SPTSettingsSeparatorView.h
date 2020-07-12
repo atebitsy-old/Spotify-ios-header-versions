@@ -14,9 +14,9 @@
     NSArray *_colors;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *colors; // @synthesize colors=_colors;
 @property(nonatomic) long long style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)drawRect:(struct CGRect)arg1;
 - (id)_actualColors;
 - (id)initWithCoder:(id)arg1;

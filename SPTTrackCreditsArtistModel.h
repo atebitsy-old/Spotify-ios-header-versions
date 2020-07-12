@@ -15,10 +15,10 @@
     NSURL *_externalUrl;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *externalUrl; // @synthesize externalUrl=_externalUrl;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

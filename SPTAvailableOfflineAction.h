@@ -17,11 +17,11 @@
     SPTCollectionPlatformFetchOptions *_collectionOptions;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isOffline; // @synthesize isOffline=_isOffline;
 @property(retain, nonatomic) SPTCollectionPlatformFetchOptions *collectionOptions; // @synthesize collectionOptions=_collectionOptions;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) NSURL *offlineURL; // @synthesize offlineURL=_offlineURL;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (_Bool)executeBeforeDismiss;
 - (id)logEventName;

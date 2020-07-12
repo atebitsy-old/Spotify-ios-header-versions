@@ -16,10 +16,10 @@
     SPTSocialManager *_socialManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTSocialManager *socialManager; // @synthesize socialManager=_socialManager;
 @property(retain, nonatomic) NSMutableDictionary *networkConnectionStates; // @synthesize networkConnectionStates=_networkConnectionStates;
 @property(nonatomic) __weak id <SPTFindFriendsNetworkConnectionManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateFacebookConnectedState;
 - (void)setConnectedStatusForNetworkType:(long long)arg1 connected:(_Bool)arg2;
 - (_Bool)isConnectedToNetwork:(long long)arg1;

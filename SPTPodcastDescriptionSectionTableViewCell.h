@@ -18,10 +18,10 @@
     id <GLUETheme> _glueTheme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) SPTPodcastSectionDescriptionTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
 @property(nonatomic) __weak id <SPTPodcastDescriptionTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 - (void)setupConstraints;
 - (void)setupUI;

@@ -22,9 +22,9 @@
 + (id)paragraphStyle;
 + (id)attributedTitleForModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSearchUICardView *cardView; // @synthesize cardView=_cardView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)sendSelectionEvent;
 - (id)defaultCardStyle;
 - (void)updateAccessibilityWithModel:(id)arg1;

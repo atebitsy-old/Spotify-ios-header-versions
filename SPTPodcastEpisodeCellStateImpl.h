@@ -21,13 +21,13 @@
     SPTPodcastEpisodeCachedProgress *_cachedProgress;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastEpisodeCachedProgress *cachedProgress; // @synthesize cachedProgress=_cachedProgress;
 @property(nonatomic) _Bool canBeMarkedAsPlayed; // @synthesize canBeMarkedAsPlayed=_canBeMarkedAsPlayed;
 @property(nonatomic) _Bool isEpisodeUnfinished; // @synthesize isEpisodeUnfinished=_isEpisodeUnfinished;
 @property(nonatomic) _Bool isEpisodeActive; // @synthesize isEpisodeActive=_isEpisodeActive;
 @property(nonatomic) _Bool isEpisodePlaying; // @synthesize isEpisodePlaying=_isEpisodePlaying;
 @property(retain, nonatomic) id <SPTPodcastEpisode> podcastEpisode; // @synthesize podcastEpisode=_podcastEpisode;
-- (void).cxx_destruct;
 - (_Bool)isEpisodePlayable;
 - (_Bool)isEpisodeExplicit;
 - (id)podcastImageURL;

@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTKeychainManagerImpl *keychainManager; // @synthesize keychainManager=_keychainManager;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(retain, nonatomic) id <SPTUICompletionNotifier> UICompletionNotifier; // @synthesize UICompletionNotifier=_UICompletionNotifier;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak SpotifyAppDelegate *appDelegate; // @synthesize appDelegate=_appDelegate;
-- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationSystemDelegate;
 - (id)provideKeychainManager;
 - (CDUnknownBlockType)provideContainerLogoutHandler;

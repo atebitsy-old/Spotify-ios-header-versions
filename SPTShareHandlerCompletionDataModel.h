@@ -17,10 +17,10 @@
     NSString *_performedShareCapability;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *performedShareCapability; // @synthesize performedShareCapability=_performedShareCapability;
 @property(copy, nonatomic) NSString *shareID; // @synthesize shareID=_shareID;
 @property(copy, nonatomic) NSString *systemDestination; // @synthesize systemDestination=_systemDestination;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -13,8 +13,8 @@
     NSMutableArray *_actionButtons;
 }
 
-@property(readonly, nonatomic) NSMutableArray *actionButtons; // @synthesize actionButtons=_actionButtons;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableArray *actionButtons; // @synthesize actionButtons=_actionButtons;
 - (void)applyStyle:(id)arg1;
 - (void)addButton:(id)arg1 tag:(unsigned long long)arg2 toView:(id)arg3;
 - (void)addButtons:(id)arg1 toView:(id)arg2;

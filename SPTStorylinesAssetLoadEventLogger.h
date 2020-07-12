@@ -13,8 +13,8 @@
     SPTStorylinesLoadEventLogger *_loadEventLogger;
 }
 
-@property(retain, nonatomic) SPTStorylinesLoadEventLogger *loadEventLogger; // @synthesize loadEventLogger=_loadEventLogger;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTStorylinesLoadEventLogger *loadEventLogger; // @synthesize loadEventLogger=_loadEventLogger;
 - (void)logAssetLoadEventForType:(long long)arg1 forStorylines:(id)arg2 atCardIndex:(long long)arg3 fromSource:(long long)arg4 withDetails:(id)arg5;
 - (void)logImageLoadErrorEventForStorylines:(id)arg1 atCardIndex:(long long)arg2 withDetails:(id)arg3;
 - (void)logImageLoadSuccessEventFromSource:(long long)arg1 forStorylines:(id)arg2 atCardIndex:(long long)arg3;

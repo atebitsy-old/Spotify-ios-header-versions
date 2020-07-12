@@ -22,11 +22,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(retain, nonatomic) NSDictionary *socialOnDemandClients; // @synthesize socialOnDemandClients=_socialOnDemandClients;
 @property(readonly, nonatomic) __weak id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationPlaybackServiceImplementation *playbackService; // @synthesize playbackService=_playbackService;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)playContentWithURI:(id)arg1 withOptions:(id)arg2 origin:(id)arg3 requestOptions:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (_Bool)canPlayContentWithURI:(id)arg1;

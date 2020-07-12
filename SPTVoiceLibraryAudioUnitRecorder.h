@@ -18,11 +18,11 @@
     SPTVoiceLibraryAudioEngineRecorderFactory *_factory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTVoiceLibraryAudioEngineRecorderFactory *factory; // @synthesize factory=_factory;
 @property(readonly, nonatomic) _Bool supportsLevelMonitoring; // @synthesize supportsLevelMonitoring=_supportsLevelMonitoring;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic, getter=isRecording) _Bool recording; // @synthesize recording=_recording;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 @property(readonly, nonatomic) double sampleRate;

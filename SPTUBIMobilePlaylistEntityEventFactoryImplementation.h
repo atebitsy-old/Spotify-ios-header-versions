@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithPageIdentifier:(id)arg1 pageUri:(id)arg2 pageReason:(id)arg3;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)itemListFactory;
 - (id)filterAndSortFactory;
 - (id)emptyViewFactory;

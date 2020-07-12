@@ -16,11 +16,11 @@
     SPTPodcastUIDiscoverCardStyle *_cardStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastUIDiscoverCardStyle *cardStyle; // @synthesize cardStyle=_cardStyle;
 @property(retain, nonatomic) SPTPodcastUIRoundedImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)applyStyle;
 - (void)setUpLabels;
 - (void)setupViews;

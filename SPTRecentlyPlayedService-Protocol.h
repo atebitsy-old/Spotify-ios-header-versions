@@ -11,7 +11,6 @@
 @protocol SPTRecentlyPlayedService <SPTService>
 - (id <SPTRecentlyPlayedShortcutItemsProvider>)provideShortcutItemsProvider;
 - (void)registerOptionalContentType:(unsigned long long)arg1;
-- (id <SPTRecentlyPlayedList>)provideRecentlyPlayedListWithoutSongs;
 - (id <SPTRecentlyPlayedList>)provideRecentlyPlayedList;
 @end
 

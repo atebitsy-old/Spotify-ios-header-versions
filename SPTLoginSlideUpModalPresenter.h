@@ -18,11 +18,11 @@
     NSMutableArray *_presentationQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *presentationQueue; // @synthesize presentationQueue=_presentationQueue;
 @property(nonatomic) __weak UIViewController *presentedDialogController; // @synthesize presentedDialogController=_presentedDialogController;
 @property(nonatomic) __weak UIWindow *previousKeyWindow; // @synthesize previousKeyWindow=_previousKeyWindow;
 @property(retain, nonatomic) UIWindow *modalWindow; // @synthesize modalWindow=_modalWindow;
-- (void).cxx_destruct;
 - (id)presentedDialog;
 - (void)viewControllerWillHideOnBackgroundTap:(id)arg1;
 - (void)resetQueueAndDismissAnimated:(_Bool)arg1;

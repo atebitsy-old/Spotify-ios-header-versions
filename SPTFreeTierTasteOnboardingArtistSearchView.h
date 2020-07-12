@@ -17,10 +17,10 @@
     SPTFreeTierTasteOnboardingArtistPickerOfflineView *_offlineStateView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistPickerOfflineView *offlineStateView; // @synthesize offlineStateView=_offlineStateView;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistSearchCollectionViewLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)activateConstraints;
 - (void)setIsOffline:(_Bool)arg1;

@@ -19,6 +19,7 @@
     double _timerSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPaused; // @synthesize isPaused=_isPaused;
 @property(nonatomic) double timerSize; // @synthesize timerSize=_timerSize;
 @property(nonatomic) double angle; // @synthesize angle=_angle;
@@ -26,7 +27,6 @@
 @property(nonatomic) double currentTimeLeft; // @synthesize currentTimeLeft=_currentTimeLeft;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property double duration; // @synthesize duration=_duration;
-- (void).cxx_destruct;
 - (double)mapValue:(double)arg1 fromRangeWithMin:(double)arg2 max:(double)arg3 ToRangeWithMin:(double)arg4 max:(double)arg5;
 - (void)setHidden:(_Bool)arg1;
 - (void)resetTimerWithDurationInSeconds:(double)arg1 timeLeft:(double)arg2;

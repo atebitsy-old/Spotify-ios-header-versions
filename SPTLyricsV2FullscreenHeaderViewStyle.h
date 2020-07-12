@@ -22,6 +22,7 @@
     double _trackInfoHorizontalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double trackInfoHorizontalMargin; // @synthesize trackInfoHorizontalMargin=_trackInfoHorizontalMargin;
 @property(nonatomic) double labelTrailingMargin; // @synthesize labelTrailingMargin=_labelTrailingMargin;
 @property(nonatomic) double shadowRadius; // @synthesize shadowRadius=_shadowRadius;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) GLUELabelStyle *subtitleStyle; // @synthesize subtitleStyle=_subtitleStyle;
 @property(retain, nonatomic) GLUELabelStyle *titleStyle; // @synthesize titleStyle=_titleStyle;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

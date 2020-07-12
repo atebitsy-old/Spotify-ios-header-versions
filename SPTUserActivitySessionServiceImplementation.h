@@ -17,8 +17,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

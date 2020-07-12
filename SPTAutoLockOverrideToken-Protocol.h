@@ -9,8 +9,8 @@
 @class NSString;
 
 @protocol SPTAutoLockOverrideToken <NSObject>
-@property(readonly, nonatomic) long long mode;
-@property(readonly, copy, nonatomic) NSString *reason;
 - (void)relinquish;
+@property(nonatomic, readonly) long long mode;
+@property(nonatomic, readonly) NSString *reason;
 @end
 

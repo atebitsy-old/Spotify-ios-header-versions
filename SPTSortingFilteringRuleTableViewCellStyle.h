@@ -20,13 +20,13 @@
     struct UIEdgeInsets _margins;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *selectedIconColor; // @synthesize selectedIconColor=_selectedIconColor;
 @property(nonatomic) struct CGSize selectedIconSize; // @synthesize selectedIconSize=_selectedIconSize;
 @property(nonatomic) long long selectedIcon; // @synthesize selectedIcon=_selectedIcon;
 @property(copy, nonatomic) GLUELabelStyle *titleStyle; // @synthesize titleStyle=_titleStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) struct UIEdgeInsets margins; // @synthesize margins=_margins;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

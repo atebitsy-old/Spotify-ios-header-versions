@@ -13,8 +13,8 @@
     SPTSettingsStorageBarView *_storageBarView;
 }
 
-@property(readonly, nonatomic) SPTSettingsStorageBarView *storageBarView; // @synthesize storageBarView=_storageBarView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTSettingsStorageBarView *storageBarView; // @synthesize storageBarView=_storageBarView;
 - (void)updateStatsWithTotalSpaceMb:(long long)arg1 freeSpaceMb:(long long)arg2 appDataSizeMb:(long long)arg3 downloadsSizeMb:(long long)arg4;
 - (void)layoutSubviews;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

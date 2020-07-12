@@ -34,6 +34,7 @@
     struct UIEdgeInsets _windowedContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isScrolling; // @synthesize isScrolling=_isScrolling;
 @property(copy, nonatomic) NSArray *contentDecorationWindowedContentConstraints; // @synthesize contentDecorationWindowedContentConstraints=_contentDecorationWindowedContentConstraints;
 @property(copy, nonatomic) NSArray *contentDecorationFullscreenContentConstraints; // @synthesize contentDecorationFullscreenContentConstraints=_contentDecorationFullscreenContentConstraints;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) SPTNowPlayingContentLayerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) struct UIEdgeInsets windowedContentInsets; // @synthesize windowedContentInsets=_windowedContentInsets;
-- (void).cxx_destruct;
 - (void)applicationWillEnterForeground:(id)arg1;
 - (void)idlePeriodDidEnd;
 - (void)idlePeriodDidBegin;

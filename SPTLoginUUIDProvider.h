@@ -13,8 +13,8 @@
     NSString *_privateUUID;
 }
 
-@property(copy, nonatomic) NSString *privateUUID; // @synthesize privateUUID=_privateUUID;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *privateUUID; // @synthesize privateUUID=_privateUUID;
 - (void)refresh;
 @property(readonly, nonatomic) NSString *UUID;
 

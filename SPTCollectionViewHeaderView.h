@@ -22,13 +22,13 @@
 }
 
 + (double)heightForDescriptionLabelWithText:(id)arg1 expanded:(_Bool)arg2 viewWidth:(double)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIView<SPTThemableView> *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(nonatomic) _Bool descriptionTextExpanded; // @synthesize descriptionTextExpanded=_descriptionTextExpanded;
 @property(nonatomic) __weak id <SPTCollectionViewHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)layoutSubviews;
 @property(copy, nonatomic) NSString *descriptionText;

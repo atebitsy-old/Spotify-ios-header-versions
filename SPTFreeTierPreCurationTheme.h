@@ -14,8 +14,8 @@
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
 }
 
-@property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(readonly, copy, nonatomic) GLUEEntityRowStyle *trackRowPreCurationStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPreCurationChunkyRowStyle *bannedChunkyTrackRowStyle;
 @property(readonly, copy, nonatomic) SPTFreeTierPreCurationChunkyRowStyle *defaultChunkyTrackRowStyle;

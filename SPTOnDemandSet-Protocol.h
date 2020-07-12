@@ -10,9 +10,9 @@
 @protocol SPTOnDemandSetObserver;
 
 @protocol SPTOnDemandSet <NSObject>
-@property(readonly, copy, nonatomic) NSSet *onDemandURLs;
 - (void)removeObserver:(id <SPTOnDemandSetObserver>)arg1;
 - (void)addObserver:(id <SPTOnDemandSetObserver>)arg1;
+@property(nonatomic, readonly) NSSet *onDemandURLs;
 - (void)updateOnDemandSet:(NSSet *)arg1;
 - (_Bool)containsURL:(NSURL *)arg1;
 @end

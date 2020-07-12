@@ -16,8 +16,8 @@
     id <SPTAppExtensionCredentialsManager> _appExtensionCredentialsManager;
 }
 
-@property(readonly, nonatomic) id <SPTAppExtensionCredentialsManager> appExtensionCredentialsManager; // @synthesize appExtensionCredentialsManager=_appExtensionCredentialsManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAppExtensionCredentialsManager> appExtensionCredentialsManager; // @synthesize appExtensionCredentialsManager=_appExtensionCredentialsManager;
 - (void)deleteCredentials;
 - (void)saveCredentials:(id)arg1;
 - (id)initWithCredentialManager:(id)arg1;

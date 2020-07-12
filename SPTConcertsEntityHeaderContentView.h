@@ -28,6 +28,7 @@
     NSMutableArray *_labelMaxWidthConstraints;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *labelMaxWidthConstraints; // @synthesize labelMaxWidthConstraints=_labelMaxWidthConstraints;
 @property(retain, nonatomic) NSLayoutConstraint *topSubviewTopEdgeConstraint; // @synthesize topSubviewTopEdgeConstraint=_topSubviewTopEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *backgroundTopEdgeConstraint; // @synthesize backgroundTopEdgeConstraint=_backgroundTopEdgeConstraint;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) GLUECalendarThumbnailView *calendarView; // @synthesize calendarView=_calendarView;
 @property(readonly, nonatomic) GLUEHeaderBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
-- (void).cxx_destruct;
 - (double)yOffsetForTopSubView;
 - (void)applySubviewStylesFromStyle:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;

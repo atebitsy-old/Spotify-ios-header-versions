@@ -36,6 +36,7 @@
     UIImpactFeedbackGenerator *_secondaryFeedbackGenerator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImpactFeedbackGenerator *secondaryFeedbackGenerator; // @synthesize secondaryFeedbackGenerator=_secondaryFeedbackGenerator;
 @property(retain, nonatomic) UINotificationFeedbackGenerator *primaryFeedbackGenerator; // @synthesize primaryFeedbackGenerator=_primaryFeedbackGenerator;
 @property(nonatomic, getter=isSelectionCompleted) _Bool selectionCompleted; // @synthesize selectionCompleted=_selectionCompleted;
@@ -50,7 +51,6 @@
 @property(nonatomic) unsigned long long closeButtonType; // @synthesize closeButtonType=_closeButtonType;
 @property(retain, nonatomic) UIBarButtonItem *closeButtonItem; // @synthesize closeButtonItem=_closeButtonItem;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistPickerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateSeedASessionElementsAppearance;
 - (void)updateActionButtonAppearance;
 - (void)didTapActionButton:(id)arg1;

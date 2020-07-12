@@ -13,8 +13,8 @@
     id <SPTOfflineManager> _offlineManager;
 }
 
-@property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 - (id)createContentWithTrack:(id)arg1 requestOptions:(id)arg2;
 - (id)initWithOfflineManager:(id)arg1;
 

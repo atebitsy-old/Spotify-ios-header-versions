@@ -16,9 +16,9 @@
 
 + (id)observerManagerWithProtocol:(id)arg1;
 + (id)observerManagerWithProtocol:(id)arg1 onQueue:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) Protocol *protocol; // @synthesize protocol=_protocol;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 - (id)notifierProxyOnQueue:(id)arg1;
 - (id)notifierProxy;
 - (void)removeObserver:(id)arg1;

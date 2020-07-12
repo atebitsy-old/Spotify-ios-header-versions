@@ -18,10 +18,10 @@
     NSLayoutConstraint *_bottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(retain, nonatomic) GLUEButton *microphoneButton; // @synthesize microphoneButton=_microphoneButton;
 @property(nonatomic) __weak id <SPTSearchVoiceEnabledViewDelegate> voiceDelegate; // @synthesize voiceDelegate=_voiceDelegate;
-- (void).cxx_destruct;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)removeVoiceElement;
 - (void)showVoiceElement;

@@ -16,9 +16,9 @@
     SPTLocalFilesImportModelItemArtist *_artist;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLocalFilesImportModelItemArtist *artist; // @synthesize artist=_artist;
 @property(retain, nonatomic) NSMutableArray *children; // @synthesize children;
-- (void).cxx_destruct;
 - (id)parent;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) NSString *artistName;

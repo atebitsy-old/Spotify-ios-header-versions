@@ -83,6 +83,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(retain, nonatomic) SPTGaiaDependencyInjectorImplementation *gaiaDependencyInjector; // @synthesize gaiaDependencyInjector=_gaiaDependencyInjector;
 @property(retain, nonatomic) SPTGaiaIconProviderImplementation *iconProvider; // @synthesize iconProvider=_iconProvider;
@@ -147,7 +148,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAccountService> accountService; // @synthesize accountService=_accountService;
-- (void).cxx_destruct;
 - (_Bool)popoverPresentationControllerShouldDismissPopover:(id)arg1;
 - (void)registerSettings;
 - (id)provideLocalSettings;

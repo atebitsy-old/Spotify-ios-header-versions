@@ -18,10 +18,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTAlertQueueOperation> operation; // @synthesize operation=_operation;
 @property(nonatomic) long long state; // @synthesize state=_state;
-- (void).cxx_destruct;
 - (void)complete;
 - (void)performCancel;
 - (void)removeObserver:(id)arg1;

@@ -23,6 +23,7 @@
     UIViewController *_lastViewControllerWithTooltip;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool tooltipWasPresented; // @synthesize tooltipWasPresented=_tooltipWasPresented;
 @property(nonatomic) __weak UIViewController *lastViewControllerWithTooltip; // @synthesize lastViewControllerWithTooltip=_lastViewControllerWithTooltip;
 @property(readonly, nonatomic) SPTCanvasLoggingService *logService; // @synthesize logService=_logService;
@@ -30,18 +31,10 @@
 @property(readonly, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFreeTierTooltipConditionalPresenter> tooltipPresenter; // @synthesize tooltipPresenter=_tooltipPresenter;
-- (void).cxx_destruct;
-- (id)canvasSettingsDisplayShutdownKey;
-- (id)canvasSettingsDisplayCountKey;
-- (id)canvasSwitchDisplayShutdownKey;
-- (id)canvasSwitchDisplayCountKey;
-- (id)canvasTapDisplayShutdownKey;
-- (id)canvasTapDisplayCountKey;
 - (id)displayShutdownKey;
 - (id)displayCountKey;
-- (void)didChangeEnableCanvasTap:(id)arg1;
-- (void)didChangeDisplayCanvasToggle:(id)arg1;
-- (void)didChangeDisplayCanvasSettings:(id)arg1;
+- (void)updateDisplayAndShutdownCount;
+- (void)didChangeCanvasEnabled:(id)arg1;
 - (void)nowPlayingViewWillAppear;
 - (void)nowPlayingViewWillDisappear;
 @property(readonly, nonatomic) long long tooltipDisplayCount;

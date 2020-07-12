@@ -21,6 +21,7 @@
     NSArray *_trackURLs;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool allTracksNotInCollection; // @synthesize allTracksNotInCollection=_allTracksNotInCollection;
 @property(readonly, nonatomic) NSArray *trackURLs; // @synthesize trackURLs=_trackURLs;
 @property(readonly, copy, nonatomic) NSURL *contextURL; // @synthesize contextURL=_contextURL;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatformLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (unsigned long long)userIntent;
 - (id)execute:(id)arg1;
 - (id)logEventName;

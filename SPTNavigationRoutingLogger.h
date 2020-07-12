@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logBrowseLink:(id)arg1 spotifyURI:(id)arg2 source:(id)arg3;
 - (void)willAttemptToOpenSpotifyURI:(id)arg1;
 - (id)initWithLogCenter:(id)arg1;

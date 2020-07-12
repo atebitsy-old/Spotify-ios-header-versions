@@ -23,6 +23,7 @@
     double _webviewHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double webviewHeight; // @synthesize webviewHeight=_webviewHeight;
 @property(readonly, copy, nonatomic) NSDictionary *actionHandlers; // @synthesize actionHandlers=_actionHandlers;
 @property(readonly, nonatomic) id <SPTInAppMessageLogger> logger; // @synthesize logger=_logger;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) WKWebViewConfiguration *webViewConfiguration; // @synthesize webViewConfiguration=_webViewConfiguration;
 @property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessage> message; // @synthesize message=_message;
-- (void).cxx_destruct;
 - (long long)getNotificationTypeFromNotification:(id)arg1;
 - (void)userContentController:(id)arg1 didReceiveScriptMessage:(id)arg2;
 - (void)didReceiveNotification:(id)arg1;

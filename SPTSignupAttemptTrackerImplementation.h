@@ -15,8 +15,8 @@
     NSMutableDictionary *_pendingSignupAttempts;
 }
 
-@property(readonly, nonatomic) NSMutableDictionary *pendingSignupAttempts; // @synthesize pendingSignupAttempts=_pendingSignupAttempts;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableDictionary *pendingSignupAttempts; // @synthesize pendingSignupAttempts=_pendingSignupAttempts;
 - (void)handleUserDidAuthenticateNotification:(id)arg1;
 - (void)resetState;
 - (id)unfinishedSignupDetails;

@@ -16,9 +16,9 @@
     GLUELabel *_failedSublabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *failedSublabel; // @synthesize failedSublabel=_failedSublabel;
 @property(retain, nonatomic) GLUELabel *failedLabel; // @synthesize failedLabel=_failedLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (void)setupViews;

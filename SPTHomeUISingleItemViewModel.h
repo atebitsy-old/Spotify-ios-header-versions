@@ -19,11 +19,11 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isActiveContext; // @synthesize isActiveContext=_isActiveContext;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <HUBComponentModel> hubComponentModel; // @synthesize hubComponentModel=_hubComponentModel;
 @property(nonatomic) __weak id <SPTHomeUISingleItemViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)dealloc;
 - (id)initWithPlayer:(id)arg1 hubComponentModel:(id)arg2;

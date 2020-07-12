@@ -38,6 +38,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) _Bool didTriggerWelcomeScreen; // @synthesize didTriggerWelcomeScreen=_didTriggerWelcomeScreen;
 @property(copy, nonatomic) NSArray *trackViewModels; // @synthesize trackViewModels=_trackViewModels;
@@ -54,7 +55,6 @@
 @property(readonly, nonatomic, getter=isGenresPageEnabled) _Bool genresPageEnabled; // @synthesize genresPageEnabled=_genresPageEnabled;
 @property(copy, nonatomic) NSArray *trackURIs; // @synthesize trackURIs=_trackURIs;
 @property(nonatomic) __weak id <SPTHomeMixViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)homeMixModelEffectHandler:(id)arg1 failedToUpdatePublishExplicitSetting:(id)arg2;
 - (void)homeMixModelEffectHandler:(id)arg1 failedToUpdateEnabledSetting:(id)arg2;
 - (void)homeMixModelEffectHandler:(id)arg1 failedToUpdateToMood:(unsigned long long)arg2 fromMood:(unsigned long long)arg3 error:(id)arg4;

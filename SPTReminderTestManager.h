@@ -18,10 +18,10 @@
     id <SPTFeatureFlagFactory> _featureFlagFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic, getter=isReminderEnabled) _Bool reminderEnabled; // @synthesize reminderEnabled=_reminderEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> enabledSignal; // @synthesize enabledSignal=_enabledSignal;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupFlags;
 - (void)dealloc;

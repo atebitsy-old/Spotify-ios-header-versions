@@ -21,13 +21,13 @@
     id <SPTHearablesRecommendationEngine> _recommendationEngine;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTHearablesRecommendationEngine> recommendationEngine; // @synthesize recommendationEngine=_recommendationEngine;
 @property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 @property(retain, nonatomic) SPTAccessory *accessory; // @synthesize accessory=_accessory;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectApi; // @synthesize connectApi=_connectApi;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
-- (void).cxx_destruct;
 - (void)playRecommendation;
 - (void)resumePlayback;
 - (void)playNewRecommendedContent:(id)arg1;

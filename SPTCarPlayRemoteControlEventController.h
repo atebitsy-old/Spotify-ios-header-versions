@@ -9,8 +9,8 @@
 #import "SPTExternalIntegrationCollectionControllerObserver-Protocol.h"
 #import "SPTNowPlayingRemoteControlEventPolicyController-Protocol.h"
 
-@class MPRemoteCommandCenter, NSString, NSTimer, SPTCarPlayFeatureProperties;
-@protocol SPTExternalIntegrationPlatform, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy;
+@class MPRemoteCommandCenter, NSString, NSTimer, SPTAccessory, SPTCarPlayFeatureProperties;
+@protocol SPTAccessoryActionLogger, SPTExternalIntegrationPlatform, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy;
 
 @interface SPTCarPlayRemoteControlEventController : NSObject <SPTExternalIntegrationCollectionControllerObserver, SPTNowPlayingRemoteControlEventPolicyController>
 {
@@ -18,6 +18,8 @@
     _Bool _activeForRemoteControlPolicyUpdates;
     id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> _delegate;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
+    id <SPTAccessoryActionLogger> _actionLogger;
+    SPTAccessory *_accessory;
     NSString *_accessorySessionId;
     MPRemoteCommandCenter *_remoteCommandCenter;
     SPTCarPlayFeatureProperties *_properties;
@@ -25,15 +27,17 @@
     long long _eventControllerPriority;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long eventControllerPriority; // @synthesize eventControllerPriority=_eventControllerPriority;
 @property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
 @property(readonly, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) MPRemoteCommandCenter *remoteCommandCenter; // @synthesize remoteCommandCenter=_remoteCommandCenter;
 @property(readonly, nonatomic) NSString *accessorySessionId; // @synthesize accessorySessionId=_accessorySessionId;
+@property(readonly, nonatomic) SPTAccessory *accessory; // @synthesize accessory=_accessory;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isActiveForRemoteControlPolicyUpdates) _Bool activeForRemoteControlPolicyUpdates; // @synthesize activeForRemoteControlPolicyUpdates=_activeForRemoteControlPolicyUpdates;
-- (void).cxx_destruct;
 - (id)eventSourceIdentifierForEvent:(id)arg1;
 - (id)externalActionOriginForEvent:(id)arg1;
 - (_Bool)shouldSeekToBeginning;
@@ -74,7 +78,7 @@
 - (void)disconnectedFromCarPlay;
 - (void)connectedToCarPlay;
 - (void)dealloc;
-- (id)initWithExternalIntegrationPlatform:(id)arg1 remoteCommandCenter:(id)arg2 featureProperties:(id)arg3 accessorySessionId:(id)arg4;
+- (id)initWithExternalIntegrationPlatform:(id)arg1 remoteCommandCenter:(id)arg2 featureProperties:(id)arg3 actionLogger:(id)arg4 accessory:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

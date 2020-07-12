@@ -16,8 +16,8 @@
     id <SPTLocalSettings> _localSettings;
 }
 
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) _Bool hasCompletedLanguageOnboarding;
 - (id)initWithLocalSettings:(id)arg1;
 

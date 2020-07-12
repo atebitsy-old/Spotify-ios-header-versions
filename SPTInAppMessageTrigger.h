@@ -16,11 +16,11 @@
     NSString *_pattern;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *pattern; // @synthesize pattern=_pattern;
 @property(readonly, copy, nonatomic) NSString *format; // @synthesize format=_format;
 @property(readonly, nonatomic) _Bool cache; // @synthesize cache=_cache;
 @property(readonly, copy, nonatomic) NSString *type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)initWithType:(id)arg1 pattern:(id)arg2 format:(id)arg3 cache:(_Bool)arg4;
 
 @end

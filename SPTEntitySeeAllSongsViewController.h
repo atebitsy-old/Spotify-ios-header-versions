@@ -25,13 +25,13 @@
     SPTEntitySeeAllSongsCellConfigurator *_cellConfigurator;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isContextMenuToBePresented) _Bool contextMenuToBePresented; // @synthesize contextMenuToBePresented=_contextMenuToBePresented;
 @property(retain, nonatomic) SPTEntitySeeAllSongsCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTEntitySeeAllSongsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (void)cellConfiguratorWillPresentContextMenu:(id)arg1;
 - (void)entitySeeAllSongsModelRequiresReloadWithViewModel:(id)arg1;
 - (void)entitySeeAllSongsModelDidFailToLoad:(id)arg1;

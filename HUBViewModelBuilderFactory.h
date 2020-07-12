@@ -15,9 +15,9 @@
     id <HUBIconImageResolver> _iconImageResolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
-- (void).cxx_destruct;
 - (id)createBuilder;
 - (id)initWithComponentDefaults:(id)arg1 iconImageResolver:(id)arg2;
 

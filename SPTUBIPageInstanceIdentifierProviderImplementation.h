@@ -15,8 +15,8 @@
     NSString *_currentPageInstanceId;
 }
 
-@property(readonly, copy, nonatomic) NSString *currentPageInstanceId; // @synthesize currentPageInstanceId=_currentPageInstanceId;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *currentPageInstanceId; // @synthesize currentPageInstanceId=_currentPageInstanceId;
 - (id)invalidatePageInstanceId;
 - (id)init;
 

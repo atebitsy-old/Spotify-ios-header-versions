@@ -18,8 +18,8 @@
     HUBDebugViewModel *_viewModel;
 }
 
-@property(readonly, nonatomic) HUBDebugViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) HUBDebugViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void)saveToClipboard;
 - (void)close;
 - (void)layoutActivityIndicator;

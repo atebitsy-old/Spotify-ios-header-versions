@@ -9,7 +9,7 @@
 @interface _TtC25PlaylistTuningFeatureImpl9PTBackend : NSObject
 {
     // Error parsing type: , name: dataLoader
-    // Error parsing type: , name: inflightCompletion
+    // Error parsing type: , name: inflightCall
 }
 
 - (void).cxx_destruct;

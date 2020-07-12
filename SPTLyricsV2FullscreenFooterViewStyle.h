@@ -18,11 +18,11 @@
     double _controlsViewHorizontalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double controlsViewHorizontalMargin; // @synthesize controlsViewHorizontalMargin=_controlsViewHorizontalMargin;
 @property(nonatomic) double playPauseButtonHeight; // @synthesize playPauseButtonHeight=_playPauseButtonHeight;
 @property(nonatomic) double progressSliderHeight; // @synthesize progressSliderHeight=_progressSliderHeight;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

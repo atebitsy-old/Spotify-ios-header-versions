@@ -38,6 +38,7 @@
 }
 
 + (id)appDelegate;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationDelegate; // @synthesize notificationDelegate=_notificationDelegate;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
@@ -54,7 +55,6 @@
 @property(retain, nonatomic) id <SPTUserActivityController> userActivityController; // @synthesize userActivityController=_userActivityController;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(retain, nonatomic) UIWindow *window; // @synthesize window=_window;
-- (void).cxx_destruct;
 - (void)loadSessionScopeServices;
 - (void)idleStateWasReachedForAppStartupController:(id)arg1;
 - (void)initialViewDidAppearForAppStartupController:(id)arg1;

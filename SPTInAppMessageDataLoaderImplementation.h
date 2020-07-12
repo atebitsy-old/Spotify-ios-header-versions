@@ -22,12 +22,12 @@
     double _requestStartTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double requestStartTime; // @synthesize requestStartTime=_requestStartTime;
 @property(retain, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) _Bool devEnabled; // @synthesize devEnabled=_devEnabled;
-- (void).cxx_destruct;
 - (void)logBackendRequestPerformanceWithRequest:(id)arg1;
 - (id)messageFormatFromRequestURL:(id)arg1;
 - (long long)requestTypeFromRequestURL:(id)arg1;

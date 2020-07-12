@@ -23,6 +23,7 @@
     UIViewController *_nowPlayingSideBar;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController *nowPlayingSideBar; // @synthesize nowPlayingSideBar=_nowPlayingSideBar;
 @property(retain, nonatomic) SPTSideBarNavigationTabsContainerView *tabsContainerView; // @synthesize tabsContainerView=_tabsContainerView;
 @property(retain, nonatomic) SPTTheme *currentTheme; // @synthesize currentTheme=_currentTheme;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) NSString *friendlyName; // @synthesize friendlyName=_friendlyName;
 @property(retain, nonatomic) SPTTabBarLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTTabBarSecondaryUIDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)navigationTabsDidSelectTabAtIndex:(unsigned long long)arg1;
 - (void)setViewControllers:(id)arg1 animated:(_Bool)arg2;
 - (void)setSelectedViewController:(id)arg1 animated:(_Bool)arg2;

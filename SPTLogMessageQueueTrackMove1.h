@@ -20,6 +20,7 @@
 }
 
 + (id)messageWithContextUri:(id)arg1 currentTrackUri:(id)arg2 targetTrackUri:(id)arg3 trackSectionBefore:(long long)arg4 trackPositionBefore:(long long)arg5 trackSectionAfter:(long long)arg6 trackPositionAfter:(long long)arg7;
+- (void).cxx_destruct;
 @property(nonatomic) long long trackPositionAfterValue; // @synthesize trackPositionAfterValue=_trackPositionAfterValue;
 @property(nonatomic) long long trackSectionAfterValue; // @synthesize trackSectionAfterValue=_trackSectionAfterValue;
 @property(nonatomic) long long trackPositionBeforeValue; // @synthesize trackPositionBeforeValue=_trackPositionBeforeValue;
@@ -27,7 +28,6 @@
 @property(copy, nonatomic) NSString *targetTrackUriValue; // @synthesize targetTrackUriValue=_targetTrackUriValue;
 @property(copy, nonatomic) NSString *currentTrackUriValue; // @synthesize currentTrackUriValue=_currentTrackUriValue;
 @property(copy, nonatomic) NSString *contextUriValue; // @synthesize contextUriValue=_contextUriValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

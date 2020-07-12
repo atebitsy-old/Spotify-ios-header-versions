@@ -22,6 +22,7 @@
     struct CGPoint _textOffset;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLinguisticTagger *tagger; // @synthesize tagger=_tagger;
 @property(nonatomic) double lineHeightMultiple; // @synthesize lineHeightMultiple=_lineHeightMultiple;
 @property(nonatomic) long long lineBreakMode; // @synthesize lineBreakMode=_lineBreakMode;
@@ -30,7 +31,6 @@
 @property(nonatomic) struct CGPoint textOffset; // @synthesize textOffset=_textOffset;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (long long)textAlignmentForString:(id)arg1;
 - (struct CGRect)adjustedRectForRect:(struct CGRect)arg1 offset:(struct CGPoint)arg2 widthMultiplier:(double)arg3 alignment:(long long)arg4;
 - (void)drawRect:(struct CGRect)arg1;

@@ -21,6 +21,7 @@
     SPTPlayerContext *_context;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPlayerContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTVoiceCommandError *error; // @synthesize error=_error;
 @property(readonly, nonatomic) NSString *sessionIdentifier; // @synthesize sessionIdentifier=_sessionIdentifier;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) NSString *query; // @synthesize query=_query;
 @property(readonly, nonatomic) NSURL *targetURI; // @synthesize targetURI=_targetURI;
 @property(readonly, nonatomic) long long intent; // @synthesize intent=_intent;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1 sessionIdentifier:(id)arg2;
 - (id)initWithIntent:(long long)arg1 targetURI:(id)arg2 query:(id)arg3 restriction:(id)arg4 media:(id)arg5 text:(id)arg6 sessionIdentifier:(id)arg7 error:(id)arg8 context:(id)arg9;
 - (_Bool)spt_isExcludedFromCommandHandling;

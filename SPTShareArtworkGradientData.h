@@ -15,10 +15,10 @@
     UIColor *_bottomColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *bottomColor; // @synthesize bottomColor=_bottomColor;
 @property(copy, nonatomic) UIColor *topColor; // @synthesize topColor=_topColor;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (id)initWithImage:(id)arg1 topColor:(id)arg2 bottomColor:(id)arg3;
 
 @end

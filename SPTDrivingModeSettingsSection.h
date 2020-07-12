@@ -18,10 +18,10 @@
     SettingsSwitchTableViewCell *_cell;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
 @property(readonly, nonatomic) id <SPTDrivingModeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (id)footerText;
 - (id)headerText;
 - (id)cellForRow:(long long)arg1;

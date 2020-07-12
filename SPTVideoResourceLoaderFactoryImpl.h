@@ -17,9 +17,9 @@
     id <SPTVideoMediaExtension> _fallbackMediaExtension;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTVideoMediaExtension> fallbackMediaExtension; // @synthesize fallbackMediaExtension=_fallbackMediaExtension;
 @property(copy, nonatomic) NSArray *mediaExtensions; // @synthesize mediaExtensions=_mediaExtensions;
-- (void).cxx_destruct;
 - (id)createResourceLoaderWithIdentity:(id)arg1;
 - (id)initWithMediaExtensions:(id)arg1 fallbackMediaExtension:(id)arg2;
 

@@ -28,6 +28,7 @@
     unsigned long long _startupSignpostID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long startupSignpostID; // @synthesize startupSignpostID=_startupSignpostID;
 @property(readonly, nonatomic) NSObject<OS_os_log> *instrumentationLog; // @synthesize instrumentationLog=_instrumentationLog;
 @property(readonly, copy, nonatomic) CDUnknownBlockType terminalStateCallback; // @synthesize terminalStateCallback=_terminalStateCallback;
@@ -40,7 +41,6 @@
 @property _Bool viewLoadingStarted; // @synthesize viewLoadingStarted=_viewLoadingStarted;
 @property(retain, nonatomic) id <SPTColdStartupSequenceTransport> transport; // @synthesize transport=_transport;
 @property(copy, nonatomic) NSString *connectionType; // @synthesize connectionType=_connectionType;
-- (void).cxx_destruct;
 - (id)genericDurations;
 - (id)coreFeatureDurations;
 - (id)serviceDurations;

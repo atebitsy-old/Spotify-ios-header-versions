@@ -9,12 +9,12 @@
 @class NSString;
 
 @protocol SPTSearch2ViewControllerProtocol <NSObject>
-@property(copy, nonatomic) CDUnknownBlockType onOffsetChange;
-@property(readonly, nonatomic) struct CGPoint contentOffset;
-@property(readonly, copy, nonatomic) NSString *requestID;
+- (void)scrollToTop;
+@property(nonatomic, copy) CDUnknownBlockType onOffsetChange;
+@property(nonatomic, readonly) struct CGPoint contentOffset;
+@property(nonatomic, readonly) NSString *requestID;
 @property(nonatomic) _Bool automaticallyAdjustsInsets;
 @property(nonatomic) struct UIEdgeInsets insets;
-@property(copy, nonatomic) NSString *query;
-- (void)scrollToTop;
+@property(nonatomic, copy) NSString *query;
 @end
 

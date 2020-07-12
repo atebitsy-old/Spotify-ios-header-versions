@@ -17,17 +17,17 @@
     NSString *_selectedAccessibilityLabel;
     SPTHomeMixHeaderActionButtonStyle *_currentStyle;
     UIView *_loadingOverlay;
-    struct UIView *_spinnerAnimationView;
+    UIView<GLUEAnimationLoading><GLUEAnimationControlling> *_spinnerAnimationView;
     id <GLUEAnimationLottieStyling> _spinnerAnimationStyler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUEAnimationLottieStyling> spinnerAnimationStyler; // @synthesize spinnerAnimationStyler=_spinnerAnimationStyler;
 @property(retain, nonatomic) UIView<GLUEAnimationLoading><GLUEAnimationControlling> *spinnerAnimationView; // @synthesize spinnerAnimationView=_spinnerAnimationView;
 @property(retain, nonatomic) UIView *loadingOverlay; // @synthesize loadingOverlay=_loadingOverlay;
 @property(copy, nonatomic) SPTHomeMixHeaderActionButtonStyle *currentStyle; // @synthesize currentStyle=_currentStyle;
 @property(copy, nonatomic) NSString *selectedAccessibilityLabel; // @synthesize selectedAccessibilityLabel=_selectedAccessibilityLabel;
 @property(copy, nonatomic) NSString *normalAccessibilityLabel; // @synthesize normalAccessibilityLabel=_normalAccessibilityLabel;
-- (void).cxx_destruct;
 - (void)setupAnimationOverlay;
 - (void)stopAnimation;
 - (void)startAnimation;

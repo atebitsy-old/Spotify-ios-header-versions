@@ -15,8 +15,8 @@
     NSMutableOrderedSet *_mutableIntegrations;
 }
 
-@property(readonly, nonatomic) NSMutableOrderedSet *mutableIntegrations; // @synthesize mutableIntegrations=_mutableIntegrations;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableOrderedSet *mutableIntegrations; // @synthesize mutableIntegrations=_mutableIntegrations;
 - (void)deregisterIntegration:(id)arg1;
 - (void)registerIntegration:(id)arg1;
 - (id)integrationForIdentifier:(id)arg1;

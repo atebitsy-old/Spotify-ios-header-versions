@@ -25,6 +25,7 @@
     GLUELabel *_metadataLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIStackView *labelStackView; // @synthesize labelStackView=_labelStackView;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) UIView *imageContainerView; // @synthesize imageContainerView=_imageContainerView;
 @property(retain, nonatomic) id <SPTPodcastUIEpisodeImageCardStyle> style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (struct CGSize)imageSizeForCntainerViewSize:(struct CGSize)arg1;
 - (void)setShowImage:(id)arg1 animated:(_Bool)arg2;

@@ -18,9 +18,9 @@
 + (id)getQueryParamValue:(id)arg1 forComponents:(id)arg2;
 + (id)doAuthResponse;
 + (id)parseRedirectURL:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *redirectURL; // @synthesize redirectURL=_redirectURL;
 @property(readonly, nonatomic) long long status; // @synthesize status=_status;
-- (void).cxx_destruct;
 - (id)initStatus:(long long)arg1 withRedirectURL:(id)arg2;
 
 @end

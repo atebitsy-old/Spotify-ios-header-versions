@@ -30,6 +30,7 @@
     UIView *_barSupportAnimationView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *barSupportAnimationView; // @synthesize barSupportAnimationView=_barSupportAnimationView;
 @property(nonatomic, getter=isBarHidden) _Bool barHidden; // @synthesize barHidden=_barHidden;
 @property(retain, nonatomic) NSLayoutConstraint *barAttachmentBottomConstraint; // @synthesize barAttachmentBottomConstraint=_barAttachmentBottomConstraint;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) UIViewController<SPTBarOverlayViewController> *overlayViewController; // @synthesize overlayViewController=_overlayViewController;
 @property(retain, nonatomic) UIViewController<SPTBarInteractiveTransitionParticipant> *nowPlayingBarViewController; // @synthesize nowPlayingBarViewController=_nowPlayingBarViewController;
 @property(retain, nonatomic) UIViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
-- (void).cxx_destruct;
 - (void)messageBarController:(id)arg1 didChangeContentInset:(struct UIEdgeInsets)arg2;
 - (double)tabBarHeight;
 - (void)notifyObserversOfBottomLayoutGuideChange;

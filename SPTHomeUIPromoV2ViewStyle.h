@@ -21,13 +21,13 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTEncoreTypeStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) SPTEncoreTypeStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) SPTEncoreTypeStyle *backgroundLabelStyle; // @synthesize backgroundLabelStyle=_backgroundLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *logoImageStyle; // @synthesize logoImageStyle=_logoImageStyle;
 @property(copy, nonatomic) GLUEImageStyle *backgroundImageStyle; // @synthesize backgroundImageStyle=_backgroundImageStyle;
 @property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

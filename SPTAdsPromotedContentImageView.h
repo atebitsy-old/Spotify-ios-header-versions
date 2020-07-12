@@ -16,10 +16,10 @@
     id <GLUEImageLoader> _glueImageLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTAdsPromotedContentImageViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)loadImageURL:(id)arg1 imageSize:(struct CGSize)arg2;
 - (id)initWithTheme:(id)arg1 glueImageLoader:(id)arg2;
 - (id)initWithTheme:(id)arg1;

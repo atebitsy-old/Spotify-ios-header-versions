@@ -25,7 +25,6 @@
 {
     _Bool _dataLoaded;
     SPTPodcastViewModel2 *_viewModel;
-    CDUnknownBlockType _contextResponseHandler;
     id <GLUEImageLoader> _glueImageLoader;
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     SPTShowContextMenuController *_showContextMenuController;
@@ -51,6 +50,7 @@
     UIViewController<_TtP31PodcastCreatorEntityPageFeature39SPTPodcastDetailsViewControllerProtocol_> *_creatorChipsViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController<_TtP31PodcastCreatorEntityPageFeature39SPTPodcastDetailsViewControllerProtocol_> *creatorChipsViewController; // @synthesize creatorChipsViewController=_creatorChipsViewController;
 @property(retain, nonatomic) id <SPTPodcastFollowSectionTableViewCellCommonInterface> followSectionTableViewCell; // @synthesize followSectionTableViewCell=_followSectionTableViewCell;
 @property(retain, nonatomic) VISREFTableHeaderView *podcastTableViewHeader; // @synthesize podcastTableViewHeader=_podcastTableViewHeader;
@@ -75,12 +75,9 @@
 @property(retain, nonatomic) SPTShowContextMenuController *showContextMenuController; // @synthesize showContextMenuController=_showContextMenuController;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-@property(copy, nonatomic) CDUnknownBlockType contextResponseHandler; // @synthesize contextResponseHandler=_contextResponseHandler;
 @property(retain, nonatomic) SPTPodcastViewModel2 *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)playURIInContext:(id)arg1;
-- (void)evaluatePendingContextResponseHandlerWithViewModel:(id)arg1;
 - (void)determineIfContextContainsURI:(id)arg1 responseHandler:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

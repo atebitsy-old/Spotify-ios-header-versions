@@ -27,6 +27,7 @@
     double _searchBarLeadingTrailingMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double searchBarLeadingTrailingMargin; // @synthesize searchBarLeadingTrailingMargin=_searchBarLeadingTrailingMargin;
 @property(nonatomic) double searchBarHeight; // @synthesize searchBarHeight=_searchBarHeight;
 @property(nonatomic) double tableViewEstimatedRowHeight; // @synthesize tableViewEstimatedRowHeight=_tableViewEstimatedRowHeight;
@@ -39,7 +40,6 @@
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundOverlayGradientStyle; // @synthesize backgroundOverlayGradientStyle=_backgroundOverlayGradientStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

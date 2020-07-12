@@ -15,10 +15,10 @@
     SPTVideoPreferredSubtitleMessageFactory *_preferredSubtitleMessageFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoPreferredSubtitleMessageFactory *preferredSubtitleMessageFactory; // @synthesize preferredSubtitleMessageFactory=_preferredSubtitleMessageFactory;
 @property(retain, nonatomic) SPTVideoSubtitleConfigurator *subtitleConfigurator; // @synthesize subtitleConfigurator=_subtitleConfigurator;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
-- (void).cxx_destruct;
 - (id)createMenuActionWithSubtitle:(id)arg1 selected:(_Bool)arg2;
 - (id)initWithCosmosSender:(id)arg1 subtitleConfigurator:(id)arg2 preferredSubtitleMessageFactory:(id)arg3;
 

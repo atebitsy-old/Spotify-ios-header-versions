@@ -24,6 +24,7 @@
 }
 
 + (id)prevTracksStringWithTrackURLs:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableSet *fetchingTrackStations; // @synthesize fetchingTrackStations=_fetchingTrackStations;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *dispatchQueue; // @synthesize dispatchQueue=_dispatchQueue;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) id <SPTRadioTestManager> radioTestManager; // @synthesize radioTestManager=_radioTestManager;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)URLForNextTracksForStation:(id)arg1;
 - (id)convertToGDPRSafeStationIfNeeded:(id)arg1;
 - (id)wrapErrorDataLoadResponse:(id)arg1;

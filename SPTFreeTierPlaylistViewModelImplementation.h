@@ -80,6 +80,7 @@
 }
 
 + (_Bool)isRecommendationContext:(id)arg1 forPlaylist:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) long long playBehaviour; // @synthesize playBehaviour=_playBehaviour;
 @property(nonatomic) __weak id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> playInitiatedNotifier; // @synthesize playInitiatedNotifier=_playInitiatedNotifier;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModelConfiguration> viewModelConfiguration; // @synthesize viewModelConfiguration=_viewModelConfiguration;
@@ -140,13 +141,12 @@
 @property(nonatomic, getter=isFormatList) _Bool formatList; // @synthesize formatList=_formatList;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (_Bool)isTrackActive:(id)arg1;
 @property(readonly, nonatomic, getter=isPlaylistPlaying) _Bool playlistPlaying;
 - (_Bool)isInPlaylistContext;
 @property(readonly, nonatomic, getter=isPlayButtonUsedForPlayback) _Bool playButtonUsedForPlayback;
 @property(readonly, nonatomic, getter=isPlayButtonPausingPlay) _Bool playButtonPausingPlay;
-- (void)playTrackEntity:(id)arg1;
+- (void)playTrackEntity:(id)arg1 interactionId:(id)arg2;
 - (void)togglePlay;
 - (id)forceLinearPlayOptions;
 - (void)doubleStateForceLinearPlay;
@@ -166,15 +166,13 @@
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
-- (void)navigateToAllSongs;
-- (void)playTrack:(id)arg1;
-- (void)playTrackURL:(id)arg1;
+- (void)playTrackURL:(id)arg1 interactionId:(id)arg2;
 - (void)navigateToPlaylistOwnerPage;
-- (void)loadMoreTracksIfApproachingEndOfLoadedTracks:(id)arg1;
+- (void)loadMoreTracks;
 - (_Bool)isApproachingEndIndexPath:(id)arg1 countOfItemsInSection:(long long)arg2;
 - (void)toggleTrackLikeAtIndexPath:(id)arg1;
 - (void)toggleTrackBanAtIndexPath:(id)arg1;
-- (void)trackSelectedAtIndexPath:(id)arg1;
+- (void)trackSelectedAtIndexPath:(id)arg1 interactionId:(id)arg2;
 - (void)deletePlaylist;
 - (id)sharingURLForTrackViewModelAtIndexPath:(id)arg1;
 - (void)changeOffline:(_Bool)arg1;

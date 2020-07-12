@@ -18,10 +18,10 @@
     NSArray *_tabs;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *tabs; // @synthesize tabs=_tabs;
 @property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(nonatomic) __weak id <SPTSideBarNavigationTabsDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)viewForItemAtIndex:(unsigned long long)arg1;
 @property(nonatomic) unsigned long long selectedIndex;
 - (void)buttonPressed:(id)arg1;

@@ -34,6 +34,7 @@
     NSArray *_headerItems;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *headerItems; // @synthesize headerItems=_headerItems;
 @property(copy, nonatomic) NSArray *nextEpisodeItems; // @synthesize nextEpisodeItems=_nextEpisodeItems;
 @property(copy, nonatomic) NSArray *unfinishedEpisodeItems; // @synthesize unfinishedEpisodeItems=_unfinishedEpisodeItems;
@@ -49,7 +50,6 @@
 @property(readonly, nonatomic) NSCache *progressCache; // @synthesize progressCache=_progressCache;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryEpisodesViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)cellActionHandler:(id)arg1 episodeForIndexPath:(id)arg2;
 - (id)cellActionHandler:(id)arg1 allEpisodesInSection:(long long)arg2;
 - (void)didFailParsingData:(id)arg1;

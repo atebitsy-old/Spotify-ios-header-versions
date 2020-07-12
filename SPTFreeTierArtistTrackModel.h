@@ -22,6 +22,7 @@
     unsigned long long _playcount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long playcount; // @synthesize playcount=_playcount;
 @property(retain, nonatomic) id <SPTFreeTierArtistAlbum> album; // @synthesize album=_album;
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly; // @synthesize premiumOnly=_premiumOnly;
@@ -29,7 +30,6 @@
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(nonatomic, getter=isRatedExplicit) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1 album:(id)arg2;
 
 // Remaining properties

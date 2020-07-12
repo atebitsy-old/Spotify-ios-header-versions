@@ -18,10 +18,10 @@
     SPTSignupTermsAndPolicyViewModel *_termsViewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSignupTermsAndPolicyViewModel *termsViewModel; // @synthesize termsViewModel=_termsViewModel;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTLoginDelayedSignupDialogFactoryDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
 @property(readonly, nonatomic) UIViewController *presentingController;
 - (void)userDidAcceptAllLicences:(id)arg1;

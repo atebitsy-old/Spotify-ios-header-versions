@@ -13,8 +13,8 @@
     NSError *_error;
 }
 
-@property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithError:(id)arg1;
 

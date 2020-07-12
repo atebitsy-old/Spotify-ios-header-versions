@@ -25,6 +25,7 @@
     unsigned long long _availableOfflineStatusAtPreviousReply;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isFirstLoadInitiated) _Bool firstLoadInitiated; // @synthesize firstLoadInitiated=_firstLoadInitiated;
 @property(nonatomic, getter=isFavoriteSongsLoaded) _Bool favoriteSongsLoaded; // @synthesize favoriteSongsLoaded=_favoriteSongsLoaded;
 @property(nonatomic) unsigned long long availableOfflineStatusAtPreviousReply; // @synthesize availableOfflineStatusAtPreviousReply=_availableOfflineStatusAtPreviousReply;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) __weak id <SPTYourLibraryMusicFavoriteMixModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)loadStoredSongCount;
 - (void)updateStoredSongCount:(unsigned long long)arg1 offlineStatus:(unsigned long long)arg2;
 - (void)handleFailedRequest:(id)arg1;

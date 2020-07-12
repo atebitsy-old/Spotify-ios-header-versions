@@ -33,6 +33,7 @@
     NSError *_error;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(retain, nonatomic) SPTConcertsEntity *entity; // @synthesize entity=_entity;
 @property(nonatomic) long long state; // @synthesize state=_state;
@@ -50,7 +51,6 @@
 @property(readonly, nonatomic) SPTConcertsInfoViewModel *infoViewModel; // @synthesize infoViewModel=_infoViewModel;
 @property(readonly, nonatomic) SPTConcertsEntityHeaderViewModel *headerViewModel; // @synthesize headerViewModel=_headerViewModel;
 @property(readonly, nonatomic) SPTConcertsLogger *logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)provideMonthlyListenersFormatter;
 - (id)sectionViewModelsForEntity:(id)arg1;

@@ -18,11 +18,11 @@
     CDUnknownBlockType _actionBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) _Bool isDisabled; // @synthesize isDisabled=_isDisabled;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (id)performAction;
 - (id)initWithAction:(CDUnknownBlockType)arg1;
 

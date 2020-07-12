@@ -20,11 +20,11 @@
     SPTAuthViewControllerViewModel *_viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAuthViewControllerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 @property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 @property(nonatomic) __weak id <SPTAuthViewControllerDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;
 - (void)webView:(id)arg1 didFinishNavigation:(id)arg2;
 - (void)webView:(id)arg1 decidePolicyForNavigationAction:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;

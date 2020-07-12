@@ -31,6 +31,7 @@
     SPTPlayerState *_playerState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -44,7 +45,6 @@
 @property(nonatomic) long long activeConnectionType; // @synthesize activeConnectionType=_activeConnectionType;
 @property(nonatomic) long long remoteConnectionState; // @synthesize remoteConnectionState=_remoteConnectionState;
 @property(nonatomic) _Bool hasAvailableDevices; // @synthesize hasAvailableDevices=_hasAvailableDevices;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 - (void)dealloc;

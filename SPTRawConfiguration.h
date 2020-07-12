@@ -16,11 +16,11 @@
     NSDictionary *_properties;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *properties; // @synthesize properties=_properties;
 @property(readonly, copy, nonatomic) NSString *assignmentID; // @synthesize assignmentID=_assignmentID;
 @property(readonly, nonatomic) long long rcsFetchTime; // @synthesize rcsFetchTime=_rcsFetchTime;
 @property(readonly, nonatomic) GPBInt64Array *policyGroupIDs; // @synthesize policyGroupIDs=_policyGroupIDs;
-- (void).cxx_destruct;
 - (id)propertyFromProtobuf:(id)arg1;
 - (id)createPropertiesFromConfiguration:(id)arg1;
 - (id)createGroupIDsFromConfiguration:(id)arg1;

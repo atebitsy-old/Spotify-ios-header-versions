@@ -42,6 +42,7 @@
     NSLayoutConstraint *_mainContainerRegularWidth;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(retain, nonatomic) NSLayoutConstraint *termsViewBottomMarginConstraint; // @synthesize termsViewBottomMarginConstraint=_termsViewBottomMarginConstraint;
@@ -70,7 +71,6 @@
 @property(readonly, nonatomic) GLUELabel *titleHeader; // @synthesize titleHeader=_titleHeader;
 @property(readonly, nonatomic) GLUEImageView *profilePicture; // @synthesize profilePicture=_profilePicture;
 - (id)submitButton;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)layoutProfilePicture;
 - (void)setupConstraintsWithStyle:(id)arg1;

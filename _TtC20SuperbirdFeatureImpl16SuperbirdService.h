@@ -10,6 +10,12 @@
 {
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: appProtocolService
+    // Error parsing type: , name: voiceLibraryService
+    // Error parsing type: , name: playbackService
+    // Error parsing type: , name: collectionPlatformService
+    // Error parsing type: , name: playlistPlatformService
+    // Error parsing type: , name: followService
+    // Error parsing type: , name: gaiaService
     // Error parsing type: , name: appProtocolExternalHandler
     // Error parsing type: , name: configurationProperties
 }

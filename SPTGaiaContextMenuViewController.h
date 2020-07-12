@@ -23,13 +23,13 @@
     id <SPTModalPresentationController> _modalPresentationController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) SPTGaiaLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTGaiaContextMenuModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTContextMenuViewInteractionTarget> interactionTarget; // @synthesize interactionTarget=_interactionTarget;
 @property(nonatomic) __weak id <SPTGaiaContextMenuViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)presentViewController:(id)arg1 forAction:(id)arg2;

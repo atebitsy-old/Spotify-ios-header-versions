@@ -17,8 +17,8 @@
 }
 
 + (id)itemWithFilterRule:(id)arg1;
-@property(readonly, nonatomic) id <SPTSortingFilteringFilterRule> filterRule; // @synthesize filterRule=_filterRule;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTSortingFilteringFilterRule> filterRule; // @synthesize filterRule=_filterRule;
 @property(readonly, copy, nonatomic) NSString *identifier;
 @property(readonly, copy, nonatomic) NSString *title;
 - (id)initWithFilterRule:(id)arg1;

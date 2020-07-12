@@ -16,10 +16,10 @@
     HUBComponentRegistry *_componentRegistry;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
-- (void).cxx_destruct;
 - (id)createHubContainerViewWithURL:(id)arg1 referrerIdentifier:(id)arg2 viewModelProvider:(id)arg3;
 - (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 theme:(id)arg3;
 

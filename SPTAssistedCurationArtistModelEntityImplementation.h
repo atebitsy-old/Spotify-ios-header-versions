@@ -16,9 +16,9 @@
     NSString *_name;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)initWithURL:(id)arg1 name:(id)arg2;
 
 // Remaining properties

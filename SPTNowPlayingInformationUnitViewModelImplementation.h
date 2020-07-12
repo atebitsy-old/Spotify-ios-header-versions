@@ -9,11 +9,12 @@
 #import "SPTNowPlayingAuxiliaryActionsHandlerObserver-Protocol.h"
 #import "SPTNowPlayingInformationUnitViewModel-Protocol.h"
 #import "SPTNowPlayingModelObserver-Protocol.h"
+#import "_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_-Protocol.h"
 
 @class NSString, NSURL, SPTNowPlayingLogger, SPTNowPlayingModel;
-@protocol SPTLinkDispatcher, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingTestManager;
+@protocol SPTLinkDispatcher, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingTestManager, _TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_;
 
-@interface SPTNowPlayingInformationUnitViewModelImplementation : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingAuxiliaryActionsHandlerObserver, SPTNowPlayingInformationUnitViewModel>
+@interface SPTNowPlayingInformationUnitViewModelImplementation : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingAuxiliaryActionsHandlerObserver, _TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_, SPTNowPlayingInformationUnitViewModel>
 {
     _Bool _shouldShowPositiveFeedback;
     id <SPTNowPlayingInformationUnitViewModelDelegate> _delegate;
@@ -25,8 +26,13 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
     id <SPTNowPlayingTestManager> _testManager;
+    unsigned long long _offlineState;
+    id <_TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_> _downloadManager;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) id <_TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_> downloadManager; // @synthesize downloadManager=_downloadManager;
+@property(nonatomic) unsigned long long offlineState; // @synthesize offlineState=_offlineState;
 @property(nonatomic) _Bool shouldShowPositiveFeedback; // @synthesize shouldShowPositiveFeedback=_shouldShowPositiveFeedback;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
@@ -37,7 +43,8 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTNowPlayingInformationUnitViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
+- (void)stateChangedTo:(unsigned long long)arg1 forURI:(id)arg2;
+- (void)toggleDownloadButton;
 - (void)auxiliaryActionsHandlerDidToggleCollectionState:(id)arg1;
 - (id)getCurrentSubtitleWithNowPlayingModel:(id)arg1;
 - (void)updateWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
@@ -52,7 +59,7 @@
 - (void)dealloc;
 - (void)stopObservers;
 - (void)startObservers;
-- (id)initWithNowPlayingModel:(id)arg1 linkDispatcher:(id)arg2 logger:(id)arg3 auxiliaryActionsHandler:(id)arg4 shouldShowPositiveFeedback:(_Bool)arg5 testManager:(id)arg6;
+- (id)initWithNowPlayingModel:(id)arg1 linkDispatcher:(id)arg2 logger:(id)arg3 auxiliaryActionsHandler:(id)arg4 shouldShowPositiveFeedback:(_Bool)arg5 testManager:(id)arg6 downloadManager:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

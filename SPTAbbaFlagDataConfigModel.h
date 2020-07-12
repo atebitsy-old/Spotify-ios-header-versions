@@ -15,9 +15,9 @@
 }
 
 + (_Bool)isValidTest:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *groups; // @synthesize groups=_groups;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithAbbaFlagDataConfig:(id)arg1;
 
 @end

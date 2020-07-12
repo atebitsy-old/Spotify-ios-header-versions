@@ -15,10 +15,10 @@
     GLUELabel *_messageLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) SPTExplicitContentTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)labelWithText:(id)arg1;
 - (void)viewDidLoad;
 - (id)initWithTitle:(id)arg1 message:(id)arg2 theme:(id)arg3;

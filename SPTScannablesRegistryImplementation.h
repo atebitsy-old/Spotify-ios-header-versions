@@ -15,8 +15,8 @@
     NSMutableArray *_registrations;
 }
 
-@property(readonly, nonatomic) NSMutableArray *registrations; // @synthesize registrations=_registrations;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableArray *registrations; // @synthesize registrations=_registrations;
 - (_Bool)executeActionForURL:(id)arg1;
 - (void)unregisterActionForRegistrant:(id)arg1;
 - (id)registerAction:(CDUnknownBlockType)arg1 predicate:(CDUnknownBlockType)arg2;

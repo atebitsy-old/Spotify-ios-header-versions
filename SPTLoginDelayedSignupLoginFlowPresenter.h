@@ -19,13 +19,13 @@
     UIViewController *_presentedController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *presentedController; // @synthesize presentedController=_presentedController;
 @property(readonly, nonatomic) SPTLoginDelayedSignupPageProvider *pageProvider; // @synthesize pageProvider=_pageProvider;
 @property(readonly, nonatomic) SPTLoginDelayedSignupDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) SPTLoginNavigationRouter *loginNavigationRouter; // @synthesize loginNavigationRouter=_loginNavigationRouter;
 @property(readonly, nonatomic) __weak id <SPTSignupService> signupService; // @synthesize signupService=_signupService;
-- (void).cxx_destruct;
 - (void)dismissPresentedViewController:(id)arg1;
 - (void)presentViewController:(id)arg1;
 - (void)presentViewWithURI:(id)arg1;

@@ -30,6 +30,7 @@
     SPTDataLoader *_dataLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) SPTHermesController *hermes; // @synthesize hermes=_hermes;
 @property(retain, nonatomic) SPTAccountTrialController *trialController; // @synthesize trialController=_trialController;
@@ -42,7 +43,6 @@
 @property(nonatomic) _Bool startTrialInProgress; // @synthesize startTrialInProgress=_startTrialInProgress;
 @property(retain, nonatomic) NSError *startTrialError; // @synthesize startTrialError=_startTrialError;
 @property(nonatomic) unsigned long long trialEligibilityState; // @synthesize trialEligibilityState=_trialEligibilityState;
-- (void).cxx_destruct;
 - (void)setSetting:(id)arg1 forKey:(id)arg2;
 - (id)settingForKey:(id)arg1;
 - (unsigned long long)loadStoredTrialEligibilityState;

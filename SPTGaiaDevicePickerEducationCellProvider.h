@@ -15,8 +15,8 @@
     SPTGaiaEducationDetailModel *_educationModel;
 }
 
-@property(readonly, nonatomic) SPTGaiaEducationDetailModel *educationModel; // @synthesize educationModel=_educationModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTGaiaEducationDetailModel *educationModel; // @synthesize educationModel=_educationModel;
 - (id)cellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (id)initWithEducationModel:(id)arg1;
 

@@ -14,9 +14,9 @@
     NSString *_emptyTitle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *emptyTitle; // @synthesize emptyTitle=_emptyTitle;
 @property(readonly, nonatomic) NSArray *nearbyConcerts; // @synthesize nearbyConcerts=_nearbyConcerts;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

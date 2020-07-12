@@ -16,11 +16,11 @@
     SPTLoginOpenEmailAppController *_emailAppController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginOpenEmailAppController *emailAppController; // @synthesize emailAppController=_emailAppController;
 @property(copy, nonatomic) NSString *emailOrUsername; // @synthesize emailOrUsername=_emailOrUsername;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginMagicLinkSentConfirmationViewLogger *logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)userDidTapOpenEmailButton;
 - (_Bool)shouldShowOpenEmailButton;
 - (id)viewStyle;

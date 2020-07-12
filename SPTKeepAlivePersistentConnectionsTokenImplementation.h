@@ -17,10 +17,10 @@
     SPTNetworkConnectivityControllerImplementation *_owningController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTNetworkConnectivityControllerImplementation *owningController; // @synthesize owningController=_owningController;
 @property(readonly, nonatomic) _Bool active; // @synthesize active=_active;
 @property(readonly, copy, nonatomic) NSString *reason; // @synthesize reason=_reason;
-- (void).cxx_destruct;
 - (void)relinquish;
 - (void)dealloc;
 - (id)initWithReason:(id)arg1 owningController:(id)arg2;

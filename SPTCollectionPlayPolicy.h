@@ -16,11 +16,11 @@
     SPTCollectionPlatformFetchOptions *_collectionOptions;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTCollectionPlatformFetchOptions *collectionOptions; // @synthesize collectionOptions=_collectionOptions;
 @property(copy, nonatomic) NSDictionary *contextMetadata; // @synthesize contextMetadata=_contextMetadata;
 @property(copy, nonatomic) SPTPlayOrigin *origin; // @synthesize origin=_origin;
 @property(copy, nonatomic) SPTPlayOptions *options; // @synthesize options=_options;
-- (void).cxx_destruct;
 - (id)description;
 - (_Bool)isEqual:(id)arg1;
 - (id)init;

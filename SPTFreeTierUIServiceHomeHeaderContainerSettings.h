@@ -15,9 +15,9 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) NSString *gradientName; // @synthesize gradientName=_gradientName;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientStyle *gradientStyle;
 - (id)initWithDictionary:(id)arg1 theme:(id)arg2;
 

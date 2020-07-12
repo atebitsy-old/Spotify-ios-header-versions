@@ -22,6 +22,7 @@
     SPTGaiaDevicePickerMaskView *_contentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaDevicePickerMaskView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) NSLayoutConstraint *accessoryViewVisibleConstraint; // @synthesize accessoryViewVisibleConstraint=_accessoryViewVisibleConstraint;
 @property(readonly, nonatomic) id <SPTGaiaDevicePickerDeviceSpecificConfigurationProvider> deviceConfiguration; // @synthesize deviceConfiguration=_deviceConfiguration;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) UIView *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)setAccessoryView:(id)arg1 animated:(_Bool)arg2;
 - (void)addAccessoryViewInContainer:(id)arg1;
 - (void)setupConstraints;

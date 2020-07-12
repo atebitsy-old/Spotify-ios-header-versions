@@ -32,6 +32,7 @@
 }
 
 + (id)defaultRangedDataSourceWithDataLoader:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableOrderedSet *lastUnavailableIndexes; // @synthesize lastUnavailableIndexes=_lastUnavailableIndexes;
 @property(nonatomic) _Bool forceReload; // @synthesize forceReload=_forceReload;
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter=_textFilter;
@@ -47,7 +48,6 @@
 @property(nonatomic) long long itemsPerPage; // @synthesize itemsPerPage=_itemsPerPage;
 @property(retain, nonatomic) id <SPTYourLibraryMusicRangeDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTYourLibraryMusicRangeDataSourceDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)rangeDataLoader:(id)arg1 error:(id)arg2;
 - (void)rangeDataLoader:(id)arg1 didLoadItems:(id)arg2 forRange:(struct _NSRange)arg3;
 - (_Bool)isThresholdHitBottomForIndexPath:(id)arg1;

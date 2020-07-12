@@ -18,9 +18,9 @@
 
 + (id)messageWithName:(id)arg1 data:(id)arg2;
 + (id)messageWithProtobuf:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSData *data; // @synthesize data=_data;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 data:(id)arg2;
 
 // Remaining properties

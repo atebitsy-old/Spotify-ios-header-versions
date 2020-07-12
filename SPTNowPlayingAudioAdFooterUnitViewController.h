@@ -24,6 +24,7 @@
     UITapGestureRecognizer *_tapGestureRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) SPTAdVoiceMicrophoneView *microphoneView; // @synthesize microphoneView=_microphoneView;
 @property(retain, nonatomic) GLUEButton *manageVoiceSettingsBtn; // @synthesize manageVoiceSettingsBtn=_manageVoiceSettingsBtn;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (void)voiceAdMicrophoneDidStopRecording;
 - (void)voiceAdMicrophoneDidStartRecording;

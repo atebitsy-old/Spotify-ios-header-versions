@@ -16,8 +16,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (id)internalMakePodcastRequest:(id)arg1 onSuccess:(CDUnknownBlockType)arg2 onError:(CDUnknownBlockType)arg3;
 - (id)makeCancelablePodcastRequest:(id)arg1 onSuccess:(CDUnknownBlockType)arg2 onError:(CDUnknownBlockType)arg3;
 - (void)makePodcastRequest:(id)arg1 onSuccess:(CDUnknownBlockType)arg2 onError:(CDUnknownBlockType)arg3;

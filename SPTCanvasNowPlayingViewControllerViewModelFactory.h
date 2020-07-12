@@ -18,12 +18,12 @@
     id <SPTCanvasIdleMonitorObserverDelegate> _idleMonitorDelegate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTCanvasIdleMonitorObserverDelegate> idleMonitorDelegate; // @synthesize idleMonitorDelegate=_idleMonitorDelegate;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTCanvasTooltipPresentationManager *tooltipManager; // @synthesize tooltipManager=_tooltipManager;
 @property(readonly, nonatomic) SPTCanvasImageResolverFactory *imageResolverFactory; // @synthesize imageResolverFactory=_imageResolverFactory;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
-- (void).cxx_destruct;
 - (id)createViewModelForTrack:(id)arg1;
 - (id)initWithCanvasTrackChecker:(id)arg1 imageResolverFactory:(id)arg2 linkDispatcher:(id)arg3 idleMonitorDelegate:(id)arg4 tooltipManager:(id)arg5;
 

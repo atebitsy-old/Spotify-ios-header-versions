@@ -16,11 +16,11 @@
     SPTPersistentCacheOptions *_options;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTPersistentCacheOptions *options; // @synthesize options=_options;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(readonly, nonatomic) NSOperationQueue *queue; // @synthesize queue=_queue;
 @property(readonly, nonatomic) __weak SPTPersistentCache *cache; // @synthesize cache=_cache;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isGarbageCollectionScheduled) _Bool garbageCollectionScheduled;
 - (void)unschedule;
 - (void)schedule;

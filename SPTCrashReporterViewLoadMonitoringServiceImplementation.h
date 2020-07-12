@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCrashReporterViewLoggerObserver *observer; // @synthesize observer=_observer;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

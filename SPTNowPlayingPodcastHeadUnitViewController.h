@@ -23,12 +23,12 @@
     id <SPTPodcastSpeedControlManager> _speedControlManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPodcastSpeedControlManager> speedControlManager; // @synthesize speedControlManager=_speedControlManager;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)auxiliaryActionsHandlerSleepTimerDidUpdateState:(id)arg1;
 - (void)auxiliaryActionsHandlerSleepTimer:(id)arg1 timeWasUpdated:(double)arg2;
 - (void)auxiliaryActionsHandlerDidChangePodcastSpeed:(id)arg1;

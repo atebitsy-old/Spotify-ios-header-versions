@@ -15,9 +15,9 @@
     NSObject<OS_dispatch_queue> *_workQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *workQueue; // @synthesize workQueue=_workQueue;
 @property(readonly, nonatomic) SPTConcertsDateFormatter *dateFormatterProvider; // @synthesize dateFormatterProvider=_dateFormatterProvider;
-- (void).cxx_destruct;
 - (void)dispatchInvalidDataErrorForCompletion:(CDUnknownBlockType)arg1;
 - (void)dispatchCompletion:(CDUnknownBlockType)arg1 forEntity:(id)arg2 orError:(id)arg3;
 - (unsigned long long)availabiltyFromString:(id)arg1;

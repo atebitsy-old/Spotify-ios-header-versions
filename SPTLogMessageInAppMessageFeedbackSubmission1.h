@@ -16,10 +16,10 @@
 }
 
 + (id)messageWithCreativeId:(id)arg1 uuid:(id)arg2 feedbackSelectionText:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *feedbackSelectionTextValue; // @synthesize feedbackSelectionTextValue=_feedbackSelectionTextValue;
 @property(copy, nonatomic) NSString *uuidValue; // @synthesize uuidValue=_uuidValue;
 @property(copy, nonatomic) NSString *creativeIdValue; // @synthesize creativeIdValue=_creativeIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

@@ -17,9 +17,9 @@
     id <SPTPodcastRequestData> _requestData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastRequestData> requestData; // @synthesize requestData=_requestData;
 @property(retain, nonatomic) SPTRequest *request; // @synthesize request=_request;
-- (void).cxx_destruct;
 - (void)addFilterPredicate:(id)arg1 forRequestString:(id)arg2 appendFilter:(_Bool)arg3;
 - (id)convertFilterPredicate:(id)arg1;
 - (void)addSortDescriptors:(id)arg1 forRequestString:(id)arg2;

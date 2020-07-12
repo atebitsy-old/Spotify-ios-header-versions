@@ -14,9 +14,9 @@
     SPTPlayerTrack *_playerTrack;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerTrack *playerTrack; // @synthesize playerTrack=_playerTrack;
 @property(retain, nonatomic) NSDictionary *mixStrategy; // @synthesize mixStrategy=_mixStrategy;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 @property(readonly, nonatomic) float trackProbability;
 @property(readonly, nonatomic) float artistProbability;

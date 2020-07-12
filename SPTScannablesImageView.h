@@ -25,6 +25,7 @@
     id <SPTImageLoader> _imageLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) UIButton *saveToCameraRollButton; // @synthesize saveToCameraRollButton=_saveToCameraRollButton;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) __weak id <SPTScannablesOnboardingPresenter> onboardingPresenter; // @synthesize onboardingPresenter=_onboardingPresenter;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)image:(id)arg1 didFinishSavingWithError:(id)arg2 contextInfo:(void *)arg3;

@@ -17,10 +17,10 @@
 }
 
 + (struct CGSize)collectionViewContentSizeForItemSizes:(id)arg1 spacing:(double)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) double maxY; // @synthesize maxY=_maxY;
 @property(copy, nonatomic) NSArray *layoutAttributes; // @synthesize layoutAttributes=_layoutAttributes;
 @property(nonatomic) __weak id <SPTSearchUICarouselLayoutDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)flipsHorizontallyInOppositeLayoutDirection;
 - (long long)developmentLayoutDirection;
 - (id)layoutAttributesForItemAtIndexPath:(id)arg1;

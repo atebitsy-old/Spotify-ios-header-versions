@@ -35,6 +35,7 @@
     id <SPTAgeVerificationProvider> _ageVerificationProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTAudioPreviewPlayer> audioPreviewPlayer; // @synthesize audioPreviewPlayer=_audioPreviewPlayer;
@@ -53,7 +54,6 @@
 @property(retain, nonatomic) id <SPTContextMenuActionsProvider> contextMenuActionsProvider; // @synthesize contextMenuActionsProvider=_contextMenuActionsProvider;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTHiddenContentViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (id)artistViewModelsFromArtistModelEntities:(id)arg1;
 - (id)trackViewModelsFromTrackModelEntities:(id)arg1;

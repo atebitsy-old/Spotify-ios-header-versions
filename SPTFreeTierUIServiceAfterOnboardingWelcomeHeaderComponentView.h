@@ -21,12 +21,12 @@
 + (id)subtitleStyle:(id)arg1;
 + (id)titleStyle:(id)arg1;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) GLUELabel *subtitle; // @synthesize subtitle=_subtitle;
 @property(retain, nonatomic) GLUELabel *title; // @synthesize title=_title;
 @property(retain, nonatomic) UIView *textContainer; // @synthesize textContainer=_textContainer;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)configureWithModel:(id)arg1;
 - (id)createSubtitle;
 - (id)createTitle;

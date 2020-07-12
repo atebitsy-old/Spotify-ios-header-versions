@@ -17,9 +17,9 @@
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
-- (void).cxx_destruct;
 - (_Bool)presentContextMenuForItemAtIndexPath:(id)arg1 itemsViewModel:(id)arg2 sender:(id)arg3 viewController:(id)arg4;
 - (id)initWithContextMenuService:(id)arg1 playlistViewModel:(id)arg2;
 

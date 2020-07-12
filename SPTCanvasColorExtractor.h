@@ -13,8 +13,8 @@
     UIImage *_image;
 }
 
-@property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
 - (id)randomColor;
 - (void)extractColorWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithImage:(id)arg1;

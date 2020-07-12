@@ -19,11 +19,11 @@
 + (id)buttonWithTitle:(id)arg1;
 + (id)buttonWithTitle:(id)arg1 target:(id)arg2 action:(SEL)arg3;
 + (id)buttonWithTitle:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType actionHandler; // @synthesize actionHandler=_actionHandler;
 @property(readonly, nonatomic) SEL action; // @synthesize action=_action;
 @property(readonly, nonatomic) __weak id target; // @synthesize target=_target;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 target:(id)arg2 action:(SEL)arg3;
 - (id)initWithTitle:(id)arg1 actionHandler:(CDUnknownBlockType)arg2;
 - (id)initWithTitle:(id)arg1;

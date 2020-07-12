@@ -18,9 +18,9 @@
 }
 
 + (id)cacheWithOptions:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTVideoCacheOptions> cacheOptions; // @synthesize cacheOptions=_cacheOptions;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
-- (void).cxx_destruct;
 - (_Bool)storeData:(id)arg1 forKey:(id)arg2 completion:(CDUnknownBlockType)arg3 onQueue:(id)arg4;
 - (void)pruneWithCompletion:(CDUnknownBlockType)arg1 onQueue:(id)arg2;
 - (_Bool)loadDataForKey:(id)arg1 completion:(CDUnknownBlockType)arg2 onQueue:(id)arg3;

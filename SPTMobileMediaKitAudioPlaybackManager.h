@@ -10,7 +10,7 @@
 #import "SPTExternalIntegrationAdditionalParameterProvider-Protocol.h"
 
 @class NSString, SPTAccessory, SPTMobileMediaKitAPKeepAliveHandler, SPTPlayerState;
-@protocol MMKLogging, SPTExternalIntegrationCollectionController, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI;
+@protocol MMKLogging, SPTAccessoryActionLogger, SPTExternalIntegrationCollectionController, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI;
 
 @interface SPTMobileMediaKitAudioPlaybackManager : NSObject <SPTExternalIntegrationAdditionalParameterProvider, MMKPlaybackDelegate>
 {
@@ -20,6 +20,7 @@
     id <SPTExternalIntegrationPlaybackController> _playbackController;
     id <SPTExternalIntegrationCollectionController> _collectionController;
     SPTMobileMediaKitAPKeepAliveHandler *_keepAliveHandler;
+    id <SPTAccessoryActionLogger> _actionLogger;
     id <MMKLogging> _logger;
     SPTAccessory *_currentAccessory;
     id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
@@ -29,6 +30,7 @@
     unsigned long long _nlURIBackgroundTask;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long nlURIBackgroundTask; // @synthesize nlURIBackgroundTask=_nlURIBackgroundTask;
 @property(nonatomic) unsigned long long playbackBackgroundTask; // @synthesize playbackBackgroundTask=_playbackBackgroundTask;
 @property(nonatomic) unsigned long long pullContextBackgroundTask; // @synthesize pullContextBackgroundTask=_pullContextBackgroundTask;
@@ -36,13 +38,13 @@
 @property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 @property(retain, nonatomic) SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(retain, nonatomic) id <MMKLogging> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) SPTMobileMediaKitAPKeepAliveHandler *keepAliveHandler; // @synthesize keepAliveHandler=_keepAliveHandler;
 @property(readonly, nonatomic) id <SPTExternalIntegrationCollectionController> collectionController; // @synthesize collectionController=_collectionController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(copy, nonatomic) NSString *lastTransactionId; // @synthesize lastTransactionId=_lastTransactionId;
 @property(retain, nonatomic) SPTPlayerState *oldPlayerState; // @synthesize oldPlayerState=_oldPlayerState;
 @property(retain, nonatomic) SPTPlayerState *currentPlayerState; // @synthesize currentPlayerState=_currentPlayerState;
-- (void).cxx_destruct;
 - (id)parameterDictionary;
 - (void)playContentWithURI:(id)arg1 options:(id)arg2 header:(id)arg3 context:(id)arg4;
 - (void)endPlaybackBackgroundTask;
@@ -77,7 +79,7 @@
 - (void)pauseWithMessage:(id)arg1;
 - (void)playWithMessage:(id)arg1;
 - (void)genericCompletionHandlerWithHeader:(id)arg1 context:(id)arg2 error:(id)arg3;
-- (id)initWithPlaybackController:(id)arg1 connectManager:(id)arg2 collectionController:(id)arg3 logger:(id)arg4 keepAliveHandler:(id)arg5;
+- (id)initWithPlaybackController:(id)arg1 connectManager:(id)arg2 collectionController:(id)arg3 logger:(id)arg4 keepAliveHandler:(id)arg5 actionLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

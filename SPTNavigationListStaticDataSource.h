@@ -18,10 +18,10 @@
     id <SPTNavigationItemTitleProvider> _navigationItemTitleProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNavigationItemTitleProvider> navigationItemTitleProvider; // @synthesize navigationItemTitleProvider=_navigationItemTitleProvider;
 @property(retain, nonatomic) SPTNavigationSettingsRegistration *settingsRegistration; // @synthesize settingsRegistration=_settingsRegistration;
 @property(nonatomic) __weak id <SPTNavigationListIdentifierFromABTestSource> abTestDataSource; // @synthesize abTestDataSource=_abTestDataSource;
-- (void).cxx_destruct;
 - (id)staticListIdentifiers;
 - (id)createListChosenViaSettingsExcludingIdentifiers:(id)arg1;
 - (id)defaultNavigationResourceURL;

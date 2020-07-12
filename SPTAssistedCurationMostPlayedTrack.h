@@ -22,6 +22,7 @@
 }
 
 + (_Bool)is19PlusOnlyFromDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool is19PlusOnly; // @synthesize is19PlusOnly=_is19PlusOnly;
 @property(readonly, nonatomic, getter=isRatedExplicit) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
 @property(readonly, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 // Remaining properties

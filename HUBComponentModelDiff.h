@@ -17,10 +17,10 @@
 
 + (id)diffFromComponentModels:(id)arg1 toComponentModels:(id)arg2;
 + (id)diffFromComponentModels:(id)arg1 toComponentModels:(id)arg2 algorithm:(CDUnknownFunctionPointerType)arg3;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *reloadedComponentIndexPaths; // @synthesize reloadedComponentIndexPaths=_reloadedComponentIndexPaths;
 @property(readonly, copy, nonatomic) NSArray *deletedComponentIndexPaths; // @synthesize deletedComponentIndexPaths=_deletedComponentIndexPaths;
 @property(readonly, copy, nonatomic) NSArray *insertedComponentIndexPaths; // @synthesize insertedComponentIndexPaths=_insertedComponentIndexPaths;
-- (void).cxx_destruct;
 - (id)debugDescription;
 @property(readonly, nonatomic) _Bool hasChanges;
 - (id)initWithInserts:(id)arg1 deletes:(id)arg2 reloads:(id)arg3;

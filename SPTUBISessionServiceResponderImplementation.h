@@ -17,8 +17,8 @@
     id <SPTUBIPlaybackIdProvider> _sessionPlaybackIdProvider;
 }
 
-@property(retain, nonatomic) id <SPTUBIPlaybackIdProvider> sessionPlaybackIdProvider; // @synthesize sessionPlaybackIdProvider=_sessionPlaybackIdProvider;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTUBIPlaybackIdProvider> sessionPlaybackIdProvider; // @synthesize sessionPlaybackIdProvider=_sessionPlaybackIdProvider;
 @property(readonly, copy, nonatomic) NSString *playbackId;
 - (void)sessionServiceDidUnload;
 - (void)sessionServiceDidLoadWithPlaybackIdProvider:(id)arg1;

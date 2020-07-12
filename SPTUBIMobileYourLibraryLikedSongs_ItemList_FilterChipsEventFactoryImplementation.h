@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithComponents:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)impression;
 - (id)clearButtonFactory;
 - (id)filterChipFactoryWithIdentifier:(id)arg1 position:(long long)arg2;

@@ -17,10 +17,10 @@
     unsigned long long _timeToLive;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long timeToLive; // @synthesize timeToLive=_timeToLive;
 @property(copy, nonatomic) NSString *cacheIdentifier; // @synthesize cacheIdentifier=_cacheIdentifier;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
-- (void).cxx_destruct;
 - (id)initWithCachePath:(id)arg1 cacheIdentifier:(id)arg2 timeToLive:(unsigned long long)arg3;
 
 // Remaining properties

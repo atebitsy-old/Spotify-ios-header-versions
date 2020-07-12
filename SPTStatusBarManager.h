@@ -22,12 +22,12 @@
 + (_Bool)addStatusBarBackgroundForViewController:(id)arg1 color:(id)arg2;
 + (double)statusBarHeight;
 + (id)defaultManager;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTStatusBarToken *rootToken; // @synthesize rootToken=_rootToken;
 @property(readonly, nonatomic) NSPointerArray *activeTokens; // @synthesize activeTokens=_activeTokens;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) UIApplication *application; // @synthesize application=_application;
-- (void).cxx_destruct;
 - (void)removeObject:(id)arg1 fromPointerArray:(id)arg2;
 - (void)statusBarFrameChangedWithNotification:(id)arg1;
 - (void)forgetToken:(id)arg1;

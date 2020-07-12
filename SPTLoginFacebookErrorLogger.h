@@ -16,10 +16,10 @@
     NSString *_screenId;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *screenId; // @synthesize screenId=_screenId;
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logFacebookLoginError:(id)arg1;
 - (id)initWithLogger:(id)arg1 screenId:(id)arg2;
 

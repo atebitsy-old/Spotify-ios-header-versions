@@ -17,9 +17,9 @@
     id <SPTHearablesRecommendationEngine> _recommendationEngine;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTHearablesRecommendationEngine> recommendationEngine; // @synthesize recommendationEngine=_recommendationEngine;
 @property(retain, nonatomic) NSMutableArray *previousRecommendations; // @synthesize previousRecommendations=_previousRecommendations;
-- (void).cxx_destruct;
 - (void)fetchRecommendationWithSessionIdentifier:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)addNewRecommendation:(id)arg1;
 - (id)initWithEngine:(id)arg1;

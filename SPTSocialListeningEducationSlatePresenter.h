@@ -27,13 +27,13 @@
     CDUnknownBlockType _confirmationHandler;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType confirmationHandler; // @synthesize confirmationHandler=_confirmationHandler;
 @property(retain, nonatomic) SPTSocialListeningListenTogetherDisclaimerViewController *disclaimerViewController; // @synthesize disclaimerViewController=_disclaimerViewController;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
-- (void).cxx_destruct;
 - (void)socialListeningListenTogetherDidConfirmJoining:(_Bool)arg1;
 - (void)presentDisclaimerViewWithName:(id)arg1 onConfirmation:(CDUnknownBlockType)arg2;
 - (void)socialListeningEducationSlateViewControllerDidTapActionButton:(id)arg1;

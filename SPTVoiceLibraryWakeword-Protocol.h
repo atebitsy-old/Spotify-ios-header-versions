@@ -9,10 +9,10 @@
 @protocol SPTVoiceLibraryWakewordDelegate;
 
 @protocol SPTVoiceLibraryWakeword <NSObject>
-@property(nonatomic) __weak id <SPTVoiceLibraryWakewordDelegate> delegate;
 - (void)resume;
 - (void)pause;
 - (void)stop;
 - (void)start;
+@property(nonatomic) __weak id <SPTVoiceLibraryWakewordDelegate> delegate;
 @end
 

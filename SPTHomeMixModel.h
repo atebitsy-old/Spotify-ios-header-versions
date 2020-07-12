@@ -20,6 +20,7 @@
     SPTHomeMixMetadataModelEntity *_currentEntity;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeMixMetadataModelEntity *currentEntity; // @synthesize currentEntity=_currentEntity;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> playlistViewDataLoaderRequestToken; // @synthesize playlistViewDataLoaderRequestToken=_playlistViewDataLoaderRequestToken;
 @property(readonly, nonatomic) SPTHomeMixModelDataLoader *homeMixDataLoader; // @synthesize homeMixDataLoader=_homeMixDataLoader;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(nonatomic) __weak id <SPTHomeMixModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleUpdateError:(id)arg1;
 - (void)handleUpdateToMetadata:(id)arg1 tracks:(id)arg2;
 - (void)load;

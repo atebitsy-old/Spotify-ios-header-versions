@@ -18,10 +18,10 @@
     id <SPContextMenuActionsFactory> _contextMenuActionsFactory;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool actionsRegistered; // @synthesize actionsRegistered=_actionsRegistered;
 @property(readonly, nonatomic) __weak id <SPContextMenuActionsFactory> contextMenuActionsFactory; // @synthesize contextMenuActionsFactory=_contextMenuActionsFactory;
 @property(readonly, nonatomic) __weak id <SPTWatchPlatformOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
-- (void).cxx_destruct;
 - (void)offlineManager:(id)arg1 didUpdateWatchAppOfflineEnabledState:(_Bool)arg2;
 - (id)actionTaskWithURI:(id)arg1 logContext:(id)arg2;
 - (void)registerActions;

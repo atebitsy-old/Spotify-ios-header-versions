@@ -17,9 +17,9 @@
     id <SPTFormatListPlatformRegistration> _fallbackHandler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFormatListPlatformRegistration> fallbackHandler; // @synthesize fallbackHandler=_fallbackHandler;
 @property(readonly, nonatomic) NSMutableArray *registrations; // @synthesize registrations=_registrations;
-- (void).cxx_destruct;
 - (id)viewControllerForURL:(id)arg1 formatListType:(id)arg2 formatListAttributes:(id)arg3 context:(id)arg4;
 - (void)unregisterFallbackHandler;
 - (void)unregisterHandlers;

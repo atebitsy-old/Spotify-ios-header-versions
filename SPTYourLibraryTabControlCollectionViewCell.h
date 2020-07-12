@@ -19,12 +19,12 @@
     double _selectedAmount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double selectedAmount; // @synthesize selectedAmount=_selectedAmount;
 @property(retain, nonatomic) NSLayoutConstraint *trailingLabelConstraints; // @synthesize trailingLabelConstraints=_trailingLabelConstraints;
 @property(retain, nonatomic) NSLayoutConstraint *leadingLabelConstraints; // @synthesize leadingLabelConstraints=_leadingLabelConstraints;
 @property(retain, nonatomic) SPTYourLibraryTabControlStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)setSelected:(_Bool)arg1;
 - (id)accessibilityLabel;
 - (void)glue_applyStyle:(id)arg1;

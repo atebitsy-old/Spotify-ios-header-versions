@@ -31,6 +31,7 @@
 + (long long)numberOfLinesForAttributedText:(id)arg1 inSize:(struct CGSize)arg2;
 + (id)truncatedText:(id)arg1 truncationText:(id)arg2 toNumberOfLines:(unsigned long long)arg3 inSize:(struct CGSize)arg4;
 + (id)attributedStringFromString:(id)arg1 WithCustomLinkAttributes:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange truncationTextRange; // @synthesize truncationTextRange=_truncationTextRange;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
@@ -44,7 +45,6 @@
 @property(retain, nonatomic) SPTEncoreTypeStyle *truncationTextStyle; // @synthesize truncationTextStyle=_truncationTextStyle;
 @property(retain, nonatomic) SPTEncoreTypeStyle *textStyle; // @synthesize textStyle=_textStyle;
 @property(nonatomic) __weak id <VISREFExpandableTextViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)linkTextAttributes;
 - (id)truncationTextAttributes;
 - (id)textAttributes;

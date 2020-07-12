@@ -15,9 +15,9 @@
     id <SPTExternalLinkControllerCampaignDelegate> _campaignDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTExternalLinkControllerCampaignDelegate> campaignDelegate; // @synthesize campaignDelegate=_campaignDelegate;
 @property(retain, nonatomic) SPTSpotifyLinkHandler *spotifyLinkHandler; // @synthesize spotifyLinkHandler=_spotifyLinkHandler;
-- (void).cxx_destruct;
 - (long long)handleHTTPURI:(id)arg1 context:(id)arg2;
 - (_Bool)canHandleHTTPURI:(id)arg1;
 - (id)initWithSpotifyLinkHandler:(id)arg1 campaignDelegate:(id)arg2;

@@ -17,11 +17,11 @@
     UIApplication *_application;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(nonatomic, getter=isObserving) _Bool observing; // @synthesize observing=_observing;
 @property(nonatomic, getter=isAwake) _Bool awake; // @synthesize awake=_awake;
 @property(nonatomic) __weak id <SPForegroundObserverDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)applicationWillEnterForegroundNotification;
 - (void)applicationDidEnterBackgroundNotification;
 - (void)teardownObservers;

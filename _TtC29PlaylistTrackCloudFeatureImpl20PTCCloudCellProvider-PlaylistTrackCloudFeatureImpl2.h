@@ -10,6 +10,7 @@
 - (void)willDisplaySection;
 - (id)sectionFooter;
 - (id)sectionHeader;
+- (id)items;
 - (unsigned long long)numberOfRows;
 - (unsigned long long)section;
 @end

@@ -14,9 +14,9 @@
     UIColor *_arrowColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *arrowColor; // @synthesize arrowColor=_arrowColor;
 @property(nonatomic) double curveRatio; // @synthesize curveRatio=_curveRatio;
-- (void).cxx_destruct;
 - (void)drawRect:(struct CGRect)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

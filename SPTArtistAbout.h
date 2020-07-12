@@ -20,6 +20,7 @@
     SPTArtistSocialLink *_socialLinks;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTArtistSocialLink *socialLinks; // @synthesize socialLinks=_socialLinks;
 @property(readonly, nonatomic) NSString *biographyText; // @synthesize biographyText=_biographyText;
 @property(readonly, nonatomic) _Bool hasRoviBio; // @synthesize hasRoviBio=_hasRoviBio;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) NSArray *galleryImages; // @synthesize galleryImages=_galleryImages;
 @property(readonly, nonatomic) NSURL *avatarImageURL; // @synthesize avatarImageURL=_avatarImageURL;
 @property(readonly, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)artistImagesWithArray:(id)arg1;

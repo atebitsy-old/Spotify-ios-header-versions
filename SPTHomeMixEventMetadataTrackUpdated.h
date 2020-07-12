@@ -14,9 +14,9 @@
     NSArray *_tracks;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, nonatomic) SPTHomeMixMetadataModelEntity *metadata; // @synthesize metadata=_metadata;
-- (void).cxx_destruct;
 - (id)initWithMetadata:(id)arg1 tracks:(id)arg2;
 
 @end

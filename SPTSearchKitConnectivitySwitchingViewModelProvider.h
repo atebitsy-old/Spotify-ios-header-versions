@@ -24,6 +24,7 @@
     id <SPTSearchKitViewModelProvider> _publishedVMP;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTSearchKitViewModelProvider> publishedVMP; // @synthesize publishedVMP=_publishedVMP;
 @property(copy, nonatomic) SPTSearchKitViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTSearchKitViewModelProvider> onlineVMP; // @synthesize onlineVMP=_onlineVMP;
 @property(readonly, nonatomic) id <SPTSearchKitViewModelProvider> offlineVMP; // @synthesize offlineVMP=_offlineVMP;
 @property(nonatomic) __weak id <SPTSearchKitViewModelProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)inactiveViewModelProviderDidUpdateFromViewModel:(id)arg1;
 - (void)activeViewModelProviderDidUpdateFromViewModel:(id)arg1;
 @property(readonly, nonatomic) id <SPTSearchKitViewModelProvider> inactiveVMP;

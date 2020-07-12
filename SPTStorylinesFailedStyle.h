@@ -18,10 +18,10 @@
 }
 
 + (id)styleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *failedSublabelStyle; // @synthesize failedSublabelStyle=_failedSublabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *failedLabelStyle; // @synthesize failedLabelStyle=_failedLabelStyle;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

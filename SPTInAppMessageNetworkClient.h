@@ -19,13 +19,13 @@
     NSArray *_supportedTriggerTypes;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *supportedTriggerTypes; // @synthesize supportedTriggerTypes=_supportedTriggerTypes;
 @property(copy, nonatomic) NSArray *supportedActions; // @synthesize supportedActions=_supportedActions;
 @property(copy, nonatomic) NSArray *supportedFormats; // @synthesize supportedFormats=_supportedFormats;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) NSTimer *triggerListRefreshTimer; // @synthesize triggerListRefreshTimer=_triggerListRefreshTimer;
 @property(retain, nonatomic) id <SPTInAppMessageDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)invalidateTimer;
 - (void)setupRefreshTimer;
 - (void)performRequestWithURL:(id)arg1 triggerPattern:(id)arg2 triggerType:(id)arg3 triggers:(id)arg4;

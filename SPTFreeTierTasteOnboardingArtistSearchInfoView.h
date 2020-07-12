@@ -19,12 +19,12 @@
     NSLayoutConstraint *_imageViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewHeightConstraint; // @synthesize imageViewHeightConstraint=_imageViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewToTitleLabelMarginConstraint; // @synthesize imageViewToTitleLabelMarginConstraint=_imageViewToTitleLabelMarginConstraint;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)activateConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

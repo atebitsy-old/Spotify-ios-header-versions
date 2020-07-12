@@ -13,8 +13,8 @@
     id <SPTPopupTheme> _theme;
 }
 
-@property(retain, nonatomic) id <SPTPopupTheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPopupTheme> theme; // @synthesize theme=_theme;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

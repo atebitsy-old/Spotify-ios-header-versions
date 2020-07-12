@@ -15,8 +15,8 @@
     SPTSortingFilteringFilterButton *_button;
 }
 
-@property(retain, nonatomic) SPTSortingFilteringFilterButton *button; // @synthesize button=_button;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTSortingFilteringFilterButton *button; // @synthesize button=_button;
 - (void)glue_applyStyle:(id)arg1;
 - (void)prepareForReuse;
 - (void)setSelected:(_Bool)arg1;

@@ -34,6 +34,7 @@
     double _presentedAt;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double presentedAt; // @synthesize presentedAt=_presentedAt;
 @property(nonatomic) _Bool delayedPopup; // @synthesize delayedPopup=_delayedPopup;
 @property(nonatomic) _Bool devicePickerVisible; // @synthesize devicePickerVisible=_devicePickerVisible;
@@ -51,7 +52,6 @@
 @property(readonly, nonatomic) __weak id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak id <SPTGaiaAttachPopupControllerDelegate> attachPopupDelegate; // @synthesize attachPopupDelegate;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)attachDevice;
 - (_Bool)activeDeviceIsSocialListening;

@@ -25,6 +25,7 @@
 
 + (id)featureIdentifier;
 + (id)featureTitle;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) UIImage *logoImage; // @synthesize logoImage=_logoImage;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSDictionary *capability; // @synthesize capability=_capability;
 @property(nonatomic) __weak id <SPTGaiaContextMenuActionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTGaiaConnectDevice *connectDevice; // @synthesize connectDevice=_connectDevice;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool supportsAutomaticFiltering;
 - (void)logHitEventWithFallback:(_Bool)arg1;
 - (void)checkFallbackURL:(id)arg1;

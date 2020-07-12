@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierPreCurationTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
-- (void).cxx_destruct;
 - (id)provideTheme;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -26,6 +26,7 @@
 
 + (id)entityPagelessRadioPlayOptions;
 + (id)playOptionsWithSuppressionsProviders:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *playbackId; // @synthesize playbackId=_playbackId;
 @property(copy, nonatomic) NSDictionary *configurationOverride; // @synthesize configurationOverride=_configurationOverride;
 @property(nonatomic) unsigned long long trigger; // @synthesize trigger=_trigger;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSNumber *seekTo; // @synthesize seekTo=_seekTo;
 @property(nonatomic) _Bool alwaysPlaySomething; // @synthesize alwaysPlaySomething=_alwaysPlaySomething;
 @property(copy, nonatomic) SPTSkipToTrack *skipTo; // @synthesize skipTo=_skipTo;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

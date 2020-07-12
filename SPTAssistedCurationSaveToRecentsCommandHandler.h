@@ -17,9 +17,9 @@
     id <SPTSearchRecentsDataSource> _searchRecentsDataSource;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSource> searchRecentsDataSource; // @synthesize searchRecentsDataSource=_searchRecentsDataSource;
 @property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithContextURI:(id)arg1 searchRecentsDataSource:(id)arg2;
 

@@ -13,6 +13,10 @@
     // Error parsing type: , name: hubsService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: ubiService
+    // Error parsing type: , name: $__lazy_storage_$_configurationProperties
+    // Error parsing type: , name: $__lazy_storage_$_ubiLocationSerializer
 }
 
 + (id)serviceIdentifier;

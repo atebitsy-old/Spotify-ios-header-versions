@@ -25,6 +25,7 @@
     UIBarButtonItem *_backButtonItem;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIBarButtonItem *backButtonItem; // @synthesize backButtonItem=_backButtonItem;
 @property(readonly, nonatomic) SPTModerationReportErrorView *errorView; // @synthesize errorView=_errorView;
 @property(readonly, nonatomic) SPTProgressView *loadingView; // @synthesize loadingView=_loadingView;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI; // @synthesize pageURI=_pageURI;
-- (void).cxx_destruct;
 - (void)reloadWebView;
 - (void)didTapBack:(id)arg1;
 - (void)didTapClose:(id)arg1;

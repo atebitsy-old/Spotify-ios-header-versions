@@ -28,6 +28,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool cancelPresentation; // @synthesize cancelPresentation=_cancelPresentation;
 @property(retain, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(readonly, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageCardMessageParser *cardMessageParser; // @synthesize cardMessageParser=_cardMessageParser;
 @property(retain, nonatomic) SPTInAppMessageCardMessagePresentationController *cardMessagePresentationController; // @synthesize cardMessagePresentationController=_cardMessagePresentationController;
-- (void).cxx_destruct;
 - (void)cancelMessagePresentation:(id)arg1;
 - (void)presentMessage:(id)arg1 forTrigger:(id)arg2;
 - (void)cardMessagePriorityDeciderDidFetchMessage:(id)arg1 forTrigger:(id)arg2;

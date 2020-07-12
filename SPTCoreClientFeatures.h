@@ -35,6 +35,8 @@
 }
 
 + (id)clientFeaturesWithCore:(id)arg1 session:(id)arg2 coreCreateOptions:(id)arg3 prefs:(struct Prefs *)arg4 scheduler:(id)arg5;
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRouterFactory *routerFactory; // @synthesize routerFactory=_routerFactory;
 @property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
@@ -52,8 +54,6 @@
 @property(retain, nonatomic) SPTLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTApplicationStateTracker *applicationStateTracker; // @synthesize applicationStateTracker=_applicationStateTracker;
 @property(retain, nonatomic) id <SPTResolver> cosmosRouter; // @synthesize cosmosRouter=_cosmosRouter;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)incognitoModeHandler:(id)arg1 incognitoModeChangedByTimeout:(_Bool)arg2;
 - (void)sessionLoginModeChanged:(id)arg1;
 @property(readonly, nonatomic) const struct ClientFeatureStack *clientFeatureStack;

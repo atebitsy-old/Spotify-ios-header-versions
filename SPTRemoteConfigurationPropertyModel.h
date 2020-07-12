@@ -15,10 +15,10 @@
     NSString *_componentId;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *componentId; // @synthesize componentId=_componentId;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *propertyIdentifier;
 - (id)initWithName:(id)arg1 componentId:(id)arg2;
 

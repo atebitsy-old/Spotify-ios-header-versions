@@ -17,9 +17,9 @@
     id <SPTFreeTierPlaylistBarButtonManagerDelegate> _barButtonManagerDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistBarButtonManagerDelegate> barButtonManagerDelegate; // @synthesize barButtonManagerDelegate=_barButtonManagerDelegate;
 @property(nonatomic) __weak GLUEButton<VISREFActionRowButtonViewModelDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateState;
 - (id)imageForState:(_Bool)arg1;
 - (void)tapContextMenuButton:(id)arg1;

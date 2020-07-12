@@ -34,6 +34,7 @@
     struct CGSize _downloadSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *mosaicRequests; // @synthesize mosaicRequests=_mosaicRequests;
 @property(retain, nonatomic) NSMutableArray *mosaicErrors; // @synthesize mosaicErrors=_mosaicErrors;
 @property(retain, nonatomic) NSMutableDictionary *mosaicParts; // @synthesize mosaicParts=_mosaicParts;
@@ -52,7 +53,6 @@
 @property(readonly, nonatomic) struct CGSize requestedSize; // @synthesize requestedSize=_requestedSize;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) _Bool allowUpscaling; // @synthesize allowUpscaling=_allowUpscaling;
-- (void).cxx_destruct;
 - (void)imageLoaded:(id)arg1 withDataKey:(id)arg2 forURL:(id)arg3 startTime:(id)arg4 forEntity:(id)arg5;
 - (void)imageLoadError:(id)arg1 forURL:(id)arg2 context:(id)arg3;
 - (void)imageLoaded:(id)arg1 forURL:(id)arg2 startTime:(id)arg3 context:(id)arg4;

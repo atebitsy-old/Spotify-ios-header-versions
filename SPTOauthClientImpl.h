@@ -17,10 +17,10 @@
     id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
-@property(readonly, nonatomic) shared_ptr_8d7bf210 *cppOauthClient; // @synthesize cppOauthClient=_cppOauthClient;
-@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) shared_ptr_8d7bf210 *cppOauthClient; // @synthesize cppOauthClient=_cppOauthClient;
+@property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id)loadTokenOrRenew:(_Bool)arg1;
 - (id)initWithOauthClient:(shared_ptr_8d7bf210)arg1 scheduler:(id)arg2;
 

@@ -13,8 +13,8 @@
     SPTContextDispatchOperation *_operation;
 }
 
-@property(retain, nonatomic) SPTContextDispatchOperation *operation; // @synthesize operation=_operation;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTContextDispatchOperation *operation; // @synthesize operation=_operation;
 
 @end
 

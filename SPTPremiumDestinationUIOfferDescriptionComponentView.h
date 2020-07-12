@@ -16,10 +16,10 @@
 }
 
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *label; // @synthesize label=_label;
 @property(retain, nonatomic) SPTPremiumDestinationUIOfferDescriptionStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)configureWithModel:(id)arg1;
 - (void)setupConstraints;
 - (void)setupView;

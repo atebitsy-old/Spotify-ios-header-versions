@@ -24,6 +24,7 @@
     double _margin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double margin; // @synthesize margin=_margin;
 @property(nonatomic) double spacing; // @synthesize spacing=_spacing;
 @property(retain, nonatomic) NSLayoutConstraint *subMessageRightConstraint; // @synthesize subMessageRightConstraint=_subMessageRightConstraint;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) GLUELabel *subMessageLabel; // @synthesize subMessageLabel=_subMessageLabel;
 @property(retain, nonatomic) GLUELabel *messageLabel; // @synthesize messageLabel=_messageLabel;
 @property(retain, nonatomic) UIView *container; // @synthesize container=_container;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 @property(copy, nonatomic) NSString *subMessage;
 @property(copy, nonatomic) NSString *message;

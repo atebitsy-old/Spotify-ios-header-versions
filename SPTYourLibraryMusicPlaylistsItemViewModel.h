@@ -31,6 +31,7 @@
 
 + (long long)iconFromURL:(id)arg1;
 + (long long)offlineSyncStatusForSPTOfflineAvailability:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool onDemand; // @synthesize onDemand=_onDemand;
 @property(readonly, nonatomic, getter=isQuickActionsEnabled) _Bool quickActionsEnabled; // @synthesize quickActionsEnabled;
 @property(readonly, nonatomic) _Bool showCollectionQuickActions; // @synthesize showCollectionQuickActions;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isShuffle) _Bool isShuffle;
 - (id)initWithItemModelItem:(id)arg1;
 

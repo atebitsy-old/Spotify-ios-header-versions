@@ -49,6 +49,7 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) _Bool shouldAnimateSlate; // @synthesize shouldAnimateSlate=_shouldAnimateSlate;
 @property(nonatomic) _Bool shouldNavigateToAlbum; // @synthesize shouldNavigateToAlbum=_shouldNavigateToAlbum;
@@ -77,7 +78,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(readonly, nonatomic) id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
-- (void).cxx_destruct;
 - (void)sendEventWithEventName:(id)arg1 reason:(id)arg2;
 - (void)loadImageURL:(id)arg1 imageSize:(struct CGSize)arg2;
 - (id)secondaryActionsForContextMenu;

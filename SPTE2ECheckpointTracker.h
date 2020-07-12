@@ -19,10 +19,10 @@
 
 + (void)reachedCheckpoint:(long long)arg1;
 + (id)nameForCheckpoint:(long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *hitCheckpoints; // @synthesize hitCheckpoints=_hitCheckpoints;
 @property(retain, nonatomic) SPTCondition *condition; // @synthesize condition=_condition;
 @property(nonatomic) long long currentCheckpoint; // @synthesize currentCheckpoint=_currentCheckpoint;
-- (void).cxx_destruct;
 - (void)receivedNotificationNamed:(id)arg1;
 - (_Bool)waitForCheckpoint:(long long)arg1 withTimeout:(double)arg2;
 - (void)dealloc;

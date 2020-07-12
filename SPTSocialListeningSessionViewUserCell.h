@@ -20,6 +20,7 @@
     UIStackView *_stackView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(nonatomic) __weak id <SPTSocialListeningSessionViewUserCellDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) GLUEImageView *profileImageView; // @synthesize profileImageView=_profileImageView;
 @property(retain, nonatomic) GLUELabel *initialsTextLabel; // @synthesize initialsTextLabel=_initialsTextLabel;
 @property(retain, nonatomic) GLUELabel *displayNameLabel; // @synthesize displayNameLabel=_displayNameLabel;
-- (void).cxx_destruct;
 - (void)didTapNameOrImage:(id)arg1;
 - (void)didTapActionButton:(id)arg1;
 - (void)addViewConstraints;

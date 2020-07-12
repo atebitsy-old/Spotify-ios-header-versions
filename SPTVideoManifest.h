@@ -26,6 +26,7 @@
     double _endTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double endTime; // @synthesize endTime=_endTime;
 @property(nonatomic) double startTime; // @synthesize startTime=_startTime;
 @property(copy, nonatomic) NSDictionary *profileLookup; // @synthesize profileLookup=_profileLookup;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) _Bool isAiring; // @synthesize isAiring=_isAiring;
 @property(readonly, nonatomic) SPTVideoManifestProfile *profileForBackgrounding; // @synthesize profileForBackgrounding=_profileForBackgrounding;
 @property(readonly, nonatomic) NSArray *profiles; // @synthesize profiles=_profiles;
-- (void).cxx_destruct;
 - (id)profileWithID:(unsigned long long)arg1;
 @property(readonly, nonatomic) double duration;
 - (id)initWithProfiles:(id)arg1 audioProfile:(id)arg2 videoProfiles:(id)arg3 profileForBackgrounding:(id)arg4 isAiring:(_Bool)arg5 segmentLength:(unsigned long long)arg6 startTime:(double)arg7 endTime:(double)arg8 baseURLs:(id)arg9 segmentTemplate:(id)arg10 subtitleTemplate:(id)arg11 subtitleBaseURLs:(id)arg12 subtitles:(id)arg13;

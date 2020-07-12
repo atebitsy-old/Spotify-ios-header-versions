@@ -25,6 +25,7 @@
     NSDate *_lastWifiLeaveDate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool activelyWaitingForHomeDevice; // @synthesize activelyWaitingForHomeDevice=_activelyWaitingForHomeDevice;
 @property(retain, nonatomic) NSDate *lastWifiLeaveDate; // @synthesize lastWifiLeaveDate=_lastWifiLeaveDate;
 @property(retain, nonatomic) NSDate *lastWifiJoinDate; // @synthesize lastWifiJoinDate=_lastWifiJoinDate;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTGaiaHomeDeviceTriggerManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)connectManager:(id)arg1 availableDevicesDidChange:(id)arg2;
 - (void)userLeftWifi;
 - (void)userJoinedWifi;

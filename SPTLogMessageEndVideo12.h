@@ -67,6 +67,7 @@
 }
 
 + (id)messageWithSequenceNumber:(long long)arg1 sequenceId:(id)arg2 videoSessionId:(id)arg3 fileId:(id)arg4 playbackId:(id)arg5 featureIdentifier:(id)arg6 featureVersion:(id)arg7 viewUri:(id)arg8 reasonStart:(id)arg9 reasonEnd:(id)arg10 msPlayed:(long long)arg11 msNominalPlayed:(long long)arg12 msTotalEst:(long long)arg13 live:(_Bool)arg14 msManifestLatency:(long long)arg15 nSeekback:(long long)arg16 msSeekback:(long long)arg17 nSeekfwd:(long long)arg18 msSeekfwd:(long long)arg19 msLatency:(long long)arg20 uiLatency:(long long)arg21 startOffsetMs:(long long)arg22 msInitialBuffering:(long long)arg23 msSeekRebuffering:(long long)arg24 msStalled:(long long)arg25 maxMsSeekRebuffering:(long long)arg26 maxMsStalled:(long long)arg27 nStalls:(long long)arg28 shuffle:(_Bool)arg29 maxContinous:(long long)arg30 unionPlayed:(long long)arg31 playContext:(id)arg32 audiocodec:(id)arg33 videocodec:(id)arg34 playTrack:(id)arg35 incognitoMode:(_Bool)arg36 provider:(id)arg37 referrer:(id)arg38 referrerVersion:(id)arg39 referrerVendor:(id)arg40 streamingRule:(id)arg41 gaiaDevId:(id)arg42 startBitrate:(long long)arg43 fullScreen:(long long)arg44 timeWeightedBitrate:(long long)arg45 prefetchedBytes:(long long)arg46 prefetchedBytesLoaded:(long long)arg47 keySystem:(id)arg48 msKeyLatency:(long long)arg49 totalBytes:(long long)arg50 localTimeMs:(long long)arg51 connectionTypeStart:(id)arg52 connectionTypeEnd:(id)arg53 msPlayedBackground:(long long)arg54;
+- (void).cxx_destruct;
 @property(nonatomic) long long msPlayedBackgroundValue; // @synthesize msPlayedBackgroundValue=_msPlayedBackgroundValue;
 @property(copy, nonatomic) NSString *connectionTypeEndValue; // @synthesize connectionTypeEndValue=_connectionTypeEndValue;
 @property(copy, nonatomic) NSString *connectionTypeStartValue; // @synthesize connectionTypeStartValue=_connectionTypeStartValue;
@@ -121,7 +122,6 @@
 @property(copy, nonatomic) NSString *videoSessionIdValue; // @synthesize videoSessionIdValue=_videoSessionIdValue;
 @property(copy, nonatomic) NSString *sequenceIdValue; // @synthesize sequenceIdValue=_sequenceIdValue;
 @property(nonatomic) long long sequenceNumberValue; // @synthesize sequenceNumberValue=_sequenceNumberValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

@@ -18,10 +18,10 @@
     NSSet *_disallowedContentTypes;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *disallowedContentTypes; // @synthesize disallowedContentTypes=_disallowedContentTypes;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (_Bool)disallowAdditionalContentType:(unsigned long long)arg1;
 - (id)initWithFeatureFlagFactory:(id)arg1 freeTierEnabledSignal:(id)arg2;

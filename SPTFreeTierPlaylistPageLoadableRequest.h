@@ -25,6 +25,7 @@
     id <SPTAlgotorialSharingService> _algotorialSharingService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAlgotorialSharingService> algotorialSharingService; // @synthesize algotorialSharingService=_algotorialSharingService;
 @property(retain, nonatomic) id <SPTPageCreationContext> pageContext; // @synthesize pageContext=_pageContext;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property _Bool formatListResolved; // @synthesize formatListResolved=_formatListResolved;
 @property _Bool active; // @synthesize active=_active;
-- (void).cxx_destruct;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;

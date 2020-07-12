@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPlaybackPreferencesObserver, SPTSettingsLogger;
-@protocol CosmosFeature, SPTAbbaFeatureFlags, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTDebugUIService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceService, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@protocol CosmosFeature, SPTAbbaFeatureFlags, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTDebugUIService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, SPTVoiceService, _TtP14ProfileFeature17SPTProfileService_;
 
 @interface SPTBuiltInSettingsFeatureImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTService>
 {
@@ -32,7 +32,7 @@
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTDataSaverService> _dataSaverService;
     id <SPTLoginService> _loginService;
-    id <_TtP16ProfileV2Feature19SPTProfileV2Service_> _profileV2Service;
+    id <_TtP14ProfileFeature17SPTProfileService_> _profileService;
     id <SPTInAppMessageService> _inAppMessageService;
     id <SPTLoginDelayedSignupService> _delayedSignupService;
     id <SPTAbbaFeatureFlags> _featureFlags;
@@ -44,6 +44,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlaybackPreferencesObserver *playbackPreferencesObserver; // @synthesize playbackPreferencesObserver=_playbackPreferencesObserver;
 @property(retain, nonatomic) SPTSettingsLogger *settingsLogger; // @synthesize settingsLogger=_settingsLogger;
 @property(nonatomic) _Bool dataSaverActivated; // @synthesize dataSaverActivated=_dataSaverActivated;
@@ -54,7 +55,7 @@
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(nonatomic) __weak id <SPTLoginDelayedSignupService> delayedSignupService; // @synthesize delayedSignupService=_delayedSignupService;
 @property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
-@property(nonatomic) __weak id <_TtP16ProfileV2Feature19SPTProfileV2Service_> profileV2Service; // @synthesize profileV2Service=_profileV2Service;
+@property(nonatomic) __weak id <_TtP14ProfileFeature17SPTProfileService_> profileService; // @synthesize profileService=_profileService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <SPTDataSaverService> dataSaverService; // @synthesize dataSaverService=_dataSaverService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
@@ -71,7 +72,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)provideTermsSettingsWithSettingsViewController:(id)arg1;
 - (id)provideLicensesSettingsWithSettingsViewController:(id)arg1;

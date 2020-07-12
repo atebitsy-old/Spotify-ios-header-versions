@@ -19,11 +19,11 @@
     id <SPTSearchUBIHubsLogger> _ubiHubsLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearchUBIHubsLogger> ubiHubsLogger; // @synthesize ubiHubsLogger=_ubiHubsLogger;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTSearch2DateProviding> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)logInteraction:(id)arg1;
 - (void)logInteractionWithURI:(id)arg1 event:(id)arg2 userIntent:(id)arg3;
 - (void)logImpressionWithComponentModel:(id)arg1;

@@ -29,6 +29,7 @@
     NSMapTable *_viewControllers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *viewControllers; // @synthesize viewControllers=_viewControllers;
 @property(readonly, nonatomic) SPTCanvasNowPlayingViewControllerLoaderCache *contentLoaderCache; // @synthesize contentLoaderCache=_contentLoaderCache;
 @property(readonly, nonatomic) SPTCanvasForceArtworkManager *forceArtworkManager; // @synthesize forceArtworkManager=_forceArtworkManager;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) SPTCanvasNowPlayingViewControllerViewModelFactory *contentLayerViewModelFactory; // @synthesize contentLayerViewModelFactory=_contentLayerViewModelFactory;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
 @property(nonatomic) __weak id <SPTCanvasNowPlayingViewContentLoaderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)contentReloader:(id)arg1 needsReloadForTrack:(id)arg2;
 - (void)didFailToRenderViewControllerViewModel:(id)arg1;
 - (void)didFailToLoadViewControllerViewModel:(id)arg1 withError:(id)arg2;

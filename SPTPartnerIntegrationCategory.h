@@ -14,9 +14,9 @@
     NSArray *_integrations;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *integrations; // @synthesize integrations=_integrations;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)initWithIdentifier:(id)arg1 integrations:(id)arg2;
 
 @end

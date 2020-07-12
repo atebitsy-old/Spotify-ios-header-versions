@@ -25,6 +25,7 @@
     struct GLUEEntityCardImageLayoutState _imageLayoutState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewWidthConstraint; // @synthesize imageViewWidthConstraint=_imageViewWidthConstraint;
 @property(nonatomic) struct GLUEEntityCardImageLayoutState imageLayoutState; // @synthesize imageLayoutState=_imageLayoutState;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) UIView *imageContainerView; // @synthesize imageContainerView=_imageContainerView;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) GLUECardDetailsView *detailsView; // @synthesize detailsView=_detailsView;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)imageViewDidUpdateImage:(id)arg1;
 - (void)prepareForReuse;

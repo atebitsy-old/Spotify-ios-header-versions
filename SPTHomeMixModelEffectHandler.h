@@ -17,9 +17,9 @@
     SPTHomeMixModel *_homeMixModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeMixModel *homeMixModel; // @synthesize homeMixModel=_homeMixModel;
 @property(nonatomic) __weak id <SPTHomeMixModelEffectHandlerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)acceptNext:(id)arg1;
 - (void)handleWelcomePageSeenEffect:(id)arg1 model:(id)arg2;
 - (void)handleUpdatePublishExplicitSettingsEffect:(id)arg1 model:(id)arg2;

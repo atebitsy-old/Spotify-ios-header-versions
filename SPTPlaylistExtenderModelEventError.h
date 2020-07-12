@@ -15,8 +15,8 @@
     NSError *_error;
 }
 
-@property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSError *error; // @synthesize error=_error;
 - (void)processWithState:(id)arg1 loop:(id)arg2;
 - (id)initWithError:(id)arg1;
 

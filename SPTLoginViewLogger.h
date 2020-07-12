@@ -19,11 +19,11 @@
     SPTLoginErrorLogger *_errorLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTUBILoginViewEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logUserDidTapRequestMagicLinkButton;
 - (void)logUserDidTapOnePasswordButton;
 - (id)adjustIdentifierForFieldWithStringIdentifier:(id)arg1;

@@ -21,13 +21,13 @@
     NSTimer *_timeoutTimer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool transitionUIVisible; // @synthesize transitionUIVisible=_transitionUIVisible;
 @property(nonatomic) _Bool transitionInProgress; // @synthesize transitionInProgress=_transitionInProgress;
 @property(retain, nonatomic) NSTimer *timeoutTimer; // @synthesize timeoutTimer=_timeoutTimer;
 @property(retain, nonatomic) NSDate *mostDistantTimeout; // @synthesize mostDistantTimeout=_mostDistantTimeout;
 @property(readonly, nonatomic) NSMutableSet *registrations; // @synthesize registrations=_registrations;
 @property(retain, nonatomic) id <SPTUIModeTransitionUIHandler> transitionUIHandler; // @synthesize transitionUIHandler=_transitionUIHandler;
-- (void).cxx_destruct;
 - (void)invalidateRegistration:(id)arg1;
 - (void)invalidateTimer;
 - (void)resetTimerWithMostDistantDate:(id)arg1;

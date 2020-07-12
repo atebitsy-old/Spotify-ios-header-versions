@@ -20,6 +20,7 @@
     struct SPTID3ParserHeaderStruct _header;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTID3ParserFrameFactory *frameFactory; // @synthesize frameFactory=_frameFactory;
 @property(retain, nonatomic) NSMutableArray *mutableFrames; // @synthesize mutableFrames=_mutableFrames;
 @property(nonatomic) long long tagSize; // @synthesize tagSize=_tagSize;
@@ -27,7 +28,6 @@
 @property(nonatomic) __weak id <SPTID3ParserDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct SPTID3ParserHeaderStruct header; // @synthesize header=_header;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
-- (void).cxx_destruct;
 - (void)attemptParse;
 @property(readonly, nonatomic) NSArray *frames;
 - (void)appendData:(id)arg1;

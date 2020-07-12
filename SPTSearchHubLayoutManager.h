@@ -15,8 +15,8 @@
     id <HUBComponentLayoutManager> _superLayoutManager;
 }
 
-@property(readonly, nonatomic) id <HUBComponentLayoutManager> superLayoutManager; // @synthesize superLayoutManager=_superLayoutManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <HUBComponentLayoutManager> superLayoutManager; // @synthesize superLayoutManager=_superLayoutManager;
 - (double)verticalMarginForComponentWithLayoutTraits:(id)arg1 precedingComponentLayoutTraits:(id)arg2;
 - (double)verticalMarginBetweenComponentWithLayoutTraits:(id)arg1 andHeaderComponentWithLayoutTraits:(id)arg2;
 - (double)marginBetweenComponentWithLayoutTraits:(id)arg1 andContentEdge:(unsigned long long)arg2;

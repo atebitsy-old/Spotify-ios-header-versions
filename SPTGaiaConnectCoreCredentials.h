@@ -17,12 +17,12 @@
     NSString *_tokenType;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *tokenType; // @synthesize tokenType=_tokenType;
 @property(copy, nonatomic) NSString *blob; // @synthesize blob=_blob;
 @property(copy, nonatomic) NSString *clientKey; // @synthesize clientKey=_clientKey;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

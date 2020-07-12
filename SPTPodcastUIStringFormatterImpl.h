@@ -19,11 +19,11 @@
 }
 
 + (id)formatterWithCurrentCalendarAndCurrentLocale;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDateComponentsFormatter *dateComponentFormatter; // @synthesize dateComponentFormatter=_dateComponentFormatter;
 @property(retain, nonatomic) NSDateFormatter *dateFormatter; // @synthesize dateFormatter=_dateFormatter;
 @property(retain, nonatomic) NSLocale *locale; // @synthesize locale=_locale;
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
-- (void).cxx_destruct;
 - (long long)daysBetweenDate:(id)arg1 andDate:(id)arg2;
 - (id)dateWithYearTemplateFormat;
 - (id)dateWithoutYearTemplateFormat;

@@ -9,9 +9,12 @@
 @class NSString;
 
 @protocol SPTFreeTierPlaylistFollowViewModel <NSObject>
-@property(readonly, nonatomic) long long followButtonType;
-@property(readonly, copy, nonatomic) NSString *numberOfLikesText;
-@property(readonly, nonatomic, getter=isFollowed) _Bool followed;
+@property(nonatomic, readonly) long long followButtonType;
+@property(nonatomic, readonly) NSString *numberOfLikesText;
 - (void)toggleFollow;
+- (_Bool)isFollowed;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool followed;
 @end
 

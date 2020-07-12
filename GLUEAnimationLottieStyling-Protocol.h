@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIColor;
+@class NSString, UIColor;
 
 @protocol GLUEAnimationLottieStyling <NSObject>
-- (void)setColor:(UIColor *)arg1 forPath:(struct NSString *)arg2;
+- (void)setColor:(UIColor *)arg1 forPath:(NSString *)arg2;
 @end
 

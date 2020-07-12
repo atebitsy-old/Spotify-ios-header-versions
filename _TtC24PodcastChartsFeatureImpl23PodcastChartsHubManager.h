@@ -17,13 +17,14 @@
     // Error parsing type: , name: iconImageResolver
     // Error parsing type: , name: commandHandlerFactory
     // Error parsing type: , name: $__lazy_storage_$_hubComponentRegistry
-    // Error parsing type: , name: homeUiService
     // Error parsing type: , name: podcastChartsServiceIdentifier
     // Error parsing type: , name: podcastChartsServicePathComponents
     // Error parsing type: , name: podcastChartsServicePathPageURIQueryKey
     // Error parsing type: , name: podcastChartsHubsNamespace
     // Error parsing type: , name: podcastChartsHeaderIdentifier
+    // Error parsing type: , name: podcastChartsListHeaderIdentifier
     // Error parsing type: , name: podcastRankRowIdentifier
+    // Error parsing type: , name: podcastChartsCardIdentifier
 }
 
 - (void).cxx_destruct;

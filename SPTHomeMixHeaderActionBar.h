@@ -20,13 +20,13 @@
     SPTHomeMixHeaderActionBarStyle *_currentStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTHomeMixHeaderActionBarStyle *currentStyle; // @synthesize currentStyle=_currentStyle;
 @property(retain, nonatomic) NSLayoutConstraint *rightSpaceConstraint; // @synthesize rightSpaceConstraint=_rightSpaceConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leftSpaceConstraint; // @synthesize leftSpaceConstraint=_leftSpaceConstraint;
 @property(readonly, nonatomic) __weak SPTHomeMixHeaderActionBarAuxView *rightAuxView; // @synthesize rightAuxView=_rightAuxView;
 @property(readonly, nonatomic) __weak SPTHomeMixHeaderActionButton *centerButton; // @synthesize centerButton=_centerButton;
 @property(readonly, nonatomic) __weak SPTHomeMixHeaderActionBarAuxView *leftAuxView; // @synthesize leftAuxView=_leftAuxView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateLeftRightAlpha:(double)arg1;
 - (void)setUpConstraints;

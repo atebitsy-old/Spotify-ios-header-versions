@@ -22,6 +22,7 @@
     NSMutableArray *_mutableTextFieldConfigurationHandlers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *mutableTextFieldConfigurationHandlers; // @synthesize mutableTextFieldConfigurationHandlers=_mutableTextFieldConfigurationHandlers;
 @property(readonly, nonatomic) NSMutableArray *mutableActions; // @synthesize mutableActions=_mutableActions;
 @property(nonatomic) __weak id <UIPopoverPresentationControllerDelegate> popoverPresentationControllerDelegate; // @synthesize popoverPresentationControllerDelegate=_popoverPresentationControllerDelegate;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) long long preferredStyle; // @synthesize preferredStyle=_preferredStyle;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *textFieldConfigurationHandlers;
 - (void)addTextFieldWithConfigurationHandler:(CDUnknownBlockType)arg1;
 @property(readonly, nonatomic) NSArray *actions;

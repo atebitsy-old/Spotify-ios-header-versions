@@ -14,9 +14,9 @@
     UIImage *_image;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(readonly, copy, nonatomic) NSAttributedString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithText:(id)arg1 image:(id)arg2;

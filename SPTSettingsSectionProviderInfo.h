@@ -16,10 +16,10 @@
 }
 
 + (id)providerInfoWithProvider:(id)arg1 andSelector:(SEL)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTAllocationContext *allocationContext; // @synthesize allocationContext=_allocationContext;
 @property(readonly, nonatomic) SEL selector; // @synthesize selector=_selector;
 @property(readonly, nonatomic) __weak id provider; // @synthesize provider=_provider;
-- (void).cxx_destruct;
 - (id)description;
 - (id)initWithProvider:(id)arg1 andSelector:(SEL)arg2;
 

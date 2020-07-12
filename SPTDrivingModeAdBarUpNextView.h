@@ -16,11 +16,11 @@
     UILabel *_contextLabel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool setupComplete; // @synthesize setupComplete=_setupComplete;
 @property(readonly, nonatomic) UILabel *contextLabel; // @synthesize contextLabel=_contextLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
-- (void).cxx_destruct;
 - (void)setCurrentPivotItem:(id)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (void)initSubviews;

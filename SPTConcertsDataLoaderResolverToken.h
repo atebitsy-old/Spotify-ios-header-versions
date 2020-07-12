@@ -18,10 +18,10 @@
     id <SPTDataLoaderCancellationToken> _cancellationToken;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTDataLoaderCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(nonatomic, getter=isCompleted) _Bool completed; // @synthesize completed=_completed;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (void)cancel;
 @property(readonly, nonatomic, getter=isCancelled) _Bool cancelled;

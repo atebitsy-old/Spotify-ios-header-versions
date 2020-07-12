@@ -15,10 +15,10 @@
     SPTStorylinesEntitiesLoadEventLogger *_entitiesLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTStorylinesEntitiesLoadEventLogger *entitiesLogger; // @synthesize entitiesLogger=_entitiesLogger;
 @property(readonly, nonatomic) NSCache *memoryCache; // @synthesize memoryCache=_memoryCache;
 @property(readonly, nonatomic) SPTStorylinesPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
-- (void).cxx_destruct;
 - (void)loadStorylinesEnabledTracksWithCallback:(CDUnknownBlockType)arg1;
 - (void)cacheEnabledTracks:(id)arg1;
 - (id)cachedContentKey;

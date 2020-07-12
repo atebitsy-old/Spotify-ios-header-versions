@@ -27,6 +27,7 @@
     NSMapTable *_requestKeysToRequestTokens;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMapTable *requestKeysToRequestTokens; // @synthesize requestKeysToRequestTokens=_requestKeysToRequestTokens;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) NSMutableDictionary *mutableFailedRequestKeysAndErrors; // @synthesize mutableFailedRequestKeysAndErrors=_mutableFailedRequestKeysAndErrors;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) _Bool hasSuccessfullyLoadedData; // @synthesize hasSuccessfullyLoadedData=_hasSuccessfullyLoadedData;
 @property(nonatomic) __weak id <SPTBaseViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSDictionary *requestURLDictionary; // @synthesize requestURLDictionary=_requestURLDictionary;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

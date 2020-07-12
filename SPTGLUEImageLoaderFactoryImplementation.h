@@ -16,8 +16,8 @@
     id <SPTImageLoaderFactory> _spotifyImageLoaderFactory;
 }
 
-@property(readonly, nonatomic) id <SPTImageLoaderFactory> spotifyImageLoaderFactory; // @synthesize spotifyImageLoaderFactory=_spotifyImageLoaderFactory;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTImageLoaderFactory> spotifyImageLoaderFactory; // @synthesize spotifyImageLoaderFactory=_spotifyImageLoaderFactory;
 - (id)createImageLoaderForSourceIdentifier:(id)arg1;
 - (id)initWithSpotifyImageLoaderFactory:(id)arg1;
 

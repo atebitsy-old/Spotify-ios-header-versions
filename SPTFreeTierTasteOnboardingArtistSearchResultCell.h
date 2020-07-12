@@ -27,6 +27,7 @@
     SPTFreeTierTasteOnboardingArtistSearchResultCellStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistSearchResultCellStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIView *labelWrapperView; // @synthesize labelWrapperView=_labelWrapperView;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleBottomConstraint; // @synthesize subtitleBottomConstraint=_subtitleBottomConstraint;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) GLUELabel *nameLabel; // @synthesize nameLabel=_nameLabel;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic, getter=isNewlyCreated) _Bool newlyCreated; // @synthesize newlyCreated=_newlyCreated;
-- (void).cxx_destruct;
 - (void)setSubtitleHidden:(_Bool)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)activateConstraints;

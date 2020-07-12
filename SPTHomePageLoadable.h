@@ -18,9 +18,9 @@
     id <SPTPageLoadStateHandler> _handler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageLoadStateHandler> handler; // @synthesize handler=_handler;
 @property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
-- (void).cxx_destruct;
 - (void)viewModelProviderWillLoadRemoteViewModel:(id)arg1;
 - (void)viewModelProviderWillLoadCachedViewModel:(id)arg1;
 - (void)viewModelProvider:(id)arg1 didLoadRemoteViewModel:(id)arg2 withError:(id)arg3;

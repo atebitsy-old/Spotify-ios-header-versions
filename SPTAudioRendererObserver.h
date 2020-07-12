@@ -23,6 +23,7 @@
     NSArray *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSOperationQueue *operationQueue; // @synthesize operationQueue=_operationQueue;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *internalQueue; // @synthesize internalQueue=_internalQueue;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) CDUnknownBlockType routePortChangeHandler; // @synthesize routePortChangeHandler=_routePortChangeHandler;
 @property(copy, nonatomic) CDUnknownBlockType automaticFlushHandler; // @synthesize automaticFlushHandler=_automaticFlushHandler;
 @property(copy, nonatomic) CDUnknownBlockType statusChangeHandler; // @synthesize statusChangeHandler=_statusChangeHandler;
-- (void).cxx_destruct;
 - (void)updateCurrentRoutePortDescription:(CDUnknownBlockType)arg1;
 - (void)handleMediaServicesWereReset:(id)arg1;
 - (void)handleMediaServicesWereLost:(id)arg1;

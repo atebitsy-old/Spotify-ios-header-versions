@@ -17,11 +17,11 @@
     NSURL *_link;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *link; // @synthesize link=_link;
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followLogger; // @synthesize followLogger=_followLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)style;

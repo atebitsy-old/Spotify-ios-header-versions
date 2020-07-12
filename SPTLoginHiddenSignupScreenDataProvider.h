@@ -14,8 +14,8 @@
 }
 
 + (id)generateRandomPassword;
-@property(retain, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 - (id)providePassword;
 - (id)defaultGender;
 - (id)supplyDataForHiddenScreens:(id)arg1;

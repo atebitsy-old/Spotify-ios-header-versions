@@ -17,10 +17,10 @@
     NSLayoutConstraint *_nextButtonBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *nextButtonBottomConstraint; // @synthesize nextButtonBottomConstraint=_nextButtonBottomConstraint;
 @property(readonly, nonatomic) GLUEGradientView *fadeGradientView; // @synthesize fadeGradientView=_fadeGradientView;
 @property(readonly, nonatomic) GLUEButton *nextButton; // @synthesize nextButton=_nextButton;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)setUpConstraints;

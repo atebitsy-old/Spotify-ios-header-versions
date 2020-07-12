@@ -19,10 +19,10 @@
     id <SPTFreeTierPresentationModalPresenter> _modalPresenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierPresentationModalPresenter> modalPresenter; // @synthesize modalPresenter=_modalPresenter;
 @property(retain, nonatomic) SPTCreatePlaylistGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTCreatePlaylistViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)dealloc;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

@@ -14,9 +14,9 @@
     id <SPTCarDetector> _carDetector;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (_Bool)isPodcastFeatureEnabled;
 - (_Bool)isVideoFeatureEnabled;
 - (id)queryParameters;

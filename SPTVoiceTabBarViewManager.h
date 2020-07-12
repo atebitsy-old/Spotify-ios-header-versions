@@ -19,10 +19,10 @@
     UILongPressGestureRecognizer *_longPressGestureRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
 @property(readonly, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak id <SPTVoiceTabBarViewManagerDelegate> tabBarViewManagerDelegate; // @synthesize tabBarViewManagerDelegate=_tabBarViewManagerDelegate;
-- (void).cxx_destruct;
 - (id)tabBarContainerViewController;
 - (void)didChangeRootViewOfMetaViewController:(id)arg1;
 - (id)getSearchTabBarButtonItemView;

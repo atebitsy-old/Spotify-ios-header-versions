@@ -29,13 +29,13 @@
 + (struct UIEdgeInsets)sectionInsetsForModel:(id)arg1 theme:(id)arg2;
 + (id)subtitleFromModel:(id)arg1;
 + (double)headerHeightForModel:(id)arg1 theme:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *backgroundGradientLayer; // @synthesize backgroundGradientLayer=_backgroundGradientLayer;
 @property(retain, nonatomic) SPTImageBlurView *backgroundImageView; // @synthesize backgroundImageView=_backgroundImageView;
 @property(nonatomic) struct CGSize itemSize; // @synthesize itemSize=_itemSize;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) GLUESectionHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (id)getOrCreateBackgroundImageBlurView;
 - (id)headerViewStyleForModel:(id)arg1;
@@ -52,8 +52,8 @@
 @property(nonatomic) __weak id <UICollectionViewDragDelegate> dragDelegate;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)configureWithModel:(id)arg1;

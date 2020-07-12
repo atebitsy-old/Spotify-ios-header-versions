@@ -6,20 +6,20 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSObject, NSString;
-@protocol OS_dispatch_queue, SPTKeepAlivePersistentConnectionsToken, SPTNetworkConnectivityControllerObserver;
+@class NSString, OS_dispatch_queue;
+@protocol SPTKeepAlivePersistentConnectionsToken, SPTNetworkConnectivityControllerObserver;
 
 @protocol SPTNetworkConnectivityController <NSObject>
-@property(readonly, nonatomic) long long connectionType;
-@property(readonly, nonatomic) _Bool allowSyncOver3G;
-@property(readonly, nonatomic) _Bool forcedOffline;
 - (_Bool)isDisconnectedOrForcedOffline;
 - (_Bool)isOfflineType:(long long)arg1;
 - (void)removeObserver:(id <SPTNetworkConnectivityControllerObserver>)arg1;
-- (void)addObserver:(id <SPTNetworkConnectivityControllerObserver>)arg1 on:(NSObject<OS_dispatch_queue> *)arg2;
+- (void)addObserver:(id <SPTNetworkConnectivityControllerObserver>)arg1 on:(OS_dispatch_queue *)arg2;
 - (id <SPTKeepAlivePersistentConnectionsToken>)keepAlivePersistentConnectionsWithReason:(NSString *)arg1;
 - (void)setAllowSyncOver3G:(_Bool)arg1 callback:(void (^)(void))arg2;
 - (void)setForcedOffline:(_Bool)arg1 callback:(void (^)(void))arg2;
 - (void)invalidate;
+@property(nonatomic, readonly) long long connectionType;
+@property(nonatomic, readonly) _Bool allowSyncOver3G;
+@property(nonatomic, readonly) _Bool forcedOffline;
 @end
 

@@ -20,13 +20,13 @@
     double _badgeIconRadiusScale;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double badgeIconRadiusScale; // @synthesize badgeIconRadiusScale=_badgeIconRadiusScale;
 @property(nonatomic) double badgeIconOffsetMultiplier; // @synthesize badgeIconOffsetMultiplier=_badgeIconOffsetMultiplier;
 @property(copy, nonatomic) UIColor *badgeIconColor; // @synthesize badgeIconColor=_badgeIconColor;
 @property(nonatomic) double badgeRadiusScale; // @synthesize badgeRadiusScale=_badgeRadiusScale;
 @property(copy, nonatomic) UIColor *badgeBackgroundColor; // @synthesize badgeBackgroundColor=_badgeBackgroundColor;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToEntityImageStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

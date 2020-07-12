@@ -20,12 +20,12 @@
     double _referenceCellHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double referenceCellHeight; // @synthesize referenceCellHeight=_referenceCellHeight;
 @property(nonatomic) double layoutHeaderHeight; // @synthesize layoutHeaderHeight=_layoutHeaderHeight;
 @property(retain, nonatomic) SPTHomeMixFamilyPileConfigurator *facePilesConfigurator; // @synthesize facePilesConfigurator=_facePilesConfigurator;
 @property(retain, nonatomic) SPTHomeMixWelcomeViewModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (_Bool)collectionView:(id)arg1 shouldSelectItemAtIndexPath:(id)arg2;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;

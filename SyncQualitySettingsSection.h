@@ -20,12 +20,12 @@
 
 + (id)productState;
 + (void)setProductState:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(readonly, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
-- (void).cxx_destruct;
 - (unsigned long long)indexForBitrateSetting:(long long)arg1;
 - (long long)bitrateSettingForIndex:(unsigned long long)arg1;
 - (id)subtitleForChoiceIndex:(long long)arg1;

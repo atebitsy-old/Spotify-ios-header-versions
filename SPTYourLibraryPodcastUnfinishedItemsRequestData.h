@@ -22,6 +22,7 @@
     NSString *_requestActionType;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *requestActionType; // @synthesize requestActionType=_requestActionType;
 @property(copy, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
 @property(copy, nonatomic) NSArray *sortDescriptors; // @synthesize sortDescriptors=_sortDescriptors;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) NSSortDescriptor *sortDescriptor; // @synthesize sortDescriptor=_sortDescriptor;
 @property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
 @property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isGrouped) _Bool grouped;
 @property(readonly, copy, nonatomic) NSString *requestAction;
 - (void)addAbsoluteTolerance:(id)arg1 relativeTolerance:(id)arg2 toString:(id)arg3;

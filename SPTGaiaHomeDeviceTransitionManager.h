@@ -25,6 +25,7 @@
     SPTGaiaHomeDeviceLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool connectedToHomeDevice; // @synthesize connectedToHomeDevice=_connectedToHomeDevice;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTGaiaSettingsProvider> settingsProvider; // @synthesize settingsProvider=_settingsProvider;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceTriggerManager *triggerManager; // @synthesize triggerManager=_triggerManager;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
-- (void).cxx_destruct;
 - (void)connectManager:(id)arg1 activeDeviceDidChange:(id)arg2;
 - (void)homeDeviceTransitionCancelled;
 - (void)homeDeviceTransitionTriggered:(id)arg1;

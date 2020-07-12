@@ -16,8 +16,8 @@
 }
 
 + (id)imagesWithArrayOfURIs:(id)arg1;
-@property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 - (_Bool)isPreviewable;
 - (id)imageURL;
 - (id)initWithURLString:(id)arg1;

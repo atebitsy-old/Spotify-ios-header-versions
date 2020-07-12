@@ -17,10 +17,10 @@
     SPTSignupRequestProvider *_requestProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSignupRequestProvider *requestProvider; // @synthesize requestProvider=_requestProvider;
 @property(retain, nonatomic) SPTSignupResponseProcessor *responseProcessor; // @synthesize responseProcessor=_responseProcessor;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)validateObject:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
 - (id)validationRequestFromObject:(id)arg1 requestProvider:(id)arg2;
 - (id)initWithDataLoader:(id)arg1 responseProcessor:(id)arg2 requestProvider:(id)arg3;

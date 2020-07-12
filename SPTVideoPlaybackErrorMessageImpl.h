@@ -21,13 +21,13 @@
     NSString *_underlyingErrorComment;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *underlyingErrorComment; // @synthesize underlyingErrorComment=_underlyingErrorComment;
 @property(retain, nonatomic) NSError *underlyingError; // @synthesize underlyingError=_underlyingError;
 @property(copy, nonatomic) NSString *errorComment; // @synthesize errorComment=_errorComment;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
-- (void).cxx_destruct;
 - (id)initWithIdentity:(id)arg1 featureIdentifier:(id)arg2 error:(id)arg3 errorComment:(id)arg4 underlyingError:(id)arg5 underlyingErrorComment:(id)arg6;
 
 // Remaining properties

@@ -18,10 +18,10 @@
     unsigned long long _unrangedTracksLength;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long unrangedTracksLength; // @synthesize unrangedTracksLength=_unrangedTracksLength;
 @property(copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(retain, nonatomic) id <SPTEditPlaylistModelEntityMetadataFields> metadata; // @synthesize metadata=_metadata;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

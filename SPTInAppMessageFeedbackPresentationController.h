@@ -22,6 +22,7 @@
     SPTInAppMessageServiceLogger *_serviceLogger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool feedbackOptionsSet; // @synthesize feedbackOptionsSet=_feedbackOptionsSet;
 @property(retain, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
 @property(retain, nonatomic) UIWindow *feedbackWindow; // @synthesize feedbackWindow=_feedbackWindow;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(copy, nonatomic) NSDictionary *messageInformation; // @synthesize messageInformation=_messageInformation;
 @property(retain, nonatomic) NSMutableArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
-- (void).cxx_destruct;
 - (void)didSelectContextMenuAction:(id)arg1;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (void)setFeedbackOptions:(id)arg1;

@@ -19,11 +19,11 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) SPTLoginDelayedSignupGuestAccountTracker *tracker; // @synthesize tracker=_tracker;
 @property(retain, nonatomic) id <SPTLoginKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
-- (void).cxx_destruct;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (void)deferCredentialsWritingUntilOnlineLogin;
 - (void)writeCredentials;

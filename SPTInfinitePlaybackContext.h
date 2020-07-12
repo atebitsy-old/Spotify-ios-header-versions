@@ -14,9 +14,9 @@
     SPTPlayerState *_initiatingState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPlayerState *initiatingState; // @synthesize initiatingState=_initiatingState;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (id)initWithURI:(id)arg1 initiatingState:(id)arg2;
 
 @end

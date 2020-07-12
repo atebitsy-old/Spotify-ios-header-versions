@@ -9,7 +9,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSpotifyAppProtocolServiceImplementation;
-@protocol GaiaFeature, SPTAuthService, SPTExternalIntegrationPlatformService, SPTSessionService;
+@protocol GaiaFeature, SPTAccessoryManagerSessionService, SPTAuthService, SPTExternalIntegrationPlatformService, SPTSessionService;
 
 @interface SPTSpotifyAppProtocolSessionServiceImplementation : NSObject <SPTService>
 {
@@ -18,15 +18,17 @@
     id <GaiaFeature> _gaiaFeature;
     id <SPTSessionService> _sessionService;
     id <SPTAuthService> _authService;
+    id <SPTAccessoryManagerSessionService> _accessorySessionService;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTAccessoryManagerSessionService> accessorySessionService; // @synthesize accessorySessionService=_accessorySessionService;
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(readonly, nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlatformService> externalIntegrationPlatformService; // @synthesize externalIntegrationPlatformService=_externalIntegrationPlatformService;
 @property(readonly, nonatomic) __weak SPTSpotifyAppProtocolServiceImplementation *appProtocolService; // @synthesize appProtocolService=_appProtocolService;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

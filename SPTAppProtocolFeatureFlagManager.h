@@ -19,11 +19,11 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> appProtocolBackgroundFeatureFlagSignal; // @synthesize appProtocolBackgroundFeatureFlagSignal=_appProtocolBackgroundFeatureFlagSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic, getter=isBackgroundStateEnabled) _Bool backgroundStateEnabled; // @synthesize backgroundStateEnabled=_backgroundStateEnabled;
-- (void).cxx_destruct;
 - (id)featureFlagSignalWithABBAKey:(id)arg1 settingsItemTitle:(id)arg2 settingsItemDescription:(id)arg3;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)removeFeatureFlagObserver:(id)arg1;

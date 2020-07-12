@@ -19,10 +19,10 @@
     unsigned long long _state;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
-- (void).cxx_destruct;
 - (void)updateConnectivityState;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;

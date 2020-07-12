@@ -15,8 +15,8 @@
     GLUELabelStyle *_titleLabelStyle;
 }
 
-@property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 - (void).cxx_destruct;
+@property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

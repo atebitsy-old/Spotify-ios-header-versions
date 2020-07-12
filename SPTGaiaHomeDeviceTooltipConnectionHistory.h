@@ -14,8 +14,8 @@
 }
 
 + (id)deepMutableCopyFromData:(id)arg1;
-@property(retain, nonatomic) NSMutableDictionary *internalRepresentation; // @synthesize internalRepresentation=_internalRepresentation;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *internalRepresentation; // @synthesize internalRepresentation=_internalRepresentation;
 - (id)filteredArrayFromArrayOfDates:(id)arg1 andLimitDate:(id)arg2;
 @property(readonly, copy, nonatomic) NSDictionary *rawData;
 - (unsigned long long)numberOfConnectionsForDeviceIdentifier:(id)arg1;

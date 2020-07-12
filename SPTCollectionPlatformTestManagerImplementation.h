@@ -31,6 +31,7 @@
     id <SPTNowPlayingTestManager> _nowPlayingTestManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNowPlayingTestManager> nowPlayingTestManager; // @synthesize nowPlayingTestManager=_nowPlayingTestManager;
 @property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
 @property(nonatomic, getter=isMadeForEmployeeEnabled) _Bool madeForEmployeeEnabled; // @synthesize madeForEmployeeEnabled=_madeForEmployeeEnabled;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
-- (void).cxx_destruct;
 - (id)objectForKeyedSubscript:(id)arg1;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
 @property(readonly, nonatomic, getter=isShowLikeActionInNPVEnabled) _Bool showLikeActionInNPVEnabled;

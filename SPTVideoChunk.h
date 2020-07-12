@@ -18,10 +18,10 @@
 }
 
 + (id)videoChunkWithData:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSData *data; // @synthesize data=_data;
 @property(nonatomic) unsigned long long startPosition; // @synthesize startPosition=_startPosition;
 @property(copy, nonatomic) NSString *key; // @synthesize key=_key;
-- (void).cxx_destruct;
 - (id)videoChunkByStartPosition:(unsigned long long)arg1 length:(unsigned long long)arg2;
 - (id)videoChunkByMergingChunk:(id)arg1;
 @property(readonly, nonatomic) unsigned long long length;

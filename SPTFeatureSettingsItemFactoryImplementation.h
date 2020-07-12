@@ -20,12 +20,12 @@
     NSMapTable *_sharedPageStorage;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMapTable *sharedPageStorage; // @synthesize sharedPageStorage=_sharedPageStorage;
 @property(readonly, nonatomic) id <SPTFeatureSettingsPageRegistry> registry; // @synthesize registry=_registry;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(readonly, nonatomic) id <SPTSettingsDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (id)itemWithLabel:(id)arg1 description:(id)arg2 UIProvider:(id)arg3;
 - (id)groupItemWithTitle:(id)arg1 description:(id)arg2 items:(id)arg3 presentAsSubPage:(_Bool)arg4;
 - (id)subPageItemWithLabel:(id)arg1 description:(id)arg2 factory:(CDUnknownBlockType)arg3;

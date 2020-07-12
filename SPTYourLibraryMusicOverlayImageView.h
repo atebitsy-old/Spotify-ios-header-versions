@@ -18,13 +18,13 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(retain, nonatomic) SPTYourLibraryMusicOverlayImageViewStateStyle *currentStyle; // @synthesize currentStyle=_currentStyle;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) UIView *overlayView; // @synthesize overlayView=_overlayView;
 @property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)applyStateStyle:(id)arg1;
 - (void)applyOverlayMask:(long long)arg1 size:(struct CGSize)arg2;
 - (void)setOverlayIcon:(long long)arg1;

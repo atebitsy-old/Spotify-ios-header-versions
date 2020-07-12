@@ -18,12 +18,12 @@
     SPTAssistedCurationCardStyle *_cardStyle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAssistedCurationCardStyle *cardStyle; // @synthesize cardStyle=_cardStyle;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
 @property(readonly, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
 @property(nonatomic) __weak id <SPTAssistedCurationCardCellConfiguratorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct CGPoint)locationInCollectionForButton:(id)arg1;
 - (id)indexPathForButton:(id)arg1;
 - (id)indexPathForCell:(id)arg1;

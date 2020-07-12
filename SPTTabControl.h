@@ -15,10 +15,10 @@
     NSArray *_labelTitles;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool labelsReplaced; // @synthesize labelsReplaced=_labelsReplaced;
 @property(retain, nonatomic) NSArray *labelTitles; // @synthesize labelTitles=_labelTitles;
 @property(retain, nonatomic) CALayer *highlightLayer; // @synthesize highlightLayer=_highlightLayer;
-- (void).cxx_destruct;
 - (void)repositionHighlight;
 - (void)setSelectedSegmentIndex:(long long)arg1;
 - (void)layoutSubviews;

@@ -19,11 +19,11 @@
     struct CGSize _imageSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isAudioPlusBanner; // @synthesize isAudioPlusBanner=_isAudioPlusBanner;
 @property(readonly, nonatomic) NSString *displayReason; // @synthesize displayReason=_displayReason;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
-- (void).cxx_destruct;
 - (id)imageMetadata:(id)arg1;
 - (id)parseDisplayReason:(id)arg1;
 - (id)parseImageURL:(id)arg1;

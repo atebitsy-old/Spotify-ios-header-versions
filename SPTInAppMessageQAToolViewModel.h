@@ -23,6 +23,7 @@
     NSMutableDictionary *_languagesAndCountriesDictionary;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *languagesAndCountriesDictionary; // @synthesize languagesAndCountriesDictionary=_languagesAndCountriesDictionary;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) SPTProgressView *loadingIndicator; // @synthesize loadingIndicator=_loadingIndicator;
 @property(retain, nonatomic) SPTInAppMessageQAToolConfigurationsController *qaToolConfigurationsController; // @synthesize qaToolConfigurationsController=_qaToolConfigurationsController;
 @property(nonatomic) __weak id <SPTInAppMessageQAToolViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setupLanguagesAndCountriesDictionaryFromData:(id)arg1;
 - (id)localesFromData:(id)arg1;
 - (id)getLanguageAndCountryFromLocale:(id)arg1;

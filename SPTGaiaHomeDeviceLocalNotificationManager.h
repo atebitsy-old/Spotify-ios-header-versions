@@ -26,6 +26,7 @@
     SPTGaiaConnectDevice *_notificationHomeDevice;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaConnectDevice *notificationHomeDevice; // @synthesize notificationHomeDevice=_notificationHomeDevice;
 @property(nonatomic) _Bool didRespondToNotification; // @synthesize didRespondToNotification=_didRespondToNotification;
 @property(copy, nonatomic) NSDictionary *actionIdentifierMap; // @synthesize actionIdentifierMap=_actionIdentifierMap;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) UNUserNotificationCenter *userNotificationCenter; // @synthesize userNotificationCenter=_userNotificationCenter;
 @property(readonly, nonatomic) id <SPTPushMessagingRegistrar> pushMessagingRegistrar; // @synthesize pushMessagingRegistrar=_pushMessagingRegistrar;
 @property(nonatomic) __weak id <SPTGaiaHomeDeviceLocalNotificationHandler> homeDeviceLocalNotificationHandler; // @synthesize homeDeviceLocalNotificationHandler=_homeDeviceLocalNotificationHandler;
-- (void).cxx_destruct;
 - (unsigned long long)notificationTypeFromNotification:(id)arg1;
 - (unsigned long long)actionTypeFromNotificationResponse:(id)arg1;
 - (void)handleNotificationResponse:(id)arg1;

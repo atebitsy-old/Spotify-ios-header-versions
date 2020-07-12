@@ -24,9 +24,9 @@
 + (double)cardContainerHeightForRows:(unsigned long long)arg1 theme:(id)arg2;
 + (double)cardContainerHeightForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 horizontalSizeClass:(long long)arg3 theme:(id)arg4;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 sizeClass:(long long)arg3 theme:(id)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;
-- (void).cxx_destruct;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;

@@ -16,10 +16,10 @@
 }
 
 + (id)messageWithSource:(id)arg1 link:(id)arg2 uri:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *uriValue; // @synthesize uriValue=_uriValue;
 @property(copy, nonatomic) NSString *linkValue; // @synthesize linkValue=_linkValue;
 @property(copy, nonatomic) NSString *sourceValue; // @synthesize sourceValue=_sourceValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

@@ -18,10 +18,10 @@
     SPTFeatureSettingsItem *_settingsItem;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFeatureSettingsItem *settingsItem; // @synthesize settingsItem=_settingsItem;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> defaultSignal; // @synthesize defaultSignal=_defaultSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> combinedSignal; // @synthesize combinedSignal=_combinedSignal;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)logExposure;
 - (void)setInitialSettingItemState:(long long)arg1;

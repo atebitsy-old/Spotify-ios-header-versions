@@ -17,12 +17,12 @@
     UIView *_labelsContainer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *labelsContainer; // @synthesize labelsContainer=_labelsContainer;
 @property(retain, nonatomic) GLUEContextMenuAccessoryButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(retain, nonatomic) GLUELabel *datestampLabel; // @synthesize datestampLabel=_datestampLabel;
 @property(retain, nonatomic) GLUELabel *artistNameLabel; // @synthesize artistNameLabel=_artistNameLabel;
 @property(readonly, nonatomic) GLUEImageView *artistImageView; // @synthesize artistImageView=_artistImageView;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)setUpConstraints;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

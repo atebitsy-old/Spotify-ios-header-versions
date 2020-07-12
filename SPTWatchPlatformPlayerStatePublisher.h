@@ -23,13 +23,13 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) __weak SPTRadioPlaybackService *radioPlaybackService; // @synthesize radioPlaybackService=_radioPlaybackService;
 @property(readonly, nonatomic) id <SPTExternalIntegrationContentController> contentController; // @synthesize contentController=_contentController;
 @property(readonly, nonatomic) id <SPTVolumeAPI> volumeController; // @synthesize volumeController=_volumeController;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (void)decoratePlayerStateDictionary:(id)arg1 withMetadataForPlayerState:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)volumeUpdated:(id)arg1;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;

@@ -11,7 +11,7 @@
 #import "SPTCanvasContentLayerVideoPreloaderDelegate-Protocol.h"
 #import "SPTNowPlayingContainerIdleMonitorObserver-Protocol.h"
 
-@class NSString, SPTCanvasContentLayerImagePreloader, SPTCanvasContentLayerVideoPlayerLoader, SPTCanvasContentLayerVideoPreloader, SPTCanvasImageResolver, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager, SPTPlayerTrack;
+@class BMPlaybackRequestFactory, NSString, SPTCanvasContentLayerImagePreloader, SPTCanvasContentLayerVideoPlayerLoader, SPTCanvasContentLayerVideoPreloader, SPTCanvasImageResolver, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager, SPTPlayerTrack;
 @protocol SPTCanvasContentLayerViewControllerViewModelDelegate, SPTCanvasContentLayerViewControllerViewModelLoadDelegate, SPTCanvasIdleMonitorObserverDelegate, SPTCanvasModel, SPTLinkDispatcher, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
 
 @interface SPTCanvasContentLayerViewControllerViewModel : NSObject <SPTCanvasContentLayerVideoPlaybackObserverDelegate, SPTCanvasContentLayerVideoPreloaderDelegate, SPTCanvasContentLayerImagePreloaderDelegate, SPTNowPlayingContainerIdleMonitorObserver>
@@ -21,6 +21,7 @@
     id <SPTCanvasContentLayerViewControllerViewModelDelegate> _delegate;
     id <SPTCanvasContentLayerViewControllerViewModelLoadDelegate> _loadDelegate;
     id <SPTVideoFeaturePlayerFactory> _videoPlayerFactory;
+    BMPlaybackRequestFactory *_playbackRequestFactory;
     id <SPTVideoURLAssetLoader> _videoAssetLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTCanvasImageResolver *_imageResolver;
@@ -34,6 +35,7 @@
 }
 
 + (_Bool)hasVideoContent:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTCanvasIdleMonitorObserverDelegate> idleMonitorDelegate; // @synthesize idleMonitorDelegate=_idleMonitorDelegate;
 @property(retain, nonatomic) SPTCanvasContentLayerVideoPlayerLoader *videoPlayerLoader; // @synthesize videoPlayerLoader=_videoPlayerLoader;
 @property(retain, nonatomic) SPTCanvasContentLayerVideoPreloader *videoPreloader; // @synthesize videoPreloader=_videoPreloader;
@@ -44,12 +46,12 @@
 @property(readonly, nonatomic) SPTCanvasImageResolver *imageResolver; // @synthesize imageResolver=_imageResolver;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTVideoURLAssetLoader> videoAssetLoader; // @synthesize videoAssetLoader=_videoAssetLoader;
+@property(readonly, nonatomic) BMPlaybackRequestFactory *playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
 @property(readonly, nonatomic) id <SPTVideoFeaturePlayerFactory> videoPlayerFactory; // @synthesize videoPlayerFactory=_videoPlayerFactory;
 @property(nonatomic) __weak id <SPTCanvasContentLayerViewControllerViewModelLoadDelegate> loadDelegate; // @synthesize loadDelegate=_loadDelegate;
 @property(nonatomic) __weak id <SPTCanvasContentLayerViewControllerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
-- (void).cxx_destruct;
 - (void)idlePeriodDidEnd;
 - (void)idlePeriodDidBegin;
 @property(readonly, nonatomic) _Bool hasVideoContent;
@@ -77,7 +79,7 @@
 - (void)loadAvatarImage;
 - (id)preloadContent;
 - (void)navigateToArtistattribution;
-- (id)initWithCanvasModel:(id)arg1 track:(id)arg2 videoPlayerFactory:(id)arg3 videoAssetLoader:(id)arg4 imageResolver:(id)arg5 linkDispatcher:(id)arg6 idleMonitorDelegate:(id)arg7 tooltipManager:(id)arg8 testManager:(id)arg9;
+- (id)initWithCanvasModel:(id)arg1 track:(id)arg2 videoPlayerFactory:(id)arg3 playbackRequestFactory:(id)arg4 videoAssetLoader:(id)arg5 imageResolver:(id)arg6 linkDispatcher:(id)arg7 idleMonitorDelegate:(id)arg8 tooltipManager:(id)arg9 testManager:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

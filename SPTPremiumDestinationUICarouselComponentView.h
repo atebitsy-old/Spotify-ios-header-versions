@@ -29,6 +29,7 @@
 }
 
 + (id)hubComponentViewFromCell:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isViewAppearing; // @synthesize isViewAppearing=_isViewAppearing;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UIPageControl *pageControl; // @synthesize pageControl=_pageControl;
@@ -38,15 +39,14 @@
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTPremiumDestinationUICarouselItemSizeCalculator> itemSizeCalculator; // @synthesize itemSizeCalculator=_itemSizeCalculator;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (struct CGSize)calculateItemSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (double)minimumLineSpacingForItemSize:(struct CGSize)arg1 containerSize:(struct CGSize)arg2 sectionInsets:(struct UIEdgeInsets)arg3 style:(id)arg4;
 - (struct UIEdgeInsets)sectionInsetsForItemSize:(struct CGSize)arg1 containerSize:(struct CGSize)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;

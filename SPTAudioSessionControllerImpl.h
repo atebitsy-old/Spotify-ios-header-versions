@@ -35,6 +35,7 @@
     id <SPTFeatureFlagSignal> _avFoundationDriverEnabledSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, setter=wakewordModeEnabled:) _Bool enableAudioSessionForWakeword; // @synthesize enableAudioSessionForWakeword=_enableAudioSessionForWakeword;
 @property(nonatomic, getter=isAVFoundationDriverEnabled) _Bool avFoundationDriverEnabled; // @synthesize avFoundationDriverEnabled=_avFoundationDriverEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> avFoundationDriverEnabledSignal; // @synthesize avFoundationDriverEnabledSignal=_avFoundationDriverEnabledSignal;
@@ -51,7 +52,6 @@
 @property(retain, nonatomic) id <SPTAudioDriverController> audioDriverController; // @synthesize audioDriverController=_audioDriverController;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTAudioSessionControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)refreshAudioSessionConfiguration:(id *)arg1;
 - (id)observerNotifierProxy;
 - (void)removeObserver:(id)arg1;

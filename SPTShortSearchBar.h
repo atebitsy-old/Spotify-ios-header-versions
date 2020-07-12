@@ -17,8 +17,8 @@
 }
 
 + (id)searchBar;
-@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (id)textField;
 - (void)setPlaceholder:(id)arg1;
 - (void)setupDefaultSearchIcons;

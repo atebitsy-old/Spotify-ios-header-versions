@@ -32,6 +32,7 @@
     struct CGSize _requestedSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTScannablesDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) UIImage *entityImage; // @synthesize entityImage=_entityImage;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) NSDate *creationDate; // @synthesize creationDate=_creationDate;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) _Bool allowUpscaling; // @synthesize allowUpscaling=_allowUpscaling;
-- (void).cxx_destruct;
 - (void)processImage;
 - (void)scannablesDataSource:(id)arg1 didFinishFetchingScannable:(id)arg2;
 - (void)scannablesDataSource:(id)arg1 didFailFetchingScannableWithError:(id)arg2;

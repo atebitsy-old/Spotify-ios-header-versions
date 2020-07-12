@@ -31,6 +31,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) FollowModel *lastBanArtistTaskModel; // @synthesize lastBanArtistTaskModel=_lastBanArtistTaskModel;
 @property(retain, nonatomic) FollowModel *lastFollowArtistTaskModel; // @synthesize lastFollowArtistTaskModel=_lastFollowArtistTaskModel;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
@@ -45,7 +46,6 @@
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)provideBanArtistTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3;
 - (id)provideFollowArtistTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3;
 - (void)provideFollowModelForTargetURI:(id)arg1 logContext:(id)arg2 completion:(CDUnknownBlockType)arg3;

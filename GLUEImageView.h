@@ -25,6 +25,7 @@
     struct CGSize _currentImageSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize currentImageSize; // @synthesize currentImageSize=_currentImageSize;
 @property(retain, nonatomic) UIImage *currentImage; // @synthesize currentImage=_currentImage;
 @property(retain, nonatomic) NSURL *currentImageURL; // @synthesize currentImageURL=_currentImageURL;
@@ -34,7 +35,6 @@
 @property(nonatomic) double loadingDurationThreshold; // @synthesize loadingDurationThreshold=_loadingDurationThreshold;
 @property(copy, nonatomic) GLUEImageStyle *style; // @synthesize style=_style;
 @property(nonatomic) __weak id <GLUEImageViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)cancelLoading;
 - (void)setImageViewURL:(id)arg1 placeholderImage:(id)arg2 imageSize:(struct CGSize)arg3 animationPolicy:(long long)arg4 completed:(CDUnknownBlockType)arg5;

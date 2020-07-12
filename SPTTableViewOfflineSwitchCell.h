@@ -24,6 +24,7 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) GLUETableViewCellStyle *tableViewCellStyle; // @synthesize tableViewCellStyle=_tableViewCellStyle;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) SPTViewOfflineSwitch *offlineSwitchView; // @synthesize offlineSwitchView=_offlineSwitchView;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(nonatomic) __weak id <SPTOfflineSwitchDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)offlineSwitchViewDidAbortStateChange:(id)arg1;
 - (unsigned long long)offlineSwitchViewOfflineAvailability:(id)arg1;
 - (void)offlineSwitchViewDidChangeState:(id)arg1 isOn:(_Bool)arg2;

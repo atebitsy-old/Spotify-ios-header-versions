@@ -23,6 +23,7 @@
 }
 
 + (Class)layerClass;
+- (void).cxx_destruct;
 @property(retain, nonatomic) BMSubtitleLayouter *subtitleLayouter; // @synthesize subtitleLayouter=_subtitleLayouter;
 @property(retain, nonatomic) id <BMKVOController> kvoController; // @synthesize kvoController=_kvoController;
 @property(retain, nonatomic) SPTVideoApplicationStateObservable *appStateObservable; // @synthesize appStateObservable=_appStateObservable;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTVideoDisplayViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct CGRect videoRect; // @synthesize videoRect=_videoRect;
 @property(nonatomic, getter=isVideoDisabled) _Bool videoDisabled; // @synthesize videoDisabled=_videoDisabled;
-- (void).cxx_destruct;
 - (void)updateAvPlayerItem:(id)arg1 withSubtitleWidthPercentage:(double)arg2 fontPercentage:(double)arg3;
 - (void)layoutSubtitles;
 @property(readonly, copy) NSString *description;

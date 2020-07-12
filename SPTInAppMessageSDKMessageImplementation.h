@@ -21,6 +21,7 @@
     NSString *_messageFormat;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isFullScreen) _Bool fullScreen; // @synthesize fullScreen=_fullScreen;
 @property(readonly, copy, nonatomic) NSString *messageFormat; // @synthesize messageFormat=_messageFormat;
 @property(readonly, copy, nonatomic) NSDictionary *clickActions; // @synthesize clickActions=_clickActions;
@@ -28,7 +29,6 @@
 @property(readonly, copy, nonatomic) NSString *uuid; // @synthesize uuid=_uuid;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, copy, nonatomic) NSString *html; // @synthesize html=_html;
-- (void).cxx_destruct;
 - (id)initWithHTML:(id)arg1 identifier:(id)arg2 uuid:(id)arg3 impressionURL:(id)arg4 clickActions:(id)arg5 fullScreen:(_Bool)arg6 messageFormat:(id)arg7;
 
 // Remaining properties

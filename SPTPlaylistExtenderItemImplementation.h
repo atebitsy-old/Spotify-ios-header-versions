@@ -23,6 +23,7 @@
     NSURL *_imageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool is19PlusOnly; // @synthesize is19PlusOnly=_is19PlusOnly;
 @property(readonly, nonatomic, getter=isRatedExplicit) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
 @property(readonly, copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
@@ -32,7 +33,6 @@
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, copy, nonatomic) NSURL *artistURL; // @synthesize artistURL=_artistURL;
 @property(readonly, copy, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

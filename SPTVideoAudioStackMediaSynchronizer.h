@@ -22,13 +22,13 @@
     id <BMPlaybackIdentity> _identity;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
 @property(nonatomic) double lastSeekDelay; // @synthesize lastSeekDelay=_lastSeekDelay;
 @property(retain, nonatomic) id <SPTAudioPlayerMediaClock> audioClock; // @synthesize audioClock=_audioClock;
 @property(retain, nonatomic) id <SPTAudioPlayerMediaClockService> audioPlayerMediaClockService; // @synthesize audioPlayerMediaClockService=_audioPlayerMediaClockService;
 @property(retain, nonatomic) NSTimer *pollingTimer; // @synthesize pollingTimer=_pollingTimer;
 @property(copy, nonatomic) CDUnknownBlockType videoPlayerProvider; // @synthesize videoPlayerProvider=_videoPlayerProvider;
-- (void).cxx_destruct;
 - (void)didCreatePlaybackInBackground:(_Bool)arg1 timestamp:(double)arg2;
 - (void)audioPlayerMediaClock:(id)arg1 didStopTrackingPositionOfTrackURI:(id)arg2;
 - (void)audioPlayerMediaClock:(id)arg1 didStartTrackingPositionOfTrackURI:(id)arg2;

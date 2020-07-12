@@ -40,6 +40,7 @@
     SPTLoginDbManager *_databaseManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool userDidSignUp; // @synthesize userDidSignUp=_userDidSignUp;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
 @property(readonly, nonatomic) SPTLoginTestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
@@ -64,7 +65,6 @@
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(nonatomic) __weak id <SPTLoginPhoneNumberLoginStateDelegate> phoneNumberLoginDelegate; // @synthesize phoneNumberLoginDelegate=_phoneNumberLoginDelegate;
 @property(retain, nonatomic) NSError *lastConnectionError; // @synthesize lastConnectionError=_lastConnectionError;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)sessionObserverDidReceiveSiARevocationUpdate;
 - (void)sessionObserverDidReceiveAutoUpdate;

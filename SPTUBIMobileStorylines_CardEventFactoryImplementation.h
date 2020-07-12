@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithPosition:(long long)arg1 components:(id)arg2;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)longHitPauseWithItemToBePaused:(id)arg1;
 - (id)impression;
 - (id)gotoNextCardButtonFactory;

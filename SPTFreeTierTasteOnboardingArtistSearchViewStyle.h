@@ -28,6 +28,7 @@
     struct UIOffset _searchBarClearIconOffset;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistPickerOfflineViewStyle *offlineViewStyle; // @synthesize offlineViewStyle=_offlineViewStyle;
 @property(nonatomic) long long searchBarKeyboardAppearance; // @synthesize searchBarKeyboardAppearance=_searchBarKeyboardAppearance;
 @property(nonatomic) struct UIOffset searchBarClearIconOffset; // @synthesize searchBarClearIconOffset=_searchBarClearIconOffset;
@@ -41,7 +42,6 @@
 @property(nonatomic) unsigned long long searchBarStyle; // @synthesize searchBarStyle=_searchBarStyle;
 @property(copy, nonatomic) SPTFreeTierTasteOnboardingArtistSearchCollectionViewLayoutStyle<GLUEStyle> *collectionViewLayoutStyle; // @synthesize collectionViewLayoutStyle=_collectionViewLayoutStyle;
 @property(copy, nonatomic) GLUECollectionViewStyle *collectionViewStyle; // @synthesize collectionViewStyle=_collectionViewStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

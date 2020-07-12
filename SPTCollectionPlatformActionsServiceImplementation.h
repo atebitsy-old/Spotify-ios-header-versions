@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCollectionPlatformLoggerImplementation *collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
-- (void).cxx_destruct;
 - (id)provideCollectionLogger;
 - (id)provideAddAllTracksAlbumActionTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 contextURL:(id)arg4;
 - (id)provideBanActionTaskForURL:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 contextURL:(id)arg4;

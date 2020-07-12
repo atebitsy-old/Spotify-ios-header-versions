@@ -6,14 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSNumber, SPTPlayOptions, SPTPlayOrigin;
-@protocol SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldRowId;
+@class NSNumber, NSString, SPTPlayOptions, SPTPlayOrigin;
+@protocol SPTPlaylistPlatformFieldRowId><SPTPlaylistPlatformFieldURL;
 
 @protocol SPTFreeTierPlaylistPlayModel <NSObject>
 - (void)fetchPlayContextWithCompletion:(void (^)(SPTPlayerContext *, NSError *))arg1;
-- (void)playTrackEntity:(id <SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldRowId>)arg1 andPlayOrigin:(SPTPlayOrigin *)arg2 shuffleOverride:(NSNumber *)arg3;
-- (void)playWithPlayOptions:(SPTPlayOptions *)arg1 andPlayOrigin:(SPTPlayOrigin *)arg2;
-- (void)playWithPlayOrigin:(SPTPlayOrigin *)arg1;
-- (void)shufflePlayWithPlayOrigin:(SPTPlayOrigin *)arg1;
+- (void)playTrackEntity:(id <SPTPlaylistPlatformFieldRowId><SPTPlaylistPlatformFieldURL>)arg1 andPlayOrigin:(SPTPlayOrigin *)arg2 shuffleOverride:(NSNumber *)arg3 interactionId:(NSString *)arg4;
+- (void)playWithPlayOptions:(SPTPlayOptions *)arg1 andPlayOrigin:(SPTPlayOrigin *)arg2 interactionId:(NSString *)arg3;
+- (void)playWithPlayOrigin:(SPTPlayOrigin *)arg1 interactionId:(NSString *)arg2;
+- (void)shufflePlayWithPlayOrigin:(SPTPlayOrigin *)arg1 interactionId:(NSString *)arg2;
 @end
 

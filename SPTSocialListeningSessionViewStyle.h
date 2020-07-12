@@ -30,6 +30,7 @@
     GLUEButtonStyle *_seeListenersButtonStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEButtonStyle *seeListenersButtonStyle; // @synthesize seeListenersButtonStyle=_seeListenersButtonStyle;
 @property(copy, nonatomic) SPTListenTogetherBetaLabelStyle *betaLabelStyle; // @synthesize betaLabelStyle=_betaLabelStyle;
 @property(copy, nonatomic) GLUEButtonStyle *startSessionButtonStyle; // @synthesize startSessionButtonStyle=_startSessionButtonStyle;
@@ -46,7 +47,6 @@
 @property(copy, nonatomic) GLUELabelStyle *descriptionLabelStyle; // @synthesize descriptionLabelStyle=_descriptionLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningSessionViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

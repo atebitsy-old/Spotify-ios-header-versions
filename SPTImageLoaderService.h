@@ -22,6 +22,7 @@
     struct CGSize _maximumImageSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSHashTable *factories; // @synthesize factories=_factories;
 @property(retain, nonatomic) SPTImageLoaderCache *memoryCache; // @synthesize memoryCache=_memoryCache;
 @property(retain, nonatomic) SPTPersistentCache *persistentImageCache; // @synthesize persistentImageCache=_persistentImageCache;
@@ -30,7 +31,6 @@
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(nonatomic, getter=isDebugModeEnabled) _Bool debugModeEnabled; // @synthesize debugModeEnabled=_debugModeEnabled;
 @property(readonly, nonatomic) SPTImageLoaderRegistry *imageLoaderRegistry; // @synthesize imageLoaderRegistry=_imageLoaderRegistry;
-- (void).cxx_destruct;
 - (id)init;
 - (void)purgeMemoryCache;
 - (void)deleteItemNamed:(id)arg1 inDirectory:(unsigned long long)arg2;

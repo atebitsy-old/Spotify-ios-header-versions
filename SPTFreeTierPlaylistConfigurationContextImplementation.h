@@ -19,11 +19,11 @@
     NSURL *_playlistURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) id <SPTPageCreationContext> pageContext; // @synthesize pageContext=_pageContext;
 @property(readonly, copy, nonatomic) NSString *formatListType; // @synthesize formatListType=_formatListType;
 @property(readonly, copy, nonatomic) NSDictionary *formatListAttributes; // @synthesize formatListAttributes=_formatListAttributes;
-- (void).cxx_destruct;
 - (id)initWithPlaylistURL:(id)arg1 pageContext:(id)arg2 formatListType:(id)arg3 formatListAttributes:(id)arg4;
 
 // Remaining properties

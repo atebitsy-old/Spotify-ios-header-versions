@@ -33,6 +33,7 @@
     struct CGRect _cachedBounds;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGRect cachedBounds; // @synthesize cachedBounds=_cachedBounds;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *duration; // @synthesize duration=_duration;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *connectButton; // @synthesize connectButton=_connectButton;
@@ -50,7 +51,6 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) SPTNowPlayingSideBarModeResolver *modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(retain, nonatomic) id <SPTNowPlayingModeViewControllerRegistry> registry; // @synthesize registry=_registry;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)updateUIForMode:(long long)arg1;
 - (void)modeDidUpdate:(long long)arg1;

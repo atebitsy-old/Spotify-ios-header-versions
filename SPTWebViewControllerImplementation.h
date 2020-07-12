@@ -42,6 +42,7 @@
     id <SPTModalPresentationController> _modalPresentationController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
@@ -65,7 +66,6 @@
 @property(nonatomic) unsigned long long requestCount; // @synthesize requestCount=_requestCount;
 @property(readonly, nonatomic) NSURL *initialURL; // @synthesize initialURL=_initialURL;
 @property(nonatomic) __weak id <SPTWebViewControllerDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (id)authenticatedURLWithToken:(id)arg1;

@@ -17,10 +17,10 @@
     NSLayoutConstraint *_contentViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *contentViewHeightConstraint; // @synthesize contentViewHeightConstraint=_contentViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *contentViewWidthConstraint; // @synthesize contentViewWidthConstraint=_contentViewWidthConstraint;
 @property(copy, nonatomic) SPTHomeMixMemberPileViewStyle *currentStyle; // @synthesize currentStyle=_currentStyle;
-- (void).cxx_destruct;
 - (struct CGSize)intrinsicContentSize;
 - (void)glue_applyStyle:(id)arg1;
 - (id)initWithContentView:(id)arg1;

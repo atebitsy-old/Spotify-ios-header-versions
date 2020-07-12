@@ -18,10 +18,10 @@
     CDUnknownBlockType _mapper;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType mapper; // @synthesize mapper=_mapper;
 @property(readonly, copy, nonatomic) NSString *key; // @synthesize key=_key;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (void)localSettingsDidChange:(id)arg1;
 - (long long)calculateState;
 - (void)updateValue;

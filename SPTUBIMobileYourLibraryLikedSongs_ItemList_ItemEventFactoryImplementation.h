@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 reason:(id)arg3 components:(id)arg4;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)swipeRemoveLikeWithItemNoLongerLiked:(id)arg1;
 - (id)swipeAddItemToQueueWithItemToAddToQueue:(id)arg1;
 - (id)swipeLikeWithItemToBeLiked:(id)arg1;

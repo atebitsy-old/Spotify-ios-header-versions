@@ -20,6 +20,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTCanvasTooltipPresentationManager *presentationManager; // @synthesize presentationManager=_presentationManager;
 @property(readonly, nonatomic) SPTCanvasPlaybackSettingsActionFactory *canvasActionFactory; // @synthesize canvasActionFactory=_canvasActionFactory;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> trackChecker; // @synthesize trackChecker=_trackChecker;
 @property(readonly, nonatomic) id <SPContextMenuActionsFactory> contextMenuActionsFactory; // @synthesize contextMenuActionsFactory=_contextMenuActionsFactory;
 @property(readonly, nonatomic) id <SPTModerationServiceState> moderationServiceState; // @synthesize moderationServiceState=_moderationServiceState;
-- (void).cxx_destruct;
 - (void)registerCanvasPlaylist;
 - (void)registerCanvasPlaybackSettings;
 - (void)registerReportAbuseForNPVCanvasTracks;

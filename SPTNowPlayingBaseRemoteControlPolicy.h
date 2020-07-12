@@ -16,9 +16,9 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)notifyObserversThatPolicyDidChange;
 - (void)removeRemoteControlStateUpdateObserver:(id)arg1;
 - (void)addRemoteControlStateUpdateObserver:(id)arg1;

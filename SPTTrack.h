@@ -22,6 +22,7 @@
 }
 
 + (id)trackWithTrackInfo:(const struct TrackInfo *)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *imageURLs; // @synthesize imageURLs=_imageURLs;
 @property(readonly, nonatomic) _Bool isPremiumOnly; // @synthesize isPremiumOnly=_isPremiumOnly;
 @property(readonly, nonatomic) _Bool is19Plus; // @synthesize is19Plus=_is19Plus;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) SPTArtist *artist; // @synthesize artist=_artist;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)imageURLForSize:(int)arg1;
 - (id)initWithURL:(id)arg1 name:(id)arg2 artist:(id)arg3 album:(id)arg4 imageURLs:(id)arg5 previewFileId:(id)arg6 isExplicit:(_Bool)arg7 is19Plus:(_Bool)arg8 isPremiumOnly:(_Bool)arg9;
 

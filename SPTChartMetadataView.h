@@ -17,12 +17,12 @@
     UILabel *_subtitleLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) UILabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)init;

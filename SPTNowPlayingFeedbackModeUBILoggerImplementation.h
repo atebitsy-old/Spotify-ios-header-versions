@@ -32,9 +32,9 @@
     id <SPTUBIMobileNowPlayingViewFeedbackEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileNowPlayingViewFeedbackEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (void)logCloseButtonTapped;
 - (void)logGoToPlayContextButtonTappedWithContextURI:(id)arg1;
 - (void)logContextMenuButtonTapped;

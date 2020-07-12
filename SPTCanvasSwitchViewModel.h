@@ -19,13 +19,13 @@
     SPTCanvasLoggingService *_logService;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasLoggingService *logService; // @synthesize logService=_logService;
 @property(readonly, nonatomic) SPTCanvasTooltipPresentationManager *tooltipManager; // @synthesize tooltipManager=_tooltipManager;
 @property(readonly, nonatomic) SPTCanvasForceArtworkManager *forceArtworkManager; // @synthesize forceArtworkManager=_forceArtworkManager;
 @property(nonatomic) __weak id <SPTCanvasSwitchViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSString *trailingOptionTitle; // @synthesize trailingOptionTitle=_trailingOptionTitle;
 @property(readonly, nonatomic) NSString *leadingOptionTitle; // @synthesize leadingOptionTitle=_leadingOptionTitle;
-- (void).cxx_destruct;
 - (void)didTapTrailingOption;
 - (void)didTapLeadingOption;
 - (void)autoSelectOption;

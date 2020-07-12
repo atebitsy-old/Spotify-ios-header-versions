@@ -25,6 +25,7 @@
     NSLayoutConstraint *_ageRestrictionViewTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *ageRestrictionViewTrailingConstraint; // @synthesize ageRestrictionViewTrailingConstraint=_ageRestrictionViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *ageRestrictionViewLeadingConstraint; // @synthesize ageRestrictionViewLeadingConstraint=_ageRestrictionViewLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *syncStatusToAgeRestrictionViewConstraint; // @synthesize syncStatusToAgeRestrictionViewConstraint=_syncStatusToAgeRestrictionViewConstraint;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) GLUETrackMultipleAccessoriesViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUETrackAccessoryLabel *trackAccessoryLabel; // @synthesize trackAccessoryLabel=_trackAccessoryLabel;
 @property(retain, nonatomic) GLUEOfflineSyncStatusView *offlineSyncStatusView; // @synthesize offlineSyncStatusView=_offlineSyncStatusView;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (_Bool)shouldGroupAccessibilityChildren;
 @property(nonatomic) long long ageRestrictionViewType;

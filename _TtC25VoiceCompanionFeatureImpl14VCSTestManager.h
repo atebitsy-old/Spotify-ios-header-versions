@@ -9,12 +9,9 @@
 @interface _TtC25VoiceCompanionFeatureImpl14VCSTestManager : NSObject
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: remoteConfigurationProperties
     // Error parsing type: , name: experiment
     // Error parsing type: , name: entryPoint
-    // Error parsing type: , name: fullscreenEnabledSignal
-    // Error parsing type: , name: snackbarEnabledSignal
-    // Error parsing type: , name: homeThingEnabledSignal
-    // Error parsing type: , name: featureFlagFactory
 }
 
 - (void).cxx_destruct;

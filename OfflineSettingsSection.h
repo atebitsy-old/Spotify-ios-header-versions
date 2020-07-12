@@ -23,6 +23,7 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
@@ -31,7 +32,6 @@
 @property(nonatomic) _Bool showingGoOnlineWithinCell; // @synthesize showingGoOnlineWithinCell=_showingGoOnlineWithinCell;
 @property(retain, nonatomic) SPTSettingsTableViewCell *goOnlineWithinCell; // @synthesize goOnlineWithinCell=_goOnlineWithinCell;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *offlineModeCell; // @synthesize offlineModeCell=_offlineModeCell;
-- (void).cxx_destruct;
 - (_Bool)showsAvailable;
 - (id)footerText;
 - (id)cellForRow:(long long)arg1;

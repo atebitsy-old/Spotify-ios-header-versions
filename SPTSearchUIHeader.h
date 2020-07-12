@@ -24,6 +24,7 @@
 }
 
 + (struct CGSize)preferredSizeForTitle:(id)arg1 searchBarText:(id)arg2 leadingAccessoryImage:(id)arg3 trailingAccessoryImage:(id)arg4 style:(id)arg5;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIButton *trailingButton; // @synthesize trailingButton=_trailingButton;
 @property(readonly, nonatomic) UILabel *searchBarLabel; // @synthesize searchBarLabel=_searchBarLabel;
 @property(readonly, nonatomic) UIImageView *leadingImageView; // @synthesize leadingImageView=_leadingImageView;
@@ -35,7 +36,6 @@
 @property(copy, nonatomic) SPTSearchUIHeaderStyle *style; // @synthesize style=_style;
 @property(copy, nonatomic) CDUnknownBlockType onTrailingButtonPress; // @synthesize onTrailingButtonPress=_onTrailingButtonPress;
 @property(copy, nonatomic) CDUnknownBlockType onSearchBarPress; // @synthesize onSearchBarPress=_onSearchBarPress;
-- (void).cxx_destruct;
 - (void)trailingButtonPressed;
 - (void)searchBarPressed;
 - (void)updateSubviews;

@@ -18,11 +18,11 @@
     NSAttributedString *_actionAttributedTitle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSAttributedString *actionAttributedTitle; // @synthesize actionAttributedTitle=_actionAttributedTitle;
 @property(copy, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
 @property(nonatomic) long long actionIcon; // @synthesize actionIcon=_actionIcon;
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
-- (void).cxx_destruct;
 - (id)performAction;
 @property(readonly, nonatomic) NSAttributedString *attributedTitle;
 - (long long)icon;

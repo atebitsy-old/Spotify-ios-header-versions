@@ -16,8 +16,8 @@
     id <GLUETheme> _theme;
 }
 
-@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (id)initWithTheme:(id)arg1;
 - (id)createAudioPreviewButtonWithModel:(id)arg1 andStyle:(id)arg2;
 - (id)createAudioPreviewButtonWithModel:(id)arg1;

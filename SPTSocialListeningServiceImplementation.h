@@ -10,7 +10,7 @@
 #import "SPTSocialListeningService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSocialListeningDataLoader, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningEducationSlatePresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
-@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP14ProfileFeature17SPTProfileService_;
 
 @interface SPTSocialListeningServiceImplementation : NSObject <SPTOfflineModeStateObserver, SPTSocialListeningService>
 {
@@ -26,7 +26,7 @@
     id <SPTShareFeature> _shareFeature;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTURIDispatchService> _URIDispatchService;
-    id <_TtP16ProfileV2Feature19SPTProfileV2Service_> _profileService;
+    id <_TtP14ProfileFeature17SPTProfileService_> _profileService;
     id <SlateFeature> _slateService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTUBIService> _ubiService;
@@ -46,6 +46,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSocialListeningDataLoader *socialListeningDataLoader; // @synthesize socialListeningDataLoader=_socialListeningDataLoader;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) SPTSocialListeningDialogManager *dialogManager; // @synthesize dialogManager=_dialogManager;
@@ -62,7 +63,7 @@
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
-@property(nonatomic) __weak id <_TtP16ProfileV2Feature19SPTProfileV2Service_> profileService; // @synthesize profileService=_profileService;
+@property(nonatomic) __weak id <_TtP14ProfileFeature17SPTProfileService_> profileService; // @synthesize profileService=_profileService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
@@ -75,7 +76,6 @@
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlagService; // @synthesize featureFlagService=_featureFlagService;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)buildModel;
 - (id)buildDialogManager;

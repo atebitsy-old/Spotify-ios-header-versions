@@ -26,6 +26,7 @@
     CDUnknownBlockType _timeGetter;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType timeGetter; // @synthesize timeGetter=_timeGetter;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
-- (void).cxx_destruct;
 - (id)setUpItemDictionaryForURLs:(id)arg1 source:(id)arg2 fromContext:(id)arg3;
 - (id)setUpItemDictionaryForURL:(id)arg1 source:(id)arg2 fromContext:(id)arg3;
 - (void)presentCollectionFullAlert;

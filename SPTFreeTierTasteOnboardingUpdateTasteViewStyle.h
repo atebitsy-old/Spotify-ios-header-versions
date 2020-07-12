@@ -18,11 +18,11 @@
     NSNumber *_messageLabelDistanceFromTop;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSNumber *messageLabelDistanceFromTop; // @synthesize messageLabelDistanceFromTop=_messageLabelDistanceFromTop;
 @property(nonatomic) double messageLabelMargins; // @synthesize messageLabelMargins=_messageLabelMargins;
 @property(copy, nonatomic) GLUELabelStyle *messageLabelStyle; // @synthesize messageLabelStyle=_messageLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

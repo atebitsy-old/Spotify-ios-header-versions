@@ -22,12 +22,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSSet *contentProviderRegistry; // @synthesize contentProviderRegistry=_contentProviderRegistry;
 @property(readonly, nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
-- (void).cxx_destruct;
 - (void)updateControllerRegistry;
 - (void)registerContentProvider:(id)arg1;
 @property(readonly, nonatomic) SPTExternalIntegrationContentControllerImplementation *sharedController; // @synthesize sharedController=_sharedController;

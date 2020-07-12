@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: hubsViewController
+    // Error parsing type: , name: impressionLogger
 }
 
 - (void).cxx_destruct;
@@ -17,6 +18,8 @@
 - (void)reloadViewModel;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (void)hubView:(id)arg1 componentViewDidDisappear:(id)arg2;
+- (void)hubView:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)sp_updateContentInsets;
 - (id)initWithCoder:(id)arg1;
 

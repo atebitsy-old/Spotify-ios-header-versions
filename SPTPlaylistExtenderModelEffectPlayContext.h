@@ -17,10 +17,10 @@
     NSURL *_playlistURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(copy, nonatomic) NSArray *recommendations; // @synthesize recommendations=_recommendations;
 @property(nonatomic) unsigned long long trackIndex; // @synthesize trackIndex=_trackIndex;
-- (void).cxx_destruct;
 - (void)processWithLoop:(id)arg1;
 - (id)initWithTrackIndex:(unsigned long long)arg1 recommendations:(id)arg2 playlistURL:(id)arg3;
 

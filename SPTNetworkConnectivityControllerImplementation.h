@@ -25,6 +25,7 @@
 }
 
 + (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) long long previousConnectionType; // @synthesize previousConnectionType=_previousConnectionType;
 @property(retain, nonatomic) CTTelephonyNetworkInfo *networkInfo; // @synthesize networkInfo=_networkInfo;
 @property(retain, nonatomic) NSUserDefaults *defaults; // @synthesize defaults=_defaults;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) APLReachability *reachability; // @synthesize reachability=_reachability;
 @property(retain, nonatomic) id <SPTConnectivityManager> connectivityManager; // @synthesize connectivityManager=_connectivityManager;
 @property(retain, nonatomic) NSHashTable *activeKeepAliveTokens; // @synthesize activeKeepAliveTokens=_activeKeepAliveTokens;
-- (void).cxx_destruct;
 - (void)setDefaultsForcedOffline:(_Bool)arg1;
 - (_Bool)defaultsForcedOffline;
 - (void)setDefaultsAllowSyncOver3G:(_Bool)arg1;

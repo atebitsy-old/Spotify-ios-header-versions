@@ -29,6 +29,7 @@
     SPTSearchBar *_searchBar;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(nonatomic) _Bool shouldBecomeFirstResponder; // @synthesize shouldBecomeFirstResponder=_shouldBecomeFirstResponder;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) SPTFreeTierPlaylistCellProviderCoordinator *cellProviderCoordinator; // @synthesize cellProviderCoordinator=_cellProviderCoordinator;
 @property(readonly, nonatomic) GLUEEntityRowStyle *trackRowStyle; // @synthesize trackRowStyle=_trackRowStyle;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (id)noResultsView;
 - (void)playlistSponsorshipDidChange;
 - (void)freeTierPlaylistViewModel:(id)arg1 error:(id)arg2;

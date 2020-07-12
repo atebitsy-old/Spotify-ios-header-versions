@@ -16,8 +16,8 @@
 }
 
 + (CDUnknownBlockType)defaultFeatureFlagSignalMapper;
-@property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (id)signal:(id)arg1 withDefaultState:(long long)arg2;
 - (id)signal:(id)arg1 withOverride:(id)arg2;
 - (id)signalWithInverse:(id)arg1;

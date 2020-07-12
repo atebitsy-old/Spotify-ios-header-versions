@@ -14,9 +14,9 @@
     SPTFreeTierFindTestManager *_testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierFindTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTFreeTierFindEndpointFactory *endpointFactory; // @synthesize endpointFactory=_endpointFactory;
-- (void).cxx_destruct;
 - (id)remoteHubContentURLForViewURI:(id)arg1;
 - (id)initWithEndpointFactory:(id)arg1 testManager:(id)arg2;
 

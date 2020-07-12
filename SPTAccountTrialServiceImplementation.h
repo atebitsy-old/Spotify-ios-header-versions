@@ -21,12 +21,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAccountTrialController *trialController; // @synthesize trialController=_trialController;
 @property(retain, nonatomic) id <SPTAccountTrialDeferredController> deferredTrialController; // @synthesize deferredTrialController=_deferredTrialController;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)provideTrialController;
 - (id)provideDeferredTrialController;
 - (void)unload;

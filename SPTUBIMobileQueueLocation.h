@@ -22,6 +22,7 @@
     NSArray *_components;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool impressionEnabled; // @synthesize impressionEnabled=_impressionEnabled;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 @property(copy, nonatomic) NSString *generatorCommitHash; // @synthesize generatorCommitHash=_generatorCommitHash;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
 @property(copy, nonatomic) NSString *specificationId; // @synthesize specificationId=_specificationId;
 @property(copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
-- (void).cxx_destruct;
 - (id)eventComponentsWithPageURI:(id)arg1 pageId:(id)arg2;
 - (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 specificationVersion:(id)arg3 pageReason:(id)arg4 specificationCommitHash:(id)arg5 generatorCommitHash:(id)arg6 components:(id)arg7 impression:(_Bool)arg8;
 

@@ -15,10 +15,10 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIImpression5ForHUBComponentModel:(id)arg1;
 - (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1;
 - (void)logViewDataDidFailToLoadWithPageIdentifier:(id)arg1;

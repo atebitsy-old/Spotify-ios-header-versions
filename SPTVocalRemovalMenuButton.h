@@ -13,8 +13,8 @@
     SPTVocalRemovalMenuButtonViewModel *_viewModel;
 }
 
-@property(retain, nonatomic) SPTVocalRemovalMenuButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTVocalRemovalMenuButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void)expandMenu;
 - (void)applyIcon;
 - (id)initWithModel:(id)arg1;

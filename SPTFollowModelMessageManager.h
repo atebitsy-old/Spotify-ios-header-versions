@@ -13,8 +13,8 @@
     NSHashTable *_observers;
 }
 
-@property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 - (void)updateFollowData:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

@@ -21,6 +21,7 @@
     SPTLoginErrorDialogLogger *_dialogLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(retain, nonatomic) NSArray *backendDefinedGenders; // @synthesize backendDefinedGenders=_backendDefinedGenders;
 @property(retain, nonatomic) NSArray *localizedGenders; // @synthesize localizedGenders=_localizedGenders;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTSignupGenderViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)configureAvailableGenders:(_Bool)arg1;
 - (void)userDidTapNextButton;
 - (id)genderForIndex:(long long)arg1;

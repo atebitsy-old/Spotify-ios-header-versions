@@ -12,17 +12,17 @@
 
 @interface SPTPodcastEpisodeDescriptionTextViewStyle : NSObject <GLUEStyle>
 {
-    UIFont *_font;
+    UIFont *_bodyFont;
     UIFont *_collapsedEndingFont;
     UIColor *_textColor;
     UIColor *_tintColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *tintColor; // @synthesize tintColor=_tintColor;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIFont *collapsedEndingFont; // @synthesize collapsedEndingFont=_collapsedEndingFont;
-@property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
+@property(copy, nonatomic) UIFont *bodyFont; // @synthesize bodyFont=_bodyFont;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

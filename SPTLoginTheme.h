@@ -45,7 +45,6 @@
 - (id)setNewPasswordViewStyle;
 - (id)singleInputFieldSignupViewStyle;
 - (id)facebookConfirmationViewStyle;
-- (id)signupViewStyle;
 - (id)loginViewStyle;
 
 @end

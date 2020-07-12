@@ -20,12 +20,12 @@
     SPTPlayOrigin *_playOrigin;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayOrigin *playOrigin; // @synthesize playOrigin=_playOrigin;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(copy, nonatomic) NSURL *homeMixURI; // @synthesize homeMixURI=_homeMixURI;
 @property(nonatomic) __weak id <SPTHomeMixPlaybackEffectHandlerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)acceptPlayFromTrack:(id)arg1;
 - (void)acceptPlaybackResume:(id)arg1;
 - (void)acceptPlaybackPause:(id)arg1;

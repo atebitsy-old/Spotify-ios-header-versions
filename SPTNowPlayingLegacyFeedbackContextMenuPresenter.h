@@ -16,10 +16,10 @@
     id <SPTContextMenuPresenter> _presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> presenter; // @synthesize presenter=_presenter;
 @property(nonatomic) __weak UIViewController *presentationController; // @synthesize presentationController=_presentationController;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
-- (void).cxx_destruct;
 - (void)dismiss;
 - (void)presentBanMenuForArtistName:(id)arg1 trackTitle:(id)arg2 imageURL:(id)arg3 senderView:(id)arg4 actions:(id)arg5;
 - (id)initWithContextMenuPresenterFactory:(id)arg1 presentationController:(id)arg2;

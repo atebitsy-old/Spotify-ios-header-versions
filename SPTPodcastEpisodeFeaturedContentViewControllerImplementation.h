@@ -23,13 +23,13 @@
     id <SPTHubImpressionLogger> _impressionLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTHubImpressionLogger> impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(retain, nonatomic) HUBView *hubView; // @synthesize hubView=_hubView;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTHubViewModelProvider *hubViewModelProvider; // @synthesize hubViewModelProvider=_hubViewModelProvider;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeFeaturedContentHubViewProvider> hubViewProvider; // @synthesize hubViewProvider=_hubViewProvider;
 @property(retain, nonatomic) NSMutableSet *episodeFeaturedContentComponents; // @synthesize episodeFeaturedContentComponents=_episodeFeaturedContentComponents;
-- (void).cxx_destruct;
 - (void)logImpressionIfNeccessary:(id)arg1;
 - (void)superScrollViewDidAppear:(id)arg1;
 - (void)superScrollViewDidScroll:(id)arg1;

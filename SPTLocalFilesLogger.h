@@ -17,11 +17,11 @@
     id <SPTUBIMobileLocalFilesImportEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIMobileLocalFilesImportEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIInteractionWithSectionIndex:(long long)arg1 itemIndex:(long long)arg2 interactionType:(id)arg3 userIntent:(id)arg4;
 - (void)logUIInteractionWithInteractionType:(id)arg1 userIntent:(id)arg2;
 - (void)logUIInteractionWithPageURI:(id)arg1 interactionType:(id)arg2 userIntent:(id)arg3;

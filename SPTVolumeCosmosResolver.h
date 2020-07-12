@@ -13,8 +13,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void)sendRequestToUrl:(id)arg1 method:(id)arg2 body:(id)arg3 responseBlock:(CDUnknownBlockType)arg4;
 - (id)initWithResolver:(id)arg1;
 

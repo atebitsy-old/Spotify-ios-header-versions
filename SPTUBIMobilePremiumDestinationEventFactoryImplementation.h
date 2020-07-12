@@ -16,8 +16,8 @@
 }
 
 + (id)factory;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)scrollingViewFactoryWithPosition:(long long)arg1;
 - (id)toolbarFactory;
 - (id)_location;

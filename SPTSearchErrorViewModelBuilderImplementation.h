@@ -18,10 +18,10 @@
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool drilldown; // @synthesize drilldown=_drilldown;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
-- (void).cxx_destruct;
 - (id)errorLoggingData;
 - (id)offlineStateOverlayComponent;
 - (id)errorStateOverlayComponent;

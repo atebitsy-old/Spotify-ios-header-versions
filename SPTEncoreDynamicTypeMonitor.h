@@ -19,11 +19,11 @@
 + (id)contentSizeCategoryFromAccessibilityScale:(double)arg1;
 + (double)accessibilityScaleFromContentSizeCategory:(id)arg1;
 + (id)defaultMonitor;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *blockListeners; // @synthesize blockListeners=_blockListeners;
 @property(retain, nonatomic) NSMapTable *listeningInstancesAndStyles; // @synthesize listeningInstancesAndStyles=_listeningInstancesAndStyles;
 @property(readonly, nonatomic) double accessibilityScale; // @synthesize accessibilityScale=_accessibilityScale;
 @property(retain, nonatomic) NSString *contentSizeCategory; // @synthesize contentSizeCategory=_contentSizeCategory;
-- (void).cxx_destruct;
 - (void)updateBlocks;
 - (void)contentSizeCategoryDidChange:(id)arg1;
 - (void)forceSetContentSizeCategory:(id)arg1;

@@ -32,6 +32,7 @@
     id <SPTShelves> _shelves;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) __weak id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -51,7 +52,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
-- (void).cxx_destruct;
 - (id)createViewModelLoaderForViewURI:(id)arg1 referrerIdentifier:(id)arg2 offlineModel:(id)arg3 reloadPageSignal:(id)arg4;
 - (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2;
 - (_Bool)canCreateViewControllerForViewURI:(id)arg1;

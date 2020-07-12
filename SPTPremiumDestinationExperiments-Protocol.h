@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIViewController;
+@class NSString, UIViewController;
 
 @protocol SPTPremiumDestinationExperiments <NSObject>
+@property(readonly, copy, nonatomic) NSString *offerTrialRibbonString;
+@property(readonly, nonatomic) _Bool offerTrialRibbonExperienceEnabled;
 @property(nonatomic) __weak UIViewController *premiumDestinationTabBarBadgeViewController;
 @property(readonly, nonatomic) _Bool tabBarBadgeExperienceEnabled;
 @property(readonly, nonatomic) _Bool shouldPresentImplicitNotificationAlertController;

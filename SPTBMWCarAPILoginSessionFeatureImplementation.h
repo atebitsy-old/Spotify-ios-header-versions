@@ -9,20 +9,22 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTBMWCarAPIFeature, SPTExternalIntegrationPlatformService, SPTRemoteConfigurationService;
+@protocol SPTAccessoryManagerSessionService, SPTBMWCarAPIFeature, SPTExternalIntegrationPlatformService, SPTRemoteConfigurationService;
 
 @interface SPTBMWCarAPILoginSessionFeatureImplementation : NSObject <SPTService>
 {
     id <SPTBMWCarAPIFeature> _bmwFeature;
     id <SPTExternalIntegrationPlatformService> _externalIntegrationPlatformService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTAccessoryManagerSessionService> _accessorySessionService;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTAccessoryManagerSessionService> accessorySessionService; // @synthesize accessorySessionService=_accessorySessionService;
 @property(readonly, nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlatformService> externalIntegrationPlatformService; // @synthesize externalIntegrationPlatformService=_externalIntegrationPlatformService;
 @property(readonly, nonatomic) __weak id <SPTBMWCarAPIFeature> bmwFeature; // @synthesize bmwFeature=_bmwFeature;
-- (void).cxx_destruct;
 - (void)disable;
 - (void)enable;
 - (void)unload;

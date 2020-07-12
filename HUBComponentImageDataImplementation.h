@@ -21,13 +21,13 @@
     NSDictionary *_customData;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *customData; // @synthesize customData=_customData;
 @property(readonly, nonatomic) UIImage *localImage; // @synthesize localImage=_localImage;
 @property(readonly, nonatomic) id <HUBIcon> placeholderIcon; // @synthesize placeholderIcon=_placeholderIcon;
 @property(readonly, copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)serialize;
 - (id)initWithIdentifier:(id)arg1 type:(long long)arg2 URL:(id)arg3 placeholderIcon:(id)arg4 localImage:(id)arg5 customData:(id)arg6;
 

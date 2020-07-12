@@ -15,8 +15,8 @@
     GLUEImageView *_imageView;
 }
 
-@property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 - (void)glue_applyStyle:(id)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;

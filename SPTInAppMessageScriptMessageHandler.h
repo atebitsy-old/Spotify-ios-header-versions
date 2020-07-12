@@ -15,8 +15,8 @@
     CDUnknownBlockType _handlerBlock;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType handlerBlock; // @synthesize handlerBlock=_handlerBlock;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType handlerBlock; // @synthesize handlerBlock=_handlerBlock;
 - (void)userContentController:(id)arg1 didReceiveScriptMessage:(id)arg2;
 
 // Remaining properties

@@ -16,8 +16,8 @@
 }
 
 + (id)dataLoaderRequestAccountingConsumptionObserverWithRequestAccount:(id)arg1;
-@property(retain, nonatomic) SPTRequestAccounting *requestAccounting; // @synthesize requestAccounting=_requestAccounting;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTRequestAccounting *requestAccounting; // @synthesize requestAccounting=_requestAccounting;
 - (void)endedRequestWithResponse:(id)arg1 bytesDownloaded:(int)arg2 bytesUploaded:(int)arg3;
 - (id)dataLoaderRequestMethodToString:(long long)arg1;
 - (id)initWithRequestAccounting:(id)arg1;

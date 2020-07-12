@@ -23,12 +23,12 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTArtistFundContentView *contentView; // @synthesize contentView=_contentView;
 @property(readonly, nonatomic) SPTArtistFundBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(readonly, nonatomic) SPTArtistFundViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)sendSelectionEvent;
 - (void)applyAccentColorFromModel:(id)arg1;
 @property(readonly, nonatomic) UIView *selectionView;

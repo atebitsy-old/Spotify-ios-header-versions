@@ -16,11 +16,11 @@
     long long _timerID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isSpeechReceived; // @synthesize isSpeechReceived=_isSpeechReceived;
 @property(readonly, nonatomic) long long timerID; // @synthesize timerID=_timerID;
 @property(readonly, nonatomic) SPTAdVoiceMetadata *voiceAdMetadata; // @synthesize voiceAdMetadata=_voiceAdMetadata;
 @property(readonly, nonatomic) long long voiceState; // @synthesize voiceState=_voiceState;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithUpdates:(CDUnknownBlockType)arg1;

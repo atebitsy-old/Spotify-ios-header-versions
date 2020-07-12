@@ -16,9 +16,9 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *identifierToken; // @synthesize identifierToken=_identifierToken;
-- (void).cxx_destruct;
 - (id)initWithToken:(id)arg1 type:(unsigned long long)arg2;
 
 // Remaining properties

@@ -16,10 +16,10 @@
     id <SPTGaiaSettingsProvider> _settingsProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaSettingsProvider> settingsProvider; // @synthesize settingsProvider=_settingsProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTSettingsTableViewCell *switchCell; // @synthesize switchCell=_switchCell;
-- (void).cxx_destruct;
 - (id)footerText;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

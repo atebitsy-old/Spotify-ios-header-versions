@@ -18,10 +18,10 @@
     GLUEButton *_findTicketsButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEButton *findTicketsButton; // @synthesize findTicketsButton=_findTicketsButton;
 @property(readonly, nonatomic) SPTConcertsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTConcertsEntityHeaderViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)headerViewModel:(id)arg1 didUpdatePrimaryImage:(id)arg2 shouldAnimate:(_Bool)arg3;
 - (void)updateContentForHeaderViewModel:(id)arg1;
 - (double)entityHeaderViewControllerMinimumHeight:(id)arg1;

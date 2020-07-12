@@ -17,9 +17,9 @@
     SPTEncoreTypeStyle *_titleStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEncoreTypeStyle *titleStyle; // @synthesize titleStyle=_titleStyle;
 @property(nonatomic) __weak id <SPTAssistedCurationSearchButtonDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapSearchButton;
 - (void)setTitle:(id)arg1 forState:(unsigned long long)arg2;
 - (void)glue_applyStyle:(id)arg1;

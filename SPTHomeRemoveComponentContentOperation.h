@@ -17,9 +17,9 @@
     SPTHomeLocalViewModelOverrides *_overrides;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *overrides; // @synthesize overrides=_overrides;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithOverrides:(id)arg1;
 

@@ -28,6 +28,7 @@
     id <SPTAlertInterface> _alertInterface;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageParser *noteMessageParser; // @synthesize noteMessageParser=_noteMessageParser;
-- (void).cxx_destruct;
 - (void)previewViewModel:(id)arg1 didFetchNoteCreativeData:(id)arg2;
 - (id)initWithNoteMessageParser:(id)arg1 slateManager:(id)arg2 notePresentationManager:(id)arg3 bannerPresentationManager:(id)arg4 freeTierTooltipPresenter:(id)arg5 snackbarPresenter:(id)arg6 actionFactory:(id)arg7 carDetector:(id)arg8 offlineModeState:(id)arg9 nowPlayingManagerRegistry:(id)arg10 alertInterface:(id)arg11;
 

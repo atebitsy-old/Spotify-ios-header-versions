@@ -15,9 +15,9 @@
 }
 
 + (id)queuedSlate:(id)arg1 animated:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isAnimated) _Bool animated; // @synthesize animated=_animated;
 @property(readonly, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
-- (void).cxx_destruct;
 - (id)initWithSlate:(id)arg1 animated:(_Bool)arg2;
 
 @end

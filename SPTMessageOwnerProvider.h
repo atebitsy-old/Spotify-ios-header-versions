@@ -15,8 +15,8 @@
     SPCore *_core;
 }
 
-@property(readonly, nonatomic) __weak SPCore *core; // @synthesize core=_core;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak SPCore *core; // @synthesize core=_core;
 - (void)provideMessageOwnerWithCompletion:(CDUnknownBlockType)arg1 failure:(CDUnknownBlockType)arg2;
 - (id)initWithCore:(id)arg1;
 

@@ -18,10 +18,10 @@
     NSURL *_pageURI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureID; // @synthesize featureID=_featureID;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
-- (void).cxx_destruct;
 - (void)replaceRowComponentInModelBuilders:(id)arg1;
 - (id)uriByAddingAssistedCurationEntityPrefixToURI:(id)arg1;
 - (void)addEntityDrillDownCommandModelInBodyComponentModelBuilder:(id)arg1;

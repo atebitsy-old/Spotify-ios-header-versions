@@ -29,6 +29,7 @@
     id <SPTAutoLockOverrideToken> _autoLockToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAutoLockOverrideToken> autoLockToken; // @synthesize autoLockToken=_autoLockToken;
 @property(nonatomic) _Bool shouldShowBanner; // @synthesize shouldShowBanner=_shouldShowBanner;
 @property(readonly, nonatomic) SPTAutoLockController *autoLockController; // @synthesize autoLockController=_autoLockController;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) SPTWazeNavigationBannerViewModel *navigationViewModel; // @synthesize navigationViewModel=_navigationViewModel;
 @property(nonatomic) long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTWazeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)testManager:(id)arg1 didChangeWazeOnboardingCompleted:(_Bool)arg2;
 - (void)updateShouldShowBannerWithDrivingState:(_Bool)arg1;
 - (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;

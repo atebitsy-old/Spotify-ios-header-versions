@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithComponents:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)hitMakePlaylistNonCollaborativeWithPlaylistToBeMadeNonCollaborative:(id)arg1;
 - (id)hitMakePlaylistCollaborativeWithPlaylistToBeMadeCollaborative:(id)arg1;
 - (id)_location;

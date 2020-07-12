@@ -19,11 +19,11 @@
     UIWindow *_window;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIWindow *window; // @synthesize window=_window;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) UIWindow *shieldingWindow; // @synthesize shieldingWindow=_shieldingWindow;
-- (void).cxx_destruct;
 - (void)hideTransitionUIForResult:(long long)arg1;
 - (void)showTransitionUI;
 - (id)screenshotBackground;

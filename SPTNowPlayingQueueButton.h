@@ -15,8 +15,8 @@
     SPTNowPlayingBadgeView *_badgeView;
 }
 
-@property(retain, nonatomic) SPTNowPlayingBadgeView *badgeView; // @synthesize badgeView=_badgeView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTNowPlayingBadgeView *badgeView; // @synthesize badgeView=_badgeView;
 - (id)accessibilityLabel;
 - (void)setHighlighted:(_Bool)arg1;
 @property(nonatomic) unsigned long long badgeValue;

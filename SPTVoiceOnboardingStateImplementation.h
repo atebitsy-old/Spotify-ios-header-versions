@@ -17,9 +17,9 @@
     NSString *_localSettingsKey;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *localSettingsKey; // @synthesize localSettingsKey=_localSettingsKey;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 @property(nonatomic, getter=isCompleted) _Bool completed;
 - (id)initWithLocalSettings:(id)arg1 localSettingsKey:(id)arg2;
 

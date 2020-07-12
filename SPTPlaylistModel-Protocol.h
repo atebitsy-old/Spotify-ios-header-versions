@@ -27,6 +27,7 @@
 - (void)moveTracksWithRowIds:(NSArray *)arg1 before:(_Bool)arg2 rowId:(NSString *)arg3 fromPlaylistURL:(NSURL *)arg4 completion:(void (^)(NSError *))arg5;
 - (void)removeTracksWithRowIds:(NSArray *)arg1 fromPlaylistURL:(NSURL *)arg2 completion:(void (^)(NSError *))arg3;
 - (void)removeTrackURLs:(NSArray *)arg1 fromPlaylistURL:(NSURL *)arg2 completion:(void (^)(NSError *))arg3;
+- (void)addTrackURLs:(NSArray *)arg1 before:(_Bool)arg2 rowId:(NSString *)arg3 toPlaylistURL:(NSURL *)arg4 completion:(void (^)(NSError *))arg5;
 - (void)addTrackURLs:(NSArray *)arg1 toPlaylistURL:(NSURL *)arg2 completion:(void (^)(NSError *))arg3;
 - (void)trackURLsForPlaylistURL:(NSURL *)arg1 completion:(void (^)(NSArray *, NSError *))arg2;
 - (void)playlistContainsTrackURLs:(NSArray *)arg1 playlistURL:(id)arg2 completion:(void (^)(NSArray *, NSError *))arg3;

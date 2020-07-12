@@ -27,6 +27,7 @@
 }
 
 + (struct CGSize)preferredImageSize;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *contentToTopViewConstraint; // @synthesize contentToTopViewConstraint=_contentToTopViewConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *contentToLeadingImageViewConstraint; // @synthesize contentToLeadingImageViewConstraint=_contentToLeadingImageViewConstraint;
 @property(retain, nonatomic) UIView *labelsView; // @synthesize labelsView=_labelsView;
@@ -38,7 +39,6 @@
 @property(nonatomic) long long subtitleStyle; // @synthesize subtitleStyle=_subtitleStyle;
 @property(retain, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)applyThemeLayout;
 - (void)applySubtitleStyle;

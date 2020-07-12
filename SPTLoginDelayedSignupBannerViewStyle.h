@@ -22,6 +22,7 @@
     double _signupButtonBottomSpacing;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double signupButtonBottomSpacing; // @synthesize signupButtonBottomSpacing=_signupButtonBottomSpacing;
 @property(nonatomic) double signupButtonTopSpacing; // @synthesize signupButtonTopSpacing=_signupButtonTopSpacing;
 @property(nonatomic) double loginButtonTopSpacing; // @synthesize loginButtonTopSpacing=_loginButtonTopSpacing;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) GLUEButtonStyle *loginButtonStyle; // @synthesize loginButtonStyle=_loginButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

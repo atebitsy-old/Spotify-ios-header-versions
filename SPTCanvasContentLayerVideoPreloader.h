@@ -17,11 +17,11 @@
     SPTaskCompletionSource *_completionSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTaskCompletionSource *completionSource; // @synthesize completionSource=_completionSource;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
 @property(readonly, nonatomic) id <SPTVideoURLAssetLoader> videoAssetLoader; // @synthesize videoAssetLoader=_videoAssetLoader;
 @property(nonatomic) __weak id <SPTCanvasContentLayerVideoPreloaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)loadVideo;
 - (void)didLoadAsset:(id)arg1 withError:(id)arg2;
 - (void)loadAsset:(id)arg1 withError:(id)arg2;

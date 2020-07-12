@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAudioPreviewModelFactory> modelFactory; // @synthesize modelFactory=_modelFactory;
 @property(retain, nonatomic) id <SPTAudioPreviewUIFactory> uiFactory; // @synthesize uiFactory=_uiFactory;
 @property(retain, nonatomic) id <SPTAudioPreviewPlayer> player; // @synthesize player=_player;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (id)providePlayer;
 - (id)provideModelFactory;
 - (id)provideUIFactory;

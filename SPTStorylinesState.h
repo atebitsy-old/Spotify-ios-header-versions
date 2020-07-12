@@ -18,9 +18,9 @@
 
 + (id)stateWithStorylines:(id)arg1;
 + (id)stateWithTrack:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(readonly, copy, nonatomic) SPTStorylines *storylines; // @synthesize storylines=_storylines;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)copyWithZone:(struct _NSZone *)arg1;

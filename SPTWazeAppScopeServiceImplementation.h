@@ -17,8 +17,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 - (void)registerWazeSchemeURIHandler;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

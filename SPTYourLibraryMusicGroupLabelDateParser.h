@@ -16,9 +16,9 @@
     NSDateFormatter *_outputDateFormatter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDateFormatter *outputDateFormatter; // @synthesize outputDateFormatter=_outputDateFormatter;
 @property(retain, nonatomic) NSDateFormatter *dateFormatterParse; // @synthesize dateFormatterParse=_dateFormatterParse;
-- (void).cxx_destruct;
 - (id)parse:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *prefix; // @dynamic prefix;
 - (id)init;

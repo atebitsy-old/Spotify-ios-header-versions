@@ -19,10 +19,10 @@
     id <SPTOnDemandSet> _onDemandSet;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isObserving) _Bool observing; // @synthesize observing=_observing;
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)onDemandSetDidUpdate:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithOnDemandSet:(id)arg1;

@@ -19,11 +19,11 @@
     NSMutableArray *_queue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) SPTAlertTokenImplementation *currentOperationToken; // @synthesize currentOperationToken=_currentOperationToken;
 @property(retain, nonatomic) SPTAlertQueuePresenterImplementation *presenter; // @synthesize presenter=_presenter;
 @property(readonly, nonatomic) SPTPopupPermissions *permissions; // @synthesize permissions=_permissions;
-- (void).cxx_destruct;
 - (void)performOperationForToken:(id)arg1;
 - (void)serviceQueue;
 - (void)alertOperationForTokenWasCancelled:(id)arg1;

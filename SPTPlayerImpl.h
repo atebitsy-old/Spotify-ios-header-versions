@@ -35,11 +35,11 @@
 + (id)failedTaskWithLocalizedErrorString:(id)arg1;
 + (id)makeErrorWithLocalizedString:(id)arg1;
 + (id)requestHeaders;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlayerLocalObservers> localObservers; // @synthesize localObservers=_localObservers;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
-- (void).cxx_destruct;
 - (id)globalPlayerSubscription:(id)arg1 parseStateUpdate:(id)arg2;
 - (void)globalPlayerSubscription:(id)arg1 gotStateUpdate:(id)arg2;
 @property(readonly, copy, nonatomic) SPTPlayerState *state;

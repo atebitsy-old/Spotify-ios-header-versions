@@ -22,13 +22,13 @@
     unsigned long long _bannerState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long bannerState; // @synthesize bannerState=_bannerState;
 @property(retain, nonatomic) NSLayoutConstraint *bannerViewBottomActiveConstraint; // @synthesize bannerViewBottomActiveConstraint=_bannerViewBottomActiveConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(retain, nonatomic) SPTYourLibraryOfflineBannerView *bannerView; // @synthesize bannerView=_bannerView;
 @property(retain, nonatomic) SPTYourLibraryGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTYourLibraryOfflineBannerViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)displayIfNeeded;
 - (void)dismiss;
 - (_Bool)isBannerDismissed;

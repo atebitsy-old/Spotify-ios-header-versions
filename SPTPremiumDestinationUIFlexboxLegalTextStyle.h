@@ -17,10 +17,10 @@
     UIColor *_legalTextHighlightedColor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *legalTextHighlightedColor; // @synthesize legalTextHighlightedColor=_legalTextHighlightedColor;
 @property(retain, nonatomic) UIColor *defaultLegalTextColor; // @synthesize defaultLegalTextColor=_defaultLegalTextColor;
 @property(retain, nonatomic) GLUELabelStyle *labelStyle; // @synthesize labelStyle=_labelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -17,8 +17,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 - (id)provideHiddenContentModel;
 - (void)configureWithServices:(id)arg1;
 

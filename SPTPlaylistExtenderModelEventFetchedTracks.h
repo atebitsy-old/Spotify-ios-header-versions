@@ -15,8 +15,8 @@
     NSArray *_playlistTracks;
 }
 
-@property(readonly, nonatomic) NSArray *playlistTracks; // @synthesize playlistTracks=_playlistTracks;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *playlistTracks; // @synthesize playlistTracks=_playlistTracks;
 - (void)processWithState:(id)arg1 loop:(id)arg2;
 - (id)initWithPlaylistTracks:(id)arg1;
 

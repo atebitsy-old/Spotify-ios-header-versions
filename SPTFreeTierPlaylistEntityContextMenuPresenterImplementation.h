@@ -22,6 +22,7 @@
     id <SPTContextMenuPresenter> _contextMenuPresenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTCreatePlaylistTestManager> createPlaylistTestManager; // @synthesize createPlaylistTestManager=_createPlaylistTestManager;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-- (void).cxx_destruct;
 - (void)addActionWithIdentifier:(id)arg1 toActions:(id)arg2;
 - (void)presentContextMenuInViewController:(id)arg1 sender:(id)arg2;
 - (id)initWithPlaylistViewModel:(id)arg1 itemsViewModel:(id)arg2 contextMenuService:(id)arg3 logger:(id)arg4 createPlaylistTestManager:(id)arg5 alertInterface:(id)arg6;

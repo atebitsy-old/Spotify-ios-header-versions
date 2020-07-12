@@ -17,12 +17,12 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTGaiaDevicePickerGLUETheme *devicePickerTheme; // @synthesize devicePickerTheme=_devicePickerTheme;
 @property(retain, nonatomic) GLUEButton *button; // @synthesize button=_button;
 @property int buttonType; // @synthesize buttonType=_buttonType;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupContextMenuButton;
 - (id)initLeaveButtonWithIndexPath:(id)arg1;

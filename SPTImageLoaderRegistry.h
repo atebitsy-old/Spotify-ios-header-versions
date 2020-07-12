@@ -15,9 +15,9 @@
     id <SPTImageLoaderRequestFactory> _defaultFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTImageLoaderRequestFactory> defaultFactory; // @synthesize defaultFactory=_defaultFactory;
 @property(readonly) NSArray *imageProviderRegistrations; // @synthesize imageProviderRegistrations=_imageProviderRegistrations;
-- (void).cxx_destruct;
 - (id)imageRequestFactoryForURL:(id)arg1;
 - (void)unregisterImageRequestFactories;
 - (void)registerImageRequestFactory:(id)arg1 predicate:(CDUnknownBlockType)arg2;

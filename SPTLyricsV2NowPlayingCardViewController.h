@@ -29,6 +29,7 @@
     id <SPTNowPlayingService> _nowPlayingService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(retain, nonatomic) UITapGestureRecognizer *tapRecognizer; // @synthesize tapRecognizer=_tapRecognizer;
 @property(retain, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
 @property(readonly, nonatomic) SPTLyricsV2Colors *defaultColors; // @synthesize defaultColors=_defaultColors;
 @property(readonly, nonatomic) NSString *cardTitle; // @synthesize cardTitle=_cardTitle;
-- (void).cxx_destruct;
 - (void)lyricsService:(id)arg1 didFailWithError:(id)arg2 forTrack:(id)arg3;
 - (void)lyricsService:(id)arg1 didFetch:(id)arg2 forTrack:(id)arg3;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;

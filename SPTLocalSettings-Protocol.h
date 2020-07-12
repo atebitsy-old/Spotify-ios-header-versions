@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSObject, NSString;
-@protocol OS_dispatch_queue, SPTLocalSettingsObserver;
+@class NSArray, NSString, OS_dispatch_queue;
+@protocol SPTLocalSettingsObserver;
 
 @protocol SPTLocalSettings <NSObject>
-@property(readonly, nonatomic) NSString *identifier;
+@property(nonatomic, readonly) NSString *identifier;
 - (NSArray *)allKeys;
 - (void)setObject:(id)arg1 forKeyedSubscript:(NSString *)arg2;
 - (id)objectForKeyedSubscript:(NSString *)arg1;
@@ -19,6 +19,6 @@
 - (void)setObject:(id)arg1 forKey:(NSString *)arg2;
 - (id)objectForKey:(NSString *)arg1;
 - (void)removeObserver:(id <SPTLocalSettingsObserver>)arg1;
-- (void)addObserver:(id <SPTLocalSettingsObserver>)arg1 onQueue:(NSObject<OS_dispatch_queue> *)arg2;
+- (void)addObserver:(id <SPTLocalSettingsObserver>)arg1 onQueue:(OS_dispatch_queue *)arg2;
 @end
 

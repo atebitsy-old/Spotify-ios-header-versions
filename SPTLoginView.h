@@ -29,6 +29,7 @@
     NSLayoutConstraint *_mainContainerRegularWidth;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(retain, nonatomic) NSLayoutConstraint *loginWithoutPasswordButtonBottomMargin; // @synthesize loginWithoutPasswordButtonBottomMargin=_loginWithoutPasswordButtonBottomMargin;
@@ -44,7 +45,6 @@
 @property(readonly, nonatomic) SPTLoginInputFormView *formView; // @synthesize formView=_formView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (id)submitButton;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTActionButton *onePasswordLoginButton;
 - (void)setOnePasswordLoginEnabled:(_Bool)arg1;
 - (void)glue_applyStyle:(id)arg1;

@@ -6,7 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSString;
+
 @protocol SPTFreeTierPlaylistTrackCloudLogger <NSObject>
-- (void)logTrackCloudSelected:(_Bool)arg1;
+- (NSString *)logTrackCloudSelected:(_Bool)arg1;
 @end
 

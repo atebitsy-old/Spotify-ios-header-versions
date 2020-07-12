@@ -28,6 +28,7 @@
     SPTPodcastEpisodeFeaturedContentLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentContextMenuPresenter *contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)managerForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)featuredContentTimelineLinkForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentTimelineForEpisodeURL:(id)arg1 withContext:(id)arg2 configureForEmbeddingInScrollView:(_Bool)arg3;

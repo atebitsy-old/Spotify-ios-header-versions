@@ -20,12 +20,12 @@
     CDStruct_5a28e70a _normalizedTitleFadeRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double latestProgress; // @synthesize latestProgress=_latestProgress;
 @property(retain, nonatomic) VISREFGradientView *overlayGradient; // @synthesize overlayGradient=_overlayGradient;
 @property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIView<VISREFHeaderViewAnimationProgress> *backButton; // @synthesize backButton=_backButton;
 @property(nonatomic) CDStruct_5a28e70a normalizedTitleFadeRange; // @synthesize normalizedTitleFadeRange=_normalizedTitleFadeRange;
-- (void).cxx_destruct;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)fullHeaderViewNormalizedProgressUpdate:(double)arg1;
 - (void)setTitle:(id)arg1;

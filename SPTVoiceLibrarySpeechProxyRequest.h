@@ -19,12 +19,12 @@
     unsigned long long _contentType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long contentType; // @synthesize contentType=_contentType;
 @property(nonatomic) _Bool useDevelopmentEndpoint; // @synthesize useDevelopmentEndpoint=_useDevelopmentEndpoint;
 @property(readonly, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(readonly, nonatomic) NSDictionary *queryParams; // @synthesize queryParams=_queryParams;
 @property(readonly, copy, nonatomic) NSString *endpoint; // @synthesize endpoint=_endpoint;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithEndpoint:(id)arg1 queryParams:(id)arg2 headers:(id)arg3;
 - (id)initWithEndpoint:(id)arg1 queryParams:(id)arg2;

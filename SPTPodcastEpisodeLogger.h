@@ -15,10 +15,10 @@
     id <SPTUBIMobilePodcastepisodeEntityEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIMobilePodcastepisodeEntityEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIInteractionForPageURI:(id)arg1 targetURI:(id)arg2 sectionID:(id)arg3 userIntent:(id)arg4;
 - (void)logRemoveDownloadInteractionForEpisodeURI:(id)arg1;
 - (void)logDownloadInteractionForEpisodeURI:(id)arg1;

@@ -14,9 +14,9 @@
     SPTPreSignupExperimentationISO8601FormattedDateProvider *_formattedDateProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPreSignupExperimentationISO8601FormattedDateProvider *formattedDateProvider; // @synthesize formattedDateProvider=_formattedDateProvider;
 @property(readonly, nonatomic) SPTPreSignupExperimentationConnectionTypeProvider *connectionTypeProvider; // @synthesize connectionTypeProvider=_connectionTypeProvider;
-- (void).cxx_destruct;
 - (id)configurationRequestData;
 - (id)initWithConnectionTypeProvider:(id)arg1 formattedDateProvider:(id)arg2;
 

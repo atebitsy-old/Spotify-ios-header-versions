@@ -16,11 +16,11 @@
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
-- (void).cxx_destruct;
 - (void)navigateToURI:(id)arg1;
 - (void)playContextURI:(id)arg1;
 - (void)handlePlayContextURIEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;

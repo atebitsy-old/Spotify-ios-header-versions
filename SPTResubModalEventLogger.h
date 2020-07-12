@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)sendLogMessageWithType:(id)arg1 daysLeft:(long long)arg2;
 - (void)logActionModalDismissedBySystem:(long long)arg1;
 - (void)logActionModalDismissedByUser:(long long)arg1;

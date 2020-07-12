@@ -27,12 +27,13 @@
     GLUELabel *_tryAgainLabel;
     UIStackView *_headerStackView;
     UIStackView *_stackView;
-    struct UIView *_sessionActiveIndicatorView;
+    UIView<GLUEAnimationLoading><GLUEAnimationControlling> *_sessionActiveIndicatorView;
     UIView *_descriptionContainerView;
     NSLayoutConstraint *_descriptionLabelToActiveIndicatorConstraint;
     NSLayoutConstraint *_descriptionLabelToContainerConstraint;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *descriptionLabelToContainerConstraint; // @synthesize descriptionLabelToContainerConstraint=_descriptionLabelToContainerConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *descriptionLabelToActiveIndicatorConstraint; // @synthesize descriptionLabelToActiveIndicatorConstraint=_descriptionLabelToActiveIndicatorConstraint;
 @property(readonly, nonatomic) UIView *descriptionContainerView; // @synthesize descriptionContainerView=_descriptionContainerView;
@@ -51,7 +52,6 @@
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) SPTListenTogetherBetaLabel *betaLabel; // @synthesize betaLabel=_betaLabel;
 @property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setSessionActiveIndicatorViewVisible:(_Bool)arg1;
 - (void)addViewConstraints;

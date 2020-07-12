@@ -17,9 +17,9 @@
     id <SPTCollectionPlatformTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
-- (void).cxx_destruct;
 - (id)setUpItemDictionaryForURLs:(id)arg1 inContextURL:(id)arg2 onError:(CDUnknownBlockType)arg3;
 - (id)collectionStatesForURLs:(id)arg1 fromResponse:(id)arg2;
 - (id)collectionStateRequestURLForURL:(id)arg1 onError:(CDUnknownBlockType)arg2;

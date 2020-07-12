@@ -16,10 +16,10 @@
     unsigned long long _backgroundTaskIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long backgroundTaskIdentifier; // @synthesize backgroundTaskIdentifier=_backgroundTaskIdentifier;
 @property(readonly, nonatomic) __weak UIApplication *application; // @synthesize application=_application;
 @property(nonatomic) __weak id <SPTAppProtocolBackgroundTaskDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isActive) _Bool active;
 - (void)stopAfterDelay:(double)arg1;
 - (void)stop;

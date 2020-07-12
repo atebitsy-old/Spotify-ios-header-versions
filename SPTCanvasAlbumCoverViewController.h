@@ -16,11 +16,11 @@
     SPTCanvasColorExtractor *_colorExtractor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCanvasColorExtractor *colorExtractor; // @synthesize colorExtractor=_colorExtractor;
 @property(readonly, copy, nonatomic) SPTCanvasActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 @property(readonly, copy, nonatomic) NSURL *albumCoverURL; // @synthesize albumCoverURL=_albumCoverURL;
 @property(retain, nonatomic) GLUEImageView *albumCoverView; // @synthesize albumCoverView=_albumCoverView;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)contentDidLoadWithImage:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;

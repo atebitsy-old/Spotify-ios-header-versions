@@ -20,6 +20,7 @@
     NSLayoutConstraint *_subtitleLabelConstraintWithImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleLabelConstraintWithImage; // @synthesize subtitleLabelConstraintWithImage=_subtitleLabelConstraintWithImage;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleLabelConstraintWithoutImage; // @synthesize subtitleLabelConstraintWithoutImage=_subtitleLabelConstraintWithoutImage;
 @property(readonly, nonatomic) UIView *separator; // @synthesize separator=_separator;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) GLUEImageView *subtitleImageView; // @synthesize subtitleImageView=_subtitleImageView;
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)resetImageAndCancelLoading;
 - (void)loadImageForPivotItem:(id)arg1 withImageLoader:(id)arg2;

@@ -18,9 +18,9 @@
     id <SPTPageLoadStateHandler> _loadStateHandler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageLoadStateHandler> loadStateHandler; // @synthesize loadStateHandler=_loadStateHandler;
 @property(retain, nonatomic) id <SPTEditPlaylistModel> model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)editPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)editPlaylistModel:(id)arg1 modelEntityDidChange:(id)arg2;
 - (void)cancel;

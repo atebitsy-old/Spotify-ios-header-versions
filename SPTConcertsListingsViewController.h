@@ -42,6 +42,7 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) long long defaultStatusBarStyle; // @synthesize defaultStatusBarStyle=_defaultStatusBarStyle;
 @property(retain, nonatomic) UILabel *tableFooterViewLabel; // @synthesize tableFooterViewLabel=_tableFooterViewLabel;
@@ -62,7 +63,6 @@
 @property(nonatomic) __weak SPTConcertsLocationSearchViewController *locationSearchVC; // @synthesize locationSearchVC=_locationSearchVC;
 @property(retain, nonatomic) SPTConcertsListingsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) NSString *localizedFeatureName; // @synthesize localizedFeatureName=_localizedFeatureName;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (unsigned long long)preferredNavigationBarState;

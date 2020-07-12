@@ -22,6 +22,7 @@
 }
 
 + (id)tracksFromCollectionTracks:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool is19PlusOnly; // @synthesize is19PlusOnly=_is19PlusOnly;
 @property(readonly, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
 @property(readonly, nonatomic, getter=isRatedExplicit) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)initWithURL:(id)arg1 name:(id)arg2 artists:(id)arg3 imageURL:(id)arg4 ratedExplicit:(_Bool)arg5 is19PlusOnly:(_Bool)arg6 previewId:(id)arg7;
 
 // Remaining properties

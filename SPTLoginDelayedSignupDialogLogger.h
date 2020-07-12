@@ -14,9 +14,9 @@
     long long _dialogSource;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long dialogSource; // @synthesize dialogSource=_dialogSource;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)uriFromDialogSource;
 - (void)logInteractionWithIntent:(id)arg1;
 - (void)logImpression;

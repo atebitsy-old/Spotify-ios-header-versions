@@ -25,6 +25,7 @@
 
 + (struct CGSize)preferredSizeForImage;
 + (double)preferredHeightForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeUIPlayButton *playButton; // @synthesize playButton=_playButton;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) GLUELabel *lowerLabel; // @synthesize lowerLabel=_lowerLabel;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) UIView *cardView; // @synthesize cardView=_cardView;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTHomeUISingleItemViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)imageStyleWithModel:(id)arg1;
 - (id)lowerLabelStyle;
 - (id)upperLabelStyle;

@@ -14,9 +14,9 @@
     UIView *_contentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(nonatomic, getter=isHideOnBackgroundTapEnabled) _Bool hideOnBackgroundTapEnabled; // @synthesize hideOnBackgroundTapEnabled=_hideOnBackgroundTapEnabled;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

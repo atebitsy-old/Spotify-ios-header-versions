@@ -16,10 +16,10 @@
 }
 
 + (id)messageWithErrorReason:(id)arg1 errorCode:(long long)arg2 authId:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *authIdValue; // @synthesize authIdValue=_authIdValue;
 @property(nonatomic) long long errorCodeValue; // @synthesize errorCodeValue=_errorCodeValue;
 @property(copy, nonatomic) NSString *errorReasonValue; // @synthesize errorReasonValue=_errorReasonValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

@@ -13,8 +13,8 @@
     SPTLoginTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 - (id)loginIntentButtonViewModel;
 - (id)signupIntentButtonViewModel;
 - (id)loginButtonViewModel;

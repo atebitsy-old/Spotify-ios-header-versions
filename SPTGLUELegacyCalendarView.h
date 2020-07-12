@@ -21,12 +21,12 @@
 }
 
 + (id)calendarViewWithDate:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *headerLayer; // @synthesize headerLayer=_headerLayer;
 @property(retain, nonatomic) CALayer *mainLayer; // @synthesize mainLayer=_mainLayer;
 @property(retain, nonatomic) UILabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(retain, nonatomic) UILabel *mainLabel; // @synthesize mainLabel=_mainLabel;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)layoutSubviews;
 - (void)applyThemeLayout;

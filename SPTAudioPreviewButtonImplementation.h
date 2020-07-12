@@ -18,9 +18,9 @@
     CADisplayLink *_displayLink;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CADisplayLink *displayLink; // @synthesize displayLink=_displayLink;
 @property(readonly, nonatomic) id <SPTAudioPreviewModel> audioPreviewModel; // @synthesize audioPreviewModel=_audioPreviewModel;
-- (void).cxx_destruct;
 - (void)setPlaying:(_Bool)arg1;
 - (void)touchedUpInside:(id)arg1;
 - (void)updateAnimation;

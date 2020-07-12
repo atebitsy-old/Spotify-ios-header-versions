@@ -19,12 +19,12 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(nonatomic) _Bool clipsToBounds; // @synthesize clipsToBounds=_clipsToBounds;
 @property(nonatomic) long long imageViewContentMode; // @synthesize imageViewContentMode=_imageViewContentMode;
 @property(nonatomic) long long mask; // @synthesize mask=_mask;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToImageStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

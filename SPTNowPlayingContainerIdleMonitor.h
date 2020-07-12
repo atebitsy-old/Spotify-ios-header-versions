@@ -21,12 +21,12 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) UITapGestureRecognizer *gestureRecognizer; // @synthesize gestureRecognizer=_gestureRecognizer;
 @property(nonatomic) __weak id <SPTNowPlayingContainerIdleMonitorLoggingDelegate> loggingDelegate; // @synthesize loggingDelegate=_loggingDelegate;
 @property(nonatomic, getter=isMonitoring) _Bool monitoring; // @synthesize monitoring=_monitoring;
 @property(nonatomic, getter=isIdle) _Bool idle; // @synthesize idle=_idle;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (void)notifyIdlePeriodDidEnd:(_Bool)arg1;
 - (void)notifyIdlePeriodDidBegin:(_Bool)arg1;

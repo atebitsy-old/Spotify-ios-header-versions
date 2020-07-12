@@ -28,6 +28,7 @@
 }
 
 + (long long)typeForStationURL:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) long long stationType; // @synthesize stationType=_stationType;
@@ -36,7 +37,6 @@
 @property(nonatomic) __weak SPTRadioPlaybackService *playbackService; // @synthesize playbackService=_playbackService;
 @property(retain, nonatomic) SPTRadioStation *station; // @synthesize station=_station;
 @property(readonly, nonatomic) NSURL *stationURL; // @synthesize stationURL=_stationURL;
-- (void).cxx_destruct;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)radioStationService:(id)arg1 loadingTracksError:(id)arg2 forStation:(id)arg3;
 - (void)radioStationService:(id)arg1 loadedTracksForStation:(id)arg2;

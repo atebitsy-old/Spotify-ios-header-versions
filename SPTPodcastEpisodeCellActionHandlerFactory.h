@@ -20,6 +20,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) __weak id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
-- (void).cxx_destruct;
 - (id)provideCellActionHandlerWithEpisodeProvider:(id)arg1 player:(id)arg2;
 - (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 podcastOffliningManager:(id)arg4 collectionLogger:(id)arg5 explicitContentAccessManager:(id)arg6 linkDispatcher:(id)arg7;
 

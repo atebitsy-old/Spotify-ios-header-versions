@@ -20,12 +20,12 @@
     NSMutableSet *_driverDistractionSessionIdentifiers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableSet *driverDistractionSessionIdentifiers; // @synthesize driverDistractionSessionIdentifiers=_driverDistractionSessionIdentifiers;
 @property(retain, nonatomic) SPTExternalIntegrationDriverDistractionViewController *lockscreenViewController; // @synthesize lockscreenViewController=_lockscreenViewController;
 @property(retain, nonatomic) UIWindow *driverDistractionWindow; // @synthesize driverDistractionWindow=_driverDistractionWindow;
 @property(nonatomic, getter=isDriverDistractionEnabled) _Bool driverDistractionEnabled; // @synthesize driverDistractionEnabled=_driverDistractionEnabled;
 @property(readonly, nonatomic) __weak SPTDefaultPopupPermissionManager *popupPermissionsManager; // @synthesize popupPermissionsManager=_popupPermissionsManager;
-- (void).cxx_destruct;
 - (void)driverDistractionViewController:(id)arg1 didTapDismissWithIdentifier:(id)arg2;
 - (void)removeLockscreenViewForIdentifier:(id)arg1;
 - (void)buildAndShowLockscreenWithImage:(id)arg1 dismissible:(_Bool)arg2 identifier:(id)arg3;

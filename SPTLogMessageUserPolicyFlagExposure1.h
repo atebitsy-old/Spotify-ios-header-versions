@@ -15,9 +15,9 @@
 }
 
 + (id)messageWithFlag:(id)arg1 value:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *valueValue; // @synthesize valueValue=_valueValue;
 @property(copy, nonatomic) NSString *flagValue; // @synthesize flagValue=_flagValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

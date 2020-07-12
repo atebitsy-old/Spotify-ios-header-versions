@@ -13,8 +13,8 @@
     id <SPTLocalSettings> _localSettings;
 }
 
-@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (_Bool)isGuestAccount;
 - (void)markAccountAsGuest:(_Bool)arg1;
 - (id)initWithLocalSettings:(id)arg1;

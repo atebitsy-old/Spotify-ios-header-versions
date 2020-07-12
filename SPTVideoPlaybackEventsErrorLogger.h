@@ -15,10 +15,10 @@
     id <BMLoggerDataProvider> _loggerDataProvider;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool playbackStarted; // @synthesize playbackStarted=_playbackStarted;
 @property(retain, nonatomic) id <BMLoggerDataProvider> loggerDataProvider; // @synthesize loggerDataProvider=_loggerDataProvider;
 @property(retain, nonatomic) id <BMLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (id)makeErrorDictionary;
 - (void)logVideoError:(id)arg1;
 - (void)didFailWithFatalError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;

@@ -13,8 +13,8 @@
     NSURL *_viewURI;
 }
 
-@property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 - (id)signalStringForDecodedURI:(id)arg1;
 - (id)encodedQueryParameterStringFromQueryItems:(id)arg1;
 - (id)queryItems;

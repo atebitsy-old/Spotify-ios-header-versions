@@ -44,6 +44,7 @@
     NSString *_pauseButtonAccessibilityString;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *pauseButtonAccessibilityString; // @synthesize pauseButtonAccessibilityString=_pauseButtonAccessibilityString;
 @property(copy, nonatomic) NSString *shufflePlayButtonAccessibilityString; // @synthesize shufflePlayButtonAccessibilityString=_shufflePlayButtonAccessibilityString;
 @property(copy, nonatomic) NSString *playButtonAccessibilityString; // @synthesize playButtonAccessibilityString=_playButtonAccessibilityString;
@@ -72,7 +73,6 @@
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistVISREFHeaderControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)update;
 - (void)configureWithHeaderConfiguration:(id)arg1 filterSortBarView:(id)arg2;

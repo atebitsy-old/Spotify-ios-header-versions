@@ -13,8 +13,8 @@
     UILabel *_valueLabel;
 }
 
-@property(retain, nonatomic) UILabel *valueLabel; // @synthesize valueLabel=_valueLabel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UILabel *valueLabel; // @synthesize valueLabel=_valueLabel;
 - (void)applyThemeLayout;
 - (void)drawRect:(struct CGRect)arg1;
 - (void)setFrame:(struct CGRect)arg1;

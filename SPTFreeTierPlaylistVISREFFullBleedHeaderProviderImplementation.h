@@ -19,11 +19,11 @@
     SPTFreeTierPlaylistVISREFFullBleedHeaderControllerImplementation *_visrefHeaderController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierPlaylistVISREFFullBleedHeaderControllerImplementation *visrefHeaderController; // @synthesize visrefHeaderController=_visrefHeaderController;
 @property(retain, nonatomic) id <VISREFIntegrationManager> visrefIntegrationManager; // @synthesize visrefIntegrationManager=_visrefIntegrationManager;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool drawDropShadow;
 @property(readonly, nonatomic) _Bool drawBottomLineLayer;
 - (id)provideHeader;

@@ -10,17 +10,21 @@
 @protocol BMPlaybackIdentity, BMVideoSurfaceContextDelegate, BMVideoSurfaceDelegate;
 
 @protocol BMVideoSurface <NSObject>
-@property(readonly, nonatomic) long long priority;
-@property(readonly, nonatomic, getter=isFullscreen) _Bool fullscreen;
-@property(nonatomic) __weak id <BMVideoSurfaceContextDelegate> contextDelegate;
-@property(nonatomic) __weak id <BMVideoSurfaceDelegate> delegate;
-@property(readonly, nonatomic) struct CGRect videoRect;
-@property(nonatomic) long long gravity;
-@property(readonly, nonatomic, getter=isAttached) _Bool attached;
-@property(readonly, nonatomic) CDUnknownBlockType shouldDisplayVideoBlock;
 - (void)detachVideoDisplayView;
 - (void)attachVideoDisplayView:(UIView *)arg1;
 - (_Bool)isPlayableForIdentity:(id <BMPlaybackIdentity>)arg1;
 - (void)setGravity:(long long)arg1 animated:(_Bool)arg2;
+@property(nonatomic, readonly) long long priority;
+- (_Bool)isFullscreen;
+@property(nonatomic) __weak id <BMVideoSurfaceContextDelegate> contextDelegate;
+@property(nonatomic) __weak id <BMVideoSurfaceDelegate> delegate;
+@property(nonatomic, readonly) struct CGRect videoRect;
+@property(nonatomic) long long gravity;
+- (_Bool)isAttached;
+@property(nonatomic, readonly) CDUnknownBlockType shouldDisplayVideoBlock;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool attached;
+@property(nonatomic, readonly) _Bool fullscreen;
 @end
 

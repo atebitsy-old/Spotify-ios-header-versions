@@ -16,11 +16,11 @@
     NSArray *_enabledFlags;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *enabledFlags; // @synthesize enabledFlags=_enabledFlags;
 @property(copy, nonatomic) NSArray *metricsFileNames; // @synthesize metricsFileNames=_metricsFileNames;
 @property(copy, nonatomic) NSArray *colorFileNames; // @synthesize colorFileNames=_colorFileNames;
 @property(copy, nonatomic) NSArray *fontFileNames; // @synthesize fontFileNames=_fontFileNames;
-- (void).cxx_destruct;
 
 @end
 

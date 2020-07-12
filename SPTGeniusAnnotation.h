@@ -17,12 +17,12 @@
     double _timestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double timestamp; // @synthesize timestamp=_timestamp;
 @property(retain, nonatomic) SPTGeniusAuthor *author; // @synthesize author=_author;
 @property(nonatomic) long long annotationType; // @synthesize annotationType=_annotationType;
 @property(copy, nonatomic) NSString *contentType; // @synthesize contentType=_contentType;
 @property(copy, nonatomic) NSString *contents; // @synthesize contents=_contents;
-- (void).cxx_destruct;
 - (id)objectRepresentation;
 - (_Bool)restoreWithObjectRepresentation:(id)arg1;
 - (long long)annotationTypeFromString:(id)arg1;

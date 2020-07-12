@@ -6,24 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSDate, NSString, NSURL;
+@class NSString, NSURL;
 
 @protocol SPTRecentlyPlayedEntityItem <NSObject>
 @property(readonly, nonatomic) long long availableOfflineStatus;
-@property(readonly, copy, nonatomic) NSDate *timestamp;
-@property(readonly, nonatomic) NSURL *offlineURL;
-@property(readonly, copy, nonatomic) NSString *loggingContext;
 @property(readonly, nonatomic) unsigned long long contentType;
-@property(readonly, copy, nonatomic) NSURL *trackURL;
 @property(readonly, nonatomic) long long icon;
 @property(readonly, copy, nonatomic) NSURL *entityURL;
 @property(readonly, copy, nonatomic) NSURL *imageURL;
 @property(readonly, copy, nonatomic) NSString *subtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 - (void)action;
-
-@optional
-@property(readonly, nonatomic) NSDate *publishDate;
-@property(readonly, nonatomic) _Bool isNew;
 @end
 

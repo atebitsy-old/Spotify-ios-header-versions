@@ -23,6 +23,7 @@
     id <SPTCanvasIdleMonitorObserverDelegate> _idleMonitorDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTCanvasIdleMonitorObserverDelegate> idleMonitorDelegate; // @synthesize idleMonitorDelegate=_idleMonitorDelegate;
 @property(retain, nonatomic) SPTCanvasContentLayerImagePreloader *avatarLoader; // @synthesize avatarLoader=_avatarLoader;
 @property(readonly, nonatomic) SPTCanvasTooltipPresentationManager *tooltipManager; // @synthesize tooltipManager=_tooltipManager;
@@ -31,7 +32,6 @@
 @property(nonatomic) __weak id <SPTCanvasNowPlayingViewControllerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
-- (void).cxx_destruct;
 - (void)idlePeriodDidEnd;
 - (void)idlePeriodDidBegin;
 - (void)removeContent;

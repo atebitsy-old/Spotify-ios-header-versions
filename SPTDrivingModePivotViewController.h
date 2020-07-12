@@ -34,6 +34,7 @@
     UISelectionFeedbackGenerator *_feedbackGenerator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UISelectionFeedbackGenerator *feedbackGenerator; // @synthesize feedbackGenerator=_feedbackGenerator;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(retain, nonatomic) SPTDrivingModeAdBarView *adBarView; // @synthesize adBarView=_adBarView;
@@ -49,7 +50,6 @@
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 @property(readonly, nonatomic) SPTDrivingModePivotViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)createPivotCollectionView;
 - (id)createLoadingView;
 - (id)createErrorView;

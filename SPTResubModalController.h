@@ -19,11 +19,11 @@
     SPTResubModalPresenter *_presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTResubModalPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) SPTResubModalEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) SPTResubModalURLManager *URLManager; // @synthesize URLManager=_URLManager;
 @property(retain, nonatomic) SPTResubModalShowManager *showManager; // @synthesize showManager=_showManager;
-- (void).cxx_destruct;
 - (void)URLReady:(id)arg1;
 - (void)shouldShowModal;
 - (void)presentModalWithURL:(id)arg1;

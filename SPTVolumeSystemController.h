@@ -18,11 +18,11 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) MPMusicPlayerController *musicPlayerController; // @synthesize musicPlayerController=_musicPlayerController;
 @property(retain, nonatomic) SPTVolumeMPMusicPlayerControllerFactory *musicPlayerFactory; // @synthesize musicPlayerFactory=_musicPlayerFactory;
 @property(retain, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)alertObserversOfSystemVolumeChange;
 - (void)removeObserver:(id)arg1;

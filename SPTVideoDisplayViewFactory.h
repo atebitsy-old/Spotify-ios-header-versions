@@ -16,10 +16,10 @@
     id <BMKVOControllerFactory> _kvoControllerFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
 @property(retain, nonatomic) SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
 @property(retain, nonatomic) SPTVideoApplicationStateObservable *applicationStateObservable; // @synthesize applicationStateObservable=_applicationStateObservable;
-- (void).cxx_destruct;
 - (id)createDisplayView;
 - (id)initWithPlayerSource:(id)arg1 kvoControllerFactory:(id)arg2 applicationStateObservable:(id)arg3;
 

@@ -9,7 +9,7 @@
 #import "SPTInAppMessageService-Protocol.h"
 
 @class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageActionsRegistryImplementation, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewBannerMessageController, SPTInAppMessagePreviewCardMessageController, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewNoteMessageController, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
-@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTURIDispatchService, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTInAppMessageServiceImplementation : NSObject <SPTInAppMessageService>
 {
@@ -47,6 +47,7 @@
     id <SPTOfflineService> _offlineService;
     id <SPTEventSenderService> _eventSenderService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTUBIService> _ubiService;
     SPTInAppMessageTriggerConfigurationsController *_triggerConfigurationsController;
     SPTInAppMessageTriggerListController *_triggerListController;
     SPTInAppMessageTriggerEngine *_triggerEngine;
@@ -78,6 +79,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageFeatureProperties *inAppMessageFeatureProperties; // @synthesize inAppMessageFeatureProperties=_inAppMessageFeatureProperties;
 @property(retain, nonatomic) SPTInAppMessageEventEmitter *eventEmitter; // @synthesize eventEmitter=_eventEmitter;
 @property(retain, nonatomic) SPTInAppMessageReceiverImplementation *messageReceiver; // @synthesize messageReceiver=_messageReceiver;
@@ -111,6 +113,7 @@
 @property(retain, nonatomic) SPTInAppMessageTriggerEngine *triggerEngine; // @synthesize triggerEngine=_triggerEngine;
 @property(retain, nonatomic) SPTInAppMessageTriggerListController *triggerListController; // @synthesize triggerListController=_triggerListController;
 @property(retain, nonatomic) SPTInAppMessageTriggerConfigurationsController *triggerConfigurationsController; // @synthesize triggerConfigurationsController=_triggerConfigurationsController;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
@@ -140,7 +143,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (_Bool)isBlockedForTA;
 - (id)providePresentationMonitor;
 - (id)provideNotePresentationManager;

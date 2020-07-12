@@ -13,8 +13,8 @@
     SPTGaiaHomeDeviceManager *_savedDeviceManager;
 }
 
-@property(readonly, nonatomic) SPTGaiaHomeDeviceManager *savedDeviceManager; // @synthesize savedDeviceManager=_savedDeviceManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTGaiaHomeDeviceManager *savedDeviceManager; // @synthesize savedDeviceManager=_savedDeviceManager;
 - (id)footerText;
 - (id)headerText;
 - (long long)numberOfRows;

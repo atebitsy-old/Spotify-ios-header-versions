@@ -23,6 +23,7 @@
     double _lastUpdateTimestamp;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double lastUpdateTimestamp; // @synthesize lastUpdateTimestamp=_lastUpdateTimestamp;
 @property(readonly, copy, nonatomic) NSString *sessionOwnerID; // @synthesize sessionOwnerID=_sessionOwnerID;
 @property(retain, nonatomic) UIColor *sessionColor; // @synthesize sessionColor=_sessionColor;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) UIImage *scannablesImage; // @synthesize scannablesImage=_scannablesImage;
 @property(readonly, nonatomic) NSArray *connectedUsers; // @synthesize connectedUsers=_connectedUsers;
 @property(readonly, nonatomic, getter=isSessionHost) _Bool sessionHost; // @synthesize sessionHost=_sessionHost;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSession:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

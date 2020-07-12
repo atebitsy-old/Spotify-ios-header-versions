@@ -16,8 +16,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void)lookupCacheStatusForImageURLs:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithCosmosResolver:(id)arg1;
 

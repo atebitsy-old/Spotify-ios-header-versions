@@ -22,6 +22,7 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) SPTVideoFairplayService *fairplayService; // @synthesize fairplayService=_fairplayService;
 @property(retain, nonatomic) id <SPTVideoEventDispatcher> eventDispatcher; // @synthesize eventDispatcher=_eventDispatcher;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <BMChunkCache> cache; // @synthesize cache=_cache;
 @property(retain, nonatomic) id <BMDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
-- (void).cxx_destruct;
 - (id)createRequestForURL:(id)arg1 loadingRequest:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)initWithIdentity:(id)arg1 dataLoader:(id)arg2 cache:(id)arg3 cachingFlatFilesEnabled:(_Bool)arg4 eventDispatcher:(id)arg5 fairplayService:(id)arg6;
 

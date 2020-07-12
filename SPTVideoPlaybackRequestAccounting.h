@@ -16,8 +16,8 @@
     SPTRequestAccounting *_requestAccounting;
 }
 
-@property(retain, nonatomic) SPTRequestAccounting *requestAccounting; // @synthesize requestAccounting=_requestAccounting;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTRequestAccounting *requestAccounting; // @synthesize requestAccounting=_requestAccounting;
 - (void)didTransferBytes:(long long)arg1 forBitrate:(double)arg2 withElapsedTime:(double)arg3 timestamp:(double)arg4;
 - (id)initWithRequestAccounting:(id)arg1;
 

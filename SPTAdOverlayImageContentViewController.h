@@ -26,6 +26,7 @@
     SPTAdFeatureFlagChecks *_featureChecker;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool viewDisplayed; // @synthesize viewDisplayed=_viewDisplayed;
 @property(nonatomic) _Bool imageLoaded; // @synthesize imageLoaded=_imageLoaded;
 @property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) id <SPTAdsBaseImageEntity> entity; // @synthesize entity=_entity;
 @property(readonly, nonatomic) UIView<SPTAdsMobileOverlayContentView> *overlayContentView; // @synthesize overlayContentView=_overlayContentView;
 @property(nonatomic) __weak id <SPTAdOverlayContentUnitDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)dismissText;
 - (id)title;
 - (void)didLoadContentImage:(id)arg1;

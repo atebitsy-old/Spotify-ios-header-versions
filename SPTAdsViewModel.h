@@ -24,6 +24,7 @@
     SPTAdContextManager *_adContextManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTAdContextManager *adContextManager; // @synthesize adContextManager=_adContextManager;
 @property(readonly, nonatomic) __weak SPTAdRulesManager *adRulesManager; // @synthesize adRulesManager=_adRulesManager;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) id <SPTPlayer> sptPlayer; // @synthesize sptPlayer=_sptPlayer;
 @property(readonly, nonatomic) id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
 @property(retain) id <SPTAdsBaseEntity> activeEntity; // @synthesize activeEntity=_activeEntity;
-- (void).cxx_destruct;
 - (id)getDependentSlotOrLogError;
 - (void)skipToNextTrack;
 - (void)reportAdClick;

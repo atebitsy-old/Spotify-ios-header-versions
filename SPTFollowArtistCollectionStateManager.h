@@ -17,9 +17,9 @@
     SPTFollowModelMessageManager *_followModelMessageManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTFollowModelMessageManager *followModelMessageManager; // @synthesize followModelMessageManager=_followModelMessageManager;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (void)followModelMessageManager:(id)arg1 followDataDidUpdate:(id)arg2;
 - (id)initWithCollectionPlatform:(id)arg1 followModelMessageManager:(id)arg2;
 

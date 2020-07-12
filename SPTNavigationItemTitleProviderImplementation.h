@@ -16,8 +16,8 @@
 }
 
 + (id)localizedTitleForUpsellNavigationItem:(unsigned long long)arg1;
-@property(retain, nonatomic) SPTNavigationFeatureProperties *properties; // @synthesize properties=_properties;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTNavigationFeatureProperties *properties; // @synthesize properties=_properties;
 - (id)localizedTitleForSourceIdentifier:(id)arg1;
 - (id)initWithFeatureProperties:(id)arg1;
 

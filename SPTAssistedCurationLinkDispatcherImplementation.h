@@ -16,9 +16,9 @@
     NSHashTable *_pageProviders;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *pageProviders; // @synthesize pageProviders=_pageProviders;
 @property(nonatomic) __weak UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
-- (void).cxx_destruct;
 - (void)registerPageProvider:(id)arg1;
 - (id)pageProviderForURI:(id)arg1;
 - (_Bool)canOpenURI:(id)arg1 allowExternalApps:(_Bool)arg2;

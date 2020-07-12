@@ -18,11 +18,11 @@
     NSArray *_trackCloudData;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(retain, nonatomic) NSArray *trackCloudData; // @synthesize trackCloudData=_trackCloudData;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
-- (void).cxx_destruct;
 - (id)initWithPlaylistTracks:(id)arg1 title:(id)arg2 isOffline:(_Bool)arg3;
 
 // Remaining properties

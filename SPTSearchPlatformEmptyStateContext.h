@@ -40,6 +40,7 @@
     NSDate *_recentsDatasetSetTimestamp;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDate *recentsDatasetSetTimestamp; // @synthesize recentsDatasetSetTimestamp=_recentsDatasetSetTimestamp;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
@@ -59,7 +60,6 @@
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
 @property(nonatomic) __weak id <SPTSearchPlatformContextDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)recentsViewModel;
 - (void)addInfoViewOverlayWithTitle:(id)arg1 subtitle:(id)arg2 toViewModel:(id)arg3;
 - (void)addEmptyStateOverlayConnectivityState:(unsigned long long)arg1 toViewModel:(id)arg2;

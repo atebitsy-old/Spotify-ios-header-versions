@@ -21,12 +21,12 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool playingRemotely; // @synthesize playingRemotely=_playingRemotely;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) SPTGaiaConnectStateObservingManager *stateObservingManager; // @synthesize stateObservingManager=_stateObservingManager;
 @property(readonly, nonatomic) SPTGaiaConnectAvailableDevicesManager *availableDevicesManager; // @synthesize availableDevicesManager=_availableDevicesManager;
 @property(readonly, nonatomic) SPTGaiaConnectCosmosResolver *resolver; // @synthesize resolver=_resolver;
-- (void).cxx_destruct;
 - (void)connectDidReceiveTransferError:(id)arg1;
 - (void)connectActiveDeviceVolumeDidUpdate:(double)arg1;
 - (void)connectDeviceRequiringOnboardingDidChange:(id)arg1;

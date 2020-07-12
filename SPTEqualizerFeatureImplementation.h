@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEqualizerLogger *equalizerLogger; // @synthesize equalizerLogger=_equalizerLogger;
 @property(retain, nonatomic) SPTEqualizerModel *equalizerModel; // @synthesize equalizerModel=_equalizerModel;
 @property(nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-- (void).cxx_destruct;
 - (id)provideEqualizerSettingsSection:(id)arg1;
 - (id)provideEqualizerViewController;
 - (void)load;

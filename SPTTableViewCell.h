@@ -36,6 +36,7 @@
 }
 
 + (double)preferredHeight;
+- (void).cxx_destruct;
 @property(nonatomic) double numberOfLinesForTitle; // @synthesize numberOfLinesForTitle=_numberOfLinesForTitle;
 @property(nonatomic) long long tableViewThemeStyle; // @synthesize tableViewThemeStyle=_tableViewThemeStyle;
 @property(nonatomic) _Bool prefixViewRemovesImage; // @synthesize prefixViewRemovesImage=_prefixViewRemovesImage;
@@ -54,7 +55,6 @@
 @property(retain, nonatomic) UIView *footerView; // @synthesize footerView=_footerView;
 @property(retain, nonatomic) UIView *prefixView; // @synthesize prefixView=_prefixView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;

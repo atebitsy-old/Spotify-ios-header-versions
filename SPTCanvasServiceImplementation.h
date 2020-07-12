@@ -58,6 +58,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCanvasNowPlayingContentReloader *canvasContentReloader; // @synthesize canvasContentReloader=_canvasContentReloader;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> canvasPlaylistRegistration; // @synthesize canvasPlaylistRegistration=_canvasPlaylistRegistration;
 @property(retain, nonatomic) SPTCanvasSwitchViewControllerManager *canvasSwitchManager; // @synthesize canvasSwitchManager=_canvasSwitchManager;
@@ -98,7 +99,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (void)registerDebugMenuActions;
 - (id)provideCanvasSettingsSection:(id)arg1;
 - (void)registerCanvasSettingsSection;

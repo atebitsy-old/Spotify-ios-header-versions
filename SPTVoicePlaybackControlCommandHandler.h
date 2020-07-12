@@ -16,8 +16,8 @@
     id <SPTExternalIntegrationPlaybackController> _playbackController;
 }
 
-@property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 - (id)handleVoiceCommand:(id)arg1;
 - (_Bool)canHandleVoiceCommand:(id)arg1;
 - (id)initWithPlaybackController:(id)arg1;

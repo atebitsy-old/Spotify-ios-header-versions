@@ -12,7 +12,7 @@
 #import "SPTLocalSettingsObserver-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
-@class NSArray, NSString, NSTimer, SPTDataLoader, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageServiceLogger, SPTInAppMessageTriggerConfigurationsPrerequisites, SPTObserverManager;
+@class NSArray, NSString, NSTimer, SPTDataLoader, SPTInAppMessageFeatureProperties, SPTInAppMessageServiceLogger, SPTInAppMessageTriggerConfigurationsPrerequisites, SPTObserverManager;
 @protocol SPTInAppMessageTriggerConfigurationsControllerDelegate, SPTInAppMessageTriggerConfigurationsControllerObserver, SPTLocalSettings, SPTOfflineModeState;
 
 @interface SPTInAppMessageTriggerConfigurationsController : NSObject <SPTInAppMessageTriggerConfigurationsPrerequisitesObserver, SPTDataLoaderDelegate, SPTLocalSettingsObserver, SPTOfflineModeStateObserver, SPTInAppMessageTriggerEngineDelegate>
@@ -29,13 +29,14 @@
     NSTimer *_triggerListRefreshTimer;
     SPTInAppMessageServiceLogger *_serviceLogger;
     double _requestStartTime;
-    SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
+    SPTInAppMessageFeatureProperties *_featureProperties;
     id <SPTOfflineModeState> _offlineModeState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(retain, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
+@property(retain, nonatomic) SPTInAppMessageFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) _Bool useDevEndpoint; // @synthesize useDevEndpoint=_useDevEndpoint;
 @property(nonatomic) double requestStartTime; // @synthesize requestStartTime=_requestStartTime;
 @property(retain, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) SPTDataLoader *configurationsDataLoader; // @synthesize configurationsDataLoader=_configurationsDataLoader;
 @property(nonatomic) __weak id <SPTInAppMessageTriggerConfigurationsControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isRefreshing) _Bool refreshing; // @synthesize refreshing=_refreshing;
-- (void).cxx_destruct;
 - (_Bool)isBlockedForTA;
 - (void)localSettingsDidChange:(id)arg1;
 - (void)logBackendRequestPerformanceWithRequest:(id)arg1;
@@ -66,7 +66,7 @@
 - (void)addConfigurationsControllerObserver:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dealloc;
-- (id)initWithPrerequisites:(id)arg1 configurationsDataLoader:(id)arg2 serviceLogger:(id)arg3 featureFlagChecker:(id)arg4 offlineModeState:(id)arg5 localSettings:(id)arg6;
+- (id)initWithPrerequisites:(id)arg1 configurationsDataLoader:(id)arg2 serviceLogger:(id)arg3 offlineModeState:(id)arg4 localSettings:(id)arg5 featureProperties:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

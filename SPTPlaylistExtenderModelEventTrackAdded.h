@@ -16,9 +16,9 @@
     NSURL *_playlistURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) unsigned long long trackIndex; // @synthesize trackIndex=_trackIndex;
-- (void).cxx_destruct;
 - (void)processWithState:(id)arg1 loop:(id)arg2;
 - (id)initWithTrackIndex:(unsigned long long)arg1 playlistURL:(id)arg2;
 

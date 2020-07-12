@@ -14,9 +14,9 @@
     SPTNowPlayingLogger *_nowPlayingLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *feedbackSoundCell; // @synthesize feedbackSoundCell=_feedbackSoundCell;
-- (void).cxx_destruct;
 - (void)feedbackSwitchChanged:(id)arg1;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

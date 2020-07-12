@@ -19,10 +19,10 @@
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(readonly, nonatomic, getter=isLikedSongsIncluded) _Bool likedSongsIncluded; // @synthesize likedSongsIncluded=_likedSongsIncluded;
 @property(readonly, nonatomic) NSArray *items; // @synthesize items=_items;
-- (void).cxx_destruct;
 - (_Bool)isLikedSongsItem:(id)arg1;
 - (_Bool)isAlbumItem:(id)arg1;
 - (_Bool)isPlaylistItem:(id)arg1;

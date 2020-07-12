@@ -44,6 +44,7 @@
 + (double)componentHeightForModel:(id)arg1 componentWidth:(double)arg2 titleLabelStyle:(id)arg3 metadataLabelStyle:(id)arg4 margin:(double)arg5;
 + (double)componentWidthForContainerWidth:(double)arg1 scale:(double)arg2 maxWidth:(double)arg3;
 + (struct CGSize)componentSizeForModel:(id)arg1 cardType:(long long)arg2 containerWidth:(double)arg3 theme:(id)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long cardType; // @synthesize cardType=_cardType;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -70,7 +71,6 @@
 @property(readonly, nonatomic) UIColor *defaultBackgroundColor; // @synthesize defaultBackgroundColor=_defaultBackgroundColor;
 @property(readonly, nonatomic) UIColor *darkTextColor; // @synthesize darkTextColor=_darkTextColor;
 @property(readonly, nonatomic) UIColor *brightTextColor; // @synthesize brightTextColor=_brightTextColor;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImage *podcastFallbackImage30;
 @property(readonly, nonatomic) UIImage *thumbnailFallbackImage;
 @property(readonly, nonatomic) struct CGPoint placeholderTextOffset;

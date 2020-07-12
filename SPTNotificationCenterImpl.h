@@ -15,8 +15,8 @@
     NSNotificationCenter *_nsNotificationCenter;
 }
 
-@property(retain, nonatomic) NSNotificationCenter *nsNotificationCenter; // @synthesize nsNotificationCenter=_nsNotificationCenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSNotificationCenter *nsNotificationCenter; // @synthesize nsNotificationCenter=_nsNotificationCenter;
 - (void)removeObserver:(id)arg1 name:(id)arg2 object:(id)arg3;
 - (void)removeObserver:(id)arg1;
 - (id)addObserverForName:(id)arg1 object:(id)arg2 queue:(id)arg3 usingBlock:(CDUnknownBlockType)arg4;

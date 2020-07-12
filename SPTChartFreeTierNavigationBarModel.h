@@ -25,6 +25,7 @@
     id <SPTContextMenuPresenter> _contextMenuPresenter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isFollowing) _Bool following; // @synthesize following=_following;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(nonatomic) __weak SPTChartFreeTierViewModel *viewModel; // @synthesize viewModel=_viewModel;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <SPContextMenuActionsFactory> contextMenuActionsFactory; // @synthesize contextMenuActionsFactory=_contextMenuActionsFactory;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(readonly, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
-- (void).cxx_destruct;
 - (void)barButtonItemManagerProvidersDidChange:(id)arg1;
 - (void)didTapLikeButton:(id)arg1;
 - (void)didTapContextMenuButton:(id)arg1;

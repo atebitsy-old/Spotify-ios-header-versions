@@ -18,9 +18,9 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)alertObserversOnOnDemandChange;
 - (void)removeObserver:(id)arg1;

@@ -19,11 +19,11 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) GLUESectionHeaderStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) __weak id <SPTQueueTableViewSectionHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)removeConstraints;
 - (void)createConstraintsIfNeeded;
 - (void)glue_applyStyle:(id)arg1;

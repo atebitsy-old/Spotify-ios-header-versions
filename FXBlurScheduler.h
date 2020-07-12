@@ -18,12 +18,12 @@
 }
 
 + (id)sharedInstance;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool updating; // @synthesize updating=_updating;
 @property(nonatomic) _Bool blurEnabled; // @synthesize blurEnabled=_blurEnabled;
 @property(nonatomic) unsigned long long updatesEnabled; // @synthesize updatesEnabled=_updatesEnabled;
 @property(nonatomic) unsigned long long viewIndex; // @synthesize viewIndex=_viewIndex;
 @property(retain, nonatomic) NSMutableArray *views; // @synthesize views=_views;
-- (void).cxx_destruct;
 - (void)updateAsynchronously;
 - (void)removeView:(id)arg1;
 - (void)addView:(id)arg1;

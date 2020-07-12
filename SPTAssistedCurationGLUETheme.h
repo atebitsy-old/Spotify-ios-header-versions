@@ -19,6 +19,7 @@
     double _minimumCardWidth;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double minimumCardWidth; // @synthesize minimumCardWidth=_minimumCardWidth;
 @property(readonly, nonatomic) double pageControlHeight; // @synthesize pageControlHeight=_pageControlHeight;
 @property(readonly, nonatomic) double searchVerticalOffset; // @synthesize searchVerticalOffset=_searchVerticalOffset;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) double cardSpacing; // @synthesize cardSpacing=_cardSpacing;
 @property(readonly, nonatomic) double topMargin; // @synthesize topMargin=_topMargin;
 @property(readonly, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)infoViewStyle;
 - (id)searchButtonStyle;
 - (id)cardStyleWithAddIcon:(long long)arg1;

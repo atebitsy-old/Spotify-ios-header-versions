@@ -6,11 +6,11 @@
 
 #import "GLUEStatefulStyle.h"
 
-@class GLUEImageStyle, SPTHomeUILabelStyle;
+@class GLUEImageStyle, GLUELabelStyle;
 
 @interface SPTHomeUIShortcutsCardStyle : GLUEStatefulStyle
 {
-    SPTHomeUILabelStyle *_titleLabelStyle;
+    GLUELabelStyle *_titleLabelStyle;
     GLUEImageStyle *_imageStyle;
     struct UIEdgeInsets _titleInsets;
 }
@@ -19,10 +19,10 @@
 + (id)makeTitleLabelStyleWithTheme:(id)arg1;
 + (id)makeUIStatesToStylesWithTheme:(id)arg1;
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets titleInsets; // @synthesize titleInsets=_titleInsets;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
-@property(copy, nonatomic) SPTHomeUILabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
+@property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithUIStatesToStyles:(id)arg1 titleLabelStyle:(id)arg2 imageStyle:(id)arg3 titleInsets:(struct UIEdgeInsets)arg4;
 

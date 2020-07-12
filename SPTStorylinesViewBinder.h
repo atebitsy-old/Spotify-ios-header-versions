@@ -19,12 +19,12 @@
     SPTStorylinesOfflineView *_offlineView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStorylinesOfflineView *offlineView; // @synthesize offlineView=_offlineView;
 @property(retain, nonatomic) SPTStorylinesFailedView *failedView; // @synthesize failedView=_failedView;
 @property(retain, nonatomic) SPTStorylinesLoadingView *loadingView; // @synthesize loadingView=_loadingView;
 @property(retain, nonatomic) SPTStorylinesView *storylinesView; // @synthesize storylinesView=_storylinesView;
 @property(retain, nonatomic) SPTStorylinesViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)performUIUpdatesWithBlock:(CDUnknownBlockType)arg1 withDuration:(double)arg2;
 - (void)currentImageDidChange:(id)arg1;
 - (void)autoplayTriggeredDidChange:(_Bool)arg1;

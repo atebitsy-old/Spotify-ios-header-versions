@@ -17,9 +17,9 @@
     id <SPTCanvasVideoLoader> _canvasVideoLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCanvasVideoLoader> canvasVideoLoader; // @synthesize canvasVideoLoader=_canvasVideoLoader;
 @property(readonly, nonatomic) id <SPTCanvasVideoLoaderFactory> canvasVideoLoaderFactory; // @synthesize canvasVideoLoaderFactory=_canvasVideoLoaderFactory;
-- (void).cxx_destruct;
 - (void)provideVideoDataForEntityURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithCanvasVideoLoaderFactory:(id)arg1;
 

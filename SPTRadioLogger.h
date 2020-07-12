@@ -16,10 +16,10 @@
     NSMutableDictionary *_loggedItems;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *loggedItems; // @synthesize loggedItems=_loggedItems;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
-- (void).cxx_destruct;
 - (void)logAutoplayEventType:(id)arg1 seedEntity:(id)arg2 offline:(long long)arg3 forcedOffline:(long long)arg4 activeConnectionType:(long long)arg5 dataSaverSetting:(long long)arg6 offlineListsCount:(long long)arg7 sessionEventCount:(long long)arg8 deviceFreeSpaceMB:(long long)arg9;
 - (void)addItemToLoggedItemsForKey:(id)arg1;
 - (_Bool)impressionIsNotLoggedForKey:(id)arg1;

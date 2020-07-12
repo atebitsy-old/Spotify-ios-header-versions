@@ -23,12 +23,12 @@
     NSMutableDictionary *_cachedViewControllers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *cachedViewControllers; // @synthesize cachedViewControllers=_cachedViewControllers;
 @property(retain, nonatomic) SPTYourLibraryPageViewController *sectionHeaderPageViewController; // @synthesize sectionHeaderPageViewController=_sectionHeaderPageViewController;
 @property(retain, nonatomic) SPTYourLibraryGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTYourLibraryViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTYourLibrarySectionsHeadersViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)yourLibraryViewModelUpdated:(id)arg1 withActiveGroupIndex:(unsigned long long)arg2 pageIndex:(unsigned long long)arg3;
 - (void)yourLibraryViewModelUpdated:(id)arg1;
 - (void)yourLibraryViewModel:(id)arg1 navigateToGroup:(unsigned long long)arg2 index:(unsigned long long)arg3;

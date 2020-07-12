@@ -32,6 +32,7 @@
     SPTFreeTierPreCurationTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierPreCurationTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
@@ -44,7 +45,6 @@
 @property(readonly, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(readonly, nonatomic) SPTAdBookmarkSettingsTrailingAccessoryView *trailingAccessoryView; // @synthesize trailingAccessoryView=_trailingAccessoryView;
 @property(readonly, nonatomic) SPTSavedAdsViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)updateUI;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (void)sp_updateContentInsets;

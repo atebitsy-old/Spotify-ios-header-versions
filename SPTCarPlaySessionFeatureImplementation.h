@@ -9,11 +9,12 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAccessory, SPTAllocationContext, SPTCarPlayDataSourceStateManager, SPTCarPlayFeatureProperties, SPTCarPlayRemoteControlEventController, SPTCarPlayUBILogger;
-@protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryStateManager, SPTCarPlayAppFeature, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTNetworkService, SPTNowPlayingPlatformService, SPTRemoteConfigurationService, SPTUBIService;
+@protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryManagerSessionService, SPTAccessoryStateManager, SPTCarPlayAppFeature, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTNetworkService, SPTNowPlayingPlatformService, SPTRemoteConfigurationService, SPTUBIService;
 
 @interface SPTCarPlaySessionFeatureImplementation : NSObject <SPTService>
 {
     id <SPTAccessoryManagerService> _accessoryManagerService;
+    id <SPTAccessoryManagerSessionService> _accessoryManagerSessionService;
     id <SPTExternalIntegrationPlatformService> _externalIntegrationPlatformService;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
     id <SPTNetworkService> _networkService;
@@ -32,6 +33,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTCarPlayAppFeature> carPlayAppFeature; // @synthesize carPlayAppFeature=_carPlayAppFeature;
 @property(retain, nonatomic) SPTCarPlayUBILogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
@@ -47,8 +49,8 @@
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlatformService> externalIntegrationPlatformService; // @synthesize externalIntegrationPlatformService=_externalIntegrationPlatformService;
+@property(readonly, nonatomic) __weak id <SPTAccessoryManagerSessionService> accessoryManagerSessionService; // @synthesize accessoryManagerSessionService=_accessoryManagerSessionService;
 @property(readonly, nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
-- (void).cxx_destruct;
 - (id)provideUBILogger;
 - (void)handleRouteChangeWithNotification:(id)arg1 audioSession:(id)arg2;
 - (void)audioRouteChanged:(id)arg1;

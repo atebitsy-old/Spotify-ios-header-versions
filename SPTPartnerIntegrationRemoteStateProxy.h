@@ -18,10 +18,10 @@
     id <SPTPartnerIntegration> _integration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isConnected; // @synthesize isConnected=_isConnected;
 @property(readonly, nonatomic) id <SPTPartnerIntegration> integration; // @synthesize integration=_integration;
 @property(readonly, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;
-- (void).cxx_destruct;
 - (id)forwardingTargetForSelector:(SEL)arg1;
 - (id)methodSignatureForSelector:(SEL)arg1;
 - (_Bool)conformsToProtocol:(id)arg1;

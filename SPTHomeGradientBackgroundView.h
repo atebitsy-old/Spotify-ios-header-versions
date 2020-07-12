@@ -19,11 +19,11 @@
     SPTHomeGradientBackgroundGenerator *_homeGradientBackgroundGenerator;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeGradientBackgroundGenerator *homeGradientBackgroundGenerator; // @synthesize homeGradientBackgroundGenerator=_homeGradientBackgroundGenerator;
 @property(readonly, nonatomic) GLUEHeaderBackgroundView *backgroundOverlayView; // @synthesize backgroundOverlayView=_backgroundOverlayView;
 @property(readonly, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)homeGradientBackgroundViewGenerator:(id)arg1 didFindGradientColor:(id)arg2;
 - (void)configureConstraints;
 - (void)setupLayout;

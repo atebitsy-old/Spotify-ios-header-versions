@@ -15,9 +15,9 @@
     id <SPTNowPlayingVideoManager> _nowPlayingVideoManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNowPlayingVideoManager> nowPlayingVideoManager; // @synthesize nowPlayingVideoManager=_nowPlayingVideoManager;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)presentFullScreenVideo;
 - (id)initWithTheme:(id)arg1 nowPlayingVideoManager:(id)arg2;
 

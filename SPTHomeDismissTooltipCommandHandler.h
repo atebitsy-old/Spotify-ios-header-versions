@@ -17,9 +17,9 @@
     SPTHomeViewModelProvider *_viewModelProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithLocalSettings:(id)arg1 viewModelProvider:(id)arg2;
 

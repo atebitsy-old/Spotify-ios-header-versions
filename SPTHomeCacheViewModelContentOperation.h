@@ -17,9 +17,9 @@
     SPTHomeContentCache *_homeContentCache;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithHomeContentCache:(id)arg1;
 

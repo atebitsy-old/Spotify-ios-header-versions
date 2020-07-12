@@ -16,9 +16,9 @@
     NSMutableDictionary *_weightMap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *weightMap; // @synthesize weightMap=_weightMap;
 @property(retain, nonatomic) NSMutableDictionary *rulesMap; // @synthesize rulesMap=_rulesMap;
-- (void).cxx_destruct;
 - (void)sortWithNewCards:(id)arg1 withEnumeratorBlock:(CDUnknownBlockType)arg2 insertCardAtIndexBlock:(CDUnknownBlockType)arg3 completionBlock:(CDUnknownBlockType)arg4;
 - (long long)compareCardA:(id)arg1 withCardB:(id)arg2;
 - (long long)weightForCard:(id)arg1;

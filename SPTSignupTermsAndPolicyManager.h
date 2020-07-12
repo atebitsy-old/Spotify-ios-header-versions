@@ -20,6 +20,7 @@
     SPTSignupTermsAndPolicyDialogLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyDialogLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyDialogCopyProvider *dialogCopyProvider; // @synthesize dialogCopyProvider=_dialogCopyProvider;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) SPTSignupMarketRestrictionsModel *marketingRestrictions; // @synthesize marketingRestrictions=_marketingRestrictions;
 @property(nonatomic, getter=isLicenseAcceptanceInProgress) _Bool licenseAcceptanceInProgress; // @synthesize licenseAcceptanceInProgress=_licenseAcceptanceInProgress;
 @property(nonatomic) __weak id <SPTSignupTermsAndPolicyManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)viewPolicyAlertActionButton;
 - (id)viewTermsAlertActionButton;
 - (void)notifyAboutLicenseAcceptanceState;

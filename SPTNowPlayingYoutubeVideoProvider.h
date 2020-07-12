@@ -17,9 +17,9 @@
     id <SPTNowPlayingTestManager> _testManger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManger; // @synthesize testManger=_testManger;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (_Bool)displaysFullScreenContentForTrack:(id)arg1;
 - (_Bool)requiresOverlayForTrack:(id)arg1;
 - (_Bool)canHideControlsForTrack:(id)arg1;

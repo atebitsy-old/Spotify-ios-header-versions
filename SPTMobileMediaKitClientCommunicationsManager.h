@@ -29,6 +29,7 @@
     id <MMKAuthorizationDelegate> _mmkDelegateWrapper;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <MMKAuthorizationDelegate> mmkDelegateWrapper; // @synthesize mmkDelegateWrapper=_mmkDelegateWrapper;
 @property(retain, nonatomic) KeychainItemWrapper *keychainItem; // @synthesize keychainItem=_keychainItem;
 @property(retain, nonatomic) id <MMKLogging> logger; // @synthesize logger=_logger;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) id <SPTAccessoryStateManager> accessoryManager; // @synthesize accessoryManager=_accessoryManager;
 @property(readonly, nonatomic) SPTMobileMediaKitAudioPlaybackManager *playbackManager; // @synthesize playbackManager=_playbackManager;
 @property(readonly, nonatomic) MMKClientManager *clientManager; // @synthesize clientManager=_clientManager;
-- (void).cxx_destruct;
 - (id)fetchAndResetLastTransactionId;
 - (void)sendPlayerEvent:(id)arg1 transactionId:(id)arg2;
 - (_Bool)isPlaybackControlledOnExternalDevice;

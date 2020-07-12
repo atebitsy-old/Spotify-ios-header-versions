@@ -23,6 +23,7 @@
 }
 
 + (id)requestWithURI:(id)arg1 body:(id)arg2 headers:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long transferType; // @synthesize transferType=_transferType;
 @property(nonatomic) double timeout; // @synthesize timeout=_timeout;
 @property(retain, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSDictionary *body; // @synthesize body=_body;
 @property(retain, nonatomic) NSString *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) NSString *UUID; // @synthesize UUID=_UUID;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSDictionary *dictionary;
 - (id)initWithDictionary:(id)arg1;

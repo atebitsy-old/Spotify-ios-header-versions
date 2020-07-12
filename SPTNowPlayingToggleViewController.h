@@ -36,6 +36,7 @@
     SPTNowPlayingModel *_model;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 @property(nonatomic) _Bool overlayHidden; // @synthesize overlayHidden=_overlayHidden;
 @property(nonatomic) unsigned long long toggleModeBeforeAd; // @synthesize toggleModeBeforeAd=_toggleModeBeforeAd;
@@ -53,7 +54,6 @@
 @property(readonly, nonatomic) SPTNowPlayingBarLogger *barLogger; // @synthesize barLogger=_barLogger;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTNowPlayingContainerIdleMonitor *idleMonitor; // @synthesize idleMonitor=_idleMonitor;
-- (void).cxx_destruct;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)updateLayout;

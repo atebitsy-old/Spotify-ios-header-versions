@@ -16,10 +16,10 @@
     SPTSocialListeningSessionFacepileItemViewStyle *_itemStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSocialListeningSessionFacepileItemViewStyle *itemStyle; // @synthesize itemStyle=_itemStyle;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-- (void).cxx_destruct;
 - (void)configureItem:(id)arg1 withNumber:(id)arg2;
 - (void)configureItem:(id)arg1 withViewModel:(id)arg2;
 - (id)initWithImageLoader:(id)arg1 theme:(id)arg2;

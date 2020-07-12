@@ -21,12 +21,12 @@
     NSURL *_URL;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool loadingImage; // @synthesize loadingImage=_loadingImage;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) NSURL *requestedURL; // @synthesize requestedURL=_requestedURL;
 @property(nonatomic) __weak UIView<SPTNowPlayingCoverArtContentViewDelegate> *contentViewDelegate; // @synthesize contentViewDelegate=_contentViewDelegate;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (id)URI;

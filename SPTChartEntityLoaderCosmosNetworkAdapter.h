@@ -17,9 +17,9 @@
     id <SPTResolver> _resolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <SPTChartEntityLoaderNetworkAdapterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)loadDataForURL:(id)arg1;
 @property(readonly, nonatomic) long long transportProtocol;
 - (id)initWithResolver:(id)arg1;

@@ -26,6 +26,7 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) _Bool isInBackground; // @synthesize isInBackground=_isInBackground;
 @property(nonatomic) _Bool didSwitchFromManualControl; // @synthesize didSwitchFromManualControl=_didSwitchFromManualControl;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) SPTLyricsLineSet *lyricsLineSet; // @synthesize lyricsLineSet=_lyricsLineSet;
 @property(retain, nonatomic) SPTPlayerTrack *currentTrack; // @synthesize currentTrack=_currentTrack;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)notifyActiveSyllableIndexChanged;
 - (void)notifyActiveLineIndexChanged;
 - (void)removeObserver:(id)arg1;

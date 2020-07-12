@@ -15,9 +15,9 @@
     id <SPTLoginLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSMutableDictionary *operationsSignposts; // @synthesize operationsSignposts=_operationsSignposts;
-- (void).cxx_destruct;
 - (double)operationDurationWithId:(id)arg1;
 - (void)trackEndingOfOperationWithId:(id)arg1;
 - (void)trackBeginningOfOperationWithId:(id)arg1;

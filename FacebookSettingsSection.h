@@ -20,12 +20,12 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(readonly, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) UIActivityIndicatorView *facebookConnectingActivityIndicator; // @synthesize facebookConnectingActivityIndicator=_facebookConnectingActivityIndicator;
 @property(retain, nonatomic) SPTSettingsTableViewCell *enableFacebookCell; // @synthesize enableFacebookCell=_enableFacebookCell;
-- (void).cxx_destruct;
 - (void)socialManager:(id)arg1 socialError:(id)arg2;
 - (void)facebookStateChanged;
 - (void)accountLinkingHandler:(_Bool)arg1;

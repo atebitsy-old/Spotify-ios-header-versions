@@ -30,6 +30,7 @@
     NSLayoutConstraint *_firstFieldDisclosureLabelHeight;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *firstFieldDisclosureLabelHeight; // @synthesize firstFieldDisclosureLabelHeight=_firstFieldDisclosureLabelHeight;
 @property(retain, nonatomic) NSLayoutConstraint *secondFieldDisclosureLabelHeight; // @synthesize secondFieldDisclosureLabelHeight=_secondFieldDisclosureLabelHeight;
 @property(retain, nonatomic) NSLayoutConstraint *firstFieldDisclosureLabelBottomMargin; // @synthesize firstFieldDisclosureLabelBottomMargin=_firstFieldDisclosureLabelBottomMargin;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) SPTLoginTextField *firstField; // @synthesize firstField=_firstField;
 @property(readonly, nonatomic) GLUELabel *secondFieldTitleLabel; // @synthesize secondFieldTitleLabel=_secondFieldTitleLabel;
 @property(readonly, nonatomic) GLUELabel *firstFieldTitleLabel; // @synthesize firstFieldTitleLabel=_firstFieldTitleLabel;
-- (void).cxx_destruct;
 - (void)hideSecondTextField;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;

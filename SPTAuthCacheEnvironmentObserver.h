@@ -21,12 +21,12 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(nonatomic) __weak id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak SPTAuthCache *authCache; // @synthesize authCache=_authCache;
 @property(nonatomic) __weak id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
-- (void).cxx_destruct;
 - (void)authTestManager:(id)arg1 didUpdateEnabledState:(_Bool)arg2;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;

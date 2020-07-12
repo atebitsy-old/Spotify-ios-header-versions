@@ -16,9 +16,9 @@
     SPTLoginDelayedSignupBannerViewModel *_viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginDelayedSignupBannerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
 - (id)initWithTheme:(id)arg1 viewModel:(id)arg2;
 

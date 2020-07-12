@@ -15,9 +15,9 @@
 }
 
 + (id)facebookPermissionsLookupJobWithFacebookService:(struct FacebookService *)arg1 andScheduler:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(nonatomic) struct FacebookService *facebook_service; // @synthesize facebook_service=_facebook_service;
-- (void).cxx_destruct;
 - (void)invalidate;
 - (void)run:(CDUnknownBlockType)arg1;
 - (id)initWithFacebookService:(struct FacebookService *)arg1 andScheduler:(id)arg2;

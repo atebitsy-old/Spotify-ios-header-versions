@@ -28,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTResolver> cosmosRouter; // @synthesize cosmosRouter=_cosmosRouter;
 @property(retain, nonatomic) SPTLocalFilesImportManager *localFilesImportManager; // @synthesize localFilesImportManager=_localFilesImportManager;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
-- (void).cxx_destruct;
 - (id)provideResolver;
 - (id)provideLocalSettings;
 - (id)provideImportMusicViewControllerWithURL:(id)arg1;

@@ -20,6 +20,7 @@
     id <SPTVoiceTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTVoiceLoggerProtocol> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) SPTVoiceOnboardingFlow *onboardingFlow; // @synthesize onboardingFlow=_onboardingFlow;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) id <SPTVoiceOnboardingRecordPermissionsState> permissionsReducer; // @synthesize permissionsReducer=_permissionsReducer;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isOnboardingCompleted) _Bool onboardingCompleted;
 - (void)setOnboardingCompleted:(_Bool)arg1;
 - (id)onboardingViewControllerWithUtteranceId:(id)arg1;

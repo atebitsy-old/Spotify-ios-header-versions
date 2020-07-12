@@ -18,10 +18,10 @@
     SPTArrowView *_arrowView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTArrowView *arrowView; // @synthesize arrowView=_arrowView;
 @property(nonatomic) long long arrowDirection; // @synthesize arrowDirection=_arrowDirection;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)syncArrowColourAndDirection;
 - (void)layoutSubviews;

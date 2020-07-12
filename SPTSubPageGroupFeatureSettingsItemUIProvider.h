@@ -19,11 +19,11 @@
     NSArray *_items;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(retain, nonatomic) SPTSettingsTableViewCell *cell; // @synthesize cell=_cell;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
-- (void).cxx_destruct;
 - (void)featureSettingsPresentation:(id)arg1 didSelectRow:(unsigned long long)arg2;
 - (id)featureSettingsPresentation:(id)arg1 cellForRow:(unsigned long long)arg2;
 - (id)initWithSubPageItems:(id)arg1 navigationRouter:(id)arg2 linkDispatcher:(id)arg3;

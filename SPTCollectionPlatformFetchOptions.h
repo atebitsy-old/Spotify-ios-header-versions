@@ -25,6 +25,7 @@
     struct _NSRange _range;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long mediaType; // @synthesize mediaType=_mediaType;
 @property(nonatomic) _Bool groupByName; // @synthesize groupByName=_groupByName;
 @property(nonatomic) unsigned long long followedArtistFilter; // @synthesize followedArtistFilter=_followedArtistFilter;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) NSArray *sort; // @synthesize sort=_sort;
 @property(nonatomic) struct _NSRange range; // @synthesize range=_range;
 @property(nonatomic) double minimumUpdateInterval; // @synthesize minimumUpdateInterval=_minimumUpdateInterval;
-- (void).cxx_destruct;
 - (id)description;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

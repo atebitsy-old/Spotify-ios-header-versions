@@ -19,11 +19,11 @@
     SPTStorylinesAssetLoadEventLogger *_eventLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStorylinesAssetLoadEventLogger *eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) NSCache *memoryCache; // @synthesize memoryCache=_memoryCache;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <SPTStorylinesCardImageLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)fetchImageForStorylines:(id)arg1 atCardIndex:(long long)arg2;

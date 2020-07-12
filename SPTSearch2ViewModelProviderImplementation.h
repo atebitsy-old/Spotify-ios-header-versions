@@ -21,12 +21,12 @@
     NSMutableArray *_contextsStack;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *contextsStack; // @synthesize contextsStack=_contextsStack;
 @property(readonly, nonatomic) id <SPTSearch2ContextProvider> contextProvider; // @synthesize contextProvider=_contextProvider;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTSearch2ViewModelProviderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <HUBViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)updateState;
 - (void)removeExcessiveContexts;
 - (void)promoteContext:(id)arg1;

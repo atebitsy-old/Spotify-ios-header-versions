@@ -6,51 +6,34 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTCanvasCompatibilityManagerObserver-Protocol.h"
 #import "SPTCanvasFlagSignalResolverDelegate-Protocol.h"
 
-@class NSString, SPTCanvasCompatibilityManager, SPTCanvasFlagSignalResolver, SPTObserverManager;
+@class NSString, SPTCanvasCompatibilityManager, SPTCanvasFlagSignalResolver, SPTCanvasRemoteConfigManager, SPTObserverManager;
 @protocol SPTLocalSettings;
 
-@interface SPTCanvasTestManager : NSObject <SPTCanvasCompatibilityManagerObserver, SPTCanvasFlagSignalResolverDelegate>
+@interface SPTCanvasTestManager : NSObject <SPTCanvasFlagSignalResolverDelegate>
 {
     _Bool _didShowFirstCanvas;
     _Bool _forceDisabled;
     _Bool _canvasEnabled;
-    SPTCanvasFlagSignalResolver *_featureFlagResolver;
-    SPTCanvasFlagSignalResolver *_streamingFlagResolver;
     SPTCanvasFlagSignalResolver *_dataSaverFlagResolver;
-    SPTCanvasFlagSignalResolver *_canvasNoCacheFlagResolver;
-    SPTCanvasFlagSignalResolver *_canvasSettingsFlagResolver;
-    SPTCanvasFlagSignalResolver *_canvasToggleFlagResolver;
-    SPTCanvasFlagSignalResolver *_canvasBlankToggleFlagResolver;
-    SPTCanvasFlagSignalResolver *_canvasTapFlagResolver;
-    SPTCanvasFlagSignalResolver *_canvasPlaylistFlagResolver;
     id <SPTLocalSettings> _localSettings;
     SPTObserverManager *_observers;
+    SPTCanvasRemoteConfigManager *_remoteConfigManager;
     SPTCanvasCompatibilityManager *_compatibilityManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasCompatibilityManager *compatibilityManager; // @synthesize compatibilityManager=_compatibilityManager;
+@property(readonly, nonatomic) SPTCanvasRemoteConfigManager *remoteConfigManager; // @synthesize remoteConfigManager=_remoteConfigManager;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *canvasPlaylistFlagResolver; // @synthesize canvasPlaylistFlagResolver=_canvasPlaylistFlagResolver;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *canvasTapFlagResolver; // @synthesize canvasTapFlagResolver=_canvasTapFlagResolver;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *canvasBlankToggleFlagResolver; // @synthesize canvasBlankToggleFlagResolver=_canvasBlankToggleFlagResolver;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *canvasToggleFlagResolver; // @synthesize canvasToggleFlagResolver=_canvasToggleFlagResolver;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *canvasSettingsFlagResolver; // @synthesize canvasSettingsFlagResolver=_canvasSettingsFlagResolver;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *canvasNoCacheFlagResolver; // @synthesize canvasNoCacheFlagResolver=_canvasNoCacheFlagResolver;
 @property(retain, nonatomic) SPTCanvasFlagSignalResolver *dataSaverFlagResolver; // @synthesize dataSaverFlagResolver=_dataSaverFlagResolver;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *streamingFlagResolver; // @synthesize streamingFlagResolver=_streamingFlagResolver;
-@property(retain, nonatomic) SPTCanvasFlagSignalResolver *featureFlagResolver; // @synthesize featureFlagResolver=_featureFlagResolver;
 @property(nonatomic, getter=isCanvasEnabled) _Bool canvasEnabled; // @synthesize canvasEnabled=_canvasEnabled;
 @property(nonatomic) _Bool forceDisabled; // @synthesize forceDisabled=_forceDisabled;
 @property(nonatomic) _Bool didShowFirstCanvas; // @synthesize didShowFirstCanvas=_didShowFirstCanvas;
-- (void).cxx_destruct;
-- (void)didChangeEnableCanvasForDevice:(id)arg1;
 - (void)didChangeFlag:(id)arg1 enabled:(_Bool)arg2;
-@property(readonly, nonatomic, getter=isDataSaverEnabled) _Bool dtaSaverEnabled;
-@property(readonly, nonatomic) _Bool shouldStreamCanvas;
+@property(readonly, nonatomic, getter=isDataSaverEnabled) _Bool dataSaverEnabled;
 @property(readonly, nonatomic) _Bool shouldSkipCanvasCache;
 - (_Bool)shouldEnableCanvasPlaylist;
 - (_Bool)shouldEnableCanvasTap;
@@ -63,8 +46,7 @@
 - (void)updateCanvasEnabled;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (void)dealloc;
-- (id)initWithFlagSignalFactory:(id)arg1 dataSaverSignal:(id)arg2 localSettings:(id)arg3 compatibilityManager:(id)arg4;
+- (id)initWithDataSaverSignal:(id)arg1 localSettings:(id)arg2 remoteConfigManager:(id)arg3 compatibilityManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

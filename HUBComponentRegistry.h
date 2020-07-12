@@ -17,9 +17,9 @@
     NSMutableDictionary *_internalRegistry;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *internalRegistry; // @synthesize internalRegistry=_internalRegistry;
 @property(retain, nonatomic) id <HUBComponentFallbackHandler> fallbackHandler; // @synthesize fallbackHandler=_fallbackHandler;
-- (void).cxx_destruct;
 - (id)component:(id)arg1 childComponentForModel:(id)arg2;
 - (void)unregisterComponentsForNamespace:(id)arg1;
 - (void)registerComponents:(id)arg1 forNamespace:(id)arg2;

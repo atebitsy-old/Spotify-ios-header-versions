@@ -18,12 +18,12 @@
 }
 
 + (id)initFromDictionary:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(copy, nonatomic) NSString *appIdName; // @synthesize appIdName=_appIdName;
 @property(copy, nonatomic) NSString *uniqueProvisionIdentifier; // @synthesize uniqueProvisionIdentifier=_uniqueProvisionIdentifier;
 @property(copy, nonatomic) NSArray *teamIdentifier; // @synthesize teamIdentifier=_teamIdentifier;
 @property(copy, nonatomic) NSString *teamName; // @synthesize teamName=_teamName;
-- (void).cxx_destruct;
 - (id)initWithTeamName:(id)arg1 teamIdentifier:(id)arg2 uniqueIdentifier:(id)arg3 appIdName:(id)arg4 name:(id)arg5;
 - (id)safeCastToStringArray:(id)arg1;
 - (id)safeCastToString:(id)arg1;

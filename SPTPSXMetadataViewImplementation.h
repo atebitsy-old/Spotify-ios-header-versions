@@ -28,6 +28,7 @@
     UIImageView *_totalDurationIconView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *totalDurationIconView; // @synthesize totalDurationIconView=_totalDurationIconView;
 @property(retain, nonatomic) UILabel *totalDurationLabel; // @synthesize totalDurationLabel=_totalDurationLabel;
 @property(retain, nonatomic) UILabel *lastModifiedLabel; // @synthesize lastModifiedLabel=_lastModifiedLabel;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) SPTActionButton *ownerNameButton; // @synthesize ownerNameButton=_ownerNameButton;
 @property(nonatomic) double totalDuration; // @synthesize totalDuration=_totalDuration;
 @property(retain, nonatomic) NSDate *lastModifiedDate; // @synthesize lastModifiedDate=_lastModifiedDate;
-- (void).cxx_destruct;
 - (void)ownerImageWasTapped:(id)arg1;
 - (void)ownerNameButtonWasTapped:(id)arg1;
 - (void)updateConstraints;

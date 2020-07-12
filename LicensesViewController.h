@@ -13,8 +13,8 @@
     WKWebView *_webView;
 }
 
-@property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) WKWebView *webView; // @synthesize webView=_webView;
 - (_Bool)shouldAutorotate;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)loadView;

@@ -23,6 +23,7 @@
     SPTIAPProductActivationRequest *_activationRequest;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTIAPProductActivationRequest *activationRequest; // @synthesize activationRequest=_activationRequest;
 @property(retain, nonatomic) SPTIAPTransactionRequest *transactionRequest; // @synthesize transactionRequest=_transactionRequest;
 @property(retain, nonatomic) id <SPTIAPRequestFactory> requestFactory; // @synthesize requestFactory=_requestFactory;
@@ -30,7 +31,6 @@
 @property(nonatomic) _Bool simulateFailingActivation; // @synthesize simulateFailingActivation=_simulateFailingActivation;
 @property(nonatomic) _Bool simulateFailingTransaction; // @synthesize simulateFailingTransaction=_simulateFailingTransaction;
 @property(nonatomic) __weak id <SPTIAPPurchaseRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)productActivationRequest:(id)arg1 didFailWithError:(id)arg2;
 - (void)productActivationRequestDidFinish:(id)arg1;
 - (void)productActivationRequestDidStart:(id)arg1;

@@ -8,11 +8,15 @@
 
 @interface _TtC18VoiceUIFeatureImpl17SearchResultsView : UIView
 {
+    // Error parsing type: , name: presentationMode
+    // Error parsing type: , name: viewDelegate
     // Error parsing type: , name: style
     // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: viewDelegate
+    // Error parsing type: , name: closeButtonWidthConstraint
+    // Error parsing type: , name: closeButtonHeightConstraint
     // Error parsing type: , name: dataSource
     // Error parsing type: , name: currentPlayingContext
+    // Error parsing type: , name: $__lazy_storage_$_closeButton
     // Error parsing type: , name: $__lazy_storage_$_flowLayout
     // Error parsing type: , name: $__lazy_storage_$_gridView
     // Error parsing type: , name: $__lazy_storage_$_floatingMicrophoneButton
@@ -20,6 +24,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)updateConstraints;
 - (id)initWithCoder:(id)arg1;
 
 @end

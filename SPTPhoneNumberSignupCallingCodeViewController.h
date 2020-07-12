@@ -25,11 +25,11 @@
     id <SPTPhoneNumberSignupCallingCodeViewControllerDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTPhoneNumberSignupCallingCodeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTPhoneNumberSignupCallingCodeViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTPhoneNumberSignupTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPhoneNumberSignupCallingCodeContainerView *containerView; // @synthesize containerView=_containerView;
-- (void).cxx_destruct;
 - (void)searchBar:(id)arg1 didChangeText:(id)arg2;
 - (void)viewModelDidUpdate:(id)arg1;
 - (unsigned long long)preferredNavigationBarState;

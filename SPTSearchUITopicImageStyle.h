@@ -20,12 +20,12 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double verticalOffset; // @synthesize verticalOffset=_verticalOffset;
 @property(nonatomic) double sideInset; // @synthesize sideInset=_sideInset;
 @property(copy, nonatomic) UIColor *overlayColor; // @synthesize overlayColor=_overlayColor;
 @property(copy, nonatomic) UIColor *shadowColor; // @synthesize shadowColor=_shadowColor;
 @property(nonatomic) double imageSide; // @synthesize imageSide=_imageSide;
-- (void).cxx_destruct;
 - (_Bool)isEqualToTopicImageStyle:(id)arg1;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

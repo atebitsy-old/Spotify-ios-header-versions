@@ -25,6 +25,7 @@
     CDUnknownBlockType _completionBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTConcertsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) NSLayoutConstraint *tableviewHeightConstraint; // @synthesize tableviewHeightConstraint=_tableviewHeightConstraint;
-- (void).cxx_destruct;
 - (void)finishedLoadingConcertsForTrack;
 - (void)stopLoadingAnimation;
 - (void)startLoadingAnimation;

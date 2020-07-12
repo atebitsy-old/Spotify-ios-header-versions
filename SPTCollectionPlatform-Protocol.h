@@ -10,8 +10,6 @@
 @protocol SPTCollectionPlatformDataLoader, SPTCollectionPlatformObserver, SPTCollectionPlatformStateProvider;
 
 @protocol SPTCollectionPlatform <NSObject>
-@property(readonly, nonatomic) id <SPTCollectionPlatformStateProvider> stateProvider;
-@property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> dataLoader;
 - (void)offlineStateForEntityURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;
 - (void)removeOfflineURL:(NSURL *)arg1 completion:(void (^)(_Bool, NSError *))arg2;
 - (void)addOfflineURL:(NSURL *)arg1 options:(SPTCollectionPlatformFetchOptions *)arg2 completion:(void (^)(_Bool, NSError *))arg3;
@@ -27,5 +25,7 @@
 - (void)addURL:(NSURL *)arg1 bySource:(NSString *)arg2 fromContext:(NSURL *)arg3 showUIConfirmation:(_Bool)arg4 completion:(void (^)(_Bool))arg5 entityName:(NSString *)arg6;
 - (void)addURL:(NSURL *)arg1 bySource:(NSString *)arg2 fromContext:(NSURL *)arg3 showUIConfirmation:(_Bool)arg4 completion:(void (^)(_Bool))arg5;
 - (_Bool)canAddTrackWithURL:(NSURL *)arg1;
+@property(nonatomic, readonly) id <SPTCollectionPlatformStateProvider> stateProvider;
+@property(nonatomic, readonly) id <SPTCollectionPlatformDataLoader> dataLoader;
 @end
 

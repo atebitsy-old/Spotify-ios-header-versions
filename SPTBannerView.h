@@ -27,6 +27,7 @@
 }
 
 + (id)spt_bannerViewWithBannerItem:(id)arg1 delegate:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(readonly, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
@@ -38,7 +39,6 @@
 @property(nonatomic) long long style; // @synthesize style=_style;
 @property(nonatomic) __weak id <SPTBannerViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (double)topInset;

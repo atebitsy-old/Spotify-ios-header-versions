@@ -22,13 +22,13 @@
     SPTFreeTierArtistFeatureProperties *_properties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierArtistFeatureProperties *properties; // @synthesize properties=_properties;
 @property(nonatomic) _Bool isBanArtistActionDisabled; // @synthesize isBanArtistActionDisabled=_isBanArtistActionDisabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> banArtistActionDisabledSignal; // @synthesize banArtistActionDisabledSignal=_banArtistActionDisabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> newExperienceEnabledSignal; // @synthesize newExperienceEnabledSignal=_newExperienceEnabledSignal;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (_Bool)isOfflineArtistViewEnabled;
 - (void)setupBanArtistActionDisabledFlag:(id)arg1;

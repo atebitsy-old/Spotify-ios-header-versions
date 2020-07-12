@@ -17,9 +17,9 @@
     id <SPTPageRegistry> _pageRegistry;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
 @property(readonly, nonatomic) __weak id <SPTNavigationListProvider> navigationListProvider; // @synthesize navigationListProvider=_navigationListProvider;
-- (void).cxx_destruct;
 - (id)newItemFromOld:(id)arg1 byUpdatingTitle:(id)arg2;
 - (void)pageRegistry:(id)arg1 didCreateViewController:(id)arg2 forViewURI:(id)arg3;
 - (void)stopObserving;

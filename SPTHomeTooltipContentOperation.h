@@ -22,13 +22,13 @@
     unsigned long long _presentationCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool operationPerformed; // @synthesize operationPerformed=_operationPerformed;
 @property(nonatomic) unsigned long long presentationCount; // @synthesize presentationCount=_presentationCount;
 @property(readonly, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
 @property(readonly, nonatomic) double horizontalAnchorPosition; // @synthesize horizontalAnchorPosition=_horizontalAnchorPosition;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)didLoadSeedASessionBarButtonItem:(id)arg1;
 - (_Bool)shouldHideTooltip;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

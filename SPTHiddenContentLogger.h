@@ -17,11 +17,11 @@
     NSURL *_pageURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(retain, nonatomic) id <SPTUBIMobileHiddenContentEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logArtistContextMenuSelectedAtIndex:(unsigned long long)arg1 artistURI:(id)arg2;
 - (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
 - (void)logTrackPreviewTappedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 startPlaying:(_Bool)arg3;

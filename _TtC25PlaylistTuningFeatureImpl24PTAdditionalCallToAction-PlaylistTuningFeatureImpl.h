@@ -7,6 +7,8 @@
 #import "_TtC25PlaylistTuningFeatureImpl24PTAdditionalCallToAction.h"
 
 @interface _TtC25PlaylistTuningFeatureImpl24PTAdditionalCallToAction (PlaylistTuningFeatureImpl)
-- (void)presentationControllerDidDismiss:(id)arg1;
+- (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
+- (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
+- (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 @end
 

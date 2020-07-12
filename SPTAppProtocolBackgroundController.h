@@ -31,6 +31,7 @@
     SPTAppProtocolBackgroundTask *_shutdownBackgroundTask;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isHandlingAudioInterruption) _Bool handlingAudioInterruption; // @synthesize handlingAudioInterruption=_handlingAudioInterruption;
 @property(nonatomic) _Bool wasPlayingWhenInterruptionBegan; // @synthesize wasPlayingWhenInterruptionBegan=_wasPlayingWhenInterruptionBegan;
 @property(nonatomic, getter=isAppRemoteConnected) _Bool appRemoteConnected; // @synthesize appRemoteConnected=_appRemoteConnected;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) __weak id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
 @property(nonatomic) __weak id <SPTAppProtocolBackgroundControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isRunning) _Bool running;
 - (void)backgroundTaskDidExpire:(id)arg1;
 - (void)updateIsAppRemoteConnected;

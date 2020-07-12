@@ -18,9 +18,9 @@
 + (id)proxyForDelegate:(id)arg1 conformingToProtocol:(id)arg2;
 + (id)proxyForObservers:(id)arg1 conformingToProtocol:(id)arg2 onQueue:(id)arg3;
 + (id)proxyForDelegate:(id)arg1 conformingToProtocol:(id)arg2 onQueue:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) Protocol *protocol; // @synthesize protocol=_protocol;
 @property(copy, nonatomic) NSArray *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 - (void)forwardInvocation:(id)arg1;
 - (id)methodSignatureForSelector:(SEL)arg1;
 - (id)methodSignatureForSelector:(SEL)arg1 required:(_Bool)arg2;

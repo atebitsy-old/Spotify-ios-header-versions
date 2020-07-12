@@ -15,9 +15,9 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) SPTVocalRemovalFeedbackBannerContentView *contentView; // @synthesize contentView=_contentView;
-- (void).cxx_destruct;
 - (void)closeButtonPressed;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)updateConstraints;

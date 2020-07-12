@@ -18,9 +18,9 @@
     UIWebView *_webview;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIWebView *webview; // @synthesize webview=_webview;
 @property(retain, nonatomic) SPTResubModalViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)webView:(id)arg1 didFailLoadWithError:(id)arg2;

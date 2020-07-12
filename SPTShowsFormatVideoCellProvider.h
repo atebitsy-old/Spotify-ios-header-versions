@@ -8,8 +8,8 @@
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
 
-@class NSString;
-@protocol BMPlaybackRequestFactory, GLUEImageLoader, GLUETheme, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTNetworkConnectivityController, SPTVideoCacheOptions, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
+@class BMPlaybackRequestFactory, NSString;
+@protocol GLUEImageLoader, GLUETheme, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTNetworkConnectivityController, SPTVideoCacheOptions, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
 
 @interface SPTShowsFormatVideoCellProvider : NSObject <SPTFreeTierPlaylistCellProvider>
 {
@@ -20,14 +20,15 @@
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <GLUETheme> _glueTheme;
     id <SPTVideoFeaturePlayerFactory> _playerFactory;
-    id <BMPlaybackRequestFactory> _playbackRequestFactory;
+    BMPlaybackRequestFactory *_playbackRequestFactory;
     id <SPTVideoCacheOptions> _videoCacheOptions;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTVideoCacheOptions> videoCacheOptions; // @synthesize videoCacheOptions=_videoCacheOptions;
-@property(readonly, nonatomic) id <BMPlaybackRequestFactory> playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
+@property(readonly, nonatomic) BMPlaybackRequestFactory *playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
 @property(readonly, nonatomic) id <SPTVideoFeaturePlayerFactory> playerFactory; // @synthesize playerFactory=_playerFactory;
 @property(readonly, nonatomic) _Bool useBetamaxPlayer; // @synthesize useBetamaxPlayer=_useBetamaxPlayer;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
@@ -35,14 +36,13 @@
 @property(retain, nonatomic) id <SPTVideoURLAssetLoader> videoAssetLoader; // @synthesize videoAssetLoader=_videoAssetLoader;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)formatCellViewModelForPlaylistTrackViewModel:(id)arg1;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
 - (void)startPreviewInLegacyVideoLayer:(id)arg1 indexPath:(id)arg2;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
-- (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (id)reuseIdentifiers;
 - (double)heightForRowAtIndexPath:(id)arg1;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;

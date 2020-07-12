@@ -21,6 +21,7 @@
     double _bottomMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double bottomMargin; // @synthesize bottomMargin=_bottomMargin;
 @property(retain, nonatomic) GLUEButtonStyle *trailingButtonStyle; // @synthesize trailingButtonStyle=_trailingButtonStyle;
 @property(nonatomic) double trailingMargin; // @synthesize trailingMargin=_trailingMargin;
@@ -28,7 +29,6 @@
 @property(nonatomic) double leadingMargin; // @synthesize leadingMargin=_leadingMargin;
 @property(nonatomic) double topMargin; // @synthesize topMargin=_topMargin;
 @property(nonatomic) double estimatedHeight; // @synthesize estimatedHeight=_estimatedHeight;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -9,6 +9,6 @@
 @protocol SPTAudioPreviewModel;
 
 @protocol SPTAudioPreviewButton <NSObject>
-@property(readonly, nonatomic) id <SPTAudioPreviewModel> audioPreviewModel;
+@property(nonatomic, readonly) id <SPTAudioPreviewModel> audioPreviewModel;
 @end
 

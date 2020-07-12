@@ -24,6 +24,7 @@
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(retain, nonatomic) id <SPTOfflineContentModelEntity> offlinePodcastEntity; // @synthesize offlinePodcastEntity=_offlinePodcastEntity;
 @property(retain, nonatomic) id <SPTOfflineContentModelEntity> offlineMusicEntity; // @synthesize offlineMusicEntity=_offlineMusicEntity;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTOfflineContentModel> offlinePodcastModel; // @synthesize offlinePodcastModel=_offlinePodcastModel;
 @property(readonly, nonatomic) id <SPTOfflineContentModel> offlineMusicModel; // @synthesize offlineMusicModel=_offlineMusicModel;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (id)ubiLoggingDataForShelfWithPosition:(unsigned long long)arg1 inSectionWithIdentifier:(id)arg2 itemIndex:(unsigned long long)arg3 itemURI:(id)arg4 sourceContentIdentifier:(id)arg5;
 - (_Bool)showDownloadSections;

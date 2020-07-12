@@ -25,6 +25,7 @@
 }
 
 + (id)trackerWithDeviceID:(id)arg1 logCenter:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *sessionID; // @synthesize sessionID=_sessionID;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) Adjust *adjust; // @synthesize adjust=_adjust;
 @property(readonly, copy, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (_Bool)adjustDeeplinkResponse:(id)arg1;
 - (void)adjustSessionTrackingFailed:(id)arg1;
 - (void)adjustSessionTrackingSucceeded:(id)arg1;

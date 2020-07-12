@@ -15,8 +15,8 @@
     id <SPTAssistedCurationAddTrackHandler> _addTrackHandler;
 }
 
-@property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler; // @synthesize addTrackHandler=_addTrackHandler;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler; // @synthesize addTrackHandler=_addTrackHandler;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithAddTrackHandler:(id)arg1;
 

@@ -18,10 +18,10 @@
     id <SPTFormatListPlatformResolver> _formatListResolver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFormatListPlatformResolver> formatListResolver; // @synthesize formatListResolver=_formatListResolver;
 @property(retain, nonatomic) id <SPTFreeTierAllSongsRegistration> fallbackHandler; // @synthesize fallbackHandler=_fallbackHandler;
 @property(readonly, nonatomic) NSMutableArray *registrations; // @synthesize registrations=_registrations;
-- (void).cxx_destruct;
 - (id)initWithFormatListResolver:(id)arg1;
 - (void)unregisterFallbackHandler:(id)arg1;
 - (void)unregisterHandler:(id)arg1;

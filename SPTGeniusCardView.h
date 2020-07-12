@@ -13,8 +13,8 @@
     SPTGeniusAnnotation *_annotation;
 }
 
-@property(readonly, nonatomic) SPTGeniusAnnotation *annotation; // @synthesize annotation=_annotation;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTGeniusAnnotation *annotation; // @synthesize annotation=_annotation;
 - (id)initWithAnnotation:(id)arg1;
 
 @end

@@ -20,12 +20,12 @@
     NSString *_lastSharedSecret;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *lastSharedSecret; // @synthesize lastSharedSecret=_lastSharedSecret;
 @property(copy, nonatomic) NSString *lastClientID; // @synthesize lastClientID=_lastClientID;
 @property(copy, nonatomic) NSString *lastChallenge; // @synthesize lastChallenge=_lastChallenge;
 @property(copy, nonatomic) NSString *lastNonce; // @synthesize lastNonce=_lastNonce;
 @property(nonatomic) __weak id <SPTAppProtocolAuthenticatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleAuthenticateMessage:(id)arg1 forSessionWithID:(unsigned long long)arg2 andReply:(CDUnknownBlockType)arg3;
 - (void)handleHelloMessage:(id)arg1 forSessionWithID:(unsigned long long)arg2 andReply:(CDUnknownBlockType)arg3;
 @property(readonly, copy, nonatomic) NSString *methodName;

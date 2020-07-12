@@ -21,12 +21,12 @@
 }
 
 + (id)equalizerViewWithValues:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(nonatomic) _Bool showConnectInfoView; // @synthesize showConnectInfoView=_showConnectInfoView;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SPTEqualizerColumnView *columnView; // @synthesize columnView=_columnView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)dealloc;
 @property(readonly, copy) NSString *description;
 - (void)applyThemeLayout;

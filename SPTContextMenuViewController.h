@@ -35,6 +35,7 @@
     id <SPTContextMenuOptions> _options;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuOptions> options; // @synthesize options=_options;
 @property(nonatomic) __weak id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
@@ -50,7 +51,6 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTContextMenuViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSURL *trackURL; // @synthesize trackURL=_trackURL;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)updateValidActionsAndReloadViewIfNeeded;

@@ -30,6 +30,7 @@
     UIImage *_currentImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *currentImage; // @synthesize currentImage=_currentImage;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) SPTStorylinesUBILogger *logger; // @synthesize logger=_logger;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) SPTStorylinesState *state; // @synthesize state=_state;
 @property(nonatomic, getter=isActive) _Bool active; // @synthesize active=_active;
 @property(nonatomic, getter=isAutoplayTriggered) _Bool autoplayTriggered; // @synthesize autoplayTriggered=_autoplayTriggered;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)didUpdateProgress:(double)arg1 atIndex:(unsigned long long)arg2 isReset:(_Bool)arg3;
 - (void)didChangeCurrentCardIndex:(unsigned long long)arg1;

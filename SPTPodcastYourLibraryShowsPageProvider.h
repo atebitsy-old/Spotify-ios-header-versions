@@ -31,6 +31,7 @@
     id <SPTNavigationRouter> _navigationRouter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) unsigned long long providerIdentifier; // @synthesize providerIdentifier=_providerIdentifier;
 @property(readonly, nonatomic) unsigned long long groupIdentifier; // @synthesize groupIdentifier=_groupIdentifier;
-- (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
 - (id)initWithURI:(id)arg1 title:(id)arg2 pageProviderIdentifier:(unsigned long long)arg3 dataLoader:(id)arg4 theme:(id)arg5 glueImageLoaderFactory:(id)arg6 logger:(id)arg7 explicitContentAccessManager:(id)arg8 metaViewController:(id)arg9 navigationRouter:(id)arg10 viewLoggerFactory:(id)arg11 stringFormatter:(id)arg12;

@@ -21,11 +21,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTWebViewFactoryImplementation *webViewFactory; // @synthesize webViewFactory=_webViewFactory;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-- (void).cxx_destruct;
 - (id)provideWebViewFactory;
 - (void)unload;
 - (void)configureWithServices:(id)arg1;

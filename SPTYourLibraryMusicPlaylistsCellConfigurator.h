@@ -20,6 +20,7 @@
     SPTYourLibraryMusicOverlayImageViewStyle *_gradientOverlayImageViewStyle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTYourLibraryMusicOverlayImageViewStyle *gradientOverlayImageViewStyle; // @synthesize gradientOverlayImageViewStyle=_gradientOverlayImageViewStyle;
 @property(readonly, nonatomic) SPTYourLibraryMusicOverlayImageViewStyle *solidOverlayImageViewStyle; // @synthesize solidOverlayImageViewStyle=_solidOverlayImageViewStyle;
 @property(readonly, nonatomic) SPTYourLibraryMusicOverlayImageViewStyle *overlayImageViewStyle; // @synthesize overlayImageViewStyle=_overlayImageViewStyle;
@@ -27,7 +28,6 @@
 @property(retain, nonatomic) GLUEEntityRowStyle *rowStyle; // @synthesize rowStyle=_rowStyle;
 @property(readonly, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-- (void).cxx_destruct;
 - (void)setupTrailingAccessoryForCell:(id)arg1 withViewModel:(id)arg2;
 - (void)setupLeadingAccessoryForCell:(id)arg1 withViewModel:(id)arg2;
 - (void)setupContentViewForCell:(id)arg1;

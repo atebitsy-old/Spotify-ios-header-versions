@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTCarModeEngine;
+@protocol SPTCarModeEngine, SPTDistractionControl;
 
 @protocol SPTCarModeEngineService <SPTService>
+- (id <SPTDistractionControl>)provideDistractionControl;
 - (id <SPTCarModeEngine>)provideEngine;
 @end
 

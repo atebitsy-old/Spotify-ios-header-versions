@@ -28,6 +28,7 @@
 
 + (id)infoViewWithSize:(struct CGSize)arg1;
 + (id)infoViewWithDefaultType:(long long)arg1 size:(struct CGSize)arg2 localizedFeatureName:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) double subviewTotalHeight; // @synthesize subviewTotalHeight=_subviewTotalHeight;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) UIView *secondaryAccessoryView; // @synthesize secondaryAccessoryView=_secondaryAccessoryView;
 @property(retain, nonatomic) UIView *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (double)minimumRequiredHeight;
 - (double)setOriginForSubview:(id)arg1 forOriginY:(double)arg2 interSubviewVerticalMargin:(double)arg3;

@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoURLAssetLoaderImplementation *videoAssetLoader; // @synthesize videoAssetLoader=_videoAssetLoader;
 @property(retain, nonatomic) SPTHTTPService *httpService; // @synthesize httpService=_httpService;
 @property(retain, nonatomic) SPTImageLoaderServiceManager *imageLoaderServiceManager; // @synthesize imageLoaderServiceManager=_imageLoaderServiceManager;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (void)invalidateSessionFactories;
 - (id)provideHermesController;
 - (id)provideReachabilityForInternetConnection;

@@ -20,13 +20,13 @@
     double _alpha;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) UIColor *borderColor; // @synthesize borderColor=_borderColor;
 @property(nonatomic) double borderWidth; // @synthesize borderWidth=_borderWidth;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

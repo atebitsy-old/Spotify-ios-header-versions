@@ -19,10 +19,10 @@
     AVAudioSession *_audioSession;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 @property(readonly, nonatomic) id <SPTAudioSessionController> audioSessionController; // @synthesize audioSessionController=_audioSessionController;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (unsigned long long)eventForCategory:(id)arg1;
 - (void)emitCurrentState;
 - (void)audioSessionController:(id)arg1 didFailSettingAudioSessionConfiguration:(id)arg2;

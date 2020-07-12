@@ -25,6 +25,7 @@
     VISREFNavigationBarView *_navigationBarView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) VISREFNavigationBarView *navigationBarView; // @synthesize navigationBarView=_navigationBarView;
 @property(nonatomic) double navigationBarTitleFadeStartPosition; // @synthesize navigationBarTitleFadeStartPosition=_navigationBarTitleFadeStartPosition;
 @property(retain, nonatomic) VISREFCustomBackButton *backButton; // @synthesize backButton=_backButton;
@@ -36,7 +37,6 @@
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(nonatomic) double navigationBarNormalizedTitleFadeStartPosition; // @synthesize navigationBarNormalizedTitleFadeStartPosition=_navigationBarNormalizedTitleFadeStartPosition;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)updateHeaderHeight:(double)arg1;
 - (double)navigationBarHeight;
 - (void)showNavigationBar:(_Bool)arg1;

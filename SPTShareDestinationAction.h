@@ -15,10 +15,10 @@
     CDUnknownBlockType _action;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(retain, nonatomic) UIImage *actionIcon; // @synthesize actionIcon=_actionIcon;
 @property(copy, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (id)imageStyle;

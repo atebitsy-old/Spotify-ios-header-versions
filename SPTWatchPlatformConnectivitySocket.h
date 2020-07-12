@@ -24,6 +24,7 @@
     NSMutableData *_bufferedWriteData;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableData *bufferedWriteData; // @synthesize bufferedWriteData=_bufferedWriteData;
 @property(retain, nonatomic) NSTimer *readTimer; // @synthesize readTimer=_readTimer;
 @property(readonly, nonatomic) GCDAsyncSocket *socket; // @synthesize socket=_socket;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityMessageHandlerRegistry> messageHandlerRegistry; // @synthesize messageHandlerRegistry=_messageHandlerRegistry;
 @property(nonatomic) __weak id <SPTWatchPlatformConnectivitySocketDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)sendReadSocketMessageWithData:(id)arg1 endOfFile:(_Bool)arg2 error:(id)arg3;
 - (void)close;
 - (void)writeData:(id)arg1;

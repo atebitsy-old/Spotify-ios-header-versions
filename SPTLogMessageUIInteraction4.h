@@ -22,6 +22,7 @@
 }
 
 + (id)messageWithRequestId:(id)arg1 featureId:(id)arg2 sectionId:(id)arg3 blockIndex:(long long)arg4 itemIndex:(long long)arg5 targetUri:(id)arg6 interactionType:(id)arg7 userIntent:(id)arg8 timestamp:(double)arg9;
+- (void).cxx_destruct;
 @property(nonatomic) double timestampValue; // @synthesize timestampValue=_timestampValue;
 @property(copy, nonatomic) NSString *userIntentValue; // @synthesize userIntentValue=_userIntentValue;
 @property(copy, nonatomic) NSString *interactionTypeValue; // @synthesize interactionTypeValue=_interactionTypeValue;
@@ -31,7 +32,6 @@
 @property(copy, nonatomic) NSString *sectionIdValue; // @synthesize sectionIdValue=_sectionIdValue;
 @property(copy, nonatomic) NSString *featureIdValue; // @synthesize featureIdValue=_featureIdValue;
 @property(copy, nonatomic) NSString *requestIdValue; // @synthesize requestIdValue=_requestIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

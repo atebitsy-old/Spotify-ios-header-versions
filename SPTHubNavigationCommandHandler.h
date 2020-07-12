@@ -17,10 +17,10 @@
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithLinkDispatcher:(id)arg1 interactionLogger:(id)arg2 ubiHubsInstrumentation:(id)arg3;
 

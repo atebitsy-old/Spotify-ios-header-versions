@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, NSURL, UIView;
+@class BMPlaybackRequestFactory, NSString, NSURL, UIView;
 @protocol BMBetamaxPlayer, BMVideoSurface, SPTCanvasContentLayerVideoPlaybackObserverDelegate, SPTCanvasModel, SPTVideoFeaturePlayerFactory;
 
 @interface SPTCanvasContentLayerVideoPlayerLoader : NSObject
@@ -16,6 +16,7 @@
     UIView<BMVideoSurface> *_surfaceView;
     id <SPTCanvasContentLayerVideoPlaybackObserverDelegate> _delegate;
     id <SPTVideoFeaturePlayerFactory> _videoPlayerFactory;
+    BMPlaybackRequestFactory *_playbackRequestFactory;
     id <SPTCanvasModel> _canvasModel;
     NSURL *_canvasAssetURL;
     double _canvasAssetDuration;
@@ -23,16 +24,17 @@
 }
 
 + (_Bool)hasVideoContent:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isLoading) _Bool loading; // @synthesize loading=_loading;
 @property(copy, nonatomic) NSString *playbackIdentifier; // @synthesize playbackIdentifier=_playbackIdentifier;
 @property(readonly, nonatomic) double canvasAssetDuration; // @synthesize canvasAssetDuration=_canvasAssetDuration;
 @property(readonly, nonatomic) NSURL *canvasAssetURL; // @synthesize canvasAssetURL=_canvasAssetURL;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
+@property(readonly, nonatomic) BMPlaybackRequestFactory *playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
 @property(readonly, nonatomic) id <SPTVideoFeaturePlayerFactory> videoPlayerFactory; // @synthesize videoPlayerFactory=_videoPlayerFactory;
 @property(nonatomic) __weak id <SPTCanvasContentLayerVideoPlaybackObserverDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) UIView<BMVideoSurface> *surfaceView; // @synthesize surfaceView=_surfaceView;
 @property(retain, nonatomic) id <BMBetamaxPlayer> videoPlayer; // @synthesize videoPlayer=_videoPlayer;
-- (void).cxx_destruct;
 - (_Bool)shouldRepeatVideo:(long long)arg1;
 - (long long)playbackOption:(id)arg1;
 - (id)requestForCanvasModel:(id)arg1 withPlaybackIndentifier:(id)arg2 mediaURL:(id)arg3;
@@ -42,7 +44,7 @@
 - (void)createVideoPlayer;
 - (void)loadPlayer;
 - (void)dealloc;
-- (id)initWithVideoPlayerFactory:(id)arg1 canvasModel:(id)arg2 canvasAssetURL:(id)arg3 canvasAssetDuration:(double)arg4;
+- (id)initWithVideoPlayerFactory:(id)arg1 playbackRequestFactory:(id)arg2 canvasModel:(id)arg3 canvasAssetURL:(id)arg4 canvasAssetDuration:(double)arg5;
 
 @end
 

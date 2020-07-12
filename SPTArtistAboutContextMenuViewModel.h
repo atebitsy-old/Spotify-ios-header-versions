@@ -20,6 +20,7 @@
     SPTArtistAboutModerationRegistrar *_artistAboutModerationRegistrar;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTArtistAboutModerationRegistrar *artistAboutModerationRegistrar; // @synthesize artistAboutModerationRegistrar=_artistAboutModerationRegistrar;
 @property(retain, nonatomic) SPTArtistAboutStateProvider *stateProvider; // @synthesize stateProvider=_stateProvider;
 @property(retain, nonatomic) id <SPTModerationServiceState> moderationServiceState; // @synthesize moderationServiceState=_moderationServiceState;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) id <SPTContextMenuActionsProvider> actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
-- (void).cxx_destruct;
 - (void)presentContextMenuInViewController:(id)arg1;
 - (id)createContextMenuTasks;
 - (void)dealloc;

@@ -19,6 +19,7 @@
     UIImage *_iconImageSelected;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *iconImageSelected; // @synthesize iconImageSelected=_iconImageSelected;
 @property(retain, nonatomic) UIImage *iconImageNormal; // @synthesize iconImageNormal=_iconImageNormal;
 @property(readonly, nonatomic) long long icon; // @synthesize icon=_icon;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) GLUELabel *itemTitleLabel; // @synthesize itemTitleLabel=_itemTitleLabel;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(readonly, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (struct CGSize)intrinsicContentSize;
 - (void)updateAccessibilityTraits;

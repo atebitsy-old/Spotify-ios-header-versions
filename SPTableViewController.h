@@ -19,8 +19,8 @@
 }
 
 + (Class)tableViewClass;
-@property(readonly, nonatomic) long long style; // @synthesize style=_style;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) long long style; // @synthesize style=_style;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)setEditing:(_Bool)arg1 animated:(_Bool)arg2;

@@ -41,6 +41,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property _Bool serviceEnabled; // @synthesize serviceEnabled=_serviceEnabled;
 @property(retain, nonatomic) SPTWazePartnerIntegration *partnerIntegration; // @synthesize partnerIntegration=_partnerIntegration;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
@@ -63,7 +64,6 @@
 @property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(readonly, nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;
-- (void).cxx_destruct;
 - (_Bool)shouldSendResumedPlaybackNotificationWithNewPlayerState:(id)arg1 oldPlayerState:(id)arg2;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (id)fragmentsParameterFromURI:(id)arg1;

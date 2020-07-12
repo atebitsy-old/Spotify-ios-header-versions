@@ -16,9 +16,9 @@
 
 + (id)decoratedAlbumWithAlbum:(id)arg1;
 + (id)decoratedAlbumWithMetadata:(const struct AlbumMetadata *)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *trackURLs; // @synthesize trackURLs=_trackURLs;
 @property(retain, nonatomic) SPTAlbum *album; // @synthesize album=_album;
-- (void).cxx_destruct;
 - (id)initWithAlbum:(id)arg1 trackURLs:(id)arg2;
 
 @end

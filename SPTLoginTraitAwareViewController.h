@@ -13,8 +13,8 @@
     id <GLUEStyle> _style;
 }
 
-@property(retain, nonatomic) id <GLUEStyle> style; // @synthesize style=_style;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <GLUEStyle> style; // @synthesize style=_style;
 - (void)traitCollectionDidChange:(id)arg1;
 
 @end

@@ -18,9 +18,9 @@
 }
 
 + (long long)trackAccessoryLabelTypeFromExplicit:(_Bool)arg1 premium:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) long long type; // @synthesize type=_type;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)setText:(id)arg1;
 - (void)setHighlighted:(_Bool)arg1;

@@ -23,12 +23,12 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTConcertsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTConcertsDateFormatter *dateFormatterProvider; // @synthesize dateFormatterProvider=_dateFormatterProvider;
 @property(readonly, nonatomic) SPTConcertsArtistNameFormatter *artistNameFormatter; // @synthesize artistNameFormatter=_artistNameFormatter;
 @property(readonly, nonatomic) SPTConcertsEntityRelatedConcert *concert; // @synthesize concert=_concert;
-- (void).cxx_destruct;
 - (void)handleAccessoryTap;
 - (void)handleTap;
 @property(readonly, nonatomic) _Bool canBeTapped;

@@ -16,10 +16,10 @@
     id <SPTShareEntityData> _shareEntity;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareEntityData> shareEntity; // @synthesize shareEntity=_shareEntity;
 @property(readonly, copy, nonatomic) NSString *headerViewSubtitle; // @synthesize headerViewSubtitle=_headerViewSubtitle;
 @property(readonly, copy, nonatomic) NSString *headerViewTitle; // @synthesize headerViewTitle=_headerViewTitle;
-- (void).cxx_destruct;
 - (id)descriptionComponentsForEntity:(id)arg1;
 - (id)itemDescription;
 - (id)bodyStringForShareEntity:(id)arg1 shareableURL:(id)arg2;

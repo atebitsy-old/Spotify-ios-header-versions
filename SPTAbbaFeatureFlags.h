@@ -32,6 +32,7 @@
     SPTAbbaLogger *_abbaLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAbbaLogger *abbaLogger; // @synthesize abbaLogger=_abbaLogger;
 @property(retain) NSMutableArray *lookedUpKeys; // @synthesize lookedUpKeys=_lookedUpKeys;
 @property(retain) NSDate *lastRefreshTimestamp; // @synthesize lastRefreshTimestamp=_lastRefreshTimestamp;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <SPTAbbaDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dealloc;
 - (void)applicationDidBecomeActive:(id)arg1;

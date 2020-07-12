@@ -21,6 +21,7 @@
     struct UIEdgeInsets _iconInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets iconInsets; // @synthesize iconInsets=_iconInsets;
 @property(nonatomic) struct UIEdgeInsets touchInsets; // @synthesize touchInsets=_touchInsets;
 - (void)setIconColor:(id)arg1;
@@ -31,7 +32,6 @@
 - (long long)icon;
 @property(retain, nonatomic) UIImage *alternateImage; // @synthesize alternateImage=_alternateImage;
 @property(nonatomic) _Bool alternateImageHidden; // @synthesize alternateImageHidden=_alternateImageHidden;
-- (void).cxx_destruct;
 - (void)applyIcon;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (id)initWithIcon:(long long)arg1;

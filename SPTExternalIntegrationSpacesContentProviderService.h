@@ -28,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) SPTExternalIntegrationSpacesContentURLResolver *contentURLResolver; // @synthesize contentURLResolver=_contentURLResolver;
 @property(readonly, nonatomic) SPTExternalIntegrationSpacesContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)errorForRequestError:(id)arg1;
 - (id)persistentCacheOptions;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;

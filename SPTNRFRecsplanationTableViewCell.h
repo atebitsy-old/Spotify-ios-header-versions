@@ -13,8 +13,8 @@
     GLUELabel *_recsplanationLabel;
 }
 
-@property(retain, nonatomic) GLUELabel *recsplanationLabel; // @synthesize recsplanationLabel=_recsplanationLabel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) GLUELabel *recsplanationLabel; // @synthesize recsplanationLabel=_recsplanationLabel;
 - (void)setupConstraints;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

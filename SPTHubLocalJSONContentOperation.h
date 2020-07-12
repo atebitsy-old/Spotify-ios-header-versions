@@ -17,9 +17,9 @@
     NSURL *_fileURL;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *fileURL; // @synthesize fileURL=_fileURL;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithJSONFileURL:(id)arg1;
 

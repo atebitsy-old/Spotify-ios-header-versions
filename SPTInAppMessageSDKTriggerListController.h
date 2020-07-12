@@ -16,8 +16,8 @@
     id <SPTInAppMessageSDKTriggerListControllerDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <SPTInAppMessageSDKTriggerListControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTInAppMessageSDKTriggerListControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)triggerObjectFromDictionary:(id)arg1;
 - (void)networkClient:(id)arg1 didFetchTriggers:(id)arg2;
 

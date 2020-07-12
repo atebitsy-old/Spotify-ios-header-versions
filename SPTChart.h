@@ -21,6 +21,7 @@
     long long _rankType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long rankType; // @synthesize rankType=_rankType;
 @property(retain, nonatomic) NSDate *lastUpdatedDate; // @synthesize lastUpdatedDate=_lastUpdatedDate;
 @property(nonatomic) unsigned long long numberOfNewEntries; // @synthesize numberOfNewEntries=_numberOfNewEntries;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) NSArray *entries; // @synthesize entries=_entries;
 @property(retain, nonatomic) NSURL *connectContextURI; // @synthesize connectContextURI=_connectContextURI;
 @property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long numberOfEntries;
 - (id)entryAtIndex:(unsigned long long)arg1;
 

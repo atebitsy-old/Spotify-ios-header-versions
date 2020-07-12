@@ -14,9 +14,9 @@
     SPTConnectivityWebgateUserAgentParameters *_webgateUserAgentParameters;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTConnectivityWebgateUserAgentParameters *webgateUserAgentParameters; // @synthesize webgateUserAgentParameters=_webgateUserAgentParameters;
 @property(copy, nonatomic) NSString *webgateLocale; // @synthesize webgateLocale=_webgateLocale;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct Configuration cpp;
 - (id)initWithConfiguration:(struct Configuration)arg1;
 - (id)init;

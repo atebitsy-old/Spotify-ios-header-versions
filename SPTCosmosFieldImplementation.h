@@ -15,10 +15,10 @@
     CDUnknownBlockType _populateBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType populateBlock; // @synthesize populateBlock=_populateBlock;
 @property(retain, nonatomic) NSDictionary *policyDictionary; // @synthesize policyDictionary=_policyDictionary;
 @property(retain, nonatomic) Protocol *protocol; // @synthesize protocol=_protocol;
-- (void).cxx_destruct;
 - (id)initWithProtocol:(id)arg1 policyDictionary:(id)arg2 populateBlock:(CDUnknownBlockType)arg3;
 - (id)initWithPolicyDictionary:(id)arg1 populateBlock:(CDUnknownBlockType)arg2;
 

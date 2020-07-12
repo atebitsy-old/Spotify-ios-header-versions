@@ -20,11 +20,11 @@
     SPTDrivingModeLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTDrivingModeContextMenuFactory> contextMenuFactory; // @synthesize contextMenuFactory=_contextMenuFactory;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingNavigationBarModel> navigationBarModel; // @synthesize navigationBarModel=_navigationBarModel;
-- (void).cxx_destruct;
 - (void)navigationBarModelDidUpdateLyricsTab:(_Bool)arg1 canvasTab:(_Bool)arg2;
 - (void)navigationBarModelStateDidChange:(id)arg1;
 - (void)rightButtonPressed:(id)arg1;

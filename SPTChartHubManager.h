@@ -21,6 +21,7 @@
     id <SPTShelves> _shelves;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, copy, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
-- (void).cxx_destruct;
 - (id)createContentOperationForURL:(id)arg1 referrerIdentifier:(id)arg2 decorationOperation:(id)arg3 cardAccessibilityContentOperation:(id)arg4;
 - (id)viewControllerForURL:(id)arg1 pageIdentifier:(id)arg2 referrerIdentifier:(id)arg3 contentDecorator:(id)arg4 cardAccessibilityContentOperation:(id)arg5;
 - (id)initWithServiceIdentifier:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 theme:(id)arg4 shelves:(id)arg5;

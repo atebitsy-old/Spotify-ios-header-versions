@@ -26,6 +26,7 @@
     UIBarButtonItem *_seedASessionBarButtonItem;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIBarButtonItem *seedASessionBarButtonItem; // @synthesize seedASessionBarButtonItem=_seedASessionBarButtonItem;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTSeedASessionConfiguration *seedASessionConfiguration; // @synthesize seedASessionConfiguration=_seedASessionConfiguration;
@@ -39,12 +40,10 @@
 @property(readonly, nonatomic) id <_TtP17FollowFeedFeature19SPTFollowFeedLogger_> feedLogger; // @synthesize feedLogger=_feedLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
-- (void).cxx_destruct;
 - (void)updateFeedNavigationItemIfNeeded:(id)arg1;
 - (void)seedASessionButtonPressed:(id)arg1;
 - (void)feedButtonPressed:(id)arg1;
 - (void)settingsButtonPressed;
-- (id)feedButtonImageWithNewItems:(_Bool)arg1;
 - (id)followFeedNavBarItem;
 - (id)leftItems;
 - (id)rightItems;

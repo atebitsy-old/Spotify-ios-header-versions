@@ -28,11 +28,11 @@
 + (long long)imageStyleFromComponentModel:(id)arg1;
 + (unsigned long long)headerViewStyleFromComponentModel:(id)arg1;
 + (double)preferredHeightForDisplayingModel:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (void)glueHeaderView:(id)arg1 collapsed:(_Bool)arg2;
 - (void)glueHeaderView:(id)arg1 imageViewTapped:(id)arg2;
 - (void)headerAccessoryButtonTapped:(id)arg1;

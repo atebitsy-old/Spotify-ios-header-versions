@@ -11,7 +11,7 @@
 #import "SpotifyApplicationRemoteControlDelegate-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTNowPlayingAuxiliaryActionsHandlerImplementation, SPTNowPlayingBackgroundViewController, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingContentLayerViewModel, SPTNowPlayingContextMenuHeaderFactory, SPTNowPlayingDefaultMode, SPTNowPlayingDeviceOrientationManager, SPTNowPlayingFeatureSettings, SPTNowPlayingFeedbackMode, SPTNowPlayingFreeMode, SPTNowPlayingLogger, SPTNowPlayingManagerImplementation, SPTNowPlayingModel, SPTNowPlayingPlaybackActionsHandlerImplementation, SPTNowPlayingPodcastMode, SPTNowPlayingRemoteControlEventDefaultController, SPTNowPlayingRemoteControlPolicyResolver, SPTNowPlayingSideBarLogger, SPTNowPlayingSideBarViewControllerFactory, SPTNowPlayingSkipLimitReachedMessageRequester, SPTNowPlayingStateProxy, SPTNowPlayingToggleViewController, SPTNowPlayingUBILogger, SPTNowPlayingVideoManagerImplementation, SPTNowPlayingVideoShowMode, SPTNowPlayingViewFullscreenConfigurator, SPTStatefulPlayer, UIViewController;
-@protocol GaiaFeature, SPContextMenuFeature, SPTAdsBaseService, SPTAdsService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTFeedbackService, SPTFormatListPlatformService, SPTGLUEService, SPTInAppMessageService, SPTMediaPlayerService, SPTNetworkService, SPTNowPlayingInfoCenterManagerProtocol, SPTNowPlayingLegacyFeedbackCoordinator, SPTNowPlayingNavigationBarModel, SPTNowPlayingNavigationBarUnitManager, SPTNowPlayingPlatformService, SPTNowPlayingRemoteControlPolicyRegistry, SPTNowPlayingTestManager, SPTPersonalisedSetsService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTQueueInteractor, SPTQueueLogger, SPTQueueService, SPTRadioService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarConditionalPresenter, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, _TtP18ConnectUIV2Feature21SPTConnectUIV2Service_, _TtP21VoiceCompanionFeature24SPTVoiceCompanionService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_;
+@protocol GaiaFeature, SPContextMenuFeature, SPTAdsBaseService, SPTAdsService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEncoreIntegrationService, SPTFeedbackService, SPTFormatListPlatformService, SPTGLUEService, SPTInAppMessageService, SPTMediaPlayerService, SPTNetworkService, SPTNowPlayingInfoCenterManagerProtocol, SPTNowPlayingLegacyFeedbackCoordinator, SPTNowPlayingNavigationBarModel, SPTNowPlayingNavigationBarUnitManager, SPTNowPlayingPlatformService, SPTNowPlayingRemoteControlPolicyRegistry, SPTNowPlayingTestManager, SPTPersonalisedSetsService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTQueueInteractor, SPTQueueLogger, SPTQueueService, SPTRadioService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarConditionalPresenter, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP18ConnectUIV2Feature21SPTConnectUIV2Service_, _TtP21VoiceCompanionFeature24SPTVoiceCompanionService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_;
 
 @interface SPTNowPlayingServiceImplementation : NSObject <SpotifyApplicationRemoteControlDelegate, SPTQueueViewControllerDelegate, SPTNowPlayingService>
 {
@@ -93,9 +93,14 @@
     SPTNowPlayingSideBarViewControllerFactory *_sideBarFactory;
     id <SPTNowPlayingNavigationBarUnitManager> _navigationBarUnitManager;
     SPTNowPlayingFeatureSettings *_featureSettings;
+    id <SPTEncoreIntegrationService> _encoreIntegrationService;
+    id <_TtP17OfflineMixFeature20SPTOfflineMixService_> _offlineMixService;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
+@property(nonatomic) __weak id <_TtP17OfflineMixFeature20SPTOfflineMixService_> offlineMixService; // @synthesize offlineMixService=_offlineMixService;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(retain, nonatomic) SPTNowPlayingFeatureSettings *featureSettings; // @synthesize featureSettings=_featureSettings;
 @property(retain, nonatomic) id <SPTNowPlayingNavigationBarUnitManager> navigationBarUnitManager; // @synthesize navigationBarUnitManager=_navigationBarUnitManager;
 @property(retain, nonatomic) SPTNowPlayingSideBarViewControllerFactory *sideBarFactory; // @synthesize sideBarFactory=_sideBarFactory;
@@ -174,10 +179,9 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (void)registerFeatureSettings;
 - (void)registerContextMenuActions;
-- (void)queue:(struct UIViewController *)arg1 didTapNowPlayingTrack:(id)arg2;
+- (void)queue:(id)arg1 didTapNowPlayingTrack:(id)arg2;
 - (_Bool)spotifyApplication:(id)arg1 handleRemoteControlEventOfSubtype:(long long)arg2;
 - (void)registerDefaultModes;
 - (id)provideSideBarFactory;

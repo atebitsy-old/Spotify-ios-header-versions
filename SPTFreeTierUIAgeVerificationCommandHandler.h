@@ -15,8 +15,8 @@
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
 }
 
-@property(readonly, nonatomic) __weak id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithAgeVerificationProvider:(id)arg1;
 

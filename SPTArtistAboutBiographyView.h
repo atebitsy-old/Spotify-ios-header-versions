@@ -31,6 +31,7 @@
     GLUEButton *_twitter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEButton *twitter; // @synthesize twitter=_twitter;
 @property(retain, nonatomic) GLUEButton *instagram; // @synthesize instagram=_instagram;
 @property(retain, nonatomic) GLUEButton *facebook; // @synthesize facebook=_facebook;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) NSURL *authorImageURL; // @synthesize authorImageURL=_authorImageURL;
 @property(retain, nonatomic) NSString *text; // @synthesize text=_text;
 @property(nonatomic) __weak id <SPTArtistAboutBiographyViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3;
 - (id)biographyText:(id)arg1 withStyle:(id)arg2;
 - (id)attributedTextForBiographyText:(id)arg1;

@@ -27,7 +27,6 @@
 - (id)spt_pageURI;
 @property(nonatomic, copy) NSString *pageIdentifier;
 - (id)spt_pageIdentifier;
-- (unsigned long long)preferredNavigationBarState;
 
 @end
 

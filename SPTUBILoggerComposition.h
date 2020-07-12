@@ -17,9 +17,9 @@
     NSArray *_sideEffectLoggers;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *sideEffectLoggers; // @synthesize sideEffectLoggers=_sideEffectLoggers;
 @property(retain, nonatomic) id <SPTUBILogger> forwardedLogger; // @synthesize forwardedLogger=_forwardedLogger;
-- (void).cxx_destruct;
 - (id)logNonAuthenticatedImpression:(id)arg1;
 - (id)logImpression:(id)arg1;
 - (id)logNonAuthenticatedInteraction:(id)arg1;

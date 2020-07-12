@@ -28,6 +28,7 @@
     UIStackView *_stackView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) UIStackView *headerStackView; // @synthesize headerStackView=_headerStackView;
 @property(readonly, nonatomic) GLUELabel *tryAgainLabel; // @synthesize tryAgainLabel=_tryAgainLabel;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) SPTListenTogetherBetaLabel *betaLabel; // @synthesize betaLabel=_betaLabel;
 @property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setSessionActiveIndicatorViewVisible:(_Bool)arg1;
 - (void)addViewConstraints;

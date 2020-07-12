@@ -17,9 +17,9 @@
 + (id)buildFilterOptions:(id)arg1;
 + (id)buildSortOptions:(id)arg1;
 + (id)factoryForBaseURL:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTCollectionPlatformFetchOptions *fetchOptions; // @synthesize fetchOptions=_fetchOptions;
 @property(copy, nonatomic) NSURL *baseURL; // @synthesize baseURL=_baseURL;
-- (void).cxx_destruct;
 - (id)build;
 - (id)applyFetchOptions:(id)arg1;
 - (id)initWithBaseURL:(id)arg1;

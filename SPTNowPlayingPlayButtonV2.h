@@ -21,13 +21,13 @@
 }
 
 + (id)button;
+- (void).cxx_destruct;
 @property(nonatomic) double circleLineWidth; // @synthesize circleLineWidth=_circleLineWidth;
 @property(retain, nonatomic) UIColor *circleColor; // @synthesize circleColor=_circleColor;
 @property(nonatomic) struct UIEdgeInsets touchInsets; // @synthesize touchInsets=_touchInsets;
 @property(nonatomic) struct CGSize circleSize; // @synthesize circleSize=_circleSize;
 @property(retain, nonatomic) UIColor *fillColor; // @synthesize fillColor;
 @property(nonatomic, getter=isFilled) _Bool filled; // @synthesize filled;
-- (void).cxx_destruct;
 - (unsigned long long)accessibilityTraits;
 - (id)accessibilityLabel;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;

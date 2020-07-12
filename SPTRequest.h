@@ -16,11 +16,11 @@
     NSDictionary *_headers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *headers; // @synthesize headers=_headers;
 @property(readonly, copy, nonatomic) NSData *body; // @synthesize body=_body;
 @property(readonly, copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, copy, nonatomic) NSString *action; // @synthesize action=_action;
-- (void).cxx_destruct;
 - (void)getCppRequest:(struct Request *)arg1;
 - (id)description;
 - (id)initWithCppRequest:(const struct Request *)arg1;

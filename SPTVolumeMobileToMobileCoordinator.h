@@ -24,6 +24,7 @@
     double _internalVolume;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double internalVolume; // @synthesize internalVolume=_internalVolume;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 @property(readonly, nonatomic) SPTVolumeBuffer *volumeBuffer; // @synthesize volumeBuffer=_volumeBuffer;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) id <SPTVolumeSynchronizationManager> remoteVolumeSynchronizationManager; // @synthesize remoteVolumeSynchronizationManager=_remoteVolumeSynchronizationManager;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
-- (void).cxx_destruct;
 - (void)remoteVolumeDidChange:(double)arg1;
 - (void)systemVolumeDidUpdate:(double)arg1;
 - (void)updateSystemVolume:(double)arg1;

@@ -39,6 +39,7 @@
 + (id)serviceURLForEndpoint:(unsigned long long)arg1;
 + (id)spt_speechRecognitionRequestWithBoundary:(id)arg1 sampleRate:(id)arg2 utteranceId:(id)arg3 inputStream:(id)arg4 endpoint:(unsigned long long)arg5 shouldSaveAudio:(_Bool)arg6 freeTierEnabled:(_Bool)arg7 language:(id)arg8;
 + (id)spt_librarySpeechRecognitionRequestWithRequest:(id)arg1 boundary:(id)arg2 sampleRate:(id)arg3 utteranceId:(id)arg4 inputStream:(id)arg5;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTDataLoaderCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(nonatomic) _Bool retriedAuthorisation; // @synthesize retriedAuthorisation=_retriedAuthorisation;
 @property(retain, nonatomic) NSMutableDictionary *mutableHeaders; // @synthesize mutableHeaders=_mutableHeaders;
@@ -56,7 +57,6 @@
 @property(nonatomic) unsigned long long maximumRetryCount; // @synthesize maximumRetryCount=_maximumRetryCount;
 @property(nonatomic) _Bool waitsForConnectivity; // @synthesize waitsForConnectivity=_waitsForConnectivity;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)description;
 - (id)urlRequest;

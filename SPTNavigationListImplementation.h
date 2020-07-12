@@ -17,10 +17,10 @@
     NSDictionary *_itemsURIMap;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *itemsURIMap; // @synthesize itemsURIMap=_itemsURIMap;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, copy, nonatomic) NSOrderedSet *items; // @synthesize items=_items;
-- (void).cxx_destruct;
 - (id)itemForURI:(id)arg1;
 - (id)initWithItems:(id)arg1 identifier:(id)arg2;
 

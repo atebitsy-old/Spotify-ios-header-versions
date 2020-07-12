@@ -25,6 +25,7 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(copy, nonatomic) NSString *currentPlaylistName; // @synthesize currentPlaylistName=_currentPlaylistName;
 @property(retain, nonatomic) NSURL *renamePlaylistURL; // @synthesize renamePlaylistURL=_renamePlaylistURL;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTCreatePlaylistModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTCreatePlaylistViewModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)createPlaylistModel:(id)arg1 didRenamePlaylistWithURL:(id)arg2;
 - (void)createPlaylistModel:(id)arg1 didCreatePlaylistWithURL:(id)arg2;
 - (void)createPlaylistModel:(id)arg1 didUpdateNumberOfOwnPlaylists:(unsigned long long)arg2;

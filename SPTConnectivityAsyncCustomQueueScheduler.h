@@ -15,8 +15,8 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 - (void)runBlock:(CDUnknownBlockType)arg1;
 - (void)postBlock:(CDUnknownBlockType)arg1;
 - (_Bool)isOnSameThread;

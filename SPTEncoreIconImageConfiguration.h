@@ -21,6 +21,7 @@
     struct UIEdgeInsets _iconEdgeInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *boundingRectColor; // @synthesize boundingRectColor=_boundingRectColor;
 @property(nonatomic) _Bool boundingRect; // @synthesize boundingRect=_boundingRect;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) long long iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) unsigned long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

@@ -19,11 +19,11 @@
     long long _overrideState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long overrideState; // @synthesize overrideState=_overrideState;
 @property(nonatomic) long long baseState; // @synthesize baseState=_baseState;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> overrideSignal; // @synthesize overrideSignal=_overrideSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> baseSignal; // @synthesize baseSignal=_baseSignal;
-- (void).cxx_destruct;
 - (void)logExposure;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)dealloc;

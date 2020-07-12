@@ -20,12 +20,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTMainContentLayoutGuideController *mainContentLayoutGuideController; // @synthesize mainContentLayoutGuideController=_mainContentLayoutGuideController;
 @property(retain, nonatomic) SPTAlertControllerImplementation *alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) SPTAlertQueueImplementation *alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTMainWindow *mainWindow; // @synthesize mainWindow=_mainWindow;
 @property(retain, nonatomic) MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
-- (void).cxx_destruct;
 - (id)provideMainContentLayoutGuide;
 - (id)provideAlertController;
 - (id)provideAlertInterface;

@@ -16,9 +16,9 @@
     NSArray *_passwordBlacklist;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *passwordBlacklist; // @synthesize passwordBlacklist=_passwordBlacklist;
 @property(retain, nonatomic) SPTSignupPasswordBackendValidator *backendValidator; // @synthesize backendValidator=_backendValidator;
-- (void).cxx_destruct;
 - (id)localValidationErrorWithObject:(id)arg1;
 - (id)errorForCode:(unsigned long long)arg1;
 - (void)validateObject:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;

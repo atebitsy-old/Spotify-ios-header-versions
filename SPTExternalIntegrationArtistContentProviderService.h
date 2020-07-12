@@ -23,13 +23,13 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *activeDataLoaders; // @synthesize activeDataLoaders=_activeDataLoaders;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(readonly, nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;
-- (void).cxx_destruct;
 - (id)errorForDataLoaderError:(id)arg1;
 - (id)createPlaceholderContentItemForURI:(id)arg1;
 - (id)trackModelsForResponse:(id)arg1 trackURLs:(id)arg2 playerContext:(id)arg3;

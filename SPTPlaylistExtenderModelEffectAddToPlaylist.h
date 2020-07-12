@@ -16,9 +16,9 @@
     NSURL *_trackURI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (void)processWithLoop:(id)arg1;
 - (id)initWithTrackURI:(id)arg1 playlistURL:(id)arg2;
 

@@ -17,9 +17,9 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;
 - (id)initWithDataLoader:(id)arg1 externalIntegrationDebugLog:(id)arg2;

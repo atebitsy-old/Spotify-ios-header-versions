@@ -17,12 +17,12 @@
     NSURL *_concertURI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *concertURI; // @synthesize concertURI=_concertURI;
 @property(readonly, nonatomic) NSString *month; // @synthesize month=_month;
 @property(readonly, nonatomic) NSString *dayOfTheMonth; // @synthesize dayOfTheMonth=_dayOfTheMonth;
 @property(readonly, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

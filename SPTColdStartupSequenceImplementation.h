@@ -21,6 +21,7 @@
     NSDictionary *_metadata;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(readonly, nonatomic) NSDictionary *steps; // @synthesize steps=_steps;
 @property(readonly, nonatomic) unsigned long long terminalApplicationState; // @synthesize terminalApplicationState=_terminalApplicationState;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) NSString *connectionType; // @synthesize connectionType=_connectionType;
 @property(readonly, nonatomic) NSString *terminalState; // @synthesize terminalState=_terminalState;
 @property(readonly, nonatomic) NSString *viewLoadSequenceID; // @synthesize viewLoadSequenceID=_viewLoadSequenceID;
-- (void).cxx_destruct;
 - (id)initWithViewLoadSequenceID:(id)arg1 terminalState:(id)arg2 connectionType:(id)arg3 initialApplicationState:(unsigned long long)arg4 terminalApplicationState:(unsigned long long)arg5 steps:(id)arg6 metadata:(id)arg7;
 
 // Remaining properties

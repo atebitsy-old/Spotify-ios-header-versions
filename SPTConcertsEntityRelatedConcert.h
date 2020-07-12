@@ -20,13 +20,13 @@
     NSString *_upcomingConcertsSource;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *upcomingConcertsSource; // @synthesize upcomingConcertsSource=_upcomingConcertsSource;
 @property(readonly, copy, nonatomic) SPTConcertsDate *endDate; // @synthesize endDate=_endDate;
 @property(readonly, copy, nonatomic) SPTConcertsDate *startDate; // @synthesize startDate=_startDate;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, copy, nonatomic) NSString *venue; // @synthesize venue=_venue;
 @property(readonly, copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)debugDescription;
 - (_Bool)isEqual:(id)arg1;

@@ -17,12 +17,12 @@
     UILabel *_annotationLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *annotationLabel; // @synthesize annotationLabel=_annotationLabel;
 @property(readonly, nonatomic) UIView *rightDividerView; // @synthesize rightDividerView=_rightDividerView;
 @property(readonly, nonatomic) UIView *leftDividerView; // @synthesize leftDividerView=_leftDividerView;
 @property(readonly, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (id)annotationAttributedString;
 - (id)titleAttributedString;
 - (void)activateConstraints;

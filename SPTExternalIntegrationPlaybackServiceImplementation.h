@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) __weak id <SPTFormatListPlatformService> formatListService; // @synthesize formatListService=_formatListService;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(readonly, nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTExternalIntegrationPlaybackControllerImplementation *sharedController; // @synthesize sharedController=_sharedController;
 - (id)providePlaybackController;
 - (id)providePlayer;

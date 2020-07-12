@@ -24,13 +24,13 @@
     unsigned long long _presentationState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long presentationState; // @synthesize presentationState=_presentationState;
 @property(nonatomic) unsigned long long presentationMode; // @synthesize presentationMode=_presentationMode;
 @property(nonatomic, getter=isRepeatVisit) _Bool repeatVisit; // @synthesize repeatVisit=_repeatVisit;
 @property(retain, nonatomic) UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingFlowConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) __weak id <SPTOnboardingServiceFlowStateReporter> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (_Bool)presentBridgeViewAnimated:(_Bool)arg1 manualLogin:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)updateTasteViewControllerDidComplete:(id)arg1;
 - (void)artistPickerViewController:(id)arg1 didComplete:(_Bool)arg2 withSelectedArtistURIs:(id)arg3 includeSimilarArtists:(_Bool)arg4 session:(id)arg5;

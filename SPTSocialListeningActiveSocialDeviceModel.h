@@ -17,10 +17,10 @@
     NSString *_deviceID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool featureAvailable; // @synthesize featureAvailable=_featureAvailable;
 @property(readonly, nonatomic) _Bool featureEnabled; // @synthesize featureEnabled=_featureEnabled;
 @property(readonly, copy, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
-- (void).cxx_destruct;
 - (id)initWithDeviceId:(id)arg1 featureAvailable:(_Bool)arg2 featureEnabled:(_Bool)arg3;
 
 // Remaining properties

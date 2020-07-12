@@ -20,13 +20,13 @@
     NSDictionary *_behaviors;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool renderRadialGradient; // @synthesize renderRadialGradient=_renderRadialGradient;
 @property(retain, nonatomic) NSDictionary *behaviors; // @synthesize behaviors=_behaviors;
 @property(retain, nonatomic) SPTVoiceListeningRadialGradientLayer *radialOverlayLayer; // @synthesize radialOverlayLayer=_radialOverlayLayer;
 @property(retain, nonatomic) CAGradientLayer *shadeOverlayLayer; // @synthesize shadeOverlayLayer=_shadeOverlayLayer;
 @property(retain, nonatomic) CAGradientLayer *backgroundGradientLayer; // @synthesize backgroundGradientLayer=_backgroundGradientLayer;
 @property(nonatomic) __weak UIView *referenceView; // @synthesize referenceView=_referenceView;
-- (void).cxx_destruct;
 - (id)interactionBehaviorWithGradientRadius:(double)arg1 backgroundGradientLocations:(id)arg2 shadeGradientLocations:(id)arg3;
 - (void)drawLayer:(id)arg1 inContext:(struct CGContext *)arg2;
 - (void)animateToInteractionMode:(unsigned long long)arg1;

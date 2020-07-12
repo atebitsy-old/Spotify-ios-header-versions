@@ -24,6 +24,7 @@
     SPTLoginMagicLinkRequestWarningPresenter *_magicLinkRequestWarningPresenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginMagicLinkRequestWarningPresenter *magicLinkRequestWarningPresenter; // @synthesize magicLinkRequestWarningPresenter=_magicLinkRequestWarningPresenter;
 @property(readonly, nonatomic) SPTLoginMagicLinkRequestTracker *magicLinkRequestTracker; // @synthesize magicLinkRequestTracker=_magicLinkRequestTracker;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) SPTLoginMagicLinkDoRequestViewLogger *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *emailOrUsername; // @synthesize emailOrUsername=_emailOrUsername;
 @property(nonatomic) __weak id <SPTMagicLinkDoRequestViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)localizedDescriptionForError:(id)arg1;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2 forEmail:(id)arg3;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessForEmail:(id)arg2;

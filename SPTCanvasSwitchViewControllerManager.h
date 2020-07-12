@@ -28,6 +28,7 @@
     long long _switchType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long switchType; // @synthesize switchType=_switchType;
 @property(retain, nonatomic) SPTPlayerState *currentState; // @synthesize currentState=_currentState;
 @property(readonly, nonatomic) __weak id <SPTCanvasNowPlayingViewContentLoaderDelegate> contentLoaderDelegate; // @synthesize contentLoaderDelegate=_contentLoaderDelegate;
@@ -38,11 +39,10 @@
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(readonly, nonatomic) SPTCanvasForceArtworkManager *forceArtworkManager; // @synthesize forceArtworkManager=_forceArtworkManager;
 @property(readonly, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 - (void)didProvideContentForTrack:(id)arg1;
 - (void)didFailToProvideContentForTrack:(id)arg1;
 - (void)didChangeCanvasEnabled:(id)arg1;
-- (void)didChangeDisplayCanvasToggle:(id)arg1;
+- (void)didChangeShowFirstCanvas:(id)arg1;
 - (void)didChangeForceArtwork:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)reloadContenUsingTrack:(id)arg1;

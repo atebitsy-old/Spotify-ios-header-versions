@@ -25,6 +25,7 @@
     double _collapsedTitleBottomOffset;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double collapsedTitleBottomOffset; // @synthesize collapsedTitleBottomOffset=_collapsedTitleBottomOffset;
 @property(nonatomic) double collapsedHeaderOverlayAlpha; // @synthesize collapsedHeaderOverlayAlpha=_collapsedHeaderOverlayAlpha;
 @property(retain, nonatomic) GLUEHeaderBackgroundStyle *backgroundOverlayStyle; // @synthesize backgroundOverlayStyle=_backgroundOverlayStyle;
@@ -35,7 +36,6 @@
 @property(nonatomic) double filterContentHeight; // @synthesize filterContentHeight=_filterContentHeight;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(copy, nonatomic) id <SPTSortingFilteringFilterBarStyle> filterBarStyle; // @synthesize filterBarStyle=_filterBarStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

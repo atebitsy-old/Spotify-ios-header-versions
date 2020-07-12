@@ -12,14 +12,19 @@
 
 @interface _TtC25PlaylistTuningFeatureImpl24PTAdditionalCallToAction : NSObject <SPTFreeTierPlaylistAdditionalCallToAction>
 {
-    // Error parsing type: , name: playlistTuningViewController
+    // Error parsing type: , name: dataLoaderFactory
+    // Error parsing type: , name: saveEventLoopConnector
+    // Error parsing type: , name: viewDependencies
     // Error parsing type: , name: delegate
     // Error parsing type: , name: freeTierPlaylistViewController
     // Error parsing type: , name: icon
     // Error parsing type: , name: selected
     // Error parsing type: , name: enabled
-    // Error parsing type: , name: formatListAttributes
     // Error parsing type: , name: eventConsumer
+    // Error parsing type: , name: playlistModel
+    // Error parsing type: , name: contextURI
+    // Error parsing type: , name: formatListAttributes
+    // Error parsing type: , name: tracks
 }
 
 - (void).cxx_destruct;

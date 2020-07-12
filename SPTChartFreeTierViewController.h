@@ -32,6 +32,7 @@
     UIView *_offlineStateView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isViewModelUpdateQueued) _Bool viewModelUpdateQueued; // @synthesize viewModelUpdateQueued=_viewModelUpdateQueued;
 @property(nonatomic, getter=isActive) _Bool active; // @synthesize active=_active;
 @property(retain, nonatomic) UIView *offlineStateView; // @synthesize offlineStateView=_offlineStateView;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) SPTChartFreeTierNavigationBarModel *navigationBarModel; // @synthesize navigationBarModel=_navigationBarModel;
 @property(readonly, nonatomic) SPTChartFreeTierViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (void)updateFooterViewIfLoaded;
 - (void)footerViewControllerUpdated:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;

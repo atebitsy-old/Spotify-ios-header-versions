@@ -15,9 +15,9 @@
     GLUESectionHeaderView *_headerView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUESectionHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (id)subtitleFromModel:(id)arg1;
 - (_Bool)containsSubtitleForModel:(id)arg1;

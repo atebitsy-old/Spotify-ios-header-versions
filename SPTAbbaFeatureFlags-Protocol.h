@@ -6,15 +6,18 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSObject, NSString;
-@protocol OS_dispatch_queue, SPTAbbaFeatureFlagsObserver;
+@class NSString, OS_dispatch_queue;
+@protocol SPTAbbaFeatureFlagsObserver;
 
 @protocol SPTAbbaFeatureFlags <NSObject>
-@property(readonly, nonatomic, getter=isCacheAvailable) _Bool cacheAvailable;
 - (void)logAccessForFlagName:(NSString *)arg1;
 - (NSString *)objectForKeyedSubscript:(NSString *)arg1;
 - (NSString *)stringForKey:(NSString *)arg1;
 - (void)removeObserver:(id <SPTAbbaFeatureFlagsObserver>)arg1;
-- (void)addObserver:(id <SPTAbbaFeatureFlagsObserver>)arg1 on:(NSObject<OS_dispatch_queue> *)arg2;
+- (void)addObserver:(id <SPTAbbaFeatureFlagsObserver>)arg1 on:(OS_dispatch_queue *)arg2;
+- (_Bool)isCacheAvailable;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool cacheAvailable;
 @end
 

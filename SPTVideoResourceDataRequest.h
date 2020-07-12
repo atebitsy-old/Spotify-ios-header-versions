@@ -23,6 +23,7 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) NSMutableData *data; // @synthesize data=_data;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(retain, nonatomic) id <BMChunkCache> cache; // @synthesize cache=_cache;
 @property(retain, nonatomic) id <BMDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveResponse:(id)arg2 withError:(id)arg3;
 - (void)dataLoader:(id)arg1 didReceiveDataChunk:(id)arg2 forResponse:(id)arg3;

@@ -16,8 +16,8 @@
     id <SPTPlaybackPreferencesProtocol> _delegate;
 }
 
-@property(nonatomic) __weak id <SPTPlaybackPreferencesProtocol> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTPlaybackPreferencesProtocol> delegate; // @synthesize delegate=_delegate;
 - (void)settingsSection:(id)arg1 didUpdatePreferences:(id)arg2;
 
 // Remaining properties

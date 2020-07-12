@@ -15,9 +15,9 @@
     NSURL *_URI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) __weak id <SPTWatchPlatformOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
-- (void).cxx_destruct;
 - (_Bool)isOfflineDesiredForURI:(id)arg1;
 - (id)execute:(id)arg1;
 - (long long)style;

@@ -21,11 +21,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTExternalIntegrationTrackContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
 @property(nonatomic) __weak id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;
-- (void).cxx_destruct;
 - (id)createPlaceholderContentItemForURI:(id)arg1;
 - (void)resolveChildContentOfParentWithURI:(id)arg1 options:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (long long)priorityForChildContentOfParentWithURI:(id)arg1;

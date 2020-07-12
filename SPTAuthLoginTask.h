@@ -19,11 +19,11 @@
     id <SPTConnectivityAsyncScheduler> _coreScheduler;
 }
 
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(copy, nonatomic) CDUnknownBlockType startOperation; // @synthesize startOperation=_startOperation;
 @property(nonatomic) __weak id <SPTAuthLoginTaskDelegate> delegate; // @synthesize delegate=_delegate;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)setCompletion:(shared_ptr_b60d0e1e)arg1;
 @property(readonly, nonatomic) struct Scheduler *scheduler;
 @property(readonly, nonatomic) function_05dfbad0 callback;

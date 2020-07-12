@@ -32,6 +32,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *delayedRecordingTimer; // @synthesize delayedRecordingTimer=_delayedRecordingTimer;
 @property(copy, nonatomic) NSString *lastSensorLoggingReason; // @synthesize lastSensorLoggingReason=_lastSensorLoggingReason;
 @property(retain, nonatomic) SPTCarmageddonLogger *logger; // @synthesize logger=_logger;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
-- (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)motionManagerDidFinishProcessingAllRequestedBatches:(id)arg1;
 - (void)motionManager:(id)arg1 didFinishBatchRecordingWithResult:(id)arg2;

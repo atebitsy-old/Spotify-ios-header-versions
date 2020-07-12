@@ -30,6 +30,7 @@
     GLUEEntityRowStyle *_rowStyle;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEntityRowStyle *rowStyle; // @synthesize rowStyle=_rowStyle;
 @property(readonly, nonatomic) unsigned long long sectionIndex; // @synthesize sectionIndex=_sectionIndex;
 @property(readonly, nonatomic) SPTLocalFilesLogger *logger; // @synthesize logger=_logger;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) SPTFilePickerSectionModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (void)sectionModelDidUpdate:(id)arg1;
 - (void)filterBarContextButtonTapped:(id)arg1;
 - (void)filterBar:(id)arg1 textDidChange:(id)arg2;

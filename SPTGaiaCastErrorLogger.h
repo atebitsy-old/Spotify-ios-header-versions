@@ -13,8 +13,8 @@
     id <SPTEventSender> _eventSender;
 }
 
-@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)sendEventName:(id)arg1 errorCode:(long long)arg2 errorMessage:(id)arg3;
 - (id)errorMessageForSessionSuspendedReason:(long long)arg1;
 - (void)logEndedSessionWithErrorCode:(long long)arg1 message:(id)arg2;

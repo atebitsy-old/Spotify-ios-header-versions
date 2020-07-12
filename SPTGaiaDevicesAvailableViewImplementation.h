@@ -26,6 +26,7 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *iconWidthConstraint; // @synthesize iconWidthConstraint=_iconWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *iconHeightConstraint; // @synthesize iconHeightConstraint=_iconHeightConstraint;
 @property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
@@ -36,7 +37,6 @@
 @property(nonatomic) _Bool hidesTextWhenDisconnected; // @synthesize hidesTextWhenDisconnected=_hidesTextWhenDisconnected;
 @property(nonatomic) __weak id <SPTGaiaDevicesAvailableViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
-- (void).cxx_destruct;
 - (void)viewModelDidUpdateWithShouldAnimate:(_Bool)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)animateUpdate:(CDUnknownBlockType)arg1;

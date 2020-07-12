@@ -17,15 +17,17 @@
     NSURL *_URL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
+@property(readonly) unsigned long long hash;
+- (_Bool)isEqualToArtist:(id)arg1;
+- (_Bool)isEqual:(id)arg1;
 - (id)initWithName:(id)arg1 URL:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 
 @end

@@ -23,6 +23,7 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(nonatomic) __weak id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(nonatomic, getter=isInBannedCollection) _Bool inBannedCollection; // @synthesize inBannedCollection=_inBannedCollection;
 @property(nonatomic, getter=isInCollection) _Bool inCollection; // @synthesize inCollection=_inCollection;
-- (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
 - (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;

@@ -14,8 +14,8 @@
     NSArray *_children;
 }
 
-@property(readonly, nonatomic) NSArray *children; // @synthesize children=_children;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *children; // @synthesize children=_children;
 - (_Bool)requiresRestart;
 - (void)updateRequiresRestart;
 - (void)updateHasOverride;

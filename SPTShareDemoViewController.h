@@ -20,12 +20,12 @@
     NSURL *_demoSpotifyURI;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *demoSpotifyURI; // @synthesize demoSpotifyURI=_demoSpotifyURI;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) NSArray *shareDestinations; // @synthesize shareDestinations=_shareDestinations;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(retain, nonatomic) NSURL *initialURI; // @synthesize initialURI=_initialURI;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

@@ -17,9 +17,9 @@
     NSRecursiveLock *_stagedContextLock;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSRecursiveLock *stagedContextLock; // @synthesize stagedContextLock=_stagedContextLock;
 @property(retain, nonatomic) NSHashTable *stagedContextObservers; // @synthesize stagedContextObservers=_stagedContextObservers;
-- (void).cxx_destruct;
 - (void)notifyStagedContextObserversWithBlock:(CDUnknownBlockType)arg1;
 - (void)addStagedContextObserver:(id)arg1;
 @property(retain, nonatomic) SPTPlayerContext *stagedContext; // @synthesize stagedContext=_stagedContext;

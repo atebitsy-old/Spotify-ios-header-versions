@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTOauthTaskDelegate-Protocol.h"
-
-@interface _TtC26FullscreenStoryFeatureImpl28LoadWebGateTokenTaskDelegate : NSObject <SPTOauthTaskDelegate>
+@interface _TtC26FullscreenStoryFeatureImpl28LoadWebGateTokenTaskDelegate : NSObject
 {
     // Error parsing type: , name: sendHandler
 }

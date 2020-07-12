@@ -22,6 +22,7 @@
     long long _offlineSyncStatus;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long offlineSyncStatus; // @synthesize offlineSyncStatus=_offlineSyncStatus;
 @property(nonatomic) _Bool showTrackOwner; // @synthesize showTrackOwner=_showTrackOwner;
 @property(readonly, nonatomic, getter=isPremiumOnlyFeatureEnabled) _Bool premiumOnlyFeatureEnabled; // @synthesize premiumOnlyFeatureEnabled=_premiumOnlyFeatureEnabled;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModelEntityTrackFields> trackEntity; // @synthesize trackEntity=_trackEntity;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *ownerName;
 @property(readonly, copy, nonatomic) NSString *rowId;
 @property(readonly, copy, nonatomic) NSDictionary *formatListAttributes;

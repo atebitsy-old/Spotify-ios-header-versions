@@ -31,9 +31,9 @@
     id <SPTUBIMobileNowPlayingViewVideoShowEventFactory> _eventFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileNowPlayingViewVideoShowEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (void).cxx_destruct;
 - (void)logSkipToPreviousTappedWithPlayerState:(id)arg1;
 - (void)logSkipToNextTappedWithPlayerState:(id)arg1;
 - (void)logShareButtonTapped;

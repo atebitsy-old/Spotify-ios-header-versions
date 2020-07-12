@@ -22,13 +22,13 @@
     SPTBannerWindowRootViewController *_bannerViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isBannerVisible) _Bool bannerVisible; // @synthesize bannerVisible=_bannerVisible;
 @property(readonly, nonatomic) SPTBannerWindowRootViewController *bannerViewController; // @synthesize bannerViewController=_bannerViewController;
 @property(readonly, nonatomic) __weak SPTStatusBarManager *statusBarManager; // @synthesize statusBarManager=_statusBarManager;
 @property(readonly, nonatomic) __weak UIScreen *screen; // @synthesize screen=_screen;
 @property(readonly, nonatomic) UIWindow *bannerWindow; // @synthesize bannerWindow=_bannerWindow;
 @property(readonly, nonatomic) UIWindow *mainWindow; // @synthesize mainWindow=_mainWindow;
-- (void).cxx_destruct;
 - (void)statusBarManager:(id)arg1 didChangeStatusBarHeight:(double)arg2;
 - (void)statusBarManager:(id)arg1 didToggleStatusBarState:(_Bool)arg2;
 - (void)bannerViewControllerDidUpdateBannerSize:(id)arg1;

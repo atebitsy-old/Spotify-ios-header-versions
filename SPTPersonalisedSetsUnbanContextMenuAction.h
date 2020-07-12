@@ -17,9 +17,9 @@
     long long _trackIndex;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long trackIndex; // @synthesize trackIndex=_trackIndex;
 @property(nonatomic) __weak id <SPTPersonalisedSetsUnbanContextMenuActionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)initWithTrackIndex:(long long)arg1;
 - (id)performAction;
 - (id)title;

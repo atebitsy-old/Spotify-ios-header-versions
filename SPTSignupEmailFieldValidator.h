@@ -16,9 +16,9 @@
     CDUnknownBlockType _lastDispatchBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType lastDispatchBlock; // @synthesize lastDispatchBlock=_lastDispatchBlock;
 @property(retain, nonatomic) SPTSignupEmailBackendValidator *emailBackendValidator; // @synthesize emailBackendValidator=_emailBackendValidator;
-- (void).cxx_destruct;
 - (id)localValidationErrorWithObject:(id)arg1;
 - (id)localValidationErrorWithEmail:(id)arg1;
 - (id)errorForCode:(unsigned long long)arg1;

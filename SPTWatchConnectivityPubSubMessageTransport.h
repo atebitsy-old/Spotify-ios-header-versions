@@ -18,10 +18,10 @@
     SPTWatchConnectivitySession *_session;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTWatchConnectivitySession *session; // @synthesize session=_session;
 @property(copy, nonatomic) NSDictionary *receivedPubSubDictionary; // @synthesize receivedPubSubDictionary=_receivedPubSubDictionary;
 @property(nonatomic) __weak id <SPTWatchConnectivityPubSubMessageTransportDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)session:(id)arg1 didReceiveMessage:(id)arg2;
 - (id)publishMessage:(id)arg1 toTopic:(id)arg2;
 - (id)initWithSession:(id)arg1;

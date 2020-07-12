@@ -25,6 +25,7 @@
     NSLayoutConstraint *_containerActionButtonBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *containerActionButtonBottomConstraint; // @synthesize containerActionButtonBottomConstraint=_containerActionButtonBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *containerSubtitleBottomConstraint; // @synthesize containerSubtitleBottomConstraint=_containerSubtitleBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *collapsedTitleConstraint; // @synthesize collapsedTitleConstraint=_collapsedTitleConstraint;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(copy, nonatomic) SPTFreeTierAllSongsHeaderContentViewStyle *style; // @synthesize style=_style;
 @property(nonatomic, getter=isTitleHiddenWhenCollapsed) _Bool titleHiddenWhenCollapsed; // @synthesize titleHiddenWhenCollapsed=_titleHiddenWhenCollapsed;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateOffset:(double)arg1;
 - (void)updateVisibleRect:(struct CGRect)arg1 minimumHeight:(double)arg2;

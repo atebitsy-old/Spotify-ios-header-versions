@@ -14,6 +14,7 @@
     // Error parsing type: , name: settingsService
     // Error parsing type: , name: sessionService
     // Error parsing type: , name: $__lazy_storage_$_carModeEngine
+    // Error parsing type: , name: $__lazy_storage_$_distractionControl
     // Error parsing type: , name: loop
     // Error parsing type: , name: debugSettingsManager
 }
@@ -24,6 +25,7 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+- (id)provideDistractionControl;
 - (id)provideEngine;
 
 @end

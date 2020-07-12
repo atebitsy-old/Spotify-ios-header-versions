@@ -18,9 +18,9 @@
     id <SPTGaiaConnectAPI> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (unsigned long long)eventForActiveDevice:(id)arg1;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)emitInitialState;

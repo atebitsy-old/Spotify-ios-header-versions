@@ -15,10 +15,10 @@
     SPTLyricsV2LoadingViewStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLyricsV2LoadingViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) CAShapeLayer *shapeLayer; // @synthesize shapeLayer=_shapeLayer;
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
-- (void).cxx_destruct;
 - (void)animateIndicator:(_Bool)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)layoutSubviews;

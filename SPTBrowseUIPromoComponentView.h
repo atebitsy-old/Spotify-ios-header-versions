@@ -21,11 +21,11 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(readonly, nonatomic) SPTBrowseUIPromoView *promoView; // @synthesize promoView=_promoView;
 @property(copy, nonatomic) SPTBrowseUIPromoStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)sendSelectionEvent;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;

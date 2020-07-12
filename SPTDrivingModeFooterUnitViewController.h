@@ -22,6 +22,7 @@
     SPTDrivingModeCoachMarkPresenter *_coachMarkPresenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDrivingModeCoachMarkPresenter *coachMarkPresenter; // @synthesize coachMarkPresenter=_coachMarkPresenter;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) id <SPTDrivingModePivotViewFactory> pivotViewFactory; // @synthesize pivotViewFactory=_pivotViewFactory;
 @property(readonly, nonatomic) SPTDrivingModeSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container; // @synthesize container=_container;
-- (void).cxx_destruct;
 - (void)buttonPressed:(id)arg1;
 - (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;

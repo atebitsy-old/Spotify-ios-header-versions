@@ -20,12 +20,12 @@
     NSMutableDictionary *_impressionTracking;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *impressionTracking; // @synthesize impressionTracking=_impressionTracking;
 @property(retain, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(retain, nonatomic) id <SPTUBIMobileYourLibraryLikedSongsEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUBIImpression:(id)arg1;
 - (void)logUBIInteractionEvent:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;

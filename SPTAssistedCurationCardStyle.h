@@ -23,6 +23,7 @@
     double _loadMoreHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double loadMoreHeight; // @synthesize loadMoreHeight=_loadMoreHeight;
 @property(retain, nonatomic) SPTAssistedCurationAddAccessoryStyle *addAccessoryStyle; // @synthesize addAccessoryStyle=_addAccessoryStyle;
 @property(nonatomic) double tableTitleOffset; // @synthesize tableTitleOffset=_tableTitleOffset;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) GLUELabelStyle *titleStyle; // @synthesize titleStyle=_titleStyle;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

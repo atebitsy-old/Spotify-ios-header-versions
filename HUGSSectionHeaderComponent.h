@@ -16,8 +16,8 @@
     id <HUGSStyleOverrider> _styleOverrider;
 }
 
-@property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 - (id)subtitleFromModel:(id)arg1;
 - (_Bool)containsSubtitleForModel:(id)arg1;
 - (id)styleForComponentModel:(id)arg1;

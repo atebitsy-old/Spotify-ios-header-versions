@@ -24,6 +24,7 @@
     id <SPTCollectionPlatform> _collectionPlatform;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(readonly, nonatomic) _Bool shuffleEnabled; // @synthesize shuffleEnabled=_shuffleEnabled;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTEpisode> episode; // @synthesize episode=_episode;
-- (void).cxx_destruct;
 - (id)provideGoToArtistActionTaskForTrackURL:(id)arg1 logContext:(id)arg2;
 - (id)provideGoToAlbumActionTaskForTrackURL:(id)arg1 logContext:(id)arg2;
 - (id)provideAddToPlaylistActionForTrackURL:(id)arg1 sourceURL:(id)arg2 logContext:(id)arg3 contextSourceURL:(id)arg4;

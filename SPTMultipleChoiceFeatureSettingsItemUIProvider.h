@@ -19,12 +19,12 @@
     id _selectedStateKey;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id selectedStateKey; // @synthesize selectedStateKey=_selectedStateKey;
 @property(readonly, copy, nonatomic) NSArray *choiceKeys; // @synthesize choiceKeys=_choiceKeys;
 @property(readonly, copy, nonatomic) NSArray *choiceTitles; // @synthesize choiceTitles=_choiceTitles;
 @property(readonly, copy, nonatomic) CDUnknownBlockType action; // @synthesize action=_action;
 @property(nonatomic) __weak SPTFeatureSettingsItem *featureSettingsItem; // @synthesize featureSettingsItem=_featureSettingsItem;
-- (void).cxx_destruct;
 - (void)featureSettingsItem:(id)arg1 changedValueFrom:(id)arg2 to:(id)arg3;
 - (void)featureSettingsPresentation:(id)arg1 didSelectRow:(unsigned long long)arg2;
 - (unsigned long long)numberOfRowsForFeatureSettingsItem:(id)arg1;

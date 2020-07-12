@@ -16,10 +16,10 @@
 }
 
 + (id)dataLoaderResolverAddressWithAddress:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) double lastFailedTime; // @synthesize lastFailedTime=_lastFailedTime;
 @property(readonly, nonatomic) double stalePeriod; // @synthesize stalePeriod=_stalePeriod;
 @property(retain, nonatomic) NSString *address; // @synthesize address=_address;
-- (void).cxx_destruct;
 - (void)failedToReach;
 - (id)initWithAddress:(id)arg1;
 @property(readonly, nonatomic, getter=isReachable) _Bool reachable;

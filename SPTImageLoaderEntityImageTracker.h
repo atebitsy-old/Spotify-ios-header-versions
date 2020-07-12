@@ -15,10 +15,10 @@
     NSFileManager *_fileManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(readonly, nonatomic) __weak SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, nonatomic) NSString *path; // @synthesize path=_path;
-- (void).cxx_destruct;
 - (id)folderPathForEntity:(id)arg1;
 - (id)folderPathForEntity:(id)arg1 dataKey:(id)arg2;
 - (void)wipeContent;

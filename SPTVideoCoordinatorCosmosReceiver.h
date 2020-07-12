@@ -19,13 +19,13 @@
     NSMutableDictionary *_handlers;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isSubscribed) _Bool subscribed; // @synthesize subscribed=_subscribed;
 @property(retain, nonatomic) NSMutableDictionary *handlers; // @synthesize handlers=_handlers;
 @property(retain, nonatomic) SPTVideoPreferredSubtitleMessageFactory *preferredSubtitleMessageFactory; // @synthesize preferredSubtitleMessageFactory=_preferredSubtitleMessageFactory;
 @property(retain, nonatomic) SPTVideoStartCommandFactory *startCommandFactory; // @synthesize startCommandFactory=_startCommandFactory;
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <SPTVideoCoordinatorCosmosReceiverDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleConfig:(id)arg1;
 - (void)handleCommandWithPayload:(id)arg1;
 - (void)addHandlerForCommand:(id)arg1 block:(CDUnknownBlockType)arg2;

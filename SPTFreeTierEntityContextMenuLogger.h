@@ -16,10 +16,10 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
-- (void).cxx_destruct;
 - (void)logRevealContextMenu;
 - (id)initWithFeatureIdentifier:(id)arg1 pageURI:(id)arg2 ubiLogger:(id)arg3;
 

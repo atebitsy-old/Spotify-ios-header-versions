@@ -26,13 +26,13 @@
 + (id)contextWithPageURL:(id)arg1;
 + (id)contextWithTracks:(id)arg1;
 + (id)contextForURI:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(copy, nonatomic) SPTPlayerRestrictions *restrictions; // @synthesize restrictions=_restrictions;
 @property(copy, nonatomic) NSArray *fallbackPages; // @synthesize fallbackPages=_fallbackPages;
 @property(copy, nonatomic) NSArray *pages; // @synthesize pages=_pages;
 @property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

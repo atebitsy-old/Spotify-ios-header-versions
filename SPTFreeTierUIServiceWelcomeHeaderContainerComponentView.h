@@ -28,6 +28,7 @@
     NSMutableArray *_childViewConstraints;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *childViewConstraints; // @synthesize childViewConstraints=_childViewConstraints;
 @property(retain, nonatomic) NSLayoutConstraint *backgroundViewHeightConstraint; // @synthesize backgroundViewHeightConstraint=_backgroundViewHeightConstraint;
 @property(nonatomic) double defaultHeight; // @synthesize defaultHeight=_defaultHeight;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;
-- (void).cxx_destruct;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)setupChildComponentsForModel:(id)arg1;
 - (void)updateBackgroundView:(id)arg1;

@@ -33,6 +33,7 @@
     SPSession *_session;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) NSMapTable *unresolvedTransactionErrorMap; // @synthesize unresolvedTransactionErrorMap=_unresolvedTransactionErrorMap;
 @property(retain, nonatomic) SPTIAPControllerRetryManager *transactionRetryManager; // @synthesize transactionRetryManager=_transactionRetryManager;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(retain, nonatomic) SPTIAPRestoredTransactionsObserver *transactionObserver; // @synthesize transactionObserver=_transactionObserver;
 @property(readonly, nonatomic) SPTIAPSimulationSettings *simulationSettings; // @synthesize simulationSettings=_simulationSettings;
-- (void).cxx_destruct;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (void)restoredTransactionsObserver:(id)arg1 transactionWasRemovedFromPaymentQueue:(id)arg2;
 - (void)restoredTransactionsObserver:(id)arg1 orphanedTransactionDidUpdate:(id)arg2;

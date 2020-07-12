@@ -32,6 +32,7 @@
     id <SPTBrowseTimeZoneProvider> _timeZoneProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTBrowseTimeZoneProvider> timeZoneProvider; // @synthesize timeZoneProvider=_timeZoneProvider;
 @property(readonly, copy, nonatomic) NSString *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureID; // @synthesize featureID=_featureID;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) id <SPTBrowseCache> cache; // @synthesize cache=_cache;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) id <SPTBrowseViewModelBuilderProvider> viewModelBuilderProvider; // @synthesize viewModelBuilderProvider=_viewModelBuilderProvider;
-- (void).cxx_destruct;
 - (id)unknownError;
 - (void)handleErrorResponse:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)applySuccessTransformationsToViewModelBuilder:(id)arg1;

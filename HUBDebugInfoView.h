@@ -25,6 +25,7 @@
     UILabel *_categoryValueLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *categoryValueLabel; // @synthesize categoryValueLabel=_categoryValueLabel;
 @property(readonly, nonatomic) UILabel *categoryKeyLabel; // @synthesize categoryKeyLabel=_categoryKeyLabel;
 @property(readonly, nonatomic) UILabel *typeValueLabel; // @synthesize typeValueLabel=_typeValueLabel;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) UILabel *identifierValueLabel; // @synthesize identifierValueLabel=_identifierValueLabel;
 @property(readonly, nonatomic) UILabel *identifierKeyLabel; // @synthesize identifierKeyLabel=_identifierKeyLabel;
 @property(readonly, nonatomic) HUBDebugViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)layoutValueStackView;
 - (void)layoutLabelStackView;
 @property(readonly, nonatomic) UIStackView *valueStackView; // @synthesize valueStackView=_valueStackView;

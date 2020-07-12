@@ -26,6 +26,7 @@
     long long _currentInstruction;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long currentInstruction; // @synthesize currentInstruction=_currentInstruction;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSTimer *idleTimer; // @synthesize idleTimer=_idleTimer;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) NSString *roundaboutExit; // @synthesize roundaboutExit=_roundaboutExit;
 @property(retain, nonatomic) UIImage *instructionImage; // @synthesize instructionImage=_instructionImage;
 @property(nonatomic) __weak id <SPTWazeNavigationBannerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)stringForDistance:(long long)arg1;
 - (id)imageForInstruction:(long long)arg1 drivingOnLeft:(_Bool)arg2;
 - (void)removeNavigationStateObserver:(id)arg1;

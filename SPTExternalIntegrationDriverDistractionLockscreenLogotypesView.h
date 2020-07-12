@@ -23,6 +23,7 @@
     NSLayoutConstraint *_partnerImageAspectConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *partnerImageAspectConstraint; // @synthesize partnerImageAspectConstraint=_partnerImageAspectConstraint;
 @property(retain, nonatomic) NSMutableArray *singleLogotypeLayout; // @synthesize singleLogotypeLayout=_singleLogotypeLayout;
 @property(retain, nonatomic) NSMutableArray *dualLogotypeLayout; // @synthesize dualLogotypeLayout=_dualLogotypeLayout;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) UIImageView *spotifyLogotypeImageView; // @synthesize spotifyLogotypeImageView=_spotifyLogotypeImageView;
 @property(readonly, nonatomic) UIImageView *partnerLogotypeImageView; // @synthesize partnerLogotypeImageView=_partnerLogotypeImageView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (id)createCommonLayout;
 - (id)createDualLogotypeLayout;

@@ -18,12 +18,12 @@
     id <SPTTrackCreditsService> _trackCreditsService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTTrackCreditsService> trackCreditsService; // @synthesize trackCreditsService=_trackCreditsService;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(retain, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(retain, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
-- (void).cxx_destruct;
 - (void)logTrackCreditsSelected;
 - (id)execute:(id)arg1;
 - (id)logEventName;

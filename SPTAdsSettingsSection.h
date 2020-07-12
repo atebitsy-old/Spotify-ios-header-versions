@@ -13,8 +13,8 @@
     NSMutableArray *_items;
 }
 
-@property(retain, nonatomic) NSMutableArray *items; // @synthesize items=_items;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableArray *items; // @synthesize items=_items;
 - (id)initWithProductState:(id)arg1 featureSettingsItemFactory:(id)arg2;
 
 @end

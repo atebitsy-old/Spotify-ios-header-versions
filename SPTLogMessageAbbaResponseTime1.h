@@ -17,11 +17,11 @@
 }
 
 + (id)messageWithResponseTime:(double)arg1 payloadSize:(long long)arg2 hasCache:(_Bool)arg3 connectionType:(id)arg4;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *connectionTypeValue; // @synthesize connectionTypeValue=_connectionTypeValue;
 @property(nonatomic) _Bool hasCacheValue; // @synthesize hasCacheValue=_hasCacheValue;
 @property(nonatomic) long long payloadSizeValue; // @synthesize payloadSizeValue=_payloadSizeValue;
 @property(nonatomic) double responseTimeValue; // @synthesize responseTimeValue=_responseTimeValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

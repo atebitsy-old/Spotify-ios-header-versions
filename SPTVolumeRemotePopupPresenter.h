@@ -29,6 +29,7 @@
     SPTVolumeRemotePopupView *_volumeView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool devicePickerVisible; // @synthesize devicePickerVisible=_devicePickerVisible;
 @property(nonatomic) _Bool volumeUpdatedSinceHide; // @synthesize volumeUpdatedSinceHide=_volumeUpdatedSinceHide;
 @property(retain, nonatomic) SPTVolumeRemotePopupView *volumeView; // @synthesize volumeView=_volumeView;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) id <SPTGaiaWirelessRoutesAPI> wirelessRoutesManager; // @synthesize wirelessRoutesManager=_wirelessRoutesManager;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTVolumeAPI> volumeManager; // @synthesize volumeManager=_volumeManager;
-- (void).cxx_destruct;
 - (void)devicePickerWillDisappear;
 - (void)devicePickerWillAppear;
 - (void)wirelessActiveDeviceDidChange;

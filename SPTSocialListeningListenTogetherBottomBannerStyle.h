@@ -22,6 +22,7 @@
     GLUEButtonStyle *_queueButtonStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEButtonStyle *queueButtonStyle; // @synthesize queueButtonStyle=_queueButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *addSongsButtonStyle; // @synthesize addSongsButtonStyle=_addSongsButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *inviteButtonStyle; // @synthesize inviteButtonStyle=_inviteButtonStyle;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToInviteStyle:(id)arg1;

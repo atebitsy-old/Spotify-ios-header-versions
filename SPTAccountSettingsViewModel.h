@@ -28,6 +28,7 @@
     SPTAccountPremiumInfoTableViewCell *_premiumInfoCell;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAccountPremiumInfoTableViewCell *premiumInfoCell; // @synthesize premiumInfoCell=_premiumInfoCell;
 @property(retain, nonatomic) SPTSettingsTableViewCell *readMoreCell; // @synthesize readMoreCell=_readMoreCell;
 @property(retain, nonatomic) SPTSettingsTableViewCell *daysLeftCell; // @synthesize daysLeftCell=_daysLeftCell;
@@ -41,7 +42,6 @@
 @property(nonatomic) __weak id <SPTAccountSettingsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain) NSString *headerText; // @synthesize headerText=_headerText;
 @property(retain) NSArray *cells; // @synthesize cells=_cells;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)currentProductDidChangeForProductInformationController:(id)arg1;
 - (void)availableProductDidChangeForProductInformationController:(id)arg1;

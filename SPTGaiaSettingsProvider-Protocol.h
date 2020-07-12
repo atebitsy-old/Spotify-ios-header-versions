@@ -9,10 +9,10 @@
 @protocol SPTGaiaSettingsObserver;
 
 @protocol SPTGaiaSettingsProvider <NSObject>
+- (void)removeObserver:(id <SPTGaiaSettingsObserver>)arg1;
+- (void)addObserver:(id <SPTGaiaSettingsObserver>)arg1;
 @property(nonatomic) _Bool automaticallyTransfersPlaybackForHomeDevice;
 @property(nonatomic) _Bool lockScreenControlsEnabled;
 @property(nonatomic) _Bool localDevicesFilterEnabled;
-- (void)removeObserver:(id <SPTGaiaSettingsObserver>)arg1;
-- (void)addObserver:(id <SPTGaiaSettingsObserver>)arg1;
 @end
 

@@ -25,6 +25,7 @@
     SPTLoginEmailAlreadyExistsDialogLogger *_emailExistDialogLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginEmailAlreadyExistsDialogLogger *emailExistDialogLogger; // @synthesize emailExistDialogLogger=_emailExistDialogLogger;
 @property(retain, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(retain, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyViewModel *termsAndPolicyViewModel; // @synthesize termsAndPolicyViewModel=_termsAndPolicyViewModel;
 @property(readonly, nonatomic) SPTSignupFacebookConfirmationLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTSignupFacebookConfirmationViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessResponse:(id)arg2;
 - (void)presentLoginViewWithEmail:(id)arg1;

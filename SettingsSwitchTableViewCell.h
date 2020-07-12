@@ -13,8 +13,8 @@
     UISwitch *_switch;
 }
 
-@property(readonly, nonatomic) UISwitch *switchControl; // @synthesize switchControl=_switch;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UISwitch *switchControl; // @synthesize switchControl=_switch;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 - (id)initWithTitle:(id)arg1 switchValue:(_Bool)arg2 target:(id)arg3 action:(SEL)arg4 reuseIdentifier:(id)arg5;
 

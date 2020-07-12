@@ -15,10 +15,10 @@
     NSString *_errorDescription;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *errorDescription; // @synthesize errorDescription=_errorDescription;
 @property(readonly, nonatomic) NSString *error; // @synthesize error=_error;
 @property(readonly, nonatomic) NSString *callbackUrl; // @synthesize callbackUrl=_callbackUrl;
-- (void).cxx_destruct;
 - (id)build;
 - (id)initWithCallbackURL:(id)arg1 withError:(id)arg2 withErrorDescription:(id)arg3;
 

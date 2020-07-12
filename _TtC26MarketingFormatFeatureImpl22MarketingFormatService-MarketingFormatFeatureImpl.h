@@ -6,9 +6,7 @@
 
 #import "_TtC26MarketingFormatFeatureImpl22MarketingFormatService.h"
 
-#import "SPTService-Protocol.h"
-
-@interface _TtC26MarketingFormatFeatureImpl22MarketingFormatService (MarketingFormatFeatureImpl) <SPTService>
+@interface _TtC26MarketingFormatFeatureImpl22MarketingFormatService (MarketingFormatFeatureImpl)
 + (id)serviceIdentifier;
 - (void)configureWithServices:(id)arg1;
 @end

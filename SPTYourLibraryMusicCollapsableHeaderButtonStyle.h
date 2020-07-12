@@ -21,6 +21,7 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(copy, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
@@ -28,7 +29,6 @@
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

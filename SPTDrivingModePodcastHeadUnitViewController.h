@@ -24,6 +24,7 @@
     UIButton *_nextTrackButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *nextTrackButton; // @synthesize nextTrackButton=_nextTrackButton;
 @property(retain, nonatomic) UIButton *previousTrackButton; // @synthesize previousTrackButton=_previousTrackButton;
 @property(retain, nonatomic) UIButton *skipForwardButton; // @synthesize skipForwardButton=_skipForwardButton;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UIButton<SPTNowPlayingPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
-- (void).cxx_destruct;
 - (void)updateSkipButtons;
 - (void)updateSeekButtons;
 - (void)updatePlayButton;

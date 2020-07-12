@@ -22,6 +22,7 @@
     GLUECardDetailsStyle *_detailsStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUECardDetailsStyle *detailsStyle; // @synthesize detailsStyle=_detailsStyle;
 @property(nonatomic) double defaultDetailsHeight; // @synthesize defaultDetailsHeight=_defaultDetailsHeight;
 @property(nonatomic) long long decoration; // @synthesize decoration=_decoration;
@@ -30,7 +31,6 @@
 @property(nonatomic) double alpha; // @synthesize alpha=_alpha;
 @property(nonatomic) double defaultWidth; // @synthesize defaultWidth=_defaultWidth;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToEntityCardStateStyle:(id)arg1;

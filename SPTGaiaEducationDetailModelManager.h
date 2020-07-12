@@ -15,9 +15,9 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(copy, nonatomic) NSArray *educationDetailModels; // @synthesize educationDetailModels=_educationDetailModels;
-- (void).cxx_destruct;
 - (id)createSpeakerEducationDetailModel;
 - (id)createTvEducationDetailModel;
 - (id)createComputerEducationDetailModel;

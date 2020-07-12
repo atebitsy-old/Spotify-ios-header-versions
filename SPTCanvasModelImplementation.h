@@ -24,6 +24,7 @@
 }
 
 + (unsigned long long)canvasContentTypeFromString:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *albumCoverURL; // @synthesize albumCoverURL=_albumCoverURL;
 @property(readonly, copy, nonatomic) NSURL *canvasURI; // @synthesize canvasURI=_canvasURI;
 @property(readonly, copy, nonatomic) NSURL *entityURI; // @synthesize entityURI=_entityURI;
@@ -33,7 +34,6 @@
 @property(readonly, copy, nonatomic) NSString *contentId; // @synthesize contentId=_contentId;
 @property(readonly, copy, nonatomic) NSURL *contentURL; // @synthesize contentURL=_contentURL;
 @property(readonly, copy, nonatomic) NSString *canvasId; // @synthesize canvasId=_canvasId;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithCanvasId:(id)arg1 canvasURI:(id)arg2 contentURL:(id)arg3 contentId:(id)arg4 type:(unsigned long long)arg5 artistURI:(id)arg6 artistName:(id)arg7 entityURI:(id)arg8 albumCoverURL:(id)arg9;
 

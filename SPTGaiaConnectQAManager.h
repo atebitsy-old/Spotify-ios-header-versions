@@ -13,8 +13,8 @@
     SPTGaiaConnectCosmosResolver *_resolver;
 }
 
-@property(readonly, nonatomic) SPTGaiaConnectCosmosResolver *resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTGaiaConnectCosmosResolver *resolver; // @synthesize resolver=_resolver;
 - (void)clearNewlyDiscovered:(CDUnknownBlockType)arg1;
 - (void)clearOnboarding:(CDUnknownBlockType)arg1;
 - (id)initWithResolver:(id)arg1;

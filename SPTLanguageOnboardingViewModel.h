@@ -25,6 +25,7 @@
     NSMutableSet *_selectedLanguages;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *selectedLanguages; // @synthesize selectedLanguages=_selectedLanguages;
 @property(copy, nonatomic) NSArray *availableLanguages; // @synthesize availableLanguages=_availableLanguages;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) SPTLanguageOnboardingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(nonatomic) __weak id <SPTLanguageOnboardingViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)languageOnboardingDataLoader:(id)arg1 didFailToUpdateSelectedLanguages:(id)arg2;
 - (void)languageOnboardingDataLoader:(id)arg1 didFailToFetchAvailableLanguages:(id)arg2;
 - (void)languageOnboardingDataLoader:(id)arg1 didFailToFetchSelectedLanguages:(id)arg2;

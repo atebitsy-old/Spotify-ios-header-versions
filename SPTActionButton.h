@@ -23,6 +23,7 @@
 }
 
 + (id)actionButtonWithSize:(long long)arg1 style:(long long)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *borderColorStates; // @synthesize borderColorStates=_borderColorStates;
 @property(retain, nonatomic) NSMutableDictionary *backgroundColorStates; // @synthesize backgroundColorStates=_backgroundColorStates;
 @property(nonatomic, getter=isBackgroundTransparent) _Bool backgroundTransparent; // @synthesize backgroundTransparent=_backgroundTransparent;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) long long style; // @synthesize style=_style;
 @property(readonly, nonatomic) long long size; // @synthesize size=_size;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)applyThemeLayout;
 - (void)applySize;

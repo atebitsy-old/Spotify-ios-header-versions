@@ -20,6 +20,7 @@
     SPTPhoneNumberSignupUtils *_phoneNumberSignupUtils;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPhoneNumberSignupUtils *phoneNumberSignupUtils; // @synthesize phoneNumberSignupUtils=_phoneNumberSignupUtils;
 @property(readonly, nonatomic) NSLocale *locale; // @synthesize locale=_locale;
 @property(copy, nonatomic) NSArray *filteredRowViewModels; // @synthesize filteredRowViewModels=_filteredRowViewModels;
@@ -27,7 +28,6 @@
 @property(readonly, copy, nonatomic) NSString *selectedCountryCode; // @synthesize selectedCountryCode=_selectedCountryCode;
 @property(copy, nonatomic) NSString *searchQueryText; // @synthesize searchQueryText=_searchQueryText;
 @property(nonatomic) __weak id <SPTPhoneNumberSignupCallingCodeViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long numberOfRows;
 - (id)rowViewModelAtIndex:(unsigned long long)arg1;
 @property(readonly, nonatomic) unsigned long long indexOfCurrentLocale;

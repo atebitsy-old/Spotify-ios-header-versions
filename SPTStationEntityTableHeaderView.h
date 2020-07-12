@@ -19,6 +19,7 @@
     UIView *_blackGradientBackgroundView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *blackGradientBackgroundView; // @synthesize blackGradientBackgroundView=_blackGradientBackgroundView;
 @property(retain, nonatomic) UIView *whiteTransparentBackgroundView; // @synthesize whiteTransparentBackgroundView=_whiteTransparentBackgroundView;
 @property(retain, nonatomic) UIImageView *radioBackgroundImageView; // @synthesize radioBackgroundImageView=_radioBackgroundImageView;
@@ -26,7 +27,6 @@
 @property(nonatomic, getter=shouldUseRadioImageSizeOverrides) _Bool useRadioImageSizeOverrides; // @synthesize useRadioImageSizeOverrides=_useRadioImageSizeOverrides;
 @property(nonatomic, getter=shouldhideRadioBackground) _Bool hideRadioBackground; // @synthesize hideRadioBackground=_hideRadioBackground;
 @property(nonatomic, getter=shouldUseSubtitleLabel) _Bool useSubtitleLabel; // @synthesize useSubtitleLabel=_useSubtitleLabel;
-- (void).cxx_destruct;
 - (double)stickyModeThreshold;
 - (void)applyThemeToSubtitleLabel:(id)arg1;
 - (void)applyThemeLayout;

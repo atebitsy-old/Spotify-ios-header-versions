@@ -24,13 +24,13 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long position; // @synthesize position=_position;
 @property(nonatomic) double horizontalAnchorPosition; // @synthesize horizontalAnchorPosition=_horizontalAnchorPosition;
 @property(readonly, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(readonly, nonatomic) GLUELabel *label; // @synthesize label=_label;
 @property(readonly, nonatomic) UIImageView *beakImageView; // @synthesize beakImageView=_beakImageView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)close;
 - (void)glue_applyStyle:(id)arg1;

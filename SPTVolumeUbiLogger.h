@@ -13,8 +13,8 @@
     id <SPTUBILogger> _logger;
 }
 
-@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void)logVolumeSystemSliderDraggedToVolume:(double)arg1 forDeviceId:(id)arg2;
 - (void)logVolumeDownHardwareButtonPressedForDeviceId:(id)arg1 newVolume:(double)arg2;
 - (void)logVolumeUpHardwareButtonPressedForDeviceId:(id)arg1 newVolume:(double)arg2;

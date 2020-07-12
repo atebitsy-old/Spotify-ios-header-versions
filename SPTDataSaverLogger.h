@@ -15,9 +15,9 @@
     NSURL *_settingsDataSaverURI;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *settingsDataSaverURI; // @synthesize settingsDataSaverURI=_settingsDataSaverURI;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (double)timestamp;
 - (void)logInteractionForDataSaverSettingEnabled:(_Bool)arg1;
 - (void)logInteractionWithInteractionType:(id)arg1 userIntent:(id)arg2 targetUri:(id)arg3 pageUri:(id)arg4;

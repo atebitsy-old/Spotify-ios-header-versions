@@ -33,6 +33,7 @@
     id <GLUETheme> _glueTheme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) UIStackView *verticalOuterStack; // @synthesize verticalOuterStack=_verticalOuterStack;
 @property(retain, nonatomic) UIStackView *horizontalTopRowStack; // @synthesize horizontalTopRowStack=_horizontalTopRowStack;
@@ -50,7 +51,6 @@
 @property(readonly, nonatomic) NSString *episodeTitle; // @synthesize episodeTitle=_episodeTitle;
 @property(retain, nonatomic) NSURL *headerImageURL; // @synthesize headerImageURL=_headerImageURL;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (double)preferredHeight;
 - (struct UIEdgeInsets)edgeInsetsWithTop:(double)arg1 leading:(double)arg2;
 - (void)applyThemeLayout;

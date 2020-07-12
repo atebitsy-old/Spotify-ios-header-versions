@@ -18,9 +18,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTRadioRemoteConfigProperties> propertiesWrapper; // @synthesize propertiesWrapper=_propertiesWrapper;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-- (void).cxx_destruct;
 - (id)provideProperties;
 - (void)unload;
 - (void)load;

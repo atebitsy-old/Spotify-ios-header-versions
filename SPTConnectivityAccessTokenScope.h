@@ -16,10 +16,10 @@
     SPTConnectivityApplicationScope *_applicationScope;
 }
 
-@property(nonatomic) __weak SPTConnectivityApplicationScope *applicationScope; // @synthesize applicationScope=_applicationScope;
-@property(retain, nonatomic) id <SPTAuthWebgateSession> session; // @synthesize session=_session;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) __weak SPTConnectivityApplicationScope *applicationScope; // @synthesize applicationScope=_applicationScope;
+@property(retain, nonatomic) id <SPTAuthWebgateSession> session; // @synthesize session=_session;
 - (struct ConnectionBuilder)connectionBuilder;
 - (id)initWithApplicationScope:(id)arg1 session:(id)arg2 configuration:(id)arg3;
 

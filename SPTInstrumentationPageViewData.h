@@ -15,10 +15,10 @@
     NSString *_navigationRootIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *navigationRootIdentifier; // @synthesize navigationRootIdentifier=_navigationRootIdentifier;
 @property(readonly, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
-- (void).cxx_destruct;
 - (id)initWithPageIdentifier:(id)arg1 pageURI:(id)arg2 navigationRootIdentifier:(id)arg3;
 
 @end

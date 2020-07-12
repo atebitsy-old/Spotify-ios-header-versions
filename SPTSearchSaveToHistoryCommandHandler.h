@@ -17,8 +17,8 @@
 
 + (id)defaultName;
 + (id)commandWithURI:(id)arg1 title:(id)arg2 subtitle:(id)arg3 placeholderIconIdentifier:(id)arg4 imageURI:(id)arg5 explicitContent:(_Bool)arg6 mogef19:(_Bool)arg7;
-@property(readonly, nonatomic) id <SPTSearchRecentsDataSource> recentsDataSource; // @synthesize recentsDataSource=_recentsDataSource;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTSearchRecentsDataSource> recentsDataSource; // @synthesize recentsDataSource=_recentsDataSource;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithRecentsDataSource:(id)arg1;
 

@@ -16,8 +16,8 @@
     id <HUGSStyleOverrider> _styleOverrider;
 }
 
-@property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;

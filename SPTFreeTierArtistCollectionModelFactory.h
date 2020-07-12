@@ -15,9 +15,9 @@
     NSString *_username;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (id)createArtistLikedSongsModelForArtistURI:(id)arg1;
 - (id)createArtistOfflineModelForArtistURI:(id)arg1;
 - (id)initWithCollectionPlatform:(id)arg1 username:(id)arg2;

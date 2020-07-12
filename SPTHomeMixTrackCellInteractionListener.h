@@ -15,9 +15,9 @@
     SPTHomeMixTrackViewModel *_trackViewModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTHomeMixTrackViewModel *trackViewModel; // @synthesize trackViewModel=_trackViewModel;
 @property(nonatomic) __weak id <SPTHomeMixTrackCellDelegate> cellDelegate; // @synthesize cellDelegate=_cellDelegate;
-- (void).cxx_destruct;
 - (void)facePileTapped:(id)arg1;
 - (void)contextMenuTapped:(id)arg1;
 - (id)initWithCellDelegate:(id)arg1 trackViewModel:(id)arg2;

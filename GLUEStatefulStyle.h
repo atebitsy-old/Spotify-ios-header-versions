@@ -17,9 +17,9 @@
 }
 
 + (id)UIStatesToStylesWithNormalStyle:(id)arg1 highlightedStyle:(id)arg2 disabledStyle:(id)arg3 selectedStyle:(id)arg4 activeStyle:(id)arg5;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSMutableDictionary *UIStatesToStyles; // @synthesize UIStatesToStyles=_UIStatesToStyles;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToStatefulStyle:(id)arg1;

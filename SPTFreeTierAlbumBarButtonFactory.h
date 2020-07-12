@@ -18,13 +18,13 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTContextMenuActionsProvider> contextMenuActionFactory; // @synthesize contextMenuActionFactory=_contextMenuActionFactory;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
-- (void).cxx_destruct;
 - (id)createContextMenuButtonViewModelForViewURI:(id)arg1 albumViewModel:(id)arg2;
 - (id)createFeedbackButtonViewModelForViewURI:(id)arg1;
 - (id)initWithCollectionConfiguration:(id)arg1 collectionPlatform:(id)arg2 collectionTestManager:(id)arg3 contextMenuPresenterFactory:(id)arg4 contextMenuActionFactory:(id)arg5 logCenter:(id)arg6;

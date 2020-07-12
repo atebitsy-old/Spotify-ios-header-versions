@@ -20,6 +20,7 @@
     NSString *_placeholderIconIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isMogef19) _Bool mogef19; // @synthesize mogef19=_mogef19;
 @property(readonly, nonatomic, getter=isExplicitContent) _Bool explicitContent; // @synthesize explicitContent=_explicitContent;
 @property(readonly, copy, nonatomic) NSString *placeholderIconIdentifier; // @synthesize placeholderIconIdentifier=_placeholderIconIdentifier;
@@ -28,7 +29,6 @@
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, copy, nonatomic) NSURL *targetURI; // @synthesize targetURI=_targetURI;
 @property(readonly, copy, nonatomic) NSURL *originURI; // @synthesize originURI=_originURI;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)description;
 - (unsigned long long)hash;

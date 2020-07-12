@@ -20,12 +20,12 @@
     SPTPSXLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPSXLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTPSXViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)offlineSwitchCellDidChangeState:(id)arg1 isOn:(_Bool)arg2;
 - (unsigned long long)offlineSwitchCellOfflineAvailability:(id)arg1;
 - (id)tableCell;

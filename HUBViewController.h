@@ -6,26 +6,22 @@
 
 #import <UIKit/UIViewController.h>
 
-@class HUBComponentRegistry, HUBContainerView;
-@protocol HUBComponentEventHandler, HUBComponentLayoutManager, HUBImageLoaderFactory;
+@class HUBContainerView;
 
 @interface HUBViewController : UIViewController
 {
-    HUBComponentRegistry *_componentRegistry;
-    id <HUBComponentLayoutManager> _componentLayoutManager;
-    id <HUBImageLoaderFactory> _imageLoaderFactory;
-    id <HUBComponentEventHandler> _componentEventHandler;
+    CDUnknownBlockType _containerViewFactory;
 }
 
-@property(retain, nonatomic) id <HUBComponentEventHandler> componentEventHandler; // @synthesize componentEventHandler=_componentEventHandler;
-@property(readonly, nonatomic) id <HUBImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-@property(readonly, nonatomic) id <HUBComponentLayoutManager> componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
-@property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType containerViewFactory; // @synthesize containerViewFactory=_containerViewFactory;
 - (void)viewDidDisappear:(_Bool)arg1;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)loadView;
+- (id)initWithContainerViewFactory:(CDUnknownBlockType)arg1;
 - (id)initWithComponentRegistry:(id)arg1 componentLayoutManager:(id)arg2 imageLoaderFactory:(id)arg3 commandHandler:(id)arg4;
 
 // Remaining properties

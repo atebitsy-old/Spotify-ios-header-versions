@@ -18,10 +18,10 @@
     NSArray *_termsViewHorizontalMargin;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *termsViewHorizontalMargin; // @synthesize termsViewHorizontalMargin=_termsViewHorizontalMargin;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
 @property(nonatomic) __weak id <UITextViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (void)setAttributedText:(id)arg1;

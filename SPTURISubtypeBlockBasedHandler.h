@@ -18,10 +18,10 @@
     SPTURISubtypeRegistryImplementation *_registry;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTURISubtypeRegistryImplementation *registry; // @synthesize registry=_registry;
 @property(readonly, copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (void)cancel;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;

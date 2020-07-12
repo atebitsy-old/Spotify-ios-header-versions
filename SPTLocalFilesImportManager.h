@@ -35,6 +35,7 @@
     NSDate *_importStartedTimestamp;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *importStartedTimestamp; // @synthesize importStartedTimestamp=_importStartedTimestamp;
 @property(readonly, nonatomic) SPTLocalFilesImportAuthorizationRequester *importAuthorizationRequester; // @synthesize importAuthorizationRequester=_importAuthorizationRequester;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -55,7 +56,6 @@
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
-- (void).cxx_destruct;
 - (void)registerSettingsPage:(id)arg1 featureSettingsItemFactory:(id)arg2;
 - (void)registerRootSettings:(id)arg1;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;

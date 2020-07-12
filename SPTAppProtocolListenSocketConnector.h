@@ -19,11 +19,11 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic) struct __CFSocket *socket; // @synthesize socket=_socket;
 @property(readonly, nonatomic, getter=isAcceptingConnections) _Bool acceptingConnections; // @synthesize acceptingConnections=_acceptingConnections;
 @property(nonatomic) __weak id <SPTAppProtocolConnectorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleNewConnectionWithInputStream:(id)arg1 outputStream:(id)arg2;
 - (void)teardownLocalSocket;
 - (void)createAndListenToLocalSocket;

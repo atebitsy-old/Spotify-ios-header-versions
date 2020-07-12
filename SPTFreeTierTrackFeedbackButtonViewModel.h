@@ -14,9 +14,9 @@
     id <SPTCollectionPlatformDataLoaderRequestToken> _collectionStateRequestToken;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionStateRequestToken; // @synthesize collectionStateRequestToken=_collectionStateRequestToken;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (void)evaluateStateForCollectionState:(unsigned long long)arg1 error:(id)arg2;
 - (void)unban;
 - (void)unlike;

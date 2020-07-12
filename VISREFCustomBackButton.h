@@ -22,6 +22,7 @@
 }
 
 + (id)defaultGlyph;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *glyphLabel; // @synthesize glyphLabel=_glyphLabel;
 @property(retain, nonatomic) UIView *darkeningView; // @synthesize darkeningView=_darkeningView;
 @property(retain, nonatomic) UIView *chevronContainerView; // @synthesize chevronContainerView=_chevronContainerView;
@@ -29,7 +30,6 @@
 @property(nonatomic) CDStruct_5a28e70a glyphOffsetProgressRange; // @synthesize glyphOffsetProgressRange=_glyphOffsetProgressRange;
 @property(nonatomic) CDStruct_5a28e70a glyphProtectionProgressRange; // @synthesize glyphProtectionProgressRange=_glyphProtectionProgressRange;
 @property(nonatomic, getter=isProtectionEnabled) _Bool protectionEnabled; // @synthesize protectionEnabled=_protectionEnabled;
-- (void).cxx_destruct;
 - (void)headerViewNormalizedProgressUpdate:(double)arg1;
 - (void)setButtonProtectionBackgroundColor:(id)arg1;
 - (void)setupLayout;

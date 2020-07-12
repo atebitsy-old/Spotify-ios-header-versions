@@ -23,12 +23,12 @@
     SPTProgressView *_progressIndicator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressIndicator; // @synthesize progressIndicator=_progressIndicator;
 @property(nonatomic) unsigned long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginIntentLedStartScreenViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTLoginActionButtonManager *actionButtonManager; // @synthesize actionButtonManager=_actionButtonManager;
-- (void).cxx_destruct;
 - (void)viewRequiresStyleApplyingToButtons;
 - (void)userDidTapButtonWithTag:(unsigned long long)arg1;
 - (void)hideProgressIndicator;

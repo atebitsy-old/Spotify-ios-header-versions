@@ -20,6 +20,7 @@
     SPTGaiaUbiLogger *_ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTGaiaLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTGaiaPopupContentViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
@@ -28,7 +29,6 @@
 @property(retain, nonatomic) SPTGaiaConnectDevice *popupDevice; // @synthesize popupDevice=_popupDevice;
 @property(retain, nonatomic) SPTGaiaDeviceAppearanceMapping *iconMapper; // @synthesize iconMapper=_iconMapper;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)popupDialogForDevice:(id)arg1;
 - (void)dismissButtonAction:(id)arg1;
 - (void)continueButtonAction:(id)arg1;

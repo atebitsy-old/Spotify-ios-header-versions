@@ -21,6 +21,7 @@
     id <SPTAlertInterface> _alertInterface;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(nonatomic) __weak id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) id <SPTScannablesTestManager> testManager; // @synthesize testManager=_testManager;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) UIDevice *device; // @synthesize device=_device;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SpotifyApplication *spotifyApplication; // @synthesize spotifyApplication=_spotifyApplication;
-- (void).cxx_destruct;
 - (void)clear;
 - (id)initWithSpotifyApplication:(id)arg1 linkDispatcher:(id)arg2 device:(id)arg3 theme:(id)arg4 testManager:(id)arg5 logger:(id)arg6 imageLoaderFactory:(id)arg7 alertInterface:(id)arg8;
 

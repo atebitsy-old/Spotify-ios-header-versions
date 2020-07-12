@@ -19,11 +19,11 @@
     double _footerViewHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double footerViewHeight; // @synthesize footerViewHeight=_footerViewHeight;
 @property(copy, nonatomic) SPTLanguageOnboardingGridFooterViewStyle *footerViewStyle; // @synthesize footerViewStyle=_footerViewStyle;
 @property(copy, nonatomic) GLUECollectionViewStyle *collectionViewStyle; // @synthesize collectionViewStyle=_collectionViewStyle;
 @property(copy, nonatomic) SPTLanguageOnboardingGridCollectionViewLayoutStyle<GLUEStyle> *collectionViewLayoutStyle; // @synthesize collectionViewLayoutStyle=_collectionViewLayoutStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

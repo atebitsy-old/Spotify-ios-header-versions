@@ -16,9 +16,9 @@
     NSString *_actionTitle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *actionTitle; // @synthesize actionTitle=_actionTitle;
 @property(nonatomic) long long actionIcon; // @synthesize actionIcon=_actionIcon;
-- (void).cxx_destruct;
 - (id)performAction;
 - (long long)icon;
 - (id)title;

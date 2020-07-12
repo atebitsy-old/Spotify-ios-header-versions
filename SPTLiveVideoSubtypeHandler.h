@@ -19,10 +19,10 @@
     id <SPTLiveVideoPlayerContextFactory> _ctxFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLiveVideoPlayerContextFactory> ctxFactory; // @synthesize ctxFactory=_ctxFactory;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)setupLivePlayerWithContext:(id)arg1;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;

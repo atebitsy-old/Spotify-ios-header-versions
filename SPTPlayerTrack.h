@@ -22,11 +22,11 @@
 + (id)trackWithURI:(id)arg1;
 + (id)trackWithURI:(id)arg1 albumURI:(id)arg2 artistURI:(id)arg3 andUID:(id)arg4;
 + (id)trackWithURI:(id)arg1 albumURI:(id)arg2 artistURI:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(copy, nonatomic) NSString *provider; // @synthesize provider=_provider;
 @property(copy, nonatomic) NSString *UID; // @synthesize UID=_UID;
 @property(copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

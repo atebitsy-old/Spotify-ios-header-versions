@@ -19,10 +19,10 @@
     NSMapTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMapTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) NSMutableDictionary *overrides; // @synthesize overrides=_overrides;
 @property(readonly, nonatomic) id <SPTLocalSettings> underlyingSettings; // @synthesize underlyingSettings=_underlyingSettings;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (void)localSettingsDidChange:(id)arg1;
 - (void)invokeObservers;

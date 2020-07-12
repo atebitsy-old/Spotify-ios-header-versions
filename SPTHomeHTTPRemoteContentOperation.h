@@ -27,6 +27,7 @@
     NSError *_previousError;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool ignoreCache; // @synthesize ignoreCache=_ignoreCache;
 @property(nonatomic) _Bool skipCache; // @synthesize skipCache=_skipCache;
 @property(retain, nonatomic) NSError *previousError; // @synthesize previousError=_previousError;
@@ -37,7 +38,6 @@
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(readonly, nonatomic) NSURL *contentURL; // @synthesize contentURL=_contentURL;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)tasteOnboardingDidFinishCurating:(id)arg1;
 - (id)makeUnknownError;
 - (void)finishWithOperationStatus:(unsigned long long)arg1;

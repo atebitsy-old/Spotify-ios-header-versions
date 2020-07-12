@@ -18,11 +18,11 @@
     NSLayoutConstraint *_topGradientViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *topGradientViewHeightConstraint; // @synthesize topGradientViewHeightConstraint=_topGradientViewHeightConstraint;
 @property(retain, nonatomic) UIView *bottomGradientView; // @synthesize bottomGradientView=_bottomGradientView;
 @property(retain, nonatomic) GLUEGradientView *topGradientView; // @synthesize topGradientView=_topGradientView;
 @property(readonly, nonatomic) SPTNowPlayingBackgroundViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)backgroundViewModel:(id)arg1 didChangeColor:(id)arg2;
 - (void)refreshWithMainNPVHeight:(double)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;

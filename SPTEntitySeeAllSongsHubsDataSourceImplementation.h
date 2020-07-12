@@ -23,6 +23,7 @@
     id <SPTOfflineModeState> _offlineModeState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) NSArray *trackURLs; // @synthesize trackURLs=_trackURLs;
 @property(copy, nonatomic) NSArray *collectionItems; // @synthesize collectionItems=_collectionItems;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, copy, nonatomic) NSDictionary *data; // @synthesize data=_data;
 @property(nonatomic) __weak id <SPTEntitySeeAllSongsHubsDataSourceDelegate> dataSourceDelegate; // @synthesize dataSourceDelegate=_dataSourceDelegate;
-- (void).cxx_destruct;
 - (_Bool)hasDataSourceLoadedForAllSongs;
 - (id)artistsForIndexPath:(id)arg1;
 - (id)imageURLForIndexPath:(id)arg1;

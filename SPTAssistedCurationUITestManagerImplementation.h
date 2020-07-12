@@ -20,11 +20,11 @@
     id <SPTFeatureFlagSignal> _freeTierSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldUseSnackBar; // @synthesize shouldUseSnackBar=_shouldUseSnackBar;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierSignal; // @synthesize freeTierSignal=_freeTierSignal;
 @property(retain, nonatomic) SPTAssistedCurationFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 @property(readonly, nonatomic, getter=isPageLoaderEnabled) _Bool pageLoaderEnabled;
 - (void)setupFeatureProperties;

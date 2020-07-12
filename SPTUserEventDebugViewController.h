@@ -18,10 +18,10 @@
     NSString *_deviceID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
 @property(retain, nonatomic) SPTAdjustUserTracker *adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
-- (void).cxx_destruct;
 - (id)tableView:(id)arg1 titleForHeaderInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;

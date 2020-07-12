@@ -15,8 +15,8 @@
     SPTArtistAboutGLUETheme *_theme;
 }
 
-@property(retain, nonatomic) SPTArtistAboutGLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTArtistAboutGLUETheme *theme; // @synthesize theme=_theme;
 - (id)createBiographyComponent;
 - (id)initWithTheme:(id)arg1;
 

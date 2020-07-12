@@ -19,12 +19,12 @@
     struct CGSize _shadowOffset;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *shadowColor; // @synthesize shadowColor=_shadowColor;
 @property(nonatomic) struct CGSize shadowOffset; // @synthesize shadowOffset=_shadowOffset;
 @property(nonatomic) double shadowRadius; // @synthesize shadowRadius=_shadowRadius;
 @property(nonatomic) double shadowOpacity; // @synthesize shadowOpacity=_shadowOpacity;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

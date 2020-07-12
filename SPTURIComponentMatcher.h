@@ -18,8 +18,8 @@
 + (id)matcherWithToken:(id)arg1 children:(id)arg2;
 + (id)matcherWithLiteral:(id)arg1 children:(id)arg2;
 + (id)matcherWithScheme:(id)arg1 children:(id)arg2;
-@property(retain, nonatomic) NSArray *children; // @synthesize children=_children;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *children; // @synthesize children=_children;
 - (_Bool)isEquivalent:(id)arg1;
 @property(readonly, nonatomic) id payload;
 - (void)addChild:(id)arg1;

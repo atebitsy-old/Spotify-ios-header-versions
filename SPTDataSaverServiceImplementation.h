@@ -29,6 +29,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDataSaverLowDataModeMonitor *lowDataModeMonitor; // @synthesize lowDataModeMonitor=_lowDataModeMonitor;
 @property(retain, nonatomic) SPTDataSaverController *controller; // @synthesize controller=_controller;
 @property(retain, nonatomic) SPTDataSaverLogger *logger; // @synthesize logger=_logger;
@@ -41,7 +42,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) _Bool canvasEnabled; // @synthesize canvasEnabled;
-- (void).cxx_destruct;
 - (void)lowDataModeDidChangeActiveState:(_Bool)arg1;
 - (id)provideDataSaverActivatedSignal;
 - (id)provideDataSaverSettingSection:(id)arg1;

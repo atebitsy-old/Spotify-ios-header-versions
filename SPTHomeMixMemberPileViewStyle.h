@@ -19,12 +19,12 @@
     struct CGSize _size;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(retain, nonatomic) UIColor *maskColor; // @synthesize maskColor=_maskColor;
 @property(nonatomic) double maskLineWidth; // @synthesize maskLineWidth=_maskLineWidth;
 @property(nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

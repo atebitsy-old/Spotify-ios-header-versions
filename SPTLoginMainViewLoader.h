@@ -17,11 +17,11 @@
     SPTLoginPerformanceLogging *_performanceLogging;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginPerformanceLogging *performanceLogging; // @synthesize performanceLogging=_performanceLogging;
 @property(retain, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(retain, nonatomic) id <SPTSessionServicesLoader> sessionServicesLoader; // @synthesize sessionServicesLoader=_sessionServicesLoader;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
-- (void).cxx_destruct;
 - (void)presentMainScreenWithCompletion:(CDUnknownBlockType)arg1;
 - (void)loadSessionServicesAndPresentMainScreenWithCompletion:(CDUnknownBlockType)arg1;
 - (id)initWithMetaViewController:(id)arg1 sessionServicesLoader:(id)arg2 loginStateController:(id)arg3 performanceLogging:(id)arg4;

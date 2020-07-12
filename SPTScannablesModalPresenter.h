@@ -19,11 +19,11 @@
     SPTScannablesLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTScannablesLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTScannablesAuthorizationRequester *authorizationRequester; // @synthesize authorizationRequester=_authorizationRequester;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTScannablesUserInterfaceFactory> userInterfaceFactory; // @synthesize userInterfaceFactory=_userInterfaceFactory;
-- (void).cxx_destruct;
 - (void)presentCameraViewWithSourceURL:(id)arg1 sourceIdentifier:(id)arg2;
 - (id)initWithUserInterfaceFactory:(id)arg1 modalPresentationController:(id)arg2 authorizationRequester:(id)arg3 logger:(id)arg4;
 

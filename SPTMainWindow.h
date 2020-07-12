@@ -14,9 +14,9 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *animationView; // @synthesize animationView=_animationView;
-- (void).cxx_destruct;
 - (void)didAddSubview:(id)arg1;
 - (void)updateTheme:(id)arg1 forTraitCollection:(id)arg2;
 - (void)traitCollectionDidChange:(id)arg1;

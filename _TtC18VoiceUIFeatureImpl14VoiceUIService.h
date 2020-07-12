@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
-
-@interface _TtC18VoiceUIFeatureImpl14VoiceUIService : NSObject <SPTService>
+@interface _TtC18VoiceUIFeatureImpl14VoiceUIService : NSObject
 {
     // Error parsing type: , name: voiceLibraryService
     // Error parsing type: , name: glueService

@@ -17,12 +17,12 @@
     NSArray *_focusPaths;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *focusPaths; // @synthesize focusPaths=_focusPaths;
 @property(readonly, nonatomic) NSIndexPath *movesTo; // @synthesize movesTo=_movesTo;
 @property(readonly, nonatomic) NSIndexPath *movesFrom; // @synthesize movesFrom=_movesFrom;
 @property(readonly, copy, nonatomic) NSArray *deletions; // @synthesize deletions=_deletions;
 @property(readonly, copy, nonatomic) NSArray *insertions; // @synthesize insertions=_insertions;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (void)performChangesOnCollectionView:(id)arg1 completion:(CDUnknownBlockType)arg2;

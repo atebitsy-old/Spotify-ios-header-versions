@@ -16,8 +16,8 @@
     id <SPTInAppMessageMessageRequesterDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <SPTInAppMessageMessageRequesterDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTInAppMessageMessageRequesterDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)requestMessageWithFeatureName:(id)arg1 eventName:(id)arg2 eventID:(id)arg3 eventVersion:(id)arg4;
 - (id)initWithDelegate:(id)arg1;
 

@@ -35,6 +35,7 @@
     NSSet *_disallowInterruptingPlaybackReasons;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *disallowInterruptingPlaybackReasons; // @synthesize disallowInterruptingPlaybackReasons=_disallowInterruptingPlaybackReasons;
 @property(copy, nonatomic) NSSet *disallowSetQueueReasons; // @synthesize disallowSetQueueReasons=_disallowSetQueueReasons;
 @property(copy, nonatomic) NSSet *disallowRemovingFromContextTracksReasons; // @synthesize disallowRemovingFromContextTracksReasons=_disallowRemovingFromContextTracksReasons;
@@ -56,7 +57,6 @@
 @property(copy, nonatomic) NSSet *disallowSkippingToPreviousTrackReasons; // @synthesize disallowSkippingToPreviousTrackReasons=_disallowSkippingToPreviousTrackReasons;
 @property(copy, nonatomic) NSSet *disallowPeekingAtNextTrackReasons; // @synthesize disallowPeekingAtNextTrackReasons=_disallowPeekingAtNextTrackReasons;
 @property(copy, nonatomic) NSSet *disallowPeekingAtPreviousTrackReasons; // @synthesize disallowPeekingAtPreviousTrackReasons=_disallowPeekingAtPreviousTrackReasons;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

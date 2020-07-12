@@ -24,6 +24,7 @@
     NSString *_availableSessionType;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool featureAvailable; // @synthesize featureAvailable=_featureAvailable;
 @property(readonly, nonatomic) _Bool featureEnabled; // @synthesize featureEnabled=_featureEnabled;
 @property(readonly, copy, nonatomic) NSString *availableSessionType; // @synthesize availableSessionType=_availableSessionType;
@@ -34,7 +35,6 @@
 @property(readonly, copy, nonatomic) NSString *availabilityStatus; // @synthesize availabilityStatus=_availabilityStatus;
 @property(readonly, copy, nonatomic) NSString *sessionID; // @synthesize sessionID=_sessionID;
 @property(readonly, copy, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1 andDeviceId:(id)arg2;
 
 // Remaining properties

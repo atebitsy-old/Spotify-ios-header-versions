@@ -21,13 +21,13 @@
     id <SPTSocialListeningTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTSocialListeningModel> model; // @synthesize model=_model;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) SPTSocialListeningEducationSlatePresenter *slatePresenter; // @synthesize slatePresenter=_slatePresenter;
 @property(readonly, nonatomic) SPTSocialListeningDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
-- (void).cxx_destruct;
 - (id)youLeftSessionNotificationMessage;
 - (id)youEndedSessionNotificationMessage;
 - (id)hostDisplayNameFromConnectedUsers:(id)arg1;

@@ -19,11 +19,11 @@
     id <SPTFeatureFlagSignal> _allowV2SharingSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool allowV2Sharing; // @synthesize allowV2Sharing=_allowV2Sharing;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> allowV2SharingSignal; // @synthesize allowV2SharingSignal=_allowV2SharingSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(retain, nonatomic) id <SPTPlaylistURIResolver> playlistURIResolver; // @synthesize playlistURIResolver=_playlistURIResolver;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)normalizeSharingEntityURI:(id)arg1 withContextSourceURI:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)normalizeContextAwareSharingEntityURI:(id)arg1 withContextSourceURI:(id)arg2 completion:(CDUnknownBlockType)arg3;

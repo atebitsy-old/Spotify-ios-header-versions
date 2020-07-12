@@ -24,6 +24,7 @@
     SPTPhoneNumberSignupValidateOtpViewLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didUserEditOtp; // @synthesize didUserEditOtp=_didUserEditOtp;
 @property(readonly, nonatomic) SPTPhoneNumberSignupValidateOtpViewLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTPhoneNumberSignupOtpSessionHandler *otpSessionHandler; // @synthesize otpSessionHandler=_otpSessionHandler;
@@ -33,7 +34,6 @@
 @property(nonatomic) _Bool isNextButtonEnabled; // @synthesize isNextButtonEnabled=_isNextButtonEnabled;
 @property(retain, nonatomic) SPTAuthCodeChallenge *codeChallenge; // @synthesize codeChallenge=_codeChallenge;
 @property(nonatomic) __weak id <SPTPhoneNumberSignupValidateOtpViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didOtpSessionTimeout;
 - (void)didEndEditingPassword;
 - (void)viewWillDisappear;

@@ -21,13 +21,13 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTConcertsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSNumberFormatter *monthlyListenersFormatter; // @synthesize monthlyListenersFormatter=_monthlyListenersFormatter;
 @property(readonly, nonatomic) SPTConcertsArtist *artist; // @synthesize artist=_artist;
 @property(readonly, copy, nonatomic) NSString *adornmentSubtitleText; // @synthesize adornmentSubtitleText;
 @property(readonly, copy, nonatomic) NSString *adornmentTitleText; // @synthesize adornmentTitleText;
-- (void).cxx_destruct;
 - (void)handleAccessoryTap;
 - (void)handleTap;
 @property(readonly, nonatomic) _Bool canBeTapped;

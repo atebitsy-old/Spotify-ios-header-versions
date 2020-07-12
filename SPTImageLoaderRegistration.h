@@ -14,9 +14,9 @@
     CDUnknownBlockType _predicate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType predicate; // @synthesize predicate=_predicate;
 @property(readonly, nonatomic) id <SPTImageLoaderRequestFactory> factory; // @synthesize factory=_factory;
-- (void).cxx_destruct;
 - (id)init;
 - (_Bool)matches:(id)arg1;
 - (id)initWithFactory:(id)arg1 predicate:(CDUnknownBlockType)arg2;

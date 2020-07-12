@@ -16,10 +16,10 @@
     id <SPTKeepAlivePersistentConnectionsToken> _keepAliveToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTKeepAlivePersistentConnectionsToken> keepAliveToken; // @synthesize keepAliveToken=_keepAliveToken;
 @property(nonatomic) __weak id <SPTNetworkConnectivityController> networkController; // @synthesize networkController=_networkController;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
-- (void).cxx_destruct;
 - (id)provideCoreSession;
 - (void)keepAlivePersistentConnection:(_Bool)arg1;
 - (void)dealloc;

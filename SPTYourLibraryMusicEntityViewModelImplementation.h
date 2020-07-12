@@ -33,6 +33,7 @@
     SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
 @property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
 @property(nonatomic) _Bool scrollingToTop; // @synthesize scrollingToTop=_scrollingToTop;
@@ -49,7 +50,6 @@
 @property(readonly, copy, nonatomic) NSString *searchPlaceholderText; // @synthesize searchPlaceholderText=_searchPlaceholderText;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) __weak id <SPTYourLibraryMusicEntityViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)entityModelDidUpdate:(id)arg1 itemsCountChanged:(_Bool)arg2;
 - (void)entityModel:(id)arg1 error:(id)arg2;
 - (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;

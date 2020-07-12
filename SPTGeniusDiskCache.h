@@ -15,9 +15,9 @@
     NSObject<OS_dispatch_queue> *_serialQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *serialQueue; // @synthesize serialQueue=_serialQueue;
 @property(readonly, copy, nonatomic) NSString *directory; // @synthesize directory=_directory;
-- (void).cxx_destruct;
 - (void)loadObjectForKey:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)deleteObjectForKey:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)saveObject:(id)arg1 forKey:(id)arg2 completion:(CDUnknownBlockType)arg3;

@@ -13,8 +13,8 @@
     id <SPTEntityService> _entityService;
 }
 
-@property(retain, nonatomic) id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 - (void)normalizeSharingEntityData:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithEntityService:(id)arg1;
 

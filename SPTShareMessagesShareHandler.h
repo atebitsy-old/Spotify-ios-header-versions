@@ -27,6 +27,7 @@
     SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) NSString *utmCampaign; // @synthesize utmCampaign=_utmCampaign;
 @property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
 @property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
-- (void).cxx_destruct;
 - (void)messageComposeViewController:(id)arg1 didFinishWithResult:(long long)arg2;
 - (id)provideShareAlertModelForError:(id)arg1;
 - (id)generateShareTextBodyFromShareData:(id)arg1;

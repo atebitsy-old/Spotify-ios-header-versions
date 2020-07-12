@@ -20,10 +20,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
-- (void).cxx_destruct;
 - (void)addMotionItemToPage:(id)arg1 featureSettingsItemFactory:(id)arg2;
 - (void)setupSettingsPage;
 - (_Bool)shouldEnableFeature:(id)arg1 rolloutValue:(id)arg2;

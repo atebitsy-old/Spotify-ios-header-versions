@@ -29,6 +29,7 @@
 + (double)maximumTrackCloudHeight:(id)arg1;
 + (double)heightPerLine:(id)arg1;
 + (id)trackAttributedStringWithStyle:(id)arg1 fromItem:(id)arg2 trackCounter:(unsigned long long)arg3 isLastTrack:(_Bool)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(retain, nonatomic) NSLayoutConstraint *tracksToTitleVerticalConstraint; // @synthesize tracksToTitleVerticalConstraint=_tracksToTitleVerticalConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *containerViewBottomConstraint; // @synthesize containerViewBottomConstraint=_containerViewBottomConstraint;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) GLUELabel *tracksLabel; // @synthesize tracksLabel=_tracksLabel;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)updateContentWithData:(id)arg1 andContainerWidth:(double)arg2;
 - (void)animateToHighlighted:(_Bool)arg1;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted;

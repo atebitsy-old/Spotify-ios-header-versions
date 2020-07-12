@@ -30,6 +30,7 @@
     id <SPTVoiceLibraryLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool activeSession; // @synthesize activeSession=_activeSession;
 @property(readonly, nonatomic) id <SPTVoiceLibraryLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTVoiceLibraryNetworkState> networkHandler; // @synthesize networkHandler=_networkHandler;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) SPTVoiceLibraryRecognitionTask *voiceRecognitionTask; // @synthesize voiceRecognitionTask=_voiceRecognitionTask;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceLibraryRecognitionTaskFactory> voiceRecognitionTaskFactory; // @synthesize voiceRecognitionTaskFactory=_voiceRecognitionTaskFactory;
-- (void).cxx_destruct;
 - (_Bool)useDevelopmentEndpoint;
 - (_Bool)useExternalAudioRecorder;
 - (void)relinquishSupportForAudioRecording;

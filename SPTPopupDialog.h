@@ -35,6 +35,7 @@
 + (id)popupWithTitle:(id)arg1 message:(id)arg2 dismissButtonTitle:(id)arg3;
 + (id)spt_popupWithTitle:(id)arg1 message:(id)arg2 buttons:(id)arg3 theme:(id)arg4;
 + (id)spt_popupWithTitle:(id)arg1 message:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long popupSupportedInterfaceOrientations; // @synthesize popupSupportedInterfaceOrientations=_popupSupportedInterfaceOrientations;
 @property(retain, nonatomic) SPTPopupButtonContainer *buttonContainer; // @synthesize buttonContainer=_buttonContainer;
 @property(retain, nonatomic) SPTPopupContainerView *contentContainer; // @synthesize contentContainer=_contentContainer;
@@ -52,7 +53,6 @@
 @property(nonatomic) struct UIEdgeInsets titleInsets; // @synthesize titleInsets=_titleInsets;
 @property(nonatomic) struct CGSize preferredDialogSize; // @synthesize preferredDialogSize=_preferredDialogSize;
 @property(nonatomic) struct UIEdgeInsets edgeMargins; // @synthesize edgeMargins=_edgeMargins;
-- (void).cxx_destruct;
 - (void)setTitle:(id)arg1;
 - (void)runStateTransitionHandlerWithOldState:(long long)arg1 newState:(long long)arg2;
 - (void)dismissSelf;

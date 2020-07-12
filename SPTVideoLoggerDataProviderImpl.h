@@ -18,10 +18,10 @@
     id <SPTNetworkConnectivityController> _ncc;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> ncc; // @synthesize ncc=_ncc;
 @property(nonatomic) __weak SPSession *loginSession; // @synthesize loginSession=_loginSession;
 @property(copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
-- (void).cxx_destruct;
 - (id)streamingRules;
 - (_Bool)isIncognitoMode;
 - (id)connectionType;

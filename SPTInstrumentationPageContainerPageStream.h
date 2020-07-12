@@ -23,6 +23,7 @@
     NSString *_navigationRoot;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool currentPageViewIsPendingInitialPage; // @synthesize currentPageViewIsPendingInitialPage=_currentPageViewIsPendingInitialPage;
 @property(copy, nonatomic) NSString *navigationRoot; // @synthesize navigationRoot=_navigationRoot;
 @property(nonatomic) __weak id <SPTNavigationListProvider> navigationListProvider; // @synthesize navigationListProvider=_navigationListProvider;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) SPTInstrumentationDeviceClock *deviceClock; // @synthesize deviceClock=_deviceClock;
 @property(readonly, nonatomic) id <SPTPageContainer> pageContainer; // @synthesize pageContainer=_pageContainer;
 @property(nonatomic) __weak id <SPTInstrumentationPageContainerPageStreamDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)pageNameForController:(id)arg1;
 - (id)navigationRootIdentifierForController:(id)arg1;
 - (id)childStreamForCurrentController:(id)arg1 pageView:(id)arg2 navigationRoot:(id)arg3;

@@ -18,10 +18,10 @@
     id <SPTSearch2UserTierProviding> _userTierProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearch2UserTierProviding> userTierProvider; // @synthesize userTierProvider=_userTierProvider;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;
-- (void).cxx_destruct;
 - (id)makePlaybackHighlightContentOperation;
 - (id)makeOnDemandDecoratorContentOperation;
 - (id)provideContentOperations;

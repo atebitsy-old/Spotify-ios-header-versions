@@ -16,8 +16,8 @@
     id <SPTCollectionPlatformDataLoader> _collectionDataLoader;
 }
 
-@property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;
 - (CDUnknownBlockType)artistToArtistNameBlock;
 - (CDUnknownBlockType)albumToOfflineAlbumBlock;
 - (void)fetchAlbumsForQuery:(id)arg1 limit:(unsigned long long)arg2 onCompletion:(CDUnknownBlockType)arg3;

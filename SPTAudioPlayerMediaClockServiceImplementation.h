@@ -20,11 +20,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *audioMediaClocks; // @synthesize audioMediaClocks=_audioMediaClocks;
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
-- (void).cxx_destruct;
 - (id)audioPlayerMediaClockForPlaybackIdentity:(id)arg1;
 - (void)unload;
 - (void)load;

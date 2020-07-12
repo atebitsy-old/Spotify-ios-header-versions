@@ -44,6 +44,7 @@
     id <SPTQueuePlaybackRestrictionHandler> _playbackRestrictionHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTQueuePlaybackRestrictionHandler> playbackRestrictionHandler; // @synthesize playbackRestrictionHandler=_playbackRestrictionHandler;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -56,7 +57,6 @@
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queueFetchQueue; // @synthesize queueFetchQueue=_queueFetchQueue;
 @property(retain, nonatomic) NSObject<OS_dispatch_source> *timer; // @synthesize timer=_timer;
 @property(nonatomic) __weak id <SPTQueueViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)entityDecorationControllerDidUpdate:(id)arg1;

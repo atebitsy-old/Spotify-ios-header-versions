@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
+@class BMPlaybackRequestFactory;
 @protocol SPTVideoCacheOptionsFactory, SPTVideoFeaturePlayerFactory;
 
 @protocol SPTVideoFeature <NSObject>
+- (BMPlaybackRequestFactory *)providePlaybackRequestFactory;
 - (id <SPTVideoFeaturePlayerFactory>)providePlayerFactory;
 - (id <SPTVideoCacheOptionsFactory>)provideVideoCacheOptionsFactory;
 @end

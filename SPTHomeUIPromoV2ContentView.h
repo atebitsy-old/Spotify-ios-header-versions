@@ -22,6 +22,7 @@
     SPTHomeUIPromoV2PlayableInfoView *_playableInfoView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUIPromoV2PlayableInfoView *playableInfoView; // @synthesize playableInfoView=_playableInfoView;
 @property(readonly, nonatomic) UIView *spacerView; // @synthesize spacerView=_spacerView;
 @property(readonly, nonatomic) GLUELabel *backgroundLabel; // @synthesize backgroundLabel=_backgroundLabel;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) SPTHomeUIPromoV2ViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTHomeUIPromoV2ContentViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(nonatomic) long long imageDisplayState;
 - (void)updateAccessibility:(unsigned long long)arg1;
 @property(nonatomic) unsigned long long playButtonMode;

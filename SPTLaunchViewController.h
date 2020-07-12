@@ -18,11 +18,11 @@
     UIImageView *_launchImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *launchImage; // @synthesize launchImage=_launchImage;
 @property(retain, nonatomic) UIImageView *logoView; // @synthesize logoView=_logoView;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(nonatomic) _Bool startedLoadingApp; // @synthesize startedLoadingApp=_startedLoadingApp;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *URI;
 - (unsigned long long)supportedInterfaceOrientations;
 - (_Bool)shouldAutorotate;

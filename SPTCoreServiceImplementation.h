@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPCore *core; // @synthesize core=_core;
 @property(retain, nonatomic) SPTPreferencesImplementation *preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) SPTCoreSchedulerThread *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) SPTEventSenderCoreProxyImplementation *eventSenderCoreProxy; // @synthesize eventSenderCoreProxy=_eventSenderCoreProxy;
 @property(retain, nonatomic) SPTCoreLogHandler *logHandler; // @synthesize logHandler=_logHandler;
 @property(retain, nonatomic) id <SPTAudioDriverController> audioDriverController; // @synthesize audioDriverController=_audioDriverController;
-- (void).cxx_destruct;
 - (id)settingsPath;
 - (id)persistentCachePath;
 - (id)volatileCachePath;

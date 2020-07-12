@@ -15,8 +15,8 @@
     SPTDataLoader *_dataLoader;
 }
 
-@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)fetchPreviewsForIdentifier:(id)arg1 type:(long long)arg2 version:(id)arg3 callBack:(CDUnknownBlockType)arg4;

@@ -19,12 +19,12 @@
     GLUECircularSpinnerViewStyle *_spinnerStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUECircularSpinnerViewStyle *spinnerStyle; // @synthesize spinnerStyle=_spinnerStyle;
 @property(retain, nonatomic) UIColor *iconColor; // @synthesize iconColor=_iconColor;
 @property(nonatomic) double iconSize; // @synthesize iconSize=_iconSize;
 @property(copy, nonatomic) UIColor *overlayColor; // @synthesize overlayColor=_overlayColor;
 @property(nonatomic) double size; // @synthesize size=_size;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToTrackPreviewViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

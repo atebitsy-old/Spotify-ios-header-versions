@@ -24,6 +24,7 @@
     NSLayoutConstraint *_accessoryButtonCenterTitleConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *accessoryButtonCenterTitleConstraint; // @synthesize accessoryButtonCenterTitleConstraint=_accessoryButtonCenterTitleConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *accessoryButtonCenterImageConstraint; // @synthesize accessoryButtonCenterImageConstraint=_accessoryButtonCenterImageConstraint;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) GLUEAccessoryIconButton *accessoryButton; // @synthesize accessoryButton=_accessoryButton;
 @property(nonatomic) __weak id <SPTSlate> slate; // @synthesize slate=_slate;
 @property(nonatomic) __weak id <SPTSlatePrivateViewControllerDelegate> privateViewControllerDelegate; // @synthesize privateViewControllerDelegate=_privateViewControllerDelegate;
-- (void).cxx_destruct;
 - (void)showDismissButton:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)updateHeaderView;
 - (struct CGRect)dismissButtonTapArea;

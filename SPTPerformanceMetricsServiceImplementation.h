@@ -30,6 +30,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTColdStartupSequenceTransport> coldStartupSequenceTransport; // @synthesize coldStartupSequenceTransport=_coldStartupSequenceTransport;
 @property(retain, nonatomic) SPTPerformanceMetricsAppMetricsCollector *appMetricCollector; // @synthesize appMetricCollector=_appMetricCollector;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
-- (void).cxx_destruct;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (void)navigationManager:(id)arg1 willNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (void)didBecomeActive;

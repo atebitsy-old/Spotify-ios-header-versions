@@ -17,9 +17,9 @@
     SPTPremiumDestinationLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-- (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithAlertInterface:(id)arg1 logger:(id)arg2;
 

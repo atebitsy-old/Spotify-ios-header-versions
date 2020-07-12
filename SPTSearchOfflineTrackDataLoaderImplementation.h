@@ -16,8 +16,8 @@
     id <SPTOfflineManager> _offlineManager;
 }
 
-@property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 - (CDUnknownBlockType)trackToOfflineTrackBlock;
 - (id)errorDomain;
 - (id)errorWithDebugDescription:(id)arg1;

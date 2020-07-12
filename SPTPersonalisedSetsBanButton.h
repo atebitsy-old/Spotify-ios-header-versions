@@ -14,9 +14,9 @@
     NSNotificationCenter *_notificationCentre;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCentre; // @synthesize notificationCentre=_notificationCentre;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

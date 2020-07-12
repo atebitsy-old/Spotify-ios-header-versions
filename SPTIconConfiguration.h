@@ -22,6 +22,7 @@
 }
 
 + (id)placeholderIconConfigurationForIcon:(long long)arg1 imageSize:(struct CGSize)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *boundingRectColor; // @synthesize boundingRectColor=_boundingRectColor;
 @property(nonatomic) _Bool boundingRect; // @synthesize boundingRect=_boundingRect;
 @property(nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) long long iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
-- (void).cxx_destruct;
 - (id)init;
 
 @end

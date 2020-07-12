@@ -15,8 +15,8 @@
     EASession *_session;
 }
 
-@property(readonly, nonatomic) EASession *session; // @synthesize session=_session;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) EASession *session; // @synthesize session=_session;
 - (void)accessoryDidDisconnect:(id)arg1;
 @property(readonly, copy) NSString *description;
 - (id)initWithSession:(id)arg1;

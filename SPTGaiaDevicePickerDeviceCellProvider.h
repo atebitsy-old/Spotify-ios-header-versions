@@ -25,6 +25,7 @@
     SEL _contextMenuActionSelector;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) SEL contextMenuActionSelector; // @synthesize contextMenuActionSelector=_contextMenuActionSelector;
 @property(nonatomic) __weak id contextMenuActionTarget; // @synthesize contextMenuActionTarget=_contextMenuActionTarget;
 @property(readonly, nonatomic) SPTGaiaDevicePickerAppearanceManager *appearanceManager; // @synthesize appearanceManager=_appearanceManager;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <SPTGaiaActiveDeviceProvider> activeDeviceProvider; // @synthesize activeDeviceProvider=_activeDeviceProvider;
 @property(readonly, nonatomic) id <SPTGaiaContextMenuModelProvider> contextMenuModelProvider; // @synthesize contextMenuModelProvider=_contextMenuModelProvider;
 @property(readonly, nonatomic) SPTGaiaConnectDevice *device; // @synthesize device=_device;
-- (void).cxx_destruct;
 - (void)setTargetForContextMenuAction:(id)arg1 action:(SEL)arg2;
 - (id)cellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (long long)accessoryIcon;

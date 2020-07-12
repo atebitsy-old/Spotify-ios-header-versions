@@ -17,9 +17,9 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSHashTable *surfaces; // @synthesize surfaces=_surfaces;
-- (void).cxx_destruct;
 - (void)videoSurfacePriorityChanged:(id)arg1;
 - (void)videoSurfaceEligibleForAttachmentChanged:(id)arg1;
 - (void)videoSurfaceSizeDidChangeWhileAttached:(id)arg1;

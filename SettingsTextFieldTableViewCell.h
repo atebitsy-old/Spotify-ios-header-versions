@@ -14,9 +14,9 @@
     NSString *_placeholder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *placeholder; // @synthesize placeholder=_placeholder;
 @property(readonly, nonatomic) UITextField *textField; // @synthesize textField=_textField;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)applyThemeLayout;

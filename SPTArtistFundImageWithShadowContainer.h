@@ -13,8 +13,8 @@
     GLUEImageView *_mainImageView;
 }
 
-@property(readonly, nonatomic) GLUEImageView *mainImageView; // @synthesize mainImageView=_mainImageView;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) GLUEImageView *mainImageView; // @synthesize mainImageView=_mainImageView;
 @property(retain, nonatomic) UIImage *image;
 - (void)applyStyleToImage:(id)arg1;
 - (void)createImageViewWithShadowColor:(id)arg1 shadowOffset:(struct CGSize)arg2 cornerRadius:(double)arg3 shadowOpacity:(double)arg4;

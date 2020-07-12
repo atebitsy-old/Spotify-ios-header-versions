@@ -20,11 +20,11 @@
     id <SPTSlate> _slate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
 @property(retain, nonatomic) UIViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
 @property(retain, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
-- (void).cxx_destruct;
 - (id)titleForSlate:(id)arg1;
 - (id)dismissTextForSlate:(id)arg1;
 - (_Bool)shouldHideImageForSlate:(id)arg1;

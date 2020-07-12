@@ -18,11 +18,11 @@
 }
 
 + (long long)interfaceOrientationForDeviceOrientation:(long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_source> *scheduleSource; // @synthesize scheduleSource=_scheduleSource;
 @property(readonly, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) UIDevice *device; // @synthesize device=_device;
 @property(nonatomic) long long interfaceOrientation; // @synthesize interfaceOrientation=_interfaceOrientation;
-- (void).cxx_destruct;
 - (void)removeOrientationObserver:(id)arg1;
 - (void)addOrientationObserver:(id)arg1;
 - (void)deviceOrientationDidChangeNotification:(id)arg1;

@@ -17,9 +17,9 @@
     NSNotificationCenter *_notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (void)publishLogoutMessage;
 - (void)handlePublisherEvent:(long long)arg1;
 - (id)initWithPubSubMessageQueue:(id)arg1 notificationCenter:(id)arg2;

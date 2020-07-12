@@ -26,6 +26,7 @@
     NSDate *_pollPaymentStateEndDate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *pollPaymentStateEndDate; // @synthesize pollPaymentStateEndDate=_pollPaymentStateEndDate;
 @property(retain, nonatomic) NSDate *pollPaymentStateStartDate; // @synthesize pollPaymentStateStartDate=_pollPaymentStateStartDate;
 @property(nonatomic) double reconnectIncrement; // @synthesize reconnectIncrement=_reconnectIncrement;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) id <SPTAccountProductInformationController> productInformationController; // @synthesize productInformationController=_productInformationController;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (void)currentProductDidChangeForProductInformationController:(id)arg1;
 - (void)applicationWillResignActive;
 - (void)applicationWillEnterForegroundOrDidFinishLaunching;

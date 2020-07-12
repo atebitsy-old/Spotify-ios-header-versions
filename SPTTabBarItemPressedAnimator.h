@@ -16,11 +16,11 @@
     double _restoreAnimationDuration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double restoreAnimationDuration; // @synthesize restoreAnimationDuration=_restoreAnimationDuration;
 @property(nonatomic) double pressedScaleFactor; // @synthesize pressedScaleFactor=_pressedScaleFactor;
 @property(retain, nonatomic) CALayer *animatedLayer; // @synthesize animatedLayer=_animatedLayer;
 - (id)animatedView;
-- (void).cxx_destruct;
 - (void)restoreAnimatedViewWithoutAnimation;
 - (void)restoreAnimatedViewWithDelay:(double)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)startAnimationWithCompletion:(CDUnknownBlockType)arg1;

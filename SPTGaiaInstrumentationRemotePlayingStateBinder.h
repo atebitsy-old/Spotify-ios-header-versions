@@ -17,9 +17,9 @@
     id <SPTGaiaConnectManager> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTInstrumentationRemotePlayingHandler> remotePlayingHandler; // @synthesize remotePlayingHandler=_remotePlayingHandler;
-- (void).cxx_destruct;
 - (void)connectManager:(id)arg1 playingRemotelyDidChange:(_Bool)arg2;
 - (void)dealloc;
 - (id)initWithConnectManager:(id)arg1 instrumentationRemotePlayingHandler:(id)arg2;

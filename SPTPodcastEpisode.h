@@ -43,6 +43,7 @@
 }
 
 + (id)stringFromTimeInterval:(double)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) long long mediaType; // @synthesize mediaType=_mediaType;
 @property(nonatomic, getter=isVideoShowMediaType) _Bool videoShowMediaType; // @synthesize videoShowMediaType=_videoShowMediaType;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
@@ -71,7 +72,6 @@
 @property(copy, nonatomic) NSString *podcastTitle; // @synthesize podcastTitle=_podcastTitle;
 @property(copy, nonatomic) NSString *longDescription; // @synthesize longDescription=_longDescription;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToPodcastEntity:(id)arg1;

@@ -44,6 +44,7 @@
     NSLayoutConstraint *_playButtonBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *playButtonBottomConstraint; // @synthesize playButtonBottomConstraint=_playButtonBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *statusLabelTopConstraint; // @synthesize statusLabelTopConstraint=_statusLabelTopConstraint;
 @property(retain, nonatomic) UILabel *statusLabelV2; // @synthesize statusLabelV2=_statusLabelV2;
@@ -73,7 +74,6 @@
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILabel *statusLabel; // @synthesize statusLabel=_statusLabel;
-- (void).cxx_destruct;
 - (double)progressViewHeight;
 - (_Bool)shouldShowProgressView;
 - (void)applyStateStyle:(id)arg1;

@@ -14,10 +14,10 @@
     shared_ptr_c81f7823 _mftCanPlayChecker;
 }
 
-@property(nonatomic) shared_ptr_c81f7823 mftCanPlayChecker; // @synthesize mftCanPlayChecker=_mftCanPlayChecker;
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) shared_ptr_c81f7823 mftCanPlayChecker; // @synthesize mftCanPlayChecker=_mftCanPlayChecker;
+@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id)initWithMftCanPlayChecker:(shared_ptr_c81f7823)arg1 scheduler:(id)arg2;
 
 @end

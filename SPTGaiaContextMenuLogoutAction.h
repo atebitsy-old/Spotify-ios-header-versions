@@ -20,10 +20,10 @@
 
 + (id)featureIdentifier;
 + (id)featureTitle;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) SPTGaiaConnectDevice *connectDevice; // @synthesize connectDevice=_connectDevice;
 @property(nonatomic) __weak id <SPTGaiaContextMenuActionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool supportsAutomaticFiltering;
 - (id)accessoryView;
 - (void)logPerformAction;

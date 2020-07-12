@@ -20,12 +20,12 @@
     id <SPTInstrumentationPageStream> _pageStream;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTInstrumentationPageStream> pageStream; // @synthesize pageStream=_pageStream;
 @property(retain, nonatomic) SPTInstrumentationInteractionItemIDGenerator *itemIDGenerator; // @synthesize itemIDGenerator=_itemIDGenerator;
 @property(retain, nonatomic) id <SPTInstrumentationInteractionIDProvider> interactionIDProvider; // @synthesize interactionIDProvider=_interactionIDProvider;
 @property(retain, nonatomic) NSHashTable *colleagues; // @synthesize colleagues=_colleagues;
 @property(retain, nonatomic) id <SPTInstrumentationInteractionLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (_Bool)shouldProcessEvent:(id)arg1;
 - (void)addPageViewInformationToBuilder:(id)arg1 withInteractionInformation:(id)arg2;
 - (id)createDataBuilderWithDefaultsWithInformation:(id)arg1;

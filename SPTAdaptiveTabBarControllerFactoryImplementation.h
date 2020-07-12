@@ -20,15 +20,15 @@
     id <SPTNavigationRouter> _navigationRouter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) id <SPTNavigationConfiguration> navigationConfiguration; // @synthesize navigationConfiguration=_navigationConfiguration;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, copy, nonatomic) NSString *friendlyName; // @synthesize friendlyName=_friendlyName;
-- (void).cxx_destruct;
-- (id)createSideBarControllerWithTabBarController:(struct UIViewController *)arg1 logCenter:(id)arg2 nowPlayingSideBar:(id)arg3;
-- (id)createTabBarContainerWithTabBarController:(struct UIViewController *)arg1 logCenter:(id)arg2;
-- (struct UIViewController *)createTabBarControllerWithLogCenter:(id)arg1;
+- (id)createSideBarControllerWithTabBarController:(id)arg1 logCenter:(id)arg2 nowPlayingSideBar:(id)arg3;
+- (id)createTabBarContainerWithTabBarController:(id)arg1 logCenter:(id)arg2;
+- (id)createTabBarControllerWithLogCenter:(id)arg1;
 - (id)initWithFriendlyName:(id)arg1 theme:(id)arg2 navigationConfiguration:(id)arg3 metaViewController:(id)arg4 navigationRouter:(id)arg5;
 
 // Remaining properties

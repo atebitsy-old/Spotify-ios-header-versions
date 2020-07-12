@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAccessoryActionLoggerImplementation *actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(readonly, nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
-- (void).cxx_destruct;
 - (id)provideAccessoryActionLogger;
 - (void)unload;
 - (void)load;

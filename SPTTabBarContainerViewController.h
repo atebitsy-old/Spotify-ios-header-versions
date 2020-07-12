@@ -13,17 +13,17 @@
 
 @interface SPTTabBarContainerViewController : UIViewController <SPTTabBarContainer>
 {
-    struct UIViewController *_tabBarController;
+    UIViewController<SPTTabBarControllerProtocol><SPContentInsetViewController> *_tabBarController;
     SPTTabBarContainerLayout *_containerLayout;
     SPTTheme *_theme;
     SPTStatusBarToken *_statusBarToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTTabBarContainerLayout *containerLayout; // @synthesize containerLayout=_containerLayout;
 @property(readonly, nonatomic) UIViewController<SPTTabBarControllerProtocol><SPContentInsetViewController> *tabBarController; // @synthesize tabBarController=_tabBarController;
-- (void).cxx_destruct;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)updateCurrentTabBarItems;
 @property(copy, nonatomic) CDUnknownBlockType visibleStateCallback;
@@ -41,7 +41,7 @@
 - (void)addFixedConstraints;
 - (void)setupViews;
 - (void)viewDidLoad;
-- (id)initWithTabBarController:(struct UIViewController *)arg1 theme:(id)arg2;
+- (id)initWithTabBarController:(id)arg1 theme:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

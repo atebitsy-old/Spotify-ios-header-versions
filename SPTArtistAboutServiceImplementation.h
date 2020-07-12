@@ -28,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTArtistAboutModerationRegistrar *moderationRegistrar; // @synthesize moderationRegistrar=_moderationRegistrar;
 @property(retain, nonatomic) SPTArtistAboutHubComponentFactoryImplementation *hubComponentFactory; // @synthesize hubComponentFactory=_hubComponentFactory;
 @property(retain, nonatomic) SPTArtistAboutGLUETheme *glueTheme; // @synthesize glueTheme=_glueTheme;
@@ -40,7 +41,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideArtistAboutViewController:(id)arg1;
 - (id)provideHubComponentFactory;
 - (void)load;

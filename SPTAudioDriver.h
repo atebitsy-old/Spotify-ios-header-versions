@@ -17,10 +17,10 @@
     NSPointerArray *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSPointerArray *observers; // @synthesize observers=_observers;
 @property(nonatomic) struct IOSAudioDriver *iosAudioDriver; // @synthesize iosAudioDriver=_iosAudioDriver;
 @property(retain) NSObject *audioDriverMutex; // @synthesize audioDriverMutex=_audioDriverMutex;
-- (void).cxx_destruct;
 - (void)audioSessionMediaServicesWereResetNotification:(id)arg1;
 - (void)audioDriverDidReset:(struct IOSAudioDriver *)arg1;
 - (void)audioDriverWillStartRunning:(struct IOSAudioDriver *)arg1;

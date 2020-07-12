@@ -18,12 +18,12 @@
 }
 
 + (id)defaultController;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *activeLockTokens; // @synthesize activeLockTokens=_activeLockTokens;
 @property(nonatomic) unsigned long long forcedScreenLockers; // @synthesize forcedScreenLockers=_forcedScreenLockers;
 @property(nonatomic) unsigned long long screenLockers; // @synthesize screenLockers=_screenLockers;
 @property(nonatomic) __weak UIDevice *device; // @synthesize device=_device;
 @property(nonatomic) __weak UIApplication *application; // @synthesize application=_application;
-- (void).cxx_destruct;
 - (void)enableIdleTimer;
 - (void)disableIdleTimer;
 - (id)tokenReasonsMatchingPredicate:(CDUnknownBlockType)arg1;

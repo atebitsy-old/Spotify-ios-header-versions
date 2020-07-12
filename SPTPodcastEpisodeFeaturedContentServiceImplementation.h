@@ -31,6 +31,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentContentOperationFactory *contentOperationFactory; // @synthesize contentOperationFactory=_contentOperationFactory;
 @property(retain, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFeaturedContentTestManager> testManager; // @synthesize testManager=_testManager;
@@ -46,7 +47,6 @@
 @property(nonatomic) __weak id <_TtP29EpisodeSegmentsFetcherFeature32SPTEpisodeSegmentsFetcherService_> episodeSegmentsFetcherService; // @synthesize episodeSegmentsFetcherService=_episodeSegmentsFetcherService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (id)provideSubtitleDecoratorContentOperation;

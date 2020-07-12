@@ -19,8 +19,8 @@
 + (id)albumWithURI:(id)arg1 albumName:(id)arg2 artistName:(id)arg3 albumImageURI:(id)arg4;
 + (id)artistWithName:(id)arg1 URI:(id)arg2 imageURL:(id)arg3 hasAffinity:(_Bool)arg4;
 + (id)createMockEntity;
-@property(nonatomic) __weak id <SPTConcertsEntityResolverDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTConcertsEntityResolverDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)resolveConcertEntityForURI:(id)arg1;
 
 // Remaining properties

@@ -14,9 +14,9 @@
     SPTAuthUserInfo *_userInfo;
 }
 
-@property(retain, nonatomic) SPTAuthUserInfo *userInfo; // @synthesize userInfo=_userInfo;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTAuthUserInfo *userInfo; // @synthesize userInfo=_userInfo;
 @property(readonly, nonatomic) NSString *identifierToken;
 - (const struct SignupInfo *)cpp;
 - (id)initWithSignupInfo:(struct SignupInfo *)arg1;

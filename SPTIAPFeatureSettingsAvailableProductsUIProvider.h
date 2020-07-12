@@ -16,8 +16,8 @@
     id <SPTIAPController> _iapController;
 }
 
-@property(retain, nonatomic) id <SPTIAPController> iapController; // @synthesize iapController=_iapController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTIAPController> iapController; // @synthesize iapController=_iapController;
 - (void)featureSettingsPresentation:(id)arg1 didSelectRow:(unsigned long long)arg2;
 - (id)featureSettingsPresentation:(id)arg1 cellForRow:(unsigned long long)arg2;
 - (unsigned long long)numberOfRowsForFeatureSettingsItem:(id)arg1;

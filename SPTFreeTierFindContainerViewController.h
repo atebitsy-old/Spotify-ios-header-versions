@@ -39,6 +39,7 @@
     struct CGRect _lastKnownFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGRect lastKnownFrame; // @synthesize lastKnownFrame=_lastKnownFrame;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) NSLayoutConstraint *mainContentGuideConstraint; // @synthesize mainContentGuideConstraint=_mainContentGuideConstraint;
@@ -54,7 +55,6 @@
 @property(readonly, nonatomic) UIViewController<SPTFreeTierFindViewController><SPTPageController> *findViewController; // @synthesize findViewController=_findViewController;
 @property(readonly, nonatomic) __weak UIViewController *topViewController; // @synthesize topViewController=_topViewController;
 @property(readonly, copy, nonatomic) NSArray *viewControllers; // @synthesize viewControllers=_viewControllers;
-- (void).cxx_destruct;
 - (void)searchControlsDidPressReturnKey:(id)arg1;
 - (void)searchControlsDidPressScannablesButton:(id)arg1;
 - (void)searchControlsDidPressCancelButton:(id)arg1;

@@ -17,11 +17,11 @@
     NSMutableDictionary *_loggedItems;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *loggedItems; // @synthesize loggedItems=_loggedItems;
 @property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
 @property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)unregisterForBackgroundNotifications;
 - (void)registerForBackgroundNotifications;
 - (void)dealloc;

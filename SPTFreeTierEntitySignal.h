@@ -13,8 +13,8 @@
     SPTObserverManager *_observerManager;
 }
 
-@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 - (void)addObserver:(id)arg1;
 - (id)init;
 

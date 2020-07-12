@@ -14,8 +14,8 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
-@property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 - (void)forwardInvocation:(id)arg1;
 - (id)initWithObservers:(id)arg1 protocol:(id)arg2 onQueue:(id)arg3;
 

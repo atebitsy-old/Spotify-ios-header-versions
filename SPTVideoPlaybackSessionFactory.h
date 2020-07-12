@@ -26,6 +26,7 @@
     id <SPTVideoMediaExtension> _spotifyVideoMediaExtension;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTVideoMediaExtension> spotifyVideoMediaExtension; // @synthesize spotifyVideoMediaExtension=_spotifyVideoMediaExtension;
 @property(retain, nonatomic) id <BMChunkCache> videoChunkCache; // @synthesize videoChunkCache=_videoChunkCache;
 @property(retain, nonatomic) id <BMDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) id <BMPlayerConfiguration> playerConfiguration; // @synthesize playerConfiguration=_playerConfiguration;
 @property(retain, nonatomic) SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
 @property(retain, nonatomic) SPTVideoCDNSelector *cdnSelector; // @synthesize cdnSelector=_cdnSelector;
-- (void).cxx_destruct;
 - (id)createSessionWithPlaybackIdentity:(id)arg1 options:(id)arg2 playerSource:(id)arg3;
 - (id)initWithCDNSelector:(id)arg1 connectionModeObservable:(id)arg2 playerConfiguration:(id)arg3 kvoControllerFactory:(id)arg4 notificationCenter:(id)arg5 videoPlaybackErrorFormatter:(id)arg6 playerSource:(id)arg7 appStateObservable:(id)arg8 avFactory:(id)arg9 eventObserverFactories:(id)arg10 dataLoader:(id)arg11 videoChunkCache:(id)arg12 spotifyVideoMediaExtension:(id)arg13;
 

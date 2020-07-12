@@ -28,6 +28,7 @@
     id <SPTBannerPresentationManager> _bannerPresentationManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) SPTNowPlayingEntityDecorationController *entityDecorationController; // @synthesize entityDecorationController=_entityDecorationController;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTVoiceSessionPresentationOptions *presentationOptions; // @synthesize presentationOptions=_presentationOptions;
 @property(readonly, nonatomic) id <SPTVoiceSessionFactory> voiceSessionFactory; // @synthesize voiceSessionFactory=_voiceSessionFactory;
-- (void).cxx_destruct;
 - (id)voiceSessionViewController;
 - (id)onboardingViewController;
 - (id)createViewController;

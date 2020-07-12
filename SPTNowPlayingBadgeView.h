@@ -19,11 +19,11 @@
     UILabel *_label;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *label; // @synthesize label=_label;
 @property(nonatomic) unsigned long long value; // @synthesize value=_value;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate;
-- (void).cxx_destruct;
 - (id)circleBezierPathWithRect:(struct CGRect)arg1;
 @property(readonly, nonatomic) UIBezierPath *maskPath;
 - (void)drawRect:(struct CGRect)arg1;

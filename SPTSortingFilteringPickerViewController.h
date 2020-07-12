@@ -27,6 +27,7 @@
     GLUEButton *_cancelButton;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool userPickedRule; // @synthesize userPickedRule=_userPickedRule;
 @property(retain, nonatomic) GLUEButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) SPTSortingFilteringGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTSortingFilteringViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTSortingFilteringPickerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)sortingFilteringViewModel:(id)arg1 deselectedFilterRule:(id)arg2 atIndexPath:(id)arg3;
 - (void)sortingFilteringViewModel:(id)arg1 selectedFilterRule:(id)arg2 atIndexPath:(id)arg3;
 - (void)sortingFilteringViewModel:(id)arg1 selectedSortRule:(id)arg2 atIndexPath:(id)arg3;

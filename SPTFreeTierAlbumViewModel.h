@@ -16,11 +16,11 @@
     NSURL *_albumURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *albumURL; // @synthesize albumURL=_albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, copy, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
 @property(readonly, copy, nonatomic) NSArray *albumTracks; // @synthesize albumTracks=_albumTracks;
-- (void).cxx_destruct;
 - (void)updateModelWithTracksURIs:(id)arg1 albumName:(id)arg2 artistName:(id)arg3;
 - (id)initWithAlbumURL:(id)arg1;
 

@@ -26,8 +26,8 @@
 - (void)handleChildComponentDeletionWithNotification:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)layoutSubviews;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;

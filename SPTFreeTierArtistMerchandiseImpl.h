@@ -16,8 +16,8 @@
     NSString *_details;
 }
 
-@property(copy, nonatomic) NSString *details; // @synthesize details=_details;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *details; // @synthesize details=_details;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

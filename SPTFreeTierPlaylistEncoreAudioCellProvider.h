@@ -22,13 +22,13 @@
     SPTFreeTierPlaylistLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTEncoreTrackRowFactory> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)unlikeWithSender:(id)arg1;
 - (void)unhideWithSender:(id)arg1;
 - (void)unbanWithSender:(id)arg1;
@@ -40,7 +40,7 @@
 - (double)heightForRowAtIndexPath:(id)arg1;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
-- (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)enableSwipeGesturesOnCell:(id)arg1 withTrackViewModel:(id)arg2 indexPath:(id)arg3;
 - (long long)encoreRestrictionForTrackViewModel:(id)arg1;
 - (id)encoreModelForTrackViewModel:(id)arg1 isPressed:(_Bool)arg2;

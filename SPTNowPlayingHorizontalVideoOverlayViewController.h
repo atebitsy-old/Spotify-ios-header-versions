@@ -17,12 +17,12 @@
     struct CGSize _viewSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGSize viewSize; // @synthesize viewSize=_viewSize;
 @property(readonly, nonatomic) SPTNowPlayingHorizontalVideoOverlayViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *widthConstraint; // @synthesize widthConstraint=_widthConstraint;
 @property(retain, nonatomic) SPTNowPlayingCarouselGradientView *gradientView; // @synthesize gradientView=_gradientView;
-- (void).cxx_destruct;
 - (void)accessoryButtonTapped:(id)arg1;
 - (void)setupFullScreenAccessoryButton;
 - (void)setupGradientView;

@@ -27,6 +27,7 @@
 }
 
 + (Class)tableViewClass;
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(retain, nonatomic) NSDictionary *pushedSubSection; // @synthesize pushedSubSection=_pushedSubSection;
 @property(copy, nonatomic) NSString *viewURI; // @synthesize viewURI=_viewURI;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(readonly, nonatomic) id <SPTPageCreationContext> pageCreationContext; // @synthesize pageCreationContext=_pageCreationContext;
 @property(retain, nonatomic) NSArray *sections; // @synthesize sections=_sections;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (id)getPushedSubSection;
 - (id)viewControllerForSection:(id)arg1 context:(id)arg2;

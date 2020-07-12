@@ -18,12 +18,12 @@
     NSString *_webAccessToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *webAccessToken; // @synthesize webAccessToken=_webAccessToken;
 @property(retain, nonatomic) SPTAccesspointWebTokenRequest *webAccessTokenRequest; // @synthesize webAccessTokenRequest=_webAccessTokenRequest;
 @property(nonatomic) __weak NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTResubModalURLManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)baseURLString;
 - (id)URLWithToken;
 - (_Bool)hasWebAccessToken;

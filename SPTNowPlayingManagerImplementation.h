@@ -30,6 +30,7 @@
     id <SPTAdsManager> _adsManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(retain, nonatomic) id <NSObject> barShownObserver; // @synthesize barShownObserver=_barShownObserver;
 @property(retain, nonatomic) id <NSObject> applicationActiveObserver; // @synthesize applicationActiveObserver=_applicationActiveObserver;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;

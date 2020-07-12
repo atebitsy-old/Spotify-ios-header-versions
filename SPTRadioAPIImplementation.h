@@ -15,8 +15,8 @@
     SPTRadioFormatListMapper *_mapper;
 }
 
-@property(retain, nonatomic) SPTRadioFormatListMapper *mapper; // @synthesize mapper=_mapper;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTRadioFormatListMapper *mapper; // @synthesize mapper=_mapper;
 - (void)retrieveFormatListURIForSeedTrackURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithFormatListMapper:(id)arg1;
 

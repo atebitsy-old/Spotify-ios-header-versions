@@ -21,6 +21,7 @@
     double _signupButtonBottomSpacing;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double signupButtonBottomSpacing; // @synthesize signupButtonBottomSpacing=_signupButtonBottomSpacing;
 @property(retain, nonatomic) NSLayoutConstraint *signupButtonTopMargin; // @synthesize signupButtonTopMargin=_signupButtonTopMargin;
 @property(retain, nonatomic) NSLayoutConstraint *loginButtonTopMargin; // @synthesize loginButtonTopMargin=_loginButtonTopMargin;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) GLUEButton *signupButton; // @synthesize signupButton=_signupButton;
 @property(readonly, nonatomic) GLUEButton *loginButton; // @synthesize loginButton=_loginButton;
 @property(readonly, nonatomic) GLUELabel *topTitleLabel; // @synthesize topTitleLabel=_topTitleLabel;
-- (void).cxx_destruct;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (double)topMargin;
 - (void)glue_applyStyle:(id)arg1;

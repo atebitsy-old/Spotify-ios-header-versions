@@ -20,10 +20,10 @@
     NSOperationQueue *_delegateQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSOperationQueue *delegateQueue; // @synthesize delegateQueue=_delegateQueue;
 @property(readonly, nonatomic) __weak id <NSURLSessionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSURLSessionConfiguration *configuration; // @synthesize configuration=_configuration;
-- (void).cxx_destruct;
 - (void)invalidateAndCancel;
 - (id)createWaitingSession;
 - (id)nonWaitingSession;

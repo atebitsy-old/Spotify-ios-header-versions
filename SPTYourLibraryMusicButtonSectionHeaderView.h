@@ -18,11 +18,11 @@
     NSLayoutConstraint *_buttonBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *buttonBottomConstraint; // @synthesize buttonBottomConstraint=_buttonBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *buttonTopConstraint; // @synthesize buttonTopConstraint=_buttonTopConstraint;
 @property(copy, nonatomic) SPTYourLibraryMusicButtonSectionHeaderViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUEButton *sectionHeaderButton; // @synthesize sectionHeaderButton=_sectionHeaderButton;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

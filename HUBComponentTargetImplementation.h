@@ -19,11 +19,11 @@
     NSDictionary *_customData;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *customData; // @synthesize customData=_customData;
 @property(readonly, nonatomic) NSArray *actionIdentifiers; // @synthesize actionIdentifiers=_actionIdentifiers;
 @property(readonly, nonatomic) id <HUBViewModel> initialViewModel; // @synthesize initialViewModel=_initialViewModel;
 @property(readonly, copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
-- (void).cxx_destruct;
 - (id)serializeActionIdentifiers;
 - (id)serialize;
 - (id)initWithURI:(id)arg1 initialViewModel:(id)arg2 actionIdentifiers:(id)arg3 customData:(id)arg4;

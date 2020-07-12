@@ -16,9 +16,9 @@
     NSMapTable *_instanceMappingMap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *instanceMappingMap; // @synthesize instanceMappingMap=_instanceMappingMap;
 @property(retain, nonatomic) NSMapTable *classMappingMap; // @synthesize classMappingMap=_classMappingMap;
-- (void).cxx_destruct;
 - (id)keyForInformation:(id)arg1;
 - (id)executeMappingForView:(id)arg1;
 - (void)setMappingBlock:(CDUnknownBlockType)arg1 forView:(id)arg2;

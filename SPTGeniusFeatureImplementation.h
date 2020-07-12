@@ -27,6 +27,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGeniusScrollProvider *scrollProvider; // @synthesize scrollProvider=_scrollProvider;
 @property(retain, nonatomic) SPTGeniusService *geniusService; // @synthesize geniusService=_geniusService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (void)unregisterScrollProvider;
 - (void)registerScrollProvider;
 - (void)registerFeatureSettingsPage;

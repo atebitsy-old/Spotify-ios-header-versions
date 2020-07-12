@@ -26,6 +26,7 @@
 
 + (id)shuffleBadgeForHeaderSmall;
 + (id)shuffleBadge;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *strokeHeightConstraint; // @synthesize strokeHeightConstraint=_strokeHeightConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *strokeWidthConstraint; // @synthesize strokeWidthConstraint=_strokeWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *iconBackgroundViewTrailingEdgeConstraint; // @synthesize iconBackgroundViewTrailingEdgeConstraint=_iconBackgroundViewTrailingEdgeConstraint;
@@ -38,7 +39,6 @@
 @property(copy, nonatomic) GLUEShuffleBadgeLabelViewStateStyle *currentStyle; // @synthesize currentStyle=_currentStyle;
 @property(readonly, nonatomic) long long icon; // @synthesize icon=_icon;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (void)updateAccessibility;
 - (double)badgeRadius;
 - (double)iconLabelSpacing;

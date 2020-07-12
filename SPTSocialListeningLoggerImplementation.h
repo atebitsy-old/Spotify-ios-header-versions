@@ -19,11 +19,11 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTUBIMobileSocialListeningParticipantsEventFactory> participantsEventFactory; // @synthesize participantsEventFactory=_participantsEventFactory;
 @property(retain, nonatomic) id <SPTUBIMobileSocialListeningEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIImpressionWithSectionId:(id)arg1 index:(long long)arg2 renderType:(id)arg3;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5 action:(id)arg6;
 - (void)logJoinFromDeepLinkWithURL:(id)arg1;

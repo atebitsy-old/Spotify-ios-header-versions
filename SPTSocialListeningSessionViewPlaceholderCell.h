@@ -19,12 +19,12 @@
     SPTSocialListeningSessionViewPlaceholderCellStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSocialListeningSessionViewPlaceholderCellStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) NSLayoutConstraint *leadingConstraint; // @synthesize leadingConstraint=_leadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *widthConstraint; // @synthesize widthConstraint=_widthConstraint;
 @property(retain, nonatomic) UIView *placeholderView; // @synthesize placeholderView=_placeholderView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addViewConstraints;
 - (void)setupPlaceholderView;

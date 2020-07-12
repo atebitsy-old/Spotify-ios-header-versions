@@ -13,8 +13,8 @@
     NSString *_oneTimeLoginToken;
 }
 
-@property(readonly, nonatomic) NSString *oneTimeLoginToken; // @synthesize oneTimeLoginToken=_oneTimeLoginToken;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *oneTimeLoginToken; // @synthesize oneTimeLoginToken=_oneTimeLoginToken;
 - (id)initWithResponseDictionary:(id)arg1;
 
 @end

@@ -19,11 +19,11 @@
     id <BMDataLoader> _dataLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <BMDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTVideoEventDispatcher> eventDispatcher; // @synthesize eventDispatcher=_eventDispatcher;
 @property(retain, nonatomic) AVAssetResourceLoadingRequest *request; // @synthesize request=_request;
 @property(retain, nonatomic) NSURL *url; // @synthesize url=_url;
-- (void).cxx_destruct;
 - (void)hlsDataManifestRequest;
 - (_Bool)start;
 - (id)initWithURL:(id)arg1 resourceLoadingRequest:(id)arg2 eventDispatcher:(id)arg3 dataLoader:(id)arg4;

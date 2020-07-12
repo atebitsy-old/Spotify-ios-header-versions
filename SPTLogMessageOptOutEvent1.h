@@ -17,11 +17,11 @@
 }
 
 + (id)messageWithEvent:(id)arg1 reason:(id)arg2 artist:(id)arg3 lineitemId:(id)arg4;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *lineitemIdValue; // @synthesize lineitemIdValue=_lineitemIdValue;
 @property(copy, nonatomic) NSString *artistValue; // @synthesize artistValue=_artistValue;
 @property(copy, nonatomic) NSString *reasonValue; // @synthesize reasonValue=_reasonValue;
 @property(copy, nonatomic) NSString *eventValue; // @synthesize eventValue=_eventValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

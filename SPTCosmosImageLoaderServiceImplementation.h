@@ -21,11 +21,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSpotifyImageRequestFactory *spotifyImageRequestFactory; // @synthesize spotifyImageRequestFactory=_spotifyImageRequestFactory;
 @property(nonatomic) __weak id <SPTImageResolveService> imageResolveService; // @synthesize imageResolveService=_imageResolveService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
-- (void).cxx_destruct;
 - (void)registerCosmosImageRequestFactory;
 - (void)registerLegacySpotifyImageRequestFactoryWithProductState:(id)arg1;
 - (void)load;

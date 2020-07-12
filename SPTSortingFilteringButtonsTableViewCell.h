@@ -22,6 +22,7 @@
     NSLayoutConstraint *_bottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *trailingConstraint; // @synthesize trailingConstraint=_trailingConstraint;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) UIView<SPTSortingFilteringButtonsContainer> *buttonsContainer; // @synthesize buttonsContainer=_buttonsContainer;
 @property(retain, nonatomic) id <SPTSortingFilteringButtonsCellStyle> style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)glue_applyStyle:(id)arg1;
 - (id)initWithButtonsContainer:(id)arg1 style:(id)arg2;

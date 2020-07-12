@@ -29,6 +29,7 @@
 
 + (id)entityRowStyleForURI:(id)arg1 usingTheme:(id)arg2;
 + (id)entityRowViewForEntityURI:(id)arg1 usingTheme:(id)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIImage *image; // @synthesize image=_image;
 @property(retain, nonatomic) NSLayoutConstraint *tertiaryToTitleConstraint; // @synthesize tertiaryToTitleConstraint=_tertiaryToTitleConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *tertiaryToSubtitleConstraint; // @synthesize tertiaryToSubtitleConstraint=_tertiaryToSubtitleConstraint;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) GLUELabel *tertiaryLabel; // @synthesize tertiaryLabel=_tertiaryLabel;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (id)stringStartingWithString:(id)arg1 stringToAppend:(id)arg2;
 - (id)accessibilityLabel;
 - (void)prepareForReuse;

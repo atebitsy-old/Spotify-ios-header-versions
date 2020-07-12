@@ -16,9 +16,9 @@
     GLUELabel *_captionLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabel *captionLabel; // @synthesize captionLabel=_captionLabel;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateCaptionWithName:(id)arg1;
 - (void)updateAvatar:(id)arg1 name:(id)arg2;

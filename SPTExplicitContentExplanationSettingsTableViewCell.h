@@ -14,9 +14,9 @@
     GLUETrackAccessoryLabelStyle *_explicitLabelStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUETrackAccessoryLabelStyle *explicitLabelStyle; // @synthesize explicitLabelStyle=_explicitLabelStyle;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (id)explanationStringWithFormat:(id)arg1 explicitLabelString:(id)arg2;
 - (id)attributedStringOfExplicitLabel:(id)arg1;
 - (id)explanationFormat;

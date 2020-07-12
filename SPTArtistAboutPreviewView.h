@@ -24,6 +24,7 @@
     SPTDisclosureAccessoryView *_disclosureView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDisclosureAccessoryView *disclosureView; // @synthesize disclosureView=_disclosureView;
 @property(retain, nonatomic) NSLayoutConstraint *disclosureViewCenterYMonthlyListenersConstraint; // @synthesize disclosureViewCenterYMonthlyListenersConstraint=_disclosureViewCenterYMonthlyListenersConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *disclosureViewCenterYBiographyLabelConstraint; // @synthesize disclosureViewCenterYBiographyLabelConstraint=_disclosureViewCenterYBiographyLabelConstraint;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) NSString *biography; // @synthesize biography=_biography;
 @property(readonly, nonatomic) __weak SPTArtistAboutGlobalChartPositionView *globalChartPositionView; // @synthesize globalChartPositionView=_globalChartPositionView;
 @property(readonly, nonatomic) SPTArtistAboutMonthlyListenersView *monthlyListenersView; // @synthesize monthlyListenersView=_monthlyListenersView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addViewConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

@@ -36,6 +36,7 @@
     NSString *_previewID;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isBanned) _Bool banned; // @synthesize banned=_banned;
 @property(nonatomic, getter=isInCollection) _Bool inCollection; // @synthesize inCollection=_inCollection;
 @property(nonatomic, getter=isLocallyPlayable) _Bool locallyPlayable; // @synthesize locallyPlayable=_locallyPlayable;
@@ -58,7 +59,6 @@
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSDictionary *formatListAttributes; // @synthesize formatListAttributes=_formatListAttributes;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

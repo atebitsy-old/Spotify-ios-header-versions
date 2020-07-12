@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationLogger, SPTPremiumDestinationSettingsPageBuilder, SPTPremiumDestinationTabBarBadgeController, SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater, SPTUpsellAccountLogger;
+@class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationLogger, SPTPremiumDestinationSettingsPageBuilder, SPTPremiumDestinationTabBarBadgeController, SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater;
 @protocol NSObject, SPTAccountService, SPTContainerUIService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLogCenter, SPTMandatoryPremiumTrialService, SPTNavigationFeature, SPTNavigationListProvider, SPTNetworkService, SPTPremiumDestinationExperiments, SPTPremiumDestinationUIService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTPremiumDestinationService : SPTUIPageService
@@ -26,7 +26,6 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTPremiumDestinationUIService> _premiumDestinationUIService;
     id <SPTLogCenter> _logCenter;
-    SPTUpsellAccountLogger *_accountLogger;
     SPTPremiumDestinationLogger *_premiumDestinationLogger;
     id <SPTUBIService> _ubiService;
     id <SPTFeatureFlagSignal> _freeTierFeatureFlagSignal;
@@ -43,6 +42,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <NSObject> clearPersistentCacheOnLogoutToken; // @synthesize clearPersistentCacheOnLogoutToken=_clearPersistentCacheOnLogoutToken;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(retain, nonatomic) SPTPremiumDestinationSettingsPageBuilder *settingsPageFactory; // @synthesize settingsPageFactory=_settingsPageFactory;
@@ -57,7 +57,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierFeatureFlagSignal; // @synthesize freeTierFeatureFlagSignal=_freeTierFeatureFlagSignal;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(retain, nonatomic) SPTPremiumDestinationLogger *premiumDestinationLogger; // @synthesize premiumDestinationLogger=_premiumDestinationLogger;
-@property(retain, nonatomic) SPTUpsellAccountLogger *accountLogger; // @synthesize accountLogger=_accountLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(nonatomic) __weak id <SPTPremiumDestinationUIService> premiumDestinationUIService; // @synthesize premiumDestinationUIService=_premiumDestinationUIService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
@@ -72,7 +71,6 @@
 @property(nonatomic) __weak id <SPTNavigationFeature> navigationService; // @synthesize navigationService=_navigationService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAccountService> accountService; // @synthesize accountService=_accountService;
-- (void).cxx_destruct;
 - (id)provideTabBarBadgeDataLoader;
 - (id)provideNavigationItemDecorator;
 - (id)providePremiumDestinationGLUETheme;
@@ -86,7 +84,6 @@
 - (_Bool)claimsURI:(id)arg1;
 - (void)loadHubManager;
 - (void)loadSettingsPage;
-- (void)loadNavigationListProviders;
 - (void)loadExperiments;
 - (void)loadFreeTierFeatureFlagSignal;
 - (void)loadLoggers;

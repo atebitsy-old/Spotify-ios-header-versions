@@ -26,11 +26,11 @@
 
 + (double)spacingForBoundsSize:(struct CGSize)arg1 theme:(id)arg2;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2 model:(id)arg3 childSizingDelegate:(id)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTHomeUICarouselChildSizingDelegate> childSizingDelegate; // @synthesize childSizingDelegate=_childSizingDelegate;
 @property(readonly, nonatomic) SPTHomeUICarouselLayout *layout; // @synthesize layout=_layout;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
-- (void).cxx_destruct;
 - (double)clamp:(double)arg1 min:(double)arg2 max:(double)arg3;
 - (double)spacing;
 - (double)carouselLayoutTrailingSpace:(id)arg1;
@@ -44,8 +44,8 @@
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
 @property(nonatomic) __weak id <UICollectionViewDragDelegate> dragDelegate;
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;

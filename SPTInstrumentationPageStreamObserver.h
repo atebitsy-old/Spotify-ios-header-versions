@@ -17,11 +17,11 @@
     id <SPTInstrumentationServiceMessagingHandler> _messagingHandler;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTInstrumentationServiceMessagingHandler> messagingHandler; // @synthesize messagingHandler=_messagingHandler;
 @property(retain, nonatomic) SPTInstrumentationPageView *latestPageView; // @synthesize latestPageView=_latestPageView;
 @property(readonly, nonatomic) id <SPTInstrumentationPageViewLogger> pageViewLogger; // @synthesize pageViewLogger=_pageViewLogger;
 @property(readonly, nonatomic) id <SPTInstrumentationPageStream> pageStream; // @synthesize pageStream=_pageStream;
-- (void).cxx_destruct;
 - (void)verifyPermittedPageViewForIdentifier:(id)arg1 pageName:(id)arg2;
 - (void)pageViewDidResolveWithPageView:(id)arg1 withPageIdentifier:(id)arg2 pageURI:(id)arg3 pageName:(id)arg4 entryTimestamp:(long long)arg5 navigationRootIdentifier:(id)arg6;
 - (void)currentPageViewDidChange;

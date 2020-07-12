@@ -17,9 +17,9 @@
     CDUnknownBlockType _contextAwareURIBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType contextAwareURIBlock; // @synthesize contextAwareURIBlock=_contextAwareURIBlock;
 @property(retain, nonatomic) id <SPTPodcastEntityDataLoader> entityDataLoader; // @synthesize entityDataLoader=_entityDataLoader;
-- (void).cxx_destruct;
 - (void)resolveDefaultContextForURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (void)lookupShowURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (_Bool)typeManagerRecognizesURI:(id)arg1;

@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTFreeTierUIService> freeTierUIService; // @synthesize freeTierUIService=_freeTierUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(retain, nonatomic) SPTFreeTierTooltipPresenterImplementation *presenter; // @synthesize presenter=_presenter;
-- (void).cxx_destruct;
 - (id)provideTooltipPresenterForViewURI:(id)arg1;
 - (id)provideTooltipPresenter;
 - (void)unload;

@@ -19,10 +19,10 @@
     long long _isInTrialState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long isInTrialState; // @synthesize isInTrialState=_isInTrialState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> inTrialSignal; // @synthesize inTrialSignal=_inTrialSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (_Bool)isFeatureEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupInTrialSignal;

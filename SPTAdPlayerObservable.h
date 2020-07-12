@@ -21,13 +21,13 @@
     _TtC19SPTAdsNowPlayingKit20SPTAdNowPlayingTrack *_currentTrack;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool active; // @synthesize active=_active;
 @property(retain, nonatomic) _TtC19SPTAdsNowPlayingKit20SPTAdNowPlayingTrack *currentTrack; // @synthesize currentTrack=_currentTrack;
 @property(retain, nonatomic) CADisplayLink *displayLink; // @synthesize displayLink=_displayLink;
 @property(readonly, nonatomic) id <SPTComScoreAnalyticsManager> comScoreAnalyticsManager; // @synthesize comScoreAnalyticsManager=_comScoreAnalyticsManager;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (void)setupDisplayLink;
 - (void)onDisplayLink:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

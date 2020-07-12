@@ -29,6 +29,7 @@
     UIImage *_badgeHornsImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *badgeHornsImage; // @synthesize badgeHornsImage=_badgeHornsImage;
 @property(retain, nonatomic) UIImage *badgeCheckmarkImage; // @synthesize badgeCheckmarkImage=_badgeCheckmarkImage;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingGenreCellStyle<GLUEStyle> *genreCellStyle; // @synthesize genreCellStyle=_genreCellStyle;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistPickerViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak SPTFreeTierTasteOnboardingArtistPickerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistPickerDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)selectItem:(id)arg1 inCollectionView:(id)arg2 atIndexPath:(id)arg3;
 - (void)selectCellInCollectionView:(id)arg1 atIndexPath:(id)arg2;
 - (void)scrollViewDidScroll:(id)arg1;

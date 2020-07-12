@@ -22,13 +22,13 @@
     UIViewController *_tabViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController *tabViewController; // @synthesize tabViewController=_tabViewController;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingNavigationBarModel> model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTNowPlayingNavigationBarUnitManagerImplementation *navigationBarUnitManager; // @synthesize navigationBarUnitManager=_navigationBarUnitManager;
-- (void).cxx_destruct;
 - (void)rightButtonPressed:(id)arg1;
 - (void)navigationBarModelStateDidChange:(id)arg1;
 - (double)viewControllerPriority;

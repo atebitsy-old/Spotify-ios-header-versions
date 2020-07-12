@@ -21,12 +21,12 @@
     SPTSearchKitViewModel *_viewModel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTSearchKitViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 @property(readonly, nonatomic) id <SPTSearchKitViewModelProvider> resultsVMP; // @synthesize resultsVMP=_resultsVMP;
 @property(readonly, nonatomic) id <SPTSearchKitViewModelProvider> initialVMP; // @synthesize initialVMP=_initialVMP;
 @property(nonatomic) __weak id <SPTSearchKitViewModelProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateViewModel;
 - (void)viewModelProvider:(id)arg1 didUpdateFromViewModel:(id)arg2;
 - (id)initWithInitialViewModelProvider:(id)arg1 resultsViewModelProvider:(id)arg2;

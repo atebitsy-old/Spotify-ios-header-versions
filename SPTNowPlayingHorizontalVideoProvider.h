@@ -20,12 +20,12 @@
     id <SPTNowPlayingVideoManager> _nowPlayingVideoManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTNowPlayingVideoManager> nowPlayingVideoManager; // @synthesize nowPlayingVideoManager=_nowPlayingVideoManager;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) BMVideoSurfaceFactory *surfaceFactory; // @synthesize surfaceFactory=_surfaceFactory;
 @property(readonly, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)didSelectCell:(id)arg1 withProvider:(id)arg2 withTrack:(id)arg3 containerViewController:(id)arg4;
 - (void)didEndDisplayingCell:(id)arg1 withTrack:(id)arg2 containerViewController:(id)arg3;
 - (void)willDisplayCell:(id)arg1 withTrack:(id)arg2 containerViewController:(id)arg3;

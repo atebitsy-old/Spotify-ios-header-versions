@@ -18,10 +18,10 @@
     id <SPTExternalLinkController> _externalLinkController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTExternalLinkController> externalLinkController; // @synthesize externalLinkController=_externalLinkController;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
-- (void).cxx_destruct;
 - (void)didChangeRootViewOfMetaViewController:(id)arg1;
 - (void)willLogOut:(id)arg1;
 - (_Bool)loggedInForURIDispatchPurposes;

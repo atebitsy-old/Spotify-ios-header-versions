@@ -35,6 +35,7 @@
     SPTAdPlayerObservable *_observer;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool noOfferCardMessageVisible; // @synthesize noOfferCardMessageVisible=_noOfferCardMessageVisible;
 @property(nonatomic) _Bool verticalVideo; // @synthesize verticalVideo=_verticalVideo;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observer; // @synthesize observer=_observer;
@@ -53,7 +54,6 @@
 @property(readonly, nonatomic) GLUELabel *footerLabel; // @synthesize footerLabel=_footerLabel;
 @property(nonatomic) __weak id <SPTNowPlayingVideoControlsVisibilityDelegate> visibilityDelegate; // @synthesize visibilityDelegate=_visibilityDelegate;
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container; // @synthesize container;
-- (void).cxx_destruct;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (void)adPlayerDisplayLinkFiredWithTrack:(id)arg1;
 - (void)didTapVideoView:(id)arg1;

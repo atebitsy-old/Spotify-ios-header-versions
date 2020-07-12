@@ -16,8 +16,8 @@
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
 }
 
-@property(readonly, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 - (_Bool)presentContextMenuForItemAtIndexPath:(id)arg1 itemsViewModel:(id)arg2 sender:(id)arg3 viewController:(id)arg4;
 - (id)initWithContextMenuProvider:(id)arg1;
 

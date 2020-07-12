@@ -15,9 +15,9 @@
     id <SPTNotificationCenter> _notificationCenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNotificationCenter> notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 - (void)playerItemNewAccessLogEntry:(id)arg1;
 - (void)playerItemNewErrorLogEntry:(id)arg1;
 - (void)playerItemFailedToPlayToEndTime:(id)arg1;

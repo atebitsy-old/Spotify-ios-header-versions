@@ -23,6 +23,7 @@
     NSString *_sponsorshipCreativeId;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *sponsorshipCreativeId; // @synthesize sponsorshipCreativeId=_sponsorshipCreativeId;
 @property(retain, nonatomic) NSString *sponsorshipLineItemId; // @synthesize sponsorshipLineItemId=_sponsorshipLineItemId;
 @property(retain, nonatomic) NSURL *sponsorshipImpressionURL; // @synthesize sponsorshipImpressionURL=_sponsorshipImpressionURL;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) NSURL *sponsoredContextURL; // @synthesize sponsoredContextURL=_sponsoredContextURL;
 @property(retain, nonatomic) NSDate *endDate; // @synthesize endDate=_endDate;
 @property(retain, nonatomic) NSDate *startDate; // @synthesize startDate=_startDate;
-- (void).cxx_destruct;
 - (id)selectJsonStringFromHTMLArray:(id)arg1;
 - (id)parseJsonFromDictionary:(id)arg1;
 - (void)populateSponsorshipData:(id)arg1;

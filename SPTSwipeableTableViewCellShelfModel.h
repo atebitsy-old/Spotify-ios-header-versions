@@ -16,11 +16,11 @@
     NSString *_accessibilityLabel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *accessibilityLabel; // @synthesize accessibilityLabel=_accessibilityLabel;
 @property(copy, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(copy, nonatomic) NSURL *trackURL; // @synthesize trackURL=_trackURL;
 @property(nonatomic) long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)initWithType:(long long)arg1;
 
 @end

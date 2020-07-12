@@ -15,8 +15,8 @@
     SPTPremiumDestinationUIGLUETheme *_theme;
 }
 
-@property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
 - (id)createViewWithFrame:(struct CGRect)arg1;

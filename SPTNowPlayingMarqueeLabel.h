@@ -23,6 +23,7 @@
     struct CGPoint _centerAnchorPoint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <NSObject> foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(nonatomic) struct CGPoint centerAnchorPoint; // @synthesize centerAnchorPoint=_centerAnchorPoint;
 @property(nonatomic) struct CGPoint trailingAnchorPoint; // @synthesize trailingAnchorPoint=_trailingAnchorPoint;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) SPTNowPlayingFadeMaskView *fadeMaskView; // @synthesize fadeMaskView=_fadeMaskView;
 @property(nonatomic, getter=isMarqueeingEnabled) _Bool marqueeingEnabled; // @synthesize marqueeingEnabled=_marqueeingEnabled;
 @property(retain, nonatomic) UILabel *label; // @synthesize label=_label;
-- (void).cxx_destruct;
 - (void)setHighlighted:(_Bool)arg1;
 - (unsigned long long)accessibilityTraits;
 - (id)accessibilityLabel;

@@ -20,12 +20,12 @@
     NSLayoutConstraint *_subtitleHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleHeightConstraint; // @synthesize subtitleHeightConstraint=_subtitleHeightConstraint;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(copy, nonatomic) GLUECardDetailsStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (struct CGSize)labelSizeForText:(id)arg1 label:(id)arg2;
 - (void)glue_applyStyle:(id)arg1;

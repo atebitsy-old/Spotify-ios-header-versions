@@ -18,12 +18,12 @@
     NSMutableSet *_internalSelectedFilterRules;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *internalSelectedFilterRules; // @synthesize internalSelectedFilterRules=_internalSelectedFilterRules;
 @property(copy, nonatomic) NSArray *availableSortRules; // @synthesize availableSortRules=_availableSortRules;
 @property(copy, nonatomic) NSArray *availableFilterRules; // @synthesize availableFilterRules=_availableFilterRules;
 @property(retain, nonatomic) id <SPTSortingFilteringSortRule> selectedSortRule; // @synthesize selectedSortRule=_selectedSortRule;
 @property(nonatomic) __weak id <SPTSortingFilteringViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (unsigned long long)sectionTypeForSectionIndex:(unsigned long long)arg1;
 - (void)selectedItemAtIndexPath:(id)arg1;
 - (_Bool)isItemSelectedAtIndexPath:(id)arg1;

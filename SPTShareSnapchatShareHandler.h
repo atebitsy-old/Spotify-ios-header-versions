@@ -27,6 +27,7 @@
     SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) NSString *utmCampaign; // @synthesize utmCampaign=_utmCampaign;
 @property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
 @property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
-- (void).cxx_destruct;
 - (id)createAlertModel;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

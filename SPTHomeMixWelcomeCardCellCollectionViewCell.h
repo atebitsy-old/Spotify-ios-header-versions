@@ -14,9 +14,9 @@
     SPTHomeMixMemberPileContainerView *_facePilesContainerView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeMixMemberPileContainerView *facePilesContainerView; // @synthesize facePilesContainerView=_facePilesContainerView;
 @property(readonly, nonatomic) GLUELabel *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)setupConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

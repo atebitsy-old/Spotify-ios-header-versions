@@ -17,9 +17,9 @@
 }
 
 + (id)sharedPermissions;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDefaultPopupPermissionManager *defaultPermissionManager; // @synthesize defaultPermissionManager=_defaultPermissionManager;
 @property(retain, nonatomic) NSHashTable *permissionManagers; // @synthesize permissionManagers=_permissionManagers;
-- (void).cxx_destruct;
 - (_Bool)popupsPermitted;
 - (void)removePermissionManager:(id)arg1;
 - (void)addPermissionManager:(id)arg1;

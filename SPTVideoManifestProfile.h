@@ -22,6 +22,7 @@
     struct CGSize _videoSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTVideoFairplayEncryptionAttributes *fairplayEncryptionAttributes; // @synthesize fairplayEncryptionAttributes=_fairplayEncryptionAttributes;
 @property(readonly, nonatomic) struct CGSize videoSize; // @synthesize videoSize=_videoSize;
 @property(readonly, nonatomic) NSString *mimeType; // @synthesize mimeType=_mimeType;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) unsigned long long segmentType; // @synthesize segmentType=_segmentType;
 @property(readonly, nonatomic) unsigned long long streamingProtocol; // @synthesize streamingProtocol=_streamingProtocol;
 @property(readonly, nonatomic) unsigned long long profileId; // @synthesize profileId=_profileId;
-- (void).cxx_destruct;
 - (id)initWithProfileId:(unsigned long long)arg1 streamingProtocol:(unsigned long long)arg2 segmentType:(unsigned long long)arg3 fairplayEncryptionAttributes:(id)arg4 fileType:(id)arg5 videoCodec:(id)arg6 audioCodec:(id)arg7 maxBitrate:(unsigned long long)arg8 mimeType:(id)arg9 videoSize:(struct CGSize)arg10;
 
 @end

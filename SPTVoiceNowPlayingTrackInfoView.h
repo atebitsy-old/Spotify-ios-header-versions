@@ -17,10 +17,10 @@
     UILabel *_artistNameLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *artistNameLabel; // @synthesize artistNameLabel=_artistNameLabel;
 @property(retain, nonatomic) UILabel *trackTitleLabel; // @synthesize trackTitleLabel=_trackTitleLabel;
 @property(readonly, nonatomic) SPTVoiceNowPlayingTrackInfoViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)voiceNowPlayingTrackInfoViewModelDidUpdate:(id)arg1;
 - (void)updateWithViewModel:(id)arg1;
 - (void)setupLayout;

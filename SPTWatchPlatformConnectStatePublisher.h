@@ -18,9 +18,9 @@
     id <SPTGaiaConnectAPI> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)connectAvailableDevicesDidChange:(id)arg1;
 - (void)handlePublisherEvent:(long long)arg1;

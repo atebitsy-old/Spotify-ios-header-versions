@@ -16,9 +16,9 @@
     NSArray *_tracks;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 // Remaining properties

@@ -26,6 +26,7 @@
     id <SPTFreeTierPersistentCounter> _persistentCounter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool listeningHistoryEnabled; // @synthesize listeningHistoryEnabled=_listeningHistoryEnabled;
 @property(readonly, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
-- (void).cxx_destruct;
 - (id)provideTooltipContentOperation;
 - (id)provideCacheViewModelContentOperation;
 - (id)provideDownloadsContentOperation;

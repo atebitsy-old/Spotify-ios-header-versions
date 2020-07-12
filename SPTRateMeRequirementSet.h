@@ -13,8 +13,8 @@
     NSMutableArray *_requirements;
 }
 
-@property(retain, nonatomic) NSMutableArray *requirements; // @synthesize requirements=_requirements;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableArray *requirements; // @synthesize requirements=_requirements;
 - (void)addRequirement:(CDUnknownBlockType)arg1;
 @property(readonly, nonatomic, getter=isValid) _Bool valid;
 - (id)init;

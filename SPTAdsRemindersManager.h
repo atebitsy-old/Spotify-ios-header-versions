@@ -20,6 +20,7 @@
     id <SPTBannerPresentationManagerTicket> _bannerTicket;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(retain, nonatomic) NSDate *lastSaveTimeStamp; // @synthesize lastSaveTimeStamp=_lastSaveTimeStamp;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> presentationManager; // @synthesize presentationManager=_presentationManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)applicationDidBecomeActive:(id)arg1;
 - (void)showReminderBanner;
 - (void)stopReminderBanner;

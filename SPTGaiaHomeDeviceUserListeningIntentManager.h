@@ -18,11 +18,11 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 @property(nonatomic) unsigned long long currentListeningIntent; // @synthesize currentListeningIntent=_currentListeningIntent;
-- (void).cxx_destruct;
 - (unsigned long long)listeningIntentFromAudioSessionRoute:(id)arg1;
 - (void)setListeningIntentAndNotifyObservers:(unsigned long long)arg1;
 - (void)updateCurrentListeningIntent;

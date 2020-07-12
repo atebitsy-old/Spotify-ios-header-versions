@@ -17,9 +17,9 @@
 + (id)nameSortRule:(id)arg1 title:(id)arg2;
 + (id)nameSortRuleWithIdentifier:(id)arg1 title:(id)arg2 groupByName:(_Bool)arg3;
 + (id)nameSortRuleWithIdentifier:(id)arg1 title:(id)arg2 groupByName:(_Bool)arg3 groupLabel:(_Bool)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (id)customPlaylistsSortRuleWithOptions;
 - (id)namePlaylistsSortRule;
 - (id)relevancePlaylistsSortRule;

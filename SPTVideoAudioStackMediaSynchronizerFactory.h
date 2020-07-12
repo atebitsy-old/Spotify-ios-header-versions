@@ -17,9 +17,9 @@
     id <SPTAudioPlayerMediaClockService> _audioPlayerMediaClockService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTAudioPlayerMediaClockService> audioPlayerMediaClockService; // @synthesize audioPlayerMediaClockService=_audioPlayerMediaClockService;
 @property(copy, nonatomic) CDUnknownBlockType playerProvider; // @synthesize playerProvider=_playerProvider;
-- (void).cxx_destruct;
 - (id)createPlaybackEventObserverForPlaybackIdentity:(id)arg1 options:(id)arg2 timeObservable:(id)arg3;
 - (id)initWithPlayerProvider:(CDUnknownBlockType)arg1 audioPlayerMediaClockService:(id)arg2;
 

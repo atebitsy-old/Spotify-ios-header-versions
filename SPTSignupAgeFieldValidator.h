@@ -16,9 +16,9 @@
     SPTSignupAgeBackendValidator *_ageBackendValidator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSignupAgeBackendValidator *ageBackendValidator; // @synthesize ageBackendValidator=_ageBackendValidator;
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
-- (void).cxx_destruct;
 - (void)validateObject:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
 - (_Bool)isBirthdayOldEnough:(id)arg1 now:(id)arg2 minNumberOfYears:(unsigned long long)arg3;
 - (id)removeTimeFromDate:(id)arg1;

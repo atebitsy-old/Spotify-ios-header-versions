@@ -41,6 +41,7 @@
     NSURL *_trackURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *trackURL; // @synthesize trackURL=_trackURL;
 @property(retain, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
@@ -61,7 +62,6 @@
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(nonatomic) long long contextMenuSubtitleStyle; // @synthesize contextMenuSubtitleStyle=_contextMenuSubtitleStyle;
 @property(nonatomic) __weak id <SPTContextMenuViewControllerIPadDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)updateValidActionsAndReloadViewIfNeeded;

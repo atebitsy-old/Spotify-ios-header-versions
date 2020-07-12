@@ -24,6 +24,7 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) struct UIEdgeInsets searchBarComponentsInsets; // @synthesize searchBarComponentsInsets=_searchBarComponentsInsets;
 @property(readonly, nonatomic) double searchBarComponentsSpacing; // @synthesize searchBarComponentsSpacing=_searchBarComponentsSpacing;
 @property(readonly, nonatomic) double spacing; // @synthesize spacing=_spacing;
@@ -33,7 +34,6 @@
 @property(readonly, copy, nonatomic) UIFont *searchBarTextFont; // @synthesize searchBarTextFont=_searchBarTextFont;
 @property(readonly, copy, nonatomic) UIColor *titleColor; // @synthesize titleColor=_titleColor;
 @property(readonly, copy, nonatomic) UIFont *titleFont; // @synthesize titleFont=_titleFont;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)copyWithZone:(struct _NSZone *)arg1;

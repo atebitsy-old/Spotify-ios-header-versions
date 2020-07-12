@@ -27,6 +27,7 @@
     struct CGPoint _thumbPosition;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) float uncompensatedTrackingValue; // @synthesize uncompensatedTrackingValue=_uncompensatedTrackingValue;
 @property(nonatomic) struct CGPoint thumbPosition; // @synthesize thumbPosition=_thumbPosition;
 @property(nonatomic) struct CGPoint startTrackingPoint; // @synthesize startTrackingPoint=_startTrackingPoint;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) UIColor *trackMinColor; // @synthesize trackMinColor=_trackMinColor;
 @property(nonatomic) __weak id <SPTDrivingModeSliderViewDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(nonatomic) _Bool resizeTrackToBounds; // @synthesize resizeTrackToBounds=_resizeTrackToBounds;
-- (void).cxx_destruct;
 - (id)timeIntervalToAccessibilityString:(double)arg1;
 - (id)accessibilityValue;
 - (id)accessibilityLabel;

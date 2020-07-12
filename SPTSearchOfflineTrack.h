@@ -19,6 +19,7 @@
     NSString *_artistName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, nonatomic) _Bool isMogef19; // @synthesize isMogef19=_isMogef19;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) _Bool isExplicit; // @synthesize isExplicit=_isExplicit;
 @property(readonly, copy, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithName:(id)arg1 uri:(id)arg2 isExplicit:(_Bool)arg3 isPremiumOnly:(_Bool)arg4 isMogef19:(_Bool)arg5 albumName:(id)arg6 artistName:(id)arg7;

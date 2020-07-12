@@ -15,10 +15,10 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTNowPlayingNavigationBarTitleView *titleView; // @synthesize titleView=_titleView;
-- (void).cxx_destruct;
 - (id)layout;
 - (void)updateConstraints;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 titleAttributes:(id)arg3;

@@ -17,6 +17,7 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIColor *selectedColor; // @synthesize selectedColor=_selectedColor;
 @property(nonatomic) long long selectedIcon; // @synthesize selectedIcon=_selectedIcon;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
@@ -24,7 +25,6 @@
 - (long long)icon;
 - (void)setIconSize:(struct CGSize)arg1;
 - (struct CGSize)iconSize;
-- (void).cxx_destruct;
 - (void)setSelected:(_Bool)arg1;
 - (void)updateForSelected;
 - (void)applyIcon;

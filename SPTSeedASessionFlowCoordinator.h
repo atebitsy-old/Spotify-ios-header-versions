@@ -19,11 +19,11 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) long long seedASessionVisualTreatment; // @synthesize seedASessionVisualTreatment=_seedASessionVisualTreatment;
 @property(retain, nonatomic) UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(readonly, nonatomic) SPTArtistPickerViewControllerProvider *artistPickerViewControllerProvider; // @synthesize artistPickerViewControllerProvider=_artistPickerViewControllerProvider;
-- (void).cxx_destruct;
 - (void)didFailSeedASession;
 - (void)didFailArtistPicking;
 - (void)didFinishArtistPicking:(id)arg1;

@@ -8,7 +8,7 @@
 
 #import "SPTHomeService-Protocol.h"
 
-@class NSString, NSURL, SPTAllocationContext, SPTHomeContentCache, SPTHomeFeatureProperties, SPTHomeHubManager, SPTHomeRemoteConfigPropertyResolver;
+@class NSString, NSURL, SPTAllocationContext, SPTHomeContentCache, SPTHomeFeatureProperties, SPTHomeHubManager;
 @protocol SPTCreatePlaylistService, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
@@ -41,17 +41,16 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     SPTHomeHubManager *_hubManager;
     SPTHomeContentCache *_homeContentCache;
-    SPTHomeRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
     id <SPTUBIHubsUtilities> _ubiHubsUtilities;
-    SPTHomeFeatureProperties *_featureProperties;
+    SPTHomeFeatureProperties *_remoteConfigProperties;
     NSURL *_pageURI;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
-@property(retain, nonatomic) SPTHomeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(retain, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
-@property(retain, nonatomic) SPTHomeRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
 @property(retain, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
@@ -80,7 +79,6 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubService; // @synthesize hubService=_hubService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-- (void).cxx_destruct;
 - (id)pageLoaderViewControllerFor:(id)arg1 URI:(id)arg2 navigationItemDecorator:(id)arg3;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;

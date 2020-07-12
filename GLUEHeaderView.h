@@ -39,6 +39,7 @@
     CAGradientLayer *_collapsedShadowLayer;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) CAGradientLayer *collapsedShadowLayer; // @synthesize collapsedShadowLayer=_collapsedShadowLayer;
 @property(readonly, nonatomic) UILabel *collapsedTitleLabel; // @synthesize collapsedTitleLabel=_collapsedTitleLabel;
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
@@ -63,7 +64,6 @@
 @property(nonatomic) unsigned long long style; // @synthesize style=_style;
 @property(nonatomic) __weak id <GLUEHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)headerImageTapped;
 - (void)createImageShadow;
 - (void)addSubviewToContainerView:(id)arg1;

@@ -31,6 +31,7 @@
     SPTFreeTierTasteOnboardingPresentationConfiguration *_presentationConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingPresentationConfiguration *presentationConfiguration; // @synthesize presentationConfiguration=_presentationConfiguration;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingDeeplinkStore *deeplinkStore; // @synthesize deeplinkStore=_deeplinkStore;
 @property(readonly, nonatomic) id <SPTInstrumentationModalPresentationMonitor> modalPresentationMonitor; // @synthesize modalPresentationMonitor=_modalPresentationMonitor;
@@ -49,7 +50,6 @@
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingLoggerFactory *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingCurator *curator; // @synthesize curator=_curator;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (id)initWithTheme:(id)arg1 curator:(id)arg2 loggerFactory:(id)arg3 metaViewController:(id)arg4 modalPresentationController:(id)arg5 popupManager:(id)arg6 dataLoaderFactory:(id)arg7 imageLoaderFactory:(id)arg8 viewLoggerFactory:(id)arg9 followModelFactory:(id)arg10 collectionPlatform:(id)arg11 previewPlayer:(id)arg12 networkConnectivityController:(id)arg13 testManager:(id)arg14 loginStateController:(id)arg15 modalPresentationMonitor:(id)arg16 deeplinkStore:(id)arg17 presentationConfiguration:(id)arg18;
 
 @end

@@ -14,9 +14,9 @@
     SPTGaiaHomeDeviceManager *_homeDeviceManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
 @property(readonly, nonatomic) SPTCastManager *castManager; // @synthesize castManager=_castManager;
-- (void).cxx_destruct;
 - (long long)iconForGaiaDeviceType:(unsigned long long)arg1 isGroup:(_Bool)arg2;
 - (long long)iconForLocalDevice;
 - (_Bool)isDeviceCast:(id)arg1;

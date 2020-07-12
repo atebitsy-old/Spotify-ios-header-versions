@@ -16,10 +16,10 @@
     id <SPTGaiaSettingsProvider> _settingsProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTGaiaSettingsProvider> settingsProvider; // @synthesize settingsProvider=_settingsProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *lockScreenControlCell; // @synthesize lockScreenControlCell=_lockScreenControlCell;
-- (void).cxx_destruct;
 - (void)lockScreenOptionChanged:(id)arg1;
 - (id)footerText;
 - (id)cellForRow:(long long)arg1;

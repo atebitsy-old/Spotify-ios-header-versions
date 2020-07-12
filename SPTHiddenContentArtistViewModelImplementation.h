@@ -25,6 +25,7 @@
     id <SPTContextMenuPresenter> _presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) UIColor *feedbackIconColor; // @synthesize feedbackIconColor=_feedbackIconColor;
 @property(readonly, nonatomic) long long feedbackIcon; // @synthesize feedbackIcon=_feedbackIcon;
 @property(readonly, nonatomic) NSURL *artistImageURL; // @synthesize artistImageURL=_artistImageURL;
-- (void).cxx_destruct;
 - (id)createContextMenuTasks;
 - (void)presentContextMenuInViewController:(id)arg1 senderView:(id)arg2;
 - (void)navigateToArtist;

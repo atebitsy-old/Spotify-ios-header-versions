@@ -22,13 +22,13 @@
     NSMutableDictionary *_URLRequestTokens;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSMutableDictionary *URLRequestTokens; // @synthesize URLRequestTokens=_URLRequestTokens;
 @property(readonly, nonatomic) SPTConcertsEntityJSONTransfomer *entityJSONTransformer; // @synthesize entityJSONTransformer=_entityJSONTransformer;
 @property(readonly, nonatomic) SPTConcertsLocalDataManager *localDataManager; // @synthesize localDataManager=_localDataManager;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *attemptQueue; // @synthesize attemptQueue=_attemptQueue;
 @property(nonatomic) __weak id <SPTConcertsEntityResolverDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)executeDelegateNotifier:(CDUnknownBlockType)arg1;
 - (void)notifyDelegateOfCancellationForToken:(id)arg1;
 - (void)notifyDelegateOfFailureWithError:(id)arg1 forToken:(id)arg2;

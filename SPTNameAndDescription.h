@@ -14,9 +14,9 @@
     NSString *_descriptionText;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 description:(id)arg2;
 
 @end

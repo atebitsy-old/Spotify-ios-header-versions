@@ -18,11 +18,11 @@
 }
 
 + (_Bool)shouldDisplayInSettingsViewController:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
-- (void).cxx_destruct;
 - (id)footerText;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

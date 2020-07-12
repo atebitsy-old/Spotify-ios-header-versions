@@ -18,10 +18,10 @@
     long long _flagSignalState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long flagSignalState; // @synthesize flagSignalState=_flagSignalState;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> flagSignal; // @synthesize flagSignal=_flagSignal;
 @property(nonatomic) __weak id <SPTCanvasFlagSignalResolverDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)dealloc;
 @property(readonly, nonatomic) _Bool isEnabled;

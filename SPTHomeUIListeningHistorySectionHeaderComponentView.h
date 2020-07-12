@@ -19,10 +19,10 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUIListeningHistorySectionHeaderView *listeningHistorySectionHeaderView; // @synthesize listeningHistorySectionHeaderView=_listeningHistorySectionHeaderView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (id)theme;
-- (void).cxx_destruct;
 - (void)didTapSectionHeaderButton;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;

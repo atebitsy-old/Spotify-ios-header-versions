@@ -20,12 +20,12 @@
     NSString *_setPasswordToken;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *setPasswordToken; // @synthesize setPasswordToken=_setPasswordToken;
 @property(retain, nonatomic) SPTRecoverAccountResetPasswordDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) SPTSignupPasswordFieldValidationViewModel *fieldViewModel; // @synthesize fieldViewModel=_fieldViewModel;
 @property(copy, nonatomic) NSString *usernameOrEmail; // @synthesize usernameOrEmail=_usernameOrEmail;
 @property(nonatomic) __weak id <SPTLoginSetNewPasswordViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)resetPasswordDataLoader:(id)arg1 didFailWithError:(id)arg2;
 - (void)resetPasswordDataLoaderDidFinishWithSuccess:(id)arg1;
 - (void)trySetNewPassword:(id)arg1;

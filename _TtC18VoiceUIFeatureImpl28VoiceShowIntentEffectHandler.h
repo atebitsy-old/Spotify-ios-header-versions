@@ -8,6 +8,7 @@
 
 @interface _TtC18VoiceUIFeatureImpl28VoiceShowIntentEffectHandler : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: playbackController
     // Error parsing type: , name: controllerDelegate
 }
 

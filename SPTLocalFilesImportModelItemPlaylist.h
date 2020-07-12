@@ -16,9 +16,9 @@
     NSArray *_trackURLs;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *trackURLs; // @synthesize trackURLs=_trackURLs;
 @property(nonatomic) long long numberOfTracks; // @synthesize numberOfTracks;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

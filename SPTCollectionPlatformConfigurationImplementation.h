@@ -20,12 +20,12 @@
     UIImage *_overlayImage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *overlayImage; // @synthesize overlayImage=_overlayImage;
 @property(retain, nonatomic) UIImage *selectedOverlayImage; // @synthesize selectedOverlayImage=_selectedOverlayImage;
 @property(readonly, nonatomic) SPTCollectionPlatformEntityConfirmationPresenter *confirmationPresenter; // @synthesize confirmationPresenter=_confirmationPresenter;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformPropertiesManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) NSURL *collectionSongsImageURL; // @synthesize collectionSongsImageURL=_collectionSongsImageURL;
-- (void).cxx_destruct;
 - (id)trackURI;
 - (_Bool)isFollowURL:(id)arg1;
 - (_Bool)shouldUseHeart:(id)arg1;

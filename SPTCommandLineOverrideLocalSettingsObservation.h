@@ -14,9 +14,9 @@
     NSObject<OS_dispatch_queue> *_queue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(nonatomic) __weak id <SPTLocalSettingsObserver> observer; // @synthesize observer=_observer;
-- (void).cxx_destruct;
 
 @end
 

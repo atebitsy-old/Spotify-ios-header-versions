@@ -23,6 +23,7 @@
     NSArray *_rawTracks;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *rawTracks; // @synthesize rawTracks=_rawTracks;
 @property(retain, nonatomic) id <SPTCollectionPlatformArtistMetadataFields> rawArtistMetadata; // @synthesize rawArtistMetadata=_rawArtistMetadata;
 @property(retain, nonatomic) SPTCollectionPlatformFetchOptions *fetchOptions; // @synthesize fetchOptions=_fetchOptions;
@@ -33,7 +34,6 @@
 @property(copy, nonatomic) NSArray *albums; // @synthesize albums=_albums;
 @property(copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, nonatomic) NSURL *artistUri; // @synthesize artistUri=_artistUri;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool hasPlayableItems;
 @property(readonly, nonatomic) NSURL *collectionArtistUrl;
 @property(readonly, nonatomic) unsigned long long numberOfOfflineTracks;

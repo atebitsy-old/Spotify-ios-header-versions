@@ -23,12 +23,12 @@
 
 + (id)ruleWithIdentifier:(id)arg1 title:(id)arg2 ascendingOrder:(_Bool)arg3 applyRule:(CDUnknownBlockType)arg4;
 + (id)ruleWithIdentifier:(id)arg1 title:(id)arg2 ascendingOrder:(_Bool)arg3 groupLabel:(_Bool)arg4 applyRule:(CDUnknownBlockType)arg5;
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType applyRule; // @synthesize applyRule=_applyRule;
 @property(readonly, nonatomic) _Bool groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(readonly, nonatomic) _Bool ascendingOrder; // @synthesize ascendingOrder=_ascendingOrder;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)applyRuleToOptions:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 title:(id)arg2 ascendingOrder:(_Bool)arg3 applyRule:(CDUnknownBlockType)arg4;
 - (id)initWithIdentifier:(id)arg1 title:(id)arg2 ascendingOrder:(_Bool)arg3 groupLabel:(_Bool)arg4 applyRule:(CDUnknownBlockType)arg5;

@@ -15,10 +15,10 @@
     unsigned long long _unrangedLength;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long unrangedLength; // @synthesize unrangedLength=_unrangedLength;
 @property(nonatomic) unsigned long long unfilteredLength; // @synthesize unfilteredLength=_unfilteredLength;
 @property(retain, nonatomic) NSArray *items; // @synthesize items=_items;
-- (void).cxx_destruct;
 
 @end
 

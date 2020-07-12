@@ -17,10 +17,10 @@
     NSString *_action;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *action; // @synthesize action=_action;
 @property(copy, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
 @property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *requestAction;
 @property(readonly, nonatomic) NSArray *sortDescriptors;
 @property(readonly, nonatomic) NSPredicate *filterPredicate;

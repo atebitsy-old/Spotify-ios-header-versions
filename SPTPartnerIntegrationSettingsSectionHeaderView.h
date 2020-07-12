@@ -20,6 +20,7 @@
     NSLayoutConstraint *_descriptionToEdgeConstraint;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *descriptionToEdgeConstraint; // @synthesize descriptionToEdgeConstraint=_descriptionToEdgeConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *descriptionToToggleConstraint; // @synthesize descriptionToToggleConstraint=_descriptionToToggleConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *headerWidthConstraint; // @synthesize headerWidthConstraint=_headerWidthConstraint;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) SPTPartnerIntegrationSettingsSectionViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 @property(nonatomic) double contentWidth;
 - (void)didToggleSwitch:(id)arg1;
 - (void)setupConstraints;

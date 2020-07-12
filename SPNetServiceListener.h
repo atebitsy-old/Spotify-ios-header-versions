@@ -18,10 +18,10 @@
     NSMutableArray *_services;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *services; // @synthesize services=_services;
 @property(retain, nonatomic) NSNetServiceBrowser *netServiceBrowser; // @synthesize netServiceBrowser=_netServiceBrowser;
 @property(nonatomic) struct MacMdnsDiscovery *discovery; // @synthesize discovery=_discovery;
-- (void).cxx_destruct;
 - (void)netService:(id)arg1 didNotResolve:(id)arg2;
 - (void)netServiceDidResolveAddress:(id)arg1;
 - (struct DiscoveredService)deviceFromServiceInfo:(id)arg1;

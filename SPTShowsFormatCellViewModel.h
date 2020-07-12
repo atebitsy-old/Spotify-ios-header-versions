@@ -29,6 +29,7 @@
     CDUnknownBlockType _banQuickAction;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType banQuickAction; // @synthesize banQuickAction=_banQuickAction;
 @property(copy, nonatomic) CDUnknownBlockType likeQuickAction; // @synthesize likeQuickAction=_likeQuickAction;
 @property(copy, nonatomic) CDUnknownBlockType showContextMenu; // @synthesize showContextMenu=_showContextMenu;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) _Bool disabled; // @synthesize disabled=_disabled;
-- (void).cxx_destruct;
 
 @end
 

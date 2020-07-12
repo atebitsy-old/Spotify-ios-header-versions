@@ -16,8 +16,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (id)makeLifetimeRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 headers:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)makeCancelableRequestWithURL:(id)arg1 requestAction:(id)arg2 requestData:(id)arg3 headers:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (id)initWithResolver:(id)arg1;

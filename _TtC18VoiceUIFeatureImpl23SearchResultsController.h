@@ -13,6 +13,8 @@
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: testManager
+    // Error parsing type: , name: ubiLogger
+    // Error parsing type: , name: logCenter
 }
 
 @end

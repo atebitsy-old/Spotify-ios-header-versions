@@ -35,6 +35,7 @@
     NSArray *_overrideCountries;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *overrideCountries; // @synthesize overrideCountries=_overrideCountries;
 @property(retain, nonatomic) SettingsTextFieldTableViewCell *countryTextFieldCell; // @synthesize countryTextFieldCell=_countryTextFieldCell;
 @property(nonatomic) _Bool forcedFocusState; // @synthesize forcedFocusState=_forcedFocusState;
@@ -50,7 +51,6 @@
 @property(nonatomic) __weak SPTAdsViewModel *adsViewModel; // @synthesize adsViewModel=_adsViewModel;
 @property(retain, nonatomic) SPTAdTestingHandler *adTestingHandler; // @synthesize adTestingHandler=_adTestingHandler;
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (id)URI;

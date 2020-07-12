@@ -17,11 +17,11 @@
     NSMutableDictionary *_colorCallbackByPath;
 }
 
-@property(retain, nonatomic) NSMutableDictionary *colorCallbackByPath; // @synthesize colorCallbackByPath=_colorCallbackByPath;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *colorCallbackByPath; // @synthesize colorCallbackByPath=_colorCallbackByPath;
 - (void)playToProgress:(double)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)setAnimationPath:(id)arg1;
-- (void)setColor:(id)arg1 forPath:(struct NSString *)arg2;
+- (void)setColor:(id)arg1 forPath:(id)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

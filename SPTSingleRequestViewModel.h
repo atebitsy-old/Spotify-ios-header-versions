@@ -30,6 +30,7 @@
     NSObject<OS_dispatch_queue> *_productStateObserverQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *productStateObserverQueue; // @synthesize productStateObserverQueue=_productStateObserverQueue;
 @property(nonatomic) double startTime; // @synthesize startTime=_startTime;
 @property(retain, nonatomic) NSArray *productStateKeysToListen; // @synthesize productStateKeysToListen=_productStateKeysToListen;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) _Bool hasSuccessfullyLoadedData; // @synthesize hasSuccessfullyLoadedData=_hasSuccessfullyLoadedData;
 @property(nonatomic, getter=isLoading) _Bool loading; // @synthesize loading=_loading;
 @property(readonly, nonatomic) NSURL *requestURL; // @synthesize requestURL=_requestURL;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

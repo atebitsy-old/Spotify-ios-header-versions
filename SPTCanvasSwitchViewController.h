@@ -23,6 +23,7 @@
     SPTCanvasSwitchViewModel *_viewModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCanvasSwitchViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) UITapGestureRecognizer *trailingOptionTap; // @synthesize trailingOptionTap=_trailingOptionTap;
 @property(readonly, nonatomic) UITapGestureRecognizer *leadingOptionTap; // @synthesize leadingOptionTap=_leadingOptionTap;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) SPTCanvasSwitchLabel *trailingOptionLabel; // @synthesize trailingOptionLabel=_trailingOptionLabel;
 @property(readonly, nonatomic) SPTCanvasSwitchLabel *leadingOptionLabel; // @synthesize leadingOptionLabel=_leadingOptionLabel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)selectTrailingOption;
 - (void)selectLeadingOption;
 - (void)themeUpdated:(id)arg1;

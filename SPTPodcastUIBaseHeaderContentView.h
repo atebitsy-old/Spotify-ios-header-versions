@@ -17,12 +17,12 @@
     NSLayoutConstraint *_heightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(retain, nonatomic) UILayoutGuide *bodyAreaLayoutGuide; // @synthesize bodyAreaLayoutGuide=_bodyAreaLayoutGuide;
 @property(retain, nonatomic) UILayoutGuide *topAreaLayoutGuide; // @synthesize topAreaLayoutGuide=_topAreaLayoutGuide;
 @property(nonatomic) double naturalHeight; // @synthesize naturalHeight=_naturalHeight;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double topAreaNormalizedHeight;
 @property(readonly, nonatomic) double navigationBarNormalizedHeight;
 @property(readonly, nonatomic) double bodyAreaNormalizedHeight;

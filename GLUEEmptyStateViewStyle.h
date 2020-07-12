@@ -21,6 +21,7 @@
     double _ctaButtonTopMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double ctaButtonTopMargin; // @synthesize ctaButtonTopMargin=_ctaButtonTopMargin;
 @property(nonatomic) double horizontalMargin; // @synthesize horizontalMargin=_horizontalMargin;
 @property(copy, nonatomic) UIColor *backgroundFillColor; // @synthesize backgroundFillColor=_backgroundFillColor;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
 @property(copy, nonatomic) GLUELabelStyle *bodyLabelStyle; // @synthesize bodyLabelStyle=_bodyLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToEmptyStateViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

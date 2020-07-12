@@ -17,11 +17,11 @@
     struct UIEdgeInsets _touchInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets touchInsets; // @synthesize touchInsets=_touchInsets;
 @property(nonatomic) unsigned long long buttonState; // @synthesize buttonState=_buttonState;
 @property(retain, nonatomic) HUBComponentEvent *event; // @synthesize event=_event;
 @property(readonly, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)addAccessibility;
 @property(nonatomic, getter=isPlaying) _Bool playing;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;

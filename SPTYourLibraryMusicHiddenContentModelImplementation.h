@@ -21,13 +21,13 @@
     id <SPTCollectionPlatformDataLoaderRequestToken> _collectionSubscription;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionSubscription; // @synthesize collectionSubscription=_collectionSubscription;
 @property(nonatomic) _Bool hasHiddenArtists; // @synthesize hasHiddenArtists=_hasHiddenArtists;
 @property(nonatomic) _Bool hasHiddenSongs; // @synthesize hasHiddenSongs=_hasHiddenSongs;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;
 @property(nonatomic) __weak id <SPTYourLibraryMusicHiddenContentModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)subscribeCollectionHiddenContent;
 - (void)loadModel;
 - (id)initWithCollectionDataLoader:(id)arg1;

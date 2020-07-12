@@ -16,10 +16,10 @@
     NSString *_dialogIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *dialogIdentifier; // @synthesize dialogIdentifier=_dialogIdentifier;
 @property(readonly, copy, nonatomic) NSString *screenIdentifier; // @synthesize screenIdentifier=_screenIdentifier;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logUserDidSeeErrorDialogWithError:(long long)arg1;
 - (id)initWithLogger:(id)arg1 screenIdentifier:(id)arg2 dialogIdentifier:(id)arg3;
 

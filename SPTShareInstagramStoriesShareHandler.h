@@ -31,6 +31,7 @@
     SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(readonly, nonatomic) id <SPTShareVideoDataProvider> videoDataLoader; // @synthesize videoDataLoader=_videoDataLoader;
 @property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) NSString *utmCampaign; // @synthesize utmCampaign=_utmCampaign;
 @property(readonly, nonatomic) NSString *utmMedium; // @synthesize utmMedium=_utmMedium;
 @property(readonly, copy, nonatomic) NSString *utmSource; // @synthesize utmSource=_utmSource;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)createAlertModelWithError:(id)arg1;

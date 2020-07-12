@@ -18,10 +18,10 @@
     id <SPTThemableViewLayoutDelegate> _layoutDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasFooterViews; // @synthesize hasFooterViews=_hasFooterViews;
 @property(nonatomic) _Bool hasHeaderViews; // @synthesize hasHeaderViews=_hasHeaderViews;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)dealloc;
 - (id)initWithFrame:(struct CGRect)arg1 collectionViewLayout:(id)arg2;

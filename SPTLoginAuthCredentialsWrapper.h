@@ -17,10 +17,10 @@
     NSString *_username;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(retain, nonatomic) id credentials; // @synthesize credentials=_credentials;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void).cxx_destruct;
 - (id)initWithCredentials:(id)arg1 type:(unsigned long long)arg2 username:(id)arg3;
 
 // Remaining properties

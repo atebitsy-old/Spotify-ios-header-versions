@@ -18,10 +18,10 @@
     NSMutableDictionary *_accessibilityTitles;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *accessibilityTitles; // @synthesize accessibilityTitles=_accessibilityTitles;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
 @property(retain, nonatomic) id <SPTSortingFilteringButtonStyle> glueStyle; // @synthesize glueStyle=_glueStyle;
-- (void).cxx_destruct;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (id)accessibilityLabel;

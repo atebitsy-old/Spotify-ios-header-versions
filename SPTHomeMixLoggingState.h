@@ -21,6 +21,7 @@
     NSArray *_excludedUsernames;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *excludedUsernames; // @synthesize excludedUsernames=_excludedUsernames;
 @property(readonly, copy, nonatomic) NSString *cohort; // @synthesize cohort=_cohort;
 @property(readonly, copy, nonatomic) NSString *algorithmName; // @synthesize algorithmName=_algorithmName;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic, getter=isPublishExplicitTracks) _Bool publishExplicitTracks; // @synthesize publishExplicitTracks=_publishExplicitTracks;
 @property(readonly, nonatomic, getter=isGlobalExplicitEnabled) _Bool globalExplicitEnabled; // @synthesize globalExplicitEnabled=_globalExplicitEnabled;
 @property(readonly, copy, nonatomic) NSString *mixType; // @synthesize mixType=_mixType;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *testData;
 - (id)initWithGlobalExplicitEnabled:(_Bool)arg1 publishExplicitTracks:(_Bool)arg2 userPartOfMix:(_Bool)arg3 familyMember:(_Bool)arg4 moodName:(id)arg5 algorithmName:(id)arg6 cohort:(id)arg7 excludedUsernames:(id)arg8;
 

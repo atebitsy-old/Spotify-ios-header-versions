@@ -24,6 +24,7 @@
     NSError *_previousError;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *previousError; // @synthesize previousError=_previousError;
 @property(retain, nonatomic) id <HUBViewModelBuilder> viewModelBuilder; // @synthesize viewModelBuilder=_viewModelBuilder;
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)finishAfterPerformingOperation:(_Bool)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dataLoader:(id)arg1 requestIsWaitingForConnectivity:(id)arg2;

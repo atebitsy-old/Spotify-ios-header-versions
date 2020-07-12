@@ -22,6 +22,7 @@
     NSString *_exitReason;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *exitReason; // @synthesize exitReason=_exitReason;
 @property(nonatomic) double aspectRatio; // @synthesize aspectRatio=_aspectRatio;
 @property(nonatomic) long long nDroppedFrames; // @synthesize nDroppedFrames=_nDroppedFrames;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSMutableArray *bitrateEvents; // @synthesize bitrateEvents=_bitrateEvents;
 @property(retain, nonatomic) id <BMLoggerDataProvider> loggerDataProvider; // @synthesize loggerDataProvider=_loggerDataProvider;
 @property(retain, nonatomic) id <BMLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (id)encryptionType;
 - (long long)kbpsAverageBandwidth;
 - (id)exitReasonFromEndReasonCode:(long long)arg1;

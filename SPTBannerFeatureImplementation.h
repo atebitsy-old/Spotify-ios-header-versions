@@ -21,12 +21,12 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTBannerSettingsManager *bannerSettingsManager; // @synthesize bannerSettingsManager=_bannerSettingsManager;
 @property(retain, nonatomic) SPTBannerPresentationManagerImplementation *bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideBannerPresentationManager;
 - (void)unload;
 - (void)load;

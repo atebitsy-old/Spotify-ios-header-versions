@@ -19,11 +19,11 @@
     id <SPTCanvasModel> _canvasModel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool buffering; // @synthesize buffering=_buffering;
 @property(nonatomic) _Bool finished; // @synthesize finished=_finished;
 @property(readonly, nonatomic) id <SPTCanvasModel> canvasModel; // @synthesize canvasModel=_canvasModel;
 @property(nonatomic) __weak id <SPTCanvasContentLayerVideoPlaybackObserverDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didFailWithFatalError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didFailWithRecoverableError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didBecomeReadyAtPosition:(double)arg1 timestamp:(double)arg2;

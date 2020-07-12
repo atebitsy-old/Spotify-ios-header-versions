@@ -18,11 +18,11 @@
     NSArray *_textLabelEdgeConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *textLabelEdgeConstraints; // @synthesize textLabelEdgeConstraints=_textLabelEdgeConstraints;
 @property(readonly, nonatomic) GLUELabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic, getter=isNewlyCreated) _Bool newlyCreated; // @synthesize newlyCreated=_newlyCreated;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)layoutSubviews;
 - (void)activateConstraints;

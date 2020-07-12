@@ -15,9 +15,9 @@
     BMSubtitleMatcher *_subtitleMatcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) BMSubtitleMatcher *subtitleMatcher; // @synthesize subtitleMatcher=_subtitleMatcher;
 @property(retain, nonatomic) id <BMPlayerConfiguration> playerConfiguration; // @synthesize playerConfiguration=_playerConfiguration;
-- (void).cxx_destruct;
 - (id)createSubtitleSelectorWithAvailableSubtitles:(id)arg1;
 - (id)initWithPlayerConfiguration:(id)arg1 subtitleMatcher:(id)arg2;
 

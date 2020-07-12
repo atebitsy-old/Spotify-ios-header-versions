@@ -20,6 +20,7 @@
     id <SPTDrivingModeDurationViewDataSource> _dataSource;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTDrivingModeDurationViewDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(readonly, nonatomic) CADisplayLink *displayLink; // @synthesize displayLink=_displayLink;
 @property(readonly, nonatomic) UILabel *timeTakenLabel; // @synthesize timeTakenLabel=_timeTakenLabel;
@@ -27,7 +28,6 @@
 @property(readonly, nonatomic) SPTDrivingModeSliderView *progressSlider; // @synthesize progressSlider=_progressSlider;
 @property(nonatomic) __weak id <SPTDrivingModeDurationViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool labelsHidden; // @synthesize labelsHidden=_labelsHidden;
-- (void).cxx_destruct;
 - (id)description;
 - (void)dealloc;
 - (void)progressSliderTouchCancel:(id)arg1;

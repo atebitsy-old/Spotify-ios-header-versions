@@ -18,9 +18,9 @@
     SPTFreeTierTasteOnboardingUpdateTasteViewModel *_viewModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingUpdateTasteViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingUpdateTasteViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)updateSeedASessionDidFail;

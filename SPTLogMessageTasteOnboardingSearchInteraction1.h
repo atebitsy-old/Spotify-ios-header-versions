@@ -19,13 +19,13 @@
 }
 
 + (id)messageWithIntent:(id)arg1 component:(id)arg2 targetUri:(id)arg3 searchSessionId:(id)arg4 sessionId:(id)arg5 interactionId:(id)arg6;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *interactionIdValue; // @synthesize interactionIdValue=_interactionIdValue;
 @property(copy, nonatomic) NSString *sessionIdValue; // @synthesize sessionIdValue=_sessionIdValue;
 @property(copy, nonatomic) NSString *searchSessionIdValue; // @synthesize searchSessionIdValue=_searchSessionIdValue;
 @property(copy, nonatomic) NSString *targetUriValue; // @synthesize targetUriValue=_targetUriValue;
 @property(copy, nonatomic) NSString *componentValue; // @synthesize componentValue=_componentValue;
 @property(copy, nonatomic) NSString *intentValue; // @synthesize intentValue=_intentValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

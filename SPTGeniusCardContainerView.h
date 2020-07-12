@@ -23,6 +23,7 @@
     NSTimer *_hideIntroTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *hideIntroTimer; // @synthesize hideIntroTimer=_hideIntroTimer;
 @property(retain, nonatomic) UIView *currentCardView; // @synthesize currentCardView=_currentCardView;
 @property(readonly, nonatomic) SPTGeniusCardIntroView *introView; // @synthesize introView=_introView;
@@ -34,7 +35,6 @@
 @property(nonatomic) _Bool paused; // @synthesize paused=_paused;
 @property(nonatomic) _Bool ensureIntroCardShows; // @synthesize ensureIntroCardShows=_ensureIntroCardShows;
 @property(readonly, nonatomic) _Bool introCardShowing; // @synthesize introCardShowing=_introCardShowing;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (struct CGRect)cardViewFrame;
 - (void)hideContainerDecorations;

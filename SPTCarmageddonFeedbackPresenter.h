@@ -21,12 +21,12 @@
     SPTCarmageddonFeedbackPresentationToken *_currentPresentationToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCarmageddonFeedbackPresentationToken *currentPresentationToken; // @synthesize currentPresentationToken=_currentPresentationToken;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) UIWindow *window; // @synthesize window=_window;
 @property(readonly, nonatomic) id <SPTSlateBuilder> slateBuilder; // @synthesize slateBuilder=_slateBuilder;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
-- (void).cxx_destruct;
 - (void)slateWillDismiss:(id)arg1;
 - (id)contentUnitForSlateViewController:(id)arg1;
 - (_Bool)shouldHideImageForSlate:(id)arg1;

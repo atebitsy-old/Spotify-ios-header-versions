@@ -21,11 +21,11 @@
 }
 
 + (id)contextMenuWithSortable:(id)arg1 pageURI:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuViewInteractionTarget> interactionTarget; // @synthesize interactionTarget=_interactionTarget;
 @property(retain, nonatomic) SPTContextMenuViewTransition *transition; // @synthesize transition=_transition;
 @property(retain, nonatomic) SPTContextMenuView *contextMenuView; // @synthesize contextMenuView=_contextMenuView;
 @property(copy, nonatomic) NSArray *groupList; // @synthesize groupList=_groupList;
-- (void).cxx_destruct;
 - (_Bool)contextMenuView:(id)arg1 shouldBeDismissedAfterPerformingAction:(id)arg2;
 - (void)dismissContextMenuView:(id)arg1 dismissalStyle:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)contextMenuView:(id)arg1 actionForIndexPath:(id)arg2;

@@ -17,9 +17,9 @@
     NSArray *_rowConstraints;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *rowConstraints; // @synthesize rowConstraints=_rowConstraints;
 @property(readonly, nonatomic) GLUEEntityRowView *rowView; // @synthesize rowView=_rowView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 @property(nonatomic, getter=isActive) _Bool active;
 @property(nonatomic, getter=isSelected) _Bool selected;

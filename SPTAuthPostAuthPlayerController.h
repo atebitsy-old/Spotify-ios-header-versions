@@ -16,10 +16,10 @@
     SPSession *_session;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
-- (void).cxx_destruct;
 - (id)sanitizePlayURI:(id)arg1;
 - (_Bool)isPlaying;
 - (void)playIfNeccessary:(id)arg1 options:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;

@@ -17,9 +17,9 @@
     unsigned long long style;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long style; // @synthesize style;
 @property(retain, nonatomic) UIControl<GLUEStyleable> *button; // @synthesize button;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

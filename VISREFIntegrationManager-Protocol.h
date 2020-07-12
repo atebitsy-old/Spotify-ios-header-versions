@@ -9,14 +9,19 @@
 @class HUBComponentRegistry, HUBIdentifier, SPTTheme, UIViewController;
 
 @protocol VISREFIntegrationManager <NSObject>
-@property(readonly, nonatomic, getter=isVisualRefreshAnimatedHeartEnabled) _Bool visualRefreshAnimatedHeartEnabled;
-@property(readonly, nonatomic, getter=isVisualRefreshGreenButtonEnabled) _Bool visualRefreshGreenButtonEnabled;
-@property(readonly, nonatomic, getter=isVisualRefreshHeaderEnabled) _Bool visualRefreshHeaderEnabled;
 - (_Bool)hasOverrideForComponentId:(HUBIdentifier *)arg1;
 - (HUBComponentRegistry *)overriddenComponentRegistryFromRegistry:(HUBComponentRegistry *)arg1 sptTheme:(SPTTheme *)arg2 contextMenuButtonViewModel:(id)arg3 feedbackButtonViewModel:(id)arg4 offlineButtonViewModel:(id)arg5 viewController:(UIViewController *)arg6 headerType:(unsigned long long)arg7;
 - (void)viewDidDisappear;
 - (void)viewDidAppear;
 - (void)viewWillAppear;
 - (void)configureWithViewController:(UIViewController *)arg1;
+- (_Bool)isVisualRefreshAnimatedHeartEnabled;
+- (_Bool)isVisualRefreshGreenButtonEnabled;
+- (_Bool)isVisualRefreshHeaderEnabled;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool visualRefreshAnimatedHeartEnabled;
+@property(nonatomic, readonly) _Bool visualRefreshGreenButtonEnabled;
+@property(nonatomic, readonly) _Bool visualRefreshHeaderEnabled;
 @end
 

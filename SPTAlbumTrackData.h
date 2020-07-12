@@ -21,6 +21,7 @@
     SPTPlayerTrack *_playerTrack;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPlayerTrack *playerTrack; // @synthesize playerTrack=_playerTrack;
 @property(nonatomic) _Bool trackCellActive; // @synthesize trackCellActive=_trackCellActive;
 @property(readonly, nonatomic, getter=isRatedExplicit) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
@@ -30,7 +31,6 @@
 @property(readonly, copy, nonatomic) NSURL *albumURL; // @synthesize albumURL=_albumURL;
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, copy, nonatomic) NSString *trackName; // @synthesize trackName=_trackName;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isPlayable) _Bool playable;
 @property(readonly, copy, nonatomic) NSString *artistSummary;
 @property(readonly, copy, nonatomic) NSURL *artistURL;

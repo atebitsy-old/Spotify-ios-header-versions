@@ -17,9 +17,9 @@
     id <SPTRemoteConfigurationIntegration> _integration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTRemoteConfigurationIntegration> integration; // @synthesize integration=_integration;
 @property(retain, nonatomic) SPTRemoteConfiguration *remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
-- (void).cxx_destruct;
 - (id)getWithClass:(Class)arg1;
 - (id)initWithRemoteConfiguration:(id)arg1 integration:(id)arg2;
 

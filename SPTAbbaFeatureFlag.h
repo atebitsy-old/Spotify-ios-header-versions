@@ -24,6 +24,7 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) long long latestState; // @synthesize latestState=_latestState;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> finalSignal; // @synthesize finalSignal=_finalSignal;
@@ -32,7 +33,6 @@
 @property(readonly, copy, nonatomic) NSString *enabledGroup; // @synthesize enabledGroup=_enabledGroup;
 @property(readonly, copy, nonatomic) NSString *featureFlagKey; // @synthesize featureFlagKey=_featureFlagKey;
 @property(nonatomic, getter=isEnabledByDefault) _Bool enabledByDefault; // @synthesize enabledByDefault=_enabledByDefault;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;

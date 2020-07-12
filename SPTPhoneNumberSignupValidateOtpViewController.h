@@ -27,6 +27,7 @@
     UINotificationFeedbackGenerator *_primaryFeedbackGenerator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UINotificationFeedbackGenerator *primaryFeedbackGenerator; // @synthesize primaryFeedbackGenerator=_primaryFeedbackGenerator;
 @property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
 @property(nonatomic) __weak id <SPTPhoneNumberSignupValidateOtpViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) SPTPhoneNumberSignupValidateOtpViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTPhoneNumberSignupTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPhoneNumberSignupValidateOtpContainerView *containerView; // @synthesize containerView=_containerView;
-- (void).cxx_destruct;
 - (void)willMoveToParentViewController:(id)arg1;
 - (void)generatePrimaryFeedbackErrorNotification;
 - (id)navigationController:(id)arg1 interactionControllerForAnimationController:(id)arg2;

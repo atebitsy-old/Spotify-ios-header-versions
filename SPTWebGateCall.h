@@ -13,10 +13,10 @@
     CDUnknownBlockType _failure;
 }
 
-@property(readonly, nonatomic) CDUnknownBlockType failure; // @synthesize failure=_failure;
-@property(readonly, nonatomic) CDUnknownBlockType success; // @synthesize success=_success;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) CDUnknownBlockType failure; // @synthesize failure=_failure;
+@property(readonly, nonatomic) CDUnknownBlockType success; // @synthesize success=_success;
 - (void)dealloc;
 - (void)cancel;
 - (void)start;

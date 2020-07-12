@@ -24,6 +24,7 @@
     id <UITableViewDragDelegate> _dragDelegateHolder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <UITableViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
 @property(readonly, copy, nonatomic) NSDictionary *reuseIdentifierToCellProviders; // @synthesize reuseIdentifierToCellProviders=_reuseIdentifierToCellProviders;
 @property(readonly, copy, nonatomic) NSDictionary *sectionDescriptions; // @synthesize sectionDescriptions=_sectionDescriptions;
@@ -33,11 +34,10 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistConfiguration> configuration; // @synthesize configuration=_configuration;
-- (void).cxx_destruct;
 - (id)indexPathForView:(id)arg1;
 - (void)presentContextMenuWithSender:(id)arg1;
 - (void)reloadCellsForCellProvider:(id)arg1;
-- (void)cellProvider:(id)arg1 playTrackAtIndexPath:(id)arg2;
+- (void)cellProvider:(id)arg1 playTrackAtIndexPath:(id)arg2 interactionId:(id)arg3;
 - (void)contextMenuPressedForCellProvider:(id)arg1 sender:(id)arg2;
 - (id)tableView:(id)arg1 viewForFooterInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2;

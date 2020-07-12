@@ -9,7 +9,7 @@
 #import "SPTVideoCoordinatorService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVideoContextPlayerCoordinator, SPTVideoCoordinatorFeatureFlags, SPTVideoDynamicEventObserverFactory, SPTVideoPreferredSubtitleMessageFactory, SPTVideoSubtitleProvider;
-@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTDebugService, SPTPlayer, SPTPlayerFeature, SPTUIPresentationService, SPTURIDispatchService, SPTVideoFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTBannerFeature, SPTCarModeEngineService, SPTContainerService, SPTContainerUIService, SPTDebugService, SPTPlayer, SPTPlayerFeature, SPTUIPresentationService, SPTURIDispatchService, SPTVideoFeature;
 
 @interface SPTVideoCoordinatorServiceImplementation : NSObject <SPTVideoCoordinatorService>
 {
@@ -18,7 +18,7 @@
     id <CosmosFeature> _cosmosService;
     id <SPTBannerFeature> _bannerFeature;
     id <SPTContainerUIService> _containerUIService;
-    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
+    id <SPTCarModeEngineService> _carModeEngineService;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTUIPresentationService> _presentationService;
     id <SPTContainerService> _containerService;
@@ -34,6 +34,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoCoordinatorFeatureFlags *flags; // @synthesize flags=_flags;
 @property(retain, nonatomic) SPTVideoPreferredSubtitleMessageFactory *preferredSubtitleMessageFactory; // @synthesize preferredSubtitleMessageFactory=_preferredSubtitleMessageFactory;
 @property(retain, nonatomic) SPTVideoSubtitleProvider *subtitleProvider; // @synthesize subtitleProvider=_subtitleProvider;
@@ -46,13 +47,12 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
-@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
+@property(nonatomic) __weak id <SPTCarModeEngineService> carModeEngineService; // @synthesize carModeEngineService=_carModeEngineService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTBannerFeature> bannerFeature; // @synthesize bannerFeature=_bannerFeature;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTVideoFeature> videoService; // @synthesize videoService=_videoService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
-- (void).cxx_destruct;
 - (void)registerContextMenuActionWithCosmosSender:(id)arg1;
 - (void)removeVideoPlaybackEventObserver:(id)arg1;
 - (void)addVideoPlaybackEventObserver:(id)arg1;

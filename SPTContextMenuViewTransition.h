@@ -24,13 +24,13 @@
     struct CGRect _originalFromViewControllerFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGRect originalFromViewControllerFrame; // @synthesize originalFromViewControllerFrame=_originalFromViewControllerFrame;
 @property(nonatomic) struct CGPoint lastKnownVelocity; // @synthesize lastKnownVelocity=_lastKnownVelocity;
 @property(nonatomic) struct CGPoint lastKnownTranslation; // @synthesize lastKnownTranslation=_lastKnownTranslation;
 @property(retain, nonatomic) id <UIViewControllerContextTransitioning> transitionContext; // @synthesize transitionContext=_transitionContext;
 @property(nonatomic, getter=isInteractive) _Bool interactive; // @synthesize interactive=_interactive;
 @property(nonatomic, getter=isPresenting) _Bool presenting; // @synthesize presenting=_presenting;
-- (void).cxx_destruct;
 - (void)cancelInteractiveTransition;
 - (void)finishInteractiveTransition;
 - (void)updateInteractiveTransition:(double)arg1;

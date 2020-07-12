@@ -25,6 +25,7 @@
     double _safeAreaMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double safeAreaMargin; // @synthesize safeAreaMargin=_safeAreaMargin;
 @property(retain, nonatomic) NSLayoutConstraint *closeButtonTrailingConstraint; // @synthesize closeButtonTrailingConstraint=_closeButtonTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewMarginConstraint; // @synthesize imageViewMarginConstraint=_imageViewMarginConstraint;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) GLUELabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(readonly, nonatomic) UIView *actionView; // @synthesize actionView=_actionView;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)applyThemeLayout;
 - (void)actionButtonTapped;

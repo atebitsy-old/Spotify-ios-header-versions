@@ -14,9 +14,9 @@
     NSArray *_items;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(readonly, nonatomic) SPTFeatureSettingsPage *page; // @synthesize page=_page;
-- (void).cxx_destruct;
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;
 - (void)hasOverrideChangedForItem:(id)arg1 withChange:(id)arg2;

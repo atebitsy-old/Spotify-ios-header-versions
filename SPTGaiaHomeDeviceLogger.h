@@ -13,8 +13,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (id)intentForPlaybackTransferSource:(unsigned long long)arg1;
 - (id)pageUriForSource:(unsigned long long)arg1;
 - (id)pageIdentifierForSource:(unsigned long long)arg1;

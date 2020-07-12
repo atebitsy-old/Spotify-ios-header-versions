@@ -22,6 +22,7 @@
     SPTPodcastFollowSectionViewModel *_followSectionViewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastFollowSectionViewModel *followSectionViewModel; // @synthesize followSectionViewModel=_followSectionViewModel;
 @property(retain, nonatomic) GLUEContextMenuAccessoryButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(retain, nonatomic) SPTPodcastFollowButton *followButton; // @synthesize followButton=_followButton;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) UISelectionFeedbackGenerator *followFeedbackGenerator; // @synthesize followFeedbackGenerator=_followFeedbackGenerator;
-- (void).cxx_destruct;
 - (void)updateFollowedButtonState:(_Bool)arg1;
 - (void)contextMenuButtonTapped:(id)arg1;
 - (void)followButtonTapped:(id)arg1;

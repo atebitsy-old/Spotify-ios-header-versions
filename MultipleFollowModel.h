@@ -23,6 +23,7 @@
     SPTFollowFeatureProperties *_featureProperties;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFollowFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(retain, nonatomic) id <SPTFollowFeatureLogger> followFeatureLogger; // @synthesize followFeatureLogger=_followFeatureLogger;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSMutableDictionary *followModelsDictionary; // @synthesize followModelsDictionary=_followModelsDictionary;
 @property(retain, nonatomic) SPTFollowStateDataLoader *followStateDataLoader; // @synthesize followStateDataLoader=_followStateDataLoader;
 @property(retain, nonatomic) NSString *currentUsername; // @synthesize currentUsername=_currentUsername;
-- (void).cxx_destruct;
 - (void)followModel:(id)arg1 remoteFollowDataDidChange:(id)arg2;
 - (void)followModel:(id)arg1 updateDidFailWithError:(id)arg2;
 - (void)followModel:(id)arg1 followDataDidChange:(id)arg2;

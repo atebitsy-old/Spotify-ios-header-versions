@@ -26,6 +26,7 @@
     SPTFreeTierPlaylistLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPodcastCellStateFactory> cellStateFactory; // @synthesize cellStateFactory=_cellStateFactory;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> cellProviderDelegate; // @synthesize cellProviderDelegate=_cellProviderDelegate;
-- (void).cxx_destruct;
 - (void)playButtonTapped:(id)arg1;
 - (void)offlineAccessoryButtonTapped:(id)arg1;
 - (void)didSelectHeaderForCell:(id)arg1 atIndexPath:(id)arg2;
@@ -48,7 +48,7 @@
 - (double)heightForRowAtIndexPath:(id)arg1;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
-- (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (id)base64EncodedContext:(id)arg1;
 - (void)displayEntityViewForEpisdoeAtIndexPath:(id)arg1;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;

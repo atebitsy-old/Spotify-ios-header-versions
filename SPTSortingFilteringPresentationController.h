@@ -16,9 +16,9 @@
     SPTSortingFilteringGLUETheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSortingFilteringGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTSortingFilteringPresentationControllerDelegate> presentationControllerDelegate; // @synthesize presentationControllerDelegate;
-- (void).cxx_destruct;
 - (void)onTapGesture:(id)arg1;
 - (void)containerViewDidLayoutSubviews;
 - (void)containerViewWillLayoutSubviews;

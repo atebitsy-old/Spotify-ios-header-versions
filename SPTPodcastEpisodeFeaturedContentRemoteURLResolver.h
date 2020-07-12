@@ -20,12 +20,12 @@
     NSDateFormatter *_dateFormatter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDateFormatter *dateFormatter; // @synthesize dateFormatter=_dateFormatter;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) unsigned long long limit; // @synthesize limit=_limit;
 @property(readonly, nonatomic) NSString *spaceName; // @synthesize spaceName=_spaceName;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 - (id)dateFormatterZeroTime;
 - (id)resolveContentURL;
 - (id)initWithEpisodeURL:(id)arg1 spaceName:(id)arg2 limit:(unsigned long long)arg3 productState:(id)arg4;

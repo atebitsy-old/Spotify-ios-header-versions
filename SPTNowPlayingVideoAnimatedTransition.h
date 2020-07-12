@@ -17,10 +17,10 @@
     UIWindow *_screenshotWindow;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIWindow *screenshotWindow; // @synthesize screenshotWindow=_screenshotWindow;
 @property(readonly, nonatomic) UIView *screenshotView; // @synthesize screenshotView=_screenshotView;
 @property(readonly, nonatomic, getter=isPresenting) _Bool presenting; // @synthesize presenting=_presenting;
-- (void).cxx_destruct;
 - (void)animateTransition:(id)arg1;
 - (double)transitionDuration:(id)arg1;
 - (void)dealloc;

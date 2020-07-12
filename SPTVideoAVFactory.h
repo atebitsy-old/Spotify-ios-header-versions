@@ -13,8 +13,8 @@
     id <BMKVOControllerFactory> _kvoControllerFactory;
 }
 
-@property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
 - (id)playerLooperWithPlayer:(id)arg1;
 - (id)playerItemWithAsset:(id)arg1;
 - (id)player;

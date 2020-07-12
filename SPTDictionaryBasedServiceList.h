@@ -17,10 +17,10 @@
     NSDictionary *_parents;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *parents; // @synthesize parents=_parents;
 @property(copy, nonatomic) NSDictionary *serviceClassesByScope; // @synthesize serviceClassesByScope=_serviceClassesByScope;
 @property(readonly, nonatomic) NSArray *scopes; // @synthesize scopes=_scopes;
-- (void).cxx_destruct;
 - (id)readConfiguration:(id)arg1;
 - (id)serviceClassesForScope:(id)arg1;
 - (id)parentScopeForScope:(id)arg1;

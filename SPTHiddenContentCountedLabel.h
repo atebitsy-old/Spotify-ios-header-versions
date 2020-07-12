@@ -22,6 +22,7 @@
 }
 
 + (id)countedLabelWithText:(id)arg1 accessibilityFormat:(id)arg2 accessibilityIdentifier:(id)arg3 theme:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *stackViewBottomInsetConstraint; // @synthesize stackViewBottomInsetConstraint=_stackViewBottomInsetConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *stackViewTopInsetConstraint; // @synthesize stackViewTopInsetConstraint=_stackViewTopInsetConstraint;
 @property(retain, nonatomic) NSNumberFormatter *countFormatter; // @synthesize countFormatter=_countFormatter;
@@ -31,7 +32,6 @@
 @property(copy, nonatomic) NSString *accessibilityFormat; // @synthesize accessibilityFormat=_accessibilityFormat;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) long long count; // @synthesize count=_count;
-- (void).cxx_destruct;
 - (long long)accessibilityNavigationStyle;
 - (id)accessibilityLabel;
 - (_Bool)isAccessibilityElement;

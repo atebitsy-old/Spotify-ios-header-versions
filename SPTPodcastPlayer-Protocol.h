@@ -11,6 +11,7 @@
 
 @protocol SPTPodcastPlayer <NSObject>
 @property(readonly, nonatomic, getter=isPaused) _Bool paused;
+@property(readonly, nonatomic) _Bool isMusicInjectionTrack;
 @property(readonly, nonatomic) _Bool isPlayingPodcastEpisode;
 @property(readonly, nonatomic) double currentTrackDuration;
 @property(readonly, nonatomic) double currentTrackPosition;

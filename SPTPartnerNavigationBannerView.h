@@ -32,6 +32,7 @@
     GLUEButton *_moreOptionsButton;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEButton *moreOptionsButton; // @synthesize moreOptionsButton=_moreOptionsButton;
 @property(readonly, nonatomic) UICollectionView *integrationListView; // @synthesize integrationListView=_integrationListView;
 @property(readonly, nonatomic) UIView *separatorView; // @synthesize separatorView=_separatorView;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) UIStackView *textStackView; // @synthesize textStackView=_textStackView;
 @property(readonly, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) SPTPartnerNavigationBannerViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (long long)numberOfSectionsInCollectionView:(id)arg1;

@@ -19,11 +19,11 @@
     unsigned long long _limit;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long limit; // @synthesize limit=_limit;
 @property(readonly, nonatomic) unsigned long long offset; // @synthesize offset=_offset;
 @property(readonly, copy, nonatomic) NSString *drilldownEntityType; // @synthesize drilldownEntityType=_drilldownEntityType;
 @property(readonly, nonatomic) SPTSearch2RequestParametersProvider *parametersProvider; // @synthesize parametersProvider=_parametersProvider;
-- (void).cxx_destruct;
 - (_Bool)isDrillDown;
 @property(readonly, nonatomic) id <SPTSearch2URLProviding> nextPageURLProvider;
 @property(readonly, nonatomic) unsigned long long responseFormat;

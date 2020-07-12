@@ -16,8 +16,8 @@
     id <SPTPermissionsOnDemandState> _onDemandState;
 }
 
-@property(retain, nonatomic) id <SPTPermissionsOnDemandState> onDemandState; // @synthesize onDemandState=_onDemandState;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPermissionsOnDemandState> onDemandState; // @synthesize onDemandState=_onDemandState;
 - (void)onDemandStateDidChange;
 - (void)dealloc;
 - (void)removeObserver;

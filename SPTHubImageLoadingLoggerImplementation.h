@@ -16,8 +16,8 @@
     id <SPTViewLogger> _viewLogger;
 }
 
-@property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 - (void)imageLoader:(id)arg1 didFailLoadingImageWithURI:(id)arg2;
 - (void)imageLoader:(id)arg1 didFinishLoadingImageWithURI:(id)arg2;
 - (void)imageLoader:(id)arg1 didBeginLoadingImageWithURI:(id)arg2;

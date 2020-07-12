@@ -28,6 +28,7 @@
     GLUEImageView *_subtitleImageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEImageView *subtitleImageView; // @synthesize subtitleImageView=_subtitleImageView;
 @property(retain, nonatomic) GLUEImageView *mainImageView; // @synthesize mainImageView=_mainImageView;
 @property(readonly, nonatomic) UIColor *subtitleIconColour; // @synthesize subtitleIconColour=_subtitleIconColour;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) long long imageViewIcon; // @synthesize imageViewIcon=_imageViewIcon;
 @property(nonatomic) long long subtitleAccessoryIcon; // @synthesize subtitleAccessoryIcon=_subtitleAccessoryIcon;
-- (void).cxx_destruct;
 - (void)calculateSubtitleAccessoryIconImage;
 @property(readonly, nonatomic) long long visualState;
 - (void)didTapAccessoryButton:(id)arg1;

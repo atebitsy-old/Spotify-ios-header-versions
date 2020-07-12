@@ -30,6 +30,7 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) SPTGaiaSocialListeningIntegrationManager *socialListeningManager; // @synthesize socialListeningManager=_socialListeningManager;
 @property(readonly, nonatomic) long long appearanceRules; // @synthesize appearanceRules=_appearanceRules;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) __weak id <SPTGaiaDevicesAvailableViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)socialListeningIntegrationManagerUpdated:(id)arg1;
 - (void)dealloc;
 - (id)inactiveFontColor;

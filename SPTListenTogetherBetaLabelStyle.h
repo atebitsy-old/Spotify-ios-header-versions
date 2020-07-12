@@ -19,12 +19,12 @@
     GLUELabelStyle *_labelStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *labelStyle; // @synthesize labelStyle=_labelStyle;
 @property(nonatomic) double verticalPadding; // @synthesize verticalPadding=_verticalPadding;
 @property(nonatomic) double horizontalPadding; // @synthesize horizontalPadding=_horizontalPadding;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToListenTogetherBetaLabelStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

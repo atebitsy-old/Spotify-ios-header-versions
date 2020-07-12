@@ -17,9 +17,9 @@
     id <SPTFreeTierPersistentCounter> _persistentCounter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
 @property(retain, nonatomic) id <SPTSnackbarPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
-- (void).cxx_destruct;
 - (_Bool)isSnackbarPresentationInProgress;
 - (_Bool)shouldSkipPresentation;
 - (void)presentSnackbarWithIdentifier:(id)arg1 message:(id)arg2 actionButtonTitle:(id)arg3 maxNumberOfTimes:(unsigned long long)arg4 skipFirstNTimes:(unsigned long long)arg5 actionBlock:(CDUnknownBlockType)arg6;

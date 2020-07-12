@@ -24,6 +24,7 @@
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(retain, nonatomic) SPTNowPlayingHorizontalVideoProvider *horizontalVideoProvider; // @synthesize horizontalVideoProvider=_horizontalVideoProvider;
 @property(retain, nonatomic) SPTNowPlayingCoverArtProvider *coverArtProvider; // @synthesize coverArtProvider=_coverArtProvider;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> glueImageLoaderFactory; // @synthesize glueImageLoaderFactory=_glueImageLoaderFactory;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)registerHorizontalVideoProvider;
 - (void)registerCoverArtProvider;
 - (id)initWithModel:(id)arg1 glueImageLoaderFactory:(id)arg2 theme:(id)arg3 videoSurfaceManager:(id)arg4 surfaceFactory:(id)arg5 nowPlayingVideoManager:(id)arg6 contentLayerViewModel:(id)arg7 shareDragDelegateFactory:(id)arg8;

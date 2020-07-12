@@ -20,10 +20,10 @@
 
 + (id)recentlyPlayedTracksPolicy;
 + (id)identifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 @property(retain, nonatomic) SPTAssistedCurationCardModelImplementation *currentCard; // @synthesize currentCard=_currentCard;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)tracksFromResponseDictionary:(id)arg1;
 - (void)fetchTrackWithCompletion:(CDUnknownBlockType)arg1;
 - (void)provideCardsForCurrentTracks:(id)arg1 andContextName:(id)arg2;

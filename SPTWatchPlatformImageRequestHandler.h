@@ -19,11 +19,11 @@
     id <SPTExternalIntegrationContentController> _contextResolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationContentController> contextResolver; // @synthesize contextResolver=_contextResolver;
 @property(readonly, nonatomic) __weak SPTWatchConnectivitySession *watchConnectivitySession; // @synthesize watchConnectivitySession=_watchConnectivitySession;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (struct CGSize)pointSizeFromPixelSize:(struct CGSize)arg1;
 - (void)handleImageRequest:(id)arg1 imageURIString:(id)arg2 fileName:(id)arg3;
 - (_Bool)handleResolveContextRequest:(id)arg1;

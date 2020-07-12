@@ -43,6 +43,7 @@
     double _lastVisibleWidth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double lastVisibleWidth; // @synthesize lastVisibleWidth=_lastVisibleWidth;
 @property(retain, nonatomic) NSMutableSet *visibleCardIdentifiers; // @synthesize visibleCardIdentifiers=_visibleCardIdentifiers;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
@@ -62,7 +63,6 @@
 @property(retain, nonatomic) UIView *additionalSubtitleView; // @synthesize additionalSubtitleView=_additionalSubtitleView;
 @property(retain, nonatomic) SPTAssistedCurationSearchButton *searchActionButton; // @synthesize searchActionButton=_searchActionButton;
 @property(nonatomic) __weak id <SPTAssistedCurationViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (unsigned long long)preferredNavigationBarState;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

@@ -20,11 +20,11 @@
     SPTPlayerState *_playerState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) id <SPTHubComponentModelURIResolver> componentModelURIResolver; // @synthesize componentModelURIResolver=_componentModelURIResolver;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)recursivelyUpdatePlaybackHighlightForComponentModelBuilder:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

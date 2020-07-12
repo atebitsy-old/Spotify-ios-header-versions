@@ -16,10 +16,10 @@
     NSString *_locale;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *locale; // @synthesize locale=_locale;
 @property(retain, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (id)endpointForFindWithFreeTierEnabled:(_Bool)arg1;
 - (id)endpointForFind;
 - (id)endpointForFreeTierFind;

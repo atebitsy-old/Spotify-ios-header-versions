@@ -37,6 +37,7 @@
     UIStackView *_subheaderContainerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIStackView *subheaderContainerView; // @synthesize subheaderContainerView=_subheaderContainerView;
 @property(retain, nonatomic) UIView *headerContainerView; // @synthesize headerContainerView=_headerContainerView;
 @property(retain, nonatomic) UIView *mainActionContainerView; // @synthesize mainActionContainerView=_mainActionContainerView;
@@ -59,7 +60,6 @@
 @property(readonly, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILabel *statusLabel; // @synthesize statusLabel=_statusLabel;
-- (void).cxx_destruct;
 - (void)applyStateStyle:(id)arg1;
 @property(copy, nonatomic) NSString *descriptionText;
 - (double)progressViewHeight;

@@ -30,6 +30,7 @@
     unsigned long long _subtitleType;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long subtitleType; // @synthesize subtitleType=_subtitleType;
 @property(nonatomic, getter=isLocalTrack) _Bool localTrack; // @synthesize localTrack=_localTrack;
 @property(copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
@@ -45,7 +46,6 @@
 @property(nonatomic) __weak id <SPTCollectionSongItemPlaying> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) long long trackRowRestriction; // @synthesize trackRowRestriction=_trackRowRestriction;
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly; // @synthesize premiumOnly=_premiumOnly;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *loggingContext;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 - (void)action;

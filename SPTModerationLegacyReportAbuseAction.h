@@ -14,9 +14,9 @@
     SPTModerationLegacyReportAbuseManager *_reportAbuseManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTModerationLegacyReportAbuseManager *reportAbuseManager; // @synthesize reportAbuseManager=_reportAbuseManager;
 @property(retain, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)style;
 - (id)logEventName;

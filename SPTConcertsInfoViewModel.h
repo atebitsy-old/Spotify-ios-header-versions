@@ -16,9 +16,9 @@
     long long _state;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long state; // @synthesize state=_state;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (void)entityViewModel:(id)arg1 didTransitionToState:(long long)arg2 fromState:(long long)arg3;
 @property(readonly, nonatomic) long long defaultType;
 @property(readonly, nonatomic) _Bool shouldShowCustomText;

@@ -13,8 +13,8 @@
     UIView *_canvasView;
 }
 
-@property(retain, nonatomic) UIView *canvasView; // @synthesize canvasView=_canvasView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *canvasView; // @synthesize canvasView=_canvasView;
 
 @end
 

@@ -21,12 +21,12 @@
     id <SPTOfflineModeState> _offlineState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) _Bool offline; // @synthesize offline=_offline;
 @property(nonatomic) __weak id <SPTYourLibraryMusicExternalSortDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)sortRule;
 - (void)dealloc;

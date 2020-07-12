@@ -26,6 +26,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(retain, nonatomic) id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(nonatomic) __weak id <SPTAssistedCurationService> assistedCurationService; // @synthesize assistedCurationService=_assistedCurationService;
@@ -36,7 +37,6 @@
 @property(nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(retain, nonatomic) SPTAssistedCurationSearchResultDrillDownHubManager *hubManager; // @synthesize hubManager=_hubManager;
-- (void).cxx_destruct;
 - (id)provideGLUEImageLoader;
 - (id)provideAssistedCurationTheme;
 - (void)configureMasterFeatureFlag:(id)arg1;

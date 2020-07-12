@@ -18,10 +18,10 @@
     id <SPTFeedbackManager> _feedbackManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeedbackManager> feedbackManager; // @synthesize feedbackManager=_feedbackManager;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) id <SPTFormatListPlatformRemoteControlPolicyManager> formatListPlatformRemoteControlPolicyManager; // @synthesize formatListPlatformRemoteControlPolicyManager=_formatListPlatformRemoteControlPolicyManager;
-- (void).cxx_destruct;
 - (id)initWithFormatListPlatformRemoteControlPolicyManager:(id)arg1 playlistModel:(id)arg2 feedbackManager:(id)arg3;
 - (id)createFeedbackManagerForViewURL:(id)arg1;
 

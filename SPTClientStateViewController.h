@@ -31,6 +31,7 @@
     UITapGestureRecognizer *_tapGestureRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(retain, nonatomic) NSArray *cellReuseIdentifiers; // @synthesize cellReuseIdentifiers=_cellReuseIdentifiers;
 @property(retain, nonatomic) UIViewController *clientStateViewController; // @synthesize clientStateViewController=_clientStateViewController;
@@ -46,7 +47,6 @@
 @property(retain, nonatomic) UISwitch *focusSwitch; // @synthesize focusSwitch=_focusSwitch;
 @property(retain, nonatomic) UITableView *stateConfigTableView; // @synthesize stateConfigTableView=_stateConfigTableView;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
-- (void).cxx_destruct;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 titleForHeaderInSection:(long long)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

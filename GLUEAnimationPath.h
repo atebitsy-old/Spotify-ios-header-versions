@@ -32,9 +32,9 @@
 + (id)heartDeselection;
 + (id)heartSelectionPride;
 + (id)heartSelection;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSBundle *bundle; // @synthesize bundle=_bundle;
 @property(readonly, copy, nonatomic) NSString *animationName; // @synthesize animationName=_animationName;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

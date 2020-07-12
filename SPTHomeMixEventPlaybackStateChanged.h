@@ -14,9 +14,9 @@
     SPTPlayerState *_nextState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPlayerState *nextState; // @synthesize nextState=_nextState;
 @property(readonly, nonatomic) SPTPlayerState *prevState; // @synthesize prevState=_prevState;
-- (void).cxx_destruct;
 - (id)initWithPrevState:(id)arg1 nextState:(id)arg2;
 
 @end

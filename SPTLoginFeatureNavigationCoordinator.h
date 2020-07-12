@@ -17,9 +17,9 @@
     SPTSignupAttemptTrackerImplementation *_signupAttemptTracker;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSignupAttemptTrackerImplementation *signupAttemptTracker; // @synthesize signupAttemptTracker=_signupAttemptTracker;
 @property(readonly, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
-- (void).cxx_destruct;
 - (void)openIntentLedStartScreen:(unsigned long long)arg1;
 - (void)openMethodLedStartScreen:(unsigned long long)arg1;
 - (void)openPhoneNumberScreen;

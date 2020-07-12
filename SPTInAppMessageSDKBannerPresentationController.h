@@ -31,6 +31,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(copy, nonatomic) NSString *triggerType; // @synthesize triggerType=_triggerType;
 @property(copy, nonatomic) NSString *matchedPattern; // @synthesize matchedPattern=_matchedPattern;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessageViewModel> messageViewModel; // @synthesize messageViewModel=_messageViewModel;
 @property(nonatomic, getter=isPresentingBanner) _Bool presentingBanner; // @synthesize presentingBanner=_presentingBanner;
-- (void).cxx_destruct;
 - (void)logMessageDiscardedWithReason:(id)arg1;
 - (_Bool)canPresentBanner;
 - (void)dismiss;

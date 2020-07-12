@@ -24,6 +24,7 @@
     SPTGaiaConnectDevice *_deviceShowingEducationTooltip;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaConnectDevice *deviceShowingEducationTooltip; // @synthesize deviceShowingEducationTooltip=_deviceShowingEducationTooltip;
 @property(readonly, nonatomic) SPTCastManager *castManager; // @synthesize castManager=_castManager;
 @property(readonly, nonatomic) SPTGaiaHomeDeviceLogger *logger; // @synthesize logger=_logger;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) SPTGaiaHomeDeviceManager *homeDeviceManager; // @synthesize homeDeviceManager=_homeDeviceManager;
 @property(readonly, nonatomic) id <SPTGaiaHomeDeviceFlagsProvider> homeDeviceFlagProvider; // @synthesize homeDeviceFlagProvider=_homeDeviceFlagProvider;
 @property(nonatomic) __weak id <SPTGaiaHomeDeviceTooltipManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didClearHomeDeviceWithId:(id)arg1;
 - (void)homeDeviceEducationCellForDevice:(id)arg1 didChangeSwitch:(_Bool)arg2 revertBlock:(CDUnknownBlockType)arg3;
 - (void)homeDeviceEducationCellDidPressCloseForDevice:(id)arg1;

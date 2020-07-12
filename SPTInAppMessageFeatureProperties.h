@@ -14,8 +14,20 @@
 {
     _Bool _inappSdkConsumerEnabled;
     _Bool _inappLegacyFeatureEnabled;
+    _Bool _inappCardFormatEnabled;
+    _Bool _inappBannerFormatEnabled;
+    _Bool _inappNoteFormatEnabled;
+    _Bool _inappNavigationTriggerEnabled;
+    _Bool _inappPlayerEventTriggerEnabled;
+    _Bool _inappClientEventTriggerEnabled;
 }
 
+@property(readonly, nonatomic) _Bool inappClientEventTriggerEnabled; // @synthesize inappClientEventTriggerEnabled=_inappClientEventTriggerEnabled;
+@property(readonly, nonatomic) _Bool inappPlayerEventTriggerEnabled; // @synthesize inappPlayerEventTriggerEnabled=_inappPlayerEventTriggerEnabled;
+@property(readonly, nonatomic) _Bool inappNavigationTriggerEnabled; // @synthesize inappNavigationTriggerEnabled=_inappNavigationTriggerEnabled;
+@property(readonly, nonatomic) _Bool inappNoteFormatEnabled; // @synthesize inappNoteFormatEnabled=_inappNoteFormatEnabled;
+@property(readonly, nonatomic) _Bool inappBannerFormatEnabled; // @synthesize inappBannerFormatEnabled=_inappBannerFormatEnabled;
+@property(readonly, nonatomic) _Bool inappCardFormatEnabled; // @synthesize inappCardFormatEnabled=_inappCardFormatEnabled;
 @property(readonly, nonatomic) _Bool inappLegacyFeatureEnabled; // @synthesize inappLegacyFeatureEnabled=_inappLegacyFeatureEnabled;
 @property(readonly, nonatomic) _Bool inappSdkConsumerEnabled; // @synthesize inappSdkConsumerEnabled=_inappSdkConsumerEnabled;
 - (id)propertyModels;

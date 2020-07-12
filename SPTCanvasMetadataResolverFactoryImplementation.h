@@ -17,9 +17,9 @@
     id <SPTCanvasTrackChecker> _canvasTrackChecker;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
 @property(readonly, nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
-- (void).cxx_destruct;
 - (id)createResolverForTracks:(id)arg1;
 - (id)initWithCosmosFeature:(id)arg1 canvasTrackChecker:(id)arg2;
 

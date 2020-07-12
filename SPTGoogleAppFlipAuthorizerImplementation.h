@@ -17,9 +17,9 @@
     id <SPTGoogleAppFlipURIManager> _uriManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTGoogleAppFlipURIManager> uriManager; // @synthesize uriManager=_uriManager;
 @property(readonly, nonatomic) __weak id <SPTAuthController> authController; // @synthesize authController=_authController;
-- (void).cxx_destruct;
 - (_Bool)handleAuthResponse:(id)arg1 withAuthenticationResult:(_Bool)arg2 redirectURI:(id)arg3 state:(id)arg4;
 - (void)performAuthenticationWithClientID:(id)arg1 scopes:(id)arg2 sourceApplication:(id)arg3 redirectURL:(id)arg4 state:(id)arg5;
 - (id)initWithAuthController:(id)arg1 uriManager:(id)arg2;

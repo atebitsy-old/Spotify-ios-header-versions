@@ -15,8 +15,8 @@
     NSUserDefaults *_userDefaults;
 }
 
-@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (id)objectForKey:(id)arg1;
 - (void)setObject:(id)arg1 forKey:(id)arg2;
 - (id)initWithUserDefaults:(id)arg1;

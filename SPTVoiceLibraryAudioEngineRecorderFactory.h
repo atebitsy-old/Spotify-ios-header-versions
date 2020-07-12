@@ -24,6 +24,7 @@
     AVAudioFormat *_audioFormatPCM16;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) AVAudioFormat *audioFormatPCM16; // @synthesize audioFormatPCM16=_audioFormatPCM16;
 @property(retain, nonatomic) AVAudioInputNode *inputNode; // @synthesize inputNode=_inputNode;
 @property(retain, nonatomic) AVAudioEngine *audioEngine; // @synthesize audioEngine=_audioEngine;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *delegateQueue; // @synthesize delegateQueue=_delegateQueue;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *audioSetupQueue; // @synthesize audioSetupQueue=_audioSetupQueue;
 @property(readonly, nonatomic) double sampleRate; // @synthesize sampleRate=_sampleRate;
-- (void).cxx_destruct;
 - (void)configurationChangeNotification:(id)arg1;
 - (void)notifyError:(id)arg1;
 - (void)notifyErrorWithStatusCode:(int)arg1 description:(id)arg2;

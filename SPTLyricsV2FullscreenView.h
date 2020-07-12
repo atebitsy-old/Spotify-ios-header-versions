@@ -37,6 +37,7 @@
     NSLayoutConstraint *_footerViewTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *footerViewTrailingConstraint; // @synthesize footerViewTrailingConstraint=_footerViewTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *footerViewLeadingConstraint; // @synthesize footerViewLeadingConstraint=_footerViewLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *footerViewBottomConstraint; // @synthesize footerViewBottomConstraint=_footerViewBottomConstraint;
@@ -62,7 +63,6 @@
 @property(readonly, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(readonly, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (double)bottomMargin;
 - (double)topMargin;
 - (void)glue_applyStyle:(id)arg1;

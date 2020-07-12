@@ -16,9 +16,9 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) NSMutableArray *registrations; // @synthesize registrations=_registrations;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)barButtonItemsForPageController:(id)arg1 continuation:(CDUnknownBlockType)arg2;

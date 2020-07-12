@@ -25,6 +25,7 @@
     id <SPTEncoreAlbumHeaderFactory> _encoreComponentFactory;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool encoreAlbumHeaderEnabled; // @synthesize encoreAlbumHeaderEnabled=_encoreAlbumHeaderEnabled;
 @property(retain, nonatomic) id <SPTEncoreAlbumHeaderFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic, getter=isVisualRefreshAnimatedHeartEnabled) _Bool visualRefreshAnimatedHeartEnabled; // @synthesize visualRefreshAnimatedHeartEnabled=_visualRefreshAnimatedHeartEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshGreenButtonEnabled) _Bool visualRefreshGreenButtonEnabled; // @synthesize visualRefreshGreenButtonEnabled=_visualRefreshGreenButtonEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshHeaderEnabled) _Bool visualRefreshHeaderEnabled; // @synthesize visualRefreshHeaderEnabled=_visualRefreshHeaderEnabled;
-- (void).cxx_destruct;
 - (_Bool)hasOverrideForComponentId:(id)arg1;
 - (id)overriddenComponentRegistryFromRegistry:(id)arg1 sptTheme:(id)arg2 contextMenuButtonViewModel:(id)arg3 feedbackButtonViewModel:(id)arg4 offlineButtonViewModel:(id)arg5 viewController:(id)arg6 headerType:(unsigned long long)arg7;
 - (void)viewDidDisappear;

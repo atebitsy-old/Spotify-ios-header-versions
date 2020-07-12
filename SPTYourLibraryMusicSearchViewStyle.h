@@ -21,13 +21,13 @@
     struct UIEdgeInsets _padding;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double itemSpacing; // @synthesize itemSpacing=_itemSpacing;
 @property(nonatomic) struct UIEdgeInsets padding; // @synthesize padding=_padding;
 @property(copy, nonatomic) UIColor *cancelButtonTextColor; // @synthesize cancelButtonTextColor=_cancelButtonTextColor;
 @property(copy, nonatomic) UIFont *cancelButtonFont; // @synthesize cancelButtonFont=_cancelButtonFont;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(copy, nonatomic) id <SPTSortingFilteringSearchFieldStyle> searchFieldStyle; // @synthesize searchFieldStyle=_searchFieldStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

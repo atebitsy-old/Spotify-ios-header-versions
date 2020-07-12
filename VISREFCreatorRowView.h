@@ -18,12 +18,12 @@
 }
 
 + (void)updateLabelsAttributedText:(id)arg1 withCreators:(id)arg2 availableWidth:(double)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *textLabelLeadingConstraint; // @synthesize textLabelLeadingConstraint=_textLabelLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *textLabelImageLeadingConstraint; // @synthesize textLabelImageLeadingConstraint=_textLabelImageLeadingConstraint;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(copy, nonatomic) NSArray *creators; // @synthesize creators=_creators;
-- (void).cxx_destruct;
 - (id)lastBaselineAnchor;
 - (id)firstLineHeightAnchor;
 - (void)updateCreatorsLabelText;

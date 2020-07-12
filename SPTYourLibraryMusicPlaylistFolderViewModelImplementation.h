@@ -28,6 +28,7 @@
     SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
 @property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringPickerFactory; // @synthesize sortingFilteringPickerFactory=_sortingFilteringPickerFactory;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsModel> model; // @synthesize model=_model;
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter;
 @property(nonatomic) __weak id <SPTYourLibraryMusicPlaylistsViewModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)playlistsModel:(id)arg1 error:(id)arg2;
 - (void)playlistsModel:(id)arg1 didUpdateEntity:(id)arg2;
 - (id)modelItemEntityAtIndexPath:(id)arg1;

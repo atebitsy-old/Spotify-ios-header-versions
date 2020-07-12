@@ -21,6 +21,7 @@
     NSString *_contextName;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *contextName; // @synthesize contextName=_contextName;
 @property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 @property(readonly, nonatomic) NSArray *hiddenTracks; // @synthesize hiddenTracks=_hiddenTracks;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) NSArray *sections; // @synthesize sections=_sections;
 @property(readonly, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) id <SPTQueueTrack> playingTrack; // @synthesize playingTrack=_playingTrack;
-- (void).cxx_destruct;
 - (id)description;
 - (id)serializedDictionary;
 - (_Bool)isEqual:(id)arg1;

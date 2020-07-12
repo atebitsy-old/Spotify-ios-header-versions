@@ -28,6 +28,7 @@
     NSMutableDictionary *_observedFeatureFlags;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *observedFeatureFlags; // @synthesize observedFeatureFlags=_observedFeatureFlags;
 @property(readonly, nonatomic) NSMutableDictionary *observedLocalSettings; // @synthesize observedLocalSettings=_observedLocalSettings;
 @property(readonly, nonatomic) NSArray *observedProductStateKeys; // @synthesize observedProductStateKeys=_observedProductStateKeys;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) _Bool noOfferCardEnabled; // @synthesize noOfferCardEnabled=_noOfferCardEnabled;
-- (void).cxx_destruct;
 - (void)notifyObserversOfLoad;
 - (void)notifyObserversOfChange;
 - (void)localSettingsDidChange:(id)arg1;

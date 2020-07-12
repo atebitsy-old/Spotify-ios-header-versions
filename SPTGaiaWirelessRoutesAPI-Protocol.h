@@ -10,12 +10,16 @@
 @protocol SPTGaiaWirelessRoutesObserver;
 
 @protocol SPTGaiaWirelessRoutesAPI <NSObject>
-@property(readonly, nonatomic) long long wirelessConnectionType;
-@property(readonly, copy, nonatomic) NSString *activeDeviceName;
-@property(readonly, nonatomic, getter=isActive) _Bool active;
-@property(readonly, nonatomic, getter=isAvailable) _Bool available;
 - (void)presentAirplayPicker;
 - (void)removeObserver:(id <SPTGaiaWirelessRoutesObserver>)arg1;
 - (void)addObserver:(id <SPTGaiaWirelessRoutesObserver>)arg1;
+@property(nonatomic, readonly) long long wirelessConnectionType;
+@property(nonatomic, readonly) NSString *activeDeviceName;
+- (_Bool)isActive;
+- (_Bool)isAvailable;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool active;
+@property(nonatomic, readonly) _Bool available;
 @end
 

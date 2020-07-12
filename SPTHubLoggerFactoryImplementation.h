@@ -18,10 +18,10 @@
     id <SPTUBIUserBehaviourInstrumentation> _userBehaviourInstrumentation;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(readonly, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)createLoadingLoggerWithPageIdentifier:(id)arg1 pageURI:(id)arg2;
 - (id)createInteractionLoggerWithFeatureIdentifier:(id)arg1 pageURI:(id)arg2;
 - (id)createImpressionLoggerWithFeatureIdentifier:(id)arg1 pageURI:(id)arg2 componentModelURIResolver:(id)arg3;

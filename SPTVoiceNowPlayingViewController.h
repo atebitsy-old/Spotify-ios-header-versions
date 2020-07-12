@@ -18,10 +18,10 @@
     SPTVoiceNowPlayingView *_nowPlayingContainerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVoiceNowPlayingView *nowPlayingContainerView; // @synthesize nowPlayingContainerView=_nowPlayingContainerView;
 @property(readonly, nonatomic) SPTVoiceNowPlayingViewModel *nowPlayingViewModel; // @synthesize nowPlayingViewModel=_nowPlayingViewModel;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)viewDidDisappear:(_Bool)arg1;

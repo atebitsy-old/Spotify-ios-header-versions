@@ -18,10 +18,10 @@
     NSOperationQueue *_onReadyQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSOperationQueue *onReadyQueue; // @synthesize onReadyQueue=_onReadyQueue;
 @property(nonatomic, getter=isReady) _Bool ready; // @synthesize ready=_ready;
 @property(readonly, nonatomic) __weak id <SPTResolver> resolver; // @synthesize resolver=_resolver;
-- (void).cxx_destruct;
 - (void)sendEventRequest:(id)arg1;
 - (void)logCollapseVideoAd:(id)arg1 atPlaybackPosition:(double)arg2;
 - (void)logExpandVideoAd:(id)arg1 atPlaybackPosition:(double)arg2;

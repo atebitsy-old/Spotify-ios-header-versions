@@ -15,7 +15,7 @@
 {
     // Error parsing type: , name: title
     // Error parsing type: , name: descriptionText
-    // Error parsing type: , name: podcastDescription
+    // Error parsing type: , name: rawDescription
     // Error parsing type: , name: publisher
     // Error parsing type: , name: url
     // Error parsing type: , name: latestPlayedEpisodeURL
@@ -45,6 +45,7 @@
 @property(nonatomic, copy) NSURL *latestPlayedEpisodeURL;
 @property(nonatomic, copy) NSURL *URL;
 @property(nonatomic, copy) NSString *publisher;
+@property(nonatomic, copy) NSString *rawDescription;
 @property(nonatomic, copy) NSString *descriptionText;
 @property(nonatomic, copy) NSString *title;
 

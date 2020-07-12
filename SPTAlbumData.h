@@ -32,6 +32,7 @@
     NSString *_windowedContentButtonURIString;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *windowedContentButtonURIString; // @synthesize windowedContentButtonURIString=_windowedContentButtonURIString;
 @property(readonly, copy, nonatomic) NSString *windowedContentButtonTitle; // @synthesize windowedContentButtonTitle=_windowedContentButtonTitle;
 @property(readonly, copy, nonatomic) NSString *windowedContentMessage; // @synthesize windowedContentMessage=_windowedContentMessage;
@@ -52,7 +53,6 @@
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSURL *artistImageURL;
 @property(readonly, copy, nonatomic) NSURL *artistURL;
 @property(readonly, copy, nonatomic) NSString *artistName;

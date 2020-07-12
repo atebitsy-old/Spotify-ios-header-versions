@@ -14,8 +14,8 @@
 }
 
 + (id)equalizerCurveWithValues:(id)arg1;
-@property(copy, nonatomic) NSDictionary *values; // @synthesize values=_values;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *values; // @synthesize values=_values;
 - (double)valueForFrequency:(double)arg1;
 - (void)setValue:(double)arg1 forFrequency:(double)arg2;
 - (id)initWithValues:(id)arg1;

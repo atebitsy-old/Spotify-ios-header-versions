@@ -17,9 +17,9 @@
     NSURL *_contextURI;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)addAssistedCurationEntityPrefixToSeeMoreURI:(id)arg1;
 - (id)addAssistedCurationEntityPrefixToEntityURI:(id)arg1;
 - (void)addSeeMoreDrillDownCommandModelInBodyComponentModelBuilder:(id)arg1;

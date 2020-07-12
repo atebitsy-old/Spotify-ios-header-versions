@@ -12,6 +12,7 @@
     // Error parsing type: , name: viewBinder
     // Error parsing type: , name: loopControllerConnected
     // Error parsing type: , name: swipeToDismissAttempted
+    // Error parsing type: , name: $__lazy_storage_$_currentMode
 }
 
 - (void).cxx_destruct;
@@ -19,6 +20,7 @@
 - (void)viewDidLoad;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+@property(nonatomic, readonly) long long preferredStatusBarStyle;
 - (void)dealloc;
 - (id)initWithCoder:(id)arg1;
 

@@ -13,8 +13,8 @@
     NSURL *_URI;
 }
 
-@property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 - (id)initWithURL:(id)arg1;
 
 @end

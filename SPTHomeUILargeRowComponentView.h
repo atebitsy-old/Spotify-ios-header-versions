@@ -24,11 +24,11 @@
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 + (id)attributedSubtitleForModel:(id)arg1 withStyle:(id)arg2;
 + (_Bool)shouldIncludeShuffleBadgeForModel:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) UILongPressGestureRecognizer *highlightGestureRecognizer; // @synthesize highlightGestureRecognizer=_highlightGestureRecognizer;
 @property(readonly, nonatomic) SPTHomeUILargeRowView *largeRow; // @synthesize largeRow=_largeRow;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (id)largeRowStyleWithContainerViewSize:(struct CGSize)arg1;
 - (void)applyThemeLayout;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;

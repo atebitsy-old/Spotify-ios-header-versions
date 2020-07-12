@@ -35,6 +35,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <_TtP22MarketingFormatFeature25SPTMarketingFormatService_> marketingFormatService; // @synthesize marketingFormatService=_marketingFormatService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
@@ -51,7 +52,6 @@
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTBrowseFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 - (CDUnknownBlockType)replaceRadioButtonTransformer;
 @property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;

@@ -19,12 +19,12 @@
     NSLayoutConstraint *_progressSliderExpandedHeight;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *progressSliderExpandedHeight; // @synthesize progressSliderExpandedHeight=_progressSliderExpandedHeight;
 @property(readonly, nonatomic) UILabel *advertisementLabel; // @synthesize advertisementLabel=_advertisementLabel;
 @property(readonly, nonatomic) SPTDrivingModeAdBarUpNextView *upNextView; // @synthesize upNextView=_upNextView;
 @property(readonly, nonatomic) SPTDrivingModeSliderView *progressSlider; // @synthesize progressSlider=_progressSlider;
 @property(readonly, nonatomic) SPTDrivingModeAdSliderDataSource *sliderDataSource; // @synthesize sliderDataSource=_sliderDataSource;
-- (void).cxx_destruct;
 - (void)trackMetadataDidFinishUpdating;
 - (void)trackMetadataDidMove:(_Bool)arg1;
 - (void)trackPositionDidChange;

@@ -23,6 +23,7 @@
     NSLayoutConstraint *_searchButtonToSearchBarConstraint;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *searchButtonToSearchBarConstraint; // @synthesize searchButtonToSearchBarConstraint=_searchButtonToSearchBarConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *searchButtonToMicrophoneConstraint; // @synthesize searchButtonToMicrophoneConstraint=_searchButtonToMicrophoneConstraint;
 @property(readonly, nonatomic) UIButton *microphoneButton; // @synthesize microphoneButton=_microphoneButton;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) __weak id <SPTFreeTierFindHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapMicrophoneButton;
 - (void)didTapSearchButton;
 - (double)headerMinimumHeight;

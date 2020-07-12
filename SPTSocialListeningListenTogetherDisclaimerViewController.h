@@ -24,6 +24,7 @@
     NSString *_name;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) GLUELabel *noteLabel; // @synthesize noteLabel=_noteLabel;
 @property(retain, nonatomic) GLUEButton *secondaryButton; // @synthesize secondaryButton=_secondaryButton;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTSocialListeningListenTogetherDisclaimerViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapSecondaryButton;
 - (void)didTapPrimaryButton;
 - (void)setTitleLabelText;

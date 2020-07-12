@@ -15,9 +15,9 @@
     id <GLUEImageLoader> _imageLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
-- (void).cxx_destruct;
 - (void)updateWithStyle:(id)arg1;
 - (void)updateLayout;
 - (void)traitCollectionDidChange:(id)arg1;

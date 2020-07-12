@@ -31,6 +31,7 @@
 }
 
 + (long long)offlineSyncStatusForSPTOfflineAvailability:(unsigned long long)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) long long offlineStatus; // @synthesize offlineStatus=_offlineStatus;
 @property(nonatomic) _Bool onDemand; // @synthesize onDemand=_onDemand;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
@@ -46,7 +47,6 @@
 @property(readonly, nonatomic) _Bool showCollectionQuickActions; // @synthesize showCollectionQuickActions=_showCollectionQuickActions;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) _Bool inCollection; // @synthesize inCollection=_inCollection;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isOfflineAvailable) _Bool offlineAvailable;
 @property(readonly, nonatomic, getter=isShuffle) _Bool isShuffle;
 @property(readonly, nonatomic) long long icon;

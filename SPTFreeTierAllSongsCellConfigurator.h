@@ -23,6 +23,7 @@
     SPTFreeTierAllSongsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierAllSongsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTFreeTierAllSongsContextMenuPresenter *contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(nonatomic) __weak id <SPTFreeTierAllSongsCellConfiguratorDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) double preferredRowHeight; // @synthesize preferredRowHeight=_preferredRowHeight;
-- (void).cxx_destruct;
 - (id)cellStyleForIndexPath:(id)arg1;
 - (id)previewStyleForIndexPath:(id)arg1;
 - (void)presentContextMenuAtIndexPath:(id)arg1 fromView:(id)arg2;

@@ -21,13 +21,13 @@
     SPTLyricsV2GLUETheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTLyricsV2Colors *colors; // @synthesize colors=_colors;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(nonatomic) __weak id <SPTVocalRemovalFeedbackBannerPresenterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)presentBanner:(id)arg1;
 - (void)closeButtonTappedInBannerView:(id)arg1;
 - (void)dismissCurrentBannerAnimated:(_Bool)arg1;

@@ -33,6 +33,7 @@
     id <SPTOfflineManager> _offlineManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
@@ -51,7 +52,6 @@
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) unsigned long long providerIdentifier; // @synthesize providerIdentifier=_providerIdentifier;
 @property(readonly, nonatomic) unsigned long long groupIdentifier; // @synthesize groupIdentifier=_groupIdentifier;
-- (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
 - (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 episodeFactory:(id)arg7 offlineManager:(id)arg8 explicitContentAccessManager:(id)arg9 theme:(id)arg10 glueTheme:(id)arg11 cellConfigurator:(id)arg12 cellActionHandlerFactory:(id)arg13 metaViewController:(id)arg14 navigationRouter:(id)arg15 podcastLogger:(id)arg16 viewLoggerFactory:(id)arg17;

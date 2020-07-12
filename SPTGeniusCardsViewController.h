@@ -34,6 +34,7 @@
     double _currentTimestamp;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool loggedUIPageImpression; // @synthesize loggedUIPageImpression=_loggedUIPageImpression;
 @property(nonatomic) _Bool firstCardScheduled; // @synthesize firstCardScheduled=_firstCardScheduled;
 @property(nonatomic) _Bool pausedPlayback; // @synthesize pausedPlayback=_pausedPlayback;
@@ -51,7 +52,6 @@
 @property(readonly, nonatomic) SPTGeniusLoggingService *loggingService; // @synthesize loggingService=_loggingService;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTGeniusService *geniusService; // @synthesize geniusService=_geniusService;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)didTapButtonWithGeniusSongID:(long long)arg1 itemIndex:(int)arg2;

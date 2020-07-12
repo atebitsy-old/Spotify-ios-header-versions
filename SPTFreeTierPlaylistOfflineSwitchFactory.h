@@ -15,10 +15,10 @@
     id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (id)offlineSwitchCell;
 - (id)initWithProductState:(id)arg1 modalPresentationController:(id)arg2 networkConnectivityController:(id)arg3;
 

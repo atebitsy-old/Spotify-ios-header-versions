@@ -18,10 +18,10 @@
     CDUnknownBlockType _completion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(nonatomic) unsigned long long numberOfTracks; // @synthesize numberOfTracks=_numberOfTracks;
-- (void).cxx_destruct;
 - (void)cancel;
 - (void)deletePlaylist;
 - (id)performAction;

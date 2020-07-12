@@ -15,10 +15,10 @@
     NSSet *_changedMetricKeys;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSSet *changedMetricKeys; // @synthesize changedMetricKeys=_changedMetricKeys;
 @property(retain, nonatomic) NSSet *changedColorKeys; // @synthesize changedColorKeys=_changedColorKeys;
 @property(retain, nonatomic) NSSet *changedFontKeys; // @synthesize changedFontKeys=_changedFontKeys;
-- (void).cxx_destruct;
 
 @end
 

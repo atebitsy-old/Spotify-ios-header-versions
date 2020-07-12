@@ -17,9 +17,9 @@
     SPTSwipeableTableViewCellShelfModel *_shelfModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSwipeableTableViewCellShelfModel *shelfModel; // @synthesize shelfModel=_shelfModel;
 @property(readonly, nonatomic) id <SPTPlayerQueue> playerQueue; // @synthesize playerQueue=_playerQueue;
-- (void).cxx_destruct;
 - (void)shelfViewModel:(CDUnknownBlockType)arg1;
 - (id)initWithPlayerQueue:(id)arg1;
 - (void)execute:(id)arg1 source:(id)arg2 completion:(CDUnknownBlockType)arg3;

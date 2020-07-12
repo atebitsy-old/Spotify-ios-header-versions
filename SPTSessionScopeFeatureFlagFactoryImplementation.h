@@ -20,12 +20,12 @@
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) SPTProductStateExposureLogger *productStateExposureLogger; // @synthesize productStateExposureLogger=_productStateExposureLogger;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
-- (void).cxx_destruct;
 - (id)productStateSignalWithKey:(id)arg1 mapper:(CDUnknownBlockType)arg2;
 - (id)productStateSignalWithKey:(id)arg1;
 - (id)abbaSignalWithKey:(id)arg1 mapper:(CDUnknownBlockType)arg2;

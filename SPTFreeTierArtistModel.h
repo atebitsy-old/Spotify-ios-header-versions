@@ -19,11 +19,11 @@
     id <SPTFreeTierArtistImage> _headerImage;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierArtistImage> headerImage; // @synthesize headerImage=_headerImage;
 @property(readonly, nonatomic) id <SPTFreeTierArtistImage> image; // @synthesize image=_image;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
-- (void).cxx_destruct;
 - (_Bool)isPreviewable;
 - (id)actionURL;
 - (id)imageURL;

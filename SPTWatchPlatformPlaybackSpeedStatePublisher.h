@@ -18,9 +18,9 @@
     id <SPTPodcastSpeedControlManager> _podcastSpeedControlManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTPodcastSpeedControlManager> podcastSpeedControlManager; // @synthesize podcastSpeedControlManager=_podcastSpeedControlManager;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (void)podcastPlaybackSpeedDidUpdate:(id)arg1 oldSpeed:(id)arg2;
 - (void)handlePublisherEvent:(long long)arg1;
 - (void)publishPlaybackSpeedState;

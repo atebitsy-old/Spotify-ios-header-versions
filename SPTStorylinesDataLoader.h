@@ -15,8 +15,8 @@
     SPTDataLoader *_dataLoader;
 }
 
-@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)handleStorylinesErrorResponse:(id)arg1;
 - (void)handleStorylinesSuccessResponse:(id)arg1;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;

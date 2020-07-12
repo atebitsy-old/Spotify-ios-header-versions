@@ -23,6 +23,7 @@
     SPTInAppMessageNoteMessageOverlayView *_noteMessageOverlayView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageOverlayView *noteMessageOverlayView; // @synthesize noteMessageOverlayView=_noteMessageOverlayView;
 @property(retain, nonatomic) UINavigationController *selectedViewController; // @synthesize selectedViewController=_selectedViewController;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak id <SPTInAppMessageNotePresentationManagerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isPresentingNote) _Bool presentingNote; // @synthesize presentingNote=_presentingNote;
-- (void).cxx_destruct;
 - (_Bool)isNowPlayingViewController:(id)arg1;
 - (void)userSwipedNoteAway;
 - (void)removeNoteMessageOverlay;

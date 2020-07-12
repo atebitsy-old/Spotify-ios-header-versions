@@ -15,8 +15,8 @@
     AVAudioPlayer *_player;
 }
 
-@property(retain, nonatomic) AVAudioPlayer *player; // @synthesize player=_player;
 - (void).cxx_destruct;
+@property(retain, nonatomic) AVAudioPlayer *player; // @synthesize player=_player;
 @property(nonatomic) long long numberOfLoops;
 @property(readonly, nonatomic, getter=isPlaying) _Bool playing;
 - (void)stop;

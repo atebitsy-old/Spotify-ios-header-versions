@@ -23,6 +23,7 @@
     NSMutableArray *_allEntities;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *allEntities; // @synthesize allEntities=_allEntities;
 @property(retain, nonatomic) NSMutableArray *entities; // @synthesize entities=_entities;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
@@ -30,7 +31,6 @@
 @property(readonly, copy, nonatomic) CDUnknownBlockType filterPredicate; // @synthesize filterPredicate=_filterPredicate;
 @property(readonly, nonatomic) unsigned long long maxNumberOfItems; // @synthesize maxNumberOfItems=_maxNumberOfItems;
 @property(nonatomic) __weak SPTRecentlyPlayedEntityModel *recentlyPlayedModel; // @synthesize recentlyPlayedModel=_recentlyPlayedModel;
-- (void).cxx_destruct;
 - (_Bool)removeItemAtIndex:(long long)arg1;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (id)itemAtIndex:(long long)arg1;

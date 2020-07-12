@@ -10,12 +10,12 @@
 #import "SPTAuthSessionDelegate-Protocol.h"
 #import "SPTCoreLoginController-Protocol.h"
 
-@class NSString, SPSession, SPTAuthController, SPTAuthLoginController, SPTAuthLoginTask, SPTAuthSession, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreCreateOptions, SPTCoreSchedulerThread, SPTEventSenderBridge, SPTLoggerAnalyticsDelegate, SPTPreferencesImplementation, SPTRemoteConfigImplementation;
+@class NSString, SPSession, SPTAuthController, SPTAuthLoginController, SPTAuthLoginTask, SPTAuthSession, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreCreateOptions, SPTCoreLoggerConnectivityAnalyticsDelegate, SPTCoreSchedulerThread, SPTEventSenderBridge, SPTPreferencesImplementation, SPTRemoteConfigImplementation;
 @protocol SPTCoreLoginControllerDelegate, SPTCoreLoginControllerLoginDelegate, SPTOfflineModeState, SPTSessionBootstrapDelegate;
 
 @interface SPCore : NSObject <SPTAuthSessionDelegate, SPTAuthLoginTaskDelegate, SPTCoreLoginController>
 {
-    SPTLoggerAnalyticsDelegate *_connectivityAnalyticsDelegate;
+    SPTCoreLoggerConnectivityAnalyticsDelegate *_connectivityAnalyticsDelegate;
     struct shared_ptr<spotify::connectivity::AnalyticsDelegate> _cppConnectivityAnalyticsDelegate;
     struct unique_ptr<spotify::connectivity::ApplicationScope, std::__1::default_delete<spotify::connectivity::ApplicationScope>> _cppConnectivity;
     struct unique_ptr<spotify::client::Core, std::__1::default_delete<spotify::client::Core>> _core;
@@ -39,6 +39,8 @@
 }
 
 + (id)coreWithCreateOptions:(id)arg1 bootstrapDelegate:(id)arg2 scheduler:(id)arg3 eventSender:(id)arg4 preferences:(id)arg5 error:(id *)arg6;
+- (id).cxx_construct;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAuthLoginTask *loginTask; // @synthesize loginTask=_loginTask;
 @property(nonatomic) __weak id <SPTCoreLoginControllerLoginDelegate> loginDelegate; // @synthesize loginDelegate=_loginDelegate;
 @property(nonatomic) __weak id <SPTSessionBootstrapDelegate> bootstrapDelegate; // @synthesize bootstrapDelegate=_bootstrapDelegate;
@@ -56,8 +58,6 @@
 @property(retain, nonatomic) SPTConnectivityApplicationScope *connectivityApplicationScope; // @synthesize connectivityApplicationScope=_connectivityApplicationScope;
 @property(nonatomic) __weak id <SPTCoreLoginControllerDelegate> loginControllerDelegate; // @synthesize loginControllerDelegate=_loginControllerDelegate;
 @property(retain, nonatomic) SPSession *session; // @synthesize session=_session;
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (id)createAccesspointResolverWithDelegate:(id)arg1;
 - (id)createRequestAccounting;
 - (void)notifyLogoutOnMainThread;

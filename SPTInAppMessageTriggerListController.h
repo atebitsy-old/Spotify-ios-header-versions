@@ -17,9 +17,9 @@
     SPTInAppMessageTriggerListParser *_triggerListParser;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageTriggerListParser *triggerListParser; // @synthesize triggerListParser=_triggerListParser;
 @property(nonatomic) __weak id <SPTInAppMessageTriggerListControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)triggerConfigurationsController:(id)arg1 didFetchActiveTriggers:(id)arg2;
 - (id)initWithTriggerListParser:(id)arg1;
 

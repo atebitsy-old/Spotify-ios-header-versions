@@ -20,14 +20,15 @@
     NSString *_recentsGroupID;
     NSString *_recentsCommandName;
     id <SPTSearch2URLProviding> _urlProvider;
-    struct NSMutableDictionary *_customCommandHandlers;
-    struct NSMutableDictionary *_customComponentNamespaces;
+    NSMutableDictionary *_customCommandHandlers;
+    NSMutableDictionary *_customComponentNamespaces;
     id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
     NSString *_customPageIdentifer;
     NSURL *_customPageURI;
     NSString *_customReferrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *customReferrerIdentifier; // @synthesize customReferrerIdentifier=_customReferrerIdentifier;
 @property(copy, nonatomic) NSURL *customPageURI; // @synthesize customPageURI=_customPageURI;
 @property(copy, nonatomic) NSString *customPageIdentifer; // @synthesize customPageIdentifer=_customPageIdentifer;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) id <SPTSearch2URLProviding> urlProvider; // @synthesize urlProvider=_urlProvider;
 @property(copy, nonatomic) NSString *recentsCommandName; // @synthesize recentsCommandName=_recentsCommandName;
 @property(copy, nonatomic) NSString *recentsGroupID; // @synthesize recentsGroupID=_recentsGroupID;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithURLProvider:(id)arg1 recentsGroupID:(id)arg2 emptyStatePropertiesProvider:(id)arg3;
 

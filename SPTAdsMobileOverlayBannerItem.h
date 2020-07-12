@@ -22,13 +22,13 @@
     SPTAdsMobileOverlayBannerView *_currentBannerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAdsMobileOverlayBannerView *currentBannerView; // @synthesize currentBannerView=_currentBannerView;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(readonly, nonatomic) id <SPTAdsBaseImageEntity> entity; // @synthesize entity=_entity;
 @property(readonly, nonatomic) __weak id <SPTBannerViewDelegate> bannerViewDelegate; // @synthesize bannerViewDelegate=_bannerViewDelegate;
-- (void).cxx_destruct;
 - (void)didLoadContentImage:(id)arg1;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
 - (id)initWithBannerViewDelegate:(id)arg1 adEntity:(id)arg2 theme:(id)arg3 glueImageLoader:(id)arg4 cosmosBridge:(id)arg5;

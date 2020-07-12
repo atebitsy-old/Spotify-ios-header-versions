@@ -39,6 +39,7 @@
     id <GLUEImageLoader> _glueImageLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic, getter=isPlaybackRestricted) _Bool playbackRestricted; // @synthesize playbackRestricted=_playbackRestricted;
 @property(retain, nonatomic) SPTPlayerState *lastPlayedState; // @synthesize lastPlayedState=_lastPlayedState;
@@ -58,7 +59,6 @@
 @property(nonatomic) __weak id <SPTGaiaDevicePickerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) _Bool activeDeviceSocialFlagValue; // @synthesize activeDeviceSocialFlagValue=_activeDeviceSocialFlagValue;
 @property(readonly, nonatomic) _Bool activeDeviceSocialFlagAvailable; // @synthesize activeDeviceSocialFlagAvailable=_activeDeviceSocialFlagAvailable;
-- (void).cxx_destruct;
 - (void)socialListeningIntegrationManagerUpdated:(id)arg1;
 - (void)homeDeviceEducationManagerDeviceShowingTooltipChanged:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

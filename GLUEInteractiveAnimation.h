@@ -21,6 +21,7 @@
     CDUnknownBlockType _completion;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(nonatomic) unsigned long long degradationPolicy; // @synthesize degradationPolicy=_degradationPolicy;
 @property(retain, nonatomic) CADisplayLink *displayLink; // @synthesize displayLink=_displayLink;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) GLUEAnimationVectorTransformer *vectorTransformer; // @synthesize vectorTransformer=_vectorTransformer;
 @property(copy, nonatomic) CDUnknownBlockType apply; // @synthesize apply=_apply;
 @property(nonatomic) double progress; // @synthesize progress=_progress;
-- (void).cxx_destruct;
 - (void)stopAnimation;
 - (void)next;
 - (void)animateToTargetProgress:(double)arg1 duration:(double)arg2 completion:(CDUnknownBlockType)arg3;

@@ -18,10 +18,10 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTSearch2DateProviding> dateProvider; // @synthesize dateProvider=_dateProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logUIInteractionLaunchVoiceSearchViewWithSourceIdentifier:(id)arg1;
 - (void)logUIInteractionForClearCurrentSearchStringWithRequestID:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 dateProvider:(id)arg2 ubiLogger:(id)arg3;

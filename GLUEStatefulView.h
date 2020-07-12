@@ -20,11 +20,11 @@
     GLUEStatefulStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEStatefulStyle *style; // @synthesize style=_style;
 @property(nonatomic) _Bool shouldManageUserInteractionEnabled; // @synthesize shouldManageUserInteractionEnabled=_shouldManageUserInteractionEnabled;
 @property(nonatomic) _Bool shouldManageAccessibilityTraits; // @synthesize shouldManageAccessibilityTraits=_shouldManageAccessibilityTraits;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
-- (void).cxx_destruct;
 - (void)updateStateBasedStyle;
 - (void)applyStateStyle:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;

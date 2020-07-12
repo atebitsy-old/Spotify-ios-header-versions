@@ -20,9 +20,9 @@
     SPTSignupFacebookConfirmationViewModel *_viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSignupFacebookConfirmationViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)userDidAcceptAllLicences:(id)arg1;
 @property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
 @property(readonly, nonatomic) UIViewController *presentingController;

@@ -42,6 +42,7 @@
     NSNumberFormatter *_decimalNumberFormatter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSNumberFormatter *decimalNumberFormatter; // @synthesize decimalNumberFormatter=_decimalNumberFormatter;
 @property(retain, nonatomic) id <SPTFreeTierArtistAlbum> latestRelease; // @synthesize latestRelease=_latestRelease;
 @property(readonly, nonatomic) id <SPTFreeTierArtist> artist; // @synthesize artist=_artist;
@@ -69,7 +70,6 @@
 @property(readonly, nonatomic) NSArray *topTracks; // @synthesize topTracks=_topTracks;
 @property(readonly, nonatomic) NSString *customMessage; // @synthesize customMessage=_customMessage;
 @property(readonly, nonatomic) id <SPTFreeTierArtistPinnedItem> pinnedItem; // @synthesize pinnedItem=_pinnedItem;
-- (void).cxx_destruct;
 - (id)playContextWithData:(id)arg1;
 - (id)merchandiseWithArray:(id)arg1;
 - (id)tracksWithArray:(id)arg1;

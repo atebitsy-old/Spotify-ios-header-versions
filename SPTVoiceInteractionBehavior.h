@@ -15,10 +15,10 @@
     NSArray *_shadeGradientLocations;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *shadeGradientLocations; // @synthesize shadeGradientLocations=_shadeGradientLocations;
 @property(retain, nonatomic) NSArray *backgroundGradientLocations; // @synthesize backgroundGradientLocations=_backgroundGradientLocations;
 @property(nonatomic) double gradientRadius; // @synthesize gradientRadius=_gradientRadius;
-- (void).cxx_destruct;
 - (id)initWithGradientRadius:(double)arg1 backgroundGradientLocations:(id)arg2 shadeGradientLocations:(id)arg3;
 
 @end

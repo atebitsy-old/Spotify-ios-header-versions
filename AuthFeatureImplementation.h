@@ -33,6 +33,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAuthLogger *authLogger; // @synthesize authLogger=_authLogger;
 @property(retain, nonatomic) SPTAuthCache *authCache; // @synthesize authCache=_authCache;
 @property(retain, nonatomic) SPTAuthCacheEnvironmentObserver *environmentObserver; // @synthesize environmentObserver=_environmentObserver;
@@ -48,7 +49,6 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-- (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (id)provideAuthController;

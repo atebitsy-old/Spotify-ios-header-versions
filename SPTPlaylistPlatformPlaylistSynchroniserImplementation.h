@@ -20,12 +20,12 @@
     id <SPTPlaylistModel> _playlistModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(nonatomic) long long totalSynchronized; // @synthesize totalSynchronized=_totalSynchronized;
 @property(retain, nonatomic) NSMutableSet *itemsSynchronized; // @synthesize itemsSynchronized=_itemsSynchronized;
 @property(retain, nonatomic) NSMutableOrderedSet *itemsToSynchronize; // @synthesize itemsToSynchronize=_itemsToSynchronize;
 @property(nonatomic) _Bool isSynchronizing; // @synthesize isSynchronizing=_isSynchronizing;
-- (void).cxx_destruct;
 - (void)markPlaylistForSynchronizationWithURL:(id)arg1;
 - (void)unmarkPlaylistForSynchronizationWithURL:(id)arg1;
 - (void)synchronizeItems;

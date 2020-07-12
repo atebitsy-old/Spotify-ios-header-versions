@@ -15,8 +15,8 @@
 }
 
 + (id)volumeControlWithVolumeControlManager:(struct AudioVolumeControlManager *)arg1 scheduler:(id)arg2;
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (void)setAudioVolume:(float)arg1 systemInitiated:(_Bool)arg2;
 - (void)invalidate;
 - (id)initWithVolumeControlManager:(struct AudioVolumeControlManager *)arg1 scheduler:(id)arg2;

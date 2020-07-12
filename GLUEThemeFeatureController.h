@@ -18,11 +18,11 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property _Bool leftAlignedTrackCloudEnabled; // @synthesize leftAlignedTrackCloudEnabled;
 @property _Bool leftAlignedSectionHeadersEnabled; // @synthesize leftAlignedSectionHeadersEnabled;
 @property _Bool motionEnabled; // @synthesize motionEnabled=_motionEnabled;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (void)enableModernFeatures;
 - (void)resetRolloutStatuses;

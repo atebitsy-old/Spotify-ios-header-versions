@@ -29,6 +29,7 @@
     NSArray *_previewViewModels;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *previewViewModels; // @synthesize previewViewModels=_previewViewModels;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) SPTProgressView *progressIndicator; // @synthesize progressIndicator=_progressIndicator;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) SPTTableView *resultsTableView; // @synthesize resultsTableView=_resultsTableView;
 @property(retain, nonatomic) UISegmentedControl *typeSegmentedControl; // @synthesize typeSegmentedControl=_typeSegmentedControl;
 @property(retain, nonatomic) UITextField *identifierTextField; // @synthesize identifierTextField=_identifierTextField;
-- (void).cxx_destruct;
 - (id)sectionTitle;
 - (void)configureCell:(id)arg1 withViewModel:(id)arg2;
 - (long long)typeFromSegementIndex:(long long)arg1;

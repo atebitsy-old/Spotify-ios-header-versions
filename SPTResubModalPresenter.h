@@ -13,8 +13,8 @@
     id <SPTModalPresentationController> _presentationController;
 }
 
-@property(retain, nonatomic) id <SPTModalPresentationController> presentationController; // @synthesize presentationController=_presentationController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTModalPresentationController> presentationController; // @synthesize presentationController=_presentationController;
 - (void)dismissViewController:(id)arg1;
 - (void)presentViewController:(id)arg1;
 - (id)initWithPresentationController:(id)arg1;

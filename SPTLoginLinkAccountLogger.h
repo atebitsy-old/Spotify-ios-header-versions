@@ -13,8 +13,8 @@
     id <SPTLoginLogger> _logger;
 }
 
-@property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void)logUserDidSeeLinkAccountFailedDialogWithError:(id)arg1;
 - (void)logUserDidSeeLinkAccountSuccessedDialog;
 - (void)logUserDidTapCancelButton;

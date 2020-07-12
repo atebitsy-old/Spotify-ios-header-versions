@@ -17,9 +17,9 @@
     SPTObserverManager *_ubiObserverManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *ubiObserverManager; // @synthesize ubiObserverManager=_ubiObserverManager;
 @property(retain, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
-- (void).cxx_destruct;
 - (void)ubiNavigationLocationChangingWithContext:(id)arg1;
 - (void)ubiNavigationRequestedWithContext:(id)arg1;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;

@@ -29,6 +29,7 @@
     UIBarButtonItem *_inviteBarButtonItem;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIBarButtonItem *inviteBarButtonItem; // @synthesize inviteBarButtonItem=_inviteBarButtonItem;
 @property(retain, nonatomic) SPTSocialListeningListenTogetherBottomBanner *bottomBanner; // @synthesize bottomBanner=_bottomBanner;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) SPTSocialListeningLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTSocialListeningViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (id)placeholderCellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (void)inviteButtonTapped:(id)arg1;
 - (void)navigateToQueue;

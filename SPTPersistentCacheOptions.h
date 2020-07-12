@@ -31,6 +31,7 @@
     CDUnknownBlockType _timingCallback;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType timingCallback; // @synthesize timingCallback=_timingCallback;
 @property(copy, nonatomic) CDUnknownBlockType debugOutput; // @synthesize debugOutput=_debugOutput;
 @property(nonatomic) long long garbageCollectionQualityOfService; // @synthesize garbageCollectionQualityOfService=_garbageCollectionQualityOfService;
@@ -48,7 +49,6 @@
 @property(nonatomic) _Bool useDirectorySeparation; // @synthesize useDirectorySeparation=_useDirectorySeparation;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSString *cacheIdentifier; // @synthesize cacheIdentifier=_cacheIdentifier;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)description;
 - (id)copyWithZone:(struct _NSZone *)arg1;

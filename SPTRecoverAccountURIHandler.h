@@ -20,12 +20,12 @@
     SPTLoginSlideUpModalPresenter *_modalPresenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginSlideUpModalPresenter *modalPresenter; // @synthesize modalPresenter=_modalPresenter;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTRecoverAccountLinkErrorHandler *linkRecoveryErrorHandler; // @synthesize linkRecoveryErrorHandler=_linkRecoveryErrorHandler;
 @property(retain, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (void)removeObserver:(id)arg1;

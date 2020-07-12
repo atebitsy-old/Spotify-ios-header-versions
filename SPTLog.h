@@ -18,10 +18,10 @@
 }
 
 + (id)createAndInstallLogWithObserver:(id)arg1 identificator:(id)arg2;
-@property(nonatomic) shared_ptr_97588a64 log_observer; // @synthesize log_observer=_log_observer;
-@property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) shared_ptr_97588a64 log_observer; // @synthesize log_observer=_log_observer;
+@property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 - (void)writeLine:(const char *)arg1 fromModule:(const char *)arg2 file:(const char *)arg3 line:(long long)arg4 threadId:(unsigned long long)arg5 at:(id)arg6 logLevel:(long long)arg7;
 - (void)logObserver:(struct LogObserver *)arg1 receivedLogLine:(const char *)arg2 fromModule:(const char *)arg3 file:(const char *)arg4 line:(long long)arg5 threadId:(unsigned long long)arg6 at:(id)arg7 logLevel:(long long)arg8;
 - (void)setHasObservers:(_Bool)arg1;

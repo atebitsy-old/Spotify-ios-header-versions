@@ -23,6 +23,7 @@
     GLUEButtonStyle *_okButtonStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEButtonStyle *okButtonStyle; // @synthesize okButtonStyle=_okButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *messageLabelStyle; // @synthesize messageLabelStyle=_messageLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) UIColor *overlayBackgroundColor; // @synthesize overlayBackgroundColor=_overlayBackgroundColor;
 @property(copy, nonatomic) UIColor *decorationColor; // @synthesize decorationColor=_decorationColor;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningEducationSlateViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

@@ -26,6 +26,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTYourLibraryViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTYourLibraryViewController *viewController; // @synthesize viewController=_viewController;
 @property(retain, nonatomic) SPTYourLibraryURIManager *uriManager; // @synthesize uriManager=_uriManager;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <SPTYourLibraryService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
-- (void).cxx_destruct;
 - (id)provideViewLoggerForURI:(id)arg1;
 - (id)provideLogger;
 - (id)provideOfflineBannerViewController;

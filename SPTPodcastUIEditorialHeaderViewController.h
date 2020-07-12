@@ -24,6 +24,7 @@
 }
 
 + (struct CGSize)sizeForContainerWidth:(double)arg1 desciption:(id)arg2 style:(id)arg3 withChildren:(_Bool)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) VISREFNavigationBarForegroundView *foregroundView; // @synthesize foregroundView=_foregroundView;
 @property(retain, nonatomic) SPTPodcastUIEditorialHeaderContentView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
@@ -32,7 +33,6 @@
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)addActionRowView:(id)arg1;
 - (void)setImage:(id)arg1;

@@ -20,11 +20,11 @@
     id <GLUEImageLoader> _imageLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTContextMenuViewTransition *transition; // @synthesize transition=_transition;
 @property(retain, nonatomic) SPTContextMenuView *contextMenuView; // @synthesize contextMenuView=_contextMenuView;
 @property(readonly, nonatomic) NSArray *subtitlesMenuActions; // @synthesize subtitlesMenuActions=_subtitlesMenuActions;
-- (void).cxx_destruct;
 - (_Bool)contextMenuView:(id)arg1 shouldBeDismissedAfterPerformingAction:(id)arg2;
 - (void)dismissContextMenuView:(id)arg1 dismissalStyle:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)contextMenuView:(id)arg1 titleForHeaderInSection:(unsigned long long)arg2;

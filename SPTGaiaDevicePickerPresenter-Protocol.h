@@ -9,7 +9,7 @@
 @class UIView;
 
 @protocol SPTGaiaDevicePickerPresenter <NSObject>
-@property(readonly, nonatomic) _Bool hasAvailableDevices;
 - (void)presentDevicePickerFromView:(UIView *)arg1 withContext:(unsigned long long)arg2;
+@property(nonatomic, readonly) _Bool hasAvailableDevices;
 @end
 

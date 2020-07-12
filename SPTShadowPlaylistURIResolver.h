@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSMutableDictionary, NSSet, SPTObserverManager;
+@class NSArray, NSDictionary, NSSet, SPTObserverManager;
 @protocol SPTLocalSettings, SPTPlaylistModel, SPTPlaylistPlatformPlaylistDataLoader;
 
 @interface SPTShadowPlaylistURIResolver : NSObject
 {
     _Bool _shouldHidePlaylists;
-    NSMutableDictionary *_shadowList;
+    NSDictionary *_shadowList;
     id <SPTPlaylistModel> _playlistModel;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     CDUnknownBlockType _sortingFilteringFactory;
@@ -22,6 +22,7 @@
     NSSet *_playlistURIsCurrentlyRefreshing;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSSet *playlistURIsCurrentlyRefreshing; // @synthesize playlistURIsCurrentlyRefreshing=_playlistURIsCurrentlyRefreshing;
 @property(readonly, nonatomic) _Bool shouldHidePlaylists; // @synthesize shouldHidePlaylists=_shouldHidePlaylists;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
@@ -30,21 +31,20 @@
 @property(copy, nonatomic) CDUnknownBlockType sortingFilteringFactory; // @synthesize sortingFilteringFactory=_sortingFilteringFactory;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
-@property(retain, nonatomic) NSMutableDictionary *shadowList; // @synthesize shadowList=_shadowList;
-- (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *shadowList; // @synthesize shadowList=_shadowList;
 - (void)resetPlaylist:(id)arg1 withTracks:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)mergeTracksFromBasePlaylist:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (void)regenerateReadPlaylistFor:(id)arg1;
+- (void)regenerateReadPlaylistFor:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)fetchImageForPlaylistURI:(id)arg1;
+- (void)persistShadowList;
+- (void)persistRoute:(id)arg1;
 - (void)removeRouteForURI:(id)arg1;
 - (void)changeImageURI:(id)arg1 forRouteURI:(id)arg2;
 - (id)shadowForURI:(id)arg1;
-- (void)resolveWriteURIFor:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (_Bool)hasShadowFor:(id)arg1;
 - (void)getShadowRouteFor:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)createShadowRouteFor:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (_Bool)shouldRouteURI:(id)arg1;
-- (void)saveShadowRoute:(id)arg1 forShadowName:(id)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (id)uriPrefixesToRoute;

@@ -13,8 +13,8 @@
     id <SPTLoginDelayedSignupBannerViewModelDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <SPTLoginDelayedSignupBannerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTLoginDelayedSignupBannerViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)signupButtonTapped:(id)arg1;
 - (void)loginButtonTapped:(id)arg1;
 - (id)signupButtonText;

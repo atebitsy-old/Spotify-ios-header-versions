@@ -18,11 +18,11 @@
     CDUnknownBlockType _completion;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType completion; // @synthesize completion=_completion;
 @property(readonly, copy, nonatomic) CDUnknownBlockType predicate; // @synthesize predicate=_predicate;
 @property(readonly, nonatomic) SEL selector; // @synthesize selector=_selector;
 @property(readonly, nonatomic) __weak id target; // @synthesize target=_target;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 - (id)createPageForURI:(id)arg1 context:(id)arg2;
 - (id)initWithTarget:(id)arg1 selector:(SEL)arg2 predicate:(CDUnknownBlockType)arg3 completion:(CDUnknownBlockType)arg4;

@@ -15,8 +15,8 @@
     NSArray *_items;
 }
 
-@property(readonly, copy, nonatomic) NSArray *items; // @synthesize items=_items;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSArray *items; // @synthesize items=_items;
 - (double)featureSettingsPresentation:(id)arg1 heightOfRow:(unsigned long long)arg2;
 - (void)featureSettingsPresentation:(id)arg1 didSelectRow:(unsigned long long)arg2;
 - (unsigned long long)numberOfRowsForFeatureSettingsItem:(id)arg1;

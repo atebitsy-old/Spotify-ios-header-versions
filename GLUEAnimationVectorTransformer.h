@@ -14,9 +14,9 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) NSMutableArray *transformerArray; // @synthesize transformerArray=_transformerArray;
-- (void).cxx_destruct;
 - (id)transformForProgress:(double)arg1;
 - (id)initWithFromValue:(id)arg1 toValue:(id)arg2 interpolator:(id)arg3;
 

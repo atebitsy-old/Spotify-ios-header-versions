@@ -22,6 +22,7 @@
     NSObject<OS_os_log> *_instrumentationLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_os_log> *instrumentationLog; // @synthesize instrumentationLog=_instrumentationLog;
 @property(readonly, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) NSMutableDictionary *serviceManagers; // @synthesize serviceManagers=_serviceManagers;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <SPTServiceList> serviceList; // @synthesize serviceList=_serviceList;
 @property(readonly, nonatomic) id <SPTServiceInstanceInteractor> instanceInteractor; // @synthesize instanceInteractor=_instanceInteractor;
 @property(nonatomic) __weak id <SPTServiceOrchestratorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)serviceManagerDidUnloadServices:(id)arg1;
 - (void)serviceManagerWillUnloadServices:(id)arg1;
 - (void)serviceManagerDidLoadServices:(id)arg1;

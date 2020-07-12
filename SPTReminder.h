@@ -18,10 +18,10 @@
     NSArray *_actions;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *actions; // @synthesize actions=_actions;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-- (void).cxx_destruct;
 - (void)handleNotificationsResponse:(id)arg1;
 - (void)presentReminderDialogWithText:(id)arg1 url:(id)arg2;
 - (void)presentReminderDialog;

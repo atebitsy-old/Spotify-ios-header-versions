@@ -24,6 +24,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -33,7 +34,6 @@
 @property(nonatomic) _Bool animatedHeartEnabled; // @synthesize animatedHeartEnabled=_animatedHeartEnabled;
 @property(retain, nonatomic) id followButtonModel; // @synthesize followButtonModel=_followButtonModel;
 @property(copy, nonatomic) CDUnknownBlockType backButtonTappedBlock; // @synthesize backButtonTappedBlock=_backButtonTappedBlock;
-- (void).cxx_destruct;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;

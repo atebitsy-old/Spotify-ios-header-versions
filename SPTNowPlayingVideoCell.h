@@ -28,6 +28,7 @@
     struct UIEdgeInsets _windowedContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNowPlayingHorizontalVideoOverlayViewController *horizontalOverlayViewController; // @synthesize horizontalOverlayViewController=_horizontalOverlayViewController;
 @property(retain, nonatomic) UIActivityIndicatorView *activityView; // @synthesize activityView=_activityView;
 @property(retain, nonatomic) NSMutableArray *windowedContentViewConstraints; // @synthesize windowedContentViewConstraints=_windowedContentViewConstraints;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) id <BMVideoSurfaceManager> videoSurfaceManager; // @synthesize videoSurfaceManager=_videoSurfaceManager;
 @property(retain, nonatomic) UIView<BMVideoSurface> *videoSurfaceView; // @synthesize videoSurfaceView=_videoSurfaceView;
 @property(retain, nonatomic) SPTNowPlayingCoverArtImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)updateViewHierarchy;
 - (void)updateOverlayViewFrame;
 - (void)setupFullScreenView:(id)arg1;

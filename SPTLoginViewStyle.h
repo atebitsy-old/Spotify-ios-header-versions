@@ -27,6 +27,7 @@
     double _horizontalMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double horizontalMargin; // @synthesize horizontalMargin=_horizontalMargin;
 @property(copy, nonatomic) GLUEButtonStyle *loginWithoutPasswordButtonStyle; // @synthesize loginWithoutPasswordButtonStyle=_loginWithoutPasswordButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *loginButtonStyle; // @synthesize loginButtonStyle=_loginButtonStyle;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(nonatomic) double mainContainerIPadWidth; // @synthesize mainContainerIPadWidth=_mainContainerIPadWidth;
 @property(nonatomic) double mainContainerWidth; // @synthesize mainContainerWidth=_mainContainerWidth;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

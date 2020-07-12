@@ -6,14 +6,15 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTEncoreDownloadButtonDelegate-Protocol.h"
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 #import "SPTNowPlayingInformationUnitViewModelDelegate-Protocol.h"
 #import "SPTNowPlayingLyricsButtonViewDelegate-Protocol.h"
 
-@class NSMutableArray, NSString, NSURL, SPTNowPlayingAnimatedLikeButton, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
-@protocol SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTSnackbarConditionalPresenter, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
+@class NSMutableArray, NSString, NSURL, SPTEncoreDownloadButton, SPTNowPlayingAnimatedLikeButton, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
+@protocol SPTEncoreDownloadButtonFactory, SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTSnackbarConditionalPresenter, _TtP17OfflineMixFeature24SPTOfflineMixTestManager_, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
-@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewDelegate, SPTNowPlayingContainedViewController>
+@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewDelegate, SPTEncoreDownloadButtonDelegate, SPTNowPlayingContainedViewController>
 {
     SPTTheme *_theme;
     long long _context;
@@ -30,8 +31,15 @@
     SPTNowPlayingLogger *_nowPlayingLogger;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
+    id <SPTEncoreDownloadButtonFactory> _downloadButtonFactory;
+    id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> _offlineMixTestManager;
+    SPTEncoreDownloadButton *_downloadButton;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) SPTEncoreDownloadButton *downloadButton; // @synthesize downloadButton=_downloadButton;
+@property(retain, nonatomic) id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> offlineMixTestManager; // @synthesize offlineMixTestManager=_offlineMixTestManager;
+@property(retain, nonatomic) id <SPTEncoreDownloadButtonFactory> downloadButtonFactory; // @synthesize downloadButtonFactory=_downloadButtonFactory;
 @property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
@@ -47,7 +55,13 @@
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) long long context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
+- (long long)currentIconDownloadState;
+- (void)downloadButtonTappedWithSender:(id)arg1;
+- (void)viewModelDidUpdateDownloadButtonState:(id)arg1;
+- (void)setupDownloadButtonConstraints;
+- (void)updateDownloadButton;
+- (void)downloadButtonTapped:(id)arg1;
+- (void)setupDownloadButton;
 - (void)presentLyricsUpsellPopup;
 - (void)toggleContentLayerLyricsView;
 - (void)didTapLyricsView;
@@ -80,7 +94,7 @@
 - (void)resetConstraints;
 - (void)setupUI;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 testManager:(id)arg4 contentLayerResolver:(id)arg5 nowPlayingLogger:(id)arg6 snackbarPresenter:(id)arg7 responsiveShuffleOnboardingController:(id)arg8;
+- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 testManager:(id)arg4 offlineMixTestManager:(id)arg5 downloadButtonFactory:(id)arg6 contentLayerResolver:(id)arg7 nowPlayingLogger:(id)arg8 snackbarPresenter:(id)arg9 responsiveShuffleOnboardingController:(id)arg10;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

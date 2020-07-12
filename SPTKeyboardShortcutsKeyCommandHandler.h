@@ -18,12 +18,12 @@
     UIView *_mostRecentFirstResponder;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIView *mostRecentFirstResponder; // @synthesize mostRecentFirstResponder=_mostRecentFirstResponder;
 @property(retain, nonatomic) id <SPTKeyboardShortcutsTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSMutableDictionary *keyCommands; // @synthesize keyCommands=_keyCommands;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)didReceiveKeyCommand:(id)arg1;
 - (void)unregisterKeyCommand:(id)arg1;

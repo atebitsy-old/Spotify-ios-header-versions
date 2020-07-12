@@ -29,6 +29,7 @@
     NSLayoutConstraint *_openEmailButtonTopMargin;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *openEmailButtonTopMargin; // @synthesize openEmailButtonTopMargin=_openEmailButtonTopMargin;
 @property(retain, nonatomic) NSLayoutConstraint *emailImageTopMargin; // @synthesize emailImageTopMargin=_emailImageTopMargin;
 @property(retain, nonatomic) NSLayoutConstraint *bodyTextLabelEdgeMargin; // @synthesize bodyTextLabelEdgeMargin=_bodyTextLabelEdgeMargin;
@@ -44,7 +45,6 @@
 @property(readonly, nonatomic) GLUELabel *bodyTextLabel; // @synthesize bodyTextLabel=_bodyTextLabel;
 @property(readonly, nonatomic) GLUELabel *upperTextLabel; // @synthesize upperTextLabel=_upperTextLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

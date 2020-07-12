@@ -19,12 +19,12 @@
     NSURL *_URL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(nonatomic) unsigned long long feedback; // @synthesize feedback=_feedback;
 @property(readonly, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToArtistModelEntity:(id)arg1;

@@ -20,10 +20,10 @@
 }
 
 + (double)preferredHeight;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTVideoTableViewCell *cell; // @synthesize cell=_cell;
 @property(readonly, nonatomic) HUGSCustomViewControl *control; // @synthesize control=_control;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)handleContextMenuButtonTap:(id)arg1;
 - (void)sendSelectionEvent;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;

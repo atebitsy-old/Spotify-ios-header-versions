@@ -17,10 +17,10 @@
     NSTimeZone *_timeZone;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isTimeUnknown; // @synthesize isTimeUnknown=_isTimeUnknown;
 @property(readonly, copy, nonatomic) NSTimeZone *timeZone; // @synthesize timeZone=_timeZone;
 @property(readonly, copy, nonatomic) NSDate *date; // @synthesize date=_date;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;

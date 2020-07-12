@@ -10,9 +10,6 @@
 @protocol SPTViewLoggerObserver;
 
 @protocol SPTViewLogger <NSObject>
-@property(readonly, nonatomic) NSUUID *uuid;
-@property(readonly) long long state;
-@property(readonly, copy, nonatomic) NSString *pageIdentifier;
 - (void)removeObserver:(id <SPTViewLoggerObserver>)arg1;
 - (void)addObserver:(id <SPTViewLoggerObserver>)arg1;
 - (void)logViewLoadingCancelledWithPageIdentifier:(NSString *)arg1 dataSource:(long long)arg2;
@@ -21,5 +18,8 @@
 - (void)logImageLoadingStartedForImageWithURI:(NSURL *)arg1;
 - (void)logViewDataDidLoadWithPageIdentifier:(NSString *)arg1 dataSource:(long long)arg2;
 - (void)logViewLoadingStartedWithPageIdentifier:(NSString *)arg1 reason:(long long)arg2;
+@property(nonatomic, readonly) NSUUID *uuid;
+@property(nonatomic, readonly) long long state;
+@property(nonatomic, readonly) NSString *pageIdentifier;
 @end
 

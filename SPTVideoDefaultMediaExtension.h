@@ -16,8 +16,8 @@
     id <SPTVideoResourceRequestFactory> _resourceRequestFactory;
 }
 
-@property(retain, nonatomic) id <SPTVideoResourceRequestFactory> resourceRequestFactory; // @synthesize resourceRequestFactory=_resourceRequestFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTVideoResourceRequestFactory> resourceRequestFactory; // @synthesize resourceRequestFactory=_resourceRequestFactory;
 - (id)resourceLoaderForIdentity:(id)arg1;
 - (_Bool)isPlayableForIdentity:(id)arg1;
 - (id)initWithResourceRequestFactory:(id)arg1;

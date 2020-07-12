@@ -20,12 +20,12 @@
     double _recordingWaitingTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double recordingWaitingTime; // @synthesize recordingWaitingTime=_recordingWaitingTime;
 @property(retain, nonatomic) SPTCarmageddonMotionRecorderConfiguration *recorderConfiguration; // @synthesize recorderConfiguration=_recorderConfiguration;
 @property(nonatomic) long long batchCount; // @synthesize batchCount=_batchCount;
 @property(readonly, nonatomic) SPTCarmageddonMotionRecorder *recorder; // @synthesize recorder=_recorder;
 @property(nonatomic) __weak id <SPTCarmageddonMotionManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)motionRecorder:(id)arg1 didFinishRecordingWithResult:(id)arg2;
 - (void)performNextBatchRecordingStep;
 - (void)stopRecording;

@@ -16,9 +16,9 @@
     GLUELabelStyle *_descriptionLabelStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *descriptionLabelStyle; // @synthesize descriptionLabelStyle=_descriptionLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *countLabelStyle; // @synthesize countLabelStyle=_countLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

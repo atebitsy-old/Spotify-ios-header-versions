@@ -15,8 +15,8 @@
     SPTInAppMessageBannerMessageViewModel *_bannerViewModel;
 }
 
-@property(retain, nonatomic) SPTInAppMessageBannerMessageViewModel *bannerViewModel; // @synthesize bannerViewModel=_bannerViewModel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTInAppMessageBannerMessageViewModel *bannerViewModel; // @synthesize bannerViewModel=_bannerViewModel;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
 - (id)initWithBannerViewModel:(id)arg1;
 

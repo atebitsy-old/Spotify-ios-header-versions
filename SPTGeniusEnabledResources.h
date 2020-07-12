@@ -17,12 +17,12 @@
     NSArray *_playlistAndAlbumURIList;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *playlistAndAlbumURIList; // @synthesize playlistAndAlbumURIList=_playlistAndAlbumURIList;
 @property(copy, nonatomic) NSArray *trackURIList; // @synthesize trackURIList=_trackURIList;
 @property(nonatomic) double cachedTimestamp; // @synthesize cachedTimestamp=_cachedTimestamp;
 @property(copy, nonatomic) NSSet *playlistAndAlbumURIs; // @synthesize playlistAndAlbumURIs=_playlistAndAlbumURIs;
 @property(copy, nonatomic) NSSet *trackURIs; // @synthesize trackURIs=_trackURIs;
-- (void).cxx_destruct;
 - (id)parseRawURIs:(id)arg1;
 - (id)objectRepresentation;
 - (_Bool)restoreWithObjectRepresentation:(id)arg1;

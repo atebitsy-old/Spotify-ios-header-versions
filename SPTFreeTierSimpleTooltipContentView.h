@@ -16,9 +16,9 @@
     SPTFreeTierSimpleTooltipStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierSimpleTooltipStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUELabel *textLabel; // @synthesize textLabel=_textLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addLayoutConstraints;
 - (void)applyStyle;

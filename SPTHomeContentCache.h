@@ -14,9 +14,9 @@
     SPSession *_session;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
-- (void).cxx_destruct;
 - (void)loadDataWithCallback:(CDUnknownBlockType)arg1;
 - (void)cacheData:(id)arg1 withCallback:(CDUnknownBlockType)arg2;
 - (id)cachedContentKey;

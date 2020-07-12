@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *registrationsByURIs; // @synthesize registrationsByURIs=_registrationsByURIs;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (void)registerAlgotorialLinkForSpotifyURI:(id)arg1 queryParameters:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (_Bool)requiresAlgotorialRegistration:(id)arg1 queryParameters:(id)arg2;
 - (void)unload;

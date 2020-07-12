@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTCrashReporterNavigationMonitoringServiceTransport *transport; // @synthesize transport=_transport;
 @property(nonatomic) __weak id <SPTInstrumentationService> instrumentationService; // @synthesize instrumentationService=_instrumentationService;
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
-- (void).cxx_destruct;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

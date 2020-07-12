@@ -19,10 +19,10 @@
     SPTChartEntityLoader *_entityLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTChartEntityLoader *entityLoader; // @synthesize entityLoader=_entityLoader;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTChartEntityDataSourceDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)chartEntityLoader:(id)arg1 didEncounterError:(id)arg2;
 - (void)chartEntityLoader:(id)arg1 didLoadChart:(id)arg2;
 - (void)loadChart;

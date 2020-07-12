@@ -21,11 +21,11 @@
 }
 
 + (id)identifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *skipTracks; // @synthesize skipTracks=_skipTracks;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
 @property(retain, nonatomic) id <SPTFreeTierRecommendationsTracksDataLoader> recommendedTracksDataLoader; // @synthesize recommendedTracksDataLoader=_recommendedTracksDataLoader;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)card:(id)arg1 addedTrack:(id)arg2 atIndex:(unsigned long long)arg3;
 - (void)fetchNumberTracks:(unsigned long long)arg1 withSeedTrack:(id)arg2 withCompletion:(CDUnknownBlockType)arg3;
 - (void)cardWithTracks:(id)arg1 basedOnTrack:(id)arg2;

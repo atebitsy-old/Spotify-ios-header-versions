@@ -20,10 +20,10 @@
 }
 
 + (id)disclosureAccessoryView;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *chevronView; // @synthesize chevronView=_chevronView;
 @property(nonatomic, getter=isDisabled) _Bool disabled; // @synthesize disabled=_disabled;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (struct CGSize)SPTCellAccessoryViewPositionAdjustment;
 - (void)layoutSubviews;

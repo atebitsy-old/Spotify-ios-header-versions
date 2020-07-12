@@ -11,8 +11,8 @@
     CDUnknownBlockType _onDidMoveToWindow;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType onDidMoveToWindow; // @synthesize onDidMoveToWindow=_onDidMoveToWindow;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType onDidMoveToWindow; // @synthesize onDidMoveToWindow=_onDidMoveToWindow;
 - (void)didMoveToWindow;
 
 @end

@@ -19,12 +19,12 @@
     double _leadingTrailingOfflinePadding;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double leadingTrailingOfflinePadding; // @synthesize leadingTrailingOfflinePadding=_leadingTrailingOfflinePadding;
 @property(copy, nonatomic) SPTLanguageOnboardingOfflineViewStyle *offlineViewStyle; // @synthesize offlineViewStyle=_offlineViewStyle;
 @property(copy, nonatomic) GLUETableViewCellStyle *headerCellStyle; // @synthesize headerCellStyle=_headerCellStyle;
 @property(nonatomic) long long tableViewSeparatorStyle; // @synthesize tableViewSeparatorStyle=_tableViewSeparatorStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

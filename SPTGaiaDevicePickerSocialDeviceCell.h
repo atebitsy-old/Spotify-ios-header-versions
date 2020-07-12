@@ -45,6 +45,7 @@
     UIButton *_closeButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) UIView *bottomContainer; // @synthesize bottomContainer=_bottomContainer;
 @property(retain, nonatomic) UIView *rowContainer; // @synthesize rowContainer=_rowContainer;
@@ -77,7 +78,6 @@
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) long long imageViewIcon; // @synthesize imageViewIcon=_imageViewIcon;
 @property(nonatomic) long long subtitleAccessoryIcon; // @synthesize subtitleAccessoryIcon=_subtitleAccessoryIcon;
-- (void).cxx_destruct;
 - (void)switchChanged:(id)arg1;
 - (void)prepareForReuse;
 - (void)setupInheritedCell;

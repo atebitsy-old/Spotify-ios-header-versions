@@ -23,6 +23,7 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) HUBComponentView *actionComponentView; // @synthesize actionComponentView=_actionComponentView;
 @property(retain, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) UIView *textContainer; // @synthesize textContainer=_textContainer;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;
-- (void).cxx_destruct;
 - (void)setupChildComponentsForMode:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (id)createDescription;

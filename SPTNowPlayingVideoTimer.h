@@ -14,9 +14,9 @@
     NSObject<OS_dispatch_source> *_scheduleSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSObject<OS_dispatch_source> *scheduleSource; // @synthesize scheduleSource=_scheduleSource;
 @property(nonatomic) __weak id <SPTNowPlayingVideoTimerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)stop;
 - (void)restart;
 - (void)fire;

@@ -21,6 +21,7 @@
     long long _cardType;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long cardType; // @synthesize cardType=_cardType;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) double highlightedAlpha; // @synthesize highlightedAlpha=_highlightedAlpha;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) double margin; // @synthesize margin=_margin;
 @property(readonly, nonatomic) UIColor *imageViewBackgroundColor; // @synthesize imageViewBackgroundColor=_imageViewBackgroundColor;
 @property(readonly, nonatomic) double imageViewCornerRadius; // @synthesize imageViewCornerRadius=_imageViewCornerRadius;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabelStyle *subtitleLabelStyle;
 @property(readonly, nonatomic) GLUELabelStyle *titleLabelStyle;
 - (id)initWithTheme:(id)arg1 cardType:(long long)arg2;

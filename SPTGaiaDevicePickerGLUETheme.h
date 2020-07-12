@@ -13,8 +13,8 @@
     SPTTheme *_mainTheme;
 }
 
-@property(readonly, nonatomic) SPTTheme *mainTheme; // @synthesize mainTheme=_mainTheme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTTheme *mainTheme; // @synthesize mainTheme=_mainTheme;
 - (id)subtitleImageColorForState:(long long)arg1;
 - (id)mainImageColorForState:(long long)arg1;
 - (id)deviceCellSubtitleTextColorForState:(long long)arg1;

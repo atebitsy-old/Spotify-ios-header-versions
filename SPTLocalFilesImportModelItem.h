@@ -20,13 +20,13 @@
     SPTLocalFilesImportModelItem *_parent;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPartiallySelected; // @synthesize isPartiallySelected=_isPartiallySelected;
 @property(nonatomic) _Bool isSelected; // @synthesize isSelected=_isSelected;
 @property(retain, nonatomic) SPTLocalFilesImportModelItem *parent; // @synthesize parent=_parent;
 @property(retain, nonatomic) NSArray *children; // @synthesize children=_children;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) long long numberOfTracks;
 - (void)updateSelectionStatus;
 - (void)recursivelySelectChildren;

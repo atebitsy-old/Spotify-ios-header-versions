@@ -16,9 +16,9 @@
     id <SPTOnDemandSet> _onDemandSet;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)onDemandSetWithArray:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithOnDemandSet:(id)arg1;

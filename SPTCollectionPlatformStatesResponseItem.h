@@ -16,9 +16,9 @@
     unsigned long long _collectionState;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long collectionState; // @synthesize collectionState=_collectionState;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

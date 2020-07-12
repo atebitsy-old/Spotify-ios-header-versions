@@ -17,9 +17,9 @@
     id <SPTFeatureFlagSignal> _featureFlagSignal;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> featureFlagSignal; // @synthesize featureFlagSignal=_featureFlagSignal;
 @property(nonatomic, getter=isSignalEnabled) _Bool signalEnabled; // @synthesize signalEnabled=_signalEnabled;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)dealloc;
 - (id)initWithFeatureFlagSignal:(id)arg1;

@@ -34,6 +34,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> collectionUnionArtistPageRegisterationToken; // @synthesize collectionUnionArtistPageRegisterationToken=_collectionUnionArtistPageRegisterationToken;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
@@ -51,7 +52,6 @@
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
-- (void).cxx_destruct;
 - (id)provideCollectionArtistViewController:(id)arg1 context:(id)arg2 model:(id)arg3;
 - (id)provideCollectionArtistPage:(id)arg1 context:(id)arg2;
 - (id)provideCollectionArtistModelForURL:(id)arg1 referrerIdentifier:(id)arg2;

@@ -22,6 +22,7 @@
     id <SPTUBIUserBehaviourInstrumentation> _userBehaviourInstrumentation;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, copy, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
-- (void).cxx_destruct;
 - (id)createDefaultCommandHandlersWithViewURI:(id)arg1 referrerIdentifier:(id)arg2 interactionLogger:(id)arg3;
 - (id)initWithFeatureIdentifier:(id)arg1 linkDispatcher:(id)arg2 playerService:(id)arg3 contextMenuLogContext:(id)arg4 contextMenuOptionsFactory:(id)arg5 presenterFactory:(id)arg6 userBehaviourInstrumentation:(id)arg7;
 

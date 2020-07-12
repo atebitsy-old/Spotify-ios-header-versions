@@ -18,12 +18,12 @@
     NSTimer *_timer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(nonatomic, getter=isFullValidationEnabled) _Bool fullValidationEnabled; // @synthesize fullValidationEnabled=_fullValidationEnabled;
 @property(retain, nonatomic) SPTSignupPasswordFieldValidator *fieldValidator; // @synthesize fieldValidator=_fieldValidator;
 @property(copy, nonatomic) CDUnknownBlockType onSuccessActionBlock; // @synthesize onSuccessActionBlock=_onSuccessActionBlock;
 @property(nonatomic) __weak id <SPTSignupPasswordFieldValidationViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)validateAndTriggerOnSuccessAction:(id)arg1;
 - (void)userDidTapNextButtonWithValue:(id)arg1;
 - (void)userDidTapReturnButtonWithValue:(id)arg1;

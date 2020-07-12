@@ -19,12 +19,12 @@
     double _emptyViewHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double emptyViewHeight; // @synthesize emptyViewHeight=_emptyViewHeight;
 @property(copy, nonatomic) SPTEditPlaylistHeaderViewStyle *headerViewStyle; // @synthesize headerViewStyle=_headerViewStyle;
 @property(copy, nonatomic) GLUETableViewStyle *tableViewStyle; // @synthesize tableViewStyle=_tableViewStyle;
 @property(copy, nonatomic) GLUEEmptyStateViewStyle *emptyEditViewStyle; // @synthesize emptyEditViewStyle=_emptyEditViewStyle;
 @property(copy, nonatomic) SPTEditPlaylistTextViewCellStyle *textViewCellStyle; // @synthesize textViewCellStyle=_textViewCellStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -19,10 +19,10 @@
 }
 
 + (id)cancellationTokenImplementationWithDelegate:(id)arg1 cancelObject:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id objectToCancel; // @synthesize objectToCancel=_objectToCancel;
 @property(readonly, nonatomic) __weak id <SPTDataLoaderCancellationTokenDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isCancelled) _Bool cancelled; // @synthesize cancelled=_cancelled;
-- (void).cxx_destruct;
 - (void)cancel;
 - (id)initWithDelegate:(id)arg1 cancelObject:(id)arg2;
 

@@ -30,6 +30,7 @@
     id <SPTSearchOnDemandPermissionMonitor> _onDemandPermissionMonitor;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSearchOnDemandPermissionMonitor> onDemandPermissionMonitor; // @synthesize onDemandPermissionMonitor=_onDemandPermissionMonitor;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, copy, nonatomic) NSArray *postProcessContentOperations; // @synthesize postProcessContentOperations=_postProcessContentOperations;
@@ -41,7 +42,6 @@
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
 @property(nonatomic) __weak id <SPTSearchPlatformContextDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)postProcessViewModel:(id)arg1;
 - (void)onDemandPermissionMonitorDidChangeState:(id)arg1;
 - (void)didChangeCanPlayAgeRestrictedContent:(_Bool)arg1;

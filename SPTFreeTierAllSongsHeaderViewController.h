@@ -19,11 +19,11 @@
     SPTFreeTierAllSongsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierAllSongsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTFreeTierAllSongsHeaderContentView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) SPTFreeTierAllSongsTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTFreeTierAllSongsHeaderEntityViewModel> headerEntityViewModel; // @synthesize headerEntityViewModel=_headerEntityViewModel;
-- (void).cxx_destruct;
 - (double)entityHeaderViewControllerMinimumHeight:(id)arg1;
 - (void)entityHeaderViewController:(id)arg1 didUpdateBounceOffsets:(struct UIEdgeInsets)arg2;
 - (void)entityHeaderViewController:(id)arg1 didUpdateVisibleRect:(struct CGRect)arg2;

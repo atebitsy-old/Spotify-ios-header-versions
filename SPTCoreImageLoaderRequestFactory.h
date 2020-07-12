@@ -17,9 +17,9 @@
     id <SPTImageResolver> _imageResolver;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTImageResolver> imageResolver; // @synthesize imageResolver=_imageResolver;
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
-- (void).cxx_destruct;
 - (id)provideImageLoaderRequestForURL:(id)arg1 sourceIdentifier:(id)arg2 downloadSize:(struct CGSize)arg3 requestedSize:(struct CGSize)arg4 allowUpscaling:(_Bool)arg5 context:(id)arg6 callback:(id)arg7 dataLoader:(id)arg8 delegate:(id)arg9 baseImageLoader:(id)arg10;
 - (id)initWithResolver:(id)arg1 imageResolver:(id)arg2;
 

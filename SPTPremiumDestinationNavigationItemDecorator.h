@@ -16,10 +16,10 @@
     UIButton *_settingsButton;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIButton *settingsButton; // @synthesize settingsButton=_settingsButton;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
-- (void).cxx_destruct;
 - (void)settingsButtonPressed:(id)arg1;
 - (id)rightItems;
 - (void)updateNavigationItemDecoratorAlpha:(double)arg1;

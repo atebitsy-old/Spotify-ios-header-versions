@@ -19,10 +19,10 @@
 }
 
 + (id)soundsBundle;
+- (void).cxx_destruct;
 @property(retain, nonatomic) AVAudioPlayer *currentAudioPlayer; // @synthesize currentAudioPlayer=_currentAudioPlayer;
 @property(retain, nonatomic) NSDictionary *cuePlayers; // @synthesize cuePlayers=_cuePlayers;
 @property(readonly, nonatomic) id <SPTVoiceTestManager> testManager; // @synthesize testManager=_testManager;
-- (void).cxx_destruct;
 - (void)playAudioCueWithPlayer:(id)arg1;
 - (id)newPlayerNamed:(id)arg1;
 - (id)audioCuePlayers;

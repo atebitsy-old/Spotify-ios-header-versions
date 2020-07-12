@@ -14,11 +14,11 @@
     UIView *_swooshFollowButtonView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *swooshFollowButtonView; // @synthesize swooshFollowButtonView=_swooshFollowButtonView;
 @property(retain, nonatomic) UIView *swooshAttributionView; // @synthesize swooshAttributionView=_swooshAttributionView;
 @property(retain, nonatomic) UIView *swooshAvatarView; // @synthesize swooshAvatarView=_swooshAvatarView;
 @property(retain, nonatomic) UIView *swooshLoadingView; // @synthesize swooshLoadingView=_swooshLoadingView;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1;

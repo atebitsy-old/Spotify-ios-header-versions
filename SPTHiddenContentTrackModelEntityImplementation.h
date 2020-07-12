@@ -26,6 +26,7 @@
     unsigned long long _playStateRestriction;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long playStateRestriction; // @synthesize playStateRestriction=_playStateRestriction;
 @property(readonly, nonatomic) _Bool is19PlusOnly; // @synthesize is19PlusOnly=_is19PlusOnly;
 @property(readonly, nonatomic, getter=isExplicit) _Bool explicit; // @synthesize explicit=_explicit;
@@ -38,7 +39,6 @@
 @property(readonly, copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(readonly, nonatomic) NSURL *albumImageURL; // @synthesize albumImageURL=_albumImageURL;
 @property(readonly, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (_Bool)isEqualToTrackModelEntity:(id)arg1;

@@ -13,8 +13,8 @@
     id <SPTProductState> _productState;
 }
 
-@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 - (void)writePreferredLocaleToBackend:(id)arg1;
 - (id)initWithProductState:(id)arg1;
 

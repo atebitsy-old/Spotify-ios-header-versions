@@ -16,9 +16,9 @@
     SPTPhoneNumberSignupCodeInputFieldStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPhoneNumberSignupCodeInputFieldStyle *style; // @synthesize style=_style;
 @property(nonatomic) _Bool inErrorMode; // @synthesize inErrorMode=_inErrorMode;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (_Bool)canPerformAction:(SEL)arg1 withSender:(id)arg2;
 - (id)currentTextColor;

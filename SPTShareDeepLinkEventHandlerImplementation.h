@@ -20,11 +20,11 @@
     NSString *_sessionIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *sessionIdentifier; // @synthesize sessionIdentifier=_sessionIdentifier;
 @property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTShareEventSenderLogger> eventSenderLogger; // @synthesize eventSenderLogger=_eventSenderLogger;
-- (void).cxx_destruct;
 - (_Bool)isPlayingSomethingNewGivenPlayerState:(id)arg1 oldPlayerState:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)applicationDidEnterBackground:(id)arg1;

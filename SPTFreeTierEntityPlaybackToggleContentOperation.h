@@ -20,11 +20,11 @@
     SPTPlayerState *_currentState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *currentState; // @synthesize currentState=_currentState;
 @property(nonatomic, getter=isObserving) _Bool observing; // @synthesize observing=_observing;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (_Bool)determineIfPlayerState:(id)arg1 isPlayingContextWithURI:(id)arg2;
 - (void)updatePlaybackButtonComponent:(id)arg1 withPlayerState:(id)arg2;

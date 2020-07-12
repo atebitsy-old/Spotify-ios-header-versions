@@ -22,6 +22,7 @@
     SPTLocalAVAssetImageLoaderRequestFactory *_avAssetImageRequestFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLocalAVAssetImageLoaderRequestFactory *avAssetImageRequestFactory; // @synthesize avAssetImageRequestFactory=_avAssetImageRequestFactory;
 @property(readonly, nonatomic) SPTLocalIPodLibraryImageLoaderRequestFactory *ipodImageRequestFactory; // @synthesize ipodImageRequestFactory=_ipodImageRequestFactory;
 @property(readonly, nonatomic) SPTMosaicImageRequestFactory *mosaicImageRequestFactory; // @synthesize mosaicImageRequestFactory=_mosaicImageRequestFactory;
@@ -29,7 +30,6 @@
 @property(nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTImageLoaderService *imageLoaderService; // @synthesize imageLoaderService=_imageLoaderService;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (_Bool)updateOfflineState;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;

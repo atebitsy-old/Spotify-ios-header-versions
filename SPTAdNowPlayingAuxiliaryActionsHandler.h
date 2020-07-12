@@ -29,6 +29,7 @@
     SPForegroundObserver *_foregroundObserver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(copy, nonatomic) NSArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
 @property(retain, nonatomic) NSMutableSet *savedAdIds; // @synthesize savedAdIds=_savedAdIds;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) SPTAdPlayerObservable *playerObserver; // @synthesize playerObserver=_playerObserver;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)foregroundObserverDidHibernate:(id)arg1;

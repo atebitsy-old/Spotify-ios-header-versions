@@ -19,10 +19,10 @@
     NSMutableDictionary *_operations;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *operations; // @synthesize operations=_operations;
 @property(copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-- (void).cxx_destruct;
 - (void)removeInstrumentationObserver:(id)arg1;
 - (void)addInstrumentationObserver:(id)arg1;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;

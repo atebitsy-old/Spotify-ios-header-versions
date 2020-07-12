@@ -26,6 +26,7 @@
 }
 
 + (id)entityServiceWithScheduler:(id)arg1 metadataModel:(struct MetadataModel *)arg2 remoteProvider:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSCache *decAlbumsCache; // @synthesize decAlbumsCache=_decAlbumsCache;
 @property(retain, nonatomic) NSCache *decArtistsCache; // @synthesize decArtistsCache=_decArtistsCache;
 @property(retain, nonatomic) NSCache *albumsCache; // @synthesize albumsCache=_albumsCache;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) id <SPTEntityRemoteProviderProtocol> remoteProvider; // @synthesize remoteProvider=_remoteProvider;
 @property(nonatomic) struct MetadataModel *metadataModel; // @synthesize metadataModel=_metadataModel;
 @property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)cancelAllTasks;
 - (void)cancelTask:(struct MetadataTask *)arg1;

@@ -13,8 +13,8 @@
     NSString *_value;
 }
 
-@property(readonly, copy, nonatomic) NSString *value; // @synthesize value=_value;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *value; // @synthesize value=_value;
 - (id)initWithName:(id)arg1 componentId:(id)arg2 value:(id)arg3;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

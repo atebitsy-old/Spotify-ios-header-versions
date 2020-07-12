@@ -26,6 +26,7 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) NSArray *modes; // @synthesize modes=_modes;
 @property(retain, nonatomic) id <SPTNowPlayingMode> mode; // @synthesize mode=_mode;
@@ -35,7 +36,6 @@
 @property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTNowPlayingModesRegistry> modesRegistry; // @synthesize modesRegistry=_modesRegistry;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)drivingModeController:(id)arg1 didChangeDrivingModeEnabledState:(_Bool)arg2;
 - (id)mapModeToDrivingMode:(id)arg1;

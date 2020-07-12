@@ -20,11 +20,11 @@
     NSMutableArray *_premiumAvailabilityCallbacks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *premiumAvailabilityCallbacks; // @synthesize premiumAvailabilityCallbacks=_premiumAvailabilityCallbacks;
 @property(copy, nonatomic) CDUnknownBlockType premiumPurchaseCallback; // @synthesize premiumPurchaseCallback=_premiumPurchaseCallback;
 @property(retain, nonatomic) SKProduct *premiumProduct; // @synthesize premiumProduct=_premiumProduct;
 @property(retain, nonatomic) id <SPTIAPController> controller; // @synthesize controller=_controller;
-- (void).cxx_destruct;
 - (void)controller:(id)arg1 didFailPurchaseWithError:(id)arg2;
 - (void)controllerDidFinishPurchase:(id)arg1;
 - (void)controllerDidStartActivation:(id)arg1;

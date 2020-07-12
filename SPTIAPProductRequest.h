@@ -20,11 +20,11 @@
     SPTIAPItunesProductRequest *_itunesProductRequest;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTIAPItunesProductRequest *itunesProductRequest; // @synthesize itunesProductRequest=_itunesProductRequest;
 @property(retain, nonatomic) SPTIAPSpotifyProductRequest *spotifyProductRequest; // @synthesize spotifyProductRequest=_spotifyProductRequest;
 @property(retain, nonatomic) id <SPTIAPRequestFactory> productRequestFactory; // @synthesize productRequestFactory=_productRequestFactory;
 @property(nonatomic) __weak id <SPTIAPProductRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)itunesProductRequest:(id)arg1 didFailWithError:(id)arg2;
 - (void)itunesProductRequest:(id)arg1 didFinishWithProducts:(id)arg2;
 - (void)itunesProductRequestDidStart:(id)arg1;

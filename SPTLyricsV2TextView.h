@@ -18,13 +18,13 @@
     NSValue *_currentLinkRangeValue;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSValue *currentLinkRangeValue; // @synthesize currentLinkRangeValue=_currentLinkRangeValue;
 @property(retain, nonatomic) NSMutableDictionary *links; // @synthesize links=_links;
 @property(copy, nonatomic) SPTLyricsV2TextViewStyle *glueStyle; // @synthesize glueStyle=_glueStyle;
 @property(nonatomic) unsigned long long textLength; // @synthesize textLength=_textLength;
 @property(nonatomic) unsigned long long activeLength; // @synthesize activeLength=_activeLength;
 @property(nonatomic) unsigned long long activeFrom; // @synthesize activeFrom=_activeFrom;
-- (void).cxx_destruct;
 - (void)updateActiveText:(unsigned long long)arg1;
 - (void)updateActiveText;
 - (struct _NSRange)verticalRangeOfSubstringWithRange:(struct _NSRange)arg1;

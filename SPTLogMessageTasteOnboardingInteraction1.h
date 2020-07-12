@@ -24,6 +24,7 @@
 }
 
 + (id)messageWithPageIdentifier:(id)arg1 targetUri:(id)arg2 intent:(id)arg3 contentSource:(id)arg4 contentSourceUri:(id)arg5 section:(id)arg6 positionIndex:(long long)arg7 maxPositionIndex:(long long)arg8 sequenceNumber:(long long)arg9 sessionId:(id)arg10 interactionId:(id)arg11;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *interactionIdValue; // @synthesize interactionIdValue=_interactionIdValue;
 @property(copy, nonatomic) NSString *sessionIdValue; // @synthesize sessionIdValue=_sessionIdValue;
 @property(nonatomic) long long sequenceNumberValue; // @synthesize sequenceNumberValue=_sequenceNumberValue;
@@ -35,7 +36,6 @@
 @property(copy, nonatomic) NSString *intentValue; // @synthesize intentValue=_intentValue;
 @property(copy, nonatomic) NSString *targetUriValue; // @synthesize targetUriValue=_targetUriValue;
 @property(copy, nonatomic) NSString *pageIdentifierValue; // @synthesize pageIdentifierValue=_pageIdentifierValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

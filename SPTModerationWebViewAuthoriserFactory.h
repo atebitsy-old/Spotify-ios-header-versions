@@ -14,9 +14,9 @@
     NSURL *_authoriserURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *authoriserURL; // @synthesize authoriserURL=_authoriserURL;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
-- (void).cxx_destruct;
 - (id)createAuthoriser;
 - (id)initWithAuthoriserURL:(id)arg1 dataLoaderFactory:(id)arg2 authoriser:(id)arg3;
 

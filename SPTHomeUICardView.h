@@ -24,13 +24,13 @@
 + (double)imageBottomMarginForTheme:(id)arg1 type:(unsigned long long)arg2;
 + (struct CGSize)sizeForAttributedTitle:(id)arg1 attributedSubtitle:(id)arg2 maxWidth:(double)arg3 style:(id)arg4 theme:(id)arg5 type:(unsigned long long)arg6;
 + (struct CGSize)imageSizeForMaxWidth:(double)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTHomeUILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) SPTHomeUILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
-- (void).cxx_destruct;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)animateToHighlighted:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;

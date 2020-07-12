@@ -20,11 +20,11 @@
     FollowModel *_followModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)followModel:(id)arg1 followDataDidChange:(id)arg2;
 - (void)updateTrackBuilders:(id)arg1 withFollowModel:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

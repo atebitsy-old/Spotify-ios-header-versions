@@ -10,13 +10,12 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSeedASessionConfiguration, SPTSeedASessionFeatureProperties, SPTSeedASessionFlowCoordinator;
-@protocol SPTFreeTierTasteOnboardingService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTUIPresentationService, SPTURIDispatchService;
+@protocol SPTFreeTierTasteOnboardingService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTURIDispatchService;
 
 @interface SPTSeedASessionServiceImplementation : NSObject <SPTSeedASessionService, SPTURISubtypeHandler>
 {
     SPTSeedASessionConfiguration *_seedASessionConfiguration;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTUIPresentationService> _uiPresentationService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTFreeTierTasteOnboardingService> _tasteOnboardingService;
     id <SPTPlayerFeature> _playerService;
@@ -25,15 +24,14 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSeedASessionFlowCoordinator *flowCoordinator; // @synthesize flowCoordinator=_flowCoordinator;
 @property(retain, nonatomic) SPTSeedASessionFeatureProperties *seedASessionFeatureProperties; // @synthesize seedASessionFeatureProperties=_seedASessionFeatureProperties;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingService> tasteOnboardingService; // @synthesize tasteOnboardingService=_tasteOnboardingService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-@property(nonatomic) __weak id <SPTUIPresentationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) SPTSeedASessionConfiguration *seedASessionConfiguration; // @synthesize seedASessionConfiguration=_seedASessionConfiguration;
-- (void).cxx_destruct;
 - (void)unregisterLinkHandler;
 - (void)registerLinkHandler;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;

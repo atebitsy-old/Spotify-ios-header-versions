@@ -24,6 +24,7 @@
     id <SPTViewLogger> _viewLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) SPTConcertsListingLogger *concertsListingLogger; // @synthesize concertsListingLogger=_concertsListingLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -31,7 +32,6 @@
 @property(nonatomic) long long defaultStatusBarStyle; // @synthesize defaultStatusBarStyle=_defaultStatusBarStyle;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SPTConcertsListingModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)logConcertSelectionForConcert:(id)arg1 atIndexPath:(id)arg2;

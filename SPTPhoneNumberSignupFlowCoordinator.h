@@ -29,6 +29,7 @@
     id <SPTLoginStateController> _loginStateController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(readonly, nonatomic) SPTPhoneNumberSignupUtils *phoneNumberSignupUtils; // @synthesize phoneNumberSignupUtils=_phoneNumberSignupUtils;
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryViewModel *phoneNumberEntryViewModel; // @synthesize phoneNumberEntryViewModel=_phoneNumberEntryViewModel;
@@ -40,7 +41,6 @@
 @property(retain, nonatomic) SPTPhoneNumberSignupValidateOtpViewController *otpViewController; // @synthesize otpViewController=_otpViewController;
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryViewController *phoneNumberEntryViewController; // @synthesize phoneNumberEntryViewController=_phoneNumberEntryViewController;
 @property(readonly, nonatomic) SPTPhoneNumberSignupTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)removeOtpViewControllerFromNavigationStack;
 - (id)selectedCountryCode;
 - (id)currentNavigationController;

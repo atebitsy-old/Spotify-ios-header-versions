@@ -19,11 +19,11 @@
     SPTFeatureSettingsPage *_settingsPage;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFeatureSettingsPage *settingsPage; // @synthesize settingsPage=_settingsPage;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(nonatomic) __weak id <SettingsRegistry> settingsRegistry; // @synthesize settingsRegistry=_settingsRegistry;
 @property(readonly, nonatomic) id <SPTLegacyFeatureFlag> contributingArtistsFeatureFlag; // @synthesize contributingArtistsFeatureFlag=_contributingArtistsFeatureFlag;
-- (void).cxx_destruct;
 - (id)initWithABBAService:(id)arg1 localSettings:(id)arg2 settingsRegistry:(id)arg3 featureSettingsItemFactory:(id)arg4;
 
 // Remaining properties

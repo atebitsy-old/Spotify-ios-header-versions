@@ -18,12 +18,12 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) NSURL *episodeURI; // @synthesize episodeURI=_episodeURI;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) id <SPTPodcastSpeedControlManager> speedControlManager; // @synthesize speedControlManager=_speedControlManager;
 - (id)logEventName;
-- (void).cxx_destruct;
 - (void)logSpeedControlSelected;
 - (id)execute:(id)arg1;
 - (id)imageStyle;

@@ -19,10 +19,10 @@
     id <SPTFeatureFlagSignal> _keyboardShortcutsEnabledSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isKeyboardShortcutsFeatureEnabled) _Bool keyboardShortcutsFeatureEnabled; // @synthesize keyboardShortcutsFeatureEnabled=_keyboardShortcutsFeatureEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> keyboardShortcutsEnabledSignal; // @synthesize keyboardShortcutsEnabledSignal=_keyboardShortcutsEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupFlags;
 - (id)initWithFeatureFlagFactory:(id)arg1;

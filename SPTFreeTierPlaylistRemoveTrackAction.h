@@ -16,10 +16,10 @@
     id <SPTPlaylistModel> _playlistModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(readonly, nonatomic) NSArray *trackURLs; // @synthesize trackURLs=_trackURLs;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)style;
 - (id)logEventName;

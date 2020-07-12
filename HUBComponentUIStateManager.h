@@ -13,8 +13,8 @@
     NSMutableDictionary *_statesForComponentModelIdentifiers;
 }
 
-@property(readonly, nonatomic) NSMutableDictionary *statesForComponentModelIdentifiers; // @synthesize statesForComponentModelIdentifiers=_statesForComponentModelIdentifiers;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableDictionary *statesForComponentModelIdentifiers; // @synthesize statesForComponentModelIdentifiers=_statesForComponentModelIdentifiers;
 - (void)removeSavedUIStateForComponentModel:(id)arg1;
 - (id)restoreUIStateForComponentModel:(id)arg1;
 - (void)saveUIState:(id)arg1 forComponentModel:(id)arg2;

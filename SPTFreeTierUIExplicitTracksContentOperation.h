@@ -18,10 +18,10 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(copy, nonatomic) NSArray *trackRowKeys; // @synthesize trackRowKeys=_trackRowKeys;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithExplicitContentAccessManager:(id)arg1;
 

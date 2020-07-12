@@ -25,6 +25,7 @@
 }
 
 + (id)messageWithLineItemId:(id)arg1 creativeId:(id)arg2 adPlaybackId:(id)arg3 adId:(id)arg4 advertiser:(id)arg5 title:(id)arg6 volume:(double)arg7 progress:(long long)arg8 format:(id)arg9 imageUrl:(id)arg10 mediaFiles:(id)arg11 event:(id)arg12;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *eventValue; // @synthesize eventValue=_eventValue;
 @property(copy, nonatomic) NSString *mediaFilesValue; // @synthesize mediaFilesValue=_mediaFilesValue;
 @property(copy, nonatomic) NSString *imageUrlValue; // @synthesize imageUrlValue=_imageUrlValue;
@@ -37,7 +38,6 @@
 @property(copy, nonatomic) NSString *adPlaybackIdValue; // @synthesize adPlaybackIdValue=_adPlaybackIdValue;
 @property(copy, nonatomic) NSString *creativeIdValue; // @synthesize creativeIdValue=_creativeIdValue;
 @property(copy, nonatomic) NSString *lineItemIdValue; // @synthesize lineItemIdValue=_lineItemIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

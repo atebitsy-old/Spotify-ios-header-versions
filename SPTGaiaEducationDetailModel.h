@@ -18,13 +18,13 @@
     NSArray *_steps;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *steps; // @synthesize steps=_steps;
 @property(readonly, copy, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(readonly, copy, nonatomic) NSString *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(readonly, copy, nonatomic) NSString *detailedTitle; // @synthesize detailedTitle=_detailedTitle;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 detailedTitle:(id)arg2 image:(id)arg3 pageURI:(id)arg4 pageIdentifier:(id)arg5 steps:(id)arg6;
 
 @end

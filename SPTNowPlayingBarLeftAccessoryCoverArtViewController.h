@@ -20,12 +20,12 @@
     NSURL *_currentImageURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *currentImageURL; // @synthesize currentImageURL=_currentImageURL;
 @property(retain, nonatomic) SPTNowPlayingCoverArtImageView *coverArtImageView; // @synthesize coverArtImageView=_coverArtImageView;
 @property(readonly, nonatomic) SPTNowPlayingBarLeftAccessoryCoverArtViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)nowPlayingBarLeftAccessoryCoverArtViewModel:(id)arg1 trackDidChange:(id)arg2;
 - (void)loadCoverArtImageForTrack:(id)arg1;
 - (void)setupUI;

@@ -19,12 +19,12 @@
     NSLayoutConstraint *_labelBottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *labelBottomConstraint; // @synthesize labelBottomConstraint=_labelBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *labelTopConstraint; // @synthesize labelTopConstraint=_labelTopConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *labelTrailingConstraint; // @synthesize labelTrailingConstraint=_labelTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *labelLeadingConstraint; // @synthesize labelLeadingConstraint=_labelLeadingConstraint;
 @property(readonly, nonatomic) GLUELabel *label; // @synthesize label=_label;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

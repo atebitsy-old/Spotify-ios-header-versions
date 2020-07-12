@@ -18,10 +18,10 @@
     NSMutableArray *_loggedResults;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *loggedResults; // @synthesize loggedResults=_loggedResults;
 @property(retain, nonatomic) SPTCarmageddonMotionBasedStateDetector *motionBasedCarDetector; // @synthesize motionBasedCarDetector=_motionBasedCarDetector;
 @property(nonatomic) __weak id <SPTCarmageddonMotionRecorderViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)carDetectorDidSendPredictionRequest:(id)arg1;
 - (void)carDetectorDidReceiveSensorBatch:(id)arg1;
 - (void)carDetector:(id)arg1 didReceivePredictionError:(id)arg2;

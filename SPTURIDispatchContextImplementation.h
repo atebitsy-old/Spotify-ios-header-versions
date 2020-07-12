@@ -21,6 +21,7 @@
     NSString *_interactionID;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *interactionID; // @synthesize interactionID=_interactionID;
 @property(readonly, nonatomic, getter=isLoggedIn) _Bool loggedIn; // @synthesize loggedIn=_loggedIn;
 @property(readonly, nonatomic) _Bool shouldSuppressAnimations; // @synthesize shouldSuppressAnimations=_shouldSuppressAnimations;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) _Bool shouldUseCurrentStack; // @synthesize shouldUseCurrentStack=_shouldUseCurrentStack;
 @property(readonly, nonatomic) id annotation; // @synthesize annotation=_annotation;
 @property(readonly, copy, nonatomic) NSString *sourceApplication; // @synthesize sourceApplication=_sourceApplication;
-- (void).cxx_destruct;
 - (id)initWithSourceApplication:(id)arg1 annotation:(id)arg2 useCurrentStack:(_Bool)arg3 popStackIfPossible:(_Bool)arg4 suppressAnimations:(_Bool)arg5 loggedIn:(_Bool)arg6 interactionID:(id)arg7;
 
 // Remaining properties

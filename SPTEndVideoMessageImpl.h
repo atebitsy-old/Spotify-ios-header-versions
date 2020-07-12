@@ -52,6 +52,7 @@
     long long _msPlayedBackground;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long msPlayedBackground; // @synthesize msPlayedBackground=_msPlayedBackground;
 @property(copy, nonatomic) NSString *connectionTypeEnd; // @synthesize connectionTypeEnd=_connectionTypeEnd;
 @property(copy, nonatomic) NSString *connectionTypeStart; // @synthesize connectionTypeStart=_connectionTypeStart;
@@ -89,7 +90,6 @@
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
 @property(copy, nonatomic) NSString *sequenceId; // @synthesize sequenceId=_sequenceId;
 @property(retain, nonatomic) NSNumber *sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
-- (void).cxx_destruct;
 - (id)initWithSequenceNumber:(id)arg1 sequenceId:(id)arg2 identity:(id)arg3 reasonStart:(id)arg4 reasonEnd:(id)arg5 msPlayed:(long long)arg6 msNominalPlayed:(long long)arg7 msTotalEst:(long long)arg8 msManifestLatency:(long long)arg9 nSeekback:(long long)arg10 msSeekback:(long long)arg11 nSeekfwd:(long long)arg12 msSeekfwd:(long long)arg13 msLatency:(long long)arg14 uiLatency:(long long)arg15 startOffsetMs:(long long)arg16 msInitialBuffering:(long long)arg17 msSeekRebuffering:(long long)arg18 msStalled:(long long)arg19 maxMsSeekRebuffering:(long long)arg20 maxMsStalled:(long long)arg21 nStalls:(long long)arg22 maxContinous:(long long)arg23 unionPlayed:(long long)arg24 audiocodec:(id)arg25 videocodec:(id)arg26 incognitoMode:(_Bool)arg27 streamingRule:(id)arg28 startBitrate:(long long)arg29 fullScreen:(long long)arg30 timeWeightedBitrate:(long long)arg31 keySystem:(id)arg32 msKeyLatency:(long long)arg33 totalBytes:(long long)arg34 connectionTypeStart:(id)arg35 connectionTypeEnd:(id)arg36 msPlayedBackground:(long long)arg37;
 
 // Remaining properties

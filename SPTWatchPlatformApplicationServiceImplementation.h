@@ -17,8 +17,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(copy, nonatomic) NSArray *publishers; // @synthesize publishers=_publishers;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *publishers; // @synthesize publishers=_publishers;
 - (id)watchConnectivityManager;
 - (void)sessionReachabilityDidChange:(id)arg1;
 - (void)unload;

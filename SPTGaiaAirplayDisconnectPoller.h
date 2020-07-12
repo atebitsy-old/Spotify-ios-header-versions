@@ -15,9 +15,9 @@
     NSTimer *_airplayDisconnectTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *airplayDisconnectTimer; // @synthesize airplayDisconnectTimer=_airplayDisconnectTimer;
 @property(nonatomic) __weak id <SPTGaiaAirplayDisconnectPollerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)poll;
 - (void)stopPolling;

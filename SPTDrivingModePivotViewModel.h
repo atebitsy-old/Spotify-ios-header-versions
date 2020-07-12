@@ -25,6 +25,7 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTDrivingModePivotPlayer *pivotPlayer; // @synthesize pivotPlayer=_pivotPlayer;
 @property(readonly, nonatomic) SPTDrivingModePivotList *pivotList; // @synthesize pivotList=_pivotList;
@@ -34,7 +35,6 @@
 @property(nonatomic, getter=shouldShowLoadingView) _Bool showLoadingView; // @synthesize showLoadingView=_showLoadingView;
 @property(nonatomic, getter=shouldShowErrorView) _Bool showErrorView; // @synthesize showErrorView=_showErrorView;
 @property(nonatomic) __weak id <SPTDrivingModePivotViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)playURI:(id)arg1;
 - (id)itemForIndex:(long long)arg1;

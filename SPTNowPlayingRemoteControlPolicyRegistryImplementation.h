@@ -15,8 +15,8 @@
     NSMapTable *_policyMap;
 }
 
-@property(retain, nonatomic) NSMapTable *policyMap; // @synthesize policyMap=_policyMap;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMapTable *policyMap; // @synthesize policyMap=_policyMap;
 - (void)unregisterRemoteControlPolicy:(id)arg1;
 - (id)remoteControlPolicyForKey:(id)arg1;
 - (void)registerRemoteControlPolicy:(id)arg1 policyKey:(id)arg2;

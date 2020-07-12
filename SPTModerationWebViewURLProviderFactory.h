@@ -13,8 +13,8 @@
     SPTModerationReportDecorationRegistryImplementation *_decorationRegistry;
 }
 
-@property(retain, nonatomic) SPTModerationReportDecorationRegistryImplementation *decorationRegistry; // @synthesize decorationRegistry=_decorationRegistry;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTModerationReportDecorationRegistryImplementation *decorationRegistry; // @synthesize decorationRegistry=_decorationRegistry;
 - (id)createProviderForURLBuilder:(id)arg1;
 - (id)initWithDecorationRegistry:(id)arg1;
 

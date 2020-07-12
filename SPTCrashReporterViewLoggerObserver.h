@@ -16,8 +16,8 @@
     id <SPTCrashReporter> _crashReporter;
 }
 
-@property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 - (void)viewLogger:(id)arg1 didTransitionToState:(long long)arg2 after:(double)arg3;
 - (id)initWithCrashReporter:(id)arg1;
 

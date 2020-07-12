@@ -18,6 +18,7 @@
 }
 
 + (id)button;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImage *normalButtonImage; // @synthesize normalButtonImage=_normalButtonImage;
 @property(retain, nonatomic) UIImage *selectedButtonImage; // @synthesize selectedButtonImage=_selectedButtonImage;
 - (void)setIconColor:(id)arg1;
@@ -26,7 +27,6 @@
 - (struct CGSize)iconSize;
 - (void)setIcon:(long long)arg1;
 - (long long)icon;
-- (void).cxx_destruct;
 - (void)setSelected:(_Bool)arg1;
 - (void)updateForSelected;
 - (void)updateAccessibility;

@@ -22,12 +22,12 @@
 
 + (id)attributedLegalTextFrom:(id)arg1 style:(id)arg2;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(retain, nonatomic) GLUELabel *legalTextLabel; // @synthesize legalTextLabel=_legalTextLabel;
 @property(retain, nonatomic) SPTPremiumDestinationUIFlexboxLegalTextStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)tapGestureRecognized:(id)arg1;

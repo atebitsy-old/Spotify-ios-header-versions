@@ -21,6 +21,7 @@
 }
 
 + (id)messageWithClientId:(id)arg1 responseType:(id)arg2 redirectUri:(id)arg3 scopes:(id)arg4 isOffline:(_Bool)arg5 appId:(id)arg6 integrationInitiated:(_Bool)arg7 authId:(id)arg8;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *authIdValue; // @synthesize authIdValue=_authIdValue;
 @property(nonatomic) _Bool integrationInitiatedValue; // @synthesize integrationInitiatedValue=_integrationInitiatedValue;
 @property(copy, nonatomic) NSString *appIdValue; // @synthesize appIdValue=_appIdValue;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSString *redirectUriValue; // @synthesize redirectUriValue=_redirectUriValue;
 @property(copy, nonatomic) NSString *responseTypeValue; // @synthesize responseTypeValue=_responseTypeValue;
 @property(copy, nonatomic) NSString *clientIdValue; // @synthesize clientIdValue=_clientIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

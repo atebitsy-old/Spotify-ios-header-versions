@@ -15,10 +15,10 @@
     NSObject<OS_nw_path_monitor> *_pathMonitor;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool activeState; // @synthesize activeState=_activeState;
 @property(retain, nonatomic) NSObject<OS_nw_path_monitor> *pathMonitor; // @synthesize pathMonitor=_pathMonitor;
 @property(nonatomic) __weak NSObject<SPTDataSaverLowDataModeMonitorDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setupLowDataModeMonitor;
 - (id)init;
 

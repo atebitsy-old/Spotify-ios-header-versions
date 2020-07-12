@@ -24,6 +24,7 @@
     SPTConcertsDateFormatter *_dateFormatter;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTConcertsDateFormatter *dateFormatter; // @synthesize dateFormatter=_dateFormatter;
 @property(readonly, copy, nonatomic) NSString *festivalTitle; // @synthesize festivalTitle=_festivalTitle;
 @property(readonly, nonatomic) _Bool isFestival; // @synthesize isFestival=_isFestival;
@@ -36,7 +37,6 @@
 @property(readonly, copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(readonly, copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *dayText;
 @property(readonly, copy, nonatomic) NSString *monthText;
 - (id)artistsFromDictionary:(id)arg1;

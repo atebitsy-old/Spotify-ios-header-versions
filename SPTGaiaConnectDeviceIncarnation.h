@@ -17,10 +17,10 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(nonatomic) _Bool isPreferred; // @synthesize isPreferred=_isPreferred;
 @property(copy, nonatomic) NSString *cosmosDeviceId; // @synthesize cosmosDeviceId=_cosmosDeviceId;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 // Remaining properties

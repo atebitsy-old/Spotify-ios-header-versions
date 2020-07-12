@@ -16,11 +16,11 @@
     NSLayoutConstraint *_gradientViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *gradientViewHeightConstraint; // @synthesize gradientViewHeightConstraint=_gradientViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(retain, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) SPTLyricsV2TextView *textView; // @synthesize textView=_textView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setBottomMargin:(double)arg1;
 - (void)setupConstraints;

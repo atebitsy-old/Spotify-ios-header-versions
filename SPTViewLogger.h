@@ -35,6 +35,7 @@
     NSArray *_finishedImageLoadingRequests;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *finishedImageLoadingRequests; // @synthesize finishedImageLoadingRequests=_finishedImageLoadingRequests;
 @property(copy, nonatomic) NSSet *pendingImageLoadingRequests; // @synthesize pendingImageLoadingRequests=_pendingImageLoadingRequests;
 @property(retain, nonatomic) NSNumber *viewStartedLoadingAt; // @synthesize viewStartedLoadingAt=_viewStartedLoadingAt;
@@ -54,7 +55,6 @@
 @property(retain, nonatomic) id <SPTViewLoadSequenceTransport> transport; // @synthesize transport=_transport;
 @property long long state; // @synthesize state=_state;
 @property(copy, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
-- (void).cxx_destruct;
 - (void)removeImageLoadingRequest:(id)arg1;
 - (void)addImageLoadingRequest:(id)arg1;
 - (void)notifyObserversOfStateChange:(long long)arg1 timeSinceStart:(double)arg2;

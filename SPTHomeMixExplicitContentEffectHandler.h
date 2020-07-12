@@ -16,8 +16,8 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
 }
 
-@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 - (void)acceptNext:(id)arg1;
 - (void)acceptEffect:(id)arg1 model:(id)arg2;
 - (_Bool)canAcceptEffect:(id)arg1;

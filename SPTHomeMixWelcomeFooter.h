@@ -21,6 +21,7 @@
     GLUEGradientView *_backgroundGradientView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(retain, nonatomic) UIView *footerLabelBackground; // @synthesize footerLabelBackground=_footerLabelBackground;
 @property(retain, nonatomic) GLUELabel *footerLabel; // @synthesize footerLabel=_footerLabel;
@@ -29,7 +30,6 @@
 @property(nonatomic) __weak id <SPTHomeMixWelcomeFooterDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSString *localizedMixName; // @synthesize localizedMixName=_localizedMixName;
 @property(retain, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupSubviews;
 - (id)initWithTheme:(id)arg1 localizedMixName:(id)arg2 delegate:(id)arg3 extraBottomMargin:(double)arg4;

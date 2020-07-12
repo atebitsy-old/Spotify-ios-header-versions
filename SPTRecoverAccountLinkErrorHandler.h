@@ -15,9 +15,9 @@
     SPTLoginDialogController *_dialogController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
-- (void).cxx_destruct;
 - (void)showRegionMismatchErrorDialog;
 - (void)showLinkExpiredErrorDialog;
 - (void)getNewRecoverAccountLink;

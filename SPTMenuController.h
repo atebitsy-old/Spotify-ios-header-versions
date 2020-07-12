@@ -16,10 +16,10 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(retain, nonatomic) UIViewController<SPTTabBarContainer> *menuViewController; // @synthesize menuViewController=_menuViewController;
-- (void).cxx_destruct;
 - (void)setContentHeaderView:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 @property(readonly, nonatomic) UIView *contentHeaderView;
 - (void)removeObserver:(id)arg1;

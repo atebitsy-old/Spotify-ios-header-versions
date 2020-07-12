@@ -21,10 +21,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTMediaPlayerService> mediaPlayerService; // @synthesize mediaPlayerService=_mediaPlayerService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
-- (void).cxx_destruct;
 - (void)loginServiceWillLaunchLoginUI;
 - (id)provideDataSourceStateManager;
 @property(readonly, nonatomic) SPTCarPlayDataSourceStateManager *stateManager; // @synthesize stateManager=_stateManager;

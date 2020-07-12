@@ -21,13 +21,13 @@
     SPTPlayerContext *_playerContext;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerContext *playerContext; // @synthesize playerContext=_playerContext;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTFormatListPlatformResolver> formatListPlatformResolver; // @synthesize formatListPlatformResolver=_formatListPlatformResolver;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 @property(retain, nonatomic) id <SPTFormatListModel> formatListModel; // @synthesize formatListModel=_formatListModel;
 @property(nonatomic) __weak id <SPTFormatListViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (long long)numberOfRowsForSection:(long long)arg1;
 @property(readonly, nonatomic) long long numberOfSections;

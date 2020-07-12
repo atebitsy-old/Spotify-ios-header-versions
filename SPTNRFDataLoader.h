@@ -20,12 +20,12 @@
     SPTDataLoaderRequest *_tailFetchRequest;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTDataLoaderRequest *tailFetchRequest; // @synthesize tailFetchRequest=_tailFetchRequest;
 @property(retain, nonatomic) NSURL *nextPageURL; // @synthesize nextPageURL=_nextPageURL;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) SPTNRFLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)requestWithURL:(id)arg1 succsssBlock:(CDUnknownBlockType)arg2 failureBlock:(CDUnknownBlockType)arg3;

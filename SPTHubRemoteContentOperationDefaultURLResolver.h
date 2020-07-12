@@ -15,8 +15,8 @@
     NSURL *_contentURL;
 }
 
-@property(readonly, copy, nonatomic) NSURL *contentURL; // @synthesize contentURL=_contentURL;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSURL *contentURL; // @synthesize contentURL=_contentURL;
 - (id)resolveContentURL;
 - (id)initWithContentURL:(id)arg1;
 

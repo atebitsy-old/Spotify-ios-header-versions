@@ -24,6 +24,7 @@
     struct CGPoint _originalCenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *noteHeightConstraint; // @synthesize noteHeightConstraint=_noteHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *noteWidthConstraint; // @synthesize noteWidthConstraint=_noteWidthConstraint;
 @property(copy, nonatomic) NSArray *noteMessageViewHorizontalConstraints; // @synthesize noteMessageViewHorizontalConstraints=_noteMessageViewHorizontalConstraints;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *noteViewBottomConstraint; // @synthesize noteViewBottomConstraint=_noteViewBottomConstraint;
 @property(nonatomic) __weak id <SPTInAppMessageMessageOverlayViewDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageView *noteMessageView; // @synthesize noteMessageView=_noteMessageView;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)handleSwipeDownGestureRecognizer:(id)arg1;
 - (void)dismissNoteMessageViewWithCompletion:(CDUnknownBlockType)arg1;

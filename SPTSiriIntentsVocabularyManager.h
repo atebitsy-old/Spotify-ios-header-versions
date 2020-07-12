@@ -13,8 +13,8 @@
     id <SPTPlaylistPlatformPlaylistDataLoader> _dataLoader;
 }
 
-@property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)clearLocalVocabularies;
 - (void)updateLocalVocabularies;
 - (id)initWithPlaylistDataLoader:(id)arg1;

@@ -14,9 +14,9 @@
     NSArray *_items;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (_Bool)isEqualToShelf:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithTitle:(id)arg1 items:(id)arg2;

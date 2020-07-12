@@ -13,8 +13,8 @@
     id <SPTInAppMessageMessageRequester> _inAppMessageRequester;
 }
 
-@property(readonly, nonatomic) id <SPTInAppMessageMessageRequester> inAppMessageRequester; // @synthesize inAppMessageRequester=_inAppMessageRequester;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTInAppMessageMessageRequester> inAppMessageRequester; // @synthesize inAppMessageRequester=_inAppMessageRequester;
 - (void)requestSkipLimitReachedMessage;
 - (id)initWithInAppMessageRequester:(id)arg1;
 

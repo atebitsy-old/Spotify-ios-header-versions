@@ -28,6 +28,7 @@
     SPTLoginHiddenSignupScreenDataProvider *_missingUserInfoProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginHiddenSignupScreenDataProvider *missingUserInfoProvider; // @synthesize missingUserInfoProvider=_missingUserInfoProvider;
 @property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTDynamicSignupFlowControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)userDidAcceptAllLicences:(id)arg1;
 @property(readonly, nonatomic) NSString *presentingControllerAdjustIdentifier;
 @property(readonly, nonatomic) UIViewController *presentingController;

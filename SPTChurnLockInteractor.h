@@ -20,12 +20,12 @@
     SPTChurnLockPresenter *_presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTChurnLockPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) SPTChurnLockDowngradeInteractor *downgradeInteractor; // @synthesize downgradeInteractor=_downgradeInteractor;
 @property(retain, nonatomic) SPTChurnLockPlayerInteractor *playerInteractor; // @synthesize playerInteractor=_playerInteractor;
 @property(retain, nonatomic) SPTChurnLockTimecheckInteractor *timecheckInteractor; // @synthesize timecheckInteractor=_timecheckInteractor;
 @property(retain, nonatomic) SPTChurnLockObservationInteractor *observationInteractor; // @synthesize observationInteractor=_observationInteractor;
-- (void).cxx_destruct;
 - (void)churnLockPresenterDidDismissChurnLock;
 - (void)shouldShowChurnLock:(_Bool)arg1;
 - (void)stopObserving;

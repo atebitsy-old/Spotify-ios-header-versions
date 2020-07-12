@@ -13,6 +13,7 @@
     // Error parsing type: , name: sponsoredContextModel
     // Error parsing type: , name: style
     // Error parsing type: , name: cellHasBeenDisplayed
+    // Error parsing type: , name: cellModel
     // Error parsing type: , name: delegate
 }
 
@@ -20,7 +21,7 @@
 - (id)init;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
-- (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)didTapCellWithSender:(id)arg1;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;

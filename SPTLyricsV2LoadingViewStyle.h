@@ -23,6 +23,7 @@
     double _beamAnimationDuration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double beamAnimationDuration; // @synthesize beamAnimationDuration=_beamAnimationDuration;
 @property(nonatomic) double styleAnimationDuration; // @synthesize styleAnimationDuration=_styleAnimationDuration;
 @property(nonatomic) double bottomFieldWidthMultiplier; // @synthesize bottomFieldWidthMultiplier=_bottomFieldWidthMultiplier;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) UIColor *beamColor; // @synthesize beamColor=_beamColor;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

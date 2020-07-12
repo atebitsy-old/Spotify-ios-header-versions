@@ -17,9 +17,9 @@
 }
 
 + (id)styleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *toplineLabelStyle; // @synthesize toplineLabelStyle=_toplineLabelStyle;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

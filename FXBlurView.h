@@ -28,6 +28,7 @@
 + (void)setUpdatesDisabled;
 + (void)setUpdatesEnabled;
 + (void)setBlurEnabled:(_Bool)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *lastUpdate; // @synthesize lastUpdate=_lastUpdate;
 @property(nonatomic) _Bool blurEnabledSet; // @synthesize blurEnabledSet=_blurEnabledSet;
 @property(nonatomic) _Bool dynamicSet; // @synthesize dynamicSet=_dynamicSet;
@@ -39,7 +40,6 @@
 @property(nonatomic) unsigned long long iterations; // @synthesize iterations=_iterations;
 @property(nonatomic, getter=isDynamic) _Bool dynamic; // @synthesize dynamic=_dynamic;
 @property(nonatomic, getter=isBlurEnabled) _Bool blurEnabled; // @synthesize blurEnabled=_blurEnabled;
-- (void).cxx_destruct;
 - (void)updateAsynchronously:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)setLayerContents:(id)arg1;
 - (id)blurredSnapshot:(id)arg1 radius:(double)arg2;

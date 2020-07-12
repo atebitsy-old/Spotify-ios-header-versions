@@ -18,9 +18,9 @@
 }
 
 + (id)dateFormatter;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (id)resolveContentURL;
 - (id)initWithPlaylistURL:(id)arg1 productState:(id)arg2;
 

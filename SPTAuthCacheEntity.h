@@ -23,13 +23,13 @@
 + (id)entityWithData:(id)arg1;
 + (_Bool)supportsSecureCoding;
 + (id)entityWithURL:(id)arg1 bundleId:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDate *lastUsed; // @synthesize lastUsed=_lastUsed;
 @property(copy, nonatomic) NSArray *scopes; // @synthesize scopes=_scopes;
 @property(readonly, nonatomic) NSString *bundleId; // @synthesize bundleId=_bundleId;
 @property(readonly, nonatomic) NSString *redirectURI; // @synthesize redirectURI=_redirectURI;
 @property(retain, nonatomic) NSDate *lastUpdated; // @synthesize lastUpdated=_lastUpdated;
 @property(readonly, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;
-- (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (void)updateLastUsed;

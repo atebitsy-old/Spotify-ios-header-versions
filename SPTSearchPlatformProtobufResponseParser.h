@@ -28,6 +28,7 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool lyricsRowDebuggingEnabled; // @synthesize lyricsRowDebuggingEnabled=_lyricsRowDebuggingEnabled;
 @property(readonly, nonatomic) _Bool topicsEnabled; // @synthesize topicsEnabled=_topicsEnabled;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) HUBViewModelBuilderFactory *viewModelBuilderFactory; // @synthesize viewModelBuilderFactory=_viewModelBuilderFactory;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
-- (void).cxx_destruct;
 - (id)seeAllRowsFromEntityTypes:(id)arg1 requestID:(id)arg2;
 - (id)renderableEntitiesPredicate;
 - (id)componentModelIdentifierWithSectionID:(id)arg1 itemIndex:(id)arg2;

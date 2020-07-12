@@ -19,12 +19,12 @@
     NSString *_action;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *action; // @synthesize action=_action;
 @property(copy, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
 @property(copy, nonatomic) NSArray *sortDescriptors; // @synthesize sortDescriptors=_sortDescriptors;
 @property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
 @property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
-- (void).cxx_destruct;
 - (void)addRange:(struct _NSRange)arg1 toString:(id)arg2;
 - (id)additionalFilterString:(id)arg1;
 - (void)setupFilterPredicate:(id)arg1;

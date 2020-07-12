@@ -18,11 +18,11 @@
     UINavigationController *_navigationController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(nonatomic, getter=shouldFinishInteractiveTransition) _Bool finishInteractiveTransition; // @synthesize finishInteractiveTransition=_finishInteractiveTransition;
 @property(retain, nonatomic) UIScreenEdgePanGestureRecognizer *edgePanGestureRecognizer; // @synthesize edgePanGestureRecognizer=_edgePanGestureRecognizer;
 @property(nonatomic, getter=isInteractive) _Bool interactive; // @synthesize interactive=_interactive;
-- (void).cxx_destruct;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;
 - (void)handleEdgePanGestureRecognizer:(id)arg1;
 - (double)gestureProgressFromGestureRecognizer:(id)arg1;

@@ -19,10 +19,10 @@
     id <SPTOfflineModeState> _offlineState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
 @property(nonatomic, getter=isContentAvailable) _Bool contentAvailable; // @synthesize contentAvailable=_contentAvailable;
 @property(nonatomic) __weak id <SPTYourLibraryMusicAvailableContentMonitorDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)dealloc;
 - (id)initWithOfflineState:(id)arg1;

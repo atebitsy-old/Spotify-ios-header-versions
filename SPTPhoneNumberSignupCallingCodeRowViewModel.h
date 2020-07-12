@@ -15,10 +15,10 @@
     NSString *_countryCode;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *countryCode; // @synthesize countryCode=_countryCode;
 @property(readonly, copy, nonatomic) NSString *countryName; // @synthesize countryName=_countryName;
 @property(readonly, copy, nonatomic) NSString *callingCode; // @synthesize callingCode=_callingCode;
-- (void).cxx_destruct;
 - (id)initWithCallingCode:(id)arg1 countryName:(id)arg2 countryCode:(id)arg3;
 
 @end

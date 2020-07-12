@@ -17,9 +17,9 @@
     id <HUBIconImageResolver> _iconImageResolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)pivotItemsForHubModels:(id)arg1;
 - (id)extractChildComponentModelsFromJSONData:(id)arg1 error:(id *)arg2;
 - (id)contentURL;

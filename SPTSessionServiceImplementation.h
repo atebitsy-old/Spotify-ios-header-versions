@@ -24,6 +24,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSessionObserver *sessionObserver; // @synthesize sessionObserver=_sessionObserver;
 @property(retain, nonatomic) id <SPTUIModeTransitionCoordinator> transitionCoordinator; // @synthesize transitionCoordinator=_transitionCoordinator;
 @property(retain, nonatomic) NSMapTable *localSettingsCache; // @synthesize localSettingsCache=_localSettingsCache;
@@ -32,7 +33,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-- (void).cxx_destruct;
 - (id)provideUIModeTransitionCoordinator;
 - (id)provideOfflineNotifier;
 - (id)provideProductState;

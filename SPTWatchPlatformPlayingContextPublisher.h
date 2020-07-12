@@ -21,12 +21,12 @@
     NSString *_topic;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *topic; // @synthesize topic=_topic;
 @property(readonly, nonatomic) __weak SPTRadioPlaybackService *radioPlayback; // @synthesize radioPlayback=_radioPlayback;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentController> contentController; // @synthesize contentController=_contentController;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
-- (void).cxx_destruct;
 - (_Bool)shouldEvaluateTrackChangesForContextURI:(id)arg1;
 - (void)externalIntegrationPlaybackController:(id)arg1 didReceiveNewPlayerState:(id)arg2 oldPlayerState:(id)arg3;
 - (void)handlePublisherEvent:(long long)arg1;

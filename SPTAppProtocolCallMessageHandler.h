@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolCallForwarder, SPTAppProtocolConnectionHandler;
-@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTNetworkConnectivityController, SPTPreferences;
+@protocol SPTAccessoryActionLogger, SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTNetworkConnectivityController, SPTPreferences;
 
 @interface SPTAppProtocolCallMessageHandler : NSObject
 {
@@ -16,6 +16,7 @@
     SPSession *_session;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     SPTAccessory *_currentAccessory;
+    id <SPTAccessoryActionLogger> _actionLogger;
     id <SPTNetworkConnectivityController> _connectivityController;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     SPTAppProtocolBlockBasedImageLoader *_blockBasedImageLoader;
@@ -25,6 +26,7 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
@@ -32,12 +34,12 @@
 @property(readonly, nonatomic) SPTAppProtocolBlockBasedImageLoader *blockBasedImageLoader; // @synthesize blockBasedImageLoader=_blockBasedImageLoader;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
+@property(nonatomic) __weak id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) SPTAppProtocolConnectionHandler *connectionHandler; // @synthesize connectionHandler=_connectionHandler;
-- (void).cxx_destruct;
 - (_Bool)isOffline;
 - (id)propertyListRepresentationOfItems:(id)arg1;
 - (id)propertyListRepresentationOfItems:(id)arg1 inRange:(struct _NSRange)arg2 ofTotalLength:(unsigned long long)arg3;
@@ -92,7 +94,7 @@
 - (void)handleSetShuffleCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleMethodNamed:(id)arg1 sourceMessage:(id)arg2 andReply:(CDUnknownBlockType)arg3;
-- (id)initWithExternalIntegrationPlatform:(id)arg1 connectionHandler:(id)arg2 networkConnectivityController:(id)arg3 imageLoaderFactory:(id)arg4 connectManager:(id)arg5 session:(id)arg6 preferences:(id)arg7 appProtocolForwarder:(id)arg8 debugLog:(id)arg9;
+- (id)initWithExternalIntegrationPlatform:(id)arg1 connectionHandler:(id)arg2 networkConnectivityController:(id)arg3 imageLoaderFactory:(id)arg4 connectManager:(id)arg5 session:(id)arg6 preferences:(id)arg7 appProtocolForwarder:(id)arg8 actionLogger:(id)arg9 debugLog:(id)arg10;
 
 @end
 

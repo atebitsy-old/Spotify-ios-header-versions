@@ -15,9 +15,9 @@
     SettingsSwitchTableViewCell *_cell;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SettingsSwitchTableViewCell *cell; // @synthesize cell=_cell;
 @property(readonly, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
-- (void).cxx_destruct;
 - (id)footerText;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

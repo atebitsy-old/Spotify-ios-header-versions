@@ -20,13 +20,13 @@
     struct UIEdgeInsets _contentInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLyricsV2LoadingViewStyle *loadingViewStyle; // @synthesize loadingViewStyle=_loadingViewStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(nonatomic) double switchViewAnimationDuration; // @synthesize switchViewAnimationDuration=_switchViewAnimationDuration;
 @property(nonatomic) double lyricsViewTopMargin; // @synthesize lyricsViewTopMargin=_lyricsViewTopMargin;
 @property(nonatomic) struct UIEdgeInsets contentInsets; // @synthesize contentInsets=_contentInsets;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

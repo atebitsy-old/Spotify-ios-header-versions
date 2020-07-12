@@ -20,12 +20,12 @@
     SPTNowPlayingLegacyFeedbackContextMenuPresenter *_presenter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNowPlayingLegacyFeedbackContextMenuPresenter *presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) id <SPTFeedbackViewModel> feedbackViewModel; // @synthesize feedbackViewModel=_feedbackViewModel;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(retain, nonatomic) id <SPTNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
 @property(nonatomic) __weak UIViewController *containingViewController; // @synthesize containingViewController=_containingViewController;
-- (void).cxx_destruct;
 - (id)banActionsWithCompletionBlock:(CDUnknownBlockType)arg1;
 - (_Bool)currentTrackHasPositiveFeedback;
 - (_Bool)currentTrackHasNegativeFeedback;

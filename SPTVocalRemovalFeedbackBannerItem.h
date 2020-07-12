@@ -17,9 +17,9 @@
     SPTVocalRemovalFeedbackBannerViewStyle *_bannerViewStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVocalRemovalFeedbackBannerViewStyle *bannerViewStyle; // @synthesize bannerViewStyle=_bannerViewStyle;
 @property(retain, nonatomic) SPTBannerView *bannerView; // @synthesize bannerView=_bannerView;
-- (void).cxx_destruct;
 - (id)createFeedbackBannerView;
 - (id)initWithDelegate:(id)arg1 style:(id)arg2;
 

@@ -13,8 +13,8 @@
     id <SPTNowPlayingAuxiliaryActionsHandler> _actionsHandler;
 }
 
-@property(readonly, nonatomic) __weak id <SPTNowPlayingAuxiliaryActionsHandler> actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTNowPlayingAuxiliaryActionsHandler> actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)icon;

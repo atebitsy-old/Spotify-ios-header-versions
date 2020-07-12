@@ -19,11 +19,11 @@
     NSMutableSet *_accessoriesToConnect;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableSet *accessoriesToConnect; // @synthesize accessoriesToConnect=_accessoriesToConnect;
 @property(nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
 @property(readonly, nonatomic, getter=isAcceptingConnections) _Bool acceptingConnections; // @synthesize acceptingConnections=_acceptingConnections;
 @property(nonatomic) __weak id <SPTAppProtocolConnectorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)_tryToConnectToAccessory:(id)arg1;
 - (void)tryToConnectToAccessory:(id)arg1;
 - (void)accessoryConnected:(id)arg1;

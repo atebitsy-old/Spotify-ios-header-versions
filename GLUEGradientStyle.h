@@ -20,11 +20,11 @@
 
 + (id)diagonalTopLeftToBottomRightGradientWithColors:(id)arg1;
 + (id)linearTopToBottomGradientWithColors:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) struct CGPoint endPoint; // @synthesize endPoint=_endPoint;
 @property(nonatomic) struct CGPoint startPoint; // @synthesize startPoint=_startPoint;
 @property(copy, nonatomic) NSArray *locations; // @synthesize locations=_locations;
 @property(copy, nonatomic) NSArray *colors; // @synthesize colors=_colors;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToGradientStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

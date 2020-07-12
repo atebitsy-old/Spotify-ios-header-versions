@@ -13,8 +13,8 @@
     NSArray *_episodes;
 }
 
-@property(readonly, copy, nonatomic) NSArray *episodes; // @synthesize episodes=_episodes;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSArray *episodes; // @synthesize episodes=_episodes;
 - (id)initWithDictionary:(id)arg1;
 
 @end

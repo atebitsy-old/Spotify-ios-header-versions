@@ -27,6 +27,7 @@
     NSCalendar *_calendar;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSCalendar *calendar; // @synthesize calendar=_calendar;
 @property(copy, nonatomic) NSDictionary *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) unsigned long long signupType; // @synthesize signupType=_signupType;
@@ -39,7 +40,6 @@
 @property(copy, nonatomic) NSString *password; // @synthesize password=_password;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(nonatomic, getter=didUserAcceptTermsAndConditions) _Bool userAcceptTermsAndConditions; // @synthesize userAcceptTermsAndConditions=_userAcceptTermsAndConditions;
-- (void).cxx_destruct;
 - (_Bool)isPhoneNumberFlow;
 - (_Bool)isGuestModeEnabled;
 - (_Bool)shouldShowMarketingOptInText;

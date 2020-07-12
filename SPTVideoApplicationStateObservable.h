@@ -16,10 +16,10 @@
     SPTVideoApplicationStateProvider *_applicationStateProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTVideoApplicationStateProvider *applicationStateProvider; // @synthesize applicationStateProvider=_applicationStateProvider;
 @property(retain, nonatomic) id <SPTNotificationCenter> notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isActive;
 @property(readonly, nonatomic) _Bool isBackgrounded;
 - (void)didChangeBackgroundState:(_Bool)arg1;

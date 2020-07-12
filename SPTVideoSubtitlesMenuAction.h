@@ -21,13 +21,13 @@
     UIView *_accessoryViewCache;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *accessoryViewCache; // @synthesize accessoryViewCache=_accessoryViewCache;
 @property(nonatomic, getter=isSelected) _Bool selected; // @synthesize selected=_selected;
 @property(retain, nonatomic) SPTVideoPreferredSubtitleMessageFactory *preferredSubtitleMessageFactory; // @synthesize preferredSubtitleMessageFactory=_preferredSubtitleMessageFactory;
 @property(retain, nonatomic) id <BMSubtitle> subtitleOption; // @synthesize subtitleOption=_subtitleOption;
 @property(retain, nonatomic) SPTVideoSubtitleConfigurator *subtitleConfigurator; // @synthesize subtitleConfigurator=_subtitleConfigurator;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
-- (void).cxx_destruct;
 - (id)accessoryView;
 - (id)catIcon:(long long)arg1 withColor:(id)arg2;
 - (id)performAction;

@@ -23,6 +23,7 @@
     SPTActivityIndicatorView *_loadingIndicatorView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTActivityIndicatorView *loadingIndicatorView; // @synthesize loadingIndicatorView=_loadingIndicatorView;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(retain, nonatomic) SPTPremiumDestinationLogger *logger; // @synthesize logger=_logger;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) SPTPremiumDestinationGLUETheme *premiumDestinationTheme; // @synthesize premiumDestinationTheme=_premiumDestinationTheme;
 @property(retain, nonatomic) SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater *tabBarBadgeLastSeenDateUpdater; // @synthesize tabBarBadgeLastSeenDateUpdater=_tabBarBadgeLastSeenDateUpdater;
 @property(retain, nonatomic) SPTPremiumDestinationNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
-- (void).cxx_destruct;
 - (id)getScrollPercentage;
 - (void)timeFireStopScroll:(id)arg1;
 - (void)displayLoadingIndicatorIfRequiredWithDelay:(unsigned long long)arg1;

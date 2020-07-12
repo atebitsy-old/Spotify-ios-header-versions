@@ -23,13 +23,13 @@
     SPTSlatePresenterQueuedSlate *_queuedSlate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isBeingDismissed) _Bool beingDismissed; // @synthesize beingDismissed=_beingDismissed;
 @property(retain, nonatomic) SPTSlatePresenterQueuedSlate *queuedSlate; // @synthesize queuedSlate=_queuedSlate;
 @property(retain, nonatomic) id <SPTSlate> presentedSlate; // @synthesize presentedSlate=_presentedSlate;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTSlateWireframe> wireframe; // @synthesize wireframe=_wireframe;
 @property(retain, nonatomic) SPTSlatePrivateViewController *currentSlateViewController; // @synthesize currentSlateViewController=_currentSlateViewController;
-- (void).cxx_destruct;
 - (void)immediatelyPresentSlate:(id)arg1 animated:(_Bool)arg2;
 - (void)accessoryButtonDidTap:(id)arg1;
 - (void)backgroundViewDidTap:(id)arg1;

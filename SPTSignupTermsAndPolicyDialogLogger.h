@@ -15,9 +15,9 @@
     NSString *_screenIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *screenIdentifier; // @synthesize screenIdentifier=_screenIdentifier;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (id)adjustDialogIdentifierWithType:(unsigned long long)arg1;
 - (void)logUserDidDeclineDialogWithType:(unsigned long long)arg1;
 - (void)logUserDidAcceptDialogWithType:(unsigned long long)arg1;

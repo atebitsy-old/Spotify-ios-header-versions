@@ -14,9 +14,9 @@
     UIView *_contentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
-- (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

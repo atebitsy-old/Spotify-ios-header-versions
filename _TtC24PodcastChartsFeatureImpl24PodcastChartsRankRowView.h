@@ -4,10 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIView.h>
+#import "GLUEStatefulView.h"
 
-@interface _TtC24PodcastChartsFeatureImpl24PodcastChartsRankRowView : UIView
+@interface _TtC24PodcastChartsFeatureImpl24PodcastChartsRankRowView : GLUEStatefulView
 {
+    // Error parsing type: , name: theme
     // Error parsing type: , name: rootStackView
     // Error parsing type: , name: rankStackView
     // Error parsing type: , name: labelStackView
@@ -19,9 +20,10 @@
 }
 
 - (void).cxx_destruct;
-- (void)glue_applyStyle:(id)arg1;
-- (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithCoder:(id)arg1;
+@property(nonatomic) _Bool highlighted;
+- (_Bool)isHighlighted;
 
 @end
 

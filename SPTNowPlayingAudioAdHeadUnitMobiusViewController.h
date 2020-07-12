@@ -27,6 +27,7 @@
     _TtC19SPTAdsNowPlayingKit27SPTNowPlayingAdHeadUnitLoop *_loop;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) _TtC19SPTAdsNowPlayingKit27SPTNowPlayingAdHeadUnitLoop *loop; // @synthesize loop=_loop;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(retain, nonatomic) id <SPTAdNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observable; // @synthesize observable=_observable;
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
-- (void).cxx_destruct;
 - (void)adPlayerDisplayLinkFiredWithTrack:(id)arg1;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (id)skipDelayAttributedText:(unsigned long long)arg1;

@@ -30,6 +30,7 @@
     NSMapTable *_timeObserverTable;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *timeObserverTable; // @synthesize timeObserverTable=_timeObserverTable;
 @property(nonatomic) double trackDuration; // @synthesize trackDuration=_trackDuration;
 @property(retain, nonatomic) SPTAdFocusManager *adFocusManager; // @synthesize adFocusManager=_adFocusManager;
@@ -44,7 +45,6 @@
 @property(nonatomic) __weak NSObject<BMVideoSurfaceManager> *surfaceManager; // @synthesize surfaceManager=_surfaceManager;
 @property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(retain, nonatomic) SPOTMoatVideoTracker *videoTracker; // @synthesize videoTracker=_videoTracker;
-- (void).cxx_destruct;
 - (id)eventData;
 - (id)getViewToTrack;
 - (double)currentPlayheadMillis;

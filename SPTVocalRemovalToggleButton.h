@@ -13,8 +13,8 @@
     SPTVocalRemovalToggleButtonViewModel *_viewModel;
 }
 
-@property(retain, nonatomic) SPTVocalRemovalToggleButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTVocalRemovalToggleButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void)updateButtonState;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)applyIcon;

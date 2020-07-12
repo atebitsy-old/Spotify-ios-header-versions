@@ -31,6 +31,7 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewWidth:(double)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) double statusBarHeight; // @synthesize statusBarHeight=_statusBarHeight;
 @property(nonatomic) struct CGPoint currentContentOffset; // @synthesize currentContentOffset=_currentContentOffset;
 @property(nonatomic) double bodyHeight; // @synthesize bodyHeight=_bodyHeight;
@@ -43,7 +44,6 @@
 @property(copy, nonatomic) SPTPodcastUIEditorialHeaderStyle *style; // @synthesize style=_style;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;

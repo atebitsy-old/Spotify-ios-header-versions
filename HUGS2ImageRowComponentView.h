@@ -23,9 +23,9 @@
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredSizeForMainImageWithModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEntityRowView *entityRowView; // @synthesize entityRowView=_entityRowView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (long long)ageRestrictionViewTypeForLabel:(id)arg1;
 - (long long)accessoryLabelTypeForLabel:(id)arg1;
 - (void)configureSubtitleAccessoryViewWithModel:(id)arg1;

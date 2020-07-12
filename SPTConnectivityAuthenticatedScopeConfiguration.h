@@ -19,6 +19,7 @@
     SPTConnectivityWebgateUserAgentParameters *_webgateUserAgentParameters;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTConnectivityWebgateUserAgentParameters *webgateUserAgentParameters; // @synthesize webgateUserAgentParameters=_webgateUserAgentParameters;
 @property(copy, nonatomic) NSString *webgateLocale; // @synthesize webgateLocale=_webgateLocale;
 @property(nonatomic) _Bool includePayloads; // @synthesize includePayloads=_includePayloads;
@@ -26,7 +27,6 @@
 @property(copy, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;
 @property(copy, nonatomic) NSString *cachePath; // @synthesize cachePath=_cachePath;
 @property(copy, nonatomic) NSString *clientVersionLong; // @synthesize clientVersionLong=_clientVersionLong;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct Configuration cpp;
 - (id)initWithConfiguration:(struct Configuration)arg1;
 - (id)init;

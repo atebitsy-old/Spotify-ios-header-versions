@@ -20,12 +20,12 @@
     id <SPTEventSender> _eventSender;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) SPTAdVoicePermissions *voicePermissionChecker; // @synthesize voicePermissionChecker=_voicePermissionChecker;
 @property(nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTAdsBaseGlobalSettingsController> globalSettings; // @synthesize globalSettings=_globalSettings;
 @property(retain, nonatomic) SPTAdFocusManager *adsFocusManager; // @synthesize adsFocusManager=_adsFocusManager;
-- (void).cxx_destruct;
 - (void)handleRecordPermissionRequestIfNeeded:(_Bool)arg1;
 - (id)voiceAdLogMessageForPreference:(_Bool)arg1;
 - (void)logUserPreference:(_Bool)arg1;

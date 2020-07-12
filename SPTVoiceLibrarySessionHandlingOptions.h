@@ -18,10 +18,10 @@
     id <SPTVoiceLibraryAudioRecorder> _externalAudioRecorder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioRecorder> externalAudioRecorder; // @synthesize externalAudioRecorder=_externalAudioRecorder;
 @property(retain, nonatomic) SPTVoiceLibrarySpeechProxyRequest *speechProxyRequest; // @synthesize speechProxyRequest=_speechProxyRequest;
 @property(nonatomic) _Bool shouldPausePlayback; // @synthesize shouldPausePlayback=_shouldPausePlayback;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;
 

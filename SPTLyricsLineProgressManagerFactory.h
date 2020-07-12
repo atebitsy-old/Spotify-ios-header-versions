@@ -13,8 +13,8 @@
     id <SPTPlayer> _player;
 }
 
-@property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (id)createLineProgressManager;
 - (id)initWithPlayer:(id)arg1;
 

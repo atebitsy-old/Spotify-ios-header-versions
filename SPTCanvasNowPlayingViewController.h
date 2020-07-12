@@ -19,11 +19,11 @@
     SPTCanvasAttributionView *_attributionView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool showsAttributionView; // @synthesize showsAttributionView=_showsAttributionView;
 @property(readonly, nonatomic) SPTCanvasAttributionView *attributionView; // @synthesize attributionView=_attributionView;
 @property(retain, nonatomic) SPTCanvasNowPlayingViewControllerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTCanvasViewController *canvasViewController; // @synthesize canvasViewController=_canvasViewController;
-- (void).cxx_destruct;
 - (void)animateWithAnimations:(CDUnknownBlockType)arg1;
 - (void)updateArtistAvatarImage:(id)arg1 artistName:(id)arg2;
 - (void)setshowsAttributionView:(_Bool)arg1;

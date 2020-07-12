@@ -28,6 +28,7 @@
     NSMutableArray *_thingsToDoWhenViewIsSet;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *thingsToDoWhenViewIsSet; // @synthesize thingsToDoWhenViewIsSet=_thingsToDoWhenViewIsSet;
 @property(readonly, nonatomic) FBKVOController *kvoController; // @synthesize kvoController=_kvoController;
 @property(nonatomic, getter=isDisappearing) _Bool disappearing; // @synthesize disappearing=_disappearing;
@@ -36,7 +37,6 @@
 @property(nonatomic) unsigned long long currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) UIView<SPTAsyncLoading> *loadingView; // @synthesize loadingView=_loadingView;
 @property(nonatomic) unsigned long long navigationBarState; // @synthesize navigationBarState=_navigationBarState;
-- (void).cxx_destruct;
 - (void)playURIInContext:(id)arg1;
 - (void)determineIfContextContainsURI:(id)arg1 responseHandler:(CDUnknownBlockType)arg2;
 - (void)sp_updateContentInsets;

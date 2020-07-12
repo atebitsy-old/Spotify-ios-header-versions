@@ -24,6 +24,7 @@
     NSMutableSet *_disallowResumingReasonsOutOfSync;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *disallowResumingReasonsOutOfSync; // @synthesize disallowResumingReasonsOutOfSync=_disallowResumingReasonsOutOfSync;
 @property(retain, nonatomic) NSMutableSet *disallowPausingReasonsOutOfSync; // @synthesize disallowPausingReasonsOutOfSync=_disallowPausingReasonsOutOfSync;
 @property(retain, nonatomic) NSSet *disallowResumingReasons; // @synthesize disallowResumingReasons=_disallowResumingReasons;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)updatePlaybackControlsForPlayerState:(id)arg1 givenOldPlayerState:(id)arg2;
 - (void)setPauseResumeRestrictions;
 - (void)notifyPlaybackControlsUpdate;

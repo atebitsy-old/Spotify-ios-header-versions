@@ -18,12 +18,12 @@
     id <SPTSocialListeningTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTSocialListeningLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
 @property(nonatomic) __weak id <SPTSocialListeningDialogPresenterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)presentFreeUserErrorJoinDialog;
 - (void)presentSessionFullDialog;
 - (void)presentSessionDeletedDialogWhenHostLeaves:(id)arg1;

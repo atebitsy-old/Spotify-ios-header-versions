@@ -15,8 +15,8 @@
     SPTArtistAboutGLUETheme *_theme;
 }
 
-@property(retain, nonatomic) SPTArtistAboutGLUETheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTArtistAboutGLUETheme *theme; // @synthesize theme=_theme;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;

@@ -23,6 +23,7 @@
 }
 
 + (double)textWithForString:(id)arg1 withFont:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTYourLibraryMusicFollowButtonStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUEPressedViewAnimator *animator; // @synthesize animator=_animator;
 @property(nonatomic) _Bool following; // @synthesize following=_following;
@@ -30,7 +31,6 @@
 @property(copy, nonatomic) CDUnknownBlockType actionBlock; // @synthesize actionBlock=_actionBlock;
 @property(copy, nonatomic) NSString *followingTitle; // @synthesize followingTitle=_followingTitle;
 @property(copy, nonatomic) NSString *followTitle; // @synthesize followTitle=_followTitle;
-- (void).cxx_destruct;
 - (void)callActionBlock;
 - (void)animateToHighlighted:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;

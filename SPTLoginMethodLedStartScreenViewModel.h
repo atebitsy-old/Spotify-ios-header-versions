@@ -14,9 +14,9 @@
     SPTDynamicSignupFlowController *_flowController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTLoginMethodLedStartViewLogger *logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)userClickedSignup;
 - (void)userClickedLogin;
 - (id)buttonContainerHeadingText;

@@ -14,9 +14,9 @@
     NSString *_locale;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isClosedCaption; // @synthesize isClosedCaption=_isClosedCaption;
 @property(copy, nonatomic) NSString *locale; // @synthesize locale=_locale;
-- (void).cxx_destruct;
 - (id)serializedDictionary;
 - (id)languageTagSuffix;
 @property(readonly, copy, nonatomic) NSString *languageTag;

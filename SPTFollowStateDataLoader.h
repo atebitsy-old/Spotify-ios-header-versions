@@ -19,10 +19,10 @@
 
 + (id)userOrArtistURIString:(id)arg1;
 + (id)createSocialGraphRequestPayloadWithFollowData:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSString *currentUsername; // @synthesize currentUsername=_currentUsername;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (_Bool)isCurrentUserFollowData:(id)arg1;
 - (id)toggleBanDataOptimistically:(id)arg1 requestContext:(id)arg2;
 - (id)toggleFollowDataOptimistically:(id)arg1 requestContext:(id)arg2;

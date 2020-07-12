@@ -19,19 +19,6 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)makeAlbumHeader:(long long)arg1;
-- (id)makeAlbumHeader;
-- (id)makeDownloadButton:(long long)arg1;
-- (id)makeDownloadButton;
-- (id)makePlaylistHeader:(long long)arg1;
-- (id)makePlaylistHeader;
-- (id)makeTrackRowArtist:(long long)arg1;
-- (id)makeTrackRowArtist;
-- (id)makeTrackRowModelHelper;
-- (id)makeTrackRow:(long long)arg1;
-- (id)makeTrackRow;
-- (id)makeTrackRowPlaylistExtender:(long long)arg1;
-- (id)makeTrackRowPlaylistExtender;
 
 @end
 

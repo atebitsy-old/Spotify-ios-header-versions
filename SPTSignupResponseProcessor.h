@@ -16,9 +16,9 @@
     NSString *_errorDomainIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *errorDomainIdentifier; // @synthesize errorDomainIdentifier=_errorDomainIdentifier;
 @property(copy, nonatomic) CDUnknownBlockType validationCompletionBlock; // @synthesize validationCompletionBlock=_validationCompletionBlock;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)extractLocalizedDescriptionFromResponseDictionary:(id)arg1 usingKey:(id)arg2 defaultDescription:(id)arg3;

@@ -17,9 +17,9 @@
 }
 
 + (_Bool)rawMessageFormatIsValid:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *details; // @synthesize details=_details;
 @property(readonly, nonatomic) unsigned long long sessionID; // @synthesize sessionID=_sessionID;
-- (void).cxx_destruct;
 - (_Bool)populateWithRawMessage:(id)arg1 error:(id *)arg2;
 @property(readonly, nonatomic) NSArray *rawMessage;
 @property(readonly, nonatomic) long long messageType;

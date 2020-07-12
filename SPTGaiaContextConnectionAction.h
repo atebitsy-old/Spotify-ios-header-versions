@@ -23,6 +23,7 @@
     long long _deviceIcon;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long deviceIcon; // @synthesize deviceIcon=_deviceIcon;
 @property(retain, nonatomic) UIImage *iconImage; // @synthesize iconImage=_iconImage;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) NSString *logEventVersion; // @synthesize logEventVersion=_logEventVersion;
 @property(retain, nonatomic) SPTGaiaConnectDevice *connectDevice; // @synthesize connectDevice=_connectDevice;
 @property(nonatomic) __weak id <SPTGaiaContextMenuActionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool supportsAutomaticFiltering;
 - (void)showProgressView;
 - (id)incarnationForDevice;

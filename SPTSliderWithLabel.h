@@ -17,8 +17,8 @@
     _Bool _labelHidden;
 }
 
-@property(nonatomic) _Bool labelHidden; // @synthesize labelHidden=_labelHidden;
 - (void).cxx_destruct;
+@property(nonatomic) _Bool labelHidden; // @synthesize labelHidden=_labelHidden;
 - (id)accessibilityValue;
 - (void)layoutSubviews;
 - (void)touchUp;

@@ -21,13 +21,13 @@
     NSURL *_imageURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(copy, nonatomic) NSString *fileId; // @synthesize fileId=_fileId;
 @property(retain, nonatomic) id <SPTFreeTierArtistImage> headerImage; // @synthesize headerImage=_headerImage;
 @property(retain, nonatomic) id <SPTFreeTierArtistImage> image; // @synthesize image=_image;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(retain, nonatomic) NSURL *uri; // @synthesize uri=_uri;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 
 // Remaining properties

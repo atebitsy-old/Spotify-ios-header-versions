@@ -30,6 +30,7 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
@@ -44,7 +45,6 @@
 @property(nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTFreeTierEntityOfflineDelegate> offlineDelegate; // @synthesize offlineDelegate=_offlineDelegate;
-- (void).cxx_destruct;
 - (void)offlineStateChangedForEntity:(id)arg1 withURL:(id)arg2;
 - (_Bool)isOfflineSyncAvailable;
 - (_Bool)isEntityOffline;

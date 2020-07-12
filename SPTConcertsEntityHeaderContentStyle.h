@@ -31,6 +31,7 @@
 + (id)createImageStyle;
 + (id)createCalendarStyleUsingTheme:(id)arg1;
 + (id)styleWithTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUECalendarThumbnailViewStyle *calendarStyle; // @synthesize calendarStyle=_calendarStyle;
 @property(copy, nonatomic) GLUEHeaderBackgroundStyle *backgroundStyle; // @synthesize backgroundStyle=_backgroundStyle;
 @property(copy, nonatomic) GLUELabelStyle *navigationBarTitleStyle; // @synthesize navigationBarTitleStyle=_navigationBarTitleStyle;
@@ -41,7 +42,6 @@
 @property(copy, nonatomic) UIColor *imageBackgroundColor; // @synthesize imageBackgroundColor=_imageBackgroundColor;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

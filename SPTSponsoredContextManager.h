@@ -22,6 +22,7 @@
     id <SPTDataLoaderCancellationToken> _requestCancellationToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> requestCancellationToken; // @synthesize requestCancellationToken=_requestCancellationToken;
 @property(retain, nonatomic) NSTimer *scheduleRequestTimer; // @synthesize scheduleRequestTimer=_scheduleRequestTimer;
 @property(retain, nonatomic) NSMutableDictionary *sponsoredContextsDictionary; // @synthesize sponsoredContextsDictionary=_sponsoredContextsDictionary;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTSponsoredContextManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

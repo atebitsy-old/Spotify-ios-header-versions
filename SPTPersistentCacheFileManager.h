@@ -15,10 +15,10 @@
     NSFileManager *_fileManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(readonly, copy, nonatomic) CDUnknownBlockType debugOutput; // @synthesize debugOutput=_debugOutput;
 @property(readonly, copy, nonatomic) SPTPersistentCacheOptions *options; // @synthesize options=_options;
-- (void).cxx_destruct;
 - (long long)optimizedDiskSizeForCacheSize:(long long)arg1;
 @property(readonly, nonatomic) unsigned long long totalUsedSizeInBytes;
 - (unsigned long long)getFileSizeAtPath:(id)arg1;

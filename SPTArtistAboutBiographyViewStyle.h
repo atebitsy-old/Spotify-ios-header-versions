@@ -20,13 +20,13 @@
     struct CGSize _biographyAuthorImageSize;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEButtonStyle *biographySocialLinkButtonStyle; // @synthesize biographySocialLinkButtonStyle=_biographySocialLinkButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *biographyAuthorLabelStyle; // @synthesize biographyAuthorLabelStyle=_biographyAuthorLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *biographyAuthorImageViewStyle; // @synthesize biographyAuthorImageViewStyle=_biographyAuthorImageViewStyle;
 @property(nonatomic) struct CGSize biographyAuthorImageSize; // @synthesize biographyAuthorImageSize=_biographyAuthorImageSize;
 @property(copy, nonatomic) UIColor *linkTextColor; // @synthesize linkTextColor=_linkTextColor;
 @property(copy, nonatomic) GLUELabelStyle *bodyLabelStyle; // @synthesize bodyLabelStyle=_bodyLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

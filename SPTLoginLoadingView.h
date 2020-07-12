@@ -14,9 +14,9 @@
     UIView *_loadingOverlay;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *loadingOverlay; // @synthesize loadingOverlay=_loadingOverlay;
 @property(readonly, nonatomic) SPTLoginLoadingActionButton *submitButton; // @synthesize submitButton=_submitButton;
-- (void).cxx_destruct;
 - (void)showLoadingUI;
 - (void)hideLoadingUI;
 

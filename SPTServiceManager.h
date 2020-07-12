@@ -25,6 +25,7 @@
     NSObject<OS_dispatch_queue> *_lifecycleHooksQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *lifecycleHooksQueue; // @synthesize lifecycleHooksQueue=_lifecycleHooksQueue;
 @property(readonly, copy, nonatomic) id <SPTServiceInstanceInteractor> instanceInteractor; // @synthesize instanceInteractor=_instanceInteractor;
 @property(retain, nonatomic) NSString *currentlyConfiguringService; // @synthesize currentlyConfiguringService=_currentlyConfiguringService;
@@ -35,7 +36,6 @@
 @property(copy, nonatomic) NSArray *enabledServices; // @synthesize enabledServices=_enabledServices;
 @property(nonatomic) __weak id <SPTServiceManagerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTServiceManager *parent; // @synthesize parent=_parent;
-- (void).cxx_destruct;
 - (_Bool)canProvideServiceWithIdentifier:(id)arg1;
 - (id)provideOptionalServiceForIdentifier:(id)arg1;
 - (id)provideServiceForIdentifier:(id)arg1;

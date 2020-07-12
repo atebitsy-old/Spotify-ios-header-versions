@@ -16,10 +16,10 @@
 }
 
 + (id)activityIndicatorView;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *dotViews; // @synthesize dotViews=_dotViews;
 @property(retain, nonatomic) UIColor *color; // @synthesize color=_color;
 @property(nonatomic, getter=isAnimating) _Bool animating; // @synthesize animating=_animating;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (_Bool)isAccessibilityElement;
 - (void)stopAnimating;

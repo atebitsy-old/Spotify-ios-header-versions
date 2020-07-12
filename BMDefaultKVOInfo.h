@@ -16,11 +16,11 @@
     SEL _action;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) SEL action; // @synthesize action=_action;
 @property(copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
 @property(nonatomic) unsigned long long options; // @synthesize options=_options;
 @property(copy, nonatomic) NSString *keyPath; // @synthesize keyPath=_keyPath;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)initWithKeyPath:(id)arg1 options:(unsigned long long)arg2 block:(CDUnknownBlockType)arg3 action:(SEL)arg4;

@@ -19,9 +19,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTWebViewFeature> webViewFeature; // @synthesize webViewFeature=_webViewFeature;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (_Bool)webViewController:(id)arg1 shouldAllowRequest:(id)arg2 navigationType:(long long)arg3;
 - (id)provideBundlingWebView:(id)arg1 context:(id)arg2;
 - (void)registerPages;

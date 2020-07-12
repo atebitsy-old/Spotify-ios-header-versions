@@ -21,13 +21,13 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) SPTHubLoadingLoggerImplementation *loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(readonly, nonatomic) SPTHubInteractionLoggerImplementation *interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) SPTHubImpressionLoggerImplementation *impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(readonly, nonatomic) SPTHubImageLoadingLoggerImplementation *imageLoadingLogger; // @synthesize imageLoadingLogger=_imageLoadingLogger;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didFailLoadingImageWithURI:(id)arg2;
 - (void)imageLoader:(id)arg1 didFinishLoadingImageWithURI:(id)arg2;
 - (void)imageLoader:(id)arg1 didBeginLoadingImageWithURI:(id)arg2;

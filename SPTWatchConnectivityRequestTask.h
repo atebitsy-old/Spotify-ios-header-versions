@@ -20,12 +20,12 @@
     unsigned long long _retries;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long retries; // @synthesize retries=_retries;
 @property(copy, nonatomic) CDUnknownBlockType errorHandler; // @synthesize errorHandler=_errorHandler;
 @property(readonly, nonatomic) SPTWatchConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;
 @property(readonly, nonatomic) id <SPTWatchConnectivityResponseHandler> responseHandler; // @synthesize responseHandler=_responseHandler;
 @property(readonly, nonatomic) SPTWatchConnectivityRequest *request; // @synthesize request=_request;
-- (void).cxx_destruct;
 - (_Bool)shouldRetryForError:(id)arg1;
 - (void)decorateAndForwardResponse:(id)arg1;
 - (void)handleResponse:(id)arg1;

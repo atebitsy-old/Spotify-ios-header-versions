@@ -21,6 +21,7 @@
     NSURL *_contextURL;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *contextURL; // @synthesize contextURL=_contextURL;
 @property(copy, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(retain, nonatomic) NSURL *link; // @synthesize link=_link;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <SPTCollectionPlatformLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (id)accessibilityHint;
 - (id)iconColor;
 - (long long)icon;

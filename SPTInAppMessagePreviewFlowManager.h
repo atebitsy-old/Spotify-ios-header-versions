@@ -23,6 +23,7 @@
     UIWindow *_previewWindow;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIWindow *previewWindow; // @synthesize previewWindow=_previewWindow;
 @property(nonatomic, getter=isPresentingPreviewButton) _Bool presentingPreviewButton; // @synthesize presentingPreviewButton=_presentingPreviewButton;
 @property(retain, nonatomic) SPTInAppMessagePreviewCreativeViewController *previewViewController; // @synthesize previewViewController=_previewViewController;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTInAppMessagePreviewViewModel *previewViewModel; // @synthesize previewViewModel=_previewViewModel;
-- (void).cxx_destruct;
 - (double)yPosition;
 - (void)didFinishPresentation:(id)arg1;
 - (void)hidePreviewButton;

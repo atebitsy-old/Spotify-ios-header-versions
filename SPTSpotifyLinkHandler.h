@@ -14,8 +14,8 @@
     SPTURISubtypeRegistryImplementation *_URISubtypeRegistry;
 }
 
-@property(readonly, nonatomic) SPTURISubtypeRegistryImplementation *URISubtypeRegistry; // @synthesize URISubtypeRegistry=_URISubtypeRegistry;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTURISubtypeRegistryImplementation *URISubtypeRegistry; // @synthesize URISubtypeRegistry=_URISubtypeRegistry;
 - (long long)openSpotifyURI:(id)arg1 withUnfilteredURI:(id)arg2 context:(id)arg3;
 - (long long)handleCleanedSpotifyURI:(id)arg1 forOriginalURI:(id)arg2 context:(id)arg3;
 @property(readonly, nonatomic) SPTSpotifyURIFallbackResolver *fallbackResolver;

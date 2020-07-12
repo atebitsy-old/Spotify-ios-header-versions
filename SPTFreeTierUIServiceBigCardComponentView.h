@@ -31,6 +31,7 @@
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3 style:(id)arg4;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
 + (id)attributedTitleFromModel:(id)arg1 withStyle:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) UILongPressGestureRecognizer *highlightGestureRecognizer; // @synthesize highlightGestureRecognizer=_highlightGestureRecognizer;
 @property(retain, nonatomic) HUBComponentEvent *tapEvent; // @synthesize tapEvent=_tapEvent;
@@ -38,7 +39,6 @@
 @property(retain, nonatomic) GLUEEntityCardView *cardView; // @synthesize cardView=_cardView;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler;
-- (void).cxx_destruct;
 - (void)sendTapEvent;
 - (void)setupGestureRecognizers;
 - (void)setUpConstraints;

@@ -19,12 +19,12 @@
     GLUEButtonStyle *_actionButtonStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEButtonStyle *actionButtonStyle; // @synthesize actionButtonStyle=_actionButtonStyle;
 @property(copy, nonatomic) GLUEImageStyle *profileImageViewStyle; // @synthesize profileImageViewStyle=_profileImageViewStyle;
 @property(copy, nonatomic) GLUELabelStyle *displayNameStyle; // @synthesize displayNameStyle=_displayNameStyle;
 @property(copy, nonatomic) GLUELabelStyle *initialsTextLabelStyle; // @synthesize initialsTextLabelStyle=_initialsTextLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningSessionViewUserCellStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

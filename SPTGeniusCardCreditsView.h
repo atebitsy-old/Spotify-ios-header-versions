@@ -19,13 +19,13 @@
     SPTActionButton *_button;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTActionButton *button; // @synthesize button=_button;
 @property(readonly, nonatomic) UILabel *creditsLabel; // @synthesize creditsLabel=_creditsLabel;
 @property(readonly, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;
 @property(readonly, nonatomic) UILabel *poweredByLabel; // @synthesize poweredByLabel=_poweredByLabel;
 @property(readonly, nonatomic) long long geniusSongID; // @synthesize geniusSongID=_geniusSongID;
 @property(nonatomic) __weak id <SPTGeniusLaunchExternalDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didTapButton:(id)arg1;
 - (id)creditsAttributedString;
 - (void)addControlActions;

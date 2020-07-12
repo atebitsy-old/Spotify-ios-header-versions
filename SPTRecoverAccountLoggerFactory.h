@@ -14,9 +14,9 @@
     id <SPTLogCenter> _logCenter;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (id)provideDialogLogger;
 - (id)provideSetNewPasswordLogger;
 - (id)initWithLogger:(id)arg1 logCenter:(id)arg2;

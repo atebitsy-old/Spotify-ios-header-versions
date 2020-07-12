@@ -15,8 +15,8 @@
     NSURL *_playlistURL;
 }
 
-@property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
 - (void)processWithLoop:(id)arg1;
 - (id)initWithPlaylistURL:(id)arg1;
 

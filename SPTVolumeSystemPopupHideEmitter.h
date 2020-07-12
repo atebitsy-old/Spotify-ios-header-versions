@@ -21,12 +21,12 @@
     MPVolumeView *_systemVolumeView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isDisabling; // @synthesize isDisabling=_isDisabling;
 @property(nonatomic) _Bool systemHUDDisabled; // @synthesize systemHUDDisabled=_systemHUDDisabled;
 @property(retain, nonatomic) MPVolumeView *systemVolumeView; // @synthesize systemVolumeView=_systemVolumeView;
 @property(readonly, nonatomic) UIApplication *application; // @synthesize application=_application;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)enableSystemVolumeHUD;
 - (void)disableSystemVolumeHUDWithCompletion:(CDUnknownBlockType)arg1;

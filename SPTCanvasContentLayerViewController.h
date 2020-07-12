@@ -23,6 +23,7 @@
     UILabel *_qaDebugLabel;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool showsAttributionView; // @synthesize showsAttributionView=_showsAttributionView;
 @property(retain, nonatomic) UILabel *qaDebugLabel; // @synthesize qaDebugLabel=_qaDebugLabel;
 @property(readonly, nonatomic) SPTCanvasActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) UIView *videoPlayerView; // @synthesize videoPlayerView=_videoPlayerView;
 @property(retain, nonatomic) SPTCanvasContentLayerViewControllerViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)animateWithAnimations:(CDUnknownBlockType)arg1;
 - (void)didLoadVideoPlayer;
 - (void)willLoadVideoPlayer;

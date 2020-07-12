@@ -19,10 +19,10 @@
 }
 
 + (_Bool)isSupported;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *fileStoragePath; // @synthesize fileStoragePath=_fileStoragePath;
 @property(readonly, nonatomic) NSFileManager *fileManager; // @synthesize fileManager=_fileManager;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-- (void).cxx_destruct;
 - (_Bool)fileManager:(id)arg1 shouldProceedAfterError:(id)arg2 movingItemAtPath:(id)arg3 toPath:(id)arg4;
 - (void)session:(id)arg1 didReceiveFile:(id)arg2;
 - (void)session:(id)arg1 didReceiveUserInfo:(id)arg2;

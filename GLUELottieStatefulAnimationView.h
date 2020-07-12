@@ -18,9 +18,9 @@
     NSMutableDictionary *_stateAnimations;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *stateAnimations; // @synthesize stateAnimations=_stateAnimations;
 @property(retain, nonatomic) NSMutableDictionary *transitionAnimations; // @synthesize transitionAnimations=_transitionAnimations;
-- (void).cxx_destruct;
 - (void)setAnimationPath:(id)arg1;
 - (_Bool)transitionToState:(unsigned long long)arg1;
 - (_Bool)transitionFromState:(unsigned long long)arg1 toState:(unsigned long long)arg2;

@@ -19,11 +19,11 @@
     NSData *_remoteConfigurationData;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSData *remoteConfigurationData; // @synthesize remoteConfigurationData=_remoteConfigurationData;
 @property(retain, nonatomic) id <SPTRemoteConfigurationCore> remoteConfigurationCore; // @synthesize remoteConfigurationCore=_remoteConfigurationCore;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTRemoteConfigurationContext> remoteConfigurationContext; // @synthesize remoteConfigurationContext=_remoteConfigurationContext;
-- (void).cxx_destruct;
 - (void)sendNonAuthenticatedEventWithProtobuf:(id)arg1;
 - (id)createBootstrapRequestNonAuthWithErrorMessage:(id)arg1 httpCode:(int)arg2 errorReason:(id)arg3 latencyInSeconds:(double)arg4 payloadSize:(long long)arg5;
 - (id)createBootstrapRequestNonAuthSuccess:(double)arg1 payloadSize:(long long)arg2;

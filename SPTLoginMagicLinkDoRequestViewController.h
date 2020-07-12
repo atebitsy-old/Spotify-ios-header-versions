@@ -21,10 +21,10 @@
     SPTLoginTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) SPTLoginMagicLinkDoRequestViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)viewModelDidSucceedRequestMagicLink:(id)arg1;
 - (void)viewModel:(id)arg1 didFailRequestMagicLinkWithError:(id)arg2;
 - (void)viewModelDidStartRequestMagicLink:(id)arg1;

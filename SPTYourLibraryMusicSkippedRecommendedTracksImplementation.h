@@ -17,9 +17,9 @@
     NSMutableSet *_mutableSkippedTracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *mutableSkippedTracks; // @synthesize mutableSkippedTracks=_mutableSkippedTracks;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (void)persistSkippedTracks;
 - (void)resetSkippedTracks;
 - (void)removeSkippedRecommendedTrackURL:(id)arg1;

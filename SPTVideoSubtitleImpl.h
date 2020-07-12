@@ -18,11 +18,11 @@
     NSString *_locale;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *locale; // @synthesize locale=_locale;
 @property(copy, nonatomic) NSString *language; // @synthesize language=_language;
 @property(copy, nonatomic) NSString *languageTag; // @synthesize languageTag=_languageTag;
 @property(retain, nonatomic) NSMutableArray *languageTagComponents; // @synthesize languageTagComponents=_languageTagComponents;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *description;
 @property(readonly, copy) NSString *debugDescription;
 - (_Bool)isEqual:(id)arg1;

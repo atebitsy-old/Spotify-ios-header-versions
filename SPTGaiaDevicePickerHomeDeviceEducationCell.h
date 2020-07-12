@@ -24,6 +24,7 @@
     UISwitch *_homeDeviceSwitch;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UISwitch *homeDeviceSwitch; // @synthesize homeDeviceSwitch=_homeDeviceSwitch;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTGaiaConnectDevice *device; // @synthesize device=_device;
 @property(nonatomic) __weak id <SPTGaiaDevicePickerHomeDeviceEducationCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)userDidChangeSwitch;
 - (void)userDidPressClose;
 @property(nonatomic) _Bool homeDeviceSwitchIsOn;

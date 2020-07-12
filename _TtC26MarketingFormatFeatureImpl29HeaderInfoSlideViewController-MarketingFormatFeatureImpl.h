@@ -6,7 +6,9 @@
 
 #import "_TtC26MarketingFormatFeatureImpl29HeaderInfoSlideViewController.h"
 
-@interface _TtC26MarketingFormatFeatureImpl29HeaderInfoSlideViewController (MarketingFormatFeatureImpl)
+#import "GLUEThemeObserver-Protocol.h"
+
+@interface _TtC26MarketingFormatFeatureImpl29HeaderInfoSlideViewController (MarketingFormatFeatureImpl) <GLUEThemeObserver>
 - (void)themeUpdated:(id)arg1;
 @end
 

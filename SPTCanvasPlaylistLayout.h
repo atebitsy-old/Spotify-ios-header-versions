@@ -18,12 +18,12 @@
     NSMutableDictionary *_itemAttributes;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *itemAttributes; // @synthesize itemAttributes=_itemAttributes;
 @property(nonatomic) __weak UICollectionViewCell *zoomedCell; // @synthesize zoomedCell=_zoomedCell;
 @property(nonatomic) double minimumInteritemSpacing; // @synthesize minimumInteritemSpacing=_minimumInteritemSpacing;
 @property(nonatomic) double minimumLineSpacing; // @synthesize minimumLineSpacing=_minimumLineSpacing;
 @property(nonatomic) __weak id <SPTCanvasPlaylistLayoutDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)shouldInvalidateLayoutForBoundsChange:(struct CGRect)arg1;
 - (id)layoutAttributesForItemAtIndexPath:(id)arg1;
 - (id)layoutAttributesForElementsInRect:(struct CGRect)arg1;

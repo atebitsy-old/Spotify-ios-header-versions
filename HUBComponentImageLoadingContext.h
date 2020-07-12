@@ -17,11 +17,11 @@
     double _timestamp;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, nonatomic) __weak HUBComponentView<HUBComponentViewWithImageHandling> *componentView; // @synthesize componentView=_componentView;
 @property(readonly, copy, nonatomic) NSString *imageIdentifier; // @synthesize imageIdentifier=_imageIdentifier;
 @property(readonly, nonatomic) long long imageType; // @synthesize imageType=_imageType;
-- (void).cxx_destruct;
 - (id)initWithImageType:(long long)arg1 imageIdentifier:(id)arg2 componentView:(id)arg3 timestamp:(double)arg4;
 
 @end

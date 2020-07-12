@@ -14,9 +14,9 @@
     SPTPreSignupExperimentationDateProvider *_currentDateProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPreSignupExperimentationDateProvider *currentDateProvider; // @synthesize currentDateProvider=_currentDateProvider;
 @property(readonly, nonatomic) NSISO8601DateFormatter *dateFormatter; // @synthesize dateFormatter=_dateFormatter;
-- (void).cxx_destruct;
 - (id)formattedCurrentDate;
 - (id)initWithCurrentDateProvider:(id)arg1 dateFormatter:(id)arg2;
 

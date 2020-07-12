@@ -20,11 +20,11 @@
     id <SPTDataLoaderCancellationToken> _dataLoaderCancellationToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> dataLoaderCancellationToken; // @synthesize dataLoaderCancellationToken=_dataLoaderCancellationToken;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) CDUnknownBlockType asyncContextCallback; // @synthesize asyncContextCallback=_asyncContextCallback;
 @property(copy, nonatomic) NSString *eventId; // @synthesize eventId=_eventId;
-- (void).cxx_destruct;
 - (id)provideContextRestrictions;
 - (id)formatMetadata:(id)arg1 forEventId:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

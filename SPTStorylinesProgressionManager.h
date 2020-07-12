@@ -18,12 +18,12 @@
     unsigned long long _cardCount;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long cardCount; // @synthesize cardCount=_cardCount;
 @property(nonatomic) double timeElapsed; // @synthesize timeElapsed=_timeElapsed;
 @property(retain, nonatomic) NSTimer *progressTimer; // @synthesize progressTimer=_progressTimer;
 @property(readonly, nonatomic) unsigned long long currentCardIndex; // @synthesize currentCardIndex=_currentCardIndex;
 @property(nonatomic) __weak id <SPTStorylinesProgressionManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)timerTicked:(id)arg1;
 - (void)cancelCurrentTimer;
 - (void)startCurrentTimer;

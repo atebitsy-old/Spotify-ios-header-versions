@@ -6,19 +6,17 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTService-Protocol.h"
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPNavigationController, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTEntitySeeAllSongsRegistry, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierPreCurationService, SPTFreeTierPresentationService, SPTGLUEService, SPTPerformanceMetricsService, SPTSelfPresentingViewController, SPTURIDispatchService, _TtP21EntityAllSongsFeature24SPTEntityAllSongsService_;
+@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTEntitySeeAllSongsRegistry, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierPreCurationService, SPTFreeTierPresentationService, SPTGLUEService, SPTPerformanceMetricsService, SPTSelfPresentingViewController, SPTURIDispatchService;
 
-@interface SPTEntitySeeAllSongsUIService : NSObject <SPTFeatureFlagSignalObserver, SPTService, SPTURISubtypeHandler>
+@interface SPTEntitySeeAllSongsUIService : NSObject <SPTService, SPTURISubtypeHandler>
 {
     id <SPTContainerService> _containerService;
     id <SPTAudioPreviewService> _audioPreviewService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTGLUEService> _glueService;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTEntitySeeAllSongsService> _allSongsService;
@@ -27,17 +25,14 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTFreeTierPreCurationService> _preCurationService;
-    id <_TtP21EntityAllSongsFeature24SPTEntityAllSongsService_> _entityAllSongsService;
-    id <SPTFeatureFlagSignal> _masterFeatureFlagSignal;
     id <SPTEntitySeeAllSongsRegistry> _registry;
     SPNavigationController<SPTSelfPresentingViewController> *_navigationController;
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPNavigationController<SPTSelfPresentingViewController> *navigationController; // @synthesize navigationController=_navigationController;
 @property(retain, nonatomic) id <SPTEntitySeeAllSongsRegistry> registry; // @synthesize registry=_registry;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> masterFeatureFlagSignal; // @synthesize masterFeatureFlagSignal=_masterFeatureFlagSignal;
-@property(nonatomic) __weak id <_TtP21EntityAllSongsFeature24SPTEntityAllSongsService_> entityAllSongsService; // @synthesize entityAllSongsService=_entityAllSongsService;
 @property(nonatomic) __weak id <SPTFreeTierPreCurationService> preCurationService; // @synthesize preCurationService=_preCurationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
@@ -46,20 +41,16 @@
 @property(nonatomic) __weak id <SPTEntitySeeAllSongsService> allSongsService; // @synthesize allSongsService=_allSongsService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (void)unregisterLinkHandler;
 - (void)registerLinkHandler;
 - (void)dismissAllSongsModal;
 - (id)dataSourceWithViewURI:(id)arg1 allSongsRegistry:(id)arg2;
-- (id)buildMasterFeatureFlag;
 - (id)provideAllSongsViewControllerForURI:(id)arg1;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -18,6 +18,7 @@
     long long _downloadsSizeMb;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long downloadsSizeMb; // @synthesize downloadsSizeMb=_downloadsSizeMb;
 @property(nonatomic) long long appDataSizeMb; // @synthesize appDataSizeMb=_appDataSizeMb;
 @property(nonatomic) long long freeSpaceMb; // @synthesize freeSpaceMb=_freeSpaceMb;
@@ -26,7 +27,6 @@
 @property(readonly, nonatomic) UIView *downloadsView; // @synthesize downloadsView=_downloadsView;
 @property(readonly, nonatomic) UIView *cacheView; // @synthesize cacheView=_cacheView;
 @property(readonly, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)updateStatsWithTotalSpaceMb:(long long)arg1 freeSpaceMb:(long long)arg2 appDataSizeMb:(long long)arg3 downloadsSizeMb:(long long)arg4;
 - (id)initWithFrame:(struct CGRect)arg1;

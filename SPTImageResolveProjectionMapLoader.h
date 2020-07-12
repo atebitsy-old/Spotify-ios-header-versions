@@ -21,12 +21,12 @@
 }
 
 + (id)preferredCacheOptions;
+- (void).cxx_destruct;
 @property(retain) NSDictionary *projectionMap; // @synthesize projectionMap=_projectionMap;
 @property(readonly, nonatomic) unsigned long long projectionMapTTL; // @synthesize projectionMapTTL=_projectionMapTTL;
 @property(readonly, copy, nonatomic) NSString *persistentCacheKey; // @synthesize persistentCacheKey=_persistentCacheKey;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, nonatomic) id <SPTImageResolveTransport> transport; // @synthesize transport=_transport;
-- (void).cxx_destruct;
 - (void)purgeCachedProjectionMap;
 - (void)cacheResponse:(id)arg1;
 - (void)loadCachedProjectionMap;

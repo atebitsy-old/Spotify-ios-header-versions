@@ -20,12 +20,12 @@
     NSString *_freeformDescription;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *freeformDescription; // @synthesize freeformDescription=_freeformDescription;
 @property(readonly, nonatomic) NSURL *entityImageURL; // @synthesize entityImageURL=_entityImageURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

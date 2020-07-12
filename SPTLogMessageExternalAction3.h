@@ -19,13 +19,13 @@
 }
 
 + (id)messageWithSessionId:(id)arg1 actionType:(id)arg2 userIntent:(id)arg3 uri:(id)arg4 playbackId:(id)arg5 eventSourceIdentifier:(id)arg6;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *eventSourceIdentifierValue; // @synthesize eventSourceIdentifierValue=_eventSourceIdentifierValue;
 @property(copy, nonatomic) NSData *playbackIdValue; // @synthesize playbackIdValue=_playbackIdValue;
 @property(copy, nonatomic) NSString *uriValue; // @synthesize uriValue=_uriValue;
 @property(copy, nonatomic) NSString *userIntentValue; // @synthesize userIntentValue=_userIntentValue;
 @property(copy, nonatomic) NSString *actionTypeValue; // @synthesize actionTypeValue=_actionTypeValue;
 @property(copy, nonatomic) NSString *sessionIdValue; // @synthesize sessionIdValue=_sessionIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

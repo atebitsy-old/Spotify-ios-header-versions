@@ -17,9 +17,9 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (id)handleVoiceCommand:(id)arg1;
 - (_Bool)canHandleVoiceCommand:(id)arg1;
 - (id)initWithPlayer:(id)arg1 referrerIdentifier:(id)arg2;

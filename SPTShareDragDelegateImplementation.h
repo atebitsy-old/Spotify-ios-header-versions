@@ -20,11 +20,11 @@
     NSString *_logContext;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(copy, nonatomic) CDUnknownBlockType itemBlock; // @synthesize itemBlock=_itemBlock;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(copy, nonatomic) CDUnknownBlockType dragPreviewCropRectBlock; // @synthesize dragPreviewCropRectBlock;
-- (void).cxx_destruct;
 - (id)provideDragItemsForIndexPath:(id)arg1;
 - (id)previewParametersForContainerView:(id)arg1 indexPath:(id)arg2;
 - (_Bool)canHandleURI:(id)arg1;

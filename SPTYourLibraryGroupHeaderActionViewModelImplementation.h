@@ -21,12 +21,12 @@
     SPTYourLibraryLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTCreatePlaylistController> createPlaylistController; // @synthesize createPlaylistController=_createPlaylistController;
 @property(readonly, getter=isVisible) _Bool visible; // @synthesize visible=_visible;
 @property(readonly) long long icon; // @synthesize icon=_icon;
 @property(readonly, copy) NSString *accessibilityLabel; // @synthesize accessibilityLabel=_accessibilityLabel;
-- (void).cxx_destruct;
 - (void)createPlaylistController:(id)arg1 didRenamePlaylistURL:(id)arg2;
 - (void)createPlaylistControllerDidCancel:(id)arg1;
 - (void)createPlaylistController:(id)arg1 didCreatePlaylistURL:(id)arg2;

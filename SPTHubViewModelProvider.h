@@ -16,9 +16,9 @@
     id <HUBViewModelLoader> _viewModelLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <HUBViewModelLoader> viewModelLoader; // @synthesize viewModelLoader=_viewModelLoader;
 @property(nonatomic) __weak id <SPTHubViewModelProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)viewModelLoader:(id)arg1 didFailLoadingWithError:(id)arg2;
 - (void)viewModelLoader:(id)arg1 didLoadViewModel:(id)arg2;
 - (void)loadViewModel;

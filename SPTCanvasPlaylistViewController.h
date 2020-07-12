@@ -27,12 +27,12 @@
     UIView *_statusBarView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *statusBarView; // @synthesize statusBarView=_statusBarView;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTCanvasPlaylistLayout *flowLayout; // @synthesize flowLayout=_flowLayout;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) SPTCanvasPlaylistViewControllerViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (_Bool)prefersBlurEffect;
 - (id)preferredNavigationBarBackgroundColor;
 - (unsigned long long)preferredNavigationBarState;

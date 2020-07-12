@@ -25,6 +25,7 @@
     id <SPTNetworkConnectivityController> _networkConnectivityController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) NSDictionary *barItems; // @synthesize barItems=_barItems;
 @property(retain, nonatomic) id <NSObject> reachabilityObservation; // @synthesize reachabilityObservation=_reachabilityObservation;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(nonatomic) double connectingMessageDelay; // @synthesize connectingMessageDelay=_connectingMessageDelay;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (void)incognitoModeHandler:(id)arg1 incognitoModeChangedByTimeout:(_Bool)arg2;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (void)updateIncognitoMode;

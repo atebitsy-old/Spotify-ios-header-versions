@@ -34,6 +34,7 @@
     double _timeSinceBackgrounded;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double timeSinceBackgrounded; // @synthesize timeSinceBackgrounded=_timeSinceBackgrounded;
 @property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
 @property(retain, nonatomic) NSURL *expectedContextURL; // @synthesize expectedContextURL=_expectedContextURL;
@@ -51,7 +52,6 @@
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(copy, nonatomic) CDUnknownBlockType playCommandCompletionHandler; // @synthesize playCommandCompletionHandler=_playCommandCompletionHandler;
 @property(copy, nonatomic) CDUnknownBlockType intentCompletionHandler; // @synthesize intentCompletionHandler=_intentCompletionHandler;
-- (void).cxx_destruct;
 - (_Bool)isPlaying;
 - (void)invalidateTimer;
 - (void)startApConnectionTimer;

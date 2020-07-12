@@ -21,13 +21,13 @@
     id <SPTAlertController> _alertController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) SPTScannablesDependencies *dependencies; // @synthesize dependencies=_dependencies;
 @property(readonly, nonatomic) __weak SPTScannablesOnboardingPresenterImplementation *onboardingPresenter; // @synthesize onboardingPresenter=_onboardingPresenter;
 @property(retain, nonatomic) SPTaskCompletionSource *requestAuthorizationCompletionSource; // @synthesize requestAuthorizationCompletionSource=_requestAuthorizationCompletionSource;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *requesterQueue; // @synthesize requesterQueue=_requesterQueue;
 @property(nonatomic) __weak id <SPTScannablesAuthorizationRequesterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)permissionDenied;
 - (void)openSettings;
 - (id)presentSettingsPromptWithTitle:(id)arg1;

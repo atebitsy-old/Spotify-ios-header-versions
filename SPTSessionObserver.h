@@ -23,6 +23,7 @@
     SPTRequestLifetime *_offlineErrorSubscription;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTRequestLifetime *offlineErrorSubscription; // @synthesize offlineErrorSubscription=_offlineErrorSubscription;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
-- (void).cxx_destruct;
 - (void)showDialogWithTitle:(id)arg1 message:(id)arg2;
 - (void)showDialogOfflineLicenseLost;
 - (void)showDialogOfflineModeExpired;

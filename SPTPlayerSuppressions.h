@@ -15,8 +15,8 @@
     NSSet *_providers;
 }
 
-@property(copy, nonatomic) NSSet *providers; // @synthesize providers=_providers;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSSet *providers; // @synthesize providers=_providers;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

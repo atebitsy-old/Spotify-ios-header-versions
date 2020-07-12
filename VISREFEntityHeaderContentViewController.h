@@ -26,6 +26,7 @@
     double _statusBarHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool viewIsVisible; // @synthesize viewIsVisible=_viewIsVisible;
 @property(nonatomic) double statusBarHeight; // @synthesize statusBarHeight=_statusBarHeight;
 @property(nonatomic) double fullHeaderHeight; // @synthesize fullHeaderHeight=_fullHeaderHeight;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *headerViewTopConstraint; // @synthesize headerViewTopConstraint=_headerViewTopConstraint;
 @property(nonatomic) __weak UIScrollView *parentScrollView; // @synthesize parentScrollView=_parentScrollView;
 @property(retain, nonatomic) VISREFBaseHeaderController *headerController; // @synthesize headerController=_headerController;
-- (void).cxx_destruct;
 - (void)headerHeightDidChangeWithTotalHeaderHeight:(double)arg1 safeAreaTopInset:(double)arg2 contentHeight:(double)arg3 topAccessoryViewHeight:(double)arg4;
 - (id)touchFowardingView:(id)arg1 didReceiveHitTest:(struct CGPoint)arg2 withEvent:(id)arg3;
 - (void)dealloc;

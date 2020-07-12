@@ -27,6 +27,7 @@
 }
 
 + (_Bool)array:(id)arg1 containsItemWithURI:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDrivingModePivotSubtitleIconResolver *subtitleIconResolver; // @synthesize subtitleIconResolver=_subtitleIconResolver;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTDrivingModePivotDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSError *error; // @synthesize error=_error;
-- (void).cxx_destruct;
 - (void)decorateLoadedItems:(id)arg1;
 - (void)decorateNowPlayingItemWithURI:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

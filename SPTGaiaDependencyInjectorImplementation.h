@@ -19,10 +19,10 @@
     id <SPTGaiaDevicePickerViewFactory> _injectedViewFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTGaiaDevicePickerViewFactory> injectedViewFactory; // @synthesize injectedViewFactory=_injectedViewFactory;
 @property(retain, nonatomic) id <SPTGaiaDevicePickerExternalPresenter> injectedDevicePickerPresenter; // @synthesize injectedDevicePickerPresenter=_injectedDevicePickerPresenter;
 @property(retain, nonatomic) id <SPTGaiaDevicePickerURIHandler> injectedURIHandler; // @synthesize injectedURIHandler=_injectedURIHandler;
-- (void).cxx_destruct;
 - (void)injectDevicePickerPresenter:(id)arg1;
 - (void)injectDevicePickerURIHandler:(id)arg1;
 @property(readonly, nonatomic) UIView *injectedVolumeSliderView; // @synthesize injectedVolumeSliderView=_injectedVolumeSliderView;

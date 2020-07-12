@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)dragSort;
 - (id)hitDeselectEntityInListWithEntityToBeDeselected:(id)arg1;
 - (id)hitSelectEntityInListWithEntityToBeSelected:(id)arg1;

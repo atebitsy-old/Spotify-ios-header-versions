@@ -18,13 +18,13 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *view; // @synthesize view=_view;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) NSLayoutConstraint *headerTopConstraint; // @synthesize headerTopConstraint=_headerTopConstraint;
 @property(retain, nonatomic) UIView *tabView; // @synthesize tabView=_tabView;
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
-- (void).cxx_destruct;
 - (void)animateHeaderDisappearToTopWithCompletion:(CDUnknownBlockType)arg1;
 - (void)animateHeaderAppearFromTopWithCompletion:(CDUnknownBlockType)arg1;
 - (void)resetConstraints;

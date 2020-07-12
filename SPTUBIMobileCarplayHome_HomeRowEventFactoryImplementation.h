@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 reason:(id)arg3 components:(id)arg4;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)impression;
 - (id)_location;
 - (id)initWithPosition:(long long)arg1 uri:(id)arg2 reason:(id)arg3 components:(id)arg4;

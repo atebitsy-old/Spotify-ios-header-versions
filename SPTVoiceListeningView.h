@@ -24,6 +24,7 @@
     SPTVoiceTooltipView *_suggestionsTooltipView;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isRunningVoiceOver; // @synthesize isRunningVoiceOver=_isRunningVoiceOver;
 @property(retain, nonatomic) SPTVoiceTooltipView *suggestionsTooltipView; // @synthesize suggestionsTooltipView=_suggestionsTooltipView;
 @property(retain, nonatomic) SPTVoiceMicrophoneView *microphoneGlowView; // @synthesize microphoneGlowView=_microphoneGlowView;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) UIButton *microphoneButton; // @synthesize microphoneButton=_microphoneButton;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(readonly, nonatomic) SPTVoiceListeningViewModel *listeningViewModel; // @synthesize listeningViewModel=_listeningViewModel;
-- (void).cxx_destruct;
 - (void)listeningViewModel:(id)arg1 didUpdateAudioInteractionMode:(unsigned long long)arg2;
 - (void)listeningViewModelDidStopListening:(id)arg1;
 - (void)listeningViewModelDidUpdate:(id)arg1;

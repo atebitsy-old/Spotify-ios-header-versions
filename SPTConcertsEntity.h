@@ -29,6 +29,7 @@
     UIColor *_primaryColor;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIColor *primaryColor; // @synthesize primaryColor=_primaryColor;
 @property(readonly, copy, nonatomic) NSArray *relatedConcerts; // @synthesize relatedConcerts=_relatedConcerts;
 @property(readonly, copy, nonatomic) NSString *ticketingPartner; // @synthesize ticketingPartner=_ticketingPartner;
@@ -44,7 +45,6 @@
 @property(readonly, copy, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(readonly, copy, nonatomic) NSURL *clickThroughURL; // @synthesize clickThroughURL=_clickThroughURL;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)description;
 - (_Bool)isEqual:(id)arg1;

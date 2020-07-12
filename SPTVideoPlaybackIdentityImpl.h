@@ -17,9 +17,9 @@
     id <BMPlaybackRequest> _request;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) id <BMPlaybackRequest> request; // @synthesize request=_request;
 @property(copy, nonatomic) NSString *sessionID; // @synthesize sessionID=_sessionID;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic) NSDictionary *metadata;

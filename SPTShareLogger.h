@@ -15,9 +15,9 @@
     NSString *_logContext;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *logContext; // @synthesize logContext=_logContext;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logMessageWithSessionId:(id)arg1 userIntent:(id)arg2 interactionType:(id)arg3 result:(id)arg4 shareData:(id)arg5 textChanged:(_Bool)arg6 sourcePageId:(id)arg7 destinationId:(id)arg8 destinationIndex:(long long)arg9 shareBrowselinkId:(id)arg10;
 - (void)logDragDropActionSucceededWithShareURI:(id)arg1 logContext:(id)arg2;
 - (void)logOverflowMenuActionDeeplinkWithSessionId:(id)arg1 shareData:(id)arg2 shareBrowselinkId:(id)arg3 activityType:(id)arg4;

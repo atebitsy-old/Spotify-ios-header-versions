@@ -18,10 +18,10 @@
     NSError *_error;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(retain, nonatomic) NSRegularExpression *regularExpression; // @synthesize regularExpression=_regularExpression;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)isValidColorAlphaValue:(id)arg1;
 - (_Bool)isValidHexColorString:(id)arg1;
 - (id)gradientDictionaryFromComponentModelBuilder:(id)arg1;

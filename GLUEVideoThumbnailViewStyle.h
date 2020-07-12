@@ -17,10 +17,10 @@
     GLUEImageStyle *_videoThumbnailImageStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEImageStyle *videoThumbnailImageStyle; // @synthesize videoThumbnailImageStyle=_videoThumbnailImageStyle;
 @property(copy, nonatomic) UIColor *timeStampBackgroundColor; // @synthesize timeStampBackgroundColor=_timeStampBackgroundColor;
 @property(copy, nonatomic) GLUELabelStyle *timeStampLabelStyle; // @synthesize timeStampLabelStyle=_timeStampLabelStyle;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToVideoThumbnailViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

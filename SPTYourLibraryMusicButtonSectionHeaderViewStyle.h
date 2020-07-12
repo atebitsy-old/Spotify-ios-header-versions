@@ -17,10 +17,10 @@
     double _buttonMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double buttonMargin; // @synthesize buttonMargin=_buttonMargin;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(copy, nonatomic) GLUEButtonStyle *sectionHeaderButtonStyle; // @synthesize sectionHeaderButtonStyle=_sectionHeaderButtonStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

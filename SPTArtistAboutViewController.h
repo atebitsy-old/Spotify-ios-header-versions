@@ -36,6 +36,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTArtistAboutBiographyView *biographyView; // @synthesize biographyView=_biographyView;
 @property(retain, nonatomic) SPTArtistAboutMonthlyListenersView *monthlyListenersView; // @synthesize monthlyListenersView=_monthlyListenersView;
@@ -52,7 +53,6 @@
 @property(retain, nonatomic) SPTArtistAboutStateProvider *stateProvider; // @synthesize stateProvider=_stateProvider;
 @property(retain, nonatomic) SPTArtistAboutContextMenuViewModel *contextMenuViewModel; // @synthesize contextMenuViewModel=_contextMenuViewModel;
 @property(retain, nonatomic) SPTArtistAboutViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)rightButtonPressed:(id)arg1;

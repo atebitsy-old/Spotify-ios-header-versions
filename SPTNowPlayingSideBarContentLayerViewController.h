@@ -27,6 +27,7 @@
     struct UIEdgeInsets _windowedContentInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isScrolling; // @synthesize isScrolling=_isScrolling;
 @property(retain, nonatomic) id <UICollectionViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) SPTNowPlayingContentLayerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) struct UIEdgeInsets windowedContentInsets; // @synthesize windowedContentInsets=_windowedContentInsets;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
-- (void).cxx_destruct;
 - (void)applicationWillEnterForeground:(id)arg1;
 - (void)contentLayerViewModelDidChangePreviousTrack:(id)arg1;
 - (void)contentLayerViewModelDidChangeNextTrack:(id)arg1;

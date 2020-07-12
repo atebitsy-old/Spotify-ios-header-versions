@@ -19,11 +19,11 @@
     NSString *_contentCacheKey;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *contentCacheKey; // @synthesize contentCacheKey=_contentCacheKey;
 @property(retain, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)tabBarBadgeURL;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

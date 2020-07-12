@@ -17,8 +17,8 @@
 }
 
 + (id)keyPathsForValuesAffectingCurrentPageView;
-@property(retain, nonatomic) SPTInstrumentationStackedPageStream *stack; // @synthesize stack=_stack;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTInstrumentationStackedPageStream *stack; // @synthesize stack=_stack;
 - (void)pageStream:(id)arg1 didSpawnChildPageStream:(id)arg2;
 - (void)pushPageStream:(id)arg1;
 @property(readonly, nonatomic) SPTInstrumentationPageView *currentPageView;

@@ -7,11 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSString, UIView;
-@protocol BMBetamaxPlayer, BMPlaybackRequestFactory, BMSubtitleFactory, BMVideoSurface, BMVideoSurfaceManager, SPTVideoCacheOptions;
+@protocol BMBetamaxPlayer, BMVideoSurface, BMVideoSurfaceManager, SPTVideoCacheOptions;
 
 @protocol SPTVideoFeaturePlayerFactory <NSObject>
-- (id <BMSubtitleFactory>)provideSubtitleFactory;
-- (id <BMPlaybackRequestFactory>)providePlaybackRequestFactory;
 - (id <BMBetamaxPlayer>)createVideoPlayerWithFeatureIdentifier:(NSString *)arg1 eventObserverFactories:(NSArray *)arg2 surface:(UIView<BMVideoSurface> *)arg3 videoCacheOptions:(id <SPTVideoCacheOptions>)arg4 withRoyaltyMediaEnabled:(_Bool)arg5 preventDisplaySleepDuringVideoPlayback:(_Bool)arg6;
 - (id <BMBetamaxPlayer>)createVideoPlayerWithFeatureIdentifier:(NSString *)arg1 eventObserverFactories:(NSArray *)arg2 surfaceManager:(id <BMVideoSurfaceManager>)arg3 videoCacheOptions:(id <SPTVideoCacheOptions>)arg4 withRoyaltyMediaEnabled:(_Bool)arg5 preventDisplaySleepDuringVideoPlayback:(_Bool)arg6;
 @end

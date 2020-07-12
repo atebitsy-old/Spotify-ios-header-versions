@@ -21,6 +21,7 @@
     id <SPTVideoPlaybackErrorFormatter> _playbackErrorFormatter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTVideoPlaybackErrorFormatter> playbackErrorFormatter; // @synthesize playbackErrorFormatter=_playbackErrorFormatter;
 @property(retain, nonatomic) SPTPlayerItemNotificationObservable *playerItemObservable; // @synthesize playerItemObservable=_playerItemObservable;
 @property(retain, nonatomic) SPTVideoApplicationStateObservable *appStateObservable; // @synthesize appStateObservable=_appStateObservable;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
 @property(retain, nonatomic) id <BMConnectionModeObservable> connectionModeObservable; // @synthesize connectionModeObservable=_connectionModeObservable;
 @property(retain, nonatomic) id <BMDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)defaultEventObserverFactoriesWithLoggerDataProvider:(id)arg1;
 - (id)createPlayerWithSurfaceManager:(id)arg1 configuration:(id)arg2 loggerDataProvider:(id)arg3 eventObserverFactories:(id)arg4 cache:(id)arg5 allowRoyaltyMedia:(_Bool)arg6;
 - (id)createPlayerWithSurface:(id)arg1 configuration:(id)arg2 loggerDataProvider:(id)arg3 eventObserverFactories:(id)arg4 cache:(id)arg5 allowRoyaltyMedia:(_Bool)arg6;

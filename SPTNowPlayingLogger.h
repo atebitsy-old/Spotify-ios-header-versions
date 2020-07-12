@@ -17,11 +17,11 @@
     SPTNowPlayingUBILogger *_nowPlayingUBILogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNowPlayingUBILogger *nowPlayingUBILogger; // @synthesize nowPlayingUBILogger=_nowPlayingUBILogger;
 @property(readonly, copy, nonatomic) CDUnknownBlockType likeActionResolver; // @synthesize likeActionResolver=_likeActionResolver;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)nowPlayingFeatureID;
 - (id)nowPlayingPageURI;
 - (void)logImpressionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 itemIndex:(unsigned long long)arg5 type:(id)arg6 renderType:(id)arg7;

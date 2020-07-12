@@ -15,10 +15,10 @@
     SPTHomeMixMemberPileContainerView *_facePileView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeMixMemberPileContainerView *facePileView; // @synthesize facePileView=_facePileView;
 @property(readonly, nonatomic) GLUELabel *reason; // @synthesize reason=_reason;
 @property(readonly, nonatomic) GLUELabel *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (void)prepareForReuse;
 - (void)setupConstraints;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

@@ -19,10 +19,10 @@
     id _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) NSString *tabMenuItemTitle; // @synthesize tabMenuItemTitle=_tabMenuItemTitle;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)contentItemAtIndexPath:(id)arg1;
 - (long long)numberOfChildItemsAtIndexPath:(id)arg1;
 - (_Bool)childItemsDisplayPlaybackProgressAtIndexPath:(id)arg1;

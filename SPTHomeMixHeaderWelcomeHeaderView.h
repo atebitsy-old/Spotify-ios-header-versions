@@ -15,10 +15,10 @@
     UIView *_container;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *container; // @synthesize container=_container;
 @property(readonly, nonatomic) GLUELabel *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, nonatomic) GLUELabel *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)setupConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

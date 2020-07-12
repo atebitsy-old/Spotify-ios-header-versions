@@ -26,6 +26,7 @@
 }
 
 + (id)identifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool usePlaylistName; // @synthesize usePlaylistName=_usePlaylistName;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SPTAssistedCurationCardModelImplementation *currentCard; // @synthesize currentCard=_currentCard;
 @property(retain, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)loadMoreTracksForCard:(id)arg1;
 - (void)card:(id)arg1 addedTrack:(id)arg2 atIndex:(unsigned long long)arg3;
 - (_Bool)hasMoreTracksForCard:(id)arg1;

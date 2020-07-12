@@ -13,8 +13,8 @@
     id <SPTRemoteConfigurationContext> _context;
 }
 
-@property(readonly, nonatomic) id <SPTRemoteConfigurationContext> context; // @synthesize context=_context;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTRemoteConfigurationContext> context; // @synthesize context=_context;
 - (id)resolverURLWithFetchType:(id)arg1;
 - (id)initWithRemoteConfigurationContext:(id)arg1;
 

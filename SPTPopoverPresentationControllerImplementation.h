@@ -18,9 +18,9 @@
     id <SPTInstrumentationModalPresentationMonitor> _presentationMonitor;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTInstrumentationModalPresentationMonitor> presentationMonitor; // @synthesize presentationMonitor=_presentationMonitor;
 @property(nonatomic) __weak id <SPTPresenterViewControllerProvider> presenterProvider; // @synthesize presenterProvider=_presenterProvider;
-- (void).cxx_destruct;
 - (void)presentViewController:(id)arg1 onParentViewController:(id)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)presentViewControllerWithPopoverPresentation:(id)arg1 onParentViewController:(id)arg2 animated:(_Bool)arg3 permittedArrowDirections:(unsigned long long)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)popoverPresentationControllerDidDismissPopover:(id)arg1;

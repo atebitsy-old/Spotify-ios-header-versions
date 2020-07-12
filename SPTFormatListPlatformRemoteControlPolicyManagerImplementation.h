@@ -15,8 +15,8 @@
     SPTObserverManager *_observers;
 }
 
-@property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 - (id)init;
 - (void)dislikeDidFinish:(id)arg1 track:(id)arg2 contextURI:(id)arg3 identifier:(id)arg4 error:(id)arg5 success:(_Bool)arg6;
 - (void)unlikeDidFinish:(id)arg1 track:(id)arg2 contextURI:(id)arg3 error:(id)arg4 success:(_Bool)arg5;

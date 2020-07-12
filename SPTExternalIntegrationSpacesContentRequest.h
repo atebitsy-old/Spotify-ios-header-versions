@@ -19,12 +19,12 @@
     CDUnknownBlockType _completionHandler;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(readonly, nonatomic) SPTExternalIntegrationSpacesContentURLResolver *URLResolver; // @synthesize URLResolver=_URLResolver;
 @property(readonly, nonatomic) SPTPersistentCache *cache; // @synthesize cache=_cache;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (id)cacheKey;
 - (void)handleErrorResponse:(id)arg1;
 - (void)handleSuccessfulResponse:(id)arg1;

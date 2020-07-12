@@ -20,11 +20,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBISessionServiceResponder> sessionServiceResponder; // @synthesize sessionServiceResponder=_sessionServiceResponder;
 @property(retain, nonatomic) SPTUBIPlaybackIdTracker *playbackIdTracker; // @synthesize playbackIdTracker=_playbackIdTracker;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -18,13 +18,13 @@
     NSString *_hardwareModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *hardwareModel; // @synthesize hardwareModel=_hardwareModel;
 @property(readonly, copy, nonatomic) NSString *systemName; // @synthesize systemName=_systemName;
 @property(readonly, copy, nonatomic) NSString *localizedModel; // @synthesize localizedModel=_localizedModel;
 @property(readonly, copy, nonatomic) NSString *model; // @synthesize model=_model;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, copy, nonatomic) NSString *systemVersion; // @synthesize systemVersion=_systemVersion;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 @end

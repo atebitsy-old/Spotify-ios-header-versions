@@ -9,8 +9,8 @@
 @protocol SPTCreatePlaylistControllerDelegate;
 
 @protocol SPTCreatePlaylistController <NSObject>
-@property(nonatomic) __weak id <SPTCreatePlaylistControllerDelegate> delegate;
 - (void)showRenamePlaylistAlert;
 - (void)showCreatePlaylistAlert;
+@property(nonatomic) __weak id <SPTCreatePlaylistControllerDelegate> delegate;
 @end
 

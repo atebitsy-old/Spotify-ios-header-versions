@@ -51,8 +51,6 @@
 + (id)LOT_colorWithString:(id)arg1;
 + (id)searchForColorByName:(id)arg1;
 - (_Bool)encore_equalToColor:(id)arg1 withPrecision:(double)arg2;
-@property(readonly, nonatomic, getter=spt_luminance) double luminance;
-- (double)spt_contrastRatioTo:(id)arg1;
 - (id)lyrics_colorByBlendingWithColor:(id)arg1 ratio:(double)arg2;
 - (union SPTColor)spt_SPTColor;
 @property(readonly, nonatomic, getter=spt_scannablesHexRepresentation) NSString *scannablesHexRepresentation;

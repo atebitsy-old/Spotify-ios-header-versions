@@ -27,6 +27,7 @@
     NSString *_appLocalizationLanguage;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *appLocalizationLanguage; // @synthesize appLocalizationLanguage=_appLocalizationLanguage;
 @property(readonly, nonatomic, getter=isUsingStagingEnvironment) _Bool usingStagingEnvironment; // @synthesize usingStagingEnvironment=_usingStagingEnvironment;
 @property(readonly, nonatomic) NSString *pinPairingCode; // @synthesize pinPairingCode=_pinPairingCode;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) NSString *redirectURIPath; // @synthesize redirectURIPath=_redirectURIPath;
 @property(readonly, nonatomic) NSString *redirectURI; // @synthesize redirectURI=_redirectURI;
 @property(readonly, nonatomic) NSString *clientId; // @synthesize clientId=_clientId;
-- (void).cxx_destruct;
 - (id)loadJsonForResource:(id)arg1 ofType:(id)arg2;
 - (id)webLanguageForAppLanguage:(id)arg1;
 - (id)toPairURL;

@@ -23,6 +23,7 @@
     id <SPTVoiceLibraryLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceLibraryLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTVoiceLibraryNetworkState> networkHandler; // @synthesize networkHandler=_networkHandler;
 @property(readonly, nonatomic) id <SPTVoiceLibraryMicrophonePermissionsState><SPTVoiceLibraryAudioRoute> audioRouteHandler; // @synthesize audioRouteHandler=_audioRouteHandler;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <SPTVoiceLibraryUtteranceIdentifierProvider> utteranceIdProvider; // @synthesize utteranceIdProvider=_utteranceIdProvider;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceLibraryRecognitionTaskFactory> voiceRecognitionTaskFactory; // @synthesize voiceRecognitionTaskFactory=_voiceRecognitionTaskFactory;
-- (void).cxx_destruct;
 - (id)createVoiceSession;
 - (id)initWithVoiceRecognitionTaskFactory:(id)arg1 audioSessionManager:(id)arg2 player:(id)arg3 utteranceIdProvider:(id)arg4 sessionHandlingOptions:(id)arg5 audioRouteHandler:(id)arg6 networkHandler:(id)arg7 logger:(id)arg8;
 

@@ -36,6 +36,7 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool newVoiceSearchExperienceEnabled; // @synthesize newVoiceSearchExperienceEnabled=_newVoiceSearchExperienceEnabled;
 @property(nonatomic) _Bool usingAVAudioEngineEnabled; // @synthesize usingAVAudioEngineEnabled=_usingAVAudioEngineEnabled;
 @property(nonatomic) _Bool onlyTranscriptionFeedbackEnabled; // @synthesize onlyTranscriptionFeedbackEnabled=_onlyTranscriptionFeedbackEnabled;
@@ -55,7 +56,6 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(nonatomic) __weak id <SPTVoiceTestManagerSettingsDelegate> settingsDelegate; // @synthesize settingsDelegate=_settingsDelegate;
-- (void).cxx_destruct;
 - (id)featureFlagSignalWithABBAKey:(id)arg1 abbaEnabledValue:(id)arg2 productStateKey:(id)arg3 productStateEnabledValue:(id)arg4 settingsItemTitle:(id)arg5 settingsItemDescription:(id)arg6;
 - (id)featureFlagSignalWithABBAKey:(id)arg1 abbaEnabledValue:(id)arg2 settingsItemTitle:(id)arg3 settingsItemDescription:(id)arg4;
 - (id)featureFlagSignalWithABBAKey:(id)arg1 settingsItemTitle:(id)arg2 settingsItemDescription:(id)arg3;

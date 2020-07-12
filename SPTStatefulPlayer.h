@@ -25,6 +25,7 @@
     SPTStatefulPlayerPlaybackControls *_playbackControls;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTStatefulPlayerPlaybackControls *playbackControls; // @synthesize playbackControls=_playbackControls;
 @property(readonly, nonatomic) SPTStatefulPlayerTrackPosition *trackPosition; // @synthesize trackPosition=_trackPosition;
 @property(readonly, nonatomic) SPTStatefulPlayerQueue *queue; // @synthesize queue=_queue;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(copy, nonatomic) SPTPlayerRestrictions *restrictions; // @synthesize restrictions=_restrictions;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (void)playbackControlsDidChange:(id)arg1;
 - (void)trackPositionDidChange:(id)arg1;
 - (void)playerQueueDidSynchronizeQueue:(id)arg1;

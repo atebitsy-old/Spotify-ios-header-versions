@@ -25,6 +25,7 @@
 }
 
 + (id)equalizerColumnViewWithValues:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIPanGestureRecognizer *panGestureRecognizer; // @synthesize panGestureRecognizer=_panGestureRecognizer;
 @property(retain, nonatomic) NSArray *labels; // @synthesize labels=_labels;
 @property(retain, nonatomic) NSArray *knobs; // @synthesize knobs=_knobs;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTEqualizerColumnViewDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) NSArray *values; // @synthesize values=_values;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)addShapeChangeAnimationWithShapeLayer:(id)arg1 animationKey:(id)arg2 duration:(double)arg3 newPath:(id)arg4;
 - (int)accessibilityValueFromEQValue:(id)arg1;
 - (id)eqValueFromAccessibilityValue:(int)arg1;

@@ -16,10 +16,10 @@
     SPTScannablesDependencies *_dependencies;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTScannablesDependencies *dependencies; // @synthesize dependencies=_dependencies;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(retain, nonatomic) id <SPTScannablesRegistry> registry; // @synthesize registry=_registry;
-- (void).cxx_destruct;
 - (id)createDefaultScannablesScanViewModelDelegateWithViewController:(id)arg1 imagePickerController:(id)arg2;
 - (id)createScannablesScanViewModelWithSourceIdentifier:(id)arg1;
 - (id)initWithRegistry:(id)arg1 dataLoaderFactory:(id)arg2 dependencies:(id)arg3;

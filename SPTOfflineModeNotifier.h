@@ -17,9 +17,9 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
-- (void).cxx_destruct;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (void)removeOfflineModeObserver:(id)arg1;
 - (void)addOfflineModeObserver:(id)arg1;

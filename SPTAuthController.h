@@ -18,10 +18,10 @@
     NSMapTable *_taskMap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMapTable *taskMap; // @synthesize taskMap=_taskMap;
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(nonatomic) __weak SPTAuthLoginController *controller; // @synthesize controller=_controller;
-- (void).cxx_destruct;
 - (void)loginTask:(id)arg1 didRequireSignup:(id)arg2;
 - (void)loginTask:(id)arg1 didRequireCode:(id)arg2;
 - (void)loginTask:(id)arg1 didRequireBootstrapUsingWebgateSession:(id)arg2 completionCallback:(CDUnknownBlockType)arg3;

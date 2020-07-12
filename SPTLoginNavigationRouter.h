@@ -17,9 +17,9 @@
     id <SPTNavigationRouter> _navigationRouter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak SPNavigationController *navigationControllerOverride; // @synthesize navigationControllerOverride=_navigationControllerOverride;
-- (void).cxx_destruct;
 - (id)vcForLink:(id)arg1 useCurrentStack:(_Bool)arg2 referrer:(id)arg3;
 - (id)selectTabAndPushViewControllerForLink:(id)arg1 options:(long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)pushViewControllerForLink:(id)arg1 options:(long long)arg2 completion:(CDUnknownBlockType)arg3;

@@ -27,6 +27,7 @@
     NSLayoutConstraint *_topMarginConstraint;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool socialListeningEnabled; // @synthesize socialListeningEnabled=_socialListeningEnabled;
 @property(retain, nonatomic) NSLayoutConstraint *topMarginConstraint; // @synthesize topMarginConstraint=_topMarginConstraint;
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
@@ -38,7 +39,6 @@
 @property(nonatomic) long long themeStyle; // @synthesize themeStyle=_themeStyle;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)setupObserver;
 - (void)forceVerticalSizeForView:(id)arg1;

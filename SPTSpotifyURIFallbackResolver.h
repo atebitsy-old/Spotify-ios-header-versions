@@ -14,9 +14,9 @@
     NSArray *_matchers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *matchers; // @synthesize matchers=_matchers;
 @property(readonly, nonatomic) NSArray *knownURISchemes; // @synthesize knownURISchemes=_knownURISchemes;
-- (void).cxx_destruct;
 - (void)parseFallbacks:(id)arg1;
 - (id)fallbackURIForURI:(id)arg1;
 - (id)initWithFallbackMap:(id)arg1;

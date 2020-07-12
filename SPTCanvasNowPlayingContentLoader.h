@@ -29,6 +29,7 @@
     NSCache *_reloadingModels;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSCache *reloadingModels; // @synthesize reloadingModels=_reloadingModels;
 @property(retain, nonatomic) NSCache *preloadedModels; // @synthesize preloadedModels=_preloadedModels;
 @property(retain, nonatomic) NSMapTable *viewControllers; // @synthesize viewControllers=_viewControllers;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) SPTCanvasNowPlayingContentReloader *contentReloader; // @synthesize contentReloader=_contentReloader;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
 @property(nonatomic) __weak id <SPTCanvasNowPlayingViewContentLoaderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)contentNeedsReloadForTrack:(id)arg1;
 - (void)didFailToRenderViewModel:(id)arg1;
 - (void)didFailToLoadViewModel:(id)arg1 withError:(id)arg2;

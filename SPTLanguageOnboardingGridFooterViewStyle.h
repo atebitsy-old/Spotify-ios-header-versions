@@ -17,10 +17,10 @@
     double _nextButtonBottomMargin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double nextButtonBottomMargin; // @synthesize nextButtonBottomMargin=_nextButtonBottomMargin;
 @property(copy, nonatomic) GLUEButtonStyle *nextButtonStyle; // @synthesize nextButtonStyle=_nextButtonStyle;
 @property(copy, nonatomic) GLUEGradientStyle *fadeGradientStyle; // @synthesize fadeGradientStyle=_fadeGradientStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

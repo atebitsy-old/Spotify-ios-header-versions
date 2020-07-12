@@ -15,8 +15,8 @@
     SPTInAppMessageEngine *_engine;
 }
 
-@property(retain, nonatomic) SPTInAppMessageEngine *engine; // @synthesize engine=_engine;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTInAppMessageEngine *engine; // @synthesize engine=_engine;
 - (id)triggerTypeStringFromTriggerType:(long long)arg1;
 - (void)requestMessageForPattern:(id)arg1 triggerType:(long long)arg2;
 - (id)initWithInAppMessageEngine:(id)arg1;

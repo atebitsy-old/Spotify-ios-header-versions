@@ -17,9 +17,9 @@
     UIView<GLUEStyleable> *_contentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView<GLUEStyleable> *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setCornerRadius:(double)arg1;
 - (void)addViewConstraints;

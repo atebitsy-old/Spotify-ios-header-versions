@@ -15,9 +15,9 @@
     NSUserDefaults *_userDefaults;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(nonatomic) __weak id <SPTPremiumDestinationTabBarBadgeLastSeenDateDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setLastSeenDate:(id)arg1;
 - (id)getLastSeenDate;
 - (id)initWithUserDefaults:(id)arg1;

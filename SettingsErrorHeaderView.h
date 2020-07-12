@@ -18,10 +18,10 @@
     double _margin;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double margin; // @synthesize margin=_margin;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 @property(retain, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (void)applyThemeLayout;
 - (double)headerHeightForWidth:(double)arg1;

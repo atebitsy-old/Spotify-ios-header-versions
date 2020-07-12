@@ -15,8 +15,8 @@
     CDUnknownBlockType _observerBlock;
 }
 
-@property(copy, nonatomic) CDUnknownBlockType observerBlock; // @synthesize observerBlock=_observerBlock;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType observerBlock; // @synthesize observerBlock=_observerBlock;
 - (_Bool)nowPlayingViewHidden;
 - (void)setNowPlayingViewVisibilityObserverBlock:(CDUnknownBlockType)arg1;
 

@@ -17,8 +17,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 - (id)provideDebugLog;
 - (void)unload;
 - (void)load;

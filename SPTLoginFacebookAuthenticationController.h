@@ -23,6 +23,7 @@
     SPTLoginFacebookErrorLogger *_errorLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginFacebookErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(readonly, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(readonly, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(readonly, nonatomic) SPFacebookSSO *facebookSSO; // @synthesize facebookSSO=_facebookSSO;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginControllerDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)handleFacebookLoginWithError:(id)arg1 userInfo:(id)arg2;
 - (void)startLoginWithThirdParty;
 - (id)initWithFacebookSSO:(id)arg1 authenticationHandler:(id)arg2 navigationCoordinator:(id)arg3 errorDecorator:(id)arg4 dialogLogger:(id)arg5 dialogController:(id)arg6 errorLogger:(id)arg7;

@@ -24,6 +24,7 @@
     NSHashTable *_delegates;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *delegates; // @synthesize delegates=_delegates;
 @property(nonatomic) __weak SPTRadioStationsService *stationService; // @synthesize stationService=_stationService;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -32,7 +33,6 @@
 @property(nonatomic) unsigned long long playbackState; // @synthesize playbackState=_playbackState;
 @property(retain, nonatomic) NSURL *currentContextURI; // @synthesize currentContextURI=_currentContextURI;
 @property(retain, nonatomic) SPTRadioStation *currentStation; // @synthesize currentStation=_currentStation;
-- (void).cxx_destruct;
 - (id)convertToGDPRSafeURIIfNeeded:(id)arg1;
 - (void)removeRadioPlaybackDelegate:(id)arg1;
 - (void)addRadioPlaybackDelegate:(id)arg1;

@@ -18,10 +18,10 @@
     CDUnknownBlockType _internalCompletionBlock;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType internalCompletionBlock; // @synthesize internalCompletionBlock=_internalCompletionBlock;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTSignupCreateUserDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2;
 - (void)invokeAndClearCompletionWithError:(id)arg1;

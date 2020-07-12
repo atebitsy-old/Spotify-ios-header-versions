@@ -19,10 +19,10 @@
 }
 
 + (id)createConnectionForAccessory:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableSet *connectedAccessories; // @synthesize connectedAccessories=_connectedAccessories;
 @property(readonly, nonatomic, getter=isAcceptingConnections) _Bool acceptingConnections; // @synthesize acceptingConnections=_acceptingConnections;
 @property(nonatomic) __weak id <SPTHearablesConnectionDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)isHearablesAccessory:(id)arg1;
 - (void)connectToAccessory:(id)arg1;
 - (void)tryToConnectToAccessory:(id)arg1;

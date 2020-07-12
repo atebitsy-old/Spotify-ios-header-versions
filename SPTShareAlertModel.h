@@ -16,11 +16,11 @@
     long long _cancelIndex;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long cancelIndex; // @synthesize cancelIndex=_cancelIndex;
 @property(retain, nonatomic) NSArray *buttonsAndHandlers; // @synthesize buttonsAndHandlers=_buttonsAndHandlers;
 @property(retain, nonatomic) NSString *message; // @synthesize message=_message;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTitle:(id)arg1 message:(id)arg2 buttonsAndHandlers:(id)arg3 cancelButtonIndex:(long long)arg4;
 
 @end

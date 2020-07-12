@@ -16,8 +16,8 @@
     id <SPTHugsFactory> _hugsFactory;
 }
 
-@property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 - (id)makeViewModelBuilderFactory;
 - (id)makeComponentDefaults;
 - (id)makeViewModelBuilder;

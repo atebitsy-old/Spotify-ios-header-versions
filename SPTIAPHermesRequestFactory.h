@@ -13,8 +13,8 @@
     SPTHermesController *_hermesController;
 }
 
-@property(retain, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
 - (id)createProductActivationRequestWithReceiptData:(id)arg1;
 - (id)createTransactionRequestForPayment:(id)arg1;
 - (id)createItunesProductRequestForProductIdentifiers:(id)arg1;

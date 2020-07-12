@@ -20,11 +20,11 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTOnDemandSetTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(retain, nonatomic) SPTOnDemandSetImplementation *onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
-- (void).cxx_destruct;
 - (id)provideOnDemandCardAccessibilityContentOperation;
 - (id)provideOnDemandReloadContentOperation;
 - (id)provideOnDemandDecoratorContentOperation;

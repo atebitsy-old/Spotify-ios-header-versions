@@ -26,6 +26,7 @@
     NSArray *_reasonComponents;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool impressionEnabled; // @synthesize impressionEnabled=_impressionEnabled;
 @property(readonly, copy, nonatomic) NSArray *reasonComponents; // @synthesize reasonComponents=_reasonComponents;
 @property(readonly, copy, nonatomic) NSArray *uriComponents; // @synthesize uriComponents=_uriComponents;
@@ -38,7 +39,6 @@
 @property(readonly, copy, nonatomic) NSString *pageReason; // @synthesize pageReason=_pageReason;
 @property(readonly, copy, nonatomic) NSString *specificationId; // @synthesize specificationId=_specificationId;
 @property(readonly, copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
-- (void).cxx_destruct;
 - (id)eventComponentsWithPageURI:(id)arg1 pageId:(id)arg2;
 - (id)initWithLocation:(id)arg1;
 - (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 specificationVersion:(id)arg6 nameComponents:(id)arg7 identifierComponents:(id)arg8 positionComponents:(id)arg9 uriComponents:(id)arg10 reasonComponents:(id)arg11 impressionEnabled:(_Bool)arg12;

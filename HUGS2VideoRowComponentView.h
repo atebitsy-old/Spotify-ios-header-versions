@@ -23,9 +23,9 @@
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredSizeForMainImageWithModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEntityRowView *entityRowView; // @synthesize entityRowView=_entityRowView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)configureTrailingViewWithModel:(id)arg1;
 - (void)configureLeadingImageView:(id)arg1 withModel:(id)arg2 style:(id)arg3;
 - (void)addImageViewIfNeededToView:(id)arg1 model:(id)arg2;

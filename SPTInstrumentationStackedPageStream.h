@@ -18,11 +18,11 @@
     SPTInstrumentationPageView *_currentPageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInstrumentationPageView *currentPageView; // @synthesize currentPageView=_currentPageView;
 @property(readonly, nonatomic) NSMutableArray *pageStreamStack; // @synthesize pageStreamStack=_pageStreamStack;
 @property(retain, nonatomic) SPTInstrumentationDeviceClock *clock; // @synthesize clock=_clock;
 @property(readonly, nonatomic) _Bool automaticPopping; // @synthesize automaticPopping=_automaticPopping;
-- (void).cxx_destruct;
 - (id)pageStreamMatchingPredicate:(CDUnknownBlockType)arg1;
 - (void)popPageStreamsFromIndex:(unsigned long long)arg1;
 - (void)currentPageViewDidChange:(id)arg1 forPageStream:(id)arg2;

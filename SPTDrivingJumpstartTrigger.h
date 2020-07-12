@@ -18,10 +18,10 @@
     UIApplication *_application;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak UIApplication *application; // @synthesize application=_application;
 @property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(readonly, nonatomic) id <SPTDrivingJumpstartHandler> jumpstartHandler; // @synthesize jumpstartHandler=_jumpstartHandler;
-- (void).cxx_destruct;
 - (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
 - (void)unload;
 - (id)initWithJumpstartHandler:(id)arg1 carDetector:(id)arg2 application:(id)arg3;

@@ -25,6 +25,7 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
@@ -34,7 +35,6 @@
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(readonly, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(nonatomic) __weak id <SPTEntitySeeAllSongsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)entitySeeAllSongsDataSource:(id)arg1 didFailToloadModelWithError:(id)arg2;
 - (void)entitySeeAllSongsDidLoadModelWithDataSource:(id)arg1;

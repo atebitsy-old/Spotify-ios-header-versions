@@ -19,11 +19,11 @@
     id <SPTCollectionPlatformLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCollectionPlatformLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-- (void).cxx_destruct;
 - (id)initWithCollectionPlatform:(id)arg1 entityURL:(id)arg2 testManager:(id)arg3 logger:(id)arg4;
 - (void)shelfViewModel:(CDUnknownBlockType)arg1;
 - (void)execute:(id)arg1 source:(id)arg2 completion:(CDUnknownBlockType)arg3;

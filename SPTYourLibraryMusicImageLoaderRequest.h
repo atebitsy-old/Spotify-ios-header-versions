@@ -27,6 +27,7 @@
     struct CGSize _requestedSize;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTYourLibraryMusicSongsImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
 @property(nonatomic) _Bool cancelled; // @synthesize cancelled=_cancelled;
 @property(nonatomic) __weak id <SPTImageLoaderRequestDelegate> delegate; // @synthesize delegate=_delegate;
@@ -39,7 +40,6 @@
 @property(readonly, nonatomic) NSDate *creationDate; // @synthesize creationDate=_creationDate;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic) _Bool allowUpscaling; // @synthesize allowUpscaling=_allowUpscaling;
-- (void).cxx_destruct;
 - (id)initWithURL:(id)arg1 imageStyle:(id)arg2 requestedSize:(struct CGSize)arg3 allowsUpscaling:(_Bool)arg4 context:(id)arg5 callback:(id)arg6 delegate:(id)arg7;
 - (void)cancel;
 - (void)load;

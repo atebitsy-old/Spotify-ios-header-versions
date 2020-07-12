@@ -21,6 +21,7 @@
     double _maxFrameTime;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double maxFrameTime; // @synthesize maxFrameTime=_maxFrameTime;
 @property(nonatomic) double durationTotal; // @synthesize durationTotal=_durationTotal;
 @property(nonatomic) double largeDrops; // @synthesize largeDrops=_largeDrops;
@@ -29,7 +30,6 @@
 @property(nonatomic) _Bool firstUpdate; // @synthesize firstUpdate=_firstUpdate;
 @property(retain, nonatomic) CADisplayLink *displayLink; // @synthesize displayLink=_displayLink;
 @property(nonatomic) __weak id <SPTFrameDropTrackerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)addFrameTime:(double)arg1 singleFrameTime:(double)arg2;
 - (void)report;
 - (void)reset;

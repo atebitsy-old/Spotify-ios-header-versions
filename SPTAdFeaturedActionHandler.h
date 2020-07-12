@@ -25,6 +25,7 @@
     id <SPTFollowModelFactory> _followFactory;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTFollowModelFactory> followFactory; // @synthesize followFactory=_followFactory;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(nonatomic) _Bool emailSent; // @synthesize emailSent=_emailSent;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

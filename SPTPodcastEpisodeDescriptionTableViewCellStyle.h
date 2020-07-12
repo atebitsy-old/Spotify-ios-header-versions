@@ -15,10 +15,10 @@
     double _spacing;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double spacing; // @synthesize spacing=_spacing;
 @property(copy, nonatomic) SPTPodcastEpisodeDescriptionTextViewStyle *descriptionTextViewStyle; // @synthesize descriptionTextViewStyle=_descriptionTextViewStyle;
 @property(copy, nonatomic) GLUELabelStyle *metadataLabelStyle; // @synthesize metadataLabelStyle=_metadataLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

@@ -16,8 +16,8 @@
     id <SPTPageController> _currentPageController;
 }
 
-@property(retain, nonatomic, getter=spt_currentPageController) id <SPTPageController> currentPageController; // @synthesize currentPageController=_currentPageController;
 - (void).cxx_destruct;
+@property(retain, nonatomic, getter=spt_currentPageController) id <SPTPageController> currentPageController; // @synthesize currentPageController=_currentPageController;
 - (void)processViewController:(id)arg1;
 - (id)initWithViewController:(id)arg1;
 

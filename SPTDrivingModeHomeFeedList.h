@@ -20,12 +20,12 @@
     id <SPTOfflineModeState> _offlineModeState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(copy, nonatomic) NSArray *loadedShelves; // @synthesize loadedShelves=_loadedShelves;
 @property(readonly, nonatomic) SPTDrivingModeHomeFeedDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSError *error; // @synthesize error=_error;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

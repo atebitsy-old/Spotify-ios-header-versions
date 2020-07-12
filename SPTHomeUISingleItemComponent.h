@@ -16,8 +16,8 @@
     id <SPTPlayer> _player;
 }
 
-@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;

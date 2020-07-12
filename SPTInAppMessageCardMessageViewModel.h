@@ -25,6 +25,7 @@
     id <SPTPushMessagingPermissionRequestor> _pushPermissionRequestor;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
 @property(retain, nonatomic) SPTInAppMessageFeedbackPresentationController *feedbackPresentationController; // @synthesize feedbackPresentationController=_feedbackPresentationController;
 @property(retain, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) SPTInAppMessageCardMessage *cardMessage; // @synthesize cardMessage=_cardMessage;
 @property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(nonatomic) __weak id <SPTInAppMessageCardMessageWebViewContentDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)logDismissEvent;
 - (id)messageFormat;
 - (void)logCardMessagePresentationPerformace;

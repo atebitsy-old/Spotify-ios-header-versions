@@ -17,9 +17,9 @@
     id <SPTContextMenuSectionHeaderDelegate> _sectionHeaderDelegate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTContextMenuSectionHeaderDelegate> sectionHeaderDelegate; // @synthesize sectionHeaderDelegate=_sectionHeaderDelegate;
 @property(nonatomic) _Bool shouldShowScannable; // @synthesize shouldShowScannable=_shouldShowScannable;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

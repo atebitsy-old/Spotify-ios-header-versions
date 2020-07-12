@@ -18,9 +18,9 @@
 
 + (id)sectionWithTitle:(id)arg1;
 + (id)hiddenSection;
+- (void).cxx_destruct;
 @property(nonatomic, getter=isSectionHeaderShowing) _Bool sectionHeaderShowing; // @synthesize sectionHeaderShowing=_sectionHeaderShowing;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)performAction;
 - (id)initWithTitle:(id)arg1 headerShowing:(_Bool)arg2;
 

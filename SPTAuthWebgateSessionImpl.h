@@ -17,9 +17,9 @@
     id <SPTOauthClient> _oauthClient;
 }
 
-@property(readonly, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(readonly, copy, nonatomic) NSString *username;
 @property(readonly, nonatomic) SPTAuthSerializableCredentials *reusableCredentials;
 @property(readonly, nonatomic) shared_ptr_8d7bf210 cppOauthClient;

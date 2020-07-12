@@ -16,9 +16,9 @@
     NSDate *_timestamp;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDate *timestamp; // @synthesize timestamp=_timestamp;
 @property(readonly, copy, nonatomic) NSDictionary *entities; // @synthesize entities=_entities;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (unsigned long long)hash;

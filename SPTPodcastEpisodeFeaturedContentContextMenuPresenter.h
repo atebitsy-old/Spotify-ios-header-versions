@@ -21,12 +21,12 @@
     SPTPodcastEpisodeFeaturedContentLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) id <SPContextMenuActionsFactory> contextMenuActionsFactory; // @synthesize contextMenuActionsFactory=_contextMenuActionsFactory;
 @property(retain, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
-- (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (void)presentForEntity:(id)arg1 sender:(id)arg2 index:(long long)arg3;
 - (id)initWithContextMenuPresenterFactory:(id)arg1 contextMenuOptionsFactory:(id)arg2 contextMenuActionsFactory:(id)arg3 logger:(id)arg4;

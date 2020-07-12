@@ -18,11 +18,11 @@
     GLUELabelStyle *_descriptionLabelStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *descriptionLabelStyle; // @synthesize descriptionLabelStyle=_descriptionLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *rankLabelStyle; // @synthesize rankLabelStyle=_rankLabelStyle;
 @property(nonatomic) unsigned long long rankCircleDiameter; // @synthesize rankCircleDiameter=_rankCircleDiameter;
 @property(copy, nonatomic) UIColor *rankCircleColor; // @synthesize rankCircleColor=_rankCircleColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

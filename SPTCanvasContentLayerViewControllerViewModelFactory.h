@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class SPTCanvasImageResolverFactory, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager;
+@class BMPlaybackRequestFactory, SPTCanvasImageResolverFactory, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager;
 @protocol SPTCanvasIdleMonitorObserverDelegate, SPTLinkDispatcher, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
 
 @interface SPTCanvasContentLayerViewControllerViewModelFactory : NSObject
 {
     id <SPTVideoFeaturePlayerFactory> _videoPlayerFactory;
+    BMPlaybackRequestFactory *_playbackRequestFactory;
     id <SPTVideoURLAssetLoader> _videoAssetLoader;
     SPTCanvasImageResolverFactory *_imageResolverFactory;
     SPTCanvasTooltipPresentationManager *_tooltipManager;
@@ -20,16 +21,17 @@
     id <SPTCanvasIdleMonitorObserverDelegate> _idleMonitorDelegate;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTCanvasIdleMonitorObserverDelegate> idleMonitorDelegate; // @synthesize idleMonitorDelegate=_idleMonitorDelegate;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTCanvasTooltipPresentationManager *tooltipManager; // @synthesize tooltipManager=_tooltipManager;
 @property(readonly, nonatomic) SPTCanvasImageResolverFactory *imageResolverFactory; // @synthesize imageResolverFactory=_imageResolverFactory;
 @property(readonly, nonatomic) id <SPTVideoURLAssetLoader> videoAssetLoader; // @synthesize videoAssetLoader=_videoAssetLoader;
+@property(readonly, nonatomic) BMPlaybackRequestFactory *playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
 @property(readonly, nonatomic) id <SPTVideoFeaturePlayerFactory> videoPlayerFactory; // @synthesize videoPlayerFactory=_videoPlayerFactory;
-- (void).cxx_destruct;
 - (id)createViewModelForCanvasModel:(id)arg1 forTrack:(id)arg2;
-- (id)initWithVideoPlayerFactory:(id)arg1 videoAssetLoader:(id)arg2 imageResolverFactory:(id)arg3 linkDispatcher:(id)arg4 idleMonitorDelegate:(id)arg5 tooltipManager:(id)arg6 testManager:(id)arg7;
+- (id)initWithVideoPlayerFactory:(id)arg1 playbackRequestFactory:(id)arg2 videoAssetLoader:(id)arg3 imageResolverFactory:(id)arg4 linkDispatcher:(id)arg5 idleMonitorDelegate:(id)arg6 tooltipManager:(id)arg7 testManager:(id)arg8;
 
 @end
 

@@ -16,11 +16,11 @@
     UIImageView *_pauseIconImageView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIImageView *pauseIconImageView; // @synthesize pauseIconImageView=_pauseIconImageView;
 @property(retain, nonatomic) CAShapeLayer *circleLayer; // @synthesize circleLayer=_circleLayer;
 @property(retain, nonatomic) SPTTheme *catTheme; // @synthesize catTheme=_catTheme;
 @property(nonatomic) double progress; // @synthesize progress=_progress;
-- (void).cxx_destruct;
 - (void)configureLayout;
 - (void)configureAppearance;
 - (id)initWithTheme:(id)arg1;

@@ -24,11 +24,11 @@
     id <HUGSStyleOverrider> _styleOverrider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 @property(readonly, nonatomic) SPTTableViewCell *cell; // @synthesize cell=_cell;
 @property(retain, nonatomic) UIGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)configureSubtitleAccessoryViewForCell:(id)arg1 model:(id)arg2;
 - (struct CGSize)imageSize;
 - (long long)accessoryLabelTypeForLabelText:(id)arg1 subtitle:(id)arg2;

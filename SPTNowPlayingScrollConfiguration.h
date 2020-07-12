@@ -14,14 +14,12 @@
     NSArray *_cardsIdentifiers;
 }
 
-+ (id)concertCardsConfiguration;
 + (id)samplesCardConfiguration;
 + (id)podcastInspectorConfiguration;
-+ (id)feedbackCardsConfiguration;
 + (id)defaultConfiguration;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *cardsIdentifiers; // @synthesize cardsIdentifiers=_cardsIdentifiers;
 @property(nonatomic) long long identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)initWithIdentifier:(long long)arg1 cardsIdentifiers:(id)arg2;
 
 @end

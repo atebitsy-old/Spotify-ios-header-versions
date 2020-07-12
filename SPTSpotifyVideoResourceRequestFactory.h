@@ -15,8 +15,8 @@
     SPTVideoFairplayService *_fairplayService;
 }
 
-@property(retain, nonatomic) SPTVideoFairplayService *fairplayService; // @synthesize fairplayService=_fairplayService;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTVideoFairplayService *fairplayService; // @synthesize fairplayService=_fairplayService;
 - (id)createRequestForURL:(id)arg1 loadingRequest:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)initWithFairplayService:(id)arg1;
 

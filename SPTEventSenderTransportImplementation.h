@@ -20,10 +20,10 @@
     NSObject<OS_dispatch_queue> *_workQueue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_dispatch_queue> *workQueue; // @synthesize workQueue=_workQueue;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (void).cxx_destruct;
 - (void)reloadDataLoader;
 - (void)satelliteServiceDidUnload;
 - (void)satelliteServiceDidLoad;

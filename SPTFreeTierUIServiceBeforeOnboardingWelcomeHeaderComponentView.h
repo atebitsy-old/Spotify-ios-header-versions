@@ -26,6 +26,7 @@
 + (id)subtitleStyle:(id)arg1;
 + (id)titleStyle:(id)arg1;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) HUBComponentView *secondaryActionComponentView; // @synthesize secondaryActionComponentView=_secondaryActionComponentView;
 @property(retain, nonatomic) HUBComponentView *primaryActionComponentView; // @synthesize primaryActionComponentView=_primaryActionComponentView;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) UIView *textContainer; // @synthesize textContainer=_textContainer;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;
-- (void).cxx_destruct;
 - (void)setupComponentView:(id)arg1 withModel:(id)arg2 relativeToView:(id)arg3 constraint:(double)arg4;
 - (void)setupChildComponentsForModel:(id)arg1;
 - (void)configureWithModel:(id)arg1;

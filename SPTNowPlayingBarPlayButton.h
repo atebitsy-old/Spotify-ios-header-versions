@@ -18,11 +18,11 @@
     struct UIEdgeInsets _touchInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double circleLineWidth; // @synthesize circleLineWidth=_circleLineWidth;
 @property(retain, nonatomic) UIColor *circleColor; // @synthesize circleColor=_circleColor;
 @property(nonatomic) struct CGSize circleSize; // @synthesize circleSize=_circleSize;
-@property(nonatomic) struct UIEdgeInsets touchInsets;
-- (void).cxx_destruct;
+@property(nonatomic) struct UIEdgeInsets touchInsets; // @synthesize touchInsets=_touchInsets;
 - (id)accessibilityIdentifier;
 - (id)accessibilityLabel;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;

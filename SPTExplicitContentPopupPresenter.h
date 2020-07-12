@@ -14,9 +14,9 @@
     SPTExplicitContentTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTExplicitContentTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
-- (void).cxx_destruct;
 - (void)presentPopupWithTitle:(id)arg1 message:(id)arg2 buttons:(id)arg3;
 - (id)initWithPopupManager:(id)arg1 theme:(id)arg2;
 

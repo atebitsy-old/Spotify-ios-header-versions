@@ -14,9 +14,9 @@
     id <SPTVoiceSession> _voiceSession;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceSession> voiceSession; // @synthesize voiceSession=_voiceSession;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
-- (void).cxx_destruct;
 - (void)handleClearAdSlotsEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;
 - (void)handlePostMicOnEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;
 - (void)handlePostSpeechErrorEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;

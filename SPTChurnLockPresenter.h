@@ -19,11 +19,11 @@
     SPTPaymentFailureModalViewController *_churnViewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPaymentFailureModalViewController *churnViewController; // @synthesize churnViewController=_churnViewController;
 @property(retain, nonatomic) id <SPTModalPresentationController> presentationController; // @synthesize presentationController=_presentationController;
 @property(nonatomic) __weak id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(nonatomic) __weak id <SPTChurnLockPresenterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)churnlockDidDowngrade;
 - (void)dismissChurnLock;
 - (void)presentChurnLock;

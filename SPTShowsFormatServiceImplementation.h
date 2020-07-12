@@ -33,6 +33,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool betamaxCacheEnabled; // @synthesize betamaxCacheEnabled=_betamaxCacheEnabled;
 @property(nonatomic) _Bool betamaxPlayerEnabled; // @synthesize betamaxPlayerEnabled=_betamaxPlayerEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> betamaxCacheSignal; // @synthesize betamaxCacheSignal=_betamaxCacheSignal;
@@ -49,7 +50,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)createSignalForAnyFiveSignalsWithAbbaKey:(id)arg1 pageTitle:(id)arg2 itemTitle:(id)arg3 itemDescription:(id)arg4;
 - (void)setupBetamaxPlayerSignal;

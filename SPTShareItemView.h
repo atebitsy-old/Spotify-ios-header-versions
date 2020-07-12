@@ -22,6 +22,7 @@
 }
 
 + (id)placeholderImageForItemType:(long long)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) SPTImageBlurView *backgroundBlurView; // @synthesize backgroundBlurView=_backgroundBlurView;
@@ -31,7 +32,6 @@
 @property(nonatomic) long long itemType; // @synthesize itemType=_itemType;
 @property(retain, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)setupStackViews;
 - (void)setupConstraints;

@@ -16,8 +16,8 @@
     id <SPTTableViewCellInformationProvider> _cellInformationProvider;
 }
 
-@property(nonatomic) __weak id <SPTTableViewCellInformationProvider> cellInformationProvider; // @synthesize cellInformationProvider=_cellInformationProvider;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTTableViewCellInformationProvider> cellInformationProvider; // @synthesize cellInformationProvider=_cellInformationProvider;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRequireFailureOfGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
 - (_Bool)gestureRecognizerShouldBegin:(id)arg1;

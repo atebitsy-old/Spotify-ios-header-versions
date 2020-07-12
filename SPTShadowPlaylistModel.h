@@ -4,17 +4,17 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTPlaylistModelDecorator.h"
+#import "SPTDecoratorProxy.h"
 
 @class SPTShadowPlaylistURIResolver;
 
-@interface SPTShadowPlaylistModel : SPTPlaylistModelDecorator
+@interface SPTShadowPlaylistModel : SPTDecoratorProxy
 {
     SPTShadowPlaylistURIResolver *_shadowUriResolver;
 }
 
-@property(retain, nonatomic) SPTShadowPlaylistURIResolver *shadowUriResolver; // @synthesize shadowUriResolver=_shadowUriResolver;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTShadowPlaylistURIResolver *shadowUriResolver; // @synthesize shadowUriResolver=_shadowUriResolver;
 - (void)playlistContainsTrackURLs:(id)arg1 playlistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)removeTrackURLs:(id)arg1 fromPlaylistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)addTrackURLs:(id)arg1 toPlaylistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;

@@ -21,13 +21,13 @@
 
 + (id)itemWithMessage:(id)arg1 automaticDismissDelay:(double)arg2;
 + (id)itemWithMessage:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTMessageBarItemDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) _Bool shouldAnimateChanges; // @synthesize shouldAnimateChanges=_shouldAnimateChanges;
 @property(nonatomic) float weight; // @synthesize weight=_weight;
 @property(nonatomic) double automaticDismissDelay; // @synthesize automaticDismissDelay=_automaticDismissDelay;
 @property(retain, nonatomic) NSAttributedString *attributedMessage; // @synthesize attributedMessage=_attributedMessage;
 @property(retain, nonatomic) NSString *message; // @synthesize message=_message;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) long long itemHeightMode;
 @property(readonly, nonatomic) UIColor *textColor;
 @property(readonly, nonatomic) UIColor *backgroundColor;

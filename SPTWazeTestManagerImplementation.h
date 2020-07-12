@@ -19,11 +19,11 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTPartnerTestManager> partnerTestManager; // @synthesize partnerTestManager=_partnerTestManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTWazeFeatureProperties *properties; // @synthesize properties=_properties;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 @property(nonatomic, getter=isWazeIntegrationEnabled) _Bool wazeIntegrationEnabled;

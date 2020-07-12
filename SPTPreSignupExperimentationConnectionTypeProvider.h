@@ -13,8 +13,8 @@
     id <SPTNetworkConnectivityController> _connectivityController;
 }
 
-@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 - (id)networkConnectionType;
 - (id)initWithNetworkConnectivityController:(id)arg1;
 

@@ -17,9 +17,9 @@
     SPTVolumeCosmosResolver *_cosmosResolver;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTVolumeCosmosResolver *cosmosResolver; // @synthesize cosmosResolver=_cosmosResolver;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)localPlaybackWasEnabled;
 - (void)setupObservation;
 - (id)initWithCosmosResolver:(id)arg1;

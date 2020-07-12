@@ -21,12 +21,12 @@
     SPTPhoneNumberSignupSearchBarStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPhoneNumberSignupSearchBarStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(retain, nonatomic) UIImageView *searchIcon; // @synthesize searchIcon=_searchIcon;
 @property(retain, nonatomic) UITextField *textField; // @synthesize textField=_textField;
 @property(nonatomic) __weak id <SPTPhoneNumberSignupSearchBarDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setTextFieldAccessibiltiyIdentifier:(id)arg1;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)textFieldDidChange:(id)arg1;

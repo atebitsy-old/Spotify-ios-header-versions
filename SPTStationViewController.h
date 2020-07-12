@@ -44,6 +44,7 @@
 }
 
 + (unsigned long long)defaultTrackRowAccessibilityTraits;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEntityRowStyle *trackRowStyle; // @synthesize trackRowStyle=_trackRowStyle;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) double defaultFooterScrollOffset; // @synthesize defaultFooterScrollOffset=_defaultFooterScrollOffset;
@@ -66,7 +67,6 @@
 @property(nonatomic) __weak id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)updateCellActiveStatus:(id)arg1 forCurrentlyPlayingIndex:(id)arg2;
 - (void)refreshHeaderActionButton;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;

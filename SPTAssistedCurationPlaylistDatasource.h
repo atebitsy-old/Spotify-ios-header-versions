@@ -18,10 +18,10 @@
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(retain, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
-- (void).cxx_destruct;
 - (void)removeTrack:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)addTrack:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)hasTracks:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;

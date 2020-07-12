@@ -14,8 +14,8 @@
     id <SPTVocalRemovalMenuButtonViewModelDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <SPTVocalRemovalMenuButtonViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTVocalRemovalMenuButtonViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSString *localizedFeedbackString;
 @property(readonly, nonatomic) NSString *localizedVolumeDownString;
 @property(readonly, nonatomic) NSString *localizedVolumeUpString;

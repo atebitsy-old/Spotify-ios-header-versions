@@ -17,11 +17,11 @@
     SPTPopupManager *_popupManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
 @property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(readonly, nonatomic) id <SPTNotificationPreferencesBackendIntegrator> notificationsBackendIntegrator; // @synthesize notificationsBackendIntegrator=_notificationsBackendIntegrator;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (void)explicitlyOptInToMarketingAttempt:(long long)arg1;
 - (void)explicitlyOptInToMarketing;
 - (void)promptUserForMarketingOptIn;

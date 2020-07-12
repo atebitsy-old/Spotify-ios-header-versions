@@ -15,8 +15,8 @@
     NSMapTable *_registry;
 }
 
-@property(readonly, nonatomic) NSMapTable *registry; // @synthesize registry=_registry;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMapTable *registry; // @synthesize registry=_registry;
 - (id)viewControllerForIdentifier:(id)arg1;
 - (_Bool)registerViewControllerBuilder:(id)arg1 forIdentifier:(id)arg2;
 - (id)init;

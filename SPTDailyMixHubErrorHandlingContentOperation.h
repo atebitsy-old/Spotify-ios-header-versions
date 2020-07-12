@@ -16,9 +16,9 @@
     id <HUBContentOperationDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didPreviouslyLoad; // @synthesize didPreviouslyLoad=_didPreviouslyLoad;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)showErrorOverlayWithViewModelBulder:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 

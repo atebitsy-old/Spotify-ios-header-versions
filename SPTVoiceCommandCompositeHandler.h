@@ -15,8 +15,8 @@
     NSSet *_handlers;
 }
 
-@property(retain, nonatomic) NSSet *handlers; // @synthesize handlers=_handlers;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSSet *handlers; // @synthesize handlers=_handlers;
 - (id)handlersForVoiceCommand:(id)arg1;
 - (id)handleVoiceCommand:(id)arg1;
 - (_Bool)canHandleVoiceCommand:(id)arg1;

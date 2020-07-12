@@ -28,6 +28,7 @@
     UINavigationController *_navigationController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(nonatomic) unsigned long long mode; // @synthesize mode=_mode;
 @property(readonly, nonatomic) SPTLanguageOnboardingLoggerFactory *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
@@ -40,7 +41,6 @@
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) __weak id <SPTLanguageOnboardingUserDefaultsController> userDefaultsController; // @synthesize userDefaultsController=_userDefaultsController;
 @property(nonatomic) __weak id <SPTOnboardingServiceFlowStateReporter> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)startOnboardingFlow;
 - (void)storeOnboardingComplete;
 - (void)languageOnboardingDidCompleteGridViewController:(id)arg1;

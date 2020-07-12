@@ -15,9 +15,9 @@
     NSMutableDictionary *_exposedFlags;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *exposedFlags; // @synthesize exposedFlags=_exposedFlags;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logExposureForFlagName:(id)arg1 variant:(id)arg2;
 - (id)initWithLogCenter:(id)arg1;
 

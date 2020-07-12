@@ -16,12 +16,13 @@
     UIViewController *_viewController;
     GLUELabel *_artistNameLabel;
     GLUELabel *_trackTitleLabel;
-    struct UIView *_playingAnimationView;
+    UIView<GLUEAnimationLoading><GLUEAnimationControlling> *_playingAnimationView;
     GLUEGradientView *_gradientView;
     NSArray *_playingAnimationCompactConstraints;
     NSArray *_playingAnimationExpandConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *playingAnimationExpandConstraints; // @synthesize playingAnimationExpandConstraints=_playingAnimationExpandConstraints;
 @property(copy, nonatomic) NSArray *playingAnimationCompactConstraints; // @synthesize playingAnimationCompactConstraints=_playingAnimationCompactConstraints;
 @property(retain, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
@@ -31,7 +32,6 @@
 @property(nonatomic) _Bool isPlaylistCover; // @synthesize isPlaylistCover=_isPlaylistCover;
 @property(nonatomic) _Bool showMetadata; // @synthesize showMetadata=_showMetadata;
 @property(nonatomic) __weak UIViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (void)animateWithAnimations:(CDUnknownBlockType)arg1 duration:(double)arg2 delay:(double)arg3;
 - (void)animateWithAnimations:(CDUnknownBlockType)arg1;
 - (void)setSelected:(_Bool)arg1;

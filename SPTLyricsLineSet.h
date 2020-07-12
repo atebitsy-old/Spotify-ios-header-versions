@@ -18,13 +18,13 @@
     long long _syncType;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long syncType; // @synthesize syncType=_syncType;
 @property(readonly, copy, nonatomic) NSString *providerCredits; // @synthesize providerCredits=_providerCredits;
 @property(readonly, copy, nonatomic) NSString *songwriterCredits; // @synthesize songwriterCredits=_songwriterCredits;
 @property(readonly, copy, nonatomic) NSString *publisherCredits; // @synthesize publisherCredits=_publisherCredits;
 @property(readonly, copy, nonatomic) NSArray *lyricLines; // @synthesize lyricLines=_lyricLines;
 @property(readonly, copy, nonatomic) NSString *trackId; // @synthesize trackId=_trackId;
-- (void).cxx_destruct;
 - (long long)syncTypeFromString:(id)arg1;
 - (id)lyricsLineAtIndex:(unsigned long long)arg1;
 - (id)initWithDictionary:(id)arg1;

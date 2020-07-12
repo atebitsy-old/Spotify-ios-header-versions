@@ -19,13 +19,13 @@
     SPTLoginButtonActionLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginButtonActionLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) id <SPTLoginThirdPartyLoginController> appleAuthController; // @synthesize appleAuthController=_appleAuthController;
 @property(readonly, nonatomic) id <SPTLoginThirdPartyLoginController> facebookAuthController; // @synthesize facebookAuthController=_facebookAuthController;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleAction:(unsigned long long)arg1;
 - (id)initWithFacebookAuthController:(id)arg1 appleAuthController:(id)arg2 flowController:(id)arg3 navigationCoordinator:(id)arg4 logger:(id)arg5;
 

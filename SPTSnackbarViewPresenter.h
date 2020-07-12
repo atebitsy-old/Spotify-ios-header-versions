@@ -22,6 +22,7 @@
     UIViewController *_rootViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool refreshEnabled; // @synthesize refreshEnabled=_refreshEnabled;
 @property(nonatomic) __weak UIViewController *rootViewController; // @synthesize rootViewController=_rootViewController;
 @property(retain, nonatomic) UILayoutGuide *mainLayoutGuide; // @synthesize mainLayoutGuide=_mainLayoutGuide;
@@ -32,7 +33,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *leadingConstraint; // @synthesize leadingConstraint=_leadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(nonatomic) __weak UIView *containerView; // @synthesize containerView=_containerView;
-- (void).cxx_destruct;
 - (void)runHorizontalAnimationWithCompletion:(CDUnknownBlockType)arg1;
 - (void)runVerticalAnimationWithBottomConstant:(double)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)runVerticalAnimationWithCompletion:(CDUnknownBlockType)arg1;

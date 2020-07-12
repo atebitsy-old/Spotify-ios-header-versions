@@ -16,11 +16,11 @@
     double _score;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double score; // @synthesize score=_score;
 @property(readonly, nonatomic) _Bool isEndOfSpeech; // @synthesize isEndOfSpeech=_isEndOfSpeech;
 @property(readonly, nonatomic) _Bool isFinal; // @synthesize isFinal=_isFinal;
 @property(readonly, copy, nonatomic) NSString *transcript; // @synthesize transcript=_transcript;
-- (void).cxx_destruct;
 - (id)initWithJSONDictionary:(id)arg1;
 
 @end

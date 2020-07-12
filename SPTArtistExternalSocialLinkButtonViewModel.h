@@ -15,10 +15,10 @@
     long long _icon;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(retain, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) unsigned long long linkType; // @synthesize linkType=_linkType;
-- (void).cxx_destruct;
 - (id)initWithType:(unsigned long long)arg1;
 
 @end

@@ -24,6 +24,7 @@
     SPTInAppMessageCardMessagePresentationController *_cardMessagePresentationController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageCardMessagePresentationController *cardMessagePresentationController; // @synthesize cardMessagePresentationController=_cardMessagePresentationController;
 @property(retain, nonatomic) SPTInAppMessageCardMessageViewModel *cardMessageViewModel; // @synthesize cardMessageViewModel=_cardMessageViewModel;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageCardMessageParser *cardMessageParser; // @synthesize cardMessageParser=_cardMessageParser;
-- (void).cxx_destruct;
 - (void)presentMessage:(id)arg1;
 - (void)previewViewModel:(id)arg1 didFetchCardCreativeData:(id)arg2;
 - (id)initWithCardMessageParser:(id)arg1 slateManager:(id)arg2 slateBuilderProvider:(id)arg3 actionFactory:(id)arg4 carDetector:(id)arg5 offlineModeState:(id)arg6 alertInterface:(id)arg7;

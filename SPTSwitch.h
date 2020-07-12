@@ -16,8 +16,8 @@
     id <SPTThemableViewLayoutDelegate> _layoutDelegate;
 }
 
-@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void)applyThemeLayout;
 - (id)initWithFrame:(struct CGRect)arg1;
 

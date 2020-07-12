@@ -17,11 +17,11 @@
     id <SPTPlaylistModel> _playlistCosmosModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isFollowedByCurrentUser; // @synthesize isFollowedByCurrentUser=_isFollowedByCurrentUser;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistCosmosModel; // @synthesize playlistCosmosModel=_playlistCosmosModel;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (long long)style;
 - (id)logEventName;

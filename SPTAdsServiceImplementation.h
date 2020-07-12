@@ -88,6 +88,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAdMobileOverlayController *mobileOverlayController; // @synthesize mobileOverlayController=_mobileOverlayController;
 @property(retain, nonatomic) SPTAdRegistryInformationManager *adRegistryInformationManager; // @synthesize adRegistryInformationManager=_adRegistryInformationManager;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
@@ -158,7 +159,6 @@
 @property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
-- (void).cxx_destruct;
 - (void)createSlot:(id)arg1 queue:(id)arg2 group:(id)arg3;
 - (void)createSlotsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)didCompleteAPLogin;

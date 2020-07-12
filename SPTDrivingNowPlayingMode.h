@@ -21,13 +21,13 @@
     NSString *_identifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) SPTDrivingModeSession *session; // @synthesize session=_session;
 @property(readonly, nonatomic) id <SPTDrivingModeViewControllerFactory> viewControllerFactory; // @synthesize viewControllerFactory=_viewControllerFactory;
 @property(readonly, nonatomic) NSMutableDictionary *viewControllerCache; // @synthesize viewControllerCache=_viewControllerCache;
 @property(readonly, nonatomic) unsigned long long headUnit; // @synthesize headUnit=_headUnit;
 @property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (_Bool)canBeResized;
 - (_Bool)requiresContentViewDisabled;
 - (_Bool)requiresScrollDisabled;

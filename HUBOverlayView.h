@@ -21,17 +21,19 @@
     struct UIEdgeInsets _contentInset;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableArray *overlayComponentViews; // @synthesize overlayComponentViews=_overlayComponentViews;
 @property(readonly, nonatomic) HUBComponentViewManager *componentViewManager; // @synthesize componentViewManager=_componentViewManager;
 @property(readonly, nonatomic) HUBComponentViewImageLoader *componentViewImageLoader; // @synthesize componentViewImageLoader=_componentViewImageLoader;
 @property(nonatomic) __weak id <HUBOverlayViewComponentDelegate> componentDelegate; // @synthesize componentDelegate=_componentDelegate;
 @property(nonatomic) struct UIEdgeInsets contentInset; // @synthesize contentInset=_contentInset;
 @property(copy, nonatomic) NSArray *componentModels; // @synthesize componentModels=_componentModels;
-- (void).cxx_destruct;
 - (void)componentViewManager:(id)arg1 componentViewDidDisappear:(id)arg2;
 - (void)componentViewManager:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)updateOverlayInteractivity;
 - (void)componentViewsDidDisappear;
+- (void)componentViewsWillDisappear;
+- (void)componentViewsDidAppear;
 - (void)componentViewsWillAppear;
 - (void)configureComponentViews;
 - (void)applyContentInsets;

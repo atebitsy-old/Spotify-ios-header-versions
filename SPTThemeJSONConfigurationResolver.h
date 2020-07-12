@@ -20,9 +20,9 @@
 }
 
 + (id)urlForConfigurationFileNamed:(id)arg1 inBundle:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *keysToAliases; // @synthesize keysToAliases=_keysToAliases;
 @property(readonly, nonatomic) NSSet *suffixes; // @synthesize suffixes=_suffixes;
-- (void).cxx_destruct;
 - (id)registerConfigurationValue:(id)arg1 forKeyWithFlags:(id)arg2 overridingCurrentValues:(_Bool)arg3;
 - (id)dependentKeysOfKeys:(id)arg1;
 - (id)configurationValueForKey:(id)arg1 reportErrors:(_Bool)arg2;

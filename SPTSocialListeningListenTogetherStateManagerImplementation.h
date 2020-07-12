@@ -17,9 +17,9 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) long long currentState; // @synthesize currentState=_currentState;
-- (void).cxx_destruct;
 - (void)socialListeningModel:(id)arg1 updatedSession:(id)arg2 updateEvent:(id)arg3;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;

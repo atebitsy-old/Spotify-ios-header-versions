@@ -13,8 +13,8 @@
     SPTAudioSessionControllerImpl *_audioSessionController;
 }
 
-@property(nonatomic) __weak SPTAudioSessionControllerImpl *audioSessionController; // @synthesize audioSessionController=_audioSessionController;
 - (void).cxx_destruct;
+@property(nonatomic) __weak SPTAudioSessionControllerImpl *audioSessionController; // @synthesize audioSessionController=_audioSessionController;
 - (void)deactivate;
 - (void)dealloc;
 - (id)initWithAudioSessionController:(id)arg1;

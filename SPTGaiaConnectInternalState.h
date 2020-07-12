@@ -16,10 +16,10 @@
     SPTGaiaConnectError *_transferError;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaConnectError *transferError; // @synthesize transferError=_transferError;
 @property(retain, nonatomic) id <SPTGaiaLocalDeviceProtocol> localDevice; // @synthesize localDevice=_localDevice;
 @property(copy, nonatomic) NSArray *availableDevices; // @synthesize availableDevices=_availableDevices;
-- (void).cxx_destruct;
 - (id)initWithAvailableDevices:(id)arg1 localDevice:(id)arg2 transferError:(id)arg3;
 
 @end

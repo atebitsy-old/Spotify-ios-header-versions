@@ -17,11 +17,11 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *gaplessCell; // @synthesize gaplessCell=_gaplessCell;
 @property(retain, nonatomic) SettingsSliderTableViewCell *crossfadeCell; // @synthesize crossfadeCell=_crossfadeCell;
-- (void).cxx_destruct;
 - (id)headerText;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;

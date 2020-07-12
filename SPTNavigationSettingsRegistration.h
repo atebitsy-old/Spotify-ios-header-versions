@@ -17,11 +17,11 @@
     SPTFeatureSettingsPage *_settingsPage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFeatureSettingsPage *settingsPage; // @synthesize settingsPage=_settingsPage;
 @property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (_Bool)mobileLandscapeEnabled;
 - (_Bool)sideBarEnabled;
 - (id)navigationListIdentifier;

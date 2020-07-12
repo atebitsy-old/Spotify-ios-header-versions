@@ -18,10 +18,10 @@
     unsigned long long _videoCDNSampling;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long videoCDNSampling; // @synthesize videoCDNSampling=_videoCDNSampling;
 @property(retain, nonatomic) SPTDataLoaderService *dataLoaderService; // @synthesize dataLoaderService=_dataLoaderService;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (void)endedRequestWithResponse:(id)arg1 bytesDownloaded:(int)arg2 bytesUploaded:(int)arg3;
 - (_Bool)shouldLogRequest:(id)arg1;
 - (void)dealloc;

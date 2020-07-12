@@ -20,12 +20,12 @@
     id <SPTGaiaConnectManager> _connectManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) SPTGaiaDeviceAppearanceMapping *iconMapper; // @synthesize iconMapper=_iconMapper;
 @property(readonly, nonatomic) SPTGaiaOnboardingPopupController *popupController; // @synthesize popupController=_popupController;
 @property(readonly, nonatomic) id <SPTGaiaWirelessRoutesAPI> wirelessRoutesManager; // @synthesize wirelessRoutesManager=_wirelessRoutesManager;
 @property(retain, nonatomic) SPTGaiaConnectDevice *newlyDiscoveredDevice; // @synthesize newlyDiscoveredDevice=_newlyDiscoveredDevice;
-- (void).cxx_destruct;
 - (_Bool)isBlockedForTA;
 - (void)activateDevice:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)notifyOnboardingOfDevice:(id)arg1 didComplete:(_Bool)arg2;

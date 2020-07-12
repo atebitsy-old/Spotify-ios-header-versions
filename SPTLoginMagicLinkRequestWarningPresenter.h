@@ -14,9 +14,9 @@
     SPTLoginMagicLinkRequestWarningDialogLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginMagicLinkRequestWarningDialogLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
-- (void).cxx_destruct;
 - (void)presentMagicLinkRequestWarning:(CDUnknownBlockType)arg1;
 - (id)initWithDialogController:(id)arg1 logger:(id)arg2;
 

@@ -18,10 +18,10 @@
     long long _orientation;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool shouldFireImpressionOnStart; // @synthesize shouldFireImpressionOnStart=_shouldFireImpressionOnStart;
 @property(readonly, nonatomic) long long orientation; // @synthesize orientation=_orientation;
 @property(readonly, copy, nonatomic) NSString *manifestID; // @synthesize manifestID=_manifestID;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool isVideo;
 - (_Bool)parseShouldFireImpressionOnStart:(id)arg1;
 - (long long)parseOrientation:(id)arg1;

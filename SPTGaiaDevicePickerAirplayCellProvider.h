@@ -17,10 +17,10 @@
     SPTGaiaDevicePickerAppearanceManager *_appearanceManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTGaiaDevicePickerAppearanceManager *appearanceManager; // @synthesize appearanceManager=_appearanceManager;
 @property(readonly, nonatomic) __weak SPTCastManager *castManager; // @synthesize castManager=_castManager;
 @property(readonly, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
-- (void).cxx_destruct;
 - (id)cellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (long long)accessoryIcon;
 - (long long)icon;

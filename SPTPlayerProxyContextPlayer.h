@@ -14,10 +14,10 @@
     weak_ptr_20886a9c _proxyContextPlayer;
 }
 
-@property(nonatomic) weak_ptr_20886a9c proxyContextPlayer; // @synthesize proxyContextPlayer=_proxyContextPlayer;
-@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) weak_ptr_20886a9c proxyContextPlayer; // @synthesize proxyContextPlayer=_proxyContextPlayer;
+@property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(readonly, nonatomic, getter=isLocalPlaybackEnabled) _Bool localPlaybackEnabled;
 - (id)initWithProxyContextPlayer:(shared_ptr_fa30f844)arg1 scheduler:(id)arg2;
 

@@ -19,11 +19,11 @@
     SPTDrivingModeLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTDrivingModeOptOutHandler> optOutHandler; // @synthesize optOutHandler=_optOutHandler;
-- (void).cxx_destruct;
 - (void)dismissWithCompletion:(CDUnknownBlockType)arg1;
 - (void)presentWithCompletion:(CDUnknownBlockType)arg1;
 - (void)onCancelButtonTap;

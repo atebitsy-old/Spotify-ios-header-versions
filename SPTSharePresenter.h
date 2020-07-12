@@ -28,6 +28,7 @@
     struct CGRect _selectionFrame;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct CGRect selectionFrame; // @synthesize selectionFrame=_selectionFrame;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
@@ -41,7 +42,6 @@
 @property(readonly, nonatomic) SPTShareHandlerFactory *shareHandlerFactory; // @synthesize shareHandlerFactory=_shareHandlerFactory;
 @property(readonly, nonatomic) SPTShareViewController *shareViewController; // @synthesize shareViewController=_shareViewController;
 @property(readonly, nonatomic) __weak UIViewController *contextViewController; // @synthesize contextViewController=_contextViewController;
-- (void).cxx_destruct;
 - (_Bool)shouldShowProgressViewForShareDestination:(id)arg1;
 - (void)logShareEventWithShareData:(id)arg1 shareDestination:(id)arg2 shareCompletionData:(id)arg3 error:(id)arg4;
 - (void)shareViewController:(id)arg1 shareData:(id)arg2 didSelectShareDestination:(id)arg3;

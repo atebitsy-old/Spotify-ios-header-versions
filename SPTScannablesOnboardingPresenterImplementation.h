@@ -19,11 +19,11 @@
     id <SPTFreeTierTooltipConditionalPresenter> _tooltipManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierTooltipConditionalPresenter> tooltipManager; // @synthesize tooltipManager=_tooltipManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) SPTScannablesSlateFactory *slateFactory; // @synthesize slateFactory=_slateFactory;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
-- (void).cxx_destruct;
 - (id)contextMenuOnboardingTooltipTextForEntityURL:(id)arg1;
 - (void)presentContextMenuOnboardingAnchoredToView:(id)arg1 entityURL:(id)arg2;
 - (void)presentScannerOnboardingSlateWithDelegate:(id)arg1;

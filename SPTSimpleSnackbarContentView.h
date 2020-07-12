@@ -20,13 +20,13 @@
     NSLayoutConstraint *_bottomConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *trailingConstraint; // @synthesize trailingConstraint=_trailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *leadingConstraint; // @synthesize leadingConstraint=_leadingConstraint;
 @property(retain, nonatomic) SPTSimpleSnackbarViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) GLUELabel *textLabel; // @synthesize textLabel=_textLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateConstraintsValues;
 - (void)addLayoutConstraints;

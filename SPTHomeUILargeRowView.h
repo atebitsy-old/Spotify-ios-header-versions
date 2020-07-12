@@ -30,6 +30,7 @@
 
 + (double)heightForRowWithTitle:(id)arg1 attributedSubtitle:(id)arg2 containerWidth:(double)arg3 style:(id)arg4;
 + (id)makeLabelStyleWithGLUELabelStyle:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSLayoutConstraint *subtitleToContentBottomConstraint; // @synthesize subtitleToContentBottomConstraint=_subtitleToContentBottomConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *titleToContentBottomConstraint; // @synthesize titleToContentBottomConstraint=_titleToContentBottomConstraint;
 @property(readonly, nonatomic) NSLayoutConstraint *subtitleToTitleConstraint; // @synthesize subtitleToTitleConstraint=_subtitleToTitleConstraint;
@@ -44,7 +45,6 @@
 @property(readonly, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 @property(copy, nonatomic) NSAttributedString *attributedSubtitle; // @dynamic attributedSubtitle;
 - (void)prepareForReuse;

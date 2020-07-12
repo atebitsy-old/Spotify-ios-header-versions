@@ -18,10 +18,10 @@
     SPTOnDemandSetTestManager *_testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTOnDemandSetTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (_Bool)isOnDemandURL:(id)arg1;
 - (void)decorateComponentModelBuilderWithShuffleBadge:(id)arg1 url:(id)arg2;
 - (_Bool)isGlueHeaderComponentModelBuilder:(id)arg1;

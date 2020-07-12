@@ -13,8 +13,8 @@
     SPTDataLoader *_dataLoader;
 }
 
-@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (id)createRequestWithDetectionResult:(id)arg1 userResponse:(unsigned long long)arg2;
 - (void)deliverCarmageddonSurveyUserResponse:(unsigned long long)arg1 forDetectionResult:(id)arg2;
 - (id)initWithDataLoader:(id)arg1;

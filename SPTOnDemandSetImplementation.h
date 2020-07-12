@@ -21,13 +21,13 @@
     SPTObserverManager *_observerManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(copy, nonatomic) NSSet *onDemandURLs; // @synthesize onDemandURLs=_onDemandURLs;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *persistentCacheQueue; // @synthesize persistentCacheQueue=_persistentCacheQueue;
 @property(readonly, nonatomic) SPTOnDemandSetTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, nonatomic) CDUnknownBlockType shuffleEnabledCallback; // @synthesize shuffleEnabledCallback=_shuffleEnabledCallback;
-- (void).cxx_destruct;
 - (id)convertPlaylistURLToV2:(id)arg1;
 - (id)convertToPlaylistV2Set:(id)arg1;
 - (void)removeObserver:(id)arg1;

@@ -13,8 +13,8 @@
     NSDate *_lastEvaluatedDate;
 }
 
-@property(retain, nonatomic) NSDate *lastEvaluatedDate; // @synthesize lastEvaluatedDate=_lastEvaluatedDate;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSDate *lastEvaluatedDate; // @synthesize lastEvaluatedDate=_lastEvaluatedDate;
 - (id)filterEvaluatedPlayerItemErrorLogEvents:(id)arg1 withEvaluationBlock:(CDUnknownBlockType)arg2;
 
 @end

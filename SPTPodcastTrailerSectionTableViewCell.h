@@ -16,10 +16,10 @@
     SPTPodcastTrailerSectionContentView *_trailerContentView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastTrailerSectionContentView *trailerContentView; // @synthesize trailerContentView=_trailerContentView;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-- (void).cxx_destruct;
 - (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)configureLayout;
 - (void)configureAppearance;

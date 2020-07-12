@@ -23,6 +23,7 @@
     EAAccessory *_externalAccessory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) EAAccessory *externalAccessory; // @synthesize externalAccessory=_externalAccessory;
 @property(readonly, copy, nonatomic) NSString *transportType; // @synthesize transportType=_transportType;
 @property(readonly, nonatomic) NSString *integrationType; // @synthesize integrationType=_integrationType;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSString *category; // @synthesize category=_category;
 @property(readonly, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (id)generateRandomSessionId;
 - (id)initWithCategory:(id)arg1 identifier:(id)arg2 clientID:(id)arg3 name:(id)arg4 company:(id)arg5 model:(id)arg6 version:(id)arg7 integrationType:(id)arg8 transportType:(id)arg9 externalAccessory:(id)arg10;

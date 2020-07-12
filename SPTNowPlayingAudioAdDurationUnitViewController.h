@@ -22,11 +22,11 @@
     SPTNowPlayingDurationViewV2 *_durationView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTNowPlayingDurationViewV2 *durationView; // @synthesize durationView=_durationView;
 @property(readonly, nonatomic) SPTNowPlayingAdDurationUnitViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) UIView *animationView; // @synthesize animationView=_animationView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)trackPositionDidChange;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (_Bool)nowPlayingSliderDisallowSeeking:(id)arg1;

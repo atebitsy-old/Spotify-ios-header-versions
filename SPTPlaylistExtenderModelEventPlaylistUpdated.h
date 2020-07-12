@@ -16,9 +16,9 @@
     unsigned long long _playlistTrackCount;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long playlistTrackCount; // @synthesize playlistTrackCount=_playlistTrackCount;
 @property(readonly, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
-- (void).cxx_destruct;
 - (void)processWithState:(id)arg1 loop:(id)arg2;
 - (id)initWithPlaylistName:(id)arg1 playlistTrackCount:(unsigned long long)arg2;
 

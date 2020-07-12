@@ -28,6 +28,7 @@
     UISwitch *_includeSimilarArtistsSwitch;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UISwitch *includeSimilarArtistsSwitch; // @synthesize includeSimilarArtistsSwitch=_includeSimilarArtistsSwitch;
 @property(retain, nonatomic) UIStackView *similarArtistsStackView; // @synthesize similarArtistsStackView=_similarArtistsStackView;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingArtistPickerViewStyle *style; // @synthesize style=_style;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) GLUEGradientView *overlayGradientView; // @synthesize overlayGradientView=_overlayGradientView;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistPickerCollectionViewLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)activateConstraints;
 - (void)updateSeedASessionElementsAppearance:(_Bool)arg1;

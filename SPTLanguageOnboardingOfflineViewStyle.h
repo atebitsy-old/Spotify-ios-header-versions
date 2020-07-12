@@ -17,10 +17,10 @@
     double _subtitleBottomEdgePadding;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double subtitleBottomEdgePadding; // @synthesize subtitleBottomEdgePadding=_subtitleBottomEdgePadding;
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

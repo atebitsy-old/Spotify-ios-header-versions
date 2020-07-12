@@ -17,9 +17,9 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logVoiceAudioInputWithSessionIdentifier:(id)arg1 portType:(id)arg2 portOrientation:(id)arg3;
 - (void)logVoiceAssistantConsentWithSessionIdentifier:(id)arg1;
 - (void)logVoiceAssistantOnboardingWithSessionIdentifier:(id)arg1 pagesViewed:(unsigned long long)arg2 totalPages:(unsigned long long)arg3 version:(id)arg4 exitMethod:(id)arg5;

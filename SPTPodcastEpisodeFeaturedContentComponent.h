@@ -15,9 +15,9 @@
     long long _state;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long state; // @synthesize state=_state;
 @property(readonly, nonatomic) __weak HUBComponentView *componentView; // @synthesize componentView=_componentView;
-- (void).cxx_destruct;
 - (_Bool)isComponentInWindow:(id)arg1 componentView:(id)arg2;
 - (_Bool)needsLoggingWhenComponentIsVisibleInWindow:(id)arg1;
 @property(readonly, nonatomic) id <HUBComponentModel> model;

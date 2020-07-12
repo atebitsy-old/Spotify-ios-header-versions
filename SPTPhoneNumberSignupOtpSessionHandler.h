@@ -16,10 +16,10 @@
     NSTimer *_timeoutSchedulerTimer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSTimer *timeoutSchedulerTimer; // @synthesize timeoutSchedulerTimer=_timeoutSchedulerTimer;
 @property(retain, nonatomic) NSDate *startTime; // @synthesize startTime=_startTime;
 @property(nonatomic) __weak id <SPTPhoneNumberSignupOtpSessionHandlerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateCurrentOtpSessionWithTimeToLiveSeconds:(double)arg1;
 - (void)resetCurrentSession;
 - (_Bool)canResendSMS;

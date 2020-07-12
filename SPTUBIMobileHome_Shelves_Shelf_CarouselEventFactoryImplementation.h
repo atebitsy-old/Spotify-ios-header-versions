@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithPosition:(long long)arg1 components:(id)arg2;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)smallCardFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)mediumCardFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)_location;

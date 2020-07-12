@@ -36,6 +36,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(nonatomic) _Bool newExperienceEnabled; // @synthesize newExperienceEnabled=_newExperienceEnabled;
 @property(retain, nonatomic) id <SPTNavigationItemTitleProvider> navigationItemTitleProvider; // @synthesize navigationItemTitleProvider=_navigationItemTitleProvider;
@@ -55,7 +56,6 @@
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)provideDefaultTabPriorityList;
 - (id)createListWithItems:(id)arg1 identifier:(id)arg2;
 - (id)listDataSources;

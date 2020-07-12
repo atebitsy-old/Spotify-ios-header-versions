@@ -23,6 +23,7 @@
     NSMutableArray *_tracks;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *tracks; // @synthesize tracks=_tracks;
 @property(readonly, copy, nonatomic) NSString *loggingIdentifier; // @synthesize loggingIdentifier=_loggingIdentifier;
 @property(readonly, copy, nonatomic) NSString *providerIdentifier; // @synthesize providerIdentifier=_providerIdentifier;
@@ -30,7 +31,6 @@
 @property(nonatomic) __weak id <SPTAssistedCurationCardModelActionsDelegate> actionsDelegate; // @synthesize actionsDelegate=_actionsDelegate;
 @property(nonatomic) __weak id <SPTAssistedCurationCardModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (void)insertTracks:(id)arg1 atIndex:(unsigned long long)arg2;
 - (void)appendTracks:(id)arg1;
 - (void)loadMore;

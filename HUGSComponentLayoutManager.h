@@ -15,8 +15,8 @@
     SPTTheme *_theme;
 }
 
-@property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (_Bool)shouldStackComponentWithLayoutTraits:(id)arg1 belowComponentWithLayoutTraits:(id)arg2;
 - (double)horizontalOffsetForComponentsWithLayoutTraits:(id)arg1 firstComponentLeadingHorizontalOffset:(double)arg2 lastComponentTrailingHorizontalOffset:(double)arg3;
 - (double)horizontalMarginForComponentWithLayoutTraits:(id)arg1 precedingComponentLayoutTraits:(id)arg2;

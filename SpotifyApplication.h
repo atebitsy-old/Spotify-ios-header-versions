@@ -18,10 +18,10 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) __weak id <SpotifyApplicationRemoteControlDelegate> remoteControlDelegate; // @synthesize remoteControlDelegate=_remoteControlDelegate;
 @property(nonatomic) __weak id <SPTInstrumentationInteractionMediator> interactionMediator; // @synthesize interactionMediator;
-- (void).cxx_destruct;
 - (_Bool)canBecomeFirstResponder;
 - (void)sendEvent:(id)arg1;
 - (void)removeRemoteControlObserver:(id)arg1;

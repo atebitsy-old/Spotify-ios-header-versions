@@ -22,12 +22,12 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) __weak id <SPTRadioRemoteConfigService> radioRemoteConfigService; // @synthesize radioRemoteConfigService=_radioRemoteConfigService;
 @property(nonatomic) __weak SPTRadioStationsService *stationsService; // @synthesize stationsService=_stationsService;
 @property(nonatomic) __weak SPTRadioPlaybackService *playbackService; // @synthesize playbackService=_playbackService;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (_Bool)isCarPlaySession:(_Bool)arg1;
 - (void)startRadioStationWithSeedURL:(id)arg1 startedFromElement:(id)arg2 referrerIdentifier:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (_Bool)startRadioStationWithSeedURL:(id)arg1 startedFromElement:(id)arg2 referrerIdentifier:(id)arg3;

@@ -22,6 +22,7 @@
 
 + (id)defaultStyleWithTheme:(id)arg1 forContainerViewSize:(struct CGSize)arg2;
 + (id)defaultStyleWithTheme:(id)arg1 forSmallContainer:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
@@ -30,7 +31,6 @@
 @property(nonatomic) double contentContainerBottomMargin; // @synthesize contentContainerBottomMargin=_contentContainerBottomMargin;
 @property(nonatomic) double contentContainerTopMargin; // @synthesize contentContainerTopMargin=_contentContainerTopMargin;
 @property(nonatomic) struct GLUESideMargins contentContainerSideMargins; // @synthesize contentContainerSideMargins=_contentContainerSideMargins;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 @end

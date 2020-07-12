@@ -30,6 +30,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> featurePageToken; // @synthesize featurePageToken=_featurePageToken;
 @property(retain, nonatomic) SPTLanguageOnboardingDataLoader *languageOnboardingDataLoader; // @synthesize languageOnboardingDataLoader=_languageOnboardingDataLoader;
 @property(retain, nonatomic) SPTLanguageOnboardingFlowCoordinator *flowCoordinator; // @synthesize flowCoordinator=_flowCoordinator;
@@ -43,7 +44,6 @@
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideLanguageSettingsViewController;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;

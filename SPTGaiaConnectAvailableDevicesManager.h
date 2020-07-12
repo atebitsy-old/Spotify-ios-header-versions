@@ -22,6 +22,7 @@
     SPTGaiaConnectDevice *_deviceRequiringOnboarding;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTGaiaConnectDevice *deviceRequiringOnboarding; // @synthesize deviceRequiringOnboarding=_deviceRequiringOnboarding;
 @property(readonly, nonatomic) SPTGaiaConnectStateObservingManager *stateObservingManager; // @synthesize stateObservingManager=_stateObservingManager;
 @property(nonatomic) __weak id <SPTGaiaConnectAvailableDevicesDelegate> delegate; // @synthesize delegate=_delegate;
@@ -29,7 +30,6 @@
 @property(copy, nonatomic) NSArray *devices; // @synthesize devices=_devices;
 @property(retain, nonatomic) SPTGaiaConnectDevice *deviceBeingActivated; // @synthesize deviceBeingActivated=_deviceBeingActivated;
 @property(retain, nonatomic) SPTGaiaConnectDevice *activeDevice; // @synthesize activeDevice=_activeDevice;
-- (void).cxx_destruct;
 - (id)findDeviceMatching:(CDUnknownBlockType)arg1;
 - (void)updateAllSpecialDevices;
 - (void)updateDevicesWithNewData:(id)arg1;

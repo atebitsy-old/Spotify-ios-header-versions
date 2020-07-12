@@ -9,10 +9,11 @@
 #import "SPTMobileMediaKitService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDataLoader, SPTMobileMediaKitAPKeepAliveHandler, SPTMobileMediaKitClientCommunicationsManager;
-@protocol GaiaFeature, SPTAccessoryManagerService, SPTExternalIntegrationCollectionService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTNetworkService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService;
+@protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryManagerSessionService, SPTExternalIntegrationCollectionService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTNetworkService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService;
 
 @interface SPTMobileMediaKitServiceImplementation : NSObject <SPTMobileMediaKitService>
 {
+    id <SPTAccessoryManagerSessionService> _accessorySessionService;
     id <SPTExternalIntegrationPlaybackService> _externalIntegrationPlaybackService;
     id <SPTExternalIntegrationCollectionService> _externalIntegrationCollectionService;
     id <SPTExternalIntegrationDebugLogService> _externalIntegrationDebugLogService;
@@ -27,6 +28,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTMobileMediaKitAPKeepAliveHandler *keepAliveHandler; // @synthesize keepAliveHandler=_keepAliveHandler;
 @property(retain, nonatomic) SPTMobileMediaKitClientCommunicationsManager *communicationManager; // @synthesize communicationManager=_communicationManager;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
@@ -38,7 +40,7 @@
 @property(nonatomic) __weak id <SPTExternalIntegrationDebugLogService> externalIntegrationDebugLogService; // @synthesize externalIntegrationDebugLogService=_externalIntegrationDebugLogService;
 @property(nonatomic) __weak id <SPTExternalIntegrationCollectionService> externalIntegrationCollectionService; // @synthesize externalIntegrationCollectionService=_externalIntegrationCollectionService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> externalIntegrationPlaybackService; // @synthesize externalIntegrationPlaybackService=_externalIntegrationPlaybackService;
-- (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTAccessoryManagerSessionService> accessorySessionService; // @synthesize accessorySessionService=_accessorySessionService;
 - (void)updateFeatureEnabled:(_Bool)arg1;
 - (void)disable;
 - (void)enable;

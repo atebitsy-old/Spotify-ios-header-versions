@@ -24,6 +24,7 @@
     UIView *_scannablesButtonContainer;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UIView *scannablesButtonContainer; // @synthesize scannablesButtonContainer=_scannablesButtonContainer;
 @property(readonly, nonatomic) UIView *cancelButtonContainer; // @synthesize cancelButtonContainer=_cancelButtonContainer;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) SPTSearchUISearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(copy, nonatomic) SPTSearchUISearchControlsStyle *style; // @synthesize style=_style;
 @property(nonatomic) __weak id <SPTSearchUISearchControlsDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (struct CGRect)expandedAccessibilityFrameForView:(id)arg1;
 - (void)cancelButtonPressed;
 - (void)scannablesButtonPressed;

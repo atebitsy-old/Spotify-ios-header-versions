@@ -26,6 +26,7 @@
     NSMutableArray *_sensorsResults;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *sensorsResults; // @synthesize sensorsResults=_sensorsResults;
 @property(retain, nonatomic) NSTimer *delayedRecordingTimer; // @synthesize delayedRecordingTimer=_delayedRecordingTimer;
 @property(retain, nonatomic) SPTCarmageddonCarDetectionState *currentState; // @synthesize currentState=_currentState;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) SPTCarmageddonMotionDetectionLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) SPTCarmageddonMotionManager *motionManager; // @synthesize motionManager=_motionManager;
 @property(nonatomic) __weak id <SPTCarmageddonMotionBasedStateDetectorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)motionManagerDidFinishProcessingAllRequestedBatches:(id)arg1;
 - (void)motionManager:(id)arg1 didFinishBatchRecordingWithResult:(id)arg2;
 - (void)predictCarmageddonStateForMotionData:(id)arg1;

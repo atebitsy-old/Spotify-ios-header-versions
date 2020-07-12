@@ -37,6 +37,7 @@
     NSLayoutConstraint *_disclosureViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *disclosureViewHeightConstraint; // @synthesize disclosureViewHeightConstraint=_disclosureViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *disclosureViewWidthConstraint; // @synthesize disclosureViewWidthConstraint=_disclosureViewWidthConstraint;
 @property(retain, nonatomic) UIView *trailingAccessoryView; // @synthesize trailingAccessoryView=_trailingAccessoryView;
@@ -60,7 +61,6 @@
 @property(copy, nonatomic) NSString *commentPlaceholderText; // @synthesize commentPlaceholderText=_commentPlaceholderText;
 @property(copy, nonatomic) NSString *subtitleText; // @synthesize subtitleText=_subtitleText;
 @property(copy, nonatomic) NSString *titleText; // @synthesize titleText=_titleText;
-- (void).cxx_destruct;
 - (void)updateCalendarView;
 - (_Bool)isConcert;
 - (void)updateCommentVisibility;

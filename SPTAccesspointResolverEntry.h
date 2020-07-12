@@ -14,9 +14,9 @@
     unsigned long long _port;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long port; // @synthesize port=_port;
 @property(copy, nonatomic) NSString *host; // @synthesize host=_host;
-- (void).cxx_destruct;
 
 @end
 

@@ -15,8 +15,8 @@
     NSIndexPath *indexPath;
 }
 
-@property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

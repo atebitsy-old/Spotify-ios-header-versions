@@ -13,8 +13,8 @@
     id <SPTLoginLogger> _logger;
 }
 
-@property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void)logAuthAttemptCompletedWithSource:(unsigned long long)arg1 error:(id)arg2 attemptId:(id)arg3 result:(id)arg4;
 - (id)logAuthAttemptStartedWithSource:(unsigned long long)arg1;
 - (id)requestTypeWithSourceType:(unsigned long long)arg1;

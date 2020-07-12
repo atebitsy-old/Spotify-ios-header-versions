@@ -40,6 +40,7 @@
     id <UIViewControllerPreviewing> _previewingContext;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <UIViewControllerPreviewing> previewingContext; // @synthesize previewingContext=_previewingContext;
 @property(retain, nonatomic) NSMutableDictionary *cellHeightsForSection; // @synthesize cellHeightsForSection=_cellHeightsForSection;
 @property(copy, nonatomic) NSArray *infoViewConstraints; // @synthesize infoViewConstraints=_infoViewConstraints;
@@ -56,7 +57,6 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTPodcastYourLibraryEpisodesViewModelImpl *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTYourLibraryPageDelegate> pageDelegate; // @synthesize pageDelegate=_pageDelegate;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double offscreenContentHeight;
 - (void)actionHandler:(id)arg1 didMarkEpisode:(id)arg2 atIndextPath:(id)arg3 asPlayed:(_Bool)arg4;
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;

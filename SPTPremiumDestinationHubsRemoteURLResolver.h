@@ -16,8 +16,8 @@
     id <SPTPremiumDestinationExperiments> _experiments;
 }
 
-@property(retain, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 - (id)resolveContentURL;
 - (id)initWithExperiments:(id)arg1;
 

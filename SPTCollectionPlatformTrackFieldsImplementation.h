@@ -38,6 +38,7 @@
     NSString *_groupLabel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(copy, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
 @property(nonatomic) _Bool isPremiumOnly; // @synthesize isPremiumOnly=_isPremiumOnly;
@@ -62,7 +63,6 @@
 @property(retain, nonatomic) NSDate *addTime; // @synthesize addTime=_addTime;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

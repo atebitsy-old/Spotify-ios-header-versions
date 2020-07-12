@@ -32,6 +32,7 @@
 }
 
 + (id)keyPathsForValuesAffectingCurrentProductMarketingName;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasEverCheckedPremiumAvailability; // @synthesize hasEverCheckedPremiumAvailability=_hasEverCheckedPremiumAvailability;
 @property(nonatomic) _Bool isCheckingPremiumAvailability; // @synthesize isCheckingPremiumAvailability=_isCheckingPremiumAvailability;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) NSDate *currentProductExpieryDate; // @synthesize currentProductExpieryDate=_currentProductExpieryDate;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(nonatomic) long long currentProduct; // @synthesize currentProduct=_currentProduct;
-- (void).cxx_destruct;
 - (void)currentProductMonitor:(id)arg1 didChangeCurrentProductFrom:(long long)arg2;
 - (void)removeProductInformationObserver:(id)arg1;
 - (void)addProductInformationObserver:(id)arg1;

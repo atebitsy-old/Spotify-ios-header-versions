@@ -18,11 +18,11 @@
     NSLayoutConstraint *_footerViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *footerViewHeightConstraint; // @synthesize footerViewHeightConstraint=_footerViewHeightConstraint;
 @property(readonly, nonatomic) SPTLanguageOnboardingGridCollectionViewLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
 @property(readonly, nonatomic) SPTLanguageOnboardingGridFooterView *footerView; // @synthesize footerView=_footerView;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setNextButtonTitle:(id)arg1;
 - (double)gridRowHeight;

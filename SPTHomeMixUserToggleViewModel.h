@@ -15,10 +15,10 @@
     SPTHomeMixDomainMediator *_domainMediator;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeMixDomainMediator *domainMediator; // @synthesize domainMediator=_domainMediator;
 @property(readonly, nonatomic) SPTHomeMixDomainModel *domainModel; // @synthesize domainModel=_domainModel;
 @property(readonly, copy, nonatomic) NSArray *members; // @synthesize members=_members;
-- (void).cxx_destruct;
 - (void)logCannotHaveEmptyMixCornerCase;
 - (void)logSwitchFlippedAtIndex:(unsigned long long)arg1 intent:(id)arg2;
 - (void)logPageImpression;

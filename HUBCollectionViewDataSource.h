@@ -20,11 +20,11 @@
     struct CGPoint _lastContentOffset;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) HUBComponentViewManager *componentViewManager; // @synthesize componentViewManager=_componentViewManager;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(nonatomic) struct CGPoint lastContentOffset; // @synthesize lastContentOffset=_lastContentOffset;
 @property(copy, nonatomic) NSArray *componentModels; // @synthesize componentModels=_componentModels;
-- (void).cxx_destruct;
 - (id)collectionView:(id)arg1 layout:(id)arg2 layoutTraitsForComponentAtIndexPath:(id)arg3;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 preferredSizeForComponentAtIndexPath:(id)arg3 containerViewSize:(struct CGSize)arg4;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;

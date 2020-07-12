@@ -21,12 +21,12 @@
     SPTAudioSessionActivator *_audioSessionActivator;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldRequestRecording; // @synthesize shouldRequestRecording=_shouldRequestRecording;
 @property(retain, nonatomic) SPTAudioSessionActivator *audioSessionActivator; // @synthesize audioSessionActivator=_audioSessionActivator;
 @property(readonly, nonatomic) __weak id <SPTAudioSessionController> audioSessionController; // @synthesize audioSessionController=_audioSessionController;
 @property(nonatomic, getter=isSessionConfigured) _Bool sessionConfigured; // @synthesize sessionConfigured=_sessionConfigured;
 @property(retain, nonatomic) NSHashTable *delegates; // @synthesize delegates;
-- (void).cxx_destruct;
 - (_Bool)audioSessionShouldSupportBluetooth:(id)arg1;
 - (_Bool)audioSessionShouldSupportRecording:(id)arg1;
 - (_Bool)shouldModifyAudioSession:(id)arg1;

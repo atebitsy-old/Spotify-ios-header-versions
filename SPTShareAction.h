@@ -23,6 +23,7 @@
     id <SPTShareFeature> _shareFeature;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(retain, nonatomic) NSString *clipboardLinkTitle; // @synthesize clipboardLinkTitle=_clipboardLinkTitle;
 @property(nonatomic) long long shareType; // @synthesize shareType=_shareType;
@@ -33,7 +34,6 @@
 @property(retain, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(retain, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) NSURL *itemURL; // @synthesize itemURL=_itemURL;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (_Bool)isEnabled;
 - (id)logEventName;

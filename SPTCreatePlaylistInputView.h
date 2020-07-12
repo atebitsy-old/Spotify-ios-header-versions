@@ -24,6 +24,7 @@
     GLUEGradientView *_backgroundGradientView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(copy, nonatomic) SPTCreatePlaylistInputViewStyle *style; // @synthesize style=_style;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) GLUEButton *secondaryButton; // @synthesize secondaryButton=_secondaryButton;
 @property(readonly, nonatomic) GLUEButton *primaryButton; // @synthesize primaryButton=_primaryButton;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setPrimaryButtonTitle:(id)arg1 forState:(unsigned long long)arg2;
 - (void)addViewConstraints;

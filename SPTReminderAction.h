@@ -15,10 +15,10 @@
     NSURL *_url;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *url; // @synthesize url=_url;
 @property(readonly, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, nonatomic) SPTReminder *reminder; // @synthesize reminder=_reminder;
-- (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)icon;

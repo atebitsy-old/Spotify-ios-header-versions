@@ -18,11 +18,11 @@
 
 + (id)accessibilityLabelForStatus:(long long)arg1;
 + (id)offlineSyncStatusView;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool requiresIconUpdate; // @synthesize requiresIconUpdate=_requiresIconUpdate;
 @property(retain, nonatomic) UIActivityIndicatorView *activityIndicator; // @synthesize activityIndicator=_activityIndicator;
 @property(retain, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
 @property(nonatomic) long long status; // @synthesize status=_status;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (void)layoutSubviews;
 

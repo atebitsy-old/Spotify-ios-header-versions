@@ -6,11 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTQueueTrack;
+@class UIViewController;
+@protocol SPTQueueEnabling><SPTPageController, SPTQueueTrack;
 
 @protocol SPTQueueViewControllerDelegate <NSObject>
 
 @optional
-- (void)queue:(struct UIViewController *)arg1 didTapNowPlayingTrack:(id <SPTQueueTrack>)arg2;
+- (void)queue:(UIViewController<SPTQueueEnabling><SPTPageController> *)arg1 didTapNowPlayingTrack:(id <SPTQueueTrack>)arg2;
 @end
 

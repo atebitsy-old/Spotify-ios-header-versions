@@ -38,6 +38,7 @@
     NSLayoutConstraint *_heightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *filterBarContentHeightConstraint; // @synthesize filterBarContentHeightConstraint=_filterBarContentHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *filterBarHeightConstraint; // @synthesize filterBarHeightConstraint=_filterBarHeightConstraint;
@@ -61,7 +62,6 @@
 @property(retain, nonatomic) UIView<SPTSortingFilteringFilterBar> *filterBar; // @synthesize filterBar=_filterBar;
 @property(nonatomic, getter=isCollapsed) _Bool collapsed; // @synthesize collapsed=_collapsed;
 @property(nonatomic, getter=isFilterBarHidden) _Bool filterBarHidden; // @synthesize filterBarHidden=_filterBarHidden;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (double)additionalContentOffset;
 - (void)updateOffset:(double)arg1;

@@ -24,6 +24,7 @@
     NSString *_specificationVersion;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
 @property(readonly, copy, nonatomic) NSString *generatorCommitHash; // @synthesize generatorCommitHash=_generatorCommitHash;
 @property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
@@ -34,7 +35,6 @@
 @property(readonly, copy, nonatomic) NSArray *components; // @synthesize components=_components;
 @property(readonly, copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
 @property(readonly, copy, nonatomic) NSString *interactionType; // @synthesize interactionType=_interactionType;
-- (void).cxx_destruct;
 - (id)initWithType:(id)arg1 applicationId:(id)arg2 specificationCommitHash:(id)arg3 specificationVersion:(id)arg4 components:(id)arg5 action:(id)arg6 actionVersion:(long long)arg7 actionParameters:(id)arg8 errors:(id)arg9;
 
 // Remaining properties

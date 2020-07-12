@@ -13,8 +13,8 @@
     id <SPTUBIUserBehaviourInstrumentation> _ubiInstrumentation;
 }
 
-@property(readonly, nonatomic) id <SPTUBIUserBehaviourInstrumentation> ubiInstrumentation; // @synthesize ubiInstrumentation=_ubiInstrumentation;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBIUserBehaviourInstrumentation> ubiInstrumentation; // @synthesize ubiInstrumentation=_ubiInstrumentation;
 - (id)createFreeTierModeUBILogger;
 - (id)createVideoShowModeUBILogger;
 - (id)createPodcastModeUBILogger;

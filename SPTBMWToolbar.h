@@ -16,10 +16,10 @@
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property _Bool id5Mode; // @synthesize id5Mode=_id5Mode;
 @property(retain, nonatomic) NSArray *buttonConfiguration; // @synthesize buttonConfiguration=_buttonConfiguration;
-- (void).cxx_destruct;
 - (void)update;
 - (void)setupSkipButtons;
 - (void)setupSaveButton;

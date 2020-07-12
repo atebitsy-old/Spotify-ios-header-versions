@@ -43,6 +43,7 @@
     NSString *_groupLabel;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(nonatomic) _Bool preferLinearPlayback; // @synthesize preferLinearPlayback=_preferLinearPlayback;
 @property(nonatomic) _Bool containsAudioEpisodes; // @synthesize containsAudioEpisodes=_containsAudioEpisodes;
@@ -72,7 +73,6 @@
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *freeformDescription; // @synthesize freeformDescription=_freeformDescription;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

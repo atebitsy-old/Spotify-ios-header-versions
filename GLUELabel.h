@@ -17,9 +17,9 @@
 }
 
 + (struct CGSize)sizeForText:(id)arg1 maxWidth:(double)arg2 style:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *originalString; // @synthesize originalString=_originalString;
 @property(copy, nonatomic) GLUELabelStyle *glueStyle; // @synthesize glueStyle=_glueStyle;
-- (void).cxx_destruct;
 - (void)drawTextInRect:(struct CGRect)arg1;
 - (void)setText:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;

@@ -21,13 +21,13 @@
     NSString *_identifier;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(copy, nonatomic) NSString *navigationBarTitle; // @synthesize navigationBarTitle=_navigationBarTitle;
 @property(copy, nonatomic) NSDictionary *customData; // @synthesize customData=_customData;
 @property(copy, nonatomic) NSArray *overlay; // @synthesize overlay=_overlay;
 @property(copy, nonatomic) NSArray *body; // @synthesize body=_body;
 @property(copy, nonatomic) SPTHubsKitComponentModel *header; // @synthesize header=_header;
-- (void).cxx_destruct;
 - (_Bool)isEqualToViewModel:(id)arg1;
 @property(readonly, copy, nonatomic) NSDictionary *dictionaryRepresentation;
 - (unsigned long long)hash;

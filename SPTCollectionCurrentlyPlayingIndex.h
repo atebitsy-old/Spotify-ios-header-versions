@@ -16,9 +16,9 @@
     NSURL *_currentlyPlayingURL;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *currentlyPlayingURL; // @synthesize currentlyPlayingURL=_currentlyPlayingURL;
 @property(nonatomic) unsigned long long currentlyPlayingTrackIndex; // @synthesize currentlyPlayingTrackIndex=_currentlyPlayingTrackIndex;
-- (void).cxx_destruct;
 - (void)gotNewPlayerState:(id)arg1 tracks:(id)arg2 contextPredicate:(CDUnknownBlockType)arg3;
 - (id)init;
 

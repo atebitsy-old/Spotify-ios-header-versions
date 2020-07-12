@@ -14,9 +14,9 @@
     unsigned long long _sequenceNumber;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
 @property(retain, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
-- (void).cxx_destruct;
 - (void)incrementSequenceNumber;
 - (id)init;
 

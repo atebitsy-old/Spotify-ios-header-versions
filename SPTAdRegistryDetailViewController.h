@@ -18,12 +18,12 @@
     SPTEntityTableHeaderView *_headerView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEntityTableHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> entity; // @synthesize entity=_entity;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-- (void).cxx_destruct;
 - (void)sendEmail;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)tableView:(id)arg1 performAction:(SEL)arg2 forRowAtIndexPath:(id)arg3 withSender:(id)arg4;

@@ -15,9 +15,9 @@
     id <SPTPlayerFeature> _playerFeature;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(retain, nonatomic) SPTModerationReportDecorationRegistryImplementation *decorationRegistry; // @synthesize decorationRegistry=_decorationRegistry;
-- (void).cxx_destruct;
 - (void)removeDecorationHandler;
 - (void)addDecorationHandler;
 - (void)dealloc;

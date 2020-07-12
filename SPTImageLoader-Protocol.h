@@ -10,7 +10,6 @@
 @protocol SPTImageLoaderDelegate, SPTImageLoaderInstrumentationObserver, SPTImageLoaderRequest;
 
 @protocol SPTImageLoader <SPTImageLoaderRemote>
-@property(nonatomic) __weak id <SPTImageLoaderDelegate> delegate;
 - (void)removeInstrumentationObserver:(id <SPTImageLoaderInstrumentationObserver>)arg1;
 - (void)addInstrumentationObserver:(id <SPTImageLoaderInstrumentationObserver>)arg1;
 - (_Bool)isURL:(NSURL *)arg1 persistedForKey:(NSString *)arg2;
@@ -19,5 +18,6 @@
 - (void)persistImage:(UIImage *)arg1 forURL:(NSURL *)arg2 withKey:(NSString *)arg3 sourceIdentifier:(NSString *)arg4;
 - (id <SPTImageLoaderRequest>)loadImageWithUpscalingForURL:(NSURL *)arg1 sourceIdentifier:(NSString *)arg2 size:(struct CGSize)arg3 context:(id)arg4;
 - (id <SPTImageLoaderRequest>)loadImageForURL:(NSURL *)arg1 sourceIdentifier:(NSString *)arg2 size:(struct CGSize)arg3 context:(id)arg4;
+@property(nonatomic) __weak id <SPTImageLoaderDelegate> delegate;
 @end
 

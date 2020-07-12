@@ -21,12 +21,12 @@
     id <SPTCollectionPlatformConfiguration> _configuration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> configuration; // @synthesize configuration=_configuration;
 @property(readonly, nonatomic) SPTFreeTierEntityFeedbackLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic, getter=isForceDisabled) _Bool forceDisabled; // @synthesize forceDisabled=_forceDisabled;
 @property(readonly, nonatomic) NSURL *entityURI; // @synthesize entityURI=_entityURI;
 @property(nonatomic) __weak id <SPTFreeTierEntityFeedbackButtonViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)setState:(unsigned long long)arg1;
 @property(readonly, nonatomic) unsigned long long state;
 - (void)unban;

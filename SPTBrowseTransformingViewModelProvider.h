@@ -21,12 +21,12 @@
     SPTObserverManager *_observers;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(retain, nonatomic) id <HUBViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, copy, nonatomic) NSArray *transformers; // @synthesize transformers=_transformers;
 @property(readonly, nonatomic) id <SPTBrowseViewModelProvider> viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
-- (void).cxx_destruct;
 - (id)transformViewModel:(id)arg1;
 - (void)transformAndSetViewModel:(id)arg1;
 - (void)viewModelProvider:(id)arg1 didUpdateStateFrom:(unsigned long long)arg2;

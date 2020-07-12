@@ -6,9 +6,7 @@
 
 #import "_TtC26AgeVerificationFeatureImpl28SlatePresenterImplementation.h"
 
-#import "_TtP26AgeVerificationFeatureImpl14SlatePresenter_-Protocol.h"
-
-@interface _TtC26AgeVerificationFeatureImpl28SlatePresenterImplementation (AgeVerificationFeatureImpl) <_TtP26AgeVerificationFeatureImpl14SlatePresenter_>
+@interface _TtC26AgeVerificationFeatureImpl28SlatePresenterImplementation (AgeVerificationFeatureImpl)
 - (void)dismiss;
 - (void)updateWithError:(id)arg1 animating:(_Bool)arg2;
 - (void)updateWithCoverArtURL:(id)arg1;

@@ -28,6 +28,7 @@
     id <SPTMetaViewController> _metaViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldDisplayNowPlayingView; // @synthesize shouldDisplayNowPlayingView=_shouldDisplayNowPlayingView;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *episodeURIString; // @synthesize episodeURIString=_episodeURIString;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)toggleEntitySelectionAtIndex:(int)arg1 shouldSelect:(_Bool)arg2;

@@ -20,12 +20,12 @@
 }
 
 + (_Bool)rawMessageFormatIsValid:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *namedArguments; // @synthesize namedArguments=_namedArguments;
 @property(readonly, nonatomic) NSArray *arguments; // @synthesize arguments=_arguments;
 @property(readonly, nonatomic) NSDictionary *details; // @synthesize details=_details;
 @property(readonly, nonatomic) unsigned long long publicationID; // @synthesize publicationID=_publicationID;
 @property(readonly, nonatomic) unsigned long long triggeringSubscriptionID; // @synthesize triggeringSubscriptionID=_triggeringSubscriptionID;
-- (void).cxx_destruct;
 - (_Bool)populateWithRawMessage:(id)arg1 error:(id *)arg2;
 @property(readonly, nonatomic) NSArray *rawMessage;
 @property(readonly, nonatomic) long long messageType;

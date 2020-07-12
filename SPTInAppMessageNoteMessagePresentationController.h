@@ -31,6 +31,7 @@
     id <SPTAuthController> _authController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(copy, nonatomic) NSDictionary *cancelationInfo; // @synthesize cancelationInfo=_cancelationInfo;
@@ -45,7 +46,6 @@
 @property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageViewModel *noteMessageViewModel; // @synthesize noteMessageViewModel=_noteMessageViewModel;
-- (void).cxx_destruct;
 - (void)noteMessageSwipedAway;
 - (void)cancelNoteMessagePresentation:(id)arg1;
 - (_Bool)canPresentNote;

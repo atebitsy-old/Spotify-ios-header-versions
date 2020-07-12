@@ -14,9 +14,9 @@
     GLUELabel *_titleLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UIImageView *imageView; // @synthesize imageView=_imageView;
-- (void).cxx_destruct;
 - (void)setHighlighted:(_Bool)arg1;
 - (void)configureWithIntegration:(id)arg1;
 - (void)layoutSubviews;

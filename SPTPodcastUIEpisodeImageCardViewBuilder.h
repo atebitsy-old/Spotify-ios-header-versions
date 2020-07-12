@@ -13,8 +13,8 @@
     id <SPTPodcastUIEpisodeImageCardStyle> _style;
 }
 
-@property(readonly, nonatomic) __weak id <SPTPodcastUIEpisodeImageCardStyle> style; // @synthesize style=_style;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTPodcastUIEpisodeImageCardStyle> style; // @synthesize style=_style;
 - (id)buildProgressViewInView:(id)arg1 layout:(id)arg2;
 - (id)buildThumbnailViewInView:(id)arg1 layout:(id)arg2;
 - (id)buildImageViewInView:(id)arg1 layout:(id)arg2;

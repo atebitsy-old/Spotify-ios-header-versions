@@ -25,6 +25,7 @@
 }
 
 + (double)subtitleHeightForWidth:(double)arg1 text:(id)arg2 style:(id)arg3;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleBaselineFromContentBottomEdgeConstraint; // @synthesize subtitleBaselineFromContentBottomEdgeConstraint=_subtitleBaselineFromContentBottomEdgeConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleBaselineToTitleBaselineConstraint; // @synthesize subtitleBaselineToTitleBaselineConstraint=_subtitleBaselineToTitleBaselineConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleBaselineToContentBottomEdgeConstraint; // @synthesize titleBaselineToContentBottomEdgeConstraint=_titleBaselineToContentBottomEdgeConstraint;
@@ -35,7 +36,6 @@
 @property(copy, nonatomic) GLUESectionHeaderStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (id)viewForLastBaselineLayout;
 - (id)viewForFirstBaselineLayout;

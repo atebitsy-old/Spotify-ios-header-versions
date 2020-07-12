@@ -16,10 +16,10 @@
     SPTStatusBarManager *_statusBarManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTStatusBarManager *statusBarManager; // @synthesize statusBarManager=_statusBarManager;
 @property(nonatomic) __weak id <SPTBannerWindowRootViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTBannerView *bannerView; // @synthesize bannerView=_bannerView;
-- (void).cxx_destruct;
 - (double)intrinsicBannerViewHeight;
 - (double)bannerTopOffset;
 - (void)viewDidLayoutSubviews;

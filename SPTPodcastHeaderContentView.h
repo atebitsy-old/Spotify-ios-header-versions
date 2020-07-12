@@ -25,6 +25,7 @@
     CDStruct_5a28e70a _titleLabelAlphaProgressRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) CDStruct_5a28e70a titleLabelAlphaProgressRange; // @synthesize titleLabelAlphaProgressRange=_titleLabelAlphaProgressRange;
 @property(nonatomic) CDStruct_5a28e70a imageAlphaProgressRange; // @synthesize imageAlphaProgressRange=_imageAlphaProgressRange;
 @property(retain, nonatomic) NSLayoutConstraint *noTitleConstraint; // @synthesize noTitleConstraint=_noTitleConstraint;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) SPTEncoreLabel *publisherLabel; // @synthesize publisherLabel=_publisherLabel;
 @property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILayoutGuide *titlePositionLayoutGuide; // @synthesize titlePositionLayoutGuide;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) double imageNoramalizedHeight;
 - (id)podcastPublisherStyle;
 - (id)podcastTitleStyle;

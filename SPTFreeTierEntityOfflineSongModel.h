@@ -20,6 +20,7 @@
     NSURL *_trackURL;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool availableOffline; // @synthesize availableOffline=_availableOffline;
 @property(readonly, nonatomic) _Bool ratedExplicit; // @synthesize ratedExplicit=_ratedExplicit;
 @property(readonly, nonatomic) _Bool premiumOnly; // @synthesize premiumOnly=_premiumOnly;
@@ -28,7 +29,6 @@
 @property(copy, nonatomic) NSURL *artistURL; // @synthesize artistURL=_artistURL;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)initWithTrackURL:(id)arg1 trackName:(id)arg2 artistName:(id)arg3 artistURL:(id)arg4 albumURL:(id)arg5 isPremiumOnly:(_Bool)arg6 isRatedExplicit:(_Bool)arg7 isAvailableOffline:(_Bool)arg8;
 
 @end

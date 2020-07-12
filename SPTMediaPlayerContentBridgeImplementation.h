@@ -23,12 +23,12 @@
     NSMutableIndexSet *_startLoadTaskIdentifiers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableIndexSet *startLoadTaskIdentifiers; // @synthesize startLoadTaskIdentifiers=_startLoadTaskIdentifiers;
 @property(retain, nonatomic) MPPlayableContentManager *contentManager; // @synthesize contentManager=_contentManager;
 @property(nonatomic) __weak id <SPTPlaybackQueueInitializer> playbackQueueInitializer; // @synthesize playbackQueueInitializer=_playbackQueueInitializer;
 @property(nonatomic) __weak id <MPPlayableContentDataSource> playableContentDataSource; // @synthesize playableContentDataSource=_playableContentDataSource;
 @property(nonatomic) __weak id <MPPlayableContentDelegate> playableContentSubDelegate; // @synthesize playableContentSubDelegate=_playableContentSubDelegate;
-- (void).cxx_destruct;
 - (void)playableContentManager:(id)arg1 didUpdateContext:(id)arg2;
 - (void)playableContentManager:(id)arg1 initializePlaybackQueueWithCompletionHandler:(CDUnknownBlockType)arg2;
 - (void)playableContentManager:(id)arg1 initiatePlaybackOfContentItemAtIndexPath:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;

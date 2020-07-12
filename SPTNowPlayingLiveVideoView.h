@@ -15,10 +15,10 @@
     SPTTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UILabel *liveLabel; // @synthesize liveLabel=_liveLabel;
 @property(retain, nonatomic) UIView *dotView; // @synthesize dotView=_dotView;
-- (void).cxx_destruct;
 - (void)setupConstraints;
 - (void)setupLabel;
 - (void)setupDot;

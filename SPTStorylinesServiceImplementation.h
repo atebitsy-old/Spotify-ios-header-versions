@@ -32,6 +32,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNowPlayingScrollDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) SPTStorylinesNowPlayingScrollProvider *provider; // @synthesize provider=_provider;
 @property(retain, nonatomic) SPTStorylinesFeatureProperties *properties; // @synthesize properties=_properties;
@@ -47,7 +48,6 @@
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)persistentCacheOptions;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 - (void)setupScrollProvider;

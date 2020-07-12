@@ -21,10 +21,10 @@
 
 + (struct CGSize)preferredViewSizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2;
 + (id)styleForTheme:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEEntityRowStyle *rowStyle; // @synthesize rowStyle=_rowStyle;
 @property(readonly, nonatomic) GLUEEntityRowView *entityRowView; // @synthesize entityRowView=_entityRowView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (struct CGSize)preferredSizeForMainImage;
 - (void)sendSelectionEvent;
 - (void)applyThemeLayout;

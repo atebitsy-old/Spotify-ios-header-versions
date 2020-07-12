@@ -21,13 +21,13 @@
     id <SPTSortingFilteringButtonsContainerStyle> filterButtonsContainerStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) id <SPTSortingFilteringButtonsContainerStyle> filterButtonsContainerStyle; // @synthesize filterButtonsContainerStyle;
 @property(nonatomic) double height; // @synthesize height;
 @property(nonatomic) double bottomMargin; // @synthesize bottomMargin;
 @property(nonatomic) double topMargin; // @synthesize topMargin;
 @property(nonatomic) double margin; // @synthesize margin;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

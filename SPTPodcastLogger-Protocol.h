@@ -15,7 +15,7 @@
 - (void)logLoadShowViewURL:(NSURL *)arg1;
 - (void)logOpenContextMenuShowInViewURL:(NSURL *)arg1;
 - (void)logOpenContextMenuEpisodeInViewURL:(NSURL *)arg1 episodeURI:(NSURL *)arg2 indexPath:(NSIndexPath *)arg3;
-- (void)logShowFollowInViewURL:(NSURL *)arg1 didFollow:(_Bool)arg2 fromContextMenu:(_Bool)arg3 autoFollow:(_Bool)arg4;
+- (void)logShowFollowInViewURL:(NSURL *)arg1 didFollow:(_Bool)arg2;
 - (void)logEpisodeSortingInViewURL:(NSURL *)arg1 sorting:(unsigned long long)arg2;
 - (void)logEpisodeFilterResetInViewURL:(NSURL *)arg1;
 - (void)logEpisodeFilterSetInViewURL:(NSURL *)arg1 filter:(NSString *)arg2 previousFilter:(NSString *)arg3;

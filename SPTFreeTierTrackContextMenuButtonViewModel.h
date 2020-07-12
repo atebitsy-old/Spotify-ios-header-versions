@@ -21,13 +21,13 @@
     SPTFreeTierEntityContextMenuLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierEntityContextMenuLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
 @property(retain, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTFreeTierEntityContextMenuButtonViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)contextMenuPresenterWithSenderView:(id)arg1;
 - (void)transitionToState:(unsigned long long)arg1;
 - (void)tapContextMenuButton:(id)arg1;

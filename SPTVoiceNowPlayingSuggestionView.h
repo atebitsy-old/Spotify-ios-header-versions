@@ -16,9 +16,9 @@
     GLUELabel *_suggestionLabel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *suggestionLabel; // @synthesize suggestionLabel=_suggestionLabel;
 @property(readonly, nonatomic) SPTVoiceNowPlayingSuggestionViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)nowPlayingSuggestionViewModelDidUpdate:(id)arg1;
 - (void)setupLayouts;
 - (void)setupViews;

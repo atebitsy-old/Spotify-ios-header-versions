@@ -35,6 +35,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFormatListPlatformRemoteControlPolicyManagerImplementation *remoteControlPolicyManager; // @synthesize remoteControlPolicyManager=_remoteControlPolicyManager;
 @property(retain, nonatomic) SPTFormatListPlatformRemoteControlPolicyFactoryImplementation *remoteControlPolicyFactory; // @synthesize remoteControlPolicyFactory=_remoteControlPolicyFactory;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -53,7 +54,6 @@
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)provideRemoteControlPolicyManager;
 - (id)provideRemoteControlPolicyFactory;
 - (id)providePlatformManagerForFormatListURL:(id)arg1;

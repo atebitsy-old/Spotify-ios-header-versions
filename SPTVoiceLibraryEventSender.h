@@ -18,9 +18,9 @@
     NSString *_referrerId;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *referrerId; // @synthesize referrerId=_referrerId;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void).cxx_destruct;
 - (void)logWakewordProviderStatusWithProviderId:(id)arg1 sessionId:(id)arg2 providerVersion:(id)arg3 providerModel:(id)arg4;
 - (void)logWakewordProviderResultWithProviderId:(id)arg1 sessionId:(id)arg2;
 - (void)logWakewordProviderErrorWithProviderId:(id)arg1 sessionId:(id)arg2 errorDomain:(id)arg3 errorDescription:(id)arg4;

@@ -14,9 +14,9 @@
     NSString *_applicationVersionString;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *applicationVersionString; // @synthesize applicationVersionString=_applicationVersionString;
 @property(readonly, nonatomic) SPTHermesController *hermesController; // @synthesize hermesController=_hermesController;
-- (void).cxx_destruct;
 - (void)start;
 - (id)initWithReceiptData:(id)arg1 hermesController:(id)arg2 applicationVersionString:(id)arg3;
 

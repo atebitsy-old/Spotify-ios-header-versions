@@ -19,13 +19,13 @@
     id <SPTPodcastUIStringFormatter> _stringFormatter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(copy, nonatomic) NSArray *showsCollection; // @synthesize showsCollection=_showsCollection;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionRequestToken; // @synthesize collectionRequestToken=_collectionRequestToken;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryShowsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)parseResponseItems:(id)arg1;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (unsigned long long)numberOfRows;

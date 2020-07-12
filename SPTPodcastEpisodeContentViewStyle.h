@@ -20,13 +20,13 @@
     struct CGSize _playButtonSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double playButtonBottomConstraintConstant; // @synthesize playButtonBottomConstraintConstant=_playButtonBottomConstraintConstant;
 @property(nonatomic) double imageCornerRadius; // @synthesize imageCornerRadius=_imageCornerRadius;
 @property(nonatomic) struct CGSize playButtonSize; // @synthesize playButtonSize=_playButtonSize;
 @property(copy, nonatomic) GLUETrackAccessoryLabelStyle *accessoryLabelStyle; // @synthesize accessoryLabelStyle=_accessoryLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleStyle; // @synthesize titleStyle=_titleStyle;
 @property(copy, nonatomic) GLUELabelStyle *descriptionStyle; // @synthesize descriptionStyle=_descriptionStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

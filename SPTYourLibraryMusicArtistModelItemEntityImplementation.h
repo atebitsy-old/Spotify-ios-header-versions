@@ -17,9 +17,9 @@
     unsigned long long _type;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) id <SPTYourLibraryMusicArtistEntity> artistEntity; // @synthesize artistEntity=_artistEntity;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isOnDemand) _Bool onDemand;
 - (id)initWithArtistEntity:(id)arg1;
 

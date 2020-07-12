@@ -14,9 +14,9 @@
     NSString *_percentage;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *percentage; // @synthesize percentage=_percentage;
 @property(retain, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithGroup:(id)arg1;
 
 @end

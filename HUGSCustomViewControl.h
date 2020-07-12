@@ -15,10 +15,10 @@
     CDUnknownBlockType _onSelectionChange;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) CDUnknownBlockType onSelectionChange; // @synthesize onSelectionChange=_onSelectionChange;
 @property(readonly, copy, nonatomic) CDUnknownBlockType onHighlightChange; // @synthesize onHighlightChange=_onHighlightChange;
 @property(readonly, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
-- (void).cxx_destruct;
 - (void)setSelected:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;

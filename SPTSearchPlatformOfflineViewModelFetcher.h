@@ -26,6 +26,7 @@
     NSString *_referrerIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTSearchOfflinePlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) id <SPTSearchOfflineTrackDataLoader> offlineTrackDataLoader; // @synthesize offlineTrackDataLoader=_offlineTrackDataLoader;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
-- (void).cxx_destruct;
 - (id)hubsKitNavigateCommandWithURI:(id)arg1;
 - (id)rowLoggingDataWithPosition:(unsigned long long)arg1 uri:(id)arg2;
 - (_Bool)displayItemAsDisabledIsExplicit:(_Bool)arg1 mogef19:(_Bool)arg2;

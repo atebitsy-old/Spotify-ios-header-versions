@@ -16,8 +16,8 @@
     id <SPTCreatePlaylistController> _playlistCreationController;
 }
 
-@property(readonly, nonatomic) id <SPTCreatePlaylistController> playlistCreationController; // @synthesize playlistCreationController=_playlistCreationController;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTCreatePlaylistController> playlistCreationController; // @synthesize playlistCreationController=_playlistCreationController;
 - (id)providePlaylistCreationCommandHandler;
 - (id)initWithPlaylistCreationController:(id)arg1;
 

@@ -39,6 +39,7 @@
 }
 
 + (id)ignoredAutoEquatablePropertyNames;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *childrenByGroupIdentifier; // @synthesize childrenByGroupIdentifier=_childrenByGroupIdentifier;
 @property(copy, nonatomic) NSDictionary *childIdentifierToIndexMap; // @synthesize childIdentifierToIndexMap=_childIdentifierToIndexMap;
 @property(copy, nonatomic) NSArray *children; // @synthesize children=_children;
@@ -62,7 +63,6 @@
 @property(readonly, nonatomic) unsigned long long index; // @synthesize index=_index;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (id)serializedChildren;
 - (id)serializedEvents;
 - (id)serializedImageData;

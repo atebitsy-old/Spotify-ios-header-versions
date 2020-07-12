@@ -21,6 +21,7 @@
     SPTLoginDbManager *_databaseManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
 @property(readonly, nonatomic) SPTLoginTestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
 @property(readonly, nonatomic) SPTLoginDelayedSignupAccountSwitcher *accountSwitcher; // @synthesize accountSwitcher=_accountSwitcher;
@@ -29,7 +30,6 @@
 @property(readonly, nonatomic) SPTLoginErrorDecorator *errorDecorator; // @synthesize errorDecorator=_errorDecorator;
 @property(readonly, nonatomic) SPTAuthenticationHandlerLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
-- (void).cxx_destruct;
 - (void)storeStickyCredentialsUserInfoForScreen:(unsigned long long)arg1;
 - (id)authLogin5Options;
 - (void)switchAccountWithCredentials:(id)arg1 fromScreen:(unsigned long long)arg2 userDidSignup:(_Bool)arg3 completionBlock:(CDUnknownBlockType)arg4;

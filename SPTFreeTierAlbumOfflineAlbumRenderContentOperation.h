@@ -19,11 +19,11 @@
     id <SPTFreeTierAlbumTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierAlbumTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSMutableArray *contextTracks; // @synthesize contextTracks=_contextTracks;
 @property(readonly, nonatomic) SPTFreeTierAlbumOfflineModel *albumOfflineModel; // @synthesize albumOfflineModel=_albumOfflineModel;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)addAlbumToViewModelBuilder:(id)arg1;
 - (id)createPlayer;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;

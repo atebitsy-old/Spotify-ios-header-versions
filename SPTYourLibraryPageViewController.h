@@ -26,6 +26,7 @@
     struct CGSize _currentSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool visible; // @synthesize visible=_visible;
 @property(retain, nonatomic) NSMutableArray *animationEndBlocks; // @synthesize animationEndBlocks=_animationEndBlocks;
 @property(retain, nonatomic) NSNumber *needReloadAtIndex; // @synthesize needReloadAtIndex=_needReloadAtIndex;
@@ -37,7 +38,6 @@
 @property(nonatomic, getter=isPageNavigationDisabled) _Bool pageNavigationDisabled; // @synthesize pageNavigationDisabled=_pageNavigationDisabled;
 @property(nonatomic) __weak id <SPTYourLibraryPageViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTYourLibraryPageViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
-- (void).cxx_destruct;
 - (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;

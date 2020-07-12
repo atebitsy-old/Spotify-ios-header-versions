@@ -10,16 +10,6 @@
 @protocol SPTNowPlayingPlayButton, SPTNowPlayingPlaybackActionsHandlerObserver;
 
 @protocol SPTNowPlayingPlaybackActionsHandler <NSObject>
-@property(readonly, nonatomic) unsigned long long repeatMode;
-@property(readonly, nonatomic) _Bool isSkippingToNextTrackAllowedWithoutUpsell;
-@property(readonly, nonatomic) _Bool isSkippingToNextTrackAllowed;
-@property(readonly, nonatomic) _Bool isSkippingToPreviousTrackAllowed;
-@property(readonly, nonatomic) _Bool isSeekingAllowed;
-@property(readonly, nonatomic) _Bool isShufflingAllowed;
-@property(readonly, nonatomic) _Bool isResumingAllowed;
-@property(readonly, nonatomic) _Bool isPausingAllowed;
-@property(readonly, nonatomic) _Bool isShuffling;
-@property(readonly, nonatomic) _Bool isPaused;
 - (void)toggleRepeat:(UIButton *)arg1;
 - (void)toggleShuffle:(UIButton *)arg1;
 - (void)skip15SecondsForward:(UIButton *)arg1;
@@ -27,6 +17,16 @@
 - (void)skipToPrevious:(UIButton *)arg1;
 - (void)skipToNext:(UIButton *)arg1;
 - (void)playPause:(UIButton<SPTNowPlayingPlayButton> *)arg1;
+@property(nonatomic, readonly) unsigned long long repeatMode;
+@property(nonatomic, readonly) _Bool isSkippingToNextTrackAllowedWithoutUpsell;
+@property(nonatomic, readonly) _Bool isSkippingToNextTrackAllowed;
+@property(nonatomic, readonly) _Bool isSkippingToPreviousTrackAllowed;
+@property(nonatomic, readonly) _Bool isSeekingAllowed;
+@property(nonatomic, readonly) _Bool isShufflingAllowed;
+@property(nonatomic, readonly) _Bool isResumingAllowed;
+@property(nonatomic, readonly) _Bool isPausingAllowed;
+@property(nonatomic, readonly) _Bool isShuffling;
+@property(nonatomic, readonly) _Bool isPaused;
 - (void)removeObserver:(id <SPTNowPlayingPlaybackActionsHandlerObserver>)arg1;
 - (void)addObserver:(id <SPTNowPlayingPlaybackActionsHandlerObserver>)arg1;
 @end

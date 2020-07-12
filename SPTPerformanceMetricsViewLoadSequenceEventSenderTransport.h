@@ -16,8 +16,8 @@
     id <SPTEventSender> _eventSender;
 }
 
-@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)handleViewLoadSequence:(id)arg1;
 - (id)initWithEventSender:(id)arg1;
 

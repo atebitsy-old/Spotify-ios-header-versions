@@ -23,6 +23,7 @@
 
 + (id)artistsFromDictionary:(id)arg1;
 + (id)entitiesWithDictionary:(id)arg1 dateFormatter:(id)arg2 artistNameFormatter:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPTConcertsDateFormatter *dateFormatter; // @synthesize dateFormatter=_dateFormatter;
 @property(readonly, nonatomic) _Bool isGroupedListing; // @synthesize isGroupedListing=_isGroupedListing;
 @property(readonly, nonatomic) _Bool isRecommendedToUser; // @synthesize isRecommendedToUser=_isRecommendedToUser;
@@ -32,7 +33,6 @@
 @property(readonly, copy, nonatomic) NSArray *concerts; // @synthesize concerts=_concerts;
 @property(readonly, copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, copy, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)subtitleFromOpeningDate:(id)arg1 closingDate:(id)arg2 venue:(id)arg3;
 - (id)dateFromDictionary:(id)arg1 withKey:(id)arg2;
 - (id)concertsFromArray:(id)arg1;

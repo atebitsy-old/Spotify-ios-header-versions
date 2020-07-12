@@ -30,6 +30,7 @@
 }
 
 + (CDUnknownBlockType)bannerItemPrioritySortingBlock;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) __weak SPTMenuController *menuController; // @synthesize menuController=_menuController;
 @property(readonly, nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) id <SPTBannerPresenter> menuControllerPresenter; // @synthesize menuControllerPresenter=_menuControllerPresenter;
 @property(readonly, copy, nonatomic) CDUnknownBlockType sortingBlock; // @synthesize sortingBlock=_sortingBlock;
 @property(nonatomic, getter=isSuspended) _Bool suspended; // @synthesize suspended=_suspended;
-- (void).cxx_destruct;
 - (id)currentlyQueuedBannerItems;
 - (void)actionButtonTappedInBannerView:(id)arg1;
 - (void)closeButtonTappedInBannerView:(id)arg1;

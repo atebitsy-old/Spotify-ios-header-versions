@@ -22,6 +22,7 @@
     UITextField *_actionTextField;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITextField *actionTextField; // @synthesize actionTextField=_actionTextField;
 @property(retain, nonatomic) id <SPTAlertAction> createAction; // @synthesize createAction=_createAction;
 @property(nonatomic) __weak id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
@@ -29,7 +30,6 @@
 @property(readonly, copy, nonatomic) NSString *currentName; // @synthesize currentName=_currentName;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (id)execute:(id)arg1;
 - (long long)style;

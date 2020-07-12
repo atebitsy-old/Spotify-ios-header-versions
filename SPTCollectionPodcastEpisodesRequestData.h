@@ -22,6 +22,7 @@
     NSString *_requestAction;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *requestAction; // @synthesize requestAction=_requestAction;
 @property(copy, nonatomic) NSData *requestBody; // @synthesize requestBody=_requestBody;
 @property(nonatomic, getter=isGrouped) _Bool grouped; // @synthesize grouped=_grouped;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) NSSortDescriptor *sortDescriptor; // @synthesize sortDescriptor=_sortDescriptor;
 @property(retain, nonatomic) NSPredicate *filterPredicate; // @synthesize filterPredicate=_filterPredicate;
 @property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
-- (void).cxx_destruct;
 - (id)additionalFilterString:(id)arg1;
 - (id)initWithURL:(id)arg1 subscribe:(_Bool)arg2;
 

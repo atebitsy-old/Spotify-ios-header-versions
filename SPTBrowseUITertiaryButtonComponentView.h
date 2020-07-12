@@ -19,9 +19,9 @@
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 + (id)styleForComponentModel:(id)arg1 theme:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEButton *button; // @synthesize button=_button;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)buttonTapped:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)applyThemeLayout;

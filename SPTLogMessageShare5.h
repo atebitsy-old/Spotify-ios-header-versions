@@ -27,6 +27,7 @@
 }
 
 + (id)messageWithSessionId:(id)arg1 userIntent:(id)arg2 interactionType:(id)arg3 result:(id)arg4 uri:(id)arg5 contextUri:(id)arg6 textChanged:(_Bool)arg7 sourcePageId:(id)arg8 destinationId:(id)arg9 destinationIndex:(long long)arg10 testGroups:(id)arg11 shareId:(id)arg12 type:(id)arg13 currentlyPlaying:(id)arg14;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *currentlyPlayingValue; // @synthesize currentlyPlayingValue=_currentlyPlayingValue;
 @property(copy, nonatomic) NSString *typeValue; // @synthesize typeValue=_typeValue;
 @property(copy, nonatomic) NSString *shareIdValue; // @synthesize shareIdValue=_shareIdValue;
@@ -41,7 +42,6 @@
 @property(copy, nonatomic) NSString *interactionTypeValue; // @synthesize interactionTypeValue=_interactionTypeValue;
 @property(copy, nonatomic) NSString *userIntentValue; // @synthesize userIntentValue=_userIntentValue;
 @property(copy, nonatomic) NSString *sessionIdValue; // @synthesize sessionIdValue=_sessionIdValue;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (unsigned long long)hash;
 - (id)serialize;

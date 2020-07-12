@@ -18,11 +18,11 @@
     SPTAutoLockController *_owningController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTAutoLockController *owningController; // @synthesize owningController=_owningController;
 @property(nonatomic) _Bool active; // @synthesize active=_active;
 @property(readonly, nonatomic) long long mode; // @synthesize mode=_mode;
 @property(readonly, copy, nonatomic) NSString *reason; // @synthesize reason=_reason;
-- (void).cxx_destruct;
 - (void)relinquish;
 - (void)dealloc;
 - (id)initWithReason:(id)arg1 mode:(long long)arg2 owningController:(id)arg3;

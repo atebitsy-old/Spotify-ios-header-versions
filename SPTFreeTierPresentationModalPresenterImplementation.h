@@ -16,9 +16,9 @@
     MessageBarController *_messageBarController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
-- (void).cxx_destruct;
 - (void)dismissViewController:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)presentViewController:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (id)topPresenterViewController;

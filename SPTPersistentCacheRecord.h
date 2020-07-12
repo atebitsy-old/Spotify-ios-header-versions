@@ -16,11 +16,11 @@
     NSData *_data;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSData *data; // @synthesize data=_data;
 @property(readonly, copy, nonatomic) NSString *key; // @synthesize key=_key;
 @property(readonly, nonatomic) unsigned long long ttl; // @synthesize ttl=_ttl;
 @property(readonly, nonatomic) unsigned long long refCount; // @synthesize refCount=_refCount;
-- (void).cxx_destruct;
 - (id)debugDescription;
 - (id)description;
 - (id)initWithData:(id)arg1 key:(id)arg2 refCount:(unsigned long long)arg3 ttl:(unsigned long long)arg4;

@@ -18,10 +18,10 @@
     NSArray *_response;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *response; // @synthesize response=_response;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTAbbaFlagDataConfigDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)buildAbbaFlagDataConfigRequest;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;

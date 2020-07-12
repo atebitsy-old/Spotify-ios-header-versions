@@ -16,9 +16,9 @@
     double _assetDuration;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) double assetDuration; // @synthesize assetDuration=_assetDuration;
 @property(readonly, nonatomic) NSURL *assetURL; // @synthesize assetURL=_assetURL;
-- (void).cxx_destruct;
 - (void)load:(CDUnknownBlockType)arg1;
 - (id)initWithURL:(id)arg1 assetDuration:(double)arg2;
 

@@ -50,6 +50,7 @@
     unsigned long long _connectionMode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long connectionMode; // @synthesize connectionMode=_connectionMode;
 @property(retain, nonatomic) id <BMConnectionModeObservable> connectionModeObservable; // @synthesize connectionModeObservable=_connectionModeObservable;
 @property(retain, nonatomic) SPTAudioFormatImpl *currentAudioFormat; // @synthesize currentAudioFormat=_currentAudioFormat;
@@ -82,7 +83,6 @@
 @property(nonatomic) _Bool allowRoyaltyMedia; // @synthesize allowRoyaltyMedia=_allowRoyaltyMedia;
 @property(nonatomic) __weak id <SPTVideoPlaybackSessionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
-- (void).cxx_destruct;
 - (void)refreshSession;
 - (void)connectionModeDidChange:(unsigned long long)arg1;
 - (void)triggerPlaybackEventsForAccessLogEvent:(id)arg1;

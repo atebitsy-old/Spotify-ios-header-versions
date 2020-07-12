@@ -20,12 +20,12 @@
     UIEvent *_event;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasPreviouslyTraversed; // @synthesize hasPreviouslyTraversed=_hasPreviouslyTraversed;
 @property(nonatomic) __weak UIEvent *event; // @synthesize event=_event;
 @property(retain, nonatomic) UIViewController<SPTPageController> *pageControllerForView; // @synthesize pageControllerForView=_pageControllerForView;
 @property(copy, nonatomic) NSString *interactionID; // @synthesize interactionID=_interactionID;
 @property(retain, nonatomic) UIView *view; // @synthesize view=_view;
-- (void).cxx_destruct;
 - (id)instrumentableOrdinalViewsWithTerminatingView:(id)arg1;
 - (struct CGPoint)interactionPointInView:(id)arg1;
 - (id)initWithEvent:(id)arg1 interactionID:(id)arg2;

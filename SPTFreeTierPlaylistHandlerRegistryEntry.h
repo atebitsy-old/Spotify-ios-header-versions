@@ -13,10 +13,10 @@
     unsigned long long _priority;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long priority; // @synthesize priority=_priority;
 @property(readonly, copy, nonatomic) CDUnknownBlockType configurationBlock; // @synthesize configurationBlock=_configurationBlock;
 @property(readonly, copy, nonatomic) CDUnknownBlockType predicate; // @synthesize predicate=_predicate;
-- (void).cxx_destruct;
 - (long long)comparePriority:(id)arg1;
 - (id)initWithPredicate:(CDUnknownBlockType)arg1 configurationBlock:(CDUnknownBlockType)arg2 priority:(unsigned long long)arg3;
 

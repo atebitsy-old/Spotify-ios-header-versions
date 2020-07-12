@@ -31,6 +31,7 @@
 }
 
 + (id)rootSettingsViewControllerWithDictionaryRepresentation:(id)arg1 loginStateController:(id)arg2 connectManager:(id)arg3 isLanguageOnboardingEnabled:(_Bool)arg4 explicitContentSettingsEnabled:(_Bool)arg5 productState:(id)arg6 featureFlags:(id)arg7 session:(id)arg8 navigationItem:(id)arg9 navigationRouter:(id)arg10 linkDispatcher:(id)arg11;
+- (void).cxx_destruct;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(nonatomic, getter=isExplicitContentSettingsEnabled) _Bool explicitContentSettingsEnabled; // @synthesize explicitContentSettingsEnabled=_explicitContentSettingsEnabled;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) NSMutableArray *settingsSectionsForConnectObserving; // @synthesize settingsSectionsForConnectObserving=_settingsSectionsForConnectObserving;
 @property(nonatomic) __weak NSObject<SPTLoginStateController> *loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(retain, nonatomic) SettingsErrorHeaderView *errorHeaderView; // @synthesize errorHeaderView=_errorHeaderView;
-- (void).cxx_destruct;
 - (_Bool)shouldShowLanguageOnboardingRow;
 - (_Bool)isLanguageOnboardingRow:(id)arg1;
 - (void)popAdsViewController;

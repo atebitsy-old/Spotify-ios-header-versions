@@ -17,11 +17,11 @@
     id <BMPlaybackTimeObserverCancellationToken> _cancellationToken;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <BMPlaybackTimeObserverCancellationToken> cancellationToken; // @synthesize cancellationToken=_cancellationToken;
 @property(retain, nonatomic) SPTVideoCoordinatorCosmosSender *cosmosSender; // @synthesize cosmosSender=_cosmosSender;
 @property(readonly, nonatomic) double stopPosition; // @synthesize stopPosition=_stopPosition;
 @property(retain, nonatomic) id <BMPlaybackTimeObservable> timeObservable; // @synthesize timeObservable=_timeObservable;
-- (void).cxx_destruct;
 - (void)scheduleInterruption;
 - (_Bool)canScheduleInterruption;
 - (void)unregister;

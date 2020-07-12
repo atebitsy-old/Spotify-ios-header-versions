@@ -16,9 +16,9 @@
 
 + (id)accessibilitySizeFlagForContentSizeCategory:(id)arg1;
 + (id)sizeFlagForContentSizeCategory:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *currentContentSizeCategory; // @synthesize currentContentSizeCategory=_currentContentSizeCategory;
 @property(retain, nonatomic) NSHashTable *themes; // @synthesize themes=_themes;
-- (void).cxx_destruct;
 - (void)updateTheme:(id)arg1 previousContentSizeCategory:(id)arg2 currentContentSizeCategory:(id)arg3;
 - (void)contentSizeCategoryDidChange;
 - (void)removeTheme:(id)arg1;

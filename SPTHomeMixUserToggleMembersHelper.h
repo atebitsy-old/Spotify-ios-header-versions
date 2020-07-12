@@ -16,10 +16,10 @@
 }
 
 + (id)membersExceptOptedOut:(id)arg1;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeMixUserToggleViewModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) NSMutableArray *usersPresent; // @synthesize usersPresent=_usersPresent;
 @property(copy, nonatomic) NSArray *members; // @synthesize members=_members;
-- (void).cxx_destruct;
 - (id)memberBlacklist;
 - (unsigned long long)selectedUsersCount;
 - (void)flipMemberAtIndex:(unsigned long long)arg1;

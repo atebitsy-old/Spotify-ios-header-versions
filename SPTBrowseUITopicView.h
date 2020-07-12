@@ -20,12 +20,12 @@
 }
 
 + (struct CGSize)sizeForTitle:(id)arg1 style:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *titleTrailingConstraint; // @synthesize titleTrailingConstraint=_titleTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *titleLeadingConstraint; // @synthesize titleLeadingConstraint=_titleLeadingConstraint;
 @property(readonly, nonatomic) UIView *borderView; // @synthesize borderView=_borderView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(copy, nonatomic) SPTBrowseUITopicStyle *style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)updateAppearance;
 - (void)glue_applyStyle:(id)arg1;
 @property(copy, nonatomic) NSString *title;

@@ -15,8 +15,8 @@
     NSArray *_presenters;
 }
 
-@property(readonly, nonatomic) NSArray *presenters; // @synthesize presenters=_presenters;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *presenters; // @synthesize presenters=_presenters;
 - (_Bool)presentContextMenuForItemAtIndexPath:(id)arg1 itemsViewModel:(id)arg2 sender:(id)arg3 viewController:(id)arg4;
 - (id)initWithPresenters:(id)arg1;
 

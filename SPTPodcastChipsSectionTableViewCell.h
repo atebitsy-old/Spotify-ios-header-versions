@@ -6,7 +6,7 @@
 
 #import "SPTPodcastSectionTableViewCell.h"
 
-@class NSArray, NSLayoutConstraint, UIStackView, UIView;
+@class NSArray, UIStackView, UIView;
 @protocol GLUETheme, SPTPodcastChipsSectionTableViewCellDelegate;
 
 @interface SPTPodcastChipsSectionTableViewCell : SPTPodcastSectionTableViewCell
@@ -15,26 +15,24 @@
     UIView *_containerView;
     id <GLUETheme> _glueTheme;
     NSArray *_layoutConstraints;
-    NSLayoutConstraint *_bottomContainerConstraint;
     NSArray *_topicCategories;
     UIStackView *_upperContainerView;
     UIStackView *_bottomContainerView;
     NSArray *_chipsViews;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *chipsViews; // @synthesize chipsViews=_chipsViews;
 @property(retain, nonatomic) UIStackView *bottomContainerView; // @synthesize bottomContainerView=_bottomContainerView;
 @property(retain, nonatomic) UIStackView *upperContainerView; // @synthesize upperContainerView=_upperContainerView;
 @property(copy, nonatomic) NSArray *topicCategories; // @synthesize topicCategories=_topicCategories;
-@property(retain, nonatomic) NSLayoutConstraint *bottomContainerConstraint; // @synthesize bottomContainerConstraint=_bottomContainerConstraint;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(nonatomic) __weak id <SPTPodcastChipsSectionTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)chipButtonTapped:(id)arg1;
 - (id)createActionButtonWithTitle:(id)arg1 atIndex:(unsigned long long)arg2;
-- (void)updateBottomConstraint;
+- (void)updateContainersLayout;
 - (double)addChipToContainer:(id)arg1 currentContentWidth:(double)arg2;
 - (void)constructButtonsUsingCategories:(id)arg1;
 - (void)updateWithViewModel:(id)arg1 atIndexPath:(id)arg2;

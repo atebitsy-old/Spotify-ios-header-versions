@@ -15,9 +15,9 @@
 }
 
 + (id)instanceWithViewController:(id)arg1 height:(double)arg2;
+- (void).cxx_destruct;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(retain, nonatomic) UIViewController *viewController; // @synthesize viewController=_viewController;
-- (void).cxx_destruct;
 - (id)description;
 
 @end

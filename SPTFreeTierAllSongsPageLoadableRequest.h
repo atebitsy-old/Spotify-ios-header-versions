@@ -19,11 +19,11 @@
     id <SPTFreeTierAllSongsDataSource> _dataSource;
 }
 
+- (void).cxx_destruct;
 @property(retain) id <SPTFreeTierAllSongsDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(readonly) id <SPTPageLoadStateHandler> handler; // @synthesize handler=_handler;
 @property(readonly, nonatomic) NSURL *viewURL; // @synthesize viewURL=_viewURL;
 @property(readonly, nonatomic) id <SPTFreeTierAllSongsRegistry> allSongsRegistry; // @synthesize allSongsRegistry=_allSongsRegistry;
-- (void).cxx_destruct;
 - (void)freeTierAllSongsRequireReloadModelWithDataSource:(id)arg1;
 - (void)freeTierAllSongsDidLoadModelWithDataSource:(id)arg1;
 - (void)freeTierAllSongsDataSource:(id)arg1 didFailToloadModelWithError:(id)arg2;

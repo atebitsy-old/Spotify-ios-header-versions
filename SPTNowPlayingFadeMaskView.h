@@ -19,6 +19,7 @@
     struct UIEdgeInsets _edgeInsets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CALayer *containerLayer; // @synthesize containerLayer=_containerLayer;
 @property(retain, nonatomic) CALayer *middleMaskLayer; // @synthesize middleMaskLayer=_middleMaskLayer;
 @property(retain, nonatomic) CAGradientLayer *bottomMaskLayer; // @synthesize bottomMaskLayer=_bottomMaskLayer;
@@ -26,7 +27,6 @@
 @property(retain, nonatomic) CAGradientLayer *topMaskLayer; // @synthesize topMaskLayer=_topMaskLayer;
 @property(retain, nonatomic) CAGradientLayer *leftMaskLayer; // @synthesize leftMaskLayer=_leftMaskLayer;
 @property(nonatomic) struct UIEdgeInsets edgeInsets; // @synthesize edgeInsets=_edgeInsets;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1 edgeInsets:(struct UIEdgeInsets)arg2;
 

@@ -27,6 +27,7 @@
 }
 
 + (id)defaultStyleWithTheme:(id)arg1 backgroundColor:(id)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double collapsedMinimumHeight; // @synthesize collapsedMinimumHeight=_collapsedMinimumHeight;
 @property(nonatomic) double height; // @synthesize height=_height;
@@ -39,7 +40,6 @@
 @property(nonatomic) double titleScaleFactor; // @synthesize titleScaleFactor=_titleScaleFactor;
 @property(nonatomic) struct GLUESideMargins titleLabelMargins; // @synthesize titleLabelMargins=_titleLabelMargins;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -25,6 +25,7 @@
     SPTVocalRemovalConfiguration *_vocalRemovalConfiguration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool forceDisablePlaybackControls; // @synthesize forceDisablePlaybackControls=_forceDisablePlaybackControls;
 @property(nonatomic) _Bool didLogVocalRemovalButtonImpression; // @synthesize didLogVocalRemovalButtonImpression=_didLogVocalRemovalButtonImpression;
 @property(readonly, nonatomic) SPTVocalRemovalConfiguration *vocalRemovalConfiguration; // @synthesize vocalRemovalConfiguration=_vocalRemovalConfiguration;
@@ -32,7 +33,6 @@
 @property(readonly, nonatomic) id <SPTNowPlayingPlaybackActionsHandler> playbackActionsHandler; // @synthesize playbackActionsHandler=_playbackActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> durationViewModel; // @synthesize durationViewModel=_durationViewModel;
 @property(nonatomic) __weak id <SPTLyricsV2FullscreenFooterViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)toggleVocalRemovalMode;
 - (void)updateMenuButton;

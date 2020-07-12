@@ -14,9 +14,9 @@
     id <SPTHomeLocalViewModelOverridesDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hideHeader; // @synthesize hideHeader=_hideHeader;
 @property(nonatomic) __weak id <SPTHomeLocalViewModelOverridesDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 
 @end
 

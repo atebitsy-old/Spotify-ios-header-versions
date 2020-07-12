@@ -18,11 +18,11 @@
     NSString *_revision;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *revision; // @synthesize revision=_revision;
 @property(copy, nonatomic) NSArray *nextTracks; // @synthesize nextTracks=_nextTracks;
 @property(copy, nonatomic) NSArray *prevTracks; // @synthesize prevTracks=_prevTracks;
 @property(copy, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)description;

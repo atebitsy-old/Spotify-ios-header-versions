@@ -19,10 +19,10 @@
     id <SPTPageLoadStateHandler> _handler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageLoadStateHandler> handler; // @synthesize handler=_handler;
 @property(retain, nonatomic) id <SPTYourLibraryMusicSongsModel> currentModel; // @synthesize currentModel=_currentModel;
 @property(copy, nonatomic) CDUnknownBlockType modelFactory; // @synthesize modelFactory=_modelFactory;
-- (void).cxx_destruct;
 - (void)songsModelAvailableFiltersDidUpdate:(id)arg1;
 - (void)songsModelDidUpdate:(id)arg1 itemsCountChanged:(_Bool)arg2;
 - (void)songsModel:(id)arg1 error:(id)arg2;

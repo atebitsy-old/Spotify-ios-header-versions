@@ -9,14 +9,16 @@
 @interface _TtC23YourLibraryXFeatureImpl21YourLibraryHeaderView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: profileImage
+    // Error parsing type: , name: profileDisplayName
     // Error parsing type: , name: mainContentView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_leadingButtonsStackView
     // Error parsing type: , name: $__lazy_storage_$_trailingButtonsStackView
     // Error parsing type: , name: $__lazy_storage_$_profileButton
-    // Error parsing type: , name: $__lazy_storage_$_profilePlaceholderImage
     // Error parsing type: , name: $__lazy_storage_$_searchButton
     // Error parsing type: , name: $__lazy_storage_$_plusButton
+    // Error parsing type: , name: $__lazy_storage_$_profilePlaceholderImage
 }
 
 - (void).cxx_destruct;

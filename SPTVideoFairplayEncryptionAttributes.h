@@ -17,12 +17,12 @@
     long long _encryptionIndex;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) long long encryptionIndex; // @synthesize encryptionIndex=_encryptionIndex;
 @property(readonly, nonatomic) NSString *keyMethod; // @synthesize keyMethod=_keyMethod;
 @property(readonly, nonatomic) NSString *keyFormatVersion; // @synthesize keyFormatVersion=_keyFormatVersion;
 @property(readonly, nonatomic) NSString *keyFormat; // @synthesize keyFormat=_keyFormat;
 @property(readonly, nonatomic) NSData *assetId; // @synthesize assetId=_assetId;
-- (void).cxx_destruct;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithDictionary:(id)arg1 index:(long long)arg2;

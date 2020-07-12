@@ -23,6 +23,7 @@
     UIColor *_progressViewTintColor;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *progressViewTintColor; // @synthesize progressViewTintColor=_progressViewTintColor;
 @property(copy, nonatomic) UIColor *progressViewBackgroundColor; // @synthesize progressViewBackgroundColor=_progressViewBackgroundColor;
 @property(nonatomic) double bottomMargin; // @synthesize bottomMargin=_bottomMargin;
@@ -32,7 +33,6 @@
 @property(copy, nonatomic) GLUELabelStyle *textStyle; // @synthesize textStyle=_textStyle;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

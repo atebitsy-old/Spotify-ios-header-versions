@@ -15,8 +15,8 @@
     SPTCanvasTestManager *_testManager;
 }
 
-@property(readonly, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
 - (id)canvasModelForTrack:(id)arg1;
 - (id)canvasModelForTrackMetadata:(id)arg1;
 - (_Bool)isCanvasEnabledForTrackMetadata:(id)arg1;

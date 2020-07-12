@@ -13,8 +13,8 @@
     id <SPTLocalSettings> _localSettings;
 }
 
-@property(nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void)saveLastLocation:(id)arg1;
 - (id)loadLastLocation;
 - (id)initWithLocalSettings:(id)arg1;

@@ -14,9 +14,9 @@
     id <SPTFreeTierPlaylistModelEntity> _initialEntity;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModelEntity> initialEntity; // @synthesize initialEntity=_initialEntity;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
-- (void).cxx_destruct;
 - (id)initWithPlaylistModel:(id)arg1 initialEntity:(id)arg2;
 
 @end

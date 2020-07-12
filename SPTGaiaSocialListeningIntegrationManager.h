@@ -29,6 +29,7 @@
     UIViewController<SPTSocialListeningSessionViewController> *_controller;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIViewController<SPTSocialListeningSessionViewController> *controller; // @synthesize controller=_controller;
 @property(readonly, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevicesList; // @synthesize socialDevicesList=_socialDevicesList;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
@@ -40,7 +41,6 @@
 @property(copy, nonatomic) NSDictionary *exposedDevices; // @synthesize exposedDevices=_exposedDevices;
 @property(retain, nonatomic) NSURL *queuedJoinRequestURL; // @synthesize queuedJoinRequestURL=_queuedJoinRequestURL;
 @property(nonatomic) _Bool localDeviceIDHasBeenSet; // @synthesize localDeviceIDHasBeenSet=_localDeviceIDHasBeenSet;
-- (void).cxx_destruct;
 - (void)socialDeviceDidDisableSocialFeature:(id)arg1;
 - (void)socialDeviceDidEnableSocialFeature:(id)arg1;
 - (void)setPhysicalDeviceIDAndTriggerPendingJoin;

@@ -21,6 +21,7 @@
     NSArray *_cards;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *cards; // @synthesize cards=_cards;
 @property(readonly, nonatomic) NSURL *targetUri; // @synthesize targetUri=_targetUri;
 @property(readonly, nonatomic) NSURL *entityUri; // @synthesize entityUri=_entityUri;
@@ -28,7 +29,6 @@
 @property(readonly, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
 @property(readonly, nonatomic) NSURL *artistUri; // @synthesize artistUri=_artistUri;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

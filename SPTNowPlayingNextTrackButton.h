@@ -16,13 +16,13 @@
 }
 
 + (id)button;
+- (void).cxx_destruct;
 - (void)setIconColor:(id)arg1;
 - (id)iconColor;
 - (void)setIconSize:(struct CGSize)arg1;
 - (struct CGSize)iconSize;
 - (void)setIcon:(long long)arg1;
 - (long long)icon;
-- (void).cxx_destruct;
 - (id)accessibilityLabel;
 - (id)initWithFrame:(struct CGRect)arg1;
 

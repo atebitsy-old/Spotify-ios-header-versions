@@ -15,8 +15,8 @@
     UIView *_containerView;
 }
 
-@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
 - (id)initWithContainerView:(id)arg1;
 

@@ -18,10 +18,10 @@
     id <HUBComponent> _component;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <HUBComponent> component; // @synthesize component=_component;
 @property(readonly, nonatomic) UILongPressGestureRecognizer *longPressGestureRecognizer; // @synthesize longPressGestureRecognizer=_longPressGestureRecognizer;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (struct CGSize)preferredSizeForContainerViewSize:(struct CGSize)arg1;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;

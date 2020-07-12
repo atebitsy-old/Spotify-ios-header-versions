@@ -23,6 +23,7 @@
     NSLayoutConstraint *_buttonTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *buttonTrailingConstraint; // @synthesize buttonTrailingConstraint=_buttonTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *buttonLeadingConstraint; // @synthesize buttonLeadingConstraint=_buttonLeadingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *textBottomConstraint; // @synthesize textBottomConstraint=_textBottomConstraint;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) SPTSnackbarWithActionViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIButton<GLUEStyleable> *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) GLUELabel *textLabel; // @synthesize textLabel=_textLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)updateConstraintsValues;
 - (void)addLayoutConstraints;

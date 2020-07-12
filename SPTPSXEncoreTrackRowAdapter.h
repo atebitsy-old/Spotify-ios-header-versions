@@ -29,6 +29,7 @@
     id <GLUETheme> _theme;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature28SPTEncoreTrackRowModelHelper_> trackRowModelHelper; // @synthesize trackRowModelHelper=_trackRowModelHelper;
 @property(retain, nonatomic) id <SPTEncoreTrackRowFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) id <SPTPSXViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) id <SPTFormatListItemModel> track; // @synthesize track=_track;
 @property(nonatomic) __weak id <SPTPSXTrackRowDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (void)banBanButtonTapped:(id)arg1;
 - (void)unlikeWithSender:(id)arg1;

@@ -18,9 +18,9 @@
     id <SPTGaiaLockScreenControlsStateProvider> _lockscreenControlStateProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTGaiaLockScreenControlsStateProvider> lockscreenControlStateProvider; // @synthesize lockscreenControlStateProvider=_lockscreenControlStateProvider;
 @property(nonatomic) __weak id <SPTVolumeEventReceiver> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (unsigned long long)eventForLockScreenControlFlag:(_Bool)arg1;
 - (void)lockScreenControlsEnabledChanged:(_Bool)arg1;
 - (void)emitInitialState;

@@ -10,9 +10,9 @@
 
 @protocol SPTPlaylistRoute <NSObject>
 @property(readonly, nonatomic) _Bool isRouted;
-@property(retain, nonatomic) NSURL *readURI;
-@property(retain, nonatomic) NSURL *writeURI;
-@property(retain, nonatomic) NSURL *basePlaylistImageURI;
-@property(retain, nonatomic) NSURL *basePlaylistURI;
+@property(readonly, nonatomic) NSURL *readURI;
+@property(readonly, nonatomic) NSURL *writeURI;
+@property(readonly, nonatomic) NSURL *basePlaylistImageURI;
+@property(readonly, nonatomic) NSURL *basePlaylistURI;
 @end
 

@@ -19,12 +19,12 @@
     double _minFontSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double minFontSize; // @synthesize minFontSize=_minFontSize;
 @property(nonatomic) double hyphenationFontSizeThreshold; // @synthesize hyphenationFontSizeThreshold=_hyphenationFontSizeThreshold;
 @property(nonatomic) double singleLineFontSizeThreshold; // @synthesize singleLineFontSizeThreshold=_singleLineFontSizeThreshold;
 @property(copy, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(copy, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToCardTextViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

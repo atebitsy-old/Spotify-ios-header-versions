@@ -17,12 +17,12 @@
     CAGradientLayer *_bottomMaskLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *bottomMaskLayer; // @synthesize bottomMaskLayer=_bottomMaskLayer;
 @property(retain, nonatomic) CALayer *middleMaskLayer; // @synthesize middleMaskLayer=_middleMaskLayer;
 @property(retain, nonatomic) CAGradientLayer *topMaskLayer; // @synthesize topMaskLayer=_topMaskLayer;
 @property(nonatomic) double bottomMaskHeight; // @synthesize bottomMaskHeight=_bottomMaskHeight;
 @property(nonatomic) double topMaskHeight; // @synthesize topMaskHeight=_topMaskHeight;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

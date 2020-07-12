@@ -18,9 +18,9 @@
     struct UIEdgeInsets alignmentRectInsetsOverride;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTFreeTierEntityFeedbackButtonViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) struct UIEdgeInsets alignmentRectInsetsOverride; // @synthesize alignmentRectInsetsOverride;
-- (void).cxx_destruct;
 - (void)viewModel:(id)arg1 didUpdateState:(unsigned long long)arg2;
 - (id)iconColorForState:(unsigned long long)arg1;
 - (id)createImageForState:(unsigned long long)arg1;

@@ -14,9 +14,9 @@
     NSArray *_artists;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *artists; // @synthesize artists=_artists;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
-- (void).cxx_destruct;
 - (id)convertRoleTitle:(id)arg1;
 - (void)setValuesFromDictionary:(id)arg1;
 - (id)initWithRoleDictionary:(id)arg1;

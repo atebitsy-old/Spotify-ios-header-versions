@@ -22,12 +22,12 @@
     NSMutableSet *_recommendationComponents;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableSet *recommendationComponents; // @synthesize recommendationComponents=_recommendationComponents;
 @property(readonly, nonatomic) id <SPTHubImpressionLogger> impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(retain, nonatomic) HUBView *hubView; // @synthesize hubView=_hubView;
 @property(readonly, nonatomic) SPTHubViewModelProvider *hubViewModelProvider; // @synthesize hubViewModelProvider=_hubViewModelProvider;
 @property(readonly, nonatomic) id <SPTPodcastRecommendationsHubViewProvider> hubViewProvider; // @synthesize hubViewProvider=_hubViewProvider;
-- (void).cxx_destruct;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)superScrollViewDidScroll:(id)arg1;
 - (void)hubView:(id)arg1 componentViewDidDisappear:(id)arg2;

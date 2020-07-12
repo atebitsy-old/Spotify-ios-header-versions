@@ -16,8 +16,8 @@
     id <SPTEventSenderCore> _eventSenderCore;
 }
 
-@property(nonatomic) __weak id <SPTEventSenderCore> eventSenderCore; // @synthesize eventSenderCore=_eventSenderCore;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTEventSenderCore> eventSenderCore; // @synthesize eventSenderCore=_eventSenderCore;
 - (_Bool)sendEventWithName:(id)arg1 data:(id)arg2;
 
 // Remaining properties

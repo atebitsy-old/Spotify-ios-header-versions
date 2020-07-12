@@ -29,6 +29,7 @@
     NSMutableSet *_jobPool;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool initialRequest; // @synthesize initialRequest=_initialRequest;
 @property(retain, nonatomic) NSMutableSet *jobPool; // @synthesize jobPool=_jobPool;
 @property(nonatomic) struct SocialManagerObserver *social_manager_observer; // @synthesize social_manager_observer=_social_manager_observer;
@@ -43,7 +44,6 @@
 @property(nonatomic) long long facebookState; // @synthesize facebookState=_facebookState;
 @property(nonatomic) long long socialState; // @synthesize socialState=_socialState;
 @property(nonatomic) int socialDataState; // @synthesize socialDataState=_socialDataState;
-- (void).cxx_destruct;
 - (void)socialManagerObserver:(struct SocialManagerObserver *)arg1 socialUserDataDidChange:(const struct shared_ptr<spotify::social::SocialUserData> *)arg2;
 - (void)socialManagerObserver:(struct SocialManagerObserver *)arg1 didReceiveError:(int)arg2 description:(id)arg3;
 - (void)socialManagerObserver:(struct SocialManagerObserver *)arg1 didReceiveSocialEvent:(int)arg2;

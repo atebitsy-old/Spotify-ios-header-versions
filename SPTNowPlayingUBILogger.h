@@ -39,9 +39,9 @@
     SPTNowPlayingUBILoggerFactory *_ubiLoggerFactory;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNowPlayingUBILoggerFactory *ubiLoggerFactory; // @synthesize ubiLoggerFactory=_ubiLoggerFactory;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
-- (void).cxx_destruct;
 - (void)logSleepTimerButtonTapped;
 - (void)logShareButtonTapped;
 - (void)logSkip15SecondsBackwardTapped;

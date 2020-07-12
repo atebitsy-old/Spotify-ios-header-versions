@@ -18,10 +18,10 @@
     id <SPTThirdPartyDeepLinkService> _thirdPartyDeeplinkService;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTThirdPartyDeepLinkService> thirdPartyDeeplinkService; // @synthesize thirdPartyDeeplinkService=_thirdPartyDeeplinkService;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> enabledSignal; // @synthesize enabledSignal=_enabledSignal;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
-- (void).cxx_destruct;
 - (void)enabledSignalHasAssumedState:(long long)arg1;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupFeatureFlags;

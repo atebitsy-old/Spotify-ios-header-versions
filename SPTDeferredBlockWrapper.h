@@ -14,9 +14,9 @@
     NSString *_origin;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *origin; // @synthesize origin=_origin;
 @property(copy, nonatomic) CDUnknownBlockType block; // @synthesize block=_block;
-- (void).cxx_destruct;
 
 @end
 

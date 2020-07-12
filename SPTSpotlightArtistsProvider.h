@@ -22,16 +22,16 @@
     long long _numberOfWindowedRequests;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long numberOfWindowedRequests; // @synthesize numberOfWindowedRequests=_numberOfWindowedRequests;
 @property(nonatomic) long long currentWindowedRequest; // @synthesize currentWindowedRequest=_currentWindowedRequest;
 @property(retain, nonatomic) NSMutableArray *windowItems; // @synthesize windowItems=_windowItems;
 @property(retain, nonatomic) SPTSpotlightItemsImageLoader *imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;
 @property(nonatomic) __weak id <SPTSpotlightItemsProviderDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)itemsImageLoader:(id)arg1 didLoadImagesForItems:(id)arg2;
 - (void)windowItemsLoaded;
-- (void)prepareArtistsToBeIndexedWithResponse:(SPTCollectionPlatformDataLoaderResponse_f5c2288a *)arg1;
+- (void)prepareArtistsToBeIndexedWithResponse:(id)arg1;
 - (void)requestCurrentWindow;
 - (id)itemsIdentifier;
 - (void)provideItems;

@@ -22,6 +22,7 @@
     double _maxContentWidth;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double maxContentWidth; // @synthesize maxContentWidth=_maxContentWidth;
 @property(readonly, nonatomic) UILabel *textLabel; // @synthesize textLabel=_textLabel;
 @property(nonatomic) double footerHeight; // @synthesize footerHeight=_footerHeight;
@@ -29,7 +30,6 @@
 @property(nonatomic, getter=isFirstSection) _Bool firstSection; // @synthesize firstSection=_firstSection;
 @property(nonatomic) long long style; // @synthesize style=_style;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (double)height;
 - (void)layoutSubviews;
 @property(copy, nonatomic) NSString *text;

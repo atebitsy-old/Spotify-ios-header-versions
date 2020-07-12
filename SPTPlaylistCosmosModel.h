@@ -19,18 +19,18 @@
     CDUnknownBlockType _timeGetter;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType timeGetter; // @synthesize timeGetter=_timeGetter;
 @property(retain, nonatomic) id <SPTCosmosDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> dictionaryDataLoader; // @synthesize dictionaryDataLoader=_dictionaryDataLoader;
-- (void).cxx_destruct;
 - (id)handleRequestPlaylistViewForPlaylistURL:(id)arg1 subscribe:(_Bool)arg2 options:(id)arg3 minimumUpdateInterval:(double)arg4 withMetadataProtocols:(id)arg5 andTrackProtocols:(id)arg6 replyOnMainThread:(_Bool)arg7 completion:(CDUnknownBlockType)arg8 onError:(CDUnknownBlockType)arg9;
 - (void)offlinePlaylistsContainingItem:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updateDescriptionForPlaylistURL:(id)arg1 freeformDescription:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)synchronisePlaylistURLs:(id)arg1;
 - (void)synchronisePlaylistURL:(id)arg1;
-- (id)loggingParams;
 - (void)fetchPlayContextForPlaylistWithURL:(id)arg1 playlistOptions:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)playWithURL:(id)arg1 playOptions:(id)arg2 playlistOptions:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
+- (id)loggingParamsWithTimestamp:(id)arg1;
+- (void)playWithURL:(id)arg1 playOptions:(id)arg2 playlistOptions:(id)arg3 loggingParams:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (id)subscribePlaylistViewWithRecommendationsForPlaylistURL:(id)arg1 options:(id)arg2 withMetadataProtocols:(id)arg3 andTrackProtocols:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (id)subscribePlaylistViewForPlaylistURL:(id)arg1 options:(id)arg2 withMetadataProtocols:(id)arg3 andTrackProtocols:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (id)subscribeFolderItemsForFolderURL:(id)arg1 options:(id)arg2 withFolderPolicyProtocols:(id)arg3 withPlaylistPolicyProtocols:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
@@ -46,7 +46,7 @@
 - (void)fetchFolderMetadataForFolderURL:(id)arg1 withFolderPolicyProtocols:(id)arg2 completion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;
 - (void)fetchPlaylistTracksForPlaylistURL:(id)arg1 options:(id)arg2 withPolicyProtocols:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (void)fetchPlaylistMetadataForPlaylistURL:(id)arg1 options:(id)arg2 withPolicyProtocols:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
-- (struct SPTPlaylistPlatformDataLoaderResponse *)tracksResponseForData:(id)arg1 items:(id)arg2;
+- (id)tracksResponseForData:(id)arg1 items:(id)arg2;
 - (void)canReportAnnotationAbuseOnPlaylistURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)rowIdForURL:(id)arg1 inFolderURL:(id)arg2 flattenTree:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)rowIdForURL:(id)arg1 inFolderURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
@@ -71,6 +71,7 @@
 - (void)removeTrackURLs:(id)arg1 fromPlaylistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)moveTracksWithRowIds:(id)arg1 before:(_Bool)arg2 rowId:(id)arg3 fromPlaylistURL:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)removeTracksWithRowIds:(id)arg1 fromPlaylistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)addTrackURLs:(id)arg1 before:(_Bool)arg2 rowId:(id)arg3 toPlaylistURL:(id)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)addTrackURLs:(id)arg1 toPlaylistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)trackURLsForPlaylistURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)playlistContainsTrackURLs:(id)arg1 playlistURL:(id)arg2 completion:(CDUnknownBlockType)arg3;

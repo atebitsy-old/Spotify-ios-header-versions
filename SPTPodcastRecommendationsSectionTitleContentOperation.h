@@ -17,9 +17,9 @@
     NSString *_title;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithTitle:(id)arg1;
 

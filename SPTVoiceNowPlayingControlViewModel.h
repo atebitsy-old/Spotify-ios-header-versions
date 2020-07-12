@@ -24,6 +24,7 @@
     id <SPTVoiceLoggerProtocol> _logger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTVoiceLoggerProtocol> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTVoiceSession> voiceSession; // @synthesize voiceSession=_voiceSession;
 @property(readonly, nonatomic) id <SPTVoicePlayerEventsListener> playerEventsListener; // @synthesize playerEventsListener=_playerEventsListener;
@@ -35,7 +36,6 @@
 @property(nonatomic) _Bool isPausedState; // @synthesize isPausedState=_isPausedState;
 @property(nonatomic) long long placeholderIcon; // @synthesize placeholderIcon=_placeholderIcon;
 @property(nonatomic) __weak id <SPTVoiceNowPlayingControlViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateViewModelStateWithVoiceCommandIntent:(long long)arg1;
 - (void)pausePlayback;
 - (void)resumePlayback;

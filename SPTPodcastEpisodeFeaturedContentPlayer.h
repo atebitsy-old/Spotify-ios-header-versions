@@ -20,16 +20,17 @@
     id <SPTEpisodeSegmentsEntity> _currentPlayingEntity;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsEntity> currentPlayingEntity; // @synthesize currentPlayingEntity=_currentPlayingEntity;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsModel> entitiesModel; // @synthesize entitiesModel=_entitiesModel;
 @property(retain, nonatomic) SPTPlayerState *currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updatePlayerState:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
 - (_Bool)isCurrentEpisodePlaying;
 - (int)currentlyPlayingEntityIndex;
+- (void)updatePlayerState:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)updateAndPlayTrackForEntity:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)userDidSelectEntity:(int)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)refreshPlayerWithEntities:(id)arg1 completion:(CDUnknownBlockType)arg2;

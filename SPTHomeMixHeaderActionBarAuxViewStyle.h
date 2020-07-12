@@ -18,11 +18,11 @@
     double _verticalButtonLabelSpacing;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double verticalButtonLabelSpacing; // @synthesize verticalButtonLabelSpacing=_verticalButtonLabelSpacing;
 @property(copy, nonatomic) GLUELabelStyle *labelStyleSelected; // @synthesize labelStyleSelected=_labelStyleSelected;
 @property(copy, nonatomic) GLUELabelStyle *labelStyleNormal; // @synthesize labelStyleNormal=_labelStyleNormal;
 @property(copy, nonatomic) NSString *debugName; // @synthesize debugName=_debugName;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

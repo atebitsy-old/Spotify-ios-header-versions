@@ -60,6 +60,7 @@
     id <SPTQueuePlaybackRestrictionHandler> _playbackRestrictionHandler;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTQueuePlaybackRestrictionHandler> playbackRestrictionHandler; // @synthesize playbackRestrictionHandler=_playbackRestrictionHandler;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) GLUEEntityRowStyle *queueStyle; // @synthesize queueStyle=_queueStyle;
@@ -97,7 +98,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) __weak id <SPTQueueViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <SPTQueueViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 - (void)setNavBarViewController:(id)arg1;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;

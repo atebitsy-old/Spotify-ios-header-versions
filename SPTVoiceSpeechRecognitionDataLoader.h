@@ -37,6 +37,7 @@
     double _isFinalIntervalTimeout;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double isFinalIntervalTimeout; // @synthesize isFinalIntervalTimeout=_isFinalIntervalTimeout;
 @property(nonatomic) double noResultIntervalTimeout; // @synthesize noResultIntervalTimeout=_noResultIntervalTimeout;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -56,7 +57,6 @@
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) _Bool didSendAudioData; // @synthesize didSendAudioData=_didSendAudioData;
 @property(nonatomic) __weak id <SPTVoiceSpeechRecognitionDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)outputStream:(id)arg1 didFailWithError:(id)arg2;
 - (_Bool)dataLoaderShouldSupportChunks:(id)arg1;
 - (void)dataLoader:(id)arg1 needsNewBodyStream:(CDUnknownBlockType)arg2 forRequest:(id)arg3;

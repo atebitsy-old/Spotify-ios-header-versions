@@ -6,7 +6,9 @@
 
 #import "_TtC21FollowFeedFeatureImpl18ContextMenuHandler.h"
 
-@interface _TtC21FollowFeedFeatureImpl18ContextMenuHandler (FollowFeedFeatureImpl)
+#import "SPTContextMenuPresenterDelegate-Protocol.h"
+
+@interface _TtC21FollowFeedFeatureImpl18ContextMenuHandler (FollowFeedFeatureImpl) <SPTContextMenuPresenterDelegate>
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (void)didSelectContextMenuAction:(id)arg1;
 @end

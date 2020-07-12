@@ -23,13 +23,13 @@
     id <GLUEImageLoader> _glueImageLoader;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(retain, nonatomic) UIViewController *currentlyVisibleViewController; // @synthesize currentlyVisibleViewController=_currentlyVisibleViewController;
 @property(retain, nonatomic) SPTVoiceNowPlayingViewController *voiceNowPlayingViewController; // @synthesize voiceNowPlayingViewController=_voiceNowPlayingViewController;
 @property(retain, nonatomic) SPTVoiceErrorViewController *errorViewController; // @synthesize errorViewController=_errorViewController;
 @property(retain, nonatomic) SPTVoiceListeningViewController *listeningViewController; // @synthesize listeningViewController=_listeningViewController;
 @property(readonly, nonatomic) SPTVoiceSessionViewModel *sessionViewModel; // @synthesize sessionViewModel=_sessionViewModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic) long long presentationStyle;

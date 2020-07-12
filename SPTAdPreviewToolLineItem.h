@@ -20,13 +20,13 @@
     NSArray *_creatives;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *creatives; // @synthesize creatives=_creatives;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) NSDate *modifiedDate; // @synthesize modifiedDate=_modifiedDate;
 @property(readonly, nonatomic) NSDate *startDate; // @synthesize startDate=_startDate;
 @property(readonly, nonatomic) long long identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithName:(id)arg1 identifier:(long long)arg2 startDate:(id)arg3 modifiedDate:(id)arg4 creatives:(id)arg5;
 
 // Remaining properties

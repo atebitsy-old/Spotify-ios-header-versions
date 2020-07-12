@@ -19,10 +19,10 @@
     id <SPTPageLoadStateHandler> _handler;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPageLoadStateHandler> handler; // @synthesize handler=_handler;
 @property(retain, nonatomic) id <SPTCollectionArtistModel> currentModel; // @synthesize currentModel=_currentModel;
 @property(copy, nonatomic) CDUnknownBlockType modelFactory; // @synthesize modelFactory=_modelFactory;
-- (void).cxx_destruct;
 - (void)artistModelOfflineStateChanged:(id)arg1;
 - (void)artistModelDidUpdateSessionOfflineStatus:(id)arg1;
 - (void)artistModelDidUpdatePlayingRow:(id)arg1;

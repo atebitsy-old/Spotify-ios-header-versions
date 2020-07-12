@@ -15,9 +15,9 @@
     NSString *_featureIdentifier;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)provideSkipDialogLogger;
 - (id)provideArtistSearchViewLoggerWithViewLogger:(id)arg1 sessionId:(id)arg2;
 - (id)provideArtistPickerViewLoggerWithViewLogger:(id)arg1 sessionId:(id)arg2;

@@ -27,6 +27,7 @@
 }
 
 + (id)filterRuleWithName:(id)arg1 query:(id)arg2;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionSubscriptionToken; // @synthesize collectionSubscriptionToken=_collectionSubscriptionToken;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) NSNumber *downloadFiltersAvailable; // @synthesize downloadFiltersAvailable=_downloadFiltersAvailable;
@@ -38,7 +39,6 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTYourLibraryMusicContentFilterDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)storeCurrenResponseData;
 - (void)storeDownloadFiltersAvailability;

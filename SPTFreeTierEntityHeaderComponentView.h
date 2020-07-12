@@ -21,9 +21,9 @@
 
 + (unsigned long long)headerViewStyleFromComponentModel:(id)arg1;
 + (double)preferredViewHeightForDisplayingModel:(id)arg1 theme:(id)arg2;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierEntityHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;

@@ -21,11 +21,11 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) UIColor *gradientEndColor; // @synthesize gradientEndColor=_gradientEndColor;
 @property(copy, nonatomic) UIColor *gradientStartColor; // @synthesize gradientStartColor=_gradientStartColor;
 @property(readonly, nonatomic) SPTBrowseUICardView *cardView; // @synthesize cardView=_cardView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)sendSelectionEvent;
 - (_Bool)shouldDisplayImageForBoundsSize:(struct CGSize)arg1 model:(id)arg2;
 - (_Bool)shouldDisplayImageForContainerSize:(struct CGSize)arg1 model:(id)arg2;

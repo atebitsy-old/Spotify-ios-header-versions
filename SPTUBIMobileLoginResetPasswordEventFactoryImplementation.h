@@ -16,8 +16,8 @@
 }
 
 + (id)factory;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)unrecoverableErrorMessageFactoryWithUri:(id)arg1;
 - (id)recoverableErrorMessageFactoryWithUri:(id)arg1;
 - (id)successMessageFactoryWithUri:(id)arg1;

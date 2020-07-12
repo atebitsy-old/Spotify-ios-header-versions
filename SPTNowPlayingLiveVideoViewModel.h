@@ -17,9 +17,9 @@
     id <SPTPlayer> _player;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 - (void)notifyObserversUsingBlock:(CDUnknownBlockType)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)updateWithPlayerState:(id)arg1;

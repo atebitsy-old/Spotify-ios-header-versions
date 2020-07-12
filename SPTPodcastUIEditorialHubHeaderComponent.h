@@ -16,8 +16,8 @@
     id <GLUETheme> _theme;
 }
 
-@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;

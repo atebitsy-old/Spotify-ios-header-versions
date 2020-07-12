@@ -25,6 +25,7 @@
     id <SPTLocalFilesPlaylistsDataSource> _playlistsDataSource;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLocalFilesPlaylistsDataSource> playlistsDataSource; // @synthesize playlistsDataSource=_playlistsDataSource;
 @property(retain, nonatomic) id <SPTLocalFilesTracksDataSource> tracksDataSource; // @synthesize tracksDataSource=_tracksDataSource;
 @property(retain, nonatomic) SPTLocalFilesImportModelItem *root; // @synthesize root=_root;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) NSArray *albums; // @synthesize albums=_albums;
 @property(retain, nonatomic) NSArray *playlists; // @synthesize playlists=_playlists;
 @property(nonatomic) _Bool isLoaded; // @synthesize isLoaded=_isLoaded;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *selectedPlaylists;
 @property(readonly, nonatomic) NSArray *selectedSongs;
 @property(readonly, nonatomic) _Bool canImport;

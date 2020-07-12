@@ -17,8 +17,8 @@
     id <HUBComponentChildDelegate> _childDelegate;
 }
 
-@property(nonatomic) __weak id <HUBComponentChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <HUBComponentChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
 - (id)createViewWithFrame:(struct CGRect)arg1;

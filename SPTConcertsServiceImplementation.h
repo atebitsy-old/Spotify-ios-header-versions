@@ -38,6 +38,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNowPlayingScrollDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(copy, nonatomic) NSSet *pageRegistrations; // @synthesize pageRegistrations=_pageRegistrations;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -59,7 +60,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (id)providePlayer;
 - (id)provideArtistConcertsPageForURI:(id)arg1 context:(id)arg2;
 - (void)registerAllArtistConcertsPage;

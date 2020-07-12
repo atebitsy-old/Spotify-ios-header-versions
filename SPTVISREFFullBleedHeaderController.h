@@ -32,6 +32,7 @@
 }
 
 + (struct CGSize)preferredHeaderSizeForContainerViewSize:(struct CGSize)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) CDStruct_5a28e70a backButtonFadeOutAlphaRange; // @synthesize backButtonFadeOutAlphaRange=_backButtonFadeOutAlphaRange;
 @property(nonatomic) CDStruct_5a28e70a backButtonGlyphProtectionAlphaRange; // @synthesize backButtonGlyphProtectionAlphaRange=_backButtonGlyphProtectionAlphaRange;
 @property(nonatomic) CDStruct_5a28e70a backButtonGlyphOffsetRange; // @synthesize backButtonGlyphOffsetRange=_backButtonGlyphOffsetRange;
@@ -48,7 +49,6 @@
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (void)navigationBarHeightDidChange:(double)arg1;
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)setImage:(id)arg1;

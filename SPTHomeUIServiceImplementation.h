@@ -8,8 +8,8 @@
 
 #import "SPTHomeUIService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTHomeUIRemoteConfigPropertyResolver;
-@protocol SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService;
+@class NSString, SPTAllocationContext, SPTHomeUIFeatureProperties;
+@protocol SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService;
 
 @interface SPTHomeUIServiceImplementation : NSObject <SPTHomeUIService>
 {
@@ -19,24 +19,22 @@
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     id <SPTSessionService> _sessionService;
     id <SPTUBIService> _ubiService;
-    SPTHomeUIRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTHomeUIRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
+- (void).cxx_destruct;
+@property(retain, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
-@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideHomeComponentLayoutManager;
 @property(readonly, nonatomic) id <SPTHomeUIComponentFactory> componentFactory;
 - (void)configureWithServices:(id)arg1;

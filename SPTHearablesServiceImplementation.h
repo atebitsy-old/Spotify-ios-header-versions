@@ -27,6 +27,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHearablesInterfaceController *interfaceController; // @synthesize interfaceController=_interfaceController;
 @property(retain, nonatomic) SPTHearablesLegacySerialProtocolApiAdapter *serialProtocolAdapter; // @synthesize serialProtocolAdapter=_serialProtocolAdapter;
 @property(retain, nonatomic) SPTHearablesPlaybackController *playbackController; // @synthesize playbackController=_playbackController;
@@ -38,7 +39,6 @@
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatformService> integrationPlatformService; // @synthesize integrationPlatformService=_integrationPlatformService;
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryService; // @synthesize accessoryService=_accessoryService;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHearablesFeatureProperties *remoteProperties;
 - (void)disableConnections;
 - (void)enableConnections;

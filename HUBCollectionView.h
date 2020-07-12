@@ -18,9 +18,9 @@
     id <UICollectionViewDelegate> _collectionViewDelegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <UICollectionViewDelegate> collectionViewDelegate; // @synthesize collectionViewDelegate=_collectionViewDelegate;
 @property(nonatomic) __weak id <HUBScrollViewDelegate> scrollViewDelegate; // @synthesize scrollViewDelegate=_scrollViewDelegate;
-- (void).cxx_destruct;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;

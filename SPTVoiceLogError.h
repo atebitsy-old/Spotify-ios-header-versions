@@ -14,9 +14,9 @@
     NSString *_errorText;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *errorText; // @synthesize errorText=_errorText;
 @property(nonatomic) unsigned long long errorType; // @synthesize errorType=_errorType;
-- (void).cxx_destruct;
 - (id)initWithErrorType:(unsigned long long)arg1 errorText:(id)arg2;
 
 @end

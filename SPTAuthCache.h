@@ -13,8 +13,8 @@
     id <SPTKeychainManager> _keychainManager;
 }
 
-@property(retain, nonatomic) id <SPTKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
 - (void)deleteKeychainEntities;
 - (id)keychainEntities;
 - (void)saveEntitiesToKeychain:(id)arg1;

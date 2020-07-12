@@ -17,11 +17,11 @@
     SPTSettingsLogger *_logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSettingsLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) NSArray *rows; // @synthesize rows=_rows;
-- (void).cxx_destruct;
 - (_Bool)shouldAddLicensingAndSCTARows;
 - (void)addLongPressGestureToCell:(id)arg1;
 - (id)cells;

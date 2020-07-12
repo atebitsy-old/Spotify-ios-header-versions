@@ -16,9 +16,9 @@
     GLUEButton *_followButton;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEButton *followButton; // @synthesize followButton=_followButton;
 @property(readonly, nonatomic) SPTStorylinesAttributionView *attributionView; // @synthesize attributionView=_attributionView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (void)setupFollowButton;

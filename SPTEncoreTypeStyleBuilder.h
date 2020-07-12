@@ -19,12 +19,12 @@
     CDStruct_b9b47a9c _lineHeightRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool upperCaseLayout; // @synthesize upperCaseLayout=_upperCaseLayout;
 @property(nonatomic) CDStruct_b9b47a9c lineHeightRange; // @synthesize lineHeightRange=_lineHeightRange;
 @property(nonatomic) CDStruct_b9b47a9c trackingRange; // @synthesize trackingRange=_trackingRange;
 @property(nonatomic) CDStruct_b9b47a9c fontSizeRange; // @synthesize fontSizeRange=_fontSizeRange;
 @property(readonly, copy, nonatomic) UIFont *font; // @synthesize font=_font;
-- (void).cxx_destruct;
 - (id)withUpperCaseLayout:(_Bool)arg1;
 - (id)withLineHeight:(double)arg1;
 - (id)withLineHeightRange:(CDStruct_b9b47a9c)arg1;

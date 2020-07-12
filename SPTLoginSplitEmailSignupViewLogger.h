@@ -20,12 +20,12 @@
     SPTLoginErrorLogger *_errorLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(copy, nonatomic) NSString *buttonIdentifier; // @synthesize buttonIdentifier=_buttonIdentifier;
 @property(copy, nonatomic) NSString *fieldIdentifier; // @synthesize fieldIdentifier=_fieldIdentifier;
 @property(copy, nonatomic) NSString *screenIdentifier; // @synthesize screenIdentifier=_screenIdentifier;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)logUserDidTapSubmitButton;
 - (void)logUserDidSeeView;
 - (void)logUserDidInteractWithField:(id)arg1;

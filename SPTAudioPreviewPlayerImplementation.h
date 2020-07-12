@@ -29,6 +29,7 @@
     SPTAudioSessionActivator *_audioSessionActivator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAudioSessionActivator *audioSessionActivator; // @synthesize audioSessionActivator=_audioSessionActivator;
 @property(nonatomic, getter=isPlayerPreviouslyPlaying) _Bool playerPreviouslyPlaying; // @synthesize playerPreviouslyPlaying=_playerPreviouslyPlaying;
 @property(retain, nonatomic) SPTAudioPreview *preview; // @synthesize preview=_preview;
@@ -41,7 +42,6 @@
 @property(retain, nonatomic) NSURL *trackURI; // @synthesize trackURI=_trackURI;
 @property(retain, nonatomic) NSString *trackIdentifier; // @synthesize trackIdentifier=_trackIdentifier;
 @property(nonatomic) long long origin; // @synthesize origin=_origin;
-- (void).cxx_destruct;
 - (void)audioSampleDidChangeVolume:(id)arg1;
 - (void)audioSampleDidStopPlaying:(id)arg1;
 - (void)audioSampleDidStartPlaying:(id)arg1;

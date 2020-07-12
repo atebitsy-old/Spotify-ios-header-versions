@@ -12,7 +12,7 @@
 #import "SPTAppProtocolSubscriptionDelegate-Protocol.h"
 
 @class NSDictionary, NSMutableDictionary, NSString, SPSession, SPTAccessory, SPTAppProtocolCallForwarder, SPTAppProtocolCallMessageHandler, SPTAppProtocolMainHandler, SPTAppProtocolSessionMessageHandler;
-@protocol SPTAccessoryStateManager, SPTAppProtocolConnection, SPTAppProtocolConnectionHandlerDelegate, SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTPreferences, SPTProductState;
+@protocol SPTAccessoryActionLogger, SPTAccessoryStateManager, SPTAppProtocolConnection, SPTAppProtocolConnectionHandlerDelegate, SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTPreferences, SPTProductState;
 
 @interface SPTAppProtocolConnectionHandler : NSObject <SPTAppProtocolConnectionOutput, SPTAppProtocolConnectionDelegate, SPTAppProtocolSubscriptionDelegate, SPTAppProtocolSessionHandler>
 {
@@ -38,6 +38,7 @@
     id <SPTAppProtocolConnection> _connection;
     id <SPTAppProtocolConnectionHandlerDelegate> _delegate;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
+    id <SPTAccessoryActionLogger> _actionLogger;
     id <SPTAccessoryStateManager> _accessoryManager;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     SPTAccessory *_currentAccesory;
@@ -46,6 +47,7 @@
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(readonly, nonatomic) __weak id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
@@ -53,6 +55,7 @@
 @property(nonatomic) _Bool hasValidSession; // @synthesize hasValidSession=_hasValidSession;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryManager; // @synthesize accessoryManager=_accessoryManager;
+@property(nonatomic) __weak id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak id <SPTAppProtocolConnectionHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <SPTAppProtocolConnection> connection; // @synthesize connection=_connection;
@@ -74,7 +77,6 @@
 @property(readonly, nonatomic) SPTAppProtocolSessionMessageHandler *sessionMessageHandler; // @synthesize sessionMessageHandler=_sessionMessageHandler;
 @property(readonly, nonatomic) SPTAppProtocolMainHandler *mainMessageHandler; // @synthesize mainMessageHandler=_mainMessageHandler;
 @property(nonatomic) unsigned long long sessionID; // @synthesize sessionID=_sessionID;
-- (void).cxx_destruct;
 - (id)transportTypeForHelloMessage:(id)arg1;
 - (void)logSessionEnd;
 - (void)logSessionStart;
@@ -87,7 +89,7 @@
 - (void)connection:(id)arg1 didCloseByRequest:(_Bool)arg2;
 - (void)connection:(id)arg1 didReceiveMessage:(id)arg2 userInfo:(id)arg3;
 - (int)nextPublicationID;
-- (id)initWithConnection:(id)arg1 accessoryStateManager:(id)arg2 networkConnectivityController:(id)arg3 externalIntegrationPlatform:(id)arg4 authenticators:(id)arg5 requiresAuthentication:(_Bool)arg6 imageLoaderFactory:(id)arg7 connectManager:(id)arg8 currentSession:(id)arg9 productState:(id)arg10 preferences:(id)arg11 appProtocolForwarder:(id)arg12 debugLog:(id)arg13;
+- (id)initWithConnection:(id)arg1 accessoryStateManager:(id)arg2 networkConnectivityController:(id)arg3 externalIntegrationPlatform:(id)arg4 authenticators:(id)arg5 requiresAuthentication:(_Bool)arg6 imageLoaderFactory:(id)arg7 connectManager:(id)arg8 currentSession:(id)arg9 productState:(id)arg10 preferences:(id)arg11 appProtocolForwarder:(id)arg12 actionLogger:(id)arg13 debugLog:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

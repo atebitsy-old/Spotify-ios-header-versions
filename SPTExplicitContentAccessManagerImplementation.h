@@ -27,6 +27,7 @@
     SPTObserverManager *_lockedStateObserverManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *lockedStateObserverManager; // @synthesize lockedStateObserverManager=_lockedStateObserverManager;
 @property(readonly, nonatomic) SPTObserverManager *enabledStateObserverManager; // @synthesize enabledStateObserverManager=_enabledStateObserverManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic, getter=isExplicitContentLocked) _Bool explicitContentLocked; // @synthesize explicitContentLocked=_explicitContentLocked;
 @property(nonatomic, getter=isExplicitContentRestricted) _Bool explicitContentRestricted; // @synthesize explicitContentRestricted=_explicitContentRestricted;
-- (void).cxx_destruct;
 - (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)presentPreventedContentDialogForContentURI:(id)arg1 contextURI:(id)arg2;

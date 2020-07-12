@@ -17,9 +17,9 @@
     id <SPTFreeTierPlaylistFollowViewModel> _viewModel;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistFollowViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak GLUEButton<VISREFActionRowButtonViewModelDelegate> *delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)viewModelDidUpdate;
 - (id)createAccessibilityLabelWithFollowedState:(_Bool)arg1;
 - (id)createImageWithFollowedState:(_Bool)arg1;

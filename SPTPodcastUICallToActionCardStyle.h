@@ -31,6 +31,7 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool useSmallMetrics; // @synthesize useSmallMetrics=_useSmallMetrics;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) double highlightedAlpha; // @synthesize highlightedAlpha=_highlightedAlpha;
@@ -48,7 +49,6 @@
 @property(readonly, nonatomic) double imageViewCornerRadius; // @synthesize imageViewCornerRadius=_imageViewCornerRadius;
 @property(readonly, nonatomic) double imageViewBottomExtension; // @synthesize imageViewBottomExtension=_imageViewBottomExtension;
 @property(readonly, nonatomic) UIColor *imageViewBackgroundColor; // @synthesize imageViewBackgroundColor=_imageViewBackgroundColor;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabelStyle *actionTextLabelStyle;
 @property(readonly, nonatomic) GLUELabelStyle *titleLabelStyle;
 - (id)initWithSize:(struct CGSize)arg1 theme:(id)arg2;

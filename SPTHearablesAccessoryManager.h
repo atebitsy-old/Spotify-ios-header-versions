@@ -13,8 +13,8 @@
     id <SPTAccessoryStateManager> _stateManager;
 }
 
-@property(readonly, nonatomic) id <SPTAccessoryStateManager> stateManager; // @synthesize stateManager=_stateManager;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAccessoryStateManager> stateManager; // @synthesize stateManager=_stateManager;
 - (void)removeAccessory:(id)arg1;
 - (id)addAccessory:(id)arg1;
 - (id)initWithStateManager:(id)arg1;

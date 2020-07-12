@@ -13,8 +13,8 @@
     UIView *_containerView;
 }
 
-@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 - (double)topEdgeOffset;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)layoutSubviews;

@@ -19,12 +19,12 @@
     NSLayoutConstraint *_stackViewTrailingConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *stackViewTrailingConstraint; // @synthesize stackViewTrailingConstraint=_stackViewTrailingConstraint;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) GLUEAccessoryIconButton *shareCodeButton; // @synthesize shareCodeButton=_shareCodeButton;
 @property(readonly, nonatomic) UIView *separatorView; // @synthesize separatorView=_separatorView;
 @property(readonly, nonatomic) GLUEImageView *scannableImageView; // @synthesize scannableImageView=_scannableImageView;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setTrailingMarginHidden:(_Bool)arg1;
 - (void)addViewConstraints;

@@ -20,12 +20,12 @@
     NSURL *_URI;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(retain, nonatomic) SPTPodcastTopicsEndpointFactory *endpointFactory; // @synthesize endpointFactory=_endpointFactory;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSArray *categories; // @synthesize categories=_categories;
 @property(nonatomic) __weak id <SPTPodcastTopicCategoryViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)loadData;

@@ -18,11 +18,11 @@
     NSArray *_lineItems;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *lineItems; // @synthesize lineItems=_lineItems;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(nonatomic) long long identifier; // @synthesize identifier=_identifier;
 @property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
 - (id)initWithIdentifier:(long long)arg1 lineItems:(id)arg2;
 
 // Remaining properties

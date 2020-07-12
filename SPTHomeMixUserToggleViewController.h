@@ -21,13 +21,13 @@
     SPTHomeMixUserToggleCellConfigurator *_cellConfigurator;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeMixUserToggleCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SPTHomeMixFamilyPileConfigurator *facePileConfigurator; // @synthesize facePileConfigurator=_facePileConfigurator;
 @property(retain, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTHomeMixUserToggleViewModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)didReceiveMemoryWarning;

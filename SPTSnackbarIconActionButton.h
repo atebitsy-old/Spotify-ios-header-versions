@@ -18,11 +18,11 @@
     struct CGSize _iconSize;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldRefreshStyle; // @synthesize shouldRefreshStyle=_shouldRefreshStyle;
 @property(nonatomic) struct CGSize iconSize; // @synthesize iconSize=_iconSize;
 @property(nonatomic) long long icon; // @synthesize icon=_icon;
 @property(retain, nonatomic) SPTSnackbarIconActionButtonStyle *style; // @synthesize style=_style;
-- (void).cxx_destruct;
 - (void)setIcon:(long long)arg1 withSize:(struct CGSize)arg2;
 - (void)glue_applyStyle:(id)arg1;
 - (id)init;

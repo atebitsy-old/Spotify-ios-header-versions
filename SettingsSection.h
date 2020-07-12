@@ -15,8 +15,8 @@
 }
 
 + (_Bool)shouldDisplayInSettingsViewController:(id)arg1;
-@property(readonly, nonatomic) __weak SettingsViewController *settingsViewController; // @synthesize settingsViewController=_settingsViewController;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak SettingsViewController *settingsViewController; // @synthesize settingsViewController=_settingsViewController;
 @property(readonly, nonatomic) __weak id <SPTContainerUIService> containerUIService;
 - (id)footerText;
 - (id)headerText;

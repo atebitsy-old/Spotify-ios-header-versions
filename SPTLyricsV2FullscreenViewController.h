@@ -37,6 +37,7 @@
     CDUnknownBlockType _lyricsViewFrameCallback;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool wasVocalRemovalEnabledAtLeastOnce; // @synthesize wasVocalRemovalEnabledAtLeastOnce=_wasVocalRemovalEnabledAtLeastOnce;
 @property(copy, nonatomic) CDUnknownBlockType lyricsViewFrameCallback; // @synthesize lyricsViewFrameCallback=_lyricsViewFrameCallback;
 @property(copy, nonatomic) CDUnknownBlockType cardViewFrameCallback; // @synthesize cardViewFrameCallback=_cardViewFrameCallback;
@@ -54,7 +55,6 @@
 @property(readonly, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
 @property(readonly, nonatomic) SPTLyricsV2Model *lyricsModel; // @synthesize lyricsModel=_lyricsModel;
 @property(readonly, nonatomic) NSString *cardTitle; // @synthesize cardTitle=_cardTitle;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)vocalRemovalFeedbackBannerPresenterDidTapCloseButton:(id)arg1;

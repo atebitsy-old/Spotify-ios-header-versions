@@ -16,9 +16,9 @@
     id <SPTHubInteractionLogger> _interactionLogger;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> interactionLogger; // @synthesize interactionLogger=_interactionLogger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (void).cxx_destruct;
 - (id)playOptions;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithPlayer:(id)arg1 interactionLogger:(id)arg2;

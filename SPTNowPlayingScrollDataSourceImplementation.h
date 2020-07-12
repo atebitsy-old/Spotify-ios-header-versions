@@ -18,10 +18,10 @@
     id <SPTNowPlayingTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSOrderedSet *activeProviders; // @synthesize activeProviders=_activeProviders;
 @property(readonly, nonatomic) NSMutableDictionary *providersDictionary; // @synthesize providersDictionary=_providersDictionary;
-- (void).cxx_destruct;
 - (id)providerAtIndex:(unsigned long long)arg1;
 - (unsigned long long)numberOfProviders;
 - (_Bool)updateProvidersForTrack:(id)arg1 compltionBlock:(CDUnknownBlockType)arg2;

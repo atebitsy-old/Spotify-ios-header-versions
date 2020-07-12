@@ -24,6 +24,7 @@
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *sptTheme; // @synthesize sptTheme=_sptTheme;
 @property(retain, nonatomic) NSLayoutConstraint *indexLabelWidthConstraint; // @synthesize indexLabelWidthConstraint=_indexLabelWidthConstraint;
 @property(readonly, nonatomic) HUGSCustomViewControl *control; // @synthesize control=_control;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) GLUEEntityRowView *rowView; // @synthesize rowView=_rowView;
 @property(readonly, nonatomic) GLUELabel *indexLabel; // @synthesize indexLabel=_indexLabel;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (double)maximumLabelWidth;
 - (double)preferedLeadingAccessoriesWidth;
 - (struct CGSize)imageViewSize;

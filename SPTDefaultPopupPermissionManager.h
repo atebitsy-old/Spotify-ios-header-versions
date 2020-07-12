@@ -15,8 +15,8 @@
     NSMutableSet *_popupsDisallowedReasons;
 }
 
-@property(retain, nonatomic) NSMutableSet *popupsDisallowedReasons; // @synthesize popupsDisallowedReasons=_popupsDisallowedReasons;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableSet *popupsDisallowedReasons; // @synthesize popupsDisallowedReasons=_popupsDisallowedReasons;
 - (_Bool)popupsAllowed;
 - (void)invalidatePopupsDisallowedReason:(id)arg1;
 - (void)disallowPopupsWithReason:(id)arg1;

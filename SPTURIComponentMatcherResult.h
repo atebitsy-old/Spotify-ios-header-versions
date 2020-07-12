@@ -14,9 +14,9 @@
     NSDictionary *_variables;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *variables; // @synthesize variables=_variables;
 @property(readonly, nonatomic) id payload; // @synthesize payload=_payload;
-- (void).cxx_destruct;
 - (id)initWithPayload:(id)arg1 variables:(id)arg2;
 
 @end

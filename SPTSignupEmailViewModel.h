@@ -24,6 +24,7 @@
     SPTDynamicSignupFlowController *_flowController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(copy, nonatomic) NSString *lastValidEmail; // @synthesize lastValidEmail=_lastValidEmail;
 @property(retain, nonatomic) SPTSignupDisplayNameSuggestionDataLoader *displayNameDataLoader; // @synthesize displayNameDataLoader=_displayNameDataLoader;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(nonatomic) __weak id <SPTSignupEmailViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
-- (void).cxx_destruct;
 - (void)presentPopupWithError:(id)arg1 email:(id)arg2;
 - (void)navigateToNextScreenWithEmail:(id)arg1;
 - (void)validateAndOpenNextScreen:(id)arg1;

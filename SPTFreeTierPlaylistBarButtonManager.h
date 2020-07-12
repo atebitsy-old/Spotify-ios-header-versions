@@ -23,6 +23,7 @@
 }
 
 + (id)fixedSpaceItem;
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIBarButtonItem *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(nonatomic, getter=isSuspended) _Bool suspended; // @synthesize suspended=_suspended;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistViewModel> viewModel; // @synthesize viewModel=_viewModel;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(readonly, nonatomic) __weak id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistBarButtonManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)contextMenuButtonTapped:(id)arg1;
 - (void)barButtonItemManagerProvidersDidChange:(id)arg1;
 - (void)setupNavigationBarButtons:(_Bool)arg1;

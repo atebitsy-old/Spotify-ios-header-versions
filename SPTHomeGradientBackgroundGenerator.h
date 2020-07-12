@@ -19,17 +19,16 @@
     NSURL *_imageURI;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *imageURI; // @synthesize imageURI=_imageURI;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <HUBImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <SPTHomeGradientBackgroundGeneratorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)extractColorFromImage:(id)arg1 fallbackColor:(id)arg2;
 - (void)imageLoader:(id)arg1 didFailLoadingImageForURL:(id)arg2 error:(id)arg3;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3;
 - (void)setGradientColor:(id)arg1;
 - (void)createGradientWithImageURL:(id)arg1;
-- (void)createGradientWithModel:(id)arg1;
 - (id)findImageURIInComponentModels:(id)arg1;
 - (void)updateHomeBackgroundGradientWithViewModel:(id)arg1;
 - (id)initWithTheme:(id)arg1 imageLoaderFactory:(id)arg2;

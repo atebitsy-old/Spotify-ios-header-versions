@@ -30,6 +30,7 @@
 }
 
 + (id)concertsWithArray:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *concertEntityViewURI; // @synthesize concertEntityViewURI=_concertEntityViewURI;
 @property(readonly, nonatomic) NSString *concertID; // @synthesize concertID=_concertID;
 @property(readonly, nonatomic) NSURL *partnerURL; // @synthesize partnerURL=_partnerURL;
@@ -44,7 +45,6 @@
 @property(copy, nonatomic) NSString *fileId; // @synthesize fileId=_fileId;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) id <SPTFreeTierArtistImage> headerImage; // @synthesize headerImage=_headerImage;
-- (void).cxx_destruct;
 - (id)initWithDictionary:(id)arg1;
 
 // Remaining properties

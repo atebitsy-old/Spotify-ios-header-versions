@@ -27,6 +27,7 @@
     NSString *_contentCacheKey;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic, getter=isObserving) _Bool observing; // @synthesize observing=_observing;
 @property(copy, nonatomic) NSString *contentCacheKey; // @synthesize contentCacheKey=_contentCacheKey;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
@@ -37,7 +38,6 @@
 @property(readonly, nonatomic) id <SPTHubRemoteContentOperationURLResolver> contentURLResolver; // @synthesize contentURLResolver=_contentURLResolver;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)processResponseBody:(id)arg1 success:(CDUnknownBlockType)arg2;
 - (void)finishAfterPerformingOperation:(_Bool)arg1;
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;

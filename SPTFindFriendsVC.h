@@ -37,6 +37,7 @@
     GLUEEntityRowStyle *_entityRowUserStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEEntityRowStyle *entityRowUserStyle; // @synthesize entityRowUserStyle=_entityRowUserStyle;
 @property(retain, nonatomic) GLUEEntityRowStyle *entityRowArtistStyle; // @synthesize entityRowArtistStyle=_entityRowArtistStyle;
 @property(retain, nonatomic) SPTFindFriendsTheme *theme; // @synthesize theme=_theme;
@@ -54,7 +55,6 @@
 @property(retain, nonatomic) SPTFindFriendsLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTFindFriendsViewModel *viewModel; // @synthesize viewModel=_viewModel;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (_Bool)searchBarShouldEndEditing:(id)arg1;

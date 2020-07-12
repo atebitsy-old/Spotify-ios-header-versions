@@ -17,9 +17,9 @@
     NSMutableDictionary *_sortedItems;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableDictionary *sortedItems; // @synthesize sortedItems=_sortedItems;
 @property(readonly, nonatomic) id <SPTCollectionSortingEntityManagerHandler> handler; // @synthesize handler=_handler;
-- (void).cxx_destruct;
 - (void)trimAndSave;
 - (void)loadLocalSorting;
 - (void)setSortColumn:(unsigned long long)arg1 forURL:(id)arg2;

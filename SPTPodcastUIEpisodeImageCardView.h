@@ -25,6 +25,7 @@
     UIProgressView *_progressView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) GLUEImageView *episodeImageView; // @synthesize episodeImageView=_episodeImageView;
 @property(retain, nonatomic) UIView *thumbnailContainerView; // @synthesize thumbnailContainerView=_thumbnailContainerView;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) GLUELabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) id <SPTPodcastUIEpisodeImageCardStyle> podcastStyle; // @synthesize podcastStyle=_podcastStyle;
-- (void).cxx_destruct;
 - (id)gradientStyleForBackgroundColor:(id)arg1;
 - (void)applyGradientStyleForBackgroundColor:(id)arg1;
 - (id)textColorOnBackgroundColor:(id)arg1;

@@ -27,6 +27,7 @@
     NSLayoutConstraint *_collectionViewHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool didSwipe; // @synthesize didSwipe=_didSwipe;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
@@ -36,7 +37,6 @@
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(retain, nonatomic) NSURL *artistURI; // @synthesize artistURI=_artistURI;
 @property(copy, nonatomic) NSArray *galleryImages; // @synthesize galleryImages=_galleryImages;
-- (void).cxx_destruct;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;

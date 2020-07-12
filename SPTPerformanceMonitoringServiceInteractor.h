@@ -18,10 +18,10 @@
     NSObject<OS_os_log> *_instrumentationLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_os_log> *instrumentationLog; // @synthesize instrumentationLog=_instrumentationLog;
 @property(readonly, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(readonly, nonatomic) SPTDefaultServiceInstanceInteractor *defaultInteractor; // @synthesize defaultInteractor=_defaultInteractor;
-- (void).cxx_destruct;
 - (void)notifyServiceThatIdleStateWasReached:(id)arg1 scope:(id)arg2;
 - (void)notifyServiceThatInitialViewDidAppear:(id)arg1 scope:(id)arg2;
 - (void)unloadService:(id)arg1 scope:(id)arg2;

@@ -16,8 +16,8 @@
     id <GLUETheme> _theme;
 }
 
-@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void)unregisterPodcastComponentsFromComponentRegistry:(id)arg1;
 - (void)registerPodcastComponentsToComponentRegistry:(id)arg1;
 - (id)provideBrowseImageHeaderComponents;

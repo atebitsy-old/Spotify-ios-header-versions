@@ -6,17 +6,17 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSDictionary, NSObject, NSString;
-@protocol OS_dispatch_queue, SPTProductStateObserver;
+@class NSDictionary, NSString, OS_dispatch_queue;
+@protocol SPTProductStateObserver;
 
 @protocol SPTProductState <NSObject>
 @property(nonatomic) __weak NSDictionary *overrides;
 @property(nonatomic) __weak NSDictionary *originalValues;
-@property(readonly, nonatomic) __weak NSDictionary *values;
+@property(nonatomic, readonly) NSDictionary *values;
 - (void)writeStringToBackend:(NSString *)arg1 forKey:(NSString *)arg2;
 - (NSString *)objectForKeyedSubscript:(NSString *)arg1;
 - (NSString *)stringForKey:(NSString *)arg1;
 - (void)removeObserver:(id <SPTProductStateObserver>)arg1;
-- (void)addObserver:(id <SPTProductStateObserver>)arg1 on:(NSObject<OS_dispatch_queue> *)arg2;
+- (void)addObserver:(id <SPTProductStateObserver>)arg1 on:(OS_dispatch_queue *)arg2;
 @end
 

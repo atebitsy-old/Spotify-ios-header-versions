@@ -25,6 +25,7 @@
     id _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(nonatomic) unsigned long long level; // @synthesize level=_level;
@@ -34,7 +35,6 @@
 @property(retain, nonatomic) NSDictionary *searchResult; // @synthesize searchResult=_searchResult;
 @property(readonly, nonatomic) id <SPTExternalIntegrationSearchController> searchController; // @synthesize searchController=_searchController;
 @property(readonly, nonatomic) __weak id <SPTBMWListScreenDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)sectionContentForGroupIndex:(long long)arg1;
 - (id)contentForRow:(long long)arg1 groupIndex:(long long)arg2;
 - (id)imageForRow:(long long)arg1 groupIndex:(long long)arg2 preferredSize:(struct CGSize)arg3;

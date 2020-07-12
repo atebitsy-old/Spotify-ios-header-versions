@@ -20,12 +20,12 @@
     NSArray *_layoutConstraints;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) UIStackView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) SPTExternalIntegrationDriverDistractionLockscreenDismissalView *dismissalView; // @synthesize dismissalView=_dismissalView;
 @property(readonly, nonatomic) SPTExternalIntegrationDriverDistractionLockscreenLogotypesView *logotypesView; // @synthesize logotypesView=_logotypesView;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (id)createLayout;
 - (void)removeViewConstraints;

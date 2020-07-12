@@ -41,6 +41,7 @@
     struct UIEdgeInsets _tableViewLayoutMargins;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double countrySelectorTitleLeadingMargin; // @synthesize countrySelectorTitleLeadingMargin=_countrySelectorTitleLeadingMargin;
 @property(nonatomic) _Bool tableViewScrollEnabled; // @synthesize tableViewScrollEnabled=_tableViewScrollEnabled;
 @property(nonatomic) struct UIEdgeInsets tableViewLayoutMargins; // @synthesize tableViewLayoutMargins=_tableViewLayoutMargins;
@@ -68,7 +69,6 @@
 @property(copy, nonatomic) GLUELabelStyle *helpLabelStyle; // @synthesize helpLabelStyle=_helpLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

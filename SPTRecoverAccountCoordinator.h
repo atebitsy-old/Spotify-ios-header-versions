@@ -15,10 +15,10 @@
     NSString *_usernameOrEmail;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *usernameOrEmail; // @synthesize usernameOrEmail=_usernameOrEmail;
 @property(copy, nonatomic) NSString *passwordResetToken; // @synthesize passwordResetToken=_passwordResetToken;
 @property(readonly, nonatomic) SPTRecoverAccountConfiguration *configuration; // @synthesize configuration=_configuration;
-- (void).cxx_destruct;
 - (id)provideSetNewPasswordViewController;
 - (void)presentSetPasswordDialogWithToken:(id)arg1;
 - (void)registerSetNewPasswordPage;

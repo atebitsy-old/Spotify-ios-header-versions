@@ -20,10 +20,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSlateBuilderProvider *builderProvider; // @synthesize builderProvider=_builderProvider;
 @property(retain, nonatomic) SPTSlatePresenter *slatePresenter; // @synthesize slatePresenter=_slatePresenter;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (void).cxx_destruct;
 - (id)provideSlateManager:(id)arg1;
 - (id)provideSlateManager;
 - (id)provideSlateBuilderProvider;

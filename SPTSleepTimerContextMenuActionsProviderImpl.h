@@ -15,8 +15,8 @@
     SPTSleepTimerControllerImpl *_sleepTimerControllerImpl;
 }
 
-@property(retain, nonatomic) SPTSleepTimerControllerImpl *sleepTimerControllerImpl; // @synthesize sleepTimerControllerImpl=_sleepTimerControllerImpl;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTSleepTimerControllerImpl *sleepTimerControllerImpl; // @synthesize sleepTimerControllerImpl=_sleepTimerControllerImpl;
 - (_Bool)isTimerActivated;
 - (id)contextMenuTitle;
 - (id)immediateTask:(id)arg1;

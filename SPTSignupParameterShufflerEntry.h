@@ -16,11 +16,11 @@
     long long _index;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long index; // @synthesize index=_index;
 @property(copy, nonatomic) NSString *secret; // @synthesize secret=_secret;
 @property(copy, nonatomic) NSString *value; // @synthesize value=_value;
 @property(copy, nonatomic) NSString *key; // @synthesize key=_key;
-- (void).cxx_destruct;
 - (long long)compareUsingSecretAndThenIndex:(id)arg1;
 - (long long)compareKey:(id)arg1;
 - (void)updateIndex:(long long)arg1 andSecret:(id)arg2;

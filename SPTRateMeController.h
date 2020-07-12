@@ -24,6 +24,7 @@
     NSArray *_partnerNavigationIntegrations;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *partnerNavigationIntegrations; // @synthesize partnerNavigationIntegrations=_partnerNavigationIntegrations;
 @property(readonly, nonatomic) id <SPTAccountProductInformationController> productInformationController; // @synthesize productInformationController=_productInformationController;
 @property(nonatomic, getter=isShowingAlert) _Bool showingAlert; // @synthesize showingAlert=_showingAlert;
@@ -33,7 +34,6 @@
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-- (void).cxx_destruct;
 - (void)applicationWillResignActiveNotification:(id)arg1;
 - (void)applicationDidBecomeActiveNotification:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

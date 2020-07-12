@@ -13,8 +13,8 @@
     SPTNowPlayingModel *_nowPlayingModel;
 }
 
-@property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 - (id)initWithNowPlayingModel:(id)arg1;
 
 @end

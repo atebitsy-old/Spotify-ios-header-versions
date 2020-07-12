@@ -37,6 +37,7 @@
     UINavigationBar *_darkNavigationBar;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool useDarkBackground; // @synthesize useDarkBackground=_useDarkBackground;
 @property(retain, nonatomic) UINavigationBar *darkNavigationBar; // @synthesize darkNavigationBar=_darkNavigationBar;
 @property(nonatomic) _Bool pullingDown; // @synthesize pullingDown=_pullingDown;
@@ -58,7 +59,6 @@
 @property(retain, nonatomic) SPTFilePickerFilterContextMenuButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
 @property(nonatomic, getter=isActive) _Bool active; // @synthesize active=_active;
 @property(nonatomic) __weak id <SPTFilePickerFilterBarDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)cancel;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;

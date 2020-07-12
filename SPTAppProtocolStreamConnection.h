@@ -25,6 +25,7 @@
     NSMutableData *_writeBuffer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableData *writeBuffer; // @synthesize writeBuffer=_writeBuffer;
 @property(retain, nonatomic) NSMutableData *readBuffer; // @synthesize readBuffer=_readBuffer;
 @property(nonatomic) unsigned int curBytesToGo; // @synthesize curBytesToGo=_curBytesToGo;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTAppProtocolConnectionDelegate> connectionDelegate; // @synthesize connectionDelegate=_connectionDelegate;
 @property(nonatomic) __weak id <SPTAppProtocolConnectionOutput> messageReceiver; // @synthesize messageReceiver=_messageReceiver;
 @property(readonly, getter=isOpen) _Bool open; // @synthesize open=_open;
-- (void).cxx_destruct;
 - (void)addMessageToOutputBuffer:(id)arg1;
 - (void)writeToOutputStream;
 - (void)readFromInputStream;

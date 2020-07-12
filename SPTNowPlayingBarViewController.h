@@ -33,6 +33,7 @@
     UIView *_bottomSeparatorView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *bottomSeparatorView; // @synthesize bottomSeparatorView=_bottomSeparatorView;
 @property(retain, nonatomic) UIView *leadingView; // @synthesize leadingView=_leadingView;
 @property(retain, nonatomic) UIView *contentView; // @synthesize contentView=_contentView;
@@ -47,7 +48,6 @@
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 @property(readonly, nonatomic) SPTNowPlayingBarModel *model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (struct CGSize)preferredContentSize;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;

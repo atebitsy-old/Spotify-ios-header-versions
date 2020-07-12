@@ -20,13 +20,13 @@
     NSLayoutConstraint *_iconWidthConstraint;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *iconWidthConstraint; // @synthesize iconWidthConstraint=_iconWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *iconHeightConstraint; // @synthesize iconHeightConstraint=_iconHeightConstraint;
 @property(retain, nonatomic) SPTSortingFilteringRuleTableViewCellStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) UIImageView *iconView; // @synthesize iconView=_iconView;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(nonatomic) _Bool ruleSelected; // @synthesize ruleSelected=_ruleSelected;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 @property(copy, nonatomic) NSString *ruleTitle;

@@ -17,9 +17,9 @@
     id <SPTHomeMixTestManagerDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTHomeMixTestManagerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> enabledSignal; // @synthesize enabledSignal=_enabledSignal;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupSignals:(id)arg1;
 - (void)dealloc;

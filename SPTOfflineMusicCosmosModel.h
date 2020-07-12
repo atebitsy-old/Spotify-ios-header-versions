@@ -31,6 +31,7 @@
 }
 
 + (id)requestURL;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> requestToken; // @synthesize requestToken=_requestToken;
 @property(copy, nonatomic) NSDictionary *decoratedItems; // @synthesize decoratedItems=_decoratedItems;
 @property(copy, nonatomic) NSArray *offlineResponseItems; // @synthesize offlineResponseItems=_offlineResponseItems;
@@ -45,7 +46,6 @@
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 @property(nonatomic) __weak id <SPTOfflineContentModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)additionalSortingReadyToSort:(id)arg1;
 - (void)additionalSorting:(id)arg1 error:(id)arg2;
 - (void)handleError:(id)arg1 withContext:(id)arg2;

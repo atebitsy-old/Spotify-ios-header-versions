@@ -16,8 +16,8 @@
     id <SPTCosmosDataLoaderRequestToken> _token;
 }
 
-@property(readonly, nonatomic) id <SPTCosmosDataLoaderRequestToken> token; // @synthesize token=_token;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTCosmosDataLoaderRequestToken> token; // @synthesize token=_token;
 - (void)cancel;
 - (id)initWithToken:(id)arg1;
 

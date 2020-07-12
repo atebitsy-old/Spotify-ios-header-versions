@@ -10,10 +10,10 @@
 @protocol SPTSponsoredContextViewModelDelegate;
 
 @protocol SPTSponsoredContextViewModel <NSObject>
-@property(readonly, nonatomic) NSString *sponsoredContextAccessibilityHint;
-@property(readonly, nonatomic) NSString *sponsoredContextAccessibilityLabel;
-@property(readonly, nonatomic) NSString *sponsoredMessage;
-@property(readonly, nonatomic) UIImage *sponsoredImage;
+@property(nonatomic, readonly) NSString *sponsoredContextAccessibilityHint;
+@property(nonatomic, readonly) NSString *sponsoredContextAccessibilityLabel;
+@property(nonatomic, readonly) NSString *sponsoredMessage;
+@property(nonatomic, readonly) UIImage *sponsoredImage;
 @property(nonatomic) __weak id <SPTSponsoredContextViewModelDelegate> delegate;
 - (void)sponsoredContextTapped:(id)arg1;
 - (void)logImpression;

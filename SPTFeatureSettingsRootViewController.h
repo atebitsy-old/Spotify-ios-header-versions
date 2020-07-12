@@ -23,6 +23,7 @@
     NSArray *_filteredChildren;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *filteredChildren; // @synthesize filteredChildren=_filteredChildren;
 @property(retain, nonatomic) SPTSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(retain, nonatomic) id <SPTBannerPresentationManagerTicket> bannerTicket; // @synthesize bannerTicket=_bannerTicket;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(readonly, nonatomic) id <SettingsRegistry> settingsRegistry; // @synthesize settingsRegistry=_settingsRegistry;
-- (void).cxx_destruct;
 - (void)searchBarCancelButtonClicked:(id)arg1;
 - (void)searchBar:(id)arg1 textDidChange:(id)arg2;
 - (void)searchBarTextDidBeginEditing:(id)arg1;

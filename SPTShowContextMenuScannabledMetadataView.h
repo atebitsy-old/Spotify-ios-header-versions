@@ -38,6 +38,7 @@
     NSLayoutConstraint *_descriptionTextMaxHeightConstraint;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool scannablesEnabled; // @synthesize scannablesEnabled=_scannablesEnabled;
 @property(retain, nonatomic) NSLayoutConstraint *descriptionTextMaxHeightConstraint; // @synthesize descriptionTextMaxHeightConstraint=_descriptionTextMaxHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *subtitleAccessoryViewLeftConstraint; // @synthesize subtitleAccessoryViewLeftConstraint=_subtitleAccessoryViewLeftConstraint;
@@ -61,7 +62,6 @@
 @property(copy, nonatomic) NSString *longDescription; // @synthesize longDescription=_longDescription;
 @property(copy, nonatomic) NSString *imageMetadataTitle; // @synthesize imageMetadataTitle=_imageMetadataTitle;
 @property(nonatomic) __weak id <SPTShowContextMenuMetadataViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dealloc;
 - (_Bool)descriptionTextViewCanBeExpanded;
 - (double)textViewTextHeight:(id)arg1 width:(double)arg2;

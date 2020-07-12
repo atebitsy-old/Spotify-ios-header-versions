@@ -17,9 +17,9 @@
     NSMutableDictionary *_componentImageLoadingContexts;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *componentImageLoadingContexts; // @synthesize componentImageLoadingContexts=_componentImageLoadingContexts;
 @property(readonly, nonatomic) id <HUBImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didFailLoadingImageForURL:(id)arg2 error:(id)arg3;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3;
 - (void)handleComponentImageFailedWithError:(id)arg1 forURL:(id)arg2 context:(id)arg3;

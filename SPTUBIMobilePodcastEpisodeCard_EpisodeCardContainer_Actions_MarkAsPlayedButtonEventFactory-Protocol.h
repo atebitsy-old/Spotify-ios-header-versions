@@ -6,10 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSURL;
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainer_Actions_MarkAsPlayedButtonEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitUiHide;
+- (id <SPTUBIInteractionEvent>)hitMarkAsUnplayedWithItemUnplayed:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)hitMarkAsPlayedWithItemPlayed:(NSURL *)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

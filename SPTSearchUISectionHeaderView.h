@@ -17,10 +17,10 @@
 
 + (double)heightForTitle:(id)arg1 style:(id)arg2 maxWidth:(double)arg3;
 + (id)attributesForStyle:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTSearchUISectionHeaderViewStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) SPTSearchUIMarginView *marginView; // @synthesize marginView=_marginView;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *title;
 - (void)updateAppearance;
 - (void)setUpAccessibility;

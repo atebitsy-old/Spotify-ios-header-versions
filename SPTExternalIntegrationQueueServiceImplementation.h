@@ -19,9 +19,9 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationPlaybackServiceImplementation *playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTExternalIntegrationQueueController> sharedController; // @synthesize sharedController=_sharedController;
 - (id)provideQueueController;
 - (void)configureWithServices:(id)arg1;

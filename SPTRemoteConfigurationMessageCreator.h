@@ -16,11 +16,11 @@
     NSString *_platform;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *platform; // @synthesize platform=_platform;
 @property(readonly, nonatomic) NSString *installationID; // @synthesize installationID=_installationID;
 @property(readonly, nonatomic) NSString *version; // @synthesize version=_version;
 @property(readonly, nonatomic) NSString *clientID; // @synthesize clientID=_clientID;
-- (void).cxx_destruct;
 - (id)wrapProtobufMessage:(id)arg1;
 - (id)payloadForConfigurationApplied:(id)arg1;
 - (id)payloadForDefaultConfigurationApplied:(id)arg1;

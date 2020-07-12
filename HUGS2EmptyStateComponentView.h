@@ -17,9 +17,9 @@
     GLUEEmptyStateView *_emptyStateView;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEEmptyStateView *emptyStateView; // @synthesize emptyStateView=_emptyStateView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)applyThemeLayout;
 - (void)applyStyleWithName:(id)arg1;
 - (id)styleNameFromModel:(id)arg1;

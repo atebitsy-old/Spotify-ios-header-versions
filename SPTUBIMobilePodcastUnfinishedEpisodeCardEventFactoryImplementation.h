@@ -16,8 +16,8 @@
 }
 
 + (id)factoryWithPageUri:(id)arg1;
-@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)unfinishedEpisodeCardContainerFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)_location;
 - (id)initWithPageUri:(id)arg1;

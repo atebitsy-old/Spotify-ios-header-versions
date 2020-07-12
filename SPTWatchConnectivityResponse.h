@@ -21,13 +21,13 @@
 }
 
 + (id)responseWithRequestUUID:(id)arg1 body:(id)arg2 headers:(id)arg3 error:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSDictionary *body; // @synthesize body=_body;
 @property(retain, nonatomic) NSDictionary *responseHeaders; // @synthesize responseHeaders=_responseHeaders;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(retain, nonatomic) SPTWatchConnectivityRequest *request; // @synthesize request=_request;
 @property(retain, nonatomic) NSString *requestUUID; // @synthesize requestUUID=_requestUUID;
 @property(readonly, nonatomic) NSString *UUID; // @synthesize UUID=_UUID;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSDictionary *dictionary;
 - (id)initWithDictionary:(id)arg1;

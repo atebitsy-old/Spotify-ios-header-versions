@@ -13,8 +13,8 @@
     id <SPTAccountTrialDeferredController> _deferredTrialController;
 }
 
-@property(readonly, nonatomic) id <SPTAccountTrialDeferredController> deferredTrialController; // @synthesize deferredTrialController=_deferredTrialController;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAccountTrialDeferredController> deferredTrialController; // @synthesize deferredTrialController=_deferredTrialController;
 - (void)startTrialComplete;
 - (void)trialEligibilityStateDidChange;
 - (void)start;

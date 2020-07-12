@@ -15,8 +15,8 @@
     SPTShareLogger *_shareLogger;
 }
 
-@property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 - (id)createShareDragDelegateWithBlock:(CDUnknownBlockType)arg1 logContext:(id)arg2;
 - (id)initWithShareLogger:(id)arg1;
 

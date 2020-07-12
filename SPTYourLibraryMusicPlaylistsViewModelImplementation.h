@@ -30,6 +30,7 @@
     SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
 @property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
 @property(nonatomic) _Bool textFilteringMode; // @synthesize textFilteringMode=_textFilteringMode;
@@ -43,7 +44,6 @@
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicPlaylistsViewModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;
 - (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedFilterRule:(id)arg2;

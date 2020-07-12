@@ -28,10 +28,10 @@
 + (id)attributedSubtitleForModel:(id)arg1 theme:(id)arg2;
 + (id)attributedTitleForModel:(id)arg1 theme:(id)arg2 textAlignment:(long long)arg3 type:(unsigned long long)arg4;
 + (struct CGSize)preferredSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3 type:(unsigned long long)arg4;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUICardView *cardView; // @synthesize cardView=_cardView;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)sendSelectionEvent;
 - (id)defaultHomeCardStyleForModel:(id)arg1;
 - (double)maxCardViewWidthForContainerViewSize:(struct CGSize)arg1;

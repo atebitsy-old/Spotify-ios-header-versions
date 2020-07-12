@@ -17,11 +17,11 @@
     SPTPremiumDestinationHubManagerConfiguration *_configuration;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationHubManagerConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
-- (void).cxx_destruct;
 - (id)provideViewControllerForURL:(id)arg1 referrerIdentifier:(id)arg2 viewModelProvider:(id)arg3 reloadSignalSource:(id)arg4;
 - (id)createCommandDispatcherForURL:(id)arg1 referrerIdentifier:(id)arg2 interactionLogger:(id)arg3 reloadSignalSource:(id)arg4;
 - (id)createViewModelProviderWithContentOperations:(id)arg1;

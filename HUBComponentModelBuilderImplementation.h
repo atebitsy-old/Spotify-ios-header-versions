@@ -45,6 +45,7 @@
 }
 
 + (id)buildComponentModelsUsingBuilders:(id)arg1 identifierOrder:(id)arg2 parent:(id)arg3;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *childBuildersByGroupIdentifier; // @synthesize childBuildersByGroupIdentifier=_childBuildersByGroupIdentifier;
 @property(readonly, nonatomic) NSMutableArray *childIdentifierOrder; // @synthesize childIdentifierOrder=_childIdentifierOrder;
 @property(readonly, nonatomic) NSMutableDictionary *childBuilders; // @synthesize childBuilders=_childBuilders;
@@ -72,7 +73,6 @@
 @property(copy, nonatomic) NSNumber *preferredIndex; // @synthesize preferredIndex=_preferredIndex;
 @property(readonly, copy, nonatomic) NSString *modelIdentifier; // @synthesize modelIdentifier=_modelIdentifier;
 @property(nonatomic) __weak id <HUBComponentModelBuilderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)componentModelBuilder:(id)arg1 groupIdentifierDidChange:(id)arg2 oldGroupIdentifier:(id)arg3;
 - (id)buildIconForPlaceholder:(_Bool)arg1;
 - (id)getOrCreateBuilderForChildWithIdentifier:(id)arg1;

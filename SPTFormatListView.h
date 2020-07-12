@@ -13,8 +13,8 @@
     SPTTableView *_tableView;
 }
 
-@property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 - (id)init;
 
 @end

@@ -21,11 +21,11 @@
 
 + (id)recentlyPlayedPolicy;
 + (id)recentlyPlayedRequestURL;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *recentlyPlayedResponseItems; // @synthesize recentlyPlayedResponseItems=_recentlyPlayedResponseItems;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> recentlyPlayedRequestToken; // @synthesize recentlyPlayedRequestToken=_recentlyPlayedRequestToken;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 @property(nonatomic) __weak id <SPTOfflineAdditionalSortingDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (id)decoratedURLFromRecentlyPlayedItem:(id)arg1 decoratedItemsDictionary:(id)arg2;
 - (id)applySortingToItems:(id)arg1 decoratedItemsDictionary:(id)arg2;

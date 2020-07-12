@@ -17,9 +17,9 @@
     id <SPTAlertController> _alertController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(retain, nonatomic) id <SPTIAPController> iapController; // @synthesize iapController=_iapController;
-- (void).cxx_destruct;
 - (id)featureSettingsPresentation:(id)arg1 cellForRow:(unsigned long long)arg2;
 - (void)featureSettingsPresentation:(id)arg1 didSelectRow:(unsigned long long)arg2;
 - (unsigned long long)numberOfRowsForFeatureSettingsItem:(id)arg1;

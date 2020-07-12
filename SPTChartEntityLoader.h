@@ -17,9 +17,9 @@
     id <SPTChartEntityLoaderNetworkAdapter> _networkAdapter;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTChartEntityLoaderNetworkAdapter> networkAdapter; // @synthesize networkAdapter=_networkAdapter;
 @property(nonatomic) __weak id <SPTChartEntityLoaderDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)chartEntityLoaderNetworkAdapter:(id)arg1 didEncounterError:(id)arg2 forURL:(id)arg3;
 - (void)chartEntityLoaderNetworkAdapter:(id)arg1 didLoadData:(id)arg2 forURL:(id)arg3;
 - (void)loadDataForEndpoint:(id)arg1 argument:(id)arg2;

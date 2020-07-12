@@ -17,11 +17,11 @@
     CADisplayLink *_displayLink;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak CADisplayLink *displayLink; // @synthesize displayLink=_displayLink;
 @property(copy, nonatomic) UIColor *targetColor; // @synthesize targetColor=_targetColor;
 @property(copy, nonatomic) UIColor *currentColor; // @synthesize currentColor=_currentColor;
 @property(nonatomic) __weak id <SPTSearchPlatformColorInterpolatorDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)transitionToColor:(id)arg1;
 - (void)transitionToColor:(id)arg1 duration:(double)arg2;
 - (void)dealloc;

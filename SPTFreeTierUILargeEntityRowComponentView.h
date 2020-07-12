@@ -21,12 +21,12 @@
     GLUEEntityRowStyle *_style;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) GLUEEntityRowStyle *style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <HUGSStyleOverrider> styleOverrider; // @synthesize styleOverrider=_styleOverrider;
 @property(readonly, nonatomic) HUGSCustomViewControl *rowViewControl; // @synthesize rowViewControl=_rowViewControl;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)didPress;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;

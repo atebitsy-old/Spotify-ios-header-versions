@@ -19,11 +19,11 @@
     unsigned long long _maxItemsCount;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) unsigned long long maxItemsCount; // @synthesize maxItemsCount=_maxItemsCount;
 @property(readonly, copy, nonatomic) NSString *storageKeyPrefix; // @synthesize storageKeyPrefix=_storageKeyPrefix;
 @property(readonly, nonatomic) NSMapTable *dataSources; // @synthesize dataSources=_dataSources;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-- (void).cxx_destruct;
 - (id)provideDataSourceForGroupID:(id)arg1;
 - (id)initWithLocalSettings:(id)arg1 storageKeyPrefix:(id)arg2 maxItemsCount:(unsigned long long)arg3;
 

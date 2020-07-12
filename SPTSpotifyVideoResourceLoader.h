@@ -28,6 +28,7 @@
     SPTSpotifyVideoHLSDataFactory *_hlsDataFactory;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSpotifyVideoHLSDataFactory *hlsDataFactory; // @synthesize hlsDataFactory=_hlsDataFactory;
 @property(retain, nonatomic) SPTVideoApplicationStateObservable *appStateObservable; // @synthesize appStateObservable=_appStateObservable;
 @property(retain, nonatomic) SPTVideoManifestResourceLoader *manifestResourceLoader; // @synthesize manifestResourceLoader=_manifestResourceLoader;
@@ -40,7 +41,6 @@
 @property(nonatomic) unsigned long long connectionMode; // @synthesize connectionMode;
 @property(readonly, nonatomic) NSURL *lastCDN; // @synthesize lastCDN=_lastCDN;
 @property(nonatomic) _Bool shouldHandleLoadingRequests; // @synthesize shouldHandleLoadingRequests=_shouldHandleLoadingRequests;
-- (void).cxx_destruct;
 - (_Bool)backgroundPlayPlusIsActive;
 - (void)didChangeBackgroundState:(_Bool)arg1;
 - (void)willResignActive;

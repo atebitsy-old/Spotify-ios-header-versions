@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTNowPlayingAuxiliaryActionsHandlerImplementation, SPTNowPlayingLogger, SPTNowPlayingModeViewControllerRegistryImplementation, SPTNowPlayingModel, SPTStatefulPlayer, SPTTheme;
-@protocol SPTGaiaDevicesAvailableViewProvider, SPTLinkDispatcher, SPTLocalSettings, SPTNowPlayingPlaybackActionsHandler, SPTNowPlayingTestManager, SPTPlayer, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
+@protocol SPTEncoreDownloadButtonFactory, SPTGaiaDevicesAvailableViewProvider, SPTLinkDispatcher, SPTLocalSettings, SPTNowPlayingPlaybackActionsHandler, SPTNowPlayingTestManager, SPTOfflineMixDownloadManager, SPTOfflineMixTestManager, SPTPlayer, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
 @interface SPTNowPlayingSideBarViewControllerFactory : NSObject
 {
@@ -24,8 +24,15 @@
     SPTStatefulPlayer *_statefulPlayer;
     id <SPTGaiaDevicesAvailableViewProvider> _devicesAvailableViewProvider;
     id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
+    id <SPTOfflineMixDownloadManager> _downloadManager;
+    id <SPTEncoreDownloadButtonFactory> _downloadButtonFactory;
+    id <SPTOfflineMixTestManager> _offlineMixTestManager;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTOfflineMixTestManager> offlineMixTestManager; // @synthesize offlineMixTestManager=_offlineMixTestManager;
+@property(retain, nonatomic) id <SPTEncoreDownloadButtonFactory> downloadButtonFactory; // @synthesize downloadButtonFactory=_downloadButtonFactory;
+@property(retain, nonatomic) id <SPTOfflineMixDownloadManager> downloadManager; // @synthesize downloadManager=_downloadManager;
 @property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(retain, nonatomic) id <SPTGaiaDevicesAvailableViewProvider> devicesAvailableViewProvider; // @synthesize devicesAvailableViewProvider=_devicesAvailableViewProvider;
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
@@ -39,7 +46,6 @@
 @property(retain, nonatomic) SPTNowPlayingAuxiliaryActionsHandlerImplementation *auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(retain, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 @property(retain, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
-- (void).cxx_destruct;
 - (id)provideConnectButtonViewController;
 - (id)createDurationUnitViewModel;
 - (id)createInformationUnitViewModelForPodcast:(_Bool)arg1;
@@ -48,7 +54,7 @@
 - (id)providePlaybackControlsViewController;
 - (id)providePodcastInformationViewController;
 - (id)provideInformationViewController;
-- (id)initWithNowPlayingModel:(id)arg1 nowPlayingLogger:(id)arg2 auxiliaryActionsHandler:(id)arg3 playbackActionsHandler:(id)arg4 linkDispatcher:(id)arg5 testManager:(id)arg6 theme:(id)arg7 localSettings:(id)arg8 player:(id)arg9 statetfulPlayer:(id)arg10 devicesAvailableViewProvider:(id)arg11 responsiveShuffleOnboardingController:(id)arg12;
+- (id)initWithNowPlayingModel:(id)arg1 nowPlayingLogger:(id)arg2 auxiliaryActionsHandler:(id)arg3 playbackActionsHandler:(id)arg4 linkDispatcher:(id)arg5 testManager:(id)arg6 offlineMixTestManager:(id)arg7 downloadButtonFactory:(id)arg8 downloadManager:(id)arg9 theme:(id)arg10 localSettings:(id)arg11 player:(id)arg12 statetfulPlayer:(id)arg13 devicesAvailableViewProvider:(id)arg14 responsiveShuffleOnboardingController:(id)arg15;
 
 @end
 

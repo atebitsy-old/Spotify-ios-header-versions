@@ -24,6 +24,7 @@
     struct CGRect _contextMenuPopOverOriginRect;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTShareContainerViewControllerProtocol> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) struct CGRect contextMenuPopOverOriginRect; // @synthesize contextMenuPopOverOriginRect=_contextMenuPopOverOriginRect;
 @property(retain, nonatomic) UIView *contextMenuPopOverOriginView; // @synthesize contextMenuPopOverOriginView=_contextMenuPopOverOriginView;
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)updateViewConstraints;

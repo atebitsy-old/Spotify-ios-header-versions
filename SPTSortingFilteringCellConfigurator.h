@@ -14,9 +14,9 @@
     SPTSortingFilteringRuleTableViewCellStyle *_cellStyle;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTSortingFilteringRuleTableViewCellStyle *cellStyle; // @synthesize cellStyle=_cellStyle;
 @property(retain, nonatomic) SPTSortingFilteringGLUETheme *theme; // @synthesize theme=_theme;
-- (void).cxx_destruct;
 - (void)configureCell:(id)arg1 withViewModel:(id)arg2 atIndexPath:(id)arg3;
 - (double)preferredCellHeight;
 - (id)initWithTheme:(id)arg1;

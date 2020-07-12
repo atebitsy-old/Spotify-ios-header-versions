@@ -17,9 +17,9 @@
     SPTFormatListModelBuilder *_modelBuilder;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTFormatListModelBuilder *modelBuilder; // @synthesize modelBuilder=_modelBuilder;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
-- (void).cxx_destruct;
 - (void)resolveFollowerCountForPlaylistURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)synchronisePlaylistURL:(id)arg1;
 - (void)resolveFormatListFromPlaylistURL:(id)arg1 metadataFetchOptions:(id)arg2 tracksFetchOptions:(id)arg3 completion:(CDUnknownBlockType)arg4;

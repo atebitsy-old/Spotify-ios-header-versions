@@ -26,6 +26,7 @@
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) SPTStatefulPlayer *statefulPlayer; // @synthesize statefulPlayer=_statefulPlayer;
 @property(readonly, nonatomic) unsigned long long currentToggleMode; // @synthesize currentToggleMode=_currentToggleMode;
 @property(nonatomic) __weak id <SPTNowPlayingModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
 - (void)playerDidReceiveStateUpdate:(id)arg1;

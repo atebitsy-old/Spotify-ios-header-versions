@@ -25,6 +25,7 @@
     long long _lastLoginMode;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) long long lastLoginMode; // @synthesize lastLoginMode=_lastLoginMode;
 @property(nonatomic) __weak SPCore *core; // @synthesize core=_core;
 @property(nonatomic) __weak SPSession *session; // @synthesize session=_session;
@@ -33,7 +34,6 @@
 @property(nonatomic, getter=didUserLogin) _Bool userLogin; // @synthesize userLogin=_userLogin;
 @property(readonly, nonatomic) NSString *trackerUserID; // @synthesize trackerUserID;
 @property(readonly, nonatomic, getter=shouldEnableUserTracker) _Bool enableUserTracker; // @synthesize enableUserTracker=_enableUserTracker;
-- (void).cxx_destruct;
 - (void)trackAppWillOpenURL:(id)arg1;
 - (void)sessionLoginModeChanged:(id)arg1;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;

@@ -16,8 +16,8 @@
     id <SPTMetaViewController> _metaViewController;
 }
 
-@property(readonly, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
 - (void)dismissBannerViewAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)presentBannerView:(id)arg1 animated:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;

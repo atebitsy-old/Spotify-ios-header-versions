@@ -18,10 +18,10 @@
     id <SPTProductState> _productState;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
-- (void).cxx_destruct;
 - (id)managerForURL:(id)arg1 URLResolver:(id)arg2 titleContentOperation:(id)arg3 referrerIdentifier:(id)arg4;
 - (id)recommendationsForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 productState:(id)arg3;

@@ -20,10 +20,10 @@
     SPTArtistAboutGLUETheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTArtistAboutGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTArtistAboutLargePreviewView *aboutPreviewView; // @synthesize aboutPreviewView=_aboutPreviewView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)didTapView;

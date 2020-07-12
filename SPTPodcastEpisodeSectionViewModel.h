@@ -13,8 +13,8 @@
 #import "SPTPodcastEpisodeSectionFilterHeaderViewDelegate-Protocol.h"
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcast, SPTPodcastEpisodeSectionFilterHeaderView, SPTPodcastFilterTableFooterView, SPTPodcastLogger, SPTPodcastSortingService, SPTTheme;
-@protocol SPTCollectionLogger, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastPlayer, SPTPodcastTestManager;
+@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcast, SPTPodcastEpisodeSectionFilterHeaderView, SPTPodcastFilterTableFooterView, SPTPodcastLogger, SPTTheme;
+@protocol SPTCollectionLogger, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastPlayer, SPTPodcastSortingProvider, SPTPodcastTestManager;
 
 @interface SPTPodcastEpisodeSectionViewModel : NSObject <SPTPodcastEpisodeSectionFilterHeaderViewDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastViewModelSection, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeProgressPolling>
 {
@@ -41,15 +41,16 @@
     NSString *_filter;
     SPTPodcastLogger *_logger;
     id <SPTPodcastTestManager> _podcastTestManager;
-    SPTPodcastSortingService *_sortingService;
+    id <SPTPodcastSortingProvider> _sortingProvider;
     unsigned long long _sortColumn;
     SPTPodcastFilterTableFooterView *_filterTableFooterView;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTPodcastFilterTableFooterView *filterTableFooterView; // @synthesize filterTableFooterView=_filterTableFooterView;
 @property(nonatomic) _Bool ascendingSortOrder; // @synthesize ascendingSortOrder=_ascendingSortOrder;
 @property(nonatomic) unsigned long long sortColumn; // @synthesize sortColumn=_sortColumn;
-@property(nonatomic) __weak SPTPodcastSortingService *sortingService; // @synthesize sortingService=_sortingService;
+@property(nonatomic) __weak id <SPTPodcastSortingProvider> sortingProvider; // @synthesize sortingProvider=_sortingProvider;
 @property(retain, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *filter; // @synthesize filter=_filter;
@@ -72,7 +73,6 @@
 @property(copy, nonatomic) NSString *textFilter; // @synthesize textFilter;
 @property(readonly, nonatomic) id <SPTPodcastEpisodeCellActionTarget> cellActionHandler; // @synthesize cellActionHandler=_cellActionHandler;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void).cxx_destruct;
 - (void)headerView:(id)arg1 didSelectButton:(id)arg2;
 - (void)resetFilters;
 @property(nonatomic) _Bool showsOnlyOfflinedContent;
@@ -102,7 +102,7 @@
 - (void)updateWithPodcast:(id)arg1;
 - (id)header;
 - (unsigned long long)numberOfRows;
-- (id)initWithPlayer:(id)arg1 cellConfigurator:(id)arg2 cellActionHandlerFactory:(id)arg3 collectionLogger:(id)arg4 podcastLogger:(id)arg5 podcastTestManager:(id)arg6 podcastURL:(id)arg7 podcastSortingService:(id)arg8;
+- (id)initWithPlayer:(id)arg1 cellConfigurator:(id)arg2 cellActionHandlerFactory:(id)arg3 collectionLogger:(id)arg4 podcastLogger:(id)arg5 podcastTestManager:(id)arg6 podcastURL:(id)arg7 podcastSortingProvider:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

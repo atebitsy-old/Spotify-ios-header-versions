@@ -16,8 +16,8 @@
     id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)acceptEffect:(id)arg1 model:(id)arg2;
 - (void)acceptNext:(id)arg1;
 - (_Bool)canAcceptEffect:(id)arg1;

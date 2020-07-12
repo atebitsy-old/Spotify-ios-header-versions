@@ -13,7 +13,7 @@
 #import "SPTImageLoaderDelegate-Protocol.h"
 
 @class NSDictionary, NSMutableDictionary, NSString, RAPIEntertainmentAppLink, SPTAccessory, SPTAudioSessionActivator, SPTBMWToolbar;
-@protocol SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTImageLoader;
+@protocol SPTAccessoryActionLogger, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTImageLoader;
 
 @interface SPTBMWLoggedInSession : NSObject <SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTExternalIntegrationContentControllerObserver, SPTImageLoaderDelegate, SPTBMWListScreenDelegate>
 {
@@ -24,6 +24,7 @@
     SPTAccessory *_currentAccessory;
     RAPIEntertainmentAppLink *_bmwAppLink;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
+    id <SPTAccessoryActionLogger> _actionLogger;
     id <SPTImageLoader> _imageLoader;
     NSMutableDictionary *_screenModels;
     SPTBMWToolbar *_toolbar;
@@ -31,6 +32,7 @@
     id _debugLog;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
 @property(retain, nonatomic) SPTAudioSessionActivator *audioSessionActivator; // @synthesize audioSessionActivator=_audioSessionActivator;
 @property(retain, nonatomic) SPTBMWToolbar *toolbar; // @synthesize toolbar=_toolbar;
@@ -38,10 +40,10 @@
 @property(nonatomic) _Bool appLinkIsConnected; // @synthesize appLinkIsConnected=_appLinkIsConnected;
 @property(retain, nonatomic) NSMutableDictionary *screenModels; // @synthesize screenModels=_screenModels;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(retain, nonatomic) RAPIEntertainmentAppLink *bmwAppLink; // @synthesize bmwAppLink=_bmwAppLink;
 @property(nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
-- (void).cxx_destruct;
 - (void)reloadRootItemsIfNeccessary;
 - (void)resolve:(id)arg1 key:(id)arg2;
 - (void)didRegisterNewContentProviderInContentController:(id)arg1;
@@ -104,7 +106,7 @@
 - (void)configureContentListScreenModelForContent:(id)arg1 screenKey:(id)arg2;
 - (void)dealloc;
 @property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
-- (id)initWithExternalIntegrationPlatform:(id)arg1 toolbar:(id)arg2 imageLoaderFactory:(id)arg3 bmwAppLink:(id)arg4 debugLog:(id)arg5;
+- (id)initWithExternalIntegrationPlatform:(id)arg1 toolbar:(id)arg2 imageLoaderFactory:(id)arg3 bmwAppLink:(id)arg4 actionLogger:(id)arg5 debugLog:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

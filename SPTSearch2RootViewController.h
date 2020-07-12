@@ -33,6 +33,7 @@
     struct UIEdgeInsets _insets;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *floatingSearchViewBottomConstraint; // @synthesize floatingSearchViewBottomConstraint=_floatingSearchViewBottomConstraint;
 @property(retain, nonatomic) SPTFloatingVoiceSearchView *floatingSearchView; // @synthesize floatingSearchView=_floatingSearchView;
 @property(readonly, nonatomic) NSLayoutConstraint *searchBarWidthConstraint; // @synthesize searchBarWidthConstraint=_searchBarWidthConstraint;
@@ -47,7 +48,6 @@
 @property(nonatomic) _Bool automaticallyAdjustsInsets; // @synthesize automaticallyAdjustsInsets=_automaticallyAdjustsInsets;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
 @property(nonatomic) unsigned long long cancelButtonVisibility; // @synthesize cancelButtonVisibility=_cancelButtonVisibility;
-- (void).cxx_destruct;
 - (void)voiceEnabledView:(id)arg1 didSelectElementWithSourceIdentifier:(id)arg2;
 - (void)configureFloatingMicrophoneForVoiceEnabledSearch;
 - (void)setupVoiceView;

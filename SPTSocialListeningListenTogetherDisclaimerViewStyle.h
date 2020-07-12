@@ -25,6 +25,7 @@
     GLUEButtonStyle *_secondaryButtonStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEButtonStyle *secondaryButtonStyle; // @synthesize secondaryButtonStyle=_secondaryButtonStyle;
 @property(copy, nonatomic) GLUEButtonStyle *primaryButtonStyle; // @synthesize primaryButtonStyle=_primaryButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *noteLabelStyle; // @synthesize noteLabelStyle=_noteLabelStyle;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) UIColor *overlayBackgroundColor; // @synthesize overlayBackgroundColor=_overlayBackgroundColor;
 @property(copy, nonatomic) UIColor *decorationColor; // @synthesize decorationColor=_decorationColor;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningListenTogetherDisclaimerViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

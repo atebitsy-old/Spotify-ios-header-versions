@@ -15,10 +15,10 @@
     CAGradientLayer *_bottomMaskLayer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *bottomMaskLayer; // @synthesize bottomMaskLayer=_bottomMaskLayer;
 @property(retain, nonatomic) CALayer *contentMaskLayer; // @synthesize contentMaskLayer=_contentMaskLayer;
 @property(retain, nonatomic) CALayer *maskLayer; // @synthesize maskLayer=_maskLayer;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (id)initWithFrame:(struct CGRect)arg1;
 

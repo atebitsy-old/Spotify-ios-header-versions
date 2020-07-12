@@ -28,6 +28,7 @@
     id <SPTAuthTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isCancelled; // @synthesize isCancelled=_isCancelled;
 @property(retain, nonatomic) id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) long long retryCount; // @synthesize retryCount=_retryCount;
@@ -40,7 +41,6 @@
 @property(nonatomic) _Bool shouldDoSilentAuth; // @synthesize shouldDoSilentAuth=_shouldDoSilentAuth;
 @property(copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 @property(nonatomic) __weak id <SPTAuthRequestDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)authViewControllerUserDidCancel:(id)arg1;
 - (void)authViewController:(id)arg1 didFinishWithResponseURL:(id)arg2;
 - (void)sessionLoginModeChanged:(id)arg1;

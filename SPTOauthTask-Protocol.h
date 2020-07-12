@@ -9,9 +9,9 @@
 @protocol SPTConnectivityAsyncScheduler, SPTOauthTaskDelegate;
 
 @protocol SPTOauthTask <NSObject>
-@property(nonatomic) __weak id <SPTOauthTaskDelegate> delegate;
 - (void)cancel;
 - (void)start;
 - (void)setDelegate:(id <SPTOauthTaskDelegate>)arg1 onScheduler:(id <SPTConnectivityAsyncScheduler>)arg2;
+@property(nonatomic) __weak id <SPTOauthTaskDelegate> delegate;
 @end
 

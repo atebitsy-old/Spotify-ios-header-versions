@@ -15,10 +15,10 @@
     NSArray *_syllables;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSArray *syllables; // @synthesize syllables=_syllables;
 @property(readonly, nonatomic) double startTime; // @synthesize startTime=_startTime;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
-- (void).cxx_destruct;
 - (id)syllableAtIndex:(unsigned long long)arg1;
 - (id)initWithDictionary:(id)arg1;
 

@@ -34,6 +34,7 @@
 }
 
 + (void)setNavigationBarHidden:(_Bool)arg1 animated:(_Bool)arg2 block:(CDUnknownBlockType)arg3;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long navigationBarStatePendingUpdate; // @synthesize navigationBarStatePendingUpdate=_navigationBarStatePendingUpdate;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) __weak id <SPTNavigationControllerTransitioning> transitionSource; // @synthesize transitionSource=_transitionSource;
@@ -47,7 +48,6 @@
 @property(retain, nonatomic) SPTNavigationControllerBlurViewOffsetCalculator *blurViewOffsetCalculator; // @synthesize blurViewOffsetCalculator=_blurViewOffsetCalculator;
 @property(nonatomic) long long currentTransitionOperation; // @synthesize currentTransitionOperation=_currentTransitionOperation;
 @property(retain, nonatomic) UIView *navigationBarBackgroundView; // @synthesize navigationBarBackgroundView=_navigationBarBackgroundView;
-- (void).cxx_destruct;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 @property(readonly, nonatomic, getter=spt_currentPageController) id <SPTPageController> currentPageController;

@@ -17,11 +17,11 @@
     UIImage *_lockscreenImage;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool dismissible; // @synthesize dismissible=_dismissible;
 @property(readonly, nonatomic) __weak UIImage *lockscreenImage; // @synthesize lockscreenImage=_lockscreenImage;
 @property(readonly, nonatomic) NSString *sessionIdentifier; // @synthesize sessionIdentifier=_sessionIdentifier;
 @property(nonatomic) __weak id <SPTExternalIntegrationDriverDistractionViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)didChangeThemeSettings:(id)arg1;
 - (id)spotifyLogotypeImageView;
 @property(readonly, nonatomic) __weak UIButton *dismissButton;

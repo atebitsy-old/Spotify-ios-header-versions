@@ -20,13 +20,13 @@
     SPTArtistAboutGlobalChartPositionViewStyle *_globalChartPositionViewStyle;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTArtistAboutGlobalChartPositionViewStyle *globalChartPositionViewStyle; // @synthesize globalChartPositionViewStyle=_globalChartPositionViewStyle;
 @property(copy, nonatomic) SPTArtistAboutMonthlyListenersViewStyle *monthlyListenersViewStyle; // @synthesize monthlyListenersViewStyle=_monthlyListenersViewStyle;
 @property(copy, nonatomic) GLUELabelStyle *biographyLabelStyle; // @synthesize biographyLabelStyle=_biographyLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 @property(nonatomic) double noBiographyViewHeight; // @synthesize noBiographyViewHeight=_noBiographyViewHeight;
 @property(nonatomic) double viewHeight; // @synthesize viewHeight=_viewHeight;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

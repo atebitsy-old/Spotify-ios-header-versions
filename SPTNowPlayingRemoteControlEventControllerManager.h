@@ -21,11 +21,11 @@
     id <SPTNowPlayingRemoteControlPolicy> _currentPolicy;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNowPlayingRemoteControlPolicy> currentPolicy; // @synthesize currentPolicy=_currentPolicy;
 @property(nonatomic) __weak id <SPTNowPlayingRemoteControlEventPolicyController> currentPolicyController; // @synthesize currentPolicyController=_currentPolicyController;
 @property(readonly, nonatomic) NSMutableSet *subtypeControllers; // @synthesize subtypeControllers=_subtypeControllers;
 @property(readonly, nonatomic) NSMutableSet *policyControllers; // @synthesize policyControllers=_policyControllers;
-- (void).cxx_destruct;
 - (id)controllerForRemoteEventSubtypeUpdatesWithHighestPriority;
 - (id)controllerForRemoteControlPolicyUpdatesWithHighestPriority;
 - (void)remoteControlPolicyDidChange:(id)arg1;

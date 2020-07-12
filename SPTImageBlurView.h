@@ -29,6 +29,7 @@
 
 + (id)blurViewForImage:(id)arg1 withFrame:(struct CGRect)arg2;
 + (id)blurViewForImage:(id)arg1 withFrame:(struct CGRect)arg2 blurredImageCache:(id)arg3 cacheKey:(id)arg4;
+- (void).cxx_destruct;
 @property(retain, nonatomic) CAGradientLayer *gradientLayer; // @synthesize gradientLayer=_gradientLayer;
 @property(nonatomic) _Bool needsUpdatedBlur; // @synthesize needsUpdatedBlur=_needsUpdatedBlur;
 @property(copy, nonatomic) id currentCacheKey; // @synthesize currentCacheKey=_currentCacheKey;
@@ -43,7 +44,6 @@
 @property(nonatomic) double maximumBlurRadius; // @synthesize maximumBlurRadius=_maximumBlurRadius;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(nonatomic) __weak id <SPTImageBlurViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)layoutSubviews;
 - (void)updateImageViewOnMainThreadWithBlurredImage:(id)arg1;
 - (void)updateBlurredImageIfNeeded;

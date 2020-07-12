@@ -17,10 +17,10 @@
     SPTInAppMessageNetworkClient *_networkClient;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTInAppMessageNetworkClient *networkClient; // @synthesize networkClient=_networkClient;
 @property(retain, nonatomic) NSMutableDictionary *triggerPatternRegularExpressionCache; // @synthesize triggerPatternRegularExpressionCache=_triggerPatternRegularExpressionCache;
 @property(copy, nonatomic) NSArray *triggerList; // @synthesize triggerList=_triggerList;
-- (void).cxx_destruct;
 - (id)getMatchingTriggersForPattern:(id)arg1;
 - (void)requestMessageForTriggerPattern:(id)arg1 triggerType:(id)arg2;
 - (void)triggerListController:(id)arg1 didFetchTriggerList:(id)arg2;

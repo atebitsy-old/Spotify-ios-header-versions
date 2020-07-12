@@ -21,12 +21,12 @@
     NSSet *_currentAccessories;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSSet *currentAccessories; // @synthesize currentAccessories=_currentAccessories;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
 @property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) SPTAdRulesManager *adRulesManager; // @synthesize adRulesManager=_adRulesManager;
 @property(retain, nonatomic) id <SPTAdsBaseGlobalSettingsController> adSettingsController; // @synthesize adSettingsController=_adSettingsController;
-- (void).cxx_destruct;
 - (void)disableAdSlots:(_Bool)arg1 reason:(id)arg2;
 - (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
 - (void)accessoryStateManager:(id)arg1 accessoryDidDisconnect:(id)arg2;

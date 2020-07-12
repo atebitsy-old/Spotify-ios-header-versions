@@ -24,6 +24,7 @@
     GLUELabel *_emailLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) GLUELabel *emailLabel; // @synthesize emailLabel=_emailLabel;
 @property(readonly, nonatomic) UIView *emailContainerView; // @synthesize emailContainerView=_emailContainerView;
 @property(readonly, nonatomic) GLUELabel *pushLabel; // @synthesize pushLabel=_pushLabel;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTNotificationSwitchDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)didToggleEmailSwitch:(id)arg1;
 - (void)didTogglePushSwitch:(id)arg1;

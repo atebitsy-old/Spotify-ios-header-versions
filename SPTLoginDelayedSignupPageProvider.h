@@ -14,9 +14,9 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
-- (void).cxx_destruct;
 - (id)pageForURI:(id)arg1;
 - (id)initWithPageRegistry:(id)arg1 linkDispatcher:(id)arg2;
 

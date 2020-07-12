@@ -16,8 +16,8 @@
     id <SPTResolver> _resolver;
 }
 
-@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void)removeFeedbackForEntityURI:(id)arg1 onContextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8 success:(CDUnknownBlockType)arg9 failure:(CDUnknownBlockType)arg10;
 - (void)dislikeEntityURI:(id)arg1 onContextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8 success:(CDUnknownBlockType)arg9 failure:(CDUnknownBlockType)arg10;
 - (void)likeEntityURI:(id)arg1 onContextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8 success:(CDUnknownBlockType)arg9 failure:(CDUnknownBlockType)arg10;

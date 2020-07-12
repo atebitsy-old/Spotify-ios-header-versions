@@ -14,9 +14,9 @@
     id <SPTUBILogger> _ubiLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logInteractionPageURI:(id)arg1 index:(long long)arg2 section:(id)arg3 targetURI:(id)arg4 type:(id)arg5 intent:(id)arg6;
 - (void)logArtistAboutSelectedSection:(id)arg1 artistURI:(id)arg2;
 - (void)logArtistAboutImageGalleryDidSwipeWithArtistURI:(id)arg1;

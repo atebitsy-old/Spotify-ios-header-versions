@@ -18,10 +18,10 @@
 }
 
 + (id)sharedManager;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTWatchConnectivityPubSubManager *pubSubManager; // @synthesize pubSubManager=_pubSubManager;
 @property(readonly, nonatomic) SPTWatchConnectivityMessageDispatcher *messageDispatcher; // @synthesize messageDispatcher=_messageDispatcher;
 @property(retain, nonatomic) SPTWatchConnectivitySession *currentSession; // @synthesize currentSession=_currentSession;
-- (void).cxx_destruct;
 - (void)session:(id)arg1 didReceiveUserInfo:(id)arg2;
 - (void)session:(id)arg1 didReceiveMessage:(id)arg2 replyHandler:(CDUnknownBlockType)arg3;
 - (void)session:(id)arg1 didReceiveMessage:(id)arg2;

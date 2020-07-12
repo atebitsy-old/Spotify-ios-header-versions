@@ -25,6 +25,7 @@
     NSString *_likedSongsScrollerTypeString;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *likedSongsScrollerTypeString; // @synthesize likedSongsScrollerTypeString=_likedSongsScrollerTypeString;
 @property(retain, nonatomic) NSString *likedSongsFilterChipsSourceString; // @synthesize likedSongsFilterChipsSourceString=_likedSongsFilterChipsSourceString;
 @property(retain, nonatomic) NSString *quickscrollMechanismInYourLibraryString; // @synthesize quickscrollMechanismInYourLibraryString=_quickscrollMechanismInYourLibraryString;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) long long quickscrollMinPages; // @synthesize quickscrollMinPages=_quickscrollMinPages;
 @property(readonly, nonatomic) _Bool offlineArtistEnabled; // @synthesize offlineArtistEnabled=_offlineArtistEnabled;
 @property(readonly, nonatomic) _Bool playlistsRelevanceSortAsDefaultEnabled; // @synthesize playlistsRelevanceSortAsDefaultEnabled=_playlistsRelevanceSortAsDefaultEnabled;
-- (void).cxx_destruct;
 - (unsigned long long)mapLikedSongsScrollerTypeToEnumValue:(id)arg1;
 - (unsigned long long)mapLikedSongsFilterChipsSourceToEnumValue:(id)arg1;
 - (unsigned long long)mapQuickscrollMechanismInYourLibraryToEnumValue:(id)arg1;

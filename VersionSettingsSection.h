@@ -13,8 +13,8 @@
     NSArray *_cells;
 }
 
-@property(retain, nonatomic) NSArray *cells; // @synthesize cells=_cells;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSArray *cells; // @synthesize cells=_cells;
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 - (id)initWithSettingsViewController:(id)arg1;

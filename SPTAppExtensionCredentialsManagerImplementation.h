@@ -19,11 +19,11 @@
     id <SPTKeychainManager> _keychainManager;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
 @property(copy, nonatomic) NSString *accessAttr; // @synthesize accessAttr=_accessAttr;
 @property(copy, nonatomic) NSString *accessGroup; // @synthesize accessGroup=_accessGroup;
 @property(copy, nonatomic) NSString *domain; // @synthesize domain=_domain;
-- (void).cxx_destruct;
 - (id)accessGroup:(long long)arg1;
 - (id)ESDKCredentials;
 - (_Bool)deleteESDKCredentials;

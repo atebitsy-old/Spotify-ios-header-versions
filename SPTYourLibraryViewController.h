@@ -33,6 +33,7 @@
     id <SPTViewLogger> _viewLogger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) SPTYourLibraryLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) UIView *topCoverView; // @synthesize topCoverView=_topCoverView;
@@ -43,7 +44,6 @@
 @property(readonly, nonatomic) SPTYourLibraryGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTYourLibraryViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic, getter=spt_currentPageController) UIViewController<SPTPageController> *currentPageController; // @synthesize currentPageController=_currentPageController;
-- (void).cxx_destruct;
 - (unsigned long long)preferredNavigationBarState;
 - (void)headerViewController:(id)arg1 selectedGroupIndexChanged:(unsigned long long)arg2;
 - (void)page:(id)arg1 disablePagesScroll:(_Bool)arg2;

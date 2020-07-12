@@ -25,6 +25,7 @@
     SPTNowPlayingSkipLimitReachedMessageRequester *_skipLimitReachedMessageRequester;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNowPlayingSkipLimitReachedMessageRequester *skipLimitReachedMessageRequester; // @synthesize skipLimitReachedMessageRequester=_skipLimitReachedMessageRequester;
 @property(retain, nonatomic) SPTNowPlayingBarModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(retain, nonatomic) NSURL *currentContext; // @synthesize currentContext=_currentContext;
@@ -33,7 +34,6 @@
 @property(nonatomic) __weak id <SPTPlayerTrackScrollViewOffsetDelegate> offsetDelegate; // @synthesize offsetDelegate=_offsetDelegate;
 @property(nonatomic) __weak id <SPTPlayerTrackScrollDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTStepScrollView *scrollView; // @synthesize scrollView=_scrollView;
-- (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
 - (void)player:(id)arg1 didMoveToRelativeTrack:(id)arg2;

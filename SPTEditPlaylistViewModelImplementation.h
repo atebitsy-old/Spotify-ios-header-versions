@@ -31,6 +31,7 @@
     NSMutableArray *_trackDeletions;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool hasBeenSaved; // @synthesize hasBeenSaved=_hasBeenSaved;
 @property(retain, nonatomic) NSMutableArray *trackDeletions; // @synthesize trackDeletions=_trackDeletions;
 @property(retain, nonatomic) NSMutableArray *trackReorders; // @synthesize trackReorders=_trackReorders;
@@ -45,7 +46,6 @@
 @property(copy, nonatomic) NSString *editedPlaylistName; // @synthesize editedPlaylistName=_editedPlaylistName;
 @property(copy, nonatomic) NSString *originalPlaylistName; // @synthesize originalPlaylistName=_originalPlaylistName;
 @property(nonatomic) __weak id <SPTEditPlaylistViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)editPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)editPlaylistModel:(id)arg1 modelEntityDidChange:(id)arg2;
 - (void)updateWithModelEntity:(id)arg1;

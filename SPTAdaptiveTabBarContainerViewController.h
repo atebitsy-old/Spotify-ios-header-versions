@@ -15,7 +15,7 @@
 @interface SPTAdaptiveTabBarContainerViewController : UIViewController <SPTTabBarSecondaryUIDelegate, SPTTabBarContainer>
 {
     _Bool _sideBarVisible;
-    struct UIViewController *_tabBarController;
+    UIViewController<SPTTabBarControllerProtocol><SPContentInsetViewController> *_tabBarController;
     SPTTabBarContainerLayout *_containerLayout;
     SPTTheme *_theme;
     SPTStatusBarToken *_statusBarToken;
@@ -25,6 +25,7 @@
     id <SPTMetaViewController> _metaViewController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool sideBarVisible; // @synthesize sideBarVisible=_sideBarVisible;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(copy, nonatomic) NSArray *sideBarConstraints; // @synthesize sideBarConstraints=_sideBarConstraints;
@@ -34,7 +35,6 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTTabBarContainerLayout *containerLayout; // @synthesize containerLayout=_containerLayout;
 @property(readonly, nonatomic) UIViewController<SPTTabBarControllerProtocol><SPContentInsetViewController> *tabBarController; // @synthesize tabBarController=_tabBarController;
-- (void).cxx_destruct;
 - (void)updateSideBarVisibilityForTraitCollection;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)updateCurrentTabBarItems;
@@ -58,7 +58,7 @@
 - (void)setupViews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithTabBarController:(struct UIViewController *)arg1 sideBarController:(id)arg2 metaViewController:(id)arg3 theme:(id)arg4;
+- (id)initWithTabBarController:(id)arg1 sideBarController:(id)arg2 metaViewController:(id)arg3 theme:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

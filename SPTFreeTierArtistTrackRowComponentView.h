@@ -21,11 +21,11 @@
     SPTTrackRowArtist *_trackRow;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTTrackRowArtist *trackRow; // @synthesize trackRow=_trackRow;
 @property(readonly, nonatomic) SPTEncoreSwipeableTableViewCell *tableCell; // @synthesize tableCell=_tableCell;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (_Bool)trackIsPlaying;
 - (_Bool)trackIsDisabled;
 - (_Bool)trackIsPremiumOnly;

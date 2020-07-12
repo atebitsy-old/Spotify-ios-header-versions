@@ -18,8 +18,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (id)provideResolver;
 - (void)configureWithServices:(id)arg1;
 

@@ -8,22 +8,22 @@
 
 #import "HUBComponent-Protocol.h"
 
-@class NSSet, SPTHomeUIRemoteConfigPropertyResolver;
+@class NSSet, SPTHomeUIFeatureProperties;
 @protocol SPTPlayer;
 
 @interface SPTHomeUIShortcutsCardComponent : HUGSThemableComponent <HUBComponent>
 {
     id <SPTPlayer> _player;
-    SPTHomeUIRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
 }
 
-@property(readonly, nonatomic) SPTHomeUIRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
-@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
-- (id)initWithTheme:(id)arg1 player:(id)arg2 remoteConfigPropertyResolver:(id)arg3;
+- (id)initWithTheme:(id)arg1 player:(id)arg2 remoteConfigProperties:(id)arg3;
 
 @end
 

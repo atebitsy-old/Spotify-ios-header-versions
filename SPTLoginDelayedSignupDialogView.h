@@ -28,6 +28,7 @@
     NSLayoutConstraint *_termsViewBottomGap;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSLayoutConstraint *termsViewBottomGap; // @synthesize termsViewBottomGap=_termsViewBottomGap;
 @property(retain, nonatomic) NSLayoutConstraint *logoImageHeight; // @synthesize logoImageHeight=_logoImageHeight;
 @property(retain, nonatomic) NSLayoutConstraint *buttonStackViewGap; // @synthesize buttonStackViewGap=_buttonStackViewGap;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) GLUEButton *firstButton; // @synthesize firstButton=_firstButton;
 @property(readonly, nonatomic) UIImageView *logoImageView; // @synthesize logoImageView=_logoImageView;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-- (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)configureConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

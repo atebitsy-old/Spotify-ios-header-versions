@@ -9,10 +9,10 @@
 @class NSArray, NSDictionary, NSString, NSURL;
 
 @protocol SettingsRegistry <NSObject>
-@property(readonly, copy, nonatomic) NSURL *settingsRootURL;
-@property(readonly, copy, nonatomic) NSDictionary *settingsStructure;
-@property(readonly, nonatomic) __weak NSArray *featureSettingsPages;
 - (NSDictionary *)settingsSectionForURL:(NSURL *)arg1;
+@property(nonatomic, readonly) NSURL *settingsRootURL;
+@property(nonatomic, readonly) NSDictionary *settingsStructure;
+@property(nonatomic, readonly) NSArray *featureSettingsPages;
 - (void)registerTitle:(NSString *)arg1 forURI:(NSURL *)arg2;
 - (void)registerSettingsSectionProvider:(id)arg1 withSelector:(SEL)arg2 forURI:(NSString *)arg3;
 - (void)registerRootSettingsSectionProvider:(id)arg1 withSelector:(SEL)arg2 forURI:(NSString *)arg3;

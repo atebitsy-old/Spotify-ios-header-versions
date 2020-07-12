@@ -19,12 +19,12 @@
     NSNumber *_trackIndex;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSNumber *trackIndex; // @synthesize trackIndex=_trackIndex;
 @property(copy, nonatomic) NSString *trackUid; // @synthesize trackUid=_trackUid;
 @property(copy, nonatomic) NSURL *trackUri; // @synthesize trackUri=_trackUri;
 @property(copy, nonatomic) NSNumber *pageIndex; // @synthesize pageIndex=_pageIndex;
 @property(copy, nonatomic) NSURL *pageUrl; // @synthesize pageUrl=_pageUrl;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithDictionary:(id)arg1;

@@ -51,6 +51,7 @@
     double _timeLeft;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool isPlayed; // @synthesize isPlayed=_isPlayed;
 @property(nonatomic) double timeLeft; // @synthesize timeLeft=_timeLeft;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
@@ -88,12 +89,13 @@
 @property(copy, nonatomic) NSString *rowId; // @synthesize rowId=_rowId;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
+@property(readonly) unsigned long long hash;
+- (_Bool)isEqualToTrackFieldsImplementation:(id)arg1;
+- (_Bool)isEqual:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 
 @end

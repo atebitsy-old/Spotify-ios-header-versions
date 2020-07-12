@@ -25,6 +25,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTResubModalController *resubModalController; // @synthesize resubModalController=_resubModalController;
 @property(retain, nonatomic) SPTPaymentFailureNotificationController *paymentFailureController; // @synthesize paymentFailureController=_paymentFailureController;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTAccountService> accountService; // @synthesize accountService=_accountService;
 @property(nonatomic) __weak id <SPTBannerFeature> bannerFeature; // @synthesize bannerFeature=_bannerFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (void).cxx_destruct;
 - (void)unloadResubModalController;
 - (void)loadResubModalController;
 - (void)unloadPaymentFailureNotification;

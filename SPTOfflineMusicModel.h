@@ -31,6 +31,7 @@
     struct _NSRange _currentAlbumRequestRange;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct _NSRange currentAlbumRequestRange; // @synthesize currentAlbumRequestRange=_currentAlbumRequestRange;
 @property(retain, nonatomic) SPTOfflineMusicModelEntity *currentEntity; // @synthesize currentEntity=_currentEntity;
 @property(copy, nonatomic) NSNumber *likedSongsAvailability; // @synthesize likedSongsAvailability=_likedSongsAvailability;
@@ -47,12 +48,11 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionDataLoader; // @synthesize collectionDataLoader=_collectionDataLoader;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(nonatomic) __weak id <SPTOfflineContentModelDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)updateModelEntity;
 - (void)checkPlaylistResponseForFullySyncedPlaylists:(id)arg1;
 - (void)rerequestAlbumsWithIncreasedWindow;
-- (void)checkAlbumResponseForFullySyncedAlbums:(SPTCollectionPlatformDataLoaderResponse_f5c2288a *)arg1;
+- (void)checkAlbumResponseForFullySyncedAlbums:(id)arg1;
 - (void)loadLikedSongs;
 - (void)loadOfflineAlbumsWithRange:(struct _NSRange)arg1;
 - (void)loadOfflinePlaylists;

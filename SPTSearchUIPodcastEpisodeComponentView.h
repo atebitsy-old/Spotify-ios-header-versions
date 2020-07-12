@@ -22,10 +22,10 @@
 + (id)styleForModel:(id)arg1 theme:(id)arg2;
 + (id)accessoryIconImageForTheme:(id)arg1;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) SPTSearchUIEpisodeViewStyle *episodeViewStyle; // @synthesize episodeViewStyle=_episodeViewStyle;
 @property(readonly, nonatomic) HUGSCustomViewControl *control; // @synthesize control=_control;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void).cxx_destruct;
 - (void)updateAlpha;
 - (void)sendSelectionEvent;
 - (id)episodeView;

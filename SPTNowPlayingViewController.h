@@ -43,6 +43,7 @@
     double _bottomStackViewHeight;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double bottomStackViewHeight; // @synthesize bottomStackViewHeight=_bottomStackViewHeight;
 @property(nonatomic) double topStackViewHeight; // @synthesize topStackViewHeight=_topStackViewHeight;
 @property(nonatomic) double topMargin; // @synthesize topMargin=_topMargin;
@@ -64,7 +65,6 @@
 @property(retain, nonatomic) NSHashTable *viewControllers; // @synthesize viewControllers=_viewControllers;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
-- (void).cxx_destruct;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)updateLayoutForMode:(id)arg1;
 - (void)setupForMode:(id)arg1 fromMode:(id)arg2;

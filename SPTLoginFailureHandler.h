@@ -20,12 +20,12 @@
     SPTLoginRecoverAccountDataLoader *_dataLoader;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginRecoverAccountDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) SPTLoginFailureCounter *failureCounter; // @synthesize failureCounter=_failureCounter;
 @property(retain, nonatomic) SPTLoginMagicLinkRequestTracker *requestTracker; // @synthesize requestTracker=_requestTracker;
 @property(retain, nonatomic) SPTLoginMagicLinkAutosendConfirmationPresenter *confirmationPresenter; // @synthesize confirmationPresenter=_confirmationPresenter;
 @property(nonatomic) __weak id <SPTLoginFailureHandlerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessForEmail:(id)arg2;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2 forEmail:(id)arg3;
 - (_Bool)hasFailedEnoughTimesForUser:(id)arg1;

@@ -16,8 +16,8 @@
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTApplicationScopeFeatureFlagSignalFactoryImplementation *signalFactory; // @synthesize signalFactory=_signalFactory;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTApplicationScopeFeatureFlagSignalFactoryImplementation *signalFactory; // @synthesize signalFactory=_signalFactory;
 - (id)provideFeatureFlagSignalFactory;
 - (void)configureWithServices:(id)arg1;
 

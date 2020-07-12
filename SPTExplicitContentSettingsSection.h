@@ -20,12 +20,12 @@
     SettingsSwitchTableViewCell *_explicitContentCell;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SettingsSwitchTableViewCell *explicitContentCell; // @synthesize explicitContentCell=_explicitContentCell;
 @property(readonly, nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
 @property(readonly, nonatomic) SPTExplicitContentLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTExplicitContentAuthenticatorFactory *authenticatorFactory; // @synthesize authenticatorFactory=_authenticatorFactory;
 @property(readonly, nonatomic) SPTExplicitContentAccessManagerImplementation *accessManager; // @synthesize accessManager=_accessManager;
-- (void).cxx_destruct;
 - (void)explicitContentLockedStateDidChange:(_Bool)arg1;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)explicitContentSwitchChanged:(id)arg1;

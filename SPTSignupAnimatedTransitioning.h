@@ -17,10 +17,10 @@
     UINavigationController *_navigationController;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak UINavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(readonly, nonatomic) SPTSignupInteractiveTransition *interactiveTransition; // @synthesize interactiveTransition=_interactiveTransition;
 @property(nonatomic) long long operation; // @synthesize operation=_operation;
-- (void).cxx_destruct;
 - (double)xValueForViewKey:(id)arg1 originalXValue:(double)arg2 superViewWidth:(double)arg3 isValueBeforeAnimation:(_Bool)arg4 operation:(long long)arg5;
 - (void)positionFrameForView:(id)arg1 superViewWidth:(double)arg2 isFrameBeforeAnimation:(_Bool)arg3 operation:(long long)arg4;
 - (double)alphaValueForViewKey:(id)arg1 isValueBeforeAnimation:(_Bool)arg2;

@@ -20,10 +20,10 @@
     SPNavigationController *_navigationController;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPNavigationController *navigationController; // @synthesize navigationController=_navigationController;
 @property(readonly, nonatomic) SPTContextMenuViewControllerIPad *viewController; // @synthesize viewController=_viewController;
 @property(nonatomic) __weak id <SPTContextMenuPresenterDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)contextMenuViewControllerIPadDidDismiss:(id)arg1;
 - (long long)adaptivePresentationStyleForPresentationController:(id)arg1 traitCollection:(id)arg2;
 - (void)popoverPresentationControllerDidDismissPopover:(id)arg1;

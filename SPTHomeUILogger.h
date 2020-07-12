@@ -16,10 +16,10 @@
     SPTMobileHomeEventFactoryProvider *_mobileHomeEventFactoryProvider;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTMobileHomeEventFactoryProvider *mobileHomeEventFactoryProvider; // @synthesize mobileHomeEventFactoryProvider=_mobileHomeEventFactoryProvider;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)trackURIInModel:(id)arg1;
 - (void)logDidChangePlayerStateInPromoV2Component:(unsigned long long)arg1 forTrackWithModel:(id)arg2 loggingData:(id)arg3;
 - (void)logDidResumeTrackInPromoV2ComponentWithModel:(id)arg1 loggingData:(id)arg2;

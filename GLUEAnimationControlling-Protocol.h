@@ -7,14 +7,14 @@
 #import "NSObject-Protocol.h"
 
 @protocol GLUEAnimationControlling <NSObject>
-@property(readonly, nonatomic) _Bool isAnimationPlaying;
-@property(readonly, nonatomic) double animationDuration;
-@property(nonatomic) double animationProgress;
-@property(nonatomic) _Bool loopAnimation;
 - (void)stop;
 - (void)pause;
 - (void)play;
 - (void)playToProgress:(double)arg1 withCompletion:(void (^)(_Bool))arg2;
 - (void)playWithCompletion:(void (^)(_Bool))arg1;
+@property(nonatomic, readonly) _Bool isAnimationPlaying;
+@property(nonatomic, readonly) double animationDuration;
+@property(nonatomic) double animationProgress;
+@property(nonatomic) _Bool loopAnimation;
 @end
 

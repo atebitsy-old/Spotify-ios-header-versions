@@ -14,9 +14,9 @@
     SPTVideoCDNSelector *_cdnSelector;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool subtitlesEnabled; // @synthesize subtitlesEnabled=_subtitlesEnabled;
 @property(retain, nonatomic) SPTVideoCDNSelector *cdnSelector; // @synthesize cdnSelector=_cdnSelector;
-- (void).cxx_destruct;
 - (id)createHLSDataWithMasterManifest:(id)arg1;
 - (id)createHLSSubtitleDataWithManifest:(id)arg1 forProfileID:(unsigned long long)arg2;
 - (id)createHLSDataWithManifest:(id)arg1 forProfileID:(unsigned long long)arg2;

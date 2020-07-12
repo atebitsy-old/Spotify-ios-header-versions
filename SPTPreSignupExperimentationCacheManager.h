@@ -13,8 +13,8 @@
     NSUserDefaults *_userDefaults;
 }
 
-@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 - (void)persistFeatureFlags:(id)arg1;
 - (id)provideFeatureFlags;
 - (id)initWithUserDefaults:(id)arg1;

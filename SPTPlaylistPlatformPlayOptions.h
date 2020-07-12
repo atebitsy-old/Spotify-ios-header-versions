@@ -15,10 +15,10 @@
     NSDictionary *_contextMetadata;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldLoadInterruptions; // @synthesize shouldLoadInterruptions=_shouldLoadInterruptions;
 @property(copy, nonatomic) NSDictionary *contextMetadata; // @synthesize contextMetadata=_contextMetadata;
 @property(copy, nonatomic) SPTPlayOrigin *origin; // @synthesize origin=_origin;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)init;
 

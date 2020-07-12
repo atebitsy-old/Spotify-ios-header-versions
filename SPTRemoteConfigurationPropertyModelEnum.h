@@ -15,10 +15,10 @@
     NSString *_defaultValue;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *defaultValue; // @synthesize defaultValue=_defaultValue;
 @property(readonly, copy, nonatomic) NSString *value; // @synthesize value=_value;
 @property(readonly, copy, nonatomic) NSArray *values; // @synthesize values=_values;
-- (void).cxx_destruct;
 - (id)copyModelWithValue:(id)arg1;
 - (id)initWithName:(id)arg1 componentId:(id)arg2 values:(id)arg3 value:(id)arg4 defaultValue:(id)arg5;
 

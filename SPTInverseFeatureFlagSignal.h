@@ -16,8 +16,8 @@
     id <SPTFeatureFlagSignal> _underlyingSignal;
 }
 
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> underlyingSignal; // @synthesize underlyingSignal=_underlyingSignal;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTFeatureFlagSignal> underlyingSignal; // @synthesize underlyingSignal=_underlyingSignal;
 - (long long)mapState:(long long)arg1;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)initWithObservedSignal:(id)arg1;

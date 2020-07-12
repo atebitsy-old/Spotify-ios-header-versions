@@ -23,6 +23,7 @@
     double _backoffMultiplier;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double backoffMultiplier; // @synthesize backoffMultiplier=_backoffMultiplier;
 @property(nonatomic) double maximumDelay; // @synthesize maximumDelay=_maximumDelay;
 @property(nonatomic) double initialDelay; // @synthesize initialDelay=_initialDelay;
@@ -31,7 +32,6 @@
 @property(retain, nonatomic) NSTimer *retryTimer; // @synthesize retryTimer=_retryTimer;
 @property(copy, nonatomic) NSDate *retryDate; // @synthesize retryDate=_retryDate;
 @property(nonatomic) __weak id <SPTIAPControllerRetryManagerDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)retryDateForCurrentTimeInterval;
 - (double)nextTimeInterval;

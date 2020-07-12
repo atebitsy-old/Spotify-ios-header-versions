@@ -13,8 +13,8 @@
     NSMutableSet *_timers;
 }
 
-@property(retain, nonatomic) NSMutableSet *timers; // @synthesize timers=_timers;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableSet *timers; // @synthesize timers=_timers;
 - (void)delayElapsed:(id)arg1;
 - (void)handleEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;
 - (id)init;

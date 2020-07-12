@@ -23,6 +23,7 @@
     UILabel *_annotationLabel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) UILabel *annotationLabel; // @synthesize annotationLabel=_annotationLabel;
 @property(readonly, nonatomic) UIView *contentNotchView; // @synthesize contentNotchView=_contentNotchView;
 @property(readonly, nonatomic) UIView *contentGradientView; // @synthesize contentGradientView=_contentGradientView;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) UILabel *artistNameLabel; // @synthesize artistNameLabel=_artistNameLabel;
 @property(readonly, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-- (void).cxx_destruct;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 - (void)loadArtistImage;
 - (id)annotationAttributedString;

@@ -28,6 +28,7 @@
     id <SPTSocialListeningTestManager> _testManager;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSDictionary *exposedDevices; // @synthesize exposedDevices=_exposedDevices;
 @property(copy, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevicesList; // @synthesize socialDevicesList=_socialDevicesList;
@@ -39,7 +40,6 @@
 @property(retain, nonatomic) SPTSocialListeningSession *session; // @synthesize session=_session;
 @property(retain, nonatomic) SPTSocialListeningDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
-- (void).cxx_destruct;
 - (void)scannablesDataSource:(id)arg1 didFinishFetchingScannable:(id)arg2;
 - (void)scannablesDataSource:(id)arg1 didFailFetchingScannableWithError:(id)arg2;
 - (void)socialListeningDataLoader:(id)arg1 didGetDeviceExposure:(id)arg2;

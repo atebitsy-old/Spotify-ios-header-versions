@@ -20,13 +20,13 @@
     double _restoreAnimationDuration;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) double restoreAnimationDuration; // @synthesize restoreAnimationDuration=_restoreAnimationDuration;
 @property(nonatomic) double animationDuration; // @synthesize animationDuration=_animationDuration;
 @property(nonatomic) double pressedScaleFactor; // @synthesize pressedScaleFactor=_pressedScaleFactor;
 @property(retain, nonatomic) CALayer *animatedLayer; // @synthesize animatedLayer=_animatedLayer;
 @property(nonatomic) _Bool isAnimating; // @synthesize isAnimating=_isAnimating;
 - (id)animatedView;
-- (void).cxx_destruct;
 @property(readonly, copy) NSString *debugDescription;
 - (void)glue_applyStyle:(id)arg1;
 - (void)restoreAnimatedViewWithoutAnimation;

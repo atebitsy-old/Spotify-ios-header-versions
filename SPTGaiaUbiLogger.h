@@ -13,8 +13,8 @@
     id <SPTUBILogger> _logger;
 }
 
-@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void)logAttachPopupListenOnThisDeviceInteractionForDeviceId:(id)arg1;
 - (void)logAttachPopupContinueInteractionForDeviceId:(id)arg1;
 - (void)logAttachPopupImpressionForDeviceId:(id)arg1;

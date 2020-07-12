@@ -17,9 +17,9 @@
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
-- (void).cxx_destruct;
 - (id)offlinePageForURI:(id)arg1;
 - (id)errorPageForError:(unsigned long long)arg1 URI:(id)arg2;
 - (id)pageForURI:(id)arg1 queryParameters:(id)arg2 referrer:(id)arg3;

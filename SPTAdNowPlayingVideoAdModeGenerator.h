@@ -21,12 +21,12 @@
     id <SPTNowPlayingModesRegistry> _npvModeRegistry;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNowPlayingModesRegistry> npvModeRegistry; // @synthesize npvModeRegistry=_npvModeRegistry;
 @property(retain, nonatomic) id <SPTAdsBaseRegistry> adRegistry; // @synthesize adRegistry=_adRegistry;
 @property(retain, nonatomic) SPTAdPlayerObservable *playerObserver; // @synthesize playerObserver=_playerObserver;
 @property(retain, nonatomic) SPTAdNowPlayingVideoShowStateManager *showStateManager; // @synthesize showStateManager=_showStateManager;
 @property(readonly, nonatomic) id <SPTNowPlayingMode> npvAdMode; // @synthesize npvAdMode=_npvAdMode;
-- (void).cxx_destruct;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (id)contentDecorationController;
 - (id)infoController;

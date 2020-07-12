@@ -13,8 +13,8 @@
     GLUEPressedAnimatorStyle *_pressedAnimatorStyle;
 }
 
-@property(copy, nonatomic) GLUEPressedAnimatorStyle *pressedAnimatorStyle; // @synthesize pressedAnimatorStyle=_pressedAnimatorStyle;
 - (void).cxx_destruct;
+@property(copy, nonatomic) GLUEPressedAnimatorStyle *pressedAnimatorStyle; // @synthesize pressedAnimatorStyle=_pressedAnimatorStyle;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;
 

@@ -34,6 +34,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginDelayedSignupLoginFlowPresenter *loginFlowPresenter; // @synthesize loginFlowPresenter=_loginFlowPresenter;
 @property(retain, nonatomic) SPTLoginDelayedSignupGuestAccountTracker *guestTracker; // @synthesize guestTracker=_guestTracker;
 @property(retain, nonatomic) SPTLoginDelayedSignupDialogLogger *bannerLogger; // @synthesize bannerLogger=_bannerLogger;
@@ -50,7 +51,6 @@
 @property(nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
-- (void).cxx_destruct;
 - (_Bool)isGuestAccount;
 - (void)dialogPresenterWillOpenFacebookFlow:(id)arg1;
 - (void)dialogPresenterWillOpenSignupFlow:(id)arg1;

@@ -13,8 +13,8 @@
     NSMutableArray *_handlers;
 }
 
-@property(retain, nonatomic) NSMutableArray *handlers; // @synthesize handlers=_handlers;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableArray *handlers; // @synthesize handlers=_handlers;
 @property(readonly, nonatomic) _Bool hasPendingHandlers;
 @property(nonatomic) _Bool allowDispatch;
 - (void)dispatchBlock:(CDUnknownBlockType)arg1;

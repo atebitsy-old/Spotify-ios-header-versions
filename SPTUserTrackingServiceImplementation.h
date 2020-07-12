@@ -23,6 +23,7 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTAdjustURLSanitizer *adjustURLSanitizer; // @synthesize adjustURLSanitizer=_adjustURLSanitizer;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) SPTAdjustUserTracker *adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
 @property(readonly, nonatomic) id <SPTPushNotificationController> pushNotificationsController; // @synthesize pushNotificationsController=_pushNotificationsController;
 @property(retain, nonatomic) SPTTrackerBroadcaster *trackerBroadcaster; // @synthesize trackerBroadcaster=_trackerBroadcaster;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

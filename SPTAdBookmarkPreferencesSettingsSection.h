@@ -22,6 +22,7 @@
     SPTFreeTierPreCurationTheme *_theme;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierPreCurationTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
@@ -31,7 +32,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) SPTSavedAdsViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)logSettingsInteraction;
 - (id)footerText;
 - (void)didSelectRow:(long long)arg1;

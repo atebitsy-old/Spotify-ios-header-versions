@@ -17,9 +17,9 @@
     id <SPTHomeMixSnackbarEffectHandlerDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTHomeMixSnackbarEffectHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackBarPresenter; // @synthesize snackBarPresenter=_snackBarPresenter;
-- (void).cxx_destruct;
 - (void)handlePresentingErrorForSwitchingMood:(id)arg1 model:(id)arg2;
 - (void)handlePresentPartnerNeedsTOSnackbarEffect:(id)arg1 model:(id)arg2;
 - (void)handlePresentJoinMixSnackbar:(id)arg1 model:(id)arg2;

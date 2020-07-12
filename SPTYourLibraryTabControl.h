@@ -26,6 +26,7 @@
 }
 
 + (_Bool)requiresConstraintBasedLayout;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryTabControlCollectionViewCell *calculationCell; // @synthesize calculationCell=_calculationCell;
 @property(retain, nonatomic) NSLayoutConstraint *selectionIndicatorLeftConstraint; // @synthesize selectionIndicatorLeftConstraint=_selectionIndicatorLeftConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *selectionIndicatorWidthConstraint; // @synthesize selectionIndicatorWidthConstraint=_selectionIndicatorWidthConstraint;
@@ -35,7 +36,6 @@
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(nonatomic) __weak id <SPTYourLibraryTabControlDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long selectedSegmentIndex; // @synthesize selectedSegmentIndex=_selectedSegmentIndex;
-- (void).cxx_destruct;
 - (void)collectionView:(id)arg1 layoutDidUpdateLayoutParameters:(id)arg2;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (void)collectionView:(id)arg1 didUnhighlightItemAtIndexPath:(id)arg2;

@@ -23,6 +23,7 @@
     NSObject<OS_os_log> *_instrumentationLog;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSObject<OS_os_log> *instrumentationLog; // @synthesize instrumentationLog=_instrumentationLog;
 @property(retain, nonatomic) NSHashTable *defaultObservers; // @synthesize defaultObservers=_defaultObservers;
 @property(readonly, nonatomic) __weak id <SPTPerformanceKitUUIDProvider> uuidProvider; // @synthesize uuidProvider=_uuidProvider;
@@ -30,7 +31,6 @@
 @property(readonly, nonatomic) SPTPerformanceMetricsFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(nonatomic) __weak id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (id)createViewLoggerForViewURI:(id)arg1;
 @property(readonly, nonatomic) id <SPTViewLoadSequenceTransport> transport; // @synthesize transport=_transport;
 - (void)removeDefaultObserver:(id)arg1;

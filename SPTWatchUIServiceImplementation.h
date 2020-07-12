@@ -19,10 +19,10 @@
 }
 
 + (id)serviceIdentifier;
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTWatchUIContextMenuActionsRegistrar *contextMenuActionsRegistrar; // @synthesize contextMenuActionsRegistrar=_contextMenuActionsRegistrar;
 @property(nonatomic) __weak id <SPTWatchPlatformService> watchPlatformService; // @synthesize watchPlatformService=_watchPlatformService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
-- (void).cxx_destruct;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

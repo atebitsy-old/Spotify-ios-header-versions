@@ -14,9 +14,9 @@
     NSString *_message;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSString *message; // @synthesize message=_message;
 @property(readonly, nonatomic) NSString *adID; // @synthesize adID=_adID;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithAdID:(id)arg1 message:(id)arg2;
 

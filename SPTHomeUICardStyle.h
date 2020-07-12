@@ -20,10 +20,10 @@
 + (id)makeUIStatesToStylesWithTheme:(id)arg1;
 + (long long)maxLinesForTitle:(id)arg1 subtitlePresent:(_Bool)arg2;
 + (id)defaultStyleWithTheme:(id)arg1 type:(unsigned long long)arg2 model:(id)arg3;
+- (void).cxx_destruct;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
 @property(copy, nonatomic) SPTHomeUILabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
 @property(copy, nonatomic) SPTHomeUILabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithUIStatesToStyles:(id)arg1 titleLabelStyle:(id)arg2 subtitleLabelStyle:(id)arg3 imageStyle:(id)arg4;
 

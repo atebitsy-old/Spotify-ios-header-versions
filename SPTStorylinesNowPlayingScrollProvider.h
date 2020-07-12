@@ -18,11 +18,11 @@
     SPTStorylinesNowPlayingViewController *_viewController;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTStorylinesNowPlayingViewController *viewController; // @synthesize viewController=_viewController;
 @property(readonly, nonatomic) SPTStorylinesNowPlayingViewControllerFactory *viewControllerFactory; // @synthesize viewControllerFactory=_viewControllerFactory;
 @property(readonly, nonatomic) SPTStorylinesViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTStorylinesEnabledManager *enabledManager; // @synthesize enabledManager=_enabledManager;
-- (void).cxx_destruct;
 - (void)didBecomeFullyShownForTrack:(id)arg1;
 - (double)preferredContentHeightForWidth:(double)arg1;
 - (id)componentViewForTrack:(id)arg1;

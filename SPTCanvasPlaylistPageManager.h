@@ -18,12 +18,12 @@
     NSArray *_allTracks;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *allTracks; // @synthesize allTracks=_allTracks;
 @property(readonly, nonatomic) NSMutableDictionary *allTracksDict; // @synthesize allTracksDict=_allTracksDict;
 @property(readonly, nonatomic) NSMutableDictionary *metadataResolvers; // @synthesize metadataResolvers=_metadataResolvers;
 @property(readonly, nonatomic) id <SPTCanvasMetadataResolverFactory> metaDataResolverFactory; // @synthesize metaDataResolverFactory=_metaDataResolverFactory;
 @property(nonatomic) unsigned long long numberOfResolvedTracks; // @synthesize numberOfResolvedTracks=_numberOfResolvedTracks;
-- (void).cxx_destruct;
 - (void)resolvePageForTrackAtIndex:(long long)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)canvasModelAtIndex:(long long)arg1;
 - (id)trackAtIndex:(long long)arg1;

@@ -16,8 +16,8 @@
     id <SPTPlayer> _player;
 }
 
-@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (id)queueMultipleTracks:(id)arg1;
 - (id)queueTrack:(id)arg1;
 - (id)queueTrackPlayNext:(id)arg1;

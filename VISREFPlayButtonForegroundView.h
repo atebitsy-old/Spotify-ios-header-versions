@@ -31,6 +31,7 @@
     UIView *_shuffleBadgeHighlightedOverlay;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UIView *shuffleBadgeHighlightedOverlay; // @synthesize shuffleBadgeHighlightedOverlay=_shuffleBadgeHighlightedOverlay;
 @property(retain, nonatomic) UIImageView *shuffleBadgeLabel; // @synthesize shuffleBadgeLabel=_shuffleBadgeLabel;
 @property(retain, nonatomic) UIView *shuffleBadge; // @synthesize shuffleBadge=_shuffleBadge;
@@ -50,7 +51,6 @@
 @property(retain, nonatomic) UILayoutGuide *playButtonLayoutGuide; // @synthesize playButtonLayoutGuide=_playButtonLayoutGuide;
 @property(nonatomic, getter=isShuffleBadgeShown) _Bool shouldShowShuffleBadge; // @synthesize shouldShowShuffleBadge=_shouldShowShuffleBadge;
 @property(copy, nonatomic) CDUnknownBlockType didTapPlayButton; // @synthesize didTapPlayButton=_didTapPlayButton;
-- (void).cxx_destruct;
 @property(readonly, nonatomic) struct CGSize playButtonSize;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)didUnHighlightButton;

@@ -23,6 +23,7 @@
     SPTEditPlaylistModelEntityImplementation *_entity;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) SPTEditPlaylistModelEntityImplementation *entity; // @synthesize entity=_entity;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
@@ -31,13 +32,12 @@
 @property(nonatomic) __weak id <SPTEditPlaylistModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering; // @synthesize sortingFiltering=_sortingFiltering;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-- (void).cxx_destruct;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)updateDescription:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)renamePlaylistToName:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)moveTrack:(id)arg1 before:(_Bool)arg2 targetTrack:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (void)removeTracks:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)updateMetadataWithResponse:(id)arg1 tracksResponse:(SPTPlaylistPlatformDataLoaderResponse_5db64d04 *)arg2 recommendations:(id)arg3;
+- (void)updateMetadataWithResponse:(id)arg1 tracksResponse:(id)arg2 recommendations:(id)arg3;
 - (void)loadMetadataAndAllTracks;
 - (_Bool)shouldIncludeEpisodes;
 - (void)loadEntirePlaylist;

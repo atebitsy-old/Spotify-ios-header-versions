@@ -20,12 +20,12 @@
 
 + (_Bool)hasStoredRecipt;
 + (id)keyPathsForValuesAffectingAvailablePremiumProductIncludes30DayTrial;
+- (void).cxx_destruct;
 @property(retain, nonatomic) KeychainItemWrapper *keychain; // @synthesize keychain=_keychain;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SKProduct *storeProduct; // @synthesize storeProduct=_storeProduct;
 @property(retain, nonatomic) NSString *productIdentifier; // @synthesize productIdentifier=_productIdentifier;
 @property(nonatomic) long long state; // @synthesize state=_state;
-- (void).cxx_destruct;
 - (_Bool)isProductAvailableForPurchase;
 @property(readonly, nonatomic) _Bool availablePremiumProductIncludes30DayTrial;
 - (id)savedReceiptData;

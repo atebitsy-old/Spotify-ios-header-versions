@@ -22,13 +22,13 @@
     id <SPTPlaylistModel> _playlistModel;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTFormatListPlatformManagerOfflineDelegate> delegate; // @synthesize delegate;
-- (void).cxx_destruct;
 - (void)presentEducationPopup;
 - (void)offlineStateChangedForEntity:(id)arg1 withURL:(id)arg2;
 - (long long)offlineStatusForItemURL:(id)arg1;

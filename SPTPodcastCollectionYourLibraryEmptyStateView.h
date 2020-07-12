@@ -25,6 +25,7 @@
 + (id)emptyStateDownloadsViewTheme:(id)arg1 linkDispatcher:(id)arg2 metaViewController:(id)arg3 navigationRouter:(id)arg4 podcastLogger:(id)arg5 viewURI:(id)arg6;
 + (id)emptyStateEpisodesViewTheme:(id)arg1 linkDispatcher:(id)arg2 metaViewController:(id)arg3 navigationRouter:(id)arg4 podcastLogger:(id)arg5 viewURI:(id)arg6;
 + (id)emptyStateShowsViewTheme:(id)arg1 linkDispatcher:(id)arg2 metaViewController:(id)arg3 navigationRouter:(id)arg4 podcastLogger:(id)arg5 viewURI:(id)arg6;
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) NSURL *navigateFromURI; // @synthesize navigateFromURI=_navigateFromURI;
 @property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;
@@ -34,7 +35,6 @@
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-- (void).cxx_destruct;
 - (id)entityPageEmptyStateViewStyle;
 - (void)applyThemeLayout;
 - (void)onAction:(id)arg1;

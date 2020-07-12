@@ -23,6 +23,7 @@
     id <SPTFeatureFlagSignal> _shouldPresentImplicitNotificationSignal;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldPresentImplicitNotificationAlertController; // @synthesize shouldPresentImplicitNotificationAlertController=_shouldPresentImplicitNotificationAlertController;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> shouldPresentImplicitNotificationSignal; // @synthesize shouldPresentImplicitNotificationSignal=_shouldPresentImplicitNotificationSignal;
 @property(nonatomic) _Bool shouldUseDevEndpointSetting; // @synthesize shouldUseDevEndpointSetting=_shouldUseDevEndpointSetting;
@@ -30,12 +31,13 @@
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic) __weak UIViewController *premiumDestinationTabBarBadgeViewController; // @synthesize premiumDestinationTabBarBadgeViewController=_premiumDestinationTabBarBadgeViewController;
-- (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupImplicitNotificacion;
 - (void)setupUseDevEndpointSetting;
 - (id)featureProperties;
 - (void)loadFlags;
+@property(readonly, copy, nonatomic) NSString *offerTrialRibbonString;
+@property(readonly, nonatomic) _Bool offerTrialRibbonExperienceEnabled;
 @property(readonly, nonatomic) _Bool tabBarBadgeExperienceEnabled;
 @property(readonly, nonatomic) _Bool shouldShowLegacyPD;
 @property(readonly, nonatomic) _Bool shouldUseHeaderVoiceoverAccessible;

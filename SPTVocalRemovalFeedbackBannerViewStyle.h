@@ -20,13 +20,13 @@
     struct UIEdgeInsets _edgeInsets;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets edgeInsets; // @synthesize edgeInsets=_edgeInsets;
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(nonatomic) struct CGSize closeButtonSize; // @synthesize closeButtonSize=_closeButtonSize;
 @property(retain, nonatomic) GLUEButtonStyle *closeButtonStyle; // @synthesize closeButtonStyle=_closeButtonStyle;
 @property(retain, nonatomic) GLUELabelStyle *labelStyle; // @synthesize labelStyle=_labelStyle;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

@@ -18,11 +18,11 @@
     NSNumber *timestamp;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSNumber *timestamp; // @synthesize timestamp;
 @property(readonly, nonatomic) SPTPlayerContext *playerContext; // @synthesize playerContext;
 @property(readonly, nonatomic) NSURL *playerContextURI; // @synthesize playerContextURI;
 @property(readonly, nonatomic) NSString *episodeItemID; // @synthesize episodeItemID;
-- (void).cxx_destruct;
 - (_Bool)isContextURI;
 - (long long)getEpisodeContextType;
 - (id)initWithQueryPrameters:(id)arg1;
