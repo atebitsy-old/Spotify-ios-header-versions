@@ -16,6 +16,7 @@
 }
 
 - (void).cxx_destruct;
+- (void)dealloc;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)removeArrangedSubview:(id)arg1;
 - (void)addArrangedSubview:(id)arg1 layoutSubviews:(_Bool)arg2;

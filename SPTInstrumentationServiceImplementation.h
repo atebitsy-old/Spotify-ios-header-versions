@@ -75,6 +75,7 @@
 - (void)configureNavigationObservers;
 - (void)configureAppFocusStateMonitorWithClock:(id)arg1;
 - (void)configureAbbaFeatureFlags;
+- (id)currentPageView;
 - (void)currentPageViewDidChange:(id)arg1 forPageStream:(id)arg2;
 - (void)observerCurrentPageStream;
 - (void)unload;

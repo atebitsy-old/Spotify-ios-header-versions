@@ -11,8 +11,8 @@
 #import "SPTService-Protocol.h"
 #import "UIPopoverPresentationControllerDelegate-Protocol.h"
 
-@class GaiaLocalAudioSessionController, GaiaMessageBarController, NSString, SPNavigationController, SPTAllocationContext, SPTCastManager, SPTGaiaAudioAPKeepAliveHandler, SPTGaiaConnectCosmosResolver, SPTGaiaConnectPublicStateCache, SPTGaiaConnectStateObservingManager, SPTGaiaDependencyInjectorImplementation, SPTGaiaDeviceAppearanceMapping, SPTGaiaDevicePickerAppearanceManager, SPTGaiaDevicePickerDeviceSpecificConfigurationManager, SPTGaiaDevicePickerDevicesProvider, SPTGaiaDevicePickerViewController, SPTGaiaDevicePickerViewModel, SPTGaiaDevicesAvailableViewFactory, SPTGaiaEducationDetailModelManager, SPTGaiaFeatureFlagsManager, SPTGaiaFeatureProperties, SPTGaiaFeatureSettingsManager, SPTGaiaHomeDeviceLocalNotificationManager, SPTGaiaHomeDeviceLogger, SPTGaiaHomeDeviceManager, SPTGaiaHomeDeviceTooltipConnectionTracker, SPTGaiaHomeDeviceTooltipManager, SPTGaiaHomeDeviceTransitionManager, SPTGaiaIconProviderImplementation, SPTGaiaInstrumentationRemotePlayingStateBinder, SPTGaiaLocalDevicePermissions, SPTGaiaLockScreenFeatureManager, SPTGaiaLogger, SPTGaiaMPMusicPlayerControllerFactory, SPTGaiaOnboardingManagerImplementation, SPTGaiaPlaybackGrabberController, SPTGaiaPopupController, SPTGaiaSettingsManager, SPTGaiaSignpostInstrumentation, SPTGaiaSilentAudioPlayerProviderDefaultImplementation, SPTGaiaSocialListeningIntegrationManager, SPTGaiaUbiLogger, SPTGaiaVolumeButtonController;
-@protocol CosmosFeature, SPTAbbaService, SPTAccountService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTGLUEService, SPTGaiaConnectAPI, SPTGaiaConnectManager, SPTGaiaDevicePickerPresenter, SPTGaiaVolumeControllerInterface, SPTGaiaWirelessRoutesAPI, SPTInstrumentationService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSocialListeningService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
+@class GaiaLocalAudioSessionController, GaiaMessageBarController, NSString, SPNavigationController, SPTAllocationContext, SPTCastManager, SPTGaiaAudioAPKeepAliveHandler, SPTGaiaConnectCosmosResolver, SPTGaiaConnectPublicStateCache, SPTGaiaConnectStateObservingManager, SPTGaiaDependencyInjectorImplementation, SPTGaiaDeviceAppearanceMapping, SPTGaiaDevicePickerAppearanceManager, SPTGaiaDevicePickerDeviceSpecificConfigurationManager, SPTGaiaDevicePickerDevicesProvider, SPTGaiaDevicePickerViewController, SPTGaiaDevicePickerViewModel, SPTGaiaDevicesAvailableViewFactory, SPTGaiaEducationDetailModelManager, SPTGaiaFeatureFlagsManager, SPTGaiaFeatureProperties, SPTGaiaFeatureSettingsManager, SPTGaiaHomeDeviceLocalNotificationManager, SPTGaiaHomeDeviceLogger, SPTGaiaHomeDeviceManager, SPTGaiaHomeDeviceTooltipConnectionTracker, SPTGaiaHomeDeviceTooltipManager, SPTGaiaHomeDeviceTransitionManager, SPTGaiaIconProviderImplementation, SPTGaiaInstrumentationRemotePlayingStateBinder, SPTGaiaLocalDevicePermissions, SPTGaiaLockScreenFeatureManager, SPTGaiaLogger, SPTGaiaOnboardingManagerImplementation, SPTGaiaPlaybackGrabberController, SPTGaiaPopupController, SPTGaiaSettingsManager, SPTGaiaSignpostInstrumentation, SPTGaiaSilentAudioPlayerProviderDefaultImplementation, SPTGaiaSocialListeningIntegrationManager, SPTGaiaUbiLogger;
+@protocol CosmosFeature, SPTAbbaService, SPTAccountService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTGLUEService, SPTGaiaConnectAPI, SPTGaiaConnectManager, SPTGaiaDevicePickerPresenter, SPTGaiaWirelessRoutesAPI, SPTInstrumentationService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSocialListeningService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface GaiaFeatureImplementation : NSObject <UIPopoverPresentationControllerDelegate, SPTService, GaiaFeature, SPTGaiaDevicePickerControllerProvider>
 {
@@ -37,8 +37,6 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTRemoteConfigurationService> _remoteConfigService;
     GaiaLocalAudioSessionController *_localAudioSessionController;
-    SPTGaiaVolumeButtonController *_volumeButtonController;
-    id <SPTGaiaVolumeControllerInterface> _volumeController;
     GaiaMessageBarController *_messageBarController;
     SPTGaiaPlaybackGrabberController *_playbackGrabberController;
     SPTGaiaDeviceAppearanceMapping *_iconMapper;
@@ -78,7 +76,6 @@
     id <SPTGaiaConnectManager> _connectManager;
     id <SPTGaiaConnectAPI> _connectAPI;
     id <SPTGaiaDevicePickerPresenter> _devicePickerPresenter;
-    SPTGaiaMPMusicPlayerControllerFactory *_musicPlayerFactory;
     SPTGaiaConnectStateObservingManager *_stateObservingManager;
     SPTGaiaIconProviderImplementation *_iconProvider;
     SPTGaiaDependencyInjectorImplementation *_gaiaDependencyInjector;
@@ -90,7 +87,6 @@
 @property(retain, nonatomic) SPTGaiaDependencyInjectorImplementation *gaiaDependencyInjector; // @synthesize gaiaDependencyInjector=_gaiaDependencyInjector;
 @property(retain, nonatomic) SPTGaiaIconProviderImplementation *iconProvider; // @synthesize iconProvider=_iconProvider;
 @property(retain, nonatomic) SPTGaiaConnectStateObservingManager *stateObservingManager; // @synthesize stateObservingManager=_stateObservingManager;
-@property(retain, nonatomic) SPTGaiaMPMusicPlayerControllerFactory *musicPlayerFactory; // @synthesize musicPlayerFactory=_musicPlayerFactory;
 @property(retain, nonatomic) id <SPTGaiaDevicePickerPresenter> devicePickerPresenter; // @synthesize devicePickerPresenter=_devicePickerPresenter;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectAPI; // @synthesize connectAPI=_connectAPI;
 @property(retain, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
@@ -130,8 +126,6 @@
 @property(retain, nonatomic) SPTGaiaDeviceAppearanceMapping *iconMapper; // @synthesize iconMapper=_iconMapper;
 @property(retain, nonatomic) SPTGaiaPlaybackGrabberController *playbackGrabberController; // @synthesize playbackGrabberController=_playbackGrabberController;
 @property(retain, nonatomic) GaiaMessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
-@property(retain, nonatomic) id <SPTGaiaVolumeControllerInterface> volumeController; // @synthesize volumeController=_volumeController;
-@property(retain, nonatomic) SPTGaiaVolumeButtonController *volumeButtonController; // @synthesize volumeButtonController=_volumeButtonController;
 @property(retain, nonatomic) GaiaLocalAudioSessionController *localAudioSessionController; // @synthesize localAudioSessionController=_localAudioSessionController;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigService; // @synthesize remoteConfigService=_remoteConfigService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
@@ -161,15 +155,12 @@
 - (id)provideSettingsProvider;
 - (id)provideSocialListeningIntegrationAPI;
 - (id)provideWirelessRoutesAPI;
-- (id)provideVolumeRecfactorFlags;
 - (id)provideIconProvider;
 - (id)providePopupPresenter;
 - (id)provideDependencyInjector;
 - (id)provideDevicePresenter;
 - (id)provideConnectAPI;
 - (id)provideDevicesAvailableViewProvider;
-- (id)provideSystemVolumeManager;
-- (id)provideGaiaVolumeController;
 - (id)provideLockScreenControlsStateProvider;
 - (void)setupCastManager;
 - (void)applicationWillChangeStatusBarOrientationNotification:(id)arg1;
@@ -182,10 +173,11 @@
 - (void)setupPopupController;
 - (void)setupPlaybackGrabberController;
 - (void)setupLocalAudioSessionController;
-- (void)setupVolumeController;
-- (void)setupVolumeButtonController;
 - (void)registerForStatusBarOrientationChanges;
 - (void)unload;
+- (void)joinSocialListeningSessionWithLink:(id)arg1;
+- (void)presentJoinConfirmationViewWithName:(id)arg1 link:(id)arg2;
+- (void)joinListenTogetherConfirmationWithLink:(id)arg1;
 - (id)handleDeepLink:(id)arg1;
 - (id)provideDevicePickerVC;
 - (void)load;

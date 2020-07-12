@@ -6,14 +6,14 @@
 
 #import <UIKit/UIView.h>
 
-#import "GLUEStyleable-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSString, SPTSearchUISearchBarStyle, SPTSearchUITintView, UIButton, UIImageView, UIStackView, UITextField, UIVisualEffectView;
+@class NSLayoutConstraint, NSString, SPTSearchUISearchBarStyle, SPTSearchUITintView, UIButton, UIImage, UIImageView, UIStackView, UITextField, UIVisualEffectView;
 @protocol SPTSearchUISearchBarDelegate;
 
-@interface SPTSearchUISearchBar : UIView <UITextFieldDelegate, GLUEStyleable>
+@interface SPTSearchUISearchBar : UIView <UITextFieldDelegate>
 {
+    NSLayoutConstraint *_textFieldHeightConstraint;
     NSString *_text;
     NSString *_placeholderText;
     id <SPTSearchUISearchBarDelegate> _delegate;
@@ -28,6 +28,8 @@
     SPTSearchUITintView *_tintView;
 }
 
++ (struct CGSize)iconSizeForStyle:(id)arg1;
++ (struct CGSize)sizeForText:(id)arg1 placeholderText:(id)arg2 searchIconImage:(id)arg3 clearButtonImage:(id)arg4 style:(id)arg5;
 @property(readonly, nonatomic) SPTSearchUITintView *tintView; // @synthesize tintView=_tintView;
 @property(readonly, nonatomic) UIVisualEffectView *vibrancyView; // @synthesize vibrancyView=_vibrancyView;
 @property(readonly, nonatomic) UIButton *clearButton; // @synthesize clearButton=_clearButton;
@@ -41,24 +43,24 @@
 @property(copy, nonatomic) NSString *placeholderText; // @synthesize placeholderText=_placeholderText;
 @property(copy, nonatomic) NSString *text; // @synthesize text=_text;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSLayoutConstraint *textFieldHeightConstraint; // @synthesize textFieldHeightConstraint=_textFieldHeightConstraint;
 - (void)clearButtonPressed;
 - (void)textChanged;
 - (void)setText:(id)arg1 updatingTextField:(_Bool)arg2;
 - (void)setUpConstraints;
 - (id)makeAttributedPlaceholder;
-- (struct CGSize)iconSize;
-- (id)makeImageForIcon:(long long)arg1;
 - (void)updateStackViewAppearance;
 - (void)updateAppearance;
 - (void)setUpViewHierarchy;
 - (void)setUpViews;
 - (_Bool)textFieldShouldReturn:(id)arg1;
-- (void)glue_applyStyle:(id)arg1;
 - (_Bool)becomeFirstResponder;
 - (void)layoutSubviews;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (id)viewForFirstBaselineLayout;
 @property(copy, nonatomic) NSString *clearButtonAccessibilityLabel;
+@property(retain, nonatomic) UIImage *clearButtonImage;
+@property(retain, nonatomic) UIImage *searchIconImage;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 // Remaining properties

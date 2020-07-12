@@ -9,7 +9,7 @@
 #import "INSSchedulerDataSource-Protocol.h"
 
 @class NSDate, NSString;
-@protocol INSEventEnvelopeFactoryProtocol, INSEventSenderStatsProviderProtocol;
+@protocol INSEventEnvelopeFactoryProtocol, INSEventSenderStatsProviderProtocol, INSEventSequenceIDProviderProtocol, INSPersistentStore;
 
 @interface INSEventSenderStatsDataSource : NSObject <INSSchedulerDataSource>
 {
@@ -17,16 +17,20 @@
     double _interval;
     id <INSEventSenderStatsProviderProtocol> _eventSenderStatsProvider;
     id <INSEventEnvelopeFactoryProtocol> _envelopeFactory;
+    id <INSEventSequenceIDProviderProtocol> _sequenceIdProvider;
+    id <INSPersistentStore> _persistentStore;
 }
 
+@property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
+@property(retain, nonatomic) id <INSEventSequenceIDProviderProtocol> sequenceIdProvider; // @synthesize sequenceIdProvider=_sequenceIdProvider;
 @property(retain, nonatomic) id <INSEventEnvelopeFactoryProtocol> envelopeFactory; // @synthesize envelopeFactory=_envelopeFactory;
 @property(retain, nonatomic) id <INSEventSenderStatsProviderProtocol> eventSenderStatsProvider; // @synthesize eventSenderStatsProvider=_eventSenderStatsProvider;
 @property(nonatomic) double interval; // @synthesize interval=_interval;
 @property(retain, nonatomic) NSDate *lastDate; // @synthesize lastDate=_lastDate;
 - (void).cxx_destruct;
 - (_Bool)shouldSendStatsEvent;
-- (void)eventEnvelopesWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithInterval:(double)arg1 eventSenderStatsProvider:(id)arg2 envelopeFactory:(id)arg3;
+- (void)eventEnvelopesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)initWithInterval:(double)arg1 eventSenderStatsProvider:(id)arg2 envelopeFactory:(id)arg3 sequenceIdProvider:(id)arg4 persistentStore:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

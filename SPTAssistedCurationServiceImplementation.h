@@ -9,10 +9,11 @@
 #import "SPTAssistedCurationService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol CosmosFeature, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService;
+@protocol CosmosFeature, SPTAddToSpotifyPlaylistExperimentService, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService;
 
 @interface SPTAssistedCurationServiceImplementation : NSObject <SPTAssistedCurationService>
 {
+    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTCoreService> _coreService;
     id <CosmosFeature> _cosmosFeature;
@@ -34,6 +35,7 @@
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
+@property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 - (void).cxx_destruct;
 - (id)mostPlayedCardProviderForURI:(id)arg1;
 - (id)recentlyPlayedCardProvider;

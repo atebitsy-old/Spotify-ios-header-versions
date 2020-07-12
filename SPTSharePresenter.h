@@ -34,7 +34,7 @@
 @property(nonatomic) __weak id <_TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_> trackService; // @synthesize trackService=_trackService;
 @property(readonly, nonatomic) __weak id <SPTPageController> pageController; // @synthesize pageController=_pageController;
 @property(readonly, nonatomic) __weak id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
-@property(retain, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
+@property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) id <SPTShareHandler> shareHandler; // @synthesize shareHandler=_shareHandler;
 @property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(readonly, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;

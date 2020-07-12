@@ -17,7 +17,7 @@
 
 @property(retain, nonatomic) NSArray *dataSources; // @synthesize dataSources=_dataSources;
 - (void).cxx_destruct;
-- (void)eventEnvelopesWithCompletion:(CDUnknownBlockType)arg1;
+- (void)eventEnvelopesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithDataSources:(id)arg1;
 
 // Remaining properties

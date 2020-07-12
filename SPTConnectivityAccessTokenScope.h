@@ -6,17 +6,18 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAuthWebgateSession, SPTConnectivityApplicationScope;
+@class SPTConnectivityApplicationScope;
+@protocol SPTAuthWebgateSession;
 
 @interface SPTConnectivityAccessTokenScope : NSObject
 {
     struct unique_ptr<spotify::connectivity::AccessTokenScope, std::__1::default_delete<spotify::connectivity::AccessTokenScope>> _accessTokenScope;
-    SPTAuthWebgateSession *_session;
+    id <SPTAuthWebgateSession> _session;
     SPTConnectivityApplicationScope *_applicationScope;
 }
 
 @property(nonatomic) __weak SPTConnectivityApplicationScope *applicationScope; // @synthesize applicationScope=_applicationScope;
-@property(retain, nonatomic) SPTAuthWebgateSession *session; // @synthesize session=_session;
+@property(retain, nonatomic) id <SPTAuthWebgateSession> session; // @synthesize session=_session;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (struct ConnectionBuilder)connectionBuilder;

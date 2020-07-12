@@ -111,7 +111,6 @@
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (void).cxx_destruct;
-- (id)provideUnfinishedItemsProvider;
 - (id)providePodcastPlayerWithViewURI:(id)arg1 featureIdentifier:(id)arg2 referrerIdentifier:(id)arg3;
 - (id)providePodcastLogger;
 - (id)providePodcastEpisodeFactory;
@@ -128,7 +127,6 @@
 - (id)provideEpisodeCellConfigurator;
 - (id)provideResolverForPodcast;
 - (id)providePodcastSpeedControlManager;
-- (void)setUpShowEntityServiceDataLoader:(id)arg1;
 - (id)provideShowEntityService;
 - (id)provideDefaultContextMenuProvider;
 - (id)provideInternalPodcastEpisodeFactory;

@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTInstrumentationCurrentPageViewObserver, SPTInstrumentationMapper, SPTInstrumentationModalPresentationMonitor, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationTransportRegistry;
+@protocol SPTInstrumentationCurrentPageViewObserver, SPTInstrumentationMapper, SPTInstrumentationModalPresentationMonitor, SPTInstrumentationPageViewProtocol, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationTransportRegistry;
 
 @protocol SPTInstrumentationService <SPTService>
+- (id <SPTInstrumentationPageViewProtocol>)currentPageView;
 - (void)removeCurrentPageViewObserver:(id <SPTInstrumentationCurrentPageViewObserver>)arg1;
 - (void)addCurrentPageViewObserver:(id <SPTInstrumentationCurrentPageViewObserver>)arg1;
 - (id <SPTInstrumentationMapper>)provideIntentMapper;

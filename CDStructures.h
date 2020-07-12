@@ -15,9 +15,9 @@ typedef void (^CDUnknownBlockType)(void); // return type and parameters are unkn
 #pragma mark Named Structures
 
 struct AccessToken {
-    basic_string_90719d97 access_token;
-    struct time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000>>> expires_at_timestamp;
-    basic_string_90719d97 token_type;
+    basic_string_90719d97 _field1;
+    struct time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000>>> _field2;
+    basic_string_90719d97 _field3;
 };
 
 struct AccessTokenScope;

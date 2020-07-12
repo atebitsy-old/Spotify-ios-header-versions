@@ -14,7 +14,6 @@
 - (UIViewController<SPTBarInteractiveTransitionParticipant> *)barViewControllerForPresentationController:(SPTBarInteractivePresentationController *)arg1;
 - (void)interactivePresentationControllerNeedsDismissal:(SPTBarInteractivePresentationController *)arg1;
 - (void)interactivePresentationControllerNeedsPresentation:(SPTBarInteractivePresentationController *)arg1;
-- (double)panHeightForInteractivePresentationController:(SPTBarInteractivePresentationController *)arg1;
 
 @optional
 - (_Bool)interactiveGesturesEnabled;

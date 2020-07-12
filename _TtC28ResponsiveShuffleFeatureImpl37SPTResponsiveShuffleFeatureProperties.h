@@ -8,6 +8,7 @@
 
 @interface _TtC28ResponsiveShuffleFeatureImpl37SPTResponsiveShuffleFeatureProperties : NSObject
 {
+    // Error parsing type: , name: exposureEligible
     // Error parsing type: , name: showAcknowledgement
     // Error parsing type: , name: responsivelyRerank
 }

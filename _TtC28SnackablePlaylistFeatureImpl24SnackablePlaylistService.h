@@ -9,6 +9,9 @@
 @interface _TtC28SnackablePlaylistFeatureImpl24SnackablePlaylistService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: playlistPlatformService
+    // Error parsing type: , name: sessionService
+    // Error parsing type: , name: glueService
     // Error parsing type: , name: pageRegistrationToken
 }
 

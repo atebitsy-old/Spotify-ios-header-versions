@@ -32,15 +32,13 @@
     SPSession *_internalSession;
     SPTCoreCreateOptions *_createOptions;
     id <SPTSessionBootstrapDelegate> _bootstrapDelegate;
-    id <SPTCoreLoginControllerLoginDelegate> _currentLoginDelegate;
+    id <SPTCoreLoginControllerLoginDelegate> _loginDelegate;
     SPTAuthLoginTask *_loginTask;
 }
 
 + (id)coreWithCreateOptions:(id)arg1 bootstrapDelegate:(id)arg2 scheduler:(id)arg3 eventSender:(id)arg4 error:(id *)arg5;
-+ (id)coreWithCreateOptions:(id)arg1 bootstrapDelegate:(id)arg2 scheduler:(id)arg3 error:(id *)arg4;
-+ (id)coreWithCreateOptions:(id)arg1 scheduler:(id)arg2 error:(id *)arg3;
 @property(retain, nonatomic) SPTAuthLoginTask *loginTask; // @synthesize loginTask=_loginTask;
-@property(nonatomic) __weak id <SPTCoreLoginControllerLoginDelegate> currentLoginDelegate; // @synthesize currentLoginDelegate=_currentLoginDelegate;
+@property(nonatomic) __weak id <SPTCoreLoginControllerLoginDelegate> loginDelegate; // @synthesize loginDelegate=_loginDelegate;
 @property(nonatomic) __weak id <SPTSessionBootstrapDelegate> bootstrapDelegate; // @synthesize bootstrapDelegate=_bootstrapDelegate;
 @property(retain, nonatomic) SPTCoreCreateOptions *createOptions; // @synthesize createOptions=_createOptions;
 @property(retain, nonatomic) SPSession *internalSession; // @synthesize internalSession=_internalSession;

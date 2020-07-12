@@ -12,6 +12,7 @@
     // Error parsing type: , name: consumer
     // Error parsing type: , name: dataFetchingCompletion
     // Error parsing type: , name: feedClient
+    // Error parsing type: , name: translator
 }
 
 @end

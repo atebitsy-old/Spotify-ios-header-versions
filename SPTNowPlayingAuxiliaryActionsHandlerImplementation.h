@@ -63,6 +63,7 @@
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 @property(nonatomic) __weak SPTNowPlayingContextMenuHeaderFactory *contextMenuHeaderFactory; // @synthesize contextMenuHeaderFactory=_contextMenuHeaderFactory;
 - (void).cxx_destruct;
+- (void)logSleepTimerButtonTapped;
 - (void)presentSleepTimerMenuFromView:(id)arg1 inViewController:(id)arg2;
 - (void)timerDidCancel:(id)arg1;
 - (void)timerDidEnd:(id)arg1;
@@ -88,11 +89,13 @@
 - (void)removeFromCollectionIfNeededWithConfirmation:(_Bool)arg1;
 - (void)handleLegacyFeedbackFeedbackWithViewController:(id)arg1 actionControl:(id)arg2 trackOnlyBan:(_Bool)arg3 confirmation:(_Bool)arg4;
 - (void)handlePremiumTierNegativeFeedbackWithViewController:(id)arg1 actionControl:(id)arg2 trackOnlyBan:(_Bool)arg3 withConfirmation:(_Bool)arg4;
+- (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1;
 - (void)handleCollectionNegativeFeedbackWithConfirmation:(_Bool)arg1;
 - (void)toggleBanStateFromViewController:(id)arg1 andActionControl:(id)arg2 andTrackOnlyBan:(_Bool)arg3 withConfirmation:(_Bool)arg4;
 - (void)toggleTrackBanStateFromViewController:(id)arg1 andActionControl:(id)arg2 withConfirmation:(_Bool)arg3;
 - (void)toggleTrackBanStateFromViewController:(id)arg1 andActionControl:(id)arg2;
 - (void)toggleBanStateFromViewController:(id)arg1 andActionControl:(id)arg2;
+- (void)logHeartButtonTappedWithFeedbackButtonBehavior:(long long)arg1;
 - (void)toggleCollectionStateFromViewController:(id)arg1 andActionControl:(id)arg2 withConfirmation:(_Bool)arg3;
 - (void)toggleCollectionStateFromViewController:(id)arg1 andActionControl:(id)arg2;
 - (void)removeObserver:(id)arg1;

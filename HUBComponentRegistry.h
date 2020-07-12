@@ -8,23 +8,24 @@
 
 #import "HUBComponentChildDelegate-Protocol.h"
 
-@class NSMutableDictionary;
+@class NSDictionary, NSMutableDictionary;
 @protocol HUBComponentFallbackHandler;
 
 @interface HUBComponentRegistry : NSObject <HUBComponentChildDelegate>
 {
     id <HUBComponentFallbackHandler> _fallbackHandler;
-    NSMutableDictionary *_registeredComponents;
+    NSMutableDictionary *_internalRegistry;
 }
 
-@property(readonly, nonatomic) NSMutableDictionary *registeredComponents; // @synthesize registeredComponents=_registeredComponents;
-@property(readonly, nonatomic) id <HUBComponentFallbackHandler> fallbackHandler; // @synthesize fallbackHandler=_fallbackHandler;
+@property(retain, nonatomic) NSMutableDictionary *internalRegistry; // @synthesize internalRegistry=_internalRegistry;
+@property(retain, nonatomic) id <HUBComponentFallbackHandler> fallbackHandler; // @synthesize fallbackHandler=_fallbackHandler;
 - (void).cxx_destruct;
 - (id)component:(id)arg1 childComponentForModel:(id)arg2;
 - (void)unregisterComponentsForNamespace:(id)arg1;
 - (void)registerComponents:(id)arg1 forNamespace:(id)arg2;
 - (id)componentForModel:(id)arg1;
 - (id)initWithFallbackHandler:(id)arg1;
+@property(readonly, nonatomic) NSDictionary *registeredComponents;
 
 @end
 

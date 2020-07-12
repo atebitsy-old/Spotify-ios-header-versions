@@ -6,12 +6,13 @@
 
 #import "_TtC24PushMessagingFeatureImpl21PushMessagingListener.h"
 
-#import "SPTThirdPartyNotificationsTracker-Protocol.h"
+#import "SPTNotificationSystemDelegate-Protocol.h"
 
-@interface _TtC24PushMessagingFeatureImpl21PushMessagingListener (PushMessagingFeatureImpl) <SPTThirdPartyNotificationsTracker>
+@interface _TtC24PushMessagingFeatureImpl21PushMessagingListener (PushMessagingFeatureImpl) <SPTNotificationSystemDelegate>
 - (void)handleNotification:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleNotificationWithResponse:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleIncomingRemoteNotification:(id)arg1;
-- (void)setPushNotificationsDeviceToken:(id)arg1;
+- (void)didRegisterForRemoteNotificationsWithDeviceToken:(id)arg1;
+- (void)didFailToRegisterForRemoteNotificationsWithError:(id)arg1;
 @end
 

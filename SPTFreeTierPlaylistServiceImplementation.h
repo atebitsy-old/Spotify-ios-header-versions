@@ -9,10 +9,11 @@
 #import "SPTFreeTierPlaylistService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierPlaylistFeatureProperties;
-@protocol SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierPlaylistTestManager, SPTFreeTierService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSortingFilteringService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPTAddToSpotifyPlaylistExperimentService, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierPlaylistTestManager, SPTFreeTierService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSortingFilteringService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierPlaylistServiceImplementation : NSObject <SPTFreeTierPlaylistService>
 {
+    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <SPTSessionService> _clientSessionService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTExplicitContentService> _explicitContentService;
@@ -42,6 +43,7 @@
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
+@property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 - (void).cxx_destruct;
 - (id)provideSortingFilteringForPlaylistURL:(id)arg1;
 - (id)provideTestManager;

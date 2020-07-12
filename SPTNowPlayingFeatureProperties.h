@@ -13,7 +13,7 @@
 @interface SPTNowPlayingFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _podcastInspectorEnabled;
-    _Bool _mixedMediaEpisodeModeEnabled;
+    _Bool _showHeadUnitLogEnabled;
     _Bool _samplesEnabled;
     _Bool _remoteControlEventSubtypeDeprecation;
     _Bool _remoteControlEventLoggingEnabled;
@@ -24,7 +24,7 @@
 @property(readonly, nonatomic) _Bool remoteControlEventLoggingEnabled; // @synthesize remoteControlEventLoggingEnabled=_remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic) _Bool remoteControlEventSubtypeDeprecation; // @synthesize remoteControlEventSubtypeDeprecation=_remoteControlEventSubtypeDeprecation;
 @property(readonly, nonatomic) _Bool samplesEnabled; // @synthesize samplesEnabled=_samplesEnabled;
-@property(readonly, nonatomic) _Bool mixedMediaEpisodeModeEnabled; // @synthesize mixedMediaEpisodeModeEnabled=_mixedMediaEpisodeModeEnabled;
+@property(readonly, nonatomic) _Bool showHeadUnitLogEnabled; // @synthesize showHeadUnitLogEnabled=_showHeadUnitLogEnabled;
 @property(readonly, nonatomic) _Bool podcastInspectorEnabled; // @synthesize podcastInspectorEnabled=_podcastInspectorEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

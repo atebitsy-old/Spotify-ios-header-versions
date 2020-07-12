@@ -57,6 +57,7 @@
 - (id)provideGoToAlbumActionTaskForTrackURL:(id)arg1 logContext:(id)arg2;
 - (id)provideAddToPlaylistActionForTrackURL:(id)arg1 sourceURL:(id)arg2 logContext:(id)arg3 contextSourceURL:(id)arg4;
 - (id)provideRemoveFromPlaylistActionForTrackURL:(id)arg1 sourceURL:(id)arg2 logContext:(id)arg3 contextSourceURL:(id)arg4;
+- (void)dismissAnimated:(_Bool)arg1;
 - (void)presentContexMenuForShow:(id)arg1 contextMenuDelegate:(id)arg2 inViewController:(id)arg3 senderView:(id)arg4 options:(id)arg5;
 - (void)presentContexMenuWithHeaderView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5;
 - (void)presentContexMenuWithMetaDataView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5;

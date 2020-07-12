@@ -8,8 +8,8 @@
 
 #import "SPTConnectivityManagerDelegate-Protocol.h"
 
-@class NSMapTable, NSString, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTAuthSession, SPTCoreClientFeatures, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOauthClient, SPTOfflineModeNotifier, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
-@protocol SPTAsyncScheduler, SPTConnectivityManager, SPTEntityService, SPTOfflineManager, SPTProductState, SPTResolver;
+@class NSMapTable, NSString, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTAuthSession, SPTCoreClientFeatures, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOfflineModeNotifier, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
+@protocol SPTAsyncScheduler, SPTConnectivityManager, SPTEntityService, SPTOauthClient, SPTOfflineManager, SPTProductState, SPTResolver;
 
 @interface SPSession : NSObject <SPTConnectivityManagerDelegate>
 {
@@ -17,7 +17,6 @@
     struct scoped_connection _accesspointForcedUpdateConnection;
     struct scoped_connection _accesspointTemporaryConnectionErrorConnection;
     struct scoped_connection _loginModeChangedConnection;
-    struct scoped_connection _offlineErrorConnection;
     _Bool _isOnline;
     _Bool _isOffline;
     _Bool _isLoggedIn;
@@ -45,7 +44,6 @@
 @property(readonly, nonatomic) NSString *currentAP;
 - (void)processLoginModeChanged;
 - (void)processTemporaryConnectionErrorWithStatus:(int)arg1 connectionError:(id)arg2;
-- (void)processOfflineSyncFailed:(const struct error_code *)arg1;
 - (void)processAutoUpdateEvent;
 - (const struct ClientFeatureStack *)clientFeatureStack;
 - (void)acceptLicenses:(id)arg1;
@@ -74,7 +72,7 @@
 @property(readonly, nonatomic) SPTPlayerMftCanPlayChecker *mftCanPlayChecker;
 @property(readonly, nonatomic) SPTAudioVolumeControl *audioVolumeControl;
 @property(readonly, nonatomic) id <SPTEntityService> entityService;
-@property(readonly, nonatomic) SPTOauthClient *oauthClient;
+@property(readonly, nonatomic) id <SPTOauthClient> oauthClient;
 @property(readonly, nonatomic) SPTHermesController *hermes;
 @property(readonly, nonatomic) SPTLogger *logger;
 @property(readonly, nonatomic) SPTApplicationStateTracker *applicationStateTracker;

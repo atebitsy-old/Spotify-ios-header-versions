@@ -8,13 +8,13 @@
 
 #import "SPTAdFocusManagerObserver-Protocol.h"
 #import "SPTAdsBaseRegistryObserver-Protocol.h"
-#import "SPTGaiaSystemVolumeObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
+#import "SPTVolumeSystemObserver-Protocol.h"
 
 @class AVAudioSession, NSString, SPTAdFeatureFlagChecks, SPTAdFocusManager, SPTPlayerState;
-@protocol SPContextMenuFeature, SPTAdsBaseCosmosBridge, SPTAdsBaseRegistry, SPTGaiaSystemVolumeManager, SPTNowPlayingManager, SPTPlayer;
+@protocol SPContextMenuFeature, SPTAdsBaseCosmosBridge, SPTAdsBaseRegistry, SPTNowPlayingManager, SPTPlayer, SPTVolumeSystemAPI;
 
-@interface SPTAdNowPlayingManager : NSObject <SPTAdsBaseRegistryObserver, SPTPlayerObserver, SPTAdFocusManagerObserver, SPTGaiaSystemVolumeObserver>
+@interface SPTAdNowPlayingManager : NSObject <SPTAdsBaseRegistryObserver, SPTPlayerObserver, SPTAdFocusManagerObserver, SPTVolumeSystemObserver>
 {
     _Bool _inAdBreak;
     _Bool _nowPlayingViewHiddenBeforeAdStart;
@@ -26,7 +26,7 @@
     SPTAdFeatureFlagChecks *_featureChecker;
     SPTAdFocusManager *_adFocusManager;
     id <SPContextMenuFeature> _contextMenuFeature;
-    id <SPTGaiaSystemVolumeManager> _systemVolumeManager;
+    id <SPTVolumeSystemAPI> _systemVolumeManager;
     AVAudioSession *_audioSession;
     NSString *_previousAudioOutput;
 }
@@ -35,7 +35,7 @@
 @property(retain, nonatomic) NSString *previousAudioOutput; // @synthesize previousAudioOutput=_previousAudioOutput;
 @property(nonatomic) float previousVolume; // @synthesize previousVolume=_previousVolume;
 @property(retain, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
-@property(retain, nonatomic) id <SPTGaiaSystemVolumeManager> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
+@property(retain, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(retain, nonatomic) SPTAdFocusManager *adFocusManager; // @synthesize adFocusManager=_adFocusManager;
 @property(retain, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;

@@ -9,7 +9,7 @@
 @interface _TtC10MobiusCore7WorkBag : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: queue
-    // Error parsing type: , name: servicing
+    // Error parsing type: , name: state
     // Error parsing type: , name: access
 }
 

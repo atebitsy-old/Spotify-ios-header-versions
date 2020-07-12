@@ -11,7 +11,7 @@
 #import "SPTAdsService-Protocol.h"
 
 @class NSString, NSURL, SPTAdContextManager, SPTAdContextManagerListener, SPTAdFeatureFlagChecks, SPTAdFeaturedActionHandler, SPTAdFocusManager, SPTAdLinkHandler, SPTAdMicPermissionsLogger, SPTAdMobileOverlayController, SPTAdNowPlayingAudioAdModeGenerator, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdNowPlayingVideoAdModeGenerator, SPTAdPlayerObservable, SPTAdRegistryInformationManager, SPTAdRulesManager, SPTAdStateLogger, SPTAdVideoEventReporter, SPTAdVoicePermissions, SPTAdVoiceSession, SPTAdsAutoDetectionController, SPTAdsFeatureProperties, SPTAdsInAppBrowserController, SPTAdsMarqueeController, SPTAdsMoatManager, SPTAdsRemindersManager, SPTAdsViewModel, SPTAllocationContext, SPTInterruptionVideoEventReporter, SPTSponsoredContextManager;
-@protocol FollowFeature, GaiaFeature, SPContextMenuFeature, SPTAbbaService, SPTAccessoryManagerService, SPTAdsBaseService, SPTAdsManager, SPTAudioPreviewService, SPTBannerFeature, SPTCollectionPlatformService, SPTComScoreAnalyticsManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDebugService, SPTEventSender, SPTEventSenderService, SPTFreeTierPreCurationService, SPTGLUEService, SPTInAppMessageService, SPTLocalSettings, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, SPTVoiceService, SPTWebViewFeature, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol FollowFeature, SPContextMenuFeature, SPTAbbaService, SPTAccessoryManagerService, SPTAdsBaseService, SPTAdsManager, SPTAudioPreviewService, SPTBannerFeature, SPTCollectionPlatformService, SPTComScoreAnalyticsManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDebugService, SPTEventSender, SPTEventSenderService, SPTFreeTierPreCurationService, SPTGLUEService, SPTInAppMessageService, SPTLocalSettings, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, SPTVoiceLibraryService, SPTVoiceService, SPTVolumeService, SPTWebViewFeature, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTAdsServiceImplementation : NSObject <SPTAdFeatureFlagChecksObserver, SPSessionObserver, SPTAdsService>
 {
@@ -28,9 +28,10 @@
     id <SPTCoreService> _coreService;
     id <FollowFeature> _followService;
     id <SPContextMenuFeature> _contextMenuFeature;
+    id <SPTVoiceLibraryService> _voiceLibraryService;
     id <SPTVoiceService> _voiceService;
     id <SPTWebViewFeature> _webviewFeature;
-    id <GaiaFeature> _gaiaFeature;
+    id <SPTVolumeService> _volumeService;
     id <SPTUIPresentationService> _presentationService;
     id <SPTInAppMessageService> _inappmessageService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
@@ -141,9 +142,10 @@
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTInAppMessageService> inappmessageService; // @synthesize inappmessageService=_inappmessageService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
-@property(nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
+@property(nonatomic) __weak id <SPTVolumeService> volumeService; // @synthesize volumeService=_volumeService;
 @property(nonatomic) __weak id <SPTWebViewFeature> webviewFeature; // @synthesize webviewFeature=_webviewFeature;
 @property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
+@property(nonatomic) __weak id <SPTVoiceLibraryService> voiceLibraryService; // @synthesize voiceLibraryService=_voiceLibraryService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <FollowFeature> followService; // @synthesize followService=_followService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
@@ -168,6 +170,7 @@
 - (id)providePlayerSource;
 - (id)provideEventSender;
 - (id)provideFeatureProperties;
+- (id)provideVoiceLibrarySession;
 - (id)provideVoiceSession;
 - (id)provideActionsHandler;
 - (id)provideFeatureChecker;

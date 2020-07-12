@@ -9,6 +9,8 @@
 @class NSString;
 
 @protocol SPTSignupTermsAndPolicyViewConfiguration <NSObject>
+- (_Bool)isPhoneNumberFlow;
+- (_Bool)isGuestModeEnabled;
 - (_Bool)shouldShowMarketingOptInText;
 - (NSString *)countryCode;
 @end

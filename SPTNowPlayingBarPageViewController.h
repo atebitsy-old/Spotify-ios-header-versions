@@ -14,18 +14,15 @@
 #import "SPTPlayerTrackScrollViewOffsetDelegate-Protocol.h"
 #import "SPViewController-Protocol.h"
 
-@class NSString, NSURL, SPForegroundObserver, SPTNowPlayingBarContentView, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingSkipLimitReachedMessageRequester, SPTPlayerTrackScrollDataSource, SPTTheme, UIView;
-@protocol SPTConnectUIDevicePickerPresenter, SPTGaiaConnectAPI, SPTGaiaDevicesAvailableView, SPTNowPlayingTestManager;
+@class NSString, NSURL, SPForegroundObserver, SPTNowPlayingBarContentView, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingSkipLimitReachedMessageRequester, SPTPlayerTrackScrollDataSource, SPTTheme;
+@protocol SPTNowPlayingTestManager, _TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_;
 
 @interface SPTNowPlayingBarPageViewController : UIViewController <SPBarTransitableViewController, SPForegroundObserverDelegate, SPTPlayerTrackScrollDataSourceDelegate, SPTPlayerTrackScrollViewOffsetDelegate, SPTNowPlayingBarModelObserver, SPTNowPlayingBarVoiceCompanionDelegate, SPViewController>
 {
     SPTNowPlayingBarModel *_nowPlayingModel;
     SPTNowPlayingSkipLimitReachedMessageRequester *_skipLimitReachedMessageRequester;
-    id <SPTGaiaConnectAPI> _connectManager;
-    id <SPTConnectUIDevicePickerPresenter> _devicePickerPresenter;
+    id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> _connectIntegration;
     SPTTheme *_theme;
-    UIView<SPTGaiaDevicesAvailableView> *_devicesAvailableView;
-    UIView *_connectButtonView;
     id <SPTNowPlayingTestManager> _testManager;
     SPTNowPlayingBarContentView *_contentView;
     SPTPlayerTrackScrollDataSource *_playerTrackScrollDataSource;
@@ -38,11 +35,8 @@
 @property(retain, nonatomic) SPTPlayerTrackScrollDataSource *playerTrackScrollDataSource; // @synthesize playerTrackScrollDataSource=_playerTrackScrollDataSource;
 @property(retain, nonatomic) SPTNowPlayingBarContentView *contentView; // @synthesize contentView=_contentView;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
-@property(retain, nonatomic) UIView *connectButtonView; // @synthesize connectButtonView=_connectButtonView;
-@property(retain, nonatomic) UIView<SPTGaiaDevicesAvailableView> *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) id <SPTConnectUIDevicePickerPresenter> devicePickerPresenter; // @synthesize devicePickerPresenter=_devicePickerPresenter;
-@property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
+@property(readonly, nonatomic) id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> connectIntegration; // @synthesize connectIntegration=_connectIntegration;
 @property(readonly, nonatomic) SPTNowPlayingSkipLimitReachedMessageRequester *skipLimitReachedMessageRequester; // @synthesize skipLimitReachedMessageRequester=_skipLimitReachedMessageRequester;
 @property(retain, nonatomic) SPTNowPlayingBarModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 - (void).cxx_destruct;
@@ -64,7 +58,7 @@
 - (void)sp_setBarTransitionProgress:(float)arg1;
 @property(readonly, nonatomic) NSURL *URI;
 - (void)dealloc;
-- (id)initWithPlayingModel:(id)arg1 logger:(id)arg2 skipLimitReachedMessageRequester:(id)arg3 theme:(id)arg4 connectManager:(id)arg5 devicePickerPresenter:(id)arg6 devicesAvailableView:(id)arg7 connectButtonView:(id)arg8 testManager:(id)arg9;
+- (id)initWithPlayingModel:(id)arg1 logger:(id)arg2 skipLimitReachedMessageRequester:(id)arg3 theme:(id)arg4 connectIntegration:(id)arg5 testManager:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

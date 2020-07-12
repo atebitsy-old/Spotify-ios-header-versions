@@ -29,7 +29,6 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (_Bool)mobileToMobileEnabled;
-- (_Bool)volumeRefactorEnabled;
 - (void)startObserving;
 - (id)initWithFeatureFlags:(id)arg1;
 

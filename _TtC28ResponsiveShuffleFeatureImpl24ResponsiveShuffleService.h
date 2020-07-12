@@ -12,7 +12,7 @@
 {
     // Error parsing type: , name: viewURI
     // Error parsing type: , name: containerService
-    // Error parsing type: , name: gaiaService
+    // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: playerFeature
     // Error parsing type: , name: playlistPlatformService

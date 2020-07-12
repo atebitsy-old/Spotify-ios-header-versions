@@ -7,6 +7,7 @@
 #import "_TtC22ConnectUIV2FeatureImpl38NowPlayingBarIntegrationImplementation.h"
 
 @interface _TtC22ConnectUIV2FeatureImpl38NowPlayingBarIntegrationImplementation (ConnectUIV2FeatureImpl)
+- (void)connectConnectionStateDidChange:(long long)arg1;
 - (void)connectActiveConnectionTypeDidChange:(long long)arg1;
 - (void)connectAvailableDevicesDidChange:(id)arg1;
 @end

@@ -24,11 +24,13 @@
     NSURL *_URL;
     NSString *_previewId;
     long long _trackRowRestriction;
+    NSString *_groupLabel;
 }
 
 + (long long)trackOfflineSyncStatusForSPTOfflineAvailability:(unsigned long long)arg1;
 + (long long)trackRowRestrictionFromEntity:(id)arg1;
 + (id)subtitleFromEntity:(id)arg1 showAlbumNameOnSubtitle:(_Bool)arg2;
+@property(readonly, copy, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(readonly, nonatomic) long long trackRowRestriction; // @synthesize trackRowRestriction=_trackRowRestriction;
 @property(readonly, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;

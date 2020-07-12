@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
+@class NSData, NSString;
 
 @protocol INSSequenceNumberEntityProtocol <NSObject>
+@property(copy, nonatomic) NSData *sequenceId;
 @property(nonatomic) long long sequenceNumberNext;
 @property(copy, nonatomic) NSString *eventName;
 @end

@@ -27,7 +27,7 @@
     // Error parsing type: , name: indicatorTopConstraint
     // Error parsing type: , name: indicatorTrailingConstraint
     // Error parsing type: , name: visible
-    // Error parsing type: , name: active
+    // Error parsing type: , name: _active
     // Error parsing type: , name: scrollView
     // Error parsing type: , name: handleMoving
     // Error parsing type: , name: _minimalOffset

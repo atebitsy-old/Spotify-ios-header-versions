@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEGradientStyle, GLUEImageStyle, GLUELabelStyle, NSString;
+@class GLUEGradientStyle, GLUEImageStyle, NSString, SPTEncoreTypeStyle;
 
 @interface SPTHomeUIPromoV2ViewStyle : NSObject <GLUEStyle>
 {
@@ -16,17 +16,17 @@
     GLUEImageStyle *_backgroundImageStyle;
     GLUEImageStyle *_mainImageStyle;
     GLUEImageStyle *_logoImageStyle;
-    GLUELabelStyle *_backgroundLabelStyle;
-    GLUELabelStyle *_titleLabelStyle;
-    GLUELabelStyle *_metadataLabelStyle;
-    GLUELabelStyle *_subtitleLabelStyle;
+    SPTEncoreTypeStyle *_backgroundLabelStyle;
+    SPTEncoreTypeStyle *_titleLabelStyle;
+    SPTEncoreTypeStyle *_metadataLabelStyle;
+    SPTEncoreTypeStyle *_subtitleLabelStyle;
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
-@property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
-@property(copy, nonatomic) GLUELabelStyle *metadataLabelStyle; // @synthesize metadataLabelStyle=_metadataLabelStyle;
-@property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
-@property(copy, nonatomic) GLUELabelStyle *backgroundLabelStyle; // @synthesize backgroundLabelStyle=_backgroundLabelStyle;
+@property(copy, nonatomic) SPTEncoreTypeStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
+@property(copy, nonatomic) SPTEncoreTypeStyle *metadataLabelStyle; // @synthesize metadataLabelStyle=_metadataLabelStyle;
+@property(copy, nonatomic) SPTEncoreTypeStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
+@property(copy, nonatomic) SPTEncoreTypeStyle *backgroundLabelStyle; // @synthesize backgroundLabelStyle=_backgroundLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *logoImageStyle; // @synthesize logoImageStyle=_logoImageStyle;
 @property(copy, nonatomic) GLUEImageStyle *mainImageStyle; // @synthesize mainImageStyle=_mainImageStyle;
 @property(copy, nonatomic) GLUEImageStyle *backgroundImageStyle; // @synthesize backgroundImageStyle=_backgroundImageStyle;

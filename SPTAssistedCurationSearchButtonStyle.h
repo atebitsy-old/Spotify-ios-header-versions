@@ -8,11 +8,11 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class NSString, UIColor, UIFont;
+@class NSString, SPTEncoreTypeStyle, UIColor;
 
 @interface SPTAssistedCurationSearchButtonStyle : NSObject <GLUEStyle>
 {
-    UIFont *_textfont;
+    SPTEncoreTypeStyle *_textStyle;
     long long _lineBreakMode;
     UIColor *_textColor;
     double _height;
@@ -33,7 +33,7 @@
 @property(nonatomic) double height; // @synthesize height=_height;
 @property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(nonatomic) long long lineBreakMode; // @synthesize lineBreakMode=_lineBreakMode;
-@property(retain, nonatomic) UIFont *textfont; // @synthesize textfont=_textfont;
+@property(retain, nonatomic) SPTEncoreTypeStyle *textStyle; // @synthesize textStyle=_textStyle;
 - (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

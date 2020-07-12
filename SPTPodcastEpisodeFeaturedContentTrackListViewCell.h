@@ -37,6 +37,7 @@
 - (void)setupConstraints;
 - (void)setupLayout;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
+- (id)subTitle:(id)arg1;
 - (void)configureCellForEntity:(id)arg1 isLastVisibleTrack:(_Bool)arg2 imageLoader:(id)arg3 trackActionHandler:(id)arg4;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

@@ -9,6 +9,7 @@
 #import "SPTNowPlayingPlaybackActionsHandler-Protocol.h"
 
 @class NSString, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingSkipLimitReachedMessageRequester, SPTObserverManager;
+@protocol SPTQueueLogger;
 
 @interface SPTNowPlayingPlaybackActionsHandlerImplementation : NSObject <SPTNowPlayingPlaybackActionsHandler>
 {
@@ -16,8 +17,10 @@
     SPTNowPlayingSkipLimitReachedMessageRequester *_skipLimitReachedMessageRequester;
     SPTNowPlayingLogger *_logger;
     SPTObserverManager *_observerManager;
+    id <SPTQueueLogger> _queueLogger;
 }
 
+@property(readonly, nonatomic) id <SPTQueueLogger> queueLogger; // @synthesize queueLogger=_queueLogger;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTNowPlayingSkipLimitReachedMessageRequester *skipLimitReachedMessageRequester; // @synthesize skipLimitReachedMessageRequester=_skipLimitReachedMessageRequester;
@@ -39,10 +42,11 @@
 @property(readonly, nonatomic) _Bool isPausingAllowed;
 @property(readonly, nonatomic) unsigned long long repeatMode;
 @property(readonly, nonatomic) _Bool isShuffling;
+- (_Bool)isToggleModeQueue;
 @property(readonly, nonatomic) _Bool isPaused;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithModel:(id)arg1 skipLimitReachedMessageRequester:(id)arg2 logger:(id)arg3;
+- (id)initWithModel:(id)arg1 skipLimitReachedMessageRequester:(id)arg2 logger:(id)arg3 queueLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

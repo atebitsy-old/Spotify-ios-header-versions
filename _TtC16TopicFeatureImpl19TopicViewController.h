@@ -6,14 +6,10 @@
 
 #import <UIKit/UIViewController.h>
 
-@class NSString, NSURL;
-
 @interface _TtC16TopicFeatureImpl19TopicViewController : UIViewController
 {
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: hubsViewController
-    // Error parsing type: , name: pageIdentifier
-    // Error parsing type: , name: pageURI
 }
 
 - (void).cxx_destruct;
@@ -22,13 +18,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)sp_updateContentInsets;
-- (id)spt_pageURI;
-- (id)spt_pageIdentifier;
 - (id)initWithCoder:(id)arg1;
-
-// Remaining properties
-@property(nonatomic, readonly) NSString *pageIdentifier;
-@property(nonatomic, readonly) NSURL *pageURI;
 
 @end
 

@@ -19,6 +19,8 @@
     // Error parsing type: , name: sessionService
     // Error parsing type: , name: podcastService
     // Error parsing type: , name: uriDispatchService
+    // Error parsing type: , name: ubiService
+    // Error parsing type: , name: performanceMetricsService
     // Error parsing type: , name: configurationProperties
 }
 

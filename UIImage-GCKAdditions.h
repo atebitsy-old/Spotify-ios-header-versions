@@ -50,7 +50,7 @@
 + (id)badgeLabelViewDefaultStyleWithHeight:(double)arg1 includeStroke:(_Bool)arg2;
 + (id)spt_chromecastIconAnimationImageWithSize:(struct CGSize)arg1 foregroundColor:(id)arg2 backgroundColor:(id)arg3 duration:(double)arg4;
 + (id)spt_chromecastIconAnimationImageWithSize:(struct CGSize)arg1 theme:(id)arg2;
-+ (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3 iconColor:(id)arg4 animatedIconBackgroundColor:(id)arg5 theme:(id)arg6;
++ (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3 iconColor:(id)arg4 animatedIconBackgroundColor:(id)arg5 theme:(id)arg6 allowAnimatedCastIcon:(_Bool)arg7;
 + (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3 theme:(id)arg4;
 + (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3;
 + (id)imageWithIconImage:(id)arg1 badgeImage:(id)arg2 selected:(_Bool)arg3;

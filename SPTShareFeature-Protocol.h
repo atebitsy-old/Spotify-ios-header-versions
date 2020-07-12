@@ -7,11 +7,12 @@
 #import "SPTService-Protocol.h"
 
 @class NSArray, NSURL, UIViewController;
-@protocol SPTShareDestination, SPTShareDragDelegateFactory, SPTShareEntityData, SPTShareEntityDataFactory;
+@protocol SPTShareDestination, SPTShareDragDelegateFactory, SPTShareEntityData, SPTShareEntityDataFactory, SPTShareVideoDataProviderRegistry;
 
 @protocol SPTShareFeature <SPTService>
 - (void)performShareToDestination:(id <SPTShareDestination>)arg1 withShareEntityData:(id <SPTShareEntityData>)arg2 contextViewController:(UIViewController *)arg3 completion:(void (^)(_Bool, NSError *))arg4;
 - (NSArray *)provideShareDestinationsForEntityURI:(NSURL *)arg1;
+- (id <SPTShareVideoDataProviderRegistry>)provideShareVideoDataProviderRegistry;
 - (id <SPTShareDragDelegateFactory>)provideShareDragDelegateFactory;
 - (id <SPTShareEntityDataFactory>)provideShareEntityDataFactory;
 - (void)presentShareViewController:(UIViewController *)arg1;

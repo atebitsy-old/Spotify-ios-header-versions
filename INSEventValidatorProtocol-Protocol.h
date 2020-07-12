@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class EventEnvelope;
+@class EventEnvelope, NSString;
 @protocol INSMessageProtocol;
 
 @protocol INSEventValidatorProtocol <NSObject>
+- (_Bool)validateOwner:(NSString *)arg1 forMessage:(id <INSMessageProtocol>)arg2;
 - (_Bool)validateEnvelope:(EventEnvelope *)arg1 error:(id *)arg2;
 - (_Bool)validateMessage:(id <INSMessageProtocol>)arg1 error:(id *)arg2;
 @end

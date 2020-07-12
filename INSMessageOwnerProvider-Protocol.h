@@ -6,9 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
-
 @protocol INSMessageOwnerProvider <NSObject>
-- (NSString *)provideMessageOwnerWithError:(id *)arg1;
+- (void)provideMessageOwnerWithCompletion:(void (^)(NSString *))arg1 failure:(void (^)(NSError *))arg2;
 @end
 

@@ -23,7 +23,6 @@
 - (void)logDidStartLoadImageWithName:(id)arg1 size:(id)arg2 forScreenWidth:(double)arg3;
 - (void)logInterfaceOrientation:(long long)arg1;
 - (void)logIOS13IfNeeded;
-- (void)logFacebookLoginError:(id)arg1;
 - (void)logUserDidTapAppleButton;
 - (void)logUserDidTapLoginButton;
 - (void)logUserDidTapFacebookButton;
@@ -32,7 +31,8 @@
 - (void)logUserDidReceiveMixedLayout;
 - (void)logUserDidReceiveIntentLedLayout;
 - (void)logUserDidReceiveMethodLedLayout;
-- (void)logUserDidSeeViewFromLogout:(_Bool)arg1;
+- (void)logViewLaunchTimeFromLogout:(_Bool)arg1;
+- (void)logUserDidSeeView;
 - (id)initWithLogger:(id)arg1;
 
 @end

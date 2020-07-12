@@ -9,6 +9,13 @@
 @interface _TtC18VoiceUIFeatureImpl9VoiceView : UIView
 {
     // Error parsing type: , name: style
+    // Error parsing type: , name: presentationMode
+    // Error parsing type: , name: closeButtonWidthConstraint
+    // Error parsing type: , name: closeButtonHeightConstraint
+    // Error parsing type: , name: titleLabelTopConstraint
+    // Error parsing type: , name: descriptionLabelTopConstraint
+    // Error parsing type: , name: micPermissionButtonBottomConstraint
+    // Error parsing type: , name: micButtonBottomConstraint
     // Error parsing type: , name: $__lazy_storage_$_closeButton
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_descriptionLabel
@@ -20,6 +27,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)updateConstraints;
 - (id)initWithCoder:(id)arg1;
 
 @end

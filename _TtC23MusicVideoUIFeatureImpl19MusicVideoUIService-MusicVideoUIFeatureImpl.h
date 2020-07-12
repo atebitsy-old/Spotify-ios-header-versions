@@ -10,5 +10,6 @@
 
 @interface _TtC23MusicVideoUIFeatureImpl19MusicVideoUIService (MusicVideoUIFeatureImpl)
 @property(nonatomic, readonly) id <_TtP19MusicVideoUIFeature28MusicVideoUIComponentFactory_> componentFactory;
+- (id)provideCommandHandlerFactory;
 @end
 

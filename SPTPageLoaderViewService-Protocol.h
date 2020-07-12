@@ -7,12 +7,12 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, NSURL, SPTHubViewModelProvider, SPTPageLoader, SPTPageLoaderViewBuilder, UIViewController;
-@protocol SPTPageController, SPTPageLoadable, SPTViewLogger;
+@protocol SPTPageController, SPTPageLoadable;
 
 @protocol SPTPageLoaderViewService <SPTService>
 - (id <SPTPageLoadable>)provideHubLoadableWithViewModelProvider:(SPTHubViewModelProvider *)arg1;
-- (UIViewController<SPTPageController> *)providePageLoaderViewWithPageIdentifier:(NSString *)arg1 pageURI:(NSURL *)arg2 loadable:(id <SPTPageLoadable>)arg3 viewLogger:(id <SPTViewLogger>)arg4 onLoaded:(UIViewController * (^)(id))arg5;
-- (SPTPageLoaderViewBuilder *)providePageLoaderViewBuilderWithPageIdentifier:(NSString *)arg1 pageURI:(NSURL *)arg2 pageLoader:(SPTPageLoader *)arg3 viewLogger:(id <SPTViewLogger>)arg4 onLoaded:(UIViewController * (^)(id))arg5;
+- (UIViewController<SPTPageController> *)providePageLoaderViewWithPageIdentifier:(NSString *)arg1 pageURI:(NSURL *)arg2 loadable:(id <SPTPageLoadable>)arg3 onLoaded:(UIViewController * (^)(id))arg4;
+- (SPTPageLoaderViewBuilder *)providePageLoaderViewBuilderWithPageIdentifier:(NSString *)arg1 pageURI:(NSURL *)arg2 pageLoader:(SPTPageLoader *)arg3 onLoaded:(UIViewController * (^)(id))arg4;
 - (SPTPageLoader *)providePageLoaderWithLoadable:(id <SPTPageLoadable>)arg1;
 @end
 

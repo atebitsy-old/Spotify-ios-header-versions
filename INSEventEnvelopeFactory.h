@@ -24,7 +24,7 @@
 @property(retain, nonatomic) INSContextRegistry *contextRegistry; // @synthesize contextRegistry=_contextRegistry;
 - (void).cxx_destruct;
 - (id)messageFragmentForMessage:(id)arg1;
-- (void)envelopeForMessage:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
+- (void)envelopeForMessage:(id)arg1 owner:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)initWithContextRegistry:(id)arg1 persistentStore:(id)arg2 eventSequenceIdProvider:(id)arg3;
 
 // Remaining properties

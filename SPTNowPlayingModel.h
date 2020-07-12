@@ -6,13 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPlayerObserver-Protocol.h"
 #import "SPTStatefulPlayerObserver-Protocol.h"
 
 @class NSString, SPTNowPlayingAuxiliaryActionsModel, SPTNowPlayingEntityDecorationController, SPTNowPlayingPlaybackController, SPTNowPlayingQueueMetadataModel, SPTNowPlayingTrackPosition, SPTObserverManager, SPTPlayerTrack, SPTStatefulPlayer;
 @protocol SPTCollectionPlatformTestManager, SPTNowPlayingModelDelegate, SPTPlayer;
 
-@interface SPTNowPlayingModel : NSObject <SPTStatefulPlayerObserver, SPTPlayerObserver>
+@interface SPTNowPlayingModel : NSObject <SPTStatefulPlayerObserver>
 {
     id <SPTNowPlayingModelDelegate> _delegate;
     unsigned long long _currentToggleMode;
@@ -39,7 +38,6 @@
 @property(readonly, nonatomic) unsigned long long currentToggleMode; // @synthesize currentToggleMode=_currentToggleMode;
 @property(nonatomic) __weak id <SPTNowPlayingModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;
 - (void)playerDidReceiveStateUpdate:(id)arg1;

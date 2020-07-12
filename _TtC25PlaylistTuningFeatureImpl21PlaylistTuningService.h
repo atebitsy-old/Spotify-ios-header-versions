@@ -9,6 +9,7 @@
 @interface _TtC25PlaylistTuningFeatureImpl21PlaylistTuningService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: freeTierPlaylistUIService
 }
 
 + (id)serviceIdentifier;

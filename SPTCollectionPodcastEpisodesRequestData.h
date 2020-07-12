@@ -32,7 +32,7 @@
 @property(copy, nonatomic) NSString *requestStringTemplate; // @synthesize requestStringTemplate=_requestStringTemplate;
 - (void).cxx_destruct;
 - (id)additionalFilterString:(id)arg1;
-- (id)initWithURL:(id)arg1 mediaType:(long long)arg2 subscribe:(_Bool)arg3;
+- (id)initWithURL:(id)arg1 subscribe:(_Bool)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

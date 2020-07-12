@@ -193,8 +193,6 @@
 - (id)provideDeviceOrientationManager;
 - (void)loadRemoteControlPolicyResolver;
 - (id)provideNowPlayingBarViewController:(id)arg1;
-- (id)provideConnectButtonViewIfAvailable;
-- (id)provideDevicesAvailableViewIfAvailable;
 - (id)createNowPlayingSideBarContentView;
 - (id)provideNowPlayingSideBarViewController:(id)arg1;
 - (id)createNowPlayingViewController:(id)arg1;

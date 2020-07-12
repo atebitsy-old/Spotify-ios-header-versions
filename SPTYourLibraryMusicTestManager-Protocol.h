@@ -11,8 +11,9 @@
 @property(readonly, nonatomic, getter=isLikedSongsFiltersReversedEnabled) _Bool likedSongsFiltersReversedEnabled;
 @property(readonly, nonatomic, getter=isLikedSongsFiltersEnabled) _Bool likedSongsFiltersEnabled;
 @property(readonly, nonatomic, getter=isOfflineArtistEnabled) _Bool offlineArtistEnabled;
+@property(readonly, nonatomic) long long quickScrollMinPages;
+@property(readonly, nonatomic) unsigned long long quickScrollMechanismInLikedSongs;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
-@property(readonly, nonatomic, getter=isPageLoaderEnabledForLikedSongs) _Bool pageLoaderEnabledForLikedSongs;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;
 @property(readonly, nonatomic, getter=isFrecencySortOrderDefaultInPlaylistsEnabled) _Bool frecencySortOrderDefaultInPlaylistsEnabled;
 @property(readonly, nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled;

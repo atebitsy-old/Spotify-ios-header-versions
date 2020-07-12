@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class HUBComponentDefaults, HUBComponentRegistry, SPTFreeTierTrackBarButtonFactory, SPTFreeTierTrackCommandHandlerFactory, SPTFreeTierTrackContentOperationFactory;
-@protocol GLUETheme, SPTHubsRendererFactory, SPTHugsFactory, SPTVisualRefreshIntegrationService;
+@protocol GLUETheme, SPTHubsRendererFactory, SPTHugsFactory, VISREFIntegrationManager;
 
 @interface SPTFreeTierTrackHubManager : NSObject
 {
@@ -18,12 +18,12 @@
     SPTFreeTierTrackCommandHandlerFactory *_commandHandlerFactory;
     SPTFreeTierTrackBarButtonFactory *_barButtonFactory;
     id <GLUETheme> _glueTheme;
-    id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
+    id <VISREFIntegrationManager> _visualRefreshIntegrationManager;
     HUBComponentDefaults *_componentDefaults;
 }
 
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
-@property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
+@property(retain, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTFreeTierTrackBarButtonFactory *barButtonFactory; // @synthesize barButtonFactory=_barButtonFactory;
 @property(readonly, nonatomic) SPTFreeTierTrackCommandHandlerFactory *commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
@@ -35,7 +35,7 @@
 - (id)createViewModelLoaderForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignal:(id)arg3;
 - (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2;
 - (_Bool)canCreateViewControllerForViewURI:(id)arg1;
-- (id)initWithComponentRegistry:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 contentOperationFactory:(id)arg4 commandHandlerFactory:(id)arg5 barButtonFactory:(id)arg6 glueTheme:(id)arg7 visualRefreshIntegrationService:(id)arg8;
+- (id)initWithComponentRegistry:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 contentOperationFactory:(id)arg4 commandHandlerFactory:(id)arg5 barButtonFactory:(id)arg6 glueTheme:(id)arg7 visualRefreshIntegrationManager:(id)arg8;
 
 @end
 

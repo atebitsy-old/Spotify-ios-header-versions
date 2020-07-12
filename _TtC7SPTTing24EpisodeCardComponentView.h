@@ -6,11 +6,9 @@
 
 #import "HUGSThemableComponentView.h"
 
-#import "HUBComponentViewWithImageHandling-Protocol.h"
-
 @protocol HUBComponentEventHandler;
 
-@interface _TtC7SPTTing24EpisodeCardComponentView : HUGSThemableComponentView <HUBComponentViewWithImageHandling>
+@interface _TtC7SPTTing24EpisodeCardComponentView : HUGSThemableComponentView
 {
     // Error parsing type: , name: cardView
     // Error parsing type: , name: eventHandler

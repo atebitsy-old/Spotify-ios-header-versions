@@ -14,6 +14,7 @@
     // Error parsing type: , name: pageURI
     // Error parsing type: , name: loopController
     // Error parsing type: , name: playlistView
+    // Error parsing type: , name: dependencies
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }
 

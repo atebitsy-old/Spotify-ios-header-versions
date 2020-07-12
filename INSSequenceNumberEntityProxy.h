@@ -8,19 +8,21 @@
 
 #import "INSSequenceNumberEntityProtocol-Protocol.h"
 
-@class NSString;
+@class NSData, NSString;
 
 @interface INSSequenceNumberEntityProxy : NSObject <INSSequenceNumberEntityProtocol>
 {
     NSString *_eventName;
     long long _sequenceNumberNext;
+    NSData *_sequenceId;
 }
 
+@property(copy, nonatomic) NSData *sequenceId; // @synthesize sequenceId=_sequenceId;
 @property(nonatomic) long long sequenceNumberNext; // @synthesize sequenceNumberNext=_sequenceNumberNext;
 @property(copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
 - (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithEntity:(id)arg1;
+- (id)initWithEventName:(id)arg1 sequenceNumberNext:(long long)arg2 sequenceId:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

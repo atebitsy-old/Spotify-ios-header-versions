@@ -10,7 +10,7 @@
 #import "SPTLoginDelayedSignupDialogPresenterDelegate-Protocol.h"
 #import "SPTLoginDelayedSignupService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTLoginDelayedSignupBannerViewModel, SPTLoginDelayedSignupDialogLogger, SPTLoginDelayedSignupDialogPresenter, SPTLoginDelayedSignupGuestAccountTracker, UIViewController;
+@class NSString, SPTAllocationContext, SPTLoginDelayedSignupBannerViewModel, SPTLoginDelayedSignupDialogLogger, SPTLoginDelayedSignupDialogPresenter, SPTLoginDelayedSignupGuestAccountTracker, SPTLoginDelayedSignupLoginFlowPresenter;
 @protocol SPTBannerFeature, SPTContainerService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTPreSignupExperimentationService, SPTRemoteConfigurationService, SPTSessionService, SPTSignupService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface SPTLoginDelayedSignupServiceImplementation : NSObject <SPTLoginDelayedSignupBannerViewModelDelegate, SPTLoginDelayedSignupDialogPresenterDelegate, SPTLoginDelayedSignupService>
@@ -26,19 +26,19 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPreSignupExperimentationService> _psesService;
     id <SPTLoginLoggingService> _loginLoggerService;
-    UIViewController *_presentedController;
     SPTLoginDelayedSignupBannerViewModel *_bannerViewModel;
     SPTLoginDelayedSignupDialogPresenter *_dialogPresenter;
     SPTLoginDelayedSignupDialogLogger *_bannerLogger;
     SPTLoginDelayedSignupGuestAccountTracker *_guestTracker;
+    SPTLoginDelayedSignupLoginFlowPresenter *_loginFlowPresenter;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTLoginDelayedSignupLoginFlowPresenter *loginFlowPresenter; // @synthesize loginFlowPresenter=_loginFlowPresenter;
 @property(retain, nonatomic) SPTLoginDelayedSignupGuestAccountTracker *guestTracker; // @synthesize guestTracker=_guestTracker;
 @property(retain, nonatomic) SPTLoginDelayedSignupDialogLogger *bannerLogger; // @synthesize bannerLogger=_bannerLogger;
 @property(retain, nonatomic) SPTLoginDelayedSignupDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
 @property(retain, nonatomic) SPTLoginDelayedSignupBannerViewModel *bannerViewModel; // @synthesize bannerViewModel=_bannerViewModel;
-@property(nonatomic) __weak UIViewController *presentedController; // @synthesize presentedController=_presentedController;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loginLoggerService; // @synthesize loginLoggerService=_loginLoggerService;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationService> psesService; // @synthesize psesService=_psesService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
@@ -58,12 +58,8 @@
 - (void)userDidTapOnSignupButton;
 - (void)userDidTapOnLoginButton;
 - (void)maybeRestoreLoginUI;
-- (void)dismiss:(id)arg1;
-- (void)presentViewController:(id)arg1;
-- (void)presentURI:(id)arg1;
 - (void)presentGuestAccountBanner;
 - (id)provideExperimentController;
-- (void)setupDialogPresenter;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

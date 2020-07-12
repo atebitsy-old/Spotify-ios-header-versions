@@ -8,8 +8,8 @@
 
 @protocol SPTCollectionPlatformPropertiesManager <SPTCollectionPlatformTestManager>
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled;
-@property(readonly, nonatomic, getter=isVISREFLikeCopyEnabled) _Bool visrefLikeCopyEnabled;
 @property(readonly, nonatomic, getter=isSnackbarForPremiumEnabled) _Bool snackbarForPremiumEnabled;
+@property(readonly, nonatomic, getter=isSnackbarWithACMCopyForArtistsEnabled) _Bool sackbarWithAcmCopyForArtistsEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyEnabled) _Bool snackbarWithACMCopyEnabled;
 @end
 

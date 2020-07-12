@@ -8,27 +8,29 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEButtonStyle, GLUEGradientStyle, GLUEImageStyle, GLUELabelStyle, NSString, UIColor;
+@class GLUEButtonStyle, GLUELabelStyle, NSString, UIColor;
 
 @interface SPTSocialListeningEducationSlateViewStyle : NSObject <GLUEStyle>
 {
     UIColor *_backgroundColor;
+    UIColor *_decorationColor;
     UIColor *_overlayBackgroundColor;
     double _cornerRadius;
+    double _decorationSmallCornerRadius;
+    double _decorationLargeCornerRadius;
     GLUELabelStyle *_titleLabelStyle;
     GLUELabelStyle *_messageLabelStyle;
     GLUEButtonStyle *_okButtonStyle;
-    GLUEImageStyle *_imageStyle;
-    GLUEGradientStyle *_gradientStyle;
 }
 
-@property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
-@property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;
 @property(copy, nonatomic) GLUEButtonStyle *okButtonStyle; // @synthesize okButtonStyle=_okButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *messageLabelStyle; // @synthesize messageLabelStyle=_messageLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
+@property(nonatomic) double decorationLargeCornerRadius; // @synthesize decorationLargeCornerRadius=_decorationLargeCornerRadius;
+@property(nonatomic) double decorationSmallCornerRadius; // @synthesize decorationSmallCornerRadius=_decorationSmallCornerRadius;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) UIColor *overlayBackgroundColor; // @synthesize overlayBackgroundColor=_overlayBackgroundColor;
+@property(copy, nonatomic) UIColor *decorationColor; // @synthesize decorationColor=_decorationColor;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
 - (void).cxx_destruct;
 @property(readonly) unsigned long long hash;

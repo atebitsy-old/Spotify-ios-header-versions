@@ -22,8 +22,10 @@
     NSDate *_retryDate;
     NSData *_sequenceId;
     long long _sequenceNumber;
+    NSString *_owner;
 }
 
+@property(copy, nonatomic) NSString *owner; // @synthesize owner=_owner;
 @property(nonatomic) _Bool authenticated; // @synthesize authenticated=_authenticated;
 @property(nonatomic) long long sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
 @property(retain, nonatomic) NSData *sequenceId; // @synthesize sequenceId=_sequenceId;

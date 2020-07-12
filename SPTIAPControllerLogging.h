@@ -6,15 +6,10 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
-
 @interface SPTIAPControllerLogging : NSObject
 {
-    id <SPTLogCenter> _logCenter;
 }
 
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (void).cxx_destruct;
 - (void)willRetryActivationAtDate:(id)arg1;
 - (void)transactionRemoved;
 - (void)clientHasLegacyControllerReceiptStored;
@@ -33,7 +28,6 @@
 - (void)logEvent:(id)arg1 domain:(id)arg2 json:(id)arg3 legacyContext:(id)arg4;
 - (void)console:(SEL)arg1 obj:(id)arg2;
 - (void)console:(SEL)arg1;
-- (id)initWithLogCenter:(id)arg1;
 
 @end
 

@@ -15,11 +15,13 @@
 #import "SPTYourLibraryMusicSongsViewModelDelegate-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
+#import "_TtP18QuickScrollFeature26SPTQuickScrollViewDelegate_-Protocol.h"
+#import "_TtP18QuickScrollFeature28SPTQuickScrollViewDatasource_-Protocol.h"
 
-@class GLUEEmptyStateView, NSString, NSURL, SPTEntityHeaderViewController, SPTProgressView, SPTTableViewOfflineSwitchCell, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicOfflineSwitchFactory, SPTYourLibraryMusicSongCellConfigurator, SPTYourLibraryMusicSongsHeaderViewController, SPTYourLibraryMusicSongsTableView;
-@protocol GLUEImageLoader, SPTAlertInterface, SPTAssistedCurationUIService, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTViewLogger, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicTestManager, UITableViewDragDelegate, _TtP18FilterChipsFeature21SPTFilterChipsFactory_;
+@class GLUEEmptyStateView, NSString, NSURL, SPTEntityHeaderViewController, SPTProgressView, SPTTableViewOfflineSwitchCell, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicOfflineSwitchFactory, SPTYourLibraryMusicSongCellConfigurator, SPTYourLibraryMusicSongsHeaderViewController, SPTYourLibraryMusicSongsTableView, UIView;
+@protocol GLUEImageLoader, SPTAlertInterface, SPTAssistedCurationUIService, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicTestManager, UITableViewDragDelegate, _TtP18FilterChipsFeature21SPTFilterChipsFactory_, _TtP18QuickScrollFeature18SPTQuickScrollView_, _TtP18QuickScrollFeature21SPTQuickScrollFactory_;
 
-@interface SPTYourLibraryMusicSongsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTYourLibraryMusicSongCellConfiguratorDelegate, SPTNavigationControllerNavigationBarState, SPContentInsetViewController, SPTOfflineSwitchDelegate, GLUEThemeObserver, SPTYourLibraryMusicSongsViewModelDelegate, SPTPageController>
+@interface SPTYourLibraryMusicSongsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTYourLibraryMusicSongCellConfiguratorDelegate, SPTNavigationControllerNavigationBarState, SPContentInsetViewController, SPTOfflineSwitchDelegate, _TtP18QuickScrollFeature26SPTQuickScrollViewDelegate_, _TtP18QuickScrollFeature28SPTQuickScrollViewDatasource_, GLUEThemeObserver, SPTYourLibraryMusicSongsViewModelDelegate, SPTPageController>
 {
     _Bool _contextMenuToBePresented;
     _Bool _fadeInTrackRowsOnReload;
@@ -33,7 +35,6 @@
     SPTEntityHeaderViewController *_headerView;
     GLUEEmptyStateView *_emptyView;
     GLUEEmptyStateView *_noResultEmptyView;
-    id <SPTViewLogger> _viewLogger;
     id <SPTAlertInterface> _alertInterface;
     SPTYourLibraryMusicOfflineSwitchFactory *_offlineSwitchFactory;
     SPTTableViewOfflineSwitchCell *_offlineSwitchCell;
@@ -44,8 +45,12 @@
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <_TtP18FilterChipsFeature21SPTFilterChipsFactory_> _filterChipsFactory;
     UIViewController *_filterChipsViewController;
+    UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *_quickScrollView;
+    id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> _quickScrollFactory;
 }
 
+@property(readonly, nonatomic) id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
+@property(retain, nonatomic) UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *quickScrollView; // @synthesize quickScrollView=_quickScrollView;
 @property(nonatomic) _Bool fadeInTrackRowsOnReload; // @synthesize fadeInTrackRowsOnReload=_fadeInTrackRowsOnReload;
 @property(retain, nonatomic) UIViewController *filterChipsViewController; // @synthesize filterChipsViewController=_filterChipsViewController;
 @property(readonly, nonatomic) id <_TtP18FilterChipsFeature21SPTFilterChipsFactory_> filterChipsFactory; // @synthesize filterChipsFactory=_filterChipsFactory;
@@ -58,7 +63,6 @@
 @property(retain, nonatomic) SPTTableViewOfflineSwitchCell *offlineSwitchCell; // @synthesize offlineSwitchCell=_offlineSwitchCell;
 @property(readonly, nonatomic) SPTYourLibraryMusicOfflineSwitchFactory *offlineSwitchFactory; // @synthesize offlineSwitchFactory=_offlineSwitchFactory;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-@property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) GLUEEmptyStateView *noResultEmptyView; // @synthesize noResultEmptyView=_noResultEmptyView;
 @property(retain, nonatomic) GLUEEmptyStateView *emptyView; // @synthesize emptyView=_emptyView;
 @property(retain, nonatomic) SPTEntityHeaderViewController *headerView; // @synthesize headerView=_headerView;
@@ -76,6 +80,12 @@
 - (id)filterChipsSectionHeaderWithViewModel:(id)arg1;
 - (id)buttonSectionHeaderWithViewModel:(id)arg1;
 - (id)defaultSectionHeaderWithViewModel:(id)arg1;
+- (void)didEndUserScrollingWithQuickScrollView:(id)arg1;
+- (void)didStartUserScrollingWithQuickScrollView:(id)arg1;
+- (void)didBecomeVisibleQuickScrollView:(id)arg1;
+- (struct CGRect)contentRectForQuickScrollView:(id)arg1;
+- (struct CGRect)scrollableRectForQuickScrollView:(id)arg1;
+- (id)quickScrollView:(id)arg1 titleAtOffset:(double)arg2;
 - (void)themeUpdated:(id)arg1;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
@@ -88,6 +98,7 @@
 - (void)songsViewModelActiveFiltersWillChange:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)songsViewModel:(id)arg1 error:(id)arg2;
 - (void)songsViewModelDidChange:(id)arg1 sectionConfigurationChanged:(_Bool)arg2;
+- (void)handleQuickScroll;
 - (void)handleEmptyView;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
@@ -123,7 +134,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 collectionConfiguration:(id)arg3 imageLoader:(id)arg4 audioPreviewModelFactory:(id)arg5 audioPreviewUIFactory:(id)arg6 emptyView:(id)arg7 viewLogger:(id)arg8 alertInterface:(id)arg9 offlineSwitchFactory:(id)arg10 sortingFilteringUIFactory:(id)arg11 shelves:(id)arg12 shareDragDelegateFactory:(id)arg13 testManager:(id)arg14 trackRowFactory:(id)arg15 assistedCurationUIService:(id)arg16 filterChipsFactory:(id)arg17;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 collectionConfiguration:(id)arg3 imageLoader:(id)arg4 audioPreviewModelFactory:(id)arg5 audioPreviewUIFactory:(id)arg6 emptyView:(id)arg7 alertInterface:(id)arg8 offlineSwitchFactory:(id)arg9 sortingFilteringUIFactory:(id)arg10 shelves:(id)arg11 shareDragDelegateFactory:(id)arg12 testManager:(id)arg13 trackRowFactory:(id)arg14 assistedCurationUIService:(id)arg15 filterChipsFactory:(id)arg16 quickScrollFactory:(id)arg17;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -10,22 +10,20 @@
 #import "SPTSignupTermsAndPolicyManagerDelegate-Protocol.h"
 #import "UITextViewDelegate-Protocol.h"
 
-@class NSString, SPTSignupTermsAndPolicyManager, SPTSignupTermsAndPolicyViewStyle;
-@protocol SPTLoginLogger, SPTSignupTermsAndPolicyViewConfiguration, SPTSignupTermsAndPolicyViewModelDelegate;
+@class NSString, SPTSignupTermsAndPolicyCopyProvider, SPTSignupTermsAndPolicyManager, SPTSignupTermsAndPolicyViewStyle;
+@protocol SPTLoginLogger, SPTSignupTermsAndPolicyViewModelDelegate;
 
 @interface SPTSignupTermsAndPolicyViewModel : NSObject <SPTSignupTermsAndPolicyManagerDelegate, SFSafariViewControllerDelegate, UITextViewDelegate>
 {
-    _Bool _guestModeEnabled;
     id <SPTSignupTermsAndPolicyViewModelDelegate> _delegate;
     SPTSignupTermsAndPolicyManager *_termsAndPolicyManager;
     SPTSignupTermsAndPolicyViewStyle *_style;
-    id <SPTSignupTermsAndPolicyViewConfiguration> _termsViewConfiguration;
     id <SPTLoginLogger> _logger;
+    SPTSignupTermsAndPolicyCopyProvider *_termsAndPolicyMessageProvider;
 }
 
-@property(readonly, nonatomic, getter=isGuestModeEnabled) _Bool guestModeEnabled; // @synthesize guestModeEnabled=_guestModeEnabled;
+@property(readonly, nonatomic) SPTSignupTermsAndPolicyCopyProvider *termsAndPolicyMessageProvider; // @synthesize termsAndPolicyMessageProvider=_termsAndPolicyMessageProvider;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) id <SPTSignupTermsAndPolicyViewConfiguration> termsViewConfiguration; // @synthesize termsViewConfiguration=_termsViewConfiguration;
 @property(retain, nonatomic) SPTSignupTermsAndPolicyViewStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTSignupTermsAndPolicyManager *termsAndPolicyManager; // @synthesize termsAndPolicyManager=_termsAndPolicyManager;
 @property(nonatomic) __weak id <SPTSignupTermsAndPolicyViewModelDelegate> delegate; // @synthesize delegate=_delegate;
@@ -39,10 +37,8 @@
 - (void)logUserDidTapLinkWith:(id)arg1;
 - (void)presentTermsDetailsForURL:(id)arg1;
 - (_Bool)isTermsAndPolicyDialogRequired;
-- (id)linksForTermsAndConditionsText;
-- (id)localizedTextForTermsAndConditions;
-- (id)termsAndConditionsAttributedText;
-- (id)initWithTermsViewConfiguration:(id)arg1 termsAndPolicyManager:(id)arg2 style:(id)arg3 logger:(id)arg4 guestModeEnabled:(_Bool)arg5;
+- (id)termsAndConditionsAttributedTextWithStyle:(id)arg1;
+- (id)initWithTermsAndPolicyManager:(id)arg1 logger:(id)arg2 termsCopyProvider:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

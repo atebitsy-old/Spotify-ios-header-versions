@@ -9,6 +9,7 @@
 @class NSData, NSDate, NSString;
 
 @protocol INSMessageEntityProtocol <NSObject>
+@property(copy, nonatomic) NSString *owner;
 @property(nonatomic) _Bool authenticated;
 @property(nonatomic) long long sequenceNumber;
 @property(retain, nonatomic) NSData *sequenceId;

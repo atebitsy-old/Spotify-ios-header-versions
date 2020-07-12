@@ -12,6 +12,5 @@
 - (void)removeObserver:(id <SPTVolumeFlagsManagerObserver>)arg1;
 - (void)addObserver:(id <SPTVolumeFlagsManagerObserver>)arg1;
 - (_Bool)mobileToMobileEnabled;
-- (_Bool)volumeRefactorEnabled;
 @end
 

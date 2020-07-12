@@ -9,19 +9,24 @@
 #import "GLUEStyleable-Protocol.h"
 #import "SPTSearchUISearchBarDelegate-Protocol.h"
 
-@class NSArray, NSString, SPTSearchUISearchBar, SPTSearchUISearchControlsStyle, UIButton;
+@class NSString, SPTSearchUISearchBar, SPTSearchUISearchControlsStyle, UIButton, UIStackView;
 @protocol SPTSearchUISearchControlsDelegate;
 
 @interface SPTSearchUISearchControls : UIView <SPTSearchUISearchBarDelegate, GLUEStyleable>
 {
-    NSArray *_horizontalSpacingConstraints;
     id <SPTSearchUISearchControlsDelegate> _delegate;
     SPTSearchUISearchControlsStyle *_style;
     SPTSearchUISearchBar *_searchBar;
     UIButton *_cancelButton;
     UIButton *_scannablesButton;
+    UIStackView *_stackView;
+    UIView *_cancelButtonContainer;
+    UIView *_scannablesButtonContainer;
 }
 
+@property(readonly, nonatomic) UIView *scannablesButtonContainer; // @synthesize scannablesButtonContainer=_scannablesButtonContainer;
+@property(readonly, nonatomic) UIView *cancelButtonContainer; // @synthesize cancelButtonContainer=_cancelButtonContainer;
+@property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) UIButton *scannablesButton; // @synthesize scannablesButton=_scannablesButton;
 @property(readonly, nonatomic) UIButton *cancelButton; // @synthesize cancelButton=_cancelButton;
 @property(readonly, nonatomic) SPTSearchUISearchBar *searchBar; // @synthesize searchBar=_searchBar;
@@ -29,9 +34,6 @@
 @property(nonatomic) __weak id <SPTSearchUISearchControlsDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (struct CGRect)expandedAccessibilityFrameForView:(id)arg1;
-- (id)constraintsForViewsDistributedHorizontally:(id)arg1;
-- (id)constraintsForViewsAlignedAlongFirstBaselines:(id)arg1;
-- (id)verticalConstraintsForViews:(id)arg1 inContainer:(id)arg2;
 - (void)cancelButtonPressed;
 - (void)scannablesButtonPressed;
 - (void)updateScannablesButtonAppearance;
@@ -41,14 +43,12 @@
 - (void)setUpConstraints;
 - (void)setUpViewHierarchy;
 - (void)setUpViewsWithCancelButtonTitle:(id)arg1;
-- (id)arrangedViews;
 - (void)searchBarDidPressReturnKey:(id)arg1;
 - (void)searchBar:(id)arg1 didChangeTextFrom:(id)arg2;
 - (void)glue_applyStyle:(id)arg1;
 - (_Bool)becomeFirstResponder;
 - (void)layoutSubviews;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
-@property(readonly, nonatomic) NSArray *horizontalSpacingConstraints; // @synthesize horizontalSpacingConstraints=_horizontalSpacingConstraints;
 @property(copy, nonatomic) NSString *scannablesButtonAccessibilityLabel;
 @property(copy, nonatomic) NSString *clearButtonAccessibilityLabel;
 @property(copy, nonatomic) NSString *placeholderText;

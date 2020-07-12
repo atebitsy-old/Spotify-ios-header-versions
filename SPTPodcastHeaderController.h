@@ -11,7 +11,6 @@
 
 @interface SPTPodcastHeaderController : VISREFBaseHeaderController
 {
-    double _headerHeight;
     double _navigationBarHeight;
     VISREFGradientBackgroundView *_backgroundView;
     SPTPodcastHeaderContentView *_contentView;
@@ -30,7 +29,6 @@
 @property(retain, nonatomic) SPTPodcastHeaderContentView *contentView; // @synthesize contentView=_contentView;
 @property(retain, nonatomic) VISREFGradientBackgroundView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
-@property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
 - (void).cxx_destruct;
 - (void)updateProgressPositionsIfNeeded;
 - (void)updateColorsWithImage:(id)arg1;
@@ -38,6 +36,7 @@
 - (void)headerViewViewHierarchyDidChange:(id)arg1;
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)headerView:(id)arg1 headerViewVisibleAreaChanged:(double)arg2;
+@property(readonly, nonatomic) struct CGPoint scrolledOffset;
 - (double)totalHeaderHeight;
 - (double)minimumContentHeight;
 - (double)minimumHeight;

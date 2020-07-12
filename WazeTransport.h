@@ -6,29 +6,34 @@
 
 #import <objc/NSObject.h>
 
-#import "WZDataSessionDelegate-Protocol.h"
-
-@class NSString, WZDataSession, WZTransportSettings;
+@class NSData, NSMutableSet;
 @protocol WazeTransportDelegate;
 
-@interface WazeTransport : NSObject <WZDataSessionDelegate>
+@interface WazeTransport : NSObject
 {
-    WZDataSession *_dataSession;
-    _Bool _isConnected;
+    NSData *_ivData;
+    NSData *_keyData;
     id <WazeTransportDelegate> _delegate;
-    unsigned long long _navigationState;
-    WZTransportSettings *_settings;
+    _Bool _monitoring;
+    int _local_port;
+    int _server_port;
+    _Bool _isConnected;
+    NSMutableSet *_readSources;
+    NSMutableSet *_listenSources;
+    NSMutableSet *_writeSources;
 }
 
 + (id)sharedInstance;
-@property(retain, nonatomic) WZTransportSettings *settings; // @synthesize settings=_settings;
-@property(nonatomic) _Bool isConnected; // @synthesize isConnected=_isConnected;
-@property(nonatomic) unsigned long long navigationState; // @synthesize navigationState=_navigationState;
-@property(nonatomic) __weak id <WazeTransportDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)startWithAddressQuery:(id)arg1 delegate:(id)arg2 returnURL:(id)arg3;
-- (void)startWithAddressQuery:(id)arg1 refLocation:(id)arg2 delegate:(id)arg3 returnURL:(id)arg4;
-- (void)startWithLocation:(id)arg1 delegate:(id)arg2 returnURL:(id)arg3;
+- (int)monitorChanges;
+- (void)addSource:(id)arg1 toSet:(id)arg2;
+- (void)removeSource:(id)arg1 fromSet:(id)arg2;
+- (void)handleReceivedData:(id)arg1;
+- (void)setConnected:(_Bool)arg1 wazeVersion:(id)arg2;
+- (void)scheduleConnectionMonitor;
+- (void)cancelConnectionMonitorRequest;
+- (id)decryptMessage:(id)arg1;
+- (id)encryptMessage:(id)arg1;
 - (void)terminate;
 - (_Bool)sendCustomInfo:(id)arg1;
 - (_Bool)sendReturnRequest;
@@ -36,24 +41,16 @@
 - (_Bool)setAddressQuery:(id)arg1;
 - (_Bool)setAddressQuery:(id)arg1 refLocation:(id)arg2;
 - (_Bool)setLocation:(id)arg1;
-- (_Bool)connectWithSettings:(id)arg1 favorite:(unsigned long long)arg2;
-- (void)connectWithSettings:(id)arg1 addressQuery:(id)arg2 referenceLocation:(id)arg3;
-- (void)connectWithSettings:(id)arg1 addressQuery:(id)arg2;
-- (void)connectWithSettings:(id)arg1 location:(id)arg2;
-- (void)connectWithSettings:(id)arg1;
-- (void)dataSession:(id)arg1 didUpdateConnection:(_Bool)arg2;
-- (void)dataSession:(id)arg1 didReceiveWazeVersion:(id)arg2;
-- (void)dataSession:(id)arg1 didReceiveDictionary:(id)arg2;
+- (void)sendDict:(id)arg1;
+- (void)startWithAddressQuery:(id)arg1 delegate:(id)arg2 returnURL:(id)arg3;
+- (void)startWithAddressQuery:(id)arg1 refLocation:(id)arg2 delegate:(id)arg3 returnURL:(id)arg4;
+- (void)startWithLocation:(id)arg1 delegate:(id)arg2 returnURL:(id)arg3;
 - (void)startWazeWithLocation:(id)arg1 orAddressQuery:(id)arg2 refLocation:(id)arg3 delegate:(id)arg4 returnURL:(id)arg5;
-- (void)connectWithSettings:(id)arg1 favorite:(unsigned long long)arg2 location:(id)arg3 query:(id)arg4 referenceLocation:(id)arg5;
-- (void)terminateDataSession;
-- (void)setupDataSession;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)urlEncode:(id)arg1;
+- (id)getRandomData:(unsigned long long)arg1;
+- (void)log:(id)arg1;
+- (id)getDocPath;
+- (id)init;
 
 @end
 

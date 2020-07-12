@@ -8,14 +8,14 @@
 
 #import "SPTPodcastEpisodeCellActionHandlerEpisodeProvider-Protocol.h"
 #import "SPTPodcastEpisodeProgressPolling-Protocol.h"
-#import "SPTPodcastUnfinishedItemsProviderObserver-Protocol.h"
 #import "SPTPodcastYourLibraryDataParserDelegate-Protocol.h"
 #import "SPTPodcastYourLibraryEpisodesViewModel-Protocol.h"
+#import "SPTYourLibraryPodcastUnfinishedItemsProviderObserver-Protocol.h"
 
-@class NSArray, NSCache, NSString, NSURL, SPTPodcastYourLibraryDataParser;
-@protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryEpisodesViewModelDelegate;
+@class NSArray, NSCache, NSString, NSURL, SPTPodcastYourLibraryDataParser, SPTYourLibraryPodcastUnfinishedItemsProvider;
+@protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastYourLibraryEpisodesViewModelDelegate;
 
-@interface SPTPodcastYourLibraryEpisodesViewModelImpl : NSObject <SPTPodcastYourLibraryDataParserDelegate, SPTPodcastUnfinishedItemsProviderObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
+@interface SPTPodcastYourLibraryEpisodesViewModelImpl : NSObject <SPTPodcastYourLibraryDataParserDelegate, SPTYourLibraryPodcastUnfinishedItemsProviderObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
     NSURL *_URL;
     id <SPTPodcastYourLibraryEpisodesViewModelDelegate> _delegate;
@@ -26,7 +26,7 @@
     id <SPTPodcastDataLoaderRequestToken> _unfinishedEpisodesRequestToken;
     id <SPTPodcastEpisodeFactory> _episodeFactory;
     id <SPTPodcastRequestFactory> _requestFactory;
-    id <SPTPodcastUnfinishedItemsProvider> _unfinishedItemsProvider;
+    SPTYourLibraryPodcastUnfinishedItemsProvider *_unfinishedItemsProvider;
     SPTPodcastYourLibraryDataParser *_dataParser;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     NSArray *_unfinishedEpisodeItems;
@@ -39,7 +39,7 @@
 @property(copy, nonatomic) NSArray *unfinishedEpisodeItems; // @synthesize unfinishedEpisodeItems=_unfinishedEpisodeItems;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) SPTPodcastYourLibraryDataParser *dataParser; // @synthesize dataParser=_dataParser;
-@property(retain, nonatomic) id <SPTPodcastUnfinishedItemsProvider> unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
+@property(retain, nonatomic) SPTYourLibraryPodcastUnfinishedItemsProvider *unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
 @property(retain, nonatomic) id <SPTPodcastRequestFactory> requestFactory; // @synthesize requestFactory=_requestFactory;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFactory> episodeFactory; // @synthesize episodeFactory=_episodeFactory;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> unfinishedEpisodesRequestToken; // @synthesize unfinishedEpisodesRequestToken=_unfinishedEpisodesRequestToken;

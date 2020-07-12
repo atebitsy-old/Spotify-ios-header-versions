@@ -18,8 +18,12 @@
 + (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)swipeAddItemToQueueWithItemToAddToQueue:(id)arg1;
+- (id)swipeRemoveLikeWithItemNoLongerLiked:(id)arg1;
+- (id)swipeLikeWithItemToBeLiked:(id)arg1;
 - (id)longHitUiReveal;
 - (id)hitPlayWithItemToBePlayed:(id)arg1;
+- (id)impression;
 - (id)educationFooterFactory;
 - (id)playButtonFactory;
 - (id)downloadButtonFactory;

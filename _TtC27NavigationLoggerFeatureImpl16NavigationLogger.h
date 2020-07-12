@@ -16,6 +16,9 @@
     // Error parsing type: , name: instrumentationObserver
     // Error parsing type: , name: navObserver
     // Error parsing type: , name: navigationRoutingObserver
+    // Error parsing type: , name: backgroundStateObserver
+    // Error parsing type: , name: backgroundState
+    // Error parsing type: , name: effectHandler
     // Error parsing type: , name: loop
     // Error parsing type: , name: queue
 }

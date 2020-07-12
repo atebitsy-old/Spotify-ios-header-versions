@@ -10,8 +10,8 @@
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTSiriIntentsHandler-Protocol.h"
 
-@class NSDictionary, NSString, SPTPlayerContext, SPTSiriIntentsKeepAliveHandler;
-@protocol SPTGaiaConnectAPI, SPTLoginStateController, SPTPlayer;
+@class NSDictionary, NSString, SPTPlayerContext, SPTSiriIntentsFeatureProperties, SPTSiriIntentsKeepAliveHandler;
+@protocol SPTEventSender, SPTGaiaConnectAPI, SPTLoginStateController, SPTPlayer;
 
 @interface SPTSiriIntentsHandlerImplementation : NSObject <SPTLoginStateControllerObserver, SPTPlayerObserver, SPTSiriIntentsHandler>
 {
@@ -19,6 +19,8 @@
     CDUnknownBlockType _intentCompletionHandler;
     CDUnknownBlockType _playCommandCompletionHandler;
     id <SPTPlayer> _player;
+    id <SPTEventSender> _eventSender;
+    SPTSiriIntentsFeatureProperties *_configuration;
     id <SPTLoginStateController> _loginStateController;
     SPTSiriIntentsKeepAliveHandler *_keepAliveHandler;
     id <SPTGaiaConnectAPI> _connectAPI;
@@ -36,6 +38,8 @@
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectAPI; // @synthesize connectAPI=_connectAPI;
 @property(retain, nonatomic) SPTSiriIntentsKeepAliveHandler *keepAliveHandler; // @synthesize keepAliveHandler=_keepAliveHandler;
 @property(retain, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
+@property(readonly, nonatomic) SPTSiriIntentsFeatureProperties *configuration; // @synthesize configuration=_configuration;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(copy, nonatomic) CDUnknownBlockType playCommandCompletionHandler; // @synthesize playCommandCompletionHandler=_playCommandCompletionHandler;
 @property(copy, nonatomic) CDUnknownBlockType intentCompletionHandler; // @synthesize intentCompletionHandler=_intentCompletionHandler;
@@ -50,6 +54,7 @@
 - (void)performCoreReloginIfNecessary;
 - (_Bool)apCouldBeOffline;
 - (void)initiatePlaybackWithContext:(id)arg1 playCommandDictionary:(id)arg2;
+- (void)sendTimeMeasurementEventWithMeasurements:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)willEnterForeground;
 - (void)didEnterBackground;
@@ -59,7 +64,7 @@
 - (void)playLocalMediaWithPlayCommandURI:(id)arg1;
 - (void)handleIntentWithPlayCommandURI:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleIntent:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (id)initWithPlayer:(id)arg1 loginStateController:(id)arg2 keepAliveHandler:(id)arg3 connectAPI:(id)arg4 deferralMode:(long long)arg5;
+- (id)initWithPlayer:(id)arg1 loginStateController:(id)arg2 keepAliveHandler:(id)arg3 connectAPI:(id)arg4 eventSender:(id)arg5 configuration:(id)arg6 deferralMode:(long long)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

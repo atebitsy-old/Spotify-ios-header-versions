@@ -9,7 +9,7 @@
 #import "SPTDrivingModeTestManager-Protocol.h"
 
 @class NSString, SPTDrivingModeLogger, SPTObserverManager;
-@protocol SPTDrivingModeRemoteConfiguration, SPTLocalSettings, SettingsRegistry;
+@protocol SPTCarModeEngine, SPTDrivingModeRemoteConfiguration, SPTLocalSettings, SettingsRegistry;
 
 @interface SPTDrivingModeTestManagerImplementation : NSObject <SPTDrivingModeTestManager>
 {
@@ -20,10 +20,12 @@
     id <SettingsRegistry> _settingsRegistry;
     SPTObserverManager *_observers;
     SPTDrivingModeLogger *_logger;
+    id <SPTCarModeEngine> _carModeEngine;
 }
 
 @property(nonatomic, getter=isCarViewFlagEnabled) _Bool carViewFlagEnabled; // @synthesize carViewFlagEnabled=_carViewFlagEnabled;
 @property(nonatomic, getter=isCarViewEnabled) _Bool carViewEnabled; // @synthesize carViewEnabled=_carViewEnabled;
+@property(readonly, nonatomic) id <SPTCarModeEngine> carModeEngine; // @synthesize carModeEngine=_carModeEngine;
 @property(readonly, nonatomic) SPTDrivingModeLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SettingsRegistry> settingsRegistry; // @synthesize settingsRegistry=_settingsRegistry;
@@ -38,7 +40,7 @@
 - (void)updateCarViewEnabledState;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)initWithRemoteConfiguration:(id)arg1 localSettings:(id)arg2 settingsRegistry:(id)arg3 logger:(id)arg4;
+- (id)initWithRemoteConfiguration:(id)arg1 carModeEngine:(id)arg2 localSettings:(id)arg3 settingsRegistry:(id)arg4 logger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

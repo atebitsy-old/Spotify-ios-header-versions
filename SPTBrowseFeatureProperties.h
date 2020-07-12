@@ -15,8 +15,10 @@
     _Bool _shouldEnableFindPromo;
     _Bool _shouldStopRegisteringCreatorUris;
     _Bool _shouldRegisterMarketingFormatComponents;
+    _Bool _shouldReplaceRadioButton;
 }
 
+@property(readonly, nonatomic) _Bool shouldReplaceRadioButton; // @synthesize shouldReplaceRadioButton=_shouldReplaceRadioButton;
 @property(readonly, nonatomic) _Bool shouldRegisterMarketingFormatComponents; // @synthesize shouldRegisterMarketingFormatComponents=_shouldRegisterMarketingFormatComponents;
 @property(readonly, nonatomic) _Bool shouldStopRegisteringCreatorUris; // @synthesize shouldStopRegisteringCreatorUris=_shouldStopRegisteringCreatorUris;
 @property(readonly, nonatomic) _Bool shouldEnableFindPromo; // @synthesize shouldEnableFindPromo=_shouldEnableFindPromo;

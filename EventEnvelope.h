@@ -13,7 +13,7 @@
 }
 
 + (id)descriptor;
-- (id)ins_messageId;
+@property(readonly, nonatomic) NSString *ins_messageId;
 
 // Remaining properties
 @property(retain, nonatomic) NSMutableArray *eventFragmentArray; // @dynamic eventFragmentArray;

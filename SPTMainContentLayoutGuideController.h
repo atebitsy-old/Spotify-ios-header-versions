@@ -11,12 +11,10 @@
 #import "SPTMetaViewControllerObserver-Protocol.h"
 
 @class MessageBarController, NSArray, NSString, SPBarViewController, SPTMenuController, UILayoutGuide, UIView;
-@protocol SPTMetaViewController;
 
 @interface SPTMainContentLayoutGuideController : NSObject <MessageBarControllerObserver, SPTMenuControllerObserver, SPTMetaViewControllerObserver>
 {
     UILayoutGuide *_layoutGuide;
-    id <SPTMetaViewController> _metaViewController;
     UIView *_rootView;
     MessageBarController *_messageBarController;
     NSArray *_messageBarConstraints;
@@ -35,7 +33,6 @@
 @property(copy, nonatomic) NSArray *messageBarConstraints; // @synthesize messageBarConstraints=_messageBarConstraints;
 @property(readonly, nonatomic) MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(readonly, nonatomic) UIView *rootView; // @synthesize rootView=_rootView;
-@property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) UILayoutGuide *layoutGuide; // @synthesize layoutGuide=_layoutGuide;
 - (void).cxx_destruct;
 - (void)updateSideBarConstraints;

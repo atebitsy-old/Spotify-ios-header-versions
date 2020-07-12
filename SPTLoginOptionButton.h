@@ -8,31 +8,41 @@
 
 #import "GLUEStyleable-Protocol.h"
 
-@class GLUEButtonStyle, GLUEImageView, NSMutableDictionary, NSString, UILabel;
+@class GLUEButtonStyle, GLUEViewAnimator, NSMutableDictionary, NSString, UIImageView, UILabel;
 
 @interface SPTLoginOptionButton : UIControl <GLUEStyleable>
 {
-    GLUEImageView *_iconImageView;
     GLUEButtonStyle *_style;
     UILabel *_title;
+    UIImageView *_iconImageView;
     NSMutableDictionary *_titles;
     NSMutableDictionary *_accessibilityTitles;
+    NSMutableDictionary *_iconImages;
+    GLUEViewAnimator *_animator;
 }
 
+@property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
+@property(retain, nonatomic) NSMutableDictionary *iconImages; // @synthesize iconImages=_iconImages;
 @property(retain, nonatomic) NSMutableDictionary *accessibilityTitles; // @synthesize accessibilityTitles=_accessibilityTitles;
 @property(retain, nonatomic) NSMutableDictionary *titles; // @synthesize titles=_titles;
+@property(retain, nonatomic) UIImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 @property(retain, nonatomic) UILabel *title; // @synthesize title=_title;
 @property(copy, nonatomic) GLUEButtonStyle *style; // @synthesize style=_style;
-@property(retain, nonatomic) GLUEImageView *iconImageView; // @synthesize iconImageView=_iconImageView;
 - (void).cxx_destruct;
+- (id)iconImageForState:(unsigned long long)arg1;
 - (id)titleForState:(unsigned long long)arg1;
 - (id)titleColorForState:(unsigned long long)arg1;
+- (id)backgroundColorForState:(unsigned long long)arg1;
 - (id)borderColorForState:(unsigned long long)arg1;
-- (void)updateButtonForState:(unsigned long long)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (id)accessibilityLabel;
-- (void)setEnabled:(_Bool)arg1;
+- (void)updateButtonForState:(unsigned long long)arg1;
+- (void)updateButtonForCurrentState;
+- (void)animateToHighlighted:(_Bool)arg1;
 - (void)setHighlighted:(_Bool)arg1;
+- (void)setSelected:(_Bool)arg1;
+- (void)setEnabled:(_Bool)arg1;
+- (void)setImage:(id)arg1 forState:(unsigned long long)arg2;
 - (void)setTitle:(id)arg1 forState:(unsigned long long)arg2;
 - (void)setupConstraints;
 - (id)initWithFrame:(struct CGRect)arg1;

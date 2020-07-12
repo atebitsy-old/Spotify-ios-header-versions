@@ -12,7 +12,7 @@
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSString, NSURL, SPTHubViewController, SPTProgressView, SPTTheme;
+@class NSString, NSURL, SPTHubViewController, SPTProgressView, SPTTheme, UIGestureRecognizer;
 @protocol SPTBrowseLoadingLogger, SPTBrowseViewModelProvider, SPTPageContainer;
 
 @interface SPTBrowseViewController : UIViewController <SPTBrowseViewModelProviderObserver, SPTNavigationControllerNavigationBarState, HUBViewContentOffsetObserver, SPTPageController, SPTBrowseViewControllerProtocol>
@@ -42,6 +42,7 @@
 - (struct CGRect)statusBarFrame;
 - (void)updateFindContentContainer;
 - (void)updateWithViewModel:(id)arg1;
+@property(readonly, nonatomic) UIGestureRecognizer *scrollViewPanGestureRecognizer;
 @property(readonly, nonatomic) struct CGPoint contentOffset;
 - (void)hubView:(id)arg1 contentOffsetDidChange:(struct CGPoint)arg2;
 - (void)sp_updateContentInsets;

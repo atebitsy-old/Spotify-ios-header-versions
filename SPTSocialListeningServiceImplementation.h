@@ -6,16 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTSocialListeningService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
-@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@class NSString, SPTAllocationContext, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningEducationSlatePresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
+@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTSocialListeningListenTogetherDataLoader, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
 
-@interface SPTSocialListeningServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTOfflineModeStateObserver, SPTSocialListeningService>
+@interface SPTSocialListeningServiceImplementation : NSObject <SPTOfflineModeStateObserver, SPTSocialListeningService>
 {
-    _Bool _socialListeningInitialized;
     id <SPTFeatureFlaggingService> _featureFlagService;
     id <SPTGLUEService> _glueService;
     id <SPTScannablesService> _scannablesService;
@@ -41,14 +39,17 @@
     SPTSocialListeningLoggerImplementation *_logger;
     id <SPTScannablesRegistration> _scannablesRegistration;
     SPTSocialListeningDialogPresenter *_dialogPresenter;
+    SPTSocialListeningEducationSlatePresenter *_slatePresenter;
     SPTSocialListeningDialogManager *_dialogManager;
     id <SPTOfflineModeState> _offlineModeState;
+    id <SPTSocialListeningListenTogetherDataLoader> _listenTogetherDataLoader;
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic, getter=isSocialListeningInitialized) _Bool socialListeningInitialized; // @synthesize socialListeningInitialized=_socialListeningInitialized;
+@property(retain, nonatomic) id <SPTSocialListeningListenTogetherDataLoader> listenTogetherDataLoader; // @synthesize listenTogetherDataLoader=_listenTogetherDataLoader;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) SPTSocialListeningDialogManager *dialogManager; // @synthesize dialogManager=_dialogManager;
+@property(retain, nonatomic) SPTSocialListeningEducationSlatePresenter *slatePresenter; // @synthesize slatePresenter=_slatePresenter;
 @property(retain, nonatomic) SPTSocialListeningDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
 @property(retain, nonatomic) id <SPTScannablesRegistration> scannablesRegistration; // @synthesize scannablesRegistration=_scannablesRegistration;
 @property(retain, nonatomic) SPTSocialListeningLoggerImplementation *logger; // @synthesize logger=_logger;
@@ -76,7 +77,6 @@
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlagService; // @synthesize featureFlagService=_featureFlagService;
 - (void).cxx_destruct;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)buildModel;
 - (id)buildDialogManager;
 - (void)loadModelDataIfNeeded;
@@ -84,6 +84,8 @@
 - (void)unregisterWithScannablesService;
 - (void)registerWithScannablesService;
 - (void)applicationDidBecomeActive:(id)arg1;
+- (id)provideListenTogetherDataLoader;
+- (id)provideSlatePresenter;
 - (id)provideSocialListeningLogger;
 - (id)provideSocialListeningModel;
 - (id)provideUserInterfaceFactory;

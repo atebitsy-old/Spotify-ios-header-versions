@@ -8,13 +8,14 @@
 
 #import "ASAuthorizationControllerDelegate-Protocol.h"
 #import "ASAuthorizationControllerPresentationContextProviding-Protocol.h"
+#import "SPTLoginThirdPartyLoginController-Protocol.h"
 
 @class NSString, SPTAuthenticationHandler, SPTLoginASAuthorizationControllerFactory, SPTLoginAppleAuthorizationControllerLogger, SPTLoginTestManager, SPTSigninWithAppleCompatibilityProvider, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
-@protocol SPTDialogController, SPTLoginAppleAuthorizationControllerDelegate, SPTLoginNavigationCoordinator;
+@protocol SPTDialogController, SPTLoginNavigationCoordinator, SPTLoginThirdPartyLoginControllerDelegate;
 
-@interface SPTLoginAppleAuthorizationController : NSObject <ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding>
+@interface SPTLoginAppleAuthorizationController : NSObject <ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding, SPTLoginThirdPartyLoginController>
 {
-    id <SPTLoginAppleAuthorizationControllerDelegate> _delegate;
+    id <SPTLoginThirdPartyLoginControllerDelegate> delegate;
     SPTAuthenticationHandler *_authenticationHandler;
     SPTLoginTestManager *_testManager;
     id <SPTDialogController> _dialogController;
@@ -37,7 +38,7 @@
 @property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
-@property(nonatomic) __weak id <SPTLoginAppleAuthorizationControllerDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <SPTLoginThirdPartyLoginControllerDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
 - (void)handleUserDidAuthenticateNotification:(id)arg1;
 - (void)showAppleSignUpNotAvailable;
@@ -49,7 +50,7 @@
 - (id)presentationAnchorForAuthorizationController:(id)arg1;
 - (_Bool)isAppleSignInCustomButtonEnabled;
 - (_Bool)isAppleSignInSystemButtonEnabled;
-- (void)loginWithAppleID;
+- (void)startLoginWithThirdParty;
 - (void)showPasswordAutofillDialog;
 - (id)initWithAuthenticationHandler:(id)arg1 navigationCoordinator:(id)arg2 testManager:(id)arg3 dialogController:(id)arg4 logger:(id)arg5 appleHandler:(id)arg6 signupAttemptTracker:(id)arg7 compatibilityProvider:(id)arg8 appleAuthControllerFactory:(id)arg9 notificationCenter:(id)arg10;
 

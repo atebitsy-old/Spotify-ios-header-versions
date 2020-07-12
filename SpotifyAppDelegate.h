@@ -13,7 +13,7 @@
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
 @class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
-@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
+@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
 @interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, SPTSessionServicesLoader, UIApplicationDelegate>
 {
@@ -34,9 +34,11 @@
     SPTServiceOrchestrator *_serviceOrchestrator;
     id <SPTLogCenter> _logCenter;
     SPTStartupTracer *_startupTracer;
+    id <SPTNotificationSystemDelegate> _notificationDelegate;
 }
 
 + (id)appDelegate;
+@property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationDelegate; // @synthesize notificationDelegate=_notificationDelegate;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;

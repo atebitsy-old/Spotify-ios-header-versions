@@ -44,7 +44,7 @@
 @property(retain, nonatomic) id <INSTransport> transport; // @synthesize transport=_transport;
 - (void).cxx_destruct;
 - (void)internalErrorEventOccuredWithMessage:(id)arg1;
-- (id)defaultContexts:(id)arg1 clientVersion:(id)arg2;
+- (id)defaultContexts:(id)arg1 clientVersion:(id)arg2 persistentStore:(id)arg3;
 - (void)removeEventObserver:(id)arg1;
 - (void)addEventObserver:(id)arg1;
 - (void)schedulerDidRequestBackOff;
@@ -57,7 +57,6 @@
 - (id)version;
 - (_Bool)sendNonAuthenticatedMessage:(id)arg1 error:(id *)arg2;
 - (_Bool)sendMessage:(id)arg1 error:(id *)arg2;
-- (_Bool)sendMessage:(id)arg1 authenticated:(_Bool)arg2 error:(id *)arg3;
 - (void)dealloc;
 - (id)initWithTransport:(id)arg1 store:(id)arg2 messageOwnerProvider:(id)arg3 clientId:(id)arg4 logger:(id)arg5 timer:(id)arg6 clientVersion:(id)arg7;
 - (id)commonInitWithTransport:(id)arg1 messageOwnerProvider:(id)arg2 clientId:(id)arg3 logger:(id)arg4 timer:(id)arg5 clientVersion:(id)arg6;

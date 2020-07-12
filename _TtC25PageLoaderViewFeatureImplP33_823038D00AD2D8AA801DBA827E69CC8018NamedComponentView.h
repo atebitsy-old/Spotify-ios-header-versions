@@ -6,11 +6,9 @@
 
 #import <UIKit/UIView.h>
 
-#import "SPTSkeletonViewControllerPlaceholderViewContainer-Protocol.h"
-
 @class NSArray;
 
-@interface _TtC25PageLoaderViewFeatureImplP33_823038D00AD2D8AA801DBA827E69CC8018NamedComponentView : UIView <SPTSkeletonViewControllerPlaceholderViewContainer>
+@interface _TtC25PageLoaderViewFeatureImplP33_823038D00AD2D8AA801DBA827E69CC8018NamedComponentView : UIView
 {
     // Error parsing type: , name: innerView
     // Error parsing type: , name: innerTitle

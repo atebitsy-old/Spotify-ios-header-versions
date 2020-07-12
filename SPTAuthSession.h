@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, SPTOauthClient;
-@protocol SPTAuthSessionDelegate, SPTConnectivityAsyncScheduler, SPTProductState;
+@class NSString;
+@protocol SPTAuthSessionDelegate, SPTConnectivityAsyncScheduler, SPTOauthClient, SPTProductState;
 
 @interface SPTAuthSession : NSObject
 {
@@ -18,12 +18,12 @@
     NSString *_canonicalUsername;
     NSString *_verbatimUsername;
     id <SPTProductState> _productState;
-    SPTOauthClient *_oauthClient;
+    id <SPTOauthClient> _oauthClient;
     id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
-@property(readonly, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
+@property(readonly, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) NSString *verbatimUsername; // @synthesize verbatimUsername=_verbatimUsername;
 @property(readonly, nonatomic) NSString *canonicalUsername; // @synthesize canonicalUsername=_canonicalUsername;

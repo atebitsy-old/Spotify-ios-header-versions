@@ -6,8 +6,6 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
-
 @protocol SPTPreferences <NSObject>
 @property(nonatomic, getter=isAudioNormalised) _Bool audioNormalised;
 @property(nonatomic) long long audioLoudnessEnvironment;
@@ -18,6 +16,5 @@
 @property(nonatomic) long long audioCrossfadeTime;
 @property(nonatomic) _Bool audioCrossfade;
 @property(nonatomic) _Bool audioGapless;
-- (void)setLanguage:(NSString *)arg1 callback:(void (^)(void))arg2;
 @end
 

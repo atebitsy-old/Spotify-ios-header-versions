@@ -10,15 +10,15 @@
 @protocol SPTFreeTierPlaylistAdditionalCallToActionDelegate;
 
 @protocol SPTFreeTierPlaylistAdditionalCallToAction <NSObject>
-@property(readonly, copy, nonatomic) NSString *accessibilityLabel;
-@property(readonly, nonatomic) _Bool enabled;
-@property(readonly, nonatomic) _Bool selected;
-@property(readonly, nonatomic) unsigned long long icon;
-@property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate;
 - (void)performAction:(UIControl *)arg1;
+@property(nonatomic, copy) NSString *accessibilityLabel;
+@property(nonatomic, readonly) _Bool enabled;
+@property(nonatomic, readonly) _Bool selected;
+@property(nonatomic, readonly) unsigned long long icon;
+@property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate;
 
 @optional
-- (void)didAppearInViewController:(UIViewController *)arg1;
 - (void)didRenderInView:(UIView *)arg1;
+- (void)didAppearInViewController:(UIViewController *)arg1;
 @end
 

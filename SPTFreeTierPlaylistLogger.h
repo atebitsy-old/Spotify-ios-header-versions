@@ -61,6 +61,9 @@
 - (void)logOfflineChanged:(_Bool)arg1;
 - (void)logEpisodeOfflineAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 offline:(_Bool)arg3;
 - (void)logEpisodePlayAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 play:(_Bool)arg3;
+- (void)logSwipeItemToAddToQueueAtIndex:(unsigned long long)arg1 itemURL:(id)arg2;
+- (void)logSwipeItemToRemoveLikeAtIndex:(unsigned long long)arg1 itemURL:(id)arg2;
+- (void)logSwipeItemToLikeAtIndex:(unsigned long long)arg1 itemURL:(id)arg2;
 - (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 liked:(_Bool)arg3;
 - (void)logTrackBanActionSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 banned:(_Bool)arg3;
 - (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;

@@ -24,10 +24,12 @@
     // Error parsing type: , name: fullscreenBackgroundImage
     // Error parsing type: , name: freeText
     // Error parsing type: , name: extraQueryItems
+    // Error parsing type: , name: capability
 }
 
 - (void).cxx_destruct;
 - (id)init;
+@property(nonatomic, readonly) unsigned long long capability; // @synthesize capability;
 @property(nonatomic, readonly) NSArray *extraQueryItems;
 @property(nonatomic, readonly) NSString *freeText;
 @property(nonatomic, readonly) UIImage *fullscreenBackgroundImage; // @synthesize fullscreenBackgroundImage;

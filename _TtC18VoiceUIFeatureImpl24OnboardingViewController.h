@@ -11,6 +11,7 @@
     // Error parsing type: , name: loopController
     // Error parsing type: , name: viewBinder
     // Error parsing type: , name: loopControllerConnected
+    // Error parsing type: , name: swipeToDismissAttempted
 }
 
 - (void).cxx_destruct;

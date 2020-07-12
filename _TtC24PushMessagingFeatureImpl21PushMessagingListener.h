@@ -9,7 +9,6 @@
 @interface _TtC24PushMessagingFeatureImpl21PushMessagingListener : NSObject
 {
     // Error parsing type: , name: subscriber
-    // Error parsing type: , name: core
 }
 
 - (void).cxx_destruct;

@@ -46,6 +46,7 @@
 @property(copy, nonatomic) NSString *trailingAccessoryAccessibilityLabel;
 @property(retain, nonatomic) UIImage *trailingAccessoryImage;
 @property(retain, nonatomic) UIImage *leadingAccessoryImage;
+@property(copy, nonatomic) NSString *searchBarAccessibilityIdentifier;
 @property(copy, nonatomic) NSString *searchBarAccessibilityLabel;
 @property(copy, nonatomic) NSString *searchBarText;
 @property(copy, nonatomic) NSString *title;

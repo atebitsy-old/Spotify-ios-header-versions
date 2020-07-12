@@ -10,7 +10,7 @@
 #import "SPTEncoreTrackRowDelegate-Protocol.h"
 
 @class SPTFreeTierPreCurationChunkyRowStyle, SPTYourLibraryMusicGLUETheme;
-@protocol GLUEImageLoader, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTCollectionPlatformConfiguration, SPTModalPresentationController, SPTShelves, SPTYourLibraryMusicSongCellConfiguratorDelegate, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_;
+@protocol GLUEImageLoader, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTCollectionPlatformConfiguration, SPTEncoreTrackRowFactory, SPTModalPresentationController, SPTShelves, SPTYourLibraryMusicSongCellConfiguratorDelegate;
 
 @interface SPTYourLibraryMusicSongCellConfigurator : NSObject <GLUEThemeObserver, SPTEncoreTrackRowDelegate>
 {
@@ -24,12 +24,12 @@
     id <SPTShelves> _shelves;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     SPTFreeTierPreCurationChunkyRowStyle *_chunkRowStyle;
-    id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> _trackRowFactory;
+    id <SPTEncoreTrackRowFactory> _trackRowFactory;
     id <SPTModalPresentationController> _modalPresentationController;
 }
 
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
-@property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
+@property(readonly, nonatomic) id <SPTEncoreTrackRowFactory> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
 @property(retain, nonatomic) SPTFreeTierPreCurationChunkyRowStyle *chunkRowStyle; // @synthesize chunkRowStyle=_chunkRowStyle;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(retain, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;

@@ -9,7 +9,7 @@
 #import "HUBContentOperation-Protocol.h"
 
 @class NSMutableArray, SPTFreeTierAlbumOfflineModel;
-@protocol HUBContentOperationDelegate, SPTFreeTierAlbumTestManager, VISREFIntegrationManager;
+@protocol HUBContentOperationDelegate, SPTFreeTierAlbumTestManager;
 
 @interface SPTFreeTierAlbumOfflineAlbumRenderContentOperation : NSObject <HUBContentOperation>
 {
@@ -17,10 +17,8 @@
     SPTFreeTierAlbumOfflineModel *_albumOfflineModel;
     NSMutableArray *_contextTracks;
     id <SPTFreeTierAlbumTestManager> _testManager;
-    id <VISREFIntegrationManager> _visualRefreshIntegrationManager;
 }
 
-@property(readonly, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
 @property(readonly, nonatomic) id <SPTFreeTierAlbumTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSMutableArray *contextTracks; // @synthesize contextTracks=_contextTracks;
 @property(readonly, nonatomic) SPTFreeTierAlbumOfflineModel *albumOfflineModel; // @synthesize albumOfflineModel=_albumOfflineModel;
@@ -29,7 +27,7 @@
 - (void)addAlbumToViewModelBuilder:(id)arg1;
 - (id)createPlayer;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (id)initWithOfflineModel:(id)arg1 testManager:(id)arg2 visualRefreshIntegrationManager:(id)arg3;
+- (id)initWithOfflineModel:(id)arg1 testManager:(id)arg2;
 
 @end
 

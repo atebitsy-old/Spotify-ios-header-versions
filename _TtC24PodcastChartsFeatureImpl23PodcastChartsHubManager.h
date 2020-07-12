@@ -15,6 +15,9 @@
     // Error parsing type: , name: componentDefaults
     // Error parsing type: , name: iconImageResolver
     // Error parsing type: , name: commandHandlerFactory
+    // Error parsing type: , name: podcastChartsServiceIdentifier
+    // Error parsing type: , name: podcastChartsServicePathComponents
+    // Error parsing type: , name: podcastChartsServicePathPageURIQueryKey
 }
 
 - (void).cxx_destruct;

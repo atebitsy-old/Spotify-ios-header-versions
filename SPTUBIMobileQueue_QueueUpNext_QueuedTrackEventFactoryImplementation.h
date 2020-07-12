@@ -19,8 +19,8 @@
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
 - (id)dragSort;
-- (id)hitSelectItemWithItemToBeSelected:(id)arg1;
-- (id)hitDeselectItemWithItemToBeDeselected:(id)arg1;
+- (id)hitDeselectEntityInListWithEntityToBeDeselected:(id)arg1;
+- (id)hitSelectEntityInListWithEntityToBeSelected:(id)arg1;
 - (id)hitPlayWithItemToBePlayed:(id)arg1;
 - (id)_location;
 - (id)initWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;

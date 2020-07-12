@@ -40,6 +40,8 @@
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(nonatomic, getter=didUserAcceptTermsAndConditions) _Bool userAcceptTermsAndConditions; // @synthesize userAcceptTermsAndConditions=_userAcceptTermsAndConditions;
 - (void).cxx_destruct;
+- (_Bool)isPhoneNumberFlow;
+- (_Bool)isGuestModeEnabled;
 - (_Bool)shouldShowMarketingOptInText;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessResponse:(id)arg2;

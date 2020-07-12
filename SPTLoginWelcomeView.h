@@ -6,20 +6,18 @@
 
 #import "SPTLoginTraitChangingView.h"
 
-@class ASAuthorizationAppleIDButton, GLUEButton, GLUEGradientView, GLUELabel, NSLayoutConstraint, SPTLoginOptionButton, UIImageView, UIStackView, UIView;
+#import "SPTLoginViewWithActionButtonsConfigurable-Protocol.h"
 
-@interface SPTLoginWelcomeView : SPTLoginTraitChangingView
+@class GLUEGradientView, GLUELabel, NSLayoutConstraint, NSString, UIImageView, UIStackView, UIView;
+@protocol SPTLoginViewWithActionButtonsDelegate;
+
+@interface SPTLoginWelcomeView : SPTLoginTraitChangingView <SPTLoginViewWithActionButtonsConfigurable>
 {
+    UIStackView *_buttonsContainerView;
+    id <SPTLoginViewWithActionButtonsDelegate> delegate;
     UIImageView *_artworkImageView;
     UIImageView *_spotifyLogo;
     GLUELabel *_helpTextLabel;
-    GLUEButton *_continueWithEmailButton;
-    GLUEButton *_signupButton;
-    GLUEButton *_loginButton;
-    ASAuthorizationAppleIDButton *_appleButton;
-    SPTLoginOptionButton *_facebookButton;
-    SPTLoginOptionButton *_outlinedAppleButton;
-    UIStackView *_buttonsContainerView;
     NSLayoutConstraint *_spotifyLogoTopEdgeMinimum;
     NSLayoutConstraint *_spotifyLogoTopEdgePrefered;
     NSLayoutConstraint *_spotifyLogoBottomEdge;
@@ -48,21 +46,23 @@
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoBottomEdge; // @synthesize spotifyLogoBottomEdge=_spotifyLogoBottomEdge;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgePrefered; // @synthesize spotifyLogoTopEdgePrefered=_spotifyLogoTopEdgePrefered;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgeMinimum; // @synthesize spotifyLogoTopEdgeMinimum=_spotifyLogoTopEdgeMinimum;
-@property(retain, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
-@property(readonly, nonatomic) SPTLoginOptionButton *outlinedAppleButton; // @synthesize outlinedAppleButton=_outlinedAppleButton;
-@property(readonly, nonatomic) SPTLoginOptionButton *facebookButton; // @synthesize facebookButton=_facebookButton;
-@property(readonly, nonatomic) ASAuthorizationAppleIDButton *appleButton; // @synthesize appleButton=_appleButton;
-@property(readonly, nonatomic) GLUEButton *loginButton; // @synthesize loginButton=_loginButton;
-@property(readonly, nonatomic) GLUEButton *signupButton; // @synthesize signupButton=_signupButton;
-@property(readonly, nonatomic) GLUEButton *continueWithEmailButton; // @synthesize continueWithEmailButton=_continueWithEmailButton;
 @property(retain, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
 @property(readonly, nonatomic) UIImageView *spotifyLogo; // @synthesize spotifyLogo=_spotifyLogo;
 @property(readonly, nonatomic) UIImageView *artworkImageView; // @synthesize artworkImageView=_artworkImageView;
+@property(nonatomic) __weak id <SPTLoginViewWithActionButtonsDelegate> delegate; // @synthesize delegate;
+@property(readonly, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
 - (void).cxx_destruct;
+- (void)actionButtonTapped:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setPropLabelText:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
 - (id)initWithStyle:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

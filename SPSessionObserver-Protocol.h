@@ -11,10 +11,8 @@
 @protocol SPSessionObserver <NSObject>
 
 @optional
-- (void)syncErrorNotEnoughSpaceOnDevice;
 - (void)sessionLoginModeChanged:(SPSession *)arg1;
 - (void)session:(SPSession *)arg1 temporaryConnectionError:(NSError *)arg2;
-- (void)session:(SPSession *)arg1 offlineSyncError:(NSError *)arg2;
 - (void)session:(SPSession *)arg1 autoUpdateWithURL:(NSURL *)arg2;
 @end
 

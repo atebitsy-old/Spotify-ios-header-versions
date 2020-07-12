@@ -20,6 +20,7 @@
 @property(readonly, nonatomic) NSDictionary *details; // @synthesize details=_details;
 @property(readonly, copy, nonatomic) NSString *realm; // @synthesize realm=_realm;
 - (void).cxx_destruct;
+- (id)initWithRealmAndDetails:(id)arg1 details:(id)arg2;
 - (_Bool)populateWithRawMessage:(id)arg1 error:(id *)arg2;
 - (_Bool)validateInfoAndReturnFailureReason:(id *)arg1;
 - (_Bool)validateRolesAndReturnFailureReason:(id *)arg1;

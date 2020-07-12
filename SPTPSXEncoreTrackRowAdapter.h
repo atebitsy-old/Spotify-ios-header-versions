@@ -10,7 +10,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, SPTPSXLogger;
-@protocol GLUETheme, SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTExplicitContentAccessManager, SPTFormatListItemModel, SPTFormatListPlatformManager, SPTPSXTestManager, SPTPSXTrackRowDelegate, SPTPSXViewModel, SPTShelves, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_, _TtP24EncoreIntegrationFeature28SPTEncoreTrackRowModelHelper_;
+@protocol GLUETheme, SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTEncoreTrackRowFactory, SPTExplicitContentAccessManager, SPTFormatListItemModel, SPTFormatListPlatformManager, SPTPSXTestManager, SPTPSXTrackRowDelegate, SPTPSXViewModel, SPTShelves, _TtP24EncoreIntegrationFeature28SPTEncoreTrackRowModelHelper_;
 
 @interface SPTPSXEncoreTrackRowAdapter : SPTTableRowAdapter <SPTPlayerObserver, SPTEncoreTrackRowDelegate>
 {
@@ -24,14 +24,14 @@
     id <SPTPSXTestManager> _testManager;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     SPTPSXLogger *_logger;
-    id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> _encoreComponentFactory;
+    id <SPTEncoreTrackRowFactory> _encoreComponentFactory;
     id <_TtP24EncoreIntegrationFeature28SPTEncoreTrackRowModelHelper_> _trackRowModelHelper;
     id <GLUETheme> _theme;
 }
 
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature28SPTEncoreTrackRowModelHelper_> trackRowModelHelper; // @synthesize trackRowModelHelper=_trackRowModelHelper;
-@property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
+@property(retain, nonatomic) id <SPTEncoreTrackRowFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 @property(retain, nonatomic) SPTPSXLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTPSXTestManager> testManager; // @synthesize testManager=_testManager;

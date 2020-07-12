@@ -28,8 +28,6 @@
     id <SPTEntityService> _entityService;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
-    id <SPTFeatureFlagSignal> _madeForPublicSignal;
-    id <SPTFeatureFlagSignal> _madeForEmployeeSignal;
     id <SPTNowPlayingTestManager> _nowPlayingTestManager;
 }
 
@@ -37,8 +35,6 @@
 @property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
 @property(nonatomic, getter=isMadeForEmployeeEnabled) _Bool madeForEmployeeEnabled; // @synthesize madeForEmployeeEnabled=_madeForEmployeeEnabled;
 @property(nonatomic, getter=isMadeForPublicEnabled) _Bool madeForPublicEnabled; // @synthesize madeForPublicEnabled=_madeForPublicEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> madeForEmployeeSignal; // @synthesize madeForEmployeeSignal=_madeForEmployeeSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> madeForPublicSignal; // @synthesize madeForPublicSignal=_madeForPublicSignal;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(readonly, nonatomic) __weak id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
@@ -51,12 +47,10 @@
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 - (void).cxx_destruct;
-- (void)setupMadeForFlags;
-@property(readonly, nonatomic, getter=isMadeForAttributionEnabled) _Bool madeForAttributionEnabled;
 - (id)objectForKeyedSubscript:(id)arg1;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
-@property(readonly, nonatomic, getter=isVISREFLikeCopyEnabled) _Bool visrefLikeCopyEnabled;
 @property(readonly, nonatomic, getter=isSnackbarForPremiumEnabled) _Bool snackbarForPremiumEnabled;
+@property(readonly, nonatomic, getter=isSnackbarWithACMCopyForArtistsEnabled) _Bool sackbarWithAcmCopyForArtistsEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyEnabled) _Bool snackbarWithACMCopyEnabled;
 @property(readonly, getter=isFollowedArtistsOnlyEnabled) _Bool followedArtistsOnlyEnabled;
 - (void)updateLocalBans;

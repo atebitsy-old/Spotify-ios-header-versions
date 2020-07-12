@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTLoginFacebookAuthenticationControllerDelegate-Protocol.h"
+#import "SPTLoginThirdPartyLoginControllerDelegate-Protocol.h"
 
 @class NSString, SPTLoginContinueWithWelcomeViewLogger, SPTLoginFacebookAuthenticationController;
 @protocol SPTLoginNavigationCoordinator, SPTLoginStateController, SPTLoginThirdPartyLoginHandlerDelegate;
 
-@interface SPTLoginContinueWithWelcomeViewModel : NSObject <SPTLoginFacebookAuthenticationControllerDelegate>
+@interface SPTLoginContinueWithWelcomeViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate>
 {
     id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
@@ -26,8 +26,9 @@
 @property(retain, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)controller:(id)arg1 didCompleteFacebookLoginWithError:(id)arg2;
-- (void)controllerDidStartFacebookLogin:(id)arg1;
+- (id)contextViewForThirdPartyLoginController:(id)arg1;
+- (void)controllerDidFinishThirdPartyLogin:(id)arg1;
+- (void)controllerDidStartThirdPartyLogin:(id)arg1;
 - (void)logUserDidSeeView;
 - (void)logoutForgetUser:(_Bool)arg1;
 - (void)continueWithFacebookPressed;

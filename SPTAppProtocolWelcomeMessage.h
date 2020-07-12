@@ -23,6 +23,7 @@
 - (_Bool)populateWithRawMessage:(id)arg1 error:(id *)arg2;
 @property(readonly, nonatomic) NSArray *rawMessage;
 @property(readonly, nonatomic) long long messageType;
+@property(readonly, nonatomic) NSString *dateTime;
 @property(readonly, nonatomic) NSString *appVersion;
 @property(readonly, nonatomic) NSDictionary *roles;
 - (id)initWithSessionID:(unsigned long long)arg1 details:(id)arg2;

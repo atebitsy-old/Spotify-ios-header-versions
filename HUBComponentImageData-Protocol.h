@@ -10,11 +10,11 @@
 @protocol HUBIcon;
 
 @protocol HUBComponentImageData <HUBSerializable>
-@property(readonly, copy, nonatomic) NSDictionary *customData;
-@property(readonly, nonatomic) UIImage *localImage;
-@property(readonly, nonatomic) id <HUBIcon> placeholderIcon;
-@property(readonly, copy, nonatomic) NSURL *URL;
-@property(readonly, nonatomic) long long type;
-@property(readonly, copy, nonatomic) NSString *identifier;
+@property(nonatomic, readonly) NSDictionary *customData;
+@property(nonatomic, readonly) UIImage *localImage;
+@property(nonatomic, readonly) id <HUBIcon> placeholderIcon;
+@property(nonatomic, readonly) NSURL *URL;
+@property(nonatomic, readonly) long long type;
+@property(nonatomic, readonly) NSString *identifier;
 @end
 

@@ -9,7 +9,7 @@
 #import "SPTDrivingModeViewControllerFactory-Protocol.h"
 
 @class NSString, SPTDrivingModeLogger;
-@protocol SPTContainerService, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol SPTCarModeEngineService, SPTContainerService, SPTDrivingModeRemoteConfiguration, SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTDrivingModeFactory : NSObject <SPTDrivingModeViewControllerFactory>
 {
@@ -32,8 +32,10 @@
     id <SPTOnDemandService> _onDemandSetService;
     id <SPTService> _drivingModeService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTCarModeEngineService> _carModeEngineService;
 }
 
+@property(readonly, nonatomic) __weak id <SPTCarModeEngineService> carModeEngineService; // @synthesize carModeEngineService=_carModeEngineService;
 @property(readonly, nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak id <SPTService> drivingModeService; // @synthesize drivingModeService=_drivingModeService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandSetService; // @synthesize onDemandSetService=_onDemandSetService;

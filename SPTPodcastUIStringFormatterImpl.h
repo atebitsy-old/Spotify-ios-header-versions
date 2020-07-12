@@ -31,7 +31,7 @@
 - (id)dateTextForGivenLatestEpisodeDate:(id)arg1;
 - (id)durationStringWithDuration:(double)arg1;
 - (id)timeLeftStringWithDuration:(double)arg1 listenedDuration:(double)arg2;
-- (id)durationOrTimeLeftStringWithEpisodeDuration:(double)arg1 listenedDuration:(double)arg2 isPlayed:(_Bool)arg3 isAudioMediaType:(_Bool)arg4;
+- (id)durationOrTimeLeftStringWithEpisodeDuration:(double)arg1 listenedDuration:(double)arg2 isPlayed:(_Bool)arg3;
 - (id)fixedPublicationAndDurationWithEpisodePublicationDate:(id)arg1 currentDate:(id)arg2 episodeDuration:(double)arg3;
 - (id)relativePublicationAndTimeLeftWithPublicationDate:(id)arg1 currentDate:(id)arg2 duration:(double)arg3 listenedDuration:(double)arg4;
 - (id)relativePublicationAndDurationWithEpisodePublicationDate:(id)arg1 currentDate:(id)arg2 episodeDuration:(double)arg3 listenedDuration:(double)arg4 isPlayed:(_Bool)arg5 isAudioMediaType:(_Bool)arg6;

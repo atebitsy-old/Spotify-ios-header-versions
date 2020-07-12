@@ -9,6 +9,7 @@
 @protocol INSMessageProtocol;
 
 @protocol INSSchedulerProtocol <NSObject>
-- (_Bool)scheduleMessage:(id <INSMessageProtocol>)arg1 authenticated:(_Bool)arg2 error:(id *)arg3;
+- (_Bool)scheduleNonAuthenticatedMessage:(id <INSMessageProtocol>)arg1 error:(id *)arg2;
+- (_Bool)scheduleAuthenticatedMessage:(id <INSMessageProtocol>)arg1 error:(id *)arg2;
 @end
 

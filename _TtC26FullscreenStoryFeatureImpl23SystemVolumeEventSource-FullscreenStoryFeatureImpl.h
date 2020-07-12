@@ -6,9 +6,9 @@
 
 #import "_TtC26FullscreenStoryFeatureImpl23SystemVolumeEventSource.h"
 
-#import "SPTGaiaSystemVolumeObserver-Protocol.h"
+#import "SPTVolumeSystemObserver-Protocol.h"
 
-@interface _TtC26FullscreenStoryFeatureImpl23SystemVolumeEventSource (FullscreenStoryFeatureImpl) <SPTGaiaSystemVolumeObserver>
+@interface _TtC26FullscreenStoryFeatureImpl23SystemVolumeEventSource (FullscreenStoryFeatureImpl) <SPTVolumeSystemObserver>
 - (void)systemVolumeDidUpdate:(double)arg1;
 @end
 

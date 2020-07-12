@@ -9,13 +9,13 @@
 #import "SPTPSXTestManager-Protocol.h"
 
 @class NSString, SPTPSXFeatureFlagSignalObserver;
-@protocol SPTCollectionPlatformTestManager, SPTFeatureFlagFactory, SPTLocalSettings, SPTProductState, _TtP24EncoreIntegrationFeature20SPTEncoreTestManager_;
+@protocol SPTCollectionPlatformTestManager, SPTEncoreTestManager, SPTFeatureFlagFactory, SPTLocalSettings, SPTProductState;
 
 @interface SPTPSXTestManagerImplementation : NSObject <SPTPSXTestManager>
 {
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
-    id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> _encoreTestManager;
+    id <SPTEncoreTestManager> _encoreTestManager;
     id <SPTCollectionPlatformTestManager> _collectionPlatformTestManager;
     id <SPTLocalSettings> _localSettings;
     SPTPSXFeatureFlagSignalObserver *_publicPSXCopyDiscoverWeeklySignalObserver;
@@ -26,15 +26,13 @@
 @property(retain, nonatomic) SPTPSXFeatureFlagSignalObserver *publicPSXCopyDiscoverWeeklySignalObserver; // @synthesize publicPSXCopyDiscoverWeeklySignalObserver=_publicPSXCopyDiscoverWeeklySignalObserver;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
-@property(readonly, nonatomic) id <_TtP24EncoreIntegrationFeature20SPTEncoreTestManager_> encoreTestManager; // @synthesize encoreTestManager=_encoreTestManager;
+@property(readonly, nonatomic) id <SPTEncoreTestManager> encoreTestManager; // @synthesize encoreTestManager=_encoreTestManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
-@property(readonly, nonatomic, getter=isCopyDiscoverWeeklyEnabled) _Bool copyDiscoverWeeklyEnabled;
 @property(readonly, nonatomic, getter=isEncoreTrackRowsEnabled) _Bool encoreTrackRowsEnabled;
 @property(readonly, nonatomic, getter=isFeedbackEnabled) _Bool feedbackEnabled;
 @property(readonly, nonatomic, getter=isPersonalisedSetsUIEnabled) _Bool personalisedSetsUIEnabled;
-- (void)setupPSXCopyDiscoverWeeklyFeatureFlags;
 - (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 localSettings:(id)arg3 encoreTestManager:(id)arg4 collectionPlatformTestManager:(id)arg5;
 
 // Remaining properties

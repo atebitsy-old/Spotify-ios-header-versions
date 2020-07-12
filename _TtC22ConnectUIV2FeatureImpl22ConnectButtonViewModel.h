@@ -12,7 +12,10 @@
     // Error parsing type: , name: devicePickerPresenter
     // Error parsing type: , name: buttonContext
     // Error parsing type: , name: theme
+    // Error parsing type: , name: testManager
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: iconShouldBlink
+    // Error parsing type: , name: animationType
     // Error parsing type: , name: icon
     // Error parsing type: , name: iconColor
     // Error parsing type: , name: shouldReloadContent

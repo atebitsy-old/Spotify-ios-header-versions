@@ -6,7 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
+@class UIGestureRecognizer;
+
 @protocol SPTBrowseViewControllerProtocol <NSObject>
+@property(readonly, nonatomic) UIGestureRecognizer *scrollViewPanGestureRecognizer;
 @property(copy, nonatomic) CDUnknownBlockType onOffsetChange;
 @property(readonly, nonatomic) struct CGPoint contentOffset;
 @end

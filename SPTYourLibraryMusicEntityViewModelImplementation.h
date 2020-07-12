@@ -101,6 +101,7 @@
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (_Bool)isContentFiltered;
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
+@property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isSortingAndFilteringEnabled) _Bool sortingAndFilteringEnabled;

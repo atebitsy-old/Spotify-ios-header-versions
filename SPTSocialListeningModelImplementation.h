@@ -11,7 +11,7 @@
 #import "SPTSocialListeningModel-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, NSURL, SPTObserverManager, SPTSocialListeningDataLoader, SPTSocialListeningSession, SPTSocialListeningUpdateEvent;
-@protocol GLUEImageLoader, SPTPlayer, SPTScannablesDataSource, SPTSocialListeningSocialDeviceModelEntity;
+@protocol GLUEImageLoader, SPTPlayer, SPTScannablesDataSource, SPTSocialListeningSocialDeviceModelEntity, SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningModelImplementation : NSObject <SPTSocialListeningModel, SPTSocialListeningDataLoaderDelegate, SPTScannablesDataSourceDelegate>
 {
@@ -25,8 +25,10 @@
     id <SPTPlayer> _player;
     NSArray<SPTSocialListeningSocialDeviceModelEntity> *_socialDevicesList;
     NSDictionary *_exposedDevices;
+    id <SPTSocialListeningTestManager> _testManager;
 }
 
+@property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSDictionary *exposedDevices; // @synthesize exposedDevices=_exposedDevices;
 @property(copy, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevicesList; // @synthesize socialDevicesList=_socialDevicesList;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -69,7 +71,7 @@
 - (void)leaveSession;
 - (void)joinSession:(id)arg1;
 - (void)loadSession:(_Bool)arg1;
-- (id)initWithDataLoader:(id)arg1 scannablesDataSource:(id)arg2 player:(id)arg3 imageLoader:(id)arg4;
+- (id)initWithDataLoader:(id)arg1 scannablesDataSource:(id)arg2 player:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

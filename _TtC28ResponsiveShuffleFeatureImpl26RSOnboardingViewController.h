@@ -12,11 +12,14 @@
     // Error parsing type: , name: topLevelViewController
     // Error parsing type: , name: heartButton
     // Error parsing type: , name: banButton
+    // Error parsing type: , name: isPresented
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)scrimTapped;
+- (void)scrimTapped:(id)arg1;
+- (void)viewDidDisappear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;
 

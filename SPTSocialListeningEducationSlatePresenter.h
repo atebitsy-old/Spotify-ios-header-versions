@@ -9,30 +9,43 @@
 #import "SPTSlateDataSource-Protocol.h"
 #import "SPTSlateDelegate-Protocol.h"
 #import "SPTSocialListeningEducationSlateViewControllerDelegate-Protocol.h"
+#import "SPTSocialListeningListenTogetherDisclaimerViewControllerDelegate-Protocol.h"
+#import "SPTSocialListeningListenTogetherSlatePresenter-Protocol.h"
 
-@class NSString, SPTSocialListeningEducationSlateViewController, SPTSocialListeningGLUETheme;
-@protocol SPTSlate, SPTSlateBuilderProvider, SPTSlateManager;
+@class NSString, SPTSocialListeningEducationSlateViewController, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherDisclaimerViewController;
+@protocol SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTSocialListeningTestManager;
 
-@interface SPTSocialListeningEducationSlatePresenter : NSObject <SPTSlateDelegate, SPTSlateDataSource, SPTSocialListeningEducationSlateViewControllerDelegate>
+@interface SPTSocialListeningEducationSlatePresenter : NSObject <SPTSlateDelegate, SPTSlateDataSource, SPTSocialListeningEducationSlateViewControllerDelegate, SPTSocialListeningListenTogetherDisclaimerViewControllerDelegate, SPTSocialListeningListenTogetherSlatePresenter>
 {
     SPTSocialListeningEducationSlateViewController *_contentViewController;
-    id <SPTSlate> _slate;
+    id <SPTSlate> _educationSlate;
+    id <SPTSlate> _disclaimerSlate;
     id <SPTSlateManager> _slateManager;
     SPTSocialListeningGLUETheme *_theme;
     id <SPTSlateBuilderProvider> _slateBuilderProvider;
+    id <SPTSocialListeningTestManager> _testManager;
+    SPTSocialListeningListenTogetherDisclaimerViewController *_disclaimerViewController;
+    CDUnknownBlockType _confirmationHandler;
 }
 
+@property(copy, nonatomic) CDUnknownBlockType confirmationHandler; // @synthesize confirmationHandler=_confirmationHandler;
+@property(retain, nonatomic) SPTSocialListeningListenTogetherDisclaimerViewController *disclaimerViewController; // @synthesize disclaimerViewController=_disclaimerViewController;
+@property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 - (void).cxx_destruct;
+- (void)socialListeningListenTogetherDidConfirmJoining:(_Bool)arg1;
+- (void)presentDisclaimerViewWithName:(id)arg1 onConfirmation:(CDUnknownBlockType)arg2;
 - (void)socialListeningEducationSlateViewControllerDidTapActionButton:(id)arg1;
 - (id)contentUnitForSlateViewController:(id)arg1;
+- (_Bool)shouldHideImageForSlate:(id)arg1;
 @property(readonly, nonatomic) SPTSocialListeningEducationSlateViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
-@property(readonly, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
+@property(readonly, nonatomic) id <SPTSlate> disclaimerSlate; // @synthesize disclaimerSlate=_disclaimerSlate;
+@property(readonly, nonatomic) id <SPTSlate> educationSlate; // @synthesize educationSlate=_educationSlate;
 - (void)presentJoinEducationSlateForParticipantWithHostName:(id)arg1;
 - (void)presentJoinEducationSlateForHostWithParticipantName:(id)arg1;
-- (id)initWithSlateManager:(id)arg1 theme:(id)arg2 slateBuilderProvider:(id)arg3;
+- (id)initWithSlateManager:(id)arg1 theme:(id)arg2 slateBuilderProvider:(id)arg3 testManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

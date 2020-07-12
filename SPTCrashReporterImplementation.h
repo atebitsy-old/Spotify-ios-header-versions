@@ -35,7 +35,6 @@
 - (id)lastCrashIdentifier;
 - (void)tellObserversToSendPendingCrashReports;
 - (void)setValue:(id)arg1 forStateKey:(id)arg2;
-- (void)leaveBreadcrumb:(id)arg1 withArguments:(char *)arg2;
 - (void)leaveBreadcrumb:(id)arg1;
 - (void)recordNonFatalError:(id)arg1;
 - (void)appOperational;

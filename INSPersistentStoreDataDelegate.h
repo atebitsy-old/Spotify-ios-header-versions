@@ -20,7 +20,8 @@
 - (void).cxx_destruct;
 - (void)didFailEnvelopes:(id)arg1;
 - (void)didDeliverEnvelopes:(id)arg1;
-- (void)scheduleEnvelope:(id)arg1 authenticated:(_Bool)arg2;
+- (void)scheduleNonAuthenticatedEnvelope:(id)arg1;
+- (void)scheduleAuthenticatedEnvelope:(id)arg1 withOwner:(id)arg2;
 - (id)initWithPersistentStore:(id)arg1;
 
 // Remaining properties

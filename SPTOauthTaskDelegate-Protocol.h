@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError, SPTAccessToken, SPTOauthTask;
+@class NSError, SPTAccessToken;
+@protocol SPTOauthTask;
 
 @protocol SPTOauthTaskDelegate <NSObject>
-- (void)oauthTask:(SPTOauthTask *)arg1 didFailWithError:(NSError *)arg2;
-- (void)oauthTask:(SPTOauthTask *)arg1 didReceiveToken:(SPTAccessToken *)arg2;
+- (void)oauthTask:(id <SPTOauthTask>)arg1 didFailWithError:(NSError *)arg2;
+- (void)oauthTask:(id <SPTOauthTask>)arg1 didReceiveToken:(SPTAccessToken *)arg2;
 @end
 

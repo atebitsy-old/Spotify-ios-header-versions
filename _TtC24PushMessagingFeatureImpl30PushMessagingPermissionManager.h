@@ -13,6 +13,7 @@
     // Error parsing type: , name: provisionalAuth
     // Error parsing type: , name: pushFeatureProperties
     // Error parsing type: , name: notificationCenter
+    // Error parsing type: , name: pushMessagingLogger
     // Error parsing type: , name: firstInstallTimestampKey
 }
 

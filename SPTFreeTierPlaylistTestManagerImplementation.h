@@ -14,38 +14,25 @@
 
 @interface SPTFreeTierPlaylistTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTFreeTierPlaylistTestManager>
 {
-    _Bool _weigthedShufflePlayDisabled;
     _Bool _freeTierEnabled;
-    _Bool _contextAwareEditorialTrackSharingEnabled;
-    _Bool _episodesInPlaylistDisabled;
-    _Bool _scrollPerformanceTrackingEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
-    id <SPTFeatureFlagSignal> _weigthedShufflePlaySignal;
-    id <SPTFeatureFlagSignal> _contextAwareEditorialTrackSharingSignal;
-    id <SPTFeatureFlagSignal> _ignoreProductStateForEpisodesAvailableSignal;
-    id <SPTFeatureFlagSignal> _scrollPerformanceSignal;
 }
 
-@property(nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled; // @synthesize scrollPerformanceTrackingEnabled=_scrollPerformanceTrackingEnabled;
-@property(nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled; // @synthesize episodesInPlaylistDisabled=_episodesInPlaylistDisabled;
-@property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
-@property(nonatomic, getter=isWeigthedShufflePlayDisabled) _Bool weigthedShufflePlayDisabled; // @synthesize weigthedShufflePlayDisabled=_weigthedShufflePlayDisabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> scrollPerformanceSignal; // @synthesize scrollPerformanceSignal=_scrollPerformanceSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> ignoreProductStateForEpisodesAvailableSignal; // @synthesize ignoreProductStateForEpisodesAvailableSignal=_ignoreProductStateForEpisodesAvailableSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> contextAwareEditorialTrackSharingSignal; // @synthesize contextAwareEditorialTrackSharingSignal=_contextAwareEditorialTrackSharingSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> weigthedShufflePlaySignal; // @synthesize weigthedShufflePlaySignal=_weigthedShufflePlaySignal;
 @property(readonly, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
-- (id)createSignalForAnyFiveSignalsWithAbbaKey:(id)arg1 pageTitle:(id)arg2 itemTitle:(id)arg3 itemDescription:(id)arg4;
 @property(readonly, nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
+@property(readonly, nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled;
+@property(readonly, nonatomic, getter=isWeigthedShufflePlayDisabled) _Bool weigthedShufflePlayDisabled;
+@property(readonly, nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled;
+@property(readonly, nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled;
 @property(readonly, nonatomic) _Bool useSwiftSponsoredSection;
 @property(readonly, nonatomic) _Bool useSwiftTrackSection;
 @property(readonly, nonatomic) _Bool useTrackCloudProvider;
@@ -53,11 +40,7 @@
 @property(readonly, nonatomic) _Bool dontOpenNPVOnAudioPlayback;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnPlayButtonPlayback;
 @property(readonly, nonatomic, getter=isDoubleStatePlayButtonEnabled) _Bool doubleStatePlayButtonEnabled;
-- (void)setupEpisodesAvailable;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
-- (void)setupScrollPerformanceSignal;
-- (void)setupContextAwareEditorialTrackSharingSignal;
-- (void)setupWeightedShufflePlay;
 - (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 freeTierEnabledSignal:(id)arg3 featureProperties:(id)arg4;
 
 // Remaining properties

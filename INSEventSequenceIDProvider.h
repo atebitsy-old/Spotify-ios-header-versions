@@ -17,6 +17,7 @@
 
 @property(readonly, copy, nonatomic) NSData *deviceID; // @synthesize deviceID=_deviceID;
 - (void).cxx_destruct;
+- (id)eventSequenceIDWithInstallID:(id)arg1 owner:(id)arg2;
 - (id)eventSequenceIDWithInstallID:(id)arg1;
 - (id)initWithDeviceID:(id)arg1;
 

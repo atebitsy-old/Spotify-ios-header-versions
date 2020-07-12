@@ -10,14 +10,15 @@
 #import "SPTWatchPlatformService-Protocol.h"
 #import "SPTWatchPlatformTestManagerObserver-Protocol.h"
 
-@class NSArray, NSDictionary, NSString, SPTAllocationContext, SPTWatchConnectivityDataLoader, SPTWatchPlatformLogging, SPTWatchPlatformOfflineManagerImplementation, SPTWatchPlatformTestManager;
-@protocol GaiaFeature, SPTAccessoryManagerService, SPTCollectionPlatformService, SPTContainerService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTPodcastFeature, SPTRadioService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSiriIntentsService, SPTVolumeService;
+@class NSArray, NSDictionary, NSString, SPTAllocationContext, SPTWatchConnectivityDataLoader, SPTWatchPlatformLogging, SPTWatchPlatformOfflineManagerImplementation, SPTWatchPlatformTestManager, SPTWatchPlatformWatchApplicationLogSubscriber;
+@protocol GaiaFeature, SPTAccessoryManagerService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTGLUEService, SPTLoginService, SPTNetworkService, SPTPodcastFeature, SPTRadioService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSiriIntentsService, SPTUIPresentationService, SPTVolumeService;
 
 @interface SPTWatchPlatformServiceImplementation : NSObject <SPTWatchPlatformTestManagerObserver, SPTWatchConnectivitySessionObserver, SPTWatchPlatformService>
 {
     id <SPTAccessoryManagerService> _accessoryManagerService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTContainerService> _containerService;
+    id <SPTContainerUIService> _containerUIService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <GaiaFeature> _gaiaFeature;
     id <SPTPodcastFeature> _podcastFeature;
@@ -26,6 +27,7 @@
     id <SPTNetworkService> _networkService;
     id <SPTRadioService> _radioService;
     id <SPTSessionService> _sessionService;
+    id <SPTUIPresentationService> _uiPresentationService;
     id <SPTExternalIntegrationDebugLogService> _externalIntegrationDebugLogService;
     id <SPTExternalIntegrationPlatformService> _externalIntegrationPlatformService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
@@ -38,9 +40,11 @@
     SPTWatchPlatformOfflineManagerImplementation *_offlineManager;
     NSDictionary *_requestHandlers;
     NSArray *_publishers;
+    SPTWatchPlatformWatchApplicationLogSubscriber *_applicationDebugLogSubscriber;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTWatchPlatformWatchApplicationLogSubscriber *applicationDebugLogSubscriber; // @synthesize applicationDebugLogSubscriber=_applicationDebugLogSubscriber;
 @property(retain, nonatomic) NSArray *publishers; // @synthesize publishers=_publishers;
 @property(retain, nonatomic) NSDictionary *requestHandlers; // @synthesize requestHandlers=_requestHandlers;
 @property(retain, nonatomic) SPTWatchPlatformOfflineManagerImplementation *offlineManager; // @synthesize offlineManager=_offlineManager;
@@ -53,6 +57,7 @@
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatformService> externalIntegrationPlatformService; // @synthesize externalIntegrationPlatformService=_externalIntegrationPlatformService;
 @property(nonatomic) __weak id <SPTExternalIntegrationDebugLogService> externalIntegrationDebugLogService; // @synthesize externalIntegrationDebugLogService=_externalIntegrationDebugLogService;
+@property(nonatomic) __weak id <SPTUIPresentationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTRadioService> radioService; // @synthesize radioService=_radioService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
@@ -61,6 +66,7 @@
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastFeature; // @synthesize podcastFeature=_podcastFeature;
 @property(nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
+@property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;
@@ -70,6 +76,7 @@
 - (void)testManager:(id)arg1 didUpdateWatchIntegrationEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didUpdateWatchAccessoryLoggingEnabledState:(_Bool)arg2;
 - (id)provideOfflineManager;
+- (void)enableApplicationDebugLogSubscriber;
 - (void)disableIntegration;
 - (void)enableIntegration;
 - (void)disableLogging;

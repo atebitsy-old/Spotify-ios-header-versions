@@ -10,6 +10,10 @@
 {
     // Error parsing type: , name: logCenter
     // Error parsing type: , name: currentDateProvider
+    // Error parsing type: , name: ubiLogger
+    // Error parsing type: , name: viewLogger
+    // Error parsing type: , name: logLoadingStartedWasInvoked
+    // Error parsing type: , name: logLoadingCompletedWasInvoked
 }
 
 @end

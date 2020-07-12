@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol _TtP19MusicVideoUIFeature28MusicVideoUIComponentFactory_;
+@protocol _TtP19MusicVideoUIFeature28MusicVideoUIComponentFactory_, _TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_;
 
 @protocol _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_ <SPTService>
+- (id <_TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_>)provideCommandHandlerFactory;
 @property(nonatomic, readonly) id <_TtP19MusicVideoUIFeature28MusicVideoUIComponentFactory_> componentFactory;
 @end
 

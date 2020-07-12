@@ -72,6 +72,7 @@
 @property(readonly, nonatomic) UIView *contentView;
 @property(readonly, nonatomic) UIViewController<SPTSocialListeningSessionViewController> *viewController;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
+@property(readonly, nonatomic) _Bool allowDeepLink;
 - (void)devicePickerWillAppear;
 - (void)dealloc;
 - (id)initWithTestManager:(id)arg1 userInterfaceFactory:(id)arg2 model:(id)arg3 connectManager:(id)arg4 notificationCenter:(id)arg5;

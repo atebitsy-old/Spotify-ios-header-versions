@@ -34,7 +34,6 @@
 @property(nonatomic) long long audioCrossfadeTime;
 @property(nonatomic) _Bool audioCrossfade;
 @property(nonatomic) _Bool audioGapless;
-- (void)setLanguage:(id)arg1 callback:(CDUnknownBlockType)arg2;
 @property(readonly, nonatomic) struct Prefs *cppPreferences;
 - (id)initWithScheduler:(id)arg1;
 

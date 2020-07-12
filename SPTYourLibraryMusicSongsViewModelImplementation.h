@@ -12,7 +12,7 @@
 #import "SPTYourLibraryMusicSongsModelDelegate-Protocol.h"
 #import "SPTYourLibraryMusicSongsViewModel-Protocol.h"
 
-@class NSArray, NSString, NSURL, SPTObserverManager, SPTPlayOrigin, SPTPlayerState, SPTYourLibraryMusicSongsHeaderViewModelImplementation, SPTYourLibraryMusicSongsLogger;
+@class NSArray, NSString, NSURL, SPTObserverManager, SPTPlayOrigin, SPTPlayerState, SPTYourLibraryMusicGroupLabelReader, SPTYourLibraryMusicSongsHeaderViewModelImplementation, SPTYourLibraryMusicSongsLogger;
 @protocol SPContextMenuFeature, SPTAlertInterface, SPTAudioPreviewPlayer, SPTOfflineModeState, SPTPlayer, SPTSortingFilteringUIFactory, SPTYourLibraryMusicSongsModel, SPTYourLibraryMusicSongsViewModelDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicSongsViewModelImplementation : NSObject <SPTYourLibraryMusicSongsHeaderViewModelActionDelegate, SPTPlayerObserver, SPTSortingFilteringPickerDelegate, SPTYourLibraryMusicSongsViewModel, SPTYourLibraryMusicSongsModelDelegate>
@@ -39,8 +39,10 @@
     SPTObserverManager *_filterChipsObserverManager;
     id <SPTAlertInterface> _alertInterface;
     NSArray *_sectionConfiguration;
+    SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
 }
 
+@property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
 @property(nonatomic) _Bool activeFiltersChanged; // @synthesize activeFiltersChanged=_activeFiltersChanged;
 @property(copy, nonatomic) NSArray *sectionConfiguration; // @synthesize sectionConfiguration=_sectionConfiguration;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
@@ -64,6 +66,9 @@
 @property(readonly, nonatomic) id <SPTYourLibraryMusicSongsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)logQuickScrollDragEnded;
+- (void)logQuickScrollDragStarted;
+- (void)logQuickScrollIsVisible;
 - (_Bool)activeFiltersEqualTo:(id)arg1;
 - (_Bool)updateActiveFilters:(id)arg1;
 - (id)itemProxyForFilterChipItem:(id)arg1;
@@ -140,12 +145,18 @@
 - (id)currentSectionsConfiguration;
 - (id)sectionViewModelAtIndex:(unsigned long long)arg1;
 - (void)itemSelectedAtIndexPath:(id)arg1;
+- (id)groupLabelAtIndexPath:(id)arg1;
 - (id)itemAtIndexPath:(id)arg1;
 - (void)loadViewModel;
 @property(readonly, nonatomic, getter=isContentFiltered) _Bool contentFiltered;
 @property(readonly, nonatomic, getter=isSortingAndFilteringEnabled) _Bool sortingAndFilteringEnabled;
 @property(readonly, nonatomic, getter=isPreviewList) _Bool previewList;
+@property(readonly, nonatomic) unsigned long long songsSection;
 @property(readonly, nonatomic) unsigned long long numberSections;
+@property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
+@property(readonly, nonatomic) long long quickScrollMinPages;
+@property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
+@property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (id)initWithModel:(id)arg1 contextMenuFeature:(id)arg2 playOrigin:(id)arg3 player:(id)arg4 offlineModeState:(id)arg5 logger:(id)arg6 testManager:(id)arg7 sortingFilteringPickerFactory:(id)arg8 audioPreviewPlayer:(id)arg9 collectionPlatformConfigurator:(id)arg10 alertInterface:(id)arg11;

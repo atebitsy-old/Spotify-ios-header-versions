@@ -7,22 +7,27 @@
 #import <objc/NSObject.h>
 
 #import "SPTDataLoaderDelegate-Protocol.h"
+#import "SPTSocialListeningListenTogetherDataLoader-Protocol.h"
 
 @class NSString, SPTDataLoader;
 @protocol SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTProfileUserData, SPTSocialListeningDataLoaderDelegate, SPTSocialListeningTestManager;
 
-@interface SPTSocialListeningDataLoader : NSObject <SPTDataLoaderDelegate>
+@interface SPTSocialListeningDataLoader : NSObject <SPTDataLoaderDelegate, SPTSocialListeningListenTogetherDataLoader>
 {
     _Bool _isLoading;
-    id <SPTSocialListeningDataLoaderDelegate> _delegate;
+    _Bool _getOrCreateSessionRequestQueued;
+    id <SPTSocialListeningDataLoaderDelegate> delegate;
     SPTDataLoader *_dataLoader;
     id <SPTCosmosDictionaryDataLoader> _cosmosDictionaryDataLoader;
     id <SPTProfileUserData> _currentUserData;
     id <SPTSocialListeningTestManager> _testManager;
     id <SPTCosmosDictionaryDataLoaderRequestToken> _sessionStateSubscriptionToken;
     NSString *_physicalDeviceID;
+    CDUnknownBlockType _completionHander;
 }
 
+@property _Bool getOrCreateSessionRequestQueued; // @synthesize getOrCreateSessionRequestQueued=_getOrCreateSessionRequestQueued;
+@property(copy, nonatomic) CDUnknownBlockType completionHander; // @synthesize completionHander=_completionHander;
 @property(copy, nonatomic) NSString *physicalDeviceID; // @synthesize physicalDeviceID=_physicalDeviceID;
 @property _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> sessionStateSubscriptionToken; // @synthesize sessionStateSubscriptionToken=_sessionStateSubscriptionToken;
@@ -30,8 +35,9 @@
 @property(readonly, nonatomic) id <SPTProfileUserData> currentUserData; // @synthesize currentUserData=_currentUserData;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDictionaryDataLoader; // @synthesize cosmosDictionaryDataLoader=_cosmosDictionaryDataLoader;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
-@property(nonatomic) __weak id <SPTSocialListeningDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <SPTSocialListeningDataLoaderDelegate> delegate; // @synthesize delegate;
 - (void).cxx_destruct;
+- (void)loadJoinConfirmationWithToken:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)getExposedDevices;
 - (void)handleSocialDeviceResponse:(id)arg1 withDeviceIds:(id)arg2;
 - (void)getSocialDeviceSessions:(id)arg1;
@@ -42,6 +48,8 @@
 - (void)setPhysicalDeviceIDState:(id)arg1;
 - (void)setCoreSocialListeningState:(_Bool)arg1;
 - (void)subscribeToSessionUpdates;
+- (id)sessionTypeAndDeviceIDQueryParameters;
+- (id)deviceIDQueryParameter;
 - (id)sessionTypeQueryParameter;
 - (void)performRequestWithURL:(id)arg1 requestMethod:(long long)arg2 expectedResponseType:(unsigned long long)arg3;
 - (void)cancelRequests;

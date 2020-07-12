@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 - (_Bool)carPlayUBIEnabled;
 - (_Bool)isTabItem:(id)arg1;
+- (void)logTabInteraction:(id)arg1 indexPath:(id)arg2;
 - (void)logContentItemPlayInteraction:(id)arg1 position:(unsigned long long)arg2;
 - (void)logContentItemImpression:(id)arg1 indexPath:(id)arg2;
 - (id)initWithUBILogger:(id)arg1 properties:(id)arg2;

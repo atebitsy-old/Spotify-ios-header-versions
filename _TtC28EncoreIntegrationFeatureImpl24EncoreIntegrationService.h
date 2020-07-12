@@ -8,7 +8,7 @@
 
 @interface _TtC28EncoreIntegrationFeatureImpl24EncoreIntegrationService : NSObject
 {
-    // Error parsing type: , name: componentFactory
+    // Error parsing type: , name: componentFactories
     // Error parsing type: , name: testManager
     // Error parsing type: , name: containerService
     // Error parsing type: , name: glueService

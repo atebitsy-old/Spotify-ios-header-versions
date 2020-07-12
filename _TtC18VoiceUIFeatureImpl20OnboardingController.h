@@ -16,6 +16,7 @@
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: ubiLogger
     // Error parsing type: , name: settingsViewModel
+    // Error parsing type: , name: eventSender
 }
 
 @end

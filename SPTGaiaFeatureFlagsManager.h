@@ -10,12 +10,11 @@
 #import "SPTGaiaDevicePickerFlagsProvider-Protocol.h"
 #import "SPTGaiaHomeDeviceFlagsProvider-Protocol.h"
 #import "SPTGaiaLockScreenPlayerFlagsProvider-Protocol.h"
-#import "SPTGaiaVolumeFeatureRefactorFlagsProvider-Protocol.h"
 
 @class NSNumber, NSString, SPTGaiaFeatureProperties, SPTGaiaLocalDevicePermissions;
 @protocol SPTAbbaFeatureFlags, SPTGaiaConnectManager, SPTLocalSettings;
 
-@interface SPTGaiaFeatureFlagsManager : NSObject <SPTGaiaDevicePickerContextMenuFlagsProvider, SPTGaiaHomeDeviceFlagsProvider, SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaDevicePickerFlagsProvider, SPTGaiaVolumeFeatureRefactorFlagsProvider>
+@interface SPTGaiaFeatureFlagsManager : NSObject <SPTGaiaDevicePickerContextMenuFlagsProvider, SPTGaiaHomeDeviceFlagsProvider, SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaDevicePickerFlagsProvider>
 {
     id <SPTAbbaFeatureFlags> _featureFlags;
     SPTGaiaFeatureProperties *_remoteConfigProperties;
@@ -32,7 +31,6 @@
 @property(readonly, nonatomic) SPTGaiaFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(readonly, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool volumeFeatureEnabled;
 - (_Bool)freeTierEducationPickerDesignEnabled;
 - (_Bool)lockScreenPlayerFeatureEnabled;
 - (id)homeDeviceLocalForcedSettingsKey;

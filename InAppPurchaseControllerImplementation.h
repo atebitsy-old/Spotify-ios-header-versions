@@ -81,7 +81,7 @@
 - (id)localizedPremiumProductPrice;
 - (void)clearSettings;
 - (void)dealloc;
-- (id)initWithSession:(id)arg1 hermes:(id)arg2 localSettings:(id)arg3 productState:(id)arg4 logCenter:(id)arg5 dataLoader:(id)arg6 alertController:(id)arg7;
+- (id)initWithSession:(id)arg1 hermes:(id)arg2 localSettings:(id)arg3 productState:(id)arg4 dataLoader:(id)arg5 alertController:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

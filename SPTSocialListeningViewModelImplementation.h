@@ -24,7 +24,6 @@
     SPTSocialListeningDialogPresenter *_dialogPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTShareEntityDataFactory> _shareEntityDataFactory;
-    NSString *_tryAgainLabelText;
     NSURL *_currentSessionURL;
     UIImage *_scannablesImage;
     UIColor *_sessionColor;
@@ -46,7 +45,6 @@
 @property(copy, nonatomic) UIColor *sessionColor; // @synthesize sessionColor=_sessionColor;
 @property(copy, nonatomic) UIImage *scannablesImage; // @synthesize scannablesImage=_scannablesImage;
 @property(copy, nonatomic) NSURL *currentSessionURL; // @synthesize currentSessionURL=_currentSessionURL;
-@property(copy, nonatomic) NSString *tryAgainLabelText; // @synthesize tryAgainLabelText=_tryAgainLabelText;
 @property(readonly, nonatomic) id <SPTShareEntityDataFactory> shareEntityDataFactory; // @synthesize shareEntityDataFactory=_shareEntityDataFactory;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTSocialListeningDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
@@ -82,6 +80,7 @@
 @property(readonly, nonatomic) _Bool sessionButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
 @property(readonly, nonatomic) _Bool tryAgainViewHidden;
+@property(readonly, copy, nonatomic) NSString *tryAgainLabelText;
 @property(readonly, nonatomic) _Bool scannablesImageHidden;
 @property(readonly, nonatomic) _Bool scannableViewHidden;
 @property(readonly, nonatomic) long long state;

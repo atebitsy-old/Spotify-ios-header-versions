@@ -17,6 +17,7 @@
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 - (void).cxx_destruct;
+- (id)backgroundColorForSpacesItem:(id)arg1;
 - (id)sourceUriForSpacesItem:(id)arg1;
 - (id)sourceForSpacesItem:(id)arg1;
 - (_Bool)isSpacesBlockTrack:(id)arg1;

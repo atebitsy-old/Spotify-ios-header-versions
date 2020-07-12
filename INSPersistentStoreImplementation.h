@@ -25,18 +25,22 @@
 - (id)sequenceNumbersMatchingPredicate:(id)arg1 limit:(unsigned long long)arg2 context:(id)arg3;
 - (id)messagesMatchingPredicate:(id)arg1 sortDescriptor:(id)arg2 limit:(unsigned long long)arg3 context:(id)arg4;
 - (id)fetchInstallIdEntityWithContext:(id)arg1;
-- (id)fetchAllSequenceNumberEntities;
-- (id)fetchFirstMessageEntitiesWithNames:(id)arg1;
-- (void)eventSenderStatsNodesWithCompletion:(CDUnknownBlockType)arg1;
+- (id)fetchSequenceNumberEntitiesWithSequenceIds:(id)arg1;
+- (id)fetchFirstMessageEntitiesWithSequenceNumbers:(id)arg1;
+- (void)eventSenderStatsNodesWithSequenceIds:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)installIdWithCompletion:(CDUnknownBlockType)arg1;
-- (void)persistEventEnvelope:(id)arg1 authenticated:(_Bool)arg2 withCompletion:(CDUnknownBlockType)arg3;
-- (void)messagesWithAuthenticatedStatus:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)allMessagesWithCompletion:(CDUnknownBlockType)arg1;
+- (void)persistEventEnvelope:(id)arg1 owner:(id)arg2 authenticated:(_Bool)arg3 withCompletion:(CDUnknownBlockType)arg4;
+- (void)fetchMessagesWithPredicate:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)persistNonAuthenticatedEventEnvelope:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)persistAuthenticatedEventEnvelope:(id)arg1 owner:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)nonAuthenticatedMessagesWithCompletion:(CDUnknownBlockType)arg1;
+- (void)authenticatedMessagesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)messagesWithCompletion:(CDUnknownBlockType)arg1;
 - (void)containMessageForId:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)deleteMessageForId:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)countWithCompletion:(CDUnknownBlockType)arg1;
 - (void)saveWithCompletion:(CDUnknownBlockType)arg1;
-- (void)incrementSequenceNumberWithEventName:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)incrementSequenceNumberWithEventName:(id)arg1 sequenceId:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)initWithPersistentStoreStack:(id)arg1 logger:(id)arg2;
 
 // Remaining properties

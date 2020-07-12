@@ -12,6 +12,7 @@
 {
     // Error parsing type: , name: sponsoredContextModel
     // Error parsing type: , name: style
+    // Error parsing type: , name: cellHasBeenDisplayed
     // Error parsing type: , name: delegate
 }
 
@@ -26,6 +27,7 @@
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
 - (id)reuseIdentifiers;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
+- (void)dealloc;
 
 @end
 

@@ -10,19 +10,16 @@
 #import "SPTNavigationRouter-Protocol.h"
 
 @class MessageBarController, NSMutableArray, NSMutableDictionary, NSOrderedSet, NSString, NSURL, NSUserDefaults, SPBarViewController, SPTMenuController, SPTNavigationManager, SPTObserverManager, SPTStartupTracer, UIViewController;
-@protocol MetaViewControllerDelegate, SPTAppStartupController, SPTBarInteractiveTransitionParticipant, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTLinkDispatcher, SPTLogCenter, SPTModalPresentationController, SPTNavigationItemsDataSource, SPTPageRegistry, SPTTabBarControllerProtocol;
+@protocol MetaViewControllerDelegate, SPTAppStartupController, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTLinkDispatcher, SPTLogCenter, SPTModalPresentationController, SPTNavigationItemsDataSource, SPTPageRegistry, SPTTabBarControllerProtocol;
 
 @interface MetaViewController : NSObject <SPTMetaViewController, SPTNavigationRouter>
 {
     _Bool _loadingUIComplete;
-    _Bool _presentingMainViewControllerComplete;
     id <SPTNavigationItemsDataSource> _dataSource;
     id <MetaViewControllerDelegate> _delegate;
     SPBarViewController *_barViewController;
     SPTMenuController *_menuController;
     UIViewController<SPTBarOverlayViewController> *_nowPlaying;
-    UIViewController<SPTBarInteractiveTransitionParticipant> *_nowPlayingBar;
-    UIViewController *_contentViewController;
     id <SPTFullscreenPlaybackPresentationManager> _fullscreenPlaybackPresentationManager;
     NSUserDefaults *_userDefaults;
     NSMutableDictionary *_rootUI;
@@ -55,9 +52,6 @@
 @property(retain, nonatomic) NSMutableDictionary *rootUI; // @synthesize rootUI=_rootUI;
 @property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(retain, nonatomic) id <SPTFullscreenPlaybackPresentationManager> fullscreenPlaybackPresentationManager; // @synthesize fullscreenPlaybackPresentationManager=_fullscreenPlaybackPresentationManager;
-@property(retain, nonatomic) UIViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
-@property(retain, nonatomic) UIViewController<SPTBarInteractiveTransitionParticipant> *nowPlayingBar; // @synthesize nowPlayingBar=_nowPlayingBar;
-@property(readonly, nonatomic) _Bool presentingMainViewControllerComplete; // @synthesize presentingMainViewControllerComplete=_presentingMainViewControllerComplete;
 @property(nonatomic, getter=isLoadingUIComplete) _Bool loadingUIComplete; // @synthesize loadingUIComplete=_loadingUIComplete;
 @property(retain, nonatomic) UIViewController<SPTBarOverlayViewController> *nowPlaying; // @synthesize nowPlaying=_nowPlaying;
 @property(retain, nonatomic) SPTMenuController *menuController; // @synthesize menuController=_menuController;

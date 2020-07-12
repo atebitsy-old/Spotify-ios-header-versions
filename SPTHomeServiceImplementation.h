@@ -9,7 +9,7 @@
 #import "SPTHomeService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHomeContentCache, SPTHomeHubManager;
-@protocol SPTCreatePlaylistService, SPTFeatureFlagFactory, SPTFeedHeartBeatManager, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeTestManager, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
+@protocol SPTCreatePlaylistService, SPTFeatureFlagFactory, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -29,35 +29,31 @@
     id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTShareFeature> _shareService;
     id <SPTFreeTierTasteOnboardingService> _tasteOnboardingService;
-    id <SPTSnackbarService> _snackbarService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIService> _ubiService;
     id <SPTSeedASessionService> _seedASessionService;
     id <SPTCreatePlaylistService> _createPlaylistService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> _listeningHistoryService;
-    id <SPTHomeTestManager> _testManager;
+    id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> _musicVideoUIService;
     SPTHomeHubManager *_hubManager;
     SPTHomeContentCache *_homeContentCache;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTFeedHeartBeatManager> _feedHeartBeatManager;
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
-@property(retain, nonatomic) id <SPTFeedHeartBeatManager> feedHeartBeatManager; // @synthesize feedHeartBeatManager=_feedHeartBeatManager;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(retain, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;
-@property(retain, nonatomic) id <SPTHomeTestManager> testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> musicVideoUIService; // @synthesize musicVideoUIService=_musicVideoUIService;
 @property(nonatomic) __weak id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> listeningHistoryService; // @synthesize listeningHistoryService=_listeningHistoryService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
 @property(nonatomic) __weak id <SPTSeedASessionService> seedASessionService; // @synthesize seedASessionService=_seedASessionService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingService> tasteOnboardingService; // @synthesize tasteOnboardingService=_tasteOnboardingService;
 @property(nonatomic) __weak id <SPTShareFeature> shareService; // @synthesize shareService=_shareService;
 @property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;

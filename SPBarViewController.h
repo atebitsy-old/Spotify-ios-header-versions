@@ -55,7 +55,6 @@
 - (id)barViewControllerForPresentationController:(id)arg1;
 - (void)interactivePresentationControllerNeedsDismissal:(id)arg1;
 - (void)interactivePresentationControllerNeedsPresentation:(id)arg1;
-- (double)panHeightForInteractivePresentationController:(id)arg1;
 - (void)applicationStatusBarFrameDidChangeNotification;
 - (void)createBarConstraints;
 - (void)updateViewConstraints;

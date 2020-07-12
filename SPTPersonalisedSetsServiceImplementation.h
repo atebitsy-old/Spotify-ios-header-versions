@@ -9,7 +9,7 @@
 #import "SPTPersonalisedSetsService-Protocol.h"
 
 @class NSArray, NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFeedbackService, SPTFormatListPlatformService, SPTGLUEService, SPTNetworkService, SPTPSXTestManager, SPTPerformanceMetricsService, SPTPersonalisedSetsNowPlayingFeedbackManagerFactory, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShelfService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTCoreService, SPTEncoreIntegrationService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFeedbackService, SPTFormatListPlatformService, SPTGLUEService, SPTNetworkService, SPTPSXTestManager, SPTPerformanceMetricsService, SPTPersonalisedSetsNowPlayingFeedbackManagerFactory, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShelfService;
 
 @interface SPTPersonalisedSetsServiceImplementation : NSObject <SPTPersonalisedSetsService>
 {
@@ -28,7 +28,7 @@
     id <SPTFeedbackService> _feedbackService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreService;
+    id <SPTEncoreIntegrationService> _encoreService;
     id <SPTCollectionSortingEntityManager> _personalisedSetSortingEntityManager;
     NSArray *_formatListExpressions;
     id <SPTPSXTestManager> _testManager;
@@ -40,7 +40,7 @@
 @property(retain, nonatomic) id <SPTPSXTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSArray *formatListExpressions; // @synthesize formatListExpressions=_formatListExpressions;
 @property(retain, nonatomic) id <SPTCollectionSortingEntityManager> personalisedSetSortingEntityManager; // @synthesize personalisedSetSortingEntityManager=_personalisedSetSortingEntityManager;
-@property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreService; // @synthesize encoreService=_encoreService;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreService; // @synthesize encoreService=_encoreService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTFeedbackService> feedbackService; // @synthesize feedbackService=_feedbackService;

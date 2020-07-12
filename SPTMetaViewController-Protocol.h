@@ -7,15 +7,12 @@
 #import "SPTNavigationItemsConsumer-Protocol.h"
 
 @class SPBarViewController, SPTMenuController, UIViewController;
-@protocol MetaViewControllerDelegate, SPTBarInteractiveTransitionParticipant, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTMetaViewControllerObserver, SPTMetaViewControllerRootViewPresenter, SPTModalPresentationController, SPTTabBarControllerProtocol;
+@protocol MetaViewControllerDelegate, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTMetaViewControllerObserver, SPTMetaViewControllerRootViewPresenter, SPTModalPresentationController, SPTTabBarControllerProtocol;
 
 @protocol SPTMetaViewController <SPTNavigationItemsConsumer>
 @property(readonly, nonatomic) UIViewController *defaultTab;
 @property(readonly, nonatomic) UIViewController *top;
 @property(retain, nonatomic) id <SPTFullscreenPlaybackPresentationManager> fullscreenPlaybackPresentationManager;
-@property(retain, nonatomic) UIViewController *contentViewController;
-@property(readonly, nonatomic) UIViewController<SPTBarInteractiveTransitionParticipant> *nowPlayingBar;
-@property(readonly, nonatomic) _Bool presentingMainViewControllerComplete;
 @property(readonly, nonatomic, getter=isShowingMainView) _Bool showingMainView;
 @property(readonly, nonatomic, getter=isShowingLoginView) _Bool showingLoginView;
 @property(readonly, nonatomic, getter=isLoadingUIComplete) _Bool loadingUIComplete;

@@ -12,10 +12,19 @@
     // Error parsing type: , name: backgroundVideoView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel
+    // Error parsing type: , name: creatorImageView
+    // Error parsing type: , name: creatorNameLabel
     // Error parsing type: , name: backgroundGradientView
+    // Error parsing type: , name: backgroundConstraints
+    // Error parsing type: , name: subtitleLabelBottomConstraint
+    // Error parsing type: , name: creatorImageViewHeightConstraint
+    // Error parsing type: , name: creatorImageViewWidthConstraint
+    // Error parsing type: , name: creatorNameLabelLeadingConstraint
 }
 
 - (void).cxx_destruct;
+- (void)layoutSubviews;
+@property(nonatomic) struct CGRect frame;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

@@ -24,6 +24,7 @@
 - (void)logSleepTimerButtonTapped;
 - (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
 - (void)logHeartButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
+- (void)logRepeatButtonTappedWithMode:(unsigned long long)arg1;
 - (void)logShuffleButtonTappedEnableShuffle:(_Bool)arg1;
 - (void)logSkipToPreviousTappedWithPlayerState:(id)arg1;
 - (void)logPlayButtonTappedWithBehavior:(long long)arg1 playerState:(id)arg2;

@@ -152,7 +152,10 @@
 + (id)spt_loginIntentLedURI:(unsigned long long)arg1;
 + (id)spt_loginMethodLedURIPrefixComponents;
 + (id)spt_loginMethodLedURI:(unsigned long long)arg1;
++ (id)spt_loginGuestModeWelcomeURI;
++ (id)spt_loginGuestModeWelcomeURIPrefixComponents;
 + (id)spt_loginWelcomeURI;
++ (id)spt_loginWelcomeURIPrefixComponents;
 + (id)spt_setPasswordURLFromVersion:(id)arg1;
 + (id)spt_setPasswordURLV2;
 + (id)spt_encodedParamsWithDictionary:(id)arg1;
@@ -389,6 +392,7 @@
 - (_Bool)spt_isLoginURI;
 - (_Bool)spt_isLoginIntentLedURI;
 - (_Bool)spt_isLoginMethodLedURI;
+- (_Bool)spt_isLoginGuestModeWelcomeURI;
 - (_Bool)spt_isLoginWelcomeURI;
 @property(readonly, nonatomic) _Bool spt_isMadeForYouHub;
 - (id)spt_imageIdentifier;

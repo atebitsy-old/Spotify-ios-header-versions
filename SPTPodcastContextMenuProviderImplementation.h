@@ -25,6 +25,7 @@
 @property(nonatomic) __weak id <SPTShowEntityService> showEntityService; // @synthesize showEntityService=_showEntityService;
 - (void).cxx_destruct;
 - (id)provideShowContextMenuControllerOptions;
+- (void)dismissContextMenuAnimated:(_Bool)arg1;
 - (void)presentContextMenuForEpisodeURI:(id)arg1 withMetadata:(id)arg2 sourceContextURI:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5 options:(id)arg6;
 - (id)initWithShowEntityService:(id)arg1 contextMenuController:(id)arg2 contextMenuDelegate:(id)arg3 featureProperties:(id)arg4;
 

@@ -9,6 +9,7 @@
 @class NSString, NSURL;
 
 @protocol SPTYourLibraryMusicTrackItemViewModel <NSObject>
+@property(readonly, copy, nonatomic) NSString *groupLabel;
 @property(readonly, nonatomic) NSString *previewId;
 @property(readonly, nonatomic) long long trackRowRestriction;
 @property(readonly, nonatomic) long long offlineStatus;

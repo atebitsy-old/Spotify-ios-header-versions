@@ -9,7 +9,7 @@
 #import "SPSessionObserver-Protocol.h"
 #import "SPTIncognitoModeHandlerObserver-Protocol.h"
 
-@class NSString, SPCore, SPSession, SPTIncognitoModeHandler;
+@class NSString, SPCore, SPSession, SPTIncognitoModeHandler, SPTRequestLifetime;
 @protocol SPTAlertInterface, SPTLogCenter, SPTNetworkConnectivityController;
 
 @interface SPTSessionObserver : NSObject <SPSessionObserver, SPTIncognitoModeHandlerObserver>
@@ -20,8 +20,10 @@
     SPTIncognitoModeHandler *_incognitoModeHandler;
     id <SPTLogCenter> _logCenter;
     id <SPTAlertInterface> _alertInterface;
+    SPTRequestLifetime *_offlineErrorSubscription;
 }
 
+@property(retain, nonatomic) SPTRequestLifetime *offlineErrorSubscription; // @synthesize offlineErrorSubscription=_offlineErrorSubscription;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(nonatomic) __weak SPTIncognitoModeHandler *incognitoModeHandler; // @synthesize incognitoModeHandler=_incognitoModeHandler;
@@ -38,6 +40,8 @@
 - (void)session:(id)arg1 autoUpdateWithURL:(id)arg2;
 - (void)incognitoModeHandler:(id)arg1 incognitoModeChangedByTimeout:(_Bool)arg2;
 - (void)tryToDisableOfflineMode;
+- (void)onOfflineError:(long long)arg1;
+- (void)subscribeToOfflineErrors;
 - (void)applicationStateChanged:(id)arg1;
 - (void)updateApplicationState;
 - (void)dealloc;

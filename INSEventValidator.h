@@ -9,24 +9,29 @@
 #import "INSEventValidatorProtocol-Protocol.h"
 
 @class NSString;
-@protocol INSLogger;
+@protocol INSInternalErrorEventDelegate, INSLogger;
 
 @interface INSEventValidator : NSObject <INSEventValidatorProtocol>
 {
     unsigned long long _maxPayloadSize;
     NSString *_shortVersionString;
     id <INSLogger> _logger;
+    id <INSInternalErrorEventDelegate> _errorDelegate;
 }
 
+@property(retain, nonatomic) id <INSInternalErrorEventDelegate> errorDelegate; // @synthesize errorDelegate=_errorDelegate;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *shortVersionString; // @synthesize shortVersionString=_shortVersionString;
 @property(nonatomic) unsigned long long maxPayloadSize; // @synthesize maxPayloadSize=_maxPayloadSize;
 - (void).cxx_destruct;
+- (void)logRejectedClientEventForValidatorResult:(unsigned long long)arg1 eventName:(id)arg2;
 - (id)errorInfoWithDescription:(id)arg1 messageName:(id)arg2;
+- (id)errorForValidatorResult:(unsigned long long)arg1 messageName:(id)arg2;
+- (unsigned long long)validateMessage:(id)arg1;
+- (_Bool)validateOwner:(id)arg1 forMessage:(id)arg2;
 - (_Bool)validateEnvelope:(id)arg1 error:(id *)arg2;
-- (id)validationErrorForMessage:(id)arg1;
 - (_Bool)validateMessage:(id)arg1 error:(id *)arg2;
-- (id)initWithMaxPayloadSize:(unsigned long long)arg1 shortVersionString:(id)arg2 logger:(id)arg3;
+- (id)initWithMaxPayloadSize:(unsigned long long)arg1 shortVersionString:(id)arg2 logger:(id)arg3 errorDelegate:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

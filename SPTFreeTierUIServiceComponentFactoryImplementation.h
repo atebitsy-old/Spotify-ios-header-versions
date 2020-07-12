@@ -28,7 +28,6 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 - (void).cxx_destruct;
-- (id)provideFullBleadHeaderComponent;
 - (id)provideFreeTierComponents;
 - (void)registerFreeTierHubsComponents;
 - (id)provideHubsComponentRegistry;

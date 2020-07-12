@@ -7,15 +7,15 @@
 #import <objc/NSObject.h>
 
 #import "SPTAdPlayerObserver-Protocol.h"
-#import "SPTVoiceSessionObserver-Protocol.h"
+#import "SPTVoiceLibrarySessionObserver-Protocol.h"
 
 @class NSString, NSTimer, SPTAdPlayerObservable, SPTAdVoiceCommandAudioPlayer, SPTObserverManager;
-@protocol SPTAccessoryStateManager, SPTAdsBaseCosmosBridge, SPTAdsBaseEntity, SPTEventSender, SPTLinkDispatcher, SPTVoiceSession;
+@protocol SPTAccessoryStateManager, SPTAdsBaseCosmosBridge, SPTAdsBaseEntity, SPTEventSender, SPTLinkDispatcher, SPTVoiceLibrarySession;
 
-@interface SPTAdVoiceManagerLegacy : NSObject <SPTVoiceSessionObserver, SPTAdPlayerObserver>
+@interface SPTAdVoiceManagerLegacy : NSObject <SPTVoiceLibrarySessionObserver, SPTAdPlayerObserver>
 {
     _Bool _initialSpeechLogged;
-    id <SPTVoiceSession> _voiceSession;
+    id <SPTVoiceLibrarySession> _voiceSession;
     id <SPTAdsBaseEntity> _adEntity;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
     id <SPTLinkDispatcher> _linkDispatcher;
@@ -45,14 +45,14 @@
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic) __weak id <SPTAdsBaseEntity> adEntity; // @synthesize adEntity=_adEntity;
-@property(retain, nonatomic) id <SPTVoiceSession> voiceSession; // @synthesize voiceSession=_voiceSession;
+@property(retain, nonatomic) id <SPTVoiceLibrarySession> voiceSession; // @synthesize voiceSession=_voiceSession;
 - (void).cxx_destruct;
 - (void)logVoiceAdLogEvent:(id)arg1;
 - (id)getActiveConnectedDevice;
 - (void)skipToNextTrack;
 - (void)navigateToURI:(id)arg1;
 - (void)playContextURI:(id)arg1;
-- (long long)adVoiceIntentFromVoiceCommandIntent:(long long)arg1;
+- (long long)adVoiceIntentFromNLUResponse:(id)arg1;
 - (void)delayElapsed:(id)arg1;
 - (void)adPlayerStateDidChangeToTrack:(id)arg1;
 - (void)handleErrorSpeechResponse;
@@ -61,9 +61,9 @@
 - (void)stopSpeechRecognition;
 - (void)startSpeechRecognition;
 - (void)startSpeechWithCompletionHandler:(CDUnknownBlockType)arg1;
-- (void)voiceSession:(id)arg1 didUpdateTranscriptText:(id)arg2;
-- (void)voiceSession:(id)arg1 didFailVoiceCommand:(id)arg2 withError:(id)arg3;
-- (void)voiceSession:(id)arg1 didReceiveVoiceCommand:(id)arg2;
+- (void)voiceSession:(id)arg1 didUpdateIntermediateResponse:(id)arg2;
+- (void)voiceSession:(id)arg1 didFailWithError:(id)arg2;
+- (void)voiceSession:(id)arg1 didReceiveFinalResponse:(id)arg2;
 - (void)voiceSessionDidStartListening:(id)arg1;
 - (void)voiceSessionWillStartListening:(id)arg1;
 - (void)voiceSessionDidStopListening:(id)arg1;

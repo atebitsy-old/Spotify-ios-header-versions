@@ -6,7 +6,9 @@
 
 #import <UIKit/UIView.h>
 
-@interface _TtCO20EncoreConsumerMobile5Views10HeaderView : UIView
+#import "_TtP20EncoreConsumerMobile10EncoreView_-Protocol.h"
+
+@interface _TtCO20EncoreConsumerMobile5Views10HeaderView : UIView <_TtP20EncoreConsumerMobile10EncoreView_>
 {
     // Error parsing type: , name: heightConstraint
     // Error parsing type: , name: onProgress

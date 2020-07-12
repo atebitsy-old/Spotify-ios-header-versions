@@ -8,8 +8,8 @@
 
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
-@class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastYourLibraryEpisodesViewModelImpl;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryPageProviderDelegate;
+@class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastYourLibraryEpisodesViewModelImpl, SPTYourLibraryPodcastUnfinishedItemsProvider;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastYourLibraryPageProviderDelegate;
 
 @interface SPTPodcastYourLibraryEpisodesPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -27,7 +27,7 @@
     id <SPTPerformanceMetricsViewLoggerFactory> _viewLoggerFactory;
     id <SPTPodcastRequestFactory> _podcastRequestFactory;
     id <SPTPodcastEpisodeFactory> _episodeFactory;
-    id <SPTPodcastUnfinishedItemsProvider> _unfinishedItemsProvider;
+    SPTYourLibraryPodcastUnfinishedItemsProvider *_unfinishedItemsProvider;
     id <SPTPodcastEpisodeCellConfigurator> _cellConfigurator;
     id <SPTMetaViewController> _metaViewController;
     id <SPTNavigationRouter> _navigationRouter;
@@ -36,7 +36,7 @@
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
-@property(retain, nonatomic) id <SPTPodcastUnfinishedItemsProvider> unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
+@property(retain, nonatomic) SPTYourLibraryPodcastUnfinishedItemsProvider *unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFactory> episodeFactory; // @synthesize episodeFactory=_episodeFactory;
 @property(retain, nonatomic) id <SPTPodcastRequestFactory> podcastRequestFactory; // @synthesize podcastRequestFactory=_podcastRequestFactory;
 @property(retain, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;

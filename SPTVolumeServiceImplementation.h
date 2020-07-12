@@ -59,11 +59,11 @@
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
+- (id)provideVolumeSystemAPI;
 - (id)provideVolumeUIFactory;
 - (id)provideVolumeAPI;
 - (void)setupVolumeSliderView;
 - (void)setupRemoteVolumePopupPresenter;
-- (void)setupGaiaVolumeProxy;
 - (id)buildVolumeSynchronizationManager;
 - (id)buildRemoteControllerRouter;
 - (void)setupMobileToMobileManager;

@@ -9,7 +9,7 @@
 #import "SPTVisualRefreshIntegrationService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTGLUEService, SPTNetworkService, SPTURIDispatchService, SPTVISREFFlagsService, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPTEncoreIntegrationService, SPTGLUEService, SPTNetworkService, SPTURIDispatchService, SPTVISREFFlagsService;
 
 @interface SPTVisualRefreshIntegrationServiceImplementation : NSObject <SPTVisualRefreshIntegrationService>
 {
@@ -17,11 +17,11 @@
     id <SPTNetworkService> _networkService;
     id <SPTVISREFFlagsService> _visualRefreshService;
     id <SPTURIDispatchService> _URIDispatchService;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreIntegrationService;
+    id <SPTEncoreIntegrationService> _encoreIntegrationService;
 }
 
 + (id)serviceIdentifier;
-@property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;

@@ -9,6 +9,7 @@
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl20CreatorHeaderHubView : HUBComponentView
 {
     // Error parsing type: , name: headerController
+    // Error parsing type: , name: currentWidth
 }
 
 - (void).cxx_destruct;

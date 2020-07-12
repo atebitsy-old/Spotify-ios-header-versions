@@ -13,17 +13,15 @@
 #import "SPTPodcastTopicCategoryViewModelDelegate-Protocol.h"
 #import "SPTPodcastTrailerSectionViewModelDelegate-Protocol.h"
 
-@class NSArray, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastEpisodeSectionViewModel, SPTPodcastFeatureProperties, SPTPodcastHeaderViewModel, SPTPodcastLogger, SPTPodcastTopicCategoryViewModel, SPTPodcastTrailerSectionViewModel, SPTPodcastViewSectionConfiguration;
-@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastDispatcher, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastViewModelDelegate2;
+@class NSArray, NSString, NSURL, SPTPodcastEpisodeSectionViewModel, SPTPodcastFeatureProperties, SPTPodcastHeaderViewModel, SPTPodcastLogger, SPTPodcastTopicCategoryViewModel, SPTPodcastTrailerSectionViewModel, SPTPodcastViewSectionConfiguration;
+@protocol SPTCollectionPlatform, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastDispatcher, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastViewModelDelegate2;
 
 @interface SPTPodcastViewModel2 : NSObject <SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastTopicCategoryViewModelDelegate, SPTPodcastFollowSectionViewModelDelegate, SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTPodcastTrailerSectionViewModelDelegate>
 {
+    _Bool _trailerWasShown;
     _Bool _isLoading;
-    _Bool _isLoaded;
-    _Bool _topicsEmpty;
     _Bool _topicsDidLoad;
     _Bool _initialLoadComplete;
-    _Bool _trailerWasShown;
     id <SPTPodcastViewModelDelegate2> _delegate;
     NSURL *_URL;
     id <SPTPodcast> _podcast;
@@ -41,18 +39,17 @@
     SPTPodcastLogger *_logger;
     id <SPTPodcastDispatcher> _dispatcher;
     id <SPTCollectionPlatform> _collectionPlatform;
-    id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     SPTPodcastEpisodeSectionViewModel *_episodeSectionViewModel;
     SPTPodcastTrailerSectionViewModel *_trailerSectionViewModel;
 }
 
 @property(nonatomic) __weak SPTPodcastTrailerSectionViewModel *trailerSectionViewModel; // @synthesize trailerSectionViewModel=_trailerSectionViewModel;
 @property(nonatomic) __weak SPTPodcastEpisodeSectionViewModel *episodeSectionViewModel; // @synthesize episodeSectionViewModel=_episodeSectionViewModel;
-@property(nonatomic) _Bool trailerWasShown; // @synthesize trailerWasShown=_trailerWasShown;
-@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
-@property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-@property(nonatomic, getter=isInitialLoadComplete) _Bool initialLoadComplete; // @synthesize initialLoadComplete=_initialLoadComplete;
+@property(nonatomic) _Bool initialLoadComplete; // @synthesize initialLoadComplete=_initialLoadComplete;
 @property(nonatomic) _Bool topicsDidLoad; // @synthesize topicsDidLoad=_topicsDidLoad;
+@property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
+@property(nonatomic) _Bool trailerWasShown; // @synthesize trailerWasShown=_trailerWasShown;
+@property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTPodcastDispatcher> dispatcher; // @synthesize dispatcher=_dispatcher;
 @property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -64,19 +61,14 @@
 @property(readonly, nonatomic) SPTPodcastTopicCategoryViewModel *topicCategoryViewModel; // @synthesize topicCategoryViewModel=_topicCategoryViewModel;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> podcastRequestToken; // @synthesize podcastRequestToken=_podcastRequestToken;
 @property(readonly, nonatomic) SPTPodcastViewSectionConfiguration *configuration; // @synthesize configuration=_configuration;
-@property(nonatomic, getter=isTopicsEmpty) _Bool topicsEmpty; // @synthesize topicsEmpty=_topicsEmpty;
 @property(readonly, copy, nonatomic) SPTPodcastHeaderViewModel *headerViewModel; // @synthesize headerViewModel=_headerViewModel;
 @property(copy, nonatomic) NSArray *topics; // @synthesize topics=_topics;
 @property(retain) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
-@property(nonatomic) _Bool isLoaded; // @synthesize isLoaded=_isLoaded;
-@property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTPodcastViewModelDelegate2> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (id)indexPathForEpisodeIndex:(long long)arg1;
 - (id)indexForEpisodeURL:(id)arg1;
-@property(readonly, nonatomic) NSSortDescriptor *sortDescriptor;
-@property(readonly, nonatomic) NSPredicate *filterPredicate;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (void)didFinishLoadingTopicsViewModel:(id)arg1 withError:(id)arg2;
 - (void)followSectionViewModelDidUpdatePlaybackState:(id)arg1;
@@ -94,8 +86,10 @@
 - (void)updateFollowSectionLayoutWithPlayerIfNeeded:(id)arg1;
 - (void)updateTrailerSectionLayoutWithPlayer:(id)arg1;
 - (_Bool)isPlayingTrailer:(id)arg1;
-- (_Bool)isPlayingAnyEpisode;
 - (void)unsubscribe;
+- (void)didFinishLoadingPodcast;
+- (_Bool)shouldUpdateToPodcast:(id)arg1 wasPlaying:(_Bool)arg2;
+- (void)updateWithPodcast:(id)arg1;
 - (void)updateSectionViewModelsWithPlayer:(id)arg1;
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;
@@ -110,9 +104,11 @@
 - (void)viewWillDisplayCellAtIndexPath:(id)arg1;
 - (void)configureTrailerEpisodeForPodcast:(id)arg1;
 - (void)updateLoadStateAndNotifyDelegate;
+- (CDUnknownBlockType)provideParsePodcastResponseCallbackWithData:(id)arg1 wasPlaying:(_Bool)arg2;
+- (CDUnknownBlockType)providePodcastRequestSuccessCallbackWithPlayState:(_Bool)arg1;
+- (CDUnknownBlockType)providePodcastRequestErrorCallback;
 - (void)loadAndSubscribe;
 - (id)sectionViewModelForIndexPath:(id)arg1;
-- (id)titleForSection:(long long)arg1;
 - (long long)numberOfSections;
 - (long long)numberOfRowsInSection:(long long)arg1;
 - (void)obtainDelegation;

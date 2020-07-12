@@ -9,9 +9,9 @@
 @class NSString, NSURL;
 
 @protocol SPTInstrumentationPageViewProtocol <NSObject>
-@property(readonly, nonatomic) NSString *navigationRootIdentifier;
-@property(readonly, nonatomic) NSString *pageName;
-@property(readonly, nonatomic) NSURL *pageURI;
-@property(readonly, nonatomic) NSString *pageIdentifier;
+@property(nonatomic, readonly) NSString *navigationRootIdentifier;
+@property(nonatomic, readonly) NSString *pageName;
+@property(nonatomic, readonly) NSURL *pageURI;
+@property(nonatomic, readonly) NSString *pageIdentifier;
 @end
 

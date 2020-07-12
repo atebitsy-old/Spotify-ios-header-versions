@@ -9,8 +9,8 @@
 #import "SPSessionObserver-Protocol.h"
 #import "SPTIncognitoModeHandlerObserver-Protocol.h"
 
-@class NSString, SPCore, SPSession, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTEntityService, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOauthClient, SPTOfflineManager, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTRouterFactory, SPTSocialManager, SPTUserFactory;
-@protocol SPTAsyncScheduler, SPTResolver;
+@class NSString, SPCore, SPSession, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTEntityService, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOfflineManager, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTRouterFactory, SPTSocialManager, SPTUserFactory;
+@protocol SPTAsyncScheduler, SPTOauthClient, SPTResolver;
 
 @interface SPTCoreClientFeatures : NSObject <SPTIncognitoModeHandlerObserver, SPSessionObserver>
 {
@@ -20,7 +20,7 @@
     SPTLogger *_logger;
     SPTEntityService *_entityService;
     SPTHermesController *_hermes;
-    SPTOauthClient *_oauthClient;
+    id <SPTOauthClient> _oauthClient;
     SPTAudioVolumeControl *_audioVolumeControl;
     SPTPlayerMftCanPlayChecker *_mftCanPlayChecker;
     SPTPlayerProxyContextPlayer *_proxyContextPlayer;
@@ -46,7 +46,7 @@
 @property(retain, nonatomic) SPTPlayerProxyContextPlayer *proxyContextPlayer; // @synthesize proxyContextPlayer=_proxyContextPlayer;
 @property(retain, nonatomic) SPTPlayerMftCanPlayChecker *mftCanPlayChecker; // @synthesize mftCanPlayChecker=_mftCanPlayChecker;
 @property(retain, nonatomic) SPTAudioVolumeControl *audioVolumeControl; // @synthesize audioVolumeControl=_audioVolumeControl;
-@property(retain, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
+@property(retain, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(retain, nonatomic) SPTHermesController *hermes; // @synthesize hermes=_hermes;
 @property(retain, nonatomic) SPTEntityService *entityService; // @synthesize entityService=_entityService;
 @property(retain, nonatomic) SPTLogger *logger; // @synthesize logger=_logger;

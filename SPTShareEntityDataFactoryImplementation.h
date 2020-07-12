@@ -16,7 +16,8 @@
 
 - (id)provideLinkEntityDataWithItemURI:(id)arg1 itemType:(long long)arg2 contextSourceURI:(id)arg3 logContext:(id)arg4 extraQueryItems:(id)arg5;
 - (id)provideMessageEntityDataWithItemURI:(id)arg1 itemType:(long long)arg2 contextSourceURI:(id)arg3 text:(id)arg4 logContext:(id)arg5 extraQueryItems:(id)arg6;
-- (id)provideStoryEntityDataWithItemURI:(id)arg1 itemType:(long long)arg2 contextSourceURI:(id)arg3 backgroundImage:(id)arg4 logContext:(id)arg5 extraQueryItems:(id)arg6;
+- (id)provideImageStoryEntityDataWithItemURI:(id)arg1 itemType:(long long)arg2 contextSourceURI:(id)arg3 backgroundImage:(id)arg4 logContext:(id)arg5 extraQueryItems:(id)arg6;
+- (id)provideVideoStoryEntityDataWithItemURI:(id)arg1 itemType:(long long)arg2 contextSourceURI:(id)arg3 logContext:(id)arg4 extraQueryItems:(id)arg5;
 - (id)provideEntityDataWithItemURI:(id)arg1 contextSourceURI:(id)arg2 text:(id)arg3 itemName:(id)arg4 creatorName:(id)arg5 sourceName:(id)arg6 imageURL:(id)arg7 itemType:(long long)arg8 clipboardLinkTitle:(id)arg9 logContext:(id)arg10;
 
 // Remaining properties

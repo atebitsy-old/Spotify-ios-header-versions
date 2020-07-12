@@ -10,15 +10,17 @@
 
 @interface SPTAccessToken : NSObject
 {
-    struct AccessToken _accessToken;
+    NSString *_accessToken;
+    NSDate *_expiresAt;
+    NSString *_tokenType;
 }
 
-- (id).cxx_construct;
+@property(readonly, copy, nonatomic) NSString *tokenType; // @synthesize tokenType=_tokenType;
+@property(readonly, copy, nonatomic) NSDate *expiresAt; // @synthesize expiresAt=_expiresAt;
+@property(readonly, copy, nonatomic) NSString *accessToken; // @synthesize accessToken=_accessToken;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSString *tokenType;
-@property(readonly, nonatomic) NSDate *expiresAt;
-@property(readonly, nonatomic) NSString *accessToken;
 - (id)initWithAccessToken:(struct AccessToken *)arg1;
+- (id)initWithAccessToken:(id)arg1 expiresAt:(id)arg2 tokenType:(id)arg3;
 
 @end
 

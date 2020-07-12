@@ -22,7 +22,7 @@
 #import "UISearchBarDelegate-Protocol.h"
 
 @class GLUEButton, NSArray, NSLayoutConstraint, NSNotificationCenter, NSString, NSURL, SPTEntityTableHeaderView, SPTInfoView, SPTPSXLogger, SPTProgressView, SPTSearchBar, SPTTableAdapter, SPTTableView, UIButton, UIView;
-@protocol GLUETheme, SPContextMenuActionsFactory, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuOptionsFactory, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTExplicitContentAccessManager, SPTFormatListPlatformManager, SPTImageLoader, SPTNetworkConnectivityController, SPTPSXMetadataView, SPTPSXTestManager, SPTPSXViewModel, SPTPageContainer, SPTProductState, SPTShelves, _TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_;
+@protocol GLUETheme, SPContextMenuActionsFactory, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuOptionsFactory, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTEncoreTrackRowFactory, SPTExplicitContentAccessManager, SPTFormatListPlatformManager, SPTImageLoader, SPTNetworkConnectivityController, SPTPSXMetadataView, SPTPSXTestManager, SPTPSXViewModel, SPTPageContainer, SPTProductState, SPTShelves;
 
 @interface SPTPSXViewController : UIViewController <SPContentInsetViewController, UIScrollViewDelegate, UISearchBarDelegate, SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTPSXViewModelDelegate, SPTPSXViewModelBanningDelegate, SPTTableViewContinuousSwipeDelegate, SPTContextMenuViewControllerDelegate, SPTTableAdapterDataSource, SPTTableAdapterAppearanceDelegate, SPTPSXTrackRowDelegate, SPTExplicitContentEnabledStateObserver, SPTPageController>
 {
@@ -54,7 +54,7 @@
     GLUEButton *_followButton;
     NSArray *_filterAndSortLayoutConstraints;
     NSLayoutConstraint *_filterAndSortContainerWidthContraint;
-    id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> _encoreComponentFactory;
+    id <SPTEncoreTrackRowFactory> _encoreComponentFactory;
     SPTTableAdapter *_tableAdapter;
     id <SPTPSXTestManager> _psxTestManager;
     SPTInfoView *_infoView;
@@ -63,7 +63,7 @@
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) id <SPTPSXTestManager> psxTestManager; // @synthesize psxTestManager=_psxTestManager;
 @property(retain, nonatomic) SPTTableAdapter *tableAdapter; // @synthesize tableAdapter=_tableAdapter;
-@property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature24SPTEncoreTrackRowFactory_> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
+@property(retain, nonatomic) id <SPTEncoreTrackRowFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 @property(retain, nonatomic) NSLayoutConstraint *filterAndSortContainerWidthContraint; // @synthesize filterAndSortContainerWidthContraint=_filterAndSortContainerWidthContraint;
 @property(copy, nonatomic) NSArray *filterAndSortLayoutConstraints; // @synthesize filterAndSortLayoutConstraints=_filterAndSortLayoutConstraints;
 @property(retain, nonatomic) GLUEButton *followButton; // @synthesize followButton=_followButton;

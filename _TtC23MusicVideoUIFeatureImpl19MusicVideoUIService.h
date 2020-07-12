@@ -10,6 +10,8 @@
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: glueService
+    // Error parsing type: , name: playerService
+    // Error parsing type: , name: playlistService
 }
 
 + (id)serviceIdentifier;

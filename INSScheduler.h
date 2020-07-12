@@ -11,7 +11,7 @@
 #import "INSTimerObserver-Protocol.h"
 
 @class NSMutableSet, NSOperationQueue, NSString;
-@protocol INSEventEnvelopeFactoryProtocol, INSEventValidatorProtocol, INSLogger, INSSchedulerDataDelegate, INSSchedulerDataSource, INSSchedulerDelegate, INSTransport;
+@protocol INSEventEnvelopeFactoryProtocol, INSEventValidatorProtocol, INSLogger, INSMessageOwnerProvider, INSSchedulerDataDelegate, INSSchedulerDataSource, INSSchedulerDelegate, INSTransport;
 
 @interface INSScheduler : NSObject <INSMessageOperationDelegate, INSSchedulerProtocol, INSTimerObserver>
 {
@@ -24,8 +24,10 @@
     id <INSSchedulerDataSource> _dataSource;
     id <INSSchedulerDataDelegate> _dataDelegate;
     id <INSEventValidatorProtocol> _validator;
+    id <INSMessageOwnerProvider> _ownerProvider;
 }
 
+@property(retain, nonatomic) id <INSMessageOwnerProvider> ownerProvider; // @synthesize ownerProvider=_ownerProvider;
 @property(retain, nonatomic) id <INSEventValidatorProtocol> validator; // @synthesize validator=_validator;
 @property(nonatomic) __weak id <INSSchedulerDataDelegate> dataDelegate; // @synthesize dataDelegate=_dataDelegate;
 @property(nonatomic) __weak id <INSSchedulerDataSource> dataSource; // @synthesize dataSource=_dataSource;
@@ -51,13 +53,16 @@
 - (void)deleteInvalidEnvelopes:(id)arg1;
 - (id)queuedEnvelopes;
 - (id)invalidEnvelopes:(id)arg1;
+- (void)scheduleMessagesWithOwner:(id)arg1;
+- (void)logOwnerErrorWithOperation:(id)arg1 underlyingError:(id)arg2;
 - (void)scheduleAllMessages;
 - (id)wrappedNodesFromEnvelopes:(id)arg1 authenticated:(_Bool)arg2;
-- (void)scheduleEnvelope:(id)arg1 authenticated:(_Bool)arg2;
+- (void)performPostScheduleActionsForEnvelope:(id)arg1 authenticated:(_Bool)arg2;
 - (void)timerDidFire:(id)arg1;
 - (void)timer:(id)arg1 didScheduleWithInterval:(double)arg2 attempt:(unsigned long long)arg3;
-- (_Bool)scheduleMessage:(id)arg1 authenticated:(_Bool)arg2 error:(id *)arg3;
-- (id)initWithTransport:(id)arg1 dataSource:(id)arg2 dataDelegate:(id)arg3 logger:(id)arg4 eventEnvelopeFactory:(id)arg5 delegate:(id)arg6 validator:(id)arg7;
+- (_Bool)scheduleNonAuthenticatedMessage:(id)arg1 error:(id *)arg2;
+- (_Bool)scheduleAuthenticatedMessage:(id)arg1 error:(id *)arg2;
+- (id)initWithTransport:(id)arg1 ownerProvider:(id)arg2 dataSource:(id)arg3 dataDelegate:(id)arg4 logger:(id)arg5 eventEnvelopeFactory:(id)arg6 delegate:(id)arg7 validator:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

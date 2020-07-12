@@ -17,22 +17,25 @@
     // Error parsing type: , name: onModeChange
     // Error parsing type: , name: onVoiceSearchButtonPress
     // Error parsing type: , name: onScannablesButtonPress
+    // Error parsing type: , name: requestIDProvider
     // Error parsing type: , name: onReturnKeyPress
     // Error parsing type: , name: mode
     // Error parsing type: , name: findHeaderContainerDelegate
     // Error parsing type: , name: theme
     // Error parsing type: , name: findHeaderContainer
     // Error parsing type: , name: searchControlsContainer
-    // Error parsing type: , name: searchControls
+    // Error parsing type: , name: $__lazy_storage_$_searchControls
     // Error parsing type: , name: hasVoiceSearch
     // Error parsing type: , name: offlineModeState
     // Error parsing type: , name: podcastFeatureEnabled
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: $__lazy_storage_$_cachedMetrics
     // Error parsing type: , name: $__lazy_storage_$_findHeader
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)updateSearchControlsStyle;
+- (void)updateHeaderStyles;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)searchControlsDidPressCancelButton:(id)arg1;
 - (void)searchControlsDidPressReturnKey:(id)arg1;
@@ -42,6 +45,7 @@
 @property(nonatomic, readonly) double collapsedHeaderHeight;
 @property(nonatomic, readonly) UIViewController *viewController;
 @property(nonatomic) __weak id <SPTFindUIHeaderContainerDelegate> findHeaderContainerDelegate; // @synthesize findHeaderContainerDelegate;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;

@@ -13,6 +13,7 @@
 
 @interface SPTPodcastMixCallToActionCustomize : NSObject <SPTFreeTierPlaylistAdditionalCallToAction>
 {
+    NSString *_accessibilityLabel;
     id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate;
     id <SPTLinkDispatcher> _linkDispatcher;
     NSURL *_targetURI;
@@ -21,8 +22,8 @@
 @property(retain, nonatomic) NSURL *targetURI; // @synthesize targetURI=_targetURI;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate; // @synthesize delegate;
+@property(copy, nonatomic) NSString *accessibilityLabel; // @synthesize accessibilityLabel=_accessibilityLabel;
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *accessibilityLabel;
 @property(readonly, nonatomic) _Bool selected;
 @property(readonly, nonatomic) unsigned long long icon;
 - (void)performAction:(id)arg1;

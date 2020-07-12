@@ -7,30 +7,28 @@
 #import <objc/NSObject.h>
 
 @class HUBComponentDefaults, SPTHomeContentOperationFactory;
-@protocol HUBContentOperation><SPTHomeCacheRenderDelegate, HUBContentOperation><SPTHomeViewControllerDelegate, SPTHomeTestManager, SPTHomeUIService, SPTHugsFactory;
+@protocol HUBContentOperation><SPTHomeCacheRenderDelegate, HUBContentOperation><SPTHomeViewControllerDelegate, SPTHugsFactory;
 
 @interface SPTHomeViewModelLoaderFactory : NSObject
 {
+    _Bool _isSeedASessionEnabled;
     SPTHomeContentOperationFactory *_contentOperationFactory;
-    id <SPTHomeTestManager> _testManager;
     id <SPTHugsFactory> _hugsFactory;
-    id <SPTHomeUIService> _homeUIService;
     HUBComponentDefaults *_componentDefaults;
     id <HUBContentOperation><SPTHomeCacheRenderDelegate> _errorHandlerContentOperation;
     id <HUBContentOperation><SPTHomeViewControllerDelegate> _tooltipContentOperation;
 }
 
+@property(readonly, nonatomic) _Bool isSeedASessionEnabled; // @synthesize isSeedASessionEnabled=_isSeedASessionEnabled;
 @property(retain, nonatomic) id <HUBContentOperation><SPTHomeViewControllerDelegate> tooltipContentOperation; // @synthesize tooltipContentOperation=_tooltipContentOperation;
 @property(retain, nonatomic) id <HUBContentOperation><SPTHomeCacheRenderDelegate> errorHandlerContentOperation; // @synthesize errorHandlerContentOperation=_errorHandlerContentOperation;
 @property(retain, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
-@property(readonly, nonatomic) __weak id <SPTHomeUIService> homeUIService; // @synthesize homeUIService=_homeUIService;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
-@property(readonly, nonatomic) __weak id <SPTHomeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTHomeContentOperationFactory *contentOperationFactory; // @synthesize contentOperationFactory=_contentOperationFactory;
 - (void).cxx_destruct;
 - (id)createRemoteViewModelLoaderForContentURL:(id)arg1 sourceIdentifier:(id)arg2 overrides:(id)arg3;
 - (id)createCachedViewModelLoaderWithOverrides:(id)arg1;
-- (id)initWithContentOperationFactory:(id)arg1 testManager:(id)arg2 hugsFactory:(id)arg3 homeUIService:(id)arg4;
+- (id)initWithContentOperationFactory:(id)arg1 hugsFactory:(id)arg2 seedASessionEnabled:(_Bool)arg3;
 
 @end
 

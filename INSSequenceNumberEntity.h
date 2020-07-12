@@ -8,7 +8,7 @@
 
 #import "INSSequenceNumberEntityProtocol-Protocol.h"
 
-@class NSString;
+@class NSData, NSString;
 
 @interface INSSequenceNumberEntity : NSManagedObject <INSSequenceNumberEntityProtocol>
 {
@@ -20,6 +20,7 @@
 @property(readonly, copy) NSString *description;
 @property(copy, nonatomic) NSString *eventName; // @dynamic eventName;
 @property(readonly) unsigned long long hash;
+@property(copy, nonatomic) NSData *sequenceId; // @dynamic sequenceId;
 @property(nonatomic) long long sequenceNumberNext; // @dynamic sequenceNumberNext;
 @property(readonly) Class superclass;
 @end

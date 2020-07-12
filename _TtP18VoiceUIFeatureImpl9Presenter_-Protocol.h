@@ -5,9 +5,10 @@
 //
 
 @class UIViewController;
+@protocol UIAdaptivePresentationControllerDelegate;
 
 @protocol _TtP18VoiceUIFeatureImpl9Presenter_
 - (void)dismissWithAnimated:(_Bool)arg1 completion:(void (^)(void))arg2;
-- (void)presentWithViewController:(UIViewController *)arg1 animated:(_Bool)arg2;
+- (void)presentWithViewController:(UIViewController<UIAdaptivePresentationControllerDelegate> *)arg1 animated:(_Bool)arg2;
 @end
 

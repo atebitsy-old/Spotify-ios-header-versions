@@ -38,7 +38,7 @@
 - (void).cxx_destruct;
 - (void)viewModelUpdatedPlaybackState:(id)arg1;
 - (void)viewModel:(id)arg1 didUpdateWithError:(id)arg2;
-- (void)dowloadButtonTapped:(id)arg1;
+- (void)downloadButtonTapped:(id)arg1;
 - (void)shareButtonTapped:(id)arg1;
 - (void)playButtonTapped:(id)arg1;
 - (void)setUpActions;

@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_;
+
 @protocol _TtP19YourLibraryXFeature22SPTYourLibraryXService_ <SPTService>
+- (id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_>)provideTestManager;
 @end
 

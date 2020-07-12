@@ -6,36 +6,33 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTLoginAppleAuthorizationControllerDelegate-Protocol.h"
-#import "SPTLoginFacebookAuthenticationControllerDelegate-Protocol.h"
+#import "SPTLoginThirdPartyLoginControllerDelegate-Protocol.h"
 
-@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginFacebookAuthenticationController, SPTLoginIntentLedStartViewLogger;
-@protocol SPTDialogController, SPTLoginThirdPartyLoginHandlerDelegate;
+@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginIntentLedStartViewLogger;
+@protocol SPTDialogController, SPTLoginThirdPartyLoginController, SPTLoginThirdPartyLoginHandlerDelegate;
 
-@interface SPTLoginIntentLedStartScreenViewModel : NSObject <SPTLoginFacebookAuthenticationControllerDelegate, SPTLoginAppleAuthorizationControllerDelegate>
+@interface SPTLoginIntentLedStartScreenViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate>
 {
     id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
     SPTLoginIntentLedStartViewLogger *_logger;
     SPTDynamicSignupFlowController *_flowController;
     unsigned long long _intent;
-    SPTLoginFacebookAuthenticationController *_facebookAuthController;
+    id <SPTLoginThirdPartyLoginController> _facebookAuthController;
     SPTLoginAppleAuthorizationController *_appleAuthController;
     id <SPTDialogController> _dialogController;
 }
 
 @property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
 @property(readonly, nonatomic) SPTLoginAppleAuthorizationController *appleAuthController; // @synthesize appleAuthController=_appleAuthController;
-@property(readonly, nonatomic) SPTLoginFacebookAuthenticationController *facebookAuthController; // @synthesize facebookAuthController=_facebookAuthController;
+@property(readonly, nonatomic) id <SPTLoginThirdPartyLoginController> facebookAuthController; // @synthesize facebookAuthController=_facebookAuthController;
 @property(nonatomic) unsigned long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTLoginIntentLedStartViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)appleAuthorizationControllerWillLogIn;
-- (void)appleAuthorizationControllerDidCompleteLoginWithError:(id)arg1;
-- (id)appleAuthorizationControllerContext;
-- (void)controller:(id)arg1 didCompleteFacebookLoginWithError:(id)arg2;
-- (void)controllerDidStartFacebookLogin:(id)arg1;
+- (id)contextViewForThirdPartyLoginController:(id)arg1;
+- (void)controllerDidFinishThirdPartyLogin:(id)arg1;
+- (void)controllerDidStartThirdPartyLogin:(id)arg1;
 - (_Bool)isAppleSignInEnabled;
 - (void)userClickedApple;
 - (void)userClickedFacebook;

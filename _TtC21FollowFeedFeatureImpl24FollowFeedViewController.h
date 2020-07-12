@@ -17,6 +17,7 @@
     // Error parsing type: , name: errorView
     // Error parsing type: , name: hubPage
     // Error parsing type: , name: progressView
+    // Error parsing type: , name: remoteConfigManager
     // Error parsing type: , name: pageConnectable
     // Error parsing type: , name: logger
 }

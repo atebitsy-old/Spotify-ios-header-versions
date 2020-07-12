@@ -11,6 +11,7 @@
 
 @protocol SPTPodcastContextMenuProvider <NSObject>
 - (id <SPTShowContextMenuControllerOptions>)provideShowContextMenuControllerOptions;
+- (void)dismissContextMenuAnimated:(_Bool)arg1;
 - (void)presentContextMenuForEpisodeURI:(NSURL *)arg1 withMetadata:(NSDictionary *)arg2 sourceContextURI:(NSURL *)arg3 inViewController:(UIViewController *)arg4 senderView:(UIView *)arg5 options:(id <SPTShowContextMenuControllerOptions>)arg6;
 @end
 

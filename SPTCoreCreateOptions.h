@@ -11,7 +11,6 @@
 
 @interface SPTCoreCreateOptions : NSObject
 {
-    _Bool _enableMftRulesForPlayer;
     _Bool _isTablet;
     _Bool _perfTracingEnabled;
     unsigned int _clientRevision;
@@ -42,7 +41,6 @@
 @property(retain, nonatomic) id <SPTAudioDriverController> audioDriverController; // @synthesize audioDriverController=_audioDriverController;
 @property(copy, nonatomic) CDUnknownBlockType acceptLanguageCallback; // @synthesize acceptLanguageCallback=_acceptLanguageCallback;
 @property(nonatomic) _Bool isTablet; // @synthesize isTablet=_isTablet;
-@property(nonatomic) _Bool enableMftRulesForPlayer; // @synthesize enableMftRulesForPlayer=_enableMftRulesForPlayer;
 @property(copy, nonatomic) CDUnknownBlockType assertionHandlerCallback; // @synthesize assertionHandlerCallback=_assertionHandlerCallback;
 @property(nonatomic) long long streamingRulesSupported; // @synthesize streamingRulesSupported=_streamingRulesSupported;
 @property(copy, nonatomic) NSString *httpUserAgent; // @synthesize httpUserAgent=_httpUserAgent;

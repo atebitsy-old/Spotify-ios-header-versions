@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP20EncoreConsumerMobile10EncoreView_-Protocol.h"
-
 @class UIView;
 
-@interface _TtCO20EncoreConsumerMobile5Views6Button : NSObject <_TtP20EncoreConsumerMobile10EncoreView_>
+@interface _TtCO20EncoreConsumerMobile5Views6Button : NSObject
 {
     // Error parsing type: , name: uiView
     // Error parsing type: , name: uiButton

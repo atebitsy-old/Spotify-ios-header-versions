@@ -28,7 +28,7 @@
     // Error parsing type: , name: browseViewController
     // Error parsing type: , name: contentViewController
     // Error parsing type: , name: containerViewController
-    // Error parsing type: , name: logger
+    // Error parsing type: , name: viewLoadingLogger
 }
 
 - (void).cxx_destruct;

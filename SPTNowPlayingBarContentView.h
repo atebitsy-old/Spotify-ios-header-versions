@@ -7,11 +7,12 @@
 #import <UIKit/UIView.h>
 
 #import "SPTNowPlayingTestManagerObserver-Protocol.h"
+#import "_TtP18ConnectUIV2Feature44SPTConnectUINowPlayingBarIntegrationObserver_-Protocol.h"
 
 @class NSArray, NSLayoutConstraint, NSString, SPTNowPlayingFadeMaskView, SPTStepScrollView, SPTTheme, UIButton;
-@protocol SPTGaiaDevicesAvailableView, SPTNowPlayingBarPlayButton, SPTNowPlayingBarVoiceCompanionDelegate, SPTNowPlayingTestManager;
+@protocol SPTNowPlayingBarPlayButton, SPTNowPlayingBarVoiceCompanionDelegate, SPTNowPlayingTestManager, _TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_;
 
-@interface SPTNowPlayingBarContentView : UIView <SPTNowPlayingTestManagerObserver>
+@interface SPTNowPlayingBarContentView : UIView <SPTNowPlayingTestManagerObserver, _TtP18ConnectUIV2Feature44SPTConnectUINowPlayingBarIntegrationObserver_>
 {
     _Bool _enabled;
     SPTStepScrollView *_stepScrollView;
@@ -20,8 +21,9 @@
     SPTNowPlayingFadeMaskView *_fadeContentView;
     SPTTheme *_theme;
     NSArray *_layoutConstraints;
-    UIView<SPTGaiaDevicesAvailableView> *_devicesAvailableView;
+    UIView *_devicesAvailableView;
     UIView *_connectButtonView;
+    id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> _connectIntegration;
     id <SPTNowPlayingTestManager> _testManager;
     UIView *_voiceCompanionView;
     UIView *_lyricsView;
@@ -34,8 +36,9 @@
 @property(retain, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(retain, nonatomic) UIView *voiceCompanionView; // @synthesize voiceCompanionView=_voiceCompanionView;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> connectIntegration; // @synthesize connectIntegration=_connectIntegration;
 @property(retain, nonatomic) UIView *connectButtonView; // @synthesize connectButtonView=_connectButtonView;
-@property(retain, nonatomic) UIView<SPTGaiaDevicesAvailableView> *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
+@property(retain, nonatomic) UIView *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTNowPlayingFadeMaskView *fadeContentView; // @synthesize fadeContentView=_fadeContentView;
@@ -44,6 +47,7 @@
 @property(readonly, nonatomic) UIButton<SPTNowPlayingBarPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(readonly, nonatomic) SPTStepScrollView *stepScrollView; // @synthesize stepScrollView=_stepScrollView;
 - (void).cxx_destruct;
+- (void)shouldUpdateConnectStateViewVisibilityWithVisible:(_Bool)arg1;
 - (void)setLyricsLabelVisible:(_Bool)arg1;
 - (void)createLyricsViewIfNeeded;
 - (void)voiceCompanionViewTapped:(id)arg1;
@@ -60,7 +64,8 @@
 - (id)devicesAvailableViewConstraints;
 - (void)updateConstraints;
 - (void)setupSubviews;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 connectDevicesView:(id)arg3 connectButtonView:(id)arg4 testManager:(id)arg5;
+- (void)dealloc;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 connectIntegration:(id)arg3 testManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

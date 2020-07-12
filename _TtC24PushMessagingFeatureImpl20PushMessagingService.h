@@ -8,9 +8,9 @@
 
 @interface _TtC24PushMessagingFeatureImpl20PushMessagingService : NSObject
 {
-    // Error parsing type: , name: pushMessagingInternal
     // Error parsing type: , name: userTrackingService
     // Error parsing type: , name: coreService
+    // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: dispatchService
     // Error parsing type: , name: containerUIService
@@ -18,9 +18,11 @@
     // Error parsing type: , name: webViewFeature
     // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: remoteConfigService
+    // Error parsing type: , name: pushMessagingInternal
     // Error parsing type: , name: pushRegistrar
     // Error parsing type: , name: pushMessagingPermissionManager
     // Error parsing type: , name: pushMessagingFlagsManager
+    // Error parsing type: , name: pushLogger
     // Error parsing type: , name: masterFeatureFlagSignal
     // Error parsing type: , name: manualFeatureFlagSignal
     // Error parsing type: , name: manualPermissionMode

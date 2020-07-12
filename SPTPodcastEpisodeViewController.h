@@ -101,6 +101,7 @@
 - (void)determineIfContextContainsURI:(id)arg1 responseHandler:(CDUnknownBlockType)arg2;
 - (void)viewSafeAreaInsetsDidChange;
 - (void)sp_updateContentInsets;
+- (void)downloadButtonTapped:(id)arg1;
 - (void)playButtonTapped:(id)arg1;
 - (void)shareButtonTapped:(id)arg1;
 - (void)setupConstraints;

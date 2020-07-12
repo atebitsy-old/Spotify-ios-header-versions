@@ -9,6 +9,6 @@
 @class NSData, NSString;
 
 @protocol INSEventSequenceIDProviderProtocol <NSObject>
-- (NSData *)eventSequenceIDWithInstallID:(NSString *)arg1;
+- (NSData *)eventSequenceIDWithInstallID:(NSString *)arg1 owner:(NSString *)arg2;
 @end
 

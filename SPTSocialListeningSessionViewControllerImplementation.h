@@ -44,7 +44,7 @@
 @property(readonly, nonatomic, getter=isLoading) _Bool loading;
 - (void)facepileTapped:(id)arg1;
 - (void)shareButtonTapped:(id)arg1;
-- (void)navigateToParticipantListView:(id)arg1;
+- (void)navigateToParticipantListView;
 - (void)showScannablesScanner:(id)arg1;
 - (void)leaveSessionButtonTapped:(id)arg1;
 - (void)tryAgainButtonTapped:(id)arg1;

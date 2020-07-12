@@ -12,12 +12,11 @@
 #import "SPTGaiaCastCoreInteractorDelegate-Protocol.h"
 #import "SPTGaiaConnectManagerObserver-Protocol.h"
 
-@class GCKCastContext, GCKDevice, NSArray, NSDate, NSString, SPTCastCustomChannel, SPTCastReceiverAppIDManager, SPTGaiaCastCoreInteractor, SPTGaiaCastErrorLogger, SPTObserverManager;
+@class GCKCastContext, GCKDevice, NSArray, NSString, SPTCastCustomChannel, SPTCastReceiverAppIDManager, SPTGaiaCastCoreInteractor, SPTGaiaCastErrorLogger, SPTObserverManager;
 @protocol SPTGaiaConnectManager, SPTProductState;
 
 @interface SPTCastManager : NSObject <GCKDiscoveryManagerListener, GCKSessionManagerListener, SPTCastCustomChannelDelegate, SPTGaiaConnectManagerObserver, SPTGaiaCastCoreInteractorDelegate>
 {
-    float _volume;
     id <SPTProductState> _productState;
     GCKCastContext *_castContext;
     SPTCastReceiverAppIDManager *_receiverAppManager;
@@ -27,12 +26,10 @@
     GCKDevice *_deviceToConnectAfterDisconnection;
     SPTCastCustomChannel *_castCustomChannel;
     SPTObserverManager *_observers;
-    NSDate *_lastVolumeSetDate;
     NSArray *_devices;
 }
 
 @property(copy, nonatomic) NSArray *devices; // @synthesize devices=_devices;
-@property(retain, nonatomic) NSDate *lastVolumeSetDate; // @synthesize lastVolumeSetDate=_lastVolumeSetDate;
 @property(retain, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTCastCustomChannel *castCustomChannel; // @synthesize castCustomChannel=_castCustomChannel;
 @property(retain, nonatomic) GCKDevice *deviceToConnectAfterDisconnection; // @synthesize deviceToConnectAfterDisconnection=_deviceToConnectAfterDisconnection;
@@ -42,7 +39,6 @@
 @property(retain, nonatomic) SPTCastReceiverAppIDManager *receiverAppManager; // @synthesize receiverAppManager=_receiverAppManager;
 @property(retain, nonatomic) GCKCastContext *castContext; // @synthesize castContext=_castContext;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-@property(nonatomic) float volume; // @synthesize volume=_volume;
 - (void).cxx_destruct;
 - (void)refreshLocalDevices;
 - (void)disconnectCastFromDevice;
@@ -76,10 +72,6 @@
 - (void)sessionManager:(id)arg1 didStartCastSession:(id)arg2;
 - (void)payloadReceived:(id)arg1;
 - (void)didUpdateDeviceList;
-- (void)sessionManager:(id)arg1 castSession:(id)arg2 didReceiveDeviceVolume:(float)arg3 muted:(_Bool)arg4;
-- (void)notifyVolumeChanged;
-- (void)volumeDown;
-- (void)volumeUp;
 - (id)castModelName:(id)arg1;
 - (long long)deviceTypeForGaiaDevice:(id)arg1;
 - (id)activeDevice;

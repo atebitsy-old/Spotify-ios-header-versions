@@ -75,6 +75,7 @@
 + (id)spt_collectionAddURI;
 + (id)spt_collectionItemStateURI;
 + (id)spt_pingURI;
++ (id)spt_watchAppDebugApplicationLogTopic;
 + (id)spt_sharedKeychainTopic;
 + (id)spt_sessionStateTopic;
 + (id)spt_recentlyPlayedItemsTopic;

@@ -9,21 +9,19 @@
 #import "SPTFeedbackManager-Protocol.h"
 
 @class NSString;
-@protocol SPTFeedbackTestManager, SPTResolver;
+@protocol SPTResolver;
 
 @interface SPTFeedbackManagerImplementation : NSObject <SPTFeedbackManager>
 {
     id <SPTResolver> _resolver;
-    id <SPTFeedbackTestManager> _testManager;
 }
 
-@property(readonly, nonatomic) id <SPTFeedbackTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 - (void).cxx_destruct;
 - (void)removeFeedbackForEntityURI:(id)arg1 onContextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8 success:(CDUnknownBlockType)arg9 failure:(CDUnknownBlockType)arg10;
 - (void)dislikeEntityURI:(id)arg1 onContextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8 success:(CDUnknownBlockType)arg9 failure:(CDUnknownBlockType)arg10;
 - (void)likeEntityURI:(id)arg1 onContextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8 success:(CDUnknownBlockType)arg9 failure:(CDUnknownBlockType)arg10;
-- (id)initWithResolver:(id)arg1 testManager:(id)arg2;
+- (id)initWithResolver:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

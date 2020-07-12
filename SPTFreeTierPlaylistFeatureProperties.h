@@ -20,6 +20,10 @@
     _Bool _useTrackCloudCellProvider;
     _Bool _useTracksSection;
     _Bool _useSwiftSponsoredSection;
+    _Bool _measureScrollPerfomance;
+    _Bool _respectShowsCollectionFlagInPlaylistForIncludingEpisodes;
+    _Bool _enableWeightedShufflePlayback;
+    _Bool _enableTrackContextSharing;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
     NSString *_followShowConfirmationOverrideString;
@@ -30,6 +34,10 @@
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
+@property(readonly, nonatomic) _Bool enableTrackContextSharing; // @synthesize enableTrackContextSharing=_enableTrackContextSharing;
+@property(readonly, nonatomic) _Bool enableWeightedShufflePlayback; // @synthesize enableWeightedShufflePlayback=_enableWeightedShufflePlayback;
+@property(readonly, nonatomic) _Bool respectShowsCollectionFlagInPlaylistForIncludingEpisodes; // @synthesize respectShowsCollectionFlagInPlaylistForIncludingEpisodes=_respectShowsCollectionFlagInPlaylistForIncludingEpisodes;
+@property(readonly, nonatomic) _Bool measureScrollPerfomance; // @synthesize measureScrollPerfomance=_measureScrollPerfomance;
 @property(readonly, nonatomic) _Bool useSwiftSponsoredSection; // @synthesize useSwiftSponsoredSection=_useSwiftSponsoredSection;
 @property(readonly, nonatomic) _Bool useTracksSection; // @synthesize useTracksSection=_useTracksSection;
 @property(readonly, nonatomic) _Bool useTrackCloudCellProvider; // @synthesize useTrackCloudCellProvider=_useTrackCloudCellProvider;

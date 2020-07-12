@@ -10,8 +10,11 @@
 {
 }
 
+- (id)slateDecorationColor;
+- (id)slateBackgroundColor;
 - (id)listenTogetherBottomBannerStyle;
 - (id)bottomBannerButtonStyleWithBackgroundColor;
+- (id)disclaimerViewStyle;
 - (id)educationSlateViewStyle;
 - (id)popupViewStyle;
 - (id)sessionViewStyle;

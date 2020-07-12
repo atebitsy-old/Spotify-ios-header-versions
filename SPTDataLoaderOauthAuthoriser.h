@@ -10,27 +10,27 @@
 #import "SPTDataLoaderAuthoriser-Protocol.h"
 #import "SPTOauthTaskDelegate-Protocol.h"
 
-@class NSMutableArray, NSMutableDictionary, NSString, SPTOauthClient, SPTOauthTask, SPTStartupTracer;
-@protocol SPTDataLoaderAuthoriserDelegate, SPTNetworkConnectivityController;
+@class NSMutableArray, NSMutableDictionary, NSString, SPTStartupTracer;
+@protocol SPTDataLoaderAuthoriserDelegate, SPTNetworkConnectivityController, SPTOauthClient, SPTOauthTask;
 
 @interface SPTDataLoaderOauthAuthoriser : NSObject <SPTOauthTaskDelegate, SPTDataLoaderAuthoriser, SPTDataLoaderAuthorisationHostRegistration>
 {
     NSString *_identifier;
     id <SPTDataLoaderAuthoriserDelegate> _delegate;
-    SPTOauthClient *_oauthClient;
+    id <SPTOauthClient> _oauthClient;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTStartupTracer *_startupTracer;
     NSMutableArray *_pendingRequests;
     NSMutableDictionary *_authorisationHosts;
-    SPTOauthTask *_task;
+    id <SPTOauthTask> _task;
 }
 
-@property(retain, nonatomic) SPTOauthTask *task; // @synthesize task=_task;
+@property(retain, nonatomic) id <SPTOauthTask> task; // @synthesize task=_task;
 @property(retain, nonatomic) NSMutableDictionary *authorisationHosts; // @synthesize authorisationHosts=_authorisationHosts;
 @property(retain, nonatomic) NSMutableArray *pendingRequests; // @synthesize pendingRequests=_pendingRequests;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
-@property(retain, nonatomic) SPTOauthClient *oauthClient; // @synthesize oauthClient=_oauthClient;
+@property(retain, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
 @property(nonatomic) __weak id <SPTDataLoaderAuthoriserDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 - (void).cxx_destruct;

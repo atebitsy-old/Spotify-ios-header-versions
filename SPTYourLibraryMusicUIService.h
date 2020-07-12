@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18FilterChipsFeature21SPTFilterChipsService_, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEncoreIntegrationService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18FilterChipsFeature21SPTFilterChipsService_, _TtP18QuickScrollFeature21SPTQuickScrollService_;
 
 @interface SPTYourLibraryMusicUIService : SPTUIPageService
 {
@@ -32,7 +32,7 @@
     id <SPTShelfService> _shelfService;
     id <SPTImageLoaderRequestFactory> _imageLoaderRequestFactory;
     id <SPTShareFeature> _shareService;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreIntegrationService;
+    id <SPTEncoreIntegrationService> _encoreIntegrationService;
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <_TtP18QuickScrollFeature21SPTQuickScrollService_> _quickScrollService;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
@@ -44,7 +44,7 @@
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <_TtP18QuickScrollFeature21SPTQuickScrollService_> quickScrollService; // @synthesize quickScrollService=_quickScrollService;
 @property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
-@property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(nonatomic) __weak id <SPTShareFeature> shareService; // @synthesize shareService=_shareService;
 @property(nonatomic) __weak id <SPTImageLoaderRequestFactory> imageLoaderRequestFactory; // @synthesize imageLoaderRequestFactory=_imageLoaderRequestFactory;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
@@ -74,7 +74,7 @@
 - (id)provideCollectionTheme;
 - (id)provideViewLoggerForURI:(id)arg1;
 - (id)providePageLoaderSongsViewControllerForURI:(id)arg1 context:(id)arg2 testManager:(id)arg3;
-- (id)provideSongsViewControllerForURI:(id)arg1 context:(id)arg2 songsEntityModel:(id)arg3 viewLogger:(id)arg4 testManager:(id)arg5;
+- (id)provideSongsViewControllerForURI:(id)arg1 context:(id)arg2 songsEntityModel:(id)arg3 testManager:(id)arg4;
 - (id)provideSongsViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)providePlaylistsViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;

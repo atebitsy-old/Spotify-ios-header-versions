@@ -6,12 +6,11 @@
 
 #import "NSObject-Protocol.h"
 #import "SPTThirdPartyAppTracker-Protocol.h"
-#import "SPTThirdPartyNotificationsTracker-Protocol.h"
 #import "SPTThirdPartyUserTracker-Protocol.h"
 
 @protocol SPTThirdPartyUserTracker;
 
-@protocol SPTThirdPartyTrackerBroadcaster <NSObject, SPTThirdPartyUserTracker, SPTThirdPartyAppTracker, SPTThirdPartyNotificationsTracker>
+@protocol SPTThirdPartyTrackerBroadcaster <NSObject, SPTThirdPartyUserTracker, SPTThirdPartyAppTracker>
 - (void)removeTracker:(id <SPTThirdPartyUserTracker>)arg1;
 - (void)addTracker:(id <SPTThirdPartyUserTracker>)arg1;
 @end

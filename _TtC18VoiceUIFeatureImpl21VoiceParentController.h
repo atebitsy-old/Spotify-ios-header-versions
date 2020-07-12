@@ -15,7 +15,6 @@
     // Error parsing type: , name: onboardingState
     // Error parsing type: , name: testManager
     // Error parsing type: , name: linkDispatcher
-    // Error parsing type: , name: voiceViewController
 }
 
 @end

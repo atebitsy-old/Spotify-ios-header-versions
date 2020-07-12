@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierArtistHubManager;
-@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_;
+@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEncoreIntegrationService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierArtistService : SPTUIPageService
 {
@@ -32,7 +32,7 @@
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTModerationService> _moderationFeature;
     id <SPTPodcastEpisodeFeaturedContentService> _podcastFeaturedService;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> _encoreService;
+    id <SPTEncoreIntegrationService> _encoreService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTFreeTierArtistHubManager *_hubManager;
 }
@@ -40,7 +40,7 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTFreeTierArtistHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <_TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_> encoreService; // @synthesize encoreService=_encoreService;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreService; // @synthesize encoreService=_encoreService;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastFeaturedService; // @synthesize podcastFeaturedService=_podcastFeaturedService;
 @property(nonatomic) __weak id <SPTModerationService> moderationFeature; // @synthesize moderationFeature=_moderationFeature;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;

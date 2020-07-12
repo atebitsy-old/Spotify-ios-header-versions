@@ -6,20 +6,20 @@
 
 #import "SPAction.h"
 
-@protocol SPTNowPlayingManager;
+@protocol SPTNowPlayingAuxiliaryActionsHandler;
 
 @interface SPTNowPlayingViewQueueAction : SPAction
 {
-    id <SPTNowPlayingManager> _nowPlayingManager;
+    id <SPTNowPlayingAuxiliaryActionsHandler> _actionsHandler;
 }
 
-@property(readonly, nonatomic) __weak id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
+@property(readonly, nonatomic) __weak id <SPTNowPlayingAuxiliaryActionsHandler> actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 - (void).cxx_destruct;
 - (id)execute:(id)arg1;
 - (id)logEventName;
 - (long long)icon;
 - (id)title;
-- (id)initWithNowPlayingManager:(id)arg1 logContext:(id)arg2;
+- (id)initWithAuxiliaryActionsHandler:(id)arg1 logContext:(id)arg2;
 
 @end
 

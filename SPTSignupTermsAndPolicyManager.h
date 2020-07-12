@@ -15,14 +15,14 @@
     id <SPTSignupTermsAndPolicyManagerDelegate> _delegate;
     SPTSignupMarketRestrictionsModel *_marketingRestrictions;
     unsigned long long _acceptedPolicy;
-    SPTSignupTermsAndPolicyDialogCopyProvider *_textCopyProvider;
+    SPTSignupTermsAndPolicyDialogCopyProvider *_dialogCopyProvider;
     id <SPTAlertInterface> _alertInterface;
     SPTSignupTermsAndPolicyDialogLogger *_logger;
 }
 
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyDialogLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-@property(readonly, nonatomic) SPTSignupTermsAndPolicyDialogCopyProvider *textCopyProvider; // @synthesize textCopyProvider=_textCopyProvider;
+@property(readonly, nonatomic) SPTSignupTermsAndPolicyDialogCopyProvider *dialogCopyProvider; // @synthesize dialogCopyProvider=_dialogCopyProvider;
 @property(nonatomic) unsigned long long acceptedPolicy; // @synthesize acceptedPolicy=_acceptedPolicy;
 @property(readonly, nonatomic) SPTSignupMarketRestrictionsModel *marketingRestrictions; // @synthesize marketingRestrictions=_marketingRestrictions;
 @property(nonatomic, getter=isLicenseAcceptanceInProgress) _Bool licenseAcceptanceInProgress; // @synthesize licenseAcceptanceInProgress=_licenseAcceptanceInProgress;
@@ -40,7 +40,7 @@
 - (void)showTermsAndPolicyDialog;
 - (_Bool)isTermsAndPolicyDialogAccepted;
 - (_Bool)isTermsAndPolicyDialogRequired;
-- (id)initWithMarketRestrictions:(id)arg1 textCopyProvider:(id)arg2 alertInterface:(id)arg3 logger:(id)arg4;
+- (id)initWithMarketRestrictions:(id)arg1 dialogCopyProvider:(id)arg2 alertInterface:(id)arg3 logger:(id)arg4;
 
 @end
 

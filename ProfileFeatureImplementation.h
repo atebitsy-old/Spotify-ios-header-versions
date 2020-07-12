@@ -63,9 +63,6 @@
 - (id)provideViewAllVCWithURI:(id)arg1 context:(id)arg2;
 - (id)provideLeafProfileViewController:(id)arg1 context:(id)arg2;
 - (id)provideRootProfileViewController:(id)arg1 context:(id)arg2;
-- (void)unregisterPages;
-- (void)registerPages;
-- (void)configurePageRegistryState;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

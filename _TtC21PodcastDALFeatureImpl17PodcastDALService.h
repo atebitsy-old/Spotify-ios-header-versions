@@ -14,6 +14,8 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (id)provideDataLoaderWithResolver:(id)arg1;
+- (id)provideUpdateEpisodeUnplayedRequestDataWithURIStrings:(id)arg1 markAsUnplayed:(_Bool)arg2;
 - (id)providePodcastRequestWithData:(id)arg1;
 - (id)providePodcastEpisodeFactory;
 - (id)providePodcastFactory;

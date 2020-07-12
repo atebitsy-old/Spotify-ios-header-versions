@@ -35,8 +35,10 @@
     unsigned long long _offlineState;
     unsigned long long _playStateRestriction;
     NSString *_previewId;
+    NSString *_groupLabel;
 }
 
+@property(copy, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
 @property(copy, nonatomic) NSString *previewId; // @synthesize previewId=_previewId;
 @property(nonatomic) _Bool isPremiumOnly; // @synthesize isPremiumOnly=_isPremiumOnly;
 @property(nonatomic) _Bool isPlayStatePlayable; // @synthesize isPlayStatePlayable=_isPlayStatePlayable;

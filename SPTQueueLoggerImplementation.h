@@ -22,6 +22,12 @@
 - (void).cxx_destruct;
 - (void)logInteractionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 targetURI:(id)arg5 type:(id)arg6 intent:(id)arg7;
 - (id)featureId;
+- (void)logSleepTimerButtonTapped;
+- (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
+- (void)logHeartButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
+- (void)logSkip15SecondsBackwardTapped;
+- (void)logSkip15SecondsForwardTapped;
+- (void)logRepeatButtonTappedWithMode:(unsigned long long)arg1;
 - (void)logTapUpNextTrack:(id)arg1 atIndex:(long long)arg2;
 - (void)logTapToSelectUpNextTrack:(id)arg1 atIndex:(long long)arg2;
 - (void)logTapToDeselectUpNextTrack:(id)arg1 atIndex:(long long)arg2;

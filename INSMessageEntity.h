@@ -25,6 +25,7 @@
 @property(readonly) unsigned long long hash;
 @property(copy, nonatomic) NSString *messageId; // @dynamic messageId;
 @property(copy, nonatomic) NSString *name; // @dynamic name;
+@property(copy, nonatomic) NSString *owner; // @dynamic owner;
 @property(nonatomic) int retryCount; // @dynamic retryCount;
 @property(copy, nonatomic) NSDate *retryDate; // @dynamic retryDate;
 @property(retain, nonatomic) NSData *sequenceId; // @dynamic sequenceId;

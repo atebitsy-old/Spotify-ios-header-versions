@@ -6,37 +6,24 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTGaiaConnectObserver-Protocol.h"
+#import "_TtP18ConnectUIV2Feature44SPTConnectUINowPlayingBarIntegrationObserver_-Protocol.h"
 
-@class NSString;
-@protocol SPTGaiaConnectAPI, SPTNowPlayingBarPageModelDelegate, _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_;
+@protocol SPTNowPlayingBarPageModelDelegate, _TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_;
 
-@interface SPTNowPlayingBarPageModel : NSObject <SPTGaiaConnectObserver>
+@interface SPTNowPlayingBarPageModel : NSObject <_TtP18ConnectUIV2Feature44SPTConnectUINowPlayingBarIntegrationObserver_>
 {
     _Bool _remoteDevicesVisible;
-    _Bool _disableRemoteDevicesView;
     id <SPTNowPlayingBarPageModelDelegate> _delegate;
-    id <SPTGaiaConnectAPI> _connectManager;
-    id <_TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_> _devicePresenter;
+    id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> _connectIntegration;
 }
 
-@property(retain, nonatomic) id <_TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_> devicePresenter; // @synthesize devicePresenter=_devicePresenter;
-@property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
-@property(nonatomic) _Bool disableRemoteDevicesView; // @synthesize disableRemoteDevicesView=_disableRemoteDevicesView;
+@property(retain, nonatomic) id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> connectIntegration; // @synthesize connectIntegration=_connectIntegration;
 @property(nonatomic, getter=isRemoteDevicesVisible) _Bool remoteDevicesVisible; // @synthesize remoteDevicesVisible=_remoteDevicesVisible;
 @property(nonatomic) __weak id <SPTNowPlayingBarPageModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)dealloc;
-- (void)connectActiveConnectionTypeDidChange:(long long)arg1;
-- (void)connectAvailableDevicesDidChange:(id)arg1;
-- (void)calculateRemoteDevicesVisible;
-- (id)initWithConnectManager:(id)arg1 devicePresenter:(id)arg2;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (void)shouldUpdateConnectStateViewVisibilityWithVisible:(_Bool)arg1;
+- (id)initWithConnectIntegration:(id)arg1;
 
 @end
 

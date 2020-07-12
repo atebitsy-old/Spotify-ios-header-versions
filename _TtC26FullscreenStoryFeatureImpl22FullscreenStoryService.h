@@ -17,7 +17,7 @@
     // Error parsing type: , name: playerService
     // Error parsing type: , name: collectionPlatformService
     // Error parsing type: , name: contextMenuService
-    // Error parsing type: , name: gaiaService
+    // Error parsing type: , name: volumeService
     // Error parsing type: , name: dispatchService
     // Error parsing type: , name: coreService
     // Error parsing type: , name: eventSenderService

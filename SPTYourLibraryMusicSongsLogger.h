@@ -26,10 +26,14 @@
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+- (void)logUBIImpression:(id)arg1;
 - (void)logUBIInteractionEvent:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
 - (id)sectionIdForSection:(unsigned long long)arg1;
+- (void)logQuickScrollDragEnded;
+- (void)logQuickScrollDragStarted;
+- (void)logQuickScrollIsVisible;
 - (void)logClearFilterWithIdentifier:(id)arg1 index:(unsigned long long)arg2;
 - (void)logFilterIdentifier:(id)arg1 sectionId:(id)arg2 filterAdded:(_Bool)arg3 index:(unsigned long long)arg4;
 - (void)logSortingIdentifier:(id)arg1 index:(unsigned long long)arg2;

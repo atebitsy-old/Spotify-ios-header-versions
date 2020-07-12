@@ -12,6 +12,7 @@
 @protocol SPTYourLibraryMusicPlaylistsViewModel <SPTYourLibraryMusicFilterableViewModel>
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
+@property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 @property(nonatomic) __weak id <SPTYourLibraryMusicPlaylistsViewModelDelegate> delegate;

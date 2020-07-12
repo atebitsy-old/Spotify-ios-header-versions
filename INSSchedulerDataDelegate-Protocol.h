@@ -6,11 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class EventEnvelope, NSArray;
+@class EventEnvelope, NSArray, NSString;
 
 @protocol INSSchedulerDataDelegate <NSObject>
 - (void)didFailEnvelopes:(NSArray *)arg1;
 - (void)didDeliverEnvelopes:(NSArray *)arg1;
-- (void)scheduleEnvelope:(EventEnvelope *)arg1 authenticated:(_Bool)arg2;
+- (void)scheduleNonAuthenticatedEnvelope:(EventEnvelope *)arg1;
+- (void)scheduleAuthenticatedEnvelope:(EventEnvelope *)arg1 withOwner:(NSString *)arg2;
 @end
 

@@ -12,6 +12,7 @@
     // Error parsing type: , name: devicePickerPresenter
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageFactory
+    // Error parsing type: , name: testManager
 }
 
 - (id)provideConnectButtonView;

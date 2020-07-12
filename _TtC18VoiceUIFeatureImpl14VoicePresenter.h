@@ -8,7 +8,7 @@
 
 @interface _TtC18VoiceUIFeatureImpl14VoicePresenter : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: parentViewController
+    // Error parsing type: , name: $__lazy_storage_$_parentViewController
 }
 
 @end

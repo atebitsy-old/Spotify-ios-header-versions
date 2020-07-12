@@ -7,6 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTMetaViewControllerPresentable <NSObject>
-@property(readonly, nonatomic) long long presentationStyle;
+@property(nonatomic, readonly) long long presentationStyle;
 @end
 

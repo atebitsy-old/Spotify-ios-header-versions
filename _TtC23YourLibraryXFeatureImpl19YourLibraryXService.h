@@ -10,13 +10,20 @@
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: dispatchService
+    // Error parsing type: , name: yourLibraryXPageToken
+    // Error parsing type: , name: testManager
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (id)provideYourLibraryViewController;
+- (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+- (id)provideTestManager;
 
 @end
 

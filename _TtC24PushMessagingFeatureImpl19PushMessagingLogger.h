@@ -14,9 +14,21 @@
     // Error parsing type: , name: pushMessagingLoggerMessageIDKey
     // Error parsing type: , name: pushMessagingLoggerURLKey
     // Error parsing type: , name: pushMessagingLoggerTimestampKey
+    // Error parsing type: , name: pushSettingNotificationCenter
+    // Error parsing type: , name: pushSettingLockScreen
+    // Error parsing type: , name: pushSettingCarPlay
+    // Error parsing type: , name: pushSettingAlert
+    // Error parsing type: , name: pushSettingBadge
+    // Error parsing type: , name: pushSettingSound
+    // Error parsing type: , name: pushAuthStatusAuthorized
+    // Error parsing type: , name: pushAuthStatusProvisional
+    // Error parsing type: , name: pushAuthStatusDenied
+    // Error parsing type: , name: pushAuthStatusNotDetermined
+    // Error parsing type: , name: pushAuthStatusUnknown
     // Error parsing type: , name: pushMessagingSharedGroupKey
     // Error parsing type: , name: pushMessagingExtensionDictionaryKey
     // Error parsing type: , name: logCenter
+    // Error parsing type: , name: eventSender
 }
 
 @end

@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTPodcastEpisode-Protocol.h"
+
 @class NSDate, NSString, NSURL;
 
-@interface _TtC21PodcastDALFeatureImpl28PodcastEpisodeImplementation : NSObject
+@interface _TtC21PodcastDALFeatureImpl28PodcastEpisodeImplementation : NSObject <SPTPodcastEpisode>
 {
     // Error parsing type: , name: title
     // Error parsing type: , name: longDescription

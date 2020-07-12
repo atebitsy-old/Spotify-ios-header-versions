@@ -8,13 +8,14 @@
 
 #import "SPTLoginThirdPartyLoginHandlerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
+#import "SPTLoginViewWithActionButtonsDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSString, NSURL, SPTLoginTheme, SPTLoginWelcomeView, SPTLoginWelcomeViewModel, SPTProgressView;
+@class NSString, NSURL, SPTLoginActionButtonManager, SPTLoginTheme, SPTLoginWelcomeView, SPTLoginWelcomeViewModel, SPTProgressView;
 @protocol GLUEImageLoader, SPTPageContainer;
 
-@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTLoginViewWithActionButtonsDelegate, SPTPageController, SPTLoginViewControllerProtocol>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
@@ -22,8 +23,10 @@
     SPTLoginTheme *_theme;
     SPTProgressView *_progressIndicator;
     id <GLUEImageLoader> _imageLoader;
+    SPTLoginActionButtonManager *_actionButtonManager;
 }
 
+@property(readonly, nonatomic) SPTLoginActionButtonManager *actionButtonManager; // @synthesize actionButtonManager=_actionButtonManager;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTProgressView *progressIndicator; // @synthesize progressIndicator=_progressIndicator;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
@@ -31,6 +34,8 @@
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;
+- (void)viewRequiresStyleApplyingToButtons;
+- (void)userDidTapButtonWithTag:(unsigned long long)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)updateImageryVisibilitySetting;
 - (void)hideProgressIndicator;
@@ -41,17 +46,11 @@
 - (void)handlerDidFinishThirdPartyLogin:(id)arg1;
 - (void)handlerDidStartThirdPartyLogin:(id)arg1;
 - (id)contextViewForThirdPartyLoginHandler:(id)arg1;
-- (void)appleButtonTapped:(id)arg1;
-- (void)signupButtonTapped:(id)arg1;
-- (void)continueWithEmailButtonTapped:(id)arg1;
-- (void)loginButtonTapped:(id)arg1;
-- (void)facebookButtonTapped:(id)arg1;
-- (void)configureButtonLayout;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 imageLoader:(id)arg3;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 imageLoader:(id)arg3 actionButtonManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

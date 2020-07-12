@@ -6,29 +6,35 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobilePodcastepisodeEntityEventFactory;
 
 @interface SPTPodcastEpisodeLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBILogger> _ubiLogger;
+    id <SPTUBIMobilePodcastepisodeEntityEventFactory> _eventFactory;
 }
 
+@property(retain, nonatomic) id <SPTUBIMobilePodcastepisodeEntityEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
-- (void)logInteractionForPageURI:(id)arg1 targetURI:(id)arg2 sectionID:(id)arg3 userIntent:(id)arg4;
-- (void)logDescriptionInteractionForSpotifyLink:(id)arg1 episodeURL:(id)arg2;
-- (void)logDescriptionInteractionForEmail:(id)arg1 episodeURL:(id)arg2;
-- (void)logDescriptionInteractionForWebLink:(id)arg1 episodeURL:(id)arg2;
-- (void)logDescriptionInteractionForTimestamp:(double)arg1 episodeURL:(id)arg2;
-- (void)logOpenContextMenuForEpisodeURL:(id)arg1;
-- (void)logDescriptionExpandingInteractionForEpisodeURL:(id)arg1;
-- (void)logHitSeeAllForPodcastURL:(id)arg1 episodeURL:(id)arg2;
-- (void)logHitCoverArtForPodcastURL:(id)arg1 episodeURL:(id)arg2;
-- (void)logHitPodcastNameLabelForPodcastURL:(id)arg1 episodeURL:(id)arg2;
-- (void)logHitShareButtonForEpisodeURL:(id)arg1;
-- (void)logHitPauseButtonForEpisodeURL:(id)arg1;
-- (void)logHitPlayButtonForEpisodeURL:(id)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (void)logUIInteractionForPageURI:(id)arg1 targetURI:(id)arg2 sectionID:(id)arg3 userIntent:(id)arg4;
+- (void)logRemoveDownloadInteractionForEpisodeURI:(id)arg1;
+- (void)logDownloadInteractionForEpisodeURI:(id)arg1;
+- (void)logDescriptionInteractionForSpotifyLink:(id)arg1 episodeURI:(id)arg2;
+- (void)logDescriptionInteractionForEmail:(id)arg1 episodeURI:(id)arg2;
+- (void)logDescriptionInteractionForWebLink:(id)arg1 episodeURI:(id)arg2;
+- (void)logDescriptionInteractionForTimestamp:(double)arg1 episodeURI:(id)arg2;
+- (void)logOpenContextMenuForEpisodeURI:(id)arg1;
+- (void)logDescriptionExpandingInteractionForEpisodeURI:(id)arg1;
+- (void)logHitSeeAllForPodcastURI:(id)arg1 episodeURI:(id)arg2;
+- (void)logHitCoverArtForPodcastURI:(id)arg1 episodeURI:(id)arg2;
+- (void)logHitPodcastNameLabelForPodcastURI:(id)arg1 episodeURI:(id)arg2;
+- (void)logHitShareButtonForEpisodeURI:(id)arg1;
+- (void)logHitPauseButtonForEpisodeURI:(id)arg1;
+- (void)logHitPlayButtonForEpisodeURI:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2 eventFactory:(id)arg3;
 
 @end
 

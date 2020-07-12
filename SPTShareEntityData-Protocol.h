@@ -11,6 +11,7 @@
 @protocol SPTShareEntityData <NSObject>
 @property(nonatomic, readonly) NSArray *extraQueryItems;
 @property(nonatomic, readonly) NSString *freeText;
+@property(nonatomic, readonly) unsigned long long capability;
 @property(nonatomic, readonly) UIImage *fullscreenBackgroundImage;
 @property(nonatomic, readonly) NSString *logContext;
 @property(nonatomic, readonly) NSString *clipboardLinkTitle;

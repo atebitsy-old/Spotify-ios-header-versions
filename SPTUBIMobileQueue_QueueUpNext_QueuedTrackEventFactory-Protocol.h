@@ -11,8 +11,8 @@
 
 @protocol SPTUBIMobileQueue_QueueUpNext_QueuedTrackEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)dragSort;
-- (id <SPTUBIInteractionEvent>)hitSelectItemWithItemToBeSelected:(NSURL *)arg1;
-- (id <SPTUBIInteractionEvent>)hitDeselectItemWithItemToBeDeselected:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)hitDeselectEntityInListWithEntityToBeDeselected:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)hitSelectEntityInListWithEntityToBeSelected:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

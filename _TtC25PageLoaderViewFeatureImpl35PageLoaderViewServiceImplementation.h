@@ -21,8 +21,8 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)provideHubLoadableWithViewModelProvider:(id)arg1;
-- (id)providePageLoaderViewWithPageIdentifier:(id)arg1 pageURI:(id)arg2 loadable:(id)arg3 viewLogger:(id)arg4 onLoaded:(CDUnknownBlockType)arg5;
-- (id)providePageLoaderViewBuilderWithPageIdentifier:(id)arg1 pageURI:(id)arg2 pageLoader:(id)arg3 viewLogger:(id)arg4 onLoaded:(CDUnknownBlockType)arg5;
+- (id)providePageLoaderViewWithPageIdentifier:(id)arg1 pageURI:(id)arg2 loadable:(id)arg3 onLoaded:(CDUnknownBlockType)arg4;
+- (id)providePageLoaderViewBuilderWithPageIdentifier:(id)arg1 pageURI:(id)arg2 pageLoader:(id)arg3 onLoaded:(CDUnknownBlockType)arg4;
 - (id)providePageLoaderWithLoadable:(id)arg1;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

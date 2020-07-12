@@ -13,17 +13,18 @@
 
 @interface INSPersistentStoreDataSource : NSObject <INSSchedulerDataSource>
 {
-    _Bool _authenticated;
+    _Bool _createdForAuthenticatedEntities;
     id <INSPersistentStore> _store;
     id <INSLogger> _logger;
 }
 
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
-@property(nonatomic) _Bool authenticated; // @synthesize authenticated=_authenticated;
+@property(nonatomic) _Bool createdForAuthenticatedEntities; // @synthesize createdForAuthenticatedEntities=_createdForAuthenticatedEntities;
 @property(retain, nonatomic) id <INSPersistentStore> store; // @synthesize store=_store;
 - (void).cxx_destruct;
-- (void)eventEnvelopesWithAuthenticatedStatus:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)eventEnvelopesWithCompletion:(CDUnknownBlockType)arg1;
+- (void)logErrors:(id)arg1;
+- (void)processEntities:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
+- (void)eventEnvelopesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithPersistentStore:(id)arg1 authenticated:(_Bool)arg2 logger:(id)arg3;
 
 // Remaining properties

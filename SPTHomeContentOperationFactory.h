@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTDataLoaderFactory, SPTHomeContentCache;
-@protocol SPTFeatureSettingsItemFactory, SPTFreeTierPersistentCounter, SPTFreeTierTasteOnboardingCurationProvider, SPTHomeTestManager, SPTLocalSettings, SPTNetworkConnectivityController, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTSnackbarService, SPTUBIHubsUtilities;
+@protocol SPTFeatureSettingsItemFactory, SPTFreeTierPersistentCounter, SPTFreeTierTasteOnboardingCurationProvider, SPTLocalSettings, SPTNetworkConnectivityController, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTUBIHubsUtilities;
 
 @interface SPTHomeContentOperationFactory : NSObject
 {
@@ -15,11 +15,9 @@
     id <SPTOnDemandService> _onDemandService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTOfflineService> _offlineService;
-    id <SPTSnackbarService> _snackbarService;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTHomeContentCache *_homeContentCache;
     SPTDataLoaderFactory *_dataLoaderFactory;
-    id <SPTHomeTestManager> _testManager;
     id <SPTPlayer> _player;
     id <SPTFreeTierTasteOnboardingCurationProvider> _tasteOnboardingCurationProvider;
     id <SPTLocalSettings> _localSettings;
@@ -35,11 +33,9 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingCurationProvider> tasteOnboardingCurationProvider; // @synthesize tasteOnboardingCurationProvider=_tasteOnboardingCurationProvider;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(readonly, nonatomic) id <SPTHomeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(readonly, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
-@property(readonly, nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(readonly, nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
@@ -48,14 +44,14 @@
 - (id)provideCacheViewModelContentOperation;
 - (id)provideDownloadsContentOperation;
 - (id)provideRemoteContentOperationWithSourceIdentifier:(id)arg1 contentURL:(id)arg2;
-- (id)provideErrorHandlingContentOperationSnackbarEnabled:(_Bool)arg1;
+- (id)provideErrorHandlingContentOperation;
 - (id)provideCachedContentOperation;
 - (id)provideRemoveComponentContentOperationWithOverrides:(id)arg1;
 - (id)provideOnDemandExtractorContentOperation;
 - (id)provideOnDemandDecoratorContentOperation;
 - (id)provideCardAccessibilityContentOperation;
 - (id)provideRecentlyPlayedContentOperation;
-- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 snackbarService:(id)arg4 networkConnectivityController:(id)arg5 homeContentCache:(id)arg6 dataLoaderFactory:(id)arg7 testManager:(id)arg8 player:(id)arg9 tasteOnboardingCurationProvider:(id)arg10 localSettings:(id)arg11 featureSettingsItemFactory:(id)arg12 ubiHubsInstrumentation:(id)arg13 persistentCounter:(id)arg14 listeningHistoryEnabled:(_Bool)arg15;
+- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 networkConnectivityController:(id)arg4 homeContentCache:(id)arg5 dataLoaderFactory:(id)arg6 player:(id)arg7 tasteOnboardingCurationProvider:(id)arg8 localSettings:(id)arg9 featureSettingsItemFactory:(id)arg10 ubiHubsInstrumentation:(id)arg11 persistentCounter:(id)arg12 listeningHistoryEnabled:(_Bool)arg13;
 
 @end
 

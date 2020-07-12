@@ -6,7 +6,7 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUELabel, NSString, SPTHomeUIPromoV2PlayButton, UIStackView;
+@class GLUELabel, NSString, SPTEncoreTypeStyle, SPTHomeUIPromoV2PlayButton, UIStackView;
 @protocol GLUETheme, SPTHomeUIPromoV2PlayableInfoViewDelegate;
 
 @interface SPTHomeUIPromoV2PlayableInfoView : UIView
@@ -16,12 +16,16 @@
     UIStackView *_stackView;
     GLUELabel *_primaryLabel;
     GLUELabel *_secondaryLabel;
+    SPTEncoreTypeStyle *_primaryLabelStyle;
+    SPTEncoreTypeStyle *_secondaryLabelStyle;
     id <GLUETheme> _theme;
     SPTHomeUIPromoV2PlayButton *_playButton;
 }
 
 @property(readonly, nonatomic) SPTHomeUIPromoV2PlayButton *playButton; // @synthesize playButton=_playButton;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) SPTEncoreTypeStyle *secondaryLabelStyle; // @synthesize secondaryLabelStyle=_secondaryLabelStyle;
+@property(readonly, nonatomic) SPTEncoreTypeStyle *primaryLabelStyle; // @synthesize primaryLabelStyle=_primaryLabelStyle;
 @property(readonly, nonatomic) GLUELabel *secondaryLabel; // @synthesize secondaryLabel=_secondaryLabel;
 @property(readonly, nonatomic) GLUELabel *primaryLabel; // @synthesize primaryLabel=_primaryLabel;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;

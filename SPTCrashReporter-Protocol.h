@@ -18,8 +18,7 @@
 - (void)userDidLogIn:(NSString *)arg1;
 - (void)setUserIdentifier:(NSString *)arg1;
 - (void)setValue:(NSString *)arg1 forStateKey:(NSString *)arg2;
-- (void)leaveBreadcrumb:(NSString *)arg1 withArguments:(char *)arg2;
-- (void)recordNonFatalError:(NSError *)arg1;
 - (void)leaveBreadcrumb:(NSString *)arg1;
+- (void)recordNonFatalError:(NSError *)arg1;
 @end
 

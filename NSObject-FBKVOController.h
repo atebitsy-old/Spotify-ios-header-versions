@@ -11,7 +11,6 @@
 @interface NSObject (FBKVOController)
 + (_Bool)gckb_swizzleClassSelector:(SEL)arg1 withSelector:(SEL)arg2;
 + (_Bool)gckb_swizzleSelector:(SEL)arg1 withSelector:(SEL)arg2;
-+ (id)codableProperties;
 + (id)spt_swizzledAlloc;
 + (id)spt_allocWithAnnotation:(id)arg1;
 + (id)spt_allocInContext:(id)arg1;
@@ -19,16 +18,6 @@
 @property(retain, nonatomic) FBKVOController *KVOControllerNonRetaining;
 @property(retain, nonatomic) FBKVOController *KVOController;
 - (_Bool)bothNullorEqual:(id)arg1 other:(id)arg2;
-- (_Bool)candidateForDeepHash:(id)arg1;
-- (unsigned long long)hashCollection:(id)arg1;
-- (void)copyPropertiesForClass:(Class)arg1 fromObject:(id)arg2 toObject:(id)arg3;
-- (void)wz_encodeWithCoder:(id)arg1;
-- (void)wz_decodeWithCoder:(id)arg1;
-- (id)codableProperties;
-- (id)wz_copyPropertiesForClass:(Class)arg1 withZone:(struct _NSZone *)arg2;
-- (unsigned long long)wz_hashClass:(Class)arg1;
-- (_Bool)wz_hasEqualPropertiesAs:(id)arg1 forClass:(Class)arg2;
-- (id)wz_briefAutoDescription;
 - (id)BMW_etchObject;
 - (id)spt_instrumentationName;
 @property(readonly, copy, getter=spt_allocationContextAnnotation) NSString *allocationContextAnnotation;

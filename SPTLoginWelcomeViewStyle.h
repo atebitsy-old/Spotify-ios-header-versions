@@ -7,19 +7,17 @@
 #import <objc/NSObject.h>
 
 #import "GLUEStyle-Protocol.h"
+#import "SPTLoginViewWithActionButtonsStyleable-Protocol.h"
 
-@class GLUEButtonStyle, GLUEGradientStyle, GLUELabelStyle, NSString, UIColor;
+@class GLUEGradientStyle, GLUELabelStyle, NSDictionary, NSString, UIColor;
 
-@interface SPTLoginWelcomeViewStyle : NSObject <GLUEStyle>
+@interface SPTLoginWelcomeViewStyle : NSObject <GLUEStyle, SPTLoginViewWithActionButtonsStyleable>
 {
     _Bool _spotifyLogoPlacementTightToTitle;
+    NSDictionary *buttonStyles;
     UIColor *_backgroundColor;
     GLUELabelStyle *_titleLabelStyle;
     GLUELabelStyle *_helpLabelStyle;
-    GLUEButtonStyle *_signupButtonStyle;
-    GLUEButtonStyle *_facebookButtonStyle;
-    GLUEButtonStyle *_loginButtonStyle;
-    GLUEButtonStyle *_thirdPartyButtonStyle;
     double _titleLabelHorizontalEdgeMargin;
     double _spotifyLogoTopEdgePreferedMargin;
     double _spotifyLogoTopEdgeMinimumMargin;
@@ -65,13 +63,10 @@
 @property(nonatomic) double spotifyLogoTopEdgeMinimumMargin; // @synthesize spotifyLogoTopEdgeMinimumMargin=_spotifyLogoTopEdgeMinimumMargin;
 @property(nonatomic) double spotifyLogoTopEdgePreferedMargin; // @synthesize spotifyLogoTopEdgePreferedMargin=_spotifyLogoTopEdgePreferedMargin;
 @property(nonatomic) double titleLabelHorizontalEdgeMargin; // @synthesize titleLabelHorizontalEdgeMargin=_titleLabelHorizontalEdgeMargin;
-@property(copy, nonatomic) GLUEButtonStyle *thirdPartyButtonStyle; // @synthesize thirdPartyButtonStyle=_thirdPartyButtonStyle;
-@property(copy, nonatomic) GLUEButtonStyle *loginButtonStyle; // @synthesize loginButtonStyle=_loginButtonStyle;
-@property(copy, nonatomic) GLUEButtonStyle *facebookButtonStyle; // @synthesize facebookButtonStyle=_facebookButtonStyle;
-@property(copy, nonatomic) GLUEButtonStyle *signupButtonStyle; // @synthesize signupButtonStyle=_signupButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *helpLabelStyle; // @synthesize helpLabelStyle=_helpLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
+@property(copy, nonatomic) NSDictionary *buttonStyles; // @synthesize buttonStyles;
 - (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

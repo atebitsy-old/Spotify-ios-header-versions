@@ -13,8 +13,10 @@
 @interface SPTShareHandlerCompletionDataModel : NSObject <SPTShareHandlerCompletionData>
 {
     NSString *_systemDestination;
+    NSString *_shareID;
 }
 
+@property(copy, nonatomic) NSString *shareID; // @synthesize shareID=_shareID;
 @property(copy, nonatomic) NSString *systemDestination; // @synthesize systemDestination=_systemDestination;
 - (void).cxx_destruct;
 

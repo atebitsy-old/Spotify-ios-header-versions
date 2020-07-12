@@ -37,6 +37,7 @@
 @property(retain, nonatomic) SPTEncoreLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) UILayoutGuide *titlePositionLayoutGuide; // @synthesize titlePositionLayoutGuide;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) double imageNoramalizedHeight;
 - (id)podcastPublisherStyle;
 - (id)podcastTitleStyle;
 - (void)updateAccessibilityLabels;

@@ -84,6 +84,7 @@
 @property(readonly, nonatomic) unsigned long long filteredContentState;
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
+@property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isSortingAndFilteringEnabled) _Bool sortingAndFilteringEnabled;
 - (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 playlistSynchroniser:(id)arg3 createPlaylistController:(id)arg4 logger:(id)arg5 testManager:(id)arg6 sortingFilteringPickerFactory:(id)arg7;

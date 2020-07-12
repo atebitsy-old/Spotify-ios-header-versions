@@ -12,6 +12,7 @@
 @protocol SPTYourLibraryMusicEntityViewModel <SPTYourLibraryMusicFilterableViewModel>
 @property(readonly, nonatomic, getter=isGroupLabelAvailable) _Bool groupLabelAvailable;
 @property(readonly, nonatomic) _Bool quickScrollUseDarkStyle;
+@property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic) unsigned long long trailingAccessoryType;
 @property(readonly, nonatomic, getter=isSnackBarsUsedForMessaging) _Bool snackBarsUsedForMessaging;

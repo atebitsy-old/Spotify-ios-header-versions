@@ -10,7 +10,7 @@
 #import "SPTShareFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition, SPTSharingSDK;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, SPTShareVideoDataProviderRegistry, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
 
 @interface SPTShareFeatureImplementation : NSObject <SPTShareContainerViewControllerProtocol, SPTShareFeature>
 {
@@ -39,9 +39,11 @@
     id <SPTShareEventSenderLogger> _shareEventSenderLogger;
     SPTShareFeatureProperties *_featureProperties;
     SPTSharingSDK *_sharingSDK;
+    id <SPTShareVideoDataProviderRegistry> _videoDataProviderRegistry;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) id <SPTShareVideoDataProviderRegistry> videoDataProviderRegistry; // @synthesize videoDataProviderRegistry=_videoDataProviderRegistry;
 @property(retain, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
@@ -83,6 +85,7 @@
 - (id)provideShareDestinationsForEntityURI:(id)arg1;
 - (void)performShareToDestination:(id)arg1 withShareEntityData:(id)arg2 contextViewController:(id)arg3 completion:(CDUnknownBlockType)arg4;
 - (id)provideShareEntityDataFactory;
+- (id)provideShareVideoDataProviderRegistry;
 - (void)registerWithContextMenu;
 - (void)registerDemoViewController;
 - (void)load;
