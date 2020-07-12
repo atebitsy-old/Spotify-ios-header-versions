@@ -11,8 +11,8 @@
 #import "SPTInstrumentationServiceMessagingHandler-Protocol.h"
 #import "SPTInstrumentationServicePrivate-Protocol.h"
 
-@class NSHashTable, NSString, SPTAllocationContext, SPTInstrumentationAppFocusStateMonitor, SPTInstrumentationInteractionItemIDGenerator, SPTInstrumentationNavigationObserver, SPTInstrumentationPageStreamFactory, SPTInstrumentationPageStreamObserver, SPTInstrumentationStackedPageStream, SPTInstrumentationTransports;
-@protocol SPTAbbaFeatureFlags, SPTAbbaService, SPTContainerService, SPTDebugService, SPTEventSenderService, SPTInstrumentationInteractionMediator, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationServiceMessagingHandler, SPTLoginService, SPTNavigationFeature, SPTPlayerFeature;
+@class NSHashTable, NSString, SPTAllocationContext, SPTInstrumentationAppFocusStateMonitor, SPTInstrumentationFeatureProperties, SPTInstrumentationInteractionItemIDGenerator, SPTInstrumentationNavigationObserver, SPTInstrumentationPageStreamFactory, SPTInstrumentationPageStreamObserver, SPTInstrumentationStackedPageStream, SPTInstrumentationTransports;
+@protocol SPTAbbaFeatureFlags, SPTAbbaService, SPTContainerService, SPTDebugService, SPTEventSenderService, SPTInstrumentationInteractionMediator, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationServiceMessagingHandler, SPTLoginService, SPTNavigationFeature, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService;
 
 @interface SPTInstrumentationServiceImplementation : NSObject <SPTInstrumentationServiceMessagingHandler, SPTAbbaFeatureFlagsObserver, SPTInstrumentationInteractionMediatorProvider, SPTInstrumentationServicePrivate>
 {
@@ -36,10 +36,16 @@
     SPTInstrumentationNavigationObserver *_navigationObserver;
     SPTInstrumentationInteractionItemIDGenerator *_interactionItemIDGenerator;
     NSHashTable *_observers;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
+    SPTInstrumentationFeatureProperties *_properties;
 }
 
 + (id)serviceIdentifier;
 @property(nonatomic) _Bool debugToolEnabled; // @synthesize debugToolEnabled=_debugToolEnabled;
+@property(retain, nonatomic) SPTInstrumentationFeatureProperties *properties; // @synthesize properties=_properties;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTInstrumentationInteractionItemIDGenerator *interactionItemIDGenerator; // @synthesize interactionItemIDGenerator=_interactionItemIDGenerator;
 @property(retain, nonatomic) SPTInstrumentationNavigationObserver *navigationObserver; // @synthesize navigationObserver=_navigationObserver;
@@ -75,6 +81,7 @@
 - (void)configureNavigationObservers;
 - (void)configureAppFocusStateMonitorWithClock:(id)arg1;
 - (void)configureAbbaFeatureFlags;
+- (void)configureRemoteConfiguration;
 - (id)currentPageView;
 - (void)currentPageViewDidChange:(id)arg1 forPageStream:(id)arg2;
 - (void)observerCurrentPageStream;

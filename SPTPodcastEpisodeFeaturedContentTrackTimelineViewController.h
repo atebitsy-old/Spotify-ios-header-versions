@@ -41,8 +41,9 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-- (void)playerDidStopPlayingEntity:(id)arg1;
-- (void)playerDidUpdateWithEntityPlaying:(id)arg1;
+- (void)toggleEntitySelectionAtIndex:(int)arg1 shouldSelect:(_Bool)arg2;
+- (void)playerDidStopPlayingSegment:(id)arg1 atIndex:(int)arg2;
+- (void)playerDidChangeSegment:(id)arg1 atIndex:(int)arg2;
 - (void)sp_updateContentInsets;
 - (void)didTapContextMenuForSender:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

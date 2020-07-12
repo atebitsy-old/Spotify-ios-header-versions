@@ -6,11 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileQueue_EditQueueBar_AddTrackButtonEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)hitAddItemsToQueueWithNumberOfItemsToAddToQueue:(unsigned long long)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

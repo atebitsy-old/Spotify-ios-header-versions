@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDataLoaderFactory, SPTShareLogger, SPTSharingSDK;
+@class SPTDataLoaderFactory, SPTShareFeatureProperties, SPTShareLogger, SPTSharingSDK;
 @protocol SPTShareVideoDataProvider;
 
 @interface SPTShareHandlerFactory : NSObject
@@ -14,16 +14,18 @@
     SPTDataLoaderFactory *_dataLoaderFactory;
     SPTShareLogger *_shareLogger;
     SPTSharingSDK *_sharingSDK;
+    SPTShareFeatureProperties *_featureProperties;
     id <SPTShareVideoDataProvider> _videoDataLoader;
 }
 
 @property(readonly, nonatomic) id <SPTShareVideoDataProvider> videoDataLoader; // @synthesize videoDataLoader=_videoDataLoader;
+@property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 - (void).cxx_destruct;
 - (id)provideShareHandlerForShareDestination:(id)arg1;
-- (id)initWithDataLoaderFactory:(id)arg1 shareLogger:(id)arg2 sharingSDK:(id)arg3 videoDataLoader:(id)arg4;
+- (id)initWithDataLoaderFactory:(id)arg1 shareLogger:(id)arg2 sharingSDK:(id)arg3 videoDataLoader:(id)arg4 featureProperties:(id)arg5;
 
 @end
 

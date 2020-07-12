@@ -22,7 +22,7 @@
 - (id)recommendationHeaderFactory;
 - (id)recommendedPreviewItemFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)previewItemFactoryWithPosition:(long long)arg1 uri:(id)arg2;
-- (id)itemFactoryWithPosition:(long long)arg1 uri:(id)arg2;
+- (id)itemFactoryWithPosition:(long long)arg1 uri:(id)arg2 reason:(id)arg3;
 - (id)downloadToggleFactory;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;

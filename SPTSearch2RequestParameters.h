@@ -40,7 +40,6 @@
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
 - (id)drilldownPathComponent;
-- (id)experienceSpecificQueryParameters;
 - (id)experiencePathComponent;
 - (_Bool)isEqualToSearchRequestParameters:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;

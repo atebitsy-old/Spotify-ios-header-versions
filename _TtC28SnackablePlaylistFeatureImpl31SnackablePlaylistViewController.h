@@ -11,7 +11,6 @@
 @interface _TtC28SnackablePlaylistFeatureImpl31SnackablePlaylistViewController : UIViewController
 {
     // Error parsing type: , name: pageIdentifier
-    // Error parsing type: , name: pageURI
     // Error parsing type: , name: loopController
     // Error parsing type: , name: playlistView
     // Error parsing type: , name: dependencies
@@ -24,10 +23,12 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;
-@property(nonatomic, copy) NSURL *pageURI;
 - (id)spt_pageURI;
 @property(nonatomic, copy) NSString *pageIdentifier;
 - (id)spt_pageIdentifier;
+
+// Remaining properties
+@property(nonatomic, readonly) NSURL *pageURI;
 
 @end
 

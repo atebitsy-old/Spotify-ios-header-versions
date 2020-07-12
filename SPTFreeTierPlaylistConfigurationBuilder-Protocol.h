@@ -13,11 +13,12 @@
 @property(copy, nonatomic) GLUEEntityRowStyle *rowStyle;
 @property(nonatomic) _Bool useBarButtons;
 @property(nonatomic) _Bool showTrackArtwork;
+@property(nonatomic) _Bool useForceLinearPlay;
 @property(nonatomic) long long headerType;
 - (id <SPTFreeTierPlaylistConfiguration>)build;
+- (void)withPlayObserver:(id <SPTFreeTierPlaylistPlayObserver> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 - (void)withAdditionalCallToAction:(id <SPTFreeTierPlaylistAdditionalCallToAction> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 - (void)withContextMenuPresenter:(id <SPTFreeTierPlaylistContextMenuPresenter> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
-- (void)withPlayViewModel:(id <SPTFreeTierPlaylistPlayViewModel> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 - (void)withCellProvider:(id <SPTFreeTierPlaylistCellProvider> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 - (void)withHeaderProvider:(id <SPTFreeTierPlaylistHeaderProvider> (^)(id <SPTFreeTierPlaylistConfiguration>))arg1;
 @end

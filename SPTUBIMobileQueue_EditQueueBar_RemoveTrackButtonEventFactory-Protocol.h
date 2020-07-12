@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileQueue_EditQueueBar_RemoveTrackButtonEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitRemoveItemsFromQueueWithNumberOfItemsToRemoveFromQueue:(unsigned long long)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

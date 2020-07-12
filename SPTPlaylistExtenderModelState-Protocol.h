@@ -18,6 +18,6 @@
 @property(readonly, nonatomic) NSArray *playlistTracks;
 @property(readonly, copy, nonatomic) NSString *playlistName;
 @property(readonly, copy, nonatomic) NSURL *playlistURL;
-@property(readonly, nonatomic) unsigned long long preferedNumberOfTracks;
+@property(readonly, nonatomic) unsigned long long preferredNumberOfTracks;
 @end
 

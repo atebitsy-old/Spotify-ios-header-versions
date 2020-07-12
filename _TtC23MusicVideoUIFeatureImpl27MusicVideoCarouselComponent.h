@@ -12,6 +12,7 @@
 {
     // Error parsing type: , name: layoutTraits
     // Error parsing type: , name: style
+    // Error parsing type: , name: videoPlayerManager
 }
 
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;

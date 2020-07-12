@@ -16,8 +16,10 @@
     _Bool _snackbarForPremiumEnabled;
     _Bool _snackbarWithAcmCopyEnabled;
     _Bool _snackbarWithAcmCopyForArtistsEnabled;
+    _Bool _showLikeActionInNpvEnabled;
 }
 
+@property(readonly, nonatomic) _Bool showLikeActionInNpvEnabled; // @synthesize showLikeActionInNpvEnabled=_showLikeActionInNpvEnabled;
 @property(readonly, nonatomic) _Bool snackbarWithAcmCopyForArtistsEnabled; // @synthesize snackbarWithAcmCopyForArtistsEnabled=_snackbarWithAcmCopyForArtistsEnabled;
 @property(readonly, nonatomic) _Bool snackbarWithAcmCopyEnabled; // @synthesize snackbarWithAcmCopyEnabled=_snackbarWithAcmCopyEnabled;
 @property(readonly, nonatomic) _Bool snackbarForPremiumEnabled; // @synthesize snackbarForPremiumEnabled=_snackbarForPremiumEnabled;

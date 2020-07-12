@@ -35,9 +35,9 @@
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)provideFeatureFlags;
-- (void)fetchFeatureFlagsWithNewEndpoint:(_Bool)arg1;
+- (void)fetchFeatureFlags;
 - (void)loadFeatureFlags;
-- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 logger:(id)arg3 useNewEndpoint:(_Bool)arg4 requestPayloadProvider:(id)arg5;
+- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 logger:(id)arg3 requestPayloadProvider:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

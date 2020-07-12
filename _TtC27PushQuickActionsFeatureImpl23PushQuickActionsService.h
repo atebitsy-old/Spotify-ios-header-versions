@@ -18,6 +18,7 @@
     // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: onDemandService
     // Error parsing type: , name: playerFeature
+    // Error parsing type: , name: eventSenderService
 }
 
 - (void).cxx_destruct;

@@ -19,6 +19,8 @@
     // Error parsing type: , name: $__lazy_storage_$_wakewordEnabled
     // Error parsing type: , name: $__lazy_storage_$_voiceEnabled
     // Error parsing type: , name: $__lazy_storage_$_ttsEnabled
+    // Error parsing type: , name: $__lazy_storage_$_searchResultEnabled
+    // Error parsing type: , name: $__lazy_storage_$_searchResultAction
     // Error parsing type: , name: $__lazy_storage_$_useDevelopmentEndpoint
 }
 

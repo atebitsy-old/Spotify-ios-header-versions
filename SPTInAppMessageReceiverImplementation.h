@@ -13,6 +13,7 @@
 
 @interface SPTInAppMessageReceiverImplementation : NSObject <SPTInAppMessageSDKMessageReceiver>
 {
+    _Bool _cancelPresentation;
     SPTInAppMessageCardPresentationController *_cardPresentationController;
     SPTInAppMessageSDKBannerPresentationController *_bannerPresentationController;
     SPTInAppMessageNoteOverlayController *_noteOverlayController;
@@ -31,6 +32,7 @@
     id <SPTAuthController> _authController;
 }
 
+@property(nonatomic) _Bool cancelPresentation; // @synthesize cancelPresentation=_cancelPresentation;
 @property(readonly, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) SPTInAppMessageNotePresentationController *notePresentationController; // @synthesize notePresentationController=_notePresentationController;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
@@ -48,6 +50,7 @@
 @property(retain, nonatomic) SPTInAppMessageSDKBannerPresentationController *bannerPresentationController; // @synthesize bannerPresentationController=_bannerPresentationController;
 @property(retain, nonatomic) SPTInAppMessageCardPresentationController *cardPresentationController; // @synthesize cardPresentationController=_cardPresentationController;
 - (void).cxx_destruct;
+- (void)cancelMessagePresentation:(id)arg1;
 - (void)didReceiveMessageViewModel:(id)arg1 matchedPattern:(id)arg2 triggerType:(id)arg3;
 - (id)initWithSlateManager:(id)arg1 slateBuilderProvider:(id)arg2 noteOverlayController:(id)arg3 bannerPresentationManager:(id)arg4 tooltipPresentationManager:(id)arg5 freeTierTooltipPresenter:(id)arg6 snackbarPresenter:(id)arg7 nowPlayingManagerRegistry:(id)arg8 offlineModeState:(id)arg9 carDetector:(id)arg10 serviceLogger:(id)arg11 crashReporter:(id)arg12 authController:(id)arg13;
 

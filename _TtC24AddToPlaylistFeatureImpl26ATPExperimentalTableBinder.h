@@ -14,6 +14,8 @@
     // Error parsing type: , name: cellBinder
     // Error parsing type: , name: logger
     // Error parsing type: , name: model
+    // Error parsing type: , name: userPlayLists
+    // Error parsing type: , name: spotifyPlayLists
 }
 
 - (void).cxx_destruct;

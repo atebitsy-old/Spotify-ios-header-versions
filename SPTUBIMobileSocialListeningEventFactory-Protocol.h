@@ -6,7 +6,8 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSocialListening_ConfirmEndSessionDialogEventFactory, SPTUBIMobileSocialListening_EndSessionButtonEventFactory, SPTUBIMobileSocialListening_FacepileEventFactory, SPTUBIMobileSocialListening_JoinButtonEventFactory, SPTUBIMobileSocialListening_LeaveSessionButtonEventFactory, SPTUBIMobileSocialListening_RetryButtonEventFactory, SPTUBIMobileSocialListening_ShareLinkButtonEventFactory;
+@class NSURL;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSocialListening_ConfirmEndSessionDialogEventFactory, SPTUBIMobileSocialListening_DeeplinkingEventFactory, SPTUBIMobileSocialListening_EndSessionButtonEventFactory, SPTUBIMobileSocialListening_FacepileEventFactory, SPTUBIMobileSocialListening_JoinButtonEventFactory, SPTUBIMobileSocialListening_LeaveSessionButtonEventFactory, SPTUBIMobileSocialListening_RetryButtonEventFactory, SPTUBIMobileSocialListening_ShareLinkButtonEventFactory;
 
 @protocol SPTUBIMobileSocialListeningEventFactory <NSObject>
 - (id <SPTUBIMobileSocialListening_ConfirmEndSessionDialogEventFactory>)confirmEndSessionDialogFactory;
@@ -16,6 +17,7 @@
 - (id <SPTUBIMobileSocialListening_JoinButtonEventFactory>)joinButtonFactory;
 - (id <SPTUBIMobileSocialListening_RetryButtonEventFactory>)retryButtonFactory;
 - (id <SPTUBIMobileSocialListening_FacepileEventFactory>)facepileFactory;
+- (id <SPTUBIMobileSocialListening_DeeplinkingEventFactory>)deeplinkingFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

@@ -11,8 +11,11 @@
     // Error parsing type: , name: voiceEnabled
     // Error parsing type: , name: wakewordEnabled
     // Error parsing type: , name: ttsEnabled
+    // Error parsing type: , name: alternateSearchEnabled
+    // Error parsing type: , name: alternateSearchAction
 }
 
+- (void).cxx_destruct;
 - (id)init;
 - (id)propertyModels;
 - (id)initWithConfiguration:(id)arg1;

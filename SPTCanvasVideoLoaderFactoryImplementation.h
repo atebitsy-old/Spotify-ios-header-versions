@@ -8,24 +8,26 @@
 
 #import "SPTCanvasVideoLoaderFactory-Protocol.h"
 
-@class NSString;
+@class NSMutableDictionary, NSString;
 @protocol CosmosFeature, SPTCanvasTrackChecker, SPTVideoURLAssetLoader;
 
 @interface SPTCanvasVideoLoaderFactoryImplementation : NSObject <SPTCanvasVideoLoaderFactory>
 {
+    NSMutableDictionary *_videoExporters;
     id <SPTCanvasTrackChecker> _canvasTrackChecker;
     id <SPTVideoURLAssetLoader> _videoAssetLoader;
     id <CosmosFeature> _cosmosFeature;
 }
 
-+ (CDUnknownBlockType)originalVideoExporterForTrack:(id)arg1;
-+ (CDUnknownBlockType)extendedVideoExporterForTrack:(id)arg1;
-+ (CDUnknownBlockType)videoExporterForTrack:(id)arg1 usingVideoLoaderType:(long long)arg2;
 @property(readonly, nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(readonly, nonatomic) id <SPTVideoURLAssetLoader> videoAssetLoader; // @synthesize videoAssetLoader=_videoAssetLoader;
 @property(readonly, nonatomic) id <SPTCanvasTrackChecker> canvasTrackChecker; // @synthesize canvasTrackChecker=_canvasTrackChecker;
+@property(readonly, nonatomic) NSMutableDictionary *videoExporters; // @synthesize videoExporters=_videoExporters;
 - (void).cxx_destruct;
 - (id)createVideoLoaderForTrack:(id)arg1 videoLoaderType:(long long)arg2;
+- (CDUnknownBlockType)originalVideoExporterForTrack:(id)arg1;
+- (CDUnknownBlockType)extendedVideoExporterForTrack:(id)arg1;
+- (CDUnknownBlockType)videoExporterForTrack:(id)arg1 usingVideoLoaderType:(long long)arg2;
 - (id)initWithCanvasTrackChecker:(id)arg1 videoAssetLoader:(id)arg2 cosmosFeature:(id)arg3;
 
 // Remaining properties

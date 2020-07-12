@@ -11,6 +11,7 @@
     // Error parsing type: , name: nudgeManager
     // Error parsing type: , name: nudgeView
     // Error parsing type: , name: flagsManager
+    // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: delayTimer
     // Error parsing type: , name: hideTimer
     // Error parsing type: , name: nudgeVisible

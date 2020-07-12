@@ -15,8 +15,15 @@
 
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
+- (id)loginIntentButtonViewModel;
+- (id)signupIntentButtonViewModel;
+- (id)loginButtonViewModel;
+- (id)emailButtonViewModel;
+- (id)signupButtonViewModel;
+- (id)phoneNumberButtonViewModel;
 - (id)facebookButtonViewModel;
 - (id)appleButtonViewModel;
+- (void)appendEnabledLoginOptions:(id)arg1;
 - (id)intentLedGroupButtonsArray;
 - (id)controlGroupButtonsArray;
 - (id)methodLedGroupButtonsArray;

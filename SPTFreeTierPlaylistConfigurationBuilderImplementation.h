@@ -10,13 +10,14 @@
 #import "SPTFreeTierPlaylistConfigurationBuilder-Protocol.h"
 
 @class GLUEEntityRowStyle, NSArray, NSString, SPTFreeTierPlaylistCellProviderDelegateWrapper;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayObserver, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
 
 @interface SPTFreeTierPlaylistConfigurationBuilderImplementation : NSObject <SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistConfigurationBuilder>
 {
     _Bool _showTrackArtwork;
     _Bool _useBarButtons;
     _Bool _excludeAllEpisodes;
+    _Bool _useForceLinearPlay;
     NSArray *_cellProviders;
     id <SPTFreeTierPlaylistContextMenuPresenter> _contextMenuPresenter;
     id <SPTFreeTierPlaylistDefaultHeaderViewModel> _defaultHeaderViewModel;
@@ -33,9 +34,10 @@
     id <SPTFreeTierEntityOfflineViewModel> _offlineViewModel;
     id <SPTFreeTierPlaylistAdditionalCallToAction> _additionalCallToAction;
     id <SPTFreeTierPlaylistPlayLogger> _playLogger;
+    id <SPTFreeTierPlaylistPlayObserver> _playObserver;
     CDUnknownBlockType _headerProviderBlock;
     NSArray *_cellProviderBlocks;
-    CDUnknownBlockType _playViewModelBlock;
+    CDUnknownBlockType _playObserverBlock;
     NSArray *_contextMenuPresenterBlocks;
     CDUnknownBlockType _additionalCallToActionBlock;
     SPTFreeTierPlaylistCellProviderDelegateWrapper *_strongReferenceDelegateWrapper;
@@ -44,9 +46,12 @@
 @property(retain, nonatomic) SPTFreeTierPlaylistCellProviderDelegateWrapper *strongReferenceDelegateWrapper; // @synthesize strongReferenceDelegateWrapper=_strongReferenceDelegateWrapper;
 @property(copy, nonatomic) CDUnknownBlockType additionalCallToActionBlock; // @synthesize additionalCallToActionBlock=_additionalCallToActionBlock;
 @property(copy, nonatomic) NSArray *contextMenuPresenterBlocks; // @synthesize contextMenuPresenterBlocks=_contextMenuPresenterBlocks;
-@property(copy, nonatomic) CDUnknownBlockType playViewModelBlock; // @synthesize playViewModelBlock=_playViewModelBlock;
+@property(copy, nonatomic) CDUnknownBlockType playObserverBlock; // @synthesize playObserverBlock=_playObserverBlock;
 @property(copy, nonatomic) NSArray *cellProviderBlocks; // @synthesize cellProviderBlocks=_cellProviderBlocks;
 @property(copy, nonatomic) CDUnknownBlockType headerProviderBlock; // @synthesize headerProviderBlock=_headerProviderBlock;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayObserver> playObserver; // @synthesize playObserver=_playObserver;
+- (void)setUseForceLinearPlay:(_Bool)arg1;
+@property(readonly, nonatomic) _Bool useForceLinearPlay;
 @property(nonatomic) _Bool excludeAllEpisodes; // @synthesize excludeAllEpisodes=_excludeAllEpisodes;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistPlayLogger> playLogger; // @synthesize playLogger=_playLogger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction; // @synthesize additionalCallToAction=_additionalCallToAction;
@@ -70,8 +75,8 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(readonly, copy, nonatomic) NSArray *cellProviders; // @synthesize cellProviders=_cellProviders;
 - (void).cxx_destruct;
+- (void)withPlayObserver:(CDUnknownBlockType)arg1;
 - (void)withAdditionalCallToAction:(CDUnknownBlockType)arg1;
-- (void)withPlayViewModel:(CDUnknownBlockType)arg1;
 - (void)withHeaderProvider:(CDUnknownBlockType)arg1;
 - (void)withContextMenuPresenter:(CDUnknownBlockType)arg1;
 - (void)withCellProvider:(CDUnknownBlockType)arg1;

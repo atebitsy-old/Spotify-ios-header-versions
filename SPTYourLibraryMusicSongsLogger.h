@@ -30,6 +30,7 @@
 - (void)logUBIInteractionEvent:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
+- (id)userIntent:(id)arg1 withReason:(id)arg2;
 - (id)sectionIdForSection:(unsigned long long)arg1;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
@@ -44,23 +45,23 @@
 - (_Bool)isTrackedImpressionOpen:(unsigned long long)arg1;
 - (void)logFilterChipsImpression;
 - (void)logEmptyViewImpression;
-- (void)logUnlikeSongDialogInteractionAtIndex:(unsigned long long)arg1 isUnliked:(_Bool)arg2 trackURI:(id)arg3;
-- (void)logUnlikeSongDialogShownAtIndex:(unsigned long long)arg1 trackURI:(id)arg2;
+- (void)logUnlikeSongDialogInteractionAtIndex:(unsigned long long)arg1 isUnliked:(_Bool)arg2 trackURI:(id)arg3 reason:(id)arg4;
+- (void)logUnlikeSongDialogShownAtIndex:(unsigned long long)arg1 trackURI:(id)arg2 reason:(id)arg3;
 - (void)logClearFilterChips;
 - (void)logFilterChipAtIndex:(unsigned long long)arg1 identifier:(id)arg2 isSelected:(_Bool)arg3;
 - (void)logCloseExtraSongsExplanation;
 - (void)logExtraSongsWhyAction;
-- (void)logSongsShufflePlay;
+- (void)logSongsShufflePlayWitReason:(id)arg1;
 - (void)logAddSongsButtonAction;
 - (void)logDiscoverSongsButton:(id)arg1;
 - (void)logCancelRemoveDownloads;
 - (void)logAvailableOffline:(_Bool)arg1;
-- (void)logSwipeActionAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 shelfPosition:(long long)arg5;
+- (void)logSwipeActionAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 shelfPosition:(long long)arg5 reason:(id)arg6;
 - (void)logAudioPreviewAtIndex:(long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 playing:(_Bool)arg5 isOriginCoverItem:(_Bool)arg6;
 - (void)logTrackBanActionSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 banned:(_Bool)arg5;
-- (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 liked:(_Bool)arg5;
-- (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4;
-- (void)logTrackItemSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4;
+- (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 liked:(_Bool)arg5 reason:(id)arg6;
+- (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 reason:(id)arg5;
+- (void)logTrackItemSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 reason:(id)arg5;
 - (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
 
 // Remaining properties

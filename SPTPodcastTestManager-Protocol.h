@@ -9,7 +9,6 @@
 @protocol SPTPodcastTestManager <NSObject>
 @property(readonly, nonatomic, getter=isPodcastNewPlaybackSpeedsEnabled) _Bool podcastNewPlaybackSpeedsEnabled;
 @property(readonly, nonatomic, getter=isPodcastDataAccessLayerPodcastRequestEnabled) _Bool podcastDataAccessLayerPodcastRequestEnabled;
-@property(readonly, nonatomic, getter=isPodcastDataAccessLayerEnabled) _Bool podcastDataAccessLayerEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 @property(readonly, nonatomic, getter=isPodcastFeatureEnabled) _Bool podcastFeatureEnabled;

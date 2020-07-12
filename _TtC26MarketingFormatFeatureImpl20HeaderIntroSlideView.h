@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: backgroundImageView
     // Error parsing type: , name: backgroundVideoView
+    // Error parsing type: , name: titleImageView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel
     // Error parsing type: , name: creatorImageView

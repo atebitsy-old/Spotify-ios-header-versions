@@ -14,6 +14,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: socialListeningIntegrationManager
     // Error parsing type: , name: eventConsumer
+    // Error parsing type: , name: scrollObserverManager
     // Error parsing type: , name: model
     // Error parsing type: , name: headerReuseIdentifier
 }

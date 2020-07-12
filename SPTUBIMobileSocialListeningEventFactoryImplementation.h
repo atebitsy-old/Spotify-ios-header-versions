@@ -15,7 +15,7 @@
     NSArray *_components;
 }
 
-+ (id)factory;
++ (id)factoryWithPageUri:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
 - (id)confirmEndSessionDialogFactory;
@@ -25,8 +25,9 @@
 - (id)joinButtonFactory;
 - (id)retryButtonFactory;
 - (id)facepileFactory;
+- (id)deeplinkingFactoryWithUri:(id)arg1;
 - (id)_location;
-- (id)init;
+- (id)initWithPageUri:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

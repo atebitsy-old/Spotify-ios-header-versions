@@ -11,7 +11,7 @@
 @interface _TtC17SPTPageLoaderView14PageLoaderView : _TtC17SPTPageLoaderView34PlaceholderContainerViewController
 {
     // Error parsing type: , name: viewSwitcher
-    // Error parsing type: , name: pageLoader
+    // Error parsing type: , name: pageLoaderStarter
     // Error parsing type: , name: viewLogger
     // Error parsing type: , name: currentViewExtractor
     // Error parsing type: , name: pageIdentifier
@@ -22,6 +22,7 @@
 - (id)init;
 - (id)initWithCoder:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidLoad;
 @property(nonatomic, copy) NSURL *pageURI;
 - (id)spt_pageURI;
 @property(nonatomic, copy) NSString *pageIdentifier;

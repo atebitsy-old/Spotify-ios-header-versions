@@ -36,6 +36,7 @@
 - (id)passwordUpdateFailedTitle;
 - (id)passwordUpdatedTitle;
 - (id)actionButtonTitle;
+- (id)fieldAccessibilityLabel;
 - (id)fieldDisclosureLabelText;
 - (id)fieldTitleLabelText;
 - (id)initWithFieldViewModel:(id)arg1 dataLoader:(id)arg2 setPasswordToken:(id)arg3 usernameOrEmail:(id)arg4;

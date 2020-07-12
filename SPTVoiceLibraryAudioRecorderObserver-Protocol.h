@@ -10,11 +10,11 @@
 @protocol SPTVoiceLibraryAudioRecorder;
 
 @protocol SPTVoiceLibraryAudioRecorderObserver <NSObject>
+- (void)audioRecorderDidStartRecording:(id <SPTVoiceLibraryAudioRecorder>)arg1;
+- (void)audioRecorder:(id <SPTVoiceLibraryAudioRecorder>)arg1 didFailWithError:(NSError *)arg2;
 - (void)audioRecorder:(id <SPTVoiceLibraryAudioRecorder>)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;
 
 @optional
 - (void)audioRecorder:(id <SPTVoiceLibraryAudioRecorder>)arg1 didChangeMeanAudioLevel:(float)arg2 rmsAudioLevel:(float)arg3 cdfScaledLevel:(float)arg4;
-- (void)audioRecorder:(id <SPTVoiceLibraryAudioRecorder>)arg1 didFailWithError:(NSError *)arg2;
-- (void)audioRecorderDidStartRecording:(id <SPTVoiceLibraryAudioRecorder>)arg1;
 @end
 

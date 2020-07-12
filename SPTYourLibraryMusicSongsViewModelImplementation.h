@@ -66,6 +66,7 @@
 @property(readonly, nonatomic) id <SPTYourLibraryMusicSongsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (id)filterReasonForPlaybackLogging;
 - (void)logQuickScrollDragEnded;
 - (void)logQuickScrollDragStarted;
 - (void)logQuickScrollIsVisible;

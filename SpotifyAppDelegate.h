@@ -63,6 +63,7 @@
 - (void)serviceOrchestrator:(id)arg1 didLoadServicesForScope:(id)arg2;
 - (void)serviceOrchestrator:(id)arg1 willLoadServicesForScope:(id)arg2;
 - (void)executeDeferredBlock:(CDUnknownBlockType)arg1 scope:(id)arg2 origin:(id)arg3;
+- (_Bool)isScopeLoaded:(id)arg1;
 - (void)withLoadedScope:(id)arg1 origin:(SEL)arg2 do:(CDUnknownBlockType)arg3;
 - (void)runDeferredBlocksForScope:(id)arg1;
 - (id)optionalServiceForIdentifier:(id)arg1 inScope:(id)arg2;
@@ -83,6 +84,7 @@
 - (void)configureTracing;
 - (void)setupColdStartTracking;
 - (void)setupLogging;
+- (void)userNotificationCenter:(id)arg1 openSettingsForNotification:(id)arg2;
 - (void)userNotificationCenter:(id)arg1 didReceiveNotificationResponse:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (void)userNotificationCenter:(id)arg1 willPresentNotification:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (unsigned long long)application:(id)arg1 supportedInterfaceOrientationsForWindow:(id)arg2;

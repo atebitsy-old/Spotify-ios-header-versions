@@ -6,15 +6,16 @@
 
 #import "SPTLoginTraitChangingView.h"
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, SPTLoginOptionButton, UIStackView, UIView;
+#import "SPTLoginViewWithActionButtonsConfigurable-Protocol.h"
 
-@interface SPTLoginIntentLedStartView : SPTLoginTraitChangingView
+@class GLUELabel, NSLayoutConstraint, NSString, UIStackView, UIView;
+@protocol SPTLoginViewWithActionButtonsDelegate;
+
+@interface SPTLoginIntentLedStartView : SPTLoginTraitChangingView <SPTLoginViewWithActionButtonsConfigurable>
 {
+    UIStackView *_buttonsContainerView;
+    id <SPTLoginViewWithActionButtonsDelegate> delegate;
     GLUELabel *_buttonsHeading;
-    GLUEButton *_continueWithEmailButton;
-    SPTLoginOptionButton *_continueWithFacebookButton;
-    SPTLoginOptionButton *_continueWithAppleButton;
-    UIStackView *_buttonContainer;
     UIView *_mainContainer;
     NSLayoutConstraint *_mainContainerCompactWidth;
     NSLayoutConstraint *_mainContainerRegularWidth;
@@ -23,15 +24,20 @@
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(readonly, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
-@property(readonly, nonatomic) UIStackView *buttonContainer; // @synthesize buttonContainer=_buttonContainer;
-@property(readonly, nonatomic) SPTLoginOptionButton *continueWithAppleButton; // @synthesize continueWithAppleButton=_continueWithAppleButton;
-@property(readonly, nonatomic) SPTLoginOptionButton *continueWithFacebookButton; // @synthesize continueWithFacebookButton=_continueWithFacebookButton;
-@property(readonly, nonatomic) GLUEButton *continueWithEmailButton; // @synthesize continueWithEmailButton=_continueWithEmailButton;
 @property(readonly, nonatomic) GLUELabel *buttonsHeading; // @synthesize buttonsHeading=_buttonsHeading;
+@property(nonatomic) __weak id <SPTLoginViewWithActionButtonsDelegate> delegate; // @synthesize delegate;
+@property(readonly, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
 - (void).cxx_destruct;
+- (void)actionButtonTapped:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraintsWithStyle:(id)arg1;
 - (id)initWithStyle:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

@@ -10,8 +10,8 @@
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTSiriIntentsHandler-Protocol.h"
 
-@class NSDictionary, NSString, SPTPlayerContext, SPTSiriIntentsFeatureProperties, SPTSiriIntentsKeepAliveHandler;
-@protocol SPTEventSender, SPTGaiaConnectAPI, SPTLoginStateController, SPTPlayer;
+@class NSDictionary, NSMutableDictionary, NSString, NSURL, SPTPlayerContext, SPTSiriIntentsFeatureProperties, SPTSiriIntentsKeepAliveHandler;
+@protocol SPTCarDetector, SPTEventSender, SPTGaiaConnectAPI, SPTLoginStateController, SPTPlayer;
 
 @interface SPTSiriIntentsHandlerImplementation : NSObject <SPTLoginStateControllerObserver, SPTPlayerObserver, SPTSiriIntentsHandler>
 {
@@ -19,6 +19,7 @@
     CDUnknownBlockType _intentCompletionHandler;
     CDUnknownBlockType _playCommandCompletionHandler;
     id <SPTPlayer> _player;
+    id <SPTCarDetector> _carDetector;
     id <SPTEventSender> _eventSender;
     SPTSiriIntentsFeatureProperties *_configuration;
     id <SPTLoginStateController> _loginStateController;
@@ -27,11 +28,17 @@
     long long _deferralMode;
     SPTPlayerContext *_pendingPlayerContext;
     NSDictionary *_pendingPlayCommandDictionary;
+    NSMutableDictionary *_performanceMeasurements;
+    NSMutableDictionary *_performanceDimensions;
+    NSURL *_expectedContextURL;
     double _timeSinceBackgrounded;
 }
 
 @property(nonatomic) double timeSinceBackgrounded; // @synthesize timeSinceBackgrounded=_timeSinceBackgrounded;
 @property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
+@property(retain, nonatomic) NSURL *expectedContextURL; // @synthesize expectedContextURL=_expectedContextURL;
+@property(retain, nonatomic) NSMutableDictionary *performanceDimensions; // @synthesize performanceDimensions=_performanceDimensions;
+@property(retain, nonatomic) NSMutableDictionary *performanceMeasurements; // @synthesize performanceMeasurements=_performanceMeasurements;
 @property(copy, nonatomic) NSDictionary *pendingPlayCommandDictionary; // @synthesize pendingPlayCommandDictionary=_pendingPlayCommandDictionary;
 @property(retain, nonatomic) SPTPlayerContext *pendingPlayerContext; // @synthesize pendingPlayerContext=_pendingPlayerContext;
 @property(readonly, nonatomic) long long deferralMode; // @synthesize deferralMode=_deferralMode;
@@ -40,6 +47,7 @@
 @property(retain, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(readonly, nonatomic) SPTSiriIntentsFeatureProperties *configuration; // @synthesize configuration=_configuration;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
+@property(readonly, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(copy, nonatomic) CDUnknownBlockType playCommandCompletionHandler; // @synthesize playCommandCompletionHandler=_playCommandCompletionHandler;
 @property(copy, nonatomic) CDUnknownBlockType intentCompletionHandler; // @synthesize intentCompletionHandler=_intentCompletionHandler;
@@ -54,7 +62,12 @@
 - (void)performCoreReloginIfNecessary;
 - (_Bool)apCouldBeOffline;
 - (void)initiatePlaybackWithContext:(id)arg1 playCommandDictionary:(id)arg2;
-- (void)sendTimeMeasurementEventWithMeasurements:(id)arg1;
+- (_Bool)isPlayingExpectedContext:(id)arg1;
+@property(readonly, nonatomic, getter=hasFinishedPerformanceMeasuring) _Bool finishedPerformanceMeasuring;
+- (void)sendTimeMeasurementEventWithMeasurements:(id)arg1 dimensions:(id)arg2;
+- (void)startMeasuringWithCapturedMeasurements:(id)arg1 dimensions:(id)arg2;
+- (void)resetPerformanceMeasurements;
+- (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)willEnterForeground;
 - (void)didEnterBackground;
@@ -63,8 +76,8 @@
 - (_Bool)shouldDeferPlaybackToLaterForSession:(id)arg1;
 - (void)playLocalMediaWithPlayCommandURI:(id)arg1;
 - (void)handleIntentWithPlayCommandURI:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (void)handleIntent:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (id)initWithPlayer:(id)arg1 loginStateController:(id)arg2 keepAliveHandler:(id)arg3 connectAPI:(id)arg4 eventSender:(id)arg5 configuration:(id)arg6 deferralMode:(long long)arg7;
+- (void)handleIntent:(id)arg1 completionHandler:(CDUnknownBlockType)arg2 measurements:(id)arg3 dimensions:(id)arg4;
+- (id)initWithPlayer:(id)arg1 loginStateController:(id)arg2 keepAliveHandler:(id)arg3 connectAPI:(id)arg4 eventSender:(id)arg5 configuration:(id)arg6 deferralMode:(long long)arg7 carDetector:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

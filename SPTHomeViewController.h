@@ -19,7 +19,7 @@
 #import "SPViewController-Protocol.h"
 
 @class HUBComponentRegistry, NSMutableDictionary, NSString, NSURL, SPTHomeLocalViewModelOverrides, SPTHomeNavigationItemDecorator, SPTHomeView, SPTHomeViewModelProvider, SPTProgressView;
-@protocol GLUETheme, HUBCommandHandler, HUBComponentEventHandler, HUBComponentLayoutManager, HUBImageLoaderFactory, SPTHomeCacheRenderDelegate, SPTHomeViewControllerDelegate, SPTHubImpressionLogger, SPTHubLoadingLogger, SPTOfflineModeState, SPTPageContainer, SPTShareDragDelegateFactory;
+@protocol GLUETheme, HUBCommandHandler, HUBComponentEventHandler, HUBComponentLayoutManager, HUBImageLoaderFactory, HUBViewModel, SPTHomeCacheRenderDelegate, SPTHomeViewControllerDelegate, SPTHubImpressionLogger, SPTHubLoadingLogger, SPTOfflineModeState, SPTPageContainer, SPTShareDragDelegateFactory;
 
 @interface SPTHomeViewController : UIViewController <SPTContentBottomLayoutGuideObserver, SPTScrollToTopViewController, HUBViewContentOffsetObserver, SPTHubViewModelProviderDelegate, HUBOverlayViewComponentDelegate, HUBViewComponentDelegate, SPTOfflineModeStateObserver, SPTPageController, SPTNavigationControllerNavigationBarState, SPViewController, SPTHomeViewModelProviderDelegate>
 {
@@ -48,8 +48,10 @@
     unsigned long long _dataLoadingSource;
     double _navigationbarAlpha;
     NSMutableDictionary *_dragDelegateHolders;
+    id <HUBViewModel> _initialViewModel;
 }
 
+@property(retain, nonatomic) id <HUBViewModel> initialViewModel; // @synthesize initialViewModel=_initialViewModel;
 @property(nonatomic) _Bool seedASessionEnabled; // @synthesize seedASessionEnabled=_seedASessionEnabled;
 @property(nonatomic) _Bool didLoadInitialViewModel; // @synthesize didLoadInitialViewModel=_didLoadInitialViewModel;
 @property(nonatomic, getter=isCurrentlyOffline) _Bool currentlyOffline; // @synthesize currentlyOffline=_currentlyOffline;
@@ -100,6 +102,7 @@
 - (void)viewModelProviderWillLoadCachedViewModel:(id)arg1;
 - (void)viewModelDidLoad:(id)arg1 dataSource:(unsigned long long)arg2;
 - (void)viewModelDidLoad:(id)arg1;
+- (void)useInitialViewModelIfPossible;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
@@ -107,7 +110,7 @@
 - (void)loadView;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 loadingLogger:(id)arg7 impressionLogger:(id)arg8 viewModelProvider:(id)arg9 shareDragDelegateFactory:(id)arg10 offlineState:(id)arg11 overrides:(id)arg12 seedASessionEnabled:(_Bool)arg13;
+- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 loadingLogger:(id)arg7 impressionLogger:(id)arg8 viewModelProvider:(id)arg9 shareDragDelegateFactory:(id)arg10 offlineState:(id)arg11 overrides:(id)arg12 seedASessionEnabled:(_Bool)arg13 initialViewModel:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

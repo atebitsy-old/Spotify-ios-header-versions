@@ -36,6 +36,7 @@
 - (void)setupUseDevEndpointSetting;
 - (id)featureProperties;
 - (void)loadFlags;
+@property(readonly, nonatomic) _Bool tabBarBadgeExperienceEnabled;
 @property(readonly, nonatomic) _Bool shouldShowLegacyPD;
 @property(readonly, nonatomic) _Bool shouldUseHeaderVoiceoverAccessible;
 - (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2;

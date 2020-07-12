@@ -43,6 +43,7 @@
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)didEncounterEndOfOutputStream;
 - (void)outputStream:(id)arg1 didFailWithError:(id)arg2;
 - (_Bool)dataLoaderShouldSupportChunks:(id)arg1;
 - (void)dataLoader:(id)arg1 needsNewBodyStream:(CDUnknownBlockType)arg2 forRequest:(id)arg3;

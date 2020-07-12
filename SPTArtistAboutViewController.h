@@ -13,7 +13,7 @@
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSString, NSURL, SPTArtistAboutBiographyView, SPTArtistAboutContextMenuViewModel, SPTArtistAboutGLUETheme, SPTArtistAboutImageGalleryViewController, SPTArtistAboutLogger, SPTArtistAboutMonthlyListenersView, SPTArtistAboutStateProvider, SPTArtistAboutViewModel, SPTInfoView, SPTProgressView, UIStackView;
+@class NSString, NSURL, SPTArtistAboutBiographyView, SPTArtistAboutContextMenuViewModel, SPTArtistAboutGLUETheme, SPTArtistAboutImageGalleryViewController, SPTArtistAboutLogger, SPTArtistAboutMonthlyListenersView, SPTArtistAboutStateProvider, SPTArtistAboutViewModel, SPTInfoView, SPTProgressView, UIScrollView, UIStackView;
 @protocol GLUEImageLoader, SPTLinkDispatcher, SPTPageContainer, SPTViewLogger;
 
 @interface SPTArtistAboutViewController : UIViewController <SPTArtistAboutViewModelDelegate, SPTArtistAboutBiographyViewDelegate, GLUEThemeObserver, SPTNavigationControllerNavigationBarState, SPContentInsetViewController, SPTPageController>
@@ -25,6 +25,7 @@
     id <SPTViewLogger> _viewLogger;
     SPTArtistAboutLogger *_logger;
     SPTArtistAboutGLUETheme *_theme;
+    UIScrollView *_containerView;
     SPTProgressView *_loadingView;
     SPTInfoView *_infoView;
     UIStackView *_rootStackView;
@@ -43,6 +44,7 @@
 @property(retain, nonatomic) UIStackView *rootStackView; // @synthesize rootStackView=_rootStackView;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) SPTProgressView *loadingView; // @synthesize loadingView=_loadingView;
+@property(retain, nonatomic) UIScrollView *containerView; // @synthesize containerView=_containerView;
 @property(retain, nonatomic) SPTArtistAboutGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTArtistAboutLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
@@ -76,7 +78,6 @@
 - (void)configureContextMenuForEnabledState:(_Bool)arg1;
 - (void)setupViews;
 - (void)viewDidLoad;
-- (void)loadView;
 - (void)dealloc;
 - (id)initWithViewModel:(id)arg1 contextMenuViewModel:(id)arg2 stateProvider:(id)arg3 glueImageLoader:(id)arg4 theme:(id)arg5 viewLogger:(id)arg6 logger:(id)arg7 linkDispatcher:(id)arg8;
 

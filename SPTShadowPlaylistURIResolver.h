@@ -14,23 +14,26 @@
     NSMutableDictionary *_shadowList;
     id <SPTPlaylistModel> _playlistModel;
     id <SPTLocalSettings> _localSettings;
+    NSDictionary *_urisToRoute;
 }
 
+@property(readonly, nonatomic) NSDictionary *urisToRoute; // @synthesize urisToRoute=_urisToRoute;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(retain, nonatomic) NSMutableDictionary *shadowList; // @synthesize shadowList=_shadowList;
 - (void).cxx_destruct;
-- (void)clearPlaylist:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)resetPlaylist:(id)arg1 withTracks:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)mergeTracksFromBasePlaylist:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)resolveShadowPlaylistFor:(id)arg1 withCompletion:(CDUnknownBlockType)arg2 onError:(CDUnknownBlockType)arg3;
+- (void)regenerateReadPlaylistFor:(id)arg1 onError:(CDUnknownBlockType)arg2;
+- (id)shadowForURI:(id)arg1;
 - (void)resolveWriteURIFor:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (id)resolveReadURIFor:(id)arg1;
 - (_Bool)hasShadowFor:(id)arg1;
-- (id)readUriFor:(id)arg1;
-- (void)shadowPlaylistFor:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (void)createShadowPlaylistFor:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (_Bool)shouldRouteUri:(id)arg1;
-- (void)saveShadowPlaylist:(id)arg1 forShadowName:(id)arg2;
-@property(readonly, nonatomic) NSDictionary *urisToRoute;
+- (void)getShadowRouteFor:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
+- (void)createShadowRouteFor:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (_Bool)shouldRouteURI:(id)arg1;
+- (void)saveShadowRoute:(id)arg1 forShadowName:(id)arg2;
+- (id)uriPrefixesToRoute;
 - (id)initWithLocalSettings:(id)arg1;
 
 @end

@@ -6,19 +6,25 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger;
 
 @interface SPTArtistAboutLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBILogger> _ubiLogger;
 }
 
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logInteractionPageURI:(id)arg1 index:(long long)arg2 section:(id)arg3 targetURI:(id)arg4 type:(id)arg5 intent:(id)arg6;
 - (void)logArtistAboutSelectedSection:(id)arg1 artistURI:(id)arg2;
 - (void)logArtistAboutImageGalleryDidSwipeWithArtistURI:(id)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (void)logHitInteractionForSocialLinkType:(unsigned long long)arg1 linkURI:(id)arg2 artistUri:(id)arg3;
+- (void)logImpressionForSocialLinks:(id)arg1 artistURI:(id)arg2;
+- (void)logImpressionForGalleryWithArtistURI:(id)arg1;
+- (id)galleryFactoryWithArtistUri:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2;
 
 @end
 

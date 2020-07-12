@@ -9,7 +9,7 @@
 #import "SPTAddToSpotifyPlaylistExperimentService-Protocol.h"
 
 @class NSString, SPTAddToSpotifyPlaylistExperimentFeatureProperties, SPTAllocationContext, SPTShadowPlaylistURIResolver;
-@protocol SPTContainerService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService;
+@protocol SPTContainerService, SPTEncoreIntegrationService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService;
 
 @interface SPTAddToSpotifyPlaylistExperimentServiceImplementation : NSObject <SPTAddToSpotifyPlaylistExperimentService>
 {
@@ -19,9 +19,13 @@
     id <SPTSessionService> _sessionService;
     SPTShadowPlaylistURIResolver *_uriResolver;
     SPTAddToSpotifyPlaylistExperimentFeatureProperties *_remoteConfig;
+    id <SPTEncoreIntegrationService> _encoreIntegrationService;
+    id <SPTShelfService> _shelfService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(retain, nonatomic) SPTAddToSpotifyPlaylistExperimentFeatureProperties *remoteConfig; // @synthesize remoteConfig=_remoteConfig;
 @property(retain, nonatomic) SPTShadowPlaylistURIResolver *uriResolver; // @synthesize uriResolver=_uriResolver;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
@@ -29,6 +33,9 @@
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> configService; // @synthesize configService=_configService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
+- (id)providePlaylistRouteForURI:(id)arg1;
+- (id)provideCellProviderWithmodel:(id)arg1 originalPlaylistViewModel:(id)arg2 player:(id)arg3 playlistURI:(id)arg4 origin:(id)arg5;
+- (_Bool)addToSpotifyPlaylistEnabledForURI:(id)arg1;
 - (_Bool)addToSpotifyPlaylistEnabled;
 - (id)provideAddToSpotifyPlaylistDataLoader;
 - (id)provideAddToSpotifyPlaylistModel;

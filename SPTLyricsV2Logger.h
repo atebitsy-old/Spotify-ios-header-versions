@@ -25,6 +25,7 @@
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
 - (void)sendUserSawEnoughCharactersGabitoEventWithTrackURI:(id)arg1 lyricsFormat:(id)arg2;
+- (id)syncTheseLyricsFactoryForURI:(id)arg1;
 - (id)playPauseButtonFactoryForURI:(id)arg1;
 - (id)fullscreenViewFactoryForURI:(id)arg1;
 - (id)cardViewFactoryForURI:(id)arg1;

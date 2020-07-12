@@ -4,23 +4,29 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <swiftCore/_TtCs12_SwiftObject.h>
+#import <objc/NSObject.h>
 
 @class NSString, NSURL;
 
-@interface _TtC20ProfileV2FeatureImpl29ProfileUserDataImplementation : _TtCs12_SwiftObject
+@interface _TtC20ProfileV2FeatureImpl29ProfileUserDataImplementation : NSObject
 {
     // Error parsing type: , name: username
     // Error parsing type: , name: displayName
     // Error parsing type: , name: imageURL
     // Error parsing type: , name: isVerified
     // Error parsing type: , name: hasAnnotatedImage
+    // Error parsing type: , name: subscriptionErroredOut
     // Error parsing type: , name: cosmosDictionaryDataLoader
     // Error parsing type: , name: requestToken
     // Error parsing type: , name: cosmosRequestDataUsernamesKey
     // Error parsing type: , name: observers
+    // Error parsing type: , name: connectivityController
+    // Error parsing type: , name: isOffline
+    // Error parsing type: , name: retryInterval
 }
 
+- (void).cxx_destruct;
+- (id)init;
 @property(nonatomic) _Bool hasAnnotatedImage; // @synthesize hasAnnotatedImage;
 @property(nonatomic) _Bool isVerified; // @synthesize isVerified;
 @property(nonatomic, copy) NSURL *imageURL;

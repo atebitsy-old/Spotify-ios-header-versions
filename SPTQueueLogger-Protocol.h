@@ -10,6 +10,7 @@
 @protocol SPTQueueTrack;
 
 @protocol SPTQueueLogger <NSObject>
+- (void)logSpeedControlMenuButtonTapped;
 - (void)logSleepTimerButtonTapped;
 - (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(SPTPlayerState *)arg2;
 - (void)logHeartButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(SPTPlayerState *)arg2;

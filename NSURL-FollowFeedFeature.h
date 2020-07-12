@@ -116,8 +116,6 @@
 + (id)spt_selectedLanguagesURL;
 + (id)spt_availableLanguagesURL;
 + (id)spt_loginImageryServiceBaseURL;
-+ (id)spt_loginContinueWithEmailURIPrefixComponents;
-+ (id)spt_continueWithEmailURI;
 + (id)spt_loginMagicLinkDoRequestURIPrefixComponents;
 + (id)spt_loginMagicLinkDoRequestViewURIWithEmail:(id)arg1 errorMessage:(id)arg2;
 + (id)spt_loginMagicLinkDoRequestViewURI;
@@ -202,9 +200,11 @@
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURI:(id)arg1;
 + (id)spt_podcastEpisodeFeaturedContentTimelineURIForEpisodeURIString:(id)arg1;
 + (id)spt_preSignupExperimentationScreenConfigurationURL;
-+ (id)spt_preSignupExperimentationFeatureFlagsURL;
 + (id)spt_localPremiumDestinationHubsResponseFileURLWithLocaleIdentifier:(id)arg1;
 + (id)spt_localPremiumDestinationHubsResponseFileURL;
++ (id)spt_premiumDestinationTabBarBadgeURLUsingDevEnabled:(_Bool)arg1;
++ (id)spt_premiumDestinationTabBarBadgeDevURL;
++ (id)spt_premiumDestinationTabBarBadgeURL;
 + (id)spt_premiumDestinationHubsServiceURLWithPathComponents:(id)arg1 usingDevEnabled:(_Bool)arg2;
 + (id)spt_premiumDestinationHubsDevV2ServiceURL;
 + (id)spt_premiumDestinationHubsV2ServiceURL;
@@ -377,7 +377,6 @@
 @property(readonly, nonatomic) long long spt_glueHubComponentEntityStyle;
 @property(readonly, nonatomic, getter=spt_isDevicePickerURL) _Bool isDevicePickerURL;
 - (_Bool)spt_isHiddenContentURI;
-- (_Bool)spt_isLoginContinueWithEmailViewURI;
 - (_Bool)spt_isLoginMagicLinkDoRequestViewURI;
 - (_Bool)spt_isLoginMagicLinkSentConfirmationViewURI;
 - (_Bool)spt_isSignupFacebookConfirmationURI;

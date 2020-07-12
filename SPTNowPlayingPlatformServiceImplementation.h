@@ -9,12 +9,11 @@
 #import "SPTNowPlayingPlatformService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTNowPlayingRemoteControlEventControllerManager;
-@protocol SPTAbbaService, SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingContentLayerResolver, SPTNowPlayingModeResolver, SPTNowPlayingModeViewControllerRegistry, SPTNowPlayingModesRegistry, SPTNowPlayingRemoteControlPolicyRegistry, SPTNowPlayingScrollDataSource_Internal, SPTNowPlayingTestManager, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService;
+@protocol SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingContentLayerResolver, SPTNowPlayingModeResolver, SPTNowPlayingModeViewControllerRegistry, SPTNowPlayingModesRegistry, SPTNowPlayingRemoteControlPolicyRegistry, SPTNowPlayingScrollDataSource_Internal, SPTNowPlayingTestManager, SPTOnDemandService, SPTPlayer, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService;
 
 @interface SPTNowPlayingPlatformServiceImplementation : NSObject <SPTNowPlayingPlatformService>
 {
     id <SPTSessionService> _sessionService;
-    id <SPTAbbaService> _abbaService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTFreeTierService> _freeTierService;
     id <SPTPlayerFeature> _playerFeature;
@@ -48,7 +47,6 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 - (void).cxx_destruct;
 - (id)provideContentLayerResolver;

@@ -33,9 +33,6 @@
 @property(readonly, nonatomic, getter=isWeigthedShufflePlayDisabled) _Bool weigthedShufflePlayDisabled;
 @property(readonly, nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled;
 @property(readonly, nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled;
-@property(readonly, nonatomic) _Bool useSwiftSponsoredSection;
-@property(readonly, nonatomic) _Bool useSwiftTrackSection;
-@property(readonly, nonatomic) _Bool useTrackCloudProvider;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnVideoPlayback;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnAudioPlayback;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnPlayButtonPlayback;

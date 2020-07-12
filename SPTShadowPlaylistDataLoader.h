@@ -7,22 +7,15 @@
 #import "SPTPlaylistDataLoaderDecorator.h"
 
 @class SPTShadowPlaylistURIResolver;
-@protocol SPTPlaylistPlatformDataLoaderRequestToken;
 
 @interface SPTShadowPlaylistDataLoader : SPTPlaylistDataLoaderDecorator
 {
-    SPTShadowPlaylistURIResolver *_shadowUriResolver;
-    id <SPTPlaylistPlatformDataLoaderRequestToken> _metadataSubscription;
+    SPTShadowPlaylistURIResolver *_shadowURIResolver;
 }
 
-@property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> metadataSubscription; // @synthesize metadataSubscription=_metadataSubscription;
-@property(retain, nonatomic) SPTShadowPlaylistURIResolver *shadowUriResolver; // @synthesize shadowUriResolver=_shadowUriResolver;
+@property(retain, nonatomic) SPTShadowPlaylistURIResolver *shadowURIResolver; // @synthesize shadowURIResolver=_shadowURIResolver;
 - (void).cxx_destruct;
 - (id)subscribeFolderItemsForFolderURL:(id)arg1 options:(id)arg2 withFolderPolicyProtocols:(id)arg3 withPlaylistPolicyProtocols:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
-- (id)subscribePlaylistViewWithRecommendationsForPlaylistURL:(id)arg1 options:(id)arg2 withMetadataProtocols:(id)arg3 andTrackProtocols:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
-- (id)subscribePlaylistViewForPlaylistURL:(id)arg1 options:(id)arg2 withMetadataProtocols:(id)arg3 andTrackProtocols:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
-- (id)subscribePlaylistTracksForPlaylistURL:(id)arg1 options:(id)arg2 withPolicyProtocols:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
-- (id)subscribePlaylistMetadataForPlaylistURL:(id)arg1 options:(id)arg2 withPolicyProtocols:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
 - (void)playWithURL:(id)arg1 playOptions:(id)arg2 playlistOptions:(id)arg3 completion:(CDUnknownBlockType)arg4 onError:(CDUnknownBlockType)arg5;
 - (void)fetchPlaylistViewForPlaylistURL:(id)arg1 options:(id)arg2 withMetadataProtocols:(id)arg3 andTrackProtocols:(id)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;
 - (void)fetchPlaylistTracksForPlaylistURL:(id)arg1 options:(id)arg2 withPolicyProtocols:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5 onError:(CDUnknownBlockType)arg6;

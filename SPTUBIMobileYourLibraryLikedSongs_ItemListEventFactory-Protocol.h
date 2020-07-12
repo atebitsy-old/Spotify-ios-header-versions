@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
+@class NSString, NSURL;
 @protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggleEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChipsEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_ItemEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItemEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendationHeaderEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendedPreviewItemEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemListEventFactory <NSObject>
@@ -14,7 +14,7 @@
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendationHeaderEventFactory>)recommendationHeaderFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendedPreviewItemEventFactory>)recommendedPreviewItemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItemEventFactory>)previewItemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
+- (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2 reason:(NSString *)arg3;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggleEventFactory>)downloadToggleFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

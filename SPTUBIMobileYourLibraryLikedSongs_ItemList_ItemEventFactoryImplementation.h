@@ -15,7 +15,7 @@
     NSArray *_components;
 }
 
-+ (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
++ (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 reason:(id)arg3 components:(id)arg4;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
 - (id)swipeRemoveLikeWithItemNoLongerLiked:(id)arg1;
@@ -26,7 +26,7 @@
 - (id)heartButtonFactory;
 - (id)contextMenuButtonFactory;
 - (id)_location;
-- (id)initWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
+- (id)initWithPosition:(long long)arg1 uri:(id)arg2 reason:(id)arg3 components:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

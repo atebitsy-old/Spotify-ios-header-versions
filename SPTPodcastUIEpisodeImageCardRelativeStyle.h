@@ -30,6 +30,12 @@
     double _progressViewCornerRadius;
     UIColor *_progressViewTintColor;
     UIColor *_progressViewTrackTintColor;
+    double _episodeShowImageV2CornerRadius;
+    double _episodeShowImageV2ShadowOpacity;
+    double _episodeShowImageV2ProtectiveLayerOpacity;
+    double _episodeShowImageV2Margin;
+    double _episodeImageCardV2ProgressViewMargin;
+    double _episodeImageCardV2ProgressViewTopSpacing;
     id <GLUETheme> _theme;
     long long _cardType;
     struct CGSize _size;
@@ -41,6 +47,12 @@
 @property(readonly, nonatomic) long long cardType; // @synthesize cardType=_cardType;
 @property(readonly, nonatomic) struct CGSize size; // @synthesize size=_size;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) double episodeImageCardV2ProgressViewTopSpacing; // @synthesize episodeImageCardV2ProgressViewTopSpacing=_episodeImageCardV2ProgressViewTopSpacing;
+@property(readonly, nonatomic) double episodeImageCardV2ProgressViewMargin; // @synthesize episodeImageCardV2ProgressViewMargin=_episodeImageCardV2ProgressViewMargin;
+@property(readonly, nonatomic) double episodeShowImageV2Margin; // @synthesize episodeShowImageV2Margin=_episodeShowImageV2Margin;
+@property(readonly, nonatomic) double episodeShowImageV2ProtectiveLayerOpacity; // @synthesize episodeShowImageV2ProtectiveLayerOpacity=_episodeShowImageV2ProtectiveLayerOpacity;
+@property(readonly, nonatomic) double episodeShowImageV2ShadowOpacity; // @synthesize episodeShowImageV2ShadowOpacity=_episodeShowImageV2ShadowOpacity;
+@property(readonly, nonatomic) double episodeShowImageV2CornerRadius; // @synthesize episodeShowImageV2CornerRadius=_episodeShowImageV2CornerRadius;
 @property(readonly, nonatomic) UIColor *progressViewTrackTintColor; // @synthesize progressViewTrackTintColor=_progressViewTrackTintColor;
 @property(readonly, nonatomic) UIColor *progressViewTintColor; // @synthesize progressViewTintColor=_progressViewTintColor;
 @property(readonly, nonatomic) double progressViewCornerRadius; // @synthesize progressViewCornerRadius=_progressViewCornerRadius;
@@ -59,6 +71,7 @@
 @property(readonly, nonatomic) UIColor *darkTextColor; // @synthesize darkTextColor=_darkTextColor;
 @property(readonly, nonatomic) UIColor *brightTextColor; // @synthesize brightTextColor=_brightTextColor;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UIImage *podcastFallbackImage30;
 @property(readonly, nonatomic) UIImage *thumbnailFallbackImage;
 @property(readonly, nonatomic) struct CGPoint placeholderTextOffset;
 @property(readonly, nonatomic) struct CGSize thumbnailSize;

@@ -11,21 +11,24 @@
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: $__lazy_storage_$_trackRow
     // Error parsing type: , name: $__lazy_storage_$_artistTrackRow
-    // Error parsing type: , name: $__lazy_storage_$_playlistExtenderRow
+    // Error parsing type: , name: $__lazy_storage_$_trackRowPlaylistExtender
     // Error parsing type: , name: $__lazy_storage_$_albumHeader
+    // Error parsing type: , name: $__lazy_storage_$_playlistHeader
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (id)makeAlbumHeader:(long long)arg1;
 - (id)makeAlbumHeader;
-- (id)makePlaylistExtenderRow:(long long)arg1;
-- (id)makePlaylistExtenderRow;
+- (id)makePlaylistHeader:(long long)arg1;
+- (id)makePlaylistHeader;
 - (id)makeTrackRowArtist:(long long)arg1;
 - (id)makeTrackRowArtist;
 - (id)makeTrackRowModelHelper;
 - (id)makeTrackRow:(long long)arg1;
 - (id)makeTrackRow;
+- (id)makeTrackRowPlaylistExtender:(long long)arg1;
+- (id)makeTrackRowPlaylistExtender;
 
 @end
 

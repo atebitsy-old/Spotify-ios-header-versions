@@ -29,6 +29,7 @@
 @property(readonly, nonatomic) SPTSocialListeningDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
 - (void).cxx_destruct;
 - (id)youLeftSessionNotificationMessage;
+- (id)youEndedSessionNotificationMessage;
 - (id)hostDisplayNameFromConnectedUsers:(id)arg1;
 - (void)presentSnackbarWithMessage:(id)arg1;
 - (void)presentNotificationForSession:(id)arg1 updateEvent:(id)arg2;

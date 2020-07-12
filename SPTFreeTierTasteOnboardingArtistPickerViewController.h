@@ -11,7 +11,6 @@
 #import "SPTFreeTierTasteOnboardingArtistPickerHeaderViewDelegate-Protocol.h"
 #import "SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate-Protocol.h"
 #import "SPTFreeTierTasteOnboardingArtistSearchViewModelDelegate-Protocol.h"
-#import "SPTInstrumentationInteractionMediatorColleague-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "UISearchControllerDelegate-Protocol.h"
@@ -19,7 +18,7 @@
 @class GLUELabel, NSString, NSURL, SPTFreeTierTasteOnboardingArtistPickerDataSource, SPTFreeTierTasteOnboardingArtistPickerOfflineView, SPTFreeTierTasteOnboardingArtistPickerView, SPTFreeTierTasteOnboardingArtistPickerViewModel, SPTFreeTierTasteOnboardingArtistSearchController, SPTFreeTierTasteOnboardingArtistSearchViewModel, UIActivityIndicatorView, UIBarButtonItem, UIImpactFeedbackGenerator, UINotificationFeedbackGenerator;
 @protocol SPTFreeTierTasteOnboardingArtistPickerViewControllerDelegate, SPTInstrumentationModalPresentationMonitor, SPTPageContainer;
 
-@interface SPTFreeTierTasteOnboardingArtistPickerViewController : UIViewController <UISearchControllerDelegate, SPTInstrumentationInteractionMediatorColleague, GLUEStyleable, SPTNavigationControllerNavigationBarState, SPTFreeTierTasteOnboardingArtistPickerHeaderViewDelegate, SPTFreeTierTasteOnboardingArtistPickerDataSourceDelegate, SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate, SPTFreeTierTasteOnboardingArtistSearchViewModelDelegate, SPTPageController>
+@interface SPTFreeTierTasteOnboardingArtistPickerViewController : UIViewController <UISearchControllerDelegate, GLUEStyleable, SPTNavigationControllerNavigationBarState, SPTFreeTierTasteOnboardingArtistPickerHeaderViewDelegate, SPTFreeTierTasteOnboardingArtistPickerDataSourceDelegate, SPTFreeTierTasteOnboardingArtistPickerViewModelDelegate, SPTFreeTierTasteOnboardingArtistSearchViewModelDelegate, SPTPageController>
 {
     _Bool _selectionCompleted;
     id <SPTFreeTierTasteOnboardingArtistPickerViewControllerDelegate> _delegate;
@@ -56,7 +55,6 @@
 - (void)updateActionButtonAppearance;
 - (void)didTapActionButton:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
-- (void)mediator:(id)arg1 requiresDataForBuilder:(id)arg2 forInteractionInformation:(id)arg3;
 - (void)didDismissSearchController:(id)arg1;
 - (void)willDismissSearchController:(id)arg1;
 - (void)didPresentSearchController:(id)arg1;

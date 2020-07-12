@@ -22,6 +22,8 @@
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+- (id)contextMenuFactoryWithURI:(id)arg1;
+- (id)vocalRemovalButtonFactoryWithURI:(id)arg1;
 - (id)footerViewFactoryWithURI:(id)arg1;
 - (id)fullscreenViewFactoryWithURI:(id)arg1;
 - (void)logUBIInteraction:(id)arg1;

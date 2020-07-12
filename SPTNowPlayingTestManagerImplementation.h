@@ -10,7 +10,7 @@
 #import "SPTNowPlayingTestManager-Protocol.h"
 
 @class NSString, SPTNowPlayingFeatureProperties, SPTNowPlayingScrollConfiguration, SPTObserverManager;
-@protocol SPTAbbaFeatureFlags, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTLocalSettings;
+@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTLocalSettings;
 
 @interface SPTNowPlayingTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTNowPlayingTestManager>
 {
@@ -28,7 +28,6 @@
     _Bool _podcastChaptersTestEnabled;
     _Bool _concertCardsTestEnabled;
     SPTNowPlayingFeatureProperties *_remoteConfigurationProperties;
-    id <SPTAbbaFeatureFlags> _featureFlags;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     SPTObserverManager *_observerManager;
@@ -76,7 +75,6 @@
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-@property(readonly, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) SPTNowPlayingFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 - (void).cxx_destruct;
 - (void)updateCurrentScrollConfiguration;
@@ -106,7 +104,7 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)dealloc;
-- (id)initWithAbbaFeatureFlags:(id)arg1 featureFlagFactory:(id)arg2 freeTierEnabledSignal:(id)arg3 localSettings:(id)arg4 remoteConfigurationResolver:(id)arg5;
+- (id)initWithFeatureFlagFactory:(id)arg1 freeTierEnabledSignal:(id)arg2 localSettings:(id)arg3 remoteConfigurationResolver:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

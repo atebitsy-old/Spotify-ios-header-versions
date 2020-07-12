@@ -9,6 +9,7 @@
 @class NSError, NSStream;
 
 @protocol SPTVoiceLibraryOutputStreamDelegate <NSObject>
+- (void)didEncounterEndOfOutputStream;
 - (void)outputStream:(NSStream *)arg1 didFailWithError:(NSError *)arg2;
 
 @optional

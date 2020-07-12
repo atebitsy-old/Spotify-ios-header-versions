@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSData, NSDictionary, NSError, UNNotification, UNNotificationResponse;
+@class NSData, NSDictionary, NSError, UNNotification, UNNotificationResponse, UNUserNotificationCenter;
 
 @protocol SPTNotificationSystemDelegate <NSObject>
+- (void)userNotificationCenter:(UNUserNotificationCenter *)arg1 openSettingsForNotification:(UNNotification *)arg2;
 - (void)handleNotificationWithResponse:(UNNotificationResponse *)arg1 completionHandler:(void (^)(void))arg2;
 - (void)handleNotification:(UNNotification *)arg1 completionHandler:(void (^)(unsigned long long))arg2;
 - (void)handleIncomingRemoteNotification:(NSDictionary *)arg1;

@@ -13,6 +13,7 @@
 
 @interface SPTInAppMessageCardMessageController : NSObject <SPTInAppMessageCardMessagePriorityDeciderDelegate>
 {
+    _Bool _cancelPresentation;
     SPTInAppMessageCardMessagePresentationController *_cardMessagePresentationController;
     SPTInAppMessageCardMessageParser *_cardMessageParser;
     id <SPTSlateManager> _slateManager;
@@ -27,6 +28,7 @@
     id <SPTAuthController> _authController;
 }
 
+@property(nonatomic) _Bool cancelPresentation; // @synthesize cancelPresentation=_cancelPresentation;
 @property(retain, nonatomic) id <SPTAuthController> authController; // @synthesize authController=_authController;
 @property(readonly, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
@@ -40,6 +42,7 @@
 @property(retain, nonatomic) SPTInAppMessageCardMessageParser *cardMessageParser; // @synthesize cardMessageParser=_cardMessageParser;
 @property(retain, nonatomic) SPTInAppMessageCardMessagePresentationController *cardMessagePresentationController; // @synthesize cardMessagePresentationController=_cardMessagePresentationController;
 - (void).cxx_destruct;
+- (void)cancelMessagePresentation:(id)arg1;
 - (void)presentMessage:(id)arg1 forTrigger:(id)arg2;
 - (void)cardMessagePriorityDeciderDidFetchMessage:(id)arg1 forTrigger:(id)arg2;
 - (id)initWithParser:(id)arg1 slateManager:(id)arg2 slateBuilderProvider:(id)arg3 actionFactory:(id)arg4 serviceLogger:(id)arg5 carDetector:(id)arg6 offlineModeState:(id)arg7 feedbackPresentationController:(id)arg8 crashReporter:(id)arg9 pushPermissionRequestor:(id)arg10 authController:(id)arg11;

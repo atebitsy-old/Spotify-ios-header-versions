@@ -13,7 +13,8 @@
     // Error parsing type: , name: pushBackendRequestAPNSKey
     // Error parsing type: , name: pushBackendRequestProdKey
     // Error parsing type: , name: pushBackendRequestTestKey
-    // Error parsing type: , name: networkService
+    // Error parsing type: , name: dataLoader
+    // Error parsing type: , name: logger
 }
 
 - (void).cxx_destruct;

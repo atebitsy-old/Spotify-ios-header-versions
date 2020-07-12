@@ -14,21 +14,17 @@
 {
     GLUEGradientStyle *_gradientStyle;
     GLUEImageStyle *_backgroundImageStyle;
-    GLUEImageStyle *_mainImageStyle;
     GLUEImageStyle *_logoImageStyle;
     SPTEncoreTypeStyle *_backgroundLabelStyle;
     SPTEncoreTypeStyle *_titleLabelStyle;
-    SPTEncoreTypeStyle *_metadataLabelStyle;
     SPTEncoreTypeStyle *_subtitleLabelStyle;
 }
 
 + (id)defaultStyleWithTheme:(id)arg1;
 @property(copy, nonatomic) SPTEncoreTypeStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
-@property(copy, nonatomic) SPTEncoreTypeStyle *metadataLabelStyle; // @synthesize metadataLabelStyle=_metadataLabelStyle;
 @property(copy, nonatomic) SPTEncoreTypeStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) SPTEncoreTypeStyle *backgroundLabelStyle; // @synthesize backgroundLabelStyle=_backgroundLabelStyle;
 @property(copy, nonatomic) GLUEImageStyle *logoImageStyle; // @synthesize logoImageStyle=_logoImageStyle;
-@property(copy, nonatomic) GLUEImageStyle *mainImageStyle; // @synthesize mainImageStyle=_mainImageStyle;
 @property(copy, nonatomic) GLUEImageStyle *backgroundImageStyle; // @synthesize backgroundImageStyle=_backgroundImageStyle;
 @property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
 - (void).cxx_destruct;

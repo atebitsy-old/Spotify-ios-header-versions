@@ -7,9 +7,10 @@
 #import "SPTFreeTierPlaylistHeaderConfiguration-Protocol.h"
 
 @class GLUEEntityRowStyle, NSArray;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayObserver;
 
 @protocol SPTFreeTierPlaylistConfiguration <SPTFreeTierPlaylistHeaderConfiguration>
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayObserver> playObserver;
 @property(nonatomic) _Bool excludeAllEpisodes;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> cellProviderDelegate;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel;
@@ -20,6 +21,7 @@
 @property(readonly, copy, nonatomic) NSArray *cellProviders;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistHeaderProvider> headerProvider;
 @property(readonly, copy, nonatomic) GLUEEntityRowStyle *rowStyle;
+@property(readonly, nonatomic) _Bool useForceLinearPlay;
 @property(readonly, nonatomic) _Bool useBarButtons;
 @property(readonly, nonatomic) long long headerType;
 @end

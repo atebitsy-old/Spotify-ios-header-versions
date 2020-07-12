@@ -7,15 +7,15 @@
 #import <objc/NSObject.h>
 
 #import "GLUEStyle-Protocol.h"
+#import "SPTLoginViewWithActionButtonsStyleable-Protocol.h"
 
-@class GLUEButtonStyle, GLUELabelStyle, NSString, UIColor;
+@class GLUELabelStyle, NSDictionary, NSString, UIColor;
 
-@interface SPTLoginIntentLedStartViewStyle : NSObject <GLUEStyle>
+@interface SPTLoginIntentLedStartViewStyle : NSObject <GLUEStyle, SPTLoginViewWithActionButtonsStyleable>
 {
+    NSDictionary *buttonStyles;
     UIColor *_backgroundColor;
     GLUELabelStyle *_buttonHeadingLabelStyle;
-    GLUEButtonStyle *_continueWithEmailButtonStyle;
-    GLUEButtonStyle *_continueWithFacebookButtonStyle;
     double _buttonsHeadingBottomMargin;
     double _buttonSeparatorMargin;
     double _buttonsEdgeMargin;
@@ -28,10 +28,9 @@
 @property(nonatomic) double buttonsEdgeMargin; // @synthesize buttonsEdgeMargin=_buttonsEdgeMargin;
 @property(nonatomic) double buttonSeparatorMargin; // @synthesize buttonSeparatorMargin=_buttonSeparatorMargin;
 @property(nonatomic) double buttonsHeadingBottomMargin; // @synthesize buttonsHeadingBottomMargin=_buttonsHeadingBottomMargin;
-@property(copy, nonatomic) GLUEButtonStyle *continueWithFacebookButtonStyle; // @synthesize continueWithFacebookButtonStyle=_continueWithFacebookButtonStyle;
-@property(copy, nonatomic) GLUEButtonStyle *continueWithEmailButtonStyle; // @synthesize continueWithEmailButtonStyle=_continueWithEmailButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *buttonHeadingLabelStyle; // @synthesize buttonHeadingLabelStyle=_buttonHeadingLabelStyle;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
+@property(copy, nonatomic) NSDictionary *buttonStyles; // @synthesize buttonStyles;
 - (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

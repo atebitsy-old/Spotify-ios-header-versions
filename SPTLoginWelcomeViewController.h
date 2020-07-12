@@ -8,29 +8,29 @@
 
 #import "SPTLoginThirdPartyLoginHandlerDelegate-Protocol.h"
 #import "SPTLoginViewControllerProtocol-Protocol.h"
-#import "SPTLoginViewWithActionButtonsDelegate-Protocol.h"
+#import "SPTLoginViewControllerWithManagedActionButtons-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
 @class NSString, NSURL, SPTLoginActionButtonManager, SPTLoginTheme, SPTLoginWelcomeView, SPTLoginWelcomeViewModel, SPTProgressView;
 @protocol GLUEImageLoader, SPTPageContainer;
 
-@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTLoginViewWithActionButtonsDelegate, SPTPageController, SPTLoginViewControllerProtocol>
+@interface SPTLoginWelcomeViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerProtocol, SPTLoginViewControllerWithManagedActionButtons>
 {
     _Bool performLogout;
     _Bool forgetUserAfterLogout;
+    SPTLoginActionButtonManager *_actionButtonManager;
     SPTLoginWelcomeViewModel *_viewModel;
     SPTLoginTheme *_theme;
     SPTProgressView *_progressIndicator;
     id <GLUEImageLoader> _imageLoader;
-    SPTLoginActionButtonManager *_actionButtonManager;
 }
 
-@property(readonly, nonatomic) SPTLoginActionButtonManager *actionButtonManager; // @synthesize actionButtonManager=_actionButtonManager;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) SPTProgressView *progressIndicator; // @synthesize progressIndicator=_progressIndicator;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginWelcomeViewModel *viewModel; // @synthesize viewModel=_viewModel;
+@property(readonly, nonatomic) SPTLoginActionButtonManager *actionButtonManager; // @synthesize actionButtonManager=_actionButtonManager;
 @property(nonatomic) _Bool forgetUserAfterLogout; // @synthesize forgetUserAfterLogout;
 @property(nonatomic) _Bool performLogout; // @synthesize performLogout;
 - (void).cxx_destruct;

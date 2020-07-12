@@ -15,7 +15,6 @@
 @interface SPTSocialListeningDataLoader : NSObject <SPTDataLoaderDelegate, SPTSocialListeningListenTogetherDataLoader>
 {
     _Bool _isLoading;
-    _Bool _getOrCreateSessionRequestQueued;
     id <SPTSocialListeningDataLoaderDelegate> delegate;
     SPTDataLoader *_dataLoader;
     id <SPTCosmosDictionaryDataLoader> _cosmosDictionaryDataLoader;
@@ -24,9 +23,10 @@
     id <SPTCosmosDictionaryDataLoaderRequestToken> _sessionStateSubscriptionToken;
     NSString *_physicalDeviceID;
     CDUnknownBlockType _completionHander;
+    unsigned long long _requestQueued;
 }
 
-@property _Bool getOrCreateSessionRequestQueued; // @synthesize getOrCreateSessionRequestQueued=_getOrCreateSessionRequestQueued;
+@property unsigned long long requestQueued; // @synthesize requestQueued=_requestQueued;
 @property(copy, nonatomic) CDUnknownBlockType completionHander; // @synthesize completionHander=_completionHander;
 @property(copy, nonatomic) NSString *physicalDeviceID; // @synthesize physicalDeviceID=_physicalDeviceID;
 @property _Bool isLoading; // @synthesize isLoading=_isLoading;

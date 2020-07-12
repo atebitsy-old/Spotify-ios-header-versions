@@ -7,12 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileHiddenContentEventFactory, SPTViewLogger;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileHiddenContentEventFactory;
 
 @interface SPTHiddenContentLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
-    id <SPTViewLogger> _viewLogger;
     id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileHiddenContentEventFactory> _eventFactory;
     NSURL *_pageURL;
@@ -21,7 +20,6 @@
 @property(retain, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(retain, nonatomic) id <SPTUBIMobileHiddenContentEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-@property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logArtistContextMenuSelectedAtIndex:(unsigned long long)arg1 artistURI:(id)arg2;
@@ -31,11 +29,7 @@
 - (void)logArtistSelectedAtIndex:(unsigned long long)arg1 artistURI:(id)arg2;
 - (void)logTabControlChangedToArtists:(_Bool)arg1;
 - (void)logItemListImpressionForArists:(_Bool)arg1;
-- (void)logViewDidFailToLoadWithPageIdentifier:(id)arg1;
-- (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1;
-- (void)logViewDidLoadWithPageIdentifier:(id)arg1;
-- (void)logViewLoadingStartedWithPageIdentifier:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventFactory:(id)arg3 ubiLogger:(id)arg4;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
 
 @end
 

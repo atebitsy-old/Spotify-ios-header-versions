@@ -22,6 +22,7 @@
 - (void).cxx_destruct;
 - (void)logInteractionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 targetURI:(id)arg5 type:(id)arg6 intent:(id)arg7;
 - (id)featureId;
+- (void)logSpeedControlMenuButtonTapped;
 - (void)logSleepTimerButtonTapped;
 - (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;
 - (void)logHeartButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(id)arg2;

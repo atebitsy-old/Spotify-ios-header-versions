@@ -19,6 +19,7 @@
 - (void).cxx_destruct;
 - (void)logRemoveTrackFromQueue:(id)arg1;
 - (void)logAddTrackToQueue:(id)arg1;
+- (void)logPlaybackSpeedButtonTapped;
 - (void)logSkip15SecondsBackwardTapped;
 - (void)logSkip15SecondsForwardTapped;
 - (void)logSleepTimerButtonTapped;

@@ -34,7 +34,7 @@
 - (id)durationOrTimeLeftStringWithEpisodeDuration:(double)arg1 listenedDuration:(double)arg2 isPlayed:(_Bool)arg3;
 - (id)fixedPublicationAndDurationWithEpisodePublicationDate:(id)arg1 currentDate:(id)arg2 episodeDuration:(double)arg3;
 - (id)relativePublicationAndTimeLeftWithPublicationDate:(id)arg1 currentDate:(id)arg2 duration:(double)arg3 listenedDuration:(double)arg4;
-- (id)relativePublicationAndDurationWithEpisodePublicationDate:(id)arg1 currentDate:(id)arg2 episodeDuration:(double)arg3 listenedDuration:(double)arg4 isPlayed:(_Bool)arg5 isAudioMediaType:(_Bool)arg6;
+- (id)relativePublicationAndDurationWithEpisodePublicationDate:(id)arg1 currentDate:(id)arg2 episodeDuration:(double)arg3 listenedDuration:(double)arg4 isPlayed:(_Bool)arg5;
 - (id)lowercaseRelativePublicationAndFixedDurationWithPublicationDate:(id)arg1 currentDate:(id)arg2 duration:(double)arg3;
 - (id)relativePublicationAndFixedDurationWithPublicationDate:(id)arg1 currentDate:(id)arg2 duration:(double)arg3;
 - (id)initWithCalendar:(id)arg1 locale:(id)arg2;

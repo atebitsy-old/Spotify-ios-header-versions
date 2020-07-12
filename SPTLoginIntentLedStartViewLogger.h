@@ -6,23 +6,17 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginErrorLogger;
 @protocol SPTLoginLogger;
 
 @interface SPTLoginIntentLedStartViewLogger : NSObject
 {
     id <SPTLoginLogger> _logger;
-    SPTLoginErrorLogger *_errorLogger;
     unsigned long long _intent;
 }
 
 @property(readonly, nonatomic) unsigned long long intent; // @synthesize intent=_intent;
-@property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
-- (void)logUserDidTapAppleButton;
-- (void)logUserDidTapFacebookButton;
-- (void)logUserDidTapEmailButton;
 - (void)logUserDidSeeView;
 - (id)initWithLogger:(id)arg1 intent:(unsigned long long)arg2;
 

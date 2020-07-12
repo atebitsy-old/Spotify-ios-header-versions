@@ -12,6 +12,7 @@
 @interface SPTHomeViewModelLoaderFactory : NSObject
 {
     _Bool _isSeedASessionEnabled;
+    _Bool _isPageLoaderEnabled;
     SPTHomeContentOperationFactory *_contentOperationFactory;
     id <SPTHugsFactory> _hugsFactory;
     HUBComponentDefaults *_componentDefaults;
@@ -19,6 +20,7 @@
     id <HUBContentOperation><SPTHomeViewControllerDelegate> _tooltipContentOperation;
 }
 
+@property(readonly, nonatomic) _Bool isPageLoaderEnabled; // @synthesize isPageLoaderEnabled=_isPageLoaderEnabled;
 @property(readonly, nonatomic) _Bool isSeedASessionEnabled; // @synthesize isSeedASessionEnabled=_isSeedASessionEnabled;
 @property(retain, nonatomic) id <HUBContentOperation><SPTHomeViewControllerDelegate> tooltipContentOperation; // @synthesize tooltipContentOperation=_tooltipContentOperation;
 @property(retain, nonatomic) id <HUBContentOperation><SPTHomeCacheRenderDelegate> errorHandlerContentOperation; // @synthesize errorHandlerContentOperation=_errorHandlerContentOperation;
@@ -28,7 +30,7 @@
 - (void).cxx_destruct;
 - (id)createRemoteViewModelLoaderForContentURL:(id)arg1 sourceIdentifier:(id)arg2 overrides:(id)arg3;
 - (id)createCachedViewModelLoaderWithOverrides:(id)arg1;
-- (id)initWithContentOperationFactory:(id)arg1 hugsFactory:(id)arg2 seedASessionEnabled:(_Bool)arg3;
+- (id)initWithContentOperationFactory:(id)arg1 hugsFactory:(id)arg2 seedASessionEnabled:(_Bool)arg3 pageLoaderEnabled:(_Bool)arg4;
 
 @end
 

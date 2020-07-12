@@ -32,9 +32,6 @@
 - (void)addAvailableTracks:(id)arg1 toPlaylist:(id)arg2;
 - (id)consumeAvailableTracksForPlaylist:(id)arg1 numberOfTracks:(unsigned long long)arg2;
 - (void)addCachedTracks:(id)arg1 forPlaylist:(id)arg2;
-- (void)discardCachedTracks:(id)arg1 forPlaylist:(id)arg2;
-- (id)cachedTracksForPlaylistURL:(id)arg1;
-- (id)returnedTracksForPlaylistURL:(id)arg1;
 - (id)initWithDataLoader:(id)arg1;
 
 // Remaining properties

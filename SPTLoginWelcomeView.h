@@ -19,7 +19,7 @@
     UIImageView *_spotifyLogo;
     GLUELabel *_helpTextLabel;
     NSLayoutConstraint *_spotifyLogoTopEdgeMinimum;
-    NSLayoutConstraint *_spotifyLogoTopEdgePrefered;
+    NSLayoutConstraint *_spotifyLogoTopEdgePreferred;
     NSLayoutConstraint *_spotifyLogoBottomEdge;
     NSLayoutConstraint *_buttonsContainerRegularSizeClassWidth;
     NSLayoutConstraint *_buttonsContainerLeadingMargin;
@@ -44,7 +44,7 @@
 @property(retain, nonatomic) NSLayoutConstraint *buttonsContainerLeadingMargin; // @synthesize buttonsContainerLeadingMargin=_buttonsContainerLeadingMargin;
 @property(retain, nonatomic) NSLayoutConstraint *buttonsContainerRegularSizeClassWidth; // @synthesize buttonsContainerRegularSizeClassWidth=_buttonsContainerRegularSizeClassWidth;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoBottomEdge; // @synthesize spotifyLogoBottomEdge=_spotifyLogoBottomEdge;
-@property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgePrefered; // @synthesize spotifyLogoTopEdgePrefered=_spotifyLogoTopEdgePrefered;
+@property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgePreferred; // @synthesize spotifyLogoTopEdgePreferred=_spotifyLogoTopEdgePreferred;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgeMinimum; // @synthesize spotifyLogoTopEdgeMinimum=_spotifyLogoTopEdgeMinimum;
 @property(retain, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
 @property(readonly, nonatomic) UIImageView *spotifyLogo; // @synthesize spotifyLogo=_spotifyLogo;

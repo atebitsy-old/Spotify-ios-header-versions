@@ -55,6 +55,7 @@
 @property(readonly, nonatomic) _Bool shouldChangePlaybackPositionCommandBeEnabled;
 @property(readonly, nonatomic) _Bool shouldChangePlaybackPositionCommandBeAvailable;
 @property(readonly, nonatomic) _Bool shouldPauseCommandBeEnabled;
+@property(readonly, nonatomic) _Bool shouldSkipPodcastEpisodeInsteadOfSeeking;
 @property(readonly, nonatomic) _Bool shouldSeekBackwardCommandBeEnabled;
 @property(readonly, nonatomic) _Bool shouldSeekBackwardCommandBeAvailable;
 @property(readonly, nonatomic) _Bool shouldSeekForwardCommandBeEnabled;

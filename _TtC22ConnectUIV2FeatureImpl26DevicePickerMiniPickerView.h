@@ -10,6 +10,8 @@
 {
     // Error parsing type: , name: pickerView
     // Error parsing type: , name: dismissClosure
+    // Error parsing type: , name: scrollObserverManager
+    // Error parsing type: , name: currentMode
     // Error parsing type: , name: lastPanLocation
     // Error parsing type: , name: heightConstraint
     // Error parsing type: , name: miniPickerSwipeGesture

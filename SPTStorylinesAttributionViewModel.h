@@ -9,7 +9,7 @@
 #import "FollowModelObserver-Protocol.h"
 #import "SPTStorylinesAttributionLoaderDelegate-Protocol.h"
 
-@class NSCache, NSString, NSURL, SPTStorylinesAttributionLoader, SPTStorylinesLogger;
+@class NSCache, NSString, NSURL, SPTStorylinesAttributionLoader, SPTStorylinesUBILogger;
 @protocol SPTLinkDispatcher, SPTPageRegistry, SPTStorylinesAttributionViewModelDelegate;
 
 @interface SPTStorylinesAttributionViewModel : NSObject <SPTStorylinesAttributionLoaderDelegate, FollowModelObserver>
@@ -18,14 +18,14 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTPageRegistry> _pageRegistry;
     SPTStorylinesAttributionLoader *_attributionLoader;
-    SPTStorylinesLogger *_logger;
+    SPTStorylinesUBILogger *_logger;
     NSCache *_followModelCache;
     NSURL *_pendingUri;
 }
 
 @property(retain, nonatomic) NSURL *pendingUri; // @synthesize pendingUri=_pendingUri;
 @property(retain, nonatomic) NSCache *followModelCache; // @synthesize followModelCache=_followModelCache;
-@property(retain, nonatomic) SPTStorylinesLogger *logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTStorylinesUBILogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTStorylinesAttributionLoader *attributionLoader; // @synthesize attributionLoader=_attributionLoader;
 @property(readonly, nonatomic) id <SPTPageRegistry> pageRegistry; // @synthesize pageRegistry=_pageRegistry;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;

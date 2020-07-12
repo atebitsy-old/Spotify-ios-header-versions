@@ -10,10 +10,12 @@
 
 @interface _TtC23MusicVideoUIFeatureImpl27MusicVideoCardComponentView : HUBComponentView
 {
-    // Error parsing type: , name: eventHandler
-    // Error parsing type: , name: musicCardView
-    // Error parsing type: , name: style
     // Error parsing type: , name: $__lazy_storage_$_contentViewClickBehavior
+    // Error parsing type: , name: musicCardView
+    // Error parsing type: , name: videoSurface
+    // Error parsing type: , name: eventHandler
+    // Error parsing type: , name: videoPreviewSourceId
+    // Error parsing type: , name: style
 }
 
 - (void).cxx_destruct;

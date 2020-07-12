@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTPlaylistPlatformFieldURL;
+@class NSURL;
 
 @protocol SPTFreeTierPlaylistIsTrackActive <NSObject>
-- (_Bool)isTrackActive:(id <SPTPlaylistPlatformFieldURL>)arg1;
+- (_Bool)isTrackActive:(NSURL *)arg1;
 @end
 

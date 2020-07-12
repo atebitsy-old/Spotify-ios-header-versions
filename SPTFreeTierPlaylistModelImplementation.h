@@ -75,7 +75,7 @@
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)fetchPlayContextWithCompletion:(CDUnknownBlockType)arg1;
 - (void)playWithWithPlayOptions:(id)arg1 platformPlayOptions:(id)arg2;
-- (id)playOptionsForShufflePlay:(_Bool)arg1 skipToTrack:(id)arg2;
+- (id)playOptionsWithShuffleOverride:(id)arg1 skipToTrack:(id)arg2;
 - (id)playlistPlatformPlayOptionsForShufflePlay:(_Bool)arg1 playOrigin:(id)arg2;
 - (void)addTrackURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)removeTracks:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -99,8 +99,8 @@
 - (_Bool)showCollectionConfirmation;
 - (void)changeFollowState:(_Bool)arg1;
 - (void)playWithPlayOptions:(id)arg1 andPlayOrigin:(id)arg2;
-- (void)playTrack:(id)arg1 andPlayOrigin:(id)arg2;
-- (void)playTrackEntity:(id)arg1 andPlayOrigin:(id)arg2;
+- (void)playTrack:(id)arg1 andPlayOrigin:(id)arg2 shuffleOverride:(id)arg3;
+- (void)playTrackEntity:(id)arg1 andPlayOrigin:(id)arg2 shuffleOverride:(id)arg3;
 - (void)playTrackURL:(id)arg1 andPlayOrigin:(id)arg2;
 - (void)playWithPlayOrigin:(id)arg1;
 - (void)shufflePlayWithPlayOrigin:(id)arg1;

@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierPlaylistFeatureProperties, SPTFreeTierPlaylistHandlerRegistryImplementation;
-@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAdsService, SPTAlgotorialSharingService, SPTAssistedCurationUIService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEncoreIntegrationService, SPTEventSenderService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierPlaylistService, SPTFreeTierPreCurationService, SPTFreeTierRecommendationsService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistExtenderService, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPodcastOffliningService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTVisualRefreshIntegrationService, _TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_, _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_, _TtP25PlaylistTrackCloudFeature28SPTPlaylistTrackCloudService_;
+@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAlgotorialSharingService, SPTAssistedCurationUIService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEncoreIntegrationService, SPTEventSenderService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierPlaylistService, SPTFreeTierRecommendationsService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistExtenderService, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPodcastOffliningService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTVisualRefreshIntegrationService, _TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_, _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_, _TtP25PlaylistTrackCloudFeature28SPTPlaylistTrackCloudService_;
 
 @interface SPTFreeTierPlaylistUIServiceImplementation : NSObject <SPTFreeTierPlaylistUIService>
 {
@@ -28,9 +28,7 @@
     id <SPTNetworkService> _networkService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTPlayerFeature> _playerService;
-    id <SPTFreeTierPreCurationService> _preCurationService;
     id <SPTFreeTierRecommendationsService> _recommendationsService;
-    id <SPTAdsService> _adsService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTCreatePlaylistService> _createPlaylistService;
@@ -88,9 +86,7 @@
 @property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
-@property(nonatomic) __weak id <SPTAdsService> adsService; // @synthesize adsService=_adsService;
 @property(nonatomic) __weak id <SPTFreeTierRecommendationsService> recommendationsService; // @synthesize recommendationsService=_recommendationsService;
-@property(nonatomic) __weak id <SPTFreeTierPreCurationService> preCurationService; // @synthesize preCurationService=_preCurationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
@@ -112,7 +108,6 @@
 - (id)allSongsDataSourceForURL:(id)arg1 formatListType:(id)arg2;
 - (id)providerFooterProviderForPlaylistURL:(id)arg1 context:(id)arg2;
 - (id)provideLoggerForURI:(id)arg1;
-- (id)provideSponsoredViewModelForURL:(id)arg1;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withContext:(id)arg2 playlistModel:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4;
 - (id)loadableForPlaylistWithURL:(id)arg1 withPageContext:(id)arg2;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withPageContext:(id)arg2 playlistModel:(id)arg3 initialEntity:(id)arg4;

@@ -23,7 +23,6 @@
     double _duration;
     NSMutableArray *_videoFormatEvents;
     NSMutableArray *_audioFormatEvents;
-    double _startBitrate;
     long long _bytesDownloaded;
     SPTVideoBufferEvent *_currentBufferEvent;
     SPTVideoFormatEvent *_currentVideoFormatEvent;
@@ -46,7 +45,6 @@
 @property(retain, nonatomic) SPTVideoBufferEvent *currentBufferEvent; // @synthesize currentBufferEvent=_currentBufferEvent;
 @property(nonatomic) _Bool messageSent; // @synthesize messageSent=_messageSent;
 @property(nonatomic) long long bytesDownloaded; // @synthesize bytesDownloaded=_bytesDownloaded;
-@property(readonly, nonatomic) double startBitrate; // @synthesize startBitrate=_startBitrate;
 @property(retain, nonatomic) NSMutableArray *audioFormatEvents; // @synthesize audioFormatEvents=_audioFormatEvents;
 @property(retain, nonatomic) NSMutableArray *videoFormatEvents; // @synthesize videoFormatEvents=_videoFormatEvents;
 @property(nonatomic) double duration; // @synthesize duration=_duration;
@@ -87,6 +85,7 @@
 - (void)willLoadManifestWithTimestamp:(double)arg1;
 - (void)willEndPlaybackWithNextIdentity:(id)arg1 timestamp:(double)arg2;
 - (void)didCreatePlaybackInBackground:(_Bool)arg1 timestamp:(double)arg2;
+@property(readonly, nonatomic) double startBitrate;
 @property(readonly, nonatomic) _Bool isEncrypted;
 - (id)calculatePlaybackStatisticsWithPlayedRanges:(id)arg1;
 - (id)calculatePlaybackStatisticsAtPosition:(double)arg1;

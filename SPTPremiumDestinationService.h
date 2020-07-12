@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationLogger, SPTPremiumDestinationSettingsPageBuilder, SPTUpsellAccountLogger;
+@class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationLogger, SPTPremiumDestinationSettingsPageBuilder, SPTPremiumDestinationTabBarBadgeController, SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater, SPTUpsellAccountLogger;
 @protocol NSObject, SPTAccountService, SPTContainerUIService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLogCenter, SPTMandatoryPremiumTrialService, SPTNavigationFeature, SPTNavigationListProvider, SPTNetworkService, SPTPremiumDestinationExperiments, SPTPremiumDestinationUIService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTPremiumDestinationService : SPTUIPageService
@@ -32,6 +32,8 @@
     id <SPTFeatureFlagSignal> _freeTierFeatureFlagSignal;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTPremiumDestinationExperiments> _experiments;
+    SPTPremiumDestinationTabBarBadgeController *_tabBarBadgeController;
+    SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater *_tabBarBadgeLastSeenDateUpdater;
     SPTPremiumDestinationHubManager *_hubManager;
     id <SPTNavigationListProvider> _navigationListProvider;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
@@ -47,6 +49,8 @@
 @property(retain, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(retain, nonatomic) id <SPTNavigationListProvider> navigationListProvider; // @synthesize navigationListProvider=_navigationListProvider;
 @property(retain, nonatomic) SPTPremiumDestinationHubManager *hubManager; // @synthesize hubManager=_hubManager;
+@property(retain, nonatomic) SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater *tabBarBadgeLastSeenDateUpdater; // @synthesize tabBarBadgeLastSeenDateUpdater=_tabBarBadgeLastSeenDateUpdater;
+@property(retain, nonatomic) SPTPremiumDestinationTabBarBadgeController *tabBarBadgeController; // @synthesize tabBarBadgeController=_tabBarBadgeController;
 @property(retain, nonatomic) id <SPTPremiumDestinationExperiments> experiments; // @synthesize experiments=_experiments;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
@@ -69,6 +73,7 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTAccountService> accountService; // @synthesize accountService=_accountService;
 - (void).cxx_destruct;
+- (id)provideTabBarBadgeDataLoader;
 - (id)provideNavigationItemDecorator;
 - (id)providePremiumDestinationGLUETheme;
 - (id)providePremiumDestinationHubManagerConfiguration;
@@ -85,6 +90,7 @@
 - (void)loadExperiments;
 - (void)loadFreeTierFeatureFlagSignal;
 - (void)loadLoggers;
+- (void)initialViewDidAppear;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -14,7 +14,7 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTCollectionArtistLogger, SPTCollectionEmptyEntityFooterView, SPTEntityTableHeaderView, SPTInfoView, SPTProgressView, SPTTableViewOfflineSwitchCell;
+@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTCollectionArtistLogger, SPTCollectionEmptyEntityFooterView, SPTEntityTableHeaderView, SPTInfoView, SPTTableViewOfflineSwitchCell;
 @protocol GLUETheme, SPTBarButtonItemManager, SPTCollectionArtistModel, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTImageLoader, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPageContainer, SPTProductState, SPTShelves;
 
 @interface SPTCollectionArtistViewController : SPTableViewController <SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTProductStateObserver, SPTOfflineSwitchDelegate, SPTBarButtonItemManagerObserver, SPTCollectionArtistModelDelegate, SPTPageController>
@@ -37,14 +37,12 @@
     GLUEButton *_followButton;
     SPTTableViewOfflineSwitchCell *_offlineSwitchCell;
     SPTCollectionEmptyEntityFooterView *_emptyArtistFooterView;
-    SPTProgressView *_progressView;
     SPTInfoView *_offlineView;
 }
 
 @property(nonatomic) _Bool hasSetupContentOffset; // @synthesize hasSetupContentOffset=_hasSetupContentOffset;
 @property(nonatomic, getter=isDataLoaded) _Bool dataLoaded; // @synthesize dataLoaded=_dataLoaded;
 @property(retain, nonatomic) SPTInfoView *offlineView; // @synthesize offlineView=_offlineView;
-@property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTCollectionEmptyEntityFooterView *emptyArtistFooterView; // @synthesize emptyArtistFooterView=_emptyArtistFooterView;
 @property(retain, nonatomic) SPTTableViewOfflineSwitchCell *offlineSwitchCell; // @synthesize offlineSwitchCell=_offlineSwitchCell;
 @property(retain, nonatomic) GLUEButton *followButton; // @synthesize followButton=_followButton;

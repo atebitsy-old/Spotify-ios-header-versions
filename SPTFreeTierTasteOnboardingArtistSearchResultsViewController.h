@@ -6,20 +6,18 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTInstrumentationInteractionMediatorColleague-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
 @class NSString, NSURL, SPTFreeTierTasteOnboardingArtistSearchView, SPTFreeTierTasteOnboardingArtistSearchViewModel;
 @protocol SPTPageContainer;
 
-@interface SPTFreeTierTasteOnboardingArtistSearchResultsViewController : UIViewController <SPTInstrumentationInteractionMediatorColleague, SPTPageController>
+@interface SPTFreeTierTasteOnboardingArtistSearchResultsViewController : UIViewController <SPTPageController>
 {
     SPTFreeTierTasteOnboardingArtistSearchViewModel *_viewModel;
 }
 
 @property(readonly, nonatomic) SPTFreeTierTasteOnboardingArtistSearchViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
-- (void)mediator:(id)arg1 requiresDataForBuilder:(id)arg2 forInteractionInformation:(id)arg3;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)traitCollectionDidChange:(id)arg1;

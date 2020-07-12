@@ -15,7 +15,7 @@
     // Error parsing type: , name: navRouter
     // Error parsing type: , name: broadcaster
     // Error parsing type: , name: logger
-    // Error parsing type: , name: network
+    // Error parsing type: , name: networking
     // Error parsing type: , name: tracer
 }
 

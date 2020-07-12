@@ -8,7 +8,7 @@
 
 #import "SPTUBIService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTObserverManager, SPTUBIPageInstanceIdentifierProvider;
+@class NSString, SPTAllocationContext, SPTObserverManager, SPTUBIPageInstanceIdentifierProviderImplementation, SPTUBISessionServiceResponderImplementation;
 @protocol SPTContainerService, SPTDebugService, SPTEventSenderService;
 
 @interface SPTUBIServiceImplementation : NSObject <SPTUBIService>
@@ -16,13 +16,15 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTContainerService> _containerService;
     id <SPTDebugService> _debugService;
-    SPTUBIPageInstanceIdentifierProvider *_pageInstanceIdProvider;
+    SPTUBISessionServiceResponderImplementation *_sessionServiceResponder;
+    SPTUBIPageInstanceIdentifierProviderImplementation *_pageInstanceIdProvider;
     SPTObserverManager *_observerManager;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(retain, nonatomic) SPTUBIPageInstanceIdentifierProvider *pageInstanceIdProvider; // @synthesize pageInstanceIdProvider=_pageInstanceIdProvider;
+@property(retain, nonatomic) SPTUBIPageInstanceIdentifierProviderImplementation *pageInstanceIdProvider; // @synthesize pageInstanceIdProvider=_pageInstanceIdProvider;
+@property(retain, nonatomic) SPTUBISessionServiceResponderImplementation *sessionServiceResponder; // @synthesize sessionServiceResponder=_sessionServiceResponder;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
@@ -35,6 +37,7 @@
 - (id)provideLogger;
 - (void)unload;
 - (void)load;
+- (id)provideSessionServiceResponder;
 - (id)provideUserBehaviourInstrumentation;
 - (void)configureWithServices:(id)arg1;
 

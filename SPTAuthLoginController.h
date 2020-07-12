@@ -27,7 +27,7 @@
 - (id)loginTaskWithOneTimeTokenCredentials:(id)arg1 options:(id)arg2;
 - (id)loginTaskWithCredentials:(id)arg1 options:(id)arg2;
 - (id)loginTaskWithPhoneNumberIdentifier:(id)arg1 options:(id)arg2;
-- (id)loginTaskWithCppCredentials:(variant_217e0f36 *)arg1 options:(id)arg2;
+- (id)loginTaskWithCppCredentials:(variant_a76687c1 *)arg1 options:(id)arg2;
 - (struct LoginController *)cpp;
 - (void)destroy;
 - (void)dealloc;

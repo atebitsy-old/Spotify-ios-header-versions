@@ -7,7 +7,6 @@
 #import <objc/NSObject.h>
 
 #import "SPTDataLoaderDelegate-Protocol.h"
-#import "SPTInstrumentationInteractionMediatorColleague-Protocol.h"
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 #import "UISearchBarDelegate-Protocol.h"
@@ -16,7 +15,7 @@
 @class NSMutableArray, NSString, SPTDataLoader, SPTFreeTierTasteOnboardingArtistSearchInfoView, SPTFreeTierTasteOnboardingArtistSearchResultCellStyle, SPTFreeTierTasteOnboardingArtistSearchViewLogger, SPTFreeTierTasteOnboardingSession, SPTFreeTierTasteOnboardingTheme, UICollectionView;
 @protocol GLUEImageLoader, SPTFreeTierTasteOnboardingArtistSearchViewModelDelegate;
 
-@interface SPTFreeTierTasteOnboardingArtistSearchViewModel : NSObject <SPTDataLoaderDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchResultsUpdating, UISearchBarDelegate, SPTInstrumentationInteractionMediatorColleague>
+@interface SPTFreeTierTasteOnboardingArtistSearchViewModel : NSObject <SPTDataLoaderDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchResultsUpdating, UISearchBarDelegate>
 {
     _Bool _repeatVisit;
     _Bool _isLoadingMore;
@@ -56,7 +55,7 @@
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistSearchViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)performLoadMoreRequest;
-- (void)mediator:(id)arg1 requiresDataForBuilder:(id)arg2 forInteractionInformation:(id)arg3;
+- (void)logSelectedArtistWithCollectionView:(id)arg1 atIndexPath:(id)arg2;
 - (void)resetContentOffset;
 - (void)searchBarCancelButtonClicked:(id)arg1;
 - (void)searchBar:(id)arg1 textDidChange:(id)arg2;

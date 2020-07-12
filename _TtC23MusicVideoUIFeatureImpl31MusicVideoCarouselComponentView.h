@@ -10,12 +10,14 @@
 
 @interface _TtC23MusicVideoUIFeatureImpl31MusicVideoCarouselComponentView : HUBComponentView
 {
-    // Error parsing type: , name: childDelegate
     // Error parsing type: , name: carouselView
     // Error parsing type: , name: children
+    // Error parsing type: , name: didDisplayCells
+    // Error parsing type: , name: itemSize
     // Error parsing type: , name: focusEngine
     // Error parsing type: , name: style
-    // Error parsing type: , name: itemSize
+    // Error parsing type: , name: videoPlayerManager
+    // Error parsing type: , name: childDelegate
 }
 
 - (void).cxx_destruct;

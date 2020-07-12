@@ -8,32 +8,32 @@
 
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, NSTimer;
+@class NSString, SPTPlayerState;
 @protocol SPTEpisodeSegmentsEntity, SPTEpisodeSegmentsModel, SPTPlayer, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate;
 
 @interface SPTPodcastEpisodeFeaturedContentPlayer : NSObject <SPTPlayerObserver>
 {
     id <SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate> _delegate;
     id <SPTPlayer> _player;
-    NSTimer *_progressTimer;
+    SPTPlayerState *_currentState;
     id <SPTEpisodeSegmentsModel> _entitiesModel;
     id <SPTEpisodeSegmentsEntity> _currentPlayingEntity;
 }
 
 @property(retain, nonatomic) id <SPTEpisodeSegmentsEntity> currentPlayingEntity; // @synthesize currentPlayingEntity=_currentPlayingEntity;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsModel> entitiesModel; // @synthesize entitiesModel=_entitiesModel;
-@property(retain, nonatomic) NSTimer *progressTimer; // @synthesize progressTimer=_progressTimer;
+@property(retain, nonatomic) SPTPlayerState *currentState; // @synthesize currentState=_currentState;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)stopCurrentlyPlayingEntity;
-- (void)updatePodcastUIStateForCurrentPosition:(double)arg1;
-- (_Bool)isCurrentEpisodePlayingForState:(id)arg1;
-- (void)fetchProgressState:(id)arg1;
+- (void)updatePlayerState:(id)arg1;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
-- (void)updateAndPlayTrackForEntity:(id)arg1;
-- (void)updatePlayerStatePositionWithEntity:(id)arg1;
-- (void)refreshPlayerWithEntities:(id)arg1;
+- (_Bool)isCurrentEpisodePlaying;
+- (int)currentlyPlayingEntityIndex;
+- (void)updateAndPlayTrackForEntity:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)userDidSelectEntity:(int)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)refreshPlayerWithEntities:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)dealloc;
 - (id)initWithPlayer:(id)arg1;
 
 // Remaining properties

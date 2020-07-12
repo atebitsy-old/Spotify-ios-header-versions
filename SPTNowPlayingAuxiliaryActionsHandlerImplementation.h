@@ -84,6 +84,7 @@
 - (void)minimizePlayingView:(id)arg1;
 - (void)presentShareMenu:(id)arg1;
 - (void)presentConnectDevicePicker:(id)arg1;
+- (void)logSpeedControlMenuButtonTapped;
 - (void)presentSpeedControlMenuFromView:(id)arg1 inViewController:(id)arg2;
 - (void)logNegativeFeedbackResults;
 - (void)removeFromCollectionIfNeededWithConfirmation:(_Bool)arg1;

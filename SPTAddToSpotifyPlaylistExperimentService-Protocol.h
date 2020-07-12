@@ -6,11 +6,15 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTPlaylistModel, SPTPlaylistPlatformPlaylistDataLoader;
+@class NSURL;
+@protocol SPTAddToSpotifyPlaylistExperimentCellProvider, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistModel, SPTPlayOrigin, SPTPlayer, SPTPlaylistModel, SPTPlaylistPlatformPlaylistDataLoader, SPTPlaylistRoute;
 
 @protocol SPTAddToSpotifyPlaylistExperimentService <SPTService>
+- (_Bool)addToSpotifyPlaylistEnabledForURI:(NSURL *)arg1;
 - (_Bool)addToSpotifyPlaylistEnabled;
 - (id <SPTPlaylistPlatformPlaylistDataLoader>)provideAddToSpotifyPlaylistDataLoader;
 - (id <SPTPlaylistModel>)provideAddToSpotifyPlaylistModel;
+- (id <SPTPlaylistRoute>)providePlaylistRouteForURI:(NSURL *)arg1;
+- (id <SPTAddToSpotifyPlaylistExperimentCellProvider>)provideCellProviderWithmodel:(id <SPTFreeTierPlaylistModel>)arg1 originalPlaylistViewModel:(id <SPTFreeTierPlaylistDefaultHeaderViewModel>)arg2 player:(id <SPTPlayer>)arg3 playlistURI:(NSURL *)arg4 origin:(id <SPTPlayOrigin>)arg5;
 @end
 

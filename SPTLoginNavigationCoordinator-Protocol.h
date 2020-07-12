@@ -12,7 +12,6 @@
 - (void)openIntentLedStartScreen:(unsigned long long)arg1;
 - (void)openMethodLedStartScreen:(unsigned long long)arg1;
 - (void)openPhoneNumberScreen;
-- (void)openPhoneNumberContinueWithEmailScreen;
 - (void)openFacebookConfirmationScreenWithUserInfo:(NSDictionary *)arg1;
 - (void)openMagicLinkSentConfirmationScreenWithEmail:(NSString *)arg1;
 - (void)openRequestMagicLinkScreenWithEmail:(NSString *)arg1 error:(NSError *)arg2;

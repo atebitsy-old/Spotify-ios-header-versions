@@ -9,7 +9,7 @@
 #import "SPTArtistAboutService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTArtistAboutGLUETheme, SPTArtistAboutHubComponentFactoryImplementation, SPTArtistAboutModerationRegistrar;
-@protocol SPContextMenuFeature, SPTContainerService, SPTCoreService, SPTGLUEService, SPTModerationService, SPTNetworkService, SPTPerformanceMetricsService, SPTURIDispatchService;
+@protocol SPContextMenuFeature, SPTContainerService, SPTCoreService, SPTGLUEService, SPTModerationService, SPTNetworkService, SPTPerformanceMetricsService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTArtistAboutServiceImplementation : NSObject <SPTArtistAboutService>
 {
@@ -20,6 +20,7 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPContextMenuFeature> _contextMenuService;
+    id <SPTUBIService> _ubiService;
     id <SPTModerationService> _moderationService;
     SPTArtistAboutGLUETheme *_glueTheme;
     SPTArtistAboutHubComponentFactoryImplementation *_hubComponentFactory;
@@ -31,6 +32,7 @@
 @property(retain, nonatomic) SPTArtistAboutHubComponentFactoryImplementation *hubComponentFactory; // @synthesize hubComponentFactory=_hubComponentFactory;
 @property(retain, nonatomic) SPTArtistAboutGLUETheme *glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(nonatomic) __weak id <SPTModerationService> moderationService; // @synthesize moderationService=_moderationService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;

@@ -6,27 +6,26 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTLoginActionButtonsViewModel-Protocol.h"
 #import "SPTLoginThirdPartyLoginControllerDelegate-Protocol.h"
 
-@class NSArray, NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginTestManager, SPTLoginWelcomeViewImageryURLProvider, SPTLoginWelcomeViewLogger;
-@protocol SPTDialogController, SPTLoginNavigationCoordinator, SPTLoginStateController, SPTLoginThirdPartyLoginController, SPTLoginThirdPartyLoginHandlerDelegate;
+@class NSArray, NSString, SPTLoginAppleAuthorizationController, SPTLoginButtonActionHandler, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginTestManager, SPTLoginWelcomeViewImageryURLProvider, SPTLoginWelcomeViewLogger;
+@protocol SPTDialogController, SPTLoginStateController, SPTLoginThirdPartyLoginHandlerDelegate;
 
-@interface SPTLoginWelcomeViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate>
+@interface SPTLoginWelcomeViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate, SPTLoginActionButtonsViewModel>
 {
     _Bool _savedCredentialsDialogShownOnce;
     _Bool _didLogViewLaunchTime;
     _Bool _guestModeEnabled;
+    NSArray *_actionButtons;
+    SPTLoginButtonActionHandler *_actionButtonHandler;
     id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
     SPTLoginTestManager *_testManager;
-    NSArray *_actionButtons;
     id <SPTLoginStateController> _loginStateController;
     SPTLoginErrorDecorator *_errorDecorator;
-    id <SPTLoginThirdPartyLoginController> _facebookAuthController;
     SPTLoginAppleAuthorizationController *_appleAuthController;
     id <SPTDialogController> _dialogController;
-    SPTDynamicSignupFlowController *_flowController;
     SPTLoginDbManager *_databaseManager;
-    id <SPTLoginNavigationCoordinator> _navigationCoordinator;
     SPTLoginWelcomeViewLogger *_logger;
     SPTLoginWelcomeViewImageryURLProvider *_imageryURLProvider;
 }
@@ -35,18 +34,16 @@
 @property(nonatomic) _Bool didLogViewLaunchTime; // @synthesize didLogViewLaunchTime=_didLogViewLaunchTime;
 @property(readonly, nonatomic) SPTLoginWelcomeViewImageryURLProvider *imageryURLProvider; // @synthesize imageryURLProvider=_imageryURLProvider;
 @property(readonly, nonatomic) SPTLoginWelcomeViewLogger *logger; // @synthesize logger=_logger;
-@property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
-@property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(nonatomic) _Bool savedCredentialsDialogShownOnce; // @synthesize savedCredentialsDialogShownOnce=_savedCredentialsDialogShownOnce;
 @property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
 @property(readonly, nonatomic) SPTLoginAppleAuthorizationController *appleAuthController; // @synthesize appleAuthController=_appleAuthController;
-@property(readonly, nonatomic) id <SPTLoginThirdPartyLoginController> facebookAuthController; // @synthesize facebookAuthController=_facebookAuthController;
 @property(readonly, nonatomic) SPTLoginErrorDecorator *errorDecorator; // @synthesize errorDecorator=_errorDecorator;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
-@property(readonly, nonatomic) NSArray *actionButtons; // @synthesize actionButtons=_actionButtons;
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) SPTLoginButtonActionHandler *actionButtonHandler; // @synthesize actionButtonHandler=_actionButtonHandler;
+@property(readonly, nonatomic) NSArray *actionButtons; // @synthesize actionButtons=_actionButtons;
 - (void).cxx_destruct;
 - (void)performActionForButtonWithTag:(unsigned long long)arg1;
 - (void)logDidFinishLoadImageWithError:(id)arg1;
@@ -55,21 +52,14 @@
 - (id)contextViewForThirdPartyLoginController:(id)arg1;
 - (void)controllerDidFinishThirdPartyLogin:(id)arg1;
 - (void)controllerDidStartThirdPartyLogin:(id)arg1;
-- (void)loginWithApple;
 - (void)showSavedCredentialsDialog;
 - (id)welcomeTitle;
 - (void)logoutForgetUser:(_Bool)arg1;
 - (void)cleanStickyCredentialsData;
-- (void)navigateToLogin;
-- (void)loginWithFacebook;
-- (void)presentSignupStepOneViewController;
-- (void)userClickedContinueWithEmail;
-- (void)userClickedSignup;
-- (void)userClickedLogin;
 - (id)welcomeImageryURL;
 - (id)helpText;
 - (id)spotifyLogo:(struct CGSize)arg1;
-- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 facebookAuthController:(id)arg3 appleAuthController:(id)arg4 dialogController:(id)arg5 flowController:(id)arg6 databaseManager:(id)arg7 navigationCoordinator:(id)arg8 testManager:(id)arg9 imageryURLProvider:(id)arg10 guestModeEnabled:(_Bool)arg11 actionButtons:(id)arg12;
+- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 appleAuthController:(id)arg3 dialogController:(id)arg4 databaseManager:(id)arg5 testManager:(id)arg6 imageryURLProvider:(id)arg7 guestModeEnabled:(_Bool)arg8 actionButtons:(id)arg9 actionButtonHandler:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

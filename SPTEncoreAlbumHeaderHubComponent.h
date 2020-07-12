@@ -9,7 +9,7 @@
 #import "HUBComponent-Protocol.h"
 
 @class NSSet;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTImageLoader, SPTLinkDispatcher, _TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_;
+@protocol SPTEncoreAlbumHeaderFactory, SPTFreeTierEntityOfflineViewModel, SPTImageLoader, SPTLinkDispatcher;
 
 @interface SPTEncoreAlbumHeaderHubComponent : NSObject <HUBComponent>
 {
@@ -17,14 +17,14 @@
     id _followButtonModel;
     id _contextMenuButtonModel;
     id <SPTFreeTierEntityOfflineViewModel> _offlineButtonModel;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_> _albumHeaderFactory;
+    id <SPTEncoreAlbumHeaderFactory> _albumHeaderFactory;
     id <SPTImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
-@property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_> albumHeaderFactory; // @synthesize albumHeaderFactory=_albumHeaderFactory;
+@property(retain, nonatomic) id <SPTEncoreAlbumHeaderFactory> albumHeaderFactory; // @synthesize albumHeaderFactory=_albumHeaderFactory;
 @property(retain, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineButtonModel; // @synthesize offlineButtonModel=_offlineButtonModel;
 @property(retain, nonatomic) id contextMenuButtonModel; // @synthesize contextMenuButtonModel=_contextMenuButtonModel;
 @property(retain, nonatomic) id followButtonModel; // @synthesize followButtonModel=_followButtonModel;

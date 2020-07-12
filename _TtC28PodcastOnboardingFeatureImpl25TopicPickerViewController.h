@@ -12,7 +12,6 @@
     // Error parsing type: , name: makeViewBinder
     // Error parsing type: , name: loopController
     // Error parsing type: , name: flowMode
-    // Error parsing type: , name: instrumentationMediatorColleague
 }
 
 - (void).cxx_destruct;

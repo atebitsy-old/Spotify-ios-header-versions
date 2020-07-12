@@ -8,6 +8,7 @@
 
 @protocol SPTVISREFTestManager <NSObject>
 @property(readonly, nonatomic, getter=isVisualRefreshAnimatedHeartEnabled) _Bool visualRefreshAnimatedHeartEnabled;
+@property(readonly, nonatomic, getter=isEncorePlaylistHeaderEnabled) _Bool encorePlaylistHeaderEnabled;
 @property(readonly, nonatomic, getter=isEncoreAlbumHeaderEnabled) _Bool encoreAlbumHeaderEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshGreenButtonEnabled) _Bool visualRefreshGreenButtonEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshHeaderEnabled) _Bool visualRefreshHeaderEnabled;

@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPPageView, SPTStepScrollView;
+@class SPTPageView, SPTStepScrollView;
 
 @protocol SPTStepScrollViewDataSource <NSObject>
-- (SPPageView *)stepScrollView:(SPTStepScrollView *)arg1 pageViewAtRelativeIndex:(long long)arg2;
+- (SPTPageView *)stepScrollView:(SPTStepScrollView *)arg1 pageViewAtRelativeIndex:(long long)arg2;
 - (long long)stepScrollView:(SPTStepScrollView *)arg1 numberOfStepsInDirection:(long long)arg2;
 @end
 

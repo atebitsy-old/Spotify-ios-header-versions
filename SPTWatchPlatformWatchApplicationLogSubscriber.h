@@ -9,7 +9,7 @@
 #import "MFMailComposeViewControllerDelegate-Protocol.h"
 #import "SPTWatchConnectivitySubscriber-Protocol.h"
 
-@class NSString, SPSession;
+@class NSString, NSUserDefaults, SPSession;
 @protocol SPTAlertInterface, SPTUIPresentationService, SPTWatchConnectivityPubSub;
 
 @interface SPTWatchPlatformWatchApplicationLogSubscriber : NSObject <SPTWatchConnectivitySubscriber, MFMailComposeViewControllerDelegate>
@@ -18,8 +18,10 @@
     SPSession *_session;
     id <SPTAlertInterface> _alertController;
     id <SPTUIPresentationService> _presentationService;
+    NSUserDefaults *_userDefaults;
 }
 
+@property(readonly, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(readonly, nonatomic) __weak id <SPTAlertInterface> alertController; // @synthesize alertController=_alertController;
 @property(readonly, nonatomic) __weak SPSession *session; // @synthesize session=_session;
@@ -31,7 +33,7 @@
 - (void)composeEmailWithMessage:(id)arg1;
 - (void)handleMessage:(id)arg1 fromTopic:(id)arg2;
 - (void)load;
-- (id)initWithPubSub:(id)arg1 session:(id)arg2 alertController:(id)arg3 presentationService:(id)arg4;
+- (id)initWithPubSub:(id)arg1 session:(id)arg2 alertController:(id)arg3 presentationService:(id)arg4 userDefaults:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

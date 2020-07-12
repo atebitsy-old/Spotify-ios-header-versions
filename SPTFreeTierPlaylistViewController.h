@@ -21,7 +21,7 @@
 #import "UITableViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTEntityHeaderViewController, SPTFrameDropTracker, SPTFreeTierPlaylistBarButtonManager, SPTFreeTierPlaylistCellConfigurator, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistFooterProvider, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistHeaderPlaceholder, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistSponsoredLogoCellStyle, SPTProgressView, SPTTableView;
+@class NSString, NSURL, SPTEntityHeaderViewController, SPTFrameDropTracker, SPTFreeTierPlaylistBarButtonManager, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistFooterProvider, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistHeaderPlaceholder, SPTFreeTierPlaylistLogger, SPTProgressView, SPTTableView;
 @protocol GLUEImageLoader, SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistEntityContextMenuPresenter, SPTFreeTierPlaylistHeader><SPTEntityHeaderContentController, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModel, SPTFreeTierRecommendationsPlaylistFooterViewController, SPTPageContainer, SPTSortingFilteringUIFactory;
 
 @interface SPTFreeTierPlaylistViewController : UIViewController <SPTFreeTierRecommendationsPlaylistFooterViewControllerDelegate, SPTNavigationControllerNavigationBarState, SPTShareableContext, SPContentInsetViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UITextFieldDelegate, SPTSortingFilteringPickerDelegate, SPTFrameDropTrackerDelegate, SPTFreeTierPlaylistBarButtonManagerDelegate, SPTStatusBarManagerObserver, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
@@ -40,8 +40,6 @@
     SPTEntityHeaderViewController *_entityHeaderViewController;
     SPTProgressView *_progressView;
     SPTFreeTierPlaylistHeaderPlaceholder *_headerPlaceholderView;
-    SPTFreeTierPlaylistSponsoredLogoCellStyle *_sponsorshipStyle;
-    SPTFreeTierPlaylistCellConfigurator *_cellConfigurator;
     CDUnknownBlockType _searchViewControllerFactory;
     id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
     SPTFrameDropTracker *_scrollPerformanceTracker;
@@ -58,8 +56,6 @@
 @property(readonly, nonatomic) SPTFrameDropTracker *scrollPerformanceTracker; // @synthesize scrollPerformanceTracker=_scrollPerformanceTracker;
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
 @property(copy, nonatomic) CDUnknownBlockType searchViewControllerFactory; // @synthesize searchViewControllerFactory=_searchViewControllerFactory;
-@property(retain, nonatomic) SPTFreeTierPlaylistCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
-@property(retain, nonatomic) SPTFreeTierPlaylistSponsoredLogoCellStyle *sponsorshipStyle; // @synthesize sponsorshipStyle=_sponsorshipStyle;
 @property(retain, nonatomic) SPTFreeTierPlaylistHeaderPlaceholder *headerPlaceholderView; // @synthesize headerPlaceholderView=_headerPlaceholderView;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTEntityHeaderViewController *entityHeaderViewController; // @synthesize entityHeaderViewController=_entityHeaderViewController;
@@ -87,7 +83,6 @@
 - (void)sortingFilteringPicker:(id)arg1 selectedFilterRule:(id)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedSortRule:(id)arg2;
 - (_Bool)textFieldShouldBeginEditing:(id)arg1;
-- (void)playlistSponsorshipDidChange;
 - (void)freeTierPlaylistViewModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistViewModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistViewModelDidChangeEmptyState:(id)arg1;
@@ -110,7 +105,6 @@
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
-- (id)cloudCellForRowAtIndexPath:(id)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;

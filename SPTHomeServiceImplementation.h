@@ -8,8 +8,8 @@
 
 #import "SPTHomeService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTHomeContentCache, SPTHomeHubManager;
-@protocol SPTCreatePlaylistService, SPTFeatureFlagFactory, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
+@class NSString, SPTAllocationContext, SPTHomeContentCache, SPTHomeFeatureProperties, SPTHomeHubManager;
+@protocol SPTCreatePlaylistService, SPTFeatureFlagFactory, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -36,17 +36,23 @@
     id <SPTURIDispatchService> _uriDispatchService;
     id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> _listeningHistoryService;
     id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> _musicVideoUIService;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
+    id <SPTPerformanceMetricsService> _performanceMetricsService;
     SPTHomeHubManager *_hubManager;
     SPTHomeContentCache *_homeContentCache;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
+    SPTHomeFeatureProperties *_featureProperties;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTHomeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(retain, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;
+@property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> musicVideoUIService; // @synthesize musicVideoUIService=_musicVideoUIService;
 @property(nonatomic) __weak id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> listeningHistoryService; // @synthesize listeningHistoryService=_listeningHistoryService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
@@ -71,6 +77,7 @@
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubService; // @synthesize hubService=_hubService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 - (void).cxx_destruct;
+- (id)pageLoaderViewControllerFor:(id)arg1 URI:(id)arg2 navigationItemDecorator:(id)arg3;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (id)createLoggerForViewURI:(id)arg1;

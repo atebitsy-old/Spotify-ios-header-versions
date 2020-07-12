@@ -8,7 +8,7 @@
 
 #import "HUBViewContentOffsetObserver-Protocol.h"
 
-@class NSTimer, SPTActivityIndicatorView, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger, SPTPremiumDestinationNavigationItemDecorator;
+@class NSTimer, SPTActivityIndicatorView, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger, SPTPremiumDestinationNavigationItemDecorator, SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater;
 
 @interface SPTPremiumDestinationHubViewController : SPTHubViewController <HUBViewContentOffsetObserver>
 {
@@ -16,6 +16,7 @@
     _Bool _shouldShowNavigationBar;
     _Bool _shouldShowLoadingIndicator;
     SPTPremiumDestinationNavigationItemDecorator *_navigationItemDecorator;
+    SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater *_tabBarBadgeLastSeenDateUpdater;
     SPTPremiumDestinationGLUETheme *_premiumDestinationTheme;
     SPTPremiumDestinationLogger *_logger;
     NSTimer *_timer;
@@ -29,6 +30,7 @@
 @property(nonatomic) _Bool shouldShowNavigationBar; // @synthesize shouldShowNavigationBar=_shouldShowNavigationBar;
 @property(nonatomic) _Bool isRootViewController; // @synthesize isRootViewController=_isRootViewController;
 @property(retain, nonatomic) SPTPremiumDestinationGLUETheme *premiumDestinationTheme; // @synthesize premiumDestinationTheme=_premiumDestinationTheme;
+@property(retain, nonatomic) SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater *tabBarBadgeLastSeenDateUpdater; // @synthesize tabBarBadgeLastSeenDateUpdater=_tabBarBadgeLastSeenDateUpdater;
 @property(retain, nonatomic) SPTPremiumDestinationNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
 - (void).cxx_destruct;
 - (id)getScrollPercentage;

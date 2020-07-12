@@ -10,6 +10,7 @@
 
 @protocol SPTPremiumDestinationExperiments <NSObject>
 @property(nonatomic) __weak UIViewController *premiumDestinationTabBarBadgeViewController;
+@property(readonly, nonatomic) _Bool tabBarBadgeExperienceEnabled;
 @property(readonly, nonatomic) _Bool shouldPresentImplicitNotificationAlertController;
 @property(readonly, nonatomic) _Bool shouldUseHeaderVoiceoverAccessible;
 @property(readonly, nonatomic) _Bool shouldUseDevEndpointSetting;

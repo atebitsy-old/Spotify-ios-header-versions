@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol FollowFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, SPTUIPresentationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol FollowFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTNavigationFeature, SPTNetworkService, SPTPageLoaderViewService, SPTPageRegistrationToken, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, SPTUIPresentationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface CollectionFeatureImplementation : NSObject <SPTService, CollectionFeature>
 {
@@ -21,6 +21,7 @@
     id <SPTCoreService> _coreService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTNetworkService> _networkFeature;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTSettingsFeature> _settingsFeature;
@@ -42,6 +43,7 @@
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
@@ -50,9 +52,9 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 - (void).cxx_destruct;
+- (id)provideCollectionArtistViewController:(id)arg1 context:(id)arg2 model:(id)arg3;
 - (id)provideCollectionArtistPage:(id)arg1 context:(id)arg2;
 - (id)provideCollectionArtistModelForURL:(id)arg1 referrerIdentifier:(id)arg2;
-- (id)provideCollectionArtistModelForURL:(id)arg1;
 - (id)playerForViewURI:(id)arg1 featureIdentifier:(id)arg2 referrerIdentifier:(id)arg3;
 - (void)unregisterCollectionArtistPage;
 - (void)unload;

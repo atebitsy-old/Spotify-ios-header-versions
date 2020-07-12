@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class INIntent, NSString;
+@class INIntent, NSDictionary, NSString;
 
 @protocol SPTSiriIntentsHandler <NSObject>
 - (void)handleIntentWithPlayCommandURI:(NSString *)arg1 completionHandler:(void (^)(NSError *))arg2;
-- (void)handleIntent:(INIntent *)arg1 completionHandler:(void (^)(INIntentResponse *))arg2;
+- (void)handleIntent:(INIntent *)arg1 completionHandler:(void (^)(INIntentResponse *))arg2 measurements:(NSDictionary *)arg3 dimensions:(NSDictionary *)arg4;
 @end
 

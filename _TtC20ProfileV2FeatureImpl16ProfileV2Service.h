@@ -12,6 +12,7 @@
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: cosmosFeature
     // Error parsing type: , name: cosmosDataLoaderService
+    // Error parsing type: , name: networkService
     // Error parsing type: , name: profileUserData
 }
 

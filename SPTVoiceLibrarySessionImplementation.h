@@ -43,6 +43,10 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceLibraryRecognitionTaskFactory> voiceRecognitionTaskFactory; // @synthesize voiceRecognitionTaskFactory=_voiceRecognitionTaskFactory;
 - (void).cxx_destruct;
+- (_Bool)useDevelopmentEndpoint;
+- (_Bool)useExternalAudioRecorder;
+- (void)relinquishSupportForAudioRecording;
+- (void)requestSupportForAudioRecording;
 - (_Bool)pausePlaybackIfNeeded;
 - (void)handleError:(id)arg1;
 - (void)networkStateHandler:(id)arg1 didFailReachabilityWithError:(id)arg2;

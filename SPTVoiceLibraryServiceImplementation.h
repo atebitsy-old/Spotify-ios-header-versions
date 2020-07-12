@@ -37,7 +37,7 @@
 - (id)provideAudioRouteHandler;
 - (id)provideMicrophonePermissionsReducer;
 @property(readonly, nonatomic) id <SPTVoiceLibraryAudioRecorderFactory> audioRecorderFactory; // @synthesize audioRecorderFactory=_audioRecorderFactory;
-- (id)createVoiceRecognitionTaskFactoryWithPlayer:(id)arg1 speechProxyRequest:(id)arg2;
+- (id)createVoiceRecognitionTaskFactoryWithPlayer:(id)arg1 sessionHandlingOptions:(id)arg2;
 - (id)providePlayerWithReferrerIdentifier:(id)arg1;
 - (id)authorisationHosts;
 - (id)provideWakeword;

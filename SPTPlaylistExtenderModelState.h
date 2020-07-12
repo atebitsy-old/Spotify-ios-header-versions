@@ -16,7 +16,7 @@
     _Bool _loading;
     _Bool _gotSubscription;
     _Bool _offline;
-    unsigned long long _preferedNumberOfTracks;
+    unsigned long long _preferredNumberOfTracks;
     NSURL *_playlistURL;
     NSString *_playlistName;
     NSArray *_playlistTracks;
@@ -33,9 +33,9 @@
 @property(retain, nonatomic) NSArray *playlistTracks; // @synthesize playlistTracks=_playlistTracks;
 @property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 @property(copy, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
-@property(nonatomic) unsigned long long preferedNumberOfTracks; // @synthesize preferedNumberOfTracks=_preferedNumberOfTracks;
+@property(nonatomic) unsigned long long preferredNumberOfTracks; // @synthesize preferredNumberOfTracks=_preferredNumberOfTracks;
 - (void).cxx_destruct;
-- (id)initWithPlaylistName:(id)arg1 playlistTracks:(id)arg2 recommendations:(id)arg3 replaceCurrentItems:(_Bool)arg4 loading:(_Bool)arg5 gotSubscription:(_Bool)arg6 preferedNumberOfTracks:(unsigned long long)arg7 playlistURL:(id)arg8 error:(id)arg9 offline:(_Bool)arg10;
+- (id)initWithPlaylistName:(id)arg1 playlistTracks:(id)arg2 recommendations:(id)arg3 replaceCurrentItems:(_Bool)arg4 loading:(_Bool)arg5 gotSubscription:(_Bool)arg6 preferredNumberOfTracks:(unsigned long long)arg7 playlistURL:(id)arg8 error:(id)arg9 offline:(_Bool)arg10;
 - (id)initWithState:(id)arg1;
 
 // Remaining properties

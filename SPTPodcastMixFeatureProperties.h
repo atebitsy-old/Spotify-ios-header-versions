@@ -13,9 +13,15 @@
 @interface SPTPodcastMixFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _podcastMixHandlerEnabled;
+    unsigned long long _pmixContextMenuEpisodeAction;
+    NSString *_pmixContextMenuEpisodeActionString;
 }
 
+@property(retain, nonatomic) NSString *pmixContextMenuEpisodeActionString; // @synthesize pmixContextMenuEpisodeActionString=_pmixContextMenuEpisodeActionString;
+@property(readonly, nonatomic) unsigned long long pmixContextMenuEpisodeAction; // @synthesize pmixContextMenuEpisodeAction=_pmixContextMenuEpisodeAction;
 @property(readonly, nonatomic) _Bool podcastMixHandlerEnabled; // @synthesize podcastMixHandlerEnabled=_podcastMixHandlerEnabled;
+- (void).cxx_destruct;
+- (unsigned long long)mapPmixContextMenuEpisodeActionToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

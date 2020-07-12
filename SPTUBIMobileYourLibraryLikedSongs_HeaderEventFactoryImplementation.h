@@ -18,7 +18,7 @@
 + (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)playButtonFactory;
+- (id)playButtonFactoryWithReason:(id)arg1;
 - (id)addSongsButtonFactory;
 - (id)filterAndSortFactory;
 - (id)_location;

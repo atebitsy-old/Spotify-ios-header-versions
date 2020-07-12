@@ -9,7 +9,7 @@
 #import "VISREFIntegrationManager-Protocol.h"
 
 @class NSArray, NSString, VISREFHubComponentRegistryOverrider, VISREFNavigationBarManager;
-@protocol SPTImageLoader, SPTLinkDispatcher, _TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_;
+@protocol SPTEncoreAlbumHeaderFactory, SPTImageLoader, SPTLinkDispatcher;
 
 @interface VISREFIntegrationManagerImplementation : NSObject <VISREFIntegrationManager>
 {
@@ -22,11 +22,11 @@
     VISREFHubComponentRegistryOverrider *_overriddenRegistry;
     id <SPTImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_> _encoreComponentFactory;
+    id <SPTEncoreAlbumHeaderFactory> _encoreComponentFactory;
 }
 
 @property(nonatomic) _Bool encoreAlbumHeaderEnabled; // @synthesize encoreAlbumHeaderEnabled=_encoreAlbumHeaderEnabled;
-@property(retain, nonatomic) id <_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
+@property(retain, nonatomic) id <SPTEncoreAlbumHeaderFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) VISREFHubComponentRegistryOverrider *overriddenRegistry; // @synthesize overriddenRegistry=_overriddenRegistry;

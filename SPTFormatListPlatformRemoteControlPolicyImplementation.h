@@ -99,6 +99,7 @@
 - (void)bookmarkButtonPressedWithCompletion:(CDUnknownBlockType)arg1;
 @property(readonly, nonatomic) _Bool shouldPlaybackSpeedControlBeEnabled;
 @property(readonly, nonatomic) _Bool shouldPlaybackSpeedControlBeAvailable;
+@property(readonly, nonatomic) _Bool shouldSkipPodcastEpisodeInsteadOfSeeking;
 @property(readonly, nonatomic) _Bool shouldSeekBackwardCommandBeEnabled;
 @property(readonly, nonatomic) _Bool shouldSeekBackwardCommandBeAvailable;
 @property(readonly, nonatomic) _Bool shouldSeekForwardCommandBeEnabled;

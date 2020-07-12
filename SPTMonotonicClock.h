@@ -10,6 +10,7 @@
 {
 }
 
++ (id)estimatedProcessStartTimestamp;
 + (unsigned long long)currentTimestamp;
 - (id)init;
 

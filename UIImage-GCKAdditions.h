@@ -53,6 +53,11 @@
 + (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3 iconColor:(id)arg4 animatedIconBackgroundColor:(id)arg5 theme:(id)arg6 allowAnimatedCastIcon:(_Bool)arg7;
 + (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3 theme:(id)arg4;
 + (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3;
++ (id)iconWithType:(unsigned long long)arg1;
++ (id)spt_loginAppleIcon;
++ (id)spt_loginFacebookIcon;
++ (id)spt_loginPhoneIcon;
++ (id)spt_loginEmailIcon;
 + (id)imageWithIconImage:(id)arg1 badgeImage:(id)arg2 selected:(_Bool)arg3;
 + (id)tabBarBadgeImage;
 + (id)spt_cutoutImageForSPTIcon:(long long)arg1 iconSize:(struct CGSize)arg2 iconOffset:(struct CGPoint)arg3 circleSize:(struct CGSize)arg4 circleColor:(id)arg5 circleLineWidth:(double)arg6 backgroundColor:(id)arg7;

@@ -10,8 +10,6 @@
 @protocol SPTCollectionArtistModel;
 
 @protocol SPTCollectionArtistModelDelegate <NSObject>
-
-@optional
 - (void)artistModelOfflineStateChanged:(id <SPTCollectionArtistModel>)arg1;
 - (void)artistModelFailedToLoad:(id <SPTCollectionArtistModel>)arg1 withError:(NSError *)arg2;
 - (void)artistModelDidLoadMetadata:(id <SPTCollectionArtistModel>)arg1;

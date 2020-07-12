@@ -7,14 +7,16 @@
 #import "SPTLoginTraitAwareViewController.h"
 
 #import "SPTLoginThirdPartyLoginHandlerDelegate-Protocol.h"
+#import "SPTLoginViewControllerWithManagedActionButtons-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSString, NSURL, SPTLoginIntentLedStartScreenViewModel, SPTLoginIntentLedStartView, SPTLoginTheme, SPTProgressView;
+@class NSString, NSURL, SPTLoginActionButtonManager, SPTLoginIntentLedStartScreenViewModel, SPTLoginIntentLedStartView, SPTLoginTheme, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginIntentLedStartViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController>
+@interface SPTLoginIntentLedStartViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTLoginThirdPartyLoginHandlerDelegate, SPTPageController, SPTLoginViewControllerWithManagedActionButtons>
 {
+    SPTLoginActionButtonManager *_actionButtonManager;
     SPTLoginIntentLedStartScreenViewModel *_viewModel;
     SPTLoginTheme *_theme;
     unsigned long long _intent;
@@ -25,7 +27,10 @@
 @property(nonatomic) unsigned long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginIntentLedStartScreenViewModel *viewModel; // @synthesize viewModel=_viewModel;
+@property(readonly, nonatomic) SPTLoginActionButtonManager *actionButtonManager; // @synthesize actionButtonManager=_actionButtonManager;
 - (void).cxx_destruct;
+- (void)viewRequiresStyleApplyingToButtons;
+- (void)userDidTapButtonWithTag:(unsigned long long)arg1;
 - (void)hideProgressIndicator;
 - (void)showProgressIndicator;
 - (void)handlerDidFinishThirdPartyLogin:(id)arg1;
@@ -34,12 +39,10 @@
 - (unsigned long long)preferredNavigationBarState;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
-- (void)continueWithAppleButtonTapped;
-- (void)continueWithEmailButtonTapped;
-- (void)continueWithFacebookButtonTapped;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 intent:(unsigned long long)arg3;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 intent:(unsigned long long)arg3 actionButtonManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

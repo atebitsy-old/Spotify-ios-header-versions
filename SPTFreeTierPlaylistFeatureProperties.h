@@ -17,9 +17,6 @@
     _Bool _dontOpenNowPlayingViewOnVideoPlayback;
     _Bool _dontOpenNowPlayingViewOnPlayButtonPlayback;
     _Bool _pageLoaderEnabledPlaylistView;
-    _Bool _useTrackCloudCellProvider;
-    _Bool _useTracksSection;
-    _Bool _useSwiftSponsoredSection;
     _Bool _measureScrollPerfomance;
     _Bool _respectShowsCollectionFlagInPlaylistForIncludingEpisodes;
     _Bool _enableWeightedShufflePlayback;
@@ -38,9 +35,6 @@
 @property(readonly, nonatomic) _Bool enableWeightedShufflePlayback; // @synthesize enableWeightedShufflePlayback=_enableWeightedShufflePlayback;
 @property(readonly, nonatomic) _Bool respectShowsCollectionFlagInPlaylistForIncludingEpisodes; // @synthesize respectShowsCollectionFlagInPlaylistForIncludingEpisodes=_respectShowsCollectionFlagInPlaylistForIncludingEpisodes;
 @property(readonly, nonatomic) _Bool measureScrollPerfomance; // @synthesize measureScrollPerfomance=_measureScrollPerfomance;
-@property(readonly, nonatomic) _Bool useSwiftSponsoredSection; // @synthesize useSwiftSponsoredSection=_useSwiftSponsoredSection;
-@property(readonly, nonatomic) _Bool useTracksSection; // @synthesize useTracksSection=_useTracksSection;
-@property(readonly, nonatomic) _Bool useTrackCloudCellProvider; // @synthesize useTrackCloudCellProvider=_useTrackCloudCellProvider;
 @property(readonly, nonatomic) _Bool pageLoaderEnabledPlaylistView; // @synthesize pageLoaderEnabledPlaylistView=_pageLoaderEnabledPlaylistView;
 @property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnPlayButtonPlayback; // @synthesize dontOpenNowPlayingViewOnPlayButtonPlayback=_dontOpenNowPlayingViewOnPlayButtonPlayback;
 @property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnVideoPlayback; // @synthesize dontOpenNowPlayingViewOnVideoPlayback=_dontOpenNowPlayingViewOnVideoPlayback;

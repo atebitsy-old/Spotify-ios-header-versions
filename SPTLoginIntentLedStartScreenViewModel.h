@@ -6,44 +6,36 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTLoginActionButtonsViewModel-Protocol.h"
 #import "SPTLoginThirdPartyLoginControllerDelegate-Protocol.h"
 
-@class NSString, SPTDynamicSignupFlowController, SPTLoginAppleAuthorizationController, SPTLoginIntentLedStartViewLogger;
-@protocol SPTDialogController, SPTLoginThirdPartyLoginController, SPTLoginThirdPartyLoginHandlerDelegate;
+@class NSArray, NSString, SPTDynamicSignupFlowController, SPTLoginButtonActionHandler, SPTLoginIntentLedStartViewLogger;
+@protocol SPTLoginThirdPartyLoginHandlerDelegate;
 
-@interface SPTLoginIntentLedStartScreenViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate>
+@interface SPTLoginIntentLedStartScreenViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate, SPTLoginActionButtonsViewModel>
 {
+    NSArray *_actionButtons;
+    SPTLoginButtonActionHandler *_actionButtonHandler;
     id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
-    SPTLoginIntentLedStartViewLogger *_logger;
     SPTDynamicSignupFlowController *_flowController;
     unsigned long long _intent;
-    id <SPTLoginThirdPartyLoginController> _facebookAuthController;
-    SPTLoginAppleAuthorizationController *_appleAuthController;
-    id <SPTDialogController> _dialogController;
+    SPTLoginIntentLedStartViewLogger *_logger;
 }
 
-@property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
-@property(readonly, nonatomic) SPTLoginAppleAuthorizationController *appleAuthController; // @synthesize appleAuthController=_appleAuthController;
-@property(readonly, nonatomic) id <SPTLoginThirdPartyLoginController> facebookAuthController; // @synthesize facebookAuthController=_facebookAuthController;
+@property(readonly, nonatomic) SPTLoginIntentLedStartViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) unsigned long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
-@property(readonly, nonatomic) SPTLoginIntentLedStartViewLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
+@property(readonly, nonatomic) SPTLoginButtonActionHandler *actionButtonHandler; // @synthesize actionButtonHandler=_actionButtonHandler;
+@property(readonly, nonatomic) NSArray *actionButtons; // @synthesize actionButtons=_actionButtons;
 - (void).cxx_destruct;
+- (void)logUserDidSeeView;
+- (void)performActionForButtonWithTag:(unsigned long long)arg1;
 - (id)contextViewForThirdPartyLoginController:(id)arg1;
 - (void)controllerDidFinishThirdPartyLogin:(id)arg1;
 - (void)controllerDidStartThirdPartyLogin:(id)arg1;
-- (_Bool)isAppleSignInEnabled;
-- (void)userClickedApple;
-- (void)userClickedFacebook;
-- (void)userClickedEmail;
-- (id)appleLogoIcon;
-- (id)facebookLogoIcon;
 - (id)buttonContainerHeadingText;
-- (id)continueWithAppleButtonText;
-- (id)continueWithFacebookButtonText;
-- (id)continueWithEmailButtonText;
-- (id)initWithFlowController:(id)arg1 intent:(unsigned long long)arg2 logger:(id)arg3 dialogController:(id)arg4 facebookAuthController:(id)arg5 appleAuthController:(id)arg6;
+- (id)initWithIntent:(unsigned long long)arg1 logger:(id)arg2 actionButtons:(id)arg3 actionButtonHandler:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

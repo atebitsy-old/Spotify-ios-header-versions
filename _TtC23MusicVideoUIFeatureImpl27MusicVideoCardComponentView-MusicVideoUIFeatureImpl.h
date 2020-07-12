@@ -6,8 +6,9 @@
 
 #import "_TtC23MusicVideoUIFeatureImpl27MusicVideoCardComponentView.h"
 
-@interface _TtC23MusicVideoUIFeatureImpl27MusicVideoCardComponentView (MusicVideoUIFeatureImpl)
-- (void)viewDidDisappear;
-- (void)viewWillAppear;
+#import "BMVideoSurfaceDelegate-Protocol.h"
+
+@interface _TtC23MusicVideoUIFeatureImpl27MusicVideoCardComponentView (MusicVideoUIFeatureImpl) <BMVideoSurfaceDelegate>
+- (void)videoSurfaceDidAttachVideo:(id)arg1;
 @end
 

@@ -64,7 +64,7 @@
 - (void)navigateToQueue;
 - (void)navigateToAddSongs;
 - (void)navigateToUserProfilePage:(id)arg1;
-- (void)leaveOrDeleteSession;
+- (void)leaveOrDeleteSessionFromScreen:(unsigned long long)arg1;
 @property(readonly, nonatomic) NSArray *shareDestinations;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
 @property(readonly, copy, nonatomic) NSString *participantsNavigationBarTitle;

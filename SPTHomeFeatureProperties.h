@@ -13,8 +13,12 @@
 @interface SPTHomeFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _useNewCacheLocation;
+    _Bool _homeImprovedNavigationBar;
+    _Bool _isPageloaderEnabled;
 }
 
+@property(readonly, nonatomic) _Bool isPageloaderEnabled; // @synthesize isPageloaderEnabled=_isPageloaderEnabled;
+@property(readonly, nonatomic) _Bool homeImprovedNavigationBar; // @synthesize homeImprovedNavigationBar=_homeImprovedNavigationBar;
 @property(readonly, nonatomic) _Bool useNewCacheLocation; // @synthesize useNewCacheLocation=_useNewCacheLocation;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

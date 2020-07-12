@@ -9,12 +9,13 @@
 #import "SPTStorylinesService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPersistentCache, SPTStorylinesNowPlayingScrollProvider;
-@protocol FollowFeature, SPTContainerService, SPTCoreService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingScrollDataSource, SPTNowPlayingService, SPTPlayerFeature, SPTURIDispatchService;
+@protocol FollowFeature, SPTContainerService, SPTCoreService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingScrollDataSource, SPTNowPlayingService, SPTPlayerFeature, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTStorylinesServiceImplementation : NSObject <SPTStorylinesService>
 {
     SPTPersistentCache *_persistentCache;
     id <SPTContainerService> _containerService;
+    id <SPTUBIService> _ubiService;
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     id <SPTNetworkService> _networkService;
@@ -40,6 +41,7 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
 - (id)persistentCacheOptions;

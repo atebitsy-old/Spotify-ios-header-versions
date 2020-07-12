@@ -43,6 +43,8 @@
 @property(nonatomic) __weak SPTFreeTierTasteOnboardingArtistPickerViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingArtistPickerDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)selectItem:(id)arg1 inCollectionView:(id)arg2 atIndexPath:(id)arg3;
+- (void)selectCellInCollectionView:(id)arg1 atIndexPath:(id)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
 @property(readonly, copy, nonatomic) NSArray *selectedItemURIs;
 - (void)scrollIndexPathsToVisible:(id)arg1 animated:(_Bool)arg2;

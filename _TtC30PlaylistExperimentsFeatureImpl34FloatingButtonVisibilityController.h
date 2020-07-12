@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTMetaViewControllerObserver-Protocol.h"
-
-@interface _TtC30PlaylistExperimentsFeatureImpl34FloatingButtonVisibilityController : NSObject <SPTMetaViewControllerObserver>
+@interface _TtC30PlaylistExperimentsFeatureImpl34FloatingButtonVisibilityController : NSObject
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: metaviewController

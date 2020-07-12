@@ -10,7 +10,6 @@
 @protocol SPTFreeTierPlaylistViewModel;
 
 @protocol SPTFreeTierPlaylistViewModelDelegate <NSObject>
-- (void)playlistSponsorshipDidChange;
 - (void)freeTierPlaylistViewModel:(id <SPTFreeTierPlaylistViewModel>)arg1 error:(NSError *)arg2;
 - (void)freeTierPlaylistViewModel:(id <SPTFreeTierPlaylistViewModel>)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistViewModelDidChangeEmptyState:(id <SPTFreeTierPlaylistViewModel>)arg1;

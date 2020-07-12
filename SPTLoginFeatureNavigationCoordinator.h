@@ -23,7 +23,6 @@
 - (void)openIntentLedStartScreen:(unsigned long long)arg1;
 - (void)openMethodLedStartScreen:(unsigned long long)arg1;
 - (void)openPhoneNumberScreen;
-- (void)openPhoneNumberContinueWithEmailScreen;
 - (void)openFacebookConfirmationScreenWithUserInfo:(id)arg1;
 - (void)openMagicLinkSentConfirmationScreenWithEmail:(id)arg1;
 - (void)openRequestMagicLinkScreenWithEmail:(id)arg1 error:(id)arg2;

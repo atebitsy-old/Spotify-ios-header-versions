@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
+@class SPTPlayOrigin;
 @protocol SPTPlaylistPlatformFieldURL><SPTPlaylistPlatformFieldRowId;
 
 @protocol SPTFreeTierPlaylistPlayViewModel <NSObject>
+@property(readonly, nonatomic) SPTPlayOrigin *playOrigin;
 @property(readonly, nonatomic, getter=isPlaylistPlaying) _Bool playlistPlaying;
 @property(readonly, nonatomic) _Bool shouldShowPlayButton;
 @property(readonly, nonatomic, getter=isPlayButtonPausingPlay) _Bool playButtonPausingPlay;

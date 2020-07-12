@@ -9,13 +9,14 @@
 #import "SPTSiriIntentsService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSiriIntentsFeatureProperties, SPTSiriIntentsKeepAliveHandler, SPTSiriIntentsVocabularyManager;
-@protocol GaiaFeature, SPTCoreService, SPTEventSenderService, SPTLoginService, SPTNetworkService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSiriIntentsHandler;
+@protocol GaiaFeature, SPTCoreService, SPTEventSenderService, SPTLoginService, SPTNetworkService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSiriIntentsHandler, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTSiriIntentsServiceImplementation : NSObject <SPTSiriIntentsService>
 {
     SPTSiriIntentsVocabularyManager *_vocabularyManager;
     SPTSiriIntentsFeatureProperties *_featureProperties;
     id <SPTSiriIntentsHandler> _intentsHandler;
+    id <_TtP19CarDetectionFeature22SPTCarDetectionService_> _carDetectionService;
     id <SPTCoreService> _coreService;
     id <GaiaFeature> _gaiaService;
     id <SPTLoginService> _loginService;
@@ -37,6 +38,7 @@
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
+@property(nonatomic) __weak id <_TtP19CarDetectionFeature22SPTCarDetectionService_> carDetectionService; // @synthesize carDetectionService=_carDetectionService;
 @property(retain, nonatomic) id <SPTSiriIntentsHandler> intentsHandler; // @synthesize intentsHandler=_intentsHandler;
 - (void).cxx_destruct;
 - (long long)deferralModeForRemoteConfigValue:(id)arg1;

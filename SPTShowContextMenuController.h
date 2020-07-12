@@ -43,6 +43,7 @@
 - (void).cxx_destruct;
 - (void)contextMenuPresenterDidDismiss:(id)arg1;
 - (_Bool)isIPad;
+- (id)providePodcastMixActionForEpisode:(id)arg1 sourcePlaylistUri:(id)arg2 logContext:(id)arg3;
 - (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(id)arg2;
 - (id)provideGoToEpisodeActionForEpisode:(id)arg1 inViewController:(id)arg2;
 - (id)provideGoToShowActionForEpisode:(id)arg1 inViewController:(id)arg2;

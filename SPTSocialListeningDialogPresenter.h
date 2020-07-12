@@ -28,7 +28,7 @@
 - (void)presentSessionFullDialog;
 - (void)presentSessionDeletedDialogWhenHostLeaves:(id)arg1;
 - (void)confirmDeleteSessionTapped;
-- (void)presentConfirmDeleteSessionDialog;
+- (void)presentConfirmDeleteSessionDialogFromScreen:(unsigned long long)arg1;
 - (id)initWithTheme:(id)arg1 popupManager:(id)arg2 logger:(id)arg3 testManager:(id)arg4;
 
 @end

@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTShareHandler-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTShareData, SPTShareLogger, SPTSharingSDK;
+@class NSString, SPTDataLoader, SPTShareData, SPTShareFeatureProperties, SPTShareLogger, SPTSharingSDK;
 @protocol SPTShareDeeplinkHandler, SPTShareVideoDataProvider;
 
 @interface SPTShareInstagramStoriesShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
@@ -26,10 +26,12 @@
     SPTShareData *_shareData;
     id <SPTShareDeeplinkHandler> _deeplinkHandler;
     SPTSharingSDK *_sharingSDK;
+    SPTShareFeatureProperties *_featureProperties;
     id <SPTShareVideoDataProvider> _videoDataLoader;
 }
 
 @property(readonly, nonatomic) id <SPTShareVideoDataProvider> videoDataLoader; // @synthesize videoDataLoader=_videoDataLoader;
+@property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
@@ -46,12 +48,15 @@
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)createAlertModelWithError:(id)arg1;
-- (void)executeCompletionWithError:(id)arg1;
+- (void)executeCompletionWithError:(id)arg1 shareHandlerCompletionData:(id)arg2;
 - (void)shareEntityWithURL:(id)arg1 backgroundImage:(id)arg2 stickerImage:(id)arg3 topColor:(id)arg4 bottomColor:(id)arg5;
 - (void)requestStickerImageForEntityURL:(id)arg1;
+- (void)sharingSDKVideoStorySharingWithData:(id)arg1;
+- (void)buildSharingSDKVideoStoryEntityDataWithData:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)legacySharingWithData:(id)arg1;
 - (id)provideShareAlertModelForError:(id)arg1;
 - (void)shareWithData:(id)arg1 shareDestination:(id)arg2 sharePresenter:(id)arg3 deeplinkHandler:(id)arg4 completion:(CDUnknownBlockType)arg5;
-- (id)initWithDataLoader:(id)arg1 shareLogger:(id)arg2 sharingSDK:(id)arg3 videoDataLoader:(id)arg4;
+- (id)initWithDataLoader:(id)arg1 shareLogger:(id)arg2 sharingSDK:(id)arg3 videoDataLoader:(id)arg4 featureProperties:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,14 +11,12 @@
 #import "SPTFreeTierPlaylistVISREFHeaderViewModel-Protocol.h"
 
 @class NSIndexPath, NSString, NSURL;
-@protocol SPTFreeTierPlaylistCloudViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistViewModelDelegate;
+@protocol SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistViewModelDelegate;
 
 @protocol SPTFreeTierPlaylistViewModel <SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel>
-@property(readonly, nonatomic, getter=isPlaylistExtenderEnabled) _Bool playlistExtenderEnabled;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistSponsoredViewModel> sponsoredViewModel;
 @property(readonly, nonatomic) _Bool contentSupportsRadio;
 @property(readonly, nonatomic) _Bool containsOnlyTracks;
-@property(readonly, nonatomic) unsigned long long type;
+@property(readonly, nonatomic) unsigned long long onDemandType;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering;
 @property(copy, nonatomic) NSString *textFilter;
 @property(readonly, nonatomic) unsigned long long offlineAvailability;
@@ -38,15 +36,12 @@
 - (void)playTrackURL:(NSURL *)arg1;
 - (void)deletePlaylist;
 - (void)load;
-- (_Bool)cellProviderSupportedForSection:(long long)arg1;
 - (void)changeOffline:(_Bool)arg1;
 - (void)toggleTrackBanAtIndexPath:(NSIndexPath *)arg1;
 - (void)toggleTrackLikeAtIndexPath:(NSIndexPath *)arg1;
-- (void)itemSelectedAtIndexPath:(NSIndexPath *)arg1;
-- (id <SPTFreeTierPlaylistCloudViewModel>)cloudViewModelAtIndexPath:(NSIndexPath *)arg1;
+- (void)trackSelectedAtIndexPath:(NSIndexPath *)arg1;
 - (NSURL *)sharingURLForTrackViewModelAtIndexPath:(NSIndexPath *)arg1;
 - (void)loadMoreTracksIfApproachingEndOfLoadedTracks:(NSIndexPath *)arg1;
 - (_Bool)isApproachingEndIndexPath:(NSIndexPath *)arg1 countOfItemsInSection:(long long)arg2;
-- (unsigned long long)countOfItemsInSection:(unsigned long long)arg1;
 @end
 

@@ -44,7 +44,7 @@
 - (void)navigateToQueue;
 - (void)navigateToAddSongs;
 - (void)navigateToUserProfilePage:(NSString *)arg1;
-- (void)leaveOrDeleteSession;
+- (void)leaveOrDeleteSessionFromScreen:(unsigned long long)arg1;
 - (void)load;
 @end
 

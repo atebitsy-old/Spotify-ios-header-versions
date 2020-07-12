@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileLyrics_FullscreenView_ContextMenu_LessVocalButtonEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitDecreaseVocalsVolume;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

@@ -18,7 +18,7 @@
 + (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)hitAddItemToQueueWithItemToAddToQueue:(id)arg1;
+- (id)hitAddItemsToQueueWithNumberOfItemsToAddToQueue:(unsigned long long)arg1;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

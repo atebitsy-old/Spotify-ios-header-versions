@@ -9,16 +9,18 @@
 #import "SPTSocialListeningLogger-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileSocialListeningEventFactory;
+@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileSocialListeningEventFactory, SPTUBIMobileSocialListeningParticipantsEventFactory;
 
 @interface SPTSocialListeningLoggerImplementation : NSObject <SPTSocialListeningLogger>
 {
     id <SPTLogCenter> _logCenter;
     id <SPTUBIMobileSocialListeningEventFactory> _eventFactory;
+    id <SPTUBIMobileSocialListeningParticipantsEventFactory> _participantsEventFactory;
     id <SPTUBILogger> _ubiLogger;
 }
 
 @property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(retain, nonatomic) id <SPTUBIMobileSocialListeningParticipantsEventFactory> participantsEventFactory; // @synthesize participantsEventFactory=_participantsEventFactory;
 @property(retain, nonatomic) id <SPTUBIMobileSocialListeningEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
@@ -28,16 +30,19 @@
 - (void)logJoinFromScannableWithURL:(id)arg1;
 - (void)logJoinFromSearchWithURL:(id)arg1;
 - (void)logParticipantListImpression;
-- (void)logConfirmEndSessionCancelButtonTapped;
-- (void)logConfirmEndSessionEndButtonTapped;
+- (void)logConfirmEndSessionCancelButtonTappedFromScreen:(unsigned long long)arg1;
+- (void)logConfirmEndSessionEndButtonTappedFromScreen:(unsigned long long)arg1;
 - (void)logEndSessionButtonTapped;
 - (void)logLeaveSessionButtonTapped;
+- (void)logUIInteractionLeaveSessionButtonTapped;
 - (void)logShareCodeButtonTapped;
 - (void)logFacepileTapped;
 - (void)logScanCodeButtonTapped;
 - (void)logTryAgainButtonTapped;
-- (void)logUserProfileTapped:(long long)arg1;
-- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
+- (void)logLeaveSessionButtonTapped:(long long)arg1 profileURL:(id)arg2;
+- (void)logEndSessionButtonTapped:(long long)arg1 profileURL:(id)arg2;
+- (void)logUserProfileTapped:(long long)arg1 profileURL:(id)arg2;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 participantsEventFactory:(id)arg3 ubiLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

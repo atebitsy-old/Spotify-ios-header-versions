@@ -11,7 +11,7 @@
 #import "SPTStorylinesLoaderDelegate-Protocol.h"
 #import "SPTStorylinesProgressionManagerDelegate-Protocol.h"
 
-@class NSString, SPTStorylinesAttributionViewModel, SPTStorylinesEnabledManager, SPTStorylinesLoader, SPTStorylinesLogger, SPTStorylinesProgressionManager, SPTStorylinesState, UIImage;
+@class NSString, SPTStorylinesAttributionViewModel, SPTStorylinesEnabledManager, SPTStorylinesLoader, SPTStorylinesProgressionManager, SPTStorylinesState, SPTStorylinesUBILogger, UIImage;
 @protocol SPTOfflineModeState, SPTStorylinesViewModelDelegate, SPTStorylinesViewModelUIDelegate;
 
 @interface SPTStorylinesViewModel : NSObject <SPTStorylinesAttributionViewModelDelegate, SPTStorylinesLoaderDelegate, SPTStorylinesProgressionManagerDelegate, SPTOfflineModeStateObserver>
@@ -25,14 +25,14 @@
     SPTStorylinesLoader *_storylinesLoader;
     SPTStorylinesEnabledManager *_enabledManager;
     SPTStorylinesProgressionManager *_progressionManager;
-    SPTStorylinesLogger *_logger;
+    SPTStorylinesUBILogger *_logger;
     id <SPTOfflineModeState> _offlineModeState;
     UIImage *_currentImage;
 }
 
 @property(retain, nonatomic) UIImage *currentImage; // @synthesize currentImage=_currentImage;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(readonly, nonatomic) SPTStorylinesLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTStorylinesUBILogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTStorylinesProgressionManager *progressionManager; // @synthesize progressionManager=_progressionManager;
 @property(readonly, nonatomic) SPTStorylinesEnabledManager *enabledManager; // @synthesize enabledManager=_enabledManager;
 @property(readonly, nonatomic) SPTStorylinesLoader *storylinesLoader; // @synthesize storylinesLoader=_storylinesLoader;

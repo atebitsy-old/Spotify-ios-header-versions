@@ -9,6 +9,7 @@
 #import "SPTNotificationSystemDelegate-Protocol.h"
 
 @interface _TtC24PushMessagingFeatureImpl21PushMessagingListener (PushMessagingFeatureImpl) <SPTNotificationSystemDelegate>
+- (void)userNotificationCenter:(id)arg1 openSettingsForNotification:(id)arg2;
 - (void)handleNotification:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleNotificationWithResponse:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleIncomingRemoteNotification:(id)arg1;

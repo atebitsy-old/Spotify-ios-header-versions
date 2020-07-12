@@ -43,7 +43,7 @@
 @property(retain, nonatomic) SPTCoreCreateOptions *createOptions; // @synthesize createOptions=_createOptions;
 @property(retain, nonatomic) SPSession *internalSession; // @synthesize internalSession=_internalSession;
 @property(retain, nonatomic) SPTEventSenderBridge *eventSenderBridge; // @synthesize eventSenderBridge=_eventSenderBridge;
-@property(retain, nonatomic) SPTCoreSchedulerThread *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
+@property(nonatomic) __weak SPTCoreSchedulerThread *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(retain, nonatomic) SPTAuthSession *authSession; // @synthesize authSession=_authSession;
 @property(nonatomic) __weak SPTAuthLoginController *loginController; // @synthesize loginController=_loginController;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineNotifier; // @synthesize offlineNotifier=_offlineNotifier;

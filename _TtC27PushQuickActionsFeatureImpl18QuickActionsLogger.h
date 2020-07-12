@@ -9,6 +9,7 @@
 @interface _TtC27PushQuickActionsFeatureImpl18QuickActionsLogger : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: logCenter
+    // Error parsing type: , name: eventSender
 }
 
 @end

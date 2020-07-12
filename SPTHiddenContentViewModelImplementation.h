@@ -15,7 +15,6 @@
 
 @interface SPTHiddenContentViewModelImplementation : NSObject <SPTExplicitContentEnabledStateObserver, SPTHiddenContentViewModel, SPTHiddenContentModelDelegate>
 {
-    _Bool _loadPending;
     id <SPTHiddenContentViewModelDelegate> _delegate;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTContextMenuActionsProvider> _contextMenuActionsProvider;
@@ -44,7 +43,6 @@
 @property(copy, nonatomic) NSArray<SPTHiddenContentArtistViewModel> *artistViewModels; // @synthesize artistViewModels=_artistViewModels;
 @property(retain, nonatomic) NSError *trackFetchError; // @synthesize trackFetchError=_trackFetchError;
 @property(copy, nonatomic) NSArray<SPTHiddenContentTrackViewModel> *trackViewModels; // @synthesize trackViewModels=_trackViewModels;
-@property(nonatomic, getter=isLoadPending) _Bool loadPending; // @synthesize loadPending=_loadPending;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) SPTHiddenContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -59,7 +57,6 @@
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
 - (id)artistViewModelsFromArtistModelEntities:(id)arg1;
 - (id)trackViewModelsFromTrackModelEntities:(id)arg1;
-- (void)endViewLoggingIfAllRequestsAreAccountedFor;
 - (void)hiddenContentModel:(id)arg1 didFailToLoadArtistsWithError:(id)arg2;
 - (void)hiddenContentModel:(id)arg1 didLoadArtists:(id)arg2;
 - (void)hiddenContentModel:(id)arg1 didFailToLoadTracksWithError:(id)arg2;

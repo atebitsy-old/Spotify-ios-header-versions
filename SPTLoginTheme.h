@@ -10,6 +10,7 @@
 {
 }
 
+- (id)login_actionButtonStyles;
 - (id)delayedSignupBannerStyle;
 - (id)popupContainerViewStyle;
 - (id)inputFormViewStyle;
@@ -35,8 +36,6 @@
 - (void)login_applySlideUpDefaultViewStyleToStyle:(id)arg1;
 - (id)slideUpDialogDefaultViewStyle;
 - (id)autosendLinkDialogViewStyle;
-- (id)continueWithEmailViewStyle;
-- (id)continueWithWelcomeViewStyle;
 - (id)intentLedStartViewStyle;
 - (id)methodLedStartScreenStyle;
 - (id)welcomeViewStyleWithTestManager:(id)arg1;

@@ -36,10 +36,12 @@
     double _nextButtonBottomMargin;
     double _subtitleLabelHorizontalMargin;
     double _scrollViewContentHeight;
+    double _countrySelectorTitleLeadingMargin;
     struct UIEdgeInsets _tableViewSeparatorInsets;
     struct UIEdgeInsets _tableViewLayoutMargins;
 }
 
+@property(nonatomic) double countrySelectorTitleLeadingMargin; // @synthesize countrySelectorTitleLeadingMargin=_countrySelectorTitleLeadingMargin;
 @property(nonatomic) _Bool tableViewScrollEnabled; // @synthesize tableViewScrollEnabled=_tableViewScrollEnabled;
 @property(nonatomic) struct UIEdgeInsets tableViewLayoutMargins; // @synthesize tableViewLayoutMargins=_tableViewLayoutMargins;
 @property(nonatomic) struct UIEdgeInsets tableViewSeparatorInsets; // @synthesize tableViewSeparatorInsets=_tableViewSeparatorInsets;

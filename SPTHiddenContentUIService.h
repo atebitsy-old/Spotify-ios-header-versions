@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHiddenContentService, SPTPerformanceMetricsService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHiddenContentService, SPTPageLoaderViewService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTHiddenContentUIService : SPTUIPageService
 {
@@ -17,13 +17,13 @@
     id <SPTFreeTierService> _freeTierService;
     id <SPTGLUEService> _glueService;
     id <SPTHiddenContentService> _hiddenContentService;
-    id <SPTPerformanceMetricsService> _performanceMetricsService;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <SPTUBIService> _ubiService;
 }
 
 + (id)serviceIdentifier;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
-@property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTHiddenContentService> hiddenContentService; // @synthesize hiddenContentService=_hiddenContentService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
@@ -32,6 +32,7 @@
 @property(nonatomic) __weak id <SPTAudioPreviewService> audioPreviewService; // @synthesize audioPreviewService=_audioPreviewService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 - (void).cxx_destruct;
+- (id)provideViewControllerForURI:(id)arg1 context:(id)arg2 model:(id)arg3;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (void)configureWithServices:(id)arg1;

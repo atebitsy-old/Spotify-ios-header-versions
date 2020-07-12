@@ -4,7 +4,7 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPPageView.h"
+#import "SPTPageView.h"
 
 #import "SPTNowPlayingBarPageModelDelegate-Protocol.h"
 #import "SPTNowPlayingTestManagerObserver-Protocol.h"
@@ -14,7 +14,7 @@
 @class NSString, NSURL, SPTNowPlayingBarPageModel, SPTTheme, UILabel;
 @protocol SPTNowPlayingTestManager, SPTThemableViewLayoutDelegate;
 
-@interface SPTNowPlayingBarPageView : SPPageView <SPTNowPlayingBarPageModelDelegate, SPTNowPlayingTestManagerObserver, SPTPlayerTrackScrollPageView, SPTThemableView>
+@interface SPTNowPlayingBarPageView : SPTPageView <SPTNowPlayingBarPageModelDelegate, SPTNowPlayingTestManagerObserver, SPTPlayerTrackScrollPageView, SPTThemableView>
 {
     _Bool _coverArtHidden;
     NSURL *_trackURL;

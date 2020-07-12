@@ -8,7 +8,6 @@
 
 @interface _TtC23MusicVideoUIFeatureImpl27VideoPlaybackCommandHandler : NSObject
 {
-    // Error parsing type: , name: playlistService
     // Error parsing type: , name: player
     // Error parsing type: , name: metaViewController
     // Error parsing type: , name: contextUri

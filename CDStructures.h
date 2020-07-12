@@ -544,6 +544,10 @@ struct GPBOutputBufferState {
 
 struct GenericTimerManager;
 
+struct GoogleSignInCredential {
+    struct unique_ptr<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl>> _pimpl;
+};
+
 struct HashEntry;
 
 struct HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection> {
@@ -1726,6 +1730,14 @@ struct optional<spotify::connectivity::auth::credentials::AppleSignInCredential>
     _Bool __engaged_;
 };
 
+struct optional<spotify::connectivity::auth::credentials::GoogleSignInCredential> {
+    union {
+        char __null_state_;
+        struct GoogleSignInCredential __val_;
+    } ;
+    _Bool __engaged_;
+};
+
 struct optional<spotify::connectivity::auth::credentials::OneTimeToken> {
     union {
         char __null_state_;
@@ -2395,6 +2407,12 @@ struct unique_ptr<spotify::connectivity::auth::credentials::AppleSignInCredentia
     } __ptr_;
 };
 
+struct unique_ptr<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl>> {
+    struct __compressed_pair<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl *, std::__1::default_delete<spotify::connectivity::auth::credentials::GoogleSignInCredential::Impl>> {
+        struct Impl *__value_;
+    } __ptr_;
+};
+
 struct unique_ptr<spotify::connectivity::auth::credentials::OneTimeToken::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::OneTimeToken::Impl>> {
     struct __compressed_pair<spotify::connectivity::auth::credentials::OneTimeToken::Impl *, std::__1::default_delete<spotify::connectivity::auth::credentials::OneTimeToken::Impl>> {
         struct Impl *__value_;
@@ -2694,49 +2712,55 @@ struct unordered_map<unsigned long long, std::__1::shared_ptr<spotify::async::Ti
     } __table_;
 };
 
-struct variant<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
-    struct __impl<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
-        union __union<std::__1::__variant_detail::_Trait::_Available, 0, spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+struct variant<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+    struct __impl<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+        union __union<std::__1::__variant_detail::_Trait::_Available, 0, spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
             char _field1;
             struct __alt<0, spotify::connectivity::auth::Identifier> {
                 struct Identifier _field1;
             } _field2;
-            union __union<std::__1::__variant_detail::_Trait::_Available, 1, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+            union __union<std::__1::__variant_detail::_Trait::_Available, 1, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                 char _field1;
                 struct __alt<1, spotify::connectivity::auth::credentials::AppleSignInCredential> {
                     struct AppleSignInCredential _field1;
                 } _field2;
-                union __union<std::__1::__variant_detail::_Trait::_Available, 2, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                union __union<std::__1::__variant_detail::_Trait::_Available, 2, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                     char _field1;
                     struct __alt<2, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore> {
                         struct AutologinFromCredentialsStore _field1;
                     } _field2;
-                    union __union<std::__1::__variant_detail::_Trait::_Available, 3, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                    union __union<std::__1::__variant_detail::_Trait::_Available, 3, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                         char _field1;
-                        struct __alt<3, spotify::connectivity::auth::credentials::OneTimeToken> {
-                            struct OneTimeToken _field1;
+                        struct __alt<3, spotify::connectivity::auth::credentials::GoogleSignInCredential> {
+                            struct GoogleSignInCredential _field1;
                         } _field2;
-                        union __union<std::__1::__variant_detail::_Trait::_Available, 4, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                        union __union<std::__1::__variant_detail::_Trait::_Available, 4, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                             char _field1;
-                            struct __alt<4, spotify::connectivity::auth::credentials::ParentChildCredential> {
-                                struct ParentChildCredential _field1;
+                            struct __alt<4, spotify::connectivity::auth::credentials::OneTimeToken> {
+                                struct OneTimeToken _field1;
                             } _field2;
-                            union __union<std::__1::__variant_detail::_Trait::_Available, 5, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                            union __union<std::__1::__variant_detail::_Trait::_Available, 5, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                                 char _field1;
-                                struct __alt<5, spotify::connectivity::auth::credentials::RefreshTokenCredentials> {
-                                    struct RefreshTokenCredentials _field1;
+                                struct __alt<5, spotify::connectivity::auth::credentials::ParentChildCredential> {
+                                    struct ParentChildCredential _field1;
                                 } _field2;
-                                union __union<std::__1::__variant_detail::_Trait::_Available, 6, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                                union __union<std::__1::__variant_detail::_Trait::_Available, 6, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                                     char _field1;
-                                    struct __alt<6, spotify::connectivity::auth::credentials::SamsungSignInCredential> {
-                                        struct SamsungSignInCredential _field1;
+                                    struct __alt<6, spotify::connectivity::auth::credentials::RefreshTokenCredentials> {
+                                        struct RefreshTokenCredentials _field1;
                                     } _field2;
-                                    union __union<std::__1::__variant_detail::_Trait::_Available, 7, spotify::connectivity::auth::LoginCredentials> {
+                                    union __union<std::__1::__variant_detail::_Trait::_Available, 7, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                                         char _field1;
-                                        struct __alt<7, spotify::connectivity::auth::LoginCredentials> {
-                                            struct LoginCredentials _field1;
+                                        struct __alt<7, spotify::connectivity::auth::credentials::SamsungSignInCredential> {
+                                            struct SamsungSignInCredential _field1;
                                         } _field2;
-                                        union __union<std::__1::__variant_detail::_Trait::_Available, 8> _field3;
+                                        union __union<std::__1::__variant_detail::_Trait::_Available, 8, spotify::connectivity::auth::LoginCredentials> {
+                                            char _field1;
+                                            struct __alt<8, spotify::connectivity::auth::LoginCredentials> {
+                                                struct LoginCredentials _field1;
+                                            } _field2;
+                                            union __union<std::__1::__variant_detail::_Trait::_Available, 9> _field3;
+                                        } _field3;
                                     } _field3;
                                 } _field3;
                             } _field3;
@@ -3369,49 +3393,55 @@ typedef struct unique_ptr<spotify::connectivity::auth::Session, std::__1::defaul
     } __ptr_;
 } unique_ptr_c7ae8056;
 
-typedef struct variant<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
-    struct __impl<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
-        union __union<std::__1::__variant_detail::_Trait::_Available, 0, spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+typedef struct variant<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+    struct __impl<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+        union __union<std::__1::__variant_detail::_Trait::_Available, 0, spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
             char _field1;
             struct __alt<0, spotify::connectivity::auth::Identifier> {
                 struct Identifier _field1;
             } _field2;
-            union __union<std::__1::__variant_detail::_Trait::_Available, 1, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+            union __union<std::__1::__variant_detail::_Trait::_Available, 1, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                 char _field1;
                 struct __alt<1, spotify::connectivity::auth::credentials::AppleSignInCredential> {
                     struct AppleSignInCredential _field1;
                 } _field2;
-                union __union<std::__1::__variant_detail::_Trait::_Available, 2, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                union __union<std::__1::__variant_detail::_Trait::_Available, 2, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                     char _field1;
                     struct __alt<2, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore> {
                         struct AutologinFromCredentialsStore _field1;
                     } _field2;
-                    union __union<std::__1::__variant_detail::_Trait::_Available, 3, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                    union __union<std::__1::__variant_detail::_Trait::_Available, 3, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                         char _field1;
-                        struct __alt<3, spotify::connectivity::auth::credentials::OneTimeToken> {
-                            struct OneTimeToken _field1;
+                        struct __alt<3, spotify::connectivity::auth::credentials::GoogleSignInCredential> {
+                            struct GoogleSignInCredential _field1;
                         } _field2;
-                        union __union<std::__1::__variant_detail::_Trait::_Available, 4, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                        union __union<std::__1::__variant_detail::_Trait::_Available, 4, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                             char _field1;
-                            struct __alt<4, spotify::connectivity::auth::credentials::ParentChildCredential> {
-                                struct ParentChildCredential _field1;
+                            struct __alt<4, spotify::connectivity::auth::credentials::OneTimeToken> {
+                                struct OneTimeToken _field1;
                             } _field2;
-                            union __union<std::__1::__variant_detail::_Trait::_Available, 5, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                            union __union<std::__1::__variant_detail::_Trait::_Available, 5, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                                 char _field1;
-                                struct __alt<5, spotify::connectivity::auth::credentials::RefreshTokenCredentials> {
-                                    struct RefreshTokenCredentials _field1;
+                                struct __alt<5, spotify::connectivity::auth::credentials::ParentChildCredential> {
+                                    struct ParentChildCredential _field1;
                                 } _field2;
-                                union __union<std::__1::__variant_detail::_Trait::_Available, 6, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
+                                union __union<std::__1::__variant_detail::_Trait::_Available, 6, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                                     char _field1;
-                                    struct __alt<6, spotify::connectivity::auth::credentials::SamsungSignInCredential> {
-                                        struct SamsungSignInCredential _field1;
+                                    struct __alt<6, spotify::connectivity::auth::credentials::RefreshTokenCredentials> {
+                                        struct RefreshTokenCredentials _field1;
                                     } _field2;
-                                    union __union<std::__1::__variant_detail::_Trait::_Available, 7, spotify::connectivity::auth::LoginCredentials> {
+                                    union __union<std::__1::__variant_detail::_Trait::_Available, 7, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
                                         char _field1;
-                                        struct __alt<7, spotify::connectivity::auth::LoginCredentials> {
-                                            struct LoginCredentials _field1;
+                                        struct __alt<7, spotify::connectivity::auth::credentials::SamsungSignInCredential> {
+                                            struct SamsungSignInCredential _field1;
                                         } _field2;
-                                        union __union<std::__1::__variant_detail::_Trait::_Available, 8> _field3;
+                                        union __union<std::__1::__variant_detail::_Trait::_Available, 8, spotify::connectivity::auth::LoginCredentials> {
+                                            char _field1;
+                                            struct __alt<8, spotify::connectivity::auth::LoginCredentials> {
+                                                struct LoginCredentials _field1;
+                                            } _field2;
+                                            union __union<std::__1::__variant_detail::_Trait::_Available, 9> _field3;
+                                        } _field3;
                                     } _field3;
                                 } _field3;
                             } _field3;
@@ -3422,7 +3452,7 @@ typedef struct variant<spotify::connectivity::auth::Identifier, spotify::connect
         } _field1;
         unsigned int _field2;
     } _field1;
-} variant_217e0f36;
+} variant_a76687c1;
 
 typedef struct vector<spotify::uri::SpotifyLink, std::__1::allocator<spotify::uri::SpotifyLink>> {
     struct SpotifyLink *_field1;

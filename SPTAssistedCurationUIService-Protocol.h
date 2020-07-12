@@ -10,9 +10,9 @@
 @protocol SPTAssistedCurationLinkDispatcher;
 
 @protocol SPTAssistedCurationUIService <SPTService>
-- (id <SPTAssistedCurationLinkDispatcher>)providerAssistedCurationLinkDispatcher;
 - (void)curateQueue;
 - (void)curateLikedSongs;
 - (void)curatePlaylistURL:(NSURL *)arg1;
+- (id <SPTAssistedCurationLinkDispatcher>)providerAssistedCurationLinkDispatcher;
 @end
 

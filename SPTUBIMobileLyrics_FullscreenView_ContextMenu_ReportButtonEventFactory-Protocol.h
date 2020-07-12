@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileLyrics_FullscreenView_ContextMenu_ReportButtonEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitReportQuality;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

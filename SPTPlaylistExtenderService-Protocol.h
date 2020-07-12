@@ -6,11 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@class NSURL, SPTDataLoader;
-@protocol SPTPlayer, SPTPlaylistExtender, SPTPlaylistExtenderModel;
+@class NSString, NSURL, SPTDataLoader;
+@protocol SPTFreeTierPlaylistIsTrackActive, SPTPlayer, SPTPlaylistExtenderCellProvider;
 
 @protocol SPTPlaylistExtenderService <SPTService>
-- (id <SPTPlaylistExtenderModel>)providePlaylistExtenderModelWithWithDataLoader:(SPTDataLoader *)arg1 player:(id <SPTPlayer>)arg2 playlistURI:(NSURL *)arg3 preferedNumberOfTracks:(unsigned long long)arg4;
-- (id <SPTPlaylistExtender>)providePlaylistExtenderWithDataLoader:(SPTDataLoader *)arg1;
+- (id <SPTPlaylistExtenderCellProvider>)provideCellProviderWithDataLoader:(SPTDataLoader *)arg1 player:(id <SPTPlayer>)arg2 playlistURI:(NSURL *)arg3 preferredNumberOfTracks:(unsigned long long)arg4 pageIdentifier:(NSString *)arg5 trackActivePredicate:(id <SPTFreeTierPlaylistIsTrackActive>)arg6;
 @end
 

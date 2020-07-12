@@ -54,6 +54,8 @@
     SPTPodcastSpeedControlManagerImpl *_podcastSpeedControlManager;
     SPTPodcastRequestFactoryImplementation *_podcastRequestFactory;
     SPTPodcastCosmosDataLoader *_podcastCosmosDataLoader;
+    SPTPodcastRequestFactoryImplementation *_internalPodcastRequestFactory;
+    SPTPodcastCosmosDataLoader *_internalPodcastCosmosDataLoader;
     SPTPodcastFactory *_podcastFactory;
     SPTPodcastEpisodeFactory *_podcastEpisodeFactory;
     SPTPodcastEpisodeCellActionHandlerFactory *_cellActionHandlerFactory;
@@ -69,6 +71,8 @@
 @property(retain, nonatomic) SPTPodcastEpisodeCellActionHandlerFactory *cellActionHandlerFactory; // @synthesize cellActionHandlerFactory=_cellActionHandlerFactory;
 @property(retain, nonatomic) SPTPodcastEpisodeFactory *podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
 @property(retain, nonatomic) SPTPodcastFactory *podcastFactory; // @synthesize podcastFactory=_podcastFactory;
+@property(retain, nonatomic) SPTPodcastCosmosDataLoader *internalPodcastCosmosDataLoader; // @synthesize internalPodcastCosmosDataLoader=_internalPodcastCosmosDataLoader;
+@property(retain, nonatomic) SPTPodcastRequestFactoryImplementation *internalPodcastRequestFactory; // @synthesize internalPodcastRequestFactory=_internalPodcastRequestFactory;
 @property(retain, nonatomic) SPTPodcastCosmosDataLoader *podcastCosmosDataLoader; // @synthesize podcastCosmosDataLoader=_podcastCosmosDataLoader;
 @property(retain, nonatomic) SPTPodcastRequestFactoryImplementation *podcastRequestFactory; // @synthesize podcastRequestFactory=_podcastRequestFactory;
 @property(retain, nonatomic) SPTPodcastSpeedControlManagerImpl *podcastSpeedControlManager; // @synthesize podcastSpeedControlManager=_podcastSpeedControlManager;
@@ -116,6 +120,8 @@
 - (id)providePodcastEpisodeFactory;
 - (id)providePodcastFactory;
 - (id)providePodcastDataLoader;
+- (id)provideInternalPodcastDataLoader;
+- (id)provideInternalPodcastRequestFactory;
 - (id)providePodcastRequestFactory;
 - (id)provideCellActionHandlerFactory;
 - (id)provideTestManager;
@@ -129,8 +135,6 @@
 - (id)providePodcastSpeedControlManager;
 - (id)provideShowEntityService;
 - (id)provideDefaultContextMenuProvider;
-- (id)provideInternalPodcastEpisodeFactory;
-- (id)provideInternalPodcastFactory;
 - (id)provideContextMenuDelegateObject;
 - (id)provideContextMenuProviderWithLinkDispatcher:(id)arg1;
 - (id)providePodcastViewControllerForURL:(id)arg1 context:(id)arg2;

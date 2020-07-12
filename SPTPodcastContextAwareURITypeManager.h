@@ -22,7 +22,6 @@
 - (void).cxx_destruct;
 - (void)resolveDefaultContextForURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (void)lookupShowURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
-- (void)lookupEpisodeURI:(id)arg1 originalURI:(id)arg2 handler:(CDUnknownBlockType)arg3;
 - (_Bool)typeManagerRecognizesURI:(id)arg1;
 - (id)initWithEntityService:(id)arg1 contextAwareURIBlock:(CDUnknownBlockType)arg2;
 

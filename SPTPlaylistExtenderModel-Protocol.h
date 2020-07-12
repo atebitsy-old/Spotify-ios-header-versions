@@ -15,12 +15,13 @@
 @property(readonly, nonatomic) NSString *sectionFooterButtonTitle;
 @property(readonly, nonatomic) NSString *sectionHeaderSubtitle;
 @property(readonly, nonatomic) NSString *sectionHeaderTitle;
+@property(readonly, nonatomic) NSURL *playlistURI;
 @property(nonatomic) __weak id <SPTPlaylistExtenderModelDelegate> delegate;
 - (_Bool)shouldDisplayFooter;
 - (void)startLoading;
 - (void)refresh;
 - (void)trackSelectedAtIndex:(long long)arg1;
-- (void)addTrackAtIndex:(unsigned long long)arg1 toPlaylistURL:(NSURL *)arg2;
+- (void)addTrackAtIndex:(unsigned long long)arg1;
 - (id <SPTPlaylistExtenderItem>)itemForIndex:(unsigned long long)arg1;
 - (unsigned long long)numberOfTracks;
 @end

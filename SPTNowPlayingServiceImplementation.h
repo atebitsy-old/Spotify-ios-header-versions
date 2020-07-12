@@ -184,6 +184,7 @@
 - (void)setupSideBarViewControllerRegistry;
 - (void)registerDefaultModeViewControllers;
 - (id)provideRemoteControlEventDefaultController;
+- (id)provideLockScreenUBILogger;
 - (id)provideQueueLogger;
 - (id)provideVideoManager;
 - (id)provideLocalSettings;

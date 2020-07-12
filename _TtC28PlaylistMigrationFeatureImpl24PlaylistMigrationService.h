@@ -19,7 +19,7 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
-- (id)provideSponsoredCellProviderWithPlaylistURL:(id)arg1;
+- (id)provideSponsoredCellProviderWithPlaylistURL:(id)arg1 cellProviderDelegate:(id)arg2;
 - (id)provideItemsViewModelWithPremiumOnlyFeatureEnabled:(_Bool)arg1 isTrackActive:(id)arg2;
 - (id)provideTrackSectionWithItemsViewModel:(id)arg1;
 

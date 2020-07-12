@@ -6,10 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTEncoreTestManager, SPTEncoreTrackRowFactory><_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_><_TtP24EncoreIntegrationFeature35SPTEncorePlaylistExtenderRowFactory_><_TtP24EncoreIntegrationFeature24SPTTrackRowArtistFactory_;
+@protocol SPTEncoreAlbumHeaderFactory><SPTEncorePlaylistHeaderFactory><SPTEncoreTrackRowFactory><SPTEncoreTrackRowPlaylistExtenderFactory><SPTTrackRowArtistFactory, SPTEncoreTestManager;
 
 @protocol SPTEncoreIntegrationService <SPTService>
 - (id <SPTEncoreTestManager>)provideTestManager;
-- (id <SPTEncoreTrackRowFactory><_TtP24EncoreIntegrationFeature27SPTEncoreAlbumHeaderFactory_><_TtP24EncoreIntegrationFeature35SPTEncorePlaylistExtenderRowFactory_><_TtP24EncoreIntegrationFeature24SPTTrackRowArtistFactory_>)provideComponentFactory;
+- (id <SPTEncoreAlbumHeaderFactory><SPTEncorePlaylistHeaderFactory><SPTEncoreTrackRowFactory><SPTEncoreTrackRowPlaylistExtenderFactory><SPTTrackRowArtistFactory>)provideComponentFactory;
 @end
 

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: videoPlayerManager
 }
 
 @end

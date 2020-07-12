@@ -14,8 +14,10 @@
 {
     _Bool _mercuryPremiumHubsPageShowLegacyIos;
     _Bool _premiumHeaderVoiceoverAccessibleEnabled;
+    _Bool _premiumDestinationTabbarBadgeEnabled;
 }
 
+@property(readonly, nonatomic) _Bool premiumDestinationTabbarBadgeEnabled; // @synthesize premiumDestinationTabbarBadgeEnabled=_premiumDestinationTabbarBadgeEnabled;
 @property(readonly, nonatomic) _Bool premiumHeaderVoiceoverAccessibleEnabled; // @synthesize premiumHeaderVoiceoverAccessibleEnabled=_premiumHeaderVoiceoverAccessibleEnabled;
 @property(readonly, nonatomic) _Bool mercuryPremiumHubsPageShowLegacyIos; // @synthesize mercuryPremiumHubsPageShowLegacyIos=_mercuryPremiumHubsPageShowLegacyIos;
 - (id)propertyModels;

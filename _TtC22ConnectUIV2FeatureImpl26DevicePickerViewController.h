@@ -17,6 +17,7 @@
     // Error parsing type: , name: loggingInterceptor
     // Error parsing type: , name: miniPickerEnabled
     // Error parsing type: , name: dismissClosure
+    // Error parsing type: , name: scrollObserverManager
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }
 

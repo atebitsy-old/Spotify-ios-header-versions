@@ -9,6 +9,12 @@
 @class GLUELabelStyle, UIColor, UIImage;
 
 @protocol SPTPodcastUIEpisodeImageCardStyle <NSObject>
+@property(readonly, nonatomic) double episodeImageCardV2ProgressViewTopSpacing;
+@property(readonly, nonatomic) double episodeImageCardV2ProgressViewMargin;
+@property(readonly, nonatomic) double episodeShowImageV2Margin;
+@property(readonly, nonatomic) double episodeShowImageV2ProtectiveLayerOpacity;
+@property(readonly, nonatomic) double episodeShowImageV2ShadowOpacity;
+@property(readonly, nonatomic) double episodeShowImageV2CornerRadius;
 @property(readonly, nonatomic) UIColor *progressViewTrackTintColor;
 @property(readonly, nonatomic) UIColor *progressViewTintColor;
 @property(readonly, nonatomic) double progressViewCornerRadius;
@@ -28,6 +34,7 @@
 @property(readonly, nonatomic) GLUELabelStyle *titleLabelStyle;
 @property(readonly, nonatomic) UIColor *darkTextColor;
 @property(readonly, nonatomic) UIColor *brightTextColor;
+@property(readonly, nonatomic) UIImage *podcastFallbackImage30;
 @property(readonly, nonatomic) UIImage *thumbnailFallbackImage;
 @property(readonly, nonatomic) UIColor *extractedFallbackColor;
 @property(readonly, nonatomic) double highlightedAlpha;

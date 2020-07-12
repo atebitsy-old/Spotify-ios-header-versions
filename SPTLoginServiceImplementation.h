@@ -86,7 +86,7 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
-- (id)provideWelcomeViewControllerWithTheme:(id)arg1 mainViewLoader:(id)arg2 loginStateController:(id)arg3 performanceLogging:(id)arg4 phoneNumberEnabled:(_Bool)arg5 guestModeEnabled:(_Bool)arg6;
+- (id)buttonActionHandlerForScreenWithIdentifier:(id)arg1;
 - (void)refreshStickyCredentialsDatabaseManager;
 - (id)provideStickyCredentialsDbManager;
 - (id)provideAppleAuthController;
@@ -94,17 +94,14 @@
 - (id)provideAccountSwitcher;
 - (id)provideNavigationRouter;
 - (id)provideDynamicFlowController;
-- (id)provideAuthenticationHandler;
 - (id)loginFailureHandler;
 - (id)mainViewLoader;
-- (id)provideContinueWithEmailViewController;
 - (id)provideIntentLedStartViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideMethodLedStartViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideWelcomeViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideLoginViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideMagicLinkSentConfirmationViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideMagicLinkDoRequestViewControllerForURI:(id)arg1 context:(id)arg2;
-- (void)registerContinueWithEmailViewController;
 - (void)registerMagicLinkSentConfirmationViewController;
 - (void)registerMagicLinkDoRequestViewController;
 - (void)registerLoginViewController;

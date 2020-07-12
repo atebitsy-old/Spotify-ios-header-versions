@@ -15,6 +15,7 @@
     // Error parsing type: , name: offlineModeState
     // Error parsing type: , name: flagsManager
     // Error parsing type: , name: presentedPicker
+    // Error parsing type: , name: miniPickerTransition
 }
 
 - (void).cxx_destruct;

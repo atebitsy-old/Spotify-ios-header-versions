@@ -9,7 +9,7 @@
 @protocol SPTEpisodeSegmentsEntity;
 
 @protocol SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate <NSObject>
-- (void)playerDidStopPlayingEntity:(id <SPTEpisodeSegmentsEntity>)arg1;
-- (void)playerDidUpdateWithEntityPlaying:(id <SPTEpisodeSegmentsEntity>)arg1;
+- (void)playerDidStopPlayingSegment:(id <SPTEpisodeSegmentsEntity>)arg1 atIndex:(int)arg2;
+- (void)playerDidChangeSegment:(id <SPTEpisodeSegmentsEntity>)arg1 atIndex:(int)arg2;
 @end
 

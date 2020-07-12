@@ -12,6 +12,8 @@
     // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: sessionService
     // Error parsing type: , name: glueService
+    // Error parsing type: , name: assistedCurationUIService
+    // Error parsing type: , name: uriDispatchService
     // Error parsing type: , name: pageRegistrationToken
 }
 

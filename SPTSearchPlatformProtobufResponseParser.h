@@ -9,11 +9,10 @@
 #import "SPTSearchPlatformResponseParser-Protocol.h"
 
 @class HUBViewModelBuilderFactory, NSString, NSURL;
-@protocol SPTExplicitContentAccessManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchUBILocationSerializer, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@protocol SPTExplicitContentAccessManager, SPTSearch2EmptyStatePropertiesProvider, SPTSearchOnDemandPermissionMonitor, SPTSearchUBILocationSerializer, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchPlatformProtobufResponseParser : NSObject <SPTSearchPlatformResponseParser>
 {
-    _Bool _nftExperience;
     _Bool _isDrillDown;
     _Bool _topicsEnabled;
     _Bool _lyricsRowDebuggingEnabled;
@@ -24,6 +23,7 @@
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
     id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
     NSString *_query;
+    id <SPTSearchOnDemandPermissionMonitor> _onDemandPermissionMonitor;
     unsigned long long _podcastRowsType;
     NSString *_referrerIdentifier;
 }
@@ -33,7 +33,7 @@
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, nonatomic) unsigned long long podcastRowsType; // @synthesize podcastRowsType=_podcastRowsType;
 @property(readonly, nonatomic) _Bool isDrillDown; // @synthesize isDrillDown=_isDrillDown;
-@property(readonly, nonatomic) _Bool nftExperience; // @synthesize nftExperience=_nftExperience;
+@property(readonly, nonatomic) id <SPTSearchOnDemandPermissionMonitor> onDemandPermissionMonitor; // @synthesize onDemandPermissionMonitor=_onDemandPermissionMonitor;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
 @property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
@@ -49,7 +49,6 @@
 - (id)drilldownTitleForQuery:(id)arg1 entityType:(int)arg2;
 - (int)entityTypeForEntity:(id)arg1;
 - (id)sectionIDForEntityType:(int)arg1;
-- (_Bool)nftExperienceWithUserTierProvider:(id)arg1;
 - (id)emptyStateProperties;
 - (id)noResultsViewModelWithRequestID:(id)arg1;
 - (id)resultsViewModelForDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3;
@@ -64,7 +63,7 @@
 - (id)parseDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
 - (id)parseMainResponse:(id)arg1 requestID:(id)arg2 error:(id *)arg3;
 - (id)parse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
-- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 userTierProvider:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 podcastRowsType:(unsigned long long)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11 topicsEnabled:(_Bool)arg12 lyricsRowDebuggingEnabled:(_Bool)arg13;
+- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 onDemandPermissionMonitor:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 podcastRowsType:(unsigned long long)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11 topicsEnabled:(_Bool)arg12 lyricsRowDebuggingEnabled:(_Bool)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
