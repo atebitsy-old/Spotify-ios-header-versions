@@ -13,12 +13,15 @@
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: logger
+    // Error parsing type: , name: leadingChipsViewControllerConstraint
+    // Error parsing type: , name: trailingChipsViewControllerConstraint
     // Error parsing type: , name: chipsViewController
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)viewDidLayoutSubviews;
+- (void)viewWillLayoutSubviews;
 - (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
 

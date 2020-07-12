@@ -13,6 +13,6 @@
 - (id <SPTShareEntityData>)provideLinkEntityDataWithItemURI:(NSURL *)arg1 itemType:(long long)arg2 contextSourceURI:(NSURL *)arg3 logContext:(NSString *)arg4 extraQueryItems:(NSArray *)arg5;
 - (id <SPTShareEntityData>)provideMessageEntityDataWithItemURI:(NSURL *)arg1 itemType:(long long)arg2 contextSourceURI:(NSURL *)arg3 text:(NSString *)arg4 logContext:(NSString *)arg5 extraQueryItems:(NSArray *)arg6;
 - (id <SPTShareEntityData>)provideStoryEntityDataWithItemURI:(NSURL *)arg1 itemType:(long long)arg2 contextSourceURI:(NSURL *)arg3 backgroundImage:(UIImage *)arg4 logContext:(NSString *)arg5 extraQueryItems:(NSArray *)arg6;
-- (id <SPTShareEntityData>)provideEntityDataWithItemURI:(NSURL *)arg1 contextSourceURI:(NSURL *)arg2 itemName:(NSString *)arg3 creatorName:(NSString *)arg4 sourceName:(NSString *)arg5 imageURL:(NSURL *)arg6 itemType:(long long)arg7 clipboardLinkTitle:(NSString *)arg8 logContext:(NSString *)arg9;
+- (id <SPTShareEntityData>)provideEntityDataWithItemURI:(NSURL *)arg1 contextSourceURI:(NSURL *)arg2 text:(NSString *)arg3 itemName:(NSString *)arg4 creatorName:(NSString *)arg5 sourceName:(NSString *)arg6 imageURL:(NSURL *)arg7 itemType:(long long)arg8 clipboardLinkTitle:(NSString *)arg9 logContext:(NSString *)arg10;
 @end
 

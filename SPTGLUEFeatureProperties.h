@@ -12,16 +12,12 @@
 
 @interface SPTGLUEFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _visrefHeadersWithGreenButtonEnabled;
-    _Bool _visrefLeftAlignedSectionHeaderEnabled;
-    _Bool _visrefLeftAlignedTrackCloudEnabled;
     _Bool _encoreAlbumHeaderEnabled;
+    _Bool _visrefAnimatedHeartEnabled;
 }
 
+@property(readonly, nonatomic) _Bool visrefAnimatedHeartEnabled; // @synthesize visrefAnimatedHeartEnabled=_visrefAnimatedHeartEnabled;
 @property(readonly, nonatomic) _Bool encoreAlbumHeaderEnabled; // @synthesize encoreAlbumHeaderEnabled=_encoreAlbumHeaderEnabled;
-@property(readonly, nonatomic) _Bool visrefLeftAlignedTrackCloudEnabled; // @synthesize visrefLeftAlignedTrackCloudEnabled=_visrefLeftAlignedTrackCloudEnabled;
-@property(readonly, nonatomic) _Bool visrefLeftAlignedSectionHeaderEnabled; // @synthesize visrefLeftAlignedSectionHeaderEnabled=_visrefLeftAlignedSectionHeaderEnabled;
-@property(readonly, nonatomic) _Bool visrefHeadersWithGreenButtonEnabled; // @synthesize visrefHeadersWithGreenButtonEnabled=_visrefHeadersWithGreenButtonEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

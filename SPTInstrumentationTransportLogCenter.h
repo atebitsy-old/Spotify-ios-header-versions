@@ -9,17 +9,20 @@
 #import "SPTInstrumentationTransport-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter;
+@protocol SPTEventSender, SPTLogCenter;
 
 @interface SPTInstrumentationTransportLogCenter : NSObject <SPTInstrumentationTransport>
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
 }
 
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)send:(id)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (void)legacySend:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 eventSender:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

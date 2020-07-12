@@ -29,9 +29,9 @@
 + (id)spt_unknownErrorWithUnderlyingError:(id)arg1;
 + (id)spt_errorWithInAppMessageJSONParserCode:(long long)arg1 userInfo:(id)arg2;
 + (id)spt_loginFlowGenericError;
-+ (id)spt_errorWithSecurityResultCode:(int)arg1;
 + (id)spt_errorWithSecurityStatusCode:(int)arg1;
 + (id)spt_persistentDataCacheErrorWithCode:(long long)arg1;
++ (id)spt_createSessionFullError;
 + (id)spt_createJoinFailedError;
 + (id)spt_voiceLibraryOfflineError;
 + (id)spt_voiceLibraryErrorWithRecordPermission:(unsigned long long)arg1;
@@ -44,6 +44,7 @@
 - (_Bool)spt_isUserDidCancelFacebookAuthenticationError;
 - (_Bool)spt_isNetworkDisabledError;
 - (_Bool)spt_isInAuthenticationErrorDomain;
+- (_Bool)spt_shouldShowSessionFullErrorPopup;
 - (_Bool)spt_shouldShowErrorPopup;
 - (id)spt_voiceLogError;
 - (unsigned long long)spt_voiceLogErrorType;

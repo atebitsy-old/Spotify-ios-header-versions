@@ -10,7 +10,7 @@
 {
 }
 
-+ (void)getCategoriesWithKey:(id)arg1 url:(id)arg2 publisherConfiguration:(id)arg3 block:(CDUnknownBlockType)arg4;
++ (void)getCategoriesWithKey:(id)arg1 url:(id)arg2 publisherId:(id)arg3 publisherUniqueDeviceId:(id)arg4 block:(CDUnknownBlockType)arg5;
 
 @end
 

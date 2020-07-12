@@ -6,41 +6,35 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTAbbaFeatureFlagsObserver-Protocol.h"
 #import "SPTGaiaDevicePickerContextMenuFlagsProvider-Protocol.h"
 #import "SPTGaiaDevicePickerFlagsProvider-Protocol.h"
 #import "SPTGaiaHomeDeviceFlagsProvider-Protocol.h"
 #import "SPTGaiaLockScreenPlayerFlagsProvider-Protocol.h"
 #import "SPTGaiaVolumeFeatureRefactorFlagsProvider-Protocol.h"
 
-@class NSNumber, NSString, SPTGaiaLocalDevicePermissions, SPTObserverManager;
+@class NSNumber, NSString, SPTGaiaFeatureProperties, SPTGaiaLocalDevicePermissions;
 @protocol SPTAbbaFeatureFlags, SPTGaiaConnectManager, SPTLocalSettings;
 
-@interface SPTGaiaFeatureFlagsManager : NSObject <SPTAbbaFeatureFlagsObserver, SPTGaiaDevicePickerContextMenuFlagsProvider, SPTGaiaHomeDeviceFlagsProvider, SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaDevicePickerFlagsProvider, SPTGaiaVolumeFeatureRefactorFlagsProvider>
+@interface SPTGaiaFeatureFlagsManager : NSObject <SPTGaiaDevicePickerContextMenuFlagsProvider, SPTGaiaHomeDeviceFlagsProvider, SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaDevicePickerFlagsProvider, SPTGaiaVolumeFeatureRefactorFlagsProvider>
 {
-    _Bool _lockScreenPlayerFeatureCurrentFlagState;
     id <SPTAbbaFeatureFlags> _featureFlags;
+    SPTGaiaFeatureProperties *_remoteConfigProperties;
     id <SPTLocalSettings> _localSettings;
     id <SPTGaiaConnectManager> _connectManager;
     SPTGaiaLocalDevicePermissions *_localDevicePermissions;
-    SPTObserverManager *_lockScreenPlayerFlagsObservers;
     NSNumber *_volumeFeatureEnabledOptionalFlag;
 }
 
 @property(retain, nonatomic) NSNumber *volumeFeatureEnabledOptionalFlag; // @synthesize volumeFeatureEnabledOptionalFlag=_volumeFeatureEnabledOptionalFlag;
-@property(nonatomic) _Bool lockScreenPlayerFeatureCurrentFlagState; // @synthesize lockScreenPlayerFeatureCurrentFlagState=_lockScreenPlayerFeatureCurrentFlagState;
-@property(retain, nonatomic) SPTObserverManager *lockScreenPlayerFlagsObservers; // @synthesize lockScreenPlayerFlagsObservers=_lockScreenPlayerFlagsObservers;
 @property(readonly, nonatomic) SPTGaiaLocalDevicePermissions *localDevicePermissions; // @synthesize localDevicePermissions=_localDevicePermissions;
 @property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
+@property(readonly, nonatomic) SPTGaiaFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool volumeFeatureEnabled;
 - (_Bool)freeTierEducationPickerDesignEnabled;
-- (void)removeLockScreenPlayerFlagsObserver:(id)arg1;
-- (void)addLockScreenPlayerFlagsObserver:(id)arg1;
 - (_Bool)lockScreenPlayerFeatureEnabled;
-- (_Bool)updatedLockScreenPlayerFeatureEnabledFromFeatureFlags;
 - (id)homeDeviceLocalForcedSettingsKey;
 - (_Bool)homeDeviceAutomaticTransferEnabled;
 - (_Bool)homeDeviceFeatureEnabled;
@@ -48,9 +42,7 @@
 - (id)devicePickerContextMenuFeatureFlagDisabledValue;
 - (id)devicePickerContextMenuFeatureFlagEnabledValue;
 - (_Bool)contextMenuEnabled:(id)arg1;
-- (void)featureFlagsDidChange:(id)arg1;
-- (void)dealloc;
-- (id)initWithFeatureFlags:(id)arg1 localSettings:(id)arg2 connectManager:(id)arg3 localDevicePermissions:(id)arg4;
+- (id)initWithFeatureFlags:(id)arg1 remoteConfigProperties:(id)arg2 localSettings:(id)arg3 connectManager:(id)arg4 localDevicePermissions:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

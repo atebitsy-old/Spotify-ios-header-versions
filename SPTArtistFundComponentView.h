@@ -31,15 +31,13 @@
 - (void).cxx_destruct;
 - (void)sendSelectionEvent;
 - (void)applyAccentColorFromModel:(id)arg1;
-- (_Bool)isAccentColorSpecifiedInModel:(id)arg1;
 @property(readonly, nonatomic) UIView *selectionView;
-- (id)titleColorForImage:(id)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (long long)obtainImageDisplayState:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (struct CGSize)preferredSizeForBackgroundImage;
-- (void)setupSubviews;
+- (void)setupConstraints;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 
 // Remaining properties

@@ -20,6 +20,9 @@
 - (void).cxx_destruct;
 - (id)init;
 - (void)playInitiatedWithPlaylistURI:(id)arg1 formatListAttributes:(id)arg2;
+- (void)banTappedWithTrackURI:(id)arg1;
+- (void)unheartTappedWithTrackURI:(id)arg1;
+- (void)heartTappedWithTrackURI:(id)arg1;
 - (void)registerBanWithButton:(id)arg1;
 - (void)registerHeartWithButton:(id)arg1;
 - (void)registerTopLevelViewController:(id)arg1;

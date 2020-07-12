@@ -13,15 +13,15 @@
 @interface SPTSocialListeningParticipantModel : NSObject <SPTSocialListeningParticipantModelEntity>
 {
     _Bool _currentUser;
+    _Bool _host;
     NSURL *_imageURL;
     NSString *_participantID;
     NSString *_username;
     NSString *_name;
     NSURL *_largeImageURL;
-    long long _memberType;
 }
 
-@property(readonly, nonatomic) long long memberType; // @synthesize memberType=_memberType;
+@property(readonly, nonatomic, getter=isHost) _Bool host; // @synthesize host=_host;
 @property(readonly, nonatomic) NSURL *largeImageURL; // @synthesize largeImageURL=_largeImageURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic, getter=isCurrentUser) _Bool currentUser; // @synthesize currentUser=_currentUser;
@@ -32,7 +32,7 @@
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToParticipantModel:(id)arg1;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithDictionary:(id)arg1 currentUserData:(id)arg2;
+- (id)initWithDictionary:(id)arg1 currentUserData:(id)arg2 sessionOwnerID:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

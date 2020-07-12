@@ -6,10 +6,13 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTScrollToTopViewController-Protocol.h"
+
 @class NSString, NSURL;
 
-@interface _TtC15FindFeatureImpl18FindViewController : UIViewController
+@interface _TtC15FindFeatureImpl18FindViewController : UIViewController <SPTScrollToTopViewController>
 {
+    // Error parsing type: , name: onTabBarItemPress
     // Error parsing type: , name: pageIdentifier
     // Error parsing type: , name: pageURI
     // Error parsing type: , name: mainContentLayoutGuide
@@ -18,6 +21,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)spt_scrollToTop;
 - (unsigned long long)preferredNavigationBarState;
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;

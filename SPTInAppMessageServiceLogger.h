@@ -23,10 +23,12 @@
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void).cxx_destruct;
+- (id)dismissType:(long long)arg1;
 - (id)parserTypeStringFromType:(long long)arg1;
 - (id)requestTypeStringFromType:(long long)arg1;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
+- (void)logInAppMessageDismissEventWithMessageID:(id)arg1 uuid:(id)arg2 dismissType:(long long)arg3;
 - (void)logInAppMessageWebviewEventWithMessageFormat:(id)arg1 messageId:(id)arg2 uuid:(id)arg3 eventType:(id)arg4 UIElement:(id)arg5 metadata:(id)arg6;
 - (void)logInAppMessageInteractionWithMessageUUID:(id)arg1 actionType:(id)arg2;
 - (void)logInAppMessagePresentedWithMessageUUID:(id)arg1 messageFormat:(id)arg2;

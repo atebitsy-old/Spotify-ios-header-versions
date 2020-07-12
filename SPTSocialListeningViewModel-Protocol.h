@@ -7,17 +7,24 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSString, UIColor, UIImage;
-@protocol SPTShareEntityData, SPTSocialListeningViewModelObserver;
+@protocol SPTShareEntityData, SPTSocialListeningListenTogetherStateManager, SPTSocialListeningTestManager, SPTSocialListeningViewModelObserver;
 
 @protocol SPTSocialListeningViewModel <NSObject>
+@property(readonly, nonatomic) id <SPTSocialListeningListenTogetherStateManager> listenTogetherStateManager;
+@property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager;
+@property(readonly, nonatomic) NSArray *shareDestinations;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
 @property(readonly, nonatomic) long long state;
 @property(readonly, nonatomic) _Bool isSessionHost;
+@property(readonly, nonatomic, getter=isParticipantsPlaceholderVisible) _Bool participantsPlaceholderVisible;
+@property(readonly, nonatomic) unsigned long long bottomBannerType;
+@property(readonly, nonatomic) _Bool sessionButtonHidden;
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
-@property(readonly, nonatomic) _Bool scanCodeButtonHidden;
+@property(readonly, nonatomic) _Bool seeListenersButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
 @property(readonly, nonatomic) _Bool tryAgainViewHidden;
 @property(readonly, copy, nonatomic) NSString *tryAgainLabelText;
+@property(readonly, nonatomic) unsigned long long maxNumberOfUsers;
 @property(readonly, nonatomic) unsigned long long numberOfOverflowUsers;
 @property(readonly, nonatomic) unsigned long long numberOfVisibleUsers;
 @property(readonly, nonatomic) _Bool scannablesImageHidden;
@@ -31,6 +38,8 @@
 - (void)removeObserver:(id <SPTSocialListeningViewModelObserver>)arg1;
 - (void)addObserver:(id <SPTSocialListeningViewModelObserver>)arg1;
 @property(readonly, nonatomic) unsigned long long numberOfUsers;
+- (void)navigateToQueue;
+- (void)navigateToAddSongs;
 - (void)navigateToUserProfilePage:(NSString *)arg1;
 - (void)leaveOrDeleteSession;
 - (void)load;

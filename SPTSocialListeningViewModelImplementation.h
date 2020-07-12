@@ -11,20 +11,20 @@
 #import "SPTSocialListeningViewModel-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTObserverManager, SPTSocialListeningDialogPresenter, UIColor, UIImage;
-@protocol SPTLinkDispatcher, SPTShareEntityData, SPTShareEntityDataFactory, SPTSocialListeningModel, SPTSocialListeningTestManager;
+@protocol SPTLinkDispatcher, SPTShareEntityData, SPTShareEntityDataFactory, SPTShareFeature, SPTSocialListeningListenTogetherStateManager, SPTSocialListeningModel, SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningViewModelImplementation : NSObject <SPTSocialListeningDialogPresenterDelegate, SPTSocialListeningViewModel, SPTSocialListeningModelObserver>
 {
+    _Bool _isSessionHost;
+    id <SPTSocialListeningTestManager> _testManager;
+    id <SPTSocialListeningListenTogetherStateManager> _listenTogetherStateManager;
     SPTObserverManager *_observers;
     id <SPTSocialListeningModel> _model;
-    id <SPTShareEntityDataFactory> _shareEntityDataFactory;
+    id <SPTShareFeature> _shareFeature;
     SPTSocialListeningDialogPresenter *_dialogPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTSocialListeningTestManager> _testManager;
-    NSString *_headerLabelText;
-    NSString *_descriptionLabelText;
+    id <SPTShareEntityDataFactory> _shareEntityDataFactory;
     NSString *_tryAgainLabelText;
-    NSString *_leaveButtonText;
     NSURL *_currentSessionURL;
     UIImage *_scannablesImage;
     UIColor *_sessionColor;
@@ -32,10 +32,13 @@
     unsigned long long _numberOfVisibleUsers;
     unsigned long long _numberOfOverflowUsers;
     unsigned long long _numberOfUsers;
+    unsigned long long _maxNumberOfUsers;
     unsigned long long _participantListHeight;
 }
 
+@property(nonatomic) _Bool isSessionHost; // @synthesize isSessionHost=_isSessionHost;
 @property(nonatomic) unsigned long long participantListHeight; // @synthesize participantListHeight=_participantListHeight;
+@property(nonatomic) unsigned long long maxNumberOfUsers; // @synthesize maxNumberOfUsers=_maxNumberOfUsers;
 @property(nonatomic) unsigned long long numberOfUsers; // @synthesize numberOfUsers=_numberOfUsers;
 @property(nonatomic) unsigned long long numberOfOverflowUsers; // @synthesize numberOfOverflowUsers=_numberOfOverflowUsers;
 @property(nonatomic) unsigned long long numberOfVisibleUsers; // @synthesize numberOfVisibleUsers=_numberOfVisibleUsers;
@@ -43,36 +46,44 @@
 @property(copy, nonatomic) UIColor *sessionColor; // @synthesize sessionColor=_sessionColor;
 @property(copy, nonatomic) UIImage *scannablesImage; // @synthesize scannablesImage=_scannablesImage;
 @property(copy, nonatomic) NSURL *currentSessionURL; // @synthesize currentSessionURL=_currentSessionURL;
-@property(copy, nonatomic) NSString *leaveButtonText; // @synthesize leaveButtonText=_leaveButtonText;
 @property(copy, nonatomic) NSString *tryAgainLabelText; // @synthesize tryAgainLabelText=_tryAgainLabelText;
-@property(copy, nonatomic) NSString *descriptionLabelText; // @synthesize descriptionLabelText=_descriptionLabelText;
-@property(copy, nonatomic) NSString *headerLabelText; // @synthesize headerLabelText=_headerLabelText;
-@property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) id <SPTShareEntityDataFactory> shareEntityDataFactory; // @synthesize shareEntityDataFactory=_shareEntityDataFactory;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTSocialListeningDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
-@property(retain, nonatomic) id <SPTShareEntityDataFactory> shareEntityDataFactory; // @synthesize shareEntityDataFactory=_shareEntityDataFactory;
+@property(readonly, nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(retain, nonatomic) id <SPTSocialListeningModel> model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
+@property(readonly, nonatomic) id <SPTSocialListeningListenTogetherStateManager> listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
+@property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
+- (_Bool)isListenTogetherEnabled;
 - (void)presenterDidConfirmDeleteSession:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;
 - (void)socialListeningModel:(id)arg1 updatedSession:(id)arg2 updateEvent:(id)arg3;
+- (void)navigateToQueue;
+- (void)navigateToAddSongs;
 - (void)navigateToUserProfilePage:(id)arg1;
 - (void)leaveOrDeleteSession;
+@property(readonly, nonatomic) NSArray *shareDestinations;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
-@property(readonly, nonatomic) _Bool isSessionHost;
+@property(readonly, copy, nonatomic) NSString *leaveButtonText;
+@property(readonly, copy, nonatomic) NSString *descriptionLabelText;
+@property(readonly, copy, nonatomic) NSString *headerLabelText;
+@property(readonly, nonatomic, getter=isParticipantsPlaceholderVisible) _Bool participantsPlaceholderVisible;
+@property(readonly, nonatomic) unsigned long long bottomBannerType;
+@property(readonly, nonatomic) _Bool seeListenersButtonHidden;
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
-@property(readonly, nonatomic) _Bool scanCodeButtonHidden;
+@property(readonly, nonatomic) _Bool sessionButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
 @property(readonly, nonatomic) _Bool tryAgainViewHidden;
 @property(readonly, nonatomic) _Bool scannablesImageHidden;
 @property(readonly, nonatomic) _Bool scannableViewHidden;
 @property(readonly, nonatomic) long long state;
 - (void)load;
-- (id)initWithModel:(id)arg1 shareEntityDataFactory:(id)arg2 dialogPresenter:(id)arg3 linkDispatcher:(id)arg4 testManager:(id)arg5;
+- (id)initWithModel:(id)arg1 shareFeature:(id)arg2 dialogPresenter:(id)arg3 linkDispatcher:(id)arg4 testManager:(id)arg5 stateManager:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

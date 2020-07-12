@@ -116,10 +116,12 @@
 - (void)viewModel:(id)arg1 didUpdateWithError:(id)arg2;
 - (void)removeViewControllerFromCell:(id)arg1;
 - (void)addViewController:(id)arg1 toCell:(id)arg2;
+- (_Bool)isStandaloneComponentEnabledForSectionIndex:(long long)arg1;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
+- (id)makeComponentCellWithChildViewController:(id)arg1;
 - (id)cellForIndex:(long long)arg1;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 estimatedHeightForRowAtIndexPath:(id)arg2;

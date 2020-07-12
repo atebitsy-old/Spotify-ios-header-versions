@@ -19,7 +19,7 @@
 - (void).cxx_destruct;
 - (id)initWithLocation:(id)arg1 interactionType:(id)arg2;
 - (id)initWithInteractionLocation:(id)arg1;
-- (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 interactionType:(id)arg6 nameComponents:(id)arg7 identifierComponents:(id)arg8 positionComponents:(id)arg9 uriComponents:(id)arg10 reasonComponents:(id)arg11 impressionEnabled:(_Bool)arg12;
+- (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 interactionType:(id)arg6 specificationVersion:(id)arg7 nameComponents:(id)arg8 identifierComponents:(id)arg9 positionComponents:(id)arg10 uriComponents:(id)arg11 reasonComponents:(id)arg12 impressionEnabled:(_Bool)arg13;
 
 // Remaining properties
 @property(readonly, copy, nonatomic) NSString *applicationId;
@@ -29,6 +29,7 @@
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic) _Bool impressionEnabled;
 @property(readonly, copy, nonatomic) NSString *specificationCommitHash;
+@property(readonly, copy, nonatomic) NSString *specificationVersion;
 @property(readonly) Class superclass;
 
 @end

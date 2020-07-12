@@ -75,6 +75,7 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (void).cxx_destruct;
+- (id)makeSearchLogger;
 - (id)makeOnDemandPermissionMonitor;
 - (id)makeLoadingLoggerWithConfiguration:(id)arg1;
 - (id)provideCosmosDictionaryDataLoader;

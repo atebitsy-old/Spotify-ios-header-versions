@@ -26,7 +26,7 @@
 - (void)updateIcon:(id)arg1;
 - (void)updateAccessibilityLabel:(id)arg1;
 - (void)updateTitle:(id)arg1;
-- (void)updateSelectedState:(_Bool)arg1;
+- (void)updateSelectedState:(_Bool)arg1 userInitiated:(_Bool)arg2;
 - (void)updateEnabledState:(_Bool)arg1;
 - (id)init;
 

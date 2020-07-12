@@ -9,6 +9,7 @@
 @class NSArray, NSDictionary, NSString;
 
 @protocol SPTUBIInteractionEvent <NSObject>
+@property(nonatomic, readonly) NSString *specificationVersion;
 @property(nonatomic, readonly) NSString *generatorCommitHash;
 @property(nonatomic, readonly) NSString *specificationCommitHash;
 @property(nonatomic, readonly) NSArray *errors;

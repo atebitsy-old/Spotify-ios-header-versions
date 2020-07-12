@@ -9,7 +9,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileConnectVolumeControl_SystemVolumeDownEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitNoAction;
+- (id <SPTUBIInteractionEvent>)hitSetVolumeWithNewVolumePercentage:(long long)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

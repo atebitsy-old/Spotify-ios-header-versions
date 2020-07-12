@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileConnectVolumeControl_VolumeSliderEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)dragNoAction;
+- (id <SPTUBIInteractionEvent>)dragSetVolumeWithNewVolumePercentage:(long long)arg1;
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

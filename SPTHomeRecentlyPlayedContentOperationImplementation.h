@@ -13,12 +13,14 @@
 
 @interface SPTHomeRecentlyPlayedContentOperationImplementation : NSObject <SPTHomeRecentlyPlayedContentOperation>
 {
+    _Bool _listeningHistoryEnabled;
     id <HUBContentOperationDelegate> _delegate;
     id <SPTRecentlyPlayedList> _recentlyPlayedList;
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
 }
 
 + (id)recentlyPlayedInfoFromViewModelBuilder:(id)arg1;
+@property(nonatomic) _Bool listeningHistoryEnabled; // @synthesize listeningHistoryEnabled=_listeningHistoryEnabled;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTRecentlyPlayedList> recentlyPlayedList; // @synthesize recentlyPlayedList=_recentlyPlayedList;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
@@ -30,8 +32,9 @@
 - (void)configureRecentlyPlayedItemComponent:(id)arg1 withItem:(id)arg2;
 - (void)configureHomeComponent:(id)arg1 name:(id)arg2 title:(id)arg3 position:(unsigned long long)arg4;
 - (void)removeRecentlyPlayedComponentFromViewModelBuilder:(id)arg1;
+- (void)setupListeningHistorySectionHeaderComponent:(id)arg1 recentlyPlayedInfo:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (id)initWithRecentlyPlayedList:(id)arg1 ubiHubsInstrumentation:(id)arg2;
+- (id)initWithRecentlyPlayedList:(id)arg1 ubiHubsInstrumentation:(id)arg2 listeningHistoryEnabled:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -4,7 +4,10 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
+@class NSString;
+
 @protocol _TtP17FollowFeedFeature21SPTFeedUpdatesManager_
+- (void)cacheItemId:(NSString *)arg1;
 - (void)fetchFeedHasNewItemsWithCompletion:(void (^)(_Bool, NSError *))arg1;
 @end
 

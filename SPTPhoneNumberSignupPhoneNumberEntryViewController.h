@@ -50,6 +50,7 @@
 - (void)setupNextButton;
 - (void)setupPhoneNumberTextField;
 - (void)setupTitle;
+- (void)setupHelpText;
 - (void)configureViews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

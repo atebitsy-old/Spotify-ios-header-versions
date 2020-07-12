@@ -65,6 +65,7 @@
 @property(readonly, nonatomic) NSString *dialogButtonTitle;
 @property(readonly, nonatomic) NSString *phoneNumberTextFieldPlaceholder;
 @property(readonly, nonatomic) NSString *nextButtonTitle;
+@property(readonly, nonatomic) NSString *helpText;
 @property(readonly, nonatomic) NSString *title;
 
 @end

@@ -10,10 +10,11 @@
 #import "SPTEditPlaylistViewModel-Protocol.h"
 
 @class NSMutableArray, NSString, NSURL;
-@protocol SPTEditPlaylistModel, SPTEditPlaylistViewModelDelegate, SPTFreeTierPlaylistTestManager;
+@protocol SPTEditPlaylistModel, SPTEditPlaylistViewModelDelegate;
 
 @interface SPTEditPlaylistViewModelImplementation : NSObject <SPTEditPlaylistViewModel, SPTEditPlaylistModelDelegate>
 {
+    _Bool _editAnnotationEnabled;
     _Bool _renameEnabled;
     _Bool _isCollaborative;
     _Bool _hasBeenSaved;
@@ -23,7 +24,6 @@
     NSString *_originalDescription;
     NSString *_editedDescription;
     id <SPTEditPlaylistModel> _playlistModel;
-    id <SPTFreeTierPlaylistTestManager> _testManager;
     NSMutableArray *_tracks;
     NSURL *_playlistImageURL;
     NSString *_playlistOwnerUsername;
@@ -39,7 +39,6 @@
 @property(nonatomic) _Bool renameEnabled; // @synthesize renameEnabled=_renameEnabled;
 @property(retain, nonatomic) NSURL *playlistImageURL; // @synthesize playlistImageURL=_playlistImageURL;
 @property(retain, nonatomic) NSMutableArray *tracks; // @synthesize tracks=_tracks;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTEditPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(copy, nonatomic) NSString *editedDescription; // @synthesize editedDescription=_editedDescription;
 @property(copy, nonatomic) NSString *originalDescription; // @synthesize originalDescription=_originalDescription;
@@ -58,11 +57,11 @@
 - (void)viewDidLoad;
 - (id)trackURLAtIndexPath:(id)arg1;
 - (id)trackViewModelAtIndexPath:(id)arg1;
-@property(readonly, nonatomic) _Bool editAnnotationEnabled;
+@property(readonly, nonatomic) _Bool editAnnotationEnabled; // @synthesize editAnnotationEnabled=_editAnnotationEnabled;
 @property(readonly, nonatomic) _Bool reorderEnabled;
 @property(readonly, nonatomic) unsigned long long countOfTracks;
 @property(readonly, nonatomic) NSURL *playlistURL;
-- (id)initWithPlaylistModel:(id)arg1 testManager:(id)arg2;
+- (id)initWithPlaylistModel:(id)arg1 enableAnnotate:(_Bool)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

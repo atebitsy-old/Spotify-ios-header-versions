@@ -10,6 +10,6 @@
 
 @protocol SPTShelf <NSObject>
 - (void)execute:(NSURL *)arg1 source:(NSString *)arg2 completion:(void (^)(long long))arg3;
-- (void)shelfView:(void (^)(SPTSwipeableTableViewCellShelf *))arg1;
+- (void)shelfViewModel:(void (^)(SPTSwipeableTableViewCellShelfModel *))arg1;
 @end
 

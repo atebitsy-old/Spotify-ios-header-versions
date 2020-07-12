@@ -9,6 +9,7 @@
 @class NSString, NSURL;
 
 @protocol SPTSocialListeningParticipantViewModel <NSObject>
+@property(readonly, nonatomic, getter=isListenTogetherEnabled) _Bool listenTogetherEnabled;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, copy, nonatomic) NSString *displayName;
 @property(readonly, copy, nonatomic) NSString *username;

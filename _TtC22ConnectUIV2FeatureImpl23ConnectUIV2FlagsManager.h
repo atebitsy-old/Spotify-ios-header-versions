@@ -19,8 +19,10 @@
     // Error parsing type: , name: $__lazy_storage_$_isMiniPickerEnabledInRemoteConfig
     // Error parsing type: , name: $__lazy_storage_$_remoteConfigProperties
     // Error parsing type: , name: $__lazy_storage_$_isConnectAttachedDestinationEnabled
+    // Error parsing type: , name: $__lazy_storage_$_isConnectDestinationNudgeEnabled
 }
 
+@property(nonatomic) _Bool isConnectDestinationNudgeEnabled;
 @property(nonatomic) _Bool isConnectAttachedDestinationEnabled;
 
 @end

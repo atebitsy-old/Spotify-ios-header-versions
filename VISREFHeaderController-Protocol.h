@@ -7,12 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class VISREFHeaderView;
+@protocol VISREFHeaderControllerObserver;
 
 @protocol VISREFHeaderController <NSObject>
 @property(readonly, nonatomic) double minimumHeight;
 @property(readonly, nonatomic) VISREFHeaderView *view;
-- (void)stopListeningForHeightChange:(id)arg1;
-- (id)listenForHeightChange:(void (^)(double, double, double, double))arg1;
+- (void)removeObserver:(id <VISREFHeaderControllerObserver>)arg1;
+- (void)addObserver:(id <VISREFHeaderControllerObserver>)arg1;
 
 @optional
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;

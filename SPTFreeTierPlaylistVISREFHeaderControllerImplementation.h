@@ -10,7 +10,7 @@
 #import "SPTImageLoaderDelegate-Protocol.h"
 
 @class NSString, NSURL, UIButton, UIImage, UIView, VISREFArtworkContentView, VISREFFadingContainerTopAccessoryView, VISREFFreeTierPlaylistFollowButtonViewModel, VISREFGradientBackgroundView, VISREFPlayButtonForegroundView;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistVISREFHeaderViewModel, SPTImageLoader;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistVISREFHeaderViewModel, SPTImageLoader, VISREFIntegrationManager;
 
 @interface SPTFreeTierPlaylistVISREFHeaderControllerImplementation : VISREFBaseHeaderController <SPTImageLoaderDelegate, SPTFreeTierPlaylistVISREFHeaderController>
 {
@@ -31,6 +31,7 @@
     id <SPTFreeTierEntityOfflineViewModel> _playlistOfflineViewModel;
     VISREFFreeTierPlaylistFollowButtonViewModel *_followButtonViewModel;
     id <SPTFreeTierPlaylistVISREFHeaderViewModel> _visrefHeaderViewModel;
+    id <VISREFIntegrationManager> _visrefIntegrationManager;
     UIButton *_contextMenuButton;
     UIButton *_followButton;
     UIButton *_offlineButton;
@@ -53,6 +54,7 @@
 @property(retain, nonatomic) UIButton *offlineButton; // @synthesize offlineButton=_offlineButton;
 @property(retain, nonatomic) UIButton *followButton; // @synthesize followButton=_followButton;
 @property(retain, nonatomic) UIButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
+@property(retain, nonatomic) id <VISREFIntegrationManager> visrefIntegrationManager; // @synthesize visrefIntegrationManager=_visrefIntegrationManager;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistVISREFHeaderViewModel> visrefHeaderViewModel; // @synthesize visrefHeaderViewModel=_visrefHeaderViewModel;
 @property(retain, nonatomic) VISREFFreeTierPlaylistFollowButtonViewModel *followButtonViewModel; // @synthesize followButtonViewModel=_followButtonViewModel;
 @property(retain, nonatomic) id <SPTFreeTierEntityOfflineViewModel> playlistOfflineViewModel; // @synthesize playlistOfflineViewModel=_playlistOfflineViewModel;
@@ -89,7 +91,7 @@
 - (void)updateContentView;
 - (void)setupForegroundView;
 - (void)setup;
-- (id)initWithHeaderHeight:(double)arg1 andTheme:(id)arg2 imageLoader:(id)arg3;
+- (id)initWithHeaderHeight:(double)arg1 andTheme:(id)arg2 imageLoader:(id)arg3 visrefIntegrationManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

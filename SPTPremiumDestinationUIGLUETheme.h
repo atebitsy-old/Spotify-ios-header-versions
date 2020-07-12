@@ -30,7 +30,6 @@
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUICarouselStyle<GLUEStyle> *carouselStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUILegalTextStyle<GLUEStyle> *legalTextStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUICtaStyle<GLUEStyle> *primaryCtaStyle;
-- (double)headerTitleContentInsetTop;
 - (double)offerCardComponentBottomContentEdgeMargin;
 - (double)flexboxComponentVerticalMargin;
 - (double)offerCardComponentVerticalMargin;

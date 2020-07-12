@@ -11,6 +11,7 @@
 @protocol SPTUBIEventFactoryLocation <NSObject>
 - (NSArray *)eventComponentsWithPageURI:(NSURL *)arg1 pageId:(NSString *)arg2;
 @property(nonatomic, readonly) _Bool impressionEnabled;
+@property(nonatomic, readonly) NSString *specificationVersion;
 @property(nonatomic, readonly) NSString *generatorCommitHash;
 @property(nonatomic, readonly) NSString *specificationCommitHash;
 @property(nonatomic, readonly) NSString *applicationId;

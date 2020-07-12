@@ -7,63 +7,37 @@
 #import "SCORClientConfigurationBuilder.h"
 
 @class NSString;
+@protocol SCORPublisherUniqueDeviceIdDelegate;
 
 @interface SCORPublisherConfigurationBuilder : SCORClientConfigurationBuilder
 {
     struct Builder {
         struct CriticalSection;
-        struct clientConfigurationParams;
+        struct ClientConfigurationParams;
+        struct PublisherUniqueDeviceIdListener *;
         struct String;
     } *_cppBuilder;
+    shared_ptr_70a56b18 _deviceIdListener;
 }
 
-- (_Bool)vce;
-- (void)setVce:(_Bool)arg1;
-- (_Bool)uncaughtExceptionTracking;
-- (void)setUncaughtExceptionTracking:(_Bool)arg1;
-- (_Bool)httpRedirectCaching;
-- (void)setHttpRedirectCaching:(_Bool)arg1;
-- (_Bool)secureTransmission;
-- (void)setSecureTransmission:(_Bool)arg1;
-- (_Bool)keepAliveMeasurement;
-- (void)setKeepAliveMeasurement:(_Bool)arg1;
-- (int)usagePropertiesAutoUpdateInterval;
-- (void)setUsagePropertiesAutoUpdateInterval:(int)arg1;
-- (long long)usagePropertiesAutoUpdateMode;
-- (void)setUsagePropertiesAutoUpdateMode:(long long)arg1;
-- (id)applicationVersion;
-- (void)setApplicationVersion:(id)arg1;
-- (id)applicationName;
-- (void)setApplicationName:(id)arg1;
-- (id)labelOrder;
-- (void)setLabelOrder:(id)arg1;
+- (id).cxx_construct;
+- (void).cxx_destruct;
+- (_Bool)vceEnabled;
+- (void)setVceEnabled:(_Bool)arg1;
+- (_Bool)httpRedirectCachingEnabled;
+- (void)setHttpRedirectCachingEnabled:(_Bool)arg1;
+- (_Bool)secureTransmissionEnabled;
+- (void)setSecureTransmissionEnabled:(_Bool)arg1;
+- (_Bool)keepAliveMeasurementEnabled;
+- (void)setKeepAliveMeasurementEnabled:(_Bool)arg1;
 - (id)startLabels;
 - (void)setStartLabels:(id)arg1;
 - (id)persistentLabels;
 - (void)setPersistentLabels:(id)arg1;
-- (int)cacheFlushingInterval;
-- (void)setCacheFlushingInterval:(int)arg1;
-- (int)cacheMeasurementExpiry;
-- (void)setCacheMeasurementExpiry:(int)arg1;
-- (void)setCacheMinutesToRetry:(int)arg1;
-- (int)cacheMinutesToRetry;
-- (int)cacheMaxFlushesInARow;
-- (void)setCacheMaxFlushesInARow:(int)arg1;
-- (int)cacheMaxBatchFiles;
-- (void)setCacheMaxBatchFiles:(int)arg1;
-- (int)cacheMaxMeasurements;
-- (void)setCacheMaxMeasurements:(int)arg1;
-- (long long)offlineCacheMode;
-- (void)setOfflineCacheMode:(long long)arg1;
-- (void)setOfflineFlushEndpointURL:(id)arg1;
-- (id)offlineFlushEndpointURL;
-- (int)liveTransmissionMode;
-- (void)setLiveTransmissionMode:(int)arg1;
-- (id)liveEndpointURL;
-- (void)setLiveEndpointURL:(id)arg1;
-@property(copy) NSString *publisherSecret;
+@property(nonatomic) __weak id <SCORPublisherUniqueDeviceIdDelegate> publisherUniqueDeviceIdDelegate;
 @property(copy) NSString *publisherId;
 - (id)build;
+- (shared_ptr_70a56b18)getDeviceIdListener;
 - (void)dealloc;
 - (id)init;
 

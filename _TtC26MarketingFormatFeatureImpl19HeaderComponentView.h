@@ -9,10 +9,11 @@
 @interface _TtC26MarketingFormatFeatureImpl19HeaderComponentView : HUGSThemableComponentView
 {
     // Error parsing type: , name: createControllerClosure
-    // Error parsing type: , name: backgroundGradientView
-    // Error parsing type: , name: bottomGradientView
-    // Error parsing type: , name: contentClippingView
+    // Error parsing type: , name: titleContainerView
+    // Error parsing type: , name: titleGradientView
     // Error parsing type: , name: titleLabel
+    // Error parsing type: , name: contentView
+    // Error parsing type: , name: bottomGradientView
     // Error parsing type: , name: modelEventDispatchQueue
     // Error parsing type: , name: hubModelEventConsumer
     // Error parsing type: , name: $__lazy_storage_$_viewController

@@ -6,24 +6,26 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray;
+@class NSMutableDictionary;
 
 @interface SCORStreamingConfiguration : NSObject
 {
-    struct StreamingConfiguration _cppStreamingConfiguration;
-    NSObject *_lock;
-    _Bool _systemClockJumpDetection;
+    shared_ptr_f29d09f4 _cppStreamingConfiguration;
+    NSMutableDictionary *_publisherConfigurations;
 }
 
 + (id)streamingConfigurationWithBuilderBlock:(CDUnknownBlockType)arg1;
-@property(readonly) _Bool systemClockJumpDetection; // @synthesize systemClockJumpDetection=_systemClockJumpDetection;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+- (void)removeAllLabels;
+- (void)removeLabelWithName:(id)arg1;
+- (void)addLabels:(id)arg1;
+- (void)setLabelWithName:(id)arg1 value:(id)arg2;
+- (id)streamingPublisherConfigurationWithPublisherId:(id)arg1;
 - (id)initWithBuilder:(id)arg1;
-@property(readonly) NSArray *restrictedPublishersList;
-- (struct StreamingConfiguration)getCppStreamingConfiguration;
-- (void)setCppStreamingConfiguration:(struct StreamingConfiguration)arg1;
-- (id)initWithCppStreamingConfiguration:(struct StreamingConfiguration)arg1;
+- (shared_ptr_f29d09f4)getCppStreamingConfiguration;
+- (void)setCppStreamingConfiguration:(shared_ptr_f29d09f4)arg1;
+- (id)initWithCppStreamingConfiguration:(shared_ptr_f29d09f4)arg1;
 
 @end
 

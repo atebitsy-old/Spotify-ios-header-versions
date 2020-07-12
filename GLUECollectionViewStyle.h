@@ -6,16 +6,18 @@
 
 #import <objc/NSObject.h>
 
-#import "GLUEStyle-Protocol.h"
+#import "GLUEScrollViewStyle-Protocol.h"
 
 @class NSString, UIColor;
 
-@interface GLUECollectionViewStyle : NSObject <GLUEStyle>
+@interface GLUECollectionViewStyle : NSObject <GLUEScrollViewStyle>
 {
+    long long scrollIndicatorStyle;
     UIColor *_backgroundColor;
 }
 
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
+@property(nonatomic) long long scrollIndicatorStyle; // @synthesize scrollIndicatorStyle;
 - (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

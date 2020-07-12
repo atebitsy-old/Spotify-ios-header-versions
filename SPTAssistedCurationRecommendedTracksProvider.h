@@ -15,6 +15,7 @@
 @interface SPTAssistedCurationRecommendedTracksProvider : NSObject <SPTAssistedCurationCardModelProviderInterfaceDelegate, SPTAssistedCurationCardsProvider>
 {
     _Bool _hasMore;
+    _Bool _usePlaylistName;
     id <SPTAssistedCurationCardsProviderDelegate> _delegate;
     NSString *_playlistName;
     SPTAssistedCurationCardModelImplementation *_currentCard;
@@ -25,6 +26,7 @@
 }
 
 + (id)identifier;
+@property(readonly, nonatomic) _Bool usePlaylistName; // @synthesize usePlaylistName=_usePlaylistName;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) id <SPTFreeTierRecommendationsTracksDataLoader> recommendedTracksDataLoader; // @synthesize recommendedTracksDataLoader=_recommendedTracksDataLoader;
@@ -42,7 +44,7 @@
 - (void)fetchNumberTracks:(unsigned long long)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)provideCardsForCurrentTracks:(id)arg1 andPlaylistName:(id)arg2;
 - (void)cardWithTracks:(id)arg1;
-- (id)initWithRecommendedTracksDataLoader:(id)arg1 offlineModeState:(id)arg2;
+- (id)initWithRecommendedTracksDataLoader:(id)arg1 offlineModeState:(id)arg2 usePlaylistName:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,8 +6,19 @@
 
 #import <UIKit/UIScrollView.h>
 
-@interface UIScrollView (CoverflowEffect)
+#import "GLUEStyleable-Protocol.h"
+
+@class NSString;
+
+@interface UIScrollView (CoverflowEffect) <GLUEStyleable>
 - (void)spt_applyCoverFlowerEffectToSubviews:(id)arg1 pageWidth:(double)arg2 minimumSubviewScale:(double)arg3 usePerspectiveEffect:(_Bool)arg4 verticalMode:(_Bool)arg5;
+- (void)glue_applyStyle:(id)arg1;
 - (void)spt_scrollToTopAnimated:(_Bool)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 @end
 

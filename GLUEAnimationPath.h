@@ -27,6 +27,8 @@
 + (id)offlineStatusInProgress;
 + (id)offlineStatusFromNotSyncedToPending;
 + (id)offlineStatusFromNotSyncedToInProgress;
++ (id)heartDeselectionWhite70;
++ (id)heartSelectionWhite70;
 + (id)heartDeselection;
 + (id)heartSelection;
 @property(readonly, nonatomic) NSBundle *bundle; // @synthesize bundle=_bundle;

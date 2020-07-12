@@ -10,6 +10,7 @@
 {
 }
 
++ (void)setAdSupportPollingDisabled:(_Bool)arg1;
 + (_Bool)isLimitAdTrackingEnabled;
 + (id)generateInstallationID;
 + (id)plainMACAddress:(id)arg1;

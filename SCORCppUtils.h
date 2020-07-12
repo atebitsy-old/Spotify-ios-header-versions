@@ -18,8 +18,6 @@
 + (id)NSArrayFromStringArray:(const struct StringArray *)arg1;
 + (id)NSMutableDictionaryFromStringPairArray:(const struct StringPairArray *)arg1;
 + (id)NSDictionaryFromStringPairArray:(const struct StringPairArray *)arg1;
-+ (shared_ptr_40517a32)LabelsContainerFromNSDictionary:(id)arg1;
-+ (id)NSDictionaryFromHashMap:(const HashMap_4f8ab526 *)arg1;
 + (struct StringPairArray)StringPairArrayFromNSDictionary:(id)arg1;
 
 @end

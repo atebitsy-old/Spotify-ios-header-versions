@@ -6,11 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTGaiaLockScreenPlayerFlagsObserver;
-
 @protocol SPTGaiaLockScreenPlayerFlagsProvider <NSObject>
-- (void)removeLockScreenPlayerFlagsObserver:(id <SPTGaiaLockScreenPlayerFlagsObserver>)arg1;
-- (void)addLockScreenPlayerFlagsObserver:(id <SPTGaiaLockScreenPlayerFlagsObserver>)arg1;
 - (_Bool)lockScreenPlayerFeatureEnabled;
 @end
 

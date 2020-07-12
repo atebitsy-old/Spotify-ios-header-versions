@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTDataLoader;
-@protocol SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTProfileUserData, SPTSocialListeningDataLoaderDelegate;
+@protocol SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTProfileUserData, SPTSocialListeningDataLoaderDelegate, SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningDataLoader : NSObject <SPTDataLoaderDelegate>
 {
@@ -18,33 +18,36 @@
     SPTDataLoader *_dataLoader;
     id <SPTCosmosDictionaryDataLoader> _cosmosDictionaryDataLoader;
     id <SPTProfileUserData> _currentUserData;
+    id <SPTSocialListeningTestManager> _testManager;
     id <SPTCosmosDictionaryDataLoaderRequestToken> _sessionStateSubscriptionToken;
 }
 
 @property _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> sessionStateSubscriptionToken; // @synthesize sessionStateSubscriptionToken=_sessionStateSubscriptionToken;
+@property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTProfileUserData> currentUserData; // @synthesize currentUserData=_currentUserData;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDictionaryDataLoader; // @synthesize cosmosDictionaryDataLoader=_cosmosDictionaryDataLoader;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTSocialListeningDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
-- (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
-- (void)setCoreSocialListeningState:(_Bool)arg1;
-- (void)subscribeToSessionUpdates;
-- (void)performRequestWithURL:(id)arg1 requestMethod:(long long)arg2 expectedResponseType:(unsigned long long)arg3;
 - (void)getExposedDevices;
 - (void)handleSocialDeviceResponse:(id)arg1 withDeviceIds:(id)arg2;
 - (void)getSocialDeviceSessions:(id)arg1;
 - (void)disableSocialDevice:(id)arg1;
 - (void)enableSocialDevice:(id)arg1;
+- (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
+- (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
+- (void)setCoreSocialListeningState:(_Bool)arg1;
+- (void)subscribeToSessionUpdates;
+- (id)sessionTypeQueryParameter;
+- (void)performRequestWithURL:(id)arg1 requestMethod:(long long)arg2 expectedResponseType:(unsigned long long)arg3;
 - (void)cancelRequests;
 - (void)leaveSession:(id)arg1;
 - (void)deleteSession:(id)arg1;
 - (void)joinSession:(id)arg1;
 - (void)getCurrentSession;
 - (void)getOrCreateSession;
-- (id)initWithDataLoader:(id)arg1 cosmosDictionaryDataLoader:(id)arg2 currentUserData:(id)arg3;
+- (id)initWithDataLoader:(id)arg1 cosmosDictionaryDataLoader:(id)arg2 currentUserData:(id)arg3 testManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

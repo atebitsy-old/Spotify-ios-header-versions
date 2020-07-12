@@ -18,6 +18,7 @@
     NSString *_pageReason;
     NSString *_specificationCommitHash;
     NSString *_generatorCommitHash;
+    NSString *_specificationVersion;
     NSArray *_nameComponents;
     NSArray *_identifierComponents;
     NSArray *_positionComponents;
@@ -31,6 +32,7 @@
 @property(readonly, copy, nonatomic) NSArray *positionComponents; // @synthesize positionComponents=_positionComponents;
 @property(readonly, copy, nonatomic) NSArray *identifierComponents; // @synthesize identifierComponents=_identifierComponents;
 @property(readonly, copy, nonatomic) NSArray *nameComponents; // @synthesize nameComponents=_nameComponents;
+@property(readonly, copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
 @property(readonly, copy, nonatomic) NSString *generatorCommitHash; // @synthesize generatorCommitHash=_generatorCommitHash;
 @property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
 @property(readonly, copy, nonatomic) NSString *pageReason; // @synthesize pageReason=_pageReason;
@@ -39,7 +41,7 @@
 - (void).cxx_destruct;
 - (id)eventComponentsWithPageURI:(id)arg1 pageId:(id)arg2;
 - (id)initWithLocation:(id)arg1;
-- (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 nameComponents:(id)arg6 identifierComponents:(id)arg7 positionComponents:(id)arg8 uriComponents:(id)arg9 reasonComponents:(id)arg10 impressionEnabled:(_Bool)arg11;
+- (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 specificationVersion:(id)arg6 nameComponents:(id)arg7 identifierComponents:(id)arg8 positionComponents:(id)arg9 uriComponents:(id)arg10 reasonComponents:(id)arg11 impressionEnabled:(_Bool)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

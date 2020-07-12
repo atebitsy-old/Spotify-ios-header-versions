@@ -8,19 +8,19 @@
 
 #import "SPTShelf-Protocol.h"
 
-@class NSString, SPTSwipeableTableViewCellShelf;
+@class NSString, SPTSwipeableTableViewCellShelfModel;
 @protocol SPTPlayerQueue;
 
 @interface SPTQueueShelf : NSObject <SPTShelf>
 {
     id <SPTPlayerQueue> _playerQueue;
-    SPTSwipeableTableViewCellShelf *_shelfView;
+    SPTSwipeableTableViewCellShelfModel *_shelfModel;
 }
 
-@property(readonly, nonatomic) SPTSwipeableTableViewCellShelf *shelfView; // @synthesize shelfView=_shelfView;
+@property(readonly, nonatomic) SPTSwipeableTableViewCellShelfModel *shelfModel; // @synthesize shelfModel=_shelfModel;
 @property(readonly, nonatomic) id <SPTPlayerQueue> playerQueue; // @synthesize playerQueue=_playerQueue;
 - (void).cxx_destruct;
-- (void)shelfView:(CDUnknownBlockType)arg1;
+- (void)shelfViewModel:(CDUnknownBlockType)arg1;
 - (id)initWithPlayerQueue:(id)arg1;
 - (void)execute:(id)arg1 source:(id)arg2 completion:(CDUnknownBlockType)arg3;
 

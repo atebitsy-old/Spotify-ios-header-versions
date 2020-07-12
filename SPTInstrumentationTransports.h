@@ -16,13 +16,14 @@
     NSSet *_transports;
 }
 
-+ (id)defaultTransportsWithLogCenter:(id)arg1;
++ (id)defaultTransportsWithLogCenter:(id)arg1 eventSender:(id)arg2;
 @property(copy, nonatomic) NSSet *transports; // @synthesize transports=_transports;
 - (void).cxx_destruct;
 - (void)removeTransport:(id)arg1;
 - (void)addTransport:(id)arg1;
 - (id)initWithTransports:(id)arg1;
 - (void)send:(id)arg1;
+- (void)legacySend:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

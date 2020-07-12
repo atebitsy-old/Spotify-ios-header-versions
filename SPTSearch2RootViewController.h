@@ -18,7 +18,6 @@
 @interface SPTSearch2RootViewController : UIViewController <SPTSearchSearchBarDelegate, SPContentInsetViewController, SPTSearchVoiceEnabledViewDelegate, SPTSearch2RootViewControllerProtocol, SPTPageController>
 {
     _Bool _automaticallyAdjustsInsets;
-    _Bool _voiceSearchAllowed;
     _Bool _shouldFocusSearchBarOnViewDidAppear;
     unsigned long long _cancelButtonVisibility;
     NSString *_query;
@@ -44,7 +43,6 @@
 @property(readonly, nonatomic) id <SPTSearchLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTSearch2ViewController *searchViewController; // @synthesize searchViewController=_searchViewController;
 @property(nonatomic) _Bool shouldFocusSearchBarOnViewDidAppear; // @synthesize shouldFocusSearchBarOnViewDidAppear=_shouldFocusSearchBarOnViewDidAppear;
-@property(nonatomic) _Bool voiceSearchAllowed; // @synthesize voiceSearchAllowed=_voiceSearchAllowed;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 @property(nonatomic) _Bool automaticallyAdjustsInsets; // @synthesize automaticallyAdjustsInsets=_automaticallyAdjustsInsets;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;

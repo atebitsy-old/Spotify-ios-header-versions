@@ -10,7 +10,7 @@
 {
 }
 
-+ (long long)extensionType;
++ (id)extensionType;
 + (_Bool)isRunningInsideExtension;
 
 @end

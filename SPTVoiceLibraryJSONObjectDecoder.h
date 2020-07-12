@@ -6,16 +6,21 @@
 
 #import <objc/NSObject.h>
 
+@class NSData;
+
 @interface SPTVoiceLibraryJSONObjectDecoder : NSObject
 {
     _Bool _insideString;
     unsigned long long _openBraces;
     unsigned long long _lastReadIndex;
+    NSData *_partialDataChunk;
 }
 
+@property(copy, nonatomic) NSData *partialDataChunk; // @synthesize partialDataChunk=_partialDataChunk;
 @property(nonatomic) unsigned long long lastReadIndex; // @synthesize lastReadIndex=_lastReadIndex;
 @property(nonatomic) _Bool insideString; // @synthesize insideString=_insideString;
 @property(nonatomic) unsigned long long openBraces; // @synthesize openBraces=_openBraces;
+- (void).cxx_destruct;
 - (void)reset;
 - (void)decodeWithJSONStream:(id)arg1 character:(unsigned short)arg2 atIndex:(long long)arg3;
 - (id)JSONObjectArrayFromDataStream:(id)arg1;

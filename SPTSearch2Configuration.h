@@ -16,6 +16,7 @@
     _Bool _offlineSearchEnabled;
     _Bool _loadingLoggingEnabled;
     _Bool _ubiLoggingEnabled;
+    _Bool _voiceAllowed;
     NSString *_recentsGroupID;
     NSString *_recentsCommandName;
     id <SPTSearch2URLProviding> _urlProvider;
@@ -30,6 +31,7 @@
 @property(copy, nonatomic) NSString *customReferrerIdentifier; // @synthesize customReferrerIdentifier=_customReferrerIdentifier;
 @property(copy, nonatomic) NSURL *customPageURI; // @synthesize customPageURI=_customPageURI;
 @property(copy, nonatomic) NSString *customPageIdentifer; // @synthesize customPageIdentifer=_customPageIdentifer;
+@property(nonatomic) _Bool voiceAllowed; // @synthesize voiceAllowed=_voiceAllowed;
 @property(nonatomic) _Bool ubiLoggingEnabled; // @synthesize ubiLoggingEnabled=_ubiLoggingEnabled;
 @property(nonatomic) _Bool loadingLoggingEnabled; // @synthesize loadingLoggingEnabled=_loadingLoggingEnabled;
 @property(nonatomic) _Bool offlineSearchEnabled; // @synthesize offlineSearchEnabled=_offlineSearchEnabled;

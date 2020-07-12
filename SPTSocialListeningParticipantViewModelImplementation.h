@@ -12,10 +12,12 @@
 
 @interface SPTSocialListeningParticipantViewModelImplementation : NSObject <SPTSocialListeningParticipantViewModel>
 {
+    _Bool _listenTogetherEnabled;
     SPTSocialListeningParticipantModel *_participantModel;
 }
 
 @property(readonly, nonatomic) SPTSocialListeningParticipantModel *participantModel; // @synthesize participantModel=_participantModel;
+@property(readonly, nonatomic, getter=isListenTogetherEnabled) _Bool listenTogetherEnabled; // @synthesize listenTogetherEnabled=_listenTogetherEnabled;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, copy, nonatomic) NSString *displayName;
@@ -23,7 +25,7 @@
 @property(readonly, copy, nonatomic) NSString *participantID;
 @property(readonly, nonatomic, getter=isHost) _Bool host;
 @property(readonly, nonatomic, getter=isCurrentUser) _Bool currentUser;
-- (id)initWithParticipantModel:(id)arg1;
+- (id)initWithParticipantModel:(id)arg1 listenTogetherEnabled:(_Bool)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

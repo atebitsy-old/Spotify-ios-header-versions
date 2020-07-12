@@ -11,7 +11,7 @@
 #import "SPTSocialListeningService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
-@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
 
 @interface SPTSocialListeningServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTOfflineModeStateObserver, SPTSocialListeningService>
 {
@@ -32,6 +32,8 @@
     id <SlateFeature> _slateService;
     id <SPTSnackbarService> _snackbarService;
     id <SPTUBIService> _ubiService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTSocialListeningTestManagerImplementation *_testManager;
     SPTSocialListeningUserInterfaceFactoryImplementation *_userInterfaceFactory;
     SPTSocialListeningGLUETheme *_socialListeningTheme;
@@ -54,6 +56,8 @@
 @property(retain, nonatomic) SPTSocialListeningGLUETheme *socialListeningTheme; // @synthesize socialListeningTheme=_socialListeningTheme;
 @property(retain, nonatomic) SPTSocialListeningUserInterfaceFactoryImplementation *userInterfaceFactory; // @synthesize userInterfaceFactory=_userInterfaceFactory;
 @property(retain, nonatomic) SPTSocialListeningTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;

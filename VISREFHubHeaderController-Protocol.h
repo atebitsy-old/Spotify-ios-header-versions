@@ -20,6 +20,7 @@
 @optional
 - (void)setImagePlaceholder;
 - (void)setImage:(UIImage *)arg1;
+- (void)setAnimatedHeartEnabled:(_Bool)arg1;
 - (void)setOfflineButtonModel:(id)arg1;
 - (void)setContextMenuButtonModel:(id)arg1;
 - (void)setFollowButtonModel:(id)arg1;

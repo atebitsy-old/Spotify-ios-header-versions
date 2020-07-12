@@ -9,13 +9,14 @@
 #import "SPTPodcastMixService-Protocol.h"
 
 @class NSString, SPSession, SPTAllocationContext, SPTPodcastMixConfiguration;
-@protocol SPTContainerService, SPTFreeTierPlaylistUIService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
+@protocol SPTContainerService, SPTFreeTierPlaylistUIService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTPodcastMixServiceImplementation : NSObject <SPTPodcastMixService>
 {
     id <SPTContainerService> _containerService;
     id <SPTSessionService> _clientSessionService;
     id <SPTFreeTierPlaylistUIService> _freeTierPlaylistUIService;
+    id <SPTPlayerFeature> _playerFeature;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTURIDispatchService> _uriDispatchService;
     SPTPodcastMixConfiguration *_configuration;
@@ -27,6 +28,7 @@
 @property(retain, nonatomic) SPTPodcastMixConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistUIService> freeTierPlaylistUIService; // @synthesize freeTierPlaylistUIService=_freeTierPlaylistUIService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;

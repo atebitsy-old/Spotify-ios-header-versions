@@ -43,8 +43,10 @@
 - (void)setUpViewHierarchy;
 - (void)setUpViews;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
+@property(copy, nonatomic) NSString *trailingAccessoryAccessibilityLabel;
 @property(retain, nonatomic) UIImage *trailingAccessoryImage;
 @property(retain, nonatomic) UIImage *leadingAccessoryImage;
+@property(copy, nonatomic) NSString *searchBarAccessibilityLabel;
 @property(copy, nonatomic) NSString *searchBarText;
 @property(copy, nonatomic) NSString *title;
 - (id)initWithFrame:(struct CGRect)arg1;

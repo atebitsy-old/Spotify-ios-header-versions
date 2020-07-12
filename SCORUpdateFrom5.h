@@ -14,8 +14,8 @@
 - (id)retrieveEventsFormCacheFiles:(id)arg1;
 - (id)getFolderPath;
 - (id)getArrayOfCacheFileNames;
-- (void)libraryPostUpdateWithNewData:(shared_ptr_4af07e7b)arg1 withOfflineCache:(shared_ptr_61609fb8)arg2;
-- (void)libraryUpdateWithNewData:(shared_ptr_4af07e7b)arg1;
+- (void)libraryPostUpdateWithNewData:(struct PropertyManager *)arg1 withOfflineCache:(struct OfflineCache *)arg2;
+- (void)libraryUpdateWithNewData:(struct PropertyManager *)arg1;
 - (id)init;
 
 @end

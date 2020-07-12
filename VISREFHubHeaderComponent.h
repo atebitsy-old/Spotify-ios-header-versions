@@ -13,6 +13,7 @@
 
 @interface VISREFHubHeaderComponent : NSObject <HUBComponent>
 {
+    _Bool _animatedHeartEnabled;
     CDUnknownBlockType _backButtonTappedBlock;
     id _followButtonModel;
     id _contextMenuButtonModel;
@@ -29,6 +30,7 @@
 @property(retain, nonatomic) Class headerControllerClass; // @synthesize headerControllerClass=_headerControllerClass;
 @property(retain, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineButtonModel; // @synthesize offlineButtonModel=_offlineButtonModel;
 @property(retain, nonatomic) id contextMenuButtonModel; // @synthesize contextMenuButtonModel=_contextMenuButtonModel;
+@property(nonatomic) _Bool animatedHeartEnabled; // @synthesize animatedHeartEnabled=_animatedHeartEnabled;
 @property(retain, nonatomic) id followButtonModel; // @synthesize followButtonModel=_followButtonModel;
 @property(copy, nonatomic) CDUnknownBlockType backButtonTappedBlock; // @synthesize backButtonTappedBlock=_backButtonTappedBlock;
 - (void).cxx_destruct;

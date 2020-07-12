@@ -47,6 +47,7 @@
 @property(nonatomic, getter=isPresentingCard) _Bool presentingCard; // @synthesize presentingCard=_presentingCard;
 - (void).cxx_destruct;
 - (void)authDidStart;
+- (void)logDismissEventWithDismissType:(long long)arg1;
 - (id)messageFormat;
 - (void)dismissCardMessageIfAdPlaying;
 - (_Bool)canPresentSlate;

@@ -8,7 +8,7 @@
 
 #import "SPTSwipeableTableViewCellGestureHandler-Protocol.h"
 
-@class NSString, SPTTransparentAdjustableView, UIView;
+@class NSMutableDictionary, NSString, SPTTransparentAdjustableView, UIView;
 @protocol SPTSwipeableTableViewCellDelegate;
 
 @interface SPTSwipeableTableViewCell : UITableViewCell <SPTSwipeableTableViewCellGestureHandler>
@@ -21,12 +21,16 @@
     SPTTransparentAdjustableView *_shelvesView;
     UIView *_containerView;
     long long _initialGesture;
+    NSMutableDictionary *_shelveModelsForGesture;
+    NSMutableDictionary *_shelvesForGesture;
     struct CGPoint _initialTranslation;
     struct CGPoint _currentTranslation;
 }
 
 + (long long)gestureFromTranslation:(double)arg1;
 + (long long)gestureFromPercentage:(double)arg1;
+@property(retain, nonatomic) NSMutableDictionary *shelvesForGesture; // @synthesize shelvesForGesture=_shelvesForGesture;
+@property(retain, nonatomic) NSMutableDictionary *shelveModelsForGesture; // @synthesize shelveModelsForGesture=_shelveModelsForGesture;
 @property(nonatomic, getter=isGestureActivated) _Bool gestureActivated; // @synthesize gestureActivated=_gestureActivated;
 @property(nonatomic) long long initialGesture; // @synthesize initialGesture=_initialGesture;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
@@ -41,17 +45,17 @@
 - (_Bool)supportsSwiping;
 - (void)handlePanGestureRecognizer:(id)arg1;
 - (void)resetContainerFromPoint:(struct CGPoint)arg1 subjectToInertia:(_Bool)arg2 horizontalVelocity:(double)arg3 withCompletionBlock:(CDUnknownBlockType)arg4;
+- (void)resetShelves;
 - (void)moveContainerWithHorizontalTranslation:(double)arg1 horizontalVelocity:(double)arg2;
 - (double)percentageFromOffset:(double)arg1;
 - (long long)shelfPositionFromGesture:(long long)arg1;
 - (long long)gestureFromShelfPosition:(long long)arg1;
-- (void)removeShelfForGesture:(long long)arg1;
-- (void)setShelf:(id)arg1 forGesture:(long long)arg2;
-- (void)setShelf:(id)arg1 atPosition:(long long)arg2;
+- (void)configureShelf:(id)arg1 forGesture:(long long)arg2;
 - (id)shelfForOffset:(double)arg1;
 - (id)oppositeShelfForGesture:(long long)arg1;
 - (id)shelfForGesture:(long long)arg1;
-- (id)shelfPlacedAt:(long long)arg1;
+- (void)setShelfModel:(id)arg1 atPosition:(long long)arg2;
+- (id)shelfModelAt:(long long)arg1;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)setHighlighted:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)setBackgroundView:(id)arg1;

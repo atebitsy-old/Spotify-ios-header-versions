@@ -14,20 +14,16 @@
 }
 
 + (void)crossPublisherIdWithBlock:(CDUnknownBlockType)arg1;
-+ (void)getActivationCategoriesWithKey:(id)arg1 url:(id)arg2 publisherConfiguration:(id)arg3 block:(CDUnknownBlockType)arg4;
++ (void)activationCategoriesWithKey:(id)arg1 url:(id)arg2 publisherId:(id)arg3 publisherUniqueDeviceId:(id)arg4 block:(CDUnknownBlockType)arg5;
 + (void)clearInternalData;
 + (void)clearOfflineCache;
 + (id)configuration;
 + (void)flushOfflineCache;
-+ (void)updateUsageProperties;
 + (void)notifyExitForeground;
 + (void)notifyEnterForeground;
 + (void)notifyUxInactive;
 + (void)notifyUxActive;
-+ (void)notifyUserInteraction;
-+ (id)trackingProperties;
-+ (void)aggregateWithEventInfo:(id)arg1;
-+ (void)aggregateWithLabels:(id)arg1;
++ (void)notifyDistributedContentViewForPartner:(id)arg1 content:(id)arg2;
 + (void)notifyHiddenEventWithLabels:(id)arg1;
 + (void)notifyHiddenEventWithEventInfo:(id)arg1;
 + (void)notifyHiddenEvent;

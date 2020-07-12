@@ -6,38 +6,42 @@
 
 #import <UIKit/UIView.h>
 
-#import "GLUEStyleable-Protocol.h"
+#import "SPTSocialListeningSessionViewProtocol-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSString, SPTSocialListeningSessionScannableView, UIActivityIndicatorView, UIStackView;
+@class GLUEButton, GLUELabel, NSString, SPTListenTogetherBetaLabel, SPTSocialListeningSessionScannableView, UIActivityIndicatorView, UIStackView;
 
-@interface SPTSocialListeningSessionView : UIView <GLUEStyleable>
+@interface SPTSocialListeningSessionView : UIView <SPTSocialListeningSessionViewProtocol>
 {
-    GLUELabel *_titleLabel;
-    GLUELabel *_descriptionLabel;
-    SPTSocialListeningSessionScannableView *_scannableView;
-    GLUELabel *_tryAgainLabel;
-    GLUEButton *_tryAgainButton;
-    GLUEButton *_scanCodeButton;
-    GLUELabel *_privacyDisclaimerLabel;
-    GLUEButton *_leaveSessionButton;
     UIActivityIndicatorView *_activityIndicatorView;
+    SPTListenTogetherBetaLabel *_betaLabel;
+    GLUELabel *_descriptionLabel;
     UIStackView *_facepileStackView;
+    GLUEButton *_leaveSessionButton;
+    GLUELabel *_privacyDisclaimerLabel;
+    SPTSocialListeningSessionScannableView *_scannableView;
+    GLUEButton *_seeListenersButton;
+    GLUEButton *_sessionButton;
+    GLUELabel *_titleLabel;
+    GLUEButton *_tryAgainButton;
+    GLUELabel *_tryAgainLabel;
     UIStackView *_headerStackView;
     UIStackView *_stackView;
 }
 
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) UIStackView *headerStackView; // @synthesize headerStackView=_headerStackView;
-@property(readonly, nonatomic) UIStackView *facepileStackView; // @synthesize facepileStackView=_facepileStackView;
-@property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
-@property(readonly, nonatomic) GLUEButton *leaveSessionButton; // @synthesize leaveSessionButton=_leaveSessionButton;
-@property(readonly, nonatomic) GLUELabel *privacyDisclaimerLabel; // @synthesize privacyDisclaimerLabel=_privacyDisclaimerLabel;
-@property(readonly, nonatomic) GLUEButton *scanCodeButton; // @synthesize scanCodeButton=_scanCodeButton;
-@property(readonly, nonatomic) GLUEButton *tryAgainButton; // @synthesize tryAgainButton=_tryAgainButton;
 @property(readonly, nonatomic) GLUELabel *tryAgainLabel; // @synthesize tryAgainLabel=_tryAgainLabel;
-@property(readonly, nonatomic) SPTSocialListeningSessionScannableView *scannableView; // @synthesize scannableView=_scannableView;
-@property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
+@property(readonly, nonatomic) GLUEButton *tryAgainButton; // @synthesize tryAgainButton=_tryAgainButton;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) GLUEButton *sessionButton; // @synthesize sessionButton=_sessionButton;
+@property(readonly, nonatomic) GLUEButton *seeListenersButton; // @synthesize seeListenersButton=_seeListenersButton;
+@property(readonly, nonatomic) SPTSocialListeningSessionScannableView *scannableView; // @synthesize scannableView=_scannableView;
+@property(readonly, nonatomic) GLUELabel *privacyDisclaimerLabel; // @synthesize privacyDisclaimerLabel=_privacyDisclaimerLabel;
+@property(readonly, nonatomic) GLUEButton *leaveSessionButton; // @synthesize leaveSessionButton=_leaveSessionButton;
+@property(readonly, nonatomic) UIStackView *facepileStackView; // @synthesize facepileStackView=_facepileStackView;
+@property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
+@property(readonly, nonatomic) SPTListenTogetherBetaLabel *betaLabel; // @synthesize betaLabel=_betaLabel;
+@property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 - (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (void)addViewConstraints;

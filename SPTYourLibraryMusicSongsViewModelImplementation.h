@@ -21,6 +21,7 @@
     _Bool _scrolling;
     _Bool _needsNonCriticalModelUpdate;
     _Bool _filteringActive;
+    _Bool _activeFiltersChanged;
     id <SPTYourLibraryMusicSongsViewModelDelegate> _delegate;
     id <SPTYourLibraryMusicSongsModel> _model;
     id <SPContextMenuFeature> _contextMenuFeature;
@@ -40,6 +41,7 @@
     NSArray *_sectionConfiguration;
 }
 
+@property(nonatomic) _Bool activeFiltersChanged; // @synthesize activeFiltersChanged=_activeFiltersChanged;
 @property(copy, nonatomic) NSArray *sectionConfiguration; // @synthesize sectionConfiguration=_sectionConfiguration;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTObserverManager *filterChipsObserverManager; // @synthesize filterChipsObserverManager=_filterChipsObserverManager;
@@ -62,6 +64,8 @@
 @property(readonly, nonatomic) id <SPTYourLibraryMusicSongsModel> model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTYourLibraryMusicSongsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (_Bool)activeFiltersEqualTo:(id)arg1;
+- (_Bool)updateActiveFilters:(id)arg1;
 - (id)itemProxyForFilterChipItem:(id)arg1;
 - (void)filterChipsInteractionObserverClearedSelection;
 - (void)filterChipsInteractionObserverItemDeSelected:(id)arg1;
@@ -131,7 +135,7 @@
 - (long long)modelItemsSectionFromViewModelSection:(long long)arg1;
 - (_Bool)isFilterChipsSection:(unsigned long long)arg1;
 - (_Bool)isRecommendedSection:(unsigned long long)arg1;
-- (_Bool)isSongsSections:(unsigned long long)arg1;
+- (_Bool)isSongsSection:(unsigned long long)arg1;
 - (long long)numberOfRowsInSections:(long long)arg1;
 - (id)currentSectionsConfiguration;
 - (id)sectionViewModelAtIndex:(unsigned long long)arg1;

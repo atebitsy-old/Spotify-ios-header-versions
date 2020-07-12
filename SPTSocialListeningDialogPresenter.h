@@ -22,6 +22,7 @@
 @property(readonly, nonatomic) SPTPopupManager *popupManager; // @synthesize popupManager=_popupManager;
 @property(nonatomic) __weak id <SPTSocialListeningDialogPresenterDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)presentSessionFullDialog;
 - (void)presentSessionDeletedDialogWhenHostLeaves:(id)arg1;
 - (void)confirmDeleteSessionTapped;
 - (void)presentConfirmDeleteSessionDialog;

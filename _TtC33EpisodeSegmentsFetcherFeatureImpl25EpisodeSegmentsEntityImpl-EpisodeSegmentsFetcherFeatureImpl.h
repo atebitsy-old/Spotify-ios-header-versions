@@ -9,6 +9,6 @@
 @class NSString;
 
 @interface _TtC33EpisodeSegmentsFetcherFeatureImpl25EpisodeSegmentsEntityImpl (EpisodeSegmentsFetcherFeatureImpl)
-@property(nonatomic, readonly) NSString *subtitle;
+@property(nonatomic, readonly) NSString *trackSubtitle;
 @end
 

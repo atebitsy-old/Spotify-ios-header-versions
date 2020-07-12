@@ -22,8 +22,10 @@
 @property(nonatomic) __weak GLUEButton<VISREFActionRowButtonViewModelDelegate> *delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
 - (void)viewModel:(id)arg1 didUpdateState:(unsigned long long)arg2;
+- (_Bool)selectedStateForFeedbackState:(unsigned long long)arg1;
 - (id)iconColorForState:(unsigned long long)arg1;
 - (id)createImageForState:(unsigned long long)arg1;
+- (void)didTapFeedbackButton;
 - (id)initWithViewModel:(id)arg1;
 
 // Remaining properties

@@ -12,8 +12,14 @@
 {
     // Error parsing type: , name: viewURI
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: gaiaService
+    // Error parsing type: , name: networkService
     // Error parsing type: , name: playerFeature
+    // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: sessionService
+    // Error parsing type: , name: settingsService
+    // Error parsing type: , name: snackbarService
     // Error parsing type: , name: tooltipService
     // Error parsing type: , name: mobiusController
     // Error parsing type: , name: onboardingController

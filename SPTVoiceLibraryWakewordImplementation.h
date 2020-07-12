@@ -40,6 +40,7 @@
 @property(nonatomic) struct SnsrSession_ *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTVoiceLibraryWakewordDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (_Bool)isActive;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;
 - (void)logErrorWithDomain:(id)arg1 andDescription:(id)arg2;
 - (id)generateSessionIdentifier;

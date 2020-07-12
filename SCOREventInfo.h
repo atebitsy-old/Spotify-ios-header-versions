@@ -11,24 +11,12 @@
     struct EventInfo *_eventInfo;
 }
 
-- (_Bool)containsLabel:(id)arg1 publisherId:(id)arg2;
-- (_Bool)containsLabel:(id)arg1;
-- (_Bool)containsPublisher:(id)arg1;
 - (struct EventInfo *)cppEventInfo;
-- (id)labelsWithPublisherId:(id)arg1;
-- (id)labels;
-- (void)removeAllLabelsWithPublisherId:(id)arg1;
-- (void)removeAllLabels;
-- (void)removeLabelWithName:(id)arg1 publisherId:(id)arg2;
-- (void)setPublisherWithId:(id)arg1;
+- (void)addIncludedPublisher:(id)arg1;
 - (void)setLabelWithName:(id)arg1 value:(id)arg2 publisherId:(id)arg3;
-- (void)setLabels:(id)arg1 publisherId:(id)arg2;
-- (void)removeLabelWithName:(id)arg1;
-- (void)removePublisherWithId:(id)arg1;
-- (id)labelWithName:(id)arg1 publisherId:(id)arg2;
-- (id)labelWithName:(id)arg1;
+- (void)addLabels:(id)arg1 publisherId:(id)arg2;
 - (void)setLabelWithName:(id)arg1 value:(id)arg2;
-- (void)setLabels:(id)arg1;
+- (void)addLabels:(id)arg1;
 - (id)copy;
 - (void)dealloc;
 - (id)initWithCppEventInfo:(struct EventInfo *)arg1;

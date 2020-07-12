@@ -16,10 +16,12 @@
     NSString *_specificationCommitHash;
     NSArray *_components;
     NSString *_interactionType;
+    NSString *_specificationVersion;
     NSArray *_errors;
 }
 
 @property(readonly, copy, nonatomic) NSArray *errors; // @synthesize errors=_errors;
+@property(readonly, copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
 @property(readonly, copy, nonatomic) NSString *interactionType; // @synthesize interactionType=_interactionType;
 @property(readonly, copy, nonatomic) NSArray *components; // @synthesize components=_components;
 @property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
@@ -74,7 +76,7 @@
 - (id)dislikeWithItemToBeDisliked:(id)arg1;
 - (id)removeRecentSearchesItem;
 - (id)playWithItemToBePlayed:(id)arg1;
-- (id)initWithApplicationId:(id)arg1 specificationCommitHash:(id)arg2 components:(id)arg3 interactionType:(id)arg4 errors:(id)arg5;
+- (id)initWithApplicationId:(id)arg1 specificationCommitHash:(id)arg2 specificationVersion:(id)arg3 components:(id)arg4 interactionType:(id)arg5 errors:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

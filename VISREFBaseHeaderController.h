@@ -9,16 +9,16 @@
 #import "VISREFHeaderController-Protocol.h"
 #import "VISREFHeaderViewDelegate-Protocol.h"
 
-@class NSMutableSet, NSString, VISREFHeaderView;
+@class NSString, SPTObserverManager, VISREFHeaderView;
 
 @interface VISREFBaseHeaderController : NSObject <VISREFHeaderController, VISREFHeaderViewDelegate>
 {
     _Bool _headerSetupDone;
     VISREFHeaderView *_view;
-    NSMutableSet *_heightDidChangeBlocks;
+    SPTObserverManager *_observers;
 }
 
-@property(retain, nonatomic) NSMutableSet *heightDidChangeBlocks; // @synthesize heightDidChangeBlocks=_heightDidChangeBlocks;
+@property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) VISREFHeaderView *view; // @synthesize view=_view;
 @property(nonatomic, getter=isHeaderSetupDone) _Bool headerSetupDone; // @synthesize headerSetupDone=_headerSetupDone;
 - (void).cxx_destruct;
@@ -31,8 +31,8 @@
 - (void)headerView:(id)arg1 topAccessoryViewVisibleAreaChanged:(double)arg2;
 - (void)headerView:(id)arg1 heightDidChangeToTotalHeaderHeight:(double)arg2 safeAreaTopInset:(double)arg3 contentViewHeight:(double)arg4 topAccessoryViewHeight:(double)arg5;
 - (void)navigationBarHeightDidChange:(double)arg1;
-- (void)stopListeningForHeightChange:(id)arg1;
-- (id)listenForHeightChange:(CDUnknownBlockType)arg1;
+- (void)removeObserver:(id)arg1;
+- (void)addObserver:(id)arg1;
 - (id)init;
 
 // Remaining properties

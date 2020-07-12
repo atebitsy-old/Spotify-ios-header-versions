@@ -7,21 +7,22 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistPlayViewModel-Protocol.h"
-#import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, SPTPlayOrigin;
-@protocol SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel;
+@class NSString, NSURL, SPTPlayOrigin;
+@protocol SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayViewModel, SPTPlayer;
 
-@interface SPTPodcastMixOnDemandPlaylistPlayViewModel : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistPlayViewModel>
+@interface SPTPodcastMixOnDemandPlaylistPlayViewModel : NSObject <SPTFreeTierPlaylistPlayViewModel>
 {
-    _Bool _shouldLaunchNPV;
     SPTPlayOrigin *_playOrigin;
     id <SPTFreeTierPlaylistPlayModel> _playModel;
     id <SPTFreeTierPlaylistPlayViewModel> _playViewModel;
     id <SPTFreeTierPlaylistPlayLogger> _playLogger;
+    id <SPTPlayer> _player;
+    NSURL *_playlistURI;
 }
 
-@property(nonatomic) _Bool shouldLaunchNPV; // @synthesize shouldLaunchNPV=_shouldLaunchNPV;
+@property(readonly, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
+@property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayLogger> playLogger; // @synthesize playLogger=_playLogger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayViewModel> playViewModel; // @synthesize playViewModel=_playViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayModel> playModel; // @synthesize playModel=_playModel;
@@ -33,8 +34,9 @@
 - (id)playOptions;
 - (void)playTrackEntity:(id)arg1;
 - (void)play;
+- (_Bool)isPlayingCurrentContext;
 @property(readonly, nonatomic, getter=isPlayButtonUsedForPlayback) _Bool playButtonUsedForPlayback;
-- (id)initWithPlayViewModel:(id)arg1 playModel:(id)arg2 playOrigin:(id)arg3 playLogger:(id)arg4;
+- (id)initWithPlayViewModel:(id)arg1 playModel:(id)arg2 playOrigin:(id)arg3 playLogger:(id)arg4 player:(id)arg5 playlistURI:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

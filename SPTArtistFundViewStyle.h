@@ -8,11 +8,10 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEButtonStyle, GLUEGradientStyle, GLUEImageStyle, GLUELabelStyle, NSString;
+@class GLUEButtonStyle, GLUEImageStyle, GLUELabelStyle, NSString;
 
 @interface SPTArtistFundViewStyle : NSObject <GLUEStyle>
 {
-    GLUEGradientStyle *_gradientStyle;
     GLUEImageStyle *_backgroundImageStyle;
     GLUEImageStyle *_mainImageStyle;
     GLUEImageStyle *_logoImageStyle;
@@ -32,7 +31,6 @@
 @property(copy, nonatomic) GLUEImageStyle *logoImageStyle; // @synthesize logoImageStyle=_logoImageStyle;
 @property(copy, nonatomic) GLUEImageStyle *mainImageStyle; // @synthesize mainImageStyle=_mainImageStyle;
 @property(copy, nonatomic) GLUEImageStyle *backgroundImageStyle; // @synthesize backgroundImageStyle=_backgroundImageStyle;
-@property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
 - (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 

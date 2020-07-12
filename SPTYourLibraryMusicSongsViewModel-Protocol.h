@@ -40,6 +40,7 @@
 - (void)toggleTrackLikeAtIndexPath:(NSIndexPath *)arg1;
 - (void)presentMenuForSongAtIndexPath:(NSIndexPath *)arg1 targetViewController:(UIViewController *)arg2 withSenderControl:(UIControl *)arg3;
 - (void)setAvailableOffline:(_Bool)arg1;
+- (_Bool)isSongsSection:(unsigned long long)arg1;
 - (_Bool)isOfflineSwitchCellAtIndex:(NSIndexPath *)arg1;
 - (_Bool)isAdditionalControlsSection:(unsigned long long)arg1;
 - (id <SPTYourLibraryMusicSongsSectionViewModel>)sectionViewModelAtIndex:(unsigned long long)arg1;

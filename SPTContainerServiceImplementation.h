@@ -8,7 +8,7 @@
 
 #import "SPTContainerService-Protocol.h"
 
-@class MetaViewController, NSString, SPTAllocationContext, SPTNavigationManager, SPTPageRegistryImplementation, SpotifyAppDelegate;
+@class MetaViewController, NSString, SPTAllocationContext, SPTKeychainManagerImpl, SPTNavigationManager, SPTPageRegistryImplementation, SpotifyAppDelegate;
 @protocol SPTContainerUIService, SPTUICompletionNotifier, SPTURIDispatchService;
 
 @interface SPTContainerServiceImplementation : NSObject <SPTContainerService>
@@ -20,9 +20,11 @@
     MetaViewController *_metaViewController;
     id <SPTUICompletionNotifier> _UICompletionNotifier;
     SPTNavigationManager *_navigationManager;
+    SPTKeychainManagerImpl *_keychainManager;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTKeychainManagerImpl *keychainManager; // @synthesize keychainManager=_keychainManager;
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(retain, nonatomic) id <SPTUICompletionNotifier> UICompletionNotifier; // @synthesize UICompletionNotifier=_UICompletionNotifier;
 @property(retain, nonatomic) MetaViewController *metaViewController; // @synthesize metaViewController=_metaViewController;

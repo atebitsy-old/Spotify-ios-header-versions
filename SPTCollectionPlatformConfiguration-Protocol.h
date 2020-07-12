@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class GLUEButton, NSString, NSURL, SPTSwipeableTableViewCellShelf, UIBarButtonItem, UIColor;
+@class GLUEButton, NSString, NSURL, UIBarButtonItem, UIColor;
 
 @protocol SPTCollectionPlatformConfiguration <NSObject>
 @property(readonly, nonatomic) NSString *collectionSongsSearchPlaceholder;
@@ -25,7 +25,6 @@
 - (void)showCollectionConfirmationProgressViewForBannedState:(_Bool)arg1 entityURL:(NSURL *)arg2 inContextURL:(NSURL *)arg3;
 - (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(NSURL *)arg2 entityName:(NSString *)arg3;
 - (void)showCollectionConfirmationProgressViewForAddedState:(_Bool)arg1 entityURL:(NSURL *)arg2;
-- (SPTSwipeableTableViewCellShelf *)provideShelfViewForItemWithCollectionState:(_Bool)arg1;
 - (NSString *)actionNameForArtistWithBanState:(_Bool)arg1;
 - (long long)actionIconForArtistWithBanState:(_Bool)arg1;
 - (NSString *)actionAccessibilityHintWithBanState:(_Bool)arg1 entityURL:(NSURL *)arg2;

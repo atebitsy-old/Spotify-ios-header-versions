@@ -8,7 +8,6 @@
 
 @interface _TtC21FollowFeedFeatureImpl26InstrumentationConnectable : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: consumer
     // Error parsing type: , name: logger
 }
 

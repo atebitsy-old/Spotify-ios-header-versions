@@ -19,8 +19,12 @@
     NSString *_accessToken;
     NSURL *_joinSessionURL;
     UIColor *_sessionColor;
+    NSString *_sessionOwnerID;
+    double _lastUpdateTimestamp;
 }
 
+@property(readonly, nonatomic) double lastUpdateTimestamp; // @synthesize lastUpdateTimestamp=_lastUpdateTimestamp;
+@property(readonly, copy, nonatomic) NSString *sessionOwnerID; // @synthesize sessionOwnerID=_sessionOwnerID;
 @property(retain, nonatomic) UIColor *sessionColor; // @synthesize sessionColor=_sessionColor;
 @property(readonly, nonatomic) NSURL *joinSessionURL; // @synthesize joinSessionURL=_joinSessionURL;
 @property(readonly, copy, nonatomic) NSString *accessToken; // @synthesize accessToken=_accessToken;

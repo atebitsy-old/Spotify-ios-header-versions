@@ -10,7 +10,6 @@
 
 @protocol SPTSearch2RootViewControllerProtocol <NSObject>
 @property(nonatomic) _Bool shouldFocusSearchBarOnViewDidAppear;
-@property(nonatomic) _Bool voiceSearchAllowed;
 @property(readonly, copy, nonatomic) NSString *requestID;
 @property(copy, nonatomic) NSString *query;
 @property(nonatomic) _Bool automaticallyAdjustsInsets;

@@ -10,10 +10,12 @@
 {
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: featureProperties
-    // Error parsing type: , name: leadingMargin
-    // Error parsing type: , name: trailingMargin
-    // Error parsing type: , name: verticalMargin
+    // Error parsing type: , name: sectionHorizontalMargin
+    // Error parsing type: , name: sectionVerticalMargin
     // Error parsing type: , name: spacing
+    // Error parsing type: , name: topMargin
+    // Error parsing type: , name: bottomMargin
+    // Error parsing type: , name: buttonHeight
 }
 
 - (void).cxx_destruct;

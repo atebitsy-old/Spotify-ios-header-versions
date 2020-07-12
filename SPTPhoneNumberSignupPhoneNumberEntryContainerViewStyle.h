@@ -16,6 +16,7 @@
     _Bool _tableViewScrollEnabled;
     GLUEGradientStyle *_backgroundGradientStyle;
     GLUELabelStyle *_titleLabelStyle;
+    GLUELabelStyle *_helpLabelStyle;
     GLUELabelStyle *_subtitleLabelStyle;
     GLUEButtonStyle *_nextButtonStyle;
     UIColor *_tableViewBackgroundColor;
@@ -30,6 +31,7 @@
     double _tableViewHeightCountrySelectionDisabled;
     double _tableViewCellHeight;
     double _tableViewHorizontalMargin;
+    double _helpLabelTopMargin;
     double _nextButtonTopMargin;
     double _nextButtonBottomMargin;
     double _subtitleLabelHorizontalMargin;
@@ -45,6 +47,7 @@
 @property(nonatomic) double subtitleLabelHorizontalMargin; // @synthesize subtitleLabelHorizontalMargin=_subtitleLabelHorizontalMargin;
 @property(nonatomic) double nextButtonBottomMargin; // @synthesize nextButtonBottomMargin=_nextButtonBottomMargin;
 @property(nonatomic) double nextButtonTopMargin; // @synthesize nextButtonTopMargin=_nextButtonTopMargin;
+@property(nonatomic) double helpLabelTopMargin; // @synthesize helpLabelTopMargin=_helpLabelTopMargin;
 @property(nonatomic) double tableViewHorizontalMargin; // @synthesize tableViewHorizontalMargin=_tableViewHorizontalMargin;
 @property(nonatomic) double tableViewCellHeight; // @synthesize tableViewCellHeight=_tableViewCellHeight;
 @property(nonatomic) double tableViewHeightCountrySelectionDisabled; // @synthesize tableViewHeightCountrySelectionDisabled=_tableViewHeightCountrySelectionDisabled;
@@ -60,6 +63,7 @@
 @property(nonatomic) _Bool scrollViewShowsScrollIndicator; // @synthesize scrollViewShowsScrollIndicator=_scrollViewShowsScrollIndicator;
 @property(copy, nonatomic) GLUEButtonStyle *nextButtonStyle; // @synthesize nextButtonStyle=_nextButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *subtitleLabelStyle; // @synthesize subtitleLabelStyle=_subtitleLabelStyle;
+@property(copy, nonatomic) GLUELabelStyle *helpLabelStyle; // @synthesize helpLabelStyle=_helpLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;
 - (void).cxx_destruct;

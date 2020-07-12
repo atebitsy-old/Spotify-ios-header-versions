@@ -14,6 +14,7 @@
 }
 
 - (void)fetchFeedHasNewItemsWithCompletion:(CDUnknownBlockType)arg1;
+- (void)cacheItemId:(id)arg1;
 
 @end
 

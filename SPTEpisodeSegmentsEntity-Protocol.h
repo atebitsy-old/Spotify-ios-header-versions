@@ -8,10 +8,12 @@
 @protocol SPTEpisodeSegmentsAlbumEntityImpl;
 
 @protocol SPTEpisodeSegmentsEntity
+@property(nonatomic, readonly) long long type;
 @property(nonatomic, readonly) double endTime;
 @property(nonatomic, readonly) double startTime;
 @property(nonatomic, readonly) long long endTimeMilliseconds;
 @property(nonatomic, readonly) long long startTimeMilliseconds;
+@property(nonatomic, readonly) NSString *trackSubtitle;
 @property(nonatomic, readonly) NSString *subtitle;
 @property(nonatomic, readonly) NSString *title;
 @property(nonatomic, readonly) NSURL *uri;

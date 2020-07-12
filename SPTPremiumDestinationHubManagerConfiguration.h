@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class HUBComponentRegistry, NSString, SPTDataLoaderFactory, SPTPersistentCache, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger;
-@protocol SPTAlertInterface, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkConnectivityController, SPTPremiumDestinationExperiments, SPTPremiumDestinationHubComponentsFactory;
+@protocol SPTAlertInterface, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkConnectivityController, SPTPremiumDestinationExperiments;
 
 @interface SPTPremiumDestinationHubManagerConfiguration : NSObject
 {
@@ -16,7 +16,6 @@
     id <SPTHubsRendererFactory> _hubsRendererFactory;
     id <SPTHugsFactory> _hugsFactory;
     id <SPTPremiumDestinationExperiments> _premiumDestinationExperiments;
-    id <SPTPremiumDestinationHubComponentsFactory> _premiumDestinationHubComponentFactory;
     SPTPremiumDestinationGLUETheme *_GLUETheme;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTDataLoaderFactory *_dataLoaderFactory;
@@ -31,14 +30,13 @@
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) SPTPremiumDestinationGLUETheme *GLUETheme; // @synthesize GLUETheme=_GLUETheme;
-@property(retain, nonatomic) id <SPTPremiumDestinationHubComponentsFactory> premiumDestinationHubComponentFactory; // @synthesize premiumDestinationHubComponentFactory=_premiumDestinationHubComponentFactory;
 @property(retain, nonatomic) id <SPTPremiumDestinationExperiments> premiumDestinationExperiments; // @synthesize premiumDestinationExperiments=_premiumDestinationExperiments;
 @property(retain, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(retain, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(copy, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
 - (void).cxx_destruct;
-- (id)initWithServiceIdentifier:(id)arg1 componentRegistry:(id)arg2 hubsRendererFactory:(id)arg3 hugsFactory:(id)arg4 premiumDestinationExperiments:(id)arg5 premiumDestinationHubComponentsFactory:(id)arg6 GLUETheme:(id)arg7 networkConnectivityController:(id)arg8 dataLoaderFactory:(id)arg9 persistentCache:(id)arg10 alertInterface:(id)arg11 premiumDestinationLogger:(id)arg12;
+- (id)initWithServiceIdentifier:(id)arg1 componentRegistry:(id)arg2 hubsRendererFactory:(id)arg3 hugsFactory:(id)arg4 premiumDestinationExperiments:(id)arg5 GLUETheme:(id)arg6 networkConnectivityController:(id)arg7 dataLoaderFactory:(id)arg8 persistentCache:(id)arg9 alertInterface:(id)arg10 premiumDestinationLogger:(id)arg11;
 
 @end
 

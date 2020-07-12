@@ -35,8 +35,6 @@
 - (id)featureProperties;
 - (void)loadFlags;
 @property(readonly, nonatomic) _Bool shouldShowLegacyPD;
-@property(readonly, nonatomic) _Bool shouldFetchPremiumDestinationHubsFromBackendV4;
-@property(readonly, nonatomic) _Bool shouldFetchPremiumDestinationHubsFromBackendV3;
 @property(readonly, nonatomic) _Bool shouldUseHeaderVoiceoverAccessible;
 - (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2;
 

@@ -33,6 +33,9 @@
     // Error parsing type: , name: $__lazy_storage_$_connectImageFactory
     // Error parsing type: , name: $__lazy_storage_$_uriDispatcher
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenterRouter
+    // Error parsing type: , name: $__lazy_storage_$_nudgeManager
+    // Error parsing type: , name: $__lazy_storage_$_connectNudgeController
+    // Error parsing type: , name: $__lazy_storage_$_nudgePresenter
     // Error parsing type: , name: $__lazy_storage_$_flagsManager
 }
 

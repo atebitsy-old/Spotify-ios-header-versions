@@ -13,11 +13,12 @@
 #import "SPTSearch2ViewControllerProtocol-Protocol.h"
 #import "SPTSearch2ViewModelProviderDelegate-Protocol.h"
 #import "SPTSearchPlatformColorInterpolatorDelegate-Protocol.h"
+#import "SPTSearchVoiceEnabledViewDelegate-Protocol.h"
 
-@class GLUEGradientView, NSMutableDictionary, NSString, NSURL, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchPlatformColorInterpolator;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTShareDragDelegateFactory, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@class GLUEGradientView, NSMutableDictionary, NSString, NSURL, SPTFloatingVoiceSearchView, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchPlatformColorInterpolator;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTSearchLogger, SPTShareDragDelegateFactory, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
-@interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
+@interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTSearchVoiceEnabledViewDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
 {
     _Bool _automaticallyAdjustsInsets;
     NSString *_query;
@@ -33,6 +34,9 @@
     id <SPTSearchLoadingLogger> _loadingLogger;
     id <SPTExplicitContentAccessManager> _explicitAccessManager;
     id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
+    SPTFloatingVoiceSearchView *_floatingSearchView;
+    id <SPTSearchLogger> _searchLogger;
+    CDUnknownBlockType _onVoiceButtonPress;
     NSMutableDictionary *_dragDelegateHolders;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     struct UIEdgeInsets _insets;
@@ -40,6 +44,9 @@
 
 @property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) NSMutableDictionary *dragDelegateHolders; // @synthesize dragDelegateHolders=_dragDelegateHolders;
+@property(readonly, copy, nonatomic) CDUnknownBlockType onVoiceButtonPress; // @synthesize onVoiceButtonPress=_onVoiceButtonPress;
+@property(readonly, nonatomic) id <SPTSearchLogger> searchLogger; // @synthesize searchLogger=_searchLogger;
+@property(retain, nonatomic) SPTFloatingVoiceSearchView *floatingSearchView; // @synthesize floatingSearchView=_floatingSearchView;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitAccessManager; // @synthesize explicitAccessManager=_explicitAccessManager;
 @property(readonly, nonatomic) id <SPTSearchLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
@@ -54,6 +61,7 @@
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void).cxx_destruct;
+- (void)voiceEnabledView:(id)arg1 didSelectElementWithSourceIdentifier:(id)arg2;
 - (void)configureDragDelegateWithViewModel:(id)arg1;
 - (id)makeNavigateHandlerWithURIDispatchService:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
@@ -86,10 +94,11 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
+- (void)viewDidAppear:(_Bool)arg1;
 - (id)backgroundColor;
 @property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
-- (id)initWithViewModelProvider:(id)arg1 dependencies:(id)arg2 configuration:(id)arg3 loadingLogger:(id)arg4;
+- (id)initWithViewModelProvider:(id)arg1 dependencies:(id)arg2 configuration:(id)arg3 loadingLogger:(id)arg4 searchLogger:(id)arg5 onVoiceButtonPress:(CDUnknownBlockType)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

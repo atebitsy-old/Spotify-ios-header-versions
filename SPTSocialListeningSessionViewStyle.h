@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEButtonStyle, GLUELabelStyle, GLUETableViewStyle, NSString, SPTSocialListeningSessionFacepileItemViewStyle, SPTSocialListeningSessionScannableViewStyle, SPTSocialListeningSessionViewUserCellStyle, UIColor;
+@class GLUEButtonStyle, GLUELabelStyle, GLUETableViewStyle, NSString, SPTListenTogetherBetaLabelStyle, SPTSocialListeningSessionFacepileItemViewStyle, SPTSocialListeningSessionScannableViewStyle, SPTSocialListeningSessionViewPlaceholderCellStyle, SPTSocialListeningSessionViewUserCellStyle, UIColor;
 
 @interface SPTSocialListeningSessionViewStyle : NSObject <GLUEStyle>
 {
@@ -23,10 +23,18 @@
     GLUEButtonStyle *_leaveSessionButtonStyle;
     GLUETableViewStyle *_participantsTableViewStyle;
     SPTSocialListeningSessionViewUserCellStyle *_participantsTableViewCellStyle;
+    SPTSocialListeningSessionViewPlaceholderCellStyle *_participantsPlaceholderCellStyle;
     SPTSocialListeningSessionFacepileItemViewStyle *_facepileItemViewStyle;
+    GLUEButtonStyle *_startSessionButtonStyle;
+    SPTListenTogetherBetaLabelStyle *_betaLabelStyle;
+    GLUEButtonStyle *_seeListenersButtonStyle;
 }
 
+@property(copy, nonatomic) GLUEButtonStyle *seeListenersButtonStyle; // @synthesize seeListenersButtonStyle=_seeListenersButtonStyle;
+@property(copy, nonatomic) SPTListenTogetherBetaLabelStyle *betaLabelStyle; // @synthesize betaLabelStyle=_betaLabelStyle;
+@property(copy, nonatomic) GLUEButtonStyle *startSessionButtonStyle; // @synthesize startSessionButtonStyle=_startSessionButtonStyle;
 @property(copy, nonatomic) SPTSocialListeningSessionFacepileItemViewStyle *facepileItemViewStyle; // @synthesize facepileItemViewStyle=_facepileItemViewStyle;
+@property(copy, nonatomic) SPTSocialListeningSessionViewPlaceholderCellStyle *participantsPlaceholderCellStyle; // @synthesize participantsPlaceholderCellStyle=_participantsPlaceholderCellStyle;
 @property(copy, nonatomic) SPTSocialListeningSessionViewUserCellStyle *participantsTableViewCellStyle; // @synthesize participantsTableViewCellStyle=_participantsTableViewCellStyle;
 @property(copy, nonatomic) GLUETableViewStyle *participantsTableViewStyle; // @synthesize participantsTableViewStyle=_participantsTableViewStyle;
 @property(copy, nonatomic) GLUEButtonStyle *leaveSessionButtonStyle; // @synthesize leaveSessionButtonStyle=_leaveSessionButtonStyle;

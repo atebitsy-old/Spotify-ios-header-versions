@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTLogMessage;
+@class GPBMessage, SPTLogMessage;
 
 @protocol SPTInstrumentationTransport <NSObject>
-- (void)send:(SPTLogMessage *)arg1;
+- (void)send:(GPBMessage *)arg1;
+- (void)legacySend:(SPTLogMessage *)arg1;
 @end
 

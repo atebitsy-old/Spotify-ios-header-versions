@@ -6,9 +6,12 @@
 
 #import <UIKit/UIView.h>
 
+#import "VISREFHeaderControllerObserver-Protocol.h"
+
+@class NSString;
 @protocol VISREFHeaderController, VISREFTableHeaderViewDelegate;
 
-@interface VISREFTableHeaderView : UIView
+@interface VISREFTableHeaderView : UIView <VISREFHeaderControllerObserver>
 {
     id <VISREFTableHeaderViewDelegate> _delegate;
     double _suggestedScrollViewOffset;
@@ -19,11 +22,19 @@
 @property(nonatomic) double suggestedScrollViewOffset; // @synthesize suggestedScrollViewOffset=_suggestedScrollViewOffset;
 @property(nonatomic) __weak id <VISREFTableHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)headerHeightDidChangeWithTotalHeaderHeight:(double)arg1 safeAreaTopInset:(double)arg2 contentHeight:(double)arg3 topAccessoryViewHeight:(double)arg4;
+- (void)dealloc;
 - (void)setupLayout;
 - (double)viewMinimumHeight;
 - (struct UIEdgeInsets)safeAreaInsets;
 - (void)didMoveToSuperview;
 - (id)initWithVISREFHeaderController:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

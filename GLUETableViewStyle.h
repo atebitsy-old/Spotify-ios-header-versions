@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "GLUEStyle-Protocol.h"
+#import "GLUEScrollViewStyle-Protocol.h"
 
 @class NSString, UIColor;
 
-@interface GLUETableViewStyle : NSObject <GLUEStyle>
+@interface GLUETableViewStyle : NSObject <GLUEScrollViewStyle>
 {
+    long long scrollIndicatorStyle;
     UIColor *_backgroundColor;
     double _rowHeight;
     double _estimatedRowHeight;
@@ -24,6 +25,7 @@
 @property(nonatomic) double estimatedRowHeight; // @synthesize estimatedRowHeight=_estimatedRowHeight;
 @property(nonatomic) double rowHeight; // @synthesize rowHeight=_rowHeight;
 @property(retain, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;
+@property(nonatomic) long long scrollIndicatorStyle; // @synthesize scrollIndicatorStyle;
 - (void).cxx_destruct;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

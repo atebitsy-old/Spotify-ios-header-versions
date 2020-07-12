@@ -10,6 +10,8 @@
 {
 }
 
+- (id)listenTogetherBottomBannerStyle;
+- (id)bottomBannerButtonStyleWithBackgroundColor;
 - (id)educationSlateViewStyle;
 - (id)popupViewStyle;
 - (id)sessionViewStyle;

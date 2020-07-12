@@ -16,7 +16,6 @@
 {
     _Bool _weigthedShufflePlayDisabled;
     _Bool _freeTierEnabled;
-    _Bool _editAnnotationEnabled;
     _Bool _contextAwareEditorialTrackSharingEnabled;
     _Bool _episodesInPlaylistDisabled;
     _Bool _scrollPerformanceTrackingEnabled;
@@ -25,7 +24,6 @@
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
     id <SPTFeatureFlagSignal> _weigthedShufflePlaySignal;
-    id <SPTFeatureFlagSignal> _editAnnotationSignal;
     id <SPTFeatureFlagSignal> _contextAwareEditorialTrackSharingSignal;
     id <SPTFeatureFlagSignal> _ignoreProductStateForEpisodesAvailableSignal;
     id <SPTFeatureFlagSignal> _scrollPerformanceSignal;
@@ -34,13 +32,11 @@
 @property(nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled; // @synthesize scrollPerformanceTrackingEnabled=_scrollPerformanceTrackingEnabled;
 @property(nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled; // @synthesize episodesInPlaylistDisabled=_episodesInPlaylistDisabled;
 @property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
-@property(nonatomic, getter=isEditAnnotationEnabled) _Bool editAnnotationEnabled; // @synthesize editAnnotationEnabled=_editAnnotationEnabled;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(nonatomic, getter=isWeigthedShufflePlayDisabled) _Bool weigthedShufflePlayDisabled; // @synthesize weigthedShufflePlayDisabled=_weigthedShufflePlayDisabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> scrollPerformanceSignal; // @synthesize scrollPerformanceSignal=_scrollPerformanceSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> ignoreProductStateForEpisodesAvailableSignal; // @synthesize ignoreProductStateForEpisodesAvailableSignal=_ignoreProductStateForEpisodesAvailableSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> contextAwareEditorialTrackSharingSignal; // @synthesize contextAwareEditorialTrackSharingSignal=_contextAwareEditorialTrackSharingSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> editAnnotationSignal; // @synthesize editAnnotationSignal=_editAnnotationSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> weigthedShufflePlaySignal; // @synthesize weigthedShufflePlaySignal=_weigthedShufflePlaySignal;
 @property(readonly, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
@@ -60,10 +56,7 @@
 - (void)setupEpisodesAvailable;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
 - (void)setupScrollPerformanceSignal;
-- (id)editAnnotationAbbaSignal;
-- (id)editAnnotationRolloutSignal;
 - (void)setupContextAwareEditorialTrackSharingSignal;
-- (void)setupEditAnnotationSignal;
 - (void)setupWeightedShufflePlay;
 - (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 freeTierEnabledSignal:(id)arg3 featureProperties:(id)arg4;
 

@@ -7,11 +7,12 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTEntityHeaderContentController-Protocol.h"
+#import "VISREFHeaderControllerObserver-Protocol.h"
 #import "VISREFTouchForwardingViewDelegate-Protocol.h"
 
 @class NSLayoutConstraint, NSString, UILayoutGuide, UIScrollView, VISREFBaseHeaderController, VISREFTouchForwardingView;
 
-@interface VISREFEntityHeaderContentViewController : UIViewController <VISREFTouchForwardingViewDelegate, SPTEntityHeaderContentController>
+@interface VISREFEntityHeaderContentViewController : UIViewController <VISREFTouchForwardingViewDelegate, VISREFHeaderControllerObserver, SPTEntityHeaderContentController>
 {
     _Bool _viewIsVisible;
     VISREFBaseHeaderController *_headerController;
@@ -36,7 +37,9 @@
 @property(nonatomic) __weak UIScrollView *parentScrollView; // @synthesize parentScrollView=_parentScrollView;
 @property(retain, nonatomic) VISREFBaseHeaderController *headerController; // @synthesize headerController=_headerController;
 - (void).cxx_destruct;
+- (void)headerHeightDidChangeWithTotalHeaderHeight:(double)arg1 safeAreaTopInset:(double)arg2 contentHeight:(double)arg3 topAccessoryViewHeight:(double)arg4;
 - (id)touchFowardingView:(id)arg1 didReceiveHitTest:(struct CGPoint)arg2 withEvent:(id)arg3;
+- (void)dealloc;
 - (void)entityHeaderViewController:(id)arg1 didAttachToScrollView:(id)arg2 inViewController:(id)arg3;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;

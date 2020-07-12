@@ -54,13 +54,14 @@
 - (void)updateLayout;
 - (double)viewWidth;
 - (double)nowPlayingViewHeight;
-- (double)viewHeight;
+- (double)currentWindowHeight;
+- (double)screenHeight;
 - (void)resetIdleState;
 - (void)applicationDidBecomeActive;
 - (void)removeApplicationStateObservers;
 - (void)addApplicationStateObservers;
 - (void)contentViewControllerDidUpdateOverlayAlpha:(double)arg1;
-- (void)contentViewControllerDidReloadData:(id)arg1;
+- (void)nowPlayingScrollViewModelMainViewSizeDidChange:(id)arg1;
 - (void)nowPlayingScrollViewModelDidChangeScrollEnabledValue:(id)arg1;
 - (void)nowPlayingScrollViewModel:(id)arg1 didMoveToRelativeTrack:(id)arg2 withDifferentProviders:(_Bool)arg3 scrollEnabledValueChanged:(_Bool)arg4;
 - (void)nowPlayingScrollViewModelDidLoadProviderContent:(id)arg1;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTSocialListeningGLUETheme, SPTSocialListeningSessionViewUserCellStyle;
+@class SPTSocialListeningGLUETheme, SPTSocialListeningSessionViewPlaceholderCellStyle, SPTSocialListeningSessionViewUserCellStyle;
 @protocol GLUEImageLoader;
 
 @interface SPTSocialListeningSessionViewUserCellConfigurator : NSObject
@@ -14,12 +14,15 @@
     id <GLUEImageLoader> _glueImageLoader;
     SPTSocialListeningGLUETheme *_theme;
     SPTSocialListeningSessionViewUserCellStyle *_cellStyle;
+    SPTSocialListeningSessionViewPlaceholderCellStyle *_placeholderCellStyle;
 }
 
+@property(retain, nonatomic) SPTSocialListeningSessionViewPlaceholderCellStyle *placeholderCellStyle; // @synthesize placeholderCellStyle=_placeholderCellStyle;
 @property(retain, nonatomic) SPTSocialListeningSessionViewUserCellStyle *cellStyle; // @synthesize cellStyle=_cellStyle;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 - (void).cxx_destruct;
+- (void)configurePlaceholderCell:(id)arg1;
 - (void)configureCell:(id)arg1 withViewModel:(id)arg2;
 - (id)initWithImageLoader:(id)arg1 theme:(id)arg2;
 

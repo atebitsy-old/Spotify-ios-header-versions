@@ -7,9 +7,10 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL;
-@protocol SPTAssistedCurationAddTrackHandler, SPTAssistedCurationModel;
+@protocol SPTAssistedCurationAddTrackHandler, SPTAssistedCurationCardsSortMechanism, SPTAssistedCurationModel;
 
 @protocol SPTAssistedCurationService <SPTService>
+- (id <SPTAssistedCurationCardsSortMechanism>)providerCardsSortMechanismForURI:(NSURL *)arg1;
 - (id <SPTAssistedCurationAddTrackHandler>)provideAddTrackHandlerForURI:(NSURL *)arg1;
 - (id <SPTAssistedCurationModel>)provideAssistedCurationModelForURI:(NSURL *)arg1;
 @end

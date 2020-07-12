@@ -70,7 +70,6 @@
 - (id)provideNavigationItemDecorator;
 - (id)providePremiumDestinationGLUETheme;
 - (id)providePremiumDestinationHubManagerConfiguration;
-- (id)providePremiumDestinationHubComponentsFactory;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)providePersistentCache;
 - (id)provideLegacyPremiumDestinationViewControllerForViewURI:(id)arg1 context:(id)arg2;

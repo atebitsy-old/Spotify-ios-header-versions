@@ -9,7 +9,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileConnectVolumeControl_SystemVolumeSliderEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)dragNoAction;
+- (id <SPTUBIInteractionEvent>)dragSetVolumeWithNewVolumePercentage:(long long)arg1;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

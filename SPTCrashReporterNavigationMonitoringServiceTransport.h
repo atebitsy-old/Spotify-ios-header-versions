@@ -19,6 +19,7 @@
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 - (void).cxx_destruct;
 - (void)send:(id)arg1;
+- (void)legacySend:(id)arg1;
 - (id)initWithCrashReporter:(id)arg1;
 
 // Remaining properties

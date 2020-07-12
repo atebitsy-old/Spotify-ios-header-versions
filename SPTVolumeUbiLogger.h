@@ -16,8 +16,8 @@
 @property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
 - (void).cxx_destruct;
 - (void)logVolumeSystemSliderDraggedToVolume:(double)arg1 forDeviceId:(id)arg2;
-- (void)logVolumeDownHardwareButtonPressedForDeviceId:(id)arg1;
-- (void)logVolumeUpHardwareButtonPressedForDeviceId:(id)arg1;
+- (void)logVolumeDownHardwareButtonPressedForDeviceId:(id)arg1 newVolume:(double)arg2;
+- (void)logVolumeUpHardwareButtonPressedForDeviceId:(id)arg1 newVolume:(double)arg2;
 - (void)logVolumeSliderDraggedToVolume:(double)arg1 forDeviceId:(id)arg2;
 - (void)logRemoteVolumeUIImpressionForDeviceId:(id)arg1;
 - (id)volumeEventFactoryForDeviceId:(id)arg1;

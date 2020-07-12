@@ -6,42 +6,44 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, NSMutableArray, NSString;
+@class NSArray, NSMutableArray, NSString;
 
 @interface SCORConfiguration : NSObject
 {
     shared_ptr_c176f907 _cppConfiguration;
     struct OwnedArray<ConfigurationListenerImpl, ComScore::DummyCriticalSection> *_listeners;
+    struct OwnedArray<CrossPublisherUniqueDeviceIdChangeListenerImpl, ComScore::DummyCriticalSection> *_listenersCrossPublisherChange;
     NSObject *_lock;
     NSMutableArray *_publishers;
     NSMutableArray *_partners;
-    _Bool _httpRedirectCaching;
 }
 
-@property(readonly) _Bool httpRedirectCaching; // @synthesize httpRedirectCaching=_httpRedirectCaching;
 - (id).cxx_construct;
 - (void).cxx_destruct;
+@property(nonatomic) long long systemClockJumpDetectionInterval;
+@property(nonatomic) long long systemClockJumpDetectionPrecision;
+@property(nonatomic) _Bool systemClockJumpDetection;
 - (shared_ptr_c176f907)cppConfiguration;
 - (id)toString;
+- (void)removeCrossPublisherUniqueDeviceIdChangeDelegate:(id)arg1;
+- (void)addCrossPublisherUniqueDeviceIdChangeDelegate:(id)arg1;
 - (void)removeDelegate:(id)arg1;
 - (void)addDelegate:(id)arg1;
 @property(readonly) _Bool enabled;
-@property(readonly) _Bool uncaughtExceptionTracking;
-@property(readonly) long long usagePropertiesAutoUpdateMode;
-@property(readonly) _Bool secureTransmission;
-@property(readonly) NSString *offlineFlushEndpointURL;
-@property(readonly) NSString *liveEndpointURL;
+@property(nonatomic) long long usagePropertiesAutoUpdateMode;
+@property(copy) NSString *offlineFlushEndpointURL;
+@property(copy) NSString *liveEndpointURL;
 @property(copy) NSArray *labelOrder;
-@property(readonly) _Bool vce;
-@property(readonly) int usagePropertiesAutoUpdateInterval;
-@property(readonly) long long cacheFlushingInterval;
-@property(readonly) int cacheMeasurementExpiry;
-@property(readonly) int cacheMinutesToRetry;
-@property(readonly) int cacheMaxFlushesInARow;
-@property(readonly) int cacheMaxBatchFiles;
-@property(readonly) int cacheMaxMeasurements;
-@property long long offlineCacheMode;
-@property int liveTransmissionMode;
+@property(readonly) _Bool vceEnabled;
+@property(nonatomic) int usagePropertiesAutoUpdateInterval;
+@property(nonatomic) int cacheMeasurementExpiry;
+@property(nonatomic) int cacheMinutesToRetry;
+@property(nonatomic) int cacheMaxFlushesInARow;
+@property(nonatomic) int cacheMaxBatchFiles;
+@property(nonatomic) int cacheMaxMeasurements;
+@property(nonatomic) long long offlineCacheMode;
+@property(nonatomic) int liveTransmissionMode;
+- (void)enableImplementationValidationMode;
 - (void)disable;
 - (id)publisherConfigurationWithPublisherId:(id)arg1;
 - (id)partnerConfigurationWithPartnerId:(id)arg1;
@@ -49,17 +51,15 @@
 - (void)removePersistentLabelWithName:(id)arg1;
 - (void)removeAllPersistentLabels;
 - (_Bool)containsPersistentLabel:(id)arg1;
-- (id)persistentLabelWithName:(id)arg1;
 - (void)setPersistentLabelWithName:(id)arg1 value:(id)arg2;
-@property _Bool keepAliveMeasurement;
-- (id)persistentLabels;
-- (void)setPersistentLabels:(id)arg1;
-@property(copy) NSDictionary *startLabels;
+@property _Bool keepAliveMeasurementEnabled;
+- (void)addPersistentLabels:(id)arg1;
+- (void)addIncludedPublisher:(id)arg1;
 - (void)removeAllStartLabels;
 - (void)removeStartLabelWithName:(id)arg1;
-- (_Bool)containsStartLabel:(id)arg1;
 - (void)setStartLabelWithName:(id)arg1 value:(id)arg2;
-- (id)startLabelWithName:(id)arg1;
+- (void)addStartLabels:(id)arg1;
+@property(nonatomic) _Bool preventAdSupportUsage;
 @property(copy) NSString *applicationVersion;
 @property(copy) NSString *applicationName;
 @property(readonly) NSArray *partnerConfigurations;

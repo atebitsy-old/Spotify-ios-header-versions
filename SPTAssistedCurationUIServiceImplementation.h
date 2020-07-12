@@ -8,11 +8,12 @@
 
 #import "SPTAssistedCurationLinkDispatcherPageProvider-Protocol.h"
 #import "SPTAssistedCurationUIService-Protocol.h"
+#import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTAssistedCurationLinkDispatcherImplementation, SPTAssistedCurationPresentationHelper;
-@protocol SPContextMenuFeature, SPTAssistedCurationService, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPerformanceMetricsService, SPTSearchPlatformService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTAssistedCurationService, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPerformanceMetricsService, SPTSearchPlatformService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
-@interface SPTAssistedCurationUIServiceImplementation : SPTUIPageService <SPTAssistedCurationLinkDispatcherPageProvider, SPTAssistedCurationUIService>
+@interface SPTAssistedCurationUIServiceImplementation : SPTUIPageService <SPTAssistedCurationLinkDispatcherPageProvider, SPTAssistedCurationUIService, SPTURISubtypeHandler>
 {
     id <SPTGLUEService> _glueService;
     id <SPContextMenuFeature> _contextMenuFeature;
@@ -24,6 +25,7 @@
     id <SPTSnackbarService> _snackbarService;
     id <SPTFreeTierPresentationService> _freeTierPresentationService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
+    id <SPTURIDispatchService> _uriDispatchService;
     id <SPTAssistedCurationUserInterfaceFactory> _userInterfaceFactory;
     SPTAssistedCurationLinkDispatcherImplementation *_linkDispatcher;
     SPTAssistedCurationPresentationHelper *_assistedCurationPresentationHelper;
@@ -41,6 +43,7 @@
 @property(retain, nonatomic) SPTAssistedCurationPresentationHelper *assistedCurationPresentationHelper; // @synthesize assistedCurationPresentationHelper=_assistedCurationPresentationHelper;
 @property(retain, nonatomic) SPTAssistedCurationLinkDispatcherImplementation *linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <SPTAssistedCurationUserInterfaceFactory> userInterfaceFactory; // @synthesize userInterfaceFactory=_userInterfaceFactory;
+@property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTFreeTierPresentationService> freeTierPresentationService; // @synthesize freeTierPresentationService=_freeTierPresentationService;
 @property(nonatomic) __weak id <SPTSnackbarService> snackbarService; // @synthesize snackbarService=_snackbarService;
@@ -52,6 +55,10 @@
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 - (void).cxx_destruct;
+- (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
+- (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
+- (void)unregisterLinkHandler;
+- (void)registerLinkHandler;
 - (id)cardProvidersToWaitWithMostPlayedCard:(_Bool)arg1;
 - (id)provideAddSongsActionTaskForURL:(id)arg1 logContext:(id)arg2;
 - (id)provideLoggerForURI:(id)arg1 playlistURI:(id)arg2;
@@ -62,13 +69,14 @@
 - (id)provideSearchDrillDownViewControllerForURL:(id)arg1 context:(id)arg2;
 - (id)provideAssistedCurationViewControllerForURI:(id)arg1 mostPlayedCard:(_Bool)arg2;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
-- (id)providerCardsSortMechanism;
 - (id)provideAssistedCurationPresentationHelper;
 - (id)providerAssistedCurationLinkDispatcher;
 - (_Bool)claimsURI:(id)arg1;
 - (void)curateForURL:(id)arg1 withMostPlayedCard:(_Bool)arg2;
+- (void)curateQueue;
 - (void)curateLikedSongs;
 - (void)curatePlaylistURL:(id)arg1;
+- (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

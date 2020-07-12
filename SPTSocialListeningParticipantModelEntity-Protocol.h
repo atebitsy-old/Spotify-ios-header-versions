@@ -9,7 +9,7 @@
 @class NSString, NSURL;
 
 @protocol SPTSocialListeningParticipantModelEntity <NSObject>
-@property(readonly, nonatomic) long long memberType;
+@property(readonly, nonatomic, getter=isHost) _Bool host;
 @property(readonly, nonatomic) NSURL *largeImageURL;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic, getter=isCurrentUser) _Bool currentUser;

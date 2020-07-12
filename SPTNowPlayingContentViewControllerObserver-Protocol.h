@@ -6,12 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTNowPlayingContentViewController;
-
 @protocol SPTNowPlayingContentViewControllerObserver <NSObject>
 
 @optional
 - (void)contentViewControllerDidUpdateOverlayAlpha:(double)arg1;
-- (void)contentViewControllerDidReloadData:(id <SPTNowPlayingContentViewController>)arg1;
 @end
 

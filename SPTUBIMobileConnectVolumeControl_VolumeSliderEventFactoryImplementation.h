@@ -18,7 +18,8 @@
 + (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)dragNoAction;
+- (id)dragSetVolumeWithNewVolumePercentage:(long long)arg1;
+- (id)impression;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

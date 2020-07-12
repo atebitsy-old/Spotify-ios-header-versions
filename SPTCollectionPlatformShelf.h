@@ -25,7 +25,7 @@
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 - (void).cxx_destruct;
 - (id)initWithCollectionPlatform:(id)arg1 entityURL:(id)arg2 testManager:(id)arg3 logger:(id)arg4;
-- (void)shelfView:(CDUnknownBlockType)arg1;
+- (void)shelfViewModel:(CDUnknownBlockType)arg1;
 - (void)execute:(id)arg1 source:(id)arg2 completion:(CDUnknownBlockType)arg3;
 
 // Remaining properties

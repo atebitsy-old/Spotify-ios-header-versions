@@ -22,6 +22,7 @@
 @interface SPTYourLibraryMusicSongsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTYourLibraryMusicSongCellConfiguratorDelegate, SPTNavigationControllerNavigationBarState, SPContentInsetViewController, SPTOfflineSwitchDelegate, GLUEThemeObserver, SPTYourLibraryMusicSongsViewModelDelegate, SPTPageController>
 {
     _Bool _contextMenuToBePresented;
+    _Bool _fadeInTrackRowsOnReload;
     SPTYourLibraryMusicSongsTableView *_tableView;
     SPTProgressView *_progressView;
     SPTYourLibraryMusicGLUETheme *_theme;
@@ -45,6 +46,7 @@
     UIViewController *_filterChipsViewController;
 }
 
+@property(nonatomic) _Bool fadeInTrackRowsOnReload; // @synthesize fadeInTrackRowsOnReload=_fadeInTrackRowsOnReload;
 @property(retain, nonatomic) UIViewController *filterChipsViewController; // @synthesize filterChipsViewController=_filterChipsViewController;
 @property(readonly, nonatomic) id <_TtP18FilterChipsFeature21SPTFilterChipsFactory_> filterChipsFactory; // @synthesize filterChipsFactory=_filterChipsFactory;
 @property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
@@ -68,6 +70,8 @@
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(retain, nonatomic) SPTYourLibraryMusicSongsTableView *tableView; // @synthesize tableView=_tableView;
 - (void).cxx_destruct;
+- (void)animateVisibleTrackRowsFadeOutWithCompletion:(CDUnknownBlockType)arg1;
+- (void)fadeInCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)configureCell:(id)arg1 atIndexPath:(id)arg2;
 - (id)filterChipsSectionHeaderWithViewModel:(id)arg1;
 - (id)buttonSectionHeaderWithViewModel:(id)arg1;
@@ -80,6 +84,8 @@
 - (unsigned long long)offlineSwitchCellOfflineAvailability:(id)arg1;
 - (void)offlineSwitchCellDidChangeState:(id)arg1 isOn:(_Bool)arg2;
 - (void)updateTableWithSectionConfigurationChanged:(_Bool)arg1;
+- (void)songsViewModelActiveFiltersDidChange:(id)arg1;
+- (void)songsViewModelActiveFiltersWillChange:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)songsViewModel:(id)arg1 error:(id)arg2;
 - (void)songsViewModelDidChange:(id)arg1 sectionConfigurationChanged:(_Bool)arg2;
 - (void)handleEmptyView;

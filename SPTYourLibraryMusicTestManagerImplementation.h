@@ -49,9 +49,7 @@
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
 @property(readonly, nonatomic, getter=isLikedSongsFiltersEnabled) _Bool likedSongsFiltersEnabled;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;
-@property(readonly, nonatomic, getter=isUnlikeDialogEnabled) _Bool unlikeDialogEnabled;
 @property(readonly, nonatomic, getter=isHideCreatePlaylistEnabled) _Bool hideCreatePlaylistEnabled;
-@property(readonly, nonatomic, getter=isLikedSongsMinorTableUpdateMechanismEnabled) _Bool likedSongsMinorTableUpdateMechanismEnabled;
 @property(readonly, nonatomic, getter=isPageLoaderEnabledForLikedSongs) _Bool pageLoaderEnabledForLikedSongs;
 - (void)setupRemoteConfigurationProperties;
 - (void)handleWindowedTrackSignal:(id)arg1 hasAssumedState:(long long)arg2;

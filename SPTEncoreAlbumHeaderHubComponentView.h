@@ -15,6 +15,7 @@
 
 @interface SPTEncoreAlbumHeaderHubComponentView : HUBComponentView <HUBComponentViewWithImageHandling, HUBComponentViewWithEvents, HUBComponentViewContentOffsetObserver>
 {
+    _Bool _animatedHeartEnabled;
     id <HUBComponentEventHandler> _eventHandler;
     CDUnknownBlockType _backButtonTappedBlock;
     id _followButtonModel;
@@ -34,6 +35,7 @@
 @property(retain, nonatomic) NSURL *lastImageURL; // @synthesize lastImageURL=_lastImageURL;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
 @property(retain, nonatomic) SPTEncoreAlbumHeaderController *headerController; // @synthesize headerController=_headerController;
+@property(nonatomic) _Bool animatedHeartEnabled; // @synthesize animatedHeartEnabled=_animatedHeartEnabled;
 @property(retain, nonatomic) id offlineButtonModel; // @synthesize offlineButtonModel=_offlineButtonModel;
 @property(retain, nonatomic) id contextMenuButtonModel; // @synthesize contextMenuButtonModel=_contextMenuButtonModel;
 @property(retain, nonatomic) id followButtonModel; // @synthesize followButtonModel=_followButtonModel;

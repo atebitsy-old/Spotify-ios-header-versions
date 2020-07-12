@@ -16,6 +16,7 @@
 + (id)spt_previewURLWithVersion:(id)arg1 type:(long long)arg2 identifier:(id)arg3;
 + (id)spt_ArtistAboutViewURLForArtistURI:(id)arg1 withTransport:(long long)arg2;
 + (id)spt_aboutURLForArtistURL:(id)arg1;
++ (id)spt_URLWithAssistedCurationQueue;
 + (id)spt_URLwithAssistedCuratedPlaylistURL:(id)arg1;
 + (id)spt_URLWithAssistedCurationPage;
 + (id)spt_assistedCurationPrefixComponents;
@@ -179,6 +180,7 @@
 + (id)spt_nowPlayingSideBarURI;
 + (id)spt_nowPlayingBarURI;
 + (id)spt_nowPlayingViewContentsURI;
++ (id)spt_nowPlayingQueueViewURI;
 + (id)spt_nowPlayingViewURI;
 + (id)spt_onboardingCoordinationFeatureURL;
 + (id)spt_PaymentCancelURL;
@@ -199,10 +201,6 @@
 + (id)spt_localPremiumDestinationHubsResponseFileURLWithLocaleIdentifier:(id)arg1;
 + (id)spt_localPremiumDestinationHubsResponseFileURL;
 + (id)spt_premiumDestinationHubsServiceURLWithPathComponents:(id)arg1 usingDevEnabled:(_Bool)arg2;
-+ (id)spt_premiumDestinationHubsDevV4ServiceURL;
-+ (id)spt_premiumDestinationHubsV4ServiceURL;
-+ (id)spt_premiumDestinationHubsDevV3ServiceURL;
-+ (id)spt_premiumDestinationHubsV3ServiceURL;
 + (id)spt_premiumDestinationHubsDevV2ServiceURL;
 + (id)spt_premiumDestinationHubsV2ServiceURL;
 + (id)spt_premiumDestinationPreviewToolNavURL;
@@ -302,6 +300,7 @@
 - (_Bool)spt_isAssistedCurationSearchDrillDownURL;
 - (id)spt_assistedCuratedPlaylistURL;
 @property(readonly, nonatomic, getter=spt_hasAssistedCurationPrefixComponents) _Bool hasAssistedCurationPrefixComponents;
+- (_Bool)spt_isAssistedCurationForQueueURL;
 - (_Bool)spt_isAssistedCurationURL;
 @property(readonly, nonatomic, getter=spt_decodedViewURI) NSURL *decodedViewURI;
 @property(readonly, nonatomic) _Bool spt_isAssistedCurationSearchResultDrillDownURI;
@@ -392,6 +391,7 @@
 @property(readonly, nonatomic, getter=spt_isNowPlayingSideBarURI) _Bool isNowPlayingSideBarURI;
 @property(readonly, nonatomic, getter=spt_isNowPlayingBarURI) _Bool isNowPlayingBarURI;
 @property(readonly, nonatomic, getter=spt_isNowPlayingViewContentsURI) _Bool isNowPlayingViewContentsURI;
+@property(readonly, nonatomic, getter=spt_isNowPlayingQueueViewURI) _Bool isNowPlayingQueueViewURI;
 @property(readonly, nonatomic, getter=spt_isNowPlayingViewURI) _Bool isNowPlayingViewURI;
 @property(readonly, nonatomic, getter=spt_isOnDemandDecoratableURL) _Bool isOnDemandDecoratableURL;
 - (_Bool)spt_isOnboardingCoordinationFeatureURI;

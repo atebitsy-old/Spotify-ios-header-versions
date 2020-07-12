@@ -28,13 +28,13 @@
 @property(retain, nonatomic) UIView<GLUEStatefulAnimationLoading><GLUEStatefulAnimationControlling><GLUEAnimationControlling> *animationView; // @synthesize animationView=_animationView;
 @property(nonatomic) unsigned long long currentStatus; // @synthesize currentStatus=_currentStatus;
 @property(retain, nonatomic) GLUEViewAnimator *animator; // @synthesize animator=_animator;
-@property(readonly, nonatomic) VISREFEntityOfflineButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
+@property(retain, nonatomic) VISREFEntityOfflineButtonViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
 - (void)updateOfflineAvailability:(unsigned long long)arg1;
 - (struct CGSize)intrinsicContentSize;
 - (void)updateTitle:(id)arg1;
 - (void)updateStyle:(id)arg1;
-- (void)updateSelectedState:(_Bool)arg1;
+- (void)updateSelectedState:(_Bool)arg1 userInitiated:(_Bool)arg2;
 - (void)updateIcon:(id)arg1;
 - (void)updateEnabledState:(_Bool)arg1;
 - (void)updateAccessibilityLabel:(id)arg1;

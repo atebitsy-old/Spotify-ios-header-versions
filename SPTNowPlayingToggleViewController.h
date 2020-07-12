@@ -12,7 +12,7 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, NSURL, SPTNavigationManager, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTNowPlayingStateProxy, SPTPlayerState, SPTStatusBarToken, SPTTheme;
+@class NSString, NSURL, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTNowPlayingStateProxy, SPTPlayerState, SPTStatusBarToken, SPTTheme;
 @protocol SPTNowPlayingContentContainingViewController, SPTPageContainer, SPTPlayer, SPTQueueEnabling, SPTQueueLogger;
 
 @interface SPTNowPlayingToggleViewController : UIViewController <SPTNowPlayingModelObserver, SPTNowPlayingModelDelegate, SPTPlayerObserver, SPTBarOverlayViewController, SPTPageController>
@@ -26,7 +26,6 @@
     SPTNowPlayingStateProxy *_stateProxy;
     SPTStatusBarToken *_statusBarToken;
     SPTTheme *_theme;
-    SPTNavigationManager *_navigationManager;
     SPTNowPlayingScrollViewController *_scrollViewController;
     UIViewController<SPTNowPlayingContentContainingViewController> *_playerViewController;
     UIViewController<SPTQueueEnabling> *_queueViewController;
@@ -45,7 +44,6 @@
 @property(retain, nonatomic) UIViewController<SPTQueueEnabling> *queueViewController; // @synthesize queueViewController=_queueViewController;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContentContainingViewController> *playerViewController; // @synthesize playerViewController=_playerViewController;
 @property(retain, nonatomic) SPTNowPlayingScrollViewController *scrollViewController; // @synthesize scrollViewController=_scrollViewController;
-@property(readonly, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
 @property(readonly, nonatomic) SPTNowPlayingStateProxy *stateProxy; // @synthesize stateProxy=_stateProxy;
@@ -88,7 +86,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 playerViewController:(id)arg2 queueViewController:(id)arg3 scrollViewController:(id)arg4 theme:(id)arg5 player:(id)arg6 navigationManager:(id)arg7 backgroundUnitProvider:(id)arg8 logger:(id)arg9 barLogger:(id)arg10 queueLogger:(id)arg11 stateProxy:(id)arg12;
+- (id)initWithModel:(id)arg1 playerViewController:(id)arg2 queueViewController:(id)arg3 scrollViewController:(id)arg4 theme:(id)arg5 player:(id)arg6 backgroundUnitProvider:(id)arg7 logger:(id)arg8 barLogger:(id)arg9 queueLogger:(id)arg10 stateProxy:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,6 +9,7 @@
 @class SPTNowPlayingScrollViewModel, SPTPlayerTrack;
 
 @protocol SPTNowPlayingScrollViewModelDelegate <NSObject>
+- (void)nowPlayingScrollViewModelMainViewSizeDidChange:(SPTNowPlayingScrollViewModel *)arg1;
 - (void)nowPlayingScrollViewModelDidChangeScrollEnabledValue:(SPTNowPlayingScrollViewModel *)arg1;
 - (void)nowPlayingScrollViewModelDidLoadProviderContent:(SPTNowPlayingScrollViewModel *)arg1;
 - (void)nowPlayingScrollViewModel:(SPTNowPlayingScrollViewModel *)arg1 didMoveToRelativeTrack:(SPTPlayerTrack *)arg2 withDifferentProviders:(_Bool)arg3 scrollEnabledValueChanged:(_Bool)arg4;

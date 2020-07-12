@@ -26,6 +26,7 @@
 @property(nonatomic, readonly) _Bool impressionEnabled; // @synthesize impressionEnabled;
 @property(nonatomic, readonly) NSString *generatorCommitHash;
 @property(nonatomic, readonly) NSString *specificationCommitHash;
+@property(nonatomic, readonly) NSString *specificationVersion;
 @property(nonatomic, readonly) NSString *applicationId;
 
 @end

@@ -9,7 +9,6 @@
 @class NSArray, NSURL;
 
 @protocol SPTShowEntityService <NSObject>
-- (void)lookupResumePointsForURIs:(NSArray *)arg1 completionHandler:(void (^)(NSDictionary *, NSError *))arg2;
 - (void)lookupEpisodeURIs:(NSArray *)arg1 completionHandler:(void (^)(NSDictionary *, NSError *))arg2;
 - (void)lookupEpisodesForShowWithURI:(NSURL *)arg1 inRange:(struct _NSRange)arg2 includeEpisode:(NSURL *)arg3 completionHandler:(void (^)(NSArray *, NSError *))arg4;
 - (void)lookupShowEntityWithURI:(NSURL *)arg1 completionHandler:(void (^)(id <SPTShow>, NSError *))arg2;

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: enableFollowFeed
     // Error parsing type: , name: enableFullSizeCards
+    // Error parsing type: , name: enablePageLoader
     // Error parsing type: , name: followFeedOuterBadgeCacheTtlSecs
 }
 

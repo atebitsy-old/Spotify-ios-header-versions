@@ -8,11 +8,9 @@
 
 @interface SCORUpdateBefore3 : NSObject
 {
-    shared_ptr_4af07e7b _cppPropertyManager;
+    struct PropertyManager *_cppPropertyManager;
 }
 
-- (id).cxx_construct;
-- (void).cxx_destruct;
 - (void)set:(id)arg1 value:(id)arg2;
 - (void)moveOldStorage;
 - (void)migrateOldKey:(id)arg1 toNewKey:(id)arg2;
@@ -20,7 +18,7 @@
 - (void)migrateOldStorageKeys;
 - (void)removeV3Key:(id)arg1;
 - (id)getV3Key:(id)arg1;
-- (void)libraryUpdateWithNewData:(shared_ptr_4af07e7b)arg1;
+- (void)libraryUpdateWithNewData:(struct PropertyManager *)arg1;
 - (id)init;
 
 @end

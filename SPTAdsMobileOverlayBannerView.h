@@ -6,7 +6,7 @@
 
 #import "SPTBannerView.h"
 
-@class GLUELabel, NSLayoutConstraint, SPTAdsPromotedContentImageView, SPTTheme, UIButton, UIView;
+@class GLUEButton, GLUELabel, NSLayoutConstraint, SPTAdsPromotedContentImageView, SPTTheme, UIButton, UIView;
 @protocol GLUEImageLoader;
 
 @interface SPTAdsMobileOverlayBannerView : SPTBannerView
@@ -15,7 +15,7 @@
     UIView *_actionView;
     GLUELabel *_headerLabel;
     GLUELabel *_advertiserLabel;
-    UIButton *_learnMoreButton;
+    GLUEButton *_learnMoreButton;
     UIButton *_closeBannerButton;
     SPTTheme *_theme;
     id <GLUEImageLoader> _glueImageLoader;
@@ -32,7 +32,7 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) UIButton *closeBannerButton; // @synthesize closeBannerButton=_closeBannerButton;
-@property(readonly, nonatomic) UIButton *learnMoreButton; // @synthesize learnMoreButton=_learnMoreButton;
+@property(readonly, nonatomic) GLUEButton *learnMoreButton; // @synthesize learnMoreButton=_learnMoreButton;
 @property(readonly, nonatomic) GLUELabel *advertiserLabel; // @synthesize advertiserLabel=_advertiserLabel;
 @property(readonly, nonatomic) GLUELabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(readonly, nonatomic) UIView *actionView; // @synthesize actionView=_actionView;

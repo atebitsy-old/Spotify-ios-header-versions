@@ -38,6 +38,7 @@
 @property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(nonatomic) __weak id <SPTInAppMessageCardMessageWebViewContentDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)logDismissEvent;
 - (id)messageFormat;
 - (void)logCardMessagePresentationPerformace;
 - (void)loadHTMLContent;

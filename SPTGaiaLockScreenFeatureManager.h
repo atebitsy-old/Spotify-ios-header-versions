@@ -7,13 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTGaiaLockScreenControlsStateProvider-Protocol.h"
-#import "SPTGaiaLockScreenPlayerFlagsObserver-Protocol.h"
 #import "SPTGaiaSettingsObserver-Protocol.h"
 
 @class NSString, SPTObserverManager;
 @protocol SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaSettingsProvider;
 
-@interface SPTGaiaLockScreenFeatureManager : NSObject <SPTGaiaSettingsObserver, SPTGaiaLockScreenPlayerFlagsObserver, SPTGaiaLockScreenControlsStateProvider>
+@interface SPTGaiaLockScreenFeatureManager : NSObject <SPTGaiaSettingsObserver, SPTGaiaLockScreenControlsStateProvider>
 {
     id <SPTGaiaLockScreenPlayerFlagsProvider> _lockScreenFlagsProvider;
     id <SPTGaiaSettingsProvider> _settingsProvider;
@@ -25,7 +24,6 @@
 @property(readonly, nonatomic) id <SPTGaiaLockScreenPlayerFlagsProvider> lockScreenFlagsProvider; // @synthesize lockScreenFlagsProvider=_lockScreenFlagsProvider;
 - (void).cxx_destruct;
 - (void)updateObservers;
-- (void)lockScreenControlsFlagChanged:(_Bool)arg1;
 - (void)localDevicesOnlySettingsChanged:(_Bool)arg1;
 - (void)lockScreenControlsSettingsChanged:(_Bool)arg1;
 - (void)removeObserver:(id)arg1;

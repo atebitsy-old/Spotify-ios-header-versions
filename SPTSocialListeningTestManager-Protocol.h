@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
+@class SPTSocialListeningFeatureProperties;
 @protocol SPTFeatureFlagSignal;
 
 @protocol SPTSocialListeningTestManager <NSObject>
+@property(readonly, nonatomic) SPTSocialListeningFeatureProperties *remoteConfigurationProperties;
 @property(readonly, nonatomic, getter=isSocialDeviceEnabled) _Bool socialDeviceEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> shareLinkEnabledSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> socialListeningEnabledSignal;

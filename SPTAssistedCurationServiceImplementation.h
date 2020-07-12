@@ -9,7 +9,7 @@
 #import "SPTAssistedCurationService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol CosmosFeature, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlaylistPlatformService;
+@protocol CosmosFeature, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService;
 
 @interface SPTAssistedCurationServiceImplementation : NSObject <SPTAssistedCurationService>
 {
@@ -20,9 +20,13 @@
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTNetworkService> _networkService;
     id <SPTFreeTierRecommendationsService> _recommendationsService;
+    id <SPTPlayerFeature> _playerFeature;
+    id <SPTPlayer> _player;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
+@property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTFreeTierRecommendationsService> recommendationsService; // @synthesize recommendationsService=_recommendationsService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
@@ -37,7 +41,8 @@
 - (id)likedSongsCardProvider;
 - (id)cardProvidersForURI:(id)arg1;
 - (id)datasourceForURI:(id)arg1;
-- (long long)collectionTypeOfURI:(id)arg1;
+- (long long)assistedCurationContextTypeForURI:(id)arg1;
+- (id)providerCardsSortMechanismForURI:(id)arg1;
 - (id)provideAddTrackHandlerForURI:(id)arg1;
 - (id)provideAssistedCurationModelForURI:(id)arg1;
 - (void)configureWithServices:(id)arg1;

@@ -24,6 +24,7 @@
     UIView *_containerView;
     GLUEGradientView *_backgroundGradientView;
     GLUELabel *_titleLabel;
+    GLUELabel *_helpTextLabel;
     UITableView *_tableView;
     SPTLoginLoadingActionButton *_nextButton;
     SPTPhoneNumberSignupPhoneNumberEntryTableViewCell *_numberEntryTableViewCell;
@@ -38,6 +39,7 @@
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryTableViewCell *numberEntryTableViewCell; // @synthesize numberEntryTableViewCell=_numberEntryTableViewCell;
 @property(retain, nonatomic) SPTLoginLoadingActionButton *nextButton; // @synthesize nextButton=_nextButton;
 @property(retain, nonatomic) UITableView *tableView; // @synthesize tableView=_tableView;
+@property(retain, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
@@ -72,6 +74,7 @@
 - (void)setCallingCodeText:(id)arg1;
 - (void)setCountrySelectorText:(id)arg1;
 - (void)setNextButtonTitle:(id)arg1;
+- (void)setInputHelpText:(id)arg1;
 - (void)setTitleText:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupTableViewHeightConstraints;
@@ -82,6 +85,7 @@
 - (void)setupNumberEntryTableViewCell;
 - (void)setupTableView;
 - (void)setupNextButton;
+- (void)setupHelpTextLabel;
 - (void)setupTitleLabel;
 - (void)setupContainerView;
 - (void)setupScrollView;

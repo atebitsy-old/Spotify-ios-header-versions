@@ -17,18 +17,23 @@
     GLUEImageView *_imageView;
 }
 
++ (struct CGSize)preferredSizeForImage;
 + (double)preferredHeightForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
 @property(readonly, nonatomic) GLUELabel *lowerLabel; // @synthesize lowerLabel=_lowerLabel;
 @property(readonly, nonatomic) GLUELabel *upperLabel; // @synthesize upperLabel=_upperLabel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
-- (id)imageStyleWithModel:(id)arg1;
-- (id)lowerLabelStyleWithImage:(_Bool)arg1;
-- (id)upperLabelStyle;
-- (id)constraintsWithImage:(_Bool)arg1;
 @property(retain, nonatomic) UIImage *image;
+- (void)activateConstraints;
+- (id)imageStyleWithModel:(id)arg1;
+- (id)lowerLabelStyle;
+- (id)upperLabelStyle;
+- (void)applyGlueStyleWithModel:(id)arg1;
+- (void)addAccessibilityWithModel:(id)arg1;
+- (id)createImageWithModel:(id)arg1;
 - (void)configureWithModel:(id)arg1;
+- (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)prepareForReuse;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 

@@ -11,7 +11,5 @@
 @property(readonly, nonatomic) _Bool shouldUseHeaderVoiceoverAccessible;
 @property(readonly, nonatomic) _Bool shouldUseDevEndpointSetting;
 @property(readonly, nonatomic) _Bool shouldShowLegacyPD;
-@property(readonly, nonatomic) _Bool shouldFetchPremiumDestinationHubsFromBackendV4;
-@property(readonly, nonatomic) _Bool shouldFetchPremiumDestinationHubsFromBackendV3;
 @end
 

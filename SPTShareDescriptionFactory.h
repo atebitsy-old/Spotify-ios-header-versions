@@ -11,6 +11,7 @@
 }
 
 + (id)legacyShareItemTypeStringForShareType:(long long)arg1;
++ (id)customShareDescriptionWithTitle:(id)arg1 leadingSubtitle:(id)arg2 trailingSubtitle:(id)arg3;
 + (id)concertShareDescriptionWithConcertTitle:(id)arg1 venueName:(id)arg2 dateText:(id)arg3;
 + (id)profileShareDescriptionWithProfileName:(id)arg1;
 + (id)episodeShareDescriptionWithEpisodeName:(id)arg1 publisherName:(id)arg2 showName:(id)arg3;

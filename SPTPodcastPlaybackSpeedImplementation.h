@@ -15,7 +15,9 @@
     unsigned long long _option;
 }
 
++ (id)extendedPlaybackSpeedFromValue:(id)arg1;
 + (id)playbackSpeedFromValue:(id)arg1;
++ (id)allAvailablePlaybackSpeedsExtended;
 + (id)allAvailablePlaybackSpeeds;
 @property(nonatomic) unsigned long long option; // @synthesize option=_option;
 @property(readonly, nonatomic) NSString *translation;

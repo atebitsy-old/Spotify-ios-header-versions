@@ -25,7 +25,7 @@
 }
 
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
-@property(nonatomic) __weak id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
+@property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(readonly, nonatomic) _Bool shuffleEnabled; // @synthesize shuffleEnabled=_shuffleEnabled;
 @property(readonly, nonatomic) long long displayContext; // @synthesize displayContext=_displayContext;
 @property(readonly, nonatomic) NSDictionary *episodeMetadata; // @synthesize episodeMetadata=_episodeMetadata;

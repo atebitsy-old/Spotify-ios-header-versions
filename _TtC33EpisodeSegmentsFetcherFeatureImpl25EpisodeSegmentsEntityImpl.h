@@ -16,14 +16,18 @@
     // Error parsing type: , name: imageUri
     // Error parsing type: , name: uri
     // Error parsing type: , name: title
+    // Error parsing type: , name: subtitle
     // Error parsing type: , name: startTimeMilliseconds
     // Error parsing type: , name: endTimeMilliseconds
+    // Error parsing type: , name: type
 }
 
+@property(nonatomic, readonly) long long type; // @synthesize type;
 @property(nonatomic, readonly) double endTime;
 @property(nonatomic, readonly) double startTime;
 @property(nonatomic, readonly) long long endTimeMilliseconds; // @synthesize endTimeMilliseconds;
 @property(nonatomic, readonly) long long startTimeMilliseconds; // @synthesize startTimeMilliseconds;
+@property(nonatomic, readonly) NSString *subtitle;
 @property(nonatomic, readonly) NSString *title;
 @property(nonatomic, readonly) NSURL *uri;
 @property(nonatomic, readonly) NSURL *imageUri;

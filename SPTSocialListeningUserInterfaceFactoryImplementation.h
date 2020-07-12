@@ -8,7 +8,7 @@
 
 #import "SPTSocialListeningUserInterfaceFactory-Protocol.h"
 
-@class NSString, SPTSocialListeningDialogPresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation;
+@class NSString, SPTSocialListeningDialogPresenter, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherStateManagerImplementation, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation;
 @protocol GLUEImageLoader, SPTContainerUIService, SPTLinkDispatcher, SPTOfflineModeState, SPTScannablesPresenter, SPTShareFeature, SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningUserInterfaceFactoryImplementation : NSObject <SPTSocialListeningUserInterfaceFactory>
@@ -24,8 +24,10 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTShareFeature> _shareFeature;
+    SPTSocialListeningListenTogetherStateManagerImplementation *_listenTogetherStateManager;
 }
 
+@property(retain, nonatomic) SPTSocialListeningListenTogetherStateManagerImplementation *listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;

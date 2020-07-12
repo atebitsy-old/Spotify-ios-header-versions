@@ -9,13 +9,18 @@
 #import "SPTAppExtensionCredentialsManager-Protocol.h"
 
 @class NSString;
+@protocol SPTKeychainManager;
 
 @interface SPTAppExtensionCredentialsManagerImplementation : NSObject <SPTAppExtensionCredentialsManager>
 {
     NSString *_domain;
     NSString *_accessGroup;
+    NSString *_accessAttr;
+    id <SPTKeychainManager> _keychainManager;
 }
 
+@property(retain, nonatomic) id <SPTKeychainManager> keychainManager; // @synthesize keychainManager=_keychainManager;
+@property(copy, nonatomic) NSString *accessAttr; // @synthesize accessAttr=_accessAttr;
 @property(copy, nonatomic) NSString *accessGroup; // @synthesize accessGroup=_accessGroup;
 @property(copy, nonatomic) NSString *domain; // @synthesize domain=_domain;
 - (void).cxx_destruct;
@@ -30,6 +35,7 @@
 - (_Bool)deleteCoreCredentials;
 - (id)setCoreCredentials:(id)arg1;
 - (id)initWithAccessGroup:(long long)arg1;
+- (id)initWithAccessGroup:(long long)arg1 keychainManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -11,6 +11,7 @@
 
 @interface SPTHomeContentOperationFactory : NSObject
 {
+    _Bool _listeningHistoryEnabled;
     id <SPTOnDemandService> _onDemandService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTOfflineService> _offlineService;
@@ -27,6 +28,7 @@
     id <SPTFreeTierPersistentCounter> _persistentCounter;
 }
 
+@property(nonatomic) _Bool listeningHistoryEnabled; // @synthesize listeningHistoryEnabled=_listeningHistoryEnabled;
 @property(readonly, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
@@ -53,7 +55,7 @@
 - (id)provideOnDemandDecoratorContentOperation;
 - (id)provideCardAccessibilityContentOperation;
 - (id)provideRecentlyPlayedContentOperation;
-- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 snackbarService:(id)arg4 networkConnectivityController:(id)arg5 homeContentCache:(id)arg6 dataLoaderFactory:(id)arg7 testManager:(id)arg8 player:(id)arg9 tasteOnboardingCurationProvider:(id)arg10 localSettings:(id)arg11 featureSettingsItemFactory:(id)arg12 ubiHubsInstrumentation:(id)arg13 persistentCounter:(id)arg14;
+- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 snackbarService:(id)arg4 networkConnectivityController:(id)arg5 homeContentCache:(id)arg6 dataLoaderFactory:(id)arg7 testManager:(id)arg8 player:(id)arg9 tasteOnboardingCurationProvider:(id)arg10 localSettings:(id)arg11 featureSettingsItemFactory:(id)arg12 ubiHubsInstrumentation:(id)arg13 persistentCounter:(id)arg14 listeningHistoryEnabled:(_Bool)arg15;
 
 @end
 

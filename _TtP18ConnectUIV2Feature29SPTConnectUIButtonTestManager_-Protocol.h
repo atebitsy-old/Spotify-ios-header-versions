@@ -5,6 +5,7 @@
 //
 
 @protocol _TtP18ConnectUIV2Feature29SPTConnectUIButtonTestManager_
+@property(nonatomic, readonly) _Bool isConnectDestinationNudgeEnabled;
 @property(nonatomic, readonly) _Bool isConnectAttachedDestinationEnabled;
 @end
 

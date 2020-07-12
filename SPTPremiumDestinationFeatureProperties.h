@@ -12,16 +12,12 @@
 
 @interface SPTPremiumDestinationFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _mercuryPremiumHubsPageBackendV3Ios;
-    _Bool _mercuryPremiumHubsPageBackendV4Ios;
     _Bool _mercuryPremiumHubsPageShowLegacyIos;
     _Bool _premiumHeaderVoiceoverAccessibleEnabled;
 }
 
 @property(readonly, nonatomic) _Bool premiumHeaderVoiceoverAccessibleEnabled; // @synthesize premiumHeaderVoiceoverAccessibleEnabled=_premiumHeaderVoiceoverAccessibleEnabled;
 @property(readonly, nonatomic) _Bool mercuryPremiumHubsPageShowLegacyIos; // @synthesize mercuryPremiumHubsPageShowLegacyIos=_mercuryPremiumHubsPageShowLegacyIos;
-@property(readonly, nonatomic) _Bool mercuryPremiumHubsPageBackendV4Ios; // @synthesize mercuryPremiumHubsPageBackendV4Ios=_mercuryPremiumHubsPageBackendV4Ios;
-@property(readonly, nonatomic) _Bool mercuryPremiumHubsPageBackendV3Ios; // @synthesize mercuryPremiumHubsPageBackendV3Ios=_mercuryPremiumHubsPageBackendV3Ios;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

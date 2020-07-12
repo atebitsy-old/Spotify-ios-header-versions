@@ -70,7 +70,6 @@
 - (id)provideModalPresentationMonitor;
 - (id)provideTransportRegistry;
 - (_Bool)dualSendingEnabled;
-- (_Bool)interactionFeatureEnabled;
 - (void)configureInteractionMediator;
 - (void)configurePageViewObserverWithClock:(id)arg1;
 - (void)configureNavigationObservers;

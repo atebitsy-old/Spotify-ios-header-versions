@@ -13,6 +13,7 @@
 
 @interface SPTFreeTierTrackVISREFHeaderController : VISREFBaseHeaderController <VISREFHubHeaderController>
 {
+    _Bool _animatedHeartEnabled;
     double _headerHeight;
     double _navigationBarHeight;
     VISREFGradientBackgroundView *_backgroundView;
@@ -35,6 +36,7 @@
 @property(copy, nonatomic) CDUnknownBlockType backButtonTappedBlock; // @synthesize backButtonTappedBlock=_backButtonTappedBlock;
 @property(retain, nonatomic) id <HUBComponentModel> model; // @synthesize model=_model;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
+@property(nonatomic) _Bool animatedHeartEnabled; // @synthesize animatedHeartEnabled=_animatedHeartEnabled;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) VISREFCustomBackButton *backButton; // @synthesize backButton=_backButton;
 @property(retain, nonatomic) VISREFPlayButtonForegroundView *foregroundView; // @synthesize foregroundView=_foregroundView;

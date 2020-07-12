@@ -16,19 +16,22 @@
     // Error parsing type: , name: onTextChange
     // Error parsing type: , name: onModeChange
     // Error parsing type: , name: onVoiceSearchButtonPress
+    // Error parsing type: , name: mode
     // Error parsing type: , name: findHeaderContainerDelegate
     // Error parsing type: , name: theme
     // Error parsing type: , name: findHeaderContainer
     // Error parsing type: , name: searchControlsContainer
     // Error parsing type: , name: searchControls
-    // Error parsing type: , name: voiceuiService
+    // Error parsing type: , name: hasVoiceSearch
+    // Error parsing type: , name: offlineModeState
+    // Error parsing type: , name: podcastFeatureEnabled
     // Error parsing type: , name: $__lazy_storage_$_findHeader
-    // Error parsing type: , name: mode
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)updateSearchControlsStyle;
+- (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)searchControlsDidPressCancelButton:(id)arg1;
 - (void)searchControlsDidPressReturnKey:(id)arg1;
 - (void)searchControlsDidPressScannablesButton:(id)arg1;

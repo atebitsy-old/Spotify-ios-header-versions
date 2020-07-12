@@ -29,6 +29,8 @@ struct ActivityPeriod {
     int _field2;
 };
 
+struct AdvertisementMetadata;
+
 struct AlbumGroup;
 
 struct AlbumInfo {
@@ -73,28 +75,18 @@ struct ApplicationStateTracker {
     struct shared_ptr<spotify::client::ApplicationStateTracker::Impl> _field1;
 };
 
-struct Array<ComScore::EventInfo::ClientInfo, ComScore::DummyCriticalSection, 0> {
-    struct ArrayAllocationBase<ComScore::EventInfo::ClientInfo, ComScore::DummyCriticalSection> _field1;
-    int _field2;
-};
-
 struct Array<ComScore::HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection>::HashEntry *, ComScore::DummyCriticalSection, 0> {
     struct ArrayAllocationBase<ComScore::HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection>::HashEntry *, ComScore::DummyCriticalSection> _field1;
     int _field2;
 };
 
-struct Array<ComScore::HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection>::HashEntry *, ComScore::DummyCriticalSection, 0> {
-    struct ArrayAllocationBase<ComScore::HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection>::HashEntry *, ComScore::DummyCriticalSection> _field1;
+struct Array<ComScore::HeartbeatInterval, ComScore::DummyCriticalSection, 0> {
+    struct ArrayAllocationBase<ComScore::HeartbeatInterval, ComScore::DummyCriticalSection> _field1;
     int _field2;
 };
 
 struct Array<ComScore::String, ComScore::DummyCriticalSection, 0> {
-    struct ArrayAllocationBase<ComScore::String, ComScore::DummyCriticalSection> data;
-    int numUsed;
-};
-
-struct ArrayAllocationBase<ComScore::EventInfo::ClientInfo, ComScore::DummyCriticalSection> {
-    struct HeapBlock<ComScore::EventInfo::ClientInfo, false> _field1;
+    struct ArrayAllocationBase<ComScore::String, ComScore::DummyCriticalSection> _field1;
     int _field2;
 };
 
@@ -103,14 +95,14 @@ struct ArrayAllocationBase<ComScore::HashMap<ComScore::String, ComScore::String,
     int _field2;
 };
 
-struct ArrayAllocationBase<ComScore::HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection>::HashEntry *, ComScore::DummyCriticalSection> {
-    struct HeapBlock<ComScore::HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection>::HashEntry *, false> _field1;
+struct ArrayAllocationBase<ComScore::HeartbeatInterval, ComScore::DummyCriticalSection> {
+    struct HeapBlock<ComScore::HeartbeatInterval, false> _field1;
     int _field2;
 };
 
 struct ArrayAllocationBase<ComScore::String, ComScore::DummyCriticalSection> {
-    struct HeapBlock<ComScore::String, false> elements;
-    int numAllocated;
+    struct HeapBlock<ComScore::String, false> _field1;
+    int _field2;
 };
 
 struct ArrayAllocationBase<ConfigurationListenerImpl *, ComScore::DummyCriticalSection> {
@@ -118,10 +110,9 @@ struct ArrayAllocationBase<ConfigurationListenerImpl *, ComScore::DummyCriticalS
     int _field2;
 };
 
-struct ArrayAllocationBase<StreamingListenerImpl *, ComScore::CriticalSection> {
-    struct _opaque_pthread_mutex_t _field1;
-    struct HeapBlock<StreamingListenerImpl *, false> _field2;
-    int _field3;
+struct ArrayAllocationBase<CrossPublisherUniqueDeviceIdChangeListenerImpl *, ComScore::DummyCriticalSection> {
+    struct HeapBlock<CrossPublisherUniqueDeviceIdChangeListenerImpl *, false> _field1;
+    int _field2;
 };
 
 struct ArtistInfo {
@@ -144,7 +135,7 @@ struct ArtistMetadata {
     struct ActivityPeriod _field10;
 };
 
-struct Asset;
+struct AssetMetadata;
 
 struct Atomic<int> {
     int _field1;
@@ -294,11 +285,17 @@ struct Client;
 
 struct ClientConfiguration;
 
+struct ClientConfigurationParams {
+    _Bool _field1;
+    _Bool _field2;
+    _Bool _field3;
+    struct StringPairArray _field4;
+    struct StringPairArray _field5;
+};
+
 struct ClientFeatureStack {
     struct unique_ptr<spotify::client_features::ClientFeatureStack::Impl, std::__1::default_delete<spotify::client_features::ClientFeatureStack::Impl>> _field1;
 };
-
-struct ClientInfo;
 
 struct ClientVersionConfig {
     basic_string_90719d97 _field1;
@@ -354,6 +351,8 @@ struct ConnectivityPolicyProvider;
 
 struct ConnectivityPolicyProviderBridge;
 
+struct ContentMetadata;
+
 struct ContextPlayerOptionOverrides {
     struct optional<bool> _field1;
     struct optional<bool> _field2;
@@ -389,6 +388,8 @@ struct CriticalSection {
     struct _opaque_pthread_mutex_t _field1;
 };
 
+struct CrossPublisherUniqueDeviceIdChangeListenerImpl;
+
 struct DefaultHashFunctions;
 
 struct DeviceConfig {
@@ -404,18 +405,16 @@ struct DeviceInfo {
 
 struct Disc;
 
-struct DummyCriticalSection;
-
 struct EventInfo {
     struct CriticalSection _field1;
     struct StringPairArray _field2;
-    struct Array<ComScore::EventInfo::ClientInfo, ComScore::DummyCriticalSection, 0> _field3;
-    struct HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection> _field4;
+    struct map<ComScore::String, ComScore::StringPairArray, std::__1::less<ComScore::String>, std::__1::allocator<std::__1::pair<const ComScore::String, ComScore::StringPairArray>>> _field3;
+    struct StringArray _field4;
     struct String _field5;
-    struct StringPairArray _field6;
+    _Bool _field6;
+    struct StringArray _field7;
+    struct StringPairArray _field8;
 };
-
-struct EventManager;
 
 struct EventSender;
 
@@ -547,36 +546,27 @@ struct HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunction
     struct CriticalSection _field4;
 };
 
-struct HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection> {
-    struct DefaultHashFunctions _field1;
-    struct Array<ComScore::HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection>::HashEntry *, ComScore::DummyCriticalSection, 0> _field2;
-    int _field3;
-    struct DummyCriticalSection _field4;
-};
-
-struct HeapBlock<ComScore::EventInfo::ClientInfo, false> {
-    struct ClientInfo *_field1;
-};
-
 struct HeapBlock<ComScore::HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection>::HashEntry *, false> {
     struct HashEntry **_field1;
 };
 
-struct HeapBlock<ComScore::HashMap<ComScore::String, ComScore::StringPairArray, ComScore::DefaultHashFunctions, ComScore::DummyCriticalSection>::HashEntry *, false> {
-    struct HashEntry **_field1;
+struct HeapBlock<ComScore::HeartbeatInterval, false> {
+    struct HeartbeatInterval *_field1;
 };
 
 struct HeapBlock<ComScore::String, false> {
-    struct String *data;
+    struct String *_field1;
 };
 
 struct HeapBlock<ConfigurationListenerImpl *, false> {
     struct ConfigurationListenerImpl **_field1;
 };
 
-struct HeapBlock<StreamingListenerImpl *, false> {
-    struct StreamingListenerImpl **_field1;
+struct HeapBlock<CrossPublisherUniqueDeviceIdChangeListenerImpl *, false> {
+    struct CrossPublisherUniqueDeviceIdChangeListenerImpl **_field1;
 };
+
+struct HeartbeatInterval;
 
 struct HermesHandler {
     CDUnknownFunctionPointerType *_field1;
@@ -756,7 +746,9 @@ struct NetworkInfo {
     _Bool _field3;
 };
 
-struct OfflineCache;
+struct OfflineCache {
+    CDUnknownFunctionPointerType *_field1;
+};
 
 struct OfflineManager {
     CDUnknownFunctionPointerType *_field1;
@@ -776,10 +768,12 @@ struct OwnedArray<ConfigurationListenerImpl, ComScore::DummyCriticalSection> {
     int _field2;
 };
 
-struct OwnedArray<StreamingListenerImpl, ComScore::CriticalSection> {
-    struct ArrayAllocationBase<StreamingListenerImpl *, ComScore::CriticalSection> _field1;
+struct OwnedArray<CrossPublisherUniqueDeviceIdChangeListenerImpl, ComScore::DummyCriticalSection> {
+    struct ArrayAllocationBase<CrossPublisherUniqueDeviceIdChangeListenerImpl *, ComScore::DummyCriticalSection> _field1;
     int _field2;
 };
+
+struct OwnedArray<StreamingListenerImpl, ComScore::CriticalSection>;
 
 struct ParentChildCredential {
     struct unique_ptr<spotify::connectivity::auth::credentials::ParentChildCredential::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::ParentChildCredential::Impl>> _pimpl;
@@ -813,8 +807,6 @@ struct PlayOrigin {
     basic_string_90719d97 _field6;
     struct set<std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<char>>, std::__1::allocator<std::__1::basic_string<char>>> _field7;
 };
-
-struct PlaybackSession;
 
 struct Position {
     double _field1;
@@ -855,7 +847,17 @@ struct PreparePlayOptions {
 
 struct ProductState;
 
-struct PropertyManager;
+struct PropertyManager {
+    struct HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection> _field1;
+    struct unique_ptr<ComScore::Storage, std::__1::default_delete<ComScore::Storage>> _field2;
+    struct unique_ptr<ComScore::PropertySerializer, std::__1::default_delete<ComScore::PropertySerializer>> _field3;
+    _Bool _field4;
+    _Bool _field5;
+    struct CriticalSection _field6;
+    struct Atomic<int> _field7;
+};
+
+struct PropertySerializer;
 
 struct ProxyAnalyticsDelegate;
 
@@ -869,13 +871,11 @@ struct ProxySettings {
     basic_string_90719d97 _field5;
 };
 
-struct ReducedRequirementsStreamingAnalytics {
-    struct shared_ptr<ComScore::StreamingAnalytics> _field1;
-    int _field2;
-    struct StringPairArray _field3;
-    _Bool _field4;
-    int _field5;
-};
+struct PublisherConfiguration;
+
+struct PublisherUniqueDeviceIdListener;
+
+struct PublisherUniqueDeviceIdListenerImpl;
 
 struct RefreshTokenCredentials {
     struct unique_ptr<spotify::connectivity::auth::credentials::RefreshTokenCredentials::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::RefreshTokenCredentials::Impl>> _field1;
@@ -1011,10 +1011,6 @@ struct SocialManagerObserver {
 
 struct SocialUserData;
 
-struct SpinLock {
-    struct Atomic<int> _field1;
-};
-
 struct SpotifyLink {
     int _field1;
     basic_string_90719d97 _field2;
@@ -1060,29 +1056,26 @@ struct SpotifyLink {
     } _field8;
 };
 
-struct StreamingAnalytics {
-    struct shared_ptr<ComScore::StreamingCore> _field1;
-    struct shared_ptr<ComScore::TaskExecutor> _field2;
-    struct StringPairArray _field3;
-    struct StreamingConfiguration _field4;
-    struct CriticalSection _field5;
-    struct SpinLock _field6;
-};
+struct StackedAdvertisementMetadata;
 
-struct StreamingConfiguration {
-    struct streamingConfigurationParams _params;
-};
+struct StackedContentMetadata;
 
-struct StreamingCore;
+struct Storage;
 
-struct StreamingListenerImpl;
+struct StreamingAnalytics;
+
+struct StreamingConfiguration;
+
+struct StreamingExtendedAnalytics;
+
+struct StreamingPublisherConfiguration;
 
 struct String {
     struct CharPointer_UTF8 _field1;
 };
 
 struct StringArray {
-    struct Array<ComScore::String, ComScore::DummyCriticalSection, 0> strings;
+    struct Array<ComScore::String, ComScore::DummyCriticalSection, 0> _field1;
 };
 
 struct StringPairArray {
@@ -1098,8 +1091,6 @@ struct Suppressions {
 struct SyncManagerApi {
     CDUnknownFunctionPointerType *_field1;
 };
-
-struct TaskExecutor;
 
 struct Timer {
     CDUnknownFunctionPointerType *_field1;
@@ -1338,34 +1329,6 @@ struct basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>
             } ;
         } __value_;
     } __r_;
-};
-
-struct clientConfigurationParams {
-    _Bool _field1;
-    struct String _field2;
-    struct String _field3;
-    _Bool _field4;
-    _Bool _field5;
-    int _field6;
-    int _field7;
-    struct StringArray _field8;
-    _Bool _field9;
-    int _field10;
-    int _field11;
-    int _field12;
-    int _field13;
-    int _field14;
-    int _field15;
-    int _field16;
-    int _field17;
-    _Bool _field18;
-    struct String _field19;
-    struct String _field20;
-    struct String _field21;
-    struct String _field22;
-    struct StringPairArray _field23;
-    struct StringPairArray _field24;
-    struct String _field25;
 };
 
 struct cmp_ctx_s {
@@ -1615,6 +1578,18 @@ struct in_addr {
 
 struct less<int>;
 
+struct map<ComScore::String, ComScore::StringPairArray, std::__1::less<ComScore::String>, std::__1::allocator<std::__1::pair<const ComScore::String, ComScore::StringPairArray>>> {
+    struct __tree<std::__1::__value_type<ComScore::String, ComScore::StringPairArray>, std::__1::__map_value_compare<ComScore::String, std::__1::__value_type<ComScore::String, ComScore::StringPairArray>, std::__1::less<ComScore::String>, true>, std::__1::allocator<std::__1::__value_type<ComScore::String, ComScore::StringPairArray>>> {
+        struct __tree_end_node<std::__1::__tree_node_base<void *>*> *_field1;
+        struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *>*>, std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<ComScore::String, ComScore::StringPairArray>, void *>>> {
+            struct __tree_end_node<std::__1::__tree_node_base<void *>*> _field1;
+        } _field2;
+        struct __compressed_pair<unsigned long, std::__1::__map_value_compare<ComScore::String, std::__1::__value_type<ComScore::String, ComScore::StringPairArray>, std::__1::less<ComScore::String>, true>> {
+            unsigned long long _field1;
+        } _field3;
+    } _field1;
+};
+
 struct map<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection, std::__1::less<__weak id<SPTConnectivityConnectionTypeProviderObserver>>, std::__1::allocator<std::__1::pair<const __weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>>> {
     struct __tree<std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>, std::__1::__map_value_compare<__weak id<SPTConnectivityConnectionTypeProviderObserver>, std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>, std::__1::less<__weak id<SPTConnectivityConnectionTypeProviderObserver>>, true>, std::__1::allocator<std::__1::__value_type<__weak id<SPTConnectivityConnectionTypeProviderObserver>, spotify::signals::scoped_connection>>> {
         struct __tree_end_node<std::__1::__tree_node_base<void *>*> *__begin_node_;
@@ -1807,8 +1782,13 @@ struct set<std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<c
     } _field1;
 };
 
-struct shared_ptr<ComScore::Asset> {
-    struct Asset *__ptr_;
+struct shared_ptr<ComScore::AdvertisementMetadata> {
+    struct AdvertisementMetadata *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+};
+
+struct shared_ptr<ComScore::AssetMetadata> {
+    struct AssetMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
 };
 
@@ -1822,44 +1802,54 @@ struct shared_ptr<ComScore::Configuration> {
     struct __shared_weak_count *__cntrl_;
 };
 
-struct shared_ptr<ComScore::EventManager> {
-    struct EventManager *__ptr_;
+struct shared_ptr<ComScore::ContentMetadata> {
+    struct ContentMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
 };
 
-struct shared_ptr<ComScore::HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection>> {
-    HashMap_4f8ab526 *_field1;
+struct shared_ptr<ComScore::OwnedArray<StreamingListenerImpl, ComScore::CriticalSection>> {
+    struct OwnedArray<StreamingListenerImpl, ComScore::CriticalSection> *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+};
+
+struct shared_ptr<ComScore::PublisherConfiguration> {
+    struct PublisherConfiguration *_field1;
     struct __shared_weak_count *_field2;
 };
 
-struct shared_ptr<ComScore::OfflineCache> {
-    struct OfflineCache *__ptr_;
+struct shared_ptr<ComScore::StackedAdvertisementMetadata> {
+    struct StackedAdvertisementMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
 };
 
-struct shared_ptr<ComScore::PlaybackSession> {
-    struct PlaybackSession *__ptr_;
-    struct __shared_weak_count *__cntrl_;
-};
-
-struct shared_ptr<ComScore::PropertyManager> {
-    struct PropertyManager *__ptr_;
+struct shared_ptr<ComScore::StackedContentMetadata> {
+    struct StackedContentMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
 };
 
 struct shared_ptr<ComScore::StreamingAnalytics> {
-    struct StreamingAnalytics *_field1;
-    struct __shared_weak_count *_field2;
+    struct StreamingAnalytics *__ptr_;
+    struct __shared_weak_count *__cntrl_;
 };
 
-struct shared_ptr<ComScore::StreamingCore> {
-    struct StreamingCore *_field1;
-    struct __shared_weak_count *_field2;
+struct shared_ptr<ComScore::StreamingConfiguration> {
+    struct StreamingConfiguration *__ptr_;
+    struct __shared_weak_count *__cntrl_;
 };
 
-struct shared_ptr<ComScore::TaskExecutor> {
-    struct TaskExecutor *_field1;
-    struct __shared_weak_count *_field2;
+struct shared_ptr<ComScore::StreamingExtendedAnalytics> {
+    struct StreamingExtendedAnalytics *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+};
+
+struct shared_ptr<ComScore::StreamingPublisherConfiguration> {
+    struct StreamingPublisherConfiguration *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+};
+
+struct shared_ptr<PublisherUniqueDeviceIdListenerImpl> {
+    struct PublisherUniqueDeviceIdListenerImpl *__ptr_;
+    struct __shared_weak_count *__cntrl_;
 };
 
 struct shared_ptr<const spotify::social::SocialUserData> {
@@ -2177,8 +2167,17 @@ struct stat {
 };
 
 struct streamingConfigurationParams {
-    struct StringArray restrictedPublishersList;
-    _Bool systemClockJumpDetection;
+    struct StringArray _field1;
+    _Bool _field2;
+    long long _field3;
+    long long _field4;
+    _Bool _field5;
+    struct Array<ComScore::HeartbeatInterval, ComScore::DummyCriticalSection, 0> _field6;
+    struct StringPairArray _field7;
+    _Bool _field8;
+    long long _field9;
+    _Bool _field10;
+    long long _field11;
 };
 
 struct thread {
@@ -2196,6 +2195,42 @@ struct timespec {
 
 struct type {
     unsigned char __lx[24];
+};
+
+struct unique_ptr<ComScore::AdvertisementMetadata::Builder, std::__1::default_delete<ComScore::AdvertisementMetadata::Builder>> {
+    struct __compressed_pair<ComScore::AdvertisementMetadata::Builder *, std::__1::default_delete<ComScore::AdvertisementMetadata::Builder>> {
+        struct Builder *__value_;
+    } __ptr_;
+};
+
+struct unique_ptr<ComScore::ContentMetadata::Builder, std::__1::default_delete<ComScore::ContentMetadata::Builder>> {
+    struct __compressed_pair<ComScore::ContentMetadata::Builder *, std::__1::default_delete<ComScore::ContentMetadata::Builder>> {
+        struct Builder *__value_;
+    } __ptr_;
+};
+
+struct unique_ptr<ComScore::PropertySerializer, std::__1::default_delete<ComScore::PropertySerializer>> {
+    struct __compressed_pair<ComScore::PropertySerializer *, std::__1::default_delete<ComScore::PropertySerializer>> {
+        struct PropertySerializer *_field1;
+    } _field1;
+};
+
+struct unique_ptr<ComScore::StackedAdvertisementMetadata::Builder, std::__1::default_delete<ComScore::StackedAdvertisementMetadata::Builder>> {
+    struct __compressed_pair<ComScore::StackedAdvertisementMetadata::Builder *, std::__1::default_delete<ComScore::StackedAdvertisementMetadata::Builder>> {
+        struct Builder *__value_;
+    } __ptr_;
+};
+
+struct unique_ptr<ComScore::StackedContentMetadata::Builder, std::__1::default_delete<ComScore::StackedContentMetadata::Builder>> {
+    struct __compressed_pair<ComScore::StackedContentMetadata::Builder *, std::__1::default_delete<ComScore::StackedContentMetadata::Builder>> {
+        struct Builder *__value_;
+    } __ptr_;
+};
+
+struct unique_ptr<ComScore::Storage, std::__1::default_delete<ComScore::Storage>> {
+    struct __compressed_pair<ComScore::Storage *, std::__1::default_delete<ComScore::Storage>> {
+        struct Storage *_field1;
+    } _field1;
 };
 
 struct unique_ptr<spotify::analytics::PendingMessageStorageImpl::PendingMessage, std::__1::default_delete<spotify::analytics::PendingMessageStorageImpl::PendingMessage>>;
@@ -2881,14 +2916,13 @@ typedef struct ?<std::__1::basic_string<char>> {
 
 typedef struct {
     struct CriticalSection _field1;
-    struct clientConfigurationParams _field2;
-    struct String _field3;
-} Builder_f57fd42e;
+    struct ClientConfigurationParams _field2;
+} Builder_32a9f4d8;
 
 typedef struct {
     struct CriticalSection _field1;
-    struct clientConfigurationParams _field2;
-} Builder_d6bb03b6;
+    struct streamingConfigurationParams _field2;
+} Builder_e82241c2;
 
 typedef struct {
     struct AuthenticationConfig {
@@ -3047,18 +3081,6 @@ typedef struct {
     float _field6;
 } CDStruct_3d979a67;
 
-typedef struct HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection> {
-    struct DefaultHashFunctions _field1;
-    struct Array<ComScore::HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection>::HashEntry *, ComScore::DummyCriticalSection, 0> _field2;
-    int _field3;
-    struct CriticalSection _field4;
-} HashMap_4f8ab526;
-
-typedef struct OwnedArray<StreamingListenerImpl, ComScore::CriticalSection> {
-    struct ArrayAllocationBase<StreamingListenerImpl *, ComScore::CriticalSection> _field1;
-    int _field2;
-} OwnedArray_4ea96a44;
-
 typedef struct basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> {
     struct __compressed_pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__rep, std::__1::allocator<char>> {
         struct __rep {
@@ -3129,10 +3151,15 @@ typedef struct map<std::__1::basic_string<char>, std::__1::basic_string<char>, s
     } _field1;
 } map_5554a4ce;
 
-typedef struct shared_ptr<ComScore::Asset> {
-    struct Asset *__ptr_;
+typedef struct shared_ptr<ComScore::AdvertisementMetadata> {
+    struct AdvertisementMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
-} shared_ptr_f916388d;
+} shared_ptr_141bbac6;
+
+typedef struct shared_ptr<ComScore::AssetMetadata> {
+    struct AssetMetadata *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_4c986b25;
 
 typedef struct shared_ptr<ComScore::ClientConfiguration> {
     struct ClientConfiguration *__ptr_;
@@ -3144,30 +3171,55 @@ typedef struct shared_ptr<ComScore::Configuration> {
     struct __shared_weak_count *__cntrl_;
 } shared_ptr_c176f907;
 
-typedef struct shared_ptr<ComScore::EventManager> {
-    struct EventManager *__ptr_;
+typedef struct shared_ptr<ComScore::ContentMetadata> {
+    struct ContentMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
-} shared_ptr_832a0d82;
+} shared_ptr_4497e35b;
 
-typedef struct shared_ptr<ComScore::HashMap<ComScore::String, ComScore::String, ComScore::DefaultHashFunctions, ComScore::CriticalSection>> {
-    HashMap_4f8ab526 *_field1;
+typedef struct shared_ptr<ComScore::OwnedArray<StreamingListenerImpl, ComScore::CriticalSection>> {
+    struct OwnedArray<StreamingListenerImpl, ComScore::CriticalSection> *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_71a59777;
+
+typedef struct shared_ptr<ComScore::PublisherConfiguration> {
+    struct PublisherConfiguration *_field1;
     struct __shared_weak_count *_field2;
-} shared_ptr_40517a32;
+} shared_ptr_3f1925d0;
 
-typedef struct shared_ptr<ComScore::OfflineCache> {
-    struct OfflineCache *__ptr_;
+typedef struct shared_ptr<ComScore::StackedAdvertisementMetadata> {
+    struct StackedAdvertisementMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
-} shared_ptr_61609fb8;
+} shared_ptr_c0a0f08b;
 
-typedef struct shared_ptr<ComScore::PlaybackSession> {
-    struct PlaybackSession *__ptr_;
+typedef struct shared_ptr<ComScore::StackedContentMetadata> {
+    struct StackedContentMetadata *__ptr_;
     struct __shared_weak_count *__cntrl_;
-} shared_ptr_1d717101;
+} shared_ptr_5260ea14;
 
-typedef struct shared_ptr<ComScore::PropertyManager> {
-    struct PropertyManager *__ptr_;
+typedef struct shared_ptr<ComScore::StreamingAnalytics> {
+    struct StreamingAnalytics *__ptr_;
     struct __shared_weak_count *__cntrl_;
-} shared_ptr_4af07e7b;
+} shared_ptr_cb674631;
+
+typedef struct shared_ptr<ComScore::StreamingConfiguration> {
+    struct StreamingConfiguration *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_f29d09f4;
+
+typedef struct shared_ptr<ComScore::StreamingExtendedAnalytics> {
+    struct StreamingExtendedAnalytics *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_09b4edf3;
+
+typedef struct shared_ptr<ComScore::StreamingPublisherConfiguration> {
+    struct StreamingPublisherConfiguration *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_0fb1d05e;
+
+typedef struct shared_ptr<PublisherUniqueDeviceIdListenerImpl> {
+    struct PublisherUniqueDeviceIdListenerImpl *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_70a56b18;
 
 typedef struct shared_ptr<const spotify::social::SocialUserData> {
     struct SocialUserData *_field1;

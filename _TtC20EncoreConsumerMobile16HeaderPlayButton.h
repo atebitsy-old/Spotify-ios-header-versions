@@ -13,8 +13,8 @@
     // Error parsing type: , name: isPlaying
     // Error parsing type: , name: playButtonHidden
     // Error parsing type: , name: shuffleBadgeHidden
+    // Error parsing type: , name: uiButton
     // Error parsing type: , name: tapAction
-    // Error parsing type: , name: internalButton
     // Error parsing type: , name: playGlyphLabel
     // Error parsing type: , name: highlightedOverlay
     // Error parsing type: , name: shuffleBadge
@@ -27,9 +27,9 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)internalButtonUnhighlight;
-- (void)internalButtonHighlight;
-- (void)internalButtonTapped;
+- (void)uiButtonUnhighlight;
+- (void)uiButtonHighlight;
+- (void)uiButtonTapped;
 - (id)initWithCoder:(id)arg1;
 - (id)init;
 

@@ -10,7 +10,7 @@
 #import "SPTImageLoaderDelegate-Protocol.h"
 
 @class NSString, NSURL, UIButton, UIColor, UIImage, UIView, VISREFCustomBackButton, VISREFFreeTierPlaylistFollowButtonViewModel, VISREFFullBleedContentView, VISREFGradientBackgroundView, VISREFPlayButtonForegroundView;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistVISREFHeaderViewModel, SPTImageLoader;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistVISREFHeaderViewModel, SPTImageLoader, VISREFIntegrationManager;
 
 @interface SPTFreeTierPlaylistVISREFFullBleedHeaderControllerImplementation : VISREFBaseHeaderController <SPTImageLoaderDelegate, SPTFreeTierPlaylistVISREFHeaderController>
 {
@@ -41,10 +41,12 @@
     NSString *_playButtonAccessibilityString;
     NSString *_shufflePlayButtonAccessibilityString;
     NSString *_pauseButtonAccessibilityString;
+    id <VISREFIntegrationManager> _visrefIntegrationManager;
     CDStruct_5a28e70a _backButtonGlyphOffsetRange;
     CDStruct_5a28e70a _backButtonGlyphProtectionAlphaRange;
 }
 
+@property(retain, nonatomic) id <VISREFIntegrationManager> visrefIntegrationManager; // @synthesize visrefIntegrationManager=_visrefIntegrationManager;
 @property(copy, nonatomic) NSString *pauseButtonAccessibilityString; // @synthesize pauseButtonAccessibilityString=_pauseButtonAccessibilityString;
 @property(copy, nonatomic) NSString *shufflePlayButtonAccessibilityString; // @synthesize shufflePlayButtonAccessibilityString=_shufflePlayButtonAccessibilityString;
 @property(copy, nonatomic) NSString *playButtonAccessibilityString; // @synthesize playButtonAccessibilityString=_playButtonAccessibilityString;
@@ -94,7 +96,7 @@
 - (void)updateColor;
 - (void)setupForegroundView;
 - (void)setup;
-- (id)initWithHeaderHeight:(double)arg1 andTheme:(id)arg2 imageLoader:(id)arg3;
+- (id)initWithHeaderHeight:(double)arg1 andTheme:(id)arg2 imageLoader:(id)arg3 visrefIntegrationManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

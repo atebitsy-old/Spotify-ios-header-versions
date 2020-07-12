@@ -22,14 +22,6 @@
 }
 
 + (id)colorMixedFrom:(id)arg1 and:(id)arg2 atRatio:(double)arg3;
-+ (id)removeFromFavoritesShelf;
-+ (id)addToFavoritesShelf;
-+ (id)removeFromCollectionShelf;
-+ (id)saveToCollectionShelf;
-+ (id)queueShelf;
-+ (id)destructiveShelfWithIcon:(long long)arg1 hintIcon:(long long)arg2;
-+ (id)constructiveShelfWithIcon:(long long)arg1 hintIcon:(long long)arg2;
-+ (id)shelfWithHintColor:(id)arg1 actionColor:(id)arg2 icon:(long long)arg3 hintIcon:(long long)arg4;
 @property(nonatomic) unsigned long long leadingEdge; // @synthesize leadingEdge=_leadingEdge;
 @property(nonatomic) double triggerInterval; // @synthesize triggerInterval=_triggerInterval;
 @property(nonatomic) double triggerPercentage; // @synthesize triggerPercentage=_triggerPercentage;
@@ -43,7 +35,8 @@
 - (id)preferredBackgroundColorForPercentage:(double)arg1 actionTriggered:(_Bool)arg2;
 - (double)adjustPercentageFrom:(double)arg1;
 - (void)layoutForPercentage:(double)arg1 actionTriggered:(_Bool)arg2;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (void)setupWithModel:(id)arg1;
+- (id)initWithModel:(id)arg1;
 
 @end
 

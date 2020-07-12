@@ -9,6 +9,6 @@
 @class SPTRequest;
 
 @protocol SPTPodcastRequest <NSObject>
-@property(readonly, nonatomic) SPTRequest *request;
+@property(nonatomic, readonly) SPTRequest *request;
 @end
 
