@@ -12,14 +12,18 @@
 
 @interface SPTAdsFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _creamMobileOverlayInAppBrowserIos;
     _Bool _creamBookmarkAudioAdsIos;
     _Bool _audioAdsSwiftNpvEnabled;
+    unsigned long long _adsInAppBrowserIos;
+    NSString *_adsInAppBrowserIosString;
 }
 
+@property(retain, nonatomic) NSString *adsInAppBrowserIosString; // @synthesize adsInAppBrowserIosString=_adsInAppBrowserIosString;
+@property(readonly, nonatomic) unsigned long long adsInAppBrowserIos; // @synthesize adsInAppBrowserIos=_adsInAppBrowserIos;
 @property(readonly, nonatomic) _Bool audioAdsSwiftNpvEnabled; // @synthesize audioAdsSwiftNpvEnabled=_audioAdsSwiftNpvEnabled;
 @property(readonly, nonatomic) _Bool creamBookmarkAudioAdsIos; // @synthesize creamBookmarkAudioAdsIos=_creamBookmarkAudioAdsIos;
-@property(readonly, nonatomic) _Bool creamMobileOverlayInAppBrowserIos; // @synthesize creamMobileOverlayInAppBrowserIos=_creamMobileOverlayInAppBrowserIos;
+- (void).cxx_destruct;
+- (unsigned long long)mapAdsInAppBrowserIosToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

@@ -8,7 +8,6 @@
 
 @interface _TtC28SnackablePlaylistFeatureImpl30SnackablePlaylistTrackEditView : UIView
 {
-    // Error parsing type: , name: headerView
     // Error parsing type: , name: tableView
 }
 

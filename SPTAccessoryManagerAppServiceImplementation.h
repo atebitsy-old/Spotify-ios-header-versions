@@ -35,7 +35,7 @@
 - (void).cxx_destruct;
 - (id)provideAccessoryStateManager;
 - (void)unloadAccessoryManagerSessionService:(id)arg1;
-- (void)loadAccessoryManagerSessionService:(id)arg1;
+- (void)loadAccessoryManagerSessionService:(id)arg1 player:(id)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

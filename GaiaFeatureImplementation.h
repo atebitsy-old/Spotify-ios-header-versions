@@ -175,9 +175,7 @@
 - (void)setupLocalAudioSessionController;
 - (void)registerForStatusBarOrientationChanges;
 - (void)unload;
-- (void)joinSocialListeningSessionWithLink:(id)arg1;
-- (void)presentJoinConfirmationViewWithName:(id)arg1 link:(id)arg2;
-- (void)joinListenTogetherConfirmationWithLink:(id)arg1;
+- (void)lookupSocialListeningSessionWithLink:(id)arg1;
 - (id)handleDeepLink:(id)arg1;
 - (id)provideDevicePickerVC;
 - (void)load;

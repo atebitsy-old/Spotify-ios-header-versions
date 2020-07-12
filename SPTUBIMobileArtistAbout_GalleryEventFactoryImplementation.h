@@ -15,15 +15,14 @@
     NSArray *_components;
 }
 
-+ (id)factoryWithUri:(id)arg1 components:(id)arg2;
++ (id)factoryWithComponents:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)swipeMoveImage;
 - (id)hitNoAction;
 - (id)impression;
 - (id)carouselFactoryWithPosition:(long long)arg1;
 - (id)_location;
-- (id)initWithUri:(id)arg1 components:(id)arg2;
+- (id)initWithComponents:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

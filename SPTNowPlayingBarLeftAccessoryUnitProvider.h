@@ -6,16 +6,13 @@
 
 #import "SPTNowPlayingBaseUnitProvider.h"
 
-#import "SPTNowPlayingTestManagerObserver-Protocol.h"
+@class SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingModel, SPTStatefulPlayer, SPTTheme, UIViewController;
+@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingManager;
 
-@class NSString, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingModel, SPTStatefulPlayer, SPTTheme, UIViewController;
-@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingManager, SPTNowPlayingTestManager;
-
-@interface SPTNowPlayingBarLeftAccessoryUnitProvider : SPTNowPlayingBaseUnitProvider <SPTNowPlayingTestManagerObserver>
+@interface SPTNowPlayingBarLeftAccessoryUnitProvider : SPTNowPlayingBaseUnitProvider
 {
     id <SPTNowPlayingManager> _nowPlayingManager;
     SPTTheme *_theme;
-    id <SPTNowPlayingTestManager> _testManager;
     UIViewController *_leftAccessoryViewController;
     SPTNowPlayingModel *_nowPlayingModel;
     id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
@@ -34,24 +31,14 @@
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(retain, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(retain, nonatomic) UIViewController *leftAccessoryViewController; // @synthesize leftAccessoryViewController=_leftAccessoryViewController;
-@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 - (void).cxx_destruct;
-- (void)nowPlayingTestManagerDidEnableBarImprovements:(id)arg1;
 - (void)processPlayerStateChange:(id)arg1 toggleMode:(unsigned long long)arg2;
 - (void)createVideoUnit;
 - (void)createCoverArtUnit;
-- (void)createHeartUnit;
-- (void)createOpenUnit;
 - (void)createEmptyUnit;
-- (id)initWithPlayer:(id)arg1 nowPlayingManager:(id)arg2 theme:(id)arg3 nowPlayingModel:(id)arg4 auxiliaryActionsHandler:(id)arg5 logger:(id)arg6 testManager:(id)arg7 imageLoaderFactory:(id)arg8 nowPlayingBarModel:(id)arg9 videoSurfaceManager:(id)arg10 statefulPlayer:(id)arg11;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)initWithPlayer:(id)arg1 nowPlayingManager:(id)arg2 theme:(id)arg3 nowPlayingModel:(id)arg4 auxiliaryActionsHandler:(id)arg5 logger:(id)arg6 imageLoaderFactory:(id)arg7 nowPlayingBarModel:(id)arg8 videoSurfaceManager:(id)arg9 statefulPlayer:(id)arg10;
 
 @end
 

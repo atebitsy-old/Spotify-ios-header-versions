@@ -10,7 +10,7 @@
 #import "SPTYourLibraryPodcastService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionLogger, SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTSessionService, SPTYourLibraryService;
+@protocol SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTSessionService, SPTYourLibraryService;
 
 @interface SPTYourLibraryPodcastServiceImplementation : NSObject <SPTPodcastYourLibraryPageProviderDelegate, SPTYourLibraryPodcastService>
 {
@@ -25,12 +25,10 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTGLUEService> _glueService;
-    id <SPTCollectionLogger> _collectionLogger;
 }
 
 + (id)serviceIdentifier;
 @property(nonatomic) _Bool podcastEntityContentTypeRegistered; // @synthesize podcastEntityContentTypeRegistered=_podcastEntityContentTypeRegistered;
-@property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;

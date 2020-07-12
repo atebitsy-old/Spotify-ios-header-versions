@@ -8,18 +8,18 @@
 
 #import "SPTHomeUIComponentFactory-Protocol.h"
 
-@class NSString, SPTHomeUILogger;
-@protocol GLUETheme, SPTHomeUITestManager, SPTPlayer;
+@class NSString, SPTHomeUILogger, SPTHomeUIRemoteConfigPropertyResolver;
+@protocol GLUETheme, SPTPlayer;
 
 @interface SPTHomeUIComponentFactoryImplementation : NSObject <SPTHomeUIComponentFactory>
 {
     id <GLUETheme> _theme;
     id <SPTPlayer> _player;
     SPTHomeUILogger *_logger;
-    id <SPTHomeUITestManager> _testManager;
+    SPTHomeUIRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
 }
 
-@property(readonly, nonatomic) id <SPTHomeUITestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) SPTHomeUIRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
 @property(readonly, nonatomic) SPTHomeUILogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -41,7 +41,7 @@
 - (void)unregisterHomeComponentsFromComponentRegistry:(id)arg1;
 - (void)registerHomeComponentsToComponentRegistry:(id)arg1;
 - (id)provideHomeHubComponents;
-- (id)initWithTheme:(id)arg1 player:(id)arg2 logger:(id)arg3 testManager:(id)arg4;
+- (id)initWithTheme:(id)arg1 player:(id)arg2 logger:(id)arg3 remoteConfigPropertyResolver:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

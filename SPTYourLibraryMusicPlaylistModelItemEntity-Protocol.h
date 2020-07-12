@@ -4,13 +4,19 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTYourLibraryMusicModelItemEntity-Protocol.h"
+#import "NSObject-Protocol.h"
 
-@protocol SPTYourLibraryMusicFolderEntity, SPTYourLibraryMusicLikedSongsModelEntity, SPTYourLibraryMusicPlaylistEntity;
+@class NSString, NSURL;
 
-@protocol SPTYourLibraryMusicPlaylistModelItemEntity <SPTYourLibraryMusicModelItemEntity>
-@property(readonly, nonatomic) id <SPTYourLibraryMusicLikedSongsModelEntity> favoriteMixEntity;
-@property(readonly, nonatomic) id <SPTYourLibraryMusicFolderEntity> folderEntity;
-@property(readonly, nonatomic) id <SPTYourLibraryMusicPlaylistEntity> playlistEntity;
+@protocol SPTYourLibraryMusicPlaylistModelItemEntity <NSObject>
+@property(readonly, nonatomic, getter=isHidden) _Bool hidden;
+@property(readonly, nonatomic, getter=isOnDemand) _Bool onDemand;
+@property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
+@property(readonly, nonatomic) unsigned long long availableOfflineStatus;
+@property(readonly, nonatomic) NSURL *imageURL;
+@property(readonly, nonatomic) NSURL *URL;
+@property(readonly, nonatomic) NSString *groupLabel;
+@property(readonly, nonatomic) NSString *itemDescription;
+@property(readonly, nonatomic) NSString *name;
 @end
 

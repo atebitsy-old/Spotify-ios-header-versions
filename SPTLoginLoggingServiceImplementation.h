@@ -8,15 +8,19 @@
 
 #import "SPTLoginLoggingService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol SPTUserTrackingService;
+@class NSString, SPTAllocationContext, SPTLoginUUIDProvider;
+@protocol SPTEventSenderService, SPTUserTrackingService;
 
 @interface SPTLoginLoggingServiceImplementation : NSObject <SPTLoginLoggingService>
 {
     id <SPTUserTrackingService> _userTrackingService;
+    id <SPTEventSenderService> _eventSenderService;
+    SPTLoginUUIDProvider *_sessionIDProvider;
 }
 
 + (id)serviceIdentifier;
+@property(retain, nonatomic) SPTLoginUUIDProvider *sessionIDProvider; // @synthesize sessionIDProvider=_sessionIDProvider;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUserTrackingService> userTrackingService; // @synthesize userTrackingService=_userTrackingService;
 - (void).cxx_destruct;
 - (id)provideLogger;

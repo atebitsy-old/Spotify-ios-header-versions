@@ -18,9 +18,6 @@
     // Error parsing type: , name: networkService
     // Error parsing type: , name: userDefaultsController
     // Error parsing type: , name: visrefIntegrationManager
-    // Error parsing type: , name: playViewModel
-    // Error parsing type: , name: followViewModel
-    // Error parsing type: , name: fullbleedHeaderViewModel
     // Error parsing type: , name: defaultHeaderViewModel
     // Error parsing type: , name: containsStoryThumbnail
     // Error parsing type: , name: headerController

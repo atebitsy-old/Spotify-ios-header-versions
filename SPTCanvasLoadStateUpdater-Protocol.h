@@ -6,9 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
-
 @protocol SPTCanvasLoadStateUpdater <NSObject>
-@property(retain, nonatomic) NSString *loadState;
+@property(nonatomic, getter=isLoaded) _Bool loaded;
 @end
 

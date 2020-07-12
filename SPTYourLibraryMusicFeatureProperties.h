@@ -14,28 +14,31 @@
 {
     _Bool _playlistsRelevanceSortAsDefaultEnabled;
     _Bool _offlineArtistEnabled;
-    _Bool _likedSongsFilterChipsEnabled;
     long long _quickscrollMinPages;
     unsigned long long _artistRecommendationsSource;
     unsigned long long _quickscrollMechanismInYourLibrary;
+    unsigned long long _likedSongsFilterChipsSource;
     unsigned long long _likedSongsScrollerType;
     NSString *_artistRecommendationsSourceString;
     NSString *_quickscrollMechanismInYourLibraryString;
+    NSString *_likedSongsFilterChipsSourceString;
     NSString *_likedSongsScrollerTypeString;
 }
 
 @property(retain, nonatomic) NSString *likedSongsScrollerTypeString; // @synthesize likedSongsScrollerTypeString=_likedSongsScrollerTypeString;
+@property(retain, nonatomic) NSString *likedSongsFilterChipsSourceString; // @synthesize likedSongsFilterChipsSourceString=_likedSongsFilterChipsSourceString;
 @property(retain, nonatomic) NSString *quickscrollMechanismInYourLibraryString; // @synthesize quickscrollMechanismInYourLibraryString=_quickscrollMechanismInYourLibraryString;
 @property(retain, nonatomic) NSString *artistRecommendationsSourceString; // @synthesize artistRecommendationsSourceString=_artistRecommendationsSourceString;
 @property(readonly, nonatomic) unsigned long long likedSongsScrollerType; // @synthesize likedSongsScrollerType=_likedSongsScrollerType;
+@property(readonly, nonatomic) unsigned long long likedSongsFilterChipsSource; // @synthesize likedSongsFilterChipsSource=_likedSongsFilterChipsSource;
 @property(readonly, nonatomic) unsigned long long quickscrollMechanismInYourLibrary; // @synthesize quickscrollMechanismInYourLibrary=_quickscrollMechanismInYourLibrary;
 @property(readonly, nonatomic) unsigned long long artistRecommendationsSource; // @synthesize artistRecommendationsSource=_artistRecommendationsSource;
 @property(readonly, nonatomic) long long quickscrollMinPages; // @synthesize quickscrollMinPages=_quickscrollMinPages;
-@property(readonly, nonatomic) _Bool likedSongsFilterChipsEnabled; // @synthesize likedSongsFilterChipsEnabled=_likedSongsFilterChipsEnabled;
 @property(readonly, nonatomic) _Bool offlineArtistEnabled; // @synthesize offlineArtistEnabled=_offlineArtistEnabled;
 @property(readonly, nonatomic) _Bool playlistsRelevanceSortAsDefaultEnabled; // @synthesize playlistsRelevanceSortAsDefaultEnabled=_playlistsRelevanceSortAsDefaultEnabled;
 - (void).cxx_destruct;
 - (unsigned long long)mapLikedSongsScrollerTypeToEnumValue:(id)arg1;
+- (unsigned long long)mapLikedSongsFilterChipsSourceToEnumValue:(id)arg1;
 - (unsigned long long)mapQuickscrollMechanismInYourLibraryToEnumValue:(id)arg1;
 - (unsigned long long)mapArtistRecommendationsSourceToEnumValue:(id)arg1;
 - (id)propertyModels;

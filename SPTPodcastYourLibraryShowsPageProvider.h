@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastYourLibraryShowsViewModel;
-@protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTGLUEImageLoaderFactory, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastLogger, SPTPodcastUIStringFormatter, SPTPodcastYourLibraryShowCellConfigurator;
+@protocol GLUEImageLoader, GLUETheme, SPTCollectionPlatformDataLoader, SPTExplicitContentAccessManager, SPTGLUEImageLoaderFactory, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastLogger, SPTPodcastUIStringFormatter, SPTPodcastYourLibraryShowCellConfigurator;
 
 @interface SPTPodcastYourLibraryShowsPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -24,7 +24,6 @@
     id <SPTCollectionPlatformDataLoader> _dataLoader;
     id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
-    id <SPTCollectionLogger> _collectionLogger;
     id <SPTPerformanceMetricsViewLoggerFactory> _viewLoggerFactory;
     id <SPTPodcastUIStringFormatter> _stringFormatter;
     id <GLUEImageLoader> _imageLoader;
@@ -37,7 +36,6 @@
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(retain, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
-@property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
@@ -52,7 +50,7 @@
 - (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithURI:(id)arg1 title:(id)arg2 pageProviderIdentifier:(unsigned long long)arg3 dataLoader:(id)arg4 theme:(id)arg5 glueImageLoaderFactory:(id)arg6 logger:(id)arg7 explicitContentAccessManager:(id)arg8 collectionLogger:(id)arg9 metaViewController:(id)arg10 navigationRouter:(id)arg11 viewLoggerFactory:(id)arg12 stringFormatter:(id)arg13;
+- (id)initWithURI:(id)arg1 title:(id)arg2 pageProviderIdentifier:(unsigned long long)arg3 dataLoader:(id)arg4 theme:(id)arg5 glueImageLoaderFactory:(id)arg6 logger:(id)arg7 explicitContentAccessManager:(id)arg8 metaViewController:(id)arg9 navigationRouter:(id)arg10 viewLoggerFactory:(id)arg11 stringFormatter:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

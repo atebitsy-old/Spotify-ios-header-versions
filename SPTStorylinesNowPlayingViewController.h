@@ -39,7 +39,6 @@
 - (void)updateStorylinesFollowText:(id)arg1;
 - (void)updateProgressBarForStorylinesWithProgress:(double)arg1 atIndex:(unsigned long long)arg2 animated:(_Bool)arg3;
 - (void)updateStorylinesArtistAttributionWithName:(id)arg1 image:(id)arg2;
-- (void)viewArtistButtonTapped:(id)arg1;
 - (void)followButtonTapped:(id)arg1;
 - (void)artistAttributionTapped:(id)arg1;
 - (void)pauseGestureRecognizerChangedState:(id)arg1;

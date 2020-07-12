@@ -8,8 +8,9 @@
 
 @interface _TtC20SuperbirdFeatureImpl16SuperbirdService : NSObject
 {
-    // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: appProtocolService
+    // Error parsing type: , name: appProtocolExternalHandler
     // Error parsing type: , name: configurationProperties
 }
 

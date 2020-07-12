@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSURL;
-@protocol SPTCollectionLogger, SPTCollectionPlatformDataLoader, SPTCollectionPlatformDataLoaderRequestToken, SPTPodcastUIStringFormatter, SPTPodcastYourLibraryShowsViewModelDelegate;
+@protocol SPTCollectionPlatformDataLoader, SPTCollectionPlatformDataLoaderRequestToken, SPTPodcastUIStringFormatter, SPTPodcastYourLibraryShowsViewModelDelegate;
 
 @interface SPTPodcastYourLibraryShowsViewModel : NSObject
 {
@@ -15,14 +15,12 @@
     NSURL *_URL;
     id <SPTCollectionPlatformDataLoader> _dataLoader;
     id <SPTCollectionPlatformDataLoaderRequestToken> _collectionRequestToken;
-    id <SPTCollectionLogger> _collectionLogger;
     NSArray *_showsCollection;
     id <SPTPodcastUIStringFormatter> _stringFormatter;
 }
 
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(copy, nonatomic) NSArray *showsCollection; // @synthesize showsCollection=_showsCollection;
-@property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionRequestToken; // @synthesize collectionRequestToken=_collectionRequestToken;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
@@ -35,7 +33,7 @@
 - (id)itemAtIndexPath:(id)arg1;
 - (void)unsubscribe;
 - (void)loadAndSubscribe;
-- (id)initWithURL:(id)arg1 dataLoader:(id)arg2 collectionLogger:(id)arg3 stringFormatter:(id)arg4;
+- (id)initWithURL:(id)arg1 dataLoader:(id)arg2 stringFormatter:(id)arg3;
 
 @end
 

@@ -11,7 +11,7 @@
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
 @class NSDictionary, NSString, SPTInAppMessageNoteOverlayController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
-@protocol SPTAuthController, SPTBannerPresentationManager, SPTCarDetector, SPTCrashReporter, SPTFreeTierTooltipConditionalPresenter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
+@protocol SPTAuthController, SPTBannerPresentationManager, SPTCarDetector, SPTCrashReporter, SPTFreeTierTooltipConditionalPresenter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTInAppMessageNotePresentationController : NSObject <SPTOfflineModeStateObserver, SPTInAppMessageNoteOverlayControllerDelegate, SPTInAppMessagePresenter>
 {
@@ -20,7 +20,6 @@
     id <SPTInAppMessageSDKMessageViewModel> _messageViewModel;
     id <SPTSlateManager> _slateManager;
     id <SPTBannerPresentationManager> _bannerPresentationManager;
-    id <SPTTooltipPresentationManager> _tooltipPresentationManager;
     id <SPTFreeTierTooltipConditionalPresenter> _freeTierTooltipPresenter;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     SPTInAppMessageServiceLogger *_serviceLogger;
@@ -46,7 +45,6 @@
 @property(readonly, nonatomic) SPTInAppMessageServiceLogger *serviceLogger; // @synthesize serviceLogger=_serviceLogger;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) id <SPTFreeTierTooltipConditionalPresenter> freeTierTooltipPresenter; // @synthesize freeTierTooltipPresenter=_freeTierTooltipPresenter;
-@property(readonly, nonatomic) id <SPTTooltipPresentationManager> tooltipPresentationManager; // @synthesize tooltipPresentationManager=_tooltipPresentationManager;
 @property(readonly, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessageViewModel> messageViewModel; // @synthesize messageViewModel=_messageViewModel;
@@ -60,7 +58,7 @@
 - (void)dismiss;
 - (void)presentInAppMessageView:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)dealloc;
-- (id)initWithNoteOverlayController:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 slateManager:(id)arg5 bannerPresentationManager:(id)arg6 tooltipPresentationManager:(id)arg7 freeTierTooltipPresenter:(id)arg8 snackbarPresenter:(id)arg9 offlineModeState:(id)arg10 nowPlayingManagerRegistry:(id)arg11 carDetector:(id)arg12 serviceLogger:(id)arg13 crashReporter:(id)arg14 authController:(id)arg15;
+- (id)initWithNoteOverlayController:(id)arg1 messageViewModel:(id)arg2 matchedPattern:(id)arg3 triggerType:(id)arg4 slateManager:(id)arg5 bannerPresentationManager:(id)arg6 freeTierTooltipPresenter:(id)arg7 snackbarPresenter:(id)arg8 offlineModeState:(id)arg9 nowPlayingManagerRegistry:(id)arg10 carDetector:(id)arg11 serviceLogger:(id)arg12 crashReporter:(id)arg13 authController:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

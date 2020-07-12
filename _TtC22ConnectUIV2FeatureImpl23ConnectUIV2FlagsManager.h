@@ -20,6 +20,7 @@
     // Error parsing type: , name: $__lazy_storage_$_remoteConfigProperties
     // Error parsing type: , name: $__lazy_storage_$_isConnectAttachedDestinationEnabled
     // Error parsing type: , name: $__lazy_storage_$_isConnectDestinationNudgeEnabled
+    // Error parsing type: , name: $__lazy_storage_$_isCustomDeviceSortingEnabled
 }
 
 @property(nonatomic) _Bool isConnectDestinationNudgeEnabled;

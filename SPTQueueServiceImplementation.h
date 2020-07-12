@@ -8,8 +8,8 @@
 
 #import "SPTQueueService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTQueueUBILogger;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTCoreService, SPTCrashReporterService, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTShowEntityService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@class NSString, SPTAllocationContext, SPTQueueFeatureProperties, SPTQueueUBILogger;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTCoreService, SPTCrashReporterService, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastEntityDataLoader, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTQueueServiceImplementation : NSObject <SPTQueueService>
 {
@@ -23,6 +23,8 @@
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTUBIService> _ubiService;
     SPTQueueUBILogger *_queueUBILogger;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    SPTQueueFeatureProperties *_featureProperties;
     id <SPTSessionService> _clientSessionService;
     id <SPTContainerService> _containerService;
     id <SPTNetworkService> _networkFeature;
@@ -34,7 +36,7 @@
     id <SPTLocalSettings> _localSettings;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     id <SPTGLUEImageLoaderFactory> _glueImageLoaderFactory;
-    id <SPTShowEntityService> _entityService;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
     id <SPTProductState> _productState;
     id <SPTPlayer> _player;
     id <SPTQueuePlaybackDelegateRegistry> _playbackDelegateRegistry;
@@ -46,7 +48,7 @@
 @property(retain, nonatomic) id <SPTQueuePlaybackDelegateRegistry> playbackDelegateRegistry; // @synthesize playbackDelegateRegistry=_playbackDelegateRegistry;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-@property(retain, nonatomic) id <SPTShowEntityService> entityService; // @synthesize entityService=_entityService;
+@property(retain, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> glueImageLoaderFactory; // @synthesize glueImageLoaderFactory=_glueImageLoaderFactory;
 @property(retain, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -58,6 +60,8 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
+@property(retain, nonatomic) SPTQueueFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) SPTQueueUBILogger *queueUBILogger; // @synthesize queueUBILogger=_queueUBILogger;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
@@ -74,6 +78,8 @@
 - (void)presentContextMenuForRegularTrack:(id)arg1 inViewController:(id)arg2 senderView:(id)arg3;
 - (void)presentContextMenuForEpisodeTrack:(id)arg1 inViewController:(id)arg2 senderView:(id)arg3;
 - (CDUnknownBlockType)makePresentContextMenuBlock;
+- (CDUnknownBlockType)providePlayLaterContextMenuActionPredicate;
+- (CDUnknownBlockType)providePlayNextContextMenuActionPredicate;
 - (CDUnknownBlockType)provideQueueContextMenuActionPredicate;
 - (unsigned long long)addToUpNextBehavior;
 - (id)provideQueueUBILogger;

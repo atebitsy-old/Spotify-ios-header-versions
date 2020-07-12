@@ -14,8 +14,10 @@
     NSString *_title;
     id <SPTLinkDispatcher> _linkDispatcher;
     NSURL *_sourceURL;
+    long long _ctaIcon;
 }
 
+@property(nonatomic) long long ctaIcon; // @synthesize ctaIcon=_ctaIcon;
 @property(copy, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (id)title;
@@ -25,7 +27,7 @@
 - (id)logEntityURL;
 - (id)logEventName;
 - (long long)icon;
-- (id)initWithLogContext:(id)arg1 linkDispacther:(id)arg2 sourceURL:(id)arg3;
+- (id)initWithLogContext:(id)arg1 linkDispacther:(id)arg2 sourceURL:(id)arg3 ctaIcon:(long long)arg4;
 
 @end
 

@@ -20,6 +20,14 @@
     NSString *_accessibilityIdentifier;
 }
 
++ (id)spt_accessibilityIdentifierWithButtonName:(id)arg1 prefix:(id)arg2;
++ (id)spt_continueWithPhoneNumberButtonWithAccessibilityIdentifierPrefix:(id)arg1;
++ (id)spt_phoneNumberButtonWithAccessibilityIdentifierPrefix:(id)arg1;
++ (id)spt_facebookButtonWithAccessibilityIdentifierPrefix:(id)arg1;
++ (id)spt_continueWithFacebookButtonWithAccessibilityIdentifierPrefix:(id)arg1;
++ (id)spt_continueWithAppleSystemButtonWithAccessibilityIdentifierPrefix:(id)arg1;
++ (id)spt_appleCustomButtonWithAccessibilityIdentifierPrefix:(id)arg1;
++ (id)spt_continueWithAppleCustomButtonWithAccessibilityIdentifierPrefix:(id)arg1;
 @property(readonly, copy, nonatomic) NSString *accessibilityIdentifier; // @synthesize accessibilityIdentifier=_accessibilityIdentifier;
 @property(readonly, nonatomic) unsigned long long style; // @synthesize style=_style;
 @property(readonly, nonatomic) unsigned long long action; // @synthesize action=_action;

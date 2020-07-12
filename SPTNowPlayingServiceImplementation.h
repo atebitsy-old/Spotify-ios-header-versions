@@ -182,6 +182,7 @@
 - (void)registerDefaultModes;
 - (id)provideSideBarFactory;
 - (void)setupSideBarViewControllerRegistry;
+- (id)createNowPlayingNavigationBarUnitViewController;
 - (void)registerDefaultModeViewControllers;
 - (id)provideRemoteControlEventDefaultController;
 - (id)provideLockScreenUBILogger;

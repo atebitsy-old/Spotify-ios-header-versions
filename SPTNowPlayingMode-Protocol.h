@@ -10,13 +10,13 @@
 @protocol SPTNowPlayingContainedViewController, SPTNowPlayingModeLayoutDelegate;
 
 @protocol SPTNowPlayingMode <NSObject>
-@property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate;
 - (UIViewController<SPTNowPlayingContainedViewController> *)queueHeadUnitViewController;
 - (UIViewController<SPTNowPlayingContainedViewController> *)footerUnitViewController;
 - (UIViewController<SPTNowPlayingContainedViewController> *)headUnitViewController;
 - (UIViewController<SPTNowPlayingContainedViewController> *)durationUnitViewController;
 - (UIViewController<SPTNowPlayingContainedViewController> *)informationUnitViewController;
 - (UIViewController<SPTNowPlayingContainedViewController> *)navigationBarUnitViewController;
+@property(nonatomic) __weak id <SPTNowPlayingModeLayoutDelegate> layoutDelegate;
 - (NSString *)identifier;
 
 @optional

@@ -6,13 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTFeatureFlagSignal;
-
 @protocol SPTSocialListeningTestManager <NSObject>
 @property(readonly, nonatomic) unsigned long long maxMemberCount;
 @property(readonly, nonatomic, getter=isSocialDeviceEnabled) _Bool socialDeviceEnabled;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> shareLinkEnabledSignal;
-@property(readonly, nonatomic, getter=isShareLinkEnabled) _Bool shareLinkEnabled;
+@property(readonly, nonatomic) _Bool isShareLinkForSingleModeEnabled;
+@property(readonly, nonatomic) _Bool isSocialListeningModeActive;
 @property(readonly, nonatomic) _Bool isListeningTogetherModeActive;
 @property(readonly, nonatomic) _Bool isSocialListeningEnabledAndNotActive;
 @property(readonly, nonatomic) _Bool isSocialListeningEnabledAndActive;

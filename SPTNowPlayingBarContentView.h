@@ -6,13 +6,12 @@
 
 #import <UIKit/UIView.h>
 
-#import "SPTNowPlayingTestManagerObserver-Protocol.h"
 #import "_TtP18ConnectUIV2Feature44SPTConnectUINowPlayingBarIntegrationObserver_-Protocol.h"
 
-@class NSArray, NSLayoutConstraint, NSString, SPTNowPlayingFadeMaskView, SPTStepScrollView, SPTTheme, UIButton;
-@protocol SPTNowPlayingBarPlayButton, SPTNowPlayingBarVoiceCompanionDelegate, SPTNowPlayingTestManager, _TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_;
+@class NSArray, NSLayoutConstraint, SPTNowPlayingFadeMaskView, SPTStepScrollView, SPTTheme, UIButton;
+@protocol SPTNowPlayingBarPlayButton, SPTNowPlayingBarVoiceCompanionDelegate, _TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_;
 
-@interface SPTNowPlayingBarContentView : UIView <SPTNowPlayingTestManagerObserver, _TtP18ConnectUIV2Feature44SPTConnectUINowPlayingBarIntegrationObserver_>
+@interface SPTNowPlayingBarContentView : UIView <_TtP18ConnectUIV2Feature44SPTConnectUINowPlayingBarIntegrationObserver_>
 {
     _Bool _enabled;
     SPTStepScrollView *_stepScrollView;
@@ -24,7 +23,6 @@
     UIView *_devicesAvailableView;
     UIView *_connectButtonView;
     id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> _connectIntegration;
-    id <SPTNowPlayingTestManager> _testManager;
     UIView *_voiceCompanionView;
     UIView *_lyricsView;
     NSLayoutConstraint *_voiceCompanionWidthLayoutConstraint;
@@ -35,7 +33,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *voiceCompanionWidthLayoutConstraint; // @synthesize voiceCompanionWidthLayoutConstraint=_voiceCompanionWidthLayoutConstraint;
 @property(retain, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(retain, nonatomic) UIView *voiceCompanionView; // @synthesize voiceCompanionView=_voiceCompanionView;
-@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> connectIntegration; // @synthesize connectIntegration=_connectIntegration;
 @property(retain, nonatomic) UIView *connectButtonView; // @synthesize connectButtonView=_connectButtonView;
 @property(retain, nonatomic) UIView *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
@@ -55,7 +52,6 @@
 - (void)removeVoiceCompanionViewIfNeeded;
 - (id)createLyricsView;
 - (void)addVoiceCompanionViewIfNeeded;
-- (void)nowPlayingTestManagerDidEnableBarImprovements:(id)arg1;
 - (void)layoutSubviews;
 - (void)setEnabled:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)forceLayout;
@@ -65,13 +61,7 @@
 - (void)updateConstraints;
 - (void)setupSubviews;
 - (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 connectIntegration:(id)arg3 testManager:(id)arg4;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 connectIntegration:(id)arg3;
 
 @end
 

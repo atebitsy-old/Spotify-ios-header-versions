@@ -9,9 +9,12 @@
 #import "SPTFreeTierPlaylistSectionFooter-Protocol.h"
 #import "SPTFreeTierPlaylistSectionHeader-Protocol.h"
 
+@class UIView;
 @protocol SPTFreeTierPlaylistCellProviderDelegate;
 
 @protocol SPTAddToSpotifyPlaylistExperimentCellProvider <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistSectionHeader, SPTFreeTierPlaylistSectionFooter>
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate;
+- (UIView *)footerView;
+- (UIView *)headerView;
 @end
 

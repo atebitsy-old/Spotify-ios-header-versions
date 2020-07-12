@@ -6,13 +6,14 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTFreeTierPlaylistModelObserver-Protocol.h"
 #import "SPTFreeTierPlaylistPlayLogger-Protocol.h"
 #import "SPTFreeTierPlaylistTrackCloudLogger-Protocol.h"
 
 @class NSMutableSet, NSString, NSURL;
 @protocol SPTEventSender, SPTLogCenter, SPTUBILogger, SPTUBIMobilePlaylistEntityEventFactory, SPTViewLogger;
 
-@interface SPTFreeTierPlaylistLogger : NSObject <SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistTrackCloudLogger>
+@interface SPTFreeTierPlaylistLogger : NSObject <SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistTrackCloudLogger, SPTFreeTierPlaylistModelObserver>
 {
     NSString *_featureId;
     NSString *_playlistViewPageIdentifier;
@@ -22,11 +23,15 @@
     NSURL *_pageURL;
     id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobilePlaylistEntityEventFactory> _ubiEventFactory;
+    NSString *_requestSource;
+    NSString *_requestId;
     NSMutableSet *_impressionPaths;
 }
 
 @property(retain, nonatomic) NSMutableSet *impressionPaths; // @synthesize impressionPaths=_impressionPaths;
-@property(readonly, nonatomic) id <SPTUBIMobilePlaylistEntityEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
+@property(copy, nonatomic) NSString *requestId; // @synthesize requestId=_requestId;
+@property(readonly, copy, nonatomic) NSString *requestSource; // @synthesize requestSource=_requestSource;
+@property(retain, nonatomic) id <SPTUBIMobilePlaylistEntityEventFactory> ubiEventFactory; // @synthesize ubiEventFactory=_ubiEventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
@@ -35,6 +40,9 @@
 @property(readonly, nonatomic) NSString *playlistViewPageIdentifier; // @synthesize playlistViewPageIdentifier=_playlistViewPageIdentifier;
 @property(readonly, copy, nonatomic) NSString *featureId; // @synthesize featureId=_featureId;
 - (void).cxx_destruct;
+- (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
+- (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
+- (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5 action:(id)arg6;
 - (void)logUIInteractionWithSectionId:(id)arg1 targetURI:(id)arg2 userIntent:(id)arg3;
 - (void)ubiLogImpressionOnce:(id)arg1;
@@ -82,7 +90,8 @@
 - (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1;
 - (void)logViewDidLoadWithPageIdentifier:(id)arg1;
 - (void)logViewLoadingStartedWithPageIdentifier:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventSender:(id)arg3 pageURL:(id)arg4 playlistViewPageIdentifier:(id)arg5 featureId:(id)arg6 ubiEventFactory:(id)arg7 ubiLogger:(id)arg8;
+- (id)createEventFactory;
+- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventSender:(id)arg3 pageURL:(id)arg4 playlistViewPageIdentifier:(id)arg5 featureId:(id)arg6 formatListType:(id)arg7 formatListAttributes:(id)arg8 ubiLogger:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

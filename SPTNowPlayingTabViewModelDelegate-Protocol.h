@@ -10,6 +10,6 @@
 
 @protocol SPTNowPlayingTabViewModelDelegate <NSObject>
 - (void)tabViewModel:(SPTNowPlayingTabViewModel *)arg1 didChangeSelectedTab:(long long)arg2;
-- (void)tabViewModelDidChangeTabs:(SPTNowPlayingTabViewModel *)arg1 canvasTabVisible:(_Bool)arg2 lyricsTabVisible:(_Bool)arg3;
+- (void)tabViewModelDidChangeTabs:(SPTNowPlayingTabViewModel *)arg1 canvasTabVisible:(_Bool)arg2 lyricsTabVisible:(_Bool)arg3 videoTabVisible:(_Bool)arg4;
 @end
 

@@ -9,8 +9,8 @@
 #import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTSocialListeningService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningEducationSlatePresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
-@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTSocialListeningListenTogetherDataLoader, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
+@class NSString, SPTAllocationContext, SPTSocialListeningDataLoader, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningEducationSlatePresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
+@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP16ProfileV2Feature19SPTProfileV2Service_;
 
 @interface SPTSocialListeningServiceImplementation : NSObject <SPTOfflineModeStateObserver, SPTSocialListeningService>
 {
@@ -42,11 +42,11 @@
     SPTSocialListeningEducationSlatePresenter *_slatePresenter;
     SPTSocialListeningDialogManager *_dialogManager;
     id <SPTOfflineModeState> _offlineModeState;
-    id <SPTSocialListeningListenTogetherDataLoader> _listenTogetherDataLoader;
+    SPTSocialListeningDataLoader *_socialListeningDataLoader;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTSocialListeningListenTogetherDataLoader> listenTogetherDataLoader; // @synthesize listenTogetherDataLoader=_listenTogetherDataLoader;
+@property(retain, nonatomic) SPTSocialListeningDataLoader *socialListeningDataLoader; // @synthesize socialListeningDataLoader=_socialListeningDataLoader;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(retain, nonatomic) SPTSocialListeningDialogManager *dialogManager; // @synthesize dialogManager=_dialogManager;
 @property(retain, nonatomic) SPTSocialListeningEducationSlatePresenter *slatePresenter; // @synthesize slatePresenter=_slatePresenter;
@@ -84,8 +84,6 @@
 - (void)unregisterWithScannablesService;
 - (void)registerWithScannablesService;
 - (void)applicationDidBecomeActive:(id)arg1;
-- (id)provideListenTogetherDataLoader;
-- (id)provideSlatePresenter;
 - (id)provideSocialListeningLogger;
 - (id)provideSocialListeningModel;
 - (id)provideUserInterfaceFactory;

@@ -17,13 +17,14 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 
-@class NSMutableSet, NSString, NSURL, SPTAssistedCurationCardCellConfigurator, SPTAssistedCurationCardStyle, SPTAssistedCurationGLUETheme, SPTAssistedCurationInfoView, SPTAssistedCurationLogger, SPTAssistedCurationSearchButton, UIActivityIndicatorView, UICollectionView, UIPageControl, UITapGestureRecognizer;
-@protocol GLUEImageLoader, SPTAssistedCurationViewControllerDelegate, SPTAssistedCurationViewModel, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTPageContainer;
+@class NSMutableSet, NSString, NSURL, SPTAssistedCurationCardCellConfigurator, SPTAssistedCurationCardStyle, SPTAssistedCurationGLUETheme, SPTAssistedCurationInfoView, SPTAssistedCurationLogger, SPTAssistedCurationSearchButton, UIActivityIndicatorView, UICollectionView, UIPageControl, UITapGestureRecognizer, UIView;
+@protocol GLUEImageLoader, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationViewControllerDelegate, SPTAssistedCurationViewModel, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory, SPTPageContainer;
 
 @interface SPTAssistedCurationViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, SPTAssistedCurationSearchButtonDelegate, SPTAssistedCurationCardCellLogDelegate, SPTAssistedCurationCardCellConfiguratorDelegate, SPTNavigationControllerNavigationBarState, SPTAssistedCurationViewModelDelegate, SPTPageController>
 {
     id <SPTAssistedCurationViewControllerDelegate> _delegate;
     SPTAssistedCurationSearchButton *_searchActionButton;
+    UIView *_additionalSubtitleView;
     UICollectionView *_cardsCollectionView;
     SPTAssistedCurationInfoView *_infoView;
     UIActivityIndicatorView *_activityIndicatorView;
@@ -35,6 +36,7 @@
     SPTAssistedCurationGLUETheme *_theme;
     SPTAssistedCurationCardStyle *_cardStyle;
     id <GLUEImageLoader> _glueImageLoader;
+    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     SPTAssistedCurationCardCellConfigurator *_cardCellConfigurator;
     UITapGestureRecognizer *_tapGesture;
     NSMutableSet *_visibleCardIdentifiers;
@@ -45,6 +47,7 @@
 @property(retain, nonatomic) NSMutableSet *visibleCardIdentifiers; // @synthesize visibleCardIdentifiers=_visibleCardIdentifiers;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGesture; // @synthesize tapGesture=_tapGesture;
 @property(retain, nonatomic) SPTAssistedCurationCardCellConfigurator *cardCellConfigurator; // @synthesize cardCellConfigurator=_cardCellConfigurator;
+@property(readonly, nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(retain, nonatomic) SPTAssistedCurationCardStyle *cardStyle; // @synthesize cardStyle=_cardStyle;
 @property(retain, nonatomic) SPTAssistedCurationGLUETheme *theme; // @synthesize theme=_theme;
@@ -56,6 +59,7 @@
 @property(retain, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 @property(retain, nonatomic) SPTAssistedCurationInfoView *infoView; // @synthesize infoView=_infoView;
 @property(retain, nonatomic) UICollectionView *cardsCollectionView; // @synthesize cardsCollectionView=_cardsCollectionView;
+@property(retain, nonatomic) UIView *additionalSubtitleView; // @synthesize additionalSubtitleView=_additionalSubtitleView;
 @property(retain, nonatomic) SPTAssistedCurationSearchButton *searchActionButton; // @synthesize searchActionButton=_searchActionButton;
 @property(nonatomic) __weak id <SPTAssistedCurationViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
@@ -116,7 +120,7 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithAssistedCurationViewModel:(id)arg1 glueImageLoader:(id)arg2 audioPreviewModelFactory:(id)arg3 audioPreviewUIFactory:(id)arg4 theme:(id)arg5 logger:(id)arg6;
+- (id)initWithAssistedCurationViewModel:(id)arg1 glueImageLoader:(id)arg2 audioPreviewModelFactory:(id)arg3 audioPreviewUIFactory:(id)arg4 addToSpotifyPlaylistExperimentService:(id)arg5 theme:(id)arg6 logger:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

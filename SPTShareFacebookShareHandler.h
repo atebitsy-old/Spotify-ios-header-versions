@@ -9,7 +9,7 @@
 #import "FBSDKSharingDelegate-Protocol.h"
 #import "SPTShareHandler-Protocol.h"
 
-@class NSString, SPTShareData, SPTShareLogger;
+@class NSString, SPTShareData, SPTShareHandlerCompletionDataModel, SPTShareLogger;
 
 @interface SPTShareFacebookShareHandler : NSObject <FBSDKSharingDelegate, SPTShareHandler>
 {
@@ -21,8 +21,10 @@
     SPTShareLogger *_shareLogger;
     CDUnknownBlockType _shareCompletionBlock;
     SPTShareData *_shareData;
+    SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+@property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(copy, nonatomic) CDUnknownBlockType shareCompletionBlock; // @synthesize shareCompletionBlock=_shareCompletionBlock;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;

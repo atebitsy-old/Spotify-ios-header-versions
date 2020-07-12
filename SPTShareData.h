@@ -28,6 +28,7 @@
 - (void).cxx_destruct;
 - (id)generateShareId;
 - (id)generateShareableURL;
+- (id)cleanedEntityURI;
 - (id)initWithEntity:(id)arg1 currentlyPlayingTrackURI:(id)arg2 shareSessionID:(id)arg3 shareableURL:(id)arg4 shareBrowselinkId:(id)arg5;
 
 @end

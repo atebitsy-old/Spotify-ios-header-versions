@@ -7,6 +7,6 @@
 #import "_TtC22ConnectUIV2FeatureImpl26DevicePickerMiniPickerView.h"
 
 @interface _TtC22ConnectUIV2FeatureImpl26DevicePickerMiniPickerView (ConnectUIV2FeatureImpl)
-- (void)handleSwipe:(id)arg1;
+- (void)handlePan:(id)arg1;
 @end
 

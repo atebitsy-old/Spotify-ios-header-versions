@@ -6,9 +6,7 @@
 
 #import "_TtC26MarketingFormatFeatureImpl19HeaderInfoSlideView.h"
 
-#import "GLUEStyleable-Protocol.h"
-
-@interface _TtC26MarketingFormatFeatureImpl19HeaderInfoSlideView (MarketingFormatFeatureImpl) <GLUEStyleable>
+@interface _TtC26MarketingFormatFeatureImpl19HeaderInfoSlideView (MarketingFormatFeatureImpl)
 - (void)glue_applyStyle:(id)arg1;
 @end
 

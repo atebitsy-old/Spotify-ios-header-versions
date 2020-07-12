@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierPlaylistFeatureProperties;
-@protocol SPTAddToSpotifyPlaylistExperimentService, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierPlaylistTestManager, SPTFreeTierService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSortingFilteringService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPTAddToSpotifyPlaylistExperimentService, SPTCollectionPlatformService, SPTExplicitContentService, SPTFreeTierPlaylistTestManager, SPTFreeTierService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSortingFilteringService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierPlaylistServiceImplementation : NSObject <SPTFreeTierPlaylistService>
 {
@@ -18,7 +18,6 @@
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTExplicitContentService> _explicitContentService;
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTFreeTierService> _freeTierService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
@@ -38,7 +37,6 @@
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;

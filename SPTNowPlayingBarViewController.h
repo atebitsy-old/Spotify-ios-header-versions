@@ -13,7 +13,7 @@
 #import "SPTPageController-Protocol.h"
 
 @class NSString, NSURL, SPTNowPlayingBarLeftAccessoryUnitProvider, SPTNowPlayingBarLogger, SPTNowPlayingBarModel, SPTNowPlayingDurationViewV2, SPTNowPlayingLogger, SPTTheme, UIView;
-@protocol SPTNowPlayingDurationUnitViewModel, SPTNowPlayingManager, SPTNowPlayingTestManager, SPTPageContainer;
+@protocol SPTNowPlayingDurationUnitViewModel, SPTNowPlayingManager, SPTPageContainer;
 
 @interface SPTNowPlayingBarViewController : UIViewController <SPTNowPlayingUnitProviderObserver, SPTNowPlayingDurationViewV2DataSource, SPTNowPlayingDurationUnitViewModelDelegate, SPTBarInteractiveTransitionParticipant, SPTPageController>
 {
@@ -24,7 +24,6 @@
     SPTNowPlayingBarLeftAccessoryUnitProvider *_leftAccessoryUnitProvider;
     UIView *_animationView;
     id <SPTNowPlayingDurationUnitViewModel> _viewModel;
-    id <SPTNowPlayingTestManager> _testManager;
     SPTNowPlayingLogger *_logger;
     SPTNowPlayingBarLogger *_barLogger;
     UIView *_backgroundView;
@@ -41,7 +40,6 @@
 @property(retain, nonatomic) UIView *backgroundView; // @synthesize backgroundView=_backgroundView;
 @property(readonly, nonatomic) SPTNowPlayingBarLogger *barLogger; // @synthesize barLogger=_barLogger;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
-@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTNowPlayingDurationUnitViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) UIView *animationView; // @synthesize animationView=_animationView;
 @property(readonly, nonatomic) SPTNowPlayingBarLeftAccessoryUnitProvider *leftAccessoryUnitProvider; // @synthesize leftAccessoryUnitProvider=_leftAccessoryUnitProvider;
@@ -80,7 +78,7 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 model:(id)arg2 nowPlayingManager:(id)arg3 barViewController:(id)arg4 leftAccessoryUnitProvider:(id)arg5 animationView:(id)arg6 durationViewModel:(id)arg7 testManager:(id)arg8 logger:(id)arg9 barLogger:(id)arg10;
+- (id)initWithTheme:(id)arg1 model:(id)arg2 nowPlayingManager:(id)arg3 barViewController:(id)arg4 leftAccessoryUnitProvider:(id)arg5 animationView:(id)arg6 durationViewModel:(id)arg7 logger:(id)arg8 barLogger:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

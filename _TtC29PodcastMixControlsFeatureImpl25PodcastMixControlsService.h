@@ -9,13 +9,16 @@
 @interface _TtC29PodcastMixControlsFeatureImpl25PodcastMixControlsService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: contextMenuService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: sessionService
     // Error parsing type: , name: snackbarService
     // Error parsing type: , name: tooltipService
     // Error parsing type: , name: ubiService
+    // Error parsing type: , name: uriDispatchService
     // Error parsing type: , name: pageRegistrationToken
 }
 

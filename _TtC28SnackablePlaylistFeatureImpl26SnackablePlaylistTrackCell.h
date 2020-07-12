@@ -10,9 +10,8 @@
 {
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel
-    // Error parsing type: , name: albumImageView
     // Error parsing type: , name: removeButton
-    // Error parsing type: , name: albumOverlayView
+    // Error parsing type: , name: previewView
 }
 
 - (void).cxx_destruct;

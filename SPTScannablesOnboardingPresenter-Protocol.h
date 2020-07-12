@@ -10,8 +10,6 @@
 @protocol SPTScannablesSlateFactoryDelegate;
 
 @protocol SPTScannablesOnboardingPresenter <NSObject>
-@property(readonly, nonatomic, getter=isPresentingContextMenuOnboarding) _Bool presentingContextMenuOnboarding;
-- (_Bool)shouldPresentContextMenuOnboarding;
 - (void)presentScannerOnboardingSlateWithDelegate:(id <SPTScannablesSlateFactoryDelegate>)arg1;
 - (void)presentContextMenuOnboardingAnchoredToView:(UIView *)arg1 entityURL:(NSURL *)arg2;
 @end

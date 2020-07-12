@@ -14,10 +14,12 @@
 {
     _Bool _useNewCacheLocation;
     _Bool _homeImprovedNavigationBar;
+    _Bool _solidHeaderBackground;
     _Bool _isPageloaderEnabled;
 }
 
 @property(readonly, nonatomic) _Bool isPageloaderEnabled; // @synthesize isPageloaderEnabled=_isPageloaderEnabled;
+@property(readonly, nonatomic) _Bool solidHeaderBackground; // @synthesize solidHeaderBackground=_solidHeaderBackground;
 @property(readonly, nonatomic) _Bool homeImprovedNavigationBar; // @synthesize homeImprovedNavigationBar=_homeImprovedNavigationBar;
 @property(readonly, nonatomic) _Bool useNewCacheLocation; // @synthesize useNewCacheLocation=_useNewCacheLocation;
 - (id)propertyModels;

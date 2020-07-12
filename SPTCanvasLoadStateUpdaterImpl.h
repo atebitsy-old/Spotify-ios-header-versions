@@ -13,14 +13,14 @@
 
 @interface SPTCanvasLoadStateUpdaterImpl : NSObject <SPTCanvasLoadStateUpdater>
 {
-    NSString *_loadState;
+    _Bool _loaded;
     NSString *_canvasId;
     id <SPTCanvasLoadStateTrackerObserver> _canvasLoadObserver;
 }
 
 @property(readonly, nonatomic) __weak id <SPTCanvasLoadStateTrackerObserver> canvasLoadObserver; // @synthesize canvasLoadObserver=_canvasLoadObserver;
 @property(readonly, nonatomic) NSString *canvasId; // @synthesize canvasId=_canvasId;
-@property(retain, nonatomic) NSString *loadState; // @synthesize loadState=_loadState;
+@property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 - (void).cxx_destruct;
 - (void)dealloc;
 - (id)initWithCanvasId:(id)arg1 canvasLoadObserver:(id)arg2;

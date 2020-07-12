@@ -34,9 +34,9 @@
 @property(readonly, nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(readonly, nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
 - (void).cxx_destruct;
-- (id)createAssistedCurationSearchViewControllerForEntityType:(id)arg1 query:(id)arg2;
-- (id)createAssistedCurationSearchViewController;
-- (id)createSearchConfigurationWithURLProvider:(id)arg1;
+- (id)createAssistedCurationSearchViewControllerForEntityType:(id)arg1 query:(id)arg2 pageIdentifier:(id)arg3 pageURI:(id)arg4;
+- (id)createAssistedCurationSearchViewControllerWithPageIdentifier:(id)arg1 pageURI:(id)arg2;
+- (id)createSearchConfigurationWithURLProvider:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3;
 - (id)makeSearchDrillDownURLPoviderWithEntityType:(id)arg1;
 - (id)makeSearchRootURLProvider;
 - (id)makeSaveToRecentsCommandHandler;

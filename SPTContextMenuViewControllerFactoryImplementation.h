@@ -43,7 +43,7 @@
 - (id)provideIPadContextMenuViewControllerWithHeaderView:(id)arg1 actions:(id)arg2 entityURL:(id)arg3 options:(id)arg4;
 - (id)provideIPadContextMenuViewControllerWithHeaderImageURL:(id)arg1 headerImagePlaceholder:(id)arg2 title:(id)arg3 subtitle:(id)arg4 metadataTitle:(id)arg5 actions:(id)arg6 entityURL:(id)arg7 trackURL:(id)arg8 headerSubtitleStyle:(long long)arg9 senderView:(id)arg10 options:(id)arg11;
 - (id)provideIPadContextMenuViewControllerWithHeaderImageURL:(id)arg1 headerImagePlaceholder:(id)arg2 title:(id)arg3 subtitle:(id)arg4 metadataTitle:(id)arg5 tasks:(id)arg6 entityURL:(id)arg7 trackURL:(id)arg8 headerSubtitleStyle:(long long)arg9 senderView:(id)arg10 options:(id)arg11;
-- (id)contextMenuViewControllerIPadForTrackWithURL:(id)arg1 name:(id)arg2 metadata:(id)arg3 playable:(_Bool)arg4 imageURL:(id)arg5 artists:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 viewURL:(id)arg9 senderView:(id)arg10 metadataTitle:(id)arg11 logContext:(id)arg12 options:(id)arg13;
+- (id)contextMenuViewControllerIPadForTrackWithURL:(id)arg1 name:(id)arg2 metadata:(id)arg3 playable:(_Bool)arg4 imageURL:(id)arg5 artists:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 viewURL:(id)arg9 contextSourceURL:(id)arg10 senderView:(id)arg11 metadataTitle:(id)arg12 logContext:(id)arg13 options:(id)arg14;
 - (id)initWithViewURI:(id)arg1 actionsProvider:(id)arg2 imageLoaderFactory:(id)arg3 glueImageLoaderFactory:(id)arg4 scannablesUserInterfaceFactory:(id)arg5 modalPressentationController:(id)arg6 player:(id)arg7 theme:(id)arg8 notificationCenter:(id)arg9;
 
 // Remaining properties

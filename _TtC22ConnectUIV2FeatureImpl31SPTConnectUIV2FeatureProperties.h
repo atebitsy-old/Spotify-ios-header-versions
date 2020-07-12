@@ -12,6 +12,7 @@
     // Error parsing type: , name: connectDevicePickerMiniEnabled
     // Error parsing type: , name: connectAttachedDestinationEnabled
     // Error parsing type: , name: connectAttachedDestinationNudgeEnabled
+    // Error parsing type: , name: connectRecencyDeviceSortingEnabled
 }
 
 - (id)init;

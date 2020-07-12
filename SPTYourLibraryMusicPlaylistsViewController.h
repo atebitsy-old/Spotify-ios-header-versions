@@ -25,6 +25,8 @@
 @interface SPTYourLibraryMusicPlaylistsViewController : UIViewController <SPTYourLibraryMusicFilterBarViewControllerDelegate, SPTScrollToTopViewController, SPContentInsetViewController, _TtP18QuickScrollFeature28SPTQuickScrollViewDatasource_, _TtP18QuickScrollFeature26SPTQuickScrollViewDelegate_, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, SPTPageController, SPTYourLibraryPage, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPViewController>
 {
     id <SPTYourLibraryPageDelegate> pageDelegate;
+    NSString *_pageIdentifier;
+    NSURL *_pageURI;
     id <SPTYourLibraryMusicPlaylistsViewModel> _viewModel;
     SPTYourLibraryMusicGLUETheme *_theme;
     CDUnknownBlockType _styleFactoryBlock;
@@ -61,6 +63,8 @@
 @property(copy, nonatomic) CDUnknownBlockType styleFactoryBlock; // @synthesize styleFactoryBlock=_styleFactoryBlock;
 @property(retain, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsViewModel> viewModel; // @synthesize viewModel=_viewModel;
+@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI; // @synthesize pageURI=_pageURI;
+@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(nonatomic) __weak id <SPTYourLibraryPageDelegate> pageDelegate; // @synthesize pageDelegate;
 - (void).cxx_destruct;
 - (void)didEndUserScrollingWithQuickScrollView:(id)arg1;
@@ -71,8 +75,6 @@
 - (id)quickScrollView:(id)arg1 titleAtOffset:(double)arg2;
 @property(readonly, nonatomic) double offscreenContentHeight;
 @property(readonly, nonatomic) NSURL *URI;
-@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayFooterView:(id)arg2 forSection:(long long)arg3;
@@ -115,7 +117,7 @@
 - (void)initializeInterface;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 styleFactoryBlock:(CDUnknownBlockType)arg4 viewLogger:(id)arg5 sortingFilteringUIFactory:(id)arg6 shareDragDelegateFactory:(id)arg7 quickScrollFactory:(id)arg8;
+- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 styleFactoryBlock:(CDUnknownBlockType)arg4 viewLogger:(id)arg5 sortingFilteringUIFactory:(id)arg6 shareDragDelegateFactory:(id)arg7 quickScrollFactory:(id)arg8 pageIdentifier:(id)arg9 pageURI:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

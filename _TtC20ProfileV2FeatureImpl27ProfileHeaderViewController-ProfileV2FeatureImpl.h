@@ -6,7 +6,9 @@
 
 #import "_TtC20ProfileV2FeatureImpl27ProfileHeaderViewController.h"
 
-@interface _TtC20ProfileV2FeatureImpl27ProfileHeaderViewController (ProfileV2FeatureImpl)
+#import "SPTEntityHeaderContentController-Protocol.h"
+
+@interface _TtC20ProfileV2FeatureImpl27ProfileHeaderViewController (ProfileV2FeatureImpl) <SPTEntityHeaderContentController>
 - (void)entityHeaderViewController:(id)arg1 didUpdateVisibleRect:(struct CGRect)arg2;
 - (double)entityHeaderViewControllerMinimumHeight:(id)arg1;
 @end

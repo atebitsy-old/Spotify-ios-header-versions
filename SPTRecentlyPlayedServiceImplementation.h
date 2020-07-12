@@ -10,10 +10,11 @@
 #import "SPTService-Protocol.h"
 
 @class NSMutableArray, NSString, SPTAllocationContext, SPTRecentlyPlayedEntityModel, SPTRecentlyPlayedTestManager;
-@protocol CosmosFeature, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlagFactory, SPTFeatureFlaggingService, SPTFreeTierService, SPTRecentlyPlayedList, SPTSessionService, SPTURIDispatchService;
+@protocol CosmosFeature, SPTAddToSpotifyPlaylistExperimentService, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlagFactory, SPTFeatureFlaggingService, SPTFreeTierService, SPTRecentlyPlayedList, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTRecentlyPlayedServiceImplementation : NSObject <SPTService, SPTRecentlyPlayedService>
 {
+    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <SPTSessionService> _clientSessionService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTCoreService> _coreService;
@@ -47,6 +48,7 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
+@property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 - (void).cxx_destruct;
 - (void)registerAllCollectionEntityContentTypes;
 - (id)provideTestManager;

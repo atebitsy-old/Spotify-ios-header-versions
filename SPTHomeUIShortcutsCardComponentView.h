@@ -35,7 +35,7 @@
 - (void)setupConstraints;
 - (void)prepareForReuse;
 - (void)dealloc;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 player:(id)arg3;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 player:(id)arg3 remoteConfigPropertyResolver:(id)arg4;
 
 @end
 

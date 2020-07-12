@@ -9,25 +9,27 @@
 #import "SPTAssistedCurationUITestManager-Protocol.h"
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
-@class NSString;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory;
+@class NSString, SPTAssistedCurationFeatureProperties;
+@protocol SPTFeatureFlagSignal, SPTRemoteConfigurationResolver;
 
 @interface SPTAssistedCurationUITestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTAssistedCurationUITestManager>
 {
     _Bool _shouldUseSnackBar;
-    id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
+    SPTAssistedCurationFeatureProperties *_featureProperties;
     id <SPTFeatureFlagSignal> _freeTierSignal;
 }
 
 @property(nonatomic) _Bool shouldUseSnackBar; // @synthesize shouldUseSnackBar=_shouldUseSnackBar;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierSignal; // @synthesize freeTierSignal=_freeTierSignal;
-@property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
-@property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
+@property(retain, nonatomic) SPTAssistedCurationFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
+@property(readonly, nonatomic, getter=isPageLoaderEnabled) _Bool pageLoaderEnabled;
+- (void)setupFeatureProperties;
 - (void)dealloc;
-- (id)initWithFeatureFlagFactory:(id)arg1 featureSettingsItemFactory:(id)arg2 freeTierSignal:(id)arg3;
+- (id)initWithRemoteConfigurationResolver:(id)arg1 freeTierSignal:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

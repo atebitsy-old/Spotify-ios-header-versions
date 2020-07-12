@@ -9,6 +9,7 @@
 @interface _TtC26MarketingFormatFeatureImpl32HeaderEntitySlideViewConnectable : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: view
+    // Error parsing type: , name: dataSaverFlag
     // Error parsing type: , name: diffuser
     // Error parsing type: , name: fuser
 }

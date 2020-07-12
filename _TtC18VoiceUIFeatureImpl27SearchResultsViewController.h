@@ -9,10 +9,17 @@
 @interface _TtC18VoiceUIFeatureImpl27SearchResultsViewController : UIViewController
 {
     // Error parsing type: , name: loopController
+    // Error parsing type: , name: viewBinder
+    // Error parsing type: , name: loopControllerConnected
+    // Error parsing type: , name: swipeToDismissAttempted
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)viewDidLoad;
+- (void)viewDidDisappear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
+- (void)dealloc;
 - (id)initWithCoder:(id)arg1;
 
 @end

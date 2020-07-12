@@ -4,17 +4,13 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTCollectionPlatformFieldAddTime-Protocol.h"
 #import "SPTCollectionPlatformFieldAlbumCovers-Protocol.h"
 #import "SPTCollectionPlatformFieldArtists-Protocol.h"
 #import "SPTCollectionPlatformFieldAvailableOfflineStatus-Protocol.h"
-#import "SPTCollectionPlatformFieldCollectionURL-Protocol.h"
 #import "SPTCollectionPlatformFieldGroupLabel-Protocol.h"
-#import "SPTCollectionPlatformFieldImageURL-Protocol.h"
 #import "SPTCollectionPlatformFieldName-Protocol.h"
 #import "SPTCollectionPlatformFieldURL-Protocol.h"
-#import "SPTYourLibraryMusicEntity-Protocol.h"
 
-@protocol SPTYourLibraryMusicAlbumEntity <SPTYourLibraryMusicEntity, SPTCollectionPlatformFieldCollectionURL, SPTCollectionPlatformFieldName, SPTCollectionPlatformFieldURL, SPTCollectionPlatformFieldImageURL, SPTCollectionPlatformFieldAlbumCovers, SPTCollectionPlatformFieldArtists, SPTCollectionPlatformFieldAddTime, SPTCollectionPlatformFieldAvailableOfflineStatus, SPTCollectionPlatformFieldGroupLabel>
+@protocol SPTYourLibraryMusicAlbumEntity <SPTCollectionPlatformFieldName, SPTCollectionPlatformFieldURL, SPTCollectionPlatformFieldAlbumCovers, SPTCollectionPlatformFieldArtists, SPTCollectionPlatformFieldAvailableOfflineStatus, SPTCollectionPlatformFieldGroupLabel>
 @end
 

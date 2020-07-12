@@ -13,12 +13,16 @@
 @interface SPTPodcastMixFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _podcastMixHandlerEnabled;
+    long long _pmixEntityTooltipMaxShowCount;
+    long long _pmixIconCustomize;
     unsigned long long _pmixContextMenuEpisodeAction;
     NSString *_pmixContextMenuEpisodeActionString;
 }
 
 @property(retain, nonatomic) NSString *pmixContextMenuEpisodeActionString; // @synthesize pmixContextMenuEpisodeActionString=_pmixContextMenuEpisodeActionString;
 @property(readonly, nonatomic) unsigned long long pmixContextMenuEpisodeAction; // @synthesize pmixContextMenuEpisodeAction=_pmixContextMenuEpisodeAction;
+@property(readonly, nonatomic) long long pmixIconCustomize; // @synthesize pmixIconCustomize=_pmixIconCustomize;
+@property(readonly, nonatomic) long long pmixEntityTooltipMaxShowCount; // @synthesize pmixEntityTooltipMaxShowCount=_pmixEntityTooltipMaxShowCount;
 @property(readonly, nonatomic) _Bool podcastMixHandlerEnabled; // @synthesize podcastMixHandlerEnabled=_podcastMixHandlerEnabled;
 - (void).cxx_destruct;
 - (unsigned long long)mapPmixContextMenuEpisodeActionToEnumValue:(id)arg1;

@@ -9,6 +9,8 @@
 @interface _TtC23YourLibraryXFeatureImpl25YourLibraryViewController : UIViewController
 {
     // Error parsing type: , name: loopController
+    // Error parsing type: , name: theme
+    // Error parsing type: , name: header
 }
 
 - (void).cxx_destruct;

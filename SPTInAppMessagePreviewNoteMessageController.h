@@ -9,7 +9,7 @@
 #import "SPTInAppMessagePreviewViewModelObserver-Protocol.h"
 
 @class NSString, SPTInAppMessageActionFactory, SPTInAppMessageNoteMessageParser, SPTInAppMessageNoteMessagePresentationController, SPTInAppMessageNoteMessageViewModel, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation;
-@protocol SPTAlertInterface, SPTBannerPresentationManager, SPTCarDetector, SPTFreeTierTooltipConditionalPresenter, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
+@protocol SPTAlertInterface, SPTBannerPresentationManager, SPTCarDetector, SPTFreeTierTooltipConditionalPresenter, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTInAppMessagePreviewNoteMessageController : NSObject <SPTInAppMessagePreviewViewModelObserver>
 {
@@ -17,7 +17,6 @@
     id <SPTSlateManager> _slateManager;
     SPTInAppMessageNotePresentationManager *_notePresentationManager;
     id <SPTBannerPresentationManager> _bannerPresentationManager;
-    id <SPTTooltipPresentationManager> _tooltipPresentationManager;
     id <SPTFreeTierTooltipConditionalPresenter> _freeTierTooltipPresenter;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     SPTInAppMessageActionFactory *_actionFactory;
@@ -38,14 +37,13 @@
 @property(retain, nonatomic) SPTInAppMessageActionFactory *actionFactory; // @synthesize actionFactory=_actionFactory;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTFreeTierTooltipConditionalPresenter> freeTierTooltipPresenter; // @synthesize freeTierTooltipPresenter=_freeTierTooltipPresenter;
-@property(retain, nonatomic) id <SPTTooltipPresentationManager> tooltipPresentationManager; // @synthesize tooltipPresentationManager=_tooltipPresentationManager;
 @property(retain, nonatomic) id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(retain, nonatomic) SPTInAppMessageNotePresentationManager *notePresentationManager; // @synthesize notePresentationManager=_notePresentationManager;
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageParser *noteMessageParser; // @synthesize noteMessageParser=_noteMessageParser;
 - (void).cxx_destruct;
 - (void)previewViewModel:(id)arg1 didFetchNoteCreativeData:(id)arg2;
-- (id)initWithNoteMessageParser:(id)arg1 slateManager:(id)arg2 notePresentationManager:(id)arg3 bannerPresentationManager:(id)arg4 tooltipPresentationManager:(id)arg5 freeTierTooltipPresenter:(id)arg6 snackbarPresenter:(id)arg7 actionFactory:(id)arg8 carDetector:(id)arg9 offlineModeState:(id)arg10 nowPlayingManagerRegistry:(id)arg11 alertInterface:(id)arg12;
+- (id)initWithNoteMessageParser:(id)arg1 slateManager:(id)arg2 notePresentationManager:(id)arg3 bannerPresentationManager:(id)arg4 freeTierTooltipPresenter:(id)arg5 snackbarPresenter:(id)arg6 actionFactory:(id)arg7 carDetector:(id)arg8 offlineModeState:(id)arg9 nowPlayingManagerRegistry:(id)arg10 alertInterface:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 - (id)queueMultipleTracks:(id)arg1;
 - (id)queueTrack:(id)arg1;
+- (id)queueTrackPlayNext:(id)arg1;
 - (id)queueTracksInternal:(id)arg1;
 - (id)fetchQueueInternal;
 - (id)fetchQueue;

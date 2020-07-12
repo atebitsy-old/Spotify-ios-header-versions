@@ -15,7 +15,7 @@
     NSArray *_components;
 }
 
-+ (id)factoryWithPageIdentifier:(id)arg1 pageUri:(id)arg2;
++ (id)factoryWithPageIdentifier:(id)arg1 pageUri:(id)arg2 pageReason:(id)arg3;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
 - (id)itemListFactory;
@@ -31,7 +31,7 @@
 - (id)toolbarFactory;
 - (id)deeplinkingFactory;
 - (id)_location;
-- (id)initWithPageIdentifier:(id)arg1 pageUri:(id)arg2;
+- (id)initWithPageIdentifier:(id)arg1 pageUri:(id)arg2 pageReason:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

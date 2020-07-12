@@ -8,8 +8,8 @@
 
 #import "SPTHomeUIService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTHomeUITestManager, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTUBIService;
+@class NSString, SPTAllocationContext, SPTHomeUIRemoteConfigPropertyResolver;
+@protocol SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService;
 
 @interface SPTHomeUIServiceImplementation : NSObject <SPTHomeUIService>
 {
@@ -18,15 +18,19 @@
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTPlayerFeature> _playerFeature;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     id <SPTSessionService> _sessionService;
     id <SPTUBIService> _ubiService;
-    id <SPTHomeUITestManager> _testManager;
+    SPTHomeUIRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) id <SPTHomeUITestManager> testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) SPTHomeUIRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;

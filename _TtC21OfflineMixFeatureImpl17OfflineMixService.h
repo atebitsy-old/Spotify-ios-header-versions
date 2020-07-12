@@ -9,12 +9,29 @@
 @interface _TtC21OfflineMixFeatureImpl17OfflineMixService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: contextMenuService
+    // Error parsing type: , name: containerUIService
     // Error parsing type: , name: freeTierPlaylistUIService
+    // Error parsing type: , name: playlistPlatformService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: sessionService
+    // Error parsing type: , name: testManager
+    // Error parsing type: , name: $__lazy_storage_$_dataLoader
+    // Error parsing type: , name: $__lazy_storage_$_downloadManager
+    // Error parsing type: , name: $__lazy_storage_$_modelProvider
+    // Error parsing type: , name: $__lazy_storage_$_playlistFilter
+    // Error parsing type: , name: $__lazy_storage_$_isLimitedOfflineEnabled
+    // Error parsing type: , name: token
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (id)provideTestManager;
+- (id)providePlaylistFilter;
+- (id)provideModelProvider;
+- (id)provideDownloadManager;
+- (id)provideDataLoader;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

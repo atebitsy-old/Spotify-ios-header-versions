@@ -14,13 +14,23 @@
     // Error parsing type: , name: glueService
     // Error parsing type: , name: assistedCurationUIService
     // Error parsing type: , name: uriDispatchService
+    // Error parsing type: , name: audioPreviewService
+    // Error parsing type: , name: explicitContentService
+    // Error parsing type: , name: preCurationService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: networkService
+    // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: shareMenuService
+    // Error parsing type: , name: uiPresentationService
     // Error parsing type: , name: pageRegistrationToken
+    // Error parsing type: , name: remoteConfigProperties
+    // Error parsing type: , name: cache
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)provideViewController;
+- (id)providePageLoader;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

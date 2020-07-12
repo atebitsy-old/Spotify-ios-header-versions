@@ -25,6 +25,7 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (void).cxx_destruct;
 - (_Bool)calculatePodcastFeatureEnabled;
+@property(readonly, nonatomic, getter=isPodcastShowPageSearchEnabled) _Bool podcastShowPageSearchEnabled;
 @property(readonly, nonatomic, getter=isPodcastNewPlaybackSpeedsEnabled) _Bool podcastNewPlaybackSpeedsEnabled;
 @property(readonly, nonatomic, getter=isPodcastDataAccessLayerPodcastRequestEnabled) _Bool podcastDataAccessLayerPodcastRequestEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;

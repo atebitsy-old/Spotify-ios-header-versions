@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileExplicitcontent_ExplicitDialogWhenLockedEventFactory, SPTUBIMobileExplicitcontent_ExplicitDialogWhenNotLockedEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobileExplicitcontent_ExplicitContentSettingsEventFactory, SPTUBIMobileExplicitcontent_ExplicitDialogWhenLockedEventFactory, SPTUBIMobileExplicitcontent_ExplicitDialogWhenNotLockedEventFactory;
 
 @protocol SPTUBIMobileExplicitcontentEventFactory <NSObject>
+- (id <SPTUBIMobileExplicitcontent_ExplicitContentSettingsEventFactory>)explicitContentSettingsFactory;
 - (id <SPTUBIMobileExplicitcontent_ExplicitDialogWhenLockedEventFactory>)explicitDialogWhenLockedFactory;
 - (id <SPTUBIMobileExplicitcontent_ExplicitDialogWhenNotLockedEventFactory>)explicitDialogWhenNotLockedFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;

@@ -50,6 +50,8 @@ struct AlbumMetadata {
     vector_553ebee1 _field6;
 };
 
+struct AnalyticsDelegate;
+
 struct ApHandler {
     CDUnknownFunctionPointerType *_field1;
 };
@@ -382,6 +384,13 @@ struct CoreCreateOptions {
     struct optional<spotify::http::ConnectionType> _field10;
     function_574b1799 _field11;
     _Bool _field12;
+    struct optional<std::__1::basic_string<char>> {
+        union {
+            char _field1;
+            basic_string_90719d97 _field2;
+        } _field1;
+        _Bool _field2;
+    } _field13;
 };
 
 struct CriticalSection {
@@ -865,6 +874,7 @@ struct PreparePlayOptions {
     basic_string_90719d97 _field11;
     struct optional<spotify::player::PlayerLicense> _field12;
     struct flat_map<std::__1::basic_string<char>, spotify::json::encoded_value, std::__1::less<std::__1::basic_string<char>>, void> _field13;
+    struct optional<spotify::player::PreparePlayOptions::ConnectTransferDetails> _field14;
 };
 
 struct ProductState;
@@ -880,8 +890,6 @@ struct PropertyManager {
 };
 
 struct PropertySerializer;
-
-struct ProxyAnalyticsDelegate;
 
 struct ProxyContextPlayer;
 
@@ -1302,6 +1310,13 @@ struct aligned_storage<spotify::player::PlaybackId> {
 struct aligned_storage<spotify::player::PlayerLicense> {
     union dummy_u {
         char _field1[24];
+        struct a8 _field2;
+    } _field1;
+};
+
+struct aligned_storage<spotify::player::PreparePlayOptions::ConnectTransferDetails> {
+    union dummy_u {
+        char _field1[104];
         struct a8 _field2;
     } _field1;
 };
@@ -1772,6 +1787,11 @@ struct optional<spotify::player::PlayerLicense> {
     struct aligned_storage<spotify::player::PlayerLicense> _field2;
 };
 
+struct optional<spotify::player::PreparePlayOptions::ConnectTransferDetails> {
+    _Bool _field1;
+    struct aligned_storage<spotify::player::PreparePlayOptions::ConnectTransferDetails> _field2;
+};
+
 struct optional<unsigned char> {
     union {
         char _field1;
@@ -1945,8 +1965,8 @@ struct shared_ptr<spotify::client::ApplicationStateTracker::Impl> {
 
 struct shared_ptr<spotify::connect::MdnsDevice>;
 
-struct shared_ptr<spotify::connectivity::ProxyAnalyticsDelegate> {
-    struct ProxyAnalyticsDelegate *__ptr_;
+struct shared_ptr<spotify::connectivity::AnalyticsDelegate> {
+    struct AnalyticsDelegate *__ptr_;
     struct __shared_weak_count *__cntrl_;
 };
 
@@ -3368,12 +3388,6 @@ typedef struct span<const spotify::uri::SpotifyLink> {
     struct SpotifyLink *_field1;
     unsigned long long _field2;
 } span_60459498;
-
-typedef struct unique_ptr<spotify::connectivity::ConnectivityManager, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> {
-    struct __compressed_pair<spotify::connectivity::ConnectivityManager *, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> {
-        struct ConnectivityManager *__value_;
-    } __ptr_;
-} unique_ptr_4241c33f;
 
 typedef struct unique_ptr<spotify::connectivity::auth::AuthSession, std::__1::default_delete<spotify::connectivity::auth::AuthSession>> {
     struct __compressed_pair<spotify::connectivity::auth::AuthSession *, std::__1::default_delete<spotify::connectivity::auth::AuthSession>> {

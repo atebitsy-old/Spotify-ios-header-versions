@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAuthController, SPTAuthLoginController, SPTConnectivityApplicationScopeConfiguration;
+@class SPTAuthLoginController, SPTConnectivityApplicationScopeConfiguration;
 @protocol SPTConnectivityAsyncScheduler;
 
 @interface SPTConnectivityApplicationScope : NSObject
@@ -18,24 +18,22 @@
     struct thread _thread;
     SPTAuthLoginController *_singletonLoginController;
     SPTConnectivityApplicationScopeConfiguration *_configuration;
-    SPTAuthController *_authController;
     id <SPTConnectivityAsyncScheduler> _defaultScheduler;
     id <SPTConnectivityAsyncScheduler> _scheduler;
 }
 
 @property(readonly, nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
 @property(retain, nonatomic) id <SPTConnectivityAsyncScheduler> defaultScheduler; // @synthesize defaultScheduler=_defaultScheduler;
-@property(readonly, nonatomic) SPTAuthController *authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) SPTConnectivityApplicationScopeConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(retain, nonatomic) SPTAuthLoginController *singletonLoginController; // @synthesize singletonLoginController=_singletonLoginController;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (id)createAccesspointResolverWithDelegate:(id)arg1;
 - (id)createRequestAccounting;
-- (id)provideAuthController;
 - (id)loginControllerWithConfiguration:(id)arg1 analyticsDelegate:(id)arg2;
 @property(readonly, nonatomic) struct Scheduler *cppScheduler;
 @property(readonly, nonatomic) struct ApplicationScope *cpp;
+- (void)prepareForShutdown;
 - (void)destroy;
 - (void)dealloc;
 - (id)initWithConnectivityApplicationScope:(struct ApplicationScope *)arg1 loginController:(struct LoginController *)arg2 scheduler:(id)arg3 configuration:(id)arg4;

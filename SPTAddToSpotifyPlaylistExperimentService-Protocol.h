@@ -6,15 +6,19 @@
 
 #import "SPTService-Protocol.h"
 
-@class NSURL;
-@protocol SPTAddToSpotifyPlaylistExperimentCellProvider, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistModel, SPTPlayOrigin, SPTPlayer, SPTPlaylistModel, SPTPlaylistPlatformPlaylistDataLoader, SPTPlaylistRoute;
+@class NSURL, UIView;
+@protocol SPTAddToSpotifyPlaylistExperimentCellProvider, SPTAddToSpotifyPlaylistExperimentLogger, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver, SPTPlayOrigin, SPTPlayer, SPTPlaylistModel, SPTPlaylistPlatformPlaylistDataLoader, SPTPlaylistRoute;
 
 @protocol SPTAddToSpotifyPlaylistExperimentService <SPTService>
+- (NSURL *)imageURIForContextURI:(NSURL *)arg1;
+- (UIView *)provideAssistedCurationSubtitleViewForURI:(NSURL *)arg1;
 - (_Bool)addToSpotifyPlaylistEnabledForURI:(NSURL *)arg1;
 - (_Bool)addToSpotifyPlaylistEnabled;
 - (id <SPTPlaylistPlatformPlaylistDataLoader>)provideAddToSpotifyPlaylistDataLoader;
 - (id <SPTPlaylistModel>)provideAddToSpotifyPlaylistModel;
 - (id <SPTPlaylistRoute>)providePlaylistRouteForURI:(NSURL *)arg1;
-- (id <SPTAddToSpotifyPlaylistExperimentCellProvider>)provideCellProviderWithmodel:(id <SPTFreeTierPlaylistModel>)arg1 originalPlaylistViewModel:(id <SPTFreeTierPlaylistDefaultHeaderViewModel>)arg2 player:(id <SPTPlayer>)arg3 playlistURI:(NSURL *)arg4 origin:(id <SPTPlayOrigin>)arg5;
+- (_Bool)shouldRouteForURI:(NSURL *)arg1;
+- (id <SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver>)decorateItemsViewModel:(id <SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver>)arg1 forPlaylistURI:(NSURL *)arg2;
+- (id <SPTAddToSpotifyPlaylistExperimentCellProvider>)provideCellProviderWithOriginalPlaylistViewModel:(id <SPTFreeTierPlaylistDefaultHeaderViewModel>)arg1 player:(id <SPTPlayer>)arg2 playlistURI:(NSURL *)arg3 origin:(id <SPTPlayOrigin>)arg4 logger:(id <SPTAddToSpotifyPlaylistExperimentLogger>)arg5 viewModelFactory:(id <SPTFreeTierPlaylistModel> (^)(NSURL *))arg6;
 @end
 

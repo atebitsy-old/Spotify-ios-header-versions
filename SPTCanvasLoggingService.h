@@ -6,14 +6,16 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTEventSender, SPTLogCenter;
 
 @interface SPTCanvasLoggingService : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
 }
 
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logCanvasTapTooltipImpression;
 - (void)logTapArtwork;
@@ -24,7 +26,7 @@
 - (void)logToggleArtworkWasTapped;
 - (void)logToggleVisualsWasTapped;
 - (void)logSettingsMenuCanvasEnabled:(_Bool)arg1 itemIndex:(int)arg2;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 eventSender:(id)arg2;
 
 @end
 

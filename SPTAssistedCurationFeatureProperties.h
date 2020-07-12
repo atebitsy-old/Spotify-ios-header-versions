@@ -12,10 +12,10 @@
 
 @interface SPTAssistedCurationFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _assistedCurationMostPlayedInLikedSongs;
+    _Bool _assistedCurationPageLoaderEnabled;
 }
 
-@property(readonly, nonatomic) _Bool assistedCurationMostPlayedInLikedSongs; // @synthesize assistedCurationMostPlayedInLikedSongs=_assistedCurationMostPlayedInLikedSongs;
+@property(readonly, nonatomic) _Bool assistedCurationPageLoaderEnabled; // @synthesize assistedCurationPageLoaderEnabled=_assistedCurationPageLoaderEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

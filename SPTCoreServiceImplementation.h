@@ -8,7 +8,7 @@
 
 #import "SPTCoreService-Protocol.h"
 
-@class NSString, SPCore, SPTAllocationContext, SPTBootstrapCoreProxyImplementation, SPTCoreLogHandler, SPTCoreSchedulerThread, SPTEventSenderCoreProxyImplementation;
+@class NSString, SPCore, SPTAllocationContext, SPTBootstrapCoreProxyImplementation, SPTCoreLogHandler, SPTCoreSchedulerThread, SPTEventSenderCoreProxyImplementation, SPTPreferencesImplementation;
 @protocol SPTAudioDriverController;
 
 @interface SPTCoreServiceImplementation : NSObject <SPTCoreService>
@@ -18,11 +18,13 @@
     SPTEventSenderCoreProxyImplementation *_eventSenderCoreProxy;
     SPTBootstrapCoreProxyImplementation *_bootstrapCoreProxy;
     SPTCoreSchedulerThread *_coreScheduler;
+    SPTPreferencesImplementation *_preferences;
     SPCore *_core;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPCore *core; // @synthesize core=_core;
+@property(retain, nonatomic) SPTPreferencesImplementation *preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) SPTCoreSchedulerThread *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(retain, nonatomic) SPTBootstrapCoreProxyImplementation *bootstrapCoreProxy; // @synthesize bootstrapCoreProxy=_bootstrapCoreProxy;
 @property(retain, nonatomic) SPTEventSenderCoreProxyImplementation *eventSenderCoreProxy; // @synthesize eventSenderCoreProxy=_eventSenderCoreProxy;

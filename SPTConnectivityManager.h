@@ -13,7 +13,7 @@
 
 @interface SPTConnectivityManager : NSObject <SPTConnectivityManager>
 {
-    unique_ptr_4241c33f _connectivityManager;
+    struct unique_ptr<spotify::connectivity::ConnectivityManager, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> _connectivityManager;
     struct TimerManager *_timerManager;
     NSObject<OS_dispatch_queue> *_callbackQueue;
     struct mutex _mutex;
@@ -40,7 +40,7 @@
 @property long long connectionType;
 - (void)addDeferedCallback:(CDUnknownBlockType)arg1 callbackQueue:(id)arg2;
 - (void)invalidate;
-- (id)initWithCoreConnectivityManager:(unique_ptr_4241c33f)arg1 scheduler:(id)arg2 timerManager:(struct TimerManager *)arg3 callbackQueue:(id)arg4;
+- (id)initWithAnalyticsDelegate:(id)arg1 allowNetwork:(_Bool)arg2 scheduler:(id)arg3 timerManager:(struct TimerManager *)arg4 callbackQueue:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

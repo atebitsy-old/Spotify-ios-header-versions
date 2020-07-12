@@ -9,7 +9,7 @@
 @interface _TtC23MusicVideoUIFeatureImpl16MusicVideoPlayer : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: videoService
-    // Error parsing type: , name: videoCoordinatorService
+    // Error parsing type: , name: surfaceManagerFactory
     // Error parsing type: , name: $__lazy_storage_$_videoPlayerComponents
     // Error parsing type: , name: $__lazy_storage_$_manager
 }

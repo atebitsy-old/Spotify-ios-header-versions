@@ -64,7 +64,16 @@
 - (void)initiatePlaybackWithContext:(id)arg1 playCommandDictionary:(id)arg2;
 - (_Bool)isPlayingExpectedContext:(id)arg1;
 @property(readonly, nonatomic, getter=hasFinishedPerformanceMeasuring) _Bool finishedPerformanceMeasuring;
-- (void)sendTimeMeasurementEventWithMeasurements:(id)arg1 dimensions:(id)arg2;
+@property(readonly, nonatomic, getter=isWaitingForPlayback) _Bool waitingForPlayback;
+- (void)markPerformanceTimestampForKey:(id)arg1;
+- (void)markPerformanceOutcomeInvalidPlayerContext;
+- (void)markPerformanceOutcomeMissingIntentPayload;
+- (void)markPerformanceOutcomePlayerError;
+- (void)markPerformanceOutcomeSuccess;
+- (void)markPerformanceOriginWatchos;
+- (void)markPerformanceOriginDimensionIos;
+- (void)markPerformanceCarConnected:(_Bool)arg1;
+- (void)sendPerformanceMeasurements;
 - (void)startMeasuringWithCapturedMeasurements:(id)arg1 dimensions:(id)arg2;
 - (void)resetPerformanceMeasurements;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;

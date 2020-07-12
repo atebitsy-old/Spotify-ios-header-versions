@@ -17,15 +17,14 @@
 @property(readonly, nonatomic) _Bool isContentLayerLyricsButtonEnabled;
 @property(readonly, nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled;
 @property(readonly, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration;
+@property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;
+@property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;
 @property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
 @property(readonly, nonatomic, getter=isMixedMediaEpisodeModeEnabled) _Bool mixedMediaEpisodeModeEnabled;
 @property(readonly, nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled;
 @property(readonly, nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled;
 @property(readonly, nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled;
-@property(readonly, nonatomic, getter=isNoSkipLimitEnabled) _Bool noSkipLimitEnabled;
 @property(readonly, nonatomic, getter=isShowsFormatContextAwareSharingEnabled) _Bool showsFormatContextAwareSharingEnabled;
-@property(readonly, nonatomic, getter=isNowPlayingBarImprovementsEnabled) _Bool nowPlayingBarImprovementsEnabled;
-@property(readonly, nonatomic, getter=isMusicSleepTimerEnabled) _Bool musicSleepTimerEnabled;
 - (_Bool)setLocalBansEnabled:(_Bool)arg1;
 - (_Bool)isPodcast:(SPTPlayerState *)arg1;
 - (void)removeObserver:(id <SPTNowPlayingTestManagerObserver>)arg1;

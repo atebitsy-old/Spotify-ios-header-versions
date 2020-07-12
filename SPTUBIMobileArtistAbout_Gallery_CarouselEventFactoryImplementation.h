@@ -18,6 +18,7 @@
 + (id)factoryWithPosition:(long long)arg1 components:(id)arg2;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)swipeMoveImage;
 - (id)_location;
 - (id)initWithPosition:(long long)arg1 components:(id)arg2;
 

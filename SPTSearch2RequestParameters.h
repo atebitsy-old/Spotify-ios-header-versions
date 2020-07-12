@@ -22,12 +22,12 @@
     unsigned long long _offset;
     unsigned long long _limit;
     unsigned long long _experience;
-    NSString *_entityType;
+    NSString *_drilldownEntityType;
     unsigned long long _endpointVersion;
 }
 
 @property(nonatomic) unsigned long long endpointVersion; // @synthesize endpointVersion=_endpointVersion;
-@property(copy, nonatomic) NSString *entityType; // @synthesize entityType=_entityType;
+@property(copy, nonatomic) NSString *drilldownEntityType; // @synthesize drilldownEntityType=_drilldownEntityType;
 @property(nonatomic) unsigned long long experience; // @synthesize experience=_experience;
 @property(nonatomic) unsigned long long limit; // @synthesize limit=_limit;
 @property(nonatomic) unsigned long long offset; // @synthesize offset=_offset;
@@ -45,7 +45,7 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSURLComponents *urlComponents;
-- (id)initWithQuery:(id)arg1 entityVersion:(unsigned long long)arg2 clientVersion:(id)arg3 catalogue:(id)arg4 country:(id)arg5 locale:(id)arg6 timestamp:(id)arg7 experience:(unsigned long long)arg8 offset:(unsigned long long)arg9 limit:(unsigned long long)arg10 entityType:(id)arg11 endpointVersion:(unsigned long long)arg12;
+- (id)initWithQuery:(id)arg1 entityVersion:(unsigned long long)arg2 clientVersion:(id)arg3 catalogue:(id)arg4 country:(id)arg5 locale:(id)arg6 timestamp:(id)arg7 experience:(unsigned long long)arg8 offset:(unsigned long long)arg9 limit:(unsigned long long)arg10 drilldownEntityType:(id)arg11 endpointVersion:(unsigned long long)arg12;
 
 @end
 

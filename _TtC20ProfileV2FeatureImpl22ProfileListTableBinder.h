@@ -14,7 +14,7 @@
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: cellBinder
     // Error parsing type: , name: model
-    // Error parsing type: , name: $__lazy_storage_$_followersNumberFormatter
+    // Error parsing type: , name: $__lazy_storage_$_numberFormatter
 }
 
 - (void).cxx_destruct;

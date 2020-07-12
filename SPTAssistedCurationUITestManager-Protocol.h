@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTAssistedCurationUITestManager <NSObject>
+@property(readonly, nonatomic, getter=isPageLoaderEnabled) _Bool pageLoaderEnabled;
 @property(readonly, nonatomic) _Bool shouldUseSnackBar;
 @end
 

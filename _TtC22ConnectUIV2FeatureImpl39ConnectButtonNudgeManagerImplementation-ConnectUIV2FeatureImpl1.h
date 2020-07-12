@@ -7,6 +7,8 @@
 #import "_TtC22ConnectUIV2FeatureImpl39ConnectButtonNudgeManagerImplementation.h"
 
 @interface _TtC22ConnectUIV2FeatureImpl39ConnectButtonNudgeManagerImplementation (ConnectUIV2FeatureImpl1)
+- (void)devicePickerWasShownNotificationReceived;
+- (void)applicationDidBecomeActiveNotificationReceived;
 - (void)applicationDidEnterBackgroundNotificationReceived;
 - (void)mainBarWasShownNotificationReceived;
 @end

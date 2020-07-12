@@ -22,7 +22,6 @@
 - (void).cxx_destruct;
 - (void)logDownloadInteractionSource:(id)arg1 downloadURI:(id)arg2 elementType:(unsigned long long)arg3 requestedDownload:(_Bool)arg4;
 - (void)logUIInteractionWithFeatureId:(id)arg1 pageURI:(id)arg2 sectionId:(id)arg3 itemIndex:(long long)arg4 targetURI:(id)arg5 interactionType:(id)arg6 userIntent:(id)arg7;
-- (void)logUIInteractionOnPageURI:(id)arg1 sectionId:(id)arg2 itemIndex:(long long)arg3 targetURI:(id)arg4 interactionType:(id)arg5 userIntent:(id)arg6;
 - (void)logUIInteractionUserIntent:(id)arg1 pageURI:(id)arg2 interactionType:(id)arg3;
 - (void)logListItemSelectedWithFeatureId:(id)arg1 pageURI:(id)arg2 flatIndex:(unsigned long long)arg3 targetURL:(id)arg4;
 - (void)logSortingOnPageURI:(id)arg1 sorting:(unsigned long long)arg2;

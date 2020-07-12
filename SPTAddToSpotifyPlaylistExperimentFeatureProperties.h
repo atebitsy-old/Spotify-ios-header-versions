@@ -13,8 +13,10 @@
 @interface SPTAddToSpotifyPlaylistExperimentFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _addToSpotifyPlaylistEnabled;
+    _Bool _showDebugPlaylistsEnabled;
 }
 
+@property(readonly, nonatomic) _Bool showDebugPlaylistsEnabled; // @synthesize showDebugPlaylistsEnabled=_showDebugPlaylistsEnabled;
 @property(readonly, nonatomic) _Bool addToSpotifyPlaylistEnabled; // @synthesize addToSpotifyPlaylistEnabled=_addToSpotifyPlaylistEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

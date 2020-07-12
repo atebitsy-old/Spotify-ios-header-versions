@@ -14,25 +14,22 @@
 
 @interface SPTSocialListeningTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTSocialListeningTestManager>
 {
-    _Bool _shareLinkEnabled;
     _Bool _socialDeviceEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTFeatureFlagSignal> _shareLinkEnabledSignal;
     id <SPTFeatureFlagSignal> _socialDeviceEnabledSignal;
     SPTSocialListeningFeatureProperties *_remoteConfigurationProperties;
 }
 
 @property(readonly, nonatomic) SPTSocialListeningFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> socialDeviceEnabledSignal; // @synthesize socialDeviceEnabledSignal=_socialDeviceEnabledSignal;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> shareLinkEnabledSignal; // @synthesize shareLinkEnabledSignal=_shareLinkEnabledSignal;
 @property(nonatomic, getter=isSocialDeviceEnabled) _Bool socialDeviceEnabled; // @synthesize socialDeviceEnabled=_socialDeviceEnabled;
-@property(nonatomic, getter=isShareLinkEnabled) _Bool shareLinkEnabled; // @synthesize shareLinkEnabled=_shareLinkEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)setupShareLinkEnabledSignal;
 - (void)setupSocialDeviceEnabledSignal;
 @property(readonly, nonatomic) unsigned long long maxMemberCount;
+@property(readonly, nonatomic) _Bool isShareLinkForSingleModeEnabled;
+@property(readonly, nonatomic) _Bool isSocialListeningModeActive;
 @property(readonly, nonatomic) _Bool isListeningTogetherModeActive;
 @property(readonly, nonatomic) _Bool isSocialListeningEnabledAndNotActive;
 @property(readonly, nonatomic) _Bool isSocialListeningEnabledAndActive;

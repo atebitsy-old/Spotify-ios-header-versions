@@ -12,8 +12,8 @@
 @protocol SPTFreeTierAllSongsRegistry <NSObject>
 - (void)unregisterFallbackHandler:(id <SPTFreeTierAllSongsRegistration>)arg1;
 - (void)unregisterHandler:(id <SPTFreeTierAllSongsRegistration>)arg1;
-- (id <SPTFreeTierAllSongsRegistration>)registerFallbackHandler:(id <SPTFreeTierAllSongsDataSource> (^)(NSURL *, NSString *))arg1;
-- (id <SPTFreeTierAllSongsRegistration>)registerHandler:(id <SPTFreeTierAllSongsDataSource> (^)(NSURL *, NSString *))arg1 predicate:(_Bool (^)(NSString *, NSDictionary *, NSURL *))arg2;
+- (id <SPTFreeTierAllSongsRegistration>)registerFallbackHandler:(id <SPTFreeTierAllSongsDataSource> (^)(NSURL *, NSString *, NSDictionary *))arg1;
+- (id <SPTFreeTierAllSongsRegistration>)registerHandler:(id <SPTFreeTierAllSongsDataSource> (^)(NSURL *, NSString *, NSDictionary *))arg1 predicate:(_Bool (^)(NSString *, NSDictionary *, NSURL *))arg2;
 - (void)fetchDataSourceForURL:(NSURL *)arg1 withCompletion:(void (^)(id <SPTFreeTierAllSongsDataSource>))arg2;
 @end
 

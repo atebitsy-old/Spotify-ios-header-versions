@@ -12,6 +12,7 @@
 @property(readonly, nonatomic) _Bool isRouted;
 @property(retain, nonatomic) NSURL *readURI;
 @property(retain, nonatomic) NSURL *writeURI;
+@property(retain, nonatomic) NSURL *basePlaylistImageURI;
 @property(retain, nonatomic) NSURL *basePlaylistURI;
 @end
 

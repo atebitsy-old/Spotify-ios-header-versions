@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTShareHandler-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTShareData, SPTShareLogger;
+@class NSString, SPTDataLoader, SPTShareData, SPTShareHandlerCompletionDataModel, SPTShareLogger;
 @protocol SPTShareDeeplinkHandler;
 
 @interface SPTShareSnapchatShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
@@ -24,8 +24,10 @@
     SPTDataLoader *_dataLoader;
     id <SPTShareDeeplinkHandler> _deeplinkHandler;
     SPTShareData *_shareData;
+    SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+@property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;

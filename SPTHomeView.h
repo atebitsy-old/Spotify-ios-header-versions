@@ -6,37 +6,43 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUEInteractiveAnimation, HUBContainerView, HUBView, NSLayoutConstraint, SPTHomeGradientBackgroundView;
+@class GLUEInteractiveAnimation, HUBContainerView, HUBView, NSLayoutConstraint, SPTHomeGradientBackgroundView, SPTHomeRemoteConfigPropertyResolver;
 @protocol GLUETheme, HUBImageLoaderFactory, HUBOverlayViewComponentDelegate;
 
 @interface SPTHomeView : UIView
 {
-    GLUEInteractiveAnimation *_headerAlphaAnimation;
     id <GLUETheme> _theme;
     id <HUBImageLoaderFactory> _imageLoaderFactory;
+    SPTHomeRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
     HUBContainerView *_containerView;
+    GLUEInteractiveAnimation *_headerAlphaAnimation;
     NSLayoutConstraint *_heightConstraint;
     SPTHomeGradientBackgroundView *_gradientBackgroundView;
+    double _headerAlphaProgress;
 }
 
+@property(nonatomic) double headerAlphaProgress; // @synthesize headerAlphaProgress=_headerAlphaProgress;
 @property(retain, nonatomic) SPTHomeGradientBackgroundView *gradientBackgroundView; // @synthesize gradientBackgroundView=_gradientBackgroundView;
 @property(retain, nonatomic) NSLayoutConstraint *heightConstraint; // @synthesize heightConstraint=_heightConstraint;
+@property(retain, nonatomic) GLUEInteractiveAnimation *headerAlphaAnimation; // @synthesize headerAlphaAnimation=_headerAlphaAnimation;
 @property(readonly, nonatomic) HUBContainerView *containerView; // @synthesize containerView=_containerView;
+@property(readonly, nonatomic) SPTHomeRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
 @property(readonly, nonatomic) id <HUBImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) GLUEInteractiveAnimation *headerAlphaAnimation; // @synthesize headerAlphaAnimation=_headerAlphaAnimation;
 - (void).cxx_destruct;
 - (void)configureHubViewInset;
-- (void)configureContainerViewConstraints;
-- (void)configureHeaderConstraints;
-- (void)setupHeaderAnimation;
-- (void)setupHeaderView;
-- (void)createDefaultHeader;
+- (void)updateHeaderOpacityWithOffset:(struct CGPoint)arg1;
 - (void)scrollToTop;
-@property(nonatomic) __weak id <HUBOverlayViewComponentDelegate> overlayComponentDelegate;
-@property(readonly, nonatomic) HUBView *hubView;
+- (void)createHeaderGradientView;
 - (void)loadViewModel:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 imageLoaderFactory:(id)arg3 componentLayoutManager:(id)arg4 componentRegistry:(id)arg5 componentEventHandler:(id)arg6;
+@property(nonatomic) __weak id <HUBOverlayViewComponentDelegate> overlayComponentDelegate;
+- (void)configureContainerViewConstraints;
+- (void)configureHeaderGradientViewConstraints;
+- (void)setupAnimationForHeaderGradientView;
+- (void)setupHeaderGradientView;
+@property(readonly, nonatomic) HUBView *hubView;
+- (void)configureView;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 imageLoaderFactory:(id)arg3 componentLayoutManager:(id)arg4 componentRegistry:(id)arg5 componentEventHandler:(id)arg6 remoteConfigPropertyResolver:(id)arg7;
 
 @end
 

@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
+@class NSString, NSURL;
 @protocol SPTNowPlayingInformationUnitViewModelDelegate;
 
 @protocol SPTNowPlayingInformationUnitViewModel <NSObject>
@@ -14,6 +14,7 @@
 @property(readonly, nonatomic, getter=isFeedbackButtonSelected) _Bool feedbackButtonSelected;
 @property(readonly, nonatomic, getter=isFeedbackButtonEnabled) _Bool feedbackButtonEnabled;
 @property(readonly, nonatomic) _Bool shouldShowPositiveFeedback;
+@property(readonly, copy, nonatomic) NSURL *contextSource;
 @property(readonly, copy, nonatomic) NSString *subtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 - (void)stopObservers;

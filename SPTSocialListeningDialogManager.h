@@ -34,6 +34,8 @@
 - (void)presentSnackbarWithMessage:(id)arg1;
 - (void)presentNotificationForSession:(id)arg1 updateEvent:(id)arg2;
 - (void)presentSlateForSession:(id)arg1;
+- (void)presentDisclaimerForSessionURL:(id)arg1 name:(id)arg2;
+- (void)socialListeningModel:(id)arg1 didLookupURL:(id)arg2 name:(id)arg3;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningModel:(id)arg1 updatedSession:(id)arg2 updateEvent:(id)arg3;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;

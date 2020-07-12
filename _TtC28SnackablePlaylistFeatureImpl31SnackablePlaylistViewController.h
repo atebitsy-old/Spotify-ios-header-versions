@@ -6,29 +6,20 @@
 
 #import <UIKit/UIViewController.h>
 
-@class NSString, NSURL;
-
 @interface _TtC28SnackablePlaylistFeatureImpl31SnackablePlaylistViewController : UIViewController
 {
-    // Error parsing type: , name: pageIdentifier
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: playlistView
     // Error parsing type: , name: dependencies
-    // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)viewDidDisappear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
+- (void)viewWillLayoutSubviews;
+- (void)viewDidLoad;
 - (void)loadView;
+- (void)dealloc;
 - (id)initWithCoder:(id)arg1;
-- (id)spt_pageURI;
-@property(nonatomic, copy) NSString *pageIdentifier;
-- (id)spt_pageIdentifier;
-
-// Remaining properties
-@property(nonatomic, readonly) NSURL *pageURI;
 
 @end
 

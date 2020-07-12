@@ -9,13 +9,14 @@
 #import "SPTPodcastMixService-Protocol.h"
 
 @class NSMutableSet, NSString, SPSession, SPTAllocationContext, SPTPodcastMixConfiguration;
-@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistUIService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
+@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistUIService, SPTFreeTierTooltipService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
 
 @interface SPTPodcastMixServiceImplementation : NSObject <SPTPodcastMixService>
 {
     id <SPTContainerService> _containerService;
     id <SPTSessionService> _clientSessionService;
     id <SPTFreeTierPlaylistUIService> _freeTierPlaylistUIService;
+    id <SPTFreeTierTooltipService> _freeTierTooltipService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPContextMenuFeature> _contextMenuService;
@@ -31,13 +32,14 @@
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTFreeTierTooltipService> freeTierTooltipService; // @synthesize freeTierTooltipService=_freeTierTooltipService;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistUIService> freeTierPlaylistUIService; // @synthesize freeTierPlaylistUIService=_freeTierPlaylistUIService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
 - (id)manageEpisodeContextMenuTask:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3;
 - (_Bool)isFormatListLoadingForOwner:(id)arg1;
-- (void)customizeWithURL:(id)arg1 context:(id)arg2 configuration:(id)arg3 formatListAttributes:(id)arg4;
+- (void)customizeWithURL:(id)arg1 context:(id)arg2 playlistConfiguration:(id)arg3 formatListAttributes:(id)arg4 podcastMixConfiguration:(id)arg5;
 - (void)enableFeature;
 - (void)unload;
 - (void)load;

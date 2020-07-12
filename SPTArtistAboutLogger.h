@@ -22,8 +22,15 @@
 - (void)logArtistAboutImageGalleryDidSwipeWithArtistURI:(id)arg1;
 - (void)logHitInteractionForSocialLinkType:(unsigned long long)arg1 linkURI:(id)arg2 artistUri:(id)arg3;
 - (void)logImpressionForSocialLinks:(id)arg1 artistURI:(id)arg2;
+- (void)logImpressionForBioForURI:(id)arg1;
 - (void)logImpressionForGalleryWithArtistURI:(id)arg1;
-- (id)galleryFactoryWithArtistUri:(id)arg1;
+- (id)bioFactoryForUri:(id)arg1;
+- (id)socialFacebookLinkEventFactory:(id)arg1;
+- (id)socialTwitterLinkEventFactory:(id)arg1;
+- (id)socialInstagramLinkEventFactory:(id)arg1;
+- (id)socialWikipediaLinkEventFactory:(id)arg1;
+- (id)galleryFactoryForUri:(id)arg1;
+- (id)aboutEventFactoryForUri:(id)arg1;
 - (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2;
 
 @end

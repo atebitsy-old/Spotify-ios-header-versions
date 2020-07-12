@@ -7,29 +7,45 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistAdditionalCallToAction-Protocol.h"
+#import "SPTFreeTierPlaylistModelObserver-Protocol.h"
 
-@class NSString, NSURL;
-@protocol SPTFreeTierPlaylistAdditionalCallToActionDelegate, SPTLinkDispatcher;
+@class NSString, NSURL, UIView;
+@protocol SPTFreeTierPlaylistAdditionalCallToActionDelegate, SPTFreeTierTooltipConditionalPresenter, SPTLinkDispatcher;
 
-@interface SPTPodcastMixCallToActionCustomize : NSObject <SPTFreeTierPlaylistAdditionalCallToAction>
+@interface SPTPodcastMixCallToActionCustomize : NSObject <SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistModelObserver>
 {
     NSString *_accessibilityLabel;
     id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate;
     id <SPTLinkDispatcher> _linkDispatcher;
     NSURL *_targetURI;
+    id <SPTFreeTierTooltipConditionalPresenter> _tooltipPresenter;
+    long long _tootlipMaximumShowCount;
+    unsigned long long _ctaIcon;
+    NSString *_playlistName;
+    UIView *_ctaButtonWeakReferenceForTooltip;
 }
 
+@property(nonatomic) __weak UIView *ctaButtonWeakReferenceForTooltip; // @synthesize ctaButtonWeakReferenceForTooltip=_ctaButtonWeakReferenceForTooltip;
+@property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
+@property(nonatomic) unsigned long long ctaIcon; // @synthesize ctaIcon=_ctaIcon;
+@property(nonatomic) long long tootlipMaximumShowCount; // @synthesize tootlipMaximumShowCount=_tootlipMaximumShowCount;
+@property(retain, nonatomic) id <SPTFreeTierTooltipConditionalPresenter> tooltipPresenter; // @synthesize tooltipPresenter=_tooltipPresenter;
 @property(retain, nonatomic) NSURL *targetURI; // @synthesize targetURI=_targetURI;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate; // @synthesize delegate;
 @property(copy, nonatomic) NSString *accessibilityLabel; // @synthesize accessibilityLabel=_accessibilityLabel;
 - (void).cxx_destruct;
+- (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
+- (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
+- (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
+- (void)didRenderInView:(id)arg1;
+- (void)didAppearInViewController:(id)arg1;
 @property(readonly, nonatomic) _Bool selected;
 @property(readonly, nonatomic) unsigned long long icon;
 - (void)performAction:(id)arg1;
 @property(readonly, nonatomic) _Bool enabled;
 - (id)title;
-- (id)initWithTargetURI:(id)arg1 linkDispatcher:(id)arg2;
+- (id)initWithTargetURI:(id)arg1 linkDispatcher:(id)arg2 tooltipPresenter:(id)arg3 tootlipMaximumShowCount:(long long)arg4 ctaIcon:(unsigned long long)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

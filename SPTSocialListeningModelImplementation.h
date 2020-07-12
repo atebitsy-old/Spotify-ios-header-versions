@@ -50,6 +50,7 @@
 - (void)socialListeningDataLoader:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningDataLoader:(id)arg1 didEndSession:(id)arg2 updateEvent:(id)arg3;
 - (void)socialListeningDataLoader:(id)arg1 didObtainSession:(id)arg2 updateEvent:(id)arg3;
+- (void)socialListeningDataLoader:(id)arg1 didLookupSession:(id)arg2;
 - (void)updateCoreSocialListeningState;
 - (void)requestScannableForSession:(id)arg1;
 - (void)fetchScannablesImageForSession:(id)arg1;
@@ -69,7 +70,10 @@
 - (void)addObserver:(id)arg1;
 - (void)pauseCurrentPlayback;
 - (void)leaveSession;
-- (void)joinSession:(id)arg1;
+- (void)joinSessionWithURL:(id)arg1;
+- (void)joinSessionConfirmed:(_Bool)arg1 sessionURL:(id)arg2;
+- (void)lookupSessionBeforeJoining:(id)arg1;
+- (void)lookupSessionWithURL:(id)arg1;
 - (void)loadSession:(_Bool)arg1;
 - (id)initWithDataLoader:(id)arg1 scannablesDataSource:(id)arg2 player:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5;
 

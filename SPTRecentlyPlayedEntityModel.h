@@ -20,8 +20,10 @@
     id <SPTLocalSettings> _localSettings;
     NSMutableArray *_allEntities;
     NSHashTable *_observers;
+    CDUnknownBlockType _exchangeImageBlock;
 }
 
+@property(copy, nonatomic) CDUnknownBlockType exchangeImageBlock; // @synthesize exchangeImageBlock=_exchangeImageBlock;
 @property(nonatomic) _Bool evaluateOfflineSyncStatus; // @synthesize evaluateOfflineSyncStatus=_evaluateOfflineSyncStatus;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSMutableArray *allEntities; // @synthesize allEntities=_allEntities;
@@ -39,7 +41,7 @@
 - (void)notifyObservers;
 @property(readonly, nonatomic) NSArray *recentlyPlayedEntities;
 - (void)subscribe;
-- (id)initWithDataLoader:(id)arg1 collectionTestManager:(id)arg2 offlineNotifier:(id)arg3 linkDispatcher:(id)arg4 localSetting:(id)arg5 evaluateOfflineSyncStatus:(_Bool)arg6;
+- (id)initWithDataLoader:(id)arg1 collectionTestManager:(id)arg2 offlineNotifier:(id)arg3 linkDispatcher:(id)arg4 localSetting:(id)arg5 evaluateOfflineSyncStatus:(_Bool)arg6 exchangeImageBlock:(CDUnknownBlockType)arg7;
 
 @end
 

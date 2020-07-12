@@ -28,14 +28,18 @@
     NSLayoutConstraint *_titleBottomMargin;
     NSLayoutConstraint *_mainContainerCompactWidth;
     NSLayoutConstraint *_mainContainerRegularWidth;
+    NSLayoutConstraint *_imageAspectRatio;
     GLUELabel *_titleLabel;
     UIView *_mainContainer;
     GLUEGradientView *_gradientView;
+    UIView *_opaqueButtonBackgroundView;
 }
 
+@property(readonly, nonatomic) UIView *opaqueButtonBackgroundView; // @synthesize opaqueButtonBackgroundView=_opaqueButtonBackgroundView;
 @property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(retain, nonatomic) NSLayoutConstraint *imageAspectRatio; // @synthesize imageAspectRatio=_imageAspectRatio;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(retain, nonatomic) NSLayoutConstraint *titleBottomMargin; // @synthesize titleBottomMargin=_titleBottomMargin;
@@ -46,12 +50,13 @@
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoBottomEdge; // @synthesize spotifyLogoBottomEdge=_spotifyLogoBottomEdge;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgePreferred; // @synthesize spotifyLogoTopEdgePreferred=_spotifyLogoTopEdgePreferred;
 @property(retain, nonatomic) NSLayoutConstraint *spotifyLogoTopEdgeMinimum; // @synthesize spotifyLogoTopEdgeMinimum=_spotifyLogoTopEdgeMinimum;
-@property(retain, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
+@property(readonly, nonatomic) GLUELabel *helpTextLabel; // @synthesize helpTextLabel=_helpTextLabel;
 @property(readonly, nonatomic) UIImageView *spotifyLogo; // @synthesize spotifyLogo=_spotifyLogo;
 @property(readonly, nonatomic) UIImageView *artworkImageView; // @synthesize artworkImageView=_artworkImageView;
 @property(nonatomic) __weak id <SPTLoginViewWithActionButtonsDelegate> delegate; // @synthesize delegate;
 @property(readonly, nonatomic) UIStackView *buttonsContainerView; // @synthesize buttonsContainerView=_buttonsContainerView;
 - (void).cxx_destruct;
+- (void)updateImageAspectRatio:(double)arg1;
 - (void)actionButtonTapped:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setPropLabelText:(id)arg1;

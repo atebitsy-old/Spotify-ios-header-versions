@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl27DevicePickerContextMenuView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: isMini
     // Error parsing type: , name: $__lazy_storage_$_tableView
     // Error parsing type: , name: $__lazy_storage_$_backgroundView
     // Error parsing type: , name: $__lazy_storage_$_closeButton

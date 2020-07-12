@@ -9,10 +9,10 @@
 @protocol SPTAlertInterface, SPTFreeTierEntityOfflineDelegate;
 
 @protocol SPTFreeTierEntityOfflineViewModel <NSObject>
-@property(readonly, nonatomic) id <SPTAlertInterface> alertInterface;
-@property(nonatomic) __weak id <SPTFreeTierEntityOfflineDelegate> offlineDelegate;
 - (void)setEntityOffline:(_Bool)arg1;
 - (_Bool)isEntityOffline;
 - (_Bool)isOfflineSyncAvailable;
+@property(nonatomic, readonly) id <SPTAlertInterface> alertInterface;
+@property(nonatomic) __weak id <SPTFreeTierEntityOfflineDelegate> offlineDelegate;
 @end
 

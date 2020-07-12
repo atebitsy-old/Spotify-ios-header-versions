@@ -6,6 +6,13 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol SPTYourLibraryMusicPlaylistFilter, _TtP17OfflineMixFeature23SPTOfflineMixDataLoader_, _TtP17OfflineMixFeature24SPTOfflineMixTestManager_, _TtP17OfflineMixFeature26SPTOfflineMixModelProvider_, _TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_;
+
 @protocol _TtP17OfflineMixFeature20SPTOfflineMixService_ <SPTService>
+- (id <SPTYourLibraryMusicPlaylistFilter>)providePlaylistFilter;
+- (id <_TtP17OfflineMixFeature26SPTOfflineMixModelProvider_>)provideModelProvider;
+- (id <_TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_>)provideDownloadManager;
+- (id <_TtP17OfflineMixFeature23SPTOfflineMixDataLoader_>)provideDataLoader;
+- (id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_>)provideTestManager;
 @end
 

@@ -10,6 +10,7 @@
 
 @protocol SPTPlayerQueue <NSObject>
 - (SPTask *)queueMultipleTracks:(NSArray *)arg1;
+- (SPTask *)queueTrackPlayNext:(SPTPlayerTrack *)arg1;
 - (SPTask *)queueTrack:(SPTPlayerTrack *)arg1;
 - (SPTask *)fetchQueue;
 @end

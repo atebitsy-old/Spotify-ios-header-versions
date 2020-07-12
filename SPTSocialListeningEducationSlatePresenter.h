@@ -10,12 +10,11 @@
 #import "SPTSlateDelegate-Protocol.h"
 #import "SPTSocialListeningEducationSlateViewControllerDelegate-Protocol.h"
 #import "SPTSocialListeningListenTogetherDisclaimerViewControllerDelegate-Protocol.h"
-#import "SPTSocialListeningListenTogetherSlatePresenter-Protocol.h"
 
 @class NSString, SPTSocialListeningEducationSlateViewController, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherDisclaimerViewController;
 @protocol SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTSocialListeningTestManager;
 
-@interface SPTSocialListeningEducationSlatePresenter : NSObject <SPTSlateDelegate, SPTSlateDataSource, SPTSocialListeningEducationSlateViewControllerDelegate, SPTSocialListeningListenTogetherDisclaimerViewControllerDelegate, SPTSocialListeningListenTogetherSlatePresenter>
+@interface SPTSocialListeningEducationSlatePresenter : NSObject <SPTSlateDelegate, SPTSlateDataSource, SPTSocialListeningEducationSlateViewControllerDelegate, SPTSocialListeningListenTogetherDisclaimerViewControllerDelegate>
 {
     SPTSocialListeningEducationSlateViewController *_contentViewController;
     id <SPTSlate> _educationSlate;

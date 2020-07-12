@@ -16,9 +16,6 @@
 {
     _Bool _freeTierEnabled;
     _Bool _localBansEnabled;
-    _Bool _noSkipLimitEnabled;
-    _Bool _musicSleepTimerEnabled;
-    _Bool _nowPlayingBarImprovementsEnabled;
     _Bool _contextAwareEditorialTrackSharingEnabled;
     _Bool _isNowPlayingBarLyricsLabelEnabled;
     _Bool _isContentLayerLyricsButtonEnabled;
@@ -35,9 +32,6 @@
     id <SPTFeatureFlagSignal> _contextAwareEditorialTrackSharingSignal;
     id <SPTFeatureFlagSignal> _podcastChaptersSignal;
     id <SPTFeatureFlagSignal> _concertCardsSignal;
-    id <SPTFeatureFlagSignal> _noSkipLimitEnabledSignal;
-    id <SPTFeatureFlagSignal> _musicSleepTimerSignal;
-    id <SPTFeatureFlagSignal> _nowPlayingBarImprovementsSignal;
     id <SPTLocalSettings> _localSettings;
     SPTNowPlayingScrollConfiguration *_scrollConfiguration;
     id <SPTFeatureFlagSignal> _lyricsNPBLabelSignal;
@@ -60,12 +54,6 @@
 @property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
 @property(retain, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration; // @synthesize scrollConfiguration=_scrollConfiguration;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> nowPlayingBarImprovementsSignal; // @synthesize nowPlayingBarImprovementsSignal=_nowPlayingBarImprovementsSignal;
-@property(nonatomic, getter=isNowPlayingBarImprovementsEnabled) _Bool nowPlayingBarImprovementsEnabled; // @synthesize nowPlayingBarImprovementsEnabled=_nowPlayingBarImprovementsEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> musicSleepTimerSignal; // @synthesize musicSleepTimerSignal=_musicSleepTimerSignal;
-@property(nonatomic, getter=isMusicSleepTimerEnabled) _Bool musicSleepTimerEnabled; // @synthesize musicSleepTimerEnabled=_musicSleepTimerEnabled;
-@property(nonatomic, getter=isNoSkipLimitEnabled) _Bool noSkipLimitEnabled; // @synthesize noSkipLimitEnabled=_noSkipLimitEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> noSkipLimitEnabledSignal; // @synthesize noSkipLimitEnabledSignal=_noSkipLimitEnabledSignal;
 @property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> concertCardsSignal; // @synthesize concertCardsSignal=_concertCardsSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> podcastChaptersSignal; // @synthesize podcastChaptersSignal=_podcastChaptersSignal;
@@ -91,9 +79,8 @@
 - (void)createFeedbackCardsSignal;
 - (void)createConcertCardsSignal;
 - (void)createPodcastChaptersSignal;
-- (void)createNowPlayingBarImprovementsSignal;
-- (void)createMusicSleepTimerSignal;
-- (void)createNoSkipLimitSignal;
+@property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;
+@property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;
 @property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventLoggingEnabled) _Bool remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;

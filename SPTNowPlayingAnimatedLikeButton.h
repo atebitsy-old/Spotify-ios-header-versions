@@ -6,19 +6,24 @@
 
 #import "GLUEButtonAnimatable.h"
 
-@class UINotificationFeedbackGenerator;
+@class NSSet, UINotificationFeedbackGenerator;
 
 @interface SPTNowPlayingAnimatedLikeButton : GLUEButtonAnimatable
 {
     _Bool _isUserInitiatedTransitionInProgress;
     UINotificationFeedbackGenerator *_feedbackGenerator;
+    NSSet *_prideURIs;
 }
 
+@property(copy, nonatomic) NSSet *prideURIs; // @synthesize prideURIs=_prideURIs;
 @property(retain, nonatomic) UINotificationFeedbackGenerator *feedbackGenerator; // @synthesize feedbackGenerator=_feedbackGenerator;
 @property(nonatomic) _Bool isUserInitiatedTransitionInProgress; // @synthesize isUserInitiatedTransitionInProgress=_isUserInitiatedTransitionInProgress;
 - (void).cxx_destruct;
+- (id)pridePlaylists;
 - (void)setSelected:(_Bool)arg1 isUserInitated:(_Bool)arg2;
 - (void)dealloc;
+- (void)updateAnimation:(long long)arg1;
+- (void)updateAnimationFortContextSource:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

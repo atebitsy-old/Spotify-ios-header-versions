@@ -16,8 +16,6 @@
 {
     _Bool _premiumLabelEnabled;
     _Bool _consolidatedExperienceEnabled;
-    _Bool _likedSongsFiltersReversedEnabled;
-    _Bool _likedSongsFilterChipsAbbaEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTProductState> _productState;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
@@ -27,11 +25,11 @@
     id <SPTFeatureFlagSignal> _windowedTrackTestSignal;
     id <SPTFeatureFlagSignal> _consolidatedExperienceSignal;
     NSDictionary *_likedSongsFiltersSignals;
+    unsigned long long _likedSongsFiltersAbbaSource;
 }
 
-@property(nonatomic, getter=isLikedSongsFilterChipsAbbaEnabled) _Bool likedSongsFilterChipsAbbaEnabled; // @synthesize likedSongsFilterChipsAbbaEnabled=_likedSongsFilterChipsAbbaEnabled;
+@property(nonatomic) unsigned long long likedSongsFiltersAbbaSource; // @synthesize likedSongsFiltersAbbaSource=_likedSongsFiltersAbbaSource;
 @property(copy, nonatomic) NSDictionary *likedSongsFiltersSignals; // @synthesize likedSongsFiltersSignals=_likedSongsFiltersSignals;
-@property(nonatomic, getter=isLikedSongsFiltersReversedEnabled) _Bool likedSongsFiltersReversedEnabled; // @synthesize likedSongsFiltersReversedEnabled=_likedSongsFiltersReversedEnabled;
 @property(nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled; // @synthesize consolidatedExperienceEnabled=_consolidatedExperienceEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> consolidatedExperienceSignal; // @synthesize consolidatedExperienceSignal=_consolidatedExperienceSignal;
 @property(nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled; // @synthesize premiumLabelEnabled=_premiumLabelEnabled;
@@ -49,7 +47,9 @@
 @property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanismInLikedSongs;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
+@property(readonly, nonatomic) unsigned long long likedSongsFiltersRCSource;
 @property(readonly, nonatomic, getter=isLikedSongsFiltersEnabled) _Bool likedSongsFiltersEnabled;
+@property(readonly, nonatomic) unsigned long long likedSongsFiltersSource;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;
 @property(readonly, nonatomic, getter=isHideCreatePlaylistEnabled) _Bool hideCreatePlaylistEnabled;
 - (void)setupRemoteConfigurationProperties;

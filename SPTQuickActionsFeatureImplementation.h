@@ -9,7 +9,7 @@
 #import "SPTQuickActionsFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTQuickActionsController;
-@protocol SPTContainerService, SPTRecentlyPlayedService, SPTScannablesService, SPTURIDispatchService;
+@protocol SPTContainerService, SPTRecentlyPlayedService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesService, SPTURIDispatchService;
 
 @interface SPTQuickActionsFeatureImplementation : NSObject <SPTQuickActionsFeature>
 {
@@ -17,11 +17,15 @@
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTScannablesService> _scannablesService;
     id <SPTURIDispatchService> _URIDispatchService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTQuickActionsController *_quickActionsController;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTQuickActionsController *quickActionsController; // @synthesize quickActionsController=_quickActionsController;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
@@ -29,6 +33,8 @@
 - (void).cxx_destruct;
 - (id)provideQuickActionsHandler;
 - (void)unload;
+- (_Bool)isQuickActionsEnabled;
+- (void)idleStateWasReached;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

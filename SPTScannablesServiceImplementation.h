@@ -9,7 +9,7 @@
 #import "SPTScannablesService-Protocol.h"
 
 @class NSMutableDictionary, NSString, SPTAllocationContext, SPTScannablesAuthorizationRequester, SPTScannablesDependencies, SPTScannablesImageLoaderRequestFactory, SPTScannablesScanViewModelFactory, SPTScannablesSlateFactory, SPTScannablesUserInterfaceFactoryImplementation;
-@protocol SPTBarButtonItemManager, SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTScannablesOnboardingPresenter, SPTScannablesPresenter, SPTScannablesRegistry, SPTScannablesShortcutItemProvider, SPTSessionService, SPTSettingsFeature, SPTTooltipService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SlateFeature;
+@protocol SPTBarButtonItemManager, SPTContainerService, SPTContainerUIService, SPTFreeTierTooltipService, SPTGLUEService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTScannablesOnboardingPresenter, SPTScannablesPresenter, SPTScannablesRegistry, SPTScannablesShortcutItemProvider, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SlateFeature;
 
 @interface SPTScannablesServiceImplementation : NSObject <SPTScannablesService>
 {
@@ -21,7 +21,7 @@
     id <SlateFeature> _slateFeature;
     id <SPTLocalSettings> _localSettings;
     id <SPTURIDispatchService> _uriDispatchService;
-    id <SPTTooltipService> _tooltipService;
+    id <SPTFreeTierTooltipService> _tooltipService;
     id <SPTSettingsFeature> _settingsService;
     id <SPTGLUEService> _glueService;
     id <SPTUIPresentationService> _UIPresentationService;
@@ -57,7 +57,7 @@
 @property(nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
-@property(nonatomic) __weak id <SPTTooltipService> tooltipService; // @synthesize tooltipService=_tooltipService;
+@property(nonatomic) __weak id <SPTFreeTierTooltipService> tooltipService; // @synthesize tooltipService=_tooltipService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) __weak id <SlateFeature> slateFeature; // @synthesize slateFeature=_slateFeature;

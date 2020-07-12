@@ -10,7 +10,7 @@
 #import "SPTNowPlayingInformationUnitViewModelDelegate-Protocol.h"
 #import "SPTNowPlayingLyricsButtonViewDelegate-Protocol.h"
 
-@class NSMutableArray, NSString, SPTNowPlayingAnimatedLikeButton, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
+@class NSMutableArray, NSString, NSURL, SPTNowPlayingAnimatedLikeButton, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
 @protocol SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTSnackbarConditionalPresenter, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
 @interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewDelegate, SPTNowPlayingContainedViewController>
@@ -21,6 +21,7 @@
     SPTNowPlayingMarqueeLabel *_subtitleLabel;
     SPTNowPlayingFreeTierFeedbackButton *_positiveFeedbackButton;
     SPTNowPlayingAnimatedLikeButton *_animatedLikeButton;
+    NSURL *_currentContextSource;
     SPTNowPlayingLyricsButtonView *_lyricsView;
     SPTNowPlayingInformationUnitViewModelImplementation *_viewModel;
     NSMutableArray *_layoutConstraints;
@@ -39,6 +40,7 @@
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTNowPlayingInformationUnitViewModelImplementation *viewModel; // @synthesize viewModel=_viewModel;
 @property(retain, nonatomic) SPTNowPlayingLyricsButtonView *lyricsView; // @synthesize lyricsView=_lyricsView;
+@property(copy, nonatomic) NSURL *currentContextSource; // @synthesize currentContextSource=_currentContextSource;
 @property(retain, nonatomic) SPTNowPlayingAnimatedLikeButton *animatedLikeButton; // @synthesize animatedLikeButton=_animatedLikeButton;
 @property(retain, nonatomic) SPTNowPlayingFreeTierFeedbackButton *positiveFeedbackButton; // @synthesize positiveFeedbackButton=_positiveFeedbackButton;
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;

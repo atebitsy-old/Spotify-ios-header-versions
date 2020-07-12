@@ -6,12 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError;
+@class NSData, NSError;
 @protocol SPTVoiceLibraryAudioRecorder;
 
 @protocol SPTVoiceLibraryAudioRecorderObserver <NSObject>
 - (void)audioRecorderDidStartRecording:(id <SPTVoiceLibraryAudioRecorder>)arg1;
 - (void)audioRecorder:(id <SPTVoiceLibraryAudioRecorder>)arg1 didFailWithError:(NSError *)arg2;
+- (void)audioRecorder:(id <SPTVoiceLibraryAudioRecorder>)arg1 didRecordAudioChunk:(NSData *)arg2;
 - (void)audioRecorder:(id <SPTVoiceLibraryAudioRecorder>)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;
 
 @optional

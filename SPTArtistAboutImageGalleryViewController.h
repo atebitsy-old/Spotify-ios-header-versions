@@ -11,7 +11,7 @@
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 
-@class NSArray, NSLayoutConstraint, NSString, NSURL, SPTArtistAboutGLUETheme, SPTArtistAboutLogger, SPTArtistAboutStateProvider, UICollectionView, UIScrollView;
+@class NSArray, NSLayoutConstraint, NSString, NSURL, SPTArtistAboutGLUETheme, SPTArtistAboutLogger, SPTArtistAboutStateProvider, UICollectionView;
 @protocol GLUEImageLoader;
 
 @interface SPTArtistAboutImageGalleryViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate>
@@ -25,11 +25,9 @@
     SPTArtistAboutLogger *_logger;
     UICollectionView *_collectionView;
     NSLayoutConstraint *_collectionViewHeightConstraint;
-    UIScrollView *_snapToPageScrollView;
 }
 
 @property(nonatomic) _Bool didSwipe; // @synthesize didSwipe=_didSwipe;
-@property(retain, nonatomic) UIScrollView *snapToPageScrollView; // @synthesize snapToPageScrollView=_snapToPageScrollView;
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(retain, nonatomic) SPTArtistAboutLogger *logger; // @synthesize logger=_logger;
@@ -39,19 +37,16 @@
 @property(retain, nonatomic) NSURL *artistURI; // @synthesize artistURI=_artistURI;
 @property(copy, nonatomic) NSArray *galleryImages; // @synthesize galleryImages=_galleryImages;
 - (void).cxx_destruct;
+- (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
-- (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
-- (void)scrollViewDidEndDecelerating:(id)arg1;
-- (void)scrollViewDidScroll:(id)arg1;
 - (struct CGSize)sizeForCell;
 - (void)updateCollectionViewContentInset;
-- (void)recenterContent;
-- (void)reloadSnapToPageScrollView;
-- (void)applyGalleryEffects;
 - (void)didTapGallery:(id)arg1;
-- (void)viewDidLayoutSubviews;
+- (void)applyGalleryEffects;
+- (void)scrollViewDidEndDecelerating:(id)arg1;
+- (void)scrollViewDidScroll:(id)arg1;
 - (id)displayedGalleryImage;
 - (void)addLayoutConstraints;
 - (void)viewDidLoad;

@@ -6,16 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileArtistAbout_AboutBiographyEventFactory, SPTUBIMobileArtistAbout_GalleryEventFactory, SPTUBIMobileArtistAbout_SocialFacebookLinkEventFactory, SPTUBIMobileArtistAbout_SocialInstagramLinkEventFactory, SPTUBIMobileArtistAbout_SocialTwitterLinkEventFactory, SPTUBIMobileArtistAbout_SocialWikipediaLinkEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobileArtistAbout_AboutAutobiographyEventFactory, SPTUBIMobileArtistAbout_AboutBiographyEventFactory, SPTUBIMobileArtistAbout_GalleryEventFactory, SPTUBIMobileArtistAbout_SocialFacebookLinkEventFactory, SPTUBIMobileArtistAbout_SocialInstagramLinkEventFactory, SPTUBIMobileArtistAbout_SocialTwitterLinkEventFactory, SPTUBIMobileArtistAbout_SocialWikipediaLinkEventFactory;
 
 @protocol SPTUBIMobileArtistAboutEventFactory <NSObject>
-- (id <SPTUBIMobileArtistAbout_SocialFacebookLinkEventFactory>)socialFacebookLinkFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIMobileArtistAbout_SocialInstagramLinkEventFactory>)socialInstagramLinkFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIMobileArtistAbout_SocialTwitterLinkEventFactory>)socialTwitterLinkFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIMobileArtistAbout_SocialWikipediaLinkEventFactory>)socialWikipediaLinkFactoryWithUri:(NSURL *)arg1;
+- (id <SPTUBIMobileArtistAbout_SocialFacebookLinkEventFactory>)socialFacebookLinkFactory;
+- (id <SPTUBIMobileArtistAbout_SocialInstagramLinkEventFactory>)socialInstagramLinkFactory;
+- (id <SPTUBIMobileArtistAbout_SocialTwitterLinkEventFactory>)socialTwitterLinkFactory;
+- (id <SPTUBIMobileArtistAbout_SocialWikipediaLinkEventFactory>)socialWikipediaLinkFactory;
+- (id <SPTUBIMobileArtistAbout_AboutAutobiographyEventFactory>)aboutAutobiographyFactory;
 - (id <SPTUBIMobileArtistAbout_AboutBiographyEventFactory>)aboutBiographyFactory;
-- (id <SPTUBIMobileArtistAbout_GalleryEventFactory>)galleryFactoryWithUri:(NSURL *)arg1;
+- (id <SPTUBIMobileArtistAbout_GalleryEventFactory>)galleryFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

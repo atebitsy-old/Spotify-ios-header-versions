@@ -19,12 +19,14 @@
     // Error parsing type: , name: playerService
     // Error parsing type: , name: coreService
     // Error parsing type: , name: ubiService
+    // Error parsing type: , name: inAppMessageService
     // Error parsing type: , name: $__lazy_storage_$_gaiaDevicePresenterProxy
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenter
     // Error parsing type: , name: $__lazy_storage_$_player
     // Error parsing type: , name: $__lazy_storage_$_devicePickerContextMenuControllerFactory
     // Error parsing type: , name: $__lazy_storage_$_devicePickerControllerFactory
     // Error parsing type: , name: $__lazy_storage_$_devicePicerContextMenuIconManager
+    // Error parsing type: , name: $__lazy_storage_$_scrollObserverManager
     // Error parsing type: , name: $__lazy_storage_$_devicePickerTheme
     // Error parsing type: , name: $__lazy_storage_$_devicePickerLogger
     // Error parsing type: , name: $__lazy_storage_$_devicePickerLoggingInterceptor
@@ -32,6 +34,7 @@
     // Error parsing type: , name: $__lazy_storage_$_connectButtonFactory
     // Error parsing type: , name: $__lazy_storage_$_connectImageFactory
     // Error parsing type: , name: $__lazy_storage_$_connectNPBIntegration
+    // Error parsing type: , name: $__lazy_storage_$_deviceSortingManager
     // Error parsing type: , name: $__lazy_storage_$_uriDispatcher
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenterRouter
     // Error parsing type: , name: $__lazy_storage_$_nudgeManager

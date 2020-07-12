@@ -9,19 +9,19 @@
 #import "SPTVoiceDeeplinkURIResolver-Protocol.h"
 
 @class NSString;
-@protocol SPTEntityService, SPTShowEntityService;
+@protocol SPTEntityService, SPTPodcastEntityDataLoader;
 
 @interface SPTVoiceDeeplinkURIResolverImplementation : NSObject <SPTVoiceDeeplinkURIResolver>
 {
     id <SPTEntityService> _entityService;
-    id <SPTShowEntityService> _showEntityService;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
 }
 
-@property(readonly, nonatomic) id <SPTShowEntityService> showEntityService; // @synthesize showEntityService=_showEntityService;
+@property(readonly, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(readonly, nonatomic) id <SPTEntityService> entityService; // @synthesize entityService=_entityService;
 - (void).cxx_destruct;
 - (void)resolveDeeplinkWithCommand:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (id)initWithEntityService:(id)arg1 showEntityService:(id)arg2;
+- (id)initWithEntityService:(id)arg1 podcastEntityDataLoader:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

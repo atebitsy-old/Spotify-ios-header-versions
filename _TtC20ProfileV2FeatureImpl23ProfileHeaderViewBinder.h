@@ -10,7 +10,6 @@
 {
     // Error parsing type: , name: headerView
     // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: remoteConfigurationProperties
 }
 
 @end

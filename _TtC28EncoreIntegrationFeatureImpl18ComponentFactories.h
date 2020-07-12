@@ -14,12 +14,15 @@
     // Error parsing type: , name: $__lazy_storage_$_trackRowPlaylistExtender
     // Error parsing type: , name: $__lazy_storage_$_albumHeader
     // Error parsing type: , name: $__lazy_storage_$_playlistHeader
+    // Error parsing type: , name: $__lazy_storage_$_downloadButton
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (id)makeAlbumHeader:(long long)arg1;
 - (id)makeAlbumHeader;
+- (id)makeDownloadButton:(long long)arg1;
+- (id)makeDownloadButton;
 - (id)makePlaylistHeader:(long long)arg1;
 - (id)makePlaylistHeader;
 - (id)makeTrackRowArtist:(long long)arg1;

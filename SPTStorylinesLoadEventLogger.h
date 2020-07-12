@@ -6,20 +6,20 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter, SPTPlayer;
+@protocol SPTEventSender, SPTPlayer;
 
 @interface SPTStorylinesLoadEventLogger : NSObject
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     id <SPTPlayer> _player;
 }
 
-@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
 - (void)logStorylinesLoadEventForEntityUri:(id)arg1 storylinesIdentifier:(id)arg2 assetIdentifier:(id)arg3 requestType:(long long)arg4 eventType:(long long)arg5 source:(long long)arg6 detail:(id)arg7;
 - (void)logPlayerStateWithEvent:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 player:(id)arg2;
+- (id)initWithEventSender:(id)arg1 player:(id)arg2;
 
 @end
 

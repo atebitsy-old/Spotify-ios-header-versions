@@ -8,7 +8,7 @@
 
 @protocol SPTYourLibraryMusicTestManager <NSObject>
 @property(readonly, nonatomic, getter=isHideCreatePlaylistEnabled) _Bool hideCreatePlaylistEnabled;
-@property(readonly, nonatomic, getter=isLikedSongsFiltersReversedEnabled) _Bool likedSongsFiltersReversedEnabled;
+@property(readonly, nonatomic) unsigned long long likedSongsFiltersSource;
 @property(readonly, nonatomic, getter=isLikedSongsFiltersEnabled) _Bool likedSongsFiltersEnabled;
 @property(readonly, nonatomic, getter=isOfflineArtistEnabled) _Bool offlineArtistEnabled;
 @property(readonly, nonatomic) long long quickScrollMinPages;

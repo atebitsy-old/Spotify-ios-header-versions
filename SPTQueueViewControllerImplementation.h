@@ -17,7 +17,7 @@
 #import "UITableViewDataSource-Protocol.h"
 
 @class GLUEEntityRowStyle, NSIndexPath, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSNotificationCenter, NSObject, NSString, NSURL, SPTQueueTableViewSectionHeaderView, SPTQueueTheme, SPTQueueViewModelDataSource, SPTTableView, UIButton, UIView;
-@protocol GLUEImageLoader, OS_dispatch_queue, OS_dispatch_semaphore, SPTCrashReporter, SPTNowPlayingModeResolver, SPTPageContainer, SPTQueueLogger, SPTQueuePlaybackRestrictionHandler, SPTQueueViewControllerDelegate, SPTQueueViewModel, SPTShowEntityService;
+@protocol GLUEImageLoader, OS_dispatch_queue, OS_dispatch_semaphore, SPTCrashReporter, SPTNowPlayingModeResolver, SPTPageContainer, SPTPodcastEntityDataLoader, SPTQueueLogger, SPTQueuePlaybackRestrictionHandler, SPTQueueViewControllerDelegate, SPTQueueViewModel;
 
 @interface SPTQueueViewControllerImplementation : UIViewController <UITableViewDataSource, SPTUITableViewExtendedDelegate, SPTQueueSelectableLeadingViewDelegate, SPTQueueTableViewSectionHeaderViewDelegate, SPTQueueViewModelDelegate, SPTProductStateObserver, SPTNowPlayingModeResolverObserver, SPTQueueEnabling, SPTPageController>
 {
@@ -28,7 +28,7 @@
     id <SPTQueueViewModel> _viewModel;
     id <SPTQueueViewControllerDelegate> _delegate;
     id <GLUEImageLoader> _glueImageLoader;
-    id <SPTShowEntityService> _entityService;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
     CDUnknownBlockType _presentContextMenuBlock;
     id <SPTNowPlayingModeResolver> _modeResolver;
     NSURL *_pageURI;
@@ -93,7 +93,7 @@
 @property(retain, nonatomic, getter=spt_pageURI) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(readonly, nonatomic) CDUnknownBlockType presentContextMenuBlock; // @synthesize presentContextMenuBlock=_presentContextMenuBlock;
-@property(readonly, nonatomic) id <SPTShowEntityService> entityService; // @synthesize entityService=_entityService;
+@property(readonly, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) __weak id <SPTQueueViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) id <SPTQueueViewModel> viewModel; // @synthesize viewModel=_viewModel;
@@ -190,7 +190,7 @@
 - (void)updateViewConstraints;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 delegate:(id)arg2 glueImageLoader:(id)arg3 entityService:(id)arg4 presentContextMenuBlock:(CDUnknownBlockType)arg5 modeResolver:(id)arg6 navigationBarViewControllerV2:(id)arg7 pageURI:(id)arg8 queueTheme:(id)arg9 logger:(id)arg10 crashReporter:(id)arg11 notificationCenter:(id)arg12 playbackRestrictionHandler:(id)arg13;
+- (id)initWithViewModel:(id)arg1 delegate:(id)arg2 glueImageLoader:(id)arg3 podcastEntityDataLoader:(id)arg4 presentContextMenuBlock:(CDUnknownBlockType)arg5 modeResolver:(id)arg6 navigationBarViewControllerV2:(id)arg7 pageURI:(id)arg8 queueTheme:(id)arg9 logger:(id)arg10 crashReporter:(id)arg11 notificationCenter:(id)arg12 playbackRestrictionHandler:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -13,6 +13,7 @@
 @interface SPTSocialListeningFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _canUseSocialSessions;
+    _Bool _shareLink;
     long long _multiOutputMaxNumberOfParticipants;
     unsigned long long _socialListeningMode;
     NSString *_socialListeningModeString;
@@ -21,6 +22,7 @@
 @property(retain, nonatomic) NSString *socialListeningModeString; // @synthesize socialListeningModeString=_socialListeningModeString;
 @property(readonly, nonatomic) unsigned long long socialListeningMode; // @synthesize socialListeningMode=_socialListeningMode;
 @property(readonly, nonatomic) long long multiOutputMaxNumberOfParticipants; // @synthesize multiOutputMaxNumberOfParticipants=_multiOutputMaxNumberOfParticipants;
+@property(readonly, nonatomic) _Bool shareLink; // @synthesize shareLink=_shareLink;
 @property(readonly, nonatomic) _Bool canUseSocialSessions; // @synthesize canUseSocialSessions=_canUseSocialSessions;
 - (void).cxx_destruct;
 - (unsigned long long)mapSocialListeningModeToEnumValue:(id)arg1;

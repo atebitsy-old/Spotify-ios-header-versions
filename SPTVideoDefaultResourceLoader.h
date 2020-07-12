@@ -8,7 +8,7 @@
 
 #import "SPTVideoResourceLoaderInternal-Protocol.h"
 
-@class NSMutableSet, NSString, NSURL, SPTVideoManifest;
+@class NSArray, NSMutableSet, NSString, NSURL, SPTVideoManifest;
 @protocol BMPlaybackIdentity, SPTVideoResourceLoaderInternalDelegate, SPTVideoResourceRequestFactory;
 
 @interface SPTVideoDefaultResourceLoader : NSObject <SPTVideoResourceLoaderInternal>
@@ -21,8 +21,10 @@
     id <BMPlaybackIdentity> _identity;
     id <SPTVideoResourceRequestFactory> _resourceRequestFactory;
     NSMutableSet *_requests;
+    NSArray *_supportedSchemes;
 }
 
+@property(copy, nonatomic) NSArray *supportedSchemes; // @synthesize supportedSchemes=_supportedSchemes;
 @property(retain, nonatomic) NSMutableSet *requests; // @synthesize requests=_requests;
 @property(retain, nonatomic) id <SPTVideoResourceRequestFactory> resourceRequestFactory; // @synthesize resourceRequestFactory=_resourceRequestFactory;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;

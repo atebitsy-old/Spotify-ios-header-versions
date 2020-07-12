@@ -30,6 +30,7 @@
 + (id)heartDeselectionWhite70;
 + (id)heartSelectionWhite70;
 + (id)heartDeselection;
++ (id)heartSelectionPride;
 + (id)heartSelection;
 @property(readonly, nonatomic) NSBundle *bundle; // @synthesize bundle=_bundle;
 @property(readonly, copy, nonatomic) NSString *animationName; // @synthesize animationName=_animationName;

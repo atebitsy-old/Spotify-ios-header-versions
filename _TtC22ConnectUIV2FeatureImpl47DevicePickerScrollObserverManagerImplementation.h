@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl47DevicePickerScrollObserverManagerImplementation : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: isMini
 }
 
 @end

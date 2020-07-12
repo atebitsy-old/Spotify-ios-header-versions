@@ -9,6 +9,7 @@
 @class NSString;
 
 @protocol SPTShareHandlerCompletionData <NSObject>
+@property(copy, nonatomic) NSString *performedShareCapability;
 @property(copy, nonatomic) NSString *shareID;
 @property(copy, nonatomic) NSString *systemDestination;
 @end

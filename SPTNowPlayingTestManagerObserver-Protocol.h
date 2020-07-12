@@ -6,11 +6,6 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTNowPlayingTestManager;
-
 @protocol SPTNowPlayingTestManagerObserver <NSObject>
-
-@optional
-- (void)nowPlayingTestManagerDidEnableBarImprovements:(id <SPTNowPlayingTestManager>)arg1;
 @end
 

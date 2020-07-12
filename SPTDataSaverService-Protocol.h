@@ -9,7 +9,7 @@
 @protocol SPTFeatureFlagSignal;
 
 @protocol SPTDataSaverService <SPTService>
-@property(nonatomic) _Bool canvasEnabled;
 - (id <SPTFeatureFlagSignal>)provideDataSaverActivatedSignal;
+@property(nonatomic) _Bool canvasEnabled;
 @end
 

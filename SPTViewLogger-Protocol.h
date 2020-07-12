@@ -7,11 +7,14 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL, NSUUID;
+@protocol SPTViewLoggerObserver;
 
 @protocol SPTViewLogger <NSObject>
 @property(readonly, nonatomic) NSUUID *uuid;
 @property(readonly) long long state;
 @property(readonly, copy, nonatomic) NSString *pageIdentifier;
+- (void)removeObserver:(id <SPTViewLoggerObserver>)arg1;
+- (void)addObserver:(id <SPTViewLoggerObserver>)arg1;
 - (void)logViewLoadingCancelledWithPageIdentifier:(NSString *)arg1 dataSource:(long long)arg2;
 - (void)logViewDataDidFailToLoadWithPageIdentifier:(NSString *)arg1 dataSource:(long long)arg2;
 - (void)logImageLoadingEndedForImageWithURI:(NSURL *)arg1;

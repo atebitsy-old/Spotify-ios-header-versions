@@ -25,7 +25,7 @@
 + (id)songsEmptyStateView:(id)arg1 onAction:(CDUnknownBlockType)arg2;
 + (id)albumsEmptyStateViewWithTheme:(id)arg1;
 + (id)artistsEmptyStateView:(id)arg1 onAction:(CDUnknownBlockType)arg2;
-+ (id)playlistsEmptyStateView:(id)arg1 onAction:(CDUnknownBlockType)arg2;
++ (id)playlistsEmptyStateView:(id)arg1 URI:(id)arg2 onAction:(CDUnknownBlockType)arg3;
 @property(copy, nonatomic) CDUnknownBlockType onActionBlock; // @synthesize onActionBlock=_onActionBlock;
 @property(retain, nonatomic) SPTYourLibraryMusicGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) NSURL *navigateFromURI; // @synthesize navigateFromURI=_navigateFromURI;

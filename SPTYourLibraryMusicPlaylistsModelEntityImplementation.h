@@ -14,23 +14,27 @@
 @interface SPTYourLibraryMusicPlaylistsModelEntityImplementation : NSObject <SPTYourLibraryMusicPlaylistsModelEntity>
 {
     _Bool _hasHiddenContent;
-    _Bool _hasOwnPlaylists;
     NSArray *_items;
     id <SPTYourLibraryMusicPlaylistModelItemEntity> _favoriteEntity;
+    id <SPTYourLibraryMusicPlaylistModelItemEntity> _offlineMixEntity;
     NSArray *_sectionIndexes;
     NSArray *_sectionTitles;
+    NSArray *_itemFilters;
 }
 
+@property(copy, nonatomic) NSArray *itemFilters; // @synthesize itemFilters=_itemFilters;
 @property(copy, nonatomic) NSArray *sectionTitles; // @synthesize sectionTitles=_sectionTitles;
 @property(copy, nonatomic) NSArray *sectionIndexes; // @synthesize sectionIndexes=_sectionIndexes;
-@property(nonatomic) _Bool hasOwnPlaylists; // @synthesize hasOwnPlaylists=_hasOwnPlaylists;
+@property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> offlineMixEntity; // @synthesize offlineMixEntity=_offlineMixEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> favoriteEntity; // @synthesize favoriteEntity=_favoriteEntity;
 @property(copy, nonatomic) NSArray *items; // @synthesize items=_items;
 @property(nonatomic) _Bool hasHiddenContent; // @synthesize hasHiddenContent=_hasHiddenContent;
 - (void).cxx_destruct;
+- (_Bool)shouldAddEntity:(id)arg1;
 - (void)setUpItemsWithPlaylistFolderItems:(id)arg1 onDemandSet:(id)arg2;
+- (void)setUpOfflineMix:(id)arg1 onDemandSet:(id)arg2;
 - (void)setUpFavoriteMix:(id)arg1;
-- (id)initWithPlaylistFolderItems:(id)arg1 favoriteMixEntity:(id)arg2 onDemandSet:(id)arg3;
+- (id)initWithPlaylistFolderItems:(id)arg1 favoriteMixEntity:(id)arg2 offlineMixEntity:(id)arg3 onDemandSet:(id)arg4 itemFilters:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class BMVideoSurfaceFactory, SPTNowPlayingContentLayerViewController, SPTNowPlayingContentLayerViewModel, SPTNowPlayingCoverArtProvider, SPTNowPlayingHorizontalVideoProvider, SPTNowPlayingLogger, SPTNowPlayingVerticalVideoProvider, SPTTheme;
-@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingContentLayerResolver, SPTNowPlayingVideoManager, SPTPlayer;
+@class BMVideoSurfaceFactory, SPTNowPlayingContentLayerViewController, SPTNowPlayingContentLayerViewModel, SPTNowPlayingCoverArtProvider, SPTNowPlayingHorizontalVideoProvider, SPTNowPlayingLogger, SPTNowPlayingVerticalVideoProvider, SPTNowPlayingYoutubeVideoProvider, SPTTheme;
+@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTNowPlayingVideoManager, SPTPlayer;
 
 @interface SPTNowPlayingContentViewProvider : NSObject
 {
@@ -20,16 +20,20 @@
     id <SPTPlayer> _player;
     SPTNowPlayingContentLayerViewModel *_contentLayerViewModel;
     id <SPTNowPlayingContentLayerResolver> _contentLayerResolver;
+    id <SPTNowPlayingTestManager> _testManger;
     SPTNowPlayingContentLayerViewController *_contentLayerViewController;
     SPTNowPlayingCoverArtProvider *_coverArtProvider;
     SPTNowPlayingVerticalVideoProvider *_verticalVideoProvider;
     SPTNowPlayingHorizontalVideoProvider *_horizontalVideoProvider;
+    SPTNowPlayingYoutubeVideoProvider *_youtubeVideoProvider;
 }
 
+@property(retain, nonatomic) SPTNowPlayingYoutubeVideoProvider *youtubeVideoProvider; // @synthesize youtubeVideoProvider=_youtubeVideoProvider;
 @property(retain, nonatomic) SPTNowPlayingHorizontalVideoProvider *horizontalVideoProvider; // @synthesize horizontalVideoProvider=_horizontalVideoProvider;
 @property(retain, nonatomic) SPTNowPlayingVerticalVideoProvider *verticalVideoProvider; // @synthesize verticalVideoProvider=_verticalVideoProvider;
 @property(retain, nonatomic) SPTNowPlayingCoverArtProvider *coverArtProvider; // @synthesize coverArtProvider=_coverArtProvider;
 @property(retain, nonatomic) SPTNowPlayingContentLayerViewController *contentLayerViewController; // @synthesize contentLayerViewController=_contentLayerViewController;
+@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManger; // @synthesize testManger=_testManger;
 @property(readonly, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
 @property(readonly, nonatomic) SPTNowPlayingContentLayerViewModel *contentLayerViewModel; // @synthesize contentLayerViewModel=_contentLayerViewModel;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -40,11 +44,12 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 - (void).cxx_destruct;
+- (void)registerYoutubeVideoProvider;
 - (void)registerHorizontalVideoProvider;
 - (void)registerVerticalVideoProvider;
 - (void)registerCoverArtProvider;
 - (id)contentViewController;
-- (id)initWithTheme:(id)arg1 glueImageLoaderFactory:(id)arg2 logger:(id)arg3 videoSurfaceManager:(id)arg4 surfaceFactory:(id)arg5 nowPlayingVideoManager:(id)arg6 player:(id)arg7 contentLayerViewModel:(id)arg8;
+- (id)initWithTheme:(id)arg1 glueImageLoaderFactory:(id)arg2 logger:(id)arg3 videoSurfaceManager:(id)arg4 surfaceFactory:(id)arg5 nowPlayingVideoManager:(id)arg6 player:(id)arg7 contentLayerViewModel:(id)arg8 testManager:(id)arg9;
 
 @end
 

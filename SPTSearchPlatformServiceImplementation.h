@@ -92,7 +92,7 @@
 - (unsigned long long)entityVersionForPodcastFeature:(id)arg1;
 @property(readonly, nonatomic) SPTSearch2RequestParametersProvider *searchRequestParametersProvider; // @synthesize searchRequestParametersProvider=_searchRequestParametersProvider;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSourceProviding> recentsDataSourceProvider; // @synthesize recentsDataSourceProvider=_recentsDataSourceProvider;
-- (id)makeURLProviderWithParametersProvider:(id)arg1 entityType:(id)arg2 limit:(unsigned long long)arg3;
+- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3;
 - (id)makeEmptyStatePropertiesProviderWithOfflineSearchEnabled:(_Bool)arg1;
 - (id)makeConfiguration;
 - (id)makeRootViewControllerWithConfiguration:(id)arg1;

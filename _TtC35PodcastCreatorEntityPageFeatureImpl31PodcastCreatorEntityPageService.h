@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: creatorPageRegistrationToken
     // Error parsing type: , name: creatorShowPageRegistrationToken
-    // Error parsing type: , name: creatorLoader
+    // Error parsing type: , name: creatorLoaders
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: glueService
@@ -26,8 +26,8 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)provideCreatorShowsPageViewControllerWith:(id)arg1 context:(id)arg2;
-- (id)providePageLoadedViewControllerWith:(id)arg1 context:(id)arg2;
+- (id)providePodcastCreatorShowListPageWith:(id)arg1 context:(id)arg2;
+- (id)providePodcastCreatorPageWith:(id)arg1 context:(id)arg2;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

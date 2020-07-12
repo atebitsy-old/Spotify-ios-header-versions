@@ -17,7 +17,6 @@
 - (void)addObserver:(id)arg1;
 - (void)carViewAvailabilityChangedWithEnabled:(_Bool)arg1;
 - (void)deactivationTriggered;
-- (void)activationDismissed;
 - (void)activationTriggered;
 @property(nonatomic) long long state; // @synthesize state;
 

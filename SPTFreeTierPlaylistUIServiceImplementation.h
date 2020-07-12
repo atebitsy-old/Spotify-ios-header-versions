@@ -105,9 +105,9 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool pageLoaderEnabled;
 - (id)provideHandlerRegistry;
-- (id)allSongsDataSourceForURL:(id)arg1 formatListType:(id)arg2;
+- (id)allSongsDataSourceForURL:(id)arg1 formatListType:(id)arg2 formatListAttributes:(id)arg3;
 - (id)providerFooterProviderForPlaylistURL:(id)arg1 context:(id)arg2;
-- (id)provideLoggerForURI:(id)arg1;
+- (id)provideLoggerForURI:(id)arg1 formatListType:(id)arg2 formatListAttributes:(id)arg3 playlistModel:(id)arg4;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withContext:(id)arg2 playlistModel:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4;
 - (id)loadableForPlaylistWithURL:(id)arg1 withPageContext:(id)arg2;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withPageContext:(id)arg2 playlistModel:(id)arg3 initialEntity:(id)arg4;

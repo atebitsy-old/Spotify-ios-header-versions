@@ -11,7 +11,6 @@
     // Error parsing type: , name: containerService
     // Error parsing type: , name: uriDispatcherService
     // Error parsing type: , name: networkService
-    // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: contextMenuService
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: cosmosFeature
@@ -23,7 +22,6 @@
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: profileV2Service
     // Error parsing type: , name: ubiService
-    // Error parsing type: , name: remoteConfigurationProperties
     // Error parsing type: , name: profilePageToken
     // Error parsing type: , name: profileListPageToken
 }

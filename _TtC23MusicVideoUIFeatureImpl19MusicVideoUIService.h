@@ -13,8 +13,9 @@
     // Error parsing type: , name: playerService
     // Error parsing type: , name: playlistService
     // Error parsing type: , name: videoService
-    // Error parsing type: , name: videoCoordinatorService
     // Error parsing type: , name: musicVideoPlayer
+    // Error parsing type: , name: nowPlayingPlatformService
+    // Error parsing type: , name: nowPlayingService
 }
 
 + (id)serviceIdentifier;

@@ -14,6 +14,7 @@
     // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: connectManager
     // Error parsing type: , name: loggingInterceptor
+    // Error parsing type: , name: scrollManager
     // Error parsing type: , name: controllerToDismiss
 }
 

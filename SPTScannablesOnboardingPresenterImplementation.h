@@ -9,27 +9,24 @@
 #import "SPTScannablesOnboardingPresenter-Protocol.h"
 
 @class NSString, SPTScannablesSlateFactory;
-@protocol SPTLocalSettings, SPTSlateManager, SPTTooltipPresentationManager;
+@protocol SPTFreeTierTooltipConditionalPresenter, SPTLocalSettings, SPTSlateManager;
 
 @interface SPTScannablesOnboardingPresenterImplementation : NSObject <SPTScannablesOnboardingPresenter>
 {
     id <SPTSlateManager> _slateManager;
     SPTScannablesSlateFactory *_slateFactory;
     id <SPTLocalSettings> _localSettings;
-    id <SPTTooltipPresentationManager> _tooltipManager;
+    id <SPTFreeTierTooltipConditionalPresenter> _tooltipManager;
 }
 
-@property(readonly, nonatomic) id <SPTTooltipPresentationManager> tooltipManager; // @synthesize tooltipManager=_tooltipManager;
+@property(readonly, nonatomic) id <SPTFreeTierTooltipConditionalPresenter> tooltipManager; // @synthesize tooltipManager=_tooltipManager;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) SPTScannablesSlateFactory *slateFactory; // @synthesize slateFactory=_slateFactory;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 - (void).cxx_destruct;
-- (id)contextMenuOnboardingDidDismissValue;
-- (_Bool)shouldPresentContextMenuOnboarding;
-- (id)contextMenuOnboardingTooltipItemForEntityURL:(id)arg1;
+- (id)contextMenuOnboardingTooltipTextForEntityURL:(id)arg1;
 - (void)presentContextMenuOnboardingAnchoredToView:(id)arg1 entityURL:(id)arg2;
 - (void)presentScannerOnboardingSlateWithDelegate:(id)arg1;
-@property(readonly, nonatomic, getter=isPresentingContextMenuOnboarding) _Bool presentingContextMenuOnboarding;
 - (id)initWithTooltipManager:(id)arg1 slateManager:(id)arg2 slateFactory:(id)arg3 localSettings:(id)arg4;
 
 // Remaining properties

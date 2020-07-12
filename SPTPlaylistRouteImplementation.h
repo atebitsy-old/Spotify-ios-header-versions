@@ -13,18 +13,20 @@
 @interface SPTPlaylistRouteImplementation : NSObject <SPTPlaylistRoute>
 {
     NSURL *_basePlaylistURI;
+    NSURL *_basePlaylistImageURI;
     NSURL *_writeURI;
     NSURL *_readURI;
 }
 
 @property(retain, nonatomic) NSURL *readURI; // @synthesize readURI=_readURI;
 @property(retain, nonatomic) NSURL *writeURI; // @synthesize writeURI=_writeURI;
+@property(retain, nonatomic) NSURL *basePlaylistImageURI; // @synthesize basePlaylistImageURI=_basePlaylistImageURI;
 @property(retain, nonatomic) NSURL *basePlaylistURI; // @synthesize basePlaylistURI=_basePlaylistURI;
 - (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (void)encodeWithCoder:(id)arg1;
 @property(readonly, nonatomic) _Bool isRouted;
-- (id)initWith:(id)arg1 writeURI:(id)arg2 readURI:(id)arg3;
+- (id)initWith:(id)arg1 baseImageURI:(id)arg2 writeURI:(id)arg3 readURI:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

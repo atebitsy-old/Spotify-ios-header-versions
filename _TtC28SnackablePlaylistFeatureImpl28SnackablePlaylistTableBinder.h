@@ -9,6 +9,7 @@
 @interface _TtC28SnackablePlaylistFeatureImpl28SnackablePlaylistTableBinder : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: audioPreviewFactory
     // Error parsing type: , name: tableView
     // Error parsing type: , name: tableBinder
     // Error parsing type: , name: eventConsumer

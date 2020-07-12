@@ -6,11 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTSocialListeningListenTogetherDataLoader, SPTSocialListeningListenTogetherSlatePresenter, SPTSocialListeningLogger, SPTSocialListeningModel, SPTSocialListeningTestManager, SPTSocialListeningUserInterfaceFactory;
+@protocol SPTSocialListeningLogger, SPTSocialListeningModel, SPTSocialListeningTestManager, SPTSocialListeningUserInterfaceFactory;
 
 @protocol SPTSocialListeningService <SPTService>
-- (id <SPTSocialListeningListenTogetherDataLoader>)provideListenTogetherDataLoader;
-- (id <SPTSocialListeningListenTogetherSlatePresenter>)provideSlatePresenter;
 - (id <SPTSocialListeningLogger>)provideSocialListeningLogger;
 - (id <SPTSocialListeningModel>)provideSocialListeningModel;
 - (id <SPTSocialListeningUserInterfaceFactory>)provideUserInterfaceFactory;

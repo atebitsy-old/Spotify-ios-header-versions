@@ -11,10 +11,13 @@
     // Error parsing type: , name: cell
     // Error parsing type: , name: model
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: audioPreviewFactory
+    // Error parsing type: , name: audioPreview
     // Error parsing type: , name: removeTrack
 }
 
-- (void)removeButtonSelected;
+- (void)removeButtonTapped;
+- (void)previewViewTapped;
 
 @end
 

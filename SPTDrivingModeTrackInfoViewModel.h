@@ -8,7 +8,7 @@
 
 #import "SPTNowPlayingInformationUnitViewModel-Protocol.h"
 
-@class NSString;
+@class NSString, NSURL;
 @protocol SPTNowPlayingInformationUnitViewModel, SPTNowPlayingInformationUnitViewModelDelegate, SPTPlayer;
 
 @interface SPTDrivingModeTrackInfoViewModel : NSObject <SPTNowPlayingInformationUnitViewModel>
@@ -28,6 +28,7 @@
 - (void).cxx_destruct;
 - (void)stopObservers;
 - (void)startObservers;
+@property(readonly, copy, nonatomic) NSURL *contextSource;
 @property(readonly, copy, nonatomic) NSString *subtitle;
 @property(readonly, copy, nonatomic) NSString *title;
 @property(nonatomic) __weak id <SPTNowPlayingInformationUnitViewModelDelegate> delegate;

@@ -23,7 +23,7 @@
 - (void)loadStateUpdater:(id)arg1 didUpdateforCanvasId:(id)arg2;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (id)loadStateForCanvasId:(id)arg1;
+- (_Bool)isLoadedForCanvasId:(id)arg1;
 - (id)canvasLoadStateUpdaterForCanvasId:(id)arg1;
 - (void)destroyLoadStateUpdaterForCanvasId:(id)arg1;
 - (id)createLoadStateUpdaterForCanvasId:(id)arg1;

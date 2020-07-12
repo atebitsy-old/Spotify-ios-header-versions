@@ -15,17 +15,18 @@
     NSArray *_components;
 }
 
-+ (id)factory;
++ (id)factoryWithPageUri:(id)arg1;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
-- (id)socialFacebookLinkFactoryWithUri:(id)arg1;
-- (id)socialInstagramLinkFactoryWithUri:(id)arg1;
-- (id)socialTwitterLinkFactoryWithUri:(id)arg1;
-- (id)socialWikipediaLinkFactoryWithUri:(id)arg1;
+- (id)socialFacebookLinkFactory;
+- (id)socialInstagramLinkFactory;
+- (id)socialTwitterLinkFactory;
+- (id)socialWikipediaLinkFactory;
+- (id)aboutAutobiographyFactory;
 - (id)aboutBiographyFactory;
-- (id)galleryFactoryWithUri:(id)arg1;
+- (id)galleryFactory;
 - (id)_location;
-- (id)init;
+- (id)initWithPageUri:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

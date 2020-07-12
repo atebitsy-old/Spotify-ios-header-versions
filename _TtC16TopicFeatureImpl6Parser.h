@@ -12,6 +12,7 @@
     // Error parsing type: , name: pageURI
     // Error parsing type: , name: featureID
     // Error parsing type: , name: episodeDurationFormatter
+    // Error parsing type: , name: publicationDateFormatter
 }
 
 @end

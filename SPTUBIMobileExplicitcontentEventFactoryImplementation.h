@@ -18,6 +18,7 @@
 + (id)factory;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (void).cxx_destruct;
+- (id)explicitContentSettingsFactory;
 - (id)explicitDialogWhenLockedFactory;
 - (id)explicitDialogWhenNotLockedFactory;
 - (id)_location;

@@ -8,8 +8,8 @@
 
 #import "SPTStorylinesService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPersistentCache, SPTStorylinesNowPlayingScrollProvider;
-@protocol FollowFeature, SPTContainerService, SPTCoreService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingScrollDataSource, SPTNowPlayingService, SPTPlayerFeature, SPTUBIService, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTPersistentCache, SPTStorylinesFeatureProperties, SPTStorylinesNowPlayingScrollProvider;
+@protocol FollowFeature, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingScrollDataSource, SPTNowPlayingService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTStorylinesServiceImplementation : NSObject <SPTStorylinesService>
 {
@@ -23,8 +23,10 @@
     id <SPTURIDispatchService> _URIDispatchService;
     id <FollowFeature> _followFeature;
     id <SPTPlayerFeature> _playerFeature;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTCoreService> _coreService;
+    id <SPTEventSenderService> _eventSenderService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    SPTStorylinesFeatureProperties *_properties;
     SPTStorylinesNowPlayingScrollProvider *_provider;
     id <SPTNowPlayingScrollDataSource> _dataSource;
 }
@@ -32,8 +34,10 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTNowPlayingScrollDataSource> dataSource; // @synthesize dataSource=_dataSource;
 @property(retain, nonatomic) SPTStorylinesNowPlayingScrollProvider *provider; // @synthesize provider=_provider;
+@property(retain, nonatomic) SPTStorylinesFeatureProperties *properties; // @synthesize properties=_properties;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <FollowFeature> followFeature; // @synthesize followFeature=_followFeature;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;

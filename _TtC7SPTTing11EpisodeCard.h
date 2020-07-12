@@ -14,6 +14,7 @@
     // Error parsing type: , name: episodeView
     // Error parsing type: , name: titleLabel
     // Error parsing type: , name: subtitleLabel
+    // Error parsing type: , name: secondarySubtitleLabel
     // Error parsing type: , name: needsUpdateSubviews
 }
 

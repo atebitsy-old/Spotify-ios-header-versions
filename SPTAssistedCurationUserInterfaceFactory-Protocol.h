@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, UIViewController;
-@protocol SPTSearch2RootViewControllerProtocol><SPTPageController, SPTSearch2ViewControllerProtocol><SPTPageController;
+@class NSString, NSURL, UIViewController;
+@protocol SPTSearch2RootViewControllerProtocol><SPTPageController, SPTSearch2ViewControllerProtocol;
 
 @protocol SPTAssistedCurationUserInterfaceFactory <NSObject>
-- (UIViewController<SPTSearch2ViewControllerProtocol><SPTPageController> *)createAssistedCurationSearchViewControllerForEntityType:(NSString *)arg1 query:(NSString *)arg2;
-- (UIViewController<SPTSearch2RootViewControllerProtocol><SPTPageController> *)createAssistedCurationSearchViewController;
+- (UIViewController<SPTSearch2ViewControllerProtocol> *)createAssistedCurationSearchViewControllerForEntityType:(NSString *)arg1 query:(NSString *)arg2 pageIdentifier:(NSString *)arg3 pageURI:(NSURL *)arg4;
+- (UIViewController<SPTSearch2RootViewControllerProtocol><SPTPageController> *)createAssistedCurationSearchViewControllerWithPageIdentifier:(NSString *)arg1 pageURI:(NSURL *)arg2;
 @end
 

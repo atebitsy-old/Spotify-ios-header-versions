@@ -10,7 +10,7 @@
 #import "SPTNowPlayingInformationUnitViewModel-Protocol.h"
 #import "SPTNowPlayingModelObserver-Protocol.h"
 
-@class NSString, SPTNowPlayingLogger, SPTNowPlayingModel;
+@class NSString, NSURL, SPTNowPlayingLogger, SPTNowPlayingModel;
 @protocol SPTLinkDispatcher, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingTestManager;
 
 @interface SPTNowPlayingInformationUnitViewModelImplementation : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingAuxiliaryActionsHandlerObserver, SPTNowPlayingInformationUnitViewModel>
@@ -20,6 +20,7 @@
     SPTNowPlayingModel *_model;
     NSString *_title;
     NSString *_subtitle;
+    NSURL *_contextSource;
     SPTNowPlayingLogger *_logger;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
@@ -31,6 +32,7 @@
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
+@property(copy, nonatomic) NSURL *contextSource; // @synthesize contextSource=_contextSource;
 @property(copy, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;

@@ -12,7 +12,7 @@
 #import "SPTYourLibraryMusicPlaylistsModel-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTPlaylistPlatformFolderResponse, SPTYourLibraryMusicFilterSortManager;
-@protocol SPTOfflineModeState, SPTOnDemandSet, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState, SPTSortingFilteringSortRule, SPTYourLibraryMusicHiddenContentModel, SPTYourLibraryMusicLikedSongsModel, SPTYourLibraryMusicLikedSongsModelEntity, SPTYourLibraryMusicPlaylistsModelDelegate, SPTYourLibraryMusicTestManager;
+@protocol SPTOfflineModeState, SPTOnDemandSet, SPTPlaylistPlatformDataLoaderRequestToken, SPTPlaylistPlatformPlaylistDataLoader, SPTProductState, SPTSortingFilteringSortRule, SPTYourLibraryMusicHiddenContentModel, SPTYourLibraryMusicLikedSongsModel, SPTYourLibraryMusicLikedSongsModelEntity, SPTYourLibraryMusicPlaylistEntity, SPTYourLibraryMusicPlaylistsModelDelegate, SPTYourLibraryMusicTestManager, _TtP17OfflineMixFeature23SPTOfflineMixDataLoader_;
 
 @interface SPTYourLibraryMusicPlaylistsModelImplementation : NSObject <SPTYourLibraryMusicFavoriteMixModelDelegate, SPTYourLibraryMusicHiddenContentModelDelegate, SPTOfflineModeStateObserver, SPTYourLibraryMusicPlaylistsModel>
 {
@@ -33,17 +33,22 @@
     id <SPTOnDemandSet> _onDemandSet;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _playlistsSubscription;
     id <SPTYourLibraryMusicLikedSongsModelEntity> _favoriteMixEntity;
+    id <SPTYourLibraryMusicPlaylistEntity> _offlineMixEntity;
     SPTPlaylistPlatformFolderResponse *_lastPlaylistResponse;
     id <SPTYourLibraryMusicTestManager> _testManager;
     SPTYourLibraryMusicFilterSortManager *_filterSortManager;
     NSURL *_uri;
     id <SPTProductState> _productState;
+    id <_TtP17OfflineMixFeature23SPTOfflineMixDataLoader_> _offlineMixDataLoader;
     id <SPTOfflineModeState> _offlineState;
+    NSArray *_itemFilters;
     struct _NSRange _currentWindow;
 }
 
+@property(copy, nonatomic) NSArray *itemFilters; // @synthesize itemFilters=_itemFilters;
 @property(nonatomic) _Bool offline; // @synthesize offline=_offline;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
+@property(readonly, nonatomic) id <_TtP17OfflineMixFeature23SPTOfflineMixDataLoader_> offlineMixDataLoader; // @synthesize offlineMixDataLoader=_offlineMixDataLoader;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(retain, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(retain, nonatomic) SPTYourLibraryMusicFilterSortManager *filterSortManager; // @synthesize filterSortManager=_filterSortManager;
@@ -52,6 +57,7 @@
 @property(nonatomic) struct _NSRange currentWindow; // @synthesize currentWindow=_currentWindow;
 @property(nonatomic) _Bool hasMore; // @synthesize hasMore=_hasMore;
 @property(retain, nonatomic) SPTPlaylistPlatformFolderResponse *lastPlaylistResponse; // @synthesize lastPlaylistResponse=_lastPlaylistResponse;
+@property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistEntity> offlineMixEntity; // @synthesize offlineMixEntity=_offlineMixEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicLikedSongsModelEntity> favoriteMixEntity; // @synthesize favoriteMixEntity=_favoriteMixEntity;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> playlistsSubscription; // @synthesize playlistsSubscription=_playlistsSubscription;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
@@ -83,12 +89,13 @@
 - (_Bool)shouldSortByAvailableOffline;
 - (void)setNeedsReload;
 - (void)reload;
-- (void)updateWithPlaylistResponse:(id)arg1 favoriteMixEntity:(id)arg2;
+- (void)updateWithPlaylistResponse:(id)arg1 favoriteMixEntity:(id)arg2 offlineMixEntity:(id)arg3;
+- (void)loadOfflineMix;
 - (void)subscribeToPlaylist;
 - (void)loadMore;
 - (void)loadModel;
 - (void)dealloc;
-- (id)initWithPlaylistDataLoader:(id)arg1 favoriteMixModel:(id)arg2 hiddenContentModel:(id)arg3 folderURI:(id)arg4 onDemandSet:(id)arg5 testManager:(id)arg6 filterSortManager:(id)arg7 productState:(id)arg8 offlineState:(id)arg9;
+- (id)initWithPlaylistDataLoader:(id)arg1 favoriteMixModel:(id)arg2 hiddenContentModel:(id)arg3 folderURI:(id)arg4 onDemandSet:(id)arg5 testManager:(id)arg6 filterSortManager:(id)arg7 productState:(id)arg8 offlineState:(id)arg9 offlineMixSevice:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

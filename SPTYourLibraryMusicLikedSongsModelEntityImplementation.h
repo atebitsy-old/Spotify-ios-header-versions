@@ -13,20 +13,30 @@
 
 @interface SPTYourLibraryMusicLikedSongsModelEntityImplementation : NSObject <SPTYourLibraryMusicLikedSongsModelEntity>
 {
+    _Bool _loaded;
+    _Bool _onDemand;
+    _Bool _hidden;
+    NSString *_name;
+    NSString *_itemDescription;
+    NSURL *_URL;
+    NSURL *_imageURL;
+    NSString *_groupLabel;
     unsigned long long _availableOfflineStatus;
-    unsigned long long _itemCount;
     id <SPTYourLibraryMusicTestManager> _testManager;
 }
 
 @property(readonly, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) unsigned long long itemCount; // @synthesize itemCount=_itemCount;
+@property(readonly, nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
+@property(readonly, nonatomic, getter=isOnDemand) _Bool onDemand; // @synthesize onDemand=_onDemand;
 @property(readonly, nonatomic) unsigned long long availableOfflineStatus; // @synthesize availableOfflineStatus=_availableOfflineStatus;
+@property(readonly, nonatomic) NSString *groupLabel; // @synthesize groupLabel=_groupLabel;
+@property(readonly, nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
+@property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
+@property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
+@property(readonly, nonatomic) NSString *itemDescription; // @synthesize itemDescription=_itemDescription;
+@property(readonly, nonatomic) NSString *name; // @synthesize name=_name;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSString *name;
-@property(readonly, nonatomic) NSURL *entityURL;
-- (_Bool)isBackedByCollection;
-- (_Bool)isLocked;
-- (id)playlistEntity;
+- (id)entityURL;
 - (id)initWithSongCount:(unsigned long long)arg1 availableOfflineStatus:(unsigned long long)arg2 testManager:(id)arg3;
 
 // Remaining properties

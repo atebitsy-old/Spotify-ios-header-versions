@@ -9,6 +9,7 @@
 @interface _TtC26MarketingFormatFeatureImpl30HeaderIntroSlideViewController : UIViewController
 {
     // Error parsing type: , name: loopController
+    // Error parsing type: , name: dataSaverFlag
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: videoLoader
     // Error parsing type: , name: theme

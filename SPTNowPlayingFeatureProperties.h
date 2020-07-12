@@ -18,8 +18,12 @@
     _Bool _remoteControlEventSubtypeDeprecation;
     _Bool _remoteControlEventLoggingEnabled;
     _Bool _animatedHeartEnabled;
+    _Bool _prideAnimatedHeartEnabled;
+    _Bool _videoTabEnabled;
 }
 
+@property(readonly, nonatomic) _Bool videoTabEnabled; // @synthesize videoTabEnabled=_videoTabEnabled;
+@property(readonly, nonatomic) _Bool prideAnimatedHeartEnabled; // @synthesize prideAnimatedHeartEnabled=_prideAnimatedHeartEnabled;
 @property(readonly, nonatomic) _Bool animatedHeartEnabled; // @synthesize animatedHeartEnabled=_animatedHeartEnabled;
 @property(readonly, nonatomic) _Bool remoteControlEventLoggingEnabled; // @synthesize remoteControlEventLoggingEnabled=_remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic) _Bool remoteControlEventSubtypeDeprecation; // @synthesize remoteControlEventSubtypeDeprecation=_remoteControlEventSubtypeDeprecation;

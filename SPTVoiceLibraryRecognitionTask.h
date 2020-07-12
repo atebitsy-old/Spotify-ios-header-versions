@@ -27,6 +27,7 @@
 - (void).cxx_destruct;
 - (void)audioRecorder:(id)arg1 didChangeMeanAudioLevel:(float)arg2 rmsAudioLevel:(float)arg3 cdfScaledLevel:(float)arg4;
 - (void)audioRecorder:(id)arg1 didFailWithError:(id)arg2;
+- (void)audioRecorder:(id)arg1 didRecordAudioChunk:(id)arg2;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;
 - (void)audioRecorderDidStartRecording:(id)arg1;
 - (void)speechRecognitionDataLoader:(id)arg1 didFailWithError:(id)arg2;

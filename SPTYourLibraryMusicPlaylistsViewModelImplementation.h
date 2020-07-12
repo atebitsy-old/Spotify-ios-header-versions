@@ -11,7 +11,7 @@
 #import "SPTYourLibraryMusicPlaylistsViewModel-Protocol.h"
 
 @class NSArray, NSString, SPTYourLibraryMusicGroupLabelReader, SPTYourLibraryMusicLogger;
-@protocol SPTCreatePlaylistController, SPTLinkDispatcher, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicLikedSongsModelEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager;
+@protocol SPTCreatePlaylistController, SPTLinkDispatcher, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicPlaylistModelItemEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicPlaylistsViewModelImplementation : NSObject <SPTSortingFilteringPickerDelegate, SPTYourLibraryMusicPlaylistsViewModel, SPTYourLibraryMusicPlaylistsModelDelegate>
 {
@@ -25,7 +25,7 @@
     SPTYourLibraryMusicLogger *_logger;
     id <SPTYourLibraryMusicTestManager> _testManager;
     id <SPTYourLibraryMusicPlaylistsModelEntity> _modelEntity;
-    id <SPTYourLibraryMusicLikedSongsModelEntity> _favoriteMixEntity;
+    id <SPTYourLibraryMusicPlaylistModelItemEntity> _favoriteMixEntity;
     id <SPTSortingFilteringUIFactory> _sortingFilteringPickerFactory;
     SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
 }
@@ -34,7 +34,7 @@
 @property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
 @property(nonatomic) _Bool textFilteringMode; // @synthesize textFilteringMode=_textFilteringMode;
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringPickerFactory; // @synthesize sortingFilteringPickerFactory=_sortingFilteringPickerFactory;
-@property(retain, nonatomic) id <SPTYourLibraryMusicLikedSongsModelEntity> favoriteMixEntity; // @synthesize favoriteMixEntity=_favoriteMixEntity;
+@property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistModelItemEntity> favoriteMixEntity; // @synthesize favoriteMixEntity=_favoriteMixEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicPlaylistsModelEntity> modelEntity; // @synthesize modelEntity=_modelEntity;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTYourLibraryMusicLogger *logger; // @synthesize logger=_logger;
@@ -52,7 +52,6 @@
 - (void)playlistsModel:(id)arg1 didUpdateEntity:(id)arg2;
 - (id)modelItemEntityAtIndexPath:(id)arg1;
 - (void)createPlaylistActionInInfoView:(_Bool)arg1;
-- (id)playlistEntityForRowAtIndexPath:(id)arg1;
 - (void)endObservingRowAtIndexPath:(id)arg1;
 - (void)beginObservingRowAtIndexPath:(id)arg1;
 - (void)willEndTextFiltering;

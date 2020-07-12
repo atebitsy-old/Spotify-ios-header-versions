@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTShareHandler-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTShareData, SPTShareFeatureProperties, SPTShareLogger, SPTSharingSDK;
+@class NSString, SPTDataLoader, SPTShareData, SPTShareFeatureProperties, SPTShareHandlerCompletionDataModel, SPTShareLogger, SPTSharingSDK;
 @protocol SPTShareDeeplinkHandler, SPTShareVideoDataProvider;
 
 @interface SPTShareInstagramStoriesShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
@@ -28,8 +28,10 @@
     SPTSharingSDK *_sharingSDK;
     SPTShareFeatureProperties *_featureProperties;
     id <SPTShareVideoDataProvider> _videoDataLoader;
+    SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+@property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(readonly, nonatomic) id <SPTShareVideoDataProvider> videoDataLoader; // @synthesize videoDataLoader=_videoDataLoader;
 @property(readonly, nonatomic) __weak SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;

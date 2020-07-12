@@ -11,12 +11,13 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTAssistedCurationLinkDispatcherImplementation, SPTAssistedCurationPresentationHelper;
-@protocol SPContextMenuFeature, SPTAssistedCurationService, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPerformanceMetricsService, SPTSearchPlatformService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationService, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTRemoteConfigurationService, SPTSearchPlatformService, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTAssistedCurationUIServiceImplementation : SPTUIPageService <SPTAssistedCurationLinkDispatcherPageProvider, SPTAssistedCurationUIService, SPTURISubtypeHandler>
 {
     id <SPTGLUEService> _glueService;
     id <SPContextMenuFeature> _contextMenuFeature;
+    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTAssistedCurationService> _assistedCurationService;
     id <SPTSearchPlatformService> _searchPlatformService;
@@ -30,15 +31,17 @@
     SPTAssistedCurationLinkDispatcherImplementation *_linkDispatcher;
     SPTAssistedCurationPresentationHelper *_assistedCurationPresentationHelper;
     id <SPTFreeTierService> _freeTierService;
-    id <SPTSettingsFeature> _settingsService;
     id <SPTAssistedCurationUITestManager> _assistedCurationUITestManager;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <SPTUBIService> _ubiService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
 }
 
 + (id)serviceIdentifier;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(retain, nonatomic) id <SPTAssistedCurationUITestManager> assistedCurationUITestManager; // @synthesize assistedCurationUITestManager=_assistedCurationUITestManager;
-@property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(retain, nonatomic) SPTAssistedCurationPresentationHelper *assistedCurationPresentationHelper; // @synthesize assistedCurationPresentationHelper=_assistedCurationPresentationHelper;
 @property(retain, nonatomic) SPTAssistedCurationLinkDispatcherImplementation *linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
@@ -52,6 +55,7 @@
 @property(nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
 @property(nonatomic) __weak id <SPTAssistedCurationService> assistedCurationService; // @synthesize assistedCurationService=_assistedCurationService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
+@property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 - (void).cxx_destruct;
@@ -63,11 +67,12 @@
 - (id)provideAddSongsActionTaskForURL:(id)arg1 logContext:(id)arg2;
 - (id)provideLoggerForURI:(id)arg1 contextURI:(id)arg2;
 - (id)provideInterfaceFactoryWithViewModel:(id)arg1;
+- (id)provideTheme;
 - (id)provideGLUEImageLoader;
 - (id)provideEducationSnackBarPresenter;
-- (id)provideFeatureSettingsItemFactory;
 - (id)provideSearchDrillDownViewControllerForURL:(id)arg1 context:(id)arg2;
-- (id)provideAssistedCurationViewControllerForURI:(id)arg1 mostPlayedCard:(_Bool)arg2;
+- (id)provideAssistedCurationViewControllerForURI:(id)arg1 mostPlayedCard:(_Bool)arg2 model:(id)arg3;
+- (id)providePageLoaderViewControllerForURI:(id)arg1 mostPlayedCard:(_Bool)arg2;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideAssistedCurationPresentationHelper;
 - (id)providerAssistedCurationLinkDispatcher;

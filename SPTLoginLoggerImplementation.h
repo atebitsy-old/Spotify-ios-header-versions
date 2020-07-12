@@ -8,14 +8,20 @@
 
 #import "SPTLoginLogger-Protocol.h"
 
-@class NSString;
-@protocol SPTAdjustUserTrackerProtocol;
+@class NSString, SPTLoginUUIDProvider;
+@protocol SPTAdjustUserTrackerProtocol, SPTEventSender;
 
 @interface SPTLoginLoggerImplementation : NSObject <SPTLoginLogger>
 {
     id <SPTAdjustUserTrackerProtocol> _adjustUserTracker;
+    id <SPTEventSender> _eventSender;
+    SPTLoginUUIDProvider *_sessionIDProvider;
+    NSString *_deviceID;
 }
 
+@property(readonly, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
+@property(retain, nonatomic) SPTLoginUUIDProvider *sessionIDProvider; // @synthesize sessionIDProvider=_sessionIDProvider;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTAdjustUserTrackerProtocol> adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
 - (void).cxx_destruct;
 - (id)timestamp;
@@ -47,7 +53,7 @@
 - (void)loginLayoutReceived:(id)arg1 layout:(id)arg2;
 - (void)operationWithIdentifier:(id)arg1 didFinishWithDuration:(double)arg2;
 - (void)accountRecoveryLinkParsed;
-- (id)initWithAdjustUserTracker:(id)arg1;
+- (id)initWithAdjustUserTracker:(id)arg1 eventSender:(id)arg2 sessionIDProvider:(id)arg3 deviceID:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

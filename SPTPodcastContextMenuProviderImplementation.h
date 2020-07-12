@@ -9,11 +9,11 @@
 #import "SPTPodcastContextMenuProvider-Protocol.h"
 
 @class NSString, SPTPodcastFeatureProperties, SPTShowContextMenuController;
-@protocol SPTEpisodeContextMenuControllerDelegate, SPTShowEntityService;
+@protocol SPTEpisodeContextMenuControllerDelegate, SPTPodcastEntityDataLoader;
 
 @interface SPTPodcastContextMenuProviderImplementation : NSObject <SPTPodcastContextMenuProvider>
 {
-    id <SPTShowEntityService> _showEntityService;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
     SPTShowContextMenuController *_contextMenuController;
     id <SPTEpisodeContextMenuControllerDelegate> _contextMenuDelegate;
     SPTPodcastFeatureProperties *_featureProperties;
@@ -22,12 +22,12 @@
 @property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) __weak id <SPTEpisodeContextMenuControllerDelegate> contextMenuDelegate; // @synthesize contextMenuDelegate=_contextMenuDelegate;
 @property(retain, nonatomic) SPTShowContextMenuController *contextMenuController; // @synthesize contextMenuController=_contextMenuController;
-@property(nonatomic) __weak id <SPTShowEntityService> showEntityService; // @synthesize showEntityService=_showEntityService;
+@property(nonatomic) __weak id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 - (void).cxx_destruct;
 - (id)provideShowContextMenuControllerOptions;
 - (void)dismissContextMenuAnimated:(_Bool)arg1;
 - (void)presentContextMenuForEpisodeURI:(id)arg1 withMetadata:(id)arg2 sourceContextURI:(id)arg3 inViewController:(id)arg4 senderView:(id)arg5 options:(id)arg6;
-- (id)initWithShowEntityService:(id)arg1 contextMenuController:(id)arg2 contextMenuDelegate:(id)arg3 featureProperties:(id)arg4;
+- (id)initWithPodcastEntityDataLoader:(id)arg1 contextMenuController:(id)arg2 contextMenuDelegate:(id)arg3 featureProperties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

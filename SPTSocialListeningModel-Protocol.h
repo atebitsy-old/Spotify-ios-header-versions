@@ -24,7 +24,10 @@
 - (void)removeObserver:(id <SPTSocialListeningModelObserver>)arg1;
 - (void)addObserver:(id <SPTSocialListeningModelObserver>)arg1;
 - (void)leaveSession;
-- (void)joinSession:(NSURL *)arg1;
+- (void)lookupSessionWithURL:(NSURL *)arg1;
 - (void)loadSession:(_Bool)arg1;
+
+@optional
+- (void)joinSessionConfirmed:(_Bool)arg1 sessionURL:(NSURL *)arg2;
 @end
 

@@ -9,14 +9,17 @@
 #import "GLUEStyleable-Protocol.h"
 #import "SPTHomeUIShortcutsCardViewModelDelegate-Protocol.h"
 
-@class GLUEImageView, NSAttributedString, NSLayoutConstraint, NSString, SPTHomeUILabel, SPTHomeUIShortcutsCardViewModel, UIView;
+@class GLUEImageView, NSAttributedString, NSLayoutConstraint, NSString, SPTHomeUIColorExtractionGradientView, SPTHomeUILabel, SPTHomeUIRemoteConfigPropertyResolver, SPTHomeUIShortcutsCardViewModel, UIColor, UIView;
 @protocol GLUEAnimationLoading><GLUEAnimationControlling, GLUETheme;
 
 @interface SPTHomeUIShortcutsCardView : GLUEStatefulView <GLUEStyleable, SPTHomeUIShortcutsCardViewModelDelegate>
 {
     SPTHomeUIShortcutsCardViewModel *_viewModel;
     id <GLUETheme> _theme;
+    SPTHomeUIRemoteConfigPropertyResolver *_remoteConfigPropertyResolver;
     SPTHomeUILabel *_titleLabel;
+    UIColor *_titleFontColor;
+    SPTHomeUIColorExtractionGradientView *_gradientView;
     GLUEImageView *_imageView;
     UIView *_accessoryView;
     GLUEImageView *_accessoryImageView;
@@ -36,7 +39,10 @@
 @property(retain, nonatomic) GLUEImageView *accessoryImageView; // @synthesize accessoryImageView=_accessoryImageView;
 @property(readonly, nonatomic) UIView *accessoryView; // @synthesize accessoryView=_accessoryView;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;
+@property(readonly, nonatomic) SPTHomeUIColorExtractionGradientView *gradientView; // @synthesize gradientView=_gradientView;
+@property(readonly, nonatomic) UIColor *titleFontColor; // @synthesize titleFontColor=_titleFontColor;
 @property(readonly, nonatomic) SPTHomeUILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) SPTHomeUIRemoteConfigPropertyResolver *remoteConfigPropertyResolver; // @synthesize remoteConfigPropertyResolver=_remoteConfigPropertyResolver;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTHomeUIShortcutsCardViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void).cxx_destruct;
@@ -49,6 +55,7 @@
 - (void)applyStateStyle:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (void)configureAccessoryViewWithViewModel:(id)arg1;
+- (void)updateGradientViewWithImage:(id)arg1;
 - (void)setImage:(id)arg1 animated:(_Bool)arg2;
 - (void)setAccessoryViewImage:(id)arg1;
 @property(copy, nonatomic) NSAttributedString *attributedTitle;
@@ -62,7 +69,8 @@
 - (void)createAccessoryView;
 - (void)createImageView;
 - (void)createTitleLabel;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
+- (void)createGradientView;
+- (id)initWithTheme:(id)arg1 remoteConfigPropertyResolver:(id)arg2 frame:(struct CGRect)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

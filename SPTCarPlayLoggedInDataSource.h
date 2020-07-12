@@ -41,7 +41,7 @@
 @property(readonly, nonatomic) SPTCarPlayContentItemBuilder *contentItemBuilder; // @synthesize contentItemBuilder=_contentItemBuilder;
 @property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) SPTCarPlayUBILogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) NSArray *rootItems; // @synthesize rootItems=_rootItems;
+@property(copy, nonatomic) NSArray *rootItems; // @synthesize rootItems=_rootItems;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) id <SPTMediaPlayerContentBridge> mediaPlayerBridge; // @synthesize mediaPlayerBridge=_mediaPlayerBridge;
 @property(retain, nonatomic) id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;

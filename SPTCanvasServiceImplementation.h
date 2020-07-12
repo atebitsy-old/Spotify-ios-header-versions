@@ -10,8 +10,8 @@
 #import "SPTCanvasService-Protocol.h"
 #import "SPTCanvasTestManagerObserver-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTCanvasContextMenuActionsRegistrar, SPTCanvasForceArtworkManager, SPTCanvasLoadStateTracker, SPTCanvasLogger, SPTCanvasLoggingService, SPTCanvasNowPlayingContentLayerProvider, SPTCanvasNowPlayingContentReloader, SPTCanvasNowPlayingViewState, SPTCanvasSwitchViewControllerManager, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager, SPTCanvasTrackCheckerImplementation;
-@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTContainerService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTEntityService, SPTFeatureFlaggingService, SPTFreeTierTooltipService, SPTGLUEService, SPTModerationService, SPTNetworkService, SPTNowPlayingContainerIdleMonitorObservable, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTURIDispatchService, SPTVideoFeature, SPTVideoURLAssetLoader;
+@class NSString, SPTAllocationContext, SPTCanvasContextMenuActionsRegistrar, SPTCanvasForceArtworkManager, SPTCanvasLoadStateTracker, SPTCanvasLoggingService, SPTCanvasNowPlayingContentLayerProvider, SPTCanvasNowPlayingContentReloader, SPTCanvasNowPlayingViewState, SPTCanvasRemoteConfigManager, SPTCanvasSwitchViewControllerManager, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager, SPTCanvasTrackCheckerImplementation;
+@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTContainerService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTEntityService, SPTEventSenderService, SPTFeatureFlaggingService, SPTFreeTierTooltipService, SPTGLUEService, SPTModerationService, SPTNetworkService, SPTNowPlayingContainerIdleMonitorObservable, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTURIDispatchService, SPTVideoFeature, SPTVideoURLAssetLoader;
 
 @interface SPTCanvasServiceImplementation : NSObject <SPTCanvasIdleMonitorObserverDelegate, SPTCanvasTestManagerObserver, SPTCanvasService>
 {
@@ -37,6 +37,8 @@
     id <CosmosFeature> _cosmosService;
     id <SPTDebugService> _debugService;
     id <SPTShareFeature> _shareFeature;
+    id <SPTEventSenderService> _eventSenderService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTCanvasTestManager *_testManager;
     SPTCanvasTrackCheckerImplementation *_trackChecker;
     SPTCanvasLoggingService *_loggingService;
@@ -44,9 +46,10 @@
     SPTCanvasTooltipPresentationManager *_canvasToolTipManager;
     SPTCanvasNowPlayingViewState *_nowPlayingState;
     SPTCanvasForceArtworkManager *_forceArtworkManager;
+    SPTCanvasRemoteConfigManager *_remoteConfigurationManager;
     id <SPTNowPlayingContainerIdleMonitorObservable> _idleMonitorObservable;
     id <SPTVideoURLAssetLoader> _canvasVideoAssetLoader;
-    SPTCanvasLogger *_canvasLogger;
+    id _canvasLogger;
     SPTCanvasNowPlayingContentLayerProvider *_nowPlayingContentLayerProvider;
     SPTCanvasLoadStateTracker *_canvasLoadStateTracker;
     SPTCanvasSwitchViewControllerManager *_canvasSwitchManager;
@@ -60,9 +63,10 @@
 @property(retain, nonatomic) SPTCanvasSwitchViewControllerManager *canvasSwitchManager; // @synthesize canvasSwitchManager=_canvasSwitchManager;
 @property(retain, nonatomic) SPTCanvasLoadStateTracker *canvasLoadStateTracker; // @synthesize canvasLoadStateTracker=_canvasLoadStateTracker;
 @property(retain, nonatomic) SPTCanvasNowPlayingContentLayerProvider *nowPlayingContentLayerProvider; // @synthesize nowPlayingContentLayerProvider=_nowPlayingContentLayerProvider;
-@property(retain, nonatomic) SPTCanvasLogger *canvasLogger; // @synthesize canvasLogger=_canvasLogger;
+@property(retain, nonatomic) id canvasLogger; // @synthesize canvasLogger=_canvasLogger;
 @property(retain, nonatomic) id <SPTVideoURLAssetLoader> canvasVideoAssetLoader; // @synthesize canvasVideoAssetLoader=_canvasVideoAssetLoader;
 @property(retain, nonatomic) id <SPTNowPlayingContainerIdleMonitorObservable> idleMonitorObservable; // @synthesize idleMonitorObservable=_idleMonitorObservable;
+@property(retain, nonatomic) SPTCanvasRemoteConfigManager *remoteConfigurationManager; // @synthesize remoteConfigurationManager=_remoteConfigurationManager;
 @property(retain, nonatomic) SPTCanvasForceArtworkManager *forceArtworkManager; // @synthesize forceArtworkManager=_forceArtworkManager;
 @property(retain, nonatomic) SPTCanvasNowPlayingViewState *nowPlayingState; // @synthesize nowPlayingState=_nowPlayingState;
 @property(retain, nonatomic) SPTCanvasTooltipPresentationManager *canvasToolTipManager; // @synthesize canvasToolTipManager=_canvasToolTipManager;
@@ -70,6 +74,8 @@
 @property(retain, nonatomic) SPTCanvasLoggingService *loggingService; // @synthesize loggingService=_loggingService;
 @property(retain, nonatomic) SPTCanvasTrackCheckerImplementation *trackChecker; // @synthesize trackChecker=_trackChecker;
 @property(retain, nonatomic) SPTCanvasTestManager *testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;

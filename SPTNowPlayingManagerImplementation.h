@@ -10,19 +10,17 @@
 #import "SPTMetaViewControllerObserver-Protocol.h"
 #import "SPTNowPlayingManager-Protocol.h"
 #import "SPTNowPlayingModelObserver-Protocol.h"
-#import "SPTNowPlayingTestManagerObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSMapTable, NSNotificationCenter, NSString, NSTimer, SPTNowPlayingModel, UIViewController;
-@protocol NSObject, SPTAdsManager, SPTLocalSettings, SPTMetaViewController, SPTNowPlayingTestManager, SPTPlayer;
+@protocol NSObject, SPTAdsManager, SPTLocalSettings, SPTMetaViewController, SPTPlayer;
 
-@interface SPTNowPlayingManagerImplementation : NSObject <SPTPlayerObserver, MessageBarControllerDelegate, SPTMetaViewControllerObserver, SPTNowPlayingModelObserver, SPTNowPlayingTestManagerObserver, SPTNowPlayingManager, SPTURISubtypeHandler>
+@interface SPTNowPlayingManagerImplementation : NSObject <SPTPlayerObserver, MessageBarControllerDelegate, SPTMetaViewControllerObserver, SPTNowPlayingModelObserver, SPTNowPlayingManager, SPTURISubtypeHandler>
 {
     SPTNowPlayingModel *_model;
     id <SPTMetaViewController> _metaViewController;
     id <SPTPlayer> _player;
-    id <SPTNowPlayingTestManager> _testManager;
     id <SPTLocalSettings> _localSettings;
     NSTimer *_metadataTimer;
     NSMapTable *_observers;
@@ -39,7 +37,6 @@
 @property(readonly, nonatomic) NSMapTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSTimer *metadataTimer; // @synthesize metadataTimer=_metadataTimer;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
@@ -70,9 +67,8 @@
 - (void)invalidate;
 - (_Bool)shouldBounceBar;
 - (void)addNotificationsObserversIfNeeded;
-- (void)nowPlayingTestManagerDidEnableBarImprovements:(id)arg1;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 metaViewController:(id)arg2 player:(id)arg3 messageBarController:(id)arg4 testManager:(id)arg5 localSettings:(id)arg6 notificationCenter:(id)arg7 adsManager:(id)arg8;
+- (id)initWithModel:(id)arg1 metaViewController:(id)arg2 player:(id)arg3 messageBarController:(id)arg4 localSettings:(id)arg5 notificationCenter:(id)arg6 adsManager:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

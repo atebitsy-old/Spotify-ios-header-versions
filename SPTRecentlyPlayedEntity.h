@@ -71,6 +71,7 @@
 - (id)dictionaryRepresentation;
 - (id)initWithDictionary:(id)arg1 linkDispatcher:(id)arg2;
 - (id)initWithURL:(id)arg1 andTrackURL:(id)arg2 timestamp:(id)arg3 linkDispatcher:(id)arg4;
+- (void)exchangeImageURL:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

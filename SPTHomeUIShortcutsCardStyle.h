@@ -15,6 +15,7 @@
     struct UIEdgeInsets _titleInsets;
 }
 
++ (id)makeImageStyle;
 + (id)makeTitleLabelStyleWithTheme:(id)arg1;
 + (id)makeUIStatesToStylesWithTheme:(id)arg1;
 + (id)defaultStyleWithTheme:(id)arg1;

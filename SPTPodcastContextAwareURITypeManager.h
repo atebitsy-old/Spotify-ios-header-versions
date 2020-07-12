@@ -9,21 +9,21 @@
 #import "SPTContextAwareURITypeManager-Protocol.h"
 
 @class NSString;
-@protocol SPTShowEntityService;
+@protocol SPTPodcastEntityDataLoader;
 
 @interface SPTPodcastContextAwareURITypeManager : NSObject <SPTContextAwareURITypeManager>
 {
-    id <SPTShowEntityService> _entityService;
+    id <SPTPodcastEntityDataLoader> _entityDataLoader;
     CDUnknownBlockType _contextAwareURIBlock;
 }
 
 @property(copy, nonatomic) CDUnknownBlockType contextAwareURIBlock; // @synthesize contextAwareURIBlock=_contextAwareURIBlock;
-@property(retain, nonatomic) id <SPTShowEntityService> entityService; // @synthesize entityService=_entityService;
+@property(retain, nonatomic) id <SPTPodcastEntityDataLoader> entityDataLoader; // @synthesize entityDataLoader=_entityDataLoader;
 - (void).cxx_destruct;
 - (void)resolveDefaultContextForURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (void)lookupShowURI:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (_Bool)typeManagerRecognizesURI:(id)arg1;
-- (id)initWithEntityService:(id)arg1 contextAwareURIBlock:(CDUnknownBlockType)arg2;
+- (id)initWithEntityDataLoader:(id)arg1 contextAwareURIBlock:(CDUnknownBlockType)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

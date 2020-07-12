@@ -8,7 +8,7 @@
 
 #import "SPTShareHandler-Protocol.h"
 
-@class NSString, SPTShareLogger;
+@class NSString, SPTShareHandlerCompletionDataModel, SPTShareLogger;
 
 @interface SPTShareTwitterShareHandler : NSObject <SPTShareHandler>
 {
@@ -18,8 +18,10 @@
     NSString *_utmContent;
     NSString *_utmTerm;
     SPTShareLogger *_shareLogger;
+    SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+@property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(readonly, nonatomic) NSString *utmTerm; // @synthesize utmTerm=_utmTerm;
 @property(readonly, nonatomic) NSString *utmContent; // @synthesize utmContent=_utmContent;

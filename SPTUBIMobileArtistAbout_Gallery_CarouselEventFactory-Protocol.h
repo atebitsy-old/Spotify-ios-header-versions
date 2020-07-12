@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileArtistAbout_Gallery_CarouselEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)swipeMoveImage;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

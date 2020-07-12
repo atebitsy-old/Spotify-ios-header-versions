@@ -11,8 +11,11 @@
     // Error parsing type: , name: connectManager
     // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: player
+    // Error parsing type: , name: inAppMessageMonitor
     // Error parsing type: , name: isMainBarShown
     // Error parsing type: , name: hasPerformedNudgeForCurrentSession
+    // Error parsing type: , name: hasSeenDevicePickerForCurrentSession
+    // Error parsing type: , name: hasSeenDevicePickerForPreviousSession
     // Error parsing type: , name: delegate
 }
 

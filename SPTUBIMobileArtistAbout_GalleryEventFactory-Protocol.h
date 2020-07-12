@@ -9,7 +9,6 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent, SPTUBIMobileArtistAbout_Gallery_CarouselEventFactory;
 
 @protocol SPTUBIMobileArtistAbout_GalleryEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)swipeMoveImage;
 - (id <SPTUBIInteractionEvent>)hitNoAction;
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileArtistAbout_Gallery_CarouselEventFactory>)carouselFactoryWithPosition:(long long)arg1;

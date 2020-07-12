@@ -17,6 +17,7 @@
 - (void).cxx_destruct;
 - (_Bool)isSupportedMediaManifest:(id)arg1;
 - (id)parseManifest:(id)arg1;
+- (id)overrideFeatureIdentifierFrom:(id)arg1;
 - (id)dateFromTimestampMS:(id)arg1;
 - (id)metadataForVideoTrack:(id)arg1 playerOptions:(id)arg2 commandInitiatedAt:(id)arg3 isSystemInitialized:(_Bool)arg4 startReason:(id)arg5;
 - (id)requestForVideoTrack:(id)arg1 playerOptions:(id)arg2 metadata:(id)arg3;

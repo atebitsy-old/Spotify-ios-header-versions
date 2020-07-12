@@ -9,12 +9,12 @@
 #import "SPTEpisodeContextMenuControllerDelegate-Protocol.h"
 
 @class NSString, SPTPodcastLogger;
-@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTOfflineManager, SPTPodcastDataLoader, SPTPodcastOffliningManager, SPTPodcastRequestFactory, SPTShow, SPTShowEntityService;
+@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTOfflineManager, SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastOffliningManager, SPTPodcastRequestFactory, SPTShow;
 
 @interface SPTPodcastContextMenuDelegateObject : NSObject <SPTEpisodeContextMenuControllerDelegate>
 {
     id <SPTOfflineManager> _offlineManager;
-    id <SPTShowEntityService> _showEntityService;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
     id <SPTPodcastDataLoader> _dataLoader;
     SPTPodcastLogger *_logger;
     id <SPTShow> _show;
@@ -31,7 +31,7 @@
 @property(retain, nonatomic) id <SPTShow> show; // @synthesize show=_show;
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
-@property(retain, nonatomic) id <SPTShowEntityService> showEntityService; // @synthesize showEntityService=_showEntityService;
+@property(retain, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(nonatomic) __weak id <SPTOfflineManager> offlineManager; // @synthesize offlineManager=_offlineManager;
 - (void).cxx_destruct;
 - (void)markEpisodeAsPlayed:(id)arg1 played:(_Bool)arg2;
@@ -40,7 +40,7 @@
 - (void)followPodcast:(id)arg1;
 - (void)unfollowPodcast:(id)arg1;
 - (void)loadPodcastWithURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithPodcastOffliningManager:(id)arg1 showEntityService:(id)arg2 dataLoader:(id)arg3 logger:(id)arg4 collectionLogger:(id)arg5 collectionPlatform:(id)arg6 requestFactory:(id)arg7;
+- (id)initWithPodcastOffliningManager:(id)arg1 podcastEntityDataLoader:(id)arg2 dataLoader:(id)arg3 logger:(id)arg4 collectionLogger:(id)arg5 collectionPlatform:(id)arg6 requestFactory:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,11 +9,12 @@
 #import "SPTAddToSpotifyPlaylistExperimentCellProvider-Protocol.h"
 #import "SPTEncoreTrackRowDelegate-Protocol.h"
 #import "SPTFreeTierPlaylistModelObserver-Protocol.h"
+#import "SPTShadowPlaylistURIResolverObserver-Protocol.h"
 
-@class NSString, NSURL, SPTPlayOrigin;
-@protocol GLUETheme, SPTEncoreTrackRowFactory, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistModelEntity, SPTPlayer, SPTShelves;
+@class NSString, NSURL, SPTPlayOrigin, SPTShadowPlaylistURIResolver;
+@protocol GLUETheme, SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentLogger, SPTEncoreTrackRowFactory, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistModelEntity, SPTPlayer, SPTPlaylistRoute, SPTShelves;
 
-@interface SPTAddToSpotifyPlaylistExperimentCellProviderImplementation : NSObject <SPTEncoreTrackRowDelegate, SPTFreeTierPlaylistModelObserver, SPTAddToSpotifyPlaylistExperimentCellProvider>
+@interface SPTAddToSpotifyPlaylistExperimentCellProviderImplementation : NSObject <SPTEncoreTrackRowDelegate, SPTFreeTierPlaylistModelObserver, SPTShadowPlaylistURIResolverObserver, SPTAddToSpotifyPlaylistExperimentCellProvider>
 {
     id <SPTFreeTierPlaylistCellProviderDelegate> _delegate;
     id <SPTEncoreTrackRowFactory> _trackRowFactory;
@@ -25,8 +26,18 @@
     id <SPTFreeTierPlaylistModelEntity> _modelEntity;
     NSURL *_playlistURI;
     SPTPlayOrigin *_origin;
+    CDUnknownBlockType _viewModelFactoryBlock;
+    id <SPContextMenuFeature> _contextMenuService;
+    id <SPTPlaylistRoute> _playlistRoute;
+    SPTShadowPlaylistURIResolver *_shadowURIResolver;
+    id <SPTAddToSpotifyPlaylistExperimentLogger> _logger;
 }
 
+@property(retain, nonatomic) id <SPTAddToSpotifyPlaylistExperimentLogger> logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTShadowPlaylistURIResolver *shadowURIResolver; // @synthesize shadowURIResolver=_shadowURIResolver;
+@property(retain, nonatomic) id <SPTPlaylistRoute> playlistRoute; // @synthesize playlistRoute=_playlistRoute;
+@property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
+@property(copy, nonatomic) CDUnknownBlockType viewModelFactoryBlock; // @synthesize viewModelFactoryBlock=_viewModelFactoryBlock;
 @property(retain, nonatomic) SPTPlayOrigin *origin; // @synthesize origin=_origin;
 @property(readonly, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModelEntity> modelEntity; // @synthesize modelEntity=_modelEntity;
@@ -34,10 +45,13 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistDefaultHeaderViewModel> originalPlaylistViewModel; // @synthesize originalPlaylistViewModel=_originalPlaylistViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
+@property(retain, nonatomic) id <SPTFreeTierPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
 @property(readonly, nonatomic) id <SPTEncoreTrackRowFactory> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)uriResolver:(id)arg1 didRegenerateReadListForRoute:(id)arg2;
+- (void)uriResolver:(id)arg1 didCreateShadow:(id)arg2;
+- (_Bool)isEmpty;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
@@ -61,13 +75,14 @@
 - (double)heightForRowAtIndexPath:(id)arg1;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (long long)loggerIndexForTrackIndex:(unsigned long long)arg1;
 - (_Bool)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)enableSwipeGesturesOnCell:(id)arg1 withTrack:(id)arg2 indexPath:(id)arg3;
 - (long long)encoreRestrictionForTrackViewModel:(id)arg1;
 - (id)encoreModelForTrack:(id)arg1 isPressed:(_Bool)arg2;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
-- (id)initWithTrackRowFactory:(id)arg1 playlistModel:(id)arg2 originalPlaylistViewModel:(id)arg3 player:(id)arg4 playlistURI:(id)arg5 origin:(id)arg6 shelves:(id)arg7 theme:(id)arg8;
+- (id)initWithTrackRowFactory:(id)arg1 viewModelFactory:(CDUnknownBlockType)arg2 originalPlaylistViewModel:(id)arg3 player:(id)arg4 playlistURI:(id)arg5 uriResolver:(id)arg6 origin:(id)arg7 shelves:(id)arg8 theme:(id)arg9 contextMenuService:(id)arg10 logger:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

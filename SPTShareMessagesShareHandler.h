@@ -9,7 +9,7 @@
 #import "MFMessageComposeViewControllerDelegate-Protocol.h"
 #import "SPTShareHandler-Protocol.h"
 
-@class NSString, SPTShareData, SPTShareLogger, SPTStatusBarToken;
+@class NSString, SPTShareData, SPTShareHandlerCompletionDataModel, SPTShareLogger, SPTStatusBarToken;
 @protocol SPTShareDeeplinkHandler;
 
 @interface SPTShareMessagesShareHandler : NSObject <MFMessageComposeViewControllerDelegate, SPTShareHandler>
@@ -24,8 +24,10 @@
     SPTShareData *_shareData;
     CDUnknownBlockType _completionBlock;
     SPTStatusBarToken *_statusBarToken;
+    SPTShareHandlerCompletionDataModel *_completionData;
 }
 
+@property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;

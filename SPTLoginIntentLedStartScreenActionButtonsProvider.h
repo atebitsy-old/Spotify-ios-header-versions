@@ -17,6 +17,7 @@
 @property(readonly, nonatomic) unsigned long long intent; // @synthesize intent=_intent;
 @property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 - (void).cxx_destruct;
+- (id)emailButtonAccessibilityIdentifier;
 - (id)emailSignupButtonViewModel;
 - (id)emailLoginButtonViewModel;
 - (id)phoneNumberButtonViewModel;

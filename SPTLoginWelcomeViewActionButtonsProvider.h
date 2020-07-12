@@ -20,10 +20,12 @@
 - (id)loginButtonViewModel;
 - (id)emailButtonViewModel;
 - (id)signupButtonViewModel;
-- (id)phoneNumberButtonViewModel;
-- (id)facebookButtonViewModel;
-- (id)appleButtonViewModel;
-- (void)appendEnabledLoginOptions:(id)arg1;
+- (id)controlGroupPhoneNumberButtonViewModel;
+- (id)methodLedGroupPhoneNumberButtonViewModel;
+- (id)methodLedGroupFacebookButtonViewModel;
+- (id)methodLedGroupAppleButtonViewModel;
+- (id)controlGroupFacebookButtonViewModel;
+- (id)controlGroupAppleButtonViewModel;
 - (id)intentLedGroupButtonsArray;
 - (id)controlGroupButtonsArray;
 - (id)methodLedGroupButtonsArray;

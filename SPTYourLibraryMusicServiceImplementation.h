@@ -9,7 +9,7 @@
 #import "SPTYourLibraryMusicService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTYourLibraryMusicServiceImplementation : NSObject <SPTYourLibraryMusicService>
 {
@@ -21,6 +21,7 @@
     id <FollowFeature> _followService;
     id <SPTFreeTierService> _freeTierService;
     id <SPTNetworkService> _networkService;
+    id <_TtP17OfflineMixFeature20SPTOfflineMixService_> _offlineMixService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
@@ -40,6 +41,7 @@
 @property(nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
+@property(nonatomic) __weak id <_TtP17OfflineMixFeature20SPTOfflineMixService_> offlineMixService; // @synthesize offlineMixService=_offlineMixService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <FollowFeature> followService; // @synthesize followService=_followService;

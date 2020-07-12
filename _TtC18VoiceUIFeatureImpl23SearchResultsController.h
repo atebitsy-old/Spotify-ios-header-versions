@@ -10,6 +10,9 @@
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: playbackController
+    // Error parsing type: , name: glueTheme
+    // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: testManager
 }
 
 @end

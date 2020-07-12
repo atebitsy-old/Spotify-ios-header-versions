@@ -11,6 +11,6 @@
 @protocol SPTShareEventSenderLogger <NSObject>
 - (void)logPlaybackFromDeepLinkWithEntityURI:(NSString *)arg1 contextURI:(NSString *)arg2 playbackId:(NSString *)arg3 deeplinkSessionIdentifier:(NSString *)arg4;
 - (void)logDeeplinkOpenEventWithEntityURI:(NSString *)arg1 sourceAppIdentifier:(NSString *)arg2 externalLink:(NSString *)arg3 deeplinkSessionIdentifier:(NSString *)arg4;
-- (void)logShareWithEntityURI:(NSString *)arg1 destinationId:(NSString *)arg2 shareId:(NSString *)arg3 sourcePageUri:(NSString *)arg4 sourcePage:(NSString *)arg5 systemDestination:(NSString *)arg6;
+- (void)logShareWithEntityURI:(NSString *)arg1 destinationId:(NSString *)arg2 shareId:(NSString *)arg3 sourcePageUri:(NSString *)arg4 sourcePage:(NSString *)arg5 capability:(NSString *)arg6 systemDestination:(NSString *)arg7;
 @end
 

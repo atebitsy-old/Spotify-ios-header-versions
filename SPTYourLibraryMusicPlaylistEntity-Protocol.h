@@ -4,19 +4,17 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "SPTPlaylistPlatformFieldAddedAt-Protocol.h"
 #import "SPTPlaylistPlatformFieldAvailableOfflineStatus-Protocol.h"
 #import "SPTPlaylistPlatformFieldFormatListAttributes-Protocol.h"
+#import "SPTPlaylistPlatformFieldFormatListType-Protocol.h"
 #import "SPTPlaylistPlatformFieldGroupLabel-Protocol.h"
 #import "SPTPlaylistPlatformFieldImageURL-Protocol.h"
 #import "SPTPlaylistPlatformFieldIsLoaded-Protocol.h"
-#import "SPTPlaylistPlatformFieldIsOwnedBySelf-Protocol.h"
 #import "SPTPlaylistPlatformFieldMadeForName-Protocol.h"
 #import "SPTPlaylistPlatformFieldName-Protocol.h"
 #import "SPTPlaylistPlatformFieldOwnerName-Protocol.h"
-#import "SPTPlaylistPlatformFieldTotalLength-Protocol.h"
 #import "SPTPlaylistPlatformFieldURL-Protocol.h"
 
-@protocol SPTYourLibraryMusicPlaylistEntity <SPTPlaylistPlatformFieldURL, SPTPlaylistPlatformFieldName, SPTPlaylistPlatformFieldImageURL, SPTPlaylistPlatformFieldTotalLength, SPTPlaylistPlatformFieldIsLoaded, SPTPlaylistPlatformFieldOwnerName, SPTPlaylistPlatformFieldIsOwnedBySelf, SPTPlaylistPlatformFieldAddedAt, SPTPlaylistPlatformFieldAvailableOfflineStatus, SPTPlaylistPlatformFieldMadeForName, SPTPlaylistPlatformFieldFormatListAttributes, SPTPlaylistPlatformFieldGroupLabel>
+@protocol SPTYourLibraryMusicPlaylistEntity <SPTPlaylistPlatformFieldURL, SPTPlaylistPlatformFieldName, SPTPlaylistPlatformFieldImageURL, SPTPlaylistPlatformFieldIsLoaded, SPTPlaylistPlatformFieldOwnerName, SPTPlaylistPlatformFieldAvailableOfflineStatus, SPTPlaylistPlatformFieldMadeForName, SPTPlaylistPlatformFieldFormatListAttributes, SPTPlaylistPlatformFieldFormatListType, SPTPlaylistPlatformFieldGroupLabel>
 @end
 

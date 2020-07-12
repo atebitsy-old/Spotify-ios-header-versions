@@ -13,6 +13,7 @@
 - (void)socialListeningDataLoader:(SPTSocialListeningDataLoader *)arg1 didGetDeviceExposure:(NSDictionary *)arg2;
 - (void)socialListeningDataLoader:(SPTSocialListeningDataLoader *)arg1 didGetSocialDevices:(NSArray<SPTSocialListeningSocialDeviceModelEntity> *)arg2;
 - (void)socialListeningDataLoader:(SPTSocialListeningDataLoader *)arg1 didDeleteSession:(SPTSocialListeningSession *)arg2;
+- (void)socialListeningDataLoader:(SPTSocialListeningDataLoader *)arg1 didLookupSession:(SPTSocialListeningSession *)arg2;
 - (void)socialListeningDataLoader:(SPTSocialListeningDataLoader *)arg1 didEndSession:(SPTSocialListeningSession *)arg2 updateEvent:(SPTSocialListeningUpdateEvent *)arg3;
 - (void)socialListeningDataLoader:(SPTSocialListeningDataLoader *)arg1 didFailWithError:(NSError *)arg2;
 - (void)socialListeningDataLoader:(SPTSocialListeningDataLoader *)arg1 didObtainSession:(SPTSocialListeningSession *)arg2 updateEvent:(SPTSocialListeningUpdateEvent *)arg3;

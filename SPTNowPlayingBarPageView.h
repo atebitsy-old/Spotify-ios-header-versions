@@ -7,14 +7,13 @@
 #import "SPTPageView.h"
 
 #import "SPTNowPlayingBarPageModelDelegate-Protocol.h"
-#import "SPTNowPlayingTestManagerObserver-Protocol.h"
 #import "SPTPlayerTrackScrollPageView-Protocol.h"
 #import "SPTThemableView-Protocol.h"
 
 @class NSString, NSURL, SPTNowPlayingBarPageModel, SPTTheme, UILabel;
-@protocol SPTNowPlayingTestManager, SPTThemableViewLayoutDelegate;
+@protocol SPTThemableViewLayoutDelegate;
 
-@interface SPTNowPlayingBarPageView : SPTPageView <SPTNowPlayingBarPageModelDelegate, SPTNowPlayingTestManagerObserver, SPTPlayerTrackScrollPageView, SPTThemableView>
+@interface SPTNowPlayingBarPageView : SPTPageView <SPTNowPlayingBarPageModelDelegate, SPTPlayerTrackScrollPageView, SPTThemableView>
 {
     _Bool _coverArtHidden;
     NSURL *_trackURL;
@@ -22,7 +21,6 @@
     NSString *_subtitle;
     NSURL *_imageURL;
     id <SPTThemableViewLayoutDelegate> _layoutDelegate;
-    id <SPTNowPlayingTestManager> _testManager;
     SPTNowPlayingBarPageModel *_model;
     SPTTheme *_theme;
     UILabel *_topLabel;
@@ -34,7 +32,6 @@
 @property(retain, nonatomic) UILabel *topLabel; // @synthesize topLabel=_topLabel;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTNowPlayingBarPageModel *model; // @synthesize model=_model;
-@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) struct CGRect coverArtAreaBounds; // @synthesize coverArtAreaBounds=_coverArtAreaBounds;
 @property(nonatomic, getter=isCoverArtHidden) _Bool coverArtHidden; // @synthesize coverArtHidden=_coverArtHidden;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
@@ -43,7 +40,6 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) NSURL *trackURL; // @synthesize trackURL=_trackURL;
 - (void).cxx_destruct;
-- (void)nowPlayingTestManagerDidEnableBarImprovements:(id)arg1;
 - (void)calculateLabelTexts;
 - (id)bottomLabelTextAttributes;
 - (id)topLabelTextAttributes;
@@ -54,7 +50,7 @@
 - (void)nowPlayingBarPageModelDidChangeRemoteDevicesViewVisibility:(id)arg1;
 - (void)applyThemeLayout;
 - (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1 reuseIdentifier:(id)arg2 model:(id)arg3 theme:(id)arg4 testManager:(id)arg5;
+- (id)initWithFrame:(struct CGRect)arg1 reuseIdentifier:(id)arg2 model:(id)arg3 theme:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
