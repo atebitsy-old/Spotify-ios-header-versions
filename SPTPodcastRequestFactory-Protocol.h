@@ -7,12 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSPredicate, NSSortDescriptor, NSURL;
-@protocol SPTPodcastRequest, SPTPodcastUITestManager;
+@protocol SPTPodcastRequest, SPTPodcastRequestData;
 
 @protocol SPTPodcastRequestFactory <NSObject>
+- (id <SPTPodcastRequest>)createRequestWithData:(id <SPTPodcastRequestData>)arg1;
 - (id <SPTPodcastRequest>)createMarkEpisodeAsPlayedRequestWithURLs:(NSArray *)arg1 markAsUnplayed:(_Bool)arg2;
-- (id <SPTPodcastRequest>)createCollectionEpisodesRequestWithURL:(NSURL *)arg1 subscribe:(_Bool)arg2 testManager:(id <SPTPodcastUITestManager>)arg3;
-- (id <SPTPodcastRequest>)createPodcastEntityRequestWithURL:(NSURL *)arg1 filterPredicate:(NSPredicate *)arg2 sortDescriptor:(NSSortDescriptor *)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5 testManager:(id <SPTPodcastUITestManager>)arg6;
+- (id <SPTPodcastRequest>)createCollectionEpisodesRequestWithURL:(NSURL *)arg1 subscribe:(_Bool)arg2;
+- (id <SPTPodcastRequest>)createPodcastEntityRequestWithURL:(NSURL *)arg1 filterPredicate:(NSPredicate *)arg2 sortDescriptor:(NSSortDescriptor *)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5;
 - (id <SPTPodcastRequest>)createDecorateItemsRequestWithItemURIs:(NSArray *)arg1 subscribe:(_Bool)arg2;
 @end
 

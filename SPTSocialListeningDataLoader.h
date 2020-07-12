@@ -20,8 +20,10 @@
     id <SPTProfileUserData> _currentUserData;
     id <SPTSocialListeningTestManager> _testManager;
     id <SPTCosmosDictionaryDataLoaderRequestToken> _sessionStateSubscriptionToken;
+    NSString *_physicalDeviceID;
 }
 
+@property(copy, nonatomic) NSString *physicalDeviceID; // @synthesize physicalDeviceID=_physicalDeviceID;
 @property _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> sessionStateSubscriptionToken; // @synthesize sessionStateSubscriptionToken=_sessionStateSubscriptionToken;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
@@ -37,6 +39,7 @@
 - (void)enableSocialDevice:(id)arg1;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
+- (void)setPhysicalDeviceIDState:(id)arg1;
 - (void)setCoreSocialListeningState:(_Bool)arg1;
 - (void)subscribeToSessionUpdates;
 - (id)sessionTypeQueryParameter;

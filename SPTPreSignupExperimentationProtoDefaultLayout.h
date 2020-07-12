@@ -6,7 +6,7 @@
 
 #import "GPBMessage.h"
 
-@class SPTPreSignupExperimentationProtoHeader;
+@class NSString, SPTPreSignupExperimentationProtoHeader;
 
 @interface SPTPreSignupExperimentationProtoDefaultLayout : GPBMessage
 {
@@ -17,6 +17,7 @@
 // Remaining properties
 @property(nonatomic) _Bool hasHeader; // @dynamic hasHeader;
 @property(retain, nonatomic) SPTPreSignupExperimentationProtoHeader *header; // @dynamic header;
+@property(copy, nonatomic) NSString *name; // @dynamic name;
 
 @end
 

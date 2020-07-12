@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSMutableArray, NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTExternalIntegrationSpacesContentFactory, SPTExternalIntegrationSpacesContentURLResolver, SPTPersistentCache;
-@protocol SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTExternalIntegrationTestManagerService, SPTNetworkService, SPTSessionService;
+@protocol SPTExternalIntegrationContentService, SPTExternalIntegrationPlaybackService, SPTExternalIntegrationTestManagerService, SPTNetworkService, SPTOnDemandService, SPTSessionService;
 
 @interface SPTExternalIntegrationSpacesContentProviderService : NSObject <SPTService, SPTExternalIntegrationContentProvider>
 {
@@ -19,6 +19,7 @@
     id <SPTExternalIntegrationContentService> _contentService;
     id <SPTExternalIntegrationPlaybackService> _playbackService;
     id <SPTNetworkService> _networkService;
+    id <SPTOnDemandService> _onDemandService;
     id <SPTExternalIntegrationTestManagerService> _testManagerService;
     NSMutableArray *_activeRequests;
     SPTExternalIntegrationSpacesContentFactory *_contentFactory;
@@ -32,6 +33,7 @@
 @property(readonly, nonatomic) SPTExternalIntegrationSpacesContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
 @property(readonly, nonatomic) NSMutableArray *activeRequests; // @synthesize activeRequests=_activeRequests;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
+@property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;

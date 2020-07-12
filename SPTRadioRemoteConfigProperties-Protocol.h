@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTRadioRemoteConfigProperties <NSObject>
+@property(readonly, nonatomic) _Bool isRadioURITransitionEnabled;
 @property(readonly, nonatomic) _Bool isRadioContextMenuActionForFreeUsersEnabled;
 @property(readonly, nonatomic) _Bool isLegacyRadioEntityPagesEnabled;
 @end

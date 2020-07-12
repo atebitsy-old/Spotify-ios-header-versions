@@ -41,6 +41,7 @@
 - (void)requestLoginLinkWithEmail:(id)arg1;
 - (id)nextButtonText;
 - (id)fieldDisclosureLabelText;
+- (id)fieldAccessibilityLabel;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
 - (id)preExistingDisclosureLabelErrorMessage;

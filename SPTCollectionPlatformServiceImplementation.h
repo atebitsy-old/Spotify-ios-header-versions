@@ -9,7 +9,7 @@
 #import "SPTCollectionPlatformService-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTCollectionLoggerImplementation;
+@class NSString, SPTAllocationContext, SPTCollectionPlatformLoggerImplementation;
 @protocol CosmosFeature, SPTAbbaService, SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTFreeTierService, SPTNowPlayingPlatformService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSnackbarService;
 
 @interface SPTCollectionPlatformServiceImplementation : NSObject <SPTService, SPTCollectionPlatformService>
@@ -31,13 +31,13 @@
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTCollectionPlatformStateProvider> _collectionPlatformState;
-    SPTCollectionLoggerImplementation *_collectionLogger;
+    SPTCollectionPlatformLoggerImplementation *_collectionLogger;
     id <SPTResolver> _collectionCosmosRouter;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTResolver> collectionCosmosRouter; // @synthesize collectionCosmosRouter=_collectionCosmosRouter;
-@property(retain, nonatomic) SPTCollectionLoggerImplementation *collectionLogger; // @synthesize collectionLogger=_collectionLogger;
+@property(retain, nonatomic) SPTCollectionPlatformLoggerImplementation *collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTCollectionPlatformStateProvider> collectionPlatformState; // @synthesize collectionPlatformState=_collectionPlatformState;
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;

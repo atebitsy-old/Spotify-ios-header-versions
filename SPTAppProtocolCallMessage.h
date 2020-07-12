@@ -73,6 +73,7 @@
 @property(readonly, nonatomic) _Bool logMessage_hasSeverityParameter;
 @property(readonly, copy, nonatomic) NSString *logMessage_message;
 @property(readonly, copy, nonatomic) NSString *logMessage_title;
+@property(readonly, nonatomic) _Bool skipPrevious_forceSkipPrevious;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

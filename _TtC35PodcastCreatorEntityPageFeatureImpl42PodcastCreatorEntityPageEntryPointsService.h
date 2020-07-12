@@ -10,7 +10,6 @@
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl42PodcastCreatorEntityPageEntryPointsService : NSObject
 {
-    // Error parsing type: , name: flags
     // Error parsing type: , name: $__lazy_storage_$_viewProvider
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
@@ -21,7 +20,6 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (void)load;
 - (void)configureWithServices:(id)arg1;
 @property(nonatomic, retain) id <_TtP31PodcastCreatorEntityPageFeature39SPTPodcastCreatorEntityPageViewProvider_> viewProvider;
 

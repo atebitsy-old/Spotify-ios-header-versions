@@ -16,6 +16,7 @@
 {
     _Bool _didChangeLine;
     _Bool _didSwitchFromManualControl;
+    _Bool _isInBackground;
     id <SPTPlayer> _player;
     SPTPlayerTrack *_currentTrack;
     SPTLyricsLineSet *_lyricsLineSet;
@@ -26,6 +27,7 @@
 }
 
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
+@property(nonatomic) _Bool isInBackground; // @synthesize isInBackground=_isInBackground;
 @property(nonatomic) _Bool didSwitchFromManualControl; // @synthesize didSwitchFromManualControl=_didSwitchFromManualControl;
 @property(nonatomic) long long activeSyllableIndex; // @synthesize activeSyllableIndex=_activeSyllableIndex;
 @property(nonatomic) long long activeLineIndex; // @synthesize activeLineIndex=_activeLineIndex;
@@ -40,6 +42,7 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)updateWithPosition:(double)arg1;
+- (void)setPlayerUpdatesEnabled:(_Bool)arg1 manualUpdate:(_Bool)arg2;
 - (void)setManualUpdatesEnabled:(_Bool)arg1;
 - (void)updateWithLyricsLineSet:(id)arg1 forTrack:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2;
@@ -50,6 +53,8 @@
 - (void)updateWithPosition:(double)arg1 playerState:(id)arg2;
 - (void)updateWithPlayerState:(id)arg1;
 - (_Bool)isLyricsTrackable;
+- (void)applicationDidEnterBackground;
+- (void)applicationWillEnterForeground;
 - (void)dealloc;
 - (id)initWithPlayer:(id)arg1;
 

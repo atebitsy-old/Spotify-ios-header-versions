@@ -14,8 +14,8 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTCollectionEmptyEntityFooterView, SPTEntityTableHeaderView, SPTInfoView, SPTProgressView, SPTTableViewOfflineSwitchCell;
-@protocol GLUETheme, SPTBarButtonItemManager, SPTCollectionArtistModel, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTImageLoader, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPageContainer, SPTProductState, SPTShelves;
+@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTCollectionArtistLogger, SPTCollectionEmptyEntityFooterView, SPTEntityTableHeaderView, SPTInfoView, SPTProgressView, SPTTableViewOfflineSwitchCell;
+@protocol GLUETheme, SPTBarButtonItemManager, SPTCollectionArtistModel, SPTCollectionPlatformTestManager, SPTContextMenuPresenter, SPTImageLoader, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPageContainer, SPTProductState, SPTShelves;
 
 @interface SPTCollectionArtistViewController : SPTableViewController <SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTProductStateObserver, SPTOfflineSwitchDelegate, SPTBarButtonItemManagerObserver, SPTCollectionArtistModelDelegate, SPTPageController>
 {
@@ -26,7 +26,7 @@
     id <SPTShelves> _shelves;
     id <SPTImageLoader> _imageLoader;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
-    id <SPTCollectionLogger> _logger;
+    SPTCollectionArtistLogger *_logger;
     id <SPTBarButtonItemManager> _barButtonItemManager;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
     id <SPTModalPresentationController> _modalPresentationController;
@@ -55,7 +55,7 @@
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) __weak id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
-@property(readonly, nonatomic) id <SPTCollectionLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTCollectionArtistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) __weak id <SPTShelves> shelves; // @synthesize shelves=_shelves;
@@ -67,6 +67,7 @@
 - (void)updateRightBarButtonItems;
 - (void)configureRightBarButtonItems:(id)arg1;
 - (void)barButtonItemManagerProvidersDidChange:(id)arg1;
+- (void)offlineSwitchCellDidAbortStateChange:(id)arg1;
 - (unsigned long long)offlineSwitchCellOfflineAvailability:(id)arg1;
 - (void)offlineSwitchCellDidChangeState:(id)arg1 isOn:(_Bool)arg2;
 - (id)spt_referrerIdentifier;
@@ -120,7 +121,7 @@
 - (void)hideOfflineView;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithArtistModel:(id)arg1 productState:(id)arg2 shelves:(id)arg3 imageLoader:(id)arg4 networkConnectivityController:(id)arg5 collectionLogger:(id)arg6 barButtonItemManager:(id)arg7 collectionTestManager:(id)arg8 modalPresentationController:(id)arg9;
+- (id)initWithArtistModel:(id)arg1 productState:(id)arg2 shelves:(id)arg3 imageLoader:(id)arg4 networkConnectivityController:(id)arg5 logger:(id)arg6 barButtonItemManager:(id)arg7 collectionTestManager:(id)arg8 modalPresentationController:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

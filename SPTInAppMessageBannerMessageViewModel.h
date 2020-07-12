@@ -36,6 +36,7 @@
 @property(readonly, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(nonatomic) __weak id <SPTInAppMessageBannerMessageWebViewContentDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)logDismissEvent;
 - (void)logTriggerMessagePresentationPerformance;
 - (void)didReceiveWebviewEvent:(id)arg1;
 - (void)didReceieveActionNotification:(id)arg1;

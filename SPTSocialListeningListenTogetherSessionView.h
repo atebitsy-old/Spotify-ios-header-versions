@@ -8,7 +8,8 @@
 
 #import "SPTSocialListeningSessionViewProtocol-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSString, SPTListenTogetherBetaLabel, SPTSocialListeningSessionScannableView, UIActivityIndicatorView, UIStackView;
+@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, SPTListenTogetherBetaLabel, SPTSocialListeningSessionScannableView, UIActivityIndicatorView, UIStackView;
+@protocol GLUEAnimationLoading><GLUEAnimationControlling;
 
 @interface SPTSocialListeningListenTogetherSessionView : UIView <SPTSocialListeningSessionViewProtocol>
 {
@@ -26,8 +27,16 @@
     GLUELabel *_tryAgainLabel;
     UIStackView *_headerStackView;
     UIStackView *_stackView;
+    struct UIView *_sessionActiveIndicatorView;
+    UIView *_descriptionContainerView;
+    NSLayoutConstraint *_descriptionLabelToActiveIndicatorConstraint;
+    NSLayoutConstraint *_descriptionLabelToContainerConstraint;
 }
 
+@property(readonly, nonatomic) NSLayoutConstraint *descriptionLabelToContainerConstraint; // @synthesize descriptionLabelToContainerConstraint=_descriptionLabelToContainerConstraint;
+@property(readonly, nonatomic) NSLayoutConstraint *descriptionLabelToActiveIndicatorConstraint; // @synthesize descriptionLabelToActiveIndicatorConstraint=_descriptionLabelToActiveIndicatorConstraint;
+@property(readonly, nonatomic) UIView *descriptionContainerView; // @synthesize descriptionContainerView=_descriptionContainerView;
+@property(retain, nonatomic) UIView<GLUEAnimationLoading><GLUEAnimationControlling> *sessionActiveIndicatorView; // @synthesize sessionActiveIndicatorView=_sessionActiveIndicatorView;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) UIStackView *headerStackView; // @synthesize headerStackView=_headerStackView;
 @property(readonly, nonatomic) GLUELabel *tryAgainLabel; // @synthesize tryAgainLabel=_tryAgainLabel;
@@ -44,6 +53,7 @@
 @property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 - (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
+- (void)setSessionActiveIndicatorViewVisible:(_Bool)arg1;
 - (void)addViewConstraints;
 - (void)setupSeeListenersButton;
 - (void)setupLeaveSessionButton;
@@ -52,8 +62,8 @@
 - (void)setupTryAgainLabel;
 - (void)setupFacepileStackView;
 - (void)setupActivityIndicatorView;
-- (void)setupDescriptionLabel;
 - (void)setupTitleLabel;
+- (void)setupDescriptionLabel;
 - (void)setupHeaderStackView;
 - (void)setupStackView;
 - (id)initWithFrame:(struct CGRect)arg1;

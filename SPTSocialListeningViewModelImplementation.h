@@ -69,9 +69,12 @@
 - (void)leaveOrDeleteSession;
 @property(readonly, nonatomic) NSArray *shareDestinations;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
+@property(readonly, copy, nonatomic) NSString *participantsNavigationBarTitle;
 @property(readonly, copy, nonatomic) NSString *leaveButtonText;
 @property(readonly, copy, nonatomic) NSString *descriptionLabelText;
 @property(readonly, copy, nonatomic) NSString *headerLabelText;
+@property(readonly, nonatomic, getter=isListenTogetherSessionActiveIndicatorVisible) _Bool listenTogetherSessionActiveIndicatorVisible;
+@property(readonly, nonatomic, getter=isParticipantsInviteBarButtonVisible) _Bool participantsInviteBarButtonVisible;
 @property(readonly, nonatomic, getter=isParticipantsPlaceholderVisible) _Bool participantsPlaceholderVisible;
 @property(readonly, nonatomic) unsigned long long bottomBannerType;
 @property(readonly, nonatomic) _Bool seeListenersButtonHidden;

@@ -52,10 +52,10 @@
 - (unsigned long long)idzk_hostInt64OffsetBy:(unsigned long long *)arg1;
 - (unsigned int)idzk_hostInt32OffsetBy:(unsigned long long *)arg1;
 - (unsigned short)idzk_hostInt16OffsetBy:(unsigned long long *)arg1;
+- (id)ins_hexString;
 @property(readonly, copy, nonatomic, getter=bm_stringBySHA256Hashing) NSString *bm_stringBySHA256Hashing;
 @property(readonly, copy, nonatomic, getter=bm_stringBySHA1Hashing) NSString *bm_stringBySHA1Hashing;
 @property(readonly, copy, nonatomic, getter=bm_hexString) NSString *bm_hexString;
-- (id)ins_hexString;
 @property(readonly, copy, nonatomic, getter=spt_stringBySHA256Hashing) NSString *stringBySHA256Hashing;
 @property(readonly, copy, nonatomic, getter=spt_stringBySHA1Hashing) NSString *stringBySHA1Hashing;
 @property(readonly, copy, nonatomic, getter=spt_hexString) NSString *hexString;

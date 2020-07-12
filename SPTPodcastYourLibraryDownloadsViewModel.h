@@ -12,7 +12,7 @@
 #import "SPTPodcastYourLibraryEpisodesViewModel-Protocol.h"
 
 @class NSCache, NSDictionary, NSMutableArray, NSString, NSURL;
-@protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUITestManager, SPTPodcastYourLibraryEpisodesViewModelDelegate;
+@protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastYourLibraryEpisodesViewModelDelegate;
 
 @interface SPTPodcastYourLibraryDownloadsViewModel : NSObject <SPTExplicitContentEnabledStateObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
@@ -29,10 +29,8 @@
     NSMutableArray *_episodes;
     id <SPTPodcastDataLoaderRequestToken> _episodesRequestToken;
     NSDictionary *_rawJSON;
-    id <SPTPodcastUITestManager> _podcastUITestManager;
 }
 
-@property(retain, nonatomic) id <SPTPodcastUITestManager> podcastUITestManager; // @synthesize podcastUITestManager=_podcastUITestManager;
 @property(nonatomic) _Bool isLoaded; // @synthesize isLoaded=_isLoaded;
 @property(nonatomic) _Bool isLoading; // @synthesize isLoading=_isLoading;
 @property(copy, nonatomic) NSDictionary *rawJSON; // @synthesize rawJSON=_rawJSON;
@@ -66,7 +64,7 @@
 @property(readonly, nonatomic) double currentEpisodeProgress;
 - (id)episodeAtIndexPath:(id)arg1;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
-- (id)initWithURL:(id)arg1 podcastRequestFactory:(id)arg2 dataLoader:(id)arg3 player:(id)arg4 episodeFactory:(id)arg5 explicitContentAccessManager:(id)arg6 podcastUITestManager:(id)arg7;
+- (id)initWithURL:(id)arg1 podcastRequestFactory:(id)arg2 dataLoader:(id)arg3 player:(id)arg4 episodeFactory:(id)arg5 explicitContentAccessManager:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

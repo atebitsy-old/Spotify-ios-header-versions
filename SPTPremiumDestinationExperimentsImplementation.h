@@ -9,13 +9,14 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTPremiumDestinationExperiments-Protocol.h"
 
-@class NSString;
+@class NSString, UIViewController;
 @protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTRemoteConfigurationResolver;
 
 @interface SPTPremiumDestinationExperimentsImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTPremiumDestinationExperiments>
 {
     _Bool _shouldUseDevEndpointSetting;
     _Bool _shouldPresentImplicitNotificationAlertController;
+    UIViewController *_premiumDestinationTabBarBadgeViewController;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     id <SPTFeatureFlagSignal> _shouldUseDevEndpointSettingSignal;
@@ -28,6 +29,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> shouldUseDevEndpointSettingSignal; // @synthesize shouldUseDevEndpointSettingSignal=_shouldUseDevEndpointSettingSignal;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
+@property(nonatomic) __weak UIViewController *premiumDestinationTabBarBadgeViewController; // @synthesize premiumDestinationTabBarBadgeViewController=_premiumDestinationTabBarBadgeViewController;
 - (void).cxx_destruct;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupImplicitNotificacion;

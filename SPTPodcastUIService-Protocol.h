@@ -6,10 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTPodcastUIButtonsFactory, SPTPodcastUIComponentFactory, SPTPodcastUIStringFormatter, SPTPodcastUITestManager;
+@protocol SPTPodcastUIButtonsFactory, SPTPodcastUIComponentFactory, SPTPodcastUIStringFormatter;
 
 @protocol SPTPodcastUIService <SPTService>
-- (id <SPTPodcastUITestManager>)provideTestManager;
 @property(nonatomic, readonly) id <SPTPodcastUIButtonsFactory> buttonsFactory;
 @property(nonatomic, readonly) id <SPTPodcastUIStringFormatter> stringFormatter;
 @property(nonatomic, readonly) id <SPTPodcastUIComponentFactory> componentFactory;

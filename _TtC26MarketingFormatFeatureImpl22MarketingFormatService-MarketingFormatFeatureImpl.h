@@ -10,9 +10,6 @@
 
 @interface _TtC26MarketingFormatFeatureImpl22MarketingFormatService (MarketingFormatFeatureImpl) <SPTService>
 + (id)serviceIdentifier;
-- (id)provideTestHubViewController;
-- (void)unload;
-- (void)load;
 - (void)configureWithServices:(id)arg1;
 @end
 

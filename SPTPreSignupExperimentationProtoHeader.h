@@ -16,6 +16,7 @@
 
 // Remaining properties
 @property(copy, nonatomic) NSString *imageURL; // @dynamic imageURL;
+@property(copy, nonatomic) NSString *name; // @dynamic name;
 
 @end
 

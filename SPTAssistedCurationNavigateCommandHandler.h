@@ -13,15 +13,15 @@
 
 @interface SPTAssistedCurationNavigateCommandHandler : NSObject <HUBCommandHandler>
 {
-    NSURL *_playlistURI;
+    NSURL *_contextURI;
     id <SPTLinkDispatcher> _linkDispatcher;
 }
 
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(readonly, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
+@property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 - (void).cxx_destruct;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
-- (id)initWithPlaylistURI:(id)arg1 linkDispatcher:(id)arg2;
+- (id)initWithContextURI:(id)arg1 linkDispatcher:(id)arg2;
 
 @end
 

@@ -9,16 +9,14 @@
 #import "SPTPodcastUIButtonsFactory-Protocol.h"
 
 @class NSString, SPTTheme;
-@protocol GLUETheme, SPTPodcastUITestManager;
+@protocol GLUETheme;
 
 @interface SPTPodcastUIButtonsFactoryImplementation : NSObject <SPTPodcastUIButtonsFactory>
 {
     SPTTheme *_theme;
     id <GLUETheme> _glueTheme;
-    id <SPTPodcastUITestManager> _testManager;
 }
 
-@property(retain, nonatomic) id <SPTPodcastUITestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
@@ -32,7 +30,7 @@
 - (id)internalPodcastButtonWithType:(long long)arg1 indexPath:(id)arg2 target:(id)arg3;
 - (id)podcastButtonWithType:(long long)arg1 indexPath:(id)arg2 target:(id)arg3;
 - (id)podcastButtonWithType:(long long)arg1;
-- (id)initWithTheme:(id)arg1 glueTheme:(id)arg2 testManager:(id)arg3;
+- (id)initWithTheme:(id)arg1 glueTheme:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -29,7 +29,7 @@
 - (void)card:(id)arg1 addedTrack:(id)arg2 atIndex:(unsigned long long)arg3;
 - (void)fetchNumberTracks:(unsigned long long)arg1 withSeedTrack:(id)arg2 withCompletion:(CDUnknownBlockType)arg3;
 - (void)cardWithTracks:(id)arg1 basedOnTrack:(id)arg2;
-- (void)provideCardsForCurrentTracks:(id)arg1 andPlaylistName:(id)arg2;
+- (void)provideCardsForCurrentTracks:(id)arg1 andContextName:(id)arg2;
 - (void)addedTrack:(id)arg1 fromContext:(unsigned long long)arg2;
 - (id)initWithRecommendedTracksDataLoader:(id)arg1 collectionPlatformDataLoader:(id)arg2;
 

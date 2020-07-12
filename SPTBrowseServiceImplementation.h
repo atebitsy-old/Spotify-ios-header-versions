@@ -71,7 +71,6 @@
 - (id)makeGenreInitialViewModel;
 - (id)makeBrowseInitialViewModel;
 - (id)makeViewModelProviderForURI:(id)arg1;
-- (CDUnknownBlockType)removeRadioButtonTransformer;
 - (id)makeGenreViewModelProviderWithGenre:(id)arg1 pageURI:(id)arg2;
 - (id)makeBrowseViewModelProviderWithPageURI:(id)arg1;
 - (id)makeGenreViewModelFetcherWithGenre:(id)arg1 pageURI:(id)arg2 cache:(id)arg3;

@@ -11,12 +11,11 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTInfinitePlaybackManager, SPTPersistentCache, SPTRadioHubManager, SPTRadioLogger, SPTRadioPlaybackService, SPTRadioStationsService;
-@protocol CosmosFeature, GaiaFeature, NSObject, SPContextMenuFeature, SPTAbbaService, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, SPTVoiceService, _TtP15AutoplayFeature18SPTAutoplayService_;
+@protocol CosmosFeature, GaiaFeature, NSObject, SPContextMenuFeature, SPTCollectionLogger, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTExplicitContentService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRadioAPI, SPTRadioManager, SPTRadioRemoteConfigService, SPTRadioTestManager, SPTRecentlyPlayedService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTURIDispatchService, SPTVoiceService, _TtP15AutoplayFeature18SPTAutoplayService_;
 
 @interface SPTRadioServiceImplementation : NSObject <SPTService, SPTRadioService, SPTURISubtypeHandler>
 {
     _Bool _radioRegisteredWithRecentlyPlayed;
-    id <SPTAbbaService> _abbaService;
     id <SPTSessionService> _clientSessionService;
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
@@ -25,7 +24,6 @@
     id <CosmosFeature> _cosmosService;
     id <SPTDataSaverService> _dataSaverService;
     id <SPTExplicitContentService> _explicitContentService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTFreeTierService> _freeTierService;
     id <GaiaFeature> _gaiaFeature;
     id <SPTGLUEService> _glueService;
@@ -86,7 +84,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTDataSaverService> dataSaverService; // @synthesize dataSaverService=_dataSaverService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
@@ -95,7 +92,6 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 - (void).cxx_destruct;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
@@ -117,7 +113,6 @@
 - (id)provideStationViewController:(id)arg1 context:(id)arg2;
 - (id)provideRadioLoggingService;
 - (id)radioStationViewModelForURL:(id)arg1;
-- (void)registerFeatureSettingsPage;
 - (id)radioAppURL;
 - (void)unload;
 - (void)load;

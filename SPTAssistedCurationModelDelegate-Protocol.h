@@ -10,8 +10,8 @@
 @protocol SPTAssistedCurationCardModel, SPTAssistedCurationCardsProvider, SPTAssistedCurationModel;
 
 @protocol SPTAssistedCurationModelDelegate <NSObject>
-- (void)assistedCurationModel:(id <SPTAssistedCurationModel>)arg1 error:(NSError *)arg2 addingToPlaylistTrackURI:(NSURL *)arg3;
-- (void)assistedCurationModel:(id <SPTAssistedCurationModel>)arg1 notAddedToPlaylistDuplicatedTrackURI:(NSURL *)arg2;
+- (void)assistedCurationModel:(id <SPTAssistedCurationModel>)arg1 error:(NSError *)arg2 addingToContextTrackURI:(NSURL *)arg3;
+- (void)assistedCurationModel:(id <SPTAssistedCurationModel>)arg1 notAddedToContextDuplicatedTrackURI:(NSURL *)arg2;
 - (void)assistedCurationModel:(id <SPTAssistedCurationModel>)arg1 addedTrackURI:(NSURL *)arg2;
 - (void)noCardsAvailableForAssistedCurationModel:(id <SPTAssistedCurationModel>)arg1 offline:(_Bool)arg2;
 - (void)assistedCurationModel:(id <SPTAssistedCurationModel>)arg1 noCardsAvailableFromCardProvider:(id <SPTAssistedCurationCardsProvider>)arg2;

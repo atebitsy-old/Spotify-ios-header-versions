@@ -9,6 +9,7 @@
 @interface _TtC25SocialOnDemandFeatureImpl34SPTSocialOnDemandFeatureProperties : NSObject
 {
     // Error parsing type: , name: enableOnDemandSharing
+    // Error parsing type: , name: disablePrerollsForOnDemandSharing
 }
 
 - (id)init;

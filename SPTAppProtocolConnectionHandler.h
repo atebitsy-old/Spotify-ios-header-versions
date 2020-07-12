@@ -11,7 +11,7 @@
 #import "SPTAppProtocolSessionHandler-Protocol.h"
 #import "SPTAppProtocolSubscriptionDelegate-Protocol.h"
 
-@class NSDictionary, NSMutableDictionary, NSString, SPSession, SPTAccessory, SPTAppProtocolCallMessageHandler, SPTAppProtocolMainHandler, SPTAppProtocolSessionMessageHandler;
+@class NSDictionary, NSMutableDictionary, NSString, SPSession, SPTAccessory, SPTAppProtocolCallForwarder, SPTAppProtocolCallMessageHandler, SPTAppProtocolMainHandler, SPTAppProtocolSessionMessageHandler;
 @protocol SPTAccessoryStateManager, SPTAppProtocolConnection, SPTAppProtocolConnectionHandlerDelegate, SPTExternalIntegrationDebugLog, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTPreferences, SPTProductState;
 
 @interface SPTAppProtocolConnectionHandler : NSObject <SPTAppProtocolConnectionOutput, SPTAppProtocolConnectionDelegate, SPTAppProtocolSubscriptionDelegate, SPTAppProtocolSessionHandler>
@@ -42,10 +42,12 @@
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     SPTAccessory *_currentAccesory;
     id <SPTPreferences> _preferences;
+    SPTAppProtocolCallForwarder *_appProtocolForwarder;
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
+@property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(readonly, nonatomic) __weak id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) SPTAccessory *currentAccesory; // @synthesize currentAccesory=_currentAccesory;
 @property(nonatomic) _Bool hasValidSession; // @synthesize hasValidSession=_hasValidSession;
@@ -85,7 +87,7 @@
 - (void)connection:(id)arg1 didCloseByRequest:(_Bool)arg2;
 - (void)connection:(id)arg1 didReceiveMessage:(id)arg2 userInfo:(id)arg3;
 - (int)nextPublicationID;
-- (id)initWithConnection:(id)arg1 accessoryStateManager:(id)arg2 networkConnectivityController:(id)arg3 externalIntegrationPlatform:(id)arg4 authenticators:(id)arg5 requiresAuthentication:(_Bool)arg6 imageLoaderFactory:(id)arg7 connectManager:(id)arg8 currentSession:(id)arg9 productState:(id)arg10 preferences:(id)arg11 debugLog:(id)arg12;
+- (id)initWithConnection:(id)arg1 accessoryStateManager:(id)arg2 networkConnectivityController:(id)arg3 externalIntegrationPlatform:(id)arg4 authenticators:(id)arg5 requiresAuthentication:(_Bool)arg6 imageLoaderFactory:(id)arg7 connectManager:(id)arg8 currentSession:(id)arg9 productState:(id)arg10 preferences:(id)arg11 appProtocolForwarder:(id)arg12 debugLog:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

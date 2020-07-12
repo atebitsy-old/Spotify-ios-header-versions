@@ -23,7 +23,6 @@
 @property(readonly, nonatomic) id <SPTHubContentOperationFactory> hubContentOperationFactory; // @synthesize hubContentOperationFactory=_hubContentOperationFactory;
 - (void).cxx_destruct;
 - (id)makePlaybackHighlightContentOperation;
-- (id)makeOnDemandCardAccessibilityContentOperation;
 - (id)makeOnDemandDecoratorContentOperation;
 - (id)provideContentOperations;
 - (id)initWithHubContentOperationFactory:(id)arg1 onDemandService:(id)arg2 userTierProvider:(id)arg3;

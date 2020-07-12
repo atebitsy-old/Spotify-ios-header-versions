@@ -15,6 +15,7 @@
     _Bool _podcastEpisodeFollowEnabled;
     _Bool _podcastEntityPageShowPlayButton;
     _Bool _podcastDataAccessLayerEnabled;
+    _Bool _podcastDataAccessLayerPodcastRequestEnabled;
     _Bool _podcastNewPlaybackSpeedsEnabled;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
@@ -27,6 +28,7 @@
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
 @property(readonly, nonatomic) _Bool podcastNewPlaybackSpeedsEnabled; // @synthesize podcastNewPlaybackSpeedsEnabled=_podcastNewPlaybackSpeedsEnabled;
+@property(readonly, nonatomic) _Bool podcastDataAccessLayerPodcastRequestEnabled; // @synthesize podcastDataAccessLayerPodcastRequestEnabled=_podcastDataAccessLayerPodcastRequestEnabled;
 @property(readonly, nonatomic) _Bool podcastDataAccessLayerEnabled; // @synthesize podcastDataAccessLayerEnabled=_podcastDataAccessLayerEnabled;
 @property(readonly, nonatomic) _Bool podcastEntityPageShowPlayButton; // @synthesize podcastEntityPageShowPlayButton=_podcastEntityPageShowPlayButton;
 @property(readonly, nonatomic) _Bool podcastEpisodeFollowEnabled; // @synthesize podcastEpisodeFollowEnabled=_podcastEpisodeFollowEnabled;

@@ -176,6 +176,10 @@
 - (id)trackForRowAtIndexPath:(id)arg1;
 - (unsigned long long)queueSectionForTableSection:(unsigned long long)arg1;
 - (void)scrollToTopAnimated:(_Bool)arg1;
+- (void)logUpNextTrackTappedAtIndex:(id)arg1;
+- (void)logTapToDeselectUpNextTrack:(id)arg1;
+- (void)logTapToSelectUpNextTrack:(id)arg1;
+- (void)logDragCellAtIndexPath:(id)arg1;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;

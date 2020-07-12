@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTPodcastEpisodeFactory, SPTPodcastFactory;
+@protocol SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastRequest, SPTPodcastRequestData;
 
 @protocol _TtP17PodcastDALFeature20SPTPodcastDALService_ <SPTService>
+- (id <SPTPodcastRequest>)providePodcastRequestWithData:(id <SPTPodcastRequestData>)arg1;
 - (id <SPTPodcastEpisodeFactory>)providePodcastEpisodeFactory;
 - (id <SPTPodcastFactory>)providePodcastFactory;
 @end

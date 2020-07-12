@@ -22,5 +22,6 @@
 @property(readonly, nonatomic) SPTListenTogetherBetaLabel *betaLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel;
 - (void)glue_applyStyle:(SPTSocialListeningSessionViewStyle *)arg1;
+- (void)setSessionActiveIndicatorViewVisible:(_Bool)arg1;
 @end
 

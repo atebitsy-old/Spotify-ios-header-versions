@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSNotificationCenter, SPTNowPlayingContentViewProvider, SPTNowPlayingLogger, SPTNowPlayingModel, SPTTheme, UIViewController;
-@protocol SPTLinkDispatcher, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingNavigationBarModel, SPTNowPlayingTitleViewPresenter, SPTNowPlayingTitleViewPresenterRegistry, SPTPlayer, SPTQueueInteractor, SPTQueueLogger, SPTQueueService, SPTQueueViewControllerDelegate, SPTShareFeature;
+@protocol SPTLinkDispatcher, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingNavigationBarModel, SPTPlayer, SPTQueueInteractor, SPTQueueLogger, SPTQueueService, SPTQueueViewControllerDelegate, SPTShareFeature;
 
 @interface SPTNowPlayingViewControllerFactory : NSObject
 {
@@ -16,10 +16,8 @@
     id <SPTNowPlayingNavigationBarModel> _navigationBarModel;
     SPTNowPlayingLogger *_logger;
     id <SPTQueueLogger> _queueLogger;
-    id <SPTNowPlayingTitleViewPresenterRegistry> _titleViewPresenterRegistry;
     id <SPTNowPlayingModeResolver> _modeResolver;
     SPTNowPlayingContentViewProvider *_contentViewProvider;
-    id <SPTNowPlayingTitleViewPresenter> _podcastTitleViewPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTQueueViewControllerDelegate> _queueViewControllerDelegate;
     id <SPTQueueService> _queueService;
@@ -40,20 +38,17 @@
 @property(readonly, nonatomic) __weak id <SPTQueueService> queueService; // @synthesize queueService=_queueService;
 @property(readonly, nonatomic) __weak id <SPTQueueViewControllerDelegate> queueViewControllerDelegate; // @synthesize queueViewControllerDelegate=_queueViewControllerDelegate;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(readonly, nonatomic) id <SPTNowPlayingTitleViewPresenter> podcastTitleViewPresenter; // @synthesize podcastTitleViewPresenter=_podcastTitleViewPresenter;
 @property(readonly, nonatomic) SPTNowPlayingContentViewProvider *contentViewProvider; // @synthesize contentViewProvider=_contentViewProvider;
 @property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
-@property(readonly, nonatomic) id <SPTNowPlayingTitleViewPresenterRegistry> titleViewPresenterRegistry; // @synthesize titleViewPresenterRegistry=_titleViewPresenterRegistry;
 @property(readonly, nonatomic) id <SPTQueueLogger> queueLogger; // @synthesize queueLogger=_queueLogger;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingNavigationBarModel> navigationBarModel; // @synthesize navigationBarModel=_navigationBarModel;
 @property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 - (void).cxx_destruct;
-- (id)provideTitleViewPresenterRegistry;
 - (id)createQueueViewController;
 - (id)createNowPlayingViewController;
-- (id)initWithNowPlayingModel:(id)arg1 navigationBarModel:(id)arg2 queueNavigationBarViewController:(id)arg3 queueViewControllerDelegate:(id)arg4 player:(id)arg5 notificationCenter:(id)arg6 nowPlayingManager:(id)arg7 theme:(id)arg8 logger:(id)arg9 queueLogger:(id)arg10 shareFeature:(id)arg11 queueService:(id)arg12 queueInteractor:(id)arg13 modeResolver:(id)arg14 contentViewProvider:(id)arg15 podcastTitleViewPresenter:(id)arg16 linkDispatcher:(id)arg17;
+- (id)initWithNowPlayingModel:(id)arg1 navigationBarModel:(id)arg2 queueNavigationBarViewController:(id)arg3 queueViewControllerDelegate:(id)arg4 player:(id)arg5 notificationCenter:(id)arg6 nowPlayingManager:(id)arg7 theme:(id)arg8 logger:(id)arg9 queueLogger:(id)arg10 shareFeature:(id)arg11 queueService:(id)arg12 queueInteractor:(id)arg13 modeResolver:(id)arg14 contentViewProvider:(id)arg15 linkDispatcher:(id)arg16;
 
 @end
 

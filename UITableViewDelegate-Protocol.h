@@ -54,7 +54,6 @@
 - (void)tableView:(UITableView *)arg1 willDisplayFooterView:(UIView *)arg2 forSection:(long long)arg3;
 - (void)tableView:(UITableView *)arg1 willDisplayHeaderView:(UIView *)arg2 forSection:(long long)arg3;
 - (void)tableView:(UITableView *)arg1 willDisplayCell:(UITableViewCell *)arg2 forRowAtIndexPath:(NSIndexPath *)arg3;
-- (void)tableView:(UITableView *)arg1 willCommitMenuWithAnimator:(id <UIContextMenuInteractionCommitAnimating>)arg2;
 - (void)tableView:(UITableView *)arg1 willPerformPreviewActionForMenuWithConfiguration:(UIContextMenuConfiguration *)arg2 animator:(id <UIContextMenuInteractionCommitAnimating>)arg3;
 - (UITargetedPreview *)tableView:(UITableView *)arg1 previewForDismissingContextMenuWithConfiguration:(UIContextMenuConfiguration *)arg2;
 - (UITargetedPreview *)tableView:(UITableView *)arg1 previewForHighlightingContextMenuWithConfiguration:(UIContextMenuConfiguration *)arg2;

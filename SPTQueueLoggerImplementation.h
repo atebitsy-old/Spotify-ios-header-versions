@@ -8,18 +8,27 @@
 
 #import "SPTQueueLogger-Protocol.h"
 
-@class NSString;
+@class NSString, SPTQueueUBILogger;
 @protocol SPTLogCenter;
 
 @interface SPTQueueLoggerImplementation : NSObject <SPTQueueLogger>
 {
     id <SPTLogCenter> _logCenter;
+    SPTQueueUBILogger *_queueUBILogger;
 }
 
+@property(readonly, nonatomic) SPTQueueUBILogger *queueUBILogger; // @synthesize queueUBILogger=_queueUBILogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
 - (void)logInteractionRequestId:(id)arg1 featureId:(id)arg2 pageURI:(id)arg3 section:(id)arg4 targetURI:(id)arg5 type:(id)arg6 intent:(id)arg7;
 - (id)featureId;
+- (void)logTapUpNextTrack:(id)arg1 atIndex:(long long)arg2;
+- (void)logTapToSelectUpNextTrack:(id)arg1 atIndex:(long long)arg2;
+- (void)logTapToDeselectUpNextTrack:(id)arg1 atIndex:(long long)arg2;
+- (void)logDragToSortUpNextTrack:(id)arg1 atIndex:(long long)arg2;
+- (void)logTapNowPlayingTrack;
+- (void)logRemoveSelectedTracks:(id)arg1;
+- (void)logAddSelectedTracks:(id)arg1;
 - (void)logViewDidScrollWithPlayerState:(id)arg1;
 - (void)logShuffleButtonTappedEnableShuffle:(_Bool)arg1 playerState:(id)arg2;
 - (void)logSkipToNextTappedWithPlayerState:(id)arg1;
@@ -31,7 +40,7 @@
 - (void)logGoToNowPlayingViewButtonTappedWithPlayerState:(id)arg1;
 - (id)intentForShufflingState:(_Bool)arg1;
 - (id)intentForPlayButtonBehavior:(long long)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 queueUBILogger:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

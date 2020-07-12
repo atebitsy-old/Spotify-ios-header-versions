@@ -9,6 +9,7 @@
 @interface _TtC18VoiceUIFeatureImpl33VoiceInteractionSettingsViewModel : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: onboardingState
     // Error parsing type: , name: testManager
     // Error parsing type: , name: microphonePermissionReducer
     // Error parsing type: , name: glueTheme

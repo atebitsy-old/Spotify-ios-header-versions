@@ -35,6 +35,7 @@
 @property(retain, nonatomic) NSArray *values; // @synthesize values=_values;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
+- (void)addShapeChangeAnimationWithShapeLayer:(id)arg1 animationKey:(id)arg2 duration:(double)arg3 newPath:(id)arg4;
 - (int)accessibilityValueFromEQValue:(id)arg1;
 - (id)eqValueFromAccessibilityValue:(int)arg1;
 - (void)incrementKnobView:(id)arg1 byAmount:(int)arg2;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, SPTRawConfiguration, SPTRemoteConfigurationMessageCreator;
+@class NSDictionary, RCCURLCreator, SPTRawConfiguration, SPTRemoteConfigurationMessageCreator;
 @protocol RCCCoreBridge, SPTRemoteConfigurationContext, SPTRemoteConfigurationDebugLogger, SPTRemoteConfigurationEventLogger, SPTRemoteConfigurationPersistence, SPTRemoteConfigurationTransport;
 
 @interface SPTRemoteConfiguration : NSObject
@@ -20,8 +20,10 @@
     id <RCCCoreBridge> _coreBridge;
     NSDictionary *_localPropertyOverrides;
     SPTRemoteConfigurationMessageCreator *_messageCreator;
+    RCCURLCreator *_urlCreator;
 }
 
+@property(retain, nonatomic) RCCURLCreator *urlCreator; // @synthesize urlCreator=_urlCreator;
 @property(retain, nonatomic) SPTRemoteConfigurationMessageCreator *messageCreator; // @synthesize messageCreator=_messageCreator;
 @property(retain, nonatomic) NSDictionary *localPropertyOverrides; // @synthesize localPropertyOverrides=_localPropertyOverrides;
 @property(readonly, nonatomic) id <RCCCoreBridge> coreBridge; // @synthesize coreBridge=_coreBridge;
@@ -33,14 +35,12 @@
 @property(retain, nonatomic) SPTRawConfiguration *activeConfiguration; // @synthesize activeConfiguration=_activeConfiguration;
 - (void).cxx_destruct;
 - (void)logMessage:(id)arg1 level:(unsigned long long)arg2;
-- (id)createResolverURLWithFetchType:(id)arg1;
 - (void)handleFetchSuccessWithData:(id)arg1;
 - (void)handleFetchSuccessNoData;
 - (void)handleFetchError:(id)arg1;
 - (id)mergedActiveAndOverridenProperties;
 - (id)getWithClass:(Class)arg1;
 - (void)sendEventsForConfiguration:(id)arg1;
-- (id)clientAttributes;
 - (void)activateConfiguration:(id)arg1;
 - (id)updatePropertyModel:(id)arg1;
 - (void)removeLocalOverrides:(id)arg1;
@@ -51,7 +51,6 @@
 - (void)clearPersistentStorage;
 - (void)activateFetched;
 - (void)fetchConfigurationWithFetchType:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (id)initWithTransport:(id)arg1 eventLogger:(id)arg2 debugLogger:(id)arg3 clientID:(id)arg4 clientVersion:(id)arg5;
 - (id)initWithTransport:(id)arg1 eventLogger:(id)arg2 debugLogger:(id)arg3 remoteConfigurationContext:(id)arg4 coreBridge:(id)arg5;
 
 @end

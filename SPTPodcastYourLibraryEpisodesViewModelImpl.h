@@ -13,7 +13,7 @@
 #import "SPTPodcastYourLibraryEpisodesViewModel-Protocol.h"
 
 @class NSArray, NSCache, NSString, NSURL, SPTPodcastYourLibraryDataParser;
-@protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUITestManager, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryEpisodesViewModelDelegate;
+@protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryEpisodesViewModelDelegate;
 
 @interface SPTPodcastYourLibraryEpisodesViewModelImpl : NSObject <SPTPodcastYourLibraryDataParserDelegate, SPTPodcastUnfinishedItemsProviderObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
@@ -29,7 +29,6 @@
     id <SPTPodcastUnfinishedItemsProvider> _unfinishedItemsProvider;
     SPTPodcastYourLibraryDataParser *_dataParser;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
-    id <SPTPodcastUITestManager> _podcastUITestManager;
     NSArray *_unfinishedEpisodeItems;
     NSArray *_nextEpisodeItems;
     NSArray *_headerItems;
@@ -38,7 +37,6 @@
 @property(copy, nonatomic) NSArray *headerItems; // @synthesize headerItems=_headerItems;
 @property(copy, nonatomic) NSArray *nextEpisodeItems; // @synthesize nextEpisodeItems=_nextEpisodeItems;
 @property(copy, nonatomic) NSArray *unfinishedEpisodeItems; // @synthesize unfinishedEpisodeItems=_unfinishedEpisodeItems;
-@property(retain, nonatomic) id <SPTPodcastUITestManager> podcastUITestManager; // @synthesize podcastUITestManager=_podcastUITestManager;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) SPTPodcastYourLibraryDataParser *dataParser; // @synthesize dataParser=_dataParser;
 @property(retain, nonatomic) id <SPTPodcastUnfinishedItemsProvider> unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
@@ -82,7 +80,7 @@
 - (_Bool)isEpisodeActiveAtIndexPath:(id)arg1;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (id)episodeAtIndexPath:(id)arg1;
-- (id)initWithDataLoader:(id)arg1 requestFactory:(id)arg2 unfinishedItemsProvider:(id)arg3 episodeFactory:(id)arg4 podcastPlayer:(id)arg5 explicitContentAccessManager:(id)arg6 viewURI:(id)arg7 podcastUITestManager:(id)arg8;
+- (id)initWithDataLoader:(id)arg1 requestFactory:(id)arg2 unfinishedItemsProvider:(id)arg3 episodeFactory:(id)arg4 podcastPlayer:(id)arg5 explicitContentAccessManager:(id)arg6 viewURI:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -16,11 +16,13 @@
 
 // Remaining properties
 @property(nonatomic) _Bool alreadyLoggedIn; // @dynamic alreadyLoggedIn;
+@property(copy, nonatomic) NSString *appPackage; // @dynamic appPackage;
 @property(copy, nonatomic) NSString *deepLink; // @dynamic deepLink;
 @property(retain, nonatomic) SPTPreSignupExperimentationProtoDeviceInformation *deviceInformation; // @dynamic deviceInformation;
 @property(nonatomic) _Bool hasDeviceInformation; // @dynamic hasDeviceInformation;
 @property(nonatomic) _Bool hasScreen; // @dynamic hasScreen;
 @property(copy, nonatomic) NSString *language; // @dynamic language;
+@property(nonatomic) int origin; // @dynamic origin;
 @property(copy, nonatomic) NSString *platform; // @dynamic platform;
 @property(copy, nonatomic) NSString *revision; // @dynamic revision;
 @property(retain, nonatomic) SPTPreSignupExperimentationProtoScreen *screen; // @dynamic screen;

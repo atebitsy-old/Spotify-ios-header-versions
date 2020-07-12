@@ -31,7 +31,7 @@
 - (void)loadMoreTracksForCard:(id)arg1;
 - (_Bool)hasMoreTracksForCard:(id)arg1;
 - (void)fetchTrackInRange:(struct _NSRange)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (void)provideCardsForCurrentTracks:(id)arg1 andPlaylistName:(id)arg2;
+- (void)provideCardsForCurrentTracks:(id)arg1 andContextName:(id)arg2;
 - (id)initWithCollectionPlatformDataLoader:(id)arg1;
 
 // Remaining properties

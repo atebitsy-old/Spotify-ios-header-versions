@@ -35,8 +35,8 @@
 - (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
 - (id)horizontallyConstrainView:(id)arg1;
-- (void)updateViewConstraintsForHost;
-- (void)updateViewConstraintsParticipant;
+- (void)updateViewConstraintsWithPrivacyLabel;
+- (void)updateViewConstraintsWithoutPrivacyLabel;
 - (void)configureWithType:(unsigned long long)arg1 withMaxNumberOfUsers:(unsigned long long)arg2;
 - (id)initWithFrame:(struct CGRect)arg1;
 

@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTPreSignupExperimentationFeatureFlagsLoader-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTPreSignupExperimentationCacheManager, SPTPreSignupExperimentationLogger;
+@class NSString, SPTDataLoader, SPTPreSignupExperimentationCacheManager, SPTPreSignupExperimentationConfigurationRequestPayloadProvider, SPTPreSignupExperimentationLogger;
 @protocol SPTPreSignupExperimentationFeatureFlagsLoaderDelegate;
 
 @interface SPTPreSignupExperimentationFeatureFlagsLoaderImplementation : NSObject <SPTDataLoaderDelegate, SPTPreSignupExperimentationFeatureFlagsLoader>
@@ -19,8 +19,10 @@
     SPTDataLoader *_dataLoader;
     SPTPreSignupExperimentationCacheManager *_cacheManager;
     SPTPreSignupExperimentationLogger *_logger;
+    SPTPreSignupExperimentationConfigurationRequestPayloadProvider *_requestPayloadProvider;
 }
 
+@property(readonly, nonatomic) SPTPreSignupExperimentationConfigurationRequestPayloadProvider *requestPayloadProvider; // @synthesize requestPayloadProvider=_requestPayloadProvider;
 @property(readonly, nonatomic) _Bool useNewEndpoint; // @synthesize useNewEndpoint=_useNewEndpoint;
 @property(readonly, nonatomic) SPTPreSignupExperimentationLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTPreSignupExperimentationCacheManager *cacheManager; // @synthesize cacheManager=_cacheManager;
@@ -35,7 +37,7 @@
 - (id)provideFeatureFlags;
 - (void)fetchFeatureFlagsWithNewEndpoint:(_Bool)arg1;
 - (void)loadFeatureFlags;
-- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 logger:(id)arg3 useNewEndpoint:(_Bool)arg4;
+- (id)initWithDataLoader:(id)arg1 cacheManager:(id)arg2 logger:(id)arg3 useNewEndpoint:(_Bool)arg4 requestPayloadProvider:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

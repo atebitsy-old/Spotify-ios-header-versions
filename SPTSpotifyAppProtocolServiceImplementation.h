@@ -15,7 +15,7 @@
 #import "SPTService-Protocol.h"
 #import "SPTSpotifyAppProtocolService-Protocol.h"
 
-@class NSMapTable, NSString, SPSession, SPTAllocationContext, SPTAppProtocolBackgroundController, SPTAppProtocolEAConnector, SPTAppProtocolFeatureFlagManager;
+@class NSMapTable, NSString, SPSession, SPTAllocationContext, SPTAppProtocolBackgroundController, SPTAppProtocolCallForwarder, SPTAppProtocolEAConnector, SPTAppProtocolFeatureFlagManager;
 @protocol SPTAccessoryManagerService, SPTAccessoryStateManager, SPTAppProtocolConnector, SPTAuthController, SPTAuthService, SPTCoreService, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkService, SPTProductState;
 
 @interface SPTSpotifyAppProtocolServiceImplementation : NSObject <NSNetServiceDelegate, SPTAppProtocolConnectionHandlerDelegate, SPTAppProtocolConnectorDelegate, SPTExternalIntegrationPlaybackControllerObserver, SPTAppProtocolBackgroundControllerDelegate, SPTAppProtocolFeatureFlagManagerObserver, SPTService, SPTSpotifyAppProtocolService>
@@ -36,6 +36,7 @@
     id <SPTAppProtocolConnector> _socketConnector;
     SPTAppProtocolEAConnector *_eaConnector;
     SPTAppProtocolBackgroundController *_backgroundController;
+    SPTAppProtocolCallForwarder *_appProtocolForwarder;
     id <SPTExternalIntegrationDebugLog> _debugLog;
     NSMapTable *_activeConnectionHandlers;
 }
@@ -44,6 +45,7 @@
 @property(copy, nonatomic) NSMapTable *activeConnectionHandlers; // @synthesize activeConnectionHandlers=_activeConnectionHandlers;
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
+@property(retain, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(retain, nonatomic) SPTAppProtocolBackgroundController *backgroundController; // @synthesize backgroundController=_backgroundController;
 @property(retain, nonatomic) SPTAppProtocolEAConnector *eaConnector; // @synthesize eaConnector=_eaConnector;
 @property(retain, nonatomic) id <SPTAppProtocolConnector> socketConnector; // @synthesize socketConnector=_socketConnector;
@@ -59,6 +61,8 @@
 @property(nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(nonatomic) __weak id <SPTAuthController> authController; // @synthesize authController=_authController;
 - (void).cxx_destruct;
+- (void)unregisterExternalHandler:(id)arg1;
+- (void)registerExternalHandler:(id)arg1;
 - (_Bool)hasAllBackgroundControllerDependencies;
 - (void)updateBackgroundControllerEnabled;
 - (_Bool)isBackgroundControllerEnabled;

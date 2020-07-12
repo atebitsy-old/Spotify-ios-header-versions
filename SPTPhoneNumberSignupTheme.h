@@ -13,6 +13,7 @@
 {
 }
 
+- (id)titleHeaderStyle;
 - (id)nextButtonStyle;
 - (id)createSearchBarStyle;
 - (id)createCountrySelectorCellStyle;

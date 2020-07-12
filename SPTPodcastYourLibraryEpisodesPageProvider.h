@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastYourLibraryEpisodesViewModelImpl;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastUITestManager, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryPageProviderDelegate;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastUnfinishedItemsProvider, SPTPodcastYourLibraryPageProviderDelegate;
 
 @interface SPTPodcastYourLibraryEpisodesPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -25,7 +25,6 @@
     SPTPodcastEpisodeCellActionHandlerFactory *_cellActionHandlerFactory;
     id <SPTPodcastLogger> _podcastLogger;
     id <SPTPerformanceMetricsViewLoggerFactory> _viewLoggerFactory;
-    id <SPTPodcastUITestManager> _podcastUITestManager;
     id <SPTPodcastRequestFactory> _podcastRequestFactory;
     id <SPTPodcastEpisodeFactory> _episodeFactory;
     id <SPTPodcastUnfinishedItemsProvider> _unfinishedItemsProvider;
@@ -40,7 +39,6 @@
 @property(retain, nonatomic) id <SPTPodcastUnfinishedItemsProvider> unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFactory> episodeFactory; // @synthesize episodeFactory=_episodeFactory;
 @property(retain, nonatomic) id <SPTPodcastRequestFactory> podcastRequestFactory; // @synthesize podcastRequestFactory=_podcastRequestFactory;
-@property(retain, nonatomic) id <SPTPodcastUITestManager> podcastUITestManager; // @synthesize podcastUITestManager=_podcastUITestManager;
 @property(retain, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
 @property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) SPTPodcastEpisodeCellActionHandlerFactory *cellActionHandlerFactory; // @synthesize cellActionHandlerFactory=_cellActionHandlerFactory;
@@ -56,7 +54,7 @@
 - (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 unfinishedItemsProvider:(id)arg7 episodeFactory:(id)arg8 cellConfigurator:(id)arg9 explicitContentAccessManager:(id)arg10 glueTheme:(id)arg11 cellActionHandlerFactory:(id)arg12 metaViewController:(id)arg13 navigationRouter:(id)arg14 podcastLogger:(id)arg15 viewLoggerFactory:(id)arg16 podcastUITestManager:(id)arg17;
+- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 unfinishedItemsProvider:(id)arg7 episodeFactory:(id)arg8 cellConfigurator:(id)arg9 explicitContentAccessManager:(id)arg10 glueTheme:(id)arg11 cellActionHandlerFactory:(id)arg12 metaViewController:(id)arg13 navigationRouter:(id)arg14 podcastLogger:(id)arg15 viewLoggerFactory:(id)arg16;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

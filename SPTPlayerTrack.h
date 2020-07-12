@@ -55,8 +55,7 @@
 @property(readonly, nonatomic) NSNumber *albumDiscCount;
 @property(readonly, nonatomic) NSNumber *albumTrackNumber;
 @property(readonly, nonatomic) NSNumber *albumTrackCount;
-@property(readonly, nonatomic) _Bool isVodcastVideo;
-@property(readonly, nonatomic) _Bool isVodcast;
+@property(readonly, nonatomic) _Bool hasPlayerVideoLayer;
 @property(readonly, nonatomic) _Bool isShow;
 @property(readonly, nonatomic) NSString *showTitle;
 @property(readonly, nonatomic) _Bool isBackgroundable;
@@ -78,6 +77,7 @@
 @property(readonly, nonatomic, getter=spt_isMetaTrack) _Bool spt_metaTrack;
 @property(readonly, nonatomic, getter=spt_isHidden) _Bool spt_hidden;
 @property(readonly, nonatomic, getter=spt_isDelimiter) _Bool spt_delimiter;
+@property(readonly, nonatomic) struct ContextTrack cpp;
 @property(nonatomic) double fadeOverlap;
 @property(nonatomic) unsigned long long fadeOutDuration;
 @property(nonatomic) unsigned long long fadeOutStartTime;
@@ -89,7 +89,6 @@
 @property(readonly, nonatomic) NSURL *albumURI;
 - (id)albumTitle;
 - (id)trackTitle;
-@property(readonly, nonatomic) struct ContextTrack cpp;
 
 @end
 

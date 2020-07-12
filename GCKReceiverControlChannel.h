@@ -8,7 +8,7 @@
 
 #import "GCKRequestTrackerDelegate-Protocol.h"
 
-@class GCKRequestTracker, NSMutableArray, NSString;
+@class GCKRequestTracker, GCKRuntimeConfiguration, NSMutableArray, NSString;
 @protocol GCKReceiverControlChannelDelegate;
 
 @interface GCKReceiverControlChannel : GCKCastChannel <GCKRequestTrackerDelegate>
@@ -20,6 +20,7 @@
     GCKRequestTracker *_volumeRequestTracker;
     GCKRequestTracker *_muteRequestTracker;
     GCKRequestTracker *_appAvailabilityRequestTracker;
+    GCKRuntimeConfiguration *_runtimeConfiguration;
     NSMutableArray *_requestTrackers;
     _Bool _awaitingFirstStatus;
     _Bool _lastKnownMute;
@@ -49,13 +50,13 @@
 - (long long)stopApplicationInternalWithSessionID:(id)arg1;
 - (long long)stopApplicationWithSessionID:(id)arg1;
 - (long long)stopApplication;
-- (long long)launchApplication:(id)arg1 senderLanguageCode:(id)arg2;
+- (long long)launchApplication:(id)arg1 senderLanguageCode:(id)arg2 supportedApplicationTypes:(id)arg3;
 - (_Bool)isLaunchingApplication;
 - (void)didDisconnect;
 - (_Bool)cancelRequest:(long long)arg1;
 - (_Bool)clearRequest:(long long)arg1;
 - (void)clearAllTrackers;
-- (id)initWithReceiverDestinationID:(id)arg1;
+- (id)initWithReceiverDestinationID:(id)arg1 runtimeConfiguration:(id)arg2;
 - (id)initWithNamespace:(id)arg1;
 
 // Remaining properties

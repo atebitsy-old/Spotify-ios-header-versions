@@ -30,9 +30,9 @@
     NSDictionary *_expandableDevices;
     NSTimer *_movingRejoinApplicationTimer;
     GCKReconnectStrategy *_reconnectStrategy;
-    NSMutableDictionary *_deviceStatuses;
     GCKUpdateSessionStateController *_updateSessionStateController;
     GCKRequest *_pendingUpdateSessionRequest;
+    NSString *_pendingNewSessionName;
     GCKEndpointID *_groupLeadEndpointID;
     NSMutableDictionary *_multizoneConnectedDevices;
     NSString *_applicationID;
@@ -59,7 +59,6 @@
 - (void)notifyDidUpdateDevicesWithFailedToMoveDeviceIDs:(id)arg1;
 - (void)notifyDidUpdateTransferableDevices:(id)arg1;
 - (void)notifyDidUpdateExpandableDevices:(id)arg1;
-- (void)resetDeviceStatus:(id)arg1;
 - (void)request:(id)arg1 didAbortWithReason:(long long)arg2;
 - (void)request:(id)arg1 didFailWithError:(id)arg2;
 - (void)requestDidComplete:(id)arg1;

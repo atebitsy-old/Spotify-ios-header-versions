@@ -8,5 +8,6 @@
 
 @interface NSISO8601DateFormatter (SPTPodcastUIFeature)
 + (id)spt_podcastUIFeatureDateFormatter;
++ (id)spt_preSignupExperimentationDateFormatter;
 @end
 

@@ -15,9 +15,6 @@
 {
     _Bool _visualRefreshHeaderEnabled;
     _Bool _visualRefreshGreenButtonEnabled;
-    _Bool _visualRefreshSectionHeaderEnabled;
-    _Bool _visualRefreshPlaylistTrackRowArtworkEnabled;
-    _Bool _visualRefreshLeftAlignedTrackCloudEnabled;
     _Bool _visualRefreshAnimatedHeartEnabled;
     _Bool _encoreAlbumHeaderEnabled;
     VISREFNavigationBarManager *_navigationBarManager;
@@ -36,9 +33,6 @@
 @property(copy, nonatomic) NSArray *headerComponents; // @synthesize headerComponents=_headerComponents;
 @property(retain, nonatomic) VISREFNavigationBarManager *navigationBarManager; // @synthesize navigationBarManager=_navigationBarManager;
 @property(readonly, nonatomic, getter=isVisualRefreshAnimatedHeartEnabled) _Bool visualRefreshAnimatedHeartEnabled; // @synthesize visualRefreshAnimatedHeartEnabled=_visualRefreshAnimatedHeartEnabled;
-@property(readonly, nonatomic, getter=isVisualRefreshLeftAlignedTrackCloudEnabled) _Bool visualRefreshLeftAlignedTrackCloudEnabled; // @synthesize visualRefreshLeftAlignedTrackCloudEnabled=_visualRefreshLeftAlignedTrackCloudEnabled;
-@property(readonly, nonatomic, getter=isVisualRefreshPlaylistTrackRowArtworkEnabled) _Bool visualRefreshPlaylistTrackRowArtworkEnabled; // @synthesize visualRefreshPlaylistTrackRowArtworkEnabled=_visualRefreshPlaylistTrackRowArtworkEnabled;
-@property(readonly, nonatomic, getter=isVisualRefreshSectionHeaderEnabled) _Bool visualRefreshSectionHeaderEnabled; // @synthesize visualRefreshSectionHeaderEnabled=_visualRefreshSectionHeaderEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshGreenButtonEnabled) _Bool visualRefreshGreenButtonEnabled; // @synthesize visualRefreshGreenButtonEnabled=_visualRefreshGreenButtonEnabled;
 @property(readonly, nonatomic, getter=isVisualRefreshHeaderEnabled) _Bool visualRefreshHeaderEnabled; // @synthesize visualRefreshHeaderEnabled=_visualRefreshHeaderEnabled;
 - (void).cxx_destruct;

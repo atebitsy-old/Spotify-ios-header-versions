@@ -8,8 +8,8 @@
 
 #import "SPTPodcastUIService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPodcastUITestHubManager, SPTPodcastUITestManagerImplementation;
-@protocol SPTAbbaService, SPTContainerService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTPodcastUIButtonsFactory, SPTPodcastUIComponentFactory, SPTPodcastUIStringFormatter, SPTSettingsFeature, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTPodcastUITestHubManager;
+@protocol SPTContainerService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTPodcastUIButtonsFactory, SPTPodcastUIComponentFactory, SPTPodcastUIStringFormatter, SPTSettingsFeature, SPTURIDispatchService;
 
 @interface SPTPodcastUIServiceImplementation : NSObject <SPTPodcastUIService>
 {
@@ -19,19 +19,15 @@
     id <SPTHomeUIService> _homeUIService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTURIDispatchService> _uriDispatchService;
-    id <SPTAbbaService> _abbaService;
     SPTPodcastUITestHubManager *_hubManager;
     id <SPTPodcastUIStringFormatter> _stringFormatter;
     id <SPTPodcastUIButtonsFactory> _buttonsFactory;
-    SPTPodcastUITestManagerImplementation *_testManager;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTPodcastUITestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTPodcastUIButtonsFactory> buttonsFactory; // @synthesize buttonsFactory=_buttonsFactory;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(retain, nonatomic) SPTPodcastUITestHubManager *hubManager; // @synthesize hubManager=_hubManager;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTHomeUIService> homeUIService; // @synthesize homeUIService=_homeUIService;
@@ -39,7 +35,6 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void).cxx_destruct;
-- (id)provideTestManager;
 - (void)registerSettingsPage:(id)arg1 featureSettingsItemFactory:(id)arg2 linkDispatcher:(id)arg3;
 - (id)providePodcastUITestViewControllerWithURI:(id)arg1 context:(id)arg2;
 @property(readonly, nonatomic) id <SPTPodcastUIComponentFactory> componentFactory;

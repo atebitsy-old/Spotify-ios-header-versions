@@ -30,6 +30,7 @@
 - (id)previouslySelectedPassword;
 - (id)nextButtonText;
 - (id)fieldDisclosureLabelText;
+- (id)fieldAccessibilityLabel;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
 - (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldViewModel:(id)arg3 flowController:(id)arg4;

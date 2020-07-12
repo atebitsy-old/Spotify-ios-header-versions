@@ -24,7 +24,6 @@
 @property(retain, nonatomic) NSURL *collectionArtistUri; // @synthesize collectionArtistUri=_collectionArtistUri;
 @property(nonatomic) unsigned long long likedTrackCount; // @synthesize likedTrackCount=_likedTrackCount;
 - (void).cxx_destruct;
-- (unsigned long long)getLikedTrackCount:(id)arg1;
 - (void)fetchLikedTracks:(CDUnknownBlockType)arg1;
 - (void)dealloc;
 - (id)initWithCollectionPlatform:(id)arg1 artistUri:(id)arg2 username:(id)arg3;

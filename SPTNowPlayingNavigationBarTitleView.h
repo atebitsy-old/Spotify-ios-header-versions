@@ -9,7 +9,7 @@
 #import "SPTThemableView-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, NSURL, SPTNowPlayingMarqueeLabel, SPTTheme, UILabel, UIView;
-@protocol SPTNowPlayingTitleViewPresenterRegistry, SPTThemableViewLayoutDelegate;
+@protocol SPTThemableViewLayoutDelegate;
 
 @interface SPTNowPlayingNavigationBarTitleView : UIControl <SPTThemableView>
 {
@@ -22,12 +22,10 @@
     SPTTheme *_theme;
     UILabel *_seperatorLabel;
     NSDictionary *_attributes;
-    id <SPTNowPlayingTitleViewPresenterRegistry> _titleViewPresenterRegistry;
     NSURL *_contextURI;
 }
 
 @property(retain, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
-@property(retain, nonatomic) id <SPTNowPlayingTitleViewPresenterRegistry> titleViewPresenterRegistry; // @synthesize titleViewPresenterRegistry=_titleViewPresenterRegistry;
 @property(retain, nonatomic) NSDictionary *attributes; // @synthesize attributes=_attributes;
 @property(retain, nonatomic) UILabel *seperatorLabel; // @synthesize seperatorLabel=_seperatorLabel;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -48,7 +46,7 @@
 - (void)updateViewLayout;
 - (void)updateConstraints;
 - (void)updateAttributes:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 attributes:(id)arg3 titleViewPresenterRegistry:(id)arg4;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 attributes:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

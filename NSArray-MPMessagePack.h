@@ -13,15 +13,15 @@
 - (id)mp_messagePack:(long long)arg1;
 - (id)mp_messagePack;
 - (id)BMW_etchObject;
+- (id)ins_reduce:(id)arg1 block:(CDUnknownBlockType)arg2;
+- (id)ins_flattenMap:(CDUnknownBlockType)arg1;
+- (id)ins_arraysPartitionedWithCapacity:(unsigned long long)arg1;
 - (id)bm_groupBy:(CDUnknownBlockType)arg1;
 - (void)bm_each:(CDUnknownBlockType)arg1;
 - (id)bm_any:(CDUnknownBlockType)arg1;
 - (id)bm_filter:(CDUnknownBlockType)arg1;
 - (id)bm_compactMap:(CDUnknownBlockType)arg1;
 - (id)bm_map:(CDUnknownBlockType)arg1;
-- (id)ins_reduce:(id)arg1 block:(CDUnknownBlockType)arg2;
-- (id)ins_flattenMap:(CDUnknownBlockType)arg1;
-- (id)ins_arraysPartitionedWithCapacity:(unsigned long long)arg1;
 - (id)safeObjectAtIndex:(unsigned long long)arg1;
 - (void)spt_queue_diffToArray:(id)arg1 usingComparator:(CDUnknownBlockType)arg2 insertedIndexSet:(id *)arg3 deletedIndexSet:(id *)arg4;
 - (void)spt_queue_diffToArray:(id)arg1 insertedIndexSet:(id *)arg2 deletedIndexSet:(id *)arg3;

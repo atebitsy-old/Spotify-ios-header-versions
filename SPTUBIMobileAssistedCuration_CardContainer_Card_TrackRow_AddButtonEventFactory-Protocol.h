@@ -10,6 +10,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AddButtonEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitAddToPlaylistWithPlaylist:(NSURL *)arg1 itemToBeAdded:(NSURL *)arg2;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

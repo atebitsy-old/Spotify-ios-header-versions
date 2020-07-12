@@ -28,12 +28,12 @@
 - (long long)spotifyRootIconForSpaceItem:(id)arg1;
 - (id)imageURIForSpacesItem:(id)arg1;
 - (id)spacesContentURIForSpacesItem:(id)arg1;
-- (id)contentFromSpacesItem:(id)arg1 testManager:(id)arg2;
-- (id)contentFromSpacesBlock:(id)arg1 identifier:(id)arg2 URI:(id)arg3 testManager:(id)arg4;
-- (id)contentListFromSpacesBlock:(id)arg1 testManager:(id)arg2;
-- (id)contentListFromSpacesList:(id)arg1 URI:(id)arg2 flattenBlocks:(_Bool)arg3 withTestManager:(id)arg4;
+- (id)contentFromSpacesItem:(id)arg1 onDemandSet:(id)arg2 testManager:(id)arg3;
+- (id)contentFromSpacesBlock:(id)arg1 identifier:(id)arg2 URI:(id)arg3 onDemandSet:(id)arg4 testManager:(id)arg5;
+- (id)contentListFromSpacesBlock:(id)arg1 onDemandSet:(id)arg2 testManager:(id)arg3;
+- (id)contentListFromSpacesList:(id)arg1 URI:(id)arg2 flattenBlocks:(_Bool)arg3 onDemandSet:(id)arg4 withTestManager:(id)arg5;
 - (id)createPlaceholderSpacesContentForURI:(id)arg1;
-- (id)createSpacesContentForURI:(id)arg1 fromSpacesList:(id)arg2 withTestManager:(id)arg3;
+- (id)createSpacesContentForURI:(id)arg1 fromSpacesList:(id)arg2 onDemandSet:(id)arg3 withTestManager:(id)arg4;
 - (id)initWithOfflineManager:(id)arg1 playbackController:(id)arg2;
 
 @end

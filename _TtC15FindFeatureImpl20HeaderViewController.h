@@ -16,6 +16,8 @@
     // Error parsing type: , name: onTextChange
     // Error parsing type: , name: onModeChange
     // Error parsing type: , name: onVoiceSearchButtonPress
+    // Error parsing type: , name: onScannablesButtonPress
+    // Error parsing type: , name: onReturnKeyPress
     // Error parsing type: , name: mode
     // Error parsing type: , name: findHeaderContainerDelegate
     // Error parsing type: , name: theme

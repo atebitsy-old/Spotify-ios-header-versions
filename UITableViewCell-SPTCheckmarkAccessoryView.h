@@ -14,8 +14,8 @@
 @interface UITableViewCell (SPTCheckmarkAccessoryView) <GLUEStyleable, SPTInstrumentationInteractionItemIDUtilities>
 - (_Bool)accessoryViewIsSPTCheckmarkAccessoryView;
 - (_Bool)accessoryViewIsSPTContextMenuAccessoryButton;
-- (void)glue_applyStyle:(id)arg1;
 - (_Bool)accessoryViewIsSPTDisclosureAccessoryView;
+- (void)glue_applyStyle:(id)arg1;
 - (long long)SPTCellAccessoryViewType;
 - (id)spt_indexPathInParentView;
 

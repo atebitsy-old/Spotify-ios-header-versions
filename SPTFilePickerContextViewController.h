@@ -20,9 +20,7 @@
     id <SPTContextMenuViewInteractionTarget> _interactionTarget;
 }
 
-+ (id)contextMenuWithSortable:(id)arg1 filterable:(id)arg2 additionalFilterActions:(id)arg3 logger:(id)arg4 pageURI:(id)arg5;
-+ (id)contextMenuWithSortable:(id)arg1 filterable:(id)arg2 logger:(id)arg3 pageURI:(id)arg4;
-+ (id)contextMenuWithSortable:(id)arg1 logger:(id)arg2 pageURI:(id)arg3;
++ (id)contextMenuWithSortable:(id)arg1 pageURI:(id)arg2;
 @property(retain, nonatomic) id <SPTContextMenuViewInteractionTarget> interactionTarget; // @synthesize interactionTarget=_interactionTarget;
 @property(retain, nonatomic) SPTContextMenuViewTransition *transition; // @synthesize transition=_transition;
 @property(retain, nonatomic) SPTContextMenuView *contextMenuView; // @synthesize contextMenuView=_contextMenuView;

@@ -16,7 +16,6 @@
     GLUEGradientStyle *_backgroundGradientStyle;
     GLUEGradientStyle *_backgroundOverlayGradientStyle;
     GLUELabelStyle *_titleLabelStyle;
-    double _titleLabelTopMargin;
     double _titleLabelHorizontalMargin;
     double _titleLabelBottomMargin;
     long long _tableViewStyle;
@@ -37,7 +36,6 @@
 @property(nonatomic) long long tableViewStyle; // @synthesize tableViewStyle=_tableViewStyle;
 @property(nonatomic) double titleLabelBottomMargin; // @synthesize titleLabelBottomMargin=_titleLabelBottomMargin;
 @property(nonatomic) double titleLabelHorizontalMargin; // @synthesize titleLabelHorizontalMargin=_titleLabelHorizontalMargin;
-@property(nonatomic) double titleLabelTopMargin; // @synthesize titleLabelTopMargin=_titleLabelTopMargin;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundOverlayGradientStyle; // @synthesize backgroundOverlayGradientStyle=_backgroundOverlayGradientStyle;
 @property(copy, nonatomic) GLUEGradientStyle *backgroundGradientStyle; // @synthesize backgroundGradientStyle=_backgroundGradientStyle;

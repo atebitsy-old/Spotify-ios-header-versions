@@ -6,9 +6,17 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL, SPTPlayerState;
+@class NSMutableSet, NSURL, SPTPlayerState;
+@protocol SPTQueueTrack;
 
 @protocol SPTQueueLogger <NSObject>
+- (void)logDragToSortUpNextTrack:(id <SPTQueueTrack>)arg1 atIndex:(long long)arg2;
+- (void)logTapToDeselectUpNextTrack:(id <SPTQueueTrack>)arg1 atIndex:(long long)arg2;
+- (void)logTapToSelectUpNextTrack:(id <SPTQueueTrack>)arg1 atIndex:(long long)arg2;
+- (void)logTapUpNextTrack:(id <SPTQueueTrack>)arg1 atIndex:(long long)arg2;
+- (void)logTapNowPlayingTrack;
+- (void)logAddSelectedTracks:(NSMutableSet *)arg1;
+- (void)logRemoveSelectedTracks:(NSMutableSet *)arg1;
 - (void)logViewDidScrollWithPlayerState:(SPTPlayerState *)arg1;
 - (void)logShuffleButtonTappedEnableShuffle:(_Bool)arg1 playerState:(SPTPlayerState *)arg2;
 - (void)logSkipToNextTappedWithPlayerState:(SPTPlayerState *)arg1;

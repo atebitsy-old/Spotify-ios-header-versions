@@ -19,6 +19,7 @@
 @property(retain, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)setMainAccessibilityLabelToComponentModel:(id)arg1;
 - (void)recursivelyDecorateComponentModelBuilders:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithOnDemandSet:(id)arg1;

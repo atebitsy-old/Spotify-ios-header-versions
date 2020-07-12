@@ -10,6 +10,7 @@
 @protocol SPTWatchConnectivityRequestHandler, SPTWatchConnectivityResponseHandler;
 
 @protocol SPTWatchConnectivityMessageHandlerRegistry <NSObject>
+- (void)processQueuedRequests;
 - (void)registerResponseHandler:(id <SPTWatchConnectivityResponseHandler>)arg1 forRequest:(SPTWatchConnectivityRequest *)arg2;
 - (void)deregisterRequestHandlerForURI:(NSString *)arg1;
 - (void)registerRequestHandler:(id <SPTWatchConnectivityRequestHandler>)arg1 forURI:(NSString *)arg2;

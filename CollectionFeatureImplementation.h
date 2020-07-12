@@ -9,8 +9,8 @@
 #import "CollectionFeature-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTCollectionLoggerImplementation;
-@protocol FollowFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUIPresentationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@class NSString, SPTAllocationContext;
+@protocol FollowFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, SPTUIPresentationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface CollectionFeatureImplementation : NSObject <SPTService, CollectionFeature>
 {
@@ -28,13 +28,13 @@
     id <SPTNavigationFeature> _navigationFeature;
     id <SPTUIPresentationService> _UIPresentationService;
     id <SPTShelfService> _shelfService;
-    SPTCollectionLoggerImplementation *_collectionLogger;
+    id <SPTUBIService> _ubiService;
     id <SPTPageRegistrationToken> _collectionUnionArtistPageRegisterationToken;
 }
 
 + (id)serviceIdentifier;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> collectionUnionArtistPageRegisterationToken; // @synthesize collectionUnionArtistPageRegisterationToken=_collectionUnionArtistPageRegisterationToken;
-@property(retain, nonatomic) SPTCollectionLoggerImplementation *collectionLogger; // @synthesize collectionLogger=_collectionLogger;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
 @property(nonatomic) __weak id <SPTUIPresentationService> UIPresentationService; // @synthesize UIPresentationService=_UIPresentationService;
 @property(nonatomic) __weak id <SPTNavigationFeature> navigationFeature; // @synthesize navigationFeature=_navigationFeature;
@@ -53,7 +53,6 @@
 - (id)provideCollectionArtistPage:(id)arg1 context:(id)arg2;
 - (id)provideCollectionArtistModelForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)provideCollectionArtistModelForURL:(id)arg1;
-- (id)provideCollectionLogger;
 - (id)playerForViewURI:(id)arg1 featureIdentifier:(id)arg2 referrerIdentifier:(id)arg3;
 - (void)unregisterCollectionArtistPage;
 - (void)unload;

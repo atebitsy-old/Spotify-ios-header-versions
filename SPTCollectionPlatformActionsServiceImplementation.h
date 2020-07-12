@@ -8,7 +8,7 @@
 
 #import "SPTCollectionPlatformActionsService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTCollectionLoggerImplementation;
+@class NSString, SPTAllocationContext, SPTCollectionPlatformLoggerImplementation;
 @protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTPlaylistPlatformService, SPTShelfService;
 
 @interface SPTCollectionPlatformActionsServiceImplementation : NSObject <SPTCollectionPlatformActionsService>
@@ -19,11 +19,11 @@
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTShelfService> _shelfService;
     id <SPTCoreService> _coreService;
-    SPTCollectionLoggerImplementation *_collectionLogger;
+    SPTCollectionPlatformLoggerImplementation *_collectionLogger;
 }
 
 + (id)serviceIdentifier;
-@property(retain, nonatomic) SPTCollectionLoggerImplementation *collectionLogger; // @synthesize collectionLogger=_collectionLogger;
+@property(retain, nonatomic) SPTCollectionPlatformLoggerImplementation *collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;

@@ -7,14 +7,14 @@
 #import "SPAction.h"
 
 @class NSURL;
-@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTCollectionPlatformTestManager;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformLogger, SPTCollectionPlatformTestManager;
 
 @interface SPTCollectionPlatformBanFromCollectionAction : SPAction
 {
     _Bool _wasBanned;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
-    id <SPTCollectionLogger> _collectionLogger;
+    id <SPTCollectionPlatformLogger> _collectionLogger;
     unsigned long long _banActionType;
     NSURL *_link;
     NSURL *_sourceURL;
@@ -26,7 +26,7 @@
 @property(retain, nonatomic) NSURL *link; // @synthesize link=_link;
 @property(nonatomic) unsigned long long banActionType; // @synthesize banActionType=_banActionType;
 @property(readonly, nonatomic) _Bool wasBanned; // @synthesize wasBanned=_wasBanned;
-@property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
+@property(retain, nonatomic) id <SPTCollectionPlatformLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 - (void).cxx_destruct;

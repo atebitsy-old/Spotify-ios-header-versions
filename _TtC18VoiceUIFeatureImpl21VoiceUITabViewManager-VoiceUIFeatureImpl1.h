@@ -7,6 +7,6 @@
 #import "_TtC18VoiceUIFeatureImpl21VoiceUITabViewManager.h"
 
 @interface _TtC18VoiceUIFeatureImpl21VoiceUITabViewManager (VoiceUIFeatureImpl1)
-- (void)handleLongPressGestureWithRecognizer:(id)arg1;
+- (void)didChangeRootViewOfMetaViewController:(id)arg1;
 @end
 

@@ -9,7 +9,7 @@
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 
 @class NSArray, NSString, NSURL;
-@protocol SPTAbbaFeatureFlags, SPTCollectionLogger, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisode, SPTPodcastEpisodeFactory, SPTPodcastEpisodePlayerContextParameters, SPTPodcastEpisodeViewModelDelegate, SPTPodcastFactory, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUIStringFormatter, SPTPodcastUITestManager, SPTShareEntityData, SPTShareEntityDataFactory;
+@protocol SPTAbbaFeatureFlags, SPTCollectionLogger, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisode, SPTPodcastEpisodeFactory, SPTPodcastEpisodePlayerContextParameters, SPTPodcastEpisodeViewModelDelegate, SPTPodcastFactory, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUIStringFormatter, SPTShareEntityData, SPTShareEntityDataFactory;
 
 @interface SPTPodcastEpisodeViewModel : NSObject <SPTPodcastPlayerDelegate>
 {
@@ -37,12 +37,10 @@
     id <SPTShareEntityDataFactory> _shareEntityDataFactory;
     id <SPTCollectionLogger> _collectionLogger;
     id <SPTPodcastEpisodePlayerContextParameters> _playerContextParameters;
-    id <SPTPodcastUITestManager> _uiTestManager;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
 }
 
 @property(retain, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
-@property(retain, nonatomic) id <SPTPodcastUITestManager> uiTestManager; // @synthesize uiTestManager=_uiTestManager;
 @property(retain, nonatomic) id <SPTPodcastEpisodePlayerContextParameters> playerContextParameters; // @synthesize playerContextParameters=_playerContextParameters;
 @property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTShareEntityDataFactory> shareEntityDataFactory; // @synthesize shareEntityDataFactory=_shareEntityDataFactory;
@@ -103,7 +101,7 @@
 - (void)loadShowDataWithCompletion:(CDUnknownBlockType)arg1;
 - (void)unsubscribe;
 - (void)load;
-- (id)initWithEpisodeURL:(id)arg1 podcastRequestFactory:(id)arg2 dataLoader:(id)arg3 episodeFactory:(id)arg4 podcastFactory:(id)arg5 stringFormatter:(id)arg6 player:(id)arg7 explicitContentAccessManager:(id)arg8 podcastOffliningManager:(id)arg9 linkDispatcher:(id)arg10 collectionPlatform:(id)arg11 shareEntityDataFactory:(id)arg12 collectionLogger:(id)arg13 playerContextParameters:(id)arg14 uiTestManager:(id)arg15;
+- (id)initWithEpisodeURL:(id)arg1 podcastRequestFactory:(id)arg2 dataLoader:(id)arg3 episodeFactory:(id)arg4 podcastFactory:(id)arg5 stringFormatter:(id)arg6 player:(id)arg7 explicitContentAccessManager:(id)arg8 podcastOffliningManager:(id)arg9 linkDispatcher:(id)arg10 collectionPlatform:(id)arg11 shareEntityDataFactory:(id)arg12 collectionLogger:(id)arg13 playerContextParameters:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

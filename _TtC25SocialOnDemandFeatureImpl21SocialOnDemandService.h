@@ -8,13 +8,10 @@
 
 @interface _TtC25SocialOnDemandFeatureImpl21SocialOnDemandService : NSObject
 {
-    // Error parsing type: , name: containerService
     // Error parsing type: , name: networkService
-    // Error parsing type: , name: playerFeature
     // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: snackbarService
-    // Error parsing type: , name: ubiService
-    // Error parsing type: , name: stateMachine
+    // Error parsing type: , name: isFeatureEnabled
+    // Error parsing type: , name: shouldDisablePrerolls
     // Error parsing type: , name: trackService
 }
 
@@ -25,6 +22,8 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+@property(nonatomic) _Bool shouldDisablePrerolls; // @synthesize shouldDisablePrerolls;
+@property(nonatomic) _Bool isFeatureEnabled; // @synthesize isFeatureEnabled;
 
 @end
 

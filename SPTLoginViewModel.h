@@ -49,7 +49,9 @@
 - (void)requestLoginLinkWithEmail:(id)arg1;
 - (id)loginWithoutPasswordButtonText;
 - (id)loginButtonText;
+- (id)passwordTextFieldAccessibilityLabel;
 - (id)passwordLabelText;
+- (id)emailTextFieldAccessibilityLabel;
 - (id)emailLabelText;
 - (id)titleLabelText;
 - (_Bool)shouldEnableLoginButtonForEmail:(id)arg1 password:(id)arg2;

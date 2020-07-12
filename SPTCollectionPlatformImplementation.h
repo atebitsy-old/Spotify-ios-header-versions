@@ -9,12 +9,12 @@
 #import "SPTCollectionPlatform-Protocol.h"
 
 @class NSHashTable, NSString;
-@protocol SPTAlertInterface, SPTCollectionLogger, SPTCollectionPlatformConfiguration, SPTCollectionPlatformDataLoader, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTMetaViewController;
+@protocol SPTAlertInterface, SPTCollectionPlatformConfiguration, SPTCollectionPlatformDataLoader, SPTCollectionPlatformLogger, SPTCollectionPlatformStateProvider, SPTCollectionPlatformTestManager, SPTCosmosDictionaryDataLoader, SPTCosmosDictionaryDataLoaderRequestToken, SPTMetaViewController;
 
 @interface SPTCollectionPlatformImplementation : NSObject <SPTCollectionPlatform>
 {
     id <SPTCosmosDictionaryDataLoader> _cosmosDataLoader;
-    id <SPTCollectionLogger> _collectionLogger;
+    id <SPTCollectionPlatformLogger> _collectionLogger;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
     id <SPTCosmosDictionaryDataLoaderRequestToken> _collectionChangesSubscriptionToken;
@@ -35,7 +35,7 @@
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoaderRequestToken> collectionChangesSubscriptionToken; // @synthesize collectionChangesSubscriptionToken=_collectionChangesSubscriptionToken;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
-@property(readonly, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
+@property(readonly, nonatomic) id <SPTCollectionPlatformLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(retain, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
 - (void).cxx_destruct;
 - (id)setUpItemDictionaryForURLs:(id)arg1 source:(id)arg2 fromContext:(id)arg3;

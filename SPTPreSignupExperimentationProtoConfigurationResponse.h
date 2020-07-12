@@ -6,7 +6,7 @@
 
 #import "GPBMessage.h"
 
-@class NSMutableArray, SPTPreSignupExperimentationProtoDefaultLayout;
+@class NSMutableArray, NSString, SPTPreSignupExperimentationProtoDefaultLayout;
 
 @interface SPTPreSignupExperimentationProtoConfigurationResponse : GPBMessage
 {
@@ -19,6 +19,7 @@
 @property(retain, nonatomic) NSMutableArray *flagsArray; // @dynamic flagsArray;
 @property(readonly, nonatomic) unsigned long long flagsArray_Count; // @dynamic flagsArray_Count;
 @property(readonly, nonatomic) int layoutOneOfCase; // @dynamic layoutOneOfCase;
+@property(copy, nonatomic) NSString *requestId; // @dynamic requestId;
 
 @end
 

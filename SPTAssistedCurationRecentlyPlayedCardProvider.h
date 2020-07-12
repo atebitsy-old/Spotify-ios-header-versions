@@ -26,7 +26,7 @@
 - (void).cxx_destruct;
 - (id)tracksFromResponseDictionary:(id)arg1;
 - (void)fetchTrackWithCompletion:(CDUnknownBlockType)arg1;
-- (void)provideCardsForCurrentTracks:(id)arg1 andPlaylistName:(id)arg2;
+- (void)provideCardsForCurrentTracks:(id)arg1 andContextName:(id)arg2;
 - (id)initWithCosmosDataLoader:(id)arg1;
 
 // Remaining properties

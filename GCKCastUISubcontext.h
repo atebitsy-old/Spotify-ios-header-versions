@@ -8,7 +8,7 @@
 
 #import "GCKUIDeviceConnectionViewControllerDelegate-Protocol.h"
 
-@class GCKAnalyticsEventLogger, GCKUIDeviceConnectionViewController, GCKUIExpandedMediaControlsViewController, GCKUIPhysicalVolumeButtonController, GCKUIResources, NSString, UINavigationController, UIStoryboard;
+@class GCKAnalyticsEventLogger, GCKUIDeviceConnectionViewController, GCKUIExpandedMediaControlsViewController, GCKUIResources, NSString, UINavigationController, UIStoryboard;
 @protocol GCKUIImageCache, GCKUIImagePicker;
 
 @interface GCKCastUISubcontext : NSObject <GCKUIDeviceConnectionViewControllerDelegate>
@@ -18,7 +18,6 @@
     GCKUIDeviceConnectionViewController *_deviceConnectionViewController;
     id <GCKUIImageCache> _defaultImageCache;
     id <GCKUIImagePicker> _defaultImagePicker;
-    GCKUIPhysicalVolumeButtonController *_physicalVolumeButtonController;
     unsigned long long _previousState;
     _Bool _useDefaultExpandedMediaControls;
     id <GCKUIImageCache> _imageCache;

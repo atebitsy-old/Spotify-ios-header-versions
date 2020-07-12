@@ -34,6 +34,7 @@
 @property(readonly, nonatomic) SPTInAppMessageNoteMessage *noteMessage; // @synthesize noteMessage=_noteMessage;
 @property(nonatomic) __weak id <SPTInAppMessageNoteMessageWebViewContentDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (void)logDismissEvent;
 - (void)logTriggerMessagePresentationPerformace;
 - (void)didReceiveWebviewEvent:(id)arg1;
 - (void)didReceieveActionNotification:(id)arg1;

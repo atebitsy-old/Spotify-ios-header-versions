@@ -11,7 +11,7 @@
 #import "SPTExternalIntegrationContentControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 
-@class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache, SPTCarPlayUBILogger;
+@class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache, SPTCarPlayFeatureProperties, SPTCarPlayUBILogger;
 @protocol SPTCarPlayContentDataSource, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTMediaPlayerContentBridge;
 
 @interface SPTCarPlayLoggedInDataSource : NSObject <SPTExternalIntegrationContentControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTCarPlayDataSource>
@@ -27,6 +27,7 @@
     id <SPTGaiaConnectAPI> _connectManager;
     NSArray *_rootItems;
     SPTCarPlayUBILogger *_logger;
+    SPTCarPlayFeatureProperties *_properties;
     SPTCarPlayContentItemBuilder *_contentItemBuilder;
     SPTCarPlayContentTreeCache *_contentTreeCache;
     id _debugLog;
@@ -38,6 +39,7 @@
 @property(nonatomic) _Bool rootItemsRequestInitiated; // @synthesize rootItemsRequestInitiated=_rootItemsRequestInitiated;
 @property(readonly, nonatomic) SPTCarPlayContentTreeCache *contentTreeCache; // @synthesize contentTreeCache=_contentTreeCache;
 @property(readonly, nonatomic) SPTCarPlayContentItemBuilder *contentItemBuilder; // @synthesize contentItemBuilder=_contentItemBuilder;
+@property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) SPTCarPlayUBILogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSArray *rootItems; // @synthesize rootItems=_rootItems;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;

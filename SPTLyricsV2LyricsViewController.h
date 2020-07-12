@@ -20,9 +20,9 @@
     _Bool _autoScrollEnabled;
     _Bool _shouldAnimateLineChange;
     id <SPTLyricsV2LyricsViewControllerDelegate> _delegate;
-    id <SPTLyricsV2LyricsViewStyleProvider> _styleProvider;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTLyricsLineProgressManager> _progressManager;
+    id <SPTLyricsV2LyricsViewStyleProvider> _styleProvider;
     id <SPTLyricsV2TestManager> _testManager;
     SPTLyricsLineSet *_lyricsLineSet;
     long long _lineIndex;
@@ -42,9 +42,9 @@
 @property(nonatomic) _Bool userInteracted; // @synthesize userInteracted=_userInteracted;
 @property(retain, nonatomic) SPTLyricsLineSet *lyricsLineSet; // @synthesize lyricsLineSet=_lyricsLineSet;
 @property(readonly, nonatomic) id <SPTLyricsV2TestManager> testManager; // @synthesize testManager=_testManager;
+@property(retain, nonatomic) id <SPTLyricsV2LyricsViewStyleProvider> styleProvider; // @synthesize styleProvider=_styleProvider;
 @property(readonly, nonatomic) id <SPTLyricsLineProgressManager> progressManager; // @synthesize progressManager=_progressManager;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(retain, nonatomic) id <SPTLyricsV2LyricsViewStyleProvider> styleProvider; // @synthesize styleProvider=_styleProvider;
 @property(nonatomic, getter=isLoggingEnabled) _Bool loggingEnabled; // @synthesize loggingEnabled=_loggingEnabled;
 @property(nonatomic, getter=isExpanded) _Bool expanded; // @synthesize expanded=_expanded;
 @property(nonatomic) __weak id <SPTLyricsV2LyricsViewControllerDelegate> delegate; // @synthesize delegate=_delegate;

@@ -8,6 +8,6 @@
 
 @interface _TtC25SocialOnDemandFeatureImpl26SocialOnDemandTrackService (SocialOnDemandFeatureImpl)
 - (id)verify:(id)arg1 with:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)register:(id)arg1 with:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (id)register:(id)arg1 with:(id)arg2 target:(id)arg3 completion:(CDUnknownBlockType)arg4;
 @end
 

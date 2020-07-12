@@ -37,7 +37,7 @@
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)nextButtonPressed:(id)arg1;
 - (void)dialogButtonPressed;
-- (void)showDialogWithTitle:(id)arg1 message:(id)arg2;
+- (void)showDialogWithTitle:(id)arg1 message:(id)arg2 buttonTitle:(id)arg3;
 - (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
 - (void)removeModelBindings;
 - (void)configureModelBindings;

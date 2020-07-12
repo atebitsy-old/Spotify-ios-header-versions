@@ -42,7 +42,7 @@
 - (void)addedTrack:(id)arg1 fromContext:(unsigned long long)arg2;
 - (void)fetchRecommendationsForTrack:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (void)fetchNumberTracks:(unsigned long long)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (void)provideCardsForCurrentTracks:(id)arg1 andPlaylistName:(id)arg2;
+- (void)provideCardsForCurrentTracks:(id)arg1 andContextName:(id)arg2;
 - (void)cardWithTracks:(id)arg1;
 - (id)initWithRecommendedTracksDataLoader:(id)arg1 offlineModeState:(id)arg2 usePlaylistName:(_Bool)arg3;
 

@@ -10,5 +10,7 @@
 
 @protocol _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_ <SPTService>
 - (id <_TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_>)provideTrackService;
+@property(nonatomic, readonly) _Bool shouldDisablePrerolls;
+@property(nonatomic, readonly) _Bool isFeatureEnabled;
 @end
 

@@ -13,9 +13,6 @@
 + (id)adjJoin:(id)arg1;
 + (id)gckb_stringWithUTF8Bytes:(const void *)arg1 length:(unsigned long long)arg2 excessBytes:(unsigned long long *)arg3;
 + (id)gckb_stringWithUTF8Data:(id)arg1 excessBytes:(unsigned long long *)arg2;
-+ (id)spt_artistBiographySanitizedText:(id)arg1;
-+ (id)spt_artistBiographyByRemovingSearchLinks:(id)arg1;
-+ (id)spt_artistBiographyByReplacingEndlines:(id)arg1;
 + (id)stringWithHmiEvent:(long long)arg1 component:(unsigned long long)arg2;
 + (id)stringWithActionEvent:(unsigned long long)arg1;
 + (id)stringForLogCategory:(int)arg1;
@@ -38,6 +35,9 @@
 + (id)stringWithA4APacketType:(unsigned long long)arg1;
 + (id)stringWithStreamEventCode:(unsigned long long)arg1;
 + (id)stringWithStreamStatus:(unsigned long long)arg1;
++ (id)spt_artistBiographySanitizedText:(id)arg1;
++ (id)spt_artistBiographyByRemovingSearchLinks:(id)arg1;
++ (id)spt_artistBiographyByReplacingEndlines:(id)arg1;
 + (id)stringForArtists:(id)arg1;
 + (id)stringForArtists:(id)arg1 maxWidth:(double)arg2 font:(id)arg3 numberOfLines:(unsigned long long)arg4 preceedingText:(id)arg5 uppercase:(_Bool)arg6 locale:(id)arg7;
 + (id)spt_serializedPlayCommandURIFromDictionary:(id)arg1;
@@ -103,7 +103,6 @@
 - (_Bool)gckb_matchesRegex:(id)arg1;
 - (_Bool)gckb_containsRegex:(id)arg1;
 - (_Bool)gckb_matchesPattern:(id)arg1;
-- (id)spt_postProcessSkipDelayCountdownText;
 - (id)BMW_etchObject;
 - (id)xmlSimpleEscapeString;
 - (id)SHA1StringRepresentation;
@@ -117,11 +116,12 @@
 - (id)CDSValueForPropertyName:(id)arg1 version:(id)arg2;
 - (_Bool)idzk_isResourceForkPath;
 - (unsigned int)idzk_precomposedUTF8Length;
+- (id)ins_sha1String;
+- (id)ins_hexToData;
+- (id)spt_postProcessSkipDelayCountdownText;
 @property(readonly, copy, nonatomic, getter=bm_stringBySHA256Hashing) NSString *bm_stringBySHA256Hashing;
 @property(readonly, copy, nonatomic, getter=bm_stringBySHA1Hashing) NSString *bm_stringBySHA1Hashing;
 - (id)bm_dataFromHexRepresentation;
-- (id)ins_sha1String;
-- (id)ins_hexToData;
 - (id)spt_contributingArtistsAlbumStringWithFont:(id)arg1;
 @property(readonly, copy, nonatomic) NSAttributedString *spt_attributedStringByReplacingLinkHTML;
 @property(readonly) double glue_cgfloatValue;

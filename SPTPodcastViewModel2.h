@@ -14,7 +14,7 @@
 #import "SPTPodcastTrailerSectionViewModelDelegate-Protocol.h"
 
 @class NSArray, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastEpisodeSectionViewModel, SPTPodcastFeatureProperties, SPTPodcastHeaderViewModel, SPTPodcastLogger, SPTPodcastTopicCategoryViewModel, SPTPodcastTrailerSectionViewModel, SPTPodcastViewSectionConfiguration;
-@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastDispatcher, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastUITestManager, SPTPodcastViewModelDelegate2;
+@protocol SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastDispatcher, SPTPodcastEpisodeCellActionTarget, SPTPodcastFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastTestManager, SPTPodcastViewModelDelegate2;
 
 @interface SPTPodcastViewModel2 : NSObject <SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastTopicCategoryViewModelDelegate, SPTPodcastFollowSectionViewModelDelegate, SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTPodcastTrailerSectionViewModelDelegate>
 {
@@ -33,7 +33,6 @@
     id <SPTPodcastDataLoaderRequestToken> _podcastRequestToken;
     SPTPodcastTopicCategoryViewModel *_topicCategoryViewModel;
     id <SPTPodcastTestManager> _testManager;
-    id <SPTPodcastUITestManager> _uiTestManager;
     SPTPodcastFeatureProperties *_featureProperties;
     id <SPTPodcastFactory> _podcastFactory;
     id <SPTPodcastRequestFactory> _requestFactory;
@@ -61,7 +60,6 @@
 @property(readonly, nonatomic) id <SPTPodcastRequestFactory> requestFactory; // @synthesize requestFactory=_requestFactory;
 @property(readonly, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
 @property(readonly, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(readonly, nonatomic) id <SPTPodcastUITestManager> uiTestManager; // @synthesize uiTestManager=_uiTestManager;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTPodcastTopicCategoryViewModel *topicCategoryViewModel; // @synthesize topicCategoryViewModel=_topicCategoryViewModel;
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> podcastRequestToken; // @synthesize podcastRequestToken=_podcastRequestToken;
@@ -119,7 +117,7 @@
 - (long long)numberOfRowsInSection:(long long)arg1;
 - (void)obtainDelegation;
 @property(readonly, copy, nonatomic) NSArray *viewSections;
-- (id)initWithURL:(id)arg1 headerViewModel:(id)arg2 configuration:(id)arg3 topicCategoryViewModel:(id)arg4 dataLoader:(id)arg5 collectionPlatform:(id)arg6 testManager:(id)arg7 uiTestManager:(id)arg8 explicitContentAccessManager:(id)arg9 podcastPlayer:(id)arg10 podcastLogger:(id)arg11 featureProperties:(id)arg12 dispatcher:(id)arg13 factory:(id)arg14 requestFactory:(id)arg15;
+- (id)initWithURL:(id)arg1 headerViewModel:(id)arg2 configuration:(id)arg3 topicCategoryViewModel:(id)arg4 dataLoader:(id)arg5 collectionPlatform:(id)arg6 testManager:(id)arg7 explicitContentAccessManager:(id)arg8 podcastPlayer:(id)arg9 podcastLogger:(id)arg10 featureProperties:(id)arg11 dispatcher:(id)arg12 factory:(id)arg13 requestFactory:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

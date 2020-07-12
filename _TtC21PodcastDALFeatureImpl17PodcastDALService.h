@@ -14,6 +14,7 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (id)providePodcastRequestWithData:(id)arg1;
 - (id)providePodcastEpisodeFactory;
 - (id)providePodcastFactory;
 - (void)unload;

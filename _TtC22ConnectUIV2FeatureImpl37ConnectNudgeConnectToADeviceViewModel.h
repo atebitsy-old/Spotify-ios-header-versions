@@ -9,6 +9,7 @@
 @interface _TtC22ConnectUIV2FeatureImpl37ConnectNudgeConnectToADeviceViewModel : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: pickerPresenter
+    // Error parsing type: , name: logger
 }
 
 @end

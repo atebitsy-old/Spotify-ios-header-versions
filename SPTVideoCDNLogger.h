@@ -9,23 +9,23 @@
 #import "SPTDataLoaderConsumptionObserver-Protocol.h"
 
 @class NSString, SPTDataLoaderService;
-@protocol SPTLogCenter;
+@protocol SPTEventSender;
 
 @interface SPTVideoCDNLogger : NSObject <SPTDataLoaderConsumptionObserver>
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     SPTDataLoaderService *_dataLoaderService;
     unsigned long long _videoCDNSampling;
 }
 
 @property(nonatomic) unsigned long long videoCDNSampling; // @synthesize videoCDNSampling=_videoCDNSampling;
 @property(retain, nonatomic) SPTDataLoaderService *dataLoaderService; // @synthesize dataLoaderService=_dataLoaderService;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void).cxx_destruct;
 - (void)endedRequestWithResponse:(id)arg1 bytesDownloaded:(int)arg2 bytesUploaded:(int)arg3;
 - (_Bool)shouldLogRequest:(id)arg1;
 - (void)dealloc;
-- (id)initWithLogCenter:(id)arg1 dataLoaderService:(id)arg2 videoCDNSampling:(unsigned long long)arg3;
+- (id)initWithEventSender:(id)arg1 dataLoaderService:(id)arg2 videoCDNSampling:(unsigned long long)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

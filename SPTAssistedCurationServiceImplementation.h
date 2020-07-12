@@ -37,7 +37,7 @@
 - (void).cxx_destruct;
 - (id)mostPlayedCardProviderForURI:(id)arg1;
 - (id)recentlyPlayedCardProvider;
-- (id)topGenresCardProvider;
+- (id)topGenresCardProviderUsingPlaylistName:(_Bool)arg1;
 - (id)likedSongsCardProvider;
 - (id)cardProvidersForURI:(id)arg1;
 - (id)datasourceForURI:(id)arg1;

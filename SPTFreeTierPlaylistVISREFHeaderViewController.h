@@ -10,15 +10,12 @@
 #import "SPTFreeTierPlaylistVISREFHeaderControllerDelegate-Protocol.h"
 
 @class NSString, VISREFBaseHeaderController;
-@protocol SPTFreeTierPlaylistVISREFHeaderController, VISREFIntegrationManager;
+@protocol SPTFreeTierPlaylistVISREFHeaderController;
 
 @interface SPTFreeTierPlaylistVISREFHeaderViewController : VISREFEntityHeaderContentViewController <SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistHeader>
 {
-    id <VISREFIntegrationManager> _visrefIntegrationManager;
 }
 
-@property(retain, nonatomic) id <VISREFIntegrationManager> visrefIntegrationManager; // @synthesize visrefIntegrationManager=_visrefIntegrationManager;
-- (void).cxx_destruct;
 - (void)popViewController;
 - (struct CGPoint)snapOffset;
 - (void)update;
@@ -27,10 +24,7 @@
 @property(readonly, nonatomic) VISREFBaseHeaderController<SPTFreeTierPlaylistVISREFHeaderController> *playlistHeaderController;
 - (void)headerControllerViewSuperviewHierarchyDidChange:(id)arg1;
 - (void)traitCollectionDidChange:(id)arg1;
-- (void)viewDidDisappear:(_Bool)arg1;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (id)initWithHeaderController:(id)arg1 visrefIntegrationManager:(id)arg2;
 - (id)initWithHeaderController:(id)arg1;
 
 // Remaining properties

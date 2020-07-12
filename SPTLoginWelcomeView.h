@@ -30,7 +30,6 @@
     NSLayoutConstraint *_titleBottomMargin;
     NSLayoutConstraint *_mainContainerCompactWidth;
     NSLayoutConstraint *_mainContainerRegularWidth;
-    NSLayoutConstraint *_artworkAspectRatio;
     GLUELabel *_titleLabel;
     UIView *_mainContainer;
     GLUEGradientView *_gradientView;
@@ -39,7 +38,6 @@
 @property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) UIView *mainContainer; // @synthesize mainContainer=_mainContainer;
 @property(retain, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
-@property(retain, nonatomic) NSLayoutConstraint *artworkAspectRatio; // @synthesize artworkAspectRatio=_artworkAspectRatio;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerRegularWidth; // @synthesize mainContainerRegularWidth=_mainContainerRegularWidth;
 @property(retain, nonatomic) NSLayoutConstraint *mainContainerCompactWidth; // @synthesize mainContainerCompactWidth=_mainContainerCompactWidth;
 @property(retain, nonatomic) NSLayoutConstraint *titleBottomMargin; // @synthesize titleBottomMargin=_titleBottomMargin;

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPSession, SPTAppProtocolConnectionHandler;
+@class SPSession, SPTAppProtocolCallForwarder, SPTAppProtocolConnectionHandler;
 @protocol SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkConnectivityController, SPTProductState;
 
 @interface SPTAppProtocolMainHandler : NSObject
@@ -17,8 +17,10 @@
     id <SPTProductState> _productState;
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     id <SPTNetworkConnectivityController> _connectivityController;
+    SPTAppProtocolCallForwarder *_appProtocolForwarder;
 }
 
+@property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
 @property(nonatomic) __weak id <SPTProductState> productState; // @synthesize productState=_productState;
@@ -29,7 +31,7 @@
 - (void)handleUnsubscribeMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleSubscribeMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
-- (id)initWithExternalIntegrationPlatform:(id)arg1 connectionHandler:(id)arg2 networkConnectivityController:(id)arg3 currentSession:(id)arg4 productState:(id)arg5 connectManager:(id)arg6;
+- (id)initWithExternalIntegrationPlatform:(id)arg1 connectionHandler:(id)arg2 networkConnectivityController:(id)arg3 currentSession:(id)arg4 productState:(id)arg5 connectManager:(id)arg6 appProtocolForwarder:(id)arg7;
 
 @end
 

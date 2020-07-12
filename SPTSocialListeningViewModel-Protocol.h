@@ -15,7 +15,9 @@
 @property(readonly, nonatomic) NSArray *shareDestinations;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
 @property(readonly, nonatomic) long long state;
+@property(readonly, nonatomic, getter=isParticipantsInviteBarButtonVisible) _Bool participantsInviteBarButtonVisible;
 @property(readonly, nonatomic) _Bool isSessionHost;
+@property(readonly, nonatomic, getter=isListenTogetherSessionActiveIndicatorVisible) _Bool listenTogetherSessionActiveIndicatorVisible;
 @property(readonly, nonatomic, getter=isParticipantsPlaceholderVisible) _Bool participantsPlaceholderVisible;
 @property(readonly, nonatomic) unsigned long long bottomBannerType;
 @property(readonly, nonatomic) _Bool sessionButtonHidden;
@@ -23,6 +25,7 @@
 @property(readonly, nonatomic) _Bool seeListenersButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
 @property(readonly, nonatomic) _Bool tryAgainViewHidden;
+@property(readonly, copy, nonatomic) NSString *participantsNavigationBarTitle;
 @property(readonly, copy, nonatomic) NSString *tryAgainLabelText;
 @property(readonly, nonatomic) unsigned long long maxNumberOfUsers;
 @property(readonly, nonatomic) unsigned long long numberOfOverflowUsers;

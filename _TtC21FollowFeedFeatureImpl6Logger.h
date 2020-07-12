@@ -8,6 +8,8 @@
 
 @interface _TtC21FollowFeedFeatureImpl6Logger : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: ubiLogger
+    // Error parsing type: , name: eventFactory
     // Error parsing type: , name: eventSender
     // Error parsing type: , name: sessionId
 }

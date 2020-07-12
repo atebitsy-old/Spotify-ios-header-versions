@@ -24,7 +24,6 @@
 @property(readonly, nonatomic, getter=isDelayedSignupSecondCellEnabled) _Bool delayedSignupSecondCellEnabled;
 @property(readonly, nonatomic, getter=isDelayedSignupFirstCellEnabled) _Bool delayedSignupFirstCellEnabled;
 @property(readonly, nonatomic, getter=isDelayedSignupExperimentEnabled) _Bool delayedSignupExperimentEnabled;
-@property(readonly, nonatomic, getter=isLogin5MagicLinkEnabled) _Bool login5MagicLinkEnabled;
 @property(readonly, nonatomic, getter=isLogin5BootstrapEnabled) _Bool login5BootstrapEnabled;
 @property(readonly, nonatomic, getter=isIntentLedWelcomeEnabled) _Bool intentLedWelcomeEnabled;
 @property(readonly, nonatomic, getter=isMethodLedWelcomeEnabled) _Bool methodLedWelcomeEnabled;

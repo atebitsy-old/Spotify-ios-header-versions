@@ -23,30 +23,29 @@
     // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: containerService
-    // Error parsing type: , name: voiceViewController
-    // Error parsing type: , name: voicePlayerEventListener
-    // Error parsing type: , name: voicePlayerLogger
-    // Error parsing type: , name: onboardingViewController
-    // Error parsing type: , name: tabBarViewManager
-    // Error parsing type: , name: wakewordController
-    // Error parsing type: , name: voiceController
-    // Error parsing type: , name: testManager
-    // Error parsing type: , name: voiceInteractionSettingsViewModel
-    // Error parsing type: , name: ttsPlaybackLogger
-    // Error parsing type: , name: voiceSourceLogger
-    // Error parsing type: , name: $__lazy_storage_$_onboardingController
     // Error parsing type: , name: $__lazy_storage_$_player
     // Error parsing type: , name: $__lazy_storage_$_linkDispatcher
     // Error parsing type: , name: $__lazy_storage_$_glueTheme
-    // Error parsing type: , name: $__lazy_storage_$_microphonePermissionReducer
     // Error parsing type: , name: $__lazy_storage_$_localSettings
     // Error parsing type: , name: $__lazy_storage_$_eventSender
+    // Error parsing type: , name: $__lazy_storage_$_microphonePermissionReducer
+    // Error parsing type: , name: $__lazy_storage_$_onboardingController
+    // Error parsing type: , name: $__lazy_storage_$_onboardingState
+    // Error parsing type: , name: $__lazy_storage_$_settingsViewModel
+    // Error parsing type: , name: $__lazy_storage_$_voiceController
+    // Error parsing type: , name: $__lazy_storage_$_voicePresenter
+    // Error parsing type: , name: $__lazy_storage_$_wakewordController
+    // Error parsing type: , name: tabBarViewManager
+    // Error parsing type: , name: testManager
+    // Error parsing type: , name: voiceInteractionSettingsManager
+    // Error parsing type: , name: voiceParentController
+    // Error parsing type: , name: voicePlayerEventListener
+    // Error parsing type: , name: voicePlayerLogger
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)provideVoiceInteractionSettingsSectionWithSettingsViewController:(id)arg1;
 - (void)initialViewDidAppear;
 - (void)unload;
 - (void)load;

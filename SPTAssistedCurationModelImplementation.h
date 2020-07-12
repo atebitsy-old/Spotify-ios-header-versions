@@ -16,9 +16,9 @@
 @interface SPTAssistedCurationModelImplementation : NSObject <SPTAssistedCurationCardModelActionsDelegate, SPTAssistedCurationModel, SPTAssistedCurationCardsProviderDelegate>
 {
     _Bool _loaded;
-    NSURL *_playlistURI;
+    NSURL *_contextURI;
     id <SPTAssistedCurationModelDelegate> _delegate;
-    NSString *_playlistName;
+    NSString *_contextName;
     id <SPTAssistedCurationDatasource> _datasource;
     NSArray *_cardProviders;
     NSMutableSet *_providersWaitingSet;
@@ -34,9 +34,9 @@
 @property(retain, nonatomic) NSArray *cardProviders; // @synthesize cardProviders=_cardProviders;
 @property(retain, nonatomic) id <SPTAssistedCurationDatasource> datasource; // @synthesize datasource=_datasource;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
-@property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
+@property(copy, nonatomic) NSString *contextName; // @synthesize contextName=_contextName;
 @property(nonatomic) __weak id <SPTAssistedCurationModelDelegate> delegate; // @synthesize delegate=_delegate;
-@property(readonly, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
+@property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 - (void).cxx_destruct;
 - (void)assistedCurationCardModelActions:(id)arg1 addTrack:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)cardProvider:(id)arg1 filterTracks:(id)arg2 completion:(CDUnknownBlockType)arg3;
@@ -45,16 +45,16 @@
 - (void)removeEmptyCard:(id)arg1;
 - (void)removeProviderFromWaitingSet:(id)arg1;
 - (_Bool)allProvidersLoaded;
-- (void)fetchPlaylistDataWithCompletion:(CDUnknownBlockType)arg1;
+- (void)fetchContextDataWithCompletion:(CDUnknownBlockType)arg1;
 - (_Bool)hasCardProviderWithIdentifier:(id)arg1;
 @property(readonly, nonatomic) unsigned long long numberOfCards;
 - (void)load;
 - (id)cardAtIndex:(unsigned long long)arg1;
 - (void)unpackNotification:(id)arg1 then:(CDUnknownBlockType)arg2;
-- (void)trackWasAddedNotToPlaylistBecauseError:(id)arg1;
-- (void)trackWasAddedNotToPlaylistBecauseDuplicated:(id)arg1;
-- (void)trackWasAddedToPlaylist:(id)arg1;
-- (id)initWithPlaylistURL:(id)arg1 datasource:(id)arg2 cardProviders:(id)arg3 addTrackHandler:(id)arg4 notificationCenter:(id)arg5 offlineModeState:(id)arg6;
+- (void)trackWasNotAddedBecauseError:(id)arg1;
+- (void)trackWasNotAddedBecauseDuplicated:(id)arg1;
+- (void)trackWasAdded:(id)arg1;
+- (id)initWithContextURL:(id)arg1 datasource:(id)arg2 cardProviders:(id)arg3 addTrackHandler:(id)arg4 notificationCenter:(id)arg5 offlineModeState:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,6 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol SPTAppProtocolExternalHandler;
+
 @protocol SPTSpotifyAppProtocolService <SPTService>
+- (void)unregisterExternalHandler:(id <SPTAppProtocolExternalHandler>)arg1;
+- (void)registerExternalHandler:(id <SPTAppProtocolExternalHandler>)arg1;
 @end
 

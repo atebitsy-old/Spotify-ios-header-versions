@@ -6,7 +6,7 @@
 
 #import "GLUEThemeBase.h"
 
-@class GLUEEntityRowStyle, SPTFreeTierPlaylistButtonSectionHeaderViewStyle, SPTFreeTierPlaylistHeaderMetadataViewStyle, SPTFreeTierPlaylistHeaderPageContainerViewStyle, SPTFreeTierPreCurationTheme;
+@class GLUEEntityRowStyle, SPTFreeTierPlaylistButtonSectionHeaderViewStyle, SPTFreeTierPreCurationTheme;
 @protocol GLUETheme;
 
 @interface SPTFreeTierPlaylistGLUETheme : GLUEThemeBase
@@ -18,13 +18,8 @@
 @property(retain, nonatomic) SPTFreeTierPreCurationTheme *preCurationTheme; // @synthesize preCurationTheme=_preCurationTheme;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) SPTFreeTierPlaylistHeaderMetadataViewStyle *headerMetadataViewStyle;
-@property(readonly, copy, nonatomic) SPTFreeTierPlaylistHeaderPageContainerViewStyle *headerPageContainerViewStyle;
 @property(readonly, copy, nonatomic) GLUEEntityRowStyle *trackRowPreCurationStyle;
 - (_Bool)isPad;
-- (id)headerContentViewStyle;
-- (id)headerViewStyle;
-- (id)headerNavigationBarTitleStyle;
 - (id)playlistRecommendationsCloudStyle;
 - (id)playlistNoTitleCloudStyle;
 - (id)playlistCloudStyle;

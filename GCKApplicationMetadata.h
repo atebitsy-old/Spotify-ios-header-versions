@@ -18,14 +18,10 @@
     NSURL *_iconURL;
     NSArray *_namespaces;
     GCKSenderApplicationInfo *_senderApplicationInfo;
-    NSString *_transportID;
-    NSString *_sessionID;
-    NSString *_statusText;
+    NSString *_applicationType;
 }
 
-@property(readonly, copy, nonatomic) NSString *statusText; // @synthesize statusText=_statusText;
-@property(readonly, copy, nonatomic) NSString *sessionID; // @synthesize sessionID=_sessionID;
-@property(readonly, copy, nonatomic) NSString *transportID; // @synthesize transportID=_transportID;
+@property(readonly, copy, nonatomic) NSString *applicationType; // @synthesize applicationType=_applicationType;
 @property(readonly, copy, nonatomic) GCKSenderApplicationInfo *senderApplicationInfo; // @synthesize senderApplicationInfo=_senderApplicationInfo;
 @property(readonly, copy, nonatomic) NSArray *namespaces; // @synthesize namespaces=_namespaces;
 @property(readonly, copy, nonatomic) NSURL *iconURL; // @synthesize iconURL=_iconURL;
@@ -40,8 +36,8 @@
 - (id)senderAppLaunchURL;
 - (id)senderAppIdentifier;
 - (id)init;
-- (id)initWithJSONObject:(id)arg1;
-- (id)initWithApplicationID:(id)arg1 applicationName:(id)arg2 iconURL:(id)arg3 namespaces:(id)arg4 senderApplicationInfo:(id)arg5;
+- (id)initWithJSONObject:(id)arg1 castToNativeEnabled:(_Bool)arg2;
+- (id)initWithApplicationID:(id)arg1 applicationName:(id)arg2 iconURL:(id)arg3 namespaces:(id)arg4 applicationType:(id)arg5 senderApplicationInfo:(id)arg6;
 
 @end
 

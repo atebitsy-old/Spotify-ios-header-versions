@@ -97,7 +97,7 @@
 @property(readonly, nonatomic) unsigned long long numberOfTracks;
 @property(readonly, nonatomic) NSURL *URI;
 @property(readonly, nonatomic) NSString *pageIdentifier;
-- (id)initWithHomeMixModel:(id)arg1 domainModel:(id)arg2 playbackEffectHandler:(id)arg3 player:(id)arg4 loggingEffectHandler:(id)arg5 offlineModeState:(id)arg6 testManager:(id)arg7 launchURIEffectHandler:(id)arg8 homeMixModelEffectHandler:(id)arg9 explicitContentEffectHandler:(id)arg10 snackbarEffectHandler:(id)arg11 linkDispatcher:(id)arg12;
+- (id)initWithHomeMixModel:(id)arg1 domainModel:(id)arg2 playbackEffectHandler:(id)arg3 player:(id)arg4 loggingEffectHandler:(id)arg5 offlineModeState:(id)arg6 launchURIEffectHandler:(id)arg7 homeMixModelEffectHandler:(id)arg8 explicitContentEffectHandler:(id)arg9 snackbarEffectHandler:(id)arg10 linkDispatcher:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

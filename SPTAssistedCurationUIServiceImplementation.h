@@ -61,7 +61,7 @@
 - (void)registerLinkHandler;
 - (id)cardProvidersToWaitWithMostPlayedCard:(_Bool)arg1;
 - (id)provideAddSongsActionTaskForURL:(id)arg1 logContext:(id)arg2;
-- (id)provideLoggerForURI:(id)arg1 playlistURI:(id)arg2;
+- (id)provideLoggerForURI:(id)arg1 contextURI:(id)arg2;
 - (id)provideInterfaceFactoryWithViewModel:(id)arg1;
 - (id)provideGLUEImageLoader;
 - (id)provideEducationSnackBarPresenter;

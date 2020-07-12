@@ -30,7 +30,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)initWithMetadata:(id)arg1 sessionID:(id)arg2 transportID:(id)arg3 statusText:(id)arg4;
-- (id)initWithJSONObject:(id)arg1;
+- (id)initWithJSONObject:(id)arg1 castToNativeEnabled:(_Bool)arg2;
 - (id)init;
 
 @end

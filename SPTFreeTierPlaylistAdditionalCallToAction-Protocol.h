@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, UIControl;
+@class NSString, UIControl, UIView, UIViewController;
 @protocol SPTFreeTierPlaylistAdditionalCallToActionDelegate;
 
 @protocol SPTFreeTierPlaylistAdditionalCallToAction <NSObject>
@@ -16,5 +16,9 @@
 @property(readonly, nonatomic) unsigned long long icon;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate;
 - (void)performAction:(UIControl *)arg1;
+
+@optional
+- (void)didAppearInViewController:(UIViewController *)arg1;
+- (void)didRenderInView:(UIView *)arg1;
 @end
 

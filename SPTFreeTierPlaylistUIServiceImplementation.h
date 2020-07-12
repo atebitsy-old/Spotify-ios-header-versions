@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierPlaylistFeatureProperties, SPTFreeTierPlaylistHandlerRegistryImplementation;
-@protocol SPContextMenuFeature, SPTAdsService, SPTAlgotorialSharingService, SPTAssistedCurationUIService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEventSenderService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierPlaylistService, SPTFreeTierPreCurationService, SPTFreeTierRecommendationsService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistExtenderService, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPodcastOffliningService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTVISREFFlagsService, SPTVisualRefreshIntegrationService, _TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_, _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_, _TtP25PlaylistTrackCloudFeature28SPTPlaylistTrackCloudService_;
+@protocol SPContextMenuFeature, SPTAdsService, SPTAlgotorialSharingService, SPTAssistedCurationUIService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEventSenderService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierPlaylistService, SPTFreeTierPreCurationService, SPTFreeTierRecommendationsService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistExtenderService, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPodcastOffliningService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTVisualRefreshIntegrationService, _TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_, _TtP24EncoreIntegrationFeature27SPTEncoreIntegrationService_, _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_, _TtP25PlaylistTrackCloudFeature28SPTPlaylistTrackCloudService_;
 
 @interface SPTFreeTierPlaylistUIServiceImplementation : NSObject <SPTFreeTierPlaylistUIService>
 {
@@ -41,7 +41,6 @@
     id <SPTSortingFilteringService> _sortingFilteringService;
     id <SPTFormatListPlatformRegistration> _formatRegistryHandlerRegistration;
     SPTFreeTierPlaylistHandlerRegistryImplementation *_handlerRegistry;
-    id <SPTVISREFFlagsService> _visualRefreshService;
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
     id <SPTPodcastFeature> _podcastFeature;
     id <SPTSessionService> _clientSessionService;
@@ -77,7 +76,6 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastFeature; // @synthesize podcastFeature=_podcastFeature;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
-@property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;
 @property(retain, nonatomic) SPTFreeTierPlaylistHandlerRegistryImplementation *handlerRegistry; // @synthesize handlerRegistry=_handlerRegistry;
 @property(retain, nonatomic) id <SPTFormatListPlatformRegistration> formatRegistryHandlerRegistration; // @synthesize formatRegistryHandlerRegistration=_formatRegistryHandlerRegistration;
 @property(nonatomic) __weak id <SPTSortingFilteringService> sortingFilteringService; // @synthesize sortingFilteringService=_sortingFilteringService;
@@ -117,7 +115,6 @@
 - (id)loadableForPlaylistWithURL:(id)arg1 withPageContext:(id)arg2;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withPageContext:(id)arg2 playlistModel:(id)arg3 initialEntity:(id)arg4;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withPageContext:(id)arg2;
-- (id)fullbleedHeaderProvider;
 - (void)unregisterPage;
 - (void)registerPage;
 - (void)load;

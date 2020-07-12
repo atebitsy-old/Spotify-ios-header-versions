@@ -7,12 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "SPTInAppMessageNoteMessageWebViewContentDelegate-Protocol.h"
+#import "SPTInAppMessageNotePresentationManagerDelegate-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
 @class NSDictionary, NSString, SPTInAppMessageNoteMessageViewModel, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
 @protocol SPTAuthController, SPTBannerPresentationManager, SPTCarDetector, SPTCrashReporter, SPTFreeTierTooltipConditionalPresenter, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
 
-@interface SPTInAppMessageNoteMessagePresentationController : NSObject <SPTInAppMessageNoteMessageWebViewContentDelegate, SPTOfflineModeStateObserver>
+@interface SPTInAppMessageNoteMessagePresentationController : NSObject <SPTInAppMessageNoteMessageWebViewContentDelegate, SPTOfflineModeStateObserver, SPTInAppMessageNotePresentationManagerDelegate>
 {
     _Bool _offline;
     SPTInAppMessageNoteMessageViewModel *_noteMessageViewModel;
@@ -47,6 +48,7 @@
 @property(retain, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(retain, nonatomic) SPTInAppMessageNoteMessageViewModel *noteMessageViewModel; // @synthesize noteMessageViewModel=_noteMessageViewModel;
 - (void).cxx_destruct;
+- (void)noteMessageSwipedAway;
 - (void)cancelNoteMessagePresentation:(id)arg1;
 - (_Bool)canPresentNote;
 - (void)logMessageDiscardedWithReason:(id)arg1;

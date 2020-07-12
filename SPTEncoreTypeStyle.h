@@ -6,11 +6,12 @@
 
 #import <objc/NSObject.h>
 
+#import "NSCopying-Protocol.h"
 #import "SPTEncoreTypeStyleBuilder-Protocol.h"
 
 @class UIFont;
 
-@interface SPTEncoreTypeStyle : NSObject <SPTEncoreTypeStyleBuilder>
+@interface SPTEncoreTypeStyle : NSObject <SPTEncoreTypeStyleBuilder, NSCopying>
 {
     _Bool _upperCaseLayout;
     UIFont *_font;
@@ -19,17 +20,7 @@
     CDStruct_b9b47a9c _lineHeightRange;
 }
 
-+ (double)kerningFromTracking:(double)arg1 withFont:(id)arg2;
-+ (double)kerningFromLetterSpacing:(double)arg1 withFront:(id)arg2;
-+ (double)lineHeightMultipleFromLineHeight:(double)arg1 withFont:(id)arg2;
 + (double)valueFromRange:(CDStruct_b9b47a9c)arg1 withScale:(double)arg2;
-+ (id)fontFromTypeStyle:(id)arg1 withAccessibilityScale:(double)arg2;
-+ (id)paragraphStyleFromStyle:(id)arg1 withAccessibilityScale:(double)arg2 andFont:(id)arg3;
-+ (id)stringAttributesForStyle:(id)arg1 withAccessibilityScale:(double)arg2;
-+ (id)attributedStringFromText:(id)arg1 withStyle:(id)arg2 andAccessibilityScale:(double)arg3;
-+ (id)mergeParagraphStyle:(id)arg1 withParagraphStyle:(id)arg2;
-+ (id)mergedStringAttributes:(id)arg1;
-+ (id)diff:(id)arg1 with:(id)arg2;
 + (id)typeStyleWithFont:(id)arg1 fontSizeRange:(CDStruct_b9b47a9c)arg2 lineHeightRange:(CDStruct_b9b47a9c)arg3 trackingRange:(CDStruct_b9b47a9c)arg4 upperCaseLayout:(_Bool)arg5;
 + (id)constrainedBadge;
 + (void)set_constrainedBadge:(id)arg1;
@@ -37,16 +28,31 @@
 + (id)badge;
 + (void)set_badge:(id)arg1;
 + (id)_badge;
++ (id)stringAttributesForStyle:(id)arg1;
++ (double)kerningFromTracking:(double)arg1 withFont:(id)arg2;
++ (double)kerningFromLetterSpacing:(double)arg1 withFront:(id)arg2;
++ (double)lineHeightMultipleFromLineHeight:(double)arg1 withFont:(id)arg2;
++ (id)fontFromTypeStyle:(id)arg1 withAccessibilityScale:(double)arg2;
++ (id)paragraphStyleFromStyle:(id)arg1 withAccessibilityScale:(double)arg2 andFont:(id)arg3;
++ (id)stringAttributesForStyle:(id)arg1 withAccessibilityScale:(double)arg2;
++ (id)attributedStringFromText:(id)arg1 withStyle:(id)arg2 andAccessibilityScale:(double)arg3;
++ (id)mergeParagraphStyle:(id)arg1 withParagraphStyle:(id)arg2;
++ (id)mergedStringAttributes:(id)arg1;
++ (id)diff:(id)arg1 with:(id)arg2;
 @property(readonly, nonatomic) _Bool upperCaseLayout; // @synthesize upperCaseLayout=_upperCaseLayout;
 @property(readonly, nonatomic) CDStruct_b9b47a9c lineHeightRange; // @synthesize lineHeightRange=_lineHeightRange;
 @property(readonly, nonatomic) CDStruct_b9b47a9c trackingRange; // @synthesize trackingRange=_trackingRange;
 @property(readonly, nonatomic) CDStruct_b9b47a9c fontSizeRange; // @synthesize fontSizeRange=_fontSizeRange;
 @property(readonly, nonatomic) UIFont *font; // @synthesize font=_font;
 - (void).cxx_destruct;
-- (id)stringAttributesWithAccessibilityScale:(double)arg1;
-- (id)attributedStringFromText:(id)arg1 withAccessibilityScale:(double)arg2;
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)description;
 - (id)initWithFont:(id)arg1 fontSizeRange:(CDStruct_b9b47a9c)arg2 lineHeightRange:(CDStruct_b9b47a9c)arg3 trackingRange:(CDStruct_b9b47a9c)arg4 upperCaseLayout:(_Bool)arg5;
+- (id)stringAttributes;
+- (id)stringAttributesWithAccessibilityScale:(double)arg1;
+- (id)attributedStringFromText:(id)arg1 withAccessibilityScale:(double)arg2;
 - (id)withUpperCaseLayout:(_Bool)arg1;
 - (id)withLineHeight:(double)arg1;
 - (id)withLineHeightRange:(CDStruct_b9b47a9c)arg1;

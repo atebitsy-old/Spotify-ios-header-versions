@@ -14,6 +14,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 
 @end

@@ -22,7 +22,8 @@
 @property(readonly, nonatomic) NSURL *headerImageURL;
 @property(readonly, nonatomic) NSURL *portraitImageURL;
 @property(nonatomic) __weak id <SPTCollectionArtistModelDelegate> delegate;
-@property(readonly, nonatomic) _Bool loaded;
+@property(readonly, nonatomic, getter=isTracksLoaded) _Bool tracksLoaded;
+@property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (unsigned long long)offlineAvailability;
 - (long long)numberOfItemsInSection:(long long)arg1;
 - (long long)numberOfSections;

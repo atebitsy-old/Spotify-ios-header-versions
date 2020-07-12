@@ -55,6 +55,7 @@
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)glue_applyStyle:(id)arg1;
 - (_Bool)becomeFirstResponder;
+- (void)layoutSubviews;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (id)viewForFirstBaselineLayout;
 @property(copy, nonatomic) NSString *clearButtonAccessibilityLabel;

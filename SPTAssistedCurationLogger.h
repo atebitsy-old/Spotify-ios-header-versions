@@ -15,10 +15,10 @@
     id <SPTViewLogger> _viewLogger;
     id <SPTUBILogger> _ubiLogger;
     id <SPTUBIMobileAssistedCurationEventFactory> _eventFactory;
-    NSURL *_playlistURI;
+    NSURL *_contextURI;
 }
 
-@property(readonly, nonatomic) NSURL *playlistURI; // @synthesize playlistURI=_playlistURI;
+@property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 @property(retain, nonatomic) id <SPTUBIMobileAssistedCurationEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
@@ -40,7 +40,7 @@
 - (void)logViewLoadingCancelledWithPageIdentifier:(id)arg1 dataSource:(long long)arg2;
 - (void)logViewDidLoadWithPageIdentifier:(id)arg1 dataSource:(long long)arg2;
 - (void)logViewLoadingStartedWithPageIdentifier:(id)arg1 reason:(long long)arg2;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventFactory:(id)arg3 ubiLogger:(id)arg4 playlistURI:(id)arg5;
+- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 eventFactory:(id)arg3 ubiLogger:(id)arg4 contextURI:(id)arg5;
 
 @end
 

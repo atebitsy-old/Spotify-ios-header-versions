@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolConnectionHandler;
+@class SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolCallForwarder, SPTAppProtocolConnectionHandler;
 @protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTNetworkConnectivityController, SPTPreferences;
 
 @interface SPTAppProtocolCallMessageHandler : NSObject
@@ -21,10 +21,12 @@
     SPTAppProtocolBlockBasedImageLoader *_blockBasedImageLoader;
     id <SPTPreferences> _preferences;
     id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
+    SPTAppProtocolCallForwarder *_appProtocolForwarder;
     id <SPTExternalIntegrationDebugLog> _debugLog;
 }
 
 @property(retain, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
+@property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 @property(readonly, nonatomic) __weak id <SPTPreferences> preferences; // @synthesize preferences=_preferences;
 @property(readonly, nonatomic) SPTAppProtocolBlockBasedImageLoader *blockBasedImageLoader; // @synthesize blockBasedImageLoader=_blockBasedImageLoader;
@@ -90,7 +92,7 @@
 - (void)handleSetShuffleCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleMethodNamed:(id)arg1 sourceMessage:(id)arg2 andReply:(CDUnknownBlockType)arg3;
-- (id)initWithExternalIntegrationPlatform:(id)arg1 connectionHandler:(id)arg2 networkConnectivityController:(id)arg3 imageLoaderFactory:(id)arg4 connectManager:(id)arg5 session:(id)arg6 preferences:(id)arg7 debugLog:(id)arg8;
+- (id)initWithExternalIntegrationPlatform:(id)arg1 connectionHandler:(id)arg2 networkConnectivityController:(id)arg3 imageLoaderFactory:(id)arg4 connectManager:(id)arg5 session:(id)arg6 preferences:(id)arg7 appProtocolForwarder:(id)arg8 debugLog:(id)arg9;
 
 @end
 

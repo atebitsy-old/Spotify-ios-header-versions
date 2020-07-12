@@ -12,8 +12,8 @@
 @protocol SPTAssistedCurationModel <NSObject>
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(readonly, nonatomic) unsigned long long numberOfCards;
-@property(readonly, nonatomic) NSURL *playlistURI;
-@property(readonly, copy, nonatomic) NSString *playlistName;
+@property(readonly, nonatomic) NSURL *contextURI;
+@property(readonly, copy, nonatomic) NSString *contextName;
 @property(nonatomic) __weak id <SPTAssistedCurationModelDelegate> delegate;
 - (_Bool)hasCardProviderWithIdentifier:(NSString *)arg1;
 - (id <SPTAssistedCurationCardModel>)cardAtIndex:(unsigned long long)arg1;

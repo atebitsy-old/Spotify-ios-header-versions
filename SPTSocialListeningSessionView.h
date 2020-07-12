@@ -44,6 +44,7 @@
 @property(readonly, nonatomic) UIActivityIndicatorView *activityIndicatorView; // @synthesize activityIndicatorView=_activityIndicatorView;
 - (void).cxx_destruct;
 - (void)glue_applyStyle:(id)arg1;
+- (void)setSessionActiveIndicatorViewVisible:(_Bool)arg1;
 - (void)addViewConstraints;
 - (void)setupLeaveSessionButton;
 - (void)setupScanCodeButton;

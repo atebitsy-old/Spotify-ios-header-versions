@@ -40,6 +40,7 @@
 - (id)deviceWithDeviceInfo:(id)arg1 asGuestMode:(_Bool)arg2;
 - (void)logPublishedDevices:(id)arg1 rejectedDevices:(id)arg2;
 - (void)handleNetworkReachabilityChange;
+- (unsigned long long)priorityFromProbingReason:(int)arg1;
 - (void)probeNetworkAddress:(id)arg1 servicePort:(unsigned short)arg2 reason:(int)arg3;
 - (unsigned long long)devicePublishActionWithLocalConnectionInfo:(id)arg1 probingEnabled:(_Bool)arg2;
 - (void)scanDatabaseForOnlineDevices:(id)arg1 rejectedDevices:(id)arg2;

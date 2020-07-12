@@ -64,7 +64,6 @@
 - (void)closeFullscreenIfNecessary;
 - (void)updateWithTrack:(id)arg1 imageURL:(id)arg2;
 - (void)didTapCardView;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (void)dealloc;

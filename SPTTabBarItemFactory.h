@@ -11,7 +11,7 @@
 }
 
 + (void)configureTabBarItemForViewController:(id)arg1 withNavigationItem:(id)arg2;
-+ (void)configureTabBarItemForViewController:(id)arg1 title:(id)arg2 SPTIcon:(long long)arg3 identifier:(id)arg4 layoutIdentifier:(id)arg5;
++ (void)configureTabBarItemForViewController:(id)arg1 title:(id)arg2 SPTIcon:(long long)arg3 identifier:(id)arg4 layoutIdentifier:(id)arg5 badgeDisplayed:(_Bool)arg6;
 
 @end
 

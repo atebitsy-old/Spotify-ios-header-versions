@@ -14,10 +14,12 @@
 @interface GCKLaunchOptions : NSObject <NSCopying, NSSecureCoding>
 {
     _Bool _relaunchIfRunning;
+    _Bool _androidReceiverCompatible;
     NSString *_languageCode;
 }
 
 + (_Bool)supportsSecureCoding;
+@property(nonatomic) _Bool androidReceiverCompatible; // @synthesize androidReceiverCompatible=_androidReceiverCompatible;
 @property(nonatomic) _Bool relaunchIfRunning; // @synthesize relaunchIfRunning=_relaunchIfRunning;
 @property(copy, nonatomic) NSString *languageCode; // @synthesize languageCode=_languageCode;
 - (void).cxx_destruct;
@@ -29,6 +31,8 @@
 - (id)initWithCoder:(id)arg1;
 - (id)initWithLanguageCode:(id)arg1 relaunchIfRunning:(_Bool)arg2;
 - (id)initWithRelaunchIfRunning:(_Bool)arg1;
+- (id)initWithRelaunchIfRunning:(_Bool)arg1 languageCode:(id)arg2 androidReceiverCompatible:(_Bool)arg3;
+- (id)initWithRelaunchIfRunning:(_Bool)arg1 androidReceiverCompatible:(_Bool)arg2;
 - (id)init;
 
 @end

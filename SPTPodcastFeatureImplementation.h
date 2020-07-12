@@ -8,7 +8,7 @@
 
 #import "SPTPodcastFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastDataLoaderShowEntityService, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactory, SPTPodcastSortingService, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
+@class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastDataLoaderShowEntityService, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactoryImplementation, SPTPodcastSortingService, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
 @protocol CosmosFeature, SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastLogger, SPTPodcastOffliningService, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_;
 
 @interface SPTPodcastFeatureImplementation : SPTUIPageService <SPTPodcastFeature>
@@ -52,7 +52,7 @@
     id <SPTEpisodeContextMenuControllerDelegate> _contextMenuDelegateObject;
     SPTPodcastTestManagerImplementation *_testManager;
     SPTPodcastSpeedControlManagerImpl *_podcastSpeedControlManager;
-    SPTPodcastRequestFactory *_podcastRequestFactory;
+    SPTPodcastRequestFactoryImplementation *_podcastRequestFactory;
     SPTPodcastCosmosDataLoader *_podcastCosmosDataLoader;
     SPTPodcastFactory *_podcastFactory;
     SPTPodcastEpisodeFactory *_podcastEpisodeFactory;
@@ -70,7 +70,7 @@
 @property(retain, nonatomic) SPTPodcastEpisodeFactory *podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
 @property(retain, nonatomic) SPTPodcastFactory *podcastFactory; // @synthesize podcastFactory=_podcastFactory;
 @property(retain, nonatomic) SPTPodcastCosmosDataLoader *podcastCosmosDataLoader; // @synthesize podcastCosmosDataLoader=_podcastCosmosDataLoader;
-@property(retain, nonatomic) SPTPodcastRequestFactory *podcastRequestFactory; // @synthesize podcastRequestFactory=_podcastRequestFactory;
+@property(retain, nonatomic) SPTPodcastRequestFactoryImplementation *podcastRequestFactory; // @synthesize podcastRequestFactory=_podcastRequestFactory;
 @property(retain, nonatomic) SPTPodcastSpeedControlManagerImpl *podcastSpeedControlManager; // @synthesize podcastSpeedControlManager=_podcastSpeedControlManager;
 @property(retain, nonatomic) SPTPodcastTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTEpisodeContextMenuControllerDelegate> contextMenuDelegateObject; // @synthesize contextMenuDelegateObject=_contextMenuDelegateObject;
@@ -127,7 +127,6 @@
 - (void)registerPodcastCollectionEntityContentType;
 - (id)provideEpisodeCellConfigurator;
 - (id)provideResolverForPodcast;
-- (id)providePodcastNowPlayingTitlePresenter;
 - (id)providePodcastSpeedControlManager;
 - (void)setUpShowEntityServiceDataLoader:(id)arg1;
 - (id)provideShowEntityService;

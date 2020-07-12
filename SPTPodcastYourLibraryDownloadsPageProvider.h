@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory, SPTTheme;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTOfflineManager, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastUITestManager, SPTPodcastYourLibraryPageProviderDelegate;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTOfflineManager, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastYourLibraryPageProviderDelegate;
 
 @interface SPTPodcastYourLibraryDownloadsPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -26,7 +26,6 @@
     id <SPTPodcastEpisodeCellConfigurator> _cellConfigurator;
     id <SPTPodcastLogger> _podcastLogger;
     id <SPTPerformanceMetricsViewLoggerFactory> _viewLoggerFactory;
-    id <SPTPodcastUITestManager> _podcastUITestManager;
     id <SPTPodcastRequestFactory> _podcastRequestFactory;
     id <SPTPodcastEpisodeFactory> _episodeFactory;
     id <SPTMetaViewController> _metaViewController;
@@ -39,7 +38,6 @@
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFactory> episodeFactory; // @synthesize episodeFactory=_episodeFactory;
 @property(retain, nonatomic) id <SPTPodcastRequestFactory> podcastRequestFactory; // @synthesize podcastRequestFactory=_podcastRequestFactory;
-@property(retain, nonatomic) id <SPTPodcastUITestManager> podcastUITestManager; // @synthesize podcastUITestManager=_podcastUITestManager;
 @property(retain, nonatomic) id <SPTPerformanceMetricsViewLoggerFactory> viewLoggerFactory; // @synthesize viewLoggerFactory=_viewLoggerFactory;
 @property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
@@ -56,7 +54,7 @@
 - (void).cxx_destruct;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 episodeFactory:(id)arg7 offlineManager:(id)arg8 explicitContentAccessManager:(id)arg9 theme:(id)arg10 glueTheme:(id)arg11 cellConfigurator:(id)arg12 cellActionHandlerFactory:(id)arg13 metaViewController:(id)arg14 navigationRouter:(id)arg15 podcastLogger:(id)arg16 viewLoggerFactory:(id)arg17 podcastUITestManager:(id)arg18;
+- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 episodeFactory:(id)arg7 offlineManager:(id)arg8 explicitContentAccessManager:(id)arg9 theme:(id)arg10 glueTheme:(id)arg11 cellConfigurator:(id)arg12 cellActionHandlerFactory:(id)arg13 metaViewController:(id)arg14 navigationRouter:(id)arg15 podcastLogger:(id)arg16 viewLoggerFactory:(id)arg17;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

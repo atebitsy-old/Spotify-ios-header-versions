@@ -32,13 +32,12 @@
 - (void).cxx_destruct;
 - (void)storeStickyCredentialsUserInfoForScreen:(unsigned long long)arg1;
 - (id)authLogin5Options;
-- (id)provideLoginOptionsForCredentials:(id)arg1;
-- (void)didLoginWithPhoneNumber;
 - (void)switchAccountWithCredentials:(id)arg1 fromScreen:(unsigned long long)arg2 userDidSignup:(_Bool)arg3 completionBlock:(CDUnknownBlockType)arg4;
 - (void)handleAuthenticationResultWithError:(id)arg1 fromScreen:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)authenticateAndLoginWithOpenIDCredentials:(id)arg1 authSourceType:(unsigned long long)arg2 onLoginComplete:(CDUnknownBlockType)arg3 onSignupRequired:(CDUnknownBlockType)arg4;
-- (void)authenticateAndLoginWithURI:(id)arg1 context:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)authenticateWithCredentials:(id)arg1 userDidSignUp:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)didLoginWithPhoneNumber;
+- (void)authenticateAndLoginWithOpenIDCredentials:(id)arg1 authSourceType:(unsigned long long)arg2 onLoginComplete:(CDUnknownBlockType)arg3 onSignupRequired:(CDUnknownBlockType)arg4;
+- (void)authenticateAndLoginWithURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)authenticateAndLoginWithCredentials:(id)arg1 fromScreen:(unsigned long long)arg2 completionBlock:(CDUnknownBlockType)arg3;
 - (void)authenticateAndLoginWithOneTimeToken:(id)arg1 fromScreen:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
 - (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 errorDecorator:(id)arg3 performanceLogging:(id)arg4 mainViewLoader:(id)arg5 accountSwitcher:(id)arg6 login5TestManager:(id)arg7 databaseManager:(id)arg8;

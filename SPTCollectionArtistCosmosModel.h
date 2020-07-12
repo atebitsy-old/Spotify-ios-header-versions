@@ -19,6 +19,7 @@
 {
     _Bool _sessionOffline;
     _Bool _loaded;
+    _Bool _tracksLoaded;
     id <SPTCollectionArtistModelDelegate> _delegate;
     SPTCollectionContextMenuComponentFactory *_contextMenuComponentFactory;
     SPTCollectionCurrentlyPlayingIndex *_currentlyPlayingIndex;
@@ -48,7 +49,8 @@
 @property(retain, nonatomic) id <SPTCollectionArtistCosmosMetadataFields> metadata; // @synthesize metadata=_metadata;
 @property(readonly, nonatomic) id <SPTClientSettings> clientSettings; // @synthesize clientSettings=_clientSettings;
 @property(retain, nonatomic) NSArray *songItems; // @synthesize songItems=_songItems;
-@property(nonatomic) _Bool loaded; // @synthesize loaded=_loaded;
+@property(nonatomic, getter=isTracksLoaded) _Bool tracksLoaded; // @synthesize tracksLoaded=_tracksLoaded;
+@property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) NSURL *collectionArtistURL; // @synthesize collectionArtistURL=_collectionArtistURL;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> trackSubscription; // @synthesize trackSubscription=_trackSubscription;

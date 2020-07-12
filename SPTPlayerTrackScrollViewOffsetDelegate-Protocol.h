@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPStepScrollView;
+@class SPTStepScrollView;
 
 @protocol SPTPlayerTrackScrollViewOffsetDelegate <NSObject>
-- (void)playerTrackScrollView:(SPStepScrollView *)arg1 scrolledToRelativeIndex:(long long)arg2;
-- (void)playerTrackScrollViewChangedOffset:(SPStepScrollView *)arg1;
+- (void)playerTrackScrollView:(SPTStepScrollView *)arg1 scrolledToRelativeIndex:(long long)arg2;
+- (void)playerTrackScrollViewChangedOffset:(SPTStepScrollView *)arg1;
 @end
 

@@ -41,7 +41,7 @@
 - (id)makeSearchRootURLProvider;
 - (id)makeSaveToRecentsCommandHandler;
 - (id)makeNavigateCommandHandler;
-- (id)addToPlaylistCommandHandlerWithViewModel:(id)arg1;
+- (id)addTrackCommandHandlerWithViewModel:(id)arg1;
 - (struct NSDictionary *)customComponentsWithViewModel:(id)arg1;
 - (id)provideGLUEImageLoader;
 - (id)provideCardStyleWithViewModel:(id)arg1;

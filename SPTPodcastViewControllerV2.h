@@ -101,10 +101,9 @@
 - (void)viewModel:(id)arg1 willPresentFilterContextViewController:(id)arg2 fromSender:(id)arg3;
 - (void)updateDetailsViewControllersWithPodcastTopics:(id)arg1;
 - (void)viewModel:(id)arg1 podcastDidFinishLoadingWithError:(id)arg2;
-- (void)viewModel:(id)arg1 didUpdateSectionAtIndexPath:(id)arg2;
+- (void)viewModel:(id)arg1 didUpdateSectionWithSectionViewModel:(id)arg2 atIndexPath:(id)arg3;
 - (unsigned long long)preferredNavigationBarState;
 - (void)didSelectResetFiltersButton:(id)arg1;
-- (void)updateSectionCellWithViewModel:(id)arg1 atIndexPath:(id)arg2;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)setupTableView;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;

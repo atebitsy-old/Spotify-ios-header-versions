@@ -9,13 +9,13 @@
 @interface _TtC18VoiceUIFeatureImpl20OnboardingController : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: $__lazy_storage_$_onboardingFlow
-    // Error parsing type: , name: $__lazy_storage_$_onboardingFirstPage
     // Error parsing type: , name: microphonePermissions
     // Error parsing type: , name: testManager
+    // Error parsing type: , name: onboardingState
     // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: ubiLogger
+    // Error parsing type: , name: settingsViewModel
 }
 
 @end

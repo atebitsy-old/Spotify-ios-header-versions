@@ -11,8 +11,6 @@
 
 @interface UIViewController (SPTDismissable)
 - (void)spt_dismissViewControllerAnimated;
-- (id)spt_freeTierPlaylist_topNavigationItem;
-- (id)spt_freeTierPlaylist_topViewController;
 - (void)updateTabBarItemForSidebarItem:(id)arg1;
 - (void)spt_updateSidebarItem;
 - (void)spt_setSidebarItem:(id)arg1;

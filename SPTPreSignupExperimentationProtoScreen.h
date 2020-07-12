@@ -14,7 +14,7 @@
 
 // Remaining properties
 @property(nonatomic) int height; // @dynamic height;
-@property(nonatomic) int resolution; // @dynamic resolution;
+@property(nonatomic) float resolution; // @dynamic resolution;
 @property(nonatomic) int width; // @dynamic width;
 
 @end

@@ -16,6 +16,8 @@
 
 @interface SPTGaiaSocialListeningIntegrationManager : NSObject <SPTGaiaConnectManagerObserver, SPTSocialListeningModelObserver, SPTGaiaSocialListeningIntegrationPublicAPI, SPTGaiaDevicePickerSocialDeviceCellDelegate>
 {
+    _Bool _localDeviceIDHasBeenSet;
+    NSURL *_queuedJoinRequestURL;
     NSDictionary *_exposedDevices;
     id <SPTSocialListeningTestManager> _testManager;
     id <SPTSocialListeningUserInterfaceFactory> _userInterfaceFactory;
@@ -36,9 +38,13 @@
 @property(readonly, nonatomic) id <SPTSocialListeningUserInterfaceFactory> userInterfaceFactory; // @synthesize userInterfaceFactory=_userInterfaceFactory;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSDictionary *exposedDevices; // @synthesize exposedDevices=_exposedDevices;
+@property(retain, nonatomic) NSURL *queuedJoinRequestURL; // @synthesize queuedJoinRequestURL=_queuedJoinRequestURL;
+@property(nonatomic) _Bool localDeviceIDHasBeenSet; // @synthesize localDeviceIDHasBeenSet=_localDeviceIDHasBeenSet;
 - (void).cxx_destruct;
 - (void)socialDeviceDidDisableSocialFeature:(id)arg1;
 - (void)socialDeviceDidEnableSocialFeature:(id)arg1;
+- (void)setPhysicalDeviceIDAndTriggerPendingJoin;
+- (void)connectManager:(id)arg1 availableDevicesDidChange:(id)arg2;
 - (void)connectManager:(id)arg1 activeDeviceDidChange:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;

@@ -54,7 +54,7 @@
 + (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3 theme:(id)arg4;
 + (id)spt_iconForActiveConnectionType:(long long)arg1 connectionState:(long long)arg2 iconSize:(struct CGSize)arg3;
 + (id)imageWithIconImage:(id)arg1 badgeImage:(id)arg2 selected:(_Bool)arg3;
-+ (id)badgeForSelected:(_Bool)arg1;
++ (id)tabBarBadgeImage;
 + (id)spt_cutoutImageForSPTIcon:(long long)arg1 iconSize:(struct CGSize)arg2 iconOffset:(struct CGPoint)arg3 circleSize:(struct CGSize)arg4 circleColor:(id)arg5 circleLineWidth:(double)arg6 backgroundColor:(id)arg7;
 + (id)animatedImageWithAnimatedGIFURL:(id)arg1;
 + (id)animatedImageWithAnimatedGIFData:(id)arg1;

@@ -15,7 +15,7 @@
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString, SPSession;
+@class NSString, SPSession, SPTAppProtocolCallForwarder;
 @protocol SPTAppProtocolSubscriptionDelegate, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTNetworkConnectivityController, SPTProductState;
 
 @interface SPTAppProtocolSubscription : NSObject <SPSessionObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTExternalIntegrationRadioControllerObserver, SPTExternalIntegrationQueueControllerObserver, SPTProductStateObserver, SPTGaiaConnectObserver, SPTNetworkConnectivityControllerObserver>
@@ -28,8 +28,10 @@
     unsigned long long _subscriptionID;
     id <SPTAppProtocolSubscriptionDelegate> _delegate;
     id <SPTNetworkConnectivityController> _connectivityController;
+    SPTAppProtocolCallForwarder *_appProtocolForwarder;
 }
 
+@property(readonly, nonatomic) SPTAppProtocolCallForwarder *appProtocolForwarder; // @synthesize appProtocolForwarder=_appProtocolForwarder;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> connectivityController; // @synthesize connectivityController=_connectivityController;
 @property(nonatomic) __weak id <SPTAppProtocolSubscriptionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) unsigned long long subscriptionID; // @synthesize subscriptionID=_subscriptionID;
@@ -53,6 +55,7 @@
 - (void)triggerContextChangedIfNeeded:(id)arg1 oldState:(id)arg2 force:(_Bool)arg3;
 - (void)triggerRatingChanged:(id)arg1 force:(_Bool)arg2;
 - (void)handlePlayerStateChange:(id)arg1 oldState:(id)arg2 force:(_Bool)arg3;
+- (void)forceTriggerForwardedSubscriptions;
 - (void)forceTriggerPlayerQueueNotification;
 - (void)forceTriggerAlertNotification;
 - (void)forceTriggerClientSessionNotificationChange;
@@ -76,9 +79,10 @@
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)stopObservingConnectionType;
 - (void)startObservingConnectionType;
+- (void)forwardSubscriptionIfNecessary;
 - (void)invalidate;
 - (void)dealloc;
-- (id)initWithTopic:(id)arg1 externalIntegrationPlatform:(id)arg2 currentSession:(id)arg3 productState:(id)arg4 networkConnectivityController:(id)arg5 connectManager:(id)arg6;
+- (id)initWithTopic:(id)arg1 externalIntegrationPlatform:(id)arg2 currentSession:(id)arg3 productState:(id)arg4 networkConnectivityController:(id)arg5 connectManager:(id)arg6 appProtocolForwarder:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

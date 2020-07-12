@@ -31,17 +31,20 @@
     // Error parsing type: , name: $__lazy_storage_$_connectButtonTheme
     // Error parsing type: , name: $__lazy_storage_$_connectButtonFactory
     // Error parsing type: , name: $__lazy_storage_$_connectImageFactory
+    // Error parsing type: , name: $__lazy_storage_$_connectNPBIntegration
     // Error parsing type: , name: $__lazy_storage_$_uriDispatcher
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenterRouter
     // Error parsing type: , name: $__lazy_storage_$_nudgeManager
     // Error parsing type: , name: $__lazy_storage_$_connectNudgeController
     // Error parsing type: , name: $__lazy_storage_$_nudgePresenter
+    // Error parsing type: , name: $__lazy_storage_$_connectButtonLogger
     // Error parsing type: , name: $__lazy_storage_$_flagsManager
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (id)provideNowPlayingBarIntegration;
 - (id)provideButtonFactory;
 - (id)provideButtonTestManager;
 - (id)provideDevicePresenter;

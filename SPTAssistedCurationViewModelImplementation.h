@@ -41,8 +41,8 @@
 @property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler; // @synthesize addTrackHandler=_addTrackHandler;
 @property(nonatomic) __weak id <SPTAssistedCurationViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)assistedCurationModel:(id)arg1 notAddedToPlaylistDuplicatedTrackURI:(id)arg2;
-- (void)assistedCurationModel:(id)arg1 error:(id)arg2 addingToPlaylistTrackURI:(id)arg3;
+- (void)assistedCurationModel:(id)arg1 notAddedToContextDuplicatedTrackURI:(id)arg2;
+- (void)assistedCurationModel:(id)arg1 error:(id)arg2 addingToContextTrackURI:(id)arg3;
 - (void)assistedCurationModel:(id)arg1 addedTrackURI:(id)arg2;
 - (void)noCardsAvailableForAssistedCurationModel:(id)arg1 offline:(_Bool)arg2;
 - (void)assistedCurationModel:(id)arg1 error:(id)arg2;
@@ -53,7 +53,7 @@
 - (void)verifyWaitingForProviderIdentifier:(id)arg1;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 @property(readonly, nonatomic) long long addTrackIcon;
-@property(readonly, nonatomic) NSURL *playlistURI;
+@property(readonly, nonatomic) NSURL *contextURI;
 - (void)viewDidDisappear;
 - (void)viewDidLoad;
 @property(readonly, nonatomic) unsigned long long numberOfCards;

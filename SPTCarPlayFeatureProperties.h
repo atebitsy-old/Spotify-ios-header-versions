@@ -18,8 +18,10 @@
     _Bool _carplayRemoteControlEventSubtypeDeprecation;
     _Bool _carplayRemoteControlEventLoggingEnabled;
     _Bool _carplayUbiEnabled;
+    _Bool _carplayLargeListsEnabled;
 }
 
+@property(readonly, nonatomic) _Bool carplayLargeListsEnabled; // @synthesize carplayLargeListsEnabled=_carplayLargeListsEnabled;
 @property(readonly, nonatomic) _Bool carplayUbiEnabled; // @synthesize carplayUbiEnabled=_carplayUbiEnabled;
 @property(readonly, nonatomic) _Bool carplayRemoteControlEventLoggingEnabled; // @synthesize carplayRemoteControlEventLoggingEnabled=_carplayRemoteControlEventLoggingEnabled;
 @property(readonly, nonatomic) _Bool carplayRemoteControlEventSubtypeDeprecation; // @synthesize carplayRemoteControlEventSubtypeDeprecation=_carplayRemoteControlEventSubtypeDeprecation;

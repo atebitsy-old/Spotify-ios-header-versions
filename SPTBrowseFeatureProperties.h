@@ -12,7 +12,6 @@
 
 @interface SPTBrowseFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _shouldRemoveRadioButton;
     _Bool _shouldEnableFindPromo;
     _Bool _shouldStopRegisteringCreatorUris;
     _Bool _shouldRegisterMarketingFormatComponents;
@@ -21,7 +20,6 @@
 @property(readonly, nonatomic) _Bool shouldRegisterMarketingFormatComponents; // @synthesize shouldRegisterMarketingFormatComponents=_shouldRegisterMarketingFormatComponents;
 @property(readonly, nonatomic) _Bool shouldStopRegisteringCreatorUris; // @synthesize shouldStopRegisteringCreatorUris=_shouldStopRegisteringCreatorUris;
 @property(readonly, nonatomic) _Bool shouldEnableFindPromo; // @synthesize shouldEnableFindPromo=_shouldEnableFindPromo;
-@property(readonly, nonatomic) _Bool shouldRemoveRadioButton; // @synthesize shouldRemoveRadioButton=_shouldRemoveRadioButton;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

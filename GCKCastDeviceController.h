@@ -12,13 +12,14 @@
 #import "GCKMultizoneControlChannelDelegate-Protocol.h"
 #import "GCKReceiverControlChannelDelegate-Protocol.h"
 
-@class GCKAnalyticsEventLogger, GCKApplicationMetadata, GCKBroadcastKeyExchangeChannel, GCKCastDeviceConnector, GCKDatabase, GCKDevice, GCKDiscoveryChannel, GCKJoinOptions, GCKLaunchOptions, GCKMultizoneControlChannel, GCKReceiverControlChannel, GCKRequest, NSMutableDictionary, NSString;
+@class GCKAnalyticsEventLogger, GCKApplicationMetadata, GCKBroadcastKeyExchangeChannel, GCKCastDeviceConnector, GCKDatabase, GCKDevice, GCKDiscoveryChannel, GCKJoinOptions, GCKLaunchOptions, GCKMultizoneControlChannel, GCKReceiverControlChannel, GCKRequest, GCKRuntimeConfiguration, NSArray, NSMutableDictionary, NSString;
 @protocol GCKCastDeviceControllerDelegate, GCKCastDeviceControllerInternalDelegate;
 
 @interface GCKCastDeviceController : NSObject <GCKCastDeviceConnectorDelegate, GCKReceiverControlChannelDelegate, GCKMultizoneControlChannelDelegate, GCKDiscoveryChannelDelegate, GCKBroadcastKeyExchangeChannelDelegate>
 {
     GCKAnalyticsEventLogger *_analyticsEventLogger;
     GCKDatabase *_database;
+    GCKRuntimeConfiguration *_runtimeConfiguration;
     GCKCastDeviceConnector *_connector;
     GCKReceiverControlChannel *_receiverControlChannel;
     GCKMultizoneControlChannel *_multizoneControlChannel;
@@ -42,6 +43,7 @@
     long long _launchAppRequestID;
     GCKRequest *_launchRequest;
     long long _lastReceivedReceiverStatusRequestID;
+    NSArray *_supportedApplicationTypes;
     _Bool _isReconnecting;
     _Bool _deviceMuted;
     _Bool _deviceSupportsMuting;
@@ -111,6 +113,8 @@
 - (void)multizoneControlChannel:(id)arg1 didReceiveMultizoneStatus:(id)arg2 requestID:(long long)arg3;
 - (void)deviceDiscoveryChannel:(id)arg1 didFailToReceiveDeviceConfigurationWithID:(long long)arg2 error:(id)arg3;
 - (void)deviceDiscoveryChannel:(id)arg1 didReceiveDeviceInformation:(id)arg2 requestID:(long long)arg3;
+- (_Bool)checkIfAppTypeIsSupported:(id)arg1;
+- (_Bool)canJoinActiveApplicationWithSenderAppID:(id)arg1 applicationStatus:(id)arg2 checkAppType:(_Bool)arg3 sessionID:(id)arg4;
 - (void)receiverControlChannel:(id)arg1 didReplaceRequestWithID:(long long)arg2;
 - (void)receiverControlChannel:(id)arg1 requestDidFailWithID:(long long)arg2 error:(id)arg3;
 - (void)receiverControlChannel:(id)arg1 didReceiveAppAvailability:(id)arg2 requestID:(long long)arg3;
@@ -145,6 +149,9 @@
 - (id)joinApplication:(id)arg1 sessionID:(id)arg2 joinOptions:(id)arg3;
 - (id)joinApplication:(id)arg1 sessionID:(id)arg2;
 - (id)joinApplication:(id)arg1;
+- (_Bool)isAlreadyConnectedToDesiredApplicationWithApplicationID:(id)arg1 sessionID:(id)arg2 applicationMetadata:(id)arg3;
+- (id)createSupportedApplicationTypesForJoinWithApplicationID:(id)arg1 joinOptions:(id)arg2;
+- (id)createSupportedApplicationTypesForLaunch:(id)arg1;
 - (id)launchApplication:(id)arg1 withLaunchOptions:(id)arg2;
 - (id)launchApplication:(id)arg1;
 - (_Bool)updateApplicationMetadata:(id)arg1;
@@ -177,8 +184,8 @@
 @property(nonatomic) double reconnectTimeout;
 @property(readonly, nonatomic) long long connectionState;
 - (void)dealloc;
-- (id)initWithConnector:(id)arg1 analyticsEventLogger:(id)arg2 database:(id)arg3;
-- (id)initWithDevice:(id)arg1 clientPackageName:(id)arg2 reconnectStrategy:(id)arg3 analyticsEventLogger:(id)arg4 database:(id)arg5 networkReachability:(id)arg6;
+- (id)initWithConnector:(id)arg1 analyticsEventLogger:(id)arg2 database:(id)arg3 runtimeConfiguration:(id)arg4;
+- (id)initWithDevice:(id)arg1 clientPackageName:(id)arg2 reconnectStrategy:(id)arg3 analyticsEventLogger:(id)arg4 database:(id)arg5 networkReachability:(id)arg6 runtimeConfiguration:(id)arg7;
 - (id)initWithDevice:(id)arg1 clientPackageName:(id)arg2 reconnectStrategy:(id)arg3;
 - (id)initWithDevice:(id)arg1 clientPackageName:(id)arg2;
 - (id)init;

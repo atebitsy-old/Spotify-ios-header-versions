@@ -20,6 +20,7 @@
 - (void)fetchSocialDevicesWithDiscoveredDeviceIds:(NSArray *)arg1;
 - (void)disableSocialDevice:(NSString *)arg1;
 - (void)enableSocialDevice:(NSString *)arg1;
+- (void)setPhysicalDeviceIDState:(NSString *)arg1;
 - (void)removeObserver:(id <SPTSocialListeningModelObserver>)arg1;
 - (void)addObserver:(id <SPTSocialListeningModelObserver>)arg1;
 - (void)leaveSession;

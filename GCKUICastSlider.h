@@ -6,15 +6,13 @@
 
 #import <UIKit/UISlider.h>
 
-@class NSArray, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, TooltipBorder, UIColor, UIFont, UILabel, UIView;
+@class NSArray, NSDictionary, NSLayoutConstraint, NSMutableArray, NSString, UIColor, UIFont, UILabel, UIView;
 
 @interface GCKUICastSlider : UISlider
 {
     UIView *_containerView;
     NSMutableArray *_adBlockViews;
     NSString *text;
-    TooltipBorder *_tooltipBorder;
-    UIColor *_tooltipBorderColor;
     NSLayoutConstraint *_leadingConstraintOfTooltip;
     NSLayoutConstraint *_leadingConstraintOfPreSeekableRangeTrackView;
     NSLayoutConstraint *_leadingConstraintOfAfterSeekableRangeTrackView;
@@ -23,7 +21,6 @@
     NSLayoutConstraint *_thumbViewXPosition;
     _Bool _showStreamStart;
     NSArray *_adBlockPositions;
-    NSString *_tooltipText;
     double _streamStart;
     double _seekableRangeStart;
     double _seekableRangeEnd;
@@ -49,7 +46,6 @@
 @property(nonatomic) double seekableRangeStart; // @synthesize seekableRangeStart=_seekableRangeStart;
 @property(nonatomic) double streamStart; // @synthesize streamStart=_streamStart;
 @property(nonatomic) _Bool showStreamStart; // @synthesize showStreamStart=_showStreamStart;
-@property(copy, nonatomic) NSString *tooltipText; // @synthesize tooltipText=_tooltipText;
 @property(retain, nonatomic) NSArray *adBlockPositions; // @synthesize adBlockPositions=_adBlockPositions;
 - (void).cxx_destruct;
 - (double)leadingOfTooltipView;
@@ -68,6 +64,7 @@
 - (void)applyStyleAttributes:(id)arg1;
 - (_Bool)watchedAdBlockAtPosition:(id)arg1;
 @property(nonatomic) _Bool thumbHidden;
+@property(copy, nonatomic) NSString *tooltipText;
 - (void)updateSliderWithStreamStart:(double)arg1 seekableRangeStart:(double)arg2 seekableRangeEnd:(double)arg3;
 - (void)setValue:(float)arg1 animated:(_Bool)arg2;
 - (void)updateTracks;

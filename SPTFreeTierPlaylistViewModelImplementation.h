@@ -15,7 +15,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSArray, NSAttributedString, NSDate, NSDictionary, NSString, NSURL, SPTFreeTierPlaylistLogger, SPTPlayOrigin, SPTPlayerState, UIColor;
-@protocol SPTAlertInterface, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, SPTVISREFFlagsService, _TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_;
+@protocol SPTAlertInterface, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistSponsoredViewModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, _TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_;
 
 @interface SPTFreeTierPlaylistViewModelImplementation : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistSponsoredViewModelDelegate, SPTFreeTierPlaylistViewModel, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistIsTrackActive>
 {
@@ -80,7 +80,6 @@
     id <SPTOfflineModeState> _offlineModeState;
     SPTFreeTierPlaylistLogger *_logger;
     id <SPTFreeTierPlaylistTestManager> _testManager;
-    id <SPTVISREFFlagsService> _visualRefreshService;
     id <SPTFreeTierPlaylistViewModelConfiguration> _viewModelConfiguration;
     id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> _playInitiatedNotifier;
 }
@@ -88,7 +87,6 @@
 + (_Bool)isRecommendationContext:(id)arg1 forPlaylist:(id)arg2;
 @property(nonatomic) __weak id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> playInitiatedNotifier; // @synthesize playInitiatedNotifier=_playInitiatedNotifier;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModelConfiguration> viewModelConfiguration; // @synthesize viewModelConfiguration=_viewModelConfiguration;
-@property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;
 @property(nonatomic, getter=isPlaylistExtenderEnabled) _Bool playlistExtenderEnabled; // @synthesize playlistExtenderEnabled=_playlistExtenderEnabled;
 @property(nonatomic, getter=isContextAwareEnabled) _Bool contextAwareEnabled; // @synthesize contextAwareEnabled=_contextAwareEnabled;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
@@ -199,7 +197,7 @@
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 sponsoredViewModel:(id)arg5 offlineModeState:(id)arg6 logger:(id)arg7 testManager:(id)arg8 contextAwareEnabled:(_Bool)arg9 visualRefreshService:(id)arg10 viewModelConfiguration:(id)arg11 playInitiatedNotifier:(id)arg12;
+- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 sponsoredViewModel:(id)arg5 offlineModeState:(id)arg6 logger:(id)arg7 testManager:(id)arg8 contextAwareEnabled:(_Bool)arg9 viewModelConfiguration:(id)arg10 playInitiatedNotifier:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

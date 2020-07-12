@@ -15,7 +15,7 @@
 #import "GCKHeartbeatChannelDelegate-Protocol.h"
 #import "GCKProximityInfoChannelDelegate-Protocol.h"
 
-@class GCKCastMessageDesegmenter, GCKCastMessageSegmenter, GCKCastSocket, GCKClientCertificate, GCKConnectionControlChannel, GCKDatabase, GCKDevice, GCKDeviceAuthChannel, GCKError, GCKHeartbeatChannel, GCKNNetworkReachability, GCKProximityInfoChannel, GCKReconnectStrategy, NSData, NSMutableDictionary, NSString, NSTimer;
+@class GCKCastMessageDesegmenter, GCKCastMessageSegmenter, GCKCastSocket, GCKConnectionControlChannel, GCKDatabase, GCKDevice, GCKDeviceAuthChannel, GCKError, GCKHeartbeatChannel, GCKNNetworkReachability, GCKProximityInfoChannel, GCKReconnectStrategy, NSData, NSMutableDictionary, NSString, NSTimer;
 @protocol GCKCastDeviceConnectorDelegate;
 
 @interface GCKCastDeviceConnector : NSObject <GCKProximityInfoChannelDelegate, GCKCastSocketDelegate, GCKConnectionControlChannelDelegate, GCKDeviceAuthChannelDelegate, GCKHeartbeatChannelDelegate, GCKCastChannelMessageSink, GCKCastMessageSegmenterDelegate, GCKCastMessageDesegmenterDelegate>
@@ -40,7 +40,6 @@
     GCKError *_disconnectionError;
     NSTimer *_flushTimer;
     NSTimer *_reconnectTimer;
-    GCKClientCertificate *_clientCertificate;
     GCKReconnectStrategy *_reconnectStrategy;
     NSString *_networkIDWhenConnectionStarted;
     _Bool _isReconnecting;
@@ -111,7 +110,6 @@
 - (void)connectInternalUnchecked;
 - (id)createConnectionControlChannel;
 - (id)createDeviceAuthChannelForDevice:(id)arg1;
-- (id)createGuestModeCastSocketWithToken:(id)arg1;
 - (id)createCastSocketWithAddressType:(long long)arg1;
 - (long long)sendMessageWithNamespace:(id)arg1 toDestinationID:(id)arg2 stringPayload:(id)arg3 binaryPayload:(id)arg4;
 - (_Bool)removeChannel:(id)arg1;

@@ -28,6 +28,7 @@
 @property(copy, nonatomic) SPTSearchUISearchControlsStyle *style; // @synthesize style=_style;
 @property(nonatomic) __weak id <SPTSearchUISearchControlsDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+- (struct CGRect)expandedAccessibilityFrameForView:(id)arg1;
 - (id)constraintsForViewsDistributedHorizontally:(id)arg1;
 - (id)constraintsForViewsAlignedAlongFirstBaselines:(id)arg1;
 - (id)verticalConstraintsForViews:(id)arg1 inContainer:(id)arg2;
@@ -45,6 +46,7 @@
 - (void)searchBar:(id)arg1 didChangeTextFrom:(id)arg2;
 - (void)glue_applyStyle:(id)arg1;
 - (_Bool)becomeFirstResponder;
+- (void)layoutSubviews;
 - (id)hitTest:(struct CGPoint)arg1 withEvent:(id)arg2;
 @property(readonly, nonatomic) NSArray *horizontalSpacingConstraints; // @synthesize horizontalSpacingConstraints=_horizontalSpacingConstraints;
 @property(copy, nonatomic) NSString *scannablesButtonAccessibilityLabel;

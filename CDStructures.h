@@ -405,6 +405,13 @@ struct DeviceInfo {
 
 struct Disc;
 
+struct DiscoveredService {
+    basic_string_90719d97 _field1;
+    basic_string_90719d97 _field2;
+    struct set<asio::ip::basic_endpoint<asio::ip::udp>, std::__1::less<asio::ip::basic_endpoint<asio::ip::udp>>, std::__1::allocator<asio::ip::basic_endpoint<asio::ip::udp>>> _field3;
+    map_5554a4ce _field4;
+};
+
 struct EventInfo {
     struct CriticalSection _field1;
     struct StringPairArray _field2;
@@ -669,6 +676,17 @@ struct LoginOptions {
     struct ProxySettings _field8;
 };
 
+struct MacMdnsDiscovery {
+    CDUnknownFunctionPointerType *_field1;
+    struct TimerManager *_field2;
+    struct function<void (const std::__1::vector<std::__1::shared_ptr<spotify::connect::MdnsDevice>, std::__1::allocator<std::__1::shared_ptr<spotify::connect::MdnsDevice>>>&)> _field3;
+    _Bool _field4;
+    struct shared_ptr<spotify::security::Random> _field5;
+    struct vector<std::__1::shared_ptr<spotify::connect::MdnsDevice>, std::__1::allocator<std::__1::shared_ptr<spotify::connect::MdnsDevice>>> _field6;
+    id _field7;
+    shared_ptr_b60d0e1e _field8;
+};
+
 struct MeMetadataRequest;
 
 struct MercuryHandler;
@@ -876,6 +894,8 @@ struct PublisherConfiguration;
 struct PublisherUniqueDeviceIdListener;
 
 struct PublisherUniqueDeviceIdListenerImpl;
+
+struct Random;
 
 struct RefreshTokenCredentials {
     struct unique_ptr<spotify::connectivity::auth::credentials::RefreshTokenCredentials::Impl, std::__1::default_delete<spotify::connectivity::auth::credentials::RefreshTokenCredentials::Impl>> _field1;
@@ -1479,6 +1499,13 @@ struct function<void (const std::__1::function<void ()>&)> {
     } __f_;
 };
 
+struct function<void (const std::__1::vector<std::__1::shared_ptr<spotify::connect::MdnsDevice>, std::__1::allocator<std::__1::shared_ptr<spotify::connect::MdnsDevice>>>&)> {
+    struct __value_func<void (const std::__1::vector<std::__1::shared_ptr<spotify::connect::MdnsDevice>, std::__1::allocator<std::__1::shared_ptr<spotify::connect::MdnsDevice>>>&)> {
+        struct type _field1;
+        struct __base<void (const std::__1::vector<std::__1::shared_ptr<spotify::connect::MdnsDevice>, std::__1::allocator<std::__1::shared_ptr<spotify::connect::MdnsDevice>>>&)> *_field2;
+    } _field1;
+};
+
 struct function<void (spotify::hermes::HermesQuery *)> {
     struct __value_func<void (spotify::hermes::HermesQuery *)> {
         struct type _field1;
@@ -1770,6 +1797,18 @@ struct scoped_connection {
     struct shared_ptr<spotify::signals::connection::shared_state> _state;
 };
 
+struct set<asio::ip::basic_endpoint<asio::ip::udp>, std::__1::less<asio::ip::basic_endpoint<asio::ip::udp>>, std::__1::allocator<asio::ip::basic_endpoint<asio::ip::udp>>> {
+    struct __tree<asio::ip::basic_endpoint<asio::ip::udp>, std::__1::less<asio::ip::basic_endpoint<asio::ip::udp>>, std::__1::allocator<asio::ip::basic_endpoint<asio::ip::udp>>> {
+        struct __tree_end_node<std::__1::__tree_node_base<void *>*> *_field1;
+        struct __compressed_pair<std::__1::__tree_end_node<std::__1::__tree_node_base<void *>*>, std::__1::allocator<std::__1::__tree_node<asio::ip::basic_endpoint<asio::ip::udp>, void *>>> {
+            struct __tree_end_node<std::__1::__tree_node_base<void *>*> _field1;
+        } _field2;
+        struct __compressed_pair<unsigned long, std::__1::less<asio::ip::basic_endpoint<asio::ip::udp>>> {
+            unsigned long long _field1;
+        } _field3;
+    } _field1;
+};
+
 struct set<std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<char>>, std::__1::allocator<std::__1::basic_string<char>>> {
     struct __tree<std::__1::basic_string<char>, std::__1::less<std::__1::basic_string<char>>, std::__1::allocator<std::__1::basic_string<char>>> {
         struct __tree_end_node<std::__1::__tree_node_base<void *>*> *_field1;
@@ -1892,6 +1931,8 @@ struct shared_ptr<spotify::client::ApplicationStateTracker::Impl> {
     struct __shared_weak_count *_field2;
 };
 
+struct shared_ptr<spotify::connect::MdnsDevice>;
+
 struct shared_ptr<spotify::connectivity::ProxyAnalyticsDelegate> {
     struct ProxyAnalyticsDelegate *__ptr_;
     struct __shared_weak_count *__cntrl_;
@@ -2010,6 +2051,11 @@ struct shared_ptr<spotify::player::mft::MftCanPlayChecker> {
 struct shared_ptr<spotify::product_state::ProductState> {
     struct ProductState *__ptr_;
     struct __shared_weak_count *__cntrl_;
+};
+
+struct shared_ptr<spotify::security::Random> {
+    struct Random *_field1;
+    struct __shared_weak_count *_field2;
 };
 
 struct shared_ptr<spotify::signals::connection::shared_state> {
@@ -2768,6 +2814,14 @@ struct vector<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::s
     struct pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection> *_field2;
     struct __compressed_pair<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>*, std::__1::allocator<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>>> {
         struct pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection> *_field1;
+    } _field3;
+};
+
+struct vector<std::__1::shared_ptr<spotify::connect::MdnsDevice>, std::__1::allocator<std::__1::shared_ptr<spotify::connect::MdnsDevice>>> {
+    struct shared_ptr<spotify::connect::MdnsDevice> *_field1;
+    struct shared_ptr<spotify::connect::MdnsDevice> *_field2;
+    struct __compressed_pair<std::__1::shared_ptr<spotify::connect::MdnsDevice>*, std::__1::allocator<std::__1::shared_ptr<spotify::connect::MdnsDevice>>> {
+        struct shared_ptr<spotify::connect::MdnsDevice> *_field1;
     } _field3;
 };
 

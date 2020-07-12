@@ -14,11 +14,13 @@
 @interface SPTCollectionEmptyEntityFooterView : UIView <SPTThemableView>
 {
     id <SPTThemableViewLayoutDelegate> _layoutDelegate;
+    unsigned long long _emptyReason;
     SPTInfoView *_infoView;
 }
 
 + (id)emptyEntityFooterViewForArtistWithName:(id)arg1 width:(double)arg2 offline:(_Bool)arg3 unplayableTracks:(_Bool)arg4 followedByUser:(_Bool)arg5 collectionTestManager:(id)arg6;
 @property(retain, nonatomic) SPTInfoView *infoView; // @synthesize infoView=_infoView;
+@property(nonatomic) unsigned long long emptyReason; // @synthesize emptyReason=_emptyReason;
 @property(nonatomic) __weak id <SPTThemableViewLayoutDelegate> layoutDelegate; // @synthesize layoutDelegate=_layoutDelegate;
 - (void).cxx_destruct;
 - (void)applyThemeLayout;

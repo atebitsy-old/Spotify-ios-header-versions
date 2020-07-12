@@ -8,7 +8,7 @@
 
 @interface _TtC18VoiceUIFeatureImpl33OnboardingCompletionEffectHandler : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: testManager
+    // Error parsing type: , name: onboardingState
 }
 
 @end

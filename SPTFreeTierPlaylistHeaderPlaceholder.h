@@ -6,28 +6,12 @@
 
 #import <UIKit/UIView.h>
 
-#import "GLUEStyleable-Protocol.h"
-
-@class GLUEImageView, NSString;
-
-@interface SPTFreeTierPlaylistHeaderPlaceholder : UIView <GLUEStyleable>
+@interface SPTFreeTierPlaylistHeaderPlaceholder : UIView
 {
-    _Bool _hasAppliedStyle;
-    GLUEImageView *_entityImageView;
 }
 
-@property(nonatomic) _Bool hasAppliedStyle; // @synthesize hasAppliedStyle=_hasAppliedStyle;
-@property(retain, nonatomic) GLUEImageView *entityImageView; // @synthesize entityImageView=_entityImageView;
-- (void).cxx_destruct;
-- (void)glue_applyStyle:(id)arg1;
 - (void)setup;
 - (id)init;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

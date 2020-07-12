@@ -39,6 +39,7 @@
 @property(nonatomic) _Bool hasSourceExtension; // @dynamic hasSourceExtension;
 @property(nonatomic) _Bool hasSourceExtensionJs; // @dynamic hasSourceExtensionJs;
 @property(nonatomic) _Bool hasSourceExtensionJson; // @dynamic hasSourceExtensionJson;
+@property(nonatomic) _Bool hasSourceExtensionJsonProto3; // @dynamic hasSourceExtensionJsonProto3;
 @property(nonatomic) _Bool hasStore; // @dynamic hasStore;
 @property(nonatomic) _Bool hasTag; // @dynamic hasTag;
 @property(nonatomic) _Bool hasTestId; // @dynamic hasTestId;
@@ -50,6 +51,7 @@
 @property(copy, nonatomic) NSData *sourceExtension; // @dynamic sourceExtension;
 @property(copy, nonatomic) NSString *sourceExtensionJs; // @dynamic sourceExtensionJs;
 @property(copy, nonatomic) NSString *sourceExtensionJson; // @dynamic sourceExtensionJson;
+@property(copy, nonatomic) NSString *sourceExtensionJsonProto3; // @dynamic sourceExtensionJsonProto3;
 @property(copy, nonatomic) NSData *store; // @dynamic store;
 @property(copy, nonatomic) NSString *tag; // @dynamic tag;
 @property(retain, nonatomic) GPBInt32Array *testCodeArray; // @dynamic testCodeArray;

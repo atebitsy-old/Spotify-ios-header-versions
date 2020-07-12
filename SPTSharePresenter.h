@@ -46,7 +46,7 @@
 - (void)logShareEventWithShareData:(id)arg1 shareDestination:(id)arg2 shareCompletionData:(id)arg3 error:(id)arg4;
 - (void)shareViewController:(id)arg1 shareData:(id)arg2 didSelectShareDestination:(id)arg3;
 - (id)appendUTMTagsForURL:(id)arg1 destination:(id)arg2;
-- (void)registerLinkWithData:(id)arg1;
+- (void)registerLinkWithData:(id)arg1 destination:(id)arg2;
 - (void)shareWithData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)shareWithBackendGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)shareWithLocalGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;

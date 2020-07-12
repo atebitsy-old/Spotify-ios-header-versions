@@ -18,9 +18,7 @@
     _Bool _explicitContentRestricted;
     _Bool _offline;
     _Bool _tasteOnboardingRequired;
-    _Bool _moodTuningFlagEnabled;
     _Bool _pendingMoodChange;
-    _Bool _contextMenuSettingsFlagEnabled;
     _Bool _settingsChangePending;
     _Bool _joinPending;
     NSURL *_homeMixURI;
@@ -35,10 +33,8 @@
 + (id)defaultBuilder;
 @property(nonatomic, getter=isJoinPending) _Bool joinPending; // @synthesize joinPending=_joinPending;
 @property(nonatomic, getter=isSettingsChangePending) _Bool settingsChangePending; // @synthesize settingsChangePending=_settingsChangePending;
-@property(nonatomic, getter=isContextMenuSettingsFlagEnabled) _Bool contextMenuSettingsFlagEnabled; // @synthesize contextMenuSettingsFlagEnabled=_contextMenuSettingsFlagEnabled;
 @property(nonatomic, getter=isPendingMoodChange) _Bool pendingMoodChange; // @synthesize pendingMoodChange=_pendingMoodChange;
 @property(nonatomic) unsigned long long mood; // @synthesize mood=_mood;
-@property(nonatomic, getter=isMoodTuningFlagEnabled) _Bool moodTuningFlagEnabled; // @synthesize moodTuningFlagEnabled=_moodTuningFlagEnabled;
 @property(nonatomic) unsigned long long entityDisplayMode; // @synthesize entityDisplayMode=_entityDisplayMode;
 @property(nonatomic, getter=isTasteOnboardingRequired) _Bool tasteOnboardingRequired; // @synthesize tasteOnboardingRequired=_tasteOnboardingRequired;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;

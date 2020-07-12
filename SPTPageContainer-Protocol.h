@@ -9,6 +9,9 @@
 @protocol SPTPageController;
 
 @protocol SPTPageContainer <NSObject>
-@property(readonly, nonatomic, getter=spt_currentPageController) id <SPTPageController> currentPageController;
+- (id <SPTPageController>)spt_currentPageController;
+
+// Remaining properties
+@property(nonatomic, readonly) id <SPTPageController> currentPageController;
 @end
 

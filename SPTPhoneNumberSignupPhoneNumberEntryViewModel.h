@@ -57,7 +57,10 @@
 - (void)logUserDidSeeDialogType:(unsigned long long)arg1;
 - (void)logUserDidSeeView;
 @property(readonly, nonatomic) NSString *dialogGeneralErrorMessage;
+@property(readonly, nonatomic) NSString *dialogGeneralErrorTitle;
+@property(readonly, nonatomic) NSString *dialogTryAgainButtonTitle;
 @property(readonly, nonatomic) NSString *dialogTryAgainMessage;
+@property(readonly, nonatomic) NSString *dialogTryAgainTitle;
 @property(readonly, nonatomic) NSString *dialogInactiveInternetMessage;
 @property(readonly, nonatomic) NSString *dialogInactiveInternetTitle;
 @property(readonly, nonatomic) NSString *dialogInvalidPhoneNumberMessage;

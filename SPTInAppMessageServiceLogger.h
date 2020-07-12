@@ -40,6 +40,7 @@
 - (void)logInAppMessageBackendRequestErrorOfType:(long long)arg1 response:(id)arg2;
 - (void)logInteractionWithTriggerMessageOfFormat:(id)arg1 trackingURL:(id)arg2;
 - (void)logImpressionOfTriggerMessageWithImpressionUrl:(id)arg1 messageFormat:(id)arg2;
+- (void)logDismissEventWithMessageID:(id)arg1 uuid:(id)arg2;
 - (void)logInteractionWithInAppMessageWithTrackingURL:(id)arg1 messageFormat:(id)arg2;
 - (void)logImpressionOfInAppMessageWithImpressionUrl:(id)arg1 messageFormat:(id)arg2;
 - (void)performLogRequestForURL:(id)arg1 type:(long long)arg2 messageFormat:(id)arg3;

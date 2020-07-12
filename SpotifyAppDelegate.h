@@ -13,14 +13,13 @@
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
 @class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
-@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTNavigationRouter, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
+@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
 @interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, SPTSessionServicesLoader, UIApplicationDelegate>
 {
     id <SPTAppStartupController> _appStartupController;
     UIWindow *_window;
     NSObject<OS_os_log> *_lifecycleLog;
-    id <SPTNavigationRouter> _navigationRouter;
     id <SPTCrashReporter> _crashReporter;
     id <SPTUserActivityController> _userActivityController;
     SPTPlayModeMonitor *_playModeMonitor;
@@ -52,7 +51,6 @@
 @property(retain, nonatomic) SPTPlayModeMonitor *playModeMonitor; // @synthesize playModeMonitor=_playModeMonitor;
 @property(retain, nonatomic) id <SPTUserActivityController> userActivityController; // @synthesize userActivityController=_userActivityController;
 @property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
-@property(readonly, nonatomic) id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(retain, nonatomic) UIWindow *window; // @synthesize window=_window;
 - (void).cxx_destruct;
 - (void)loadSessionScopeServices;

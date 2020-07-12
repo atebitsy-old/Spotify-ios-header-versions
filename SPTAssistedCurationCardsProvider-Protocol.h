@@ -12,7 +12,7 @@
 @protocol SPTAssistedCurationCardsProvider <NSObject>
 + (NSString *)identifier;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate;
-- (void)provideCardsForCurrentTracks:(NSArray *)arg1 andPlaylistName:(NSString *)arg2;
+- (void)provideCardsForCurrentTracks:(NSArray *)arg1 andContextName:(NSString *)arg2;
 
 @optional
 - (void)addedTrack:(NSURL *)arg1 fromContext:(unsigned long long)arg2;

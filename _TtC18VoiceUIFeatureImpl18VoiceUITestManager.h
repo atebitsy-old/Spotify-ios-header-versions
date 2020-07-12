@@ -13,6 +13,7 @@
     // Error parsing type: , name: enableWakewordSignal
     // Error parsing type: , name: observerManager
     // Error parsing type: , name: localSettings
+    // Error parsing type: , name: $__lazy_storage_$_remoteConfigProperties
     // Error parsing type: , name: developmentEndpointEnabled
     // Error parsing type: , name: wakewordLocallyEnabled
     // Error parsing type: , name: $__lazy_storage_$_wakewordEnabled

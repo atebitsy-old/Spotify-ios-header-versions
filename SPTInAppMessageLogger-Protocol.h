@@ -11,5 +11,8 @@
 @protocol SPTInAppMessageLogger <NSObject>
 - (void)logInteractionWithInAppMessageWithTrackingURL:(NSURL *)arg1 messageFormat:(NSString *)arg2;
 - (void)logImpressionOfInAppMessageWithImpressionUrl:(NSURL *)arg1 messageFormat:(NSString *)arg2;
+
+@optional
+- (void)logDismissEventWithMessageID:(NSString *)arg1 uuid:(NSString *)arg2;
 @end
 

@@ -9,13 +9,16 @@
 @class NSArray, NSData, NSPredicate, NSString;
 
 @protocol SPTPodcastRequestData <NSObject>
-@property(readonly, copy, nonatomic) NSString *requestAction;
-@property(readonly, nonatomic) NSArray *sortDescriptors;
-@property(readonly, nonatomic) NSPredicate *filterPredicate;
-@property(readonly, copy, nonatomic) NSString *requestStringTemplate;
+@property(nonatomic, readonly) NSString *requestAction;
+@property(nonatomic, readonly) NSArray *sortDescriptors;
+@property(nonatomic, readonly) NSPredicate *filterPredicate;
+@property(nonatomic, readonly) NSString *requestStringTemplate;
 
 @optional
-@property(readonly, nonatomic, getter=isGrouped) _Bool grouped;
-@property(readonly, copy, nonatomic) NSData *requestBody;
+- (_Bool)isGrouped;
+@property(nonatomic, readonly) NSData *requestBody;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool grouped;
 @end
 

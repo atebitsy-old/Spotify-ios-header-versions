@@ -21,7 +21,7 @@
 - (void).cxx_destruct;
 - (id)layout;
 - (void)updateConstraints;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 titleAttributes:(id)arg3 titleViewPresenterRegistry:(id)arg4;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 titleAttributes:(id)arg3;
 
 @end
 

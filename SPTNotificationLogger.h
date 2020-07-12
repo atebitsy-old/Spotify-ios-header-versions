@@ -6,17 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTLogCenter, SPTUBILogger;
 
 @interface SPTNotificationLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTUBILogger> _ubiLogger;
 }
 
+@property(retain, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void).cxx_destruct;
+- (id)getSpotifyUpdatesSectionFactory;
+- (id)getMusicSectionFactory;
 - (void)logNotificationSettingsKey:(id)arg1 enabled:(_Bool)arg2 itemIndex:(int)arg3;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2;
 
 @end
 

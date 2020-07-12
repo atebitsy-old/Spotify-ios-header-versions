@@ -62,6 +62,7 @@
 - (void)fetchSocialDevicesWithDiscoveredDeviceIds:(id)arg1;
 - (void)enableSocialDevice:(id)arg1;
 - (void)disableSocialDevice:(id)arg1;
+- (void)setPhysicalDeviceIDState:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)pauseCurrentPlayback;

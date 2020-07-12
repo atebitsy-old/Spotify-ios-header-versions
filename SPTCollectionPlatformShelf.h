@@ -9,17 +9,17 @@
 #import "SPTShelf-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTCollectionPlatformTestManager;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformLogger, SPTCollectionPlatformTestManager;
 
 @interface SPTCollectionPlatformShelf : NSObject <SPTShelf>
 {
     id <SPTCollectionPlatform> _collectionPlatform;
     NSURL *_entityURL;
     id <SPTCollectionPlatformTestManager> _testManager;
-    id <SPTCollectionLogger> _logger;
+    id <SPTCollectionPlatformLogger> _logger;
 }
 
-@property(readonly, nonatomic) id <SPTCollectionLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTCollectionPlatformLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) NSURL *entityURL; // @synthesize entityURL=_entityURL;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;

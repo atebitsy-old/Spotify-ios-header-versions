@@ -6,16 +6,16 @@
 
 #import <objc/NSObject.h>
 
-#import "SPStepScrollViewDataSource-Protocol.h"
-#import "SPStepScrollViewDelegate-Protocol.h"
 #import "SPTStatefulPlayerObserver-Protocol.h"
+#import "SPTStepScrollViewDataSource-Protocol.h"
+#import "SPTStepScrollViewDelegate-Protocol.h"
 
-@class NSString, NSURL, SPStepScrollView, SPTNowPlayingBarModel, SPTNowPlayingSkipLimitReachedMessageRequester;
+@class NSString, NSURL, SPTNowPlayingBarModel, SPTNowPlayingSkipLimitReachedMessageRequester, SPTStepScrollView;
 @protocol SPTPlayerTrackScrollDataSourceDelegate, SPTPlayerTrackScrollViewOffsetDelegate;
 
-@interface SPTPlayerTrackScrollDataSource : NSObject <SPTStatefulPlayerObserver, SPStepScrollViewDataSource, SPStepScrollViewDelegate>
+@interface SPTPlayerTrackScrollDataSource : NSObject <SPTStatefulPlayerObserver, SPTStepScrollViewDataSource, SPTStepScrollViewDelegate>
 {
-    SPStepScrollView *_scrollView;
+    SPTStepScrollView *_scrollView;
     id <SPTPlayerTrackScrollDataSourceDelegate> _delegate;
     id <SPTPlayerTrackScrollViewOffsetDelegate> _offsetDelegate;
     NSURL *_currentTrack;
@@ -32,7 +32,7 @@
 @property(retain, nonatomic) NSURL *currentTrack; // @synthesize currentTrack=_currentTrack;
 @property(nonatomic) __weak id <SPTPlayerTrackScrollViewOffsetDelegate> offsetDelegate; // @synthesize offsetDelegate=_offsetDelegate;
 @property(nonatomic) __weak id <SPTPlayerTrackScrollDataSourceDelegate> delegate; // @synthesize delegate=_delegate;
-@property(retain, nonatomic) SPStepScrollView *scrollView; // @synthesize scrollView=_scrollView;
+@property(retain, nonatomic) SPTStepScrollView *scrollView; // @synthesize scrollView=_scrollView;
 - (void).cxx_destruct;
 - (void)playerDidUpdateTrackPosition:(id)arg1;
 - (void)playerDidUpdatePlaybackControls:(id)arg1;

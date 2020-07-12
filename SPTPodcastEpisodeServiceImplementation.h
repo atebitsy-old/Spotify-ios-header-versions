@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUIPresentationService, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_, _TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_;
+@protocol SPTCollectionPlatformService, SPTContainerUIService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUIPresentationService, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_, _TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
 {
@@ -24,7 +24,7 @@
     id <SPTUIPresentationService> _presentationService;
     id <SPTShareFeature> _shareFeature;
     id <SPTCollectionPlatformService> _collectionPlatformService;
-    id <_TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_> _podcastCreatorEntityPageService;
+    id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> _podcastCreatorEntityPageEntryPointsService;
     id <SPTPodcastEpisodeFeaturedContentService> _podcastEpisodeFeaturedContentService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPodcastOffliningService> _podcastOffliningService;
@@ -36,7 +36,7 @@
 @property(nonatomic) __weak id <SPTPodcastOffliningService> podcastOffliningService; // @synthesize podcastOffliningService=_podcastOffliningService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastEpisodeFeaturedContentService; // @synthesize podcastEpisodeFeaturedContentService=_podcastEpisodeFeaturedContentService;
-@property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature34SPTPodcastCreatorEntityPageService_> podcastCreatorEntityPageService; // @synthesize podcastCreatorEntityPageService=_podcastCreatorEntityPageService;
+@property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> podcastCreatorEntityPageEntryPointsService; // @synthesize podcastCreatorEntityPageEntryPointsService=_podcastCreatorEntityPageEntryPointsService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;

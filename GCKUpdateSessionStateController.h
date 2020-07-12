@@ -10,6 +10,7 @@
 
 @interface GCKUpdateSessionStateController : NSObject
 {
+    NSMutableDictionary *_deviceStatuses;
     NSMutableDictionary *_devicesToSetDictionary;
     NSMutableDictionary *_devicesToAddDictionary;
     NSMutableDictionary *_devicesToRemoveDictionary;
@@ -18,11 +19,15 @@
 @property(copy, nonatomic) NSMutableDictionary *devicesToRemoveDictionary; // @synthesize devicesToRemoveDictionary=_devicesToRemoveDictionary;
 @property(copy, nonatomic) NSMutableDictionary *devicesToAddDictionary; // @synthesize devicesToAddDictionary=_devicesToAddDictionary;
 @property(copy, nonatomic) NSMutableDictionary *devicesToSetDictionary; // @synthesize devicesToSetDictionary=_devicesToSetDictionary;
+@property(copy, nonatomic) NSMutableDictionary *deviceStatuses; // @synthesize deviceStatuses=_deviceStatuses;
 - (void).cxx_destruct;
+- (void)updateDevice:(id)arg1 status:(long long)arg2;
+- (void)resetDeviceStatus:(id)arg1;
+- (void)resetAllDeviceStatuses;
 - (_Bool)hasPendingDevices;
 - (void)clear;
-- (void)updateSessionWithDevicesToAdd:(id)arg1 devicesToRemove:(id)arg2 deviceStatuses:(id)arg3;
-- (void)updateSessionWithDevicesToSet:(id)arg1 deviceStatuses:(id)arg2;
+- (void)updateSessionWithDevicesToAdd:(id)arg1 devicesToRemove:(id)arg2;
+- (void)updateSessionWithDevicesToSet:(id)arg1;
 @property(readonly, copy, nonatomic) NSArray *devicesToRemove;
 @property(readonly, copy, nonatomic) NSArray *devicesToAdd;
 @property(readonly, copy, nonatomic) NSArray *devicesToSet;

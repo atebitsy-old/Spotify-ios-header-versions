@@ -6,13 +6,14 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTInAppMessageNoteOverlayControllerDelegate-Protocol.h"
 #import "SPTInAppMessagePresenter-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
 @class NSDictionary, NSString, SPTInAppMessageNoteOverlayController, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessageServiceLogger;
 @protocol SPTAuthController, SPTBannerPresentationManager, SPTCarDetector, SPTCrashReporter, SPTFreeTierTooltipConditionalPresenter, SPTInAppMessageSDKMessageViewModel, SPTOfflineModeState, SPTSlateManager, SPTSnackbarConditionalPresenter, SPTTooltipPresentationManager;
 
-@interface SPTInAppMessageNotePresentationController : NSObject <SPTOfflineModeStateObserver, SPTInAppMessagePresenter>
+@interface SPTInAppMessageNotePresentationController : NSObject <SPTOfflineModeStateObserver, SPTInAppMessageNoteOverlayControllerDelegate, SPTInAppMessagePresenter>
 {
     _Bool _offline;
     SPTInAppMessageNoteOverlayController *_noteOverlayController;
@@ -51,6 +52,7 @@
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessageViewModel> messageViewModel; // @synthesize messageViewModel=_messageViewModel;
 @property(readonly, nonatomic) SPTInAppMessageNoteOverlayController *noteOverlayController; // @synthesize noteOverlayController=_noteOverlayController;
 - (void).cxx_destruct;
+- (void)noteMessageSwipedAway;
 - (void)cancelNoteMessagePresentation:(id)arg1;
 - (_Bool)canPresentNote;
 - (void)logMessageDiscardedWithReason:(id)arg1;

@@ -6,9 +6,7 @@
 
 #import "_TtC30PlaylistWithStoriesFeatureImpl46PlaylistWithStoriesVisualRefreshHeaderProvider.h"
 
-#import "SPTFreeTierPlaylistHeaderProvider-Protocol.h"
-
-@interface _TtC30PlaylistWithStoriesFeatureImpl46PlaylistWithStoriesVisualRefreshHeaderProvider (PlaylistWithStoriesFeatureImpl) <SPTFreeTierPlaylistHeaderProvider>
+@interface _TtC30PlaylistWithStoriesFeatureImpl46PlaylistWithStoriesVisualRefreshHeaderProvider (PlaylistWithStoriesFeatureImpl)
 @property(nonatomic, readonly) _Bool drawBottomLineLayer;
 @property(nonatomic, readonly) _Bool drawDropShadow;
 - (id)provideHeader;

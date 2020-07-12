@@ -20,6 +20,7 @@
 @property(retain, nonatomic) SPTRadioFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool isRadioURITransitionEnabled;
 @property(readonly, nonatomic) _Bool isLegacyRadioEntityPagesEnabled;
 @property(readonly, nonatomic) _Bool isRadioContextMenuActionForFreeUsersEnabled;
 - (void)lazyLoadRemoteConfigurationProperties;

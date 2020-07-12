@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTNotificationLogger;
-@protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTNetworkService, SPTNotificationPreferencesBackendIntegrator;
+@protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTNetworkService, SPTNotificationPreferencesBackendIntegrator, SPTUBIService;
 
 @interface SPTNotificationsServiceImplementation : NSObject <SPTNotificationsService, SPTService>
 {
@@ -18,6 +18,7 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTNetworkService> _networkFeature;
     id <SPTCoreService> _coreService;
+    id <SPTUBIService> _ubiService;
     id <SPTNotificationPreferencesBackendIntegrator> _notificationsBackendIntegrator;
     SPTNotificationLogger *_notificationLogger;
 }
@@ -25,6 +26,7 @@
 + (id)serviceIdentifier;
 @property(retain, nonatomic) SPTNotificationLogger *notificationLogger; // @synthesize notificationLogger=_notificationLogger;
 @property(retain, nonatomic) id <SPTNotificationPreferencesBackendIntegrator> notificationsBackendIntegrator; // @synthesize notificationsBackendIntegrator=_notificationsBackendIntegrator;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;

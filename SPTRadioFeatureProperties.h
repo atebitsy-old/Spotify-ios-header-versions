@@ -14,8 +14,10 @@
 {
     _Bool _suppressLegacyRadioEntityPagesEnabled;
     _Bool _freeContextMenuAction;
+    _Bool _radioLegacyGdprEndpoints;
 }
 
+@property(readonly, nonatomic) _Bool radioLegacyGdprEndpoints; // @synthesize radioLegacyGdprEndpoints=_radioLegacyGdprEndpoints;
 @property(readonly, nonatomic) _Bool freeContextMenuAction; // @synthesize freeContextMenuAction=_freeContextMenuAction;
 @property(readonly, nonatomic) _Bool suppressLegacyRadioEntityPagesEnabled; // @synthesize suppressLegacyRadioEntityPagesEnabled=_suppressLegacyRadioEntityPagesEnabled;
 - (id)propertyModels;

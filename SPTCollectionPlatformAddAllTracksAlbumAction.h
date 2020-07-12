@@ -7,14 +7,14 @@
 #import "SPAction.h"
 
 @class NSArray, NSURL;
-@protocol SPTCollectionLogger, SPTCollectionPlatform, SPTCollectionPlatformTestManager;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformLogger, SPTCollectionPlatformTestManager;
 
 @interface SPTCollectionPlatformAddAllTracksAlbumAction : SPAction
 {
     _Bool _allTracksNotInCollection;
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTCollectionPlatformTestManager> _collectionTestManager;
-    id <SPTCollectionLogger> _collectionLogger;
+    id <SPTCollectionPlatformLogger> _collectionLogger;
     NSURL *_link;
     NSURL *_sourceURL;
     NSURL *_contextURL;
@@ -26,7 +26,7 @@
 @property(readonly, copy, nonatomic) NSURL *contextURL; // @synthesize contextURL=_contextURL;
 @property(readonly, copy, nonatomic) NSURL *sourceURL; // @synthesize sourceURL=_sourceURL;
 @property(readonly, nonatomic) NSURL *link; // @synthesize link=_link;
-@property(readonly, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
+@property(readonly, nonatomic) id <SPTCollectionPlatformLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatformTestManager> collectionTestManager; // @synthesize collectionTestManager=_collectionTestManager;
 @property(readonly, nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 - (void).cxx_destruct;

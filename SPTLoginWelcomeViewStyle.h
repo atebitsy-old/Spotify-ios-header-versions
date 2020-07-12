@@ -40,13 +40,11 @@
     double _titleMessageVerticalSpacing;
     double _minTitleMessageScale;
     GLUEGradientStyle *_gradientStyle;
-    double _compactLayoutArtworkImageAspectRatio;
     double _spotifyLogoBottomMargin;
 }
 
 @property(nonatomic) double spotifyLogoBottomMargin; // @synthesize spotifyLogoBottomMargin=_spotifyLogoBottomMargin;
 @property(nonatomic) _Bool spotifyLogoPlacementTightToTitle; // @synthesize spotifyLogoPlacementTightToTitle=_spotifyLogoPlacementTightToTitle;
-@property(nonatomic) double compactLayoutArtworkImageAspectRatio; // @synthesize compactLayoutArtworkImageAspectRatio=_compactLayoutArtworkImageAspectRatio;
 @property(copy, nonatomic) GLUEGradientStyle *gradientStyle; // @synthesize gradientStyle=_gradientStyle;
 @property(nonatomic) double minTitleMessageScale; // @synthesize minTitleMessageScale=_minTitleMessageScale;
 @property(nonatomic) double titleMessageVerticalSpacing; // @synthesize titleMessageVerticalSpacing=_titleMessageVerticalSpacing;

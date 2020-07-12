@@ -8,7 +8,7 @@
 
 #import "GCKRuntimeConfigurationValueObserver-Protocol.h"
 
-@class GCKAnalyticsEventLogger, GCKCastDeviceProvider, GCKCastOptions, GCKClearcutEventSink, GCKDatabase, GCKDeviceProviderRegistry, GCKDiagnosticListener, GCKDiscoveryManager, GCKNNetworkReachability, GCKPrecacheController, GCKRuntimeConfiguration, GCKSessionManager, GCKUIExpandedMediaControlsViewController, NSString;
+@class GCKAnalyticsEventLogger, GCKCastDeviceProvider, GCKCastOptions, GCKClearcutEventSink, GCKDatabase, GCKDeviceProviderRegistry, GCKDiagnosticListener, GCKDiscoveryManager, GCKNNetworkReachability, GCKPhysicalVolumeButtonController, GCKPrecacheController, GCKRuntimeConfiguration, GCKSessionManager, GCKUIExpandedMediaControlsViewController, NSString;
 @protocol GCKUIImageCache, GCKUIImagePicker;
 
 @interface GCKCastContext : NSObject <GCKRuntimeConfigurationValueObserver>
@@ -17,6 +17,7 @@
     GCKDiagnosticListener *_diagnosticListener;
     GCKClearcutEventSink *_clearcutEventSink;
     _Bool _enableClearcutAnalytics;
+    GCKPhysicalVolumeButtonController *_physicalVolumeButtonController;
     unsigned long long _castState;
     GCKDiscoveryManager *_discoveryManager;
     GCKSessionManager *_sessionManager;

@@ -26,7 +26,7 @@
 @property(nonatomic, getter=isPlaying) _Bool playing;
 - (_Bool)pointInside:(struct CGPoint)arg1 withEvent:(id)arg2;
 - (void)sendTapEvent;
-- (void)configureWithModel:(id)arg1 eventHandler:(id)arg2;
+- (void)configureWithModel:(id)arg1 event:(id)arg2 eventHandler:(id)arg3;
 - (void)addIconImagesToStates;
 - (id)init;
 

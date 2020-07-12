@@ -9,6 +9,6 @@
 
 @protocol _TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_
 - (id <SPTDataLoaderCancellationToken>)verify:(NSString *)arg1 with:(NSString *)arg2 completion:(void (^)(long long))arg3;
-- (id <SPTDataLoaderCancellationToken>)register:(NSString *)arg1 with:(NSString *)arg2 completion:(void (^)(long long))arg3;
+- (id <SPTDataLoaderCancellationToken>)register:(NSString *)arg1 with:(NSString *)arg2 target:(NSString *)arg3 completion:(void (^)(long long))arg4;
 @end
 

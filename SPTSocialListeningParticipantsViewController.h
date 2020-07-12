@@ -13,7 +13,7 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherBottomBanner, SPTSocialListeningLoggerImplementation, SPTSocialListeningSessionViewUserCellConfigurator, SPTTableView;
+@class NSString, NSURL, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherBottomBanner, SPTSocialListeningLoggerImplementation, SPTSocialListeningSessionViewUserCellConfigurator, SPTTableView, UIBarButtonItem;
 @protocol GLUEImageLoader, SPTPageContainer, SPTShareFeature, SPTSocialListeningViewModel;
 
 @interface SPTSocialListeningParticipantsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTSocialListeningSessionViewUserCellDelegate, SPTSocialListeningViewModelObserver, SPTSocialListeningListenTogetherStateObserver, SPTPageController>
@@ -26,8 +26,10 @@
     SPTSocialListeningSessionViewUserCellConfigurator *_cellConfigurator;
     SPTTableView *_tableView;
     SPTSocialListeningListenTogetherBottomBanner *_bottomBanner;
+    UIBarButtonItem *_inviteBarButtonItem;
 }
 
+@property(retain, nonatomic) UIBarButtonItem *inviteBarButtonItem; // @synthesize inviteBarButtonItem=_inviteBarButtonItem;
 @property(retain, nonatomic) SPTSocialListeningListenTogetherBottomBanner *bottomBanner; // @synthesize bottomBanner=_bottomBanner;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(retain, nonatomic) SPTSocialListeningSessionViewUserCellConfigurator *cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
@@ -40,6 +42,7 @@
 - (id)placeholderCellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (void)inviteButtonTapped:(id)arg1;
 - (void)navigateToQueue;
+- (void)updateNavigationBarButtons;
 - (void)updateBottomBanner;
 - (void)sessionViewUserCellDidTapActionButton:(id)arg1;
 - (void)sessionViewUserCellDidTapUserImageOrName:(id)arg1;

@@ -9,6 +9,6 @@
 @class NSURL;
 
 @protocol SPViewController <NSObject>
-@property(readonly, nonatomic) NSURL *URI;
+@property(nonatomic, readonly) NSURL *URI;
 @end
 

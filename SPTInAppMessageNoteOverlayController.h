@@ -10,11 +10,12 @@
 #import "SPTNavigationManagerDelegate-Protocol.h"
 
 @class NSString, SPTInAppMessageNoteOverlayView, SPTNavigationManager, UILayoutGuide, UINavigationController;
-@protocol SPTMetaViewController;
+@protocol SPTInAppMessageNoteOverlayControllerDelegate, SPTMetaViewController;
 
 @interface SPTInAppMessageNoteOverlayController : NSObject <SPTNavigationManagerDelegate, SPTInAppMessageNoteOverlayViewDelegate>
 {
     _Bool _presentingNote;
+    id <SPTInAppMessageNoteOverlayControllerDelegate> _delegate;
     id <SPTMetaViewController> _metaViewController;
     UILayoutGuide *_mainContentLayoutGuideProvider;
     SPTNavigationManager *_navigationManager;
@@ -27,6 +28,7 @@
 @property(retain, nonatomic) SPTNavigationManager *navigationManager; // @synthesize navigationManager=_navigationManager;
 @property(retain, nonatomic) UILayoutGuide *mainContentLayoutGuideProvider; // @synthesize mainContentLayoutGuideProvider=_mainContentLayoutGuideProvider;
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
+@property(nonatomic) __weak id <SPTInAppMessageNoteOverlayControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isPresentingNote) _Bool presentingNote; // @synthesize presentingNote=_presentingNote;
 - (void).cxx_destruct;
 - (_Bool)isNowPlayingViewController:(id)arg1;

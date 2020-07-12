@@ -47,6 +47,7 @@
 - (void)validateEmail:(id)arg1 withCompletionBlock:(CDUnknownBlockType)arg2;
 - (id)nextButtonText;
 - (id)fieldDisclosureLabelText;
+- (id)fieldAccessibilityLabel;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
 - (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldValidator:(id)arg3 displayNameDataLoader:(id)arg4 dialogController:(id)arg5 dialogLogger:(id)arg6 flowController:(id)arg7;

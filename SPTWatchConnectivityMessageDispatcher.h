@@ -8,17 +8,20 @@
 
 #import "SPTWatchConnectivityMessageHandlerRegistry-Protocol.h"
 
-@class NSMutableDictionary, NSString;
+@class NSMutableArray, NSMutableDictionary, NSString;
 
 @interface SPTWatchConnectivityMessageDispatcher : NSObject <SPTWatchConnectivityMessageHandlerRegistry>
 {
     NSMutableDictionary *_requestHandlers;
     NSMutableDictionary *_responseHandlers;
+    NSMutableArray *_queuedRequests;
 }
 
+@property(readonly, nonatomic) NSMutableArray *queuedRequests; // @synthesize queuedRequests=_queuedRequests;
 @property(readonly, nonatomic) NSMutableDictionary *responseHandlers; // @synthesize responseHandlers=_responseHandlers;
 @property(readonly, nonatomic) NSMutableDictionary *requestHandlers; // @synthesize requestHandlers=_requestHandlers;
 - (void).cxx_destruct;
+- (void)processQueuedRequests;
 - (void)registerResponseHandler:(id)arg1 forRequest:(id)arg2;
 - (void)deregisterRequestHandlerForURI:(id)arg1;
 - (void)registerRequestHandler:(id)arg1 forURI:(id)arg2;

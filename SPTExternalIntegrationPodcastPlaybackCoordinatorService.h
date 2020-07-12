@@ -10,19 +10,17 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTExternalIntegrationPlaybackServiceImplementation, SPTExternalIntegrationPodcastContentFactory;
-@protocol SPTPodcastFeature, SPTPodcastUIService;
+@protocol SPTPodcastFeature;
 
 @interface SPTExternalIntegrationPodcastPlaybackCoordinatorService : NSObject <SPTService, SPTExternalIntegrationPlaybackCoordinator>
 {
     SPTExternalIntegrationPlaybackServiceImplementation *_playbackService;
     id <SPTPodcastFeature> _podcastService;
-    id <SPTPodcastUIService> _podcastUIService;
     SPTExternalIntegrationPodcastContentFactory *_contentFactory;
 }
 
 + (id)serviceIdentifier;
 @property(readonly, nonatomic) SPTExternalIntegrationPodcastContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
-@property(readonly, nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
 @property(readonly, nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationPlaybackServiceImplementation *playbackService; // @synthesize playbackService=_playbackService;
 - (void).cxx_destruct;

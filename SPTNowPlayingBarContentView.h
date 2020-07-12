@@ -8,13 +8,13 @@
 
 #import "SPTNowPlayingTestManagerObserver-Protocol.h"
 
-@class NSArray, NSLayoutConstraint, NSString, SPStepScrollView, SPTNowPlayingFadeMaskView, SPTTheme, UIButton;
+@class NSArray, NSLayoutConstraint, NSString, SPTNowPlayingFadeMaskView, SPTStepScrollView, SPTTheme, UIButton;
 @protocol SPTGaiaDevicesAvailableView, SPTNowPlayingBarPlayButton, SPTNowPlayingBarVoiceCompanionDelegate, SPTNowPlayingTestManager;
 
 @interface SPTNowPlayingBarContentView : UIView <SPTNowPlayingTestManagerObserver>
 {
     _Bool _enabled;
-    SPStepScrollView *_stepScrollView;
+    SPTStepScrollView *_stepScrollView;
     UIButton<SPTNowPlayingBarPlayButton> *_playPauseButton;
     id <SPTNowPlayingBarVoiceCompanionDelegate> _voiceDelegate;
     SPTNowPlayingFadeMaskView *_fadeContentView;
@@ -42,7 +42,7 @@
 @property(nonatomic) __weak id <SPTNowPlayingBarVoiceCompanionDelegate> voiceDelegate; // @synthesize voiceDelegate=_voiceDelegate;
 @property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic) UIButton<SPTNowPlayingBarPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
-@property(readonly, nonatomic) SPStepScrollView *stepScrollView; // @synthesize stepScrollView=_stepScrollView;
+@property(readonly, nonatomic) SPTStepScrollView *stepScrollView; // @synthesize stepScrollView=_stepScrollView;
 - (void).cxx_destruct;
 - (void)setLyricsLabelVisible:(_Bool)arg1;
 - (void)createLyricsViewIfNeeded;

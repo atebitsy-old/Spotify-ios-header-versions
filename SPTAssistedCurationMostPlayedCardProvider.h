@@ -30,7 +30,7 @@
 @property(retain, nonatomic) SPTAssistedCurationCardModelImplementation *currentCard; // @synthesize currentCard=_currentCard;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
-- (void)provideCardsForCurrentTracks:(id)arg1 andPlaylistName:(id)arg2;
+- (void)provideCardsForCurrentTracks:(id)arg1 andContextName:(id)arg2;
 - (id)initWithMostPlayedDataLoader:(id)arg1 excludeURI:(id)arg2 offlineModeState:(id)arg3;
 
 // Remaining properties
