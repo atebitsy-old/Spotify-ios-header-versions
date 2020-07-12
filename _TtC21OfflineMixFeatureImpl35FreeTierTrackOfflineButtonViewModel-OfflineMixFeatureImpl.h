@@ -6,9 +6,7 @@
 
 #import "_TtC21OfflineMixFeatureImpl35FreeTierTrackOfflineButtonViewModel.h"
 
-#import "SPTFreeTierEntityOfflineViewModel-Protocol.h"
-
-@interface _TtC21OfflineMixFeatureImpl35FreeTierTrackOfflineButtonViewModel (OfflineMixFeatureImpl) <SPTFreeTierEntityOfflineViewModel>
+@interface _TtC21OfflineMixFeatureImpl35FreeTierTrackOfflineButtonViewModel (OfflineMixFeatureImpl)
 - (void)setEntityOffline:(_Bool)arg1;
 - (_Bool)isEntityOffline;
 - (_Bool)isOfflineSyncAvailable;

@@ -14,6 +14,7 @@
 @interface SPTSearchPlatformProtobufResponseParser : NSObject <SPTSearchPlatformResponseParser>
 {
     _Bool _isDrillDown;
+    _Bool _newPodcastRowsEnabled;
     _Bool _topicsEnabled;
     _Bool _lyricsRowDebuggingEnabled;
     NSURL *_pageURI;
@@ -24,7 +25,6 @@
     id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
     NSString *_query;
     id <SPTSearchOnDemandPermissionMonitor> _onDemandPermissionMonitor;
-    unsigned long long _podcastRowsType;
     NSString *_referrerIdentifier;
 }
 
@@ -32,7 +32,7 @@
 @property(readonly, nonatomic) _Bool lyricsRowDebuggingEnabled; // @synthesize lyricsRowDebuggingEnabled=_lyricsRowDebuggingEnabled;
 @property(readonly, nonatomic) _Bool topicsEnabled; // @synthesize topicsEnabled=_topicsEnabled;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
-@property(readonly, nonatomic) unsigned long long podcastRowsType; // @synthesize podcastRowsType=_podcastRowsType;
+@property(readonly, nonatomic) _Bool newPodcastRowsEnabled; // @synthesize newPodcastRowsEnabled=_newPodcastRowsEnabled;
 @property(readonly, nonatomic) _Bool isDrillDown; // @synthesize isDrillDown=_isDrillDown;
 @property(readonly, nonatomic) id <SPTSearchOnDemandPermissionMonitor> onDemandPermissionMonitor; // @synthesize onDemandPermissionMonitor=_onDemandPermissionMonitor;
 @property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
@@ -63,7 +63,7 @@
 - (id)parseDrillDownResponse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
 - (id)parseMainResponse:(id)arg1 requestID:(id)arg2 error:(id *)arg3;
 - (id)parse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
-- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 onDemandPermissionMonitor:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 podcastRowsType:(unsigned long long)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11 topicsEnabled:(_Bool)arg12 lyricsRowDebuggingEnabled:(_Bool)arg13;
+- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 onDemandPermissionMonitor:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 query:(id)arg7 isDrillDown:(_Bool)arg8 newPodcastRowsEnabled:(_Bool)arg9 ubiLocationSerializer:(id)arg10 referrerIdentifier:(id)arg11 topicsEnabled:(_Bool)arg12 lyricsRowDebuggingEnabled:(_Bool)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

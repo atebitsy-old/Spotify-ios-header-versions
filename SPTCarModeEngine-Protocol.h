@@ -12,6 +12,7 @@
 - (void)carViewAvailabilityChangedWithEnabled:(_Bool)arg1;
 - (void)deactivationTriggered;
 - (void)activationTriggered;
+@property(nonatomic, readonly) _Bool isSettingsEnabled;
 @property(nonatomic, readonly) long long state;
 @end
 

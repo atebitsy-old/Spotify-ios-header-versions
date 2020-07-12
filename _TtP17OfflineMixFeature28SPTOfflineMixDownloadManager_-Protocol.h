@@ -14,6 +14,7 @@
 - (void)remove:(NSURL *)arg1;
 - (void)download:(NSURL *)arg1;
 - (void)removeObserver:(id <_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_>)arg1;
-- (void)addObserver:(id <_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_>)arg1;
+- (void)removeObserver:(id <_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_>)arg1 forTrack:(NSURL *)arg2;
+- (void)addObserver:(id <_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_>)arg1 forTrack:(NSURL *)arg2;
 @end
 

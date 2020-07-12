@@ -17,10 +17,10 @@
     NSHashTable *_observers;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(nonatomic) double interval; // @synthesize interval=_interval;
-- (void).cxx_destruct;
 - (id)timerForInterval:(double)arg1 selector:(SEL)arg2 retryCount:(unsigned long long)arg3;
 - (id)retryTimerForTimer:(id)arg1;
 - (id)scheduledTimer;

@@ -25,6 +25,7 @@
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 - (_Bool)calculatePodcastFeatureEnabled;
+@property(readonly, nonatomic, getter=isPodcastDALEnabledForExternalFeatures) _Bool podcastDALEnabledForExternalFeatures;
 @property(readonly, nonatomic, getter=isPodcastShowPageHTMLDescriptionEnabled) _Bool podcastShowPageHTMLDescriptionEnabled;
 @property(readonly, nonatomic, getter=isPodcastShowPageSearchEnabled) _Bool podcastShowPageSearchEnabled;
 @property(readonly, nonatomic, getter=isPodcastNewPlaybackSpeedsEnabled) _Bool podcastNewPlaybackSpeedsEnabled;

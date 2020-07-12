@@ -9,9 +9,10 @@
 @class EventEnvelope, NSArray, NSString;
 
 @protocol INSSchedulerDataDelegate <NSObject>
+- (void)performBlockOnPrivateMOCQueue:(void (^)(void))arg1;
 - (void)didFailEnvelopes:(NSArray *)arg1;
 - (void)didDeliverEnvelopes:(NSArray *)arg1;
-- (void)scheduleNonAuthenticatedEnvelope:(EventEnvelope *)arg1;
-- (void)scheduleAuthenticatedEnvelope:(EventEnvelope *)arg1 withOwner:(NSString *)arg2;
+- (void)scheduleNonAuthenticatedEnvelopeOnPrivateMOC:(EventEnvelope *)arg1;
+- (void)scheduleAuthenticatedEnvelopeOnPrivateMOC:(EventEnvelope *)arg1 withOwner:(NSString *)arg2;
 @end
 

@@ -15,8 +15,6 @@
 
 @interface SPTVideoFeaturePlayerConfiguration : NSObject <SPTAbbaFeatureFlagsObserver, BMPlayerConfiguration, BMSpotifyVideoConfiguration>
 {
-    _Bool _subtitlesEnabled;
-    _Bool _cachingFlatFilesEnabled;
     _Bool _preventDisplaySleepDuringVideoPlayback;
     unsigned long long _videoCDNLoggingOption;
     id <SPTAbbaFeatureFlags> _featureFlags;
@@ -29,17 +27,15 @@
 @property(retain, nonatomic) SPTVideoFeatureProperties *videoFeatureProperties; // @synthesize videoFeatureProperties=_videoFeatureProperties;
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(readonly, nonatomic) _Bool preventDisplaySleepDuringVideoPlayback; // @synthesize preventDisplaySleepDuringVideoPlayback=_preventDisplaySleepDuringVideoPlayback;
-@property(readonly, nonatomic) _Bool cachingFlatFilesEnabled; // @synthesize cachingFlatFilesEnabled=_cachingFlatFilesEnabled;
-@property(readonly, nonatomic) _Bool subtitlesEnabled; // @synthesize subtitlesEnabled=_subtitlesEnabled;
 @property(readonly, nonatomic) unsigned long long videoCDNLoggingOption; // @synthesize videoCDNLoggingOption=_videoCDNLoggingOption;
 @property(readonly, nonatomic) _Bool spotifyVideoHLSEnabled;
 - (id)mediaURLForManifestID:(id)arg1;
+@property(readonly, nonatomic) _Bool bitstreamCachingEnabled;
+@property(readonly, nonatomic) _Bool subtitlesEnabled;
 @property(readonly, nonatomic) NSURL *fairplayLicenseURL;
 @property(readonly, nonatomic) NSURL *fairplayApplicationCertificateURL;
 - (id)remoteManifestURLForManifestID:(id)arg1;
 - (void)featureFlagsDidChange:(id)arg1;
-- (void)updateRolloutFlatFilesCaching;
-- (void)updateABSubtitles;
 - (void)updateVideoCDNSampling;
 - (void)updateFeatureFlagsTemplates;
 - (void)dealloc;

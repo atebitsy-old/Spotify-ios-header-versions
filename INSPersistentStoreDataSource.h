@@ -18,13 +18,12 @@
     id <INSLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(nonatomic) _Bool createdForAuthenticatedEntities; // @synthesize createdForAuthenticatedEntities=_createdForAuthenticatedEntities;
 @property(retain, nonatomic) id <INSPersistentStore> store; // @synthesize store=_store;
-- (void).cxx_destruct;
 - (void)logErrors:(id)arg1;
-- (void)processEntities:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
-- (void)eventEnvelopesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)getAllEventEnvelopesOnPrivateMOCForOwner:(id)arg1 outAuthEnvelopes:(id)arg2 outNonAuthEnvelopes:(id)arg3;
 - (id)initWithPersistentStore:(id)arg1 authenticated:(_Bool)arg2 logger:(id)arg3;
 
 // Remaining properties

@@ -48,8 +48,6 @@
 - (void)authorizationController:(id)arg1 didCompleteWithError:(id)arg2;
 - (void)authorizationController:(id)arg1 didCompleteWithAuthorization:(id)arg2;
 - (id)presentationAnchorForAuthorizationController:(id)arg1;
-- (_Bool)isAppleSignInCustomButtonEnabled;
-- (_Bool)isAppleSignInSystemButtonEnabled;
 - (void)startLoginWithThirdParty;
 - (void)showPasswordAutofillDialog;
 - (id)initWithAuthenticationHandler:(id)arg1 navigationCoordinator:(id)arg2 testManager:(id)arg3 dialogController:(id)arg4 logger:(id)arg5 appleHandler:(id)arg6 signupAttemptTracker:(id)arg7 compatibilityProvider:(id)arg8 appleAuthControllerFactory:(id)arg9 notificationCenter:(id)arg10;

@@ -10,7 +10,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSError, NSString, SPTDataLoader, SPTPersistentCache;
+@class NSError, NSString, NSURL, SPTDataLoader, SPTPersistentCache;
 @protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTHubRemoteContentOperationURLResolver, SPTNetworkConnectivityController;
 
 @interface SPTFreeTierEntityRemoteContentOperation : NSObject <SPTDataLoaderDelegate, SPTNetworkConnectivityControllerObserver, HUBContentOperation>
@@ -24,12 +24,14 @@
     NSError *_previousError;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
     SPTPersistentCache *_persistentCache;
+    NSURL *_contentURL;
     NSString *_contentCacheKey;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic, getter=isObserving) _Bool observing; // @synthesize observing=_observing;
 @property(copy, nonatomic) NSString *contentCacheKey; // @synthesize contentCacheKey=_contentCacheKey;
+@property(retain, nonatomic) NSURL *contentURL; // @synthesize contentURL=_contentURL;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) NSError *previousError; // @synthesize previousError=_previousError;

@@ -19,6 +19,8 @@
     // Error parsing type: , name: nowPlayingService
     // Error parsing type: , name: playerService
     // Error parsing type: , name: podcastService
+    // Error parsing type: , name: snackbarService
+    // Error parsing type: , name: uriDispatcherService
 }
 
 + (id)serviceIdentifier;

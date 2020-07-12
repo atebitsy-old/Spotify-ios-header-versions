@@ -10,6 +10,7 @@
 
 @interface _TtC26FullscreenStoryFeatureImpl22VideoPlayerEventSource (FullscreenStoryFeatureImpl) <BMEventObserver>
 - (void)didChangeSurface:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
+- (void)didChangeDuration:(double)arg1 timestamp:(double)arg2;
 - (void)didEndPlaybackWithReason:(long long)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didBecomeReadyAtPosition:(double)arg1 timestamp:(double)arg2;
 - (void)didFailWithRecoverableError:(id)arg1 atPosition:(double)arg2 timestamp:(double)arg3;

@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAssistedCurationCardStyle;
+@class NSString, SPTAssistedCurationCardStyle;
 @protocol GLUEImageLoader, SPTAssistedCurationCardCellConfiguratorDelegate, SPTAudioPreviewModelFactory, SPTAudioPreviewUIFactory;
 
 @interface SPTAssistedCurationCardCellConfigurator : NSObject
 {
     id <SPTAssistedCurationCardCellConfiguratorDelegate> _delegate;
+    NSString *_addActionAccessibilityLabel;
     id <SPTAudioPreviewModelFactory> _audioPreviewModelFactory;
     id <SPTAudioPreviewUIFactory> _audioPreviewUIFactory;
     id <GLUEImageLoader> _glueImageLoader;
@@ -23,6 +24,7 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) id <SPTAudioPreviewUIFactory> audioPreviewUIFactory; // @synthesize audioPreviewUIFactory=_audioPreviewUIFactory;
 @property(readonly, nonatomic) id <SPTAudioPreviewModelFactory> audioPreviewModelFactory; // @synthesize audioPreviewModelFactory=_audioPreviewModelFactory;
+@property(copy, nonatomic) NSString *addActionAccessibilityLabel; // @synthesize addActionAccessibilityLabel=_addActionAccessibilityLabel;
 @property(nonatomic) __weak id <SPTAssistedCurationCardCellConfiguratorDelegate> delegate; // @synthesize delegate=_delegate;
 - (struct CGPoint)locationInCollectionForButton:(id)arg1;
 - (id)indexPathForButton:(id)arg1;

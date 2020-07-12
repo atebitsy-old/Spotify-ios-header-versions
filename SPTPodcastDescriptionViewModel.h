@@ -8,19 +8,27 @@
 
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSString;
+@class NSAttributedString, NSString;
+@protocol SPTPodcastTestManager, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
 
 @interface SPTPodcastDescriptionViewModel : NSObject <SPTPodcastViewModelSection>
 {
     double _headerHeight;
     NSString *_descriptionText;
+    NSAttributedString *_htmlDescriptionText;
+    id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> _podcastHTMLParser;
+    id <SPTPodcastTestManager> _podcastTestManager;
     struct _NSRange _descriptionAttributionRange;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
+@property(readonly, nonatomic) id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> podcastHTMLParser; // @synthesize podcastHTMLParser=_podcastHTMLParser;
 @property(nonatomic) struct _NSRange descriptionAttributionRange; // @synthesize descriptionAttributionRange=_descriptionAttributionRange;
+@property(copy, nonatomic) NSAttributedString *htmlDescriptionText; // @synthesize htmlDescriptionText=_htmlDescriptionText;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
+- (_Bool)isRawDescriptionValidForPodcast:(id)arg1;
 - (void)configureDescriptionTextForPodcast:(id)arg1;
 - (long long)identifier;
 - (void)updateWithPodcastPlayer:(id)arg1;
@@ -28,7 +36,7 @@
 - (id)header;
 - (id)footer;
 - (unsigned long long)numberOfRows;
-- (id)init;
+- (id)initWithPodcastHTMLParser:(id)arg1 podcastTestManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

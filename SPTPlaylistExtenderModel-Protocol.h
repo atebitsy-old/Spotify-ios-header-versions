@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL;
+@class NSArray, NSString, NSURL;
 @protocol SPTPlaylistExtenderItem, SPTPlaylistExtenderModelDelegate;
 
 @protocol SPTPlaylistExtenderModel <NSObject>
@@ -20,9 +20,8 @@
 - (_Bool)shouldDisplayFooter;
 - (void)startLoading;
 - (void)refresh;
-- (void)trackSelectedAtIndex:(long long)arg1;
-- (void)addTrackAtIndex:(unsigned long long)arg1;
-- (id <SPTPlaylistExtenderItem>)itemForIndex:(unsigned long long)arg1;
-- (unsigned long long)numberOfTracks;
+- (void)trackSelected:(id <SPTPlaylistExtenderItem>)arg1;
+- (void)addTrack:(id <SPTPlaylistExtenderItem>)arg1;
+- (NSArray *)items;
 @end
 

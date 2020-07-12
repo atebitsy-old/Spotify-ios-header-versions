@@ -35,7 +35,7 @@
     id <SPTFreeTierPlaylistTestManager> _testManager;
     SPTFreeTierPlaylistFeatureProperties *_featureProperties;
     NSString *_formatListType;
-    CDUnknownBlockType _navigationIdFactory;
+    CDUnknownBlockType _pageInstanceIdFactory;
     SPTFreeTierPlaylistModelEntityImplementation *_playlistEntity;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _metadataSubscription;
     id <SPTPlaylistPlatformDataLoaderRequestToken> _followCountSubscription;
@@ -53,7 +53,7 @@
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> followCountSubscription; // @synthesize followCountSubscription=_followCountSubscription;
 @property(retain, nonatomic) id <SPTPlaylistPlatformDataLoaderRequestToken> metadataSubscription; // @synthesize metadataSubscription=_metadataSubscription;
 @property(retain, nonatomic) SPTFreeTierPlaylistModelEntityImplementation *playlistEntity; // @synthesize playlistEntity=_playlistEntity;
-@property(readonly, copy, nonatomic) CDUnknownBlockType navigationIdFactory; // @synthesize navigationIdFactory=_navigationIdFactory;
+@property(readonly, copy, nonatomic) CDUnknownBlockType pageInstanceIdFactory; // @synthesize pageInstanceIdFactory=_pageInstanceIdFactory;
 @property(copy, nonatomic) NSString *formatListType; // @synthesize formatListType=_formatListType;
 @property(retain, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
@@ -111,7 +111,7 @@
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
 - (void)dealloc;
-- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 ageVerificationProvider:(id)arg11 testManager:(id)arg12 featureProperties:(id)arg13 formatListType:(id)arg14 navigationIdFactory:(CDUnknownBlockType)arg15;
+- (id)initWithPlaylistURL:(id)arg1 playlistDataLoader:(id)arg2 playlistModel:(id)arg3 collectionPlatform:(id)arg4 collectionConfiguration:(id)arg5 sortingFiltering:(id)arg6 onDemandSet:(id)arg7 clientSettings:(id)arg8 productState:(id)arg9 explicitContentAccessManager:(id)arg10 ageVerificationProvider:(id)arg11 testManager:(id)arg12 featureProperties:(id)arg13 formatListType:(id)arg14 pageInstanceIdFactory:(CDUnknownBlockType)arg15;
 @property(readonly, nonatomic, getter=isCappedOverridenByXCUITest) _Bool cappedOverridenByXCUITest;
 
 // Remaining properties

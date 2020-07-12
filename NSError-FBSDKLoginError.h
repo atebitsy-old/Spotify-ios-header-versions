@@ -32,9 +32,10 @@
 + (id)spt_loginFlowGenericError;
 + (id)spt_errorWithSecurityStatusCode:(int)arg1;
 + (id)spt_persistentDataCacheErrorWithCode:(long long)arg1;
-+ (id)spt_createFreeUserAttemptJoinError;
++ (id)spt_createFreeUserError;
 + (id)spt_createSessionFullError;
 + (id)spt_createJoinFailedError;
++ (id)spt_voiceLibraryInactiveStateError;
 + (id)spt_voiceLibraryOfflineError;
 + (id)spt_voiceLibraryErrorWithRecordPermission:(unsigned long long)arg1;
 + (id)spt_connectivityErrorWithCode:(long long)arg1 description:(id)arg2;
@@ -46,9 +47,9 @@
 - (_Bool)spt_isUserDidCancelFacebookAuthenticationError;
 - (_Bool)spt_isNetworkDisabledError;
 - (_Bool)spt_isInAuthenticationErrorDomain;
-- (_Bool)spt_shouldShowFreeUserAttemptJoinErrorPopup;
-- (_Bool)spt_shouldShowSessionFullErrorPopup;
-- (_Bool)spt_shouldShowErrorPopup;
+- (_Bool)spt_isFreeUserError;
+- (_Bool)spt_isSessionFullError;
+- (_Bool)spt_isJoinedFailedError;
 - (id)spt_voiceLogError;
 - (unsigned long long)spt_voiceLogErrorType;
 - (_Bool)spt_isUnintrusiveVoiceErrorType;

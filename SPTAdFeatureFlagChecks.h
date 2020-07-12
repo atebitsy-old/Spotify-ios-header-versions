@@ -50,7 +50,6 @@
 @property(readonly, nonatomic, getter=isAudioPlusEnabled) _Bool audioPlusEnabled;
 @property(readonly, nonatomic, getter=isLeaveBehindTopBannerEnabled) _Bool leaveBehindTopBannerEnabled;
 @property(readonly, nonatomic, getter=isLeaveBehindCompanionBannerEnabled) _Bool leaveBehindCompanionBannerEnabled;
-@property(readonly, nonatomic, getter=isInAppBrowserEnabled) _Bool inAppBrowserEnabled;
 @property(readonly, nonatomic, getter=isMarqueeEnabled) _Bool marqueeEnabled;
 @property(readonly, nonatomic, getter=isAdFeedbackEnabled) _Bool adFeedbackEnabled;
 @property(readonly, nonatomic, getter=isNewVideoEventsEnabled) _Bool newVideoEventsEnabled;
@@ -61,7 +60,6 @@
 @property(readonly, nonatomic, getter=isMobiusVoiceEnabled) _Bool mobiusVoiceEnabled;
 @property(readonly, nonatomic, getter=isVoiceEnabled) _Bool voiceEnabled;
 - (void)requestNoOfferCardFlagValueFromCore;
-@property(readonly, nonatomic, getter=isComscoreEnabled) _Bool comscoreEnabled;
 @property(readonly, nonatomic, getter=isCosmosWatchNowEnabled) _Bool cosmosWatchNowEnabled;
 - (void)dealloc;
 - (id)initWithProductState:(id)arg1 localSetting:(id)arg2 abbaService:(id)arg3 resolver:(id)arg4;

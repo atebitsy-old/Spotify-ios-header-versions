@@ -15,21 +15,6 @@
     // Error parsing type: , name: onDemandSet
     // Error parsing type: , name: player
     // Error parsing type: , name: logger
-    // Error parsing type: , name: actionInfoKey
-    // Error parsing type: , name: apsKey
-    // Error parsing type: , name: metadataKey
-    // Error parsing type: , name: messageIdKey
-    // Error parsing type: , name: campaignIdKey
-    // Error parsing type: , name: actionIDKey
-    // Error parsing type: , name: actionDataKey
-    // Error parsing type: , name: actionURI
-    // Error parsing type: , name: actionURL
-    // Error parsing type: , name: actionDismiss
-    // Error parsing type: , name: actionSave
-    // Error parsing type: , name: actionBan
-    // Error parsing type: , name: actionPlay
-    // Error parsing type: , name: actionSettings
-    // Error parsing type: , name: settingsURL
     // Error parsing type: , name: badInfo
     // Error parsing type: , name: badIdentifier
 }

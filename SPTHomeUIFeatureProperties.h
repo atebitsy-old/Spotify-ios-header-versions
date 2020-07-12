@@ -13,8 +13,10 @@
 @interface SPTHomeUIFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _useEditorialShortcuts;
+    _Bool _itemDimensionInstrumentation;
 }
 
+@property(readonly, nonatomic) _Bool itemDimensionInstrumentation; // @synthesize itemDimensionInstrumentation=_itemDimensionInstrumentation;
 @property(readonly, nonatomic) _Bool useEditorialShortcuts; // @synthesize useEditorialShortcuts=_useEditorialShortcuts;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

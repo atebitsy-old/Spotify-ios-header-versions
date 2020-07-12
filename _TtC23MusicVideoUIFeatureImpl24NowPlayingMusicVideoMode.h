@@ -13,8 +13,9 @@
     // Error parsing type: , name: layoutDelegate
     // Error parsing type: , name: viewControllerRegistry
     // Error parsing type: , name: playbackActionsHandler
-    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: imageLoader
     // Error parsing type: , name: glueTheme
+    // Error parsing type: , name: footerLoopControllerConfiguration
     // Error parsing type: , name: footerViewController
 }
 

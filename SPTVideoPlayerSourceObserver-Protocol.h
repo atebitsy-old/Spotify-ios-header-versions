@@ -19,5 +19,6 @@
 - (void)playerSource:(SPTVideoPlayerSource *)arg1 playerItem:(AVPlayerItem *)arg2 likelyToKeepUp:(_Bool)arg3;
 - (void)playerSource:(SPTVideoPlayerSource *)arg1 playerItem:(AVPlayerItem *)arg2 statusChanged:(long long)arg3;
 - (void)playerSource:(SPTVideoPlayerSource *)arg1 resetPlayerWithError:(NSError *)arg2;
+- (void)playerSource:(SPTVideoPlayerSource *)arg1 didChangeDuration:(double)arg2;
 @end
 

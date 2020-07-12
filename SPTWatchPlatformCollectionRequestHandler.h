@@ -8,16 +8,20 @@
 
 #import "SPTWatchConnectivityRequestHandler-Protocol.h"
 
-@class NSString, SPTWatchConnectivityDataLoader;
-@protocol SPTCollectionPlatform;
+@class NSString, SPTWatchConnectivityDataLoader, SPTWatchPlatformLogging;
+@protocol SPTAccessoryActionLogger, SPTCollectionPlatform;
 
 @interface SPTWatchPlatformCollectionRequestHandler : NSObject <SPTWatchConnectivityRequestHandler>
 {
     SPTWatchConnectivityDataLoader *_dataLoader;
     id <SPTCollectionPlatform> _collectionPlatform;
+    SPTWatchPlatformLogging *_watchPlatformLogging;
+    id <SPTAccessoryActionLogger> _actionLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
+@property(readonly, nonatomic) SPTWatchPlatformLogging *watchPlatformLogging; // @synthesize watchPlatformLogging=_watchPlatformLogging;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (id)stringFromCollectionPlatformState:(unsigned long long)arg1;
@@ -27,7 +31,7 @@
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;
 - (void)sendCompletionResponseForRequest:(id)arg1 body:(id)arg2 error:(id)arg3;
-- (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 collectionPlatform:(id)arg2 watchPlatformLogging:(id)arg3 actionLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

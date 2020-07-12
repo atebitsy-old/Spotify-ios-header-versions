@@ -13,8 +13,10 @@
 @interface SPTFreeTierAlbumFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _albumOfflineStateManagement;
+    _Bool _albumPageLoaderDisabled;
 }
 
+@property(readonly, nonatomic) _Bool albumPageLoaderDisabled; // @synthesize albumPageLoaderDisabled=_albumPageLoaderDisabled;
 @property(readonly, nonatomic) _Bool albumOfflineStateManagement; // @synthesize albumOfflineStateManagement=_albumOfflineStateManagement;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

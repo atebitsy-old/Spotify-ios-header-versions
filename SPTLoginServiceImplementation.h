@@ -89,7 +89,7 @@
 - (id)buttonActionHandlerForScreenWithIdentifier:(id)arg1;
 - (void)refreshStickyCredentialsDatabaseManager;
 - (id)provideStickyCredentialsDbManager;
-- (id)provideAppleAuthController;
+- (id)provideAppleAuthControllerWithScreenIdentifier:(id)arg1;
 - (id)provideFacebookAuthController:(id)arg1;
 - (id)provideAccountSwitcher;
 - (id)provideNavigationRouter;

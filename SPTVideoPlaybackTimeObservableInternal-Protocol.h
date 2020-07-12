@@ -7,7 +7,6 @@
 #import "BMPlaybackTimeObservable-Protocol.h"
 
 @protocol SPTVideoPlaybackTimeObservableInternal <BMPlaybackTimeObservable>
-- (double)duration;
 - (void)stopObserving;
 @end
 

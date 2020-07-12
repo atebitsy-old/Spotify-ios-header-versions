@@ -20,9 +20,7 @@
 @property(readonly, nonatomic) __weak SPSession *currentSession; // @synthesize currentSession=_currentSession;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-- (id)mapSeedASessionButtonTypeToIdentifier:(long long)arg1;
 - (double)getTimestamp;
-- (void)logDidTapOnSeedASessionButton:(long long)arg1;
 - (void)logDidTapOnSettingsButton;
 - (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2 currentSession:(id)arg3;
 

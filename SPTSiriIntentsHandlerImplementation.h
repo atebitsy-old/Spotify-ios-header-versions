@@ -10,7 +10,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTSiriIntentsHandler-Protocol.h"
 
-@class NSDictionary, NSMutableDictionary, NSString, NSURL, SPTPlayerContext, SPTSiriIntentsFeatureProperties, SPTSiriIntentsKeepAliveHandler;
+@class NSDictionary, NSMutableDictionary, NSString, NSTimer, NSURL, SPTPlayerContext, SPTSiriIntentsFeatureProperties, SPTSiriIntentsKeepAliveHandler;
 @protocol SPTCarDetector, SPTEventSender, SPTGaiaConnectAPI, SPTLoginStateController, SPTPlayer;
 
 @interface SPTSiriIntentsHandlerImplementation : NSObject <SPTLoginStateControllerObserver, SPTPlayerObserver, SPTSiriIntentsHandler>
@@ -32,9 +32,11 @@
     NSMutableDictionary *_performanceDimensions;
     NSURL *_expectedContextURL;
     double _timeSinceBackgrounded;
+    NSTimer *_waitingForPlaybackTimer;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSTimer *waitingForPlaybackTimer; // @synthesize waitingForPlaybackTimer=_waitingForPlaybackTimer;
 @property(nonatomic) double timeSinceBackgrounded; // @synthesize timeSinceBackgrounded=_timeSinceBackgrounded;
 @property(nonatomic, getter=isBackgrounded) _Bool backgrounded; // @synthesize backgrounded=_backgrounded;
 @property(retain, nonatomic) NSURL *expectedContextURL; // @synthesize expectedContextURL=_expectedContextURL;
@@ -53,6 +55,10 @@
 @property(copy, nonatomic) CDUnknownBlockType playCommandCompletionHandler; // @synthesize playCommandCompletionHandler=_playCommandCompletionHandler;
 @property(copy, nonatomic) CDUnknownBlockType intentCompletionHandler; // @synthesize intentCompletionHandler=_intentCompletionHandler;
 - (_Bool)isPlaying;
+- (void)didTriggerWaitingForPlaybackTimer;
+@property(readonly, nonatomic, getter=isWaitingForPlayback) _Bool waitingForPlayback;
+- (void)stopWaitingForPlayback;
+- (void)startWaitingForPlabyack;
 - (void)invalidateTimer;
 - (void)startApConnectionTimer;
 - (id)playOriginFromPlayCommandDictionary:(id)arg1;
@@ -64,8 +70,8 @@
 - (void)initiatePlaybackWithContext:(id)arg1 playCommandDictionary:(id)arg2;
 - (_Bool)isPlayingExpectedContext:(id)arg1;
 @property(readonly, nonatomic, getter=hasFinishedPerformanceMeasuring) _Bool finishedPerformanceMeasuring;
-@property(readonly, nonatomic, getter=isWaitingForPlayback) _Bool waitingForPlayback;
 - (void)markPerformanceTimestampForKey:(id)arg1;
+- (void)markPerformanceOutcomePlayerTimeout;
 - (void)markPerformanceOutcomeInvalidPlayerContext;
 - (void)markPerformanceOutcomeMissingIntentPayload;
 - (void)markPerformanceOutcomePlayerError;

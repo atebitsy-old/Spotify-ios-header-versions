@@ -6,30 +6,28 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, SPTLoginMagicLinkSentConfirmationViewLogger, SPTLoginOpenEmailAppController, SPTLoginTheme;
+@class NSString, SPTLoginMagicLinkSentConfirmationViewLogger, SPTLoginOpenEmailAppController;
 
 @interface SPTLoginMagicLinkSentConfirmationViewModel : NSObject
 {
-    SPTLoginMagicLinkSentConfirmationViewLogger *_logger;
-    SPTLoginTheme *_theme;
     NSString *_emailOrUsername;
     SPTLoginOpenEmailAppController *_emailAppController;
+    SPTLoginMagicLinkSentConfirmationViewLogger *_logger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTLoginMagicLinkSentConfirmationViewLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTLoginOpenEmailAppController *emailAppController; // @synthesize emailAppController=_emailAppController;
 @property(copy, nonatomic) NSString *emailOrUsername; // @synthesize emailOrUsername=_emailOrUsername;
-@property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
-@property(readonly, nonatomic) SPTLoginMagicLinkSentConfirmationViewLogger *logger; // @synthesize logger=_logger;
+- (void)userDidSeeView;
 - (void)userDidTapOpenEmailButton;
 - (_Bool)shouldShowOpenEmailButton;
-- (id)viewStyle;
 - (id)emailSentImage;
 - (id)emailButtonText;
 - (id)bodyLabelText;
 - (id)upperLabelText;
 - (id)titleLabelText;
-- (id)initWithTheme:(id)arg1 emailOrUsername:(id)arg2 logger:(id)arg3 emailAppController:(id)arg4;
+- (id)initWithEmailOrUsername:(id)arg1 logger:(id)arg2 emailAppController:(id)arg3;
 
 @end
 

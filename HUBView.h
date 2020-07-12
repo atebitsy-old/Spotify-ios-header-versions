@@ -21,7 +21,6 @@
     HUBComponentViewImageLoader *_componentViewImageLoader;
     HUBComponentViewManager *_componentViewManager;
     HUBCollectionViewDataSource *_collectionViewDataSource;
-    CDUnknownBlockType _pendingScrollAnimationCallback;
     NSHashTable *_visibleContentOffsetObservingComponentViews;
     NSHashTable *_contentOffsetObservers;
     HUBCollectionViewLayout *_collectionViewLayout;
@@ -31,7 +30,6 @@
 @property(retain, nonatomic) HUBCollectionViewLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
 @property(readonly, nonatomic) NSHashTable *contentOffsetObservers; // @synthesize contentOffsetObservers=_contentOffsetObservers;
 @property(readonly, nonatomic) NSHashTable *visibleContentOffsetObservingComponentViews; // @synthesize visibleContentOffsetObservingComponentViews=_visibleContentOffsetObservingComponentViews;
-@property(copy, nonatomic) CDUnknownBlockType pendingScrollAnimationCallback; // @synthesize pendingScrollAnimationCallback=_pendingScrollAnimationCallback;
 @property(readonly, nonatomic) HUBCollectionViewDataSource *collectionViewDataSource; // @synthesize collectionViewDataSource=_collectionViewDataSource;
 @property(readonly, nonatomic) HUBComponentViewManager *componentViewManager; // @synthesize componentViewManager=_componentViewManager;
 @property(readonly, nonatomic) HUBComponentViewImageLoader *componentViewImageLoader; // @synthesize componentViewImageLoader=_componentViewImageLoader;

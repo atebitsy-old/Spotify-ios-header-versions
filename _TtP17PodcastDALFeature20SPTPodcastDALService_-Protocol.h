@@ -6,13 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@class NSArray;
-@protocol SPTPodcastDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastRequestData, SPTPodcastRequestFactory, SPTResolver;
+@protocol SPTPodcastDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastRequestFactory, SPTResolver;
 
 @protocol _TtP17PodcastDALFeature20SPTPodcastDALService_ <SPTService>
 - (id <SPTPodcastRequestFactory>)providePodcastRequestFactory;
 - (id <SPTPodcastDataLoader>)provideDataLoaderWithResolver:(id <SPTResolver>)arg1;
-- (id <SPTPodcastRequestData>)provideUpdateEpisodeUnplayedRequestDataWithURIStrings:(NSArray *)arg1 markAsUnplayed:(_Bool)arg2;
 - (id <SPTPodcastEpisodeFactory>)providePodcastEpisodeFactory;
 - (id <SPTPodcastFactory>)providePodcastFactory;
 @end

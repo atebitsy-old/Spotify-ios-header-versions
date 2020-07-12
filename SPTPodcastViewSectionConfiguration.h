@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSMutableArray, SPTPodcastLogger;
-@protocol SPTExplicitContentAccessManager;
+@protocol SPTExplicitContentAccessManager, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
 
 @interface SPTPodcastViewSectionConfiguration : NSObject
 {
@@ -15,9 +15,11 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     NSMutableArray *_viewSectionContainers;
     SPTPodcastLogger *_logger;
+    id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> _podcastHTMLParser;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> podcastHTMLParser; // @synthesize podcastHTMLParser=_podcastHTMLParser;
 @property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSMutableArray *viewSectionContainers; // @synthesize viewSectionContainers=_viewSectionContainers;
 @property(readonly, nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -25,7 +27,7 @@
 - (id)instanceForSectionIdentifier:(long long)arg1;
 - (void)enableSection:(long long)arg1;
 - (void)createViewModelSectionsFromContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandlerFactory:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingProvider:(id)arg9 explicitContentAccessManager:(id)arg10;
-- (id)initWithViewContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandlerFactory:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingProvider:(id)arg9 explicitContentAccessManager:(id)arg10;
+- (id)initWithViewContainers:(id)arg1 podcastPlayer:(id)arg2 cellConfigurator:(id)arg3 cellActionHandlerFactory:(id)arg4 collectionLogger:(id)arg5 podcastLogger:(id)arg6 podcastTestManager:(id)arg7 podcastURL:(id)arg8 sortingProvider:(id)arg9 explicitContentAccessManager:(id)arg10 podcastHTMLParser:(id)arg11;
 
 @end
 

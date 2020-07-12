@@ -8,20 +8,20 @@
 
 #import "SPTHomeUIComponentFactory-Protocol.h"
 
-@class NSString, SPTHomeUIFeatureProperties, SPTHomeUILogger;
+@class NSString, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation;
 @protocol GLUETheme, SPTPlayer;
 
 @interface SPTHomeUIComponentFactoryImplementation : NSObject <SPTHomeUIComponentFactory>
 {
     id <GLUETheme> _theme;
     id <SPTPlayer> _player;
-    SPTHomeUILogger *_logger;
+    SPTHomeUILoggerImplementation *_logger;
     SPTHomeUIFeatureProperties *_remoteConfigProperties;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
-@property(readonly, nonatomic) SPTHomeUILogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (id)createListeningHistorySectionHeaderComponent;

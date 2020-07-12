@@ -16,7 +16,6 @@
 
 @interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTPageController, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate>
 {
-    _Bool _configureForEmbeddingInScrollView;
     _Bool _shouldDisplayNowPlayingView;
     NSString *_episodeURIString;
     id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> _dataLoader;
@@ -32,7 +31,6 @@
 @property(nonatomic) _Bool shouldDisplayNowPlayingView; // @synthesize shouldDisplayNowPlayingView=_shouldDisplayNowPlayingView;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
-@property(readonly, nonatomic, getter=shouldConfigureForEmbeddingInScrollView) _Bool configureForEmbeddingInScrollView; // @synthesize configureForEmbeddingInScrollView=_configureForEmbeddingInScrollView;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsModel> episodeSegmentsModel; // @synthesize episodeSegmentsModel=_episodeSegmentsModel;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentPlayer *featuredContentPlayer; // @synthesize featuredContentPlayer=_featuredContentPlayer;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentContextMenuPresenter *contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
@@ -47,8 +45,6 @@
 - (void)sp_updateContentInsets;
 - (void)didTapContextMenuForSender:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
-- (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
-- (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
@@ -58,7 +54,7 @@
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)setUpNavigationItem;
-- (id)initWithEpisodeURI:(id)arg1 episodeSegmentsDataLoader:(id)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4 featuredContentPlayer:(id)arg5 configureForEmbeddingInScrollView:(_Bool)arg6 logger:(id)arg7 metaViewController:(id)arg8 configureToDisplayNowPlayingView:(_Bool)arg9;
+- (id)initWithEpisodeURI:(id)arg1 episodeSegmentsDataLoader:(id)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4 featuredContentPlayer:(id)arg5 logger:(id)arg6 metaViewController:(id)arg7 configureToDisplayNowPlayingView:(_Bool)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -31,6 +31,7 @@
 - (id)emailBodyWithMessage:(id)arg1;
 - (id)emailSubject;
 - (void)composeEmailWithMessage:(id)arg1;
+- (void)presentIncomingLogAlertWithMessage:(id)arg1;
 - (void)handleMessage:(id)arg1 fromTopic:(id)arg2;
 - (void)load;
 - (id)initWithPubSub:(id)arg1 session:(id)arg2 alertController:(id)arg3 presentationService:(id)arg4 userDefaults:(id)arg5;

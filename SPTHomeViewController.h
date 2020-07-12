@@ -19,17 +19,15 @@
 #import "SPViewController-Protocol.h"
 
 @class HUBComponentRegistry, NSMutableDictionary, NSString, NSURL, SPTHomeFeatureProperties, SPTHomeLocalViewModelOverrides, SPTHomeNavigationItemDecorator, SPTHomeStatusBarAppearanceModifier, SPTHomeView, SPTHomeViewModelProvider, SPTProgressView;
-@protocol GLUETheme, HUBCommandHandler, HUBComponentEventHandler, HUBComponentLayoutManager, HUBImageLoaderFactory, HUBViewModel, SPTHomeCacheRenderDelegate, SPTHomeViewControllerDelegate, SPTHubImpressionLogger, SPTHubLoadingLogger, SPTOfflineModeState, SPTPageContainer, SPTShareDragDelegateFactory;
+@protocol GLUETheme, HUBCommandHandler, HUBComponentLayoutManager, HUBImageLoaderFactory, HUBViewModel, SPTHomeCacheRenderDelegate, SPTHubLogger, SPTOfflineModeState, SPTPageContainer, SPTShareDragDelegateFactory;
 
 @interface SPTHomeViewController : UIViewController <SPTContentBottomLayoutGuideObserver, SPTScrollToTopViewController, HUBViewContentOffsetObserver, SPTHubViewModelProviderDelegate, HUBOverlayViewComponentDelegate, HUBViewComponentDelegate, SPTOfflineModeStateObserver, SPTPageController, SPTNavigationControllerNavigationBarState, SPViewController, SPTHomeViewModelProviderDelegate>
 {
     _Bool _currentlyOffline;
     _Bool _didLoadInitialViewModel;
-    _Bool _seedASessionEnabled;
     NSString *_pageIdentifier;
     NSURL *_pageURI;
     id <SPTHomeCacheRenderDelegate> _cacheRenderDelegate;
-    id <SPTHomeViewControllerDelegate> _delegate;
     SPTHomeNavigationItemDecorator *_navigationItemDecorator;
     id <GLUETheme> _theme;
     NSURL *_viewURI;
@@ -37,40 +35,37 @@
     id <HUBComponentLayoutManager> _componentLayoutManager;
     id <HUBImageLoaderFactory> _imageLoaderFactory;
     id <HUBCommandHandler> _commandHandler;
-    id <SPTHubLoadingLogger> _loadingLogger;
-    id <SPTHubImpressionLogger> _impressionLogger;
+    id <SPTHubLogger> _hubLogger;
     SPTHomeViewModelProvider *_viewModelProvider;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     id <SPTOfflineModeState> _offlineState;
     SPTHomeLocalViewModelOverrides *_overrides;
     SPTHomeFeatureProperties *_remoteConfigProperties;
     SPTHomeStatusBarAppearanceModifier *_statusBarAppearanceModifier;
-    id <HUBComponentEventHandler> _componentEventHandler;
     SPTProgressView *_loadingIndicator;
     unsigned long long _dataLoadingSource;
     NSMutableDictionary *_dragDelegateHolders;
     id <HUBViewModel> _initialViewModel;
+    CDUnknownBlockType _homeViewFactory;
     double _navigationbarAlpha;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) double navigationbarAlpha; // @synthesize navigationbarAlpha=_navigationbarAlpha;
+@property(readonly, copy, nonatomic) CDUnknownBlockType homeViewFactory; // @synthesize homeViewFactory=_homeViewFactory;
 @property(retain, nonatomic) id <HUBViewModel> initialViewModel; // @synthesize initialViewModel=_initialViewModel;
-@property(nonatomic) _Bool seedASessionEnabled; // @synthesize seedASessionEnabled=_seedASessionEnabled;
 @property(nonatomic) _Bool didLoadInitialViewModel; // @synthesize didLoadInitialViewModel=_didLoadInitialViewModel;
 @property(nonatomic, getter=isCurrentlyOffline) _Bool currentlyOffline; // @synthesize currentlyOffline=_currentlyOffline;
 @property(retain, nonatomic) NSMutableDictionary *dragDelegateHolders; // @synthesize dragDelegateHolders=_dragDelegateHolders;
 @property(nonatomic) unsigned long long dataLoadingSource; // @synthesize dataLoadingSource=_dataLoadingSource;
 @property(readonly, nonatomic) SPTProgressView *loadingIndicator; // @synthesize loadingIndicator=_loadingIndicator;
-@property(retain, nonatomic) id <HUBComponentEventHandler> componentEventHandler; // @synthesize componentEventHandler=_componentEventHandler;
 @property(readonly, nonatomic) SPTHomeStatusBarAppearanceModifier *statusBarAppearanceModifier; // @synthesize statusBarAppearanceModifier=_statusBarAppearanceModifier;
 @property(readonly, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *overrides; // @synthesize overrides=_overrides;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineState; // @synthesize offlineState=_offlineState;
 @property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
-@property(readonly, nonatomic) id <SPTHubImpressionLogger> impressionLogger; // @synthesize impressionLogger=_impressionLogger;
-@property(readonly, nonatomic) id <SPTHubLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
+@property(readonly, nonatomic) id <SPTHubLogger> hubLogger; // @synthesize hubLogger=_hubLogger;
 @property(readonly, nonatomic) id <HUBCommandHandler> commandHandler; // @synthesize commandHandler=_commandHandler;
 @property(readonly, nonatomic) id <HUBImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) id <HUBComponentLayoutManager> componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
@@ -78,7 +73,6 @@
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTHomeNavigationItemDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
-@property(nonatomic) __weak id <SPTHomeViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTHomeCacheRenderDelegate> cacheRenderDelegate; // @synthesize cacheRenderDelegate=_cacheRenderDelegate;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
@@ -113,7 +107,7 @@
 - (void)loadView;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithTheme:(id)arg1 viewURI:(id)arg2 componentRegistry:(id)arg3 componentLayoutManager:(id)arg4 imageLoaderFactory:(id)arg5 commandHandler:(id)arg6 loadingLogger:(id)arg7 impressionLogger:(id)arg8 viewModelProvider:(id)arg9 shareDragDelegateFactory:(id)arg10 offlineState:(id)arg11 overrides:(id)arg12 statusBarAppearanceModifier:(id)arg13 seedASessionEnabled:(_Bool)arg14 remoteConfigProperties:(id)arg15 initialViewModel:(id)arg16;
+- (id)initWithViewURI:(id)arg1 hubLogger:(id)arg2 viewModelProvider:(id)arg3 shareDragDelegateFactory:(id)arg4 offlineState:(id)arg5 overrides:(id)arg6 statusBarAppearanceModifier:(id)arg7 initialViewModel:(id)arg8 homeViewFactory:(CDUnknownBlockType)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

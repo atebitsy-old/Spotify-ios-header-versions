@@ -25,6 +25,8 @@
     // Error parsing type: , name: footerViewController
     // Error parsing type: , name: emptyViewController
     // Error parsing type: , name: collectionPlatform
+    // Error parsing type: , name: snackBarPresenter
+    // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: layoutDelegate
 }
 

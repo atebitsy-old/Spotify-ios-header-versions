@@ -54,6 +54,7 @@
 - (void)playerItemFailedToPlayToEndTime:(id)arg1 withError:(id)arg2;
 - (void)playerItemDidPlayToEndTime:(id)arg1;
 - (void)didChangeSeekableTimeRanges:(id)arg1;
+- (void)didChangePlayerItemDuration:(id)arg1 playerItem:(id)arg2;
 - (void)didChangePlayerItemLikelyToKeepUp:(id)arg1 playerItem:(id)arg2;
 - (void)didChangePlayerItemStatus:(id)arg1 playeritem:(id)arg2;
 - (void)currentPlayerItemChanged:(id)arg1 object:(id)arg2;

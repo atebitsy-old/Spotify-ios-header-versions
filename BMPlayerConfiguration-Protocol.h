@@ -9,7 +9,7 @@
 @class NSString, NSURL;
 
 @protocol BMPlayerConfiguration <NSObject>
-@property(readonly, nonatomic) _Bool cachingFlatFilesEnabled;
+@property(readonly, nonatomic) _Bool bitstreamCachingEnabled;
 @property(readonly, nonatomic) _Bool subtitlesEnabled;
 @property(readonly, nonatomic) unsigned long long videoCDNLoggingOption;
 @property(readonly, nonatomic) _Bool preventDisplaySleepDuringVideoPlayback;

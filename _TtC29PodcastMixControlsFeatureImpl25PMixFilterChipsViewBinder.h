@@ -12,6 +12,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: logger
     // Error parsing type: , name: eventConsumer
+    // Error parsing type: , name: delegate
     // Error parsing type: , name: topics
     // Error parsing type: , name: selectedTopic
     // Error parsing type: , name: cellIdentifier

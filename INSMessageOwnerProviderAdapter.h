@@ -16,8 +16,8 @@
     id <INSMessageOwnerProvider> _messageOwnerProvider;
 }
 
-@property(retain, nonatomic) id <INSMessageOwnerProvider> messageOwnerProvider; // @synthesize messageOwnerProvider=_messageOwnerProvider;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <INSMessageOwnerProvider> messageOwnerProvider; // @synthesize messageOwnerProvider=_messageOwnerProvider;
 - (void)provideMessageOwnerWithCompletion:(CDUnknownBlockType)arg1 failure:(CDUnknownBlockType)arg2;
 - (id)initWithMessageOwnerProvider:(id)arg1;
 

@@ -10,7 +10,10 @@
 {
 }
 
-+ (void)createTimeMeasurementWithCategory:(id)arg1;
++ (void)sendMeasurement:(id)arg1;
++ (id)createTimeMeasurementBuilderWithCategory:(id)arg1;
++ (void)setSharedTransport:(id)arg1;
++ (id)sharedTransport;
 - (id)init;
 
 @end

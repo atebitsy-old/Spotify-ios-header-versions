@@ -16,6 +16,7 @@
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: clientSessionService
+    // Error parsing type: , name: ubiService
     // Error parsing type: , name: $__lazy_storage_$_flowCoordinator
     // Error parsing type: , name: $__lazy_storage_$_curationManager
 }

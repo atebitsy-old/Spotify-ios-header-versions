@@ -13,6 +13,7 @@
     // Error parsing type: , name: audioPreviewUIFactory
     // Error parsing type: , name: contextMenuOptions
     // Error parsing type: , name: contextMenuPresenterFactory
+    // Error parsing type: , name: explicitContentAccessManager
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: currentTracks
@@ -20,6 +21,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)audioPreviewTappedWithButton:(id)arg1;
 - (void)contextMenuTappedWithButton:(id)arg1;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;

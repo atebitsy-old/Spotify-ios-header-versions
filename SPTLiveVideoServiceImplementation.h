@@ -6,21 +6,20 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTLiveVideoService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTContainerService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayerFeature, SPTURIDispatchService, SPTURISubtypeHandler;
+@protocol SPTContainerService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTRemoteConfigurationService, SPTURIDispatchService, SPTURISubtypeHandler;
 
-@interface SPTLiveVideoServiceImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTLiveVideoService>
+@interface SPTLiveVideoServiceImplementation : NSObject <SPTLiveVideoService>
 {
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTContainerService> _containerService;
     id <SPTURIDispatchService> _uriDispatchService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPlayerFeature> _playerService;
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
-    id <SPTFeatureFlagSignal> _enabledSignal;
+    id <SPTPlayer> _player;
     id <SPTURISubtypeHandler> _subtypeHandler;
     id <SPTNetworkService> _networkFeature;
 }
@@ -29,19 +28,17 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(retain, nonatomic) id <SPTURISubtypeHandler> subtypeHandler; // @synthesize subtypeHandler=_subtypeHandler;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> enabledSignal; // @synthesize enabledSignal=_enabledSignal;
+@property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 - (id)provideLiveContextFactory;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)disableService;
 - (void)enableService;
 - (void)unload;
-- (void)setupFeatureFlagSignal;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

@@ -12,17 +12,18 @@
     // Error parsing type: , name: contextMenuService
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: freeTierPlaylistUIService
+    // Error parsing type: , name: networkService
     // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: sessionService
-    // Error parsing type: , name: testManager
-    // Error parsing type: , name: dataLoader
+    // Error parsing type: , name: $__lazy_storage_$_offlineMixServiceClient
     // Error parsing type: , name: $__lazy_storage_$_offlineMixPlaylistDataLoader
     // Error parsing type: , name: $__lazy_storage_$_dialogPresenter
     // Error parsing type: , name: $__lazy_storage_$_downloadManager
     // Error parsing type: , name: $__lazy_storage_$_modelProvider
     // Error parsing type: , name: $__lazy_storage_$_playlistFilter
     // Error parsing type: , name: $__lazy_storage_$_isLimitedOfflineEnabled
+    // Error parsing type: , name: testManager
     // Error parsing type: , name: token
 }
 

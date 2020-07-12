@@ -11,7 +11,7 @@
 #import "SPTSocialListeningViewModel-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTObserverManager, SPTSocialListeningDialogPresenter, UIColor, UIImage;
-@protocol SPTLinkDispatcher, SPTShareEntityData, SPTShareEntityDataFactory, SPTShareFeature, SPTSocialListeningListenTogetherStateManager, SPTSocialListeningModel, SPTSocialListeningTestManager;
+@protocol SPTLinkDispatcher, SPTProfileUserData, SPTShareEntityData, SPTShareEntityDataFactory, SPTShareFeature, SPTSocialListeningListenTogetherStateManager, SPTSocialListeningModel, SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningViewModelImplementation : NSObject <SPTSocialListeningDialogPresenterDelegate, SPTSocialListeningViewModel, SPTSocialListeningModelObserver>
 {
@@ -24,10 +24,11 @@
     SPTSocialListeningDialogPresenter *_dialogPresenter;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTShareEntityDataFactory> _shareEntityDataFactory;
+    id <SPTProfileUserData> _currentUserData;
     NSURL *_currentSessionURL;
     UIImage *_scannablesImage;
     UIColor *_sessionColor;
-    NSArray *_connectedUsers;
+    NSArray *_users;
     unsigned long long _numberOfVisibleUsers;
     unsigned long long _numberOfOverflowUsers;
     unsigned long long _numberOfUsers;
@@ -42,10 +43,11 @@
 @property(nonatomic) unsigned long long numberOfUsers; // @synthesize numberOfUsers=_numberOfUsers;
 @property(nonatomic) unsigned long long numberOfOverflowUsers; // @synthesize numberOfOverflowUsers=_numberOfOverflowUsers;
 @property(nonatomic) unsigned long long numberOfVisibleUsers; // @synthesize numberOfVisibleUsers=_numberOfVisibleUsers;
-@property(copy, nonatomic) NSArray *connectedUsers; // @synthesize connectedUsers=_connectedUsers;
+@property(copy, nonatomic) NSArray *users; // @synthesize users=_users;
 @property(copy, nonatomic) UIColor *sessionColor; // @synthesize sessionColor=_sessionColor;
 @property(copy, nonatomic) UIImage *scannablesImage; // @synthesize scannablesImage=_scannablesImage;
 @property(copy, nonatomic) NSURL *currentSessionURL; // @synthesize currentSessionURL=_currentSessionURL;
+@property(readonly, nonatomic) id <SPTProfileUserData> currentUserData; // @synthesize currentUserData=_currentUserData;
 @property(readonly, nonatomic) id <SPTShareEntityDataFactory> shareEntityDataFactory; // @synthesize shareEntityDataFactory=_shareEntityDataFactory;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTSocialListeningDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
@@ -67,6 +69,7 @@
 - (void)leaveOrDeleteSessionFromScreen:(unsigned long long)arg1;
 @property(readonly, nonatomic) NSArray *shareDestinations;
 @property(readonly, nonatomic) id <SPTShareEntityData> shareEntityData;
+@property(readonly, nonatomic) _Bool facepileDimmingHidden;
 @property(readonly, copy, nonatomic) NSString *participantsNavigationBarTitle;
 @property(readonly, copy, nonatomic) NSString *leaveButtonText;
 @property(readonly, copy, nonatomic) NSString *descriptionLabelText;
@@ -79,13 +82,14 @@
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
 @property(readonly, nonatomic) _Bool sessionButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
+@property(readonly, nonatomic) _Bool privacyDisclaimerLabelHidden;
 @property(readonly, nonatomic) _Bool tryAgainViewHidden;
 @property(readonly, copy, nonatomic) NSString *tryAgainLabelText;
 @property(readonly, nonatomic) _Bool scannablesImageHidden;
 @property(readonly, nonatomic) _Bool scannableViewHidden;
 @property(readonly, nonatomic) long long state;
 - (void)load;
-- (id)initWithModel:(id)arg1 shareFeature:(id)arg2 dialogPresenter:(id)arg3 linkDispatcher:(id)arg4 testManager:(id)arg5 stateManager:(id)arg6;
+- (id)initWithModel:(id)arg1 shareFeature:(id)arg2 dialogPresenter:(id)arg3 linkDispatcher:(id)arg4 testManager:(id)arg5 stateManager:(id)arg6 currentUserData:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -44,7 +44,6 @@
 @property(readonly, nonatomic) id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (id)managerForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)featuredContentTimelineLinkForEpisodeURL:(id)arg1 withContext:(id)arg2;
-- (id)featuredContentTimelineForEpisodeURL:(id)arg1 withContext:(id)arg2 configureForEmbeddingInScrollView:(_Bool)arg3;
 - (id)featuredContentTimelineForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentTrackListForEpisodeURL:(id)arg1 withContext:(id)arg2;
 - (id)featuredContentForEpisodeURL:(id)arg1 withContext:(id)arg2;

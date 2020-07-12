@@ -6,26 +6,31 @@
 
 #import "HUGSThemableComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithEvents-Protocol.h"
 
-@class SPTHomeUIListeningHistorySectionHeaderView;
-@protocol GLUETheme, HUBComponentEventHandler;
+@class SPTHomeUIFeatureProperties, SPTHomeUIListeningHistorySectionHeaderView, SPTHomeUILoggerImplementation;
+@protocol HUBComponentEventHandler;
 
-@interface SPTHomeUIListeningHistorySectionHeaderComponentView : HUGSThemableComponentView <HUBComponentViewWithEvents>
+@interface SPTHomeUIListeningHistorySectionHeaderComponentView : HUGSThemableComponentView <HUBComponentViewWithEvents, HUBComponentViewObserver>
 {
-    id <GLUETheme> _theme;
     id <HUBComponentEventHandler> _eventHandler;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     SPTHomeUIListeningHistorySectionHeaderView *_listeningHistorySectionHeaderView;
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUIListeningHistorySectionHeaderView *listeningHistorySectionHeaderView; // @synthesize listeningHistorySectionHeaderView=_listeningHistorySectionHeaderView;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (id)theme;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)didTapSectionHeaderButton;
 - (void)configureWithModel:(id)arg1;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 logger:(id)arg3 remoteConfigProperties:(id)arg4;
 
 @end
 

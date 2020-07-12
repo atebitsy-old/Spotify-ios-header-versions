@@ -25,8 +25,8 @@
 @property(readonly, nonatomic) id <HUBImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <SPTHomeGradientBackgroundGeneratorDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)extractColorFromImage:(id)arg1 fallbackColor:(id)arg2;
-- (void)imageLoader:(id)arg1 didFailLoadingImageForURL:(id)arg2 error:(id)arg3;
-- (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3;
+- (void)imageLoader:(id)arg1 didFailLoadingImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
+- (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 context:(id)arg4;
 - (void)setGradientColor:(id)arg1;
 - (void)createGradientWithImageURL:(id)arg1;
 - (id)findImageURIInComponentModels:(id)arg1;

@@ -19,6 +19,7 @@
     // Error parsing type: , name: onDemandService
     // Error parsing type: , name: playerFeature
     // Error parsing type: , name: eventSenderService
+    // Error parsing type: , name: ubiService
 }
 
 - (void).cxx_destruct;

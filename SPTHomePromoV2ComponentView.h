@@ -6,6 +6,7 @@
 
 #import "HUGSThemableComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 #import "HUGSSelectableComponentView-Protocol.h"
@@ -14,7 +15,7 @@
 @class NSString, SPTHomeUIPromoV2BackgroundView, SPTHomeUIPromoV2ContentView, SPTHomeUIPromoV2ViewStyle, UIGestureRecognizer, UIView;
 @protocol HUBCommandModel, HUBComponentEventHandler, SPTHomePromoV2ComponentViewDelegate;
 
-@interface SPTHomePromoV2ComponentView : HUGSThemableComponentView <SPTHomeUIPromoV2ContentViewDelegate, HUBComponentViewWithEvents, HUGSSelectableComponentView, HUBComponentViewWithImageHandling>
+@interface SPTHomePromoV2ComponentView : HUGSThemableComponentView <SPTHomeUIPromoV2ContentViewDelegate, HUBComponentViewWithEvents, HUGSSelectableComponentView, HUBComponentViewWithImageHandling, HUBComponentViewObserver>
 {
     id <HUBComponentEventHandler> _eventHandler;
     UIGestureRecognizer *_selectionGestureRecognizer;
@@ -41,6 +42,8 @@
 - (void)didTapPlayButtonInContentView:(id)arg1;
 - (void)sendSelectionEvent;
 @property(readonly, nonatomic) UIView *selectionView;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (id)titleColorForImage:(id)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;

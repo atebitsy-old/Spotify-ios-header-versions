@@ -13,23 +13,29 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class NSString, SPTHomeUICarouselLayout, UICollectionView;
+@class HUBContext, NSString, SPTHomeUICarouselLayout, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, UICollectionView;
 @protocol HUBComponentViewChildDelegate, SPTHomeUICarouselChildSizingDelegate, UICollectionViewDragDelegate;
 
-@interface SPTHomeUICarouselComponentView : HUGSThemableComponentView <UICollectionViewDataSource, UICollectionViewDelegate, SPTHomeUICarouselLayoutDelegate, HUBComponentViewWithDraggableChildren, HUBComponentViewObserver, HUBComponentViewWithRestorableUIState>
+@interface SPTHomeUICarouselComponentView : HUGSThemableComponentView <UICollectionViewDataSource, UICollectionViewDelegate, SPTHomeUICarouselLayoutDelegate, HUBComponentViewWithDraggableChildren, HUBComponentViewWithRestorableUIState, HUBComponentViewObserver>
 {
     id <HUBComponentViewChildDelegate> _childDelegate;
+    id <SPTHomeUICarouselChildSizingDelegate> _childSizingDelegate;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     UICollectionView *_collectionView;
     SPTHomeUICarouselLayout *_layout;
-    id <SPTHomeUICarouselChildSizingDelegate> _childSizingDelegate;
+    HUBContext *_context;
 }
 
 + (double)spacingForBoundsSize:(struct CGSize)arg1 theme:(id)arg2;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2 model:(id)arg3 childSizingDelegate:(id)arg4;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) __weak id <SPTHomeUICarouselChildSizingDelegate> childSizingDelegate; // @synthesize childSizingDelegate=_childSizingDelegate;
+@property(retain, nonatomic) HUBContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTHomeUICarouselLayout *layout; // @synthesize layout=_layout;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) __weak id <SPTHomeUICarouselChildSizingDelegate> childSizingDelegate; // @synthesize childSizingDelegate=_childSizingDelegate;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
 - (double)clamp:(double)arg1 min:(double)arg2 max:(double)arg3;
 - (double)spacing;
@@ -49,7 +55,7 @@
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 childSizingDelegate:(id)arg3;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 childSizingDelegate:(id)arg3 logger:(id)arg4 remoteConfigProperties:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

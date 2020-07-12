@@ -10,8 +10,8 @@
 #import "SPTAssistedCurationUIService-Protocol.h"
 #import "SPTURISubtypeHandler-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTAssistedCurationLinkDispatcherImplementation, SPTAssistedCurationPresentationHelper;
-@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationService, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTRemoteConfigurationService, SPTSearchPlatformService, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@class NSArray, NSString, SPTAllocationContext, SPTAssistedCurationLinkDispatcherImplementation, SPTAssistedCurationPresentationHelper;
+@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationService, SPTAssistedCurationUIContextHandler, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTRemoteConfigurationService, SPTSearchPlatformService, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTAssistedCurationUIServiceImplementation : SPTUIPageService <SPTAssistedCurationLinkDispatcherPageProvider, SPTAssistedCurationUIService, SPTURISubtypeHandler>
 {
@@ -35,10 +35,14 @@
     id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <SPTUBIService> _ubiService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    NSArray *_contextHandlers;
+    id <SPTAssistedCurationUIContextHandler> _contextHandlerFallback;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTAssistedCurationUIContextHandler> contextHandlerFallback; // @synthesize contextHandlerFallback=_contextHandlerFallback;
+@property(copy, nonatomic) NSArray *contextHandlers; // @synthesize contextHandlers=_contextHandlers;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
@@ -63,21 +67,25 @@
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (void)unregisterLinkHandler;
 - (void)registerLinkHandler;
-- (id)cardProvidersToWaitWithMostPlayedCard:(_Bool)arg1;
 - (id)provideAddSongsActionTaskForURL:(id)arg1 logContext:(id)arg2;
 - (id)provideLoggerForURI:(id)arg1 contextURI:(id)arg2;
 - (id)provideInterfaceFactoryWithViewModel:(id)arg1;
 - (id)provideTheme;
 - (id)provideGLUEImageLoader;
 - (id)provideEducationSnackBarPresenter;
+- (id)queueUIContextHandler;
+- (id)likedSongsUIContextHandler;
+- (id)playlistUIContextHandler;
+- (void)setupContextHandlers;
+- (id)contextHandlerForURI:(id)arg1;
 - (id)provideSearchDrillDownViewControllerForURL:(id)arg1 context:(id)arg2;
-- (id)provideAssistedCurationViewControllerForURI:(id)arg1 mostPlayedCard:(_Bool)arg2 model:(id)arg3;
-- (id)providePageLoaderViewControllerForURI:(id)arg1 mostPlayedCard:(_Bool)arg2;
+- (id)provideAssistedCurationViewControllerForURI:(id)arg1 contextHandler:(id)arg2 model:(id)arg3;
+- (id)providePageLoaderViewControllerForURI:(id)arg1;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideAssistedCurationPresentationHelper;
 - (id)providerAssistedCurationLinkDispatcher;
 - (_Bool)claimsURI:(id)arg1;
-- (void)curateForURL:(id)arg1 withMostPlayedCard:(_Bool)arg2;
+- (void)curateForURL:(id)arg1;
 - (void)curateQueue;
 - (void)curateLikedSongs;
 - (void)curatePlaylistURL:(id)arg1;

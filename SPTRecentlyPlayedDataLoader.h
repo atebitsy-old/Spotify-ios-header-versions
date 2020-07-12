@@ -29,6 +29,7 @@
 - (_Bool)enableContentType:(unsigned long long)arg1;
 - (void)hideEntityWithUrl:(id)arg1;
 - (void)subscribeOnSuccess:(CDUnknownBlockType)arg1 onError:(CDUnknownBlockType)arg2;
+- (void)dealloc;
 - (id)initWithCosmosDataLoader:(id)arg1 testManager:(id)arg2;
 
 @end

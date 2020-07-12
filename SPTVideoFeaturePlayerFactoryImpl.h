@@ -35,7 +35,7 @@
 - (id)playerConfigurationWithPreventDisplaySleepDuringVideoPlayback:(_Bool)arg1;
 - (id)loggerDataProviderForIdentifier:(id)arg1;
 - (id)cacheWithOptions:(id)arg1;
-- (id)defaultObserverFactoriesWithLoggerDataProvider:(id)arg1;
+- (id)defaultObserverFactoriesWithLoggerDataProvider:(id)arg1 royaltyMediaEnabled:(_Bool)arg2;
 - (id)createVideoPlayerWithFeatureIdentifier:(id)arg1 eventObserverFactories:(id)arg2 surfaceManager:(id)arg3 videoCacheOptions:(id)arg4 withRoyaltyMediaEnabled:(_Bool)arg5 preventDisplaySleepDuringVideoPlayback:(_Bool)arg6;
 - (id)createVideoPlayerWithFeatureIdentifier:(id)arg1 eventObserverFactories:(id)arg2 surface:(id)arg3 videoCacheOptions:(id)arg4 withRoyaltyMediaEnabled:(_Bool)arg5 preventDisplaySleepDuringVideoPlayback:(_Bool)arg6;
 - (id)initWithPlayerFactory:(id)arg1 featureFlags:(id)arg2 videoFeatureProperties:(id)arg3 logger:(id)arg4 loginSession:(id)arg5 networkConnectivityController:(id)arg6 requestAccounting:(id)arg7 audioPlayerMediaClockService:(id)arg8;

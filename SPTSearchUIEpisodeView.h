@@ -29,7 +29,6 @@
     UIStackView *_subtitleStack;
 }
 
-+ (double)subtitleSpacingForStyle:(id)arg1;
 + (double)imageToLabelsSpacingForStyle:(id)arg1;
 + (struct CGSize)sizeForTitle:(id)arg1 subtitle:(id)arg2 accessoryTitle:(id)arg3 accessoryIconImage:(id)arg4 explicitContent:(_Bool)arg5 style:(id)arg6 maxWidth:(double)arg7;
 - (void).cxx_destruct;

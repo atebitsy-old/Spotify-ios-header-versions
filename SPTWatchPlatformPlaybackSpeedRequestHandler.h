@@ -8,22 +8,26 @@
 
 #import "SPTWatchConnectivityRequestHandler-Protocol.h"
 
-@class NSString, SPTWatchConnectivityDataLoader;
-@protocol SPTPodcastSpeedControlManager;
+@class NSString, SPTWatchConnectivityDataLoader, SPTWatchPlatformLogging;
+@protocol SPTAccessoryActionLogger, SPTPodcastSpeedControlManager;
 
 @interface SPTWatchPlatformPlaybackSpeedRequestHandler : NSObject <SPTWatchConnectivityRequestHandler>
 {
     SPTWatchConnectivityDataLoader *_dataLoader;
     id <SPTPodcastSpeedControlManager> _podcastSpeedControlManager;
+    SPTWatchPlatformLogging *_watchPlatformLogging;
+    id <SPTAccessoryActionLogger> _actionLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
+@property(readonly, nonatomic) SPTWatchPlatformLogging *watchPlatformLogging; // @synthesize watchPlatformLogging=_watchPlatformLogging;
 @property(readonly, nonatomic) __weak id <SPTPodcastSpeedControlManager> podcastSpeedControlManager; // @synthesize podcastSpeedControlManager=_podcastSpeedControlManager;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)sendCompletionResponseForRequest:(id)arg1 body:(id)arg2 error:(id)arg3;
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;
-- (id)initWithDataLoader:(id)arg1 podcastSpeedControlManager:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 podcastSpeedControlManager:(id)arg2 watchPlatformLogging:(id)arg3 actionLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

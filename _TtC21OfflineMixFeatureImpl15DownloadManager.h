@@ -8,21 +8,23 @@
 
 @interface _TtC21OfflineMixFeatureImpl15DownloadManager : NSObject
 {
-    // Error parsing type: , name: observerManager
-    // Error parsing type: , name: offlineState
-    // Error parsing type: , name: dispatchWorkItems
     // Error parsing type: , name: dialogPresenter
+    // Error parsing type: , name: observerManagers
+    // Error parsing type: , name: offlineManager
+    // Error parsing type: , name: offlineMixServiceClient
+    // Error parsing type: , name: playlistDataLoader
 }
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)changeOfflineStateFor:(id)arg1;
 - (unsigned long long)offlineStateOf:(id)arg1;
 - (_Bool)isAvailableOffline:(id)arg1;
 - (void)remove:(id)arg1;
 - (void)download:(id)arg1;
 - (void)removeObserver:(id)arg1;
-- (void)addObserver:(id)arg1;
+- (void)removeObserver:(id)arg1 forTrack:(id)arg2;
+- (void)addObserver:(id)arg1 forTrack:(id)arg2;
+- (void)dealloc;
 
 @end
 

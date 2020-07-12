@@ -13,7 +13,7 @@
 
 @interface SPTVideoDefaultResourceRequestFactory : NSObject <SPTVideoResourceRequestFactory>
 {
-    _Bool _cachingFlatFilesEnabled;
+    _Bool _bitstreamCachingEnabled;
     id <BMPlaybackIdentity> _identity;
     id <BMDataLoader> _dataLoader;
     id <BMChunkCache> _cache;
@@ -26,12 +26,12 @@
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *queue; // @synthesize queue=_queue;
 @property(retain, nonatomic) SPTVideoFairplayService *fairplayService; // @synthesize fairplayService=_fairplayService;
 @property(retain, nonatomic) id <SPTVideoEventDispatcher> eventDispatcher; // @synthesize eventDispatcher=_eventDispatcher;
-@property(nonatomic) _Bool cachingFlatFilesEnabled; // @synthesize cachingFlatFilesEnabled=_cachingFlatFilesEnabled;
+@property(nonatomic) _Bool bitstreamCachingEnabled; // @synthesize bitstreamCachingEnabled=_bitstreamCachingEnabled;
 @property(retain, nonatomic) id <BMChunkCache> cache; // @synthesize cache=_cache;
 @property(retain, nonatomic) id <BMDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
 - (id)createRequestForURL:(id)arg1 loadingRequest:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)initWithIdentity:(id)arg1 dataLoader:(id)arg2 cache:(id)arg3 cachingFlatFilesEnabled:(_Bool)arg4 eventDispatcher:(id)arg5 fairplayService:(id)arg6;
+- (id)initWithIdentity:(id)arg1 dataLoader:(id)arg2 cache:(id)arg3 bitstreamCachingEnabled:(_Bool)arg4 eventDispatcher:(id)arg5 fairplayService:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

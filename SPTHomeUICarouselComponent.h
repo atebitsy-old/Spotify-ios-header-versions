@@ -10,20 +10,25 @@
 #import "HUBComponentWithChildren-Protocol.h"
 #import "SPTHomeUICarouselChildSizingDelegate-Protocol.h"
 
-@class NSSet, NSString;
+@class NSSet, NSString, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation;
 @protocol HUBComponentChildDelegate;
 
 @interface SPTHomeUICarouselComponent : HUGSThemableComponent <SPTHomeUICarouselChildSizingDelegate, HUBComponent, HUBComponentWithChildren>
 {
     id <HUBComponentChildDelegate> _childDelegate;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(retain, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <HUBComponentChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
 - (struct CGSize)sizeForChildAtIndex:(unsigned long long)arg1 inModel:(id)arg2 containerSize:(struct CGSize)arg3;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
+- (id)initWithTheme:(id)arg1 logger:(id)arg2 remoteConfigProperties:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

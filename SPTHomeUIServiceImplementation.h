@@ -9,7 +9,7 @@
 #import "SPTHomeUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHomeUIFeatureProperties;
-@protocol SPTContainerService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService;
+@protocol SPTContainerService, SPTEventSenderService, SPTFeatureFlaggingService, SPTGLUEService, SPTHomeUIComponentFactory, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService;
 
 @interface SPTHomeUIServiceImplementation : NSObject <SPTHomeUIService>
 {
@@ -21,12 +21,14 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTSessionService> _sessionService;
     id <SPTUBIService> _ubiService;
+    id <SPTEventSenderService> _eventSenderService;
     SPTHomeUIFeatureProperties *_remoteConfigProperties;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
@@ -35,6 +37,7 @@
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
+- (id)provideHomeUILogger;
 - (id)provideHomeComponentLayoutManager;
 @property(readonly, nonatomic) id <SPTHomeUIComponentFactory> componentFactory;
 - (void)configureWithServices:(id)arg1;

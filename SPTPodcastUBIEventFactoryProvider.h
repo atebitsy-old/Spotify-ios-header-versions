@@ -12,6 +12,7 @@
 
 - (id)ubiPodcastUnfinishedEpisodeCardEventFactoryWithPageURI:(id)arg1;
 - (id)ubiPodcastEpisodeCardEventFactoryWithPageURI:(id)arg1;
+- (id)ubiPodcastEmptyEventFactoryWithPageURI:(id)arg1;
 - (id)ubiPodcastSortEventFactoryWithPageURI:(id)arg1;
 - (id)ubiPodcastEventFactoryWithPageURI:(id)arg1;
 

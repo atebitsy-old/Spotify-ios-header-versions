@@ -70,8 +70,8 @@
 - (void)refreshBarHeight;
 - (void)bounceBar;
 - (void)hideBarAnimated:(_Bool)arg1;
-- (void)removeBarAttachmentViewController:(id)arg1 animated:(_Bool)arg2;
-- (void)addBarAttachmentViewController:(id)arg1 atIndex:(unsigned long long)arg2 height:(double)arg3 animated:(_Bool)arg4;
+- (void)removeBarAttachmentViewController:(id)arg1;
+- (void)addBarAttachmentViewController:(id)arg1 atIndex:(unsigned long long)arg2 height:(double)arg3;
 - (void)addViewController:(id)arg1;
 - (void)addViewForViewController:(id)arg1;
 - (void)viewDidAppear:(_Bool)arg1;

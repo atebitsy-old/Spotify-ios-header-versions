@@ -8,36 +8,43 @@
 
 #import "GLUEStyleable-Protocol.h"
 #import "HUBComponentViewContentOffsetObserver-Protocol.h"
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithEvents-Protocol.h"
 
-@class GLUELabel, NSString, UIButton, UIImageView;
+@class GLUELabel, NSString, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, UIButton, UIImageView;
 @protocol HUBComponentEventHandler;
 
-@interface SPTHomeUITooltipView : HUGSThemableComponentView <HUBComponentViewWithEvents, HUBComponentViewContentOffsetObserver, GLUEStyleable>
+@interface SPTHomeUITooltipView : HUGSThemableComponentView <HUBComponentViewWithEvents, HUBComponentViewContentOffsetObserver, GLUEStyleable, HUBComponentViewObserver>
 {
     id <HUBComponentEventHandler> _eventHandler;
+    unsigned long long _position;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     UIImageView *_beakImageView;
     GLUELabel *_label;
     UIButton *_closeButton;
     double _horizontalAnchorPosition;
-    unsigned long long _position;
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) unsigned long long position; // @synthesize position=_position;
 @property(nonatomic) double horizontalAnchorPosition; // @synthesize horizontalAnchorPosition=_horizontalAnchorPosition;
 @property(readonly, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(readonly, nonatomic) GLUELabel *label; // @synthesize label=_label;
 @property(readonly, nonatomic) UIImageView *beakImageView; // @synthesize beakImageView=_beakImageView;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) unsigned long long position; // @synthesize position=_position;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)close;
 - (void)glue_applyStyle:(id)arg1;
 - (void)horizontallyAnchorBeak:(double)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)layoutSubviews;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 position:(unsigned long long)arg3;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 position:(unsigned long long)arg3 logger:(id)arg4 remoteConfigProperties:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

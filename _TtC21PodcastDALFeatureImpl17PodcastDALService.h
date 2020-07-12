@@ -16,7 +16,6 @@
 - (id)init;
 - (id)providePodcastRequestFactory;
 - (id)provideDataLoaderWithResolver:(id)arg1;
-- (id)provideUpdateEpisodeUnplayedRequestDataWithURIStrings:(id)arg1 markAsUnplayed:(_Bool)arg2;
 - (id)providePodcastEpisodeFactory;
 - (id)providePodcastFactory;
 - (void)unload;

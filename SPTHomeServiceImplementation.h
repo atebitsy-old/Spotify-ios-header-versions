@@ -9,7 +9,7 @@
 #import "SPTHomeService-Protocol.h"
 
 @class NSString, NSURL, SPTAllocationContext, SPTHomeContentCache, SPTHomeFeatureProperties, SPTHomeHubManager;
-@protocol SPTCreatePlaylistService, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSeedASessionService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
+@protocol SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -31,8 +31,6 @@
     id <SPTFreeTierTasteOnboardingService> _tasteOnboardingService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIService> _ubiService;
-    id <SPTSeedASessionService> _seedASessionService;
-    id <SPTCreatePlaylistService> _createPlaylistService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> _listeningHistoryService;
     id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> _musicVideoUIService;
@@ -59,8 +57,6 @@
 @property(nonatomic) __weak id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> musicVideoUIService; // @synthesize musicVideoUIService=_musicVideoUIService;
 @property(nonatomic) __weak id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> listeningHistoryService; // @synthesize listeningHistoryService=_listeningHistoryService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-@property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
-@property(nonatomic) __weak id <SPTSeedASessionService> seedASessionService; // @synthesize seedASessionService=_seedASessionService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTFreeTierTasteOnboardingService> tasteOnboardingService; // @synthesize tasteOnboardingService=_tasteOnboardingService;

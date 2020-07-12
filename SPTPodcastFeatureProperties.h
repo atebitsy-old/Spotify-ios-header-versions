@@ -18,6 +18,7 @@
     _Bool _podcastNewPlaybackSpeedsEnabled;
     _Bool _podcastShowPageSearchEnabled;
     _Bool _podcastShowPageHtmlDescriptionEnabled;
+    _Bool _podcastDataAccessLayerEnabledForExternalFeatures;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
     NSString *_followShowConfirmationOverrideString;
@@ -29,6 +30,7 @@
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
+@property(readonly, nonatomic) _Bool podcastDataAccessLayerEnabledForExternalFeatures; // @synthesize podcastDataAccessLayerEnabledForExternalFeatures=_podcastDataAccessLayerEnabledForExternalFeatures;
 @property(readonly, nonatomic) _Bool podcastShowPageHtmlDescriptionEnabled; // @synthesize podcastShowPageHtmlDescriptionEnabled=_podcastShowPageHtmlDescriptionEnabled;
 @property(readonly, nonatomic) _Bool podcastShowPageSearchEnabled; // @synthesize podcastShowPageSearchEnabled=_podcastShowPageSearchEnabled;
 @property(readonly, nonatomic) _Bool podcastNewPlaybackSpeedsEnabled; // @synthesize podcastNewPlaybackSpeedsEnabled=_podcastNewPlaybackSpeedsEnabled;

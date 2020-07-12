@@ -13,6 +13,7 @@
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: collectionView
     // Error parsing type: , name: listItemBinder
+    // Error parsing type: , name: contentHeaderBinder
     // Error parsing type: , name: model
 }
 

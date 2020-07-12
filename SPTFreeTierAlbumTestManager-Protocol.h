@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTFreeTierAlbumTestManager <NSObject>
+- (_Bool)isAlbumPageLoaderDisabled;
 - (_Bool)isAlbumOfflineMangementEnabled;
 @end
 

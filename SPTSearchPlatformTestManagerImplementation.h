@@ -15,32 +15,22 @@
 @interface SPTSearchPlatformTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTSearchPlatformTestManager>
 {
     _Bool _searchKitEnabled;
-    _Bool _podcastResultCardsTopPlayedEnabled;
-    _Bool _podcastResultCardsDurationEnabled;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     SPTSearchFeatureProperties *_properties;
     id <SPTFeatureFlagSignal> _searchKitSignal;
-    id <SPTFeatureFlagSignal> _podcastResultCardsTopPlayedSignal;
-    id <SPTFeatureFlagSignal> _podcastResultCardsDurationSignal;
-    unsigned long long _podcastRowsType;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) unsigned long long podcastRowsType; // @synthesize podcastRowsType=_podcastRowsType;
-@property(nonatomic, getter=isPodcastResultCardsDurationEnabled) _Bool podcastResultCardsDurationEnabled; // @synthesize podcastResultCardsDurationEnabled=_podcastResultCardsDurationEnabled;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> podcastResultCardsDurationSignal; // @synthesize podcastResultCardsDurationSignal=_podcastResultCardsDurationSignal;
-@property(nonatomic, getter=isPodcastResultCardsTopPlayedEnabled) _Bool podcastResultCardsTopPlayedEnabled; // @synthesize podcastResultCardsTopPlayedEnabled=_podcastResultCardsTopPlayedEnabled;
-@property(readonly, nonatomic) id <SPTFeatureFlagSignal> podcastResultCardsTopPlayedSignal; // @synthesize podcastResultCardsTopPlayedSignal=_podcastResultCardsTopPlayedSignal;
 @property(nonatomic, getter=isSearchKitEnabled) _Bool searchKitEnabled; // @synthesize searchKitEnabled=_searchKitEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> searchKitSignal; // @synthesize searchKitSignal=_searchKitSignal;
 @property(readonly, nonatomic) SPTSearchFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
+@property(readonly, nonatomic, getter=areNewPodcastRowsEnabled) _Bool newPodcastRowsEnabled;
+@property(readonly, nonatomic, getter=isNewRecentsRowEnabled) _Bool newRecentsRowEnabled;
 @property(readonly, nonatomic, getter=isLyricsRowDebuggingEnabled) _Bool lyricsRowDebuggingEnabled;
 @property(readonly, nonatomic, getter=isTopicsEnabled) _Bool topicsEnabled;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)updatePodcastRowType;
 - (void)setUpSearchKitSignal;
-- (void)setUpPodcastResultsCardsSignals;
 - (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2;
 
 // Remaining properties

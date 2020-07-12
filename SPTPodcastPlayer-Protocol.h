@@ -6,19 +6,15 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSNumber, NSString, NSURL, SPTPlayOrigin, SPTPlayerContext;
+@class NSArray, NSNumber, NSString, NSURL, SPTPlayOrigin, SPTPlayerContext, SPTPlayerState;
 @protocol SPTPodcastEpisode, SPTPodcastPlayerDelegate;
 
 @protocol SPTPodcastPlayer <NSObject>
-@property(readonly, nonatomic, getter=isPaused) _Bool paused;
-@property(readonly, nonatomic) _Bool isMusicInjectionTrack;
-@property(readonly, nonatomic) _Bool isPlayingPodcastEpisode;
-@property(readonly, nonatomic) double currentTrackDuration;
 @property(readonly, nonatomic) double currentTrackPosition;
 @property(readonly, nonatomic) double currentTrackProgress;
 @property(readonly, nonatomic) NSURL *currentlyPlayingTrack;
 @property(nonatomic) __weak id <SPTPodcastPlayerDelegate> delegate;
-@property(readonly, nonatomic) NSURL *lastStateContextURI;
+@property(readonly, nonatomic) SPTPlayerState *lastState;
 - (_Bool)resumePodcast:(NSURL *)arg1 episodeUrl:(NSURL *)arg2;
 - (_Bool)seekInPodcast:(NSURL *)arg1 episodeUrl:(NSURL *)arg2 toPosition:(double)arg3;
 - (_Bool)isActiveContextURI:(NSURL *)arg1;

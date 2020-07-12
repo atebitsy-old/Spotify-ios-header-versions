@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: state
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: properties
     // Error parsing type: , name: observerManager
 }
 
@@ -18,6 +19,7 @@
 - (void)carViewAvailabilityChangedWithEnabled:(_Bool)arg1;
 - (void)deactivationTriggered;
 - (void)activationTriggered;
+@property(nonatomic, readonly) _Bool isSettingsEnabled;
 @property(nonatomic) long long state; // @synthesize state;
 
 @end

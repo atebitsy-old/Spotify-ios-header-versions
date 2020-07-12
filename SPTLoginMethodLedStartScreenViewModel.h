@@ -10,13 +10,14 @@
 
 @interface SPTLoginMethodLedStartScreenViewModel : NSObject
 {
-    SPTLoginMethodLedStartViewLogger *_logger;
     SPTDynamicSignupFlowController *_flowController;
+    SPTLoginMethodLedStartViewLogger *_logger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTLoginMethodLedStartViewLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
+- (void)logUserDidSeeView;
 - (void)userClickedSignup;
 - (void)userClickedLogin;
 - (id)buttonContainerHeadingText;

@@ -15,8 +15,8 @@
     NSString *_clientVersion;
 }
 
-@property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
 - (id)applicationIos;
 @property(readonly, copy, nonatomic) NSData *contextData;
 @property(readonly, copy, nonatomic) NSString *contextName;

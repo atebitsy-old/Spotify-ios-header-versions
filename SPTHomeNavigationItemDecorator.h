@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class SPTHomeLogger, SPTHomeNavigationButton, SPTSeedASessionConfiguration, SPTTheme, UIBarButtonItem, UIButton;
-@protocol SPTBarButtonItemManager, SPTLinkDispatcher, SPTLocalSettings, _TtP17FollowFeedFeature19SPTFollowFeedLogger_, _TtP17FollowFeedFeature21SPTFeedUpdatesManager_, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_;
+@class SPTHomeLogger, SPTHomeNavigationButton, SPTTheme;
+@protocol SPTBarButtonItemManager, SPTLinkDispatcher, _TtP17FollowFeedFeature19SPTFollowFeedLogger_, _TtP17FollowFeedFeature21SPTFeedUpdatesManager_, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_;
 
 @interface SPTHomeNavigationItemDecorator : NSObject
 {
@@ -20,17 +20,9 @@
     id <_TtP17FollowFeedFeature21SPTFeedUpdatesManager_> _feedUpdatesManager;
     SPTHomeNavigationButton *_settingsButton;
     SPTHomeNavigationButton *_feedButton;
-    UIButton *_seedASessionButton;
-    SPTSeedASessionConfiguration *_seedASessionConfiguration;
-    id <SPTLocalSettings> _localSettings;
-    UIBarButtonItem *_seedASessionBarButtonItem;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIBarButtonItem *seedASessionBarButtonItem; // @synthesize seedASessionBarButtonItem=_seedASessionBarButtonItem;
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(retain, nonatomic) SPTSeedASessionConfiguration *seedASessionConfiguration; // @synthesize seedASessionConfiguration=_seedASessionConfiguration;
-@property(retain, nonatomic) UIButton *seedASessionButton; // @synthesize seedASessionButton=_seedASessionButton;
 @property(retain, nonatomic) SPTHomeNavigationButton *feedButton; // @synthesize feedButton=_feedButton;
 @property(retain, nonatomic) SPTHomeNavigationButton *settingsButton; // @synthesize settingsButton=_settingsButton;
 @property(readonly, nonatomic) __weak id <_TtP17FollowFeedFeature21SPTFeedUpdatesManager_> feedUpdatesManager; // @synthesize feedUpdatesManager=_feedUpdatesManager;
@@ -41,15 +33,13 @@
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 - (void)updateFeedNavigationItemIfNeeded:(id)arg1;
-- (void)seedASessionButtonPressed:(id)arg1;
 - (void)feedButtonPressed:(id)arg1;
 - (void)settingsButtonPressed;
 - (id)followFeedNavBarItem;
-- (id)leftItems;
 - (id)rightItems;
 - (void)updateNavigationItemDecoratorAlpha:(double)arg1;
 - (void)decoratePageController:(id)arg1;
-- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedRemoteConfig:(id)arg5 feedUpdatesManager:(id)arg6 feedLogger:(id)arg7 seedASessionConfiguration:(id)arg8 localSettings:(id)arg9;
+- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedRemoteConfig:(id)arg5 feedUpdatesManager:(id)arg6 feedLogger:(id)arg7;
 
 @end
 

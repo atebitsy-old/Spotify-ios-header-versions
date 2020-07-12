@@ -9,15 +9,17 @@
 #import "HUBContentOperation-Protocol.h"
 
 @class NSURL;
-@protocol HUBContentOperationDelegate;
+@protocol HUBContentOperationDelegate, SPTAssistedCurationUIContextHandler;
 
 @interface SPTAssistedCurationSearchResultDrillDownContentOperation : NSObject <HUBContentOperation>
 {
     id <HUBContentOperationDelegate> _delegate;
     NSURL *_contextURI;
+    id <SPTAssistedCurationUIContextHandler> _contextHandler;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAssistedCurationUIContextHandler> contextHandler; // @synthesize contextHandler=_contextHandler;
 @property(readonly, nonatomic) NSURL *contextURI; // @synthesize contextURI=_contextURI;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)addAssistedCurationEntityPrefixToSeeMoreURI:(id)arg1;
@@ -26,7 +28,7 @@
 - (void)addEntityDrillDownCommandModelInBodyComponentModelBuilder:(id)arg1;
 - (void)addTrackRowCommandModelAndCustomDataInBodyComponentModelBuilder:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (id)initWithContextURI:(id)arg1;
+- (id)initWithContextURI:(id)arg1 andContextHandler:(id)arg2;
 
 @end
 

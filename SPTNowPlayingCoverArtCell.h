@@ -23,6 +23,7 @@
 @property(retain, nonatomic) SPTNowPlayingCoverArtImageView *imageView; // @synthesize imageView=_imageView;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) struct UIEdgeInsets windowedContentInsets; // @synthesize windowedContentInsets=_windowedContentInsets;
+- (void)roundCorners:(_Bool)arg1;
 - (void)prepareForReuse;
 - (void)setupUI;
 - (id)initWithFrame:(struct CGRect)arg1;

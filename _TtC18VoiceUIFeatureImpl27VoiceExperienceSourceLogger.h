@@ -12,6 +12,7 @@
     // Error parsing type: , name: eventSender
     // Error parsing type: , name: element
     // Error parsing type: , name: source
+    // Error parsing type: , name: carModeStatus
 }
 
 @end

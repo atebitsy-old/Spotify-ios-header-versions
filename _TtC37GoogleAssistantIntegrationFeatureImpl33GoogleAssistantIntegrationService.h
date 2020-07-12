@@ -8,6 +8,7 @@
 
 @interface _TtC37GoogleAssistantIntegrationFeatureImpl33GoogleAssistantIntegrationService : NSObject
 {
+    // Error parsing type: , name: willAttemptOpenURI
     // Error parsing type: , name: containerService
     // Error parsing type: , name: externalIntegrationPlaybackService
     // Error parsing type: , name: uriDispatchService
@@ -18,6 +19,7 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (void)willAttemptToOpenSpotifyWithNotification:(id)arg1;
 - (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (void)unload;

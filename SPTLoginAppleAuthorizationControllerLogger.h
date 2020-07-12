@@ -6,14 +6,17 @@
 
 #import <objc/NSObject.h>
 
+@class NSString;
 @protocol SPTLoginLogger;
 
 @interface SPTLoginAppleAuthorizationControllerLogger : NSObject
 {
     id <SPTLoginLogger> _logger;
+    NSString *_screenIdentifier;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *screenIdentifier; // @synthesize screenIdentifier=_screenIdentifier;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void)logUserDidSeeCanNotReachAppleDialog;
 - (void)logUserDidSeeSignupDisabledDialog;
@@ -23,7 +26,7 @@
 - (void)logDidFailToShowCredentialsDialogWithType:(unsigned long long)arg1;
 - (void)logUserDidCancelCredentialsDialogWithType:(unsigned long long)arg1;
 - (void)logUserDidSelectCredentials;
-- (id)initWithLogger:(id)arg1;
+- (id)initWithLogger:(id)arg1 screenIdentifier:(id)arg2;
 
 @end
 

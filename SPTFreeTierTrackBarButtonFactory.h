@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTContextMenuPresenterFactory, SPTLogCenter, SPTUBILogger;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformConfiguration, SPTContextMenuPresenterFactory, SPTLogCenter, SPTUBILogger, _TtP17OfflineMixFeature26SPTOfflineMixModelProvider_;
 
 @interface SPTFreeTierTrackBarButtonFactory : NSObject
 {
@@ -14,18 +14,21 @@
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
     id <SPTLogCenter> _logCenter;
+    id <_TtP17OfflineMixFeature26SPTOfflineMixModelProvider_> _offlineMixModelProvider;
     id <SPTUBILogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <_TtP17OfflineMixFeature26SPTOfflineMixModelProvider_> offlineMixModelProvider; // @synthesize offlineMixModelProvider=_offlineMixModelProvider;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(readonly, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 - (id)createContextMenuButtonViewModelForViewURI:(id)arg1;
+- (id)createOfflineButtonViewModelForViewURI:(id)arg1;
 - (id)createFeedbackButtonViewModelForViewURI:(id)arg1;
-- (id)initWithCollectionConfiguration:(id)arg1 collectionPlatform:(id)arg2 contextMenuPresenterFactory:(id)arg3 logCenter:(id)arg4 ubiLogger:(id)arg5;
+- (id)initWithCollectionConfiguration:(id)arg1 collectionPlatform:(id)arg2 contextMenuPresenterFactory:(id)arg3 offlineMixModelProvider:(id)arg4 logCenter:(id)arg5 ubiLogger:(id)arg6;
 
 @end
 

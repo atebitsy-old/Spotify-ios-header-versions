@@ -47,6 +47,7 @@
 - (void)toggleDownloadButton;
 - (void)auxiliaryActionsHandlerDidToggleCollectionState:(id)arg1;
 - (id)getCurrentSubtitleWithNowPlayingModel:(id)arg1;
+- (void)updateOfflineMixDownloadManagerWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)updateWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)navigateToCurrentArtist;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;

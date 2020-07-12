@@ -17,30 +17,32 @@
     id <INSLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) INSPersistentStoreStack *stack; // @synthesize stack=_stack;
-- (void).cxx_destruct;
-- (unsigned long long)countInContext:(id)arg1 predicate:(id)arg2;
+- (unsigned long long)countMessagesInContext:(id)arg1 predicate:(id)arg2;
 - (id)installIdWithContext:(id)arg1 predicate:(id)arg2;
 - (id)sequenceNumbersMatchingPredicate:(id)arg1 limit:(unsigned long long)arg2 context:(id)arg3;
 - (id)messagesMatchingPredicate:(id)arg1 sortDescriptor:(id)arg2 limit:(unsigned long long)arg3 context:(id)arg4;
 - (id)fetchInstallIdEntityWithContext:(id)arg1;
 - (id)fetchSequenceNumberEntitiesWithSequenceIds:(id)arg1;
 - (id)fetchFirstMessageEntitiesWithSequenceNumbers:(id)arg1;
-- (void)eventSenderStatsNodesWithSequenceIds:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)installIdWithCompletion:(CDUnknownBlockType)arg1;
-- (void)persistEventEnvelope:(id)arg1 owner:(id)arg2 authenticated:(_Bool)arg3 withCompletion:(CDUnknownBlockType)arg4;
-- (void)fetchMessagesWithPredicate:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)persistNonAuthenticatedEventEnvelope:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)persistAuthenticatedEventEnvelope:(id)arg1 owner:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)nonAuthenticatedMessagesWithCompletion:(CDUnknownBlockType)arg1;
-- (void)authenticatedMessagesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)messagesWithCompletion:(CDUnknownBlockType)arg1;
-- (void)containMessageForId:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)deleteMessageForId:(id)arg1 completion:(CDUnknownBlockType)arg2;
-- (void)countWithCompletion:(CDUnknownBlockType)arg1;
-- (void)saveWithCompletion:(CDUnknownBlockType)arg1;
-- (void)incrementSequenceNumberWithEventName:(id)arg1 sequenceId:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (_Bool)isCurrentlyOnPrivateMOCDispatchQueue;
+- (void)performBlockOnPrivateMOCQueue:(CDUnknownBlockType)arg1;
+- (id)getEventSenderStatsNodesOnPrivateMOCWithSequenceIds:(id)arg1;
+- (id)getInstallIdOnPrivateMOC;
+- (id)persistEventEnvelopeOnPrivateMOC:(id)arg1 owner:(id)arg2 authenticated:(_Bool)arg3;
+- (id)fetchMessagesOnPrivateMOCWithPredicate:(id)arg1;
+- (id)persistNonAuthenticatedEventEnvelopeOnPrivateMOC:(id)arg1;
+- (id)persistAuthenticatedEventEnvelopeOnPrivateMOC:(id)arg1 owner:(id)arg2;
+- (id)getNonAuthenticatedMessagesOnPrivateMOC;
+- (id)getAuthenticatedMessagesOnPrivateMOCWithOwner:(id)arg1;
+- (id)getAllMessagesOnPrivateMOC;
+- (_Bool)doesContainMessageOnPrivateMOCWithId:(id)arg1;
+- (void)deleteMessageOnPrivateMOCWithId:(id)arg1;
+- (unsigned long long)getMessageCountOnPrivateMOC;
+- (void)saveOnPrivateMOC;
+- (id)incrementSequenceNumberOnPrivateMOCWithEventName:(id)arg1 sequenceId:(id)arg2;
 - (id)initWithPersistentStoreStack:(id)arg1 logger:(id)arg2;
 
 // Remaining properties

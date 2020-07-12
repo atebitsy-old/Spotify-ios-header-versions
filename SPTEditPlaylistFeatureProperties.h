@@ -12,12 +12,10 @@
 
 @interface SPTEditPlaylistFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _pageLoaderEnabled;
     _Bool _annotateEnabled;
 }
 
 @property(readonly, nonatomic) _Bool annotateEnabled; // @synthesize annotateEnabled=_annotateEnabled;
-@property(readonly, nonatomic) _Bool pageLoaderEnabled; // @synthesize pageLoaderEnabled=_pageLoaderEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

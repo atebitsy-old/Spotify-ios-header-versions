@@ -20,6 +20,7 @@
 @interface SPTSearchPlatformEmptyStateContext : NSObject <SPTSearchRecentsDataSourceDelegate, SPTPlayerObserver, SPTSearch2ConnectivityMonitorObserver, SPTExplicitContentEnabledStateObserver, _TtP22AgeVerificationFeature43SPTCanPlayAgeRestrictedContentStateObserver_, SPTSearchOnDemandPermissionMonitorObserver, SPTSearchPlatformContext>
 {
     _Bool _shouldRoundPodcastArtwork;
+    _Bool _newRecentsRowEnabled;
     id <SPTSearchPlatformContextDelegate> _delegate;
     NSString *_query;
     unsigned long long _state;
@@ -41,6 +42,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool newRecentsRowEnabled; // @synthesize newRecentsRowEnabled=_newRecentsRowEnabled;
 @property(copy, nonatomic) NSDate *recentsDatasetSetTimestamp; // @synthesize recentsDatasetSetTimestamp=_recentsDatasetSetTimestamp;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
@@ -75,7 +77,7 @@
 - (void)reload;
 - (void)setState:(unsigned long long)arg1;
 - (void)setViewModel:(id)arg1;
-- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 onDemandPermissionMonitor:(id)arg7 shouldRoundPodcastArtwork:(_Bool)arg8 explicitContentAccessManager:(id)arg9 ageVerificationProvider:(id)arg10 ubiLocationSerializer:(id)arg11 featureID:(id)arg12 pageURI:(id)arg13 referrerIdentifier:(id)arg14;
+- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 onDemandPermissionMonitor:(id)arg7 shouldRoundPodcastArtwork:(_Bool)arg8 explicitContentAccessManager:(id)arg9 ageVerificationProvider:(id)arg10 ubiLocationSerializer:(id)arg11 featureID:(id)arg12 pageURI:(id)arg13 referrerIdentifier:(id)arg14 newRecentsRowEnabled:(_Bool)arg15;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

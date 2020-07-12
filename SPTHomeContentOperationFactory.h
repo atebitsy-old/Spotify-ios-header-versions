@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTDataLoaderFactory, SPTHomeContentCache;
-@protocol SPTFeatureSettingsItemFactory, SPTFreeTierPersistentCounter, SPTFreeTierTasteOnboardingCurationProvider, SPTLocalSettings, SPTNetworkConnectivityController, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTUBIHubsUtilities;
+@protocol SPTFeatureSettingsItemFactory, SPTFreeTierTasteOnboardingCurationProvider, SPTLocalSettings, SPTNetworkConnectivityController, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTUBIHubsUtilities;
 
 @interface SPTHomeContentOperationFactory : NSObject
 {
@@ -23,12 +23,10 @@
     id <SPTLocalSettings> _localSettings;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
-    id <SPTFreeTierPersistentCounter> _persistentCounter;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool listeningHistoryEnabled; // @synthesize listeningHistoryEnabled=_listeningHistoryEnabled;
-@property(readonly, nonatomic) id <SPTFreeTierPersistentCounter> persistentCounter; // @synthesize persistentCounter=_persistentCounter;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -40,7 +38,6 @@
 @property(readonly, nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
 @property(readonly, nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
-- (id)provideTooltipContentOperation;
 - (id)provideCacheViewModelContentOperation;
 - (id)provideDownloadsContentOperation;
 - (id)provideRemoteContentOperationWithSourceIdentifier:(id)arg1 contentURL:(id)arg2;
@@ -51,7 +48,7 @@
 - (id)provideOnDemandDecoratorContentOperation;
 - (id)provideCardAccessibilityContentOperation;
 - (id)provideRecentlyPlayedContentOperation;
-- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 networkConnectivityController:(id)arg4 homeContentCache:(id)arg5 dataLoaderFactory:(id)arg6 player:(id)arg7 tasteOnboardingCurationProvider:(id)arg8 localSettings:(id)arg9 featureSettingsItemFactory:(id)arg10 ubiHubsInstrumentation:(id)arg11 persistentCounter:(id)arg12 listeningHistoryEnabled:(_Bool)arg13;
+- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 networkConnectivityController:(id)arg4 homeContentCache:(id)arg5 dataLoaderFactory:(id)arg6 player:(id)arg7 tasteOnboardingCurationProvider:(id)arg8 localSettings:(id)arg9 featureSettingsItemFactory:(id)arg10 ubiHubsInstrumentation:(id)arg11 listeningHistoryEnabled:(_Bool)arg12;
 
 @end
 

@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
+@class NSString, NSURL;
 @protocol SPTAssistedCurationAddTrackHandler, SPTAssistedCurationCardViewModel, SPTAssistedCurationViewModelDelegate;
 
 @protocol SPTAssistedCurationViewModel <NSObject>
+@property(readonly, copy, nonatomic) NSString *addActionAccessibilityLabel;
 @property(readonly, nonatomic) long long addTrackIcon;
 @property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler;
 @property(readonly, nonatomic) NSURL *contextURI;

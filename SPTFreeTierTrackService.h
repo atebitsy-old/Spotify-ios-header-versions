@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierTrackHubManager;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTFreeTierService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTUBIService, SPTURIDispatchService, SPTVisualRefreshIntegrationService;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTEntitySeeAllSongsService, SPTFreeTierService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTUBIService, SPTURIDispatchService, SPTVisualRefreshIntegrationService, _TtP17OfflineMixFeature20SPTOfflineMixService_;
 
 @interface SPTFreeTierTrackService : SPTUIPageService
 {
@@ -19,6 +19,7 @@
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPContextMenuFeature> _contextMenuService;
+    id <_TtP17OfflineMixFeature20SPTOfflineMixService_> _offlineMixService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTNetworkService> _networkService;
     id <SPTPlayerFeature> _playerService;
@@ -35,6 +36,7 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
+@property(nonatomic) __weak id <_TtP17OfflineMixFeature20SPTOfflineMixService_> offlineMixService; // @synthesize offlineMixService=_offlineMixService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;

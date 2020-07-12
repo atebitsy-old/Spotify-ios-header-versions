@@ -13,18 +13,25 @@
 @interface SPTSocialListeningParticipantViewModelImplementation : NSObject <SPTSocialListeningParticipantViewModel>
 {
     _Bool _listenTogetherEnabled;
+    _Bool _currentUser;
+    _Bool _host;
+    NSString *_participantID;
+    NSString *_username;
+    NSString *_displayName;
+    NSURL *_imageURL;
     SPTSocialListeningParticipantModel *_participantModel;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSocialListeningParticipantModel *participantModel; // @synthesize participantModel=_participantModel;
+@property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
+@property(readonly, copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
+@property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
+@property(readonly, copy, nonatomic) NSString *participantID; // @synthesize participantID=_participantID;
+@property(readonly, nonatomic, getter=isHost) _Bool host; // @synthesize host=_host;
+@property(readonly, nonatomic, getter=isCurrentUser) _Bool currentUser; // @synthesize currentUser=_currentUser;
 @property(readonly, nonatomic, getter=isListenTogetherEnabled) _Bool listenTogetherEnabled; // @synthesize listenTogetherEnabled=_listenTogetherEnabled;
-@property(readonly, nonatomic) NSURL *imageURL;
-@property(readonly, copy, nonatomic) NSString *displayName;
-@property(readonly, copy, nonatomic) NSString *username;
-@property(readonly, copy, nonatomic) NSString *participantID;
-@property(readonly, nonatomic, getter=isHost) _Bool host;
-@property(readonly, nonatomic, getter=isCurrentUser) _Bool currentUser;
+- (id)initWithCurrentUserData:(id)arg1 listenTogetherEnabled:(_Bool)arg2;
 - (id)initWithParticipantModel:(id)arg1 listenTogetherEnabled:(_Bool)arg2;
 
 // Remaining properties

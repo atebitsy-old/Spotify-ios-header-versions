@@ -12,14 +12,14 @@
 
 @interface BMDefaultPlayerConfiguration : NSObject <BMPlayerConfiguration>
 {
-    _Bool cachingFlatFilesEnabled;
+    _Bool bitstreamCachingEnabled;
     _Bool subtitlesEnabled;
     unsigned long long videoCDNLoggingOption;
 }
 
 @property(readonly, nonatomic) unsigned long long videoCDNLoggingOption; // @synthesize videoCDNLoggingOption;
 @property(readonly, nonatomic) _Bool subtitlesEnabled; // @synthesize subtitlesEnabled;
-@property(readonly, nonatomic) _Bool cachingFlatFilesEnabled; // @synthesize cachingFlatFilesEnabled;
+@property(readonly, nonatomic) _Bool bitstreamCachingEnabled; // @synthesize bitstreamCachingEnabled;
 - (id)remoteManifestURLForManifestID:(id)arg1;
 @property(readonly, nonatomic) NSURL *fairplayApplicationCertificateURL;
 @property(readonly, nonatomic) NSURL *fairplayLicenseURL;

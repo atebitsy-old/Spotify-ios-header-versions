@@ -9,8 +9,6 @@
 @interface _TtC25PlaylistTuningFeatureImpl16PTViewController : UIViewController
 {
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: dismissEventSource
-    // Error parsing type: , name: saveEventSource
     // Error parsing type: , name: viewDependencies
     // Error parsing type: , name: _view
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
@@ -19,8 +17,6 @@
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)saveButtonTapped;
-- (void)closeButtonTapped;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

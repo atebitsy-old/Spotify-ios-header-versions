@@ -19,6 +19,7 @@
     // Error parsing type: , name: testManager
     // Error parsing type: , name: ttsPlaybackLogger
     // Error parsing type: , name: voiceSourceLogger
+    // Error parsing type: , name: carModeEngine
 }
 
 @end

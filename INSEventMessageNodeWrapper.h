@@ -19,11 +19,11 @@
 }
 
 + (id)wrapperWithEnvelope:(id)arg1 authenticated:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSData *sequenceId; // @synthesize sequenceId=_sequenceId;
 @property(readonly, nonatomic) long long sequenceNumber; // @synthesize sequenceNumber=_sequenceNumber;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
 @property(readonly, nonatomic) NSNumber *authenticated; // @synthesize authenticated=_authenticated;
-- (void).cxx_destruct;
 - (id)initWithEnvelope:(id)arg1 authenticated:(_Bool)arg2;
 
 // Remaining properties

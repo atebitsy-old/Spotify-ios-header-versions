@@ -6,12 +6,13 @@
 
 #import <UIKit/UITextView.h>
 
-@class GLUELabelStyle, NSString;
+@class GLUELabelStyle, NSAttributedString, NSString;
 
 @interface SPTPodcastSectionDescriptionTextView : UITextView
 {
     _Bool _needsTextViewLayout;
     NSString *_originalText;
+    NSAttributedString *_htmlOriginalText;
     double _lineHeight;
     GLUELabelStyle *_style;
     GLUELabelStyle *_seeMoreStyle;
@@ -24,11 +25,15 @@
 @property(nonatomic) _Bool needsTextViewLayout; // @synthesize needsTextViewLayout=_needsTextViewLayout;
 @property(nonatomic) double lineHeight; // @synthesize lineHeight=_lineHeight;
 @property(nonatomic) struct _NSRange attributionStringRange; // @synthesize attributionStringRange=_attributionStringRange;
+@property(copy, nonatomic) NSAttributedString *htmlOriginalText; // @synthesize htmlOriginalText=_htmlOriginalText;
 @property(copy, nonatomic) NSString *originalText; // @synthesize originalText=_originalText;
 - (id)uncollapsedStringEnding;
 - (id)collapsedStringEnding;
+- (void)updateHTMLDescriptionAttributedText;
 - (void)updateAttributedText;
+- (void)configureHTMLText:(id)arg1 withAttributionRange:(struct _NSRange)arg2;
 - (void)configureText:(id)arg1 withAttributionRange:(struct _NSRange)arg2;
+- (void)updateDescriptonTextViewConfiguration;
 - (void)setNumberOfLines:(long long)arg1;
 - (void)setBounds:(struct CGRect)arg1;
 - (_Bool)canBecomeFirstResponder;

@@ -9,22 +9,20 @@
 #import "SPTVideoPlaybackSessionAssetLoader-Protocol.h"
 
 @class NSString, SPTVideoAVFactory;
-@protocol SPTVideoEventDispatcher, SPTVideoResourceLoaderInternal;
+@protocol SPTVideoResourceLoaderInternal;
 
 @interface SPTVideoPlaybackSessionAssetLoader : NSObject <SPTVideoPlaybackSessionAssetLoader>
 {
     SPTVideoAVFactory *_avFactory;
     id <SPTVideoResourceLoaderInternal> _resourceLoader;
-    id <SPTVideoEventDispatcher> _eventDispatcher;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTVideoEventDispatcher> eventDispatcher; // @synthesize eventDispatcher=_eventDispatcher;
 @property(retain, nonatomic) id <SPTVideoResourceLoaderInternal> resourceLoader; // @synthesize resourceLoader=_resourceLoader;
 @property(retain, nonatomic) SPTVideoAVFactory *avFactory; // @synthesize avFactory=_avFactory;
 - (void)prepareAsset:(id)arg1 withKeys:(id)arg2 completion:(CDUnknownBlockType)arg3 errorHandler:(CDUnknownBlockType)arg4;
 - (void)loadPlayerItemWithCompletion:(CDUnknownBlockType)arg1 errorHandler:(CDUnknownBlockType)arg2;
-- (id)initWithAVFactory:(id)arg1 resourceLoader:(id)arg2 eventDispatcher:(id)arg3;
+- (id)initWithAVFactory:(id)arg1 resourceLoader:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

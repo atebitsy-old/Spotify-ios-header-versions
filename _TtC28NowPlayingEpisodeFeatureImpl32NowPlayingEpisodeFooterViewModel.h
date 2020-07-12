@@ -8,7 +8,9 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl32NowPlayingEpisodeFooterViewModel : NSObject
 {
+    // Error parsing type: , name: snackBarPresenter
     // Error parsing type: , name: episodePlayer
+    // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: delegate
 }
 

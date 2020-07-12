@@ -24,7 +24,6 @@
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *timeObserverQueue; // @synthesize timeObserverQueue=_timeObserverQueue;
 @property(retain, nonatomic) NSMutableDictionary *registeredObserverTokens; // @synthesize registeredObserverTokens=_registeredObserverTokens;
 @property(nonatomic) __weak SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
-- (double)duration;
 - (id)player;
 - (id)registerCancellationTokenForObserverToken:(id)arg1;
 - (void)removeObserversForPlayer:(id)arg1;

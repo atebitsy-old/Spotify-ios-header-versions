@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSSet;
+@class EventSenderStats, NSSet;
 
 @protocol INSEventSenderStatsProviderProtocol <NSObject>
-- (void)provideStatsWithSequenceIds:(NSSet *)arg1 completion:(void (^)(EventSenderStats *))arg2;
+- (EventSenderStats *)provideStatsOnPrivateMOCWithSequenceIds:(NSSet *)arg1;
 @end
 

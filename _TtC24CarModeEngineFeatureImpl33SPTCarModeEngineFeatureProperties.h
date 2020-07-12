@@ -9,6 +9,7 @@
 @interface _TtC24CarModeEngineFeatureImpl33SPTCarModeEngineFeatureProperties : NSObject
 {
     // Error parsing type: , name: carModeEngineEnabled
+    // Error parsing type: , name: carModeEngineSettings
 }
 
 - (id)init;

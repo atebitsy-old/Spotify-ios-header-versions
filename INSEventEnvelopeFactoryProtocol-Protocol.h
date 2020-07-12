@@ -11,6 +11,6 @@
 
 @protocol INSEventEnvelopeFactoryProtocol <NSObject>
 + (EventEnvelope *)envelopeForEntity:(id <INSMessageEntityProtocol>)arg1;
-- (void)envelopeForMessage:(id <INSMessageProtocol>)arg1 owner:(NSString *)arg2 completion:(void (^)(EventEnvelope *))arg3;
+- (EventEnvelope *)createEnvelopeOnPrivateMOCForMessage:(id <INSMessageProtocol>)arg1 owner:(NSString *)arg2;
 @end
 

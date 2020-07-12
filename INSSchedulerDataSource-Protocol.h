@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
+@class NSMutableArray, NSString;
 
 @protocol INSSchedulerDataSource <NSObject>
-- (void)eventEnvelopesWithOwner:(NSString *)arg1 completion:(void (^)(NSArray *, _Bool))arg2;
+- (void)getAllEventEnvelopesOnPrivateMOCForOwner:(NSString *)arg1 outAuthEnvelopes:(NSMutableArray *)arg2 outNonAuthEnvelopes:(NSMutableArray *)arg3;
 @end
 

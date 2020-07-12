@@ -6,8 +6,9 @@
 
 #import "_TtC22ConnectUIV2FeatureImpl27DevicePickerPresenterRouter.h"
 
-@interface _TtC22ConnectUIV2FeatureImpl27DevicePickerPresenterRouter (ConnectUIV2FeatureImpl)
-- (void)presentDevicePickerFromView:(id)arg1 withContext:(unsigned long long)arg2;
-@property(nonatomic, readonly) _Bool hasAvailableDevices;
+#import "_TtP22ConnectUIV2FeatureImpl30PresentationControllerProvider_-Protocol.h"
+
+@interface _TtC22ConnectUIV2FeatureImpl27DevicePickerPresenterRouter (ConnectUIV2FeatureImpl) <_TtP22ConnectUIV2FeatureImpl30PresentationControllerProvider_>
+- (void)presentWithViewController:(id)arg1;
 @end
 

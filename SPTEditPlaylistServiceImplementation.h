@@ -43,9 +43,8 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (id)provideLoggerForURI:(id)arg1 pageIdentifier:(id)arg2;
 - (id)provideEditPlaylistModelForURL:(id)arg1;
-- (id)provideEditPlaylistViewControllerForURL:(id)arg1 model:(id)arg2;
-- (id)providePageLoaderViewControllerForURL:(id)arg1 model:(id)arg2;
-- (id)providePlaylistEditViewControllerForURL:(id)arg1;
+- (id)createViewControllerForURL:(id)arg1 model:(id)arg2;
+- (id)provideEditPlaylistViewControllerForURL:(id)arg1;
 - (void)registerEditPlaylistAction;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

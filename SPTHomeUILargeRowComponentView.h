@@ -6,16 +6,19 @@
 
 #import "HUGSThemableComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
-@class NSString, SPTHomeUILargeRowView, UILongPressGestureRecognizer, UITapGestureRecognizer;
+@class NSString, SPTHomeUIFeatureProperties, SPTHomeUILargeRowView, SPTHomeUILoggerImplementation, UILongPressGestureRecognizer, UITapGestureRecognizer;
 @protocol HUBComponentEventHandler;
 
-@interface SPTHomeUILargeRowComponentView : HUGSThemableComponentView <UIGestureRecognizerDelegate, HUBComponentViewWithImageHandling, HUBComponentViewWithEvents>
+@interface SPTHomeUILargeRowComponentView : HUGSThemableComponentView <UIGestureRecognizerDelegate, HUBComponentViewWithImageHandling, HUBComponentViewWithEvents, HUBComponentViewObserver>
 {
     id <HUBComponentEventHandler> _eventHandler;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     SPTHomeUILargeRowView *_largeRow;
     UILongPressGestureRecognizer *_highlightGestureRecognizer;
     UITapGestureRecognizer *_selectionGestureRecognizer;
@@ -28,6 +31,8 @@
 @property(retain, nonatomic) UITapGestureRecognizer *selectionGestureRecognizer; // @synthesize selectionGestureRecognizer=_selectionGestureRecognizer;
 @property(retain, nonatomic) UILongPressGestureRecognizer *highlightGestureRecognizer; // @synthesize highlightGestureRecognizer=_highlightGestureRecognizer;
 @property(readonly, nonatomic) SPTHomeUILargeRowView *largeRow; // @synthesize largeRow=_largeRow;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (id)largeRowStyleWithContainerViewSize:(struct CGSize)arg1;
 - (void)applyThemeLayout;
@@ -35,12 +40,14 @@
 - (void)sendSelectionEvent;
 - (void)highlightGestureRecognizerChangedState:(id)arg1;
 - (void)setupGestureRecognizers;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (struct CGSize)preferredSizeForMainImageWithContainerViewSize:(struct CGSize)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 logger:(id)arg3 remoteConfigProperties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

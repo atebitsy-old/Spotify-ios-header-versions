@@ -31,8 +31,8 @@
 @property(retain, nonatomic) id <BMConnectionModeObservable> connectionModeObservable; // @synthesize connectionModeObservable=_connectionModeObservable;
 @property(retain, nonatomic) id <BMDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (id)defaultEventObserverFactoriesWithLoggerDataProvider:(id)arg1;
-- (id)createPlayerWithSurfaceManager:(id)arg1 configuration:(id)arg2 loggerDataProvider:(id)arg3 eventObserverFactories:(id)arg4 cache:(id)arg5 allowRoyaltyMedia:(_Bool)arg6;
-- (id)createPlayerWithSurface:(id)arg1 configuration:(id)arg2 loggerDataProvider:(id)arg3 eventObserverFactories:(id)arg4 cache:(id)arg5 allowRoyaltyMedia:(_Bool)arg6;
+- (id)createPlayerWithSurfaceManager:(id)arg1 configuration:(id)arg2 loggerDataProvider:(id)arg3 eventObserverFactories:(id)arg4 cache:(id)arg5;
+- (id)createPlayerWithSurface:(id)arg1 configuration:(id)arg2 loggerDataProvider:(id)arg3 eventObserverFactories:(id)arg4 cache:(id)arg5;
 - (id)initWithDataLoader:(id)arg1 connectionModeObservable:(id)arg2 kvoControllerFactory:(id)arg3 logger:(id)arg4 notificationCenter:(id)arg5 appStateObservable:(id)arg6 playerItemObservable:(id)arg7 playbackErrorFormatter:(id)arg8;
 - (id)initWithDataLoader:(id)arg1 connectionModeObservable:(id)arg2 kvoControllerFactory:(id)arg3 logger:(id)arg4;
 

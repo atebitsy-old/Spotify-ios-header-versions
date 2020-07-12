@@ -6,10 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSManagedObjectContext, NSManagedObjectModel;
+@class NSManagedObjectContext;
 
 @protocol INSPersistentStoreStackProtocol <NSObject>
-@property(readonly, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property(readonly, nonatomic) NSManagedObjectContext *mainQueueMOC;
 @property(readonly, nonatomic) NSManagedObjectContext *privateMOC;
 @end

@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTEntitySeeAllSongsService, SPTHubCommandHandlerFactory, SPTHubsRendererFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTUBILogger;
+@protocol SPTEntitySeeAllSongsService, SPTHubCommandHandlerFactory, SPTHubsRendererFactory, SPTLinkDispatcher, SPTPlayerFeature, SPTUBILogger, _TtP17OfflineMixFeature26SPTOfflineMixModelProvider_;
 
 @interface SPTFreeTierTrackCommandHandlerFactory : NSObject
 {
@@ -15,19 +15,21 @@
     id <SPTHubsRendererFactory> _hubsRendererFactory;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTEntitySeeAllSongsService> _entitySeeAllSongsService;
+    id <_TtP17OfflineMixFeature26SPTOfflineMixModelProvider_> _offlineMixModelProvider;
     id <SPTUBILogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) __weak id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <_TtP17OfflineMixFeature26SPTOfflineMixModelProvider_> offlineMixModelProvider; // @synthesize offlineMixModelProvider=_offlineMixModelProvider;
 @property(readonly, nonatomic) __weak id <SPTEntitySeeAllSongsService> entitySeeAllSongsService; // @synthesize entitySeeAllSongsService=_entitySeeAllSongsService;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) __weak id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> defaultCommandHandlerFactory; // @synthesize defaultCommandHandlerFactory=_defaultCommandHandlerFactory;
 - (id)createLoggerForViewURI:(id)arg1;
-- (id)createCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3;
-- (id)initWithDefaultCommandHandlerFactory:(id)arg1 playerService:(id)arg2 hubsRendererFactory:(id)arg3 linkDispatcher:(id)arg4 allSongsService:(id)arg5 ubiLogger:(id)arg6;
+- (id)createCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3 offlineModel:(id)arg4;
+- (id)initWithDefaultCommandHandlerFactory:(id)arg1 playerService:(id)arg2 hubsRendererFactory:(id)arg3 linkDispatcher:(id)arg4 allSongsService:(id)arg5 offlineMixModelProvider:(id)arg6 ubiLogger:(id)arg7;
 
 @end
 

@@ -53,7 +53,7 @@
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
 @property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 - (id)createViewModelLoaderForViewURI:(id)arg1 referrerIdentifier:(id)arg2 offlineModel:(id)arg3 reloadPageSignal:(id)arg4;
-- (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2;
+- (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 preloadedModel:(id)arg3;
 - (_Bool)canCreateViewControllerForViewURI:(id)arg1;
 - (id)initWithComponentRegistry:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 contentOperationFactory:(id)arg4 commandHandlerFactory:(id)arg5 barButtonFactory:(id)arg6 glueTheme:(id)arg7 onDemandState:(id)arg8 offlineModelFactory:(id)arg9 playerService:(id)arg10 offlineModeState:(id)arg11 productState:(id)arg12 dataLoader:(id)arg13 collectionPlatform:(id)arg14 visualRefreshIntegrationManager:(id)arg15 shelves:(id)arg16 explicitContentAccessService:(id)arg17 ageVerificationProvider:(id)arg18;
 

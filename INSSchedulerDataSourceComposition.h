@@ -15,9 +15,9 @@
     NSArray *_dataSources;
 }
 
-@property(retain, nonatomic) NSArray *dataSources; // @synthesize dataSources=_dataSources;
 - (void).cxx_destruct;
-- (void)eventEnvelopesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
+@property(retain, nonatomic) NSArray *dataSources; // @synthesize dataSources=_dataSources;
+- (void)getAllEventEnvelopesOnPrivateMOCForOwner:(id)arg1 outAuthEnvelopes:(id)arg2 outNonAuthEnvelopes:(id)arg3;
 - (id)initWithDataSources:(id)arg1;
 
 // Remaining properties

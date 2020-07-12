@@ -17,9 +17,9 @@
     NSData *_installId;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSData *installId; // @synthesize installId=_installId;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
-- (void).cxx_destruct;
 - (id)installationId;
 @property(readonly, copy, nonatomic) NSData *contextData;
 @property(readonly, copy, nonatomic) NSString *contextName;

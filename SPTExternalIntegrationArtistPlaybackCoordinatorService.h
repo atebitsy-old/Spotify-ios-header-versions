@@ -10,7 +10,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSMutableArray, NSString, SPTAllocationContext, SPTExternalIntegrationPlaybackServiceImplementation;
+@class NSMutableArray, NSString, SPTAllocationContext, SPTExternalIntegrationPlaybackServiceImplementation, SPTask;
 @protocol SPTExternalIntegrationTestManagerService, SPTNetworkService, SPTPlayer;
 
 @interface SPTExternalIntegrationArtistPlaybackCoordinatorService : NSObject <SPTPlayerObserver, SPTService, SPTExternalIntegrationPlaybackCoordinator>
@@ -21,16 +21,20 @@
     NSMutableArray *_activeDataLoaders;
     id <SPTPlayer> _player;
     CDUnknownBlockType _completionHandler;
+    SPTask *_ongoingTask;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTask *ongoingTask; // @synthesize ongoingTask=_ongoingTask;
 @property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) NSMutableArray *activeDataLoaders; // @synthesize activeDataLoaders=_activeDataLoaders;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationTestManagerService> testManagerService; // @synthesize testManagerService=_testManagerService;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationPlaybackServiceImplementation *playbackService; // @synthesize playbackService=_playbackService;
 @property(readonly, nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
+- (void)cancelOngoingTask;
+- (void)executePlayTask:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)player:(id)arg1 didEncounterError:(id)arg2;
 - (void)playContentWithURI:(id)arg1 withOptions:(id)arg2 origin:(id)arg3 requestOptions:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (_Bool)canPlayContentWithURI:(id)arg1;

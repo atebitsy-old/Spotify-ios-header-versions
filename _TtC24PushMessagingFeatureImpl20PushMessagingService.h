@@ -18,6 +18,7 @@
     // Error parsing type: , name: webViewFeature
     // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: remoteConfigService
+    // Error parsing type: , name: ubiService
     // Error parsing type: , name: pushMessagingInternal
     // Error parsing type: , name: pushRegistrar
     // Error parsing type: , name: pushMessagingPermissionManager

@@ -15,8 +15,8 @@
     NSData *_clientId;
 }
 
-@property(retain, nonatomic) NSData *clientId; // @synthesize clientId=_clientId;
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSData *clientId; // @synthesize clientId=_clientId;
 @property(readonly, copy, nonatomic) NSData *contextData;
 @property(readonly, copy, nonatomic) NSString *contextName;
 - (id)initWithClientId:(id)arg1;

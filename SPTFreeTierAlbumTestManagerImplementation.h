@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierAlbumFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+- (_Bool)isAlbumPageLoaderDisabled;
 - (_Bool)isAlbumOfflineMangementEnabled;
 - (id)initWithRemoteConfigurationResolver:(id)arg1;
 

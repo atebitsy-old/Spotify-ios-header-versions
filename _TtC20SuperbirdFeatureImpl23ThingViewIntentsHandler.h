@@ -14,6 +14,7 @@
     // Error parsing type: , name: followFactory
     // Error parsing type: , name: connectManager
     // Error parsing type: , name: earconPlayer
+    // Error parsing type: , name: podcastSeekBackOnResumeTime
     // Error parsing type: , name: defaultSeekTime
 }
 

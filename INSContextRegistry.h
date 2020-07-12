@@ -15,9 +15,9 @@
     id <INSLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSArray *contexts; // @synthesize contexts=_contexts;
-- (void).cxx_destruct;
 - (void)enumerateContextsUsingBlock:(CDUnknownBlockType)arg1;
 - (id)initWithContexts:(id)arg1 logger:(id)arg2;
 

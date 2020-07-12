@@ -24,6 +24,7 @@
     NSError *_wireFormatError;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSError *wireFormatError; // @synthesize wireFormatError=_wireFormatError;
 @property(retain, nonatomic) NSData *responseBody; // @synthesize responseBody=_responseBody;
 @property(retain, nonatomic) NSDictionary *responseHeaders; // @synthesize responseHeaders=_responseHeaders;
@@ -36,7 +37,6 @@
 @property(readonly, nonatomic) _Bool shouldBackoff; // @synthesize shouldBackoff=_shouldBackoff;
 @property(retain, nonatomic) NSError *responseError; // @synthesize responseError=_responseError;
 @property(readonly, nonatomic) long long responseCode; // @synthesize responseCode=_responseCode;
-- (void).cxx_destruct;
 - (_Bool)responseCodeSuccessful;
 - (_Bool)errorOccured;
 - (id)initWithEnvelopes:(id)arg1 responseCode:(long long)arg2 responseHeaders:(id)arg3 responseBody:(id)arg4 responseError:(id)arg5 authenticated:(_Bool)arg6 error:(id *)arg7;

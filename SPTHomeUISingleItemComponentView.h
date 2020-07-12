@@ -6,17 +6,19 @@
 
 #import "HUGSThemableComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 
-@class SPTHomeUISingleItemView, UITapGestureRecognizer;
-@protocol GLUETheme, HUBComponentEventHandler, SPTPlayer;
+@class SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, SPTHomeUISingleItemView, UITapGestureRecognizer;
+@protocol HUBComponentEventHandler, SPTPlayer;
 
-@interface SPTHomeUISingleItemComponentView : HUGSThemableComponentView <HUBComponentViewWithImageHandling, HUBComponentViewWithEvents>
+@interface SPTHomeUISingleItemComponentView : HUGSThemableComponentView <HUBComponentViewWithImageHandling, HUBComponentViewWithEvents, HUBComponentViewObserver>
 {
     id <HUBComponentEventHandler> _eventHandler;
-    id <GLUETheme> _theme;
     id <SPTPlayer> _player;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     SPTHomeUISingleItemView *_singleItemView;
     UITapGestureRecognizer *_tapGestureRecognizer;
 }
@@ -25,15 +27,18 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *tapGestureRecognizer; // @synthesize tapGestureRecognizer=_tapGestureRecognizer;
 @property(readonly, nonatomic) SPTHomeUISingleItemView *singleItemView; // @synthesize singleItemView=_singleItemView;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-- (id)theme;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void)sendSelectionEvent;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 player:(id)arg3;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 player:(id)arg3 logger:(id)arg4 remoteConfigProperties:(id)arg5;
 
 @end
 

@@ -13,8 +13,12 @@
 @interface SPTVideoFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _spotifyVideoHlsEnabled;
+    _Bool _subtitlesEnabled;
+    _Bool _bitstreamCachingEnabled;
 }
 
+@property(readonly, nonatomic) _Bool bitstreamCachingEnabled; // @synthesize bitstreamCachingEnabled=_bitstreamCachingEnabled;
+@property(readonly, nonatomic) _Bool subtitlesEnabled; // @synthesize subtitlesEnabled=_subtitlesEnabled;
 @property(readonly, nonatomic) _Bool spotifyVideoHlsEnabled; // @synthesize spotifyVideoHlsEnabled=_spotifyVideoHlsEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

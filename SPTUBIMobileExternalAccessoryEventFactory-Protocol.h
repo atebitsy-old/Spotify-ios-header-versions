@@ -10,16 +10,18 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileExternalAccessoryEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitCreateRadioWithBasedOnItem:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)hitSetPlaybackSpeedWithPlaybackSpeed:(unsigned long long)arg1;
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitSeekByTimeWithMsSeekedOffset:(long long)arg1;
 - (id <SPTUBIInteractionEvent>)hitSeekToTimeWithMsToSeekTo:(long long)arg1;
-- (id <SPTUBIInteractionEvent>)hitRemoveLikeWithItemNoLongerLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitShuffleEnable;
 - (id <SPTUBIInteractionEvent>)hitShuffleDisable;
 - (id <SPTUBIInteractionEvent>)hitRepeatDisable;
 - (id <SPTUBIInteractionEvent>)hitRepeatOneEnable;
 - (id <SPTUBIInteractionEvent>)hitRepeatEnable;
+- (id <SPTUBIInteractionEvent>)hitRemoveLikeWithItemNoLongerLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitLikeWithItemToBeLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitSkipToPreviousWithItemToBeSkipped:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitSkipToNextWithItemToBeSkipped:(NSURL *)arg1;

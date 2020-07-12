@@ -8,18 +8,23 @@
 
 #import "HUBComponent-Protocol.h"
 
-@class NSSet;
+@class NSSet, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation;
 
 @interface SPTHomeUISectionHeaderComponent : HUGSThemableComponent <HUBComponent>
 {
     unsigned long long _type;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
-- (id)initWithTheme:(id)arg1 type:(unsigned long long)arg2;
+- (id)initWithTheme:(id)arg1 type:(unsigned long long)arg2 logger:(id)arg3 remoteConfigProperties:(id)arg4;
 
 @end
 

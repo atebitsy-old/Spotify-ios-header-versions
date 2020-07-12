@@ -9,6 +9,7 @@
 @interface _TtC21FollowFeedFeatureImpl22PlaybackCommandHandler : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: hubCommandTranslator
+    // Error parsing type: , name: explicitContentManager
 }
 
 - (void)handleCommand:(id)arg1 event:(id)arg2;

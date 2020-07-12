@@ -27,6 +27,7 @@
     id <INSMessageOwnerProvider> _ownerProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSMessageOwnerProvider> ownerProvider; // @synthesize ownerProvider=_ownerProvider;
 @property(retain, nonatomic) id <INSEventValidatorProtocol> validator; // @synthesize validator=_validator;
 @property(nonatomic) __weak id <INSSchedulerDataDelegate> dataDelegate; // @synthesize dataDelegate=_dataDelegate;
@@ -37,7 +38,6 @@
 @property(retain, nonatomic) id <INSTransport> transport; // @synthesize transport=_transport;
 @property(retain, nonatomic) NSMutableSet *operationsInFlight; // @synthesize operationsInFlight=_operationsInFlight;
 @property(retain, nonatomic) NSOperationQueue *executionQueue; // @synthesize executionQueue=_executionQueue;
-- (void).cxx_destruct;
 - (void)messageOperationDidFinish:(id)arg1;
 - (id)eventsDescriptionWithEnvelopes:(id)arg1;
 - (void)handleShouldBackoff;

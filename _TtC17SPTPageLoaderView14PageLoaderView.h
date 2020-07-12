@@ -10,12 +10,14 @@
 
 @interface _TtC17SPTPageLoaderView14PageLoaderView : _TtC17SPTPageLoaderView34PlaceholderContainerViewController
 {
+    // Error parsing type: , name: state
     // Error parsing type: , name: viewSwitcher
     // Error parsing type: , name: pageLoaderStarter
     // Error parsing type: , name: viewLogger
     // Error parsing type: , name: currentViewExtractor
     // Error parsing type: , name: pageIdentifier
     // Error parsing type: , name: pageURI
+    // Error parsing type: , name: stateObservers
 }
 
 - (void).cxx_destruct;

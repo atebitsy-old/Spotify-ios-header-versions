@@ -8,6 +8,7 @@
 
 @interface _TtC21FollowFeedFeatureImpl21DomainModelTranslator : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: isExplicitRestricted
 }
 
 @end

@@ -393,6 +393,8 @@ struct CoreCreateOptions {
     } _field13;
 };
 
+struct CredentialsStorage;
+
 struct CriticalSection {
     struct _opaque_pthread_mutex_t _field1;
 };
@@ -1953,6 +1955,11 @@ struct shared_ptr<spotify::connectivity::AnalyticsDelegate> {
     struct __shared_weak_count *__cntrl_;
 };
 
+struct shared_ptr<spotify::connectivity::CredentialsStorage> {
+    struct CredentialsStorage *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+};
+
 struct shared_ptr<spotify::connectivity::auth::oauth::Client> {
     struct Client *__ptr_;
     struct __shared_weak_count *__cntrl_;
@@ -3297,6 +3304,11 @@ typedef struct shared_ptr<spotify::analytics::Logger> {
     struct Logger *__ptr_;
     struct __shared_weak_count *__cntrl_;
 } shared_ptr_0bb93f61;
+
+typedef struct shared_ptr<spotify::connectivity::CredentialsStorage> {
+    struct CredentialsStorage *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_23ecd02a;
 
 typedef struct shared_ptr<spotify::connectivity::auth::oauth::Client> {
     struct Client *__ptr_;

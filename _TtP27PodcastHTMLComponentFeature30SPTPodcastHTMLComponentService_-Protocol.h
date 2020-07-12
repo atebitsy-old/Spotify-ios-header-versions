@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
+
 @protocol _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_ <SPTService>
+- (id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_>)provideHTMLParser;
 @end
 

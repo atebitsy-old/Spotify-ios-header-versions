@@ -11,14 +11,15 @@
 @interface HUBContext : NSObject
 {
     UICollectionView *_collectionView;
+    UICollectionViewCell *_collectionViewCell;
     NSIndexPath *_indexPath;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
+@property(readonly, nonatomic) __weak UICollectionViewCell *collectionViewCell; // @synthesize collectionViewCell=_collectionViewCell;
 @property(readonly, nonatomic) __weak UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
-@property(readonly, nonatomic) __weak UICollectionViewCell *collectionViewCell;
-- (id)initWithCollectionView:(id)arg1 indexPath:(id)arg2;
+- (id)initWithCollectionView:(id)arg1 collectionViewCell:(id)arg2 indexPath:(id)arg3;
 
 @end
 

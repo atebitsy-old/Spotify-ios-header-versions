@@ -13,6 +13,7 @@
 
 @interface SPTVoiceLibrarySessionHandlingOptions : NSObject <NSCopying>
 {
+    _Bool _requiresBackgroundRecording;
     _Bool _shouldPausePlayback;
     SPTVoiceLibrarySpeechProxyRequest *_speechProxyRequest;
     id <SPTVoiceLibraryAudioRecorder> _externalAudioRecorder;
@@ -22,6 +23,7 @@
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioRecorder> externalAudioRecorder; // @synthesize externalAudioRecorder=_externalAudioRecorder;
 @property(retain, nonatomic) SPTVoiceLibrarySpeechProxyRequest *speechProxyRequest; // @synthesize speechProxyRequest=_speechProxyRequest;
 @property(nonatomic) _Bool shouldPausePlayback; // @synthesize shouldPausePlayback=_shouldPausePlayback;
+@property(nonatomic) _Bool requiresBackgroundRecording; // @synthesize requiresBackgroundRecording=_requiresBackgroundRecording;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;
 

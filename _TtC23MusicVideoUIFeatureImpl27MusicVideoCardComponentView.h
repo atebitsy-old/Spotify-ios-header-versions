@@ -14,7 +14,7 @@
     // Error parsing type: , name: musicCardView
     // Error parsing type: , name: videoSurface
     // Error parsing type: , name: eventHandler
-    // Error parsing type: , name: videoPreviewSourceId
+    // Error parsing type: , name: videoPreviewUrl
     // Error parsing type: , name: style
 }
 

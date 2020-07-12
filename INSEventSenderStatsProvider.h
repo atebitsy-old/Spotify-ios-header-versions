@@ -17,10 +17,10 @@
     id <INSLogger> _logger;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
-- (void).cxx_destruct;
-- (void)provideStatsWithSequenceIds:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)provideStatsOnPrivateMOCWithSequenceIds:(id)arg1;
 - (id)initWithPersistentStore:(id)arg1 logger:(id)arg2;
 
 // Remaining properties

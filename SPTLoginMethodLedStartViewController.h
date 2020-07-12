@@ -28,6 +28,7 @@
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)signupButtonTapped;
 - (void)loginButtonTapped;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithViewModel:(id)arg1 theme:(id)arg2 method:(unsigned long long)arg3;

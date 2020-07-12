@@ -6,8 +6,10 @@
 
 #import "_TtC23YourLibraryXFeatureImpl28YourLibraryContentViewBinder.h"
 
-@interface _TtC23YourLibraryXFeatureImpl28YourLibraryContentViewBinder (YourLibraryXFeatureImpl1)
-- (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
-- (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
+#import "UICollectionViewDataSourcePrefetching-Protocol.h"
+
+@interface _TtC23YourLibraryXFeatureImpl28YourLibraryContentViewBinder (YourLibraryXFeatureImpl1) <UICollectionViewDataSourcePrefetching>
+- (void)collectionView:(id)arg1 cancelPrefetchingForItemsAtIndexPaths:(id)arg2;
+- (void)collectionView:(id)arg1 prefetchItemsAtIndexPaths:(id)arg2;
 @end
 

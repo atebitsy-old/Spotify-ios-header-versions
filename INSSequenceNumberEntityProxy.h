@@ -17,10 +17,10 @@
     NSData *_sequenceId;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSData *sequenceId; // @synthesize sequenceId=_sequenceId;
 @property(nonatomic) long long sequenceNumberNext; // @synthesize sequenceNumberNext=_sequenceNumberNext;
 @property(copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
-- (void).cxx_destruct;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithEventName:(id)arg1 sequenceNumberNext:(long long)arg2 sequenceId:(id)arg3;
 

@@ -38,7 +38,7 @@
     SPTAuthLoginTask *_loginTask;
 }
 
-+ (id)coreWithCreateOptions:(id)arg1 bootstrapDelegate:(id)arg2 scheduler:(id)arg3 eventSender:(id)arg4 preferences:(id)arg5 error:(id *)arg6;
++ (id)coreWithCreateOptions:(id)arg1 applicationScopeConfiguration:(id)arg2 bootstrapDelegate:(id)arg3 scheduler:(id)arg4 eventSender:(id)arg5 preferences:(id)arg6 error:(id *)arg7;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTAuthLoginTask *loginTask; // @synthesize loginTask=_loginTask;
@@ -101,7 +101,7 @@
 - (struct Core *)cpp;
 - (void)invalidate;
 - (void)dealloc;
-- (id)initWithCreateOptions:(id)arg1 bootstrapDelegate:(id)arg2 scheduler:(id)arg3 eventSender:(id)arg4 preferences:(id)arg5 error:(id *)arg6;
+- (id)initWithCreateOptions:(id)arg1 applicationScopeConfiguration:(id)arg2 bootstrapDelegate:(id)arg3 scheduler:(id)arg4 eventSender:(id)arg5 preferences:(id)arg6 error:(id *)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

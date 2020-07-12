@@ -11,6 +11,7 @@
     // Error parsing type: , name: queue
     // Error parsing type: , name: playbackTimeObservable
     // Error parsing type: , name: videoPlayer
+    // Error parsing type: , name: duration
     // Error parsing type: , name: playerIndex
     // Error parsing type: , name: lock
     // Error parsing type: , name: consumer

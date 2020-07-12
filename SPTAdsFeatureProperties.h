@@ -14,6 +14,7 @@
 {
     _Bool _creamBookmarkAudioAdsIos;
     _Bool _audioAdsSwiftNpvEnabled;
+    _Bool _comscoreEnabled;
     unsigned long long _adsInAppBrowserIos;
     NSString *_adsInAppBrowserIosString;
 }
@@ -21,6 +22,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSString *adsInAppBrowserIosString; // @synthesize adsInAppBrowserIosString=_adsInAppBrowserIosString;
 @property(readonly, nonatomic) unsigned long long adsInAppBrowserIos; // @synthesize adsInAppBrowserIos=_adsInAppBrowserIos;
+@property(readonly, nonatomic) _Bool comscoreEnabled; // @synthesize comscoreEnabled=_comscoreEnabled;
 @property(readonly, nonatomic) _Bool audioAdsSwiftNpvEnabled; // @synthesize audioAdsSwiftNpvEnabled=_audioAdsSwiftNpvEnabled;
 @property(readonly, nonatomic) _Bool creamBookmarkAudioAdsIos; // @synthesize creamBookmarkAudioAdsIos=_creamBookmarkAudioAdsIos;
 - (unsigned long long)mapAdsInAppBrowserIosToEnumValue:(id)arg1;

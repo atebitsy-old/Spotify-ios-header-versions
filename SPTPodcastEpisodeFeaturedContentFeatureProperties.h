@@ -12,18 +12,14 @@
 
 @interface SPTPodcastEpisodeFeaturedContentFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
+    _Bool _podcastLinkedPageEnabled;
     _Bool _podcastCrossLinkingEnable;
     _Bool _podcastLinkedPageNpv;
-    unsigned long long _podcastTrackListMode;
-    NSString *_podcastTrackListModeString;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) NSString *podcastTrackListModeString; // @synthesize podcastTrackListModeString=_podcastTrackListModeString;
-@property(readonly, nonatomic) unsigned long long podcastTrackListMode; // @synthesize podcastTrackListMode=_podcastTrackListMode;
 @property(readonly, nonatomic) _Bool podcastLinkedPageNpv; // @synthesize podcastLinkedPageNpv=_podcastLinkedPageNpv;
 @property(readonly, nonatomic) _Bool podcastCrossLinkingEnable; // @synthesize podcastCrossLinkingEnable=_podcastCrossLinkingEnable;
-- (unsigned long long)mapPodcastTrackListModeToEnumValue:(id)arg1;
+@property(readonly, nonatomic) _Bool podcastLinkedPageEnabled; // @synthesize podcastLinkedPageEnabled=_podcastLinkedPageEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

@@ -8,34 +8,25 @@
 
 #import "INSPersistentStoreStackProtocol-Protocol.h"
 
-@class NSManagedObjectContext, NSManagedObjectModel, NSPersistentContainer, NSString;
-@protocol INSLogger;
+@class NSManagedObjectContext, NSPersistentContainer, NSString;
+@protocol OS_dispatch_queue;
 
 @interface INSPersistentStoreStack : NSObject <INSPersistentStoreStackProtocol>
 {
-    NSManagedObjectModel *_managedObjectModel;
     NSManagedObjectContext *_mainQueueMOC;
     NSManagedObjectContext *_privateMOC;
     NSPersistentContainer *_persistentContainer;
-    NSString *_storeName;
-    id <INSLogger> _logger;
+    NSObject<OS_dispatch_queue> *_privateMOCQueue;
 }
 
-+ (id)messageEntityDescription;
-+ (id)sequenceNumberEntityDescription;
-+ (id)installIdEntityDescription;
-+ (id)currentCoreDataModel;
-@property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) NSString *storeName; // @synthesize storeName=_storeName;
-@property(retain, nonatomic) NSPersistentContainer *persistentContainer; // @synthesize persistentContainer=_persistentContainer;
-@property(retain, nonatomic) NSManagedObjectContext *privateMOC; // @synthesize privateMOC=_privateMOC;
-@property(retain, nonatomic) NSManagedObjectContext *mainQueueMOC; // @synthesize mainQueueMOC=_mainQueueMOC;
-@property(retain, nonatomic) NSManagedObjectModel *managedObjectModel; // @synthesize managedObjectModel=_managedObjectModel;
 - (void).cxx_destruct;
-- (id)storeUrl;
-- (id)documentsDirectory;
-- (id)initWithLogger:(id)arg1 managedObjectModel:(id)arg2 storeName:(id)arg3;
+@property(retain, nonatomic) NSObject<OS_dispatch_queue> *privateMOCQueue; // @synthesize privateMOCQueue=_privateMOCQueue;
+@property(readonly, nonatomic) NSPersistentContainer *persistentContainer; // @synthesize persistentContainer=_persistentContainer;
+@property(readonly, nonatomic) NSManagedObjectContext *privateMOC; // @synthesize privateMOC=_privateMOC;
+@property(readonly, nonatomic) NSManagedObjectContext *mainQueueMOC; // @synthesize mainQueueMOC=_mainQueueMOC;
+- (_Bool)isCurrentlyOnPrivateMOCDispatchQueue;
 - (id)initWithLogger:(id)arg1;
+- (id)initWithPersistentContainer:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -7,13 +7,13 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory;
-@protocol SPTLinkDispatcher, SPTPodcastContextMenuProvider, SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastLogger, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastSpeedControlManager, SPTPodcastTestManager;
+@protocol SPTLinkDispatcher, SPTPodcastContextMenuProvider, SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastSpeedControlManager, SPTPodcastTestManager;
 
 @protocol SPTPodcastFeature <SPTService>
 - (SPTPodcastEpisodeCellActionHandlerFactory *)provideCellActionHandlerFactory;
 - (id <SPTPodcastEpisodeCellConfigurator>)provideEpisodeCellConfigurator;
 - (id <SPTPodcastPlayer>)providePodcastPlayerWithViewURI:(NSURL *)arg1 featureIdentifier:(NSString *)arg2 referrerIdentifier:(NSString *)arg3;
-- (id <SPTPodcastLogger>)providePodcastLogger;
+- (id <SPTPodcastLogger><SPTPodcastUBILogger>)providePodcastLogger;
 - (id <SPTPodcastEpisodeFactory>)providePodcastEpisodeFactory;
 - (id <SPTPodcastFactory>)providePodcastFactory;
 - (id <SPTPodcastDataLoader>)providePodcastDataLoader;

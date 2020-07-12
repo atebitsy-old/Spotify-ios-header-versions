@@ -20,12 +20,12 @@
 }
 
 + (id)nodeWithSequenceNumber:(id)arg1;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSData *sequenceId; // @synthesize sequenceId=_sequenceId;
 @property(nonatomic) long long count; // @synthesize count=_count;
 @property(nonatomic) long long seqNext; // @synthesize seqNext=_seqNext;
 @property(nonatomic) long long seqMin; // @synthesize seqMin=_seqMin;
 @property(copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
-- (void).cxx_destruct;
 - (void)applyFirstMessage:(id)arg1;
 - (id)initWithSequenceNumber:(id)arg1;
 

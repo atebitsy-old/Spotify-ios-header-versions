@@ -9,15 +9,17 @@
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSString, NSURL, SPTLoginMagicLinkSentConfirmationView, SPTLoginMagicLinkSentConfirmationViewModel;
+@class NSString, NSURL, SPTLoginMagicLinkSentConfirmationView, SPTLoginMagicLinkSentConfirmationViewModel, SPTLoginTheme;
 @protocol SPTPageContainer;
 
 @interface SPTLoginMagicLinkSentConfirmationViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTPageController>
 {
     SPTLoginMagicLinkSentConfirmationViewModel *_viewModel;
+    SPTLoginTheme *_theme;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginMagicLinkSentConfirmationViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (unsigned long long)preferredNavigationBarState;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
@@ -26,7 +28,7 @@
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithViewModel:(id)arg1;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

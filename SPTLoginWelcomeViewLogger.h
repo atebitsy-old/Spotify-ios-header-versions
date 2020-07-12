@@ -6,22 +6,26 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginErrorLogger;
+@class NSString, SPTLoginErrorLogger;
 @protocol SPTLoginLogger;
 
 @interface SPTLoginWelcomeViewLogger : NSObject
 {
     id <SPTLoginLogger> _logger;
     SPTLoginErrorLogger *_errorLogger;
+    NSString *_currentWelcomeImageAttemptID;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *currentWelcomeImageAttemptID; // @synthesize currentWelcomeImageAttemptID=_currentWelcomeImageAttemptID;
 @property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
+- (void)resetCurrentLoggerAttemptID;
+- (void)logImageResponseWithError:(id)arg1;
 - (void)logImageInteractionWithName:(id)arg1;
 - (void)logUserDidSwipeImage;
 - (void)logUserDidTapImage;
-- (void)logDidFailLoadImage;
+- (void)logDidFailLoadImageWithError:(id)arg1;
 - (void)logDidFinishLoadImage;
 - (void)logDidStartLoadImageWithName:(id)arg1 size:(id)arg2 forScreenWidth:(double)arg3;
 - (void)logInterfaceOrientation:(long long)arg1;

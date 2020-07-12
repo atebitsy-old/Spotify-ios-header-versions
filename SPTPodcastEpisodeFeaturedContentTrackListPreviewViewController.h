@@ -6,16 +6,18 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTPodcastEpisodeFeaturedContentNotificationBannerViewDelegate-Protocol.h"
 #import "SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate-Protocol.h"
 
-@class GLUESectionHeaderView, NSString, SPTPodcastEpisodeFeaturedContentPlayer, SPTPodcastEpisodeFeaturedContentTrackListPreviewView;
+@class GLUESectionHeaderView, NSString, SPTPodcastEpisodeFeaturedContentNotificationBannerView, SPTPodcastEpisodeFeaturedContentPlayer, SPTPodcastEpisodeFeaturedContentTrackListPreviewView;
 @protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTLinkDispatcher, SPTMetaViewController, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
-@interface SPTPodcastEpisodeFeaturedContentTrackListPreviewViewController : UIViewController <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate>
+@interface SPTPodcastEpisodeFeaturedContentTrackListPreviewViewController : UIViewController <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate, SPTPodcastEpisodeFeaturedContentNotificationBannerViewDelegate>
 {
     _Bool _shouldDisplayNowPlayingView;
     GLUESectionHeaderView *_sectionHeaderView;
     SPTPodcastEpisodeFeaturedContentTrackListPreviewView *_previewView;
+    SPTPodcastEpisodeFeaturedContentNotificationBannerView *_freeBannerView;
     NSString *_episodeURIString;
     id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> _dataLoader;
     id <GLUEImageLoader> _imageLoader;
@@ -34,11 +36,13 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *episodeURIString; // @synthesize episodeURIString=_episodeURIString;
+@property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentNotificationBannerView *freeBannerView; // @synthesize freeBannerView=_freeBannerView;
 @property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentTrackListPreviewView *previewView; // @synthesize previewView=_previewView;
 @property(retain, nonatomic) GLUESectionHeaderView *sectionHeaderView; // @synthesize sectionHeaderView=_sectionHeaderView;
 - (void)navigateToTimeline;
 - (void)navigateToNowPlayingView;
 - (void)podcastEpisodeFeaturedContentTrackListPreviewViewDidSelect:(id)arg1;
+- (void)didSelectPremiumPlan;
 - (void)setContentHidden:(_Bool)arg1;
 - (void)handleFetchedModel:(id)arg1;
 - (void)fetchEpisodeSegmentsModel;

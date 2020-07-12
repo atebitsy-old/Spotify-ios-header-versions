@@ -16,7 +16,7 @@
 }
 
 + (id)makeUIStatesToStylesWithTheme:(id)arg1;
-+ (id)defaultStyleWithTheme:(id)arg1;
++ (id)defaultStyleWithTheme:(id)arg1 imageMask:(long long)arg2;
 - (void).cxx_destruct;
 @property(nonatomic) struct UIEdgeInsets titleInsets; // @synthesize titleInsets=_titleInsets;
 @property(copy, nonatomic) GLUEImageStyle *imageStyle; // @synthesize imageStyle=_imageStyle;

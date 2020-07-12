@@ -9,7 +9,7 @@
 #import "SPTShowInfoViewProvider-Protocol.h"
 
 @class NSString;
-@protocol GLUETheme, SPTLinkDispatcher, SPTMetaViewController, SPTNavigationRouter, SPTPodcastLogger;
+@protocol GLUETheme, SPTLinkDispatcher, SPTMetaViewController, SPTNavigationRouter, SPTPodcastLogger><SPTPodcastUBILogger;
 
 @interface SPTPodcastYourLibraryInfoViewProviderImplementation : NSObject <SPTShowInfoViewProvider>
 {
@@ -17,11 +17,11 @@
     id <SPTMetaViewController> _metaViewController;
     id <SPTNavigationRouter> _navigationRouter;
     id <GLUETheme> _theme;
-    id <SPTPodcastLogger> _podcastLogger;
+    id <SPTPodcastLogger><SPTPodcastUBILogger> _podcastLogger;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
+@property(retain, nonatomic) id <SPTPodcastLogger><SPTPodcastUBILogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;

@@ -15,8 +15,8 @@
     NSArray *_loggers;
 }
 
-@property(copy, nonatomic) NSArray *loggers; // @synthesize loggers=_loggers;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *loggers; // @synthesize loggers=_loggers;
 - (void)logError:(id)arg1;
 - (void)logMessage:(id)arg1;
 - (id)initWithLoggers:(id)arg1;

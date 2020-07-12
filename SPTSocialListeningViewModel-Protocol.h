@@ -24,15 +24,17 @@
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
 @property(readonly, nonatomic) _Bool seeListenersButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
+@property(readonly, nonatomic) _Bool privacyDisclaimerLabelHidden;
 @property(readonly, nonatomic) _Bool tryAgainViewHidden;
 @property(readonly, copy, nonatomic) NSString *participantsNavigationBarTitle;
 @property(readonly, copy, nonatomic) NSString *tryAgainLabelText;
 @property(readonly, nonatomic) unsigned long long maxNumberOfUsers;
 @property(readonly, nonatomic) unsigned long long numberOfOverflowUsers;
 @property(readonly, nonatomic) unsigned long long numberOfVisibleUsers;
+@property(readonly, nonatomic) _Bool facepileDimmingHidden;
 @property(readonly, nonatomic) _Bool scannablesImageHidden;
 @property(readonly, nonatomic) _Bool scannableViewHidden;
-@property(readonly, copy, nonatomic) NSArray *connectedUsers;
+@property(readonly, copy, nonatomic) NSArray *users;
 @property(readonly, copy, nonatomic) UIColor *sessionColor;
 @property(readonly, copy, nonatomic) UIImage *scannablesImage;
 @property(readonly, copy, nonatomic) NSString *leaveButtonText;

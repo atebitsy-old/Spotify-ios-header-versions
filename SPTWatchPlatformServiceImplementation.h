@@ -41,12 +41,14 @@
     SPTWatchPlatformOfflineManagerImplementation *_offlineManager;
     NSDictionary *_requestHandlers;
     NSArray *_publishers;
+    NSArray *_priorityPublishers;
     SPTWatchPlatformWatchApplicationLogSubscriber *_applicationDebugLogSubscriber;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTWatchPlatformWatchApplicationLogSubscriber *applicationDebugLogSubscriber; // @synthesize applicationDebugLogSubscriber=_applicationDebugLogSubscriber;
+@property(retain, nonatomic) NSArray *priorityPublishers; // @synthesize priorityPublishers=_priorityPublishers;
 @property(retain, nonatomic) NSArray *publishers; // @synthesize publishers=_publishers;
 @property(retain, nonatomic) NSDictionary *requestHandlers; // @synthesize requestHandlers=_requestHandlers;
 @property(retain, nonatomic) SPTWatchPlatformOfflineManagerImplementation *offlineManager; // @synthesize offlineManager=_offlineManager;
@@ -78,12 +80,18 @@
 - (void)testManager:(id)arg1 didUpdateWatchIntegrationEnabledState:(_Bool)arg2;
 - (void)testManager:(id)arg1 didUpdateWatchAccessoryLoggingEnabledState:(_Bool)arg2;
 - (id)provideOfflineManager;
+- (void)disablePublishers:(id)arg1;
+- (void)updateReachabilityForPublishers:(id)arg1;
+- (void)enablePublishers:(id)arg1;
 - (void)enableApplicationDebugLogSubscriber;
 - (void)disableIntegration;
 - (void)enableIntegration;
 - (void)disableLogging;
 - (void)enableLogging;
+- (void)disablePriorityPublishers;
+- (void)enablePriorityPublishers;
 - (void)updateEnablement;
+- (void)updatePriorityEnablement;
 - (void)unload;
 - (void)idleStateWasReached;
 - (void)load;

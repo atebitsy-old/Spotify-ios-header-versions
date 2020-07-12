@@ -11,6 +11,7 @@
     // Error parsing type: , name: superbirdAppProtocolSubdomain
     // Error parsing type: , name: voiceAppProtocolHandler
     // Error parsing type: , name: presetsAppProtocolHandler
+    // Error parsing type: , name: otaAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_methodHandlers
     // Error parsing type: , name: $__lazy_storage_$_subscriptionHandlers
 }

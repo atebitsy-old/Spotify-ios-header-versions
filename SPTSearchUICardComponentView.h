@@ -18,7 +18,7 @@
     SPTSearchUICardView *_cardView;
 }
 
-+ (id)defaultCardStyleForTheme:(id)arg1;
++ (id)defaultCardStyleForTheme:(id)arg1 model:(id)arg2;
 + (id)paragraphStyle;
 + (id)attributedTitleForModel:(id)arg1 theme:(id)arg2;
 + (struct CGSize)preferredSizeForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
@@ -26,7 +26,7 @@
 @property(readonly, nonatomic) SPTSearchUICardView *cardView; // @synthesize cardView=_cardView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
 - (void)sendSelectionEvent;
-- (id)defaultCardStyle;
+- (id)defaultCardStyleWithModel:(id)arg1;
 - (void)updateAccessibilityWithModel:(id)arg1;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;

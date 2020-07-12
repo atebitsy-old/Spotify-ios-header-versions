@@ -6,8 +6,8 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSObject, NSString, NSURL;
-@protocol OS_dispatch_queue, SPTOfflineObserver;
+@class NSArray, NSString, NSURL, OS_dispatch_queue;
+@protocol SPTOfflineObserver;
 
 @protocol SPTOfflineManager <NSObject>
 - (void)fetchNumberOfOfflineLists:(void (^)(long long))arg1;
@@ -15,7 +15,7 @@
 - (void)findShowsMatchingQuery:(NSString *)arg1 completionHandler:(void (^)(NSArray *))arg2;
 - (void)findTracksMatchingQuery:(NSString *)arg1 completionHandler:(void (^)(NSArray *))arg2;
 - (void)removeObserver:(id <SPTOfflineObserver>)arg1 forURL:(NSURL *)arg2 entity:(id)arg3;
-- (void)addObserver:(id <SPTOfflineObserver>)arg1 forURL:(NSURL *)arg2 entity:(id)arg3 queue:(NSObject<OS_dispatch_queue> *)arg4;
+- (void)addObserver:(id <SPTOfflineObserver>)arg1 forURL:(NSURL *)arg2 entity:(id)arg3 queue:(OS_dispatch_queue *)arg4;
 - (void)addObserver:(id <SPTOfflineObserver>)arg1 forURL:(NSURL *)arg2 entity:(id)arg3;
 - (void)resetEntityOfflineAvailabilityWithURL:(NSURL *)arg1;
 - (void)makeEntityAvailableOfflineWithURL:(NSURL *)arg1 trackURLs:(NSArray *)arg2;

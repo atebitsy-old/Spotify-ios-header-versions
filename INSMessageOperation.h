@@ -21,6 +21,7 @@
     NSString *_path;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) NSString *path; // @synthesize path=_path;
 @property(nonatomic) _Bool authenticate; // @synthesize authenticate=_authenticate;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
@@ -29,7 +30,6 @@
 @property(retain, nonatomic) NSError *parseError; // @synthesize parseError=_parseError;
 @property(retain, nonatomic) INSResponse *response; // @synthesize response=_response;
 @property(retain, nonatomic) NSArray *envelopes; // @synthesize envelopes=_envelopes;
-- (void).cxx_destruct;
 - (void)validate;
 - (void)main;
 - (id)initWithTransport:(id)arg1 logger:(id)arg2 path:(id)arg3 authenticate:(_Bool)arg4 envelopes:(id)arg5 delegate:(id)arg6;

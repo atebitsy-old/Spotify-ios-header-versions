@@ -10,5 +10,7 @@
 {
 }
 
+- (id)parseWithInput:(id)arg1;
+
 @end
 

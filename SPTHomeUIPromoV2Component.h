@@ -4,31 +4,32 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "HUGSThemableComponent.h"
 
 #import "HUBComponent-Protocol.h"
 #import "SPTHomePromoV2ComponentViewDelegate-Protocol.h"
 
-@class NSSet, NSString, SPTHomeUILogger;
-@protocol GLUETheme, SPTHomeUIPromoV2Player;
+@class NSSet, NSString, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation;
+@protocol SPTHomeUIPromoV2Player;
 
-@interface SPTHomeUIPromoV2Component : NSObject <SPTHomePromoV2ComponentViewDelegate, HUBComponent>
+@interface SPTHomeUIPromoV2Component : HUGSThemableComponent <SPTHomePromoV2ComponentViewDelegate, HUBComponent>
 {
-    id <GLUETheme> _theme;
     id <SPTHomeUIPromoV2Player> _player;
-    SPTHomeUILogger *_logger;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTHomeUILogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTHomeUIPromoV2Player> player; // @synthesize player=_player;
-@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+- (void)view:(id)arg1 willAppearWithContext:(id)arg2;
 - (void)logPlayerAction:(unsigned long long)arg1 withModel:(id)arg2 loggingData:(id)arg3;
 - (void)didTapPlayInComponentView:(id)arg1 withModel:(id)arg2 loggingData:(id)arg3;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)createViewWithFrame:(struct CGRect)arg1;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
-- (id)initWithTheme:(id)arg1 player:(id)arg2 logger:(id)arg3;
+- (id)initWithTheme:(id)arg1 player:(id)arg2 logger:(id)arg3 remoteConfigProperties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

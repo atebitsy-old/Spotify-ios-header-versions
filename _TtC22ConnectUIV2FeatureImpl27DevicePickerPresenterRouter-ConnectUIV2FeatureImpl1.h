@@ -6,9 +6,8 @@
 
 #import "_TtC22ConnectUIV2FeatureImpl27DevicePickerPresenterRouter.h"
 
-#import "SPTGaiaDevicePickerExternalPresenter-Protocol.h"
-
-@interface _TtC22ConnectUIV2FeatureImpl27DevicePickerPresenterRouter (ConnectUIV2FeatureImpl1) <SPTGaiaDevicePickerExternalPresenter>
-- (void)presentAnyDevicePickerFromView:(id)arg1 withPresentationContext:(unsigned long long)arg2;
+@interface _TtC22ConnectUIV2FeatureImpl27DevicePickerPresenterRouter (ConnectUIV2FeatureImpl1)
+- (void)presentDevicePickerFromView:(id)arg1 withContext:(unsigned long long)arg2;
+@property(nonatomic, readonly) _Bool hasAvailableDevices;
 @end
 

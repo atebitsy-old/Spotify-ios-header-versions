@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol HUBComponentLayoutManager, SPTHomeUIComponentFactory;
+@protocol HUBComponentLayoutManager, SPTHomeUIComponentFactory, SPTHomeUILogger;
 
 @protocol SPTHomeUIService <SPTService>
+- (id <SPTHomeUILogger>)provideHomeUILogger;
 - (id <HUBComponentLayoutManager>)provideHomeComponentLayoutManager;
 @property(nonatomic, readonly) id <SPTHomeUIComponentFactory> componentFactory;
 @end

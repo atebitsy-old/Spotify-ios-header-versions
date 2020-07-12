@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: isMini
+    // Error parsing type: , name: interfaceIdiom
     // Error parsing type: , name: $__lazy_storage_$_tableView
     // Error parsing type: , name: $__lazy_storage_$_backgroundView
     // Error parsing type: , name: $__lazy_storage_$_closeButton

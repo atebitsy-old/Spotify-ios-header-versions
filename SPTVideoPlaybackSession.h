@@ -16,7 +16,6 @@
 
 @interface SPTVideoPlaybackSession : NSObject <SPTVideoResourceLoaderInternalDelegate, SPTVideoApplicationStateObserver, BMConnectionModeObserver, SPTVideoPlayerSourceObserver>
 {
-    _Bool _allowRoyaltyMedia;
     _Bool _paused;
     _Bool _seeking;
     _Bool _stalled;
@@ -40,6 +39,7 @@
     SPTVideoCDNSelector *_cdnSelector;
     SPTVideoApplicationStateObservable *_appStateObservable;
     double _initialOffset;
+    double _duration;
     double _lastSeekTime;
     NSDate *_lastSeekEventDate;
     long long _playerResetCount;
@@ -67,6 +67,7 @@
 @property(nonatomic) _Bool buffering; // @synthesize buffering=_buffering;
 @property(nonatomic) _Bool stalled; // @synthesize stalled=_stalled;
 @property(nonatomic) _Bool seeking; // @synthesize seeking=_seeking;
+@property(nonatomic) double duration; // @synthesize duration=_duration;
 @property(nonatomic) double initialOffset; // @synthesize initialOffset=_initialOffset;
 @property(retain, nonatomic) SPTVideoApplicationStateObservable *appStateObservable; // @synthesize appStateObservable=_appStateObservable;
 @property(retain, nonatomic) SPTVideoCDNSelector *cdnSelector; // @synthesize cdnSelector=_cdnSelector;
@@ -80,7 +81,6 @@
 @property(retain, nonatomic) SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
 @property(nonatomic) float preferredPlaybackSpeed; // @synthesize preferredPlaybackSpeed=_preferredPlaybackSpeed;
 @property(nonatomic, getter=isPaused) _Bool paused; // @synthesize paused=_paused;
-@property(nonatomic) _Bool allowRoyaltyMedia; // @synthesize allowRoyaltyMedia=_allowRoyaltyMedia;
 @property(nonatomic) __weak id <SPTVideoPlaybackSessionDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
 - (void)refreshSession;
@@ -106,6 +106,7 @@
 - (void)playerSource:(id)arg1 didReachEndForPlayerItem:(id)arg2;
 - (void)playerSource:(id)arg1 didUpdateSeekableWindow:(id)arg2;
 - (void)playerSource:(id)arg1 didChangeSubtitle:(id)arg2;
+- (void)playerSource:(id)arg1 didChangeDuration:(double)arg2;
 - (void)didChangeBackgroundState:(_Bool)arg1;
 - (void)willResignActive;
 - (void)didBecomeActive;

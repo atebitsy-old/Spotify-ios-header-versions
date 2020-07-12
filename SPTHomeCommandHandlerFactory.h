@@ -7,13 +7,12 @@
 #import <objc/NSObject.h>
 
 @class NSString;
-@protocol SPTHubInteractionLogger, SPTLocalSettings, SPTPlayer, SPTUBIHubsUtilities;
+@protocol SPTHubInteractionLogger, SPTPlayer, SPTUBIHubsUtilities;
 
 @interface SPTHomeCommandHandlerFactory : NSObject
 {
     NSString *_username;
     id <SPTPlayer> _player;
-    id <SPTLocalSettings> _localSettings;
     id <SPTHubInteractionLogger> _hubInteractionLogger;
     id <SPTUBIHubsUtilities> _ubiHubsUtilities;
 }
@@ -21,17 +20,14 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
 @property(readonly, nonatomic) id <SPTHubInteractionLogger> hubInteractionLogger; // @synthesize hubInteractionLogger=_hubInteractionLogger;
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, copy, nonatomic) NSString *username; // @synthesize username=_username;
-- (id)provideListeningHistoryCommandHandler:(id)arg1;
 - (id)providePlayThenPauseCommandHandler:(id)arg1;
 - (id)providePlayAndNavigateCommandHandler:(id)arg1;
 - (id)providePlayThenNavigateCommandHandler:(id)arg1;
 - (id)provideTasteOnboardingSkipCommandHandlerWithOverrides:(id)arg1;
-- (id)provideTooltipDismissalCommandHandlerWithViewModelProvider:(id)arg1;
 - (id)provideReloadCommandHandlerWithViewModelProvider:(id)arg1;
-- (id)initWithUsername:(id)arg1 player:(id)arg2 localSettings:(id)arg3 hubInteractionLogger:(id)arg4 ubiHubsUtilities:(id)arg5;
+- (id)initWithUsername:(id)arg1 player:(id)arg2 hubInteractionLogger:(id)arg3 ubiHubsUtilities:(id)arg4;
 
 @end
 

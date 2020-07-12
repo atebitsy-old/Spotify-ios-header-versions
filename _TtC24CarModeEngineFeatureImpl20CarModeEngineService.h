@@ -17,6 +17,8 @@
     // Error parsing type: , name: $__lazy_storage_$_distractionControl
     // Error parsing type: , name: loop
     // Error parsing type: , name: debugSettingsManager
+    // Error parsing type: , name: properties
+    // Error parsing type: , name: settingsManager
 }
 
 + (id)serviceIdentifier;

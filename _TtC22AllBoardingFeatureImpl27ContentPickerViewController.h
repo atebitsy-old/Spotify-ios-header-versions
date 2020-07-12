@@ -13,6 +13,7 @@
     // Error parsing type: , name: pickerView
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: logger
 }
 
 - (void).cxx_destruct;

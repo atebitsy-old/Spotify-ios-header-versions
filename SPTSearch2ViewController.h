@@ -12,13 +12,14 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTSearch2ViewControllerProtocol-Protocol.h"
 #import "SPTSearch2ViewModelProviderDelegate-Protocol.h"
+#import "SPTSearchKeyboardTrackerDelegate-Protocol.h"
 #import "SPTSearchPlatformColorInterpolatorDelegate-Protocol.h"
 #import "SPTSearchVoiceEnabledViewDelegate-Protocol.h"
 
-@class GLUEGradientView, NSString, NSURL, SPTFloatingVoiceSearchView, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchPlatformColorInterpolator;
+@class GLUEGradientView, NSLayoutConstraint, NSString, NSURL, SPTFloatingVoiceSearchView, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchKeyboardTracker, SPTSearchPlatformColorInterpolator;
 @protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTSearchLogger, UICollectionViewDragDelegate, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
-@interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTSearchVoiceEnabledViewDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
+@interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTSearchVoiceEnabledViewDelegate, SPTSearchKeyboardTrackerDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
 {
     _Bool _automaticallyAdjustsInsets;
     NSString *_query;
@@ -38,10 +39,14 @@
     id <SPTSearchLogger> _searchLogger;
     CDUnknownBlockType _onVoiceButtonPress;
     id <UICollectionViewDragDelegate> _dragDelegateObject;
+    NSLayoutConstraint *_floatingSearchViewBottomConstraint;
+    SPTSearchKeyboardTracker *_keyboardTracker;
     struct UIEdgeInsets _insets;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTSearchKeyboardTracker *keyboardTracker; // @synthesize keyboardTracker=_keyboardTracker;
+@property(retain, nonatomic) NSLayoutConstraint *floatingSearchViewBottomConstraint; // @synthesize floatingSearchViewBottomConstraint=_floatingSearchViewBottomConstraint;
 @property(readonly, nonatomic) id <UICollectionViewDragDelegate> dragDelegateObject; // @synthesize dragDelegateObject=_dragDelegateObject;
 @property(readonly, copy, nonatomic) CDUnknownBlockType onVoiceButtonPress; // @synthesize onVoiceButtonPress=_onVoiceButtonPress;
 @property(readonly, nonatomic) id <SPTSearchLogger> searchLogger; // @synthesize searchLogger=_searchLogger;
@@ -59,6 +64,7 @@
 @property(nonatomic) _Bool automaticallyAdjustsInsets; // @synthesize automaticallyAdjustsInsets=_automaticallyAdjustsInsets;
 @property(nonatomic) struct UIEdgeInsets insets; // @synthesize insets=_insets;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
+- (void)keyboardTrackerDidUpdateKeyboardFrame:(id)arg1;
 - (void)voiceEnabledView:(id)arg1 didSelectElementWithSourceIdentifier:(id)arg2;
 - (id)makeNavigateHandlerWithURIDispatchService:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
@@ -66,6 +72,7 @@
 - (id)makeReloadCommandHandlerWithUbiHubsLogger:(id)arg1;
 - (id)makeKeyboardDismissCommandHandler;
 - (id)makePlayTrackHandlerWithPlayerFeature:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (struct CGRect)keyboardFrame;
 - (id)urlForDraggableItemAtIndexPath:(id)arg1;
 - (id)makePlayerProviderWithPlayerFeature:(id)arg1;
 - (id)makeHUBViewControllerWithDependencies:(id)arg1 configuration:(id)arg2;
@@ -77,6 +84,7 @@
 - (void)updateGradientStyle;
 - (void)adjustInsetsIfNeeded;
 - (void)layoutGradientView;
+- (void)updateFloatingSearchViewConstraints;
 - (void)layoutSubviews;
 - (void)colorInterpolatorDidChangeColor:(id)arg1;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;

@@ -14,6 +14,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)items;
 - (void)willDisplaySection;
 - (id)sectionFooter;
 - (id)sectionHeader;

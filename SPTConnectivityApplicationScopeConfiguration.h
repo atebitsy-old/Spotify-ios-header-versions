@@ -25,6 +25,7 @@
     NSString *_defaultHTTPUserAgent;
 }
 
++ (id)iosConnectivityApplicationScopeConfigurationWithCachePath:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool enablePerformanceTracing; // @synthesize enablePerformanceTracing=_enablePerformanceTracing;
 @property(copy, nonatomic) NSString *defaultHTTPUserAgent; // @synthesize defaultHTTPUserAgent=_defaultHTTPUserAgent;

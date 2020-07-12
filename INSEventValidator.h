@@ -19,11 +19,11 @@
     id <INSInternalErrorEventDelegate> _errorDelegate;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSInternalErrorEventDelegate> errorDelegate; // @synthesize errorDelegate=_errorDelegate;
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *shortVersionString; // @synthesize shortVersionString=_shortVersionString;
 @property(nonatomic) unsigned long long maxPayloadSize; // @synthesize maxPayloadSize=_maxPayloadSize;
-- (void).cxx_destruct;
 - (void)logRejectedClientEventForValidatorResult:(unsigned long long)arg1 eventName:(id)arg2;
 - (id)errorInfoWithDescription:(id)arg1 messageName:(id)arg2;
 - (id)errorForValidatorResult:(unsigned long long)arg1 messageName:(id)arg2;

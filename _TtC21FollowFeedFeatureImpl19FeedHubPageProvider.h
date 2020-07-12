@@ -15,6 +15,7 @@
     // Error parsing type: , name: paginationHandler
     // Error parsing type: , name: logger
     // Error parsing type: , name: remoteConfigManager
+    // Error parsing type: , name: explicitContentManager
 }
 
 @end

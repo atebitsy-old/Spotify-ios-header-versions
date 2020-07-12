@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
+- (id)logSetPlaybackSpeedWithPlaybackSpeed:(id)arg1 fromAccessory:(id)arg2;
 - (id)logUiNavigateWithDestination:(id)arg1 fromAccessory:(id)arg2;
 - (id)logAddItemToQueueWithItemToAddToQueue:(id)arg1 fromAccessory:(id)arg2;
 - (id)logSeekByTimeWithMsSeekedOffset:(long long)arg1 fromAccessory:(id)arg2;

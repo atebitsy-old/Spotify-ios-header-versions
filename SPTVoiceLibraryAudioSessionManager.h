@@ -27,7 +27,6 @@
 @property(readonly, nonatomic) __weak id <SPTAudioSessionController> audioSessionController; // @synthesize audioSessionController=_audioSessionController;
 @property(nonatomic, getter=isSessionConfigured) _Bool sessionConfigured; // @synthesize sessionConfigured=_sessionConfigured;
 @property(retain, nonatomic) NSHashTable *delegates; // @synthesize delegates;
-- (_Bool)audioSessionShouldSupportBluetooth:(id)arg1;
 - (_Bool)audioSessionShouldSupportRecording:(id)arg1;
 - (_Bool)shouldModifyAudioSession:(id)arg1;
 - (void)refreshAudioSessionConfiguration;

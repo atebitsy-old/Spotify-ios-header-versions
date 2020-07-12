@@ -23,8 +23,10 @@
     // Error parsing type: , name: contributingArtistService
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: explicitContentService
     // Error parsing type: , name: pageRegistrationToken
     // Error parsing type: , name: remoteConfigManager
+    // Error parsing type: , name: $__lazy_storage_$_explicitContentManager
     // Error parsing type: , name: $__lazy_storage_$_feedUpdatesManager
 }
 

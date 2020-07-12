@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntitySort_FilterEventFactory, SPTUBIMobilePodcastEntitySort_SortEventFactory;
+@class NSURL;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntitySort_ClearFilterEventFactory, SPTUBIMobilePodcastEntitySort_FilterEventFactory, SPTUBIMobilePodcastEntitySort_SortEventFactory;
 
 @protocol SPTUBIMobilePodcastEntitySortEventFactory <NSObject>
+- (id <SPTUBIMobilePodcastEntitySort_ClearFilterEventFactory>)clearFilterFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobilePodcastEntitySort_SortEventFactory>)sortFactory;
 - (id <SPTUBIMobilePodcastEntitySort_FilterEventFactory>)filterFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;

@@ -9,11 +9,12 @@
 #import "SPTEncoreTrackRowPlaylistExtenderDelegate-Protocol.h"
 #import "SPTPlaylistExtenderCellProvider-Protocol.h"
 #import "SPTPlaylistExtenderModelDelegate-Protocol.h"
+#import "SPTPlaylistExtenderRefreshButtonCellDelegate-Protocol.h"
 
-@class NSString, SPTPlaylistExtenderLogger;
+@class NSOrderedSet, NSString, SPTPlaylistExtenderLogger;
 @protocol GLUETheme, SPTEncoreTrackRowPlaylistExtenderFactory, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistIsTrackActive, SPTPlaylistExtenderModel, SPTProductState, SPTShelves;
 
-@interface SPTPlaylistExtenderCellProvider : NSObject <SPTEncoreTrackRowPlaylistExtenderDelegate, SPTPlaylistExtenderModelDelegate, SPTPlaylistExtenderCellProvider>
+@interface SPTPlaylistExtenderCellProvider : NSObject <SPTEncoreTrackRowPlaylistExtenderDelegate, SPTPlaylistExtenderModelDelegate, SPTPlaylistExtenderCellProvider, SPTPlaylistExtenderRefreshButtonCellDelegate>
 {
     _Bool _isEnabled;
     id <SPTFreeTierPlaylistCellProviderDelegate> delegate;
@@ -25,9 +26,13 @@
     id <SPTProductState> _productState;
     id <SPTFreeTierPlaylistIsTrackActive> _trackActivePredicate;
     SPTPlaylistExtenderLogger *_logger;
+    NSOrderedSet *_cellModels;
 }
 
++ (long long)encoreRestrictionForItem:(id)arg1;
++ (id)encoreModelForCellModel:(id)arg1 isPressed:(_Bool)arg2;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSOrderedSet *cellModels; // @synthesize cellModels=_cellModels;
 @property(nonatomic) _Bool isEnabled; // @synthesize isEnabled=_isEnabled;
 @property(readonly, nonatomic) SPTPlaylistExtenderLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistIsTrackActive> trackActivePredicate; // @synthesize trackActivePredicate=_trackActivePredicate;
@@ -38,6 +43,7 @@
 @property(readonly, nonatomic) id <SPTEncoreTrackRowPlaylistExtenderFactory> rowFactory; // @synthesize rowFactory=_rowFactory;
 @property(copy, nonatomic) CDUnknownBlockType testIndexPathResolver; // @synthesize testIndexPathResolver=_testIndexPathResolver;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate;
+- (void)refreshButtonCell:(id)arg1 didTapButton:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
@@ -46,15 +52,13 @@
 - (void)unlikeWithSender:(id)arg1;
 - (void)playlistExtenderModelDidUpdate:(id)arg1;
 - (void)playlistExtenderModel:(id)arg1 didFailWithError:(id)arg2;
+- (id)createCellModels;
 - (void)refreshRecommendations;
-- (id)footerView;
-- (double)footerHeight;
-- (double)headerHeight;
-- (id)headerView;
 - (void)willDisplaySection;
 - (id)sectionFooter;
 - (id)sectionHeader;
 - (unsigned long long)section;
+- (id)items;
 - (unsigned long long)numberOfRows;
 - (id)reuseIdentifiers;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
@@ -63,8 +67,9 @@
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)enableSwipeGesturesOnCell:(id)arg1 withItem:(id)arg2;
-- (long long)encoreRestrictionForItem:(id)arg1;
-- (id)encoreModelForItem:(id)arg1 isPressed:(_Bool)arg2;
+- (void)configureCell:(id)arg1 cellModel:(id)arg2;
+- (void)configureRefreshButtonCell:(id)arg1;
+- (void)configureHeaderCell:(id)arg1 headerCellModel:(id)arg2;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 - (id)initWithTrackRowFactory:(id)arg1 model:(id)arg2 shelves:(id)arg3 theme:(id)arg4 productState:(id)arg5 trackActivePredicate:(id)arg6 logger:(id)arg7;

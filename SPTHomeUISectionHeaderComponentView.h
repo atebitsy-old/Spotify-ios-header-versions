@@ -6,20 +6,28 @@
 
 #import "HUGSThemableComponentView.h"
 
-@class SPTHomeUISectionHeaderView;
+#import "HUBComponentViewObserver-Protocol.h"
 
-@interface SPTHomeUISectionHeaderComponentView : HUGSThemableComponentView
+@class SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, SPTHomeUISectionHeaderView;
+
+@interface SPTHomeUISectionHeaderComponentView : HUGSThemableComponentView <HUBComponentViewObserver>
 {
     unsigned long long _type;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     SPTHomeUISectionHeaderView *_sectionHeaderView;
 }
 
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3 type:(unsigned long long)arg4;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeUISectionHeaderView *sectionHeaderView; // @synthesize sectionHeaderView=_sectionHeaderView;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)configureWithModel:(id)arg1;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 type:(unsigned long long)arg3;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 type:(unsigned long long)arg3 logger:(id)arg4 remoteConfigProperties:(id)arg5;
 
 @end
 

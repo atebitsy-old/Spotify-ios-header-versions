@@ -26,8 +26,8 @@
 @property(retain, nonatomic) id <HUBImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)extractColorFromImage:(id)arg1;
-- (void)imageLoader:(id)arg1 didFailLoadingImageForURL:(id)arg2 error:(id)arg3;
-- (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3;
+- (void)imageLoader:(id)arg1 didFailLoadingImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
+- (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 context:(id)arg4;
 - (void)updateHeaderGradient:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (id)initWithImageLoader:(id)arg1;

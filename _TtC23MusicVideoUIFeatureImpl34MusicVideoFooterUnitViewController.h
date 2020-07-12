@@ -9,7 +9,8 @@
 @interface _TtC23MusicVideoUIFeatureImpl34MusicVideoFooterUnitViewController : UIViewController
 {
     // Error parsing type: , name: style
-    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: loopController
+    // Error parsing type: , name: makeViewBinder
 }
 
 - (void).cxx_destruct;

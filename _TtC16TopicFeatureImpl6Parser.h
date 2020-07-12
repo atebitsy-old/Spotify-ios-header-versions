@@ -11,7 +11,6 @@
     // Error parsing type: , name: hugsFactory
     // Error parsing type: , name: pageURI
     // Error parsing type: , name: ubiLocationSerializer
-    // Error parsing type: , name: relatedTopicsMockEnabled
     // Error parsing type: , name: episodeDurationFormatter
     // Error parsing type: , name: publicationDateFormatter
 }

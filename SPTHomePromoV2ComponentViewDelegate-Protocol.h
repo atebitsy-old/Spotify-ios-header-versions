@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSDictionary, SPTHomePromoV2ComponentView;
+@class HUBContext, HUGSThemableComponentView, NSDictionary, SPTHomePromoV2ComponentView;
 @protocol HUBCommandModel;
 
 @protocol SPTHomePromoV2ComponentViewDelegate <NSObject>
+- (void)view:(HUGSThemableComponentView *)arg1 willAppearWithContext:(HUBContext *)arg2;
 - (void)didTapPlayInComponentView:(SPTHomePromoV2ComponentView *)arg1 withModel:(id <HUBCommandModel>)arg2 loggingData:(NSDictionary *)arg3;
 @end
 

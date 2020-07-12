@@ -6,18 +6,22 @@
 
 #import "HUGSThemableComponentView.h"
 
+#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithChildren-Protocol.h"
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 #import "UICollectionViewDelegateFlowLayout-Protocol.h"
 
-@class NSString, UICollectionView;
+@class HUBContext, NSString, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, UICollectionView;
 @protocol HUBComponentViewChildDelegate;
 
-@interface SPTHomeUIShortcutsContainerComponentView : HUGSThemableComponentView <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HUBComponentViewWithChildren>
+@interface SPTHomeUIShortcutsContainerComponentView : HUGSThemableComponentView <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, HUBComponentViewWithChildren, HUBComponentViewObserver>
 {
     id <HUBComponentViewChildDelegate> childDelegate;
+    SPTHomeUILoggerImplementation *_logger;
+    SPTHomeUIFeatureProperties *_remoteConfigProperties;
     UICollectionView *_collectionView;
+    HUBContext *_context;
 }
 
 + (long long)numberOfCardsForItems:(long long)arg1 withSizeClass:(long long)arg2;
@@ -25,17 +29,22 @@
 + (double)cardContainerHeightForModel:(id)arg1 containerViewSize:(struct CGSize)arg2 horizontalSizeClass:(long long)arg3 theme:(id)arg4;
 + (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 sizeClass:(long long)arg3 theme:(id)arg4;
 - (void).cxx_destruct;
+@property(retain, nonatomic) HUBContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
+@property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
+- (void)viewDidDisappearWithContext:(id)arg1;
+- (void)viewWillAppearWithContext:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)addGradientView;
 - (void)layoutSubviews;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 logger:(id)arg3 remoteConfigProperties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

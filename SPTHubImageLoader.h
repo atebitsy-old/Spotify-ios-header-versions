@@ -23,7 +23,7 @@
 @property(nonatomic) __weak id <HUBImageLoaderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)imageLoader:(id)arg1 didFailToLoadImageForURL:(id)arg2 error:(id)arg3 context:(id)arg4;
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
-- (void)loadImageForURL:(id)arg1 targetSize:(struct CGSize)arg2;
+- (void)loadImageForURL:(id)arg1 targetSize:(struct CGSize)arg2 context:(id)arg3;
 - (id)initWithImageLoader:(id)arg1 imageLoadingLogger:(id)arg2;
 
 // Remaining properties

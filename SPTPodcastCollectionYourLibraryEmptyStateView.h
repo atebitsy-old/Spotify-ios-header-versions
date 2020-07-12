@@ -7,7 +7,7 @@
 #import "GLUEEmptyStateView.h"
 
 @class NSURL;
-@protocol GLUETheme, SPTLinkDispatcher, SPTMetaViewController, SPTNavigationRouter, SPTPodcastLogger;
+@protocol GLUETheme, SPTLinkDispatcher, SPTMetaViewController, SPTNavigationRouter, SPTPodcastLogger><SPTPodcastUBILogger;
 
 @interface SPTPodcastCollectionYourLibraryEmptyStateView : GLUEEmptyStateView
 {
@@ -19,14 +19,14 @@
     NSURL *_navigateURI;
     NSURL *_URI;
     NSURL *_navigateFromURI;
-    id <SPTPodcastLogger> _podcastLogger;
+    id <SPTPodcastLogger><SPTPodcastUBILogger> _podcastLogger;
 }
 
 + (id)emptyStateDownloadsViewTheme:(id)arg1 linkDispatcher:(id)arg2 metaViewController:(id)arg3 navigationRouter:(id)arg4 podcastLogger:(id)arg5 viewURI:(id)arg6;
 + (id)emptyStateEpisodesViewTheme:(id)arg1 linkDispatcher:(id)arg2 metaViewController:(id)arg3 navigationRouter:(id)arg4 podcastLogger:(id)arg5 viewURI:(id)arg6;
 + (id)emptyStateShowsViewTheme:(id)arg1 linkDispatcher:(id)arg2 metaViewController:(id)arg3 navigationRouter:(id)arg4 podcastLogger:(id)arg5 viewURI:(id)arg6;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTPodcastLogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
+@property(retain, nonatomic) id <SPTPodcastLogger><SPTPodcastUBILogger> podcastLogger; // @synthesize podcastLogger=_podcastLogger;
 @property(retain, nonatomic) NSURL *navigateFromURI; // @synthesize navigateFromURI=_navigateFromURI;
 @property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 @property(retain, nonatomic) NSURL *navigateURI; // @synthesize navigateURI=_navigateURI;

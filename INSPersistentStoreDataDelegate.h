@@ -16,12 +16,13 @@
     id <INSPersistentStore> _store;
 }
 
-@property(retain, nonatomic) id <INSPersistentStore> store; // @synthesize store=_store;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <INSPersistentStore> store; // @synthesize store=_store;
+- (void)performBlockOnPrivateMOCQueue:(CDUnknownBlockType)arg1;
 - (void)didFailEnvelopes:(id)arg1;
 - (void)didDeliverEnvelopes:(id)arg1;
-- (void)scheduleNonAuthenticatedEnvelope:(id)arg1;
-- (void)scheduleAuthenticatedEnvelope:(id)arg1 withOwner:(id)arg2;
+- (void)scheduleNonAuthenticatedEnvelopeOnPrivateMOC:(id)arg1;
+- (void)scheduleAuthenticatedEnvelopeOnPrivateMOC:(id)arg1 withOwner:(id)arg2;
 - (id)initWithPersistentStore:(id)arg1;
 
 // Remaining properties

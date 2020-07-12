@@ -33,6 +33,7 @@
 @property(readonly, nonatomic) id <SPTVolumeAPI> volumeController; // @synthesize volumeController=_volumeController;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
+- (void)handleShuffleRequest:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleSkipRequest:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;

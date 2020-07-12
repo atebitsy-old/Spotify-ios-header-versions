@@ -9,6 +9,6 @@
 
 @protocol HUBImageLoader
 @property(nonatomic) __weak id <HUBImageLoaderDelegate> delegate;
-- (void)loadImageForURL:(NSURL *)arg1 targetSize:(struct CGSize)arg2;
+- (void)loadImageForURL:(NSURL *)arg1 targetSize:(struct CGSize)arg2 context:(id)arg3;
 @end
 

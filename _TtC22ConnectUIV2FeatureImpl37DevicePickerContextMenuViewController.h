@@ -13,6 +13,7 @@
     // Error parsing type: , name: iconManager
     // Error parsing type: , name: loggingInterceptor
     // Error parsing type: , name: scrollManager
+    // Error parsing type: , name: interfaceIdiom
     // Error parsing type: , name: $__lazy_storage_$_contextMenuView
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }

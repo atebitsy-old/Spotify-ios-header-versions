@@ -21,15 +21,15 @@
     id <INSPersistentStore> _persistentStore;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
 @property(retain, nonatomic) id <INSEventSequenceIDProviderProtocol> sequenceIdProvider; // @synthesize sequenceIdProvider=_sequenceIdProvider;
 @property(retain, nonatomic) id <INSEventEnvelopeFactoryProtocol> envelopeFactory; // @synthesize envelopeFactory=_envelopeFactory;
 @property(retain, nonatomic) id <INSEventSenderStatsProviderProtocol> eventSenderStatsProvider; // @synthesize eventSenderStatsProvider=_eventSenderStatsProvider;
 @property(nonatomic) double interval; // @synthesize interval=_interval;
 @property(retain, nonatomic) NSDate *lastDate; // @synthesize lastDate=_lastDate;
-- (void).cxx_destruct;
 - (_Bool)shouldSendStatsEvent;
-- (void)eventEnvelopesWithOwner:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)getAllEventEnvelopesOnPrivateMOCForOwner:(id)arg1 outAuthEnvelopes:(id)arg2 outNonAuthEnvelopes:(id)arg3;
 - (id)initWithInterval:(double)arg1 eventSenderStatsProvider:(id)arg2 envelopeFactory:(id)arg3 sequenceIdProvider:(id)arg4 persistentStore:(id)arg5;
 
 // Remaining properties

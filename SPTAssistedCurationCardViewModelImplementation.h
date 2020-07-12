@@ -49,7 +49,6 @@
 @property(readonly, copy, nonatomic) NSString *cardTitle;
 - (void)loadMore;
 @property(readonly, nonatomic) _Bool hasMore;
-- (_Bool)isLoaded;
 - (_Bool)isEqualToCardModel:(id)arg1;
 - (void)dealloc;
 - (id)initWithCardModel:(id)arg1 audioPreviewModel:(id)arg2 explicitContentAccessManager:(id)arg3 ageVerificationProvider:(id)arg4;

@@ -6,20 +6,23 @@
 
 #import "NSObject-Protocol.h"
 
-@class EventEnvelope, NSData, NSSet, NSString;
+@class EventEnvelope, INSMessageEntityProxy, NSArray, NSData, NSDictionary, NSSet, NSString;
+@protocol INSInstallIdEntityProtocol, INSSequenceNumberEntityProtocol;
 
 @protocol INSPersistentStore <NSObject>
-- (void)eventSenderStatsNodesWithSequenceIds:(NSSet *)arg1 completion:(void (^)(NSDictionary *))arg2;
-- (void)installIdWithCompletion:(void (^)(id <INSInstallIdEntityProtocol>))arg1;
-- (void)saveWithCompletion:(void (^)(void))arg1;
-- (void)persistNonAuthenticatedEventEnvelope:(EventEnvelope *)arg1 completion:(void (^)(INSMessageEntityProxy *))arg2;
-- (void)persistAuthenticatedEventEnvelope:(EventEnvelope *)arg1 owner:(NSString *)arg2 completion:(void (^)(INSMessageEntityProxy *))arg3;
-- (void)nonAuthenticatedMessagesWithCompletion:(void (^)(NSArray *))arg1;
-- (void)incrementSequenceNumberWithEventName:(NSString *)arg1 sequenceId:(NSData *)arg2 completion:(void (^)(id <INSSequenceNumberEntityProtocol>))arg3;
-- (void)authenticatedMessagesWithOwner:(NSString *)arg1 completion:(void (^)(NSArray *))arg2;
-- (void)messagesWithCompletion:(void (^)(NSArray *))arg1;
-- (void)containMessageForId:(NSString *)arg1 completion:(void (^)(_Bool))arg2;
-- (void)deleteMessageForId:(NSString *)arg1 completion:(void (^)(void))arg2;
-- (void)countWithCompletion:(void (^)(unsigned long long))arg1;
+- (unsigned long long)getMessageCountOnPrivateMOC;
+- (_Bool)isCurrentlyOnPrivateMOCDispatchQueue;
+- (void)performBlockOnPrivateMOCQueue:(void (^)(void))arg1;
+- (NSDictionary *)getEventSenderStatsNodesOnPrivateMOCWithSequenceIds:(NSSet *)arg1;
+- (id <INSInstallIdEntityProtocol>)getInstallIdOnPrivateMOC;
+- (void)saveOnPrivateMOC;
+- (INSMessageEntityProxy *)persistNonAuthenticatedEventEnvelopeOnPrivateMOC:(EventEnvelope *)arg1;
+- (INSMessageEntityProxy *)persistAuthenticatedEventEnvelopeOnPrivateMOC:(EventEnvelope *)arg1 owner:(NSString *)arg2;
+- (id <INSSequenceNumberEntityProtocol>)incrementSequenceNumberOnPrivateMOCWithEventName:(NSString *)arg1 sequenceId:(NSData *)arg2;
+- (NSArray *)getNonAuthenticatedMessagesOnPrivateMOC;
+- (NSArray *)getAuthenticatedMessagesOnPrivateMOCWithOwner:(NSString *)arg1;
+- (NSArray *)getAllMessagesOnPrivateMOC;
+- (_Bool)doesContainMessageOnPrivateMOCWithId:(NSString *)arg1;
+- (void)deleteMessageOnPrivateMOCWithId:(NSString *)arg1;
 @end
 

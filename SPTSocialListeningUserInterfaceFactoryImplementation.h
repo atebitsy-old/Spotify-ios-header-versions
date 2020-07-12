@@ -9,7 +9,7 @@
 #import "SPTSocialListeningUserInterfaceFactory-Protocol.h"
 
 @class NSString, SPTSocialListeningDialogPresenter, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherStateManagerImplementation, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation;
-@protocol GLUEImageLoader, SPTContainerUIService, SPTLinkDispatcher, SPTOfflineModeState, SPTScannablesPresenter, SPTShareFeature, SPTSocialListeningTestManager;
+@protocol GLUEImageLoader, SPTContainerUIService, SPTLinkDispatcher, SPTOfflineModeState, SPTProfileUserData, SPTScannablesPresenter, SPTShareFeature, SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningUserInterfaceFactoryImplementation : NSObject <SPTSocialListeningUserInterfaceFactory>
 {
@@ -25,9 +25,11 @@
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTShareFeature> _shareFeature;
     SPTSocialListeningListenTogetherStateManagerImplementation *_listenTogetherStateManager;
+    id <SPTProfileUserData> _currentUserData;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTProfileUserData> currentUserData; // @synthesize currentUserData=_currentUserData;
 @property(retain, nonatomic) SPTSocialListeningListenTogetherStateManagerImplementation *listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -41,7 +43,7 @@
 @property(readonly, nonatomic) SPTSocialListeningModelImplementation *model; // @synthesize model=_model;
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 - (id)createSocialListeningSessionView;
-- (id)initWithTheme:(id)arg1 scannablesPresenter:(id)arg2 containerUIService:(id)arg3 offlineModeState:(id)arg4 shareFeature:(id)arg5 model:(id)arg6 logger:(id)arg7 dialogPresenter:(id)arg8 imageLoader:(id)arg9 linkDispatcher:(id)arg10 testManager:(id)arg11;
+- (id)initWithTheme:(id)arg1 scannablesPresenter:(id)arg2 containerUIService:(id)arg3 offlineModeState:(id)arg4 shareFeature:(id)arg5 model:(id)arg6 logger:(id)arg7 dialogPresenter:(id)arg8 imageLoader:(id)arg9 linkDispatcher:(id)arg10 testManager:(id)arg11 currentUserData:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

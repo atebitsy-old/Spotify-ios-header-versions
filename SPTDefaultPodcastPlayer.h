@@ -36,7 +36,6 @@
 - (id)provideDefaultPlayOptionsWithSkipTrack:(id)arg1 andPosition:(id)arg2;
 - (void)fetchProgressState:(id)arg1;
 - (void)scheduleFetchProgressTimerIfNecessary;
-@property(readonly, nonatomic, getter=isPaused) _Bool paused;
 - (id)restrictionsForPodcasts;
 - (_Bool)isActiveContextURI:(id)arg1;
 - (_Bool)isActiveEpisodeURL:(id)arg1 inEntityURL:(id)arg2;
@@ -48,13 +47,9 @@
 - (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 withOrigin:(id)arg3 startEpisodeUrl:(id)arg4 fromTimestamp:(id)arg5 resetPlay:(_Bool)arg6 completionHandler:(CDUnknownBlockType)arg7;
 - (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 startEpisodeUrl:(id)arg3 fromTimestamp:(id)arg4 resetPlay:(_Bool)arg5;
 - (void)pausePodcast:(id)arg1 startEpisodeUrl:(id)arg2;
-@property(readonly, nonatomic) _Bool isMusicInjectionTrack;
-@property(readonly, nonatomic) _Bool isPlayingPodcastEpisode;
-@property(readonly, nonatomic) double currentTrackDuration;
 - (_Bool)seekInPodcast:(id)arg1 episodeUrl:(id)arg2 toPosition:(double)arg3;
 @property(readonly, nonatomic) double currentTrackPosition;
 @property(readonly, nonatomic) double currentTrackProgress;
-@property(readonly, nonatomic) NSURL *lastStateContextURI;
 - (void)dealloc;
 - (id)initWithPlayer:(id)arg1 testManager:(id)arg2;
 

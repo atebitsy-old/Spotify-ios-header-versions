@@ -12,7 +12,7 @@
     // Error parsing type: , name: thingViewIntentsHandler
     // Error parsing type: , name: playbackController
     // Error parsing type: , name: audioRecorder
-    // Error parsing type: , name: appProtocolPayloadBuilder
+    // Error parsing type: , name: payloadConstructor
     // Error parsing type: , name: earconPlayer
     // Error parsing type: , name: ttsPlayer
     // Error parsing type: , name: voiceResponse

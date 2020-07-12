@@ -10,18 +10,15 @@
 
 @interface SPTTimeMeasurement : NSObject
 {
-    // Error parsing type: , name: measurementId
-    // Error parsing type: , name: category
-    // Error parsing type: , name: dimensions
-    // Error parsing type: , name: metadata
-    // Error parsing type: , name: points
-    // Error parsing type: , name: featureId
+    // Error parsing type: , name: timeMeasurement
+    // Error parsing type: , name: $__lazy_storage_$_points
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (_Bool)isEqual:(id)arg1;
 @property(nonatomic, readonly) NSString *featureId;
-@property(nonatomic, readonly) NSSet *points;
+@property(nonatomic, copy) NSSet *points;
 @property(nonatomic, readonly) NSDictionary *metadata;
 @property(nonatomic, readonly) NSDictionary *dimensions;
 @property(nonatomic, readonly) NSString *category;

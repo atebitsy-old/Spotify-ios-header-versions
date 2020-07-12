@@ -18,6 +18,7 @@
 + (id)factoryWithPageUri:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)clearFilterFactoryWithUri:(id)arg1;
 - (id)sortFactory;
 - (id)filterFactory;
 - (id)_location;

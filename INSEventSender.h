@@ -29,6 +29,7 @@
     id <INSMessageOwnerProvider> _messageOwnerProvider;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) id <INSMessageOwnerProvider> messageOwnerProvider; // @synthesize messageOwnerProvider=_messageOwnerProvider;
 @property(retain, nonatomic) INSEventValidator *validator; // @synthesize validator=_validator;
 @property(retain, nonatomic) INSSchedulerDataSourceComposition *composition; // @synthesize composition=_composition;
@@ -42,7 +43,6 @@
 @property(retain, nonatomic) id <INSLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) INSScheduler *scheduler; // @synthesize scheduler=_scheduler;
 @property(retain, nonatomic) id <INSTransport> transport; // @synthesize transport=_transport;
-- (void).cxx_destruct;
 - (void)internalErrorEventOccuredWithMessage:(id)arg1;
 - (id)defaultContexts:(id)arg1 clientVersion:(id)arg2 persistentStore:(id)arg3;
 - (void)removeEventObserver:(id)arg1;

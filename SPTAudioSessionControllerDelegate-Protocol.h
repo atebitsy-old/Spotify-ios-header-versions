@@ -12,7 +12,6 @@
 - (_Bool)shouldModifyAudioSession:(id <SPTAudioSessionController>)arg1;
 
 @optional
-- (_Bool)audioSessionShouldSupportBluetooth:(id <SPTAudioSessionController>)arg1;
 - (double)audioSessionPreferredIOBufferDuration:(id <SPTAudioSessionController>)arg1;
 - (_Bool)audioSessionShouldSupportRecording:(id <SPTAudioSessionController>)arg1;
 @end

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: logCenter
     // Error parsing type: , name: eventSender
+    // Error parsing type: , name: ubiLogger
 }
 
 @end

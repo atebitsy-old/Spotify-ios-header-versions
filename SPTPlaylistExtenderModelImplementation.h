@@ -47,14 +47,13 @@
 @property(readonly, nonatomic) NSString *sectionHeaderSubtitle;
 @property(readonly, nonatomic) NSString *sectionHeaderTitle;
 - (_Bool)shouldDisplayFooter;
-- (void)trackSelectedAtIndex:(long long)arg1;
+- (void)trackSelected:(id)arg1;
 - (void)refresh;
-- (unsigned long long)numberOfTracks;
 - (void)startLoading;
-- (id)itemForIndex:(unsigned long long)arg1;
+- (id)items;
 @property(readonly, nonatomic, getter=isStarted) _Bool started;
 @property(readonly, nonatomic, getter=isLoading) _Bool loading;
-- (void)addTrackAtIndex:(unsigned long long)arg1;
+- (void)addTrack:(id)arg1;
 - (void)pushState:(id)arg1 withEffects:(id)arg2;
 - (void)pushEvent:(id)arg1;
 @property(readonly, nonatomic) __weak id <SPTPlaylistExtenderModel> model;

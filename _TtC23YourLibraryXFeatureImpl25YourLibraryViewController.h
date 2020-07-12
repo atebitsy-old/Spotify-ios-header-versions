@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIViewController.h>
+#import "SPViewController.h"
 
-@interface _TtC23YourLibraryXFeatureImpl25YourLibraryViewController : UIViewController
+@interface _TtC23YourLibraryXFeatureImpl25YourLibraryViewController : SPViewController
 {
     // Error parsing type: , name: loopController
     // Error parsing type: , name: theme

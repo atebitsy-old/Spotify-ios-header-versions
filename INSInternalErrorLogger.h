@@ -16,8 +16,8 @@
     id <INSInternalErrorEventDelegate> _internalErrorEventDelegate;
 }
 
-@property(nonatomic) __weak id <INSInternalErrorEventDelegate> internalErrorEventDelegate; // @synthesize internalErrorEventDelegate=_internalErrorEventDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <INSInternalErrorEventDelegate> internalErrorEventDelegate; // @synthesize internalErrorEventDelegate=_internalErrorEventDelegate;
 - (void)notifyInternalErrorEventWithErrorType:(id)arg1 errorMessage:(id)arg2 errorContext:(id)arg3 delegate:(id)arg4;
 - (void)logError:(id)arg1;
 - (void)logMessage:(id)arg1;

@@ -17,8 +17,8 @@
 
 + (id)proxyWithEntity:(id)arg1;
 + (id)proxyWithInstallId:(id)arg1;
-@property(copy, nonatomic) NSString *installId; // @synthesize installId=_installId;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *installId; // @synthesize installId=_installId;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithIntallId:(id)arg1;
 

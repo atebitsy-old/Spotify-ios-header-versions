@@ -7,12 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
-#import "SPTFreeTierPlaylistSectionDescription-Protocol.h"
+#import "SPTFreeTierPlaylistSectionDescriptionV2-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistButtonSectionHeaderViewStyle;
 @protocol SPTFreeTierPlaylistEmptyViewAdditionalCallToAction, SPTFreeTierPlaylistViewModel;
 
-@interface SPTFreeTierPlaylistAdditionalCTACellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescription>
+@interface SPTFreeTierPlaylistAdditionalCTACellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescriptionV2>
 {
     id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> _additionalCallToAction;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
@@ -29,6 +29,7 @@
 - (id)sectionFooter;
 - (id)sectionHeader;
 - (unsigned long long)section;
+- (id)items;
 - (unsigned long long)numberOfRows;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;

@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL, SPTAccessory;
+@class NSNumber, NSString, NSURL, SPTAccessory;
 
 @protocol SPTAccessoryActionLogger <NSObject>
+- (NSString *)logSetPlaybackSpeedWithPlaybackSpeed:(NSNumber *)arg1 fromAccessory:(SPTAccessory *)arg2;
 - (NSString *)logUiNavigateWithDestination:(NSURL *)arg1 fromAccessory:(SPTAccessory *)arg2;
 - (NSString *)logAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1 fromAccessory:(SPTAccessory *)arg2;
 - (NSString *)logSeekByTimeWithMsSeekedOffset:(long long)arg1 fromAccessory:(SPTAccessory *)arg2;

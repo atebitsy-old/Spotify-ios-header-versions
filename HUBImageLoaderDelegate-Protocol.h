@@ -8,7 +8,7 @@
 @protocol HUBImageLoader;
 
 @protocol HUBImageLoaderDelegate
-- (void)imageLoader:(id <HUBImageLoader>)arg1 didFailLoadingImageForURL:(NSURL *)arg2 error:(NSError *)arg3;
-- (void)imageLoader:(id <HUBImageLoader>)arg1 didLoadImage:(UIImage *)arg2 forURL:(NSURL *)arg3;
+- (void)imageLoader:(id <HUBImageLoader>)arg1 didFailLoadingImageForURL:(NSURL *)arg2 error:(NSError *)arg3 context:(id)arg4;
+- (void)imageLoader:(id <HUBImageLoader>)arg1 didLoadImage:(UIImage *)arg2 forURL:(NSURL *)arg3 context:(id)arg4;
 @end
 

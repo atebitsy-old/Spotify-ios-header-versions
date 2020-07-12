@@ -11,6 +11,7 @@
     // Error parsing type: , name: queue
     // Error parsing type: , name: lock
     // Error parsing type: , name: player
+    // Error parsing type: , name: connectManager
     // Error parsing type: , name: consumer
 }
 

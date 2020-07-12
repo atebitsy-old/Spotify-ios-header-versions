@@ -10,13 +10,14 @@
 #import "SPTAssistedCurationViewModel-Protocol.h"
 
 @class NSMutableArray, NSMutableSet, NSString, NSURL;
-@protocol SPTAgeVerificationProvider, SPTAssistedCurationAddTrackHandler, SPTAssistedCurationCardsSortMechanism, SPTAssistedCurationModel, SPTAssistedCurationUITestManager, SPTAssistedCurationViewModelDelegate, SPTAudioPreviewModelFactory, SPTAudioPreviewPlayer, SPTExplicitContentAccessManager, SPTSnackbarConditionalPresenter;
+@protocol SPTAgeVerificationProvider, SPTAssistedCurationAddTrackHandler, SPTAssistedCurationCardsSortMechanism, SPTAssistedCurationModel, SPTAssistedCurationUIContextHandler, SPTAssistedCurationUITestManager, SPTAssistedCurationViewModelDelegate, SPTAudioPreviewModelFactory, SPTAudioPreviewPlayer, SPTExplicitContentAccessManager, SPTSnackbarConditionalPresenter;
 
 @interface SPTAssistedCurationViewModelImplementation : NSObject <SPTAssistedCurationViewModel, SPTAssistedCurationModelDelegate>
 {
     id <SPTAssistedCurationViewModelDelegate> _delegate;
     id <SPTAssistedCurationAddTrackHandler> _addTrackHandler;
     id <SPTAssistedCurationModel> _assistedCurationModel;
+    id <SPTAssistedCurationUIContextHandler> _contextHandler;
     NSMutableArray *_cards;
     id <SPTAssistedCurationCardsSortMechanism> _sortMechanism;
     NSMutableSet *_waitForProviderIdentifiers;
@@ -38,6 +39,7 @@
 @property(retain, nonatomic) NSMutableSet *waitForProviderIdentifiers; // @synthesize waitForProviderIdentifiers=_waitForProviderIdentifiers;
 @property(readonly, nonatomic) id <SPTAssistedCurationCardsSortMechanism> sortMechanism; // @synthesize sortMechanism=_sortMechanism;
 @property(retain, nonatomic) NSMutableArray *cards; // @synthesize cards=_cards;
+@property(retain, nonatomic) id <SPTAssistedCurationUIContextHandler> contextHandler; // @synthesize contextHandler=_contextHandler;
 @property(retain, nonatomic) id <SPTAssistedCurationModel> assistedCurationModel; // @synthesize assistedCurationModel=_assistedCurationModel;
 @property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler; // @synthesize addTrackHandler=_addTrackHandler;
 @property(nonatomic) __weak id <SPTAssistedCurationViewModelDelegate> delegate; // @synthesize delegate=_delegate;
@@ -52,6 +54,7 @@
 - (void)presentMessage:(id)arg1;
 - (void)verifyWaitingForProviderIdentifier:(id)arg1;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
+@property(readonly, copy, nonatomic) NSString *addActionAccessibilityLabel;
 @property(readonly, nonatomic) long long addTrackIcon;
 @property(readonly, nonatomic) NSURL *contextURI;
 - (void)viewDidDisappear;
@@ -59,7 +62,7 @@
 @property(readonly, nonatomic) unsigned long long numberOfCards;
 - (unsigned long long)indexOfCardViewModel:(id)arg1;
 - (id)cardViewModelAtIndex:(unsigned long long)arg1;
-- (id)initWithAssistedCurationModel:(id)arg1 addTrackHandler:(id)arg2 sortMechanism:(id)arg3 waitForCardProviders:(id)arg4 audioPreviewPlayer:(id)arg5 audioPreviewModelFactory:(id)arg6 snackbarPresenter:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 testManager:(id)arg10;
+- (id)initWithAssistedCurationModel:(id)arg1 contextHandler:(id)arg2 addTrackHandler:(id)arg3 sortMechanism:(id)arg4 audioPreviewPlayer:(id)arg5 audioPreviewModelFactory:(id)arg6 snackbarPresenter:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 testManager:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

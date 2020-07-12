@@ -7,12 +7,13 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL;
-@protocol SPTAssistedCurationLinkDispatcher;
+@protocol SPTAssistedCurationLinkDispatcher, SPTAssistedCurationUIContextHandler;
 
 @protocol SPTAssistedCurationUIService <SPTService>
 - (void)curateQueue;
 - (void)curateLikedSongs;
 - (void)curatePlaylistURL:(NSURL *)arg1;
+- (id <SPTAssistedCurationUIContextHandler>)contextHandlerForURI:(NSURL *)arg1;
 - (id <SPTAssistedCurationLinkDispatcher>)providerAssistedCurationLinkDispatcher;
 @end
 

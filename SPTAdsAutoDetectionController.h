@@ -7,16 +7,16 @@
 #import <objc/NSObject.h>
 
 #import "SPTAccessoryStateObserver-Protocol.h"
-#import "SPTCarDetectionStateObserver-Protocol.h"
+#import "SPTDistractionControlObserver-Protocol.h"
 
 @class NSSet, NSString, SPTAdRulesManager;
-@protocol SPTAccessoryStateManager, SPTAdsBaseGlobalSettingsController, SPTCarDetector;
+@protocol SPTAccessoryStateManager, SPTAdsBaseGlobalSettingsController, SPTDistractionControl;
 
-@interface SPTAdsAutoDetectionController : NSObject <SPTAccessoryStateObserver, SPTCarDetectionStateObserver>
+@interface SPTAdsAutoDetectionController : NSObject <SPTAccessoryStateObserver, SPTDistractionControlObserver>
 {
     id <SPTAdsBaseGlobalSettingsController> _adSettingsController;
     SPTAdRulesManager *_adRulesManager;
-    id <SPTCarDetector> _carDetector;
+    id <SPTDistractionControl> _distractionControl;
     id <SPTAccessoryStateManager> _accessoryStateManager;
     NSSet *_currentAccessories;
 }
@@ -24,18 +24,18 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSSet *currentAccessories; // @synthesize currentAccessories=_currentAccessories;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
-@property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
+@property(retain, nonatomic) id <SPTDistractionControl> distractionControl; // @synthesize distractionControl=_distractionControl;
 @property(retain, nonatomic) SPTAdRulesManager *adRulesManager; // @synthesize adRulesManager=_adRulesManager;
 @property(retain, nonatomic) id <SPTAdsBaseGlobalSettingsController> adSettingsController; // @synthesize adSettingsController=_adSettingsController;
 - (void)disableAdSlots:(_Bool)arg1 reason:(id)arg2;
-- (void)carDetector:(id)arg1 didChangeCarConnected:(_Bool)arg2;
+- (void)distractionControlStateChanged:(_Bool)arg1;
 - (void)accessoryStateManager:(id)arg1 accessoryDidDisconnect:(id)arg2;
 - (void)accessoryStateManager:(id)arg1 accessoryDidConnect:(id)arg2;
 - (id)accessoriesContainCar:(id)arg1;
 - (id)serializeAccessoryInfo:(id)arg1;
 - (void)registerDeviceInfo:(id)arg1;
 - (void)dealloc;
-- (id)initWithAdSettingsController:(id)arg1 stateManager:(id)arg2 carDetector:(id)arg3 rulesManager:(id)arg4;
+- (id)initWithAdSettingsController:(id)arg1 stateManager:(id)arg2 distractionControl:(id)arg3 rulesManager:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
