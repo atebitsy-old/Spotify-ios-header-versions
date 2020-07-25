@@ -11,7 +11,7 @@
 #import "SPTYourLibraryMusicPlaylistsViewModel-Protocol.h"
 
 @class NSArray, NSString, SPTYourLibraryMusicGroupLabelReader, SPTYourLibraryMusicLogger;
-@protocol SPTCreatePlaylistController, SPTLinkDispatcher, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicPlaylistModelItemEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager;
+@protocol SPTCreatePlaylistController, SPTLinkDispatcher, SPTLocalSettings, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicPlaylistModelItemEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager;
 
 @interface SPTYourLibraryMusicPlaylistsViewModelImplementation : NSObject <SPTSortingFilteringPickerDelegate, SPTYourLibraryMusicPlaylistsViewModel, SPTYourLibraryMusicPlaylistsModelDelegate>
 {
@@ -28,9 +28,11 @@
     id <SPTYourLibraryMusicPlaylistModelItemEntity> _favoriteMixEntity;
     id <SPTSortingFilteringUIFactory> _sortingFilteringPickerFactory;
     SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
+    id <SPTLocalSettings> _localSettings;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
 @property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
 @property(nonatomic) _Bool textFilteringMode; // @synthesize textFilteringMode=_textFilteringMode;
@@ -94,7 +96,7 @@
 @property(readonly, nonatomic) NSArray *activeFilterTitles;
 @property(readonly, nonatomic) unsigned long long filteredContentState;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 playlistSynchroniser:(id)arg3 createPlaylistController:(id)arg4 logger:(id)arg5 testManager:(id)arg6 sortingFilteringPickerFactory:(id)arg7;
+- (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 playlistSynchroniser:(id)arg3 createPlaylistController:(id)arg4 logger:(id)arg5 testManager:(id)arg6 sortingFilteringPickerFactory:(id)arg7 localSettings:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

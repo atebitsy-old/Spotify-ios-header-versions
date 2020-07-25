@@ -17,6 +17,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)showGenericErrorMessageWithTryAgainBlock:(CDUnknownBlockType)arg1 cancelBlock:(CDUnknownBlockType)arg2;
 - (void)showDownloadedTracksLimitReachedPopupWith:(CDUnknownBlockType)arg1;
 - (void)showPlayTooltipIn:(id)arg1 from:(struct CGRect)arg2 maxNumberOfTimes:(unsigned long long)arg3;
 - (void)showDownloadTooltipIn:(id)arg1 from:(struct CGRect)arg2 maxNumberOfTimes:(unsigned long long)arg3;

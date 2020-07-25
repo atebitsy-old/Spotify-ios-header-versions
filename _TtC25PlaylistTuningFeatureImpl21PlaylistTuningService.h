@@ -12,6 +12,7 @@
     // Error parsing type: , name: containerService
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: contextMenuService
+    // Error parsing type: , name: crashReporterService
     // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: explicitContentService
     // Error parsing type: , name: freeTierPlaylistUIService

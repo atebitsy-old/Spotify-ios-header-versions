@@ -8,7 +8,7 @@
 
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
-@class NSString, SPTTheme;
+@class NSString, SPTNowPlayingHeadUnitView, SPTTheme;
 @protocol SPTNowPlayingContainingViewController;
 
 @interface SPTNowPlayingHeadUnitViewController : UIViewController <SPTNowPlayingContainedViewController>
@@ -31,9 +31,8 @@
 - (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
-- (void)setupConstraints;
-- (void)addSubViewController:(id)arg1;
 - (void)viewDidLoad;
+- (void)loadView;
 - (id)initWithTheme:(id)arg1 playPauseViewController:(id)arg2 leftSecondaryViewController:(id)arg3 rightSecondaryViewController:(id)arg4 leftTertiaryViewController:(id)arg5 rightTertiaryViewController:(id)arg6;
 
 // Remaining properties
@@ -42,6 +41,7 @@
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
+@property(retain, nonatomic) SPTNowPlayingHeadUnitView *view; // @dynamic view;
 
 @end
 

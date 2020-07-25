@@ -8,12 +8,14 @@
 
 #import "SPTAdsMobileOverlayContentView-Protocol.h"
 
-@class GLUEGradientView, NSString, SPTAdsPromotedContentImageView, SPTTheme, UIButton;
+@class GLUEGradientView, NSString, SPTAdNowPlayingBookmarkButton, SPTAdsPromotedContentImageView, SPTTheme, UIButton;
 
 @interface SPTAdOverlayBaseContentView : UIView <SPTAdsMobileOverlayContentView>
 {
+    _Bool _shouldShowBookmarkButton;
     SPTAdsPromotedContentImageView *_contentImageView;
     UIButton *_actionButton;
+    SPTAdNowPlayingBookmarkButton *_bookmarkButton;
     SPTTheme *_theme;
     GLUEGradientView *_gradientOverlayView;
 }
@@ -21,10 +23,13 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientView *gradientOverlayView; // @synthesize gradientOverlayView=_gradientOverlayView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) _Bool shouldShowBookmarkButton; // @synthesize shouldShowBookmarkButton=_shouldShowBookmarkButton;
+@property(readonly, nonatomic) SPTAdNowPlayingBookmarkButton *bookmarkButton; // @synthesize bookmarkButton=_bookmarkButton;
 @property(readonly, nonatomic) UIButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView; // @synthesize contentImageView=_contentImageView;
 - (void)addConstraints;
-- (id)initWithTheme:(id)arg1 glueImageLoader:(id)arg2;
+- (id)initWithTheme:(id)arg1 bookmarkButtonState:(long long)arg2 glueImageLoader:(id)arg3;
+- (id)initWithAdvertiserTitle:(id)arg1 advertiserSubtitle:(id)arg2 advertiserInfo:(id)arg3 bookmarkButtonState:(long long)arg4 theme:(id)arg5 glueTheme:(id)arg6 glueImageLoader:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

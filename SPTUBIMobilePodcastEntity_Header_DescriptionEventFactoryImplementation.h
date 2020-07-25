@@ -18,7 +18,7 @@
 + (id)factoryWithComponents:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
-- (id)podcastLinkFactoryWithUri:(id)arg1;
+- (id)podcastLinkFactory;
 - (id)seeMoreButtonFactory;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;

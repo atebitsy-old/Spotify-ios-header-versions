@@ -79,6 +79,7 @@
 - (void)loginWithStoredCredentials:(id)arg1 options:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)loginWithPhoneNumberIdentifier:(id)arg1;
 - (void)loginWithOneTimeToken:(id)arg1 options:(id)arg2 userDidSignUp:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (id)loginOptions:(id)arg1 withCoreStorageOptions:(id)arg2;
 - (void)notifyServicesOnLoginWithCore:(id)arg1;
 - (void)presentCoreReloginError:(id)arg1;
 - (id)core:(id)arg1 localizedDescriptionForLoginErrorCode:(int)arg2;

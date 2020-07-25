@@ -32,7 +32,6 @@
 @property(copy, nonatomic) NSAttributedString *htmlDescriptionText; // @synthesize htmlDescriptionText=_htmlDescriptionText;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
-- (void)logUBIInteractionsForShowDescription:(_Bool)arg1;
 - (_Bool)isRawDescriptionValidForPodcast:(id)arg1;
 - (void)configureDescriptionTextForPodcast:(id)arg1;
 - (long long)identifier;

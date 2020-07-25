@@ -9,11 +9,10 @@
 #import "SPTAssistedCurationService-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, SPTAllocationContext;
-@protocol CosmosFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationContextHandler, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, _TtP17OfflineMixFeature20SPTOfflineMixService_;
+@protocol CosmosFeature, SPTAssistedCurationContextHandler, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, _TtP17OfflineMixFeature20SPTOfflineMixService_;
 
 @interface SPTAssistedCurationServiceImplementation : NSObject <SPTAssistedCurationService>
 {
-    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTCoreService> _coreService;
     id <CosmosFeature> _cosmosFeature;
@@ -44,7 +43,6 @@
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
-@property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 - (id)mostPlayedCardProviderWithContextManager:(id)arg1 andURI:(id)arg2;
 - (id)recentlyPlayedCardProvider;
 - (id)topGenresCardProviderWithContextManager:(id)arg1;

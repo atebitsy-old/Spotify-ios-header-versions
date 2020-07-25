@@ -55,6 +55,8 @@
 @property(retain, nonatomic) SPTConnectivityApplicationScope *connectivityApplicationScope; // @synthesize connectivityApplicationScope=_connectivityApplicationScope;
 @property(nonatomic) __weak id <SPTCoreLoginControllerDelegate> loginControllerDelegate; // @synthesize loginControllerDelegate=_loginControllerDelegate;
 @property(retain, nonatomic) SPSession *session; // @synthesize session=_session;
+@property(readonly, nonatomic) struct SPTAuthCacheId cacheId;
+@property(readonly, nonatomic) struct SPTAuthCacheSalt cacheSalt;
 - (id)createAccesspointResolverWithDelegate:(id)arg1;
 - (id)createRequestAccounting;
 - (void)notifyLogoutOnMainThread;

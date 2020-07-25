@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDynamicSignupFlowController, SPTLoginErrorDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupGenderArray, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
+@class SPTDynamicSignupFlowController, SPTLoginErrorDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupGenderArray, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
 @protocol SPTSignupGenderViewModelDelegate;
 
 @interface SPTSignupGenderViewModel : NSObject
@@ -18,9 +18,11 @@
     SPTSignupUserInfoModel *_userInfoModel;
     SPTLoginErrorDialogLogger *_dialogLogger;
     SPTSignupGenderArray *_genderArray;
+    SPTSignupA11yEnvironment *_a11yEnvironment;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTSignupA11yEnvironment *a11yEnvironment; // @synthesize a11yEnvironment=_a11yEnvironment;
 @property(readonly, nonatomic) SPTSignupGenderArray *genderArray; // @synthesize genderArray=_genderArray;
 @property(readonly, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
 @property(readonly, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
@@ -35,8 +37,9 @@
 - (id)nextButtonText;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
+@property(readonly, nonatomic) _Bool shouldAutoFocusTextFieldOnAppear;
 @property(nonatomic) long long selectedIndex;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 dialogLogger:(id)arg3 termsAndPolicyViewModel:(id)arg4 flowController:(id)arg5 genderArray:(id)arg6;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 dialogLogger:(id)arg3 termsAndPolicyViewModel:(id)arg4 flowController:(id)arg5 genderArray:(id)arg6 a11yEnvironment:(id)arg7;
 
 @end
 

@@ -14,6 +14,7 @@
     NSArray *_cardsIdentifiers;
 }
 
++ (id)pollConfiguration;
 + (id)samplesCardConfiguration;
 + (id)podcastInspectorConfiguration;
 + (id)defaultConfiguration;

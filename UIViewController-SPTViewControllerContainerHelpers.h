@@ -25,6 +25,8 @@
 - (_Bool)isRootParentBeingDismissed;
 - (void)spt_performIdleAnimations:(CDUnknownBlockType)arg1 completion:(CDUnknownBlockType)arg2 theme:(id)arg3;
 - (void)spt_performIdleAnimations:(CDUnknownBlockType)arg1 theme:(id)arg2;
+- (void)spt_setPageReferrer:(id)arg1;
+- (id)spt_pageReferrer;
 @property(readonly, nonatomic, getter=spt_share_currentPopoverPresentationController) UIPopoverPresentationController *currentPopoverPresentationController;
 @property(readonly, nonatomic, getter=spt_share_isPresentedInPopover) _Bool presentedInPopover;
 - (id)sp_barViewController;
@@ -37,7 +39,5 @@
 @property(readonly, nonatomic) UINavigationItem *spt_navigationItem;
 @property(readonly, nonatomic) UIViewController<SPNavigationLikeController> *sp_navigationController;
 @property(copy, nonatomic, getter=spt_referrerIdentifier, setter=spt_setReferrerIdentifier:) NSString *referrerIdentifier;
-- (void)spt_setPageReferrer:(id)arg1;
-@property(readonly, copy, nonatomic, getter=spt_pageReferrer) NSString *pageReferrer;
 @end
 

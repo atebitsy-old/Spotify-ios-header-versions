@@ -8,10 +8,11 @@
 #import "NSObject-Protocol.h"
 #import "SPTEpisode-Protocol.h"
 
-@class NSString;
+@class NSArray, NSString;
 
 @protocol SPTPodcastEpisode <NSObject, SPTEpisode, NSCopying>
 + (NSString *)stringFromTimeInterval:(double)arg1;
+@property(nonatomic, readonly) NSArray *quotes;
 @property(nonatomic, readonly) double listeningProgress;
 @property(nonatomic, readonly) unsigned long long syncProgress;
 - (_Bool)isUnplayed;

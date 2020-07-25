@@ -14,15 +14,18 @@
 {
     _Bool _sectionHeaderShowing;
     NSString *_title;
+    long long _type;
 }
 
 + (id)sectionWithTitle:(id)arg1;
 + (id)hiddenSection;
 - (void).cxx_destruct;
+@property(nonatomic) long long type; // @synthesize type=_type;
 @property(nonatomic, getter=isSectionHeaderShowing) _Bool sectionHeaderShowing; // @synthesize sectionHeaderShowing=_sectionHeaderShowing;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (void)performAction;
 - (id)initWithTitle:(id)arg1 headerShowing:(_Bool)arg2;
+- (id)initWithTitle:(id)arg1 headerShowing:(_Bool)arg2 type:(long long)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

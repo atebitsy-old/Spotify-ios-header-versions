@@ -17,6 +17,9 @@
 - (id)disclaimerViewStyle;
 - (id)educationSlateViewStyle;
 - (id)popupViewStyle;
+- (id)tryAgainButtonStyle;
+- (id)tryAgainLabelStyle;
+- (id)scannableViewStyle;
 - (id)sessionViewStyle;
 
 @end

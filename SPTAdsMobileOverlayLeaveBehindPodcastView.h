@@ -6,12 +6,12 @@
 
 #import <UIKit/UIView.h>
 
-#import "SPTAdsMobileOverlayContentBookmarkableView-Protocol.h"
+#import "SPTAdsMobileOverlayContentView-Protocol.h"
 
 @class GLUEGradientView, NSString, SPTAdNowPlayingBookmarkButton, SPTAdsPodcastLabelUtils, SPTAdsPromotedContentImageView, SPTNowPlayingButton, SPTTheme, UIButton, UILabel;
 @protocol GLUEImageLoader, SPTNowPlayingPlayButton;
 
-@interface SPTAdsMobileOverlayLeaveBehindPodcastView : UIView <SPTAdsMobileOverlayContentBookmarkableView>
+@interface SPTAdsMobileOverlayLeaveBehindPodcastView : UIView <SPTAdsMobileOverlayContentView>
 {
     _Bool _shouldShowBookmarkButton;
     SPTAdsPromotedContentImageView *_contentImageView;
@@ -53,7 +53,6 @@
 - (void)setupPlayButton;
 - (void)updateDescription:(id)arg1;
 - (id)initWithAdvertiserTitle:(id)arg1 advertiserSubtitle:(id)arg2 advertiserInfo:(id)arg3 bookmarkButtonState:(long long)arg4 theme:(id)arg5 glueImageLoader:(id)arg6;
-- (id)initWithAdvertiserTitle:(id)arg1 advertiserSubtitle:(id)arg2 advertiserInfo:(id)arg3 bookmarkButtonState:(long long)arg4 theme:(id)arg5 glueTheme:(id)arg6 glueImageLoader:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

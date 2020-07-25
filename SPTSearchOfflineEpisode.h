@@ -23,6 +23,9 @@
 @property(readonly, copy, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(readonly, copy, nonatomic) NSString *showName; // @synthesize showName=_showName;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
+- (_Bool)isEqualToOfflineEpisode:(id)arg1;
+- (unsigned long long)hash;
+- (_Bool)isEqual:(id)arg1;
 - (id)initWithName:(id)arg1 showName:(id)arg2 uri:(id)arg3 imageURL:(id)arg4 isExplicit:(_Bool)arg5;
 
 @end

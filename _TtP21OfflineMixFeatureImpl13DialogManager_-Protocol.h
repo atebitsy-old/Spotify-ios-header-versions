@@ -8,6 +8,7 @@
 
 @protocol _TtP21OfflineMixFeatureImpl13DialogManager_
 @property(nonatomic, copy) CDUnknownBlockType closeNPVCallback;
+- (void)showGenericErrorMessageWithTryAgainBlock:(void (^)(void))arg1 cancelBlock:(void (^)(void))arg2;
 - (void)showTapToPlayTooltipFor:(UIViewController *)arg1;
 - (void)showDownloadedTracksLimitReachedPopup;
 - (void)showTrackDownloadRemovedSnackbar;

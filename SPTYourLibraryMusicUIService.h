@@ -6,7 +6,7 @@
 
 #import "SPTUIPageService.h"
 
-@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEncoreIntegrationService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18FilterChipsFeature21SPTFilterChipsService_, _TtP18QuickScrollFeature21SPTQuickScrollService_;
+@protocol SPContextMenuFeature, SPTAssistedCurationUIService, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEncoreIntegrationService, SPTFreeTierPreCurationService, SPTGLUEService, SPTImageLoaderRequestFactory, SPTNetworkService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTUIPresentationService, SPTYourLibraryMusicService, SPTYourLibraryService, _TtP18FilterChipsFeature21SPTFilterChipsService_, _TtP18QuickScrollFeature21SPTQuickScrollService_, _TtP19YourLibraryXFeature22SPTYourLibraryXService_;
 
 @interface SPTYourLibraryMusicUIService : SPTUIPageService
 {
@@ -29,6 +29,7 @@
     id <SPTFreeTierPreCurationService> _preCurationService;
     id <SPTSortingFilteringService> _sortingFilteringService;
     id <SPTYourLibraryService> _yourLibraryService;
+    id <_TtP19YourLibraryXFeature22SPTYourLibraryXService_> _yourLibraryXService;
     id <SPTShelfService> _shelfService;
     id <SPTImageLoaderRequestFactory> _imageLoaderRequestFactory;
     id <SPTShareFeature> _shareService;
@@ -49,6 +50,7 @@
 @property(nonatomic) __weak id <SPTShareFeature> shareService; // @synthesize shareService=_shareService;
 @property(nonatomic) __weak id <SPTImageLoaderRequestFactory> imageLoaderRequestFactory; // @synthesize imageLoaderRequestFactory=_imageLoaderRequestFactory;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
+@property(nonatomic) __weak id <_TtP19YourLibraryXFeature22SPTYourLibraryXService_> yourLibraryXService; // @synthesize yourLibraryXService=_yourLibraryXService;
 @property(nonatomic) __weak id <SPTYourLibraryService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
 @property(nonatomic) __weak id <SPTSortingFilteringService> sortingFilteringService; // @synthesize sortingFilteringService=_sortingFilteringService;
 @property(nonatomic) __weak id <SPTFreeTierPreCurationService> preCurationService; // @synthesize preCurationService=_preCurationService;

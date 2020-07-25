@@ -9,6 +9,7 @@
 @interface _TtC22AllBoardingFeatureImpl15FlowLoadingView : UIViewController
 {
     // Error parsing type: , name: loadingIndicator
+    // Error parsing type: , name: isAnimating
 }
 
 - (void).cxx_destruct;

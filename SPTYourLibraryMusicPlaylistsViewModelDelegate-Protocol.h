@@ -11,6 +11,6 @@
 
 @protocol SPTYourLibraryMusicPlaylistsViewModelDelegate <NSObject>
 - (void)viewModel:(id <SPTYourLibraryMusicPlaylistsViewModel>)arg1 error:(NSError *)arg2;
-- (void)viewModelDidUpdate:(id <SPTYourLibraryMusicPlaylistsViewModel>)arg1;
+- (void)viewModelDidUpdate:(id <SPTYourLibraryMusicPlaylistsViewModel>)arg1 sectionHeadersChanged:(_Bool)arg2;
 @end
 

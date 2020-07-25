@@ -11,7 +11,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTAuthCache, SPTAuthCacheEnvironmentObserver, SPTAuthControllerImplementation, SPTAuthFeatureProperties, SPTAuthLogger, SPTDataLoader;
-@protocol GaiaFeature, SPTAuthTestManager, SPTContainerService, SPTContainerUIService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTLogCenter, SPTLoginDelayedSignupService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
+@protocol GaiaFeature, SPTAuthTestManager, SPTContainerService, SPTContainerUIService, SPTEventSenderService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTLoginDelayedSignupService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
 
 @interface AuthFeatureImplementation : NSObject <SPTURISubtypeHandler, SPTAuthService, SPSessionObserver>
 {
@@ -25,8 +25,8 @@
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTLoginDelayedSignupService> _delayedSignupService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTEventSenderService> _eventSenderService;
     SPTAuthFeatureProperties *_featureProperties;
-    id <SPTLogCenter> _logcenter;
     SPTAuthControllerImplementation *_authController;
     id <SPTAuthTestManager> _testManager;
     SPTAuthCacheEnvironmentObserver *_environmentObserver;
@@ -43,8 +43,8 @@
 @property(retain, nonatomic) SPTAuthCacheEnvironmentObserver *environmentObserver; // @synthesize environmentObserver=_environmentObserver;
 @property(retain, nonatomic) id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTAuthControllerImplementation *authController; // @synthesize authController=_authController;
-@property(retain, nonatomic) id <SPTLogCenter> logcenter; // @synthesize logcenter=_logcenter;
 @property(retain, nonatomic) SPTAuthFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTLoginDelayedSignupService> delayedSignupService; // @synthesize delayedSignupService=_delayedSignupService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;

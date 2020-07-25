@@ -10,7 +10,7 @@
 {
 }
 
-- (id)ubiPodcastSpeedControlEventFactory;
+- (id)ubiPodcastSpeedControlEventFactoryWithPageURI:(id)arg1;
 - (id)ubiPodcastUnfinishedEpisodeCardEventFactoryWithPageURI:(id)arg1;
 - (id)ubiPodcastYourLibraryEventFactoryWithPageURI:(id)arg1;
 - (id)ubiPodcastEpisodeCardEventFactoryWithPageURI:(id)arg1;

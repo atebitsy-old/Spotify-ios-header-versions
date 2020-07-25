@@ -7,16 +7,15 @@
 #import <UIKit/UITableViewController.h>
 
 #import "SPContentInsetViewController-Protocol.h"
-#import "SPTPageController-Protocol.h"
+#import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate-Protocol.h"
 #import "SPTPodcastEpisodeFeaturedContentTrackActionsDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentLogger, SPTPodcastEpisodeFeaturedContentPlayer;
-@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTMetaViewController, SPTPageContainer, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
+@class NSString, SPTPodcastEpisodeFeaturedContentContextMenuPresenter, SPTPodcastEpisodeFeaturedContentLogger, SPTPodcastEpisodeFeaturedContentPlayer;
+@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTMetaViewController, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
-@interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTPageController, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate>
+@interface SPTPodcastEpisodeFeaturedContentTrackTimelineViewController : UITableViewController <SPContentInsetViewController, SPTPodcastEpisodeFeaturedContentPlayerPlayerDelegate, SPTNavigationControllerNavigationBarState, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate>
 {
-    _Bool _shouldDisplayNowPlayingView;
     NSString *_episodeURIString;
     id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> _dataLoader;
     id <GLUEImageLoader> _imageLoader;
@@ -28,7 +27,6 @@
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool shouldDisplayNowPlayingView; // @synthesize shouldDisplayNowPlayingView=_shouldDisplayNowPlayingView;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsModel> episodeSegmentsModel; // @synthesize episodeSegmentsModel=_episodeSegmentsModel;
@@ -37,8 +35,6 @@
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <_TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *episodeURIString; // @synthesize episodeURIString=_episodeURIString;
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
-@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)toggleEntitySelectionAtIndex:(int)arg1 shouldSelect:(_Bool)arg2;
 - (void)playerDidStopPlayingSegment:(id)arg1 atIndex:(int)arg2;
 - (void)playerDidChangeSegment:(id)arg1 atIndex:(int)arg2;
@@ -49,18 +45,17 @@
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (void)handleFetchedModel:(id)arg1;
-- (void)fetchEpisodeSegmentsModel;
 - (void)viewDidLayoutSubviews;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
+- (unsigned long long)preferredNavigationBarState;
 - (void)setUpNavigationItem;
-- (id)initWithEpisodeURI:(id)arg1 episodeSegmentsDataLoader:(id)arg2 imageLoader:(id)arg3 contextMenuPresenter:(id)arg4 featuredContentPlayer:(id)arg5 logger:(id)arg6 metaViewController:(id)arg7 configureToDisplayNowPlayingView:(_Bool)arg8;
+- (id)initWithEpisodeSegmentsModel:(id)arg1 imageLoader:(id)arg2 contextMenuPresenter:(id)arg3 featuredContentPlayer:(id)arg4 logger:(id)arg5 metaViewController:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
 
 @end

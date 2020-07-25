@@ -48,9 +48,6 @@
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
 - (void)navigationManager:(id)arg1 willNavigateFromViewController:(id)arg2 toViewController:(id)arg3;
-- (void)didBecomeActive;
-- (void)didEnterBackground;
-- (void)enableCpuMonitor:(_Bool)arg1;
 - (void)unload;
 - (void)idleStateWasReached;
 - (void)load;

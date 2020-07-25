@@ -16,15 +16,18 @@
     // Error parsing type: , name: centralViewUpscalingProgressMultiplier
     // Error parsing type: , name: centralViewDownscalingProgressMultiplier
     // Error parsing type: , name: centralViewUpscalingProgressRange
+    // Error parsing type: , name: centralViewFullbleedScalingProgressRange
     // Error parsing type: , name: centralView
     // Error parsing type: , name: contentView
     // Error parsing type: , name: centralViewTopConstraint
     // Error parsing type: , name: centralViewTopConstraintWithMargin
+    // Error parsing type: , name: centralViewWidthConstraint
     // Error parsing type: , name: centralViewBottomConstraint
     // Error parsing type: , name: heightConstraint
     // Error parsing type: , name: playButtonLayoutGuide
     // Error parsing type: , name: minimumHeightLayoutConstraint
     // Error parsing type: , name: minimumHeightLayoutGuide
+    // Error parsing type: , name: isFullBleed
     // Error parsing type: , name: playButton
 }
 

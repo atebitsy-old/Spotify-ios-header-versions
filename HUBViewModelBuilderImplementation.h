@@ -51,6 +51,9 @@
 - (id)debugDescription;
 - (void)addJSONDictionary:(id)arg1;
 - (_Bool)addJSONData:(id)arg1 error:(id *)arg2;
+- (void)appendOverlayModel:(id)arg1 withIdentifier:(id)arg2;
+- (void)appendBodyModel:(id)arg1 withIdentifier:(id)arg2;
+- (void)setHeaderModel:(id)arg1;
 - (id)build;
 - (void)appendOverlayComponentModelBuilder:(id)arg1;
 - (void)appendBodyComponentModelBuilder:(id)arg1;

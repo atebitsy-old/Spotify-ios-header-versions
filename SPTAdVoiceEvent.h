@@ -11,7 +11,7 @@
 }
 
 - (_Bool)isEqual:(id)arg1;
-- (id)mapFromSpeechTranscriptReceived:(CDUnknownBlockType)arg1 TimerElapsed:(CDUnknownBlockType)arg2 speechSessionStarted:(CDUnknownBlockType)arg3 listeningPeriodStarted:(CDUnknownBlockType)arg4 speechResponseReceived:(CDUnknownBlockType)arg5 speechIntentRecognized:(CDUnknownBlockType)arg6 speechRecognitionError:(CDUnknownBlockType)arg7 micActivationRequested:(CDUnknownBlockType)arg8 adSlotsCleared:(CDUnknownBlockType)arg9 ctaClicked:(CDUnknownBlockType)arg10 playbackPaused:(CDUnknownBlockType)arg11 playbackBuffering:(CDUnknownBlockType)arg12 playbackResumed:(CDUnknownBlockType)arg13 cuePlayed:(CDUnknownBlockType)arg14 init:(CDUnknownBlockType)arg15 tearDown:(CDUnknownBlockType)arg16;
+- (id)mapFromSpeechTranscriptReceived:(CDUnknownBlockType)arg1 TimerElapsed:(CDUnknownBlockType)arg2 speechSessionStarted:(CDUnknownBlockType)arg3 listeningPeriodStarted:(CDUnknownBlockType)arg4 speechResponseReceived:(CDUnknownBlockType)arg5 speechIntentRecognized:(CDUnknownBlockType)arg6 speechRecognitionError:(CDUnknownBlockType)arg7 micActivationRequested:(CDUnknownBlockType)arg8 adSlotsCleared:(CDUnknownBlockType)arg9 ctaClicked:(CDUnknownBlockType)arg10 playbackPaused:(CDUnknownBlockType)arg11 playbackBuffering:(CDUnknownBlockType)arg12 playbackResumed:(CDUnknownBlockType)arg13 adSaved:(CDUnknownBlockType)arg14 cuePlayed:(CDUnknownBlockType)arg15 init:(CDUnknownBlockType)arg16 tearDown:(CDUnknownBlockType)arg17;
 
 @end
 

@@ -14,6 +14,7 @@
 @property(readonly, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevices;
 @property(readonly, nonatomic) NSString *sessionID;
 @property(readonly, nonatomic) long long state;
+@property(readonly, nonatomic) NSArray *connectedUsers;
 @property(readonly, nonatomic) unsigned long long connectedParticipants;
 @property(readonly, nonatomic, getter=isSessionHost) _Bool sessionHost;
 - (void)fetchExposedDevices;
@@ -25,6 +26,7 @@
 - (void)addObserver:(id <SPTSocialListeningModelObserver>)arg1;
 - (void)leaveSession;
 - (void)lookupSessionWithURL:(NSURL *)arg1;
+- (void)loadSessionScannable;
 - (void)loadSession:(_Bool)arg1;
 
 @optional

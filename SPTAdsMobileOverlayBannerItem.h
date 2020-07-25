@@ -14,6 +14,7 @@
 
 @interface SPTAdsMobileOverlayBannerItem : SPTBannerItem <SPTAdsPromotedContentImageViewDelegate, SPTBannerItemCustomView>
 {
+    _Bool _shouldShowBookmarkButton;
     id <SPTBannerViewDelegate> _bannerViewDelegate;
     id <SPTAdsBaseImageEntity> _entity;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
@@ -24,6 +25,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shouldShowBookmarkButton; // @synthesize shouldShowBookmarkButton=_shouldShowBookmarkButton;
 @property(readonly, nonatomic) unsigned long long bannerVersion; // @synthesize bannerVersion=_bannerVersion;
 @property(retain, nonatomic) SPTBannerView *currentBannerView; // @synthesize currentBannerView=_currentBannerView;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
@@ -33,7 +35,7 @@
 @property(readonly, nonatomic) __weak id <SPTBannerViewDelegate> bannerViewDelegate; // @synthesize bannerViewDelegate=_bannerViewDelegate;
 - (void)didLoadContentImage:(id)arg1;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
-- (id)initWithBannerViewDelegate:(id)arg1 adEntity:(id)arg2 bannerVersion:(unsigned long long)arg3 theme:(id)arg4 glueImageLoader:(id)arg5 cosmosBridge:(id)arg6;
+- (id)initWithBannerViewDelegate:(id)arg1 adEntity:(id)arg2 bannerVersion:(unsigned long long)arg3 shouldShowBookmarkButton:(_Bool)arg4 theme:(id)arg5 glueImageLoader:(id)arg6 cosmosBridge:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

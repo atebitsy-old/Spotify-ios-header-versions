@@ -8,7 +8,7 @@
 
 #import "SPTPodcastEpisode-Protocol.h"
 
-@class NSDate, NSString, NSURL;
+@class NSArray, NSDate, NSString, NSURL;
 
 @interface SPTPodcastEpisode : NSObject <SPTPodcastEpisode>
 {
@@ -41,10 +41,12 @@
     double _lastPlayedAt;
     unsigned long long _type;
     long long _mediaType;
+    NSArray *_quotes;
 }
 
 + (id)stringFromTimeInterval:(double)arg1;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *quotes; // @synthesize quotes=_quotes;
 @property(nonatomic) long long mediaType; // @synthesize mediaType=_mediaType;
 @property(nonatomic, getter=isVideoShowMediaType) _Bool videoShowMediaType; // @synthesize videoShowMediaType=_videoShowMediaType;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;

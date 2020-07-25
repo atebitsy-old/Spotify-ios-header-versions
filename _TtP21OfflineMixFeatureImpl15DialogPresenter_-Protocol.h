@@ -7,6 +7,7 @@
 @class UIView;
 
 @protocol _TtP21OfflineMixFeatureImpl15DialogPresenter_
+- (void)showGenericErrorMessageWithTryAgainBlock:(void (^)(void))arg1 cancelBlock:(void (^)(void))arg2;
 - (void)showPlayTooltipIn:(UIView *)arg1 from:(struct CGRect)arg2 maxNumberOfTimes:(unsigned long long)arg3;
 - (void)showDownloadedTracksLimitReachedPopupWith:(void (^)(void))arg1;
 - (void)showDownloadTooltipIn:(UIView *)arg1 from:(struct CGRect)arg2 maxNumberOfTimes:(unsigned long long)arg3;

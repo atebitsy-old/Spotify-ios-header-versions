@@ -20,6 +20,7 @@
     _Bool _physicalButtonsSupported;
     _Bool _isAudioPlus;
     _Bool _bookmarkable;
+    _Bool _bookmarked;
     NSString *_identifier;
     NSString *_adPlaybackID;
     unsigned long long _skipDelaySecs;
@@ -47,6 +48,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
+@property(readonly, nonatomic, getter=isBookmarked) _Bool bookmarked; // @synthesize bookmarked=_bookmarked;
 @property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable; // @synthesize bookmarkable=_bookmarkable;
 @property(readonly, nonatomic) _Bool isAudioPlus; // @synthesize isAudioPlus=_isAudioPlus;
 @property(readonly, copy, nonatomic) NSString *format; // @synthesize format=_format;

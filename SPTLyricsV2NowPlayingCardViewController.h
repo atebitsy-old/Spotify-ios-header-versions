@@ -10,7 +10,7 @@
 #import "SPTLyricsV2ServiceCallback-Protocol.h"
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
-@class NSString, NSURL, SPTLyricsV2Colors, SPTLyricsV2Configuration, SPTLyricsV2FullscreenViewController, SPTLyricsV2GLUETheme, SPTLyricsV2LyricsViewController, SPTLyricsV2Model, SPTLyricsV2NowPlayingCardView, SPTPlayerTrack, SPTVocalRemovalConfiguration, UITapGestureRecognizer;
+@class NSString, NSURL, SPTLyricsV2Colors, SPTLyricsV2Configuration, SPTLyricsV2FullscreenViewController, SPTLyricsV2GLUETheme, SPTLyricsV2LyricsViewController, SPTLyricsV2Model, SPTLyricsV2NowPlayingCardView, SPTPlayerTrack, SPTVocalRemovalConfiguration;
 @protocol SPTNowPlayingService;
 
 @interface SPTLyricsV2NowPlayingCardViewController : UIViewController <SPTLyricsV2LyricsViewControllerDelegate, SPTNetworkConnectivityControllerObserver, SPTLyricsV2ServiceCallback>
@@ -25,13 +25,11 @@
     SPTLyricsV2Model *_lyricsModel;
     SPTLyricsV2FullscreenViewController *_fullscreenViewController;
     SPTPlayerTrack *_track;
-    UITapGestureRecognizer *_tapRecognizer;
     id <SPTNowPlayingService> _nowPlayingService;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
-@property(retain, nonatomic) UITapGestureRecognizer *tapRecognizer; // @synthesize tapRecognizer=_tapRecognizer;
 @property(retain, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 @property(retain, nonatomic) SPTLyricsV2FullscreenViewController *fullscreenViewController; // @synthesize fullscreenViewController=_fullscreenViewController;
 @property(retain, nonatomic) SPTLyricsV2Model *lyricsModel; // @synthesize lyricsModel=_lyricsModel;
@@ -63,7 +61,7 @@
 - (void)animateFullscreenAppearance;
 - (void)closeFullscreenIfNecessary;
 - (void)updateWithTrack:(id)arg1 imageURL:(id)arg2;
-- (void)didTapCardView;
+- (void)openFullscreenView;
 - (void)viewDidLoad;
 - (void)loadView;
 - (void)dealloc;

@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSDictionary, NSError, NSString, NSURL;
+@class NSArray, NSDictionary, NSError, NSString, NSURL, UIColor, UIImage;
 @protocol SPTSocialListeningModel, SPTSocialListeningSessionModelEntity, SPTSocialListeningSocialDeviceModelEntity, SPTSocialListeningUpdateEventModelEntity;
 
 @protocol SPTSocialListeningModelObserver <NSObject>
@@ -15,6 +15,7 @@
 - (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 updatedSession:(id <SPTSocialListeningSessionModelEntity>)arg2 updateEvent:(id <SPTSocialListeningUpdateEventModelEntity>)arg3;
 
 @optional
+- (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 didFinishLoadingScannable:(UIImage *)arg2 sessionColor:(UIColor *)arg3 error:(NSError *)arg4;
 - (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 gotExposedDevices:(NSDictionary *)arg2;
 - (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 updatedSocialDevices:(NSArray<SPTSocialListeningSocialDeviceModelEntity> *)arg2;
 - (void)socialListeningModel:(id <SPTSocialListeningModel>)arg1 didLookupURL:(NSURL *)arg2 name:(NSString *)arg3;

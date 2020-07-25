@@ -31,7 +31,9 @@
 - (void)presentFreeUserErrorJoinDialog;
 - (void)presentSessionFullDialog;
 - (void)presentSessionDeletedDialogWhenHostLeaves:(id)arg1;
+- (void)confirmLeaveSessionTapped;
 - (void)confirmDeleteSessionTapped;
+- (void)presentConfirmLeaveSessionDialog:(id)arg1;
 - (void)presentConfirmDeleteSessionDialogFromScreen:(unsigned long long)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

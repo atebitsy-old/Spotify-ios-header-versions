@@ -22,6 +22,7 @@
     // Error parsing type: , name: followModelFactory
     // Error parsing type: , name: modalPresentationMonitor
     // Error parsing type: , name: eventSender
+    // Error parsing type: , name: initialDeeplink
     // Error parsing type: , name: curationManager
     // Error parsing type: , name: flowLoop
     // Error parsing type: , name: navigationController

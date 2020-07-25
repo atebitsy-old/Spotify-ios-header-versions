@@ -22,7 +22,6 @@
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 - (id)entityTypes;
-- (unsigned long long)entityVersion;
 - (id)makeDefaultSearchRequestParameters;
 - (id)initWithPodcastService:(id)arg1 sessionService:(id)arg2 topicsEnabled:(_Bool)arg3;
 

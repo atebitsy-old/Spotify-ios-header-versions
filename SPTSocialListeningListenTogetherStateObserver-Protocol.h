@@ -6,7 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
+@class NSError, UIColor, UIImage;
+
 @protocol SPTSocialListeningListenTogetherStateObserver <NSObject>
 - (void)listenTogetherStateUpdated:(long long)arg1;
+
+@optional
+- (void)didFinishLoadingScannable:(UIImage *)arg1 sessionColor:(UIColor *)arg2 error:(NSError *)arg3;
 @end
 

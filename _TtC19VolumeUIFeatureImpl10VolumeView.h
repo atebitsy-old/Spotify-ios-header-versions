@@ -10,10 +10,7 @@
 {
     // Error parsing type: , name: theme
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: volumeBarHeight
-    // Error parsing type: , name: volumeHeightAnchor
-    // Error parsing type: , name: volumeLeadingAnchor
-    // Error parsing type: , name: containerView
+    // Error parsing type: , name: volumeBarHeightConstraint
     // Error parsing type: , name: delegate
     // Error parsing type: , name: $__lazy_storage_$_volumeBarBorder
     // Error parsing type: , name: $__lazy_storage_$_volumeBar

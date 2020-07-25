@@ -45,7 +45,6 @@
 - (void)prepareForReuse;
 - (void)setupConstraints;
 - (void)setUpSubviews;
-- (void)layoutSubviews;
 - (id)initWithTheme:(id)arg1 style:(id)arg2;
 
 // Remaining properties

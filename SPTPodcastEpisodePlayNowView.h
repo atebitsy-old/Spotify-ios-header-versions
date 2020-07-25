@@ -15,7 +15,6 @@
 {
     _Bool _editing;
     _Bool _explicit;
-    _Bool shouldTruncateDescription;
     UILabel *_statusLabel;
     UILabel *_titleLabel;
     UILabel *_subtitleLabel;
@@ -46,7 +45,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *progressViewHeightConstraint; // @synthesize progressViewHeightConstraint=_progressViewHeightConstraint;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(nonatomic) _Bool shouldTruncateDescription; // @synthesize shouldTruncateDescription;
 @property(readonly, nonatomic) GLUETrackAccessoryLabel *accessoryLabel; // @synthesize accessoryLabel=_accessoryLabel;
 @property(nonatomic, getter=isExplicit) _Bool explicit; // @synthesize explicit=_explicit;
 @property(retain, nonatomic) UIControl *playControl; // @synthesize playControl=_playControl;

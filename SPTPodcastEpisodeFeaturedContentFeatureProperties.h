@@ -12,14 +12,10 @@
 
 @interface SPTPodcastEpisodeFeaturedContentFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _podcastLinkedPageEnabled;
     _Bool _podcastCrossLinkingEnable;
-    _Bool _podcastLinkedPageNpv;
 }
 
-@property(readonly, nonatomic) _Bool podcastLinkedPageNpv; // @synthesize podcastLinkedPageNpv=_podcastLinkedPageNpv;
 @property(readonly, nonatomic) _Bool podcastCrossLinkingEnable; // @synthesize podcastCrossLinkingEnable=_podcastCrossLinkingEnable;
-@property(readonly, nonatomic) _Bool podcastLinkedPageEnabled; // @synthesize podcastLinkedPageEnabled=_podcastLinkedPageEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

@@ -12,15 +12,19 @@
 {
     _Bool _bootstrapRequired;
     _Bool _authOnly;
+    struct SPTAuthCacheSalt _cacheSalt;
     NSString *_APSRVHostOverride;
     NSString *_APHostOverride;
     NSString *_xResolveHostOverride;
     NSString *_canonicalUsername;
     long long _login5Setting;
+    struct SPTAuthCacheId _cacheId;
 }
 
 + (id)defaultLoginOptions;
 - (void).cxx_destruct;
+@property(nonatomic) struct SPTAuthCacheId cacheId; // @synthesize cacheId=_cacheId;
+@property(nonatomic) struct SPTAuthCacheSalt cacheSalt; // @synthesize cacheSalt=_cacheSalt;
 @property(nonatomic) _Bool authOnly; // @synthesize authOnly=_authOnly;
 @property(nonatomic) _Bool bootstrapRequired; // @synthesize bootstrapRequired=_bootstrapRequired;
 @property(nonatomic) long long login5Setting; // @synthesize login5Setting=_login5Setting;

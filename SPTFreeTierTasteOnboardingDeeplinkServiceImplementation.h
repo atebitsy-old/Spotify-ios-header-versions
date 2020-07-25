@@ -6,11 +6,12 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTFreeTierTasteOnboardingDeeplinkService-Protocol.h"
 #import "SPTService-Protocol.h"
 
 @class NSString, NSURL, SPTAllocationContext;
 
-@interface SPTFreeTierTasteOnboardingDeeplinkServiceImplementation : NSObject <SPTService>
+@interface SPTFreeTierTasteOnboardingDeeplinkServiceImplementation : NSObject <SPTService, SPTFreeTierTasteOnboardingDeeplinkService>
 {
     _Bool _isPaidSocialCampaign;
     NSURL *_deeplinkURI;

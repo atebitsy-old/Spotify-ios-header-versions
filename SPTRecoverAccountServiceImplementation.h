@@ -9,7 +9,7 @@
 #import "SPTRecoverAccountService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTRecoverAccountURIHandler;
-@protocol SPTContainerService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTPreSignupExperimentationService, SPTServiceManagerService, SPTURIDispatchService;
+@protocol SPTContainerService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTLoginSessionScopeServicesLoaderProviderService, SPTPreSignupExperimentationService, SPTURIDispatchService;
 
 @interface SPTRecoverAccountServiceImplementation : NSObject <SPTRecoverAccountService>
 {
@@ -17,7 +17,7 @@
     id <SPTGLUEService> _glueService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTLoginService> _loginService;
-    id <SPTServiceManagerService> _serviceManagerService;
+    id <SPTLoginSessionScopeServicesLoaderProviderService> _sessionScopeServicesLoaderProviderService;
     id <SPTPreSignupExperimentationService> _experimentationService;
     id <SPTLoginLoggingService> _loggerService;
     SPTRecoverAccountURIHandler *_recoverAccountURIHandler;
@@ -30,7 +30,7 @@
 @property(retain, nonatomic) SPTRecoverAccountURIHandler *recoverAccountURIHandler; // @synthesize recoverAccountURIHandler=_recoverAccountURIHandler;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationService> experimentationService; // @synthesize experimentationService=_experimentationService;
-@property(nonatomic) __weak id <SPTServiceManagerService> serviceManagerService; // @synthesize serviceManagerService=_serviceManagerService;
+@property(nonatomic) __weak id <SPTLoginSessionScopeServicesLoaderProviderService> sessionScopeServicesLoaderProviderService; // @synthesize sessionScopeServicesLoaderProviderService=_sessionScopeServicesLoaderProviderService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

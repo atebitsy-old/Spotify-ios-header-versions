@@ -18,8 +18,8 @@
 + (id)factory;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
-- (id)emptyStateFactory;
-- (id)contentFactoryWithPosition:(long long)arg1 uri:(id)arg2;
+- (id)emptyStateFactoryWithReason:(id)arg1;
+- (id)contentFactoryWithPosition:(long long)arg1 uri:(id)arg2 reason:(id)arg3;
 - (id)_location;
 - (id)init;
 

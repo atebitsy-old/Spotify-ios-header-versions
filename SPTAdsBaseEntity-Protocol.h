@@ -10,6 +10,7 @@
 @protocol SPTAdsBaseEntity, SPTAdsBaseFeaturedAction, SPTAdsBaseReward, SPTAdsBaseVoiceModel;
 
 @protocol SPTAdsBaseEntity <NSObject>
+@property(readonly, nonatomic, getter=isBookmarked) _Bool bookmarked;
 @property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable;
 @property(readonly, nonatomic) _Bool isAudioPlus;
 @property(readonly, copy, nonatomic) NSString *format;

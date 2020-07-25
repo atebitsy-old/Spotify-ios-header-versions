@@ -23,6 +23,7 @@
 - (void)unregisterPodcastComponentsFromComponentRegistry:(id)arg1;
 - (void)registerPodcastComponentsToComponentRegistry:(id)arg1;
 - (id)provideBrowseImageHeaderComponents;
+- (id)makeEpisodeImageCardWithType:(long long)arg1 v2Enabled:(_Bool)arg2 theme:(id)arg3;
 - (id)providePodcastHubComponents;
 - (id)initWithTheme:(id)arg1 featureProperties:(id)arg2;
 

@@ -18,11 +18,9 @@
     id <SPTLocalSettings> _localSettings;
     NSMutableArray *_allEntities;
     NSHashTable *_observers;
-    CDUnknownBlockType _exchangeImageBlock;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) CDUnknownBlockType exchangeImageBlock; // @synthesize exchangeImageBlock=_exchangeImageBlock;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSMutableArray *allEntities; // @synthesize allEntities=_allEntities;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
@@ -37,7 +35,7 @@
 - (void)notifyObservers;
 @property(readonly, nonatomic) NSArray *recentlyPlayedEntities;
 - (void)subscribe;
-- (id)initWithDataLoader:(id)arg1 collectionTestManager:(id)arg2 linkDispatcher:(id)arg3 localSetting:(id)arg4 exchangeImageBlock:(CDUnknownBlockType)arg5;
+- (id)initWithDataLoader:(id)arg1 collectionTestManager:(id)arg2 linkDispatcher:(id)arg3 localSetting:(id)arg4;
 
 @end
 

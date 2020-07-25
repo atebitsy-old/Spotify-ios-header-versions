@@ -13,7 +13,6 @@
 
 @optional
 + (id)new;
-@property(nonatomic) _Bool shouldTruncateDescription;
 @property(copy, nonatomic) NSArray *secondaryActionViewsRight;
 @property(copy, nonatomic) NSArray *secondaryActionViewsLeft;
 @property(retain, nonatomic) UIView *mainActionView;

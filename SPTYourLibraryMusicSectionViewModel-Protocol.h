@@ -9,6 +9,7 @@
 @class NSString;
 
 @protocol SPTYourLibraryMusicSectionViewModel <NSObject>
+@property(readonly, nonatomic) long long type;
 @property(readonly, nonatomic, getter=isSectionHeaderShowing) _Bool sectionHeaderShowing;
 @property(readonly, nonatomic) NSString *title;
 - (void)performAction;

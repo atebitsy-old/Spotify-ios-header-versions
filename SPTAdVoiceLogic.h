@@ -11,6 +11,7 @@
 }
 
 + (CDUnknownBlockType)cuePlayed:(id)arg1;
++ (CDUnknownBlockType)savedAd:(id)arg1;
 + (CDUnknownBlockType)playbackResumed:(id)arg1;
 + (CDUnknownBlockType)playbackBuffering:(id)arg1;
 + (CDUnknownBlockType)playbackPaused:(id)arg1;

@@ -14,7 +14,6 @@
 {
     _Bool _onDemandSetsEnabled;
     NSString *_query;
-    unsigned long long _entityVersion;
     NSString *_catalogue;
     NSString *_clientVersion;
     NSString *_country;
@@ -43,9 +42,7 @@
 @property(copy, nonatomic) NSString *country; // @synthesize country=_country;
 @property(copy, nonatomic) NSString *clientVersion; // @synthesize clientVersion=_clientVersion;
 @property(copy, nonatomic) NSString *catalogue; // @synthesize catalogue=_catalogue;
-@property(nonatomic) unsigned long long entityVersion; // @synthesize entityVersion=_entityVersion;
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
-- (id)drilldownPathComponent;
 - (void)addDeprecatedPathComponents:(id)arg1;
 - (void)addDeprecatedQueryParameters:(id)arg1;
 - (id)experiencePathComponent;
@@ -53,7 +50,7 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSURLComponents *urlComponents;
-- (id)initWithQuery:(id)arg1 entityVersion:(unsigned long long)arg2 clientVersion:(id)arg3 catalogue:(id)arg4 country:(id)arg5 locale:(id)arg6 timestamp:(id)arg7 requestId:(id)arg8 experience:(unsigned long long)arg9 offset:(unsigned long long)arg10 limit:(unsigned long long)arg11 drilldownEntityType:(id)arg12 endpointVersion:(unsigned long long)arg13 entityTypes:(id)arg14 onDemandSetsEnabled:(_Bool)arg15;
+- (id)initWithQuery:(id)arg1 clientVersion:(id)arg2 catalogue:(id)arg3 country:(id)arg4 locale:(id)arg5 timestamp:(id)arg6 requestId:(id)arg7 experience:(unsigned long long)arg8 offset:(unsigned long long)arg9 limit:(unsigned long long)arg10 drilldownEntityType:(id)arg11 endpointVersion:(unsigned long long)arg12 entityTypes:(id)arg13 onDemandSetsEnabled:(_Bool)arg14;
 
 @end
 

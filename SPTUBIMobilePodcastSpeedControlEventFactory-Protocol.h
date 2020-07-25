@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastSpeedControl_PlaybackSpeedXEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastSpeedControl_CloseButtonEventFactory, SPTUBIMobilePodcastSpeedControl_PlaybackSpeedXEventFactory;
 
 @protocol SPTUBIMobilePodcastSpeedControlEventFactory <NSObject>
+- (id <SPTUBIMobilePodcastSpeedControl_CloseButtonEventFactory>)closeButtonFactory;
 - (id <SPTUBIMobilePodcastSpeedControl_PlaybackSpeedXEventFactory>)playbackSpeedXFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

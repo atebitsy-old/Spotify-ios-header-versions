@@ -8,11 +8,12 @@
 
 #import "SPTAdsBaseRegistryObserver-Protocol.h"
 
-@class NSString, SPTAdFeatureFlagChecks, SPTAdPlayerObservable, SPTAdVoiceManager, SPTNowPlayingAudioAdMode;
+@class NSString, SPTAdFeatureFlagChecks, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdPlayerObservable, SPTAdVoiceManager, SPTNowPlayingAudioAdMode;
 @protocol SPTAccessoryStateManager, SPTAdsBaseCosmosBridge, SPTAdsBaseRegistry, SPTEventSender, SPTLinkDispatcher, SPTVoiceLibraryService, SPTVoiceLibrarySession;
 
 @interface SPTAdVoiceSession : NSObject <SPTAdsBaseRegistryObserver>
 {
+    SPTAdNowPlayingAuxiliaryActionsHandler *_actionsHandler;
     id <SPTAdsBaseRegistry> _adRegistry;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
     id <SPTLinkDispatcher> _linkDispatcher;
@@ -38,10 +39,11 @@
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic) __weak id <SPTAdsBaseRegistry> adRegistry; // @synthesize adRegistry=_adRegistry;
+@property(retain, nonatomic) SPTAdNowPlayingAuxiliaryActionsHandler *actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 - (id)createVoiceSessionWithAdEntity:(id)arg1;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)dealloc;
-- (id)initWithAdRegistry:(id)arg1 voiceService:(id)arg2 linkDispatcher:(id)arg3 cosmosBridge:(id)arg4 audioAdMode:(id)arg5 playerObserver:(id)arg6 featureFlagChecker:(id)arg7 accessoryStateManager:(id)arg8 eventSender:(id)arg9;
+- (id)initWithAdRegistry:(id)arg1 voiceService:(id)arg2 linkDispatcher:(id)arg3 cosmosBridge:(id)arg4 audioAdMode:(id)arg5 playerObserver:(id)arg6 featureFlagChecker:(id)arg7 accessoryStateManager:(id)arg8 eventSender:(id)arg9 actionsHandler:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

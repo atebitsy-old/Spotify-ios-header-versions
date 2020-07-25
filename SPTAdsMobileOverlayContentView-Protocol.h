@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTAdsPromotedContentImageView, UIButton;
+@class SPTAdNowPlayingBookmarkButton, SPTAdsPromotedContentImageView, UIButton;
 
 @protocol SPTAdsMobileOverlayContentView <NSObject>
+@property(readonly, nonatomic) _Bool shouldShowBookmarkButton;
+@property(readonly, nonatomic) SPTAdNowPlayingBookmarkButton *bookmarkButton;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView;
 @property(readonly, nonatomic) UIButton *actionButton;
 

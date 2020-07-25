@@ -53,6 +53,7 @@
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <_TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_> audioPlusService; // @synthesize audioPlusService=_audioPlusService;
+- (id)provideSeeAllViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideCoverArtViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideDescriptionViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideActionRowViewControllerForURI:(id)arg1 context:(id)arg2;

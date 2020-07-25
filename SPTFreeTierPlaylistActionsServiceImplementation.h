@@ -9,11 +9,10 @@
 #import "SPTFreeTierPlaylistActionsService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTCollectionLogger, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTContainerUIService, SPTFreeTierPlaylistService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTUBIService;
+@protocol SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTCollectionSortingEntityManager, SPTContainerService, SPTContainerUIService, SPTFreeTierPlaylistService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTUBIService;
 
 @interface SPTFreeTierPlaylistActionsServiceImplementation : NSObject <SPTFreeTierPlaylistActionsService>
 {
-    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <SPTCollectionPlatformService> _collectionPlatformService;
     id <SPTCollectionSortingEntityManager> _collectionSortingEntityManager;
     id <SPTContainerService> _containerService;
@@ -38,9 +37,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(retain, nonatomic) id <SPTCollectionSortingEntityManager> collectionSortingEntityManager; // @synthesize collectionSortingEntityManager=_collectionSortingEntityManager;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
-@property(nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
-- (id)playlistModelWithShadow;
-- (id)playlistDataLoaderWithShadow;
 - (id)selectedActionIconColor;
 - (id)provideCollectionLogger;
 - (void)registerDownloadAction;

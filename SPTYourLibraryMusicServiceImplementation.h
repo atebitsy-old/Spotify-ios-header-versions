@@ -9,7 +9,7 @@
 #import "SPTYourLibraryMusicService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol FollowFeature, SPTCollectionPlatformService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTNetworkService, SPTOnDemandService, SPTPlaylistPlatformService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTYourLibraryMusicTestManager, SPTYourLibraryService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_, _TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_;
 
 @interface SPTYourLibraryMusicServiceImplementation : NSObject <SPTYourLibraryMusicService>
 {
@@ -30,10 +30,12 @@
     id <SPTSettingsFeature> _settingsService;
     id <SPTYourLibraryService> _yourLibraryService;
     id <SPTYourLibraryMusicTestManager> _testManager;
+    id <_TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_> _yourLibraryBetaService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <_TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_> yourLibraryBetaService; // @synthesize yourLibraryBetaService=_yourLibraryBetaService;
 @property(retain, nonatomic) id <SPTYourLibraryMusicTestManager> testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTYourLibraryService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsService; // @synthesize settingsService=_settingsService;

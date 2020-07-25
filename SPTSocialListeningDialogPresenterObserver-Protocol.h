@@ -12,6 +12,7 @@
 
 @optional
 - (void)presenter:(SPTSocialListeningDialogPresenter *)arg1 didSelectSessionMode:(long long)arg2 forJoinURL:(NSURL *)arg3;
+- (void)presenterDidConfirmLeaveSession:(SPTSocialListeningDialogPresenter *)arg1;
 - (void)presenterDidConfirmDeleteSession:(SPTSocialListeningDialogPresenter *)arg1;
 @end
 

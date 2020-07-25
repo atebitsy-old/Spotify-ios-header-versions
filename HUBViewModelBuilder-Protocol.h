@@ -7,9 +7,12 @@
 #import "HUBJSONCompatibleBuilder-Protocol.h"
 
 @class NSArray, NSMutableDictionary, NSString;
-@protocol HUBComponentModelBuilder, HUBViewModel, HUBViewModelBuilder;
+@protocol HUBComponentModelBuilder, HUBModelEncodable, HUBViewModel, HUBViewModelBuilder;
 
 @protocol HUBViewModelBuilder <HUBJSONCompatibleBuilder>
+- (void)appendOverlayModel:(id <HUBModelEncodable>)arg1 withIdentifier:(NSString *)arg2;
+- (void)appendBodyModel:(id <HUBModelEncodable>)arg1 withIdentifier:(NSString *)arg2;
+- (void)setHeaderModel:(id <HUBModelEncodable>)arg1;
 - (void)removeAllComponentModelBuilders;
 - (void)removeBuilderForOverlayComponentModelWithIdentifier:(NSString *)arg1;
 - (void)removeBuilderForBodyComponentModelWithIdentifier:(NSString *)arg1;

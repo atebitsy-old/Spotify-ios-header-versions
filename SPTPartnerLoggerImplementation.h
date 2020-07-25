@@ -9,11 +9,11 @@
 #import "SPTPartnerLogger-Protocol.h"
 
 @class NSString, SPTPartnerTimeTracker;
-@protocol SPTLogCenter, SPTPartnerTestManager;
+@protocol SPTEventSender, SPTPartnerTestManager;
 
 @interface SPTPartnerLoggerImplementation : NSObject <SPTPartnerLogger>
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     NSString *_sessionId;
     SPTPartnerTimeTracker *_timeTracker;
     id <SPTPartnerTestManager> _testManager;
@@ -23,10 +23,10 @@
 @property(retain, nonatomic) id <SPTPartnerTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTPartnerTimeTracker *timeTracker; // @synthesize timeTracker=_timeTracker;
 @property(copy, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)logBannerSessionEventWithEventType:(id)arg1 eventReason:(id)arg2 sessionType:(id)arg3 shownApps:(id)arg4 connectedApp:(id)arg5;
 - (void)startNewSession;
-- (id)initWithLogCenter:(id)arg1 testManager:(id)arg2;
+- (id)initWithEventSender:(id)arg1 testManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

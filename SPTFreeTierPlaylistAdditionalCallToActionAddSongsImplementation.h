@@ -9,12 +9,11 @@
 #import "SPTFreeTierPlaylistEmptyViewAdditionalCallToAction-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistLogger;
-@protocol SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationUIService, SPTFreeTierPlaylistViewModel;
+@protocol SPTAssistedCurationUIService, SPTFreeTierPlaylistViewModel;
 
 @interface SPTFreeTierPlaylistAdditionalCallToActionAddSongsImplementation : NSObject <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction>
 {
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
-    id <SPTAddToSpotifyPlaylistExperimentService> _addToSpotifyPlaylistExperimentService;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     SPTFreeTierPlaylistLogger *_logger;
 }
@@ -22,13 +21,12 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-@property(readonly, nonatomic) __weak id <SPTAddToSpotifyPlaylistExperimentService> addToSpotifyPlaylistExperimentService; // @synthesize addToSpotifyPlaylistExperimentService=_addToSpotifyPlaylistExperimentService;
 @property(readonly, nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(readonly, copy, nonatomic) NSString *educationalText;
 - (void)performAction:(id)arg1;
 @property(readonly, nonatomic) _Bool enabled;
 @property(readonly, copy, nonatomic) NSString *title;
-- (id)initWithPlaylistViewModel:(id)arg1 assistedCurationUIService:(id)arg2 addToSpotifyPlaylistExperimentService:(id)arg3 logger:(id)arg4;
+- (id)initWithPlaylistViewModel:(id)arg1 assistedCurationUIService:(id)arg2 logger:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

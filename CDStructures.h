@@ -662,10 +662,6 @@ struct LoginController {
     CDUnknownFunctionPointerType *_field1;
 };
 
-struct LoginControllerConfiguration {
-    struct CacheDrmConfig _field1;
-};
-
 struct LoginCredentials {
     struct unique_ptr<spotify::connectivity::auth::LoginCredentials::Impl, std::__1::default_delete<spotify::connectivity::auth::LoginCredentials::Impl>> _impl;
 };
@@ -679,6 +675,7 @@ struct LoginOptions {
     _Bool _field6;
     basic_string_90719d97 _field7;
     struct ProxySettings _field8;
+    struct CacheDrmConfig _field9;
 };
 
 struct MeMetadataRequest;
@@ -916,15 +913,15 @@ struct Resolve {
 
 struct ResolveImpl;
 
-struct SPTAuthSchedulerBridge;
-
-struct SPTConnectivityCacheId {
+struct SPTAuthCacheId {
     unsigned char elements[16];
 };
 
-struct SPTConnectivityCacheSalt {
+struct SPTAuthCacheSalt {
     unsigned char elements[4];
 };
+
+struct SPTAuthSchedulerBridge;
 
 struct SPTEncoreIconCharacterSet {
     CDUnion_2be632f8 _field1;
@@ -3014,6 +3011,15 @@ typedef struct {
 } CDStruct_e24ffa00;
 
 typedef struct {
+    unsigned int framesProcessed;
+    float meanAccumulator;
+    float rmsAccumulator;
+    float meanLevel;
+    float rmsLevel;
+    float cdfScaledLevel;
+} CDStruct_edb3adff;
+
+typedef struct {
     unsigned long long _field1;
     id *_field2;
     unsigned long long *_field3;
@@ -3113,16 +3119,7 @@ typedef struct {
     CDStruct_3412e649 magnitude;
 } CDStruct_93d588b8;
 
-// Ambiguous groups
-typedef struct {
-    unsigned int _field1;
-    float _field2;
-    float _field3;
-    float _field4;
-    float _field5;
-    float _field6;
-} CDStruct_3d979a67;
-
+// Template types
 typedef struct basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> {
     struct __compressed_pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__rep, std::__1::allocator<char>> {
         struct __rep {

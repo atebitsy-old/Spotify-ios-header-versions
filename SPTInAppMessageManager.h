@@ -6,19 +6,22 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, NSDictionary, SPTInAppMessageEngine, SPTInAppMessageNetworkClient, SPTInAppMessageSDKMessageController, SPTInAppMessageSDKTriggerListController;
-@protocol SPTInAppMessageDataLoader, SPTInAppMessageLogger, SPTInAppMessageRequester, SPTInAppMessageSDKMessageReceiver;
+@class NSArray, NSDictionary, SPTInAppMessageEngine, SPTInAppMessageNetworkClient, SPTInAppMessageSDKMessageController, SPTInAppMessageSDKMessagePreviewController, SPTInAppMessageSDKTriggerListController;
+@protocol SPTInAppMessageDataLoader, SPTInAppMessageLogger, SPTInAppMessageRequester, SPTInAppMessageSDKMessagePreviewReceiver, SPTInAppMessageSDKMessageReceiver;
 
 @interface SPTInAppMessageManager : NSObject
 {
+    _Bool _messagePreviewControllerObservingNetworkClient;
     id <SPTInAppMessageDataLoader> _dataLoader;
     id <SPTInAppMessageLogger> _logger;
     id <SPTInAppMessageRequester> _messageRequester;
     id <SPTInAppMessageSDKMessageReceiver> _messageReceiver;
+    id <SPTInAppMessageSDKMessagePreviewReceiver> _messagePreviewReceiver;
     SPTInAppMessageNetworkClient *_networkClient;
     SPTInAppMessageEngine *_engine;
     SPTInAppMessageSDKTriggerListController *_triggerListController;
     SPTInAppMessageSDKMessageController *_messageController;
+    SPTInAppMessageSDKMessagePreviewController *_messagePreviewController;
     NSDictionary *_actionHandlers;
     NSArray *_supportedFormats;
     NSArray *_supportedActions;
@@ -26,26 +29,30 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool messagePreviewControllerObservingNetworkClient; // @synthesize messagePreviewControllerObservingNetworkClient=_messagePreviewControllerObservingNetworkClient;
 @property(readonly, copy, nonatomic) NSArray *supportedTriggerTypes; // @synthesize supportedTriggerTypes=_supportedTriggerTypes;
 @property(readonly, copy, nonatomic) NSArray *supportedActions; // @synthesize supportedActions=_supportedActions;
 @property(readonly, copy, nonatomic) NSArray *supportedFormats; // @synthesize supportedFormats=_supportedFormats;
 @property(readonly, copy, nonatomic) NSDictionary *actionHandlers; // @synthesize actionHandlers=_actionHandlers;
+@property(retain, nonatomic) SPTInAppMessageSDKMessagePreviewController *messagePreviewController; // @synthesize messagePreviewController=_messagePreviewController;
 @property(retain, nonatomic) SPTInAppMessageSDKMessageController *messageController; // @synthesize messageController=_messageController;
 @property(retain, nonatomic) SPTInAppMessageSDKTriggerListController *triggerListController; // @synthesize triggerListController=_triggerListController;
 @property(retain, nonatomic) SPTInAppMessageEngine *engine; // @synthesize engine=_engine;
 @property(retain, nonatomic) SPTInAppMessageNetworkClient *networkClient; // @synthesize networkClient=_networkClient;
+@property(retain, nonatomic) id <SPTInAppMessageSDKMessagePreviewReceiver> messagePreviewReceiver; // @synthesize messagePreviewReceiver=_messagePreviewReceiver;
 @property(retain, nonatomic) id <SPTInAppMessageSDKMessageReceiver> messageReceiver; // @synthesize messageReceiver=_messageReceiver;
 @property(readonly, nonatomic) id <SPTInAppMessageRequester> messageRequester; // @synthesize messageRequester=_messageRequester;
 @property(readonly, nonatomic) id <SPTInAppMessageLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTInAppMessageDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 - (void)startTriggerEngine;
+- (id)createMessagePreviewController;
 - (id)createMessageController;
 - (id)createTriggerListController;
 - (id)createNetworkClient;
 - (id)createSDKEngine;
 - (id)provideMessageRequester;
 - (void)dealloc;
-- (id)initWithDataLoader:(id)arg1 logger:(id)arg2 supportedFormats:(id)arg3 supportedTriggerTypes:(id)arg4 actionHandlers:(id)arg5 messageReceiver:(id)arg6;
+- (id)initWithDataLoader:(id)arg1 logger:(id)arg2 supportedFormats:(id)arg3 supportedTriggerTypes:(id)arg4 actionHandlers:(id)arg5 messageReceiver:(id)arg6 messagePreviewReceiver:(id)arg7;
 
 @end
 

@@ -8,16 +8,20 @@
 
 #import "SPTWatchConnectivityRequestHandler-Protocol.h"
 
-@class NSString, SPTWatchConnectivityDataLoader;
-@protocol SPTLogCenter;
+@class NSString, SPTWatchConnectivityDataLoader, SPTWatchPlatformLogging;
+@protocol SPTAccessoryActionLogger, SPTLogCenter;
 
 @interface SPTWatchPlatformLogRequestHandler : NSObject <SPTWatchConnectivityRequestHandler>
 {
     SPTWatchConnectivityDataLoader *_dataLoader;
     id <SPTLogCenter> _logCenter;
+    id <SPTAccessoryActionLogger> _actionLogger;
+    SPTWatchPlatformLogging *_watchPlatformLogging;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTWatchPlatformLogging *watchPlatformLogging; // @synthesize watchPlatformLogging=_watchPlatformLogging;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) SPTWatchConnectivityDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 - (_Bool)isUIImpression5MessageRequest:(id)arg1;
@@ -26,7 +30,7 @@
 - (void)logInteractionMessageWithRequest:(id)arg1;
 - (void)handleRequest:(id)arg1;
 - (_Bool)canHandleRequest:(id)arg1;
-- (id)initWithDataLoader:(id)arg1 logCenter:(id)arg2;
+- (id)initWithDataLoader:(id)arg1 logCenter:(id)arg2 watchPlatformLogging:(id)arg3 actionLogger:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: networkService
+    // Error parsing type: , name: nowPlayingPlatformService
     // Error parsing type: , name: pageLoaderViewService
 }
 

@@ -11,7 +11,7 @@
 #import "SPTSignupService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSignupConfigurationDataLoader, SPTSignupUserInfoModel;
-@protocol SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTPreSignupExperimentationService, SPTServiceManagerService;
+@protocol SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTLoginSessionScopeServicesLoaderProviderService, SPTNetworkService, SPTPreSignupExperimentationService;
 
 @interface SPTSignupServiceImplementation : NSObject <SPTPageRegistryObserver, SPTLoginServiceObserver, SPTSignupService>
 {
@@ -20,7 +20,7 @@
     id <SPTGLUEService> _glueService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTNetworkService> _networkService;
-    id <SPTServiceManagerService> _serviceManagerService;
+    id <SPTLoginSessionScopeServicesLoaderProviderService> _sessionScopeServicesLoaderProviderService;
     id <SPTPreSignupExperimentationService> _experimentationService;
     id <SPTLoginLoggingService> _loggerService;
     SPTSignupUserInfoModel *_userInfoModel;
@@ -33,7 +33,7 @@
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationService> experimentationService; // @synthesize experimentationService=_experimentationService;
-@property(nonatomic) __weak id <SPTServiceManagerService> serviceManagerService; // @synthesize serviceManagerService=_serviceManagerService;
+@property(nonatomic) __weak id <SPTLoginSessionScopeServicesLoaderProviderService> sessionScopeServicesLoaderProviderService; // @synthesize sessionScopeServicesLoaderProviderService=_sessionScopeServicesLoaderProviderService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

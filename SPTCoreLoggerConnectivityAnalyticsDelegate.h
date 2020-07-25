@@ -18,6 +18,7 @@
 - (id).cxx_construct;
 - (void).cxx_destruct;
 @property(nonatomic) shared_ptr_0bb93f61 cppLogger; // @synthesize cppLogger=_cppLogger;
+- (void)destroy;
 - (void)log:(id)arg1;
 
 // Remaining properties

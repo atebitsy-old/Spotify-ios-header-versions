@@ -14,5 +14,6 @@
 @optional
 - (double)audioSessionPreferredIOBufferDuration:(id <SPTAudioSessionController>)arg1;
 - (_Bool)audioSessionShouldSupportRecording:(id <SPTAudioSessionController>)arg1;
+- (_Bool)shouldActivateAudioSession:(id <SPTAudioSessionController>)arg1;
 @end
 

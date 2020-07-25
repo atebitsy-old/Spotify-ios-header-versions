@@ -6,12 +6,12 @@
 
 #import <UIKit/UIView.h>
 
-#import "SPTAdsMobileOverlayContentBookmarkableView-Protocol.h"
+#import "SPTAdsMobileOverlayContentView-Protocol.h"
 
 @class NSString, SPTAdNowPlayingBookmarkButton, SPTAdsPromotedContentImageView, SPTTheme, UIButton, UILabel;
 @protocol GLUEImageLoader;
 
-@interface SPTAdsMobileOverlayLeaveBehindBrandView : UIView <SPTAdsMobileOverlayContentBookmarkableView>
+@interface SPTAdsMobileOverlayLeaveBehindBrandView : UIView <SPTAdsMobileOverlayContentView>
 {
     _Bool _shouldShowBookmarkButton;
     SPTAdsPromotedContentImageView *_contentImageView;
@@ -40,7 +40,6 @@
 - (void)addConstraints;
 - (void)setBounds:(struct CGRect)arg1;
 - (id)initWithAdvertiserTitle:(id)arg1 advertiserSubtitle:(id)arg2 bookmarkButtonState:(long long)arg3 theme:(id)arg4 glueImageLoader:(id)arg5;
-- (id)initWithAdvertiserTitle:(id)arg1 advertiserSubtitle:(id)arg2 advertiserInfo:(id)arg3 bookmarkButtonState:(long long)arg4 theme:(id)arg5 glueTheme:(id)arg6 glueImageLoader:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

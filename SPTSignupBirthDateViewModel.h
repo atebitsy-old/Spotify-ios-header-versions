@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDynamicSignupFlowController, SPTLoginErrorDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupAgeFieldValidator, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
+@class SPTDynamicSignupFlowController, SPTLoginDeviceUtils, SPTLoginErrorDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupAgeFieldValidator, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
 @protocol SPTSignupBirthDateViewModelDelegate;
 
 @interface SPTSignupBirthDateViewModel : NSObject
@@ -18,11 +18,15 @@
     SPTSignupAgeFieldValidator *_ageValidator;
     SPTSignupUserInfoModel *_userInfoModel;
     SPTLoginErrorDialogLogger *_dialogLogger;
+    SPTSignupA11yEnvironment *_a11yEnvironment;
+    SPTLoginDeviceUtils *_deviceUtils;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
-@property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
+@property(readonly, nonatomic) SPTLoginDeviceUtils *deviceUtils; // @synthesize deviceUtils=_deviceUtils;
+@property(readonly, nonatomic) SPTSignupA11yEnvironment *a11yEnvironment; // @synthesize a11yEnvironment=_a11yEnvironment;
+@property(readonly, nonatomic) SPTLoginErrorDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
+@property(readonly, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(readonly, nonatomic) SPTSignupAgeFieldValidator *ageValidator; // @synthesize ageValidator=_ageValidator;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) SPTSignupTermsAndPolicyViewModel *termsAndPolicyViewModel; // @synthesize termsAndPolicyViewModel=_termsAndPolicyViewModel;
@@ -41,7 +45,9 @@
 - (id)nextButtonText;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
-- (id)initWithAgeValidator:(id)arg1 userInfoModel:(id)arg2 logger:(id)arg3 dialogLogger:(id)arg4 termsAndPolicyViewModel:(id)arg5 flowController:(id)arg6;
+- (_Bool)isLastScreenOnIPhoneSE;
+@property(readonly, nonatomic) _Bool shouldAutoFocusTextFieldOnAppear;
+- (id)initWithAgeValidator:(id)arg1 userInfoModel:(id)arg2 logger:(id)arg3 dialogLogger:(id)arg4 termsAndPolicyViewModel:(id)arg5 flowController:(id)arg6 a11yEnvironment:(id)arg7 deviceUtils:(id)arg8;
 
 @end
 

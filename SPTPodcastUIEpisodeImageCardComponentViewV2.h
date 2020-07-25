@@ -11,17 +11,19 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class NSString, SPTPodcastUIEpisodeImageCardViewV2;
-@protocol HUBComponentEventHandler;
+@protocol HUBComponentEventHandler, SPTPodcastUIEpisodeImageCardStyle;
 
 @interface SPTPodcastUIEpisodeImageCardComponentViewV2 : HUGSThemableComponentView <UIGestureRecognizerDelegate, HUBComponentViewWithEvents, HUBComponentViewWithImageHandling>
 {
     _Bool _highlighted;
     id <HUBComponentEventHandler> _eventHandler;
     SPTPodcastUIEpisodeImageCardViewV2 *_imageCardView;
+    id <SPTPodcastUIEpisodeImageCardStyle> _style;
 }
 
-+ (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2 theme:(id)arg3;
++ (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 cardType:(long long)arg2 containerViewSize:(struct CGSize)arg3 theme:(id)arg4;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPodcastUIEpisodeImageCardStyle> style; // @synthesize style=_style;
 @property(nonatomic, getter=isHighlighted) _Bool highlighted; // @synthesize highlighted=_highlighted;
 @property(retain, nonatomic) SPTPodcastUIEpisodeImageCardViewV2 *imageCardView; // @synthesize imageCardView=_imageCardView;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
@@ -34,7 +36,7 @@
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
 - (void)setUpSubviews;
-- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
+- (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 style:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

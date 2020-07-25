@@ -6,17 +6,18 @@
 
 #import "SPTBannerView.h"
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, SPTAdsPromotedContentImageView, SPTTheme, UIButton, UIView;
+@class GLUEButton, GLUELabel, NSLayoutConstraint, SPTAdNowPlayingBookmarkButton, SPTAdsPromotedContentImageView, SPTTheme, UIButton, UIView;
 @protocol GLUEImageLoader;
 
 @interface SPTAdsMobileOverlayBannerViewSimple : SPTBannerView
 {
+    _Bool _shouldShowBookmarkButton;
     SPTAdsPromotedContentImageView *_imageView;
     UIView *_actionView;
     GLUELabel *_headerLabel;
-    GLUELabel *_advertiserLabel;
     GLUEButton *_learnMoreButton;
     UIButton *_closeBannerButton;
+    SPTAdNowPlayingBookmarkButton *_bookmarkButton;
     SPTTheme *_theme;
     id <GLUEImageLoader> _glueImageLoader;
     NSLayoutConstraint *_imageViewSizeContraint;
@@ -26,15 +27,16 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shouldShowBookmarkButton; // @synthesize shouldShowBookmarkButton=_shouldShowBookmarkButton;
 @property(nonatomic) double safeAreaMargin; // @synthesize safeAreaMargin=_safeAreaMargin;
 @property(retain, nonatomic) NSLayoutConstraint *closeButtonTrailingConstraint; // @synthesize closeButtonTrailingConstraint=_closeButtonTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewMarginConstraint; // @synthesize imageViewMarginConstraint=_imageViewMarginConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewSizeContraint; // @synthesize imageViewSizeContraint=_imageViewSizeContraint;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) SPTAdNowPlayingBookmarkButton *bookmarkButton; // @synthesize bookmarkButton=_bookmarkButton;
 @property(readonly, nonatomic) UIButton *closeBannerButton; // @synthesize closeBannerButton=_closeBannerButton;
 @property(readonly, nonatomic) GLUEButton *learnMoreButton; // @synthesize learnMoreButton=_learnMoreButton;
-@property(readonly, nonatomic) GLUELabel *advertiserLabel; // @synthesize advertiserLabel=_advertiserLabel;
 @property(readonly, nonatomic) GLUELabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(readonly, nonatomic) UIView *actionView; // @synthesize actionView=_actionView;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *imageView; // @synthesize imageView=_imageView;
@@ -47,7 +49,7 @@
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)addConstraints;
 - (void)removeUnusedSubviews;
-- (id)initWithAdvertiserTitle:(id)arg1 actionButtonText:(id)arg2 imageUrl:(id)arg3 theme:(id)arg4 glueImageLoader:(id)arg5;
+- (id)initWithAdvertiserTitle:(id)arg1 actionButtonText:(id)arg2 bookmarkButtonState:(long long)arg3 imageUrl:(id)arg4 theme:(id)arg5 glueImageLoader:(id)arg6;
 
 @end
 

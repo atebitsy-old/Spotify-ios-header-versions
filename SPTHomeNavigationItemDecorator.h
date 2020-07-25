@@ -44,6 +44,7 @@
 - (void)settingsButtonPressed;
 - (id)listeningHistoryNavBarItem;
 - (id)followFeedNavBarItem;
+- (id)settingsNavBarItem;
 - (id)rightItems;
 - (void)updateNavigationItemDecoratorAlpha:(double)arg1;
 - (void)decoratePageController:(id)arg1;

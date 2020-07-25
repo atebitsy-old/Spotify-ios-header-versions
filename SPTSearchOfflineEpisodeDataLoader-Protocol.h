@@ -9,6 +9,6 @@
 @class NSString;
 
 @protocol SPTSearchOfflineEpisodeDataLoader <NSObject>
-- (void)fetchEpisodesWithQuery:(NSString *)arg1 limit:(unsigned long long)arg2 onCompletion:(void (^)(SPTSearchPlatformOfflineEpisodesResponse *))arg3 onError:(void (^)(NSError *))arg4;
+- (void)fetchEpisodesWithQuery:(NSString *)arg1 limit:(unsigned long long)arg2 onCompletion:(void (^)(NSArray *, NSError *))arg3;
 @end
 

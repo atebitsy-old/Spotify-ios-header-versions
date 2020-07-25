@@ -20,8 +20,13 @@
     _Bool _videoTabEnabled;
     _Bool _bartocoverartAnimationEnabled;
     _Bool _contentLayerTabEnabled;
+    unsigned long long _pollsFeatureInNpv;
+    NSString *_pollsFeatureInNpvString;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) NSString *pollsFeatureInNpvString; // @synthesize pollsFeatureInNpvString=_pollsFeatureInNpvString;
+@property(readonly, nonatomic) unsigned long long pollsFeatureInNpv; // @synthesize pollsFeatureInNpv=_pollsFeatureInNpv;
 @property(readonly, nonatomic) _Bool contentLayerTabEnabled; // @synthesize contentLayerTabEnabled=_contentLayerTabEnabled;
 @property(readonly, nonatomic) _Bool bartocoverartAnimationEnabled; // @synthesize bartocoverartAnimationEnabled=_bartocoverartAnimationEnabled;
 @property(readonly, nonatomic) _Bool videoTabEnabled; // @synthesize videoTabEnabled=_videoTabEnabled;
@@ -30,6 +35,7 @@
 @property(readonly, nonatomic) _Bool samplesEnabled; // @synthesize samplesEnabled=_samplesEnabled;
 @property(readonly, nonatomic) _Bool showHeadUnitLogEnabled; // @synthesize showHeadUnitLogEnabled=_showHeadUnitLogEnabled;
 @property(readonly, nonatomic) _Bool podcastInspectorEnabled; // @synthesize podcastInspectorEnabled=_podcastInspectorEnabled;
+- (unsigned long long)mapPollsFeatureInNpvToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

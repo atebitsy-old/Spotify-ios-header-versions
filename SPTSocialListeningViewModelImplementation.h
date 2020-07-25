@@ -58,6 +58,7 @@
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 - (_Bool)isNewUIExperienceEnabled;
 - (void)presenter:(id)arg1 didSelectSessionMode:(long long)arg2 forJoinURL:(id)arg3;
+- (void)presenterDidConfirmLeaveSession:(id)arg1;
 - (void)presenterDidConfirmDeleteSession:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
@@ -89,6 +90,7 @@
 @property(readonly, nonatomic) _Bool scannablesImageHidden;
 @property(readonly, nonatomic) _Bool scannableViewHidden;
 @property(readonly, nonatomic) long long state;
+- (void)loadScannable;
 - (void)load;
 - (id)initWithModel:(id)arg1 shareFeature:(id)arg2 dialogPresenter:(id)arg3 linkDispatcher:(id)arg4 testManager:(id)arg5 stateManager:(id)arg6 currentUserData:(id)arg7;
 

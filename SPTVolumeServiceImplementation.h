@@ -8,7 +8,7 @@
 
 #import "SPTVolumeService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeDebugInstrumentation, SPTVolumeFeatureProperties, SPTVolumeFlagsProvider, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSliderViewFactory, SPTVolumeSystemPopupHideEmitter, SPTVolumeUbiLogger;
+@class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeDebugInstrumentation, SPTVolumeFeatureProperties, SPTVolumeFlagsProvider, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSliderViewFactory, SPTVolumeSystemPopupEmitter, SPTVolumeSystemPopupHideEmitterLegacy, SPTVolumeUbiLogger;
 @protocol CosmosFeature, GaiaFeature, SPTAbbaService, SPTContainerService, SPTEventSenderService, SPTGaiaConnectAPI, SPTPlayerFeature, SPTRemoteConfigurationService, SPTUBIService, SPTVolumeAPI, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeServiceImplementation : NSObject <SPTVolumeService>
@@ -28,7 +28,8 @@
     id <SPTGaiaConnectAPI> _connectManager;
     id <SPTVolumeSystemAPI> _systemVolumeManager;
     SPTVolumeBuffer *_remoteBuffer;
-    SPTVolumeSystemPopupHideEmitter *_systemPopupEmitter;
+    SPTVolumeSystemPopupHideEmitterLegacy *_legacySystemPopupEmitter;
+    SPTVolumeSystemPopupEmitter *_systemPopupEmitter;
     SPTVolumeLogger *_logger;
     SPTVolumeUbiLogger *_ubiLogger;
     SPTVolumeDebugInstrumentation *_debugLogger;
@@ -47,7 +48,8 @@
 @property(retain, nonatomic) SPTVolumeDebugInstrumentation *debugLogger; // @synthesize debugLogger=_debugLogger;
 @property(retain, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) SPTVolumeLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) SPTVolumeSystemPopupHideEmitter *systemPopupEmitter; // @synthesize systemPopupEmitter=_systemPopupEmitter;
+@property(retain, nonatomic) SPTVolumeSystemPopupEmitter *systemPopupEmitter; // @synthesize systemPopupEmitter=_systemPopupEmitter;
+@property(retain, nonatomic) SPTVolumeSystemPopupHideEmitterLegacy *legacySystemPopupEmitter; // @synthesize legacySystemPopupEmitter=_legacySystemPopupEmitter;
 @property(retain, nonatomic) SPTVolumeBuffer *remoteBuffer; // @synthesize remoteBuffer=_remoteBuffer;
 @property(retain, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
@@ -67,6 +69,7 @@
 - (id)provideVolumeSystemAPI;
 - (id)provideVolumeUIFactory;
 - (id)provideVolumeAPI;
+- (id)activeSystemPopupEmitter;
 - (void)setupVolumeSliderView;
 - (void)setupRemoteVolumePopupPresenter;
 - (id)buildVolumeSynchronizationManager;

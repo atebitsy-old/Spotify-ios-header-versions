@@ -15,6 +15,7 @@
     struct RemoteConfigStorage *_remote_config;
 }
 
+- (id)propertyDefinitions;
 - (_Bool)setConfigurationProto:(id)arg1 bootstrap:(_Bool)arg2;
 @property(readonly, nonatomic) struct RemoteConfigStorage *cppRemoteConfig;
 - (id)initWithRemoteConfig:(struct RemoteConfigStorage *)arg1;

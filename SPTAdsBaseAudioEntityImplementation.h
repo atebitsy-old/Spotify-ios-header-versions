@@ -30,6 +30,7 @@
 @property(readonly, copy, nonatomic) NSString *advertiser;
 @property(readonly, nonatomic, getter=isAudioPlus) _Bool audioPlus; // @synthesize audioPlus=_audioPlus;
 @property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable;
+@property(readonly, nonatomic, getter=isBookmarked) _Bool bookmarked;
 @property(readonly, nonatomic) NSURL *clickthroughURL;
 @property(readonly, nonatomic) NSURL *coverArtURL;
 @property(readonly, nonatomic) UIColor *creativeColor;

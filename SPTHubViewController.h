@@ -29,8 +29,8 @@
     unsigned long long _preferredNavigationBarState;
     unsigned long long _viewModelLoadingType;
     NSMutableDictionary *_dragDelegateHolders;
-    SPTTheme *_theme;
     SPTHubShelvesManager *_shelvesManager;
+    SPTTheme *_theme;
     SPTHubKeyboardManager *_keyboardManager;
     id <SPTHubImpressionLogger> _impressionLogger;
     id <SPTHubLoadingLogger> _loadingLogger;
@@ -45,8 +45,8 @@
 @property(readonly, nonatomic) id <SPTHubLoadingLogger> loadingLogger; // @synthesize loadingLogger=_loadingLogger;
 @property(readonly, nonatomic) id <SPTHubImpressionLogger> impressionLogger; // @synthesize impressionLogger=_impressionLogger;
 @property(retain, nonatomic) SPTHubKeyboardManager *keyboardManager; // @synthesize keyboardManager=_keyboardManager;
-@property(retain, nonatomic) SPTHubShelvesManager *shelvesManager; // @synthesize shelvesManager=_shelvesManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(retain, nonatomic) SPTHubShelvesManager *shelvesManager; // @synthesize shelvesManager=_shelvesManager;
 @property(retain, nonatomic) NSMutableDictionary *dragDelegateHolders; // @synthesize dragDelegateHolders=_dragDelegateHolders;
 @property(nonatomic) unsigned long long viewModelLoadingType; // @synthesize viewModelLoadingType=_viewModelLoadingType;
 @property(nonatomic) unsigned long long preferredNavigationBarState; // @synthesize preferredNavigationBarState=_preferredNavigationBarState;

@@ -19,6 +19,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)showGenericErrorMessageWithTryAgainBlock:(CDUnknownBlockType)arg1 cancelBlock:(CDUnknownBlockType)arg2;
 - (void)showTapToPlayTooltipFor:(id)arg1;
 - (void)showDownloadedTracksLimitReachedPopup;
 - (void)showTrackDownloadRemovedSnackbar;

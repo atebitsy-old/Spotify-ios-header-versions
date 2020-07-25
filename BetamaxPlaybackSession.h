@@ -29,6 +29,7 @@
 @property(nonatomic) _Bool hasEncryptionType; // @dynamic hasEncryptionType;
 @property(nonatomic) _Bool hasExitReason; // @dynamic hasExitReason;
 @property(nonatomic) _Bool hasFeatureIdentifier; // @dynamic hasFeatureIdentifier;
+@property(nonatomic) _Bool hasIsRoyaltyMedia; // @dynamic hasIsRoyaltyMedia;
 @property(nonatomic) _Bool hasKbpsAverageBandwidth; // @dynamic hasKbpsAverageBandwidth;
 @property(nonatomic) _Bool hasKbytesDownloaded; // @dynamic hasKbytesDownloaded;
 @property(nonatomic) _Bool hasKbytesPlayed; // @dynamic hasKbytesPlayed;
@@ -56,6 +57,7 @@
 @property(nonatomic) _Bool hasNViewTransitions; // @dynamic hasNViewTransitions;
 @property(nonatomic) _Bool hasSessionId; // @dynamic hasSessionId;
 @property(nonatomic) _Bool hasStartBitrate; // @dynamic hasStartBitrate;
+@property(nonatomic) _Bool isRoyaltyMedia; // @dynamic isRoyaltyMedia;
 @property(nonatomic) int kbpsAverageBandwidth; // @dynamic kbpsAverageBandwidth;
 @property(nonatomic) long long kbytesDownloaded; // @dynamic kbytesDownloaded;
 @property(nonatomic) long long kbytesPlayed; // @dynamic kbytesPlayed;

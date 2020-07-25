@@ -13,7 +13,6 @@
 @interface SPTSearchFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _shouldEnableTopics;
-    _Bool _shouldUseV2Search;
     _Bool _shouldEnableNewRecentsRow;
     _Bool _editorialOnDemandEnabled;
     _Bool _editorialOnDemandDebuggingEnabled;
@@ -24,7 +23,6 @@
 @property(readonly, nonatomic) _Bool editorialOnDemandDebuggingEnabled; // @synthesize editorialOnDemandDebuggingEnabled=_editorialOnDemandDebuggingEnabled;
 @property(readonly, nonatomic) _Bool editorialOnDemandEnabled; // @synthesize editorialOnDemandEnabled=_editorialOnDemandEnabled;
 @property(readonly, nonatomic) _Bool shouldEnableNewRecentsRow; // @synthesize shouldEnableNewRecentsRow=_shouldEnableNewRecentsRow;
-@property(readonly, nonatomic) _Bool shouldUseV2Search; // @synthesize shouldUseV2Search=_shouldUseV2Search;
 @property(readonly, nonatomic) _Bool shouldEnableTopics; // @synthesize shouldEnableTopics=_shouldEnableTopics;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

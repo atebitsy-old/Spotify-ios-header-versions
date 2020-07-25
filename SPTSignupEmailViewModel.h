@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, NSTimer, SPTDynamicSignupFlowController, SPTLoginDialogController, SPTLoginEmailAlreadyExistsDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupDisplayNameSuggestionDataLoader, SPTSignupEmailFieldValidator, SPTSignupUserInfoModel;
+@class NSString, NSTimer, SPTDynamicSignupFlowController, SPTLoginDialogController, SPTLoginEmailAlreadyExistsDialogLogger, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupDisplayNameSuggestionDataLoader, SPTSignupEmailFieldValidator, SPTSignupUserInfoModel;
 @protocol SPTSignupEmailViewModelDelegate;
 
 @interface SPTSignupEmailViewModel : NSObject
@@ -22,18 +22,20 @@
     SPTSignupDisplayNameSuggestionDataLoader *_displayNameDataLoader;
     NSString *_lastValidEmail;
     SPTDynamicSignupFlowController *_flowController;
+    SPTSignupA11yEnvironment *_a11yEnvironment;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTSignupA11yEnvironment *a11yEnvironment; // @synthesize a11yEnvironment=_a11yEnvironment;
 @property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(copy, nonatomic) NSString *lastValidEmail; // @synthesize lastValidEmail=_lastValidEmail;
-@property(retain, nonatomic) SPTSignupDisplayNameSuggestionDataLoader *displayNameDataLoader; // @synthesize displayNameDataLoader=_displayNameDataLoader;
-@property(retain, nonatomic) SPTLoginEmailAlreadyExistsDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
-@property(retain, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
+@property(readonly, nonatomic) SPTSignupDisplayNameSuggestionDataLoader *displayNameDataLoader; // @synthesize displayNameDataLoader=_displayNameDataLoader;
+@property(readonly, nonatomic) SPTLoginEmailAlreadyExistsDialogLogger *dialogLogger; // @synthesize dialogLogger=_dialogLogger;
+@property(readonly, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(nonatomic, getter=isFullValidationEnabled) _Bool fullValidationEnabled; // @synthesize fullValidationEnabled=_fullValidationEnabled;
-@property(retain, nonatomic) SPTSignupEmailFieldValidator *fieldValidator; // @synthesize fieldValidator=_fieldValidator;
-@property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
+@property(readonly, nonatomic) SPTSignupEmailFieldValidator *fieldValidator; // @synthesize fieldValidator=_fieldValidator;
+@property(readonly, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(nonatomic) __weak id <SPTSignupEmailViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) SPTLoginSplitEmailSignupViewLogger *logger; // @synthesize logger=_logger;
 - (void)presentPopupWithError:(id)arg1 email:(id)arg2;
@@ -50,7 +52,8 @@
 - (id)fieldAccessibilityLabel;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldValidator:(id)arg3 displayNameDataLoader:(id)arg4 dialogController:(id)arg5 dialogLogger:(id)arg6 flowController:(id)arg7;
+@property(readonly, nonatomic) _Bool shouldAutoFocusTextFieldOnAppear;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldValidator:(id)arg3 displayNameDataLoader:(id)arg4 dialogController:(id)arg5 dialogLogger:(id)arg6 flowController:(id)arg7 a11yEnvironment:(id)arg8;
 
 @end
 

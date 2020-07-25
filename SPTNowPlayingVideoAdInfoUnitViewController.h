@@ -10,7 +10,7 @@
 #import "SPTNowPlayingAdUnitViewController-Protocol.h"
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, NSURL, SPTAdFeatureFlagChecks, SPTAdPlayerObservable, SPTTheme;
+@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, NSURL, SPTAdFeatureFlagChecks, SPTAdNowPlayingBookmarkButton, SPTAdPlayerObservable, SPTTheme;
 @protocol GLUETheme, SPTAdsManager, SPTNowPlayingContainingViewController, SPTNowPlayingVideoControlsVisibilityDelegate;
 
 @interface SPTNowPlayingVideoAdInfoUnitViewController : UIViewController <SPTAdPlayerObserver, SPTNowPlayingContainedViewController, SPTNowPlayingAdUnitViewController>
@@ -33,9 +33,11 @@
     NSLayoutConstraint *_actionButtonTopConstraintNoLabel;
     double _animationDuration;
     SPTAdPlayerObservable *_observer;
+    SPTAdNowPlayingBookmarkButton *_bookmarkButton;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTAdNowPlayingBookmarkButton *bookmarkButton; // @synthesize bookmarkButton=_bookmarkButton;
 @property(nonatomic) _Bool noOfferCardMessageVisible; // @synthesize noOfferCardMessageVisible=_noOfferCardMessageVisible;
 @property(nonatomic) _Bool verticalVideo; // @synthesize verticalVideo=_verticalVideo;
 @property(readonly, nonatomic) SPTAdPlayerObservable *observer; // @synthesize observer=_observer;
@@ -65,6 +67,7 @@
 - (void)updateSkipCountdownString:(int)arg1;
 - (void)setupSkipButtonWithAnimation:(_Bool)arg1;
 - (void)skipButtonTapped;
+- (void)didTapBookmarkButton;
 - (void)didTapActionButton;
 - (void)configureFooterLabelWithEntity:(id)arg1;
 - (void)configureSkipButtonWithEntity:(id)arg1;

@@ -17,6 +17,7 @@
     // Error parsing type: , name: networkConnectivityController
     // Error parsing type: , name: saveEventLoopConnector
     // Error parsing type: , name: viewDependencies
+    // Error parsing type: , name: crashReporter
     // Error parsing type: , name: lifecycleState
     // Error parsing type: , name: viewBinder
     // Error parsing type: , name: delegate

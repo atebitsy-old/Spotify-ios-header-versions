@@ -13,7 +13,9 @@
     // Error parsing type: , name: wirelessRoutesManager
     // Error parsing type: , name: systemUIHider
     // Error parsing type: , name: volumeUIPresenter
+    // Error parsing type: , name: audioSessionController
     // Error parsing type: , name: notificationCenter
+    // Error parsing type: , name: isAudioSessionActive
     // Error parsing type: , name: isDevicePickerVisible
 }
 

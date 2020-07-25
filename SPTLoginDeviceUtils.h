@@ -12,6 +12,8 @@
 
 + (_Bool)isIPhoneSE;
 + (_Bool)isIpad;
+- (_Bool)isIPhoneSE;
+- (_Bool)isIpad;
 
 @end
 

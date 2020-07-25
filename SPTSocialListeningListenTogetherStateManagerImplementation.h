@@ -21,6 +21,7 @@
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(nonatomic) long long currentState; // @synthesize currentState=_currentState;
 - (void)socialListeningModel:(id)arg1 updatedSession:(id)arg2 updateEvent:(id)arg3;
+- (void)socialListeningModel:(id)arg1 didFinishLoadingScannable:(id)arg2 sessionColor:(id)arg3 error:(id)arg4;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
 - (void)updateCurrentState:(long long)arg1;

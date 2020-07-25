@@ -11,6 +11,7 @@
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: theme
     // Error parsing type: , name: logger
+    // Error parsing type: , name: traitCollection
     // Error parsing type: , name: tableView
     // Error parsing type: , name: tableBinder
     // Error parsing type: , name: primaryFeedbackGenerator

@@ -18,17 +18,20 @@
 @property(copy, nonatomic) NSString *accessoryName; // @dynamic accessoryName;
 @property(copy, nonatomic) NSString *accessoryType; // @dynamic accessoryType;
 @property(copy, nonatomic) NSString *action; // @dynamic action;
+@property(copy, nonatomic) NSString *audioRouteId; // @dynamic audioRouteId;
 @property(copy, nonatomic) NSString *brand; // @dynamic brand;
 @property(copy, nonatomic) NSString *clientId; // @dynamic clientId;
 @property(nonatomic) _Bool hasAccessoryName; // @dynamic hasAccessoryName;
 @property(nonatomic) _Bool hasAccessoryType; // @dynamic hasAccessoryType;
 @property(nonatomic) _Bool hasAction; // @dynamic hasAction;
+@property(nonatomic) _Bool hasAudioRouteId; // @dynamic hasAudioRouteId;
 @property(nonatomic) _Bool hasBrand; // @dynamic hasBrand;
 @property(nonatomic) _Bool hasClientId; // @dynamic hasClientId;
 @property(nonatomic) _Bool hasIntegration; // @dynamic hasIntegration;
 @property(nonatomic) _Bool hasInteractionId; // @dynamic hasInteractionId;
 @property(nonatomic) _Bool hasModel; // @dynamic hasModel;
 @property(nonatomic) _Bool hasProtocol; // @dynamic hasProtocol;
+@property(nonatomic) _Bool hasRemoteDeviceId; // @dynamic hasRemoteDeviceId;
 @property(nonatomic) _Bool hasSenderId; // @dynamic hasSenderId;
 @property(nonatomic) _Bool hasTransportType; // @dynamic hasTransportType;
 @property(nonatomic) _Bool hasVersion; // @dynamic hasVersion;
@@ -36,6 +39,7 @@
 @property(copy, nonatomic) NSString *interactionId; // @dynamic interactionId;
 @property(copy, nonatomic) NSString *model; // @dynamic model;
 @property(copy, nonatomic) NSString *protocol; // @dynamic protocol;
+@property(copy, nonatomic) NSString *remoteDeviceId; // @dynamic remoteDeviceId;
 @property(copy, nonatomic) NSString *senderId; // @dynamic senderId;
 @property(copy, nonatomic) NSString *transportType; // @dynamic transportType;
 @property(copy, nonatomic) NSString *version; // @dynamic version;

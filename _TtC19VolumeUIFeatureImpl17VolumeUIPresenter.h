@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: application
     // Error parsing type: , name: viewFactory
-    // Error parsing type: , name: $__lazy_storage_$_volumeView
+    // Error parsing type: , name: volumeView
     // Error parsing type: , name: autoHideTimer
 }
 

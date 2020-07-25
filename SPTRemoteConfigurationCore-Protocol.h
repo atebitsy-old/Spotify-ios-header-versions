@@ -9,6 +9,7 @@
 @class NSData;
 
 @protocol SPTRemoteConfigurationCore <NSObject>
+- (NSData *)propertyDefinitions;
 - (_Bool)setConfigurationProto:(NSData *)arg1 bootstrap:(_Bool)arg2;
 @end
 

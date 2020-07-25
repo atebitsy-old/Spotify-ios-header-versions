@@ -8,6 +8,5 @@
 
 @interface _TtC19VolumeUIFeatureImpl30VolumeUIPresentationController (VolumeUIFeatureImpl1)
 - (void)connectActiveDeviceDidChange:(id)arg1;
-- (void)connectDeviceBeingActivatedDidChange:(id)arg1;
 @end
 

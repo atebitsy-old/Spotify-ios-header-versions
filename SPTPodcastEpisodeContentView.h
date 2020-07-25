@@ -15,7 +15,6 @@
 {
     _Bool _explicit;
     _Bool _editing;
-    _Bool shouldTruncateDescription;
     UILabel *_statusLabel;
     UILabel *_titleLabel;
     UILabel *_subtitleLabel;
@@ -60,7 +59,6 @@
 @property(retain, nonatomic) UIView *upperMiddleContainerView; // @synthesize upperMiddleContainerView=_upperMiddleContainerView;
 @property(retain, nonatomic) UIView *upperContainerView; // @synthesize upperContainerView=_upperContainerView;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
-@property(nonatomic) _Bool shouldTruncateDescription; // @synthesize shouldTruncateDescription;
 @property(retain, nonatomic) UIControl *playControl; // @synthesize playControl=_playControl;
 @property(readonly, nonatomic) UIProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) GLUEImageView *imageView; // @synthesize imageView=_imageView;

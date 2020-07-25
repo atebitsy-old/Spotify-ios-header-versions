@@ -10,7 +10,7 @@
 #import "SPTHubShelvesManagerActionDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 
-@class NSString, SPTFreeTierArtistContextMenuButtonViewModel, SPTFreeTierArtistFeedbackButtonViewModel, SPTFreeTierArtistUBILogger, SPTFreeTierEntityNavigationDecorator, SPTHubShelvesManager, SPTProgressView;
+@class NSString, SPTFreeTierArtistContextMenuButtonViewModel, SPTFreeTierArtistFeedbackButtonViewModel, SPTFreeTierArtistUBILogger, SPTFreeTierEntityNavigationDecorator, SPTProgressView;
 
 @interface SPTFreeTierArtistViewController : SPTHubViewController <SPTNavigationControllerNavigationBarState, SPTHubShelvesManagerActionDelegate, HUBViewContentOffsetObserver>
 {
@@ -41,7 +41,6 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(retain, nonatomic) SPTHubShelvesManager *shelvesManager; // @dynamic shelvesManager;
 @property(readonly) Class superclass;
 
 @end

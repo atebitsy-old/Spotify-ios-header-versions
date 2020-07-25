@@ -8,14 +8,13 @@
 
 #import "SPTAppStartupControllerDelegate-Protocol.h"
 #import "SPTServiceOrchestratorDelegate-Protocol.h"
-#import "SPTSessionServicesLoader-Protocol.h"
 #import "UIApplicationDelegate-Protocol.h"
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
 @class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
 @protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTEmailUniversalLinkResolverDelegate, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
-@interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, SPTSessionServicesLoader, UIApplicationDelegate>
+@interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, UIApplicationDelegate>
 {
     id <SPTAppStartupController> _appStartupController;
     UIWindow *_window;

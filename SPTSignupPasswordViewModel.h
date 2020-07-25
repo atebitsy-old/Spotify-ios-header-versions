@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDynamicSignupFlowController, SPTLoginSplitEmailSignupViewLogger, SPTSignupPasswordFieldValidationViewModel, SPTSignupUserInfoModel;
+@class SPTDynamicSignupFlowController, SPTLoginSplitEmailSignupViewLogger, SPTSignupA11yEnvironment, SPTSignupPasswordFieldValidationViewModel, SPTSignupUserInfoModel;
 
 @interface SPTSignupPasswordViewModel : NSObject
 {
@@ -14,9 +14,11 @@
     SPTSignupUserInfoModel *_userInfoModel;
     SPTSignupPasswordFieldValidationViewModel *_fieldViewModel;
     SPTDynamicSignupFlowController *_flowController;
+    SPTSignupA11yEnvironment *_a11yEnvironment;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTSignupA11yEnvironment *a11yEnvironment; // @synthesize a11yEnvironment=_a11yEnvironment;
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) SPTSignupPasswordFieldValidationViewModel *fieldViewModel; // @synthesize fieldViewModel=_fieldViewModel;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
@@ -33,7 +35,8 @@
 - (id)fieldAccessibilityLabel;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
-- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldViewModel:(id)arg3 flowController:(id)arg4;
+@property(readonly, nonatomic) _Bool shouldAutoFocusTextFieldOnAppear;
+- (id)initWithLogger:(id)arg1 userInfoModel:(id)arg2 fieldViewModel:(id)arg3 flowController:(id)arg4 a11yEnvironment:(id)arg5;
 
 @end
 

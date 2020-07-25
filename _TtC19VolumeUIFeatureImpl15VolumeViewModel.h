@@ -4,12 +4,18 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <swiftCore/_TtCs12_SwiftObject.h>
+#import <objc/NSObject.h>
 
-@interface _TtC19VolumeUIFeatureImpl15VolumeViewModel : _TtCs12_SwiftObject
+@interface _TtC19VolumeUIFeatureImpl15VolumeViewModel : NSObject
 {
-    // Error parsing type: , name: volumePercentage
+    // Error parsing type: , name: volumeManager
+    // Error parsing type: , name: volume
+    // Error parsing type: , name: delegate
 }
+
+- (void).cxx_destruct;
+- (id)init;
+- (void)dealloc;
 
 @end
 

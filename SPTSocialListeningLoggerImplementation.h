@@ -30,6 +30,8 @@
 - (void)logJoinFromScannableWithURL:(id)arg1;
 - (void)logJoinFromSearchWithURL:(id)arg1;
 - (void)logParticipantListImpression;
+- (void)logConfirmLeaveSessionCancelButtonTapped;
+- (void)logConfirmLeaveSessionConfirmButtonTapped;
 - (void)logConfirmEndSessionCancelButtonTappedFromScreen:(unsigned long long)arg1;
 - (void)logConfirmEndSessionEndButtonTappedFromScreen:(unsigned long long)arg1;
 - (void)logEndSessionButtonTapped;

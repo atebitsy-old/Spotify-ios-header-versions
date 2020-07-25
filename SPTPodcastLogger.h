@@ -51,6 +51,9 @@
 - (void)logPlayPodcastWithURI:(id)arg1 episodeURI:(id)arg2;
 - (void)logShowTrailerWithURI:(id)arg1 showURI:(id)arg2;
 - (void)logToggleTrailerPlaybackWithURI:(id)arg1 showURI:(id)arg2;
+- (void)ubi_logRemoveFiltersForPodcastURI:(id)arg1;
+- (void)ubi_logSpeedControlMenuClosedForPodcastURI:(id)arg1;
+- (void)ubi_logDescriptionLinkSelectedForPodcastURI:(id)arg1 linkURL:(id)arg2;
 - (void)ubi_logPausePodcastWithEpisodeURI:(id)arg1 podcastURI:(id)arg2;
 - (void)ubi_logPlayPodcastWithEpisodeURI:(id)arg1 podcastURI:(id)arg2;
 - (void)ubi_logSpeedControlSelected:(id)arg1 speed:(id)arg2;

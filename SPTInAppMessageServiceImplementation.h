@@ -8,7 +8,7 @@
 
 #import "SPTInAppMessageService-Protocol.h"
 
-@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewBannerMessageController, SPTInAppMessagePreviewCardMessageController, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewNoteMessageController, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
+@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSDKMessagePreviewReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
 @protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTInAppMessageServiceImplementation : NSObject <SPTInAppMessageService>
@@ -64,9 +64,6 @@
     SPTInAppMessageNowPlayingManagerRegistryImplementation *_nowPlayingManagerRegistry;
     SPTInAppMessagePreviewFlowManager *_previewFlowManager;
     SPTInAppMessagePreviewViewModel *_previewViewModel;
-    SPTInAppMessagePreviewCardMessageController *_previewCardMessageController;
-    SPTInAppMessagePreviewBannerMessageController *_previewBannerMessageController;
-    SPTInAppMessagePreviewNoteMessageController *_previewNoteMessageController;
     SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
     SPCore *_core;
     SPTInAppMessageSettingsPageBuilder *_settingsPageBuilder;
@@ -77,10 +74,12 @@
     SPTInAppMessageReceiverImplementation *_messageReceiver;
     SPTInAppMessageEventEmitter *_eventEmitter;
     SPTInAppMessageFeatureProperties *_inAppMessageFeatureProperties;
+    SPTInAppMessageSDKMessagePreviewReceiverImplementation *_messagePreviewReceiver;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTInAppMessageSDKMessagePreviewReceiverImplementation *messagePreviewReceiver; // @synthesize messagePreviewReceiver=_messagePreviewReceiver;
 @property(retain, nonatomic) SPTInAppMessageFeatureProperties *inAppMessageFeatureProperties; // @synthesize inAppMessageFeatureProperties=_inAppMessageFeatureProperties;
 @property(retain, nonatomic) SPTInAppMessageEventEmitter *eventEmitter; // @synthesize eventEmitter=_eventEmitter;
 @property(retain, nonatomic) SPTInAppMessageReceiverImplementation *messageReceiver; // @synthesize messageReceiver=_messageReceiver;
@@ -96,9 +95,6 @@
 @property(nonatomic) _Bool previewViewModelObservingPlayer; // @synthesize previewViewModelObservingPlayer=_previewViewModelObservingPlayer;
 @property(nonatomic) _Bool addedPlayerObserver; // @synthesize addedPlayerObserver=_addedPlayerObserver;
 @property(retain, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
-@property(retain, nonatomic) SPTInAppMessagePreviewNoteMessageController *previewNoteMessageController; // @synthesize previewNoteMessageController=_previewNoteMessageController;
-@property(retain, nonatomic) SPTInAppMessagePreviewBannerMessageController *previewBannerMessageController; // @synthesize previewBannerMessageController=_previewBannerMessageController;
-@property(retain, nonatomic) SPTInAppMessagePreviewCardMessageController *previewCardMessageController; // @synthesize previewCardMessageController=_previewCardMessageController;
 @property(retain, nonatomic) SPTInAppMessagePreviewViewModel *previewViewModel; // @synthesize previewViewModel=_previewViewModel;
 @property(retain, nonatomic) SPTInAppMessagePreviewFlowManager *previewFlowManager; // @synthesize previewFlowManager=_previewFlowManager;
 @property(retain, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
@@ -153,7 +149,6 @@
 - (id)provideFeatureFlagChecker;
 - (id)createActionFactory;
 - (id)createCardMessageController;
-- (void)setupPreviewFlow;
 - (id)createPreviewFlowManager;
 - (id)createPreviewViewModel;
 - (id)createNoteMessageController;
@@ -172,6 +167,7 @@
 - (void)loadControllers;
 - (id)createActionHandlers;
 - (id)createEventEmitter;
+- (id)createMessagePreviewReceiver;
 - (id)createMessageReceiver;
 - (id)createInAppMessageManager;
 - (void)setupFeatureComponents;

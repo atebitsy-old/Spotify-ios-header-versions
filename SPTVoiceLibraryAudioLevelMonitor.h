@@ -8,19 +8,12 @@
 
 @interface SPTVoiceLibraryAudioLevelMonitor : NSObject
 {
-    struct {
-        unsigned int framesProcessed;
-        float meanAccumulator;
-        float rmsAccumulator;
-        float meanLevel;
-        float rmsLevel;
-        float cdfScaledLevel;
-    } _levelMonitorData;
+    CDStruct_edb3adff _levelMonitorData;
 }
 
-@property(nonatomic) CDStruct_3d979a67 levelMonitorData; // @synthesize levelMonitorData=_levelMonitorData;
+@property(nonatomic) CDStruct_edb3adff levelMonitorData; // @synthesize levelMonitorData=_levelMonitorData;
 - (void)reset;
-- (CDStruct_3d979a67)performLevelMonitoringForAudioBuffer:(const struct AudioBufferList *)arg1 frameCount:(unsigned int)arg2;
+- (CDStruct_edb3adff)performLevelMonitoringForAudioBuffer:(const struct AudioBufferList *)arg1 frameCount:(unsigned int)arg2;
 
 @end
 

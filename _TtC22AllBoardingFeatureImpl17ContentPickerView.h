@@ -9,7 +9,7 @@
 @interface _TtC22AllBoardingFeatureImpl17ContentPickerView : UIView
 {
     // Error parsing type: , name: theme
-    // Error parsing type: , name: largeHeaderViewTopConstraint
+    // Error parsing type: , name: collectionViewTopConstraint
     // Error parsing type: , name: navigationItem
     // Error parsing type: , name: skipButton
     // Error parsing type: , name: $__lazy_storage_$_collectionViewLayout
@@ -25,6 +25,7 @@
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 
 @end

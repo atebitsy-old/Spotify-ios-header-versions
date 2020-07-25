@@ -6,48 +6,31 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTInstrumentationCurrentPageViewObserver-Protocol.h"
-#import "SPTLocalSettingsObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSString, SPTDataLoader, SPTObserverManager;
-@protocol SPTAlertInterface, SPTInAppMessagePreviewViewModelObserver, SPTLocalSettings;
+@class NSString;
+@protocol SPTAlertInterface, SPTInAppMessageRequester;
 
-@interface SPTInAppMessagePreviewViewModel : NSObject <SPTLocalSettingsObserver, SPTDataLoaderDelegate, SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver>
+@interface SPTInAppMessagePreviewViewModel : NSObject <SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver>
 {
-    _Bool _useDevEndpoint;
-    SPTDataLoader *_dataLoader;
     id <SPTAlertInterface> _alertInterface;
-    id <SPTLocalSettings> _localSettings;
-    SPTObserverManager *_observerManager;
+    id <SPTInAppMessageRequester> _messageRequester;
     NSString *_pageURI;
     NSString *_playbackURI;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool useDevEndpoint; // @synthesize useDevEndpoint=_useDevEndpoint;
 @property(copy, nonatomic) NSString *playbackURI; // @synthesize playbackURI=_playbackURI;
 @property(copy, nonatomic) NSString *pageURI; // @synthesize pageURI=_pageURI;
-@property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
-@property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
-@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(readonly, nonatomic) id <SPTInAppMessageRequester> messageRequester; // @synthesize messageRequester=_messageRequester;
+@property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 - (void)presentAlertWithTitle:(id)arg1 message:(id)arg2;
 - (id)getURIForPageView:(id)arg1;
-- (void)handleSuccessfulResponse:(id)arg1;
-- (void)handleErrorResponse:(id)arg1;
-- (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
-- (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
-- (void)fetchMessageForCreativeID:(id)arg1 triggerType:(id)arg2;
-@property(readonly, nonatomic) id <SPTInAppMessagePreviewViewModelObserver> observerNotifierProxy;
-- (void)removePreviewViewModelObserver:(id)arg1;
-- (void)addPreviewViewModelObserver:(id)arg1;
+- (void)fetchMessageForCreativeID:(id)arg1 triggerType:(id)arg2 isRelayCreative:(_Bool)arg3;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)currentPageViewUpdated:(id)arg1;
-- (void)localSettingsDidChange:(id)arg1;
-- (void)dealloc;
-- (id)initWithDataLoader:(id)arg1 alertInterface:(id)arg2 localSettings:(id)arg3;
+- (id)initWithMessageRequester:(id)arg1 alertInterface:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

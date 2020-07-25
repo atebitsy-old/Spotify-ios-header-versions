@@ -11,7 +11,7 @@
 #import "SPTShareableContext-Protocol.h"
 #import "SPViewController-Protocol.h"
 
-@class NSString, NSURL, SPTFreeTierAlbumContextMenuButtonViewModel, SPTFreeTierAlbumFeedbackButtonViewModel, SPTFreeTierAlbumUBILogger, SPTHubShelvesManager, SPTProgressView;
+@class NSString, NSURL, SPTFreeTierAlbumContextMenuButtonViewModel, SPTFreeTierAlbumFeedbackButtonViewModel, SPTFreeTierAlbumUBILogger, SPTProgressView;
 @protocol SPTPlayer;
 
 @interface SPTFreeTierAlbumViewController : SPTHubViewController <SPTShareableContext, SPTNavigationControllerNavigationBarState, SPTHubShelvesManagerActionDelegate, SPViewController>
@@ -44,7 +44,6 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(retain, nonatomic) SPTHubShelvesManager *shelvesManager; // @dynamic shelvesManager;
 @property(readonly) Class superclass;
 
 @end

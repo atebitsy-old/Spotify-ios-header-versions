@@ -92,7 +92,6 @@
 + (id)spt_seedASessionQuestionnaireURL:(id)arg1 sessionId:(id)arg2;
 + (id)spt_freeTierTrackContentURLForTrackIdentifier:(id)arg1;
 + (id)spt_hiddenContentURI;
-+ (id)spt_urlForFetchingCreativeUsingDevEnabled:(_Bool)arg1 creativeID:(id)arg2 triggerType:(id)arg3 triggerURI:(id)arg4;
 + (id)spt_qaToolURL;
 + (id)spt_fetchUploadFormForRejectedCreative;
 + (id)spt_rejectCreativeWithID:(id)arg1 usingDevEnabled:(_Bool)arg2;
@@ -217,6 +216,7 @@
 + (unsigned long long)spt_optimalCDNImageSizeForSideInPixels:(double)arg1;
 + (id)spt_availableSPTCDNImageSizes;
 + (void)createQueryParametersWithTriggerPatterns:(id)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3 actions:(id)arg4 forUrlString:(id)arg5;
++ (id)spt_inAppMessageFetchMessagePreviewURLForCreativeID:(id)arg1 devEnabled:(_Bool)arg2 isRelayCreative:(_Bool)arg3;
 + (id)spt_inAppMessageFetchMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3 actions:(id)arg4 devEnabled:(_Bool)arg5;
 + (id)spt_inAppMessageFetchTriggersURLUsingDevEnabled:(_Bool)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3;
 + (id)spt_inAppMessageBaseURLComponentsWhenDevEnabled:(_Bool)arg1;
@@ -259,9 +259,6 @@
 + (id)spt_videoPlayerState;
 + (id)spt_videoPlayerAdvance;
 + (id)spt_videoPlayerCommands;
-+ (id)spt_voiceSpeakerDynamicSuggestionURL;
-+ (id)spt_voiceDynamicSuggestionURL;
-+ (id)spt_voiceAvailableLanguagesURL;
 - (_Bool)isFollowFeedURL;
 @property(nonatomic, readonly) NSDictionary *spotifyURIParameters;
 @property(nonatomic, readonly) long long spotifyURIType;
@@ -508,7 +505,6 @@
 - (_Bool)spt_isTrackCreditsViewControllerURI;
 - (id)spt_UIDFromTrackURI;
 @property(readonly, nonatomic) _Bool spt_isPlaylistGenerationIntentURI;
-@property(readonly, nonatomic, getter=spt_isVoiceURL) _Bool isVoiceURL;
 
 // Remaining properties
 @property(nonatomic, readonly) NSString *censoredURIString;

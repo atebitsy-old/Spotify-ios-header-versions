@@ -53,12 +53,17 @@
 - (void)socialListeningDataLoader:(id)arg1 didLookupSession:(id)arg2;
 - (void)updateCoreSocialListeningState;
 - (void)requestScannableForSession:(id)arg1;
+- (id)getScannableColorFromImage:(id)arg1;
+- (void)fetchNewExperienceScannablesImage;
 - (void)fetchScannablesImageForSession:(id)arg1;
+- (void)handleNewExperienceSession:(id)arg1 updateEvent:(id)arg2;
 - (void)handleSession:(id)arg1 updateEvent:(id)arg2;
+- (void)notifyScannableDidFinishLoadingIfError:(id)arg1;
 - (void)notifyIfLoaded;
 @property(readonly, nonatomic) NSURL *hostAvatarURL;
 @property(readonly, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevices;
 @property(readonly, nonatomic) NSString *sessionID;
+@property(readonly, nonatomic) NSArray *connectedUsers;
 @property(readonly, nonatomic) unsigned long long connectedParticipants;
 @property(readonly, nonatomic, getter=isSessionHost) _Bool sessionHost;
 - (void)fetchExposedDevices;
@@ -74,6 +79,7 @@
 - (void)joinSessionConfirmed:(_Bool)arg1 sessionURL:(id)arg2 sessionMode:(long long)arg3;
 - (void)lookupSessionBeforeJoining:(id)arg1;
 - (void)lookupSessionWithURL:(id)arg1;
+- (void)loadSessionScannable;
 - (void)loadSession:(_Bool)arg1;
 - (id)initWithDataLoader:(id)arg1 scannablesDataSource:(id)arg2 player:(id)arg3 imageLoader:(id)arg4 testManager:(id)arg5;
 

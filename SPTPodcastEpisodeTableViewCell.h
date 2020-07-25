@@ -12,7 +12,6 @@
 @interface SPTPodcastEpisodeTableViewCell : SPTPodcastSectionTableViewCell
 {
     _Bool _disabled;
-    _Bool _shouldTruncateDescription;
     NSURL *_imageURL;
     id <SPTPodcastEpisodeCellActionTarget> _target;
     SPTPodcastEpisodeContentViewStyle *_contentViewStyle;
@@ -24,7 +23,6 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) GLUEStatefulView<SPTPodcastEpisodeView> *episodeView; // @synthesize episodeView=_episodeView;
-@property(nonatomic) _Bool shouldTruncateDescription; // @synthesize shouldTruncateDescription=_shouldTruncateDescription;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 @property(retain, nonatomic) SPTPodcastEpisodeContentViewStyle *contentViewStyle; // @synthesize contentViewStyle=_contentViewStyle;
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionTarget> target; // @synthesize target=_target;

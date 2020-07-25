@@ -72,6 +72,8 @@
 - (void)viewSafeAreaInsetsDidChange;
 - (void)updateSafeAreaInsets;
 - (void)notifyFullyShownComponents;
+- (_Bool)cellAtIndexPathIsFullyShown:(id)arg1;
+- (_Bool)cellAtIndexPathIsHalfwayShown:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;

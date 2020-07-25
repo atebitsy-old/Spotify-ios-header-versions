@@ -61,6 +61,7 @@
 @property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
 @property(readonly, nonatomic, getter=isMixedMediaEpisodeModeEnabled) _Bool mixedMediaEpisodeModeEnabled;
+- (_Bool)isPollsTestEnabled;
 - (_Bool)isSamplesTestEnabled;
 - (_Bool)isPodcastInspectorTestEnabled;
 - (void)setupRemoteConfiguration;

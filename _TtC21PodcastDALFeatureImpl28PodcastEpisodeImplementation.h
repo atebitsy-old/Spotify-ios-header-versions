@@ -8,7 +8,7 @@
 
 #import "SPTPodcastEpisode-Protocol.h"
 
-@class NSDate, NSString, NSURL;
+@class NSArray, NSDate, NSString, NSURL;
 
 @interface _TtC21PodcastDALFeatureImpl28PodcastEpisodeImplementation : NSObject <SPTPodcastEpisode>
 {
@@ -38,6 +38,7 @@
     // Error parsing type: , name: type
     // Error parsing type: , name: inCollection
     // Error parsing type: , name: isNewEpisode
+    // Error parsing type: , name: actualQuotes
     // Error parsing type: , name: rawDescription
     // Error parsing type: , name: syncProgress
 }
@@ -49,6 +50,7 @@
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithZone:(void *)arg1;
 - (id)playerMediaTypeString;
+@property(nonatomic, readonly) NSArray *quotes;
 @property(nonatomic, readonly) double listenedDuration;
 @property(nonatomic, readonly) double listeningProgress;
 - (id)localizedDate;

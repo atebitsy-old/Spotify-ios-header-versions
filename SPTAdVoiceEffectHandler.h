@@ -6,10 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAdVoiceCosmosEffectHandler, SPTAdVoiceLogEffectHandler, SPTAdVoicePlayCueEffectHandler, SPTAdVoicePlayerEffectHandler, SPTAdVoiceSpeechRecognitionCommandEffectHandler, SPTAdVoiceStartDelayTimerEffectHandler;
+@class SPTAdVoiceAuxiliaryActionsEffectHandler, SPTAdVoiceCosmosEffectHandler, SPTAdVoiceLogEffectHandler, SPTAdVoicePlayCueEffectHandler, SPTAdVoicePlayerEffectHandler, SPTAdVoiceSpeechRecognitionCommandEffectHandler, SPTAdVoiceStartDelayTimerEffectHandler;
 
 @interface SPTAdVoiceEffectHandler : NSObject
 {
+    SPTAdVoiceAuxiliaryActionsEffectHandler *_auxiliaryActionsHandler;
     SPTAdVoiceCosmosEffectHandler *_cosmosEffectHandler;
     SPTAdVoiceLogEffectHandler *_voiceLogEffectHandler;
     SPTAdVoicePlayCueEffectHandler *_playCueEffectHandler;
@@ -25,6 +26,7 @@
 @property(readonly, nonatomic) SPTAdVoicePlayCueEffectHandler *playCueEffectHandler; // @synthesize playCueEffectHandler=_playCueEffectHandler;
 @property(readonly, nonatomic) SPTAdVoiceLogEffectHandler *voiceLogEffectHandler; // @synthesize voiceLogEffectHandler=_voiceLogEffectHandler;
 @property(readonly, nonatomic) SPTAdVoiceCosmosEffectHandler *cosmosEffectHandler; // @synthesize cosmosEffectHandler=_cosmosEffectHandler;
+@property(readonly, nonatomic) SPTAdVoiceAuxiliaryActionsEffectHandler *auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 - (CDUnknownBlockType)postAdVoiceLogWithPositionWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)postAdVoiceLogWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)postMicOnWithEventSink:(CDUnknownBlockType)arg1;
@@ -33,12 +35,13 @@
 - (CDUnknownBlockType)clearAdSlotsWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)skipToNextTrackWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)playCueWithEventSink:(CDUnknownBlockType)arg1;
+- (CDUnknownBlockType)saveAdWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)playContextURIWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)speechRecognitionCommandWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)listenForAudioSignalWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)startDelayTimerWithEventSink:(CDUnknownBlockType)arg1;
 - (void)handleEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;
-- (id)initWithSpeechRecognitionCommandEffectHandler:(id)arg1 playerEffectHandler:(id)arg2 playCueEffectHandler:(id)arg3 startDelayTimerEffectHandler:(id)arg4 cosmosEffectHandler:(id)arg5 voiceLogEffectHandler:(id)arg6;
+- (id)initWithSpeechRecognitionCommandEffectHandler:(id)arg1 playerEffectHandler:(id)arg2 playCueEffectHandler:(id)arg3 startDelayTimerEffectHandler:(id)arg4 cosmosEffectHandler:(id)arg5 voiceLogEffectHandler:(id)arg6 auxiliaryActionsHandler:(id)arg7;
 
 @end
 

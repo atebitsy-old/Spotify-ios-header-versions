@@ -23,6 +23,7 @@
 @property(copy, nonatomic) NSArray *triggerList; // @synthesize triggerList=_triggerList;
 - (id)getMatchingTriggersForPattern:(id)arg1;
 - (void)requestMessageForTriggerPattern:(id)arg1 triggerType:(id)arg2;
+- (void)requestMessagePreviewForCreativeID:(id)arg1 triggerURI:(id)arg2 isRelayCreative:(_Bool)arg3;
 - (void)triggerListController:(id)arg1 didFetchTriggerList:(id)arg2;
 - (id)initWithNetworkClient:(id)arg1;
 

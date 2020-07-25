@@ -20,7 +20,7 @@
 #import "_TtP18QuickScrollFeature28SPTQuickScrollViewDatasource_-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTProgressView, SPTTableView, SPTYourLibraryMusicEmptyView, SPTYourLibraryMusicFilterBarViewController, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicPlaylistsCellConfigurator, UIView;
-@protocol GLUEImageLoader, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTViewLogger, SPTYourLibraryMusicPlaylistsViewModel, SPTYourLibraryPageDelegate, UITableViewDragDelegate, _TtP18QuickScrollFeature18SPTQuickScrollView_, _TtP18QuickScrollFeature21SPTQuickScrollFactory_;
+@protocol GLUEImageLoader, SPTPageContainer, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTViewLogger, SPTYourLibraryMusicPlaylistsViewModel, SPTYourLibraryPageDelegate, UITableViewDragDelegate, _TtP18QuickScrollFeature18SPTQuickScrollView_, _TtP18QuickScrollFeature21SPTQuickScrollFactory_, _TtP19YourLibraryXFeature41SPTYourLibraryXAssistantBannerViewFactory_;
 
 @interface SPTYourLibraryMusicPlaylistsViewController : UIViewController <SPTYourLibraryMusicFilterBarViewControllerDelegate, SPTScrollToTopViewController, SPContentInsetViewController, _TtP18QuickScrollFeature28SPTQuickScrollViewDatasource_, _TtP18QuickScrollFeature26SPTQuickScrollViewDelegate_, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, SPTPageController, SPTYourLibraryPage, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPViewController>
 {
@@ -43,11 +43,13 @@
     id <UITableViewDragDelegate> _dragDelegateHolder;
     UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *_quickScrollView;
     id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> _quickScrollFactory;
+    id <_TtP19YourLibraryXFeature41SPTYourLibraryXAssistantBannerViewFactory_> _assistantBannerViewFactory;
     NSArray *_sectionIndexTitles;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *sectionIndexTitles; // @synthesize sectionIndexTitles=_sectionIndexTitles;
+@property(readonly, nonatomic) id <_TtP19YourLibraryXFeature41SPTYourLibraryXAssistantBannerViewFactory_> assistantBannerViewFactory; // @synthesize assistantBannerViewFactory=_assistantBannerViewFactory;
 @property(readonly, nonatomic) id <_TtP18QuickScrollFeature21SPTQuickScrollFactory_> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
 @property(retain, nonatomic) UIView<_TtP18QuickScrollFeature18SPTQuickScrollView_> *quickScrollView; // @synthesize quickScrollView=_quickScrollView;
 @property(retain, nonatomic) id <UITableViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
@@ -106,9 +108,9 @@
 - (void)handleQuickScroll;
 - (void)handleEmptyView;
 - (_Bool)areSectionIndexTitlesUpdated;
-- (void)updateTable;
+- (void)updateTableWithSectionHeadersChanged:(_Bool)arg1;
 - (void)viewModel:(id)arg1 error:(id)arg2;
-- (void)viewModelDidUpdate:(id)arg1;
+- (void)viewModelDidUpdate:(id)arg1 sectionHeadersChanged:(_Bool)arg2;
 - (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)applyThemeLayout;
 - (void)setupCellConfigurator;
@@ -117,7 +119,7 @@
 - (void)initializeInterface;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 styleFactoryBlock:(CDUnknownBlockType)arg4 viewLogger:(id)arg5 sortingFilteringUIFactory:(id)arg6 shareDragDelegateFactory:(id)arg7 quickScrollFactory:(id)arg8 pageIdentifier:(id)arg9 pageURI:(id)arg10;
+- (id)initWithViewModel:(id)arg1 imageLoader:(id)arg2 theme:(id)arg3 styleFactoryBlock:(CDUnknownBlockType)arg4 viewLogger:(id)arg5 sortingFilteringUIFactory:(id)arg6 shareDragDelegateFactory:(id)arg7 quickScrollFactory:(id)arg8 assistantBannerViewFactory:(id)arg9 pageIdentifier:(id)arg10 pageURI:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

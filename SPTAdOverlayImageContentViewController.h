@@ -45,7 +45,7 @@
 - (_Bool)isGoogleHomeOverlay;
 - (void)postImpressionIfNeeded;
 - (_Bool)isLeaveBehindOverlay;
-- (id)leaveBehindView;
+- (id)leaveBehindViewWithBookmarkButtonState:(long long)arg1;
 - (void)titleActionButtonTapped;
 - (void)playActionButtonTapped;
 - (void)bookmarkButtonTapped;

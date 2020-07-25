@@ -20,6 +20,7 @@
     // Error parsing type: , name: videoCoordinatorService
     // Error parsing type: , name: gaiaService
     // Error parsing type: , name: containerUIService
+    // Error parsing type: , name: relatedContentManager
     // Error parsing type: , name: videoService
     // Error parsing type: , name: musicVideoPlayer
     // Error parsing type: , name: nowPlayingPlatformService

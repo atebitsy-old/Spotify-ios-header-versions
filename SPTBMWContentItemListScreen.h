@@ -9,7 +9,7 @@
 #import "SPTBMWListScreen-Protocol.h"
 
 @class NSArray, NSString, SPTAccessory;
-@protocol SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform;
+@protocol SPTAccessoryActionLogger, SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform;
 
 @interface SPTBMWContentItemListScreen : NSObject <SPTBMWListScreen>
 {
@@ -21,9 +21,11 @@
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     NSArray *_content;
     SPTAccessory *_currentAccessory;
+    id <SPTAccessoryActionLogger> _actionLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(nonatomic) _Bool didLoadContent; // @synthesize didLoadContent=_didLoadContent;
 @property(retain, nonatomic) NSArray *content; // @synthesize content=_content;
@@ -47,7 +49,7 @@
 @property(readonly, nonatomic) NSString *title;
 @property(readonly, nonatomic) unsigned long long groupCount;
 @property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
-- (id)initWithContent:(id)arg1 externalIntegrationPlatform:(id)arg2 level:(unsigned long long)arg3 delegate:(id)arg4 currentAccessory:(id)arg5;
+- (id)initWithContent:(id)arg1 externalIntegrationPlatform:(id)arg2 level:(unsigned long long)arg3 delegate:(id)arg4 currentAccessory:(id)arg5 actionLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

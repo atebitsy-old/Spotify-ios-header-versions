@@ -49,6 +49,7 @@
     UIViewController *_actionRow;
     UIViewController *_descriptionView;
     UIViewController *_coverArt;
+    UIViewController *_seeAll;
     UIViewController *_audioPlus;
     UIViewController<SPTPodcastRecommendationsViewController> *_recommendations;
     UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *_featuredContent;
@@ -76,6 +77,7 @@
 @property(retain, nonatomic) UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *featuredContent; // @synthesize featuredContent=_featuredContent;
 @property(retain, nonatomic) UIViewController<SPTPodcastRecommendationsViewController> *recommendations; // @synthesize recommendations=_recommendations;
 @property(retain, nonatomic) UIViewController *audioPlus; // @synthesize audioPlus=_audioPlus;
+@property(retain, nonatomic) UIViewController *seeAll; // @synthesize seeAll=_seeAll;
 @property(retain, nonatomic) UIViewController *coverArt; // @synthesize coverArt=_coverArt;
 @property(retain, nonatomic) UIViewController *descriptionView; // @synthesize descriptionView=_descriptionView;
 @property(retain, nonatomic) UIViewController *actionRow; // @synthesize actionRow=_actionRow;
@@ -148,7 +150,7 @@
 - (void)loadComponentViews;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 descriptionView:(id)arg9 coverArt:(id)arg10 recommendations:(id)arg11 featuredContent:(id)arg12 trackList:(id)arg13 audioPlus:(id)arg14 buttonsFactory:(id)arg15 featureProperties:(id)arg16 metaViewController:(id)arg17 htmlParser:(id)arg18;
+- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 descriptionView:(id)arg9 coverArt:(id)arg10 seeAll:(id)arg11 recommendations:(id)arg12 featuredContent:(id)arg13 trackList:(id)arg14 audioPlus:(id)arg15 buttonsFactory:(id)arg16 featureProperties:(id)arg17 metaViewController:(id)arg18 htmlParser:(id)arg19;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

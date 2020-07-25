@@ -8,12 +8,8 @@
 
 @interface SPTConnectivityLoginControllerConfiguration : NSObject
 {
-    struct SPTConnectivityCacheSalt _cacheSalt;
-    struct SPTConnectivityCacheId _cacheId;
 }
 
-@property(nonatomic) struct SPTConnectivityCacheId cacheId; // @synthesize cacheId=_cacheId;
-@property(nonatomic) struct SPTConnectivityCacheSalt cacheSalt; // @synthesize cacheSalt=_cacheSalt;
 @property(readonly, nonatomic) struct LoginControllerConfiguration cpp;
 
 @end

@@ -15,12 +15,13 @@
     NSArray *_components;
 }
 
-+ (id)factory;
++ (id)factoryWithPageUri:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)closeButtonFactory;
 - (id)playbackSpeedXFactory;
 - (id)_location;
-- (id)init;
+- (id)initWithPageUri:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

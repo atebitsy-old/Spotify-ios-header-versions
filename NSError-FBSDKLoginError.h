@@ -32,6 +32,7 @@
 + (id)spt_errorWithInAppMessageJSONParserCode:(long long)arg1 userInfo:(id)arg2;
 + (id)spt_loginFlowGenericError;
 + (id)spt_errorWithSecurityStatusCode:(int)arg1;
++ (id)spt_scannableError;
 + (id)spt_createFreeUserError;
 + (id)spt_createSessionFullError;
 + (id)spt_createJoinFailedError;
@@ -50,12 +51,6 @@
 - (_Bool)spt_isFreeUserError;
 - (_Bool)spt_isSessionFullError;
 - (_Bool)spt_isJoinedFailedError;
-- (id)spt_voiceLogError;
-- (unsigned long long)spt_voiceLogErrorType;
-- (_Bool)spt_isUnintrusiveVoiceErrorType;
-- (id)spt_voiceLogErrorTextString;
-- (id)spt_voiceLogErrorTypeString;
-- (unsigned long long)spt_voiceErrorType;
 - (id)spt_voiceLibrarySessionError;
 - (id)spt_voiceLibraryErrorDescription;
 - (id)spt_voiceLibraryErrorType;

@@ -6,19 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTEventSender;
 
 @interface SPTAuthLogger : NSObject
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)logAuthEventStartWithClientId:(id)arg1 responseType:(id)arg2 redirectUri:(id)arg3 scopes:(id)arg4 isOffline:(_Bool)arg5 appId:(id)arg6 integrationInitiated:(_Bool)arg7 authId:(id)arg8;
 - (void)logAuthEventFailureWithErrorReason:(id)arg1 errorCode:(long long)arg2 authId:(id)arg3;
 - (void)logAuthEventSuccessWithAuthId:(id)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithEventSender:(id)arg1;
 
 @end
 

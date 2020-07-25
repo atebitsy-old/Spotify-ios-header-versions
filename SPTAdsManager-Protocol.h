@@ -24,6 +24,7 @@
 @property(nonatomic, readonly) _Bool shouldShowSkipControl;
 - (_Bool)isVideoInProgress;
 @property(nonatomic, readonly) _Bool isVideoCompanionAd;
+@property(nonatomic, readonly) _Bool isVideoCompanionNonBookmarkableAd;
 @property(nonatomic, readonly) _Bool isNowPlayingViewForcedOpen;
 @property(nonatomic, readonly) NSString *actionMessage;
 @property(nonatomic, readonly) _Bool isEndOfWatchNow;

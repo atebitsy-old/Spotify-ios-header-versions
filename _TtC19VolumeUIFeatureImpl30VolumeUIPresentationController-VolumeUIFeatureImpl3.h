@@ -6,8 +6,9 @@
 
 #import "_TtC19VolumeUIFeatureImpl30VolumeUIPresentationController.h"
 
-@interface _TtC19VolumeUIFeatureImpl30VolumeUIPresentationController (VolumeUIFeatureImpl3)
-- (void)devicePickerWillDisappear;
-- (void)devicePickerWillAppear;
+#import "SPTAudioSessionControllerObserver-Protocol.h"
+
+@interface _TtC19VolumeUIFeatureImpl30VolumeUIPresentationController (VolumeUIFeatureImpl3) <SPTAudioSessionControllerObserver>
+- (void)audioSessionController:(id)arg1 willSetAudioSessionActive:(_Bool)arg2;
 @end
 

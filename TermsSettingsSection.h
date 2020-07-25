@@ -21,8 +21,8 @@
 - (id)cellForRow:(long long)arg1;
 - (long long)numberOfRows;
 - (id)createCellWithIdentifier:(id)arg1 text:(id)arg2;
-- (id)createTermAndConditionCellsWithVoiceTestManager:(id)arg1;
-- (id)initWithSettingsViewController:(id)arg1 voiceTestManager:(id)arg2 logger:(id)arg3;
+- (id)createTermAndConditionCellsWithVoiceuiService:(id)arg1;
+- (id)initWithSettingsViewController:(id)arg1 voiceuiService:(id)arg2 logger:(id)arg3;
 
 @end
 

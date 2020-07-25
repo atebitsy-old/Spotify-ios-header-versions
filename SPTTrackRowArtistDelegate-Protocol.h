@@ -11,6 +11,5 @@
 - (void)unbanWithSender:(UIView *)arg1;
 - (void)unlikeWithSender:(UIView *)arg1;
 - (void)contextMenuTappedWithSender:(UIView *)arg1;
-- (void)tappedWithSender:(UIView *)arg1;
 @end
 

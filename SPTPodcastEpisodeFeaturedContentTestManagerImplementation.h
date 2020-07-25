@@ -17,8 +17,6 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPodcastEpisodeFeaturedContentFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
-@property(readonly, nonatomic, getter=isLinkedPageNPV) _Bool linkedPageNPV;
-@property(readonly, nonatomic, getter=isTrackListLinkedPageEnabled) _Bool trackListLinkedPageEnabled;
 @property(readonly, nonatomic, getter=isFeaturedContentEnabled) _Bool featuredContentEnabled;
 - (id)initWithRemoteConfigurationResolver:(id)arg1;
 

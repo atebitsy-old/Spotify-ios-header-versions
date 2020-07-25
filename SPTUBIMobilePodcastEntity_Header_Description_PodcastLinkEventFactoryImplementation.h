@@ -15,13 +15,13 @@
     NSArray *_components;
 }
 
-+ (id)factoryWithUri:(id)arg1 components:(id)arg2;
++ (id)factoryWithComponents:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)hitNavigateToExternalUriWithDestination:(id)arg1;
 - (id)impression;
 - (id)_location;
-- (id)initWithUri:(id)arg1 components:(id)arg2;
+- (id)initWithComponents:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

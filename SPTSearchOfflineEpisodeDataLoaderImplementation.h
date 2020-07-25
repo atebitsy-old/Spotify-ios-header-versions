@@ -18,9 +18,10 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTCosmosDictionaryDataLoader> cosmosDataLoader; // @synthesize cosmosDataLoader=_cosmosDataLoader;
+- (id)episodesFromCosmosResponseDictionary:(id)arg1;
 - (id)policy;
 - (id)urlForQuery:(id)arg1 limit:(id)arg2;
-- (void)fetchEpisodesWithQuery:(id)arg1 limit:(unsigned long long)arg2 onCompletion:(CDUnknownBlockType)arg3 onError:(CDUnknownBlockType)arg4;
+- (void)fetchEpisodesWithQuery:(id)arg1 limit:(unsigned long long)arg2 onCompletion:(CDUnknownBlockType)arg3;
 - (id)initWithCosmosDataLoader:(id)arg1;
 
 // Remaining properties

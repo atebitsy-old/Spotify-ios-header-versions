@@ -10,7 +10,7 @@
 #import "SPTPartnerTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPartnerIntegrationStateLoader, SPTPartnerNavigationBannerCoordinator;
-@protocol SPTAuthService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTLogCenter, SPTLoginDelayedSignupService, SPTNetworkService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPartnerIntegrationRegistry, SPTPartnerTestManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol SPTAuthService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTEventSenderService, SPTFeatureFlaggingService, SPTLoginDelayedSignupService, SPTNetworkService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPartnerIntegrationRegistry, SPTPartnerTestManager, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTPartnerServiceImplementation : NSObject <SPTPartnerTestManagerObserver, SPTPartnerService>
 {
@@ -26,22 +26,22 @@
     id <SPTAuthService> _authService;
     id <SPTNowPlayingService> _nowPlayingService;
     id <SPTLoginDelayedSignupService> _delayedSignupService;
+    id <SPTEventSenderService> _eventSenderService;
     id <SPTPartnerIntegrationRegistry> _partnerIntegrationRegistry;
     id <SPTPartnerTestManager> _testManager;
     SPTPartnerIntegrationStateLoader *_partnerIntegrationStateLoader;
     SPTPartnerNavigationBannerCoordinator *_navigationBannerCoordinator;
     id <SPTPageRegistrationToken> _settingsPageRegistrationToken;
-    id <SPTLogCenter> _logCenter;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTPageRegistrationToken> settingsPageRegistrationToken; // @synthesize settingsPageRegistrationToken=_settingsPageRegistrationToken;
 @property(retain, nonatomic) SPTPartnerNavigationBannerCoordinator *navigationBannerCoordinator; // @synthesize navigationBannerCoordinator=_navigationBannerCoordinator;
 @property(retain, nonatomic) SPTPartnerIntegrationStateLoader *partnerIntegrationStateLoader; // @synthesize partnerIntegrationStateLoader=_partnerIntegrationStateLoader;
 @property(retain, nonatomic) id <SPTPartnerTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTPartnerIntegrationRegistry> partnerIntegrationRegistry; // @synthesize partnerIntegrationRegistry=_partnerIntegrationRegistry;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(readonly, nonatomic) __weak id <SPTLoginDelayedSignupService> delayedSignupService; // @synthesize delayedSignupService=_delayedSignupService;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingService> nowPlayingService; // @synthesize nowPlayingService=_nowPlayingService;
 @property(readonly, nonatomic) __weak id <SPTAuthService> authService; // @synthesize authService=_authService;

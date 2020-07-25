@@ -26,6 +26,7 @@
 @property(readonly, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
 @property(readonly, nonatomic) NSString *title; // @synthesize title=_title;
 - (id)createCardViewController;
+- (void)didSelectComponentViewForTrack:(id)arg1;
 - (id)componentViewForTrack:(id)arg1;
 - (void)loadContentForTrack:(id)arg1;
 - (_Bool)isEnabledForTrack:(id)arg1;

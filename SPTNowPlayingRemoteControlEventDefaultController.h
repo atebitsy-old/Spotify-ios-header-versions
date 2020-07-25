@@ -57,7 +57,7 @@
 - (void)performSkipToPreviousWithCommandEvent:(id)arg1 isContentWithEventOriginatingFromSiri:(_Bool)arg2;
 - (void)perfromSkipToNextWithCommandEvent:(id)arg1;
 - (_Bool)shouldSkip15sInsteadOfChangingTrackForEvent:(id)arg1;
-- (_Bool)shouldCommandEventOverrideCustomPodcastSkipBehaviour:(id)arg1;
+- (_Bool)isEventOriginatingFromSiri:(id)arg1;
 - (void)audioPlayerDecodeErrorDidOccur:(id)arg1 error:(id)arg2;
 - (void)audioPlayerDidFinishPlaying:(id)arg1 successfully:(_Bool)arg2;
 - (long long)shuffleButtonPressed:(id)arg1;

@@ -36,6 +36,7 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+- (id)provideAssistantBannerViewFactory;
 - (id)provideTestManager;
 
 @end

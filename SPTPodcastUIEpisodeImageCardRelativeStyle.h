@@ -23,7 +23,6 @@
     double _thumbnailMargin;
     double _thumbnailShadowAlpha;
     double _thumbnailShadowRadius;
-    double _labelStackViewMargin;
     double _placeholderTextWidthMultiplier;
     double _colorAnimationDuration;
     double _progressViewHeight;
@@ -33,7 +32,6 @@
     double _episodeShowImageV2CornerRadius;
     double _episodeShowImageV2ShadowOpacity;
     double _episodeShowImageV2ProtectiveLayerOpacity;
-    double _episodeShowImageV2Margin;
     double _episodeImageCardV2ProgressViewMargin;
     double _episodeImageCardV2ProgressViewTopSpacing;
     id <GLUETheme> _theme;
@@ -50,7 +48,6 @@
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) double episodeImageCardV2ProgressViewTopSpacing; // @synthesize episodeImageCardV2ProgressViewTopSpacing=_episodeImageCardV2ProgressViewTopSpacing;
 @property(readonly, nonatomic) double episodeImageCardV2ProgressViewMargin; // @synthesize episodeImageCardV2ProgressViewMargin=_episodeImageCardV2ProgressViewMargin;
-@property(readonly, nonatomic) double episodeShowImageV2Margin; // @synthesize episodeShowImageV2Margin=_episodeShowImageV2Margin;
 @property(readonly, nonatomic) double episodeShowImageV2ProtectiveLayerOpacity; // @synthesize episodeShowImageV2ProtectiveLayerOpacity=_episodeShowImageV2ProtectiveLayerOpacity;
 @property(readonly, nonatomic) double episodeShowImageV2ShadowOpacity; // @synthesize episodeShowImageV2ShadowOpacity=_episodeShowImageV2ShadowOpacity;
 @property(readonly, nonatomic) double episodeShowImageV2CornerRadius; // @synthesize episodeShowImageV2CornerRadius=_episodeShowImageV2CornerRadius;
@@ -60,7 +57,6 @@
 @property(readonly, nonatomic) double progressViewHeight; // @synthesize progressViewHeight=_progressViewHeight;
 @property(readonly, nonatomic) double colorAnimationDuration; // @synthesize colorAnimationDuration=_colorAnimationDuration;
 @property(readonly, nonatomic) double placeholderTextWidthMultiplier; // @synthesize placeholderTextWidthMultiplier=_placeholderTextWidthMultiplier;
-@property(readonly, nonatomic) double labelStackViewMargin; // @synthesize labelStackViewMargin=_labelStackViewMargin;
 @property(readonly, nonatomic) double thumbnailShadowRadius; // @synthesize thumbnailShadowRadius=_thumbnailShadowRadius;
 @property(readonly, nonatomic) double thumbnailShadowAlpha; // @synthesize thumbnailShadowAlpha=_thumbnailShadowAlpha;
 @property(readonly, nonatomic) double thumbnailMargin; // @synthesize thumbnailMargin=_thumbnailMargin;
@@ -71,6 +67,8 @@
 @property(readonly, nonatomic) UIColor *defaultBackgroundColor; // @synthesize defaultBackgroundColor=_defaultBackgroundColor;
 @property(readonly, nonatomic) UIColor *darkTextColor; // @synthesize darkTextColor=_darkTextColor;
 @property(readonly, nonatomic) UIColor *brightTextColor; // @synthesize brightTextColor=_brightTextColor;
+@property(readonly, nonatomic) double episodeShowImageV2Margin;
+@property(readonly, nonatomic) double labelStackViewMargin;
 @property(readonly, nonatomic) UIImage *podcastFallbackImage30;
 @property(readonly, nonatomic) UIImage *thumbnailFallbackImage;
 @property(readonly, nonatomic) struct CGPoint placeholderTextOffset;

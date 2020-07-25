@@ -14,12 +14,15 @@
     // Error parsing type: , name: nameToSubtitlePaddingConstraint
     // Error parsing type: , name: nameBottomConstraint
     // Error parsing type: , name: subtitleBottomConstraint
+    // Error parsing type: , name: resultImageViewHeightConstraint
+    // Error parsing type: , name: resultImageViewWidthConstraint
     // Error parsing type: , name: resultImageView
     // Error parsing type: , name: newlyCreated
     // Error parsing type: , name: theme
 }
 
 - (void).cxx_destruct;
+- (void)traitCollectionDidChange:(id)arg1;
 - (void)prepareForReuse;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;

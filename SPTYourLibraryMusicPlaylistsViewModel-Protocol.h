@@ -43,6 +43,7 @@
 - (void)loadViewModel;
 
 @optional
+- (void)closedAssistantBanner;
 - (void)willEndTextFiltering;
 - (void)willBeginTextFiltering;
 @end

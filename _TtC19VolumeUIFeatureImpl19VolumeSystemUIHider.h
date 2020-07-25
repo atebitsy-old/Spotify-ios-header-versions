@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: delayAfterHiding
     // Error parsing type: , name: application
+    // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: $__lazy_storage_$_systemVolumeView
     // Error parsing type: , name: systemUIDisabled
     // Error parsing type: , name: isDisablingSystemUI
