@@ -14,6 +14,7 @@
 @property(nonatomic) __weak id <SPTCrashDetectorDelegate> delegate;
 - (NSURL *)crashReportURLForUUID:(NSString *)arg1;
 - (void)recordCustomExceptionName:(NSString *)arg1 reason:(NSString *)arg2 callStack:(NSArray *)arg3;
+- (void)synchronizeState;
 - (void)setValue:(NSString *)arg1 forStateKey:(NSString *)arg2;
 - (void)leaveBreadcrumb:(NSString *)arg1;
 - (void)setUserIdentifier:(NSString *)arg1;

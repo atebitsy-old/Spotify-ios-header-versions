@@ -10,9 +10,12 @@
 {
     // Error parsing type: , name: flagsProvider
     // Error parsing type: , name: store
+    // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: observers
     // Error parsing type: , name: lastUsedTable
 }
+
+- (void)userDidLogout;
 
 @end
 

@@ -13,6 +13,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageFactory
     // Error parsing type: , name: testManager
+    // Error parsing type: , name: notificationCenter
 }
 
 - (id)provideConnectButtonView;

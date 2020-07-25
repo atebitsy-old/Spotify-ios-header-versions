@@ -9,8 +9,12 @@
 @interface _TtC25PlaylistTuningFeatureImpl34SPTPlaylistTuningFeatureProperties : NSObject
 {
     // Error parsing type: , name: experimentEnabled
+    // Error parsing type: , name: onboardingEnabled
+    // Error parsing type: , name: tuningEnabled
+    // Error parsing type: , name: tabOrder
 }
 
+- (void).cxx_destruct;
 - (id)init;
 - (id)propertyModels;
 - (id)initWithConfiguration:(id)arg1;

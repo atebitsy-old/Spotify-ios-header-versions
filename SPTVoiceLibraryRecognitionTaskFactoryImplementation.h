@@ -9,7 +9,7 @@
 #import "SPTVoiceLibraryRecognitionTaskFactory-Protocol.h"
 
 @class NSString, SPTDataLoaderFactory, SPTVoiceLibrarySpeechProxyRequest;
-@protocol SPTPlayer, SPTVoiceLibraryAudioRecorder;
+@protocol SPTPlayer, SPTVoiceLibraryAudioRecorder, SPTVoiceLibrarySharedAudioBufferConsumer;
 
 @interface SPTVoiceLibraryRecognitionTaskFactoryImplementation : NSObject <SPTVoiceLibraryRecognitionTaskFactory>
 {
@@ -17,15 +17,17 @@
     id <SPTVoiceLibraryAudioRecorder> _audioRecorder;
     id <SPTPlayer> _player;
     SPTVoiceLibrarySpeechProxyRequest *_speechProxyRequest;
+    id <SPTVoiceLibrarySharedAudioBufferConsumer> _sharedAudioBuffer;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTVoiceLibrarySharedAudioBufferConsumer> sharedAudioBuffer; // @synthesize sharedAudioBuffer=_sharedAudioBuffer;
 @property(readonly, nonatomic) SPTVoiceLibrarySpeechProxyRequest *speechProxyRequest; // @synthesize speechProxyRequest=_speechProxyRequest;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTVoiceLibraryAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
 - (id)createVoiceRecognitionTask;
-- (id)initWithDataLoaderFactory:(id)arg1 audioRecorder:(id)arg2 player:(id)arg3 speechProxyRequest:(id)arg4;
+- (id)initWithDataLoaderFactory:(id)arg1 audioRecorder:(id)arg2 sharedAudioBuffer:(id)arg3 player:(id)arg4 speechProxyRequest:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

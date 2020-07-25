@@ -36,8 +36,8 @@
 @property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) unsigned long long position; // @synthesize position=_position;
 @property(retain, nonatomic) id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler=_eventHandler;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)close;
 - (void)glue_applyStyle:(id)arg1;

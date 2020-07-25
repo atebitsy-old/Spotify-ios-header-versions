@@ -26,7 +26,8 @@
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (id)trackURIInModel:(id)arg1;
 - (void)logDidChangePlayerStateInPromoV2Component:(unsigned long long)arg1 forTrackWithModel:(id)arg2 loggingData:(id)arg3;
-- (void)logDimensionsForView:(id)arg1 withContext:(id)arg2;
+- (void)logDimensionsForView:(id)arg1 withModel:(id)arg2 column:(int)arg3 row:(int)arg4 yOffset:(int)arg5;
+- (void)logDimensionsForView:(id)arg1;
 - (void)logDimensionsForCell:(id)arg1 withIndexPath:(id)arg2 collectionView:(id)arg3 context:(id)arg4;
 - (void)logDidResumeTrackInPromoV2ComponentWithModel:(id)arg1 loggingData:(id)arg2;
 - (void)logDidPauseTrackInPromoV2ComponentWithModel:(id)arg1 loggingData:(id)arg2;

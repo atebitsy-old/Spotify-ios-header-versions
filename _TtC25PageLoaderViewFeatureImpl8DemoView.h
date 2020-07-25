@@ -10,11 +10,13 @@
 {
     // Error parsing type: , name: titleText
     // Error parsing type: , name: bodyText
+    // Error parsing type: , name: reload
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
+- (void)retryCalled;
 - (void)viewDidLoad;
 
 @end

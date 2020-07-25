@@ -18,6 +18,7 @@
 
 @interface SPTPodcastViewModel2 : NSObject <SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastTopicCategoryViewModelDelegate, SPTPodcastFollowSectionViewModelDelegate, SPTExplicitContentEnabledStateObserver, SPTPodcastPlayerDelegate, SPTPodcastTrailerSectionViewModelDelegate>
 {
+    _Bool _topicsEmpty;
     _Bool _trailerWasShown;
     _Bool _isLoading;
     _Bool _topicsDidLoad;
@@ -25,7 +26,6 @@
     id <SPTPodcastViewModelDelegate2> _delegate;
     NSURL *_URL;
     id <SPTPodcast> _podcast;
-    NSArray *_topics;
     SPTPodcastHeaderViewModel *_headerViewModel;
     SPTPodcastViewSectionConfiguration *_configuration;
     id <SPTPodcastDataLoaderRequestToken> _podcastRequestToken;
@@ -63,7 +63,7 @@
 @property(retain, nonatomic) id <SPTPodcastDataLoaderRequestToken> podcastRequestToken; // @synthesize podcastRequestToken=_podcastRequestToken;
 @property(readonly, nonatomic) SPTPodcastViewSectionConfiguration *configuration; // @synthesize configuration=_configuration;
 @property(readonly, copy, nonatomic) SPTPodcastHeaderViewModel *headerViewModel; // @synthesize headerViewModel=_headerViewModel;
-@property(copy, nonatomic) NSArray *topics; // @synthesize topics=_topics;
+@property(nonatomic, getter=isTopicsEmpty) _Bool topicsEmpty; // @synthesize topicsEmpty=_topicsEmpty;
 @property(retain) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(nonatomic) __weak id <SPTPodcastViewModelDelegate2> delegate; // @synthesize delegate=_delegate;

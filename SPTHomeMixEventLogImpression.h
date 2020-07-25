@@ -6,16 +6,16 @@
 
 #import "SPTHomeMixEvent.h"
 
-@class NSString;
+@protocol SPTUBIImpressionEvent;
 
 @interface SPTHomeMixEventLogImpression : SPTHomeMixEvent
 {
-    NSString *_sectionId;
+    id <SPTUBIImpressionEvent> _ubiImpression;
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *sectionId; // @synthesize sectionId=_sectionId;
-- (id)initWithSectionId:(id)arg1;
+@property(retain, nonatomic) id <SPTUBIImpressionEvent> ubiImpression; // @synthesize ubiImpression=_ubiImpression;
+- (id)initWithUbiImpression:(id)arg1;
 
 @end
 

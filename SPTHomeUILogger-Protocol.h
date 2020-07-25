@@ -9,7 +9,7 @@
 @class HUBComponentCollectionViewCell, HUBComponentView, HUBContext, NSIndexPath, UICollectionView;
 
 @protocol SPTHomeUILogger <NSObject>
-- (void)logDimensionsForView:(HUBComponentView *)arg1 withContext:(HUBContext *)arg2;
+- (void)logDimensionsForView:(HUBComponentView *)arg1;
 - (void)logDimensionsForCell:(HUBComponentCollectionViewCell *)arg1 withIndexPath:(NSIndexPath *)arg2 collectionView:(UICollectionView *)arg3 context:(HUBContext *)arg4;
 @end
 

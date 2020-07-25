@@ -45,7 +45,7 @@
 - (void)performSkipToPreviousWithCommandEvent:(id)arg1;
 - (void)perfromSkipToNextWithCommandEvent:(id)arg1;
 - (_Bool)shouldSkip15sInsteadOfChangingTrackForEvent:(id)arg1;
-- (_Bool)shouldCommandEventOverrideCustomPodcastSkipBehaviour:(id)arg1;
+- (_Bool)isEventOriginatingFromSiri:(id)arg1;
 - (void)didReceiveUpdatedCollectionNotification;
 - (void)externalIntegrationCollectionController:(id)arg1 didReceiveNewCollectionStateForCurrentTrack:(_Bool)arg2;
 - (long long)doNothing:(id)arg1;
@@ -58,8 +58,10 @@
 - (long long)dislikeButtonPressed:(id)arg1;
 - (long long)likeButtonPressed:(id)arg1;
 - (long long)handleChangePlaybackPosition:(id)arg1;
-- (void)seekForward;
-- (void)seekBackward;
+- (void)seekForward:(id)arg1;
+- (void)seekForwardTimerDidFire:(id)arg1;
+- (void)seekBackward:(id)arg1;
+- (void)seekBackwardTimerDidFire:(id)arg1;
 - (long long)handleSeekForwardCommand:(id)arg1;
 - (long long)handleSeekBackwardCommand:(id)arg1;
 - (long long)handleSkipForward:(id)arg1;

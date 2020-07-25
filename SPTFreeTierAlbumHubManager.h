@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class HUBComponentDefaults, HUBComponentRegistry, SPTDataLoader, SPTFreeTierAlbumBarButtonFactory, SPTFreeTierAlbumCommandHandlerFactory, SPTFreeTierAlbumContentOperationFactory, SPTFreeTierAlbumOfflineModelFactory;
-@protocol GLUETheme, SPTAgeVerificationProvider, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTOfflineModeState, SPTPermissionsOnDemandState, SPTPlayerFeature, SPTProductState, SPTShelves, VISREFIntegrationManager;
+@protocol GLUETheme, SPTAgeVerificationProvider, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTOfflineModeState, SPTPermissionsOnDemandState, SPTPlayerFeature, SPTProductState, SPTShelves, SPTUBILogger, VISREFIntegrationManager;
 
 @interface SPTFreeTierAlbumHubManager : NSObject
 {
@@ -30,9 +30,11 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTAgeVerificationProvider> _ageVerificationProvider;
     id <SPTShelves> _shelves;
+    id <SPTUBILogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) __weak id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -55,7 +57,7 @@
 - (id)createViewModelLoaderForViewURI:(id)arg1 referrerIdentifier:(id)arg2 offlineModel:(id)arg3 reloadPageSignal:(id)arg4;
 - (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 preloadedModel:(id)arg3;
 - (_Bool)canCreateViewControllerForViewURI:(id)arg1;
-- (id)initWithComponentRegistry:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 contentOperationFactory:(id)arg4 commandHandlerFactory:(id)arg5 barButtonFactory:(id)arg6 glueTheme:(id)arg7 onDemandState:(id)arg8 offlineModelFactory:(id)arg9 playerService:(id)arg10 offlineModeState:(id)arg11 productState:(id)arg12 dataLoader:(id)arg13 collectionPlatform:(id)arg14 visualRefreshIntegrationManager:(id)arg15 shelves:(id)arg16 explicitContentAccessService:(id)arg17 ageVerificationProvider:(id)arg18;
+- (id)initWithComponentRegistry:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 contentOperationFactory:(id)arg4 commandHandlerFactory:(id)arg5 barButtonFactory:(id)arg6 glueTheme:(id)arg7 onDemandState:(id)arg8 offlineModelFactory:(id)arg9 playerService:(id)arg10 offlineModeState:(id)arg11 productState:(id)arg12 dataLoader:(id)arg13 collectionPlatform:(id)arg14 visualRefreshIntegrationManager:(id)arg15 shelves:(id)arg16 explicitContentAccessService:(id)arg17 ageVerificationProvider:(id)arg18 ubiLogger:(id)arg19;
 
 @end
 

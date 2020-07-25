@@ -6,31 +6,37 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTGaiaConnectManagerObserver-Protocol.h"
 #import "SPTGaiaLockScreenControlsStateProvider-Protocol.h"
 #import "SPTGaiaSettingsObserver-Protocol.h"
 
-@class NSString, SPTObserverManager;
-@protocol SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaSettingsProvider;
+@class NSNumber, NSString, SPTObserverManager;
+@protocol SPTGaiaConnectManager, SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaSettingsProvider;
 
-@interface SPTGaiaLockScreenFeatureManager : NSObject <SPTGaiaSettingsObserver, SPTGaiaLockScreenControlsStateProvider>
+@interface SPTGaiaLockScreenFeatureManager : NSObject <SPTGaiaSettingsObserver, SPTGaiaConnectManagerObserver, SPTGaiaLockScreenControlsStateProvider>
 {
     id <SPTGaiaLockScreenPlayerFlagsProvider> _lockScreenFlagsProvider;
     id <SPTGaiaSettingsProvider> _settingsProvider;
+    id <SPTGaiaConnectManager> _connectManager;
     SPTObserverManager *_observers;
+    NSNumber *_internalLockScreenFeatureIsEnabled;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSNumber *internalLockScreenFeatureIsEnabled; // @synthesize internalLockScreenFeatureIsEnabled=_internalLockScreenFeatureIsEnabled;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
+@property(readonly, nonatomic) id <SPTGaiaConnectManager> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTGaiaSettingsProvider> settingsProvider; // @synthesize settingsProvider=_settingsProvider;
 @property(readonly, nonatomic) id <SPTGaiaLockScreenPlayerFlagsProvider> lockScreenFlagsProvider; // @synthesize lockScreenFlagsProvider=_lockScreenFlagsProvider;
 - (void)updateObservers;
+- (void)connectManager:(id)arg1 activeDeviceDidChange:(id)arg2;
 - (void)localDevicesOnlySettingsChanged:(_Bool)arg1;
 - (void)lockScreenControlsSettingsChanged:(_Bool)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (_Bool)lockScreenFeatureIsEnabled;
 - (void)dealloc;
-- (id)initWithLockScreenPlayerFlagsProvider:(id)arg1 settingsProvider:(id)arg2;
+- (id)initWithLockScreenPlayerFlagsProvider:(id)arg1 settingsProvider:(id)arg2 connectManager:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

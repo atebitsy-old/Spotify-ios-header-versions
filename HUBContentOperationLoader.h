@@ -9,7 +9,7 @@
 #import "HUBContentOperationWrapperDelegate-Protocol.h"
 #import "HUBViewModelLoader-Protocol.h"
 
-@class HUBComponentDefaults, HUBViewModelBuilderImplementation, NSArray, NSMutableArray, NSMutableDictionary;
+@class HUBComponentDefaults, HUBLinkedList, HUBViewModelBuilderImplementation, NSArray, NSMutableDictionary;
 @protocol HUBIconImageResolver, HUBViewModel, HUBViewModelLoaderDelegate, OS_dispatch_queue;
 
 @interface HUBContentOperationLoader : NSObject <HUBContentOperationWrapperDelegate, HUBViewModelLoader>
@@ -17,7 +17,7 @@
     id <HUBViewModelLoaderDelegate> _delegate;
     NSArray *_contentOperations;
     NSMutableDictionary *_contentOperationWrappers;
-    NSMutableArray *_contentOperationQueue;
+    HUBLinkedList *_contentOperationQueue;
     HUBComponentDefaults *_componentDefaults;
     id <HUBIconImageResolver> _iconImageResolver;
     id <HUBViewModel> _previouslyLoadedViewModel;
@@ -35,7 +35,7 @@
 @property(retain, nonatomic) id <HUBViewModel> previouslyLoadedViewModel; // @synthesize previouslyLoadedViewModel=_previouslyLoadedViewModel;
 @property(readonly, nonatomic) id <HUBIconImageResolver> iconImageResolver; // @synthesize iconImageResolver=_iconImageResolver;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
-@property(readonly, nonatomic) NSMutableArray *contentOperationQueue; // @synthesize contentOperationQueue=_contentOperationQueue;
+@property(readonly, nonatomic) HUBLinkedList *contentOperationQueue; // @synthesize contentOperationQueue=_contentOperationQueue;
 @property(readonly, nonatomic) NSMutableDictionary *contentOperationWrappers; // @synthesize contentOperationWrappers=_contentOperationWrappers;
 @property(readonly, copy, nonatomic) NSArray *contentOperations; // @synthesize contentOperations=_contentOperations;
 @property(nonatomic) __weak id <HUBViewModelLoaderDelegate> delegate; // @synthesize delegate=_delegate;

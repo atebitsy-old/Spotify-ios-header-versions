@@ -6,7 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_, _TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_;
+
 @protocol _TtP23ListeningHistoryFeature26SPTListeningHistoryService_ <SPTService>
-@property(nonatomic, readonly) _Bool isListeningHistoryEnabled;
+- (id <_TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_>)provideListeningHistoryLogger;
+- (id <_TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_>)provideRemoteConfigManager;
 @end
 

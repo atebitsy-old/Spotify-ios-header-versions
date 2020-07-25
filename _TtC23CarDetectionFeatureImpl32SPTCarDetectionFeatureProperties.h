@@ -8,7 +8,7 @@
 
 @interface _TtC23CarDetectionFeatureImpl32SPTCarDetectionFeatureProperties : NSObject
 {
-    // Error parsing type: , name: carDetectionRollout
+    // Error parsing type: , name: carDetectionEnabled
 }
 
 - (id)init;

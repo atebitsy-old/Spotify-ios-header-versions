@@ -9,6 +9,7 @@
 @class NSString;
 
 @protocol SPTLoginAuthCredentialsWrapper <NSObject>
+@property(readonly, nonatomic) unsigned long long source;
 @property(readonly, copy, nonatomic) NSString *username;
 @property(readonly, nonatomic) id credentials;
 @property(readonly, nonatomic) unsigned long long type;

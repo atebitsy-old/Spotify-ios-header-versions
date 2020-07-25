@@ -28,7 +28,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (void)setupRemoteConfigurationProperties;
 @property(readonly, nonatomic, getter=isYourLibraryXEnabled) _Bool yourLibraryXEnabled;
-@property(readonly, nonatomic, getter=isCreateButtonInHeaderEnabled) _Bool createButtonInHeaderEnabled;
 @property(readonly, nonatomic) long long persistActiveTabDurationHours;
 @property(readonly, nonatomic, getter=isPersistActiveTabEnabled) _Bool persistActiveTabEnabled;
 - (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2 freeTierExperienceEnabledSignal:(id)arg3 yourLibraryXTestManager:(id)arg4;

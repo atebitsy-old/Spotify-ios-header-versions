@@ -32,7 +32,7 @@
 - (void)handleUpdateToMetadata:(id)arg1 tracks:(id)arg2;
 - (void)load;
 - (void)updateWelcomeStatus;
-- (void)updateMemberBlacklist:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)updateMemberExcludeList:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)switchToMood:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)updateEnabledSetting:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)updatePublishExplicitTracksSetting:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2;

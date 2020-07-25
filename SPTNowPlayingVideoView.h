@@ -10,7 +10,7 @@
 #import "SPTThemableView-Protocol.h"
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
-@class NSLayoutConstraint, NSString, SPTNowPlayingDurationViewV2, SPTNowPlayingHeadUnitView, SPTNowPlayingNavigationBarView, SPTNowPlayingNavigationButtonsView, SPTNowPlayingVideoFooterView, SPTNowPlayingVideoHeaderView, SPTTheme, UIActivityIndicatorView;
+@class NSLayoutConstraint, NSString, SPTNowPlayingDurationViewV2, SPTNowPlayingHeadUnitViewController, SPTNowPlayingNavigationBarView, SPTNowPlayingNavigationButtonsView, SPTNowPlayingVideoFooterView, SPTNowPlayingVideoHeaderView, SPTTheme, UIActivityIndicatorView;
 @protocol BMVideoSurface, SPTNowPlayingVideoViewV2Delegate, SPTThemableViewLayoutDelegate;
 
 @interface SPTNowPlayingVideoView : UIView <BMVideoSurfaceDelegate, UIGestureRecognizerDelegate, SPTThemableView>
@@ -21,7 +21,7 @@
     id <SPTNowPlayingVideoViewV2Delegate> _delegate;
     SPTNowPlayingNavigationBarView *_headerTitleView;
     SPTNowPlayingNavigationButtonsView *_headerButtonsView;
-    SPTNowPlayingHeadUnitView *_headUnitView;
+    SPTNowPlayingHeadUnitViewController *_headUnitViewController;
     UIView<BMVideoSurface> *_videoSurface;
     SPTNowPlayingDurationViewV2 *_durationView;
     UIActivityIndicatorView *_loadingActivityIndicatorView;
@@ -56,7 +56,7 @@
 @property(readonly, nonatomic) UIActivityIndicatorView *loadingActivityIndicatorView; // @synthesize loadingActivityIndicatorView=_loadingActivityIndicatorView;
 @property(readonly, nonatomic) SPTNowPlayingDurationViewV2 *durationView; // @synthesize durationView=_durationView;
 @property(readonly, nonatomic) UIView<BMVideoSurface> *videoSurface; // @synthesize videoSurface=_videoSurface;
-@property(readonly, nonatomic) SPTNowPlayingHeadUnitView *headUnitView; // @synthesize headUnitView=_headUnitView;
+@property(readonly, nonatomic) SPTNowPlayingHeadUnitViewController *headUnitViewController; // @synthesize headUnitViewController=_headUnitViewController;
 @property(readonly, nonatomic) SPTNowPlayingNavigationButtonsView *headerButtonsView; // @synthesize headerButtonsView=_headerButtonsView;
 @property(readonly, nonatomic) SPTNowPlayingNavigationBarView *headerTitleView; // @synthesize headerTitleView=_headerTitleView;
 @property(nonatomic) __weak id <SPTNowPlayingVideoViewV2Delegate> delegate; // @synthesize delegate=_delegate;
@@ -72,7 +72,7 @@
 - (void)setupConstraints;
 - (void)applyThemeLayout;
 - (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 videoSurface:(id)arg3 durationViewDataSource:(id)arg4 headUnitView:(id)arg5 animationView:(id)arg6;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 videoSurface:(id)arg3 durationViewDataSource:(id)arg4 headUnitViewController:(id)arg5 animationView:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

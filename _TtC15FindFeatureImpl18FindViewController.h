@@ -7,13 +7,14 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTPageContainer-Protocol.h"
+#import "SPTRoutingController-Protocol.h"
 #import "SPTScrollToTopViewController-Protocol.h"
 #import "SPViewController-Protocol.h"
 
 @class NSString, NSURL;
 @protocol SPTPageContainer, SPTPageController;
 
-@interface _TtC15FindFeatureImpl18FindViewController : UIViewController <SPTPageContainer, SPTScrollToTopViewController, SPViewController>
+@interface _TtC15FindFeatureImpl18FindViewController : UIViewController <SPTPageContainer, SPTScrollToTopViewController, SPViewController, SPTRoutingController>
 {
     // Error parsing type: , name: onVoiceSearchButtonPress
     // Error parsing type: , name: onReturnKeyPress
@@ -29,10 +30,12 @@
     // Error parsing type: , name: contentViewController
     // Error parsing type: , name: containerViewController
     // Error parsing type: , name: viewLoadingLogger
+    // Error parsing type: , name: supportsRouting
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (_Bool)routeToViewControllerForURL:(id)arg1;
 @property(nonatomic, readonly) NSURL *URI;
 - (void)spt_scrollToTop;
 - (unsigned long long)preferredNavigationBarState;

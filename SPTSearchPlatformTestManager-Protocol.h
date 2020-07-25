@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTSearchPlatformTestManager <NSObject>
+@property(readonly, nonatomic, getter=isTopicCarouselProhibited) _Bool topicCarouselProhibited;
+@property(readonly, nonatomic, getter=isEditorialOnDemandDebuggingEnabled) _Bool editorialOnDemandDebuggingEnabled;
+@property(readonly, nonatomic, getter=isEditorialOnDemandEnabled) _Bool editorialOnDemandEnabled;
 @property(readonly, nonatomic, getter=isNewRecentsRowEnabled) _Bool newRecentsRowEnabled;
-@property(readonly, nonatomic, getter=isLyricsRowDebuggingEnabled) _Bool lyricsRowDebuggingEnabled;
 @property(readonly, nonatomic, getter=isTopicsEnabled) _Bool topicsEnabled;
-@property(readonly, nonatomic, getter=areNewPodcastRowsEnabled) _Bool newPodcastRowsEnabled;
-@property(readonly, nonatomic, getter=isSearchKitEnabled) _Bool searchKitEnabled;
 @end
 

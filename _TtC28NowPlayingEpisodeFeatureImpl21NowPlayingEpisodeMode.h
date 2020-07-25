@@ -14,6 +14,7 @@
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: gaiaService
     // Error parsing type: , name: playerService
+    // Error parsing type: , name: shareFeature
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: contextMenuPresenter
     // Error parsing type: , name: episodePlayer
@@ -27,6 +28,7 @@
     // Error parsing type: , name: collectionPlatform
     // Error parsing type: , name: snackBarPresenter
     // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: densityHelper
     // Error parsing type: , name: layoutDelegate
 }
 

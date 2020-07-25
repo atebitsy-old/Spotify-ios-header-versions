@@ -24,7 +24,7 @@
 - (_Bool)isTabItem:(id)arg1;
 - (void)logTabImpression:(id)arg1;
 - (void)logContentItemRequested:(id)arg1 indexPath:(id)arg2;
-- (void)logContentItemPlayInteraction:(id)arg1 position:(unsigned long long)arg2;
+- (id)logContentItemPlayInteraction:(id)arg1 position:(unsigned long long)arg2;
 - (void)logContentItemImpression:(id)arg1 indexPath:(id)arg2;
 - (id)initWithUBILogger:(id)arg1 properties:(id)arg2;
 

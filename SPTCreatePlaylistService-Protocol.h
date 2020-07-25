@@ -7,10 +7,9 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTCreatePlaylistCommandHandlerFactory, SPTCreatePlaylistController, SPTCreatePlaylistTestManager;
+@protocol SPTCreatePlaylistController, SPTCreatePlaylistTestManager;
 
 @protocol SPTCreatePlaylistService <SPTService>
-- (id <SPTCreatePlaylistCommandHandlerFactory>)provideCommandHandlerFactory;
 - (id <SPTCreatePlaylistTestManager>)provideTestManager;
 - (id <SPTCreatePlaylistController>)provideRenamePlaylistControllerForPlaylistURL:(NSURL *)arg1 currentName:(NSString *)arg2;
 - (id <SPTCreatePlaylistController>)provideCreatePlaylistControllerInFolder:(NSURL *)arg1;

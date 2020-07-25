@@ -4,20 +4,21 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UICollectionReusableView.h>
+#import <UIKit/UIView.h>
 
-@interface _TtC22AllBoardingFeatureImpl15LargeHeaderView : UICollectionReusableView
+@interface _TtC22AllBoardingFeatureImpl15LargeHeaderView : UIView
 {
     // Error parsing type: , name: $__lazy_storage_$_label
+    // Error parsing type: , name: $__lazy_storage_$_searchBarContainerView
+    // Error parsing type: , name: $__lazy_storage_$_searchBar
+    // Error parsing type: , name: searchBarHeightConstraint
     // Error parsing type: , name: titleText
     // Error parsing type: , name: theme
-    // Error parsing type: , name: newlyCreated
 }
 
 - (void).cxx_destruct;
-- (void)prepareForReuse;
-- (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithCoder:(id)arg1;
 
 @end
 

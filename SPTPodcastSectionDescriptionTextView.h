@@ -13,10 +13,10 @@
     _Bool _needsTextViewLayout;
     NSString *_originalText;
     NSAttributedString *_htmlOriginalText;
+    NSString *_suffix;
     double _lineHeight;
     GLUELabelStyle *_style;
     GLUELabelStyle *_seeMoreStyle;
-    struct _NSRange _attributionStringRange;
 }
 
 - (void).cxx_destruct;
@@ -24,15 +24,16 @@
 @property(retain, nonatomic) GLUELabelStyle *style; // @synthesize style=_style;
 @property(nonatomic) _Bool needsTextViewLayout; // @synthesize needsTextViewLayout=_needsTextViewLayout;
 @property(nonatomic) double lineHeight; // @synthesize lineHeight=_lineHeight;
-@property(nonatomic) struct _NSRange attributionStringRange; // @synthesize attributionStringRange=_attributionStringRange;
+@property(copy, nonatomic) NSString *suffix; // @synthesize suffix=_suffix;
 @property(copy, nonatomic) NSAttributedString *htmlOriginalText; // @synthesize htmlOriginalText=_htmlOriginalText;
 @property(copy, nonatomic) NSString *originalText; // @synthesize originalText=_originalText;
 - (id)uncollapsedStringEnding;
 - (id)collapsedStringEnding;
-- (void)updateHTMLDescriptionAttributedText;
-- (void)updateAttributedText;
-- (void)configureHTMLText:(id)arg1 withAttributionRange:(struct _NSRange)arg2;
-- (void)configureText:(id)arg1 withAttributionRange:(struct _NSRange)arg2;
+- (id)styledSuffixString:(id)arg1;
+- (void)configureHTMLTextAppearance;
+- (void)configureTextAppearance;
+- (void)configureHTMLText:(id)arg1 withSuffix:(id)arg2;
+- (void)configureText:(id)arg1 withSuffix:(id)arg2;
 - (void)updateDescriptonTextViewConfiguration;
 - (void)setNumberOfLines:(long long)arg1;
 - (void)setBounds:(struct CGRect)arg1;

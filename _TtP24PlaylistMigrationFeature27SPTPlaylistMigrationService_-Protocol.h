@@ -7,13 +7,13 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL;
-@protocol SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProvider><SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistIsTrackActive, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription;
+@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistCellProviderV2, SPTFreeTierPlaylistCellProviderV2><SPTFreeTierPlaylistSectionDescriptionV2, SPTFreeTierPlaylistIsTrackActive, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescriptionV2;
 
 @protocol _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_ <SPTService>
-- (id <SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription>)provideUnloadedTracksSection;
-- (id <SPTFreeTierPlaylistCellProvider>)providePlaceholderCellProvider;
-- (id <SPTFreeTierPlaylistCellProvider><SPTFreeTierPlaylistSectionDescription>)provideSponsoredCellProviderWithPlaylistURL:(NSURL *)arg1 cellProviderDelegate:(id <SPTFreeTierPlaylistCellProviderDelegate>)arg2;
+- (id <SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescriptionV2>)provideUnloadedTracksSection;
+- (id <SPTFreeTierPlaylistCellProviderV2>)providePlaceholderCellProvider;
+- (id <SPTFreeTierPlaylistCellProviderV2><SPTFreeTierPlaylistSectionDescriptionV2>)provideSponsoredCellProviderWithPlaylistURL:(NSURL *)arg1 cellProviderDelegate:(id <SPTFreeTierPlaylistCellProviderDelegate>)arg2;
 - (id <SPTFreeTierPlaylistItemsViewModel><SPTFreeTierPlaylistModelObserver>)provideItemsViewModelWithPremiumOnlyFeatureEnabled:(_Bool)arg1 isTrackActive:(id <SPTFreeTierPlaylistIsTrackActive>)arg2;
-- (id <SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription>)provideTrackSectionWithItemsViewModel:(id <SPTFreeTierPlaylistItemsViewModel>)arg1;
+- (id <SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescriptionV2>)provideTrackSectionWithItemsViewModel:(id <SPTFreeTierPlaylistItemsViewModel>)arg1;
 @end
 

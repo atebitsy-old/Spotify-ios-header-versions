@@ -7,7 +7,7 @@
 #import "SPTFreeTierPlaylistHeaderConfiguration-Protocol.h"
 
 @class GLUEEntityRowStyle, NSArray;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayObserver;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayObserver;
 
 @protocol SPTFreeTierPlaylistConfiguration <SPTFreeTierPlaylistHeaderConfiguration>
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayObserver> playObserver;
@@ -17,7 +17,6 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistContextMenuPresenter> contextMenuPresenter;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayModel> playModel;
 @property(readonly, copy, nonatomic) NSArray *cellProviders;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistHeaderProvider> headerProvider;
 @property(readonly, copy, nonatomic) GLUEEntityRowStyle *rowStyle;

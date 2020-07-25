@@ -12,8 +12,10 @@
 {
     // Error parsing type: , name: uri
     // Error parsing type: , name: _entities
+    // Error parsing type: , name: canUpsell
 }
 
+@property(nonatomic, readonly) _Bool canUpsell; // @synthesize canUpsell;
 @property(nonatomic, readonly) NSArray *entities;
 @property(nonatomic, readonly) NSString *uri;
 

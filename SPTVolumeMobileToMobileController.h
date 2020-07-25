@@ -6,42 +6,27 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTVolumeFlagsManagerObserver-Protocol.h"
+@class SPTVolumeCosmosResolver;
+@protocol SPTVolumeMobileToMobileDelegate, SPTVolumeSystemAPI;
 
-@class NSString, SPTVolumeCosmosResolver;
-@protocol SPTVolumeFlagsManager, SPTVolumeMobileToMobileDelegate, SPTVolumeSystemAPI;
-
-@interface SPTVolumeMobileToMobileController : NSObject <SPTVolumeFlagsManagerObserver>
+@interface SPTVolumeMobileToMobileController : NSObject
 {
-    _Bool _isSetup;
     id <SPTVolumeMobileToMobileDelegate> _delegate;
     SPTVolumeCosmosResolver *_resolver;
     id <SPTVolumeSystemAPI> _systemVolumeManager;
-    id <SPTVolumeFlagsManager> _flagManager;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool isSetup; // @synthesize isSetup=_isSetup;
-@property(readonly, nonatomic) id <SPTVolumeFlagsManager> flagManager; // @synthesize flagManager=_flagManager;
 @property(readonly, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(readonly, nonatomic) SPTVolumeCosmosResolver *resolver; // @synthesize resolver=_resolver;
 @property(nonatomic) __weak id <SPTVolumeMobileToMobileDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)bodyFromDictionary:(id)arg1;
-- (void)mobileToMobileEnabledChanged;
 - (void)sendVolumeUpdate:(double)arg1;
 - (void)didReceiveRemoteVolume:(double)arg1;
 - (void)startObservingRemoteVolume;
 - (void)sendInitialVolume:(double)arg1;
 - (void)setupMobileToMobile;
-- (void)dealloc;
-- (void)setupObserving;
-- (id)initWithResolver:(id)arg1 systemVolumeManager:(id)arg2 flagManager:(id)arg3;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)initWithResolver:(id)arg1 systemVolumeManager:(id)arg2;
 
 @end
 

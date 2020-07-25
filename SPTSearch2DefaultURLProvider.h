@@ -13,6 +13,7 @@
 
 @interface SPTSearch2DefaultURLProvider : NSObject <SPTSearch2URLProviding>
 {
+    _Bool _onDemandSetsEnabled;
     SPTSearch2RequestParametersProvider *_parametersProvider;
     NSString *_drilldownEntityType;
     unsigned long long _offset;
@@ -21,6 +22,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool onDemandSetsEnabled; // @synthesize onDemandSetsEnabled=_onDemandSetsEnabled;
 @property(readonly, nonatomic) unsigned long long endpointVersion; // @synthesize endpointVersion=_endpointVersion;
 @property(readonly, nonatomic) unsigned long long limit; // @synthesize limit=_limit;
 @property(readonly, nonatomic) unsigned long long offset; // @synthesize offset=_offset;
@@ -30,8 +32,8 @@
 @property(readonly, nonatomic) id <SPTSearch2URLProviding> nextPageURLProvider;
 @property(readonly, nonatomic) unsigned long long responseFormat;
 - (id)urlForQuery:(id)arg1;
-- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 offset:(unsigned long long)arg3 limit:(unsigned long long)arg4 endpointVersion:(unsigned long long)arg5;
-- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4;
+- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 offset:(unsigned long long)arg3 limit:(unsigned long long)arg4 endpointVersion:(unsigned long long)arg5 onDemandSetsEnabled:(_Bool)arg6;
+- (id)initWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4 onDemandSetsEnabled:(_Bool)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

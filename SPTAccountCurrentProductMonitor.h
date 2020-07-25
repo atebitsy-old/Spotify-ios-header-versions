@@ -9,7 +9,7 @@
 #import "SPTProductStateObserver-Protocol.h"
 
 @class NSDate, NSString, SPTAccountTrialController, SPTObserverManager;
-@protocol SPTAccountTrialDeferredController, SPTProductState;
+@protocol SPTProductState;
 
 @interface SPTAccountCurrentProductMonitor : NSObject <SPTProductStateObserver>
 {
@@ -17,13 +17,11 @@
     NSDate *_currentProductExpieryDate;
     SPTObserverManager *_observers;
     id <SPTProductState> _productState;
-    id <SPTAccountTrialDeferredController> _deferredTrialController;
     SPTAccountTrialController *_trialController;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAccountTrialController *trialController; // @synthesize trialController=_trialController;
-@property(readonly, nonatomic) id <SPTAccountTrialDeferredController> deferredTrialController; // @synthesize deferredTrialController=_deferredTrialController;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSDate *currentProductExpieryDate; // @synthesize currentProductExpieryDate=_currentProductExpieryDate;
@@ -36,7 +34,7 @@
 - (long long)accountForProductState:(id)arg1;
 - (void)updateCurrentProduct;
 - (void)dealloc;
-- (id)initWithProductState:(id)arg1 trialController:(id)arg2 deferredTrialController:(id)arg3;
+- (id)initWithProductState:(id)arg1 trialController:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

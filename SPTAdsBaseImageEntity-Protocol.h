@@ -9,7 +9,10 @@
 @class NSString, NSURL;
 
 @protocol SPTAdsBaseImageEntity <SPTAdsBaseEntity>
-@property(readonly, nonatomic) _Bool isAudioPlusBanner;
+@property(readonly, nonatomic) NSString *audioPlusEntityInfo;
+@property(readonly, nonatomic) NSString *audioPlusTitle;
+@property(readonly, nonatomic) NSString *audioPlusDetail;
+@property(readonly, nonatomic) long long audioPlusAdType;
 @property(readonly, nonatomic) NSString *displayReason;
 @property(readonly, nonatomic) NSURL *imageURL;
 @property(readonly, nonatomic) struct CGSize imageSize;

@@ -8,12 +8,12 @@
 
 #import "SPTAdsMobileOverlayContentView-Protocol.h"
 
-@class GLUEButton, GLUEGradientView, NSString, SPTAdsPromotedContentImageView, SPTTheme;
+@class GLUEGradientView, NSString, SPTAdsPromotedContentImageView, SPTTheme, UIButton;
 
 @interface SPTAdOverlayBaseContentView : UIView <SPTAdsMobileOverlayContentView>
 {
     SPTAdsPromotedContentImageView *_contentImageView;
-    GLUEButton *_actionButton;
+    UIButton *_actionButton;
     SPTTheme *_theme;
     GLUEGradientView *_gradientOverlayView;
 }
@@ -21,7 +21,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) GLUEGradientView *gradientOverlayView; // @synthesize gradientOverlayView=_gradientOverlayView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
+@property(readonly, nonatomic) UIButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView; // @synthesize contentImageView=_contentImageView;
 - (void)addConstraints;
 - (id)initWithTheme:(id)arg1 glueImageLoader:(id)arg2;

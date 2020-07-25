@@ -6,12 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Episodes_EmptyEventFactory, SPTUBIMobilePodcastEntity_Episodes_EpisodeEventFactory, SPTUBIMobilePodcastEntity_Episodes_HeaderEventFactory;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Episodes_EmptyEventFactory, SPTUBIMobilePodcastEntity_Episodes_HeaderEventFactory;
 
 @protocol SPTUBIMobilePodcastEntity_EpisodesEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastEntity_Episodes_EmptyEventFactory>)emptyFactory;
-- (id <SPTUBIMobilePodcastEntity_Episodes_EpisodeEventFactory>)episodeFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobilePodcastEntity_Episodes_HeaderEventFactory>)headerFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

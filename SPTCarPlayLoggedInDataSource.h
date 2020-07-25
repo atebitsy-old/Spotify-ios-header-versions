@@ -11,8 +11,8 @@
 #import "SPTExternalIntegrationContentControllerObserver-Protocol.h"
 #import "SPTExternalIntegrationPlaybackControllerObserver-Protocol.h"
 
-@class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache, SPTCarPlayFeatureProperties, SPTCarPlayUBILogger;
-@protocol SPTCarPlayContentDataSource, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTMediaPlayerContentBridge;
+@class NSArray, NSSet, NSString, SPTAccessory, SPTCarPlayContentItemBuilder, SPTCarPlayContentTreeCache, SPTCarPlayContinuePlayingFeature, SPTCarPlayFeatureProperties, SPTCarPlayUBILogger;
+@protocol SPTAccessoryActionLogger, SPTCarPlayContentDataSource, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTMediaPlayerContentBridge;
 
 @interface SPTCarPlayLoggedInDataSource : NSObject <SPTExternalIntegrationContentControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationCollectionControllerObserver, SPTCarPlayDataSource>
 {
@@ -28,18 +28,22 @@
     NSArray *_rootItems;
     SPTCarPlayUBILogger *_logger;
     SPTCarPlayFeatureProperties *_properties;
+    id <SPTAccessoryActionLogger> _actionLogger;
     SPTCarPlayContentItemBuilder *_contentItemBuilder;
     SPTCarPlayContentTreeCache *_contentTreeCache;
+    SPTCarPlayContinuePlayingFeature *_continuePlayingFeature;
     id _debugLog;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
+@property(readonly, nonatomic) SPTCarPlayContinuePlayingFeature *continuePlayingFeature; // @synthesize continuePlayingFeature=_continuePlayingFeature;
 @property _Bool offlineOnly; // @synthesize offlineOnly=_offlineOnly;
 @property _Bool fetchingRootPending; // @synthesize fetchingRootPending=_fetchingRootPending;
 @property(nonatomic) _Bool rootItemsRequestInitiated; // @synthesize rootItemsRequestInitiated=_rootItemsRequestInitiated;
 @property(readonly, nonatomic) SPTCarPlayContentTreeCache *contentTreeCache; // @synthesize contentTreeCache=_contentTreeCache;
 @property(readonly, nonatomic) SPTCarPlayContentItemBuilder *contentItemBuilder; // @synthesize contentItemBuilder=_contentItemBuilder;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(retain, nonatomic) SPTCarPlayUBILogger *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSArray *rootItems; // @synthesize rootItems=_rootItems;
@@ -81,7 +85,7 @@
 - (void)carplaySessionEnded;
 @property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 - (void)dealloc;
-- (id)initWithContentDataSource:(id)arg1 contentTreeCache:(id)arg2 externalIntegrationPlatform:(id)arg3 mediaPlayerBridge:(id)arg4 connectManager:(id)arg5 imageLoaderFactory:(id)arg6 properties:(id)arg7 offlineOnly:(_Bool)arg8 debugLog:(id)arg9 logger:(id)arg10;
+- (id)initWithContentDataSource:(id)arg1 contentTreeCache:(id)arg2 externalIntegrationPlatform:(id)arg3 mediaPlayerBridge:(id)arg4 connectManager:(id)arg5 imageLoaderFactory:(id)arg6 properties:(id)arg7 contentItemBuilder:(id)arg8 continuePlayingFeature:(id)arg9 offlineOnly:(_Bool)arg10 debugLog:(id)arg11 logger:(id)arg12 actionLogger:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

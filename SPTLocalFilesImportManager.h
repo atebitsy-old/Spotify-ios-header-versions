@@ -78,7 +78,7 @@
 - (void)enableIfFlagged;
 - (void)startImportWithURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)checkForPermissionWithResultHandler:(CDUnknownBlockType)arg1;
-- (id)initWithProductState:(id)arg1 localSettings:(id)arg2 collectionPlatform:(id)arg3 collectionTestManager:(id)arg4 playlistModel:(id)arg5 imageLoaderFactory:(id)arg6 resolver:(id)arg7 navigationRouter:(id)arg8 logCenter:(id)arg9 containerUIService:(id)arg10 linkDispatcher:(id)arg11 ubiLogger:(id)arg12;
+- (id)initWithProductState:(id)arg1 localSettings:(id)arg2 collectionPlatform:(id)arg3 collectionTestManager:(id)arg4 playlistModel:(id)arg5 imageLoaderFactory:(id)arg6 resolver:(id)arg7 navigationRouter:(id)arg8 containerUIService:(id)arg9 linkDispatcher:(id)arg10 logger:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

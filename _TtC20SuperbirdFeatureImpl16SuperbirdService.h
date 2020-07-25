@@ -15,10 +15,22 @@
     // Error parsing type: , name: playbackService
     // Error parsing type: , name: collectionPlatformService
     // Error parsing type: , name: playlistPlatformService
+    // Error parsing type: , name: accessoryManagerService
+    // Error parsing type: , name: accessoryManagerSessionService
     // Error parsing type: , name: followService
     // Error parsing type: , name: gaiaService
     // Error parsing type: , name: appProtocolExternalHandler
     // Error parsing type: , name: configurationProperties
+    // Error parsing type: , name: $__lazy_storage_$_superbirdDetector
+    // Error parsing type: , name: $__lazy_storage_$_pitstopNetworkManager
+    // Error parsing type: , name: $__lazy_storage_$_pitstopLogProcessor
+    // Error parsing type: , name: $__lazy_storage_$_pitstopLogger
+    // Error parsing type: , name: $__lazy_storage_$_otaProtocolHandler
+    // Error parsing type: , name: $__lazy_storage_$_presetsAppProtocolHandler
+    // Error parsing type: , name: $__lazy_storage_$_registerDeviceAppProtocolHandler
+    // Error parsing type: , name: $__lazy_storage_$_pitstopAppProtocolHandler
+    // Error parsing type: , name: $__lazy_storage_$_instrumentationAppProtocolHandler
+    // Error parsing type: , name: $__lazy_storage_$_voiceAppProtocolHandler
 }
 
 + (id)serviceIdentifier;

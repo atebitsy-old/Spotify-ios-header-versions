@@ -14,7 +14,7 @@
 @class NSString, NSURL, SPTLoginMagicLinkDoRequestView, SPTLoginMagicLinkDoRequestViewModel, SPTLoginTheme, SPTProgressView;
 @protocol SPTPageContainer;
 
-@interface SPTLoginMagicLinkDoRequestViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, SPTPageController, UITextFieldDelegate, SPTMagicLinkDoRequestViewModelDelegate>
+@interface SPTLoginMagicLinkDoRequestViewController : SPTLoginTraitAwareViewController <SPTNavigationControllerNavigationBarState, UITextFieldDelegate, SPTMagicLinkDoRequestViewModelDelegate, SPTPageController>
 {
     SPTLoginMagicLinkDoRequestViewModel *_viewModel;
     SPTProgressView *_progressView;
@@ -36,7 +36,7 @@
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)hideRequestLoginLinkInProgressState;
 - (void)showRequestLoginLinkInProgressState;
-- (void)doRequest;
+- (void)requestLoginLinkButtonTapped;
 - (void)checkPreexistingError;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;

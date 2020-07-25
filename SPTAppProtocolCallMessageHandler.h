@@ -6,10 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolCallForwarder, SPTAppProtocolConnectionHandler;
+#import "SPTExternalIntegrationInformationProvider-Protocol.h"
+
+@class NSString, SPSession, SPTAccessory, SPTAppProtocolBlockBasedImageLoader, SPTAppProtocolCallForwarder, SPTAppProtocolConnectionHandler;
 @protocol SPTAccessoryActionLogger, SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlatform, SPTGaiaConnectAPI, SPTImageLoaderFactory, SPTNetworkConnectivityController, SPTPreferences;
 
-@interface SPTAppProtocolCallMessageHandler : NSObject
+@interface SPTAppProtocolCallMessageHandler : NSObject <SPTExternalIntegrationInformationProvider>
 {
     SPTAppProtocolConnectionHandler *_connectionHandler;
     id <SPTGaiaConnectAPI> _connectManager;
@@ -59,6 +61,9 @@
 - (void)handleGetSessionStateMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleGetCapabilitiesMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleStartRadioMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
+- (id)additionalParameters;
+- (id)accessory;
+- (id)actionOrigin;
 - (void)playURI:(id)arg1 message:(id)arg2 withReply:(CDUnknownBlockType)arg3;
 - (void)handlePlayUriMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handlePlayItemMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
@@ -84,6 +89,7 @@
 - (void)handleSetPlaybackPositionCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleSetPlaybackSpeedCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (id)protocolErrorForError:(id)arg1;
+- (void)handleSkipToIndexInQueueCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleSkipPreviousCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleSkipNextCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleGetRatingCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
@@ -95,6 +101,12 @@
 - (void)handleCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleMethodNamed:(id)arg1 sourceMessage:(id)arg2 andReply:(CDUnknownBlockType)arg3;
 - (id)initWithExternalIntegrationPlatform:(id)arg1 connectionHandler:(id)arg2 networkConnectivityController:(id)arg3 imageLoaderFactory:(id)arg4 connectManager:(id)arg5 session:(id)arg6 preferences:(id)arg7 appProtocolForwarder:(id)arg8 actionLogger:(id)arg9 debugLog:(id)arg10;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

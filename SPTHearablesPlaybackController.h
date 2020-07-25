@@ -9,13 +9,14 @@
 #import "SPTHearablesSpotifyGoAPI-Protocol.h"
 
 @class NSString, SPTAccessory;
-@protocol SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI, SPTHearablesRecommendationEngine;
+@protocol SPTAccessoryActionLogger, SPTExternalIntegrationDebugLog, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI, SPTHearablesRecommendationEngine;
 
 @interface SPTHearablesPlaybackController : NSObject <SPTHearablesSpotifyGoAPI>
 {
     id <SPTExternalIntegrationPlaybackController> _playbackController;
     id <SPTGaiaConnectAPI> _connectApi;
     id <SPTExternalIntegrationDebugLog> _debugLog;
+    id <SPTAccessoryActionLogger> _actionLogger;
     SPTAccessory *_accessory;
     id <SPTExternalIntegrationExternalActionOrigin> _externalActionOrigin;
     id <SPTHearablesRecommendationEngine> _recommendationEngine;
@@ -25,6 +26,7 @@
 @property(retain, nonatomic) id <SPTHearablesRecommendationEngine> recommendationEngine; // @synthesize recommendationEngine=_recommendationEngine;
 @property(retain, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
 @property(retain, nonatomic) SPTAccessory *accessory; // @synthesize accessory=_accessory;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectApi; // @synthesize connectApi=_connectApi;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
@@ -36,7 +38,7 @@
 - (void)performGoCommand;
 - (id)playOriginForSource:(id)arg1;
 - (void)setCurrentAccessory:(id)arg1;
-- (id)initWithPlaybackController:(id)arg1 connectApi:(id)arg2 recommendationEngine:(id)arg3 logger:(id)arg4;
+- (id)initWithPlaybackController:(id)arg1 connectApi:(id)arg2 recommendationEngine:(id)arg3 actionLogger:(id)arg4 logger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

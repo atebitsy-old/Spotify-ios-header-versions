@@ -15,7 +15,7 @@
     GLUELabel *_label;
 }
 
-+ (double)titleLabelHeightForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 style:(id)arg3 labelStyle:(id)arg4;
++ (double)titleLabelHeightForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3 labelStyle:(id)arg4;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
 - (void).cxx_destruct;
 @property(retain, nonatomic) GLUELabel *label; // @synthesize label=_label;

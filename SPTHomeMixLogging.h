@@ -10,27 +10,21 @@
 {
 }
 
-+ (id)logMessageImpression:(id)arg1 sectionId:(id)arg2 homeMixState:(id)arg3;
-+ (id)logMessageWelcomePageSeen:(id)arg1 homeMixState:(id)arg2;
-+ (id)homeMixMessageForHomeMixURI:(id)arg1 sectionId:(id)arg2 itemIndex:(long long)arg3 targetURI:(id)arg4 interactionType:(id)arg5 userIntent:(id)arg6 action:(id)arg7 homeMixState:(id)arg8;
-+ (id)homeMixMessageForHomeMixURI:(id)arg1 sectionId:(id)arg2 itemIndex:(long long)arg3 targetURI:(id)arg4 userIntent:(id)arg5 homeMixState:(id)arg6;
-+ (id)homeMixMessageForHomeMixURI:(id)arg1 sectionId:(id)arg2 targetURI:(id)arg3 userIntent:(id)arg4 homeMixState:(id)arg5;
-+ (id)homeMixMessageHitInteraction:(id)arg1 sectionId:(id)arg2 intent:(id)arg3 homeMixState:(id)arg4;
-+ (id)logMessageInteraction:(id)arg1 sectionId:(id)arg2 userIntent:(id)arg3 itemIndex:(long long)arg4 targetURI:(id)arg5 homeMixState:(id)arg6;
-+ (id)logMessageError:(id)arg1 description:(id)arg2 homeMixURI:(id)arg3 homeMixState:(id)arg4;
-+ (id)logMessageWelcomeLearnMoreTapped:(id)arg1 homeMixState:(id)arg2;
-+ (id)logMessageWelcomeListenNowTapped:(id)arg1 homeMixState:(id)arg2;
-+ (id)logMessageTasteOnboardingStartTapped:(id)arg1 homeMixState:(id)arg2;
-+ (id)logMessageJoinSnackbarTapped:(id)arg1 homeMixState:(id)arg2;
-+ (id)logMessageRejoinTapped:(id)arg1 homeMixState:(id)arg2;
-+ (id)logMessageTrackFacePileTappedForHomeMixURI:(id)arg1 index:(unsigned long long)arg2 trackURI:(id)arg3 homeMixState:(id)arg4;
-+ (id)logMessageTrackContextMenuTappedForHomeMixURI:(id)arg1 index:(unsigned long long)arg2 trackURI:(id)arg3 homeMixState:(id)arg4;
-+ (id)logMessageTrackTappedForHomeMixURI:(id)arg1 index:(unsigned long long)arg2 trackURI:(id)arg3 homeMixState:(id)arg4;
-+ (id)logMessageHeartButtonTappedForHomeMixURI:(id)arg1 selected:(_Bool)arg2 homeMixState:(id)arg3;
-+ (id)logMessagePlayButtonTappedForHomeMixURI:(id)arg1 selected:(_Bool)arg2 homeMixState:(id)arg3;
-+ (id)logMessageHeaderContextMenuButtonTappedForHomeMixURI:(id)arg1 homeMixState:(id)arg2;
-+ (id)logMessageHeaderUpbeatButtonTappedForHomeMixURI:(id)arg1 desiredMood:(id)arg2 homeMixState:(id)arg3;
-+ (id)logMessageHeaderChillButtonTappedForHomeMixURI:(id)arg1 desiredMood:(id)arg2 homeMixState:(id)arg3;
++ (id)ubiUserManagementSwitchToggledForHomeMixUri:(id)arg1 memberIncluded:(_Bool)arg2;
++ (id)ubiUserManagementRowTappedForHomeMixUri:(id)arg1;
++ (id)ubiTasteVizImpression;
++ (id)ubiTasteVizLearnMoreTapped;
++ (id)ubiTasteVizListenNowTappedForHomeMixURI:(id)arg1;
++ (id)ubiTrackFacePileTappedForHomeMixURI:(id)arg1 trackURI:(id)arg2 trackIndex:(long long)arg3;
++ (id)ubiTrackContextMenuTappedForHomeMixURI:(id)arg1 trackURI:(id)arg2 trackIndex:(long long)arg3;
++ (id)ubiTrackSelectedForHomeMixURI:(id)arg1 trackURI:(id)arg2 trackIndex:(long long)arg3;
++ (id)ubiEntityContextMenuTappedForHomeMixURI:(id)arg1;
++ (id)ubiStartTasteOnboardingForHomeMixURI:(id)arg1;
++ (id)ubiSnackbarJoinButtonTappedForHomeMixURI:(id)arg1;
++ (id)ubiJoinButtonTappedForHomeMixURI:(id)arg1;
++ (id)ubiPlayPauseButtonTappedForHomeMixURI:(id)arg1 pausing:(_Bool)arg2;
++ (id)ubiUpbeatButtonTappedForHomeMixURI:(id)arg1 enableTuning:(_Bool)arg2;
++ (id)ubiChillButtonTappedForHomeMixURI:(id)arg1 enableTuning:(_Bool)arg2;
 
 @end
 

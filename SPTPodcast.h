@@ -15,6 +15,7 @@
 {
     _Bool _following;
     NSString *rawDescription;
+    NSArray *topics;
     NSString *_title;
     NSString *_descriptionText;
     NSString *_publisher;
@@ -43,6 +44,7 @@
 @property(copy, nonatomic) NSString *publisher; // @synthesize publisher=_publisher;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
+@property(readonly, nonatomic) NSArray *topics; // @synthesize topics;
 @property(readonly, nonatomic) NSString *rawDescription; // @synthesize rawDescription;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;

@@ -6,95 +6,64 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTEncoreDownloadButtonDelegate-Protocol.h"
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 #import "SPTNowPlayingInformationUnitViewModelDelegate-Protocol.h"
-#import "SPTNowPlayingLyricsButtonViewDelegate-Protocol.h"
+#import "SPTNowPlayingLyricsButtonViewControllerDelegate-Protocol.h"
 
-@class NSMutableArray, NSString, NSURL, SPTEncoreDownloadButton, SPTNowPlayingAnimatedLikeButton, SPTNowPlayingFreeTierFeedbackButton, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLogger, SPTNowPlayingLyricsButtonView, SPTNowPlayingMarqueeLabel, SPTTheme;
-@protocol SPTEncoreDownloadButtonFactory, SPTNowPlayingContainingViewController, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTSnackbarConditionalPresenter, _TtP17OfflineMixFeature24SPTOfflineMixTestManager_, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
+@class NSMutableArray, NSString, SPTNowPlayingDownloadButtonViewController, SPTNowPlayingHeartButtonViewController, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLyricsButtonViewController, SPTNowPlayingMarqueeLabel, SPTTheme;
+@protocol SPTNowPlayingContainingViewController, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
-@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewDelegate, SPTEncoreDownloadButtonDelegate, SPTNowPlayingContainedViewController>
+@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewControllerDelegate, SPTNowPlayingContainedViewController>
 {
     SPTTheme *_theme;
     long long _context;
     SPTNowPlayingMarqueeLabel *_titleLabel;
     SPTNowPlayingMarqueeLabel *_subtitleLabel;
-    SPTNowPlayingFreeTierFeedbackButton *_positiveFeedbackButton;
-    SPTNowPlayingAnimatedLikeButton *_animatedLikeButton;
-    NSURL *_currentContextSource;
-    SPTNowPlayingLyricsButtonView *_lyricsView;
     SPTNowPlayingInformationUnitViewModelImplementation *_viewModel;
     NSMutableArray *_layoutConstraints;
-    id <SPTNowPlayingTestManager> _testManager;
-    id <SPTNowPlayingContentLayerResolver> _contentLayerResolver;
-    SPTNowPlayingLogger *_nowPlayingLogger;
-    id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
     id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
-    id <SPTEncoreDownloadButtonFactory> _downloadButtonFactory;
-    id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> _offlineMixTestManager;
-    SPTEncoreDownloadButton *_downloadButton;
+    SPTNowPlayingLyricsButtonViewController *_lyricsButtonViewController;
+    SPTNowPlayingDownloadButtonViewController *_downloadButtonViewController;
+    SPTNowPlayingHeartButtonViewController *_heartButtonViewController;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTEncoreDownloadButton *downloadButton; // @synthesize downloadButton=_downloadButton;
-@property(retain, nonatomic) id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> offlineMixTestManager; // @synthesize offlineMixTestManager=_offlineMixTestManager;
-@property(retain, nonatomic) id <SPTEncoreDownloadButtonFactory> downloadButtonFactory; // @synthesize downloadButtonFactory=_downloadButtonFactory;
+@property(readonly, nonatomic) SPTNowPlayingHeartButtonViewController *heartButtonViewController; // @synthesize heartButtonViewController=_heartButtonViewController;
+@property(readonly, nonatomic) SPTNowPlayingDownloadButtonViewController *downloadButtonViewController; // @synthesize downloadButtonViewController=_downloadButtonViewController;
+@property(readonly, nonatomic) SPTNowPlayingLyricsButtonViewController *lyricsButtonViewController; // @synthesize lyricsButtonViewController=_lyricsButtonViewController;
 @property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
-@property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
-@property(retain, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
-@property(retain, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
-@property(retain, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTNowPlayingInformationUnitViewModelImplementation *viewModel; // @synthesize viewModel=_viewModel;
-@property(retain, nonatomic) SPTNowPlayingLyricsButtonView *lyricsView; // @synthesize lyricsView=_lyricsView;
-@property(copy, nonatomic) NSURL *currentContextSource; // @synthesize currentContextSource=_currentContextSource;
-@property(retain, nonatomic) SPTNowPlayingAnimatedLikeButton *animatedLikeButton; // @synthesize animatedLikeButton=_animatedLikeButton;
-@property(retain, nonatomic) SPTNowPlayingFreeTierFeedbackButton *positiveFeedbackButton; // @synthesize positiveFeedbackButton=_positiveFeedbackButton;
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) long long context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (long long)currentIconDownloadState;
-- (void)downloadButtonTappedWithSender:(id)arg1;
-- (void)viewModelDidUpdateDownloadButtonState:(id)arg1;
-- (void)setupDownloadButtonConstraints;
-- (void)updateDownloadButton;
-- (void)downloadButtonTapped:(id)arg1;
-- (void)setupDownloadButton;
-- (void)presentLyricsUpsellPopup;
-- (void)toggleContentLayerLyricsView;
-- (void)didTapLyricsView;
-- (void)viewModelDidUpdateLyricsButtonVisibility:(_Bool)arg1;
-- (void)viewModelDidUpdatePositiveFeedbackButtonState:(id)arg1;
-- (void)viewModelDidUpdate:(id)arg1 trackDidChange:(_Bool)arg2;
+- (void)didUpdateLyricsButtonVisibility:(_Bool)arg1;
 - (void)updateLabels;
-- (void)updateFeedbackButton;
-- (struct CGSize)preferredContentSize;
+- (void)viewModelDidUpdate:(id)arg1 trackDidChange:(_Bool)arg2;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
+- (void)setupDownloadButtonConstraintsIfNeeded;
 - (void)setupLyricsViewConstraints;
-- (void)setupAnimatedLikeButtonConstraints;
-- (void)setupPositiveFeedbackButtonConstraints;
+- (void)setupAnimatedLikeButtonConstraintsIfNeeded;
 - (void)setupDefaultConstraints;
-- (double)contextDependentPositiveFeedbackButtonTrailingMargin;
-- (double)contextDependentTitleSideMargin;
-- (void)positiveFeedbackButtonTapped:(id)arg1;
-- (void)subtitleLabelTapped:(id)arg1;
-- (void)titleLabelTapped:(id)arg1;
-- (void)viewDidAppear:(_Bool)arg1;
-- (void)viewWillDisappear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
-- (void)setupAnimatedLikeButton;
-- (void)setupPositiveFeedbackButton;
-- (void)setupSubtitleLabel;
-- (void)setupTitleLabel;
-- (void)setupLyricsViewIfNeeded;
 - (void)setupConstraints;
 - (void)resetConstraints;
+- (double)contextDependentPositiveFeedbackButtonTrailingMargin;
+- (double)contextDependentTitleSideMargin;
+- (void)subtitleLabelTapped:(id)arg1;
+- (void)titleLabelTapped:(id)arg1;
+- (void)setupDownloadButtonIfNeeded;
+- (void)setupAnimatedLikeButtonIfNeeded;
+- (void)setupLyricsViewIfNeeded;
+- (void)setupSubtitleLabel;
+- (void)setupTitleLabel;
 - (void)setupUI;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 testManager:(id)arg4 offlineMixTestManager:(id)arg5 downloadButtonFactory:(id)arg6 contentLayerResolver:(id)arg7 nowPlayingLogger:(id)arg8 snackbarPresenter:(id)arg9 responsiveShuffleOnboardingController:(id)arg10;
+- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 responsiveShuffleOnboardingController:(id)arg4 lyricsButtonViewController:(id)arg5 downloadButtonViewController:(id)arg6 heartButtonViewController:(id)arg7;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

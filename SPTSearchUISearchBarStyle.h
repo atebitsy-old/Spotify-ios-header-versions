@@ -19,7 +19,6 @@
     double _padding;
 }
 
-+ (id)freetierfind_styleForTheme:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) double padding; // @synthesize padding=_padding;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;

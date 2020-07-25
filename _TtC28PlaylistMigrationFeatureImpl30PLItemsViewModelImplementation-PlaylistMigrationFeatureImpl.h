@@ -6,9 +6,7 @@
 
 #import "_TtC28PlaylistMigrationFeatureImpl30PLItemsViewModelImplementation.h"
 
-#import "SPTFreeTierPlaylistModelObserver-Protocol.h"
-
-@interface _TtC28PlaylistMigrationFeatureImpl30PLItemsViewModelImplementation (PlaylistMigrationFeatureImpl) <SPTFreeTierPlaylistModelObserver>
+@interface _TtC28PlaylistMigrationFeatureImpl30PLItemsViewModelImplementation (PlaylistMigrationFeatureImpl)
 - (void)freeTierPlaylistModel:(id)arg1 error:(id)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;

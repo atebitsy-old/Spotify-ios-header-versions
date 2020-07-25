@@ -7,14 +7,15 @@
 #import <objc/NSObject.h>
 
 #import "BMConnectionModeObserver-Protocol.h"
+#import "BMDRMManagerObserver-Protocol.h"
 #import "SPTVideoApplicationStateObserver-Protocol.h"
 #import "SPTVideoPlayerSourceObserver-Protocol.h"
 #import "SPTVideoResourceLoaderInternalDelegate-Protocol.h"
 
-@class NSDate, NSString, SPTAudioFormatImpl, SPTPlayerItemErrorLogEventFilter, SPTVideoApplicationStateObservable, SPTVideoCDNSelector, SPTVideoFormatImpl, SPTVideoPlayerSource;
+@class BMDRMManager, NSDate, NSString, SPTAudioFormatImpl, SPTPlayerItemErrorLogEventFilter, SPTVideoApplicationStateObservable, SPTVideoCDNSelector, SPTVideoFormatImpl, SPTVideoPlayerSource;
 @protocol BMConnectionModeObservable, BMPlaybackIdentity, BMPlayerConfiguration, SPTNotificationCenter, SPTVideoEventDispatcher, SPTVideoPlaybackErrorFormatter, SPTVideoPlaybackSessionAssetLoader, SPTVideoPlaybackSessionDelegate, SPTVideoPlaybackTimeObservableInternal, SPTVideoResourceLoaderInternal;
 
-@interface SPTVideoPlaybackSession : NSObject <SPTVideoResourceLoaderInternalDelegate, SPTVideoApplicationStateObserver, BMConnectionModeObserver, SPTVideoPlayerSourceObserver>
+@interface SPTVideoPlaybackSession : NSObject <SPTVideoResourceLoaderInternalDelegate, BMDRMManagerObserver, SPTVideoApplicationStateObserver, BMConnectionModeObserver, SPTVideoPlayerSourceObserver>
 {
     _Bool _paused;
     _Bool _seeking;
@@ -30,6 +31,7 @@
     id <SPTVideoPlaybackSessionDelegate> _delegate;
     SPTVideoPlayerSource *_playerSource;
     id <SPTVideoResourceLoaderInternal> _resourceLoader;
+    BMDRMManager *_drmManager;
     id <SPTVideoEventDispatcher> _eventDispatcher;
     id <BMPlayerConfiguration> _playerConfiguration;
     id <SPTNotificationCenter> _notificationCenter;
@@ -77,6 +79,7 @@
 @property(retain, nonatomic) id <SPTNotificationCenter> notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) id <BMPlayerConfiguration> playerConfiguration; // @synthesize playerConfiguration=_playerConfiguration;
 @property(retain, nonatomic) id <SPTVideoEventDispatcher> eventDispatcher; // @synthesize eventDispatcher=_eventDispatcher;
+@property(retain, nonatomic) BMDRMManager *drmManager; // @synthesize drmManager=_drmManager;
 @property(retain, nonatomic) id <SPTVideoResourceLoaderInternal> resourceLoader; // @synthesize resourceLoader=_resourceLoader;
 @property(retain, nonatomic) SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
 @property(nonatomic) float preferredPlaybackSpeed; // @synthesize preferredPlaybackSpeed=_preferredPlaybackSpeed;
@@ -110,6 +113,8 @@
 - (void)didChangeBackgroundState:(_Bool)arg1;
 - (void)willResignActive;
 - (void)didBecomeActive;
+- (void)didEndLicenceRequestWithError:(id)arg1;
+- (void)didStartLicenceRequest;
 - (void)sendPlaybackError:(id)arg1;
 - (void)playerSource:(id)arg1 playerItem:(id)arg2 likelyToKeepUp:(_Bool)arg3;
 - (void)playerSource:(id)arg1 playerItem:(id)arg2 statusChanged:(long long)arg3;
@@ -129,7 +134,7 @@
 - (void)unloadSessionWithNextIdentity:(id)arg1;
 - (void)loadSession;
 - (void)dealloc;
-- (id)initWithPlaybackIdentity:(id)arg1 options:(id)arg2 eventDispatcher:(id)arg3 resourceLoader:(id)arg4 connectionModeObservable:(id)arg5 notificationCenter:(id)arg6 videoPlaybackErrorFormatter:(id)arg7 playbackTimeObservable:(id)arg8 sessionAssetLoader:(id)arg9 playerSource:(id)arg10 cndSelector:(id)arg11 playerConfiguration:(id)arg12 appStateObservable:(id)arg13 playerItemErrorLogEventFilter:(id)arg14;
+- (id)initWithPlaybackIdentity:(id)arg1 options:(id)arg2 eventDispatcher:(id)arg3 resourceLoader:(id)arg4 drmManager:(id)arg5 connectionModeObservable:(id)arg6 notificationCenter:(id)arg7 videoPlaybackErrorFormatter:(id)arg8 playbackTimeObservable:(id)arg9 sessionAssetLoader:(id)arg10 playerSource:(id)arg11 cndSelector:(id)arg12 playerConfiguration:(id)arg13 appStateObservable:(id)arg14 playerItemErrorLogEventFilter:(id)arg15;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

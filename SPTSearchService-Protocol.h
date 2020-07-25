@@ -6,10 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@class UIViewController;
+@class NSString, UIViewController;
 @protocol SPTSearch2ViewControllerProtocol;
 
 @protocol SPTSearchService <SPTService>
-- (UIViewController<SPTSearch2ViewControllerProtocol> *)makeViewController;
+- (UIViewController<SPTSearch2ViewControllerProtocol> *)makeViewControllerWithReferrerIdentifier:(NSString *)arg1;
 @end
 

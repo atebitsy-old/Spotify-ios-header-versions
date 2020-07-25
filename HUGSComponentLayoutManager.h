@@ -8,7 +8,7 @@
 
 #import "HUBComponentLayoutManager-Protocol.h"
 
-@class SPTTheme;
+@class NSString, SPTTheme;
 
 @interface HUGSComponentLayoutManager : NSObject <HUBComponentLayoutManager>
 {
@@ -18,6 +18,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (_Bool)shouldStackComponentWithLayoutTraits:(id)arg1 belowComponentWithLayoutTraits:(id)arg2;
+- (id)collectionView:(id)arg1 layout:(id)arg2 initialLayoutAttributesForAppearingItemAtIndexPath:(id)arg3 finalAttributes:(id)arg4;
 - (double)horizontalOffsetForComponentsWithLayoutTraits:(id)arg1 firstComponentLeadingHorizontalOffset:(double)arg2 lastComponentTrailingHorizontalOffset:(double)arg3;
 - (double)horizontalMarginForComponentWithLayoutTraits:(id)arg1 precedingComponentLayoutTraits:(id)arg2;
 - (double)verticalMarginForComponentWithLayoutTraits:(id)arg1 precedingComponentLayoutTraits:(id)arg2;
@@ -27,6 +28,12 @@
 - (double)containerMaxWidthForComponentWithLayoutTraits:(id)arg1;
 @property(readonly, nonatomic) double defaultComponentMargin;
 - (id)initWithTheme:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

@@ -7,6 +7,5 @@
 #import "SPTService-Protocol.h"
 
 @protocol _TtP11FindFeature14SPTFindService_ <SPTService>
-@property(nonatomic, readonly) _Bool composableFindEnabled;
 @end
 

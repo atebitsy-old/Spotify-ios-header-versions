@@ -8,6 +8,7 @@
 
 @interface _TtC25PlaylistTuningFeatureImpl30PTRecordOnboardedEffectHandler : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: localSettings
 }
 
 @end

@@ -6,7 +6,7 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class GLUEAccessoryIconButton, UIImageView, UILabel, UIView;
+@class GLUEAccessoryIconButton, SPTPodcastEpisodeFeaturedContentTrackPreviewTagView, UIImageView, UILabel, UIStackView, UIView;
 @protocol SPTEpisodeSegmentsEntity, SPTPodcastEpisodeFeaturedContentTrackActionsDelegate;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackListViewCell : UITableViewCell
@@ -14,7 +14,8 @@
     UIImageView *_trackImageView;
     UILabel *_titleLabel;
     UILabel *_subtitleLabel;
-    UILabel *_timeLabel;
+    SPTPodcastEpisodeFeaturedContentTrackPreviewTagView *_previewTagView;
+    UIStackView *_subtitleStackView;
     GLUEAccessoryIconButton *_contextMenuButton;
     UIView *_timelineView;
     id <SPTEpisodeSegmentsEntity> _currentEpisodeSegmentsEntity;
@@ -28,18 +29,17 @@
 @property(retain, nonatomic) id <SPTEpisodeSegmentsEntity> currentEpisodeSegmentsEntity; // @synthesize currentEpisodeSegmentsEntity=_currentEpisodeSegmentsEntity;
 @property(retain, nonatomic) UIView *timelineView; // @synthesize timelineView=_timelineView;
 @property(retain, nonatomic) GLUEAccessoryIconButton *contextMenuButton; // @synthesize contextMenuButton=_contextMenuButton;
-@property(retain, nonatomic) UILabel *timeLabel; // @synthesize timeLabel=_timeLabel;
+@property(retain, nonatomic) UIStackView *subtitleStackView; // @synthesize subtitleStackView=_subtitleStackView;
+@property(retain, nonatomic) SPTPodcastEpisodeFeaturedContentTrackPreviewTagView *previewTagView; // @synthesize previewTagView=_previewTagView;
 @property(retain, nonatomic) UILabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(retain, nonatomic) UILabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(retain, nonatomic) UIImageView *trackImageView; // @synthesize trackImageView=_trackImageView;
-- (id)formattedTrackStartTimeForEntity:(id)arg1;
 - (void)didTouchContextMenu;
 - (void)setupConstraints;
 - (void)setupLayout;
 - (void)setSelected:(_Bool)arg1 animated:(_Bool)arg2;
 - (id)subTitle:(id)arg1;
-- (_Bool)isContextMenuEnabled:(id)arg1;
-- (_Bool)isArtistCover:(id)arg1;
+- (id)placeHolder:(_Bool)arg1;
 - (void)configureCellForEntity:(id)arg1 isLastVisibleTrack:(_Bool)arg2 imageLoader:(id)arg3 trackActionHandler:(id)arg4;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

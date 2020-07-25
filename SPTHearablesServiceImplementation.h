@@ -8,12 +8,13 @@
 
 #import "SPTHearablesService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTHearablesAccessoryManager, SPTHearablesConnector, SPTHearablesFeatureProperties, SPTHearablesInterfaceController, SPTHearablesLegacySerialProtocolApiAdapter, SPTHearablesPlaybackController;
-@protocol GaiaFeature, SPTAccessoryManagerService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTNetworkService, SPTRemoteConfigurationService;
+@class NSString, SPTAllocationContext, SPTHearablesAccessoryManager, SPTHearablesConnector, SPTHearablesFeatureProperties, SPTHearablesInterfaceController, SPTHearablesPlaybackController, SPTHearablesSpotifyGoAccessControlList;
+@protocol GaiaFeature, SPTAccessoryManagerService, SPTAccessoryManagerSessionService, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlatformService, SPTHearablesSerialProtocolAdapter, SPTNetworkService, SPTRemoteConfigurationService;
 
 @interface SPTHearablesServiceImplementation : NSObject <SPTHearablesService>
 {
     id <SPTAccessoryManagerService> _accessoryService;
+    id <SPTAccessoryManagerSessionService> _accessorySessionService;
     id <SPTExternalIntegrationPlatformService> _integrationPlatformService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTNetworkService> _networkFeature;
@@ -22,14 +23,16 @@
     SPTHearablesConnector *_hearablesConnector;
     SPTHearablesAccessoryManager *_accessoryManager;
     SPTHearablesPlaybackController *_playbackController;
-    SPTHearablesLegacySerialProtocolApiAdapter *_serialProtocolAdapter;
+    id <SPTHearablesSerialProtocolAdapter> _serialProtocolAdapter;
     SPTHearablesInterfaceController *_interfaceController;
+    SPTHearablesSpotifyGoAccessControlList *_accessControlList;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTHearablesSpotifyGoAccessControlList *accessControlList; // @synthesize accessControlList=_accessControlList;
 @property(retain, nonatomic) SPTHearablesInterfaceController *interfaceController; // @synthesize interfaceController=_interfaceController;
-@property(retain, nonatomic) SPTHearablesLegacySerialProtocolApiAdapter *serialProtocolAdapter; // @synthesize serialProtocolAdapter=_serialProtocolAdapter;
+@property(retain, nonatomic) id <SPTHearablesSerialProtocolAdapter> serialProtocolAdapter; // @synthesize serialProtocolAdapter=_serialProtocolAdapter;
 @property(retain, nonatomic) SPTHearablesPlaybackController *playbackController; // @synthesize playbackController=_playbackController;
 @property(retain, nonatomic) SPTHearablesAccessoryManager *accessoryManager; // @synthesize accessoryManager=_accessoryManager;
 @property(retain, nonatomic) SPTHearablesConnector *hearablesConnector; // @synthesize hearablesConnector=_hearablesConnector;
@@ -38,10 +41,12 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatformService> integrationPlatformService; // @synthesize integrationPlatformService=_integrationPlatformService;
+@property(nonatomic) __weak id <SPTAccessoryManagerSessionService> accessorySessionService; // @synthesize accessorySessionService=_accessorySessionService;
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryService; // @synthesize accessoryService=_accessoryService;
 @property(readonly, nonatomic) SPTHearablesFeatureProperties *remoteProperties;
 - (void)disableConnections;
 - (void)enableConnections;
+- (id)provideSpotifyGoAPI;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

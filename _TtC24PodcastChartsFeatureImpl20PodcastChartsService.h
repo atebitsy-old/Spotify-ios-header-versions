@@ -9,8 +9,6 @@
 @interface _TtC24PodcastChartsFeatureImpl20PodcastChartsService : NSObject
 {
     // Error parsing type: , name: containerService
-    // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: featureProperties
     // Error parsing type: , name: pageRegistrationToken
     // Error parsing type: , name: glueImageLoader
     // Error parsing type: , name: $__lazy_storage_$_hubManager

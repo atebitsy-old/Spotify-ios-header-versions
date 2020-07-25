@@ -8,12 +8,12 @@
 
 @interface SPTAdVoiceEventSpeechIntentRecognized : SPTAdVoiceEvent
 {
-    _Bool _isPositive;
+    long long _intentType;
 }
 
-@property(readonly, nonatomic) _Bool isPositive; // @synthesize isPositive=_isPositive;
+@property(readonly, nonatomic) long long intentType; // @synthesize intentType=_intentType;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithIsPositive:(_Bool)arg1;
+- (id)initWithIntentType:(long long)arg1;
 
 @end
 

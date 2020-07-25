@@ -33,7 +33,6 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)serializedDictionary;
 - (id)initWithDictionary:(id)arg1;
-@property(nonatomic, readonly) _Bool isMusicVideo;
 @property(readonly, nonatomic, getter=isFullScreenAdvertisement) _Bool fullScreenAdvertisement;
 @property(readonly, nonatomic, getter=isSASInterruption) _Bool sasInterruption;
 @property(readonly, nonatomic, getter=isInterruption) _Bool interruption;

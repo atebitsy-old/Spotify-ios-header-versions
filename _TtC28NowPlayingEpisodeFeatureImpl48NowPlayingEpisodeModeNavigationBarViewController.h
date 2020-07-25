@@ -8,9 +8,13 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl48NowPlayingEpisodeModeNavigationBarViewController : UIViewController
 {
-    // Error parsing type: , name: model
     // Error parsing type: , name: nowPlayingManager
     // Error parsing type: , name: auxiliaryActionsHandler
+    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: closeButton
+    // Error parsing type: , name: contextMenuButton
+    // Error parsing type: , name: navigationTitle
+    // Error parsing type: , name: linkDispatcher
 }
 
 - (void).cxx_destruct;
@@ -18,10 +22,8 @@
 - (void)titlePressedWithSender:(id)arg1;
 - (void)rightButtonPressedWithSender:(id)arg1;
 - (void)leftButtonPressedWithSender:(id)arg1;
-- (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)viewWillAppear:(_Bool)arg1;
-- (void)loadView;
 - (id)initWithCoder:(id)arg1;
 
 @end

@@ -15,7 +15,7 @@
 #import "SPTSlateWireframeCustomPresentationDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTAdsMarqueContentViewController, SPTAdsMarqueeContextMenuFactory, SPTAdsMarqueeContextMenuTransition, SPTAdsMarqueeContextMenuView, SPTAdsMarqueeContextMenuViewController, SPTNavigationManager, SPTProgressView, SPTTheme, UIImage;
-@protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAdsBaseMarqueeEntity, SPTAdsBaseRegistry, SPTEventSender, SPTInAppMessagePresentationMonitor, SPTLinkDispatcher, SPTLogCenter, SPTProductState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService, SPTWebViewFactory;
+@protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAdsBaseMarqueeEntity, SPTAdsBaseRegistry, SPTEventSender, SPTInAppMessagePresentationMonitor, SPTLinkDispatcher, SPTProductState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService, SPTWebViewFactory;
 
 @interface SPTAdsMarqueeController : NSObject <SPTAdsBaseRegistryObserver, SPTNavigationManagerDelegate, SPTSlateDataSource, SPTSlateDelegate, SPTSlateViewDataSource, SPTSlateWireframeCustomPresentationDelegate, SPTAdsMarqueContentViewControllerDelegate>
 {
@@ -43,7 +43,6 @@
     id <SPTAdsBaseMarqueeEntity> _adEntity;
     id <SPTSlate> _slate;
     UIImage *_albumImage;
-    id <SPTLogCenter> _logCenter;
     SPTProgressView *_progressView;
     NSURL *_currentContextURL;
     id <SPTProductState> _productState;
@@ -55,7 +54,6 @@
 @property(nonatomic) _Bool shouldNavigateToAlbum; // @synthesize shouldNavigateToAlbum=_shouldNavigateToAlbum;
 @property(retain, nonatomic) NSURL *currentContextURL; // @synthesize currentContextURL=_currentContextURL;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) UIImage *albumImage; // @synthesize albumImage=_albumImage;
 @property(retain, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
 @property(retain, nonatomic) id <SPTAdsBaseMarqueeEntity> adEntity; // @synthesize adEntity=_adEntity;
@@ -103,7 +101,7 @@
 - (_Bool)isCurrentContextURLHome;
 - (void)forcePresentMarquee;
 - (void)dealloc;
-- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 imageLoader:(id)arg3 slateBuilderProvider:(id)arg4 slateManager:(id)arg5 contextMenuFactory:(id)arg6 presentationService:(id)arg7 navigationManager:(id)arg8 linkDispatcher:(id)arg9 inAppMessagePresentationMonitor:(id)arg10 logCenter:(id)arg11 theme:(id)arg12 productState:(id)arg13 eventSender:(id)arg14;
+- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 imageLoader:(id)arg3 slateBuilderProvider:(id)arg4 slateManager:(id)arg5 contextMenuFactory:(id)arg6 presentationService:(id)arg7 navigationManager:(id)arg8 linkDispatcher:(id)arg9 inAppMessagePresentationMonitor:(id)arg10 theme:(id)arg11 productState:(id)arg12 eventSender:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

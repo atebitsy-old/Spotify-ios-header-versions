@@ -11,11 +11,12 @@
 #import "SPTNowPlayingScrollViewModelDelegate-Protocol.h"
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
+#import "UICollectionViewDelegateFlowLayout-Protocol.h"
 
 @class CAShapeLayer, GLUEGradientView, NSLayoutConstraint, NSNotificationCenter, NSString, SPTNowPlayingBackgroundViewController, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingScrollViewModel, SPTTheme, UICollectionView, UICollectionViewFlowLayout;
-@protocol SPTNowPlayingContentContainingViewController, SPTNowPlayingScrollViewControllerGestureDelegate;
+@protocol SPTNowPlayingScrollViewControllerGestureDelegate, SPTNowPlayingViewControllerProtocol;
 
-@interface SPTNowPlayingScrollViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, SPTNowPlayingScrollViewModelDelegate, SPTNowPlayingContentViewControllerObserver, SPTNowPlayingContainerIdleMonitorReceiving>
+@interface SPTNowPlayingScrollViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SPTNowPlayingScrollViewModelDelegate, SPTNowPlayingContentViewControllerObserver, SPTNowPlayingContainerIdleMonitorReceiving>
 {
     _Bool _isShowingScrollComponents;
     _Bool _scrollViewIsAnimating;
@@ -23,7 +24,7 @@
     UICollectionView *_collectionView;
     id <SPTNowPlayingScrollViewControllerGestureDelegate> _gestureDelegate;
     UICollectionViewFlowLayout *_collectionViewLayout;
-    UIViewController<SPTNowPlayingContentContainingViewController> *_nowPlayingViewController;
+    UIViewController<SPTNowPlayingViewControllerProtocol> *_nowPlayingViewController;
     SPTNowPlayingBackgroundViewController *_backgroundViewController;
     NSLayoutConstraint *_npvHeightConstraint;
     SPTNowPlayingScrollViewModel *_scrollViewModel;
@@ -46,16 +47,19 @@
 @property(retain, nonatomic) SPTNowPlayingScrollViewModel *scrollViewModel; // @synthesize scrollViewModel=_scrollViewModel;
 @property(retain, nonatomic) NSLayoutConstraint *npvHeightConstraint; // @synthesize npvHeightConstraint=_npvHeightConstraint;
 @property(readonly, nonatomic) SPTNowPlayingBackgroundViewController *backgroundViewController; // @synthesize backgroundViewController=_backgroundViewController;
-@property(retain, nonatomic) UIViewController<SPTNowPlayingContentContainingViewController> *nowPlayingViewController; // @synthesize nowPlayingViewController=_nowPlayingViewController;
+@property(retain, nonatomic) UIViewController<SPTNowPlayingViewControllerProtocol> *nowPlayingViewController; // @synthesize nowPlayingViewController=_nowPlayingViewController;
 @property(retain, nonatomic) UICollectionViewFlowLayout *collectionViewLayout; // @synthesize collectionViewLayout=_collectionViewLayout;
 @property(nonatomic) __weak id <SPTNowPlayingScrollViewControllerGestureDelegate> gestureDelegate; // @synthesize gestureDelegate=_gestureDelegate;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 - (struct CGSize)sizeForItemAtIndex:(unsigned long long)arg1;
-- (void)updateLayout;
+- (double)componentWidth;
+- (void)reloadCollectionViewLayout;
+- (double)peekHeight;
 - (double)viewWidth;
 - (double)nowPlayingViewHeight;
+- (struct CGSize)nowPlayingViewControllerSizeForContainerSize:(struct CGSize)arg1;
+- (double)maxNowPlayingViewControllerWidth;
 - (double)currentWindowHeight;
-- (double)screenHeight;
 - (void)resetIdleState;
 - (void)applicationDidBecomeActive;
 - (void)removeApplicationStateObservers;
@@ -72,6 +76,7 @@
 - (void)scrollViewDidEndScrollingAnimation:(id)arg1;
 - (void)scrollViewDidEndDecelerating:(id)arg1;
 - (void)scrollViewWillBeginDragging:(id)arg1;
+- (struct UIEdgeInsets)collectionView:(id)arg1 layout:(id)arg2 insetForSectionAtIndex:(long long)arg3;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 - (void)refreshScrollBackgroundGradientVisibility;
 - (void)reloadCollectionViewData;
@@ -80,19 +85,22 @@
 - (void)collectionView:(id)arg1 willDisplaySupplementaryView:(id)arg2 forElementKind:(id)arg3 atIndexPath:(id)arg4;
 - (id)collectionView:(id)arg1 viewForSupplementaryElementOfKind:(id)arg2 atIndexPath:(id)arg3;
 - (void)setupNowPlayingViewControllerInView:(id)arg1;
+- (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 referenceSizeForHeaderInSection:(long long)arg3;
 - (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)traitCollectionDidChange:(id)arg1;
+- (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)setRoundedCornersIfNeeded:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
-- (void)setupCollectionViewContentInset;
-- (void)updateNPVSize;
 - (void)setupBackgroundViews;
+- (void)refreshBackgroundViewFrame;
+- (void)setupRoundedCornersMaskLayer;
 - (void)setupUI;
+- (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (id)initWithNowPlayingViewController:(id)arg1 scrollViewModel:(id)arg2 theme:(id)arg3 notificationCenter:(id)arg4 backgroundViewController:(id)arg5;
 

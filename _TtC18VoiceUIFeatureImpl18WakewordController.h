@@ -11,6 +11,7 @@
     // Error parsing type: , name: delegate
     // Error parsing type: , name: provider
     // Error parsing type: , name: testManager
+    // Error parsing type: , name: superbirdDetector
     // Error parsing type: , name: loop
 }
 

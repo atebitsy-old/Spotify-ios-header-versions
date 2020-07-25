@@ -18,6 +18,8 @@
     _Bool _skippable;
     _Bool _inAppBrowser;
     _Bool _physicalButtonsSupported;
+    _Bool _isAudioPlus;
+    _Bool _bookmarkable;
     NSString *_identifier;
     NSString *_adPlaybackID;
     unsigned long long _skipDelaySecs;
@@ -45,6 +47,8 @@
 
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSDictionary *metadata; // @synthesize metadata=_metadata;
+@property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable; // @synthesize bookmarkable=_bookmarkable;
+@property(readonly, nonatomic) _Bool isAudioPlus; // @synthesize isAudioPlus=_isAudioPlus;
 @property(readonly, copy, nonatomic) NSString *format; // @synthesize format=_format;
 @property(readonly, nonatomic) id <SPTAdsBaseVoiceModel> voice; // @synthesize voice=_voice;
 @property(readonly, copy, nonatomic) NSString *offerSubtitle; // @synthesize offerSubtitle=_offerSubtitle;

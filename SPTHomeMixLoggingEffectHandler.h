@@ -9,19 +9,19 @@
 #import "SPTHomeMixEffectHandler-Protocol.h"
 
 @class NSString;
-@protocol SPTLogCenter;
+@protocol SPTUBILogger;
 
 @interface SPTHomeMixLoggingEffectHandler : NSObject <SPTHomeMixEffectHandler>
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTUBILogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (void)acceptEffect:(id)arg1 model:(id)arg2;
 - (void)acceptNext:(id)arg1;
 - (_Bool)canAcceptEffect:(id)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithUbiLogger:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

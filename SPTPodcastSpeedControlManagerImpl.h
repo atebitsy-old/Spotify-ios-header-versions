@@ -32,7 +32,7 @@
 - (id)providePodcastPlaybackSpeeds;
 - (id)currentPodcastPlaybackSpeedIconWithSize:(struct CGSize)arg1;
 - (id)provideSpeedControlIconImage;
-- (id)providePodcastSpeedControlViewController;
+- (id)providePodcastSpeedControlViewControllerWithURL:(id)arg1;
 - (id)initWithPodcastPreferences:(id)arg1 podcastLogger:(id)arg2 theme:(id)arg3 podcastTestManager:(id)arg4;
 
 // Remaining properties

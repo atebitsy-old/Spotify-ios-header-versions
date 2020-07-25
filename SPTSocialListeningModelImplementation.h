@@ -70,8 +70,8 @@
 - (void)addObserver:(id)arg1;
 - (void)pauseCurrentPlayback;
 - (void)leaveSession;
-- (void)joinSessionWithURL:(id)arg1;
-- (void)joinSessionConfirmed:(_Bool)arg1 sessionURL:(id)arg2;
+- (void)joinSessionWithURL:(id)arg1 sessionMode:(long long)arg2;
+- (void)joinSessionConfirmed:(_Bool)arg1 sessionURL:(id)arg2 sessionMode:(long long)arg3;
 - (void)lookupSessionBeforeJoining:(id)arg1;
 - (void)lookupSessionWithURL:(id)arg1;
 - (void)loadSession:(_Bool)arg1;

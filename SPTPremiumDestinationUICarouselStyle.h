@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class NSString;
+@class NSArray, NSString;
 
 @interface SPTPremiumDestinationUICarouselStyle : NSObject <GLUEStyle>
 {
@@ -18,8 +18,11 @@
     double _bottomContentMargin;
     double _defaultMinimumLineSpacing;
     double _compactMinimumLineSpacing;
+    NSArray *_gradientColors;
 }
 
+- (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *gradientColors; // @synthesize gradientColors=_gradientColors;
 @property(nonatomic) double compactMinimumLineSpacing; // @synthesize compactMinimumLineSpacing=_compactMinimumLineSpacing;
 @property(nonatomic) double defaultMinimumLineSpacing; // @synthesize defaultMinimumLineSpacing=_defaultMinimumLineSpacing;
 @property(nonatomic) double bottomContentMargin; // @synthesize bottomContentMargin=_bottomContentMargin;

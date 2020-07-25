@@ -41,7 +41,7 @@
 - (void)updateSkipDelayLabel;
 - (id)skipDelayAttributedText:(unsigned long long)arg1;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)updateSkipButtons:(_Bool)arg1;

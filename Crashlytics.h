@@ -9,12 +9,11 @@
 #import "CLSBetaControllerDelegate-Protocol.h"
 #import "CLSCrashReportingControllerDelegate-Protocol.h"
 #import "FABKit-Protocol.h"
-#import "WKScriptMessageHandler-Protocol.h"
 
 @class CLSBetaController, CLSCrashReportingController, NSString;
 @protocol CrashlyticsDelegate;
 
-@interface Crashlytics : NSObject <FABKit, CLSCrashReportingControllerDelegate, CLSBetaControllerDelegate, WKScriptMessageHandler>
+@interface Crashlytics : NSObject <FABKit, CLSCrashReportingControllerDelegate, CLSBetaControllerDelegate>
 {
     id <CrashlyticsDelegate> _delegate;
     CLSCrashReportingController *_crashReportingController;
@@ -46,7 +45,6 @@
 - (void).cxx_destruct;
 - (void)logEvent:(id)arg1 attributes:(id)arg2;
 - (void)logEvent:(id)arg1;
-- (void)userContentController:(id)arg1 didReceiveScriptMessage:(id)arg2;
 - (id)settingsForBetaController:(id)arg1;
 - (id)APIKeyForBetaController:(id)arg1;
 - (id)settingsForCrashReportingController:(id)arg1;
@@ -62,9 +60,6 @@
 - (_Bool)shouldInstallCrashCallback;
 - (void)warnDelegateAboutMethods;
 - (_Bool)delegateRespondsToLegacyMethods;
-- (void)monitorErrorsForWKWebViewConfiguration:(id)arg1;
-- (_Bool)handleWebView:(id)arg1 shouldStartLoadWithRequest:(id)arg2 navigationType:(long long)arg3;
-- (void)monitorErrorsForUIWebView:(id)arg1;
 - (void)recordCustomExceptionName:(id)arg1 reason:(id)arg2 frameArray:(id)arg3;
 - (void)recordError:(id)arg1 withAdditionalUserInfo:(id)arg2;
 - (void)recordError:(id)arg1;

@@ -18,8 +18,8 @@
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *currentWelcomeImageAttemptID; // @synthesize currentWelcomeImageAttemptID=_currentWelcomeImageAttemptID;
-@property(retain, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
-@property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
+@property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
 - (void)resetCurrentLoggerAttemptID;
 - (void)logImageResponseWithError:(id)arg1;
 - (void)logImageInteractionWithName:(id)arg1;
@@ -27,12 +27,10 @@
 - (void)logUserDidTapImage;
 - (void)logDidFailLoadImageWithError:(id)arg1;
 - (void)logDidFinishLoadImage;
-- (void)logDidStartLoadImageWithName:(id)arg1 size:(id)arg2 forScreenWidth:(double)arg3;
+- (void)logDidStartLoadImageWithURL:(id)arg1 forScreenWidth:(double)arg2;
 - (void)logInterfaceOrientation:(long long)arg1;
 - (void)logIOS13IfNeeded;
-- (void)logUserDidReceiveMixedLayout;
-- (void)logUserDidReceiveIntentLedLayout;
-- (void)logUserDidReceiveMethodLedLayout;
+- (void)logUserDidReceiveLayoutWithName:(id)arg1;
 - (void)logViewLaunchTimeFromLogout:(_Bool)arg1;
 - (void)logUserDidSeeView;
 - (id)initWithLogger:(id)arg1;

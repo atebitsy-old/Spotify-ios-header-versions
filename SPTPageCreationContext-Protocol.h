@@ -10,8 +10,8 @@
 @protocol SPTLinkDispatcher;
 
 @protocol SPTPageCreationContext <NSObject>
-@property(readonly, copy, nonatomic) NSDictionary *queryParameters;
-@property(readonly, copy, nonatomic) NSString *referrerIdentifier;
+@property(nonatomic, readonly) NSDictionary *queryParameters;
+@property(nonatomic, readonly) NSString *referrerIdentifier;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher;
 @end
 

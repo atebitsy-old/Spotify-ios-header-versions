@@ -20,8 +20,10 @@
     // Error parsing type: , name: startTimeMilliseconds
     // Error parsing type: , name: endTimeMilliseconds
     // Error parsing type: , name: type
+    // Error parsing type: , name: isAbridged
 }
 
+@property(nonatomic, readonly) _Bool isAbridged; // @synthesize isAbridged;
 @property(nonatomic, readonly) long long type; // @synthesize type;
 @property(nonatomic, readonly) double endTime;
 @property(nonatomic, readonly) double startTime;

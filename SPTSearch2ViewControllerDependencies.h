@@ -6,48 +6,46 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPContextMenuFeature, SPTAgeVerificationService, SPTContainerService, SPTExplicitContentService, SPTGLUEService, SPTHubsRendererFactory, SPTLogCenter, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTUBIService, SPTURIDispatchService;
+@protocol GLUETheme, SPTAgeVerificationProvider, SPTContextMenuOptionsFactory, SPTContextMenuPresenterFactory, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTImageLoaderFactory, SPTLinkDispatcher, SPTLogCenter, SPTOnDemandSet, SPTPodcastContextMenuProvider, SPTSearchPlayerProvider, SPTSearchRecentsDataSourceProviding, SPTShelves, SPTUBIUserBehaviourInstrumentation;
 
 @interface SPTSearch2ViewControllerDependencies : NSObject
 {
-    id <SPTNetworkService> _networkService;
-    id <SPTSessionService> _sessionService;
-    id <SPTGLUEService> _glueService;
-    id <SPTPlaylistPlatformService> _playlistPlatformService;
-    id <SPTHubsRendererFactory> _hubsRendererFactory;
-    id <SPTPlayerFeature> _playerService;
-    id <SPTContainerService> _containerService;
-    id <SPTPodcastFeature> _podcastService;
-    id <SPTShelfService> _shelfService;
-    id <SPTSearchRecentsDataSourceProviding> _recentsDataSourceProvider;
-    id <SPTOnDemandService> _onDemandService;
+    id <GLUETheme> _theme;
+    id <SPTUBIUserBehaviourInstrumentation> _ubi;
     id <SPTLogCenter> _logCenter;
-    id <SPContextMenuFeature> _contextMenuService;
-    id <SPTExplicitContentService> _explicitContentService;
-    id <SPTAgeVerificationService> _ageVerificationService;
-    id <SPTUBIService> _ubiService;
-    id <SPTURIDispatchService> _uriDispatchService;
+    id <SPTOnDemandSet> _onDemandSet;
+    id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <SPTAgeVerificationProvider> _ageVerificationProvider;
+    id <SPTSearchPlayerProvider> _playerProvider;
+    id <SPTSearchRecentsDataSourceProviding> _recentsDataSourceProvider;
+    id <SPTLinkDispatcher> _linkDispatcher;
+    id <SPTImageLoaderFactory> _imageLoaderFactory;
+    id <SPTHugsFactory> _hugsFactory;
+    id <SPTHubsRendererFactory> _hubsRendererFactory;
+    id <SPTShelves> _shelves;
+    id <SPTContextMenuOptionsFactory> _contextMenuOptionsFactory;
+    id <SPTContextMenuPresenterFactory> _contextMenuPresenterFactory;
+    id <SPTPodcastContextMenuProvider> _contextMenuProvider;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-@property(readonly, nonatomic) id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
-@property(readonly, nonatomic) id <SPTAgeVerificationService> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
-@property(readonly, nonatomic) id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
-@property(readonly, nonatomic) id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
-@property(readonly, nonatomic) id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
-@property(readonly, nonatomic) id <SPTSearchRecentsDataSourceProviding> recentsDataSourceProvider; // @synthesize recentsDataSourceProvider=_recentsDataSourceProvider;
-@property(readonly, nonatomic) id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;
-@property(readonly, nonatomic) id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
-@property(readonly, nonatomic) id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-@property(readonly, nonatomic) id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
+@property(readonly, nonatomic) id <SPTPodcastContextMenuProvider> contextMenuProvider; // @synthesize contextMenuProvider=_contextMenuProvider;
+@property(readonly, nonatomic) id <SPTContextMenuPresenterFactory> contextMenuPresenterFactory; // @synthesize contextMenuPresenterFactory=_contextMenuPresenterFactory;
+@property(readonly, nonatomic) id <SPTContextMenuOptionsFactory> contextMenuOptionsFactory; // @synthesize contextMenuOptionsFactory=_contextMenuOptionsFactory;
+@property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
-@property(readonly, nonatomic) id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
-@property(readonly, nonatomic) id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(readonly, nonatomic) id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
-@property(readonly, nonatomic) id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (id)initWithNetworkService:(id)arg1 sessionService:(id)arg2 glueService:(id)arg3 playlistPlatformService:(id)arg4 hubsRendererFactory:(id)arg5 playerService:(id)arg6 containerService:(id)arg7 podcastService:(id)arg8 shelfService:(id)arg9 recentsDataSourceProvider:(id)arg10 onDemandService:(id)arg11 logCenter:(id)arg12 contextMenuService:(id)arg13 explicitContentService:(id)arg14 ageVerificationService:(id)arg15 ubiService:(id)arg16 uriDispatchService:(id)arg17;
+@property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
+@property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
+@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
+@property(readonly, nonatomic) id <SPTSearchRecentsDataSourceProviding> recentsDataSourceProvider; // @synthesize recentsDataSourceProvider=_recentsDataSourceProvider;
+@property(readonly, nonatomic) id <SPTSearchPlayerProvider> playerProvider; // @synthesize playerProvider=_playerProvider;
+@property(readonly, nonatomic) id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
+@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
+@property(readonly, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
+@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTUBIUserBehaviourInstrumentation> ubi; // @synthesize ubi=_ubi;
+@property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
+- (id)initWithTheme:(id)arg1 ubi:(id)arg2 logCenter:(id)arg3 onDemandSet:(id)arg4 explicitContentAccessManager:(id)arg5 ageVerificationProvider:(id)arg6 playerProvider:(id)arg7 recentsDataSourceProvider:(id)arg8 linkDispatcher:(id)arg9 imageLoaderFactory:(id)arg10 hugsFactory:(id)arg11 hubsRendererFactory:(id)arg12 shelves:(id)arg13 contextMenuOptionsFactory:(id)arg14 contextMenuPresenterFactory:(id)arg15 contextMenuProvider:(id)arg16;
 
 @end
 

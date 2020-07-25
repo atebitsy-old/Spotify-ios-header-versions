@@ -8,7 +8,7 @@
 
 #import "SPTOnDemandSet-Protocol.h"
 
-@class NSSet, NSString, SPTObserverManager, SPTOnDemandSetTestManager, SPTPersistentCache;
+@class NSSet, NSString, NSURL, SPTObserverManager, SPTOnDemandSetTestManager, SPTPersistentCache;
 @protocol OS_dispatch_queue;
 
 @interface SPTOnDemandSetImplementation : NSObject <SPTOnDemandSet>
@@ -18,11 +18,13 @@
     SPTOnDemandSetTestManager *_testManager;
     NSObject<OS_dispatch_queue> *_persistentCacheQueue;
     NSSet *_onDemandURLs;
+    NSURL *_temporaryOnDemandItemURI;
     SPTObserverManager *_observerManager;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
+@property(copy, nonatomic) NSURL *temporaryOnDemandItemURI; // @synthesize temporaryOnDemandItemURI=_temporaryOnDemandItemURI;
 @property(copy, nonatomic) NSSet *onDemandURLs; // @synthesize onDemandURLs=_onDemandURLs;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *persistentCacheQueue; // @synthesize persistentCacheQueue=_persistentCacheQueue;
 @property(readonly, nonatomic) SPTOnDemandSetTestManager *testManager; // @synthesize testManager=_testManager;
@@ -32,6 +34,7 @@
 - (id)convertToPlaylistV2Set:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (void)updateTemporaryOnDemandItem:(id)arg1;
 - (void)updateOnDemandSet:(id)arg1;
 - (_Bool)containsURL:(id)arg1;
 - (void)cacheOnDemandSet:(id)arg1;

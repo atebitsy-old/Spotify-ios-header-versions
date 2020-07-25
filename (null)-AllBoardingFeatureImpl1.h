@@ -6,7 +6,6 @@
 
 @interface (null) (AllBoardingFeatureImpl1)
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
-- (void)collectionView:(id)arg1 didDeselectItemAtIndexPath:(id)arg2;
 - (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 @end
 

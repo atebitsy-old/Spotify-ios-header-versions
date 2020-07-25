@@ -12,6 +12,7 @@
     // Error parsing type: , name: viewDependencies
     // Error parsing type: , name: _view
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
+    // Error parsing type: , name: isFirstViewWillAppear
     // Error parsing type: , name: delegate
 }
 

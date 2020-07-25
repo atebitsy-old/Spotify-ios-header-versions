@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeViewModelDelegate-Protocol.h"
 #import "UITextViewDelegate-Protocol.h"
 
-@class GLUELabel, NSString, SPTPodcastEpisodeDescriptionTextView, SPTPodcastEpisodeLogger, SPTPodcastEpisodeViewModel, UILayoutGuide, UIStackView;
+@class GLUELabel, NSString, SPTPodcastEpisodeDescriptionTextView, SPTPodcastEpisodeFeatureProperties, SPTPodcastEpisodeLogger, SPTPodcastEpisodeViewModel, UILayoutGuide, UIStackView;
 @protocol GLUETheme;
 
 @interface SPTPodcastEpisodeDescriptionViewController : UIViewController <SPTPodcastEpisodeViewModelDelegate, UITextViewDelegate>
@@ -21,9 +21,11 @@
     SPTPodcastEpisodeDescriptionTextView *_descriptionTextView;
     GLUELabel *_metadataLabel;
     UILayoutGuide *_layoutGuide;
+    SPTPodcastEpisodeFeatureProperties *_featureProperties;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPodcastEpisodeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) UILayoutGuide *layoutGuide; // @synthesize layoutGuide=_layoutGuide;
 @property(retain, nonatomic) GLUELabel *metadataLabel; // @synthesize metadataLabel=_metadataLabel;
 @property(retain, nonatomic) SPTPodcastEpisodeDescriptionTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
@@ -40,9 +42,10 @@
 - (void)viewModel:(id)arg1 didUpdateWithError:(id)arg2;
 - (void)setUpConstraints;
 - (void)setUpView;
+- (void)dealloc;
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 logger:(id)arg3;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 logger:(id)arg3 htmlParser:(id)arg4 featureProperties:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

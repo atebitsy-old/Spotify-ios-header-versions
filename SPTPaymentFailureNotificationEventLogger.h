@@ -7,23 +7,23 @@
 #import <objc/NSObject.h>
 
 @class SPTPaymentFailureNotificationRetryManager;
-@protocol SPTLogCenter;
+@protocol SPTEventSender;
 
 @interface SPTPaymentFailureNotificationEventLogger : NSObject
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     SPTPaymentFailureNotificationRetryManager *_retryManager;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTPaymentFailureNotificationRetryManager *retryManager; // @synthesize retryManager=_retryManager;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)sendLogMessageWithType:(id)arg1;
 - (void)logPaymentFailureNotificationWasDismissedBySystem;
 - (void)logPaymentFailureNotificationWasDismissedByUser;
 - (void)logPaymentFailureNotificationWasQueued;
 - (void)logPaymentFailureNotificationWasPresented;
-- (id)initWithLogCenter:(id)arg1 retryManager:(id)arg2;
+- (id)initWithEventSender:(id)arg1 retryManager:(id)arg2;
 
 @end
 

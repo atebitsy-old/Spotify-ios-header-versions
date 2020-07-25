@@ -56,7 +56,7 @@
 - (void)addPlaybackEventObserver:(id)arg1;
 - (void)videoPlaybackSessionDidFinish:(id)arg1;
 - (void)videoPlaybackSession:(id)arg1 didChangeDuration:(double)arg2;
-- (void)videoPlaybackSession:(id)arg1 didPlayToTime:(CDStruct_1b6d18a9)arg2;
+- (void)videoPlaybackSession:(id)arg1 didPlayToTime:(CDStruct_198678f7)arg2;
 - (void)videoPlaybackSessionDidStart:(id)arg1;
 - (void)stopWithNextIdentity:(id)arg1;
 - (void)loadSessionWithIdentity:(id)arg1 options:(id)arg2;

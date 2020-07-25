@@ -10,7 +10,7 @@
 #import "SPTVideoResourceLoaderInternal-Protocol.h"
 
 @class NSMutableSet, NSString, NSURL, SPTSpotifyVideoHLSDataFactory, SPTVideoApplicationStateObservable, SPTVideoCDNSelector, SPTVideoManifest, SPTVideoManifestResourceLoader;
-@protocol BMPlaybackIdentity, SPTVideoResourceLoaderInternalDelegate, SPTVideoResourceRequestFactory;
+@protocol BMPlaybackIdentity, SPTVideoResourceLoaderInternalDelegate;
 
 @interface SPTSpotifyVideoResourceLoader : NSObject <SPTVideoApplicationStateObserver, SPTVideoResourceLoaderInternal>
 {
@@ -18,7 +18,6 @@
     NSURL *_lastCDN;
     unsigned long long connectionMode;
     id <SPTVideoResourceLoaderInternalDelegate> delegate;
-    id <SPTVideoResourceRequestFactory> _resourceRequestFactory;
     SPTVideoManifest *_manifest;
     SPTVideoCDNSelector *_cdnSelector;
     id <BMPlaybackIdentity> _identity;
@@ -36,7 +35,6 @@
 @property(retain, nonatomic) id <BMPlaybackIdentity> identity; // @synthesize identity=_identity;
 @property(retain, nonatomic) SPTVideoCDNSelector *cdnSelector; // @synthesize cdnSelector=_cdnSelector;
 @property(retain, nonatomic) SPTVideoManifest *manifest; // @synthesize manifest=_manifest;
-@property(retain, nonatomic) id <SPTVideoResourceRequestFactory> resourceRequestFactory; // @synthesize resourceRequestFactory=_resourceRequestFactory;
 @property(nonatomic) __weak id <SPTVideoResourceLoaderInternalDelegate> delegate; // @synthesize delegate;
 @property(nonatomic) unsigned long long connectionMode; // @synthesize connectionMode;
 @property(readonly, nonatomic) NSURL *lastCDN; // @synthesize lastCDN=_lastCDN;
@@ -57,7 +55,7 @@
 - (void)prepareManifestResource:(CDUnknownBlockType)arg1;
 - (id)videoProfileForURL:(id)arg1;
 - (id)URLForAsset;
-- (id)initWithIdentity:(id)arg1 manifestResourceLoader:(id)arg2 resourceRequestFactory:(id)arg3 cdnSelector:(id)arg4 appStateObservable:(id)arg5 hlsDataFactory:(id)arg6;
+- (id)initWithIdentity:(id)arg1 manifestResourceLoader:(id)arg2 cdnSelector:(id)arg3 appStateObservable:(id)arg4 hlsDataFactory:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

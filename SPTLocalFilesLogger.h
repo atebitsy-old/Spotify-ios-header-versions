@@ -7,18 +7,20 @@
 #import <objc/NSObject.h>
 
 @class NSURL;
-@protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileLocalFilesImportEventFactory;
+@protocol SPTEventSender, SPTLogCenter, SPTUBILogger, SPTUBIMobileLocalFilesImportEventFactory;
 
 @interface SPTLocalFilesLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
     NSURL *_viewURI;
     id <SPTUBILogger> _ubiLogger;
+    id <SPTEventSender> _eventSender;
     id <SPTUBIMobileLocalFilesImportEventFactory> _eventFactory;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTUBIMobileLocalFilesImportEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
@@ -44,7 +46,7 @@
 - (void)logFlowPageChangedWithSection:(long long)arg1;
 - (void)logFlowSelectAllButtonSelected:(_Bool)arg1 section:(long long)arg2;
 - (void)logFlowImportStartedWithTargetURI:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2;
+- (id)initWithLogCenter:(id)arg1 ubiLogger:(id)arg2 eventSender:(id)arg3;
 
 @end
 

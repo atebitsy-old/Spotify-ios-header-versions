@@ -61,16 +61,23 @@
 - (id)items;
 - (unsigned long long)numberOfRows;
 - (id)reuseIdentifiers;
+- (id)reuseIdentifierForItem:(id)arg1 indexPath:(id)arg2;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
+- (double)heightForItem:(id)arg1 indexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;
+- (void)didEndDisplayingPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)willDisplayPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)enableSwipeGesturesOnCell:(id)arg1 withItem:(id)arg2;
 - (void)configureCell:(id)arg1 cellModel:(id)arg2;
 - (void)configureRefreshButtonCell:(id)arg1;
 - (void)configureHeaderCell:(id)arg1 headerCellModel:(id)arg2;
+- (void)configureCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 - (id)initWithTrackRowFactory:(id)arg1 model:(id)arg2 shelves:(id)arg3 theme:(id)arg4 productState:(id)arg5 trackActivePredicate:(id)arg6 logger:(id)arg7;
 

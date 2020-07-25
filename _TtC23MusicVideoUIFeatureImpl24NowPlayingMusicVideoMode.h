@@ -12,11 +12,12 @@
 {
     // Error parsing type: , name: layoutDelegate
     // Error parsing type: , name: viewControllerRegistry
-    // Error parsing type: , name: playbackActionsHandler
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: footerLoopControllerConfiguration
+    // Error parsing type: , name: headUnitLoopControllerConfiguration
     // Error parsing type: , name: footerViewController
+    // Error parsing type: , name: headViewController
 }
 
 - (void).cxx_destruct;

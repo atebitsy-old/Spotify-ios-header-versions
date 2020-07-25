@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UICollectionViewCell.h>
+#import "SPTNowPlayingContentLayerCell.h"
 
 #import "BMVideoSurfaceDelegate-Protocol.h"
 
 @class BMVideoSurfaceFactory, NSMutableArray, NSString, SPTNowPlayingCoverArtImageView, SPTNowPlayingHorizontalVideoOverlayViewController, UIActivityIndicatorView, UIView;
 @protocol BMVideoSurface, BMVideoSurfaceManager, SPTNowPlayingVideoManager;
 
-@interface SPTNowPlayingVideoCell : UICollectionViewCell <BMVideoSurfaceDelegate>
+@interface SPTNowPlayingVideoCell : SPTNowPlayingContentLayerCell <BMVideoSurfaceDelegate>
 {
     _Bool _shouldDisplayVideoSurface;
     _Bool _showHorizontalVideoOverlay;

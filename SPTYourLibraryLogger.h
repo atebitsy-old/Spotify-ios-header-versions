@@ -22,7 +22,6 @@
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIImpressionWithSectionId:(id)arg1 index:(long long)arg2 renderType:(id)arg3;
 - (void)logImpressionForPageURI:(id)arg1 index:(long long)arg2;
-- (void)logCreatePlaylistAction:(unsigned long long)arg1;
 - (void)logSelectedTabIndex:(unsigned long long)arg1 groupIndex:(unsigned long long)arg2 pageURI:(id)arg3;
 - (void)logSelectedGroupIndex:(unsigned long long)arg1;
 - (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;

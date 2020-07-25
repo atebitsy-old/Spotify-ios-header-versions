@@ -13,6 +13,7 @@
     // Error parsing type: , name: viewBinder
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: encoreTrackRowFactory
+    // Error parsing type: , name: listeningHistoryLogger
 }
 
 - (void).cxx_destruct;

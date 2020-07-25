@@ -12,7 +12,7 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class NSLayoutConstraint, NSString, SPTPremiumDestinationUICarouselStyle, SPTPremiumDestinationUIGLUETheme, SPTPremiumDestinationUIValueCarouselFlowLayout, UICollectionView, UIPageControl;
+@class NSLayoutConstraint, NSString, SPTPremiumDestinationUICarouselGradientView, SPTPremiumDestinationUICarouselStyle, SPTPremiumDestinationUIGLUETheme, SPTPremiumDestinationUIValueCarouselFlowLayout, UICollectionView, UIPageControl;
 @protocol HUBComponentViewChildDelegate, SPTPremiumDestinationUICarouselItemSizeCalculator;
 
 @interface SPTPremiumDestinationUICarouselComponentView : HUBComponentView <UICollectionViewDataSource, UICollectionViewDelegate, HUBComponentViewWithChildren, HUBComponentViewObserver, HUBComponentViewWithRestorableUIState>
@@ -23,6 +23,7 @@
     SPTPremiumDestinationUIGLUETheme *_theme;
     SPTPremiumDestinationUICarouselStyle *_style;
     SPTPremiumDestinationUIValueCarouselFlowLayout *_collectionLayout;
+    SPTPremiumDestinationUICarouselGradientView *_gradientView;
     UICollectionView *_collectionView;
     UIPageControl *_pageControl;
     NSLayoutConstraint *_collectionViewHeightConstraint;
@@ -34,6 +35,7 @@
 @property(retain, nonatomic) NSLayoutConstraint *collectionViewHeightConstraint; // @synthesize collectionViewHeightConstraint=_collectionViewHeightConstraint;
 @property(retain, nonatomic) UIPageControl *pageControl; // @synthesize pageControl=_pageControl;
 @property(retain, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
+@property(retain, nonatomic) SPTPremiumDestinationUICarouselGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(retain, nonatomic) SPTPremiumDestinationUIValueCarouselFlowLayout *collectionLayout; // @synthesize collectionLayout=_collectionLayout;
 @property(retain, nonatomic) SPTPremiumDestinationUICarouselStyle *style; // @synthesize style=_style;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
@@ -45,14 +47,16 @@
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
+- (void)configureCollectionViewWithModel:(id)arg1 style:(id)arg2 containerSize:(struct CGSize)arg3;
 - (void)configureWithModel:(id)arg1;
 - (void)dealloc;
+- (void)layoutSubviews;
 - (void)setupConstraints;
 - (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;

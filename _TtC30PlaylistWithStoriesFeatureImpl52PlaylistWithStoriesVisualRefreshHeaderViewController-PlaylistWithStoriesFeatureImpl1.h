@@ -6,9 +6,7 @@
 
 #import "_TtC30PlaylistWithStoriesFeatureImpl52PlaylistWithStoriesVisualRefreshHeaderViewController.h"
 
-#import "SPTFreeTierPlaylistHeader-Protocol.h"
-
-@interface _TtC30PlaylistWithStoriesFeatureImpl52PlaylistWithStoriesVisualRefreshHeaderViewController (PlaylistWithStoriesFeatureImpl1) <SPTFreeTierPlaylistHeader>
+@interface _TtC30PlaylistWithStoriesFeatureImpl52PlaylistWithStoriesVisualRefreshHeaderViewController (PlaylistWithStoriesFeatureImpl1)
 - (struct CGPoint)snapOffset;
 - (void)update;
 @end

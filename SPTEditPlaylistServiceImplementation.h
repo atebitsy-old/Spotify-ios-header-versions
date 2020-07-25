@@ -9,7 +9,7 @@
 #import "SPTEditPlaylistService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTEditPlaylistFeatureProperties;
-@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSettingsFeature, SPTUBIService, SPTUIPresentationService;
+@protocol SPContextMenuFeature, SPTContainerService, SPTFreeTierPlaylistService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSettingsFeature, SPTUBIService, SPTUIPresentationService, _TtP25PlaylistAnnotationFeature28SPTPlaylistAnnotationService_;
 
 @interface SPTEditPlaylistServiceImplementation : NSObject <SPTEditPlaylistService>
 {
@@ -24,12 +24,14 @@
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <_TtP25PlaylistAnnotationFeature28SPTPlaylistAnnotationService_> _playlistAnnotationService;
     SPTEditPlaylistFeatureProperties *_featureProperties;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTEditPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <_TtP25PlaylistAnnotationFeature28SPTPlaylistAnnotationService_> playlistAnnotationService; // @synthesize playlistAnnotationService=_playlistAnnotationService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;

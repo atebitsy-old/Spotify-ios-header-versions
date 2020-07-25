@@ -6,12 +6,17 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
+@class NSString, NSURL;
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileExternalAccessoryEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitDisconnectFromRemoteDeviceWithRemoteDeviceId:(NSString *)arg1;
+- (id <SPTUBIInteractionEvent>)hitPlaySomething;
+- (id <SPTUBIInteractionEvent>)hitDecreaseVolume;
+- (id <SPTUBIInteractionEvent>)hitIncreaseVolume;
+- (id <SPTUBIInteractionEvent>)hitSetVolumeWithNewVolumePercentage:(long long)arg1;
 - (id <SPTUBIInteractionEvent>)hitCreateRadioWithBasedOnItem:(NSURL *)arg1;
-- (id <SPTUBIInteractionEvent>)hitSetPlaybackSpeedWithPlaybackSpeed:(unsigned long long)arg1;
+- (id <SPTUBIInteractionEvent>)hitSetPlaybackSpeedWithCurrentlyPlayedItem:(NSURL *)arg1 playbackSpeed:(unsigned long long)arg2;
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitSeekByTimeWithMsSeekedOffset:(long long)arg1;

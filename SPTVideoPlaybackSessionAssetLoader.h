@@ -8,21 +8,23 @@
 
 #import "SPTVideoPlaybackSessionAssetLoader-Protocol.h"
 
-@class NSString, SPTVideoAVFactory;
+@class AVContentKeySession, BMAVFactory, NSString;
 @protocol SPTVideoResourceLoaderInternal;
 
 @interface SPTVideoPlaybackSessionAssetLoader : NSObject <SPTVideoPlaybackSessionAssetLoader>
 {
-    SPTVideoAVFactory *_avFactory;
+    BMAVFactory *_avFactory;
     id <SPTVideoResourceLoaderInternal> _resourceLoader;
+    AVContentKeySession *_contentKeySession;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) AVContentKeySession *contentKeySession; // @synthesize contentKeySession=_contentKeySession;
 @property(retain, nonatomic) id <SPTVideoResourceLoaderInternal> resourceLoader; // @synthesize resourceLoader=_resourceLoader;
-@property(retain, nonatomic) SPTVideoAVFactory *avFactory; // @synthesize avFactory=_avFactory;
+@property(retain, nonatomic) BMAVFactory *avFactory; // @synthesize avFactory=_avFactory;
 - (void)prepareAsset:(id)arg1 withKeys:(id)arg2 completion:(CDUnknownBlockType)arg3 errorHandler:(CDUnknownBlockType)arg4;
 - (void)loadPlayerItemWithCompletion:(CDUnknownBlockType)arg1 errorHandler:(CDUnknownBlockType)arg2;
-- (id)initWithAVFactory:(id)arg1 resourceLoader:(id)arg2;
+- (id)initWithAVFactory:(id)arg1 resourceLoader:(id)arg2 contentKeySession:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,9 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
+@class NSData, NSString;
 
 @protocol SPTConnectivityAnalyticsDelegate <NSObject>
 - (void)log:(NSString *)arg1;
+
+@optional
+- (void)logEventWithName:(NSString *)arg1 data:(NSData *)arg2;
 @end
 

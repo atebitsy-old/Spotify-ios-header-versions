@@ -27,12 +27,14 @@
     // Error parsing type: , name: unrangedLength
     // Error parsing type: , name: trailerEpisode
     // Error parsing type: , name: episodes
+    // Error parsing type: , name: topics
 }
 
 - (void).cxx_destruct;
 - (id)init;
 @property(nonatomic, readonly) long long hash;
 - (_Bool)isEqual:(id)arg1;
+@property(nonatomic, copy) NSArray *topics;
 @property(nonatomic, copy) NSArray *episodes;
 @property(nonatomic, retain) id <SPTPodcastEpisode> trailerEpisode; // @synthesize trailerEpisode;
 @property(nonatomic) unsigned long long unrangedLength; // @synthesize unrangedLength;

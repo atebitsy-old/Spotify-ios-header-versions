@@ -13,6 +13,7 @@
 
 @interface SPTWatchConnectivityRequestTask : NSObject <SPTWatchConnectivityResponseHandler>
 {
+    _Bool _receivedResponse;
     SPTWatchConnectivityRequest *_request;
     id <SPTWatchConnectivityResponseHandler> _responseHandler;
     SPTWatchConnectivityManager *_connectivityManager;
@@ -21,6 +22,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool receivedResponse; // @synthesize receivedResponse=_receivedResponse;
 @property(nonatomic) unsigned long long retries; // @synthesize retries=_retries;
 @property(copy, nonatomic) CDUnknownBlockType errorHandler; // @synthesize errorHandler=_errorHandler;
 @property(readonly, nonatomic) SPTWatchConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;

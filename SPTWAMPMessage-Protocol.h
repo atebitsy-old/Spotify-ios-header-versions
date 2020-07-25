@@ -9,8 +9,8 @@
 @class NSArray, NSString;
 
 @protocol SPTWAMPMessage <NSObject>
-@property(readonly, nonatomic) NSArray *rawMessage;
-@property(readonly, copy, nonatomic) NSString *jsonRepresentation;
-@property(readonly, nonatomic) long long messageType;
+@property(nonatomic, readonly) NSArray *rawMessage;
+@property(nonatomic, readonly) NSString *jsonRepresentation;
+@property(nonatomic, readonly) long long messageType;
 @end
 

@@ -8,19 +8,23 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUELabelStyle, NSString;
+@class GLUEButtonStyle, GLUETableViewStyle, NSString, UIColor;
 
 @interface SPTSocialListeningSessionPopupViewStyle : NSObject <GLUEStyle>
 {
-    GLUELabelStyle *_titleLabelStyle;
-    GLUELabelStyle *_messageLabelStyle;
+    GLUEButtonStyle *_continueButtonStyle;
+    GLUETableViewStyle *_tableViewStyle;
     double _verticalMargin;
+    UIColor *_checkboxColor;
+    struct CGSize _checkboxSize;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIColor *checkboxColor; // @synthesize checkboxColor=_checkboxColor;
+@property(nonatomic) struct CGSize checkboxSize; // @synthesize checkboxSize=_checkboxSize;
 @property(nonatomic) double verticalMargin; // @synthesize verticalMargin=_verticalMargin;
-@property(copy, nonatomic) GLUELabelStyle *messageLabelStyle; // @synthesize messageLabelStyle=_messageLabelStyle;
-@property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
+@property(copy, nonatomic) GLUETableViewStyle *tableViewStyle; // @synthesize tableViewStyle=_tableViewStyle;
+@property(copy, nonatomic) GLUEButtonStyle *continueButtonStyle; // @synthesize continueButtonStyle=_continueButtonStyle;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqualToSocialListeningSessionPopupViewStyle:(id)arg1;
 - (_Bool)isEqual:(id)arg1;

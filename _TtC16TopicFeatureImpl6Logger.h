@@ -6,10 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTHubImpressionLogger-Protocol.h"
-#import "SPTHubInteractionLogger-Protocol.h"
-
-@interface _TtC16TopicFeatureImpl6Logger : NSObject <SPTHubInteractionLogger, SPTHubImpressionLogger>
+@interface _TtC16TopicFeatureImpl6Logger : NSObject
 {
     // Error parsing type: , name: logCenter
     // Error parsing type: , name: dateProvider

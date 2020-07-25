@@ -36,9 +36,8 @@
 - (void)login_applySlideUpDefaultViewStyleToStyle:(id)arg1;
 - (id)slideUpDialogDefaultViewStyle;
 - (id)autosendLinkDialogViewStyle;
-- (id)intentLedStartViewStyle;
-- (id)methodLedStartScreenStyle;
-- (id)welcomeViewStyleWithTestManager:(id)arg1;
+- (id)actionPickerStartViewStyle;
+- (id)welcomeViewStyleWithLogoAlignmentToTitle:(_Bool)arg1;
 - (id)magicLinkDoRequestViewStyle;
 - (id)magicLinkSentConfirmationViewStyle;
 - (id)singleInputFieldBaseViewStyle;

@@ -10,12 +10,12 @@
 
 @interface SPTHomeMixEffectUpdatePresentMembers : SPTHomeMixEffect
 {
-    NSArray *_memberBlacklist;
+    NSArray *_memberExcludeList;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) NSArray *memberBlacklist; // @synthesize memberBlacklist=_memberBlacklist;
-- (id)initWithMemberBlacklist:(id)arg1;
+@property(copy, nonatomic) NSArray *memberExcludeList; // @synthesize memberExcludeList=_memberExcludeList;
+- (id)initWithMemberExcludeList:(id)arg1;
 
 @end
 

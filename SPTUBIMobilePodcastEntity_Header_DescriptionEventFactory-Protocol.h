@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Header_Description_SeeMoreButtonEventFactory;
+@class NSURL;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Header_Description_PodcastLinkEventFactory, SPTUBIMobilePodcastEntity_Header_Description_SeeMoreButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntity_Header_DescriptionEventFactory <NSObject>
+- (id <SPTUBIMobilePodcastEntity_Header_Description_PodcastLinkEventFactory>)podcastLinkFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobilePodcastEntity_Header_Description_SeeMoreButtonEventFactory>)seeMoreButtonFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end

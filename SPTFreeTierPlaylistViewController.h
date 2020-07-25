@@ -15,16 +15,14 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTShareableContext-Protocol.h"
 #import "SPTSortingFilteringPickerDelegate-Protocol.h"
-#import "SPTStatusBarManagerObserver-Protocol.h"
 #import "UISearchBarDelegate-Protocol.h"
-#import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTEntityHeaderViewController, SPTFrameDropTracker, SPTFreeTierPlaylistBarButtonManager, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistFooterProvider, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistHeaderPlaceholder, SPTFreeTierPlaylistLogger, SPTProgressView, SPTTableView;
-@protocol GLUEImageLoader, SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistEntityContextMenuPresenter, SPTFreeTierPlaylistHeader><SPTEntityHeaderContentController, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModel, SPTFreeTierRecommendationsPlaylistFooterViewController, SPTPageContainer, SPTSortingFilteringUIFactory;
+@class NSString, NSURL, SPTEntityHeaderViewController, SPTFrameDropTracker, SPTFreeTierPlaylistBarButtonManager, SPTFreeTierPlaylistFooterProvider, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistHeaderPlaceholder, SPTFreeTierPlaylistLogger, SPTProgressView, SPTTableView;
+@protocol GLUEImageLoader, SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistEntityContextMenuPresenter, SPTFreeTierPlaylistHeader><SPTEntityHeaderContentController, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModel, SPTFreeTierRecommendationsPlaylistFooterViewController, SPTPageContainer, SPTSortingFilteringUIFactory;
 
-@interface SPTFreeTierPlaylistViewController : UIViewController <SPTFreeTierRecommendationsPlaylistFooterViewControllerDelegate, SPTNavigationControllerNavigationBarState, SPTShareableContext, SPContentInsetViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UITextFieldDelegate, SPTSortingFilteringPickerDelegate, SPTFrameDropTrackerDelegate, SPTFreeTierPlaylistBarButtonManagerDelegate, SPTStatusBarManagerObserver, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
+@interface SPTFreeTierPlaylistViewController : UIViewController <SPTFreeTierRecommendationsPlaylistFooterViewControllerDelegate, SPTNavigationControllerNavigationBarState, SPTShareableContext, SPContentInsetViewController, UITableViewDelegate, UISearchBarDelegate, UITextFieldDelegate, SPTSortingFilteringPickerDelegate, SPTFrameDropTrackerDelegate, SPTFreeTierPlaylistBarButtonManagerDelegate, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
 {
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     id <GLUEImageLoader> _imageLoader;
@@ -44,7 +42,7 @@
     id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
     SPTFrameDropTracker *_scrollPerformanceTracker;
     id <SPTFreeTierPlaylistTestManager> _playlistTestManager;
-    SPTFreeTierPlaylistCellProviderCoordinator *_cellProviderCoordinator;
+    id <SPTFreeTierPlaylistCellProviderCoordinator> _cellProviderCoordinator;
     id <SPTFreeTierPlaylistEntityContextMenuPresenter> _entityContextMenuPresenter;
     CDUnknownBlockType _whenDataIsLoaded;
 }
@@ -52,7 +50,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType whenDataIsLoaded; // @synthesize whenDataIsLoaded=_whenDataIsLoaded;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistEntityContextMenuPresenter> entityContextMenuPresenter; // @synthesize entityContextMenuPresenter=_entityContextMenuPresenter;
-@property(readonly, nonatomic) SPTFreeTierPlaylistCellProviderCoordinator *cellProviderCoordinator; // @synthesize cellProviderCoordinator=_cellProviderCoordinator;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistCellProviderCoordinator> cellProviderCoordinator; // @synthesize cellProviderCoordinator=_cellProviderCoordinator;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> playlistTestManager; // @synthesize playlistTestManager=_playlistTestManager;
 @property(readonly, nonatomic) SPTFrameDropTracker *scrollPerformanceTracker; // @synthesize scrollPerformanceTracker=_scrollPerformanceTracker;
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
@@ -71,10 +69,9 @@
 @property(readonly, nonatomic) SPTFreeTierPlaylistGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-- (void)statusBarManager:(id)arg1 didToggleStatusBarState:(_Bool)arg2;
-- (void)statusBarManager:(id)arg1 didChangeStatusBarHeight:(double)arg2;
 - (void)didTapContextMenuButton:(id)arg1;
 - (void)frameDropTracker:(id)arg1 reportDuration:(double)arg2 maxFrameTime:(double)arg3 smallDropCount:(double)arg4 largeDropCount:(double)arg5;
+- (void)playDeeplinkedTrackURL:(id)arg1;
 - (void)playURIInContext:(id)arg1;
 - (void)determineIfContextContainsURI:(id)arg1 responseHandler:(CDUnknownBlockType)arg2;
 - (id)indexPathForView:(id)arg1;
@@ -105,9 +102,6 @@
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
-- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
-- (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-- (long long)numberOfSectionsInTableView:(id)arg1;
 - (_Bool)automaticallyAdjustsScrollViewInsets;
 - (void)sp_updateContentInsets;
 - (void)addFooterIfApproachingBottomOfList;

@@ -6,34 +6,32 @@
 
 #import <objc/NSObject.h>
 
-@class SPTDataLoaderFactory, SPTHomeContentCache;
-@protocol SPTFeatureSettingsItemFactory, SPTFreeTierTasteOnboardingCurationProvider, SPTLocalSettings, SPTNetworkConnectivityController, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTUBIHubsUtilities;
+@class SPTDataLoaderFactory, SPTHomeContentStorage;
+@protocol SPTCrashReporter, SPTFeatureSettingsItemFactory, SPTFreeTierTasteOnboardingCurationProvider, SPTNetworkConnectivityController, SPTOfflineService, SPTOnDemandService, SPTPlayer, SPTRecentlyPlayedService, SPTUBIHubsUtilities;
 
 @interface SPTHomeContentOperationFactory : NSObject
 {
-    _Bool _listeningHistoryEnabled;
     id <SPTOnDemandService> _onDemandService;
     id <SPTRecentlyPlayedService> _recentlyPlayedService;
     id <SPTOfflineService> _offlineService;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
-    SPTHomeContentCache *_homeContentCache;
+    SPTHomeContentStorage *_homeContentStorage;
     SPTDataLoaderFactory *_dataLoaderFactory;
     id <SPTPlayer> _player;
     id <SPTFreeTierTasteOnboardingCurationProvider> _tasteOnboardingCurationProvider;
-    id <SPTLocalSettings> _localSettings;
     id <SPTFeatureSettingsItemFactory> _featureSettingsItemFactory;
     id <SPTUBIHubsUtilities> _ubiHubsInstrumentation;
+    id <SPTCrashReporter> _crashReporter;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool listeningHistoryEnabled; // @synthesize listeningHistoryEnabled=_listeningHistoryEnabled;
+@property(readonly, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(readonly, nonatomic) id <SPTUBIHubsUtilities> ubiHubsInstrumentation; // @synthesize ubiHubsInstrumentation=_ubiHubsInstrumentation;
 @property(readonly, nonatomic) id <SPTFeatureSettingsItemFactory> featureSettingsItemFactory; // @synthesize featureSettingsItemFactory=_featureSettingsItemFactory;
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingCurationProvider> tasteOnboardingCurationProvider; // @synthesize tasteOnboardingCurationProvider=_tasteOnboardingCurationProvider;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
-@property(readonly, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
+@property(readonly, nonatomic) SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(readonly, nonatomic) __weak id <SPTRecentlyPlayedService> recentlyPlayedService; // @synthesize recentlyPlayedService=_recentlyPlayedService;
@@ -41,14 +39,13 @@
 - (id)provideCacheViewModelContentOperation;
 - (id)provideDownloadsContentOperation;
 - (id)provideRemoteContentOperationWithSourceIdentifier:(id)arg1 contentURL:(id)arg2;
-- (id)provideErrorHandlingContentOperation;
 - (id)provideCachedContentOperation;
 - (id)provideRemoveComponentContentOperationWithOverrides:(id)arg1;
 - (id)provideOnDemandExtractorContentOperation;
 - (id)provideOnDemandDecoratorContentOperation;
 - (id)provideCardAccessibilityContentOperation;
 - (id)provideRecentlyPlayedContentOperation;
-- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 networkConnectivityController:(id)arg4 homeContentCache:(id)arg5 dataLoaderFactory:(id)arg6 player:(id)arg7 tasteOnboardingCurationProvider:(id)arg8 localSettings:(id)arg9 featureSettingsItemFactory:(id)arg10 ubiHubsInstrumentation:(id)arg11 listeningHistoryEnabled:(_Bool)arg12;
+- (id)initWithOnDemandService:(id)arg1 recentlyPlayedService:(id)arg2 offlineService:(id)arg3 networkConnectivityController:(id)arg4 homeContentStorage:(id)arg5 dataLoaderFactory:(id)arg6 player:(id)arg7 tasteOnboardingCurationProvider:(id)arg8 featureSettingsItemFactory:(id)arg9 ubiHubsInstrumentation:(id)arg10 crashReporter:(id)arg11;
 
 @end
 

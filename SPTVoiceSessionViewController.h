@@ -7,13 +7,12 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTMetaViewControllerPresentable-Protocol.h"
-#import "SPTPageController-Protocol.h"
 #import "SPTVoiceSessionViewModelDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTVoiceErrorViewController, SPTVoiceListeningViewController, SPTVoiceNowPlayingViewController, SPTVoiceSessionViewModel;
-@protocol GLUEImageLoader, SPTPageContainer;
+@class NSString, SPTVoiceErrorViewController, SPTVoiceListeningViewController, SPTVoiceNowPlayingViewController, SPTVoiceSessionViewModel;
+@protocol GLUEImageLoader;
 
-@interface SPTVoiceSessionViewController : UIViewController <SPTVoiceSessionViewModelDelegate, SPTMetaViewControllerPresentable, SPTPageController>
+@interface SPTVoiceSessionViewController : UIViewController <SPTVoiceSessionViewModelDelegate, SPTMetaViewControllerPresentable>
 {
     SPTVoiceSessionViewModel *_sessionViewModel;
     SPTVoiceListeningViewController *_listeningViewController;
@@ -30,8 +29,6 @@
 @property(retain, nonatomic) SPTVoiceErrorViewController *errorViewController; // @synthesize errorViewController=_errorViewController;
 @property(retain, nonatomic) SPTVoiceListeningViewController *listeningViewController; // @synthesize listeningViewController=_listeningViewController;
 @property(readonly, nonatomic) SPTVoiceSessionViewModel *sessionViewModel; // @synthesize sessionViewModel=_sessionViewModel;
-@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic) long long presentationStyle;
 - (void)sessionViewModelWantsToOpenListening:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)sessionViewModelWantsToClose:(id)arg1 completion:(CDUnknownBlockType)arg2;
@@ -49,7 +46,6 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
 
 @end

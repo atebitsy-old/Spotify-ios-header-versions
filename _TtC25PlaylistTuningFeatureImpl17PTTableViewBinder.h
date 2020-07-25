@@ -16,6 +16,8 @@
     // Error parsing type: , name: explicitContentAccessManager
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: trackRowConfiguration
     // Error parsing type: , name: currentTracks
 }
 
@@ -23,6 +25,7 @@
 - (id)init;
 - (void)audioPreviewTappedWithButton:(id)arg1;
 - (void)contextMenuTappedWithButton:(id)arg1;
+- (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;

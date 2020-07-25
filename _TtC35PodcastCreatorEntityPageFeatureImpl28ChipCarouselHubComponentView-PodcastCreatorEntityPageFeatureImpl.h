@@ -7,7 +7,7 @@
 #import "_TtC35PodcastCreatorEntityPageFeatureImpl28ChipCarouselHubComponentView.h"
 
 @interface _TtC35PodcastCreatorEntityPageFeatureImpl28ChipCarouselHubComponentView (PodcastCreatorEntityPageFeatureImpl)
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 @end
 

@@ -8,11 +8,8 @@
 
 @interface _TtC16TopicFeatureImpl6Parser : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: hugsFactory
     // Error parsing type: , name: pageURI
-    // Error parsing type: , name: ubiLocationSerializer
-    // Error parsing type: , name: episodeDurationFormatter
-    // Error parsing type: , name: publicationDateFormatter
+    // Error parsing type: , name: ubiLocationProvider
 }
 
 @end

@@ -8,6 +8,9 @@
 @protocol SPTEpisodeSegmentsAlbumEntityImpl;
 
 @protocol SPTEpisodeSegmentsEntity
+@property(nonatomic, readonly) _Bool isAbridged;
+@property(nonatomic, readonly) _Bool isTalkSegment;
+@property(nonatomic, readonly) _Bool isMusicSegment;
 @property(nonatomic, readonly) long long type;
 @property(nonatomic, readonly) double endTime;
 @property(nonatomic, readonly) double startTime;

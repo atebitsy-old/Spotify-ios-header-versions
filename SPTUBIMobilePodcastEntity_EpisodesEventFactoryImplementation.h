@@ -19,7 +19,6 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)emptyFactory;
-- (id)episodeFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)headerFactory;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;

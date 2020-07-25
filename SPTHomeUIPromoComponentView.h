@@ -33,8 +33,8 @@
 - (void)sendSelectionEvent;
 - (void)applyThemeLayout;
 @property(readonly, nonatomic) UIView *selectionView;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (struct CGSize)preferredSizeForMainImageWithModel:(id)arg1 theme:(id)arg2;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;

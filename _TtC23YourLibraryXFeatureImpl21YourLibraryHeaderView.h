@@ -8,10 +8,12 @@
 
 @interface _TtC23YourLibraryXFeatureImpl21YourLibraryHeaderView : UIView
 {
-    // Error parsing type: , name: theme
+    // Error parsing type: , name: style
     // Error parsing type: , name: profileImage
     // Error parsing type: , name: profileDisplayName
     // Error parsing type: , name: mainContentView
+    // Error parsing type: , name: contentFiltersView
+    // Error parsing type: , name: $__lazy_storage_$_headerBottomAnchor
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_leadingButtonsStackView
     // Error parsing type: , name: $__lazy_storage_$_trailingButtonsStackView

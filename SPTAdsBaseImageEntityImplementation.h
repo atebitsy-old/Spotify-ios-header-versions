@@ -13,18 +13,25 @@
 
 @interface SPTAdsBaseImageEntityImplementation : SPTAdsBaseEntityImplementation <SPTAdsBaseImageEntity>
 {
-    _Bool _isAudioPlusBanner;
     NSURL *_imageURL;
     NSString *_displayReason;
+    long long _audioPlusAdType;
+    NSString *_audioPlusDetail;
+    NSString *_audioPlusTitle;
+    NSString *_audioPlusEntityInfo;
     struct CGSize _imageSize;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool isAudioPlusBanner; // @synthesize isAudioPlusBanner=_isAudioPlusBanner;
+@property(readonly, nonatomic) NSString *audioPlusEntityInfo; // @synthesize audioPlusEntityInfo=_audioPlusEntityInfo;
+@property(readonly, nonatomic) NSString *audioPlusTitle; // @synthesize audioPlusTitle=_audioPlusTitle;
+@property(readonly, nonatomic) NSString *audioPlusDetail; // @synthesize audioPlusDetail=_audioPlusDetail;
+@property(readonly, nonatomic) long long audioPlusAdType; // @synthesize audioPlusAdType=_audioPlusAdType;
 @property(readonly, nonatomic) NSString *displayReason; // @synthesize displayReason=_displayReason;
 @property(readonly, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(readonly, nonatomic) struct CGSize imageSize; // @synthesize imageSize=_imageSize;
 - (id)imageMetadata:(id)arg1;
+- (long long)parseAudioPlusType:(id)arg1;
 - (id)parseDisplayReason:(id)arg1;
 - (id)parseImageURL:(id)arg1;
 - (struct CGSize)parseImageSize:(id)arg1;
@@ -34,6 +41,7 @@
 @property(readonly, copy, nonatomic) NSString *actionText;
 @property(readonly, copy, nonatomic) NSString *adPlaybackID;
 @property(readonly, copy, nonatomic) NSString *advertiser;
+@property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable;
 @property(readonly, nonatomic) NSURL *clickthroughURL;
 @property(readonly, nonatomic) NSURL *coverArtURL;
 @property(readonly, nonatomic) UIColor *creativeColor;
@@ -49,6 +57,7 @@
 @property(readonly, copy, nonatomic) NSString *identifier;
 @property(readonly, nonatomic) _Bool inAppBrowser;
 @property(readonly, nonatomic) _Bool isAudio;
+@property(readonly, nonatomic) _Bool isAudioPlus;
 @property(readonly, nonatomic) _Bool isVideo;
 @property(readonly, copy, nonatomic) NSString *lineItemID;
 @property(readonly, copy, nonatomic) NSDictionary *metadata;

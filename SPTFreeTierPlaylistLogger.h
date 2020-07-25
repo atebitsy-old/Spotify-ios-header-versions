@@ -79,7 +79,6 @@
 - (id)logTrackCloudSelected:(_Bool)arg1;
 - (void)logBrowseButtonClicked;
 - (void)logAddSongsInteraction;
-- (void)logShuffleBadgeSelected;
 - (id)logPlayButtonPauseClicked;
 - (id)logPlayButtonPlayClicked;
 - (void)logHeaderContextMenuButton;

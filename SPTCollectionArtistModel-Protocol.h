@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class FollowModel, NSIndexPath, NSString, NSURL, SPTCollectionContextMenuComponent;
+@class FollowModel, NSIndexPath, NSString, NSURL, SPTCollectionContextMenuComponent, SPTLoggingParams;
 @protocol SPTCollectionArtistModelDelegate, SPTCollectionEntityListTrackItem;
 
 @protocol SPTCollectionArtistModel <NSObject>
@@ -32,7 +32,7 @@
 - (void)load;
 - (void)toggleFollowState;
 - (unsigned long long)offlineSyncStateForTrackAtIndexPath:(NSIndexPath *)arg1;
-- (void)shufflePlayArtistEnforceShuffle:(_Bool)arg1;
+- (void)shufflePlayArtistEnforceShuffle:(_Bool)arg1 loggingParams:(SPTLoggingParams *)arg2;
 - (SPTCollectionContextMenuComponent *)artistContextMenuComponent;
 - (SPTCollectionContextMenuComponent *)contextMenuComponentForTrackAtIndexPath:(NSIndexPath *)arg1;
 @end

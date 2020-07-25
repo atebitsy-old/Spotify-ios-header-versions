@@ -12,6 +12,7 @@
     // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: player
     // Error parsing type: , name: inAppMessageMonitor
+    // Error parsing type: , name: wiredAudioStatusProvider
     // Error parsing type: , name: isMainBarShown
     // Error parsing type: , name: hasPerformedNudgeForCurrentSession
     // Error parsing type: , name: hasSeenDevicePickerForCurrentSession

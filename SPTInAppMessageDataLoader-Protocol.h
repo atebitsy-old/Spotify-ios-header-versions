@@ -10,6 +10,6 @@
 
 @protocol SPTInAppMessageDataLoader <NSObject>
 @property(nonatomic) _Bool devEnabled;
-- (void)requestWithURL:(NSURL *)arg1 headers:(NSDictionary *)arg2 completion:(void (^)(NSData *, NSURL *, _Bool))arg3;
+- (void)requestWithURL:(NSURL *)arg1 headers:(NSDictionary *)arg2 completion:(void (^)(NSData *, NSURL *, long long))arg3;
 @end
 

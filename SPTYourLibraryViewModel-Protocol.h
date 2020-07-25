@@ -7,14 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSIndexPath, NSString, NSURL, UIViewController;
-@protocol SPTYourLibraryGroupHeaderActionViewModel, SPTYourLibraryPage><SPTPageController, SPTYourLibraryViewModelObserver;
+@protocol SPTYourLibraryPage><SPTPageController, SPTYourLibraryViewModelObserver;
 
 @protocol SPTYourLibraryViewModel <NSObject>
 - (void)saveLastVisitedPageURI:(NSURL *)arg1;
 - (void)stateRestoreToLastVisitedURI;
 - (_Bool)stateRestoreToURI:(NSURL *)arg1;
 - (UIViewController<SPTYourLibraryPage><SPTPageController> *)pageViewControllerAtIndexPath:(NSIndexPath *)arg1;
-- (id <SPTYourLibraryGroupHeaderActionViewModel>)groupHeaderActionViewModel;
 - (NSURL *)pageURIAtIndexPath:(NSIndexPath *)arg1;
 - (NSString *)groupTitleForSection:(unsigned long long)arg1;
 - (NSString *)pageTitleAtIndexPath:(NSIndexPath *)arg1;

@@ -19,6 +19,7 @@
 - (void)appShutdown;
 - (void)userDidLogIn:(NSString *)arg1;
 - (void)setUserIdentifier:(NSString *)arg1;
+- (void)synchronizeState;
 - (void)setValue:(NSString *)arg1 forStateKey:(NSString *)arg2;
 - (void)leaveBreadcrumb:(NSString *)arg1;
 - (void)recordNonFatalError:(NSError *)arg1;

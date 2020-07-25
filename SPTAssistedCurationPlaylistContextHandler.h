@@ -13,6 +13,7 @@
 
 @interface SPTAssistedCurationPlaylistContextHandler : NSObject <SPTAssistedCurationContextHandler>
 {
+    _Bool _prioritizeRecentlyPlayed;
     id <SPTPlaylistModel> _playlistModel;
     id <SPTPlaylistPlatformPlaylistDataLoader> _playlistDataLoader;
 }
@@ -20,6 +21,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
 @property(retain, nonatomic) id <SPTPlaylistModel> playlistModel; // @synthesize playlistModel=_playlistModel;
+@property(nonatomic) _Bool prioritizeRecentlyPlayed; // @synthesize prioritizeRecentlyPlayed=_prioritizeRecentlyPlayed;
 - (id)supportedCardProviders;
 - (id)provideSortMechanism;
 - (id)provideDatasourceForContextURI:(id)arg1;

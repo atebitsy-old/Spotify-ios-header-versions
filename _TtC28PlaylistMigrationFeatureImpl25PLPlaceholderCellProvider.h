@@ -6,18 +6,27 @@
 
 #import <objc/NSObject.h>
 
-@interface _TtC28PlaylistMigrationFeatureImpl25PLPlaceholderCellProvider : NSObject
+#import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+
+@interface _TtC28PlaylistMigrationFeatureImpl25PLPlaceholderCellProvider : NSObject <SPTFreeTierPlaylistCellProvider>
 {
 }
 
 - (id)init;
+- (void)didEndDisplayingPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)willDisplayPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
+- (void)configureCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (double)heightForItem:(id)arg1 indexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;
+- (id)reuseIdentifierForItem:(id)arg1 indexPath:(id)arg2;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
 - (id)reuseIdentifiers;
+- (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 
 @end

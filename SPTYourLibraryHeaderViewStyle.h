@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEAccessoryIconButtonStyle, NSString, UIColor;
+@class NSString, UIColor;
 
 @interface SPTYourLibraryHeaderViewStyle : NSObject <GLUEStyle>
 {
@@ -16,11 +16,9 @@
     double _topMargin;
     double _bottomMargin;
     double _contentInsetMargin;
-    GLUEAccessoryIconButtonStyle *_actionButtonStyle;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) GLUEAccessoryIconButtonStyle *actionButtonStyle; // @synthesize actionButtonStyle=_actionButtonStyle;
 @property(nonatomic) double contentInsetMargin; // @synthesize contentInsetMargin=_contentInsetMargin;
 @property(nonatomic) double bottomMargin; // @synthesize bottomMargin=_bottomMargin;
 @property(nonatomic) double topMargin; // @synthesize topMargin=_topMargin;

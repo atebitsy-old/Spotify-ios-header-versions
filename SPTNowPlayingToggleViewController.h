@@ -13,7 +13,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, NSURL, SPTNowPlayingBarLogger, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingLogger, SPTNowPlayingModel, SPTNowPlayingScrollViewController, SPTNowPlayingStateProxy, SPTPlayerState, SPTStatusBarToken, SPTTheme;
-@protocol SPTModalPresentationController, SPTNowPlayingContentContainingViewController, SPTPageContainer, SPTPlayer, SPTQueueEnabling, SPTQueueLogger;
+@protocol SPTModalPresentationController, SPTNowPlayingViewControllerProtocol, SPTPageContainer, SPTPlayer, SPTQueueEnabling, SPTQueueLogger;
 
 @interface SPTNowPlayingToggleViewController : UIViewController <SPTNowPlayingModelObserver, SPTNowPlayingModelDelegate, SPTPlayerObserver, SPTBarOverlayViewController, SPTPageController>
 {
@@ -28,7 +28,7 @@
     SPTTheme *_theme;
     SPTNowPlayingScrollViewController *_scrollViewController;
     id <SPTModalPresentationController> _modalPresentationController;
-    UIViewController<SPTNowPlayingContentContainingViewController> *_playerViewController;
+    UIViewController<SPTNowPlayingViewControllerProtocol> *_playerViewController;
     UIViewController<SPTQueueEnabling> *_queueViewController;
     id <SPTPlayer> _player;
     SPTPlayerState *_currentPlayerState;
@@ -44,7 +44,7 @@
 @property(retain, nonatomic) SPTPlayerState *currentPlayerState; // @synthesize currentPlayerState=_currentPlayerState;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) UIViewController<SPTQueueEnabling> *queueViewController; // @synthesize queueViewController=_queueViewController;
-@property(retain, nonatomic) UIViewController<SPTNowPlayingContentContainingViewController> *playerViewController; // @synthesize playerViewController=_playerViewController;
+@property(retain, nonatomic) UIViewController<SPTNowPlayingViewControllerProtocol> *playerViewController; // @synthesize playerViewController=_playerViewController;
 @property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) SPTNowPlayingScrollViewController *scrollViewController; // @synthesize scrollViewController=_scrollViewController;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -73,6 +73,7 @@
 - (void)nowPlayingModel:(id)arg1 toggleModeDidChange:(unsigned long long)arg2 animated:(_Bool)arg3;
 - (_Bool)nowPlayingModel:(id)arg1 canSwitchToToggleMode:(unsigned long long)arg2;
 - (id)managedIdleMonitorReceivers;
+- (id)coverArtView;
 - (_Bool)isShowsFormat;
 - (_Bool)isPlayingAd;
 - (void)restoreToggleModeAfterAd;

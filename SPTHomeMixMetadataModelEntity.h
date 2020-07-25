@@ -63,7 +63,7 @@
 - (_Bool)isEqualToMixModelEntity:(id)arg1;
 - (void)populatePropertiesBasedOnFormatListAttributes:(id)arg1;
 - (id)initWithURL:(id)arg1 playlistMetadata:(id)arg2;
-@property(readonly, copy, nonatomic) NSArray *memberBlacklistAsStringArray;
+@property(readonly, copy, nonatomic) NSArray *memberExcludeListAsStringArray;
 
 @end
 

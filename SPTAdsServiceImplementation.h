@@ -10,8 +10,8 @@
 #import "SPTAdFeatureFlagChecksObserver-Protocol.h"
 #import "SPTAdsService-Protocol.h"
 
-@class NSString, NSURL, SPTAdContextManager, SPTAdContextManagerListener, SPTAdFeatureFlagChecks, SPTAdFeaturedActionHandler, SPTAdFocusManager, SPTAdLinkHandler, SPTAdMicPermissionsLogger, SPTAdMobileOverlayController, SPTAdNowPlayingAudioAdModeGenerator, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdNowPlayingVideoAdModeGenerator, SPTAdPlayerObservable, SPTAdRegistryInformationManager, SPTAdRulesManager, SPTAdStateLogger, SPTAdVideoEventReporter, SPTAdVoicePermissions, SPTAdVoiceSession, SPTAdsAutoDetectionController, SPTAdsFeatureProperties, SPTAdsInAppBrowserController, SPTAdsMarqueeController, SPTAdsMoatManager, SPTAdsRemindersManager, SPTAdsViewModel, SPTAllocationContext, SPTInterruptionVideoEventReporter, SPTSponsoredContextManager;
-@protocol FollowFeature, SPContextMenuFeature, SPTAbbaService, SPTAccessoryManagerService, SPTAdsBaseService, SPTAdsManager, SPTAudioPreviewService, SPTBannerFeature, SPTCarModeEngineService, SPTCollectionPlatformService, SPTComScoreAnalyticsManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDebugService, SPTEventSender, SPTEventSenderService, SPTFreeTierPreCurationService, SPTGLUEService, SPTInAppMessageService, SPTLocalSettings, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, SPTVoiceLibraryService, SPTVoiceService, SPTVolumeService, SPTWebViewFeature, SlateFeature;
+@class NSString, NSURL, SPTAdContextManager, SPTAdContextManagerListener, SPTAdFeatureFlagChecks, SPTAdFeaturedActionHandler, SPTAdFocusManager, SPTAdLinkHandler, SPTAdMicPermissionsLogger, SPTAdMobileOverlayController, SPTAdNowPlayingAudioAdModeGenerator, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdNowPlayingVideoAdModeGenerator, SPTAdPlayerObservable, SPTAdRegistryInformationManager, SPTAdRulesManager, SPTAdStateLogger, SPTAdVoicePermissions, SPTAdVoiceSession, SPTAdsAutoDetectionController, SPTAdsFeatureProperties, SPTAdsInAppBrowserController, SPTAdsMarqueeController, SPTAdsRemindersManager, SPTAdsViewModel, SPTAllocationContext, SPTSponsoredContextManager;
+@protocol FollowFeature, SPContextMenuFeature, SPTAbbaService, SPTAccessoryManagerService, SPTAdsBaseService, SPTAdsManager, SPTAudioPreviewService, SPTBannerFeature, SPTCarModeEngineService, SPTCollectionPlatformService, SPTComScoreAnalyticsManager, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDebugService, SPTEventSender, SPTEventSenderService, SPTFreeTierPreCurationService, SPTGLUEService, SPTInAppMessageService, SPTLocalSettings, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoCoordinatorService, SPTVoiceLibraryService, SPTVolumeService, SPTWebViewFeature, SlateFeature;
 
 @interface SPTAdsServiceImplementation : NSObject <SPTAdFeatureFlagChecksObserver, SPSessionObserver, SPTAdsService>
 {
@@ -28,8 +28,7 @@
     id <SPTCoreService> _coreService;
     id <FollowFeature> _followService;
     id <SPContextMenuFeature> _contextMenuFeature;
-    id <SPTVoiceLibraryService> _voiceLibraryService;
-    id <SPTVoiceService> _voiceService;
+    id <SPTVoiceLibraryService> _voiceService;
     id <SPTWebViewFeature> _webviewFeature;
     id <SPTVolumeService> _volumeService;
     id <SPTUIPresentationService> _presentationService;
@@ -54,9 +53,6 @@
     SPTSponsoredContextManager *_sponsoredContextManager;
     SPTAdFeatureFlagChecks *_featureChecker;
     SPTAdsAutoDetectionController *_autoDetectionController;
-    SPTAdVideoEventReporter *_videoEventReporter;
-    SPTInterruptionVideoEventReporter *_interruptionEventReporter;
-    SPTAdsMoatManager *_moatManager;
     SPTAdNowPlayingAudioAdModeGenerator *_audioAdModeGenerator;
     SPTAdNowPlayingVideoAdModeGenerator *_videoAdModeGenerator;
     SPTAdPlayerObservable *_adPlayerObserver;
@@ -118,9 +114,6 @@
 @property(retain, nonatomic) SPTAdPlayerObservable *adPlayerObserver; // @synthesize adPlayerObserver=_adPlayerObserver;
 @property(retain, nonatomic) SPTAdNowPlayingVideoAdModeGenerator *videoAdModeGenerator; // @synthesize videoAdModeGenerator=_videoAdModeGenerator;
 @property(retain, nonatomic) SPTAdNowPlayingAudioAdModeGenerator *audioAdModeGenerator; // @synthesize audioAdModeGenerator=_audioAdModeGenerator;
-@property(retain, nonatomic) SPTAdsMoatManager *moatManager; // @synthesize moatManager=_moatManager;
-@property(retain, nonatomic) SPTInterruptionVideoEventReporter *interruptionEventReporter; // @synthesize interruptionEventReporter=_interruptionEventReporter;
-@property(retain, nonatomic) SPTAdVideoEventReporter *videoEventReporter; // @synthesize videoEventReporter=_videoEventReporter;
 @property(retain, nonatomic) SPTAdsAutoDetectionController *autoDetectionController; // @synthesize autoDetectionController=_autoDetectionController;
 @property(retain, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(retain, nonatomic) SPTSponsoredContextManager *sponsoredContextManager; // @synthesize sponsoredContextManager=_sponsoredContextManager;
@@ -145,8 +138,7 @@
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTVolumeService> volumeService; // @synthesize volumeService=_volumeService;
 @property(nonatomic) __weak id <SPTWebViewFeature> webviewFeature; // @synthesize webviewFeature=_webviewFeature;
-@property(nonatomic) __weak id <SPTVoiceService> voiceService; // @synthesize voiceService=_voiceService;
-@property(nonatomic) __weak id <SPTVoiceLibraryService> voiceLibraryService; // @synthesize voiceLibraryService=_voiceLibraryService;
+@property(nonatomic) __weak id <SPTVoiceLibraryService> voiceService; // @synthesize voiceService=_voiceService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <FollowFeature> followService; // @synthesize followService=_followService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
@@ -167,17 +159,12 @@
 - (void)addAPConnectionObserver;
 - (void)adsFeatureFlagsDidLoad:(id)arg1;
 - (void)adsFeatureFlagsDidChange:(id)arg1;
-- (id)providePlayerSource;
 - (id)provideEventSender;
 - (id)provideFeatureProperties;
-- (id)provideVoiceLibrarySession;
-- (id)provideVoiceSession;
 - (id)provideActionsHandler;
 - (id)provideFeatureChecker;
 - (id)createNewInterruptionEventReporter:(id)arg1 timeObservable:(id)arg2;
-- (id)provideInterruptionVideoEventReporter;
 - (id)createNewAdVideoEventReporterWithIdentity:(id)arg1 timeObservable:(id)arg2;
-- (id)provideAdVideoEventReporter;
 - (id)provideAdsPlayer;
 - (id)provideAdsInAppBrowserController;
 - (id)provideFocusManager;
@@ -204,7 +191,6 @@
 - (id)provideAudioAdModeGenerator;
 - (id)provideRemindersManager;
 - (id)provideVideoAdModeGenerator;
-- (void)loadMoatManager;
 - (void)loadAdSettings;
 - (void)loadSponsoredContextManager;
 - (void)loadAdStateLogger;

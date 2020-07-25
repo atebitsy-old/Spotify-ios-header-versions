@@ -7,10 +7,14 @@
 #import "NSObject-Protocol.h"
 
 @protocol GLUEStatefulItem <NSObject>
-@property(nonatomic, getter=isActive) _Bool active;
-@property(nonatomic, getter=isSelected) _Bool selected;
-@property(nonatomic, getter=isDisabled) _Bool disabled;
-@property(nonatomic, getter=isHighlighted) _Bool highlighted;
-@property(readonly, nonatomic) unsigned long long state;
+@property(nonatomic) _Bool active;
+- (_Bool)isActive;
+@property(nonatomic) _Bool selected;
+- (_Bool)isSelected;
+@property(nonatomic) _Bool disabled;
+- (_Bool)isDisabled;
+@property(nonatomic) _Bool highlighted;
+- (_Bool)isHighlighted;
+@property(nonatomic, readonly) unsigned long long state;
 @end
 

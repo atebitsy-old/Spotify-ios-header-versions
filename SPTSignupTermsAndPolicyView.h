@@ -7,13 +7,14 @@
 #import <UIKit/UIView.h>
 
 #import "GLUEStyleable-Protocol.h"
+#import "UITextViewDelegate-Protocol.h"
 
 @class NSArray, NSString, UITextView;
-@protocol UITextViewDelegate;
+@protocol SPTSignupTermsAndPolicyViewDelegate;
 
-@interface SPTSignupTermsAndPolicyView : UIView <GLUEStyleable>
+@interface SPTSignupTermsAndPolicyView : UIView <UITextViewDelegate, GLUEStyleable>
 {
-    id <UITextViewDelegate> _delegate;
+    id <SPTSignupTermsAndPolicyViewDelegate> _delegate;
     UITextView *_textView;
     NSArray *_termsViewHorizontalMargin;
 }
@@ -21,7 +22,8 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSArray *termsViewHorizontalMargin; // @synthesize termsViewHorizontalMargin=_termsViewHorizontalMargin;
 @property(retain, nonatomic) UITextView *textView; // @synthesize textView=_textView;
-@property(nonatomic) __weak id <UITextViewDelegate> delegate; // @synthesize delegate=_delegate;
+@property(nonatomic) __weak id <SPTSignupTermsAndPolicyViewDelegate> delegate; // @synthesize delegate=_delegate;
+- (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
 - (void)glue_applyStyle:(id)arg1;
 - (void)setupConstraints;
 - (void)setAttributedText:(id)arg1;

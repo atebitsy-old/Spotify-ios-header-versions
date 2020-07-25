@@ -6,21 +6,25 @@
 
 #import <UIKit/UITableViewCell.h>
 
-@class GLUELabel;
+@class GLUELabel, NSLayoutConstraint;
 
 @interface SPTPlaylistExtenderHeaderCell : UITableViewCell
 {
     GLUELabel *_titleLabel;
     GLUELabel *_subtitleLabel;
+    NSLayoutConstraint *_labelSpacingConstraint;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSLayoutConstraint *labelSpacingConstraint; // @synthesize labelSpacingConstraint=_labelSpacingConstraint;
 @property(readonly, nonatomic) GLUELabel *subtitleLabel; // @synthesize subtitleLabel=_subtitleLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 - (void)updateWithModel:(id)arg1 style:(id)arg2;
 - (id)accessibilityTextForTitle:(id)arg1 subtitle:(id)arg2;
 - (id)accessibilityHint;
 - (id)accessibilityLabel;
+- (void)updateLabelSpacing;
+- (void)traitCollectionDidChange:(id)arg1;
 - (void)setup;
 - (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
 

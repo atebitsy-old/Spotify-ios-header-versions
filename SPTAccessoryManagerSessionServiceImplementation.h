@@ -9,7 +9,7 @@
 #import "SPTAccessoryManagerSessionService-Protocol.h"
 
 @class NSString, SPTAccessoryActionLoggerImplementation, SPTAccessoryManagerAppServiceImplementation, SPTAllocationContext;
-@protocol GaiaFeature, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTUBIService;
+@protocol GaiaFeature, SPTEventSenderService, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTUBIService;
 
 @interface SPTAccessoryManagerSessionServiceImplementation : NSObject <SPTAccessoryManagerSessionService>
 {
@@ -19,6 +19,7 @@
     SPTAccessoryManagerAppServiceImplementation *_accessoryManagerAppService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIService> _ubiService;
+    id <SPTEventSenderService> _eventSenderService;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTAccessoryActionLoggerImplementation *_actionLogger;
 }
@@ -27,6 +28,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTAccessoryActionLoggerImplementation *actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+@property(readonly, nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(readonly, nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(readonly, nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(readonly, nonatomic) __weak SPTAccessoryManagerAppServiceImplementation *accessoryManagerAppService; // @synthesize accessoryManagerAppService=_accessoryManagerAppService;

@@ -9,7 +9,7 @@
 #import "SPTPageController-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTShareDataProvider, SPTShareLogger, UIView;
-@protocol SPTPageContainer, SPTShareContainerViewControllerProtocol, SPTShareEntityData;
+@protocol SPTPageContainer, SPTShareContainerViewControllerProtocol, SPTShareEntityData, SPTShareUBILogger;
 
 @interface SPTShareContainerViewController : UIViewController <SPTPageController>
 {
@@ -19,6 +19,7 @@
     NSArray *_destinations;
     SPTShareDataProvider *_shareDataProvider;
     SPTShareLogger *_shareLogger;
+    id <SPTShareUBILogger> _ubiLogger;
     UIView *_containerView;
     NSArray *_layoutConstraints;
     struct CGRect _contextMenuPopOverOriginRect;
@@ -27,6 +28,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) UIView *containerView; // @synthesize containerView=_containerView;
+@property(readonly, nonatomic) __weak id <SPTShareUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(retain, nonatomic) SPTShareDataProvider *shareDataProvider; // @synthesize shareDataProvider=_shareDataProvider;
 @property(copy, nonatomic) NSArray *destinations; // @synthesize destinations=_destinations;
@@ -44,7 +46,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithShareDataProvider:(id)arg1 entityData:(id)arg2 destinations:(id)arg3 shareLogger:(id)arg4;
+- (id)initWithShareDataProvider:(id)arg1 entityData:(id)arg2 destinations:(id)arg3 shareLogger:(id)arg4 ubiLogger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

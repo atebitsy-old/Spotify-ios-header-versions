@@ -6,7 +6,7 @@
 
 #import "GPBMessage.h"
 
-@class NSMutableArray, NSString, SPTSearchProtoRelatedEntity;
+@class NSMutableArray, NSString, SPTSearchProtoOnDemand, SPTSearchProtoRelatedEntity;
 
 @interface SPTSearchProtoTrack : GPBMessage
 {
@@ -16,12 +16,11 @@
 
 // Remaining properties
 @property(nonatomic) _Bool explicit_p; // @dynamic explicit_p;
+@property(nonatomic) _Bool hasOnDemand; // @dynamic hasOnDemand;
 @property(nonatomic) _Bool hasTrackAlbum; // @dynamic hasTrackAlbum;
 @property(nonatomic) _Bool lyricsMatch; // @dynamic lyricsMatch;
 @property(nonatomic) _Bool mogef19; // @dynamic mogef19;
-@property(nonatomic) _Bool onDemand; // @dynamic onDemand;
-@property(copy, nonatomic) NSString *onDemandPlaylistUri; // @dynamic onDemandPlaylistUri;
-@property(copy, nonatomic) NSString *onDemandTrackUri; // @dynamic onDemandTrackUri;
+@property(retain, nonatomic) SPTSearchProtoOnDemand *onDemand; // @dynamic onDemand;
 @property(copy, nonatomic) NSString *previewId; // @dynamic previewId;
 @property(retain, nonatomic) SPTSearchProtoRelatedEntity *trackAlbum; // @dynamic trackAlbum;
 @property(retain, nonatomic) NSMutableArray *trackArtistsArray; // @dynamic trackArtistsArray;

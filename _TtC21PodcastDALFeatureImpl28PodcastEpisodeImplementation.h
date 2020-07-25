@@ -38,6 +38,7 @@
     // Error parsing type: , name: type
     // Error parsing type: , name: inCollection
     // Error parsing type: , name: isNewEpisode
+    // Error parsing type: , name: rawDescription
     // Error parsing type: , name: syncProgress
 }
 
@@ -54,6 +55,7 @@
 - (id)localizedDuration;
 - (id)localizedTime;
 @property(nonatomic) unsigned long long syncProgress; // @synthesize syncProgress;
+@property(nonatomic, copy) NSString *rawDescription;
 - (_Bool)isUnplayed;
 @property(nonatomic) _Bool newEpisode; // @synthesize newEpisode=isNewEpisode;
 - (_Bool)isNewEpisode;

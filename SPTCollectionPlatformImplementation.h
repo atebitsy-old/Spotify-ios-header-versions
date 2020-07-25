@@ -45,8 +45,8 @@
 - (id)offlineURLForEntityURL:(id)arg1;
 - (void)removeOfflineURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)addOfflineURL:(id)arg1 options:(id)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)loggingParams;
-- (void)playEntityURL:(id)arg1 playPolicy:(id)arg2 replyOnMainThread:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (id)loggingParamsWithTimestamp:(id)arg1;
+- (void)playEntityURL:(id)arg1 playPolicy:(id)arg2 loggingParams:(id)arg3 replyOnMainThread:(_Bool)arg4 completion:(CDUnknownBlockType)arg5;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)notifyObservers;

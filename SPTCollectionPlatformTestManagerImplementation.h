@@ -49,7 +49,6 @@
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 - (id)objectForKeyedSubscript:(id)arg1;
 @property(readonly, nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled;
-@property(readonly, nonatomic, getter=isShowLikeActionInNPVEnabled) _Bool showLikeActionInNPVEnabled;
 @property(readonly, nonatomic, getter=isSnackbarForPremiumEnabled) _Bool snackbarForPremiumEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyForArtistsEnabled) _Bool sackbarWithAcmCopyForArtistsEnabled;
 @property(readonly, nonatomic, getter=isSnackbarWithACMCopyEnabled) _Bool snackbarWithACMCopyEnabled;

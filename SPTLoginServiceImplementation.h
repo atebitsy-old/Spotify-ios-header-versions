@@ -11,7 +11,7 @@
 #import "SPTPageRegistryObserver-Protocol.h"
 #import "SPTPreSignupExperimentationFeatureFlagsLoaderDelegate-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTDynamicSignupFlowController, SPTLoginAttemptLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
+@class NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTAuthenticationHandlerLogger, SPTDynamicSignupFlowController, SPTLoginAttemptLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureLayoutConfigurationProvider, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
 @protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTFacebookIntegrationService, SPTGLUEService, SPTLoginLoggingService, SPTNetworkService, SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTPreSignupExperimentationService, SPTServiceManagerService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTLoginServiceImplementation : NSObject <SPTPageRegistryObserver, SPTPreSignupExperimentationFeatureFlagsLoaderDelegate, SPTLoginService, SPTLoginLogoutHandler>
@@ -43,22 +43,26 @@
     SPTLoginNavigationRouter *_loginNavigationRouter;
     SPTLoginDelayedSignupAccountSwitcher *_accountSwitcher;
     SPTAuthenticationHandler *_authenticationHandler;
+    SPTAuthenticationHandlerLogger *_authenticationHandlerLogger;
     SPTLoginSlideUpModalPresenter *_slideUpModalPresenter;
     SPTLoginFeatureNavigationCoordinator *_navigationCoordinator;
     SPTSigninWithAppleHandler *_siaHandler;
     SPTSignupAttemptTrackerImplementation *_signupAttemptTracker;
     SPTDynamicSignupFlowController *_flowController;
     SPTLoginDbManager *_stickyCredentialsDbManager;
+    SPTLoginFeatureLayoutConfigurationProvider *_featureLayoutConfigurationProvider;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTLoginFeatureLayoutConfigurationProvider *featureLayoutConfigurationProvider; // @synthesize featureLayoutConfigurationProvider=_featureLayoutConfigurationProvider;
 @property(retain, nonatomic) SPTLoginDbManager *stickyCredentialsDbManager; // @synthesize stickyCredentialsDbManager=_stickyCredentialsDbManager;
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(retain, nonatomic) SPTSignupAttemptTrackerImplementation *signupAttemptTracker; // @synthesize signupAttemptTracker=_signupAttemptTracker;
 @property(retain, nonatomic) SPTSigninWithAppleHandler *siaHandler; // @synthesize siaHandler=_siaHandler;
 @property(retain, nonatomic) SPTLoginFeatureNavigationCoordinator *navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(retain, nonatomic) SPTLoginSlideUpModalPresenter *slideUpModalPresenter; // @synthesize slideUpModalPresenter=_slideUpModalPresenter;
+@property(retain, nonatomic) SPTAuthenticationHandlerLogger *authenticationHandlerLogger; // @synthesize authenticationHandlerLogger=_authenticationHandlerLogger;
 @property(retain, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(retain, nonatomic) SPTLoginDelayedSignupAccountSwitcher *accountSwitcher; // @synthesize accountSwitcher=_accountSwitcher;
 @property(retain, nonatomic) SPTLoginNavigationRouter *loginNavigationRouter; // @synthesize loginNavigationRouter=_loginNavigationRouter;
@@ -86,6 +90,8 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
+- (id)wrappedCredentialsFor:(id)arg1;
+- (id)startScreenBlueprintLayoutName;
 - (id)buttonActionHandlerForScreenWithIdentifier:(id)arg1;
 - (void)refreshStickyCredentialsDatabaseManager;
 - (id)provideStickyCredentialsDbManager;
@@ -115,8 +121,9 @@
 - (_Bool)isEligibleForGuestAccountExperience;
 - (void)createGuestAccountOrShowLoginView;
 - (id)provideLoginKeychainManagerImpl;
+- (void)setupFeatureLayoutConfigurationWithConfiguration:(id)arg1;
 - (void)featureFlagsLoaderDidFailToLoadFeatureFlags:(id)arg1;
-- (void)featureFlagsLoader:(id)arg1 didLoadFeatureFlags:(id)arg2;
+- (void)featureFlagsLoader:(id)arg1 didLoadFeatureFlags:(id)arg2 signupConfiguration:(id)arg3;
 - (void)loadFeatureFlags;
 - (void)tryToLoginAutomaticallyWithCredentials:(id)arg1 loginOptions:(id)arg2;
 - (void)loginWithCredentials:(id)arg1 loginOptions:(id)arg2;

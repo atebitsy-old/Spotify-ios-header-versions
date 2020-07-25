@@ -19,10 +19,10 @@
 @property(readonly, nonatomic) SPTHomeMixDomainMediator *domainMediator; // @synthesize domainMediator=_domainMediator;
 @property(readonly, nonatomic) SPTHomeMixDomainModel *domainModel; // @synthesize domainModel=_domainModel;
 @property(readonly, copy, nonatomic) NSArray *members; // @synthesize members=_members;
-- (void)logCannotHaveEmptyMixCornerCase;
-- (void)logSwitchFlippedAtIndex:(unsigned long long)arg1 intent:(id)arg2;
+- (void)logRowTappedAtIndex:(unsigned long long)arg1;
+- (void)logSwitchFlippedAtIndex:(unsigned long long)arg1 enabled:(_Bool)arg2;
 - (void)logPageImpression;
-- (void)updateMemberBlackList:(id)arg1;
+- (void)updateMemberExcludeList:(id)arg1;
 - (id)initWithDomainModel:(id)arg1 domainMediator:(id)arg2;
 
 @end

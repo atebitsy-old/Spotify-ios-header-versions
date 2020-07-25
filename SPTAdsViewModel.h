@@ -10,14 +10,14 @@
 #import "SPTAdsBaseRegistryObserver-Protocol.h"
 
 @class NSString, NSURL, SPTAdContextManager, SPTAdRulesManager;
-@protocol SPTAdsBaseCosmosBridge, SPTAdsBaseEntity, SPTAdsBaseRegistry, SPTLogCenter, SPTPlayer;
+@protocol SPTAdsBaseCosmosBridge, SPTAdsBaseEntity, SPTAdsBaseRegistry, SPTEventSender, SPTPlayer;
 
 @interface SPTAdsViewModel : NSObject <SPTAdContextManagerObserver, SPTAdsBaseRegistryObserver>
 {
     id <SPTAdsBaseEntity> _activeEntity;
     id <SPTAdsBaseRegistry> _registry;
     id <SPTPlayer> _sptPlayer;
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     NSURL *_prerollContextURL;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
     SPTAdRulesManager *_adRulesManager;
@@ -29,7 +29,7 @@
 @property(readonly, nonatomic) __weak SPTAdRulesManager *adRulesManager; // @synthesize adRulesManager=_adRulesManager;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(retain, nonatomic) NSURL *prerollContextURL; // @synthesize prerollContextURL=_prerollContextURL;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTPlayer> sptPlayer; // @synthesize sptPlayer=_sptPlayer;
 @property(readonly, nonatomic) id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
 @property(retain) id <SPTAdsBaseEntity> activeEntity; // @synthesize activeEntity=_activeEntity;
@@ -49,7 +49,7 @@
 @property(readonly, nonatomic, getter=isOptInOffer) _Bool optInOffer;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)dealloc;
-- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 adRulesManager:(id)arg3 adContextManager:(id)arg4 player:(id)arg5 logCenter:(id)arg6;
+- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 adRulesManager:(id)arg3 adContextManager:(id)arg4 player:(id)arg5 eventSender:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

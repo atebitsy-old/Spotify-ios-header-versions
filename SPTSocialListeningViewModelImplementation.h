@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTSocialListeningDialogPresenterDelegate-Protocol.h"
+#import "SPTSocialListeningDialogPresenterObserver-Protocol.h"
 #import "SPTSocialListeningModelObserver-Protocol.h"
 #import "SPTSocialListeningViewModel-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTObserverManager, SPTSocialListeningDialogPresenter, UIColor, UIImage;
 @protocol SPTLinkDispatcher, SPTProfileUserData, SPTShareEntityData, SPTShareEntityDataFactory, SPTShareFeature, SPTSocialListeningListenTogetherStateManager, SPTSocialListeningModel, SPTSocialListeningTestManager;
 
-@interface SPTSocialListeningViewModelImplementation : NSObject <SPTSocialListeningDialogPresenterDelegate, SPTSocialListeningViewModel, SPTSocialListeningModelObserver>
+@interface SPTSocialListeningViewModelImplementation : NSObject <SPTSocialListeningDialogPresenterObserver, SPTSocialListeningViewModel, SPTSocialListeningModelObserver>
 {
     _Bool _isSessionHost;
     id <SPTSocialListeningTestManager> _testManager;
@@ -56,7 +56,8 @@
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTSocialListeningListenTogetherStateManager> listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
-- (_Bool)isListenTogetherEnabled;
+- (_Bool)isNewUIExperienceEnabled;
+- (void)presenter:(id)arg1 didSelectSessionMode:(long long)arg2 forJoinURL:(id)arg3;
 - (void)presenterDidConfirmDeleteSession:(id)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

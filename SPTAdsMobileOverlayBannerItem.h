@@ -9,7 +9,7 @@
 #import "SPTAdsPromotedContentImageViewDelegate-Protocol.h"
 #import "SPTBannerItemCustomView-Protocol.h"
 
-@class NSString, SPTAdsMobileOverlayBannerView, SPTBannerView, SPTTheme;
+@class NSString, SPTBannerView, SPTTheme;
 @protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTBannerViewDelegate;
 
 @interface SPTAdsMobileOverlayBannerItem : SPTBannerItem <SPTAdsPromotedContentImageViewDelegate, SPTBannerItemCustomView>
@@ -19,11 +19,13 @@
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
     SPTTheme *_theme;
     id <GLUEImageLoader> _glueImageLoader;
-    SPTAdsMobileOverlayBannerView *_currentBannerView;
+    SPTBannerView *_currentBannerView;
+    unsigned long long _bannerVersion;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTAdsMobileOverlayBannerView *currentBannerView; // @synthesize currentBannerView=_currentBannerView;
+@property(readonly, nonatomic) unsigned long long bannerVersion; // @synthesize bannerVersion=_bannerVersion;
+@property(retain, nonatomic) SPTBannerView *currentBannerView; // @synthesize currentBannerView=_currentBannerView;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
@@ -31,7 +33,7 @@
 @property(readonly, nonatomic) __weak id <SPTBannerViewDelegate> bannerViewDelegate; // @synthesize bannerViewDelegate=_bannerViewDelegate;
 - (void)didLoadContentImage:(id)arg1;
 @property(readonly, nonatomic) SPTBannerView *bannerView;
-- (id)initWithBannerViewDelegate:(id)arg1 adEntity:(id)arg2 theme:(id)arg3 glueImageLoader:(id)arg4 cosmosBridge:(id)arg5;
+- (id)initWithBannerViewDelegate:(id)arg1 adEntity:(id)arg2 bannerVersion:(unsigned long long)arg3 theme:(id)arg4 glueImageLoader:(id)arg5 cosmosBridge:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

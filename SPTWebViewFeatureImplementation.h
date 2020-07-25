@@ -6,13 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTService-Protocol.h"
 #import "SPTWebViewFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTWebViewFactoryImplementation;
 @protocol SPTCoreService, SPTUIPresentationService, SPTURIDispatchService;
 
-@interface SPTWebViewFeatureImplementation : NSObject <SPTService, SPTWebViewFeature>
+@interface SPTWebViewFeatureImplementation : NSObject <SPTWebViewFeature>
 {
     id <SPTCoreService> _coreService;
     id <SPTURIDispatchService> _URIDispatchService;

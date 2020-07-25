@@ -8,8 +8,8 @@
 
 #import "SPTHomeService-Protocol.h"
 
-@class NSString, NSURL, SPTAllocationContext, SPTHomeContentCache, SPTHomeFeatureProperties, SPTHomeHubManager;
-@protocol SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP19MusicVideoUIFeature22SPTMusicVideoUIService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
+@class NSString, NSURL, SPTAllocationContext, SPTHomeContentStorage, SPTHomeDebugger, SPTHomeFeatureProperties, SPTHomeHubManager;
+@protocol SPTContainerUIService, SPTCrashReporterService, SPTFreeTierTasteOnboardingService, SPTFreeTierUIService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTUBIHubsUtilities, SPTUBIService, SPTURIDispatchService, _TtP17FollowFeedFeature20SPTFollowFeedService_, _TtP19CarDetectionFeature22SPTCarDetectionService_, _TtP23ListeningHistoryFeature26SPTListeningHistoryService_;
 
 @interface SPTHomeServiceImplementation : SPTUIPageService <SPTHomeService>
 {
@@ -33,28 +33,32 @@
     id <SPTUBIService> _ubiService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> _listeningHistoryService;
-    id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> _musicVideoUIService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTPageLoaderViewService> _pageLoaderViewService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
+    id <SPTCrashReporterService> _crashReporterService;
+    id <SPTContainerUIService> _containerUIService;
     SPTHomeHubManager *_hubManager;
-    SPTHomeContentCache *_homeContentCache;
+    SPTHomeContentStorage *_homeContentStorage;
     id <SPTUBIHubsUtilities> _ubiHubsUtilities;
     SPTHomeFeatureProperties *_remoteConfigProperties;
     NSURL *_pageURI;
+    SPTHomeDebugger *_homeDebugger;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTHomeDebugger *homeDebugger; // @synthesize homeDebugger=_homeDebugger;
 @property(copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(retain, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(retain, nonatomic) id <SPTUBIHubsUtilities> ubiHubsUtilities; // @synthesize ubiHubsUtilities=_ubiHubsUtilities;
-@property(retain, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
+@property(retain, nonatomic) SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
 @property(retain, nonatomic) SPTHomeHubManager *hubManager; // @synthesize hubManager=_hubManager;
+@property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
+@property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
-@property(nonatomic) __weak id <_TtP19MusicVideoUIFeature22SPTMusicVideoUIService_> musicVideoUIService; // @synthesize musicVideoUIService=_musicVideoUIService;
 @property(nonatomic) __weak id <_TtP23ListeningHistoryFeature26SPTListeningHistoryService_> listeningHistoryService; // @synthesize listeningHistoryService=_listeningHistoryService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
@@ -80,6 +84,7 @@
 - (_Bool)claimsURI:(id)arg1;
 - (id)createLoggerForViewURI:(id)arg1;
 - (id)providePersistentCache;
+- (id)createHomeHubProvider;
 - (void)setupHubManager;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

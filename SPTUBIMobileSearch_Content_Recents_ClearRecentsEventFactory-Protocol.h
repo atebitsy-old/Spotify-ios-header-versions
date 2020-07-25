@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileSearch_Content_Recents_ClearRecentsEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitClearRecentSearches;
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

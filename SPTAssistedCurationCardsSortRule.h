@@ -17,6 +17,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) _Bool scrollToNewCard; // @synthesize scrollToNewCard=_scrollToNewCard;
 @property(readonly, copy, nonatomic) NSString *providerIdentifier; // @synthesize providerIdentifier=_providerIdentifier;
+- (_Bool)isEqual:(id)arg1;
 - (id)initWithProviderClass:(Class)arg1 scrollToNewCard:(_Bool)arg2;
 
 @end

@@ -7,7 +7,6 @@
 #import "_TtC28NowPlayingEpisodeFeatureImpl23NowPlayingEpisodePlayer.h"
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl23NowPlayingEpisodePlayer (NowPlayingEpisodeFeatureImpl)
-- (void)didFireTimer;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 @end
 

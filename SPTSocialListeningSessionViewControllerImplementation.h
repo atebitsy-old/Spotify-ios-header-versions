@@ -10,7 +10,7 @@
 #import "SPTSocialListeningViewModelObserver-Protocol.h"
 
 @class NSString, SPTSocialListeningFacepileItemViewConfigurator, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningSessionView;
-@protocol GLUEImageLoader, SPTContainerUIService, SPTOfflineModeState, SPTScannablesPresenter, SPTShareFeature, SPTSocialListeningViewModel;
+@protocol GLUEImageLoader, SPTContainerUIService, SPTOfflineModeState, SPTPageLoaderViewService, SPTScannablesPresenter, SPTShareFeature, SPTSocialListeningViewModel;
 
 @interface SPTSocialListeningSessionViewControllerImplementation : UIViewController <SPTSocialListeningSessionViewController, SPTSocialListeningViewModelObserver>
 {
@@ -22,11 +22,13 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTShareFeature> _shareFeature;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
     SPTSocialListeningFacepileItemViewConfigurator *_itemConfigurator;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSocialListeningFacepileItemViewConfigurator *itemConfigurator; // @synthesize itemConfigurator=_itemConfigurator;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(readonly, nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
@@ -44,6 +46,7 @@
 @property(readonly, nonatomic, getter=isLoading) _Bool loading;
 - (void)facepileTapped:(id)arg1;
 - (void)shareButtonTapped:(id)arg1;
+- (id)provideSocialListeningParticipantsViewController;
 - (void)navigateToParticipantListView;
 - (void)showScannablesScanner:(id)arg1;
 - (void)leaveSessionButtonTapped:(id)arg1;
@@ -58,7 +61,7 @@
 - (void)loadView;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 scannablesPresenter:(id)arg2 containerUIService:(id)arg3 offlineModeState:(id)arg4 shareFeature:(id)arg5 theme:(id)arg6 logger:(id)arg7 imageLoader:(id)arg8;
+- (id)initWithViewModel:(id)arg1 scannablesPresenter:(id)arg2 containerUIService:(id)arg3 offlineModeState:(id)arg4 shareFeature:(id)arg5 theme:(id)arg6 logger:(id)arg7 imageLoader:(id)arg8 pageLoaderViewService:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

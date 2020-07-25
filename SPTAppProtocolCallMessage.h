@@ -74,6 +74,7 @@
 @property(readonly, copy, nonatomic) NSString *logMessage_message;
 @property(readonly, copy, nonatomic) NSString *logMessage_title;
 @property(readonly, nonatomic) _Bool skipPrevious_forceSkipPrevious;
+- (long long)skipToIndexInQueue_index;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

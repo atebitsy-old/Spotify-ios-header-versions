@@ -7,9 +7,10 @@
 #import "SPTService-Protocol.h"
 
 @class SPTNavigationManager, SPTStartupTracer;
-@protocol SPTKeychainManager, SPTLogCenter, SPTMetaViewController, SPTNavigationRouter, SPTNotificationSystemDelegate, SPTPageRegistry, SPTUICompletionNotifier;
+@protocol SPTEmailUniversalLinkResolverDelegate, SPTKeychainManager, SPTLogCenter, SPTMetaViewController, SPTNavigationRouter, SPTNotificationSystemDelegate, SPTPageRegistry, SPTUICompletionNotifier;
 
 @protocol SPTContainerService <SPTService>
+@property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationSystemDelegate;
 - (void (^)(void))provideContainerLogoutHandler;
 - (id <SPTKeychainManager>)provideKeychainManager;

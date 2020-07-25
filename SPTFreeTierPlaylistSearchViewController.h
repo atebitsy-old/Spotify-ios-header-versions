@@ -10,13 +10,12 @@
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "UISearchBarDelegate-Protocol.h"
-#import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUEEntityRowStyle, NSLayoutConstraint, NSString, NSURL, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistLogger, SPTSearchBar, SPTTableView;
-@protocol SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTPageContainer;
+@protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTPageContainer;
 
-@interface SPTFreeTierPlaylistSearchViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTNavigationControllerNavigationBarState, UISearchBarDelegate, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
+@interface SPTFreeTierPlaylistSearchViewController : UIViewController <UITableViewDelegate, SPTNavigationControllerNavigationBarState, UISearchBarDelegate, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
 {
     _Bool _shouldBecomeFirstResponder;
     SPTTableView *_tableView;
@@ -25,6 +24,7 @@
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistConfiguration> _configuration;
     NSLayoutConstraint *_bottomConstraint;
     SPTSearchBar *_searchBar;
 }
@@ -33,6 +33,7 @@
 @property(retain, nonatomic) SPTSearchBar *searchBar; // @synthesize searchBar=_searchBar;
 @property(nonatomic) _Bool shouldBecomeFirstResponder; // @synthesize shouldBecomeFirstResponder=_shouldBecomeFirstResponder;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistConfiguration> configuration; // @synthesize configuration=_configuration;
 @property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
@@ -60,14 +61,11 @@
 - (double)tableView:(id)arg1 estimatedHeightForRowAtIndexPath:(id)arg2;
 - (void)tableView:(id)arg1 didEndDisplayingCell:(id)arg2 forRowAtIndexPath:(id)arg3;
 - (void)tableView:(id)arg1 willDisplayCell:(id)arg2 forRowAtIndexPath:(id)arg3;
-- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
-- (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
-- (long long)numberOfSectionsInTableView:(id)arg1;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-- (id)initWithPlaylistViewModel:(id)arg1 itemsViewModel:(id)arg2 trackRowStyle:(id)arg3 cellProviderCoordinator:(id)arg4 logger:(id)arg5;
+- (id)initWithPlaylistViewModel:(id)arg1 itemsViewModel:(id)arg2 trackRowStyle:(id)arg3 cellProviderCoordinator:(id)arg4 configuration:(id)arg5 logger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

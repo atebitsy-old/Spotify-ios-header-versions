@@ -11,5 +11,6 @@
 @protocol SPTOauthClient <NSObject>
 @property(nonatomic) __weak id <SPTConnectivityAsyncScheduler> scheduler;
 - (id <SPTOauthTask>)loadTokenOrRenew:(_Bool)arg1;
+- (void)destroy;
 @end
 

@@ -37,7 +37,6 @@
 @property(copy, nonatomic) NSString *deviceId; // @synthesize deviceId=_deviceId;
 @property(copy, nonatomic) NSString *version; // @synthesize version=_version;
 @property(nonatomic) long long status; // @synthesize status=_status;
-- (id)payloadDictionary;
 - (id)dictionaryRepresentation:(id)arg1;
 - (id)initWithDeviceId:(id)arg1 name:(id)arg2 isAudioOnly:(_Bool)arg3 isAudioGroup:(_Bool)arg4 ipAddress:(id)arg5;
 

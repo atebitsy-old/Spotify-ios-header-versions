@@ -24,7 +24,6 @@
 @property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (id)createListeningHistorySectionHeaderComponent;
 - (id)createTooltipComponent;
 - (id)createTappableSectionHeaderComponent;
 - (id)createShortcutsCardComponent;

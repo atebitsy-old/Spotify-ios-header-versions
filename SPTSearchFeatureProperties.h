@@ -14,14 +14,16 @@
 {
     _Bool _shouldEnableTopics;
     _Bool _shouldUseV2Search;
-    _Bool _shouldEnableDebuggingLyricsRow;
     _Bool _shouldEnableNewRecentsRow;
-    _Bool _shouldEnableNewPodcastRow;
+    _Bool _editorialOnDemandEnabled;
+    _Bool _editorialOnDemandDebuggingEnabled;
+    _Bool _topicCarouselProhibited;
 }
 
-@property(readonly, nonatomic) _Bool shouldEnableNewPodcastRow; // @synthesize shouldEnableNewPodcastRow=_shouldEnableNewPodcastRow;
+@property(readonly, nonatomic) _Bool topicCarouselProhibited; // @synthesize topicCarouselProhibited=_topicCarouselProhibited;
+@property(readonly, nonatomic) _Bool editorialOnDemandDebuggingEnabled; // @synthesize editorialOnDemandDebuggingEnabled=_editorialOnDemandDebuggingEnabled;
+@property(readonly, nonatomic) _Bool editorialOnDemandEnabled; // @synthesize editorialOnDemandEnabled=_editorialOnDemandEnabled;
 @property(readonly, nonatomic) _Bool shouldEnableNewRecentsRow; // @synthesize shouldEnableNewRecentsRow=_shouldEnableNewRecentsRow;
-@property(readonly, nonatomic) _Bool shouldEnableDebuggingLyricsRow; // @synthesize shouldEnableDebuggingLyricsRow=_shouldEnableDebuggingLyricsRow;
 @property(readonly, nonatomic) _Bool shouldUseV2Search; // @synthesize shouldUseV2Search=_shouldUseV2Search;
 @property(readonly, nonatomic) _Bool shouldEnableTopics; // @synthesize shouldEnableTopics=_shouldEnableTopics;
 - (id)propertyModels;

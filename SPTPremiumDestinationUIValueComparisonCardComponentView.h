@@ -28,8 +28,8 @@
 - (id)constraintsForChildComponentView:(id)arg1 previousComponentView:(id)arg2 size:(struct CGSize)arg3;
 - (void)removeChildComponentViews:(id)arg1;
 - (void)setupChildComponentsForModel:(id)arg1;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;

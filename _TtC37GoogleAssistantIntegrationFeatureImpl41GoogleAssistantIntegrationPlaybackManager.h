@@ -6,16 +6,21 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTExternalIntegrationAdditionalParameterProvider-Protocol.h"
+#import "SPTExternalIntegrationInformationProvider-Protocol.h"
 
-@interface _TtC37GoogleAssistantIntegrationFeatureImpl41GoogleAssistantIntegrationPlaybackManager : NSObject <SPTExternalIntegrationAdditionalParameterProvider>
+@interface _TtC37GoogleAssistantIntegrationFeatureImpl41GoogleAssistantIntegrationPlaybackManager : NSObject <SPTExternalIntegrationInformationProvider>
 {
+    // Error parsing type: , name: currentAccessory
+    // Error parsing type: , name: externalActionOrigin
+    // Error parsing type: , name: backgroundTaskIdentifier
     // Error parsing type: , name: playbackController
 }
 
 - (void).cxx_destruct;
 - (id)init;
-- (id)parameterDictionary;
+- (id)additionalParameters;
+- (id)actionOrigin;
+- (id)accessory;
 
 @end
 

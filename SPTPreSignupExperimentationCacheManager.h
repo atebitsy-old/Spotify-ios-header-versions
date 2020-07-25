@@ -15,8 +15,9 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSUserDefaults *userDefaults; // @synthesize userDefaults=_userDefaults;
-- (void)persistFeatureFlags:(id)arg1;
-- (id)provideFeatureFlags;
+- (void)clearCache;
+- (void)cacheConfigurationResponseProto:(id)arg1;
+- (id)provideConfigurationProto;
 - (id)initWithUserDefaults:(id)arg1;
 
 @end

@@ -8,11 +8,10 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEEmptyStateViewStyle, GLUETableViewStyle, NSString, SPTEditPlaylistHeaderViewStyle, SPTEditPlaylistTextViewCellStyle;
+@class GLUEEmptyStateViewStyle, GLUETableViewStyle, NSString, SPTEditPlaylistHeaderViewStyle;
 
 @interface SPTEditPlaylistEditStyle : NSObject <GLUEStyle>
 {
-    SPTEditPlaylistTextViewCellStyle *_textViewCellStyle;
     GLUEEmptyStateViewStyle *_emptyEditViewStyle;
     GLUETableViewStyle *_tableViewStyle;
     SPTEditPlaylistHeaderViewStyle *_headerViewStyle;
@@ -24,7 +23,6 @@
 @property(copy, nonatomic) SPTEditPlaylistHeaderViewStyle *headerViewStyle; // @synthesize headerViewStyle=_headerViewStyle;
 @property(copy, nonatomic) GLUETableViewStyle *tableViewStyle; // @synthesize tableViewStyle=_tableViewStyle;
 @property(copy, nonatomic) GLUEEmptyStateViewStyle *emptyEditViewStyle; // @synthesize emptyEditViewStyle=_emptyEditViewStyle;
-@property(copy, nonatomic) SPTEditPlaylistTextViewCellStyle *textViewCellStyle; // @synthesize textViewCellStyle=_textViewCellStyle;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 
 // Remaining properties

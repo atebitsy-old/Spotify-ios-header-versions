@@ -9,34 +9,35 @@
 #import "SPTInAppMessageSDKMessageViewModel-Protocol.h"
 #import "WKScriptMessageHandler-Protocol.h"
 
-@class NSDictionary, NSString, WKWebView, WKWebViewConfiguration;
+@class NSDictionary, NSString, SPTInAppMessageSDKMessageV1, WKWebView, WKWebViewConfiguration;
 @protocol SPTInAppMessageLogger, SPTInAppMessagePresenter, SPTInAppMessageSDKMessage;
 
 @interface SPTInAppMessageSDKMessageViewModelImplementation : NSObject <WKScriptMessageHandler, SPTInAppMessageSDKMessageViewModel>
 {
-    id <SPTInAppMessageSDKMessage> _message;
     WKWebView *_webview;
     WKWebViewConfiguration *_webViewConfiguration;
     id <SPTInAppMessagePresenter> _presenter;
     id <SPTInAppMessageLogger> _logger;
     NSDictionary *_actionHandlers;
     double _webviewHeight;
+    SPTInAppMessageSDKMessageV1 *_sdkMessage;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTInAppMessageSDKMessageV1 *sdkMessage; // @synthesize sdkMessage=_sdkMessage;
 @property(nonatomic) double webviewHeight; // @synthesize webviewHeight=_webviewHeight;
 @property(readonly, copy, nonatomic) NSDictionary *actionHandlers; // @synthesize actionHandlers=_actionHandlers;
 @property(readonly, nonatomic) id <SPTInAppMessageLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTInAppMessagePresenter> presenter; // @synthesize presenter=_presenter;
 @property(retain, nonatomic) WKWebViewConfiguration *webViewConfiguration; // @synthesize webViewConfiguration=_webViewConfiguration;
 @property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
-@property(readonly, nonatomic) id <SPTInAppMessageSDKMessage> message; // @synthesize message=_message;
 - (long long)getNotificationTypeFromNotification:(id)arg1;
 - (void)userContentController:(id)arg1 didReceiveScriptMessage:(id)arg2;
 - (void)didReceiveNotification:(id)arg1;
 - (void)setupWebviewWithWidth:(double)arg1;
 - (void)loadViewForWidth:(double)arg1 presenter:(id)arg2;
 - (void)dealloc;
+@property(readonly, nonatomic) id <SPTInAppMessageSDKMessage> message;
 - (id)initWithMessage:(id)arg1 actionHandlers:(id)arg2 logger:(id)arg3;
 
 // Remaining properties

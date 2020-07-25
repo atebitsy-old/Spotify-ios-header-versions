@@ -7,17 +7,16 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTEditPlaylistEditCellConfiguratorDelegate-Protocol.h"
-#import "SPTEditPlaylistTextViewCellDelegate-Protocol.h"
 #import "SPTEditPlaylistViewModelDelegate-Protocol.h"
 #import "SPTPageController-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSIndexPath, NSString, NSURL, SPTEditPlaylistCellConfigurator, SPTEditPlaylistEditStyle, SPTEditPlaylistHeaderView, SPTEditPlaylistLogger, SPTProgressView, UITableView;
-@protocol GLUEImageLoader, SPTEditPlaylistViewModel, SPTPageContainer;
+@class NSString, NSURL, SPTEditPlaylistCellConfigurator, SPTEditPlaylistEditStyle, SPTEditPlaylistHeaderView, SPTEditPlaylistLogger, SPTProgressView, UITableView;
+@protocol GLUEImageLoader, SPTEditPlaylistViewModel, SPTPageContainer, _TtP25PlaylistAnnotationFeature21SPTPlaylistAnnotation_;
 
-@interface SPTEditPlaylistViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTEditPlaylistEditCellConfiguratorDelegate, SPTEditPlaylistTextViewCellDelegate, UITextFieldDelegate, SPTPageController, SPTEditPlaylistViewModelDelegate>
+@interface SPTEditPlaylistViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTEditPlaylistEditCellConfiguratorDelegate, UITextFieldDelegate, SPTPageController, SPTEditPlaylistViewModelDelegate>
 {
     _Bool _userHasChangedTitle;
     _Bool _initialDataLoadedCallback;
@@ -28,13 +27,13 @@
     id <GLUEImageLoader> _glueImageLoader;
     SPTProgressView *_progressView;
     SPTEditPlaylistHeaderView *_headerView;
-    NSIndexPath *_indexPathForDescriptionCell;
     SPTEditPlaylistEditStyle *_style;
+    UIViewController<_TtP25PlaylistAnnotationFeature21SPTPlaylistAnnotation_> *_annotationViewController;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UIViewController<_TtP25PlaylistAnnotationFeature21SPTPlaylistAnnotation_> *annotationViewController; // @synthesize annotationViewController=_annotationViewController;
 @property(readonly, copy, nonatomic) SPTEditPlaylistEditStyle *style; // @synthesize style=_style;
-@property(retain, nonatomic) NSIndexPath *indexPathForDescriptionCell; // @synthesize indexPathForDescriptionCell=_indexPathForDescriptionCell;
 @property(retain, nonatomic) SPTEditPlaylistHeaderView *headerView; // @synthesize headerView=_headerView;
 @property(nonatomic) _Bool initialDataLoadedCallback; // @synthesize initialDataLoadedCallback=_initialDataLoadedCallback;
 @property(nonatomic) _Bool userHasChangedTitle; // @synthesize userHasChangedTitle=_userHasChangedTitle;
@@ -47,9 +46,7 @@
 - (void)keyboardWillHideNotification:(id)arg1;
 - (void)keyboardWillShowNotification:(id)arg1;
 - (_Bool)textFieldShouldReturn:(id)arg1;
-- (void)textViewCell:(id)arg1 didUpdateText:(id)arg2;
 - (void)editCellConfiguratorDidPressDelete:(id)arg1;
-- (void)verifySelfSizingOfDescriptionCell;
 - (void)editPlaylistViewModelDidChange:(id)arg1;
 - (id)createEmptyView;
 - (void)handleEmptyView;
@@ -60,21 +57,22 @@
 - (_Bool)tableView:(id)arg1 canMoveRowAtIndexPath:(id)arg2;
 - (_Bool)tableView:(id)arg1 shouldIndentWhileEditingRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 editingStyleForRowAtIndexPath:(id)arg2;
-- (id)configureDescriptionCell;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)hideProgressView;
 - (void)showProgressView;
+- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(id)arg1;
 - (void)setupConstraints;
 - (void)didPressCancel;
+- (void)save;
 - (void)didPressDone;
 - (void)initializeInterface;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)dealloc;
 - (void)viewDidLoad;
-- (id)initWithEditViewModel:(id)arg1 theme:(id)arg2 logger:(id)arg3 glueImageLoader:(id)arg4;
+- (id)initWithEditViewModel:(id)arg1 theme:(id)arg2 logger:(id)arg3 glueImageLoader:(id)arg4 annotationViewController:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

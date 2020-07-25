@@ -26,6 +26,8 @@
 - (void)applyThemeLayout;
 - (void)buttonTapped:(id)arg1;
 - (void)configureWithModel:(id)arg1;
+- (void)setupConstraints;
+- (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;
 
 @end

@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL;
+@class NSString, NSURL, SPTLoggingParams;
 
 @protocol SPTCollectionEntityListTrackItem <NSObject>
 @property(readonly, nonatomic) long long trackRowRestriction;
@@ -24,6 +24,6 @@
 @property(readonly, copy, nonatomic) NSURL *imageURL;
 @property(readonly, copy, nonatomic) NSString *subtitle;
 @property(readonly, copy, nonatomic) NSString *title;
-- (void)action;
+- (void)actionWithLoggingParams:(SPTLoggingParams *)arg1;
 @end
 

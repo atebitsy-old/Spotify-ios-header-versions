@@ -12,6 +12,9 @@
     // Error parsing type: , name: voiceAppProtocolHandler
     // Error parsing type: , name: presetsAppProtocolHandler
     // Error parsing type: , name: otaAppProtocolHandler
+    // Error parsing type: , name: deviceAppProtocolHandler
+    // Error parsing type: , name: pitstopAppProtocolHandler
+    // Error parsing type: , name: instrumentationAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_methodHandlers
     // Error parsing type: , name: $__lazy_storage_$_subscriptionHandlers
 }

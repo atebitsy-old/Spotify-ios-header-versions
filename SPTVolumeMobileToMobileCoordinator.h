@@ -10,7 +10,7 @@
 #import "SPTVolumeSystemObserver-Protocol.h"
 
 @class AVAudioSession, NSString, SPTVolumeBuffer, SPTVolumeMobileToMobileController;
-@protocol SPTGaiaConnectAPI, SPTVolumeFlagsManager, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
+@protocol SPTGaiaConnectAPI, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeMobileToMobileCoordinator : NSObject <SPTVolumeSystemObserver, SPTVolumeMobileToMobileDelegate>
 {
@@ -18,7 +18,6 @@
     id <SPTGaiaConnectAPI> _connectManager;
     id <SPTVolumeSynchronizationManager> _remoteVolumeSynchronizationManager;
     SPTVolumeMobileToMobileController *_mobileToMobileController;
-    id <SPTVolumeFlagsManager> _flagManager;
     SPTVolumeBuffer *_volumeBuffer;
     AVAudioSession *_audioSession;
     double _internalVolume;
@@ -28,7 +27,6 @@
 @property(nonatomic) double internalVolume; // @synthesize internalVolume=_internalVolume;
 @property(readonly, nonatomic) AVAudioSession *audioSession; // @synthesize audioSession=_audioSession;
 @property(readonly, nonatomic) SPTVolumeBuffer *volumeBuffer; // @synthesize volumeBuffer=_volumeBuffer;
-@property(readonly, nonatomic) id <SPTVolumeFlagsManager> flagManager; // @synthesize flagManager=_flagManager;
 @property(readonly, nonatomic) SPTVolumeMobileToMobileController *mobileToMobileController; // @synthesize mobileToMobileController=_mobileToMobileController;
 @property(readonly, nonatomic) id <SPTVolumeSynchronizationManager> remoteVolumeSynchronizationManager; // @synthesize remoteVolumeSynchronizationManager=_remoteVolumeSynchronizationManager;
 @property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
@@ -42,7 +40,7 @@
 - (void)dealloc;
 - (void)setupInternalVolume;
 - (void)setupObserving;
-- (id)initWithSystemVolumeManager:(id)arg1 remoteVolumeSynchronizationManager:(id)arg2 connectManager:(id)arg3 mobileToMobileController:(id)arg4 flagManager:(id)arg5 volumeBuffer:(id)arg6 audioSession:(id)arg7;
+- (id)initWithSystemVolumeManager:(id)arg1 remoteVolumeSynchronizationManager:(id)arg2 connectManager:(id)arg3 mobileToMobileController:(id)arg4 volumeBuffer:(id)arg5 audioSession:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

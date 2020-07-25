@@ -10,7 +10,7 @@
 #import "SPTWebViewControllerDelegate-Protocol.h"
 
 @class NSLayoutConstraint, NSString, NSURL, SPTAdsMarqueeContextMenuView, SPTTheme, UIButton, UIVisualEffectView;
-@protocol SPTAdsBaseMarqueeEntity, SPTEventSender, SPTLogCenter, SPTPageContainer, SPTUIPresentationService, SPTWebViewController;
+@protocol SPTAdsBaseMarqueeEntity, SPTEventSender, SPTPageContainer, SPTUIPresentationService, SPTWebViewController;
 
 @interface SPTAdsMarqueeContextMenuViewController : UIViewController <SPTWebViewControllerDelegate, SPTPageController>
 {
@@ -21,7 +21,6 @@
     SPTAdsMarqueeContextMenuView *_contextMenuViewSecondary;
     SPTTheme *_theme;
     UIViewController<SPTWebViewController> *_webViewController;
-    id <SPTLogCenter> _logcenter;
     id <SPTAdsBaseMarqueeEntity> _adEntity;
     id <SPTEventSender> _eventSender;
     double _popoverHeight;
@@ -35,7 +34,6 @@
 @property(nonatomic) double popoverHeight; // @synthesize popoverHeight=_popoverHeight;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTAdsBaseMarqueeEntity> adEntity; // @synthesize adEntity=_adEntity;
-@property(readonly, nonatomic) id <SPTLogCenter> logcenter; // @synthesize logcenter=_logcenter;
 @property(readonly, nonatomic) UIViewController<SPTWebViewController> *webViewController; // @synthesize webViewController=_webViewController;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTAdsMarqueeContextMenuView *contextMenuViewSecondary; // @synthesize contextMenuViewSecondary=_contextMenuViewSecondary;
@@ -59,7 +57,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (id)initWithTheme:(id)arg1 title:(id)arg2 primaryContextMenuView:(id)arg3 secondaryContextMenuView:(id)arg4 presentationService:(id)arg5 webViewFactory:(id)arg6 logCenter:(id)arg7 adEntity:(id)arg8 eventSender:(id)arg9;
+- (id)initWithTheme:(id)arg1 title:(id)arg2 primaryContextMenuView:(id)arg3 secondaryContextMenuView:(id)arg4 presentationService:(id)arg5 webViewFactory:(id)arg6 adEntity:(id)arg7 eventSender:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

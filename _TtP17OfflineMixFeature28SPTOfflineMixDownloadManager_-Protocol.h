@@ -11,7 +11,9 @@
 - (void)changeOfflineStateFor:(NSURL *)arg1;
 - (unsigned long long)offlineStateOf:(NSURL *)arg1;
 - (_Bool)isAvailableOffline:(NSURL *)arg1;
+- (void)remove:(NSURL *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)remove:(NSURL *)arg1;
+- (void)download:(NSURL *)arg1 completion:(void (^)(NSError *))arg2;
 - (void)download:(NSURL *)arg1;
 - (void)removeObserver:(id <_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_>)arg1;
 - (void)removeObserver:(id <_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_>)arg1 forTrack:(NSURL *)arg2;

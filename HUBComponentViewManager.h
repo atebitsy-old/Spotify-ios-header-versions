@@ -29,8 +29,8 @@
 - (id)componentView:(id)arg1 childComponentViewForModel:(id)arg2;
 - (void)restoreComponentUIStateForComponentView:(id)arg1;
 - (void)saveComponentUIStateForComponentView:(id)arg1;
-- (void)componentViewDidDisappear:(id)arg1 withContext:(id)arg2;
-- (void)componentViewWillAppear:(id)arg1 withContext:(id)arg2;
+- (void)componentViewDidDisappear:(id)arg1;
+- (void)componentViewWillAppear:(id)arg1;
 - (id)createComponentViewForModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (id)initWithComponentRegistry:(id)arg1 componentEventHandler:(id)arg2;
 

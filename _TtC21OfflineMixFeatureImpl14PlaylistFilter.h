@@ -8,7 +8,7 @@
 
 @interface _TtC21OfflineMixFeatureImpl14PlaylistFilter : NSObject
 {
-    // Error parsing type: , name: formatListType
+    // Error parsing type: , name: formatListTypes
 }
 
 - (void).cxx_destruct;

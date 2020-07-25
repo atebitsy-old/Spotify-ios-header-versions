@@ -12,6 +12,7 @@
 @protocol SPTAssistedCurationUIService <SPTService>
 - (void)curateQueue;
 - (void)curateLikedSongs;
+- (void)curatePlaylistURL:(NSURL *)arg1 shouldPrioRecentlyPlayed:(_Bool)arg2;
 - (void)curatePlaylistURL:(NSURL *)arg1;
 - (id <SPTAssistedCurationUIContextHandler>)contextHandlerForURI:(NSURL *)arg1;
 - (id <SPTAssistedCurationLinkDispatcher>)providerAssistedCurationLinkDispatcher;

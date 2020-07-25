@@ -6,24 +6,24 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, NSURL;
+@class NSArray, NSString, NSURL;
 
 @interface SPTAdVoiceMetadata : NSObject
 {
     double _delay;
     double _microphoneListeningPeriod;
     NSString *_adID;
-    long long _intent;
+    NSArray *_intents;
     NSURL *_actionURI;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *actionURI; // @synthesize actionURI=_actionURI;
-@property(readonly, nonatomic) long long intent; // @synthesize intent=_intent;
+@property(readonly, nonatomic) NSArray *intents; // @synthesize intents=_intents;
 @property(readonly, nonatomic) NSString *adID; // @synthesize adID=_adID;
 @property(readonly, nonatomic) double microphoneListeningPeriod; // @synthesize microphoneListeningPeriod=_microphoneListeningPeriod;
 @property(readonly, nonatomic) double delay; // @synthesize delay=_delay;
-- (id)initWithDelay:(double)arg1 adID:(id)arg2 intent:(long long)arg3 actionURI:(id)arg4;
+- (id)initWithDelay:(double)arg1 adID:(id)arg2 intents:(id)arg3 actionURI:(id)arg4;
 
 @end
 

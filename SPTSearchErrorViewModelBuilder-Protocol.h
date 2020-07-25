@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTHubsKitViewModel;
+@class NSString, SPTHubsKitViewModel;
 
 @protocol SPTSearchErrorViewModelBuilder <NSObject>
-- (SPTHubsKitViewModel *)viewModelForErrorType:(unsigned long long)arg1;
+- (SPTHubsKitViewModel *)viewModelForErrorType:(unsigned long long)arg1 requestID:(NSString *)arg2;
 @end
 

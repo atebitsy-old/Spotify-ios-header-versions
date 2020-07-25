@@ -19,7 +19,7 @@
 + (CDUnknownBlockType)welcomePageSeen:(id)arg1;
 + (CDUnknownBlockType)welcomeLearnMoreTapped:(id)arg1;
 + (CDUnknownBlockType)welcomeListenNowTapped:(id)arg1;
-+ (CDUnknownBlockType)memberBlacklistUpdated:(id)arg1;
++ (CDUnknownBlockType)memberExcludeListUpdated:(id)arg1;
 + (CDUnknownBlockType)explicitContentEnabledChanged:(id)arg1;
 + (CDUnknownBlockType)failedToChangeMood:(id)arg1;
 + (CDUnknownBlockType)metadataTrackUpdated:(id)arg1;

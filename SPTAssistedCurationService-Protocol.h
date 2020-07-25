@@ -10,7 +10,7 @@
 @protocol SPTAssistedCurationAddTrackHandler, SPTAssistedCurationCardsSortMechanism, SPTAssistedCurationModel;
 
 @protocol SPTAssistedCurationService <SPTService>
-- (id <SPTAssistedCurationCardsSortMechanism>)providerCardsSortMechanismForURI:(NSURL *)arg1;
+- (id <SPTAssistedCurationCardsSortMechanism>)providerCardsSortMechanismForURI:(NSURL *)arg1 shouldPrioRecentlyPlayed:(_Bool)arg2;
 - (id <SPTAssistedCurationAddTrackHandler>)provideAddTrackHandlerForURI:(NSURL *)arg1;
 - (id <SPTAssistedCurationModel>)provideAssistedCurationModelForURI:(NSURL *)arg1;
 @end

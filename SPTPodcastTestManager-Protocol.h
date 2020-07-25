@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTPodcastTestManager <NSObject>
+@property(readonly, nonatomic, getter=isPodcastTopicsInShowRequestEnabled) _Bool podcastTopicsInShowRequestEnabled;
 @property(readonly, nonatomic, getter=isPodcastDALEnabledForExternalFeatures) _Bool podcastDALEnabledForExternalFeatures;
 @property(readonly, nonatomic, getter=isPodcastShowPageHTMLDescriptionEnabled) _Bool podcastShowPageHTMLDescriptionEnabled;
 @property(readonly, nonatomic, getter=isPodcastShowPageSearchEnabled) _Bool podcastShowPageSearchEnabled;
 @property(readonly, nonatomic, getter=isPodcastNewPlaybackSpeedsEnabled) _Bool podcastNewPlaybackSpeedsEnabled;
-@property(readonly, nonatomic, getter=isPodcastDataAccessLayerPodcastRequestEnabled) _Bool podcastDataAccessLayerPodcastRequestEnabled;
 @property(readonly, nonatomic, getter=isPodcastPlayButtonShown) _Bool podcastPlayButtonShown;
 @property(readonly, nonatomic, getter=isShowsCollectionFeatureEnabled) _Bool showsCollectionFeatureEnabled;
 @property(readonly, nonatomic, getter=isPodcastFeatureEnabled) _Bool podcastFeatureEnabled;

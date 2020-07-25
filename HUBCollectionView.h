@@ -8,12 +8,11 @@
 
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class NSMutableSet, NSString;
+@class NSString;
 @protocol HUBScrollViewDelegate, UICollectionViewDelegate;
 
 @interface HUBCollectionView : UICollectionView <UICollectionViewDelegate>
 {
-    NSMutableSet *_registeredCollectionViewCellReuseIdentifiers;
     id <HUBScrollViewDelegate> _scrollViewDelegate;
     id <UICollectionViewDelegate> _collectionViewDelegate;
 }
@@ -26,7 +25,6 @@
 - (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
 - (_Bool)touchesShouldCancelInContentView:(id)arg1;
 - (id)dequeueReusableCellWithReuseIdentifier:(id)arg1 forIndexPath:(id)arg2 cellClassWhenUnregistered:(Class)arg3;
-@property(readonly, nonatomic) NSMutableSet *registeredCollectionViewCellReuseIdentifiers; // @synthesize registeredCollectionViewCellReuseIdentifiers=_registeredCollectionViewCellReuseIdentifiers;
 - (void)setContentOffset:(struct CGPoint)arg1;
 - (void)setContentInset:(struct UIEdgeInsets)arg1;
 - (id)initWithFrame:(struct CGRect)arg1 collectionViewLayout:(id)arg2;

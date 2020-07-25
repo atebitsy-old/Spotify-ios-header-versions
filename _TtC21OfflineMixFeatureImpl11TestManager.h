@@ -10,9 +10,13 @@
 {
     // Error parsing type: , name: userCuratedOfflineMixEnabled
     // Error parsing type: , name: spotifyCuratedOfflineMixEnabled
+    // Error parsing type: , name: userCuratedPlaylistURL
+    // Error parsing type: , name: spotifyCuratedPlaylistURL
 }
 
+- (void).cxx_destruct;
 - (id)init;
+- (_Bool)isOfflineMixPlaylistURL:(id)arg1;
 @property(nonatomic, readonly) _Bool spotifyCuratedOfflineMixEnabled; // @synthesize spotifyCuratedOfflineMixEnabled;
 @property(nonatomic, readonly) _Bool userCuratedOfflineMixEnabled; // @synthesize userCuratedOfflineMixEnabled;
 

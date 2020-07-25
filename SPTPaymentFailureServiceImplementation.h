@@ -9,7 +9,7 @@
 #import "SPTPaymentFailureService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPaymentFailureNotificationController, SPTResubModalController;
-@protocol CosmosFeature, SPTAccountService, SPTBannerFeature, SPTContainerService, SPTFeatureFlaggingService, SPTSessionService, SPTUIPresentationService;
+@protocol CosmosFeature, SPTAccountService, SPTBannerFeature, SPTContainerService, SPTEventSenderService, SPTFeatureFlaggingService, SPTSessionService, SPTUIPresentationService;
 
 @interface SPTPaymentFailureServiceImplementation : NSObject <SPTPaymentFailureService>
 {
@@ -20,6 +20,7 @@
     id <SPTContainerService> _containerService;
     id <CosmosFeature> _cosmosFeature;
     id <SPTUIPresentationService> _presentationService;
+    id <SPTEventSenderService> _eventSenderService;
     SPTPaymentFailureNotificationController *_paymentFailureController;
     SPTResubModalController *_resubModalController;
 }
@@ -28,6 +29,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTResubModalController *resubModalController; // @synthesize resubModalController=_resubModalController;
 @property(retain, nonatomic) SPTPaymentFailureNotificationController *paymentFailureController; // @synthesize paymentFailureController=_paymentFailureController;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;

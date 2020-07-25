@@ -68,6 +68,7 @@
 - (void)updateVolumeToNewValue:(float)arg1;
 - (void)updateVolumeAfterVolumeDecrease;
 - (void)updateVolumeAfterVolumeIncrease;
+@property(readonly, nonatomic) _Bool isAppleWatch;
 @property(readonly, nonatomic) NSString *loggingIdentifier;
 - (id)deviceId;
 - (_Bool)isEqual:(id)arg1;

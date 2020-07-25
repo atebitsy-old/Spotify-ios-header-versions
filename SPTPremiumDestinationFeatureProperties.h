@@ -16,15 +16,20 @@
     _Bool _premiumHeaderVoiceoverAccessibleEnabled;
     _Bool _premiumDestinationTabbarBadgeEnabled;
     unsigned long long _premiumDestinationTrialOfferRibbon;
+    unsigned long long _premiumDestinationSystemNotification;
     NSString *_premiumDestinationTrialOfferRibbonString;
+    NSString *_premiumDestinationSystemNotificationString;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *premiumDestinationSystemNotificationString; // @synthesize premiumDestinationSystemNotificationString=_premiumDestinationSystemNotificationString;
 @property(retain, nonatomic) NSString *premiumDestinationTrialOfferRibbonString; // @synthesize premiumDestinationTrialOfferRibbonString=_premiumDestinationTrialOfferRibbonString;
+@property(readonly, nonatomic) unsigned long long premiumDestinationSystemNotification; // @synthesize premiumDestinationSystemNotification=_premiumDestinationSystemNotification;
 @property(readonly, nonatomic) unsigned long long premiumDestinationTrialOfferRibbon; // @synthesize premiumDestinationTrialOfferRibbon=_premiumDestinationTrialOfferRibbon;
 @property(readonly, nonatomic) _Bool premiumDestinationTabbarBadgeEnabled; // @synthesize premiumDestinationTabbarBadgeEnabled=_premiumDestinationTabbarBadgeEnabled;
 @property(readonly, nonatomic) _Bool premiumHeaderVoiceoverAccessibleEnabled; // @synthesize premiumHeaderVoiceoverAccessibleEnabled=_premiumHeaderVoiceoverAccessibleEnabled;
 @property(readonly, nonatomic) _Bool mercuryPremiumHubsPageShowLegacyIos; // @synthesize mercuryPremiumHubsPageShowLegacyIos=_mercuryPremiumHubsPageShowLegacyIos;
+- (unsigned long long)mapPremiumDestinationSystemNotificationToEnumValue:(id)arg1;
 - (unsigned long long)mapPremiumDestinationTrialOfferRibbonToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

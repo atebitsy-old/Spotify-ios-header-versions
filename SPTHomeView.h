@@ -6,13 +6,13 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUEInteractiveAnimation, HUBContainerView, HUBView, NSLayoutConstraint, SPTHomeFeatureProperties, SPTHomeGradientBackgroundView;
-@protocol GLUETheme, HUBImageLoaderFactory, HUBOverlayViewComponentDelegate;
+@class GLUEInteractiveAnimation, HUBContainerView, HUBView, NSLayoutConstraint, SPTHomeFeatureProperties, SPTHomeGradientBackgroundView, SPTHomeHubProvider;
+@protocol GLUETheme, HUBOverlayViewComponentDelegate;
 
 @interface SPTHomeView : UIView
 {
     id <GLUETheme> _theme;
-    id <HUBImageLoaderFactory> _imageLoaderFactory;
+    SPTHomeHubProvider *_homeHubProvider;
     SPTHomeFeatureProperties *_remoteConfigProperties;
     HUBContainerView *_containerView;
     GLUEInteractiveAnimation *_headerAlphaAnimation;
@@ -28,10 +28,10 @@
 @property(retain, nonatomic) GLUEInteractiveAnimation *headerAlphaAnimation; // @synthesize headerAlphaAnimation=_headerAlphaAnimation;
 @property(readonly, nonatomic) HUBContainerView *containerView; // @synthesize containerView=_containerView;
 @property(readonly, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
-@property(readonly, nonatomic) id <HUBImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
+@property(readonly, nonatomic) SPTHomeHubProvider *homeHubProvider; // @synthesize homeHubProvider=_homeHubProvider;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
-- (void)configureHubViewInset;
-- (void)updateHeaderOpacityWithOffset:(struct CGPoint)arg1;
+- (void)addDefaultBodyViewInset;
+- (void)updateHeaderGradientOpacityWithOffset:(struct CGPoint)arg1;
 - (void)scrollToTop;
 - (void)createHeaderGradientView;
 - (void)loadViewModel:(id)arg1;
@@ -40,9 +40,9 @@
 - (void)configureHeaderGradientViewConstraints;
 - (void)setupAnimationForHeaderGradientView;
 - (void)setupHeaderGradientView;
-@property(readonly, nonatomic) HUBView *hubView;
 - (void)configureView;
-- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 imageLoaderFactory:(id)arg3 componentLayoutManager:(id)arg4 componentRegistry:(id)arg5 componentEventHandler:(id)arg6 remoteConfigProperties:(id)arg7;
+@property(readonly, nonatomic) HUBView *bodyView;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2 homeHubProvider:(id)arg3 componentEventHandler:(id)arg4 remoteConfigProperties:(id)arg5;
 
 @end
 

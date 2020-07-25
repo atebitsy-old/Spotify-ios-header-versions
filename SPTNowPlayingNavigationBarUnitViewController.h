@@ -20,25 +20,30 @@
     SPTTheme *_theme;
     id <GLUETheme> _glueTheme;
     UIViewController *_tabViewController;
+    UIViewController *_leftButtonViewController;
+    UIViewController *_rightButtonViewController;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) UIViewController *rightButtonViewController; // @synthesize rightButtonViewController=_rightButtonViewController;
+@property(readonly, nonatomic) UIViewController *leftButtonViewController; // @synthesize leftButtonViewController=_leftButtonViewController;
 @property(retain, nonatomic) UIViewController *tabViewController; // @synthesize tabViewController=_tabViewController;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTNowPlayingNavigationBarModel> model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTNowPlayingNavigationBarUnitManagerImplementation *navigationBarUnitManager; // @synthesize navigationBarUnitManager=_navigationBarUnitManager;
-- (void)rightButtonPressed:(id)arg1;
 - (void)navigationBarModelStateDidChange:(id)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (void)updateLabels;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)setupRightButton;
+- (void)setupLeftButton;
 - (void)loadView;
-- (id)initWithNavigationBarModel:(id)arg1 auxiliaryActionsHandler:(id)arg2 theme:(id)arg3 glueTheme:(id)arg4 tabViewController:(id)arg5;
+- (id)initWithNavigationBarModel:(id)arg1 auxiliaryActionsHandler:(id)arg2 theme:(id)arg3 glueTheme:(id)arg4 tabViewController:(id)arg5 leftButtonViewController:(id)arg6 rightButtonViewController:(id)arg7;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

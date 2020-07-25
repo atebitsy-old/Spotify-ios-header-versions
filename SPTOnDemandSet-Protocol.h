@@ -13,6 +13,7 @@
 - (void)removeObserver:(id <SPTOnDemandSetObserver>)arg1;
 - (void)addObserver:(id <SPTOnDemandSetObserver>)arg1;
 @property(nonatomic, readonly) NSSet *onDemandURLs;
+- (void)updateTemporaryOnDemandItem:(NSURL *)arg1;
 - (void)updateOnDemandSet:(NSSet *)arg1;
 - (_Bool)containsURL:(NSURL *)arg1;
 @end

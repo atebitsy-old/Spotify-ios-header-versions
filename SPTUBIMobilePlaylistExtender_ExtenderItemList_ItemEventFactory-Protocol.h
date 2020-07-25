@@ -10,6 +10,9 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobilePlaylistExtender_ExtenderItemList_Item_AddSongsButtonEventFactory;
 
 @protocol SPTUBIMobilePlaylistExtender_ExtenderItemList_ItemEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)swipeAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)swipeRemoveLikeWithItemNoLongerLiked:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)swipeLikeWithItemToBeLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIMobilePlaylistExtender_ExtenderItemList_Item_AddSongsButtonEventFactory>)addSongsButtonFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;

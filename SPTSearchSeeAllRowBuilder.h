@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)seeAllLoggingDataForURI:(id)arg1 ubiLocationSerializer:(id)arg2 position:(unsigned long long)arg3;
++ (id)seeAllLoggingDataForURI:(id)arg1 ubiLocationSerializer:(id)arg2 position:(unsigned long long)arg3 requestID:(id)arg4;
 + (void)addUIILoggingDataToComponentModel:(id)arg1 entityType:(int)arg2 requestID:(id)arg3 pageURI:(id)arg4;
 + (id)sectionIDForEntityType:(int)arg1;
 + (id)entityTypeNameForEntityType:(int)arg1;

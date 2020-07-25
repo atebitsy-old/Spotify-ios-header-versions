@@ -9,12 +9,12 @@
 #import "SPTChurnLockViewModelDelegate-Protocol.h"
 
 @class NSString, SPTPaymentFailureModalViewController;
-@protocol SPTChurnLockPresenterDelegate, SPTLogCenter, SPTModalPresentationController;
+@protocol SPTChurnLockPresenterDelegate, SPTEventSender, SPTModalPresentationController;
 
 @interface SPTChurnLockPresenter : NSObject <SPTChurnLockViewModelDelegate>
 {
     id <SPTChurnLockPresenterDelegate> _delegate;
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     id <SPTModalPresentationController> _presentationController;
     SPTPaymentFailureModalViewController *_churnViewController;
 }
@@ -22,12 +22,12 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTPaymentFailureModalViewController *churnViewController; // @synthesize churnViewController=_churnViewController;
 @property(retain, nonatomic) id <SPTModalPresentationController> presentationController; // @synthesize presentationController=_presentationController;
-@property(nonatomic) __weak id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(nonatomic) __weak id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(nonatomic) __weak id <SPTChurnLockPresenterDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)churnlockDidDowngrade;
 - (void)dismissChurnLock;
 - (void)presentChurnLock;
-- (id)initWithLogCenter:(id)arg1 presentationController:(id)arg2;
+- (id)initWithEventSender:(id)arg1 presentationController:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

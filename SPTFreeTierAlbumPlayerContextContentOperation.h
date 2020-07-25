@@ -17,6 +17,8 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
+- (void)addTrackURIsToClickEventInComponentBuilder:(id)arg1 trackUris:(id)arg2;
+- (id)retrievePlayButtonBuilderFromHeaderComponentBuilder:(id)arg1;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 
 @end

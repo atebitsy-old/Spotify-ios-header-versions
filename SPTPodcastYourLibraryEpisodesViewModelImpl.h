@@ -6,6 +6,7 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTOfflineModeStateObserver-Protocol.h"
 #import "SPTPodcastEpisodeCellActionHandlerEpisodeProvider-Protocol.h"
 #import "SPTPodcastEpisodeProgressPolling-Protocol.h"
 #import "SPTPodcastYourLibraryDataParserDelegate-Protocol.h"
@@ -13,10 +14,11 @@
 #import "SPTYourLibraryPodcastUnfinishedItemsProviderObserver-Protocol.h"
 
 @class NSArray, NSCache, NSString, NSURL, SPTPodcastYourLibraryDataParser, SPTYourLibraryPodcastUnfinishedItemsProvider;
-@protocol SPTExplicitContentAccessManager, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastYourLibraryEpisodesViewModelDelegate;
+@protocol SPTExplicitContentAccessManager, SPTOfflineModeState, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisodeFactory, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastYourLibraryEpisodesViewModelDelegate;
 
-@interface SPTPodcastYourLibraryEpisodesViewModelImpl : NSObject <SPTPodcastYourLibraryDataParserDelegate, SPTYourLibraryPodcastUnfinishedItemsProviderObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
+@interface SPTPodcastYourLibraryEpisodesViewModelImpl : NSObject <SPTPodcastYourLibraryDataParserDelegate, SPTYourLibraryPodcastUnfinishedItemsProviderObserver, SPTOfflineModeStateObserver, SPTPodcastYourLibraryEpisodesViewModel, SPTPodcastEpisodeProgressPolling, SPTPodcastEpisodeCellActionHandlerEpisodeProvider>
 {
+    _Bool _isOffline;
     NSURL *_URL;
     id <SPTPodcastYourLibraryEpisodesViewModelDelegate> _delegate;
     NSCache *_progressCache;
@@ -29,15 +31,18 @@
     SPTYourLibraryPodcastUnfinishedItemsProvider *_unfinishedItemsProvider;
     SPTPodcastYourLibraryDataParser *_dataParser;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <SPTOfflineModeState> _offlineStateObservable;
     NSArray *_unfinishedEpisodeItems;
     NSArray *_nextEpisodeItems;
     NSArray *_headerItems;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isOffline; // @synthesize isOffline=_isOffline;
 @property(copy, nonatomic) NSArray *headerItems; // @synthesize headerItems=_headerItems;
 @property(copy, nonatomic) NSArray *nextEpisodeItems; // @synthesize nextEpisodeItems=_nextEpisodeItems;
 @property(copy, nonatomic) NSArray *unfinishedEpisodeItems; // @synthesize unfinishedEpisodeItems=_unfinishedEpisodeItems;
+@property(readonly, nonatomic) id <SPTOfflineModeState> offlineStateObservable; // @synthesize offlineStateObservable=_offlineStateObservable;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) SPTPodcastYourLibraryDataParser *dataParser; // @synthesize dataParser=_dataParser;
 @property(retain, nonatomic) SPTYourLibraryPodcastUnfinishedItemsProvider *unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
@@ -50,6 +55,7 @@
 @property(readonly, nonatomic) NSCache *progressCache; // @synthesize progressCache=_progressCache;
 @property(nonatomic) __weak id <SPTPodcastYourLibraryEpisodesViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) NSURL *URL; // @synthesize URL=_URL;
+- (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)cellActionHandler:(id)arg1 episodeForIndexPath:(id)arg2;
 - (id)cellActionHandler:(id)arg1 allEpisodesInSection:(long long)arg2;
 - (void)didFailParsingData:(id)arg1;
@@ -80,7 +86,8 @@
 - (_Bool)isEpisodeActiveAtIndexPath:(id)arg1;
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (id)episodeAtIndexPath:(id)arg1;
-- (id)initWithDataLoader:(id)arg1 requestFactory:(id)arg2 unfinishedItemsProvider:(id)arg3 episodeFactory:(id)arg4 podcastPlayer:(id)arg5 explicitContentAccessManager:(id)arg6 viewURI:(id)arg7;
+- (void)dealloc;
+- (id)initWithDataLoader:(id)arg1 requestFactory:(id)arg2 unfinishedItemsProvider:(id)arg3 episodeFactory:(id)arg4 podcastPlayer:(id)arg5 explicitContentAccessManager:(id)arg6 offlineStateObservable:(id)arg7 viewURI:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

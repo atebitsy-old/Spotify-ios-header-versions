@@ -60,8 +60,8 @@
 - (void)presentInAppMessageView:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
 - (_Bool)slateShouldOnlyDismissOnFooterTap:(id)arg1;
 - (_Bool)slateShouldDismiss:(id)arg1;
+- (_Bool)shouldHideImageForSlate:(id)arg1;
 - (id)dismissTextForSlate:(id)arg1;
-- (id)titleForSlate:(id)arg1;
 - (void)slateDidDismiss:(id)arg1;
 - (_Bool)shouldFullscreen;
 - (id)contentUnitForSlateViewController:(id)arg1;

@@ -7,9 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol UITableViewDragDelegate><UICollectionViewDragDelegate><SPTShareCroppableDragPreview;
+@protocol SPTShareCroppableDragPreview><UICollectionViewDragDelegate><UITableViewDragDelegate;
 
 @protocol SPTShareDragDelegateFactory <NSObject>
-- (id <UITableViewDragDelegate><UICollectionViewDragDelegate><SPTShareCroppableDragPreview>)createShareDragDelegateWithBlock:(NSURL * (^)(NSIndexPath *))arg1 logContext:(NSString *)arg2;
+- (id <SPTShareCroppableDragPreview><UICollectionViewDragDelegate><UITableViewDragDelegate>)createShareDragDelegateWithBlock:(NSURL * (^)(NSIndexPath *))arg1 logContext:(NSString *)arg2;
 @end
 

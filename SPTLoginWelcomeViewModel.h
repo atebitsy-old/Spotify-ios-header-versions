@@ -9,43 +9,38 @@
 #import "SPTLoginActionButtonsViewModel-Protocol.h"
 #import "SPTLoginThirdPartyLoginControllerDelegate-Protocol.h"
 
-@class NSArray, NSString, SPTLoginAppleAuthorizationController, SPTLoginButtonActionHandler, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginTestManager, SPTLoginWelcomeViewImageryURLProvider, SPTLoginWelcomeViewLogger;
-@protocol SPTDialogController, SPTLoginStateController, SPTLoginThirdPartyLoginHandlerDelegate;
+@class NSArray, NSString, SPTLoginAppleAuthorizationController, SPTLoginButtonActionHandler, SPTLoginDbManager, SPTLoginErrorDecorator, SPTLoginWelcomeModel, SPTLoginWelcomeViewLogger;
+@protocol SPTLoginStateController, SPTLoginThirdPartyLoginHandlerDelegate;
 
 @interface SPTLoginWelcomeViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate, SPTLoginActionButtonsViewModel>
 {
     _Bool _savedCredentialsDialogShownOnce;
     _Bool _didLogViewLaunchTime;
     _Bool _guestModeEnabled;
-    NSArray *_actionButtons;
     SPTLoginButtonActionHandler *_actionButtonHandler;
     id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
-    SPTLoginTestManager *_testManager;
     id <SPTLoginStateController> _loginStateController;
     SPTLoginErrorDecorator *_errorDecorator;
     SPTLoginAppleAuthorizationController *_appleAuthController;
-    id <SPTDialogController> _dialogController;
     SPTLoginDbManager *_databaseManager;
     SPTLoginWelcomeViewLogger *_logger;
-    SPTLoginWelcomeViewImageryURLProvider *_imageryURLProvider;
+    SPTLoginWelcomeModel *_model;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTLoginWelcomeModel *model; // @synthesize model=_model;
 @property(nonatomic, getter=isGuestModeEnabled) _Bool guestModeEnabled; // @synthesize guestModeEnabled=_guestModeEnabled;
 @property(nonatomic) _Bool didLogViewLaunchTime; // @synthesize didLogViewLaunchTime=_didLogViewLaunchTime;
-@property(readonly, nonatomic) SPTLoginWelcomeViewImageryURLProvider *imageryURLProvider; // @synthesize imageryURLProvider=_imageryURLProvider;
 @property(readonly, nonatomic) SPTLoginWelcomeViewLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
 @property(nonatomic) _Bool savedCredentialsDialogShownOnce; // @synthesize savedCredentialsDialogShownOnce=_savedCredentialsDialogShownOnce;
-@property(readonly, nonatomic) id <SPTDialogController> dialogController; // @synthesize dialogController=_dialogController;
 @property(readonly, nonatomic) SPTLoginAppleAuthorizationController *appleAuthController; // @synthesize appleAuthController=_appleAuthController;
 @property(readonly, nonatomic) SPTLoginErrorDecorator *errorDecorator; // @synthesize errorDecorator=_errorDecorator;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
-@property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTLoginButtonActionHandler *actionButtonHandler; // @synthesize actionButtonHandler=_actionButtonHandler;
-@property(readonly, nonatomic) NSArray *actionButtons; // @synthesize actionButtons=_actionButtons;
 - (void)performActionForButtonWithTag:(unsigned long long)arg1;
+@property(readonly, nonatomic) NSArray *actionButtons;
 - (void)logUserDidSwipeImage;
 - (void)logUserDidTapImage;
 - (void)logDidFinishLoadImageWithError:(id)arg1;
@@ -61,7 +56,7 @@
 - (id)welcomeImageryURL;
 - (id)helpText;
 - (id)spotifyLogo:(struct CGSize)arg1;
-- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 appleAuthController:(id)arg3 dialogController:(id)arg4 databaseManager:(id)arg5 testManager:(id)arg6 imageryURLProvider:(id)arg7 guestModeEnabled:(_Bool)arg8 actionButtons:(id)arg9 actionButtonHandler:(id)arg10;
+- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 appleAuthController:(id)arg3 databaseManager:(id)arg4 guestModeEnabled:(_Bool)arg5 actionButtonHandler:(id)arg6 model:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

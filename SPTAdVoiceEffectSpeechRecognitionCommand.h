@@ -6,18 +6,21 @@
 
 #import "SPTAdVoiceEffect.h"
 
+@class NSArray;
+
 @interface SPTAdVoiceEffectSpeechRecognitionCommand : SPTAdVoiceEffect
 {
     long long _commandType;
     double _microphoneListeningPeriod;
-    long long _intent;
+    NSArray *_intents;
 }
 
-@property(readonly, nonatomic) long long intent; // @synthesize intent=_intent;
+- (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *intents; // @synthesize intents=_intents;
 @property(readonly, nonatomic) double microphoneListeningPeriod; // @synthesize microphoneListeningPeriod=_microphoneListeningPeriod;
 @property(readonly, nonatomic) long long commandType; // @synthesize commandType=_commandType;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithCommandType:(long long)arg1 microphoneListeningPeriod:(double)arg2 intent:(long long)arg3;
+- (id)initWithCommandType:(long long)arg1 microphoneListeningPeriod:(double)arg2 intents:(id)arg3;
 
 @end
 

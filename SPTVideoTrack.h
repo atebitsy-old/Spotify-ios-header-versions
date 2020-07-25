@@ -22,8 +22,9 @@
 @property(readonly, nonatomic) SPTPlayOrigin *origin; // @synthesize origin=_origin;
 @property(readonly, nonatomic) SPTPlayerTrack *track; // @synthesize track=_track;
 - (_Bool)isEqual:(id)arg1;
-- (_Bool)isBackgroundable;
 - (unsigned long long)hash;
+- (_Bool)isAdvertisement;
+- (_Bool)isBackgroundable;
 - (id)serializedDictionary;
 - (id)initWithTrack:(id)arg1 origin:(id)arg2 playbackID:(id)arg3 contextURI:(id)arg4;
 - (id)initWithDictionary:(id)arg1;

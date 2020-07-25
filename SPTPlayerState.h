@@ -67,6 +67,7 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (id)init;
 - (id)initWithDictionary:(id)arg1;
+@property(nonatomic, readonly) _Bool isMusicVideo;
 - (_Bool)spt_hasDifferentTrackOptionsOrContextThanState:(id)arg1;
 - (id)filterEmptyRestrictions:(id)arg1;
 - (id)preprocessForDisplay;

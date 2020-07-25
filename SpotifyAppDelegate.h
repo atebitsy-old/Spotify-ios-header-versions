@@ -13,7 +13,7 @@
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
 @class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
-@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
+@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTEmailUniversalLinkResolverDelegate, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
 @interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, SPTSessionServicesLoader, UIApplicationDelegate>
 {
@@ -35,10 +35,12 @@
     id <SPTLogCenter> _logCenter;
     SPTStartupTracer *_startupTracer;
     id <SPTNotificationSystemDelegate> _notificationDelegate;
+    id <SPTEmailUniversalLinkResolverDelegate> _emailUniversalLinkResolverDelegate;
 }
 
 + (id)appDelegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate; // @synthesize emailUniversalLinkResolverDelegate=_emailUniversalLinkResolverDelegate;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationDelegate; // @synthesize notificationDelegate=_notificationDelegate;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;

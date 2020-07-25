@@ -6,8 +6,8 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSNumber, NSString, NSURL, SPTPlayOptions, SPTPlayOrigin, SPTPlayerOptionOverrides, SPTPlayerState;
-@protocol SPTAudioSessionController, SPTExternalIntegrationActionCoordinator, SPTExternalIntegrationAdditionalParameterProvider, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationPlaybackCoordinator;
+@class NSArray, NSNumber, NSString, NSURL, SPTPlayOptions, SPTPlayOrigin, SPTPlayerOptionOverrides, SPTPlayerState, SPTPlayerTrack;
+@protocol SPTAudioSessionController, SPTExternalIntegrationActionCoordinator, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationInformationProvider, SPTExternalIntegrationPlaybackControllerObserver, SPTExternalIntegrationPlaybackCoordinator;
 
 @protocol SPTExternalIntegrationPlaybackController <NSObject>
 - (void)removeObserver:(id <SPTExternalIntegrationPlaybackControllerObserver>)arg1;
@@ -16,6 +16,8 @@
 - (void)getFilteredPlayQueueWithCompletionHandler:(void (^)(NSArray *))arg1;
 - (void)enqueueTrackWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (void)seekTo:(double)arg1 completionHandler:(void (^)(NSError *))arg2;
+- (void)skipToPreviousTrack:(SPTPlayerTrack *)arg1 withExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
+- (void)skipToNextTrack:(SPTPlayerTrack *)arg1 withExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (void)skipToPreviousTrackWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1 completionHandler:(void (^)(NSError *))arg2;
 - (void)skipToNextTrackWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1 completionHandler:(void (^)(NSError *))arg2;
 - (void)disableRepeatWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1 completionHandler:(void (^)(NSError *))arg2;
@@ -28,8 +30,7 @@
 - (void)setPodcastPlaybackSpeed:(NSNumber *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (void)resumeWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1 completionHandler:(void (^)(NSError *))arg2;
 - (void)pauseWithExternalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg1 completionHandler:(void (^)(NSError *))arg2;
-- (void)performActionWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
-- (void)performActionWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 externalParameterProvider:(id <SPTExternalIntegrationAdditionalParameterProvider>)arg3 completionHandler:(void (^)(NSError *))arg4;
+- (void)performActionWithURI:(NSURL *)arg1 accessoryInfoProvider:(id <SPTExternalIntegrationInformationProvider>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (_Bool)canPerformActionWithURI:(NSURL *)arg1;
 - (void)playContentWithURI:(NSURL *)arg1 withOptions:(SPTPlayOptions *)arg2 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg3 completionHandler:(void (^)(NSError *))arg4;
 - (void)playContentWithURI:(NSURL *)arg1 withOptions:(SPTPlayOptions *)arg2 origin:(SPTPlayOrigin *)arg3 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg4 completionHandler:(void (^)(NSError *))arg5;

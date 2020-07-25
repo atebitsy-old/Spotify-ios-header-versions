@@ -6,9 +6,12 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTHearablesSerialProtocolAdapter-Protocol.h"
+
+@class NSString;
 @protocol SPTHearablesSpotifyGoAPI;
 
-@interface SPTHearablesLegacySerialProtocolApiAdapter : NSObject
+@interface SPTHearablesLegacySerialProtocolApiAdapter : NSObject <SPTHearablesSerialProtocolAdapter>
 {
     id <SPTHearablesSpotifyGoAPI> _adaptee;
 }
@@ -16,8 +19,14 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTHearablesSpotifyGoAPI> adaptee; // @synthesize adaptee=_adaptee;
 - (id)parseData:(id)arg1;
-- (id)executeMessage:(id)arg1;
+- (void)executeMessage:(id)arg1;
 - (id)initWithImplementation:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

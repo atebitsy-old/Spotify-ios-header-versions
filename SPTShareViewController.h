@@ -12,7 +12,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUELabel, NSArray, NSLayoutConstraint, NSString, SPTShareData, SPTShareDestinationUtility, SPTShareItemView, SPTShareLogger, UIButton, UITableView, UIView;
-@protocol GLUETheme, SPTContextMenuPresenterFactory, SPTImageLoader, SPTShareViewControllerDelegate;
+@protocol GLUETheme, SPTContextMenuPresenterFactory, SPTImageLoader, SPTShareUBILogger, SPTShareViewControllerDelegate;
 
 @interface SPTShareViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SPTImageLoaderDelegate, SPTShareViewControllerProtocol>
 {
@@ -36,9 +36,11 @@
     NSLayoutConstraint *_mainContainerViewBottomContraint;
     SPTShareData *_shareData;
     NSArray *_shareDestinations;
+    id <SPTShareUBILogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTShareUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(copy, nonatomic) NSArray *shareDestinations; // @synthesize shareDestinations=_shareDestinations;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(nonatomic, getter=isHidden) _Bool hidden; // @synthesize hidden=_hidden;
@@ -85,7 +87,7 @@
 - (void)setupMainView;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithShareLogger:(id)arg1 shareData:(id)arg2 shareDestinations:(id)arg3 shareDestinationUtility:(id)arg4 contextMenuPresenterFactory:(id)arg5 imageLoader:(id)arg6;
+- (id)initWithShareLogger:(id)arg1 shareData:(id)arg2 shareDestinations:(id)arg3 shareDestinationUtility:(id)arg4 contextMenuPresenterFactory:(id)arg5 imageLoader:(id)arg6 ubiLogger:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

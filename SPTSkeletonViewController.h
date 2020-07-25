@@ -13,11 +13,14 @@
     // Error parsing type: , name: componentBackgroundColor
     // Error parsing type: , name: shimmerColor
     // Error parsing type: , name: tableView
+    // Error parsing type: , name: hasAppeared
     // Error parsing type: , name: isAnimating
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)viewDidAppear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;

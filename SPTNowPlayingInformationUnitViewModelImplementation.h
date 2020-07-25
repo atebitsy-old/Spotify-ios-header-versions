@@ -6,17 +6,14 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTNowPlayingAuxiliaryActionsHandlerObserver-Protocol.h"
 #import "SPTNowPlayingInformationUnitViewModel-Protocol.h"
 #import "SPTNowPlayingModelObserver-Protocol.h"
-#import "_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_-Protocol.h"
 
 @class NSString, NSURL, SPTNowPlayingLogger, SPTNowPlayingModel;
-@protocol SPTLinkDispatcher, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingTestManager, _TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_;
+@protocol SPTLinkDispatcher, SPTNowPlayingInformationUnitViewModelDelegate;
 
-@interface SPTNowPlayingInformationUnitViewModelImplementation : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingAuxiliaryActionsHandlerObserver, _TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_, SPTNowPlayingInformationUnitViewModel>
+@interface SPTNowPlayingInformationUnitViewModelImplementation : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingInformationUnitViewModel>
 {
-    _Bool _shouldShowPositiveFeedback;
     id <SPTNowPlayingInformationUnitViewModelDelegate> _delegate;
     SPTNowPlayingModel *_model;
     NSString *_title;
@@ -24,18 +21,9 @@
     NSURL *_contextSource;
     SPTNowPlayingLogger *_logger;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
-    id <SPTNowPlayingTestManager> _testManager;
-    unsigned long long _offlineState;
-    id <_TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_> _downloadManager;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <_TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_> downloadManager; // @synthesize downloadManager=_downloadManager;
-@property(nonatomic) unsigned long long offlineState; // @synthesize offlineState=_offlineState;
-@property(nonatomic) _Bool shouldShowPositiveFeedback; // @synthesize shouldShowPositiveFeedback=_shouldShowPositiveFeedback;
-@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
-@property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSURL *contextSource; // @synthesize contextSource=_contextSource;
@@ -43,24 +31,17 @@
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
 @property(nonatomic) __weak id <SPTNowPlayingInformationUnitViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)stateChangedTo:(unsigned long long)arg1 forURI:(id)arg2;
-- (void)toggleDownloadButton;
-- (void)auxiliaryActionsHandlerDidToggleCollectionState:(id)arg1;
 - (id)getCurrentSubtitleWithNowPlayingModel:(id)arg1;
-- (void)updateOfflineMixDownloadManagerWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)updateWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)navigateToCurrentArtist;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)nowPlayingModelDidUpdateMetadata:(id)arg1;
-@property(readonly, nonatomic, getter=isFeedbackButtonSelected) _Bool feedbackButtonSelected;
-@property(readonly, nonatomic, getter=isFeedbackButtonEnabled) _Bool feedbackButtonEnabled;
-- (void)toggleCollectionStateFromViewController:(id)arg1 andActionControl:(id)arg2;
 - (void)navigateToSubtitleLink;
 - (void)navigateToCurrentAlbum;
 - (void)dealloc;
 - (void)stopObservers;
 - (void)startObservers;
-- (id)initWithNowPlayingModel:(id)arg1 linkDispatcher:(id)arg2 logger:(id)arg3 auxiliaryActionsHandler:(id)arg4 shouldShowPositiveFeedback:(_Bool)arg5 testManager:(id)arg6 downloadManager:(id)arg7;
+- (id)initWithNowPlayingModel:(id)arg1 linkDispatcher:(id)arg2 logger:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

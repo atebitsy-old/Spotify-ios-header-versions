@@ -61,7 +61,6 @@
 @property(readonly, nonatomic, getter=areContextMenuSettingsAvailable) _Bool contextMenuSettingsAvailable;
 @property(readonly, nonatomic, getter=areContextMenuSettingsDisabled) _Bool contextMenuSettingsDisabled;
 - (id)initWithHomeMixURI:(id)arg1 username:(id)arg2 currentlyPlayingTrackURI:(id)arg3 playing:(_Bool)arg4 playingHomeMixContext:(_Bool)arg5 offline:(_Bool)arg6 entityMode:(unsigned long long)arg7 mood:(unsigned long long)arg8 pendingMoodChange:(_Bool)arg9 tasteOnboardingRequired:(_Bool)arg10 metaDataEntity:(id)arg11 trackEntities:(id)arg12 loaded:(_Bool)arg13 enabled:(_Bool)arg14 explicitContentRestricted:(_Bool)arg15 genrePageContextMenuDisabled:(_Bool)arg16 settingsChangePending:(_Bool)arg17 joinPending:(_Bool)arg18;
-- (id)currentLoggingState;
 
 @end
 

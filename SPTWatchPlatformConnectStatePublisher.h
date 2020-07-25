@@ -9,16 +9,18 @@
 #import "SPTGaiaConnectObserver-Protocol.h"
 #import "SPTWatchPlatformPublisher-Protocol.h"
 
-@class NSString;
+@class NSDictionary, NSString;
 @protocol SPTGaiaConnectAPI, SPTWatchConnectivityPubSubMessageQueue;
 
 @interface SPTWatchPlatformConnectStatePublisher : NSObject <SPTGaiaConnectObserver, SPTWatchPlatformPublisher>
 {
     id <SPTWatchConnectivityPubSubMessageQueue> _pubSubMessageQueue;
     id <SPTGaiaConnectAPI> _connectManager;
+    NSDictionary *_lastSentConnectStateDictonary;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *lastSentConnectStateDictonary; // @synthesize lastSentConnectStateDictonary=_lastSentConnectStateDictonary;
 @property(readonly, nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) __weak id <SPTWatchConnectivityPubSubMessageQueue> pubSubMessageQueue; // @synthesize pubSubMessageQueue=_pubSubMessageQueue;
 - (void)connectActiveDeviceDidChange:(id)arg1;

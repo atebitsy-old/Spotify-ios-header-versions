@@ -35,6 +35,7 @@
 - (void)userDidTapNextButtonWithValue:(id)arg1;
 - (id)previouslySelectedDate;
 - (id)initialBirthDate;
+- (_Bool)isTermsAndPolicyViewHidden;
 - (id)minimumBirthDate;
 - (id)maximumBirthDate;
 - (id)nextButtonText;

@@ -10,8 +10,8 @@
 #import "SPTAuthService-Protocol.h"
 #import "SPTURISubtypeHandler-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTAuthCache, SPTAuthCacheEnvironmentObserver, SPTAuthControllerImplementation, SPTAuthLogger;
-@protocol GaiaFeature, SPTAuthTestManager, SPTContainerService, SPTContainerUIService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTLogCenter, SPTLoginDelayedSignupService, SPTNetworkService, SPTSessionService, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTAuthCache, SPTAuthCacheEnvironmentObserver, SPTAuthControllerImplementation, SPTAuthFeatureProperties, SPTAuthLogger, SPTDataLoader;
+@protocol GaiaFeature, SPTAuthTestManager, SPTContainerService, SPTContainerUIService, SPTExternalIntegrationPlatformService, SPTFeatureFlaggingService, SPTLogCenter, SPTLoginDelayedSignupService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService;
 
 @interface AuthFeatureImplementation : NSObject <SPTURISubtypeHandler, SPTAuthService, SPSessionObserver>
 {
@@ -24,22 +24,28 @@
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTLoginDelayedSignupService> _delayedSignupService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    SPTAuthFeatureProperties *_featureProperties;
     id <SPTLogCenter> _logcenter;
     SPTAuthControllerImplementation *_authController;
     id <SPTAuthTestManager> _testManager;
     SPTAuthCacheEnvironmentObserver *_environmentObserver;
     SPTAuthCache *_authCache;
     SPTAuthLogger *_authLogger;
+    SPTDataLoader *_dataLoader;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) SPTAuthLogger *authLogger; // @synthesize authLogger=_authLogger;
 @property(retain, nonatomic) SPTAuthCache *authCache; // @synthesize authCache=_authCache;
 @property(retain, nonatomic) SPTAuthCacheEnvironmentObserver *environmentObserver; // @synthesize environmentObserver=_environmentObserver;
 @property(retain, nonatomic) id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTAuthControllerImplementation *authController; // @synthesize authController=_authController;
 @property(retain, nonatomic) id <SPTLogCenter> logcenter; // @synthesize logcenter=_logcenter;
+@property(retain, nonatomic) SPTAuthFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTLoginDelayedSignupService> delayedSignupService; // @synthesize delayedSignupService=_delayedSignupService;
 @property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
@@ -53,6 +59,7 @@
 - (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
 - (id)provideAuthController;
 - (void)unload;
+- (id)providePersistentCache;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "HUBAutoEquatable.h"
+#import <objc/NSObject.h>
 
 #import "HUBComponentTarget-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, NSURL;
 @protocol HUBViewModel;
 
-@interface HUBComponentTargetImplementation : HUBAutoEquatable <HUBComponentTarget>
+@interface HUBComponentTargetImplementation : NSObject <HUBComponentTarget>
 {
     NSURL *_URI;
     id <HUBViewModel> _initialViewModel;
@@ -26,12 +26,13 @@
 @property(readonly, copy, nonatomic) NSURL *URI; // @synthesize URI=_URI;
 - (id)serializeActionIdentifiers;
 - (id)serialize;
+@property(readonly) unsigned long long hash;
+- (_Bool)isEqual:(id)arg1;
 - (id)initWithURI:(id)arg1 initialViewModel:(id)arg2 actionIdentifiers:(id)arg3 customData:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 
 @end

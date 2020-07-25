@@ -6,13 +6,19 @@
 
 #import "GLUEThemeBase.h"
 
+@class SPTPodcastEpisodeFeatureProperties;
+
 @interface SPTPodcastEpisodeTheme : GLUEThemeBase
 {
+    SPTPodcastEpisodeFeatureProperties *_featureProperties;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) SPTPodcastEpisodeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 - (id)descriptionCellStyle;
 - (id)backgroundOverlayStyle;
 - (id)headerContentViewStyle;
+- (id)initWithParentTheme:(id)arg1 featureProperties:(id)arg2;
 
 @end
 

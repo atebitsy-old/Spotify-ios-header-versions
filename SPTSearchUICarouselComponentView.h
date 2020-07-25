@@ -42,8 +42,8 @@
 - (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)layoutSubviews;

@@ -12,28 +12,27 @@
 
 @interface _TtC25PlaylistTuningFeatureImpl24PTAdditionalCallToAction : NSObject <SPTFreeTierPlaylistAdditionalCallToAction>
 {
+    // Error parsing type: , name: alertInterface
     // Error parsing type: , name: dataLoaderFactory
+    // Error parsing type: , name: networkConnectivityController
     // Error parsing type: , name: saveEventLoopConnector
     // Error parsing type: , name: viewDependencies
+    // Error parsing type: , name: lifecycleState
+    // Error parsing type: , name: viewBinder
     // Error parsing type: , name: delegate
     // Error parsing type: , name: freeTierPlaylistViewController
-    // Error parsing type: , name: icon
-    // Error parsing type: , name: selected
-    // Error parsing type: , name: enabled
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: playlistModel
-    // Error parsing type: , name: contextURI
-    // Error parsing type: , name: formatListAttributes
-    // Error parsing type: , name: tracks
 }
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)didRenderInView:(id)arg1;
 - (void)performAction:(id)arg1;
 - (void)didAppearInViewController:(id)arg1;
-@property(nonatomic) _Bool enabled; // @synthesize enabled;
-@property(nonatomic) _Bool selected; // @synthesize selected;
-@property(nonatomic) unsigned long long icon; // @synthesize icon;
+@property(nonatomic, readonly) _Bool enabled;
+@property(nonatomic, readonly) _Bool selected;
+@property(nonatomic, readonly) unsigned long long icon;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistAdditionalCallToActionDelegate> delegate; // @synthesize delegate;
 
 @end

@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-@class NSMutableDictionary, NSNumber;
+@class NSMutableDictionary;
 
 @interface SPTStartupDurationTracker : NSObject
 {
-    NSNumber *_durationTrackingEnabled;
+    _Bool _durationTrackingEnabled;
     NSMutableDictionary *_durations;
     NSMutableDictionary *_inFlightDurations;
 }
@@ -18,13 +18,13 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSMutableDictionary *inFlightDurations; // @synthesize inFlightDurations=_inFlightDurations;
 @property(readonly, nonatomic) NSMutableDictionary *durations; // @synthesize durations=_durations;
+@property(readonly, nonatomic, getter=isDurationTrackingEnabled) _Bool durationTrackingEnabled; // @synthesize durationTrackingEnabled=_durationTrackingEnabled;
 - (id)longestDurationsForType:(id)arg1 maxDurations:(long long)arg2;
 - (id)durationsForType:(id)arg1;
 - (void)addDuration:(double)arg1 type:(id)arg2 key:(id)arg3;
 - (void)endDurationOfType:(id)arg1 key:(id)arg2;
 - (void)startDurationOfType:(id)arg1 key:(id)arg2;
 - (void)reset;
-@property(readonly, nonatomic, getter=isDurationTrackingEnabled) _Bool durationTrackingEnabled;
 - (id)init;
 
 @end

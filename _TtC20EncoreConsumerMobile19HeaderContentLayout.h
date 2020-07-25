@@ -11,6 +11,7 @@
     // Error parsing type: , name: onRemount
     // Error parsing type: , name: onProgress
     // Error parsing type: , name: onFullHeaderProgress
+    // Error parsing type: , name: minimumHeight
     // Error parsing type: , name: centralViewTopMarginConstant
     // Error parsing type: , name: centralViewUpscalingProgressMultiplier
     // Error parsing type: , name: centralViewDownscalingProgressMultiplier
@@ -22,6 +23,8 @@
     // Error parsing type: , name: centralViewBottomConstraint
     // Error parsing type: , name: heightConstraint
     // Error parsing type: , name: playButtonLayoutGuide
+    // Error parsing type: , name: minimumHeightLayoutConstraint
+    // Error parsing type: , name: minimumHeightLayoutGuide
     // Error parsing type: , name: playButton
 }
 

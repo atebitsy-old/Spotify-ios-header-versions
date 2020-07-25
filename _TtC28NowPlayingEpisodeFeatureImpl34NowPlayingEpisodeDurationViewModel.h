@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: episodePlayer
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: densityHelper
 }
 
 - (void).cxx_destruct;

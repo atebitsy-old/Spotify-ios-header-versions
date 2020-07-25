@@ -7,6 +7,8 @@
 @class UIView;
 
 @protocol SPTEncorePlaylistHeaderDelegate
+- (void)filterButtonTappedWithSender:(UIView *)arg1;
+- (void)filterFieldTappedWithSender:(UIView *)arg1;
 - (void)heightChangedWithTotalHeight:(double)arg1 topAccessoryViewHeight:(double)arg2;
 - (void)backButtonTappedWithSender:(UIView *)arg1;
 - (void)togglePlaybackWithSender:(UIView *)arg1;

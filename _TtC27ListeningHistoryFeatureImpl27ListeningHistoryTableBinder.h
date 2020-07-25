@@ -12,6 +12,7 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: trackRowFactory
+    // Error parsing type: , name: listeningHistoryLogger
     // Error parsing type: , name: playingEntityURL
     // Error parsing type: , name: sections
 }

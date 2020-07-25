@@ -9,8 +9,8 @@
 #import "SPTAdOverlayImageContentViewDataSource-Protocol.h"
 #import "SPTAdsPromotedContentImageViewDelegate-Protocol.h"
 
-@class NSString, SPTAdFeatureFlagChecks, SPTTheme, UIView;
-@protocol GLUEImageLoader, SPTAdOverlayContentUnitDelegate, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTAdsManager, SPTAdsMobileOverlayContentView;
+@class NSString, SPTAdsFeatureProperties, SPTTheme, UIView;
+@protocol GLUEImageLoader, GLUETheme, SPTAdOverlayContentUnitDelegate, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTAdsManager, SPTAdsMobileOverlayContentView;
 
 @interface SPTAdOverlayImageContentViewController : UIViewController <SPTAdsPromotedContentImageViewDelegate, SPTAdOverlayImageContentViewDataSource>
 {
@@ -22,15 +22,17 @@
     id <SPTAdsManager> _adManager;
     id <GLUEImageLoader> _imageLoader;
     SPTTheme *_theme;
+    id <GLUETheme> _glueTheme;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
-    SPTAdFeatureFlagChecks *_featureChecker;
+    SPTAdsFeatureProperties *_featureProperties;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool viewDisplayed; // @synthesize viewDisplayed=_viewDisplayed;
 @property(nonatomic) _Bool imageLoaded; // @synthesize imageLoaded=_imageLoaded;
-@property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
+@property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
+@property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTAdsManager> adManager; // @synthesize adManager=_adManager;
@@ -42,11 +44,18 @@
 - (void)didLoadContentImage:(id)arg1;
 - (_Bool)isGoogleHomeOverlay;
 - (void)postImpressionIfNeeded;
-- (_Bool)isCompanionBanner;
-- (void)actionButtonTapped;
+- (_Bool)isLeaveBehindOverlay;
+- (id)leaveBehindView;
+- (void)titleActionButtonTapped;
+- (void)playActionButtonTapped;
+- (void)bookmarkButtonTapped;
 - (void)viewDidAppear:(_Bool)arg1;
+- (void)styleActionButton:(id)arg1 withColor:(id)arg2;
+- (void)configureTitleActionButton;
+- (void)configurePlayActionButton;
+- (void)configureBookmarkButton;
 - (void)viewDidLoad;
-- (id)initWithEntity:(id)arg1 adManager:(id)arg2 imageLoader:(id)arg3 theme:(id)arg4 cosmosBridge:(id)arg5 featureChecker:(id)arg6;
+- (id)initWithEntity:(id)arg1 adManager:(id)arg2 imageLoader:(id)arg3 theme:(id)arg4 glueTheme:(id)arg5 cosmosBridge:(id)arg6 featureProperties:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

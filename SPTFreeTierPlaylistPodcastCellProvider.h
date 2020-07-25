@@ -7,12 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+#import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 #import "SPTPodcastEpisodeCellActionTarget-Protocol.h"
 
 @class NSString, NSURL, SPTFreeTierPlaylistLogger;
 @protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
 
-@interface SPTFreeTierPlaylistPodcastCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTPodcastEpisodeCellActionTarget>
+@interface SPTFreeTierPlaylistPodcastCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2, SPTPodcastEpisodeCellActionTarget>
 {
     id <SPTFreeTierPlaylistCellProviderDelegate> _cellProviderDelegate;
     id <SPTPodcastEpisodeCellConfigurator> _cellConfigurator;
@@ -44,14 +45,22 @@
 - (void)cellContextMenuTapped:(id)arg1;
 - (void)toggleOfflineForEpisodeAtIndexPath:(id)arg1;
 - (id)reuseIdentifiers;
+- (id)reuseIdentifierForItem:(id)arg1 indexPath:(id)arg2;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
+- (double)heightForItem:(id)arg1 indexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;
+- (void)didEndDisplayingPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)willDisplayPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (id)base64EncodedContext:(id)arg1;
+- (void)displayEntityViewForEpisode:(id)arg1;
 - (void)displayEntityViewForEpisdoeAtIndexPath:(id)arg1;
+- (void)configureCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 - (id)initWithCellConfigurator:(id)arg1 cellStateFactory:(id)arg2 player:(id)arg3 itemsViewModel:(id)arg4 podcastOffliningManager:(id)arg5 linkDispatcher:(id)arg6 playlistURL:(id)arg7 playModel:(id)arg8 logger:(id)arg9;
 

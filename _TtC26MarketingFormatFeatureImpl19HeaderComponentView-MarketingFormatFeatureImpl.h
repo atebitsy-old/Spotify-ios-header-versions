@@ -7,7 +7,7 @@
 #import "_TtC26MarketingFormatFeatureImpl19HeaderComponentView.h"
 
 @interface _TtC26MarketingFormatFeatureImpl19HeaderComponentView (MarketingFormatFeatureImpl)
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 @end
 

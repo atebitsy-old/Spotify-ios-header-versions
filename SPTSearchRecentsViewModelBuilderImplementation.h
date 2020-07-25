@@ -13,7 +13,6 @@
 
 @interface SPTSearchRecentsViewModelBuilderImplementation : NSObject <SPTSearchRecentsViewModelBuilder>
 {
-    _Bool _shouldRoundPodcastArtwork;
     _Bool _explicitContentPlaybackAllowed;
     _Bool _ageRestrictedContentPlaybackAllowed;
     _Bool _newRecentsRowEnabled;
@@ -32,7 +31,6 @@
 @property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) _Bool ageRestrictedContentPlaybackAllowed; // @synthesize ageRestrictedContentPlaybackAllowed=_ageRestrictedContentPlaybackAllowed;
 @property(readonly, nonatomic) _Bool explicitContentPlaybackAllowed; // @synthesize explicitContentPlaybackAllowed=_explicitContentPlaybackAllowed;
-@property(readonly, nonatomic) _Bool shouldRoundPodcastArtwork; // @synthesize shouldRoundPodcastArtwork=_shouldRoundPodcastArtwork;
 @property(readonly, copy, nonatomic) NSString *recentsCommandName; // @synthesize recentsCommandName=_recentsCommandName;
 - (id)dismissKeyboardCommand;
 - (_Bool)shouldMarkItemAsDisabled:(id)arg1;
@@ -45,7 +43,7 @@
 - (id)rowsForItems:(id)arg1 playingTrackURI:(id)arg2 playingAlbumURI:(id)arg3 allowPlayback:(_Bool)arg4;
 - (id)sectionHeader;
 - (id)buildWithItems:(id)arg1 playingTrackURI:(id)arg2 playingAlbumURI:(id)arg3 allowPlayback:(_Bool)arg4;
-- (id)initWithRecentsCommandName:(id)arg1 shouldRoundPodcastArtwork:(_Bool)arg2 explicitContentPlaybackAllowed:(_Bool)arg3 ageRestrictedContentPlaybackAllowed:(_Bool)arg4 ubiLocationSerializer:(id)arg5 featureID:(id)arg6 pageURI:(id)arg7 referrerIdentifier:(id)arg8 newRecentsRowEnabled:(_Bool)arg9;
+- (id)initWithRecentsCommandName:(id)arg1 explicitContentPlaybackAllowed:(_Bool)arg2 ageRestrictedContentPlaybackAllowed:(_Bool)arg3 ubiLocationSerializer:(id)arg4 featureID:(id)arg5 pageURI:(id)arg6 referrerIdentifier:(id)arg7 newRecentsRowEnabled:(_Bool)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

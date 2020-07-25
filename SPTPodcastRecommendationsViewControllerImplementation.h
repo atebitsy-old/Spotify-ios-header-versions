@@ -28,13 +28,13 @@
 @property(retain, nonatomic) HUBView *hubView; // @synthesize hubView=_hubView;
 @property(readonly, nonatomic) SPTHubViewModelProvider *hubViewModelProvider; // @synthesize hubViewModelProvider=_hubViewModelProvider;
 @property(readonly, nonatomic) id <SPTPodcastRecommendationsHubViewProvider> hubViewProvider; // @synthesize hubViewProvider=_hubViewProvider;
-- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)superScrollViewDidScroll:(id)arg1;
 - (void)hubView:(id)arg1 componentViewDidDisappear:(id)arg2;
 - (void)hubView:(id)arg1 componentViewWillAppear:(id)arg2;
 - (void)viewModelDidLoad:(id)arg1 dataSource:(unsigned long long)arg2;
 - (void)viewModelDidLoad:(id)arg1;
 - (void)setupHubView;
+- (void)viewDidLoad;
 - (id)initWithHubViewModelProvider:(id)arg1 hubViewProvider:(id)arg2 impressionLogger:(id)arg3;
 
 // Remaining properties

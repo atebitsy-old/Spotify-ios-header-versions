@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierPlaylistConfiguration-Protocol.h"
 #import "SPTFreeTierPlaylistConfigurationBuilder-Protocol.h"
+#import "SPTFreeTierPlaylistConfigurationInternal-Protocol.h"
 
 @class GLUEEntityRowStyle, NSArray, NSString, SPTFreeTierPlaylistCellProviderDelegateWrapper;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPlayObserver, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistContextMenuPresenter, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistHeaderProvider, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayObserver, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
 
-@interface SPTFreeTierPlaylistConfigurationBuilderImplementation : NSObject <SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistConfigurationBuilder>
+@interface SPTFreeTierPlaylistConfigurationBuilderImplementation : NSObject <SPTFreeTierPlaylistConfigurationInternal, SPTFreeTierPlaylistConfigurationBuilder>
 {
     _Bool _showTrackArtwork;
     _Bool _useBarButtons;
@@ -26,7 +26,6 @@
     id <SPTFreeTierPlaylistFullbleedHeaderViewModel> _fullbleedHeaderViewModel;
     id <SPTFreeTierPlaylistHeaderProvider> _headerProvider;
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
-    id <SPTFreeTierPlaylistPlayModel> _playModel;
     id <SPTFreeTierPlaylistPlayViewModel> _playViewModel;
     long long _headerType;
     GLUEEntityRowStyle *_rowStyle;
@@ -35,6 +34,7 @@
     id <SPTFreeTierPlaylistAdditionalCallToAction> _additionalCallToAction;
     id <SPTFreeTierPlaylistPlayLogger> _playLogger;
     id <SPTFreeTierPlaylistPlayObserver> _playObserver;
+    NSArray *_availableSections;
     CDUnknownBlockType _headerProviderBlock;
     NSArray *_cellProviderBlocks;
     CDUnknownBlockType _playObserverBlock;
@@ -43,6 +43,7 @@
     SPTFreeTierPlaylistCellProviderDelegateWrapper *_strongReferenceDelegateWrapper;
 }
 
++ (id)uniqueSectionsFromSections:(id)arg1;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTFreeTierPlaylistCellProviderDelegateWrapper *strongReferenceDelegateWrapper; // @synthesize strongReferenceDelegateWrapper=_strongReferenceDelegateWrapper;
 @property(copy, nonatomic) CDUnknownBlockType additionalCallToActionBlock; // @synthesize additionalCallToActionBlock=_additionalCallToActionBlock;
@@ -50,6 +51,7 @@
 @property(copy, nonatomic) CDUnknownBlockType playObserverBlock; // @synthesize playObserverBlock=_playObserverBlock;
 @property(copy, nonatomic) NSArray *cellProviderBlocks; // @synthesize cellProviderBlocks=_cellProviderBlocks;
 @property(copy, nonatomic) CDUnknownBlockType headerProviderBlock; // @synthesize headerProviderBlock=_headerProviderBlock;
+@property(readonly, copy, nonatomic) NSArray *availableSections; // @synthesize availableSections=_availableSections;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayObserver> playObserver; // @synthesize playObserver=_playObserver;
 - (void)setUseForceLinearPlay:(_Bool)arg1;
 @property(readonly, nonatomic) _Bool useForceLinearPlay;
@@ -66,7 +68,6 @@
 - (void)setHeaderType:(long long)arg1;
 @property(readonly, nonatomic) long long headerType;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayViewModel> playViewModel; // @synthesize playViewModel=_playViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayModel> playModel; // @synthesize playModel=_playModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistHeaderProvider> headerProvider; // @synthesize headerProvider=_headerProvider;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistFullbleedHeaderViewModel> fullbleedHeaderViewModel; // @synthesize fullbleedHeaderViewModel=_fullbleedHeaderViewModel;
@@ -80,7 +81,7 @@
 - (void)withHeaderProvider:(CDUnknownBlockType)arg1;
 - (void)withContextMenuPresenter:(CDUnknownBlockType)arg1;
 - (void)withCellProvider:(CDUnknownBlockType)arg1;
-- (id)build;
+- (id)buildWithTrackSections:(id)arg1;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> cellProviderDelegate;
 - (id)initWithPlaylistViewModel:(id)arg1 itemsViewModel:(id)arg2 playViewModel:(id)arg3 model:(id)arg4 offlineViewModel:(id)arg5 rowStyle:(id)arg6 logger:(id)arg7 delegate:(id)arg8;
 

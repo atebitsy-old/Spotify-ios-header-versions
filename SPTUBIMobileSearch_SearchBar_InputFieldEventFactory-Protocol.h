@@ -6,11 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
+@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileSearch_SearchBar_InputFieldEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)keyStrokeTextClear;
-- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

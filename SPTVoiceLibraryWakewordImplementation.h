@@ -10,8 +10,8 @@
 #import "SPTVoiceLibraryAudioSessionDelegate-Protocol.h"
 #import "SPTVoiceLibraryWakeword-Protocol.h"
 
-@class NSString, SPTVoiceLibraryAudioSessionManager;
-@protocol OS_dispatch_queue, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryWakewordDelegate, SPTVoiceLibraryWakewordProviderLogger;
+@class NSString, SPTVoiceLibraryAudioSessionManager, SPTVoiceLibraryWakewordOptions;
+@protocol OS_dispatch_queue, SPTVoiceLibraryAudioRecorder, SPTVoiceLibrarySharedAudioBufferProducer, SPTVoiceLibraryWakewordDelegate, SPTVoiceLibraryWakewordProviderLogger;
 
 @interface SPTVoiceLibraryWakewordImplementation : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibraryAudioSessionDelegate, SPTVoiceLibraryWakeword>
 {
@@ -20,10 +20,13 @@
     struct SnsrStream_ *_audioStream;
     id <SPTVoiceLibraryAudioRecorder> _audioRecorder;
     SPTVoiceLibraryAudioSessionManager *_audioSessionManager;
+    id <SPTVoiceLibrarySharedAudioBufferProducer> _sharedAudioBuffer;
+    SPTVoiceLibraryWakewordOptions *_wakewordOptions;
     NSObject<OS_dispatch_queue> *_wakewordDetectionQueue;
     NSObject<OS_dispatch_queue> *_wakewordLoadingQueue;
     NSString *_modelPath;
     unsigned long long _state;
+    unsigned long long _lookback_tail_samples;
     id <SPTVoiceLibraryWakewordProviderLogger> _logger;
     NSString *_sessionIdentifier;
 }
@@ -31,10 +34,13 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *sessionIdentifier; // @synthesize sessionIdentifier=_sessionIdentifier;
 @property(retain, nonatomic) id <SPTVoiceLibraryWakewordProviderLogger> logger; // @synthesize logger=_logger;
+@property(nonatomic) unsigned long long lookback_tail_samples; // @synthesize lookback_tail_samples=_lookback_tail_samples;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(copy, nonatomic) NSString *modelPath; // @synthesize modelPath=_modelPath;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *wakewordLoadingQueue; // @synthesize wakewordLoadingQueue=_wakewordLoadingQueue;
 @property(retain, nonatomic) NSObject<OS_dispatch_queue> *wakewordDetectionQueue; // @synthesize wakewordDetectionQueue=_wakewordDetectionQueue;
+@property(retain, nonatomic) SPTVoiceLibraryWakewordOptions *wakewordOptions; // @synthesize wakewordOptions=_wakewordOptions;
+@property(retain, nonatomic) id <SPTVoiceLibrarySharedAudioBufferProducer> sharedAudioBuffer; // @synthesize sharedAudioBuffer=_sharedAudioBuffer;
 @property(retain, nonatomic) SPTVoiceLibraryAudioSessionManager *audioSessionManager; // @synthesize audioSessionManager=_audioSessionManager;
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
 @property(nonatomic) struct SnsrStream_ *audioStream; // @synthesize audioStream=_audioStream;
@@ -44,18 +50,20 @@
 - (void)audioRecorderDidStartRecording:(id)arg1;
 - (void)audioRecorder:(id)arg1 didFailWithError:(id)arg2;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(short **)arg2 ofSize:(unsigned int)arg3;
+- (void)writeDataToSharedBuffer:(id)arg1;
 - (_Bool)isActive;
 - (void)logErrorWithDomain:(id)arg1 andDescription:(id)arg2;
 - (id)generateSessionIdentifier;
 - (void)unload;
 - (void)loadSensoryWithCompletion:(CDUnknownBlockType)arg1;
+- (void)purgeSharedBuffer;
 - (void)resume;
 - (void)pause;
 - (void)stop;
 - (void)start;
 - (_Bool)hasActiveAudioSessionForAudioRecording;
 - (void)dealloc;
-- (id)initWithAudioRecorder:(id)arg1 audioSessionManager:(id)arg2 logger:(id)arg3;
+- (id)initWithAudioRecorder:(id)arg1 audioSessionManager:(id)arg2 sharedAudioBuffer:(id)arg3 logger:(id)arg4 wakewordOptions:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

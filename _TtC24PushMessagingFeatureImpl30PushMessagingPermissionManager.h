@@ -9,8 +9,6 @@
 @interface _TtC24PushMessagingFeatureImpl30PushMessagingPermissionManager : NSObject
 {
     // Error parsing type: , name: messageBarController
-    // Error parsing type: , name: provisionalAuthorizationFlagSignal
-    // Error parsing type: , name: provisionalAuth
     // Error parsing type: , name: pushFeatureProperties
     // Error parsing type: , name: notificationCenter
     // Error parsing type: , name: pushMessagingLogger

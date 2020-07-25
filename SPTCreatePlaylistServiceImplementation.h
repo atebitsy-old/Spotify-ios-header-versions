@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTCreatePlaylistService-Protocol.h"
+#import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTCreatePlaylistTestManagerImplementation;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTFreeTierPresentationService, SPTGLUEService, SPTInAppMessageService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTUBIService, SPTURIDispatchService;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTFreeTierPresentationService, SPTGLUEService, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTUBIService, SPTURIDispatchService;
 
-@interface SPTCreatePlaylistServiceImplementation : NSObject <SPTCreatePlaylistService>
+@interface SPTCreatePlaylistServiceImplementation : NSObject <SPTURISubtypeHandler, SPTCreatePlaylistService>
 {
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
@@ -20,18 +21,18 @@
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTGLUEService> _glueService;
-    id <SPTInAppMessageService> _inAppMessageService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIService> _ubiService;
+    id <SPTURIDispatchService> _uriDispatchService;
     SPTCreatePlaylistTestManagerImplementation *_testManager;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTCreatePlaylistTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
@@ -39,16 +40,19 @@
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
+- (long long)URISubtypeHandlerOpenURI:(id)arg1 context:(id)arg2;
+- (_Bool)URISubtypeHandlerCanHandleURI:(id)arg1;
+- (void)unregisterLinkHandler;
+- (void)registerLinkHandler;
+- (void)unregisterContextMenuActions;
 - (void)registerContextMenuActions;
-- (id)provideCommandHandlerFactory;
 - (id)provideTestManager;
 - (id)provideLoggerForURL:(id)arg1 playlistURI:(id)arg2;
 - (id)provideCreatePlaylistTheme;
 - (id)provideRenamePlaylistControllerForPlaylistURL:(id)arg1 currentName:(id)arg2;
 - (id)provideCreatePlaylistControllerInFolder:(id)arg1;
 - (id)provideCreatePlaylistController;
-- (void)unregisterCreatePlaylist;
-- (void)registerCreatePlaylist;
+- (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

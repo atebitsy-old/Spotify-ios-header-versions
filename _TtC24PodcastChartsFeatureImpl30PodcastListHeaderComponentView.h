@@ -8,14 +8,18 @@
 
 @interface _TtC24PodcastChartsFeatureImpl30PodcastListHeaderComponentView : HUGSThemableComponentView
 {
+    // Error parsing type: , name: headerController
     // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: $__lazy_storage_$_headerView
+    // Error parsing type: , name: currentWidth
+    // Error parsing type: , name: currentNavigationBarHeight
 }
 
 - (void).cxx_destruct;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
+- (struct CGSize)preferredSizeForContainerViewSize:(struct CGSize)arg1;
 - (void)applyThemeLayout;
 - (void)configureWithModel:(id)arg1;
+- (void)layoutSubviews;
 
 @end
 

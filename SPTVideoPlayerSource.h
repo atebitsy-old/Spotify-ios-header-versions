@@ -8,7 +8,7 @@
 
 #import "SPTPlayerItemNotificationObserver-Protocol.h"
 
-@class AVPlayerItem, AVQueuePlayer, NSHashTable, NSString, SPTPlayerItemNotificationObservable, SPTVideoAVFactory, SPTVideoPlayerLooper, SPTVideoSubtitleSelector, SPTVideoSubtitleSelectorFactory;
+@class AVPlayerItem, AVQueuePlayer, BMAVFactory, NSHashTable, NSString, SPTPlayerItemNotificationObservable, SPTVideoPlayerLooper, SPTVideoSubtitleSelector, SPTVideoSubtitleSelectorFactory;
 @protocol BMKVOController, BMKVOControllerFactory, BMPlayerConfiguration, BMSubtitle;
 
 @interface SPTVideoPlayerSource : NSObject <SPTPlayerItemNotificationObserver>
@@ -22,7 +22,7 @@
     id <BMKVOController> _kvoController;
     id <BMKVOControllerFactory> _kvoControllerFactory;
     id <BMPlayerConfiguration> _playerConfiguration;
-    SPTVideoAVFactory *_avFactory;
+    BMAVFactory *_avFactory;
     SPTVideoPlayerLooper *_playerLooper;
     NSHashTable *_observers;
     SPTPlayerItemNotificationObservable *_playerItemObservable;
@@ -38,7 +38,7 @@
 @property(retain, nonatomic) SPTPlayerItemNotificationObservable *playerItemObservable; // @synthesize playerItemObservable=_playerItemObservable;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) SPTVideoPlayerLooper *playerLooper; // @synthesize playerLooper=_playerLooper;
-@property(retain, nonatomic) SPTVideoAVFactory *avFactory; // @synthesize avFactory=_avFactory;
+@property(retain, nonatomic) BMAVFactory *avFactory; // @synthesize avFactory=_avFactory;
 @property(retain, nonatomic) id <BMPlayerConfiguration> playerConfiguration; // @synthesize playerConfiguration=_playerConfiguration;
 @property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
 @property(retain, nonatomic) id <BMKVOController> kvoController; // @synthesize kvoController=_kvoController;

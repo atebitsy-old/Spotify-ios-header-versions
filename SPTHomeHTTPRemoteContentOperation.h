@@ -10,8 +10,8 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTFreeTierTasteOnboardingCurationObserver-Protocol.h"
 
-@class NSError, NSString, NSURL, SPTDataLoader;
-@protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTFreeTierTasteOnboardingCurationProvider, SPTLocalSettings;
+@class NSError, NSString, NSURL, SPTDataLoader, SPTHomeContentStorage;
+@protocol HUBContentOperationDelegate, HUBViewModelBuilder, SPTCrashReporter, SPTFreeTierTasteOnboardingCurationProvider;
 
 @interface SPTHomeHTTPRemoteContentOperation : NSObject <SPTDataLoaderDelegate, SPTFreeTierTasteOnboardingCurationObserver, HUBContentOperation>
 {
@@ -22,17 +22,19 @@
     NSString *_sourceIdentifier;
     SPTDataLoader *_dataLoader;
     id <SPTFreeTierTasteOnboardingCurationProvider> _tasteOnboardingCurationProvider;
-    id <SPTLocalSettings> _localSettings;
     id <HUBViewModelBuilder> _viewModelBuilder;
     NSError *_previousError;
+    id <SPTCrashReporter> _crashReporter;
+    SPTHomeContentStorage *_homeContentStorage;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
+@property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
 @property(nonatomic) _Bool ignoreCache; // @synthesize ignoreCache=_ignoreCache;
 @property(nonatomic) _Bool skipCache; // @synthesize skipCache=_skipCache;
 @property(retain, nonatomic) NSError *previousError; // @synthesize previousError=_previousError;
 @property(retain, nonatomic) id <HUBViewModelBuilder> viewModelBuilder; // @synthesize viewModelBuilder=_viewModelBuilder;
-@property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTFreeTierTasteOnboardingCurationProvider> tasteOnboardingCurationProvider; // @synthesize tasteOnboardingCurationProvider=_tasteOnboardingCurationProvider;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
@@ -45,7 +47,7 @@
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
 - (void)dealloc;
-- (id)initWithContentURL:(id)arg1 sourceIdentifier:(id)arg2 dataLoaderFactory:(id)arg3 tasteOnboardingCurationProvider:(id)arg4 featureSettingsItemFactory:(id)arg5 localSettings:(id)arg6;
+- (id)initWithContentURL:(id)arg1 sourceIdentifier:(id)arg2 dataLoaderFactory:(id)arg3 tasteOnboardingCurationProvider:(id)arg4 featureSettingsItemFactory:(id)arg5 crashReporter:(id)arg6 homeContentStorage:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

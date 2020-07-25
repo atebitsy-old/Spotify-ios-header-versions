@@ -16,9 +16,9 @@
 @interface SPTNowPlayingScrollViewModel : NSObject <SPTNowPlayingModelObserver, SPTNowPlayingModeResolverObserver, SPTBannerPresentationObserver>
 {
     _Bool _scrollEnabled;
-    _Bool _requireScrollDisabled;
     _Bool _hasSentSwipeInteractionForCurrentTrack;
     _Bool _hasSentPageImpressionForCurrentTrack;
+    _Bool _requireScrollDisabled;
     _Bool _bannerPresented;
     id <SPTNowPlayingScrollViewModelDelegate> _delegate;
     SPTNowPlayingModel *_nowPlayingModel;
@@ -33,6 +33,7 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool bannerPresented; // @synthesize bannerPresented=_bannerPresented;
+@property(nonatomic) _Bool requireScrollDisabled; // @synthesize requireScrollDisabled=_requireScrollDisabled;
 @property(retain, nonatomic) NSMutableSet *componentsFullyShown; // @synthesize componentsFullyShown=_componentsFullyShown;
 @property(nonatomic) _Bool hasSentPageImpressionForCurrentTrack; // @synthesize hasSentPageImpressionForCurrentTrack=_hasSentPageImpressionForCurrentTrack;
 @property(nonatomic) _Bool hasSentSwipeInteractionForCurrentTrack; // @synthesize hasSentSwipeInteractionForCurrentTrack=_hasSentSwipeInteractionForCurrentTrack;
@@ -42,7 +43,6 @@
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(readonly, nonatomic) id <SPTNowPlayingScrollDataSource_Internal> dataSource; // @synthesize dataSource=_dataSource;
-@property(nonatomic) _Bool requireScrollDisabled; // @synthesize requireScrollDisabled=_requireScrollDisabled;
 @property(nonatomic) _Bool scrollEnabled; // @synthesize scrollEnabled=_scrollEnabled;
 @property(readonly, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
 @property(nonatomic) __weak id <SPTNowPlayingScrollViewModelDelegate> delegate; // @synthesize delegate=_delegate;

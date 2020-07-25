@@ -7,6 +7,7 @@
 @class NSArray, NSString;
 
 @protocol SPTEpisodeSegmentsModel
+@property(nonatomic, readonly) _Bool canUpsell;
 @property(nonatomic, readonly) NSArray *entities;
 @property(nonatomic, readonly) NSString *uri;
 @end

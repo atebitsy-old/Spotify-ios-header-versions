@@ -10,9 +10,9 @@
 @protocol SPTVolumeObserver;
 
 @protocol SPTVolumeAPI <NSObject>
-@property(readonly, nonatomic) NSNumber *volume;
 - (void)removeObserver:(id <SPTVolumeObserver>)arg1;
 - (void)addObserver:(id <SPTVolumeObserver>)arg1;
 - (void)requestVolumeUpdate:(double)arg1;
+@property(nonatomic, readonly) NSNumber *volume;
 @end
 

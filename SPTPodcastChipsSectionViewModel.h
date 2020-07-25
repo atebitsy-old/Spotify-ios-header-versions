@@ -8,24 +8,31 @@
 
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSArray, NSString;
+@class NSArray, NSString, SPTPodcast;
+@protocol SPTPodcastUBILogger;
 
 @interface SPTPodcastChipsSectionViewModel : NSObject <SPTPodcastViewModelSection>
 {
     double _headerHeight;
     NSArray *_topics;
+    SPTPodcast *_podcast;
+    id <SPTPodcastUBILogger> _logger;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTPodcastUBILogger> logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTPodcast *podcast; // @synthesize podcast=_podcast;
 @property(copy, nonatomic) NSArray *topics; // @synthesize topics=_topics;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
+- (void)logUBIInteractionsForTopicCategory:(id)arg1;
+- (id)topicCategoryWithTitle:(id)arg1;
 - (long long)identifier;
 - (void)updateWithTopics:(id)arg1;
 - (void)updateWithPodcastPlayer:(id)arg1;
 - (void)updateWithPodcast:(id)arg1;
 - (id)header;
 - (unsigned long long)numberOfRows;
-- (id)init;
+- (id)initWithPodcastLogger:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

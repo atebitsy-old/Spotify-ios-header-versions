@@ -28,7 +28,7 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
-@property(retain, nonatomic) id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
+@property(nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(nonatomic) __weak id <SPTAssistedCurationService> assistedCurationService; // @synthesize assistedCurationService=_assistedCurationService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
@@ -39,7 +39,7 @@
 @property(retain, nonatomic) SPTAssistedCurationSearchResultDrillDownHubManager *hubManager; // @synthesize hubManager=_hubManager;
 - (id)provideGLUEImageLoader;
 - (id)provideAssistedCurationTheme;
-- (void)configureMasterFeatureFlag:(id)arg1;
+- (void)configurePrincipalFeatureFlag:(id)arg1;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (void)load;

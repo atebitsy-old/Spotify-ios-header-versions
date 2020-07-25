@@ -9,13 +9,21 @@
 @interface _TtC21PodcastDALFeatureImpl17PodcastDALService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: cosmosFeature
+    // Error parsing type: , name: sessionService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: $__lazy_storage_$_resolver
+    // Error parsing type: , name: $__lazy_storage_$_featureProperties
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (id)providePodcastEpisodeDataParserWithFactory:(id)arg1;
 - (id)providePodcastRequestFactory;
-- (id)provideDataLoaderWithResolver:(id)arg1;
+- (id)provideDataLoader;
+- (id)providePodcastEntityDataLoader;
+- (id)provideSortingProvider;
 - (id)providePodcastEpisodeFactory;
 - (id)providePodcastFactory;
 - (void)unload;

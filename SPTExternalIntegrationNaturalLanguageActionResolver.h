@@ -24,7 +24,7 @@
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)notifyErrorHandlerForResponse:(id)arg1 withError:(id)arg2;
 - (id)createSourceDeviceData;
-- (void)resolveActionForURI:(id)arg1 externalActionOrigin:(id)arg2 externalParameterProvider:(id)arg3 success:(CDUnknownBlockType)arg4 error:(CDUnknownBlockType)arg5;
+- (void)resolveActionForURI:(id)arg1 accessoryInfoProvider:(id)arg2 success:(CDUnknownBlockType)arg3 error:(CDUnknownBlockType)arg4;
 - (id)initWithDataLoader:(id)arg1 connectManager:(id)arg2;
 
 // Remaining properties

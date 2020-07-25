@@ -7,12 +7,13 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+#import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 #import "SPTFreeTierPlaylistSectionDescriptionV2-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistButtonSectionHeaderViewStyle;
 @protocol SPTFreeTierPlaylistEmptyViewAdditionalCallToAction, SPTFreeTierPlaylistViewModel;
 
-@interface SPTFreeTierPlaylistAdditionalCTACellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescriptionV2>
+@interface SPTFreeTierPlaylistAdditionalCTACellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2, SPTFreeTierPlaylistSectionDescriptionV2>
 {
     id <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction> _additionalCallToAction;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
@@ -31,15 +32,22 @@
 - (unsigned long long)section;
 - (id)items;
 - (unsigned long long)numberOfRows;
+- (void)didEndDisplayingPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)willDisplayPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (id)reuseIdentifiers;
+- (id)reuseIdentifierForItem:(id)arg1 indexPath:(id)arg2;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
+- (double)heightForItem:(id)arg1 indexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;
+- (void)didSelectPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
-- (void)configureEmptyListCTACell:(id)arg1;
-- (void)configureAdditionalCTACell:(id)arg1;
+- (void)configureEmptyListCTACell:(id)arg1 additionalCallToAction:(id)arg2;
+- (void)configureAdditionalCTACell:(id)arg1 onDemandType:(unsigned long long)arg2 additionalCallToAction:(id)arg3;
+- (void)configureCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 - (id)initWithPlaylistViewModel:(id)arg1 additionalCallToActionButton:(id)arg2 defaultStyle:(id)arg3 emptyListStyle:(id)arg4;
 

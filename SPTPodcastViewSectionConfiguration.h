@@ -7,20 +7,20 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSMutableArray, SPTPodcastLogger;
-@protocol SPTExplicitContentAccessManager, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
+@protocol SPTExplicitContentAccessManager, SPTPodcastUBILogger, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
 
 @interface SPTPodcastViewSectionConfiguration : NSObject
 {
     NSArray *_viewSections;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     NSMutableArray *_viewSectionContainers;
-    SPTPodcastLogger *_logger;
+    SPTPodcastLogger<SPTPodcastUBILogger> *_logger;
     id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> _podcastHTMLParser;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> podcastHTMLParser; // @synthesize podcastHTMLParser=_podcastHTMLParser;
-@property(readonly, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) SPTPodcastLogger<SPTPodcastUBILogger> *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSMutableArray *viewSectionContainers; // @synthesize viewSectionContainers=_viewSectionContainers;
 @property(readonly, nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(copy, nonatomic) NSArray *viewSections; // @synthesize viewSections=_viewSections;

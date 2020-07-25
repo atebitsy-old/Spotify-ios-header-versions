@@ -5,14 +5,16 @@
 //
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+#import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 #import "SPTFreeTierPlaylistSectionDescription-Protocol.h"
+#import "SPTFreeTierPlaylistSectionDescriptionV2-Protocol.h"
 #import "SPTFreeTierPlaylistSectionFooter-Protocol.h"
 #import "SPTFreeTierPlaylistSectionHeader-Protocol.h"
 
 @class UIView;
 @protocol SPTFreeTierPlaylistCellProviderDelegate;
 
-@protocol SPTAddToSpotifyPlaylistExperimentCellProvider <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistSectionHeader, SPTFreeTierPlaylistSectionFooter>
+@protocol SPTAddToSpotifyPlaylistExperimentCellProvider <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2, SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistSectionDescriptionV2, SPTFreeTierPlaylistSectionHeader, SPTFreeTierPlaylistSectionFooter>
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate;
 - (UIView *)footerView;
 - (UIView *)headerView;

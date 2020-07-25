@@ -12,9 +12,9 @@
 @protocol GLUEEntityRowContent;
 
 @protocol GLUEEntityRow <GLUEStatefulItem, GLUEStyleable, GLUEReusable>
-@property(retain, nonatomic) UIView *trailingAccessoryView;
-@property(retain, nonatomic) UIView<GLUEEntityRowContent> *entityContentView;
-@property(retain, nonatomic) UIView *leadingAccessoryView;
 - (void)glue_applyStyle:(GLUEEntityRowStyle *)arg1;
+@property(nonatomic, retain) UIView *trailingAccessoryView;
+@property(nonatomic, retain) UIView<GLUEEntityRowContent> *entityContentView;
+@property(nonatomic, retain) UIView *leadingAccessoryView;
 @end
 

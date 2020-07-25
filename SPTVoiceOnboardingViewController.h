@@ -7,15 +7,14 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTMetaViewControllerPresentable-Protocol.h"
-#import "SPTPageController-Protocol.h"
 #import "SPTVoiceOnboardingFlowSessionIdProvider-Protocol.h"
 #import "SPTVoiceOnboardingViewDelegate-Protocol.h"
 #import "UIScrollViewDelegate-Protocol.h"
 
-@class CAGradientLayer, NSArray, NSString, NSURL, SPTVoiceOnboardingFlow, UIButton, UIPageControl, UIScrollView, UIView;
-@protocol GLUETheme, SPTLinkDispatcher, SPTPageContainer, SPTVoiceLoggerProtocol, SPTVoiceOnboardingRecordPermissionsState;
+@class CAGradientLayer, NSArray, NSString, SPTVoiceOnboardingFlow, UIButton, UIPageControl, UIScrollView, UIView;
+@protocol GLUETheme, SPTLinkDispatcher, SPTVoiceLoggerProtocol, SPTVoiceOnboardingRecordPermissionsState;
 
-@interface SPTVoiceOnboardingViewController : UIViewController <UIScrollViewDelegate, SPTVoiceOnboardingViewDelegate, SPTPageController, SPTMetaViewControllerPresentable, SPTVoiceOnboardingFlowSessionIdProvider>
+@interface SPTVoiceOnboardingViewController : UIViewController <UIScrollViewDelegate, SPTVoiceOnboardingViewDelegate, SPTMetaViewControllerPresentable, SPTVoiceOnboardingFlowSessionIdProvider>
 {
     SPTVoiceOnboardingFlow *_onboardingFlow;
     id <GLUETheme> _glueTheme;
@@ -51,8 +50,6 @@
 @property(readonly, nonatomic) __weak id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTVoiceOnboardingFlow *onboardingFlow; // @synthesize onboardingFlow=_onboardingFlow;
 - (id)provideSessionId;
-@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic) long long presentationStyle;
 - (void)updateVisiblePage;
 - (void)scrollToPreviousPage;
@@ -87,7 +84,6 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
 
 @end

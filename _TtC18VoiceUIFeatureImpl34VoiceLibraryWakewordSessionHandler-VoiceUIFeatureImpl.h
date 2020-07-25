@@ -10,6 +10,6 @@
 
 @interface _TtC18VoiceUIFeatureImpl34VoiceLibraryWakewordSessionHandler (VoiceUIFeatureImpl) <SPTVoiceLibraryWakewordDelegate>
 - (void)wakewordFailedToLoad;
-- (void)wakewordDetected;
+- (void)wakewordDetectedSeamlessly:(_Bool)arg1;
 @end
 

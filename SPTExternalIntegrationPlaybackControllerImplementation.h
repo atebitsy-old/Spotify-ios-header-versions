@@ -51,6 +51,8 @@
 @property(readonly, nonatomic) SPTPlayerState *playerState;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (void)skipToPreviousTrack:(id)arg1 withExternalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)skipToNextTrack:(id)arg1 withExternalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)skipToPreviousTrackWithExternalActionOrigin:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)skipToNextTrackWithExternalActionOrigin:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)setRepeatTrack:(_Bool)arg1 repeatContext:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
@@ -64,8 +66,7 @@
 - (void)setPodcastPlaybackSpeed:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)resumeWithExternalActionOrigin:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)pauseWithExternalActionOrigin:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
-- (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 externalParameterProvider:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
-- (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)performActionWithURI:(id)arg1 accessoryInfoProvider:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (_Bool)canPerformActionWithURI:(id)arg1;
 - (void)initiatePlaybackWithURI:(id)arg1 options:(id)arg2 origin:(id)arg3 requestOptions:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (void)preparePlaybackWithURI:(id)arg1 options:(id)arg2 origin:(id)arg3 requestOptions:(id)arg4 externalActionOrigin:(id)arg5 completionHandler:(CDUnknownBlockType)arg6;

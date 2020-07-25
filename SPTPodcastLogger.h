@@ -51,6 +51,14 @@
 - (void)logPlayPodcastWithURI:(id)arg1 episodeURI:(id)arg2;
 - (void)logShowTrailerWithURI:(id)arg1 showURI:(id)arg2;
 - (void)logToggleTrailerPlaybackWithURI:(id)arg1 showURI:(id)arg2;
+- (void)ubi_logPausePodcastWithEpisodeURI:(id)arg1 podcastURI:(id)arg2;
+- (void)ubi_logPlayPodcastWithEpisodeURI:(id)arg1 podcastURI:(id)arg2;
+- (void)ubi_logSpeedControlSelected:(id)arg1 speed:(id)arg2;
+- (void)ubi_logShowDescription:(id)arg1 expanded:(_Bool)arg2;
+- (void)ubi_logTopicCategory:(id)arg1 atIndex:(long long)arg2 targetURI:(id)arg3;
+- (void)ubi_logShowFollowInViewURL:(id)arg1 didFollow:(_Bool)arg2;
+- (void)ubi_logOpenContextMenuShowInViewURL:(id)arg1;
+- (void)ubi_logNavigateToShowPageInViewURL:(id)arg1 atIndex:(long long)arg2 targetURI:(id)arg3;
 - (void)ubi_logContextMenuToEpisodePageInViewURL:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4;
 - (void)ubi_logEpisodeSortingInViewURL:(id)arg1 sorting:(unsigned long long)arg2;
 - (void)ubi_logEpisodeFilterSetInViewURL:(id)arg1 filter:(id)arg2 previousFilter:(id)arg3;

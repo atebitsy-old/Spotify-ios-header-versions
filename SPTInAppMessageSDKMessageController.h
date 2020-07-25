@@ -24,9 +24,7 @@
 @property(copy, nonatomic) NSDictionary *actionHandlers; // @synthesize actionHandlers=_actionHandlers;
 @property(readonly, nonatomic) id <SPTInAppMessageLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTInAppMessageSDKMessageReceiver> messageReceiver; // @synthesize messageReceiver=_messageReceiver;
-- (id)unlockMessageDictionary:(id)arg1 triggers:(id)arg2;
-- (id)clickActionFromDictionary:(id)arg1;
-- (id)modelObjectFromJSONData:(id)arg1 triggers:(id)arg2 error:(out id *)arg3;
+- (id)getMatchingMessage:(id)arg1 fromTriggers:(id)arg2;
 - (void)networkClient:(id)arg1 didFetchMessage:(id)arg2 triggers:(id)arg3 triggerType:(id)arg4;
 - (id)initWithMessageReceiver:(id)arg1 actionHandlers:(id)arg2 logger:(id)arg3;
 

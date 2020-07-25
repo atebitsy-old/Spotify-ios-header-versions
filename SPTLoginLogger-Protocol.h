@@ -6,9 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSDictionary, NSError, NSString;
+@class NSArray, NSDictionary, NSError, NSString, SPTLoginLoggerUserAuthEventAttributes;
 
 @protocol SPTLoginLogger <NSObject>
+@property(copy, nonatomic) NSString *requestID;
+- (void)trackFeatureFlagFallbackWithFlagsAndFallbackState:(NSDictionary *)arg1;
+- (void)trackFeatureFlagExposureWithEnabledFlags:(NSArray *)arg1 disabledFlags:(NSArray *)arg2 fromCache:(_Bool)arg3;
 - (void)userDidCompleteRequestWithType:(NSString *)arg1 error:(NSError *)arg2 attemptId:(NSString *)arg3 result:(NSString *)arg4;
 - (void)userDidCompleteRequestWithType:(NSString *)arg1 error:(NSError *)arg2 attemptId:(NSString *)arg3;
 - (NSString *)userDidStartRequestWithType:(NSString *)arg1;
@@ -21,7 +24,7 @@
 - (void)trackGenericEventWithName:(NSString *)arg1;
 - (void)userIsAboutToSeeLoginFlow;
 - (void)userDidRegister;
-- (void)operationWithIdentifier:(NSString *)arg1 didFinishWithDuration:(double)arg2;
+- (void)userDidAuthenticateWithUserAuthEventAttributes:(SPTLoginLoggerUserAuthEventAttributes *)arg1;
 - (void)userDidAuthenticateFromScreen:(NSString *)arg1;
 - (void)userAccountRecoveryCompleted:(_Bool)arg1;
 - (void)loginLayoutReceived:(NSString *)arg1 layout:(NSString *)arg2;

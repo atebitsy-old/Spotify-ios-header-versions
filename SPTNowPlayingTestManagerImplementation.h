@@ -16,7 +16,6 @@
 {
     _Bool _freeTierEnabled;
     _Bool _localBansEnabled;
-    _Bool _contextAwareEditorialTrackSharingEnabled;
     _Bool _isNowPlayingBarLyricsLabelEnabled;
     _Bool _isContentLayerLyricsButtonEnabled;
     _Bool _isContentLayerLyricsTabEnabled;
@@ -25,7 +24,6 @@
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     SPTObserverManager *_observerManager;
-    id <SPTFeatureFlagSignal> _contextAwareEditorialTrackSharingSignal;
     SPTNowPlayingScrollConfiguration *_scrollConfiguration;
     id <SPTFeatureFlagSignal> _lyricsNPBLabelSignal;
     id <SPTFeatureFlagSignal> _lyricsContentLayerButtonSignal;
@@ -42,10 +40,8 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsContentLayerButtonSignal; // @synthesize lyricsContentLayerButtonSignal=_lyricsContentLayerButtonSignal;
 @property(nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled; // @synthesize isNowPlayingBarLyricsLabelEnabled=_isNowPlayingBarLyricsLabelEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsNPBLabelSignal; // @synthesize lyricsNPBLabelSignal=_lyricsNPBLabelSignal;
-@property(nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled; // @synthesize contextAwareEditorialTrackSharingEnabled=_contextAwareEditorialTrackSharingEnabled;
 @property(retain, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration; // @synthesize scrollConfiguration=_scrollConfiguration;
 @property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> contextAwareEditorialTrackSharingSignal; // @synthesize contextAwareEditorialTrackSharingSignal=_contextAwareEditorialTrackSharingSignal;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierEnabledSignal; // @synthesize freeTierEnabledSignal=_freeTierEnabledSignal;
@@ -55,15 +51,14 @@
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (_Bool)isPodcast:(id)arg1;
 @property(readonly, nonatomic, getter=isShowsFormatContextAwareSharingEnabled) _Bool showsFormatContextAwareSharingEnabled;
-- (void)createContextAwareEditorialTrackSharingSignal;
 - (void)setupLyricsUpsellPopupSignal;
 - (void)setupContentLayerLyricsTabSignal;
 - (void)setupLyricsInNPVContentLayer;
 - (void)setupLyricsNowPlayingBarLabel;
+@property(readonly, nonatomic) _Bool isContentLayerTabEnabled;
+@property(readonly, nonatomic, getter=isBarToCoverArtAnimationEnabled) _Bool barToCoverArtAnimationEnabled;
 @property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;
 @property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;
-@property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
-@property(readonly, nonatomic, getter=isRemoteControlEventLoggingEnabled) _Bool remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
 @property(readonly, nonatomic, getter=isMixedMediaEpisodeModeEnabled) _Bool mixedMediaEpisodeModeEnabled;
 - (_Bool)isSamplesTestEnabled;

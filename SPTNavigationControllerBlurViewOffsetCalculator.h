@@ -10,8 +10,8 @@
 {
 }
 
-- (double)offsetForWidth:(double)arg1 isHidden:(_Bool)arg2 shouldHideAfterTransition:(_Bool)arg3 operation:(long long)arg4;
-- (double)nextOffsetForWidth:(double)arg1 isHidden:(_Bool)arg2 shouldHideAfterTransition:(_Bool)arg3 operation:(long long)arg4;
+- (double)offsetForWidth:(double)arg1 isHidden:(_Bool)arg2 shouldHideAfterTransition:(_Bool)arg3 operation:(long long)arg4 isRTL:(_Bool)arg5;
+- (double)nextOffsetForWidth:(double)arg1 isHidden:(_Bool)arg2 shouldHideAfterTransition:(_Bool)arg3 operation:(long long)arg4 isRTL:(_Bool)arg5;
 
 @end
 

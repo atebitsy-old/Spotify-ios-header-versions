@@ -6,20 +6,25 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIButton, UIImage, UIView;
+@class UIButton, UIImage, UIView, VISREFPlaylistContextMenuViewModel;
 @protocol SPTFreeTierPlaylistHeaderConfiguration, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, VISREFHeaderViewAnimationProgress;
 
 @protocol SPTFreeTierPlaylistVISREFHeaderController <NSObject>
 @property(nonatomic) __weak id <SPTFreeTierPlaylistVISREFHeaderControllerDelegate> delegate;
-- (double)headerHeight;
-- (void)setSearchView:(UIView *)arg1;
 - (void)setImage:(UIImage *)arg1;
+- (void)update;
+- (void)configureWithHeaderConfiguration:(id <SPTFreeTierPlaylistHeaderConfiguration>)arg1 filterSortBarView:(UIView *)arg2;
+
+@optional
+- (double)topAccessoryViewHeight;
+- (double)headerHeight;
+- (void)setContextMenuModel:(VISREFPlaylistContextMenuViewModel *)arg1;
+- (void)setBackButtonTappedBlock:(void (^)(void))arg1;
+- (void)setCustomBackButton:(UIView<VISREFHeaderViewAnimationProgress> *)arg1;
+- (void)setSearchView:(UIView *)arg1;
 - (void)setAdditionalCTAButton:(UIButton *)arg1;
 - (void)setOfflineButton:(UIButton *)arg1;
 - (void)setFollowButton:(UIButton *)arg1;
 - (void)setContextMenuButton:(UIButton *)arg1;
-- (void)setCustomBackButton:(UIView<VISREFHeaderViewAnimationProgress> *)arg1;
-- (void)update;
-- (void)configureWithHeaderConfiguration:(id <SPTFreeTierPlaylistHeaderConfiguration>)arg1 filterSortBarView:(UIView *)arg2;
 @end
 

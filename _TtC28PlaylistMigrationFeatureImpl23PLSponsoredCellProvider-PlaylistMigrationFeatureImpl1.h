@@ -6,10 +6,7 @@
 
 #import "_TtC28PlaylistMigrationFeatureImpl23PLSponsoredCellProvider.h"
 
-#import "SPTFreeTierPlaylistSectionDescription-Protocol.h"
-#import "SPTFreeTierPlaylistSectionDescriptionV2-Protocol.h"
-
-@interface _TtC28PlaylistMigrationFeatureImpl23PLSponsoredCellProvider (PlaylistMigrationFeatureImpl1) <SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistSectionDescriptionV2>
+@interface _TtC28PlaylistMigrationFeatureImpl23PLSponsoredCellProvider (PlaylistMigrationFeatureImpl1)
 - (id)items;
 - (void)willDisplaySection;
 - (id)sectionFooter;

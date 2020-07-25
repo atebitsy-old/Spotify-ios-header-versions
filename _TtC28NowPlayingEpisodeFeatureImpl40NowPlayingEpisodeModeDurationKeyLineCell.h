@@ -9,7 +9,6 @@
 @interface _TtC28NowPlayingEpisodeFeatureImpl40NowPlayingEpisodeModeDurationKeyLineCell : UICollectionViewCell
 {
     // Error parsing type: , name: lineView
-    // Error parsing type: , name: trailingConstraint
 }
 
 - (void).cxx_destruct;

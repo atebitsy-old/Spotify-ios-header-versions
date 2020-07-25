@@ -8,8 +8,8 @@
 
 #import "SPTSleepTimerService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol GaiaFeature, SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTPlayerFeature, SPTSleepTimerContextMenuActionsProvider, SPTSleepTimerController;
+@class NSString, SPTAllocationContext, SPTSleepTimerUBILogger;
+@protocol GaiaFeature, SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTPlayerFeature, SPTSleepTimerContextMenuActionsProvider, SPTSleepTimerController, SPTUBIService;
 
 @interface SPTSleepTimerServiceImplementation : NSObject <SPTSleepTimerService>
 {
@@ -20,10 +20,14 @@
     id <SPTSleepTimerContextMenuActionsProvider> _sleepTimerContextMenuActionsProvider;
     id <SPTContainerUIService> _containerUIService;
     id <SPTContainerService> _containerService;
+    id <SPTUBIService> _ubiService;
+    SPTSleepTimerUBILogger *_logger;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTSleepTimerUBILogger *logger; // @synthesize logger=_logger;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(retain, nonatomic) id <SPTSleepTimerContextMenuActionsProvider> sleepTimerContextMenuActionsProvider; // @synthesize sleepTimerContextMenuActionsProvider=_sleepTimerContextMenuActionsProvider;

@@ -15,12 +15,15 @@
     unsigned long long _type;
     id _credentials;
     NSString *_username;
+    unsigned long long _source;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) unsigned long long source; // @synthesize source=_source;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;
 @property(retain, nonatomic) id credentials; // @synthesize credentials=_credentials;
 @property(nonatomic) unsigned long long type; // @synthesize type=_type;
+- (id)initWithCredentials:(id)arg1 type:(unsigned long long)arg2 username:(id)arg3 source:(unsigned long long)arg4;
 - (id)initWithCredentials:(id)arg1 type:(unsigned long long)arg2 username:(id)arg3;
 
 // Remaining properties

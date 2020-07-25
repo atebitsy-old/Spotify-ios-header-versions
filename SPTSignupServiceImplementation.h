@@ -10,7 +10,7 @@
 #import "SPTPageRegistryObserver-Protocol.h"
 #import "SPTSignupService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTLoginPerformanceLogging, SPTSignupConfigurationDataLoader, SPTSignupUserInfoModel;
+@class NSString, SPTAllocationContext, SPTSignupConfigurationDataLoader, SPTSignupUserInfoModel;
 @protocol SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTNetworkService, SPTPreSignupExperimentationService, SPTServiceManagerService;
 
 @interface SPTSignupServiceImplementation : NSObject <SPTPageRegistryObserver, SPTLoginServiceObserver, SPTSignupService>
@@ -25,12 +25,10 @@
     id <SPTLoginLoggingService> _loggerService;
     SPTSignupUserInfoModel *_userInfoModel;
     SPTSignupConfigurationDataLoader *_configurationDataLoader;
-    SPTLoginPerformanceLogging *_performanceLogging;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTLoginPerformanceLogging *performanceLogging; // @synthesize performanceLogging=_performanceLogging;
 @property(retain, nonatomic) SPTSignupConfigurationDataLoader *configurationDataLoader; // @synthesize configurationDataLoader=_configurationDataLoader;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;

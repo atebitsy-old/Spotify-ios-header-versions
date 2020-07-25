@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierPlaylistItemsViewModel-Protocol.h"
-
-@interface _TtC28PlaylistMigrationFeatureImpl30PLItemsViewModelImplementation : NSObject <SPTFreeTierPlaylistItemsViewModel>
+@interface _TtC28PlaylistMigrationFeatureImpl30PLItemsViewModelImplementation : NSObject
 {
     // Error parsing type: , name: isTrackActive
     // Error parsing type: , name: premiumOnlyFeatureEnabled

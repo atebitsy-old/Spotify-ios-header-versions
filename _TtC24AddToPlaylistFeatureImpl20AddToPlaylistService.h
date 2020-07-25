@@ -11,6 +11,7 @@
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: containerService
     // Error parsing type: , name: containerUIService
+    // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: playlistPlatformService
     // Error parsing type: , name: addToSpotifyPlaylistExperimentService

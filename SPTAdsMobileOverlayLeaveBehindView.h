@@ -8,13 +8,13 @@
 
 #import "SPTAdsMobileOverlayContentView-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSString, SPTAdsPromotedContentImageView, SPTTheme;
+@class GLUELabel, NSString, SPTAdsPromotedContentImageView, SPTTheme, UIButton;
 @protocol GLUEImageLoader;
 
 @interface SPTAdsMobileOverlayLeaveBehindView : UIView <SPTAdsMobileOverlayContentView>
 {
     SPTAdsPromotedContentImageView *_contentImageView;
-    GLUEButton *_actionButton;
+    UIButton *_actionButton;
     SPTTheme *_theme;
     UIView *_backgroundOverlayView;
     GLUELabel *_advertiserTitle;
@@ -26,7 +26,7 @@
 @property(readonly, nonatomic) GLUELabel *advertiserTitle; // @synthesize advertiserTitle=_advertiserTitle;
 @property(readonly, nonatomic) UIView *backgroundOverlayView; // @synthesize backgroundOverlayView=_backgroundOverlayView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(readonly, nonatomic) GLUEButton *actionButton; // @synthesize actionButton=_actionButton;
+@property(readonly, nonatomic) UIButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView; // @synthesize contentImageView=_contentImageView;
 - (void)applyThemeLayout;
 - (void)addConstraints;

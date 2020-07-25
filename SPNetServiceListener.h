@@ -13,26 +13,34 @@
 
 @interface SPNetServiceListener : NSObject <NSNetServiceBrowserDelegate, NSNetServiceDelegate>
 {
-    struct MacMdnsDiscovery *_discovery;
+    _Bool _IPv6Enabled;
+    vector_023e58be _currently_detected_devices;
+    function_bc4a390e _callback;
+    struct shared_ptr<spotify::security::Random> _prng;
+    struct TimerManager *_scheduler;
     NSNetServiceBrowser *_netServiceBrowser;
     NSMutableArray *_services;
 }
 
+- (id).cxx_construct;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *services; // @synthesize services=_services;
 @property(retain, nonatomic) NSNetServiceBrowser *netServiceBrowser; // @synthesize netServiceBrowser=_netServiceBrowser;
-@property(nonatomic) struct MacMdnsDiscovery *discovery; // @synthesize discovery=_discovery;
+- (void)removeCurrentlyDetectedDeviceSilently:(basic_string_90719d97)arg1;
+- (void)removeCurrentlyDetectedDeviceAndNotify:(basic_string_90719d97)arg1;
+- (void)clearCurrentlyDetectedDevices;
 - (void)netService:(id)arg1 didNotResolve:(id)arg2;
 - (void)netServiceDidResolveAddress:(id)arg1;
-- (struct DiscoveredService)deviceFromServiceInfo:(id)arg1;
-- (void)netServiceBrowserDidStopSearch:(id)arg1;
+- (void)addCurrentlyDetectedDevice:(struct DiscoveredService)arg1;
+- (struct DiscoveredService)extractDiscoveredService:(id)arg1;
 - (void)netServiceBrowserWillSearch:(id)arg1;
 - (void)netServiceBrowser:(id)arg1 didRemoveService:(id)arg2 moreComing:(_Bool)arg3;
 - (void)netServiceBrowser:(id)arg1 didFindService:(id)arg2 moreComing:(_Bool)arg3;
 - (void)stop;
 - (void)start;
 - (void)dealloc;
-- (id)initWithDiscovery:(struct MacMdnsDiscovery *)arg1;
+- (id)initWithScheduler:(struct TimerManager *)arg1 withIPv6Enabled:(_Bool)arg2 withCallback:(function_bc4a390e)arg3;
+- (vector_023e58be *)getCurrentlyDetectedDevices;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

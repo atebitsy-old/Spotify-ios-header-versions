@@ -11,8 +11,9 @@
     // Error parsing type: , name: scopeBar
     // Error parsing type: , name: extentBar
     // Error parsing type: , name: extentThumb
-    // Error parsing type: , name: panRecognizer
     // Error parsing type: , name: initialDragX
+    // Error parsing type: , name: releaseFeedback
+    // Error parsing type: , name: snapFeedback
     // Error parsing type: , name: isContinuous
     // Error parsing type: , name: snapToCenter
     // Error parsing type: , name: value

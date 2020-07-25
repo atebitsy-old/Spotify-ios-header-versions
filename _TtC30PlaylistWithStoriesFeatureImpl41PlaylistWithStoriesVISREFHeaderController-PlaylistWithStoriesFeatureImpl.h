@@ -6,9 +6,7 @@
 
 #import "_TtC30PlaylistWithStoriesFeatureImpl41PlaylistWithStoriesVISREFHeaderController.h"
 
-#import "SPTImageLoaderDelegate-Protocol.h"
-
-@interface _TtC30PlaylistWithStoriesFeatureImpl41PlaylistWithStoriesVISREFHeaderController (PlaylistWithStoriesFeatureImpl) <SPTImageLoaderDelegate>
+@interface _TtC30PlaylistWithStoriesFeatureImpl41PlaylistWithStoriesVISREFHeaderController (PlaylistWithStoriesFeatureImpl)
 - (void)imageLoader:(id)arg1 didLoadImage:(id)arg2 forURL:(id)arg3 loadTime:(double)arg4 context:(id)arg5;
 @end
 

@@ -14,11 +14,13 @@
     UIColor *_iconColor;
     UIImage *_selectedButtonImage;
     UIImage *_normalButtonImage;
+    UIColor *_normalImageTintColor;
     struct CGSize _iconSize;
 }
 
 + (id)button;
 - (void).cxx_destruct;
+@property(retain, nonatomic) UIColor *normalImageTintColor; // @synthesize normalImageTintColor=_normalImageTintColor;
 @property(retain, nonatomic) UIImage *normalButtonImage; // @synthesize normalButtonImage=_normalButtonImage;
 @property(retain, nonatomic) UIImage *selectedButtonImage; // @synthesize selectedButtonImage=_selectedButtonImage;
 - (void)setIconColor:(id)arg1;
@@ -28,10 +30,12 @@
 - (void)setIcon:(long long)arg1;
 - (long long)icon;
 - (void)setSelected:(_Bool)arg1;
+- (void)updateTintColorForSelected;
 - (void)updateForSelected;
 - (void)updateAccessibility;
 - (void)applyIcon;
 - (id)init;
+- (id)initWithNormalImageTintColor:(id)arg1;
 
 @end
 

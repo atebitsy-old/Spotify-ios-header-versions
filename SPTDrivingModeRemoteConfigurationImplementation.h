@@ -23,7 +23,6 @@
 @property(readonly, nonatomic, getter=isInCarViewHoldback) _Bool carViewHoldbackEnabled;
 @property(readonly, nonatomic, getter=isCarViewEnabled) _Bool carViewEnabled;
 @property(readonly, nonatomic, getter=isHomeFeedEnabled) _Bool drivingCarViewHomeFeed;
-@property(readonly, nonatomic, getter=isScreenlockPreventionEnabled) _Bool screenlockPreventionEnabled;
 @property(readonly, nonatomic, getter=isSwipeToSkipEnabled) _Bool swipeToSkipEnabled;
 - (id)initWithProperties:(id)arg1;
 

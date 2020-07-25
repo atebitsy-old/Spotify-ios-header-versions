@@ -8,7 +8,7 @@
 
 #import "HUBViewContentOffsetObserver-Protocol.h"
 
-@class NSTimer, SPTActivityIndicatorView, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger, SPTPremiumDestinationNavigationItemDecorator, SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater;
+@class NSTimer, SPTActivityIndicatorView, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationInAppMessageRequester, SPTPremiumDestinationLogger, SPTPremiumDestinationNavigationItemDecorator, SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater, SPTPremiumDestinationUIComponentLayoutManager;
 
 @interface SPTPremiumDestinationHubViewController : SPTHubViewController <HUBViewContentOffsetObserver>
 {
@@ -20,11 +20,15 @@
     SPTPremiumDestinationGLUETheme *_premiumDestinationTheme;
     SPTPremiumDestinationLogger *_logger;
     NSTimer *_timer;
+    SPTPremiumDestinationInAppMessageRequester *_premiumDestinationInAppMessageRequester;
     SPTActivityIndicatorView *_loadingIndicatorView;
+    SPTPremiumDestinationUIComponentLayoutManager *_componentLayoutManager;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPremiumDestinationUIComponentLayoutManager *componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
 @property(retain, nonatomic) SPTActivityIndicatorView *loadingIndicatorView; // @synthesize loadingIndicatorView=_loadingIndicatorView;
+@property(retain, nonatomic) SPTPremiumDestinationInAppMessageRequester *premiumDestinationInAppMessageRequester; // @synthesize premiumDestinationInAppMessageRequester=_premiumDestinationInAppMessageRequester;
 @property(retain, nonatomic) NSTimer *timer; // @synthesize timer=_timer;
 @property(retain, nonatomic) SPTPremiumDestinationLogger *logger; // @synthesize logger=_logger;
 @property(nonatomic) _Bool shouldShowLoadingIndicator; // @synthesize shouldShowLoadingIndicator=_shouldShowLoadingIndicator;
@@ -45,7 +49,7 @@
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithPremiumDestinationTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11 premiumDestinationLogger:(id)arg12;
+- (id)initWithPremiumDestinationTheme:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3 componentRegistry:(id)arg4 componentLayoutManager:(id)arg5 imageLoaderFactory:(id)arg6 commandHandler:(id)arg7 viewModelProvider:(id)arg8 impressionLogger:(id)arg9 loadingLogger:(id)arg10 shareDragDelegateFactory:(id)arg11 premiumDestinationLogger:(id)arg12 premiumDestinationInAppMessageRequester:(id)arg13;
 
 @end
 

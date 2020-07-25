@@ -7,11 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTExternalIntegrationAdditionalParameterProvider, SPTExternalIntegrationExternalActionOrigin;
+@protocol SPTExternalIntegrationInformationProvider;
 
 @protocol SPTExternalIntegrationActionCoordinator <NSObject>
-- (void)performActionWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 completionHandler:(void (^)(NSError *))arg3;
-- (void)performActionWithURI:(NSURL *)arg1 externalActionOrigin:(id <SPTExternalIntegrationExternalActionOrigin>)arg2 externalParameterProvider:(id <SPTExternalIntegrationAdditionalParameterProvider>)arg3 completionHandler:(void (^)(NSError *))arg4;
+- (void)performActionWithURI:(NSURL *)arg1 accessoryInfoProvider:(id <SPTExternalIntegrationInformationProvider>)arg2 completionHandler:(void (^)(NSError *))arg3;
 - (_Bool)canPerformActionWithURI:(NSURL *)arg1;
 @end
 

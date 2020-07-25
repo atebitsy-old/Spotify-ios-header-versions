@@ -9,7 +9,7 @@
 @interface _TtC18VoiceUIFeatureImpl15VoiceController : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: delegate
-    // Error parsing type: , name: voiceSession
+    // Error parsing type: , name: voiceSessionFactory
     // Error parsing type: , name: glueTheme
     // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: playbackController

@@ -11,7 +11,7 @@
 #import "SPTNowPlayingRemoteEventSubtypesController-Protocol.h"
 
 @class AVAudioPlayer, MPRemoteCommandCenter, NSMapTable, NSString, NSTimer, SPTNowPlayingLockScreenUBILogger, SPTNowPlayingModel;
-@protocol SPTAudioSessionController, SPTNowPlayingRemoteControlEventLogger, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy, SPTNowPlayingTestManager;
+@protocol SPTAccessoryActionLogger, SPTAudioSessionController, SPTNowPlayingRemoteControlEventPolicyControllerDelegate, SPTNowPlayingRemoteControlPolicy, SPTNowPlayingTestManager;
 
 @interface SPTNowPlayingRemoteControlEventDefaultController : NSObject <AVAudioPlayerDelegate, SPTNowPlayingRemoteControlEventPolicyController, SPTNowPlayingRemoteEventSubtypesController>
 {
@@ -35,7 +35,7 @@
     MPRemoteCommandCenter *_remoteCommandCenter;
     CDUnknownBlockType _avAudioPlayerFactory;
     id <SPTNowPlayingTestManager> _testManager;
-    id <SPTNowPlayingRemoteControlEventLogger> _logger;
+    id <SPTAccessoryActionLogger> _logger;
     SPTNowPlayingLockScreenUBILogger *_lockScreenUBILogger;
 }
 
@@ -43,7 +43,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) _Bool playersLoaded; // @synthesize playersLoaded=_playersLoaded;
 @property(readonly, nonatomic) SPTNowPlayingLockScreenUBILogger *lockScreenUBILogger; // @synthesize lockScreenUBILogger=_lockScreenUBILogger;
-@property(readonly, nonatomic) id <SPTNowPlayingRemoteControlEventLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) CDUnknownBlockType avAudioPlayerFactory; // @synthesize avAudioPlayerFactory=_avAudioPlayerFactory;
 @property(retain, nonatomic) MPRemoteCommandCenter *remoteCommandCenter; // @synthesize remoteCommandCenter=_remoteCommandCenter;
@@ -53,9 +53,8 @@
 @property(readonly, nonatomic) id <SPTNowPlayingRemoteControlPolicy> remoteControlPolicy; // @synthesize remoteControlPolicy=_remoteControlPolicy;
 @property(nonatomic) __weak id <SPTNowPlayingRemoteControlEventPolicyControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic, getter=isActiveForRemoteControlPolicyUpdates) _Bool activeForRemoteControlPolicyUpdates; // @synthesize activeForRemoteControlPolicyUpdates=_activeForRemoteControlPolicyUpdates;
-- (id)eventSourceIdentifierForEvent:(id)arg1;
 - (void)performSeekToStartWithCommandEvent:(id)arg1;
-- (void)performSkipToPreviousWithCommandEvent:(id)arg1 isPodcastContentWithEventOriginatingFromSiri:(_Bool)arg2;
+- (void)performSkipToPreviousWithCommandEvent:(id)arg1 isContentWithEventOriginatingFromSiri:(_Bool)arg2;
 - (void)perfromSkipToNextWithCommandEvent:(id)arg1;
 - (_Bool)shouldSkip15sInsteadOfChangingTrackForEvent:(id)arg1;
 - (_Bool)shouldCommandEventOverrideCustomPodcastSkipBehaviour:(id)arg1;

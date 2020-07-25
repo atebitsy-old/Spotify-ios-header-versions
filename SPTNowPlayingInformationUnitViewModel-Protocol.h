@@ -11,10 +11,6 @@
 
 @protocol SPTNowPlayingInformationUnitViewModel <NSObject>
 @property(nonatomic) __weak id <SPTNowPlayingInformationUnitViewModelDelegate> delegate;
-@property(readonly, nonatomic, getter=isFeedbackButtonSelected) _Bool feedbackButtonSelected;
-@property(readonly, nonatomic, getter=isFeedbackButtonEnabled) _Bool feedbackButtonEnabled;
-@property(readonly, nonatomic) unsigned long long offlineState;
-@property(readonly, nonatomic) _Bool shouldShowPositiveFeedback;
 @property(readonly, copy, nonatomic) NSURL *contextSource;
 @property(readonly, copy, nonatomic) NSString *subtitle;
 @property(readonly, copy, nonatomic) NSString *title;

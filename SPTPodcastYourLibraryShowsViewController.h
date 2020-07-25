@@ -17,7 +17,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTPodcastYourLibraryShowsViewModel, SPTProgressView, SPTTableView, SPTTheme, UIView;
-@protocol GLUEImageLoader, SPTLinkDispatcher, SPTPageContainer, SPTPodcastLogger, SPTPodcastYourLibraryShowCellConfigurator, SPTShowInfoViewProvider, SPTViewLogger, SPTYourLibraryPageDelegate;
+@protocol GLUEImageLoader, SPTLinkDispatcher, SPTPageContainer, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastYourLibraryShowCellConfigurator, SPTShowInfoViewProvider, SPTViewLogger, SPTYourLibraryPageDelegate;
 
 @interface SPTPodcastYourLibraryShowsViewController : UIViewController <SPTPodcastYourLibraryShowsViewModelDelegate, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, SPTShowInfoViewProviderTarget, SPContentInsetViewController, SPTPageController, SPTYourLibraryPage, SPTScrollToTopViewController>
 {
@@ -28,7 +28,7 @@
     id <SPTPodcastYourLibraryShowCellConfigurator> _cellConfigurator;
     id <GLUEImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTPodcastLogger> _logger;
+    id <SPTPodcastLogger><SPTPodcastUBILogger> _logger;
     SPTTheme *_theme;
     id <SPTViewLogger> _viewLogger;
     id <SPTShowInfoViewProvider> _infoViewProvider;
@@ -42,7 +42,7 @@
 @property(retain, nonatomic) id <SPTShowInfoViewProvider> infoViewProvider; // @synthesize infoViewProvider=_infoViewProvider;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(retain, nonatomic) id <SPTPodcastLogger> logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) id <SPTPodcastLogger><SPTPodcastUBILogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) id <SPTPodcastYourLibraryShowCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;

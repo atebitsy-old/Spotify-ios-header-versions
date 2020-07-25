@@ -4,9 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "_TtC17SPTPageLoaderView34SinglePlaceholderSkeletonComponent.h"
+#import "SPTSinglePlaceholderSkeletonComponent.h"
 
-@interface SPTSkeletonComponentShufflePlay : _TtC17SPTPageLoaderView34SinglePlaceholderSkeletonComponent
+@interface SPTSkeletonComponentShufflePlay : SPTSinglePlaceholderSkeletonComponent
 {
 }
 

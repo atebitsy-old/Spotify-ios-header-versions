@@ -14,13 +14,13 @@
 @interface SPTLoggingParams : NSObject <NSCopying, NSMutableCopying>
 {
     NSNumber *_commandInitiatedTime;
-    NSString *_navigationId;
+    NSString *_pageInstanceId;
     NSString *_interactionId;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *interactionId; // @synthesize interactionId=_interactionId;
-@property(copy, nonatomic) NSString *navigationId; // @synthesize navigationId=_navigationId;
+@property(copy, nonatomic) NSString *pageInstanceId; // @synthesize pageInstanceId=_pageInstanceId;
 @property(copy, nonatomic) NSNumber *commandInitiatedTime; // @synthesize commandInitiatedTime=_commandInitiatedTime;
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;

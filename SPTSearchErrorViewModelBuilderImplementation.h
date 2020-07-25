@@ -22,11 +22,11 @@
 @property(readonly, nonatomic) _Bool drilldown; // @synthesize drilldown=_drilldown;
 @property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
 @property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
-- (id)errorLoggingData;
+- (id)errorLoggingDataWithRequestID:(id)arg1;
 - (id)offlineStateOverlayComponent;
-- (id)errorStateOverlayComponent;
-- (id)overlayComponentForErrorType:(unsigned long long)arg1;
-- (id)viewModelForErrorType:(unsigned long long)arg1;
+- (id)errorStateOverlayComponentWithRequestID:(id)arg1;
+- (id)overlayComponentForErrorType:(unsigned long long)arg1 requestID:(id)arg2;
+- (id)viewModelForErrorType:(unsigned long long)arg1 requestID:(id)arg2;
 - (id)initWithUBILocationSerializer:(id)arg1 emptyStatePropertiesProvider:(id)arg2 drilldown:(_Bool)arg3;
 
 // Remaining properties

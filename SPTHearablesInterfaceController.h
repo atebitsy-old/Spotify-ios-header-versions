@@ -8,17 +8,18 @@
 
 #import "SPTHearablesConnectionDelegate-Protocol.h"
 
-@class NSString, SPTHearablesAccessoryManager, SPTHearablesLegacySerialProtocolApiAdapter, SPTHearablesPlaybackController;
+@class NSString, SPTHearablesAccessoryManager, SPTHearablesPlaybackController;
+@protocol SPTHearablesSerialProtocolAdapter;
 
 @interface SPTHearablesInterfaceController : NSObject <SPTHearablesConnectionDelegate>
 {
     SPTHearablesAccessoryManager *_accessoryManager;
     SPTHearablesPlaybackController *_playbackController;
-    SPTHearablesLegacySerialProtocolApiAdapter *_serialProtocolAdapter;
+    id <SPTHearablesSerialProtocolAdapter> _serialProtocolAdapter;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTHearablesLegacySerialProtocolApiAdapter *serialProtocolAdapter; // @synthesize serialProtocolAdapter=_serialProtocolAdapter;
+@property(readonly, nonatomic) id <SPTHearablesSerialProtocolAdapter> serialProtocolAdapter; // @synthesize serialProtocolAdapter=_serialProtocolAdapter;
 @property(readonly, nonatomic) SPTHearablesPlaybackController *playbackController; // @synthesize playbackController=_playbackController;
 @property(readonly, nonatomic) SPTHearablesAccessoryManager *accessoryManager; // @synthesize accessoryManager=_accessoryManager;
 - (void)connection:(id)arg1 didReceiveData:(id)arg2;

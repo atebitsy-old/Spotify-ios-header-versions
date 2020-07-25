@@ -9,15 +9,11 @@
 @class NSError, SPTFindFriendsViewModel;
 
 @protocol SPTFindFriendsViewModelDelegate <NSObject>
-- (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 hasDisconnectedFromNetworkType:(long long)arg2;
-- (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 hasConnectedToNetworkType:(long long)arg2;
 - (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 didFindMatches:(_Bool)arg2;
-- (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 hasLoadedFriendsWithSuccess:(_Bool)arg2 error:(NSError *)arg3;
 
 @optional
 - (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 didFailToUpdateFollowStateWithError:(NSError *)arg2;
 - (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 didUpdateFollowStateForUserAtIndex:(unsigned long long)arg2;
 - (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 isOffline:(_Bool)arg2;
-- (void)findFriendsViewModel:(SPTFindFriendsViewModel *)arg1 isLoading:(_Bool)arg2;
 @end
 

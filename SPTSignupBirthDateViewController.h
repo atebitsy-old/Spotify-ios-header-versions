@@ -50,7 +50,6 @@
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)viewDidAppear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithTheme:(id)arg1 viewModel:(id)arg2;

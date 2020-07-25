@@ -7,11 +7,10 @@
 #import "SPTUIPageService.h"
 
 @class SPTYourLibraryGLUETheme, SPTYourLibraryLogger, SPTYourLibraryURIManager, SPTYourLibraryViewController;
-@protocol SPTCreatePlaylistService, SPTGLUEService, SPTOfflineService, SPTPerformanceMetricsService, SPTSessionService, SPTUBIService, SPTYourLibraryService, SPTYourLibraryViewModel;
+@protocol SPTGLUEService, SPTOfflineService, SPTPerformanceMetricsService, SPTSessionService, SPTUBIService, SPTYourLibraryService, SPTYourLibraryViewModel;
 
 @interface SPTYourLibraryUIService : SPTUIPageService
 {
-    id <SPTCreatePlaylistService> _createPlaylistService;
     id <SPTGLUEService> _glueService;
     id <SPTYourLibraryService> _yourLibraryService;
     id <SPTOfflineService> _offlineService;
@@ -38,7 +37,6 @@
 @property(nonatomic) __weak id <SPTOfflineService> offlineService; // @synthesize offlineService=_offlineService;
 @property(nonatomic) __weak id <SPTYourLibraryService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(nonatomic) __weak id <SPTCreatePlaylistService> createPlaylistService; // @synthesize createPlaylistService=_createPlaylistService;
 - (id)provideViewLoggerForURI:(id)arg1;
 - (id)provideLogger;
 - (id)provideOfflineBannerViewController;

@@ -9,13 +9,18 @@
 @interface _TtC22AllBoardingFeatureImpl17ContentPickerView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: largeHeaderViewTopConstraint
+    // Error parsing type: , name: navigationItem
+    // Error parsing type: , name: skipButton
     // Error parsing type: , name: $__lazy_storage_$_collectionViewLayout
     // Error parsing type: , name: $__lazy_storage_$_collectionView
-    // Error parsing type: , name: doneButton
+    // Error parsing type: , name: $__lazy_storage_$_doneButton
     // Error parsing type: , name: overlayGradientView
     // Error parsing type: , name: userInteractionBlockerView
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: $__lazy_storage_$_titleView
+    // Error parsing type: , name: $__lazy_storage_$_largeHeaderView
+    // Error parsing type: , name: $__lazy_storage_$_navigationBarBackgroundView
 }
 
 - (void).cxx_destruct;

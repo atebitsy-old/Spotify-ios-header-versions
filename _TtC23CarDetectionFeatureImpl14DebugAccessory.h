@@ -13,6 +13,7 @@
 }
 
 - (id)init;
+- (id)initWithProtocol:(id)arg1 name:(id)arg2 bundleIdentifier:(id)arg3;
 @property(nonatomic, readonly) NSString *transportType;
 @property(nonatomic, readonly) NSString *integrationType;
 @property(nonatomic, readonly) NSString *identifier;

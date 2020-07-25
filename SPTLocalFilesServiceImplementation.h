@@ -9,7 +9,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLocalFilesImportManager;
-@protocol CosmosFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTNetworkService, SPTPlaylistPlatformService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTURIDispatchService;
+@protocol CosmosFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTEventSenderService, SPTNetworkService, SPTPlaylistPlatformService, SPTResolver, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTLocalFilesServiceImplementation : NSObject <SPTService>
 {
@@ -23,6 +23,7 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTURIDispatchService> _dispatchService;
     id <SPTUBIService> _ubiService;
+    id <SPTEventSenderService> _eventSenderService;
     SPTLocalFilesImportManager *_localFilesImportManager;
     id <SPTResolver> _cosmosRouter;
 }
@@ -31,6 +32,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTResolver> cosmosRouter; // @synthesize cosmosRouter=_cosmosRouter;
 @property(retain, nonatomic) SPTLocalFilesImportManager *localFilesImportManager; // @synthesize localFilesImportManager=_localFilesImportManager;
+@property(readonly, nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> dispatchService; // @synthesize dispatchService=_dispatchService;
 @property(readonly, nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;

@@ -27,6 +27,7 @@
 - (id)lastBaselineAnchor;
 - (id)firstLineHeightAnchor;
 - (void)updateCreatorsLabelText;
+- (struct CGSize)intrinsicContentSize;
 - (void)layoutSubviews;
 - (void)hideImage:(_Bool)arg1;
 - (id)init;

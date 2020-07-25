@@ -32,7 +32,7 @@
 @property(readonly, nonatomic) id <SPTAssistedCurationAddTrackHandler> addTrackHandler; // @synthesize addTrackHandler=_addTrackHandler;
 @property(retain, nonatomic) NSMutableArray *cards; // @synthesize cards=_cards;
 @property(retain, nonatomic) NSMutableSet *providersWaitingSet; // @synthesize providersWaitingSet=_providersWaitingSet;
-@property(retain, nonatomic) NSArray *cardProviders; // @synthesize cardProviders=_cardProviders;
+@property(copy, nonatomic) NSArray *cardProviders; // @synthesize cardProviders=_cardProviders;
 @property(retain, nonatomic) id <SPTAssistedCurationDatasource> datasource; // @synthesize datasource=_datasource;
 @property(nonatomic, getter=isLoaded) _Bool loaded; // @synthesize loaded=_loaded;
 @property(copy, nonatomic) NSString *contextName; // @synthesize contextName=_contextName;

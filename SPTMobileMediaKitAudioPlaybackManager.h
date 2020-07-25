@@ -7,12 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "MMKPlaybackDelegate-Protocol.h"
-#import "SPTExternalIntegrationAdditionalParameterProvider-Protocol.h"
+#import "SPTExternalIntegrationInformationProvider-Protocol.h"
 
 @class NSString, SPTAccessory, SPTMobileMediaKitAPKeepAliveHandler, SPTPlayerState;
 @protocol MMKLogging, SPTAccessoryActionLogger, SPTExternalIntegrationCollectionController, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationPlaybackController, SPTGaiaConnectAPI;
 
-@interface SPTMobileMediaKitAudioPlaybackManager : NSObject <SPTExternalIntegrationAdditionalParameterProvider, MMKPlaybackDelegate>
+@interface SPTMobileMediaKitAudioPlaybackManager : NSObject <SPTExternalIntegrationInformationProvider, MMKPlaybackDelegate>
 {
     SPTPlayerState *_currentPlayerState;
     SPTPlayerState *_oldPlayerState;
@@ -45,7 +45,9 @@
 @property(copy, nonatomic) NSString *lastTransactionId; // @synthesize lastTransactionId=_lastTransactionId;
 @property(retain, nonatomic) SPTPlayerState *oldPlayerState; // @synthesize oldPlayerState=_oldPlayerState;
 @property(retain, nonatomic) SPTPlayerState *currentPlayerState; // @synthesize currentPlayerState=_currentPlayerState;
-- (id)parameterDictionary;
+- (id)additionalParameters;
+- (id)actionOrigin;
+- (id)accessory;
 - (void)playContentWithURI:(id)arg1 options:(id)arg2 header:(id)arg3 context:(id)arg4;
 - (void)endPlaybackBackgroundTask;
 - (void)startPlaybackBackgroundTask;

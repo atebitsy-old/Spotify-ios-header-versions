@@ -6,12 +6,10 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTPageController-Protocol.h"
+@class SPTVoiceNowPlayingView, SPTVoiceNowPlayingViewModel;
+@protocol GLUEImageLoader;
 
-@class NSString, NSURL, SPTVoiceNowPlayingView, SPTVoiceNowPlayingViewModel;
-@protocol GLUEImageLoader, SPTPageContainer;
-
-@interface SPTVoiceNowPlayingViewController : UIViewController <SPTPageController>
+@interface SPTVoiceNowPlayingViewController : UIViewController
 {
     id <GLUEImageLoader> _glueImageLoader;
     SPTVoiceNowPlayingViewModel *_nowPlayingViewModel;
@@ -22,19 +20,10 @@
 @property(retain, nonatomic) SPTVoiceNowPlayingView *nowPlayingContainerView; // @synthesize nowPlayingContainerView=_nowPlayingContainerView;
 @property(readonly, nonatomic) SPTVoiceNowPlayingViewModel *nowPlayingViewModel; // @synthesize nowPlayingViewModel=_nowPlayingViewModel;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithViewModel:(id)arg1 glueImageLoader:(id)arg2;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
-@property(readonly) Class superclass;
 
 @end
 

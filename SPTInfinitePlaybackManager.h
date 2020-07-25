@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSMutableArray, NSString, NSURL, SPSession, SPTDataLoader, SPTInfinitePlaybackContext, SPTRadioAutoplayOfflineLogger, SPTRadioLogger, SPTRadioPlaybackService;
+@class NSMutableArray, NSString, NSURL, SPSession, SPTDataLoader, SPTInfinitePlaybackContext, SPTRadioLogger, SPTRadioPlaybackService;
 @protocol SPTGaiaConnectAPI, SPTLocalSettings, SPTNetworkConnectivityController, SPTPlayer;
 
 @interface SPTInfinitePlaybackManager : NSObject <SPTDataLoaderDelegate, SPTPlayerObserver>
@@ -25,7 +25,6 @@
     id <SPTNetworkConnectivityController> _networkConnectivity;
     id <SPTGaiaConnectAPI> _connectManager;
     SPTRadioLogger *_logger;
-    SPTRadioAutoplayOfflineLogger *_offlineLogger;
     NSMutableArray *_previousTrackURIs;
     NSURL *_seedURI;
     SPTInfinitePlaybackContext *_autoplayContext;
@@ -37,7 +36,6 @@
 @property(nonatomic) _Bool trackHasPlayed; // @synthesize trackHasPlayed=_trackHasPlayed;
 @property(retain, nonatomic) NSURL *seedURI; // @synthesize seedURI=_seedURI;
 @property(readonly, nonatomic) NSMutableArray *previousTrackURIs; // @synthesize previousTrackURIs=_previousTrackURIs;
-@property(readonly, nonatomic) SPTRadioAutoplayOfflineLogger *offlineLogger; // @synthesize offlineLogger=_offlineLogger;
 @property(readonly, nonatomic) __weak SPTRadioLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) __weak id <SPTNetworkConnectivityController> networkConnectivity; // @synthesize networkConnectivity=_networkConnectivity;
@@ -47,7 +45,6 @@
 @property(readonly, nonatomic) __weak SPTRadioPlaybackService *radioPlaybackService; // @synthesize radioPlaybackService=_radioPlaybackService;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic, getter=isEnabled) _Bool enabled; // @synthesize enabled=_enabled;
-- (void)logOfflineAutoplaySkippedWithSeedUri:(id)arg1;
 - (void)startPlayerContextURI:(id)arg1 fromPlayerState:(id)arg2;
 - (void)startRadioStationWithSeedURI:(id)arg1 fromPlayerState:(id)arg2;
 - (void)launchAutoplayWithSeedURI:(id)arg1 fromPlayerState:(id)arg2;
@@ -58,7 +55,7 @@
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)dealloc;
-- (id)initWithPlayer:(id)arg1 playbackService:(id)arg2 localSettings:(id)arg3 session:(id)arg4 dataLoader:(id)arg5 networkConnectivity:(id)arg6 connectManager:(id)arg7 logger:(id)arg8 offlineLogger:(id)arg9;
+- (id)initWithPlayer:(id)arg1 playbackService:(id)arg2 localSettings:(id)arg3 session:(id)arg4 dataLoader:(id)arg5 networkConnectivity:(id)arg6 connectManager:(id)arg7 logger:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

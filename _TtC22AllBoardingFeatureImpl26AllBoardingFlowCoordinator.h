@@ -19,6 +19,9 @@
     // Error parsing type: , name: networkService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: ubiLogger
+    // Error parsing type: , name: followModelFactory
+    // Error parsing type: , name: modalPresentationMonitor
+    // Error parsing type: , name: eventSender
     // Error parsing type: , name: curationManager
     // Error parsing type: , name: flowLoop
     // Error parsing type: , name: navigationController

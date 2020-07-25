@@ -9,7 +9,7 @@
 #import "SPTAssistedCurationService-Protocol.h"
 
 @class NSArray, NSDictionary, NSString, SPTAllocationContext;
-@protocol CosmosFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationContextHandler, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService;
+@protocol CosmosFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationContextHandler, SPTCollectionPlatformService, SPTCoreService, SPTCosmosDataLoaderService, SPTFreeTierRecommendationsService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, _TtP17OfflineMixFeature20SPTOfflineMixService_;
 
 @interface SPTAssistedCurationServiceImplementation : NSObject <SPTAssistedCurationService>
 {
@@ -22,6 +22,7 @@
     id <SPTNetworkService> _networkService;
     id <SPTFreeTierRecommendationsService> _recommendationsService;
     id <SPTPlayerFeature> _playerFeature;
+    id <_TtP17OfflineMixFeature20SPTOfflineMixService_> _offlineMixService;
     id <SPTPlayer> _player;
     NSArray *_contextHandlers;
     id <SPTAssistedCurationContextHandler> _contextHandlerFallback;
@@ -34,6 +35,7 @@
 @property(retain, nonatomic) id <SPTAssistedCurationContextHandler> contextHandlerFallback; // @synthesize contextHandlerFallback=_contextHandlerFallback;
 @property(copy, nonatomic) NSArray *contextHandlers; // @synthesize contextHandlers=_contextHandlers;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
+@property(nonatomic) __weak id <_TtP17OfflineMixFeature20SPTOfflineMixService_> offlineMixService; // @synthesize offlineMixService=_offlineMixService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTFreeTierRecommendationsService> recommendationsService; // @synthesize recommendationsService=_recommendationsService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
@@ -54,9 +56,10 @@
 - (void)setupProvidersFactory;
 - (void)setupContextHandlers;
 - (id)queueContextHandler;
+- (id)offlineMixContextHandler;
 - (id)likedSongsContextHandler;
 - (id)playlistContextHandler;
-- (id)providerCardsSortMechanismForURI:(id)arg1;
+- (id)providerCardsSortMechanismForURI:(id)arg1 shouldPrioRecentlyPlayed:(_Bool)arg2;
 - (id)provideAddTrackHandlerForURI:(id)arg1;
 - (id)provideAssistedCurationModelForURI:(id)arg1;
 - (void)load;

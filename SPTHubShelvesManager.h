@@ -9,7 +9,7 @@
 #import "UIGestureRecognizerDelegate-Protocol.h"
 
 @class HUBComponentView, NSString, NSURL, SPTSwipeGestureRecognizer, UICollectionView;
-@protocol SPTHubComponentModelURIResolver, SPTHubSwipeableTableViewCellComponentView, SPTShelves;
+@protocol SPTHubComponentModelURIResolver, SPTHubShelvesManagerActionDelegate, SPTHubSwipeableTableViewCellComponentView, SPTShelves;
 
 @interface SPTHubShelvesManager : NSObject <UIGestureRecognizerDelegate>
 {
@@ -19,9 +19,11 @@
     NSURL *_viewURI;
     id <SPTHubComponentModelURIResolver> _componentModelURIResolver;
     SPTSwipeGestureRecognizer *_swipeGestureRecognizer;
+    id <SPTHubShelvesManagerActionDelegate> _actionDelegate;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTHubShelvesManagerActionDelegate> actionDelegate; // @synthesize actionDelegate=_actionDelegate;
 @property(retain, nonatomic) SPTSwipeGestureRecognizer *swipeGestureRecognizer; // @synthesize swipeGestureRecognizer=_swipeGestureRecognizer;
 @property(readonly, nonatomic) id <SPTHubComponentModelURIResolver> componentModelURIResolver; // @synthesize componentModelURIResolver=_componentModelURIResolver;
 @property(readonly, copy, nonatomic) NSURL *viewURI; // @synthesize viewURI=_viewURI;
@@ -36,6 +38,7 @@
 - (void)handleSwipeGestureRecognizer:(id)arg1;
 - (void)setupSwipeGestureRecognizerIfNeeded;
 - (void)enableShelvesForComponentView:(id)arg1;
+- (id)initWithShelves:(id)arg1 hubContentView:(id)arg2 viewURI:(id)arg3 componentModelURIResolver:(id)arg4 actionDelegate:(id)arg5;
 - (id)initWithShelves:(id)arg1 hubContentView:(id)arg2 viewURI:(id)arg3 componentModelURIResolver:(id)arg4;
 
 // Remaining properties

@@ -7,7 +7,7 @@
 #import "_TtC23MusicVideoUIFeatureImpl27MusicVideoCardComponentView.h"
 
 @interface _TtC23MusicVideoUIFeatureImpl27MusicVideoCardComponentView (MusicVideoUIFeatureImpl1)
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 @end
 

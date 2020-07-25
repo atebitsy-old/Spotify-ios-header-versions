@@ -35,6 +35,7 @@
 - (CDUnknownBlockType)playCueWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)playContextURIWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)speechRecognitionCommandWithEventSink:(CDUnknownBlockType)arg1;
+- (CDUnknownBlockType)listenForAudioSignalWithEventSink:(CDUnknownBlockType)arg1;
 - (CDUnknownBlockType)startDelayTimerWithEventSink:(CDUnknownBlockType)arg1;
 - (void)handleEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;
 - (id)initWithSpeechRecognitionCommandEffectHandler:(id)arg1 playerEffectHandler:(id)arg2 playCueEffectHandler:(id)arg3 startDelayTimerEffectHandler:(id)arg4 cosmosEffectHandler:(id)arg5 voiceLogEffectHandler:(id)arg6;

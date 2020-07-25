@@ -6,48 +6,40 @@
 
 #import <objc/NSObject.h>
 
-@class HUBComponentRegistry, SPTHomeCommandHandlerFactory, SPTHomeEndpointFactory, SPTHomeFeatureProperties, SPTHomeLocalViewModelOverrides, SPTHomeViewModelLoaderFactory, SPTHomeViewModelProvider;
-@protocol GLUETheme, SPTHomeUIService, SPTHubsRendererFactory, SPTLinkDispatcher, SPTOfflineModeState, SPTShareDragDelegateFactory, SPTViewLogger, _TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_;
+@class SPTHomeCommandHandlerFactory, SPTHomeDebugger, SPTHomeEndpointFactory, SPTHomeFeatureProperties, SPTHomeHubProvider, SPTHomeLocalViewModelOverrides, SPTHomeViewModelLoaderFactory, SPTHomeViewModelProvider;
+@protocol GLUETheme, SPTOfflineModeState, SPTShareDragDelegateFactory;
 
 @interface SPTHomeHubManager : NSObject
 {
     SPTHomeViewModelProvider *_viewModelProvider;
-    id <SPTHubsRendererFactory> _hubsRendererFactory;
+    SPTHomeHubProvider *_homeHubProvider;
     SPTHomeEndpointFactory *_endpointFactory;
-    SPTHomeCommandHandlerFactory *_commandHandlerFactory;
-    HUBComponentRegistry *_componentRegistry;
+    SPTHomeCommandHandlerFactory *_homeCommandHandlerFactory;
     id <GLUETheme> _GLUETheme;
     id <SPTOfflineModeState> _offlineModeState;
-    id <SPTHomeUIService> _homeUIService;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     SPTHomeViewModelLoaderFactory *_viewModelLoaderFactory;
-    id <SPTLinkDispatcher> _linkDispatcher;
-    id <_TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_> _musicVideoCommandHandlerFactory;
     SPTHomeFeatureProperties *_remoteConfigProperties;
-    id <SPTViewLogger> _viewLogger;
     SPTHomeLocalViewModelOverrides *_localViewModelOverrides;
+    SPTHomeDebugger *_homeDebugger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTHomeDebugger *homeDebugger; // @synthesize homeDebugger=_homeDebugger;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *localViewModelOverrides; // @synthesize localViewModelOverrides=_localViewModelOverrides;
-@property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
 @property(readonly, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
-@property(readonly, nonatomic) id <_TtP19MusicVideoUIFeature31MusicVideoCommandHandlerFactory_> musicVideoCommandHandlerFactory; // @synthesize musicVideoCommandHandlerFactory=_musicVideoCommandHandlerFactory;
-@property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTHomeViewModelLoaderFactory *viewModelLoaderFactory; // @synthesize viewModelLoaderFactory=_viewModelLoaderFactory;
 @property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
-@property(readonly, nonatomic) __weak id <SPTHomeUIService> homeUIService; // @synthesize homeUIService=_homeUIService;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <GLUETheme> GLUETheme; // @synthesize GLUETheme=_GLUETheme;
-@property(readonly, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
-@property(readonly, nonatomic) SPTHomeCommandHandlerFactory *commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
+@property(readonly, nonatomic) SPTHomeCommandHandlerFactory *homeCommandHandlerFactory; // @synthesize homeCommandHandlerFactory=_homeCommandHandlerFactory;
 @property(readonly, nonatomic) SPTHomeEndpointFactory *endpointFactory; // @synthesize endpointFactory=_endpointFactory;
-@property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
+@property(readonly, nonatomic) SPTHomeHubProvider *homeHubProvider; // @synthesize homeHubProvider=_homeHubProvider;
 @property(readonly, nonatomic) SPTHomeViewModelProvider *viewModelProvider; // @synthesize viewModelProvider=_viewModelProvider;
 - (id)makeCommandDispatcherWithURL:(id)arg1 referrerIdentifier:(id)arg2 hubLogger:(id)arg3 viewModelProvider:(id)arg4 overrides:(id)arg5;
 - (id)makeViewModelProviderForSourceIdentifier:(id)arg1 overrides:(id)arg2;
 - (id)provideHubViewControllerForURL:(id)arg1 initialViewModel:(id)arg2 referrerIdentifier:(id)arg3 viewLogger:(id)arg4;
-- (id)initWithHubsRendererFactory:(id)arg1 endpointFactory:(id)arg2 commandHandlerFactory:(id)arg3 componentRegistry:(id)arg4 GLUETheme:(id)arg5 offlineModeState:(id)arg6 homeUIService:(id)arg7 shareDragDelegateFactory:(id)arg8 viewModelLoaderFactory:(id)arg9 linkDispatcher:(id)arg10 musicVideoCommandHandlerFactory:(id)arg11 remoteConfigProperties:(id)arg12 sourceIdentifier:(id)arg13;
+- (id)initWithHomeHubProvider:(id)arg1 endpointFactory:(id)arg2 homeCommandHandlerFactory:(id)arg3 GLUETheme:(id)arg4 offlineModeState:(id)arg5 shareDragDelegateFactory:(id)arg6 viewModelLoaderFactory:(id)arg7 remoteConfigProperties:(id)arg8 sourceIdentifier:(id)arg9 homeDebugger:(id)arg10;
 
 @end
 

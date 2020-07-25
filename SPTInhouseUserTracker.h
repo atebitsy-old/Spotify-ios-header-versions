@@ -8,24 +8,26 @@
 
 #import "SPTThirdPartyUserTracker-Protocol.h"
 
-@class NSString;
-@protocol SPTLogCenter;
+@class NSString, SPTAdvertiserIDProvider;
+@protocol SPTEventSender;
 
 @interface SPTInhouseUserTracker : NSObject <SPTThirdPartyUserTracker>
 {
     _Bool _enableUserTracker;
     NSString *_trackerUserID;
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     NSString *_deviceID;
+    SPTAdvertiserIDProvider *_advertiserIDProvider;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTAdvertiserIDProvider *advertiserIDProvider; // @synthesize advertiserIDProvider=_advertiserIDProvider;
 @property(readonly, copy, nonatomic) NSString *deviceID; // @synthesize deviceID=_deviceID;
-@property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) NSString *trackerUserID; // @synthesize trackerUserID=_trackerUserID;
 @property(readonly, nonatomic, getter=shouldEnableUserTracker) _Bool enableUserTracker; // @synthesize enableUserTracker=_enableUserTracker;
 - (void)userDidLoginWithProductState:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 deviceID:(id)arg2;
+- (id)initWithEventSender:(id)arg1 deviceID:(id)arg2 advertiserIDProvider:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

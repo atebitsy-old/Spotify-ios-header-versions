@@ -24,6 +24,7 @@
 - (void)dealloc;
 - (void)updateAnimation:(long long)arg1;
 - (void)updateAnimationFortContextSource:(id)arg1;
+- (id)accessibilityLabel;
 - (id)initWithFrame:(struct CGRect)arg1;
 
 @end

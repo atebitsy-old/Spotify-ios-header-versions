@@ -13,14 +13,15 @@
 #import "SPTPodcastEpisodeDescriptionTableViewCellDelegate-Protocol.h"
 #import "SPTPodcastEpisodeViewModelDelegate-Protocol.h"
 #import "SPTShareableContext-Protocol.h"
+#import "SPTThemableViewLayoutDelegate-Protocol.h"
 #import "SPViewController-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
 @class GLUEEntityRowTableViewCell, NSString, NSURL, SPTEntityHeaderViewController, SPTPodcastEpisodeActionsTableViewCell, SPTPodcastEpisodeCoverArtTableViewCell, SPTPodcastEpisodeDescriptionTableViewCell, SPTPodcastEpisodeEntityHeaderContentViewController, SPTPodcastEpisodeFeatureProperties, SPTPodcastEpisodeLogger, SPTPodcastEpisodeTheme, SPTPodcastEpisodeViewModel, SPTProgressView, SPTTableView, UIBarButtonItem, UITableViewCell;
-@protocol SPTImageLoaderFactory, SPTMetaViewController, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger;
+@protocol SPTImageLoaderFactory, SPTMetaViewController, SPTModalPresentationController, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeFeaturedContentViewController, SPTPodcastRecommendationsViewController, SPTPodcastUIButtonsFactory, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTViewLogger, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
 
-@interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
+@interface SPTPodcastEpisodeViewController : UIViewController <SPContentInsetViewController, SPTPodcastEpisodeViewModelDelegate, SPTEntityHeaderContentController, SPTPodcastEpisodeDescriptionTableViewCellDelegate, SPTNavigationControllerNavigationBarState, SPTThemableViewLayoutDelegate, UITableViewDelegate, UITableViewDataSource, SPTPageController, SPViewController, SPTShareableContext>
 {
     _Bool _showLoadingOverlayProgressView;
     _Bool _viewHasAppeared;
@@ -37,7 +38,6 @@
     SPTPodcastEpisodeCoverArtTableViewCell *_coverArtCell;
     UITableViewCell *_actionRowCell;
     UITableViewCell *_audioPlusCell;
-    UITableViewCell *_creatorLinksCell;
     UITableViewCell *_featuredContentCell;
     UITableViewCell *_trackListContentCell;
     GLUEEntityRowTableViewCell *_podcastCell;
@@ -48,8 +48,8 @@
     id <SPTViewLogger> _viewLogger;
     UIViewController *_actionRow;
     UIViewController *_descriptionView;
+    UIViewController *_coverArt;
     UIViewController *_audioPlus;
-    UIViewController *_creatorLinks;
     UIViewController<SPTPodcastRecommendationsViewController> *_recommendations;
     UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *_featuredContent;
     id <SPTMetaViewController> _metaViewController;
@@ -59,9 +59,11 @@
     SPTProgressView *_progressView;
     double _featuredContentBottomMargin;
     SPTPodcastEpisodeFeatureProperties *_featureProperties;
+    id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> _htmlParser;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> htmlParser; // @synthesize htmlParser=_htmlParser;
 @property(retain, nonatomic) SPTPodcastEpisodeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) double featuredContentBottomMargin; // @synthesize featuredContentBottomMargin=_featuredContentBottomMargin;
 @property(nonatomic) _Bool viewHasAppeared; // @synthesize viewHasAppeared=_viewHasAppeared;
@@ -73,8 +75,8 @@
 @property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) UIViewController<SPTPodcastEpisodeFeaturedContentViewController> *featuredContent; // @synthesize featuredContent=_featuredContent;
 @property(retain, nonatomic) UIViewController<SPTPodcastRecommendationsViewController> *recommendations; // @synthesize recommendations=_recommendations;
-@property(retain, nonatomic) UIViewController *creatorLinks; // @synthesize creatorLinks=_creatorLinks;
 @property(retain, nonatomic) UIViewController *audioPlus; // @synthesize audioPlus=_audioPlus;
+@property(retain, nonatomic) UIViewController *coverArt; // @synthesize coverArt=_coverArt;
 @property(retain, nonatomic) UIViewController *descriptionView; // @synthesize descriptionView=_descriptionView;
 @property(retain, nonatomic) UIViewController *actionRow; // @synthesize actionRow=_actionRow;
 @property(retain, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
@@ -85,7 +87,6 @@
 @property(retain, nonatomic) GLUEEntityRowTableViewCell *podcastCell; // @synthesize podcastCell=_podcastCell;
 @property(retain, nonatomic) UITableViewCell *trackListContentCell; // @synthesize trackListContentCell=_trackListContentCell;
 @property(retain, nonatomic) UITableViewCell *featuredContentCell; // @synthesize featuredContentCell=_featuredContentCell;
-@property(retain, nonatomic) UITableViewCell *creatorLinksCell; // @synthesize creatorLinksCell=_creatorLinksCell;
 @property(retain, nonatomic) UITableViewCell *audioPlusCell; // @synthesize audioPlusCell=_audioPlusCell;
 @property(retain, nonatomic) UITableViewCell *actionRowCell; // @synthesize actionRowCell=_actionRowCell;
 @property(retain, nonatomic) SPTPodcastEpisodeCoverArtTableViewCell *coverArtCell; // @synthesize coverArtCell=_coverArtCell;
@@ -100,6 +101,7 @@
 @property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 - (void)showNPVIfNeeded;
+- (void)themableViewWillUpdateLayout:(id)arg1;
 - (void)scrollViewDidChangeAdjustedContentInset:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (void)playURIInContext:(id)arg1;
@@ -111,7 +113,7 @@
 - (void)shareButtonTapped:(id)arg1;
 - (void)setupConstraints;
 - (void)setupHeaderViewController;
-- (void)setTableViewStyle;
+- (void)setTableViewStyleIfNeeded;
 - (void)initializeView;
 - (void)tableViewReload;
 - (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
@@ -143,9 +145,10 @@
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)loadComponentViews;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 descriptionView:(id)arg9 creatorLinks:(id)arg10 recommendations:(id)arg11 featuredContent:(id)arg12 trackList:(id)arg13 audioPlus:(id)arg14 buttonsFactory:(id)arg15 featureProperties:(id)arg16 metaViewController:(id)arg17;
+- (id)initWithEpisodeViewModel:(id)arg1 imageLoaderFactory:(id)arg2 modalPresentationController:(id)arg3 podcastContextMenuProvider:(id)arg4 shareFeature:(id)arg5 logger:(id)arg6 viewLogger:(id)arg7 actionRow:(id)arg8 descriptionView:(id)arg9 coverArt:(id)arg10 recommendations:(id)arg11 featuredContent:(id)arg12 trackList:(id)arg13 audioPlus:(id)arg14 buttonsFactory:(id)arg15 featureProperties:(id)arg16 metaViewController:(id)arg17 htmlParser:(id)arg18;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

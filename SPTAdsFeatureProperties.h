@@ -16,15 +16,25 @@
     _Bool _audioAdsSwiftNpvEnabled;
     _Bool _comscoreEnabled;
     unsigned long long _adsInAppBrowserIos;
+    unsigned long long _audioPlusFormat;
+    unsigned long long _audioPlusVersion;
     NSString *_adsInAppBrowserIosString;
+    NSString *_audioPlusFormatString;
+    NSString *_audioPlusVersionString;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *audioPlusVersionString; // @synthesize audioPlusVersionString=_audioPlusVersionString;
+@property(retain, nonatomic) NSString *audioPlusFormatString; // @synthesize audioPlusFormatString=_audioPlusFormatString;
 @property(retain, nonatomic) NSString *adsInAppBrowserIosString; // @synthesize adsInAppBrowserIosString=_adsInAppBrowserIosString;
+@property(readonly, nonatomic) unsigned long long audioPlusVersion; // @synthesize audioPlusVersion=_audioPlusVersion;
+@property(readonly, nonatomic) unsigned long long audioPlusFormat; // @synthesize audioPlusFormat=_audioPlusFormat;
 @property(readonly, nonatomic) unsigned long long adsInAppBrowserIos; // @synthesize adsInAppBrowserIos=_adsInAppBrowserIos;
 @property(readonly, nonatomic) _Bool comscoreEnabled; // @synthesize comscoreEnabled=_comscoreEnabled;
 @property(readonly, nonatomic) _Bool audioAdsSwiftNpvEnabled; // @synthesize audioAdsSwiftNpvEnabled=_audioAdsSwiftNpvEnabled;
 @property(readonly, nonatomic) _Bool creamBookmarkAudioAdsIos; // @synthesize creamBookmarkAudioAdsIos=_creamBookmarkAudioAdsIos;
+- (unsigned long long)mapAudioPlusVersionToEnumValue:(id)arg1;
+- (unsigned long long)mapAudioPlusFormatToEnumValue:(id)arg1;
 - (unsigned long long)mapAdsInAppBrowserIosToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -12,7 +12,7 @@
 
 @interface SPTSocialListeningParticipantViewModelImplementation : NSObject <SPTSocialListeningParticipantViewModel>
 {
-    _Bool _listenTogetherEnabled;
+    _Bool _newUIExperienceEnabled;
     _Bool _currentUser;
     _Bool _host;
     NSString *_participantID;
@@ -30,9 +30,9 @@
 @property(readonly, copy, nonatomic) NSString *participantID; // @synthesize participantID=_participantID;
 @property(readonly, nonatomic, getter=isHost) _Bool host; // @synthesize host=_host;
 @property(readonly, nonatomic, getter=isCurrentUser) _Bool currentUser; // @synthesize currentUser=_currentUser;
-@property(readonly, nonatomic, getter=isListenTogetherEnabled) _Bool listenTogetherEnabled; // @synthesize listenTogetherEnabled=_listenTogetherEnabled;
-- (id)initWithCurrentUserData:(id)arg1 listenTogetherEnabled:(_Bool)arg2;
-- (id)initWithParticipantModel:(id)arg1 listenTogetherEnabled:(_Bool)arg2;
+@property(readonly, nonatomic, getter=isNewUIExperienceEnabled) _Bool newUIExperienceEnabled; // @synthesize newUIExperienceEnabled=_newUIExperienceEnabled;
+- (id)initWithCurrentUserData:(id)arg1 newUIExperienceEnabled:(_Bool)arg2;
+- (id)initWithParticipantModel:(id)arg1 newUIExperienceEnabled:(_Bool)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

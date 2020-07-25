@@ -8,8 +8,8 @@
 
 #import "SPTMetaViewControllerObserver-Protocol.h"
 
-@class NSString, SPTAutoLockController, SPTDrivingModeCarModePlayer, SPTDrivingModeFactory, SPTDrivingModeHomeFeedList, SPTDrivingModePivotList, SPTDrivingModePivotPlayer;
-@protocol SPTAutoLockOverrideToken, SPTDrivingModeOptOutHandler, SPTDrivingModeRemoteConfiguration, SPTMetaViewController;
+@class NSString, SPTDrivingModeCarModePlayer, SPTDrivingModeFactory, SPTDrivingModeHomeFeedList, SPTDrivingModePivotList, SPTDrivingModePivotPlayer;
+@protocol SPTDrivingModeOptOutHandler, SPTDrivingModeRemoteConfiguration, SPTMetaViewController;
 
 @interface SPTDrivingModeSession : NSObject <SPTMetaViewControllerObserver>
 {
@@ -22,13 +22,9 @@
     id <SPTDrivingModeRemoteConfiguration> _remoteConfiguration;
     SPTDrivingModeFactory *_factory;
     id <SPTMetaViewController> _metaViewController;
-    SPTAutoLockController *_autoLockController;
-    id <SPTAutoLockOverrideToken> _autoLockOverride;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTAutoLockOverrideToken> autoLockOverride; // @synthesize autoLockOverride=_autoLockOverride;
-@property(retain, nonatomic) SPTAutoLockController *autoLockController; // @synthesize autoLockController=_autoLockController;
 @property(nonatomic) _Bool isShowing; // @synthesize isShowing=_isShowing;
 @property(readonly, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(readonly, nonatomic) SPTDrivingModeFactory *factory; // @synthesize factory=_factory;
@@ -45,7 +41,7 @@
 @property(readonly, nonatomic, getter=isPivotEnabled) _Bool pivotEnabled;
 - (void)setupConfiguration;
 - (void)dealloc;
-- (id)initWithRemoteConfiguration:(id)arg1 optOutHandler:(id)arg2 factory:(id)arg3 metaViewController:(id)arg4 autoLockController:(id)arg5;
+- (id)initWithRemoteConfiguration:(id)arg1 optOutHandler:(id)arg2 factory:(id)arg3 metaViewController:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

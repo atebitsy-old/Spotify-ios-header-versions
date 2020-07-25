@@ -13,6 +13,7 @@
 
 @interface SPTLoginLoggerImplementation : NSObject <SPTLoginLogger>
 {
+    NSString *_requestID;
     id <SPTAdjustUserTrackerProtocol> _adjustUserTracker;
     id <SPTEventSender> _eventSender;
     SPTLoginUUIDProvider *_sessionIDProvider;
@@ -24,7 +25,11 @@
 @property(retain, nonatomic) SPTLoginUUIDProvider *sessionIDProvider; // @synthesize sessionIDProvider=_sessionIDProvider;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTAdjustUserTrackerProtocol> adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
+@property(copy, nonatomic) NSString *requestID; // @synthesize requestID=_requestID;
+- (id)typeCheckedParametersFromParameters:(id)arg1;
 - (id)timestamp;
+- (void)trackFeatureFlagFallbackWithFlagsAndFallbackState:(id)arg1;
+- (void)trackFeatureFlagExposureWithEnabledFlags:(id)arg1 disabledFlags:(id)arg2 fromCache:(_Bool)arg3;
 - (void)userDidCompleteRequestWithType:(id)arg1 error:(id)arg2 attemptId:(id)arg3 result:(id)arg4;
 - (void)userDidCompleteRequestWithType:(id)arg1 error:(id)arg2 attemptId:(id)arg3;
 - (id)userDidStartRequestWithType:(id)arg1;
@@ -43,6 +48,7 @@
 - (void)userDidSeeDialog:(id)arg1 onScreen:(id)arg2;
 - (void)userDidSeeScreen:(id)arg1;
 - (void)userDidRegister;
+- (void)userDidAuthenticateWithUserAuthEventAttributes:(id)arg1;
 - (void)userDidAuthenticateFromScreen:(id)arg1;
 - (void)userClickedButton:(id)arg1 onScreen:(id)arg2 inDialog:(id)arg3;
 - (void)userClickedButton:(id)arg1 onScreen:(id)arg2;
@@ -51,7 +57,6 @@
 - (void)trackGenericEventWithName:(id)arg1 parameters:(id)arg2;
 - (void)trackGenericEventWithName:(id)arg1;
 - (void)loginLayoutReceived:(id)arg1 layout:(id)arg2;
-- (void)operationWithIdentifier:(id)arg1 didFinishWithDuration:(double)arg2;
 - (void)accountRecoveryLinkParsed;
 - (id)initWithAdjustUserTracker:(id)arg1 eventSender:(id)arg2 sessionIDProvider:(id)arg3 deviceID:(id)arg4;
 

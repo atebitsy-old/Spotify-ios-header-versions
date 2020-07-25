@@ -9,19 +9,22 @@
 #import "HUBComponent-Protocol.h"
 #import "HUBComponentWithChildren-Protocol.h"
 
-@class NSSet;
+@class NSSet, SPTPremiumDestinationUIGLUETheme;
 @protocol HUBComponentChildDelegate;
 
 @interface SPTPremiumDestinationUIFlexboxImageComponent : NSObject <HUBComponent, HUBComponentWithChildren>
 {
     id <HUBComponentChildDelegate> _childDelegate;
+    SPTPremiumDestinationUIGLUETheme *_theme;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <HUBComponentChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;
 @property(readonly, copy, nonatomic) NSSet *layoutTraits;
 - (id)createViewWithFrame:(struct CGRect)arg1;
+- (id)initWithTheme:(id)arg1;
 
 @end
 

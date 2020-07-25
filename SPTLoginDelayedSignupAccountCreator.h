@@ -26,7 +26,7 @@
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2;
 - (void)invokeAndClearCompletionWithError:(id)arg1;
 - (id)generateBirthDate;
-- (id)generateRandomGender;
+- (unsigned long long)generateRandomGender;
 - (id)generateRandomGuestEmail;
 - (id)createGuestUserInfoModel;
 - (void)createGuestAccountWithCompletion:(CDUnknownBlockType)arg1;

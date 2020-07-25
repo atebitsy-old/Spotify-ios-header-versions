@@ -36,7 +36,7 @@
 - (void)didTapVideoView:(id)arg1;
 - (void)setShowsVideoControls:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (double)currentTrackLength;

@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol SPTHearablesSpotifyGoAPI;
+
 @protocol SPTHearablesService <SPTService>
+- (id <SPTHearablesSpotifyGoAPI>)provideSpotifyGoAPI;
 @end
 

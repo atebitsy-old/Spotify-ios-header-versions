@@ -28,7 +28,7 @@
 - (id)componentViewForLayout;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

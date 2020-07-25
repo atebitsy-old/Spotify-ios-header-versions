@@ -44,7 +44,6 @@
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 - (void)nextButtonTapped:(id)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (void)loadView;
 - (id)initWithTheme:(id)arg1 viewModel:(id)arg2;

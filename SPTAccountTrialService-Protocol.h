@@ -7,10 +7,8 @@
 #import "SPTService-Protocol.h"
 
 @class SPTAccountTrialController;
-@protocol SPTAccountTrialDeferredController;
 
 @protocol SPTAccountTrialService <SPTService>
-- (id <SPTAccountTrialDeferredController>)provideDeferredTrialController;
 - (SPTAccountTrialController *)provideTrialController;
 @end
 

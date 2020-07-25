@@ -19,7 +19,6 @@
 }
 
 + (double)offerCardBaseComponentHeightForStyle:(id)arg1;
-+ (struct CGSize)offerCardContentViewSizeForContainerViewSize:(struct CGSize)arg1 style:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <HUBComponentChildDelegate> childDelegate; // @synthesize childDelegate=_childDelegate;

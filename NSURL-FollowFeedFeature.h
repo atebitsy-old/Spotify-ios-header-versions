@@ -10,6 +10,7 @@
 
 @interface NSURL (FollowFeedFeature)
 + (id)spt_followFeedURL;
++ (id)spt_listeningHistoryURL;
 + (id)spt_URLWithType:(long long)arg1 parameters:(id)arg2;
 + (id)spt_URLWithDecodedComponents:(id)arg1 queryParameters:(id)arg2;
 + (id)spt_URLWithDecodedComponents:(id)arg1;
@@ -53,9 +54,6 @@
 + (id)spt_abbaFormatDictionary;
 + (id)spt_abbaConfigurationURI;
 + (id)spt_abbaResolveURI;
-+ (id)spt_removeFeedbackURLWithEntityURI:(id)arg1 contextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8;
-+ (id)spt_dislikeFeedbackURLWithEntityURI:(id)arg1 contextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8;
-+ (id)spt_likeFeedbackURLWithEntityURI:(id)arg1 contextURI:(id)arg2 subcontextURI:(id)arg3 viewURI:(id)arg4 reason:(id)arg5 backendURL:(id)arg6 feature:(id)arg7 actions:(id)arg8;
 + (id)spt_FindFriendsViewAllFriendsURLWithTransport:(long long)arg1;
 + (id)spt_FollowModelRemoveBanArtistURL;
 + (id)spt_FollowModelBanArtistURL;
@@ -72,7 +70,6 @@
 + (id)spt_freeTierArtistContentURLForArtistIdentifier:(id)arg1 withOnDemandURLs:(id)arg2 podcastEnabled:(_Bool)arg3 videoEnabled:(_Bool)arg4 onDemandTrialEnabled:(_Bool)arg5;
 + (id)spt_artist_concertEntityViewURIFromConcertID:(id)arg1;
 + (id)spt_artist_partnerURLFromSpotifyURI:(id)arg1;
-+ (id)spt_freeTierFindURI;
 + (id)spt_freeTierTasteOnboardingUpdateURI;
 + (id)spt_freeTierTasteOnboardingURI;
 + (id)spt_freeTierTasteOnboardingConvertHermesURIToHttp:(id)arg1 timestamp:(id)arg2;
@@ -177,7 +174,6 @@
 + (id)spt_moderationServicePingURL;
 + (id)spt_moderationServiceURL;
 + (id)spt_KeymasterTokensURL;
-+ (id)spt_NRFURL;
 + (id)spt_unsubscribeUserFromNotificationAPIURL:(id)arg1 channel:(long long)arg2;
 + (id)spt_subscribeUserToNotificationAPIURL:(id)arg1 channel:(long long)arg2;
 + (id)spt_fetchNotificationPreferencesAPIURL;
@@ -189,9 +185,6 @@
 + (id)spt_nowPlayingViewURI;
 + (id)spt_onboardingCoordinationFeatureURL;
 + (id)spt_PaymentCancelURL;
-+ (id)spt_artistDismissRecommendationURLForDimissUri:(id)arg1;
-+ (id)spt_personalisedSetsPrefixComponents;
-+ (id)spt_personalisedSetURLWithPlaylistURL:(id)arg1;
 + (id)spt_phoneNumberSignupPhoneNumberEntryViewURI;
 + (id)spt_phoneNumberSignupValidateOtpViewURI;
 + (id)spt_phoneNumberSignupCallingCodeViewURI;
@@ -351,7 +344,6 @@
 @property(readonly, nonatomic) _Bool spt_isFreeTierCollectionArtistViewURI;
 @property(readonly, nonatomic) _Bool spt_URIContainsFreeTierArtist;
 @property(readonly, nonatomic) _Bool spt_isFreeTierArtistViewURI;
-- (_Bool)spt_isFreeTierFindURI;
 - (_Bool)spt_freeTierTasteOnboardingIsMediumPaidSocial;
 @property(readonly, nonatomic) NSString *spt_freeTierTrackIdentifier;
 @property(readonly, nonatomic) _Bool spt_isFreeTierTrackViewURI;
@@ -388,8 +380,6 @@
 @property(readonly, nonatomic, getter=spt_isNowPlayingViewURI) _Bool isNowPlayingViewURI;
 @property(readonly, nonatomic, getter=spt_isOnDemandDecoratableURL) _Bool isOnDemandDecoratableURL;
 - (_Bool)spt_isOnboardingCoordinationFeatureURI;
-@property(readonly, nonatomic, getter=spt_personalisedSetEmbeddedPlaylistURL) NSURL *personalisedSetEmbeddedPlaylistURL;
-@property(readonly, nonatomic, getter=spt_isPersonalisedSetURL) _Bool personalisedSetURL;
 - (_Bool)spt_isPhoneNumberEntryViewURI;
 - (_Bool)spt_isFreeTierAddToPlaylistURI;
 - (id)spt_playlistV2URI;
@@ -406,11 +396,6 @@
 - (double)spt_podcastTimestampInMillisecondsFromURL;
 - (double)spt_podcastTimestampInSecondsFromURL;
 @property(readonly, nonatomic, getter=spt_isPodcastEpisodeFeaturedContentTimelineURI) _Bool isPodcastEpisodeFeaturedContentTimelineURI;
-@property(readonly, nonatomic, getter=spt_URLIsWebURL) _Bool isWebURL;
-@property(readonly, nonatomic, getter=spt_URLIsSpotifyURL) _Bool isSpotifyURL;
-@property(readonly, nonatomic, getter=spt_URLIsEmailURL) _Bool isEmailURL;
-@property(readonly, nonatomic, getter=spt_displayTimeFromURL) NSString *displayTimeFromURL;
-@property(readonly, nonatomic, getter=spt_timestampFromURL) NSNumber *timestampFromURL;
 @property(readonly, nonatomic, getter=spt_internalPodcastURLFromShowURL) NSURL *internalPodcastURLFromShowURL;
 @property(readonly, nonatomic, getter=spt_internalPodcastEpisodeURLFromPodcastEpisodeURL) NSURL *internalPodcastEpisodeURLFromPodcastEpisodeURL;
 - (id)spt_urlFromPodmarksURL;
@@ -433,6 +418,9 @@
 @property(readonly, nonatomic, getter=spt_isInternalPodcastEpisodeURL) _Bool isInternalPodcastEpisodeURL;
 @property(readonly, nonatomic, getter=spt_isPodcastEpisodeURL) _Bool isPodcastEpisodeURL;
 @property(readonly, nonatomic, getter=spt_isPodcastURL) _Bool isPodcastURL;
+@property(readonly, nonatomic, getter=spt_URLIsWebURL) _Bool isWebURL;
+@property(readonly, nonatomic, getter=spt_URLIsEmailURL) _Bool isEmailURL;
+@property(readonly, nonatomic, getter=spt_timestampFromURL) NSNumber *timestampFromURL;
 @property(readonly, nonatomic, getter=spt_podcastMixControlsForPlaylist) NSURL *podcastMixControlsForPlaylist;
 - (_Bool)spt_isPreSignupExperimentationScreenConfigurationURL;
 - (_Bool)spt_isPremiumDestinationPreviewURL;

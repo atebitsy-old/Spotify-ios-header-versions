@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 @class NSString;
-@protocol SPTLogCenter, SPTViewLogger;
+@protocol SPTEventSender, SPTLogCenter, SPTViewLogger;
 
 @interface SPTFreeTierTasteOnboardingArtistSearchViewLogger : NSObject
 {
     id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
     id <SPTViewLogger> _viewLogger;
     NSString *_sessionId;
     NSString *_featureIdentifier;
@@ -21,6 +22,7 @@
 @property(readonly, nonatomic) NSString *featureIdentifier; // @synthesize featureIdentifier=_featureIdentifier;
 @property(readonly, nonatomic) NSString *sessionId; // @synthesize sessionId=_sessionId;
 @property(readonly, nonatomic) id <SPTViewLogger> viewLogger; // @synthesize viewLogger=_viewLogger;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logViewDataDidCancel;
 - (void)logViewDataDidLoad;
@@ -33,7 +35,7 @@
 - (void)logSearchSelectArtistInteractionWithTargetUri:(id)arg1 searchSessionId:(id)arg2 interactionId:(id)arg3 isExtendedSearchItem:(_Bool)arg4;
 - (void)logBackButtonInteractionWithSearchSessionId:(id)arg1;
 - (void)logClearButtonInteractionWithSearchSessionId:(id)arg1;
-- (id)initWithLogCenter:(id)arg1 viewLogger:(id)arg2 sessionId:(id)arg3 featureIdentifier:(id)arg4;
+- (id)initWithLogCenter:(id)arg1 eventSender:(id)arg2 viewLogger:(id)arg3 sessionId:(id)arg4 featureIdentifier:(id)arg5;
 
 @end
 

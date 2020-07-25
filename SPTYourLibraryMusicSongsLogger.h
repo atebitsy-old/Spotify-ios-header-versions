@@ -15,6 +15,7 @@
 {
     id <SPTLogCenter> _logCenter;
     id <SPTUBILogger> _ubiLogger;
+    CDUnknownBlockType _pageInstanceIdFactory;
     id <SPTUBIMobileYourLibraryLikedSongsEventFactory> _eventFactory;
     NSURL *_pageURL;
     NSMutableDictionary *_impressionTracking;
@@ -24,10 +25,11 @@
 @property(retain, nonatomic) NSMutableDictionary *impressionTracking; // @synthesize impressionTracking=_impressionTracking;
 @property(retain, nonatomic) NSURL *pageURL; // @synthesize pageURL=_pageURL;
 @property(retain, nonatomic) id <SPTUBIMobileYourLibraryLikedSongsEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
+@property(readonly, copy, nonatomic) CDUnknownBlockType pageInstanceIdFactory; // @synthesize pageInstanceIdFactory=_pageInstanceIdFactory;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)logUBIImpression:(id)arg1;
-- (void)logUBIInteractionEvent:(id)arg1;
+- (id)logUBIInteractionEvent:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
 - (id)userIntent:(id)arg1 withReason:(id)arg2;
@@ -51,7 +53,7 @@
 - (void)logFilterChipAtIndex:(unsigned long long)arg1 identifier:(id)arg2 isSelected:(_Bool)arg3;
 - (void)logCloseExtraSongsExplanation;
 - (void)logExtraSongsWhyAction;
-- (void)logSongsShufflePlayWitReason:(id)arg1;
+- (id)logSongsShufflePlayWitReason:(id)arg1;
 - (void)logAddSongsButtonAction;
 - (void)logDiscoverSongsButton:(id)arg1;
 - (void)logCancelRemoveDownloads;
@@ -61,8 +63,8 @@
 - (void)logTrackBanActionSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 banned:(_Bool)arg5;
 - (void)logTrackLikeActionSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 liked:(_Bool)arg5 reason:(id)arg6;
 - (void)logTrackContextMenuSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 reason:(id)arg5;
-- (void)logTrackItemSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 reason:(id)arg5;
-- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3;
+- (id)logTrackItemSelectedAtIndex:(unsigned long long)arg1 itemType:(unsigned long long)arg2 section:(unsigned long long)arg3 trackURI:(id)arg4 reason:(id)arg5;
+- (id)initWithLogCenter:(id)arg1 eventFactory:(id)arg2 ubiLogger:(id)arg3 pageInstanceIdFactory:(CDUnknownBlockType)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

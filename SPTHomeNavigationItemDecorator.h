@@ -7,39 +7,47 @@
 #import <objc/NSObject.h>
 
 @class SPTHomeLogger, SPTHomeNavigationButton, SPTTheme;
-@protocol SPTBarButtonItemManager, SPTLinkDispatcher, _TtP17FollowFeedFeature19SPTFollowFeedLogger_, _TtP17FollowFeedFeature21SPTFeedUpdatesManager_, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_;
+@protocol SPTBarButtonItemManager, SPTLinkDispatcher, _TtP17FollowFeedFeature19SPTFollowFeedLogger_, _TtP17FollowFeedFeature21SPTFeedUpdatesManager_, _TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_, _TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_, _TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_;
 
 @interface SPTHomeNavigationItemDecorator : NSObject
 {
     id <SPTBarButtonItemManager> _barButtonItemManager;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <_TtP17FollowFeedFeature19SPTFollowFeedLogger_> _feedLogger;
+    id <_TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_> _listeningHistoryLogger;
     SPTHomeLogger *_homeLogger;
     SPTTheme *_theme;
     id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_> _followFeedRemoteConfig;
+    id <_TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_> _listeningHistoryRemoteConfig;
     id <_TtP17FollowFeedFeature21SPTFeedUpdatesManager_> _feedUpdatesManager;
     SPTHomeNavigationButton *_settingsButton;
     SPTHomeNavigationButton *_feedButton;
+    SPTHomeNavigationButton *_listeningHistoryButton;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTHomeNavigationButton *listeningHistoryButton; // @synthesize listeningHistoryButton=_listeningHistoryButton;
 @property(retain, nonatomic) SPTHomeNavigationButton *feedButton; // @synthesize feedButton=_feedButton;
 @property(retain, nonatomic) SPTHomeNavigationButton *settingsButton; // @synthesize settingsButton=_settingsButton;
 @property(readonly, nonatomic) __weak id <_TtP17FollowFeedFeature21SPTFeedUpdatesManager_> feedUpdatesManager; // @synthesize feedUpdatesManager=_feedUpdatesManager;
+@property(readonly, nonatomic) __weak id <_TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_> listeningHistoryRemoteConfig; // @synthesize listeningHistoryRemoteConfig=_listeningHistoryRemoteConfig;
 @property(readonly, nonatomic) __weak id <_TtP17FollowFeedFeature29FollowFeedRemoteConfigManager_> followFeedRemoteConfig; // @synthesize followFeedRemoteConfig=_followFeedRemoteConfig;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTHomeLogger *homeLogger; // @synthesize homeLogger=_homeLogger;
+@property(readonly, nonatomic) id <_TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_> listeningHistoryLogger; // @synthesize listeningHistoryLogger=_listeningHistoryLogger;
 @property(readonly, nonatomic) id <_TtP17FollowFeedFeature19SPTFollowFeedLogger_> feedLogger; // @synthesize feedLogger=_feedLogger;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTBarButtonItemManager> barButtonItemManager; // @synthesize barButtonItemManager=_barButtonItemManager;
 - (void)updateFeedNavigationItemIfNeeded:(id)arg1;
+- (void)listeningHistoryButtonPressed:(id)arg1;
 - (void)feedButtonPressed:(id)arg1;
 - (void)settingsButtonPressed;
+- (id)listeningHistoryNavBarItem;
 - (id)followFeedNavBarItem;
 - (id)rightItems;
 - (void)updateNavigationItemDecoratorAlpha:(double)arg1;
 - (void)decoratePageController:(id)arg1;
-- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedRemoteConfig:(id)arg5 feedUpdatesManager:(id)arg6 feedLogger:(id)arg7;
+- (id)initWithBarButtonItemManager:(id)arg1 linkDispatcher:(id)arg2 homeLogger:(id)arg3 theme:(id)arg4 followFeedRemoteConfig:(id)arg5 listeningHistoryRemoteConfig:(id)arg6 feedUpdatesManager:(id)arg7 feedLogger:(id)arg8 listeningHistoryLogger:(id)arg9;
 
 @end
 

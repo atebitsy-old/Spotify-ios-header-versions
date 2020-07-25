@@ -11,8 +11,6 @@
 @protocol SPTAccountProductInformationObserver <NSObject>
 
 @optional
-- (void)premiumTrialEligibilityDidArriveForProductInformationController:(id <SPTAccountProductInformationController>)arg1;
-- (void)premiumTrialEligibilityIsSetForProductInformationController:(id <SPTAccountProductInformationController>)arg1;
 - (void)availableProductDidChangeForProductInformationController:(id <SPTAccountProductInformationController>)arg1;
 - (void)currentProductDidChangeForProductInformationController:(id <SPTAccountProductInformationController>)arg1;
 @end

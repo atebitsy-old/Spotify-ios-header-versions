@@ -18,6 +18,7 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)itemForIndexPath:(id)arg1;
 - (void)reloadCellsForCellProvider:(id)arg1;
 - (void)contextMenuPressedForCellProvider:(id)arg1 sender:(id)arg2;
 - (void)cellProvider:(id)arg1 playTrackAtIndexPath:(id)arg2 interactionId:(id)arg3;

@@ -17,7 +17,7 @@
 #import "UITableViewDataSource-Protocol.h"
 
 @class GLUEEntityRowStyle, NSIndexPath, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSNotificationCenter, NSObject, NSString, NSURL, SPTQueueTableViewSectionHeaderView, SPTQueueTheme, SPTQueueViewModelDataSource, SPTTableView, UIButton, UIView;
-@protocol GLUEImageLoader, OS_dispatch_queue, OS_dispatch_semaphore, SPTCrashReporter, SPTNowPlayingModeResolver, SPTPageContainer, SPTPodcastEntityDataLoader, SPTQueueLogger, SPTQueuePlaybackRestrictionHandler, SPTQueueViewControllerDelegate, SPTQueueViewModel;
+@protocol GLUEImageLoader, OS_dispatch_queue, OS_dispatch_semaphore, SPTNowPlayingContainedViewController, SPTNowPlayingModeResolver, SPTPageContainer, SPTPodcastEntityDataLoader, SPTQueueLogger, SPTQueuePlaybackRestrictionHandler, SPTQueueViewControllerDelegate, SPTQueueViewModel;
 
 @interface SPTQueueViewControllerImplementation : UIViewController <UITableViewDataSource, SPTUITableViewExtendedDelegate, SPTQueueSelectableLeadingViewDelegate, SPTQueueTableViewSectionHeaderViewDelegate, SPTQueueViewModelDelegate, SPTProductStateObserver, SPTNowPlayingModeResolverObserver, SPTQueueEnabling, SPTPageController>
 {
@@ -42,16 +42,15 @@
     NSObject<OS_dispatch_semaphore> *_tableUpdateSemaphore;
     UIView *_actionBarView;
     SPTTableView *_tableView;
-    UIViewController *_footerViewController;
+    UIViewController<SPTNowPlayingContainedViewController> *_footerViewController;
     SPTQueueViewModelDataSource *_dataSource;
     UIButton *_upNextButton;
     UIButton *_removeButton;
     NSIndexPath *_draggingRowPreviousIndexPath;
     NSIndexPath *_draggingRowCurrentIndexPath;
-    UIViewController *_navBarViewController;
+    UIViewController<SPTNowPlayingContainedViewController> *_navBarViewController;
     UIViewController *_navigationBarButtonsViewController;
-    UIViewController *_navigationBarViewControllerV2;
-    id <SPTCrashReporter> _crashReporter;
+    UIViewController<SPTNowPlayingContainedViewController> *_navigationBarViewController;
     id <SPTQueueLogger> _logger;
     GLUEEntityRowStyle *_audioStyle;
     GLUEEntityRowStyle *_videoStyle;
@@ -67,10 +66,9 @@
 @property(readonly, nonatomic) GLUEEntityRowStyle *videoStyle; // @synthesize videoStyle=_videoStyle;
 @property(readonly, nonatomic) GLUEEntityRowStyle *audioStyle; // @synthesize audioStyle=_audioStyle;
 @property(retain, nonatomic) id <SPTQueueLogger> logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) id <SPTCrashReporter> crashReporter; // @synthesize crashReporter=_crashReporter;
-@property(readonly, nonatomic) UIViewController *navigationBarViewControllerV2; // @synthesize navigationBarViewControllerV2=_navigationBarViewControllerV2;
+@property(readonly, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *navigationBarViewController; // @synthesize navigationBarViewController=_navigationBarViewController;
 @property(retain, nonatomic) UIViewController *navigationBarButtonsViewController; // @synthesize navigationBarButtonsViewController=_navigationBarButtonsViewController;
-@property(readonly, nonatomic) UIViewController *navBarViewController; // @synthesize navBarViewController=_navBarViewController;
+@property(readonly, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *navBarViewController; // @synthesize navBarViewController=_navBarViewController;
 @property(retain, nonatomic) NSIndexPath *draggingRowCurrentIndexPath; // @synthesize draggingRowCurrentIndexPath=_draggingRowCurrentIndexPath;
 @property(retain, nonatomic) NSIndexPath *draggingRowPreviousIndexPath; // @synthesize draggingRowPreviousIndexPath=_draggingRowPreviousIndexPath;
 @property(retain, nonatomic) UIButton *removeButton; // @synthesize removeButton=_removeButton;
@@ -79,7 +77,7 @@
 @property(nonatomic, getter=isDraggingRows) _Bool draggingRows; // @synthesize draggingRows=_draggingRows;
 @property(nonatomic, getter=areUpdatesEnabled) _Bool updatesEnabled; // @synthesize updatesEnabled=_updatesEnabled;
 @property(retain, nonatomic) SPTQueueViewModelDataSource *dataSource; // @synthesize dataSource=_dataSource;
-@property(retain, nonatomic) UIViewController *footerViewController; // @synthesize footerViewController=_footerViewController;
+@property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *footerViewController; // @synthesize footerViewController=_footerViewController;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
 @property(nonatomic) _Bool hideNowPlayingCoverArt; // @synthesize hideNowPlayingCoverArt=_hideNowPlayingCoverArt;
 @property(retain, nonatomic) UIView *actionBarView; // @synthesize actionBarView=_actionBarView;
@@ -186,11 +184,10 @@
 - (void)fontSizeDidChange:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (void)didReceiveMemoryWarning;
 - (void)updateViewConstraints;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 delegate:(id)arg2 glueImageLoader:(id)arg3 podcastEntityDataLoader:(id)arg4 presentContextMenuBlock:(CDUnknownBlockType)arg5 modeResolver:(id)arg6 navigationBarViewControllerV2:(id)arg7 pageURI:(id)arg8 queueTheme:(id)arg9 logger:(id)arg10 crashReporter:(id)arg11 notificationCenter:(id)arg12 playbackRestrictionHandler:(id)arg13;
+- (id)initWithViewModel:(id)arg1 delegate:(id)arg2 glueImageLoader:(id)arg3 podcastEntityDataLoader:(id)arg4 presentContextMenuBlock:(CDUnknownBlockType)arg5 modeResolver:(id)arg6 navigationBarViewController:(id)arg7 pageURI:(id)arg8 queueTheme:(id)arg9 logger:(id)arg10 notificationCenter:(id)arg11 playbackRestrictionHandler:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

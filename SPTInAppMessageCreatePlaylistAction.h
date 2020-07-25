@@ -8,17 +8,18 @@
 
 #import "SPTInAppMessageActionHandler-Protocol.h"
 
-@class NSString, SPTInAppMessageActionsRegistryImplementation;
+@class NSString;
+@protocol SPTLinkDispatcher;
 
 @interface SPTInAppMessageCreatePlaylistAction : NSObject <SPTInAppMessageActionHandler>
 {
-    SPTInAppMessageActionsRegistryImplementation *_registry;
+    id <SPTLinkDispatcher> _linkDispatcher;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTInAppMessageActionsRegistryImplementation *registry; // @synthesize registry=_registry;
+@property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 - (void)executeActionWithURL:(id)arg1;
-- (id)initWithActionsRegistry:(id)arg1;
+- (id)initWithLinkDispatcher:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

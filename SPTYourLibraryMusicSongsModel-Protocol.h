@@ -8,7 +8,7 @@
 #import "SPTSortingFilteringFilterableModel-Protocol.h"
 #import "SPTSortingFilteringSortableModel-Protocol.h"
 
-@class NSURL, SPTPlayOrigin;
+@class NSURL, SPTLoggingParams, SPTPlayOrigin;
 @protocol SPTPlayer, SPTYourLibraryMusicModelItemEntity, SPTYourLibraryMusicSongEntity, SPTYourLibraryMusicSongsModelDelegate;
 
 @protocol SPTYourLibraryMusicSongsModel <NSObject, SPTSortingFilteringFilterableModel, SPTSortingFilteringSortableModel>
@@ -30,8 +30,8 @@
 - (id <SPTYourLibraryMusicSongEntity>)recommendedItemAtIndex:(unsigned long long)arg1;
 - (id <SPTYourLibraryMusicModelItemEntity>)itemAtIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2;
 - (unsigned long long)numberItemsInSection:(unsigned long long)arg1;
-- (void)playTrackEntity:(id <SPTYourLibraryMusicModelItemEntity>)arg1 playOrigin:(SPTPlayOrigin *)arg2 fallbackPlayer:(id <SPTPlayer>)arg3;
-- (void)shufflePlayWithPlayOrigin:(SPTPlayOrigin *)arg1 fallbackPlayer:(id <SPTPlayer>)arg2;
+- (void)playTrackEntity:(id <SPTYourLibraryMusicModelItemEntity>)arg1 playOrigin:(SPTPlayOrigin *)arg2 loggingParams:(SPTLoggingParams *)arg3 fallbackPlayer:(id <SPTPlayer>)arg4;
+- (void)shufflePlayWithPlayOrigin:(SPTPlayOrigin *)arg1 loggingParams:(SPTLoggingParams *)arg2 fallbackPlayer:(id <SPTPlayer>)arg3;
 - (void)loadModel;
 @end
 

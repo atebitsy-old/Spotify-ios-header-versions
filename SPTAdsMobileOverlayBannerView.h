@@ -6,34 +6,54 @@
 
 #import "SPTBannerView.h"
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, SPTAdsPromotedContentImageView, SPTTheme, UIButton, UIView;
-@protocol GLUEImageLoader;
+@class GLUELabel, NSLayoutConstraint, SPTAdNowPlayingBookmarkButton, SPTAdsPromotedContentImageView, SPTNowPlayingButton, SPTTheme, UIButton, UIImageView, UIView;
+@protocol GLUEImageLoader, SPTNowPlayingPlayButton;
 
 @interface SPTAdsMobileOverlayBannerView : SPTBannerView
 {
+    _Bool _shouldShowPlayButton;
+    _Bool _hasExternalLinkImage;
+    _Bool _shouldShowBookmarkButton;
     SPTAdsPromotedContentImageView *_imageView;
     UIView *_actionView;
     GLUELabel *_headerLabel;
     GLUELabel *_advertiserLabel;
-    GLUEButton *_learnMoreButton;
+    GLUELabel *_infoLabel;
+    GLUELabel *_learnMoreLabel;
     UIButton *_closeBannerButton;
     SPTTheme *_theme;
+    UIView *_bannerContainer;
+    UIView *_labelsContainer;
+    UIView *_bannerOverlayView;
+    UIImageView *_externalLinkImageView;
+    SPTAdNowPlayingBookmarkButton *_bookmarkButton;
     id <GLUEImageLoader> _glueImageLoader;
     NSLayoutConstraint *_imageViewSizeContraint;
     NSLayoutConstraint *_imageViewMarginConstraint;
     NSLayoutConstraint *_closeButtonTrailingConstraint;
+    SPTNowPlayingButton<SPTNowPlayingPlayButton> *_playPauseButton;
     double _safeAreaMargin;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shouldShowBookmarkButton; // @synthesize shouldShowBookmarkButton=_shouldShowBookmarkButton;
 @property(nonatomic) double safeAreaMargin; // @synthesize safeAreaMargin=_safeAreaMargin;
+@property(readonly, nonatomic) _Bool hasExternalLinkImage; // @synthesize hasExternalLinkImage=_hasExternalLinkImage;
+@property(readonly, nonatomic) _Bool shouldShowPlayButton; // @synthesize shouldShowPlayButton=_shouldShowPlayButton;
+@property(readonly, nonatomic) SPTNowPlayingButton<SPTNowPlayingPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(retain, nonatomic) NSLayoutConstraint *closeButtonTrailingConstraint; // @synthesize closeButtonTrailingConstraint=_closeButtonTrailingConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewMarginConstraint; // @synthesize imageViewMarginConstraint=_imageViewMarginConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *imageViewSizeContraint; // @synthesize imageViewSizeContraint=_imageViewSizeContraint;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
+@property(readonly, nonatomic) SPTAdNowPlayingBookmarkButton *bookmarkButton; // @synthesize bookmarkButton=_bookmarkButton;
+@property(readonly, nonatomic) UIImageView *externalLinkImageView; // @synthesize externalLinkImageView=_externalLinkImageView;
+@property(readonly, nonatomic) UIView *bannerOverlayView; // @synthesize bannerOverlayView=_bannerOverlayView;
+@property(readonly, nonatomic) UIView *labelsContainer; // @synthesize labelsContainer=_labelsContainer;
+@property(readonly, nonatomic) UIView *bannerContainer; // @synthesize bannerContainer=_bannerContainer;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) UIButton *closeBannerButton; // @synthesize closeBannerButton=_closeBannerButton;
-@property(readonly, nonatomic) GLUEButton *learnMoreButton; // @synthesize learnMoreButton=_learnMoreButton;
+@property(readonly, nonatomic) GLUELabel *learnMoreLabel; // @synthesize learnMoreLabel=_learnMoreLabel;
+@property(readonly, nonatomic) GLUELabel *infoLabel; // @synthesize infoLabel=_infoLabel;
 @property(readonly, nonatomic) GLUELabel *advertiserLabel; // @synthesize advertiserLabel=_advertiserLabel;
 @property(readonly, nonatomic) GLUELabel *headerLabel; // @synthesize headerLabel=_headerLabel;
 @property(readonly, nonatomic) UIView *actionView; // @synthesize actionView=_actionView;
@@ -46,8 +66,10 @@
 - (void)updateConstraints;
 - (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)addConstraints;
+- (void)setupPlayButton;
 - (void)removeUnusedSubviews;
-- (id)initWithAdvertiserTitle:(id)arg1 actionButtonText:(id)arg2 imageUrl:(id)arg3 theme:(id)arg4 glueImageLoader:(id)arg5;
+- (void)updateBannerColor:(id)arg1;
+- (id)initWithAdvertiserTitle:(id)arg1 advertiserSubtitle:(id)arg2 actionButtonText:(id)arg3 hasExternalLinkImage:(_Bool)arg4 shouldShowPlayButton:(_Bool)arg5 bookmarkButtonState:(long long)arg6 imageUrl:(id)arg7 theme:(id)arg8 glueImageLoader:(id)arg9;
 
 @end
 

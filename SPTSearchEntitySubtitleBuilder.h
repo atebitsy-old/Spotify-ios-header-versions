@@ -14,7 +14,7 @@
 + (id)durationStringWithDuration:(unsigned long long)arg1;
 + (id)artistsForAlbumEntity:(id)arg1;
 + (id)artistsForTrackEntity:(id)arg1;
-+ (id)subtitleForEntity:(id)arg1 subtitleType:(unsigned long long)arg2 newPodcastRowsEnabled:(_Bool)arg3;
++ (id)subtitleForEntity:(id)arg1 subtitleType:(unsigned long long)arg2;
 
 @end
 

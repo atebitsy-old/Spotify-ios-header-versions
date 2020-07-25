@@ -4,10 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <swiftCore/_TtCs12_SwiftObject.h>
+#import <objc/NSObject.h>
 
-@interface _TtC22ConnectUIV2FeatureImpl27ConnectButtonNudgePresenter : _TtCs12_SwiftObject
+@interface _TtC22ConnectUIV2FeatureImpl27ConnectButtonNudgePresenter : NSObject
 {
+    // Error parsing type: , name: connectManager
     // Error parsing type: , name: nudgeManager
     // Error parsing type: , name: nudgeView
     // Error parsing type: , name: flagsManager
@@ -16,6 +17,10 @@
     // Error parsing type: , name: hideTimer
     // Error parsing type: , name: nudgeVisible
 }
+
+- (void).cxx_destruct;
+- (id)init;
+- (void)dealloc;
 
 @end
 

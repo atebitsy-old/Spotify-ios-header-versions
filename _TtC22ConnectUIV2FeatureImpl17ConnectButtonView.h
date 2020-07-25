@@ -11,7 +11,6 @@
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageFactory
     // Error parsing type: , name: viewModel
-    // Error parsing type: , name: isBlinking
     // Error parsing type: , name: $__lazy_storage_$_button
 }
 

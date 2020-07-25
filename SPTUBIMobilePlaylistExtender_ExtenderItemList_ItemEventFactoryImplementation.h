@@ -18,6 +18,9 @@
 + (id)factoryWithUri:(id)arg1 components:(id)arg2;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)swipeAddItemToQueueWithItemToAddToQueue:(id)arg1;
+- (id)swipeRemoveLikeWithItemNoLongerLiked:(id)arg1;
+- (id)swipeLikeWithItemToBeLiked:(id)arg1;
 - (id)hitPlayWithItemToBePlayed:(id)arg1;
 - (id)addSongsButtonFactory;
 - (id)_location;

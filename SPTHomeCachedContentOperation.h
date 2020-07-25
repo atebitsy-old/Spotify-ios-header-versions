@@ -8,13 +8,13 @@
 
 #import "HUBContentOperation-Protocol.h"
 
-@class NSError, SPTHomeContentCache;
+@class NSError, SPTHomeContentStorage;
 @protocol HUBContentOperationDelegate, HUBViewModelBuilder;
 
 @interface SPTHomeCachedContentOperation : NSObject <HUBContentOperation>
 {
     id <HUBContentOperationDelegate> _delegate;
-    SPTHomeContentCache *_homeContentCache;
+    SPTHomeContentStorage *_homeContentStorage;
     id <HUBViewModelBuilder> _viewModelBuilder;
     NSError *_previousError;
 }
@@ -22,7 +22,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSError *previousError; // @synthesize previousError=_previousError;
 @property(retain, nonatomic) id <HUBViewModelBuilder> viewModelBuilder; // @synthesize viewModelBuilder=_viewModelBuilder;
-@property(readonly, nonatomic) __weak SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
+@property(readonly, nonatomic) __weak SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)modifyContentIdentifierToIndicateCacheSource:(id)arg1;
 - (id)makeUnknownError;
@@ -33,7 +33,7 @@
 - (void)parseBody:(id)arg1;
 - (void)loadFromCache;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (id)initWithHomeContentCache:(id)arg1;
+- (id)initWithHomeContentStorage:(id)arg1;
 
 @end
 

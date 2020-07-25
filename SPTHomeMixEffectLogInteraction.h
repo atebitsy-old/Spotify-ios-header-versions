@@ -6,16 +6,16 @@
 
 #import "SPTHomeMixEffect.h"
 
-@class SPTLogMessage;
+@protocol SPTUBIInteractionEvent;
 
 @interface SPTHomeMixEffectLogInteraction : SPTHomeMixEffect
 {
-    SPTLogMessage *_logMessage;
+    id <SPTUBIInteractionEvent> _ubiInteraction;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTLogMessage *logMessage; // @synthesize logMessage=_logMessage;
-- (id)initWithLogMessage:(id)arg1;
+@property(readonly, nonatomic) id <SPTUBIInteractionEvent> ubiInteraction; // @synthesize ubiInteraction=_ubiInteraction;
+- (id)initWithUbiInteraction:(id)arg1;
 
 @end
 

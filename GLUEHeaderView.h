@@ -90,7 +90,6 @@
 - (void)setupDefaultTitleLabel;
 - (void)setupForStyle:(unsigned long long)arg1;
 - (id)initWithWidth:(double)arg1 style:(unsigned long long)arg2;
-- (id)instrumentableOrdinalViewsWithTerminatingView:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

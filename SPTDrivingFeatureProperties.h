@@ -12,7 +12,6 @@
 
 @interface SPTDrivingFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _drivingCarViewScreenlockPrevention;
     _Bool _drivingCarViewSwipeToSkip;
     _Bool _drivingCarViewHomeFeed;
     _Bool _drivingCarViewRollout;
@@ -27,7 +26,6 @@
 @property(readonly, nonatomic) _Bool drivingCarViewRollout; // @synthesize drivingCarViewRollout=_drivingCarViewRollout;
 @property(readonly, nonatomic) _Bool drivingCarViewHomeFeed; // @synthesize drivingCarViewHomeFeed=_drivingCarViewHomeFeed;
 @property(readonly, nonatomic) _Bool drivingCarViewSwipeToSkip; // @synthesize drivingCarViewSwipeToSkip=_drivingCarViewSwipeToSkip;
-@property(readonly, nonatomic) _Bool drivingCarViewScreenlockPrevention; // @synthesize drivingCarViewScreenlockPrevention=_drivingCarViewScreenlockPrevention;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

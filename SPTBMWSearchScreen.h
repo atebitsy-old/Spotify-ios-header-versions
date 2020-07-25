@@ -9,7 +9,7 @@
 #import "SPTBMWListScreen-Protocol.h"
 
 @class NSDictionary, NSString, NSTimer, SPTAccessory;
-@protocol SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationSearchController;
+@protocol SPTAccessoryActionLogger, SPTBMWListScreenDelegate, SPTExternalIntegrationContent, SPTExternalIntegrationExternalActionOrigin, SPTExternalIntegrationSearchController;
 
 @interface SPTBMWSearchScreen : NSObject <SPTBMWListScreen>
 {
@@ -22,11 +22,13 @@
     NSString *_lastIssuedSearchString;
     unsigned long long _level;
     SPTAccessory *_currentAccessory;
+    id <SPTAccessoryActionLogger> _actionLogger;
     id _debugLog;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
+@property(readonly, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(readonly, nonatomic) __weak SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(nonatomic) unsigned long long level; // @synthesize level=_level;
 @property(retain, nonatomic) NSString *lastIssuedSearchString; // @synthesize lastIssuedSearchString=_lastIssuedSearchString;
@@ -52,11 +54,12 @@
 - (void)screenDidAppear;
 - (void)screenDidDisappear;
 - (void)updateSearchTriggered;
+- (void)performSearchWithQuery:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
 - (void)updateSearchRequest:(CDUnknownBlockType)arg1;
 - (void)update:(CDUnknownBlockType)arg1;
 - (void)didChangeSearchString:(id)arg1;
 @property(readonly, nonatomic) id <SPTExternalIntegrationExternalActionOrigin> externalActionOrigin; // @synthesize externalActionOrigin=_externalActionOrigin;
-- (id)initWithSearchController:(id)arg1 debugLog:(id)arg2 delegate:(id)arg3 currentAccessory:(id)arg4;
+- (id)initWithSearchController:(id)arg1 debugLog:(id)arg2 delegate:(id)arg3 currentAccessory:(id)arg4 actionLogger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

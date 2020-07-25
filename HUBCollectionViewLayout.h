@@ -22,6 +22,8 @@
 @property(readonly, nonatomic) NSMutableDictionary *layoutAttributesByIndexPath; // @synthesize layoutAttributesByIndexPath=_layoutAttributesByIndexPath;
 @property(readonly, nonatomic) id <HUBComponentLayoutManager> componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
 @property(nonatomic) _Bool adjustsTargetContentOffset; // @synthesize adjustsTargetContentOffset=_adjustsTargetContentOffset;
+- (id)finalLayoutAttributesForDisappearingItemAtIndexPath:(id)arg1;
+- (id)initialLayoutAttributesForAppearingItemAtIndexPath:(id)arg1;
 - (id)layoutTraitsForComponentAtIndexPath:(id)arg1;
 - (struct CGSize)preferredSizeForComponentAtIndexPath:(id)arg1 containerViewSize:(struct CGSize)arg2;
 - (void)updateLayoutAttributesForComponentsTraits:(id)arg1 horizontalAdjustment:(double)arg2 lastComponentIndex:(long long)arg3;

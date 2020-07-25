@@ -15,10 +15,12 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
+- (id)requestTypeWithSourceType:(unsigned long long)arg1;
+- (id)attributesForReg:(_Bool)arg1 authType:(id)arg2 authMethod:(id)arg3;
+- (id)userAuthEventAttributesForType:(unsigned long long)arg1;
+- (id)screenIdentifierFromScreen:(unsigned long long)arg1;
 - (void)logAuthAttemptCompletedWithSource:(unsigned long long)arg1 error:(id)arg2 attemptId:(id)arg3 result:(id)arg4;
 - (id)logAuthAttemptStartedWithSource:(unsigned long long)arg1;
-- (id)requestTypeWithSourceType:(unsigned long long)arg1;
-- (id)screenIdentifierFromScreen:(unsigned long long)arg1;
 - (void)logGuestUserDidAuthFromScreen:(unsigned long long)arg1;
 - (void)logUserDidAuthFromScreen:(unsigned long long)arg1;
 - (void)logUserDidSignup;

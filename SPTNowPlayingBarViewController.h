@@ -67,6 +67,7 @@
 - (void)trackPositionDidChange;
 - (void)handleTap:(id)arg1;
 - (void)setupTapGestureRecognizer;
+- (id)leftAccessoryView;
 - (void)setupBottomSeparatorView;
 - (void)setupLeadingView;
 - (void)setupContentView;

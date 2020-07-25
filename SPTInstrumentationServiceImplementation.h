@@ -6,24 +6,20 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTAbbaFeatureFlagsObserver-Protocol.h"
-#import "SPTInstrumentationInteractionMediatorProvider-Protocol.h"
 #import "SPTInstrumentationServiceMessagingHandler-Protocol.h"
 #import "SPTInstrumentationServicePrivate-Protocol.h"
 
-@class NSHashTable, NSString, SPTAllocationContext, SPTInstrumentationAppFocusStateMonitor, SPTInstrumentationFeatureProperties, SPTInstrumentationInteractionItemIDGenerator, SPTInstrumentationNavigationObserver, SPTInstrumentationPageStreamFactory, SPTInstrumentationPageStreamObserver, SPTInstrumentationStackedPageStream, SPTInstrumentationTransports;
-@protocol SPTAbbaFeatureFlags, SPTAbbaService, SPTContainerService, SPTDebugService, SPTEventSenderService, SPTInstrumentationInteractionMediator, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationServiceMessagingHandler, SPTLoginService, SPTNavigationFeature, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService;
+@class NSHashTable, NSString, SPTAllocationContext, SPTInstrumentationAppFocusStateMonitor, SPTInstrumentationNavigationObserver, SPTInstrumentationPageStreamFactory, SPTInstrumentationPageStreamObserver, SPTInstrumentationStackedPageStream, SPTInstrumentationTransports;
+@protocol SPTAbbaFeatureFlags, SPTAbbaService, SPTContainerService, SPTEventSenderService, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationServiceMessagingHandler, SPTLoginService, SPTNavigationFeature, SPTPlayerFeature;
 
-@interface SPTInstrumentationServiceImplementation : NSObject <SPTInstrumentationServiceMessagingHandler, SPTAbbaFeatureFlagsObserver, SPTInstrumentationInteractionMediatorProvider, SPTInstrumentationServicePrivate>
+@interface SPTInstrumentationServiceImplementation : NSObject <SPTInstrumentationServiceMessagingHandler, SPTInstrumentationServicePrivate>
 {
-    _Bool _debugToolEnabled;
     id <SPTInstrumentationServiceMessagingHandler> _messagingHandler;
     id <SPTInstrumentationRemotePlayingHandler> _remotePlayingHandler;
     id <SPTContainerService> _containerService;
     id <SPTLoginService> _loginService;
     id <SPTPlayerFeature> _playerService;
     id <SPTAbbaService> _abbaService;
-    id <SPTDebugService> _debugService;
     id <SPTNavigationFeature> _navigationService;
     id <SPTEventSenderService> _eventSenderService;
     id <SPTAbbaFeatureFlags> _abbaFeatureFlags;
@@ -32,25 +28,14 @@
     SPTInstrumentationAppFocusStateMonitor *_appFocusStateMonitor;
     SPTInstrumentationStackedPageStream *_unifiedPageStream;
     SPTInstrumentationPageStreamFactory *_pageStreamFactory;
-    id <SPTInstrumentationInteractionMediator> _interactionMediator;
     SPTInstrumentationNavigationObserver *_navigationObserver;
-    SPTInstrumentationInteractionItemIDGenerator *_interactionItemIDGenerator;
     NSHashTable *_observers;
-    id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
-    SPTInstrumentationFeatureProperties *_properties;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(nonatomic) _Bool debugToolEnabled; // @synthesize debugToolEnabled=_debugToolEnabled;
-@property(retain, nonatomic) SPTInstrumentationFeatureProperties *properties; // @synthesize properties=_properties;
-@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-@property(retain, nonatomic) SPTInstrumentationInteractionItemIDGenerator *interactionItemIDGenerator; // @synthesize interactionItemIDGenerator=_interactionItemIDGenerator;
 @property(retain, nonatomic) SPTInstrumentationNavigationObserver *navigationObserver; // @synthesize navigationObserver=_navigationObserver;
-@property(retain, nonatomic) id <SPTInstrumentationInteractionMediator> interactionMediator; // @synthesize interactionMediator=_interactionMediator;
 @property(retain, nonatomic) SPTInstrumentationPageStreamFactory *pageStreamFactory; // @synthesize pageStreamFactory=_pageStreamFactory;
 @property(retain, nonatomic) SPTInstrumentationStackedPageStream *unifiedPageStream; // @synthesize unifiedPageStream=_unifiedPageStream;
 @property(retain, nonatomic) SPTInstrumentationAppFocusStateMonitor *appFocusStateMonitor; // @synthesize appFocusStateMonitor=_appFocusStateMonitor;
@@ -59,36 +44,28 @@
 @property(retain, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTNavigationFeature> navigationService; // @synthesize navigationService=_navigationService;
-@property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(retain, nonatomic) id <SPTInstrumentationRemotePlayingHandler> remotePlayingHandler; // @synthesize remotePlayingHandler=_remotePlayingHandler;
 @property(nonatomic) __weak id <SPTInstrumentationServiceMessagingHandler> messagingHandler; // @synthesize messagingHandler=_messagingHandler;
-- (void)featureFlagsDidChange:(id)arg1;
-- (id)provideInteractionMediator;
 - (void)instrumentationServiceObservedUninstrumentedPage:(id)arg1;
 - (void)removeCurrentPageViewObserver:(id)arg1;
 - (void)addCurrentPageViewObserver:(id)arg1;
-- (id)provideIntentMapper;
-- (id)provideIDMapper;
 - (id)provideModalPresentationMonitor;
 - (id)provideTransportRegistry;
 - (_Bool)dualSendingEnabled;
-- (void)configureInteractionMediator;
 - (void)configurePageViewObserverWithClock:(id)arg1;
 - (void)configureNavigationObservers;
 - (void)configureAppFocusStateMonitorWithClock:(id)arg1;
 - (void)configureAbbaFeatureFlags;
-- (void)configureRemoteConfiguration;
 - (id)currentPageView;
 - (void)currentPageViewDidChange:(id)arg1 forPageStream:(id)arg2;
 - (void)observerCurrentPageStream;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
-- (void)dealloc;
 
 // Remaining properties
 @property(retain, nonatomic) SPTAllocationContext *allocationContext;

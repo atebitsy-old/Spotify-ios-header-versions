@@ -6,11 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@class SPTVoiceLibrarySessionHandlingOptions;
+@class SPTVoiceLibrarySessionHandlingOptions, SPTVoiceLibraryWakewordOptions;
 @protocol SPTVoiceLibraryMicrophonePermissionsState, SPTVoiceLibrarySessionFactory, SPTVoiceLibraryWakeword;
 
 @protocol SPTVoiceLibraryService <SPTService>
-- (id <SPTVoiceLibraryWakeword>)provideWakeword;
+- (id <SPTVoiceLibraryWakeword>)createWakewordProviderWithOptions:(SPTVoiceLibraryWakewordOptions *)arg1;
 - (id <SPTVoiceLibraryMicrophonePermissionsState>)provideMicrophonePermissionsReducer;
 - (id <SPTVoiceLibrarySessionFactory>)createVoiceSessionFactoryWithConsumer:(long long)arg1 sessionHandlingOptions:(SPTVoiceLibrarySessionHandlingOptions *)arg2;
 @end

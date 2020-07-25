@@ -9,13 +9,14 @@
 #import "SPTPodcastEpisodeService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContextDispatchService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUBIService, SPTUIPresentationService, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_, _TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_;
+@protocol SPTCollectionPlatformService, SPTContextDispatchService, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPerformanceMetricsService, SPTPodcastEpisodeFeaturedContentService, SPTPodcastFeature, SPTPodcastOffliningService, SPTPodcastRecommendationsService, SPTPodcastUIService, SPTRemoteConfigurationService, SPTShareFeature, SPTUBIService, SPTUIPresentationService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_, _TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_;
 
 @interface SPTPodcastEpisodeServiceImplementation : SPTUIPageService <SPTPodcastEpisodeService>
 {
     id <_TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_> _audioPlusService;
     id <SPTNetworkService> _networkFeature;
     id <SPTPodcastFeature> _podcastService;
+    id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     id <SPTPodcastUIService> _podcastUIService;
     id <SPTPodcastRecommendationsService> _podcastRecommendationsService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
@@ -23,24 +24,24 @@
     id <SPTUIPresentationService> _presentationService;
     id <SPTShareFeature> _shareFeature;
     id <SPTCollectionPlatformService> _collectionPlatformService;
-    id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> _podcastCreatorEntityPageEntryPointsService;
     id <SPTPodcastEpisodeFeaturedContentService> _podcastEpisodeFeaturedContentService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTPodcastOffliningService> _podcastOffliningService;
     id <SPTUBIService> _ubiService;
     id <SPTContextDispatchService> _contextDispatchService;
     id <SPTGLUEService> _glueService;
+    id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> _podcastHTMLComponentService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> podcastHTMLComponentService; // @synthesize podcastHTMLComponentService=_podcastHTMLComponentService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContextDispatchService> contextDispatchService; // @synthesize contextDispatchService=_contextDispatchService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPodcastOffliningService> podcastOffliningService; // @synthesize podcastOffliningService=_podcastOffliningService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastEpisodeFeaturedContentService> podcastEpisodeFeaturedContentService; // @synthesize podcastEpisodeFeaturedContentService=_podcastEpisodeFeaturedContentService;
-@property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> podcastCreatorEntityPageEntryPointsService; // @synthesize podcastCreatorEntityPageEntryPointsService=_podcastCreatorEntityPageEntryPointsService;
 @property(nonatomic) __weak id <SPTCollectionPlatformService> collectionPlatformService; // @synthesize collectionPlatformService=_collectionPlatformService;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
@@ -48,9 +49,11 @@
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
 @property(nonatomic) __weak id <SPTPodcastRecommendationsService> podcastRecommendationsService; // @synthesize podcastRecommendationsService=_podcastRecommendationsService;
 @property(nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
+@property(nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <_TtP30PodcastEpisodeAudioPlusFeature33SPTPodcastEpisodeAudioPlusService_> audioPlusService; // @synthesize audioPlusService=_audioPlusService;
+- (id)provideCoverArtViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideDescriptionViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideActionRowViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideEpisodeLoggerForURI:(id)arg1;

@@ -15,7 +15,8 @@
     // Error parsing type: , name: sessionService
     // Error parsing type: , name: $__lazy_storage_$_carModeEngine
     // Error parsing type: , name: $__lazy_storage_$_distractionControl
-    // Error parsing type: , name: loop
+    // Error parsing type: , name: carModeEngineLoop
+    // Error parsing type: , name: screenAwakeLoop
     // Error parsing type: , name: debugSettingsManager
     // Error parsing type: , name: properties
     // Error parsing type: , name: settingsManager

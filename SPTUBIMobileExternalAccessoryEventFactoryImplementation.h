@@ -18,8 +18,13 @@
 + (id)factory;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)hitDisconnectFromRemoteDeviceWithRemoteDeviceId:(id)arg1;
+- (id)hitPlaySomething;
+- (id)hitDecreaseVolume;
+- (id)hitIncreaseVolume;
+- (id)hitSetVolumeWithNewVolumePercentage:(long long)arg1;
 - (id)hitCreateRadioWithBasedOnItem:(id)arg1;
-- (id)hitSetPlaybackSpeedWithPlaybackSpeed:(unsigned long long)arg1;
+- (id)hitSetPlaybackSpeedWithCurrentlyPlayedItem:(id)arg1 playbackSpeed:(unsigned long long)arg2;
 - (id)hitUiNavigateWithDestination:(id)arg1;
 - (id)hitAddItemToQueueWithItemToAddToQueue:(id)arg1;
 - (id)hitSeekByTimeWithMsSeekedOffset:(long long)arg1;

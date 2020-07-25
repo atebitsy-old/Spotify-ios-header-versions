@@ -9,7 +9,7 @@
 #import "UIViewControllerAnimatedTransitioning-Protocol.h"
 #import "UIViewControllerInteractiveTransitioning-Protocol.h"
 
-@class CADisplayLink, NSArray, NSString, UIView, UIViewController;
+@class CADisplayLink, NSArray, NSString, SPTNowPlayingContentAnimator, UIView, UIViewController;
 @protocol SPTBarInteractiveTransitionParticipant, SPTBarOverlayViewController, UIViewControllerContextTransitioning;
 
 @interface SPTBarOverlayPresentationTransition : NSObject <UIViewControllerAnimatedTransitioning, UIViewControllerInteractiveTransitioning>
@@ -31,12 +31,14 @@
     UIView *_barSnapshotView;
     UIView *_tabBarSnapshotView;
     double _dismissalInitialTranslationY;
+    SPTNowPlayingContentAnimator *_nowPlayingContentAnimator;
     struct CGPoint _completionTranslation;
     struct CGPoint _completionVelocity;
     struct CGRect _barFrame;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTNowPlayingContentAnimator *nowPlayingContentAnimator; // @synthesize nowPlayingContentAnimator=_nowPlayingContentAnimator;
 @property(nonatomic) double dismissalInitialTranslationY; // @synthesize dismissalInitialTranslationY=_dismissalInitialTranslationY;
 @property(nonatomic) _Bool interactionInProgress; // @synthesize interactionInProgress=_interactionInProgress;
 @property(retain, nonatomic) UIView *tabBarSnapshotView; // @synthesize tabBarSnapshotView=_tabBarSnapshotView;

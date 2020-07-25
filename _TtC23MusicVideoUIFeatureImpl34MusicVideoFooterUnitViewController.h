@@ -10,7 +10,7 @@
 {
     // Error parsing type: , name: style
     // Error parsing type: , name: loopController
-    // Error parsing type: , name: makeViewBinder
+    // Error parsing type: , name: viewBinderFactory
 }
 
 - (void).cxx_destruct;

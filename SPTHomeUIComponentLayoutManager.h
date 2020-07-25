@@ -8,6 +8,7 @@
 
 #import "HUBComponentLayoutManager-Protocol.h"
 
+@class NSString;
 @protocol GLUETheme, HUBComponentLayoutManager;
 
 @interface SPTHomeUIComponentLayoutManager : NSObject <HUBComponentLayoutManager>
@@ -27,6 +28,12 @@
 - (double)verticalMarginBetweenComponentWithLayoutTraits:(id)arg1 andHeaderComponentWithLayoutTraits:(id)arg2;
 - (double)marginBetweenComponentWithLayoutTraits:(id)arg1 andContentEdge:(unsigned long long)arg2;
 - (id)initWithHugsLayoutManager:(id)arg1 theme:(id)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

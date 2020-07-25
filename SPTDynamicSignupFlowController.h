@@ -48,7 +48,6 @@
 - (void)authenticateWithCredentials;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessResponse:(id)arg2;
 - (void)resetFlow;
-- (void)updateScreenForTerms:(unsigned long long)arg1 termsModel:(id)arg2 view:(id)arg3;
 - (void)createUserAndPresentMainScreen:(id)arg1 termsModel:(id)arg2 logger:(id)arg3;
 - (_Bool)isScreenLast:(unsigned long long)arg1;
 - (_Bool)goToSignupFlowStartScreen;
@@ -57,9 +56,7 @@
 - (unsigned long long)findLastScreen;
 - (unsigned long long)findStartScreen;
 - (unsigned long long)findScreenForStep:(int)arg1 fromScreen:(unsigned long long)arg2;
-- (unsigned long long)findPreviousScreen:(unsigned long long)arg1;
 - (unsigned long long)findNextScreen:(unsigned long long)arg1;
-- (_Bool)goToPreviousScreenFromScreen:(unsigned long long)arg1;
 - (_Bool)goToNextScreenFromScreen:(unsigned long long)arg1;
 - (void)loadFlow;
 - (id)initWithTestManager:(id)arg1 createUserDataLoader:(id)arg2 navigationCoordinator:(id)arg3 authenticationHandler:(id)arg4 dialogController:(id)arg5 missingUserInfoProvider:(id)arg6;

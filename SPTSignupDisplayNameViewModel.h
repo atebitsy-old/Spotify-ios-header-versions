@@ -29,6 +29,7 @@
 - (void)textFieldUpdated:(id)arg1;
 - (void)setDisplayName:(id)arg1;
 - (void)createUserAndPresentMainScreen;
+- (_Bool)isTermsAndPolicyViewHidden;
 - (id)displayNameSuggestion;
 - (id)createButtonLoadingText;
 - (id)createButtonText;

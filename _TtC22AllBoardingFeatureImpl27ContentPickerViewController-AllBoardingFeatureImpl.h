@@ -6,16 +6,9 @@
 
 #import "_TtC22AllBoardingFeatureImpl27ContentPickerViewController.h"
 
-#import "SPTPageController-Protocol.h"
+#import "UISearchBarDelegate-Protocol.h"
 
-@class NSString, NSURL;
-
-@interface _TtC22AllBoardingFeatureImpl27ContentPickerViewController (AllBoardingFeatureImpl) <SPTPageController>
-- (id)spt_pageURI;
-- (id)spt_pageIdentifier;
-
-// Remaining properties
-@property(nonatomic, readonly) NSString *pageIdentifier;
-@property(nonatomic, readonly) NSURL *pageURI;
+@interface _TtC22AllBoardingFeatureImpl27ContentPickerViewController (AllBoardingFeatureImpl) <UISearchBarDelegate>
+- (_Bool)searchBarShouldBeginEditing:(id)arg1;
 @end
 

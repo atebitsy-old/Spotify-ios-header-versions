@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
+@class NSString, NSURL;
 
 @protocol SPTAdsBaseVoiceModel <NSObject>
 @property(readonly, nonatomic) NSURL *uri;
-@property(readonly, nonatomic) long long intent;
+@property(readonly, nonatomic) NSString *intents;
 @property(readonly, nonatomic) long long delay;
 @end
 

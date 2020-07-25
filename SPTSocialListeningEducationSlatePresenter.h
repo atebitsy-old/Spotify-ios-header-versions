@@ -35,13 +35,15 @@
 @property(readonly, nonatomic) SPTSocialListeningGLUETheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 - (void)socialListeningListenTogetherDidConfirmJoining:(_Bool)arg1;
-- (void)presentDisclaimerViewWithName:(id)arg1 onConfirmation:(CDUnknownBlockType)arg2;
 - (void)socialListeningEducationSlateViewControllerDidTapActionButton:(id)arg1;
+- (_Bool)shouldAllowDragGesture;
 - (id)contentUnitForSlateViewController:(id)arg1;
 - (_Bool)shouldHideImageForSlate:(id)arg1;
 @property(readonly, nonatomic) SPTSocialListeningEducationSlateViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
 @property(readonly, nonatomic) id <SPTSlate> disclaimerSlate; // @synthesize disclaimerSlate=_disclaimerSlate;
 @property(readonly, nonatomic) id <SPTSlate> educationSlate; // @synthesize educationSlate=_educationSlate;
+- (void)dismissDisclaimerView;
+- (void)presentDisclaimerViewWithName:(id)arg1 onConfirmation:(CDUnknownBlockType)arg2;
 - (void)presentJoinEducationSlateForParticipantWithHostName:(id)arg1;
 - (void)presentJoinEducationSlateForHostWithParticipantName:(id)arg1;
 - (id)initWithSlateManager:(id)arg1 theme:(id)arg2 slateBuilderProvider:(id)arg3 testManager:(id)arg4;

@@ -7,28 +7,22 @@
 #import <objc/NSObject.h>
 
 @class HUBComponentDefaults, SPTHomeContentOperationFactory;
-@protocol HUBContentOperation, HUBContentOperation><SPTHomeCacheRenderDelegate, SPTHugsFactory;
+@protocol SPTHugsFactory;
 
 @interface SPTHomeViewModelLoaderFactory : NSObject
 {
-    _Bool _isPageLoaderEnabled;
     SPTHomeContentOperationFactory *_contentOperationFactory;
     id <SPTHugsFactory> _hugsFactory;
     HUBComponentDefaults *_componentDefaults;
-    id <HUBContentOperation><SPTHomeCacheRenderDelegate> _errorHandlerContentOperation;
-    id <HUBContentOperation> _tooltipContentOperation;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool isPageLoaderEnabled; // @synthesize isPageLoaderEnabled=_isPageLoaderEnabled;
-@property(retain, nonatomic) id <HUBContentOperation> tooltipContentOperation; // @synthesize tooltipContentOperation=_tooltipContentOperation;
-@property(retain, nonatomic) id <HUBContentOperation><SPTHomeCacheRenderDelegate> errorHandlerContentOperation; // @synthesize errorHandlerContentOperation=_errorHandlerContentOperation;
 @property(retain, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) SPTHomeContentOperationFactory *contentOperationFactory; // @synthesize contentOperationFactory=_contentOperationFactory;
 - (id)createRemoteViewModelLoaderForContentURL:(id)arg1 sourceIdentifier:(id)arg2 overrides:(id)arg3;
 - (id)createCachedViewModelLoaderWithOverrides:(id)arg1;
-- (id)initWithContentOperationFactory:(id)arg1 hugsFactory:(id)arg2 pageLoaderEnabled:(_Bool)arg3;
+- (id)initWithContentOperationFactory:(id)arg1 hugsFactory:(id)arg2;
 
 @end
 

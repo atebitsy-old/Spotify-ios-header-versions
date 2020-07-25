@@ -8,8 +8,8 @@
 
 #import "SPTCoreService-Protocol.h"
 
-@class NSString, SPCore, SPTAllocationContext, SPTBootstrapCoreProxyImplementation, SPTCoreLogHandler, SPTCoreSchedulerThread, SPTEventSenderCoreProxyImplementation, SPTPreferencesImplementation;
-@protocol SPTAudioDriverController;
+@class NSString, SPCore, SPTAllocationContext, SPTBootstrapCoreProxyImplementation, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreLogHandler, SPTCoreLoggerConnectivityAnalyticsDelegate, SPTCoreSchedulerThread, SPTEventSenderAnalyticsDelegate, SPTEventSenderCoreProxyImplementation, SPTPreferencesImplementation;
+@protocol SPTAudioDriverController, SPTAuthCredentialsStorage, SPTConnectivityConnectionTypeProvider, SPTConnectivityConnectivityPolicyProvider;
 
 @interface SPTCoreServiceImplementation : NSObject <SPTCoreService>
 {
@@ -19,12 +19,28 @@
     SPTBootstrapCoreProxyImplementation *_bootstrapCoreProxy;
     SPTCoreSchedulerThread *_coreScheduler;
     SPTPreferencesImplementation *_preferences;
+    SPTCoreLoggerConnectivityAnalyticsDelegate *_connectivityAnalyticsDelegate;
+    id <SPTConnectivityConnectionTypeProvider> _connectivityConnectionTypeProvider;
+    id <SPTConnectivityConnectivityPolicyProvider> _connectivityConnectivityPolicyProvider;
+    id <SPTAuthCredentialsStorage> _connectivityCredentialsStorage;
+    SPTConnectivityManager *_connectivityManager;
+    SPTConnectivityApplicationScope *_connectivityApplicationScope;
+    SPTEventSenderAnalyticsDelegate *_eventSenderAnalyticsDelegate;
     SPCore *_core;
+    CDUnknownBlockType _assertionHandlerCallback;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType assertionHandlerCallback; // @synthesize assertionHandlerCallback=_assertionHandlerCallback;
 @property(retain, nonatomic) SPCore *core; // @synthesize core=_core;
+@property(retain, nonatomic) SPTEventSenderAnalyticsDelegate *eventSenderAnalyticsDelegate; // @synthesize eventSenderAnalyticsDelegate=_eventSenderAnalyticsDelegate;
+@property(retain, nonatomic) SPTConnectivityApplicationScope *connectivityApplicationScope; // @synthesize connectivityApplicationScope=_connectivityApplicationScope;
+@property(retain, nonatomic) SPTConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;
+@property(retain, nonatomic) id <SPTAuthCredentialsStorage> connectivityCredentialsStorage; // @synthesize connectivityCredentialsStorage=_connectivityCredentialsStorage;
+@property(retain, nonatomic) id <SPTConnectivityConnectivityPolicyProvider> connectivityConnectivityPolicyProvider; // @synthesize connectivityConnectivityPolicyProvider=_connectivityConnectivityPolicyProvider;
+@property(retain, nonatomic) id <SPTConnectivityConnectionTypeProvider> connectivityConnectionTypeProvider; // @synthesize connectivityConnectionTypeProvider=_connectivityConnectionTypeProvider;
+@property(retain, nonatomic) SPTCoreLoggerConnectivityAnalyticsDelegate *connectivityAnalyticsDelegate; // @synthesize connectivityAnalyticsDelegate=_connectivityAnalyticsDelegate;
 @property(retain, nonatomic) SPTPreferencesImplementation *preferences; // @synthesize preferences=_preferences;
 @property(retain, nonatomic) SPTCoreSchedulerThread *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(retain, nonatomic) SPTBootstrapCoreProxyImplementation *bootstrapCoreProxy; // @synthesize bootstrapCoreProxy=_bootstrapCoreProxy;

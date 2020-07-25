@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "HUBAutoEquatable.h"
+#import <objc/NSObject.h>
 
 #import "HUBComponentImageData-Protocol.h"
 
 @class NSDictionary, NSString, NSURL, UIImage;
 @protocol HUBIcon;
 
-@interface HUBComponentImageDataImplementation : HUBAutoEquatable <HUBComponentImageData>
+@interface HUBComponentImageDataImplementation : NSObject <HUBComponentImageData>
 {
     NSString *_identifier;
     long long _type;
@@ -29,12 +29,13 @@
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 - (id)serialize;
+@property(readonly) unsigned long long hash;
+- (_Bool)isEqual:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 type:(long long)arg2 URL:(id)arg3 placeholderIcon:(id)arg4 localImage:(id)arg5 customData:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 
 @end

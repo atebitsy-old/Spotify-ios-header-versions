@@ -13,12 +13,10 @@
 @interface SPTYourLibraryFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _yourLibraryPersistActiveTab;
-    _Bool _yourLibraryCreateButtonInHeaderEnabled;
     long long _yourLibraryPersistActiveTabDurationInHours;
 }
 
 @property(readonly, nonatomic) long long yourLibraryPersistActiveTabDurationInHours; // @synthesize yourLibraryPersistActiveTabDurationInHours=_yourLibraryPersistActiveTabDurationInHours;
-@property(readonly, nonatomic) _Bool yourLibraryCreateButtonInHeaderEnabled; // @synthesize yourLibraryCreateButtonInHeaderEnabled=_yourLibraryCreateButtonInHeaderEnabled;
 @property(readonly, nonatomic) _Bool yourLibraryPersistActiveTab; // @synthesize yourLibraryPersistActiveTab=_yourLibraryPersistActiveTab;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -6,13 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@class HUBComponentRegistry, NSString, SPTDataLoaderFactory, SPTPersistentCache, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger;
-@protocol SPTAlertInterface, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkConnectivityController, SPTPremiumDestinationExperiments;
+@class HUBComponentRegistry, NSString, SPTDataLoaderFactory, SPTPersistentCache, SPTPremiumDestinationGLUETheme, SPTPremiumDestinationLogger, SPTPremiumDestinationUIComponentLayoutManager;
+@protocol SPTAlertInterface, SPTHubsRendererFactory, SPTHugsFactory, SPTInAppMessageMessageRequester, SPTNetworkConnectivityController, SPTPremiumDestinationExperiments;
 
 @interface SPTPremiumDestinationHubManagerConfiguration : NSObject
 {
     NSString *_serviceIdentifier;
     HUBComponentRegistry *_componentRegistry;
+    SPTPremiumDestinationUIComponentLayoutManager *_componentLayoutManager;
     id <SPTHubsRendererFactory> _hubsRendererFactory;
     id <SPTHugsFactory> _hugsFactory;
     id <SPTPremiumDestinationExperiments> _premiumDestinationExperiments;
@@ -22,9 +23,11 @@
     SPTPersistentCache *_persistentCache;
     id <SPTAlertInterface> _alertInterface;
     SPTPremiumDestinationLogger *_premiumDestinationLogger;
+    id <SPTInAppMessageMessageRequester> _inAppMessageRequester;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTInAppMessageMessageRequester> inAppMessageRequester; // @synthesize inAppMessageRequester=_inAppMessageRequester;
 @property(readonly, nonatomic) SPTPremiumDestinationLogger *premiumDestinationLogger; // @synthesize premiumDestinationLogger=_premiumDestinationLogger;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
@@ -34,9 +37,10 @@
 @property(retain, nonatomic) id <SPTPremiumDestinationExperiments> premiumDestinationExperiments; // @synthesize premiumDestinationExperiments=_premiumDestinationExperiments;
 @property(retain, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(retain, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
+@property(retain, nonatomic) SPTPremiumDestinationUIComponentLayoutManager *componentLayoutManager; // @synthesize componentLayoutManager=_componentLayoutManager;
 @property(retain, nonatomic) HUBComponentRegistry *componentRegistry; // @synthesize componentRegistry=_componentRegistry;
 @property(copy, nonatomic) NSString *serviceIdentifier; // @synthesize serviceIdentifier=_serviceIdentifier;
-- (id)initWithServiceIdentifier:(id)arg1 componentRegistry:(id)arg2 hubsRendererFactory:(id)arg3 hugsFactory:(id)arg4 premiumDestinationExperiments:(id)arg5 GLUETheme:(id)arg6 networkConnectivityController:(id)arg7 dataLoaderFactory:(id)arg8 persistentCache:(id)arg9 alertInterface:(id)arg10 premiumDestinationLogger:(id)arg11;
+- (id)initWithServiceIdentifier:(id)arg1 componentRegistry:(id)arg2 componentLayoutManager:(id)arg3 hubsRendererFactory:(id)arg4 hugsFactory:(id)arg5 premiumDestinationExperiments:(id)arg6 GLUETheme:(id)arg7 networkConnectivityController:(id)arg8 dataLoaderFactory:(id)arg9 persistentCache:(id)arg10 alertInterface:(id)arg11 premiumDestinationLogger:(id)arg12 inAppMessageRequester:(id)arg13;
 
 @end
 

@@ -25,7 +25,7 @@
 @property(nonatomic) __weak id <SPTSearchPlatformService> searchPlatformService; // @synthesize searchPlatformService=_searchPlatformService;
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (id)makeViewController;
+- (id)makeViewControllerWithReferrerIdentifier:(id)arg1;
 - (id)searchConfiguration;
 - (id)provideSearchViewControllerForURL:(id)arg1 context:(id)arg2;
 - (void)registerSearchPage;

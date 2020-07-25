@@ -8,8 +8,8 @@
 
 #import "SPTFindFriendsFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTFindFriendsLogger;
-@protocol FollowFeature, SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTGLUEService, SPTNetworkService, SPTSessionService, SPTUBIService, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTFindFriendsLogger, SPTFindFriendsNetworkConnectionManager;
+@protocol FollowFeature, SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTGLUEService, SPTNetworkService, SPTPageLoaderViewService, SPTSessionService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTFindFriendsFeatureImplementation : NSObject <SPTFindFriendsFeature>
 {
@@ -24,10 +24,14 @@
     id <SPTGLUEService> _glueService;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTUBIService> _ubiService;
+    id <SPTPageLoaderViewService> _pageLoaderViewService;
+    SPTFindFriendsNetworkConnectionManager *_networkConnectionManager;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTFindFriendsNetworkConnectionManager *networkConnectionManager; // @synthesize networkConnectionManager=_networkConnectionManager;
+@property(nonatomic) __weak id <SPTPageLoaderViewService> pageLoaderViewService; // @synthesize pageLoaderViewService=_pageLoaderViewService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
@@ -41,6 +45,7 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (id)provideFindFriendsTheme;
 - (void)presentFindFriendsFromViewController:(id)arg1;
+- (id)provideFindFriendsViewAfterInitialLoadWithModel:(id)arg1 pageLoader:(id)arg2 context:(id)arg3;
 - (id)provideFindFriendsVCForURI:(id)arg1 context:(id)arg2;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -10,8 +10,9 @@
 @protocol SPTNowPlayingTestManagerObserver;
 
 @protocol SPTNowPlayingTestManager <NSObject>
-@property(readonly, nonatomic, getter=isRemoteControlEventLoggingEnabled) _Bool remoteControlEventLoggingEnabled;
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
+@property(readonly, nonatomic) _Bool isContentLayerTabEnabled;
+@property(readonly, nonatomic, getter=isBarToCoverArtAnimationEnabled) _Bool barToCoverArtAnimationEnabled;
 @property(readonly, nonatomic) _Bool isLyricsUpsellPopupEnabled;
 @property(readonly, nonatomic) _Bool isContentLayerLyricsTabEnabled;
 @property(readonly, nonatomic) _Bool isContentLayerLyricsButtonEnabled;
@@ -19,9 +20,7 @@
 @property(readonly, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration;
 @property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;
 @property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;
-@property(readonly, nonatomic, getter=isAnimatedHeartEnabled) _Bool animatedHeartEnabled;
 @property(readonly, nonatomic, getter=isMixedMediaEpisodeModeEnabled) _Bool mixedMediaEpisodeModeEnabled;
-@property(readonly, nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled;
 @property(readonly, nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled;
 @property(readonly, nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled;
 @property(readonly, nonatomic, getter=isShowsFormatContextAwareSharingEnabled) _Bool showsFormatContextAwareSharingEnabled;

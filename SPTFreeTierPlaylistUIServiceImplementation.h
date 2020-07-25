@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierPlaylistFeatureProperties, SPTFreeTierPlaylistHandlerRegistryImplementation;
-@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAlgotorialSharingService, SPTAssistedCurationUIService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEncoreIntegrationService, SPTEventSenderService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierPlaylistService, SPTFreeTierRecommendationsService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistExtenderService, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPodcastOffliningService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTVisualRefreshIntegrationService, _TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_, _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_, _TtP25PlaylistTrackCloudFeature28SPTPlaylistTrackCloudService_;
+@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAlgotorialSharingService, SPTAssistedCurationUIService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCreatePlaylistService, SPTEncoreIntegrationService, SPTEventSenderService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierPlaylistService, SPTFreeTierRecommendationsService, SPTGLUEService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistExtenderService, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPodcastOffliningService, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTShelfService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIService, SPTVisualRefreshIntegrationService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_, _TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_, _TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_, _TtP25PlaylistTrackCloudFeature28SPTPlaylistTrackCloudService_;
 
 @interface SPTFreeTierPlaylistUIServiceImplementation : NSObject <SPTFreeTierPlaylistUIService>
 {
@@ -54,10 +54,12 @@
     id <_TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_> _playlistMigrationService;
     id <_TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_> _responsiveShuffleService;
     id <_TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_> _playlistWebViewService;
+    id <_TtP17OfflineMixFeature20SPTOfflineMixService_> _offlineMixService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <_TtP17OfflineMixFeature20SPTOfflineMixService_> offlineMixService; // @synthesize offlineMixService=_offlineMixService;
 @property(nonatomic) __weak id <_TtP22PlaylistWebViewFeature25SPTPlaylistWebViewService_> playlistWebViewService; // @synthesize playlistWebViewService=_playlistWebViewService;
 @property(nonatomic) __weak id <_TtP24ResponsiveShuffleFeature27SPTResponsiveShuffleService_> responsiveShuffleService; // @synthesize responsiveShuffleService=_responsiveShuffleService;
 @property(nonatomic) __weak id <_TtP24PlaylistMigrationFeature27SPTPlaylistMigrationService_> playlistMigrationService; // @synthesize playlistMigrationService=_playlistMigrationService;
@@ -104,6 +106,10 @@
 - (id)allSongsDataSourceForURL:(id)arg1 formatListType:(id)arg2 formatListAttributes:(id)arg3;
 - (id)providerFooterProviderForPlaylistURL:(id)arg1 context:(id)arg2;
 - (id)provideLoggerForURI:(id)arg1 formatListType:(id)arg2 formatListAttributes:(id)arg3 playlistModel:(id)arg4;
+- (id)makePlaylistViewControllerWithDependencies:(id)arg1 searchViewControllerFactory:(CDUnknownBlockType)arg2;
+- (id)makeCellProviderCoordinatorWithDependencies:(id)arg1 onlyIncludeTrackSections:(_Bool)arg2;
+- (void)setupConfigurationBuilder:(id)arg1 URL:(id)arg2 context:(id)arg3 logger:(id)arg4 player:(id)arg5 playlistViewModel:(id)arg6 theme:(id)arg7;
+- (id)makeDependenciesForURL:(id)arg1 context:(id)arg2 playlistModel:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withContext:(id)arg2 playlistModel:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4;
 - (id)loadableForPlaylistWithURL:(id)arg1 withPageContext:(id)arg2;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withPageContext:(id)arg2 playlistModel:(id)arg3 initialEntity:(id)arg4;

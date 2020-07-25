@@ -19,7 +19,6 @@
 
 @interface SPTSearchPlatformEmptyStateContext : NSObject <SPTSearchRecentsDataSourceDelegate, SPTPlayerObserver, SPTSearch2ConnectivityMonitorObserver, SPTExplicitContentEnabledStateObserver, _TtP22AgeVerificationFeature43SPTCanPlayAgeRestrictedContentStateObserver_, SPTSearchOnDemandPermissionMonitorObserver, SPTSearchPlatformContext>
 {
-    _Bool _shouldRoundPodcastArtwork;
     _Bool _newRecentsRowEnabled;
     id <SPTSearchPlatformContextDelegate> _delegate;
     NSString *_query;
@@ -51,7 +50,6 @@
 @property(readonly, nonatomic) id <SPTSearchUBILocationSerializer> ubiLocationSerializer; // @synthesize ubiLocationSerializer=_ubiLocationSerializer;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
-@property(readonly, nonatomic) _Bool shouldRoundPodcastArtwork; // @synthesize shouldRoundPodcastArtwork=_shouldRoundPodcastArtwork;
 @property(readonly, nonatomic) id <SPTSearch2ConnectivityMonitor> connectivityMonitor; // @synthesize connectivityMonitor=_connectivityMonitor;
 @property(readonly, copy, nonatomic) NSString *recentsCommandName; // @synthesize recentsCommandName=_recentsCommandName;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -77,7 +75,7 @@
 - (void)reload;
 - (void)setState:(unsigned long long)arg1;
 - (void)setViewModel:(id)arg1;
-- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 onDemandPermissionMonitor:(id)arg7 shouldRoundPodcastArtwork:(_Bool)arg8 explicitContentAccessManager:(id)arg9 ageVerificationProvider:(id)arg10 ubiLocationSerializer:(id)arg11 featureID:(id)arg12 pageURI:(id)arg13 referrerIdentifier:(id)arg14 newRecentsRowEnabled:(_Bool)arg15;
+- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 onDemandPermissionMonitor:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10 featureID:(id)arg11 pageURI:(id)arg12 referrerIdentifier:(id)arg13 newRecentsRowEnabled:(_Bool)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

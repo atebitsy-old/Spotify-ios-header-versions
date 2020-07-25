@@ -8,8 +8,8 @@
 
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
-@class NSString, SPTInAppMessageActionsRegistryImplementation, SPTPopupManager;
-@protocol SPTAccountProductActivationController, SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTFeatureFlagSignal, SPTFollowModelFactory, SPTLinkDispatcher, SPTOnDemandSet, SPTPlayer, SPTPlaylistModel, SPTPodcastTestManager, SPTPushMessagingPermissionRequestor, SPTUIModeTransitionCoordinator;
+@class NSString, SPTPopupManager;
+@protocol SPTAccountProductActivationController, SPTCollectionPlatform, SPTCollectionPlatformTestManager, SPTFeatureFlagSignal, SPTFollowModelFactory, SPTLinkDispatcher, SPTModalPresentationController, SPTOnDemandSet, SPTPlayer, SPTPlaylistModel, SPTPodcastTestManager, SPTPushMessagingPermissionRequestor, SPTUIModeTransitionCoordinator, SPTWebViewFactory;
 
 @interface SPTInAppMessageActionFactory : NSObject <SPTFeatureFlagSignalObserver>
 {
@@ -27,12 +27,14 @@
     id <SPTPlayer> _player;
     id <SPTOnDemandSet> _onDemandSet;
     id <SPTPushMessagingPermissionRequestor> _pushPermissionRequestor;
-    SPTInAppMessageActionsRegistryImplementation *_actionsRegistry;
+    id <SPTModalPresentationController> _modalPresentationController;
+    id <SPTWebViewFactory> _webViewFactory;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
-@property(retain, nonatomic) SPTInAppMessageActionsRegistryImplementation *actionsRegistry; // @synthesize actionsRegistry=_actionsRegistry;
+@property(retain, nonatomic) id <SPTWebViewFactory> webViewFactory; // @synthesize webViewFactory=_webViewFactory;
+@property(retain, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) id <SPTPushMessagingPermissionRequestor> pushPermissionRequestor; // @synthesize pushPermissionRequestor=_pushPermissionRequestor;
 @property(retain, nonatomic) id <SPTOnDemandSet> onDemandSet; // @synthesize onDemandSet=_onDemandSet;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -49,7 +51,7 @@
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (id)createActionForClickActionType:(long long)arg1;
 - (void)dealloc;
-- (id)initWithLinkDispatcher:(id)arg1 productActivationController:(id)arg2 transitionCoordinator:(id)arg3 freeTierEnabledSignal:(id)arg4 popupManager:(id)arg5 collectionPlatform:(id)arg6 followModelFactory:(id)arg7 podcastTestManager:(id)arg8 playlistModel:(id)arg9 collectionTestManager:(id)arg10 onDemandSet:(id)arg11 player:(id)arg12 actionsRegistry:(id)arg13 pushPermissionRequestor:(id)arg14;
+- (id)initWithLinkDispatcher:(id)arg1 productActivationController:(id)arg2 transitionCoordinator:(id)arg3 freeTierEnabledSignal:(id)arg4 popupManager:(id)arg5 collectionPlatform:(id)arg6 followModelFactory:(id)arg7 podcastTestManager:(id)arg8 playlistModel:(id)arg9 collectionTestManager:(id)arg10 onDemandSet:(id)arg11 player:(id)arg12 pushPermissionRequestor:(id)arg13 modalPresentationController:(id)arg14 webviewFactory:(id)arg15;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

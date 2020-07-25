@@ -28,6 +28,6 @@
 - (void)loadSession:(_Bool)arg1;
 
 @optional
-- (void)joinSessionConfirmed:(_Bool)arg1 sessionURL:(NSURL *)arg2;
+- (void)joinSessionConfirmed:(_Bool)arg1 sessionURL:(NSURL *)arg2 sessionMode:(long long)arg3;
 @end
 

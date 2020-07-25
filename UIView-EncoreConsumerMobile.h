@@ -6,12 +6,9 @@
 
 #import <UIKit/UIView.h>
 
-#import "SPTInstrumentationInteractable-Protocol.h"
-#import "SPTInstrumentationInteractionItemIDUtilities-Protocol.h"
+@class UIButton, UILayoutGuide;
 
-@class NSString, UILayoutGuide;
-
-@interface UIView (EncoreConsumerMobile) <SPTInstrumentationInteractable, SPTInstrumentationInteractionItemIDUtilities>
+@interface UIView (EncoreConsumerMobile)
 + (id)glue_lottieAnimationStylerForAnimationView:(id)arg1;
 + (id)glue_createStatefulAnimationView;
 + (id)glue_createAnimationViewWithName:(id)arg1;
@@ -21,7 +18,10 @@
 + (void)glue_animateWithDuration:(double)arg1 delay:(double)arg2 options:(unsigned long long)arg3 animations:(CDUnknownBlockType)arg4 completion:(CDUnknownBlockType)arg5 degradationPolicy:(unsigned long long)arg6;
 + (double)glue_maxViewWidthForReadableContentGuide;
 + (id)glue_newForConstraints;
++ (_Bool)spt_isRTL;
 @property(nonatomic, readonly) UIView *uiView;
+@property(nonatomic, readonly) UIView *playButton;
+@property(nonatomic, readonly) UIButton *downloadButton;
 @property(readonly, nonatomic) struct UIEdgeInsets glue_layoutMarginsForReadableContentGuide;
 - (id)glue_constrainHorizontallyWithinReadableContentGuideForContainer:(id)arg1 withMargin:(double)arg2 activate:(_Bool)arg3;
 - (id)glue_constrainHorizontallyWithinReadableContentGuideForContainer:(id)arg1 activate:(_Bool)arg2;
@@ -42,8 +42,6 @@
 @property(readonly, nonatomic) UILayoutGuide *glue_readableContentGuide;
 - (id)glue_readableContentGuide_internal;
 @property(readonly, nonatomic, getter=glue_compatibleSafeGuide) UILayoutGuide *compatibleSafeGuide;
-- (id)spt_indexPathInParentView;
-- (id)instrumentableOrdinalViewsWithTerminatingView:(id)arg1;
 @property(nonatomic, getter=spt_isEligibleForTransition) _Bool spt_eligibleForTransition;
 - (void)keyboardWillHide:(id)arg1;
 - (void)keyboardWillShow:(id)arg1;
@@ -52,6 +50,7 @@
 - (void)shakeView;
 - (id)spt_podcastUIRoundedCornerMaskLayerForViewRect:(struct CGRect)arg1 cornerRadius:(double)arg2;
 - (id)spt_imageRepresentation;
+@property(readonly, nonatomic, getter=spt_isRTL) _Bool isRTL;
 - (void)spt_centerVertically;
 - (void)spt_centerHorizontally;
 @property(nonatomic, getter=spt_frameHeight, setter=spt_setFrameHeight:) double frameHeight;
@@ -72,11 +71,5 @@
 - (id)sp_superviewWithClass:(Class)arg1;
 - (_Bool)sp_isOrHasSuperviewOfClass:(Class)arg1;
 - (void)visref_removeAllSubviews;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 @end
 

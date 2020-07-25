@@ -8,26 +8,31 @@
 
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSAttributedString, NSString;
-@protocol SPTPodcastTestManager, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
+@class NSAttributedString, NSString, SPTPodcast;
+@protocol SPTPodcastTestManager, SPTPodcastUBILogger, _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
 
 @interface SPTPodcastDescriptionViewModel : NSObject <SPTPodcastViewModelSection>
 {
     double _headerHeight;
     NSString *_descriptionText;
     NSAttributedString *_htmlDescriptionText;
+    NSString *_suffix;
     id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> _podcastHTMLParser;
     id <SPTPodcastTestManager> _podcastTestManager;
-    struct _NSRange _descriptionAttributionRange;
+    id <SPTPodcastUBILogger> _logger;
+    SPTPodcast *_podcast;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPodcast *podcast; // @synthesize podcast=_podcast;
+@property(retain, nonatomic) id <SPTPodcastUBILogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 @property(readonly, nonatomic) id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> podcastHTMLParser; // @synthesize podcastHTMLParser=_podcastHTMLParser;
-@property(nonatomic) struct _NSRange descriptionAttributionRange; // @synthesize descriptionAttributionRange=_descriptionAttributionRange;
+@property(copy, nonatomic) NSString *suffix; // @synthesize suffix=_suffix;
 @property(copy, nonatomic) NSAttributedString *htmlDescriptionText; // @synthesize htmlDescriptionText=_htmlDescriptionText;
 @property(copy, nonatomic) NSString *descriptionText; // @synthesize descriptionText=_descriptionText;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
+- (void)logUBIInteractionsForShowDescription:(_Bool)arg1;
 - (_Bool)isRawDescriptionValidForPodcast:(id)arg1;
 - (void)configureDescriptionTextForPodcast:(id)arg1;
 - (long long)identifier;
@@ -36,7 +41,7 @@
 - (id)header;
 - (id)footer;
 - (unsigned long long)numberOfRows;
-- (id)initWithPodcastHTMLParser:(id)arg1 podcastTestManager:(id)arg2;
+- (id)initWithPodcastHTMLParser:(id)arg1 podcastTestManager:(id)arg2 podcastLogger:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

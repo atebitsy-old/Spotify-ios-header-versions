@@ -8,7 +8,7 @@
 
 #import "SPTConnectivityManagerDelegate-Protocol.h"
 
-@class NSMapTable, NSString, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTAuthSession, SPTCoreClientFeatures, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOfflineModeNotifier, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
+@class NSMapTable, NSString, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTAuthSession, SPTConnectivityAuthenticatedScope, SPTCoreClientFeatures, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOfflineModeNotifier, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
 @protocol SPTAsyncScheduler, SPTConnectivityManager, SPTEntityService, SPTOauthClient, SPTOfflineManager, SPTProductState, SPTResolver;
 
 @interface SPSession : NSObject <SPTConnectivityManagerDelegate>
@@ -25,12 +25,14 @@
     id <SPTAsyncScheduler> _scheduler;
     SPTAuthSession *_session;
     SPTOfflineModeNotifier *_offlineNotifier;
+    SPTConnectivityAuthenticatedScope *_connectivityAuthenticatedScope;
     SPTCoreClientFeatures *_clientFeatures;
 }
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTCoreClientFeatures *clientFeatures; // @synthesize clientFeatures=_clientFeatures;
+@property(retain, nonatomic) SPTConnectivityAuthenticatedScope *connectivityAuthenticatedScope; // @synthesize connectivityAuthenticatedScope=_connectivityAuthenticatedScope;
 @property(readonly, nonatomic) SPTOfflineModeNotifier *offlineNotifier; // @synthesize offlineNotifier=_offlineNotifier;
 @property(readonly, nonatomic) __weak SPTAuthSession *session; // @synthesize session=_session;
 @property(nonatomic) __weak id <SPTAsyncScheduler> scheduler; // @synthesize scheduler=_scheduler;
@@ -63,7 +65,7 @@
 @property(readonly, nonatomic) id <SPTProductState> productState;
 @property(readonly, nonatomic) NSString *verbatimUsername;
 @property(readonly, nonatomic) NSString *currentUsername;
-- (id)initWithCore:(id)arg1 coreCreateOptions:(id)arg2 isPerfTracingEnabled:(_Bool)arg3 session:(id)arg4 connectivityManager:(id)arg5 prefs:(struct Prefs *)arg6 scheduler:(id)arg7;
+- (id)initWithCore:(id)arg1 connectivityApplicationScope:(id)arg2 connectivityManager:(id)arg3 coreCreateOptions:(id)arg4 isPerfTracingEnabled:(_Bool)arg5 session:(id)arg6 prefs:(id)arg7 scheduler:(id)arg8;
 @property(readonly, nonatomic) SPTIncognitoModeHandler *incognitoModeHandler;
 @property(readonly, nonatomic) id <SPTOfflineManager> offlineManager;
 @property(readonly, nonatomic) SPTUserFactory *userFactory;

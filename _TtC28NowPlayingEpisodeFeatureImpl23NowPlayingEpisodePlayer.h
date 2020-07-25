@@ -8,6 +8,8 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl23NowPlayingEpisodePlayer : NSObject
 {
+    // Error parsing type: , name: densityHelper
+    // Error parsing type: , name: alertInterface
     // Error parsing type: , name: dataLoader
     // Error parsing type: , name: observers
     // Error parsing type: , name: model
@@ -15,6 +17,7 @@
     // Error parsing type: , name: currentState
     // Error parsing type: , name: timer
     // Error parsing type: , name: densityFactor
+    // Error parsing type: , name: retryCount
 }
 
 - (void).cxx_destruct;

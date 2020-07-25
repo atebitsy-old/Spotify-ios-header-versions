@@ -9,26 +9,28 @@
 #import "SPTUserTrackingService-Protocol.h"
 
 @class NSString, SPTAdjustURLSanitizer, SPTAdjustUserTracker, SPTAllocationContext, SPTTrackerBroadcaster;
-@protocol SPTContainerService, SPTCoreService, SPTDebugService, SPTPushNotificationController;
+@protocol SPTContainerService, SPTCoreService, SPTDebugService, SPTEventSenderService, SPTPushNotificationController;
 
 @interface SPTUserTrackingServiceImplementation : NSObject <SPTUserTrackingService>
 {
     SPTTrackerBroadcaster *_trackerBroadcaster;
     id <SPTPushNotificationController> _pushNotificationsController;
-    SPTAdjustUserTracker *_adjustUserTracker;
     id <SPTContainerService> _containerService;
     id <SPTCoreService> _coreService;
     id <SPTDebugService> _debugService;
+    id <SPTEventSenderService> _eventSenderService;
+    SPTAdjustUserTracker *_adjustUserTracker;
     SPTAdjustURLSanitizer *_adjustURLSanitizer;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTAdjustURLSanitizer *adjustURLSanitizer; // @synthesize adjustURLSanitizer=_adjustURLSanitizer;
+@property(retain, nonatomic) SPTAdjustUserTracker *adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-@property(retain, nonatomic) SPTAdjustUserTracker *adjustUserTracker; // @synthesize adjustUserTracker=_adjustUserTracker;
 @property(readonly, nonatomic) id <SPTPushNotificationController> pushNotificationsController; // @synthesize pushNotificationsController=_pushNotificationsController;
 @property(retain, nonatomic) SPTTrackerBroadcaster *trackerBroadcaster; // @synthesize trackerBroadcaster=_trackerBroadcaster;
 - (void)unload;

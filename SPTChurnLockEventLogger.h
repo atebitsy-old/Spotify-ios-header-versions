@@ -6,21 +6,21 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTEventSender;
 
 @interface SPTChurnLockEventLogger : NSObject
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)logEventWithType:(id)arg1;
 - (void)logChurnLockDowngradeConfirmed;
 - (void)logChurnLockDowngradeCancelled;
 - (void)logChurnLockActionButtonPressed;
 - (void)logChurnLockViewWasPresented;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithEventSender:(id)arg1;
 
 @end
 

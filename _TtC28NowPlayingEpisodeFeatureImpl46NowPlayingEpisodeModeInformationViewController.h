@@ -14,6 +14,9 @@
     // Error parsing type: , name: tableView
     // Error parsing type: , name: userIsInteracting
     // Error parsing type: , name: interactionTimer
+    // Error parsing type: , name: snackBarPresenter
+    // Error parsing type: , name: linkDispatcher
+    // Error parsing type: , name: isPresentingNPV
 }
 
 - (void).cxx_destruct;

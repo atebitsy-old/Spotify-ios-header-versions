@@ -9,9 +9,10 @@
 @interface _TtC20SuperbirdFeatureImpl21OTAAppProtocolHandler : NSObject
 {
     // Error parsing type: , name: dataLoader
-    // Error parsing type: , name: otaPackageManager
+    // Error parsing type: , name: pitstopLogger
     // Error parsing type: , name: payloadConstructor
     // Error parsing type: , name: otaPackageSubsUpdates
+    // Error parsing type: , name: packagesWithVersion
 }
 
 - (void).cxx_destruct;

@@ -10,13 +10,12 @@
 #import "SPTHomeMixUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTHomeMixService, SPTHomeMixTestManager;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierTooltipService, SPTGLUEService, SPTNavigationFeature, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTURIDispatchService, SlateFeature;
+@protocol SPContextMenuFeature, SPTContainerUIService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTFormatListPlatformRegistration, SPTFormatListPlatformService, SPTFreeTierTooltipService, SPTGLUEService, SPTNavigationFeature, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature;
 
 @interface SPTHomeMixUIServiceImplementation : NSObject <SPTHomeMixTestManagerDelegate, SPTHomeMixUIService>
 {
     SPTHomeMixService *_homeMixService;
     id <SPTSessionService> _clientSessionService;
-    id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTExplicitContentService> _explicitContentService;
@@ -28,11 +27,12 @@
     id <SPTNavigationFeature> _navigationService;
     id <SPTPlayerFeature> _playbackFeature;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTSessionService> _sessionService;
     id <SPTShareFeature> _shareFeature;
     id <SlateFeature> _slateService;
-    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTUBIService> _ubiService;
     id <SPTFormatListPlatformRegistration> _formatListPlatformRegistrationToken;
     SPTHomeMixTestManager *_testManager;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
@@ -43,11 +43,12 @@
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(retain, nonatomic) SPTHomeMixTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTFormatListPlatformRegistration> formatListPlatformRegistrationToken; // @synthesize formatListPlatformRegistrationToken=_formatListPlatformRegistrationToken;
-@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playbackFeature; // @synthesize playbackFeature=_playbackFeature;
 @property(nonatomic) __weak id <SPTNavigationFeature> navigationService; // @synthesize navigationService=_navigationService;
@@ -59,7 +60,6 @@
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
-@property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak SPTHomeMixService *homeMixService; // @synthesize homeMixService=_homeMixService;
 - (id)featureProperties;

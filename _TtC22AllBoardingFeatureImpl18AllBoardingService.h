@@ -17,6 +17,11 @@
     // Error parsing type: , name: glueService
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: ubiService
+    // Error parsing type: , name: followFeature
+    // Error parsing type: , name: instrumentationService
+    // Error parsing type: , name: featureFlaggingService
+    // Error parsing type: , name: eventSenderService
+    // Error parsing type: , name: debugFeatureManager
     // Error parsing type: , name: $__lazy_storage_$_flowCoordinator
     // Error parsing type: , name: $__lazy_storage_$_curationManager
 }

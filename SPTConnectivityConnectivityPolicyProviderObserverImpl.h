@@ -12,7 +12,7 @@
 
 @interface SPTConnectivityConnectivityPolicyProviderObserverImpl : NSObject <SPTConnectivityConnectivityPolicyProviderObserver>
 {
-    weak_ptr_8e421c5b _bridge;
+    weak_ptr_387624aa _bridge;
     id <SPTConnectivityConnectivityPolicyProvider> _provider;
 }
 
@@ -20,7 +20,7 @@
 - (void).cxx_destruct;
 - (void)dealloc;
 - (void)connectivityPolicyProvider:(id)arg1 didChangeFromPolicy:(long long)arg2 toPolicy:(long long)arg3;
-- (id)initWithBridge:(const weak_ptr_8e421c5b *)arg1 connectivityPolicyProvider:(id)arg2;
+- (id)initWithBridge:(const weak_ptr_387624aa *)arg1 connectivityPolicyProvider:(id)arg2;
 
 @end
 

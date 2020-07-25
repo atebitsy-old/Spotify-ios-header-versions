@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTDataLoaderDelegate-Protocol.h"
+#import "SPTAudioPreviewDataLoaderDelegate-Protocol.h"
 #import "SPTID3ParserDelegate-Protocol.h"
 
-@class CADisplayLink, NSMapTable, NSMutableData, NSNumber, NSString, NSURL, SPTDataLoader, SPTID3Parser;
-@protocol OS_dispatch_queue;
+@class CADisplayLink, NSMapTable, NSMutableData, NSNumber, NSString, NSURL, SPTID3Parser;
+@protocol OS_dispatch_queue, SPTAudioPreviewDataLoader, SPTAudioPreviewDataRequest;
 
-@interface SPTAudioPreview : NSObject <SPTDataLoaderDelegate, SPTID3ParserDelegate>
+@interface SPTAudioPreview : NSObject <SPTAudioPreviewDataLoaderDelegate, SPTID3ParserDelegate>
 {
     struct OpaqueAudioFileStreamID *_audioFileStream;
     struct OpaqueAudioComponentInstance *_audioUnit;
@@ -35,7 +35,8 @@
     unsigned long long _minimumNumberOfBytes;
     double _startTime;
     NSNumber *_maximumPlayTime;
-    SPTDataLoader *_dataLoader;
+    id <SPTAudioPreviewDataLoader> _dataLoader;
+    id <SPTAudioPreviewDataRequest> _dataRequest;
     NSString *_sourceIdentifier;
     unsigned long long _dataCount;
     double _targetVolume;
@@ -68,7 +69,8 @@
 @property(nonatomic) double targetVolume; // @synthesize targetVolume=_targetVolume;
 @property(nonatomic) unsigned long long dataCount; // @synthesize dataCount=_dataCount;
 @property(readonly, copy, nonatomic) NSString *sourceIdentifier; // @synthesize sourceIdentifier=_sourceIdentifier;
-@property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(retain, nonatomic) id <SPTAudioPreviewDataRequest> dataRequest; // @synthesize dataRequest=_dataRequest;
+@property(readonly, nonatomic) id <SPTAudioPreviewDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
 @property _Bool shouldLoop; // @synthesize shouldLoop=_shouldLoop;
 @property(retain, nonatomic) NSNumber *maximumPlayTime; // @synthesize maximumPlayTime=_maximumPlayTime;
 @property(nonatomic) double startTime; // @synthesize startTime=_startTime;
@@ -84,12 +86,9 @@
 - (void)stop;
 - (void)start;
 @property(readonly, nonatomic, getter=isDataEnoughToRender) _Bool dataEnoughToRender;
-- (void)dataLoader:(id)arg1 didReceiveInitialResponse:(id)arg2;
-- (void)dataLoader:(id)arg1 didReceiveDataChunk:(id)arg2 forResponse:(id)arg3;
-- (_Bool)dataLoaderShouldSupportChunks:(id)arg1;
-- (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
-- (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
-- (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
+- (void)dataLoader:(id)arg1 didReceiveInitialResponseForRequest:(id)arg2;
+- (void)dataLoader:(id)arg1 didReceiveDataChunk:(id)arg2 forRequest:(id)arg3;
+- (void)stopLoadingData;
 - (void)dealloc;
 - (void)notifyDelegatesWithBlock:(CDUnknownBlockType)arg1;
 - (void)updateVolume;

@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSIndexPath, UIView, UIViewController;
-@protocol SPTFreeTierPlaylistItemsViewModel, SPTPageController;
+@class UIView, UIViewController;
+@protocol SPTFreeTierPlaylistTrackViewModel, SPTPageController;
 
 @protocol SPTFreeTierPlaylistContextMenuPresenter <NSObject>
-- (_Bool)presentContextMenuForItemAtIndexPath:(NSIndexPath *)arg1 itemsViewModel:(id <SPTFreeTierPlaylistItemsViewModel>)arg2 sender:(UIView *)arg3 viewController:(UIViewController<SPTPageController> *)arg4;
+- (_Bool)presentContextMenuForTrackViewModel:(id <SPTFreeTierPlaylistTrackViewModel>)arg1 sender:(UIView *)arg2 viewController:(UIViewController<SPTPageController> *)arg3;
 @end
 

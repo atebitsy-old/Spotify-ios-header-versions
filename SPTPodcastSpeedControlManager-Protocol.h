@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSNumber, UIImage, UIViewController;
+@class NSArray, NSNumber, NSURL, UIImage, UIViewController;
 @protocol SPTPodcastPlaybackSpeed, SPTPodcastPreferencesObserver;
 
 @protocol SPTPodcastSpeedControlManager <NSObject>
@@ -18,6 +18,6 @@
 - (void)addPodcastPreferencesObserver:(id <SPTPodcastPreferencesObserver>)arg1;
 - (UIImage *)currentPodcastPlaybackSpeedIconWithSize:(struct CGSize)arg1;
 - (UIImage *)provideSpeedControlIconImage;
-- (UIViewController *)providePodcastSpeedControlViewController;
+- (UIViewController *)providePodcastSpeedControlViewControllerWithURL:(NSURL *)arg1;
 @end
 

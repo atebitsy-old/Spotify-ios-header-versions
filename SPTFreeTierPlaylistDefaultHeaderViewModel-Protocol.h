@@ -6,26 +6,19 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSDate, NSString, NSURL;
+@class NSString, NSURL;
 
 @protocol SPTFreeTierPlaylistDefaultHeaderViewModel <NSObject>
 - (void)navigateToPlaylistOwnerPage;
 - (_Bool)isFormatList;
-@property(nonatomic, readonly) NSString *creatorTitle;
-@property(nonatomic, readonly) NSDate *lastModifiedTime;
 @property(nonatomic, readonly) NSString *playlistOwnerName;
 @property(nonatomic, readonly) NSURL *ownerImageURL;
-@property(nonatomic, readonly) double totalDuration;
-@property(nonatomic, readonly) _Bool shouldShowPlaylistOwnerPage;
 @property(nonatomic, readonly) _Bool showSearchBar;
-- (_Bool)isShuffleBadgeEducationAvailable;
-- (void)showShuffleBadgeEducationDialog;
 @property(nonatomic, readonly) NSURL *playlistImageURL;
 @property(nonatomic, readonly) NSString *playlistDescription;
 @property(nonatomic, readonly) NSString *playlistName;
 
 // Remaining properties
 @property(nonatomic, readonly) _Bool formatList;
-@property(nonatomic, readonly) _Bool shuffleBadgeEducationAvailable;
 @end
 

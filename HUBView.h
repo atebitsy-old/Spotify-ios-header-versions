@@ -42,7 +42,6 @@
 - (struct CGRect)contentRectForScrollView:(id)arg1;
 - (void)scrollViewDidScroll:(id)arg1;
 - (_Bool)scrollViewShouldBeginScrolling:(id)arg1;
-- (void)applyComponentModelDiff:(id)arg1;
 @property(nonatomic) _Bool adjustsTargetContentOffset;
 - (void)setContentOffset:(struct CGPoint)arg1 animated:(_Bool)arg2;
 - (void)componentViewsDidDisappear;
@@ -53,6 +52,7 @@
 - (void)addContentOffsetObserver:(id)arg1;
 - (void)setBackgroundColor:(id)arg1;
 @property(copy, nonatomic) NSArray *componentModels;
+- (void)setComponentModels:(id)arg1 animated:(_Bool)arg2;
 - (id)createCollectionViewWithComponentRegistry:(id)arg1 componentLayoutManager:(id)arg2 dataSource:(id)arg3 scrollViewDelegate:(id)arg4;
 - (void)dealloc;
 - (id)initWithFrame:(struct CGRect)arg1 imageLoaderFactory:(id)arg2 componentLayoutManager:(id)arg3 componentRegistry:(id)arg4 componentEventHandler:(id)arg5;

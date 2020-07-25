@@ -32,10 +32,12 @@
 - (void)setArtworkImage:(id)arg1;
 - (void)configurePlaceholderArtwork;
 - (void)loadArtwork;
+- (void)updateSubtitle:(id)arg1;
 - (void)didRequestContentItem;
 @property(readonly) unsigned long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithExternalIntegrationContent:(id)arg1 imageLoader:(id)arg2 imageBuilder:(id)arg3 properties:(id)arg4 iconCache:(id)arg5 playable:(_Bool)arg6;
+- (_Bool)isContinuePlayingItem;
 - (_Bool)isErrorItem;
 - (_Bool)isShuffleItem;
 

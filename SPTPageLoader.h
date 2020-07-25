@@ -9,8 +9,7 @@
 @interface SPTPageLoader : NSObject
 {
     // Error parsing type: , name: pageLoader
-    // Error parsing type: , name: observerManager
-    // Error parsing type: , name: observerCancelable
+    // Error parsing type: , name: observers
 }
 
 - (void).cxx_destruct;
@@ -20,7 +19,6 @@
 - (void)retry;
 - (void)stop;
 - (void)start;
-- (void)dealloc;
 - (id)initWithLoadable:(id)arg1;
 
 @end

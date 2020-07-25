@@ -6,20 +6,20 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTLogCenter;
+@protocol SPTEventSender;
 
 @interface SPTResubModalEventLogger : NSObject
 {
-    id <SPTLogCenter> _logCenter;
+    id <SPTEventSender> _eventSender;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 - (void)sendLogMessageWithType:(id)arg1 daysLeft:(long long)arg2;
 - (void)logActionModalDismissedBySystem:(long long)arg1;
 - (void)logActionModalDismissedByUser:(long long)arg1;
 - (void)logImpressionModalPresented:(long long)arg1;
-- (id)initWithLogCenter:(id)arg1;
+- (id)initWithEventSender:(id)arg1;
 
 @end
 

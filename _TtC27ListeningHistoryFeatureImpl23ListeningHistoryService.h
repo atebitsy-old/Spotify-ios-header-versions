@@ -8,7 +8,6 @@
 
 @interface _TtC27ListeningHistoryFeatureImpl23ListeningHistoryService : NSObject
 {
-    // Error parsing type: , name: isListeningHistoryEnabled
     // Error parsing type: , name: containerService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: glueService
@@ -18,6 +17,7 @@
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: contextMenuService
     // Error parsing type: , name: snackbarService
+    // Error parsing type: , name: remoteConfigManager
     // Error parsing type: , name: $__lazy_storage_$_player
     // Error parsing type: , name: $__lazy_storage_$_snackbarPresenter
 }
@@ -28,7 +28,8 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
-@property(nonatomic) _Bool isListeningHistoryEnabled; // @synthesize isListeningHistoryEnabled;
+- (id)provideListeningHistoryLogger;
+- (id)provideRemoteConfigManager;
 
 @end
 

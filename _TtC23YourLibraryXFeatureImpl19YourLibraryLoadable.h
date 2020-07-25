@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: connection
     // Error parsing type: , name: loader
+    // Error parsing type: , name: currentUserData
     // Error parsing type: , name: subscriptionData
 }
 

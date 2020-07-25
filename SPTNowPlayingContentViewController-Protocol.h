@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class UIViewController;
+@class UIView, UIViewController;
 @protocol SPTNowPlayingContentViewControllerObserver;
 
 @protocol SPTNowPlayingContentViewController <NSObject>
@@ -18,6 +18,6 @@
 
 @optional
 @property(nonatomic) struct UIEdgeInsets windowedContentInsets;
-- (void)updateWithEmptyFrame:(struct CGRect)arg1;
+- (UIView *)coverArtView;
 @end
 

@@ -6,14 +6,11 @@
 
 #import <UIKit/UIApplication.h>
 
-#import "SPTInstrumentationInteractionEventCaptor-Protocol.h"
+@class NSHashTable;
+@protocol SpotifyApplicationRemoteControlDelegate;
 
-@class NSHashTable, NSString;
-@protocol SPTInstrumentationInteractionMediator, SpotifyApplicationRemoteControlDelegate;
-
-@interface SpotifyApplication : UIApplication <SPTInstrumentationInteractionEventCaptor>
+@interface SpotifyApplication : UIApplication
 {
-    id <SPTInstrumentationInteractionMediator> interactionMediator;
     id <SpotifyApplicationRemoteControlDelegate> _remoteControlDelegate;
     NSHashTable *_observers;
 }
@@ -21,19 +18,11 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(nonatomic) __weak id <SpotifyApplicationRemoteControlDelegate> remoteControlDelegate; // @synthesize remoteControlDelegate=_remoteControlDelegate;
-@property(nonatomic) __weak id <SPTInstrumentationInteractionMediator> interactionMediator; // @synthesize interactionMediator;
 - (_Bool)canBecomeFirstResponder;
-- (void)sendEvent:(id)arg1;
 - (void)removeRemoteControlObserver:(id)arg1;
 - (void)addRemoteControlObserver:(id)arg1;
 - (_Bool)handleRemoteControlEventOfSubtype:(long long)arg1;
 - (void)remoteControlReceivedWithEvent:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

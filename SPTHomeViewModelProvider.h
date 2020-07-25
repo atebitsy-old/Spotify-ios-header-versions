@@ -9,29 +9,32 @@
 #import "HUBViewModelLoaderDelegate-Protocol.h"
 #import "SPTHomeLocalViewModelOverridesDelegate-Protocol.h"
 
-@class NSString;
-@protocol HUBViewModelLoader, SPTHomeViewModelProviderDelegate, SPTHubViewModelProviderDelegate;
+@class NSArray, NSString;
+@protocol HUBViewModelLoader, SPTHubViewModelProviderDelegate;
 
 @interface SPTHomeViewModelProvider : SPTHubViewModelProvider <HUBViewModelLoaderDelegate, SPTHomeLocalViewModelOverridesDelegate>
 {
     id <SPTHubViewModelProviderDelegate> delegate;
-    id <SPTHomeViewModelProviderDelegate> _viewModelProviderDelegate;
     id <HUBViewModelLoader> _cachedViewModelLoader;
     id <HUBViewModelLoader> _remoteViewModelLoader;
     unsigned long long _lastLoadedSource;
+    NSArray *_observers;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSArray *observers; // @synthesize observers=_observers;
 @property(nonatomic) unsigned long long lastLoadedSource; // @synthesize lastLoadedSource=_lastLoadedSource;
 @property(readonly, nonatomic) id <HUBViewModelLoader> remoteViewModelLoader; // @synthesize remoteViewModelLoader=_remoteViewModelLoader;
 @property(readonly, nonatomic) id <HUBViewModelLoader> cachedViewModelLoader; // @synthesize cachedViewModelLoader=_cachedViewModelLoader;
-@property(nonatomic) __weak id <SPTHomeViewModelProviderDelegate> viewModelProviderDelegate; // @synthesize viewModelProviderDelegate=_viewModelProviderDelegate;
 @property(nonatomic) __weak id <SPTHubViewModelProviderDelegate> delegate; // @synthesize delegate;
 - (void)viewModelLoader:(id)arg1 didFailLoadingWithError:(id)arg2;
 - (void)viewModelLoader:(id)arg1 didLoadViewModel:(id)arg2;
 - (void)overridesDidChange:(id)arg1;
 - (void)loadViewModelWithSource:(unsigned long long)arg1;
 - (void)loadViewModel;
+- (void)removeViewModelProviderObserver:(id)arg1;
+- (void)addViewModelProviderObserver:(id)arg1;
+- (void)dealloc;
 - (id)initWithCachedViewModelLoader:(id)arg1 remoteViewModelLoader:(id)arg2;
 
 // Remaining properties

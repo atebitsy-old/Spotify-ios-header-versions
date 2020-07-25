@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP31PodcastCreatorEntityPageFeature15SPTPodcastTopic_-Protocol.h"
+#import "SPTPodcastTopic-Protocol.h"
 
 @class NSString, NSURL;
 
-@interface SPTPodcastTopicCategory : NSObject <_TtP31PodcastCreatorEntityPageFeature15SPTPodcastTopic_>
+@interface SPTPodcastTopicCategory : NSObject <SPTPodcastTopic>
 {
     NSString *_title;
     NSURL *_uri;
@@ -20,6 +20,12 @@
 @property(copy, nonatomic) NSURL *uri; // @synthesize uri=_uri;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (id)initWithDictionary:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

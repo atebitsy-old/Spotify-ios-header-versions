@@ -30,6 +30,7 @@
 - (id)provideOnDemandDecoratorContentOperation;
 - (id)provideOnDemandExtractorContentOperation;
 - (id)provideOnDemandSet;
+- (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

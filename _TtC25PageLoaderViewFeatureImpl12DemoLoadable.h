@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: states
     // Error parsing type: , name: stateIndex
+    // Error parsing type: , name: delay
     // Error parsing type: , name: callback
 }
 

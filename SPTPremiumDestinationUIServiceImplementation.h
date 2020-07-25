@@ -21,6 +21,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPremiumDestinationUIHubComponentFactory> componentFactory; // @synthesize componentFactory=_componentFactory;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
+- (id)provideComponentLayoutManager;
 - (id)providePremiumDestinationUIGLUETheme;
 - (id)provideHubsComponentRegistry;
 - (void)unload;

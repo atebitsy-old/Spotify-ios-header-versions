@@ -8,8 +8,8 @@
 
 #import "SPTPodcastFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastEntityDataLoaderImplementation, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactoryImplementation, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
-@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastOffliningService, SPTPodcastSortingProvider, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_, _TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_;
+@class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactoryImplementation, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
+@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastEntityDataLoader, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastOffliningService, SPTPodcastSortingProvider, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_;
 
 @interface SPTPodcastFeatureImplementation : SPTUIPageService <SPTPodcastFeature>
 {
@@ -38,11 +38,11 @@
     id <SPTPodcastOffliningService> _podcastOffliningService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTUBIUserBehaviourInstrumentation> _ubiService;
-    id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> _podcastCreatorEntityPageEntryPointsService;
     id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> _podcastHTMLComponentService;
+    id <SPTSortingFilteringService> _sortingFilteringService;
     SPTPodcastFeatureProperties *_featureProperties;
-    SPTPodcastEntityDataLoaderImplementation *_podcastEntityDataLoader;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
     id <SPTPodcastContextMenuProvider> _defaultContextMenuProvider;
     id <SPTPodcastSortingProvider> _sortingProvider;
     id <SPTCollectionLogger> _collectionLogger;
@@ -84,11 +84,11 @@
 @property(nonatomic) _Bool podcastEntityContentTypeRegistered; // @synthesize podcastEntityContentTypeRegistered=_podcastEntityContentTypeRegistered;
 @property(retain, nonatomic) id <SPTPodcastSortingProvider> sortingProvider; // @synthesize sortingProvider=_sortingProvider;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> defaultContextMenuProvider; // @synthesize defaultContextMenuProvider=_defaultContextMenuProvider;
-@property(retain, nonatomic) SPTPodcastEntityDataLoaderImplementation *podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
+@property(retain, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(retain, nonatomic) SPTPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <SPTSortingFilteringService> sortingFilteringService; // @synthesize sortingFilteringService=_sortingFilteringService;
 @property(nonatomic) __weak id <_TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_> podcastHTMLComponentService; // @synthesize podcastHTMLComponentService=_podcastHTMLComponentService;
 @property(nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
-@property(nonatomic) __weak id <_TtP31PodcastCreatorEntityPageFeature45SPTPodcastCreatorEntityPageEntryPointsService_> podcastCreatorEntityPageEntryPointsService; // @synthesize podcastCreatorEntityPageEntryPointsService=_podcastCreatorEntityPageEntryPointsService;
 @property(nonatomic) __weak id <SPTUBIUserBehaviourInstrumentation> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTPodcastOffliningService> podcastOffliningService; // @synthesize podcastOffliningService=_podcastOffliningService;

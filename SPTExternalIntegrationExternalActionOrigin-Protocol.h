@@ -9,8 +9,8 @@
 @class NSString;
 
 @protocol SPTExternalIntegrationExternalActionOrigin <NSObject>
-@property(readonly, nonatomic) NSString *eventOriginID;
-@property(readonly, nonatomic) NSString *clientID;
-@property(readonly, nonatomic) NSString *accessorySessionID;
+@property(nonatomic, readonly) NSString *eventOriginID;
+@property(nonatomic, readonly) NSString *clientID;
+@property(nonatomic, readonly) NSString *accessorySessionID;
 @end
 

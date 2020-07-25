@@ -20,10 +20,8 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTFreeTierPlaylistFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
-@property(readonly, nonatomic) _Bool enableConsistentFreePlayBehaviour;
-@property(readonly, nonatomic) _Bool enableConsistentPremiumPlayBehaviour;
-@property(readonly, nonatomic, getter=isContextAwareEditorialTrackSharingEnabled) _Bool contextAwareEditorialTrackSharingEnabled;
 @property(readonly, nonatomic, getter=isWeigthedShufflePlayDisabled) _Bool weigthedShufflePlayDisabled;
+@property(readonly, nonatomic) unsigned long long tableviewUpdateStrategy;
 @property(readonly, nonatomic, getter=isEpisodesInPlaylistDisabled) _Bool episodesInPlaylistDisabled;
 @property(readonly, nonatomic, getter=isScrollPerformanceTrackingEnabled) _Bool scrollPerformanceTrackingEnabled;
 @property(readonly, nonatomic) _Bool dontOpenNPVOnVideoPlayback;

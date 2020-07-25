@@ -10,12 +10,11 @@
 #import "GCKSessionManagerListener-Protocol.h"
 #import "SPTCastCustomChannelDelegate-Protocol.h"
 #import "SPTGaiaCastCoreInteractorDelegate-Protocol.h"
-#import "SPTGaiaConnectManagerObserver-Protocol.h"
 
 @class GCKCastContext, GCKDevice, NSArray, NSString, SPTCastCustomChannel, SPTCastReceiverAppIDManager, SPTGaiaCastCoreInteractor, SPTGaiaCastErrorLogger, SPTObserverManager;
 @protocol SPTGaiaConnectManager, SPTProductState;
 
-@interface SPTCastManager : NSObject <GCKDiscoveryManagerListener, GCKSessionManagerListener, SPTCastCustomChannelDelegate, SPTGaiaConnectManagerObserver, SPTGaiaCastCoreInteractorDelegate>
+@interface SPTCastManager : NSObject <GCKDiscoveryManagerListener, GCKSessionManagerListener, SPTCastCustomChannelDelegate, SPTGaiaCastCoreInteractorDelegate>
 {
     id <SPTProductState> _productState;
     GCKCastContext *_castContext;
@@ -44,23 +43,20 @@
 - (void)disconnectCastFromDevice;
 @property(readonly, nonatomic) GCKDevice *connectedCastDevice;
 - (void)connectToDevice:(id)arg1;
-- (id)castDeviceWithIdentifier:(id)arg1;
-- (void)connectToCastDeviceWithId:(id)arg1;
+- (void)connectToCastDeviceWithName:(id)arg1;
 - (void)notifyObserversConnectivityUpdated;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
-- (_Bool)isCastDeviceConnected:(id)arg1;
 - (_Bool)isLoginAlreadyPerformed;
 - (_Bool)isDevice:(id)arg1 sameAsCastDevice:(id)arg2;
-- (void)connectManager:(id)arg1 activeDeviceDidChange:(id)arg2;
 - (id)castDiscoveredDeviceFromGCKDevice:(id)arg1;
 - (void)removeDeviceFromCore:(id)arg1;
 - (void)injectDeviceToCore:(id)arg1;
 - (void)removeCastDevice:(id)arg1;
 - (void)addCastDevice:(id)arg1;
-- (void)handleConnectLoginStatusDidChange:(id)arg1 username:(id)arg2 blob:(id)arg3 clientKey:(id)arg4 tokenType:(id)arg5;
 - (void)didLogoutFromDevice;
-- (void)didLoginToDeviceWithCredentials:(id)arg1;
+- (void)didRequestMessage:(id)arg1;
+- (void)didRequestConnect:(id)arg1;
 - (void)destroyMessageChannel;
 - (void)createMessageChannel;
 - (void)createChannels;
@@ -70,10 +66,9 @@
 - (void)sessionManager:(id)arg1 willEndSession:(id)arg2;
 - (void)sessionManager:(id)arg1 didFailToStartCastSession:(id)arg2 withError:(id)arg3;
 - (void)sessionManager:(id)arg1 didStartCastSession:(id)arg2;
-- (void)payloadReceived:(id)arg1;
+- (void)messageReceived:(id)arg1;
 - (void)didUpdateDeviceList;
 - (id)castModelName:(id)arg1;
-- (long long)deviceTypeForGaiaDevice:(id)arg1;
 - (id)activeDevice;
 - (id)getCastDeviceList;
 - (_Bool)isConnectedCastDevice:(id)arg1;

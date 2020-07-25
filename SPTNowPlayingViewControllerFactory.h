@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class NSNotificationCenter, SPTNowPlayingContentViewProvider, SPTNowPlayingLogger, SPTNowPlayingModel, SPTTheme, UIViewController;
-@protocol SPTLinkDispatcher, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingNavigationBarModel, SPTPlayer, SPTQueueInteractor, SPTQueueLogger, SPTQueueService, SPTQueueViewControllerDelegate, SPTShareFeature;
+@protocol SPTLinkDispatcher, SPTNowPlayingContainedViewController, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingNavigationBarModel, SPTPlayer, SPTQueueInteractor, SPTQueueLogger, SPTQueueService, SPTQueueViewControllerDelegate, SPTShareFeature;
 
 @interface SPTNowPlayingViewControllerFactory : NSObject
 {
@@ -21,7 +21,7 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTQueueViewControllerDelegate> _queueViewControllerDelegate;
     id <SPTQueueService> _queueService;
-    UIViewController *_queueNavigationBarViewController;
+    UIViewController<SPTNowPlayingContainedViewController> *_queueNavigationBarViewController;
     id <SPTPlayer> _player;
     NSNotificationCenter *_notificationCenter;
     SPTTheme *_theme;
@@ -35,7 +35,7 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(readonly, nonatomic) UIViewController *queueNavigationBarViewController; // @synthesize queueNavigationBarViewController=_queueNavigationBarViewController;
+@property(readonly, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *queueNavigationBarViewController; // @synthesize queueNavigationBarViewController=_queueNavigationBarViewController;
 @property(readonly, nonatomic) __weak id <SPTQueueService> queueService; // @synthesize queueService=_queueService;
 @property(readonly, nonatomic) __weak id <SPTQueueViewControllerDelegate> queueViewControllerDelegate; // @synthesize queueViewControllerDelegate=_queueViewControllerDelegate;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;

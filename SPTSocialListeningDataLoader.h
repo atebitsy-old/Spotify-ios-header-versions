@@ -45,14 +45,14 @@
 - (void)setPhysicalDeviceIDState:(id)arg1;
 - (void)setCoreSocialListeningState:(_Bool)arg1;
 - (void)subscribeToSessionUpdates;
-- (id)sessionTypeAndDeviceIDQueryParameters;
+- (id)playbackControlAndDeviceIDQueryParametersForSessionMode:(long long)arg1;
 - (id)deviceIDQueryParameter;
-- (id)sessionTypeQueryParameter;
+- (id)playbackControlQueryParameterForSessionMode:(long long)arg1;
 - (void)performRequestWithURL:(id)arg1 requestMethod:(long long)arg2 expectedResponseType:(unsigned long long)arg3;
 - (void)cancelRequests;
 - (void)leaveSession:(id)arg1;
 - (void)deleteSession:(id)arg1;
-- (void)joinSession:(id)arg1;
+- (void)joinSession:(id)arg1 sessionMode:(long long)arg2;
 - (void)getCurrentSession;
 - (void)getOrCreateSession;
 - (id)initWithDataLoader:(id)arg1 cosmosDictionaryDataLoader:(id)arg2 currentUserData:(id)arg3 testManager:(id)arg4;

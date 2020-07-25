@@ -10,7 +10,7 @@
 {
 }
 
-- (id)initWithName:(id)arg1 creatorText:(id)arg2 creatorImage:(id)arg3 isBySpotify:(_Bool)arg4 playlistDescription:(id)arg5 coverArtImage:(id)arg6 coverArtColor:(id)arg7 likes:(long long)arg8 duration:(double)arg9 downloadState:(long long)arg10 isPlaying:(_Bool)arg11 isPlayable:(_Bool)arg12 isDownloadable:(_Bool)arg13 isLiked:(_Bool)arg14 minimumHeight:(double)arg15 fullHeight:(double)arg16;
+- (id)initWithName:(id)arg1 creatorText:(id)arg2 creatorImage:(id)arg3 isBySpotify:(_Bool)arg4 playlistDescription:(id)arg5 coverArtImage:(id)arg6 coverArtColor:(id)arg7 likes:(long long)arg8 duration:(double)arg9 downloadState:(long long)arg10 isPlaying:(_Bool)arg11 isPlayable:(_Bool)arg12 isDownloadable:(_Bool)arg13 showsShuffleBadge:(_Bool)arg14 isLiked:(_Bool)arg15 minimumHeight:(double)arg16 fullHeight:(double)arg17;
 
 @end
 

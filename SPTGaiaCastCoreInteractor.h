@@ -21,7 +21,8 @@
 - (id)urlWithDeviceId:(id)arg1 deviceId:(id)arg2;
 - (void)removeDeviceWithId:(id)arg1 responseBlock:(CDUnknownBlockType)arg2;
 - (void)injectDeviceWithId:(id)arg1 info:(id)arg2 responseBlock:(CDUnknownBlockType)arg3;
-- (void)loginDeviceWithId:(id)arg1 info:(id)arg2 responseBlock:(CDUnknownBlockType)arg3;
+- (void)castDeviceWasConnected:(id)arg1;
+- (void)messageReceived:(id)arg1;
 - (void)startObservingLoginStatus;
 - (id)initWithResolver:(id)arg1;
 

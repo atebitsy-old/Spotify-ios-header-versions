@@ -36,7 +36,7 @@
 @property(readonly, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)didTapBookmarkButton;

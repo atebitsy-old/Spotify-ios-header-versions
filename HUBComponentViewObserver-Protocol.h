@@ -4,10 +4,8 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class HUBContext;
-
 @protocol HUBComponentViewObserver
-- (void)viewDidDisappearWithContext:(HUBContext *)arg1;
-- (void)viewWillAppearWithContext:(HUBContext *)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 @end
 

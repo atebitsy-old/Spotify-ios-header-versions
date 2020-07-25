@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@class HUBComponentRegistry, SPTPremiumDestinationUIGLUETheme;
+@class HUBComponentRegistry, SPTPremiumDestinationUIComponentLayoutManager, SPTPremiumDestinationUIGLUETheme;
 
 @protocol SPTPremiumDestinationUIService <SPTService>
+- (SPTPremiumDestinationUIComponentLayoutManager *)provideComponentLayoutManager;
 - (SPTPremiumDestinationUIGLUETheme *)providePremiumDestinationUIGLUETheme;
 - (HUBComponentRegistry *)provideHubsComponentRegistry;
 @end

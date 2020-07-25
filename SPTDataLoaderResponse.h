@@ -6,27 +6,27 @@
 
 #import <objc/NSObject.h>
 
-@class NSData, NSDate, NSDictionary, NSError, NSURLResponse, SPTDataLoaderRequest;
+@class NSData, NSDate, NSDictionary, NSError, NSURL, SPTDataLoaderRequest;
 
 @interface SPTDataLoaderResponse : NSObject
 {
     SPTDataLoaderRequest *_request;
     NSError *_error;
     NSDictionary *_responseHeaders;
+    NSURL *_resolvedURL;
     NSDate *_retryAfter;
     NSData *_body;
     double _requestTime;
     long long _statusCode;
-    NSURLResponse *_response;
 }
 
 + (id)dataLoaderResponseWithRequest:(id)arg1 response:(id)arg2;
 - (void).cxx_destruct;
-@property(readonly, nonatomic) NSURLResponse *response; // @synthesize response=_response;
 @property(readonly, nonatomic) long long statusCode; // @synthesize statusCode=_statusCode;
 @property(nonatomic) double requestTime; // @synthesize requestTime=_requestTime;
 @property(retain, nonatomic) NSData *body; // @synthesize body=_body;
 @property(readonly, nonatomic) NSDate *retryAfter; // @synthesize retryAfter=_retryAfter;
+@property(readonly, nonatomic) NSURL *resolvedURL; // @synthesize resolvedURL=_resolvedURL;
 @property(retain, nonatomic) NSDictionary *responseHeaders; // @synthesize responseHeaders=_responseHeaders;
 @property(retain, nonatomic) NSError *error; // @synthesize error=_error;
 @property(readonly, nonatomic) SPTDataLoaderRequest *request; // @synthesize request=_request;

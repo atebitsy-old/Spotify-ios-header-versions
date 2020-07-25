@@ -11,7 +11,7 @@
 #import "SPTSleepTimerController-Protocol.h"
 #import "SPTTimerDelegate-Protocol.h"
 
-@class NSHashTable, NSString, SPTTimer;
+@class NSHashTable, NSString, SPTSleepTimerUBILogger, SPTTimer;
 @protocol SPTAlertInterface, SPTGaiaConnectAPI, SPTLogCenter, SPTPlayer;
 
 @interface SPTSleepTimerControllerImpl : NSObject <SPTTimerDelegate, SPTGaiaConnectObserver, SPTPlayerObserver, SPTSleepTimerController>
@@ -24,9 +24,11 @@
     NSHashTable *_eventObservers;
     id <SPTAlertInterface> _alertInterface;
     id <SPTLogCenter> _logCenter;
+    SPTSleepTimerUBILogger *_logger;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTSleepTimerUBILogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) NSHashTable *eventObservers; // @synthesize eventObservers=_eventObservers;
@@ -64,7 +66,7 @@
 - (double)timeRemaining;
 - (id)defaultFormattedTime;
 - (void)dealloc;
-- (id)initWithPlayer:(id)arg1 connectManager:(id)arg2 alertInterface:(id)arg3 logCenter:(id)arg4;
+- (id)initWithPlayer:(id)arg1 connectManager:(id)arg2 alertInterface:(id)arg3 logCenter:(id)arg4 logger:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

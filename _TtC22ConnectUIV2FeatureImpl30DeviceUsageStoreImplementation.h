@@ -8,6 +8,9 @@
 
 @interface _TtC22ConnectUIV2FeatureImpl30DeviceUsageStoreImplementation : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: lastStoredDataKey
+    // Error parsing type: , name: domain
+    // Error parsing type: , name: keyChainManager
 }
 
 @end

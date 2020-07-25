@@ -39,6 +39,7 @@
 - (id)lastCrashURL;
 - (id)lastCrashIdentifier;
 - (void)tellObserversToSendPendingCrashReports;
+- (void)synchronizeState;
 - (void)setValue:(id)arg1 forStateKey:(id)arg2;
 - (void)leaveBreadcrumb:(id)arg1;
 - (void)recordNonFatalError:(id)arg1;

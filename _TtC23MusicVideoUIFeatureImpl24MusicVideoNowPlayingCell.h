@@ -8,7 +8,16 @@
 
 @interface _TtC23MusicVideoUIFeatureImpl24MusicVideoNowPlayingCell : UICollectionViewCell
 {
-    // Error parsing type: , name: manifestIdentifier
+    // Error parsing type: , name: shouldDisplayVideoSurface
+    // Error parsing type: , name: imageView
+    // Error parsing type: , name: windowedContentView
+    // Error parsing type: , name: activityIndicatorView
+    // Error parsing type: , name: windowedContentViewConstraints
+    // Error parsing type: , name: videoSurfaceView
+    // Error parsing type: , name: windowedContentInsets
+    // Error parsing type: , name: videoSurfaceManager
+    // Error parsing type: , name: videoSurfaceFactory
+    // Error parsing type: , name: playerTrackUri
 }
 
 - (void).cxx_destruct;

@@ -9,7 +9,7 @@
 #import "SPTVoiceLibraryService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVoiceLibraryWakewordImplementation;
-@protocol SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTEventSenderService, SPTNetworkService, SPTPlayerFeature, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryAudioRecorderFactory, SPTVoiceLibraryAudioSession;
+@protocol SPTCoreService, SPTDataLoaderAuthorisationHostRegistration, SPTEventSenderService, SPTNetworkService, SPTPlayerFeature, SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryAudioRecorderFactory, SPTVoiceLibraryAudioSession, SPTVoiceLibrarySharedAudioBufferConsumer><SPTVoiceLibrarySharedAudioBufferProducer;
 
 @interface SPTVoiceLibraryServiceImplementation : NSObject <SPTVoiceLibraryService>
 {
@@ -22,10 +22,12 @@
     id <SPTVoiceLibraryAudioRecorder> _audioRecorder;
     id <SPTVoiceLibraryAudioSession> _audioSessionManager;
     SPTVoiceLibraryWakewordImplementation *_wakewordImplementation;
+    id <SPTVoiceLibrarySharedAudioBufferConsumer><SPTVoiceLibrarySharedAudioBufferProducer> _sharedAudioBuffer;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTVoiceLibrarySharedAudioBufferConsumer><SPTVoiceLibrarySharedAudioBufferProducer> sharedAudioBuffer; // @synthesize sharedAudioBuffer=_sharedAudioBuffer;
 @property(retain, nonatomic) SPTVoiceLibraryWakewordImplementation *wakewordImplementation; // @synthesize wakewordImplementation=_wakewordImplementation;
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioSession> audioSessionManager; // @synthesize audioSessionManager=_audioSessionManager;
 @property(retain, nonatomic) id <SPTVoiceLibraryAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
@@ -40,7 +42,7 @@
 - (id)createVoiceRecognitionTaskFactoryWithPlayer:(id)arg1 sessionHandlingOptions:(id)arg2;
 - (id)providePlayerWithReferrerIdentifier:(id)arg1;
 - (id)authorisationHosts;
-- (id)provideWakeword;
+- (id)createWakewordProviderWithOptions:(id)arg1;
 - (id)createVoiceSessionFactoryWithConsumer:(long long)arg1 sessionHandlingOptions:(id)arg2;
 - (void)unload;
 - (void)load;

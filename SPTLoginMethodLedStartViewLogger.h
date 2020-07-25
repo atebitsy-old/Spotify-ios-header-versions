@@ -6,10 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginErrorLogger;
+#import "SPTLoginScreenViewLoggerProtocol-Protocol.h"
+
+@class NSString, SPTLoginErrorLogger;
 @protocol SPTLoginLogger;
 
-@interface SPTLoginMethodLedStartViewLogger : NSObject
+@interface SPTLoginMethodLedStartViewLogger : NSObject <SPTLoginScreenViewLoggerProtocol>
 {
     id <SPTLoginLogger> _logger;
     SPTLoginErrorLogger *_errorLogger;
@@ -20,10 +22,14 @@
 @property(readonly, nonatomic) unsigned long long method; // @synthesize method=_method;
 @property(readonly, nonatomic) SPTLoginErrorLogger *errorLogger; // @synthesize errorLogger=_errorLogger;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void)logUserDidTapLoginButton;
-- (void)logUserDidTapSignupButton;
 - (void)logUserDidSeeView;
 - (id)initWithLogger:(id)arg1 method:(unsigned long long)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

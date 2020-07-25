@@ -9,6 +9,7 @@
 @interface _TtC28PodcastOnboardingFeatureImpl20TopicPickerTagLogger : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: logCenter
+    // Error parsing type: , name: eventSender
     // Error parsing type: , name: pageURI
     // Error parsing type: , name: session
 }

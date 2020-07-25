@@ -8,19 +8,13 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl39NowPlayingEpisodeModeHeadViewController : UIViewController
 {
-    // Error parsing type: , name: playerService
-    // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: entityImageView
-    // Error parsing type: , name: entityTitleLabel
-    // Error parsing type: , name: entitySubtitleLabel
-    // Error parsing type: , name: entityDurationLabel
+    // Error parsing type: , name: viewModel
+    // Error parsing type: , name: talkHeaderView
+    // Error parsing type: , name: musicHeaderView
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
-- (void)viewWillDisappear:(_Bool)arg1;
-- (void)viewWillAppear:(_Bool)arg1;
-- (void)viewDidLoad;
 - (id)initWithCoder:(id)arg1;
 
 @end

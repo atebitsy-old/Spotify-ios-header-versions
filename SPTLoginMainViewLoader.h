@@ -6,25 +6,24 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginPerformanceLogging;
-@protocol SPTLoginStateController, SPTMetaViewController, SPTSessionServicesLoader;
+@protocol SPTLoginLogger, SPTLoginStateController, SPTMetaViewController, SPTSessionServicesLoader;
 
 @interface SPTLoginMainViewLoader : NSObject
 {
     id <SPTMetaViewController> _metaViewController;
     id <SPTSessionServicesLoader> _sessionServicesLoader;
     id <SPTLoginStateController> _loginStateController;
-    SPTLoginPerformanceLogging *_performanceLogging;
+    id <SPTLoginLogger> _logger;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTLoginPerformanceLogging *performanceLogging; // @synthesize performanceLogging=_performanceLogging;
-@property(retain, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
-@property(retain, nonatomic) id <SPTSessionServicesLoader> sessionServicesLoader; // @synthesize sessionServicesLoader=_sessionServicesLoader;
-@property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
+@property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
+@property(readonly, nonatomic) id <SPTSessionServicesLoader> sessionServicesLoader; // @synthesize sessionServicesLoader=_sessionServicesLoader;
+@property(readonly, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 - (void)presentMainScreenWithCompletion:(CDUnknownBlockType)arg1;
 - (void)loadSessionServicesAndPresentMainScreenWithCompletion:(CDUnknownBlockType)arg1;
-- (id)initWithMetaViewController:(id)arg1 sessionServicesLoader:(id)arg2 loginStateController:(id)arg3 performanceLogging:(id)arg4;
+- (id)initWithMetaViewController:(id)arg1 sessionServicesLoader:(id)arg2 loginStateController:(id)arg3 logger:(id)arg4;
 
 @end
 

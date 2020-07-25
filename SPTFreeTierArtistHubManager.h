@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class HUBComponentDefaults, HUBComponentRegistry, SPTFreeTierArtistBarButtonFactory, SPTFreeTierArtistCollectionModelFactory, SPTFreeTierArtistCommandHandlerFactory, SPTFreeTierArtistContentOperationFactory;
-@protocol GLUETheme, SPTAgeVerificationProvider, SPTBarButtonItemManager, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTInAppMessageMessageRequester, SPTNetworkConnectivityController, SPTPermissionsOnDemandState, SPTShelves, VISREFIntegrationManager;
+@protocol GLUETheme, SPTAgeVerificationProvider, SPTBarButtonItemManager, SPTExplicitContentAccessManager, SPTHubsRendererFactory, SPTHugsFactory, SPTInAppMessageMessageRequester, SPTNetworkConnectivityController, SPTPermissionsOnDemandState, SPTShelves, SPTUBILogger, VISREFIntegrationManager;
 
 @interface SPTFreeTierArtistHubManager : NSObject
 {
@@ -28,9 +28,11 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <SPTAgeVerificationProvider> _ageVerificationProvider;
     id <SPTInAppMessageMessageRequester> _inAppMessageRequester;
+    id <SPTUBILogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTInAppMessageMessageRequester> inAppMessageRequester; // @synthesize inAppMessageRequester=_inAppMessageRequester;
 @property(readonly, nonatomic) __weak id <SPTAgeVerificationProvider> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(nonatomic) __weak id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -53,7 +55,7 @@
 - (id)createArtistViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)createViewControllerForViewURI:(id)arg1 referrerIdentifier:(id)arg2;
 - (_Bool)canCreateViewControllerForViewURI:(id)arg1;
-- (id)initWithComponentRegistry:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 contentOperationFactory:(id)arg4 commandHandlerFactory:(id)arg5 barButtonFactory:(id)arg6 glueTheme:(id)arg7 artistHubComponentsFactory:(id)arg8 encoreArtistHubComponentsFactory:(id)arg9 onDemandState:(id)arg10 barButtonItemManager:(id)arg11 shelves:(id)arg12 visualRefreshIntegrationManager:(id)arg13 networkConnectivityController:(id)arg14 explicitContentAccessService:(id)arg15 ageVerificationProvider:(id)arg16 offlineModelFactory:(id)arg17 inAppMessageRequester:(id)arg18;
+- (id)initWithComponentRegistry:(id)arg1 hubsRendererFactory:(id)arg2 hugsFactory:(id)arg3 contentOperationFactory:(id)arg4 commandHandlerFactory:(id)arg5 barButtonFactory:(id)arg6 glueTheme:(id)arg7 artistHubComponentsFactory:(id)arg8 encoreArtistHubComponentsFactory:(id)arg9 onDemandState:(id)arg10 barButtonItemManager:(id)arg11 shelves:(id)arg12 visualRefreshIntegrationManager:(id)arg13 networkConnectivityController:(id)arg14 explicitContentAccessService:(id)arg15 ageVerificationProvider:(id)arg16 offlineModelFactory:(id)arg17 inAppMessageRequester:(id)arg18 ubiLogger:(id)arg19;
 
 @end
 

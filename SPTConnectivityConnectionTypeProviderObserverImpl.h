@@ -12,7 +12,7 @@
 
 @interface SPTConnectivityConnectionTypeProviderObserverImpl : NSObject <SPTConnectivityConnectionTypeProviderObserver>
 {
-    weak_ptr_3008fdc2 _bridge;
+    weak_ptr_e693900f _bridge;
     id <SPTConnectivityConnectionTypeProvider> _provider;
 }
 
@@ -20,7 +20,7 @@
 - (void).cxx_destruct;
 - (void)dealloc;
 - (void)connectionTypeProvider:(id)arg1 didChangeFromConnectionType:(long long)arg2 toConnectionType:(long long)arg3;
-- (id)initWithBridge:(const weak_ptr_3008fdc2 *)arg1 connectionTypeProvider:(id)arg2;
+- (id)initWithBridge:(const weak_ptr_e693900f *)arg1 connectionTypeProvider:(id)arg2;
 
 @end
 

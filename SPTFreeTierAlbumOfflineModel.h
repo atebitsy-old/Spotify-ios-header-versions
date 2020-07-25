@@ -10,7 +10,7 @@
 #import "SPTOfflineObserver-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTCollectionPlatformFetchOptions;
-@protocol SPTAlertInterface, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTFreeTierAlbumCosmosMetadataFields, SPTFreeTierEntityOfflineDelegate, SPTOfflineManager, SPTProductState;
+@protocol SPTAlertInterface, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTFreeTierAlbumCosmosMetadataFields, SPTFreeTierEntityOfflineDelegate, SPTOfflineManager, SPTProductState, _TtP17OfflineMixFeature24SPTOfflineMixTestManager_;
 
 @interface SPTFreeTierAlbumOfflineModel : NSObject <SPTOfflineObserver, SPTFreeTierEntityOfflineViewModel>
 {
@@ -28,9 +28,11 @@
     NSArray *_rawTracks;
     id <SPTAlertInterface> _alertInterface;
     id <SPTProductState> _productState;
+    id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> _offlineMixTestManager;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> offlineMixTestManager; // @synthesize offlineMixTestManager=_offlineMixTestManager;
 @property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(nonatomic) _Bool loaded; // @synthesize loaded=_loaded;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
@@ -62,7 +64,7 @@
 @property(readonly, nonatomic) NSString *albumName;
 - (void)loadWithCompletion:(CDUnknownBlockType)arg1;
 - (void)dealloc;
-- (id)initWithOfflineManager:(id)arg1 albumURL:(id)arg2 username:(id)arg3 collectionPlatform:(id)arg4 alertInterface:(id)arg5 productState:(id)arg6;
+- (id)initWithOfflineManager:(id)arg1 albumURL:(id)arg2 username:(id)arg3 collectionPlatform:(id)arg4 alertInterface:(id)arg5 productState:(id)arg6 offlineMixTestManager:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

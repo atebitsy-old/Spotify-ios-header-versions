@@ -9,7 +9,7 @@
 #import "SPTGeniusFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTGeniusScrollProvider, SPTGeniusService;
-@protocol SPTContainerService, SPTCoreService, SPTLyricsFeature, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayerFeature, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
+@protocol SPTContainerService, SPTCoreService, SPTLyricsFeature, SPTNetworkService, SPTNowPlayingPlatformService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTURIDispatchService;
 
 @interface SPTGeniusFeatureImplementation : NSObject <SPTGeniusFeature>
 {
@@ -22,6 +22,7 @@
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     id <SPTLyricsFeature> _lyricsFeature;
     id <SPTURIDispatchService> _uriDispatchService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTGeniusService *_geniusService;
     SPTGeniusScrollProvider *_scrollProvider;
 }
@@ -30,6 +31,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTGeniusScrollProvider *scrollProvider; // @synthesize scrollProvider=_scrollProvider;
 @property(retain, nonatomic) SPTGeniusService *geniusService; // @synthesize geniusService=_geniusService;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTLyricsFeature> lyricsFeature; // @synthesize lyricsFeature=_lyricsFeature;
 @property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;

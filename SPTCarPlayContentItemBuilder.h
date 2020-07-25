@@ -24,7 +24,9 @@
 @property(retain, nonatomic) SPTCarPlayFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
 @property(readonly, nonatomic) id <SPTExternalIntegrationPlaybackController> playbackController; // @synthesize playbackController=_playbackController;
+- (id)contentItemFromExternalIntegrationContent:(id)arg1 withIsPlayable:(_Bool)arg2;
 - (id)contentItemFromExternalIntegrationContent:(id)arg1;
+- (id)continuePlayingContentItemWithSubtitle:(id)arg1;
 - (id)errorIsOfflineContentItem;
 - (id)errorContentItem;
 - (id)emptyListContentItemOfParent:(id)arg1;

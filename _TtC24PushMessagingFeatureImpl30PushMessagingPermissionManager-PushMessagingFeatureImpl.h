@@ -6,7 +6,9 @@
 
 #import "_TtC24PushMessagingFeatureImpl30PushMessagingPermissionManager.h"
 
-@interface _TtC24PushMessagingFeatureImpl30PushMessagingPermissionManager (PushMessagingFeatureImpl)
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
+#import "MessageBarControllerObserver-Protocol.h"
+
+@interface _TtC24PushMessagingFeatureImpl30PushMessagingPermissionManager (PushMessagingFeatureImpl) <MessageBarControllerObserver>
+- (void)messageBarController:(id)arg1 didChangeToContentViewController:(id)arg2;
 @end
 

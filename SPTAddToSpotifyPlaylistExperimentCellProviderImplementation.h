@@ -34,6 +34,8 @@
     SPTShadowPlaylistItemsViewModel *_itemsViewModel;
 }
 
++ (long long)encoreRestrictionForTrack:(id)arg1;
++ (id)encoreModelForCellModel:(id)arg1 modelHelper:(id)arg2 isPressed:(_Bool)arg3;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTShadowPlaylistItemsViewModel *itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(retain, nonatomic) id <SPTAddToSpotifyPlaylistExperimentLogger> logger; // @synthesize logger=_logger;
@@ -65,24 +67,31 @@
 - (id)sectionFooter;
 - (id)sectionHeader;
 - (unsigned long long)section;
+- (id)items;
 - (unsigned long long)numberOfRows;
+- (id)trackEntityForIndexPath:(id)arg1;
 - (void)unlikeWithSender:(id)arg1;
 - (void)unhideWithSender:(id)arg1;
 - (void)unbanWithSender:(id)arg1;
 - (void)tappedWithSender:(id)arg1;
 - (void)contextMenuTappedWithSender:(id)arg1;
 - (id)indexPathForView:(id)arg1;
+- (id)reuseIdentifierForItem:(id)arg1 indexPath:(id)arg2;
 - (id)reuseIdentifiers;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
+- (double)heightForItem:(id)arg1 indexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;
+- (void)didEndDisplayingPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)willDisplayPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (long long)loggerIndexForTrackIndex:(unsigned long long)arg1;
+- (void)didSelectPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)enableSwipeGesturesOnCell:(id)arg1 withTrack:(id)arg2 indexPath:(id)arg3;
-- (long long)encoreRestrictionForTrackViewModel:(id)arg1;
-- (id)encoreModelForTrack:(id)arg1 atIndexPath:(id)arg2 isPressed:(_Bool)arg3;
+- (void)configureCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 - (id)initWithTrackRowFactory:(id)arg1 viewModelFactory:(CDUnknownBlockType)arg2 originalPlaylistViewModel:(id)arg3 player:(id)arg4 playlistURI:(id)arg5 uriResolver:(id)arg6 origin:(id)arg7 shelves:(id)arg8 theme:(id)arg9 contextMenuService:(id)arg10 logger:(id)arg11 itemsViewModel:(id)arg12;
 

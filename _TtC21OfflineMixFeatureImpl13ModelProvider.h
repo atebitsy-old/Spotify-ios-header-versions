@@ -14,6 +14,8 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (id)provideTrackSectionFor:(id)arg1;
+- (id)provideFreeTierPlaylistCellProviderFor:(id)arg1 itemsViewModel:(id)arg2 assistedCurationUIService:(id)arg3;
 - (id)provideFreeTierTrackOfflineToggleCommandHandlerFor:(id)arg1;
 - (id)provideFreeTierTrackOfflineButtonViewModelFor:(id)arg1;
 

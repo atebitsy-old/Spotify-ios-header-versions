@@ -10,7 +10,7 @@
 #import "SPTFreeTierPlaylistContextMenuPresenter-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTShowsFormatVideoContextMenuProvider;
+@protocol SPTContextMenuOptionsFactory, SPTContextMenuPresenter, SPTContextMenuPresenterFactory, SPTShowsFormatVideoContextMenuProvider;
 
 @interface SPTShowsFormatPlaylistContextMenuPresenter : NSObject <SPTContextMenuPresenterDelegate, SPTFreeTierPlaylistContextMenuPresenter>
 {
@@ -19,16 +19,18 @@
     NSURL *_pageURI;
     id <SPTContextMenuPresenterFactory> _presenterFactory;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
+    id <SPTContextMenuOptionsFactory> _optionsFactory;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTContextMenuOptionsFactory> optionsFactory; // @synthesize optionsFactory=_optionsFactory;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(retain, nonatomic) id <SPTContextMenuPresenterFactory> presenterFactory; // @synthesize presenterFactory=_presenterFactory;
 @property(retain, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, nonatomic) id <SPTShowsFormatVideoContextMenuProvider> videoContextMenuProvider; // @synthesize videoContextMenuProvider=_videoContextMenuProvider;
 @property(readonly, nonatomic) _Bool contextAwareSharingEnabled; // @synthesize contextAwareSharingEnabled=_contextAwareSharingEnabled;
-- (_Bool)presentContextMenuForItemAtIndexPath:(id)arg1 itemsViewModel:(id)arg2 sender:(id)arg3 viewController:(id)arg4;
-- (id)initWithVideoContextMenuPresenter:(id)arg1 presenterFactory:(id)arg2 contextAwareSharingEnabled:(_Bool)arg3 pageURI:(id)arg4;
+- (_Bool)presentContextMenuForTrackViewModel:(id)arg1 sender:(id)arg2 viewController:(id)arg3;
+- (id)initWithVideoContextMenuPresenter:(id)arg1 presenterFactory:(id)arg2 optionsFactory:(id)arg3 contextAwareSharingEnabled:(_Bool)arg4 pageURI:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

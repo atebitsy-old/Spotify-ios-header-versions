@@ -11,12 +11,14 @@
 @interface SPTAdVoiceModel : NSObject
 {
     _Bool _isSpeechReceived;
+    _Bool _isAudioSignalEnabled;
     long long _voiceState;
     SPTAdVoiceMetadata *_voiceAdMetadata;
     long long _timerID;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool isAudioSignalEnabled; // @synthesize isAudioSignalEnabled=_isAudioSignalEnabled;
 @property(readonly, nonatomic) _Bool isSpeechReceived; // @synthesize isSpeechReceived=_isSpeechReceived;
 @property(readonly, nonatomic) long long timerID; // @synthesize timerID=_timerID;
 @property(readonly, nonatomic) SPTAdVoiceMetadata *voiceAdMetadata; // @synthesize voiceAdMetadata=_voiceAdMetadata;
@@ -24,7 +26,7 @@
 - (unsigned long long)hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)copyWithUpdates:(CDUnknownBlockType)arg1;
-- (id)initWithVoiceState:(long long)arg1 voiceAdMetadata:(id)arg2 timerID:(long long)arg3 isSpeechReceived:(_Bool)arg4;
+- (id)initWithVoiceState:(long long)arg1 voiceAdMetadata:(id)arg2 timerID:(long long)arg3 isSpeechReceived:(_Bool)arg4 isAudioSignalEnabled:(_Bool)arg5;
 
 @end
 

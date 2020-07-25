@@ -8,7 +8,7 @@
 
 #import "SPTLoginRecoverAccountDataLoaderDelegate-Protocol.h"
 
-@class NSString, SPTLoginMagicLinkDoRequestViewLogger, SPTLoginMagicLinkRequestTracker, SPTLoginMagicLinkRequestWarningPresenter, SPTLoginRecoverAccountDataLoader, SPTLoginTheme;
+@class NSString, SPTLoginMagicLinkDoRequestViewLogger, SPTLoginMagicLinkRequestTracker, SPTLoginMagicLinkRequestWarningPresenter, SPTLoginRecoverAccountDataLoader;
 @protocol SPTLoginNavigationCoordinator, SPTMagicLinkDoRequestViewModelDelegate;
 
 @interface SPTLoginMagicLinkDoRequestViewModel : NSObject <SPTLoginRecoverAccountDataLoaderDelegate>
@@ -16,7 +16,6 @@
     id <SPTMagicLinkDoRequestViewModelDelegate> _delegate;
     NSString *_emailOrUsername;
     SPTLoginMagicLinkDoRequestViewLogger *_logger;
-    SPTLoginTheme *_theme;
     NSString *_errorMessage;
     SPTLoginRecoverAccountDataLoader *_recoverAccountDataLoader;
     id <SPTLoginNavigationCoordinator> _navigationCoordinator;
@@ -30,23 +29,22 @@
 @property(readonly, nonatomic) id <SPTLoginNavigationCoordinator> navigationCoordinator; // @synthesize navigationCoordinator=_navigationCoordinator;
 @property(readonly, nonatomic) SPTLoginRecoverAccountDataLoader *recoverAccountDataLoader; // @synthesize recoverAccountDataLoader=_recoverAccountDataLoader;
 @property(readonly, copy, nonatomic) NSString *errorMessage; // @synthesize errorMessage=_errorMessage;
-@property(readonly, nonatomic) SPTLoginTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTLoginMagicLinkDoRequestViewLogger *logger; // @synthesize logger=_logger;
 @property(copy, nonatomic) NSString *emailOrUsername; // @synthesize emailOrUsername=_emailOrUsername;
 @property(nonatomic) __weak id <SPTMagicLinkDoRequestViewModelDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)userDidSeeView;
 - (id)localizedDescriptionForError:(id)arg1;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithError:(id)arg2 forEmail:(id)arg3;
 - (void)dataLoader:(id)arg1 didFinishLoadingWithSuccessForEmail:(id)arg2;
 - (void)startRequestForLoginLinkWithEmail:(id)arg1;
-- (void)requestLoginLinkWithEmail:(id)arg1;
+- (void)userDidRequestLoginLinkWithEmail:(id)arg1;
 - (id)nextButtonText;
 - (id)fieldDisclosureLabelText;
 - (id)fieldAccessibilityLabel;
 - (id)fieldTitleLabelText;
 - (id)titleLabelText;
 - (id)preExistingDisclosureLabelErrorMessage;
-- (id)viewStyle;
-- (id)initWithTheme:(id)arg1 emailOrUsername:(id)arg2 errorMessage:(id)arg3 recoverAccountDataLoader:(id)arg4 navigationCoordinator:(id)arg5 logger:(id)arg6 magicLinkRequestTracker:(id)arg7 magicLinkWarningPresenter:(id)arg8;
+- (id)initWithEmailOrUsername:(id)arg1 errorMessage:(id)arg2 recoverAccountDataLoader:(id)arg3 navigationCoordinator:(id)arg4 logger:(id)arg5 magicLinkRequestTracker:(id)arg6 magicLinkWarningPresenter:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

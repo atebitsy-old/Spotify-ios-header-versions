@@ -8,7 +8,7 @@
 
 #import "SPTYourLibraryTabControlDelegate-Protocol.h"
 
-@class GLUEAccessoryIconButton, NSLayoutConstraint, NSString, SPTYourLibraryGLUETheme, SPTYourLibraryTabControl;
+@class NSLayoutConstraint, NSString, SPTYourLibraryGLUETheme, SPTYourLibraryTabControl;
 @protocol SPTYourLibraryHeaderViewControllerDelegate, SPTYourLibraryViewModel;
 
 @interface SPTYourLibraryHeaderViewController : UIViewController <SPTYourLibraryTabControlDelegate>
@@ -20,7 +20,6 @@
     SPTYourLibraryGLUETheme *_theme;
     id <SPTYourLibraryViewModel> _viewModel;
     SPTYourLibraryTabControl *_tabControl;
-    GLUEAccessoryIconButton *_actionButton;
     double _lastScrollPosition;
     NSLayoutConstraint *_topConstraint;
 }
@@ -30,7 +29,6 @@
 @property(retain, nonatomic) NSLayoutConstraint *topConstraint; // @synthesize topConstraint=_topConstraint;
 @property(nonatomic) _Bool updateHeaderOffset; // @synthesize updateHeaderOffset=_updateHeaderOffset;
 @property(nonatomic) double lastScrollPosition; // @synthesize lastScrollPosition=_lastScrollPosition;
-@property(retain, nonatomic) GLUEAccessoryIconButton *actionButton; // @synthesize actionButton=_actionButton;
 @property(retain, nonatomic) SPTYourLibraryTabControl *tabControl; // @synthesize tabControl=_tabControl;
 @property(readonly, nonatomic) id <SPTYourLibraryViewModel> viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic) SPTYourLibraryGLUETheme *theme; // @synthesize theme=_theme;

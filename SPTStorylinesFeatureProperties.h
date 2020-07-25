@@ -13,8 +13,10 @@
 @interface SPTStorylinesFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _storylinesEnabled;
+    _Bool _useContextTrackExtensions;
 }
 
+@property(readonly, nonatomic) _Bool useContextTrackExtensions; // @synthesize useContextTrackExtensions=_useContextTrackExtensions;
 @property(readonly, nonatomic) _Bool storylinesEnabled; // @synthesize storylinesEnabled=_storylinesEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

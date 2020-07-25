@@ -13,8 +13,10 @@
 @interface SPTPerformanceMetricsFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _shouldCollectAppMetrics;
+    _Bool _shouldSendTimeMeasurements;
 }
 
+@property(readonly, nonatomic) _Bool shouldSendTimeMeasurements; // @synthesize shouldSendTimeMeasurements=_shouldSendTimeMeasurements;
 @property(readonly, nonatomic) _Bool shouldCollectAppMetrics; // @synthesize shouldCollectAppMetrics=_shouldCollectAppMetrics;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -58,6 +58,7 @@
 - (void)writeInitialMessage;
 - (void)setupStreams;
 - (void)write:(short **)arg1 maxLength:(unsigned long long)arg2;
+- (void)writeData:(id)arg1;
 - (void)cancel;
 - (void)start;
 - (id)initWithDataLoader:(id)arg1 player:(id)arg2 sampleRate:(double)arg3 speechProxyRequest:(id)arg4;

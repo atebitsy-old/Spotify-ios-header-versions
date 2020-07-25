@@ -9,8 +9,5 @@
 @interface NSDateFormatter (CommonHTTP)
 + (id)spt_ISO8601MillisecondsFormatter;
 + (id)spt_ISO8601Formatter;
-+ (id)spt_ANSICFormatter;
-+ (id)spt_RFC850Formatter;
-+ (id)spt_RFC1123Formatter;
 @end
 

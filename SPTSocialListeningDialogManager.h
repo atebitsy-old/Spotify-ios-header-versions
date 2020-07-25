@@ -6,12 +6,13 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTSocialListeningDialogPresenterObserver-Protocol.h"
 #import "SPTSocialListeningModelObserver-Protocol.h"
 
 @class NSString, SPTSocialListeningDialogPresenter, SPTSocialListeningEducationSlatePresenter;
 @protocol SPTLocalSettings, SPTSnackbarConditionalPresenter, SPTSocialListeningModel, SPTSocialListeningTestManager;
 
-@interface SPTSocialListeningDialogManager : NSObject <SPTSocialListeningModelObserver>
+@interface SPTSocialListeningDialogManager : NSObject <SPTSocialListeningModelObserver, SPTSocialListeningDialogPresenterObserver>
 {
     SPTSocialListeningDialogPresenter *_dialogPresenter;
     SPTSocialListeningEducationSlatePresenter *_slatePresenter;
@@ -28,6 +29,7 @@
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) SPTSocialListeningEducationSlatePresenter *slatePresenter; // @synthesize slatePresenter=_slatePresenter;
 @property(readonly, nonatomic) SPTSocialListeningDialogPresenter *dialogPresenter; // @synthesize dialogPresenter=_dialogPresenter;
+- (void)presenter:(id)arg1 didSelectSessionMode:(long long)arg2 forJoinURL:(id)arg3;
 - (id)youLeftSessionNotificationMessage;
 - (id)youEndedSessionNotificationMessage;
 - (id)hostDisplayNameFromConnectedUsers:(id)arg1;

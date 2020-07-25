@@ -12,6 +12,7 @@
 
 @interface SPTSearch2RequestParameters : NSObject <NSCopying>
 {
+    _Bool _onDemandSetsEnabled;
     NSString *_query;
     unsigned long long _entityVersion;
     NSString *_catalogue;
@@ -29,6 +30,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool onDemandSetsEnabled; // @synthesize onDemandSetsEnabled=_onDemandSetsEnabled;
 @property(nonatomic) unsigned long long endpointVersion; // @synthesize endpointVersion=_endpointVersion;
 @property(copy, nonatomic) NSString *drilldownEntityType; // @synthesize drilldownEntityType=_drilldownEntityType;
 @property(nonatomic) unsigned long long experience; // @synthesize experience=_experience;
@@ -51,7 +53,7 @@
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (_Bool)isEqual:(id)arg1;
 @property(readonly, nonatomic) NSURLComponents *urlComponents;
-- (id)initWithQuery:(id)arg1 entityVersion:(unsigned long long)arg2 clientVersion:(id)arg3 catalogue:(id)arg4 country:(id)arg5 locale:(id)arg6 timestamp:(id)arg7 requestId:(id)arg8 experience:(unsigned long long)arg9 offset:(unsigned long long)arg10 limit:(unsigned long long)arg11 drilldownEntityType:(id)arg12 endpointVersion:(unsigned long long)arg13 entityTypes:(id)arg14;
+- (id)initWithQuery:(id)arg1 entityVersion:(unsigned long long)arg2 clientVersion:(id)arg3 catalogue:(id)arg4 country:(id)arg5 locale:(id)arg6 timestamp:(id)arg7 requestId:(id)arg8 experience:(unsigned long long)arg9 offset:(unsigned long long)arg10 limit:(unsigned long long)arg11 drilldownEntityType:(id)arg12 endpointVersion:(unsigned long long)arg13 entityTypes:(id)arg14 onDemandSetsEnabled:(_Bool)arg15;
 
 @end
 

@@ -14,7 +14,7 @@
 #import "SPTSleepTimerTimeObserver-Protocol.h"
 
 @class NSString, SPTNowPlayingContextMenuHeaderFactory, SPTNowPlayingLogger, SPTNowPlayingModel, SPTObserverManager;
-@protocol SPContextMenuFeature, SPTContextMenuPresenter, SPTLinkDispatcher, SPTNowPlayingLegacyFeedbackCoordinator, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingTestManager, SPTPodcastContextMenuProvider, SPTPodcastSpeedControlManager, SPTQueueLogger, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTSleepTimerController, SPTSleepTimerService, SPTUIPresentationService, _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
+@protocol SPContextMenuFeature, SPTContextMenuPresenter, SPTLinkDispatcher, SPTNowPlayingManager, SPTNowPlayingModeResolver, SPTNowPlayingTestManager, SPTPodcastContextMenuProvider, SPTPodcastSpeedControlManager, SPTQueueLogger, SPTShareFeature, SPTShowContextMenuControllerOptions, SPTSleepTimerController, SPTSleepTimerService, SPTUIPresentationService, _TtP18ConnectUIV2Feature33SPTConnectUIDevicePickerPresenter_, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
 @interface SPTNowPlayingAuxiliaryActionsHandlerImplementation : NSObject <SPTNowPlayingAuxiliaryActionsModelObserver, SPTPodcastPreferencesObserver, SPTContextMenuPresenterDelegate, SPTSleepTimerTimeObserver, SPTSleepTimerEventObserver, SPTNowPlayingAuxiliaryActionsHandler>
 {
@@ -29,7 +29,6 @@
     SPTNowPlayingLogger *_logger;
     SPTObserverManager *_observerManager;
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
-    id <SPTNowPlayingLegacyFeedbackCoordinator> _feedbackCoordinator;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
     id <SPTNowPlayingModeResolver> _modeResolver;
     id <SPTQueueLogger> _queueLogger;
@@ -51,7 +50,6 @@
 @property(readonly, nonatomic) id <SPTQueueLogger> queueLogger; // @synthesize queueLogger=_queueLogger;
 @property(readonly, nonatomic) __weak id <SPTNowPlayingModeResolver> modeResolver; // @synthesize modeResolver=_modeResolver;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
-@property(readonly, nonatomic) id <SPTNowPlayingLegacyFeedbackCoordinator> feedbackCoordinator; // @synthesize feedbackCoordinator=_feedbackCoordinator;
 @property(readonly, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
@@ -88,10 +86,7 @@
 - (void)presentSpeedControlMenuFromView:(id)arg1 inViewController:(id)arg2;
 - (void)logNegativeFeedbackResults;
 - (void)removeFromCollectionIfNeededWithConfirmation:(_Bool)arg1;
-- (void)handleLegacyFeedbackFeedbackWithViewController:(id)arg1 actionControl:(id)arg2 trackOnlyBan:(_Bool)arg3 confirmation:(_Bool)arg4;
-- (void)handlePremiumTierNegativeFeedbackWithViewController:(id)arg1 actionControl:(id)arg2 trackOnlyBan:(_Bool)arg3 withConfirmation:(_Bool)arg4;
 - (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1;
-- (void)handleCollectionNegativeFeedbackWithConfirmation:(_Bool)arg1;
 - (void)toggleBanStateFromViewController:(id)arg1 andActionControl:(id)arg2 andTrackOnlyBan:(_Bool)arg3 withConfirmation:(_Bool)arg4;
 - (void)toggleTrackBanStateFromViewController:(id)arg1 andActionControl:(id)arg2 withConfirmation:(_Bool)arg3;
 - (void)toggleTrackBanStateFromViewController:(id)arg1 andActionControl:(id)arg2;
@@ -106,7 +101,7 @@
 @property(readonly, nonatomic) _Bool isCurrentTrackInCollection;
 @property(readonly, nonatomic) _Bool isCurrentTrackBanned;
 - (void)dealloc;
-- (id)initWithModel:(id)arg1 speedControlManager:(id)arg2 presentationService:(id)arg3 devicePickerPresenter:(id)arg4 contextMenuService:(id)arg5 podcastContextMenuProvider:(id)arg6 nowPlayingManager:(id)arg7 linkDispatcher:(id)arg8 feedbackCoordinator:(id)arg9 modeResolver:(id)arg10 logger:(id)arg11 queueLogger:(id)arg12 testManager:(id)arg13 sleepTimerService:(id)arg14 shareFeature:(id)arg15 responsiveShuffleOnboardingController:(id)arg16;
+- (id)initWithModel:(id)arg1 speedControlManager:(id)arg2 presentationService:(id)arg3 devicePickerPresenter:(id)arg4 contextMenuService:(id)arg5 podcastContextMenuProvider:(id)arg6 nowPlayingManager:(id)arg7 linkDispatcher:(id)arg8 modeResolver:(id)arg9 logger:(id)arg10 queueLogger:(id)arg11 testManager:(id)arg12 sleepTimerService:(id)arg13 shareFeature:(id)arg14 responsiveShuffleOnboardingController:(id)arg15;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

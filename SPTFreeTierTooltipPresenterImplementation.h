@@ -28,6 +28,9 @@
 @property(retain, nonatomic) NSLayoutConstraint *verticalAlignmentConstraint; // @synthesize verticalAlignmentConstraint=_verticalAlignmentConstraint;
 @property(retain, nonatomic) SPTFreeTierTooltipTheme *theme; // @synthesize theme=_theme;
 - (void)userDidTapTooltipView:(id)arg1;
+- (id)horizontalGuideInContainer:(id)arg1 correspondingToRect:(struct CGRect)arg2;
+- (void)constrainTooltip:(id)arg1 inContainer:(id)arg2 pointingAtRect:(struct CGRect)arg3;
+- (void)constrainTooltipForCompactWidth:(id)arg1 inContainer:(id)arg2 pointingAtRect:(struct CGRect)arg3;
 - (_Bool)canFitTooltip:(id)arg1 inContainer:(id)arg2;
 - (double)timeIntervalForDuration:(long long)arg1;
 - (double)verticalMarginForArrowDirection:(unsigned long long)arg1 anchorRect:(struct CGRect)arg2 tooltip:(id)arg3 inContainerView:(id)arg4;

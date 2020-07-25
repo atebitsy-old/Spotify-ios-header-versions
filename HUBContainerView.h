@@ -36,6 +36,7 @@
 - (void)layoutSubviews;
 - (void)layoutContainerView;
 @property(nonatomic) _Bool useDiffingOnViewModelChanges;
+- (void)setViewModel:(id)arg1 animated:(_Bool)arg2;
 - (void)setBackgroundColor:(id)arg1;
 - (void)containerViewDidDisappear;
 - (void)containerViewWillDisappear;

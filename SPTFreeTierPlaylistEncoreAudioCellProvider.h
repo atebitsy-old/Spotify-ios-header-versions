@@ -8,11 +8,12 @@
 
 #import "SPTEncoreTrackRowDelegate-Protocol.h"
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+#import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistLogger;
 @protocol SPTEncoreTrackRowFactory, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTShelves;
 
-@interface SPTFreeTierPlaylistEncoreAudioCellProvider : NSObject <SPTEncoreTrackRowDelegate, SPTFreeTierPlaylistCellProvider>
+@interface SPTFreeTierPlaylistEncoreAudioCellProvider : NSObject <SPTEncoreTrackRowDelegate, SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2>
 {
     id <SPTFreeTierPlaylistCellProviderDelegate> _delegate;
     id <SPTEncoreTrackRowFactory> _trackRowFactory;
@@ -36,15 +37,22 @@
 - (void)contextMenuTappedWithSender:(id)arg1;
 - (id)indexPathForView:(id)arg1;
 - (id)reuseIdentifiers;
+- (id)reuseIdentifierForItem:(id)arg1 indexPath:(id)arg2;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
+- (double)heightForItem:(id)arg1 indexPath:(id)arg2;
+- (void)didEndDisplayingPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
+- (void)willDisplayPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (double)heightForRowAtIndexPath:(id)arg1;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (void)enableSwipeGesturesOnCell:(id)arg1 withTrackViewModel:(id)arg2 indexPath:(id)arg3;
 - (long long)encoreRestrictionForTrackViewModel:(id)arg1;
 - (id)encoreModelForTrackViewModel:(id)arg1 isPressed:(_Bool)arg2;
+- (void)configureCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 - (id)initWithTrackRowFactory:(id)arg1 itemsViewModel:(id)arg2 shelves:(id)arg3 playlistViewModel:(id)arg4 logger:(id)arg5;
 

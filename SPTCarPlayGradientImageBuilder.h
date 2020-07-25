@@ -11,7 +11,7 @@
 }
 
 + (id)colorByDimmingColor:(id)arg1 toContrastWithColor:(id)arg2 minContrastRatio:(double)arg3;
-- (id)drawGradientInRect:(struct CGRect)arg1 contentItem:(id)arg2;
+- (id)drawGradientInRect:(struct CGRect)arg1 contentItem:(id)arg2 isRTL:(_Bool)arg3;
 - (id)imageWithGradient:(id)arg1 contentItem:(id)arg2;
 
 @end

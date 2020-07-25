@@ -13,9 +13,12 @@
     // Error parsing type: , name: playlistModel
     // Error parsing type: , name: followFactory
     // Error parsing type: , name: connectManager
+    // Error parsing type: , name: actionLogger
+    // Error parsing type: , name: superbirdDetector
     // Error parsing type: , name: earconPlayer
-    // Error parsing type: , name: podcastSeekBackOnResumeTime
     // Error parsing type: , name: defaultSeekTime
+    // Error parsing type: , name: podcastSeekBackOnResumeTime
+    // Error parsing type: , name: noPreviousTrackErrorMessage
 }
 
 @end

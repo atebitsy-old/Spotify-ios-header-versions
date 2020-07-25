@@ -8,7 +8,7 @@
 
 @interface _TtC24CarModeEngineFeatureImpl28CarModeEngineSettingsManager : NSObject
 {
-    // Error parsing type: , name: delegate
+    // Error parsing type: , name: observerManager
     // Error parsing type: , name: localSettings
     // Error parsing type: , name: settingsRegistry
     // Error parsing type: , name: properties

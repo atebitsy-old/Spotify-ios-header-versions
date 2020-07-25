@@ -40,6 +40,15 @@
 + (id)spt_artistBiographyByReplacingEndlines:(id)arg1;
 + (id)stringForArtists:(id)arg1;
 + (id)stringForArtists:(id)arg1 maxWidth:(double)arg2 font:(id)arg3 numberOfLines:(unsigned long long)arg4 preceedingText:(id)arg5 uppercase:(_Bool)arg6 locale:(id)arg7;
++ (id)spt_phoneNumberButtonAccessibilityID;
++ (id)spt_emailButtonAccessibilityID;
++ (id)spt_continueWithEmailButtonAccessibilityID;
++ (id)spt_appleButtonAccessibilityID;
++ (id)spt_facebookButtonAccessibilityID;
++ (id)spt_signupButtonAccessibilityID;
++ (id)spt_loginButtonAccessibilityID;
++ (id)spt_intentLedStartViewAccessibilityIDPrefix;
++ (id)spt_welcomeViewAccessibilityIDPrefix;
 + (id)spt_serializedPlayCommandURIFromDictionary:(id)arg1;
 + (id)stringForSourceType:(long long)arg1;
 + (id)stringForEventType:(long long)arg1;
@@ -120,6 +129,7 @@
 - (id)ins_sha1String;
 - (id)ins_hexToData;
 - (id)spt_postProcessSkipDelayCountdownText;
+- (id)spt_base64EncodedStringBySHA256Hashing;
 @property(readonly, copy, nonatomic, getter=bm_stringBySHA256Hashing) NSString *bm_stringBySHA256Hashing;
 @property(readonly, copy, nonatomic, getter=bm_stringBySHA1Hashing) NSString *bm_stringBySHA1Hashing;
 - (id)bm_dataFromHexRepresentation;

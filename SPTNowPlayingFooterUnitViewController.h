@@ -6,35 +6,31 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTGaiaDevicesAvailableViewDelegate-Protocol.h"
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
-@class NSString, SPTNowPlayingButton, SPTTheme, UIView;
-@protocol SPTGaiaDevicesAvailableView, SPTGaiaDevicesAvailableViewProvider, SPTNowPlayingAuxiliaryActionsHandler, SPTNowPlayingContainingViewController;
+@class NSString, SPTTheme;
+@protocol SPTNowPlayingContainingViewController;
 
-@interface SPTNowPlayingFooterUnitViewController : UIViewController <SPTGaiaDevicesAvailableViewDelegate, SPTNowPlayingContainedViewController>
+@interface SPTNowPlayingFooterUnitViewController : UIViewController <SPTNowPlayingContainedViewController>
 {
-    id <SPTGaiaDevicesAvailableViewProvider> _devicesAvailableViewProvider;
-    id <SPTNowPlayingAuxiliaryActionsHandler> _auxiliaryActionsHandler;
+    UIViewController *_leftButtonViewController;
+    UIViewController *_rightButtonViewController;
     SPTTheme *_theme;
-    UIView<SPTGaiaDevicesAvailableView> *_devicesAvailableView;
-    SPTNowPlayingButton *_rightButton;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTNowPlayingButton *rightButton; // @synthesize rightButton=_rightButton;
-@property(retain, nonatomic) UIView<SPTGaiaDevicesAvailableView> *devicesAvailableView; // @synthesize devicesAvailableView=_devicesAvailableView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-@property(readonly, nonatomic) id <SPTNowPlayingAuxiliaryActionsHandler> auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
-@property(readonly, nonatomic) id <SPTGaiaDevicesAvailableViewProvider> devicesAvailableViewProvider; // @synthesize devicesAvailableViewProvider=_devicesAvailableViewProvider;
-- (void)didUpdateDevicesAvailableText:(id)arg1 withAccessibilityLabel:(id)arg2;
+@property(retain, nonatomic) UIViewController *rightButtonViewController; // @synthesize rightButtonViewController=_rightButtonViewController;
+@property(retain, nonatomic) UIViewController *leftButtonViewController; // @synthesize leftButtonViewController=_leftButtonViewController;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
-- (struct CGSize)preferredContentSize;
-- (void)setupViewConstraints;
-- (void)setupDevicesAvailableView;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
+- (void)setupLeftButton;
+- (void)setupRightButton;
+- (void)setupExtraConstraintsIfNeeded;
+- (void)addSubViewController:(id)arg1;
 - (void)viewDidLoad;
-- (id)initWithAuxiliaryActionsHandler:(id)arg1 devicesAvailableViewProvider:(id)arg2 rightButton:(id)arg3 theme:(id)arg4;
+- (id)initWithLeftButtonViewController:(id)arg1 rightButtonViewController:(id)arg2 theme:(id)arg3;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

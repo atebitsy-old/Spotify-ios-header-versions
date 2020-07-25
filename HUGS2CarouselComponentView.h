@@ -41,8 +41,8 @@
 @property(nonatomic) __weak id <UICollectionViewDragDelegate> dragDelegate;
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;

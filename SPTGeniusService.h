@@ -9,7 +9,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
-@class NSCache, NSMutableDictionary, NSMutableSet, NSString, NSTimer, SPTDataLoader, SPTGeniusDiskCache, SPTGeniusServiceEnabledResourcesLoadingState;
+@class NSCache, NSMutableDictionary, NSMutableSet, NSString, NSTimer, SPTDataLoader, SPTGeniusDiskCache, SPTGeniusFeatureProperties, SPTGeniusServiceEnabledResourcesLoadingState;
 @protocol SPTLocalSettings, SPTLyricsTrackChecker, SPTOfflineModeState;
 
 @interface SPTGeniusService : NSObject <SPTDataLoaderDelegate, SPTOfflineModeStateObserver>
@@ -26,9 +26,11 @@
     NSMutableSet *_enabledTrackURIs;
     SPTGeniusServiceEnabledResourcesLoadingState *_enabledResourcesLoadingState;
     NSTimer *_refreshEnabledURIsTimer;
+    SPTGeniusFeatureProperties *_remoteConfigurationProperties;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTGeniusFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(retain, nonatomic) NSTimer *refreshEnabledURIsTimer; // @synthesize refreshEnabledURIsTimer=_refreshEnabledURIsTimer;
 @property(nonatomic, getter=isAllowedToRefreshCache) _Bool allowedToRefreshCache; // @synthesize allowedToRefreshCache=_allowedToRefreshCache;
 @property(readonly, nonatomic) SPTGeniusServiceEnabledResourcesLoadingState *enabledResourcesLoadingState; // @synthesize enabledResourcesLoadingState=_enabledResourcesLoadingState;
@@ -61,8 +63,9 @@
 - (void)fetchAnnotationsForTrackID:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (_Bool)canFetchAnnotationsForTrack:(id)arg1;
 - (_Bool)isTrackGeniusEnabled:(id)arg1;
+- (_Bool)shouldShowBtlWithHasLyrics:(_Bool)arg1 btlSnpvTreatment:(unsigned long long)arg2;
 - (void)dealloc;
-- (id)initWithDiskCache:(id)arg1 dataLoaderFactory:(id)arg2 offlineModeState:(id)arg3 localSettings:(id)arg4 lyricsTrackChecker:(id)arg5;
+- (id)initWithDiskCache:(id)arg1 dataLoaderFactory:(id)arg2 offlineModeState:(id)arg3 localSettings:(id)arg4 lyricsTrackChecker:(id)arg5 remoteConfigurationResolver:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

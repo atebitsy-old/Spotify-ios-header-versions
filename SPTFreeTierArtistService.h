@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierArtistHubManager;
-@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEncoreIntegrationService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTInAppMessageService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol FollowFeature, SPContextMenuFeature, SPTArtistAboutService, SPTCollectionPlatformService, SPTEncoreIntegrationService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTInAppMessageService, SPTModerationService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPermissionsService, SPTPlayerFeature, SPTPodcastEpisodeFeaturedContentService, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTUBIService, SPTVisualRefreshIntegrationService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierArtistService : SPTUIPageService
 {
@@ -36,10 +36,12 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTInAppMessageService> _inAppMessageService;
     SPTFreeTierArtistHubManager *_hubManager;
+    id <SPTUBIService> _ubiService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(retain, nonatomic) SPTFreeTierArtistHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;

@@ -10,11 +10,12 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, SPTAccessoryManagerFeatureProperties, SPTPlayerState;
-@protocol SPTPlayer, SPTUBILogger;
+@protocol SPTEventSender, SPTPlayer, SPTUBILogger;
 
 @interface SPTAccessoryActionLoggerImplementation : NSObject <SPTPlayerObserver, SPTAccessoryActionLogger>
 {
     id <SPTUBILogger> _ubiLogger;
+    id <SPTEventSender> _eventSender;
     id <SPTPlayer> _player;
     SPTAccessoryManagerFeatureProperties *_properties;
     SPTPlayerState *_playerState;
@@ -24,13 +25,18 @@
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) SPTAccessoryManagerFeatureProperties *properties; // @synthesize properties=_properties;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+- (id)EARemoteInteractionFromAccessory:(id)arg1 action:(id)arg2 interactionId:(id)arg3;
+- (void)sendRemoteInteractionWithInteractionId:(id)arg1 action:(id)arg2 fromAccessory:(id)arg3;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
+- (id)logSearchWithSearchQuery:(id)arg1 fromAccessory:(id)arg2;
+- (id)logPlaySomethingFromAccessory:(id)arg1;
 - (id)logSetPlaybackSpeedWithPlaybackSpeed:(id)arg1 fromAccessory:(id)arg2;
 - (id)logUiNavigateWithDestination:(id)arg1 fromAccessory:(id)arg2;
 - (id)logAddItemToQueueWithItemToAddToQueue:(id)arg1 fromAccessory:(id)arg2;
-- (id)logSeekByTimeWithMsSeekedOffset:(long long)arg1 fromAccessory:(id)arg2;
-- (id)logSeekToTimeWithMsToSeekTo:(long long)arg1 fromAccessory:(id)arg2;
+- (id)logSeekByTimeWithSecondsSeekedOffset:(long long)arg1 fromAccessory:(id)arg2;
+- (id)logSeekToTimeWithSecondsToSeekTo:(long long)arg1 fromAccessory:(id)arg2;
 - (id)logRemoveLikeWithCurrentItemNoLongerLikedFromAccessory:(id)arg1;
 - (id)logShuffleEnableFromAccessory:(id)arg1;
 - (id)logShuffleDisableFromAccessory:(id)arg1;
@@ -42,9 +48,9 @@
 - (id)logSkipToNextWithCurrentItemToBeSkippedFromAccessory:(id)arg1;
 - (id)logPauseWithCurrentItemToBePausedFromAccessory:(id)arg1;
 - (id)logResumeWithCurrentItemToBeResumedFromAccessory:(id)arg1;
-- (id)logPlayWithItemToBePlayed:(id)arg1 fromAccessory:(id)arg2;
+- (id)logPlayWithItemToBePlayed:(id)arg1 withInteractionId:(id)arg2 fromAccessory:(id)arg3;
 - (void)dealloc;
-- (id)initWithUBILogger:(id)arg1 player:(id)arg2 properties:(id)arg3;
+- (id)initWithUBILogger:(id)arg1 eventSender:(id)arg2 player:(id)arg3 properties:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

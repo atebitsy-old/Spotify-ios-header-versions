@@ -6,12 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobilePodcastEntity_Trailer_ContextMenuButtonEventFactory, SPTUBIMobilePodcastEntity_Trailer_PlayButtonEventFactory;
+@class NSURL;
+@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent, SPTUBIMobilePodcastEntity_Trailer_ContextMenuButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntity_TrailerEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobilePodcastEntity_Trailer_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
-- (id <SPTUBIMobilePodcastEntity_Trailer_PlayButtonEventFactory>)playButtonFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

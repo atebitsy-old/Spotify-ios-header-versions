@@ -10,6 +10,6 @@
 
 @optional
 - (void)wakewordFailedToLoad;
-- (void)wakewordDetected;
+- (void)wakewordDetectedSeamlessly:(_Bool)arg1;
 @end
 

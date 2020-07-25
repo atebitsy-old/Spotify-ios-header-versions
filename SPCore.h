@@ -10,14 +10,11 @@
 #import "SPTAuthSessionDelegate-Protocol.h"
 #import "SPTCoreLoginController-Protocol.h"
 
-@class NSString, SPSession, SPTAuthController, SPTAuthLoginController, SPTAuthLoginTask, SPTAuthSession, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreCreateOptions, SPTCoreLoggerConnectivityAnalyticsDelegate, SPTCoreSchedulerThread, SPTEventSenderBridge, SPTPreferencesImplementation, SPTRemoteConfigImplementation;
+@class NSString, SPSession, SPTAuthController, SPTAuthLoginController, SPTAuthLoginTask, SPTAuthSession, SPTConnectivityApplicationScope, SPTConnectivityManager, SPTCoreCreateOptions, SPTCoreSchedulerThread, SPTEventSenderBridge, SPTPreferencesImplementation, SPTRemoteConfigImplementation;
 @protocol SPTCoreLoginControllerDelegate, SPTCoreLoginControllerLoginDelegate, SPTOfflineModeState, SPTSessionBootstrapDelegate;
 
 @interface SPCore : NSObject <SPTAuthSessionDelegate, SPTAuthLoginTaskDelegate, SPTCoreLoginController>
 {
-    SPTCoreLoggerConnectivityAnalyticsDelegate *_connectivityAnalyticsDelegate;
-    struct shared_ptr<spotify::connectivity::AnalyticsDelegate> _cppConnectivityAnalyticsDelegate;
-    struct unique_ptr<spotify::connectivity::ApplicationScope, std::__1::default_delete<spotify::connectivity::ApplicationScope>> _cppConnectivity;
     struct unique_ptr<spotify::client::Core, std::__1::default_delete<spotify::client::Core>> _core;
     SPSession *_session;
     id <SPTCoreLoginControllerDelegate> _loginControllerDelegate;
@@ -38,7 +35,7 @@
     SPTAuthLoginTask *_loginTask;
 }
 
-+ (id)coreWithCreateOptions:(id)arg1 applicationScopeConfiguration:(id)arg2 bootstrapDelegate:(id)arg3 scheduler:(id)arg4 eventSender:(id)arg5 preferences:(id)arg6 error:(id *)arg7;
++ (id)coreWithCreateOptions:(id)arg1 connectivityAnalyticsDelegate:(id)arg2 connectivityManager:(id)arg3 connectivityApplicationScope:(id)arg4 bootstrapDelegate:(id)arg5 scheduler:(id)arg6 eventSender:(id)arg7 preferences:(id)arg8 error:(id *)arg9;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTAuthLoginTask *loginTask; // @synthesize loginTask=_loginTask;
@@ -50,7 +47,7 @@
 @property(nonatomic) __weak SPTCoreSchedulerThread *coreScheduler; // @synthesize coreScheduler=_coreScheduler;
 @property(retain, nonatomic) SPTAuthSession *authSession; // @synthesize authSession=_authSession;
 @property(readonly, nonatomic) SPTAuthController *authController; // @synthesize authController=_authController;
-@property(nonatomic) __weak SPTAuthLoginController *loginController; // @synthesize loginController=_loginController;
+@property(retain, nonatomic) SPTAuthLoginController *loginController; // @synthesize loginController=_loginController;
 @property(nonatomic) __weak id <SPTOfflineModeState> offlineNotifier; // @synthesize offlineNotifier=_offlineNotifier;
 @property(retain, nonatomic) SPTConnectivityManager *connectivityManager; // @synthesize connectivityManager=_connectivityManager;
 @property(retain, nonatomic) SPTRemoteConfigImplementation *remoteConfig; // @synthesize remoteConfig=_remoteConfig;
@@ -101,7 +98,7 @@
 - (struct Core *)cpp;
 - (void)invalidate;
 - (void)dealloc;
-- (id)initWithCreateOptions:(id)arg1 applicationScopeConfiguration:(id)arg2 bootstrapDelegate:(id)arg3 scheduler:(id)arg4 eventSender:(id)arg5 preferences:(id)arg6 error:(id *)arg7;
+- (id)initWithCreateOptions:(id)arg1 connectivityAnalyticsDelegate:(id)arg2 connectivityManager:(id)arg3 connectivityApplicationScope:(id)arg4 bootstrapDelegate:(id)arg5 scheduler:(id)arg6 eventSender:(id)arg7 preferences:(id)arg8 error:(id *)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -9,7 +9,7 @@
 #import "SPTNavigationManagerDelegate-Protocol.h"
 #import "SPTPerformanceMetricsService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPerformanceMetricsAppMetricsCollector, SPTPerformanceMetricsViewLoggerFactoryImplementation, SPTStartupTracer;
+@class NSString, SPTAllocationContext, SPTPerformanceMetricsAppMetricsCollector, SPTPerformanceMetricsEventSenderTransport, SPTPerformanceMetricsViewLoggerFactoryImplementation, SPTStartupTracer;
 @protocol CosmosFeature, SPTColdStartupSequenceTransport, SPTContainerService, SPTEventSenderService, SPTNetworkService, SPTPerformanceKitUUIDProvider, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTViewLoggerConnectionTypeProvider;
 
 @interface SPTPerformanceMetricsServiceImplementation : NSObject <SPTNavigationManagerDelegate, SPTPerformanceMetricsService>
@@ -27,10 +27,12 @@
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTPerformanceMetricsAppMetricsCollector *_appMetricCollector;
     id <SPTColdStartupSequenceTransport> _coldStartupSequenceTransport;
+    SPTPerformanceMetricsEventSenderTransport *_eventSenderTransport;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPerformanceMetricsEventSenderTransport *eventSenderTransport; // @synthesize eventSenderTransport=_eventSenderTransport;
 @property(retain, nonatomic) id <SPTColdStartupSequenceTransport> coldStartupSequenceTransport; // @synthesize coldStartupSequenceTransport=_coldStartupSequenceTransport;
 @property(retain, nonatomic) SPTPerformanceMetricsAppMetricsCollector *appMetricCollector; // @synthesize appMetricCollector=_appMetricCollector;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;

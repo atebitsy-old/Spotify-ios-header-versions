@@ -9,7 +9,7 @@
 #import "SPTPodcastUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPodcastUITestHubManager;
-@protocol SPTContainerService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTPodcastUIButtonsFactory, SPTPodcastUIComponentFactory, SPTPodcastUIStringFormatter, SPTSettingsFeature, SPTURIDispatchService;
+@protocol SPTContainerService, SPTGLUEService, SPTHomeUIService, SPTHubFrameworkService, SPTPodcastUIButtonsFactory, SPTPodcastUIComponentFactory, SPTPodcastUIStringFormatter, SPTRemoteConfigurationService, SPTSettingsFeature, SPTURIDispatchService;
 
 @interface SPTPodcastUIServiceImplementation : NSObject <SPTPodcastUIService>
 {
@@ -19,6 +19,7 @@
     id <SPTHomeUIService> _homeUIService;
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTURIDispatchService> _uriDispatchService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTPodcastUITestHubManager *_hubManager;
     id <SPTPodcastUIStringFormatter> _stringFormatter;
     id <SPTPodcastUIButtonsFactory> _buttonsFactory;
@@ -29,6 +30,7 @@
 @property(retain, nonatomic) id <SPTPodcastUIButtonsFactory> buttonsFactory; // @synthesize buttonsFactory=_buttonsFactory;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
 @property(retain, nonatomic) SPTPodcastUITestHubManager *hubManager; // @synthesize hubManager=_hubManager;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
 @property(nonatomic) __weak id <SPTHomeUIService> homeUIService; // @synthesize homeUIService=_homeUIService;
@@ -37,6 +39,7 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (void)registerSettingsPage:(id)arg1 featureSettingsItemFactory:(id)arg2 linkDispatcher:(id)arg3;
 - (id)providePodcastUITestViewControllerWithURI:(id)arg1 context:(id)arg2;
+- (id)provideFeatureProperties;
 @property(readonly, nonatomic) id <SPTPodcastUIComponentFactory> componentFactory;
 - (void)unload;
 - (void)load;

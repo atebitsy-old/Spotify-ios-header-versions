@@ -10,14 +10,11 @@
 @protocol SPTFreeTierPlaylistSortingFilteringDelegate;
 
 @protocol SPTFreeTierPlaylistSortingFiltering <NSObject>
+@property(readonly, nonatomic, getter=isSorted) _Bool sorted;
+@property(copy, nonatomic) NSString *textFilter;
+@property(nonatomic) __weak id <SPTFreeTierPlaylistSortingFilteringDelegate> delegate;
 - (void)resetFilters;
 - (void)applySortingAndFilteringToFetchOptions:(SPTPlaylistPlatformPlaylistTracksFetchOptions *)arg1;
 - (void)loadSavedSettings;
-- (_Bool)isSorted;
-@property(nonatomic, copy) NSString *textFilter;
-@property(nonatomic) __weak id <SPTFreeTierPlaylistSortingFilteringDelegate> delegate;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool sorted;
 @end
 

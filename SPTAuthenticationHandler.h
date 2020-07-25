@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAuthenticationHandlerLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountSwitcher, SPTLoginErrorDecorator, SPTLoginMainViewLoader, SPTLoginPerformanceLogging, SPTLoginTestManager;
+@class SPTAuthenticationHandlerLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountSwitcher, SPTLoginErrorDecorator, SPTLoginMainViewLoader, SPTLoginTestManager;
 @protocol SPTLoginStateController;
 
 @interface SPTAuthenticationHandler : NSObject
@@ -14,7 +14,6 @@
     id <SPTLoginStateController> _loginStateController;
     SPTAuthenticationHandlerLogger *_logger;
     SPTLoginErrorDecorator *_errorDecorator;
-    SPTLoginPerformanceLogging *_performanceLogging;
     SPTLoginMainViewLoader *_mainViewLoader;
     SPTLoginDelayedSignupAccountSwitcher *_accountSwitcher;
     SPTLoginTestManager *_login5TestManager;
@@ -26,7 +25,6 @@
 @property(readonly, nonatomic) SPTLoginTestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
 @property(readonly, nonatomic) SPTLoginDelayedSignupAccountSwitcher *accountSwitcher; // @synthesize accountSwitcher=_accountSwitcher;
 @property(readonly, nonatomic) SPTLoginMainViewLoader *mainViewLoader; // @synthesize mainViewLoader=_mainViewLoader;
-@property(readonly, nonatomic) SPTLoginPerformanceLogging *performanceLogging; // @synthesize performanceLogging=_performanceLogging;
 @property(readonly, nonatomic) SPTLoginErrorDecorator *errorDecorator; // @synthesize errorDecorator=_errorDecorator;
 @property(readonly, nonatomic) SPTAuthenticationHandlerLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
@@ -34,13 +32,12 @@
 - (id)authLogin5Options;
 - (void)switchAccountWithCredentials:(id)arg1 fromScreen:(unsigned long long)arg2 userDidSignup:(_Bool)arg3 completionBlock:(CDUnknownBlockType)arg4;
 - (void)handleAuthenticationResultWithError:(id)arg1 fromScreen:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
-- (void)authenticateWithCredentials:(id)arg1 userDidSignUp:(_Bool)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)didLoginWithPhoneNumber;
 - (void)authenticateAndLoginWithOpenIDCredentials:(id)arg1 authSourceType:(unsigned long long)arg2 onLoginComplete:(CDUnknownBlockType)arg3 onSignupRequired:(CDUnknownBlockType)arg4;
 - (void)authenticateAndLoginWithURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)authenticateAndLoginWithCredentials:(id)arg1 fromScreen:(unsigned long long)arg2 completionBlock:(CDUnknownBlockType)arg3;
 - (void)authenticateAndLoginWithOneTimeToken:(id)arg1 fromScreen:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 errorDecorator:(id)arg3 performanceLogging:(id)arg4 mainViewLoader:(id)arg5 accountSwitcher:(id)arg6 login5TestManager:(id)arg7 databaseManager:(id)arg8;
+- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 errorDecorator:(id)arg3 mainViewLoader:(id)arg4 accountSwitcher:(id)arg5 login5TestManager:(id)arg6 databaseManager:(id)arg7;
 
 @end
 

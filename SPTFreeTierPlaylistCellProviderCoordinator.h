@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFreeTierPlaylistCellProviderDelegate-Protocol.h"
+#import "SPTFreeTierPlaylistCellProviderCoordinator-Protocol.h"
 
 @class NSDictionary, NSMutableDictionary, NSString, SPTFreeTierPlaylistLogger;
 @protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTShareDragDelegateFactory, UITableViewDragDelegate;
 
-@interface SPTFreeTierPlaylistCellProviderCoordinator : NSObject <SPTFreeTierPlaylistCellProviderDelegate>
+@interface SPTFreeTierPlaylistCellProviderCoordinator : NSObject <SPTFreeTierPlaylistCellProviderCoordinator>
 {
     id <SPTFreeTierPlaylistConfiguration> _configuration;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
@@ -34,16 +34,21 @@
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistConfiguration> configuration; // @synthesize configuration=_configuration;
+- (id)itemIdentifierForIndexPath:(id)arg1;
 - (id)indexPathForView:(id)arg1;
 - (void)presentContextMenuWithSender:(id)arg1;
+- (id)itemForIndexPath:(id)arg1;
 - (void)reloadCellsForCellProvider:(id)arg1;
 - (void)cellProvider:(id)arg1 playTrackAtIndexPath:(id)arg2 interactionId:(id)arg3;
 - (void)contextMenuPressedForCellProvider:(id)arg1 sender:(id)arg2;
+- (void)setupDataSource:(id)arg1;
+- (void)reloadDataForTableView:(id)arg1;
 - (id)tableView:(id)arg1 viewForFooterInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForFooterInSection:(long long)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
+- (long long)numberOfSectionsInTableView:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 heightForRowAtIndexPath:(id)arg2;
 - (double)tableView:(id)arg1 estimatedHeightForRowAtIndexPath:(id)arg2;

@@ -15,7 +15,6 @@
 
 @interface SPTFreeTierPlaylistAllSongsDataSource : NSObject <SPTFreeTierAllSongsHeaderEntityViewModelDelegate, SPTFreeTierAllSongsDataSource, SPTFreeTierPlaylistModelObserver>
 {
-    _Bool _contextAwareEnabled;
     id <SPTFreeTierAllSongsDataSourceDelegate> _dataSourceDelegate;
     id <SPTFreeTierPlaylistModel> _model;
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
@@ -36,7 +35,6 @@
 @property(retain, nonatomic) NSNumber *numberBannedTracks; // @synthesize numberBannedTracks=_numberBannedTracks;
 @property(retain, nonatomic) NSNumber *numberTracks; // @synthesize numberTracks=_numberTracks;
 @property(retain, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionSubscriptionToken; // @synthesize collectionSubscriptionToken=_collectionSubscriptionToken;
-@property(nonatomic, getter=isContextAwareEnabled) _Bool contextAwareEnabled; // @synthesize contextAwareEnabled=_contextAwareEnabled;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(retain, nonatomic) id <SPTPlaylistPlatformPlaylistDataLoader> playlistDataLoader; // @synthesize playlistDataLoader=_playlistDataLoader;
@@ -84,7 +82,7 @@
 - (void)freeTierPlaylistModel:(id)arg1 initialFollowCount:(unsigned long long)arg2;
 - (void)freeTierPlaylistModel:(id)arg1 playlistModelEntityDidChange:(id)arg2;
 - (_Bool)equalTracks:(id)arg1 otherTracks:(id)arg2;
-- (id)initWithModel:(id)arg1 playlistDataLoader:(id)arg2 collectionPlatform:(id)arg3 testManager:(id)arg4 contextAwareEnabled:(_Bool)arg5 assistedCurationUIService:(id)arg6 snackbarPresenter:(id)arg7 logger:(id)arg8;
+- (id)initWithModel:(id)arg1 playlistDataLoader:(id)arg2 collectionPlatform:(id)arg3 testManager:(id)arg4 assistedCurationUIService:(id)arg5 snackbarPresenter:(id)arg6 logger:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

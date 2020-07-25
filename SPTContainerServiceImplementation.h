@@ -9,7 +9,7 @@
 #import "SPTContainerService-Protocol.h"
 
 @class MetaViewController, NSString, SPTAllocationContext, SPTKeychainManagerImpl, SPTNavigationManager, SPTPageRegistryImplementation, SpotifyAppDelegate;
-@protocol SPTContainerUIService, SPTNotificationSystemDelegate, SPTUICompletionNotifier, SPTURIDispatchService;
+@protocol SPTContainerUIService, SPTEmailUniversalLinkResolverDelegate, SPTNotificationSystemDelegate, SPTUICompletionNotifier, SPTURIDispatchService;
 
 @interface SPTContainerServiceImplementation : NSObject <SPTContainerService>
 {
@@ -33,6 +33,7 @@
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak SpotifyAppDelegate *appDelegate; // @synthesize appDelegate=_appDelegate;
+@property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationSystemDelegate;
 - (id)provideKeychainManager;
 - (CDUnknownBlockType)provideContainerLogoutHandler;

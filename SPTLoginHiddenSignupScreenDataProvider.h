@@ -17,7 +17,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
 - (id)providePassword;
-- (id)defaultGender;
+- (unsigned long long)defaultGender;
 - (id)supplyDataForHiddenScreens:(id)arg1;
 - (id)initWithTestManager:(id)arg1;
 

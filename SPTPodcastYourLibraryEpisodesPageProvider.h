@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastYourLibraryEpisodesViewModelImpl, SPTYourLibraryPodcastUnfinishedItemsProvider;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastYourLibraryPageProviderDelegate;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTMetaViewController, SPTNavigationRouter, SPTOfflineModeState, SPTPerformanceMetricsViewLoggerFactory, SPTPodcastDataLoader, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeFactory, SPTPodcastLogger, SPTPodcastRequestFactory, SPTPodcastYourLibraryPageProviderDelegate;
 
 @interface SPTPodcastYourLibraryEpisodesPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -29,6 +29,7 @@
     id <SPTPodcastEpisodeFactory> _episodeFactory;
     SPTYourLibraryPodcastUnfinishedItemsProvider *_unfinishedItemsProvider;
     id <SPTPodcastEpisodeCellConfigurator> _cellConfigurator;
+    id <SPTOfflineModeState> _offlineStateObservable;
     id <SPTMetaViewController> _metaViewController;
     id <SPTNavigationRouter> _navigationRouter;
 }
@@ -36,6 +37,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTNavigationRouter> navigationRouter; // @synthesize navigationRouter=_navigationRouter;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
+@property(readonly, nonatomic) id <SPTOfflineModeState> offlineStateObservable; // @synthesize offlineStateObservable=_offlineStateObservable;
 @property(retain, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(retain, nonatomic) SPTYourLibraryPodcastUnfinishedItemsProvider *unfinishedItemsProvider; // @synthesize unfinishedItemsProvider=_unfinishedItemsProvider;
 @property(retain, nonatomic) id <SPTPodcastEpisodeFactory> episodeFactory; // @synthesize episodeFactory=_episodeFactory;
@@ -54,7 +56,7 @@
 @property(readonly, nonatomic) unsigned long long groupIdentifier; // @synthesize groupIdentifier=_groupIdentifier;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 unfinishedItemsProvider:(id)arg7 episodeFactory:(id)arg8 cellConfigurator:(id)arg9 explicitContentAccessManager:(id)arg10 glueTheme:(id)arg11 cellActionHandlerFactory:(id)arg12 metaViewController:(id)arg13 navigationRouter:(id)arg14 podcastLogger:(id)arg15 viewLoggerFactory:(id)arg16;
+- (id)initWithURI:(id)arg1 title:(id)arg2 delegate:(id)arg3 pageProviderIdentifier:(unsigned long long)arg4 podcastRequestFactory:(id)arg5 dataLoader:(id)arg6 unfinishedItemsProvider:(id)arg7 episodeFactory:(id)arg8 cellConfigurator:(id)arg9 explicitContentAccessManager:(id)arg10 glueTheme:(id)arg11 cellActionHandlerFactory:(id)arg12 metaViewController:(id)arg13 navigationRouter:(id)arg14 podcastLogger:(id)arg15 viewLoggerFactory:(id)arg16 offlineStateObservable:(id)arg17;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -14,8 +14,8 @@
 #import "SPTSlateDelegate-Protocol.h"
 #import "SPTSlateWireframeCustomPresentationDelegate-Protocol.h"
 
-@class NSString, NSTimer, SPTAdFeatureFlagChecks, SPTNavigationManager, SPTTheme;
-@protocol GLUEImageLoader, SPTAdOverlayImageContentViewDataSource, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTAdsBaseRegistry, SPTAdsManager, SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTLinkDispatcher, SPTPlayer, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService;
+@class NSString, NSTimer, SPTAdsFeatureProperties, SPTNavigationManager, SPTTheme;
+@protocol GLUEImageLoader, GLUETheme, SPTAdOverlayImageContentViewDataSource, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTAdsBaseRegistry, SPTAdsManager, SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTPlayer, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService;
 
 @interface SPTAdMobileOverlayController : NSObject <SPTAdOverlayContentUnitDelegate, SPTAdsBaseRegistryObserver, SPTSlateDataSource, SPTSlateDelegate, SPTSlateWireframeCustomPresentationDelegate, SPTBannerViewDelegate, SPTNavigationManagerDelegate>
 {
@@ -25,6 +25,7 @@
     id <SPTAdsBaseRegistry> _registry;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
     SPTTheme *_theme;
+    id <GLUETheme> _glueTheme;
     id <SPTPlayer> _player;
     id <SPTSlateBuilderProvider> _slateBuilderProvider;
     id <SPTSlateManager> _slateManager;
@@ -32,9 +33,8 @@
     id <SPTUIPresentationService> _presentationService;
     id <SPTBannerPresentationManager> _bannerPresentationManager;
     id <GLUEImageLoader> _imageLoader;
-    SPTAdFeatureFlagChecks *_featureChecker;
+    SPTAdsFeatureProperties *_featureProperties;
     SPTNavigationManager *_navigationManagager;
-    id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTSlate> _slate;
     id <SPTAdOverlayImageContentViewDataSource> _contentViewDataSource;
     NSTimer *_fetchTimer;
@@ -55,9 +55,8 @@
 @property(retain, nonatomic) NSTimer *fetchTimer; // @synthesize fetchTimer=_fetchTimer;
 @property(retain, nonatomic) id <SPTAdOverlayImageContentViewDataSource> contentViewDataSource; // @synthesize contentViewDataSource=_contentViewDataSource;
 @property(retain, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
-@property(retain, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTNavigationManager *navigationManagager; // @synthesize navigationManagager=_navigationManagager;
-@property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
+@property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) __weak id <SPTBannerPresentationManager> bannerPresentationManager; // @synthesize bannerPresentationManager=_bannerPresentationManager;
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
@@ -65,6 +64,7 @@
 @property(readonly, nonatomic) __weak id <SPTSlateManager> slateManager; // @synthesize slateManager=_slateManager;
 @property(readonly, nonatomic) __weak id <SPTSlateBuilderProvider> slateBuilderProvider; // @synthesize slateBuilderProvider=_slateBuilderProvider;
 @property(readonly, nonatomic) __weak id <SPTPlayer> player; // @synthesize player=_player;
+@property(readonly, nonatomic) __weak id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) __weak SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(readonly, nonatomic) __weak id <SPTAdsBaseRegistry> registry; // @synthesize registry=_registry;
@@ -72,6 +72,7 @@
 - (void)closeButtonTappedInBannerView:(id)arg1;
 - (void)actionButtonTappedInBannerView:(id)arg1;
 - (void)hideBanner;
+- (unsigned long long)bannerVersion;
 - (void)showBanner;
 - (_Bool)isIPad;
 - (id)provideSlate;
@@ -90,6 +91,8 @@
 - (void)presentSlateViewControllerInCustomMode:(id)arg1 animated:(_Bool)arg2;
 - (void)slateDidDismiss:(id)arg1;
 - (id)contentUnitForSlateViewController:(id)arg1;
+- (_Bool)isBannerFlagChecked;
+- (_Bool)shouldShowAdEntityInOverlay:(id)arg1;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)applicationDidBecomeActive:(id)arg1;
 - (void)applicationWillResignActive:(id)arg1;
@@ -100,7 +103,7 @@
 - (void)invalidateFetchTimer;
 - (void)startAudioPlusTimerIfNeeded;
 - (void)startFetchTimer;
-- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 theme:(id)arg3 player:(id)arg4 slateBuilderProvider:(id)arg5 slateManager:(id)arg6 manager:(id)arg7 imageLoader:(id)arg8 linkDispatcher:(id)arg9 presentationService:(id)arg10 featureChecker:(id)arg11 bannerPresentationManager:(id)arg12 navigationManager:(id)arg13;
+- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 theme:(id)arg3 glueTheme:(id)arg4 player:(id)arg5 slateBuilderProvider:(id)arg6 slateManager:(id)arg7 manager:(id)arg8 imageLoader:(id)arg9 presentationService:(id)arg10 featureProperties:(id)arg11 bannerPresentationManager:(id)arg12 navigationManager:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -18,7 +18,7 @@
     NSString *_password;
     NSString *_identifierToken;
     NSDate *_birthday;
-    NSString *_gender;
+    unsigned long long _gender;
     NSString *_displayName;
     SPTSignupMarketRestrictionsModel *_marketRestrictions;
     NSDictionary *_facebookUserInfo;
@@ -34,12 +34,13 @@
 @property(copy, nonatomic) NSDictionary *facebookUserInfo; // @synthesize facebookUserInfo=_facebookUserInfo;
 @property(retain, nonatomic) SPTSignupMarketRestrictionsModel *marketRestrictions; // @synthesize marketRestrictions=_marketRestrictions;
 @property(copy, nonatomic) NSString *displayName; // @synthesize displayName=_displayName;
-@property(copy, nonatomic) NSString *gender; // @synthesize gender=_gender;
+@property(nonatomic) unsigned long long gender; // @synthesize gender=_gender;
 @property(copy, nonatomic) NSDate *birthday; // @synthesize birthday=_birthday;
 @property(copy, nonatomic) NSString *identifierToken; // @synthesize identifierToken=_identifierToken;
 @property(copy, nonatomic) NSString *password; // @synthesize password=_password;
 @property(copy, nonatomic) NSString *email; // @synthesize email=_email;
 @property(nonatomic, getter=didUserAcceptTermsAndConditions) _Bool userAcceptTermsAndConditions; // @synthesize userAcceptTermsAndConditions=_userAcceptTermsAndConditions;
+- (id)requestPayloadGenderValue;
 - (_Bool)isPhoneNumberFlow;
 - (_Bool)isGuestModeEnabled;
 - (_Bool)shouldShowMarketingOptInText;

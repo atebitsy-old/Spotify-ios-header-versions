@@ -31,7 +31,7 @@
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)addTapGestureRecognizer;
-- (void)addLayoutConstraints;
+- (void)setupConstraints;
 - (void)setupViews;
 - (id)initWithFrame:(struct CGRect)arg1 theme:(id)arg2;
 

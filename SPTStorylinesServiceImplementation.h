@@ -51,6 +51,7 @@
 - (id)persistentCacheOptions;
 @property(readonly, nonatomic) SPTPersistentCache *persistentCache; // @synthesize persistentCache=_persistentCache;
 - (void)setupScrollProvider;
+- (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

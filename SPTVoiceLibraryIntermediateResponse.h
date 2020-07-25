@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSString;
+@class NSDictionary, NSString;
 
 @interface SPTVoiceLibraryIntermediateResponse : NSObject
 {
@@ -14,9 +14,11 @@
     _Bool _isEndOfSpeech;
     NSString *_transcript;
     double _score;
+    NSDictionary *_json;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSDictionary *json; // @synthesize json=_json;
 @property(readonly, nonatomic) double score; // @synthesize score=_score;
 @property(readonly, nonatomic) _Bool isEndOfSpeech; // @synthesize isEndOfSpeech=_isEndOfSpeech;
 @property(readonly, nonatomic) _Bool isFinal; // @synthesize isFinal=_isFinal;

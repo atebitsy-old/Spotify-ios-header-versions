@@ -4,11 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UICollectionViewCell.h>
+#import "SPTNowPlayingContentLayerCell.h"
 
 @class NSArray, SPTNowPlayingCoverArtImageView, SPTTheme, UIView;
 
-@interface SPTNowPlayingCoverArtCell : UICollectionViewCell
+@interface SPTNowPlayingCoverArtCell : SPTNowPlayingContentLayerCell
 {
     SPTTheme *_theme;
     SPTNowPlayingCoverArtImageView *_imageView;

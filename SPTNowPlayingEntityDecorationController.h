@@ -11,7 +11,6 @@
 
 @interface SPTNowPlayingEntityDecorationController : NSObject
 {
-    _Bool _contextAwareSharing;
     SPTPlayerState *_playerState;
     unsigned long long _entityType;
     NSString *_entityName;
@@ -33,7 +32,6 @@
 @property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
 @property(retain, nonatomic) NSURL *entityClickURI; // @synthesize entityClickURI=_entityClickURI;
 @property(retain, nonatomic) NSString *contextName; // @synthesize contextName=_contextName;
-@property(nonatomic, getter=isContextAwareSharing) _Bool contextAwareSharing; // @synthesize contextAwareSharing=_contextAwareSharing;
 @property(retain, nonatomic) NSString *entityDescription; // @synthesize entityDescription=_entityDescription;
 @property(retain, nonatomic) NSString *entityName; // @synthesize entityName=_entityName;
 @property(nonatomic) unsigned long long entityType; // @synthesize entityType=_entityType;

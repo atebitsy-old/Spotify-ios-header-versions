@@ -6,24 +6,19 @@
 
 #import <objc/NSObject.h>
 
-@class SPTLoginTestManager;
-
 @interface SPTLoginWelcomeViewImageryURLProvider : NSObject
 {
     _Bool _regularLayout;
-    SPTLoginTestManager *_testManager;
     double _screenScale;
 }
 
-- (void).cxx_destruct;
 @property(readonly, nonatomic, getter=isRegularLayout) _Bool regularLayout; // @synthesize regularLayout=_regularLayout;
 @property(readonly, nonatomic) double screenScale; // @synthesize screenScale=_screenScale;
-@property(readonly, nonatomic) SPTLoginTestManager *testManager; // @synthesize testManager=_testManager;
-- (id)imageName;
+- (id)imageURLWithTestCell:(unsigned long long)arg1;
+- (id)imageNameWithTestCell:(unsigned long long)arg1;
 - (id)imageSize;
 - (id)imageShortNameForCell:(unsigned long long)arg1;
-- (id)imageryURL;
-- (id)initWithTestManager:(id)arg1 screenScale:(double)arg2 isRegularLayout:(_Bool)arg3;
+- (id)initWithScreenScale:(double)arg1 isRegularLayout:(_Bool)arg2;
 
 @end
 

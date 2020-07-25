@@ -9,7 +9,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTChurnLockInteractor;
-@protocol SPTContainerService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayerFeature, SPTSessionService, SPTUIPresentationService;
+@protocol SPTContainerService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayerFeature, SPTSessionService, SPTUIPresentationService;
 
 @interface SPTChurnLockService : NSObject <SPTService>
 {
@@ -19,12 +19,14 @@
     id <SPTPlayerFeature> _playerFeature;
     id <SPTContainerService> _containerService;
     id <SPTUIPresentationService> _presentationService;
+    id <SPTEventSenderService> _eventSenderService;
     SPTChurnLockInteractor *_churnLockInteractor;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTChurnLockInteractor *churnLockInteractor; // @synthesize churnLockInteractor=_churnLockInteractor;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;

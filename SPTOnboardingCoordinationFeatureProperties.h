@@ -13,8 +13,10 @@
 @interface SPTOnboardingCoordinationFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _isAllboardingLoEnabled;
+    _Bool _isAllboardingToEnabled;
 }
 
+@property(readonly, nonatomic) _Bool isAllboardingToEnabled; // @synthesize isAllboardingToEnabled=_isAllboardingToEnabled;
 @property(readonly, nonatomic) _Bool isAllboardingLoEnabled; // @synthesize isAllboardingLoEnabled=_isAllboardingLoEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

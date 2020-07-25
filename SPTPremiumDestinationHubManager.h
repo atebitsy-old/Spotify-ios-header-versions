@@ -28,7 +28,6 @@
 - (id)createRemoteContentOperationsWithContentURLResolver:(id)arg1 reloadSignalSource:(id)arg2;
 - (id)createLocalContentOperations;
 - (id)providePremiumDestinationHubsRemoteURLResolver;
-- (id)providePremiumDestinationComponentLayoutManager;
 - (id)provideLocalJSONPreviewViewControllerForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)provideViewControllerForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)initWithHubManagerConfiguration:(id)arg1;

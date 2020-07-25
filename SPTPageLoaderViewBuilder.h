@@ -9,7 +9,6 @@
 @interface SPTPageLoaderViewBuilder : NSObject
 {
     // Error parsing type: , name: builder
-    // Error parsing type: , name: pageLoader
 }
 
 - (void).cxx_destruct;
@@ -21,7 +20,6 @@
 - (void)withNotFound:(CDUnknownBlockType)arg1;
 - (void)withLoaded:(CDUnknownBlockType)arg1;
 - (void)withLoading:(CDUnknownBlockType)arg1;
-- (id)initWithPageLoader:(id)arg1 pageIdentifier:(id)arg2 pageURI:(id)arg3;
 
 @end
 

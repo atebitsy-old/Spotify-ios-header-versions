@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTGaiaConnectCoreCredentials;
+@class NSString;
 
 @protocol SPTGaiaCastCoreInteractorDelegate <NSObject>
 - (void)didLogoutFromDevice;
-- (void)didLoginToDeviceWithCredentials:(SPTGaiaConnectCoreCredentials *)arg1;
+- (void)didRequestConnect:(NSString *)arg1;
+- (void)didRequestMessage:(NSString *)arg1;
 @end
 

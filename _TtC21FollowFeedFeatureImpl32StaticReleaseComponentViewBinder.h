@@ -23,9 +23,10 @@
 - (void)contextMenuButtonClickedWithSender:(id)arg1;
 - (void)playButtonClicked;
 - (void)artistAvatarClicked;
+- (struct CGSize)sizeThatFits:(struct CGSize)arg1;
 - (void)configureWithModel:(id)arg1;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)dealloc;
 @property(nonatomic) __weak id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler;
 

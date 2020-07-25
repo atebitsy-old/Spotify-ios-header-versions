@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP16SuperbirdFeature20SPTSuperbirdDetector_;
+
 @protocol _TtP16SuperbirdFeature19SPTSuperbirdService_ <SPTService>
+- (id <_TtP16SuperbirdFeature20SPTSuperbirdDetector_>)provideSuperbirdDetector;
 @end
 

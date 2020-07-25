@@ -5,6 +5,7 @@
 //
 
 @protocol _TtP17OfflineMixFeature23SPTOfflineMixDataLoader_
+- (void)fetchOfflineMixPlaylistItemsWithCompletion:(void (^)(NSString *, NSArray *, NSError *))arg1;
 - (void)fetchOfflineMixPlaylistWithCompletion:(void (^)(id <SPTYourLibraryMusicPlaylistEntity>))arg1;
 @end
 

@@ -12,10 +12,21 @@
     // Error parsing type: , name: glueService
     // Error parsing type: , name: playerService
     // Error parsing type: , name: playlistService
+    // Error parsing type: , name: networkService
+    // Error parsing type: , name: collectionPlatformService
+    // Error parsing type: , name: uriDispatchService
+    // Error parsing type: , name: contextMenuService
+    // Error parsing type: , name: settingsService
+    // Error parsing type: , name: videoCoordinatorService
+    // Error parsing type: , name: gaiaService
+    // Error parsing type: , name: containerUIService
     // Error parsing type: , name: videoService
     // Error parsing type: , name: musicVideoPlayer
     // Error parsing type: , name: nowPlayingPlatformService
     // Error parsing type: , name: nowPlayingService
+    // Error parsing type: , name: nowPlayingMode
+    // Error parsing type: , name: landscapeVideoManager
+    // Error parsing type: , name: $__lazy_storage_$_player
 }
 
 + (id)serviceIdentifier;

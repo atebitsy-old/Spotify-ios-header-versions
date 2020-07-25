@@ -9,7 +9,7 @@
 @protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePodcastEntity_Episodes_Empty_RemoveFiltersButtonEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitFilter;
+- (id <SPTUBIInteractionEvent>)hitClearFilter;
 - (id <SPTUBIEventFactoryLocation>)_location;
 @end
 

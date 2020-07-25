@@ -11,8 +11,10 @@
 }
 
 + (long long)placeholderSPTIconForEntity:(id)arg1;
-+ (id)imageStyleForEntity:(id)arg1;
-+ (id)imageDataForEntity:(id)arg1;
++ (id)cardImageStyleForEntity:(id)arg1;
++ (id)rowImageStyleForEntity:(id)arg1;
++ (id)cardImageDataForEntity:(id)arg1;
++ (id)rowImageDataForEntity:(id)arg1;
 + (id)placeholderIconForEntity:(id)arg1;
 
 @end

@@ -10,7 +10,7 @@
 #import "SPTYourLibraryMusicTestManager-Protocol.h"
 
 @class NSDictionary, NSString, SPTYourLibraryMusicFeatureProperties;
-@protocol SPTCollectionPlatformTestManager, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver, SPTYourLibraryTestManager;
+@protocol SPTCollectionPlatformTestManager, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver;
 
 @interface SPTYourLibraryMusicTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTYourLibraryMusicTestManager>
 {
@@ -21,7 +21,6 @@
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTYourLibraryMusicFeatureProperties *_remoteConfigurationProperties;
     id <SPTCollectionPlatformTestManager> _collectionPlatformTestManager;
-    id <SPTYourLibraryTestManager> _yourLibraryTestManager;
     id <SPTFeatureFlagSignal> _windowedTrackTestSignal;
     id <SPTFeatureFlagSignal> _consolidatedExperienceSignal;
     NSDictionary *_likedSongsFiltersSignals;
@@ -35,7 +34,6 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> consolidatedExperienceSignal; // @synthesize consolidatedExperienceSignal=_consolidatedExperienceSignal;
 @property(nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled; // @synthesize premiumLabelEnabled=_premiumLabelEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> windowedTrackTestSignal; // @synthesize windowedTrackTestSignal=_windowedTrackTestSignal;
-@property(readonly, nonatomic) id <SPTYourLibraryTestManager> yourLibraryTestManager; // @synthesize yourLibraryTestManager=_yourLibraryTestManager;
 @property(readonly, nonatomic) id <SPTCollectionPlatformTestManager> collectionPlatformTestManager; // @synthesize collectionPlatformTestManager=_collectionPlatformTestManager;
 @property(retain, nonatomic) SPTYourLibraryMusicFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
@@ -51,13 +49,12 @@
 @property(readonly, nonatomic, getter=isLikedSongsFiltersEnabled) _Bool likedSongsFiltersEnabled;
 @property(readonly, nonatomic) unsigned long long likedSongsFiltersSource;
 @property(readonly, nonatomic, getter=isShowAlbumArtistRecommendationsEnabled) _Bool showAlbumArtistRecommendationsEnabled;
-@property(readonly, nonatomic, getter=isHideCreatePlaylistEnabled) _Bool hideCreatePlaylistEnabled;
 - (void)setupRemoteConfigurationProperties;
 - (void)handleWindowedTrackSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)setupLikedSongsFiltersSignals;
 - (void)setupIsPremiumOnlySignal;
-- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 remoteConfigurationResolver:(id)arg3 collectionPlatformTestManager:(id)arg4 consolidatedExperienceSignal:(id)arg5 yourLibraryTestManager:(id)arg6;
+- (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 remoteConfigurationResolver:(id)arg3 collectionPlatformTestManager:(id)arg4 consolidatedExperienceSignal:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

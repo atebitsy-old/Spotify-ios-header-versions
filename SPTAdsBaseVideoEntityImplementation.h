@@ -32,6 +32,7 @@
 @property(readonly, copy, nonatomic) NSString *actionText;
 @property(readonly, copy, nonatomic) NSString *adPlaybackID;
 @property(readonly, copy, nonatomic) NSString *advertiser;
+@property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable;
 @property(readonly, nonatomic) NSURL *clickthroughURL;
 @property(readonly, nonatomic) NSURL *coverArtURL;
 @property(readonly, nonatomic) UIColor *creativeColor;
@@ -47,6 +48,7 @@
 @property(readonly, copy, nonatomic) NSString *identifier;
 @property(readonly, nonatomic) _Bool inAppBrowser;
 @property(readonly, nonatomic) _Bool isAudio;
+@property(readonly, nonatomic) _Bool isAudioPlus;
 @property(readonly, copy, nonatomic) NSString *lineItemID;
 @property(readonly, copy, nonatomic) NSDictionary *metadata;
 @property(readonly, copy, nonatomic) NSString *offerSubtitle;

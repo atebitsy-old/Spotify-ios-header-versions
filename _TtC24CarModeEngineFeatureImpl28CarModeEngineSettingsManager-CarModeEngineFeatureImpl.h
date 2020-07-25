@@ -6,7 +6,12 @@
 
 #import "_TtC24CarModeEngineFeatureImpl28CarModeEngineSettingsManager.h"
 
+@protocol _TtP24CarModeEngineFeatureImpl34CarModeEngineLocalSettingsDelegate_;
+
 @interface _TtC24CarModeEngineFeatureImpl28CarModeEngineSettingsManager (CarModeEngineFeatureImpl)
-- (id)provideCarModeSettingsSectionWithSettingsViewController:(id)arg1;
+@property(nonatomic, retain) id <_TtP24CarModeEngineFeatureImpl34CarModeEngineLocalSettingsDelegate_> delegate;
+@property(nonatomic) _Bool keepScreenAwake;
+@property(nonatomic) long long availability;
+@property(nonatomic) _Bool startAutomatically;
 @end
 

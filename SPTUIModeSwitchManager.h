@@ -9,7 +9,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 
 @class NSString;
-@protocol SPTAlertController, SPTCrashReporter, SPTFeatureFlagSignal, SPTLinkDispatcher, SPTLoginStateController, SPTMetaViewController, SPTSessionServicesLoader, SPTUIModeTransitionCoordinator;
+@protocol SPTAlertController, SPTCrashReporter, SPTFeatureFlagSignal, SPTFreeTierSessionScopeServicesLoaderService, SPTLinkDispatcher, SPTLoginStateController, SPTMetaViewController, SPTUIModeTransitionCoordinator;
 
 @interface SPTUIModeSwitchManager : NSObject <SPTFeatureFlagSignalObserver>
 {
@@ -17,7 +17,7 @@
     long long _currentState;
     id <SPTLoginStateController> _loginStateController;
     id <SPTMetaViewController> _metaViewController;
-    id <SPTSessionServicesLoader> _sessionServicesLoader;
+    id <SPTFreeTierSessionScopeServicesLoaderService> _sessionServicesLoaderService;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTAlertController> _alertController;
     id <SPTUIModeTransitionCoordinator> _transitionCoordinator;
@@ -29,7 +29,7 @@
 @property(retain, nonatomic) id <SPTUIModeTransitionCoordinator> transitionCoordinator; // @synthesize transitionCoordinator=_transitionCoordinator;
 @property(retain) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
-@property(nonatomic) __weak id <SPTSessionServicesLoader> sessionServicesLoader; // @synthesize sessionServicesLoader=_sessionServicesLoader;
+@property(nonatomic) __weak id <SPTFreeTierSessionScopeServicesLoaderService> sessionServicesLoaderService; // @synthesize sessionServicesLoaderService=_sessionServicesLoaderService;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(nonatomic) __weak id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(nonatomic) long long currentState; // @synthesize currentState=_currentState;
@@ -39,7 +39,7 @@
 - (void)performUIModeSwitch;
 - (void)theNewExperienceStateChanged;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (id)initWithCurrentState:(long long)arg1 theNewExperienceEnabledSignal:(id)arg2 loginStateController:(id)arg3 metaViewController:(id)arg4 sessionServicesLoader:(id)arg5 linkDispatcher:(id)arg6 alertController:(id)arg7 transitionCoordinator:(id)arg8 crashReporter:(id)arg9;
+- (id)initWithCurrentState:(long long)arg1 theNewExperienceEnabledSignal:(id)arg2 loginStateController:(id)arg3 metaViewController:(id)arg4 sessionServicesLoaderService:(id)arg5 linkDispatcher:(id)arg6 alertController:(id)arg7 transitionCoordinator:(id)arg8 crashReporter:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

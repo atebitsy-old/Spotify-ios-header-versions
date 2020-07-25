@@ -29,10 +29,11 @@
 - (void)setupSocialDeviceEnabledSignal;
 @property(readonly, nonatomic) unsigned long long maxMemberCount;
 @property(readonly, nonatomic) _Bool isShareLinkForSingleModeEnabled;
-@property(readonly, nonatomic) _Bool isSocialListeningModeActive;
-@property(readonly, nonatomic) _Bool isListeningTogetherModeActive;
-@property(readonly, nonatomic) _Bool isSocialListeningEnabledAndNotActive;
-@property(readonly, nonatomic) _Bool isSocialListeningEnabledAndActive;
+@property(readonly, nonatomic, getter=isAllowListen) _Bool allowListen;
+@property(readonly, nonatomic, getter=isNewUIExperienceEnabled) _Bool newUIExperienceEnabled;
+@property(readonly, nonatomic, getter=isSocialListeningAvailable) _Bool socialListeningAvailable;
+@property(readonly, nonatomic, getter=isCanUseSocialSessions) _Bool canUseSocialSessions;
+@property(readonly, nonatomic, getter=isSocialListeningEnabled) _Bool socialListeningEnabled;
 - (id)initWithFeatureFlagFactory:(id)arg1 featureProperties:(id)arg2;
 
 // Remaining properties

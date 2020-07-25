@@ -11,14 +11,14 @@
 #import "SPTNowPlayingContainerIdleMonitorObserver-Protocol.h"
 #import "SPTNowPlayingContainerIdleMonitorReceiving-Protocol.h"
 #import "SPTNowPlayingContainingViewController-Protocol.h"
-#import "SPTNowPlayingContentContainingViewController-Protocol.h"
 #import "SPTNowPlayingModeLayoutDelegate-Protocol.h"
 #import "SPTNowPlayingModeResolverObserver-Protocol.h"
+#import "SPTNowPlayingViewControllerProtocol-Protocol.h"
 
 @class NSArray, NSHashTable, NSLayoutConstraint, NSMutableArray, NSMutableDictionary, NSString, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentViewProvider, SPTNowPlayingLogger, SPTNowPlayingModel, SPTTheme, UIStackView;
 @protocol SPTNowPlayingContainedViewController, SPTNowPlayingContentViewController, SPTNowPlayingModeResolver, SPTShareFeature;
 
-@interface SPTNowPlayingViewController : UIViewController <SPTNowPlayingContainingViewController, SPTNowPlayingContainerIdleMonitorObserver, SPTNowPlayingContainerIdleMonitorLoggingDelegate, SPTNowPlayingModeResolverObserver, SPTNowPlayingModeLayoutDelegate, SPTBarOverlayViewController, SPTNowPlayingContentContainingViewController, SPTNowPlayingContainerIdleMonitorReceiving>
+@interface SPTNowPlayingViewController : UIViewController <SPTNowPlayingContainingViewController, SPTNowPlayingContainerIdleMonitorObserver, SPTNowPlayingContainerIdleMonitorLoggingDelegate, SPTNowPlayingModeResolverObserver, SPTNowPlayingModeLayoutDelegate, SPTBarOverlayViewController, SPTNowPlayingViewControllerProtocol, SPTNowPlayingContainerIdleMonitorReceiving>
 {
     SPTNowPlayingModel *_model;
     SPTTheme *_theme;
@@ -26,7 +26,7 @@
     NSArray *_providers;
     SPTNowPlayingLogger *_logger;
     SPTNowPlayingContainerIdleMonitor *_idleMonitor;
-    NSMutableArray *_layoutConstraints;
+    NSMutableArray *_stackViewsViewControllerConstraints;
     UIStackView *_topStackView;
     UIStackView *_bottomStackView;
     id <SPTShareFeature> _shareFeature;
@@ -38,15 +38,18 @@
     NSLayoutConstraint *_topStackViewHeightConstraint;
     NSLayoutConstraint *_bottomStackViewHeightConstraint;
     NSLayoutConstraint *_bottomStackViewBottomConstraint;
+    NSLayoutConstraint *_bottomStackViewWidthConstraint;
     double _topMargin;
     double _topStackViewHeight;
     double _bottomStackViewHeight;
+    struct CGSize maxSize;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) double bottomStackViewHeight; // @synthesize bottomStackViewHeight=_bottomStackViewHeight;
 @property(nonatomic) double topStackViewHeight; // @synthesize topStackViewHeight=_topStackViewHeight;
 @property(nonatomic) double topMargin; // @synthesize topMargin=_topMargin;
+@property(retain, nonatomic) NSLayoutConstraint *bottomStackViewWidthConstraint; // @synthesize bottomStackViewWidthConstraint=_bottomStackViewWidthConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *bottomStackViewBottomConstraint; // @synthesize bottomStackViewBottomConstraint=_bottomStackViewBottomConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *bottomStackViewHeightConstraint; // @synthesize bottomStackViewHeightConstraint=_bottomStackViewHeightConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *topStackViewHeightConstraint; // @synthesize topStackViewHeightConstraint=_topStackViewHeightConstraint;
@@ -58,13 +61,14 @@
 @property(nonatomic) __weak id <SPTShareFeature> shareFeature; // @synthesize shareFeature=_shareFeature;
 @property(retain, nonatomic) UIStackView *bottomStackView; // @synthesize bottomStackView=_bottomStackView;
 @property(retain, nonatomic) UIStackView *topStackView; // @synthesize topStackView=_topStackView;
-@property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
+@property(retain, nonatomic) NSMutableArray *stackViewsViewControllerConstraints; // @synthesize stackViewsViewControllerConstraints=_stackViewsViewControllerConstraints;
 @property(retain, nonatomic) SPTNowPlayingContainerIdleMonitor *idleMonitor; // @synthesize idleMonitor=_idleMonitor;
 @property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) NSArray *providers; // @synthesize providers=_providers;
 @property(retain, nonatomic) NSHashTable *viewControllers; // @synthesize viewControllers=_viewControllers;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
+@property(nonatomic) struct CGSize maxSize; // @synthesize maxSize;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)updateLayoutForMode:(id)arg1;
 - (void)setupForMode:(id)arg1 fromMode:(id)arg2;
@@ -79,21 +83,22 @@
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
 - (void)addChildViewController:(id)arg1;
 - (void)containedViewController:(id)arg1 didUpdatePreferredSizeTo:(struct CGSize)arg2;
+- (void)reloadModeLayout;
 - (_Bool)barViewControllerInteractiveTransitionEnabled:(id)arg1;
 - (id)replacementViewsForBarTransition:(id)arg1;
-- (double)preferredHeightForViewController:(id)arg1;
+- (double)preferredHeightForViewController:(id)arg1 inContainerSize:(struct CGSize)arg2;
 - (void)replaceViewController:(id)arg1 with:(id)arg2;
 - (void)setupContentViewController;
 - (void)emptyStackViews;
 - (void)setupStackViews;
+- (void)setupViewConstraints;
 - (void)viewWillAppear:(_Bool)arg1;
 - (id)viewControllersForEdge:(unsigned long long)arg1;
 - (void)updateViewConstraints;
 - (void)updateWindowedContentSpace;
-- (double)maxHeight;
-- (void)viewDidLayoutSubviews;
-- (void)setupConstraints;
+- (void)setupStackViewsHeightConstraints;
 - (void)forceUpdateViewConstraints;
+- (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (_Bool)shouldAutorotate;
 - (id)initWithModel:(id)arg1 theme:(id)arg2 modeResolver:(id)arg3 shareFeature:(id)arg4 logger:(id)arg5 contentViewProvider:(id)arg6;

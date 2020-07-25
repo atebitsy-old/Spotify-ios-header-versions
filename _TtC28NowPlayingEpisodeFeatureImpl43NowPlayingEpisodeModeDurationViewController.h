@@ -21,6 +21,7 @@
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (void)didTapSliderWithGesture:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (id)initWithCoder:(id)arg1;
 

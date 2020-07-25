@@ -17,6 +17,7 @@
     // Error parsing type: , name: layoutManager
     // Error parsing type: , name: commandHandler
     // Error parsing type: , name: paginationHandler
+    // Error parsing type: , name: useDiffingOnViewModelChanges
 }
 
 - (void).cxx_destruct;

@@ -17,7 +17,7 @@
 #import "SPTSearchVoiceEnabledViewDelegate-Protocol.h"
 
 @class GLUEGradientView, NSLayoutConstraint, NSString, NSURL, SPTFloatingVoiceSearchView, SPTProgressView, SPTSearch2Configuration, SPTSearchHubViewController, SPTSearchKeyboardTracker, SPTSearchPlatformColorInterpolator;
-@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTSearchLogger, UICollectionViewDragDelegate, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
+@protocol GLUETheme, SPTExplicitContentAccessManager, SPTImageLoader, SPTPageContainer, SPTSearch2ViewModelProvider, SPTSearchLoadingLogger, SPTSearchLogger, SPTSearchOnDemandPromoting, UICollectionViewDragDelegate, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearch2ViewController : UIViewController <SPContentInsetViewController, SPTSearch2ViewModelProviderDelegate, HUBViewContentOffsetObserver, SPTImageLoaderDelegate, SPTSearchPlatformColorInterpolatorDelegate, SPTSearchVoiceEnabledViewDelegate, SPTSearchKeyboardTrackerDelegate, SPTPageController, SPTSearch2ViewControllerProtocol>
 {
@@ -41,10 +41,12 @@
     id <UICollectionViewDragDelegate> _dragDelegateObject;
     NSLayoutConstraint *_floatingSearchViewBottomConstraint;
     SPTSearchKeyboardTracker *_keyboardTracker;
+    id <SPTSearchOnDemandPromoting> _onDemandPromoter;
     struct UIEdgeInsets _insets;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTSearchOnDemandPromoting> onDemandPromoter; // @synthesize onDemandPromoter=_onDemandPromoter;
 @property(readonly, nonatomic) SPTSearchKeyboardTracker *keyboardTracker; // @synthesize keyboardTracker=_keyboardTracker;
 @property(retain, nonatomic) NSLayoutConstraint *floatingSearchViewBottomConstraint; // @synthesize floatingSearchViewBottomConstraint=_floatingSearchViewBottomConstraint;
 @property(readonly, nonatomic) id <UICollectionViewDragDelegate> dragDelegateObject; // @synthesize dragDelegateObject=_dragDelegateObject;
@@ -66,15 +68,15 @@
 @property(copy, nonatomic) NSString *query; // @synthesize query=_query;
 - (void)keyboardTrackerDidUpdateKeyboardFrame:(id)arg1;
 - (void)voiceEnabledView:(id)arg1 didSelectElementWithSourceIdentifier:(id)arg2;
-- (id)makeNavigateHandlerWithURIDispatchService:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makeSelectOnDemandTrackHandlerWithOnDemandSet:(id)arg1 linkDispatcher:(id)arg2 searchHubsLogger:(id)arg3 ubiHubsLogger:(id)arg4;
+- (id)makeNavigateHandlerWithLinkDispatcher:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeClearRecentsCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeRemoveRecentCommandHandlerWithDataSource:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (id)makeReloadCommandHandlerWithUbiHubsLogger:(id)arg1;
 - (id)makeKeyboardDismissCommandHandler;
-- (id)makePlayTrackHandlerWithPlayerFeature:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
+- (id)makePlayTrackHandlerWithPlayerProvider:(id)arg1 searchHubsLogger:(id)arg2 ubiHubsLogger:(id)arg3;
 - (struct CGRect)keyboardFrame;
 - (id)urlForDraggableItemAtIndexPath:(id)arg1;
-- (id)makePlayerProviderWithPlayerFeature:(id)arg1;
 - (id)makeHUBViewControllerWithDependencies:(id)arg1 configuration:(id)arg2;
 - (void)dismissKeyboard;
 - (void)setGradientColor:(id)arg1 animated:(_Bool)arg2;
@@ -104,7 +106,7 @@
 - (id)backgroundColor;
 @property(readonly, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
-- (id)initWithViewModelProvider:(id)arg1 dependencies:(id)arg2 configuration:(id)arg3 loadingLogger:(id)arg4 searchLogger:(id)arg5 onVoiceButtonPress:(CDUnknownBlockType)arg6;
+- (id)initWithViewModelProvider:(id)arg1 dependencies:(id)arg2 configuration:(id)arg3 loadingLogger:(id)arg4 searchLogger:(id)arg5 onDemandPromoter:(id)arg6 onVoiceButtonPress:(CDUnknownBlockType)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

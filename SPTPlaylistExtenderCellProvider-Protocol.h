@@ -5,13 +5,14 @@
 //
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+#import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 #import "SPTFreeTierPlaylistModelObserver-Protocol.h"
 #import "SPTFreeTierPlaylistSectionDescription-Protocol.h"
 #import "SPTFreeTierPlaylistSectionDescriptionV2-Protocol.h"
 
 @protocol SPTFreeTierPlaylistCellProviderDelegate;
 
-@protocol SPTPlaylistExtenderCellProvider <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistSectionDescriptionV2, SPTFreeTierPlaylistModelObserver>
+@protocol SPTPlaylistExtenderCellProvider <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2, SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistSectionDescriptionV2, SPTFreeTierPlaylistModelObserver>
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate;
 @end
 

@@ -9,7 +9,7 @@
 #import "SPTBrowseService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTBrowseFeatureProperties, SPTPersistentCache;
-@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, _TtP22MarketingFormatFeature25SPTMarketingFormatService_;
+@protocol SPTBrowseTestManager, SPTContainerService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRadioService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, _TtP22MarketingFormatFeature25SPTMarketingFormatService_;
 
 @interface SPTBrowseServiceImplementation : NSObject <SPTBrowseService>
 {
@@ -31,12 +31,10 @@
     id <SPTSettingsFeature> _settingsFeature;
     id <SPTSessionService> _clientSessionService;
     id <_TtP22MarketingFormatFeature25SPTMarketingFormatService_> _marketingFormatService;
-    id <SPTPlayerFeature> _playerService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <_TtP22MarketingFormatFeature25SPTMarketingFormatService_> marketingFormatService; // @synthesize marketingFormatService=_marketingFormatService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTSettingsFeature> settingsFeature; // @synthesize settingsFeature=_settingsFeature;
@@ -53,10 +51,7 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(readonly, nonatomic) SPTBrowseFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-- (CDUnknownBlockType)replaceRadioButtonTransformer;
-@property(readonly, nonatomic) CDUnknownBlockType cardsTransformer;
 @property(readonly, nonatomic) id <SPTBrowseTestManager> testManager; // @synthesize testManager=_testManager;
-- (_Bool)ownsPageWithURI:(id)arg1;
 - (id)makeViewController;
 - (id)pageIdentifierForURI:(id)arg1;
 - (void)setNavigationBarVisible:(_Bool)arg1 inViewModelBuilder:(id)arg2;

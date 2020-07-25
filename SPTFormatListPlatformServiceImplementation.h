@@ -9,20 +9,17 @@
 #import "SPTFormatListPlatformService-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTFormatListPlatformRegistryImplementation, SPTFormatListPlatformRemoteControlPolicyFactoryImplementation, SPTFormatListPlatformRemoteControlPolicyManagerImplementation, SPTFormatListPlatformTestManagerImplementation;
-@protocol SPTAbbaService, SPTAlgotorialSharingService, SPTContainerService, SPTCoreService, SPTFeedbackService, SPTFormatListPlatformResolver, SPTFreeTierService, SPTGLUEService, SPTLocalSettings, SPTPlayerFeature, SPTPlaylistPlatformService, SPTSessionService, SPTVisualRefreshIntegrationService, VISREFIntegrationManager;
+@class NSString, SPTAllocationContext, SPTFormatListPlatformRegistryImplementation, SPTFormatListPlatformTestManagerImplementation;
+@protocol SPTAbbaService, SPTAlgotorialSharingService, SPTCoreService, SPTFormatListPlatformResolver, SPTFreeTierService, SPTGLUEService, SPTLocalSettings, SPTPlaylistPlatformService, SPTSessionService, SPTVisualRefreshIntegrationService, VISREFIntegrationManager;
 
 @interface SPTFormatListPlatformServiceImplementation : NSObject <SPTService, SPTFormatListPlatformService>
 {
     id <SPTSessionService> _clientSessionService;
-    id <SPTContainerService> _containerService;
     id <SPTFreeTierService> _freeTierService;
     id <SPTGLUEService> _glueService;
     id <SPTCoreService> _coreService;
     id <SPTAbbaService> _abbaService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
-    id <SPTPlayerFeature> _playerFeature;
-    id <SPTFeedbackService> _feedbackService;
     id <SPTAlgotorialSharingService> _algotorialSharingService;
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
     id <VISREFIntegrationManager> _visualRefreshIntegrationManager;
@@ -30,14 +27,10 @@
     SPTFormatListPlatformRegistryImplementation *_registry;
     id <SPTFormatListPlatformResolver> _platformResolver;
     id <SPTLocalSettings> _localSettings;
-    SPTFormatListPlatformRemoteControlPolicyFactoryImplementation *_remoteControlPolicyFactory;
-    SPTFormatListPlatformRemoteControlPolicyManagerImplementation *_remoteControlPolicyManager;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTFormatListPlatformRemoteControlPolicyManagerImplementation *remoteControlPolicyManager; // @synthesize remoteControlPolicyManager=_remoteControlPolicyManager;
-@property(retain, nonatomic) SPTFormatListPlatformRemoteControlPolicyFactoryImplementation *remoteControlPolicyFactory; // @synthesize remoteControlPolicyFactory=_remoteControlPolicyFactory;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTFormatListPlatformResolver> platformResolver; // @synthesize platformResolver=_platformResolver;
 @property(retain, nonatomic) SPTFormatListPlatformRegistryImplementation *registry; // @synthesize registry=_registry;
@@ -45,24 +38,18 @@
 @property(retain, nonatomic) id <VISREFIntegrationManager> visualRefreshIntegrationManager; // @synthesize visualRefreshIntegrationManager=_visualRefreshIntegrationManager;
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(nonatomic) __weak id <SPTAlgotorialSharingService> algotorialSharingService; // @synthesize algotorialSharingService=_algotorialSharingService;
-@property(nonatomic) __weak id <SPTFeedbackService> feedbackService; // @synthesize feedbackService=_feedbackService;
-@property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
-@property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-- (id)provideRemoteControlPolicyManager;
-- (id)provideRemoteControlPolicyFactory;
 - (id)providePlatformManagerForFormatListURL:(id)arg1;
 - (id)providePlatformResolver;
 - (id)providePlatformRegistry;
 - (id)provideLocalSettings;
 - (id)provideTestManager;
 - (id)provideFormatListPlatformViewController:(id)arg1 context:(id)arg2;
-- (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

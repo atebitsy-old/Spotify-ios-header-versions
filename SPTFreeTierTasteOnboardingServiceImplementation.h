@@ -10,7 +10,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierTasteOnboardingCompoundCuration, SPTFreeTierTasteOnboardingCurator, SPTFreeTierTasteOnboardingDeeplinkServiceImplementation, SPTFreeTierTasteOnboardingFlowCoordinator, SPTFreeTierTasteOnboardingTestManagerImplementation;
-@protocol FollowFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHomeMixUIService, SPTInstrumentationService, SPTLoginService, SPTMandatoryPremiumTrialService, SPTNetworkService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
+@protocol FollowFeature, SPTAudioPreviewService, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTEventSenderService, SPTFeatureFlaggingService, SPTFreeTierService, SPTGLUEService, SPTHomeMixUIService, SPTInstrumentationService, SPTLoginService, SPTMandatoryPremiumTrialService, SPTNetworkService, SPTPerformanceMetricsService, SPTPlaylistPlatformService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationService, SPTURIDispatchService, _TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_;
 
 @interface SPTFreeTierTasteOnboardingServiceImplementation : NSObject <SPTFreeTierTasteOnboardingService, SPTURISubtypeHandler>
 {
@@ -36,6 +36,7 @@
     id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> _podcastOnboardingService;
     id <SPTPlaylistPlatformService> _playlistPlatformService;
     id <SPTContainerUIService> _containerUIService;
+    id <SPTEventSenderService> _eventSenderService;
     SPTFreeTierTasteOnboardingCurator *_curator;
     SPTFreeTierTasteOnboardingFlowCoordinator *_flowCoordinator;
     SPTFreeTierTasteOnboardingTestManagerImplementation *_testManager;
@@ -50,6 +51,7 @@
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingFlowCoordinator *flowCoordinator; // @synthesize flowCoordinator=_flowCoordinator;
 @property(retain, nonatomic) SPTFreeTierTasteOnboardingCurator *curator; // @synthesize curator=_curator;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTPlaylistPlatformService> playlistPlatformService; // @synthesize playlistPlatformService=_playlistPlatformService;
 @property(nonatomic) __weak id <_TtP24PodcastOnboardingFeature27SPTPodcastOnboardingService_> podcastOnboardingService; // @synthesize podcastOnboardingService=_podcastOnboardingService;

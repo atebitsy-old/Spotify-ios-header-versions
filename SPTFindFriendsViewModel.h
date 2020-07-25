@@ -7,60 +7,48 @@
 #import <objc/NSObject.h>
 
 #import "FollowModelObserver-Protocol.h"
-#import "SPTDataLoaderDelegate-Protocol.h"
 #import "SPTFindFriendsNetworkConnectionManagerDelegate-Protocol.h"
 #import "SPTOfflineModeStateObserver-Protocol.h"
 
-@class MultipleFollowModel, NSArray, NSString, SPTDataLoader, SPTFindFriendsNetworkConnectionManager;
-@protocol FollowFeature, SPTFindFriendsViewModelDelegate, SPTOfflineModeState;
+@class MultipleFollowModel, NSArray, NSString, SPTFindFriendsNetworkConnectionManager, SPTPageLoader;
+@protocol FollowFeature, SPTFindFriendsLoadableModel, SPTFindFriendsViewModelDelegate, SPTOfflineModeState;
 
-@interface SPTFindFriendsViewModel : NSObject <SPTFindFriendsNetworkConnectionManagerDelegate, FollowModelObserver, SPTDataLoaderDelegate, SPTOfflineModeStateObserver>
+@interface SPTFindFriendsViewModel : NSObject <FollowModelObserver, SPTOfflineModeStateObserver, SPTFindFriendsNetworkConnectionManagerDelegate>
 {
-    _Bool _loading;
     _Bool _offline;
     id <SPTFindFriendsViewModelDelegate> _delegate;
-    NSArray *_friends;
-    SPTDataLoader *_dataLoader;
+    NSArray *_filteredFriends;
+    id <SPTFindFriendsLoadableModel> _model;
     id <SPTOfflineModeState> _offlineModeState;
     SPTFindFriendsNetworkConnectionManager *_networkConnectionManager;
-    NSArray *_allFriends;
     id <FollowFeature> _followFeature;
     MultipleFollowModel *_multipleFollowModel;
+    SPTPageLoader *_pageLoader;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPageLoader *pageLoader; // @synthesize pageLoader=_pageLoader;
 @property(retain, nonatomic) MultipleFollowModel *multipleFollowModel; // @synthesize multipleFollowModel=_multipleFollowModel;
 @property(readonly, nonatomic) __weak id <FollowFeature> followFeature; // @synthesize followFeature=_followFeature;
-@property(retain, nonatomic) NSArray *allFriends; // @synthesize allFriends=_allFriends;
 @property(retain, nonatomic) SPTFindFriendsNetworkConnectionManager *networkConnectionManager; // @synthesize networkConnectionManager=_networkConnectionManager;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
-@property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic, getter=isOffline) _Bool offline; // @synthesize offline=_offline;
-@property(nonatomic, getter=isLoading) _Bool loading; // @synthesize loading=_loading;
-@property(retain, nonatomic) NSArray *friends; // @synthesize friends=_friends;
+@property(retain, nonatomic) id <SPTFindFriendsLoadableModel> model; // @synthesize model=_model;
+@property(retain, nonatomic) NSArray *filteredFriends; // @synthesize filteredFriends=_filteredFriends;
 @property(nonatomic) __weak id <SPTFindFriendsViewModelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)networkConnectionManager:(id)arg1 hasDisconnectedFromNetworkType:(long long)arg2;
 - (void)networkConnectionManager:(id)arg1 hasConnectedToNetworkType:(long long)arg2;
-- (_Bool)isConnectedToFacebook;
-- (_Bool)isConnectedToAnyNetworks;
+- (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (void)connectToNetworkAtIndex:(unsigned long long)arg1;
 - (long long)networkTypeAtIndex:(unsigned long long)arg1;
-- (id)networks;
 - (void)followModel:(id)arg1 updateDidFailWithError:(id)arg2;
 - (void)followModel:(id)arg1 followDataDidChange:(id)arg2;
 - (void)followAllFriends;
 - (void)toggleFollowStateForUserAtIndex:(unsigned long long)arg1;
 - (void)filterFriendsWithSearchQuery:(id)arg1;
-- (void)dataLoader:(id)arg1 didCancelRequest:(id)arg2;
-- (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
-- (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
-- (id)parseDataFromResponse:(id)arg1 error:(id *)arg2;
-- (void)requestData;
-- (unsigned long long)friendsNotYetFollowedCount;
-- (unsigned long long)totalFriendsCount;
+- (void)updateMultipleFollowModel;
 - (void)dealloc;
-- (id)initWithDataLoader:(id)arg1 networkConnectionManager:(id)arg2 offlineModeState:(id)arg3 followFeature:(id)arg4;
+- (id)initWithModel:(id)arg1 pageLoader:(id)arg2 networkConnectionManager:(id)arg3 offlineModeState:(id)arg4 followFeature:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

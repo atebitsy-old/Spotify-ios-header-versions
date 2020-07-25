@@ -23,6 +23,7 @@
 + (CDUnknownBlockType)listeningPeriodStarted:(id)arg1;
 + (CDUnknownBlockType)speechSessionStarted:(id)arg1;
 + (CDUnknownBlockType)timerElapsed:(id)arg1;
++ (CDUnknownBlockType)micActivationRequested:(id)arg1;
 + (CDUnknownBlockType)tearDown:(id)arg1;
 + (CDUnknownBlockType)initEvent;
 + (id)updateWithModel:(id)arg1 event:(id)arg2;

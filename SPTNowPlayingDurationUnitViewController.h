@@ -50,7 +50,7 @@
 - (double)nowPlayingSliderCurrentPosition:(id)arg1;
 - (double)nowPlayingSliderCurrentDuration:(id)arg1;
 - (double)nowPlayingSliderAnimationSpeed:(id)arg1;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)setupConstraints;

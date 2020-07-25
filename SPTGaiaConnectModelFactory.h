@@ -10,7 +10,6 @@
 {
 }
 
-+ (void)coreCredentialsFromData:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
 + (id)incarnationsFromArray:(id)arg1;
 + (id)deviceFromArray:(id)arg1 withIdentifier:(id)arg2;
 + (id)transferErrorFromRawState:(id)arg1 withDevices:(id)arg2;

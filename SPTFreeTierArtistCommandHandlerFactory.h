@@ -23,8 +23,8 @@
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> defaultCommandHandlerFactory; // @synthesize defaultCommandHandlerFactory=_defaultCommandHandlerFactory;
 - (id)createLoggerForViewURI:(id)arg1;
 - (id)createArtistReleasesCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3;
-- (id)createArtistViewCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 inAppMessageRequester:(id)arg6;
-- (id)createCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 inAppMessageRequester:(id)arg6;
+- (id)createArtistViewCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 inAppMessageRequester:(id)arg6 ubiLogger:(id)arg7;
+- (id)createCommandHandlerForViewURI:(id)arg1 referrerIdentifier:(id)arg2 reloadPageSignalSource:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 inAppMessageRequester:(id)arg6 ubiLogger:(id)arg7;
 - (id)initWithDefaultCommandHandlerFactory:(id)arg1 playerService:(id)arg2 hubsRendererFactory:(id)arg3 allSongsService:(id)arg4;
 
 @end

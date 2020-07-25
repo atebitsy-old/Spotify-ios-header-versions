@@ -14,18 +14,18 @@
 {
     _Bool _carplayFeature;
     _Bool _carplayDeferImageLoading;
-    _Bool _carplayDisableTrackImages;
     _Bool _carplayRemoteControlEventSubtypeDeprecation;
     _Bool _carplayRemoteControlEventLoggingEnabled;
     _Bool _carplayUbiEnabled;
     _Bool _carplayLargeListsEnabled;
+    _Bool _carplayContinuePlayingFeature;
 }
 
+@property(readonly, nonatomic) _Bool carplayContinuePlayingFeature; // @synthesize carplayContinuePlayingFeature=_carplayContinuePlayingFeature;
 @property(readonly, nonatomic) _Bool carplayLargeListsEnabled; // @synthesize carplayLargeListsEnabled=_carplayLargeListsEnabled;
 @property(readonly, nonatomic) _Bool carplayUbiEnabled; // @synthesize carplayUbiEnabled=_carplayUbiEnabled;
 @property(readonly, nonatomic) _Bool carplayRemoteControlEventLoggingEnabled; // @synthesize carplayRemoteControlEventLoggingEnabled=_carplayRemoteControlEventLoggingEnabled;
 @property(readonly, nonatomic) _Bool carplayRemoteControlEventSubtypeDeprecation; // @synthesize carplayRemoteControlEventSubtypeDeprecation=_carplayRemoteControlEventSubtypeDeprecation;
-@property(readonly, nonatomic) _Bool carplayDisableTrackImages; // @synthesize carplayDisableTrackImages=_carplayDisableTrackImages;
 @property(readonly, nonatomic) _Bool carplayDeferImageLoading; // @synthesize carplayDeferImageLoading=_carplayDeferImageLoading;
 @property(readonly, nonatomic) _Bool carplayFeature; // @synthesize carplayFeature=_carplayFeature;
 - (id)propertyModels;

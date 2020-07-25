@@ -6,9 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Header_Actions_ContextMenuButtonEventFactory, SPTUBIMobilePodcastEntity_Header_Actions_FollowButtonEventFactory;
+@class NSURL;
+@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Header_Actions_ContextMenuButtonEventFactory, SPTUBIMobilePodcastEntity_Header_Actions_FollowButtonEventFactory, SPTUBIMobilePodcastEntity_Header_Actions_PlayButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntity_Header_ActionsEventFactory <NSObject>
+- (id <SPTUBIMobilePodcastEntity_Header_Actions_PlayButtonEventFactory>)playButtonFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobilePodcastEntity_Header_Actions_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
 - (id <SPTUBIMobilePodcastEntity_Header_Actions_FollowButtonEventFactory>)followButtonFactory;
 - (id <SPTUBIEventFactoryLocation>)_location;

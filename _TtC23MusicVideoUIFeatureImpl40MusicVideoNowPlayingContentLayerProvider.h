@@ -6,11 +6,22 @@
 
 #import <objc/NSObject.h>
 
+@protocol SPTNowPlayingContentLayerProviderDelegate;
+
 @interface _TtC23MusicVideoUIFeatureImpl40MusicVideoNowPlayingContentLayerProvider : NSObject
 {
+    // Error parsing type: , name: surfaceFactory
+    // Error parsing type: , name: videoSurfaceManager
+    // Error parsing type: , name: imageLoaderFactory
+    // Error parsing type: , name: player
+    // Error parsing type: , name: isMusicVideo
+    // Error parsing type: , name: delegate
 }
 
+- (void).cxx_destruct;
 - (id)init;
+- (void)dealloc;
+@property(nonatomic) __weak id <SPTNowPlayingContentLayerProviderDelegate> delegate; // @synthesize delegate;
 
 @end
 

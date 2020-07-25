@@ -6,10 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
-@class GLUEButton, SPTAdsPromotedContentImageView;
+@class SPTAdsPromotedContentImageView, UIButton;
 
 @protocol SPTAdsMobileOverlayContentView <NSObject>
 @property(readonly, nonatomic) SPTAdsPromotedContentImageView *contentImageView;
-@property(readonly, nonatomic) GLUEButton *actionButton;
+@property(readonly, nonatomic) UIButton *actionButton;
+
+@optional
+- (_Bool)isPlayPauseButtonPlaying;
+- (_Bool)updatePlayActionButtonState;
 @end
 

@@ -39,7 +39,7 @@
 @property(readonly, nonatomic) NSLayoutConstraint *searchBarWidthConstraint; // @synthesize searchBarWidthConstraint=_searchBarWidthConstraint;
 @property(readonly, nonatomic) UIView<SPTSearchSearchBarProtocol> *searchBar; // @synthesize searchBar=_searchBar;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
-@property(readonly, nonatomic) id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
+@property(readonly, nonatomic) __weak id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTSearchLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) SPTSearch2ViewController *searchViewController; // @synthesize searchViewController=_searchViewController;

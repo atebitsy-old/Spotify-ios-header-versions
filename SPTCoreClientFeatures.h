@@ -9,8 +9,8 @@
 #import "SPSessionObserver-Protocol.h"
 #import "SPTIncognitoModeHandlerObserver-Protocol.h"
 
-@class NSString, SPCore, SPSession, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTEntityService, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOfflineManager, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTRouterFactory, SPTSocialManager, SPTUserFactory;
-@protocol SPTAsyncScheduler, SPTOauthClient, SPTResolver;
+@class NSString, SPCore, SPSession, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTEntityService, SPTIncognitoModeHandler, SPTLogger, SPTOfflineManager, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTRouterFactory, SPTSocialManager, SPTUserFactory;
+@protocol SPTAsyncScheduler, SPTResolver;
 
 @interface SPTCoreClientFeatures : NSObject <SPTIncognitoModeHandlerObserver, SPSessionObserver>
 {
@@ -19,8 +19,6 @@
     SPTApplicationStateTracker *_applicationStateTracker;
     SPTLogger *_logger;
     SPTEntityService *_entityService;
-    SPTHermesController *_hermes;
-    id <SPTOauthClient> _oauthClient;
     SPTAudioVolumeControl *_audioVolumeControl;
     SPTPlayerMftCanPlayChecker *_mftCanPlayChecker;
     SPTPlayerProxyContextPlayer *_proxyContextPlayer;
@@ -34,7 +32,7 @@
     SPTRouterFactory *_routerFactory;
 }
 
-+ (id)clientFeaturesWithCore:(id)arg1 session:(id)arg2 coreCreateOptions:(id)arg3 prefs:(struct Prefs *)arg4 scheduler:(id)arg5;
++ (id)clientFeaturesWithCore:(id)arg1 connectivityApplicationScope:(id)arg2 connectivityManager:(id)arg3 session:(id)arg4 connectivityAuthenticatedScope:(id)arg5 coreCreateOptions:(id)arg6 prefs:(id)arg7 scheduler:(id)arg8;
 - (id).cxx_construct;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTRouterFactory *routerFactory; // @synthesize routerFactory=_routerFactory;
@@ -48,8 +46,6 @@
 @property(retain, nonatomic) SPTPlayerProxyContextPlayer *proxyContextPlayer; // @synthesize proxyContextPlayer=_proxyContextPlayer;
 @property(retain, nonatomic) SPTPlayerMftCanPlayChecker *mftCanPlayChecker; // @synthesize mftCanPlayChecker=_mftCanPlayChecker;
 @property(retain, nonatomic) SPTAudioVolumeControl *audioVolumeControl; // @synthesize audioVolumeControl=_audioVolumeControl;
-@property(retain, nonatomic) id <SPTOauthClient> oauthClient; // @synthesize oauthClient=_oauthClient;
-@property(retain, nonatomic) SPTHermesController *hermes; // @synthesize hermes=_hermes;
 @property(retain, nonatomic) SPTEntityService *entityService; // @synthesize entityService=_entityService;
 @property(retain, nonatomic) SPTLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTApplicationStateTracker *applicationStateTracker; // @synthesize applicationStateTracker=_applicationStateTracker;
@@ -62,7 +58,7 @@
 - (void)flushCaches;
 - (void)teardownServices;
 - (void)invalidate;
-- (id)initWithCore:(struct Core *)arg1 session:(struct Session *)arg2 prefs:(struct Prefs *)arg3 objcCore:(id)arg4 objcSession:(id)arg5 coreCreateOptions:(id)arg6 coreScheduler:(struct TimerManager *)arg7 scheduler:(id)arg8;
+- (id)initWithCore:(struct Core *)arg1 connectivityApplicationScope:(id)arg2 connectivityManager:(id)arg3 session:(id)arg4 connectivityAuthenticatedScope:(id)arg5 prefs:(id)arg6 objcCore:(id)arg7 objcSession:(id)arg8 coreCreateOptions:(id)arg9 coreScheduler:(struct TimerManager *)arg10 scheduler:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

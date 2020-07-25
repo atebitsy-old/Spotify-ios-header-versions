@@ -8,12 +8,12 @@
 
 #import "SFSafariViewControllerDelegate-Protocol.h"
 #import "SPTSignupTermsAndPolicyManagerDelegate-Protocol.h"
-#import "UITextViewDelegate-Protocol.h"
+#import "SPTSignupTermsAndPolicyViewDelegate-Protocol.h"
 
 @class NSString, SPTSignupTermsAndPolicyCopyProvider, SPTSignupTermsAndPolicyManager, SPTSignupTermsAndPolicyViewStyle;
 @protocol SPTLoginLogger, SPTSignupTermsAndPolicyViewModelDelegate;
 
-@interface SPTSignupTermsAndPolicyViewModel : NSObject <SPTSignupTermsAndPolicyManagerDelegate, SFSafariViewControllerDelegate, UITextViewDelegate>
+@interface SPTSignupTermsAndPolicyViewModel : NSObject <SPTSignupTermsAndPolicyManagerDelegate, SFSafariViewControllerDelegate, SPTSignupTermsAndPolicyViewDelegate>
 {
     id <SPTSignupTermsAndPolicyViewModelDelegate> _delegate;
     SPTSignupTermsAndPolicyManager *_termsAndPolicyManager;
@@ -29,7 +29,7 @@
 @property(retain, nonatomic) SPTSignupTermsAndPolicyManager *termsAndPolicyManager; // @synthesize termsAndPolicyManager=_termsAndPolicyManager;
 @property(nonatomic) __weak id <SPTSignupTermsAndPolicyViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)safariViewControllerDidFinish:(id)arg1;
-- (_Bool)textView:(id)arg1 shouldInteractWithURL:(id)arg2 inRange:(struct _NSRange)arg3 interaction:(long long)arg4;
+- (void)userDidTapLegalLinkWithURL:(id)arg1;
 - (void)showTermsAndPolicyDialog;
 - (void)termsAndPolicyManagerDidAcceptAllLicences:(id)arg1;
 - (void)termsAndPolicyManagerDidSelectPrivacyAndPolicyDetails:(id)arg1;

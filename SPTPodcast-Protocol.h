@@ -11,6 +11,7 @@
 @protocol SPTPodcastEpisode;
 
 @protocol SPTPodcast <NSObject, SPTShow>
+@property(nonatomic, readonly) NSArray *topics;
 @property(nonatomic, readonly) id <SPTPodcastEpisode> trailerEpisode;
 @property(nonatomic, readonly) NSArray *episodes;
 @property(nonatomic, readonly) unsigned long long unrangedLength;

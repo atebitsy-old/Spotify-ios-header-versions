@@ -8,7 +8,7 @@
 
 #import "UITextViewDelegate-Protocol.h"
 
-@class NSString, SPTPodcastSectionDescriptionTextView;
+@class NSString, SPTPodcastDescriptionViewModel, SPTPodcastSectionDescriptionTextView;
 @protocol GLUETheme, SPTPodcastDescriptionTableViewCellDelegate;
 
 @interface SPTPodcastDescriptionSectionTableViewCell : SPTPodcastSectionTableViewCell <UITextViewDelegate>
@@ -16,9 +16,11 @@
     id <SPTPodcastDescriptionTableViewCellDelegate> _delegate;
     SPTPodcastSectionDescriptionTextView *_descriptionTextView;
     id <GLUETheme> _glueTheme;
+    SPTPodcastDescriptionViewModel *_descriptionSectionViewModel;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPodcastDescriptionViewModel *descriptionSectionViewModel; // @synthesize descriptionSectionViewModel=_descriptionSectionViewModel;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) SPTPodcastSectionDescriptionTextView *descriptionTextView; // @synthesize descriptionTextView=_descriptionTextView;
 @property(nonatomic) __weak id <SPTPodcastDescriptionTableViewCellDelegate> delegate; // @synthesize delegate=_delegate;

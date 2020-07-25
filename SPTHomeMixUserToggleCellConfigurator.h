@@ -26,7 +26,7 @@
 @property(retain, nonatomic) SPTHomeMixFamilyPileConfigurator *facePilesConfigurator; // @synthesize facePilesConfigurator=_facePilesConfigurator;
 @property(retain, nonatomic) SPTHomeMixUserToggleViewModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTHomeMixGlueTheme *theme; // @synthesize theme=_theme;
-- (id)memberBlacklist;
+- (id)memberExcludeList;
 - (void)switchFlipped:(id)arg1;
 - (void)tableView:(id)arg1 didSelectRowAtIndexPath:(id)arg2;
 - (void)flipSwitchAtIndexPath:(id)arg1;

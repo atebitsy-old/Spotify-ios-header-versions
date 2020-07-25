@@ -6,7 +6,7 @@
 
 #import "SPTPodcastSectionTableViewCell.h"
 
-@class NSArray, UIStackView, UIView;
+@class NSArray, SPTPodcastChipsSectionViewModel, UIStackView, UIView;
 @protocol GLUETheme, SPTPodcastChipsSectionTableViewCellDelegate;
 
 @interface SPTPodcastChipsSectionTableViewCell : SPTPodcastSectionTableViewCell
@@ -16,6 +16,7 @@
     id <GLUETheme> _glueTheme;
     NSArray *_layoutConstraints;
     NSArray *_topicCategories;
+    SPTPodcastChipsSectionViewModel *_chipsSectionViewModel;
     UIStackView *_upperContainerView;
     UIStackView *_bottomContainerView;
     NSArray *_chipsViews;
@@ -25,6 +26,7 @@
 @property(copy, nonatomic) NSArray *chipsViews; // @synthesize chipsViews=_chipsViews;
 @property(retain, nonatomic) UIStackView *bottomContainerView; // @synthesize bottomContainerView=_bottomContainerView;
 @property(retain, nonatomic) UIStackView *upperContainerView; // @synthesize upperContainerView=_upperContainerView;
+@property(retain, nonatomic) SPTPodcastChipsSectionViewModel *chipsSectionViewModel; // @synthesize chipsSectionViewModel=_chipsSectionViewModel;
 @property(copy, nonatomic) NSArray *topicCategories; // @synthesize topicCategories=_topicCategories;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;

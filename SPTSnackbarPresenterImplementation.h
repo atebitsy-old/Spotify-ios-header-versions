@@ -45,7 +45,7 @@
 - (void)presentSnackbarWithText:(id)arg1 buttonIcon:(long long)arg2 actionBlock:(CDUnknownBlockType)arg3;
 - (void)presentSnackbarWithText:(id)arg1 buttonTitle:(id)arg2 actionBlock:(CDUnknownBlockType)arg3;
 - (void)presentSnackbarWithText:(id)arg1;
-- (id)initWithTheme:(id)arg1 carDetector:(id)arg2 viewPresenter:(id)arg3;
+- (id)initWithTheme:(id)arg1 carDetector:(id)arg2 viewPresenter:(id)arg3 isRTL:(_Bool)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -84,7 +84,7 @@
 - (id)provideQueueLogger;
 - (id)provideQueuePlaybackDelegateRegistry;
 - (id)provideQueueInteractor;
-- (id)createQueueViewControllerWithDelegate:(id)arg1 modeResolver:(id)arg2 navigationBarViewControllerV2:(id)arg3 queueInteractor:(id)arg4 entityDecorationController:(id)arg5;
+- (id)createQueueViewControllerWithDelegate:(id)arg1 modeResolver:(id)arg2 navigationBarViewController:(id)arg3 queueInteractor:(id)arg4 entityDecorationController:(id)arg5;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTPersistentCache, SPTPremiumDestinationHubManager, SPTPremiumDestinationLogger, SPTPremiumDestinationSettingsPageBuilder, SPTPremiumDestinationTabBarBadgeController, SPTPremiumDestinationTabBarBadgeLastSeenDateUpdater;
-@protocol NSObject, SPTAccountService, SPTContainerUIService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTLogCenter, SPTMandatoryPremiumTrialService, SPTNavigationFeature, SPTNavigationListProvider, SPTNetworkService, SPTPremiumDestinationExperiments, SPTPremiumDestinationUIService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTURIDispatchService;
+@protocol NSObject, SPTAccountService, SPTContainerUIService, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTFeatureSettingsItemFactory, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTInAppMessageService, SPTLogCenter, SPTMandatoryPremiumTrialService, SPTNavigationFeature, SPTNavigationListProvider, SPTNetworkService, SPTPremiumDestinationExperiments, SPTPremiumDestinationUIService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTPremiumDestinationService : SPTUIPageService
 {
@@ -25,6 +25,7 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTPremiumDestinationUIService> _premiumDestinationUIService;
+    id <SPTInAppMessageService> _inAppMessageService;
     id <SPTLogCenter> _logCenter;
     SPTPremiumDestinationLogger *_premiumDestinationLogger;
     id <SPTUBIService> _ubiService;
@@ -58,6 +59,7 @@
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(retain, nonatomic) SPTPremiumDestinationLogger *premiumDestinationLogger; // @synthesize premiumDestinationLogger=_premiumDestinationLogger;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(nonatomic) __weak id <SPTInAppMessageService> inAppMessageService; // @synthesize inAppMessageService=_inAppMessageService;
 @property(nonatomic) __weak id <SPTPremiumDestinationUIService> premiumDestinationUIService; // @synthesize premiumDestinationUIService=_premiumDestinationUIService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
@@ -79,7 +81,7 @@
 - (id)providePersistentCache;
 - (id)provideLegacyPremiumDestinationViewControllerForViewURI:(id)arg1 context:(id)arg2;
 - (id)provideHubsPremiumDestinationViewControllerWithURI:(id)arg1 context:(id)arg2;
-- (void)configureMasterFeatureFlag:(id)arg1;
+- (void)configurePrincipalFeatureFlag:(id)arg1;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (_Bool)claimsURI:(id)arg1;
 - (void)loadHubManager;

@@ -10,8 +10,8 @@
 {
     // Error parsing type: , name: lineView
     // Error parsing type: , name: progressLineView
-    // Error parsing type: , name: centerYConstraint
     // Error parsing type: , name: progressWidthConstraint
+    // Error parsing type: , name: lineCenterYConstraint
 }
 
 - (void).cxx_destruct;

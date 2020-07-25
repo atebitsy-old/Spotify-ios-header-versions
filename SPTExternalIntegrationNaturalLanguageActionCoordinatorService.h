@@ -10,28 +10,31 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTExternalIntegrationNaturalLanguageActionResolver;
-@protocol GaiaFeature, SPTExternalIntegrationPlaybackService, SPTNetworkService;
+@protocol GaiaFeature, SPTAccessoryActionLogger, SPTAccessoryManagerSessionService, SPTExternalIntegrationPlaybackService, SPTNetworkService;
 
 @interface SPTExternalIntegrationNaturalLanguageActionCoordinatorService : NSObject <SPTService, SPTExternalIntegrationActionCoordinator>
 {
     id <SPTExternalIntegrationPlaybackService> _playbackService;
     id <SPTNetworkService> _networkService;
     id <GaiaFeature> _gaiaService;
+    id <SPTAccessoryManagerSessionService> _accessoryManagerSessionService;
+    id <SPTAccessoryActionLogger> _actionLogger;
     SPTExternalIntegrationNaturalLanguageActionResolver *_resolver;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTExternalIntegrationNaturalLanguageActionResolver *resolver; // @synthesize resolver=_resolver;
+@property(retain, nonatomic) id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
+@property(nonatomic) __weak id <SPTAccessoryManagerSessionService> accessoryManagerSessionService; // @synthesize accessoryManagerSessionService=_accessoryManagerSessionService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlaybackService> playbackService; // @synthesize playbackService=_playbackService;
-- (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)performActionWithURI:(id)arg1 externalActionOrigin:(id)arg2 externalParameterProvider:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)performActionWithURI:(id)arg1 accessoryInfoProvider:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (_Bool)canPerformActionWithURI:(id)arg1;
-- (void)handlePullContextIntentFromAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)handlePlayIntentFromAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
-- (void)performAction:(id)arg1 externalActionOrigin:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)handlePullContextIntentFromAction:(id)arg1 accessoryInfoProvider:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)handlePlayIntentFromAction:(id)arg1 accessoryInfoProvider:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)performAction:(id)arg1 accessoryInfoProvider:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

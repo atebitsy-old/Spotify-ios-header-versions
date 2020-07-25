@@ -8,20 +8,21 @@
 
 #import "HUBContentOperation-Protocol.h"
 
-@class SPTHomeContentCache;
+@class SPTHomeContentStorage;
 @protocol HUBContentOperationDelegate;
 
 @interface SPTHomeCacheViewModelContentOperation : NSObject <HUBContentOperation>
 {
     id <HUBContentOperationDelegate> delegate;
-    SPTHomeContentCache *_homeContentCache;
+    SPTHomeContentStorage *_homeContentStorage;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTHomeContentCache *homeContentCache; // @synthesize homeContentCache=_homeContentCache;
+@property(readonly, nonatomic) SPTHomeContentStorage *homeContentStorage; // @synthesize homeContentStorage=_homeContentStorage;
 @property(nonatomic) __weak id <HUBContentOperationDelegate> delegate; // @synthesize delegate;
 - (void)performForViewModelBuilder:(id)arg1 previousError:(id)arg2;
-- (id)initWithHomeContentCache:(id)arg1;
+- (id)cacheTimestampData;
+- (id)initWithHomeContentStorage:(id)arg1;
 
 @end
 

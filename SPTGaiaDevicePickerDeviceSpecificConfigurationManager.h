@@ -17,7 +17,6 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *mainViewController; // @synthesize mainViewController=_mainViewController;
-@property(readonly, nonatomic) _Bool devicePickerCanBeAccessedAsStandalonePage;
 @property(readonly, nonatomic) _Bool devicePickerWantsPopoverPresentation;
 @property(readonly, nonatomic) _Bool devicePickerWantsLightTheme;
 - (id)initWithMainViewController:(id)arg1;

@@ -19,9 +19,9 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)impression;
-- (id)errorFactory;
+- (id)errorFactoryWithReason:(id)arg1;
 - (id)offlineResultsFactory;
-- (id)onlineResultsFactory;
+- (id)onlineResultsFactoryWithReason:(id)arg1;
 - (id)recentsFactory;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;

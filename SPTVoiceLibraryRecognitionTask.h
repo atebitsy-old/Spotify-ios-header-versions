@@ -7,24 +7,28 @@
 #import <objc/NSObject.h>
 
 #import "SPTVoiceLibraryAudioRecorderObserver-Protocol.h"
+#import "SPTVoiceLibrarySharedAudioBufferConsumerDelegate-Protocol.h"
 #import "SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate-Protocol.h"
 
 @class NSString, SPTVoiceLibrarySpeechRecognitionDataLoader;
-@protocol SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryRecognitionTaskDelegate;
+@protocol SPTVoiceLibraryAudioRecorder, SPTVoiceLibraryRecognitionTaskDelegate, SPTVoiceLibrarySharedAudioBufferConsumer;
 
-@interface SPTVoiceLibraryRecognitionTask : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate>
+@interface SPTVoiceLibraryRecognitionTask : NSObject <SPTVoiceLibraryAudioRecorderObserver, SPTVoiceLibrarySpeechRecognitionDataLoaderDelegate, SPTVoiceLibrarySharedAudioBufferConsumerDelegate>
 {
     id <SPTVoiceLibraryRecognitionTaskDelegate> _delegate;
     unsigned long long _state;
     id <SPTVoiceLibraryAudioRecorder> _audioRecorder;
     SPTVoiceLibrarySpeechRecognitionDataLoader *_speechRecognitionDataLoader;
+    id <SPTVoiceLibrarySharedAudioBufferConsumer> _sharedAudioBuffer;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTVoiceLibrarySharedAudioBufferConsumer> sharedAudioBuffer; // @synthesize sharedAudioBuffer=_sharedAudioBuffer;
 @property(readonly, nonatomic) SPTVoiceLibrarySpeechRecognitionDataLoader *speechRecognitionDataLoader; // @synthesize speechRecognitionDataLoader=_speechRecognitionDataLoader;
 @property(readonly, nonatomic) id <SPTVoiceLibraryAudioRecorder> audioRecorder; // @synthesize audioRecorder=_audioRecorder;
 @property(readonly, nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(nonatomic) __weak id <SPTVoiceLibraryRecognitionTaskDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)audioBuffer:(id)arg1 didReadDataChunk:(id)arg2;
 - (void)audioRecorder:(id)arg1 didChangeMeanAudioLevel:(float)arg2 rmsAudioLevel:(float)arg3 cdfScaledLevel:(float)arg4;
 - (void)audioRecorder:(id)arg1 didFailWithError:(id)arg2;
 - (void)audioRecorder:(id)arg1 didRecordAudioChunk:(id)arg2;
@@ -43,7 +47,7 @@
 - (void)cancel;
 - (void)start;
 - (void)dealloc;
-- (id)initWithSpeechRecognitionDataLoader:(id)arg1 audioRecorder:(id)arg2;
+- (id)initWithSpeechRecognitionDataLoader:(id)arg1 audioRecorder:(id)arg2 sharedAudioBuffer:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

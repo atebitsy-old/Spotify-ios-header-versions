@@ -7,9 +7,9 @@
 #import "SPTService-Protocol.h"
 
 @class NSURL;
-@protocol SPTFreeTierPlaylistCellProvider><SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription, SPTFreeTierPlaylistTrackCloudLogger, SPTLinkDispatcher;
+@protocol SPTFreeTierPlaylistCellProviderV2><SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescriptionV2, SPTFreeTierPlaylistTrackCloudLogger, SPTLinkDispatcher;
 
 @protocol _TtP25PlaylistTrackCloudFeature28SPTPlaylistTrackCloudService_ <SPTService>
-- (id <SPTFreeTierPlaylistCellProvider><SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescription>)makeCloudCellProviderWithPlaylistURL:(NSURL *)arg1 linkDispatcher:(id <SPTLinkDispatcher>)arg2 logger:(id <SPTFreeTierPlaylistTrackCloudLogger>)arg3;
+- (id <SPTFreeTierPlaylistCellProviderV2><SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescriptionV2>)makeCloudCellProviderWithPlaylistURL:(NSURL *)arg1 linkDispatcher:(id <SPTLinkDispatcher>)arg2 logger:(id <SPTFreeTierPlaylistTrackCloudLogger>)arg3;
 @end
 

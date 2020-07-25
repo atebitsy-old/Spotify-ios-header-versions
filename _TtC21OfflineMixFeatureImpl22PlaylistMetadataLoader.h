@@ -14,6 +14,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+- (void)fetchOfflineMixPlaylistItemsWithCompletion:(CDUnknownBlockType)arg1;
 - (void)fetchOfflineMixPlaylistWithCompletion:(CDUnknownBlockType)arg1;
 
 @end

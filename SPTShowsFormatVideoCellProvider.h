@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
+#import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 
-@class BMPlaybackRequestFactory, NSString;
+@class BMPlaybackRequestFactory, NSMutableDictionary, NSString;
 @protocol GLUEImageLoader, GLUETheme, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTNetworkConnectivityController, SPTVideoCacheOptions, SPTVideoFeaturePlayerFactory, SPTVideoURLAssetLoader;
 
-@interface SPTShowsFormatVideoCellProvider : NSObject <SPTFreeTierPlaylistCellProvider>
+@interface SPTShowsFormatVideoCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2>
 {
     _Bool _useBetamaxPlayer;
     id <SPTFreeTierPlaylistCellProviderDelegate> _delegate;
@@ -23,9 +24,11 @@
     BMPlaybackRequestFactory *_playbackRequestFactory;
     id <SPTVideoCacheOptions> _videoCacheOptions;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
+    NSMutableDictionary *_assetURLs;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSMutableDictionary *assetURLs; // @synthesize assetURLs=_assetURLs;
 @property(readonly, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(readonly, nonatomic) id <SPTVideoCacheOptions> videoCacheOptions; // @synthesize videoCacheOptions=_videoCacheOptions;
 @property(readonly, nonatomic) BMPlaybackRequestFactory *playbackRequestFactory; // @synthesize playbackRequestFactory=_playbackRequestFactory;
@@ -37,14 +40,21 @@
 @property(retain, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistCellProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (id)formatCellViewModelForPlaylistTrackViewModel:(id)arg1;
+- (id)reuseIdentifierForItem:(id)arg1 indexPath:(id)arg2;
 - (id)identifierForCellForRowAtIndexPath:(id)arg1;
-- (void)startPreviewInLegacyVideoLayer:(id)arg1 indexPath:(id)arg2;
+- (void)startPreviewInLegacyVideoLayer:(id)arg1 indexPath:(id)arg2 trackViewModel:(id)arg3;
+- (void)configureCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)configurePlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)didEndDisplayingPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didEndDisplayingPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)willDisplayPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)willDisplayPlaylistCell:(id)arg1 forRowAtIndexPath:(id)arg2;
+- (void)didSelectPlaylistCell:(id)arg1 item:(id)arg2 indexPath:(id)arg3;
 - (void)didSelectPlaylistCell:(id)arg1 atIndexPath:(id)arg2;
 - (id)reuseIdentifiers;
+- (double)heightForItem:(id)arg1 indexPath:(id)arg2;
 - (double)heightForRowAtIndexPath:(id)arg1;
+- (_Bool)handlesItem:(id)arg1 indexPath:(id)arg2;
 - (_Bool)handlesCellAtIndexPath:(id)arg1;
 - (id)initWithImageLoader:(id)arg1 videoAssetLoader:(id)arg2 itemsViewModel:(id)arg3 rowStyle:(id)arg4 theme:(id)arg5 playerFactory:(id)arg6 videoCacheOptions:(id)arg7 playbackRequestFactory:(id)arg8 networkConnectivityController:(id)arg9 useBetamaxPlayer:(_Bool)arg10;
 

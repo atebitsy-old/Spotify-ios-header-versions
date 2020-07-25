@@ -9,19 +9,21 @@
 #import "SPTBootstrapService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTCoreService, SPTEventSenderService, SPTRemoteConfigurationContextService, SPTSessionBootstrapDelegate;
+@protocol SPTCoreService, SPTEventSenderService, SPTPreSignupExperimentationService, SPTRemoteConfigurationContextService, SPTSessionBootstrapDelegate;
 
 @interface SPTBootstrapServiceImplementation : NSObject <SPTBootstrapService>
 {
     id <SPTRemoteConfigurationContextService> _remoteConfigurationContextService;
     id <SPTCoreService> _coreService;
     id <SPTEventSenderService> _eventSenderService;
+    id <SPTPreSignupExperimentationService> _psesService;
     id <SPTSessionBootstrapDelegate> _bootstrapModule;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTSessionBootstrapDelegate> bootstrapModule; // @synthesize bootstrapModule=_bootstrapModule;
+@property(nonatomic) __weak id <SPTPreSignupExperimentationService> psesService; // @synthesize psesService=_psesService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationContextService> remoteConfigurationContextService; // @synthesize remoteConfigurationContextService=_remoteConfigurationContextService;

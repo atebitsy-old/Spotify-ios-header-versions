@@ -9,7 +9,6 @@
 @interface _TtC15FindFeatureImpl11FindService : NSObject
 {
     // Error parsing type: , name: containerService
-    // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: containerUIService
     // Error parsing type: , name: browseService
     // Error parsing type: , name: glueService
@@ -21,14 +20,14 @@
     // Error parsing type: , name: uriDispatchService
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: performanceMetricsService
-    // Error parsing type: , name: configurationProperties
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: properties
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)provideViewControllerForURI:(id)arg1;
-@property(nonatomic, readonly) _Bool composableFindEnabled;
+- (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

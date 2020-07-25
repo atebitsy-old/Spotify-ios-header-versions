@@ -13,7 +13,7 @@
 @optional
 - (void)playback:(id <BMPlaybackIdentity>)arg1 didChangeDuration:(double)arg2;
 - (void)playbackDidFinishForIdentity:(id <BMPlaybackIdentity>)arg1;
-- (void)playback:(id <BMPlaybackIdentity>)arg1 didPlayToTime:(CDStruct_1b6d18a9)arg2;
+- (void)playback:(id <BMPlaybackIdentity>)arg1 didPlayToTime:(CDStruct_198678f7)arg2;
 - (void)playbackDidStartForIdentity:(id <BMPlaybackIdentity>)arg1;
 - (void)playbackDidCreateSessionWithIdentity:(id <BMPlaybackIdentity>)arg1;
 @end

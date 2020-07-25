@@ -25,8 +25,8 @@
 - (void)dismissButtonClickedWithSender:(id)arg1;
 - (void)followButtonClickedWithSender:(id)arg1;
 - (void)configureWithModel:(id)arg1;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 @property(nonatomic) __weak id <HUBComponentEventHandler> eventHandler; // @synthesize eventHandler;
 
 @end

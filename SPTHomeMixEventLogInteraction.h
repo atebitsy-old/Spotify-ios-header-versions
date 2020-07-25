@@ -6,22 +6,16 @@
 
 #import "SPTHomeMixEvent.h"
 
-@class NSString;
+@protocol SPTUBIInteractionEvent;
 
 @interface SPTHomeMixEventLogInteraction : SPTHomeMixEvent
 {
-    NSString *_sectionId;
-    NSString *_userIntent;
-    long long _itemIndex;
-    NSString *_targetURI;
+    id <SPTUBIInteractionEvent> _ubiInteraction;
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *targetURI; // @synthesize targetURI=_targetURI;
-@property(readonly, nonatomic) long long itemIndex; // @synthesize itemIndex=_itemIndex;
-@property(readonly, copy, nonatomic) NSString *userIntent; // @synthesize userIntent=_userIntent;
-@property(readonly, copy, nonatomic) NSString *sectionId; // @synthesize sectionId=_sectionId;
-- (id)initWithSectionId:(id)arg1 userIntent:(id)arg2 itemIndex:(long long)arg3 targetURI:(id)arg4;
+@property(retain, nonatomic) id <SPTUBIInteractionEvent> ubiInteraction; // @synthesize ubiInteraction=_ubiInteraction;
+- (id)initWithUbiInteraction:(id)arg1;
 
 @end
 

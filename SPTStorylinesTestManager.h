@@ -9,8 +9,10 @@
 @interface SPTStorylinesTestManager : NSObject
 {
     _Bool _storylinesEnabled;
+    _Bool _useContextTrackExtensions;
 }
 
+@property(nonatomic) _Bool useContextTrackExtensions; // @synthesize useContextTrackExtensions=_useContextTrackExtensions;
 @property(nonatomic) _Bool storylinesEnabled; // @synthesize storylinesEnabled=_storylinesEnabled;
 - (id)initWithFeatureProperties:(id)arg1;
 

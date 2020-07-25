@@ -7,11 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSIndexPath, NSString, UIView;
-@protocol SPTFreeTierPlaylistCellProvider;
+@protocol SPTFreeTierPlaylistCellProviderV2;
 
 @protocol SPTFreeTierPlaylistCellProviderDelegate <NSObject>
-- (void)reloadCellsForCellProvider:(id <SPTFreeTierPlaylistCellProvider>)arg1;
-- (void)cellProvider:(id <SPTFreeTierPlaylistCellProvider>)arg1 playTrackAtIndexPath:(NSIndexPath *)arg2 interactionId:(NSString *)arg3;
-- (void)contextMenuPressedForCellProvider:(id <SPTFreeTierPlaylistCellProvider>)arg1 sender:(UIView *)arg2;
+- (id)itemForIndexPath:(NSIndexPath *)arg1;
+- (void)reloadCellsForCellProvider:(id <SPTFreeTierPlaylistCellProviderV2>)arg1;
+- (void)cellProvider:(id <SPTFreeTierPlaylistCellProviderV2>)arg1 playTrackAtIndexPath:(NSIndexPath *)arg2 interactionId:(NSString *)arg3;
+- (void)contextMenuPressedForCellProvider:(id <SPTFreeTierPlaylistCellProviderV2>)arg1 sender:(UIView *)arg2;
 @end
 

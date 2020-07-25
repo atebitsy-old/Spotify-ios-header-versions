@@ -33,7 +33,7 @@
 @property(nonatomic) __weak id <SPTPreSignupExperimentationFeatureFlagsLoaderDelegate> delegate; // @synthesize delegate;
 - (void)resetCurrentLoggerAttemptID;
 - (void)reportResponse:(id)arg1;
-- (void)reportSuccessLoadingFlags:(id)arg1 fromCache:(_Bool)arg2;
+- (void)reportSuccessLoadingFlags:(id)arg1 fromCache:(_Bool)arg2 signupConfiguration:(id)arg3;
 - (void)reportFailureLoadingFlags;
 - (void)reportUsingCachedData;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;

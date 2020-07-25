@@ -31,11 +31,11 @@
 - (id)actionsDictionaryForTrackURL:(id)arg1 name:(id)arg2 metadata:(id)arg3 playable:(_Bool)arg4 imageURL:(id)arg5 artists:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 viewURL:(id)arg9 logContext:(id)arg10 contextSourceURL:(id)arg11;
 - (id)generateCorrectTaskArrayWithTaskOrder:(id)arg1 actionDictionary:(id)arg2;
 - (id)actionsForTrackURL:(id)arg1 name:(id)arg2 metadata:(id)arg3 playable:(_Bool)arg4 imageURL:(id)arg5 artists:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 viewURL:(id)arg9 logContext:(id)arg10 contextSourceURL:(id)arg11;
-- (id)actionForURIs:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 containerURL:(id)arg4 playlistName:(id)arg5 actionIdentifier:(id)arg6 contextSourceURL:(id)arg7;
-- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 tracks:(id)arg4 actionIdentifier:(id)arg5;
-- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 itemName:(id)arg4 creatorName:(id)arg5 sourceName:(id)arg6 imageURL:(id)arg7 clipboardLinkTitle:(id)arg8 actionIdentifier:(id)arg9;
-- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 contextURL:(id)arg4 actionIdentifier:(id)arg5;
-- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 actionIdentifier:(id)arg4;
+- (id)actionForURIs:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 containerURL:(id)arg4 playlistName:(id)arg5 actionIdentifier:(unsigned long long)arg6 contextSourceURL:(id)arg7;
+- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 tracks:(id)arg4 actionIdentifier:(unsigned long long)arg5;
+- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 itemName:(id)arg4 creatorName:(id)arg5 sourceName:(id)arg6 imageURL:(id)arg7 clipboardLinkTitle:(id)arg8 actionIdentifier:(unsigned long long)arg9;
+- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 contextURL:(id)arg4 actionIdentifier:(unsigned long long)arg5;
+- (id)actionForURI:(id)arg1 logContext:(id)arg2 sourceURL:(id)arg3 actionIdentifier:(unsigned long long)arg4;
 - (id)offlineSync:(id)arg1 isOffline:(_Bool)arg2 collectionPlatform:(id)arg3 collectionOptions:(id)arg4 logContext:(id)arg5;
 - (id)viewAlbumWithAlbumURL:(id)arg1 logContext:(id)arg2;
 - (id)viewArtists:(id)arg1 logContext:(id)arg2;

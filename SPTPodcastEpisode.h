@@ -23,6 +23,7 @@
     _Bool _videoShowMediaType;
     NSString *_title;
     NSString *_longDescription;
+    NSString *_rawDescription;
     NSString *_podcastTitle;
     NSURL *_podcastURL;
     NSString *_publisherName;
@@ -70,6 +71,7 @@
 @property(copy, nonatomic) NSString *publisherName; // @synthesize publisherName=_publisherName;
 @property(copy, nonatomic) NSURL *podcastURL; // @synthesize podcastURL=_podcastURL;
 @property(copy, nonatomic) NSString *podcastTitle; // @synthesize podcastTitle=_podcastTitle;
+@property(copy, nonatomic) NSString *rawDescription; // @synthesize rawDescription=_rawDescription;
 @property(copy, nonatomic) NSString *longDescription; // @synthesize longDescription=_longDescription;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 - (id)copyWithZone:(struct _NSZone *)arg1;

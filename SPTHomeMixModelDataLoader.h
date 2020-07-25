@@ -26,7 +26,7 @@
 - (void)handleSettingsErrorResponse:(id)arg1;
 - (void)postExplicitOptOutChange:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (void)handleChangeMoodErrorResponse:(id)arg1;
-- (void)postTuningWithMoodChange:(unsigned long long)arg1 memberBlacklist:(id)arg2 homeMixURI:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)postTuningWithMoodChange:(unsigned long long)arg1 memberExcludeList:(id)arg2 homeMixURI:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
 - (id)initWithDataLoader:(id)arg1;
 
 // Remaining properties

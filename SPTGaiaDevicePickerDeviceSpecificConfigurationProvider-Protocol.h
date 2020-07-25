@@ -8,7 +8,6 @@
 
 @protocol SPTGaiaDevicePickerDeviceSpecificConfigurationProvider <NSObject>
 @property(readonly, nonatomic) _Bool devicePickerWantsPopoverPresentation;
-@property(readonly, nonatomic) _Bool devicePickerCanBeAccessedAsStandalonePage;
 @property(readonly, nonatomic) _Bool devicePickerWantsLightTheme;
 @end
 

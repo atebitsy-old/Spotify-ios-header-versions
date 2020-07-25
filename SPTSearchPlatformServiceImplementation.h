@@ -9,7 +9,7 @@
 #import "SPTSearchPlatformService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSearch2RequestParametersProvider;
-@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCosmosDataLoaderService, SPTExplicitContentService, SPTFeatureFlaggingService, SPTGLUEService, SPTHubFrameworkService, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRemoteConfigurationService, SPTResolver, SPTSearch2UserTierProviding, SPTSearchPlatformTestManager, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTUBIService, SPTUBIUserBehaviourInstrumentation, SPTURIDispatchService, _TtP14VoiceUIFeature17SPTVoiceUIService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCosmosDataLoaderService, SPTExplicitContentService, SPTGLUEService, SPTHubFrameworkService, SPTHubsRendererFactory, SPTHugsFactory, SPTNetworkService, SPTOnDemandService, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTRemoteConfigurationService, SPTResolver, SPTSearch2UserTierProviding, SPTSearchPlatformTestManager, SPTSearchRecentsDataSourceProviding, SPTSessionService, SPTShelfService, SPTUBIService, SPTUBIUserBehaviourInstrumentation, SPTURIDispatchService, _TtP14VoiceUIFeature17SPTVoiceUIService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTSearchPlatformServiceImplementation : NSObject <SPTSearchPlatformService>
 {
@@ -29,7 +29,6 @@
     id <_TtP14VoiceUIFeature17SPTVoiceUIService_> _voiceuiService;
     id <SPTOnDemandService> _onDemandService;
     id <SPTExplicitContentService> _explicitContentService;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTCosmosDataLoaderService> _cosmosDataLoaderService;
     id <CosmosFeature> _cosmosFeature;
@@ -60,7 +59,6 @@
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 @property(nonatomic) __weak id <SPTCosmosDataLoaderService> cosmosDataLoaderService; // @synthesize cosmosDataLoaderService=_cosmosDataLoaderService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTOnDemandService> onDemandService; // @synthesize onDemandService=_onDemandService;
 @property(nonatomic) __weak id <_TtP14VoiceUIFeature17SPTVoiceUIService_> voiceuiService; // @synthesize voiceuiService=_voiceuiService;
@@ -75,6 +73,7 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
+- (id)makeDemandPromoter;
 - (id)makeSearchLogger;
 - (id)makeOnDemandPermissionMonitor;
 - (id)makeLoadingLoggerWithConfiguration:(id)arg1;
@@ -84,6 +83,7 @@
 - (id)offlineTrackDataLoader;
 - (id)makeViewModelProviderWithConfiguration:(id)arg1;
 - (id)makeDefaultSearchRequestParameters;
+- (id)makePlayerProviderWithPlayerFeature:(id)arg1;
 - (id)makeViewControllerDependencies;
 - (id)makeUBILocationSerializer;
 - (id)provideLinkDispatcher;
@@ -92,6 +92,7 @@
 - (unsigned long long)entityVersionForPodcastFeature:(id)arg1;
 @property(readonly, nonatomic) SPTSearch2RequestParametersProvider *searchRequestParametersProvider; // @synthesize searchRequestParametersProvider=_searchRequestParametersProvider;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSourceProviding> recentsDataSourceProvider; // @synthesize recentsDataSourceProvider=_recentsDataSourceProvider;
+- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4 onDemandSetsEnabled:(_Bool)arg5;
 - (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4;
 - (id)makeEmptyStatePropertiesProviderWithOfflineSearchEnabled:(_Bool)arg1;
 - (id)makeConfiguration;

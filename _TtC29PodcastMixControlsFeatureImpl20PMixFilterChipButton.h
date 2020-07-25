@@ -9,7 +9,6 @@
 @interface _TtC29PodcastMixControlsFeatureImpl20PMixFilterChipButton : UIButton
 {
     // Error parsing type: , name: style
-    // Error parsing type: , name: callbackId
 }
 
 - (void).cxx_destruct;

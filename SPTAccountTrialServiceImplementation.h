@@ -9,27 +9,19 @@
 #import "SPTAccountTrialService-Protocol.h"
 
 @class NSString, SPTAccountTrialController, SPTAllocationContext;
-@protocol SPTAccountTrialDeferredController, SPTCoreService, SPTNetworkService, SPTSessionService;
+@protocol SPTSessionService;
 
 @interface SPTAccountTrialServiceImplementation : NSObject <SPTAccountTrialService>
 {
     id <SPTSessionService> _clientSessionService;
-    id <SPTNetworkService> _networkService;
-    id <SPTCoreService> _coreService;
-    id <SPTAccountTrialDeferredController> _deferredTrialController;
     SPTAccountTrialController *_trialController;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTAccountTrialController *trialController; // @synthesize trialController=_trialController;
-@property(retain, nonatomic) id <SPTAccountTrialDeferredController> deferredTrialController; // @synthesize deferredTrialController=_deferredTrialController;
-@property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
-@property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (id)provideTrialController;
-- (id)provideDeferredTrialController;
-- (void)unload;
 - (void)configureWithServices:(id)arg1;
 
 // Remaining properties

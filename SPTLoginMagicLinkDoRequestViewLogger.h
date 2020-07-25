@@ -15,7 +15,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
-- (void)logUserDidPressSubmitButton;
+- (void)logUserDidTapSubmitButton;
 - (void)logUserDidSeeView;
 - (id)initWithLogger:(id)arg1;
 

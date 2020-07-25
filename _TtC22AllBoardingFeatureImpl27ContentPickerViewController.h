@@ -10,10 +10,12 @@
 {
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
     // Error parsing type: , name: loopController
+    // Error parsing type: , name: searchController
     // Error parsing type: , name: pickerView
     // Error parsing type: , name: theme
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: logger
+    // Error parsing type: , name: modalPresentationMonitor
 }
 
 - (void).cxx_destruct;

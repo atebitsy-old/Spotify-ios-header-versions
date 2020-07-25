@@ -26,8 +26,8 @@
 @property(retain, nonatomic) GLUEGradientView *gradientView; // @synthesize gradientView=_gradientView;
 @property(nonatomic) __weak id <HUBComponentViewChildDelegate> childDelegate; // @synthesize childDelegate;
 - (void)setupChildComponentsForModel:(id)arg1;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;
 - (void)setupConstraints;

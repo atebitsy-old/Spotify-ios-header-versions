@@ -6,17 +6,16 @@
 
 #import <UIKit/UIViewController.h>
 
-#import "SPTPageController-Protocol.h"
 #import "SPTSocialListeningListenTogetherStateObserver-Protocol.h"
 #import "SPTSocialListeningSessionViewUserCellDelegate-Protocol.h"
 #import "SPTSocialListeningViewModelObserver-Protocol.h"
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherBottomBanner, SPTSocialListeningLoggerImplementation, SPTSocialListeningSessionViewUserCellConfigurator, SPTTableView, UIBarButtonItem;
-@protocol GLUEImageLoader, SPTPageContainer, SPTShareFeature, SPTSocialListeningViewModel;
+@class NSString, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherBottomBanner, SPTSocialListeningLoggerImplementation, SPTSocialListeningSessionViewUserCellConfigurator, SPTTableView, UIBarButtonItem;
+@protocol GLUEImageLoader, SPTShareFeature, SPTSocialListeningViewModel;
 
-@interface SPTSocialListeningParticipantsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTSocialListeningSessionViewUserCellDelegate, SPTSocialListeningViewModelObserver, SPTSocialListeningListenTogetherStateObserver, SPTPageController>
+@interface SPTSocialListeningParticipantsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTSocialListeningSessionViewUserCellDelegate, SPTSocialListeningViewModelObserver, SPTSocialListeningListenTogetherStateObserver>
 {
     id <SPTSocialListeningViewModel> _viewModel;
     id <GLUEImageLoader> _imageLoader;
@@ -46,8 +45,6 @@
 - (void)updateBottomBanner;
 - (void)sessionViewUserCellDidTapActionButton:(id)arg1;
 - (void)sessionViewUserCellDidTapUserImageOrName:(id)arg1;
-@property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
-@property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)listenTogetherStateUpdated:(long long)arg1;
 - (void)socialListeningViewModelWillLeaveSession:(id)arg1;
 - (void)socialListeningViewModelDidDeleteSession:(id)arg1;
@@ -67,7 +64,6 @@
 @property(readonly, copy) NSString *debugDescription;
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
-@property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
 
 @end

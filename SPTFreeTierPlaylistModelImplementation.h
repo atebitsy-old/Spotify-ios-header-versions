@@ -70,6 +70,7 @@
 @property(readonly, nonatomic, getter=isFormatList) _Bool formatList; // @synthesize formatList=_formatList;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering; // @synthesize sortingFiltering=_sortingFiltering;
 @property(readonly, nonatomic) NSURL *playlistURL; // @synthesize playlistURL=_playlistURL;
+- (void)addPrimaryObserver:(id)arg1;
 - (void)addPlaylistModelObserver:(id)arg1;
 @property(readonly, copy, nonatomic) NSPointerArray *observers; // @synthesize observers=_observers;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;

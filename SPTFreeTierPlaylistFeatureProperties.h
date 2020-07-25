@@ -19,21 +19,21 @@
     _Bool _respectShowsCollectionFlagInPlaylistForIncludingEpisodes;
     _Bool _enableWeightedShufflePlayback;
     _Bool _enableTrackContextSharing;
-    _Bool _enableConsistentPremiumPlayBehaviour;
-    _Bool _enableConsistentFreePlayBehaviour;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
+    unsigned long long _playlistTableviewUpdateStrategy;
     NSString *_followShowConfirmationOverrideString;
     NSString *_unfollowShowConfirmationOverrideString;
+    NSString *_playlistTableviewUpdateStrategyString;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *playlistTableviewUpdateStrategyString; // @synthesize playlistTableviewUpdateStrategyString=_playlistTableviewUpdateStrategyString;
 @property(retain, nonatomic) NSString *unfollowShowConfirmationOverrideString; // @synthesize unfollowShowConfirmationOverrideString=_unfollowShowConfirmationOverrideString;
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
+@property(readonly, nonatomic) unsigned long long playlistTableviewUpdateStrategy; // @synthesize playlistTableviewUpdateStrategy=_playlistTableviewUpdateStrategy;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
-@property(readonly, nonatomic) _Bool enableConsistentFreePlayBehaviour; // @synthesize enableConsistentFreePlayBehaviour=_enableConsistentFreePlayBehaviour;
-@property(readonly, nonatomic) _Bool enableConsistentPremiumPlayBehaviour; // @synthesize enableConsistentPremiumPlayBehaviour=_enableConsistentPremiumPlayBehaviour;
 @property(readonly, nonatomic) _Bool enableTrackContextSharing; // @synthesize enableTrackContextSharing=_enableTrackContextSharing;
 @property(readonly, nonatomic) _Bool enableWeightedShufflePlayback; // @synthesize enableWeightedShufflePlayback=_enableWeightedShufflePlayback;
 @property(readonly, nonatomic) _Bool respectShowsCollectionFlagInPlaylistForIncludingEpisodes; // @synthesize respectShowsCollectionFlagInPlaylistForIncludingEpisodes=_respectShowsCollectionFlagInPlaylistForIncludingEpisodes;
@@ -41,6 +41,7 @@
 @property(readonly, nonatomic) _Bool pageLoaderEnabledPlaylistView; // @synthesize pageLoaderEnabledPlaylistView=_pageLoaderEnabledPlaylistView;
 @property(readonly, nonatomic) _Bool dontOpenNowPlayingViewOnVideoPlayback; // @synthesize dontOpenNowPlayingViewOnVideoPlayback=_dontOpenNowPlayingViewOnVideoPlayback;
 @property(readonly, nonatomic) _Bool doubleStatePlayButton; // @synthesize doubleStatePlayButton=_doubleStatePlayButton;
+- (unsigned long long)mapPlaylistTableviewUpdateStrategyToEnumValue:(id)arg1;
 - (unsigned long long)mapUnfollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (unsigned long long)mapFollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (id)propertyModels;

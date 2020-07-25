@@ -34,6 +34,7 @@
 @property(nonatomic, readonly) NSString *publisherName;
 @property(nonatomic, readonly) NSString *podcastTitle;
 @property(nonatomic, readonly) NSURL *podcastURL;
+@property(nonatomic, readonly) NSString *rawDescription;
 @property(nonatomic, readonly) NSString *longDescription;
 @property(nonatomic, readonly) NSString *title;
 

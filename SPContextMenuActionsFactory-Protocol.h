@@ -10,19 +10,19 @@
 @protocol SPTCollectionPlatform, SPTContributingArtistsService, SPTModalPresentationController, SPTPodcastSpeedControlManager, SPTUIPresentationService;
 
 @protocol SPContextMenuActionsFactory <NSObject>
-- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 title:(NSString *)arg3 imageURL:(NSURL *)arg4 actionIdentifier:(NSString *)arg5;
-- (id)actionForURIs:(NSArray *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 containerURL:(NSURL *)arg4 playlistName:(NSString *)arg5 actionIdentifier:(NSString *)arg6 contextSourceURL:(NSURL *)arg7;
-- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 tracks:(NSArray *)arg4 actionIdentifier:(NSString *)arg5;
-- (id)shareActionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 itemName:(NSString *)arg4 creatorName:(NSString *)arg5 sourceName:(NSString *)arg6 imageURL:(NSURL *)arg7 clipboardLinkTitle:(NSString *)arg8 actionIdentifier:(NSString *)arg9;
-- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 itemName:(NSString *)arg4 creatorName:(NSString *)arg5 sourceName:(NSString *)arg6 imageURL:(NSURL *)arg7 clipboardLinkTitle:(NSString *)arg8 actionIdentifier:(NSString *)arg9;
-- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 contextURL:(NSURL *)arg4 actionIdentifier:(NSString *)arg5;
-- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 actionIdentifier:(NSString *)arg4;
-- (void)registerActionForCarThingPredicate:(id (^)(NSURL *, NSString *, NSString *, NSURL *))arg1 actionIdentifier:(NSString *)arg2;
-- (void)registerActionForURIContainerPredicate:(id (^)(NSArray *, NSString *, NSURL *, NSURL *, NSURL *, NSString *))arg1 actionIdentifier:(NSString *)arg2;
-- (void)registerActionForTracksPredicate:(id (^)(NSURL *, NSString *, NSURL *, NSArray *))arg1 actionIdentifier:(NSString *)arg2;
-- (void)registerActionForSharePredicate:(id (^)(NSURL *, NSString *, NSURL *, NSString *, NSString *, NSString *, NSURL *, NSString *))arg1 actionIdentifier:(NSString *)arg2;
-- (void)registerActionForEntityInContextPredicate:(id (^)(NSURL *, NSString *, NSURL *, NSURL *))arg1 actionIdentifier:(NSString *)arg2;
-- (void)registerActionForShortPredicate:(id (^)(NSURL *, NSString *, NSURL *))arg1 actionIdentifier:(NSString *)arg2;
+- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 title:(NSString *)arg3 imageURL:(NSURL *)arg4 actionIdentifier:(unsigned long long)arg5;
+- (id)actionForURIs:(NSArray *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 containerURL:(NSURL *)arg4 playlistName:(NSString *)arg5 actionIdentifier:(unsigned long long)arg6 contextSourceURL:(NSURL *)arg7;
+- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 tracks:(NSArray *)arg4 actionIdentifier:(unsigned long long)arg5;
+- (id)shareActionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 itemName:(NSString *)arg4 creatorName:(NSString *)arg5 sourceName:(NSString *)arg6 imageURL:(NSURL *)arg7 clipboardLinkTitle:(NSString *)arg8 actionIdentifier:(unsigned long long)arg9;
+- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 itemName:(NSString *)arg4 creatorName:(NSString *)arg5 sourceName:(NSString *)arg6 imageURL:(NSURL *)arg7 clipboardLinkTitle:(NSString *)arg8 actionIdentifier:(unsigned long long)arg9;
+- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 contextURL:(NSURL *)arg4 actionIdentifier:(unsigned long long)arg5;
+- (id)actionForURI:(NSURL *)arg1 logContext:(NSString *)arg2 sourceURL:(NSURL *)arg3 actionIdentifier:(unsigned long long)arg4;
+- (void)registerActionForCarThingPredicate:(id (^)(NSURL *, NSString *, NSString *, NSURL *))arg1 actionIdentifier:(unsigned long long)arg2;
+- (void)registerActionForURIContainerPredicate:(id (^)(NSArray *, NSString *, NSURL *, NSURL *, NSURL *, NSString *))arg1 actionIdentifier:(unsigned long long)arg2;
+- (void)registerActionForTracksPredicate:(id (^)(NSURL *, NSString *, NSURL *, NSArray *))arg1 actionIdentifier:(unsigned long long)arg2;
+- (void)registerActionForSharePredicate:(id (^)(NSURL *, NSString *, NSURL *, NSString *, NSString *, NSString *, NSURL *, NSString *))arg1 actionIdentifier:(unsigned long long)arg2;
+- (void)registerActionForEntityInContextPredicate:(id (^)(NSURL *, NSString *, NSURL *, NSURL *))arg1 actionIdentifier:(unsigned long long)arg2;
+- (void)registerActionForShortPredicate:(id (^)(NSURL *, NSString *, NSURL *))arg1 actionIdentifier:(unsigned long long)arg2;
 - (id)viewAlbumWithAlbumURL:(NSURL *)arg1 logContext:(NSString *)arg2;
 - (id)viewArtists:(NSArray *)arg1 logContext:(NSString *)arg2 presentationService:(id <SPTUIPresentationService>)arg3 contributingArtistsService:(id <SPTContributingArtistsService>)arg4;
 - (id)viewArtistWithURL:(NSURL *)arg1 logContext:(NSString *)arg2;

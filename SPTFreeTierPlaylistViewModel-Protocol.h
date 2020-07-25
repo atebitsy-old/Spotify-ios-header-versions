@@ -40,7 +40,6 @@
 - (void)toggleTrackBanAtIndexPath:(NSIndexPath *)arg1;
 - (void)toggleTrackLikeAtIndexPath:(NSIndexPath *)arg1;
 - (void)trackSelectedAtIndexPath:(NSIndexPath *)arg1 interactionId:(NSString *)arg2;
-- (NSURL *)sharingURLForTrackViewModelAtIndexPath:(NSIndexPath *)arg1;
 - (void)loadMoreTracks;
 - (_Bool)isApproachingEndIndexPath:(NSIndexPath *)arg1 countOfItemsInSection:(long long)arg2;
 @end

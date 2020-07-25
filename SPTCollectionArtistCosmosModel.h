@@ -73,11 +73,11 @@
 - (long long)numberOfSections;
 - (id)itemAtIndexPath:(id)arg1;
 - (_Bool)checkPlayabilityOfCollectionSongTrackItem:(id)arg1;
-- (void)playCollectionSongTrackItem:(id)arg1;
+- (void)playCollectionSongTrackItem:(id)arg1 loggingParams:(id)arg2;
 - (void)followModel:(id)arg1 followDataDidChange:(id)arg2;
 - (void)toggleFollowState;
 - (void)setupFollowModel;
-- (void)shufflePlayArtistEnforceShuffle:(_Bool)arg1;
+- (void)shufflePlayArtistEnforceShuffle:(_Bool)arg1 loggingParams:(id)arg2;
 - (unsigned long long)offlineAvailability;
 - (_Bool)hasNoSavedTracks;
 @property(readonly, nonatomic, getter=isFollowedByCurrentUser) _Bool followedByCurrentUser;

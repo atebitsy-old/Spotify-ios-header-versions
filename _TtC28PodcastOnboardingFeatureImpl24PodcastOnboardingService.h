@@ -17,6 +17,7 @@
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: settingsService
     // Error parsing type: , name: performanceMetricsService
+    // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: enabledPodcastInFirstTimeFlowSignal
     // Error parsing type: , name: enabledIntentInFirstTimeFlowSignal
     // Error parsing type: , name: $__lazy_storage_$_flowCoordinator

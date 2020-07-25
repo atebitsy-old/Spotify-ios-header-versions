@@ -9,14 +9,15 @@
 #import "SPTPodcastYourLibraryPageProviderDelegate-Protocol.h"
 #import "SPTYourLibraryPodcastService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTSessionService, SPTYourLibraryService;
+@class NSString, SPTAllocationContext, SPTYourLibraryPodcastFeatureProperties;
+@protocol SPTCollectionPlatformService, SPTContainerService, SPTExplicitContentService, SPTGLUEService, SPTPerformanceMetricsService, SPTPodcastFeature, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTSessionService, SPTYourLibraryService, _TtP17PodcastDALFeature20SPTPodcastDALService_;
 
 @interface SPTYourLibraryPodcastServiceImplementation : NSObject <SPTPodcastYourLibraryPageProviderDelegate, SPTYourLibraryPodcastService>
 {
     _Bool _podcastEntityContentTypeRegistered;
     id <SPTContainerService> _containerService;
     id <SPTPodcastFeature> _podcastFeature;
+    id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     id <SPTYourLibraryService> _yourLibraryService;
     id <SPTPodcastUIService> _podcastUIService;
     id <SPTSessionService> _clientSessionService;
@@ -25,11 +26,15 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTExplicitContentService> _explicitContentService;
     id <SPTGLUEService> _glueService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    SPTYourLibraryPodcastFeatureProperties *_featureProperties;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(nonatomic) _Bool podcastEntityContentTypeRegistered; // @synthesize podcastEntityContentTypeRegistered=_podcastEntityContentTypeRegistered;
+@property(retain, nonatomic) SPTYourLibraryPodcastFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;
@@ -38,6 +43,7 @@
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
 @property(nonatomic) __weak id <SPTYourLibraryService> yourLibraryService; // @synthesize yourLibraryService=_yourLibraryService;
+@property(nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
 @property(nonatomic) __weak id <SPTPodcastFeature> podcastFeature; // @synthesize podcastFeature=_podcastFeature;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (id)podcastYourLibraryPageProvider:(id)arg1 podcastPlayerWithViewURI:(id)arg2 featureIdentifier:(id)arg3 referrerIdentifier:(id)arg4;

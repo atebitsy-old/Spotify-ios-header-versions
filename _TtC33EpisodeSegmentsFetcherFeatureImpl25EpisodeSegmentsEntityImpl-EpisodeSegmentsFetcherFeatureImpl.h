@@ -9,6 +9,8 @@
 @class NSString;
 
 @interface _TtC33EpisodeSegmentsFetcherFeatureImpl25EpisodeSegmentsEntityImpl (EpisodeSegmentsFetcherFeatureImpl)
+@property(nonatomic, readonly) _Bool isTalkSegment;
+@property(nonatomic, readonly) _Bool isMusicSegment;
 @property(nonatomic, readonly) NSString *trackSubtitle;
 @end
 

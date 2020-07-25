@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader;
+@protocol SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTSignupConfiguration;
 
 @protocol SPTPreSignupExperimentationFeatureFlagsLoaderDelegate <NSObject>
-- (void)featureFlagsLoader:(id <SPTPreSignupExperimentationFeatureFlagsLoader>)arg1 didLoadFeatureFlags:(id <SPTPreSignupExperimentationFeatureFlags>)arg2;
+- (void)featureFlagsLoader:(id <SPTPreSignupExperimentationFeatureFlagsLoader>)arg1 didLoadFeatureFlags:(id <SPTPreSignupExperimentationFeatureFlags>)arg2 signupConfiguration:(id <SPTSignupConfiguration>)arg3;
 - (void)featureFlagsLoaderDidFailToLoadFeatureFlags:(id <SPTPreSignupExperimentationFeatureFlagsLoader>)arg1;
 @end
 

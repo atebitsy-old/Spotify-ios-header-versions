@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "HUBAutoEquatable.h"
+#import <objc/NSObject.h>
 
 #import "HUBViewModel-Protocol.h"
 
 @class HUBViewModelBuilderImplementation, NSArray, NSDate, NSDictionary, NSString;
 @protocol HUBComponentModel;
 
-@interface HUBViewModelImplementation : HUBAutoEquatable <HUBViewModel>
+@interface HUBViewModelImplementation : NSObject <HUBViewModel>
 {
     NSString *_identifier;
     NSString *_navigationBarTitle;
@@ -23,7 +23,6 @@
     HUBViewModelBuilderImplementation *_builder;
 }
 
-+ (id)ignoredAutoEquatablePropertyNames;
 - (void).cxx_destruct;
 @property(readonly, copy, nonatomic) HUBViewModelBuilderImplementation *builder; // @synthesize builder=_builder;
 @property(readonly, copy, nonatomic) NSDate *buildDate; // @synthesize buildDate=_buildDate;
@@ -35,13 +34,14 @@
 @property(readonly, copy, nonatomic) NSString *identifier; // @synthesize identifier=_identifier;
 - (id)serializeComponentModels:(id)arg1;
 - (id)serialize;
+@property(readonly) unsigned long long hash;
+- (_Bool)isEqual:(id)arg1;
 @property(readonly, copy) NSString *debugDescription;
 - (id)createBuilder;
 - (id)initWithIdentifier:(id)arg1 navigationBarTitle:(id)arg2 headerComponentModel:(id)arg3 bodyComponentModels:(id)arg4 overlayComponentModels:(id)arg5 customData:(id)arg6 builder:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 
 @end

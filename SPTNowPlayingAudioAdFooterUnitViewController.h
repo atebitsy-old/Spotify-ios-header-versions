@@ -38,7 +38,7 @@
 - (void)setupConstraints;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (void)didTapMicrophoneView;
 - (void)didTapManageAdSettingsBtn;
 - (void)updateViewWithVoiceAd:(_Bool)arg1;

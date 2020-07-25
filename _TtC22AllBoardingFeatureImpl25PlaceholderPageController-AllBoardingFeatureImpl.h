@@ -6,9 +6,11 @@
 
 #import "_TtC22AllBoardingFeatureImpl25PlaceholderPageController.h"
 
+#import "SPTPageController-Protocol.h"
+
 @class NSString, NSURL;
 
-@interface _TtC22AllBoardingFeatureImpl25PlaceholderPageController (AllBoardingFeatureImpl)
+@interface _TtC22AllBoardingFeatureImpl25PlaceholderPageController (AllBoardingFeatureImpl) <SPTPageController>
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;
 

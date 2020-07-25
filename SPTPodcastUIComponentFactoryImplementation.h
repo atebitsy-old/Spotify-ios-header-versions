@@ -8,21 +8,23 @@
 
 #import "SPTPodcastUIComponentFactory-Protocol.h"
 
-@class NSString;
+@class NSString, SPTPodcastUIFeatureProperties;
 @protocol GLUETheme;
 
 @interface SPTPodcastUIComponentFactoryImplementation : NSObject <SPTPodcastUIComponentFactory>
 {
     id <GLUETheme> _theme;
+    SPTPodcastUIFeatureProperties *_featureProperties;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTPodcastUIFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void)unregisterPodcastComponentsFromComponentRegistry:(id)arg1;
 - (void)registerPodcastComponentsToComponentRegistry:(id)arg1;
 - (id)provideBrowseImageHeaderComponents;
 - (id)providePodcastHubComponents;
-- (id)initWithTheme:(id)arg1;
+- (id)initWithTheme:(id)arg1 featureProperties:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,14 +6,13 @@
 
 #import "HUGSThemableComponentView.h"
 
-#import "HUBComponentViewObserver-Protocol.h"
 #import "HUBComponentViewWithEvents-Protocol.h"
 #import "HUBComponentViewWithImageHandling-Protocol.h"
 
 @class SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, SPTHomeUITappableSectionHeaderView, UITapGestureRecognizer;
 @protocol HUBComponentEventHandler;
 
-@interface SPTHomeUITappableSectionHeaderComponentView : HUGSThemableComponentView <HUBComponentViewWithImageHandling, HUBComponentViewWithEvents, HUBComponentViewObserver>
+@interface SPTHomeUITappableSectionHeaderComponentView : HUGSThemableComponentView <HUBComponentViewWithImageHandling, HUBComponentViewWithEvents>
 {
     id <HUBComponentEventHandler> _eventHandler;
     SPTHomeUILoggerImplementation *_logger;
@@ -32,8 +31,6 @@
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)sendSelectionEvent;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 logger:(id)arg3 remoteConfigProperties:(id)arg4;

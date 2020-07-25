@@ -14,12 +14,10 @@
 @interface SPTAdsBaseAudioEntityImplementation : SPTAdsBaseEntityImplementation <SPTAdsBaseAudioEntity>
 {
     _Bool _audioPlus;
-    _Bool _bookmarkable;
     long long _type;
 }
 
-@property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable; // @synthesize bookmarkable=_bookmarkable;
-@property(readonly, nonatomic, getter=isAudioPlus) _Bool audioPlus; // @synthesize audioPlus=_audioPlus;
+@property(readonly, nonatomic) _Bool isAudioPlus;
 @property(readonly, nonatomic) long long type; // @synthesize type=_type;
 - (id)entityTypeString;
 @property(readonly, nonatomic) _Bool isAudio;
@@ -30,6 +28,8 @@
 @property(readonly, copy, nonatomic) NSString *actionText;
 @property(readonly, copy, nonatomic) NSString *adPlaybackID;
 @property(readonly, copy, nonatomic) NSString *advertiser;
+@property(readonly, nonatomic, getter=isAudioPlus) _Bool audioPlus; // @synthesize audioPlus=_audioPlus;
+@property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable;
 @property(readonly, nonatomic) NSURL *clickthroughURL;
 @property(readonly, nonatomic) NSURL *coverArtURL;
 @property(readonly, nonatomic) UIColor *creativeColor;

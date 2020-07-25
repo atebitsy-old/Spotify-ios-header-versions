@@ -7,7 +7,7 @@
 #import "_TtC23MusicVideoUIFeatureImpl31MusicVideoCarouselComponentView.h"
 
 @interface _TtC23MusicVideoUIFeatureImpl31MusicVideoCarouselComponentView (MusicVideoUIFeatureImpl)
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 @end
 

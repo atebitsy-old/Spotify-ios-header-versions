@@ -10,8 +10,10 @@
 {
     // Error parsing type: , name: voiceEnabled
     // Error parsing type: , name: wakewordEnabled
+    // Error parsing type: , name: seamlessVoiceEnabled
     // Error parsing type: , name: ttsEnabled
     // Error parsing type: , name: alternateSearchEnabled
+    // Error parsing type: , name: seamlessVoiceOption
     // Error parsing type: , name: alternateSearchAction
 }
 

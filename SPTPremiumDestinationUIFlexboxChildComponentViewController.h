@@ -6,21 +6,26 @@
 
 #import <objc/NSObject.h>
 
+@class SPTPremiumDestinationUIGLUETheme;
 @protocol SPTPremiumDestinationUIFlexboxChildComponentViewControllerDataSource;
 
 @interface SPTPremiumDestinationUIFlexboxChildComponentViewController : NSObject
 {
     id <SPTPremiumDestinationUIFlexboxChildComponentViewControllerDataSource> _dataSource;
+    SPTPremiumDestinationUIGLUETheme *_theme;
 }
 
 + (struct UIEdgeInsets)edgeInsetsForComponentModel:(id)arg1;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(nonatomic) __weak id <SPTPremiumDestinationUIFlexboxChildComponentViewControllerDataSource> dataSource; // @synthesize dataSource=_dataSource;
 - (void)dealloc;
+- (id)constraintsForChildComponentView:(id)arg1 layoutGuide:(id)arg2 model:(id)arg3 theme:(id)arg4 insets:(struct UIEdgeInsets)arg5;
 - (id)constraintForLayoutGuide:(id)arg1 previousLayoutGuide:(id)arg2 parentComponentView:(id)arg3 inverse:(_Bool)arg4;
 - (void)configureChildComponentView:(id)arg1 forLayoutInParentComponentView:(id)arg2 withModel:(id)arg3 childDelegate:(id)arg4;
 - (void)layout;
 - (void)prepareForReuse;
+- (id)initWithTheme:(id)arg1;
 
 @end
 

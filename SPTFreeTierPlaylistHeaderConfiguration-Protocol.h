@@ -9,13 +9,13 @@
 @protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistAdditionalCallToAction, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayLogger, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderViewModel;
 
 @protocol SPTFreeTierPlaylistHeaderConfiguration <NSObject>
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction;
-@property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistPlayLogger> playLogger;
-@property(readonly, nonatomic) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistVISREFHeaderViewModel> visrefHeaderViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistFullbleedHeaderViewModel> fullbleedHeaderViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistDefaultHeaderViewModel> defaultHeaderViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistFollowViewModel> followViewModel;
-@property(readonly, nonatomic) id <SPTFreeTierPlaylistPlayViewModel> playViewModel;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistAdditionalCallToAction> additionalCallToAction;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistPlayLogger> playLogger;
+@property(nonatomic, readonly) id <SPTFreeTierEntityOfflineViewModel> offlineViewModel;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistVISREFHeaderViewModel> visrefHeaderViewModel;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistFullbleedHeaderViewModel> fullbleedHeaderViewModel;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistDefaultHeaderViewModel> defaultHeaderViewModel;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistFollowViewModel> followViewModel;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistPlayViewModel> playViewModel;
 @end
 

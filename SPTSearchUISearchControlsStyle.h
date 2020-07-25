@@ -18,7 +18,6 @@
     double _spacing;
 }
 
-+ (id)freetierfind_styleForTheme:(id)arg1;
 - (void).cxx_destruct;
 @property(nonatomic) double spacing; // @synthesize spacing=_spacing;
 @property(copy, nonatomic) UIFont *controlsFont; // @synthesize controlsFont=_controlsFont;

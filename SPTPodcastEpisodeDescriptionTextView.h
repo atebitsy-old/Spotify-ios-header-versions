@@ -9,29 +9,35 @@
 #import "GLUEStyleable-Protocol.h"
 
 @class NSString, NSURL, SPTPodcastEpisodeDescriptionTextViewStyle;
+@protocol _TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_;
 
 @interface SPTPodcastEpisodeDescriptionTextView : UITextView <GLUEStyleable>
 {
+    _Bool _allowHTML;
     NSURL *_episodeURL;
     double _episodeDuration;
     NSString *_originalText;
     double _lineHeight;
     SPTPodcastEpisodeDescriptionTextViewStyle *_style;
+    id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> _htmlParser;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <_TtP27PodcastHTMLComponentFeature20SPTPodcastHTMLParser_> htmlParser; // @synthesize htmlParser=_htmlParser;
 @property(retain, nonatomic) SPTPodcastEpisodeDescriptionTextViewStyle *style; // @synthesize style=_style;
 @property(nonatomic) double lineHeight; // @synthesize lineHeight=_lineHeight;
 @property(copy, nonatomic) NSString *originalText; // @synthesize originalText=_originalText;
+@property(nonatomic) _Bool allowHTML; // @synthesize allowHTML=_allowHTML;
 @property(nonatomic) double episodeDuration; // @synthesize episodeDuration=_episodeDuration;
 @property(copy, nonatomic) NSURL *episodeURL; // @synthesize episodeURL=_episodeURL;
 - (id)collapsedStringEnding;
 - (void)glue_applyStyle:(id)arg1;
-- (void)setAttributedText:(id)arg1;
+- (id)makeAttributedTextForText:(id)arg1;
 - (void)setText:(id)arg1;
 - (void)setNumberOfLines:(long long)arg1;
 - (void)setBounds:(struct CGRect)arg1;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (id)initWithHtmlParser:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1 htmlParser:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

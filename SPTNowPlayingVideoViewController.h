@@ -13,7 +13,7 @@
 #import "SPTNowPlayingVideoViewV2Delegate-Protocol.h"
 #import "SPTStatefulPlayerObserver-Protocol.h"
 
-@class NSString, SPTNowPlayingLogger, SPTNowPlayingSkipLimitReachedMessageRequester, SPTNowPlayingVideoHeadUnitViewController, SPTNowPlayingVideoTimer, SPTNowPlayingVideoView, SPTNowPlayingVideoViewModel, SPTStatusBarToken, SPTTheme, UIView;
+@class NSString, SPTNowPlayingHeadUnitViewController, SPTNowPlayingLogger, SPTNowPlayingSkipLimitReachedMessageRequester, SPTNowPlayingVideoTimer, SPTNowPlayingVideoView, SPTNowPlayingVideoViewModel, SPTStatusBarToken, SPTTheme, UIView;
 @protocol BMVideoSurfaceManager, SPTLinkDispatcher, SPTLocalSettings, SPTNowPlayingVideoViewControllerDelegate, SPTPodcastContextMenuProvider, SPTQueueLogger;
 
 @interface SPTNowPlayingVideoViewController : UIViewController <SPTNowPlayingDurationViewV2DataSource, SPTNowPlayingDurationViewV2Delegate, SPTNowPlayingTrackPositionObserver, SPTNowPlayingVideoViewV2Delegate, SPTNowPlayingVideoTimerDelegate, SPTStatefulPlayerObserver>
@@ -34,11 +34,11 @@
     SPTNowPlayingVideoView *_videoView;
     SPTNowPlayingVideoTimer *_dismissControlsTimer;
     SPTStatusBarToken *_statusBarToken;
-    SPTNowPlayingVideoHeadUnitViewController *_headUnitViewController;
+    SPTNowPlayingHeadUnitViewController *_headUnitViewController;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTNowPlayingVideoHeadUnitViewController *headUnitViewController; // @synthesize headUnitViewController=_headUnitViewController;
+@property(retain, nonatomic) SPTNowPlayingHeadUnitViewController *headUnitViewController; // @synthesize headUnitViewController=_headUnitViewController;
 @property(nonatomic) _Bool visible; // @synthesize visible=_visible;
 @property(nonatomic) _Bool shouldNotifyDismissal; // @synthesize shouldNotifyDismissal=_shouldNotifyDismissal;
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;

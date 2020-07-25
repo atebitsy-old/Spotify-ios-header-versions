@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSDictionary;
+@class NSString;
 
 @protocol SPTCastCustomChannelDelegate <NSObject>
-- (void)payloadReceived:(NSDictionary *)arg1;
+- (void)messageReceived:(NSString *)arg1;
 @end
 

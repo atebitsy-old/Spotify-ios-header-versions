@@ -6,11 +6,9 @@
 
 #import "HUGSThemableComponentView.h"
 
-#import "HUBComponentViewObserver-Protocol.h"
-
 @class SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, SPTHomeUISectionHeaderView;
 
-@interface SPTHomeUISectionHeaderComponentView : HUGSThemableComponentView <HUBComponentViewObserver>
+@interface SPTHomeUISectionHeaderComponentView : HUGSThemableComponentView
 {
     unsigned long long _type;
     SPTHomeUILoggerImplementation *_logger;
@@ -24,8 +22,6 @@
 @property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(readonly, nonatomic) SPTHomeUILoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
 - (void)configureWithModel:(id)arg1;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2 type:(unsigned long long)arg3 logger:(id)arg4 remoteConfigProperties:(id)arg5;
 

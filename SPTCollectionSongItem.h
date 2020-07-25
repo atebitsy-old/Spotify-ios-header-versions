@@ -48,7 +48,7 @@
 @property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly; // @synthesize premiumOnly=_premiumOnly;
 @property(readonly, copy, nonatomic) NSString *loggingContext;
 @property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
-- (void)action;
+- (void)actionWithLoggingParams:(id)arg1;
 - (id)initWithEntityURL:(id)arg1 trackURL:(id)arg2 trackName:(id)arg3 imageURL:(id)arg4 artistName:(id)arg5 artistURL:(id)arg6 albumName:(id)arg7 albumURL:(id)arg8 isPremiumOnly:(_Bool)arg9 trackRowRestriction:(long long)arg10 isLocalFile:(_Bool)arg11 subtitleType:(unsigned long long)arg12;
 
 // Remaining properties

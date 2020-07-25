@@ -18,9 +18,10 @@
 + (id)factoryWithUri:(id)arg1 components:(id)arg2;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)hitPauseWithItemToBePaused:(id)arg1;
+- (id)hitPlayWithItemToBePlayed:(id)arg1;
 - (id)impression;
 - (id)contextMenuButtonFactory;
-- (id)playButtonFactory;
 - (id)_location;
 - (id)initWithUri:(id)arg1 components:(id)arg2;
 

@@ -13,8 +13,10 @@
 @interface SPTHearablesFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _spotifyGoFeatureEnabled;
+    _Bool _spotifyGoLegacyProtocol;
 }
 
+@property(readonly, nonatomic) _Bool spotifyGoLegacyProtocol; // @synthesize spotifyGoLegacyProtocol=_spotifyGoLegacyProtocol;
 @property(readonly, nonatomic) _Bool spotifyGoFeatureEnabled; // @synthesize spotifyGoFeatureEnabled=_spotifyGoFeatureEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

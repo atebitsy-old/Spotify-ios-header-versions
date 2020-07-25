@@ -33,7 +33,7 @@
 @property(readonly, nonatomic) id <SPTModerationServiceState> moderationFeatureState; // @synthesize moderationFeatureState=_moderationFeatureState;
 @property(readonly, nonatomic) id <SPTModerationReportDecorationRegistry> decorationRegistry; // @synthesize decorationRegistry=_decorationRegistry;
 @property(nonatomic, getter=isArtistBanned) _Bool artistBanned; // @synthesize artistBanned=_artistBanned;
-@property(readonly, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
+@property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
 @property(readonly, nonatomic) id <SPTFreeTierArtistTestManager> freeTierArtistTestManager; // @synthesize freeTierArtistTestManager=_freeTierArtistTestManager;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> presenter; // @synthesize presenter=_presenter;
@@ -51,6 +51,7 @@
 - (void)transitionToState:(unsigned long long)arg1;
 - (void)tapContextMenuButton:(id)arg1;
 - (void)configureWithViewURI:(id)arg1 metadata:(id)arg2;
+- (void)fetchFollowModelForArtist:(id)arg1;
 - (id)initWithPresenterFactory:(id)arg1 actionFactory:(id)arg2 freeTierArtistTestManager:(id)arg3 artistURI:(id)arg4 followModelFactory:(id)arg5 decorationRegistry:(id)arg6 moderationFeatureState:(id)arg7;
 
 // Remaining properties

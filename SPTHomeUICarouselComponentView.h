@@ -13,7 +13,7 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class HUBContext, NSString, SPTHomeUICarouselLayout, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, UICollectionView;
+@class NSString, SPTHomeUICarouselLayout, SPTHomeUIFeatureProperties, SPTHomeUILoggerImplementation, UICollectionView;
 @protocol HUBComponentViewChildDelegate, SPTHomeUICarouselChildSizingDelegate, UICollectionViewDragDelegate;
 
 @interface SPTHomeUICarouselComponentView : HUGSThemableComponentView <UICollectionViewDataSource, UICollectionViewDelegate, SPTHomeUICarouselLayoutDelegate, HUBComponentViewWithDraggableChildren, HUBComponentViewWithRestorableUIState, HUBComponentViewObserver>
@@ -24,13 +24,11 @@
     SPTHomeUIFeatureProperties *_remoteConfigProperties;
     UICollectionView *_collectionView;
     SPTHomeUICarouselLayout *_layout;
-    HUBContext *_context;
 }
 
 + (double)spacingForBoundsSize:(struct CGSize)arg1 theme:(id)arg2;
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 theme:(id)arg2 model:(id)arg3 childSizingDelegate:(id)arg4;
 - (void).cxx_destruct;
-@property(retain, nonatomic) HUBContext *context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTHomeUICarouselLayout *layout; // @synthesize layout=_layout;
 @property(readonly, nonatomic) UICollectionView *collectionView; // @synthesize collectionView=_collectionView;
 @property(readonly, nonatomic) SPTHomeUIFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
@@ -50,8 +48,8 @@
 - (void)restoreUIState:(id)arg1;
 - (id)currentUIState;
 @property(nonatomic) __weak id <UICollectionViewDragDelegate> dragDelegate;
-- (void)viewDidDisappearWithContext:(id)arg1;
-- (void)viewWillAppearWithContext:(id)arg1;
+- (void)viewDidDisappear;
+- (void)viewWillAppear;
 - (void)configureWithModel:(id)arg1;
 - (void)prepareForReuse;
 - (void)layoutSubviews;

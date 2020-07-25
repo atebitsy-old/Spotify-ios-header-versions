@@ -18,11 +18,8 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *receiverPublicKey; // @synthesize receiverPublicKey=_receiverPublicKey;
 @property(nonatomic) __weak id <SPTCastCustomChannelDelegate> delegate; // @synthesize delegate=_delegate;
-- (void)sendDictionaryToCast:(id)arg1;
-- (void)loginDeviceWithUsername:(id)arg1 blob:(id)arg2 clientKey:(id)arg3 tokenType:(id)arg4;
-- (void)handleInfoResponse:(id)arg1;
-- (void)sendGetInfoWithDevice:(id)arg1;
 - (void)didReceiveTextMessage:(id)arg1;
+- (void)sendMessage:(id)arg1;
 
 @end
 

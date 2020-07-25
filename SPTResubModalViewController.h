@@ -7,24 +7,24 @@
 #import <UIKit/UIViewController.h>
 
 #import "SPTPageController-Protocol.h"
-#import "UIWebViewDelegate-Protocol.h"
+#import "WKNavigationDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTResubModalViewModel, UIWebView;
+@class NSString, NSURL, SPTResubModalViewModel, WKWebView;
 @protocol SPTPageContainer;
 
-@interface SPTResubModalViewController : UIViewController <UIWebViewDelegate, SPTPageController>
+@interface SPTResubModalViewController : UIViewController <WKNavigationDelegate, SPTPageController>
 {
     SPTResubModalViewModel *_viewModel;
-    UIWebView *_webview;
+    WKWebView *_webview;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) UIWebView *webview; // @synthesize webview=_webview;
+@property(retain, nonatomic) WKWebView *webview; // @synthesize webview=_webview;
 @property(retain, nonatomic) SPTResubModalViewModel *viewModel; // @synthesize viewModel=_viewModel;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
-- (void)webView:(id)arg1 didFailLoadWithError:(id)arg2;
-- (_Bool)webView:(id)arg1 shouldStartLoadWithRequest:(id)arg2 navigationType:(long long)arg3;
+- (void)webView:(id)arg1 didFailNavigation:(id)arg2 withError:(id)arg3;
+- (void)webView:(id)arg1 decidePolicyForNavigationAction:(id)arg2 decisionHandler:(CDUnknownBlockType)arg3;
 - (void)startLoadingData;
 - (void)cancelButtonPressed;
 - (void)logModalDismissedBecauseOfError:(_Bool)arg1;

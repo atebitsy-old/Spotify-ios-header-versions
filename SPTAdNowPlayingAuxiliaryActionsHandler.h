@@ -11,7 +11,7 @@
 #import "SPTDataLoaderDelegate-Protocol.h"
 
 @class NSArray, NSMutableSet, NSString, SPForegroundObserver, SPTAdPlayerObservable, SPTAdsFeatureProperties, SPTAdsRemindersManager, SPTDataLoader;
-@protocol SPContextMenuFeature, SPTAdsBaseEntity, SPTContextMenuPresenter, SPTLogCenter, SPTSnackbarConditionalPresenter;
+@protocol SPContextMenuFeature, SPTAdsBaseEntity, SPTContextMenuPresenter, SPTEventSender, SPTLogCenter, SPTSnackbarConditionalPresenter;
 
 @interface SPTAdNowPlayingAuxiliaryActionsHandler : NSObject <SPTContextMenuPresenterDelegate, SPForegroundObserverDelegate, SPTDataLoaderDelegate>
 {
@@ -27,9 +27,11 @@
     NSMutableSet *_savedAdIds;
     NSArray *_contextMenuActions;
     SPForegroundObserver *_foregroundObserver;
+    id <SPTEventSender> _eventSender;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(copy, nonatomic) NSArray *contextMenuActions; // @synthesize contextMenuActions=_contextMenuActions;
 @property(retain, nonatomic) NSMutableSet *savedAdIds; // @synthesize savedAdIds=_savedAdIds;
@@ -64,7 +66,7 @@
 - (_Bool)isAdBookmarked:(id)arg1;
 - (void)startBackgroundObserver;
 - (void)dealloc;
-- (id)initWithEducationPresenter:(id)arg1 contextMenuFeature:(id)arg2 logCenter:(id)arg3 playerObserver:(id)arg4 dataLoader:(id)arg5 featureProperties:(id)arg6 reminderManager:(id)arg7;
+- (id)initWithEducationPresenter:(id)arg1 contextMenuFeature:(id)arg2 logCenter:(id)arg3 playerObserver:(id)arg4 dataLoader:(id)arg5 featureProperties:(id)arg6 reminderManager:(id)arg7 eventSender:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

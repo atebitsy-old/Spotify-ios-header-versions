@@ -6,13 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTHomeViewModelProviderDelegate-Protocol.h"
+#import "SPTHomeViewModelProviderObserver-Protocol.h"
 #import "SPTPageLoadable-Protocol.h"
 
 @class NSString, SPTHomeViewModelProvider;
 @protocol SPTPageLoadStateHandler;
 
-@interface SPTHomePageLoadable : NSObject <SPTPageLoadable, SPTHomeViewModelProviderDelegate>
+@interface SPTHomePageLoadable : NSObject <SPTPageLoadable, SPTHomeViewModelProviderObserver>
 {
     SPTHomeViewModelProvider *_viewModelProvider;
     id <SPTPageLoadStateHandler> _handler;

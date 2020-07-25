@@ -24,6 +24,7 @@
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 - (void)player:(id)arg1 queueDidChange:(id)arg2;
+- (void)getTrackAtIndex:(long long)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
 - (void)getPlayQueueWithCompletionHandler:(CDUnknownBlockType)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

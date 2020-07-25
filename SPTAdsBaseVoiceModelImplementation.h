@@ -13,16 +13,15 @@
 @interface SPTAdsBaseVoiceModelImplementation : NSObject <SPTAdsBaseVoiceModel>
 {
     long long _delay;
-    long long _intent;
+    NSString *_intents;
     NSURL *_uri;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSURL *uri; // @synthesize uri=_uri;
-@property(readonly, nonatomic) long long intent; // @synthesize intent=_intent;
+@property(readonly, nonatomic) NSString *intents; // @synthesize intents=_intents;
 @property(readonly, nonatomic) long long delay; // @synthesize delay=_delay;
-- (long long)parseIntent:(id)arg1;
-- (id)initWithDelay:(long long)arg1 intent:(id)arg2 uri:(id)arg3;
+- (id)initWithDelay:(long long)arg1 intents:(id)arg2 uri:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

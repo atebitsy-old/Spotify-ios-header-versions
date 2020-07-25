@@ -27,6 +27,9 @@
 - (long long)disconnectedNetworkTypeAtIndex:(unsigned long long)arg1;
 - (id)disconnectedNetworks;
 - (void)setupNetworkConnectionStates;
+- (void)dealloc;
+- (void)endObserving;
+- (void)startObserving;
 - (id)initWithSocialManager:(id)arg1;
 
 @end

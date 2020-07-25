@@ -10,7 +10,7 @@
 {
 }
 
-+ (long long)calculatePlayBehaviourForPremium:(_Bool)arg1 wantsForcedLinear:(_Bool)arg2 isDoubleStatePlayButtonFlagEnabled:(_Bool)arg3 preferLinearPlayback:(_Bool)arg4 onDemandType:(unsigned long long)arg5 enableConsistentPremiumPlayBehaviour:(_Bool)arg6 enableConsistentFreePlayBehaviour:(_Bool)arg7;
++ (long long)calculatePlayBehaviourForPremium:(_Bool)arg1 wantsForcedLinear:(_Bool)arg2 isDoubleStatePlayButtonFlagEnabled:(_Bool)arg3 preferLinearPlayback:(_Bool)arg4 onDemandType:(unsigned long long)arg5;
 
 @end
 

@@ -30,7 +30,7 @@
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
-- (void)addActionWithIdentifier:(id)arg1 toActions:(id)arg2;
+- (void)addActionWithIdentifier:(unsigned long long)arg1 toActions:(id)arg2;
 - (void)presentContextMenuInViewController:(id)arg1 sender:(id)arg2;
 - (id)initWithPlaylistViewModel:(id)arg1 itemsViewModel:(id)arg2 contextMenuService:(id)arg3 logger:(id)arg4 createPlaylistTestManager:(id)arg5 alertInterface:(id)arg6;
 

@@ -46,6 +46,7 @@
 @property(retain, nonatomic) SPTNowPlayingAuxiliaryActionsHandlerImplementation *auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(retain, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 @property(retain, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
+- (id)provideHeartButtonViewController;
 - (id)provideConnectButtonViewController;
 - (id)createDurationUnitViewModel;
 - (id)createInformationUnitViewModelForPodcast:(_Bool)arg1;

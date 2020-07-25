@@ -37,7 +37,7 @@
 - (void)setShowsVideoControls:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (void)minimizePlayingView;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)setupConstraints;

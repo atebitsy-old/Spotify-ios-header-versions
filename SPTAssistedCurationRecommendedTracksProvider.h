@@ -34,7 +34,7 @@
 @property(retain, nonatomic) NSMutableArray *playlistTracks; // @synthesize playlistTracks=_playlistTracks;
 @property(retain, nonatomic) NSMutableSet *skipTracks; // @synthesize skipTracks=_skipTracks;
 @property(retain, nonatomic) SPTAssistedCurationCardModelImplementation *currentCard; // @synthesize currentCard=_currentCard;
-@property(retain, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
+@property(copy, nonatomic) NSString *playlistName; // @synthesize playlistName=_playlistName;
 @property(nonatomic) __weak id <SPTAssistedCurationCardsProviderDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)loadMoreTracksForCard:(id)arg1;
 - (void)card:(id)arg1 addedTrack:(id)arg2 atIndex:(unsigned long long)arg3;

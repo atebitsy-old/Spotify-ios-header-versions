@@ -17,12 +17,12 @@
 
 - (void).cxx_destruct;
 @property(nonatomic) __weak INSEventSender *sdk; // @synthesize sdk=_sdk;
-- (void)sendWrappedNonAuthenticatedEvent:(id)arg1;
-- (void)sendWrappedEvent:(id)arg1;
-- (void)sendNonAuthenticatedEventWithName:(id)arg1 data:(id)arg2;
-- (void)sendNonAuthenticatedEventWithProtobuf:(id)arg1;
-- (void)sendEventWithName:(id)arg1 data:(id)arg2;
-- (void)sendEventWithProtobuf:(id)arg1;
+- (_Bool)sendWrappedNonAuthenticatedEvent:(id)arg1;
+- (_Bool)sendWrappedEvent:(id)arg1;
+- (_Bool)sendNonAuthenticatedEventWithName:(id)arg1 data:(id)arg2;
+- (_Bool)sendNonAuthenticatedEventWithProtobuf:(id)arg1;
+- (_Bool)sendEventWithName:(id)arg1 data:(id)arg2;
+- (_Bool)sendEventWithProtobuf:(id)arg1;
 - (id)wrapMessage:(id)arg1;
 - (id)initWithSdk:(id)arg1;
 

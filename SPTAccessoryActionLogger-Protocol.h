@@ -9,11 +9,13 @@
 @class NSNumber, NSString, NSURL, SPTAccessory;
 
 @protocol SPTAccessoryActionLogger <NSObject>
+- (NSString *)logPlaySomethingFromAccessory:(SPTAccessory *)arg1;
+- (NSString *)logSearchWithSearchQuery:(NSString *)arg1 fromAccessory:(SPTAccessory *)arg2;
 - (NSString *)logSetPlaybackSpeedWithPlaybackSpeed:(NSNumber *)arg1 fromAccessory:(SPTAccessory *)arg2;
 - (NSString *)logUiNavigateWithDestination:(NSURL *)arg1 fromAccessory:(SPTAccessory *)arg2;
 - (NSString *)logAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1 fromAccessory:(SPTAccessory *)arg2;
-- (NSString *)logSeekByTimeWithMsSeekedOffset:(long long)arg1 fromAccessory:(SPTAccessory *)arg2;
-- (NSString *)logSeekToTimeWithMsToSeekTo:(long long)arg1 fromAccessory:(SPTAccessory *)arg2;
+- (NSString *)logSeekByTimeWithSecondsSeekedOffset:(long long)arg1 fromAccessory:(SPTAccessory *)arg2;
+- (NSString *)logSeekToTimeWithSecondsToSeekTo:(long long)arg1 fromAccessory:(SPTAccessory *)arg2;
 - (NSString *)logRemoveLikeWithCurrentItemNoLongerLikedFromAccessory:(SPTAccessory *)arg1;
 - (NSString *)logShuffleEnableFromAccessory:(SPTAccessory *)arg1;
 - (NSString *)logShuffleDisableFromAccessory:(SPTAccessory *)arg1;
@@ -25,6 +27,6 @@
 - (NSString *)logSkipToNextWithCurrentItemToBeSkippedFromAccessory:(SPTAccessory *)arg1;
 - (NSString *)logPauseWithCurrentItemToBePausedFromAccessory:(SPTAccessory *)arg1;
 - (NSString *)logResumeWithCurrentItemToBeResumedFromAccessory:(SPTAccessory *)arg1;
-- (NSString *)logPlayWithItemToBePlayed:(NSURL *)arg1 fromAccessory:(SPTAccessory *)arg2;
+- (NSString *)logPlayWithItemToBePlayed:(NSURL *)arg1 withInteractionId:(NSString *)arg2 fromAccessory:(SPTAccessory *)arg3;
 @end
 

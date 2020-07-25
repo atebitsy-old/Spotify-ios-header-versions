@@ -6,14 +6,12 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTInstrumentationCurrentPageViewObserver, SPTInstrumentationMapper, SPTInstrumentationModalPresentationMonitor, SPTInstrumentationPageViewProtocol, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationTransportRegistry;
+@protocol SPTInstrumentationCurrentPageViewObserver, SPTInstrumentationModalPresentationMonitor, SPTInstrumentationPageViewProtocol, SPTInstrumentationRemotePlayingHandler, SPTInstrumentationTransportRegistry;
 
 @protocol SPTInstrumentationService <SPTService>
 - (id <SPTInstrumentationPageViewProtocol>)currentPageView;
 - (void)removeCurrentPageViewObserver:(id <SPTInstrumentationCurrentPageViewObserver>)arg1;
 - (void)addCurrentPageViewObserver:(id <SPTInstrumentationCurrentPageViewObserver>)arg1;
-- (id <SPTInstrumentationMapper>)provideIntentMapper;
-- (id <SPTInstrumentationMapper>)provideIDMapper;
 - (id <SPTInstrumentationModalPresentationMonitor>)provideModalPresentationMonitor;
 - (id <SPTInstrumentationTransportRegistry>)provideTransportRegistry;
 @property(nonatomic, readonly) id <SPTInstrumentationRemotePlayingHandler> remotePlayingHandler;

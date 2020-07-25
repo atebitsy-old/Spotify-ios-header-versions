@@ -18,7 +18,6 @@
 + (id)factoryWithComponents:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
-- (id)impression;
 - (id)scannablesButtonFactory;
 - (id)cancelButtonFactory;
 - (id)inputFieldFactory;

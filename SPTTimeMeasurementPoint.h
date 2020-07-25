@@ -18,6 +18,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
+@property(nonatomic, readonly) long long hash;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 featureID:(id)arg2 timestamp:(id)arg3 duration:(id)arg4;
 @property(nonatomic, readonly) NSNumber *duration; // @synthesize duration;

@@ -12,9 +12,9 @@
     // Error parsing type: , name: profileImage
     // Error parsing type: , name: profileImagesWrapperView
     // Error parsing type: , name: profileImageView
-    // Error parsing type: , name: displayNameLabel
     // Error parsing type: , name: editProfileButton
     // Error parsing type: , name: followButton
+    // Error parsing type: , name: displayNameLabel
     // Error parsing type: , name: badgeView
     // Error parsing type: , name: stackView
     // Error parsing type: , name: theme

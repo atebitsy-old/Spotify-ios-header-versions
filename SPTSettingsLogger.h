@@ -34,7 +34,7 @@
 - (void)logSettingsMenuCrossfadeSetAtItemIndex:(int)arg1;
 - (void)logSettingsMenuForceOfflineEnabled:(_Bool)arg1 itemIndex:(int)arg2;
 - (void)logSettingsMenuLogoutAtItemIndex:(int)arg1;
-- (void)logSettingsMenuProfileAtItemIndex:(int)arg1;
+- (void)logSettingsMenuProfileAtItemIndex:(int)arg1 targetUri:(id)arg2;
 - (id)initWithLogCenter:(id)arg1;
 
 @end

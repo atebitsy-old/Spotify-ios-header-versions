@@ -4,14 +4,14 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "HUBAutoEquatable.h"
+#import <objc/NSObject.h>
 
 #import "HUBComponentModel-Protocol.h"
 
 @class HUBIdentifier, NSArray, NSDictionary, NSString;
 @protocol HUBComponentImageData, HUBComponentModel, HUBComponentTarget, HUBIcon;
 
-@interface HUBComponentModelImplementation : HUBAutoEquatable <HUBComponentModel>
+@interface HUBComponentModelImplementation : NSObject <HUBComponentModel>
 {
     NSString *_identifier;
     unsigned long long _type;
@@ -38,7 +38,6 @@
     NSDictionary *_childrenByGroupIdentifier;
 }
 
-+ (id)ignoredAutoEquatablePropertyNames;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSDictionary *childrenByGroupIdentifier; // @synthesize childrenByGroupIdentifier=_childrenByGroupIdentifier;
 @property(copy, nonatomic) NSDictionary *childIdentifierToIndexMap; // @synthesize childIdentifierToIndexMap=_childIdentifierToIndexMap;
@@ -73,12 +72,13 @@
 - (id)childAtIndex:(unsigned long long)arg1;
 - (id)serialize;
 @property(readonly, copy) NSString *debugDescription;
+@property(readonly) unsigned long long hash;
+- (_Bool)isEqual:(id)arg1;
 - (id)valueForKey:(id)arg1;
 - (id)initWithIdentifier:(id)arg1 type:(unsigned long long)arg2 index:(unsigned long long)arg3 groupIdentifier:(id)arg4 componentIdentifier:(id)arg5 componentCategory:(id)arg6 title:(id)arg7 subtitle:(id)arg8 accessoryTitle:(id)arg9 descriptionText:(id)arg10 mainImageData:(id)arg11 backgroundImageData:(id)arg12 customImageData:(id)arg13 icon:(id)arg14 target:(id)arg15 events:(id)arg16 metadata:(id)arg17 loggingData:(id)arg18 customData:(id)arg19 parent:(id)arg20;
 
 // Remaining properties
 @property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
 
 @end

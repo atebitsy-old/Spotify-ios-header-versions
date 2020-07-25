@@ -9,7 +9,6 @@
 @class NSString;
 
 @protocol SPTAdsBaseAudioEntity <SPTAdsBaseEntity>
-@property(readonly, nonatomic, getter=isBookmarkable) _Bool bookmarkable;
 @property(readonly, nonatomic, getter=isAudioPlus) _Bool audioPlus;
 @property(readonly, nonatomic) long long type;
 - (NSString *)entityTypeString;

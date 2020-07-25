@@ -34,7 +34,7 @@
 - (void)modelDidChangeFrom:(id)arg1 to:(id)arg2;
 - (void)dispatch:(id)arg1;
 - (void)dealloc;
-- (id)initWithVoiceSession:(id)arg1 adEntity:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 cosmosBridge:(id)arg5 accessoryStateManager:(id)arg6 eventSender:(id)arg7;
+- (id)initWithVoiceSession:(id)arg1 adEntity:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 cosmosBridge:(id)arg5 accessoryStateManager:(id)arg6 eventSender:(id)arg7 isAudioSignalEnabled:(_Bool)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

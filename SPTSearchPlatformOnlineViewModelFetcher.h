@@ -40,11 +40,12 @@
 - (void)performCompletionUnlessCancelledForRequest:(id)arg1 withViewModel:(id)arg2;
 - (void)addViewModelTypeSuccessToViewModelBuilder:(id)arg1;
 - (id)urlByUpdatingQueryParametersInURL:(id)arg1;
+- (id)requestIDFromParameters:(id)arg1;
 - (void)setCancellationToken:(id)arg1 forRequest:(id)arg2;
 - (id)cancellationTokenForRequest:(id)arg1;
 - (void)setCompletionBlock:(CDUnknownBlockType)arg1 forRequest:(id)arg2;
 - (CDUnknownBlockType)completionBlockForRequest:(id)arg1;
-- (id)viewModelForErrorType:(unsigned long long)arg1;
+- (id)viewModelForErrorType:(unsigned long long)arg1 requestID:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveErrorResponse:(id)arg2;
 - (void)dataLoader:(id)arg1 didReceiveSuccessfulResponse:(id)arg2;
 - (id)fetchViewModelWithCompletion:(CDUnknownBlockType)arg1;

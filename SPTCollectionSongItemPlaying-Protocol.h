@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
+@class SPTLoggingParams;
 @protocol SPTCollectionEntityListTrackItem;
 
 @protocol SPTCollectionSongItemPlaying <NSObject>
 - (_Bool)checkPlayabilityOfCollectionSongTrackItem:(id <SPTCollectionEntityListTrackItem>)arg1;
-- (void)playCollectionSongTrackItem:(id <SPTCollectionEntityListTrackItem>)arg1;
+- (void)playCollectionSongTrackItem:(id <SPTCollectionEntityListTrackItem>)arg1 loggingParams:(SPTLoggingParams *)arg2;
 @end
 

@@ -38,6 +38,7 @@
 - (void)recordNonFatalError:(id)arg1;
 - (void)recordCustomExceptionName:(id)arg1 reason:(id)arg2 callStack:(id)arg3;
 - (id)crashReportURLForUUID:(id)arg1;
+- (void)synchronizeState;
 - (void)_setValue:(id)arg1 forStateKey:(id)arg2;
 - (void)setValue:(id)arg1 forStateKey:(id)arg2;
 - (void)setValuesForStateKeysWithDictionary:(id)arg1;

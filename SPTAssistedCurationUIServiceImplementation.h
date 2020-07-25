@@ -11,7 +11,7 @@
 #import "SPTURISubtypeHandler-Protocol.h"
 
 @class NSArray, NSString, SPTAllocationContext, SPTAssistedCurationLinkDispatcherImplementation, SPTAssistedCurationPresentationHelper;
-@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationService, SPTAssistedCurationUIContextHandler, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTRemoteConfigurationService, SPTSearchPlatformService, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTAddToSpotifyPlaylistExperimentService, SPTAssistedCurationService, SPTAssistedCurationUIContextHandler, SPTAssistedCurationUITestManager, SPTAssistedCurationUserInterfaceFactory, SPTAudioPreviewService, SPTExplicitContentService, SPTFreeTierPresentationService, SPTFreeTierService, SPTGLUEService, SPTPageLoaderViewService, SPTPerformanceMetricsService, SPTRemoteConfigurationService, SPTSearchPlatformService, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTAssistedCurationUIServiceImplementation : SPTUIPageService <SPTAssistedCurationLinkDispatcherPageProvider, SPTAssistedCurationUIService, SPTURISubtypeHandler>
 {
@@ -37,10 +37,12 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     NSArray *_contextHandlers;
     id <SPTAssistedCurationUIContextHandler> _contextHandlerFallback;
+    id <_TtP17OfflineMixFeature20SPTOfflineMixService_> _offlineMixService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <_TtP17OfflineMixFeature20SPTOfflineMixService_> offlineMixService; // @synthesize offlineMixService=_offlineMixService;
 @property(retain, nonatomic) id <SPTAssistedCurationUIContextHandler> contextHandlerFallback; // @synthesize contextHandlerFallback=_contextHandlerFallback;
 @property(copy, nonatomic) NSArray *contextHandlers; // @synthesize contextHandlers=_contextHandlers;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
@@ -73,21 +75,23 @@
 - (id)provideTheme;
 - (id)provideGLUEImageLoader;
 - (id)provideEducationSnackBarPresenter;
+- (id)offlineMixUIContextHandler;
 - (id)queueUIContextHandler;
 - (id)likedSongsUIContextHandler;
 - (id)playlistUIContextHandler;
 - (void)setupContextHandlers;
 - (id)contextHandlerForURI:(id)arg1;
 - (id)provideSearchDrillDownViewControllerForURL:(id)arg1 context:(id)arg2;
-- (id)provideAssistedCurationViewControllerForURI:(id)arg1 contextHandler:(id)arg2 model:(id)arg3;
-- (id)providePageLoaderViewControllerForURI:(id)arg1;
+- (id)provideAssistedCurationViewControllerForURI:(id)arg1 contextHandler:(id)arg2 model:(id)arg3 shouldPrioRecentlyPlayed:(_Bool)arg4;
+- (id)providePageLoaderViewControllerForURI:(id)arg1 shouldPrioRecentlyPlayed:(_Bool)arg2;
 - (id)provideViewControllerForURI:(id)arg1 context:(id)arg2;
 - (id)provideAssistedCurationPresentationHelper;
 - (id)providerAssistedCurationLinkDispatcher;
 - (_Bool)claimsURI:(id)arg1;
-- (void)curateForURL:(id)arg1;
+- (void)curateForURL:(id)arg1 shouldPrioRecentlyPlayed:(_Bool)arg2;
 - (void)curateQueue;
 - (void)curateLikedSongs;
+- (void)curatePlaylistURL:(id)arg1 shouldPrioRecentlyPlayed:(_Bool)arg2;
 - (void)curatePlaylistURL:(id)arg1;
 - (void)unload;
 - (void)load;

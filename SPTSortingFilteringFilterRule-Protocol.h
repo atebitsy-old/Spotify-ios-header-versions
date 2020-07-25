@@ -9,8 +9,11 @@
 @class NSString;
 
 @protocol SPTSortingFilteringFilterRule <NSObject>
-@property(readonly, nonatomic, getter=isExclusive) _Bool exclusive;
-@property(readonly, copy, nonatomic) NSString *title;
-@property(readonly, copy, nonatomic) NSString *identifier;
+- (_Bool)isExclusive;
+@property(nonatomic, readonly) NSString *title;
+@property(nonatomic, readonly) NSString *identifier;
+
+// Remaining properties
+@property(nonatomic, readonly) _Bool exclusive;
 @end
 

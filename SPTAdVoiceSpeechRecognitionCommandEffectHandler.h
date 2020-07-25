@@ -6,31 +6,29 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTVoiceSessionObserver-Protocol.h"
+#import "SPTVoiceLibrarySessionObserver-Protocol.h"
 
-@class NSString;
-@protocol SPTPlayer, SPTVoiceSession;
+@class NSArray, NSString;
+@protocol SPTPlayer, SPTVoiceLibrarySession;
 
-@interface SPTAdVoiceSpeechRecognitionCommandEffectHandler : NSObject <SPTVoiceSessionObserver>
+@interface SPTAdVoiceSpeechRecognitionCommandEffectHandler : NSObject <SPTVoiceLibrarySessionObserver>
 {
-    id <SPTVoiceSession> _voiceSession;
+    id <SPTVoiceLibrarySession> _voiceSession;
     id <SPTPlayer> _player;
-    long long _intent;
+    NSArray *_intents;
     CDUnknownBlockType _eventSink;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType eventSink; // @synthesize eventSink=_eventSink;
-@property(nonatomic) long long intent; // @synthesize intent=_intent;
+@property(copy, nonatomic) NSArray *intents; // @synthesize intents=_intents;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(readonly, nonatomic) id <SPTVoiceSession> voiceSession; // @synthesize voiceSession=_voiceSession;
-- (void)voiceSessionDidReceiveFinalTranscription:(id)arg1;
-- (void)voiceSession:(id)arg1 didUpdateTranscriptText:(id)arg2;
-- (void)voiceSession:(id)arg1 didFailVoiceCommand:(id)arg2 withError:(id)arg3;
-- (void)voiceSession:(id)arg1 didReceiveVoiceCommand:(id)arg2;
+@property(readonly, nonatomic) id <SPTVoiceLibrarySession> voiceSession; // @synthesize voiceSession=_voiceSession;
+- (void)voiceSession:(id)arg1 didUpdateIntermediateResponse:(id)arg2;
+- (void)voiceSession:(id)arg1 didFailWithError:(id)arg2;
+- (void)voiceSession:(id)arg1 didReceiveFinalResponse:(id)arg2;
 - (void)voiceSessionDidStartListening:(id)arg1;
 - (void)voiceSessionWillStartListening:(id)arg1;
-- (void)voiceSessionDidStopListening:(id)arg1;
 - (void)handleEffect:(id)arg1 eventSink:(CDUnknownBlockType)arg2;
 - (void)stopSpeechRecognition;
 - (void)startSpeechRecognition;

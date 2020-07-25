@@ -9,7 +9,7 @@
 #import "SPTAuthController-Protocol.h"
 #import "SPTAuthRequestDelegate-Protocol.h"
 
-@class NSString, SPSession, SPTAuthCache, SPTAuthLogger, SPTAuthPostAuthPlayerController, SPTAuthRequest, SPTDefaultPopupPermissionManager, SPTHermesController, SPTObserverManager, SPTProgressView;
+@class NSString, SPSession, SPTAuthCache, SPTAuthLogger, SPTAuthPostAuthPlayerController, SPTAuthRequest, SPTAuthSourceApplicationValidationManager, SPTDefaultPopupPermissionManager, SPTHermesController, SPTObserverManager, SPTProgressView;
 @protocol SPTAlertInterface, SPTAuthTestManager, SPTContainerUIService, SPTLinkDispatcher, SPTNetworkConnectivityController;
 
 @interface SPTAuthControllerImplementation : NSObject <SPTAuthRequestDelegate, SPTAuthController>
@@ -23,6 +23,7 @@
     SPTProgressView *_progressView;
     SPTObserverManager *_observerManager;
     id <SPTAuthTestManager> _testManager;
+    SPTAuthSourceApplicationValidationManager *_sourceAppValidationManager;
     SPTAuthCache *_authCache;
     id <SPTLinkDispatcher> _linkDispatcher;
     SPTAuthRequest *_request;
@@ -41,6 +42,7 @@
 @property(retain, nonatomic) SPTAuthRequest *request; // @synthesize request=_request;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) SPTAuthCache *authCache; // @synthesize authCache=_authCache;
+@property(retain, nonatomic) SPTAuthSourceApplicationValidationManager *sourceAppValidationManager; // @synthesize sourceAppValidationManager=_sourceAppValidationManager;
 @property(readonly, nonatomic) id <SPTAuthTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(readonly, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
@@ -60,8 +62,11 @@
 - (_Bool)shouldDoNetworklessAuthorizationWithClientId:(id)arg1 scopes:(id)arg2 redirectUri:(id)arg3 bundleId:(id)arg4;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (void)authenticateWithURL:(id)arg1 sourceApplication:(id)arg2 shouldValidate:(_Bool)arg3 shouldDoSilentAuth:(_Bool)arg4 completionHandler:(CDUnknownBlockType)arg5;
 - (void)authenticateWithURL:(id)arg1 sourceApplication:(id)arg2 shouldDoSilentAuth:(_Bool)arg3 completionHandler:(CDUnknownBlockType)arg4;
-- (id)initWithSession:(id)arg1 hermesController:(id)arg2 containerUIService:(id)arg3 connectivityController:(id)arg4 alertController:(id)arg5 testManager:(id)arg6 authCache:(id)arg7 linkDispatcher:(id)arg8 postAuthPlayerController:(id)arg9 authLogger:(id)arg10;
+- (void)handleSoruceAppValidationRepsonse:(long long)arg1 sourceApplication:(id)arg2 url:(id)arg3 shouldDoSilentAuth:(_Bool)arg4 completionHandler:(CDUnknownBlockType)arg5;
+- (void)validateSourceApplication:(id)arg1 authenticateWithURL:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (id)initWithSession:(id)arg1 hermesController:(id)arg2 containerUIService:(id)arg3 connectivityController:(id)arg4 alertController:(id)arg5 testManager:(id)arg6 authCache:(id)arg7 linkDispatcher:(id)arg8 postAuthPlayerController:(id)arg9 validationManager:(id)arg10 authLogger:(id)arg11;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

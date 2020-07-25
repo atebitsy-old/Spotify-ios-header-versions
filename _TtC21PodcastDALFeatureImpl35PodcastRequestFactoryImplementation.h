@@ -17,7 +17,7 @@
 - (id)createMarkEpisodeAsPlayedRequestWithURLs:(id)arg1 markAsUnplayed:(_Bool)arg2;
 - (id)createCollectionEpisodesRequestWithURL:(id)arg1 subscribe:(_Bool)arg2;
 - (id)createPodcastEntityRequestWithURL:(id)arg1 filterPredicate:(id)arg2 sortDescriptor:(id)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5;
-- (id)createDecorateItemsRequestWithItemURIs:(id)arg1 subscribe:(_Bool)arg2;
+- (id)createDecorateItemsRequestWithItemURIs:(id)arg1 subscribe:(_Bool)arg2 fetchHTMLDescription:(_Bool)arg3;
 
 @end
 

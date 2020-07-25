@@ -9,6 +9,8 @@
 @class NSAttributedString, NSString, NSURL;
 
 @protocol SPTFreeTierPlaylistVISREFHeaderViewModel <NSObject>
+@property(nonatomic, readonly) unsigned long long followCount;
+@property(nonatomic, readonly) double totalDuration;
 @property(nonatomic, readonly) NSString *metadataAccessibilityLabel;
 @property(nonatomic, readonly) NSString *metadataText;
 @property(nonatomic, readonly) NSAttributedString *creatorText;

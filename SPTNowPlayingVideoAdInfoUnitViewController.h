@@ -61,7 +61,7 @@
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (void)updateSkipCountdownString:(int)arg1;
 - (void)setupSkipButtonWithAnimation:(_Bool)arg1;
 - (void)skipButtonTapped;

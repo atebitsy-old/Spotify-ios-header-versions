@@ -14,7 +14,8 @@
     // Error parsing type: , name: networkService
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: ubiService
-    // Error parsing type: , name: $__lazy_storage_$_ubiLocationSerializer
+    // Error parsing type: , name: $__lazy_storage_$_viewModelBuilderFactory
+    // Error parsing type: , name: $__lazy_storage_$_ubiLocationProvider
 }
 
 + (id)serviceIdentifier;

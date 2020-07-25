@@ -5,9 +5,11 @@
 //
 
 @class NSURL;
-@protocol HUBCommandHandler, SPTFreeTierEntityOfflineViewModel;
+@protocol HUBCommandHandler, SPTAssistedCurationUIService, SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistCellProviderV2, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescriptionV2;
 
 @protocol _TtP17OfflineMixFeature26SPTOfflineMixModelProvider_
+- (id <SPTFreeTierPlaylistModelObserver><SPTFreeTierPlaylistSectionDescriptionV2>)provideTrackSectionFor:(id <SPTFreeTierPlaylistItemsViewModel>)arg1;
+- (id <SPTFreeTierPlaylistCellProviderV2>)provideFreeTierPlaylistCellProviderFor:(NSURL *)arg1 itemsViewModel:(id <SPTFreeTierPlaylistItemsViewModel>)arg2 assistedCurationUIService:(id <SPTAssistedCurationUIService>)arg3;
 - (id <HUBCommandHandler>)provideFreeTierTrackOfflineToggleCommandHandlerFor:(id <SPTFreeTierEntityOfflineViewModel>)arg1;
 - (id <SPTFreeTierEntityOfflineViewModel>)provideFreeTierTrackOfflineButtonViewModelFor:(NSURL *)arg1;
 @end

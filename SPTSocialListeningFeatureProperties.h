@@ -14,18 +14,18 @@
 {
     _Bool _canUseSocialSessions;
     _Bool _shareLink;
+    _Bool _enabled;
+    _Bool _newUiExperienceEnabled;
+    _Bool _allowListen;
     long long _multiOutputMaxNumberOfParticipants;
-    unsigned long long _socialListeningMode;
-    NSString *_socialListeningModeString;
 }
 
-- (void).cxx_destruct;
-@property(retain, nonatomic) NSString *socialListeningModeString; // @synthesize socialListeningModeString=_socialListeningModeString;
-@property(readonly, nonatomic) unsigned long long socialListeningMode; // @synthesize socialListeningMode=_socialListeningMode;
 @property(readonly, nonatomic) long long multiOutputMaxNumberOfParticipants; // @synthesize multiOutputMaxNumberOfParticipants=_multiOutputMaxNumberOfParticipants;
+@property(readonly, nonatomic) _Bool allowListen; // @synthesize allowListen=_allowListen;
+@property(readonly, nonatomic) _Bool newUiExperienceEnabled; // @synthesize newUiExperienceEnabled=_newUiExperienceEnabled;
+@property(readonly, nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
 @property(readonly, nonatomic) _Bool shareLink; // @synthesize shareLink=_shareLink;
 @property(readonly, nonatomic) _Bool canUseSocialSessions; // @synthesize canUseSocialSessions=_canUseSocialSessions;
-- (unsigned long long)mapSocialListeningModeToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

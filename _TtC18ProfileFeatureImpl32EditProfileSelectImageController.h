@@ -6,10 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "UIImagePickerControllerDelegate-Protocol.h"
-#import "UINavigationControllerDelegate-Protocol.h"
-
-@interface _TtC18ProfileFeatureImpl32EditProfileSelectImageController : NSObject <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface _TtC18ProfileFeatureImpl32EditProfileSelectImageController : NSObject
 {
     // Error parsing type: , name: editProfileLogger
     // Error parsing type: , name: modalPresentationController

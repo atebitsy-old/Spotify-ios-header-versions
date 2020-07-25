@@ -9,6 +9,7 @@
 @interface _TtC23SharePreviewMenuFeature29SharePreviewMenuConfiguration : NSObject
 {
     // Error parsing type: , name: payloadProvider
+    // Error parsing type: , name: preferredDestinationOrder
 }
 
 - (void).cxx_destruct;

@@ -6,7 +6,7 @@
 
 #import "GLUEThemeBase.h"
 
-@class SPTPremiumDestinationUICarouselStyle, SPTPremiumDestinationUICtaStyle, SPTPremiumDestinationUICurrentPlanStyle, SPTPremiumDestinationUIFlexboxButtonStyle, SPTPremiumDestinationUIFlexboxLegalTextStyle, SPTPremiumDestinationUIFlexboxSubtitleStyle, SPTPremiumDestinationUIFlexboxTitleStyle, SPTPremiumDestinationUIHeaderTitleStyle, SPTPremiumDestinationUILegalTextStyle, SPTPremiumDestinationUIOfferCardRibbonStyle, SPTPremiumDestinationUIOfferCardStyle, SPTPremiumDestinationUIOfferDescriptionStyle, SPTPremiumDestinationUIOfferTitlePricePeriodStyle, SPTPremiumDestinationUIOfferTitleStyle, SPTPremiumDestinationUIValueCardSingleStyle, SPTPremiumDestinationUIValueCardStyle, SPTPremiumDestinationUIValueComparisonCardStyle;
+@class SPTPremiumDestinationUICarouselStyle, SPTPremiumDestinationUICtaStyle, SPTPremiumDestinationUICurrentPlanStyle, SPTPremiumDestinationUIFlexboxButtonStyle, SPTPremiumDestinationUIFlexboxLegalTextStyle, SPTPremiumDestinationUIFlexboxSubtitleStyle, SPTPremiumDestinationUIFlexboxTitleStyle, SPTPremiumDestinationUIHeaderTitleStyle, SPTPremiumDestinationUILegalTextStyle, SPTPremiumDestinationUIOfferCardRibbonStyle, SPTPremiumDestinationUIOfferCardStyle, SPTPremiumDestinationUIOfferDescriptionStyle, SPTPremiumDestinationUIOfferTitlePricePeriodStyle, SPTPremiumDestinationUIOfferTitleStyle, SPTPremiumDestinationUISectionHeaderStyle, SPTPremiumDestinationUIValueCardSingleStyle, SPTPremiumDestinationUIValueCardStyle, SPTPremiumDestinationUIValueComparisonCardStyle;
 @protocol GLUEStyle;
 
 @interface SPTPremiumDestinationUIGLUETheme : GLUEThemeBase
@@ -24,6 +24,7 @@
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUIOfferTitleStyle<GLUEStyle> *offerTitleStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUIOfferDescriptionStyle<GLUEStyle> *offerDescriptionStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUIOfferCardStyle<GLUEStyle> *offerCardStyle;
+@property(readonly, copy, nonatomic) SPTPremiumDestinationUISectionHeaderStyle<GLUEStyle> *sectionHeaderStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUICurrentPlanStyle<GLUEStyle> *currentPlanStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUIValueCardSingleStyle *valueCardSingleStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUIValueCardStyle *valueCardStyle;
@@ -31,7 +32,11 @@
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUICarouselStyle<GLUEStyle> *carouselStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUILegalTextStyle<GLUEStyle> *legalTextStyle;
 @property(readonly, copy, nonatomic) SPTPremiumDestinationUICtaStyle<GLUEStyle> *primaryCtaStyle;
+- (double)componentContentWidthPercentage;
+- (double)sizeClassLayoutComponentWidthPercentage;
 - (double)offerCardComponentBottomContentEdgeMargin;
+- (double)sectionHeaderComponentBottomVerticalMargin;
+- (double)sectionHeaderComponentTopVerticalMargin;
 - (double)flexboxComponentVerticalMargin;
 - (double)offerCardComponentVerticalMargin;
 

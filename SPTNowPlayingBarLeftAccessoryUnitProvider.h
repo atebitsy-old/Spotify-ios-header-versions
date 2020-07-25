@@ -35,6 +35,7 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 - (void)processPlayerStateChange:(id)arg1 toggleMode:(unsigned long long)arg2;
+- (id)accessoryView;
 - (void)createVideoUnit;
 - (void)createCoverArtUnit;
 - (void)createEmptyUnit;

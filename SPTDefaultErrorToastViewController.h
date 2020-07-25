@@ -12,9 +12,9 @@
     // Error parsing type: , name: bodyText
     // Error parsing type: , name: retryAction
     // Error parsing type: , name: style
-    // Error parsing type: , name: $__lazy_storage_$_onDetach
 }
 
++ (id)accessibilityIdentifier;
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;

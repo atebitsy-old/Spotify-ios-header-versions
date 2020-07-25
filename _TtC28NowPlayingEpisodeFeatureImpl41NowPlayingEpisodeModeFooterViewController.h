@@ -8,26 +8,28 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl41NowPlayingEpisodeModeFooterViewController : UIViewController
 {
+    // Error parsing type: , name: episodeModeSharePresenter
     // Error parsing type: , name: auxiliaryActionsHandler
     // Error parsing type: , name: podcastSpeedControlManager
     // Error parsing type: , name: devicesAvailableViewProvider
     // Error parsing type: , name: devicesAvailableView
     // Error parsing type: , name: nextButton
-    // Error parsing type: , name: queueButton
-    // Error parsing type: , name: speedButton
-    // Error parsing type: , name: playPauseButton
     // Error parsing type: , name: previousButton
+    // Error parsing type: , name: shareButton
+    // Error parsing type: , name: speedButton
+    // Error parsing type: , name: sleepButton
     // Error parsing type: , name: viewModel
+    // Error parsing type: , name: circularProgressPlayPauseView
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)presentSleepTimerMenuWithSender:(id)arg1;
 - (void)presentSpeedControlMenuWithSender:(id)arg1;
-- (void)goToQueueWithSender:(id)arg1;
+- (void)presentShareMenuWithSender:(id)arg1;
 - (void)presentConnectDevicePickerWithSender:(id)arg1;
 - (void)skipToNextWithSender:(id)arg1;
 - (void)skipToPreviousWithSender:(id)arg1;
-- (void)playPauseWithSender:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (id)initWithCoder:(id)arg1;

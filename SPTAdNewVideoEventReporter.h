@@ -53,6 +53,7 @@
 - (void)logEvent:(id)arg1 position:(double)arg2;
 - (_Bool)shouldFireImpressionOnEnd;
 - (_Bool)shouldFireImpressionOnThreshold;
+- (void)didChangeBackgroundState:(_Bool)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didEndPlaybackWithReason:(long long)arg1 atPosition:(double)arg2 timestamp:(double)arg3;
 - (void)didChangeDuration:(double)arg1 timestamp:(double)arg2;
 - (void)didBecomeReadyAtPosition:(double)arg1 timestamp:(double)arg2;

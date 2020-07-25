@@ -22,7 +22,7 @@
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(readonly, nonatomic) id <SPTWebViewFactory> webViewFactory; // @synthesize webViewFactory=_webViewFactory;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (id)provideContextMenuViewControllerForPrimaryContextView:(id)arg1 secondaryContextMenuView:(id)arg2 adEntity:(id)arg3 logCenter:(id)arg4 title:(id)arg5;
+- (id)provideContextMenuViewControllerForPrimaryContextView:(id)arg1 secondaryContextMenuView:(id)arg2 adEntity:(id)arg3 title:(id)arg4;
 - (id)provideMarqueeContextMenuForTitle:(id)arg1 actions:(id)arg2;
 - (id)provideContextMenuActionWithIcon:(long long)arg1 attributedTitle:(id)arg2 actionBlock:(CDUnknownBlockType)arg3;
 - (id)provideContextMenuActionWithIcon:(long long)arg1 title:(id)arg2 actionBlock:(CDUnknownBlockType)arg3;

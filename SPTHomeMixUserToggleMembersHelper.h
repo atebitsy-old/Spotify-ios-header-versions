@@ -20,7 +20,7 @@
 @property(retain, nonatomic) SPTHomeMixUserToggleViewModel *model; // @synthesize model=_model;
 @property(retain, nonatomic) NSMutableArray *usersPresent; // @synthesize usersPresent=_usersPresent;
 @property(copy, nonatomic) NSArray *members; // @synthesize members=_members;
-- (id)memberBlacklist;
+- (id)memberExcludeList;
 - (unsigned long long)selectedUsersCount;
 - (void)flipMemberAtIndex:(unsigned long long)arg1;
 - (long long)memberStateAtIndex:(unsigned long long)arg1;

@@ -36,7 +36,7 @@
 - (_Bool)nowPlayingDurationViewShouldAlwaysShowDurationLabels:(id)arg1;
 - (id)nowPlayingDurationView:(id)arg1 timeTakenTextForSliderValue:(float)arg2;
 - (id)nowPlayingDurationView:(id)arg1 timeRemainingTextForSliderValue:(float)arg2;
-- (struct CGSize)preferredContentSize;
+- (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)setupConstraints;

@@ -14,11 +14,14 @@
 @interface SPTConnectivityManager : NSObject <SPTConnectivityManager>
 {
     struct unique_ptr<spotify::connectivity::ConnectivityManager, std::__1::default_delete<spotify::connectivity::ConnectivityManager>> _connectivityManager;
-    struct TimerManager *_timerManager;
+    struct io_context _ioContext;
+    struct unique_ptr<asio::io_context::work, std::__1::default_delete<asio::io_context::work>> _ioContextWork;
+    struct unique_ptr<std::__1::thread, std::__1::default_delete<std::__1::thread>> _backgroundThread;
+    struct unique_ptr<spotify::async::Scheduler, std::__1::default_delete<spotify::async::Scheduler>> _schedulerBridge;
     NSObject<OS_dispatch_queue> *_callbackQueue;
     struct mutex _mutex;
     unsigned long long _nextCallbackTimerId;
-    struct unordered_map<unsigned long long, std::__1::shared_ptr<spotify::async::Timer>, std::__1::hash<unsigned long long>, std::__1::equal_to<unsigned long long>, std::__1::allocator<std::__1::pair<const unsigned long long, std::__1::shared_ptr<spotify::async::Timer>>>> _callbackTimers;
+    struct unordered_map<unsigned long long, std::__1::shared_ptr<asio::basic_waitable_timer<std::__1::chrono::system_clock, asio::wait_traits<std::__1::chrono::system_clock>, asio::executor>>, std::__1::hash<unsigned long long>, std::__1::equal_to<unsigned long long>, std::__1::allocator<std::__1::pair<const unsigned long long, std::__1::shared_ptr<asio::basic_waitable_timer<std::__1::chrono::system_clock, asio::wait_traits<std::__1::chrono::system_clock>, asio::executor>>>>> _callbackTimers;
     struct scoped_connection _connectivityManagerStateChangeConnection;
     id <SPTConnectivityManagerDelegate> delegate;
     id <SPTConnectivityAsyncScheduler> _scheduler;
@@ -40,7 +43,7 @@
 @property long long connectionType;
 - (void)addDeferedCallback:(CDUnknownBlockType)arg1 callbackQueue:(id)arg2;
 - (void)invalidate;
-- (id)initWithAnalyticsDelegate:(id)arg1 allowNetwork:(_Bool)arg2 scheduler:(id)arg3 timerManager:(struct TimerManager *)arg4 callbackQueue:(id)arg5;
+- (id)initWithAnalyticsDelegate:(id)arg1 allowNetwork:(_Bool)arg2 scheduler:(id)arg3 callbackQueue:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

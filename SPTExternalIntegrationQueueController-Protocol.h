@@ -11,6 +11,7 @@
 @protocol SPTExternalIntegrationQueueController <NSObject>
 - (void)removeObserver:(id <SPTExternalIntegrationQueueControllerObserver>)arg1;
 - (void)addObserver:(id <SPTExternalIntegrationQueueControllerObserver>)arg1;
+- (void)getTrackAtIndex:(long long)arg1 withCompletionHandler:(void (^)(SPTPlayerTrack *))arg2;
 - (void)getPlayQueueWithCompletionHandler:(void (^)(SPTPlayerQueue *))arg1;
 @end
 
