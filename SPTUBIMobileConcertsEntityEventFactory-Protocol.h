@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileConcertsEntity_FindTicketsButtonEventFactory, SPTUBIMobileConcertsEntity_LineupCarouselEventFactory, SPTUBIMobileConcertsEntity_ListenToTheirMusicEventFactory, SPTUBIMobileConcertsEntity_RelatedConcertsListEventFactory, SPTUBIMobileConcertsEntity_SeeMoreConcertsButtonEventFactory, SPTUBIMobileConcertsEntity_ShareButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileConcertsEntity_FindTicketsButtonEventFactory, SPTUBIMobileConcertsEntity_LineupCarouselEventFactory, SPTUBIMobileConcertsEntity_ListenToTheirMusicEventFactory, SPTUBIMobileConcertsEntity_RelatedConcertsListEventFactory, SPTUBIMobileConcertsEntity_SeeMoreConcertsButtonEventFactory, SPTUBIMobileConcertsEntity_ShareButtonEventFactory;
 
 @protocol SPTUBIMobileConcertsEntityEventFactory <NSObject>
 - (id <SPTUBIMobileConcertsEntity_SeeMoreConcertsButtonEventFactory>)seeMoreConcertsButtonFactory;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobileConcertsEntity_LineupCarouselEventFactory>)lineupCarouselFactory;
 - (id <SPTUBIMobileConcertsEntity_FindTicketsButtonEventFactory>)findTicketsButtonFactory;
 - (id <SPTUBIMobileConcertsEntity_ShareButtonEventFactory>)shareButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

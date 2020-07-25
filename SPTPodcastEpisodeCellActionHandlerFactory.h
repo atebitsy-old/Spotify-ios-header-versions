@@ -28,6 +28,7 @@
 @property(retain, nonatomic) SPTPodcastLogger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
+- (id)provideCellActionHandlerWithEpisodeProvider:(id)arg1 player:(id)arg2 respectPlaybackOrder:(_Bool)arg3;
 - (id)provideCellActionHandlerWithEpisodeProvider:(id)arg1 player:(id)arg2;
 - (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 podcastOffliningManager:(id)arg4 collectionLogger:(id)arg5 explicitContentAccessManager:(id)arg6 linkDispatcher:(id)arg7;
 

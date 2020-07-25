@@ -25,7 +25,7 @@
 - (void)showUserCuratedIntroMessage;
 - (void)showTrackDownloadRemovedSnackbar;
 - (void)showTrackDownloadCompletedSnackbar;
-- (void)showRemoveFromDownloadsConfirmationAlertWith:(CDUnknownBlockType)arg1;
+- (void)showRemoveFromDownloadsConfirmationAlertWithConfirmBlock:(CDUnknownBlockType)arg1 cancelBlock:(CDUnknownBlockType)arg2;
 
 @end
 

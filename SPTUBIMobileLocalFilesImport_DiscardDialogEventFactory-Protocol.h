@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileLocalFilesImport_DiscardDialog_ContinueButtonEventFactory, SPTUBIMobileLocalFilesImport_DiscardDialog_StopButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileLocalFilesImport_DiscardDialog_ContinueButtonEventFactory, SPTUBIMobileLocalFilesImport_DiscardDialog_StopButtonEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImport_DiscardDialogEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileLocalFilesImport_DiscardDialog_StopButtonEventFactory>)stopButtonFactory;
 - (id <SPTUBIMobileLocalFilesImport_DiscardDialog_ContinueButtonEventFactory>)continueButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

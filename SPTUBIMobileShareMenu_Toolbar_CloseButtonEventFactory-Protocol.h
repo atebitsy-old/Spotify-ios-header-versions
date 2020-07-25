@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileShareMenu_Toolbar_CloseButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiHide;
 - (id <SPTUBIImpressionEvent>)impression;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

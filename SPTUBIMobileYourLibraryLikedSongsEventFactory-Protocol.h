@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibraryLikedSongs_ClearFiltersButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_EmptyViewEventFactory, SPTUBIMobileYourLibraryLikedSongs_HeaderEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemListEventFactory, SPTUBIMobileYourLibraryLikedSongs_QuickScrollEventFactory, SPTUBIMobileYourLibraryLikedSongs_SortFilterSheetEventFactory, SPTUBIMobileYourLibraryLikedSongs_ToolbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryLikedSongs_ClearFiltersButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_EmptyViewEventFactory, SPTUBIMobileYourLibraryLikedSongs_HeaderEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemListEventFactory, SPTUBIMobileYourLibraryLikedSongs_QuickScrollEventFactory, SPTUBIMobileYourLibraryLikedSongs_SortFilterSheetEventFactory, SPTUBIMobileYourLibraryLikedSongs_ToolbarEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongsEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibraryLikedSongs_SortFilterSheetEventFactory>)sortFilterSheetFactory;
@@ -16,6 +16,6 @@
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemListEventFactory>)itemListFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_HeaderEventFactory>)headerFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

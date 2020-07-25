@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibraryPlaylists_ItemList_CreatePlaylistEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_HiddenContentEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_ItemEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_LikedSongsEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryPlaylists_ItemList_CreatePlaylistEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_HiddenContentEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_ItemEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_LikedSongsEventFactory;
 
 @protocol SPTUBIMobileYourLibraryPlaylists_ItemListEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibraryPlaylists_ItemList_HiddenContentEventFactory>)hiddenContentFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileYourLibraryPlaylists_ItemList_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileYourLibraryPlaylists_ItemList_LikedSongsEventFactory>)likedSongsFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileYourLibraryPlaylists_ItemList_CreatePlaylistEventFactory>)createPlaylistFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

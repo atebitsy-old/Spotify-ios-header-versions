@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSString;
+
 @interface INTERNAL_SPTEncoreNavigationRowModel : NSObject
 {
     // Error parsing type: , name: title
@@ -18,6 +20,10 @@
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithTitle:(id)arg1 isTappable:(_Bool)arg2 isPressed:(_Bool)arg3 hasDestination:(_Bool)arg4;
+@property(nonatomic, readonly) _Bool hasDestination; // @synthesize hasDestination;
+@property(nonatomic, readonly) _Bool isPressed; // @synthesize isPressed;
+@property(nonatomic, readonly) _Bool isTappable; // @synthesize isTappable;
+@property(nonatomic, readonly) NSString *title;
 
 @end
 

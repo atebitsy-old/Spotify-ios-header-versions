@@ -7,17 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSDictionary, NSString;
+@protocol SPTUBIInteractionEventLocation;
 
 @protocol SPTUBIInteractionEvent <NSObject>
-@property(nonatomic, readonly) NSString *specificationVersion;
-@property(nonatomic, readonly) NSString *generatorCommitHash;
-@property(nonatomic, readonly) NSString *specificationCommitHash;
 @property(nonatomic, readonly) NSArray *errors;
 @property(nonatomic, readonly) NSDictionary *actionParameters;
 @property(nonatomic, readonly) long long actionVersion;
 @property(nonatomic, readonly) NSString *action;
-@property(nonatomic, readonly) NSArray *components;
-@property(nonatomic, readonly) NSString *interactionType;
-@property(nonatomic, readonly) NSString *applicationId;
+@property(nonatomic, readonly) id <SPTUBIInteractionEventLocation> location;
 @end
 

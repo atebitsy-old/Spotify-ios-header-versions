@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePlaylistExtender_ExtenderItemList_Item_AddSongsButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitAddToPlaylistWithPlaylist:(NSURL *)arg1 itemToBeAdded:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

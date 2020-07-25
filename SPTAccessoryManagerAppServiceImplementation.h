@@ -9,7 +9,7 @@
 #import "SPTAccessoryManagerService-Protocol.h"
 
 @class NSString, SPTAccessoryDetector, SPTAccessoryEndStreamTracker, SPTAccessoryManagerLogging, SPTAccessoryStateManagerImplementation, SPTAllocationContext;
-@protocol SPTContainerService, SPTCrashReporterService, SPTExternalIntegrationDebugLogService, SPTNetworkService;
+@protocol OS_dispatch_queue, SPTContainerService, SPTCrashReporterService, SPTExternalIntegrationDebugLogService, SPTNetworkService;
 
 @interface SPTAccessoryManagerAppServiceImplementation : NSObject <SPTAccessoryManagerService>
 {
@@ -21,10 +21,12 @@
     id <SPTCrashReporterService> _crashReporterService;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
     id <SPTNetworkService> _networkService;
+    NSObject<OS_dispatch_queue> *_EAAccessoryManagerQueue;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *EAAccessoryManagerQueue; // @synthesize EAAccessoryManagerQueue=_EAAccessoryManagerQueue;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
@@ -33,6 +35,7 @@
 @property(retain, nonatomic) SPTAccessoryEndStreamTracker *endStreamTracker; // @synthesize endStreamTracker=_endStreamTracker;
 @property(retain, nonatomic) SPTAccessoryManagerLogging *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTAccessoryStateManagerImplementation *stateManager; // @synthesize stateManager=_stateManager;
+- (id)provideEAAccessoryManagerQueue;
 - (id)provideAccessoryStateManager;
 - (void)unloadAccessoryManagerSessionService:(id)arg1;
 - (void)loadAccessoryManagerSessionService:(id)arg1 player:(id)arg2;

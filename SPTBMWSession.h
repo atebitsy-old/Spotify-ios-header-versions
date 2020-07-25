@@ -9,7 +9,7 @@
 #import "RAPIEntertainmentAppLinkDelegate-Protocol.h"
 
 @class NSString, RAPICarDescription, RAPIEntertainmentAppLink, SPTAccessory, SPTBMWLoggedInSession, SPTBMWToolbar;
-@protocol SPTAccessoryActionLogger, SPTAccessoryStateManager, SPTAutoLockOverrideToken, SPTExternalIntegrationPlatform, SPTImageLoaderFactory;
+@protocol OS_dispatch_queue, SPTAccessoryActionLogger, SPTAccessoryStateManager, SPTAutoLockOverrideToken, SPTExternalIntegrationPlatform, SPTImageLoaderFactory, SPTUIPresentationServiceFactory;
 
 @interface SPTBMWSession : NSObject <RAPIEntertainmentAppLinkDelegate>
 {
@@ -20,17 +20,20 @@
     id <SPTExternalIntegrationPlatform> _externalIntegrationPlatform;
     id <SPTAccessoryActionLogger> _actionLogger;
     SPTBMWLoggedInSession *_loggedInSession;
+    NSObject<OS_dispatch_queue> *_dispatchQueue;
     id <SPTImageLoaderFactory> _imageLoaderFactory;
     RAPICarDescription *_descriptionFromOnConnectedToCar;
     id <SPTAutoLockOverrideToken> _autoLockOverride;
     SPTBMWToolbar *_toolbar;
     id <SPTAccessoryStateManager> _accessoryManager;
     SPTAccessory *_currentAccessory;
+    id <SPTUIPresentationServiceFactory> _uiPresentationFactory;
     id _debugLog;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id debugLog; // @synthesize debugLog=_debugLog;
+@property(readonly, nonatomic) id <SPTUIPresentationServiceFactory> uiPresentationFactory; // @synthesize uiPresentationFactory=_uiPresentationFactory;
 @property(retain, nonatomic) SPTAccessory *currentAccessory; // @synthesize currentAccessory=_currentAccessory;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryManager; // @synthesize accessoryManager=_accessoryManager;
 @property(retain, nonatomic) SPTBMWToolbar *toolbar; // @synthesize toolbar=_toolbar;
@@ -40,6 +43,7 @@
 @property(nonatomic) _Bool appLinkIsConnected; // @synthesize appLinkIsConnected=_appLinkIsConnected;
 @property(retain, nonatomic) RAPICarDescription *descriptionFromOnConnectedToCar; // @synthesize descriptionFromOnConnectedToCar=_descriptionFromOnConnectedToCar;
 @property(readonly, nonatomic) id <SPTImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
+@property(readonly, nonatomic) NSObject<OS_dispatch_queue> *dispatchQueue; // @synthesize dispatchQueue=_dispatchQueue;
 @property(retain, nonatomic) SPTBMWLoggedInSession *loggedInSession; // @synthesize loggedInSession=_loggedInSession;
 @property(nonatomic) __weak id <SPTAccessoryActionLogger> actionLogger; // @synthesize actionLogger=_actionLogger;
 @property(nonatomic) __weak id <SPTExternalIntegrationPlatform> externalIntegrationPlatform; // @synthesize externalIntegrationPlatform=_externalIntegrationPlatform;
@@ -90,7 +94,7 @@
 - (void)initializeAppLink;
 - (id)rapiConfig;
 - (void)asynchronouslySetupAppLink;
-- (id)initWithAccessoryManager:(id)arg1 imageLoaderFactory:(id)arg2 debugLog:(id)arg3;
+- (id)initWithAccessoryManager:(id)arg1 dispatchQueue:(id)arg2 imageLoaderFactory:(id)arg3 debugLog:(id)arg4 uiPresentationFactory:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

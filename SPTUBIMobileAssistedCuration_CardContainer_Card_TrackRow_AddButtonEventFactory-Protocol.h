@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AddButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitAddToPlaylistWithPlaylist:(NSURL *)arg1 itemToBeAdded:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

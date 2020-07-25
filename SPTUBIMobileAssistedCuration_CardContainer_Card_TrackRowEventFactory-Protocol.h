@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AddButtonEventFactory, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AlbumCoverEventFactory, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_HeartButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AddButtonEventFactory, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AlbumCoverEventFactory, SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_HeartButtonEventFactory;
 
 @protocol SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRowEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_HeartButtonEventFactory>)heartButtonFactory;
 - (id <SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AddButtonEventFactory>)addButtonFactory;
 - (id <SPTUBIMobileAssistedCuration_CardContainer_Card_TrackRow_AlbumCoverEventFactory>)albumCoverFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

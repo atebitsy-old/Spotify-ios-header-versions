@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileQueue_EditQueueBarEventFactory, SPTUBIMobileQueue_MainControlsEventFactory, SPTUBIMobileQueue_NowPlayingEventFactory, SPTUBIMobileQueue_QueueUpNextEventFactory, SPTUBIMobileQueue_TopBarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileQueue_EditQueueBarEventFactory, SPTUBIMobileQueue_MainControlsEventFactory, SPTUBIMobileQueue_NowPlayingEventFactory, SPTUBIMobileQueue_QueueUpNextEventFactory, SPTUBIMobileQueue_TopBarEventFactory;
 
 @protocol SPTUBIMobileQueueEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeQuickScroll;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobileQueue_QueueUpNextEventFactory>)queueUpNextFactory;
 - (id <SPTUBIMobileQueue_NowPlayingEventFactory>)nowPlayingFactory;
 - (id <SPTUBIMobileQueue_TopBarEventFactory>)topBarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

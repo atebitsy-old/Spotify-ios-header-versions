@@ -6,14 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTOnboardingFlowCoordinator-Protocol.h"
-
-@protocol SPTOnboardingServiceFlowStateReporter;
-
-@interface _TtC22AllBoardingFeatureImpl26AllBoardingFlowCoordinator : NSObject <SPTOnboardingFlowCoordinator>
+@interface _TtC22AllBoardingFeatureImpl26AllBoardingFlowCoordinator : NSObject
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: modalPresentationController
+    // Error parsing type: , name: metaViewController
     // Error parsing type: , name: dataLoaderFactory
     // Error parsing type: , name: pageLoaderViewService
     // Error parsing type: , name: networkService
@@ -31,8 +28,7 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)startOnboardingFlow;
-@property(nonatomic) __weak id <SPTOnboardingServiceFlowStateReporter> delegate; // @synthesize delegate;
+- (void)dealloc;
 
 @end
 

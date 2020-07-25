@@ -7,7 +7,7 @@
 #import "_TtC28EncoreIntegrationFeatureImpl18ComponentFactories.h"
 
 @interface _TtC28EncoreIntegrationFeatureImpl18ComponentFactories (EncoreIntegrationFeatureImpl6)
-- (id)makeTrackRowPlaylistExtender:(long long)arg1;
-- (id)makeTrackRowPlaylistExtender;
+- (id)makeTrackRowChart:(long long)arg1;
+- (id)makeTrackRowChart;
 @end
 

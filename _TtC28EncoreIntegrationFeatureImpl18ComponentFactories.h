@@ -12,6 +12,8 @@
     // Error parsing type: , name: $__lazy_storage_$_trackRow
     // Error parsing type: , name: $__lazy_storage_$_artistTrackRow
     // Error parsing type: , name: $__lazy_storage_$_trackRowPlaylistExtender
+    // Error parsing type: , name: $__lazy_storage_$_trackRowChart
+    // Error parsing type: , name: $__lazy_storage_$_trackRowAlbum
     // Error parsing type: , name: $__lazy_storage_$_albumHeader
     // Error parsing type: , name: $__lazy_storage_$_playlistHeader
     // Error parsing type: , name: $__lazy_storage_$_downloadButton

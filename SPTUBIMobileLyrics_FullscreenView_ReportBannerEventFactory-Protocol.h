@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileLyrics_FullscreenView_ReportBanner_OkButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileLyrics_FullscreenView_ReportBanner_OkButtonEventFactory;
 
 @protocol SPTUBIMobileLyrics_FullscreenView_ReportBannerEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileLyrics_FullscreenView_ReportBanner_OkButtonEventFactory>)okButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

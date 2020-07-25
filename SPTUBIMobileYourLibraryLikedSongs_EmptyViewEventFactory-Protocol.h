@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileYourLibraryLikedSongs_EmptyView_DiscoverButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileYourLibraryLikedSongs_EmptyView_DiscoverButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_EmptyViewEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileYourLibraryLikedSongs_EmptyView_DiscoverButtonEventFactory>)discoverButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

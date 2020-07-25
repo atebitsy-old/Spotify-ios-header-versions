@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileArtistPage_PopularReleases_RowsEventFactory, SPTUBIMobileArtistPage_PopularReleases_SeeDiscografyEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileArtistPage_PopularReleases_RowsEventFactory, SPTUBIMobileArtistPage_PopularReleases_SeeDiscografyEventFactory;
 
 @protocol SPTUBIMobileArtistPage_PopularReleasesEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileArtistPage_PopularReleases_SeeDiscografyEventFactory>)seeDiscografyFactory;
 - (id <SPTUBIMobileArtistPage_PopularReleases_RowsEventFactory>)rowsFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

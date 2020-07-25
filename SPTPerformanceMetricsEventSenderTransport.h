@@ -12,15 +12,16 @@
 
 @interface SPTPerformanceMetricsEventSenderTransport : NSObject <SPTGabitoTimeReporterDelegate>
 {
-    _Bool _shouldSendTimeMeasurements;
+    _Bool _enabled;
     id <SPTEventSender> _eventSender;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool shouldSendTimeMeasurements; // @synthesize shouldSendTimeMeasurements=_shouldSendTimeMeasurements;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
+@property(nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
+- (void)logNonAuthenticatedEventWithName:(id)arg1 data:(id)arg2;
 - (void)logEventWithName:(id)arg1 data:(id)arg2;
-- (id)initWithEventSender:(id)arg1 remoteConfigurationProperties:(id)arg2;
+- (id)initWithEventSender:(id)arg1;
 
 @end
 

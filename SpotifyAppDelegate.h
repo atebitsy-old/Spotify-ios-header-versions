@@ -11,8 +11,8 @@
 #import "UIApplicationDelegate-Protocol.h"
 #import "UNUserNotificationCenterDelegate-Protocol.h"
 
-@class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
-@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTEmailUniversalLinkResolverDelegate, SPTLinkDispatcher, SPTLogCenter, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
+@class NSMutableDictionary, NSString, SPTApplicationDelegateLogger, SPTCookieStorageManager, SPTLogCenterImplementation, SPTPerfTracingSignpostObserver, SPTPlayModeMonitor, SPTServiceOrchestrator, SPTStartupTracer, UIWindow;
+@protocol OS_os_log, SPTAppStartupController, SPTCrashReporter, SPTEmailUniversalLinkResolverDelegate, SPTLinkDispatcher, SPTMetaViewController, SPTNotificationSystemDelegate, SPTReminderHandlerService, SPTThirdPartyTrackerBroadcaster, SPTUserActivityController;
 
 @interface SpotifyAppDelegate : NSObject <SPTServiceOrchestratorDelegate, SPTAppStartupControllerDelegate, UNUserNotificationCenterDelegate, UIApplicationDelegate>
 {
@@ -31,7 +31,7 @@
     id <SPTReminderHandlerService> _reminderHandlerService;
     SPTPerfTracingSignpostObserver *_perfTracingObserver;
     SPTServiceOrchestrator *_serviceOrchestrator;
-    id <SPTLogCenter> _logCenter;
+    SPTLogCenterImplementation *_logCenter;
     SPTStartupTracer *_startupTracer;
     id <SPTNotificationSystemDelegate> _notificationDelegate;
     id <SPTEmailUniversalLinkResolverDelegate> _emailUniversalLinkResolverDelegate;
@@ -42,7 +42,7 @@
 @property(nonatomic) __weak id <SPTEmailUniversalLinkResolverDelegate> emailUniversalLinkResolverDelegate; // @synthesize emailUniversalLinkResolverDelegate=_emailUniversalLinkResolverDelegate;
 @property(nonatomic) __weak id <SPTNotificationSystemDelegate> notificationDelegate; // @synthesize notificationDelegate=_notificationDelegate;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
-@property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+@property(retain, nonatomic) SPTLogCenterImplementation *logCenter; // @synthesize logCenter=_logCenter;
 @property(retain, nonatomic) SPTServiceOrchestrator *serviceOrchestrator; // @synthesize serviceOrchestrator=_serviceOrchestrator;
 @property(retain, nonatomic) SPTPerfTracingSignpostObserver *perfTracingObserver; // @synthesize perfTracingObserver=_perfTracingObserver;
 @property(nonatomic) __weak id <SPTReminderHandlerService> reminderHandlerService; // @synthesize reminderHandlerService=_reminderHandlerService;

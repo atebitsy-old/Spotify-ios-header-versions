@@ -9,15 +9,16 @@
 #import "SPTNavigationManagerDelegate-Protocol.h"
 #import "SPTPerformanceMetricsService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPerformanceMetricsAppMetricsCollector, SPTPerformanceMetricsEventSenderTransport, SPTPerformanceMetricsViewLoggerFactoryImplementation, SPTStartupTracer;
-@protocol CosmosFeature, SPTColdStartupSequenceTransport, SPTContainerService, SPTEventSenderService, SPTNetworkService, SPTPerformanceKitUUIDProvider, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTViewLoggerConnectionTypeProvider;
+@class NSString, SPTAllocationContext, SPTPerformanceMetricsAppMetricsCollector, SPTPerformanceMetricsViewLoggerFactoryImplementation, SPTStartupTracer;
+@protocol CosmosFeature, SPTColdStartupSequenceTransport, SPTContainerService, SPTEventSenderService, SPTNetworkService, SPTPerformanceKitUUIDProvider, SPTPerformanceMetricsAppScopeService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTResolver, SPTViewLoggerConnectionTypeProvider;
 
 @interface SPTPerformanceMetricsServiceImplementation : NSObject <SPTNavigationManagerDelegate, SPTPerformanceMetricsService>
 {
     id <CosmosFeature> _cosmosFeature;
     id <SPTContainerService> _containerService;
-    id <SPTNetworkService> _networkService;
     id <SPTEventSenderService> _eventSenderService;
+    id <SPTNetworkService> _networkService;
+    id <SPTPerformanceMetricsAppScopeService> _performanceMetricsAppScopeService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTStartupTracer *_startupTracer;
     id <SPTResolver> _resolver;
@@ -27,12 +28,10 @@
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     SPTPerformanceMetricsAppMetricsCollector *_appMetricCollector;
     id <SPTColdStartupSequenceTransport> _coldStartupSequenceTransport;
-    SPTPerformanceMetricsEventSenderTransport *_eventSenderTransport;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTPerformanceMetricsEventSenderTransport *eventSenderTransport; // @synthesize eventSenderTransport=_eventSenderTransport;
 @property(retain, nonatomic) id <SPTColdStartupSequenceTransport> coldStartupSequenceTransport; // @synthesize coldStartupSequenceTransport=_coldStartupSequenceTransport;
 @property(retain, nonatomic) SPTPerformanceMetricsAppMetricsCollector *appMetricCollector; // @synthesize appMetricCollector=_appMetricCollector;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
@@ -42,8 +41,9 @@
 @property(retain, nonatomic) id <SPTResolver> resolver; // @synthesize resolver=_resolver;
 @property(retain, nonatomic) SPTStartupTracer *startupTracer; // @synthesize startupTracer=_startupTracer;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
-@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
+@property(nonatomic) __weak id <SPTPerformanceMetricsAppScopeService> performanceMetricsAppScopeService; // @synthesize performanceMetricsAppScopeService=_performanceMetricsAppScopeService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
+@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosFeature; // @synthesize cosmosFeature=_cosmosFeature;
 - (void)navigationManager:(id)arg1 didNavigateFromViewController:(id)arg2 toViewController:(id)arg3;

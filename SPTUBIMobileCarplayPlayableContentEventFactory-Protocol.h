@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCarplayPlayableContent_ItemListEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileCarplayPlayableContent_ItemListEventFactory;
 
 @protocol SPTUBIMobileCarplayPlayableContentEventFactory <NSObject>
 - (id <SPTUBIMobileCarplayPlayableContent_ItemListEventFactory>)itemListFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2 reason:(NSString *)arg3;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

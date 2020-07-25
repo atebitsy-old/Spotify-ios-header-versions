@@ -14,6 +14,7 @@
 @interface SPTPodcastEpisodeCellActionHandler : NSObject <SPTPodcastEpisodeCellActionTarget>
 {
     _Bool _reversePlaybackOrder;
+    _Bool _shouldRespectPlaybackOrder;
     id <SPTPodcastEpisodeCellActionHandlerDelegate> _delegate;
     id <SPTPodcastEpisodeCellActionHandlerEpisodeProvider> _episodeProvider;
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
@@ -28,6 +29,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shouldRespectPlaybackOrder; // @synthesize shouldRespectPlaybackOrder=_shouldRespectPlaybackOrder;
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) _Bool reversePlaybackOrder; // @synthesize reversePlaybackOrder=_reversePlaybackOrder;
 @property(readonly, nonatomic) __weak id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
@@ -59,7 +61,7 @@
 - (void)configureForViewController:(id)arg1;
 - (id)featureId;
 - (id)URI;
-- (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 podcastOffliningManager:(id)arg4 collectionLogger:(id)arg5 player:(id)arg6 explicitContentAccessManager:(id)arg7 linkDispatcher:(id)arg8 episodeProvider:(id)arg9;
+- (id)initWithPodcastContextMenuProvider:(id)arg1 snackbarPresenter:(id)arg2 logger:(id)arg3 podcastOffliningManager:(id)arg4 collectionLogger:(id)arg5 player:(id)arg6 explicitContentAccessManager:(id)arg7 linkDispatcher:(id)arg8 episodeProvider:(id)arg9 shouldRespectPlaybackOrder:(_Bool)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

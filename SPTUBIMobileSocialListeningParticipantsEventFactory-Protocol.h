@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSocialListeningParticipants_ConfirmEndSessionDialogEventFactory, SPTUBIMobileSocialListeningParticipants_ParticipantListEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileSocialListeningParticipants_ConfirmEndSessionDialogEventFactory, SPTUBIMobileSocialListeningParticipants_ParticipantListEventFactory;
 
 @protocol SPTUBIMobileSocialListeningParticipantsEventFactory <NSObject>
 - (id <SPTUBIMobileSocialListeningParticipants_ConfirmEndSessionDialogEventFactory>)confirmEndSessionDialogFactory;
 - (id <SPTUBIMobileSocialListeningParticipants_ParticipantListEventFactory>)participantListFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

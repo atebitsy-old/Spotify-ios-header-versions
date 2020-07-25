@@ -7,6 +7,7 @@
 @class NSData, NSString;
 
 @protocol SPTGabitoTimeReporterDelegate
+- (void)logNonAuthenticatedEventWithName:(NSString *)arg1 data:(NSData *)arg2;
 - (void)logEventWithName:(NSString *)arg1 data:(NSData *)arg2;
 @end
 

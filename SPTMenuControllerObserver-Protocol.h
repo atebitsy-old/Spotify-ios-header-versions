@@ -6,12 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTMenuController, UIView;
+@class UIView;
+@protocol SPTMenuController;
 
 @protocol SPTMenuControllerObserver <NSObject>
 
 @optional
-- (void)menuController:(SPTMenuController *)arg1 didSetContentHeaderView:(UIView *)arg2;
-- (void)menuController:(SPTMenuController *)arg1 willSetContentHeaderView:(UIView *)arg2;
+- (void)menuController:(id <SPTMenuController>)arg1 didSetContentHeaderView:(UIView *)arg2;
+- (void)menuController:(id <SPTMenuController>)arg1 willSetContentHeaderView:(UIView *)arg2;
 @end
 

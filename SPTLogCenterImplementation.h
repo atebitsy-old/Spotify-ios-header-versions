@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 #import "SPTLogCenter-Protocol.h"
+#import "SPTLogCenterCoreIntegration-Protocol.h"
 
 @class NSMutableArray, NSString;
 @protocol OS_dispatch_queue, SPTLogger;
 
-@interface SPTLogCenterImplementation : NSObject <SPTLogCenter>
+@interface SPTLogCenterImplementation : NSObject <SPTLogCenter, SPTLogCenterCoreIntegration>
 {
     NSString *_anonymousToken;
     NSMutableArray *_messages;

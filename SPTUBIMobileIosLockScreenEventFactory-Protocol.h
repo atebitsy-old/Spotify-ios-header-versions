@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileIosLockScreen_MainControlsEventFactory, SPTUBIMobileIosLockScreen_PlaybackProgressEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileIosLockScreen_MainControlsEventFactory, SPTUBIMobileIosLockScreen_PlaybackProgressEventFactory;
 
 @protocol SPTUBIMobileIosLockScreenEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIMobileIosLockScreen_MainControlsEventFactory>)mainControlsFactory;
 - (id <SPTUBIMobileIosLockScreen_PlaybackProgressEventFactory>)playbackProgressFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

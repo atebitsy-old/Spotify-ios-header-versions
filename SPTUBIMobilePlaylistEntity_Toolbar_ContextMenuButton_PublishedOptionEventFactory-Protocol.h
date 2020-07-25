@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_PublishedOptionEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitMakePlaylistSecretWithPlaylistToBeMadeSecret:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitMakePlaylistPublicWithPlaylistToBeMadePublic:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

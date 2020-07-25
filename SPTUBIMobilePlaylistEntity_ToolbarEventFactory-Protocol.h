@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePlaylistEntity_Toolbar_AddItemsOptionEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_BackButtonEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_CloseButtonEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButtonEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_HeartButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePlaylistEntity_Toolbar_AddItemsOptionEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_BackButtonEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_CloseButtonEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButtonEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_HeartButtonEventFactory;
 
 @protocol SPTUBIMobilePlaylistEntity_ToolbarEventFactory <NSObject>
 - (id <SPTUBIMobilePlaylistEntity_Toolbar_CloseButtonEventFactory>)closeButtonFactory;
@@ -14,6 +14,6 @@
 - (id <SPTUBIMobilePlaylistEntity_Toolbar_AddItemsOptionEventFactory>)addItemsOptionFactory;
 - (id <SPTUBIMobilePlaylistEntity_Toolbar_HeartButtonEventFactory>)heartButtonFactory;
 - (id <SPTUBIMobilePlaylistEntity_Toolbar_BackButtonEventFactory>)backButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

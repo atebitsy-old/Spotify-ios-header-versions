@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggle_CancelEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiHide;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

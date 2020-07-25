@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileLyrics_FullscreenView_LyricsView_SyncTheseLyricsEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileLyrics_FullscreenView_LyricsView_SyncTheseLyricsEventFactory;
 
 @protocol SPTUBIMobileLyrics_FullscreenView_LyricsViewEventFactory <NSObject>
 - (id <SPTUBIMobileLyrics_FullscreenView_LyricsView_SyncTheseLyricsEventFactory>)syncTheseLyricsFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

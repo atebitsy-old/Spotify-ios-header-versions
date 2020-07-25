@@ -11,8 +11,8 @@
 
 @protocol SPTSearchPlatformService <SPTService>
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSourceProviding> recentsDataSourceProvider;
-- (id <SPTSearch2URLProviding>)makeURLProviderWithParametersProvider:(SPTSearch2RequestParametersProvider *)arg1 drilldownEntityType:(NSString *)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4 onDemandSetsEnabled:(_Bool)arg5;
-- (id <SPTSearch2URLProviding>)makeURLProviderWithParametersProvider:(SPTSearch2RequestParametersProvider *)arg1 drilldownEntityType:(NSString *)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4;
+- (id <SPTSearch2URLProviding>)makeURLProviderWithParametersProvider:(SPTSearch2RequestParametersProvider *)arg1 drilldownEntityType:(NSString *)arg2 limit:(unsigned long long)arg3 onDemandSetsEnabled:(_Bool)arg4;
+- (id <SPTSearch2URLProviding>)makeURLProviderWithParametersProvider:(SPTSearch2RequestParametersProvider *)arg1 drilldownEntityType:(NSString *)arg2 limit:(unsigned long long)arg3;
 - (id <SPTSearch2EmptyStatePropertiesProvider>)makeEmptyStatePropertiesProviderWithOfflineSearchEnabled:(_Bool)arg1;
 - (SPTSearch2RequestParametersProvider *)searchRequestParametersProvider;
 - (SPTSearch2Configuration *)makeConfiguration;

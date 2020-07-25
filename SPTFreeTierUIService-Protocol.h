@@ -6,11 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@class HUBComponentRegistry, NSString, NSURL;
-@protocol SPTFreeTierPersistentCounter;
+@class NSString, NSURL;
+@protocol SPTFreeTierPersistentCounter, SPTFreeTierUIComponentFactory;
 
 @protocol SPTFreeTierUIService <SPTService>
 - (id <SPTFreeTierPersistentCounter>)providePersistentCounterWithIdentifier:(NSString *)arg1 viewURI:(NSURL *)arg2;
-- (HUBComponentRegistry *)provideHubsComponentRegistry;
+- (id <SPTFreeTierUIComponentFactory>)provideComponentFactory;
 @end
 

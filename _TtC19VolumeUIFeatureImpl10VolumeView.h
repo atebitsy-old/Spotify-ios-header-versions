@@ -12,10 +12,12 @@
     // Error parsing type: , name: viewModel
     // Error parsing type: , name: volumeBarHeightConstraint
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: customGestureRecognizers
     // Error parsing type: , name: $__lazy_storage_$_volumeBarBorder
     // Error parsing type: , name: $__lazy_storage_$_volumeBar
     // Error parsing type: , name: $__lazy_storage_$_volumeBarBackgroud
     // Error parsing type: , name: $__lazy_storage_$_volumeIcon
+    // Error parsing type: , name: $__lazy_storage_$_animator
 }
 
 - (void).cxx_destruct;

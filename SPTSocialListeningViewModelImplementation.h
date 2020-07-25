@@ -56,6 +56,7 @@
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTSocialListeningListenTogetherStateManager> listenTogetherStateManager; // @synthesize listenTogetherStateManager=_listenTogetherStateManager;
 @property(readonly, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
+- (_Bool)isNewUIExperienceScannableEnabled;
 - (_Bool)isNewUIExperienceEnabled;
 - (void)presenter:(id)arg1 didSelectSessionMode:(long long)arg2 forJoinURL:(id)arg3;
 - (void)presenterDidConfirmLeaveSession:(id)arg1;
@@ -65,8 +66,6 @@
 - (void)socialListeningModel:(id)arg1 didDeleteSession:(id)arg2;
 - (void)socialListeningModel:(id)arg1 didReceiveError:(id)arg2;
 - (void)socialListeningModel:(id)arg1 updatedSession:(id)arg2 updateEvent:(id)arg3;
-- (void)navigateToQueue;
-- (void)navigateToAddSongs;
 - (void)navigateToUserProfilePage:(id)arg1;
 - (void)leaveOrDeleteSessionFromScreen:(unsigned long long)arg1;
 @property(readonly, nonatomic) NSArray *shareDestinations;
@@ -78,10 +77,10 @@
 @property(readonly, copy, nonatomic) NSString *headerLabelText;
 @property(readonly, nonatomic, getter=isListenTogetherSessionActiveIndicatorVisible) _Bool listenTogetherSessionActiveIndicatorVisible;
 @property(readonly, nonatomic, getter=isParticipantsInviteBarButtonVisible) _Bool participantsInviteBarButtonVisible;
-@property(readonly, nonatomic, getter=isParticipantsPlaceholderVisible) _Bool participantsPlaceholderVisible;
 @property(readonly, nonatomic) unsigned long long bottomBannerType;
 @property(readonly, nonatomic) _Bool seeListenersButtonHidden;
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
+@property(readonly, nonatomic) _Bool scanCodeButtonHidden;
 @property(readonly, nonatomic) _Bool sessionButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
 @property(readonly, nonatomic) _Bool privacyDisclaimerLabelHidden;

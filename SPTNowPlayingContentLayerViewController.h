@@ -14,11 +14,12 @@
 #import "UICollectionViewDataSource-Protocol.h"
 #import "UICollectionViewDelegate-Protocol.h"
 
-@class NSArray, NSMutableSet, NSNotificationCenter, NSString, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentLayerViewModel, SPTNowPlayingLogger, SPTNowPlayingShowsFormatOverlayView, SPTObserverManager, SPTTheme, UICollectionView;
-@protocol SPTNowPlayingTestManager;
+@class NSArray, NSMutableSet, NSNotificationCenter, NSString, NSURL, SPTNowPlayingContainerIdleMonitor, SPTNowPlayingContentLayerViewModel, SPTNowPlayingLogger, SPTNowPlayingShowsFormatOverlayView, SPTObserverManager, SPTTheme, UICollectionView;
+@protocol SPTNowPlayingTestManager, SPTShareDragDelegateFactory, UICollectionViewDragDelegate;
 
 @interface SPTNowPlayingContentLayerViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, SPTNowPlayingContentLayerViewModelDelegate, SPTNowPlayingContentLayerResolverDelegate, SPTNowPlayingContainerIdleMonitorObserver, SPTNowPlayingContentViewController, SPTNowPlayingContainerIdleMonitorReceiving>
 {
+    _Bool _sideBarMode;
     _Bool _isScrolling;
     UICollectionView *_collectionView;
     SPTNowPlayingContentLayerViewModel *_viewModel;
@@ -28,21 +29,28 @@
     NSNotificationCenter *_notificationCenter;
     SPTNowPlayingLogger *_nowPlayingLogger;
     id <SPTNowPlayingTestManager> _nowPlayingTestManager;
+    id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
+    NSURL *_logContextURI;
     SPTNowPlayingShowsFormatOverlayView *_overlayView;
     UIViewController *_contentDecorationViewController;
     NSMutableSet *_unconfiguredIndexPaths;
     NSArray *_contentDecorationFullscreenContentConstraints;
     NSArray *_contentDecorationWindowedContentConstraints;
+    id <UICollectionViewDragDelegate> _dragDelegateHolder;
     struct UIEdgeInsets _windowedContentInsets;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <UICollectionViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
 @property(nonatomic) _Bool isScrolling; // @synthesize isScrolling=_isScrolling;
 @property(copy, nonatomic) NSArray *contentDecorationWindowedContentConstraints; // @synthesize contentDecorationWindowedContentConstraints=_contentDecorationWindowedContentConstraints;
 @property(copy, nonatomic) NSArray *contentDecorationFullscreenContentConstraints; // @synthesize contentDecorationFullscreenContentConstraints=_contentDecorationFullscreenContentConstraints;
 @property(retain, nonatomic) NSMutableSet *unconfiguredIndexPaths; // @synthesize unconfiguredIndexPaths=_unconfiguredIndexPaths;
 @property(retain, nonatomic) UIViewController *contentDecorationViewController; // @synthesize contentDecorationViewController=_contentDecorationViewController;
 @property(retain, nonatomic) SPTNowPlayingShowsFormatOverlayView *overlayView; // @synthesize overlayView=_overlayView;
+@property(readonly, nonatomic) _Bool sideBarMode; // @synthesize sideBarMode=_sideBarMode;
+@property(readonly, nonatomic) NSURL *logContextURI; // @synthesize logContextURI=_logContextURI;
+@property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> nowPlayingTestManager; // @synthesize nowPlayingTestManager=_nowPlayingTestManager;
 @property(readonly, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 @property(readonly, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
@@ -82,6 +90,7 @@
 - (void)reloadCurrentItemIfNeeded;
 - (void)scrollToItemAtIndexPathIfNeeded:(id)arg1 animated:(_Bool)arg2;
 - (void)reloadDataMovingToIndexPath:(id)arg1 relativeMovement:(long long)arg2;
+- (void)reloadData;
 - (id)cellAsCoverArtCell:(id)arg1;
 - (void)updateContentDecorationViewControllerFrame;
 - (id)contentViewOfType:(unsigned long long)arg1;
@@ -92,13 +101,16 @@
 @property(readonly, nonatomic) _Bool shouldTrackIdlePeriodChanges;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (void)setupShareDragFeature;
 - (void)setupCollectionView;
 - (void)updateOverlay;
 - (void)setupOverlay;
 - (void)setupUI;
 - (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)reloadCollectionViewLayoutIfNeededWithSize:(struct CGSize)arg1;
 - (void)reloadCollectionViewLayoutWithSize:(struct CGSize)arg1;
 - (void)reloadCollectionViewLayoutIfNeeded;
+- (void)reloadCollectionViewLayout;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
@@ -106,7 +118,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (void)dealloc;
-- (id)initWithViewModel:(id)arg1 theme:(id)arg2 notificationCenter:(id)arg3 nowPlayingLogger:(id)arg4 testManager:(id)arg5;
+- (id)initWithViewModel:(id)arg1 theme:(id)arg2 notificationCenter:(id)arg3 nowPlayingLogger:(id)arg4 testManager:(id)arg5 shareDragDelegateFactory:(id)arg6 logContextURI:(id)arg7 sideBarMode:(_Bool)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

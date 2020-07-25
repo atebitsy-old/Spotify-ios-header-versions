@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileLyrics_FullscreenView_LyricsView_SyncTheseLyricsEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitNavigateToExternalUriWithDestination:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

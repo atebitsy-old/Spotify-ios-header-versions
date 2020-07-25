@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSAttributedString, NSString, UIColor, UIImage;
+
 @interface INTERNAL_SPTEncorePlaylistHeaderModel : NSObject
 {
     // Error parsing type: , name: name
@@ -31,6 +33,23 @@
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithName:(id)arg1 creatorText:(id)arg2 creatorImage:(id)arg3 isBySpotify:(_Bool)arg4 playlistDescription:(id)arg5 coverArtImage:(id)arg6 coverArtColor:(id)arg7 likes:(long long)arg8 duration:(double)arg9 downloadState:(long long)arg10 isPlaying:(_Bool)arg11 isPlayable:(_Bool)arg12 isDownloadable:(_Bool)arg13 showsShuffleBadge:(_Bool)arg14 isLiked:(_Bool)arg15 minimumHeight:(double)arg16 fullHeight:(double)arg17;
+@property(nonatomic, readonly) double fullHeight; // @synthesize fullHeight;
+@property(nonatomic, readonly) double minimumHeight; // @synthesize minimumHeight;
+@property(nonatomic, readonly) _Bool isLiked; // @synthesize isLiked;
+@property(nonatomic, readonly) _Bool showsShuffleBadge; // @synthesize showsShuffleBadge;
+@property(nonatomic, readonly) _Bool isDownloadable; // @synthesize isDownloadable;
+@property(nonatomic, readonly) _Bool isPlayable; // @synthesize isPlayable;
+@property(nonatomic, readonly) _Bool isPlaying; // @synthesize isPlaying;
+@property(nonatomic, readonly) long long downloadState; // @synthesize downloadState;
+@property(nonatomic, readonly) double duration; // @synthesize duration;
+@property(nonatomic, readonly) long long likes; // @synthesize likes;
+@property(nonatomic, readonly) UIColor *coverArtColor; // @synthesize coverArtColor;
+@property(nonatomic, readonly) UIImage *coverArtImage; // @synthesize coverArtImage;
+@property(nonatomic, readonly) NSAttributedString *playlistDescription; // @synthesize playlistDescription;
+@property(nonatomic, readonly) _Bool isBySpotify; // @synthesize isBySpotify;
+@property(nonatomic, readonly) UIImage *creatorImage; // @synthesize creatorImage;
+@property(nonatomic, readonly) NSAttributedString *creatorText; // @synthesize creatorText;
+@property(nonatomic, readonly) NSString *name;
 
 @end
 

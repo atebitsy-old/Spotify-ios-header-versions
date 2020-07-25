@@ -50,7 +50,6 @@
 - (void)didMoveToSuperview;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
-@property(nonatomic) double topAccessoryViewVerticalOffset; // @synthesize topAccessoryViewVerticalOffset;
 
 @end
 

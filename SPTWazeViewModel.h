@@ -10,8 +10,8 @@
 #import "SPTWazeNavigationStateObserver-Protocol.h"
 #import "SPTWazeTestManagerObserver-Protocol.h"
 
-@class NSString, SPTAutoLockController, SPTWazeNavigationBannerViewModel, SPTWazeTransportManager;
-@protocol SPTAutoLockOverrideToken, SPTCarDetector, SPTExternalIntegrationDebugLog, SPTLinkDispatcher, SPTPartnerTestManager, SPTWazeTestManager, SPTWazeViewModelDelegate;
+@class NSString, SPTWazeNavigationBannerViewModel, SPTWazeTransportManager;
+@protocol SPTAutoLockController, SPTAutoLockOverrideToken, SPTCarDetector, SPTExternalIntegrationDebugLog, SPTLinkDispatcher, SPTPartnerTestManager, SPTWazeTestManager, SPTWazeViewModelDelegate;
 
 @interface SPTWazeViewModel : NSObject <SPTCarDetectionStateObserver, SPTWazeNavigationStateObserver, SPTWazeTestManagerObserver>
 {
@@ -25,14 +25,14 @@
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTExternalIntegrationDebugLog> _debugLog;
     id <SPTWazeTestManager> _testManager;
-    SPTAutoLockController *_autoLockController;
+    id <SPTAutoLockController> _autoLockController;
     id <SPTAutoLockOverrideToken> _autoLockToken;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTAutoLockOverrideToken> autoLockToken; // @synthesize autoLockToken=_autoLockToken;
 @property(nonatomic) _Bool shouldShowBanner; // @synthesize shouldShowBanner=_shouldShowBanner;
-@property(readonly, nonatomic) SPTAutoLockController *autoLockController; // @synthesize autoLockController=_autoLockController;
+@property(readonly, nonatomic) id <SPTAutoLockController> autoLockController; // @synthesize autoLockController=_autoLockController;
 @property(readonly, nonatomic) id <SPTWazeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTExternalIntegrationDebugLog> debugLog; // @synthesize debugLog=_debugLog;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;

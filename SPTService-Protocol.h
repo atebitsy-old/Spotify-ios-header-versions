@@ -12,6 +12,7 @@
 @protocol SPTService <NSObject>
 + (NSString *)serviceIdentifier;
 - (void)configureWithServices:(id <SPTServiceProvider>)arg1;
+- (id)init;
 
 @optional
 - (void)idleStateWasReached;

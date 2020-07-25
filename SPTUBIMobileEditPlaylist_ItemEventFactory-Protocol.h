@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileEditPlaylist_Item_RemoveButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileEditPlaylist_Item_RemoveButtonEventFactory;
 
 @protocol SPTUBIMobileEditPlaylist_ItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)dragSort;
 - (id <SPTUBIMobileEditPlaylist_Item_RemoveButtonEventFactory>)removeButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

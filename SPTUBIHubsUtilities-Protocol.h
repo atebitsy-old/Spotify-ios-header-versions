@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class HUBComponentEvent, NSArray, NSDictionary;
-@protocol HUBComponentModel, SPTUBIEventFactory, SPTUBIEventFactoryInteractionLocation, SPTUBIEventFactoryLocation;
+@protocol HUBComponentModel, SPTUBIEventFactory, SPTUBIEventLocation, SPTUBIInteractionEventLocation;
 
 @protocol SPTUBIHubsUtilities <NSObject>
-- (NSDictionary *)dictionaryRepresentationOfLocation:(id <SPTUBIEventFactoryLocation>)arg1;
+- (NSDictionary *)dictionaryRepresentationOfLocation:(id <SPTUBIEventLocation>)arg1;
 - (NSArray *)locationsFromComponent:(id <HUBComponentModel>)arg1;
-- (id <SPTUBIEventFactoryInteractionLocation>)interactionLocationFromEvent:(HUBComponentEvent *)arg1;
+- (id <SPTUBIInteractionEventLocation>)interactionLocationFromEvent:(HUBComponentEvent *)arg1;
 - (id <SPTUBIEventFactory>)provideEventFactory;
 @end
 

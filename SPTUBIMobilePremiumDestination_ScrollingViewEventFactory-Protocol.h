@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobilePremiumDestination_ScrollingView_HubsComponentEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobilePremiumDestination_ScrollingView_HubsComponentEventFactory;
 
 @protocol SPTUBIMobilePremiumDestination_ScrollingViewEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobilePremiumDestination_ScrollingView_HubsComponentEventFactory>)hubsComponentFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

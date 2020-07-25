@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileHiddenContent_UndoSnackbar_UndoButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileHiddenContent_UndoSnackbar_UndoButtonEventFactory;
 
 @protocol SPTUBIMobileHiddenContent_UndoSnackbarEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileHiddenContent_UndoSnackbar_UndoButtonEventFactory>)undoButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

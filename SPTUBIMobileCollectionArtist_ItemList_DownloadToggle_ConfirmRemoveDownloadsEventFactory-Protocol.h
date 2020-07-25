@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileCollectionArtist_ItemList_DownloadToggle_ConfirmRemoveDownloadsEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitRemoveDownloadWithItemToRemoveFromDownloads:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

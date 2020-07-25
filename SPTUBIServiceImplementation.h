@@ -8,7 +8,7 @@
 
 #import "SPTUBIService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTObserverManager, SPTUBIPageInstanceIdentifierProviderImplementation, SPTUBISessionServiceResponderImplementation;
+@class NSString, SPTAllocationContext, SPTObserverManager, SPTUBIPageInstanceIdentifierProviderImplementation, SPTUBISessionServiceResponderImplementation, UBILogger;
 @protocol SPTContainerService, SPTDebugService, SPTEventSenderService;
 
 @interface SPTUBIServiceImplementation : NSObject <SPTUBIService>
@@ -16,6 +16,7 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTContainerService> _containerService;
     id <SPTDebugService> _debugService;
+    UBILogger *_ubiLogger;
     SPTUBISessionServiceResponderImplementation *_sessionServiceResponder;
     SPTUBIPageInstanceIdentifierProviderImplementation *_pageInstanceIdProvider;
     SPTObserverManager *_observerManager;
@@ -26,6 +27,7 @@
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
 @property(retain, nonatomic) SPTUBIPageInstanceIdentifierProviderImplementation *pageInstanceIdProvider; // @synthesize pageInstanceIdProvider=_pageInstanceIdProvider;
 @property(retain, nonatomic) SPTUBISessionServiceResponderImplementation *sessionServiceResponder; // @synthesize sessionServiceResponder=_sessionServiceResponder;
+@property(retain, nonatomic) UBILogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(nonatomic) __weak id <SPTDebugService> debugService; // @synthesize debugService=_debugService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;

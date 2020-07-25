@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePlaylistEntity_Header_CoverArtEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiHide;
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

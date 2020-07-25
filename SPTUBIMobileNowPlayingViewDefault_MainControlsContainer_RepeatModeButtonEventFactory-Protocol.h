@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileNowPlayingViewDefault_MainControlsContainer_RepeatModeButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitRepeatDisable;
 - (id <SPTUBIInteractionEvent>)hitRepeatOneEnable;
 - (id <SPTUBIInteractionEvent>)hitRepeatEnable;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

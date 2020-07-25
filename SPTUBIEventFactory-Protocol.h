@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryInteractionLocation, SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEventFactory, SPTUBIInteractionEventLocation;
 
 @protocol SPTUBIEventFactory <NSObject>
-- (id <SPTUBIImpressionEvent>)impressionFromLocation:(id <SPTUBIEventFactoryLocation>)arg1;
-- (id <SPTUBIInteractionEventFactory>)interactionFactoryFromLocation:(id <SPTUBIEventFactoryInteractionLocation>)arg1;
+- (id <SPTUBIImpressionEvent>)impressionFromLocation:(id <SPTUBIEventLocation>)arg1;
+- (id <SPTUBIInteractionEventFactory>)interactionFactoryFromLocation:(id <SPTUBIInteractionEventLocation>)arg1;
 @end
 

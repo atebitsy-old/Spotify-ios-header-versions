@@ -6,14 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSString;
+@class NSArray;
+@protocol SPTUBIEventLocation;
 
 @protocol SPTUBIImpressionEvent <NSObject>
-@property(nonatomic, readonly) NSString *specificationVersion;
-@property(nonatomic, readonly) NSString *generatorCommitHash;
-@property(nonatomic, readonly) NSString *specificationCommitHash;
 @property(nonatomic, readonly) NSArray *errors;
-@property(nonatomic, readonly) NSArray *components;
-@property(nonatomic, readonly) NSString *applicationId;
+@property(nonatomic, readonly) id <SPTUBIEventLocation> location;
 @end
 

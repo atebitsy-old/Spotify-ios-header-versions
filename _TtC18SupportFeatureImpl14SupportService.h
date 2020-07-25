@@ -11,6 +11,8 @@
     // Error parsing type: , name: supportContainerService
     // Error parsing type: , name: remoteConfigurationService
     // Error parsing type: , name: settingsService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: hubsService
     // Error parsing type: , name: pageRegistrationToken
     // Error parsing type: , name: remoteConfigManager
 }
@@ -19,7 +21,7 @@
 - (void).cxx_destruct;
 - (id)init;
 - (id)provideRemoteConfigManager;
-- (id)provideSupportViewController;
+- (id)provideSupportHomeViewController;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

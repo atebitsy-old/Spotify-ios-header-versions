@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePodcastSpeedControl_PlaybackSpeedXEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitSetPlaybackSpeedWithCurrentlyPlayedItem:(NSURL *)arg1 playbackSpeed:(unsigned long long)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

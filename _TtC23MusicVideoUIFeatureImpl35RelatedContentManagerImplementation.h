@@ -4,17 +4,20 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <swiftCore/_TtCs12_SwiftObject.h>
+#import <objc/NSObject.h>
 
-@interface _TtC23MusicVideoUIFeatureImpl35RelatedContentManagerImplementation : _TtCs12_SwiftObject
+@interface _TtC23MusicVideoUIFeatureImpl35RelatedContentManagerImplementation : NSObject
 {
-    // Error parsing type: , name: relatedContentObservable
-    // Error parsing type: , name: player
-    // Error parsing type: , name: dataLoader
-    // Error parsing type: , name: currentTrackUri
-    // Error parsing type: , name: $__lazy_storage_$_dataLoaderDelegate
-    // Error parsing type: , name: $__lazy_storage_$_playerObserver
+    // Error parsing type: , name: observerManager
+    // Error parsing type: , name: playerObserver
+    // Error parsing type: , name: relatedContentDataLoader
+    // Error parsing type: , name: currentEpisodeUri
+    // Error parsing type: , name: relatedContent
 }
+
+- (void).cxx_destruct;
+- (id)init;
+- (void)dealloc;
 
 @end
 

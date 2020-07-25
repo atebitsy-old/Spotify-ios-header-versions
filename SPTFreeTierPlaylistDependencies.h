@@ -6,14 +6,14 @@
 
 #import <objc/NSObject.h>
 
-@class NSURL, SPTFreeTierPlaylistCellProviderDelegateWrapper, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistViewModelImplementation;
-@protocol SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistConfigurationContext, SPTFreeTierPlaylistConfigurationInternal, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration;
+@class NSURL, SPTFreeTierPlaylistCellProviderDelegateWrapper, SPTFreeTierPlaylistGLUETheme, SPTFreeTierPlaylistViewModelImplementation;
+@protocol SPTCollectionPlatformConfiguration, SPTFreeTierPlaylistConfigurationContext, SPTFreeTierPlaylistConfigurationInternal, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration;
 
 @interface SPTFreeTierPlaylistDependencies : NSObject
 {
     NSURL *_URL;
     SPTFreeTierPlaylistGLUETheme *_theme;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
     id <SPTFreeTierPlaylistTestManager> _testManager;
     id <SPTFreeTierPlaylistViewModelConfiguration> _viewModelConfiguration;
     id <SPTCollectionPlatformConfiguration> _collectionConfiguration;
@@ -35,7 +35,7 @@
 @property(retain, nonatomic) id <SPTCollectionPlatformConfiguration> collectionConfiguration; // @synthesize collectionConfiguration=_collectionConfiguration;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistViewModelConfiguration> viewModelConfiguration; // @synthesize viewModelConfiguration=_viewModelConfiguration;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
-@property(retain, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTFreeTierPlaylistGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 

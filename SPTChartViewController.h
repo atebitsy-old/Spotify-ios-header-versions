@@ -10,6 +10,7 @@
 #import "SPTBarButtonItemManagerObserver-Protocol.h"
 #import "SPTChartEntityDataSourceDelegate-Protocol.h"
 #import "SPTChartViewModelPlayerDelegate-Protocol.h"
+#import "SPTEncoreTrackRowChartDelegate-Protocol.h"
 #import "SPTExplicitContentEnabledStateObserver-Protocol.h"
 #import "SPTFormatListPlatformManagerOfflineDelegate-Protocol.h"
 #import "SPTImageLoaderDelegate-Protocol.h"
@@ -22,10 +23,10 @@
 #import "UITableViewDataSource-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTChartLogger, SPTChartMetadataView, SPTChartViewModel, SPTEntityTableHeaderView, SPTInfoView, SPTProgressView, SPTTableView, SPTTableViewOfflineSwitchCell;
-@protocol GLUETheme, SPContextMenuFeature, SPTBarButtonItemManager, SPTChartEntityDataSource, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuPresenter, SPTExplicitContentAccessManager, SPTFormatListPlatformManager, SPTImageLoader, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPageContainer, SPTProductState, SPTShelves;
+@class GLUEButton, GLUEEntityRowStyle, NSString, NSURL, SPTChartFeatureProperties, SPTChartLogger, SPTChartMetadataView, SPTChartViewModel, SPTEntityTableHeaderView, SPTInfoView, SPTProgressView, SPTTableView, SPTTableViewOfflineSwitchCell;
+@protocol GLUETheme, SPContextMenuFeature, SPTBarButtonItemManager, SPTChartEntityDataSource, SPTCollectionPlatformTestManager, SPTContextMenuOptions, SPTContextMenuPresenter, SPTEncoreTrackRowChartFactory, SPTExplicitContentAccessManager, SPTFormatListPlatformManager, SPTImageLoader, SPTModalPresentationController, SPTNetworkConnectivityController, SPTPageContainer, SPTProductState, SPTShelves;
 
-@interface SPTChartViewController : UIViewController <SPContentInsetViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTChartEntityDataSourceDelegate, SPTChartViewModelPlayerDelegate, SPViewController, SPTProductStateObserver, SPTOfflineSwitchDelegate, SPTFormatListPlatformManagerOfflineDelegate, SPTBarButtonItemManagerObserver, SPTExplicitContentEnabledStateObserver, SPTPageController>
+@interface SPTChartViewController : UIViewController <SPContentInsetViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate, SPTImageLoaderDelegate, SPTNavigationControllerNavigationBarState, SPTChartEntityDataSourceDelegate, SPTChartViewModelPlayerDelegate, SPViewController, SPTProductStateObserver, SPTOfflineSwitchDelegate, SPTFormatListPlatformManagerOfflineDelegate, SPTBarButtonItemManagerObserver, SPTExplicitContentEnabledStateObserver, SPTEncoreTrackRowChartDelegate, SPTPageController>
 {
     SPTChartMetadataView *_metadataView;
     NSURL *_URL;
@@ -52,9 +53,15 @@
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     id <GLUETheme> _theme;
     GLUEEntityRowStyle *_trackRowStyle;
+    id <SPTEncoreTrackRowChartFactory> _trackRowFactory;
+    SPTChartFeatureProperties *_properties;
 }
 
++ (Class)reusableClassForEncoreTrackRowEnabled:(_Bool)arg1;
++ (id)reusableIdentifierForEncoreTrackRowEnabled:(_Bool)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTChartFeatureProperties *properties; // @synthesize properties=_properties;
+@property(readonly, nonatomic) id <SPTEncoreTrackRowChartFactory> trackRowFactory; // @synthesize trackRowFactory=_trackRowFactory;
 @property(readonly, nonatomic) GLUEEntityRowStyle *trackRowStyle; // @synthesize trackRowStyle=_trackRowStyle;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -80,6 +87,12 @@
 @property(nonatomic) __weak id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(retain, nonatomic) SPTChartMetadataView *metadataView; // @synthesize metadataView=_metadataView;
+- (void)unlikeWithSender:(id)arg1;
+- (void)unhideWithSender:(id)arg1;
+- (void)unbanWithSender:(id)arg1;
+- (void)contextMenuTappedWithSender:(id)arg1;
+- (id)indexPathForCell:(id)arg1;
+- (id)indexPathOfSubview:(id)arg1;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;
 @property(readonly, nonatomic, getter=spt_pageIdentifier) NSString *pageIdentifier;
 - (void)explicitContentEnabledStateDidChange:(_Bool)arg1;
@@ -106,8 +119,12 @@
 - (id)tableView:(id)arg1 willSelectRowAtIndexPath:(id)arg2;
 - (void)setupTrailingAccessoryForCell:(id)arg1 indexPath:(id)arg2;
 - (void)configureMultipleAccessoriesViewForCell:(id)arg1 status:(long long)arg2 accessoryLabelType:(long long)arg3;
+- (void)configureSwipeGesturesOnCell:(id)arg1 viewModel:(id)arg2 atIndexPath:(id)arg3;
+- (id)encoreModelForTrackViewModel:(id)arg1 isPressed:(_Bool)arg2 atIndexPath:(id)arg3;
+- (void)configureEncoreCell:(id)arg1 withViewModel:(id)arg2 atIndexPath:(id)arg3;
 - (id)contentViewForCell:(id)arg1;
 - (void)configureTrackCell:(id)arg1 atIndexPath:(id)arg2 withModel:(id)arg3;
+- (void)configureCell:(id)arg1 atIndexPath:(id)arg2;
 - (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
 - (long long)tableView:(id)arg1 numberOfRowsInSection:(long long)arg2;
 - (long long)numberOfSectionsInTableView:(id)arg1;
@@ -129,7 +146,7 @@
 - (void)setupView;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithURL:(id)arg1 productState:(id)arg2 logCenter:(id)arg3 viewModel:(id)arg4 contextMenuFeature:(id)arg5 entityDataSource:(id)arg6 shelves:(id)arg7 imageLoader:(id)arg8 barButtonItemManager:(id)arg9 networkConnectivityController:(id)arg10 formatListPlatformManager:(id)arg11 collectionTestManager:(id)arg12 modalPresentationController:(id)arg13 explicitContentAccessManager:(id)arg14;
+- (id)initWithURL:(id)arg1 productState:(id)arg2 logCenter:(id)arg3 viewModel:(id)arg4 contextMenuFeature:(id)arg5 entityDataSource:(id)arg6 shelves:(id)arg7 imageLoader:(id)arg8 barButtonItemManager:(id)arg9 networkConnectivityController:(id)arg10 formatListPlatformManager:(id)arg11 collectionTestManager:(id)arg12 modalPresentationController:(id)arg13 explicitContentAccessManager:(id)arg14 trackRowFactory:(id)arg15 properties:(id)arg16;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

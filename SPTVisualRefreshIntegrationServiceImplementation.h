@@ -9,7 +9,7 @@
 #import "SPTVisualRefreshIntegrationService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTEncoreIntegrationService, SPTGLUEService, SPTNetworkService, SPTURIDispatchService, SPTVISREFFlagsService;
+@protocol SPTEncoreIntegrationService, SPTGLUEService, SPTNetworkService, SPTSortingFilteringService, SPTURIDispatchService, SPTVISREFFlagsService;
 
 @interface SPTVisualRefreshIntegrationServiceImplementation : NSObject <SPTVisualRefreshIntegrationService>
 {
@@ -18,10 +18,12 @@
     id <SPTVISREFFlagsService> _visualRefreshService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTEncoreIntegrationService> _encoreIntegrationService;
+    id <SPTSortingFilteringService> _sortingFilteringService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTSortingFilteringService> sortingFilteringService; // @synthesize sortingFilteringService=_sortingFilteringService;
 @property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTVISREFFlagsService> visualRefreshService; // @synthesize visualRefreshService=_visualRefreshService;

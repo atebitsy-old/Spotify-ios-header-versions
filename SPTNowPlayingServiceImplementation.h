@@ -174,7 +174,6 @@
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (id)provideDownloadButtonViewControllerIfNeeded;
-- (id)provideLyricsButtonViewControllerIfNeeded;
 - (id)provideCloseButtonViewController;
 - (id)provideContextMenuButtonViewController;
 - (id)provideGaiaDevicesAvailableViewController;

@@ -10,13 +10,14 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSString, SPTAccessoryManagerFeatureProperties, SPTPlayerState;
-@protocol SPTEventSender, SPTPlayer, SPTUBILogger;
+@protocol SPTEventSender, SPTGaiaConnectAPI, SPTPlayer, SPTUBILogger;
 
 @interface SPTAccessoryActionLoggerImplementation : NSObject <SPTPlayerObserver, SPTAccessoryActionLogger>
 {
     id <SPTUBILogger> _ubiLogger;
     id <SPTEventSender> _eventSender;
     id <SPTPlayer> _player;
+    id <SPTGaiaConnectAPI> _connectManager;
     SPTAccessoryManagerFeatureProperties *_properties;
     SPTPlayerState *_playerState;
 }
@@ -24,10 +25,12 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlayerState *playerState; // @synthesize playerState=_playerState;
 @property(readonly, nonatomic) SPTAccessoryManagerFeatureProperties *properties; // @synthesize properties=_properties;
+@property(readonly, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
-- (id)EARemoteInteractionFromAccessory:(id)arg1 action:(id)arg2 interactionId:(id)arg3;
+- (_Bool)isPresent:(id)arg1;
+- (id)EARemoteInteractionFromAccessory:(id)arg1 action:(id)arg2 interactionId:(id)arg3 remoteDeviceId:(id)arg4;
 - (void)sendRemoteInteractionWithInteractionId:(id)arg1 action:(id)arg2 fromAccessory:(id)arg3;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (id)logSearchWithSearchQuery:(id)arg1 fromAccessory:(id)arg2;
@@ -50,7 +53,7 @@
 - (id)logResumeWithCurrentItemToBeResumedFromAccessory:(id)arg1;
 - (id)logPlayWithItemToBePlayed:(id)arg1 withInteractionId:(id)arg2 fromAccessory:(id)arg3;
 - (void)dealloc;
-- (id)initWithUBILogger:(id)arg1 eventSender:(id)arg2 player:(id)arg3 properties:(id)arg4;
+- (id)initWithUBILogger:(id)arg1 eventSender:(id)arg2 player:(id)arg3 properties:(id)arg4 connectManager:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

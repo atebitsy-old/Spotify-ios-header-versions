@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileExplicitcontent_ExplicitDialogWhenLocked_CancelEventFactory, SPTUBIMobileExplicitcontent_ExplicitDialogWhenLocked_CloseButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileExplicitcontent_ExplicitDialogWhenLocked_CancelEventFactory, SPTUBIMobileExplicitcontent_ExplicitDialogWhenLocked_CloseButtonEventFactory;
 
 @protocol SPTUBIMobileExplicitcontent_ExplicitDialogWhenLockedEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileExplicitcontent_ExplicitDialogWhenLocked_CancelEventFactory>)cancelFactory;
 - (id <SPTUBIMobileExplicitcontent_ExplicitDialogWhenLocked_CloseButtonEventFactory>)closeButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

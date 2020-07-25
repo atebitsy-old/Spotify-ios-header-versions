@@ -19,7 +19,6 @@
 
 @interface SPTSearchPlatformEmptyStateContext : NSObject <SPTSearchRecentsDataSourceDelegate, SPTPlayerObserver, SPTSearch2ConnectivityMonitorObserver, SPTExplicitContentEnabledStateObserver, _TtP22AgeVerificationFeature43SPTCanPlayAgeRestrictedContentStateObserver_, SPTSearchOnDemandPermissionMonitorObserver, SPTSearchPlatformContext>
 {
-    _Bool _newRecentsRowEnabled;
     id <SPTSearchPlatformContextDelegate> _delegate;
     NSString *_query;
     unsigned long long _state;
@@ -41,7 +40,6 @@
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) _Bool newRecentsRowEnabled; // @synthesize newRecentsRowEnabled=_newRecentsRowEnabled;
 @property(copy, nonatomic) NSDate *recentsDatasetSetTimestamp; // @synthesize recentsDatasetSetTimestamp=_recentsDatasetSetTimestamp;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
@@ -75,7 +73,7 @@
 - (void)reload;
 - (void)setState:(unsigned long long)arg1;
 - (void)setViewModel:(id)arg1;
-- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 onDemandPermissionMonitor:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10 featureID:(id)arg11 pageURI:(id)arg12 referrerIdentifier:(id)arg13 newRecentsRowEnabled:(_Bool)arg14;
+- (id)initWithViewModelBuilderFactory:(id)arg1 emptyStatePropertiesProvider:(id)arg2 recentsDataSource:(id)arg3 player:(id)arg4 recentsCommandName:(id)arg5 connectivityMonitor:(id)arg6 onDemandPermissionMonitor:(id)arg7 explicitContentAccessManager:(id)arg8 ageVerificationProvider:(id)arg9 ubiLocationSerializer:(id)arg10 featureID:(id)arg11 pageURI:(id)arg12 referrerIdentifier:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

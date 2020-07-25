@@ -6,9 +6,11 @@
 
 #import "_TtC22AllBoardingFeatureImpl18SendViewController.h"
 
+#import "SPTPageController-Protocol.h"
+
 @class NSString, NSURL;
 
-@interface _TtC22AllBoardingFeatureImpl18SendViewController (AllBoardingFeatureImpl)
+@interface _TtC22AllBoardingFeatureImpl18SendViewController (AllBoardingFeatureImpl) <SPTPageController>
 - (id)spt_pageURI;
 - (id)spt_pageIdentifier;
 

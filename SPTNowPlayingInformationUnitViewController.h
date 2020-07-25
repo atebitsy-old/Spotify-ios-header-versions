@@ -8,12 +8,11 @@
 
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 #import "SPTNowPlayingInformationUnitViewModelDelegate-Protocol.h"
-#import "SPTNowPlayingLyricsButtonViewControllerDelegate-Protocol.h"
 
-@class NSMutableArray, NSString, SPTNowPlayingDownloadButtonViewController, SPTNowPlayingHeartButtonViewController, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingLyricsButtonViewController, SPTNowPlayingMarqueeLabel, SPTTheme;
+@class NSMutableArray, NSString, SPTNowPlayingDownloadButtonViewController, SPTNowPlayingHeartButtonViewController, SPTNowPlayingInformationUnitViewModelImplementation, SPTNowPlayingMarqueeLabel, SPTTheme;
 @protocol SPTNowPlayingContainingViewController, _TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_;
 
-@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingLyricsButtonViewControllerDelegate, SPTNowPlayingContainedViewController>
+@interface SPTNowPlayingInformationUnitViewController : UIViewController <SPTNowPlayingInformationUnitViewModelDelegate, SPTNowPlayingContainedViewController>
 {
     SPTTheme *_theme;
     long long _context;
@@ -22,7 +21,6 @@
     SPTNowPlayingInformationUnitViewModelImplementation *_viewModel;
     NSMutableArray *_layoutConstraints;
     id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> _onboardingController;
-    SPTNowPlayingLyricsButtonViewController *_lyricsButtonViewController;
     SPTNowPlayingDownloadButtonViewController *_downloadButtonViewController;
     SPTNowPlayingHeartButtonViewController *_heartButtonViewController;
 }
@@ -30,7 +28,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNowPlayingHeartButtonViewController *heartButtonViewController; // @synthesize heartButtonViewController=_heartButtonViewController;
 @property(readonly, nonatomic) SPTNowPlayingDownloadButtonViewController *downloadButtonViewController; // @synthesize downloadButtonViewController=_downloadButtonViewController;
-@property(readonly, nonatomic) SPTNowPlayingLyricsButtonViewController *lyricsButtonViewController; // @synthesize lyricsButtonViewController=_lyricsButtonViewController;
 @property(retain, nonatomic) id <_TtP24ResponsiveShuffleFeature40SPTResponsiveShuffleOnboardingController_> onboardingController; // @synthesize onboardingController=_onboardingController;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(readonly, nonatomic) SPTNowPlayingInformationUnitViewModelImplementation *viewModel; // @synthesize viewModel=_viewModel;
@@ -38,14 +35,12 @@
 @property(retain, nonatomic) SPTNowPlayingMarqueeLabel *titleLabel; // @synthesize titleLabel=_titleLabel;
 @property(readonly, nonatomic) long long context; // @synthesize context=_context;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
-- (void)didUpdateLyricsButtonVisibility:(_Bool)arg1;
 - (void)updateLabels;
 - (void)viewModelDidUpdate:(id)arg1 trackDidChange:(_Bool)arg2;
 - (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
 - (void)setupDownloadButtonConstraintsIfNeeded;
-- (void)setupLyricsViewConstraints;
 - (void)setupAnimatedLikeButtonConstraintsIfNeeded;
 - (void)setupDefaultConstraints;
 - (void)setupConstraints;
@@ -56,14 +51,13 @@
 - (void)titleLabelTapped:(id)arg1;
 - (void)setupDownloadButtonIfNeeded;
 - (void)setupAnimatedLikeButtonIfNeeded;
-- (void)setupLyricsViewIfNeeded;
 - (void)setupSubtitleLabel;
 - (void)setupTitleLabel;
 - (void)setupUI;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;
-- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 responsiveShuffleOnboardingController:(id)arg4 lyricsButtonViewController:(id)arg5 downloadButtonViewController:(id)arg6 heartButtonViewController:(id)arg7;
+- (id)initWithTheme:(id)arg1 context:(long long)arg2 viewModel:(id)arg3 responsiveShuffleOnboardingController:(id)arg4 downloadButtonViewController:(id)arg5 heartButtonViewController:(id)arg6;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;

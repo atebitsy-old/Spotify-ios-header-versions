@@ -9,7 +9,7 @@
 #import "SPTMarqueeobjcService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTMarqueeController;
-@protocol SPTAdsBaseService, SPTContainerService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
+@protocol SPTAdsBaseService, SPTContainerService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTMarqueeTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
 
 @interface SPTMarqueeobjcServiceImplementation : NSObject <SPTMarqueeobjcService>
 {
@@ -23,12 +23,16 @@
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTInAppMessageService> _inappmessageService;
     id <SPTSessionService> _clientSessionService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTMarqueeController *_marqueeController;
+    id <SPTMarqueeTestManager> _marqueeTestManager;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTMarqueeTestManager> marqueeTestManager; // @synthesize marqueeTestManager=_marqueeTestManager;
 @property(retain, nonatomic) SPTMarqueeController *marqueeController; // @synthesize marqueeController=_marqueeController;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 @property(nonatomic) __weak id <SPTInAppMessageService> inappmessageService; // @synthesize inappmessageService=_inappmessageService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
@@ -39,7 +43,7 @@
 @property(nonatomic) __weak id <SPTWebViewFeature> webviewService; // @synthesize webviewService=_webviewService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
-- (id)loadMarqueeController;
+- (void)loadMarqueeController;
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

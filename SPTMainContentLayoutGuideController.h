@@ -10,7 +10,8 @@
 #import "SPTMenuControllerObserver-Protocol.h"
 #import "SPTMetaViewControllerObserver-Protocol.h"
 
-@class MessageBarController, NSArray, NSString, SPBarViewController, SPTMenuController, UILayoutGuide, UIView;
+@class MessageBarController, NSArray, NSString, SPBarViewController, UILayoutGuide, UIView;
+@protocol SPTMenuController;
 
 @interface SPTMainContentLayoutGuideController : NSObject <MessageBarControllerObserver, SPTMenuControllerObserver, SPTMetaViewControllerObserver>
 {
@@ -18,7 +19,7 @@
     UIView *_rootView;
     MessageBarController *_messageBarController;
     NSArray *_messageBarConstraints;
-    SPTMenuController *_menuController;
+    id <SPTMenuController> _menuController;
     NSArray *_menuContentHeaderConstraints;
     SPBarViewController *_barViewController;
     NSArray *_barViewControllerConstraints;
@@ -30,7 +31,7 @@
 @property(copy, nonatomic) NSArray *barViewControllerConstraints; // @synthesize barViewControllerConstraints=_barViewControllerConstraints;
 @property(nonatomic) __weak SPBarViewController *barViewController; // @synthesize barViewController=_barViewController;
 @property(copy, nonatomic) NSArray *menuContentHeaderConstraints; // @synthesize menuContentHeaderConstraints=_menuContentHeaderConstraints;
-@property(nonatomic) __weak SPTMenuController *menuController; // @synthesize menuController=_menuController;
+@property(nonatomic) __weak id <SPTMenuController> menuController; // @synthesize menuController=_menuController;
 @property(copy, nonatomic) NSArray *messageBarConstraints; // @synthesize messageBarConstraints=_messageBarConstraints;
 @property(readonly, nonatomic) MessageBarController *messageBarController; // @synthesize messageBarController=_messageBarController;
 @property(readonly, nonatomic) UIView *rootView; // @synthesize rootView=_rootView;

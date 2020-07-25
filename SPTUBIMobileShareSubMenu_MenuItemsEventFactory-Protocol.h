@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileShareSubMenu_MenuItems_ShareDestinationEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileShareSubMenu_MenuItems_ShareDestinationEventFactory;
 
 @protocol SPTUBIMobileShareSubMenu_MenuItemsEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileShareSubMenu_MenuItems_ShareDestinationEventFactory>)shareDestinationFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -85,7 +85,7 @@
 - (id)connectivityMonitor;
 - (id)ageVerificationProvider;
 - (id)explicitContentAccessManager;
-- (id)emptyStateContextWithPlayer:(id)arg1 viewModelBuilderFactory:(id)arg2 recentsDataSource:(id)arg3 emptyStatePropertiesProvider:(id)arg4 recentsCommandName:(id)arg5 ubiLocationSerializer:(id)arg6 featureID:(id)arg7 pageURI:(id)arg8 referrerIdentifier:(id)arg9 newRecentsRowEnabled:(_Bool)arg10;
+- (id)emptyStateContextWithPlayer:(id)arg1 viewModelBuilderFactory:(id)arg2 recentsDataSource:(id)arg3 emptyStatePropertiesProvider:(id)arg4 recentsCommandName:(id)arg5 ubiLocationSerializer:(id)arg6 featureID:(id)arg7 pageURI:(id)arg8 referrerIdentifier:(id)arg9;
 - (id)makeViewModelProviderWithConfiguration:(id)arg1;
 - (id)makeDefaultSearchRequestParameters;
 - (id)makePlayerProviderWithPlayerFeature:(id)arg1;
@@ -96,8 +96,8 @@
 - (id)createSPTPlayerWithReferrerIdentifier:(id)arg1;
 @property(readonly, nonatomic) SPTSearch2RequestParametersProvider *searchRequestParametersProvider; // @synthesize searchRequestParametersProvider=_searchRequestParametersProvider;
 @property(readonly, nonatomic) id <SPTSearchRecentsDataSourceProviding> recentsDataSourceProvider; // @synthesize recentsDataSourceProvider=_recentsDataSourceProvider;
-- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4 onDemandSetsEnabled:(_Bool)arg5;
-- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 endpointVersion:(unsigned long long)arg4;
+- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3 onDemandSetsEnabled:(_Bool)arg4;
+- (id)makeURLProviderWithParametersProvider:(id)arg1 drilldownEntityType:(id)arg2 limit:(unsigned long long)arg3;
 - (id)makeEmptyStatePropertiesProviderWithOfflineSearchEnabled:(_Bool)arg1;
 - (id)makeConfiguration;
 - (id)makeRootViewControllerWithConfiguration:(id)arg1;

@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHiddenContent_Tabs_TabItemEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHiddenContent_Tabs_TabItemEventFactory;
 
 @protocol SPTUBIMobileHiddenContent_TabsEventFactory <NSObject>
 - (id <SPTUBIMobileHiddenContent_Tabs_TabItemEventFactory>)tabItemFactoryWithIdentifier:(NSString *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

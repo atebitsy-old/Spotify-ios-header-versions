@@ -32,6 +32,7 @@
     _Bool _disallowRemovingFromContextTracks;
     _Bool _disallowSetQueue;
     _Bool _inhibitUpdates;
+    _Bool _shouldShowClearButton;
     id <SPTQueueViewModelDelegate> _delegate;
     NSObject<OS_dispatch_source> *_timer;
     NSObject<OS_dispatch_queue> *_queueFetchQueue;
@@ -45,6 +46,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool shouldShowClearButton; // @synthesize shouldShowClearButton=_shouldShowClearButton;
 @property(readonly, nonatomic) id <SPTQueuePlaybackRestrictionHandler> playbackRestrictionHandler; // @synthesize playbackRestrictionHandler=_playbackRestrictionHandler;
 @property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
@@ -77,11 +79,13 @@
 - (void)disableUpdates;
 - (void)enableUpdates;
 - (id)addFutureTracksToUpNext:(id)arg1;
+- (id)removeAllTracksForSection:(unsigned long long)arg1;
 - (id)removeTracks:(id)arg1;
 - (id)moveTrackAtIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2 toIndex:(unsigned long long)arg3 toSection:(unsigned long long)arg4;
+- (_Bool)shouldShowClearButtonForSection:(unsigned long long)arg1;
 - (id)headerTitleForSection:(unsigned long long)arg1;
 - (void)dealloc;
-- (id)initWithPlayer:(id)arg1 productState:(id)arg2 playbackDelegateRegistry:(id)arg3 entityDecorationController:(id)arg4 logCenter:(id)arg5 addToUpNextBehavior:(unsigned long long)arg6 explicitContentAccessManager:(id)arg7 ageVerificationProvider:(id)arg8 playbackRestrictionHandler:(id)arg9;
+- (id)initWithPlayer:(id)arg1 productState:(id)arg2 playbackDelegateRegistry:(id)arg3 entityDecorationController:(id)arg4 logCenter:(id)arg5 addToUpNextBehavior:(unsigned long long)arg6 explicitContentAccessManager:(id)arg7 ageVerificationProvider:(id)arg8 playbackRestrictionHandler:(id)arg9 featureProperties:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

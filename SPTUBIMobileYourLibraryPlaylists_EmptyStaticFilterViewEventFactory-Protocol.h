@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileYourLibraryPlaylists_EmptyStaticFilterView_ClearFiltersButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileYourLibraryPlaylists_EmptyStaticFilterView_ClearFiltersButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibraryPlaylists_EmptyStaticFilterViewEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileYourLibraryPlaylists_EmptyStaticFilterView_ClearFiltersButtonEventFactory>)clearFiltersButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

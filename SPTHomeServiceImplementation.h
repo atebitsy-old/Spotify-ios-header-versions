@@ -84,7 +84,7 @@
 - (_Bool)claimsURI:(id)arg1;
 - (id)createLoggerForViewURI:(id)arg1;
 - (id)providePersistentCache;
-- (id)createHomeHubProvider;
+- (id)createHomeHubProviderWithComponentRegistry:(id)arg1;
 - (void)setupHubManager;
 - (void)load;
 - (void)configureWithServices:(id)arg1;

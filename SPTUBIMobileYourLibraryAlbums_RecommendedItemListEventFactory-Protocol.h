@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibraryAlbums_RecommendedItemList_ItemEventFactory, SPTUBIMobileYourLibraryAlbums_RecommendedItemList_RecommendedSectionHeaderEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryAlbums_RecommendedItemList_ItemEventFactory, SPTUBIMobileYourLibraryAlbums_RecommendedItemList_RecommendedSectionHeaderEventFactory;
 
 @protocol SPTUBIMobileYourLibraryAlbums_RecommendedItemListEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibraryAlbums_RecommendedItemList_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileYourLibraryAlbums_RecommendedItemList_RecommendedSectionHeaderEventFactory>)recommendedSectionHeaderFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

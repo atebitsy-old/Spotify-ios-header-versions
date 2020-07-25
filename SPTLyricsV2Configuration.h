@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class SPTAutoLockController, SPTLyricsV2Logger, SPTLyricsV2Service;
-@protocol SPTGLUEImageLoaderFactory, SPTLinkDispatcher, SPTLyricsLineProgressManager, SPTModalPresentationController, SPTNetworkConnectivityController, SPTNowPlayingService, SPTPlayer;
+@class SPTLyricsV2Logger, SPTLyricsV2Service;
+@protocol SPTAutoLockController, SPTGLUEImageLoaderFactory, SPTLinkDispatcher, SPTLyricsLineProgressManager, SPTModalPresentationController, SPTNetworkConnectivityController, SPTNowPlayingService, SPTPlayer;
 
 @interface SPTLyricsV2Configuration : NSObject
 {
-    SPTAutoLockController *_autoLockController;
+    id <SPTAutoLockController> _autoLockController;
     id <SPTGLUEImageLoaderFactory> _imageLoaderFactory;
     SPTLyricsV2Logger *_logger;
     SPTLyricsV2Service *_lyricsService;
@@ -33,7 +33,7 @@
 @property(retain, nonatomic) SPTLyricsV2Service *lyricsService; // @synthesize lyricsService=_lyricsService;
 @property(retain, nonatomic) SPTLyricsV2Logger *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) id <SPTGLUEImageLoaderFactory> imageLoaderFactory; // @synthesize imageLoaderFactory=_imageLoaderFactory;
-@property(retain, nonatomic) SPTAutoLockController *autoLockController; // @synthesize autoLockController=_autoLockController;
+@property(retain, nonatomic) id <SPTAutoLockController> autoLockController; // @synthesize autoLockController=_autoLockController;
 
 @end
 

@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileLocalFilesImport_EverythingImportedDialog_OkButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileLocalFilesImport_EverythingImportedDialog_OkButtonEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImport_EverythingImportedDialogEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileLocalFilesImport_EverythingImportedDialog_OkButtonEventFactory>)okButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

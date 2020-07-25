@@ -13,8 +13,10 @@
 @interface SPTFreeTierTasteOnboardingFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _tasteOnboardingSkipWhenDeeplink;
+    _Bool _firstTimeFlowEnabled;
 }
 
+@property(readonly, nonatomic) _Bool firstTimeFlowEnabled; // @synthesize firstTimeFlowEnabled=_firstTimeFlowEnabled;
 @property(readonly, nonatomic) _Bool tasteOnboardingSkipWhenDeeplink; // @synthesize tasteOnboardingSkipWhenDeeplink=_tasteOnboardingSkipWhenDeeplink;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

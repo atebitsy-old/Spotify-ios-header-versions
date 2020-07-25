@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventLocation;
 
 @protocol SPTUBIMobileAlbumPage_UnknownComponentEventFactory <NSObject>
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

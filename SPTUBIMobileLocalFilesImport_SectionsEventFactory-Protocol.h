@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileLocalFilesImport_Sections_SectionEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileLocalFilesImport_Sections_SectionEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImport_SectionsEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeUiReveal;
 - (id <SPTUBIMobileLocalFilesImport_Sections_SectionEventFactory>)sectionFactoryWithIdentifier:(NSString *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

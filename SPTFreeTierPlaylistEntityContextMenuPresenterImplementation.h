@@ -8,15 +8,15 @@
 
 #import "SPTFreeTierPlaylistEntityContextMenuPresenter-Protocol.h"
 
-@class NSString, SPTFreeTierPlaylistLogger;
-@protocol SPContextMenuFeature, SPTAlertInterface, SPTContextMenuPresenter, SPTCreatePlaylistTestManager, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel;
+@class NSString;
+@protocol SPContextMenuFeature, SPTAlertInterface, SPTContextMenuPresenter, SPTCreatePlaylistTestManager, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistViewModel;
 
 @interface SPTFreeTierPlaylistEntityContextMenuPresenterImplementation : NSObject <SPTFreeTierPlaylistEntityContextMenuPresenter>
 {
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPContextMenuFeature> _contextMenuService;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
     id <SPTCreatePlaylistTestManager> _createPlaylistTestManager;
     id <SPTAlertInterface> _alertInterface;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
@@ -26,7 +26,7 @@
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(retain, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface=_alertInterface;
 @property(retain, nonatomic) id <SPTCreatePlaylistTestManager> createPlaylistTestManager; // @synthesize createPlaylistTestManager=_createPlaylistTestManager;
-@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;

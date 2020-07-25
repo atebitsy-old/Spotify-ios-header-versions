@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent;
 
 @protocol SPTUBIMobileNowPlayingViewDefault_ScrollComponentsContainer_ComponentEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

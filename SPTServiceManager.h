@@ -52,9 +52,6 @@
 @property(readonly, copy) NSString *description;
 - (void)dealloc;
 - (id)initWithScope:(id)arg1 enabledServices:(id)arg2 instanceInteractor:(id)arg3 lifecycleHooksQueue:(id)arg4 parent:(id)arg5;
-- (id)graphVizForDependencyGraph:(id)arg1 loadOrder:(id)arg2;
-- (void)dumpGraphVizToFile:(id)arg1 forDependencyGraph:(id)arg2 loadOrder:(id)arg3;
-- (void)maybeDumpDependencyGraphAndExit:(id)arg1 loadOrder:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

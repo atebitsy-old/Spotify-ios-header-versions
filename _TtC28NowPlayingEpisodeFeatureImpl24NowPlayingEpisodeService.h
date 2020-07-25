@@ -22,6 +22,8 @@
     // Error parsing type: , name: snackbarService
     // Error parsing type: , name: shareFeature
     // Error parsing type: , name: uriDispatcherService
+    // Error parsing type: , name: nowPlayingEpisodeMode
+    // Error parsing type: , name: modeRegistry
 }
 
 + (id)serviceIdentifier;

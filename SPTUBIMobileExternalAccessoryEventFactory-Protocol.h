@@ -7,9 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileExternalAccessoryEventFactory <NSObject>
+- (id <SPTUBIInteractionEvent>)hitSearch;
 - (id <SPTUBIInteractionEvent>)hitDisconnectFromRemoteDeviceWithRemoteDeviceId:(NSString *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlaySomething;
 - (id <SPTUBIInteractionEvent>)hitDecreaseVolume;
@@ -33,6 +34,6 @@
 - (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitResumeWithItemToBeResumed:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

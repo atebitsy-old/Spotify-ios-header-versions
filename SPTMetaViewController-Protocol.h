@@ -6,8 +6,8 @@
 
 #import "SPTNavigationItemsConsumer-Protocol.h"
 
-@class SPBarViewController, SPTMenuController, UIViewController;
-@protocol MetaViewControllerDelegate, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTMetaViewControllerObserver, SPTMetaViewControllerRootViewPresenter, SPTModalPresentationController, SPTTabBarControllerProtocol;
+@class SPBarViewController, UIViewController;
+@protocol MetaViewControllerDelegate, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTMenuController, SPTMetaViewControllerObserver, SPTMetaViewControllerRootViewPresenter, SPTModalPresentationController, SPTTabBarControllerProtocol;
 
 @protocol SPTMetaViewController <SPTNavigationItemsConsumer>
 - (void)setModalPresentationController:(id <SPTModalPresentationController>)arg1;
@@ -29,7 +29,7 @@
 - (_Bool)isShowingLoginView;
 - (_Bool)isLoadingUIComplete;
 @property(nonatomic, readonly) UIViewController<SPTBarOverlayViewController> *nowPlaying;
-@property(nonatomic, readonly) SPTMenuController *menuController;
+@property(nonatomic, readonly) id <SPTMenuController> menuController;
 @property(nonatomic, readonly) UIViewController *rootContainer;
 @property(nonatomic, readonly) SPBarViewController *barViewController;
 @property(nonatomic) __weak id <MetaViewControllerDelegate> delegate;

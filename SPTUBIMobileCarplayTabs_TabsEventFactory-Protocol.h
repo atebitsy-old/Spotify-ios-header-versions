@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCarplayTabs_Tabs_BrowseEventFactory, SPTUBIMobileCarplayTabs_Tabs_CollectionEventFactory, SPTUBIMobileCarplayTabs_Tabs_HomeEventFactory, SPTUBIMobileCarplayTabs_Tabs_RecentlyPlayedEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileCarplayTabs_Tabs_BrowseEventFactory, SPTUBIMobileCarplayTabs_Tabs_CollectionEventFactory, SPTUBIMobileCarplayTabs_Tabs_HomeEventFactory, SPTUBIMobileCarplayTabs_Tabs_RecentlyPlayedEventFactory;
 
 @protocol SPTUBIMobileCarplayTabs_TabsEventFactory <NSObject>
 - (id <SPTUBIMobileCarplayTabs_Tabs_CollectionEventFactory>)collectionFactory;
 - (id <SPTUBIMobileCarplayTabs_Tabs_BrowseEventFactory>)browseFactory;
 - (id <SPTUBIMobileCarplayTabs_Tabs_RecentlyPlayedEventFactory>)recentlyPlayedFactory;
 - (id <SPTUBIMobileCarplayTabs_Tabs_HomeEventFactory>)homeFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

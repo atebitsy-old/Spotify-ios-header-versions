@@ -4,47 +4,37 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import "SPTSharingSDKStoriesShareHandler.h"
 
-#import "SPTSharingSDKShareHandler-Protocol.h"
+@class SPTSharingSDKImageDownloader, SPTSharingSDKLinkGenerator;
+@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKEntityData, SPTSharingSDKPasteboardHandler;
 
-@class NSDictionary, NSString, NSURL, SPTSharingSDKImageDownloader, SPTSharingSDKLinkGenerator, UIViewController;
-@protocol SPTSharingSDKDeeplinkHandler, SPTSharingSDKDestination, SPTSharingSDKEntityData, SPTSharingSDKPasteboardHandler;
-
-@interface SPTSharingSDKInstagramStoriesShareHandler : NSObject <SPTSharingSDKShareHandler>
+@interface SPTSharingSDKInstagramStoriesShareHandler : SPTSharingSDKStoriesShareHandler
 {
-    id <SPTSharingSDKDestination> _destination;
     id <SPTSharingSDKEntityData> _entityData;
-    UIViewController *_contextViewController;
     SPTSharingSDKImageDownloader *_imageDownloader;
     SPTSharingSDKLinkGenerator *_linkGenerator;
     id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
     id <SPTSharingSDKPasteboardHandler> _pasteboardHandler;
-    NSURL *_stickerImageURL;
-    NSDictionary *_extraPasteboardItems;
 }
 
-+ (id)buildLinkGenerationPayloadFromEntityData:(id)arg1;
-+ (id)makeInstagramDeeplinkURL;
-+ (id)failedToDeeplinkError;
-@property(readonly, nonatomic) NSDictionary *extraPasteboardItems; // @synthesize extraPasteboardItems=_extraPasteboardItems;
-@property(readonly, nonatomic) NSURL *stickerImageURL; // @synthesize stickerImageURL=_stickerImageURL;
-@property(readonly, nonatomic) __weak id <SPTSharingSDKPasteboardHandler> pasteboardHandler; // @synthesize pasteboardHandler=_pasteboardHandler;
-@property(readonly, nonatomic) __weak id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
-@property(readonly, nonatomic) __weak SPTSharingSDKLinkGenerator *linkGenerator; // @synthesize linkGenerator=_linkGenerator;
-@property(readonly, nonatomic) __weak SPTSharingSDKImageDownloader *imageDownloader; // @synthesize imageDownloader=_imageDownloader;
-@property(readonly, nonatomic) __weak UIViewController *contextViewController; // @synthesize contextViewController=_contextViewController;
-@property(readonly, nonatomic) id <SPTSharingSDKEntityData> entityData; // @synthesize entityData=_entityData;
-@property(readonly, nonatomic) id <SPTSharingSDKDestination> destination; // @synthesize destination=_destination;
 - (void).cxx_destruct;
-- (void)deeplinkIntoInstagramWithShareableURL:(id)arg1 stickerImage:(id)arg2 extraPasteboardItems:(id)arg3 completion:(CDUnknownBlockType)arg4;
-- (void)performShareAction:(CDUnknownBlockType)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
+- (id)pasteboardHandler;
+- (id)deeplinkHandler;
+- (id)linkGenerator;
+- (id)imageDownloader;
+- (id)entityData;
+- (id)extraDeeplinkQueryItems;
+- (id)deeplinkScheme;
+- (id)deeplinkHost;
+- (id)pasteboardStickerImageKey;
+- (id)pasteboardContentURLKey;
+- (id)extraPasteboardItems;
+- (id)stickerImagePath;
+- (id)pasteboardBottomColorKey;
+- (id)pasteboardTopColorKey;
+- (_Bool)shouldUseDefaultGradientColors;
+- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 imageDownloader:(id)arg3 deeplinkHandler:(id)arg4 pasteboardHandler:(id)arg5;
 
 @end
 

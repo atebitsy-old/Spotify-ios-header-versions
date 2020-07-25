@@ -23,6 +23,7 @@
     UIView *_playContainerView;
     UILabel *_contentTitle;
     UILabel *_contentDetail;
+    UILabel *_contentDescription;
     id <GLUEImageLoader> _glueImageLoader;
     SPTNowPlayingButton<SPTNowPlayingPlayButton> *_playPauseButton;
 }
@@ -30,6 +31,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTNowPlayingButton<SPTNowPlayingPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
+@property(readonly, nonatomic) UILabel *contentDescription; // @synthesize contentDescription=_contentDescription;
 @property(readonly, nonatomic) UILabel *contentDetail; // @synthesize contentDetail=_contentDetail;
 @property(readonly, nonatomic) UILabel *contentTitle; // @synthesize contentTitle=_contentTitle;
 @property(readonly, nonatomic) UIView *playContainerView; // @synthesize playContainerView=_playContainerView;

@@ -9,24 +9,26 @@
 #import "SPTUIModeTransitionUIHandler-Protocol.h"
 
 @class NSString, SPTProgressView, UIWindow;
-@protocol SPTMetaViewController;
+@protocol SPTMetaViewController, SPTUIPresentationServiceFactory;
 
 @interface SPTUIModeTransitionUIManager : NSObject <SPTUIModeTransitionUIHandler>
 {
     UIWindow *_shieldingWindow;
     id <SPTMetaViewController> _metaViewController;
+    id <SPTUIPresentationServiceFactory> _uiPresentationServiceFactory;
     SPTProgressView *_progressView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
+@property(retain, nonatomic) id <SPTUIPresentationServiceFactory> uiPresentationServiceFactory; // @synthesize uiPresentationServiceFactory=_uiPresentationServiceFactory;
 @property(nonatomic) __weak id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) UIWindow *shieldingWindow; // @synthesize shieldingWindow=_shieldingWindow;
 - (void)hideTransitionUIForResult:(long long)arg1;
 - (void)showTransitionUI;
 - (id)screenshotBackground;
 - (void)setupShieldingWindowUsingScreenshotView:(id)arg1;
-- (id)initWithMetaViewController:(id)arg1;
+- (id)initWithMetaViewController:(id)arg1 uiPresentationServiceFactory:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

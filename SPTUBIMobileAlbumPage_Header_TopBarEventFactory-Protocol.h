@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAlbumPage_Header_TopBar_BackButtonEventFactory, SPTUBIMobileAlbumPage_Header_TopBar_ContextMenuButtonEventFactory, SPTUBIMobileAlbumPage_Header_TopBar_FollowButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_Header_TopBar_BackButtonEventFactory, SPTUBIMobileAlbumPage_Header_TopBar_ContextMenuButtonEventFactory, SPTUBIMobileAlbumPage_Header_TopBar_FollowButtonEventFactory;
 
 @protocol SPTUBIMobileAlbumPage_Header_TopBarEventFactory <NSObject>
 - (id <SPTUBIMobileAlbumPage_Header_TopBar_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
 - (id <SPTUBIMobileAlbumPage_Header_TopBar_FollowButtonEventFactory>)followButtonFactory;
 - (id <SPTUBIMobileAlbumPage_Header_TopBar_BackButtonEventFactory>)backButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

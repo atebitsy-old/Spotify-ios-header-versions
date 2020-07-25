@@ -17,7 +17,6 @@
     id <GLUETheme> _theme;
     SPTNowPlayingTabLabel *_canvasTabLabel;
     SPTNowPlayingTabLabel *_coverArtLabel;
-    SPTNowPlayingTabLabel *_lyricsTabLabel;
     SPTNowPlayingTabLabel *_videoTabLabel;
     UIStackView *_stackView;
     UITapGestureRecognizer *_canvasLabelTapRecognizer;
@@ -37,7 +36,6 @@
 @property(readonly, nonatomic) UITapGestureRecognizer *canvasLabelTapRecognizer; // @synthesize canvasLabelTapRecognizer=_canvasLabelTapRecognizer;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
 @property(readonly, nonatomic) SPTNowPlayingTabLabel *videoTabLabel; // @synthesize videoTabLabel=_videoTabLabel;
-@property(readonly, nonatomic) SPTNowPlayingTabLabel *lyricsTabLabel; // @synthesize lyricsTabLabel=_lyricsTabLabel;
 @property(readonly, nonatomic) SPTNowPlayingTabLabel *coverArtLabel; // @synthesize coverArtLabel=_coverArtLabel;
 @property(readonly, nonatomic) SPTNowPlayingTabLabel *canvasTabLabel; // @synthesize canvasTabLabel=_canvasTabLabel;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
@@ -49,7 +47,6 @@
 - (void)coverArtLabelTapped;
 - (void)canvasLabelTapped;
 - (void)setVideoTabVisible:(_Bool)arg1;
-- (void)setLyricsTabVisible:(_Bool)arg1;
 - (void)setCanvasTabVisible:(_Bool)arg1;
 - (void)themeUpdated:(id)arg1;
 - (void)viewDidLoad;

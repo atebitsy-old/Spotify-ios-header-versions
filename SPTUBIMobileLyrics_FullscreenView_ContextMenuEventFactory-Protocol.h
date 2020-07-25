@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileLyrics_FullscreenView_ContextMenu_LessVocalButtonEventFactory, SPTUBIMobileLyrics_FullscreenView_ContextMenu_MoreVocalButtonEventFactory, SPTUBIMobileLyrics_FullscreenView_ContextMenu_ReportButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileLyrics_FullscreenView_ContextMenu_LessVocalButtonEventFactory, SPTUBIMobileLyrics_FullscreenView_ContextMenu_MoreVocalButtonEventFactory, SPTUBIMobileLyrics_FullscreenView_ContextMenu_ReportButtonEventFactory;
 
 @protocol SPTUBIMobileLyrics_FullscreenView_ContextMenuEventFactory <NSObject>
 - (id <SPTUBIMobileLyrics_FullscreenView_ContextMenu_ReportButtonEventFactory>)reportButtonFactory;
 - (id <SPTUBIMobileLyrics_FullscreenView_ContextMenu_LessVocalButtonEventFactory>)lessVocalButtonFactory;
 - (id <SPTUBIMobileLyrics_FullscreenView_ContextMenu_MoreVocalButtonEventFactory>)moreVocalButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

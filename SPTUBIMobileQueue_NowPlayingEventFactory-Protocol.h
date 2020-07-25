@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileQueue_NowPlaying_NowPlayingTrackEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileQueue_NowPlaying_NowPlayingTrackEventFactory;
 
 @protocol SPTUBIMobileQueue_NowPlayingEventFactory <NSObject>
 - (id <SPTUBIMobileQueue_NowPlaying_NowPlayingTrackEventFactory>)nowPlayingTrackFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

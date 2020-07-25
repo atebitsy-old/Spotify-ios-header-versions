@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventLocation;
 
 @protocol SPTUBIMobilePodcastepisodeEntity_ToolBar_TitleLabelEventFactory <NSObject>
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

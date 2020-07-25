@@ -11,19 +11,21 @@
 @interface SPTSearch2RequestParametersProvider : NSObject
 {
     _Bool _topicsEnabled;
+    _Bool _v2AssistedCurationEnabled;
     id <SPTPodcastTestManager> _podcastTestManager;
     id <SPTProductState> _productState;
     id <SPTFeatureFlagSignal> _freeTierSignal;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool v2AssistedCurationEnabled; // @synthesize v2AssistedCurationEnabled=_v2AssistedCurationEnabled;
 @property(readonly, nonatomic) _Bool topicsEnabled; // @synthesize topicsEnabled=_topicsEnabled;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> freeTierSignal; // @synthesize freeTierSignal=_freeTierSignal;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTPodcastTestManager> podcastTestManager; // @synthesize podcastTestManager=_podcastTestManager;
 - (id)entityTypes;
 - (id)makeDefaultSearchRequestParameters;
-- (id)initWithPodcastService:(id)arg1 sessionService:(id)arg2 topicsEnabled:(_Bool)arg3;
+- (id)initWithPodcastService:(id)arg1 sessionService:(id)arg2 topicsEnabled:(_Bool)arg3 v2AssistedCurationEnabled:(_Bool)arg4;
 
 @end
 

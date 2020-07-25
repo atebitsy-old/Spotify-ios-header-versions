@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventLocation;
 
 @protocol SPTUBIMobileHome_Shelves_RecentlyPlayedShelf_HeaderEventFactory <NSObject>
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

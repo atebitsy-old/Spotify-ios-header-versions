@@ -21,7 +21,6 @@
     _Bool _watchAppOfflineEnabled;
     _Bool _credentialStoreSendCredentialsEnabled;
     _Bool _webAPIIntegrationEnabled;
-    _Bool _connectManagerXEnabled;
     _Bool _watchAppStreamingSignalEnabled;
     unsigned long long _bitrateSetting;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
@@ -53,7 +52,6 @@
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 @property(readonly, nonatomic) unsigned long long bitrateSetting; // @synthesize bitrateSetting=_bitrateSetting;
-@property(readonly, nonatomic, getter=isConnectManagerXEnabled) _Bool connectManagerXEnabled; // @synthesize connectManagerXEnabled=_connectManagerXEnabled;
 @property(readonly, nonatomic, getter=isWebAPIIntegrationEnabled) _Bool webAPIIntegrationEnabled; // @synthesize webAPIIntegrationEnabled=_webAPIIntegrationEnabled;
 @property(readonly, nonatomic, getter=shouldCredentialStoreSendCredentials) _Bool credentialStoreSendCredentialsEnabled; // @synthesize credentialStoreSendCredentialsEnabled=_credentialStoreSendCredentialsEnabled;
 @property(readonly, nonatomic, getter=isWatchAppOfflineEnabled) _Bool watchAppOfflineEnabled; // @synthesize watchAppOfflineEnabled=_watchAppOfflineEnabled;
@@ -72,7 +70,6 @@
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
 - (void)setBitrateSetting:(unsigned long long)arg1;
-- (void)setConnectManagerXEnabled:(_Bool)arg1;
 - (void)setWebAPIIntegrationEnabled:(_Bool)arg1;
 - (void)setWatchAppOfflineEnabled:(_Bool)arg1;
 - (void)setWatchAppStreamingEnabled:(_Bool)arg1;
@@ -80,7 +77,6 @@
 - (void)setWatchIntegrationEnabled:(_Bool)arg1;
 - (void)setCredentialStoreSendCredentialsEnabled:(_Bool)arg1;
 - (void)evaluateBitrateSetting;
-- (void)evaluateConnectManagerXEnabled;
 - (void)evaluateWebAPIIntegrationEnabled;
 - (void)evaluateAccessoryLoggingEnabled;
 - (void)evaluateCredentialStoreSendCredentials;

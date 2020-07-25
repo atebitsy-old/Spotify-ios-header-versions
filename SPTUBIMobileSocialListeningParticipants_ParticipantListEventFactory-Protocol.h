@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSocialListeningParticipants_ParticipantList_ParticipantEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileSocialListeningParticipants_ParticipantList_ParticipantEventFactory;
 
 @protocol SPTUBIMobileSocialListeningParticipants_ParticipantListEventFactory <NSObject>
 - (id <SPTUBIMobileSocialListeningParticipants_ParticipantList_ParticipantEventFactory>)participantFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

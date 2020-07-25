@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePlaylistAllSongs_AddSongsButtonEventFactory, SPTUBIMobilePlaylistAllSongs_BackButtonEventFactory, SPTUBIMobilePlaylistAllSongs_EpisodeOrTrackEventFactory, SPTUBIMobilePlaylistAllSongs_ToolbarEventFactory, SPTUBIMobilePlaylistAllSongs_TransitionViewEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePlaylistAllSongs_AddSongsButtonEventFactory, SPTUBIMobilePlaylistAllSongs_BackButtonEventFactory, SPTUBIMobilePlaylistAllSongs_EpisodeOrTrackEventFactory, SPTUBIMobilePlaylistAllSongs_ToolbarEventFactory, SPTUBIMobilePlaylistAllSongs_TransitionViewEventFactory;
 
 @protocol SPTUBIMobilePlaylistAllSongsEventFactory <NSObject>
 - (id <SPTUBIMobilePlaylistAllSongs_EpisodeOrTrackEventFactory>)episodeOrTrackFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobilePlaylistAllSongs_BackButtonEventFactory>)backButtonFactory;
 - (id <SPTUBIMobilePlaylistAllSongs_ToolbarEventFactory>)toolbarFactory;
 - (id <SPTUBIMobilePlaylistAllSongs_TransitionViewEventFactory>)transitionViewFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

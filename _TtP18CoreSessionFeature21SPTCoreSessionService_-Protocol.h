@@ -6,8 +6,8 @@
 
 #import "SPTService-Protocol.h"
 
-@class SPTApplicationStateTracker, SPTAudioVolumeControl, SPTIncognitoModeHandler, SPTLogger, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
-@protocol SPTEntityService, SPTOfflineManager, SPTResolver;
+@class SPTApplicationStateTracker, SPTAudioVolumeControl, SPTIncognitoModeHandler, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
+@protocol SPTEntityService, SPTLogger, SPTOfflineManager, SPTResolver;
 
 @protocol _TtP18CoreSessionFeature21SPTCoreSessionService_ <SPTService>
 - (SPTIncognitoModeHandler *)provideIncognitoModeHandler;
@@ -18,7 +18,7 @@
 - (SPTPlayerMftCanPlayChecker *)provideMFTCanPlayChecker;
 - (SPTAudioVolumeControl *)provideAudioVolumeControl;
 - (id <SPTEntityService>)provideEntityService;
-- (SPTLogger *)provideLogger;
+- (id <SPTLogger>)provideLogger;
 - (SPTApplicationStateTracker *)provideApplicationStateTracker;
 - (id <SPTResolver>)provideCosmosRouter;
 @end

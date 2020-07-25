@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileAlbumPage_OfflineSwitchEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitRemoveDownloadWithItemToRemoveFromDownloads:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitDownloadWithItemToDownload:(NSURL *)arg1;
 - (id <SPTUBIImpressionEvent>)impression;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

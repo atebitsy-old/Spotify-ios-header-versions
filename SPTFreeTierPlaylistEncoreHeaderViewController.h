@@ -42,6 +42,8 @@
 - (double)entityHeaderViewControllerMinimumHeight:(id)arg1;
 - (void)entityHeaderViewController:(id)arg1 didUpdateVisibleRect:(struct CGRect)arg2;
 - (void)entityHeaderViewController:(id)arg1 didUpdateBounceOffsets:(struct UIEdgeInsets)arg2;
+- (void)presentFiltersViewController:(id)arg1;
+- (void)presentSearchViewController:(id)arg1;
 - (void)popViewController;
 - (struct CGPoint)snapOffset;
 - (void)update;
@@ -50,6 +52,7 @@
 - (id)playlistHeaderController;
 - (void)headerControllerViewSuperviewHierarchyDidChange:(id)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)setupHeaderControllerPresenters;
 - (id)initWithHeaderController:(id)arg1;
 
 // Remaining properties

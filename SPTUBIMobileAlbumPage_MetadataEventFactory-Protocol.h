@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAlbumPage_Metadata_AlbumEventFactory, SPTUBIMobileAlbumPage_Metadata_ArtistEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_Metadata_AlbumEventFactory, SPTUBIMobileAlbumPage_Metadata_ArtistEventFactory;
 
 @protocol SPTUBIMobileAlbumPage_MetadataEventFactory <NSObject>
 - (id <SPTUBIMobileAlbumPage_Metadata_ArtistEventFactory>)artistFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileAlbumPage_Metadata_AlbumEventFactory>)albumFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

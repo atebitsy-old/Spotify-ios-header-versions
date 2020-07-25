@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePremiumDestination_ScrollingViewEventFactory, SPTUBIMobilePremiumDestination_ToolbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePremiumDestination_ScrollingViewEventFactory, SPTUBIMobilePremiumDestination_ToolbarEventFactory;
 
 @protocol SPTUBIMobilePremiumDestinationEventFactory <NSObject>
 - (id <SPTUBIMobilePremiumDestination_ScrollingViewEventFactory>)scrollingViewFactoryWithPosition:(long long)arg1;
 - (id <SPTUBIMobilePremiumDestination_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

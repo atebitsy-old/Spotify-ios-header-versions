@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileShareMenu_MenuItems_FacebookPopupMenuEventFactory, SPTUBIMobileShareMenu_MenuItems_ShareDestinationEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileShareMenu_MenuItems_FacebookPopupMenuEventFactory, SPTUBIMobileShareMenu_MenuItems_ShareDestinationEventFactory;
 
 @protocol SPTUBIMobileShareMenu_MenuItemsEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileShareMenu_MenuItems_FacebookPopupMenuEventFactory>)facebookPopupMenuFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
 - (id <SPTUBIMobileShareMenu_MenuItems_ShareDestinationEventFactory>)shareDestinationFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

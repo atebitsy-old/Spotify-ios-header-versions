@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileInAppMessage_InAppMessageCtaEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitNavigateToWebviewUriWithDestination:(NSURL *)arg1;
@@ -21,6 +21,6 @@
 - (id <SPTUBIInteractionEvent>)hitLikeWithItemToBeLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitDislikeWithItemToBeDisliked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitCreatePlaylist;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

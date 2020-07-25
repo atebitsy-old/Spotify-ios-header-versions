@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL;
+@class NSArray, NSString, NSURL;
 @protocol SPTPodcastUIStringFormatter;
 
 @protocol SPTPodcastEpisodeCellState <NSObject>
@@ -25,5 +25,8 @@
 - (NSString *)longDescription;
 - (NSString *)podcastSubtitle;
 - (NSString *)podcastTitle;
+
+@optional
+- (NSArray *)quotes;
 @end
 

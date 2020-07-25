@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHomeMixUserManagement_DoneButtonEventFactory, SPTUBIMobileHomeMixUserManagement_MixMemberItemEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHomeMixUserManagement_DoneButtonEventFactory, SPTUBIMobileHomeMixUserManagement_MixMemberItemEventFactory;
 
 @protocol SPTUBIMobileHomeMixUserManagementEventFactory <NSObject>
 - (id <SPTUBIMobileHomeMixUserManagement_DoneButtonEventFactory>)doneButtonFactory;
 - (id <SPTUBIMobileHomeMixUserManagement_MixMemberItemEventFactory>)mixMemberItemFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

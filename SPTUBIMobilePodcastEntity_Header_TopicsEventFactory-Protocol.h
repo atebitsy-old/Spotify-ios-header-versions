@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Header_Topics_TopicButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastEntity_Header_Topics_TopicButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntity_Header_TopicsEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastEntity_Header_Topics_TopicButtonEventFactory>)topicButtonFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

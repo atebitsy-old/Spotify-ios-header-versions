@@ -11,7 +11,6 @@
 @protocol SPTNowPlayingBarModelObserver <NSObject>
 
 @optional
-- (void)nowPlayingBarModelDidUpdateLyricsLabelVisibility:(_Bool)arg1;
 - (void)nowPlayingBarModelDidUpdateVoiceCompanionState:(SPTNowPlayingBarModel *)arg1;
 - (void)nowPlayingBarModelDidUpdateTrackMetaData:(SPTNowPlayingBarModel *)arg1;
 - (void)nowPlayingBarModelDidUpdatePlayingState:(SPTNowPlayingBarModel *)arg1;

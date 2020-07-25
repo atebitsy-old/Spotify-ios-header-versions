@@ -7,11 +7,12 @@
 #import <objc/NSObject.h>
 
 @class SPTConnectivityApplicationScopeConfiguration, SPTConnectivityBackgroundThreadTimerManager;
-@protocol SPTConnectivityAnalyticsDelegate, SPTConnectivityAsyncScheduler, SPTConnectivityConnectivityPolicyProvider;
+@protocol SPTClientTokenAcquirer, SPTConnectivityAnalyticsDelegate, SPTConnectivityAsyncScheduler, SPTConnectivityConnectivityPolicyProvider;
 
 @interface SPTConnectivityApplicationScope : NSObject
 {
     struct unique_ptr<spotify::connectivity::ApplicationScope, std::__1::default_delete<spotify::connectivity::ApplicationScope>> _cppApplicationScope;
+    id <SPTClientTokenAcquirer> _clientTokenAcquirer;
     SPTConnectivityApplicationScopeConfiguration *_configuration;
     id <SPTConnectivityAsyncScheduler> _defaultScheduler;
     SPTConnectivityBackgroundThreadTimerManager *_backgroundThreadTimerManager;
@@ -28,6 +29,7 @@
 @property(retain, nonatomic) SPTConnectivityBackgroundThreadTimerManager *backgroundThreadTimerManager; // @synthesize backgroundThreadTimerManager=_backgroundThreadTimerManager;
 @property(retain, nonatomic) id <SPTConnectivityAsyncScheduler> defaultScheduler; // @synthesize defaultScheduler=_defaultScheduler;
 @property(retain, nonatomic) SPTConnectivityApplicationScopeConfiguration *configuration; // @synthesize configuration=_configuration;
+@property(retain, nonatomic) id <SPTClientTokenAcquirer> clientTokenAcquirer; // @synthesize clientTokenAcquirer=_clientTokenAcquirer;
 - (id)createAccesspointResolverWithDelegate:(id)arg1;
 - (id)createRequestAccounting;
 - (id)loginControllerWithConfiguration:(id)arg1 analyticsDelegate:(id)arg2;

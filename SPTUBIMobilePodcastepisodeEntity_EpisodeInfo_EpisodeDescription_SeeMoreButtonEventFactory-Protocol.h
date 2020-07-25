@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_EpisodeDescription_SeeMoreButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiElementToggle;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

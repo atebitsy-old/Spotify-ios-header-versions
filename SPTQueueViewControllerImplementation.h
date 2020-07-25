@@ -128,6 +128,7 @@
 - (_Bool)tableView:(id)arg1 canMoveRowAtIndexPath:(id)arg2;
 - (_Bool)tableView:(id)arg1 canEditRowAtIndexPath:(id)arg2;
 - (_Bool)tableView:(id)arg1 shouldHighlightRowAtIndexPath:(id)arg2;
+- (_Bool)shouldShowClearButtonInSection:(long long)arg1;
 - (id)titleForTableViewHeaderInSection:(long long)arg1;
 - (void)setupLeadingAccessoryForQueueCell:(id)arg1 atIndexPath:(id)arg2 forTrack:(id)arg3;
 - (void)setupLeadingAccessoryForAudioCell:(id)arg1 atIndexPath:(id)arg2 forTrack:(id)arg3;
@@ -154,6 +155,7 @@
 - (void)updateTableViewMasks;
 - (void)setDragging:(_Bool)arg1 forCell:(id)arg2;
 - (_Bool)cellIsDragging:(id)arg1;
+- (void)tableViewCellSectionHeaderView:(id)arg1 didTapClearButton:(id)arg2;
 - (void)tableViewCellSectionHeaderView:(id)arg1 didUpdateCGRect:(struct CGRect)arg2;
 - (void)upNextSelectedTracks:(id)arg1;
 - (void)removeSelectedTracks:(id)arg1;

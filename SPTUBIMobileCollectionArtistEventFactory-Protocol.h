@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCollectionArtist_EmptyViewEventFactory, SPTUBIMobileCollectionArtist_HeaderEventFactory, SPTUBIMobileCollectionArtist_ItemListEventFactory, SPTUBIMobileCollectionArtist_ToolbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileCollectionArtist_EmptyViewEventFactory, SPTUBIMobileCollectionArtist_HeaderEventFactory, SPTUBIMobileCollectionArtist_ItemListEventFactory, SPTUBIMobileCollectionArtist_ToolbarEventFactory;
 
 @protocol SPTUBIMobileCollectionArtistEventFactory <NSObject>
 - (id <SPTUBIMobileCollectionArtist_EmptyViewEventFactory>)emptyViewFactoryWithReason:(NSString *)arg1;
 - (id <SPTUBIMobileCollectionArtist_ItemListEventFactory>)itemListFactory;
 - (id <SPTUBIMobileCollectionArtist_HeaderEventFactory>)headerFactory;
 - (id <SPTUBIMobileCollectionArtist_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -6,14 +6,16 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSData, NSSet, NSString, NSURL, UIImage;
+@class NSArray, NSData, NSSet, NSString, NSURL, UIImage;
 @protocol SPTSharingSDKUTMTag;
 
 @protocol SPTSharingSDKEntityData <NSObject>
+@property(readonly, nonatomic) NSArray *excludedActivityTypes;
 @property(readonly, nonatomic) id <SPTSharingSDKUTMTag> utmTag;
 @property(readonly, nonatomic) NSURL *fallbackShareableURL;
 @property(readonly, nonatomic) unsigned long long capability;
 @property(readonly, nonatomic) NSSet *extraQueryItems;
+@property(readonly, nonatomic) NSString *text;
 @property(readonly, nonatomic) NSData *video;
 @property(readonly, nonatomic) UIImage *image;
 @property(readonly, copy, nonatomic) NSString *spotifyURIString;

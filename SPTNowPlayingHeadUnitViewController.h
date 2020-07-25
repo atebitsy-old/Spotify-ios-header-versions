@@ -8,11 +8,12 @@
 
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
-@class NSString, SPTNowPlayingHeadUnitView, SPTTheme;
+@class NSString, SPTTheme;
 @protocol SPTNowPlayingContainingViewController;
 
 @interface SPTNowPlayingHeadUnitViewController : UIViewController <SPTNowPlayingContainedViewController>
 {
+    _Bool _sideBarMode;
     UIViewController *_playPauseViewController;
     UIViewController *_leftSecondaryViewController;
     UIViewController *_rightSecondaryViewController;
@@ -22,6 +23,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool sideBarMode; // @synthesize sideBarMode=_sideBarMode;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIViewController *rightTertiaryViewController; // @synthesize rightTertiaryViewController=_rightTertiaryViewController;
 @property(retain, nonatomic) UIViewController *leftTertiaryViewController; // @synthesize leftTertiaryViewController=_leftTertiaryViewController;
@@ -31,9 +33,11 @@
 - (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (double)viewControllerPriority;
 - (unsigned long long)leadingEdge;
+- (void)setupHeadUnitView;
+- (void)setupSidebarHeadUnitView;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithTheme:(id)arg1 playPauseViewController:(id)arg2 leftSecondaryViewController:(id)arg3 rightSecondaryViewController:(id)arg4 leftTertiaryViewController:(id)arg5 rightTertiaryViewController:(id)arg6;
+- (id)initWithTheme:(id)arg1 sideBarMode:(_Bool)arg2 playPauseViewController:(id)arg3 leftSecondaryViewController:(id)arg4 rightSecondaryViewController:(id)arg5 leftTertiaryViewController:(id)arg6 rightTertiaryViewController:(id)arg7;
 
 // Remaining properties
 @property(nonatomic) __weak UIViewController<SPTNowPlayingContainingViewController> *container;
@@ -41,7 +45,6 @@
 @property(readonly, copy) NSString *description;
 @property(readonly) unsigned long long hash;
 @property(readonly) Class superclass;
-@property(retain, nonatomic) SPTNowPlayingHeadUnitView *view; // @dynamic view;
 
 @end
 

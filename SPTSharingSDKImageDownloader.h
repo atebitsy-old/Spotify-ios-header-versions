@@ -13,8 +13,9 @@
     id <SPTSharingSDKNetworkService> _networkService;
 }
 
-@property(readonly, nonatomic) __weak id <SPTSharingSDKNetworkService> networkService; // @synthesize networkService=_networkService;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTSharingSDKNetworkService> networkService; // @synthesize networkService=_networkService;
+- (id)safeStringFromDictionary:(id)arg1 withKey:(id)arg2;
 - (void)downloadImageFromURL:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (id)initWithNetworkService:(id)arg1;
 

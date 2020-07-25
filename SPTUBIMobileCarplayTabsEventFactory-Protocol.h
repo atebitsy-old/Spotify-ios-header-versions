@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCarplayTabs_TabsEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileCarplayTabs_TabsEventFactory;
 
 @protocol SPTUBIMobileCarplayTabsEventFactory <NSObject>
 - (id <SPTUBIMobileCarplayTabs_TabsEventFactory>)tabsFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

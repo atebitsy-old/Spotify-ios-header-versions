@@ -9,11 +9,10 @@
 #import "SPTLyricsFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTLyricsV2Service;
-@protocol SPTFeatureFlaggingService, SPTLyricsTrackChecker, SPTLyricsV2TestManager, SPTNetworkService, SPTRemoteConfigurationService;
+@protocol SPTLyricsTrackChecker, SPTLyricsV2TestManager, SPTNetworkService, SPTRemoteConfigurationService;
 
 @interface SPTLyricsFeatureImplementation : NSObject <SPTLyricsFeature>
 {
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTNetworkService> _networkService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     id <SPTLyricsTrackChecker> _trackChecker;
@@ -28,7 +27,6 @@
 @property(retain, nonatomic) id <SPTLyricsTrackChecker> trackChecker; // @synthesize trackChecker=_trackChecker;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 - (id)provideLyricsV2Service;
 - (id)provideTestManager;
 - (id)provideLyricsTrackChecker;

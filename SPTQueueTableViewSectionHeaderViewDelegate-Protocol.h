@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTQueueTableViewSectionHeaderView;
+@class GLUEButton, SPTQueueTableViewSectionHeaderView;
 
 @protocol SPTQueueTableViewSectionHeaderViewDelegate <NSObject>
+- (void)tableViewCellSectionHeaderView:(SPTQueueTableViewSectionHeaderView *)arg1 didTapClearButton:(GLUEButton *)arg2;
 - (void)tableViewCellSectionHeaderView:(SPTQueueTableViewSectionHeaderView *)arg1 didUpdateCGRect:(struct CGRect)arg2;
 @end
 

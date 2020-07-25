@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent;
 
 @protocol SPTUBIMobileYourLibrary_PageContainer_PageItemEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

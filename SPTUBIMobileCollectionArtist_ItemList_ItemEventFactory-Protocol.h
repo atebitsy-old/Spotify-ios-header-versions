@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileCollectionArtist_ItemList_Item_ContextMenuButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileCollectionArtist_ItemList_Item_ContextMenuButtonEventFactory;
 
 @protocol SPTUBIMobileCollectionArtist_ItemList_ItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
@@ -16,6 +16,6 @@
 - (id <SPTUBIInteractionEvent>)longHitUiReveal;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIMobileCollectionArtist_ItemList_Item_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

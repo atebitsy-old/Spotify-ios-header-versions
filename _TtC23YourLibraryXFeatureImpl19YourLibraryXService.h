@@ -27,6 +27,7 @@
     // Error parsing type: , name: contentFilterItemLoader
     // Error parsing type: , name: $__lazy_storage_$_localSettings
     // Error parsing type: , name: $__lazy_storage_$_instrumentation
+    // Error parsing type: , name: $__lazy_storage_$_theme
 }
 
 + (id)serviceIdentifier;
@@ -36,6 +37,7 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+- (id)provideOnboardingViewControllerFactory;
 - (id)provideAssistantBannerViewFactory;
 - (id)provideTestManager;
 

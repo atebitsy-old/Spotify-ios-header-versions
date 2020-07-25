@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileAssistedCuration_CardContainerEventFactory, SPTUBIMobileAssistedCuration_EmptyViewEventFactory, SPTUBIMobileAssistedCuration_OfflineViewEventFactory, SPTUBIMobileAssistedCuration_PageControlContainerEventFactory, SPTUBIMobileAssistedCuration_SearchBoxEventFactory, SPTUBIMobileAssistedCuration_ToolbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileAssistedCuration_CardContainerEventFactory, SPTUBIMobileAssistedCuration_EmptyViewEventFactory, SPTUBIMobileAssistedCuration_OfflineViewEventFactory, SPTUBIMobileAssistedCuration_PageControlContainerEventFactory, SPTUBIMobileAssistedCuration_SearchBoxEventFactory, SPTUBIMobileAssistedCuration_ToolbarEventFactory;
 
 @protocol SPTUBIMobileAssistedCurationEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeUiNavigateBack;
@@ -16,6 +16,6 @@
 - (id <SPTUBIMobileAssistedCuration_CardContainerEventFactory>)cardContainerFactory;
 - (id <SPTUBIMobileAssistedCuration_SearchBoxEventFactory>)searchBoxFactory;
 - (id <SPTUBIMobileAssistedCuration_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -16,30 +16,14 @@
 {
     _Bool _freeTierEnabled;
     _Bool _localBansEnabled;
-    _Bool _isNowPlayingBarLyricsLabelEnabled;
-    _Bool _isContentLayerLyricsButtonEnabled;
-    _Bool _isContentLayerLyricsTabEnabled;
-    _Bool _isLyricsUpsellPopupEnabled;
     SPTNowPlayingFeatureProperties *_remoteConfigurationProperties;
     id <SPTFeatureFlagFactory> _featureFlagFactory;
     id <SPTFeatureFlagSignal> _freeTierEnabledSignal;
     SPTObserverManager *_observerManager;
     SPTNowPlayingScrollConfiguration *_scrollConfiguration;
-    id <SPTFeatureFlagSignal> _lyricsNPBLabelSignal;
-    id <SPTFeatureFlagSignal> _lyricsContentLayerButtonSignal;
-    id <SPTFeatureFlagSignal> _contentLayerLyricsTabSignal;
-    id <SPTFeatureFlagSignal> _lyricsUpsellPopupSignal;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) _Bool isLyricsUpsellPopupEnabled; // @synthesize isLyricsUpsellPopupEnabled=_isLyricsUpsellPopupEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsUpsellPopupSignal; // @synthesize lyricsUpsellPopupSignal=_lyricsUpsellPopupSignal;
-@property(nonatomic) _Bool isContentLayerLyricsTabEnabled; // @synthesize isContentLayerLyricsTabEnabled=_isContentLayerLyricsTabEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> contentLayerLyricsTabSignal; // @synthesize contentLayerLyricsTabSignal=_contentLayerLyricsTabSignal;
-@property(nonatomic) _Bool isContentLayerLyricsButtonEnabled; // @synthesize isContentLayerLyricsButtonEnabled=_isContentLayerLyricsButtonEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsContentLayerButtonSignal; // @synthesize lyricsContentLayerButtonSignal=_lyricsContentLayerButtonSignal;
-@property(nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled; // @synthesize isNowPlayingBarLyricsLabelEnabled=_isNowPlayingBarLyricsLabelEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsNPBLabelSignal; // @synthesize lyricsNPBLabelSignal=_lyricsNPBLabelSignal;
 @property(retain, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration; // @synthesize scrollConfiguration=_scrollConfiguration;
 @property(nonatomic, getter=isLocalBansEnabled) _Bool localBansEnabled; // @synthesize localBansEnabled=_localBansEnabled;
 @property(nonatomic, getter=isFreeTierEnabled) _Bool freeTierEnabled; // @synthesize freeTierEnabled=_freeTierEnabled;
@@ -51,10 +35,6 @@
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (_Bool)isPodcast:(id)arg1;
 @property(readonly, nonatomic, getter=isShowsFormatContextAwareSharingEnabled) _Bool showsFormatContextAwareSharingEnabled;
-- (void)setupLyricsUpsellPopupSignal;
-- (void)setupContentLayerLyricsTabSignal;
-- (void)setupLyricsInNPVContentLayer;
-- (void)setupLyricsNowPlayingBarLabel;
 @property(readonly, nonatomic) _Bool isContentLayerTabEnabled;
 @property(readonly, nonatomic, getter=isBarToCoverArtAnimationEnabled) _Bool barToCoverArtAnimationEnabled;
 @property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;

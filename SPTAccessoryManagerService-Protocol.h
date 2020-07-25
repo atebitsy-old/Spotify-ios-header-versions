@@ -6,9 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
+@class OS_dispatch_queue;
 @protocol SPTAccessoryStateManager;
 
 @protocol SPTAccessoryManagerService <SPTService>
+- (OS_dispatch_queue *)provideEAAccessoryManagerQueue;
 - (id <SPTAccessoryStateManager>)provideAccessoryStateManager;
 @end
 

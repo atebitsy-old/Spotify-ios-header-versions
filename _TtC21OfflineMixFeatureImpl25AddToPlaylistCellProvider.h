@@ -10,6 +10,8 @@
 {
     // Error parsing type: , name: assistedCurationUIService
     // Error parsing type: , name: itemsViewModel
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: networkConnectivityController
     // Error parsing type: , name: playlistURL
     // Error parsing type: , name: theme
 }

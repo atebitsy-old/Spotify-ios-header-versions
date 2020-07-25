@@ -18,10 +18,10 @@
 }
 
 + (id)allShareDestinations;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *urlScheme; // @synthesize urlScheme=_urlScheme;
 @property(readonly, copy, nonatomic) NSString *destinationID; // @synthesize destinationID=_destinationID;
 @property(readonly, nonatomic) unsigned long long capabilities; // @synthesize capabilities=_capabilities;
-- (void).cxx_destruct;
 - (id)initWithDestinationID:(id)arg1 capabilities:(unsigned long long)arg2 urlScheme:(id)arg3;
 
 // Remaining properties

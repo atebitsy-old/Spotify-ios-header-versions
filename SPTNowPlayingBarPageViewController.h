@@ -43,7 +43,6 @@
 - (void)didTapVoiceCompanionView;
 - (void)playerTrackScrollView:(id)arg1 scrolledToRelativeIndex:(long long)arg2;
 - (void)playerTrackScrollViewChangedOffset:(id)arg1;
-- (void)nowPlayingBarModelDidUpdateLyricsLabelVisibility:(_Bool)arg1;
 - (void)nowPlayingBarModelDidUpdateVoiceCompanionState:(id)arg1;
 - (void)nowPlayingBarModelDidUpdateTrackMetaData:(id)arg1;
 - (void)nowPlayingBarModelDidUpdatePlayingState:(id)arg1;

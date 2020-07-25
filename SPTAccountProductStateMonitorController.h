@@ -9,7 +9,7 @@
 #import "SPTAccountProductInformationObserver-Protocol.h"
 
 @class NSDate, NSString, NSTimer, SPSession, SPTProgressView, UIImage, UIWindow;
-@protocol SPTAccountProductInformationController, SPTMetaViewController;
+@protocol SPTAccountProductInformationController, SPTMetaViewController, SPTUIPresentationServiceFactory;
 
 @interface SPTAccountProductStateMonitorController : NSObject <SPTAccountProductInformationObserver>
 {
@@ -24,9 +24,11 @@
     double _reconnectIncrement;
     NSDate *_pollPaymentStateStartDate;
     NSDate *_pollPaymentStateEndDate;
+    id <SPTUIPresentationServiceFactory> _uiPresentationServiceFactory;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTUIPresentationServiceFactory> uiPresentationServiceFactory; // @synthesize uiPresentationServiceFactory=_uiPresentationServiceFactory;
 @property(retain, nonatomic) NSDate *pollPaymentStateEndDate; // @synthesize pollPaymentStateEndDate=_pollPaymentStateEndDate;
 @property(retain, nonatomic) NSDate *pollPaymentStateStartDate; // @synthesize pollPaymentStateStartDate=_pollPaymentStateStartDate;
 @property(nonatomic) double reconnectIncrement; // @synthesize reconnectIncrement=_reconnectIncrement;
@@ -57,7 +59,7 @@
 - (void)stopObservingPaymentAndProductChanges;
 - (void)startObservingPaymentAndProductChanges;
 - (void)dealloc;
-- (id)initWithSession:(id)arg1 productInformationController:(id)arg2 metaViewController:(id)arg3;
+- (id)initWithSession:(id)arg1 productInformationController:(id)arg2 metaViewController:(id)arg3 uiPresentationServiceFactory:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

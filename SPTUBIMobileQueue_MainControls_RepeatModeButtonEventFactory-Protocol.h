@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileQueue_MainControls_RepeatModeButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitRepeatOneEnable;
 - (id <SPTUBIInteractionEvent>)hitRepeatEnable;
 - (id <SPTUBIInteractionEvent>)hitRepeatDisable;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

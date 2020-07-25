@@ -40,8 +40,6 @@
 - (void)notifyObserversNavigateToGroup:(unsigned long long)arg1 index:(unsigned long long)arg2;
 - (void)notifyObserversModelUpdateWithActiveGroupIndex:(unsigned long long)arg1 pageIndex:(unsigned long long)arg2;
 - (void)notifiyObserversModelUpdated;
-- (void)saveLastVisitedPageURI:(id)arg1;
-- (void)stateRestoreToLastVisitedURI;
 - (void)load;
 - (void)yourLibraryModel:(id)arg1 didUpdatePageProviders:(id)arg2 groupData:(id)arg3;
 - (_Bool)stateRestoreToURI:(id)arg1;

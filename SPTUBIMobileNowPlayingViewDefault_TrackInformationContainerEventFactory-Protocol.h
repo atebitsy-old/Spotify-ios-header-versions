@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileNowPlayingViewDefault_TrackInformationContainer_HeartButtonEventFactory, SPTUBIMobileNowPlayingViewDefault_TrackInformationContainer_LabelContainerEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileNowPlayingViewDefault_TrackInformationContainer_HeartButtonEventFactory, SPTUBIMobileNowPlayingViewDefault_TrackInformationContainer_LabelContainerEventFactory;
 
 @protocol SPTUBIMobileNowPlayingViewDefault_TrackInformationContainerEventFactory <NSObject>
 - (id <SPTUBIMobileNowPlayingViewDefault_TrackInformationContainer_HeartButtonEventFactory>)heartButtonFactory;
 - (id <SPTUBIMobileNowPlayingViewDefault_TrackInformationContainer_LabelContainerEventFactory>)labelContainerFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

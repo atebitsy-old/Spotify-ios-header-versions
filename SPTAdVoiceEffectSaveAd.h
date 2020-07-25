@@ -6,17 +6,11 @@
 
 #import "SPTAdVoiceEffect.h"
 
-@class NSString;
-
 @interface SPTAdVoiceEffectSaveAd : SPTAdVoiceEffect
 {
-    NSString *_adID;
 }
 
-- (void).cxx_destruct;
-@property(readonly, nonatomic) NSString *adID; // @synthesize adID=_adID;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithAdID:(id)arg1;
 
 @end
 

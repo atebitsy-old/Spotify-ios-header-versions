@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileTrackPageFree_Toolbar_BackNavigationButtonEventFactory, SPTUBIMobileTrackPageFree_Toolbar_ContextMenuButtonEventFactory, SPTUBIMobileTrackPageFree_Toolbar_HeartButtonEventFactory, SPTUBIMobileTrackPageFree_Toolbar_UnbanButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileTrackPageFree_Toolbar_BackNavigationButtonEventFactory, SPTUBIMobileTrackPageFree_Toolbar_ContextMenuButtonEventFactory, SPTUBIMobileTrackPageFree_Toolbar_HeartButtonEventFactory, SPTUBIMobileTrackPageFree_Toolbar_UnbanButtonEventFactory;
 
 @protocol SPTUBIMobileTrackPageFree_ToolbarEventFactory <NSObject>
 - (id <SPTUBIMobileTrackPageFree_Toolbar_UnbanButtonEventFactory>)unbanButtonFactory;
 - (id <SPTUBIMobileTrackPageFree_Toolbar_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
 - (id <SPTUBIMobileTrackPageFree_Toolbar_HeartButtonEventFactory>)heartButtonFactory;
 - (id <SPTUBIMobileTrackPageFree_Toolbar_BackNavigationButtonEventFactory>)backNavigationButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

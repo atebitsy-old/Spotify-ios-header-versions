@@ -17,8 +17,9 @@
 + (id)makeGenerateShareableURLRequestHTTPBodyFromPayload:(id)arg1;
 + (id)makeGenerateShareableURLRequestURL;
 + (id)makeErrorFromErrorResponse:(id)arg1;
-@property(readonly, nonatomic) __weak id <SPTSharingSDKNetworkService> networkService; // @synthesize networkService=_networkService;
++ (id)buildLinkGenerationPayloadFromEntityData:(id)arg1;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTSharingSDKNetworkService> networkService; // @synthesize networkService=_networkService;
 - (void)generateShareableURLWithPayload:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
 - (id)initWithNetworkService:(id)arg1;
 

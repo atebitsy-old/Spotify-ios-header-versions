@@ -68,6 +68,7 @@
 - (void)sessionManager:(id)arg1 didStartCastSession:(id)arg2;
 - (void)messageReceived:(id)arg1;
 - (void)didUpdateDeviceList;
+- (void)didUpdateDeviceListSync;
 - (id)castModelName:(id)arg1;
 - (id)activeDevice;
 - (id)getCastDeviceList;

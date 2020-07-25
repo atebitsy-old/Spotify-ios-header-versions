@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileInAppMessage_InAppMessageCtaEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileInAppMessage_InAppMessageCtaEventFactory;
 
 @protocol SPTUBIMobileInAppMessageEventFactory <NSObject>
 - (id <SPTUBIMobileInAppMessage_InAppMessageCtaEventFactory>)inAppMessageCtaFactoryWithIdentifier:(NSString *)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

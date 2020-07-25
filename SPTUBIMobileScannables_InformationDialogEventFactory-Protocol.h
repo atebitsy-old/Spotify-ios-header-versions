@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileScannables_InformationDialog_CancelButtonEventFactory, SPTUBIMobileScannables_InformationDialog_ScanButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileScannables_InformationDialog_CancelButtonEventFactory, SPTUBIMobileScannables_InformationDialog_ScanButtonEventFactory;
 
 @protocol SPTUBIMobileScannables_InformationDialogEventFactory <NSObject>
 - (id <SPTUBIMobileScannables_InformationDialog_CancelButtonEventFactory>)cancelButtonFactory;
 - (id <SPTUBIMobileScannables_InformationDialog_ScanButtonEventFactory>)scanButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

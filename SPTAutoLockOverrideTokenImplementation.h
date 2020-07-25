@@ -8,18 +8,19 @@
 
 #import "SPTAutoLockOverrideToken-Protocol.h"
 
-@class NSString, SPTAutoLockController;
+@class NSString;
+@protocol SPTAutoLockController;
 
 @interface SPTAutoLockOverrideTokenImplementation : NSObject <SPTAutoLockOverrideToken>
 {
     _Bool _active;
     NSString *_reason;
     long long _mode;
-    SPTAutoLockController *_owningController;
+    id <SPTAutoLockController> _owningController;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) __weak SPTAutoLockController *owningController; // @synthesize owningController=_owningController;
+@property(readonly, nonatomic) __weak id <SPTAutoLockController> owningController; // @synthesize owningController=_owningController;
 @property(nonatomic) _Bool active; // @synthesize active=_active;
 @property(readonly, nonatomic) long long mode; // @synthesize mode=_mode;
 @property(readonly, copy, nonatomic) NSString *reason; // @synthesize reason=_reason;

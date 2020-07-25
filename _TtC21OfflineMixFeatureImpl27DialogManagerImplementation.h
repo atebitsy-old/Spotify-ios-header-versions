@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: dialogPresenter
     // Error parsing type: , name: localSettings
+    // Error parsing type: , name: logger
     // Error parsing type: , name: navigationManager
     // Error parsing type: , name: linkDispatcher
     // Error parsing type: , name: testManager
@@ -19,12 +20,12 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)showGenericErrorMessageWithTryAgainBlock:(CDUnknownBlockType)arg1 cancelBlock:(CDUnknownBlockType)arg2;
+- (void)showGenericErrorMessageFor:(id)arg1 tryAgainBlock:(CDUnknownBlockType)arg2 cancelBlock:(CDUnknownBlockType)arg3;
 - (void)showTapToPlayTooltipFor:(id)arg1;
 - (void)showDownloadedTracksLimitReachedPopup;
-- (void)showTrackDownloadRemovedSnackbar;
-- (void)showTrackDownloadCompletedSnackbar;
-- (void)showRemoveFromDownloadsConfirmationAlertWith:(CDUnknownBlockType)arg1;
+- (void)showTrackDownloadRemovedSnackbarFor:(id)arg1;
+- (void)showTrackDownloadCompletedSnackbarFor:(id)arg1;
+- (void)showRemoveFromDownloadsConfirmationAlertFor:(id)arg1 with:(CDUnknownBlockType)arg2;
 - (void)dealloc;
 @property(nonatomic, copy) CDUnknownBlockType closeNPVCallback;
 

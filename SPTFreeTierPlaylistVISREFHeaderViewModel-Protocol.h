@@ -7,8 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSAttributedString, NSString, NSURL;
+@protocol SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistSortingFiltering;
 
 @protocol SPTFreeTierPlaylistVISREFHeaderViewModel <NSObject>
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistLogger> logger;
+@property(nonatomic, readonly) CDUnknownBlockType searchViewControllerFactory;
+@property(nonatomic, readonly) id <SPTFreeTierPlaylistSortingFiltering> sortingFiltering;
 @property(nonatomic, readonly) unsigned long long followCount;
 @property(nonatomic, readonly) double totalDuration;
 @property(nonatomic, readonly) NSString *metadataAccessibilityLabel;

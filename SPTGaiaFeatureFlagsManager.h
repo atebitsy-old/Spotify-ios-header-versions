@@ -6,6 +6,7 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTGaiaAudioSessionActivationManagerFlagsProvider-Protocol.h"
 #import "SPTGaiaDevicePickerContextMenuFlagsProvider-Protocol.h"
 #import "SPTGaiaDevicePickerFlagsProvider-Protocol.h"
 #import "SPTGaiaHomeDeviceFlagsProvider-Protocol.h"
@@ -14,7 +15,7 @@
 @class NSNumber, NSString, SPTGaiaFeatureProperties, SPTGaiaLocalDevicePermissions;
 @protocol SPTAbbaFeatureFlags, SPTGaiaConnectManager, SPTLocalSettings;
 
-@interface SPTGaiaFeatureFlagsManager : NSObject <SPTGaiaDevicePickerContextMenuFlagsProvider, SPTGaiaHomeDeviceFlagsProvider, SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaDevicePickerFlagsProvider>
+@interface SPTGaiaFeatureFlagsManager : NSObject <SPTGaiaDevicePickerContextMenuFlagsProvider, SPTGaiaHomeDeviceFlagsProvider, SPTGaiaLockScreenPlayerFlagsProvider, SPTGaiaDevicePickerFlagsProvider, SPTGaiaAudioSessionActivationManagerFlagsProvider>
 {
     id <SPTAbbaFeatureFlags> _featureFlags;
     SPTGaiaFeatureProperties *_remoteConfigProperties;
@@ -31,6 +32,7 @@
 @property(readonly, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) SPTGaiaFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(readonly, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
+- (_Bool)audioSessionActivationManagerEnabled;
 - (_Bool)freeTierEducationPickerDesignEnabled;
 - (_Bool)lockScreenPlayerFeatureEnabled;
 - (id)homeDeviceLocalForcedSettingsKey;

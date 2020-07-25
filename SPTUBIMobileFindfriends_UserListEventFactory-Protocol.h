@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileFindfriends_UserList_UserEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileFindfriends_UserList_UserEventFactory;
 
 @protocol SPTUBIMobileFindfriends_UserListEventFactory <NSObject>
 - (id <SPTUBIMobileFindfriends_UserList_UserEventFactory>)userFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

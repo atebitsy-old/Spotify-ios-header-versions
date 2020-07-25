@@ -13,7 +13,7 @@
 - (id <SPTPodcastRequest>)createRequestWithData:(id <SPTPodcastRequestData>)arg1;
 - (id <SPTPodcastRequest>)createMarkEpisodeAsPlayedRequestWithURLs:(NSArray *)arg1 markAsUnplayed:(_Bool)arg2;
 - (id <SPTPodcastRequest>)createCollectionEpisodesRequestWithURL:(NSURL *)arg1 subscribe:(_Bool)arg2;
-- (id <SPTPodcastRequest>)createPodcastEntityRequestWithURL:(NSURL *)arg1 filterPredicate:(NSPredicate *)arg2 sortDescriptor:(NSSortDescriptor *)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5;
+- (id <SPTPodcastRequest>)createPodcastEntityRequestWithURL:(NSURL *)arg1 filterPredicate:(NSPredicate *)arg2 sortDescriptor:(NSSortDescriptor *)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5 fetchTopics:(_Bool)arg6 fetchEpisodeQuotes:(_Bool)arg7;
 - (id <SPTPodcastRequest>)createDecorateItemsRequestWithItemURIs:(NSArray *)arg1 subscribe:(_Bool)arg2 fetchHTMLDescription:(_Bool)arg3;
 @end
 

@@ -8,7 +8,7 @@
 
 #import "SPTAdsMobileOverlayContentView-Protocol.h"
 
-@class GLUELabel, NSString, SPTAdNowPlayingBookmarkButton, SPTAdsPromotedContentImageView, SPTTheme, UIButton;
+@class NSString, SPTAdNowPlayingBookmarkButton, SPTAdsPromotedContentImageView, SPTTheme, UIButton;
 @protocol GLUEImageLoader;
 
 @interface SPTAdsMobileOverlayLeaveBehindView : UIView <SPTAdsMobileOverlayContentView>
@@ -19,13 +19,13 @@
     SPTAdNowPlayingBookmarkButton *_bookmarkButton;
     SPTTheme *_theme;
     UIView *_backgroundOverlayView;
-    GLUELabel *_advertiserTitle;
+    UIView *_ctaContainer;
     id <GLUEImageLoader> _glueImageLoader;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
-@property(readonly, nonatomic) GLUELabel *advertiserTitle; // @synthesize advertiserTitle=_advertiserTitle;
+@property(readonly, nonatomic) UIView *ctaContainer; // @synthesize ctaContainer=_ctaContainer;
 @property(readonly, nonatomic) UIView *backgroundOverlayView; // @synthesize backgroundOverlayView=_backgroundOverlayView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) _Bool shouldShowBookmarkButton; // @synthesize shouldShowBookmarkButton=_shouldShowBookmarkButton;

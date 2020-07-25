@@ -9,8 +9,8 @@
 #import "SPTChartFeature-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTChartFeatureTestManager, SPTChartHubManager;
-@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTExplicitContentService, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTSessionService, SPTShelfService, SPTUIPresentationService, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTChartFeatureProperties, SPTChartFeatureTestManager, SPTChartHubManager;
+@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerService, SPTCoreService, SPTEncoreIntegrationService, SPTExplicitContentService, SPTFormatListPlatformService, SPTFreeTierAllSongsService, SPTFreeTierRecommendationsService, SPTFreeTierService, SPTGLUEService, SPTHubFrameworkService, SPTNavigationFeature, SPTNetworkService, SPTOnDemandService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface SPTChartFeatureImplementation : NSObject <SPTService, SPTChartFeature>
 {
@@ -36,10 +36,16 @@
     id <SPTURIDispatchService> _uriDispatchService;
     SPTChartHubManager *_hubManager;
     SPTChartFeatureTestManager *_testManager;
+    id <SPTEncoreIntegrationService> _encoreIntegrationService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    SPTChartFeatureProperties *_properties;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTChartFeatureProperties *properties; // @synthesize properties=_properties;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreIntegrationService; // @synthesize encoreIntegrationService=_encoreIntegrationService;
 @property(retain, nonatomic) SPTChartFeatureTestManager *testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) SPTChartHubManager *hubManager; // @synthesize hubManager=_hubManager;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;

@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_DeleteOption_CancelEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_DeleteOption_ConfirmDeletionEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_DeleteOption_CancelEventFactory, SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_DeleteOption_ConfirmDeletionEventFactory;
 
 @protocol SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_DeleteOptionEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_DeleteOption_CancelEventFactory>)cancelFactory;
 - (id <SPTUBIMobilePlaylistEntity_Toolbar_ContextMenuButton_DeleteOption_ConfirmDeletionEventFactory>)confirmDeletionFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAlbumPage_CopyrightEventFactory, SPTUBIMobileAlbumPage_HeaderEventFactory, SPTUBIMobileAlbumPage_MetadataEventFactory, SPTUBIMobileAlbumPage_OfflineSwitchEventFactory, SPTUBIMobileAlbumPage_RecommendationsEventFactory, SPTUBIMobileAlbumPage_ShufflePlayButtonEventFactory, SPTUBIMobileAlbumPage_TopContainerEventFactory, SPTUBIMobileAlbumPage_TrackCloudEventFactory, SPTUBIMobileAlbumPage_TrackListEventFactory, SPTUBIMobileAlbumPage_UnknownComponentEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_CopyrightEventFactory, SPTUBIMobileAlbumPage_HeaderEventFactory, SPTUBIMobileAlbumPage_MetadataEventFactory, SPTUBIMobileAlbumPage_OfflineSwitchEventFactory, SPTUBIMobileAlbumPage_RecommendationsEventFactory, SPTUBIMobileAlbumPage_ShufflePlayButtonEventFactory, SPTUBIMobileAlbumPage_TopContainerEventFactory, SPTUBIMobileAlbumPage_TrackCloudEventFactory, SPTUBIMobileAlbumPage_TrackListEventFactory, SPTUBIMobileAlbumPage_UnknownComponentEventFactory;
 
 @protocol SPTUBIMobileAlbumPageEventFactory <NSObject>
 - (id <SPTUBIMobileAlbumPage_UnknownComponentEventFactory>)unknownComponentFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
@@ -20,6 +20,6 @@
 - (id <SPTUBIMobileAlbumPage_ShufflePlayButtonEventFactory>)shufflePlayButtonFactory;
 - (id <SPTUBIMobileAlbumPage_TopContainerEventFactory>)topContainerFactory;
 - (id <SPTUBIMobileAlbumPage_HeaderEventFactory>)headerFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

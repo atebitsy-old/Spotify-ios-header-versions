@@ -5,9 +5,9 @@
 //
 
 @class NSString, UIView;
-@protocol GLUETheme, _TtP19YourLibraryXFeature34SPTYourLibraryXAssistantBannerView_;
+@protocol _TtP19YourLibraryXFeature34SPTYourLibraryXAssistantBannerView_;
 
 @protocol _TtP19YourLibraryXFeature41SPTYourLibraryXAssistantBannerViewFactory_
-- (UIView<_TtP19YourLibraryXFeature34SPTYourLibraryXAssistantBannerView_> *)makeAssistantBannerViewWithHeaderText:(NSString *)arg1 title:(NSString *)arg2 subtitle:(NSString *)arg3 closeAction:(void (^)(void))arg4 theme:(id <GLUETheme>)arg5;
+- (UIView<_TtP19YourLibraryXFeature34SPTYourLibraryXAssistantBannerView_> *)makeAssistantBannerViewWithHeaderText:(NSString *)arg1 title:(NSString *)arg2 subtitle:(NSString *)arg3 closeAction:(void (^)(void))arg4;
 @end
 

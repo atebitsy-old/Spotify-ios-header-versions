@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEmpty_BrowseButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastEmpty_BrowseButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEmptyEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastEmpty_BrowseButtonEventFactory>)browseButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

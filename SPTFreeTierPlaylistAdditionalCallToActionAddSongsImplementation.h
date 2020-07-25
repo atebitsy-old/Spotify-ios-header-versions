@@ -8,18 +8,18 @@
 
 #import "SPTFreeTierPlaylistEmptyViewAdditionalCallToAction-Protocol.h"
 
-@class NSString, SPTFreeTierPlaylistLogger;
-@protocol SPTAssistedCurationUIService, SPTFreeTierPlaylistViewModel;
+@class NSString;
+@protocol SPTAssistedCurationUIService, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistViewModel;
 
 @interface SPTFreeTierPlaylistAdditionalCallToActionAddSongsImplementation : NSObject <SPTFreeTierPlaylistEmptyViewAdditionalCallToAction>
 {
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(readonly, copy, nonatomic) NSString *educationalText;

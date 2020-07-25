@@ -12,8 +12,8 @@
 #import "UISearchBarDelegate-Protocol.h"
 #import "UITableViewDelegate-Protocol.h"
 
-@class GLUEEntityRowStyle, NSLayoutConstraint, NSString, NSURL, SPTFreeTierPlaylistCellProviderCoordinator, SPTFreeTierPlaylistLogger, SPTSearchBar, SPTTableView;
-@protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTPageContainer;
+@class GLUEEntityRowStyle, NSLayoutConstraint, NSString, NSURL, SPTFreeTierPlaylistCellProviderCoordinator, SPTSearchBar, SPTTableView;
+@protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistViewModel, SPTPageContainer;
 
 @interface SPTFreeTierPlaylistSearchViewController : UIViewController <UITableViewDelegate, SPTNavigationControllerNavigationBarState, UISearchBarDelegate, SPTPageController, SPTFreeTierPlaylistViewModelDelegate>
 {
@@ -23,7 +23,7 @@
     SPTFreeTierPlaylistCellProviderCoordinator *_cellProviderCoordinator;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
     id <SPTFreeTierPlaylistConfiguration> _configuration;
     NSLayoutConstraint *_bottomConstraint;
     SPTSearchBar *_searchBar;
@@ -34,7 +34,7 @@
 @property(nonatomic) _Bool shouldBecomeFirstResponder; // @synthesize shouldBecomeFirstResponder=_shouldBecomeFirstResponder;
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistConfiguration> configuration; // @synthesize configuration=_configuration;
-@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) SPTFreeTierPlaylistCellProviderCoordinator *cellProviderCoordinator; // @synthesize cellProviderCoordinator=_cellProviderCoordinator;

@@ -10,7 +10,7 @@
 #import "SPTNowPlayingAdUnitViewController-Protocol.h"
 #import "SPTNowPlayingContainedViewController-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, NSURL, SPTAdFeatureFlagChecks, SPTAdNowPlayingBookmarkButton, SPTAdPlayerObservable, SPTTheme;
+@class GLUEButton, GLUELabel, NSLayoutConstraint, NSString, NSURL, SPTAdFeatureFlagChecks, SPTAdNowPlayingBookmarkButton, SPTAdPlayerObservable, SPTAdsFeatureProperties, SPTTheme;
 @protocol GLUETheme, SPTAdsManager, SPTNowPlayingContainingViewController, SPTNowPlayingVideoControlsVisibilityDelegate;
 
 @interface SPTNowPlayingVideoAdInfoUnitViewController : UIViewController <SPTAdPlayerObserver, SPTNowPlayingContainedViewController, SPTNowPlayingAdUnitViewController>
@@ -26,6 +26,7 @@
     SPTTheme *_theme;
     id <GLUETheme> _glueTheme;
     SPTAdFeatureFlagChecks *_featureChecker;
+    SPTAdsFeatureProperties *_featureProperties;
     id <SPTAdsManager> _adsManager;
     NSURL *_clickthroughURL;
     unsigned long long _skipDelaySeconds;
@@ -47,6 +48,7 @@
 @property(nonatomic) unsigned long long skipDelaySeconds; // @synthesize skipDelaySeconds=_skipDelaySeconds;
 @property(retain, nonatomic) NSURL *clickthroughURL; // @synthesize clickthroughURL=_clickthroughURL;
 @property(readonly, nonatomic) __weak id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
+@property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) __weak SPTTheme *theme; // @synthesize theme=_theme;
@@ -76,7 +78,7 @@
 - (void)configureSubviewsWithEntity:(id)arg1;
 - (void)setupConstraints;
 - (void)dealloc;
-- (id)initWithAdManager:(id)arg1 playerObservable:(id)arg2 theme:(id)arg3 featureChecker:(id)arg4;
+- (id)initWithAdManager:(id)arg1 playerObservable:(id)arg2 theme:(id)arg3 featureChecker:(id)arg4 featureProperties:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSleepTimer_InvalidSleepOptionEventFactory, SPTUBIMobileSleepTimer_RemoveSleepTimerEventFactory, SPTUBIMobileSleepTimer_SleepAtEndOfTrackEventFactory, SPTUBIMobileSleepTimer_SleepInXMinutesEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileSleepTimer_InvalidSleepOptionEventFactory, SPTUBIMobileSleepTimer_RemoveSleepTimerEventFactory, SPTUBIMobileSleepTimer_SleepAtEndOfTrackEventFactory, SPTUBIMobileSleepTimer_SleepInXMinutesEventFactory;
 
 @protocol SPTUBIMobileSleepTimerEventFactory <NSObject>
 - (id <SPTUBIMobileSleepTimer_InvalidSleepOptionEventFactory>)invalidSleepOptionFactory;
 - (id <SPTUBIMobileSleepTimer_RemoveSleepTimerEventFactory>)removeSleepTimerFactory;
 - (id <SPTUBIMobileSleepTimer_SleepAtEndOfTrackEventFactory>)sleepAtEndOfTrackFactory;
 - (id <SPTUBIMobileSleepTimer_SleepInXMinutesEventFactory>)sleepInXMinutesFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -9,8 +9,8 @@
 #import "SPTNowPlayingSideBarModeObserver-Protocol.h"
 #import "SPTPageController-Protocol.h"
 
-@class NSArray, NSMutableArray, NSString, NSURL, SPTNowPlayingSideBarContentLayerViewController, SPTNowPlayingSideBarModeResolver, SPTTheme, UIStackView, UIView;
-@protocol SPTNowPlayingContainedViewController, SPTNowPlayingManager, SPTNowPlayingModeViewControllerRegistry, SPTPageContainer, SPTPlayer;
+@class NSArray, NSMutableArray, NSString, NSURL, SPTNowPlayingSideBarModeResolver, SPTTheme, UIStackView, UIView;
+@protocol SPTNowPlayingContainedViewController, SPTNowPlayingContentViewController, SPTNowPlayingManager, SPTNowPlayingModeViewControllerRegistry, SPTPageContainer, SPTPlayer;
 
 @interface SPTNowPlayingSideBarViewController : UIViewController <SPTPageController, SPTNowPlayingSideBarModeObserver>
 {
@@ -22,7 +22,7 @@
     UIView *_emptyView;
     NSArray *_currentViewControllers;
     NSMutableArray *_layoutConstraints;
-    SPTNowPlayingSideBarContentLayerViewController *_contentViewController;
+    UIViewController<SPTNowPlayingContentViewController> *_contentViewController;
     id <SPTNowPlayingManager> _nowPlayingManager;
     UIViewController<SPTNowPlayingContainedViewController> *_infoUnit;
     UIViewController<SPTNowPlayingContainedViewController> *_podcastInfoUnit;
@@ -42,7 +42,7 @@
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *podcastInfoUnit; // @synthesize podcastInfoUnit=_podcastInfoUnit;
 @property(retain, nonatomic) UIViewController<SPTNowPlayingContainedViewController> *infoUnit; // @synthesize infoUnit=_infoUnit;
 @property(nonatomic) __weak id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
-@property(retain, nonatomic) SPTNowPlayingSideBarContentLayerViewController *contentViewController; // @synthesize contentViewController=_contentViewController;
+@property(retain, nonatomic) UIViewController<SPTNowPlayingContentViewController> *contentViewController; // @synthesize contentViewController=_contentViewController;
 @property(retain, nonatomic) NSMutableArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(copy, nonatomic) NSArray *currentViewControllers; // @synthesize currentViewControllers=_currentViewControllers;
 @property(retain, nonatomic) UIView *emptyView; // @synthesize emptyView=_emptyView;
@@ -65,7 +65,6 @@
 - (void)setupSideBarMode;
 - (struct UIEdgeInsets)windowedContentInsetsForCurrentStackViewHeight;
 - (void)viewDidLayoutSubviews;
-- (void)viewDidAppear:(_Bool)arg1;
 - (void)viewDidLoad;
 - (id)initWithRegistry:(id)arg1 modeResolver:(id)arg2 contentViewController:(id)arg3 nowPlayingManager:(id)arg4 player:(id)arg5 theme:(id)arg6;
 

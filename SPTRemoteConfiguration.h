@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class NSDictionary, RCCURLCreator, SPTRawConfiguration, SPTRemoteConfigurationMessageCreator;
+@class RCCLocalOverrides, RCCURLCreator, SPTRawConfiguration, SPTRemoteConfigurationMessageCreator;
 @protocol RCCCoreBridge, SPTRemoteConfigurationContext, SPTRemoteConfigurationDebugLogger, SPTRemoteConfigurationEventLogger, SPTRemoteConfigurationPersistence, SPTRemoteConfigurationTransport;
 
 @interface SPTRemoteConfiguration : NSObject
@@ -18,7 +18,7 @@
     id <SPTRemoteConfigurationPersistence> _persistence;
     id <SPTRemoteConfigurationContext> _remoteConfigurationContext;
     id <RCCCoreBridge> _coreBridge;
-    NSDictionary *_localPropertyOverrides;
+    RCCLocalOverrides *_localOverridesHandler;
     SPTRemoteConfigurationMessageCreator *_messageCreator;
     RCCURLCreator *_urlCreator;
 }
@@ -26,7 +26,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) RCCURLCreator *urlCreator; // @synthesize urlCreator=_urlCreator;
 @property(retain, nonatomic) SPTRemoteConfigurationMessageCreator *messageCreator; // @synthesize messageCreator=_messageCreator;
-@property(retain, nonatomic) NSDictionary *localPropertyOverrides; // @synthesize localPropertyOverrides=_localPropertyOverrides;
+@property(retain, nonatomic) RCCLocalOverrides *localOverridesHandler; // @synthesize localOverridesHandler=_localOverridesHandler;
 @property(readonly, nonatomic) id <RCCCoreBridge> coreBridge; // @synthesize coreBridge=_coreBridge;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationContext> remoteConfigurationContext; // @synthesize remoteConfigurationContext=_remoteConfigurationContext;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationPersistence> persistence; // @synthesize persistence=_persistence;
@@ -38,15 +38,15 @@
 - (void)handleFetchSuccessWithData:(id)arg1;
 - (void)handleFetchSuccessNoData;
 - (void)handleFetchError:(id)arg1;
-- (id)mergedActiveAndOverridenProperties;
 - (id)getWithClass:(Class)arg1;
 - (void)sendEventsForConfiguration:(id)arg1;
 - (void)activateConfiguration:(id)arg1;
+- (id)corePropertyModels;
+- (id)coreComponentsWithProperties;
 - (id)updatePropertyModel:(id)arg1;
 - (void)removeLocalOverrides:(id)arg1;
 - (void)clearLocalOverrides;
 - (id)localOverrides;
-- (_Bool)isValidOverride:(id)arg1;
 - (void)setLocalOverrides:(id)arg1;
 - (void)clearPersistentStorage;
 - (void)activateFetched;

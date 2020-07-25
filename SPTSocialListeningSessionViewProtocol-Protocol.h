@@ -14,6 +14,7 @@
 @property(readonly, nonatomic) GLUEButton *leaveSessionButton;
 @property(readonly, nonatomic) GLUELabel *privacyDisclaimerLabel;
 @property(readonly, nonatomic) GLUEButton *seeListenersButton;
+@property(readonly, nonatomic) GLUEButton *scanCodeButton;
 @property(readonly, nonatomic) GLUEButton *sessionButton;
 @property(readonly, nonatomic) GLUEButton *tryAgainButton;
 @property(readonly, nonatomic) GLUELabel *tryAgainLabel;

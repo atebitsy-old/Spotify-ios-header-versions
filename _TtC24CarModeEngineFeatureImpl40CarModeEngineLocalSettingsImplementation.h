@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "_TtP24CarModeEngineFeatureImpl26CarModeEngineLocalSettings_-Protocol.h"
+
 @protocol _TtP24CarModeEngineFeatureImpl34CarModeEngineLocalSettingsDelegate_;
 
-@interface _TtC24CarModeEngineFeatureImpl40CarModeEngineLocalSettingsImplementation : NSObject
+@interface _TtC24CarModeEngineFeatureImpl40CarModeEngineLocalSettingsImplementation : NSObject <_TtP24CarModeEngineFeatureImpl26CarModeEngineLocalSettings_>
 {
     // Error parsing type: , name: delegate
     // Error parsing type: , name: localSettings

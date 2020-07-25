@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChips_ClearButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChips_FilterChipEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChips_ClearButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChips_FilterChipEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChipsEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChips_ClearButtonEventFactory>)clearButtonFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_FilterChips_FilterChipEventFactory>)filterChipFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

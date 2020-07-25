@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileLocalFilesImport_Sections_Section_Item_CheckboxEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileLocalFilesImport_Sections_Section_Item_CheckboxEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImport_Sections_Section_ItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiElementToggle;
 - (id <SPTUBIMobileLocalFilesImport_Sections_Section_Item_CheckboxEventFactory>)checkboxFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -10,8 +10,6 @@
 @protocol SPTYourLibraryPage><SPTPageController, SPTYourLibraryViewModelObserver;
 
 @protocol SPTYourLibraryViewModel <NSObject>
-- (void)saveLastVisitedPageURI:(NSURL *)arg1;
-- (void)stateRestoreToLastVisitedURI;
 - (_Bool)stateRestoreToURI:(NSURL *)arg1;
 - (UIViewController<SPTYourLibraryPage><SPTPageController> *)pageViewControllerAtIndexPath:(NSIndexPath *)arg1;
 - (NSURL *)pageURIAtIndexPath:(NSIndexPath *)arg1;

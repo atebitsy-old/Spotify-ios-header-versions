@@ -8,13 +8,15 @@
 
 #import "GLUEStyleable-Protocol.h"
 
-@class GLUELabel, GLUESectionHeaderStyle, NSArray, NSString;
+@class GLUEButton, GLUELabel, GLUESectionHeaderStyle, NSArray, NSString;
 @protocol SPTQueueTableViewSectionHeaderViewDelegate;
 
 @interface SPTQueueTableViewSectionHeaderView : UITableViewHeaderFooterView <GLUEStyleable>
 {
+    _Bool _shouldShowClearButton;
     id <SPTQueueTableViewSectionHeaderViewDelegate> _delegate;
     GLUELabel *_titleLabel;
+    GLUEButton *_clearButton;
     GLUESectionHeaderStyle *_style;
     NSArray *_layoutConstraints;
 }
@@ -22,11 +24,16 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *layoutConstraints; // @synthesize layoutConstraints=_layoutConstraints;
 @property(retain, nonatomic) GLUESectionHeaderStyle *style; // @synthesize style=_style;
+@property(retain, nonatomic) GLUEButton *clearButton; // @synthesize clearButton=_clearButton;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(nonatomic) _Bool shouldShowClearButton; // @synthesize shouldShowClearButton=_shouldShowClearButton;
 @property(nonatomic) __weak id <SPTQueueTableViewSectionHeaderViewDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)removeConstraints;
 - (void)createConstraintsIfNeeded;
 - (void)glue_applyStyle:(id)arg1;
+- (void)clearButtonTapped:(id)arg1;
+- (void)removeClearButton;
+- (void)addClearButton;
 - (struct UIEdgeInsets)safeAreaInsets;
 - (void)setFrame:(struct CGRect)arg1;
 - (id)textLabel;

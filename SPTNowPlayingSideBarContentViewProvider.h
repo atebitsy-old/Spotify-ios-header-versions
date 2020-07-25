@@ -6,8 +6,8 @@
 
 #import <objc/NSObject.h>
 
-@class BMVideoSurfaceFactory, SPTNowPlayingContentLayerViewModel, SPTNowPlayingCoverArtProvider, SPTNowPlayingHorizontalVideoProvider, SPTNowPlayingSideBarContentLayerViewController, SPTTheme;
-@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingContentLayerResolver, SPTNowPlayingVideoManager, SPTShareDragDelegateFactory;
+@class BMVideoSurfaceFactory, SPTNowPlayingContentLayerViewModel, SPTNowPlayingCoverArtProvider, SPTNowPlayingHorizontalVideoProvider, SPTNowPlayingLogger, SPTTheme, UIViewController;
+@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingContentLayerResolver, SPTNowPlayingContentViewController, SPTNowPlayingTestManager, SPTNowPlayingVideoManager, SPTShareDragDelegateFactory;
 
 @interface SPTNowPlayingSideBarContentViewProvider : NSObject
 {
@@ -18,7 +18,9 @@
     id <SPTNowPlayingVideoManager> _nowPlayingVideoManager;
     SPTNowPlayingContentLayerViewModel *_contentLayerViewModel;
     id <SPTNowPlayingContentLayerResolver> _contentLayerResolver;
-    SPTNowPlayingSideBarContentLayerViewController *_contentLayerViewController;
+    SPTNowPlayingLogger *_logger;
+    id <SPTNowPlayingTestManager> _testManager;
+    UIViewController<SPTNowPlayingContentViewController> *_contentLayerViewController;
     SPTNowPlayingCoverArtProvider *_coverArtProvider;
     SPTNowPlayingHorizontalVideoProvider *_horizontalVideoProvider;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
@@ -28,7 +30,9 @@
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(retain, nonatomic) SPTNowPlayingHorizontalVideoProvider *horizontalVideoProvider; // @synthesize horizontalVideoProvider=_horizontalVideoProvider;
 @property(retain, nonatomic) SPTNowPlayingCoverArtProvider *coverArtProvider; // @synthesize coverArtProvider=_coverArtProvider;
-@property(retain, nonatomic) SPTNowPlayingSideBarContentLayerViewController *contentLayerViewController; // @synthesize contentLayerViewController=_contentLayerViewController;
+@property(retain, nonatomic) UIViewController<SPTNowPlayingContentViewController> *contentLayerViewController; // @synthesize contentLayerViewController=_contentLayerViewController;
+@property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManager; // @synthesize testManager=_testManager;
+@property(readonly, nonatomic) SPTNowPlayingLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
 @property(readonly, nonatomic) SPTNowPlayingContentLayerViewModel *contentLayerViewModel; // @synthesize contentLayerViewModel=_contentLayerViewModel;
 @property(readonly, nonatomic) id <SPTNowPlayingVideoManager> nowPlayingVideoManager; // @synthesize nowPlayingVideoManager=_nowPlayingVideoManager;
@@ -38,7 +42,7 @@
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void)registerHorizontalVideoProvider;
 - (void)registerCoverArtProvider;
-- (id)initWithModel:(id)arg1 glueImageLoaderFactory:(id)arg2 theme:(id)arg3 videoSurfaceManager:(id)arg4 surfaceFactory:(id)arg5 nowPlayingVideoManager:(id)arg6 contentLayerViewModel:(id)arg7 shareDragDelegateFactory:(id)arg8;
+- (id)initWithModel:(id)arg1 glueImageLoaderFactory:(id)arg2 theme:(id)arg3 videoSurfaceManager:(id)arg4 surfaceFactory:(id)arg5 nowPlayingVideoManager:(id)arg6 contentLayerViewModel:(id)arg7 shareDragDelegateFactory:(id)arg8 logger:(id)arg9 testManager:(id)arg10;
 
 @end
 

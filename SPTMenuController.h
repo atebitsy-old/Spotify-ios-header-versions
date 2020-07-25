@@ -6,10 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class NSArray, SPTNavigationManager, SPTObserverManager, UIView, UIViewController;
+#import "SPTMenuController-Protocol.h"
+
+@class NSArray, NSString, SPTNavigationManager, SPTObserverManager, UIView, UIViewController;
 @protocol SPTTabBarContainer;
 
-@interface SPTMenuController : NSObject
+@interface SPTMenuController : NSObject <SPTMenuController>
 {
     UIViewController<SPTTabBarContainer> *_menuViewController;
     SPTNavigationManager *_navigationManager;
@@ -27,6 +29,12 @@
 @property(nonatomic) __weak UIViewController *selectedViewController;
 @property(copy, nonatomic) NSArray *viewControllers;
 - (id)initWithTabBarFactory:(id)arg1 navigationManager:(id)arg2 logCenter:(id)arg3;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

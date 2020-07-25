@@ -11,6 +11,7 @@
 }
 
 - (id)artistNameForArtistsArray:(id)arg1;
+- (id)artistNamesForArtistsArray:(id)arg1;
 - (id)buildFormatListItemModelsFromRowsResponse:(id)arg1;
 - (id)buildFormatListModelFromMetadataPolicyResponse:(id)arg1 rowsPolicyResponse:(id)arg2;
 

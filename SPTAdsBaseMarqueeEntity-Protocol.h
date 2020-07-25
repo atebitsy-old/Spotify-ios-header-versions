@@ -9,6 +9,7 @@
 @class NSString, NSURL;
 
 @protocol SPTAdsBaseMarqueeEntity <SPTAdsBaseEntity>
+@property(readonly, nonatomic) NSString *ctaText;
 @property(readonly, nonatomic) NSString *tag;
 @property(readonly, nonatomic) NSString *artistName;
 @property(readonly, nonatomic) NSURL *artistURI;

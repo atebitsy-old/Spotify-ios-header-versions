@@ -6,7 +6,7 @@
 
 #import "GLUEThemeBase.h"
 
-@class SPTPhoneNumberSignupCallingCodeContainerViewStyle, SPTPhoneNumberSignupPhoneNumberEntryContainerViewStyle, SPTPhoneNumberSignupValidateOtpContainerViewStyle;
+@class SPTPhoneNumberSignupCallingCodeContainerViewStyle, SPTPhoneNumberSignupValidateOtpContainerViewStyle;
 @protocol GLUEStyle;
 
 @interface SPTPhoneNumberSignupTheme : GLUEThemeBase
@@ -17,8 +17,8 @@
 - (id)nextButtonStyle;
 - (id)createSearchBarStyle;
 - (id)createCountrySelectorCellStyle;
-- (id)createPhoneNumberEntryCellStyle;
-@property(readonly, copy, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryContainerViewStyle<GLUEStyle> *enterPhoneNumberContainerViewStyle;
+- (id)createPhoneNumberEntryCellStyleWithPhoneAutofillEnabled:(_Bool)arg1;
+- (id)enterPhoneNumberContainerViewStyleWithPhoneAutofillEnabled:(_Bool)arg1;
 - (id)createCallingCodeTitleLabelStyle;
 - (id)createCallingCodeCellStyle;
 @property(readonly, copy, nonatomic) SPTPhoneNumberSignupCallingCodeContainerViewStyle<GLUEStyle> *callingCodeContainerViewStyle;

@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_EpisodeDescription_TimestampEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitSeekToTimeWithMsToSeekTo:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

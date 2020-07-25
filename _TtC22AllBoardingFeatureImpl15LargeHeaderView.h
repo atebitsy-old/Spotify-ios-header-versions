@@ -9,7 +9,7 @@
 @interface _TtC22AllBoardingFeatureImpl15LargeHeaderView : UIView
 {
     // Error parsing type: , name: $__lazy_storage_$_label
-    // Error parsing type: , name: $__lazy_storage_$_searchBarContainerView
+    // Error parsing type: , name: searchBarContainerView
     // Error parsing type: , name: $__lazy_storage_$_searchBar
     // Error parsing type: , name: searchBarHeightConstraint
     // Error parsing type: , name: titleText

@@ -9,8 +9,8 @@
 #import "SPTMetaViewController-Protocol.h"
 #import "SPTNavigationRouter-Protocol.h"
 
-@class MessageBarController, NSMutableArray, NSMutableDictionary, NSOrderedSet, NSString, NSURL, NSUserDefaults, SPBarViewController, SPTMenuController, SPTNavigationManager, SPTObserverManager, SPTStartupTracer, UIViewController;
-@protocol MetaViewControllerDelegate, SPTAppStartupController, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTLinkDispatcher, SPTLogCenter, SPTModalPresentationController, SPTNavigationItemsDataSource, SPTPageRegistry, SPTTabBarControllerProtocol;
+@class MessageBarController, NSMutableArray, NSMutableDictionary, NSOrderedSet, NSString, NSURL, NSUserDefaults, SPBarViewController, SPTNavigationManager, SPTObserverManager, SPTStartupTracer, UIViewController;
+@protocol MetaViewControllerDelegate, SPTAppStartupController, SPTBarOverlayViewController, SPTFullscreenPlaybackPresentationManager, SPTLinkDispatcher, SPTLogCenter, SPTMenuController, SPTModalPresentationController, SPTNavigationItemsDataSource, SPTPageRegistry, SPTTabBarControllerProtocol;
 
 @interface MetaViewController : NSObject <SPTMetaViewController, SPTNavigationRouter>
 {
@@ -18,7 +18,7 @@
     id <SPTNavigationItemsDataSource> _dataSource;
     id <MetaViewControllerDelegate> _delegate;
     SPBarViewController *_barViewController;
-    SPTMenuController *_menuController;
+    id <SPTMenuController> _menuController;
     UIViewController<SPTBarOverlayViewController> *_nowPlaying;
     id <SPTFullscreenPlaybackPresentationManager> _fullscreenPlaybackPresentationManager;
     NSUserDefaults *_userDefaults;
@@ -55,7 +55,7 @@
 @property(retain, nonatomic) id <SPTFullscreenPlaybackPresentationManager> fullscreenPlaybackPresentationManager; // @synthesize fullscreenPlaybackPresentationManager=_fullscreenPlaybackPresentationManager;
 @property(nonatomic, getter=isLoadingUIComplete) _Bool loadingUIComplete; // @synthesize loadingUIComplete=_loadingUIComplete;
 @property(retain, nonatomic) UIViewController<SPTBarOverlayViewController> *nowPlaying; // @synthesize nowPlaying=_nowPlaying;
-@property(retain, nonatomic) SPTMenuController *menuController; // @synthesize menuController=_menuController;
+@property(retain, nonatomic) id <SPTMenuController> menuController; // @synthesize menuController=_menuController;
 @property(retain, nonatomic) SPBarViewController *barViewController; // @synthesize barViewController=_barViewController;
 @property(nonatomic) __weak id <MetaViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(nonatomic) __weak id <SPTNavigationItemsDataSource> dataSource; // @synthesize dataSource=_dataSource;

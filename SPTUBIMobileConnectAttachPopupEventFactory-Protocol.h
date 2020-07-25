@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileConnectAttachPopup_ContainerViewEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileConnectAttachPopup_ContainerViewEventFactory;
 
 @protocol SPTUBIMobileConnectAttachPopupEventFactory <NSObject>
 - (id <SPTUBIMobileConnectAttachPopup_ContainerViewEventFactory>)containerViewFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

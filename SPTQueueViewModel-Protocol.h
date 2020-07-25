@@ -14,8 +14,10 @@
 @property(readonly, nonatomic) _Bool disallowReorderingInContextTracks;
 @property(nonatomic) __weak id <SPTQueueViewModelDelegate> delegate;
 @property(readonly, nonatomic) SPTQueueViewModelDataSource *dataSource;
+- (_Bool)shouldShowClearButtonForSection:(unsigned long long)arg1;
 - (NSString *)headerTitleForSection:(unsigned long long)arg1;
 - (SPTQueueViewModelDataSource *)addFutureTracksToUpNext:(NSSet *)arg1;
+- (SPTQueueViewModelDataSource *)removeAllTracksForSection:(unsigned long long)arg1;
 - (SPTQueueViewModelDataSource *)removeTracks:(NSSet *)arg1;
 - (SPTQueueViewModelDataSource *)moveTrackAtIndex:(unsigned long long)arg1 inSection:(unsigned long long)arg2 toIndex:(unsigned long long)arg3 toSection:(unsigned long long)arg4;
 - (void)disableUpdates;

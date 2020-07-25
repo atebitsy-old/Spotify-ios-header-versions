@@ -9,33 +9,24 @@
 #import "SPTUBIInteractionEvent-Protocol.h"
 
 @class NSArray, NSDictionary, NSString;
+@protocol SPTUBIInteractionEventLocation;
 
 @interface SPTUBIEventFactoryInteraction : NSObject <SPTUBIInteractionEvent>
 {
-    NSString *_interactionType;
-    NSString *_applicationId;
-    NSArray *_components;
+    id <SPTUBIInteractionEventLocation> _location;
     NSString *_action;
     long long _actionVersion;
     NSDictionary *_actionParameters;
     NSArray *_errors;
-    NSString *_specificationCommitHash;
-    NSString *_generatorCommitHash;
-    NSString *_specificationVersion;
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
-@property(readonly, copy, nonatomic) NSString *generatorCommitHash; // @synthesize generatorCommitHash=_generatorCommitHash;
-@property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
 @property(readonly, copy, nonatomic) NSArray *errors; // @synthesize errors=_errors;
 @property(readonly, copy, nonatomic) NSDictionary *actionParameters; // @synthesize actionParameters=_actionParameters;
 @property(readonly, nonatomic) long long actionVersion; // @synthesize actionVersion=_actionVersion;
 @property(readonly, copy, nonatomic) NSString *action; // @synthesize action=_action;
-@property(readonly, copy, nonatomic) NSArray *components; // @synthesize components=_components;
-@property(readonly, copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
-@property(readonly, copy, nonatomic) NSString *interactionType; // @synthesize interactionType=_interactionType;
-- (id)initWithType:(id)arg1 applicationId:(id)arg2 specificationCommitHash:(id)arg3 specificationVersion:(id)arg4 components:(id)arg5 action:(id)arg6 actionVersion:(long long)arg7 actionParameters:(id)arg8 errors:(id)arg9;
+@property(readonly, nonatomic) id <SPTUBIInteractionEventLocation> location; // @synthesize location=_location;
+- (id)initWithLocation:(id)arg1 action:(id)arg2 actionVersion:(long long)arg3 actionParameters:(id)arg4 errors:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

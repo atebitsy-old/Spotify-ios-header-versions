@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUELabelStyle, NSString, SPTLyricsV2LoadingViewStyle, UIColor;
+@class GLUELabelStyle, NSString, SPTLyricsV2ErrorViewStyle, SPTLyricsV2LoadingViewStyle, UIColor;
 
 @interface SPTLyricsV2NowPlayingCardViewStyle : NSObject <GLUEStyle>
 {
@@ -17,10 +17,12 @@
     double _switchViewAnimationDuration;
     GLUELabelStyle *_titleLabelStyle;
     SPTLyricsV2LoadingViewStyle *_loadingViewStyle;
+    SPTLyricsV2ErrorViewStyle *_errorViewStyle;
     struct UIEdgeInsets _contentInsets;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTLyricsV2ErrorViewStyle *errorViewStyle; // @synthesize errorViewStyle=_errorViewStyle;
 @property(retain, nonatomic) SPTLyricsV2LoadingViewStyle *loadingViewStyle; // @synthesize loadingViewStyle=_loadingViewStyle;
 @property(copy, nonatomic) GLUELabelStyle *titleLabelStyle; // @synthesize titleLabelStyle=_titleLabelStyle;
 @property(nonatomic) double switchViewAnimationDuration; // @synthesize switchViewAnimationDuration=_switchViewAnimationDuration;

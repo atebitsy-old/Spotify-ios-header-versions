@@ -6,18 +6,22 @@
 
 #import <objc/NSObject.h>
 
-@class NSString, NSURL;
+@class NSArray, NSString, NSURL;
 
 @interface SPTChartEntry : NSObject
 {
     _Bool _playable;
+    _Bool _playStatePlayable;
     _Bool _explicitTrack;
+    _Bool _is19PlusOnly;
     _Bool _locallyPlayable;
     _Bool _inCollection;
     _Bool _banned;
+    _Bool _premiumOnly;
     NSURL *_URI;
     NSString *_title;
     unsigned long long _rank;
+    NSArray *_artistNames;
     NSString *_artistsTitle;
     NSURL *_artistURI;
     NSURL *_albumURI;
@@ -30,10 +34,13 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, getter=isPremiumOnly) _Bool premiumOnly; // @synthesize premiumOnly=_premiumOnly;
 @property(nonatomic, getter=isBanned) _Bool banned; // @synthesize banned=_banned;
 @property(nonatomic, getter=isInCollection) _Bool inCollection; // @synthesize inCollection=_inCollection;
 @property(nonatomic, getter=isLocallyPlayable) _Bool locallyPlayable; // @synthesize locallyPlayable=_locallyPlayable;
+@property(nonatomic) _Bool is19PlusOnly; // @synthesize is19PlusOnly=_is19PlusOnly;
 @property(nonatomic, getter=isExplicitTrack) _Bool explicitTrack; // @synthesize explicitTrack=_explicitTrack;
+@property(nonatomic, getter=isPlayStatePlayable) _Bool playStatePlayable; // @synthesize playStatePlayable=_playStatePlayable;
 @property(nonatomic, getter=isPlayable) _Bool playable; // @synthesize playable=_playable;
 @property(nonatomic) unsigned long long previousPosition; // @synthesize previousPosition=_previousPosition;
 @property(nonatomic) unsigned long long currentPosition; // @synthesize currentPosition=_currentPosition;
@@ -44,6 +51,7 @@
 @property(retain, nonatomic) NSURL *albumURI; // @synthesize albumURI=_albumURI;
 @property(retain, nonatomic) NSURL *artistURI; // @synthesize artistURI=_artistURI;
 @property(copy, nonatomic) NSString *artistsTitle; // @synthesize artistsTitle=_artistsTitle;
+@property(copy, nonatomic) NSArray *artistNames; // @synthesize artistNames=_artistNames;
 @property(nonatomic) unsigned long long rank; // @synthesize rank=_rank;
 @property(copy, nonatomic) NSString *title; // @synthesize title=_title;
 @property(retain, nonatomic) NSURL *URI; // @synthesize URI=_URI;

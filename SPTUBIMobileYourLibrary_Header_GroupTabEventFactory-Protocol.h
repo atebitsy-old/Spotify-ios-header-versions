@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibrary_Header_GroupTab_ActionButtonEventFactory, SPTUBIMobileYourLibrary_Header_GroupTab_ItemListEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibrary_Header_GroupTab_ActionButtonEventFactory, SPTUBIMobileYourLibrary_Header_GroupTab_ItemListEventFactory;
 
 @protocol SPTUBIMobileYourLibrary_Header_GroupTabEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibrary_Header_GroupTab_ActionButtonEventFactory>)actionButtonFactory;
 - (id <SPTUBIMobileYourLibrary_Header_GroupTab_ItemListEventFactory>)itemListFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

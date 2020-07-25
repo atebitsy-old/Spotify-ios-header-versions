@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHomeMixFacePileDetail_DetailViewEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHomeMixFacePileDetail_DetailViewEventFactory;
 
 @protocol SPTUBIMobileHomeMixFacePileDetailEventFactory <NSObject>
 - (id <SPTUBIMobileHomeMixFacePileDetail_DetailViewEventFactory>)detailViewFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

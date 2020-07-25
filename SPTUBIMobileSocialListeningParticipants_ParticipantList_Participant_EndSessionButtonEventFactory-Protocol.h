@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileSocialListeningParticipants_ParticipantList_Participant_EndSessionButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitStopHostingSocialListeningSession;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

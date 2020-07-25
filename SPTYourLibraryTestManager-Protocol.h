@@ -8,7 +8,5 @@
 
 @protocol SPTYourLibraryTestManager <NSObject>
 @property(readonly, nonatomic, getter=isYourLibraryXEnabled) _Bool yourLibraryXEnabled;
-@property(readonly, nonatomic) long long persistActiveTabDurationHours;
-@property(readonly, nonatomic, getter=isPersistActiveTabEnabled) _Bool persistActiveTabEnabled;
 @end
 

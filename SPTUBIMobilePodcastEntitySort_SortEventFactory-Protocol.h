@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntitySort_Sort_NewToOldButtonEventFactory, SPTUBIMobilePodcastEntitySort_Sort_OldToNewButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastEntitySort_Sort_NewToOldButtonEventFactory, SPTUBIMobilePodcastEntitySort_Sort_OldToNewButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntitySort_SortEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastEntitySort_Sort_OldToNewButtonEventFactory>)oldToNewButtonFactory;
 - (id <SPTUBIMobilePodcastEntitySort_Sort_NewToOldButtonEventFactory>)newToOldButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

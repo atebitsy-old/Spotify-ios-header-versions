@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastUnfinishedEpisodeCard_UnfinishedEpisodeCardContainerEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastUnfinishedEpisodeCard_UnfinishedEpisodeCardContainerEventFactory;
 
 @protocol SPTUBIMobilePodcastUnfinishedEpisodeCardEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastUnfinishedEpisodeCard_UnfinishedEpisodeCardContainerEventFactory>)unfinishedEpisodeCardContainerFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

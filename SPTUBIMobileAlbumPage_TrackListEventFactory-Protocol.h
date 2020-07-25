@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAlbumPage_TrackList_TrackPreviewEventFactory, SPTUBIMobileAlbumPage_TrackList_TrackRowEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_TrackList_TrackPreviewEventFactory, SPTUBIMobileAlbumPage_TrackList_TrackRowEventFactory;
 
 @protocol SPTUBIMobileAlbumPage_TrackListEventFactory <NSObject>
 - (id <SPTUBIMobileAlbumPage_TrackList_TrackPreviewEventFactory>)trackPreviewFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileAlbumPage_TrackList_TrackRowEventFactory>)trackRowFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

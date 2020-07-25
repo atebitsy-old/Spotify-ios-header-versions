@@ -9,6 +9,8 @@
 @interface _TtC19VolumeUIFeatureImpl15VolumeViewModel : NSObject
 {
     // Error parsing type: , name: volumeManager
+    // Error parsing type: , name: throttler
+    // Error parsing type: , name: throttledVolume
     // Error parsing type: , name: volume
     // Error parsing type: , name: delegate
 }

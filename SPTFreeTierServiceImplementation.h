@@ -10,7 +10,7 @@
 #import "SPTMetaViewControllerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTFreeTierTestManagerImplementation, SPTUIModeSwitchManager;
-@protocol SPTContainerService, SPTContainerUIService, SPTCrashReporterService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierSessionScopeServicesLoaderService, SPTLoginService, SPTSessionService, SPTURIDispatchService;
+@protocol SPTContainerService, SPTContainerUIService, SPTCrashReporterService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierSessionScopeServicesLoaderService, SPTLoginService, SPTSessionService, SPTUIPresentationApplicationService, SPTURIDispatchService;
 
 @interface SPTFreeTierServiceImplementation : NSObject <SPTMetaViewControllerObserver, SPTFreeTierService>
 {
@@ -23,6 +23,7 @@
     id <SPTLoginService> _loginService;
     id <SPTFreeTierSessionScopeServicesLoaderService> _sessionServicesLoaderService;
     id <SPTURIDispatchService> _URIDispatchService;
+    id <SPTUIPresentationApplicationService> _uiPresentationService;
     SPTFreeTierTestManagerImplementation *_testManager;
     id <SPTFeatureFlagSignal> _theNewExperienceEnabledSignal;
     id <SPTFeatureFlagSignal> _premiumTierEnabledSignal;
@@ -38,6 +39,7 @@
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> premiumTierEnabledSignal; // @synthesize premiumTierEnabledSignal=_premiumTierEnabledSignal;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> theNewExperienceEnabledSignal; // @synthesize theNewExperienceEnabledSignal=_theNewExperienceEnabledSignal;
 @property(retain, nonatomic) SPTFreeTierTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <SPTUIPresentationApplicationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTFreeTierSessionScopeServicesLoaderService> sessionServicesLoaderService; // @synthesize sessionServicesLoaderService=_sessionServicesLoaderService;
 @property(nonatomic) __weak id <SPTLoginService> loginService; // @synthesize loginService=_loginService;

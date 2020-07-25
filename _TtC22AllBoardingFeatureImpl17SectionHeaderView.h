@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: $__lazy_storage_$_titleLabel
     // Error parsing type: , name: title
+    // Error parsing type: , name: subtitle
     // Error parsing type: , name: $__lazy_storage_$_subtitleLabel
     // Error parsing type: , name: $__lazy_storage_$_stackView
     // Error parsing type: , name: newlyCreated

@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileLoginResetPassword_NewPasswordInputFieldEventFactory, SPTUBIMobileLoginResetPassword_RecoverableErrorMessageEventFactory, SPTUBIMobileLoginResetPassword_ResetPasswordButtonEventFactory, SPTUBIMobileLoginResetPassword_SuccessMessageEventFactory, SPTUBIMobileLoginResetPassword_UnrecoverableErrorMessageEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileLoginResetPassword_NewPasswordInputFieldEventFactory, SPTUBIMobileLoginResetPassword_RecoverableErrorMessageEventFactory, SPTUBIMobileLoginResetPassword_ResetPasswordButtonEventFactory, SPTUBIMobileLoginResetPassword_SuccessMessageEventFactory, SPTUBIMobileLoginResetPassword_UnrecoverableErrorMessageEventFactory;
 
 @protocol SPTUBIMobileLoginResetPasswordEventFactory <NSObject>
 - (id <SPTUBIMobileLoginResetPassword_UnrecoverableErrorMessageEventFactory>)unrecoverableErrorMessageFactoryWithUri:(NSURL *)arg1;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobileLoginResetPassword_SuccessMessageEventFactory>)successMessageFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileLoginResetPassword_ResetPasswordButtonEventFactory>)resetPasswordButtonFactory;
 - (id <SPTUBIMobileLoginResetPassword_NewPasswordInputFieldEventFactory>)newPasswordInputFieldFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

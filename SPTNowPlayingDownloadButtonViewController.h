@@ -8,27 +8,25 @@
 
 #import "SPTEncoreDownloadButtonDelegate-Protocol.h"
 #import "SPTNowPlayingModelObserver-Protocol.h"
-#import "_TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_-Protocol.h"
+#import "_TtP17OfflineMixFeature43SPTOfflineMixNowPlayingOfflineModelObserver_-Protocol.h"
 
 @class NSString, SPTEncoreDownloadButton, SPTNowPlayingModel;
-@protocol SPTEncoreDownloadButtonFactory, _TtP17OfflineMixFeature24SPTOfflineMixTestManager_, _TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_;
+@protocol SPTEncoreDownloadButtonFactory, _TtP17OfflineMixFeature26SPTOfflineMixModelProvider_, _TtP17OfflineMixFeature35SPTOfflineMixNowPlayingOfflineModel_;
 
-@interface SPTNowPlayingDownloadButtonViewController : UIViewController <SPTNowPlayingModelObserver, SPTEncoreDownloadButtonDelegate, _TtP17OfflineMixFeature36SPTOfflineMixDownloadManagerObserver_>
+@interface SPTNowPlayingDownloadButtonViewController : UIViewController <SPTNowPlayingModelObserver, SPTEncoreDownloadButtonDelegate, _TtP17OfflineMixFeature43SPTOfflineMixNowPlayingOfflineModelObserver_>
 {
     id <SPTEncoreDownloadButtonFactory> _downloadButtonFactory;
-    id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> _offlineMixTestManager;
     SPTNowPlayingModel *_model;
-    id <_TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_> _downloadManager;
+    id <_TtP17OfflineMixFeature26SPTOfflineMixModelProvider_> _offlineMixModelProvider;
+    id <_TtP17OfflineMixFeature35SPTOfflineMixNowPlayingOfflineModel_> _offlineMixModel;
     SPTEncoreDownloadButton *_downloadButton;
-    unsigned long long _offlineState;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) unsigned long long offlineState; // @synthesize offlineState=_offlineState;
 @property(retain, nonatomic) SPTEncoreDownloadButton *downloadButton; // @synthesize downloadButton=_downloadButton;
-@property(readonly, nonatomic) id <_TtP17OfflineMixFeature28SPTOfflineMixDownloadManager_> downloadManager; // @synthesize downloadManager=_downloadManager;
+@property(retain, nonatomic) id <_TtP17OfflineMixFeature35SPTOfflineMixNowPlayingOfflineModel_> offlineMixModel; // @synthesize offlineMixModel=_offlineMixModel;
+@property(readonly, nonatomic) id <_TtP17OfflineMixFeature26SPTOfflineMixModelProvider_> offlineMixModelProvider; // @synthesize offlineMixModelProvider=_offlineMixModelProvider;
 @property(readonly, nonatomic) SPTNowPlayingModel *model; // @synthesize model=_model;
-@property(readonly, nonatomic) id <_TtP17OfflineMixFeature24SPTOfflineMixTestManager_> offlineMixTestManager; // @synthesize offlineMixTestManager=_offlineMixTestManager;
 @property(readonly, nonatomic) id <SPTEncoreDownloadButtonFactory> downloadButtonFactory; // @synthesize downloadButtonFactory=_downloadButtonFactory;
 - (void)updateOfflineMixDownloadManagerWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
 - (void)updateWithNowPlayingModel:(id)arg1 trackDidChange:(_Bool)arg2;
@@ -39,11 +37,11 @@
 - (void)downloadButtonTapped:(id)arg1;
 - (void)nowPlayingModel:(id)arg1 didMoveToRelativeTrack:(id)arg2;
 - (void)nowPlayingModelDidUpdateMetadata:(id)arg1;
-- (void)stateChangedTo:(unsigned long long)arg1 forURI:(id)arg2;
+- (void)offlineStateDidChangeFor:(id)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)loadView;
-- (id)initWithNowPlayingModel:(id)arg1 offlineMixTestManager:(id)arg2 downloadButtonFactory:(id)arg3 downloadManager:(id)arg4;
+- (id)initWithNowPlayingModel:(id)arg1 downloadButtonFactory:(id)arg2 offlineMixModelProvider:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

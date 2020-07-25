@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileConcertsArtistConcerts_ChangeLocationEventFactory, SPTUBIMobileConcertsArtistConcerts_NearyouListingEventFactory, SPTUBIMobileConcertsArtistConcerts_OthervenuesListingEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileConcertsArtistConcerts_ChangeLocationEventFactory, SPTUBIMobileConcertsArtistConcerts_NearyouListingEventFactory, SPTUBIMobileConcertsArtistConcerts_OthervenuesListingEventFactory;
 
 @protocol SPTUBIMobileConcertsArtistConcertsEventFactory <NSObject>
 - (id <SPTUBIMobileConcertsArtistConcerts_OthervenuesListingEventFactory>)othervenuesListingFactory;
 - (id <SPTUBIMobileConcertsArtistConcerts_NearyouListingEventFactory>)nearyouListingFactory;
 - (id <SPTUBIMobileConcertsArtistConcerts_ChangeLocationEventFactory>)changeLocationFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

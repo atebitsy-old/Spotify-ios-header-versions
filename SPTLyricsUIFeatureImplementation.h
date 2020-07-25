@@ -8,8 +8,8 @@
 
 #import "SPTLyricsUIFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTLyricsContentLayerContext, SPTLyricsFeatureImplementation, SPTLyricsV2Configuration, SPTLyricsV2GLUETheme, SPTVocalRemovalConfiguration;
-@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTBannerFeature, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService;
+@class NSString, SPTAllocationContext, SPTLyricsFeatureImplementation, SPTLyricsV2Configuration, SPTLyricsV2GLUETheme, SPTVocalRemovalConfiguration;
+@protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTBannerFeature, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPlayer, SPTPlayerFeature, SPTUBIService, SPTUIPresentationApplicationService, SPTUIPresentationService, SPTURIDispatchService;
 
 @interface SPTLyricsUIFeatureImplementation : NSObject <SPTLyricsUIFeature>
 {
@@ -23,7 +23,8 @@
     id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     id <SPTPlayerFeature> _playerService;
     id <SPTUBIService> _ubiService;
-    id <SPTUIPresentationService> _uiPresentationService;
+    id <SPTUIPresentationApplicationService> _uiPresentationApplicationService;
+    id <SPTUIPresentationService> _uiPresentationSessionService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTPlayer> _player;
     id <SPTBannerFeature> _bannerService;
@@ -33,14 +34,12 @@
     SPTLyricsV2GLUETheme *_theme;
     SPTLyricsV2Configuration *_lyricsConfiguration;
     SPTVocalRemovalConfiguration *_vocalRemovalConfiguration;
-    SPTLyricsContentLayerContext *_contentLayerContext;
     SPTLyricsFeatureImplementation *_lyricsService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(nonatomic) __weak SPTLyricsFeatureImplementation *lyricsService; // @synthesize lyricsService=_lyricsService;
-@property(retain, nonatomic) SPTLyricsContentLayerContext *contentLayerContext; // @synthesize contentLayerContext=_contentLayerContext;
 @property(retain, nonatomic) SPTVocalRemovalConfiguration *vocalRemovalConfiguration; // @synthesize vocalRemovalConfiguration=_vocalRemovalConfiguration;
 @property(retain, nonatomic) SPTLyricsV2Configuration *lyricsConfiguration; // @synthesize lyricsConfiguration=_lyricsConfiguration;
 @property(retain, nonatomic) SPTLyricsV2GLUETheme *theme; // @synthesize theme=_theme;
@@ -50,7 +49,8 @@
 @property(nonatomic) __weak id <SPTBannerFeature> bannerService; // @synthesize bannerService=_bannerService;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
-@property(nonatomic) __weak id <SPTUIPresentationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
+@property(nonatomic) __weak id <SPTUIPresentationService> uiPresentationSessionService; // @synthesize uiPresentationSessionService=_uiPresentationSessionService;
+@property(nonatomic) __weak id <SPTUIPresentationApplicationService> uiPresentationApplicationService; // @synthesize uiPresentationApplicationService=_uiPresentationApplicationService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
 @property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
@@ -62,7 +62,6 @@
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuService; // @synthesize contextMenuService=_contextMenuService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (id)provideResolver;
-- (void)registerNowPlayingContentLayerProvider;
 - (void)registerNowPlayingScrollProvider;
 - (void)setupConfigurations;
 - (id)providePlayer;

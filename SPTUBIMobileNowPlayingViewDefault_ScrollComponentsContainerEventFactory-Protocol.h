@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileNowPlayingViewDefault_ScrollComponentsContainer_ComponentEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileNowPlayingViewDefault_ScrollComponentsContainer_ComponentEventFactory;
 
 @protocol SPTUBIMobileNowPlayingViewDefault_ScrollComponentsContainerEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileNowPlayingViewDefault_ScrollComponentsContainer_ComponentEventFactory>)componentFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

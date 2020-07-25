@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileNotificationsPreferencesDefaultIos_SpotifyUpdatesSectionEventFactory, SPTUBIMobileNotificationsPreferencesDefaultIos_YourMusicSectionEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileNotificationsPreferencesDefaultIos_SpotifyUpdatesSectionEventFactory, SPTUBIMobileNotificationsPreferencesDefaultIos_YourMusicSectionEventFactory;
 
 @protocol SPTUBIMobileNotificationsPreferencesDefaultIosEventFactory <NSObject>
 - (id <SPTUBIMobileNotificationsPreferencesDefaultIos_SpotifyUpdatesSectionEventFactory>)spotifyUpdatesSectionFactory;
 - (id <SPTUBIMobileNotificationsPreferencesDefaultIos_YourMusicSectionEventFactory>)yourMusicSectionFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

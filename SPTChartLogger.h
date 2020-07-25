@@ -33,6 +33,8 @@
 - (void)logFollowButtonInteractionWithNewFollowStatus:(_Bool)arg1;
 - (void)logContextMenuInteraction;
 - (void)logShufflePlayInteraction;
+- (void)logTrackToggleBanInteractionForTrackURI:(id)arg1 index:(long long)arg2 banned:(_Bool)arg3;
+- (void)logTrackToggleLikeInteractionForTrackURI:(id)arg1 index:(long long)arg2 liked:(_Bool)arg3;
 - (void)logTrackContextMenuInteractionForTrackURI:(id)arg1 index:(long long)arg2;
 - (void)logTrackInteractionForTrackURI:(id)arg1 index:(long long)arg2;
 - (id)initWithLogCenter:(id)arg1 chartURI:(id)arg2;

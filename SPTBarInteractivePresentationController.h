@@ -33,6 +33,7 @@
 - (void)nowPlayingScrollViewControllerDidScroll:(id)arg1;
 - (void)nowPlayingScrollViewControllerDidAppear:(id)arg1;
 - (_Bool)overlayViewControllerIsMoving;
+- (void)rebootRecognizer:(id)arg1;
 - (void)applicationStatusBarFrameDidChangeNotification;
 - (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
 - (id)interactionControllerForDismissal:(id)arg1;

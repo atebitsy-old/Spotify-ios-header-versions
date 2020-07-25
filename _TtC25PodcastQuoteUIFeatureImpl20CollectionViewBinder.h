@@ -12,12 +12,12 @@
     // Error parsing type: , name: imageLoader
     // Error parsing type: , name: shareMenuFactory
     // Error parsing type: , name: modalPresentationController
+    // Error parsing type: , name: logger
     // Error parsing type: , name: collectionView
 }
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)shareButtonTapped:(id)arg1;
 
 @end
 

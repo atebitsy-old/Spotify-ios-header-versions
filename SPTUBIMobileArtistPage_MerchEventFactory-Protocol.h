@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileArtistPage_Merch_OfferEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileArtistPage_Merch_OfferEventFactory;
 
 @protocol SPTUBIMobileArtistPage_MerchEventFactory <NSObject>
 - (id <SPTUBIMobileArtistPage_Merch_OfferEventFactory>)offerFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

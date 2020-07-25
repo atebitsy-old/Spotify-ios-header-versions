@@ -8,27 +8,19 @@
 
 #import "SPTUBIImpressionEvent-Protocol.h"
 
-@class NSArray, NSString;
+@class NSArray;
+@protocol SPTUBIEventLocation;
 
 @interface _TtC24AddToPlaylistFeatureImplP33_6DE61BD0C9AD9D234D064831C34F76AB29ImpressionEventImplementation : NSObject <SPTUBIImpressionEvent>
 {
-    // Error parsing type: , name: applicationId
-    // Error parsing type: , name: specificationId
-    // Error parsing type: , name: specificationVersion
-    // Error parsing type: , name: specificationCommitHash
-    // Error parsing type: , name: generatorCommitHash
-    // Error parsing type: , name: components
+    // Error parsing type: , name: location
     // Error parsing type: , name: errors
 }
 
 - (void).cxx_destruct;
 - (id)init;
 @property(nonatomic, readonly) NSArray *errors;
-@property(nonatomic, readonly) NSArray *components;
-@property(nonatomic, readonly) NSString *generatorCommitHash;
-@property(nonatomic, readonly) NSString *specificationCommitHash;
-@property(nonatomic, readonly) NSString *specificationVersion;
-@property(nonatomic, readonly) NSString *applicationId;
+@property(nonatomic, readonly) id <SPTUBIEventLocation> location; // @synthesize location;
 
 @end
 

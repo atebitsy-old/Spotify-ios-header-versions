@@ -10,8 +10,8 @@
 #import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 #import "SPTPodcastEpisodeCellActionTarget-Protocol.h"
 
-@class NSString, NSURL, SPTFreeTierPlaylistLogger;
-@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
+@class NSString, NSURL;
+@protocol SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistPlayModel, SPTFreeTierPlaylistPodcastCellStateFactory, SPTLinkDispatcher, SPTPlayer, SPTPodcastEpisodeCellActionHandlerDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastOffliningManager;
 
 @interface SPTFreeTierPlaylistPodcastCellProvider : NSObject <SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2, SPTPodcastEpisodeCellActionTarget>
 {
@@ -24,11 +24,11 @@
     id <SPTFreeTierPlaylistPlayModel> _playModel;
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistPlayModel> playModel; // @synthesize playModel=_playModel;

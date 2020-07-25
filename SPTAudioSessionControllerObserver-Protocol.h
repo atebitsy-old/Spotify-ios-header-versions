@@ -21,6 +21,7 @@
 - (void)audioSessionController:(id <SPTAudioSessionController>)arg1 didFailSettingAudioSessionActive:(_Bool)arg2 error:(NSError *)arg3;
 - (void)audioSessionController:(id <SPTAudioSessionController>)arg1 didSetAudioSessionActive:(_Bool)arg2;
 - (void)audioSessionController:(id <SPTAudioSessionController>)arg1 willSetAudioSessionActive:(_Bool)arg2;
+- (void)audioSessionControllerWillAttemptToActivateAudioSession:(id <SPTAudioSessionController>)arg1;
 - (void)audioSessionController:(id <SPTAudioSessionController>)arg1 willReleaseLockForAudioSessionConfiguration:(SPTAudioSessionActivator *)arg2;
 - (void)audioSessionController:(id <SPTAudioSessionController>)arg1 willAttemptLockForAudioSessionConfiguration:(SPTAudioSessionActivator *)arg2;
 @end

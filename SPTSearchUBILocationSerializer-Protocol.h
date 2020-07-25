@@ -7,9 +7,9 @@
 #import "NSObject-Protocol.h"
 
 @class NSDictionary;
-@protocol SPTUBIEventFactoryLocation;
+@protocol SPTUBIEventLocation;
 
 @protocol SPTSearchUBILocationSerializer <NSObject>
-- (NSDictionary *)dictionaryRepresentationOfLocation:(id <SPTUBIEventFactoryLocation>)arg1;
+- (NSDictionary *)dictionaryRepresentationOfLocation:(id <SPTUBIEventLocation>)arg1;
 @end
 

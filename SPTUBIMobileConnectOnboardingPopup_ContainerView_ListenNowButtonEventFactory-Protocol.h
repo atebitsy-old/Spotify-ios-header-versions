@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileConnectOnboardingPopup_ContainerView_ListenNowButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitConnectToRemoteDeviceWithRemoteDeviceId:(NSString *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

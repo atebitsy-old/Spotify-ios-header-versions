@@ -9,7 +9,7 @@
 #import "SPTFreeTierPlaylistHeaderProvider-Protocol.h"
 
 @class NSString, SPTFreeTierPlaylistEncoreHeaderControllerImplementation;
-@protocol SPTEncorePlaylistHeaderFactory, SPTImageLoader, SPTLinkDispatcher;
+@protocol SPTEncorePlaylistHeaderFactory, SPTImageLoader, SPTLinkDispatcher, SPTSortingFilteringUIFactory;
 
 @interface SPTFreeTierPlaylistEncoreHeaderProviderImplementation : NSObject <SPTFreeTierPlaylistHeaderProvider>
 {
@@ -17,9 +17,11 @@
     SPTFreeTierPlaylistEncoreHeaderControllerImplementation *_headerController;
     id <SPTEncorePlaylistHeaderFactory> _encoreComponentFactory;
     id <SPTLinkDispatcher> _linkDispatcher;
+    id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTEncorePlaylistHeaderFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 @property(retain, nonatomic) SPTFreeTierPlaylistEncoreHeaderControllerImplementation *headerController; // @synthesize headerController=_headerController;
@@ -30,7 +32,7 @@
 - (void)configureBarButtonManagerDelegate:(id)arg1;
 - (void)configureWithPlaylistConfiguration:(id)arg1 filterSortBarView:(id)arg2;
 - (void)setupVISREFHeaderController;
-- (id)initWithImageLoader:(id)arg1 linkDispatcher:(id)arg2 encoreComponentFactory:(id)arg3;
+- (id)initWithImageLoader:(id)arg1 linkDispatcher:(id)arg2 encoreComponentFactory:(id)arg3 sortingFilteringUIFactory:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobilePlaylistEntity_EmptyView_AddSongsButtonEventFactory, SPTUBIMobilePlaylistEntity_EmptyView_HomeButtonEventFactory, SPTUBIMobilePlaylistEntity_EmptyView_NotFoundViewEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobilePlaylistEntity_EmptyView_AddSongsButtonEventFactory, SPTUBIMobilePlaylistEntity_EmptyView_HomeButtonEventFactory, SPTUBIMobilePlaylistEntity_EmptyView_NotFoundViewEventFactory;
 
 @protocol SPTUBIMobilePlaylistEntity_EmptyViewEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobilePlaylistEntity_EmptyView_NotFoundViewEventFactory>)notFoundViewFactory;
 - (id <SPTUBIMobilePlaylistEntity_EmptyView_HomeButtonEventFactory>)homeButtonFactory;
 - (id <SPTUBIMobilePlaylistEntity_EmptyView_AddSongsButtonEventFactory>)addSongsButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

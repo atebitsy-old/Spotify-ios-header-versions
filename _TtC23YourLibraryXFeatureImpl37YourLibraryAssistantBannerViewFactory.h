@@ -8,10 +8,12 @@
 
 @interface _TtC23YourLibraryXFeatureImpl37YourLibraryAssistantBannerViewFactory : NSObject
 {
+    // Error parsing type: , name: theme
 }
 
+- (void).cxx_destruct;
 - (id)init;
-- (id)makeAssistantBannerViewWithHeaderText:(id)arg1 title:(id)arg2 subtitle:(id)arg3 closeAction:(CDUnknownBlockType)arg4 theme:(id)arg5;
+- (id)makeAssistantBannerViewWithHeaderText:(id)arg1 title:(id)arg2 subtitle:(id)arg3 closeAction:(CDUnknownBlockType)arg4;
 
 @end
 

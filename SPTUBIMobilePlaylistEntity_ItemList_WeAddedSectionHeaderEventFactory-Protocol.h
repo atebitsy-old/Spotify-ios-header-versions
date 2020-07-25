@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobilePlaylistEntity_ItemList_WeAddedSectionHeader_RecommendationExplanationDialogEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobilePlaylistEntity_ItemList_WeAddedSectionHeader_RecommendationExplanationDialogEventFactory;
 
 @protocol SPTUBIMobilePlaylistEntity_ItemList_WeAddedSectionHeaderEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIMobilePlaylistEntity_ItemList_WeAddedSectionHeader_RecommendationExplanationDialogEventFactory>)recommendationExplanationDialogFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

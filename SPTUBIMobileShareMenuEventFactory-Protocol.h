@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileShareMenu_BackgroundViewEventFactory, SPTUBIMobileShareMenu_MenuItemsEventFactory, SPTUBIMobileShareMenu_ToolbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileShareMenu_BackgroundViewEventFactory, SPTUBIMobileShareMenu_MenuItemsEventFactory, SPTUBIMobileShareMenu_ToolbarEventFactory;
 
 @protocol SPTUBIMobileShareMenuEventFactory <NSObject>
 - (id <SPTUBIMobileShareMenu_MenuItemsEventFactory>)menuItemsFactory;
 - (id <SPTUBIMobileShareMenu_BackgroundViewEventFactory>)backgroundViewFactory;
 - (id <SPTUBIMobileShareMenu_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

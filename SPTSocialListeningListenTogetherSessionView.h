@@ -22,6 +22,7 @@
     SPTSocialListeningSessionScannableView *_scannableView;
     GLUEButton *_seeListenersButton;
     GLUEButton *_sessionButton;
+    GLUEButton *_scanCodeButton;
     GLUELabel *_titleLabel;
     GLUEButton *_tryAgainButton;
     GLUELabel *_tryAgainLabel;
@@ -43,6 +44,7 @@
 @property(readonly, nonatomic) GLUELabel *tryAgainLabel; // @synthesize tryAgainLabel=_tryAgainLabel;
 @property(readonly, nonatomic) GLUEButton *tryAgainButton; // @synthesize tryAgainButton=_tryAgainButton;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) GLUEButton *scanCodeButton; // @synthesize scanCodeButton=_scanCodeButton;
 @property(readonly, nonatomic) GLUEButton *sessionButton; // @synthesize sessionButton=_sessionButton;
 @property(readonly, nonatomic) GLUEButton *seeListenersButton; // @synthesize seeListenersButton=_seeListenersButton;
 @property(readonly, nonatomic) SPTSocialListeningSessionScannableView *scannableView; // @synthesize scannableView=_scannableView;
@@ -57,6 +59,7 @@
 - (void)addViewConstraints;
 - (void)setupSeeListenersButton;
 - (void)setupLeaveSessionButton;
+- (void)setupScanCodeButton;
 - (void)setupStartSessionButton;
 - (void)setupTryAgainButton;
 - (void)setupTryAgainLabel;

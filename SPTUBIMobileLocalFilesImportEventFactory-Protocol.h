@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileLocalFilesImport_DiscardDialogEventFactory, SPTUBIMobileLocalFilesImport_EverythingImportedDialogEventFactory, SPTUBIMobileLocalFilesImport_ImportConfirmationDialogEventFactory, SPTUBIMobileLocalFilesImport_NoFilesDialogEventFactory, SPTUBIMobileLocalFilesImport_SectionsEventFactory, SPTUBIMobileLocalFilesImport_ToolbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileLocalFilesImport_DiscardDialogEventFactory, SPTUBIMobileLocalFilesImport_EverythingImportedDialogEventFactory, SPTUBIMobileLocalFilesImport_ImportConfirmationDialogEventFactory, SPTUBIMobileLocalFilesImport_NoFilesDialogEventFactory, SPTUBIMobileLocalFilesImport_SectionsEventFactory, SPTUBIMobileLocalFilesImport_ToolbarEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImportEventFactory <NSObject>
 - (id <SPTUBIMobileLocalFilesImport_NoFilesDialogEventFactory>)noFilesDialogFactory;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobileLocalFilesImport_ImportConfirmationDialogEventFactory>)importConfirmationDialogFactory;
 - (id <SPTUBIMobileLocalFilesImport_SectionsEventFactory>)sectionsFactory;
 - (id <SPTUBIMobileLocalFilesImport_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

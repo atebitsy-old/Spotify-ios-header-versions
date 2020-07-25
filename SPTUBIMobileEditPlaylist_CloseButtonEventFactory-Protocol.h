@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileEditPlaylist_CloseButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIInteractionEvent>)hitUiHide;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

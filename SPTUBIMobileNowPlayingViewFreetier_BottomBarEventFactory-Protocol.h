@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileNowPlayingViewFreetier_BottomBar_ConnectButtonEventFactory, SPTUBIMobileNowPlayingViewFreetier_BottomBar_ShareButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileNowPlayingViewFreetier_BottomBar_ConnectButtonEventFactory, SPTUBIMobileNowPlayingViewFreetier_BottomBar_ShareButtonEventFactory;
 
 @protocol SPTUBIMobileNowPlayingViewFreetier_BottomBarEventFactory <NSObject>
 - (id <SPTUBIMobileNowPlayingViewFreetier_BottomBar_ShareButtonEventFactory>)shareButtonFactory;
 - (id <SPTUBIMobileNowPlayingViewFreetier_BottomBar_ConnectButtonEventFactory>)connectButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

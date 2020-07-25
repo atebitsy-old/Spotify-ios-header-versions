@@ -6,11 +6,15 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSData, NSSet, NSString, NSURL, UIImage;
+@class NSArray, NSData, NSSet, NSString, NSURL, UIImage;
 @protocol SPTSharingSDKEntityData, SPTSharingSDKUTMTag;
 
 @protocol SPTSharingSDKEntityDataFactory <NSObject>
+- (id <SPTSharingSDKEntityData>)provideGradientStoryEntityDataWithSpotifyURIString:(NSString *)arg1 extraQueryItems:(NSSet *)arg2 fallbackShareableURL:(NSURL *)arg3 utmTag:(id <SPTSharingSDKUTMTag>)arg4;
 - (id <SPTSharingSDKEntityData>)provideImageStoryEntityDataWithSpotifyURIString:(NSString *)arg1 image:(UIImage *)arg2 extraQueryItems:(NSSet *)arg3 fallbackShareableURL:(NSURL *)arg4 utmTag:(id <SPTSharingSDKUTMTag>)arg5;
 - (id <SPTSharingSDKEntityData>)provideVideoStoryEntityDataWithSpotifyURIString:(NSString *)arg1 video:(NSData *)arg2 extraQueryItems:(NSSet *)arg3 fallbackShareableURL:(NSURL *)arg4 utmTag:(id <SPTSharingSDKUTMTag>)arg5;
+- (id <SPTSharingSDKEntityData>)provideImageEntityDataWithSpotifyURIString:(NSString *)arg1 image:(UIImage *)arg2;
+- (id <SPTSharingSDKEntityData>)provideMessageEntityDataWithSpotifyURIString:(NSString *)arg1 text:(NSString *)arg2 extraQueryItems:(NSSet *)arg3 fallbackShareableURL:(NSURL *)arg4 utmTag:(id <SPTSharingSDKUTMTag>)arg5 excludedActivityTypes:(NSArray *)arg6;
+- (id <SPTSharingSDKEntityData>)provideLinkEntityDataWithSpotifyURIString:(NSString *)arg1 extraQueryItems:(NSSet *)arg2 fallbackShareableURL:(NSURL *)arg3 utmTag:(id <SPTSharingSDKUTMTag>)arg4 excludedActivityTypes:(NSArray *)arg5;
 @end
 

@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileNowPlayingViewFeedback_TrackInformation_ArtistLabelEventFactory, SPTUBIMobileNowPlayingViewFeedback_TrackInformation_TitleLabelEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileNowPlayingViewFeedback_TrackInformation_ArtistLabelEventFactory, SPTUBIMobileNowPlayingViewFeedback_TrackInformation_TitleLabelEventFactory;
 
 @protocol SPTUBIMobileNowPlayingViewFeedback_TrackInformationEventFactory <NSObject>
 - (id <SPTUBIMobileNowPlayingViewFeedback_TrackInformation_ArtistLabelEventFactory>)artistLabelFactory;
 - (id <SPTUBIMobileNowPlayingViewFeedback_TrackInformation_TitleLabelEventFactory>)titleLabelFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

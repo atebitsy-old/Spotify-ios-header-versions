@@ -8,20 +8,24 @@
 
 #import "SPTFormatListItemModel-Protocol.h"
 
-@class NSDictionary, NSString, NSURL;
+@class NSArray, NSDictionary, NSString, NSURL;
 
 @interface SPTFormatListItemModelImplementation : NSObject <SPTFormatListItemModel>
 {
     _Bool _playable;
+    _Bool _playStatePlayable;
     _Bool _explicitItem;
+    _Bool _is19PlusOnly;
     _Bool _backgroundable;
     _Bool _locallyPlayable;
     _Bool _inCollection;
     _Bool _banned;
+    _Bool _premiumOnly;
     NSDictionary *_formatListAttributes;
     NSString *_name;
     NSURL *_URL;
     NSString *_UID;
+    NSArray *_artistNames;
     NSString *_artistName;
     NSURL *_artistURL;
     NSString *_albumName;
@@ -37,11 +41,14 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic, getter=isPremiumOnly) _Bool premiumOnly; // @synthesize premiumOnly=_premiumOnly;
 @property(nonatomic, getter=isBanned) _Bool banned; // @synthesize banned=_banned;
 @property(nonatomic, getter=isInCollection) _Bool inCollection; // @synthesize inCollection=_inCollection;
 @property(nonatomic, getter=isLocallyPlayable) _Bool locallyPlayable; // @synthesize locallyPlayable=_locallyPlayable;
 @property(nonatomic, getter=isBackgroundable) _Bool backgroundable; // @synthesize backgroundable=_backgroundable;
+@property(nonatomic) _Bool is19PlusOnly; // @synthesize is19PlusOnly=_is19PlusOnly;
 @property(nonatomic, getter=isExplicitItem) _Bool explicitItem; // @synthesize explicitItem=_explicitItem;
+@property(nonatomic, getter=isPlayStatePlayable) _Bool playStatePlayable; // @synthesize playStatePlayable=_playStatePlayable;
 @property(nonatomic, getter=isPlayable) _Bool playable; // @synthesize playable=_playable;
 @property(copy, nonatomic) NSString *previewID; // @synthesize previewID=_previewID;
 @property(copy, nonatomic) NSString *mediaType; // @synthesize mediaType=_mediaType;
@@ -55,6 +62,7 @@
 @property(copy, nonatomic) NSString *albumName; // @synthesize albumName=_albumName;
 @property(retain, nonatomic) NSURL *artistURL; // @synthesize artistURL=_artistURL;
 @property(copy, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;
+@property(copy, nonatomic) NSArray *artistNames; // @synthesize artistNames=_artistNames;
 @property(copy, nonatomic) NSString *UID; // @synthesize UID=_UID;
 @property(retain, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(copy, nonatomic) NSString *name; // @synthesize name=_name;

@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileYourLibraryAlbums_SortFilterSheet_FilterOptionEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitClearFilter;
 - (id <SPTUBIInteractionEvent>)hitFilter;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

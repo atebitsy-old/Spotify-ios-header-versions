@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileCollectionArtist_ItemList_DownloadToggle_CancelEventFactory, SPTUBIMobileCollectionArtist_ItemList_DownloadToggle_ConfirmRemoveDownloadsEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileCollectionArtist_ItemList_DownloadToggle_CancelEventFactory, SPTUBIMobileCollectionArtist_ItemList_DownloadToggle_ConfirmRemoveDownloadsEventFactory;
 
 @protocol SPTUBIMobileCollectionArtist_ItemList_DownloadToggleEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitNoAction;
@@ -16,6 +16,6 @@
 - (id <SPTUBIInteractionEvent>)hitDownloadWithItemToDownload:(NSURL *)arg1;
 - (id <SPTUBIMobileCollectionArtist_ItemList_DownloadToggle_CancelEventFactory>)cancelFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileCollectionArtist_ItemList_DownloadToggle_ConfirmRemoveDownloadsEventFactory>)confirmRemoveDownloadsFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

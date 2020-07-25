@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePlaylistEntity_Header_CoverArtEventFactory, SPTUBIMobilePlaylistEntity_Header_FollowButtonEventFactory, SPTUBIMobilePlaylistEntity_Header_OwnerEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePlaylistEntity_Header_CoverArtEventFactory, SPTUBIMobilePlaylistEntity_Header_FollowButtonEventFactory, SPTUBIMobilePlaylistEntity_Header_OwnerEventFactory;
 
 @protocol SPTUBIMobilePlaylistEntity_HeaderEventFactory <NSObject>
 - (id <SPTUBIMobilePlaylistEntity_Header_FollowButtonEventFactory>)followButtonFactory;
 - (id <SPTUBIMobilePlaylistEntity_Header_OwnerEventFactory>)ownerFactory;
 - (id <SPTUBIMobilePlaylistEntity_Header_CoverArtEventFactory>)coverArtFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

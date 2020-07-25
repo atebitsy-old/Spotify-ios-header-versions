@@ -15,13 +15,14 @@
     // Error parsing type: , name: tapAction
     // Error parsing type: , name: onProgress
     // Error parsing type: , name: onFullHeaderProgress
+    // Error parsing type: , name: onRemount
     // Error parsing type: , name: chevronContainerView
     // Error parsing type: , name: darkeningView
     // Error parsing type: , name: glyphLabel
     // Error parsing type: , name: glyphOffsetProgressRange
     // Error parsing type: , name: glyphProtectionProgressRange
     // Error parsing type: , name: buttonFadeOutProgressRange
-    // Error parsing type: , name: protectionEnabled
+    // Error parsing type: , name: associatedColor
 }
 
 - (void)performAction;

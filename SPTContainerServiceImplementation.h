@@ -39,6 +39,7 @@
 - (CDUnknownBlockType)provideContainerLogoutHandler;
 - (id)providePageRegistry;
 - (id)provideStartupTracer;
+- (id)provideLogCenterCoreIntegration;
 - (id)provideLogCenter;
 - (id)provideUICompletionNotifier;
 - (id)provideNavigationRouter;

@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileLocalFilesImport_Sections_Section_BottomBar_DeselectAllToggleButtonEventFactory, SPTUBIMobileLocalFilesImport_Sections_Section_BottomBar_SelectAllToggleButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileLocalFilesImport_Sections_Section_BottomBar_DeselectAllToggleButtonEventFactory, SPTUBIMobileLocalFilesImport_Sections_Section_BottomBar_SelectAllToggleButtonEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImport_Sections_Section_BottomBarEventFactory <NSObject>
 - (id <SPTUBIMobileLocalFilesImport_Sections_Section_BottomBar_DeselectAllToggleButtonEventFactory>)deselectAllToggleButtonFactory;
 - (id <SPTUBIMobileLocalFilesImport_Sections_Section_BottomBar_SelectAllToggleButtonEventFactory>)selectAllToggleButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

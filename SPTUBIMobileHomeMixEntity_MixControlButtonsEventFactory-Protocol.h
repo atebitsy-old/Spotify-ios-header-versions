@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileHomeMixEntity_MixControlButtons_ChillButtonEventFactory, SPTUBIMobileHomeMixEntity_MixControlButtons_PlayPauseButtonEventFactory, SPTUBIMobileHomeMixEntity_MixControlButtons_UpbeatButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileHomeMixEntity_MixControlButtons_ChillButtonEventFactory, SPTUBIMobileHomeMixEntity_MixControlButtons_PlayPauseButtonEventFactory, SPTUBIMobileHomeMixEntity_MixControlButtons_UpbeatButtonEventFactory;
 
 @protocol SPTUBIMobileHomeMixEntity_MixControlButtonsEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileHomeMixEntity_MixControlButtons_UpbeatButtonEventFactory>)upbeatButtonFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileHomeMixEntity_MixControlButtons_PlayPauseButtonEventFactory>)playPauseButtonFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileHomeMixEntity_MixControlButtons_ChillButtonEventFactory>)chillButtonFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

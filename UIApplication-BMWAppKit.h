@@ -21,8 +21,8 @@
 + (id)communicationProtocols;
 + (id)legacyCommunicationProtocol;
 @property(readonly, nonatomic) double spt_maxSafeAreaInsets;
-- (id)spt_rootView;
 - (void)spt_safelyExit:(int)arg1;
 - (void)spt_safelyExit;
+- (id)spt_rootView;
 @end
 

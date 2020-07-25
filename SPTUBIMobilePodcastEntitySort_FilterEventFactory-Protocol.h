@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntitySort_Filter_AllEpisodesButtonEventFactory, SPTUBIMobilePodcastEntitySort_Filter_DownloadsButtonEventFactory, SPTUBIMobilePodcastEntitySort_Filter_UnplayedButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastEntitySort_Filter_AllEpisodesButtonEventFactory, SPTUBIMobilePodcastEntitySort_Filter_DownloadsButtonEventFactory, SPTUBIMobilePodcastEntitySort_Filter_UnplayedButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntitySort_FilterEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastEntitySort_Filter_UnplayedButtonEventFactory>)unplayedButtonFactory;
 - (id <SPTUBIMobilePodcastEntitySort_Filter_DownloadsButtonEventFactory>)downloadsButtonFactory;
 - (id <SPTUBIMobilePodcastEntitySort_Filter_AllEpisodesButtonEventFactory>)allEpisodesButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

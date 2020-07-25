@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileLyrics_FullscreenView_ContextMenuEventFactory, SPTUBIMobileLyrics_FullscreenView_FooterViewEventFactory, SPTUBIMobileLyrics_FullscreenView_HeaderViewEventFactory, SPTUBIMobileLyrics_FullscreenView_LyricsViewEventFactory, SPTUBIMobileLyrics_FullscreenView_ReportBannerEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileLyrics_FullscreenView_ContextMenuEventFactory, SPTUBIMobileLyrics_FullscreenView_FooterViewEventFactory, SPTUBIMobileLyrics_FullscreenView_HeaderViewEventFactory, SPTUBIMobileLyrics_FullscreenView_LyricsViewEventFactory, SPTUBIMobileLyrics_FullscreenView_ReportBannerEventFactory;
 
 @protocol SPTUBIMobileLyrics_FullscreenViewEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobileLyrics_FullscreenView_LyricsViewEventFactory>)lyricsViewFactory;
 - (id <SPTUBIMobileLyrics_FullscreenView_HeaderViewEventFactory>)headerViewFactory;
 - (id <SPTUBIMobileLyrics_FullscreenView_ReportBannerEventFactory>)reportBannerFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastFeaturedTracklist_TracklistEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastFeaturedTracklist_TracklistEventFactory;
 
 @protocol SPTUBIMobilePodcastFeaturedTracklistEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastFeaturedTracklist_TracklistEventFactory>)tracklistFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

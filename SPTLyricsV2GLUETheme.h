@@ -17,7 +17,6 @@
 - (id)fullscreenHeaderViewStyle:(_Bool)arg1 withColors:(id)arg2;
 - (id)fullscreenLyricsViewStyleProvider:(_Bool)arg1 withColors:(id)arg2 isLyricsEastAsian:(_Bool)arg3;
 - (id)fullscreenViewStyle:(_Bool)arg1 withColors:(id)arg2;
-- (id)nowPlayingContentLayerLyricsViewStyleProviderWithLyricsEastAsian:(_Bool)arg1;
 - (id)nowPlayingCardLyricsViewStyleProviderWithColors:(id)arg1 isLyricsEastAsian:(_Bool)arg2;
 - (id)nowPlayingCardViewStyleWithColors:(id)arg1;
 - (_Bool)isDefaultScreenClass;

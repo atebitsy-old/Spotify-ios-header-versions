@@ -9,7 +9,7 @@
 #import "SPTBMWCarAPIFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTBMWSession, UIViewController, UIWindow;
-@protocol SPTAccessoryManagerService, SPTContainerService, SPTExternalIntegrationDebugLogService, SPTNetworkService, SPTURIDispatchService;
+@protocol SPTAccessoryManagerService, SPTContainerService, SPTExternalIntegrationDebugLogService, SPTNetworkService, SPTUIPresentationApplicationService, SPTURIDispatchService;
 
 @interface SPTBMWCarAPIFeatureImplementation : NSObject <SPTBMWCarAPIFeature>
 {
@@ -17,6 +17,7 @@
     id <SPTAccessoryManagerService> _accessoryManagerService;
     id <SPTNetworkService> _networkService;
     id <SPTExternalIntegrationDebugLogService> _debugLogService;
+    id <SPTUIPresentationApplicationService> _uiPresentationService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTContainerService> _containerService;
     UIViewController *_rapiDebugViewController;
@@ -29,6 +30,7 @@
 @property(retain, nonatomic) UIViewController *rapiDebugViewController; // @synthesize rapiDebugViewController=_rapiDebugViewController;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
+@property(nonatomic) __weak id <SPTUIPresentationApplicationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(nonatomic) __weak id <SPTExternalIntegrationDebugLogService> debugLogService; // @synthesize debugLogService=_debugLogService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTAccessoryManagerService> accessoryManagerService; // @synthesize accessoryManagerService=_accessoryManagerService;

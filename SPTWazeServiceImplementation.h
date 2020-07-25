@@ -12,7 +12,7 @@
 #import "SPTWazeTestManagerObserver-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTWazePartnerIntegration, SPTWazePresenter, SPTWazeTestManagerImplementation, SPTWazeTransportManager, SPTWazeViewModel;
-@protocol GaiaFeature, SPTAuthService, SPTBannerFeature, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTLocalSettings, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPartnerService, SPTRemoteConfigurationService, SPTSessionService, SPTURIDispatchService, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@protocol GaiaFeature, SPTAuthService, SPTBannerFeature, SPTExternalIntegrationDebugLog, SPTExternalIntegrationDebugLogService, SPTExternalIntegrationPlaybackService, SPTGLUEService, SPTLocalSettings, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPartnerService, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationApplicationService, SPTURIDispatchService, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTWazeServiceImplementation : NSObject <SPTWazeTestManagerObserver, SPTAuthControllerObserver, SPTExternalIntegrationPlaybackControllerObserver, SPTWazeService>
 {
@@ -25,6 +25,7 @@
     id <SPTExternalIntegrationPlaybackService> _externalIntegrationPlaybackService;
     id <GaiaFeature> _gaiaFeature;
     id <SPTURIDispatchService> _uriDispatchService;
+    id <SPTUIPresentationApplicationService> _uiPresentationService;
     id <SlateFeature> _slateService;
     id <SPTGLUEService> _glueService;
     id <SPTPartnerService> _partnerService;
@@ -56,6 +57,7 @@
 @property(readonly, nonatomic) __weak id <SPTPartnerService> partnerService; // @synthesize partnerService=_partnerService;
 @property(readonly, nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(readonly, nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
+@property(readonly, nonatomic) __weak id <SPTUIPresentationApplicationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(readonly, nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(readonly, nonatomic) __weak id <GaiaFeature> gaiaFeature; // @synthesize gaiaFeature=_gaiaFeature;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationPlaybackService> externalIntegrationPlaybackService; // @synthesize externalIntegrationPlaybackService=_externalIntegrationPlaybackService;

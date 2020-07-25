@@ -7,6 +7,7 @@
 #import "_TtC25PodcastQuoteUIFeatureImpl20CollectionViewBinder.h"
 
 @interface _TtC25PodcastQuoteUIFeatureImpl20CollectionViewBinder (PodcastQuoteUIFeatureImpl2)
-- (struct CGSize)collectionView:(id)arg1 layout:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
+- (void)collectionView:(id)arg1 willDisplayCell:(id)arg2 forItemAtIndexPath:(id)arg3;
+- (void)collectionView:(id)arg1 didSelectItemAtIndexPath:(id)arg2;
 @end
 

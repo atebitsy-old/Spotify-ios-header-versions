@@ -40,7 +40,6 @@
 - (void)logFacebookPopupActionTappedWithSessionId:(id)arg1 shareData:(id)arg2;
 - (void)logLINEActionTappedWithSessionId:(id)arg1 shareData:(id)arg2 shareBrowselinkId:(id)arg3;
 - (void)logFBMessengerActionTappedWithSessionId:(id)arg1 shareData:(id)arg2 shareBrowselinkId:(id)arg3;
-- (void)logTikTokAppActionTappedWithSessionId:(id)arg1 shareData:(id)arg2 shareBrowselinkId:(id)arg3;
 - (void)logWhatsAppActionTappedWithSessionId:(id)arg1 shareData:(id)arg2 shareBrowselinkId:(id)arg3;
 - (void)logSnapchatActionTappedWithSessionId:(id)arg1 shareData:(id)arg2 shareBrowselinkId:(id)arg3;
 - (void)logFacebookStoriesActionSucceededWithSessionId:(id)arg1 shareData:(id)arg2 shareBrowselinkId:(id)arg3;

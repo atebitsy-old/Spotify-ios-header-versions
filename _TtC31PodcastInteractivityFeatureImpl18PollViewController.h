@@ -10,6 +10,7 @@
 {
     // Error parsing type: , name: style
     // Error parsing type: , name: mobiusController
+    // Error parsing type: , name: $__lazy_storage_$_headerView
     // Error parsing type: , name: $__lazy_storage_$_footerView
     // Error parsing type: , name: $__lazy_storage_$_tableView
 }

@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSArray, NSString, NSURL;
+
 @interface _TtCOO20EncoreConsumerMobile10Components8TrackRow5Model : NSObject
 {
     // Error parsing type: , name: name
@@ -26,6 +28,18 @@
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithName:(id)arg1 artists:(id)arg2 addedBy:(id)arg3 coverArt:(id)arg4 downloadState:(long long)arg5 restriction:(long long)arg6 isPremiumOnly:(_Bool)arg7 isPlaying:(_Bool)arg8 isPlayable:(_Bool)arg9 modifier:(long long)arg10 isPressed:(_Bool)arg11 deviceOffline:(_Bool)arg12;
+@property(nonatomic, readonly) _Bool deviceOffline; // @synthesize deviceOffline;
+@property(nonatomic, readonly) _Bool isPressed; // @synthesize isPressed;
+@property(nonatomic, readonly) long long modifier; // @synthesize modifier;
+@property(nonatomic, readonly) _Bool isPlayable; // @synthesize isPlayable;
+@property(nonatomic, readonly) _Bool isPlaying; // @synthesize isPlaying;
+@property(nonatomic, readonly) _Bool isPremiumOnly; // @synthesize isPremiumOnly;
+@property(nonatomic, readonly) long long restriction; // @synthesize restriction;
+@property(nonatomic, readonly) long long downloadState; // @synthesize downloadState;
+@property(nonatomic, readonly) NSURL *coverArt;
+@property(nonatomic, readonly) NSString *addedBy;
+@property(nonatomic, readonly) NSArray *artists;
+@property(nonatomic, readonly) NSString *name;
 
 @end
 

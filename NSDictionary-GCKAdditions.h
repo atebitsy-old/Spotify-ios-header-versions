@@ -104,6 +104,7 @@
 - (id)spt_premiumDestinationGradientDirectionValue;
 - (id)spt_premiumDestinationGradientColorArray;
 - (id)spt_premiumDestinationGradientStyle;
+- (id)spt_benefitsList;
 - (unsigned long long)spt_premiumDestinationUICacheTTLFromHTTPResponseHeaders;
 - (id)spt_premiumDestinationUIGradientDirectionValue;
 - (id)spt_premiumDestinationUIGradientColorArray;

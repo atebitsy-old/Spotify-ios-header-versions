@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileQueue_QueueUpNext_QueuedTrackEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)dragSort;
 - (id <SPTUBIInteractionEvent>)hitDeselectEntityInListWithEntityToBeDeselected:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitSelectEntityInListWithEntityToBeSelected:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

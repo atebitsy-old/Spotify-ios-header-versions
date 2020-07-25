@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileArtistAbout_AboutAutobiographyEventFactory, SPTUBIMobileArtistAbout_AboutBiographyEventFactory, SPTUBIMobileArtistAbout_GalleryEventFactory, SPTUBIMobileArtistAbout_SocialFacebookLinkEventFactory, SPTUBIMobileArtistAbout_SocialInstagramLinkEventFactory, SPTUBIMobileArtistAbout_SocialTwitterLinkEventFactory, SPTUBIMobileArtistAbout_SocialWikipediaLinkEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileArtistAbout_AboutAutobiographyEventFactory, SPTUBIMobileArtistAbout_AboutBiographyEventFactory, SPTUBIMobileArtistAbout_GalleryEventFactory, SPTUBIMobileArtistAbout_SocialFacebookLinkEventFactory, SPTUBIMobileArtistAbout_SocialInstagramLinkEventFactory, SPTUBIMobileArtistAbout_SocialTwitterLinkEventFactory, SPTUBIMobileArtistAbout_SocialWikipediaLinkEventFactory;
 
 @protocol SPTUBIMobileArtistAboutEventFactory <NSObject>
 - (id <SPTUBIMobileArtistAbout_SocialFacebookLinkEventFactory>)socialFacebookLinkFactory;
@@ -16,6 +16,6 @@
 - (id <SPTUBIMobileArtistAbout_AboutAutobiographyEventFactory>)aboutAutobiographyFactory;
 - (id <SPTUBIMobileArtistAbout_AboutBiographyEventFactory>)aboutBiographyFactory;
 - (id <SPTUBIMobileArtistAbout_GalleryEventFactory>)galleryFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

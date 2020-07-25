@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBINowPlayingBar_HeartButtonEventFactory, SPTUBINowPlayingBar_PlayButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBINowPlayingBar_HeartButtonEventFactory, SPTUBINowPlayingBar_PlayButtonEventFactory;
 
 @protocol SPTUBINowPlayingBarEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
@@ -16,6 +16,6 @@
 - (id <SPTUBIInteractionEvent>)swipeUiReveal;
 - (id <SPTUBINowPlayingBar_HeartButtonEventFactory>)heartButtonFactory;
 - (id <SPTUBINowPlayingBar_PlayButtonEventFactory>)playButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

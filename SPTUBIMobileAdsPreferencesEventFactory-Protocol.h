@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAdsPreferences_AdPartnerPreferencesEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAdsPreferences_AdPartnerPreferencesEventFactory;
 
 @protocol SPTUBIMobileAdsPreferencesEventFactory <NSObject>
 - (id <SPTUBIMobileAdsPreferences_AdPartnerPreferencesEventFactory>)adPartnerPreferencesFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

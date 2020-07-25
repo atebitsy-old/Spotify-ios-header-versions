@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIGAIAMobileConnectSettingsPage_DeviceLockScreenToggleEventFactory, SPTUBIGAIAMobileConnectSettingsPage_DeviceMenuButtonEventFactory, SPTUBIGAIAMobileConnectSettingsPage_LocalDeviceToggleEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIGAIAMobileConnectSettingsPage_DeviceLockScreenToggleEventFactory, SPTUBIGAIAMobileConnectSettingsPage_DeviceMenuButtonEventFactory, SPTUBIGAIAMobileConnectSettingsPage_LocalDeviceToggleEventFactory;
 
 @protocol SPTUBIGAIAMobileConnectSettingsPageEventFactory <NSObject>
 - (id <SPTUBIGAIAMobileConnectSettingsPage_DeviceLockScreenToggleEventFactory>)deviceLockScreenToggleFactory;
 - (id <SPTUBIGAIAMobileConnectSettingsPage_LocalDeviceToggleEventFactory>)localDeviceToggleFactory;
 - (id <SPTUBIGAIAMobileConnectSettingsPage_DeviceMenuButtonEventFactory>)deviceMenuButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

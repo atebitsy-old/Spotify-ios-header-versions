@@ -6,8 +6,11 @@
 
 #import "_TtC25PodcastQuoteUIFeatureImpl21PodcastQuoteUIService.h"
 
+@protocol SPTPodcastQuoteUIComponentFactory;
+
 @interface _TtC25PodcastQuoteUIFeatureImpl21PodcastQuoteUIService (PodcastQuoteUIFeatureImpl)
 + (id)serviceIdentifier;
+@property(nonatomic, readonly) id <SPTPodcastQuoteUIComponentFactory> componentFactory;
 - (void)configureWithServices:(id)arg1;
 @end
 

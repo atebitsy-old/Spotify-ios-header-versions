@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileConnectAttachPopup_ContainerView_CloseEventFactory, SPTUBIMobileConnectAttachPopup_ContainerView_ContinueButtonEventFactory, SPTUBIMobileConnectAttachPopup_ContainerView_ListenOnThisDeviceButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileConnectAttachPopup_ContainerView_CloseEventFactory, SPTUBIMobileConnectAttachPopup_ContainerView_ContinueButtonEventFactory, SPTUBIMobileConnectAttachPopup_ContainerView_ListenOnThisDeviceButtonEventFactory;
 
 @protocol SPTUBIMobileConnectAttachPopup_ContainerViewEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileConnectAttachPopup_ContainerView_CloseEventFactory>)closeFactoryWithReason:(NSString *)arg1;
 - (id <SPTUBIMobileConnectAttachPopup_ContainerView_ListenOnThisDeviceButtonEventFactory>)listenOnThisDeviceButtonFactory;
 - (id <SPTUBIMobileConnectAttachPopup_ContainerView_ContinueButtonEventFactory>)continueButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

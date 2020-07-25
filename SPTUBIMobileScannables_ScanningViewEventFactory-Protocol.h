@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileScannables_ScanningView_CloseButtonEventFactory, SPTUBIMobileScannables_ScanningView_SelectPhotoButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileScannables_ScanningView_CloseButtonEventFactory, SPTUBIMobileScannables_ScanningView_SelectPhotoButtonEventFactory;
 
 @protocol SPTUBIMobileScannables_ScanningViewEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)scanCodeJoinSocialListeningSession;
 - (id <SPTUBIInteractionEvent>)scanCodeUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIMobileScannables_ScanningView_CloseButtonEventFactory>)closeButtonFactory;
 - (id <SPTUBIMobileScannables_ScanningView_SelectPhotoButtonEventFactory>)selectPhotoButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

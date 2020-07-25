@@ -7,16 +7,11 @@
 #import <objc/NSObject.h>
 
 @class NSArray, NSDictionary, NSString;
+@protocol SPTUBIInteractionEventLocation;
 
 @interface _TtC18ProfileFeatureImplP33_8A316DF310E0621348DC3416DBE10E4630InteractionEventImplementation : NSObject
 {
-    // Error parsing type: , name: applicationId
-    // Error parsing type: , name: specificationId
-    // Error parsing type: , name: specificationVersion
-    // Error parsing type: , name: specificationCommitHash
-    // Error parsing type: , name: generatorCommitHash
-    // Error parsing type: , name: interactionType
-    // Error parsing type: , name: components
+    // Error parsing type: , name: location
     // Error parsing type: , name: action
     // Error parsing type: , name: actionVersion
     // Error parsing type: , name: actionParameters
@@ -29,12 +24,7 @@
 @property(nonatomic, readonly) NSDictionary *actionParameters;
 @property(nonatomic, readonly) long long actionVersion; // @synthesize actionVersion;
 @property(nonatomic, readonly) NSString *action;
-@property(nonatomic, readonly) NSArray *components;
-@property(nonatomic, readonly) NSString *interactionType;
-@property(nonatomic, readonly) NSString *generatorCommitHash;
-@property(nonatomic, readonly) NSString *specificationCommitHash;
-@property(nonatomic, readonly) NSString *specificationVersion;
-@property(nonatomic, readonly) NSString *applicationId;
+@property(nonatomic, readonly) id <SPTUBIInteractionEventLocation> location; // @synthesize location;
 
 @end
 

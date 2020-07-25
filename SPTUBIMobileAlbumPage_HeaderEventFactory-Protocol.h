@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAlbumPage_Header_TopBarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_Header_TopBarEventFactory;
 
 @protocol SPTUBIMobileAlbumPage_HeaderEventFactory <NSObject>
 - (id <SPTUBIMobileAlbumPage_Header_TopBarEventFactory>)topBarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

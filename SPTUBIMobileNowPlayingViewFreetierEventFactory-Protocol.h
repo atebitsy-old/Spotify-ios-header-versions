@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileNowPlayingViewFreetier_BottomBarEventFactory, SPTUBIMobileNowPlayingViewFreetier_CoverArtEventFactory, SPTUBIMobileNowPlayingViewFreetier_MainControlsEventFactory, SPTUBIMobileNowPlayingViewFreetier_PlaybackProgressEventFactory, SPTUBIMobileNowPlayingViewFreetier_ScrollComponentsEventFactory, SPTUBIMobileNowPlayingViewFreetier_TopBarEventFactory, SPTUBIMobileNowPlayingViewFreetier_TrackInformationEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileNowPlayingViewFreetier_BottomBarEventFactory, SPTUBIMobileNowPlayingViewFreetier_CoverArtEventFactory, SPTUBIMobileNowPlayingViewFreetier_MainControlsEventFactory, SPTUBIMobileNowPlayingViewFreetier_PlaybackProgressEventFactory, SPTUBIMobileNowPlayingViewFreetier_ScrollComponentsEventFactory, SPTUBIMobileNowPlayingViewFreetier_TopBarEventFactory, SPTUBIMobileNowPlayingViewFreetier_TrackInformationEventFactory;
 
 @protocol SPTUBIMobileNowPlayingViewFreetierEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeUiHide;
@@ -18,6 +18,6 @@
 - (id <SPTUBIMobileNowPlayingViewFreetier_TrackInformationEventFactory>)trackInformationFactory;
 - (id <SPTUBIMobileNowPlayingViewFreetier_CoverArtEventFactory>)coverArtFactory;
 - (id <SPTUBIMobileNowPlayingViewFreetier_TopBarEventFactory>)topBarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

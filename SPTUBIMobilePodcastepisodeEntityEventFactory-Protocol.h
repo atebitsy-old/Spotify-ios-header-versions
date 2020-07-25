@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastepisodeEntity_ActionsEventFactory, SPTUBIMobilePodcastepisodeEntity_EpisodeImageEventFactory, SPTUBIMobilePodcastepisodeEntity_EpisodeInfoEventFactory, SPTUBIMobilePodcastepisodeEntity_HeaderEventFactory, SPTUBIMobilePodcastepisodeEntity_SeeAllEpisodesButtonEventFactory, SPTUBIMobilePodcastepisodeEntity_ToolBarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastepisodeEntity_ActionsEventFactory, SPTUBIMobilePodcastepisodeEntity_EpisodeImageEventFactory, SPTUBIMobilePodcastepisodeEntity_EpisodeInfoEventFactory, SPTUBIMobilePodcastepisodeEntity_HeaderEventFactory, SPTUBIMobilePodcastepisodeEntity_SeeAllEpisodesButtonEventFactory, SPTUBIMobilePodcastepisodeEntity_ToolBarEventFactory;
 
 @protocol SPTUBIMobilePodcastepisodeEntityEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastepisodeEntity_SeeAllEpisodesButtonEventFactory>)seeAllEpisodesButtonFactory;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobilePodcastepisodeEntity_ActionsEventFactory>)actionsFactory;
 - (id <SPTUBIMobilePodcastepisodeEntity_HeaderEventFactory>)headerFactory;
 - (id <SPTUBIMobilePodcastepisodeEntity_ToolBarEventFactory>)toolBarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

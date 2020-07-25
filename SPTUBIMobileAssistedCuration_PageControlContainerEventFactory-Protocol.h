@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAssistedCuration_PageControlContainer_PageControlEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAssistedCuration_PageControlContainer_PageControlEventFactory;
 
 @protocol SPTUBIMobileAssistedCuration_PageControlContainerEventFactory <NSObject>
 - (id <SPTUBIMobileAssistedCuration_PageControlContainer_PageControlEventFactory>)pageControlFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

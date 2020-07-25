@@ -17,10 +17,12 @@
     _Bool _enabled;
     _Bool _newUiExperienceEnabled;
     _Bool _allowListen;
+    _Bool _newUiExperienceScannables;
     long long _multiOutputMaxNumberOfParticipants;
 }
 
 @property(readonly, nonatomic) long long multiOutputMaxNumberOfParticipants; // @synthesize multiOutputMaxNumberOfParticipants=_multiOutputMaxNumberOfParticipants;
+@property(readonly, nonatomic) _Bool newUiExperienceScannables; // @synthesize newUiExperienceScannables=_newUiExperienceScannables;
 @property(readonly, nonatomic) _Bool allowListen; // @synthesize allowListen=_allowListen;
 @property(readonly, nonatomic) _Bool newUiExperienceEnabled; // @synthesize newUiExperienceEnabled=_newUiExperienceEnabled;
 @property(readonly, nonatomic) _Bool enabled; // @synthesize enabled=_enabled;

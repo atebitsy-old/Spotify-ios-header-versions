@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHome_Shelves_RecentlyPlayedShelf_Carousel_SmallCardEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHome_Shelves_RecentlyPlayedShelf_Carousel_SmallCardEventFactory;
 
 @protocol SPTUBIMobileHome_Shelves_RecentlyPlayedShelf_CarouselEventFactory <NSObject>
 - (id <SPTUBIMobileHome_Shelves_RecentlyPlayedShelf_Carousel_SmallCardEventFactory>)smallCardFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

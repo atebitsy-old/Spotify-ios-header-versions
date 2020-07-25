@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggle_CancelEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggle_ConfirmRemoveDownloadsEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggle_CancelEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggle_ConfirmRemoveDownloadsEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggleEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIInteractionEvent>)hitDownloadWithItemToDownload:(NSURL *)arg1;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggle_CancelEventFactory>)cancelFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_DownloadToggle_ConfirmRemoveDownloadsEventFactory>)confirmRemoveDownloadsFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

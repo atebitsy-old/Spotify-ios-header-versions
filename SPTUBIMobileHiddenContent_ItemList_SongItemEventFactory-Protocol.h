@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileHiddenContent_ItemList_SongItem_AlbumCoverEventFactory, SPTUBIMobileHiddenContent_ItemList_SongItem_BanButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileHiddenContent_ItemList_SongItem_AlbumCoverEventFactory, SPTUBIMobileHiddenContent_ItemList_SongItem_BanButtonEventFactory;
 
 @protocol SPTUBIMobileHiddenContent_ItemList_SongItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIMobileHiddenContent_ItemList_SongItem_BanButtonEventFactory>)banButtonFactory;
 - (id <SPTUBIMobileHiddenContent_ItemList_SongItem_AlbumCoverEventFactory>)albumCoverFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

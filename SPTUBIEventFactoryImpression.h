@@ -9,25 +9,18 @@
 #import "SPTUBIImpressionEvent-Protocol.h"
 
 @class NSArray, NSString;
+@protocol SPTUBIEventLocation;
 
 @interface SPTUBIEventFactoryImpression : NSObject <SPTUBIImpressionEvent>
 {
-    NSString *_applicationId;
-    NSArray *_components;
+    id <SPTUBIEventLocation> _location;
     NSArray *_errors;
-    NSString *_specificationCommitHash;
-    NSString *_generatorCommitHash;
-    NSString *_specificationVersion;
 }
 
 - (void).cxx_destruct;
-@property(readonly, copy, nonatomic) NSString *specificationVersion; // @synthesize specificationVersion=_specificationVersion;
-@property(readonly, copy, nonatomic) NSString *generatorCommitHash; // @synthesize generatorCommitHash=_generatorCommitHash;
-@property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
 @property(readonly, copy, nonatomic) NSArray *errors; // @synthesize errors=_errors;
-@property(readonly, copy, nonatomic) NSArray *components; // @synthesize components=_components;
-@property(readonly, copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
-- (id)initWithApplicationId:(id)arg1 specificationCommitHash:(id)arg2 specificationVersion:(id)arg3 components:(id)arg4 errors:(id)arg5;
+@property(readonly, nonatomic) id <SPTUBIEventLocation> location; // @synthesize location=_location;
+- (id)initWithLocation:(id)arg1 errors:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

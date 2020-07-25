@@ -13,6 +13,7 @@
     // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: settingsService
     // Error parsing type: , name: sessionService
+    // Error parsing type: , name: uiPresentationService
     // Error parsing type: , name: $__lazy_storage_$_carModeEngine
     // Error parsing type: , name: $__lazy_storage_$_distractionControl
     // Error parsing type: , name: carModeEngineLoop

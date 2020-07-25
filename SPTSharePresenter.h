@@ -8,11 +8,12 @@
 
 #import "SPTShareViewControllerDelegate-Protocol.h"
 
-@class NSString, SPTProgressView, SPTShareFeatureProperties, SPTShareHandlerFactory, SPTShareViewController, SPTSharingSDK, UIViewController;
+@class NSString, SPTProgressView, SPTShareFeatureProperties, SPTShareHandlerFactory, SPTSharePresenterSharingSDKHelper, SPTShareViewController, SPTSharingSDK, UIViewController;
 @protocol SPTAlertController, SPTPageController, SPTShareDeeplinkHandler, SPTShareEventSenderLogger, SPTShareHandler, SPTShareUBILogger, _TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_;
 
 @interface SPTSharePresenter : NSObject <SPTShareViewControllerDelegate>
 {
+    SPTSharePresenterSharingSDKHelper *_sharingSDKHelper;
     UIViewController *_contextViewController;
     SPTShareViewController *_shareViewController;
     SPTShareHandlerFactory *_shareHandlerFactory;
@@ -37,7 +38,7 @@
 @property(readonly, nonatomic) __weak id <SPTShareUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) __weak id <SPTPageController> pageController; // @synthesize pageController=_pageController;
 @property(readonly, nonatomic) __weak id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
-@property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
+@property(readonly, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) id <SPTShareHandler> shareHandler; // @synthesize shareHandler=_shareHandler;
 @property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(readonly, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
@@ -53,10 +54,12 @@
 - (void)shareWithData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)shareWithBackendGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)shareWithLocalGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)performShareWithSharingSDKWithShareDestination:(id)arg1 shareData:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)performShareDestination:(id)arg1 shareData:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)presentViewController:(id)arg1;
 - (void)discardChildViewControllerIfNecessary;
 - (void)dismissShareViewController:(CDUnknownBlockType)arg1;
+@property(readonly, nonatomic) SPTSharePresenterSharingSDKHelper *sharingSDKHelper; // @synthesize sharingSDKHelper=_sharingSDKHelper;
 - (void)dismissWithCompletion:(CDUnknownBlockType)arg1;
 - (void)presentProgressView;
 - (void)presentAlertControllerWithModel:(id)arg1;

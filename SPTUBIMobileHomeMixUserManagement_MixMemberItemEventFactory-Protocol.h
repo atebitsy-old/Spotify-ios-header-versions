@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileHomeMixUserManagement_MixMemberItem_MixMemberToggleEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileHomeMixUserManagement_MixMemberItem_MixMemberToggleEventFactory;
 
 @protocol SPTUBIMobileHomeMixUserManagement_MixMemberItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitTuneEnabled;
 - (id <SPTUBIMobileHomeMixUserManagement_MixMemberItem_MixMemberToggleEventFactory>)mixMemberToggleFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

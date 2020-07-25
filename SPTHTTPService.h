@@ -8,7 +8,7 @@
 
 #import "SPTProductStateObserver-Protocol.h"
 
-@class NSString, SPCore, SPTDataLoaderFactory, SPTDataLoaderFactoryManager, SPTDataLoaderOauthAuthoriser, SPTDataLoaderRequestAccountingConsumptionObserver, SPTDataLoaderResolver, SPTDataLoaderService, SPTStartupTracer;
+@class NSString, SPCore, SPTDataLoaderChainAuthoriser, SPTDataLoaderClientTokenAuthoriser, SPTDataLoaderFactory, SPTDataLoaderFactoryManager, SPTDataLoaderOauthAuthoriser, SPTDataLoaderRequestAccountingConsumptionObserver, SPTDataLoaderResolver, SPTDataLoaderService, SPTStartupTracer;
 @protocol SPTNetworkConnectivityController;
 
 @interface SPTHTTPService : NSObject <SPTProductStateObserver>
@@ -22,11 +22,15 @@
     SPTDataLoaderFactory *_dataLoaderFactory;
     SPTDataLoaderFactoryManager *_dataLoaderFactoryManager;
     SPTDataLoaderOauthAuthoriser *_oauthAuthoriser;
+    SPTDataLoaderClientTokenAuthoriser *_clientTokenAuthoriser;
+    SPTDataLoaderChainAuthoriser *_chainAuthoriser;
     id _productStateStreamingRulesValue;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id productStateStreamingRulesValue; // @synthesize productStateStreamingRulesValue=_productStateStreamingRulesValue;
+@property(retain, nonatomic) SPTDataLoaderChainAuthoriser *chainAuthoriser; // @synthesize chainAuthoriser=_chainAuthoriser;
+@property(retain, nonatomic) SPTDataLoaderClientTokenAuthoriser *clientTokenAuthoriser; // @synthesize clientTokenAuthoriser=_clientTokenAuthoriser;
 @property(retain, nonatomic) SPTDataLoaderOauthAuthoriser *oauthAuthoriser; // @synthesize oauthAuthoriser=_oauthAuthoriser;
 @property(retain, nonatomic) SPTDataLoaderFactoryManager *dataLoaderFactoryManager; // @synthesize dataLoaderFactoryManager=_dataLoaderFactoryManager;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataLoaderFactory; // @synthesize dataLoaderFactory=_dataLoaderFactory;
@@ -40,7 +44,10 @@
 - (id)provideAuthoriser;
 - (id)provideDataLoaderFactory;
 - (void)clientDidLogout;
-- (void)setOauthClient:(id)arg1 productState:(id)arg2;
+- (void)observeProductState:(id)arg1;
+- (void)makeDataLoaderFactoryWithClientTokenAcquirer:(id)arg1 oauthClient:(id)arg2;
+- (void)makeDataLoaderFactoryWithClientTokenAcquirer:(id)arg1;
+- (void)makeDataLoaderFactoryWithAuthorisers:(id)arg1;
 - (id)dataLoaderServiceConfiguration;
 - (void)dealloc;
 - (id)initWithNetworkConnectivityController:(id)arg1 startupTracer:(id)arg2 core:(id)arg3;

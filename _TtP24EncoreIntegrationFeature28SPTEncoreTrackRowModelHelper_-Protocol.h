@@ -5,6 +5,8 @@
 //
 
 @protocol _TtP24EncoreIntegrationFeature28SPTEncoreTrackRowModelHelper_
+- (long long)trackChartIndicatorStateFromEntryStatus:(unsigned long long)arg1;
+- (long long)trackRestrictionIs19PlusOnly:(_Bool)arg1 isExplicit:(_Bool)arg2;
 - (long long)trackModifierIsHidden:(_Bool)arg1 isInCollection:(_Bool)arg2;
 - (long long)trackModifierIsBanned:(_Bool)arg1 isInCollection:(_Bool)arg2;
 - (long long)downloadStateFromSyncStatus:(long long)arg1;

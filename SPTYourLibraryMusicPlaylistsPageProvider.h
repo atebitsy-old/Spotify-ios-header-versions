@@ -9,7 +9,7 @@
 #import "SPTYourLibraryPageProvider-Protocol.h"
 
 @class NSString, NSURL, SPTYourLibraryMusicGLUETheme, SPTYourLibraryMusicLogger;
-@protocol SPTGLUEImageLoaderFactory, SPTLocalSettings, SPTPerformanceMetricsViewLoggerFactory, SPTPlaylistPlatformPlaylistSynchroniser, SPTQuickScrollFactory, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTYourLibraryMusicTestManager, SPTYourLibraryXAssistantBannerViewFactory;
+@protocol SPTGLUEImageLoaderFactory, SPTLocalSettings, SPTModalPresentationController, SPTPerformanceMetricsViewLoggerFactory, SPTPlaylistPlatformPlaylistSynchroniser, SPTQuickScrollFactory, SPTShareDragDelegateFactory, SPTSortingFilteringUIFactory, SPTYourLibraryMusicTestManager, SPTYourLibraryXAssistantBannerViewFactory, SPTYourLibraryXOnboardingViewControllerFactory;
 
 @interface SPTYourLibraryMusicPlaylistsPageProvider : NSObject <SPTYourLibraryPageProvider>
 {
@@ -31,9 +31,13 @@
     id <SPTQuickScrollFactory> _quickScrollFactory;
     id <SPTYourLibraryXAssistantBannerViewFactory> _assistantBannerViewFactory;
     id <SPTLocalSettings> _localSettings;
+    id <SPTModalPresentationController> _modalPresentationController;
+    id <SPTYourLibraryXOnboardingViewControllerFactory> _onboardingViewControllerFactory;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTYourLibraryXOnboardingViewControllerFactory> onboardingViewControllerFactory; // @synthesize onboardingViewControllerFactory=_onboardingViewControllerFactory;
+@property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(readonly, nonatomic) id <SPTYourLibraryXAssistantBannerViewFactory> assistantBannerViewFactory; // @synthesize assistantBannerViewFactory=_assistantBannerViewFactory;
 @property(readonly, nonatomic) id <SPTQuickScrollFactory> quickScrollFactory; // @synthesize quickScrollFactory=_quickScrollFactory;
@@ -55,7 +59,7 @@
 - (id)playlistViewModel:(id)arg1 context:(id)arg2 model:(id)arg3;
 - (id)pageViewControllerForContext:(id)arg1;
 - (_Bool)claimsURI:(id)arg1;
-- (id)initWithPlaylistsModelProvider:(CDUnknownBlockType)arg1 URI:(id)arg2 styleFactoryBlock:(CDUnknownBlockType)arg3 playlistSynchroniser:(id)arg4 createPlaylistControllerProvider:(CDUnknownBlockType)arg5 logger:(id)arg6 viewLoggerFactory:(id)arg7 imageLoaderFactory:(id)arg8 theme:(id)arg9 sortingFilteringUIFactory:(id)arg10 testManager:(id)arg11 shareDragDelegateFactory:(id)arg12 quickScrollFactory:(id)arg13 assistantBannerViewFactory:(id)arg14 localSettings:(id)arg15;
+- (id)initWithPlaylistsModelProvider:(CDUnknownBlockType)arg1 URI:(id)arg2 styleFactoryBlock:(CDUnknownBlockType)arg3 playlistSynchroniser:(id)arg4 createPlaylistControllerProvider:(CDUnknownBlockType)arg5 logger:(id)arg6 viewLoggerFactory:(id)arg7 imageLoaderFactory:(id)arg8 theme:(id)arg9 sortingFilteringUIFactory:(id)arg10 testManager:(id)arg11 shareDragDelegateFactory:(id)arg12 quickScrollFactory:(id)arg13 assistantBannerViewFactory:(id)arg14 localSettings:(id)arg15 modalPresentationController:(id)arg16 onboardingViewControllerFactory:(id)arg17;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -90,7 +90,7 @@
 - (void)setupContainerView;
 - (void)setupScrollView;
 - (void)setupBackgroundGradientView;
-- (id)initWithTheme:(id)arg1 delegate:(id)arg2;
+- (id)initWithStyle:(id)arg1 delegate:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -7,6 +7,6 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTSharingSDKShareHandler <NSObject>
-- (void)performShareAction:(void (^)(_Bool, NSError *, NSString *))arg1;
+- (void)performShareAction:(void (^)(_Bool, NSError *, id <SPTSharingSDKPerformShareToDestinationCompletionData>))arg1;
 @end
 

@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileEditPlaylist_BackEventFactory, SPTUBIMobileEditPlaylist_CancelButtonEventFactory, SPTUBIMobileEditPlaylist_CloseButtonEventFactory, SPTUBIMobileEditPlaylist_CoverArtEventFactory, SPTUBIMobileEditPlaylist_DescriptionFieldEventFactory, SPTUBIMobileEditPlaylist_DiscardButtonEventFactory, SPTUBIMobileEditPlaylist_DiscardDialogEventFactory, SPTUBIMobileEditPlaylist_ItemEventFactory, SPTUBIMobileEditPlaylist_NameFieldEventFactory, SPTUBIMobileEditPlaylist_SaveButtonEventFactory, SPTUBIMobileEditPlaylist_UndoButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileEditPlaylist_BackEventFactory, SPTUBIMobileEditPlaylist_CancelButtonEventFactory, SPTUBIMobileEditPlaylist_CloseButtonEventFactory, SPTUBIMobileEditPlaylist_CoverArtEventFactory, SPTUBIMobileEditPlaylist_DescriptionFieldEventFactory, SPTUBIMobileEditPlaylist_DiscardButtonEventFactory, SPTUBIMobileEditPlaylist_DiscardDialogEventFactory, SPTUBIMobileEditPlaylist_ItemEventFactory, SPTUBIMobileEditPlaylist_NameFieldEventFactory, SPTUBIMobileEditPlaylist_SaveButtonEventFactory, SPTUBIMobileEditPlaylist_UndoButtonEventFactory;
 
 @protocol SPTUBIMobileEditPlaylistEventFactory <NSObject>
 - (id <SPTUBIMobileEditPlaylist_ItemEventFactory>)itemFactoryWithUri:(NSURL *)arg1;
@@ -21,6 +21,6 @@
 - (id <SPTUBIMobileEditPlaylist_CloseButtonEventFactory>)closeButtonFactory;
 - (id <SPTUBIMobileEditPlaylist_SaveButtonEventFactory>)saveButtonFactory;
 - (id <SPTUBIMobileEditPlaylist_BackEventFactory>)backFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

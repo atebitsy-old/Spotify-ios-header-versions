@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHiddenContent_ItemListEventFactory, SPTUBIMobileHiddenContent_TabsEventFactory, SPTUBIMobileHiddenContent_ToolbarEventFactory, SPTUBIMobileHiddenContent_UndoSnackbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHiddenContent_ItemListEventFactory, SPTUBIMobileHiddenContent_TabsEventFactory, SPTUBIMobileHiddenContent_ToolbarEventFactory, SPTUBIMobileHiddenContent_UndoSnackbarEventFactory;
 
 @protocol SPTUBIMobileHiddenContentEventFactory <NSObject>
 - (id <SPTUBIMobileHiddenContent_UndoSnackbarEventFactory>)undoSnackbarFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileHiddenContent_ItemListEventFactory>)itemListFactoryWithIdentifier:(NSString *)arg1;
 - (id <SPTUBIMobileHiddenContent_TabsEventFactory>)tabsFactory;
 - (id <SPTUBIMobileHiddenContent_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

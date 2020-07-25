@@ -12,6 +12,7 @@
     // Error parsing type: , name: shareEntityUri
     // Error parsing type: , name: image
     // Error parsing type: , name: message
+    // Error parsing type: , name: queryItems
 }
 
 - (void).cxx_destruct;

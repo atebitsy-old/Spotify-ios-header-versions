@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobilePodcastFeaturedTracklist_Tracklist_Item_ContextMenuButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobilePodcastFeaturedTracklist_Tracklist_Item_ContextMenuButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastFeaturedTracklist_Tracklist_ItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIMobilePodcastFeaturedTracklist_Tracklist_Item_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

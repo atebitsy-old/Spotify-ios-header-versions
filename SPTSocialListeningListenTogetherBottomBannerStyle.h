@@ -8,7 +8,7 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEButtonStyle, GLUELabelStyle, NSString, UIColor;
+@class GLUEButtonStyle, GLUELabelStyle, NSString, SPTSocialListeningScannableContainerViewStyle, UIColor;
 
 @interface SPTSocialListeningListenTogetherBottomBannerStyle : NSObject <GLUEStyle>
 {
@@ -18,13 +18,11 @@
     GLUELabelStyle *_descriptionLabelStyle;
     GLUELabelStyle *_privacyDisclaimerLabelStyle;
     GLUEButtonStyle *_inviteButtonStyle;
-    GLUEButtonStyle *_addSongsButtonStyle;
-    GLUEButtonStyle *_queueButtonStyle;
+    SPTSocialListeningScannableContainerViewStyle *_scannableContainerStyle;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) GLUEButtonStyle *queueButtonStyle; // @synthesize queueButtonStyle=_queueButtonStyle;
-@property(copy, nonatomic) GLUEButtonStyle *addSongsButtonStyle; // @synthesize addSongsButtonStyle=_addSongsButtonStyle;
+@property(copy, nonatomic) SPTSocialListeningScannableContainerViewStyle *scannableContainerStyle; // @synthesize scannableContainerStyle=_scannableContainerStyle;
 @property(copy, nonatomic) GLUEButtonStyle *inviteButtonStyle; // @synthesize inviteButtonStyle=_inviteButtonStyle;
 @property(copy, nonatomic) GLUELabelStyle *privacyDisclaimerLabelStyle; // @synthesize privacyDisclaimerLabelStyle=_privacyDisclaimerLabelStyle;
 @property(copy, nonatomic) GLUELabelStyle *descriptionLabelStyle; // @synthesize descriptionLabelStyle=_descriptionLabelStyle;

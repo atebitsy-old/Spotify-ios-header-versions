@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileAlbumPage_Recommendations_RecommendationEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileAlbumPage_Recommendations_RecommendationEventFactory;
 
 @protocol SPTUBIMobileAlbumPage_RecommendationsEventFactory <NSObject>
 - (id <SPTUBIMobileAlbumPage_Recommendations_RecommendationEventFactory>)recommendationFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

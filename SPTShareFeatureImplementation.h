@@ -9,7 +9,7 @@
 #import "SPTShareContainerViewControllerProtocol-Protocol.h"
 #import "SPTShareFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition, SPTSharingSDK;
+@class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition;
 @protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, SPTShareUBILogger, SPTShareVideoDataProviderRegistry, SPTUBIService, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
 
 @interface SPTShareFeatureImplementation : NSObject <SPTShareContainerViewControllerProtocol, SPTShareFeature>
@@ -39,7 +39,6 @@
     SPTShareLogger *_shareLogger;
     id <SPTShareEventSenderLogger> _shareEventSenderLogger;
     SPTShareFeatureProperties *_featureProperties;
-    SPTSharingSDK *_sharingSDK;
     id <SPTShareVideoDataProviderRegistry> _videoDataProviderRegistry;
     id <SPTShareUBILogger> _ubiLogger;
 }
@@ -48,7 +47,6 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTShareUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTShareVideoDataProviderRegistry> videoDataProviderRegistry; // @synthesize videoDataProviderRegistry=_videoDataProviderRegistry;
-@property(retain, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
@@ -75,7 +73,9 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (id)provideShareDemoViewControllerWithURI:(id)arg1 context:(id)arg2;
-- (id)provideShareHandlerFactory;
+- (id)makeShareDialogPresenterWithShareViewController:(id)arg1;
+- (id)makeSharingSDKWithShareViewController:(id)arg1;
+- (id)provideShareHandlerFactoryWithSharingSDK:(id)arg1;
 - (id)retrieveTopLevelNavigationPageController;
 - (id)retrieveModallyPresentedPageController;
 - (id)visiblePageController;

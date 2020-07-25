@@ -14,6 +14,7 @@
     // Error parsing type: , name: offlineDelegate
     // Error parsing type: , name: uri
     // Error parsing type: , name: downloadManager
+    // Error parsing type: , name: logger
 }
 
 - (void).cxx_destruct;

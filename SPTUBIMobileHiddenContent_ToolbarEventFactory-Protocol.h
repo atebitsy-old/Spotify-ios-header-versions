@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHiddenContent_Toolbar_BackButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHiddenContent_Toolbar_BackButtonEventFactory;
 
 @protocol SPTUBIMobileHiddenContent_ToolbarEventFactory <NSObject>
 - (id <SPTUBIMobileHiddenContent_Toolbar_BackButtonEventFactory>)backButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

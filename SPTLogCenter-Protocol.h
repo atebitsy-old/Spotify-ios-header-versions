@@ -7,11 +7,8 @@
 #import "NSObject-Protocol.h"
 
 @class NSDictionary, NSNumber, NSString, SPTLogMessage;
-@protocol SPTLogger;
 
 @protocol SPTLogCenter <NSObject>
-- (void)detachCoreLogger;
-- (void)attachCoreLogger:(id <SPTLogger>)arg1;
 - (_Bool)sendMessageWithSequenceNumber:(NSNumber *)arg1 messageName:(NSString *)arg2;
 - (_Bool)updateMessageWithSequenceNumber:(NSNumber *)arg1 messageName:(NSString *)arg2 message:(SPTLogMessage *)arg3;
 - (NSDictionary *)createMessage:(NSString *)arg1;

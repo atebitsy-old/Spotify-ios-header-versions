@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibrary_PageContainer_PageItemEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibrary_PageContainer_PageItemEventFactory;
 
 @protocol SPTUBIMobileYourLibrary_PageContainerEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibrary_PageContainer_PageItemEventFactory>)pageItemFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

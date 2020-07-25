@@ -9,7 +9,7 @@
 #import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTYourLibraryMusicTestManager-Protocol.h"
 
-@class NSDictionary, NSString, SPTYourLibraryMusicFeatureProperties;
+@class NSString, SPTYourLibraryMusicFeatureProperties;
 @protocol SPTCollectionPlatformTestManager, SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTProductState, SPTRemoteConfigurationResolver, _TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_;
 
 @interface SPTYourLibraryMusicTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTYourLibraryMusicTestManager>
@@ -24,13 +24,9 @@
     id <_TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_> _yourLibraryBetaTestManager;
     id <SPTFeatureFlagSignal> _windowedTrackTestSignal;
     id <SPTFeatureFlagSignal> _consolidatedExperienceSignal;
-    NSDictionary *_likedSongsFiltersSignals;
-    unsigned long long _likedSongsFiltersAbbaSource;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) unsigned long long likedSongsFiltersAbbaSource; // @synthesize likedSongsFiltersAbbaSource=_likedSongsFiltersAbbaSource;
-@property(copy, nonatomic) NSDictionary *likedSongsFiltersSignals; // @synthesize likedSongsFiltersSignals=_likedSongsFiltersSignals;
 @property(nonatomic, getter=isConsolidatedExperienceEnabled) _Bool consolidatedExperienceEnabled; // @synthesize consolidatedExperienceEnabled=_consolidatedExperienceEnabled;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> consolidatedExperienceSignal; // @synthesize consolidatedExperienceSignal=_consolidatedExperienceSignal;
 @property(nonatomic, getter=isPremiumLabelEnabled) _Bool premiumLabelEnabled; // @synthesize premiumLabelEnabled=_premiumLabelEnabled;
@@ -41,13 +37,11 @@
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (id)unionOfMultipleChoiceSignalsForAllFlags:(id)arg1 andSignalsForOneFlag:(id)arg2;
 @property(readonly, nonatomic, getter=isOfflineArtistEnabled) _Bool offlineArtistEnabled;
 @property(readonly, nonatomic, getter=isFrecencySortOrderDefaultInPlaylistsEnabled) _Bool frecencySortOrderDefaultInPlaylistsEnabled;
 @property(readonly, nonatomic) long long quickScrollMinPages;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanismInLikedSongs;
 @property(readonly, nonatomic) unsigned long long quickScrollMechanism;
-@property(readonly, nonatomic) unsigned long long likedSongsFiltersRCSource;
 @property(readonly, nonatomic, getter=isLikedSongsFiltersEnabled) _Bool likedSongsFiltersEnabled;
 @property(readonly, nonatomic) unsigned long long likedSongsFiltersSource;
 @property(readonly, nonatomic, getter=isYourLibraryBetaEnabled) _Bool yourLibraryBetaEnabled;
@@ -55,7 +49,6 @@
 - (void)setupRemoteConfigurationProperties;
 - (void)handleWindowedTrackSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)setupLikedSongsFiltersSignals;
 - (void)setupIsPremiumOnlySignal;
 - (id)initWithFeatureFlagFactory:(id)arg1 productState:(id)arg2 remoteConfigurationResolver:(id)arg3 collectionPlatformTestManager:(id)arg4 yourLibraryBetaTestManager:(id)arg5 consolidatedExperienceSignal:(id)arg6;
 

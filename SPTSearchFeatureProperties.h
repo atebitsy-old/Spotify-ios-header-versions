@@ -13,16 +13,16 @@
 @interface SPTSearchFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _shouldEnableTopics;
-    _Bool _shouldEnableNewRecentsRow;
     _Bool _editorialOnDemandEnabled;
     _Bool _editorialOnDemandDebuggingEnabled;
     _Bool _topicCarouselProhibited;
+    _Bool _v2AssistedCurationEnabled;
 }
 
+@property(readonly, nonatomic) _Bool v2AssistedCurationEnabled; // @synthesize v2AssistedCurationEnabled=_v2AssistedCurationEnabled;
 @property(readonly, nonatomic) _Bool topicCarouselProhibited; // @synthesize topicCarouselProhibited=_topicCarouselProhibited;
 @property(readonly, nonatomic) _Bool editorialOnDemandDebuggingEnabled; // @synthesize editorialOnDemandDebuggingEnabled=_editorialOnDemandDebuggingEnabled;
 @property(readonly, nonatomic) _Bool editorialOnDemandEnabled; // @synthesize editorialOnDemandEnabled=_editorialOnDemandEnabled;
-@property(readonly, nonatomic) _Bool shouldEnableNewRecentsRow; // @synthesize shouldEnableNewRecentsRow=_shouldEnableNewRecentsRow;
 @property(readonly, nonatomic) _Bool shouldEnableTopics; // @synthesize shouldEnableTopics=_shouldEnableTopics;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileStorylines_BottomRowEventFactory, SPTUBIMobileStorylines_CardEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileStorylines_BottomRowEventFactory, SPTUBIMobileStorylines_CardEventFactory;
 
 @protocol SPTUBIMobileStorylinesEventFactory <NSObject>
 - (id <SPTUBIMobileStorylines_BottomRowEventFactory>)bottomRowFactory;
 - (id <SPTUBIMobileStorylines_CardEventFactory>)cardFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

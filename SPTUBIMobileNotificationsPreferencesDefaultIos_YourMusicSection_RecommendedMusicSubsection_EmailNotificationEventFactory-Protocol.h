@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileNotificationsPreferencesDefaultIos_YourMusicSection_RecommendedMusicSubsection_EmailNotificationEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitSettingEnable;
 - (id <SPTUBIInteractionEvent>)hitSettingDisable;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

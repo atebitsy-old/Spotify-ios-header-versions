@@ -18,10 +18,10 @@
     NSSet *_extraQueryItems;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSSet *extraQueryItems; // @synthesize extraQueryItems=_extraQueryItems;
 @property(readonly, nonatomic) id <SPTSharingSDKUTMTag> utmTag; // @synthesize utmTag=_utmTag;
 @property(readonly, copy, nonatomic) NSString *spotifyURIString; // @synthesize spotifyURIString=_spotifyURIString;
-- (void).cxx_destruct;
 - (id)initWithSpotifyURIString:(id)arg1 utmTag:(id)arg2 extraQueryItems:(id)arg3;
 
 // Remaining properties

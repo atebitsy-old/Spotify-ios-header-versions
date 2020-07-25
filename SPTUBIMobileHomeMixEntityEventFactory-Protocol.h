@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHomeMixEntity_ContextMenuButtonEventFactory, SPTUBIMobileHomeMixEntity_HomeMixArtEventFactory, SPTUBIMobileHomeMixEntity_JoinButtonEventFactory, SPTUBIMobileHomeMixEntity_JoinSnackbarButtonEventFactory, SPTUBIMobileHomeMixEntity_MixControlButtonsEventFactory, SPTUBIMobileHomeMixEntity_TasteOnBoardingCtaEventFactory, SPTUBIMobileHomeMixEntity_TrackListEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHomeMixEntity_ContextMenuButtonEventFactory, SPTUBIMobileHomeMixEntity_HomeMixArtEventFactory, SPTUBIMobileHomeMixEntity_JoinButtonEventFactory, SPTUBIMobileHomeMixEntity_JoinSnackbarButtonEventFactory, SPTUBIMobileHomeMixEntity_MixControlButtonsEventFactory, SPTUBIMobileHomeMixEntity_TasteOnBoardingCtaEventFactory, SPTUBIMobileHomeMixEntity_TrackListEventFactory;
 
 @protocol SPTUBIMobileHomeMixEntityEventFactory <NSObject>
 - (id <SPTUBIMobileHomeMixEntity_JoinSnackbarButtonEventFactory>)joinSnackbarButtonFactoryWithUri:(NSURL *)arg1;
@@ -17,6 +17,6 @@
 - (id <SPTUBIMobileHomeMixEntity_MixControlButtonsEventFactory>)mixControlButtonsFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileHomeMixEntity_HomeMixArtEventFactory>)homeMixArtFactory;
 - (id <SPTUBIMobileHomeMixEntity_ContextMenuButtonEventFactory>)contextMenuButtonFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

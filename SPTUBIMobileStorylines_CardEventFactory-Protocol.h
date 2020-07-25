@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent, SPTUBIMobileStorylines_Card_GotoNextCardButtonEventFactory, SPTUBIMobileStorylines_Card_GotoPreviousCardButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent, SPTUBIMobileStorylines_Card_GotoNextCardButtonEventFactory, SPTUBIMobileStorylines_Card_GotoPreviousCardButtonEventFactory;
 
 @protocol SPTUBIMobileStorylines_CardEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)longHitPauseWithItemToBePaused:(NSURL *)arg1;
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileStorylines_Card_GotoNextCardButtonEventFactory>)gotoNextCardButtonFactory;
 - (id <SPTUBIMobileStorylines_Card_GotoPreviousCardButtonEventFactory>)gotoPreviousCardButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

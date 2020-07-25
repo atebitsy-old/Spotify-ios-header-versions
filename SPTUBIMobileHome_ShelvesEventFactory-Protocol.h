@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHome_Shelves_RecentlyPlayedShelfEventFactory, SPTUBIMobileHome_Shelves_ShelfEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHome_Shelves_RecentlyPlayedShelfEventFactory, SPTUBIMobileHome_Shelves_ShelfEventFactory;
 
 @protocol SPTUBIMobileHome_ShelvesEventFactory <NSObject>
 - (id <SPTUBIMobileHome_Shelves_ShelfEventFactory>)shelfFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
 - (id <SPTUBIMobileHome_Shelves_RecentlyPlayedShelfEventFactory>)recentlyPlayedShelfFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

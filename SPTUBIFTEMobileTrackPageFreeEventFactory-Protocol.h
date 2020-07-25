@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIFTEMobileTrackPageFree_AddToPlaylistButtonEventFactory, SPTUBIFTEMobileTrackPageFree_AppearsOnCarouselEventFactory, SPTUBIFTEMobileTrackPageFree_ItemEventFactory, SPTUBIFTEMobileTrackPageFree_ShufflePlayButtonEventFactory, SPTUBIFTEMobileTrackPageFree_ToolbarEventFactory, SPTUBIFTEMobileTrackPageFree_TrackCloudEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIFTEMobileTrackPageFree_AddToPlaylistButtonEventFactory, SPTUBIFTEMobileTrackPageFree_AppearsOnCarouselEventFactory, SPTUBIFTEMobileTrackPageFree_ItemEventFactory, SPTUBIFTEMobileTrackPageFree_ShufflePlayButtonEventFactory, SPTUBIFTEMobileTrackPageFree_ToolbarEventFactory, SPTUBIFTEMobileTrackPageFree_TrackCloudEventFactory;
 
 @protocol SPTUBIFTEMobileTrackPageFreeEventFactory <NSObject>
 - (id <SPTUBIFTEMobileTrackPageFree_ItemEventFactory>)itemFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
@@ -16,6 +16,6 @@
 - (id <SPTUBIFTEMobileTrackPageFree_ShufflePlayButtonEventFactory>)shufflePlayButtonFactory;
 - (id <SPTUBIFTEMobileTrackPageFree_AddToPlaylistButtonEventFactory>)addToPlaylistButtonFactory;
 - (id <SPTUBIFTEMobileTrackPageFree_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

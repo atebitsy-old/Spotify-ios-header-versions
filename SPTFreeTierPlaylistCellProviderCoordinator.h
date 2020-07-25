@@ -8,8 +8,8 @@
 
 #import "SPTFreeTierPlaylistCellProviderCoordinator-Protocol.h"
 
-@class NSDictionary, NSMutableDictionary, NSString, SPTFreeTierPlaylistLogger;
-@protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTShareDragDelegateFactory, UITableViewDragDelegate;
+@class NSDictionary, NSMutableDictionary, NSString;
+@protocol SPTFreeTierPlaylistConfiguration, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistViewModel, SPTShareDragDelegateFactory, UITableViewDragDelegate;
 
 @interface SPTFreeTierPlaylistCellProviderCoordinator : NSObject <SPTFreeTierPlaylistCellProviderCoordinator>
 {
@@ -18,7 +18,7 @@
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     NSMutableDictionary *_rowHeightCache;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
     NSDictionary *_sectionDescriptions;
     NSDictionary *_reuseIdentifierToCellProviders;
     id <UITableViewDragDelegate> _dragDelegateHolder;
@@ -28,7 +28,7 @@
 @property(retain, nonatomic) id <UITableViewDragDelegate> dragDelegateHolder; // @synthesize dragDelegateHolder=_dragDelegateHolder;
 @property(readonly, copy, nonatomic) NSDictionary *reuseIdentifierToCellProviders; // @synthesize reuseIdentifierToCellProviders=_reuseIdentifierToCellProviders;
 @property(readonly, copy, nonatomic) NSDictionary *sectionDescriptions; // @synthesize sectionDescriptions=_sectionDescriptions;
-@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSMutableDictionary *rowHeightCache; // @synthesize rowHeightCache=_rowHeightCache;
 @property(retain, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;

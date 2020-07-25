@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileSearch_Content_OnlineResults_SeeAllItemEventFactory, SPTUBIMobileSearch_Content_OnlineResults_TopResultsEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileSearch_Content_OnlineResults_SeeAllItemEventFactory, SPTUBIMobileSearch_Content_OnlineResults_TopResultsEventFactory;
 
 @protocol SPTUBIMobileSearch_Content_OnlineResultsEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileSearch_Content_OnlineResults_SeeAllItemEventFactory>)seeAllItemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileSearch_Content_OnlineResults_TopResultsEventFactory>)topResultsFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

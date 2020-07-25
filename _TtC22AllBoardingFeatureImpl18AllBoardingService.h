@@ -22,15 +22,17 @@
     // Error parsing type: , name: featureFlaggingService
     // Error parsing type: , name: eventSenderService
     // Error parsing type: , name: tasteOnboardingDeeplinkService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: loginOnboardingService
     // Error parsing type: , name: debugFeatureManager
     // Error parsing type: , name: $__lazy_storage_$_flowCoordinator
     // Error parsing type: , name: $__lazy_storage_$_curationManager
+    // Error parsing type: , name: $__lazy_storage_$_remoteConfigurationProperties
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)provideCoordinator;
 - (void)applicationDidBecomeActive;
 - (void)unload;
 - (void)load;

@@ -13,7 +13,7 @@
 #import "UITableViewDelegate-Protocol.h"
 
 @class NSString, SPTSocialListeningGLUETheme, SPTSocialListeningListenTogetherBottomBanner, SPTSocialListeningLoggerImplementation, SPTSocialListeningSessionViewUserCellConfigurator, SPTTableView, UIBarButtonItem;
-@protocol GLUEImageLoader, SPTShareFeature, SPTSocialListeningViewModel;
+@protocol GLUEImageLoader, SPTShareFeature, SPTSocialListeningScannableModel, SPTSocialListeningViewModel;
 
 @interface SPTSocialListeningParticipantsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SPTSocialListeningSessionViewUserCellDelegate, SPTSocialListeningViewModelObserver, SPTSocialListeningListenTogetherStateObserver>
 {
@@ -26,9 +26,11 @@
     SPTTableView *_tableView;
     SPTSocialListeningListenTogetherBottomBanner *_bottomBanner;
     UIBarButtonItem *_inviteBarButtonItem;
+    id <SPTSocialListeningScannableModel> _scannableModel;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTSocialListeningScannableModel> scannableModel; // @synthesize scannableModel=_scannableModel;
 @property(retain, nonatomic) UIBarButtonItem *inviteBarButtonItem; // @synthesize inviteBarButtonItem=_inviteBarButtonItem;
 @property(retain, nonatomic) SPTSocialListeningListenTogetherBottomBanner *bottomBanner; // @synthesize bottomBanner=_bottomBanner;
 @property(retain, nonatomic) SPTTableView *tableView; // @synthesize tableView=_tableView;
@@ -38,13 +40,15 @@
 @property(readonly, nonatomic) SPTSocialListeningLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(readonly, nonatomic) id <SPTSocialListeningViewModel> viewModel; // @synthesize viewModel=_viewModel;
-- (id)placeholderCellForTableView:(id)arg1 atIndexPath:(id)arg2;
 - (void)inviteButtonTapped:(id)arg1;
-- (void)navigateToQueue;
+- (void)tryAgainButtonTapped;
 - (void)updateNavigationBarButtons;
+- (_Bool)scannableViewHidden;
+- (void)updateScannableUI;
 - (void)updateBottomBanner;
 - (void)sessionViewUserCellDidTapActionButton:(id)arg1;
 - (void)sessionViewUserCellDidTapUserImageOrName:(id)arg1;
+- (void)didFinishLoadingScannable:(id)arg1 sessionColor:(id)arg2 error:(id)arg3;
 - (void)listenTogetherStateUpdated:(long long)arg1;
 - (void)socialListeningViewModelWillLeaveSession:(id)arg1;
 - (void)socialListeningViewModelDidDeleteSession:(id)arg1;

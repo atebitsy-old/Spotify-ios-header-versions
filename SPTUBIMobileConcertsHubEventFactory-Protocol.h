@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileConcertsHub_HeaderEventFactory, SPTUBIMobileConcertsHub_RecommendedEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileConcertsHub_HeaderEventFactory, SPTUBIMobileConcertsHub_RecommendedEventFactory;
 
 @protocol SPTUBIMobileConcertsHubEventFactory <NSObject>
 - (id <SPTUBIMobileConcertsHub_RecommendedEventFactory>)recommendedFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileConcertsHub_HeaderEventFactory>)headerFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

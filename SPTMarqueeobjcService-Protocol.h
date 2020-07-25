@@ -6,6 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol SPTMarqueeTestManager;
+
 @protocol SPTMarqueeobjcService <SPTService>
+- (void)loadMarqueeController;
+- (id <SPTMarqueeTestManager>)marqueeTestManager;
 @end
 

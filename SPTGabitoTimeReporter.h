@@ -11,11 +11,13 @@
 @interface SPTGabitoTimeReporter : NSObject
 {
     // Error parsing type: , name: delegate
+    // Error parsing type: , name: authenticated
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (id)initWithDelegate:(id)arg1;
+@property(nonatomic) _Bool authenticated; // @synthesize authenticated;
 @property(nonatomic) __weak id <SPTGabitoTimeReporterDelegate> delegate; // @synthesize delegate;
 
 @end

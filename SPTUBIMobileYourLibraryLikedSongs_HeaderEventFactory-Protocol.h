@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibraryLikedSongs_Header_AddSongsButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_Header_FilterAndSortEventFactory, SPTUBIMobileYourLibraryLikedSongs_Header_PlayButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryLikedSongs_Header_AddSongsButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_Header_FilterAndSortEventFactory, SPTUBIMobileYourLibraryLikedSongs_Header_PlayButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_HeaderEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibraryLikedSongs_Header_PlayButtonEventFactory>)playButtonFactoryWithReason:(NSString *)arg1;
 - (id <SPTUBIMobileYourLibraryLikedSongs_Header_AddSongsButtonEventFactory>)addSongsButtonFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_Header_FilterAndSortEventFactory>)filterAndSortFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

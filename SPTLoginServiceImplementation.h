@@ -12,7 +12,7 @@
 #import "SPTPreSignupExperimentationFeatureFlagsLoaderDelegate-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTAuthenticationHandlerLogger, SPTDynamicSignupFlowController, SPTLoginAttemptLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureLayoutConfigurationProvider, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
-@protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTFacebookIntegrationService, SPTGLUEService, SPTLoginLoggingService, SPTLoginSessionScopeServicesLoaderProviderService, SPTNetworkService, SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTPreSignupExperimentationService, SPTUBIService, SPTURIDispatchService;
+@protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTFacebookIntegrationService, SPTGLUEService, SPTLoginLoggingService, SPTLoginSessionScopeServicesLoaderProviderService, SPTNetworkService, SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTPreSignupExperimentationService, SPTUBIService, SPTUIPresentationApplicationService, SPTURIDispatchService;
 
 @interface SPTLoginServiceImplementation : NSObject <SPTPageRegistryObserver, SPTPreSignupExperimentationFeatureFlagsLoaderDelegate, SPTLoginService, SPTLoginLogoutHandler>
 {
@@ -29,6 +29,7 @@
     id <SPTNetworkService> _networkService;
     id <SPTURIDispatchService> _URIDispatchService;
     id <SPTLoginLoggingService> _loggerService;
+    id <SPTUIPresentationApplicationService> _uiPresentationService;
     id <SPTUBIService> _ubiService;
     id <SPTPreSignupExperimentationFeatureFlagsLoader> _flagsLoader;
     id <SPTPreSignupExperimentationFeatureFlags> _featureFlags;
@@ -79,6 +80,7 @@
 @property(retain, nonatomic) id <SPTPreSignupExperimentationFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
 @property(retain, nonatomic) id <SPTPreSignupExperimentationFeatureFlagsLoader> flagsLoader; // @synthesize flagsLoader=_flagsLoader;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
+@property(nonatomic) __weak id <SPTUIPresentationApplicationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
@@ -137,6 +139,7 @@
 - (void)logoutWithCompletion:(CDUnknownBlockType)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;
+- (id)createPhoneNumberTestManager;
 - (id)provideSlideUpModalPresenter;
 - (id)provideLogoutHandler;
 - (id)provideKeychainManager;

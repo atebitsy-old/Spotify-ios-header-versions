@@ -37,6 +37,7 @@
 @property(retain, nonatomic) id <SPTPodcastUIEpisodeImageCardStyle> style; // @synthesize style=_style;
 @property(readonly, nonatomic) id <GLUETheme> theme; // @synthesize theme=_theme;
 - (void)glue_applyStyle:(id)arg1;
+- (id)accessibilityLabel;
 - (struct CGSize)imageSizeForCntainerViewSize:(struct CGSize)arg1;
 - (void)setShowImage:(id)arg1 animated:(_Bool)arg2;
 @property(copy, nonatomic) NSString *metadataText;

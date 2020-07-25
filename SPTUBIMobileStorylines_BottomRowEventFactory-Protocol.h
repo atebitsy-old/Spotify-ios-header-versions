@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileStorylines_BottomRow_AttributionLabelEventFactory, SPTUBIMobileStorylines_BottomRow_FollowButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileStorylines_BottomRow_AttributionLabelEventFactory, SPTUBIMobileStorylines_BottomRow_FollowButtonEventFactory;
 
 @protocol SPTUBIMobileStorylines_BottomRowEventFactory <NSObject>
 - (id <SPTUBIMobileStorylines_BottomRow_FollowButtonEventFactory>)followButtonFactory;
 - (id <SPTUBIMobileStorylines_BottomRow_AttributionLabelEventFactory>)attributionLabelFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

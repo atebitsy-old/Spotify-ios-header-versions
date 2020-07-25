@@ -12,7 +12,7 @@
 #import "SPTPhoneNumberSignupValidateOtpViewControllerDelegate-Protocol.h"
 
 @class NSDictionary, NSString, SPTPhoneNumberSignupPhoneNumberEntryViewController, SPTPhoneNumberSignupPhoneNumberEntryViewModel, SPTPhoneNumberSignupTheme, SPTPhoneNumberSignupUtils, SPTPhoneNumberSignupValidateOtpViewController;
-@protocol SPTDialogController, SPTLoginLoggingService, SPTLoginNavigationCoordinator, SPTLoginService, SPTLoginStateController;
+@protocol SPTDialogController, SPTLoginLoggingService, SPTLoginNavigationCoordinator, SPTLoginPhoneNumberTestManager, SPTLoginService, SPTLoginStateController;
 
 @interface SPTPhoneNumberSignupFlowCoordinator : NSObject <SPTPhoneNumberSignupValidateOtpViewControllerDelegate, SPTPhoneNumberSignupPhoneNumberEntryViewControllerDelegate, SPTPhoneNumberSignupCallingCodeViewControllerDelegate, SPTLoginPhoneNumberLoginStateDelegate>
 {
@@ -27,9 +27,11 @@
     SPTPhoneNumberSignupPhoneNumberEntryViewModel *_phoneNumberEntryViewModel;
     SPTPhoneNumberSignupUtils *_phoneNumberSignupUtils;
     id <SPTLoginStateController> _loginStateController;
+    id <SPTLoginPhoneNumberTestManager> _testManager;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTLoginPhoneNumberTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) __weak id <SPTLoginStateController> loginStateController; // @synthesize loginStateController=_loginStateController;
 @property(readonly, nonatomic) SPTPhoneNumberSignupUtils *phoneNumberSignupUtils; // @synthesize phoneNumberSignupUtils=_phoneNumberSignupUtils;
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryViewModel *phoneNumberEntryViewModel; // @synthesize phoneNumberEntryViewModel=_phoneNumberEntryViewModel;
@@ -59,7 +61,7 @@
 - (id)provideNewValidateOtpViewControllerWithChallengeInfo:(id)arg1;
 - (id)provideNewCallingCodeViewController;
 - (id)providePhoneNumberEntryViewController;
-- (id)initWithTheme:(id)arg1 navigationCoordinator:(id)arg2 loginService:(id)arg3 dialogController:(id)arg4 loggingService:(id)arg5 allowedCallingCodes:(id)arg6 phoneNumberSignupUtils:(id)arg7 loginStateController:(id)arg8;
+- (id)initWithTheme:(id)arg1 navigationCoordinator:(id)arg2 loginService:(id)arg3 dialogController:(id)arg4 loggingService:(id)arg5 allowedCallingCodes:(id)arg6 phoneNumberSignupUtils:(id)arg7 loginStateController:(id)arg8 testManager:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

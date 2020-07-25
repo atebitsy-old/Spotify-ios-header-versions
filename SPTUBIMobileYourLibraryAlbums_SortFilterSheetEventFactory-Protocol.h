@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_CancelButtonEventFactory, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_DismissEventFactory, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_FilterOptionEventFactory, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_SortOptionEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_CancelButtonEventFactory, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_DismissEventFactory, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_FilterOptionEventFactory, SPTUBIMobileYourLibraryAlbums_SortFilterSheet_SortOptionEventFactory;
 
 @protocol SPTUBIMobileYourLibraryAlbums_SortFilterSheetEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibraryAlbums_SortFilterSheet_DismissEventFactory>)dismissFactory;
 - (id <SPTUBIMobileYourLibraryAlbums_SortFilterSheet_CancelButtonEventFactory>)cancelButtonFactory;
 - (id <SPTUBIMobileYourLibraryAlbums_SortFilterSheet_SortOptionEventFactory>)sortOptionFactoryWithIdentifier:(NSString *)arg1;
 - (id <SPTUBIMobileYourLibraryAlbums_SortFilterSheet_FilterOptionEventFactory>)filterOptionFactoryWithIdentifier:(NSString *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHome_Shelves_Shelf_CarouselEventFactory, SPTUBIMobileHome_Shelves_Shelf_HeaderEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHome_Shelves_Shelf_CarouselEventFactory, SPTUBIMobileHome_Shelves_Shelf_HeaderEventFactory;
 
 @protocol SPTUBIMobileHome_Shelves_ShelfEventFactory <NSObject>
 - (id <SPTUBIMobileHome_Shelves_Shelf_CarouselEventFactory>)carouselFactoryWithPosition:(long long)arg1;
 - (id <SPTUBIMobileHome_Shelves_Shelf_HeaderEventFactory>)headerFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

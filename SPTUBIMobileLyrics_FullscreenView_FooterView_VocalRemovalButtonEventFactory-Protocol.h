@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileLyrics_FullscreenView_FooterView_VocalRemovalButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitVocalRemovalDisabled;
 - (id <SPTUBIInteractionEvent>)hitVocalRemovalEnabled;
 - (id <SPTUBIImpressionEvent>)impression;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

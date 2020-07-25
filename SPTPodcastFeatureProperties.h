@@ -21,13 +21,17 @@
     _Bool _podcastTopicsInShowRequestEnabled;
     unsigned long long _followShowConfirmationOverride;
     unsigned long long _unfollowShowConfirmationOverride;
+    unsigned long long _podcastQuotes;
     NSString *_followShowConfirmationOverrideString;
     NSString *_unfollowShowConfirmationOverrideString;
+    NSString *_podcastQuotesString;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSString *podcastQuotesString; // @synthesize podcastQuotesString=_podcastQuotesString;
 @property(retain, nonatomic) NSString *unfollowShowConfirmationOverrideString; // @synthesize unfollowShowConfirmationOverrideString=_unfollowShowConfirmationOverrideString;
 @property(retain, nonatomic) NSString *followShowConfirmationOverrideString; // @synthesize followShowConfirmationOverrideString=_followShowConfirmationOverrideString;
+@property(readonly, nonatomic) unsigned long long podcastQuotes; // @synthesize podcastQuotes=_podcastQuotes;
 @property(readonly, nonatomic) unsigned long long unfollowShowConfirmationOverride; // @synthesize unfollowShowConfirmationOverride=_unfollowShowConfirmationOverride;
 @property(readonly, nonatomic) unsigned long long followShowConfirmationOverride; // @synthesize followShowConfirmationOverride=_followShowConfirmationOverride;
 @property(readonly, nonatomic) _Bool podcastTopicsInShowRequestEnabled; // @synthesize podcastTopicsInShowRequestEnabled=_podcastTopicsInShowRequestEnabled;
@@ -37,6 +41,7 @@
 @property(readonly, nonatomic) _Bool podcastNewPlaybackSpeedsEnabled; // @synthesize podcastNewPlaybackSpeedsEnabled=_podcastNewPlaybackSpeedsEnabled;
 @property(readonly, nonatomic) _Bool podcastEntityPageShowPlayButton; // @synthesize podcastEntityPageShowPlayButton=_podcastEntityPageShowPlayButton;
 @property(readonly, nonatomic) _Bool podcastEpisodeFollowEnabled; // @synthesize podcastEpisodeFollowEnabled=_podcastEpisodeFollowEnabled;
+- (unsigned long long)mapPodcastQuotesToEnumValue:(id)arg1;
 - (unsigned long long)mapUnfollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (unsigned long long)mapFollowShowConfirmationOverrideToEnumValue:(id)arg1;
 - (id)propertyModels;

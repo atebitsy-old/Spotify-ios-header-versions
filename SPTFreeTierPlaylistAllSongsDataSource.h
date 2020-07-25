@@ -10,8 +10,8 @@
 #import "SPTFreeTierAllSongsHeaderEntityViewModelDelegate-Protocol.h"
 #import "SPTFreeTierPlaylistModelObserver-Protocol.h"
 
-@class NSArray, NSNumber, NSString, SPTFreeTierPlaylistLogger;
-@protocol SPTAssistedCurationUIService, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTFreeTierAllSongsDataSourceDelegate, SPTFreeTierAllSongsHeaderEntityViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistModelEntity, SPTFreeTierPlaylistTestManager, SPTPlaylistPlatformPlaylistDataLoader, SPTSnackbarConditionalPresenter;
+@class NSArray, NSNumber, NSString;
+@protocol SPTAssistedCurationUIService, SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTFreeTierAllSongsDataSourceDelegate, SPTFreeTierAllSongsHeaderEntityViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistModelEntity, SPTFreeTierPlaylistTestManager, SPTPlaylistPlatformPlaylistDataLoader, SPTSnackbarConditionalPresenter;
 
 @interface SPTFreeTierPlaylistAllSongsDataSource : NSObject <SPTFreeTierAllSongsHeaderEntityViewModelDelegate, SPTFreeTierAllSongsDataSource, SPTFreeTierPlaylistModelObserver>
 {
@@ -19,7 +19,7 @@
     id <SPTFreeTierPlaylistModel> _model;
     id <SPTAssistedCurationUIService> _assistedCurationUIService;
     id <SPTSnackbarConditionalPresenter> _snackbarPresenter;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
     id <SPTFreeTierPlaylistModelEntity> _modelEntity;
     NSArray *_tracks;
     NSArray *_recommendations;
@@ -41,7 +41,7 @@
 @property(copy, nonatomic) NSArray *recommendations; // @synthesize recommendations=_recommendations;
 @property(copy, nonatomic) NSArray *tracks; // @synthesize tracks=_tracks;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistModelEntity> modelEntity; // @synthesize modelEntity=_modelEntity;
-@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTSnackbarConditionalPresenter> snackbarPresenter; // @synthesize snackbarPresenter=_snackbarPresenter;
 @property(readonly, nonatomic) __weak id <SPTAssistedCurationUIService> assistedCurationUIService; // @synthesize assistedCurationUIService=_assistedCurationUIService;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistModel> model; // @synthesize model=_model;

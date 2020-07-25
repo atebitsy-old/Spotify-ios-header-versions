@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent;
 
 @protocol SPTUBIMobileEditPlaylist_DiscardDialogEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

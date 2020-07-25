@@ -13,8 +13,10 @@
 @interface SPTQueueFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _queuePlayNextPlayLaterEnabled;
+    _Bool _shouldShowClearButton;
 }
 
+@property(readonly, nonatomic) _Bool shouldShowClearButton; // @synthesize shouldShowClearButton=_shouldShowClearButton;
 @property(readonly, nonatomic) _Bool queuePlayNextPlayLaterEnabled; // @synthesize queuePlayNextPlayLaterEnabled=_queuePlayNextPlayLaterEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSearch_ContentEventFactory, SPTUBIMobileSearch_SearchBarEventFactory, SPTUBIMobileSearch_VoiceButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileSearch_ContentEventFactory, SPTUBIMobileSearch_SearchBarEventFactory, SPTUBIMobileSearch_VoiceButtonEventFactory;
 
 @protocol SPTUBIMobileSearchEventFactory <NSObject>
 - (id <SPTUBIMobileSearch_VoiceButtonEventFactory>)voiceButtonFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileSearch_ContentEventFactory>)contentFactory;
 - (id <SPTUBIMobileSearch_SearchBarEventFactory>)searchBarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

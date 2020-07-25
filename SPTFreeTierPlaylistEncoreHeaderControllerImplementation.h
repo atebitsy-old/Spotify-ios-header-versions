@@ -10,11 +10,12 @@
 #import "SPTFreeTierEntityOfflineDelegate-Protocol.h"
 #import "SPTFreeTierPlaylistVISREFHeaderController-Protocol.h"
 #import "SPTImageLoaderDelegate-Protocol.h"
+#import "SPTSortingFilteringPickerDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTEncorePlaylistHeader, UIColor, UIImage, UIView, VISREFFreeTierPlaylistFollowButtonViewModel, VISREFPlaylistContextMenuViewModel;
-@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistVISREFHeaderViewModel, SPTImageLoader, SPTLinkDispatcher;
+@protocol SPTFreeTierEntityOfflineViewModel, SPTFreeTierPlaylistDefaultHeaderViewModel, SPTFreeTierPlaylistFollowViewModel, SPTFreeTierPlaylistFullbleedHeaderViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistVISREFHeaderControllerDelegate, SPTFreeTierPlaylistVISREFHeaderViewModel, SPTImageLoader, SPTLinkDispatcher, SPTSortingFilteringUIFactory;
 
-@interface SPTFreeTierPlaylistEncoreHeaderControllerImplementation : NSObject <SPTImageLoaderDelegate, SPTEncorePlaylistHeaderDelegate, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistVISREFHeaderController>
+@interface SPTFreeTierPlaylistEncoreHeaderControllerImplementation : NSObject <SPTImageLoaderDelegate, SPTEncorePlaylistHeaderDelegate, SPTFreeTierEntityOfflineDelegate, SPTSortingFilteringPickerDelegate, SPTFreeTierPlaylistVISREFHeaderController>
 {
     id <SPTFreeTierPlaylistVISREFHeaderControllerDelegate> _delegate;
     UIView *_headerView;
@@ -22,6 +23,8 @@
     id <SPTImageLoader> _imageLoader;
     SPTEncorePlaylistHeader *_playlistHeader;
     CDUnknownBlockType _backButtonTappedBlock;
+    CDUnknownBlockType _searchButtonTappedBlock;
+    CDUnknownBlockType _filterButtonTappedBlock;
     double _headerHeight;
     unsigned long long _currentOfflineAvailability;
     double _navigationBarHeight;
@@ -39,11 +42,13 @@
     VISREFFreeTierPlaylistFollowButtonViewModel *_followButtonViewModel;
     id <SPTFreeTierPlaylistVISREFHeaderViewModel> _visrefHeaderViewModel;
     VISREFPlaylistContextMenuViewModel *_contextMenuViewModel;
+    id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
     UIView *_searchView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) UIView *searchView; // @synthesize searchView=_searchView;
+@property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
 @property(retain, nonatomic) VISREFPlaylistContextMenuViewModel *contextMenuViewModel; // @synthesize contextMenuViewModel=_contextMenuViewModel;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistVISREFHeaderViewModel> visrefHeaderViewModel; // @synthesize visrefHeaderViewModel=_visrefHeaderViewModel;
 @property(retain, nonatomic) VISREFFreeTierPlaylistFollowButtonViewModel *followButtonViewModel; // @synthesize followButtonViewModel=_followButtonViewModel;
@@ -61,12 +66,18 @@
 @property(nonatomic) double navigationBarHeight; // @synthesize navigationBarHeight=_navigationBarHeight;
 @property(nonatomic) unsigned long long currentOfflineAvailability; // @synthesize currentOfflineAvailability=_currentOfflineAvailability;
 @property(nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
+@property(copy, nonatomic) CDUnknownBlockType filterButtonTappedBlock; // @synthesize filterButtonTappedBlock=_filterButtonTappedBlock;
+@property(copy, nonatomic) CDUnknownBlockType searchButtonTappedBlock; // @synthesize searchButtonTappedBlock=_searchButtonTappedBlock;
 @property(copy, nonatomic) CDUnknownBlockType backButtonTappedBlock; // @synthesize backButtonTappedBlock=_backButtonTappedBlock;
 @property(retain, nonatomic) SPTEncorePlaylistHeader *playlistHeader; // @synthesize playlistHeader=_playlistHeader;
 @property(retain, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) UIView *headerView; // @synthesize headerView=_headerView;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistVISREFHeaderControllerDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)sortingFilteringPicker:(id)arg1 selectedFilterRule:(id)arg2;
+- (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
+- (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;
+- (void)sortingFilteringPicker:(id)arg1 selectedSortRule:(id)arg2;
 - (double)topAccessoryViewHeight;
 - (void)viewModel:(id)arg1 offlineAvailabilityChanged:(unsigned long long)arg2;
 - (void)filterFieldTappedWithSender:(id)arg1;
@@ -88,7 +99,7 @@
 - (void)navigationBarHeightDidChange:(double)arg1 forceUpdate:(_Bool)arg2;
 - (void)updatePlaylistImageWithURL:(id)arg1;
 - (void)setup;
-- (id)initWithPlaylistHeader:(id)arg1 imageLoader:(id)arg2 linkDispatcher:(id)arg3;
+- (id)initWithPlaylistHeader:(id)arg1 imageLoader:(id)arg2 linkDispatcher:(id)arg3 sortingFilteringUIFactory:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

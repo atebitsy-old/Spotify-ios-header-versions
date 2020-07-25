@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileShareMenu_MenuItems_ShareDestinationEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitShareWithEntityToBeShared:(NSURL *)arg1 shareId:(NSString *)arg2;
 - (id <SPTUBIImpressionEvent>)impression;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

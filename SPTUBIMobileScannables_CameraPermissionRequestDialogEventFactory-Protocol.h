@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileScannables_CameraPermissionRequestDialog_AllowButtonEventFactory, SPTUBIMobileScannables_CameraPermissionRequestDialog_DisallowButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileScannables_CameraPermissionRequestDialog_AllowButtonEventFactory, SPTUBIMobileScannables_CameraPermissionRequestDialog_DisallowButtonEventFactory;
 
 @protocol SPTUBIMobileScannables_CameraPermissionRequestDialogEventFactory <NSObject>
 - (id <SPTUBIMobileScannables_CameraPermissionRequestDialog_DisallowButtonEventFactory>)disallowButtonFactory;
 - (id <SPTUBIMobileScannables_CameraPermissionRequestDialog_AllowButtonEventFactory>)allowButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

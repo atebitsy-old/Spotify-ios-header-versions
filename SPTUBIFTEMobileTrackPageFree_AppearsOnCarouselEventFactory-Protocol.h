@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIFTEMobileTrackPageFree_AppearsOnCarousel_AppearsOnCardEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIFTEMobileTrackPageFree_AppearsOnCarousel_AppearsOnCardEventFactory;
 
 @protocol SPTUBIFTEMobileTrackPageFree_AppearsOnCarouselEventFactory <NSObject>
 - (id <SPTUBIFTEMobileTrackPageFree_AppearsOnCarousel_AppearsOnCardEventFactory>)appearsOnCardFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

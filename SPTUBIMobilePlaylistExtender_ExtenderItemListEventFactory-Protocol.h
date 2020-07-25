@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePlaylistExtender_ExtenderItemList_HeaderEventFactory, SPTUBIMobilePlaylistExtender_ExtenderItemList_ItemEventFactory, SPTUBIMobilePlaylistExtender_ExtenderItemList_RefreshButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePlaylistExtender_ExtenderItemList_HeaderEventFactory, SPTUBIMobilePlaylistExtender_ExtenderItemList_ItemEventFactory, SPTUBIMobilePlaylistExtender_ExtenderItemList_RefreshButtonEventFactory;
 
 @protocol SPTUBIMobilePlaylistExtender_ExtenderItemListEventFactory <NSObject>
 - (id <SPTUBIMobilePlaylistExtender_ExtenderItemList_ItemEventFactory>)itemFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobilePlaylistExtender_ExtenderItemList_RefreshButtonEventFactory>)refreshButtonFactory;
 - (id <SPTUBIMobilePlaylistExtender_ExtenderItemList_HeaderEventFactory>)headerFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

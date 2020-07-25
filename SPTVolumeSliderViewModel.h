@@ -11,7 +11,7 @@
 #import "SPTVolumeSystemObserver-Protocol.h"
 #import "SPTVolumeThrottlerDelegate-Protocol.h"
 
-@class NSString, SPTVolumeLogger, SPTVolumeThrottler, SPTVolumeUbiLogger;
+@class NSString, SPTVolumeLogger, SPTVolumeThrottlerImplementation, SPTVolumeUbiLogger;
 @protocol SPTGaiaConnectAPI, SPTVolumeAPI, SPTVolumeSliderViewModelDelegate, SPTVolumeSystemAPI;
 
 @interface SPTVolumeSliderViewModel : NSObject <SPTVolumeObserver, SPTGaiaConnectObserver, SPTVolumeSystemObserver, SPTVolumeThrottlerDelegate>
@@ -22,7 +22,7 @@
     id <SPTVolumeAPI> _volumeController;
     id <SPTVolumeSystemAPI> _systemVolumeManager;
     id <SPTGaiaConnectAPI> _connectManager;
-    SPTVolumeThrottler *_commandThrottler;
+    SPTVolumeThrottlerImplementation *_commandThrottler;
     SPTVolumeLogger *_logger;
     SPTVolumeUbiLogger *_ubiLogger;
     double _sliderValue;
@@ -33,7 +33,7 @@
 @property(nonatomic) double sliderValue; // @synthesize sliderValue=_sliderValue;
 @property(retain, nonatomic) SPTVolumeUbiLogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) SPTVolumeLogger *logger; // @synthesize logger=_logger;
-@property(retain, nonatomic) SPTVolumeThrottler *commandThrottler; // @synthesize commandThrottler=_commandThrottler;
+@property(retain, nonatomic) SPTVolumeThrottlerImplementation *commandThrottler; // @synthesize commandThrottler=_commandThrottler;
 @property(retain, nonatomic) id <SPTGaiaConnectAPI> connectManager; // @synthesize connectManager=_connectManager;
 @property(retain, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(retain, nonatomic) id <SPTVolumeAPI> volumeController; // @synthesize volumeController=_volumeController;

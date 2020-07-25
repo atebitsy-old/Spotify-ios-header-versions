@@ -10,6 +10,7 @@
 
 @protocol SPTYourLibraryMusicAssistantSectionViewModel <SPTYourLibraryMusicSectionViewModel>
 @property(readonly, nonatomic) CDUnknownBlockType closeAction;
+@property(readonly, nonatomic) CDUnknownBlockType buttonAction;
 @property(readonly, nonatomic) NSString *buttonText;
 @property(readonly, nonatomic) NSString *subtitle;
 @property(readonly, nonatomic) NSString *headerText;

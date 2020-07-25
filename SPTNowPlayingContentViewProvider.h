@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class BMVideoSurfaceFactory, SPTNowPlayingContentLayerViewController, SPTNowPlayingContentLayerViewModel, SPTNowPlayingCoverArtProvider, SPTNowPlayingHorizontalVideoProvider, SPTNowPlayingLogger, SPTNowPlayingVerticalVideoProvider, SPTNowPlayingYoutubeVideoProvider, SPTTheme;
-@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTNowPlayingVideoManager, SPTPlayer;
+@protocol BMVideoSurfaceManager, SPTGLUEImageLoaderFactory, SPTNowPlayingContentLayerResolver, SPTNowPlayingTestManager, SPTNowPlayingVideoManager, SPTPlayer, SPTShareDragDelegateFactory;
 
 @interface SPTNowPlayingContentViewProvider : NSObject
 {
@@ -20,6 +20,7 @@
     id <SPTPlayer> _player;
     SPTNowPlayingContentLayerViewModel *_contentLayerViewModel;
     id <SPTNowPlayingContentLayerResolver> _contentLayerResolver;
+    id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     id <SPTNowPlayingTestManager> _testManger;
     SPTNowPlayingContentLayerViewController *_contentLayerViewController;
     SPTNowPlayingCoverArtProvider *_coverArtProvider;
@@ -35,6 +36,7 @@
 @property(retain, nonatomic) SPTNowPlayingCoverArtProvider *coverArtProvider; // @synthesize coverArtProvider=_coverArtProvider;
 @property(retain, nonatomic) SPTNowPlayingContentLayerViewController *contentLayerViewController; // @synthesize contentLayerViewController=_contentLayerViewController;
 @property(readonly, nonatomic) id <SPTNowPlayingTestManager> testManger; // @synthesize testManger=_testManger;
+@property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) id <SPTNowPlayingContentLayerResolver> contentLayerResolver; // @synthesize contentLayerResolver=_contentLayerResolver;
 @property(readonly, nonatomic) SPTNowPlayingContentLayerViewModel *contentLayerViewModel; // @synthesize contentLayerViewModel=_contentLayerViewModel;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -49,7 +51,7 @@
 - (void)registerVerticalVideoProvider;
 - (void)registerCoverArtProvider;
 - (id)contentViewController;
-- (id)initWithTheme:(id)arg1 glueImageLoaderFactory:(id)arg2 logger:(id)arg3 videoSurfaceManager:(id)arg4 surfaceFactory:(id)arg5 nowPlayingVideoManager:(id)arg6 player:(id)arg7 contentLayerViewModel:(id)arg8 testManager:(id)arg9;
+- (id)initWithTheme:(id)arg1 glueImageLoaderFactory:(id)arg2 logger:(id)arg3 videoSurfaceManager:(id)arg4 surfaceFactory:(id)arg5 nowPlayingVideoManager:(id)arg6 player:(id)arg7 contentLayerViewModel:(id)arg8 shareDragDelegateFactory:(id)arg9 testManager:(id)arg10;
 
 @end
 

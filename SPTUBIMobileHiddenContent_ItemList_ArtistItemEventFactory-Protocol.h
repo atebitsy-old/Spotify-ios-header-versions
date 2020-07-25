@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileHiddenContent_ItemList_ArtistItem_BanButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileHiddenContent_ItemList_ArtistItem_BanButtonEventFactory;
 
 @protocol SPTUBIMobileHiddenContent_ItemList_ArtistItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIMobileHiddenContent_ItemList_ArtistItem_BanButtonEventFactory>)banButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

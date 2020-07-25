@@ -6,9 +6,6 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTOnboardingFlowCoordinator;
-
 @protocol _TtP18AllBoardingFeature21SPTAllBoardingService_ <SPTService>
-- (id <SPTOnboardingFlowCoordinator>)provideCoordinator;
 @end
 

@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobilePodcastUnfinishedEpisodeCard_UnfinishedEpisodeCardContainer_MarkAsPlayedButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobilePodcastUnfinishedEpisodeCard_UnfinishedEpisodeCardContainer_MarkAsPlayedButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastUnfinishedEpisodeCard_UnfinishedEpisodeCardContainerEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitPauseWithItemToBePaused:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIMobilePodcastUnfinishedEpisodeCard_UnfinishedEpisodeCardContainer_MarkAsPlayedButtonEventFactory>)markAsPlayedButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

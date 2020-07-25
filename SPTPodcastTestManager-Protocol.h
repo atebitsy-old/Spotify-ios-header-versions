@@ -7,6 +7,8 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTPodcastTestManager <NSObject>
+@property(readonly, nonatomic, getter=isPodcastQuoteDisplayEnabled) _Bool podcastQuoteDisplayEnabled;
+@property(readonly, nonatomic, getter=isPodcastQuoteFetchEnabled) _Bool podcastQuoteFetchEnabled;
 @property(readonly, nonatomic, getter=isPodcastTopicsInShowRequestEnabled) _Bool podcastTopicsInShowRequestEnabled;
 @property(readonly, nonatomic, getter=isPodcastDALEnabledForExternalFeatures) _Bool podcastDALEnabledForExternalFeatures;
 @property(readonly, nonatomic, getter=isPodcastShowPageHTMLDescriptionEnabled) _Bool podcastShowPageHTMLDescriptionEnabled;

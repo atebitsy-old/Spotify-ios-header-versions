@@ -6,10 +6,12 @@
 
 #import <objc/NSObject.h>
 
-@class SPTPsesCommandLineArguments;
+#import "SPTLoginPhoneNumberTestManager-Protocol.h"
+
+@class NSString, SPTPsesCommandLineArguments;
 @protocol SPTPreSignupExperimentationFeatureFlagsLoader;
 
-@interface SPTLoginTestManager : NSObject
+@interface SPTLoginTestManager : NSObject <SPTLoginPhoneNumberTestManager>
 {
     id <SPTPreSignupExperimentationFeatureFlagsLoader> _featureFlagsLoader;
     SPTPsesCommandLineArguments *_psesCommandLineArguments;
@@ -18,6 +20,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTPsesCommandLineArguments *psesCommandLineArguments; // @synthesize psesCommandLineArguments=_psesCommandLineArguments;
 @property(readonly, nonatomic) id <SPTPreSignupExperimentationFeatureFlagsLoader> featureFlagsLoader; // @synthesize featureFlagsLoader=_featureFlagsLoader;
+@property(readonly, nonatomic, getter=isPhoneNumberAutofillEnabled) _Bool phoneNumberAutofillEnabled;
 @property(readonly, nonatomic, getter=isStartScreenImageryEnabled) _Bool startScreenImageryEnabled;
 - (unsigned long long)welcomeViewImageryCell;
 @property(readonly, nonatomic, getter=isPhoneNumberEnabled) _Bool phoneNumberEnabled;
@@ -39,6 +42,12 @@
 - (_Bool)isFlagEnabled:(id)arg1;
 - (id)initWithFeatureFlagsLoader:(id)arg1 psesCommandLineArguments:(id)arg2;
 - (id)initWithFeatureFlagsLoader:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

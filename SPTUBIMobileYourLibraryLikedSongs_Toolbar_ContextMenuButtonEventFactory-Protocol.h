@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_Toolbar_ContextMenuButton_FindOptionEventFactory, SPTUBIMobileYourLibraryLikedSongs_Toolbar_ContextMenuButton_SortOptionEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_Toolbar_ContextMenuButton_FindOptionEventFactory, SPTUBIMobileYourLibraryLikedSongs_Toolbar_ContextMenuButton_SortOptionEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_Toolbar_ContextMenuButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIMobileYourLibraryLikedSongs_Toolbar_ContextMenuButton_SortOptionEventFactory>)sortOptionFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_Toolbar_ContextMenuButton_FindOptionEventFactory>)findOptionFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

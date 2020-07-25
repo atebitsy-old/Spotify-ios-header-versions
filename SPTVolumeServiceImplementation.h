@@ -8,7 +8,7 @@
 
 #import "SPTVolumeService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeDebugInstrumentation, SPTVolumeFeatureProperties, SPTVolumeFlagsProvider, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSliderViewFactory, SPTVolumeSystemPopupEmitter, SPTVolumeSystemPopupHideEmitterLegacy, SPTVolumeUbiLogger;
+@class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeDebugInstrumentation, SPTVolumeFeatureProperties, SPTVolumeFlagsProvider, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSliderViewFactory, SPTVolumeSystemPopupEmitter, SPTVolumeSystemPopupHideEmitterLegacy, SPTVolumeThrottlerFactoryImplementation, SPTVolumeUbiLogger;
 @protocol CosmosFeature, GaiaFeature, SPTAbbaService, SPTContainerService, SPTEventSenderService, SPTGaiaConnectAPI, SPTPlayerFeature, SPTRemoteConfigurationService, SPTUBIService, SPTVolumeAPI, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeServiceImplementation : NSObject <SPTVolumeService>
@@ -37,10 +37,12 @@
     SPTVolumeSliderViewFactory *_volumeSliderViewFactory;
     SPTVolumeFeatureProperties *_remoteConfigProperties;
     SPTVolumeFlagsProvider *_flagsProvider;
+    SPTVolumeThrottlerFactoryImplementation *_volumeThrottlerFactory;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) SPTVolumeThrottlerFactoryImplementation *volumeThrottlerFactory; // @synthesize volumeThrottlerFactory=_volumeThrottlerFactory;
 @property(retain, nonatomic) SPTVolumeFlagsProvider *flagsProvider; // @synthesize flagsProvider=_flagsProvider;
 @property(retain, nonatomic) SPTVolumeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
 @property(retain, nonatomic) SPTVolumeSliderViewFactory *volumeSliderViewFactory; // @synthesize volumeSliderViewFactory=_volumeSliderViewFactory;
@@ -65,6 +67,7 @@
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
+- (id)provideVolumeThrottlerFactory;
 - (id)provideVolumeFlagsProvider;
 - (id)provideVolumeSystemAPI;
 - (id)provideVolumeUIFactory;

@@ -11,7 +11,7 @@
 #import "SPTYourLibraryMusicPlaylistsViewModel-Protocol.h"
 
 @class NSArray, NSString, SPTYourLibraryMusicGroupLabelReader, SPTYourLibraryMusicLogger;
-@protocol SPTCreatePlaylistController, SPTLinkDispatcher, SPTLocalSettings, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicPlaylistModelItemEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager;
+@protocol SPTCreatePlaylistController, SPTLinkDispatcher, SPTLocalSettings, SPTModalPresentationController, SPTPlaylistPlatformPlaylistSynchroniser, SPTSortingFilteringUIFactory, SPTYourLibraryMusicPlaylistModelItemEntity, SPTYourLibraryMusicPlaylistsModel, SPTYourLibraryMusicPlaylistsModelEntity, SPTYourLibraryMusicPlaylistsViewModelDelegate, SPTYourLibraryMusicTestManager, _TtP19YourLibraryXFeature46SPTYourLibraryXOnboardingViewControllerFactory_;
 
 @interface SPTYourLibraryMusicPlaylistsViewModelImplementation : NSObject <SPTSortingFilteringPickerDelegate, SPTYourLibraryMusicPlaylistsViewModel, SPTYourLibraryMusicPlaylistsModelDelegate>
 {
@@ -29,9 +29,13 @@
     id <SPTSortingFilteringUIFactory> _sortingFilteringPickerFactory;
     SPTYourLibraryMusicGroupLabelReader *_groupLabelReader;
     id <SPTLocalSettings> _localSettings;
+    id <SPTModalPresentationController> _modalPresentationController;
+    id <_TtP19YourLibraryXFeature46SPTYourLibraryXOnboardingViewControllerFactory_> _onboardingViewControllerFactory;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <_TtP19YourLibraryXFeature46SPTYourLibraryXOnboardingViewControllerFactory_> onboardingViewControllerFactory; // @synthesize onboardingViewControllerFactory=_onboardingViewControllerFactory;
+@property(readonly, nonatomic) id <SPTModalPresentationController> modalPresentationController; // @synthesize modalPresentationController=_modalPresentationController;
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) SPTYourLibraryMusicGroupLabelReader *groupLabelReader; // @synthesize groupLabelReader=_groupLabelReader;
 @property(nonatomic) _Bool didLogScrollIndexSelected; // @synthesize didLogScrollIndexSelected=_didLogScrollIndexSelected;
@@ -96,7 +100,7 @@
 @property(readonly, nonatomic) NSArray *activeFilterTitles;
 @property(readonly, nonatomic) unsigned long long filteredContentState;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 playlistSynchroniser:(id)arg3 createPlaylistController:(id)arg4 logger:(id)arg5 testManager:(id)arg6 sortingFilteringPickerFactory:(id)arg7 localSettings:(id)arg8;
+- (id)initWithModel:(id)arg1 linkDispatcher:(id)arg2 playlistSynchroniser:(id)arg3 createPlaylistController:(id)arg4 logger:(id)arg5 testManager:(id)arg6 sortingFilteringPickerFactory:(id)arg7 localSettings:(id)arg8 modalPresentationController:(id)arg9 onboardingViewControllerFactory:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

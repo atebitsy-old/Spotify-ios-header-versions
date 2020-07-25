@@ -301,6 +301,16 @@ struct ClientFeatureStack {
     struct unique_ptr<spotify::client_features::ClientFeatureStack::Impl, std::__1::default_delete<spotify::client_features::ClientFeatureStack::Impl>> _field1;
 };
 
+struct ClientToken {
+    basic_string_90719d97 token;
+    struct time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000>>> expires_at_timestamp;
+    struct time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1, 1000000>>> refresh_at_timestamp;
+    basic_string_90719d97 client_data_hash;
+    struct vector<std::__1::basic_string<char>, std::__1::allocator<std::__1::basic_string<char>>> domains;
+};
+
+struct ClientTokenAcquirer;
+
 struct ClientTokenInfo {
     basic_string_90719d97 _field1;
 };
@@ -731,10 +741,10 @@ struct NSDictionary {
 };
 
 struct NSDirectionalEdgeInsets {
-    double _field1;
-    double _field2;
-    double _field3;
-    double _field4;
+    double top;
+    double leading;
+    double bottom;
+    double trailing;
 };
 
 struct NSMutableDictionary {
@@ -1920,6 +1930,11 @@ struct shared_ptr<spotify::connectivity::CredentialsStorage> {
     struct __shared_weak_count *__cntrl_;
 };
 
+struct shared_ptr<spotify::connectivity::auth::client_token::ClientTokenAcquirer> {
+    struct ClientTokenAcquirer *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+};
+
 struct shared_ptr<spotify::connectivity::auth::oauth::Client> {
     struct Client *__ptr_;
     struct __shared_weak_count *__cntrl_;
@@ -2809,11 +2824,11 @@ struct vector<spotify::uri::SpotifyLink, std::__1::allocator<spotify::uri::Spoti
 };
 
 struct vector<std::__1::basic_string<char>, std::__1::allocator<std::__1::basic_string<char>>> {
-    basic_string_90719d97 *_field1;
-    basic_string_90719d97 *_field2;
+    basic_string_90719d97 *__begin_;
+    basic_string_90719d97 *__end_;
     struct __compressed_pair<std::__1::basic_string<char>*, std::__1::allocator<std::__1::basic_string<char>>> {
-        basic_string_90719d97 *_field1;
-    } _field3;
+        basic_string_90719d97 *__value_;
+    } __end_cap_;
 };
 
 struct vector<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>, std::__1::allocator<std::__1::pair<spotify::playback::AudioVolumeControl *, spotify::signals::connection>>> {
@@ -2856,6 +2871,11 @@ struct vector_alloc_holder<boost::container::small_vector_allocator<spotify::sig
     struct connected_slot *_field1;
     unsigned long long _field2;
     unsigned long long _field3;
+};
+
+struct weak_ptr<spotify::connectivity::auth::client_token::ClientTokenAcquirer> {
+    struct ClientTokenAcquirer *__ptr_;
+    struct __shared_weak_count *__cntrl_;
 };
 
 struct weak_ptr<spotify::connectivity::netstat::RequestAccounting::Impl> {
@@ -3287,6 +3307,11 @@ typedef struct shared_ptr<spotify::connectivity::CredentialsStorage> {
     struct __shared_weak_count *__cntrl_;
 } shared_ptr_23ecd02a;
 
+typedef struct shared_ptr<spotify::connectivity::auth::client_token::ClientTokenAcquirer> {
+    struct ClientTokenAcquirer *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} shared_ptr_57e77949;
+
 typedef struct shared_ptr<spotify::connectivity::auth::oauth::Client> {
     struct Client *__ptr_;
     struct __shared_weak_count *__cntrl_;
@@ -3448,6 +3473,11 @@ typedef struct vector<std::__1::shared_ptr<spotify::connect::MdnsDevice>, std::_
         struct shared_ptr<spotify::connect::MdnsDevice> *__value_;
     } __end_cap_;
 } vector_023e58be;
+
+typedef struct weak_ptr<spotify::connectivity::auth::client_token::ClientTokenAcquirer> {
+    struct ClientTokenAcquirer *__ptr_;
+    struct __shared_weak_count *__cntrl_;
+} weak_ptr_e1a4dc17;
 
 typedef struct weak_ptr<spotify::connectivity::objc::ConnectionTypeProviderBridge> {
     struct ConnectionTypeProviderBridge *__ptr_;

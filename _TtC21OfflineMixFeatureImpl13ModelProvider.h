@@ -10,12 +10,13 @@
 {
     // Error parsing type: , name: alertInterface
     // Error parsing type: , name: downloadManager
+    // Error parsing type: , name: logger
 }
 
 - (void).cxx_destruct;
 - (id)init;
 - (id)provideTrackSectionFor:(id)arg1;
-- (id)provideFreeTierPlaylistCellProviderFor:(id)arg1 itemsViewModel:(id)arg2 assistedCurationUIService:(id)arg3;
+- (id)provideNowPlayingOfflineModelFor:(id)arg1;
 - (id)provideFreeTierTrackOfflineToggleCommandHandlerFor:(id)arg1;
 - (id)provideFreeTierTrackOfflineButtonViewModelFor:(id)arg1;
 

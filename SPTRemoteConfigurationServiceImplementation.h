@@ -8,7 +8,7 @@
 
 #import "SPTRemoteConfigurationService-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTRemoteConfigurationCoreBridgeImplementation, SPTRemoteConfigurationFeatureProperties;
+@class NSString, SPTAllocationContext, SPTRemoteConfiguration, SPTRemoteConfigurationCoreBridgeImplementation, SPTRemoteConfigurationFeatureProperties;
 @protocol SPTBootstrapService, SPTCoreService, SPTEventSenderService, SPTNetworkService, SPTRemoteConfigurationIntegration, SPTRemoteConfigurationResolver;
 
 @interface SPTRemoteConfigurationServiceImplementation : NSObject <SPTRemoteConfigurationService>
@@ -19,6 +19,7 @@
     id <SPTEventSenderService> _eventSenderService;
     id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
     id <SPTRemoteConfigurationIntegration> _remoteConfigurationIntegration;
+    SPTRemoteConfiguration *_remoteConfiguration;
     SPTRemoteConfigurationFeatureProperties *_properties;
     SPTRemoteConfigurationCoreBridgeImplementation *_coreBridge;
 }
@@ -27,6 +28,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTRemoteConfigurationCoreBridgeImplementation *coreBridge; // @synthesize coreBridge=_coreBridge;
 @property(retain, nonatomic) SPTRemoteConfigurationFeatureProperties *properties; // @synthesize properties=_properties;
+@property(retain, nonatomic) SPTRemoteConfiguration *remoteConfiguration; // @synthesize remoteConfiguration=_remoteConfiguration;
 @property(retain, nonatomic) id <SPTRemoteConfigurationIntegration> remoteConfigurationIntegration; // @synthesize remoteConfigurationIntegration=_remoteConfigurationIntegration;
 @property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;

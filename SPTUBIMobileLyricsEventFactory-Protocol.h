@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileLyrics_CardViewEventFactory, SPTUBIMobileLyrics_FullscreenViewEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileLyrics_CardViewEventFactory, SPTUBIMobileLyrics_FullscreenViewEventFactory;
 
 @protocol SPTUBIMobileLyricsEventFactory <NSObject>
 - (id <SPTUBIMobileLyrics_FullscreenViewEventFactory>)fullscreenViewFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileLyrics_CardViewEventFactory>)cardViewFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

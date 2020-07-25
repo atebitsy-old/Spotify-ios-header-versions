@@ -9,7 +9,7 @@
 #import "SPSessionObserver-Protocol.h"
 #import "SPTIncognitoModeHandlerObserver-Protocol.h"
 
-@class NSString, SPCore, SPSession, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTEntityService, SPTIncognitoModeHandler, SPTLogger, SPTOfflineManager, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTRouterFactory, SPTSocialManager, SPTUserFactory;
+@class NSString, SPCore, SPSession, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTEntityService, SPTIncognitoModeHandler, SPTLoggerImplementation, SPTOfflineManager, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTRouterFactory, SPTSocialManager, SPTUserFactory;
 @protocol SPTAsyncScheduler, SPTResolver;
 
 @interface SPTCoreClientFeatures : NSObject <SPTIncognitoModeHandlerObserver, SPSessionObserver>
@@ -17,7 +17,7 @@
     struct unique_ptr<spotify::client_features::ClientFeatureStack, std::__1::default_delete<spotify::client_features::ClientFeatureStack>> _clientFeatureStack;
     id <SPTResolver> _cosmosRouter;
     SPTApplicationStateTracker *_applicationStateTracker;
-    SPTLogger *_logger;
+    SPTLoggerImplementation *_logger;
     SPTEntityService *_entityService;
     SPTAudioVolumeControl *_audioVolumeControl;
     SPTPlayerMftCanPlayChecker *_mftCanPlayChecker;
@@ -47,7 +47,7 @@
 @property(retain, nonatomic) SPTPlayerMftCanPlayChecker *mftCanPlayChecker; // @synthesize mftCanPlayChecker=_mftCanPlayChecker;
 @property(retain, nonatomic) SPTAudioVolumeControl *audioVolumeControl; // @synthesize audioVolumeControl=_audioVolumeControl;
 @property(retain, nonatomic) SPTEntityService *entityService; // @synthesize entityService=_entityService;
-@property(retain, nonatomic) SPTLogger *logger; // @synthesize logger=_logger;
+@property(retain, nonatomic) SPTLoggerImplementation *logger; // @synthesize logger=_logger;
 @property(retain, nonatomic) SPTApplicationStateTracker *applicationStateTracker; // @synthesize applicationStateTracker=_applicationStateTracker;
 @property(retain, nonatomic) id <SPTResolver> cosmosRouter; // @synthesize cosmosRouter=_cosmosRouter;
 - (void)incognitoModeHandler:(id)arg1 incognitoModeChangedByTimeout:(_Bool)arg2;

@@ -6,13 +6,13 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileFindfriends_ConnectToFacebookButtonEventFactory, SPTUBIMobileFindfriends_FilterTextEventFactory, SPTUBIMobileFindfriends_FollowAllButtonEventFactory, SPTUBIMobileFindfriends_UserListEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileFindfriends_ConnectToFacebookButtonEventFactory, SPTUBIMobileFindfriends_FilterTextEventFactory, SPTUBIMobileFindfriends_FollowAllButtonEventFactory, SPTUBIMobileFindfriends_UserListEventFactory;
 
 @protocol SPTUBIMobileFindfriendsEventFactory <NSObject>
 - (id <SPTUBIMobileFindfriends_UserListEventFactory>)userListFactory;
 - (id <SPTUBIMobileFindfriends_FollowAllButtonEventFactory>)followAllButtonFactory;
 - (id <SPTUBIMobileFindfriends_ConnectToFacebookButtonEventFactory>)connectToFacebookButtonFactory;
 - (id <SPTUBIMobileFindfriends_FilterTextEventFactory>)filterTextFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

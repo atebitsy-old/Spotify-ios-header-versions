@@ -8,7 +8,10 @@
 
 @interface _TtC25PodcastQuoteUIFeatureImpl21PodcastQuoteUIService : NSObject
 {
-    // Error parsing type: , name: containerService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: sharePreviewService
+    // Error parsing type: , name: uiPresentationService
+    // Error parsing type: , name: ubiService
 }
 
 - (void).cxx_destruct;

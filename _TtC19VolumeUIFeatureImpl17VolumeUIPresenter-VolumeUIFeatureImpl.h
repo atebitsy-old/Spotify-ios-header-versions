@@ -7,6 +7,6 @@
 #import "_TtC19VolumeUIFeatureImpl17VolumeUIPresenter.h"
 
 @interface _TtC19VolumeUIFeatureImpl17VolumeUIPresenter (VolumeUIFeatureImpl)
-- (void)hideVolumeUI;
+- (void)autoHideVolumeUI;
 @end
 

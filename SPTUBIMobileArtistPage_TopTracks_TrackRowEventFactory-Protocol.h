@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileArtistPage_TopTracks_TrackRowEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeRightAddItemToQueueWithItemToAddToQueue:(NSURL *)arg1;
@@ -15,6 +15,6 @@
 - (id <SPTUBIInteractionEvent>)swipeLeftLikeWithItemToBeLiked:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

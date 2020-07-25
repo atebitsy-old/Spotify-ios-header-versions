@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileHome_TasteOnboarding_ChooseButtonEventFactory, SPTUBIMobileHome_TasteOnboarding_DismissButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileHome_TasteOnboarding_ChooseButtonEventFactory, SPTUBIMobileHome_TasteOnboarding_DismissButtonEventFactory;
 
 @protocol SPTUBIMobileHome_TasteOnboardingEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileHome_TasteOnboarding_ChooseButtonEventFactory>)chooseButtonFactoryWithIdentifier:(NSString *)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileHome_TasteOnboarding_DismissButtonEventFactory>)dismissButtonFactoryWithIdentifier:(NSString *)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

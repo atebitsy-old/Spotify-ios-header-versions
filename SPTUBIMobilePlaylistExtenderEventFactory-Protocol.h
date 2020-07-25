@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePlaylistExtender_ExtenderItemListEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePlaylistExtender_ExtenderItemListEventFactory;
 
 @protocol SPTUBIMobilePlaylistExtenderEventFactory <NSObject>
 - (id <SPTUBIMobilePlaylistExtender_ExtenderItemListEventFactory>)extenderItemListFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

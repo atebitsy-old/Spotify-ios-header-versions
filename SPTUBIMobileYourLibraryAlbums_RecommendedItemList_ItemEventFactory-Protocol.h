@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryAlbums_RecommendedItemList_Item_ItemActionEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryAlbums_RecommendedItemList_Item_ItemActionEventFactory;
 
 @protocol SPTUBIMobileYourLibraryAlbums_RecommendedItemList_ItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIMobileYourLibraryAlbums_RecommendedItemList_Item_ItemActionEventFactory>)itemActionFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

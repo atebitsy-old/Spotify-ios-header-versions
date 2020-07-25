@@ -8,29 +8,18 @@
 
 #import "SPTYourLibraryTestManager-Protocol.h"
 
-@class NSString, SPTYourLibraryFeatureProperties;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal, SPTRemoteConfigurationResolver, _TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_;
+@class NSString;
+@protocol _TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_;
 
 @interface SPTYourLibraryTestManagerImplementation : NSObject <SPTYourLibraryTestManager>
 {
-    id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
-    SPTYourLibraryFeatureProperties *_remoteConfigurationProperties;
-    id <SPTFeatureFlagSignal> _freeTierExperienceEnabledSignal;
     id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_> _yourLibraryXTestManager;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_> yourLibraryXTestManager; // @synthesize yourLibraryXTestManager=_yourLibraryXTestManager;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> freeTierExperienceEnabledSignal; // @synthesize freeTierExperienceEnabledSignal=_freeTierExperienceEnabledSignal;
-@property(retain, nonatomic) SPTYourLibraryFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
-@property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
-@property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void)setupRemoteConfigurationProperties;
 @property(readonly, nonatomic, getter=isYourLibraryXEnabled) _Bool yourLibraryXEnabled;
-@property(readonly, nonatomic) long long persistActiveTabDurationHours;
-@property(readonly, nonatomic, getter=isPersistActiveTabEnabled) _Bool persistActiveTabEnabled;
-- (id)initWithFeatureFlagFactory:(id)arg1 remoteConfigurationResolver:(id)arg2 freeTierExperienceEnabledSignal:(id)arg3 yourLibraryXTestManager:(id)arg4;
+- (id)initWithYourLibraryXTestManager:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -8,37 +8,38 @@
 
 #import "GLUEStyleable-Protocol.h"
 
-@class GLUEButton, GLUELabel, NSArray, NSString, UIStackView;
+@class GLUEButton, GLUELabel, NSArray, NSString, SPTSocialListeningScannableContainerViewImplementation, UIStackView;
+@protocol SPTSocialListeningTestManager;
 
 @interface SPTSocialListeningListenTogetherBottomBanner : UIView <GLUEStyleable>
 {
     GLUEButton *_inviteButton;
-    GLUEButton *_addSongsButton;
-    GLUEButton *_queueButton;
     double _preferredHeight;
+    SPTSocialListeningScannableContainerViewImplementation *_scannableContainerView;
     GLUELabel *_titleLabel;
     GLUELabel *_descriptionLabel;
     GLUELabel *_privacyDisclaimerLabel;
     UIStackView *_buttonContainerView;
     NSArray *_currentConstraints;
+    id <SPTSocialListeningTestManager> _testManager;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTSocialListeningTestManager> testManager; // @synthesize testManager=_testManager;
 @property(copy, nonatomic) NSArray *currentConstraints; // @synthesize currentConstraints=_currentConstraints;
 @property(readonly, nonatomic) UIStackView *buttonContainerView; // @synthesize buttonContainerView=_buttonContainerView;
 @property(readonly, nonatomic) GLUELabel *privacyDisclaimerLabel; // @synthesize privacyDisclaimerLabel=_privacyDisclaimerLabel;
 @property(readonly, nonatomic) GLUELabel *descriptionLabel; // @synthesize descriptionLabel=_descriptionLabel;
 @property(readonly, nonatomic) GLUELabel *titleLabel; // @synthesize titleLabel=_titleLabel;
+@property(readonly, nonatomic) SPTSocialListeningScannableContainerViewImplementation *scannableContainerView; // @synthesize scannableContainerView=_scannableContainerView;
 @property(nonatomic) double preferredHeight; // @synthesize preferredHeight=_preferredHeight;
-@property(readonly, nonatomic) GLUEButton *queueButton; // @synthesize queueButton=_queueButton;
-@property(readonly, nonatomic) GLUEButton *addSongsButton; // @synthesize addSongsButton=_addSongsButton;
 @property(readonly, nonatomic) GLUEButton *inviteButton; // @synthesize inviteButton=_inviteButton;
 - (void)glue_applyStyle:(id)arg1;
 - (id)horizontallyConstrainView:(id)arg1;
 - (void)updateViewConstraintsWithPrivacyLabel;
-- (void)updateViewConstraintsWithoutPrivacyLabel;
 - (void)configureWithType:(unsigned long long)arg1 withMaxNumberOfUsers:(unsigned long long)arg2;
-- (id)initWithFrame:(struct CGRect)arg1;
+- (void)setupScannableContainerViewLayoutConstraints;
+- (id)initWithTestManager:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

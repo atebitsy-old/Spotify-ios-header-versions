@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePlaylistEntity_ItemList_ItemEventFactory, SPTUBIMobilePlaylistEntity_ItemList_ShuffleEducationEventFactory, SPTUBIMobilePlaylistEntity_ItemList_WeAddedSectionHeaderEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePlaylistEntity_ItemList_ItemEventFactory, SPTUBIMobilePlaylistEntity_ItemList_ShuffleEducationEventFactory, SPTUBIMobilePlaylistEntity_ItemList_WeAddedSectionHeaderEventFactory;
 
 @protocol SPTUBIMobilePlaylistEntity_ItemListEventFactory <NSObject>
 - (id <SPTUBIMobilePlaylistEntity_ItemList_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobilePlaylistEntity_ItemList_WeAddedSectionHeaderEventFactory>)weAddedSectionHeaderFactory;
 - (id <SPTUBIMobilePlaylistEntity_ItemList_ShuffleEducationEventFactory>)shuffleEducationFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileExplicitcontent_ExplicitContentSettings_AllowExplicitContentToggleEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileExplicitcontent_ExplicitContentSettings_AllowExplicitContentToggleEventFactory;
 
 @protocol SPTUBIMobileExplicitcontent_ExplicitContentSettingsEventFactory <NSObject>
 - (id <SPTUBIMobileExplicitcontent_ExplicitContentSettings_AllowExplicitContentToggleEventFactory>)allowExplicitContentToggleFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

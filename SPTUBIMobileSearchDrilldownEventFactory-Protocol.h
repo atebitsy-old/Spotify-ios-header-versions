@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileSearchDrilldown_ContentEventFactory, SPTUBIMobileSearchDrilldown_EmptyStateEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileSearchDrilldown_ContentEventFactory, SPTUBIMobileSearchDrilldown_EmptyStateEventFactory;
 
 @protocol SPTUBIMobileSearchDrilldownEventFactory <NSObject>
 - (id <SPTUBIMobileSearchDrilldown_EmptyStateEventFactory>)emptyStateFactoryWithReason:(NSString *)arg1;
 - (id <SPTUBIMobileSearchDrilldown_ContentEventFactory>)contentFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2 reason:(NSString *)arg3;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

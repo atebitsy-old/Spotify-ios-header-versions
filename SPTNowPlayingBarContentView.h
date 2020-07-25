@@ -24,15 +24,11 @@
     UIView *_connectButtonView;
     id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> _connectIntegration;
     UIView *_voiceCompanionView;
-    UIView *_lyricsView;
     NSLayoutConstraint *_voiceCompanionWidthLayoutConstraint;
-    NSLayoutConstraint *_lyricsLabelWidthLayoutConstraint;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSLayoutConstraint *lyricsLabelWidthLayoutConstraint; // @synthesize lyricsLabelWidthLayoutConstraint=_lyricsLabelWidthLayoutConstraint;
 @property(retain, nonatomic) NSLayoutConstraint *voiceCompanionWidthLayoutConstraint; // @synthesize voiceCompanionWidthLayoutConstraint=_voiceCompanionWidthLayoutConstraint;
-@property(retain, nonatomic) UIView *lyricsView; // @synthesize lyricsView=_lyricsView;
 @property(retain, nonatomic) UIView *voiceCompanionView; // @synthesize voiceCompanionView=_voiceCompanionView;
 @property(readonly, nonatomic) id <_TtP18ConnectUIV2Feature36SPTConnectUINowPlayingBarIntegration_> connectIntegration; // @synthesize connectIntegration=_connectIntegration;
 @property(retain, nonatomic) UIView *connectButtonView; // @synthesize connectButtonView=_connectButtonView;
@@ -45,18 +41,15 @@
 @property(readonly, nonatomic) UIButton<SPTNowPlayingBarPlayButton> *playPauseButton; // @synthesize playPauseButton=_playPauseButton;
 @property(readonly, nonatomic) SPTStepScrollView *stepScrollView; // @synthesize stepScrollView=_stepScrollView;
 - (void)shouldUpdateConnectStateViewVisibilityWithVisible:(_Bool)arg1;
-- (void)setLyricsLabelVisible:(_Bool)arg1;
-- (void)createLyricsViewIfNeeded;
 - (void)voiceCompanionViewTapped:(id)arg1;
 - (void)showVoiceCompanionButton:(_Bool)arg1;
 - (void)removeVoiceCompanionViewIfNeeded;
-- (id)createLyricsView;
 - (void)addVoiceCompanionViewIfNeeded;
 - (void)layoutSubviews;
 - (void)setEnabled:(_Bool)arg1 animated:(_Bool)arg2;
 - (void)forceLayout;
 - (void)resetConstraints;
-- (id)layoutConstraintsForContentView:(id)arg1 playButton:(id)arg2 voiceCompanionButton:(id)arg3 lyricsView:(id)arg4 connectButtonView:(id)arg5;
+- (id)layoutConstraintsForContentView:(id)arg1 playButton:(id)arg2 voiceCompanionButton:(id)arg3 connectButtonView:(id)arg4;
 - (id)devicesAvailableViewConstraints;
 - (void)updateConstraints;
 - (void)setupSubviews;

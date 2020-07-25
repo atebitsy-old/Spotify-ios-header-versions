@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileQueue_MainControls_ShuffleModeButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitShuffleEnable;
 - (id <SPTUBIInteractionEvent>)hitShuffleDisable;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

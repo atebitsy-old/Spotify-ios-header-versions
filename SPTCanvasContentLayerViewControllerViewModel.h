@@ -64,7 +64,8 @@
 - (void)didFailToLoadVideoForCanvasModel:(id)arg1 withError:(id)arg2;
 - (void)didLoadVideoForCanvasModel:(id)arg1;
 - (void)willLoadVideoForCanvasModel:(id)arg1;
-- (void)didFailToRenderViewModel;
+- (void)didFailToLoadViewModelWithError:(id)arg1;
+- (void)didFailToRenderViewModelWithError:(id)arg1;
 - (void)removeVideoPlayerView;
 - (void)addVideoPlayerView;
 - (void)removeContent;

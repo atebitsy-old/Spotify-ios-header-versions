@@ -107,7 +107,7 @@
 - (id)makePlaylistViewControllerWithDependencies:(id)arg1 searchViewControllerFactory:(CDUnknownBlockType)arg2;
 - (id)makeCellProviderCoordinatorWithDependencies:(id)arg1 onlyIncludeTrackSections:(_Bool)arg2;
 - (void)setupConfigurationBuilder:(id)arg1 URL:(id)arg2 context:(id)arg3 logger:(id)arg4 player:(id)arg5 playlistViewModel:(id)arg6 theme:(id)arg7;
-- (id)makeDependenciesForURL:(id)arg1 context:(id)arg2 playlistModel:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4;
+- (id)makeDependenciesForURL:(id)arg1 context:(id)arg2 playlistModel:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4 searchViewControllerFactory:(CDUnknownBlockType)arg5;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withContext:(id)arg2 playlistModel:(id)arg3 configurationBlock:(CDUnknownBlockType)arg4;
 - (id)loadableForPlaylistWithURL:(id)arg1 withPageContext:(id)arg2;
 - (id)providePlaylistViewControllerForURL:(id)arg1 withPageContext:(id)arg2 playlistModel:(id)arg3 initialEntity:(id)arg4;

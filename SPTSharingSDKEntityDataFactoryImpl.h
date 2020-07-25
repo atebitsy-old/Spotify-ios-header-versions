@@ -14,8 +14,12 @@
 {
 }
 
+- (id)provideGradientStoryEntityDataWithSpotifyURIString:(id)arg1 extraQueryItems:(id)arg2 fallbackShareableURL:(id)arg3 utmTag:(id)arg4;
 - (id)provideImageStoryEntityDataWithSpotifyURIString:(id)arg1 image:(id)arg2 extraQueryItems:(id)arg3 fallbackShareableURL:(id)arg4 utmTag:(id)arg5;
 - (id)provideVideoStoryEntityDataWithSpotifyURIString:(id)arg1 video:(id)arg2 extraQueryItems:(id)arg3 fallbackShareableURL:(id)arg4 utmTag:(id)arg5;
+- (id)provideImageEntityDataWithSpotifyURIString:(id)arg1 image:(id)arg2;
+- (id)provideMessageEntityDataWithSpotifyURIString:(id)arg1 text:(id)arg2 extraQueryItems:(id)arg3 fallbackShareableURL:(id)arg4 utmTag:(id)arg5 excludedActivityTypes:(id)arg6;
+- (id)provideLinkEntityDataWithSpotifyURIString:(id)arg1 extraQueryItems:(id)arg2 fallbackShareableURL:(id)arg3 utmTag:(id)arg4 excludedActivityTypes:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

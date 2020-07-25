@@ -17,6 +17,7 @@
     SPTAdsPromotedContentImageView *_contentImageView;
     UIButton *_actionButton;
     SPTAdNowPlayingBookmarkButton *_bookmarkButton;
+    UIView *_seeMoreView;
     SPTTheme *_theme;
     GLUEGradientView *_backgroundGradientView;
     UIView *_shadowDropView;
@@ -42,6 +43,7 @@
 @property(readonly, nonatomic) UIView *shadowDropView; // @synthesize shadowDropView=_shadowDropView;
 @property(readonly, nonatomic) GLUEGradientView *backgroundGradientView; // @synthesize backgroundGradientView=_backgroundGradientView;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
+@property(readonly, nonatomic) UIView *seeMoreView; // @synthesize seeMoreView=_seeMoreView;
 @property(readonly, nonatomic) _Bool shouldShowBookmarkButton; // @synthesize shouldShowBookmarkButton=_shouldShowBookmarkButton;
 @property(readonly, nonatomic) SPTAdNowPlayingBookmarkButton *bookmarkButton; // @synthesize bookmarkButton=_bookmarkButton;
 @property(readonly, nonatomic) UIButton *actionButton; // @synthesize actionButton=_actionButton;

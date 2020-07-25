@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIPLCMobileRenamePlaylist_BackEventFactory, SPTUBIPLCMobileRenamePlaylist_CloseButtonEventFactory, SPTUBIPLCMobileRenamePlaylist_RenameButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIPLCMobileRenamePlaylist_BackEventFactory, SPTUBIPLCMobileRenamePlaylist_CloseButtonEventFactory, SPTUBIPLCMobileRenamePlaylist_RenameButtonEventFactory;
 
 @protocol SPTUBIPLCMobileRenamePlaylistEventFactory <NSObject>
 - (id <SPTUBIPLCMobileRenamePlaylist_CloseButtonEventFactory>)closeButtonFactory;
 - (id <SPTUBIPLCMobileRenamePlaylist_BackEventFactory>)backFactory;
 - (id <SPTUBIPLCMobileRenamePlaylist_RenameButtonEventFactory>)renameButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

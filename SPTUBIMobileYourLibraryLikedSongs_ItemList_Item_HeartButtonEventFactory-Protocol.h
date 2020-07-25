@@ -7,13 +7,13 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButton_CancelEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButton_ConfirmRemoveLikeEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButton_CancelEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButton_ConfirmRemoveLikeEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIInteractionEvent>)hitRemoveLikeWithItemNoLongerLiked:(NSURL *)arg1;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButton_CancelEventFactory>)cancelFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButton_ConfirmRemoveLikeEventFactory>)confirmRemoveLikeFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

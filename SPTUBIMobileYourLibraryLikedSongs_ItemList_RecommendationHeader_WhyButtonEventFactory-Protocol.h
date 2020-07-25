@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendationHeader_WhyButton_OkButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendationHeader_WhyButton_OkButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendationHeader_WhyButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_RecommendationHeader_WhyButton_OkButtonEventFactory>)okButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

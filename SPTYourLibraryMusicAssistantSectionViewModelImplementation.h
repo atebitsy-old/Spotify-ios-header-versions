@@ -15,11 +15,13 @@
     NSString *_headerText;
     NSString *_subtitle;
     NSString *_buttonText;
+    CDUnknownBlockType _buttonAction;
     CDUnknownBlockType _closeAction;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) CDUnknownBlockType closeAction; // @synthesize closeAction=_closeAction;
+@property(copy, nonatomic) CDUnknownBlockType buttonAction; // @synthesize buttonAction=_buttonAction;
 @property(readonly, nonatomic) NSString *buttonText; // @synthesize buttonText=_buttonText;
 @property(readonly, nonatomic) NSString *subtitle; // @synthesize subtitle=_subtitle;
 @property(readonly, nonatomic) NSString *headerText; // @synthesize headerText=_headerText;

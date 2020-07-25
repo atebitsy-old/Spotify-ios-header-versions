@@ -7,22 +7,19 @@
 #import <objc/NSObject.h>
 
 #import "SPTInAppMessageMessageRequesterDelegate-Protocol.h"
-#import "SPTInAppMessagePodcastExperimentsHandlerDelegate-Protocol.h"
 #import "SPTInAppMessageTriggerListControllerDelegate-Protocol.h"
 #import "SPTInstrumentationCurrentPageViewObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSArray, NSMutableDictionary, NSNotificationCenter, NSString, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageFeatureProperties, SPTInAppMessagePodcastExperimentsHandler;
+@class NSArray, NSMutableDictionary, NSNotificationCenter, NSString, SPTInAppMessageFeatureProperties;
 @protocol SPTCarDetector, SPTInAppMessageTriggerEngineDelegate;
 
-@interface SPTInAppMessageTriggerEngine : NSObject <SPTInAppMessagePodcastExperimentsHandlerDelegate, SPTInAppMessageTriggerListControllerDelegate, SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver, SPTInAppMessageMessageRequesterDelegate>
+@interface SPTInAppMessageTriggerEngine : NSObject <SPTInAppMessageTriggerListControllerDelegate, SPTInstrumentationCurrentPageViewObserver, SPTPlayerObserver, SPTInAppMessageMessageRequesterDelegate>
 {
     NSArray *_triggerList;
     id <SPTInAppMessageTriggerEngineDelegate> _delegate;
     NSMutableDictionary *_triggerRegularExpressionCache;
     id <SPTCarDetector> _carDetector;
-    SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
-    SPTInAppMessagePodcastExperimentsHandler *_podcastExperimentsHandler;
     SPTInAppMessageFeatureProperties *_featureProperties;
     NSNotificationCenter *_notificationCenter;
     NSString *_matchingNavigationPattern;
@@ -40,15 +37,10 @@
 @property(copy, nonatomic) NSString *matchingNavigationPattern; // @synthesize matchingNavigationPattern=_matchingNavigationPattern;
 @property(retain, nonatomic) NSNotificationCenter *notificationCenter; // @synthesize notificationCenter=_notificationCenter;
 @property(retain, nonatomic) SPTInAppMessageFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(retain, nonatomic) SPTInAppMessagePodcastExperimentsHandler *podcastExperimentsHandler; // @synthesize podcastExperimentsHandler=_podcastExperimentsHandler;
-@property(retain, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
 @property(retain, nonatomic) id <SPTCarDetector> carDetector; // @synthesize carDetector=_carDetector;
 @property(retain, nonatomic) NSMutableDictionary *triggerRegularExpressionCache; // @synthesize triggerRegularExpressionCache=_triggerRegularExpressionCache;
 @property(nonatomic) __weak id <SPTInAppMessageTriggerEngineDelegate> delegate; // @synthesize delegate=_delegate;
 @property(retain, nonatomic) NSArray *triggerList; // @synthesize triggerList=_triggerList;
-- (void)podcastExperiementsHandler:(id)arg1 didDownloadPodcast:(id)arg2;
-- (void)podcastExperiementsHandler:(id)arg1 didFollowPodcast:(id)arg2;
-- (void)setupPodcastExperiments;
 - (id)getClientEventPatternForMessageRequest:(id)arg1;
 - (id)getURIForPageView:(id)arg1;
 - (void)postCancelPresentationNotification:(id)arg1;
@@ -61,7 +53,7 @@
 - (id)getMatchingTriggersForURI:(id)arg1 triggerType:(id)arg2;
 - (void)performPatternMatchingForURI:(id)arg1 triggerType:(id)arg2;
 - (void)triggerListController:(id)arg1 didFetchActiveTriggers:(id)arg2;
-- (id)initWithCarDetector:(id)arg1 featureFlagChecker:(id)arg2 podcastExperimentsHandler:(id)arg3 notificationCenter:(id)arg4 featureProperties:(id)arg5;
+- (id)initWithCarDetector:(id)arg1 notificationCenter:(id)arg2 featureProperties:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -25,6 +25,7 @@
 @property(readonly, nonatomic) id <SPTSearchHubsLogger> searchHubsLogger; // @synthesize searchHubsLogger=_searchHubsLogger;
 @property(readonly, nonatomic) id <SPTSearchOnDemandPromoting> onDemandPromoter; // @synthesize onDemandPromoter=_onDemandPromoter;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
+- (void)logNavigationWithURI:(id)arg1 event:(id)arg2;
 - (id)navigateAndPlayURIWithTrackURI:(id)arg1 playlistURI:(id)arg2;
 - (void)handleCommand:(id)arg1 event:(id)arg2;
 - (id)initWithLinkDispatcher:(id)arg1 onDemandPromoter:(id)arg2 searchHubsLogger:(id)arg3 ubiHubsLogger:(id)arg4;

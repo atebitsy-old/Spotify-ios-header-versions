@@ -16,6 +16,7 @@
     id <SPTPodcastEpisodeCellActionTarget> _target;
     SPTPodcastEpisodeContentViewStyle *_contentViewStyle;
     NSIndexPath *_indexPath;
+    UIView *_quotesView;
     GLUEStatefulView<SPTPodcastEpisodeView> *_episodeView;
     id <GLUETheme> _glueTheme;
 }
@@ -23,6 +24,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) GLUEStatefulView<SPTPodcastEpisodeView> *episodeView; // @synthesize episodeView=_episodeView;
+@property(retain, nonatomic) UIView *quotesView; // @synthesize quotesView=_quotesView;
 @property(retain, nonatomic) NSIndexPath *indexPath; // @synthesize indexPath=_indexPath;
 @property(retain, nonatomic) SPTPodcastEpisodeContentViewStyle *contentViewStyle; // @synthesize contentViewStyle=_contentViewStyle;
 @property(nonatomic) __weak id <SPTPodcastEpisodeCellActionTarget> target; // @synthesize target=_target;

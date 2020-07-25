@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileConnectVolumeControl_RemoteVolumeOverlayEventFactory, SPTUBIMobileConnectVolumeControl_SystemVolumeDownEventFactory, SPTUBIMobileConnectVolumeControl_SystemVolumeSliderEventFactory, SPTUBIMobileConnectVolumeControl_SystemVolumeUpEventFactory, SPTUBIMobileConnectVolumeControl_VolumeSliderEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileConnectVolumeControl_RemoteVolumeOverlayEventFactory, SPTUBIMobileConnectVolumeControl_SystemVolumeDownEventFactory, SPTUBIMobileConnectVolumeControl_SystemVolumeSliderEventFactory, SPTUBIMobileConnectVolumeControl_SystemVolumeUpEventFactory, SPTUBIMobileConnectVolumeControl_VolumeSliderEventFactory;
 
 @protocol SPTUBIMobileConnectVolumeControlEventFactory <NSObject>
 - (id <SPTUBIMobileConnectVolumeControl_SystemVolumeDownEventFactory>)systemVolumeDownFactory;
@@ -14,6 +14,6 @@
 - (id <SPTUBIMobileConnectVolumeControl_SystemVolumeSliderEventFactory>)systemVolumeSliderFactory;
 - (id <SPTUBIMobileConnectVolumeControl_VolumeSliderEventFactory>)volumeSliderFactory;
 - (id <SPTUBIMobileConnectVolumeControl_RemoteVolumeOverlayEventFactory>)remoteVolumeOverlayFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

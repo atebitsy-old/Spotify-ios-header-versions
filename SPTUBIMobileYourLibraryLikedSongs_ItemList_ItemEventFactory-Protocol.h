@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_ContextMenuButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_ContextMenuButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_ItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeRemoveLikeWithItemNoLongerLiked:(NSURL *)arg1;
@@ -17,6 +17,6 @@
 - (id <SPTUBIInteractionEvent>)hitPlayWithItemToBePlayed:(NSURL *)arg1;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_HeartButtonEventFactory>)heartButtonFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_Item_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

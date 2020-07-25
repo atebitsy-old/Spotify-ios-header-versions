@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileLocalFilesImport_Toolbar_CloseButtonEventFactory, SPTUBIMobileLocalFilesImport_Toolbar_ImportButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileLocalFilesImport_Toolbar_CloseButtonEventFactory, SPTUBIMobileLocalFilesImport_Toolbar_ImportButtonEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImport_ToolbarEventFactory <NSObject>
 - (id <SPTUBIMobileLocalFilesImport_Toolbar_ImportButtonEventFactory>)importButtonFactory;
 - (id <SPTUBIMobileLocalFilesImport_Toolbar_CloseButtonEventFactory>)closeButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

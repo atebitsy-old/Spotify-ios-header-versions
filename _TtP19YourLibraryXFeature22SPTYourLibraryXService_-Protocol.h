@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol _TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_, _TtP19YourLibraryXFeature41SPTYourLibraryXAssistantBannerViewFactory_;
+@protocol _TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_, _TtP19YourLibraryXFeature41SPTYourLibraryXAssistantBannerViewFactory_, _TtP19YourLibraryXFeature46SPTYourLibraryXOnboardingViewControllerFactory_;
 
 @protocol _TtP19YourLibraryXFeature22SPTYourLibraryXService_ <SPTService>
+- (id <_TtP19YourLibraryXFeature46SPTYourLibraryXOnboardingViewControllerFactory_>)provideOnboardingViewControllerFactory;
 - (id <_TtP19YourLibraryXFeature41SPTYourLibraryXAssistantBannerViewFactory_>)provideAssistantBannerViewFactory;
 - (id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_>)provideTestManager;
 @end

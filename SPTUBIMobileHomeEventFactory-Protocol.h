@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSString, NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHome_ItemEventFactory, SPTUBIMobileHome_LargeCardEventFactory, SPTUBIMobileHome_PromoV1EventFactory, SPTUBIMobileHome_PromoV2EventFactory, SPTUBIMobileHome_SectionHeaderEventFactory, SPTUBIMobileHome_ShelvesEventFactory, SPTUBIMobileHome_TasteOnboardingEventFactory, SPTUBIMobileHome_ToolbarEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHome_ItemEventFactory, SPTUBIMobileHome_LargeCardEventFactory, SPTUBIMobileHome_PromoV1EventFactory, SPTUBIMobileHome_PromoV2EventFactory, SPTUBIMobileHome_SectionHeaderEventFactory, SPTUBIMobileHome_ShelvesEventFactory, SPTUBIMobileHome_TasteOnboardingEventFactory, SPTUBIMobileHome_ToolbarEventFactory;
 
 @protocol SPTUBIMobileHomeEventFactory <NSObject>
 - (id <SPTUBIMobileHome_ItemEventFactory>)itemFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
@@ -18,6 +18,6 @@
 - (id <SPTUBIMobileHome_PromoV2EventFactory>)promoV2FactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
 - (id <SPTUBIMobileHome_PromoV1EventFactory>)promoV1FactoryWithIdentifier:(NSString *)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileHome_ToolbarEventFactory>)toolbarFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

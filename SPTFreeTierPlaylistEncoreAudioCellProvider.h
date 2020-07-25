@@ -10,8 +10,8 @@
 #import "SPTFreeTierPlaylistCellProvider-Protocol.h"
 #import "SPTFreeTierPlaylistCellProviderV2-Protocol.h"
 
-@class NSString, SPTFreeTierPlaylistLogger;
-@protocol SPTEncoreTrackRowFactory, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistViewModel, SPTShelves;
+@class NSString;
+@protocol SPTEncoreTrackRowFactory, SPTFreeTierPlaylistCellProviderDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistViewModel, SPTShelves;
 
 @interface SPTFreeTierPlaylistEncoreAudioCellProvider : NSObject <SPTEncoreTrackRowDelegate, SPTFreeTierPlaylistCellProvider, SPTFreeTierPlaylistCellProviderV2>
 {
@@ -20,11 +20,11 @@
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTFreeTierPlaylistViewModel> _playlistViewModel;
     id <SPTShelves> _shelves;
-    SPTFreeTierPlaylistLogger *_logger;
+    id <SPTFreeTierPlaylistLogger> _logger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
+@property(readonly, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTShelves> shelves; // @synthesize shelves=_shelves;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistViewModel> playlistViewModel; // @synthesize playlistViewModel=_playlistViewModel;
 @property(readonly, nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;

@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileLocalFilesImport_Sections_Section_BottomBarEventFactory, SPTUBIMobileLocalFilesImport_Sections_Section_ItemEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileLocalFilesImport_Sections_Section_BottomBarEventFactory, SPTUBIMobileLocalFilesImport_Sections_Section_ItemEventFactory;
 
 @protocol SPTUBIMobileLocalFilesImport_Sections_SectionEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileLocalFilesImport_Sections_Section_BottomBarEventFactory>)bottomBarFactory;
 - (id <SPTUBIMobileLocalFilesImport_Sections_Section_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

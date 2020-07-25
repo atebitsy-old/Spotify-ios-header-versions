@@ -42,10 +42,12 @@
 - (id)dismissText;
 - (id)title;
 - (void)didLoadContentImage:(id)arg1;
+- (void)configureBrandAndConcertAdBackgroundWithColor:(id)arg1;
 - (_Bool)isGoogleHomeOverlay;
 - (void)postImpressionIfNeeded;
 - (_Bool)isLeaveBehindOverlay;
 - (id)leaveBehindViewWithBookmarkButtonState:(long long)arg1;
+- (void)seeMoreTapped;
 - (void)titleActionButtonTapped;
 - (void)playActionButtonTapped;
 - (void)bookmarkButtonTapped;

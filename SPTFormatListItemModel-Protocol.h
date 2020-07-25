@@ -6,14 +6,17 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSDictionary, NSString, NSURL;
+@class NSArray, NSDictionary, NSString, NSURL;
 
 @protocol SPTFormatListItemModel <NSObject>
+@property(readonly, nonatomic, getter=isPremiumOnly) _Bool premiumOnly;
 @property(readonly, nonatomic, getter=isBanned) _Bool banned;
 @property(readonly, nonatomic, getter=isInCollection) _Bool inCollection;
 @property(readonly, nonatomic, getter=isLocallyPlayable) _Bool locallyPlayable;
 @property(readonly, nonatomic, getter=isBackgroundable) _Bool backgroundable;
+@property(readonly, nonatomic) _Bool is19PlusOnly;
 @property(readonly, nonatomic, getter=isExplicitItem) _Bool explicitItem;
+@property(readonly, nonatomic, getter=isPlayStatePlayable) _Bool playStatePlayable;
 @property(readonly, nonatomic, getter=isPlayable) _Bool playable;
 @property(readonly, copy, nonatomic) NSString *previewID;
 @property(readonly, copy, nonatomic) NSString *mediaType;
@@ -27,6 +30,7 @@
 @property(readonly, copy, nonatomic) NSString *albumName;
 @property(readonly, nonatomic) NSURL *artistURL;
 @property(readonly, copy, nonatomic) NSString *artistName;
+@property(readonly, copy, nonatomic) NSArray *artistNames;
 @property(readonly, copy, nonatomic) NSString *UID;
 @property(readonly, nonatomic) NSURL *URL;
 @property(readonly, copy, nonatomic) NSString *name;

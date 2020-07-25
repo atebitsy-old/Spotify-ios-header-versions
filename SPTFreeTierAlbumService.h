@@ -7,7 +7,7 @@
 #import "SPTUIPageService.h"
 
 @class SPTFreeTierAlbumHubManager, SPTFreeTierTrackContextAwareURITypeManager, SPTPersistentCache;
-@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCoreService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierAlbumTestManager, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPageLoaderViewService, SPTPermissionsService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTUBIService, SPTVisualRefreshIntegrationService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTCollectionPlatformService, SPTContainerUIService, SPTContextDispatchService, SPTCoreService, SPTEncoreIntegrationService, SPTEntitySeeAllSongsService, SPTExplicitContentService, SPTFreeTierAlbumTestManager, SPTFreeTierUIService, SPTGLUEService, SPTHubFrameworkService, SPTNetworkService, SPTOnDemandService, SPTOnDemandTrialService, SPTPageLoaderViewService, SPTPermissionsService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTSessionService, SPTShelfService, SPTUBIService, SPTVisualRefreshIntegrationService, _TtP17OfflineMixFeature20SPTOfflineMixService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTFreeTierAlbumService : SPTUIPageService
 {
@@ -29,6 +29,7 @@
     id <SPTShelfService> _shelfService;
     id <SPTContainerUIService> _containerUIService;
     id <_TtP17OfflineMixFeature20SPTOfflineMixService_> _offlineMixService;
+    id <SPTEncoreIntegrationService> _encoreService;
     SPTFreeTierAlbumHubManager *_hubManager;
     SPTFreeTierTrackContextAwareURITypeManager *_nptTrackURITypeManager;
     id <SPTVisualRefreshIntegrationService> _visualRefreshIntegrationService;
@@ -51,6 +52,7 @@
 @property(nonatomic) __weak id <SPTVisualRefreshIntegrationService> visualRefreshIntegrationService; // @synthesize visualRefreshIntegrationService=_visualRefreshIntegrationService;
 @property(retain, nonatomic) SPTFreeTierTrackContextAwareURITypeManager *nptTrackURITypeManager; // @synthesize nptTrackURITypeManager=_nptTrackURITypeManager;
 @property(retain, nonatomic) SPTFreeTierAlbumHubManager *hubManager; // @synthesize hubManager=_hubManager;
+@property(nonatomic) __weak id <SPTEncoreIntegrationService> encoreService; // @synthesize encoreService=_encoreService;
 @property(nonatomic) __weak id <_TtP17OfflineMixFeature20SPTOfflineMixService_> offlineMixService; // @synthesize offlineMixService=_offlineMixService;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTShelfService> shelfService; // @synthesize shelfService=_shelfService;

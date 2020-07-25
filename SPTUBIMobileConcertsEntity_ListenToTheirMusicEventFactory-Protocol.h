@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileConcertsEntity_ListenToTheirMusic_AlbumCoverEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileConcertsEntity_ListenToTheirMusic_AlbumCoverEventFactory;
 
 @protocol SPTUBIMobileConcertsEntity_ListenToTheirMusicEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileConcertsEntity_ListenToTheirMusic_AlbumCoverEventFactory>)albumCoverFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

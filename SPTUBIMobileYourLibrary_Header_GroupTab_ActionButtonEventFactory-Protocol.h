@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibrary_Header_GroupTab_ActionButton_CancelEventFactory, SPTUBIMobileYourLibrary_Header_GroupTab_ActionButton_ConfirmActionButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibrary_Header_GroupTab_ActionButton_CancelEventFactory, SPTUBIMobileYourLibrary_Header_GroupTab_ActionButton_ConfirmActionButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibrary_Header_GroupTab_ActionButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiReveal;
 - (id <SPTUBIMobileYourLibrary_Header_GroupTab_ActionButton_CancelEventFactory>)cancelFactory;
 - (id <SPTUBIMobileYourLibrary_Header_GroupTab_ActionButton_ConfirmActionButtonEventFactory>)confirmActionButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

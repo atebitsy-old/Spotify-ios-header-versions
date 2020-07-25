@@ -6,9 +6,7 @@
 
 #import "_TtC26AgeVerificationFeatureImpl37ExplanatoryPopupServiceImplementation.h"
 
-#import "_TtP26AgeVerificationFeatureImpl23ExplanatoryPopupService_-Protocol.h"
-
-@interface _TtC26AgeVerificationFeatureImpl37ExplanatoryPopupServiceImplementation (AgeVerificationFeatureImpl) <_TtP26AgeVerificationFeatureImpl23ExplanatoryPopupService_>
+@interface _TtC26AgeVerificationFeatureImpl37ExplanatoryPopupServiceImplementation (AgeVerificationFeatureImpl)
 - (void)cancel;
 - (void)fetchFor:(id)arg1 completionCallback:(CDUnknownBlockType)arg2;
 @end

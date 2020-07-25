@@ -39,6 +39,7 @@
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoader> collectionPlatformDataLoader; // @synthesize collectionPlatformDataLoader=_collectionPlatformDataLoader;
 @property(readonly, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(nonatomic) __weak id <SPTYourLibraryMusicContentFilterDataLoaderDelegate> delegate; // @synthesize delegate=_delegate;
+- (id)localKeyForFiltersSource;
 - (void)handleError:(id)arg1 withContext:(id)arg2;
 - (void)storeCurrenResponseData;
 - (void)storeDownloadFiltersAvailability;

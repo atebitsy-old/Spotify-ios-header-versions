@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_EpisodeDescriptionEventFactory, SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_PublishDateDurationLabelEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_EpisodeDescriptionEventFactory, SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_PublishDateDurationLabelEventFactory;
 
 @protocol SPTUBIMobilePodcastepisodeEntity_EpisodeInfoEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_PublishDateDurationLabelEventFactory>)publishDateDurationLabelFactory;
 - (id <SPTUBIMobilePodcastepisodeEntity_EpisodeInfo_EpisodeDescriptionEventFactory>)episodeDescriptionFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

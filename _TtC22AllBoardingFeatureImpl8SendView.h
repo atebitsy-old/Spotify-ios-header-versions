@@ -9,17 +9,14 @@
 @interface _TtC22AllBoardingFeatureImpl8SendView : UIView
 {
     // Error parsing type: , name: theme
-    // Error parsing type: , name: animatedViewLeadingConstraint
-    // Error parsing type: , name: $__lazy_storage_$_labelContainerView
     // Error parsing type: , name: $__lazy_storage_$_label
-    // Error parsing type: , name: $__lazy_storage_$_animatingDotsView
+    // Error parsing type: , name: activityIndicator
     // Error parsing type: , name: labelText
     // Error parsing type: , name: isAnimating
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
-- (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 
 @end

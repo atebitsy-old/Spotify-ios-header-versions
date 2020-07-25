@@ -9,7 +9,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 
 @class NSArray, NSAttributedString, NSIndexPath, NSString, NSURL, SPTChart, SPTPlayerContext;
-@protocol SPTChartViewModelDelegate, SPTChartViewModelPlayerDelegate, SPTExplicitContentAccessManager, SPTOfflineModeState, SPTPlayer;
+@protocol SPTChartViewModelDelegate, SPTChartViewModelPlayerDelegate, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTOfflineModeState, SPTPlayer;
 
 @interface SPTChartViewModel : NSObject <SPTPlayerObserver>
 {
@@ -21,15 +21,18 @@
     id <SPTChartViewModelDelegate> _delegate;
     id <SPTChartViewModelPlayerDelegate> _playerDelegate;
     SPTChart *_chart;
+    NSURL *_URL;
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
     NSURL *_currentPlayerStateOriginURL;
     id <SPTPlayer> _player;
     SPTPlayerContext *_playerContext;
     NSArray *_playerTracks;
+    id <SPTCollectionPlatform> _collectionPlatform;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 @property(nonatomic) _Bool playlistHasLoaded; // @synthesize playlistHasLoaded=_playlistHasLoaded;
 @property(retain, nonatomic) NSArray *playerTracks; // @synthesize playerTracks=_playerTracks;
 @property(retain, nonatomic) SPTPlayerContext *playerContext; // @synthesize playerContext=_playerContext;
@@ -37,6 +40,7 @@
 @property(retain, nonatomic) NSURL *currentPlayerStateOriginURL; // @synthesize currentPlayerStateOriginURL=_currentPlayerStateOriginURL;
 @property(retain, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
+@property(copy, nonatomic) NSURL *URL; // @synthesize URL=_URL;
 @property(readonly, nonatomic, getter=isUsingNewFormatsUI) _Bool usingNewFormatsUI; // @synthesize usingNewFormatsUI=_usingNewFormatsUI;
 @property(retain, nonatomic) SPTChart *chart; // @synthesize chart=_chart;
 @property(nonatomic) __weak id <SPTChartViewModelPlayerDelegate> playerDelegate; // @synthesize playerDelegate=_playerDelegate;
@@ -62,18 +66,26 @@
 @property(readonly, nonatomic) NSString *metadataText;
 @property(readonly, nonatomic) NSString *chartTitle;
 - (unsigned long long)chartEntryStatusForIndex:(unsigned long long)arg1;
+- (_Bool)isPlayStatePlayableForChartEntryAtIndex:(unsigned long long)arg1;
 - (_Bool)isPlaybackAvailableForChartEntryAtIndexPath:(id)arg1;
 - (unsigned long long)chartEntryPositionForIndex:(unsigned long long)arg1;
+- (_Bool)isTrack19PlusOnlyAtIndex:(unsigned long long)arg1;
+- (_Bool)isTrackInCollectionAtIndex:(unsigned long long)arg1;
+- (_Bool)isTrackPremiumOnlyAtIndex:(unsigned long long)arg1;
 - (_Bool)isTrackHiddenAtIndex:(unsigned long long)arg1;
 - (_Bool)isTrackExplicitContentPlaybackRestrictedAtIndex:(unsigned long long)arg1;
 - (_Bool)isTrackExplicitAtIndex:(long long)arg1;
+- (id)albumImageUrlForTrackAtIndex:(unsigned long long)arg1;
 - (id)urlForTrackAtIndex:(long long)arg1;
+- (id)artistNamesForTrackAtIndex:(long long)arg1;
 - (id)subtitleForTrackAtIndex:(long long)arg1;
 - (id)titleForTrackAtIndex:(long long)arg1;
 @property(readonly, nonatomic, getter=isUserOffline) _Bool userOffline;
+- (void)toggleTrackBanAtIndexPath:(id)arg1;
+- (void)toggleTrackLikeAtIndexPath:(id)arg1;
 - (void)playTrackAtIndexPath:(id)arg1;
 - (void)playContextShuffled:(_Bool)arg1 didUserTapTrackRow:(_Bool)arg2;
-- (id)initWithPlayer:(id)arg1 offlineModeState:(id)arg2 explicitContentAccessManager:(id)arg3 URL:(id)arg4;
+- (id)initWithPlayer:(id)arg1 offlineModeState:(id)arg2 explicitContentAccessManager:(id)arg3 collectionPlatform:(id)arg4 URL:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

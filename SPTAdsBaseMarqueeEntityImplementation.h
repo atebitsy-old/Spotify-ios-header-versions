@@ -20,9 +20,11 @@
     NSString *_artistName;
     NSString *_tag;
     NSString *_disclosure;
+    NSString *_ctaText;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSString *ctaText; // @synthesize ctaText=_ctaText;
 @property(readonly, nonatomic) NSString *disclosure; // @synthesize disclosure=_disclosure;
 @property(readonly, nonatomic) NSString *tag; // @synthesize tag=_tag;
 @property(readonly, nonatomic) NSString *artistName; // @synthesize artistName=_artistName;

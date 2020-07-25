@@ -12,7 +12,7 @@
 #import "SPTSignupPasswordFieldValidationViewModelDelegate-Protocol.h"
 #import "UITextFieldDelegate-Protocol.h"
 
-@class NSString, NSURL, SPTLoginSetNewPasswordLogger, SPTLoginSetNewPasswordViewModel, SPTLoginTheme, SPTProgressView, SPTSignupSingleInputFieldView;
+@class NSString, NSURL, SPTLoginSetNewPasswordLogger, SPTLoginSetNewPasswordView, SPTLoginSetNewPasswordViewModel, SPTLoginTheme, SPTProgressView;
 @protocol SPTPageContainer;
 
 @interface SPTLoginSetNewPasswordViewController : UIViewController <UITextFieldDelegate, SPTSignupPasswordFieldValidationViewModelDelegate, SPTLoginSetNewPasswordViewModelDelegate, SPTNavigationControllerNavigationBarState, SPTPageController>
@@ -54,7 +54,7 @@
 @property(readonly) unsigned long long hash;
 @property(readonly, nonatomic, getter=spt_pageContainer) id <SPTPageContainer> pageContainer;
 @property(readonly) Class superclass;
-@property(retain, nonatomic) SPTSignupSingleInputFieldView *view; // @dynamic view;
+@property(retain, nonatomic) SPTLoginSetNewPasswordView *view; // @dynamic view;
 
 @end
 

@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCollectionArtist_Header_FollowButtonEventFactory, SPTUBIMobileCollectionArtist_Header_PlayButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileCollectionArtist_Header_FollowButtonEventFactory, SPTUBIMobileCollectionArtist_Header_PlayButtonEventFactory;
 
 @protocol SPTUBIMobileCollectionArtist_HeaderEventFactory <NSObject>
 - (id <SPTUBIMobileCollectionArtist_Header_PlayButtonEventFactory>)playButtonFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileCollectionArtist_Header_FollowButtonEventFactory>)followButtonFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

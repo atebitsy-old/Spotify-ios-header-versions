@@ -12,8 +12,8 @@
 #import "SPTFreeTierPlaylistViewModel-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
 
-@class NSAttributedString, NSDictionary, NSNumber, NSString, NSURL, SPTFreeTierPlaylistLogger, SPTPlayOrigin, SPTPlayerState, UIColor;
-@protocol SPTAlertInterface, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayObserver, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, _TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_;
+@class NSAttributedString, NSDictionary, NSNumber, NSString, NSURL, SPTPlayOrigin, SPTPlayerState, UIColor;
+@protocol SPTAlertInterface, SPTFreeTierEntityOfflineDelegate, SPTFreeTierPlaylistItemsViewModel, SPTFreeTierPlaylistLogger, SPTFreeTierPlaylistModel, SPTFreeTierPlaylistPlayObserver, SPTFreeTierPlaylistSortingFiltering, SPTFreeTierPlaylistTestManager, SPTFreeTierPlaylistViewModelConfiguration, SPTFreeTierPlaylistViewModelDelegate, SPTLinkDispatcher, SPTOfflineModeState, SPTPlayer, SPTSortingFilteringUIFactory, _TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_;
 
 @interface SPTFreeTierPlaylistViewModelImplementation : NSObject <SPTPlayerObserver, SPTFreeTierPlaylistViewModel, SPTFreeTierPlaylistPlayViewModel, SPTFreeTierPlaylistModelObserver, SPTFreeTierPlaylistIsTrackActive>
 {
@@ -38,6 +38,7 @@
     id <SPTFreeTierPlaylistViewModelDelegate> _delegate;
     id <SPTFreeTierEntityOfflineDelegate> _offlineDelegate;
     id <SPTAlertInterface> alertInterface;
+    id <SPTFreeTierPlaylistLogger> _logger;
     id <SPTFreeTierPlaylistItemsViewModel> _itemsViewModel;
     id <SPTFreeTierPlaylistPlayObserver> _playObserver;
     id <SPTFreeTierPlaylistModel> _playlistModel;
@@ -69,23 +70,25 @@
     SPTPlayerState *_lastPlayerState;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTOfflineModeState> _offlineModeState;
-    SPTFreeTierPlaylistLogger *_logger;
     id <SPTFreeTierPlaylistTestManager> _testManager;
     NSNumber *_lastTrackCount;
     id <SPTFreeTierPlaylistViewModelConfiguration> _viewModelConfiguration;
     id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> _playInitiatedNotifier;
     long long _playBehaviour;
+    id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
+    CDUnknownBlockType _searchViewControllerFactory;
 }
 
 + (_Bool)isRecommendationContext:(id)arg1 forPlaylist:(id)arg2;
 - (void).cxx_destruct;
+@property(copy, nonatomic) CDUnknownBlockType searchViewControllerFactory; // @synthesize searchViewControllerFactory=_searchViewControllerFactory;
+@property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
 @property(nonatomic) _Bool forceHideDownloadButton; // @synthesize forceHideDownloadButton=_forceHideDownloadButton;
 @property(nonatomic) long long playBehaviour; // @synthesize playBehaviour=_playBehaviour;
 @property(nonatomic) __weak id <_TtP24ResponsiveShuffleFeature41SPTResponsiveShufflePlayInitiatedNotifier_> playInitiatedNotifier; // @synthesize playInitiatedNotifier=_playInitiatedNotifier;
 @property(readonly, nonatomic) id <SPTFreeTierPlaylistViewModelConfiguration> viewModelConfiguration; // @synthesize viewModelConfiguration=_viewModelConfiguration;
 @property(retain, nonatomic) NSNumber *lastTrackCount; // @synthesize lastTrackCount=_lastTrackCount;
 @property(retain, nonatomic) id <SPTFreeTierPlaylistTestManager> testManager; // @synthesize testManager=_testManager;
-@property(retain, nonatomic) SPTFreeTierPlaylistLogger *logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) __weak id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTPlayerState *lastPlayerState; // @synthesize lastPlayerState=_lastPlayerState;
@@ -132,6 +135,7 @@
 @property(nonatomic) _Bool wantsForceLinearPlay; // @synthesize wantsForceLinearPlay=_wantsForceLinearPlay;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistPlayObserver> playObserver; // @synthesize playObserver=_playObserver;
 @property(nonatomic) __weak id <SPTFreeTierPlaylistItemsViewModel> itemsViewModel; // @synthesize itemsViewModel=_itemsViewModel;
+@property(retain, nonatomic) id <SPTFreeTierPlaylistLogger> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) id <SPTAlertInterface> alertInterface; // @synthesize alertInterface;
 @property(nonatomic) __weak id <SPTFreeTierEntityOfflineDelegate> offlineDelegate; // @synthesize offlineDelegate=_offlineDelegate;
 @property(nonatomic, getter=isFormatList) _Bool formatList; // @synthesize formatList=_formatList;
@@ -178,7 +182,7 @@
 @property(readonly, nonatomic, getter=isEmpty) _Bool empty;
 - (void)load;
 @property(readonly, nonatomic, getter=isLoaded) _Bool loaded;
-- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 offlineModeState:(id)arg5 logger:(id)arg6 testManager:(id)arg7 viewModelConfiguration:(id)arg8 playInitiatedNotifier:(id)arg9 forceHideDownloadButton:(_Bool)arg10;
+- (id)initWithPlaylistModel:(id)arg1 playOrigin:(id)arg2 player:(id)arg3 linkDispatcher:(id)arg4 offlineModeState:(id)arg5 logger:(id)arg6 testManager:(id)arg7 viewModelConfiguration:(id)arg8 playInitiatedNotifier:(id)arg9 forceHideDownloadButton:(_Bool)arg10 sortingFilteringUIFactory:(id)arg11 searchViewControllerFactory:(CDUnknownBlockType)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

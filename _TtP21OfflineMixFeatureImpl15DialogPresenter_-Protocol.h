@@ -15,6 +15,6 @@
 - (void)showUserCuratedIntroMessage;
 - (void)showTrackDownloadRemovedSnackbar;
 - (void)showTrackDownloadCompletedSnackbar;
-- (void)showRemoveFromDownloadsConfirmationAlertWith:(void (^)(void))arg1;
+- (void)showRemoveFromDownloadsConfirmationAlertWithConfirmBlock:(void (^)(void))arg1 cancelBlock:(void (^)(void))arg2;
 @end
 

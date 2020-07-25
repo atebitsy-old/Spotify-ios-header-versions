@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastepisodeEntity_Actions_DownloadButtonEventFactory, SPTUBIMobilePodcastepisodeEntity_Actions_PlayButtonEventFactory, SPTUBIMobilePodcastepisodeEntity_Actions_ShareButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastepisodeEntity_Actions_DownloadButtonEventFactory, SPTUBIMobilePodcastepisodeEntity_Actions_PlayButtonEventFactory, SPTUBIMobilePodcastepisodeEntity_Actions_ShareButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastepisodeEntity_ActionsEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastepisodeEntity_Actions_DownloadButtonEventFactory>)downloadButtonFactory;
 - (id <SPTUBIMobilePodcastepisodeEntity_Actions_ShareButtonEventFactory>)shareButtonFactory;
 - (id <SPTUBIMobilePodcastepisodeEntity_Actions_PlayButtonEventFactory>)playButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

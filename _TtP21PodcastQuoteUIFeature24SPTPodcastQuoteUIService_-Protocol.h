@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol SPTPodcastQuoteUIComponentFactory;
+
 @protocol _TtP21PodcastQuoteUIFeature24SPTPodcastQuoteUIService_ <SPTService>
+@property(nonatomic, readonly) id <SPTPodcastQuoteUIComponentFactory> componentFactory;
 @end
 

@@ -12,6 +12,7 @@
 @interface SPTPhoneNumberSignupPhoneNumberEntryViewModel : NSObject
 {
     _Bool _isNextButtonEnabled;
+    _Bool _autofillEnabled;
     _Bool _isNextButtonLoading;
     _Bool _didUserEditPhoneNumber;
     SPTPhoneNumberSignupPhoneNumberEntryModel *_model;
@@ -32,6 +33,7 @@
 @property(nonatomic) _Bool isNextButtonLoading; // @synthesize isNextButtonLoading=_isNextButtonLoading;
 @property(copy, nonatomic) NSString *countryName; // @synthesize countryName=_countryName;
 @property(copy, nonatomic) NSString *callingCode; // @synthesize callingCode=_callingCode;
+@property(readonly, nonatomic, getter=isAutofillEnabled) _Bool autofillEnabled; // @synthesize autofillEnabled=_autofillEnabled;
 @property(nonatomic) _Bool isNextButtonEnabled; // @synthesize isNextButtonEnabled=_isNextButtonEnabled;
 @property(readonly, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryModel *model; // @synthesize model=_model;
 - (void)dealloc;
@@ -47,7 +49,7 @@
 - (void)selectedCountryDidUpdate;
 - (void)updateSelectedCountryCodeIfCountrySelectionIsDisabled;
 - (id)callingCodeForCountryCode:(id)arg1;
-- (id)initWithModel:(id)arg1 loginStateController:(id)arg2 locale:(id)arg3 logger:(id)arg4 phoneNumberSignupUtils:(id)arg5;
+- (id)initWithModel:(id)arg1 loginStateController:(id)arg2 locale:(id)arg3 logger:(id)arg4 phoneNumberSignupUtils:(id)arg5 autofillEnabled:(_Bool)arg6;
 - (void)logOtpRequestFailure;
 - (void)logOtpRequestSuccess;
 - (void)logUserDidEditPhoneNumber;

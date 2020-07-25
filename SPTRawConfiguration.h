@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class GPBInt64Array, NSDictionary, NSString;
+@class GPBInt64Array, NSDictionary, NSString, SPTRemoteConfiguration_GranularConfiguration;
 
 @interface SPTRawConfiguration : NSObject
 {
@@ -14,9 +14,11 @@
     long long _rcsFetchTime;
     NSString *_assignmentID;
     NSDictionary *_properties;
+    SPTRemoteConfiguration_GranularConfiguration *_granularConfiguration;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTRemoteConfiguration_GranularConfiguration *granularConfiguration; // @synthesize granularConfiguration=_granularConfiguration;
 @property(readonly, nonatomic) NSDictionary *properties; // @synthesize properties=_properties;
 @property(readonly, copy, nonatomic) NSString *assignmentID; // @synthesize assignmentID=_assignmentID;
 @property(readonly, nonatomic) long long rcsFetchTime; // @synthesize rcsFetchTime=_rcsFetchTime;

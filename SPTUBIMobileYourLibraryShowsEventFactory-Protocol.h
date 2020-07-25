@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileYourLibraryShows_ShowsRowEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryShows_ShowsRowEventFactory;
 
 @protocol SPTUBIMobileYourLibraryShowsEventFactory <NSObject>
 - (id <SPTUBIMobileYourLibraryShows_ShowsRowEventFactory>)showsRowFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

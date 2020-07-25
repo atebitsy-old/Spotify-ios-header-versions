@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Episodes_Empty_RemoveFiltersButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastEntity_Episodes_Empty_RemoveFiltersButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntity_Episodes_EmptyEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastEntity_Episodes_Empty_RemoveFiltersButtonEventFactory>)removeFiltersButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

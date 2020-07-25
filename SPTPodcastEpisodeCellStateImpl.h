@@ -28,6 +28,7 @@
 @property(nonatomic) _Bool isEpisodeActive; // @synthesize isEpisodeActive=_isEpisodeActive;
 @property(nonatomic) _Bool isEpisodePlaying; // @synthesize isEpisodePlaying=_isEpisodePlaying;
 @property(retain, nonatomic) id <SPTPodcastEpisode> podcastEpisode; // @synthesize podcastEpisode=_podcastEpisode;
+- (id)quotes;
 - (_Bool)isEpisodePlayable;
 - (_Bool)isEpisodeExplicit;
 - (id)podcastImageURL;

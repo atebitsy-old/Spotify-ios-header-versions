@@ -6,6 +6,8 @@
 
 #import <objc/NSObject.h>
 
+@class NSArray, NSString, NSURL;
+
 @interface INTERNAL_SPTEncoreTrackRowChartModel : NSObject
 {
     // Error parsing type: , name: name
@@ -28,6 +30,20 @@
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithName:(id)arg1 artists:(id)arg2 addedBy:(id)arg3 coverArt:(id)arg4 rowNumber:(long long)arg5 indicatorState:(long long)arg6 downloadState:(long long)arg7 restriction:(long long)arg8 isPremiumOnly:(_Bool)arg9 isPlaying:(_Bool)arg10 isPlayable:(_Bool)arg11 modifier:(long long)arg12 isPressed:(_Bool)arg13 deviceOffline:(_Bool)arg14;
+@property(nonatomic, readonly) _Bool deviceOffline; // @synthesize deviceOffline;
+@property(nonatomic, readonly) _Bool isPressed; // @synthesize isPressed;
+@property(nonatomic, readonly) long long modifier; // @synthesize modifier;
+@property(nonatomic, readonly) _Bool isPlayable; // @synthesize isPlayable;
+@property(nonatomic, readonly) _Bool isPlaying; // @synthesize isPlaying;
+@property(nonatomic, readonly) _Bool isPremiumOnly; // @synthesize isPremiumOnly;
+@property(nonatomic, readonly) long long restriction; // @synthesize restriction;
+@property(nonatomic, readonly) long long downloadState; // @synthesize downloadState;
+@property(nonatomic, readonly) long long indicatorState; // @synthesize indicatorState;
+@property(nonatomic, readonly) long long rowNumber; // @synthesize rowNumber;
+@property(nonatomic, readonly) NSURL *coverArt;
+@property(nonatomic, readonly) NSString *addedBy;
+@property(nonatomic, readonly) NSArray *artists;
+@property(nonatomic, readonly) NSString *name;
 
 @end
 

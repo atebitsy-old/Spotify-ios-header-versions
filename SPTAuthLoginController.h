@@ -31,7 +31,6 @@
 - (struct LoginController *)cpp;
 - (void)destroy;
 - (void)dealloc;
-- (id)initWithNonOwningLoginController:(struct LoginController *)arg1 coreThreadScheduler:(id)arg2;
 - (id)initWithLoginController:(unique_ptr_97a42db5)arg1 coreThreadScheduler:(id)arg2;
 
 @end

@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileCollectionArtist_ItemList_AlbumItemEventFactory, SPTUBIMobileCollectionArtist_ItemList_DownloadToggleEventFactory, SPTUBIMobileCollectionArtist_ItemList_ItemEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileCollectionArtist_ItemList_AlbumItemEventFactory, SPTUBIMobileCollectionArtist_ItemList_DownloadToggleEventFactory, SPTUBIMobileCollectionArtist_ItemList_ItemEventFactory;
 
 @protocol SPTUBIMobileCollectionArtist_ItemListEventFactory <NSObject>
 - (id <SPTUBIMobileCollectionArtist_ItemList_AlbumItemEventFactory>)albumItemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileCollectionArtist_ItemList_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileCollectionArtist_ItemList_DownloadToggleEventFactory>)downloadToggleFactoryWithUri:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

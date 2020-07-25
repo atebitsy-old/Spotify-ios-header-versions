@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainer_ActionsEventFactory, SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainer_ContextMenuButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainer_ActionsEventFactory, SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainer_ContextMenuButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainerEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainer_ActionsEventFactory>)actionsFactory;
 - (id <SPTUBIMobilePodcastEpisodeCard_EpisodeCardContainer_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

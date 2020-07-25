@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHome_Shelves_Shelf_Carousel_MediumCardEventFactory, SPTUBIMobileHome_Shelves_Shelf_Carousel_SmallCardEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHome_Shelves_Shelf_Carousel_MediumCardEventFactory, SPTUBIMobileHome_Shelves_Shelf_Carousel_SmallCardEventFactory;
 
 @protocol SPTUBIMobileHome_Shelves_Shelf_CarouselEventFactory <NSObject>
 - (id <SPTUBIMobileHome_Shelves_Shelf_Carousel_SmallCardEventFactory>)smallCardFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileHome_Shelves_Shelf_Carousel_MediumCardEventFactory>)mediumCardFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

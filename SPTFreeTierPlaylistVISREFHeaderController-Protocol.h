@@ -18,6 +18,8 @@
 @optional
 - (double)topAccessoryViewHeight;
 - (double)headerHeight;
+- (void)setFilterButtonTappedBlock:(void (^)(UIViewController *))arg1;
+- (void)setSearchButtonTappedBlock:(void (^)(UIViewController *))arg1;
 - (void)setContextMenuModel:(VISREFPlaylistContextMenuViewModel *)arg1;
 - (void)setBackButtonTappedBlock:(void (^)(void))arg1;
 - (void)setCustomBackButton:(UIView<VISREFHeaderViewAnimationProgress> *)arg1;

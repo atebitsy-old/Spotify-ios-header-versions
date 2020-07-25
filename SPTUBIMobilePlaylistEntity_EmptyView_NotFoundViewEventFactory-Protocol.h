@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobilePlaylistEntity_EmptyView_NotFoundView_RemoveButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobilePlaylistEntity_EmptyView_NotFoundView_RemoveButtonEventFactory;
 
 @protocol SPTUBIMobilePlaylistEntity_EmptyView_NotFoundViewEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobilePlaylistEntity_EmptyView_NotFoundView_RemoveButtonEventFactory>)removeButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

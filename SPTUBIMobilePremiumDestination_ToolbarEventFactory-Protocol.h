@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePremiumDestination_Toolbar_SettingButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePremiumDestination_Toolbar_SettingButtonEventFactory;
 
 @protocol SPTUBIMobilePremiumDestination_ToolbarEventFactory <NSObject>
 - (id <SPTUBIMobilePremiumDestination_Toolbar_SettingButtonEventFactory>)settingButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

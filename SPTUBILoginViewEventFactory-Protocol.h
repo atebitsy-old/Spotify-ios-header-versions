@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBILoginView_LoginButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBILoginView_LoginButtonEventFactory;
 
 @protocol SPTUBILoginViewEventFactory <NSObject>
 - (id <SPTUBILoginView_LoginButtonEventFactory>)loginButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

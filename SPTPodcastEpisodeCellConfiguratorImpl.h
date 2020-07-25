@@ -9,7 +9,7 @@
 #import "SPTPodcastEpisodeCellConfigurator-Protocol.h"
 
 @class NSString, SPTTheme;
-@protocol GLUEImageLoader, GLUETheme, SPTExplicitContentAccessManager, SPTPodcastTestManager, SPTPodcastUIButtonsFactory, SPTPodcastUIStringFormatter;
+@protocol GLUEImageLoader, GLUETheme, SPTExplicitContentAccessManager, SPTPodcastQuoteUIComponentFactory, SPTPodcastTestManager, SPTPodcastUIButtonsFactory, SPTPodcastUIStringFormatter;
 
 @interface SPTPodcastEpisodeCellConfiguratorImpl : NSObject <SPTPodcastEpisodeCellConfigurator>
 {
@@ -19,11 +19,13 @@
     id <SPTPodcastUIStringFormatter> _stringFormatter;
     id <SPTPodcastTestManager> _testManager;
     id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <SPTPodcastQuoteUIComponentFactory> _quoteComponentFactory;
     id <SPTPodcastUIButtonsFactory> _buttonsFactory;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastUIButtonsFactory> buttonsFactory; // @synthesize buttonsFactory=_buttonsFactory;
+@property(readonly, nonatomic) id <SPTPodcastQuoteUIComponentFactory> quoteComponentFactory; // @synthesize quoteComponentFactory=_quoteComponentFactory;
 @property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
 @property(retain, nonatomic) id <SPTPodcastTestManager> testManager; // @synthesize testManager=_testManager;
 @property(retain, nonatomic) id <SPTPodcastUIStringFormatter> stringFormatter; // @synthesize stringFormatter=_stringFormatter;
@@ -31,6 +33,7 @@
 @property(retain, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (id)glueStyle;
+- (void)updateQuotesViewInCell:(id)arg1 withConfiguration:(id)arg2;
 - (_Bool)isEpisodeDisabled:(id)arg1;
 - (id)downloadButtonForCell:(id)arg1;
 - (void)updateOfflineAccessoryButtonInCell:(id)arg1 forStatus:(long long)arg2 withProgress:(double)arg3;
@@ -40,7 +43,7 @@
 - (id)configureUnfinishedCell:(id)arg1 atIndexPath:(id)arg2 cellState:(id)arg3 target:(id)arg4;
 - (id)configureEpisodeCell:(id)arg1 atIndexPath:(id)arg2 episodeCellState:(id)arg3 target:(id)arg4;
 - (Class)cellClass;
-- (id)initWithTheme:(id)arg1 glueTheme:(id)arg2 imageLoader:(id)arg3 stringFormatter:(id)arg4 buttonsFactory:(id)arg5 explicitContentAccessManager:(id)arg6;
+- (id)initWithTheme:(id)arg1 glueTheme:(id)arg2 imageLoader:(id)arg3 stringFormatter:(id)arg4 buttonsFactory:(id)arg5 explicitContentAccessManager:(id)arg6 quoteComponentFactory:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

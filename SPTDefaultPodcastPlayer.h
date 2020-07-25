@@ -44,7 +44,9 @@
 - (_Bool)resumePodcast:(id)arg1 episodeUrl:(id)arg2;
 - (void)playPodcastWithContext:(id)arg1 itemID:(id)arg2 fromTimestamp:(id)arg3;
 - (void)playPodcastWithContextURI:(id)arg1 itemID:(id)arg2 fromTimestamp:(id)arg3;
+- (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 withOrigin:(id)arg3 startEpisodeUrl:(id)arg4 fromTimestamp:(id)arg5 resetPlay:(_Bool)arg6 respectOrder:(_Bool)arg7 completionHandler:(CDUnknownBlockType)arg8;
 - (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 withOrigin:(id)arg3 startEpisodeUrl:(id)arg4 fromTimestamp:(id)arg5 resetPlay:(_Bool)arg6 completionHandler:(CDUnknownBlockType)arg7;
+- (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 startEpisodeUrl:(id)arg3 fromTimestamp:(id)arg4 resetPlay:(_Bool)arg5 respectOrder:(_Bool)arg6;
 - (void)playPodcast:(id)arg1 withEpisodes:(id)arg2 startEpisodeUrl:(id)arg3 fromTimestamp:(id)arg4 resetPlay:(_Bool)arg5;
 - (void)pausePodcast:(id)arg1 startEpisodeUrl:(id)arg2;
 - (_Bool)seekInPodcast:(id)arg1 episodeUrl:(id)arg2 toPosition:(double)arg3;

@@ -18,8 +18,8 @@
 @property(readonly, nonatomic, getter=isParticipantsInviteBarButtonVisible) _Bool participantsInviteBarButtonVisible;
 @property(readonly, nonatomic) _Bool isSessionHost;
 @property(readonly, nonatomic, getter=isListenTogetherSessionActiveIndicatorVisible) _Bool listenTogetherSessionActiveIndicatorVisible;
-@property(readonly, nonatomic, getter=isParticipantsPlaceholderVisible) _Bool participantsPlaceholderVisible;
 @property(readonly, nonatomic) unsigned long long bottomBannerType;
+@property(readonly, nonatomic) _Bool scanCodeButtonHidden;
 @property(readonly, nonatomic) _Bool sessionButtonHidden;
 @property(readonly, nonatomic) _Bool shareLinkButtonHidden;
 @property(readonly, nonatomic) _Bool seeListenersButtonHidden;
@@ -43,8 +43,6 @@
 - (void)removeObserver:(id <SPTSocialListeningViewModelObserver>)arg1;
 - (void)addObserver:(id <SPTSocialListeningViewModelObserver>)arg1;
 @property(readonly, nonatomic) unsigned long long numberOfUsers;
-- (void)navigateToQueue;
-- (void)navigateToAddSongs;
 - (void)navigateToUserProfilePage:(NSString *)arg1;
 - (void)leaveOrDeleteSessionFromScreen:(unsigned long long)arg1;
 - (void)loadScannable;

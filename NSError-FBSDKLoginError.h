@@ -20,7 +20,11 @@
 + (id)errorWithFrameworkCode:(long long)arg1 description:(id)arg2 underlyingError:(id)arg3;
 + (id)errorWithFrameworkCode:(long long)arg1 description:(id)arg2;
 + (id)spt_persistentDataCacheErrorWithCode:(long long)arg1;
++ (id)spt_incompatibleShareDestinationAndEntityDataError;
++ (id)spt_noShareableURLErrorWithUnderlyingError:(id)arg1;
 + (id)spt_sharingSDKErrorWithCode:(unsigned long long)arg1 message:(id)arg2;
++ (id)spt_sharingSDKErrorWithCode:(unsigned long long)arg1 message:(id)arg2 underlyingError:(id)arg3;
++ (id)spt_sharingSDKErrorWithCode:(unsigned long long)arg1 userInfo:(id)arg2;
 + (id)spt_browseViewModelFetcherErrorWithCode:(long long)arg1 userInfo:(id)arg2;
 + (_Bool)spt_isRecoverableConcertsEntityErrorCode:(long long)arg1;
 + (id)spt_concertsEntityErrorWithCode:(long long)arg1 userInfo:(id)arg2;

@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileShareSubMenu_CloseButtonEventFactory, SPTUBIMobileShareSubMenu_MenuItemsEventFactory, SPTUBIMobileShareSubMenu_TitleLabelEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileShareSubMenu_CloseButtonEventFactory, SPTUBIMobileShareSubMenu_MenuItemsEventFactory, SPTUBIMobileShareSubMenu_TitleLabelEventFactory;
 
 @protocol SPTUBIMobileShareSubMenuEventFactory <NSObject>
 - (id <SPTUBIMobileShareSubMenu_CloseButtonEventFactory>)closeButtonFactory;
 - (id <SPTUBIMobileShareSubMenu_MenuItemsEventFactory>)menuItemsFactory;
 - (id <SPTUBIMobileShareSubMenu_TitleLabelEventFactory>)titleLabelFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

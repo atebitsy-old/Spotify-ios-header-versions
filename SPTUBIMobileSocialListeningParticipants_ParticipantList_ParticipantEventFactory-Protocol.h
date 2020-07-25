@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileSocialListeningParticipants_ParticipantList_Participant_EndSessionButtonEventFactory, SPTUBIMobileSocialListeningParticipants_ParticipantList_Participant_LeaveSessionButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileSocialListeningParticipants_ParticipantList_Participant_EndSessionButtonEventFactory, SPTUBIMobileSocialListeningParticipants_ParticipantList_Participant_LeaveSessionButtonEventFactory;
 
 @protocol SPTUBIMobileSocialListeningParticipants_ParticipantList_ParticipantEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIMobileSocialListeningParticipants_ParticipantList_Participant_EndSessionButtonEventFactory>)endSessionButtonFactory;
 - (id <SPTUBIMobileSocialListeningParticipants_ParticipantList_Participant_LeaveSessionButtonEventFactory>)leaveSessionButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

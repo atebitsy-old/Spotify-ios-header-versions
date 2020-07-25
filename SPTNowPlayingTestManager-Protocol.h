@@ -13,10 +13,6 @@
 @property(readonly, nonatomic, getter=isRemoteControlEventSubtypeDeprecationEnabled) _Bool remoteControlEventSubtypeDeprecationEnabled;
 @property(readonly, nonatomic) _Bool isContentLayerTabEnabled;
 @property(readonly, nonatomic, getter=isBarToCoverArtAnimationEnabled) _Bool barToCoverArtAnimationEnabled;
-@property(readonly, nonatomic) _Bool isLyricsUpsellPopupEnabled;
-@property(readonly, nonatomic) _Bool isContentLayerLyricsTabEnabled;
-@property(readonly, nonatomic) _Bool isContentLayerLyricsButtonEnabled;
-@property(readonly, nonatomic) _Bool isNowPlayingBarLyricsLabelEnabled;
 @property(readonly, nonatomic) SPTNowPlayingScrollConfiguration *scrollConfiguration;
 @property(readonly, nonatomic, getter=isContentLayerVideoTabEnabled) _Bool videoTabEnabled;
 @property(readonly, nonatomic, getter=isPrideAnimatedHeartEnabled) _Bool prideAnimatedHeartEnabled;

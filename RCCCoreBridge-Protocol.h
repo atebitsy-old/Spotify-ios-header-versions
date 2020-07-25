@@ -7,6 +7,7 @@
 @class NSData;
 
 @protocol RCCCoreBridge
+- (NSData *)propertyDefinitions;
 - (_Bool)passConfigurationData:(NSData *)arg1 error:(id *)arg2;
 @end
 

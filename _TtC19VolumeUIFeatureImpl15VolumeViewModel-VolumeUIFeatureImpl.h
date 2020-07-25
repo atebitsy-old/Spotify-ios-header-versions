@@ -6,7 +6,9 @@
 
 #import "_TtC19VolumeUIFeatureImpl15VolumeViewModel.h"
 
-@interface _TtC19VolumeUIFeatureImpl15VolumeViewModel (VolumeUIFeatureImpl)
-- (void)volumeUpdated:(id)arg1;
+#import "SPTVolumeThrottlerDelegate-Protocol.h"
+
+@interface _TtC19VolumeUIFeatureImpl15VolumeViewModel (VolumeUIFeatureImpl) <SPTVolumeThrottlerDelegate>
+- (void)shouldPerformThrottledAction:(id)arg1;
 @end
 

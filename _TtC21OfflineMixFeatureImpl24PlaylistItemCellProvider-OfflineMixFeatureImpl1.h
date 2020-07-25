@@ -7,6 +7,7 @@
 #import "_TtC21OfflineMixFeatureImpl24PlaylistItemCellProvider.h"
 
 @interface _TtC21OfflineMixFeatureImpl24PlaylistItemCellProvider (OfflineMixFeatureImpl1)
+- (void)didTapWithPreviewButton:(id)arg1;
 - (void)didTapWithDownloadedButton:(id)arg1;
 - (void)didTapWithContextMenuButton:(id)arg1;
 @end

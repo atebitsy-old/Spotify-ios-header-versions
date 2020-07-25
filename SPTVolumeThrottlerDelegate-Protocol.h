@@ -6,9 +6,9 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTVolumeThrottler;
+@protocol SPTVolumeThrottler;
 
 @protocol SPTVolumeThrottlerDelegate <NSObject>
-- (void)shouldPerformThrottledAction:(SPTVolumeThrottler *)arg1;
+- (void)shouldPerformThrottledAction:(id <SPTVolumeThrottler>)arg1;
 @end
 

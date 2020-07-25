@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent, SPTUBIMobileArtistAbout_Gallery_CarouselEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIInteractionEvent, SPTUBIMobileArtistAbout_Gallery_CarouselEventFactory;
 
 @protocol SPTUBIMobileArtistAbout_GalleryEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitNoAction;
 - (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIMobileArtistAbout_Gallery_CarouselEventFactory>)carouselFactoryWithPosition:(long long)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

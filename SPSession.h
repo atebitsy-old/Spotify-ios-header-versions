@@ -8,7 +8,7 @@
 
 #import "SPTConnectivityManagerDelegate-Protocol.h"
 
-@class NSMapTable, NSString, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTAuthSession, SPTConnectivityAuthenticatedScope, SPTCoreClientFeatures, SPTHermesController, SPTIncognitoModeHandler, SPTLogger, SPTOfflineModeNotifier, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
+@class NSMapTable, NSString, SPTApplicationStateTracker, SPTAudioVolumeControl, SPTAuthSession, SPTConnectivityAuthenticatedScope, SPTCoreClientFeatures, SPTHermesController, SPTIncognitoModeHandler, SPTLoggerImplementation, SPTOfflineModeNotifier, SPTPlayerMftCanPlayChecker, SPTPlayerProxyContextPlayer, SPTSocialManager, SPTUserFactory;
 @protocol SPTAsyncScheduler, SPTConnectivityManager, SPTEntityService, SPTOauthClient, SPTOfflineManager, SPTProductState, SPTResolver;
 
 @interface SPSession : NSObject <SPTConnectivityManagerDelegate>
@@ -76,7 +76,7 @@
 @property(readonly, nonatomic) id <SPTEntityService> entityService;
 @property(readonly, nonatomic) id <SPTOauthClient> oauthClient;
 @property(readonly, nonatomic) SPTHermesController *hermes;
-@property(readonly, nonatomic) SPTLogger *logger;
+@property(readonly, nonatomic) SPTLoggerImplementation *logger;
 @property(readonly, nonatomic) SPTApplicationStateTracker *applicationStateTracker;
 @property(readonly, nonatomic) id <SPTResolver> cosmosRouter;
 

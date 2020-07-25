@@ -8,8 +8,8 @@
 
 #import "SPTInAppMessageService-Protocol.h"
 
-@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureFlagChecks, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSDKMessagePreviewReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
-@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFeatureFlagSignal, SPTFeatureFlaggingService, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
+@class NSString, SPCore, SPTAllocationContext, SPTInAppMessageActionFactory, SPTInAppMessageBannerMessageController, SPTInAppMessageBannerMessagePriorityDecider, SPTInAppMessageCardMessageController, SPTInAppMessageCardMessagePriorityDecider, SPTInAppMessageEventEmitter, SPTInAppMessageFeatureProperties, SPTInAppMessageManager, SPTInAppMessageMessageRequesterImplementation, SPTInAppMessageNoteMessageController, SPTInAppMessageNoteMessagePriorityDecider, SPTInAppMessageNotePresentationManager, SPTInAppMessageNowPlayingManagerRegistryImplementation, SPTInAppMessagePresentationMonitorImplementation, SPTInAppMessagePreviewFlowManager, SPTInAppMessagePreviewViewModel, SPTInAppMessageReceiverImplementation, SPTInAppMessageSDKMessagePreviewReceiverImplementation, SPTInAppMessageSettingsPageBuilder, SPTInAppMessageTriggerConfigurationsController, SPTInAppMessageTriggerEngine, SPTInAppMessageTriggerListController;
+@protocol FollowFeature, SPContextMenuFeature, SPTAccountService, SPTAuthService, SPTBannerFeature, SPTCollectionPlatformService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTEventSenderService, SPTFeatureFlagSignal, SPTFreeTierService, SPTFreeTierTooltipService, SPTInstrumentationService, SPTNetworkService, SPTOfflineService, SPTOnDemandService, SPTPlayerFeature, SPTPlaylistPlatformService, SPTPodcastFeature, SPTPushMessagingService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTSnackbarService, SPTUBIService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature, _TtP19CarDetectionFeature22SPTCarDetectionService_;
 
 @interface SPTInAppMessageServiceImplementation : NSObject <SPTInAppMessageService>
 {
@@ -29,7 +29,6 @@
     id <SPTContainerService> _containerService;
     id <SPTContainerUIService> _containerUIService;
     id <SPTBannerFeature> _bannerFeature;
-    id <SPTFeatureFlaggingService> _featureFlaggingService;
     id <SPTAccountService> _accountService;
     id <SPTFreeTierService> _freeTierService;
     id <SPTPlayerFeature> _playerFeature;
@@ -64,7 +63,6 @@
     SPTInAppMessageNowPlayingManagerRegistryImplementation *_nowPlayingManagerRegistry;
     SPTInAppMessagePreviewFlowManager *_previewFlowManager;
     SPTInAppMessagePreviewViewModel *_previewViewModel;
-    SPTInAppMessageFeatureFlagChecks *_featureFlagChecker;
     SPCore *_core;
     SPTInAppMessageSettingsPageBuilder *_settingsPageBuilder;
     SPTInAppMessageActionFactory *_actionFactory;
@@ -94,7 +92,6 @@
 @property(nonatomic) _Bool addedSDKPageViewObserver; // @synthesize addedSDKPageViewObserver=_addedSDKPageViewObserver;
 @property(nonatomic) _Bool previewViewModelObservingPlayer; // @synthesize previewViewModelObservingPlayer=_previewViewModelObservingPlayer;
 @property(nonatomic) _Bool addedPlayerObserver; // @synthesize addedPlayerObserver=_addedPlayerObserver;
-@property(retain, nonatomic) SPTInAppMessageFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
 @property(retain, nonatomic) SPTInAppMessagePreviewViewModel *previewViewModel; // @synthesize previewViewModel=_previewViewModel;
 @property(retain, nonatomic) SPTInAppMessagePreviewFlowManager *previewFlowManager; // @synthesize previewFlowManager=_previewFlowManager;
 @property(retain, nonatomic) SPTInAppMessageNowPlayingManagerRegistryImplementation *nowPlayingManagerRegistry; // @synthesize nowPlayingManagerRegistry=_nowPlayingManagerRegistry;
@@ -129,7 +126,6 @@
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
 @property(nonatomic) __weak id <SPTFreeTierService> freeTierService; // @synthesize freeTierService=_freeTierService;
 @property(nonatomic) __weak id <SPTAccountService> accountService; // @synthesize accountService=_accountService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlaggingService; // @synthesize featureFlaggingService=_featureFlaggingService;
 @property(nonatomic) __weak id <SPTBannerFeature> bannerFeature; // @synthesize bannerFeature=_bannerFeature;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
@@ -146,7 +142,6 @@
 - (id)provideNotePresentationManager;
 - (id)provideNowPlayingManagerRegistry;
 - (id)provideMessageRequester;
-- (id)provideFeatureFlagChecker;
 - (id)createActionFactory;
 - (id)createCardMessageController;
 - (id)createPreviewFlowManager;

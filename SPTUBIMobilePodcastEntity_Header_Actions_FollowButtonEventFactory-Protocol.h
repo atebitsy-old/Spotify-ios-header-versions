@@ -7,11 +7,11 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobilePodcastEntity_Header_Actions_FollowButtonEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)hitUnfollowWithItemToBeUnfollowed:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitFollowWithItemToBeFollowed:(NSURL *)arg1;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

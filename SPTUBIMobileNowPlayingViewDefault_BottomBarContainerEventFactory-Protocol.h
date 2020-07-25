@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileNowPlayingViewDefault_BottomBarContainer_ConnectButtonEventFactory, SPTUBIMobileNowPlayingViewDefault_BottomBarContainer_QueueButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileNowPlayingViewDefault_BottomBarContainer_ConnectButtonEventFactory, SPTUBIMobileNowPlayingViewDefault_BottomBarContainer_QueueButtonEventFactory;
 
 @protocol SPTUBIMobileNowPlayingViewDefault_BottomBarContainerEventFactory <NSObject>
 - (id <SPTUBIMobileNowPlayingViewDefault_BottomBarContainer_QueueButtonEventFactory>)queueButtonFactory;
 - (id <SPTUBIMobileNowPlayingViewDefault_BottomBarContainer_ConnectButtonEventFactory>)connectButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

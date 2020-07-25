@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSString;
-@protocol SPTUBIEventFactoryLocation, SPTUBIImpressionEvent, SPTUBIMobileSearch_Content_ErrorEventFactory, SPTUBIMobileSearch_Content_OfflineResultsEventFactory, SPTUBIMobileSearch_Content_OnlineResultsEventFactory, SPTUBIMobileSearch_Content_RecentsEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent, SPTUBIMobileSearch_Content_ErrorEventFactory, SPTUBIMobileSearch_Content_OfflineResultsEventFactory, SPTUBIMobileSearch_Content_OnlineResultsEventFactory, SPTUBIMobileSearch_Content_RecentsEventFactory;
 
 @protocol SPTUBIMobileSearch_ContentEventFactory <NSObject>
 - (id <SPTUBIImpressionEvent>)impression;
@@ -15,6 +15,6 @@
 - (id <SPTUBIMobileSearch_Content_OfflineResultsEventFactory>)offlineResultsFactory;
 - (id <SPTUBIMobileSearch_Content_OnlineResultsEventFactory>)onlineResultsFactoryWithReason:(NSString *)arg1;
 - (id <SPTUBIMobileSearch_Content_RecentsEventFactory>)recentsFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -31,6 +31,7 @@
 - (void)sendSelectionEvent;
 - (struct CGSize)preferredSizeForImageFromData:(id)arg1 model:(id)arg2 containerViewSize:(struct CGSize)arg3;
 - (void)updateViewForLoadedImage:(id)arg1 fromData:(id)arg2 model:(id)arg3 animated:(_Bool)arg4;
+- (id)accessibilityLabel;
 - (void)setMetadataWithModel:(id)arg1;
 - (void)setTitleWithModel:(id)arg1;
 - (void)configureWithModel:(id)arg1;

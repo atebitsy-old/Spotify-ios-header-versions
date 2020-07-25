@@ -6,32 +6,21 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTLyricsV2TestManager-Protocol.h"
 
 @class NSString, SPTLyricsFeatureProperties;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal;
 
-@interface SPTLyricsV2TestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTLyricsV2TestManager>
+@interface SPTLyricsV2TestManagerImplementation : NSObject <SPTLyricsV2TestManager>
 {
-    id <SPTFeatureFlagFactory> _featureFlagFactory;
     SPTLyricsFeatureProperties *_properties;
-    id <SPTFeatureFlagSignal> _lyricsV2FlagSignal;
-    long long _lyricsV2FlagState;
 }
 
 - (void).cxx_destruct;
-@property(nonatomic) long long lyricsV2FlagState; // @synthesize lyricsV2FlagState=_lyricsV2FlagState;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> lyricsV2FlagSignal; // @synthesize lyricsV2FlagSignal=_lyricsV2FlagSignal;
 @property(readonly, nonatomic) SPTLyricsFeatureProperties *properties; // @synthesize properties=_properties;
-@property(readonly, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
 - (_Bool)isSyllableSyncEnabled;
 - (_Bool)isVocalRemovalEnabled;
 - (_Bool)isFeatureEnabled;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)setupLyricsV2Flags;
-- (void)dealloc;
-- (id)initWithFeatureFlagFactory:(id)arg1 resolver:(id)arg2;
+- (id)initWithResolver:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

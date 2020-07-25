@@ -19,7 +19,6 @@
     _Bool _watchIntentsHandling;
     _Bool _appleWatchStreaming;
     _Bool _appleWatchMockingbird;
-    _Bool _appleWatchHoneyBees;
     unsigned long long _appleWatchPubsubTransport;
     unsigned long long _appleWatchBitrate;
     NSString *_appleWatchPubsubTransportString;
@@ -31,7 +30,6 @@
 @property(retain, nonatomic) NSString *appleWatchPubsubTransportString; // @synthesize appleWatchPubsubTransportString=_appleWatchPubsubTransportString;
 @property(readonly, nonatomic) unsigned long long appleWatchBitrate; // @synthesize appleWatchBitrate=_appleWatchBitrate;
 @property(readonly, nonatomic) unsigned long long appleWatchPubsubTransport; // @synthesize appleWatchPubsubTransport=_appleWatchPubsubTransport;
-@property(readonly, nonatomic) _Bool appleWatchHoneyBees; // @synthesize appleWatchHoneyBees=_appleWatchHoneyBees;
 @property(readonly, nonatomic) _Bool appleWatchMockingbird; // @synthesize appleWatchMockingbird=_appleWatchMockingbird;
 @property(readonly, nonatomic) _Bool appleWatchStreaming; // @synthesize appleWatchStreaming=_appleWatchStreaming;
 @property(readonly, nonatomic) _Bool watchIntentsHandling; // @synthesize watchIntentsHandling=_watchIntentsHandling;

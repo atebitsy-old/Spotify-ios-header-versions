@@ -7,10 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHomeMixEntity_TrackList_TrackItemEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHomeMixEntity_TrackList_TrackItemEventFactory;
 
 @protocol SPTUBIMobileHomeMixEntity_TrackListEventFactory <NSObject>
 - (id <SPTUBIMobileHomeMixEntity_TrackList_TrackItemEventFactory>)trackItemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

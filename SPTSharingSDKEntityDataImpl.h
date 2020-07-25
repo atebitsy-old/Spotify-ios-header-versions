@@ -8,7 +8,7 @@
 
 #import "SPTSharingSDKEntityData-Protocol.h"
 
-@class NSData, NSSet, NSString, NSURL, UIImage;
+@class NSArray, NSData, NSSet, NSString, NSURL, UIImage;
 @protocol SPTSharingSDKUTMTag;
 
 @interface SPTSharingSDKEntityDataImpl : NSObject <SPTSharingSDKEntityData>
@@ -16,21 +16,25 @@
     NSString *_spotifyURIString;
     UIImage *_image;
     NSData *_video;
+    NSString *_text;
     NSSet *_extraQueryItems;
     unsigned long long _capability;
     NSURL *_fallbackShareableURL;
     id <SPTSharingSDKUTMTag> _utmTag;
+    NSArray *_excludedActivityTypes;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *excludedActivityTypes; // @synthesize excludedActivityTypes=_excludedActivityTypes;
 @property(readonly, nonatomic) id <SPTSharingSDKUTMTag> utmTag; // @synthesize utmTag=_utmTag;
 @property(readonly, nonatomic) NSURL *fallbackShareableURL; // @synthesize fallbackShareableURL=_fallbackShareableURL;
 @property(readonly, nonatomic) unsigned long long capability; // @synthesize capability=_capability;
 @property(readonly, nonatomic) NSSet *extraQueryItems; // @synthesize extraQueryItems=_extraQueryItems;
+@property(readonly, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, nonatomic) NSData *video; // @synthesize video=_video;
 @property(readonly, nonatomic) UIImage *image; // @synthesize image=_image;
 @property(readonly, copy, nonatomic) NSString *spotifyURIString; // @synthesize spotifyURIString=_spotifyURIString;
-- (void).cxx_destruct;
-- (id)initWithSpotifyURIString:(id)arg1 image:(id)arg2 video:(id)arg3 extraQueryItems:(id)arg4 fallbackShareableURL:(id)arg5 capability:(unsigned long long)arg6 utmTag:(id)arg7;
+- (id)initWithSpotifyURIString:(id)arg1 image:(id)arg2 video:(id)arg3 text:(id)arg4 extraQueryItems:(id)arg5 fallbackShareableURL:(id)arg6 capability:(unsigned long long)arg7 utmTag:(id)arg8 excludedActivityTypes:(id)arg9;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

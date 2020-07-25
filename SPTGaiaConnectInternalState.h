@@ -11,16 +11,18 @@
 
 @interface SPTGaiaConnectInternalState : NSObject
 {
+    _Bool _isRunning;
     NSArray *_availableDevices;
     id <SPTGaiaLocalDeviceProtocol> _localDevice;
     SPTGaiaConnectError *_transferError;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool isRunning; // @synthesize isRunning=_isRunning;
 @property(retain, nonatomic) SPTGaiaConnectError *transferError; // @synthesize transferError=_transferError;
 @property(retain, nonatomic) id <SPTGaiaLocalDeviceProtocol> localDevice; // @synthesize localDevice=_localDevice;
 @property(copy, nonatomic) NSArray *availableDevices; // @synthesize availableDevices=_availableDevices;
-- (id)initWithAvailableDevices:(id)arg1 localDevice:(id)arg2 transferError:(id)arg3;
+- (id)initWithAvailableDevices:(id)arg1 localDevice:(id)arg2 transferError:(id)arg3 isRunning:(_Bool)arg4;
 
 @end
 

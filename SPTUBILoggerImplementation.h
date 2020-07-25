@@ -8,33 +8,24 @@
 
 #import "SPTUBILogger-Protocol.h"
 
-@class NSString, SPTObserverManager;
-@protocol SPTEventSender, SPTUBIPageInstanceIdentifierProvider, SPTUBIPlaybackIdProvider;
+@class NSString, SPTObserverManager, UBILogger;
 
 @interface SPTUBILoggerImplementation : NSObject <SPTUBILogger>
 {
-    id <SPTEventSender> _eventSender;
+    UBILogger *_ubiLogger;
     SPTObserverManager *_observerManager;
-    id <SPTUBIPageInstanceIdentifierProvider> _pageInstanceIdentifierProvider;
-    id <SPTUBIPlaybackIdProvider> _playbackIdProvider;
     CDUnknownBlockType _errorHandler;
 }
 
 - (void).cxx_destruct;
 @property(copy, nonatomic) CDUnknownBlockType errorHandler; // @synthesize errorHandler=_errorHandler;
-@property(retain, nonatomic) id <SPTUBIPlaybackIdProvider> playbackIdProvider; // @synthesize playbackIdProvider=_playbackIdProvider;
-@property(nonatomic) __weak id <SPTUBIPageInstanceIdentifierProvider> pageInstanceIdentifierProvider; // @synthesize pageInstanceIdentifierProvider=_pageInstanceIdentifierProvider;
 @property(retain, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-@property(nonatomic) __weak id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
-- (void)addPathToEvent:(id)arg1 fromComponents:(id)arg2;
-- (void)addActionParametersToEvent:(id)arg1 fromInteraction:(id)arg2;
-- (id)addDataToMessage:(id)arg1 fromImpression:(id)arg2;
-- (id)addDataToMessage:(id)arg1 fromInteraction:(id)arg2;
+@property(retain, nonatomic) UBILogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (id)logNonAuthenticatedImpression:(id)arg1;
 - (id)logImpression:(id)arg1;
 - (id)logNonAuthenticatedInteraction:(id)arg1;
 - (id)logInteraction:(id)arg1;
-- (id)initWithEventSender:(id)arg1 pageInstanceIdentifierProvider:(id)arg2 observerManager:(id)arg3 playbackIdProvider:(id)arg4;
+- (id)initWithLogger:(id)arg1 observerManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

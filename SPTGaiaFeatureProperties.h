@@ -13,8 +13,10 @@
 @interface SPTGaiaFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _connectLockscreenControlsEnabled;
+    _Bool _audioSessionActivationManagerEnabled;
 }
 
+@property(readonly, nonatomic) _Bool audioSessionActivationManagerEnabled; // @synthesize audioSessionActivationManagerEnabled=_audioSessionActivationManagerEnabled;
 @property(readonly, nonatomic) _Bool connectLockscreenControlsEnabled; // @synthesize connectLockscreenControlsEnabled=_connectLockscreenControlsEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_AlbumCoverEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_ContextMenuButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_HeartButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_AlbumCoverEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_ContextMenuButtonEventFactory, SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_HeartButtonEventFactory;
 
 @protocol SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)longHitUiReveal;
@@ -16,6 +16,6 @@
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_HeartButtonEventFactory>)heartButtonFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
 - (id <SPTUBIMobileYourLibraryLikedSongs_ItemList_PreviewItem_AlbumCoverEventFactory>)albumCoverFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

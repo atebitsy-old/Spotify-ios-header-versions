@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileHomeMixTasteViz_LearnMoreLinkEventFactory, SPTUBIMobileHomeMixTasteViz_ListenNowButtonEventFactory, SPTUBIMobileHomeMixTasteViz_TasteVizViewEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileHomeMixTasteViz_LearnMoreLinkEventFactory, SPTUBIMobileHomeMixTasteViz_ListenNowButtonEventFactory, SPTUBIMobileHomeMixTasteViz_TasteVizViewEventFactory;
 
 @protocol SPTUBIMobileHomeMixTasteVizEventFactory <NSObject>
 - (id <SPTUBIMobileHomeMixTasteViz_LearnMoreLinkEventFactory>)learnMoreLinkFactory;
 - (id <SPTUBIMobileHomeMixTasteViz_ListenNowButtonEventFactory>)listenNowButtonFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileHomeMixTasteViz_TasteVizViewEventFactory>)tasteVizViewFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

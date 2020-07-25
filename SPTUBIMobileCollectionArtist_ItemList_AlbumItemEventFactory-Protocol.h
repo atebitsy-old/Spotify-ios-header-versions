@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent, SPTUBIMobileCollectionArtist_ItemList_AlbumItem_ContextMenuButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent, SPTUBIMobileCollectionArtist_ItemList_AlbumItem_ContextMenuButtonEventFactory;
 
 @protocol SPTUBIMobileCollectionArtist_ItemList_AlbumItemEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)longHitUiReveal;
 - (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
 - (id <SPTUBIMobileCollectionArtist_ItemList_AlbumItem_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

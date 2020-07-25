@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePodcastEntity_Episodes_Header_SortButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePodcastEntity_Episodes_Header_SortButtonEventFactory;
 
 @protocol SPTUBIMobilePodcastEntity_Episodes_HeaderEventFactory <NSObject>
 - (id <SPTUBIMobilePodcastEntity_Episodes_Header_SortButtonEventFactory>)sortButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -16,10 +16,12 @@
     _Bool _shareDeepLinkLoggingEnabled;
     _Bool _shareDeepLinkLoggingAllowAllUris;
     _Bool _isCanvasSharingEnabled;
+    _Bool _sharingsdkEnabled;
     long long _shareDestinationsVersion;
 }
 
 @property(readonly, nonatomic) long long shareDestinationsVersion; // @synthesize shareDestinationsVersion=_shareDestinationsVersion;
+@property(readonly, nonatomic) _Bool sharingsdkEnabled; // @synthesize sharingsdkEnabled=_sharingsdkEnabled;
 @property(readonly, nonatomic) _Bool isCanvasSharingEnabled; // @synthesize isCanvasSharingEnabled=_isCanvasSharingEnabled;
 @property(readonly, nonatomic) _Bool shareDeepLinkLoggingAllowAllUris; // @synthesize shareDeepLinkLoggingAllowAllUris=_shareDeepLinkLoggingAllowAllUris;
 @property(readonly, nonatomic) _Bool shareDeepLinkLoggingEnabled; // @synthesize shareDeepLinkLoggingEnabled=_shareDeepLinkLoggingEnabled;

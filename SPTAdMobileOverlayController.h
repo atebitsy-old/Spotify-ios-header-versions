@@ -14,7 +14,7 @@
 #import "SPTSlateDelegate-Protocol.h"
 #import "SPTSlateWireframeCustomPresentationDelegate-Protocol.h"
 
-@class NSString, NSTimer, SPTAdsFeatureProperties, SPTNavigationManager, SPTTheme;
+@class NSString, NSTimer, SPTAdOverlayImageContentViewController, SPTAdsFeatureProperties, SPTNavigationManager, SPTTheme;
 @protocol GLUEImageLoader, GLUETheme, SPTAdOverlayImageContentViewDataSource, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTAdsBaseRegistry, SPTAdsManager, SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTPlayer, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService;
 
 @interface SPTAdMobileOverlayController : NSObject <SPTAdOverlayContentUnitDelegate, SPTAdsBaseRegistryObserver, SPTSlateDataSource, SPTSlateDelegate, SPTSlateWireframeCustomPresentationDelegate, SPTBannerViewDelegate, SPTNavigationManagerDelegate>
@@ -42,9 +42,11 @@
     CDUnknownBlockType _contentUnitDismissalCompletionBlock;
     id <SPTBannerPresentationManagerTicket> _bannerTicket;
     double _inactivityThreshold;
+    SPTAdOverlayImageContentViewController *_contentUnit;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) __weak SPTAdOverlayImageContentViewController *contentUnit; // @synthesize contentUnit=_contentUnit;
 @property(nonatomic) _Bool shouldShowTopBanner; // @synthesize shouldShowTopBanner=_shouldShowTopBanner;
 @property(nonatomic) _Bool shouldForceDisplay; // @synthesize shouldForceDisplay=_shouldForceDisplay;
 @property(nonatomic) _Bool shouldAnimateSlate; // @synthesize shouldAnimateSlate=_shouldAnimateSlate;

@@ -36,7 +36,7 @@
 - (void)updateAdModeWithAdEntity:(id)arg1;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)dealloc;
-- (id)initWithAdManager:(id)arg1 adRegistry:(id)arg2 playerObserver:(id)arg3 theme:(id)arg4 adNowPlayingManager:(id)arg5 modeRegistry:(id)arg6 featureChecker:(id)arg7;
+- (id)initWithAdManager:(id)arg1 adRegistry:(id)arg2 playerObserver:(id)arg3 theme:(id)arg4 adNowPlayingManager:(id)arg5 modeRegistry:(id)arg6 featureChecker:(id)arg7 featureProperties:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileQueue_TopBar_CloseButtonEventFactory, SPTUBIMobileQueue_TopBar_PlaybackSourceLabelEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileQueue_TopBar_CloseButtonEventFactory, SPTUBIMobileQueue_TopBar_PlaybackSourceLabelEventFactory;
 
 @protocol SPTUBIMobileQueue_TopBarEventFactory <NSObject>
 - (id <SPTUBIMobileQueue_TopBar_PlaybackSourceLabelEventFactory>)playbackSourceLabelFactory;
 - (id <SPTUBIMobileQueue_TopBar_CloseButtonEventFactory>)closeButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

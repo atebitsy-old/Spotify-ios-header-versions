@@ -20,6 +20,7 @@
     // Error parsing type: , name: sessionService
     // Error parsing type: , name: snackbarService
     // Error parsing type: , name: uriDispatchService
+    // Error parsing type: , name: $__lazy_storage_$_logger
     // Error parsing type: , name: $__lazy_storage_$_offlineMixServiceClient
     // Error parsing type: , name: $__lazy_storage_$_offlineMixPlaylistDataLoader
     // Error parsing type: , name: $__lazy_storage_$_dialogManager

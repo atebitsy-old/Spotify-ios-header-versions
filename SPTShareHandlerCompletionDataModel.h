@@ -17,6 +17,7 @@
     NSString *_performedShareCapability;
 }
 
++ (id)completionDataModelWithSharingSDKData:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *performedShareCapability; // @synthesize performedShareCapability=_performedShareCapability;
 @property(copy, nonatomic) NSString *shareID; // @synthesize shareID=_shareID;

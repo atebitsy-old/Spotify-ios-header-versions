@@ -9,6 +9,7 @@
 @interface _TtC28NowPlayingEpisodeFeatureImpl30NowPlayingEpisodeDensityHelper : NSObject
 {
     // Error parsing type: , name: timeline
+    // Error parsing type: , name: screenWidth
 }
 
 - (void).cxx_destruct;

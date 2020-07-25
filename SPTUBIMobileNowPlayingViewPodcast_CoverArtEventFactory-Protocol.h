@@ -7,12 +7,12 @@
 #import "NSObject-Protocol.h"
 
 @class NSURL;
-@protocol SPTUBIEventFactoryLocation, SPTUBIInteractionEvent;
+@protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileNowPlayingViewPodcast_CoverArtEventFactory <NSObject>
 - (id <SPTUBIInteractionEvent>)swipeSkipToPreviousWithItemToBeSkipped:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)swipeSkipToNextWithItemToBeSkipped:(NSURL *)arg1;
 - (id <SPTUBIInteractionEvent>)hitUiElementToggle;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

@@ -8,6 +8,7 @@
 
 @interface _TtC20EncoreConsumerMobile19HeaderContentLayout : UIView
 {
+    // Error parsing type: , name: childComponents
     // Error parsing type: , name: onRemount
     // Error parsing type: , name: onProgress
     // Error parsing type: , name: onFullHeaderProgress

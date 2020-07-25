@@ -9,7 +9,7 @@
 #import "SPTLoginActionButtonsViewModel-Protocol.h"
 #import "SPTLoginThirdPartyLoginControllerDelegate-Protocol.h"
 
-@class NSArray, NSString, NSURL, SPTDynamicSignupFlowController, SPTLoginButtonActionHandler;
+@class NSArray, NSString, NSURL, SPTLoginButtonActionHandler;
 @protocol SPTLoginScreenViewLoggerProtocol, SPTLoginThirdPartyLoginHandlerDelegate;
 
 @interface SPTLoginActionPickerViewModel : NSObject <SPTLoginThirdPartyLoginControllerDelegate, SPTLoginActionButtonsViewModel>
@@ -18,7 +18,6 @@
     SPTLoginButtonActionHandler *_actionButtonHandler;
     id <SPTLoginThirdPartyLoginHandlerDelegate> _delegate;
     NSURL *_pageURI;
-    SPTDynamicSignupFlowController *_flowController;
     NSString *_headingText;
     id <SPTLoginScreenViewLoggerProtocol> _logger;
 }
@@ -26,7 +25,6 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLoginScreenViewLoggerProtocol> logger; // @synthesize logger=_logger;
 @property(readonly, nonatomic) NSString *headingText; // @synthesize headingText=_headingText;
-@property(readonly, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;
 @property(readonly, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(nonatomic) __weak id <SPTLoginThirdPartyLoginHandlerDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) SPTLoginButtonActionHandler *actionButtonHandler; // @synthesize actionButtonHandler=_actionButtonHandler;

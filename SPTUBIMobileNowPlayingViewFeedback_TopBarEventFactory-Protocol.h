@@ -6,12 +6,12 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobileNowPlayingViewFeedback_TopBar_CloseButtonEventFactory, SPTUBIMobileNowPlayingViewFeedback_TopBar_ContextMenuButtonEventFactory, SPTUBIMobileNowPlayingViewFeedback_TopBar_PlaybackSourceLabelEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobileNowPlayingViewFeedback_TopBar_CloseButtonEventFactory, SPTUBIMobileNowPlayingViewFeedback_TopBar_ContextMenuButtonEventFactory, SPTUBIMobileNowPlayingViewFeedback_TopBar_PlaybackSourceLabelEventFactory;
 
 @protocol SPTUBIMobileNowPlayingViewFeedback_TopBarEventFactory <NSObject>
 - (id <SPTUBIMobileNowPlayingViewFeedback_TopBar_ContextMenuButtonEventFactory>)contextMenuButtonFactory;
 - (id <SPTUBIMobileNowPlayingViewFeedback_TopBar_PlaybackSourceLabelEventFactory>)playbackSourceLabelFactory;
 - (id <SPTUBIMobileNowPlayingViewFeedback_TopBar_CloseButtonEventFactory>)closeButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

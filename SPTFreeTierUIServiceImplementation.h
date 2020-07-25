@@ -9,7 +9,7 @@
 #import "SPTFreeTierUIService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTFreeTierUIServiceComponentFactory, SPTGLUEService, SPTNetworkService, SPTSessionService, SPTUIPresentationService;
+@protocol SPTFreeTierUIComponentFactory, SPTGLUEService, SPTNetworkService, SPTSessionService, SPTUIPresentationService;
 
 @interface SPTFreeTierUIServiceImplementation : NSObject <SPTFreeTierUIService>
 {
@@ -17,17 +17,17 @@
     id <SPTNetworkService> _networkService;
     id <SPTUIPresentationService> _presentationService;
     id <SPTSessionService> _sessionService;
-    id <SPTFreeTierUIServiceComponentFactory> _componentFactory;
+    id <SPTFreeTierUIComponentFactory> _componentFactory;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTFreeTierUIServiceComponentFactory> componentFactory; // @synthesize componentFactory=_componentFactory;
+@property(retain, nonatomic) id <SPTFreeTierUIComponentFactory> componentFactory; // @synthesize componentFactory=_componentFactory;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-- (id)provideHubsComponentRegistry;
+- (id)provideComponentFactory;
 - (id)providePersistentCounterWithIdentifier:(id)arg1 viewURI:(id)arg2;
 - (void)unload;
 - (void)load;

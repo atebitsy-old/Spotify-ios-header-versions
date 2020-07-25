@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventFactoryLocation, SPTUBIMobilePlaylistAllSongs_Toolbar_CloseButtonEventFactory;
+@protocol SPTUBIEventLocation, SPTUBIMobilePlaylistAllSongs_Toolbar_CloseButtonEventFactory;
 
 @protocol SPTUBIMobilePlaylistAllSongs_ToolbarEventFactory <NSObject>
 - (id <SPTUBIMobilePlaylistAllSongs_Toolbar_CloseButtonEventFactory>)closeButtonFactory;
-- (id <SPTUBIEventFactoryLocation>)_location;
+- (id <SPTUBIEventLocation>)_location;
 @end
 

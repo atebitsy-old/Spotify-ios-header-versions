@@ -4,15 +4,15 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-@class UIViewController;
+@class NSURL, UIViewController;
 
 @protocol _TtP21OfflineMixFeatureImpl13DialogManager_
 @property(nonatomic, copy) CDUnknownBlockType closeNPVCallback;
-- (void)showGenericErrorMessageWithTryAgainBlock:(void (^)(void))arg1 cancelBlock:(void (^)(void))arg2;
+- (void)showGenericErrorMessageFor:(NSURL *)arg1 tryAgainBlock:(void (^)(void))arg2 cancelBlock:(void (^)(void))arg3;
 - (void)showTapToPlayTooltipFor:(UIViewController *)arg1;
 - (void)showDownloadedTracksLimitReachedPopup;
-- (void)showTrackDownloadRemovedSnackbar;
-- (void)showTrackDownloadCompletedSnackbar;
-- (void)showRemoveFromDownloadsConfirmationAlertWith:(void (^)(void))arg1;
+- (void)showTrackDownloadRemovedSnackbarFor:(NSURL *)arg1;
+- (void)showTrackDownloadCompletedSnackbarFor:(NSURL *)arg1;
+- (void)showRemoveFromDownloadsConfirmationAlertFor:(NSURL *)arg1 with:(void (^)(void))arg2;
 @end
 
