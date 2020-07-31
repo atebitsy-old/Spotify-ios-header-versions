@@ -23,13 +23,13 @@
 + (id)serializeURL:(id)arg1 params:(id)arg2 httpMethod:(id)arg3;
 + (id)serializeURL:(id)arg1 params:(id)arg2;
 + (_Bool)isAttachment:(id)arg1;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long flags; // @synthesize flags=_flags;
 @property(readonly, copy, nonatomic) NSString *version; // @synthesize version=_version;
 @property(readonly, copy, nonatomic) NSString *graphPath; // @synthesize graphPath=_graphPath;
 @property(readonly, copy, nonatomic) NSString *tokenString; // @synthesize tokenString=_tokenString;
 @property(copy, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
 @property(copy, nonatomic) NSString *HTTPMethod; // @synthesize HTTPMethod;
-- (void).cxx_destruct;
 - (id)description;
 - (id)startWithCompletionHandler:(CDUnknownBlockType)arg1;
 - (_Bool)hasAttachments;

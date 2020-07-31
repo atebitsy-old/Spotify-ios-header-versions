@@ -29,6 +29,7 @@
 - (_Bool)trackIsPlaying;
 - (_Bool)trackIsDisabled;
 - (_Bool)trackIsPremiumOnly;
+- (long long)restriction;
 - (id)createTrackRowModelFromHubsWithPressedState:(_Bool)arg1;
 - (void)unlikeWithSender:(id)arg1;
 - (void)unhideWithSender:(id)arg1;

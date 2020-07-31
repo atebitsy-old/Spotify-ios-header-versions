@@ -18,8 +18,8 @@
 
 + (_Bool)supportsSecureCoding;
 + (id)hashtagWithString:(id)arg1;
-@property(copy, nonatomic) NSString *stringRepresentation; // @synthesize stringRepresentation=_stringRepresentation;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *stringRepresentation; // @synthesize stringRepresentation=_stringRepresentation;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

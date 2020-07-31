@@ -16,6 +16,7 @@
     // Error parsing type: , name: coverArtColor
     // Error parsing type: , name: isPlaying
     // Error parsing type: , name: isPlayable
+    // Error parsing type: , name: isBanned
     // Error parsing type: , name: isFollowed
     // Error parsing type: , name: minimumHeight
     // Error parsing type: , name: fullHeight
@@ -25,10 +26,11 @@
 - (id)init;
 @property(nonatomic, readonly) long long hash;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithName:(id)arg1 monthlyListeners:(id)arg2 coverArtImage:(id)arg3 coverArtColor:(id)arg4 isPlaying:(_Bool)arg5 isPlayable:(_Bool)arg6 isFollowed:(_Bool)arg7 minimumHeight:(double)arg8 fullHeight:(double)arg9;
+- (id)initWithName:(id)arg1 monthlyListeners:(id)arg2 coverArtImage:(id)arg3 coverArtColor:(id)arg4 isPlaying:(_Bool)arg5 isPlayable:(_Bool)arg6 isBanned:(_Bool)arg7 isFollowed:(_Bool)arg8 minimumHeight:(double)arg9 fullHeight:(double)arg10;
 @property(nonatomic, readonly) double fullHeight; // @synthesize fullHeight;
 @property(nonatomic, readonly) double minimumHeight; // @synthesize minimumHeight;
 @property(nonatomic, readonly) _Bool isFollowed; // @synthesize isFollowed;
+@property(nonatomic, readonly) _Bool isBanned; // @synthesize isBanned;
 @property(nonatomic, readonly) _Bool isPlayable; // @synthesize isPlayable;
 @property(nonatomic, readonly) _Bool isPlaying; // @synthesize isPlaying;
 @property(nonatomic, readonly) UIColor *coverArtColor; // @synthesize coverArtColor;

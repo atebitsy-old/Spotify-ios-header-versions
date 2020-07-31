@@ -6,13 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastEpisodeFactory-Protocol.h"
-
-@interface _TtC21PodcastDALFeatureImpl35PodcastEpisodeFactoryImplementation : NSObject <SPTPodcastEpisodeFactory>
+@interface _TtC21PodcastDALFeatureImpl35PodcastEpisodeFactoryImplementation : NSObject
 {
 }
 
 - (id)init;
+- (id)podcastEpisodeWithProtobufData:(id)arg1 responseType:(unsigned long long)arg2 podcast:(id)arg3;
 - (id)podcastEpisodeWithDictionary:(id)arg1 podcast:(id)arg2;
 
 @end

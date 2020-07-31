@@ -6,10 +6,12 @@
 
 #import <UIKit/UIApplication.h>
 
-@class NSHashTable;
+#import "SPTSpotifyApplication-Protocol.h"
+
+@class NSHashTable, NSString;
 @protocol SpotifyApplicationRemoteControlDelegate;
 
-@interface SpotifyApplication : UIApplication
+@interface SpotifyApplication : UIApplication <SPTSpotifyApplication>
 {
     id <SpotifyApplicationRemoteControlDelegate> _remoteControlDelegate;
     NSHashTable *_observers;
@@ -23,6 +25,12 @@
 - (void)addRemoteControlObserver:(id)arg1;
 - (_Bool)handleRemoteControlEventOfSubtype:(long long)arg1;
 - (void)remoteControlReceivedWithEvent:(id)arg1;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

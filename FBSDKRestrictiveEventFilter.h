@@ -11,13 +11,13 @@
 @interface FBSDKRestrictiveEventFilter : NSObject
 {
     NSString *_eventName;
-    NSDictionary *_eventParams;
+    NSDictionary *_restrictiveParams;
 }
 
-@property(readonly, copy, nonatomic) NSDictionary *eventParams; // @synthesize eventParams=_eventParams;
-@property(readonly, copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
 - (void).cxx_destruct;
-- (id)initWithEventName:(id)arg1 eventParams:(id)arg2;
+@property(readonly, copy, nonatomic) NSDictionary *restrictiveParams; // @synthesize restrictiveParams=_restrictiveParams;
+@property(readonly, copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
+- (id)initWithEventName:(id)arg1 restrictiveParams:(id)arg2;
 
 @end
 

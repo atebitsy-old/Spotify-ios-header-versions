@@ -6,21 +6,21 @@
 
 #import <objc/NSObject.h>
 
-#import "FBSDKSharingDelegate-Protocol.h"
+#import "SPTSharingSDKShareDialogPresenter-Protocol.h"
 
-@class NSString;
+@class NSString, SPTShareFBSDKShareDialogWrapper, UIViewController;
 
-@interface SPTShareFacebookDialogPresenter : NSObject <FBSDKSharingDelegate>
+@interface SPTShareFacebookDialogPresenter : NSObject <SPTSharingSDKShareDialogPresenter>
 {
-    CDUnknownBlockType _completionHandler;
+    UIViewController *_contextViewController;
+    SPTShareFBSDKShareDialogWrapper *_facebookDialogWrapper;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) CDUnknownBlockType completionHandler; // @synthesize completionHandler=_completionHandler;
-- (void)sharerDidCancel:(id)arg1;
-- (void)sharer:(id)arg1 didFailWithError:(id)arg2;
-- (void)sharer:(id)arg1 didCompleteWithResults:(id)arg2;
-- (void)shareFromViewController:(id)arg1 withContent:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+@property(readonly, nonatomic) SPTShareFBSDKShareDialogWrapper *facebookDialogWrapper; // @synthesize facebookDialogWrapper=_facebookDialogWrapper;
+@property(readonly, nonatomic) __weak UIViewController *contextViewController; // @synthesize contextViewController=_contextViewController;
+- (void)presentShareDialogWithShareableData:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (id)initWithContextViewController:(id)arg1 facebookDialogWrapper:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

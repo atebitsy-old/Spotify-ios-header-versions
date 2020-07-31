@@ -6,21 +6,40 @@
 
 #import <objc/NSObject.h>
 
-@protocol SPTHubLogger, SPTUBIMobileArtistPageEventFactory;
+#import "SPTFreeTierArtistContextMenuButtonViewModelLogger-Protocol.h"
+#import "SPTFreeTierArtistFeedbackButtonViewModelLogger-Protocol.h"
+#import "SPTFreeTierEntityPlaybackToggleCommandHandlerLogger-Protocol.h"
+#import "SPTFreeTierEntityViewControllerLogger-Protocol.h"
+#import "VISREFBackButtonUBILogger-Protocol.h"
 
-@interface SPTFreeTierArtistUBILogger : NSObject
+@class NSString;
+@protocol SPTUBILogger, SPTUBIMobileArtistPageEventFactory;
+
+@interface SPTFreeTierArtistUBILogger : NSObject <SPTFreeTierArtistContextMenuButtonViewModelLogger, SPTFreeTierArtistFeedbackButtonViewModelLogger, SPTFreeTierEntityPlaybackToggleCommandHandlerLogger, SPTFreeTierEntityViewControllerLogger, VISREFBackButtonUBILogger>
 {
-    id <SPTHubLogger> _logger;
+    id <SPTUBILogger> _logger;
     id <SPTUBIMobileArtistPageEventFactory> _eventFactory;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTUBIMobileArtistPageEventFactory> eventFactory; // @synthesize eventFactory=_eventFactory;
-@property(readonly, nonatomic) id <SPTHubLogger> logger; // @synthesize logger=_logger;
-- (void)logSwipeRightAddToQueueWithIdentifier:(id)arg1 position:(long long)arg2 targetURI:(id)arg3;
-- (void)logSwipeLeftDislikeWithIdentifier:(id)arg1 position:(long long)arg2 targetURI:(id)arg3;
-- (void)logSwipeLeftLikeWithIdentifier:(id)arg1 position:(long long)arg2 targetURI:(id)arg3;
+@property(readonly, nonatomic) id <SPTUBILogger> logger; // @synthesize logger=_logger;
+- (void)logHitPauseItem:(id)arg1;
+- (void)logHitShufflePlayContext:(id)arg1;
+- (void)logHitBack;
+- (void)logHitContextMenu;
+- (void)logHitUnfollowForURI:(id)arg1;
+- (void)logHitFollowForURI:(id)arg1;
+- (void)logSwipeRightAddToQueueWithPosition:(long long)arg1 targetURI:(id)arg2;
+- (void)logSwipeLeftRemoveLikeWithPosition:(long long)arg1 targetURI:(id)arg2;
+- (void)logSwipeLeftLikeWithPosition:(long long)arg1 targetURI:(id)arg2;
 - (id)initWithLogger:(id)arg1 eventFactory:(id)arg2;
+
+// Remaining properties
+@property(readonly, copy) NSString *debugDescription;
+@property(readonly, copy) NSString *description;
+@property(readonly) unsigned long long hash;
+@property(readonly) Class superclass;
 
 @end
 

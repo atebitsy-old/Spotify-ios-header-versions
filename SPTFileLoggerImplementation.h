@@ -18,16 +18,13 @@
     NSURL *_logFilePathURL;
 }
 
-+ (id)defaultLogPathURL;
-+ (id)applicationLogsDirectory;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSURL *logFilePathURL; // @synthesize logFilePathURL=_logFilePathURL;
 @property(retain, nonatomic) NSObject<OS_dispatch_io> *fileSource; // @synthesize fileSource=_fileSource;
 - (void)writeToFileContentOfBuffer:(const char *)arg1 length:(int)arg2;
-- (id)logsList;
+- (id)currentLogFolder;
 - (id)currentLogFilePath;
 - (_Bool)startLogging;
-- (id)initWithDefaultLogPathURL;
 - (id)initWithLogPathURL:(id)arg1;
 
 // Remaining properties

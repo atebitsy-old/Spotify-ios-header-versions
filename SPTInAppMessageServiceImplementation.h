@@ -166,8 +166,6 @@
 - (id)createMessageReceiver;
 - (id)createInAppMessageManager;
 - (void)setupFeatureComponents;
-- (void)unregisterTriggerHTTPHost;
-- (void)registerTriggerHTTPHost;
 - (void)removeNFTTransitionKey;
 - (void)unload;
 - (void)load;

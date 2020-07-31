@@ -22,6 +22,7 @@
     NSDate *_refreshDate;
     NSString *_tokenString;
     NSString *_userID;
+    NSString *_graphDomain;
 }
 
 + (_Bool)supportsSecureCoding;
@@ -29,6 +30,8 @@
 + (_Bool)isCurrentAccessTokenActive;
 + (void)setCurrentAccessToken:(id)arg1;
 + (id)currentAccessToken;
+- (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *graphDomain; // @synthesize graphDomain=_graphDomain;
 @property(readonly, copy, nonatomic) NSString *userID; // @synthesize userID=_userID;
 @property(readonly, copy, nonatomic) NSString *tokenString; // @synthesize tokenString=_tokenString;
 @property(readonly, copy, nonatomic) NSDate *refreshDate; // @synthesize refreshDate=_refreshDate;
@@ -38,7 +41,6 @@
 @property(readonly, copy, nonatomic) NSSet *declinedPermissions; // @synthesize declinedPermissions=_declinedPermissions;
 @property(readonly, copy, nonatomic) NSDate *dataAccessExpirationDate; // @synthesize dataAccessExpirationDate=_dataAccessExpirationDate;
 @property(readonly, copy, nonatomic) NSString *appID; // @synthesize appID=_appID;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (id)copyWithZone:(struct _NSZone *)arg1;
@@ -48,6 +50,7 @@
 @property(readonly, nonatomic, getter=isExpired) _Bool expired;
 @property(readonly, nonatomic, getter=isDataAccessExpired) _Bool dataAccessExpired;
 - (_Bool)hasGranted:(id)arg1;
+- (id)initWithTokenString:(id)arg1 permissions:(id)arg2 declinedPermissions:(id)arg3 expiredPermissions:(id)arg4 appID:(id)arg5 userID:(id)arg6 expirationDate:(id)arg7 refreshDate:(id)arg8 dataAccessExpirationDate:(id)arg9 graphDomain:(id)arg10;
 - (id)initWithTokenString:(id)arg1 permissions:(id)arg2 declinedPermissions:(id)arg3 expiredPermissions:(id)arg4 appID:(id)arg5 userID:(id)arg6 expirationDate:(id)arg7 refreshDate:(id)arg8 dataAccessExpirationDate:(id)arg9;
 
 // Remaining properties

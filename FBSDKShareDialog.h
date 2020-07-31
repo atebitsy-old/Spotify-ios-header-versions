@@ -26,12 +26,12 @@
 + (id)showFromViewController:(id)arg1 withContent:(id)arg2 delegate:(id)arg3;
 + (id)dialogWithViewController:(id)arg1 withContent:(id)arg2 delegate:(id)arg3;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long mode; // @synthesize mode=_mode;
 @property(nonatomic) __weak UIViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
 @property(nonatomic) _Bool shouldFailOnDataError; // @synthesize shouldFailOnDataError=_shouldFailOnDataError;
 @property(copy, nonatomic) id <FBSDKSharingContent> shareContent; // @synthesize shareContent=_shareContent;
 @property(nonatomic) __weak id <FBSDKSharingDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (id)_calculateInitialText;
 - (void)_logDialogShow;
 - (void)_invokeDelegateDidFailWithError:(id)arg1;
@@ -68,7 +68,6 @@
 - (_Bool)_canShowNative;
 - (void)_loadNativeMethodName:(id *)arg1 methodVersion:(id *)arg2;
 - (_Bool)_showAutomatic:(id *)arg1;
-- (_Bool)_isOpenGraphURLShare:(id)arg1;
 - (_Bool)_isDefaultToShareSheet;
 - (void)webDialogDidCancel:(id)arg1;
 - (void)webDialog:(id)arg1 didFailWithError:(id)arg2;

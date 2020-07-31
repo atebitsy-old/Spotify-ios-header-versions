@@ -8,13 +8,49 @@
 
 #import "SPTSearchPlatformResponseParser-Protocol.h"
 
-@class NSString;
+@class HUBViewModelBuilderFactory, NSString;
+@protocol SPTExplicitContentAccessManager, SPTSearch2EmptyStatePropertiesProvider, _TtP22AgeVerificationFeature26SPTAgeVerificationProvider_;
 
 @interface SPTSearchAssistedCurationResponseParser : NSObject <SPTSearchPlatformResponseParser>
 {
+    _Bool _isDrilldown;
+    NSString *_query;
+    HUBViewModelBuilderFactory *_viewModelBuilderFactory;
+    id <SPTSearch2EmptyStatePropertiesProvider> _emptyStatePropertiesProvider;
+    id <SPTExplicitContentAccessManager> _explicitContentAccessManager;
+    id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> _ageVerificationProvider;
 }
 
+- (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool isDrilldown; // @synthesize isDrilldown=_isDrilldown;
+@property(readonly, nonatomic) id <_TtP22AgeVerificationFeature26SPTAgeVerificationProvider_> ageVerificationProvider; // @synthesize ageVerificationProvider=_ageVerificationProvider;
+@property(readonly, nonatomic) id <SPTExplicitContentAccessManager> explicitContentAccessManager; // @synthesize explicitContentAccessManager=_explicitContentAccessManager;
+@property(readonly, nonatomic) id <SPTSearch2EmptyStatePropertiesProvider> emptyStatePropertiesProvider; // @synthesize emptyStatePropertiesProvider=_emptyStatePropertiesProvider;
+@property(readonly, nonatomic) HUBViewModelBuilderFactory *viewModelBuilderFactory; // @synthesize viewModelBuilderFactory=_viewModelBuilderFactory;
+@property(readonly, copy, nonatomic) NSString *query; // @synthesize query=_query;
+- (id)emptyStateProperties;
+- (id)renderableEntitiesPredicate;
+- (id)componentModelIdentifierWithSectionID:(id)arg1 itemIndex:(id)arg2;
+- (id)seeAllRowsFromEntityTypes:(id)arg1 requestID:(id)arg2;
+- (id)artistsForTrackEntity:(id)arg1;
+- (id)artistsForAlbumEntity:(id)arg1;
+- (long long)placeholderSPTIconForEntity:(id)arg1;
+- (id)placeholderIconForEntity:(id)arg1;
+- (id)navigateCommandWithURI:(id)arg1;
+- (id)navigateAndSaveToHistoryCommandForEntity:(id)arg1;
+- (id)addTrackCommandWithURI:(id)arg1;
+- (id)eventsForEntity:(id)arg1;
+- (id)customDataForEntity:(id)arg1;
+- (id)metadataForEntity:(id)arg1;
+- (id)mainImageDataForEntity:(id)arg1;
+- (id)subtitleForEntity:(id)arg1;
+- (id)rowsForEntities:(id)arg1 requestID:(id)arg2 sectionID:(id)arg3;
+- (id)resultsViewModelForMainResponse:(id)arg1 requestID:(id)arg2;
+- (id)noResultsViewModelWithRequestID:(id)arg1;
+- (id)viewModelForMainResponse:(id)arg1 requestID:(id)arg2;
+- (id)parseMainResponse:(id)arg1 requestID:(id)arg2 error:(id *)arg3;
 - (id)parse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
+- (id)initWithQuery:(id)arg1 viewModelBuilderFactory:(id)arg2 emptyStatePropertiesProvider:(id)arg3 explicitContentAccessManager:(id)arg4 ageVerificationProvider:(id)arg5 isDrilldown:(_Bool)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

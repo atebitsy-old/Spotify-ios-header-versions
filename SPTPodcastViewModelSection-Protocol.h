@@ -6,14 +6,14 @@
 
 #import "NSObject-Protocol.h"
 
-@class SPTPodcast, UIView;
-@protocol SPTPodcastPlayer;
+@class UIView;
+@protocol SPTPodcast, SPTPodcastPlayer;
 
 @protocol SPTPodcastViewModelSection <NSObject>
 @property(readonly, nonatomic) double headerHeight;
 - (long long)identifier;
 - (void)updateWithPodcastPlayer:(id <SPTPodcastPlayer>)arg1;
-- (void)updateWithPodcast:(SPTPodcast *)arg1;
+- (void)updateWithPodcast:(id <SPTPodcast>)arg1;
 - (UIView *)header;
 - (unsigned long long)numberOfRows;
 @end

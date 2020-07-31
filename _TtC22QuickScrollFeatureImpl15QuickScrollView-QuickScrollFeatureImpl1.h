@@ -7,6 +7,7 @@
 #import "_TtC22QuickScrollFeatureImpl15QuickScrollView.h"
 
 @interface _TtC22QuickScrollFeatureImpl15QuickScrollView (QuickScrollFeatureImpl1)
+- (void)invalidateTitle;
 - (void)reset;
 - (void)attachScrollView:(id)arg1;
 @property(nonatomic) _Bool isActive;

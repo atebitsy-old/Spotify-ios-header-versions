@@ -9,17 +9,20 @@
 #import "SPTYourLibraryTestManager-Protocol.h"
 
 @class NSString;
-@protocol _TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_;
+@protocol _TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_, _TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_;
 
 @interface SPTYourLibraryTestManagerImplementation : NSObject <SPTYourLibraryTestManager>
 {
     id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_> _yourLibraryXTestManager;
+    id <_TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_> _yourLibraryBetaTestManager;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <_TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_> yourLibraryBetaTestManager; // @synthesize yourLibraryBetaTestManager=_yourLibraryBetaTestManager;
 @property(readonly, nonatomic) id <_TtP19YourLibraryXFeature26SPTYourLibraryXTestManager_> yourLibraryXTestManager; // @synthesize yourLibraryXTestManager=_yourLibraryXTestManager;
+@property(readonly, nonatomic, getter=isYourLibraryBetaEnabled) _Bool yourLibraryBetaEnabled;
 @property(readonly, nonatomic, getter=isYourLibraryXEnabled) _Bool yourLibraryXEnabled;
-- (id)initWithYourLibraryXTestManager:(id)arg1;
+- (id)initWithYourLibraryXTestManager:(id)arg1 yourLibraryBetaTestManager:(id)arg2;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

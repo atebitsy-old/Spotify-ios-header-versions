@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class FBSDKShareVideo, NSDictionary, NSNumber, NSNumberFormatter, NSString;
+@class NSDictionary, NSNumber, NSNumberFormatter, NSString;
 @protocol FBSDKVideoUploaderDelegate;
 
 @interface FBSDKVideoUploader : NSObject
@@ -17,17 +17,15 @@
     NSString *_graphPath;
     NSString *_videoName;
     unsigned long long _videoSize;
-    FBSDKShareVideo *_video;
     NSDictionary *_parameters;
     NSString *_graphNode;
     id <FBSDKVideoUploaderDelegate> _delegate;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) __weak id <FBSDKVideoUploaderDelegate> delegate; // @synthesize delegate=_delegate;
 @property(copy, nonatomic) NSString *graphNode; // @synthesize graphNode=_graphNode;
 @property(copy, nonatomic) NSDictionary *parameters; // @synthesize parameters=_parameters;
-@property(readonly, copy, nonatomic) FBSDKShareVideo *video; // @synthesize video=_video;
-- (void).cxx_destruct;
 - (id)_graphPathWithSuffix:(id)arg1;
 - (id)numberFormatter;
 - (id)_extractOffsetsFromResultDictionary:(id)arg1;

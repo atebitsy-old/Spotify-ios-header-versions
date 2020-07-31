@@ -9,7 +9,7 @@
 #import "SPTRecoverAccountService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTRecoverAccountURIHandler;
-@protocol SPTContainerService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTLoginSessionScopeServicesLoaderProviderService, SPTPreSignupExperimentationService, SPTURIDispatchService;
+@protocol SPTAuthLoginOptionsUtilsService, SPTContainerService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTLoginSessionScopeServicesLoaderProviderService, SPTPreSignupExperimentationService, SPTURIDispatchService;
 
 @interface SPTRecoverAccountServiceImplementation : NSObject <SPTRecoverAccountService>
 {
@@ -20,6 +20,7 @@
     id <SPTLoginSessionScopeServicesLoaderProviderService> _sessionScopeServicesLoaderProviderService;
     id <SPTPreSignupExperimentationService> _experimentationService;
     id <SPTLoginLoggingService> _loggerService;
+    id <SPTAuthLoginOptionsUtilsService> _authUtilsService;
     SPTRecoverAccountURIHandler *_recoverAccountURIHandler;
     NSString *_usernameOrEmail;
 }
@@ -28,6 +29,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *usernameOrEmail; // @synthesize usernameOrEmail=_usernameOrEmail;
 @property(retain, nonatomic) SPTRecoverAccountURIHandler *recoverAccountURIHandler; // @synthesize recoverAccountURIHandler=_recoverAccountURIHandler;
+@property(nonatomic) __weak id <SPTAuthLoginOptionsUtilsService> authUtilsService; // @synthesize authUtilsService=_authUtilsService;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;
 @property(nonatomic) __weak id <SPTPreSignupExperimentationService> experimentationService; // @synthesize experimentationService=_experimentationService;
 @property(nonatomic) __weak id <SPTLoginSessionScopeServicesLoaderProviderService> sessionScopeServicesLoaderProviderService; // @synthesize sessionScopeServicesLoaderProviderService=_sessionScopeServicesLoaderProviderService;

@@ -19,7 +19,7 @@
     id <SPTOfflineModeState> _offlineModeState;
     id <SPTShareDragDelegateFactory> _shareDragDelegateFactory;
     SPTHomeViewModelLoaderFactory *_viewModelLoaderFactory;
-    SPTHomeFeatureProperties *_remoteConfigProperties;
+    SPTHomeFeatureProperties *_homeFeatureProperties;
     SPTHomeLocalViewModelOverrides *_localViewModelOverrides;
     SPTHomeDebugger *_homeDebugger;
 }
@@ -27,7 +27,7 @@
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTHomeDebugger *homeDebugger; // @synthesize homeDebugger=_homeDebugger;
 @property(readonly, nonatomic) SPTHomeLocalViewModelOverrides *localViewModelOverrides; // @synthesize localViewModelOverrides=_localViewModelOverrides;
-@property(readonly, nonatomic) SPTHomeFeatureProperties *remoteConfigProperties; // @synthesize remoteConfigProperties=_remoteConfigProperties;
+@property(readonly, nonatomic) SPTHomeFeatureProperties *homeFeatureProperties; // @synthesize homeFeatureProperties=_homeFeatureProperties;
 @property(readonly, nonatomic) SPTHomeViewModelLoaderFactory *viewModelLoaderFactory; // @synthesize viewModelLoaderFactory=_viewModelLoaderFactory;
 @property(readonly, nonatomic) id <SPTShareDragDelegateFactory> shareDragDelegateFactory; // @synthesize shareDragDelegateFactory=_shareDragDelegateFactory;
 @property(readonly, nonatomic) id <SPTOfflineModeState> offlineModeState; // @synthesize offlineModeState=_offlineModeState;
@@ -39,7 +39,7 @@
 - (id)makeCommandDispatcherWithURL:(id)arg1 referrerIdentifier:(id)arg2 hubLogger:(id)arg3 viewModelProvider:(id)arg4 overrides:(id)arg5;
 - (id)makeViewModelProviderForSourceIdentifier:(id)arg1 overrides:(id)arg2;
 - (id)provideHubViewControllerForURL:(id)arg1 initialViewModel:(id)arg2 referrerIdentifier:(id)arg3 viewLogger:(id)arg4;
-- (id)initWithHomeHubProvider:(id)arg1 endpointFactory:(id)arg2 homeCommandHandlerFactory:(id)arg3 GLUETheme:(id)arg4 offlineModeState:(id)arg5 shareDragDelegateFactory:(id)arg6 viewModelLoaderFactory:(id)arg7 remoteConfigProperties:(id)arg8 sourceIdentifier:(id)arg9 homeDebugger:(id)arg10;
+- (id)initWithHomeHubProvider:(id)arg1 endpointFactory:(id)arg2 homeCommandHandlerFactory:(id)arg3 GLUETheme:(id)arg4 offlineModeState:(id)arg5 shareDragDelegateFactory:(id)arg6 viewModelLoaderFactory:(id)arg7 homeFeatureProperties:(id)arg8 sourceIdentifier:(id)arg9 homeDebugger:(id)arg10;
 
 @end
 

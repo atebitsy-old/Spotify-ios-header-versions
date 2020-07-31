@@ -30,7 +30,6 @@
     // Error parsing type: , name: contentViewController
     // Error parsing type: , name: containerViewController
     // Error parsing type: , name: viewLoadingLogger
-    // Error parsing type: , name: supportsRouting
 }
 
 - (void).cxx_destruct;

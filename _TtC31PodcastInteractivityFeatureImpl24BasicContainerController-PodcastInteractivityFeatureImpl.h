@@ -7,6 +7,9 @@
 #import "_TtC31PodcastInteractivityFeatureImpl24BasicContainerController.h"
 
 @interface _TtC31PodcastInteractivityFeatureImpl24BasicContainerController (PodcastInteractivityFeatureImpl)
-- (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
+- (void)viewDidDisappear:(_Bool)arg1;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 @end
 

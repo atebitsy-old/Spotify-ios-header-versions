@@ -53,6 +53,8 @@
 - (void)replyWithOfflineRecommendationsForMessage:(id)arg1 reply:(CDUnknownBlockType)arg2;
 - (void)resolveChildContentOfParentURI:(id)arg1 getChildrenMessage:(id)arg2 reply:(CDUnknownBlockType)arg3;
 - (void)replyToMessage:(id)arg1 reply:(CDUnknownBlockType)arg2 items:(id)arg3 error:(id)arg4;
+- (id)getCustomSpacesIdForConnectedAccessory;
+- (_Bool)connectedAccessoryRequiresCustomSpaces;
 - (void)handleGetCrossfadeStateCallMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;
 - (void)handleLogMessage:(id)arg1;
 - (void)handleQueueUriMessage:(id)arg1 andReply:(CDUnknownBlockType)arg2;

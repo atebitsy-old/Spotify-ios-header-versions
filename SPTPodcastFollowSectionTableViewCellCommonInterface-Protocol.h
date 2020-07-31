@@ -7,8 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class GLUEContextMenuAccessoryButton;
+@protocol SPTPodcastNewFollowTableViewCellDelegate;
 
 @protocol SPTPodcastFollowSectionTableViewCellCommonInterface <NSObject>
+@property(nonatomic) __weak id <SPTPodcastNewFollowTableViewCellDelegate> followDelegate;
 @property(readonly, nonatomic) GLUEContextMenuAccessoryButton *contextMenuButton;
 @end
 

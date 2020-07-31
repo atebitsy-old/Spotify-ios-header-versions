@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldCollectionAlbumTracksCount <SPTCollectionPlatformDataLoaderField>
-@property(readonly, nonatomic) unsigned long long collectionAlbumTracksCount;
+@property(nonatomic, readonly) unsigned long long collectionAlbumTracksCount;
 @end
 

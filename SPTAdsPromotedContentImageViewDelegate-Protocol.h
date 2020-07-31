@@ -9,6 +9,7 @@
 @class UIImage;
 
 @protocol SPTAdsPromotedContentImageViewDelegate <NSObject>
+- (void)didFailToLoadImage;
 - (void)didLoadContentImage:(UIImage *)arg1;
 @end
 

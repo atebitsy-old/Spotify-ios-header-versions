@@ -15,7 +15,10 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
-- (id)entityDataFromShareData:(id)arg1 fallbackURL:(id)arg2;
+- (id)utmMediumForDestinationID:(long long)arg1;
+- (id)utmSourceForDestinationID:(long long)arg1;
+- (id)utmTagForShareForDestinationID:(long long)arg1;
+- (id)entityDataFromShareData:(id)arg1 fallbackURL:(id)arg2 destinationID:(long long)arg3;
 - (id)sharingSKDDestinationForDestinationID:(long long)arg1;
 - (id)initWithSharingSDK:(id)arg1;
 

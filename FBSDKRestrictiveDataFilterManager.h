@@ -10,10 +10,11 @@
 {
 }
 
++ (_Bool)isRestrictedEvent:(id)arg1;
 + (_Bool)isMatchedWithPattern:(id)arg1 text:(id)arg2;
-+ (id)processParameters:(id)arg1 eventName:(id)arg2;
++ (void)enable;
 + (void)processEvents:(id)arg1;
-+ (_Bool)isDeprecatedEvent:(id)arg1;
++ (id)processParameters:(id)arg1 eventName:(id)arg2;
 + (id)getMatchedDataTypeWithEventName:(id)arg1 paramKey:(id)arg2;
 + (void)updateFilters:(id)arg1;
 

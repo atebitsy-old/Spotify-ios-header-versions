@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldAlbumIsComplete <SPTCollectionPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool isComplete;
+@property(nonatomic, readonly) _Bool isComplete;
 @end
 

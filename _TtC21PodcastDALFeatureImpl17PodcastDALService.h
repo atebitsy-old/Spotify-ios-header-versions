@@ -19,7 +19,6 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
-- (id)providePodcastEpisodeDataParserWithFactory:(id)arg1;
 - (id)providePodcastRequestFactory;
 - (id)provideDataLoader;
 - (id)providePodcastEntityDataLoader;

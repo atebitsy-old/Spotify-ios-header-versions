@@ -26,12 +26,12 @@
 + (id)photoWithPhotoAsset:(id)arg1 userGenerated:(_Bool)arg2;
 + (id)photoWithImageURL:(id)arg1 userGenerated:(_Bool)arg2;
 + (id)photoWithImage:(id)arg1 userGenerated:(_Bool)arg2;
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *caption; // @synthesize caption=_caption;
 @property(nonatomic, getter=isUserGenerated) _Bool userGenerated; // @synthesize userGenerated=_userGenerated;
 @property(copy, nonatomic) PHAsset *photoAsset; // @synthesize photoAsset=_photoAsset;
 @property(copy, nonatomic) NSURL *imageURL; // @synthesize imageURL=_imageURL;
 @property(retain, nonatomic) UIImage *image; // @synthesize image=_image;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

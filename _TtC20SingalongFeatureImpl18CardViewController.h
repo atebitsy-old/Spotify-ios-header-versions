@@ -8,12 +8,14 @@
 
 @interface _TtC20SingalongFeatureImpl18CardViewController : UIViewController
 {
-    // Error parsing type: , name: lyricsDependencies
     // Error parsing type: , name: loopController
+    // Error parsing type: , name: lyricsDependencies
+    // Error parsing type: , name: lyricsViewController
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)loadView;
 - (id)initWithCoder:(id)arg1;
 
 @end

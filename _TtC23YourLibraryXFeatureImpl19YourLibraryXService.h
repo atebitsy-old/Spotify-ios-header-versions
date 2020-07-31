@@ -22,6 +22,8 @@
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: sortingFilteringService
     // Error parsing type: , name: uiPresentationService
+    // Error parsing type: , name: quickScrollService
+    // Error parsing type: , name: yourLibraryBetaService
     // Error parsing type: , name: yourLibraryXPageToken
     // Error parsing type: , name: testManager
     // Error parsing type: , name: contentFilterItemLoader

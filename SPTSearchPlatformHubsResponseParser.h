@@ -8,12 +8,11 @@
 
 #import "SPTSearchPlatformResponseParser-Protocol.h"
 
-@class HUBViewModelBuilderFactory, NSString, NSURL;
+@class HUBViewModelBuilderFactory, NSString;
 @protocol HUBContentOperation, SPTSearchViewModelPatching;
 
 @interface SPTSearchPlatformHubsResponseParser : NSObject <SPTSearchPlatformResponseParser>
 {
-    NSURL *_pageURI;
     HUBViewModelBuilderFactory *_viewModelBuilderFactory;
     id <HUBContentOperation> _hubs2MigrationContentOperation;
     id <SPTSearchViewModelPatching> _patcher;
@@ -23,9 +22,8 @@
 @property(readonly, nonatomic) id <SPTSearchViewModelPatching> patcher; // @synthesize patcher=_patcher;
 @property(readonly, nonatomic) id <HUBContentOperation> hubs2MigrationContentOperation; // @synthesize hubs2MigrationContentOperation=_hubs2MigrationContentOperation;
 @property(readonly, nonatomic) HUBViewModelBuilderFactory *viewModelBuilderFactory; // @synthesize viewModelBuilderFactory=_viewModelBuilderFactory;
-@property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 - (id)parse:(id)arg1 requestID:(id)arg2 offset:(unsigned long long)arg3 error:(id *)arg4;
-- (id)initWithPageURI:(id)arg1 viewModelBuilderFactory:(id)arg2 hubs2MigrationContentOperation:(id)arg3 patcher:(id)arg4;
+- (id)initWithViewModelBuilderFactory:(id)arg1 hubs2MigrationContentOperation:(id)arg2 patcher:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

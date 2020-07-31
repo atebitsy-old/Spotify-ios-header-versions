@@ -6,13 +6,8 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString;
-
 @protocol SPTInAppMessageCardMessageWebViewContentDelegate <NSObject>
 - (void)dismissCardMessageOverlayContentUnit;
 - (_Bool)present;
-
-@optional
-- (void)actionReceivedWithValue:(NSString *)arg1;
 @end
 

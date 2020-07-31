@@ -6,11 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL;
+@class NSURL;
 @protocol SPTUBIEventLocation, SPTUBIMobileArtistPage_PopularReleases_Rows_ReleaseEventFactory;
 
 @protocol SPTUBIMobileArtistPage_PopularReleases_RowsEventFactory <NSObject>
-- (id <SPTUBIMobileArtistPage_PopularReleases_Rows_ReleaseEventFactory>)releaseFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2 uri:(NSURL *)arg3;
+- (id <SPTUBIMobileArtistPage_PopularReleases_Rows_ReleaseEventFactory>)releaseFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIEventLocation>)_location;
 @end
 

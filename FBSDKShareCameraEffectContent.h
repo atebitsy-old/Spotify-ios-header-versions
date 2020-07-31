@@ -26,6 +26,7 @@
 }
 
 + (_Bool)supportsSecureCoding;
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *shareUUID; // @synthesize shareUUID=_shareUUID;
 @property(copy, nonatomic) NSString *pageID; // @synthesize pageID=_pageID;
 @property(copy, nonatomic) NSString *ref; // @synthesize ref=_ref;
@@ -36,7 +37,6 @@
 @property(copy, nonatomic) FBSDKCameraEffectTextures *effectTextures; // @synthesize effectTextures=_effectTextures;
 @property(copy, nonatomic) FBSDKCameraEffectArguments *effectArguments; // @synthesize effectArguments=_effectArguments;
 @property(copy, nonatomic) NSString *effectID; // @synthesize effectID=_effectID;
-- (void).cxx_destruct;
 - (id)copyWithZone:(struct _NSZone *)arg1;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;

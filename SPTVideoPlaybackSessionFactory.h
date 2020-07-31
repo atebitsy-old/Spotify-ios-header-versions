@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class BMAVFactory, BMDRMManager, NSArray, SPTVideoApplicationStateObservable, SPTVideoCDNSelector, SPTVideoPlayerSource;
+@class BMAVFactory, BMContentDownloader, BMDRMManager, NSArray, SPTVideoApplicationStateObservable, SPTVideoCDNSelector, SPTVideoPlayerSource;
 @protocol BMChunkCache, BMConnectionModeObservable, BMDataLoader, BMKVOControllerFactory, BMPlayerConfiguration, SPTNotificationCenter, SPTVideoMediaExtension, SPTVideoPlaybackErrorFormatter;
 
 @interface SPTVideoPlaybackSessionFactory : NSObject
@@ -25,9 +25,11 @@
     id <BMChunkCache> _videoChunkCache;
     id <SPTVideoMediaExtension> _spotifyVideoMediaExtension;
     BMDRMManager *_drmManager;
+    BMContentDownloader *_contentDownloader;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) BMContentDownloader *contentDownloader; // @synthesize contentDownloader=_contentDownloader;
 @property(retain, nonatomic) BMDRMManager *drmManager; // @synthesize drmManager=_drmManager;
 @property(retain, nonatomic) id <SPTVideoMediaExtension> spotifyVideoMediaExtension; // @synthesize spotifyVideoMediaExtension=_spotifyVideoMediaExtension;
 @property(retain, nonatomic) id <BMChunkCache> videoChunkCache; // @synthesize videoChunkCache=_videoChunkCache;
@@ -43,7 +45,7 @@
 @property(retain, nonatomic) SPTVideoPlayerSource *playerSource; // @synthesize playerSource=_playerSource;
 @property(retain, nonatomic) SPTVideoCDNSelector *cdnSelector; // @synthesize cdnSelector=_cdnSelector;
 - (id)createSessionWithPlaybackIdentity:(id)arg1 options:(id)arg2 playerSource:(id)arg3;
-- (id)initWithCDNSelector:(id)arg1 connectionModeObservable:(id)arg2 playerConfiguration:(id)arg3 kvoControllerFactory:(id)arg4 notificationCenter:(id)arg5 videoPlaybackErrorFormatter:(id)arg6 playerSource:(id)arg7 appStateObservable:(id)arg8 avFactory:(id)arg9 eventObserverFactories:(id)arg10 dataLoader:(id)arg11 videoChunkCache:(id)arg12 spotifyVideoMediaExtension:(id)arg13 drmManager:(id)arg14;
+- (id)initWithCDNSelector:(id)arg1 connectionModeObservable:(id)arg2 playerConfiguration:(id)arg3 kvoControllerFactory:(id)arg4 notificationCenter:(id)arg5 videoPlaybackErrorFormatter:(id)arg6 playerSource:(id)arg7 appStateObservable:(id)arg8 avFactory:(id)arg9 eventObserverFactories:(id)arg10 dataLoader:(id)arg11 videoChunkCache:(id)arg12 spotifyVideoMediaExtension:(id)arg13 drmManager:(id)arg14 contentDownloader:(id)arg15;
 
 @end
 

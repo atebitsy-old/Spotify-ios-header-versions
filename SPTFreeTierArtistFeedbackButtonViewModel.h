@@ -10,16 +10,18 @@
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 
 @class FollowModel, NSString;
-@protocol SPTFollowModelFactory, SPTNetworkConnectivityController;
+@protocol SPTFollowModelFactory, SPTFreeTierArtistFeedbackButtonViewModelLogger, SPTNetworkConnectivityController;
 
 @interface SPTFreeTierArtistFeedbackButtonViewModel : SPTFreeTierEntityFeedbackButtonViewModelBase <FollowModelObserver, SPTNetworkConnectivityControllerObserver>
 {
     id <SPTFollowModelFactory> _followModelFactory;
     FollowModel *_followModel;
     id <SPTNetworkConnectivityController> _networkConnectivityController;
+    id <SPTFreeTierArtistFeedbackButtonViewModelLogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTFreeTierArtistFeedbackButtonViewModelLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkConnectivityController; // @synthesize networkConnectivityController=_networkConnectivityController;
 @property(retain, nonatomic) FollowModel *followModel; // @synthesize followModel=_followModel;
 @property(readonly, nonatomic) id <SPTFollowModelFactory> followModelFactory; // @synthesize followModelFactory=_followModelFactory;
@@ -32,7 +34,7 @@
 - (void)unban;
 - (void)unlike;
 - (void)like;
-- (id)initWithArtistURI:(id)arg1 configuration:(id)arg2 followModelFactory:(id)arg3 logger:(id)arg4 networkConnectivityController:(id)arg5;
+- (id)initWithArtistURI:(id)arg1 configuration:(id)arg2 followModelFactory:(id)arg3 logger:(id)arg4 networkConnectivityController:(id)arg5 ubiLogger:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

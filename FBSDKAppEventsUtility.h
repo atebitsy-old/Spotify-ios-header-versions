@@ -29,7 +29,7 @@
 + (id)attributionID;
 + (unsigned long long)advertisingTrackingStatus;
 + (id)advertiserID;
-+ (id)activityParametersDictionaryForEvent:(id)arg1 implicitEventsOnly:(_Bool)arg2 shouldAccessAdvertisingID:(_Bool)arg3;
++ (id)activityParametersDictionaryForEvent:(id)arg1 shouldAccessAdvertisingID:(_Bool)arg2;
 
 @end
 

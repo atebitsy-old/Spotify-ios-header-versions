@@ -9,11 +9,12 @@
 #import "SPTYourLibraryService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTYourLibraryModelImplementation, SPTYourLibraryTestManagerImplementation;
-@protocol _TtP19YourLibraryXFeature22SPTYourLibraryXService_;
+@protocol _TtP19YourLibraryXFeature22SPTYourLibraryXService_, _TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_;
 
 @interface SPTYourLibraryServiceImplementation : NSObject <SPTYourLibraryService>
 {
     id <_TtP19YourLibraryXFeature22SPTYourLibraryXService_> _yourLibraryXService;
+    id <_TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_> _yourLibraryBetaService;
     SPTYourLibraryTestManagerImplementation *_testManager;
     SPTYourLibraryModelImplementation *_model;
 }
@@ -22,6 +23,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTYourLibraryModelImplementation *model; // @synthesize model=_model;
 @property(retain, nonatomic) SPTYourLibraryTestManagerImplementation *testManager; // @synthesize testManager=_testManager;
+@property(nonatomic) __weak id <_TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_> yourLibraryBetaService; // @synthesize yourLibraryBetaService=_yourLibraryBetaService;
 @property(nonatomic) __weak id <_TtP19YourLibraryXFeature22SPTYourLibraryXService_> yourLibraryXService; // @synthesize yourLibraryXService=_yourLibraryXService;
 - (id)provideYourLibraryModel;
 - (id)providePageProviderRegistry;

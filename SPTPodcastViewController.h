@@ -11,6 +11,7 @@
 #import "SPTPageController-Protocol.h"
 #import "SPTPodcastChipsSectionTableViewCellDelegate-Protocol.h"
 #import "SPTPodcastDescriptionTableViewCellDelegate-Protocol.h"
+#import "SPTPodcastNewFollowTableViewCellDelegate-Protocol.h"
 #import "SPTPodcastViewModelDelegate2-Protocol.h"
 #import "SPTShareableContext-Protocol.h"
 #import "SPTShowContextMenuControllerDelegate-Protocol.h"
@@ -19,13 +20,14 @@
 #import "UITableViewDelegate-Protocol.h"
 #import "VISREFTableHeaderViewDelegate-Protocol.h"
 
-@class GLUEContextMenuAccessoryButton, NSString, NSURL, SPTInfoView, SPTPodcastFilterTableFooterView, SPTPodcastHeaderController, SPTPodcastLogger, SPTPodcastViewModel, SPTShowContextMenuController, SPTTableView, SPTTheme, VISREFTableHeaderView;
+@class GLUEContextMenuAccessoryButton, NSString, NSURL, SPTInfoView, SPTPodcastFilterTableFooterView, SPTPodcastFollowButtonPressedObserver, SPTPodcastHeaderController, SPTPodcastLogger, SPTPodcastViewModel, SPTShowContextMenuController, SPTTableView, SPTTheme, VISREFTableHeaderView;
 @protocol GLUEImageLoader, GLUETheme, SPTCollectionLogger, SPTCollectionPlatformTestManager, SPTLinkDispatcher, SPTPageContainer, SPTPodcastContextMenuProvider, SPTPodcastEpisodeCellConfigurator, SPTPodcastFollowSectionTableViewCellCommonInterface, SPTPodcastTestManager, SPTPodcastUBILogger, SPTShareFeature, SPTSortingFilteringUIFactory, SPTUIPresentationService, SPTViewLogger;
 
-@interface SPTPodcastViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTPodcastViewModelDelegate2, SPTShowContextMenuControllerDelegate, SPTShareableContext, SPTPodcastChipsSectionTableViewCellDelegate, SPTPodcastDescriptionTableViewCellDelegate, SPContentInsetViewController, VISREFTableHeaderViewDelegate, SPTPageController, SPViewController, UITableViewDelegate, UITableViewDataSource>
+@interface SPTPodcastViewController : UIViewController <SPTNavigationControllerNavigationBarState, SPTPodcastViewModelDelegate2, SPTShowContextMenuControllerDelegate, SPTShareableContext, SPTPodcastChipsSectionTableViewCellDelegate, SPTPodcastDescriptionTableViewCellDelegate, SPContentInsetViewController, VISREFTableHeaderViewDelegate, SPTPodcastNewFollowTableViewCellDelegate, SPTPageController, SPViewController, UITableViewDelegate, UITableViewDataSource>
 {
     _Bool _dataLoaded;
     SPTPodcastViewModel *_viewModel;
+    SPTPodcastFollowButtonPressedObserver *_followObserver;
     id <GLUEImageLoader> _glueImageLoader;
     id <SPTPodcastContextMenuProvider> _podcastContextMenuProvider;
     SPTShowContextMenuController *_showContextMenuController;
@@ -76,6 +78,7 @@
 @property(retain, nonatomic) SPTShowContextMenuController *showContextMenuController; // @synthesize showContextMenuController=_showContextMenuController;
 @property(retain, nonatomic) id <SPTPodcastContextMenuProvider> podcastContextMenuProvider; // @synthesize podcastContextMenuProvider=_podcastContextMenuProvider;
 @property(retain, nonatomic) id <GLUEImageLoader> glueImageLoader; // @synthesize glueImageLoader=_glueImageLoader;
+@property(retain, nonatomic) SPTPodcastFollowButtonPressedObserver *followObserver; // @synthesize followObserver=_followObserver;
 @property(retain, nonatomic) SPTPodcastViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void)playURIInContext:(id)arg1;
 - (void)determineIfContextContainsURI:(id)arg1 responseHandler:(CDUnknownBlockType)arg2;
@@ -118,6 +121,7 @@
 - (double)tableView:(id)arg1 heightForHeaderInSection:(long long)arg2;
 - (id)tableView:(id)arg1 viewForHeaderInSection:(long long)arg2;
 - (void)showContextMenuController:(id)arg1 didUpdateFollowedState:(_Bool)arg2 forShow:(id)arg3;
+- (void)followButtonPressed;
 - (void)showContextMenuWithSenderView:(id)arg1;
 - (void)createContextMenuButton;
 - (void)setupConstraints;

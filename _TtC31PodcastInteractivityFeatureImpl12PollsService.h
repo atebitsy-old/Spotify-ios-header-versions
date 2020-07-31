@@ -6,12 +6,16 @@
 
 #import <objc/NSObject.h>
 
+@protocol _TtP27PodcastInteractivityFeature30SPTPollsViewControllerProvider_;
+
 @interface _TtC31PodcastInteractivityFeatureImpl12PollsService : NSObject
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: networkService
     // Error parsing type: , name: nowPlayingPlatformService
     // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: remoteConfigurationService
+    // Error parsing type: , name: $__lazy_storage_$_viewControllerProvider
 }
 
 + (id)serviceIdentifier;
@@ -20,6 +24,7 @@
 - (void)unload;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
+@property(nonatomic, retain) id <_TtP27PodcastInteractivityFeature30SPTPollsViewControllerProvider_> viewControllerProvider;
 
 @end
 

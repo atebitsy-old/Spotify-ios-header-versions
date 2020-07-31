@@ -11,7 +11,8 @@
 @interface SPTPremiumDestinationUIBenefitsCardView : UIView
 {
     SPTPremiumDestinationUIBenefitsHeaderView *_headerView;
-    UIStackView *_stackView;
+    UIStackView *_headerStackView;
+    UIStackView *_contentStackView;
     UIView *_separatorView;
     SPTPremiumDestinationUIGLUETheme *_theme;
     NSLayoutConstraint *_separatorWidthConstraint;
@@ -29,7 +30,8 @@
 @property(retain, nonatomic) NSLayoutConstraint *separatorWidthConstraint; // @synthesize separatorWidthConstraint=_separatorWidthConstraint;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *separatorView; // @synthesize separatorView=_separatorView;
-@property(retain, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
+@property(retain, nonatomic) UIStackView *contentStackView; // @synthesize contentStackView=_contentStackView;
+@property(retain, nonatomic) UIStackView *headerStackView; // @synthesize headerStackView=_headerStackView;
 @property(retain, nonatomic) SPTPremiumDestinationUIBenefitsHeaderView *headerView; // @synthesize headerView=_headerView;
 - (void)traitCollectionDidChange:(id)arg1;
 - (void)setStackViewContentInset:(struct NSDirectionalEdgeInsets)arg1;

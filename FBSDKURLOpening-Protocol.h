@@ -13,5 +13,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)arg1;
 - (_Bool)canOpenURL:(NSURL *)arg1 forApplication:(UIApplication *)arg2 sourceApplication:(NSString *)arg3 annotation:(id)arg4;
 - (_Bool)application:(UIApplication *)arg1 openURL:(NSURL *)arg2 sourceApplication:(NSString *)arg3 annotation:(id)arg4;
+
+@optional
+- (_Bool)shouldStopPropagationOfURL:(NSURL *)arg1;
 @end
 

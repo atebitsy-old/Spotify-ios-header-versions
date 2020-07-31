@@ -32,7 +32,7 @@
 @property(readonly, nonatomic) SPTLoginFeatureDefaultLayout *defaultLayout;
 - (id)headerModelWithHeader:(id)arg1;
 @property(readonly, nonatomic) id <SPTLoginWelcomeModelBuilder> welcomeViewLayout;
-- (id)activeLayoutComponentName;
+- (id)activeLayoutName;
 - (unsigned long long)activeLayoutFromConfiguration:(id)arg1 testManager:(id)arg2;
 - (id)initWithConfiguration:(id)arg1 testManager:(id)arg2 imageURLProvider:(id)arg3;
 

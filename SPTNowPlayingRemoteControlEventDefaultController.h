@@ -64,8 +64,13 @@
 - (long long)repeatButtonPressed:(id)arg1;
 - (void)playFeedbackSoundIfEnabled:(id)arg1;
 - (id)playerForSoundNamed:(id)arg1;
+- (void)logSeek:(id)arg1 withInterval:(long long)arg2;
 - (void)seekForward;
+- (void)seekForwardFromTimer:(id)arg1;
+- (void)seekForwardWithEvent:(id)arg1;
 - (void)seekBackward;
+- (void)seekBackwardFromTimer:(id)arg1;
+- (void)seekBackwardWithEvent:(id)arg1;
 - (long long)bookmarkButtonPressed:(id)arg1;
 - (void)logDislikeButtonPressed:(id)arg1;
 - (long long)dislikeButtonPressed:(id)arg1;

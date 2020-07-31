@@ -9,6 +9,6 @@
 @class NSDictionary;
 
 @protocol SPTCollectionPlatformFieldPodcastCovers <SPTCollectionPlatformDataLoaderField>
-@property(readonly, copy, nonatomic) NSDictionary *podcastCovers;
+@property(nonatomic, readonly) NSDictionary *podcastCovers;
 @end
 

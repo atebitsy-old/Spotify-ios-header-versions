@@ -10,7 +10,7 @@
 #import "SPTShareHandler-Protocol.h"
 
 @class NSString, SPTDataLoader, SPTShareData, SPTShareHandlerCompletionDataModel, SPTShareLogger;
-@protocol SPTShareDeeplinkHandler;
+@protocol SPTSharingSDKDeeplinkHandler;
 
 @interface SPTShareSnapchatShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
 {
@@ -22,7 +22,7 @@
     NSString *_utmTerm;
     SPTShareLogger *_shareLogger;
     SPTDataLoader *_dataLoader;
-    id <SPTShareDeeplinkHandler> _deeplinkHandler;
+    id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
     SPTShareData *_shareData;
     SPTShareHandlerCompletionDataModel *_completionData;
 }
@@ -31,7 +31,7 @@
 @property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
-@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
+@property(retain, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTDataLoader *dataLoader; // @synthesize dataLoader=_dataLoader;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(readonly, nonatomic) NSString *utmTerm; // @synthesize utmTerm=_utmTerm;

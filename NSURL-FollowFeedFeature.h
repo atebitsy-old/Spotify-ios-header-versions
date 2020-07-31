@@ -92,12 +92,6 @@
 + (id)spt_seedASessionQuestionnaireURL:(id)arg1 sessionId:(id)arg2;
 + (id)spt_freeTierTrackContentURLForTrackIdentifier:(id)arg1;
 + (id)spt_hiddenContentURI;
-+ (id)spt_qaToolURL;
-+ (id)spt_fetchUploadFormForRejectedCreative;
-+ (id)spt_rejectCreativeWithID:(id)arg1 usingDevEnabled:(_Bool)arg2;
-+ (id)spt_approveCreativeWithID:(id)arg1 usingDevEnabled:(_Bool)arg2;
-+ (id)spt_urlForFetchingLocales:(_Bool)arg1;
-+ (id)spt_urlForFetchingCreativesUsingDevEnabled:(_Bool)arg1 withCampaignID:(id)arg2 status:(long long)arg3 type:(id)arg4 andLocale:(id)arg5;
 + (void)createQueryParameterWithTriggerPatterns:(id)arg1 triggerType:(id)arg2 forUrlString:(id)arg3;
 + (id)spt_inAppMessageFeatureFetchNoteMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
 + (id)spt_inAppMessageFeatureFetchBannerMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 usingDevEnabled:(_Bool)arg3;
@@ -216,7 +210,7 @@
 + (unsigned long long)spt_optimalCDNImageSizeForSideInPixels:(double)arg1;
 + (id)spt_availableSPTCDNImageSizes;
 + (void)createQueryParametersWithTriggerPatterns:(id)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3 actions:(id)arg4 forUrlString:(id)arg5;
-+ (id)spt_inAppMessageFetchMessagePreviewURLForCreativeID:(id)arg1 devEnabled:(_Bool)arg2 isRelayCreative:(_Bool)arg3;
++ (id)spt_inAppMessageFetchMessagePreviewURLForCreativeID:(id)arg1 devEnabled:(_Bool)arg2;
 + (id)spt_inAppMessageFetchMessagesURLForTriggerPatterns:(id)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3 actions:(id)arg4 devEnabled:(_Bool)arg5;
 + (id)spt_inAppMessageFetchTriggersURLUsingDevEnabled:(_Bool)arg1 triggerType:(id)arg2 creativeTypes:(id)arg3;
 + (id)spt_inAppMessageBaseURLComponentsWhenDevEnabled:(_Bool)arg1;

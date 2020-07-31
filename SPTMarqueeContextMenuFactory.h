@@ -7,18 +7,18 @@
 #import <objc/NSObject.h>
 
 @class SPTTheme;
-@protocol SPTEventSender, SPTUIPresentationService, SPTWebViewFactory;
+@protocol SPTAdsMarqueeLogger, SPTUIPresentationService, SPTWebViewFactory;
 
 @interface SPTMarqueeContextMenuFactory : NSObject
 {
     SPTTheme *_theme;
     id <SPTWebViewFactory> _webViewFactory;
     id <SPTUIPresentationService> _presentationService;
-    id <SPTEventSender> _eventSender;
+    id <SPTAdsMarqueeLogger> _eventLogger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
+@property(readonly, nonatomic) id <SPTAdsMarqueeLogger> eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(readonly, nonatomic) id <SPTWebViewFactory> webViewFactory; // @synthesize webViewFactory=_webViewFactory;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -26,7 +26,7 @@
 - (id)provideMarqueeContextMenuForTitle:(id)arg1 actions:(id)arg2;
 - (id)provideContextMenuActionWithIcon:(long long)arg1 attributedTitle:(id)arg2 actionBlock:(CDUnknownBlockType)arg3;
 - (id)provideContextMenuActionWithIcon:(long long)arg1 title:(id)arg2 actionBlock:(CDUnknownBlockType)arg3;
-- (id)initWithWebViewFactory:(id)arg1 presentationService:(id)arg2 theme:(id)arg3 eventSender:(id)arg4;
+- (id)initWithWebViewFactory:(id)arg1 presentationService:(id)arg2 theme:(id)arg3 eventLogger:(id)arg4;
 
 @end
 

@@ -8,8 +8,8 @@
 
 #import "SPTPodcastFeature-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactoryImplementation, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
-@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastEntityDataLoader, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastOffliningService, SPTPodcastSortingProvider, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP21PodcastQuoteUIFeature24SPTPodcastQuoteUIService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_;
+@class NSString, SPTAllocationContext, SPTPodcastContextAwareURITypeManager, SPTPodcastCosmosDataLoader, SPTPodcastEpisodeCellActionHandlerFactory, SPTPodcastFeatureProperties, SPTPodcastPreferences, SPTPodcastRequestFactoryImplementation, SPTPodcastSpeedControlManagerImpl, SPTPodcastTestManagerImplementation;
+@protocol CosmosFeature, SPContextMenuFeature, SPTCollectionLogger, SPTCollectionPlatformService, SPTContextDispatchService, SPTCrashReporterService, SPTEpisodeContextMenuControllerDelegate, SPTExplicitContentService, SPTGLUEService, SPTNetworkService, SPTPageRegistrationToken, SPTPerformanceMetricsService, SPTPlayerFeature, SPTPodcastContextMenuProvider, SPTPodcastEntityDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastOffliningService, SPTPodcastSortingProvider, SPTPodcastUIService, SPTRecentlyPlayedService, SPTRemoteConfigurationService, SPTResolver, SPTScannablesService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTSleepTimerService, SPTSnackbarService, SPTSortingFilteringService, SPTUBIUserBehaviourInstrumentation, SPTUIPresentationService, SPTURIDispatchService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP21PodcastQuoteUIFeature24SPTPodcastQuoteUIService_, _TtP27PodcastHTMLComponentFeature30SPTPodcastHTMLComponentService_;
 
 @interface SPTPodcastFeatureImplementation : SPTUIPageService <SPTPodcastFeature>
 {
@@ -56,8 +56,8 @@
     SPTPodcastCosmosDataLoader *_podcastCosmosDataLoader;
     SPTPodcastRequestFactoryImplementation *_internalPodcastRequestFactory;
     SPTPodcastCosmosDataLoader *_internalPodcastCosmosDataLoader;
-    SPTPodcastFactory *_podcastFactory;
-    SPTPodcastEpisodeFactory *_podcastEpisodeFactory;
+    id <SPTPodcastFactory> _podcastFactory;
+    id <SPTPodcastEpisodeFactory> _podcastEpisodeFactory;
     SPTPodcastEpisodeCellActionHandlerFactory *_cellActionHandlerFactory;
     id <CosmosFeature> _cosmosService;
     SPTPodcastPreferences *_podcastPreferences;
@@ -70,8 +70,8 @@
 @property(retain, nonatomic) SPTPodcastPreferences *podcastPreferences; // @synthesize podcastPreferences=_podcastPreferences;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(retain, nonatomic) SPTPodcastEpisodeCellActionHandlerFactory *cellActionHandlerFactory; // @synthesize cellActionHandlerFactory=_cellActionHandlerFactory;
-@property(retain, nonatomic) SPTPodcastEpisodeFactory *podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
-@property(retain, nonatomic) SPTPodcastFactory *podcastFactory; // @synthesize podcastFactory=_podcastFactory;
+@property(retain, nonatomic) id <SPTPodcastEpisodeFactory> podcastEpisodeFactory; // @synthesize podcastEpisodeFactory=_podcastEpisodeFactory;
+@property(retain, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
 @property(retain, nonatomic) SPTPodcastCosmosDataLoader *internalPodcastCosmosDataLoader; // @synthesize internalPodcastCosmosDataLoader=_internalPodcastCosmosDataLoader;
 @property(retain, nonatomic) SPTPodcastRequestFactoryImplementation *internalPodcastRequestFactory; // @synthesize internalPodcastRequestFactory=_internalPodcastRequestFactory;
 @property(retain, nonatomic) SPTPodcastCosmosDataLoader *podcastCosmosDataLoader; // @synthesize podcastCosmosDataLoader=_podcastCosmosDataLoader;

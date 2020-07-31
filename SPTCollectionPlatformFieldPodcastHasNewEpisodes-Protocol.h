@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldPodcastHasNewEpisodes <SPTCollectionPlatformDataLoaderField>
-@property(readonly, nonatomic) _Bool hasNewEpisodes;
+@property(nonatomic, readonly) _Bool hasNewEpisodes;
 @end
 

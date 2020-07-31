@@ -9,6 +9,7 @@
 @interface _TtC23YourLibraryXFeatureImpl25YourLibraryListItemBinder : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: imageLoader
+    // Error parsing type: , name: style
     // Error parsing type: , name: defaultRowStyle
     // Error parsing type: , name: artistRowStyle
     // Error parsing type: , name: podcastRowStyle

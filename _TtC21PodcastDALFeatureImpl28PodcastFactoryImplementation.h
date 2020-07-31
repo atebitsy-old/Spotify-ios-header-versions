@@ -13,6 +13,7 @@
 }
 
 - (id)init;
+- (id)podcastWithProtobufData:(id)arg1 responseType:(unsigned long long)arg2;
 - (id)podcastWithDictionary:(id)arg1 shouldRemoveHeaders:(_Bool)arg2;
 - (id)podcastWithDictionary:(id)arg1;
 

@@ -9,6 +9,7 @@
 @interface _TtC23YourLibraryXFeatureImpl15YourLibraryView : UIView
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: quickScrollFactory
     // Error parsing type: , name: headerView
     // Error parsing type: , name: $__lazy_storage_$_contentView
 }

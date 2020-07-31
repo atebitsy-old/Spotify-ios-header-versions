@@ -16,7 +16,7 @@
 @interface SPTNowPlayingAudioAdFooterUnitViewController : UIViewController <SPTNowPlayingContainedViewController, SPTNowPlayingAdUnitViewController, SPTAdVoiceManagerObserver>
 {
     SPTTheme *_theme;
-    GLUEButton *_manageVoiceSettingsBtn;
+    GLUEButton *_leftButton;
     SPTAdVoiceMicrophoneView *_microphoneView;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
@@ -30,7 +30,7 @@
 @property(nonatomic) __weak id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(retain, nonatomic) SPTAdVoiceMicrophoneView *microphoneView; // @synthesize microphoneView=_microphoneView;
-@property(retain, nonatomic) GLUEButton *manageVoiceSettingsBtn; // @synthesize manageVoiceSettingsBtn=_manageVoiceSettingsBtn;
+@property(retain, nonatomic) GLUEButton *leftButton; // @synthesize leftButton=_leftButton;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 - (void)reloadViewControllerWithAdEntity:(id)arg1;
 - (void)voiceAdMicrophoneDidStopRecording;
@@ -40,9 +40,10 @@
 - (unsigned long long)leadingEdge;
 - (struct CGSize)preferredContentSizeForContainerSize:(struct CGSize)arg1;
 - (void)didTapMicrophoneView;
-- (void)didTapManageAdSettingsBtn;
-- (void)updateViewWithVoiceAd:(_Bool)arg1;
-- (void)setupManageAdSettingsButton;
+- (void)didTapLeftButton;
+- (void)updateViewWithAdEntity:(id)arg1;
+- (void)configureLeftButtonText:(id)arg1;
+- (void)setUpLeftButton;
 - (void)setupMicView;
 - (void)setupVoiceViews;
 - (id)initWithTheme:(id)arg1 linkDispatcher:(id)arg2 cosmosBridge:(id)arg3;

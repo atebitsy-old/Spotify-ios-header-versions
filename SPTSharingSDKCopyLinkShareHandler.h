@@ -9,22 +9,22 @@
 #import "SPTSharingSDKShareHandler-Protocol.h"
 
 @class NSString, SPTSharingSDKLinkGenerator;
-@protocol SPTSharingSDKEntityData, SPTSharingSDKPasteboardHandler;
+@protocol SPTSharingSDKEntityData, SPTSharingSDKPasteboardWrapper;
 
 @interface SPTSharingSDKCopyLinkShareHandler : NSObject <SPTSharingSDKShareHandler>
 {
     id <SPTSharingSDKEntityData> _entityData;
     SPTSharingSDKLinkGenerator *_linkGenerator;
-    id <SPTSharingSDKPasteboardHandler> _pasteboardHandler;
+    id <SPTSharingSDKPasteboardWrapper> _pasteboardWrapper;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTSharingSDKPasteboardHandler> pasteboardHandler; // @synthesize pasteboardHandler=_pasteboardHandler;
+@property(readonly, nonatomic) id <SPTSharingSDKPasteboardWrapper> pasteboardWrapper; // @synthesize pasteboardWrapper=_pasteboardWrapper;
 @property(readonly, nonatomic) SPTSharingSDKLinkGenerator *linkGenerator; // @synthesize linkGenerator=_linkGenerator;
 @property(readonly, nonatomic) id <SPTSharingSDKEntityData> entityData; // @synthesize entityData=_entityData;
 - (id)completionDataWithShareID:(id)arg1;
 - (void)performShareAction:(CDUnknownBlockType)arg1;
-- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 pasteboardHandler:(id)arg3;
+- (id)initWithEntityData:(id)arg1 linkGenerator:(id)arg2 pasteboardWrapper:(id)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

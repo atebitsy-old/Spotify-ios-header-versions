@@ -15,12 +15,12 @@
     FBSDKServerConfiguration *_serverConfiguration;
     FBSDKAppEventsState *_appEventsState;
     FBSDKEventBindingManager *_eventBindingManager;
-    NSString *_userID;
     _Bool _isUnityInit;
     _Bool _disableTimer;
     unsigned long long _flushBehavior;
     NSString *_pushNotificationsDeviceTokenString;
     NSObject<OS_dispatch_source> *_flushTimer;
+    NSString *_userID;
 }
 
 + (id)requestForCustomAudienceThirdPartyIDWithAccessToken:(id)arg1;
@@ -35,6 +35,7 @@
 + (void)sendEventBindingsToUnity;
 + (void)setIsUnityInit:(_Bool)arg1;
 + (void)augmentHybridWKWebView:(id)arg1;
++ (id)anonymousID;
 + (void)updateUserProperties:(id)arg1 handler:(CDUnknownBlockType)arg2;
 + (void)clearUserDataForType:(id)arg1;
 + (void)setUserData:(id)arg1 forType:(id)arg2;
@@ -64,11 +65,12 @@
 + (void)logEvent:(id)arg1 valueToSum:(double)arg2;
 + (void)logEvent:(id)arg1;
 + (void)initialize;
+- (void).cxx_destruct;
+@property(copy, nonatomic) NSString *userID; // @synthesize userID=_userID;
 @property(retain, nonatomic) NSObject<OS_dispatch_source> *flushTimer; // @synthesize flushTimer=_flushTimer;
 @property(copy, nonatomic) NSString *pushNotificationsDeviceTokenString; // @synthesize pushNotificationsDeviceTokenString=_pushNotificationsDeviceTokenString;
 @property(nonatomic) _Bool disableTimer; // @synthesize disableTimer=_disableTimer;
 @property(nonatomic) unsigned long long flushBehavior; // @synthesize flushBehavior=_flushBehavior;
-- (void).cxx_destruct;
 - (void)applicationMovingFromActiveStateOrTerminating;
 - (void)applicationDidBecomeActive;
 - (void)flushTimerFired:(id)arg1;

@@ -34,10 +34,10 @@
     NSString *_tagline;
 }
 
+- (void).cxx_destruct;
 @property(copy, nonatomic) NSString *tagline; // @synthesize tagline=_tagline;
 @property(copy, nonatomic) NSString *message; // @synthesize message=_message;
 @property(nonatomic) double displayDuration; // @synthesize displayDuration=_displayDuration;
-- (void).cxx_destruct;
 - (void)cancelAllScheduledFadeOutMethods;
 - (void)scheduleFadeoutRespectingMinimumDisplayDuration;
 - (void)scheduleAutomaticFadeout;

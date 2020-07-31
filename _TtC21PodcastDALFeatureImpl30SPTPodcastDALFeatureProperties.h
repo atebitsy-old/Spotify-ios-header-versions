@@ -8,7 +8,6 @@
 
 @interface _TtC21PodcastDALFeatureImpl30SPTPodcastDALFeatureProperties : NSObject
 {
-    // Error parsing type: , name: podcastDataAccessLayerEnabledForExternalFeatures
     // Error parsing type: , name: podcastDalProtobufEnabled
 }
 

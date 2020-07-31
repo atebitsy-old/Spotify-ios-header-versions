@@ -9,6 +9,7 @@
 @protocol SPTEncoreArtistHeaderDelegate
 - (void)heightChangedWithTotalHeight:(double)arg1 topAccessoryViewHeight:(double)arg2;
 - (void)backButtonTappedWithSender:(UIView *)arg1;
+- (void)unbanWithSender:(UIView *)arg1;
 - (void)togglePlaybackWithSender:(UIView *)arg1;
 - (void)toggleFollowWithSender:(UIView *)arg1;
 - (void)contextMenuTappedWithSender:(UIView *)arg1;

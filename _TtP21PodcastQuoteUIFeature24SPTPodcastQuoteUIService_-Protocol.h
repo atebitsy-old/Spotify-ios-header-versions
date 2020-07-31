@@ -6,9 +6,11 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTPodcastQuoteUIComponentFactory;
+@class NSURL, UIViewController;
+@protocol SPTPageCreationContext, SPTPodcastQuoteUIComponentFactory;
 
 @protocol _TtP21PodcastQuoteUIFeature24SPTPodcastQuoteUIService_ <SPTService>
+- (UIViewController *)providePodcastQuotesViewControllerWithEpisodeURI:(NSURL *)arg1 context:(id <SPTPageCreationContext>)arg2;
 @property(nonatomic, readonly) id <SPTPodcastQuoteUIComponentFactory> componentFactory;
 @end
 

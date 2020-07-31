@@ -10,7 +10,7 @@
 #import "SPTShareHandler-Protocol.h"
 
 @class NSString, SPTDataLoader, SPTShareData, SPTShareHandlerCompletionDataModel, SPTShareLogger;
-@protocol SPTShareDeeplinkHandler;
+@protocol SPTSharingSDKDeeplinkHandler;
 
 @interface SPTShareFacebookStoriesShareHandler : NSObject <SPTShareHandler, SPTDataLoaderDelegate>
 {
@@ -24,13 +24,13 @@
     SPTShareLogger *_shareLogger;
     CDUnknownBlockType _shareCompletionBlock;
     SPTShareData *_shareData;
-    id <SPTShareDeeplinkHandler> _deeplinkHandler;
+    id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
     SPTShareHandlerCompletionDataModel *_completionData;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTShareHandlerCompletionDataModel *completionData; // @synthesize completionData=_completionData;
-@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
+@property(retain, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
 @property(copy, nonatomic) CDUnknownBlockType shareCompletionBlock; // @synthesize shareCompletionBlock=_shareCompletionBlock;
 @property(nonatomic) _Bool isRequesting; // @synthesize isRequesting=_isRequesting;

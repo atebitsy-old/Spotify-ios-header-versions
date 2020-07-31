@@ -10,7 +10,7 @@
 #import "SPTWebViewControllerDelegate-Protocol.h"
 
 @class NSLayoutConstraint, NSString, NSURL, SPTAdsMarqueeContextMenuView, SPTTheme, UIButton, UIVisualEffectView;
-@protocol SPTAdsBaseMarqueeEntity, SPTEventSender, SPTPageContainer, SPTUIPresentationService, SPTWebViewController;
+@protocol SPTAdsBaseMarqueeEntity, SPTAdsMarqueeLogger, SPTPageContainer, SPTUIPresentationService, SPTWebViewController;
 
 @interface SPTAdsMarqueeContextMenuViewController : UIViewController <SPTWebViewControllerDelegate, SPTPageController>
 {
@@ -22,7 +22,7 @@
     SPTTheme *_theme;
     UIViewController<SPTWebViewController> *_webViewController;
     id <SPTAdsBaseMarqueeEntity> _adEntity;
-    id <SPTEventSender> _eventSender;
+    id <SPTAdsMarqueeLogger> _eventLogger;
     double _popoverHeight;
     id <SPTUIPresentationService> _presentationService;
     NSLayoutConstraint *_bottomConstraint;
@@ -32,7 +32,7 @@
 @property(retain, nonatomic) NSLayoutConstraint *bottomConstraint; // @synthesize bottomConstraint=_bottomConstraint;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) double popoverHeight; // @synthesize popoverHeight=_popoverHeight;
-@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
+@property(readonly, nonatomic) id <SPTAdsMarqueeLogger> eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(retain, nonatomic) id <SPTAdsBaseMarqueeEntity> adEntity; // @synthesize adEntity=_adEntity;
 @property(readonly, nonatomic) UIViewController<SPTWebViewController> *webViewController; // @synthesize webViewController=_webViewController;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -57,7 +57,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
-- (id)initWithTheme:(id)arg1 title:(id)arg2 primaryContextMenuView:(id)arg3 secondaryContextMenuView:(id)arg4 presentationService:(id)arg5 webViewFactory:(id)arg6 adEntity:(id)arg7 eventSender:(id)arg8;
+- (id)initWithTheme:(id)arg1 title:(id)arg2 primaryContextMenuView:(id)arg3 secondaryContextMenuView:(id)arg4 presentationService:(id)arg5 webViewFactory:(id)arg6 adEntity:(id)arg7 eventLogger:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

@@ -15,8 +15,8 @@
 }
 
 + (id)impressionTrackerWithEventName:(id)arg1;
-@property(readonly, copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *eventName; // @synthesize eventName=_eventName;
 - (void)_applicationDidEnterBackgroundNotification:(id)arg1;
 - (void)logImpressionWithIdentifier:(id)arg1 parameters:(id)arg2;
 - (void)dealloc;

@@ -14,6 +14,7 @@
 + (id)featureName:(unsigned long long)arg1;
 + (_Bool)checkGK:(unsigned long long)arg1;
 + (unsigned long long)getParentFeature:(unsigned long long)arg1;
++ (void)disableFeature:(id)arg1;
 + (_Bool)isEnabled:(unsigned long long)arg1;
 + (void)checkFeature:(unsigned long long)arg1 completionBlock:(CDUnknownBlockType)arg2;
 

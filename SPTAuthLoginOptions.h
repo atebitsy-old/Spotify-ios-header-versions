@@ -21,7 +21,6 @@
     struct SPTAuthCacheId _cacheId;
 }
 
-+ (id)defaultLoginOptions;
 - (void).cxx_destruct;
 @property(nonatomic) struct SPTAuthCacheId cacheId; // @synthesize cacheId=_cacheId;
 @property(nonatomic) struct SPTAuthCacheSalt cacheSalt; // @synthesize cacheSalt=_cacheSalt;
@@ -33,7 +32,6 @@
 @property(retain, nonatomic) NSString *APHostOverride; // @synthesize APHostOverride=_APHostOverride;
 @property(retain, nonatomic) NSString *APSRVHostOverride; // @synthesize APSRVHostOverride=_APSRVHostOverride;
 @property(readonly, nonatomic) struct LoginOptions cppLoginOptions;
-- (void)persistGlobalApHostOverride:(id)arg1;
 
 @end
 

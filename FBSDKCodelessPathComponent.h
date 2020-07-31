@@ -21,6 +21,7 @@
     NSString *_desc;
 }
 
+- (void).cxx_destruct;
 @property(readonly, nonatomic) int matchBitmask; // @synthesize matchBitmask=_matchBitmask;
 @property(readonly, nonatomic) int row; // @synthesize row=_row;
 @property(readonly, nonatomic) int section; // @synthesize section=_section;
@@ -30,7 +31,7 @@
 @property(readonly, copy, nonatomic) NSString *hint; // @synthesize hint=_hint;
 @property(readonly, copy, nonatomic) NSString *text; // @synthesize text=_text;
 @property(readonly, copy, nonatomic) NSString *className; // @synthesize className=_className;
-- (void).cxx_destruct;
+- (_Bool)isEqualToPath:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 
 @end

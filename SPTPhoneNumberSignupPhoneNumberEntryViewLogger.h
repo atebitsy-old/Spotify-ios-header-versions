@@ -15,6 +15,7 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLoginLogger> logger; // @synthesize logger=_logger;
+- (void)logUserDidUsePhoneNumberAutofill;
 - (void)logOtpRequestFailure;
 - (void)logOtpRequestSuccess;
 - (void)logUserDidEditPhoneNumber;

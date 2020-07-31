@@ -10,7 +10,7 @@
 {
 }
 
-- (id)initWithName:(id)arg1 monthlyListeners:(id)arg2 coverArtImage:(id)arg3 coverArtColor:(id)arg4 isPlaying:(_Bool)arg5 isPlayable:(_Bool)arg6 isFollowed:(_Bool)arg7 minimumHeight:(double)arg8 fullHeight:(double)arg9;
+- (id)initWithName:(id)arg1 monthlyListeners:(id)arg2 coverArtImage:(id)arg3 coverArtColor:(id)arg4 isPlaying:(_Bool)arg5 isPlayable:(_Bool)arg6 isBanned:(_Bool)arg7 isFollowed:(_Bool)arg8 minimumHeight:(double)arg9 fullHeight:(double)arg10;
 
 @end
 

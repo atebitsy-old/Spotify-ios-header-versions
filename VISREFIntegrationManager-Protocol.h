@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class HUBComponentRegistry, HUBIdentifier, SPTTheme, UIViewController;
+@protocol VISREFBackButtonUBILogger;
 
 @protocol VISREFIntegrationManager <NSObject>
 - (_Bool)hasOverrideForComponentId:(HUBIdentifier *)arg1;
@@ -14,6 +15,7 @@
 - (void)viewDidDisappear;
 - (void)viewDidAppear;
 - (void)viewWillAppear;
+- (void)configureWithViewController:(UIViewController *)arg1 ubiLogger:(id <VISREFBackButtonUBILogger>)arg2;
 - (void)configureWithViewController:(UIViewController *)arg1;
 - (_Bool)isVisualRefreshAnimatedHeartEnabled;
 - (_Bool)isVisualRefreshGreenButtonEnabled;

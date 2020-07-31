@@ -7,6 +7,6 @@
 #import "SPTCollectionPlatformDataLoaderField-Protocol.h"
 
 @protocol SPTCollectionPlatformFieldPodcastMediaType <SPTCollectionPlatformDataLoaderField>
-@property(readonly, nonatomic) unsigned long long mediaType;
+@property(nonatomic, readonly) unsigned long long mediaType;
 @end
 

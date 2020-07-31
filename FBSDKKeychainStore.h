@@ -14,9 +14,9 @@
     NSString *_accessGroup;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *accessGroup; // @synthesize accessGroup=_accessGroup;
 @property(readonly, copy, nonatomic) NSString *service; // @synthesize service=_service;
-- (void).cxx_destruct;
 - (id)queryForKey:(id)arg1;
 - (id)dataForKey:(id)arg1;
 - (_Bool)setData:(id)arg1 forKey:(id)arg2 accessibility:(void *)arg3;

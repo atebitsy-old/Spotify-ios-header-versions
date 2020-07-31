@@ -9,7 +9,7 @@
 #import "SPTShareViewControllerDelegate-Protocol.h"
 
 @class NSString, SPTProgressView, SPTShareFeatureProperties, SPTShareHandlerFactory, SPTSharePresenterSharingSDKHelper, SPTShareViewController, SPTSharingSDK, UIViewController;
-@protocol SPTAlertController, SPTPageController, SPTShareDeeplinkHandler, SPTShareEventSenderLogger, SPTShareHandler, SPTShareUBILogger, _TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_;
+@protocol SPTAlertController, SPTPageController, SPTShareEventSenderLogger, SPTShareHandler, SPTShareUBILogger, SPTSharingSDKDeeplinkHandler, _TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_;
 
 @interface SPTSharePresenter : NSObject <SPTShareViewControllerDelegate>
 {
@@ -18,7 +18,7 @@
     SPTShareViewController *_shareViewController;
     SPTShareHandlerFactory *_shareHandlerFactory;
     id <SPTAlertController> _alertController;
-    id <SPTShareDeeplinkHandler> _deeplinkHandler;
+    id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
     id <SPTShareHandler> _shareHandler;
     SPTSharingSDK *_sharingSDK;
     id <SPTShareEventSenderLogger> _shareEventSenderLogger;
@@ -40,7 +40,7 @@
 @property(readonly, nonatomic) __weak id <SPTShareEventSenderLogger> shareEventSenderLogger; // @synthesize shareEventSenderLogger=_shareEventSenderLogger;
 @property(readonly, nonatomic) SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
 @property(retain, nonatomic) id <SPTShareHandler> shareHandler; // @synthesize shareHandler=_shareHandler;
-@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
+@property(retain, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(readonly, nonatomic) id <SPTAlertController> alertController; // @synthesize alertController=_alertController;
 @property(readonly, nonatomic) SPTShareHandlerFactory *shareHandlerFactory; // @synthesize shareHandlerFactory=_shareHandlerFactory;
 @property(readonly, nonatomic) SPTShareViewController *shareViewController; // @synthesize shareViewController=_shareViewController;

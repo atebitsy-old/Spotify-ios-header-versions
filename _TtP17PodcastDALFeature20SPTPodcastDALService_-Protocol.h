@@ -6,10 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastEpisodeDataParser, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastRequestFactory, SPTPodcastSortingProvider;
+@protocol SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastEpisodeFactory, SPTPodcastFactory, SPTPodcastRequestFactory, SPTPodcastSortingProvider;
 
 @protocol _TtP17PodcastDALFeature20SPTPodcastDALService_ <SPTService>
-- (id <SPTPodcastEpisodeDataParser>)providePodcastEpisodeDataParserWithFactory:(id <SPTPodcastEpisodeFactory>)arg1;
 - (id <SPTPodcastEntityDataLoader>)providePodcastEntityDataLoader;
 - (id <SPTPodcastSortingProvider>)provideSortingProvider;
 - (id <SPTPodcastRequestFactory>)providePodcastRequestFactory;

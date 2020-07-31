@@ -1221,6 +1221,10 @@ struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<int, s
     struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<int, std::__1::shared_ptr<spotify::facebook::FacebookServiceRequest<spotify::facebook::proto::UserState, spotify::facebook::proto::UserState>>>, void *>*> *_field1;
 };
 
+struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*> {
+    struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*> *_field1;
+};
+
 struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, void *>*> {
     struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, void *>*> *_field1;
 };
@@ -2536,6 +2540,17 @@ struct unique_ptr<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__h
     } _field1;
 };
 
+struct unique_ptr<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*[], std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*>>> {
+    struct __compressed_pair<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>**, std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*>>> {
+        struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*> **_field1;
+        struct __bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*>> {
+            struct __compressed_pair<unsigned long, std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*>> {
+                unsigned long long _field1;
+            } _field1;
+        } _field2;
+    } _field1;
+};
+
 struct unique_ptr<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, void *>*>*[], std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, void *>*>*>>> {
     struct __compressed_pair<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, void *>*>**, std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, void *>*>*>>> {
         struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, std::__1::basic_string<char>>, void *>*> **_field1;
@@ -2660,6 +2675,21 @@ struct unordered_map<int, std::__1::shared_ptr<spotify::facebook::FacebookServic
             unsigned long long _field1;
         } _field3;
         struct __compressed_pair<float, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, std::__1::shared_ptr<spotify::facebook::FacebookServiceRequest<spotify::facebook::proto::UserState, spotify::facebook::proto::UserState>>>, std::__1::equal_to<int>, true>> {
+            float _field1;
+        } _field4;
+    } _field1;
+};
+
+struct unordered_map<std::__1::basic_string<char>, fbsdk::MTensor, std::__1::hash<std::__1::basic_string<char>>, std::__1::equal_to<std::__1::basic_string<char>>, std::__1::allocator<std::__1::pair<const std::__1::basic_string<char>, fbsdk::MTensor>>> {
+    struct __hash_table<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::__unordered_map_hasher<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::hash<std::__1::basic_string<char>>, true>, std::__1::__unordered_map_equal<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::equal_to<std::__1::basic_string<char>>, true>, std::__1::allocator<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>>> {
+        struct unique_ptr<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*[], std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*>>> _field1;
+        struct __compressed_pair<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>, std::__1::allocator<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>>> {
+            struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*> _field1;
+        } _field2;
+        struct __compressed_pair<unsigned long, std::__1::__unordered_map_hasher<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::hash<std::__1::basic_string<char>>, true>> {
+            unsigned long long _field1;
+        } _field3;
+        struct __compressed_pair<float, std::__1::__unordered_map_equal<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::equal_to<std::__1::basic_string<char>>, true>> {
             float _field1;
         } _field4;
     } _field1;
@@ -3139,6 +3169,11 @@ typedef struct {
     CDStruct_3412e649 magnitude;
 } CDStruct_93d588b8;
 
+typedef struct {
+    CDStruct_198678f7 _field1;
+    CDStruct_198678f7 _field2;
+} CDStruct_3c1748cc;
+
 // Template types
 typedef struct basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> {
     struct __compressed_pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>>::__rep, std::__1::allocator<char>> {
@@ -3396,6 +3431,21 @@ typedef struct unique_ptr<spotify::connectivity::auth::Session, std::__1::defaul
         struct Session *__value_;
     } __ptr_;
 } unique_ptr_c7ae8056;
+
+typedef struct unordered_map<std::__1::basic_string<char>, fbsdk::MTensor, std::__1::hash<std::__1::basic_string<char>>, std::__1::equal_to<std::__1::basic_string<char>>, std::__1::allocator<std::__1::pair<const std::__1::basic_string<char>, fbsdk::MTensor>>> {
+    struct __hash_table<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::__unordered_map_hasher<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::hash<std::__1::basic_string<char>>, true>, std::__1::__unordered_map_equal<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::equal_to<std::__1::basic_string<char>>, true>, std::__1::allocator<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>>> {
+        struct unique_ptr<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*[], std::__1::__bucket_list_deallocator<std::__1::allocator<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>*>>> _field1;
+        struct __compressed_pair<std::__1::__hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*>, std::__1::allocator<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>>> {
+            struct __hash_node_base<std::__1::__hash_node<std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, void *>*> _field1;
+        } _field2;
+        struct __compressed_pair<unsigned long, std::__1::__unordered_map_hasher<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::hash<std::__1::basic_string<char>>, true>> {
+            unsigned long long _field1;
+        } _field3;
+        struct __compressed_pair<float, std::__1::__unordered_map_equal<std::__1::basic_string<char>, std::__1::__hash_value_type<std::__1::basic_string<char>, fbsdk::MTensor>, std::__1::equal_to<std::__1::basic_string<char>>, true>> {
+            float _field1;
+        } _field4;
+    } _field1;
+} unordered_map_32d37657;
 
 typedef struct variant<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {
     struct __impl<spotify::connectivity::auth::Identifier, spotify::connectivity::auth::credentials::AppleSignInCredential, spotify::connectivity::auth::credentials::AutologinFromCredentialsStore, spotify::connectivity::auth::credentials::GoogleSignInCredential, spotify::connectivity::auth::credentials::OneTimeToken, spotify::connectivity::auth::credentials::ParentChildCredential, spotify::connectivity::auth::credentials::RefreshTokenCredentials, spotify::connectivity::auth::credentials::SamsungSignInCredential, spotify::connectivity::auth::LoginCredentials> {

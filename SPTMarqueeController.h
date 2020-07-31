@@ -15,7 +15,7 @@
 #import "SPTSlateWireframeCustomPresentationDelegate-Protocol.h"
 
 @class NSString, NSURL, SPTMarqueeContentViewController, SPTMarqueeContextMenuFactory, SPTMarqueeContextMenuTransition, SPTMarqueeContextMenuView, SPTMarqueeContextMenuViewController, SPTNavigationManager, SPTProgressView, SPTTheme, UIImage;
-@protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAdsBaseMarqueeEntity, SPTAdsBaseRegistry, SPTEventSender, SPTInAppMessagePresentationMonitor, SPTLinkDispatcher, SPTProductState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService, SPTWebViewFactory;
+@protocol GLUEImageLoader, SPTAdsBaseCosmosBridge, SPTAdsBaseMarqueeEntity, SPTAdsBaseRegistry, SPTAdsMarqueeLogger, SPTInAppMessagePresentationMonitor, SPTLinkDispatcher, SPTProductState, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService, SPTWebViewFactory;
 
 @interface SPTMarqueeController : NSObject <SPTAdsBaseRegistryObserver, SPTNavigationManagerDelegate, SPTSlateDataSource, SPTSlateDelegate, SPTSlateViewDataSource, SPTSlateWireframeCustomPresentationDelegate, SPTMarqueeContentViewControllerDelegate>
 {
@@ -34,7 +34,7 @@
     id <SPTInAppMessagePresentationMonitor> _inAppMessagePresentationMonitor;
     id <SPTUIPresentationService> _presentationService;
     SPTMarqueeContextMenuTransition *_transition;
-    id <SPTEventSender> _eventSender;
+    id <SPTAdsMarqueeLogger> _eventLogger;
     SPTMarqueeContentViewController *_marqueeContentViewController;
     SPTMarqueeContextMenuViewController *_primaryMarqueeContextMenuController;
     SPTMarqueeContextMenuViewController *_secondaryMarqueeContextMenuController;
@@ -62,7 +62,7 @@
 @property(retain, nonatomic) SPTMarqueeContextMenuViewController *secondaryMarqueeContextMenuController; // @synthesize secondaryMarqueeContextMenuController=_secondaryMarqueeContextMenuController;
 @property(retain, nonatomic) SPTMarqueeContextMenuViewController *primaryMarqueeContextMenuController; // @synthesize primaryMarqueeContextMenuController=_primaryMarqueeContextMenuController;
 @property(retain, nonatomic) SPTMarqueeContentViewController *marqueeContentViewController; // @synthesize marqueeContentViewController=_marqueeContentViewController;
-@property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
+@property(readonly, nonatomic) id <SPTAdsMarqueeLogger> eventLogger; // @synthesize eventLogger=_eventLogger;
 @property(readonly, nonatomic) SPTMarqueeContextMenuTransition *transition; // @synthesize transition=_transition;
 @property(readonly, nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(readonly, nonatomic) id <SPTInAppMessagePresentationMonitor> inAppMessagePresentationMonitor; // @synthesize inAppMessagePresentationMonitor=_inAppMessagePresentationMonitor;
@@ -101,7 +101,7 @@
 - (_Bool)isCurrentContextURLHome;
 - (void)forcePresentMarquee;
 - (void)dealloc;
-- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 imageLoader:(id)arg3 slateBuilderProvider:(id)arg4 slateManager:(id)arg5 contextMenuFactory:(id)arg6 presentationService:(id)arg7 navigationManager:(id)arg8 linkDispatcher:(id)arg9 inAppMessagePresentationMonitor:(id)arg10 theme:(id)arg11 productState:(id)arg12 eventSender:(id)arg13;
+- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 imageLoader:(id)arg3 slateBuilderProvider:(id)arg4 slateManager:(id)arg5 contextMenuFactory:(id)arg6 presentationService:(id)arg7 navigationManager:(id)arg8 linkDispatcher:(id)arg9 inAppMessagePresentationMonitor:(id)arg10 theme:(id)arg11 productState:(id)arg12 eventLogger:(id)arg13;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;
