@@ -9,11 +9,19 @@
 @interface _TtC20SingalongFeatureImpl20LyricsViewController : UIViewController
 {
     // Error parsing type: , name: dependencies
+    // Error parsing type: , name: lineHeight
+    // Error parsing type: , name: lineIndex
     // Error parsing type: , name: lyricsLineSet
+    // Error parsing type: , name: syllableIndex
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)didProgressToSyllableIndexWithSyllableIndex:(long long)arg1;
+- (void)didProgressToLineIndexWithLineIndex:(long long)arg1;
+- (void)dealloc;
+- (void)viewDidDisappear:(_Bool)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
 - (void)loadView;
 - (id)initWithCoder:(id)arg1;
 

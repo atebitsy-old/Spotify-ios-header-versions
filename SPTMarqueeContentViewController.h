@@ -7,7 +7,7 @@
 #import <UIKit/UIViewController.h>
 
 @class SPTMarqueeContentView, SPTTheme;
-@protocol SPTMarqueeContentViewControllerDelegate, SPTProductState;
+@protocol SPTMarqueeContentViewControllerDelegate, SPTMarqueeTestManager, SPTProductState;
 
 @interface SPTMarqueeContentViewController : UIViewController
 {
@@ -15,16 +15,18 @@
     SPTMarqueeContentView *_marqueeContentView;
     SPTTheme *_theme;
     id <SPTProductState> _productState;
+    id <SPTMarqueeTestManager> _testManager;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTMarqueeTestManager> testManager; // @synthesize testManager=_testManager;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(readonly, nonatomic) SPTMarqueeContentView *marqueeContentView; // @synthesize marqueeContentView=_marqueeContentView;
 @property(nonatomic) __weak id <SPTMarqueeContentViewControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)didTapInformationText:(id)arg1;
 - (void)navigateToAlbum:(id)arg1;
-- (id)initWithTheme:(id)arg1 marqueeEntity:(id)arg2 albumImage:(id)arg3 productState:(id)arg4;
+- (id)initWithTheme:(id)arg1 marqueeEntity:(id)arg2 albumImage:(id)arg3 productState:(id)arg4 testManager:(id)arg5;
 
 @end
 

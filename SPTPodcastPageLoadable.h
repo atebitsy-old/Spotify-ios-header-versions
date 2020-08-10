@@ -9,20 +9,30 @@
 #import "SPTPageLoadable-Protocol.h"
 
 @class NSURL;
-@protocol SPTPodcastEntityDataLoader;
+@protocol SPTPageLoadStateHandler, SPTPodcastDataLoader, SPTPodcastFactory, SPTPodcastRequestFactory, SPTPodcastSortingProvider;
 
 @interface SPTPodcastPageLoadable : NSObject <SPTPageLoadable>
 {
     NSURL *_URI;
-    id <SPTPodcastEntityDataLoader> _entityDataLoader;
+    id <SPTPodcastRequestFactory> _requestFactory;
+    id <SPTPodcastDataLoader> _dataLoader;
+    id <SPTPodcastFactory> _podcastFactory;
+    id <SPTPodcastSortingProvider> _sortingProvider;
+    id <SPTPageLoadStateHandler> _pageLoadHandler;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) id <SPTPodcastEntityDataLoader> entityDataLoader; // @synthesize entityDataLoader=_entityDataLoader;
+@property(retain, nonatomic) id <SPTPageLoadStateHandler> pageLoadHandler; // @synthesize pageLoadHandler=_pageLoadHandler;
+@property(readonly, nonatomic) id <SPTPodcastSortingProvider> sortingProvider; // @synthesize sortingProvider=_sortingProvider;
+@property(readonly, nonatomic) id <SPTPodcastFactory> podcastFactory; // @synthesize podcastFactory=_podcastFactory;
+@property(readonly, nonatomic) id <SPTPodcastDataLoader> dataLoader; // @synthesize dataLoader=_dataLoader;
+@property(readonly, nonatomic) id <SPTPodcastRequestFactory> requestFactory; // @synthesize requestFactory=_requestFactory;
 @property(readonly, nonatomic) NSURL *URI; // @synthesize URI=_URI;
+- (CDUnknownBlockType)providePodcastRequestErrorCallback;
+- (CDUnknownBlockType)providePodcastRequestSuccessCallback;
 - (void)loadWithResultHandler:(id)arg1;
 - (void)cancel;
-- (id)initWithPodcastURI:(id)arg1 dataLoader:(id)arg2;
+- (id)initWithPodcastURI:(id)arg1 requestFactory:(id)arg2 dataLoader:(id)arg3 factory:(id)arg4 sortingProvider:(id)arg5;
 
 @end
 

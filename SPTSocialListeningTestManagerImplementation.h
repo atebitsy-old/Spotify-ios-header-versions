@@ -6,36 +6,27 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTFeatureFlagSignalObserver-Protocol.h"
 #import "SPTSocialListeningTestManager-Protocol.h"
 
 @class NSString, SPTSocialListeningFeatureProperties;
-@protocol SPTFeatureFlagFactory, SPTFeatureFlagSignal;
 
-@interface SPTSocialListeningTestManagerImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTSocialListeningTestManager>
+@interface SPTSocialListeningTestManagerImplementation : NSObject <SPTSocialListeningTestManager>
 {
     _Bool _socialDeviceEnabled;
-    id <SPTFeatureFlagFactory> _featureFlagFactory;
-    id <SPTFeatureFlagSignal> _socialDeviceEnabledSignal;
     SPTSocialListeningFeatureProperties *_remoteConfigurationProperties;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTSocialListeningFeatureProperties *remoteConfigurationProperties; // @synthesize remoteConfigurationProperties=_remoteConfigurationProperties;
-@property(retain, nonatomic) id <SPTFeatureFlagSignal> socialDeviceEnabledSignal; // @synthesize socialDeviceEnabledSignal=_socialDeviceEnabledSignal;
 @property(nonatomic, getter=isSocialDeviceEnabled) _Bool socialDeviceEnabled; // @synthesize socialDeviceEnabled=_socialDeviceEnabled;
-@property(retain, nonatomic) id <SPTFeatureFlagFactory> featureFlagFactory; // @synthesize featureFlagFactory=_featureFlagFactory;
-- (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
-- (void)setupSocialDeviceEnabledSignal;
 @property(readonly, nonatomic) unsigned long long maxMemberCount;
-@property(readonly, nonatomic) _Bool isShareLinkForSingleModeEnabled;
 @property(readonly, nonatomic, getter=isAllowListen) _Bool allowListen;
 @property(readonly, nonatomic, getter=isNewUIExperienceScannableEnabled) _Bool newUIExperienceScannableEnabled;
 @property(readonly, nonatomic, getter=isNewUIExperienceEnabled) _Bool newUIExperienceEnabled;
 @property(readonly, nonatomic, getter=isSocialListeningAvailable) _Bool socialListeningAvailable;
 @property(readonly, nonatomic, getter=isCanUseSocialSessions) _Bool canUseSocialSessions;
 @property(readonly, nonatomic, getter=isSocialListeningEnabled) _Bool socialListeningEnabled;
-- (id)initWithFeatureFlagFactory:(id)arg1 featureProperties:(id)arg2;
+- (id)initWithFeatureProperties:(id)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

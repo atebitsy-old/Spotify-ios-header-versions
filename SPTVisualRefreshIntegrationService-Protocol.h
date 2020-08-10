@@ -11,6 +11,7 @@
 @protocol SPTVisualRefreshIntegrationService <SPTService>
 - (id <VISREFIntegrationManager>)visrefIntegrationManager;
 - (id <SPTFreeTierPlaylistHeaderProvider>)visrefPlaylistFullBleedHeaderProvider;
+- (id <SPTFreeTierPlaylistHeaderProvider>)encorePlaylistHeaderProvider;
 - (id <SPTFreeTierPlaylistHeaderProvider>)visrefPlaylistHeaderProvider;
 @end
 

@@ -7,6 +7,8 @@
 @class NSURL;
 
 @protocol _TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_
+- (void)logListeningHistoryViewModeMenuItemInteractionWithItemIndex:(long long)arg1;
+- (void)logListeningHistoryViewModeMenuNavBarButtonInteraction;
 - (void)logListeningHistoryContextMenuInteractionWithItemUri:(NSURL *)arg1 itemIndex:(long long)arg2;
 - (void)logListeningHistoryItemInteractionWithItemUri:(NSURL *)arg1 itemIndex:(long long)arg2;
 - (void)logListeningHistoryPageImpression;

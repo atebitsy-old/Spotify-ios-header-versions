@@ -6,31 +6,18 @@
 
 #import <UIKit/UIApplication.h>
 
-#import "SPTSpotifyApplication-Protocol.h"
+@class SPTRemoteControlImplementation;
 
-@class NSHashTable, NSString;
-@protocol SpotifyApplicationRemoteControlDelegate;
-
-@interface SpotifyApplication : UIApplication <SPTSpotifyApplication>
+@interface SpotifyApplication : UIApplication
 {
-    id <SpotifyApplicationRemoteControlDelegate> _remoteControlDelegate;
-    NSHashTable *_observers;
+    SPTRemoteControlImplementation *_remoteControl;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSHashTable *observers; // @synthesize observers=_observers;
-@property(nonatomic) __weak id <SpotifyApplicationRemoteControlDelegate> remoteControlDelegate; // @synthesize remoteControlDelegate=_remoteControlDelegate;
 - (_Bool)canBecomeFirstResponder;
-- (void)removeRemoteControlObserver:(id)arg1;
-- (void)addRemoteControlObserver:(id)arg1;
-- (_Bool)handleRemoteControlEventOfSubtype:(long long)arg1;
+- (id)remoteControlInstance;
+- (id)provideRemoteControl;
 - (void)remoteControlReceivedWithEvent:(id)arg1;
-
-// Remaining properties
-@property(readonly, copy) NSString *debugDescription;
-@property(readonly, copy) NSString *description;
-@property(readonly) unsigned long long hash;
-@property(readonly) Class superclass;
 
 @end
 

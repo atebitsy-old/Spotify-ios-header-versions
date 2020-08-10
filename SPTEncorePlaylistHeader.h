@@ -15,8 +15,6 @@
     // Error parsing type: , name: delegate
 }
 
-+ (void)setTopAccessoryViewHeight:(double)arg1;
-+ (double)topAccessoryViewHeight;
 - (void).cxx_destruct;
 - (id)init;
 @property(nonatomic, readonly) UIView *uiView;

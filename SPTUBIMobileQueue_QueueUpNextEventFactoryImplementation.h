@@ -19,6 +19,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)queuedTrackFactoryWithPosition:(long long)arg1 uri:(id)arg2;
+- (id)clearButtonFactory;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

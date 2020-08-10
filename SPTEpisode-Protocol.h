@@ -19,6 +19,7 @@
 @property(nonatomic, readonly) double lastPlayedAt;
 - (_Bool)isPlayed;
 - (_Bool)isAvailable;
+- (_Bool)isMusicAndTalk;
 - (_Bool)isPlayable;
 @property(nonatomic, readonly) long long mediaType;
 @property(nonatomic, readonly) NSString *manifestId;
@@ -42,6 +43,7 @@
 @property(nonatomic, readonly) _Bool available;
 @property(nonatomic, readonly) _Bool explicit;
 @property(nonatomic, readonly) _Bool followingPodcast;
+@property(nonatomic, readonly) _Bool musicAndTalk;
 @property(nonatomic, readonly) _Bool playable;
 @property(nonatomic, readonly) _Bool played;
 @property(nonatomic, readonly) _Bool videoShowMediaType;

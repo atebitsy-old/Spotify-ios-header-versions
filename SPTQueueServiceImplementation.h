@@ -9,7 +9,7 @@
 #import "SPTQueueService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTQueueFeatureProperties, SPTQueueUBILogger;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTCrashReporterService, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastEntityDataLoader, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastEntityDataLoader, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTQueueServiceImplementation : NSObject <SPTQueueService>
 {
@@ -17,7 +17,6 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTContextMenuOptions> _contextMenuOptions;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
-    id <SPTCrashReporterService> _crashReporterService;
     id <SPTExplicitContentService> _explicitContentService;
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTUBIService> _ubiService;
@@ -68,7 +67,6 @@
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
-@property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(retain, nonatomic) id <SPTContextMenuOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;

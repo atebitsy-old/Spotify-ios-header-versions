@@ -65,8 +65,8 @@
 - (void)ubi_logContextMenuToEpisodePageInViewURL:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4;
 - (void)ubi_logEpisodeSortingInViewURL:(id)arg1 sorting:(unsigned long long)arg2;
 - (void)ubi_logEpisodeFilterSetInViewURL:(id)arg1 filter:(id)arg2 previousFilter:(id)arg3;
-- (void)ubi_logNavigateBrowsePodcastsPage:(id)arg1 targetURI:(id)arg2;
-- (void)ubi_logNavigateToEpisodePageInViewURL:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4;
+- (void)ubi_logNavigateBrowsePodcastsInViewURL:(id)arg1 targetURL:(id)arg2;
+- (void)ubi_logNavigateToEpisodePageInViewURL:(id)arg1 atIndex:(long long)arg2 episodeURI:(id)arg3 featureId:(id)arg4;
 - (void)ubi_logMarkAsPlayedEpisodePage:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4;
 - (void)ubi_logRemoveEpisodeDownloadWithPageURI:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4;
 - (void)ubi_logEpisodeDownloadWithPageURI:(id)arg1 atIndex:(long long)arg2 podcastURI:(id)arg3 featureId:(id)arg4;

@@ -32,6 +32,7 @@
 @property(readonly, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 - (_Bool)isPresent:(id)arg1;
+- (id)changeTransportTypeAppRemoteToAppToApp:(id)arg1;
 - (id)EARemoteInteractionFromAccessory:(id)arg1 action:(id)arg2 interactionId:(id)arg3 remoteDeviceId:(id)arg4;
 - (void)sendRemoteInteractionWithInteractionId:(id)arg1 action:(id)arg2 fromAccessory:(id)arg3;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

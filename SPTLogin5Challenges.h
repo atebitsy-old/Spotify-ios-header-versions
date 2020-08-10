@@ -6,7 +6,7 @@
 
 #import "GPBMessage.h"
 
-@class SPTLogin5HashcashChallenge;
+@class NSMutableArray;
 
 @interface SPTLogin5Challenges : GPBMessage
 {
@@ -15,8 +15,8 @@
 + (id)descriptor;
 
 // Remaining properties
-@property(nonatomic) _Bool hasHashcash; // @dynamic hasHashcash;
-@property(retain, nonatomic) SPTLogin5HashcashChallenge *hashcash; // @dynamic hashcash;
+@property(retain, nonatomic) NSMutableArray *challengesArray; // @dynamic challengesArray;
+@property(readonly, nonatomic) unsigned long long challengesArray_Count; // @dynamic challengesArray_Count;
 
 @end
 

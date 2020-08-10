@@ -8,8 +8,7 @@
 
 @interface _TtC15FindFeatureImpl24SPTFindFeatureProperties : NSObject
 {
-    // Error parsing type: , name: shouldForwardReferrerIdentifier
-    // Error parsing type: , name: shouldSupportUriRouting
+    // Error parsing type: , name: shouldDefaultToSearch
 }
 
 - (id)init;

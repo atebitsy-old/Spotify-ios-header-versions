@@ -65,6 +65,7 @@
 - (id)indexPathForScrollSectionIndex:(unsigned long long)arg1;
 @property(readonly, nonatomic) NSArray *sectionIndexTitles;
 - (void)removeFilterAtIndex:(long long)arg1;
+- (void)logBetaAssistantViewImpressionIfNeeded;
 - (void)logEmptyStaticFilterViewImpression;
 - (void)logEmptyTextFilterViewImpression;
 - (void)logEmptyViewImpression;

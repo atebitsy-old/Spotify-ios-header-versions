@@ -6,11 +6,9 @@
 
 #import "_TtC20SuperbirdFeatureImpl23VoiceAppProtocolHandler.h"
 
-#import "SPTVoiceLibrarySessionObserver-Protocol.h"
-
-@interface _TtC20SuperbirdFeatureImpl23VoiceAppProtocolHandler (SuperbirdFeatureImpl) <SPTVoiceLibrarySessionObserver>
-- (void)voiceSession:(id)arg1 didFailWithError:(id)arg2;
-- (void)voiceSession:(id)arg1 didReceiveFinalResponse:(id)arg2;
-- (void)voiceSession:(id)arg1 didUpdateIntermediateResponse:(id)arg2;
+@interface _TtC20SuperbirdFeatureImpl23VoiceAppProtocolHandler (SuperbirdFeatureImpl)
+- (void)voiceSessionDidFailWithError:(id)arg1 sessionId:(id)arg2 utteranceId:(id)arg3;
+- (void)voiceSessionDidReceiveFinalResponseWithResponse:(id)arg1 sessionId:(id)arg2 utteranceId:(id)arg3;
+- (void)voiceSessionDidUpdateIntermediateTranscriptWithTranscript:(id)arg1 isFinal:(_Bool)arg2 isEndOfSpeech:(_Bool)arg3 sessionId:(id)arg4 utteranceId:(id)arg5;
 @end
 

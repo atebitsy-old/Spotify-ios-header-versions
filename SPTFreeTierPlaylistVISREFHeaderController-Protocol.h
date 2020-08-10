@@ -16,7 +16,6 @@
 - (void)configureWithHeaderConfiguration:(id <SPTFreeTierPlaylistHeaderConfiguration>)arg1 filterSortBarView:(UIView *)arg2;
 
 @optional
-- (double)topAccessoryViewHeight;
 - (double)headerHeight;
 - (void)setFilterButtonTappedBlock:(void (^)(UIViewController *))arg1;
 - (void)setSearchButtonTappedBlock:(void (^)(UIViewController *))arg1;

@@ -9,6 +9,7 @@
 @interface _TtC22AllBoardingFeatureImpl13FollowHandler : _TtCs12_SwiftObject
 {
     // Error parsing type: , name: followModelFactory
+    // Error parsing type: , name: collectionPlatform
 }
 
 @end

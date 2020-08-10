@@ -8,15 +8,17 @@
 
 #import "INSLogger-Protocol.h"
 
-@class NSString;
+@class NSDate, NSString;
 @protocol INSInternalErrorEventDelegate;
 
 @interface INSInternalErrorLogger : NSObject <INSLogger>
 {
     id <INSInternalErrorEventDelegate> _internalErrorEventDelegate;
+    NSDate *_lastReportedSaveErrorTime;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSDate *lastReportedSaveErrorTime; // @synthesize lastReportedSaveErrorTime=_lastReportedSaveErrorTime;
 @property(nonatomic) __weak id <INSInternalErrorEventDelegate> internalErrorEventDelegate; // @synthesize internalErrorEventDelegate=_internalErrorEventDelegate;
 - (void)notifyInternalErrorEventWithErrorType:(id)arg1 errorMessage:(id)arg2 errorContext:(id)arg3 delegate:(id)arg4;
 - (void)logError:(id)arg1;

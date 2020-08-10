@@ -4,20 +4,21 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <UIKit/UIView.h>
+#import <objc/NSObject.h>
 
-@interface _TtCO20EncoreConsumerMobile5Views10HeaderView : UIView
+@class UIView;
+
+@interface _TtCO20EncoreConsumerMobile5Views10HeaderView : NSObject
 {
-    // Error parsing type: , name: heightConstraint
+    // Error parsing type: , name: uiView
     // Error parsing type: , name: onProgress
     // Error parsing type: , name: onFullHeaderProgress
     // Error parsing type: , name: onRemount
-    // Error parsing type: , name: containedView
 }
 
 - (void).cxx_destruct;
-- (id)initWithFrame:(struct CGRect)arg1;
-- (id)initWithCoder:(id)arg1;
+- (id)init;
+@property(nonatomic, retain) UIView *uiView; // @synthesize uiView;
 
 @end
 

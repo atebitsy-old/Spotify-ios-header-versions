@@ -22,7 +22,6 @@
 @property(readonly, copy, nonatomic) CDUnknownBlockType mapper; // @synthesize mapper=_mapper;
 @property(readonly, copy, nonatomic) NSString *key; // @synthesize key=_key;
 @property(readonly, nonatomic) id <SPTAbbaFeatureFlags> abbaFeatureFlags; // @synthesize abbaFeatureFlags=_abbaFeatureFlags;
-- (void)logExposure;
 - (void)featureFlagsDidChange:(id)arg1;
 - (long long)calculateState;
 - (void)updateValue;

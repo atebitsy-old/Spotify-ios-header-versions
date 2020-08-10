@@ -31,6 +31,7 @@
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 - (id)visrefIntegrationManager;
 - (id)visrefPlaylistFullBleedHeaderProvider;
+- (id)encorePlaylistHeaderProvider;
 - (id)visrefPlaylistHeaderProvider;
 - (void)unload;
 - (void)load;

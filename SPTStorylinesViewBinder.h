@@ -26,7 +26,7 @@
 @property(retain, nonatomic) SPTStorylinesView *storylinesView; // @synthesize storylinesView=_storylinesView;
 @property(retain, nonatomic) SPTStorylinesViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void)performUIUpdatesWithBlock:(CDUnknownBlockType)arg1 withDuration:(double)arg2;
-- (void)currentImageDidChange:(id)arg1;
+- (void)currentImageDidChange:(id)arg1 atCardIndex:(unsigned long long)arg2;
 - (void)autoplayTriggeredDidChange:(_Bool)arg1;
 - (void)stateDidChange:(id)arg1 oldState:(id)arg2;
 - (id)initWithViewModel:(id)arg1 storylinesView:(id)arg2 loadingView:(id)arg3 failedView:(id)arg4 offlineView:(id)arg5;

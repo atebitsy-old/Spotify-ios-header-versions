@@ -8,19 +8,20 @@
 
 @interface _TtC20SuperbirdFeatureImpl16SuperbirdService : NSObject
 {
-    // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: appProtocolService
-    // Error parsing type: , name: networkService
-    // Error parsing type: , name: voiceLibraryService
-    // Error parsing type: , name: playbackService
-    // Error parsing type: , name: collectionPlatformService
-    // Error parsing type: , name: playlistPlatformService
-    // Error parsing type: , name: accessoryManagerService
-    // Error parsing type: , name: accessoryManagerSessionService
-    // Error parsing type: , name: followService
-    // Error parsing type: , name: gaiaService
+    // Error parsing type: , name: _appProtocolService
+    // Error parsing type: , name: _networkService
+    // Error parsing type: , name: _voiceLibraryService
+    // Error parsing type: , name: _playlistPlatformService
+    // Error parsing type: , name: _accessoryManagerService
+    // Error parsing type: , name: _followService
+    // Error parsing type: , name: _gaiaService
+    // Error parsing type: , name: _featureFlaggingService
+    // Error parsing type: , name: _playbackService
+    // Error parsing type: , name: _collectionPlatformService
+    // Error parsing type: , name: _remoteConfigurationService
+    // Error parsing type: , name: _accessoryManagerSessionService
+    // Error parsing type: , name: testManager
     // Error parsing type: , name: appProtocolExternalHandler
-    // Error parsing type: , name: configurationProperties
     // Error parsing type: , name: $__lazy_storage_$_superbirdDetector
     // Error parsing type: , name: $__lazy_storage_$_pitstopNetworkManager
     // Error parsing type: , name: $__lazy_storage_$_pitstopLogProcessor
@@ -31,6 +32,8 @@
     // Error parsing type: , name: $__lazy_storage_$_pitstopAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_instrumentationAppProtocolHandler
     // Error parsing type: , name: $__lazy_storage_$_voiceAppProtocolHandler
+    // Error parsing type: , name: $__lazy_storage_$_remoteConfigurationNetworkManager
+    // Error parsing type: , name: $__lazy_storage_$_remoteConfigurationAppProtocolHandler
 }
 
 + (id)serviceIdentifier;
@@ -38,7 +41,6 @@
 - (id)init;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 
 @end
 

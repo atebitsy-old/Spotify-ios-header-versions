@@ -9,22 +9,25 @@
 #import "SPTPodcastRecommendationsViewProvider-Protocol.h"
 
 @class NSString;
-@protocol SPTHubsRendererFactory, SPTHugsFactory, SPTProductState;
+@protocol SPTHubsRendererFactory, SPTHugsFactory, SPTProductState, SPTUBIUserBehaviourInstrumentation;
 
 @interface SPTPodcastRecommendationsViewProviderImplementation : NSObject <SPTPodcastRecommendationsViewProvider>
 {
     id <SPTHubsRendererFactory> _hubsRendererFactory;
     id <SPTHugsFactory> _hugsFactory;
+    id <SPTUBIUserBehaviourInstrumentation> _userBehaviourInstrumentation;
     id <SPTProductState> _productState;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
+@property(readonly, nonatomic) id <SPTUBIUserBehaviourInstrumentation> userBehaviourInstrumentation; // @synthesize userBehaviourInstrumentation=_userBehaviourInstrumentation;
 @property(readonly, nonatomic) id <SPTHugsFactory> hugsFactory; // @synthesize hugsFactory=_hugsFactory;
 @property(readonly, nonatomic) id <SPTHubsRendererFactory> hubsRendererFactory; // @synthesize hubsRendererFactory=_hubsRendererFactory;
+- (id)provideLoggerFactoryForURL:(id)arg1;
 - (id)managerForURL:(id)arg1 URLResolver:(id)arg2 titleContentOperation:(id)arg3 referrerIdentifier:(id)arg4;
 - (id)recommendationsForEpisodeURL:(id)arg1 withContext:(id)arg2;
-- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 productState:(id)arg3;
+- (id)initWithHubsRendererFactory:(id)arg1 hugsFactory:(id)arg2 userBehaviourInstrumentation:(id)arg3 productState:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

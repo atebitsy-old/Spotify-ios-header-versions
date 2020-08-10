@@ -13,6 +13,7 @@
 - (void)logImpressionOfInAppMessageWithImpressionUrl:(NSURL *)arg1 messageFormat:(NSString *)arg2;
 
 @optional
+- (void)logInteractionWithInAppMessageWithUUID:(NSString *)arg1 actionType:(NSString *)arg2 actionUrl:(NSURL *)arg3;
 - (void)logDismissEventWithMessageID:(NSString *)arg1 uuid:(NSString *)arg2;
 @end
 

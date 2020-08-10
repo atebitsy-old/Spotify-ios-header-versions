@@ -7,13 +7,16 @@
 #import <UIKit/UIView.h>
 
 @class UILabel;
+@protocol SPTSliderWithLabelConfiguration;
 
 @interface SPTSliderLabelView : UIView
 {
     UILabel *_valueLabel;
+    id <SPTSliderWithLabelConfiguration> _configuration;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTSliderWithLabelConfiguration> configuration; // @synthesize configuration=_configuration;
 @property(retain, nonatomic) UILabel *valueLabel; // @synthesize valueLabel=_valueLabel;
 - (void)applyThemeLayout;
 - (void)drawRect:(struct CGRect)arg1;
@@ -22,7 +25,7 @@
 - (void)layoutSubviews;
 - (void)setValue:(id)arg1;
 - (void)dealloc;
-- (id)init;
+- (id)initWithConfiguration:(id)arg1;
 
 @end
 

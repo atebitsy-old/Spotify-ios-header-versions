@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTSortingFilteringFilterRule-Protocol.h"
+
 @class NSString;
 
-@interface _TtCV27ListeningHistoryFeatureImpl38ListeningHistoryFilterOptionPickerData10FilterRule : NSObject
+@interface _TtCV27ListeningHistoryFeatureImpl38ListeningHistoryFilterOptionPickerData10FilterRule : NSObject <SPTSortingFilteringFilterRule>
 {
     // Error parsing type: , name: viewMode
 }

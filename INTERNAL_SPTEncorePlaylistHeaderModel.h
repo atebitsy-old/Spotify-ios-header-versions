@@ -13,7 +13,8 @@
     // Error parsing type: , name: name
     // Error parsing type: , name: creatorText
     // Error parsing type: , name: creatorImage
-    // Error parsing type: , name: isBySpotify
+    // Error parsing type: , name: coverArtIncludesTitle
+    // Error parsing type: , name: hasP2SLayout
     // Error parsing type: , name: playlistDescription
     // Error parsing type: , name: coverArtImage
     // Error parsing type: , name: coverArtColor
@@ -22,6 +23,7 @@
     // Error parsing type: , name: downloadState
     // Error parsing type: , name: isPlaying
     // Error parsing type: , name: isPlayable
+    // Error parsing type: , name: isLikeable
     // Error parsing type: , name: isDownloadable
     // Error parsing type: , name: showsShuffleBadge
     // Error parsing type: , name: isLiked
@@ -32,12 +34,13 @@
 - (void).cxx_destruct;
 - (id)init;
 - (_Bool)isEqual:(id)arg1;
-- (id)initWithName:(id)arg1 creatorText:(id)arg2 creatorImage:(id)arg3 isBySpotify:(_Bool)arg4 playlistDescription:(id)arg5 coverArtImage:(id)arg6 coverArtColor:(id)arg7 likes:(long long)arg8 duration:(double)arg9 downloadState:(long long)arg10 isPlaying:(_Bool)arg11 isPlayable:(_Bool)arg12 isDownloadable:(_Bool)arg13 showsShuffleBadge:(_Bool)arg14 isLiked:(_Bool)arg15 minimumHeight:(double)arg16 fullHeight:(double)arg17;
+- (id)initWithName:(id)arg1 creatorText:(id)arg2 creatorImage:(id)arg3 coverArtIncludesTitle:(_Bool)arg4 hasP2SLayout:(_Bool)arg5 playlistDescription:(id)arg6 coverArtImage:(id)arg7 coverArtColor:(id)arg8 likes:(long long)arg9 duration:(double)arg10 downloadState:(long long)arg11 isPlaying:(_Bool)arg12 isPlayable:(_Bool)arg13 isLikeable:(_Bool)arg14 isDownloadable:(_Bool)arg15 showsShuffleBadge:(_Bool)arg16 isLiked:(_Bool)arg17 minimumHeight:(double)arg18 fullHeight:(double)arg19;
 @property(nonatomic, readonly) double fullHeight; // @synthesize fullHeight;
 @property(nonatomic, readonly) double minimumHeight; // @synthesize minimumHeight;
 @property(nonatomic, readonly) _Bool isLiked; // @synthesize isLiked;
 @property(nonatomic, readonly) _Bool showsShuffleBadge; // @synthesize showsShuffleBadge;
 @property(nonatomic, readonly) _Bool isDownloadable; // @synthesize isDownloadable;
+@property(nonatomic, readonly) _Bool isLikeable; // @synthesize isLikeable;
 @property(nonatomic, readonly) _Bool isPlayable; // @synthesize isPlayable;
 @property(nonatomic, readonly) _Bool isPlaying; // @synthesize isPlaying;
 @property(nonatomic, readonly) long long downloadState; // @synthesize downloadState;
@@ -46,9 +49,10 @@
 @property(nonatomic, readonly) UIColor *coverArtColor; // @synthesize coverArtColor;
 @property(nonatomic, readonly) UIImage *coverArtImage; // @synthesize coverArtImage;
 @property(nonatomic, readonly) NSAttributedString *playlistDescription; // @synthesize playlistDescription;
-@property(nonatomic, readonly) _Bool isBySpotify; // @synthesize isBySpotify;
+@property(nonatomic, readonly) _Bool hasP2SLayout; // @synthesize hasP2SLayout;
+@property(nonatomic, readonly) _Bool coverArtIncludesTitle; // @synthesize coverArtIncludesTitle;
 @property(nonatomic, readonly) UIImage *creatorImage; // @synthesize creatorImage;
-@property(nonatomic, readonly) NSAttributedString *creatorText; // @synthesize creatorText;
+@property(nonatomic, readonly) NSString *creatorText;
 @property(nonatomic, readonly) NSString *name;
 
 @end

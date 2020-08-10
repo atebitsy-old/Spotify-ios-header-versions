@@ -11,6 +11,7 @@
 @interface _TtC29PodcastMixControlsFeatureImpl21PMixDislikeShowAction : SPAction
 {
     // Error parsing type: , name: userControlsClient
+    // Error parsing type: , name: logger
     // Error parsing type: , name: online
     // Error parsing type: , name: showUri
     // Error parsing type: , name: playlistUri

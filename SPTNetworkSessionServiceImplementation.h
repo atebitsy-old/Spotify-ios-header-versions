@@ -9,12 +9,15 @@
 #import "SPTNetworkConnectivityControllerObserver-Protocol.h"
 #import "SPTService-Protocol.h"
 
-@class NSString, SPTAllocationContext;
-@protocol SPTLocalSettings, SPTNetworkConnectivityController, SPTNetworkService, SPTSessionService;
+@class NSString, SPTAllocationContext, SPTNetworkFeatureProperties;
+@protocol SPTLocalSettings, SPTNetworkConnectivityController, SPTNetworkService, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService;
 
 @interface SPTNetworkSessionServiceImplementation : NSObject <SPTNetworkConnectivityControllerObserver, SPTService>
 {
-    id <SPTNetworkService> _networkFeature;
+    id <SPTNetworkService> _networkService;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
+    id <SPTRemoteConfigurationResolver> _remoteConfigurationResolver;
+    SPTNetworkFeatureProperties *_properties;
     id <SPTSessionService> _sessionService;
     id <SPTNetworkConnectivityController> _networkController;
     id <SPTLocalSettings> _localSettings;
@@ -25,7 +28,10 @@
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(retain, nonatomic) id <SPTNetworkConnectivityController> networkController; // @synthesize networkController=_networkController;
 @property(nonatomic) __weak id <SPTSessionService> sessionService; // @synthesize sessionService=_sessionService;
-@property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
+@property(retain, nonatomic) SPTNetworkFeatureProperties *properties; // @synthesize properties=_properties;
+@property(retain, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
+@property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 - (void)userWillLogout:(id)arg1;
 - (void)networkConnectivityController:(id)arg1 didChangeForcedOffline:(_Bool)arg2;
 - (void)unload;

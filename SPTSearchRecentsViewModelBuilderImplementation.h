@@ -15,6 +15,7 @@
 {
     _Bool _explicitContentPlaybackAllowed;
     _Bool _ageRestrictedContentPlaybackAllowed;
+    _Bool _episodeTwoLinesEnabled;
     NSString *_recentsCommandName;
     id <SPTSearchUBILocationSerializer> _ubiLocationSerializer;
     NSString *_featureID;
@@ -23,6 +24,7 @@
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) _Bool episodeTwoLinesEnabled; // @synthesize episodeTwoLinesEnabled=_episodeTwoLinesEnabled;
 @property(readonly, copy, nonatomic) NSString *referrerIdentifier; // @synthesize referrerIdentifier=_referrerIdentifier;
 @property(readonly, copy, nonatomic) NSURL *pageURI; // @synthesize pageURI=_pageURI;
 @property(readonly, copy, nonatomic) NSString *featureID; // @synthesize featureID=_featureID;
@@ -33,7 +35,6 @@
 - (id)dismissKeyboardCommand;
 - (_Bool)shouldMarkItemAsDisabled:(id)arg1;
 - (_Bool)shouldMarkItemAsPlaying:(id)arg1 playingTrackURI:(id)arg2 playingAlbumURI:(id)arg3;
-- (id)mainImageDataForItem:(id)arg1;
 - (id)onTapCommandForItem:(id)arg1 allowPlayback:(_Bool)arg2;
 - (id)clearButtonUBILoggingData;
 - (id)clearButton;
@@ -41,7 +42,7 @@
 - (id)rowsForItems:(id)arg1 playingTrackURI:(id)arg2 playingAlbumURI:(id)arg3 allowPlayback:(_Bool)arg4;
 - (id)sectionHeader;
 - (id)buildWithItems:(id)arg1 playingTrackURI:(id)arg2 playingAlbumURI:(id)arg3 allowPlayback:(_Bool)arg4;
-- (id)initWithRecentsCommandName:(id)arg1 explicitContentPlaybackAllowed:(_Bool)arg2 ageRestrictedContentPlaybackAllowed:(_Bool)arg3 ubiLocationSerializer:(id)arg4 featureID:(id)arg5 pageURI:(id)arg6 referrerIdentifier:(id)arg7;
+- (id)initWithRecentsCommandName:(id)arg1 explicitContentPlaybackAllowed:(_Bool)arg2 ageRestrictedContentPlaybackAllowed:(_Bool)arg3 ubiLocationSerializer:(id)arg4 featureID:(id)arg5 pageURI:(id)arg6 referrerIdentifier:(id)arg7 episodeTwoLinesEnabled:(_Bool)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

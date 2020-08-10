@@ -13,7 +13,6 @@
 @interface SPTSocialListeningFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _canUseSocialSessions;
-    _Bool _shareLink;
     _Bool _enabled;
     _Bool _newUiExperienceEnabled;
     _Bool _allowListen;
@@ -26,7 +25,6 @@
 @property(readonly, nonatomic) _Bool allowListen; // @synthesize allowListen=_allowListen;
 @property(readonly, nonatomic) _Bool newUiExperienceEnabled; // @synthesize newUiExperienceEnabled=_newUiExperienceEnabled;
 @property(readonly, nonatomic) _Bool enabled; // @synthesize enabled=_enabled;
-@property(readonly, nonatomic) _Bool shareLink; // @synthesize shareLink=_shareLink;
 @property(readonly, nonatomic) _Bool canUseSocialSessions; // @synthesize canUseSocialSessions=_canUseSocialSessions;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

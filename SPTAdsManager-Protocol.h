@@ -17,6 +17,7 @@
 - (void)disableMidrollAdExperience:(_Bool)arg1 playOriginContext:(NSURL *)arg2;
 - (void)disablePrerollAdExperience:(_Bool)arg1 featureIdentifier:(NSString *)arg2;
 - (_Bool)handleSkip;
+- (void)handleBookmarkAction;
 - (void)handleAdTap:(NSURL *)arg1 shouldPlayContent:(_Bool)arg2;
 - (void)handleAdTap:(NSURL *)arg1;
 - (double)skipDelayRemaining:(double)arg1;

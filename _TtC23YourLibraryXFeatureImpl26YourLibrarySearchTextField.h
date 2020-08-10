@@ -6,6 +6,8 @@
 
 #import <UIKit/UITextField.h>
 
+@class NSString;
+
 @interface _TtC23YourLibraryXFeatureImpl26YourLibrarySearchTextField : UITextField
 {
     // Error parsing type: , name: style
@@ -18,6 +20,7 @@
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (void)updateRightViewButtonMode;
+@property(nonatomic, copy) NSString *text;
 - (struct CGRect)rightViewRectForBounds:(struct CGRect)arg1;
 - (struct CGRect)leftViewRectForBounds:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;

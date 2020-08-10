@@ -9,7 +9,7 @@
 #import "SPTMarqueeobjcService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTMarqueeController;
-@protocol SPTAdsBaseService, SPTAdsMarqueeLogger, SPTContainerService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTMarqueeTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
+@protocol SPTAdsBaseService, SPTAdsMarqueeLogger, SPTContainerService, SPTGLUEService, SPTInAppMessageService, SPTMarqueeTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
 
 @interface SPTMarqueeobjcServiceImplementation : NSObject <SPTMarqueeobjcService>
 {
@@ -17,7 +17,6 @@
     id <SPTGLUEService> _glueService;
     id <SPTWebViewFeature> _webviewService;
     id <SPTUIPresentationService> _presentationService;
-    id <SPTEventSenderService> _eventSenderService;
     id <SPTAdsBaseService> _adsBaseService;
     id <SlateFeature> _slateService;
     id <SPTURIDispatchService> _URIDispatchService;
@@ -40,7 +39,6 @@
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
 @property(nonatomic) __weak id <SPTAdsBaseService> adsBaseService; // @synthesize adsBaseService=_adsBaseService;
-@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTWebViewFeature> webviewService; // @synthesize webviewService=_webviewService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;

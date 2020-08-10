@@ -9,19 +9,21 @@
 #import "SPTPodcastRecommendationsService-Protocol.h"
 
 @class NSString, SPTAllocationContext;
-@protocol SPTGLUEService, SPTHubFrameworkService, SPTPodcastRecommendationsViewProvider, SPTSessionService;
+@protocol SPTGLUEService, SPTHubFrameworkService, SPTPodcastRecommendationsViewProvider, SPTSessionService, SPTUBIService;
 
 @interface SPTPodcastRecommendationsServiceImplementation : NSObject <SPTPodcastRecommendationsService>
 {
     id <SPTSessionService> _clientSessionService;
     id <SPTHubFrameworkService> _hubFrameworkService;
     id <SPTGLUEService> _glueService;
+    id <SPTUBIService> _ubiService;
     id <SPTPodcastRecommendationsViewProvider> _recommendationsViewProvider;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTPodcastRecommendationsViewProvider> recommendationsViewProvider; // @synthesize recommendationsViewProvider=_recommendationsViewProvider;
+@property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTHubFrameworkService> hubFrameworkService; // @synthesize hubFrameworkService=_hubFrameworkService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;

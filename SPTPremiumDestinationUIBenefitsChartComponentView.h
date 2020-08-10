@@ -16,11 +16,12 @@
 }
 
 + (struct CGSize)sizeForContainerViewSize:(struct CGSize)arg1 model:(id)arg2 theme:(id)arg3;
++ (double)getHeaderStackViewWidthWithBenefitChart:(id)arg1 style:(id)arg2;
 - (void).cxx_destruct;
 @property(retain, nonatomic) NSMutableArray *chartRows; // @synthesize chartRows=_chartRows;
 @property(retain, nonatomic) SPTPremiumDestinationUIGLUETheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) SPTPremiumDestinationUIBenefitsCardView *cardView; // @synthesize cardView=_cardView;
-- (void)createAndAddChartRowsWithItems:(id)arg1 style:(id)arg2 columnWidth:(double)arg3;
+- (void)createAndAddChartRowsWithItems:(id)arg1 style:(id)arg2 stackViewWidth:(double)arg3;
 - (void)createAndAddChartHeaderViewWithChart:(id)arg1 style:(id)arg2;
 - (void)prepareForReuse;
 - (void)configureWithModel:(id)arg1;

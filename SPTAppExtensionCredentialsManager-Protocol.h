@@ -6,16 +6,15 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSError, SPTAppExtensionKeychainCredentials;
-@protocol NSSecureCoding><SPTLoginSession;
+@class NSError, SPTAppExtensionKeychainCredentials, SPTLoginSession;
 
 @protocol SPTAppExtensionCredentialsManager <NSObject>
 - (SPTAppExtensionKeychainCredentials *)ESDKCredentials;
 - (NSError *)deleteESDKCredentials;
 - (NSError *)setESDKCredentials:(SPTAppExtensionKeychainCredentials *)arg1;
-- (id <NSSecureCoding><SPTLoginSession>)storedLoginSession;
+- (SPTLoginSession *)storedLoginSession;
 - (NSError *)deleteStoredLoginSession;
-- (NSError *)setStoredLoginSession:(id <NSSecureCoding><SPTLoginSession>)arg1;
+- (NSError *)setStoredLoginSession:(SPTLoginSession *)arg1;
 - (SPTAppExtensionKeychainCredentials *)coreCredentials;
 - (NSError *)deleteCoreCredentials;
 - (NSError *)setCoreCredentials:(SPTAppExtensionKeychainCredentials *)arg1;

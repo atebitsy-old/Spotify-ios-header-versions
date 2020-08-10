@@ -6,20 +6,16 @@
 
 #import <UIKit/UIView.h>
 
-@class GLUEImageView, NSLayoutConstraint;
+@class GLUEImageView;
 
 @interface SPTAdBookmarkSettingsTrailingAccessoryView : UIView
 {
     _Bool _externalLinkAvailable;
     GLUEImageView *_bookmarkButtonView;
     GLUEImageView *_clickThroughActionView;
-    NSLayoutConstraint *_externalLinkVisibleConstraint;
-    NSLayoutConstraint *_externalLinkInVisibleConstraint;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSLayoutConstraint *externalLinkInVisibleConstraint; // @synthesize externalLinkInVisibleConstraint=_externalLinkInVisibleConstraint;
-@property(retain, nonatomic) NSLayoutConstraint *externalLinkVisibleConstraint; // @synthesize externalLinkVisibleConstraint=_externalLinkVisibleConstraint;
 @property(readonly, nonatomic) GLUEImageView *clickThroughActionView; // @synthesize clickThroughActionView=_clickThroughActionView;
 @property(readonly, nonatomic) GLUEImageView *bookmarkButtonView; // @synthesize bookmarkButtonView=_bookmarkButtonView;
 @property(nonatomic) _Bool externalLinkAvailable; // @synthesize externalLinkAvailable=_externalLinkAvailable;

@@ -11,6 +11,7 @@
     // Error parsing type: , name: interactionHandler
     // Error parsing type: , name: impressionHandler
     // Error parsing type: , name: factory
+    // Error parsing type: , name: onboardingFactory
 }
 
 @end

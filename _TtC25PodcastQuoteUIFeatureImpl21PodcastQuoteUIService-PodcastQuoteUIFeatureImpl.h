@@ -12,6 +12,5 @@
 + (id)serviceIdentifier;
 - (id)providePodcastQuotesViewControllerWithEpisodeURI:(id)arg1 context:(id)arg2;
 @property(nonatomic, readonly) id <SPTPodcastQuoteUIComponentFactory> componentFactory;
-- (void)configureWithServices:(id)arg1;
 @end
 

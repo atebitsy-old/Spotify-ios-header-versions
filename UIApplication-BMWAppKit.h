@@ -20,6 +20,7 @@
 + (id)negotiationProtocols;
 + (id)communicationProtocols;
 + (id)legacyCommunicationProtocol;
+- (id)provideRemoteControl;
 @property(readonly, nonatomic) double spt_maxSafeAreaInsets;
 - (void)spt_safelyExit:(int)arg1;
 - (void)spt_safelyExit;

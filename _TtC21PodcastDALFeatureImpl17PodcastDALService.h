@@ -21,9 +21,12 @@
 - (id)init;
 - (id)providePodcastRequestFactory;
 - (id)provideDataLoader;
+- (id)provideProtobufPodcastEntityDataLoader;
 - (id)providePodcastEntityDataLoader;
 - (id)provideSortingProvider;
+- (id)providePodcastEpisodeProtobufFactory;
 - (id)providePodcastEpisodeFactory;
+- (id)providePodcastProtobufFactory;
 - (id)providePodcastFactory;
 - (void)unload;
 - (void)load;

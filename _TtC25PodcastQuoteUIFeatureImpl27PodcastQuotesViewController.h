@@ -11,12 +11,12 @@
     // Error parsing type: , name: loopController
     // Error parsing type: , name: componentFactory
     // Error parsing type: , name: containerView
-    // Error parsing type: , name: errorLabel
     // Error parsing type: , name: viewConnectable
 }
 
 - (void).cxx_destruct;
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)viewDidLayoutSubviews;
 - (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
 - (void)viewDidLoad;

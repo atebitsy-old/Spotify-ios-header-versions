@@ -17,7 +17,7 @@
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
-- (id)createImageResovleManagerWithTransport:(id)arg1 cacheStatusProvider:(id)arg2 userIdentifier:(id)arg3 configurationTTL:(unsigned long long)arg4 configurationUpdatedCallback:(CDUnknownBlockType)arg5;
+- (id)createImageResovleManagerWithTransport:(id)arg1 cacheStatusProvider:(id)arg2 userIdentifier:(id)arg3 configurationTTL:(unsigned long long)arg4 fallbackToOriginal:(_Bool)arg5 configurationUpdatedCallback:(CDUnknownBlockType)arg6;
 - (id)createCoreProjectionMapEndpoint;
 - (id)createCacheStatusProvider;
 - (id)createTransport;

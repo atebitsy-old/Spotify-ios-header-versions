@@ -20,7 +20,6 @@
 + (id)descriptionForState:(long long)arg1;
 - (void).cxx_destruct;
 @property(readonly, nonatomic) SPTObserverManager *observerManager; // @synthesize observerManager=_observerManager;
-- (void)logExposure;
 - (void)setStateInternal:(long long)arg1;
 - (void)removeObserver:(id)arg1;
 - (void)addObserver:(id)arg1;

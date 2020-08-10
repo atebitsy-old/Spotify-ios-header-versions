@@ -6,13 +6,14 @@
 
 #import <UIKit/UIViewController.h>
 
+#import "SPTAdFocusManagerObserver-Protocol.h"
 #import "SPTAdOverlayImageContentViewDataSource-Protocol.h"
 #import "SPTAdsPromotedContentImageViewDelegate-Protocol.h"
 
-@class NSString, SPTAdsFeatureProperties, SPTTheme, UIView;
+@class NSString, SPTAdFocusManager, SPTAdsFeatureProperties, SPTTheme, UIView;
 @protocol GLUEImageLoader, GLUETheme, SPTAdOverlayContentUnitDelegate, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTAdsManager, SPTAdsMobileOverlayContentView;
 
-@interface SPTAdOverlayImageContentViewController : UIViewController <SPTAdsPromotedContentImageViewDelegate, SPTAdOverlayImageContentViewDataSource>
+@interface SPTAdOverlayImageContentViewController : UIViewController <SPTAdsPromotedContentImageViewDelegate, SPTAdFocusManagerObserver, SPTAdOverlayImageContentViewDataSource>
 {
     _Bool _imageLoaded;
     _Bool _viewDisplayed;
@@ -24,6 +25,7 @@
     SPTTheme *_theme;
     id <GLUETheme> _glueTheme;
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
+    SPTAdFocusManager *_adFocusManager;
     SPTAdsFeatureProperties *_featureProperties;
 }
 
@@ -31,6 +33,7 @@
 @property(nonatomic) _Bool viewDisplayed; // @synthesize viewDisplayed=_viewDisplayed;
 @property(nonatomic) _Bool imageLoaded; // @synthesize imageLoaded=_imageLoaded;
 @property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
+@property(retain, nonatomic) SPTAdFocusManager *adFocusManager; // @synthesize adFocusManager=_adFocusManager;
 @property(readonly, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
 @property(readonly, nonatomic) id <GLUETheme> glueTheme; // @synthesize glueTheme=_glueTheme;
 @property(readonly, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
@@ -39,6 +42,7 @@
 @property(readonly, nonatomic) id <SPTAdsBaseImageEntity> entity; // @synthesize entity=_entity;
 @property(readonly, nonatomic) UIView<SPTAdsMobileOverlayContentView> *overlayContentView; // @synthesize overlayContentView=_overlayContentView;
 @property(nonatomic) __weak id <SPTAdOverlayContentUnitDelegate> delegate; // @synthesize delegate=_delegate;
+- (void)adFocusManagerWillResignActive:(id)arg1;
 - (id)dismissText;
 - (id)title;
 - (void)didLoadContentImage:(id)arg1;
@@ -58,8 +62,9 @@
 - (void)configurePlayActionButton;
 - (void)configureBookmarkButton;
 - (void)configureTappableArea;
+- (void)dealloc;
 - (void)viewDidLoad;
-- (id)initWithEntity:(id)arg1 adManager:(id)arg2 imageLoader:(id)arg3 theme:(id)arg4 glueTheme:(id)arg5 cosmosBridge:(id)arg6 featureProperties:(id)arg7;
+- (id)initWithEntity:(id)arg1 adManager:(id)arg2 imageLoader:(id)arg3 theme:(id)arg4 glueTheme:(id)arg5 cosmosBridge:(id)arg6 adFocusManager:(id)arg7 featureProperties:(id)arg8;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

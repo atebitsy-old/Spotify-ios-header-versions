@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastEpisodeFactory-Protocol.h"
-
-@interface _TtC21PodcastDALFeatureImpl43PodcastEpisodeFactoryProtobufImplementation : NSObject <SPTPodcastEpisodeFactory>
+@interface _TtC21PodcastDALFeatureImpl43PodcastEpisodeFactoryProtobufImplementation : NSObject
 {
 }
 

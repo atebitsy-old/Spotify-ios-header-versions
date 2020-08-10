@@ -9,7 +9,7 @@
 #import "SPTShareViewControllerDelegate-Protocol.h"
 
 @class NSString, SPTProgressView, SPTShareFeatureProperties, SPTShareHandlerFactory, SPTSharePresenterSharingSDKHelper, SPTShareViewController, SPTSharingSDK, UIViewController;
-@protocol SPTAlertController, SPTPageController, SPTShareEventSenderLogger, SPTShareHandler, SPTShareUBILogger, SPTSharingSDKDeeplinkHandler, _TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_;
+@protocol SPTAlertController, SPTPageController, SPTShareEventSenderLogger, SPTShareHandler, SPTShareUBILogger, SPTShareVideoDataProvider, SPTSharingSDKDeeplinkHandler, _TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_;
 
 @interface SPTSharePresenter : NSObject <SPTShareViewControllerDelegate>
 {
@@ -27,10 +27,12 @@
     id <_TtP21SocialOnDemandFeature29SPTSocialOnDemandTrackService_> _trackService;
     SPTProgressView *_progressView;
     SPTShareFeatureProperties *_featureProperties;
+    id <SPTShareVideoDataProvider> _videoDataLoader;
     struct CGRect _selectionFrame;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) __weak id <SPTShareVideoDataProvider> videoDataLoader; // @synthesize videoDataLoader=_videoDataLoader;
 @property(nonatomic) struct CGRect selectionFrame; // @synthesize selectionFrame=_selectionFrame;
 @property(retain, nonatomic) SPTShareFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
@@ -54,6 +56,7 @@
 - (void)shareWithData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)shareWithBackendGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)shareWithLocalGeneratedURLWithShareData:(id)arg1 destination:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)performShareWithSharingSDKWithDestination:(id)arg1 entityData:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)performShareWithSharingSDKWithShareDestination:(id)arg1 shareData:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)performShareDestination:(id)arg1 shareData:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)presentViewController:(id)arg1;
@@ -63,7 +66,7 @@
 - (void)dismissWithCompletion:(CDUnknownBlockType)arg1;
 - (void)presentProgressView;
 - (void)presentAlertControllerWithModel:(id)arg1;
-- (id)initWithContextViewController:(id)arg1 shareViewController:(id)arg2 shareHandlerFactory:(id)arg3 alertController:(id)arg4 deeplinkHandler:(id)arg5 featureProperties:(id)arg6 trackService:(id)arg7 sharingSDK:(id)arg8 eventSenderLogger:(id)arg9 topLevelPageController:(id)arg10 ubiLogger:(id)arg11;
+- (id)initWithContextViewController:(id)arg1 shareViewController:(id)arg2 shareHandlerFactory:(id)arg3 alertController:(id)arg4 deeplinkHandler:(id)arg5 featureProperties:(id)arg6 trackService:(id)arg7 sharingSDK:(id)arg8 eventSenderLogger:(id)arg9 topLevelPageController:(id)arg10 ubiLogger:(id)arg11 videoDataLoader:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

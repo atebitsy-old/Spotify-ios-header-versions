@@ -4,21 +4,16 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
-
 @class NSArray, NSData, NSPredicate, NSString;
 
-@protocol SPTPodcastRequestData <NSObject>
+@protocol SPTPodcastRequestData
 @property(nonatomic, readonly) NSString *requestAction;
 @property(nonatomic, readonly) NSArray *sortDescriptors;
 @property(nonatomic, readonly) NSPredicate *filterPredicate;
 @property(nonatomic, readonly) NSString *requestStringTemplate;
 
 @optional
-- (_Bool)isGrouped;
+@property(nonatomic, readonly) _Bool isGrouped;
 @property(nonatomic, readonly) NSData *requestBody;
-
-// Remaining properties
-@property(nonatomic, readonly) _Bool grouped;
 @end
 

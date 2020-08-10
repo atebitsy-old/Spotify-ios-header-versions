@@ -10,7 +10,7 @@
 #import "SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate-Protocol.h"
 
 @class GLUESectionHeaderView, NSString, SPTPodcastEpisodeFeaturedContentNotificationBannerView, SPTPodcastEpisodeFeaturedContentTrackListPreviewView;
-@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTLinkDispatcher, SPTMetaViewController, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
+@protocol GLUEImageLoader, SPTEpisodeSegmentsModel, SPTLinkDispatcher, _TtP29EpisodeSegmentsFetcherFeature34SPTEpisodeSegmentsCosmosDataLoader_;
 
 @interface SPTPodcastEpisodeFeaturedContentTrackListPreviewViewController : UIViewController <SPTPodcastEpisodeFeaturedContentTrackListPreviewViewDelegate, SPTPodcastEpisodeFeaturedContentNotificationBannerViewDelegate>
 {
@@ -22,11 +22,9 @@
     id <GLUEImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
     id <SPTEpisodeSegmentsModel> _episodeSegmentsModel;
-    id <SPTMetaViewController> _metaViewController;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) id <SPTMetaViewController> metaViewController; // @synthesize metaViewController=_metaViewController;
 @property(retain, nonatomic) id <SPTEpisodeSegmentsModel> episodeSegmentsModel; // @synthesize episodeSegmentsModel=_episodeSegmentsModel;
 @property(readonly, nonatomic) id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
@@ -44,7 +42,7 @@
 - (void)viewDidLayoutSubviews;
 - (void)viewDidLoad;
 - (void)loadView;
-- (id)initWithEpisodeURI:(id)arg1 dataLoader:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4 metaViewController:(id)arg5;
+- (id)initWithEpisodeURI:(id)arg1 dataLoader:(id)arg2 imageLoader:(id)arg3 linkDispatcher:(id)arg4;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

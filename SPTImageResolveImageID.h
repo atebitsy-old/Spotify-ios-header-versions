@@ -21,6 +21,7 @@
 @property(readonly, nonatomic) NSData *transcodeID; // @synthesize transcodeID=_transcodeID;
 @property(readonly, nonatomic) NSData *projectionID; // @synthesize projectionID=_projectionID;
 @property(readonly, nonatomic) NSData *collectionID; // @synthesize collectionID=_collectionID;
+- (id)spotifyURI;
 - (id)urlWithTemplate:(id)arg1;
 - (id)hexString;
 - (id)initWithCollectionID:(id)arg1 projectionID:(id)arg2 transcodeID:(id)arg3;

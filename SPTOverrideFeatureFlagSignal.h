@@ -24,7 +24,6 @@
 @property(nonatomic) long long baseState; // @synthesize baseState=_baseState;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> overrideSignal; // @synthesize overrideSignal=_overrideSignal;
 @property(readonly, nonatomic) id <SPTFeatureFlagSignal> baseSignal; // @synthesize baseSignal=_baseSignal;
-- (void)logExposure;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (void)dealloc;
 - (id)initWithBaseSignal:(id)arg1 overrideSignal:(id)arg2;

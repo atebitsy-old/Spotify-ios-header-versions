@@ -35,7 +35,6 @@
     // Error parsing type: , name: $__lazy_storage_$_voiceController
     // Error parsing type: , name: $__lazy_storage_$_voicePresenter
     // Error parsing type: , name: $__lazy_storage_$_wakewordController
-    // Error parsing type: , name: $__lazy_storage_$_searchResultsController
     // Error parsing type: , name: tabBarViewManager
     // Error parsing type: , name: testManager
     // Error parsing type: , name: voiceInteractionSettingsManager

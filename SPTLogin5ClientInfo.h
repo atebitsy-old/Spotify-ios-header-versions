@@ -16,6 +16,7 @@
 
 // Remaining properties
 @property(copy, nonatomic) NSString *clientId; // @dynamic clientId;
+@property(copy, nonatomic) NSString *deviceId; // @dynamic deviceId;
 
 @end
 

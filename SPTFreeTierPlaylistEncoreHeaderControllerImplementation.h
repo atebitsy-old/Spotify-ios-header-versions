@@ -44,9 +44,11 @@
     VISREFPlaylistContextMenuViewModel *_contextMenuViewModel;
     id <SPTSortingFilteringUIFactory> _sortingFilteringUIFactory;
     UIView *_searchView;
+    double _topAccessoryViewHeight;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) double topAccessoryViewHeight; // @synthesize topAccessoryViewHeight=_topAccessoryViewHeight;
 @property(retain, nonatomic) UIView *searchView; // @synthesize searchView=_searchView;
 @property(retain, nonatomic) id <SPTSortingFilteringUIFactory> sortingFilteringUIFactory; // @synthesize sortingFilteringUIFactory=_sortingFilteringUIFactory;
 @property(retain, nonatomic) VISREFPlaylistContextMenuViewModel *contextMenuViewModel; // @synthesize contextMenuViewModel=_contextMenuViewModel;
@@ -78,7 +80,6 @@
 - (void)sortingFilteringPicker:(id)arg1 deselectedFilterRule:(id)arg2;
 - (void)didCancelSortingFilteringPicker:(id)arg1 reason:(unsigned long long)arg2;
 - (void)sortingFilteringPicker:(id)arg1 selectedSortRule:(id)arg2;
-- (double)topAccessoryViewHeight;
 - (void)viewModel:(id)arg1 offlineAvailabilityChanged:(unsigned long long)arg2;
 - (void)filterFieldTappedWithSender:(id)arg1;
 - (void)filterButtonTappedWithSender:(id)arg1;

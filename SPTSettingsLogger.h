@@ -15,6 +15,7 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
+- (void)logSettingMenuCookieSettingsAtItemIndex:(int)arg1;
 - (void)logSettingsMenuPrivacyPolicyAtItemIndex:(int)arg1;
 - (void)logSettingsMenuVoiceTermsConditionsAtItemIndex:(int)arg1;
 - (void)logSettingsMenuTermsConditionsAtItemIndex:(int)arg1;

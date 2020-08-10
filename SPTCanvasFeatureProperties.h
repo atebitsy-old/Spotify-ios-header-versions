@@ -12,7 +12,6 @@
 
 @interface SPTCanvasFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
-    _Bool _canvasstateGabitoEnabled;
     _Bool _canvasNoCacheEnabled;
     _Bool _canvasPlaylistEnabled;
     _Bool _canvasAbSettingsEnabled;
@@ -30,7 +29,6 @@
 @property(readonly, nonatomic) _Bool canvasAbSettingsEnabled; // @synthesize canvasAbSettingsEnabled=_canvasAbSettingsEnabled;
 @property(readonly, nonatomic) _Bool canvasPlaylistEnabled; // @synthesize canvasPlaylistEnabled=_canvasPlaylistEnabled;
 @property(readonly, nonatomic) _Bool canvasNoCacheEnabled; // @synthesize canvasNoCacheEnabled=_canvasNoCacheEnabled;
-@property(readonly, nonatomic) _Bool canvasstateGabitoEnabled; // @synthesize canvasstateGabitoEnabled=_canvasstateGabitoEnabled;
 - (unsigned long long)mapCanvasAbToggleToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

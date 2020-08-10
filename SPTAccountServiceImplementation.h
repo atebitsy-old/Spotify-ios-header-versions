@@ -10,7 +10,7 @@
 #import "SPTExternalLinkControllerCampaignDelegate-Protocol.h"
 
 @class NSString, SPTAccountCurrentProductMonitor, SPTAccountExternalLinkController, SPTAccountProductActivationUserFeedbackController, SPTAllocationContext;
-@protocol InAppPurchaseFeature, SPTAccountProductActivationController, SPTAccountProductInformationController, SPTAccountTrialService, SPTContainerService, SPTLoginDelayedSignupService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationApplicationService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature;
+@protocol InAppPurchaseFeature, SPTAccountProductActivationController, SPTAccountProductInformationController, SPTAccountTrialService, SPTContainerService, SPTLoginDelayedSignupService, SPTSessionService, SPTSettingsFeature, SPTUIPresentationApplicationService, SPTURIDispatchService, SPTWebViewFeature;
 
 @interface SPTAccountServiceImplementation : NSObject <SPTExternalLinkControllerCampaignDelegate, SPTAccountService>
 {
@@ -22,7 +22,6 @@
     id <SPTWebViewFeature> _webViewFeature;
     id <SPTAccountTrialService> _accountTrialService;
     id <SPTLoginDelayedSignupService> _delayedSignupService;
-    id <SPTUIPresentationService> _uiPresentationService;
     id <SPTUIPresentationApplicationService> _uiPresentationApplicationService;
     id <SPTAccountProductInformationController> _productInformationController;
     id <SPTAccountProductActivationController> _productActivationController;
@@ -39,7 +38,6 @@
 @property(retain, nonatomic) id <SPTAccountProductActivationController> productActivationController; // @synthesize productActivationController=_productActivationController;
 @property(retain, nonatomic) id <SPTAccountProductInformationController> productInformationController; // @synthesize productInformationController=_productInformationController;
 @property(nonatomic) __weak id <SPTUIPresentationApplicationService> uiPresentationApplicationService; // @synthesize uiPresentationApplicationService=_uiPresentationApplicationService;
-@property(nonatomic) __weak id <SPTUIPresentationService> uiPresentationService; // @synthesize uiPresentationService=_uiPresentationService;
 @property(nonatomic) __weak id <SPTLoginDelayedSignupService> delayedSignupService; // @synthesize delayedSignupService=_delayedSignupService;
 @property(nonatomic) __weak id <SPTAccountTrialService> accountTrialService; // @synthesize accountTrialService=_accountTrialService;
 @property(nonatomic) __weak id <SPTWebViewFeature> webViewFeature; // @synthesize webViewFeature=_webViewFeature;

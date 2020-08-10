@@ -7,6 +7,7 @@
 #import "_TtC28EncoreIntegrationFeatureImpl18ComponentFactories.h"
 
 @interface _TtC28EncoreIntegrationFeatureImpl18ComponentFactories (EncoreIntegrationFeatureImpl6)
-- (id)makeTrackRowChartModelHelper;
+- (id)makeTrackRowArtist:(long long)arg1;
+- (id)makeTrackRowArtist;
 @end
 

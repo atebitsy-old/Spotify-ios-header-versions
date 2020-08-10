@@ -6,12 +6,12 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTStorylinesService-Protocol.h"
+#import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPersistentCache, SPTStorylinesFeatureProperties, SPTStorylinesNowPlayingScrollProvider;
 @protocol FollowFeature, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTGLUEService, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingScrollDataSource, SPTNowPlayingService, SPTPlayerFeature, SPTRemoteConfigurationService, SPTUBIService, SPTURIDispatchService;
 
-@interface SPTStorylinesServiceImplementation : NSObject <SPTStorylinesService>
+@interface SPTStorylinesServiceImplementation : NSObject <SPTService>
 {
     SPTPersistentCache *_persistentCache;
     id <SPTContainerService> _containerService;

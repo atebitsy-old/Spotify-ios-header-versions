@@ -8,7 +8,7 @@
 
 @interface _TtC22CoreSessionFeatureImpl18CoreSessionService : NSObject
 {
-    // Error parsing type: , name: sessionService
+    // Error parsing type: , name: _sessionService
 }
 
 + (id)serviceIdentifier;
@@ -27,7 +27,6 @@
 - (id)provideCosmosRouter;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 
 @end
 

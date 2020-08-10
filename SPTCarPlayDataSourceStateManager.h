@@ -37,7 +37,6 @@
 - (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)carplaySessionDidDisconnect;
 - (void)applyRestricedDataSourceForReason:(unsigned long long)arg1;
-- (void)setDataSourceAccessory:(id)arg1;
 - (void)setupLoggedInDataSourcesWithExternalIntegrationPlatform:(id)arg1 imageLoaderFactory:(id)arg2 connectManager:(id)arg3 networkConnectivityController:(id)arg4 properties:(id)arg5 logger:(id)arg6 actionLogger:(id)arg7 accessory:(id)arg8;
 - (void)tearDownForRestricedDataSource;
 - (void)dealloc;

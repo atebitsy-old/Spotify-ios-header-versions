@@ -16,6 +16,7 @@
 
 // Remaining properties
 @property(copy, nonatomic) NSString *accessToken; // @dynamic accessToken;
+@property(nonatomic) int accessTokenExpiresIn; // @dynamic accessTokenExpiresIn;
 @property(copy, nonatomic) NSData *storedCredential; // @dynamic storedCredential;
 @property(copy, nonatomic) NSString *username; // @dynamic username;
 

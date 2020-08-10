@@ -8,7 +8,7 @@
 
 #import "SPTPodcastRecommendationsHubViewProvider-Protocol.h"
 
-@class HUBComponentDefaults, NSString, NSURL, SPTPodcastRecommendationsContentOperationsFactory;
+@class HUBComponentDefaults, NSString, NSURL, SPTPodcastRecommendationsContentOperationsFactory, SPTPodcastRecommendationsLoggerFactory;
 @protocol SPTHubCommandHandlerFactory, SPTHubsRendererFactory, SPTHugsFactory;
 
 @interface SPTPodcastRecommendationsHubManager : NSObject <SPTPodcastRecommendationsHubViewProvider>
@@ -21,9 +21,11 @@
     SPTPodcastRecommendationsContentOperationsFactory *_contentOperationsFactory;
     HUBComponentDefaults *_componentDefaults;
     id <SPTHubCommandHandlerFactory> _commandHandlerFactory;
+    SPTPodcastRecommendationsLoggerFactory *_loggerFactory;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) SPTPodcastRecommendationsLoggerFactory *loggerFactory; // @synthesize loggerFactory=_loggerFactory;
 @property(readonly, nonatomic) id <SPTHubCommandHandlerFactory> commandHandlerFactory; // @synthesize commandHandlerFactory=_commandHandlerFactory;
 @property(readonly, nonatomic) HUBComponentDefaults *componentDefaults; // @synthesize componentDefaults=_componentDefaults;
 @property(readonly, nonatomic) SPTPodcastRecommendationsContentOperationsFactory *contentOperationsFactory; // @synthesize contentOperationsFactory=_contentOperationsFactory;
@@ -35,7 +37,7 @@
 - (id)commandDispatcherForURL:(id)arg1 referrerIdentifier:(id)arg2;
 - (id)hubViewWithFrame:(struct CGRect)arg1;
 - (id)viewModelProvider;
-- (id)initWithServiceIdentifier:(id)arg1 URL:(id)arg2 referrerIdentifier:(id)arg3 hubsRendererFactory:(id)arg4 hugsFactory:(id)arg5 contentOperationsFactory:(id)arg6;
+- (id)initWithServiceIdentifier:(id)arg1 URL:(id)arg2 referrerIdentifier:(id)arg3 hubsRendererFactory:(id)arg4 hugsFactory:(id)arg5 contentOperationsFactory:(id)arg6 loggerFactory:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

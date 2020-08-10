@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTSortingFilteringFilterRule-Protocol.h"
-
 @class NSString;
 
-@interface _TtC27ListeningHistoryFeatureImpl26ListeningHistoryFilterRule : NSObject <SPTSortingFilteringFilterRule>
+@interface _TtC27ListeningHistoryFeatureImpl26ListeningHistoryFilterRule : NSObject
 {
     // Error parsing type: , name: ruleTitle
     // Error parsing type: , name: ruleIdentifier

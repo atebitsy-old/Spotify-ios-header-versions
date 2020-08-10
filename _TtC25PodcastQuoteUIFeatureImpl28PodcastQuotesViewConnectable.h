@@ -4,18 +4,13 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import <objc/NSObject.h>
+#import <swiftCore/_TtCs12_SwiftObject.h>
 
-@interface _TtC25PodcastQuoteUIFeatureImpl28PodcastQuotesViewConnectable : NSObject
+@interface _TtC25PodcastQuoteUIFeatureImpl28PodcastQuotesViewConnectable : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: view
     // Error parsing type: , name: componentFactory
-    // Error parsing type: , name: containerViewClosure
-    // Error parsing type: , name: errorLabelClosure
-    // Error parsing type: , name: eventConsumer
 }
-
-- (void).cxx_destruct;
-- (id)init;
 
 @end
 

@@ -6,9 +6,10 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol SPTYYourLibraryBetaExperienceRegistry, _TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_;
+@protocol SPTYYourLibraryBetaExperienceRegistry, _TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_, _TtP22YourLibraryBetaFeature33SPTYourLibraryBetaFeedbackFactory_;
 
 @protocol _TtP22YourLibraryBetaFeature25SPTYourLibraryBetaService_ <SPTService>
+- (id <_TtP22YourLibraryBetaFeature33SPTYourLibraryBetaFeedbackFactory_>)provideFeedbackFactory;
 - (id <SPTYYourLibraryBetaExperienceRegistry>)provideExperienceRegistry;
 - (id <_TtP22YourLibraryBetaFeature29SPTYourLibraryBetaTestManager_>)provideTestManager;
 @end

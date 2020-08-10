@@ -6,10 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
-@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryPlaylists_ItemList_CreatePlaylistEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_HiddenContentEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_ItemEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_LikedSongsEventFactory;
+@class NSString, NSURL;
+@protocol SPTUBIEventLocation, SPTUBIMobileYourLibraryPlaylists_ItemList_AssistantEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_CreatePlaylistEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_HiddenContentEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_ItemEventFactory, SPTUBIMobileYourLibraryPlaylists_ItemList_LikedSongsEventFactory;
 
 @protocol SPTUBIMobileYourLibraryPlaylists_ItemListEventFactory <NSObject>
+- (id <SPTUBIMobileYourLibraryPlaylists_ItemList_AssistantEventFactory>)assistantFactoryWithIdentifier:(NSString *)arg1 position:(long long)arg2;
 - (id <SPTUBIMobileYourLibraryPlaylists_ItemList_HiddenContentEventFactory>)hiddenContentFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileYourLibraryPlaylists_ItemList_ItemEventFactory>)itemFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;
 - (id <SPTUBIMobileYourLibraryPlaylists_ItemList_LikedSongsEventFactory>)likedSongsFactoryWithPosition:(long long)arg1 uri:(NSURL *)arg2;

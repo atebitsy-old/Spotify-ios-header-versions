@@ -13,6 +13,18 @@
     // Error parsing type: , name: layoutTraits
 }
 
++ (id)metadataPlayingKey;
++ (id)mainImageCustomDataStyleRoundedCorners;
++ (id)mainImageCustomDataStyleCircular;
++ (id)mainImageCustomDataStyleNormal;
++ (id)mainImageCustomDataStyleKey;
++ (id)customDataSubtitleAccessoryTypeAgeRestricted;
++ (id)customDataSubtitleAccessoryTypeExplicit;
++ (id)customDataSubtitleAccessoryTypeNone;
++ (id)customDataTitleTwoLinesKey;
++ (id)customDataSubtitleAccessoryTypeKey;
++ (id)customDataTrailingViewAccessibilityLabelKey;
++ (id)customDataDisabledKey;
 - (void).cxx_destruct;
 - (id)initWithTheme:(id)arg1;
 - (struct CGSize)preferredViewSizeForDisplayingModel:(id)arg1 containerViewSize:(struct CGSize)arg2;

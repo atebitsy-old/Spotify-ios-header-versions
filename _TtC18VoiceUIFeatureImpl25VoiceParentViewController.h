@@ -8,7 +8,6 @@
 
 @interface _TtC18VoiceUIFeatureImpl25VoiceParentViewController : UIViewController
 {
-    // Error parsing type: , name: touchLocation
     // Error parsing type: , name: $__lazy_storage_$_notchView
 }
 

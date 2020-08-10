@@ -78,7 +78,7 @@
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;
 - (void)podcastPlayerStateDidChange:(id)arg1;
-- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2;
+- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2 fromTrackURL:(id)arg3;
 - (_Bool)navigateToExternalURL:(id)arg1;
 - (void)navigateToPodcast;
 - (void)playEpisodeAtPosition:(double)arg1;
@@ -90,6 +90,7 @@
 - (void)togglePlayback;
 - (_Bool)isActive;
 @property(readonly, nonatomic) _Bool isMusicInjectionEpisode;
+@property(readonly, nonatomic) _Bool isMusicAndTalk;
 @property(readonly, nonatomic) _Bool isExplicit;
 @property(readonly, nonatomic) _Bool isPlayed;
 @property(readonly, nonatomic) double duration;

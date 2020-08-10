@@ -10,7 +10,7 @@
 {
 }
 
-+ (id)provideBrowseComponentsWithTheme:(id)arg1 promoComponentEnabled:(_Bool)arg2 headerV2Enabled:(_Bool)arg3;
++ (id)provideBrowseComponentsWithTheme:(id)arg1 promoComponentEnabled:(_Bool)arg2;
 
 @end
 

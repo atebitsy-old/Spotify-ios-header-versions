@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastDataLoaderRequestToken-Protocol.h"
-
-@interface SPTRequestLifetime : NSObject <SPTPodcastDataLoaderRequestToken>
+@interface SPTRequestLifetime : NSObject
 {
     _Bool _acquired;
     CDUnknownBlockType _cancelBlock;

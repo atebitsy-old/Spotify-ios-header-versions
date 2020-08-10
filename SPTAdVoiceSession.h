@@ -8,7 +8,7 @@
 
 #import "SPTAdsBaseRegistryObserver-Protocol.h"
 
-@class NSString, SPTAdFeatureFlagChecks, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdPlayerObservable, SPTAdVoiceManager, SPTNowPlayingAudioAdMode;
+@class NSString, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdPlayerObservable, SPTAdVoiceManager, SPTAdsFeatureProperties, SPTNowPlayingAudioAdMode;
 @protocol SPTAccessoryStateManager, SPTAdsBaseCosmosBridge, SPTAdsBaseRegistry, SPTEventSender, SPTLinkDispatcher, SPTVoiceLibraryService, SPTVoiceLibrarySession;
 
 @interface SPTAdVoiceSession : NSObject <SPTAdsBaseRegistryObserver>
@@ -22,7 +22,7 @@
     SPTAdVoiceManager *_adVoiceManager;
     SPTNowPlayingAudioAdMode *_audioAdMode;
     SPTAdPlayerObservable *_playerObserver;
-    SPTAdFeatureFlagChecks *_featureFlagChecker;
+    SPTAdsFeatureProperties *_featureProperties;
     id <SPTAccessoryStateManager> _accessoryStateManager;
     id <SPTEventSender> _eventSender;
 }
@@ -30,7 +30,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <SPTEventSender> eventSender; // @synthesize eventSender=_eventSender;
 @property(retain, nonatomic) id <SPTAccessoryStateManager> accessoryStateManager; // @synthesize accessoryStateManager=_accessoryStateManager;
-@property(retain, nonatomic) SPTAdFeatureFlagChecks *featureFlagChecker; // @synthesize featureFlagChecker=_featureFlagChecker;
+@property(retain, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(retain, nonatomic) SPTAdPlayerObservable *playerObserver; // @synthesize playerObserver=_playerObserver;
 @property(retain, nonatomic) SPTNowPlayingAudioAdMode *audioAdMode; // @synthesize audioAdMode=_audioAdMode;
 @property(retain, nonatomic) SPTAdVoiceManager *adVoiceManager; // @synthesize adVoiceManager=_adVoiceManager;
@@ -43,7 +43,7 @@
 - (id)createVoiceSessionWithAdEntity:(id)arg1;
 - (void)adRegistry:(id)arg1 didProcessAdEntity:(id)arg2 event:(long long)arg3;
 - (void)dealloc;
-- (id)initWithAdRegistry:(id)arg1 voiceService:(id)arg2 linkDispatcher:(id)arg3 cosmosBridge:(id)arg4 audioAdMode:(id)arg5 playerObserver:(id)arg6 featureFlagChecker:(id)arg7 accessoryStateManager:(id)arg8 eventSender:(id)arg9 actionsHandler:(id)arg10;
+- (id)initWithAdRegistry:(id)arg1 voiceService:(id)arg2 linkDispatcher:(id)arg3 cosmosBridge:(id)arg4 audioAdMode:(id)arg5 playerObserver:(id)arg6 featureProperties:(id)arg7 accessoryStateManager:(id)arg8 eventSender:(id)arg9 actionsHandler:(id)arg10;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

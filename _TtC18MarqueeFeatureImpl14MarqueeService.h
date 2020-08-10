@@ -10,6 +10,10 @@
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: adsBaseService
+    // Error parsing type: , name: slateService
+    // Error parsing type: , name: sessionService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: inAppMessageService
     // Error parsing type: , name: $__lazy_storage_$_marqueeController
 }
 

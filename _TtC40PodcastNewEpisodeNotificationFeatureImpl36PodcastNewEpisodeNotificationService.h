@@ -9,6 +9,12 @@
 @interface _TtC40PodcastNewEpisodeNotificationFeatureImpl36PodcastNewEpisodeNotificationService : NSObject
 {
     // Error parsing type: , name: containerService
+    // Error parsing type: , name: collectionPlatformService
+    // Error parsing type: , name: glueService
+    // Error parsing type: , name: networkService
+    // Error parsing type: , name: podcastDAL
+    // Error parsing type: , name: $__lazy_storage_$_nenMobiusOrchestrator
+    // Error parsing type: , name: $__lazy_storage_$_nenViewProvider
 }
 
 + (id)serviceIdentifier;
@@ -16,6 +22,7 @@
 - (id)init;
 - (void)unload;
 - (void)load;
+- (id)provideNENViewProviderWithUrl:(id)arg1;
 - (void)configureWithServices:(id)arg1;
 
 @end

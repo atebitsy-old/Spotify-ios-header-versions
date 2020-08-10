@@ -14,8 +14,8 @@
 - (id).cxx_construct;
 - (void).cxx_destruct;
 - (const struct GoogleSignInCredential *)cpp;
-- (id)initWithAuthCode:(id)arg1;
-- (id)initWithAuthCode:(id)arg1 redirectURI:(id)arg2;
+- (id)initWithAuthCode:(id)arg1 clientId:(id)arg2;
+- (id)initWithAuthCode:(id)arg1 redirectURI:(id)arg2 clientId:(id)arg3;
 
 @end
 

@@ -10,7 +10,8 @@
 
 @interface _TtC18MarqueeFeatureImpl23AdsBaseRegistryDelegate : NSObject <SPTAdsBaseRegistryObserver>
 {
-    // Error parsing type: , name: handler
+    // Error parsing type: , name: triggerSlotHandler
+    // Error parsing type: , name: sendEventHandler
 }
 
 - (void).cxx_destruct;

@@ -18,6 +18,7 @@
 + (id)factoryWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)hitUiReveal;
 - (id)hitUiNavigateWithDestination:(id)arg1;
 - (id)hitPlayWithItemToBePlayed:(id)arg1;
 - (id)impression;

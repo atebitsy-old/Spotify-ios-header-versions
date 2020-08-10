@@ -6,7 +6,7 @@
 
 #import <objc/NSObject.h>
 
-@class _TtC20SingalongFeatureImpl11TestManager;
+@protocol _TtP20SingalongFeatureImpl11TestManager_;
 
 @interface _TtC20SingalongFeatureImpl16SingalongService : NSObject
 {
@@ -20,7 +20,7 @@
 - (id)init;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
-@property(nonatomic, retain) _TtC20SingalongFeatureImpl11TestManager *testManager; // @synthesize testManager;
+@property(nonatomic, retain) id <_TtP20SingalongFeatureImpl11TestManager_> testManager; // @synthesize testManager;
 
 @end
 

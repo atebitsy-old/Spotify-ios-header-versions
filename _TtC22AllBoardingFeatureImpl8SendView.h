@@ -8,7 +8,6 @@
 
 @interface _TtC22AllBoardingFeatureImpl8SendView : UIView
 {
-    // Error parsing type: , name: theme
     // Error parsing type: , name: $__lazy_storage_$_label
     // Error parsing type: , name: activityIndicator
     // Error parsing type: , name: labelText

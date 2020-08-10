@@ -12,6 +12,9 @@
     // Error parsing type: , name: quickScrollView
     // Error parsing type: , name: collectionView
     // Error parsing type: , name: labelParser
+    // Error parsing type: , name: eventConsumer
+    // Error parsing type: , name: style
+    // Error parsing type: , name: userDragging
 }
 
 @end
