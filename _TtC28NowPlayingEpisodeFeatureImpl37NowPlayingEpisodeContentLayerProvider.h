@@ -8,12 +8,8 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl37NowPlayingEpisodeContentLayerProvider : NSObject
 {
-    // Error parsing type: , name: isMixedMediaEpisodeEnabled
-    // Error parsing type: , name: episodePlayer
-    // Error parsing type: , name: imageLoader
 }
 
-- (void).cxx_destruct;
 - (id)init;
 
 @end

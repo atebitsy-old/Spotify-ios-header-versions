@@ -5,11 +5,13 @@
 //
 
 @class NSString, UIViewController;
-@protocol SPTPageCreationContext;
+@protocol SPTPageController, SPTPageCreationContext;
 
 @protocol SPTYourLibraryBetaExperience
-- (UIViewController *)provideViewControllerWithPageCreationContext:(id <SPTPageCreationContext>)arg1;
+- (UIViewController<SPTPageController> *)provideViewControllerWithPageCreationContext:(id <SPTPageCreationContext>)arg1;
+- (void)startExperience;
 - (void)stopExperience;
+@property(nonatomic, readonly) _Bool isDefaultExperience;
 @property(nonatomic, readonly) NSString *identifier;
 @end
 

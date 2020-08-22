@@ -10,25 +10,29 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTExternalIntegrationPodcastContentFactory;
-@protocol SPTExternalIntegrationContentService, SPTPodcastFeature, SPTPodcastUIService;
+@protocol SPTExternalIntegrationContentService, SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastUIService, _TtP17PodcastDALFeature20SPTPodcastDALService_;
 
 @interface SPTExternalIntegrationPodcastContentProviderService : NSObject <SPTService, SPTExternalIntegrationContentProvider>
 {
     id <SPTExternalIntegrationContentService> _contentService;
-    id <SPTPodcastFeature> _podcastService;
+    id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     id <SPTPodcastUIService> _podcastUIService;
     SPTExternalIntegrationPodcastContentFactory *_contentFactory;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
+    id <SPTPodcastDataLoader> _podcastDataLoader;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPodcastDataLoader> podcastDataLoader; // @synthesize podcastDataLoader=_podcastDataLoader;
+@property(readonly, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(readonly, nonatomic) SPTExternalIntegrationPodcastContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
 @property(readonly, nonatomic) __weak id <SPTPodcastUIService> podcastUIService; // @synthesize podcastUIService=_podcastUIService;
-@property(readonly, nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
+@property(readonly, nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
 @property(readonly, nonatomic) __weak id <SPTExternalIntegrationContentService> contentService; // @synthesize contentService=_contentService;
 - (id)jsonParsingError:(id)arg1;
 - (id)createPlaceholderContentItemForURI:(id)arg1;
-- (void)resolveChildContentWithCollectionPodcastURI:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)resolveChildContentWithCollectionPodcastURI:(id)arg1 options:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (void)resolveChildContentOfParentWithShowURI:(id)arg1 options:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (void)resolveChildContentOfParentWithURI:(id)arg1 options:(id)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
 - (long long)priorityForChildContentOfParentWithURI:(id)arg1;

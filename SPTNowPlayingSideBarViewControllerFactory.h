@@ -46,6 +46,7 @@
 @property(retain, nonatomic) SPTNowPlayingAuxiliaryActionsHandlerImplementation *auxiliaryActionsHandler; // @synthesize auxiliaryActionsHandler=_auxiliaryActionsHandler;
 @property(retain, nonatomic) SPTNowPlayingLogger *nowPlayingLogger; // @synthesize nowPlayingLogger=_nowPlayingLogger;
 @property(retain, nonatomic) SPTNowPlayingModel *nowPlayingModel; // @synthesize nowPlayingModel=_nowPlayingModel;
+- (id)provideGaiaDevicesAvailableViewController;
 - (id)provideSkipForwardButtonViewController;
 - (id)provideSkipBackwardButtonViewController;
 - (id)provideSkipPreviousButtonViewController;

@@ -18,6 +18,7 @@
 - (_Bool)resumePodcast:(NSURL *)arg1 episodeUrl:(NSURL *)arg2;
 - (_Bool)seekInPodcast:(NSURL *)arg1 episodeUrl:(NSURL *)arg2 toPosition:(double)arg3;
 - (_Bool)isActiveContextURI:(NSURL *)arg1;
+- (_Bool)isPlayingEpisodeURL:(NSURL *)arg1;
 - (_Bool)isActiveEpisodeURL:(NSURL *)arg1 inEntityURL:(NSURL *)arg2;
 - (void)pausePodcast:(NSURL *)arg1 startEpisodeUrl:(NSURL *)arg2;
 - (void)playPodcastWithContext:(SPTPlayerContext *)arg1 itemID:(NSString *)arg2 fromTimestamp:(NSNumber *)arg3;

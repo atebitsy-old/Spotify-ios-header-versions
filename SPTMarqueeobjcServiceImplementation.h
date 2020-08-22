@@ -9,7 +9,7 @@
 #import "SPTMarqueeobjcService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTMarqueeController;
-@protocol SPTAdsBaseService, SPTContainerService, SPTEventSenderService, SPTGLUEService, SPTInAppMessageService, SPTMarqueeTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
+@protocol SPTAdsBaseService, SPTAdsMarqueeLogger, SPTContainerService, SPTGLUEService, SPTInAppMessageService, SPTMarqueeTestManager, SPTRemoteConfigurationService, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTWebViewFeature, SlateFeature;
 
 @interface SPTMarqueeobjcServiceImplementation : NSObject <SPTMarqueeobjcService>
 {
@@ -17,7 +17,6 @@
     id <SPTGLUEService> _glueService;
     id <SPTWebViewFeature> _webviewService;
     id <SPTUIPresentationService> _presentationService;
-    id <SPTEventSenderService> _eventSenderService;
     id <SPTAdsBaseService> _adsBaseService;
     id <SlateFeature> _slateService;
     id <SPTURIDispatchService> _URIDispatchService;
@@ -26,10 +25,12 @@
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTMarqueeController *_marqueeController;
     id <SPTMarqueeTestManager> _marqueeTestManager;
+    id <SPTAdsMarqueeLogger> _marqueeEventLogger;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTAdsMarqueeLogger> marqueeEventLogger; // @synthesize marqueeEventLogger=_marqueeEventLogger;
 @property(retain, nonatomic) id <SPTMarqueeTestManager> marqueeTestManager; // @synthesize marqueeTestManager=_marqueeTestManager;
 @property(retain, nonatomic) SPTMarqueeController *marqueeController; // @synthesize marqueeController=_marqueeController;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
@@ -38,11 +39,11 @@
 @property(nonatomic) __weak id <SPTURIDispatchService> URIDispatchService; // @synthesize URIDispatchService=_URIDispatchService;
 @property(nonatomic) __weak id <SlateFeature> slateService; // @synthesize slateService=_slateService;
 @property(nonatomic) __weak id <SPTAdsBaseService> adsBaseService; // @synthesize adsBaseService=_adsBaseService;
-@property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUIPresentationService> presentationService; // @synthesize presentationService=_presentationService;
 @property(nonatomic) __weak id <SPTWebViewFeature> webviewService; // @synthesize webviewService=_webviewService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
+- (void)injectMarqueeAdsLogger:(id)arg1;
 - (void)loadMarqueeController;
 - (void)unload;
 - (void)load;

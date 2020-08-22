@@ -13,11 +13,15 @@
 
 @interface SPTEncryptedClientTokenObserverImplementation : NSObject <SPTEncryptedClientTokenObserver>
 {
+    struct shared_ptr<spotify::signals::scoped_connection> _connection;
     id <SPTEncryptedClientTokenObserverDelegate> delegate;
 }
 
+- (id).cxx_construct;
 - (void).cxx_destruct;
 @property(nonatomic) __weak id <SPTEncryptedClientTokenObserverDelegate> delegate; // @synthesize delegate;
+- (void)subscribeToAcquirer:(weak_ptr_e1a4dc17)arg1;
+- (id)initWithCppClientTokenAcquirer:(weak_ptr_e1a4dc17)arg1;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

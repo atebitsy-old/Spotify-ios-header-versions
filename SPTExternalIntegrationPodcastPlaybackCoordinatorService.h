@@ -10,18 +10,24 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTExternalIntegrationPlaybackServiceImplementation, SPTExternalIntegrationPodcastContentFactory;
-@protocol SPTPodcastFeature;
+@protocol SPTPodcastDataLoader, SPTPodcastEntityDataLoader, SPTPodcastFeature, _TtP17PodcastDALFeature20SPTPodcastDALService_;
 
 @interface SPTExternalIntegrationPodcastPlaybackCoordinatorService : NSObject <SPTService, SPTExternalIntegrationPlaybackCoordinator>
 {
     SPTExternalIntegrationPlaybackServiceImplementation *_playbackService;
     id <SPTPodcastFeature> _podcastService;
+    id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     SPTExternalIntegrationPodcastContentFactory *_contentFactory;
+    id <SPTPodcastEntityDataLoader> _podcastEntityDataLoader;
+    id <SPTPodcastDataLoader> _podcastDataLoader;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTPodcastDataLoader> podcastDataLoader; // @synthesize podcastDataLoader=_podcastDataLoader;
+@property(readonly, nonatomic) id <SPTPodcastEntityDataLoader> podcastEntityDataLoader; // @synthesize podcastEntityDataLoader=_podcastEntityDataLoader;
 @property(readonly, nonatomic) SPTExternalIntegrationPodcastContentFactory *contentFactory; // @synthesize contentFactory=_contentFactory;
+@property(readonly, nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
 @property(readonly, nonatomic) __weak id <SPTPodcastFeature> podcastService; // @synthesize podcastService=_podcastService;
 @property(readonly, nonatomic) __weak SPTExternalIntegrationPlaybackServiceImplementation *playbackService; // @synthesize playbackService=_playbackService;
 - (id)jsonParsingError:(id)arg1;

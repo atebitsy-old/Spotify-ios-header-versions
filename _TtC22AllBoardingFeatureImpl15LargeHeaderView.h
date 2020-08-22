@@ -11,13 +11,15 @@
     // Error parsing type: , name: $__lazy_storage_$_label
     // Error parsing type: , name: searchBarContainerView
     // Error parsing type: , name: $__lazy_storage_$_searchBar
-    // Error parsing type: , name: searchBarHeightConstraint
+    // Error parsing type: , name: $__lazy_storage_$_searchBarHeightConstraint
+    // Error parsing type: , name: $__lazy_storage_$_searchBarTopConstraint
     // Error parsing type: , name: titleText
     // Error parsing type: , name: theme
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)layoutSubviews;
 - (id)initWithCoder:(id)arg1;
 
 @end

@@ -13,12 +13,14 @@
 @interface SPTGLUEFeatureProperties : NSObject <SPTRemoteConfigurationProperties>
 {
     _Bool _encoreAlbumHeaderEnabled;
+    _Bool _encoreArtistHeaderEnabled;
     _Bool _encorePlaylistHeaderEnabled;
     _Bool _visrefAnimatedHeartEnabled;
 }
 
 @property(readonly, nonatomic) _Bool visrefAnimatedHeartEnabled; // @synthesize visrefAnimatedHeartEnabled=_visrefAnimatedHeartEnabled;
 @property(readonly, nonatomic) _Bool encorePlaylistHeaderEnabled; // @synthesize encorePlaylistHeaderEnabled=_encorePlaylistHeaderEnabled;
+@property(readonly, nonatomic) _Bool encoreArtistHeaderEnabled; // @synthesize encoreArtistHeaderEnabled=_encoreArtistHeaderEnabled;
 @property(readonly, nonatomic) _Bool encoreAlbumHeaderEnabled; // @synthesize encoreAlbumHeaderEnabled=_encoreAlbumHeaderEnabled;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;

@@ -13,8 +13,8 @@
 #import "SPTPodcastEpisodeSectionFilterHeaderViewDelegate-Protocol.h"
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcast, SPTPodcastEpisodeSectionFilterHeaderView, SPTPodcastFilterTableFooterView, SPTTheme;
-@protocol SPTCollectionLogger, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastPlayer, SPTPodcastSortingProvider, SPTPodcastTestManager;
+@class NSArray, NSCache, NSPredicate, NSSortDescriptor, NSString, NSURL, SPTPodcastEpisodeSectionFilterHeaderView, SPTPodcastFilterTableFooterView, SPTTheme;
+@protocol SPTCollectionLogger, SPTPodcast, SPTPodcastEpisodeCellActionTarget, SPTPodcastEpisodeCellConfigurator, SPTPodcastEpisodeViewModelSectionDelegate, SPTPodcastLogger><SPTPodcastUBILogger, SPTPodcastPlayer, SPTPodcastSortingProvider, SPTPodcastTestManager;
 
 @interface SPTPodcastEpisodeSectionViewModel : NSObject <SPTPodcastEpisodeSectionFilterHeaderViewDelegate, SPTPodcastEpisodeCellActionHandlerEpisodeProvider, SPTPodcastViewModelSection, SPTCollectionSorting, SPTCollectionFiltering, SPTPodcastEpisodeProgressPolling>
 {
@@ -32,7 +32,7 @@
     id <SPTPodcastEpisodeViewModelSectionDelegate> _delegate;
     id <SPTPodcastEpisodeCellConfigurator> _cellConfigurator;
     SPTTheme *_theme;
-    SPTPodcast *_podcast;
+    id <SPTPodcast> _podcast;
     id <SPTPodcastPlayer> _player;
     NSString *_filterOnLastUpdate;
     SPTPodcastEpisodeSectionFilterHeaderView *_filterHeaderView;
@@ -44,9 +44,11 @@
     id <SPTPodcastSortingProvider> _sortingProvider;
     unsigned long long _sortColumn;
     SPTPodcastFilterTableFooterView *_filterTableFooterView;
+    long long _activeSupplementaryContentIndex;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) long long activeSupplementaryContentIndex; // @synthesize activeSupplementaryContentIndex=_activeSupplementaryContentIndex;
 @property(retain, nonatomic) SPTPodcastFilterTableFooterView *filterTableFooterView; // @synthesize filterTableFooterView=_filterTableFooterView;
 @property(nonatomic) _Bool ascendingSortOrder; // @synthesize ascendingSortOrder=_ascendingSortOrder;
 @property(nonatomic) unsigned long long sortColumn; // @synthesize sortColumn=_sortColumn;
@@ -59,7 +61,7 @@
 @property(retain, nonatomic) SPTPodcastEpisodeSectionFilterHeaderView *filterHeaderView; // @synthesize filterHeaderView=_filterHeaderView;
 @property(copy, nonatomic) NSString *filterOnLastUpdate; // @synthesize filterOnLastUpdate=_filterOnLastUpdate;
 @property(retain, nonatomic) id <SPTPodcastPlayer> player; // @synthesize player=_player;
-@property(retain, nonatomic) SPTPodcast *podcast; // @synthesize podcast=_podcast;
+@property(retain, nonatomic) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) id <SPTPodcastEpisodeCellConfigurator> cellConfigurator; // @synthesize cellConfigurator=_cellConfigurator;
 @property(nonatomic) __weak id <SPTPodcastEpisodeViewModelSectionDelegate> delegate; // @synthesize delegate=_delegate;
@@ -84,7 +86,9 @@
 - (void)updateProgressWithPlayer:(id)arg1;
 - (id)cachedProgressForEpisode:(id)arg1;
 - (void)updateCurrentProgress:(double)arg1 position:(double)arg2 duration:(double)arg3 forEpisode:(id)arg4;
+- (void)updateSupplementaryContent;
 - (long long)indexForEpisodeURL:(id)arg1;
+- (long long)indexOfPlayingEpisode;
 - (long long)indexOfActiveEpisode;
 - (void)filterAction:(id)arg1;
 - (void)updateSortDescriptor;

@@ -18,8 +18,8 @@
     id <FBSDKAppLinkReturnToRefererControllerDelegate> _delegate;
 }
 
-@property(nonatomic) __weak id <FBSDKAppLinkReturnToRefererControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <FBSDKAppLinkReturnToRefererControllerDelegate> delegate; // @synthesize delegate=_delegate;
 - (void)openRefererAppLink:(id)arg1;
 - (void)closeViewAnimated:(_Bool)arg1 explicitlyClosed:(_Bool)arg2;
 - (void)closeViewAnimated:(_Bool)arg1;

@@ -9,7 +9,6 @@
 @protocol SPTSocialListeningTestManager <NSObject>
 @property(readonly, nonatomic) unsigned long long maxMemberCount;
 @property(readonly, nonatomic, getter=isSocialDeviceEnabled) _Bool socialDeviceEnabled;
-@property(readonly, nonatomic) _Bool isShareLinkForSingleModeEnabled;
 @property(readonly, nonatomic, getter=isAllowListen) _Bool allowListen;
 @property(readonly, nonatomic, getter=isNewUIExperienceScannableEnabled) _Bool newUIExperienceScannableEnabled;
 @property(readonly, nonatomic, getter=isNewUIExperienceEnabled) _Bool newUIExperienceEnabled;

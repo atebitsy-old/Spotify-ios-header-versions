@@ -15,10 +15,10 @@
     NSString *_filename;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *filename; // @synthesize filename=_filename;
 @property(readonly, nonatomic) NSData *data; // @synthesize data=_data;
 @property(readonly, copy, nonatomic) NSString *contentType; // @synthesize contentType=_contentType;
-- (void).cxx_destruct;
 - (id)initWithData:(id)arg1 filename:(id)arg2 contentType:(id)arg3;
 
 @end

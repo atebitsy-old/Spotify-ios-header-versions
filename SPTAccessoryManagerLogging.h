@@ -26,7 +26,6 @@
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 - (void)connectActiveDeviceDidChange:(id)arg1;
 - (void)logStreamEndedForPlaybackID:(id)arg1 withAccessory:(id)arg2;
-- (_Bool)applyExtraValidationForAudioOutputRouteMessage:(id)arg1;
 - (id)stringFromAudioRoutePortType:(id)arg1;
 - (void)logAudioRoute:(id)arg1 withPlaybackId:(id)arg2;
 - (void)logAudioRoute:(id)arg1;

@@ -8,8 +8,7 @@
 
 @interface _TtC23YourLibraryXFeatureImpl39YourLibrarySearchPresenterEffectHandler : _TtCs12_SwiftObject
 {
-    // Error parsing type: , name: modalPresentationController
-    // Error parsing type: , name: searchProvider
+    // Error parsing type: , name: linkDispatcher
 }
 
 @end

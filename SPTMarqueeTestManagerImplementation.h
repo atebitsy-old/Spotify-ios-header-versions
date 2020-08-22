@@ -20,6 +20,7 @@
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTMarqueeobjcFeatureProperties *marqueeProperties; // @synthesize marqueeProperties=_marqueeProperties;
 @property(readonly, nonatomic) id <SPTRemoteConfigurationResolver> remoteConfigurationResolver; // @synthesize remoteConfigurationResolver=_remoteConfigurationResolver;
+- (_Bool)isBackendStringsEnabled;
 - (_Bool)isMarqueeEnabled;
 - (id)initWithRemoteConfigurationResolver:(id)arg1;
 

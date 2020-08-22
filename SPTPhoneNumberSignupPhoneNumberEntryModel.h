@@ -13,14 +13,17 @@
     NSDictionary *_allowedCallingCodes;
     NSString *_selectedCountryCode;
     NSString *_nationalPhoneNumber;
+    NSDictionary *_placeholders;
 }
 
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSDictionary *placeholders; // @synthesize placeholders=_placeholders;
 @property(copy, nonatomic) NSString *nationalPhoneNumber; // @synthesize nationalPhoneNumber=_nationalPhoneNumber;
 @property(copy, nonatomic) NSString *selectedCountryCode; // @synthesize selectedCountryCode=_selectedCountryCode;
 @property(readonly, copy, nonatomic) NSDictionary *allowedCallingCodes; // @synthesize allowedCallingCodes=_allowedCallingCodes;
+@property(readonly, copy, nonatomic) NSString *phoneNumberPlaceholder;
 - (void)verifyCountryCodeInCountries;
-- (id)initWithAllowedCallingCodes:(id)arg1 selectedCountryCode:(id)arg2;
+- (id)initWithAllowedCallingCodes:(id)arg1 selectedCountryCode:(id)arg2 phoneNumberPlaceholders:(id)arg3;
 
 @end
 

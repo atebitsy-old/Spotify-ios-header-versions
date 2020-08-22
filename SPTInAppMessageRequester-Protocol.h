@@ -9,7 +9,7 @@
 @class NSString;
 
 @protocol SPTInAppMessageRequester <NSObject>
-- (void)requestMessagePreviewForCreativeID:(NSString *)arg1 triggerURI:(NSString *)arg2 isRelayCreative:(_Bool)arg3;
+- (void)requestMessagePreviewForCreativeID:(NSString *)arg1 triggerURI:(NSString *)arg2;
 - (void)requestMessageForPattern:(NSString *)arg1 triggerType:(long long)arg2;
 @end
 

@@ -19,7 +19,7 @@
 @property(readonly, copy, nonatomic) NSString *interactionType; // @synthesize interactionType=_interactionType;
 - (id)initWithLocation:(id)arg1 interactionType:(id)arg2;
 - (id)initWithInteractionLocation:(id)arg1;
-- (id)initWithApplicationId:(id)arg1 specificationId:(id)arg2 pageReason:(id)arg3 specificationCommitHash:(id)arg4 generatorCommitHash:(id)arg5 interactionType:(id)arg6 specificationVersion:(id)arg7 eventPathComponents:(id)arg8 impressionEnabled:(_Bool)arg9;
+- (id)initWithApplicationId:(id)arg1 specificationCommitHash:(id)arg2 generatorCommitHash:(id)arg3 interactionType:(id)arg4 specificationVersion:(id)arg5 eventPathComponents:(id)arg6 impressionEnabled:(_Bool)arg7;
 
 // Remaining properties
 @property(readonly, copy, nonatomic) NSString *applicationId;

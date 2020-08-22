@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastRequestData-Protocol.h"
-
 @class NSArray, NSData, NSPredicate, NSString;
 
-@interface _TtC21PodcastDALFeatureImpl39PodcastUpdateEpisodeUnplayedRequestData : NSObject <SPTPodcastRequestData>
+@interface _TtC21PodcastDALFeatureImpl39PodcastUpdateEpisodeUnplayedRequestData : NSObject
 {
     // Error parsing type: , name: requestStringTemplate
     // Error parsing type: , name: filterPredicate

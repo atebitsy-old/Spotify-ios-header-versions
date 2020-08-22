@@ -23,10 +23,12 @@
     long long _streamingRulesSupported;
     long long _reconnectPolicy;
     NSString *_defaultHTTPUserAgent;
+    NSString *_encryptedPersistedClientToken;
 }
 
 + (id)iosConnectivityApplicationScopeConfigurationWithCachePath:(id)arg1;
 - (void).cxx_destruct;
+@property(copy, nonatomic) NSString *encryptedPersistedClientToken; // @synthesize encryptedPersistedClientToken=_encryptedPersistedClientToken;
 @property(nonatomic) _Bool enablePerformanceTracing; // @synthesize enablePerformanceTracing=_enablePerformanceTracing;
 @property(copy, nonatomic) NSString *defaultHTTPUserAgent; // @synthesize defaultHTTPUserAgent=_defaultHTTPUserAgent;
 @property(nonatomic) long long reconnectPolicy; // @synthesize reconnectPolicy=_reconnectPolicy;

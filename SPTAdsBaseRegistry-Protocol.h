@@ -10,9 +10,9 @@
 @protocol SPTAdsBaseEntity, SPTAdsBaseRegistryObserver;
 
 @protocol SPTAdsBaseRegistry <NSObject>
-@property(readonly, copy, nonatomic) NSArray *availableEntities;
 - (void)discardAd:(id <SPTAdsBaseEntity>)arg1;
 - (void)removeObserver:(id <SPTAdsBaseRegistryObserver>)arg1;
 - (void)addObserver:(id <SPTAdsBaseRegistryObserver>)arg1;
+@property(nonatomic, readonly) NSArray *availableEntities;
 @end
 

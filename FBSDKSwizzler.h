@@ -10,6 +10,9 @@
 {
 }
 
++ (_Bool)object:(id)arg1 ofClass:(Class)arg2 isCallingSelector:(SEL)arg3;
++ (void)object:(id)arg1 ofClass:(Class)arg2 removeSelector:(SEL)arg3;
++ (void)object:(id)arg1 ofClass:(Class)arg2 addSelector:(SEL)arg3;
 + (void)unswizzleSelector:(SEL)arg1 onClass:(Class)arg2 named:(id)arg3;
 + (void)unswizzleSelector:(SEL)arg1 onClass:(Class)arg2;
 + (void)swizzleSelector:(SEL)arg1 onClass:(Class)arg2 withBlock:(CDUnknownBlockType)arg3 named:(id)arg4;

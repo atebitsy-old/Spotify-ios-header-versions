@@ -10,7 +10,7 @@
 #import "SPTShareHandler-Protocol.h"
 
 @class NSString, SPTShareData, SPTShareHandlerCompletionDataModel, SPTShareLogger, SPTStatusBarToken;
-@protocol SPTShareDeeplinkHandler;
+@protocol SPTSharingSDKDeeplinkHandler;
 
 @interface SPTShareMessagesShareHandler : NSObject <MFMessageComposeViewControllerDelegate, SPTShareHandler>
 {
@@ -20,7 +20,7 @@
     NSString *_utmContent;
     NSString *_utmTerm;
     SPTShareLogger *_shareLogger;
-    id <SPTShareDeeplinkHandler> _deeplinkHandler;
+    id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
     SPTShareData *_shareData;
     CDUnknownBlockType _completionBlock;
     SPTStatusBarToken *_statusBarToken;
@@ -32,7 +32,7 @@
 @property(retain, nonatomic) SPTStatusBarToken *statusBarToken; // @synthesize statusBarToken=_statusBarToken;
 @property(copy, nonatomic) CDUnknownBlockType completionBlock; // @synthesize completionBlock=_completionBlock;
 @property(retain, nonatomic) SPTShareData *shareData; // @synthesize shareData=_shareData;
-@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
+@property(retain, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTShareLogger *shareLogger; // @synthesize shareLogger=_shareLogger;
 @property(readonly, nonatomic) NSString *utmTerm; // @synthesize utmTerm=_utmTerm;
 @property(readonly, nonatomic) NSString *utmContent; // @synthesize utmContent=_utmContent;

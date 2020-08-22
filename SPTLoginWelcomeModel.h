@@ -14,17 +14,19 @@
     NSString *_buttonHeading;
     NSArray *_actionButtons;
     NSString *_layoutName;
+    NSString *_layoutMLName;
     id <SPTLoginWelcomeViewHeader> _header;
 }
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) id <SPTLoginWelcomeViewHeader> header; // @synthesize header=_header;
+@property(readonly, nonatomic) NSString *layoutMLName; // @synthesize layoutMLName=_layoutMLName;
 @property(readonly, nonatomic) NSString *layoutName; // @synthesize layoutName=_layoutName;
 @property(readonly, nonatomic) NSArray *actionButtons; // @synthesize actionButtons=_actionButtons;
 @property(readonly, nonatomic) NSString *buttonHeading; // @synthesize buttonHeading=_buttonHeading;
-@property(readonly, nonatomic) NSString *headerName;
+@property(readonly, nonatomic) NSString *headerMLName;
 @property(readonly, nonatomic) NSURL *imageURL;
-- (id)initWithButtonHeading:(id)arg1 actionButtons:(id)arg2 header:(id)arg3 layoutName:(id)arg4;
+- (id)initWithButtonHeading:(id)arg1 actionButtons:(id)arg2 header:(id)arg3 layoutName:(id)arg4 layoutMLName:(id)arg5;
 
 @end
 

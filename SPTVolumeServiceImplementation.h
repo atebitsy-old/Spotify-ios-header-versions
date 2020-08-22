@@ -9,14 +9,13 @@
 #import "SPTVolumeService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVolumeBuffer, SPTVolumeCosmosResolver, SPTVolumeDebugInstrumentation, SPTVolumeFeatureProperties, SPTVolumeFlagsProvider, SPTVolumeLogger, SPTVolumeMobileToMobileCoordinator, SPTVolumeRemotePopupPresenter, SPTVolumeSliderViewFactory, SPTVolumeSystemPopupEmitter, SPTVolumeSystemPopupHideEmitterLegacy, SPTVolumeThrottlerFactoryImplementation, SPTVolumeUbiLogger;
-@protocol CosmosFeature, GaiaFeature, SPTAbbaService, SPTContainerService, SPTEventSenderService, SPTGaiaConnectAPI, SPTPlayerFeature, SPTRemoteConfigurationService, SPTUBIService, SPTVolumeAPI, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
+@protocol CosmosFeature, GaiaFeature, SPTContainerService, SPTEventSenderService, SPTGaiaConnectAPI, SPTPlayerFeature, SPTRemoteConfigurationService, SPTUBIService, SPTVolumeAPI, SPTVolumeSynchronizationManager, SPTVolumeSystemAPI;
 
 @interface SPTVolumeServiceImplementation : NSObject <SPTVolumeService>
 {
     id <SPTContainerService> _containerService;
     id <GaiaFeature> _gaiaService;
     id <CosmosFeature> _cosmosService;
-    id <SPTAbbaService> _abbaService;
     id <SPTPlayerFeature> _playerService;
     id <SPTUBIService> _ubiService;
     id <SPTEventSenderService> _eventSenderService;
@@ -63,7 +62,6 @@
 @property(nonatomic) __weak id <SPTEventSenderService> eventSenderService; // @synthesize eventSenderService=_eventSenderService;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerService; // @synthesize playerService=_playerService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <GaiaFeature> gaiaService; // @synthesize gaiaService=_gaiaService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;

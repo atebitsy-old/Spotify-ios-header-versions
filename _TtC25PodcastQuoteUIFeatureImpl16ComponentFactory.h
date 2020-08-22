@@ -8,13 +8,12 @@
 
 @interface _TtC25PodcastQuoteUIFeatureImpl16ComponentFactory : _TtCs12_SwiftObject
 {
+    // Error parsing type: , name: dismissCache
     // Error parsing type: , name: imageLoaderFactory
     // Error parsing type: , name: modalPresentationController
     // Error parsing type: , name: shareMenuFactory
     // Error parsing type: , name: logger
 }
-
-- (id)createViewWithQuotes:(id)arg1;
 
 @end
 

@@ -19,19 +19,18 @@
     _Bool _usedSFAuthSession;
     NSString *_authType;
     unsigned long long _defaultAudience;
-    unsigned long long _loginBehavior;
     UIViewController *_fromViewController;
     NSSet *_requestedPermissions;
 }
 
 + (id)stringForChallenge;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSSet *requestedPermissions; // @synthesize requestedPermissions=_requestedPermissions;
 @property(nonatomic) __weak UIViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
-@property(nonatomic) unsigned long long loginBehavior; // @synthesize loginBehavior=_loginBehavior;
 @property(nonatomic) unsigned long long defaultAudience; // @synthesize defaultAudience=_defaultAudience;
 @property(retain, nonatomic) NSString *authType; // @synthesize authType=_authType;
-- (void).cxx_destruct;
+- (_Bool)shouldStopPropagationOfURL:(id)arg1;
 - (_Bool)isAuthenticationURL:(id)arg1;
 - (void)applicationDidBecomeActive:(id)arg1;
 - (_Bool)canOpenURL:(id)arg1 forApplication:(id)arg2 sourceApplication:(id)arg3 annotation:(id)arg4;

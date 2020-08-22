@@ -18,6 +18,7 @@
 + (id)factoryWithComponents:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
+- (id)assistantFactoryWithIdentifier:(id)arg1 position:(long long)arg2;
 - (id)hiddenContentFactoryWithUri:(id)arg1;
 - (id)itemFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)likedSongsFactoryWithPosition:(long long)arg1 uri:(id)arg2;

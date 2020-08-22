@@ -16,6 +16,7 @@
 + (void)checkRegisteredCanOpenURLScheme:(id)arg1;
 + (_Bool)isRegisteredURLScheme:(id)arg1;
 + (id)hexadecimalStringFromData:(id)arg1;
++ (long long)statusBarOrientation;
 + (id)topMostViewController;
 + (id)findWindow;
 + (void)validateFacebookReservedURLSchemes;

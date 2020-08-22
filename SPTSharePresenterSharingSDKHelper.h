@@ -6,16 +6,26 @@
 
 #import <objc/NSObject.h>
 
-@class SPTSharingSDK;
+@class NSArray, SPTSharingSDK;
 
 @interface SPTSharePresenterSharingSDKHelper : NSObject
 {
     SPTSharingSDK *_sharingSDK;
+    NSArray *_excludedActivityTypes;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) NSArray *excludedActivityTypes; // @synthesize excludedActivityTypes=_excludedActivityTypes;
 @property(readonly, nonatomic) __weak SPTSharingSDK *sharingSDK; // @synthesize sharingSDK=_sharingSDK;
-- (id)entityDataFromShareData:(id)arg1 fallbackURL:(id)arg2;
+- (id)makeSnapchatStoriesEntityDataWith:(id)arg1 utmTag:(id)arg2;
+- (id)makeFacebookStoriesEntityDataWith:(id)arg1 utmTag:(id)arg2;
+- (id)makeInstagramStoriesEntityDataWith:(id)arg1 utmTag:(id)arg2;
+- (id)makeLinkOrMessageEntityDataWith:(id)arg1 utmTag:(id)arg2;
+- (id)makeLinkEntityDataWith:(id)arg1 utmTag:(id)arg2;
+- (id)utmMediumForDestinationID:(long long)arg1;
+- (id)utmSourceForDestinationID:(long long)arg1;
+- (id)utmTagForShareForDestinationID:(long long)arg1;
+- (id)entityDataFromShareData:(id)arg1 destinationID:(long long)arg2;
 - (id)sharingSKDDestinationForDestinationID:(long long)arg1;
 - (id)initWithSharingSDK:(id)arg1;
 

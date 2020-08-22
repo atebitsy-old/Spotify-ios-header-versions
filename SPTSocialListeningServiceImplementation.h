@@ -10,11 +10,10 @@
 #import "SPTSocialListeningService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSocialListeningDataLoader, SPTSocialListeningDialogManager, SPTSocialListeningDialogPresenter, SPTSocialListeningEducationSlatePresenter, SPTSocialListeningGLUETheme, SPTSocialListeningLoggerImplementation, SPTSocialListeningModelImplementation, SPTSocialListeningTestManagerImplementation, SPTSocialListeningUserInterfaceFactoryImplementation;
-@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTFeatureFlaggingService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPageLoaderViewService, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP14ProfileFeature17SPTProfileService_;
+@protocol CosmosFeature, SPTContainerService, SPTContainerUIService, SPTCosmosDataLoaderService, SPTGLUEService, SPTNetworkService, SPTOfflineModeState, SPTPageLoaderViewService, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTScannablesRegistration, SPTScannablesService, SPTSessionService, SPTShareFeature, SPTSnackbarService, SPTUBIService, SPTURIDispatchService, SlateFeature, _TtP14ProfileFeature17SPTProfileService_;
 
 @interface SPTSocialListeningServiceImplementation : NSObject <SPTOfflineModeStateObserver, SPTSocialListeningService>
 {
-    id <SPTFeatureFlaggingService> _featureFlagService;
     id <SPTGLUEService> _glueService;
     id <SPTScannablesService> _scannablesService;
     id <SPTNetworkService> _networkService;
@@ -77,7 +76,6 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkService; // @synthesize networkService=_networkService;
 @property(nonatomic) __weak id <SPTScannablesService> scannablesService; // @synthesize scannablesService=_scannablesService;
 @property(nonatomic) __weak id <SPTGLUEService> glueService; // @synthesize glueService=_glueService;
-@property(nonatomic) __weak id <SPTFeatureFlaggingService> featureFlagService; // @synthesize featureFlagService=_featureFlagService;
 - (void)offlineModeState:(id)arg1 updated:(_Bool)arg2;
 - (id)buildModel;
 - (id)buildDialogManager;

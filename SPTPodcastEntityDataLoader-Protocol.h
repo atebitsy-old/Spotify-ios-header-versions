@@ -4,11 +4,9 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
-#import "NSObject-Protocol.h"
-
 @class NSArray, NSURL;
 
-@protocol SPTPodcastEntityDataLoader <NSObject>
+@protocol SPTPodcastEntityDataLoader
 - (void)lookupEpisodeURIs:(NSArray *)arg1 completionHandler:(void (^)(NSDictionary *, NSError *))arg2;
 - (void)lookupEpisodesForShowWithURI:(NSURL *)arg1 inRange:(struct _NSRange)arg2 includeEpisode:(NSURL *)arg3 completionHandler:(void (^)(NSArray *, NSError *))arg4;
 - (void)lookupShowEntityWithURI:(NSURL *)arg1 completionHandler:(void (^)(id <SPTShow>, NSError *))arg2;

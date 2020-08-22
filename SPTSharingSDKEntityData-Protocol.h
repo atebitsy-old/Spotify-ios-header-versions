@@ -6,12 +6,11 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSArray, NSData, NSSet, NSString, NSURL, UIImage;
-@protocol SPTSharingSDKUTMTag;
+@class NSArray, NSData, NSSet, NSString, NSURL, SPTSharingSDKUTMTag, UIImage;
 
 @protocol SPTSharingSDKEntityData <NSObject>
 @property(readonly, nonatomic) NSArray *excludedActivityTypes;
-@property(readonly, nonatomic) id <SPTSharingSDKUTMTag> utmTag;
+@property(readonly, nonatomic) SPTSharingSDKUTMTag *utmTag;
 @property(readonly, nonatomic) NSURL *fallbackShareableURL;
 @property(readonly, nonatomic) unsigned long long capability;
 @property(readonly, nonatomic) NSSet *extraQueryItems;

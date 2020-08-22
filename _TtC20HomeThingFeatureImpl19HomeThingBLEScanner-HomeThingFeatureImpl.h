@@ -6,9 +6,10 @@
 
 #import "_TtC20HomeThingFeatureImpl19HomeThingBLEScanner.h"
 
+#import "CBCentralManagerDelegate-Protocol.h"
 #import "CBPeripheralDelegate-Protocol.h"
 
-@interface _TtC20HomeThingFeatureImpl19HomeThingBLEScanner (HomeThingFeatureImpl) <CBPeripheralDelegate>
+@interface _TtC20HomeThingFeatureImpl19HomeThingBLEScanner (HomeThingFeatureImpl) <CBCentralManagerDelegate, CBPeripheralDelegate>
 - (void)peripheral:(id)arg1 didUpdateNotificationStateForCharacteristic:(id)arg2 error:(id)arg3;
 - (void)peripheral:(id)arg1 didWriteValueForCharacteristic:(id)arg2 error:(id)arg3;
 - (void)peripheral:(id)arg1 didDiscoverCharacteristicsForService:(id)arg2 error:(id)arg3;

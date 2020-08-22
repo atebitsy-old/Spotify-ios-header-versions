@@ -10,28 +10,6 @@
 @protocol HUBCommandModelBuilder, HUBComponentImageDataBuilder, HUBComponentModel, HUBComponentModelBuilder, HUBComponentTargetBuilder;
 
 @protocol HUBComponentModelBuilder <HUBJSONCompatibleBuilder>
-@property(readonly, nonatomic) NSMutableDictionary *customData;
-@property(readonly, nonatomic) NSMutableDictionary *loggingData;
-@property(readonly, nonatomic) NSMutableDictionary *metadata;
-@property(readonly, nonatomic) _Bool targetBuilderExists;
-@property(readonly, nonatomic) id <HUBComponentTargetBuilder> targetBuilder;
-@property(copy, nonatomic) NSString *iconIdentifier;
-@property(retain, nonatomic) UIImage *backgroundImage;
-@property(copy, nonatomic) NSURL *backgroundImageURL;
-@property(readonly, nonatomic) id <HUBComponentImageDataBuilder> backgroundImageDataBuilder;
-@property(retain, nonatomic) UIImage *mainImage;
-@property(copy, nonatomic) NSURL *mainImageURL;
-@property(readonly, nonatomic) id <HUBComponentImageDataBuilder> mainImageDataBuilder;
-@property(copy, nonatomic) NSString *descriptionText;
-@property(copy, nonatomic) NSString *accessoryTitle;
-@property(copy, nonatomic) NSString *subtitle;
-@property(copy, nonatomic) NSString *title;
-@property(copy, nonatomic) NSString *componentCategory;
-@property(copy, nonatomic) NSString *componentName;
-@property(copy, nonatomic) NSString *componentNamespace;
-@property(copy, nonatomic) NSString *groupIdentifier;
-@property(copy, nonatomic) NSNumber *preferredIndex;
-@property(readonly, copy, nonatomic) NSString *modelIdentifier;
 - (void)removeAllChildBuilders;
 - (void)removeBuilderForChildWithIdentifier:(NSString *)arg1;
 - (NSArray *)buildersForChildrenInGroupWithIdentifier:(NSString *)arg1;
@@ -42,6 +20,28 @@
 - (_Bool)builderExistsForCustomImageDataWithIdentifier:(NSString *)arg1;
 - (id <HUBCommandModelBuilder>)commandModelBuilderForEventWithName:(NSString *)arg1;
 - (_Bool)builderExistsForEventWithName:(NSString *)arg1;
+@property(nonatomic, readonly) NSMutableDictionary *customData;
+@property(nonatomic, readonly) NSMutableDictionary *loggingData;
+@property(nonatomic, readonly) NSMutableDictionary *metadata;
+@property(nonatomic, readonly) _Bool targetBuilderExists;
+@property(nonatomic, readonly) id <HUBComponentTargetBuilder> targetBuilder;
 - (id <HUBComponentModel>)buildForIndex:(unsigned long long)arg1 parent:(id <HUBComponentModel>)arg2;
+@property(nonatomic, copy) NSString *iconIdentifier;
+@property(nonatomic, retain) UIImage *backgroundImage;
+@property(nonatomic, copy) NSURL *backgroundImageURL;
+@property(nonatomic, readonly) id <HUBComponentImageDataBuilder> backgroundImageDataBuilder;
+@property(nonatomic, retain) UIImage *mainImage;
+@property(nonatomic, copy) NSURL *mainImageURL;
+@property(nonatomic, readonly) id <HUBComponentImageDataBuilder> mainImageDataBuilder;
+@property(nonatomic, copy) NSString *descriptionText;
+@property(nonatomic, copy) NSString *accessoryTitle;
+@property(nonatomic, copy) NSString *subtitle;
+@property(nonatomic, copy) NSString *title;
+@property(nonatomic, copy) NSString *componentCategory;
+@property(nonatomic, copy) NSString *componentName;
+@property(nonatomic, copy) NSString *componentNamespace;
+@property(nonatomic, copy) NSString *groupIdentifier;
+@property(nonatomic, copy) NSNumber *preferredIndex;
+@property(nonatomic, readonly) NSString *modelIdentifier;
 @end
 

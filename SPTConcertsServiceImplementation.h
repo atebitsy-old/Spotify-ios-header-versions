@@ -9,7 +9,7 @@
 #import "SPTConcertsService-Protocol.h"
 
 @class NSSet, NSString, SPTAllocationContext, SPTConcertsDateFormatter, SPTConcertsLocalDataManager;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTNowPlayingPlatformService, SPTNowPlayingScrollDataSource, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTUBIService, SPTURIDispatchService;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTGLUEService, SPTHubFrameworkService, SPTLocalSettings, SPTNavigationFeature, SPTNetworkService, SPTNowPlayingScrollDataSource, SPTPerformanceMetricsService, SPTPlayer, SPTPlayerFeature, SPTRemoteConfigurationResolver, SPTRemoteConfigurationService, SPTSessionService, SPTUBIService, SPTURIDispatchService;
 
 @interface SPTConcertsServiceImplementation : NSObject <SPTConcertsService>
 {
@@ -26,7 +26,6 @@
     id <SPTPerformanceMetricsService> _performanceMetricsService;
     id <SPTURIDispatchService> _uriDispatchService;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
-    id <SPTNowPlayingPlatformService> _nowPlayingPlatformService;
     id <SPTPlayerFeature> _playerFeature;
     id <SPTUBIService> _ubiService;
     id <SPTLocalSettings> _localSettings;
@@ -47,7 +46,6 @@
 @property(retain, nonatomic) id <SPTLocalSettings> localSettings; // @synthesize localSettings=_localSettings;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <SPTPlayerFeature> playerFeature; // @synthesize playerFeature=_playerFeature;
-@property(nonatomic) __weak id <SPTNowPlayingPlatformService> nowPlayingPlatformService; // @synthesize nowPlayingPlatformService=_nowPlayingPlatformService;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(nonatomic) __weak id <SPTURIDispatchService> uriDispatchService; // @synthesize uriDispatchService=_uriDispatchService;
 @property(nonatomic) __weak id <SPTPerformanceMetricsService> performanceMetricsService; // @synthesize performanceMetricsService=_performanceMetricsService;

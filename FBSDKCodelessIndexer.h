@@ -12,7 +12,6 @@
 
 + (id)dimensionOf:(id)arg1;
 + (id)screenshot;
-+ (id)recursiveCaptureTree:(id)arg1;
 + (id)currentViewTree;
 + (void)uploadIndexing:(id)arg1;
 + (void)uploadIndexing;

@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTSignupFieldValidator-Protocol.h"
+#import "SPTSignupFieldRemoteValidator-Protocol.h"
 
 @class NSCalendar, NSString, SPTSignupAgeBackendValidator;
 
-@interface SPTSignupAgeFieldValidator : NSObject <SPTSignupFieldValidator>
+@interface SPTSignupAgeFieldValidator : NSObject <SPTSignupFieldRemoteValidator>
 {
     NSCalendar *_calendar;
     SPTSignupAgeBackendValidator *_ageBackendValidator;

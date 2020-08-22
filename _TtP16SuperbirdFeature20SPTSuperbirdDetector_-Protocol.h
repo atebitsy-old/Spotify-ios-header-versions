@@ -4,9 +4,11 @@
 //     class-dump is Copyright (C) 1997-1998, 2000-2001, 2004-2015 by Steve Nygard.
 //
 
+@class NSString;
 @protocol _TtP16SuperbirdFeature28SPTSuperbirdDetectorObserver_;
 
 @protocol _TtP16SuperbirdFeature20SPTSuperbirdDetector_
+@property(nonatomic, readonly) NSString *deviceSerial;
 - (_Bool)isSuperbirdConnected;
 - (void)removeObserver:(id <_TtP16SuperbirdFeature28SPTSuperbirdDetectorObserver_>)arg1;
 - (void)addObserver:(id <_TtP16SuperbirdFeature28SPTSuperbirdDetectorObserver_>)arg1;

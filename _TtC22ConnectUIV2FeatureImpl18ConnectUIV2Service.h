@@ -8,18 +8,18 @@
 
 @interface _TtC22ConnectUIV2FeatureImpl18ConnectUIV2Service : NSObject
 {
-    // Error parsing type: , name: containerService
-    // Error parsing type: , name: gaiaService
-    // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: uiPresentationService
-    // Error parsing type: , name: glueService
-    // Error parsing type: , name: abbaService
-    // Error parsing type: , name: volumeService
-    // Error parsing type: , name: uriService
-    // Error parsing type: , name: playerService
-    // Error parsing type: , name: coreService
-    // Error parsing type: , name: ubiService
-    // Error parsing type: , name: inAppMessageService
+    // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _gaiaService
+    // Error parsing type: , name: _remoteConfigurationService
+    // Error parsing type: , name: _uiPresentationService
+    // Error parsing type: , name: _glueService
+    // Error parsing type: , name: _abbaService
+    // Error parsing type: , name: _volumeService
+    // Error parsing type: , name: _uriService
+    // Error parsing type: , name: _playerService
+    // Error parsing type: , name: _coreService
+    // Error parsing type: , name: _ubiService
+    // Error parsing type: , name: _inAppMessageService
     // Error parsing type: , name: $__lazy_storage_$_gaiaDevicePresenterProxy
     // Error parsing type: , name: $__lazy_storage_$_devicePickerPresenter
     // Error parsing type: , name: $__lazy_storage_$_player
@@ -53,7 +53,6 @@
 - (id)provideDevicePresenter;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 
 @end
 

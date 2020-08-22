@@ -10,6 +10,7 @@
 @protocol SPTPodcastEpisode, SPTPodcastViewModelSection;
 
 @protocol SPTPodcastViewModelDelegate2 <NSObject>
+- (void)viewModelDidUpdateSupplementaryContent:(SPTPodcastViewModel *)arg1;
 - (void)viewModel:(SPTPodcastViewModel *)arg1 showContextMenuForTrailerEpisode:(id <SPTPodcastEpisode>)arg2 atIndexPath:(NSIndexPath *)arg3;
 - (void)viewModel:(SPTPodcastViewModel *)arg1 scrollToLatestPlayedEpisodeAtIndexPath:(NSIndexPath *)arg2;
 - (void)podcastViewModelDidUpdatePlaybackRestrictions:(SPTPodcastViewModel *)arg1;

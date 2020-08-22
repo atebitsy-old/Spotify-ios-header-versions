@@ -22,6 +22,7 @@
 - (NSIndexPath *)indexPathForScrollSectionIndex:(unsigned long long)arg1;
 - (_Bool)showSeparatorForSection:(long long)arg1;
 - (void)createPlaylistActionInInfoView:(_Bool)arg1;
+- (void)logBetaAssistantViewImpressionIfNeeded;
 - (void)logEmptyStaticFilterViewImpression;
 - (void)logEmptyTextFilterViewImpression;
 - (void)logEmptyViewImpression;

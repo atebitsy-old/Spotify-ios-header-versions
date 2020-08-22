@@ -8,20 +8,20 @@
 
 @interface _TtC24AddToPlaylistFeatureImpl20AddToPlaylistService : NSObject
 {
-    // Error parsing type: , name: ubiService
-    // Error parsing type: , name: containerService
-    // Error parsing type: , name: containerUIService
-    // Error parsing type: , name: eventSenderService
-    // Error parsing type: , name: glueService
-    // Error parsing type: , name: playlistPlatformService
-    // Error parsing type: , name: contextMenuFeature
-    // Error parsing type: , name: featureFlaggingService
-    // Error parsing type: , name: freeTierService
-    // Error parsing type: , name: snackbarFeature
-    // Error parsing type: , name: freetierCollectionService
-    // Error parsing type: , name: crashReporterService
-    // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: pageLoaderViewService
+    // Error parsing type: , name: _ubiService
+    // Error parsing type: , name: _containerService
+    // Error parsing type: , name: _containerUIService
+    // Error parsing type: , name: _eventSenderService
+    // Error parsing type: , name: _glueService
+    // Error parsing type: , name: _playlistPlatformService
+    // Error parsing type: , name: _contextMenuFeature
+    // Error parsing type: , name: _featureFlaggingService
+    // Error parsing type: , name: _freeTierService
+    // Error parsing type: , name: _snackbarFeature
+    // Error parsing type: , name: _yourLibraryMusicService
+    // Error parsing type: , name: _crashReporterService
+    // Error parsing type: , name: _remoteConfigurationService
+    // Error parsing type: , name: _pageLoaderViewService
     // Error parsing type: , name: crashReporter
     // Error parsing type: , name: crashReporterWrapper
     // Error parsing type: , name: freeTierSignal
@@ -35,7 +35,6 @@
 - (id)init;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 
 @end
 

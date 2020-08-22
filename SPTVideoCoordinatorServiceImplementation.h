@@ -9,11 +9,11 @@
 #import "SPTVideoCoordinatorService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTVideoContextPlayerCoordinator, SPTVideoCoordinatorFeatureFlags, SPTVideoDynamicEventObserverFactory, SPTVideoPreferredSubtitleMessageFactory, SPTVideoSubtitleProvider;
-@protocol CosmosFeature, SPContextMenuFeature, SPTAbbaService, SPTBannerFeature, SPTCarModeEngineService, SPTContainerService, SPTContainerUIService, SPTDebugService, SPTPlayer, SPTPlayerFeature, SPTUIPresentationService, SPTURIDispatchService, SPTVideoFeature;
+@protocol CosmosFeature, SPContextMenuFeature, SPTBannerFeature, SPTCarModeEngineService, SPTContainerService, SPTContainerUIService, SPTDebugService, SPTPlayer, SPTPlayerFeature, SPTSessionService, SPTUIPresentationService, SPTURIDispatchService, SPTVideoFeature;
 
 @interface SPTVideoCoordinatorServiceImplementation : NSObject <SPTVideoCoordinatorService>
 {
-    id <SPTAbbaService> _abbaService;
+    id <SPTSessionService> _clientSessionService;
     id <SPTVideoFeature> _videoService;
     id <CosmosFeature> _cosmosService;
     id <SPTBannerFeature> _bannerFeature;
@@ -52,7 +52,7 @@
 @property(nonatomic) __weak id <SPTBannerFeature> bannerFeature; // @synthesize bannerFeature=_bannerFeature;
 @property(nonatomic) __weak id <CosmosFeature> cosmosService; // @synthesize cosmosService=_cosmosService;
 @property(nonatomic) __weak id <SPTVideoFeature> videoService; // @synthesize videoService=_videoService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
+@property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
 - (void)registerContextMenuActionWithCosmosSender:(id)arg1;
 - (void)removeVideoPlaybackEventObserver:(id)arg1;
 - (void)addVideoPlaybackEventObserver:(id)arg1;

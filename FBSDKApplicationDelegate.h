@@ -22,6 +22,8 @@
 + (void)load;
 - (void).cxx_destruct;
 - (_Bool)isAppLaunched;
+- (void)_logSwiftRuntimeAvailability;
+- (void)_logIfAutoAppLinkEnabled;
 - (void)_logSDKInitialize;
 - (void)_logIfAppLinkEvent:(id)arg1;
 - (void)removeObserver:(id)arg1;

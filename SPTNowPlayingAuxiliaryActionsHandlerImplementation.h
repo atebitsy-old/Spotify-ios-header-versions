@@ -75,7 +75,6 @@
 - (void)logGoToPlayContextWithURI:(id)arg1;
 - (void)showEntityPage:(id)arg1;
 - (void)dismissQueueIfNeeded;
-- (_Bool)shouldHideContextMenuHeader;
 - (id)extraContextMenuTasksIfAnyInViewController:(id)arg1 sender:(id)arg2;
 - (void)presentContextMenuWithHeaderOptionsInViewController:(id)arg1 sender:(id)arg2;
 - (void)presentContextMenuInViewController:(id)arg1 sender:(id)arg2;

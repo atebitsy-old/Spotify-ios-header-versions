@@ -7,7 +7,7 @@
 #import <objc/NSObject.h>
 
 @class SPTAuthenticationHandlerLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountSwitcher, SPTLoginErrorDecorator, SPTLoginMainViewLoader, SPTLoginTestManager;
-@protocol SPTLoginStateController;
+@protocol SPTAuthLoginOptionsUtils, SPTLoginStateController;
 
 @interface SPTAuthenticationHandler : NSObject
 {
@@ -18,9 +18,11 @@
     SPTLoginDelayedSignupAccountSwitcher *_accountSwitcher;
     SPTLoginTestManager *_login5TestManager;
     SPTLoginDbManager *_databaseManager;
+    id <SPTAuthLoginOptionsUtils> _authLoginOptionsUtils;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTAuthLoginOptionsUtils> authLoginOptionsUtils; // @synthesize authLoginOptionsUtils=_authLoginOptionsUtils;
 @property(readonly, nonatomic) SPTLoginDbManager *databaseManager; // @synthesize databaseManager=_databaseManager;
 @property(readonly, nonatomic) SPTLoginTestManager *login5TestManager; // @synthesize login5TestManager=_login5TestManager;
 @property(readonly, nonatomic) SPTLoginDelayedSignupAccountSwitcher *accountSwitcher; // @synthesize accountSwitcher=_accountSwitcher;
@@ -37,7 +39,7 @@
 - (void)authenticateAndLoginWithURI:(id)arg1 completion:(CDUnknownBlockType)arg2;
 - (void)authenticateAndLoginWithCredentials:(id)arg1 fromScreen:(unsigned long long)arg2 completionBlock:(CDUnknownBlockType)arg3;
 - (void)authenticateAndLoginWithOneTimeToken:(id)arg1 fromScreen:(unsigned long long)arg2 completion:(CDUnknownBlockType)arg3;
-- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 errorDecorator:(id)arg3 mainViewLoader:(id)arg4 accountSwitcher:(id)arg5 login5TestManager:(id)arg6 databaseManager:(id)arg7;
+- (id)initWithLoginStateController:(id)arg1 logger:(id)arg2 errorDecorator:(id)arg3 mainViewLoader:(id)arg4 accountSwitcher:(id)arg5 login5TestManager:(id)arg6 databaseManager:(id)arg7 authLoginOptionsUtils:(id)arg8;
 
 @end
 

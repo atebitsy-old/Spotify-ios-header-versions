@@ -8,21 +8,17 @@
 
 @interface _TtC18VoiceUIFeatureImpl9VoiceView : UIView
 {
-    // Error parsing type: , name: style
-    // Error parsing type: , name: presentationMode
+    // Error parsing type: , name: glueTheme
     // Error parsing type: , name: closeButtonWidthConstraint
     // Error parsing type: , name: closeButtonHeightConstraint
-    // Error parsing type: , name: titleLabelTopConstraint
-    // Error parsing type: , name: descriptionLabelTopConstraint
-    // Error parsing type: , name: micPermissionButtonBottomConstraint
-    // Error parsing type: , name: micButtonBottomConstraint
+    // Error parsing type: , name: interactionViewTopConstraint
+    // Error parsing type: , name: resultsViewTopConstraint
+    // Error parsing type: , name: $__lazy_storage_$_interactionViewStyle
+    // Error parsing type: , name: $__lazy_storage_$_resultsViewStyle
+    // Error parsing type: , name: presentationMode
     // Error parsing type: , name: $__lazy_storage_$_closeButton
-    // Error parsing type: , name: $__lazy_storage_$_titleLabel
-    // Error parsing type: , name: $__lazy_storage_$_descriptionLabel
-    // Error parsing type: , name: $__lazy_storage_$_offlineErrorImageView
-    // Error parsing type: , name: $__lazy_storage_$_micButton
-    // Error parsing type: , name: $__lazy_storage_$_micPermissionButton
-    // Error parsing type: , name: $__lazy_storage_$_listeningAnimationView
+    // Error parsing type: , name: $__lazy_storage_$_interactionView
+    // Error parsing type: , name: $__lazy_storage_$_resultsView
 }
 
 - (void).cxx_destruct;

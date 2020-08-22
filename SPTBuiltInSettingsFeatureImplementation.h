@@ -10,7 +10,7 @@
 #import "SPTService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTPlaybackPreferencesObserver, SPTSettingsLogger;
-@protocol CosmosFeature, SPTAbbaFeatureFlags, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTDebugUIService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, _TtP14ProfileFeature17SPTProfileService_, _TtP14VoiceUIFeature17SPTVoiceUIService_;
+@protocol CosmosFeature, SPTAbbaFeatureFlags, SPTAbbaService, SPTBannerFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTDebugUIService, SPTFeatureFlagSignal, SPTFreeTierService, SPTInAppMessageService, SPTLoginDelayedSignupService, SPTLoginService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsDataSource, SPTSettingsFeature, SPTURIDispatchService, _TtP14ProfileFeature17SPTProfileService_, _TtP14VoiceUIFeature17SPTVoiceUIService_;
 
 @interface SPTBuiltInSettingsFeatureImplementation : NSObject <SPTFeatureFlagSignalObserver, SPTService>
 {
@@ -40,12 +40,14 @@
     id <SPTFeatureFlagSignal> _freeTierFeatureSignal;
     id <SPTFeatureFlagSignal> _dataSaverActivatedSignal;
     SPTSettingsLogger *_settingsLogger;
+    id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTPlaybackPreferencesObserver *_playbackPreferencesObserver;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTPlaybackPreferencesObserver *playbackPreferencesObserver; // @synthesize playbackPreferencesObserver=_playbackPreferencesObserver;
+@property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) SPTSettingsLogger *settingsLogger; // @synthesize settingsLogger=_settingsLogger;
 @property(nonatomic) _Bool dataSaverActivated; // @synthesize dataSaverActivated=_dataSaverActivated;
 @property(retain, nonatomic) id <SPTFeatureFlagSignal> dataSaverActivatedSignal; // @synthesize dataSaverActivatedSignal=_dataSaverActivatedSignal;
@@ -76,6 +78,7 @@
 - (id)provideTermsSettingsWithSettingsViewController:(id)arg1;
 - (id)provideLicensesSettingsWithSettingsViewController:(id)arg1;
 - (id)provideVersionSettingsWithSettingsViewController:(id)arg1;
+- (id)provideLocalFilesSyncSettingsWithSettingsViewController:(id)arg1;
 - (id)provideFacebookSettingsWithSettingsViewController:(id)arg1;
 - (id)provideRecentlyPlayedArtistsSettingsWithSettingsViewController:(id)arg1;
 - (id)providePublishActivitySettingsWithSettingsViewController:(id)arg1;
@@ -93,6 +96,7 @@
 - (id)provideProfileSettingsWithSettingsViewController:(id)arg1;
 - (id)provideLogoutSettingsSection:(id)arg1;
 - (void)unload;
+- (id)provideFeatureProperties;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
 

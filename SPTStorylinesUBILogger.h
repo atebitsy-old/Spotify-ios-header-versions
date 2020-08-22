@@ -6,14 +6,13 @@
 
 #import <objc/NSObject.h>
 
-@class NSMutableSet, NSString, SPForegroundObserver, SPTStorylinesLogger;
+@class NSMutableSet, NSString, SPForegroundObserver;
 @protocol SPTNowPlayingManager, SPTPlayer, SPTUBILogger;
 
 @interface SPTStorylinesUBILogger : NSObject
 {
     NSString *_pageIdentifier;
     id <SPTUBILogger> _ubiLogger;
-    SPTStorylinesLogger *_legacyLogger;
     id <SPTPlayer> _player;
     id <SPTNowPlayingManager> _nowPlayingManager;
     SPForegroundObserver *_foregroundObserver;
@@ -27,7 +26,6 @@
 @property(readonly, nonatomic) SPForegroundObserver *foregroundObserver; // @synthesize foregroundObserver=_foregroundObserver;
 @property(readonly, nonatomic) id <SPTNowPlayingManager> nowPlayingManager; // @synthesize nowPlayingManager=_nowPlayingManager;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
-@property(readonly, nonatomic) SPTStorylinesLogger *legacyLogger; // @synthesize legacyLogger=_legacyLogger;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) NSString *pageIdentifier; // @synthesize pageIdentifier=_pageIdentifier;
 @property(readonly, nonatomic) _Bool shouldSendMessage;
@@ -45,7 +43,7 @@
 - (id)cardFactoryWithIndex:(long long)arg1 trackUri:(id)arg2;
 - (id)factoryForTrackUri:(id)arg1;
 - (void)dealloc;
-- (id)initWithPageIdentifier:(id)arg1 logger:(id)arg2 legacyLogger:(id)arg3 player:(id)arg4 nowPlayingManager:(id)arg5 foregroundObserver:(id)arg6;
+- (id)initWithPageIdentifier:(id)arg1 logger:(id)arg2 player:(id)arg3 nowPlayingManager:(id)arg4 foregroundObserver:(id)arg5;
 
 @end
 

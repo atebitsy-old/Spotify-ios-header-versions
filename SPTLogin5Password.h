@@ -6,7 +6,7 @@
 
 #import "GPBMessage.h"
 
-@class NSString;
+@class NSData, NSString;
 
 @interface SPTLogin5Password : GPBMessage
 {
@@ -16,6 +16,7 @@
 
 // Remaining properties
 @property(copy, nonatomic) NSString *id_p; // @dynamic id_p;
+@property(copy, nonatomic) NSData *padding; // @dynamic padding;
 @property(copy, nonatomic) NSString *password; // @dynamic password;
 
 @end

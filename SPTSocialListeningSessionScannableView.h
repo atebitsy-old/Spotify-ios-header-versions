@@ -8,25 +8,18 @@
 
 #import "GLUEStyleable-Protocol.h"
 
-@class GLUEAccessoryIconButton, GLUEImageView, NSLayoutConstraint, NSString, UIStackView;
+@class GLUEImageView, NSString, UIStackView;
 
 @interface SPTSocialListeningSessionScannableView : UIView <GLUEStyleable>
 {
     GLUEImageView *_scannableImageView;
-    UIView *_separatorView;
-    GLUEAccessoryIconButton *_shareCodeButton;
     UIStackView *_stackView;
-    NSLayoutConstraint *_stackViewTrailingConstraint;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSLayoutConstraint *stackViewTrailingConstraint; // @synthesize stackViewTrailingConstraint=_stackViewTrailingConstraint;
 @property(readonly, nonatomic) UIStackView *stackView; // @synthesize stackView=_stackView;
-@property(readonly, nonatomic) GLUEAccessoryIconButton *shareCodeButton; // @synthesize shareCodeButton=_shareCodeButton;
-@property(readonly, nonatomic) UIView *separatorView; // @synthesize separatorView=_separatorView;
 @property(readonly, nonatomic) GLUEImageView *scannableImageView; // @synthesize scannableImageView=_scannableImageView;
 - (void)glue_applyStyle:(id)arg1;
-- (void)setTrailingMarginHidden:(_Bool)arg1;
 - (void)addViewConstraints;
 - (void)setupView;
 - (id)initWithFrame:(struct CGRect)arg1;

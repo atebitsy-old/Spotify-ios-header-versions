@@ -6,16 +6,17 @@
 
 #import <objc/NSObject.h>
 
-#import "NSCoding-Protocol.h"
+#import "NSSecureCoding-Protocol.h"
 
 @class NSData, NSString;
 
-@interface SPTAppExtensionKeychainCredentials : NSObject <NSCoding>
+@interface SPTAppExtensionKeychainCredentials : NSObject <NSSecureCoding>
 {
     NSString *_username;
     NSData *_authBlob;
 }
 
++ (_Bool)supportsSecureCoding;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSData *authBlob; // @synthesize authBlob=_authBlob;
 @property(copy, nonatomic) NSString *username; // @synthesize username=_username;

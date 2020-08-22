@@ -11,7 +11,7 @@
 #import "SPTSignupService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTSignupConfigurationDataLoader, SPTSignupUserInfoModel;
-@protocol SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTLoginSessionScopeServicesLoaderProviderService, SPTNetworkService, SPTPreSignupExperimentationService;
+@protocol SPTAuthLoginOptionsUtilsService, SPTContainerService, SPTContainerUIService, SPTGLUEService, SPTLoginLoggingService, SPTLoginService, SPTLoginSessionScopeServicesLoaderProviderService, SPTNetworkService, SPTPreSignupExperimentationService;
 
 @interface SPTSignupServiceImplementation : NSObject <SPTPageRegistryObserver, SPTLoginServiceObserver, SPTSignupService>
 {
@@ -25,10 +25,12 @@
     id <SPTLoginLoggingService> _loggerService;
     SPTSignupUserInfoModel *_userInfoModel;
     SPTSignupConfigurationDataLoader *_configurationDataLoader;
+    id <SPTAuthLoginOptionsUtilsService> _authUtilsService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTAuthLoginOptionsUtilsService> authUtilsService; // @synthesize authUtilsService=_authUtilsService;
 @property(retain, nonatomic) SPTSignupConfigurationDataLoader *configurationDataLoader; // @synthesize configurationDataLoader=_configurationDataLoader;
 @property(retain, nonatomic) SPTSignupUserInfoModel *userInfoModel; // @synthesize userInfoModel=_userInfoModel;
 @property(nonatomic) __weak id <SPTLoginLoggingService> loggerService; // @synthesize loggerService=_loggerService;

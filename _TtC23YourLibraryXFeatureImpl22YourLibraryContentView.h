@@ -9,12 +9,20 @@
 @interface _TtC23YourLibraryXFeatureImpl22YourLibraryContentView : UIView
 {
     // Error parsing type: , name: style
+    // Error parsing type: , name: quickScrollFactory
+    // Error parsing type: , name: $__lazy_storage_$_quickScroll
+    // Error parsing type: , name: feedbackButtonView
+    // Error parsing type: , name: feedbackButtonViewBottomConstraint
+    // Error parsing type: , name: contentInsetObserver
+    // Error parsing type: , name: $__lazy_storage_$_collectionViewLayout
     // Error parsing type: , name: $__lazy_storage_$_collectionView
+    // Error parsing type: , name: $__lazy_storage_$_emptyView
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
 - (id)initWithCoder:(id)arg1;
+- (void)dealloc;
 
 @end
 

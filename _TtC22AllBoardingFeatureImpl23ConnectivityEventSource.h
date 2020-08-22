@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTNetworkConnectivityControllerObserver-Protocol.h"
-
-@interface _TtC22AllBoardingFeatureImpl23ConnectivityEventSource : NSObject <SPTNetworkConnectivityControllerObserver>
+@interface _TtC22AllBoardingFeatureImpl23ConnectivityEventSource : NSObject
 {
     // Error parsing type: , name: connectivityController
     // Error parsing type: , name: subscribers
@@ -17,7 +15,6 @@
 
 - (void).cxx_destruct;
 - (id)init;
-- (void)networkConnectivityController:(id)arg1 didChangeConnectionType:(long long)arg2 oldConnectionType:(long long)arg3;
 - (void)dealloc;
 
 @end

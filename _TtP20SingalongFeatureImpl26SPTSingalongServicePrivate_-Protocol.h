@@ -6,9 +6,9 @@
 
 #import "_TtP16SingalongFeature19SPTSingalongService_-Protocol.h"
 
-@class _TtC20SingalongFeatureImpl11TestManager;
+@protocol _TtP20SingalongFeatureImpl11TestManager_;
 
 @protocol _TtP20SingalongFeatureImpl26SPTSingalongServicePrivate_ <_TtP16SingalongFeature19SPTSingalongService_>
-@property(nonatomic, readonly) _TtC20SingalongFeatureImpl11TestManager *testManager;
+@property(nonatomic, readonly) id <_TtP20SingalongFeatureImpl11TestManager_> testManager;
 @end
 

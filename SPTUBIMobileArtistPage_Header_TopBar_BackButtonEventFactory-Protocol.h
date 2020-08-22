@@ -6,11 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSURL;
 @protocol SPTUBIEventLocation, SPTUBIInteractionEvent;
 
 @protocol SPTUBIMobileArtistPage_Header_TopBar_BackButtonEventFactory <NSObject>
-- (id <SPTUBIInteractionEvent>)hitUiNavigateWithDestination:(NSURL *)arg1;
+- (id <SPTUBIInteractionEvent>)hitUiNavigateBack;
 - (id <SPTUBIEventLocation>)_location;
 @end
 

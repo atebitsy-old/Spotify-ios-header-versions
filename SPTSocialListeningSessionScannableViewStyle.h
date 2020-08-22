@@ -8,20 +8,16 @@
 
 #import "GLUEStyle-Protocol.h"
 
-@class GLUEAccessoryIconButtonStyle, GLUEImageStyle, NSString, UIColor;
+@class GLUEImageStyle, NSString, UIColor;
 
 @interface SPTSocialListeningSessionScannableViewStyle : NSObject <GLUEStyle>
 {
     UIColor *_backgroundColor;
     double _cornerRadius;
     GLUEImageStyle *_scannablesImageViewStyle;
-    GLUEAccessoryIconButtonStyle *_shareCodeButtonStyle;
-    UIColor *_separatorColor;
 }
 
 - (void).cxx_destruct;
-@property(copy, nonatomic) UIColor *separatorColor; // @synthesize separatorColor=_separatorColor;
-@property(copy, nonatomic) GLUEAccessoryIconButtonStyle *shareCodeButtonStyle; // @synthesize shareCodeButtonStyle=_shareCodeButtonStyle;
 @property(copy, nonatomic) GLUEImageStyle *scannablesImageViewStyle; // @synthesize scannablesImageViewStyle=_scannablesImageViewStyle;
 @property(nonatomic) double cornerRadius; // @synthesize cornerRadius=_cornerRadius;
 @property(copy, nonatomic) UIColor *backgroundColor; // @synthesize backgroundColor=_backgroundColor;

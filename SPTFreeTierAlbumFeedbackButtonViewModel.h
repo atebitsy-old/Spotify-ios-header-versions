@@ -6,22 +6,24 @@
 
 #import "SPTFreeTierEntityFeedbackButtonViewModelBase.h"
 
-@protocol SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken;
+@protocol SPTCollectionPlatform, SPTCollectionPlatformDataLoaderRequestToken, SPTFreeTierAlbumFeedbackButtonViewModelLogger;
 
 @interface SPTFreeTierAlbumFeedbackButtonViewModel : SPTFreeTierEntityFeedbackButtonViewModelBase
 {
     id <SPTCollectionPlatform> _collectionPlatform;
     id <SPTCollectionPlatformDataLoaderRequestToken> _collectionStateRequestToken;
+    id <SPTFreeTierAlbumFeedbackButtonViewModelLogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
+@property(readonly, nonatomic) id <SPTFreeTierAlbumFeedbackButtonViewModelLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTCollectionPlatformDataLoaderRequestToken> collectionStateRequestToken; // @synthesize collectionStateRequestToken=_collectionStateRequestToken;
 @property(readonly, nonatomic) id <SPTCollectionPlatform> collectionPlatform; // @synthesize collectionPlatform=_collectionPlatform;
 - (void)evaluateStateForCollectionState:(unsigned long long)arg1 error:(id)arg2;
 - (void)unban;
 - (void)unlike;
 - (void)like;
-- (id)initWithAlbumURI:(id)arg1 configuration:(id)arg2 collectionPlatform:(id)arg3 logger:(id)arg4;
+- (id)initWithAlbumURI:(id)arg1 configuration:(id)arg2 collectionPlatform:(id)arg3 logger:(id)arg4 ubiLogger:(id)arg5;
 
 @end
 

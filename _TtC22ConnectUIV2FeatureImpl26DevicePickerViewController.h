@@ -18,7 +18,6 @@
     // Error parsing type: , name: miniPickerEnabled
     // Error parsing type: , name: dismissClosure
     // Error parsing type: , name: scrollObserverManager
-    // Error parsing type: , name: shouldsStartLoop
     // Error parsing type: , name: $__lazy_storage_$_viewBinder
 }
 
@@ -26,9 +25,11 @@
 - (id)initWithNibName:(id)arg1 bundle:(id)arg2;
 - (id)initWithCoder:(id)arg1;
 - (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
+- (void)viewDidDisappear:(_Bool)arg1;
 - (void)viewWillDisappear:(_Bool)arg1;
 - (void)viewDidAppear:(_Bool)arg1;
 - (void)viewWillAppear:(_Bool)arg1;
+- (void)dealloc;
 - (void)viewDidLoad;
 
 @end

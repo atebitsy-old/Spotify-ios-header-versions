@@ -13,6 +13,7 @@
     // Error parsing type: , name: uiView
     // Error parsing type: , name: uiButton
     // Error parsing type: , name: tapAction
+    // Error parsing type: , name: isFullBleed
     // Error parsing type: , name: onProgress
     // Error parsing type: , name: onFullHeaderProgress
     // Error parsing type: , name: onRemount

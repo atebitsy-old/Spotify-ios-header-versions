@@ -12,9 +12,9 @@
 }
 
 - (void).cxx_destruct;
-- (void)applyThemeLayout;
 - (void)updateViewForChangedContentOffset:(struct CGPoint)arg1;
 - (void)configureWithModel:(id)arg1;
+- (void)applyThemeLayout;
 - (id)initWithTheme:(id)arg1 frame:(struct CGRect)arg2;
 
 @end

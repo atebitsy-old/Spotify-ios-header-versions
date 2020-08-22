@@ -11,21 +11,21 @@
 #import "SPTShareableContext-Protocol.h"
 #import "SPViewController-Protocol.h"
 
-@class NSString, NSURL, SPTFreeTierAlbumContextMenuButtonViewModel, SPTFreeTierAlbumFeedbackButtonViewModel, SPTFreeTierAlbumUBILogger, SPTProgressView;
-@protocol SPTPlayer;
+@class NSString, NSURL, SPTFreeTierAlbumContextMenuButtonViewModel, SPTFreeTierAlbumFeedbackButtonViewModel, SPTProgressView;
+@protocol SPTFreeTierEntityViewControllerLogger, SPTPlayer;
 
 @interface SPTFreeTierAlbumViewController : SPTHubViewController <SPTShareableContext, SPTNavigationControllerNavigationBarState, SPTHubShelvesManagerActionDelegate, SPViewController>
 {
     SPTFreeTierAlbumFeedbackButtonViewModel *_feedbackButtonViewModel;
     SPTFreeTierAlbumContextMenuButtonViewModel *_contextMenuButtonViewModel;
     id <SPTPlayer> _player;
-    SPTFreeTierAlbumUBILogger *_ubiLogger;
+    id <SPTFreeTierEntityViewControllerLogger> _ubiLogger;
     SPTProgressView *_progressView;
 }
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
-@property(readonly, nonatomic) SPTFreeTierAlbumUBILogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTFreeTierEntityViewControllerLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(readonly, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(readonly, nonatomic) SPTFreeTierAlbumContextMenuButtonViewModel *contextMenuButtonViewModel; // @synthesize contextMenuButtonViewModel=_contextMenuButtonViewModel;
 @property(readonly, nonatomic) SPTFreeTierAlbumFeedbackButtonViewModel *feedbackButtonViewModel; // @synthesize feedbackButtonViewModel=_feedbackButtonViewModel;

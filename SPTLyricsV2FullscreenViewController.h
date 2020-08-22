@@ -19,6 +19,7 @@
 @interface SPTLyricsV2FullscreenViewController : UIViewController <SPTLyricsV2FullscreenFooterViewControllerDelegate, SPTLyricsV2LyricsViewControllerDelegate, SPTVocalRemovalMenuButtonViewModelDelegate, SPTVocalRemovalFeedbackBannerPresenterDelegate, SPTGaiaConnectObserver, SPTPageController>
 {
     _Bool _wasVocalRemovalEnabledAtLeastOnce;
+    _Bool _wasUserSawEnoughCharactersEventLogged;
     NSString *_cardTitle;
     SPTLyricsV2Model *_lyricsModel;
     SPTLyricsV2Configuration *_lyricsConfiguration;
@@ -38,6 +39,7 @@
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool wasUserSawEnoughCharactersEventLogged; // @synthesize wasUserSawEnoughCharactersEventLogged=_wasUserSawEnoughCharactersEventLogged;
 @property(nonatomic) _Bool wasVocalRemovalEnabledAtLeastOnce; // @synthesize wasVocalRemovalEnabledAtLeastOnce=_wasVocalRemovalEnabledAtLeastOnce;
 @property(copy, nonatomic) CDUnknownBlockType lyricsViewFrameCallback; // @synthesize lyricsViewFrameCallback=_lyricsViewFrameCallback;
 @property(copy, nonatomic) CDUnknownBlockType cardViewFrameCallback; // @synthesize cardViewFrameCallback=_cardViewFrameCallback;

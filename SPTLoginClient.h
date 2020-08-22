@@ -13,8 +13,8 @@
     NSString *_clientID;
 }
 
-@property(readonly, copy, nonatomic) NSString *clientID; // @synthesize clientID=_clientID;
 - (void).cxx_destruct;
+@property(readonly, copy, nonatomic) NSString *clientID; // @synthesize clientID=_clientID;
 - (void)dispatchCompletion:(CDUnknownBlockType)arg1 withSession:(id)arg2 error:(id)arg3;
 - (void)handleLoginResponse:(id)arg1 withLoginRequest:(id)arg2 completion:(CDUnknownBlockType)arg3;
 - (void)sendLoginRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;

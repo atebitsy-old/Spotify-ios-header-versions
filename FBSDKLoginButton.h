@@ -23,11 +23,11 @@
     unsigned long long _tooltipColorStyle;
 }
 
+- (void).cxx_destruct;
 @property(nonatomic) unsigned long long tooltipColorStyle; // @synthesize tooltipColorStyle=_tooltipColorStyle;
 @property(nonatomic) unsigned long long tooltipBehavior; // @synthesize tooltipBehavior=_tooltipBehavior;
 @property(copy, nonatomic) NSArray *permissions; // @synthesize permissions=_permissions;
 @property(nonatomic) __weak id <FBSDKLoginButtonDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)_updateContent;
 - (void)_showTooltipIfNeeded;
 - (id)_shortLogInTitle;
@@ -45,7 +45,6 @@
 - (struct CGRect)imageRectForContentRect:(struct CGRect)arg1;
 - (void)didMoveToWindow;
 - (id)defaultFont;
-@property(nonatomic) unsigned long long loginBehavior;
 @property(nonatomic) unsigned long long defaultAudience;
 - (void)dealloc;
 

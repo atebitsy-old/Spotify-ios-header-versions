@@ -5,7 +5,7 @@
 //
 
 @interface (null) (YourLibraryXFeatureImpl)
-- (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
-- (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
+- (void)scrollViewDidStopWithScrollView:(id)arg1 lastDelta:(double)arg2;
+- (void)scrollViewDidScrollWithScrollView:(id)arg1 delta:(double)arg2;
 @end
 

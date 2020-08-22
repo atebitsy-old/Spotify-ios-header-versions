@@ -21,10 +21,10 @@
 + (id)showWithContent:(id)arg1 delegate:(id)arg2;
 + (id)dialogWithContent:(id)arg1 delegate:(id)arg2;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(nonatomic) _Bool shouldFailOnDataError; // @synthesize shouldFailOnDataError=_shouldFailOnDataError;
 @property(copy, nonatomic) id <FBSDKSharingContent> shareContent; // @synthesize shareContent=_shareContent;
 @property(nonatomic) __weak id <FBSDKSharingDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)_logDialogShow;
 - (void)_invokeDelegateDidFailWithError:(id)arg1;
 - (void)_invokeDelegateDidCompleteWithResults:(id)arg1;

@@ -31,6 +31,7 @@
 @property(retain, nonatomic) SPTPhoneNumberSignupPhoneNumberEntryContainerView *containerView; // @synthesize containerView=_containerView;
 - (void)didMoveToParentViewController:(id)arg1;
 - (unsigned long long)preferredNavigationBarState;
+- (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
 - (void)textFieldDidChange:(id)arg1;
 - (void)countrySelectorCellPressed;
 @property(readonly, nonatomic, getter=spt_pageURI) NSURL *pageURI;

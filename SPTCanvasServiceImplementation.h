@@ -10,7 +10,7 @@
 #import "SPTCanvasService-Protocol.h"
 #import "SPTCanvasTestManagerObserver-Protocol.h"
 
-@class NSString, SPTAllocationContext, SPTCanvasContextMenuActionsRegistrar, SPTCanvasForceArtworkManager, SPTCanvasLoadStateTracker, SPTCanvasLoggingService, SPTCanvasNowPlayingContentLayerProvider, SPTCanvasNowPlayingContentReloader, SPTCanvasNowPlayingViewState, SPTCanvasRemoteConfigManager, SPTCanvasSwitchViewControllerManager, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager, SPTCanvasTrackCheckerImplementation;
+@class NSString, SPTAllocationContext, SPTCanvasContextMenuActionsRegistrar, SPTCanvasForceArtworkManager, SPTCanvasLoadStateTracker, SPTCanvasLogger, SPTCanvasLoggingService, SPTCanvasNowPlayingContentLayerProvider, SPTCanvasNowPlayingContentReloader, SPTCanvasNowPlayingViewState, SPTCanvasRemoteConfigManager, SPTCanvasSwitchViewControllerManager, SPTCanvasTestManager, SPTCanvasTooltipPresentationManager, SPTCanvasTrackCheckerImplementation;
 @protocol CosmosFeature, GaiaFeature, SPContextMenuFeature, SPTContainerService, SPTCoreService, SPTDataSaverService, SPTDebugService, SPTEntityService, SPTEventSenderService, SPTFeatureFlaggingService, SPTFreeTierTooltipService, SPTGLUEService, SPTModerationService, SPTNetworkService, SPTNowPlayingContainerIdleMonitorObservable, SPTNowPlayingPlatformService, SPTNowPlayingService, SPTPageRegistrationToken, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShareFeature, SPTURIDispatchService, SPTVideoFeature, SPTVideoURLAssetLoader;
 
 @interface SPTCanvasServiceImplementation : NSObject <SPTCanvasIdleMonitorObserverDelegate, SPTCanvasTestManagerObserver, SPTCanvasService>
@@ -49,7 +49,7 @@
     SPTCanvasRemoteConfigManager *_remoteConfigurationManager;
     id <SPTNowPlayingContainerIdleMonitorObservable> _idleMonitorObservable;
     id <SPTVideoURLAssetLoader> _canvasVideoAssetLoader;
-    id _canvasLogger;
+    SPTCanvasLogger *_canvasLogger;
     SPTCanvasNowPlayingContentLayerProvider *_nowPlayingContentLayerProvider;
     SPTCanvasLoadStateTracker *_canvasLoadStateTracker;
     SPTCanvasSwitchViewControllerManager *_canvasSwitchManager;
@@ -64,7 +64,7 @@
 @property(retain, nonatomic) SPTCanvasSwitchViewControllerManager *canvasSwitchManager; // @synthesize canvasSwitchManager=_canvasSwitchManager;
 @property(retain, nonatomic) SPTCanvasLoadStateTracker *canvasLoadStateTracker; // @synthesize canvasLoadStateTracker=_canvasLoadStateTracker;
 @property(retain, nonatomic) SPTCanvasNowPlayingContentLayerProvider *nowPlayingContentLayerProvider; // @synthesize nowPlayingContentLayerProvider=_nowPlayingContentLayerProvider;
-@property(retain, nonatomic) id canvasLogger; // @synthesize canvasLogger=_canvasLogger;
+@property(retain, nonatomic) SPTCanvasLogger *canvasLogger; // @synthesize canvasLogger=_canvasLogger;
 @property(retain, nonatomic) id <SPTVideoURLAssetLoader> canvasVideoAssetLoader; // @synthesize canvasVideoAssetLoader=_canvasVideoAssetLoader;
 @property(retain, nonatomic) id <SPTNowPlayingContainerIdleMonitorObservable> idleMonitorObservable; // @synthesize idleMonitorObservable=_idleMonitorObservable;
 @property(retain, nonatomic) SPTCanvasRemoteConfigManager *remoteConfigurationManager; // @synthesize remoteConfigurationManager=_remoteConfigurationManager;

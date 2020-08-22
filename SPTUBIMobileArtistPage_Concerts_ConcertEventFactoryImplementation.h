@@ -19,6 +19,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
 - (id)hitUiNavigateWithDestination:(id)arg1;
+- (id)impression;
 - (id)_location;
 - (id)initWithPosition:(long long)arg1 uri:(id)arg2 components:(id)arg3;
 

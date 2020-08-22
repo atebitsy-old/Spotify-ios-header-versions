@@ -6,11 +6,9 @@
 
 #import <objc/NSObject.h>
 
-#import "_TtP20SingalongFeatureImpl26SPTSingalongServicePrivate_-Protocol.h"
+@protocol _TtP20SingalongFeatureImpl11TestManager_;
 
-@class _TtC20SingalongFeatureImpl11TestManager;
-
-@interface _TtC20SingalongFeatureImpl16SingalongService : NSObject <_TtP20SingalongFeatureImpl26SPTSingalongServicePrivate_>
+@interface _TtC20SingalongFeatureImpl16SingalongService : NSObject
 {
     // Error parsing type: , name: containerService
     // Error parsing type: , name: remoteConfigurationService
@@ -22,7 +20,7 @@
 - (id)init;
 - (void)load;
 - (void)configureWithServices:(id)arg1;
-@property(nonatomic, retain) _TtC20SingalongFeatureImpl11TestManager *testManager; // @synthesize testManager;
+@property(nonatomic, retain) id <_TtP20SingalongFeatureImpl11TestManager_> testManager; // @synthesize testManager;
 
 @end
 

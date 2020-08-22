@@ -22,6 +22,7 @@
     UITapGestureRecognizer *_insideTapGestureRecognizer;
 }
 
+- (void).cxx_destruct;
 @property(retain, nonatomic) UITapGestureRecognizer *insideTapGestureRecognizer; // @synthesize insideTapGestureRecognizer=_insideTapGestureRecognizer;
 @property(retain, nonatomic) UIButton *closeButton; // @synthesize closeButton=_closeButton;
 @property(retain, nonatomic) UILabel *labelView; // @synthesize labelView=_labelView;
@@ -30,7 +31,6 @@
 @property(retain, nonatomic) FBSDKAppLink *refererAppLink; // @synthesize refererAppLink=_refererAppLink;
 @property(retain, nonatomic) UIColor *textColor; // @synthesize textColor=_textColor;
 @property(nonatomic) __weak id <FBSDKAppLinkReturnToRefererViewDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)updateHidden;
 - (void)onTapInside:(id)arg1;
 - (void)closeButtonTapped:(id)arg1;

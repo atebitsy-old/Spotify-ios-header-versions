@@ -8,16 +8,16 @@
 
 #import "BMPlayerConfiguration-Protocol.h"
 #import "BMSpotifyVideoConfiguration-Protocol.h"
-#import "SPTAbbaFeatureFlagsObserver-Protocol.h"
+#import "SPTProductStateObserver-Protocol.h"
 
 @class NSString, NSURL, SPTVideoFeatureProperties;
-@protocol SPTAbbaFeatureFlags;
+@protocol SPTProductState;
 
-@interface SPTVideoFeaturePlayerConfiguration : NSObject <SPTAbbaFeatureFlagsObserver, BMPlayerConfiguration, BMSpotifyVideoConfiguration>
+@interface SPTVideoFeaturePlayerConfiguration : NSObject <SPTProductStateObserver, BMPlayerConfiguration, BMSpotifyVideoConfiguration>
 {
     _Bool _preventDisplaySleepDuringVideoPlayback;
     unsigned long long _videoCDNLoggingOption;
-    id <SPTAbbaFeatureFlags> _featureFlags;
+    id <SPTProductState> _productState;
     SPTVideoFeatureProperties *_videoFeatureProperties;
     NSString *_manifestURLTemplate;
 }
@@ -25,7 +25,7 @@
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSString *manifestURLTemplate; // @synthesize manifestURLTemplate=_manifestURLTemplate;
 @property(retain, nonatomic) SPTVideoFeatureProperties *videoFeatureProperties; // @synthesize videoFeatureProperties=_videoFeatureProperties;
-@property(retain, nonatomic) id <SPTAbbaFeatureFlags> featureFlags; // @synthesize featureFlags=_featureFlags;
+@property(retain, nonatomic) id <SPTProductState> productState; // @synthesize productState=_productState;
 @property(readonly, nonatomic) _Bool preventDisplaySleepDuringVideoPlayback; // @synthesize preventDisplaySleepDuringVideoPlayback=_preventDisplaySleepDuringVideoPlayback;
 @property(readonly, nonatomic) unsigned long long videoCDNLoggingOption; // @synthesize videoCDNLoggingOption=_videoCDNLoggingOption;
 @property(readonly, nonatomic) _Bool spotifyVideoHLSEnabled;
@@ -35,12 +35,12 @@
 @property(readonly, nonatomic) NSURL *fairplayLicenseURL;
 @property(readonly, nonatomic) NSURL *fairplayApplicationCertificateURL;
 - (id)remoteManifestURLForManifestID:(id)arg1;
-- (void)featureFlagsDidChange:(id)arg1;
+- (void)productState:(id)arg1 stateDidChange:(id)arg2;
 - (void)updateVideoCDNSampling;
-- (void)updateFeatureFlagsTemplates;
+- (void)updateManifestURLTemplate;
 - (void)dealloc;
-- (void)updateFeatureFlags;
-- (id)initWithFeatureFlags:(id)arg1 videoFeatureProperties:(id)arg2 preventDisplaySleepDuringVideoPlayback:(_Bool)arg3;
+- (void)updateProductState;
+- (id)initWithProductState:(id)arg1 videoFeatureProperties:(id)arg2 preventDisplaySleepDuringVideoPlayback:(_Bool)arg3;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

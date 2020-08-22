@@ -10,7 +10,7 @@
 {
 }
 
-+ (CDUnknownBlockType)cuePlayed:(id)arg1;
++ (CDUnknownBlockType)earconPlayed:(id)arg1;
 + (CDUnknownBlockType)savedAd:(id)arg1;
 + (CDUnknownBlockType)playbackResumed:(id)arg1;
 + (CDUnknownBlockType)playbackBuffering:(id)arg1;

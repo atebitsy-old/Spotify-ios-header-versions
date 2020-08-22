@@ -9,6 +9,8 @@
 @interface _TtC23YourLibraryXFeatureImpl42YourLibraryOnboardingViewControllerFactory : NSObject
 {
     // Error parsing type: , name: theme
+    // Error parsing type: , name: logger
+    // Error parsing type: , name: activate
 }
 
 - (void).cxx_destruct;

@@ -11,7 +11,7 @@
 #import "SPTPlayerObserver-Protocol.h"
 #import "SPTVolumeSystemObserver-Protocol.h"
 
-@class AVAudioSession, NSString, SPTAdFeatureFlagChecks, SPTAdFocusManager, SPTPlayerState;
+@class AVAudioSession, NSString, SPTAdFocusManager, SPTPlayerState;
 @protocol SPContextMenuFeature, SPTAdsBaseCosmosBridge, SPTAdsBaseRegistry, SPTNowPlayingManager, SPTPlayer, SPTVolumeSystemAPI;
 
 @interface SPTAdNowPlayingManager : NSObject <SPTAdsBaseRegistryObserver, SPTPlayerObserver, SPTAdFocusManagerObserver, SPTVolumeSystemObserver>
@@ -23,7 +23,6 @@
     id <SPTAdsBaseCosmosBridge> _cosmosBridge;
     id <SPTAdsBaseRegistry> _adRegistry;
     id <SPTPlayer> _player;
-    SPTAdFeatureFlagChecks *_featureChecker;
     SPTAdFocusManager *_adFocusManager;
     id <SPContextMenuFeature> _contextMenuFeature;
     id <SPTVolumeSystemAPI> _systemVolumeManager;
@@ -39,7 +38,6 @@
 @property(retain, nonatomic) id <SPTVolumeSystemAPI> systemVolumeManager; // @synthesize systemVolumeManager=_systemVolumeManager;
 @property(nonatomic) __weak id <SPContextMenuFeature> contextMenuFeature; // @synthesize contextMenuFeature=_contextMenuFeature;
 @property(retain, nonatomic) SPTAdFocusManager *adFocusManager; // @synthesize adFocusManager=_adFocusManager;
-@property(retain, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
 @property(retain, nonatomic) id <SPTAdsBaseRegistry> adRegistry; // @synthesize adRegistry=_adRegistry;
 @property(retain, nonatomic) id <SPTAdsBaseCosmosBridge> cosmosBridge; // @synthesize cosmosBridge=_cosmosBridge;
@@ -62,7 +60,7 @@
 @property(readonly, nonatomic, getter=isPlayingAd) _Bool playingAd;
 @property(readonly, nonatomic) SPTPlayerState *currentPlayerState;
 - (void)dealloc;
-- (id)initWithCosmosBridge:(id)arg1 adRegistry:(id)arg2 player:(id)arg3 featureChecker:(id)arg4 adFocusManager:(id)arg5 contextMenuFeature:(id)arg6 systemVolumeManager:(id)arg7;
+- (id)initWithCosmosBridge:(id)arg1 adRegistry:(id)arg2 player:(id)arg3 adFocusManager:(id)arg4 contextMenuFeature:(id)arg5 systemVolumeManager:(id)arg6;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

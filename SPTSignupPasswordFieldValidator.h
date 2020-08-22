@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTSignupFieldValidator-Protocol.h"
+#import "SPTSignupFieldLocalAndRemoteValidator-Protocol.h"
 
 @class NSArray, NSString, SPTSignupPasswordBackendValidator;
 
-@interface SPTSignupPasswordFieldValidator : NSObject <SPTSignupFieldValidator>
+@interface SPTSignupPasswordFieldValidator : NSObject <SPTSignupFieldLocalAndRemoteValidator>
 {
     SPTSignupPasswordBackendValidator *_backendValidator;
     NSArray *_passwordBlacklist;

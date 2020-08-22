@@ -14,10 +14,10 @@
 {
     _Bool _shouldEnableFindPromo;
     _Bool _shouldRegisterMarketingFormatComponents;
-    _Bool _headerV2Enabled;
+    _Bool _shouldUsePageLoader;
 }
 
-@property(readonly, nonatomic) _Bool headerV2Enabled; // @synthesize headerV2Enabled=_headerV2Enabled;
+@property(readonly, nonatomic) _Bool shouldUsePageLoader; // @synthesize shouldUsePageLoader=_shouldUsePageLoader;
 @property(readonly, nonatomic) _Bool shouldRegisterMarketingFormatComponents; // @synthesize shouldRegisterMarketingFormatComponents=_shouldRegisterMarketingFormatComponents;
 @property(readonly, nonatomic) _Bool shouldEnableFindPromo; // @synthesize shouldEnableFindPromo=_shouldEnableFindPromo;
 - (id)propertyModels;

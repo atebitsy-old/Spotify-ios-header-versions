@@ -10,6 +10,7 @@
 {
 }
 
++ (_Bool)isMatchURLScheme:(id)arg1;
 + (id)appInvitePromotionCodeFromURL:(id)arg1;
 + (void)fetchDeferredAppLink:(CDUnknownBlockType)arg1;
 

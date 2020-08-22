@@ -8,7 +8,7 @@
 
 #import "SPTYourLibraryMusicSortFilterLogger-Protocol.h"
 
-@class NSString;
+@class NSMutableDictionary, NSString;
 @protocol SPTLogCenter, SPTUBILogger, SPTUBIMobileYourLibraryAlbumsEventFactory, SPTUBIMobileYourLibraryArtistsEventFactory, SPTUBIMobileYourLibraryPlaylistsEventFactory;
 
 @interface SPTYourLibraryMusicLogger : NSObject <SPTYourLibraryMusicSortFilterLogger>
@@ -20,9 +20,11 @@
     id <SPTUBILogger> _ubiLogger;
     id <SPTLogCenter> _logCenter;
     unsigned long long _type;
+    NSMutableDictionary *_impressionTracking;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) NSMutableDictionary *impressionTracking; // @synthesize impressionTracking=_impressionTracking;
 @property(readonly, nonatomic) unsigned long long type; // @synthesize type=_type;
 @property(readonly, nonatomic) id <SPTLogCenter> logCenter; // @synthesize logCenter=_logCenter;
 @property(readonly, nonatomic) id <SPTUBILogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
@@ -38,6 +40,12 @@
 - (void)logUIImpressionWithImpressionType:(id)arg1;
 - (void)logUIInteractionWithSectionId:(id)arg1 itemIndex:(long long)arg2 targetURI:(id)arg3 interactionType:(id)arg4 userIntent:(id)arg5;
 - (void)logUIInteractionWithSectionId:(id)arg1 userIntent:(id)arg2;
+- (void)clearTrackedImpression:(unsigned long long)arg1;
+- (void)trackImpression:(unsigned long long)arg1;
+- (_Bool)isTrackedImpressionOpen:(unsigned long long)arg1;
+- (void)logAssistantViewImpressionWithIdentifier:(id)arg1 index:(long long)arg2;
+- (id)betaAssistantFactory;
+- (void)logBetaAssistantViewImpression;
 - (void)logEmptyStaticFilterViewImpression;
 - (void)logEmptyTextFilterViewImpression;
 - (void)logEmptyViewImpression;
@@ -49,6 +57,8 @@
 - (void)logFilterSortInteractionType:(unsigned long long)arg1;
 - (void)logAddArtistsWithURL:(id)arg1;
 - (void)logAddArtistsButtonWithURL:(id)arg1;
+- (void)logBetaAssistantViewActionTapped;
+- (void)logBetaAssistantViewClosed;
 - (void)logCreatePlaylist;
 - (void)logCreatePlaylistButton;
 - (void)logLikedSongsWithURL:(id)arg1;

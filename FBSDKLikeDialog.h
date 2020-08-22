@@ -20,12 +20,12 @@
 
 + (id)likeWithObjectID:(id)arg1 objectType:(unsigned long long)arg2 delegate:(id)arg3;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(nonatomic) __weak UIViewController *fromViewController; // @synthesize fromViewController=_fromViewController;
 @property(nonatomic) _Bool shouldFailOnDataError; // @synthesize shouldFailOnDataError=_shouldFailOnDataError;
 @property(nonatomic) unsigned long long objectType; // @synthesize objectType=_objectType;
 @property(copy, nonatomic) NSString *objectID; // @synthesize objectID=_objectID;
 @property(nonatomic) __weak id <FBSDKLikeDialogDelegate> delegate; // @synthesize delegate=_delegate;
-- (void).cxx_destruct;
 - (void)_handleCompletionWithDialogResults:(id)arg1 error:(id)arg2;
 - (_Bool)_canLikeNative;
 - (_Bool)validateWithError:(id *)arg1;

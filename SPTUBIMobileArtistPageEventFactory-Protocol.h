@@ -6,7 +6,7 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSString, NSURL;
+@class NSURL;
 @protocol SPTUBIEventLocation, SPTUBIMobileArtistPage_ArtistFanFundingEventFactory, SPTUBIMobileArtistPage_ArtistPickEventFactory, SPTUBIMobileArtistPage_ArtistsPlaylistEventFactory, SPTUBIMobileArtistPage_BiographyEventFactory, SPTUBIMobileArtistPage_ConcertsEventFactory, SPTUBIMobileArtistPage_FansAlsoLikeEventFactory, SPTUBIMobileArtistPage_FeaturingEventFactory, SPTUBIMobileArtistPage_HeaderEventFactory, SPTUBIMobileArtistPage_LikedTracksEventFactory, SPTUBIMobileArtistPage_MerchEventFactory, SPTUBIMobileArtistPage_PopularReleasesEventFactory, SPTUBIMobileArtistPage_TopTracksEventFactory, SPTUBIMobileArtistPage_TrackCloudEventFactory;
 
 @protocol SPTUBIMobileArtistPageEventFactory <NSObject>
@@ -14,12 +14,12 @@
 - (id <SPTUBIMobileArtistPage_ConcertsEventFactory>)concertsFactory;
 - (id <SPTUBIMobileArtistPage_MerchEventFactory>)merchFactory;
 - (id <SPTUBIMobileArtistPage_ArtistFanFundingEventFactory>)artistFanFundingFactory;
-- (id <SPTUBIMobileArtistPage_ArtistsPlaylistEventFactory>)artistsPlaylistFactoryWithIdentifier:(NSString *)arg1;
-- (id <SPTUBIMobileArtistPage_FansAlsoLikeEventFactory>)fansAlsoLikeFactoryWithIdentifier:(NSString *)arg1;
-- (id <SPTUBIMobileArtistPage_FeaturingEventFactory>)featuringFactoryWithIdentifier:(NSString *)arg1;
-- (id <SPTUBIMobileArtistPage_PopularReleasesEventFactory>)popularReleasesFactoryWithIdentifier:(NSString *)arg1;
+- (id <SPTUBIMobileArtistPage_ArtistsPlaylistEventFactory>)artistsPlaylistFactory;
+- (id <SPTUBIMobileArtistPage_FansAlsoLikeEventFactory>)fansAlsoLikeFactory;
+- (id <SPTUBIMobileArtistPage_FeaturingEventFactory>)featuringFactory;
+- (id <SPTUBIMobileArtistPage_PopularReleasesEventFactory>)popularReleasesFactory;
 - (id <SPTUBIMobileArtistPage_ArtistPickEventFactory>)artistPickFactory;
-- (id <SPTUBIMobileArtistPage_TrackCloudEventFactory>)trackCloudFactoryWithIdentifier:(NSString *)arg1;
+- (id <SPTUBIMobileArtistPage_TrackCloudEventFactory>)trackCloudFactory;
 - (id <SPTUBIMobileArtistPage_TopTracksEventFactory>)topTracksFactory;
 - (id <SPTUBIMobileArtistPage_LikedTracksEventFactory>)likedTracksFactoryWithUri:(NSURL *)arg1;
 - (id <SPTUBIMobileArtistPage_HeaderEventFactory>)headerFactory;

@@ -7,9 +7,10 @@
 #import "NSObject-Protocol.h"
 
 @class NSArray, NSString, NSURL;
-@protocol SPTSocialListeningModelObserver, SPTSocialListeningSocialDeviceModelEntity;
+@protocol SPTSocialListeningModelObserver, SPTSocialListeningSessionModelEntity, SPTSocialListeningSocialDeviceModelEntity;
 
 @protocol SPTSocialListeningModel <NSObject>
+@property(readonly, nonatomic) id <SPTSocialListeningSessionModelEntity> sessionModelEntity;
 @property(readonly, nonatomic) NSURL *hostAvatarURL;
 @property(readonly, nonatomic) NSArray<SPTSocialListeningSocialDeviceModelEntity> *socialDevices;
 @property(readonly, nonatomic) NSString *sessionID;

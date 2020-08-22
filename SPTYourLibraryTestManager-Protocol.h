@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTYourLibraryTestManager <NSObject>
+@property(readonly, nonatomic, getter=isYourLibraryBetaEnabled) _Bool yourLibraryBetaEnabled;
 @property(readonly, nonatomic, getter=isYourLibraryXEnabled) _Bool yourLibraryXEnabled;
 @end
 

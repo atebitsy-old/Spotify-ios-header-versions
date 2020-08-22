@@ -9,7 +9,7 @@
 #import "SPTQueueService-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTQueueFeatureProperties, SPTQueueUBILogger;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTCrashReporterService, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastEntityDataLoader, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTContextMenuOptions, SPTContextMenuPresenter, SPTExplicitContentService, SPTGLUEImageLoaderFactory, SPTGLUEService, SPTImageLoaderFactory, SPTLocalSettings, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPodcastEntityDataLoader, SPTPodcastFeature, SPTProductState, SPTQueueLogger, SPTQueuePlaybackDelegateRegistry, SPTRemoteConfigurationService, SPTSessionService, SPTSettingsFeature, SPTShelfService, SPTUBIService, _TtP17PodcastDALFeature20SPTPodcastDALService_, _TtP22AgeVerificationFeature25SPTAgeVerificationService_;
 
 @interface SPTQueueServiceImplementation : NSObject <SPTQueueService>
 {
@@ -17,13 +17,13 @@
     id <SPTContainerUIService> _containerUIService;
     id <SPTContextMenuOptions> _contextMenuOptions;
     id <SPTContextMenuPresenter> _contextMenuPresenter;
-    id <SPTCrashReporterService> _crashReporterService;
     id <SPTExplicitContentService> _explicitContentService;
     id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> _ageVerificationService;
     id <SPTUBIService> _ubiService;
     SPTQueueUBILogger *_queueUBILogger;
     id <SPTRemoteConfigurationService> _remoteConfigurationService;
     SPTQueueFeatureProperties *_featureProperties;
+    id <_TtP17PodcastDALFeature20SPTPodcastDALService_> _podcastDALService;
     id <SPTSessionService> _clientSessionService;
     id <SPTContainerService> _containerService;
     id <SPTNetworkService> _networkFeature;
@@ -60,13 +60,13 @@
 @property(nonatomic) __weak id <SPTNetworkService> networkFeature; // @synthesize networkFeature=_networkFeature;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
+@property(nonatomic) __weak id <_TtP17PodcastDALFeature20SPTPodcastDALService_> podcastDALService; // @synthesize podcastDALService=_podcastDALService;
 @property(retain, nonatomic) SPTQueueFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(nonatomic) __weak id <SPTRemoteConfigurationService> remoteConfigurationService; // @synthesize remoteConfigurationService=_remoteConfigurationService;
 @property(retain, nonatomic) SPTQueueUBILogger *queueUBILogger; // @synthesize queueUBILogger=_queueUBILogger;
 @property(nonatomic) __weak id <SPTUBIService> ubiService; // @synthesize ubiService=_ubiService;
 @property(nonatomic) __weak id <_TtP22AgeVerificationFeature25SPTAgeVerificationService_> ageVerificationService; // @synthesize ageVerificationService=_ageVerificationService;
 @property(nonatomic) __weak id <SPTExplicitContentService> explicitContentService; // @synthesize explicitContentService=_explicitContentService;
-@property(nonatomic) __weak id <SPTCrashReporterService> crashReporterService; // @synthesize crashReporterService=_crashReporterService;
 @property(retain, nonatomic) id <SPTContextMenuPresenter> contextMenuPresenter; // @synthesize contextMenuPresenter=_contextMenuPresenter;
 @property(retain, nonatomic) id <SPTContextMenuOptions> contextMenuOptions; // @synthesize contextMenuOptions=_contextMenuOptions;
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;

@@ -25,7 +25,6 @@
 - (id)_parametersForNewEvent;
 - (id)clientStateForAuthMethod:(id)arg1 andExistingState:(id)arg2;
 - (void)logNativeAppDialogResult:(_Bool)arg1 dialogDuration:(double)arg2;
-- (void)systemAuthDidShowDialog:(_Bool)arg1 isUnTOSedDevice:(_Bool)arg2;
 - (void)willAttemptAppSwitchingBehavior;
 - (id)parametersWithTimeStampAndClientState:(id)arg1 forAuthMethod:(id)arg2;
 - (void)endLoginWithResult:(id)arg1 error:(id)arg2;

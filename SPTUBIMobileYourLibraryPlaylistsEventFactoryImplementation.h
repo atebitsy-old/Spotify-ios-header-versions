@@ -25,6 +25,7 @@
 - (id)alphabeticIndexFactory;
 - (id)quickScrollFactory;
 - (id)itemListFactory;
+- (id)activeFilterFactoryWithIdentifier:(id)arg1;
 - (id)filterAndSortFactory;
 - (id)_location;
 - (id)init;

@@ -30,6 +30,7 @@
 - (_Bool)trackIsDisabled;
 - (_Bool)trackIsPremiumOnly;
 - (id)artistNames;
+- (long long)restriction;
 - (id)createTrackRowModelFromHubsWithPressedState:(_Bool)arg1;
 - (void)unlikeWithSender:(id)arg1;
 - (void)unhideWithSender:(id)arg1;

@@ -8,12 +8,12 @@
 
 @interface _TtC24CarModeEngineFeatureImpl20CarModeEngineService : NSObject
 {
-    // Error parsing type: , name: carDetectionService
-    // Error parsing type: , name: remoteConfigurationService
-    // Error parsing type: , name: featureFlaggingService
-    // Error parsing type: , name: settingsService
-    // Error parsing type: , name: sessionService
-    // Error parsing type: , name: uiPresentationService
+    // Error parsing type: , name: _carDetectionService
+    // Error parsing type: , name: _remoteConfigurationService
+    // Error parsing type: , name: _featureFlaggingService
+    // Error parsing type: , name: _settingsService
+    // Error parsing type: , name: _sessionService
+    // Error parsing type: , name: _uiPresentationService
     // Error parsing type: , name: $__lazy_storage_$_carModeEngine
     // Error parsing type: , name: $__lazy_storage_$_distractionControl
     // Error parsing type: , name: carModeEngineLoop
@@ -28,7 +28,6 @@
 - (id)init;
 - (void)unload;
 - (void)load;
-- (void)configureWithServices:(id)arg1;
 - (id)provideDistractionControl;
 - (id)provideEngine;
 

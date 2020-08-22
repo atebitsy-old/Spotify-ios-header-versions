@@ -18,9 +18,9 @@
 
 + (id)resolver;
 + (void)initialize;
+- (void).cxx_destruct;
 @property(nonatomic) long long userInterfaceIdiom; // @synthesize userInterfaceIdiom=_userInterfaceIdiom;
 @property(retain, nonatomic) NSMutableDictionary *cachedFBSDKAppLinks; // @synthesize cachedFBSDKAppLinks=_cachedFBSDKAppLinks;
-- (void).cxx_destruct;
 - (void)appLinksFromURLs:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (void)appLinkFromURL:(id)arg1 handler:(CDUnknownBlockType)arg2;
 - (id)initWithUserInterfaceIdiom:(long long)arg1;

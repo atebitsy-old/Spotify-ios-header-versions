@@ -9,12 +9,11 @@
 @interface _TtC18VoiceUIFeatureImpl27SPTVoiceUIFeatureProperties : NSObject
 {
     // Error parsing type: , name: voiceEnabled
+    // Error parsing type: , name: voiceV3MigrationEnabled
     // Error parsing type: , name: wakewordEnabled
     // Error parsing type: , name: seamlessVoiceEnabled
     // Error parsing type: , name: ttsEnabled
-    // Error parsing type: , name: alternateSearchEnabled
     // Error parsing type: , name: seamlessVoiceOption
-    // Error parsing type: , name: alternateSearchAction
 }
 
 - (void).cxx_destruct;

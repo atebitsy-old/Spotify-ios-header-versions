@@ -27,7 +27,6 @@
 @property(readonly, copy, nonatomic) NSString *specificationCommitHash; // @synthesize specificationCommitHash=_specificationCommitHash;
 @property(readonly, copy, nonatomic) NSArray *eventPathComponents; // @synthesize eventPathComponents=_eventPathComponents;
 @property(readonly, copy, nonatomic) NSString *applicationId; // @synthesize applicationId=_applicationId;
-- (id)initWithLocation:(id)arg1 overridingPageURI:(id)arg2 overridingPageId:(id)arg3;
 - (id)initWithApplicationId:(id)arg1 components:(id)arg2 specificationCommitHash:(id)arg3 generatorCommitHash:(id)arg4 specificationVersion:(id)arg5 impressionEnabled:(_Bool)arg6;
 
 // Remaining properties

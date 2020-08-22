@@ -44,6 +44,7 @@
 - (void)playlistsModel:(id)arg1 error:(id)arg2;
 - (void)playlistsModel:(id)arg1 didUpdateEntity:(id)arg2;
 - (id)modelItemEntityAtIndexPath:(id)arg1;
+- (void)logBetaAssistantViewImpressionIfNeeded;
 - (_Bool)showSeparatorForSection:(long long)arg1;
 - (void)logEmptyStaticFilterViewImpression;
 - (void)logEmptyTextFilterViewImpression;

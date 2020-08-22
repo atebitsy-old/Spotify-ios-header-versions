@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastEntityDataLoader-Protocol.h"
-
-@interface _TtC21PodcastDALFeatureImpl37PodcastEntityDataLoaderImplementation : NSObject <SPTPodcastEntityDataLoader>
+@interface _TtC21PodcastDALFeatureImpl37PodcastEntityDataLoaderImplementation : NSObject
 {
     // Error parsing type: , name: sortingProvider
     // Error parsing type: , name: podcastFactory

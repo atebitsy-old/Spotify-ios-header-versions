@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastRequestFactory-Protocol.h"
-
-@interface _TtC21PodcastDALFeatureImpl35PodcastRequestFactoryImplementation : NSObject <SPTPodcastRequestFactory>
+@interface _TtC21PodcastDALFeatureImpl35PodcastRequestFactoryImplementation : NSObject
 {
 }
 
@@ -17,7 +15,7 @@
 - (id)createMarkEpisodeAsPlayedRequestWithURLs:(id)arg1 markAsUnplayed:(_Bool)arg2;
 - (id)createCollectionEpisodesRequestWithURL:(id)arg1 subscribe:(_Bool)arg2;
 - (id)createPodcastEntityRequestWithURL:(id)arg1 filterPredicate:(id)arg2 sortDescriptor:(id)arg3 range:(struct _NSRange)arg4 subscribe:(_Bool)arg5 fetchTopics:(_Bool)arg6 fetchEpisodeQuotes:(_Bool)arg7;
-- (id)createDecorateItemsRequestWithItemURIs:(id)arg1 subscribe:(_Bool)arg2 fetchHTMLDescription:(_Bool)arg3;
+- (id)createDecorateItemsRequestWithItemURIs:(id)arg1 subscribe:(_Bool)arg2 fetchHTMLDescription:(_Bool)arg3 fetchQuotes:(_Bool)arg4;
 
 @end
 

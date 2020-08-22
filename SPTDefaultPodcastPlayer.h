@@ -37,6 +37,7 @@
 - (void)fetchProgressState:(id)arg1;
 - (void)scheduleFetchProgressTimerIfNecessary;
 - (id)restrictionsForPodcasts;
+- (_Bool)isPlayingEpisodeURL:(id)arg1;
 - (_Bool)isActiveContextURI:(id)arg1;
 - (_Bool)isActiveEpisodeURL:(id)arg1 inEntityURL:(id)arg2;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;

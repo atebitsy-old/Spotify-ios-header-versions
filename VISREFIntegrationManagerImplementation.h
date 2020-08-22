@@ -9,7 +9,7 @@
 #import "VISREFIntegrationManager-Protocol.h"
 
 @class NSArray, NSString, VISREFHubComponentRegistryOverrider, VISREFNavigationBarManager;
-@protocol SPTEncoreAlbumHeaderFactory, SPTImageLoader, SPTLinkDispatcher;
+@protocol SPTEncoreAlbumHeaderFactory><SPTEncoreArtistHeaderFactory, SPTImageLoader, SPTLinkDispatcher;
 
 @interface VISREFIntegrationManagerImplementation : NSObject <VISREFIntegrationManager>
 {
@@ -17,17 +17,19 @@
     _Bool _visualRefreshGreenButtonEnabled;
     _Bool _visualRefreshAnimatedHeartEnabled;
     _Bool _encoreAlbumHeaderEnabled;
+    _Bool _encoreArtistHeaderEnabled;
     VISREFNavigationBarManager *_navigationBarManager;
     NSArray *_headerComponents;
     VISREFHubComponentRegistryOverrider *_overriddenRegistry;
     id <SPTImageLoader> _imageLoader;
     id <SPTLinkDispatcher> _linkDispatcher;
-    id <SPTEncoreAlbumHeaderFactory> _encoreComponentFactory;
+    id <SPTEncoreAlbumHeaderFactory><SPTEncoreArtistHeaderFactory> _encoreComponentFactory;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool encoreArtistHeaderEnabled; // @synthesize encoreArtistHeaderEnabled=_encoreArtistHeaderEnabled;
 @property(nonatomic) _Bool encoreAlbumHeaderEnabled; // @synthesize encoreAlbumHeaderEnabled=_encoreAlbumHeaderEnabled;
-@property(retain, nonatomic) id <SPTEncoreAlbumHeaderFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
+@property(retain, nonatomic) id <SPTEncoreAlbumHeaderFactory><SPTEncoreArtistHeaderFactory> encoreComponentFactory; // @synthesize encoreComponentFactory=_encoreComponentFactory;
 @property(nonatomic) __weak id <SPTLinkDispatcher> linkDispatcher; // @synthesize linkDispatcher=_linkDispatcher;
 @property(readonly, nonatomic) id <SPTImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
 @property(retain, nonatomic) VISREFHubComponentRegistryOverrider *overriddenRegistry; // @synthesize overriddenRegistry=_overriddenRegistry;
@@ -41,6 +43,7 @@
 - (void)viewDidDisappear;
 - (void)viewDidAppear;
 - (void)viewWillAppear;
+- (void)configureWithViewController:(id)arg1 ubiLogger:(id)arg2;
 - (void)configureWithViewController:(id)arg1;
 - (id)initWithConfigurationFromVisualRefreshFlagsService:(id)arg1 imageLoader:(id)arg2 linkDispatcher:(id)arg3 encoreComponentFactory:(id)arg4;
 

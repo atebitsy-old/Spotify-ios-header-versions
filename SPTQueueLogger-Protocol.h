@@ -10,6 +10,7 @@
 @protocol SPTQueueTrack;
 
 @protocol SPTQueueLogger <NSObject>
+- (void)logClearQueueWithNumberOfItemsToRemove:(unsigned long long)arg1;
 - (void)logSpeedControlMenuButtonTapped;
 - (void)logSleepTimerButtonTapped;
 - (void)logBanButtonTappedWithFeedbackButtonBehavior:(long long)arg1 playerState:(SPTPlayerState *)arg2;

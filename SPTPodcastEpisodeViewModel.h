@@ -9,7 +9,7 @@
 #import "SPTPodcastPlayerDelegate-Protocol.h"
 
 @class NSArray, NSString, NSURL, SPTPodcastEpisodeFeatureProperties;
-@protocol SPTAbbaFeatureFlags, SPTCollectionLogger, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisode, SPTPodcastEpisodeDataParser, SPTPodcastEpisodeFactory, SPTPodcastEpisodePlayerContextParameters, SPTPodcastEpisodeViewModelDelegate, SPTPodcastFactory, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUIStringFormatter, SPTShareEntityData, SPTShareEntityDataFactory;
+@protocol SPTAbbaFeatureFlags, SPTCollectionLogger, SPTCollectionPlatform, SPTExplicitContentAccessManager, SPTLinkDispatcher, SPTPodcast, SPTPodcastDataLoader, SPTPodcastDataLoaderRequestToken, SPTPodcastEpisode, SPTPodcastEpisodeFactory, SPTPodcastEpisodePlayerContextParameters, SPTPodcastEpisodeViewModelDelegate, SPTPodcastFactory, SPTPodcastOffliningManager, SPTPodcastPlayer, SPTPodcastRequestFactory, SPTPodcastUIStringFormatter, SPTShareEntityData, SPTShareEntityDataFactory;
 
 @interface SPTPodcastEpisodeViewModel : NSObject <SPTPodcastPlayerDelegate>
 {
@@ -17,6 +17,7 @@
     _Bool _isPlaying;
     _Bool _fetchingPodcast;
     _Bool _reversePlaybackOrder;
+    _Bool _didLoad;
     id <SPTPodcastEpisodeViewModelDelegate> _delegate;
     NSArray *_sections;
     NSURL *_URL;
@@ -38,13 +39,12 @@
     id <SPTCollectionLogger> _collectionLogger;
     id <SPTPodcastEpisodePlayerContextParameters> _playerContextParameters;
     id <SPTPodcastOffliningManager> _podcastOffliningManager;
-    id <SPTPodcastEpisodeDataParser> _episodeDataParser;
     SPTPodcastEpisodeFeatureProperties *_featureProperties;
 }
 
 - (void).cxx_destruct;
+@property(nonatomic) _Bool didLoad; // @synthesize didLoad=_didLoad;
 @property(retain, nonatomic) SPTPodcastEpisodeFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(retain, nonatomic) id <SPTPodcastEpisodeDataParser> episodeDataParser; // @synthesize episodeDataParser=_episodeDataParser;
 @property(retain, nonatomic) id <SPTPodcastOffliningManager> podcastOffliningManager; // @synthesize podcastOffliningManager=_podcastOffliningManager;
 @property(retain, nonatomic) id <SPTPodcastEpisodePlayerContextParameters> playerContextParameters; // @synthesize playerContextParameters=_playerContextParameters;
 @property(retain, nonatomic) id <SPTCollectionLogger> collectionLogger; // @synthesize collectionLogger=_collectionLogger;
@@ -78,7 +78,7 @@
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;
 - (void)podcastPlayerStateDidChange:(id)arg1;
-- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2;
+- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2 fromTrackURL:(id)arg3;
 - (_Bool)navigateToExternalURL:(id)arg1;
 - (void)navigateToPodcast;
 - (void)playEpisodeAtPosition:(double)arg1;
@@ -90,6 +90,7 @@
 - (void)togglePlayback;
 - (_Bool)isActive;
 @property(readonly, nonatomic) _Bool isMusicInjectionEpisode;
+@property(readonly, nonatomic) _Bool isMusicAndTalk;
 @property(readonly, nonatomic) _Bool isExplicit;
 @property(readonly, nonatomic) _Bool isPlayed;
 @property(readonly, nonatomic) double duration;
@@ -105,8 +106,8 @@
 @property(readonly, nonatomic) NSString *title;
 - (void)loadShowDataWithCompletion:(CDUnknownBlockType)arg1;
 - (void)unsubscribe;
-- (void)load;
-- (id)initWithEpisodeURL:(id)arg1 podcastRequestFactory:(id)arg2 dataLoader:(id)arg3 episodeFactory:(id)arg4 podcastFactory:(id)arg5 stringFormatter:(id)arg6 player:(id)arg7 explicitContentAccessManager:(id)arg8 podcastOffliningManager:(id)arg9 linkDispatcher:(id)arg10 collectionPlatform:(id)arg11 shareEntityDataFactory:(id)arg12 collectionLogger:(id)arg13 playerContextParameters:(id)arg14 episodeDataParser:(id)arg15 featureProperties:(id)arg16;
+- (void)loadWithSubscription:(_Bool)arg1;
+- (id)initWithEpisodeURL:(id)arg1 podcastRequestFactory:(id)arg2 dataLoader:(id)arg3 episodeFactory:(id)arg4 podcastFactory:(id)arg5 stringFormatter:(id)arg6 player:(id)arg7 explicitContentAccessManager:(id)arg8 podcastOffliningManager:(id)arg9 linkDispatcher:(id)arg10 collectionPlatform:(id)arg11 shareEntityDataFactory:(id)arg12 collectionLogger:(id)arg13 playerContextParameters:(id)arg14 featureProperties:(id)arg15;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

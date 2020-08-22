@@ -15,6 +15,7 @@
 
 - (void).cxx_destruct;
 @property(retain, nonatomic) id <BMKVOControllerFactory> kvoControllerFactory; // @synthesize kvoControllerFactory=_kvoControllerFactory;
+- (id)createDownloadSessionWithDelegate:(id)arg1 identifier:(id)arg2;
 - (id)createPlayerLooperWithPlayer:(id)arg1;
 - (id)createPlayerItemWithAsset:(id)arg1;
 - (id)createQueuePlayer;

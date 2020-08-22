@@ -10,6 +10,7 @@
 {
 }
 
++ (id)recursiveGetLabelsFromView:(id)arg1;
 + (id)getDimensionOf:(id)arg1;
 + (long long)getTag:(id)arg1;
 + (id)getParentCollectionView:(id)arg1;
@@ -18,12 +19,14 @@
 + (_Bool)isView:(id)arg1 superViewOfView:(id)arg2;
 + (id)getViewReactTag:(id)arg1;
 + (_Bool)isRCTButton:(id)arg1;
++ (id)recursiveCaptureTreeWithCurrentNode:(id)arg1 targetNode:(id)arg2 objAddressSet:(id)arg3 hash:(_Bool)arg4;
 + (_Bool)isUserInputView:(id)arg1;
 + (unsigned long long)getClassBitmask:(id)arg1;
 + (id)getHint:(id)arg1;
 + (id)getTextStyle:(id)arg1;
 + (id)getText:(id)arg1;
 + (id)getIndexPath:(id)arg1;
++ (id)getDetailAttributesOf:(id)arg1 withHash:(_Bool)arg2;
 + (id)getDetailAttributesOf:(id)arg1;
 + (id)getAttributesOf:(id)arg1 parent:(id)arg2;
 + (id)getPath:(id)arg1 limit:(int)arg2;

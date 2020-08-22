@@ -17,13 +17,19 @@
     _Bool _solidHeaderBackground;
     _Bool _isErrorLoggingEnabled;
     _Bool _homeLoadingDebuggerEnabled;
+    unsigned long long _listeningHistory;
+    NSString *_listeningHistoryString;
 }
 
+- (void).cxx_destruct;
+@property(retain, nonatomic) NSString *listeningHistoryString; // @synthesize listeningHistoryString=_listeningHistoryString;
+@property(readonly, nonatomic) unsigned long long listeningHistory; // @synthesize listeningHistory=_listeningHistory;
 @property(readonly, nonatomic) _Bool homeLoadingDebuggerEnabled; // @synthesize homeLoadingDebuggerEnabled=_homeLoadingDebuggerEnabled;
 @property(readonly, nonatomic) _Bool isErrorLoggingEnabled; // @synthesize isErrorLoggingEnabled=_isErrorLoggingEnabled;
 @property(readonly, nonatomic) _Bool solidHeaderBackground; // @synthesize solidHeaderBackground=_solidHeaderBackground;
 @property(readonly, nonatomic) _Bool homeImprovedNavigationBar; // @synthesize homeImprovedNavigationBar=_homeImprovedNavigationBar;
 @property(readonly, nonatomic) _Bool useNewCacheLocation; // @synthesize useNewCacheLocation=_useNewCacheLocation;
+- (unsigned long long)mapListeningHistoryToEnumValue:(id)arg1;
 - (id)propertyModels;
 - (id)initWithPropertyValuesDictionary:(id)arg1;
 - (id)initWithConfiguration:(id)arg1;

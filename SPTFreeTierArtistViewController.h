@@ -10,7 +10,8 @@
 #import "SPTHubShelvesManagerActionDelegate-Protocol.h"
 #import "SPTNavigationControllerNavigationBarState-Protocol.h"
 
-@class NSString, SPTFreeTierArtistContextMenuButtonViewModel, SPTFreeTierArtistFeedbackButtonViewModel, SPTFreeTierArtistUBILogger, SPTFreeTierEntityNavigationDecorator, SPTProgressView;
+@class NSString, SPTFreeTierArtistContextMenuButtonViewModel, SPTFreeTierArtistFeedbackButtonViewModel, SPTFreeTierEntityNavigationDecorator, SPTProgressView;
+@protocol SPTFreeTierEntityViewControllerLogger;
 
 @interface SPTFreeTierArtistViewController : SPTHubViewController <SPTNavigationControllerNavigationBarState, SPTHubShelvesManagerActionDelegate, HUBViewContentOffsetObserver>
 {
@@ -18,11 +19,11 @@
     SPTFreeTierArtistContextMenuButtonViewModel *_contextMenuButtonViewModel;
     SPTFreeTierEntityNavigationDecorator *_navigationItemDecorator;
     SPTProgressView *_progressView;
-    SPTFreeTierArtistUBILogger *_ubiLogger;
+    id <SPTFreeTierEntityViewControllerLogger> _ubiLogger;
 }
 
 - (void).cxx_destruct;
-@property(readonly, nonatomic) SPTFreeTierArtistUBILogger *ubiLogger; // @synthesize ubiLogger=_ubiLogger;
+@property(readonly, nonatomic) id <SPTFreeTierEntityViewControllerLogger> ubiLogger; // @synthesize ubiLogger=_ubiLogger;
 @property(retain, nonatomic) SPTProgressView *progressView; // @synthesize progressView=_progressView;
 @property(readonly, nonatomic) SPTFreeTierEntityNavigationDecorator *navigationItemDecorator; // @synthesize navigationItemDecorator=_navigationItemDecorator;
 @property(readonly, nonatomic) SPTFreeTierArtistContextMenuButtonViewModel *contextMenuButtonViewModel; // @synthesize contextMenuButtonViewModel=_contextMenuButtonViewModel;

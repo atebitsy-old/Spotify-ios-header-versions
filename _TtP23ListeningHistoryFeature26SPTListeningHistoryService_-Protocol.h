@@ -6,10 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
-@protocol _TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_, _TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_;
+@protocol _TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_;
 
 @protocol _TtP23ListeningHistoryFeature26SPTListeningHistoryService_ <SPTService>
 - (id <_TtP23ListeningHistoryFeature25SPTListeningHistoryLogger_>)provideListeningHistoryLogger;
-- (id <_TtP23ListeningHistoryFeature35ListeningHistoryRemoteConfigManager_>)provideRemoteConfigManager;
 @end
 

@@ -7,6 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @protocol SPTMarqueeTestManager <NSObject>
+- (_Bool)isBackendStringsEnabled;
 - (_Bool)isMarqueeEnabled;
 @end
 

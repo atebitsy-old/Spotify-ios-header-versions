@@ -9,7 +9,7 @@
 @class SPTStorylinesState, UIImage;
 
 @protocol SPTStorylinesViewModelDelegate <NSObject>
-- (void)currentImageDidChange:(UIImage *)arg1;
+- (void)currentImageDidChange:(UIImage *)arg1 atCardIndex:(unsigned long long)arg2;
 - (void)autoplayTriggeredDidChange:(_Bool)arg1;
 - (void)stateDidChange:(SPTStorylinesState *)arg1 oldState:(SPTStorylinesState *)arg2;
 @end

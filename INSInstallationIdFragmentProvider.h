@@ -7,20 +7,22 @@
 #import <objc/NSObject.h>
 
 #import "INSEventContext-Protocol.h"
+#import "INSInstallationIdProtocol-Protocol.h"
 
 @class NSData, NSString;
 @protocol INSPersistentStore;
 
-@interface INSInstallationIdFragmentProvider : NSObject <INSEventContext>
+@interface INSInstallationIdFragmentProvider : NSObject <INSEventContext, INSInstallationIdProtocol>
 {
+    NSString *_installationId;
     id <INSPersistentStore> _persistentStore;
-    NSData *_installId;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) NSData *installId; // @synthesize installId=_installId;
 @property(retain, nonatomic) id <INSPersistentStore> persistentStore; // @synthesize persistentStore=_persistentStore;
-- (id)installationId;
+@property(retain, nonatomic) NSString *installationId; // @synthesize installationId=_installationId;
+- (id)installIdUrl;
+- (id)fetchCachedInstallationId;
 @property(readonly, copy, nonatomic) NSData *contextData;
 @property(readonly, copy, nonatomic) NSString *contextName;
 - (id)initWithPersistentStore:(id)arg1;

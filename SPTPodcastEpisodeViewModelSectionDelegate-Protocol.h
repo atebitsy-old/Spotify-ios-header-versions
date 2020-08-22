@@ -6,10 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@class NSIndexPath, SPTPodcastEpisodeSectionViewModel, SPTPodcastFilterContextViewController;
+@class NSIndexSet, SPTPodcastEpisodeSectionViewModel, SPTPodcastFilterContextViewController;
 
 @protocol SPTPodcastEpisodeViewModelSectionDelegate <NSObject>
-- (void)viewModel:(SPTPodcastEpisodeSectionViewModel *)arg1 didUpdatePlayingEpisodeAtIndexPath:(NSIndexPath *)arg2;
+- (void)viewModel:(SPTPodcastEpisodeSectionViewModel *)arg1 didUpdateSupplementaryContentAtIndexes:(NSIndexSet *)arg2;
 - (void)viewModel:(SPTPodcastEpisodeSectionViewModel *)arg1 willPresentFilterContextViewController:(SPTPodcastFilterContextViewController *)arg2 fromSender:(id)arg3;
 - (void)sectionViewModelDidUpdateFilterSorting:(SPTPodcastEpisodeSectionViewModel *)arg1;
 @end

@@ -9,40 +9,38 @@
 #import "SPTBrowseConnectivityMonitorObserver-Protocol.h"
 #import "SPTBrowseViewModelProvider-Protocol.h"
 
-@class NSString, SPTObserverManager;
-@protocol HUBViewModel, SPTBrowseConnectivityMonitor, SPTBrowseViewModelFetcher, SPTDataLoaderCancellationToken;
+@class NSString, SPTBrowseViewModel, SPTObserverManager;
+@protocol SPTBrowseConnectivityMonitor, SPTBrowseViewModelFetcher, SPTDataLoaderCancellationToken;
 
 @interface SPTBrowseViewModelProviderImplementation : NSObject <SPTBrowseConnectivityMonitorObserver, SPTBrowseViewModelProvider>
 {
     _Bool _refreshDisallowed;
     _Bool _loadedRemoteContent;
     _Bool _cacheLoadCompleted;
-    id <HUBViewModel> _viewModel;
+    SPTBrowseViewModel *_viewModel;
     id <SPTBrowseViewModelFetcher> _viewModelFetcher;
     SPTObserverManager *_observers;
     id <SPTBrowseViewModelFetcher> _nextPageFetcher;
     unsigned long long _state;
     id <SPTDataLoaderCancellationToken> _nextPageFetchCancellationToken;
     id <SPTBrowseConnectivityMonitor> _connectivityMonitor;
-    id <HUBViewModel> _initialViewModel;
-    id <HUBViewModel> _offlineViewModel;
-    id <HUBViewModel> _errorViewModel;
+    SPTBrowseViewModel *_offlineViewModel;
+    SPTBrowseViewModel *_errorViewModel;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic, getter=isCacheLoadCompleted) _Bool cacheLoadCompleted; // @synthesize cacheLoadCompleted=_cacheLoadCompleted;
 @property(nonatomic, getter=hasLoadedRemoteContent) _Bool loadedRemoteContent; // @synthesize loadedRemoteContent=_loadedRemoteContent;
 @property(nonatomic, getter=isRefreshDisallowed) _Bool refreshDisallowed; // @synthesize refreshDisallowed=_refreshDisallowed;
-@property(readonly, nonatomic) id <HUBViewModel> errorViewModel; // @synthesize errorViewModel=_errorViewModel;
-@property(readonly, nonatomic) id <HUBViewModel> offlineViewModel; // @synthesize offlineViewModel=_offlineViewModel;
-@property(readonly, nonatomic) id <HUBViewModel> initialViewModel; // @synthesize initialViewModel=_initialViewModel;
+@property(readonly, nonatomic) SPTBrowseViewModel *errorViewModel; // @synthesize errorViewModel=_errorViewModel;
+@property(readonly, nonatomic) SPTBrowseViewModel *offlineViewModel; // @synthesize offlineViewModel=_offlineViewModel;
 @property(readonly, nonatomic) id <SPTBrowseConnectivityMonitor> connectivityMonitor; // @synthesize connectivityMonitor=_connectivityMonitor;
 @property(retain, nonatomic) id <SPTDataLoaderCancellationToken> nextPageFetchCancellationToken; // @synthesize nextPageFetchCancellationToken=_nextPageFetchCancellationToken;
 @property(nonatomic) unsigned long long state; // @synthesize state=_state;
 @property(retain, nonatomic) id <SPTBrowseViewModelFetcher> nextPageFetcher; // @synthesize nextPageFetcher=_nextPageFetcher;
 @property(readonly, nonatomic) SPTObserverManager *observers; // @synthesize observers=_observers;
 @property(readonly, nonatomic) id <SPTBrowseViewModelFetcher> viewModelFetcher; // @synthesize viewModelFetcher=_viewModelFetcher;
-@property(retain, nonatomic) id <HUBViewModel> viewModel; // @synthesize viewModel=_viewModel;
+@property(retain, nonatomic) SPTBrowseViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (id)viewModelByAppendingViewModel:(id)arg1 toViewModel:(id)arg2;
 - (void)cancelLoadingNextPage;
 - (void)connectivityMonitorDidChangeState:(id)arg1;
@@ -51,7 +49,7 @@
 - (void)loadNextPage;
 - (void)refresh;
 - (void)reload;
-- (id)initWithViewModelFetcher:(id)arg1 connectivityMonitor:(id)arg2 initialViewModel:(id)arg3 offlineViewModel:(id)arg4 errorViewModel:(id)arg5;
+- (id)initWithViewModelFetcher:(id)arg1 connectivityMonitor:(id)arg2 placeholderViewModel:(id)arg3 offlineViewModel:(id)arg4 errorViewModel:(id)arg5;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

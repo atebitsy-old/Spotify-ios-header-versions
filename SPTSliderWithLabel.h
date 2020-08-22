@@ -7,6 +7,7 @@
 #import "SPTSlider.h"
 
 @class NSString, SPTSliderLabelView, UIView;
+@protocol SPTSliderWithLabelConfiguration;
 
 @interface SPTSliderWithLabel : SPTSlider
 {
@@ -15,10 +16,13 @@
     NSString *_valueFormat;
     CDUnknownBlockType _valueFormatter;
     _Bool _labelHidden;
+    id <SPTSliderWithLabelConfiguration> _configuration;
 }
 
 - (void).cxx_destruct;
+@property(retain, nonatomic) id <SPTSliderWithLabelConfiguration> configuration; // @synthesize configuration=_configuration;
 @property(nonatomic) _Bool labelHidden; // @synthesize labelHidden=_labelHidden;
+- (_Bool)isPad;
 - (id)accessibilityValue;
 - (void)layoutSubviews;
 - (void)touchUp;
@@ -27,7 +31,7 @@
 @property(copy, nonatomic) CDUnknownBlockType valueFormatter;
 @property(retain, nonatomic) NSString *valueFormat;
 - (void)dealloc;
-- (id)initWithFrame:(struct CGRect)arg1 animationView:(id)arg2;
+- (id)initWithFrame:(struct CGRect)arg1 animationView:(id)arg2 configuration:(id)arg3;
 - (void)commonSetup;
 
 @end

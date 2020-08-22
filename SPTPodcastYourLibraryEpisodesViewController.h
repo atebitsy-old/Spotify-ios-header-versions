@@ -61,7 +61,7 @@
 - (void)actionHandler:(id)arg1 didMarkEpisode:(id)arg2 atIndextPath:(id)arg3 asPlayed:(_Bool)arg4;
 - (void)podcastPlayer:(id)arg1 didUpdateProgressForTrackURL:(id)arg2;
 - (double)podcastPlayer:(id)arg1 updateProgressIntervalForTrackURL:(id)arg2;
-- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2;
+- (void)podcastPlayer:(id)arg1 didChangePlayingTrackURL:(id)arg2 fromTrackURL:(id)arg3;
 - (void)podcastPlayerStateDidChange:(id)arg1;
 - (void)viewModelDidUpdatePlayingEpisode:(id)arg1;
 - (void)viewModel:(id)arg1 episodesDidFinishLoadingWithError:(id)arg2;

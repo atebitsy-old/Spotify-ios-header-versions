@@ -12,7 +12,7 @@
 #import "SPTPreSignupExperimentationFeatureFlagsLoaderDelegate-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTAuthenticationHandler, SPTAuthenticationHandlerLogger, SPTDynamicSignupFlowController, SPTLoginAttemptLogger, SPTLoginDbManager, SPTLoginDelayedSignupAccountCreator, SPTLoginDelayedSignupAccountSwitcher, SPTLoginDialogController, SPTLoginErrorDecorator, SPTLoginFeatureLayoutConfigurationProvider, SPTLoginFeatureNavigationCoordinator, SPTLoginKeychainManagerImplementation, SPTLoginLogoutAwaiter, SPTLoginNavigationRouter, SPTLoginSlideUpModalPresenter, SPTLoginStateControllerImplementation, SPTObserverManager, SPTSigninWithAppleHandler, SPTSignupAttemptTrackerImplementation;
-@protocol SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTFacebookIntegrationService, SPTGLUEService, SPTLoginLoggingService, SPTLoginSessionScopeServicesLoaderProviderService, SPTNetworkService, SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTPreSignupExperimentationService, SPTUBIService, SPTUIPresentationApplicationService, SPTURIDispatchService;
+@protocol SPTAuthLoginOptionsUtilsService, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTCrashReporterService, SPTFacebookIntegrationService, SPTGLUEService, SPTLoginLoggingService, SPTLoginSessionScopeServicesLoaderProviderService, SPTNetworkService, SPTPreSignupExperimentationFeatureFlags, SPTPreSignupExperimentationFeatureFlagsLoader, SPTPreSignupExperimentationService, SPTUBIService, SPTUIPresentationApplicationService, SPTURIDispatchService;
 
 @interface SPTLoginServiceImplementation : NSObject <SPTPageRegistryObserver, SPTPreSignupExperimentationFeatureFlagsLoaderDelegate, SPTLoginService, SPTLoginLogoutHandler>
 {
@@ -52,10 +52,12 @@
     SPTDynamicSignupFlowController *_flowController;
     SPTLoginDbManager *_stickyCredentialsDbManager;
     SPTLoginFeatureLayoutConfigurationProvider *_featureLayoutConfigurationProvider;
+    id <SPTAuthLoginOptionsUtilsService> _authUtilsService;
 }
 
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
+@property(nonatomic) __weak id <SPTAuthLoginOptionsUtilsService> authUtilsService; // @synthesize authUtilsService=_authUtilsService;
 @property(retain, nonatomic) SPTLoginFeatureLayoutConfigurationProvider *featureLayoutConfigurationProvider; // @synthesize featureLayoutConfigurationProvider=_featureLayoutConfigurationProvider;
 @property(retain, nonatomic) SPTLoginDbManager *stickyCredentialsDbManager; // @synthesize stickyCredentialsDbManager=_stickyCredentialsDbManager;
 @property(retain, nonatomic) SPTDynamicSignupFlowController *flowController; // @synthesize flowController=_flowController;

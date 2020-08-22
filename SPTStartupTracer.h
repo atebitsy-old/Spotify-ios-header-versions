@@ -61,7 +61,7 @@
 - (void)logStartLoadingService:(id)arg1 inBackground:(_Bool)arg2;
 - (void)logFinishedLoadingScope:(id)arg1;
 - (void)logStartLoadingScope:(id)arg1;
-@property(readonly, nonatomic, getter=isExecutingBootSequence) _Bool executingBootSequence;
+@property(readonly, nonatomic, getter=isInitializingApplication) _Bool initializingApplication;
 - (_Bool)hasViewLoadingStarted;
 - (_Bool)hasReachedTerminalState;
 - (void)reset;

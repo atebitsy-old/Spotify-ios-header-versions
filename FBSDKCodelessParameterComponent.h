@@ -16,11 +16,12 @@
     NSString *_pathType;
 }
 
+- (void).cxx_destruct;
 @property(readonly, copy, nonatomic) NSString *pathType; // @synthesize pathType=_pathType;
 @property(readonly, nonatomic) NSArray *path; // @synthesize path=_path;
 @property(readonly, copy, nonatomic) NSString *value; // @synthesize value=_value;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
-- (void).cxx_destruct;
+- (_Bool)isEqualToParameter:(id)arg1;
 - (id)initWithJSON:(id)arg1;
 
 @end

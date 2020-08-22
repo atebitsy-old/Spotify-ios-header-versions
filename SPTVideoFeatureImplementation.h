@@ -10,11 +10,10 @@
 #import "SPTVideoFeature-Protocol.h"
 
 @class BMPlaybackRequestFactory, NSString, SPTAllocationContext, SPTVideoCDNLogger;
-@protocol SPTAbbaService, SPTAudioPlayerMediaClockService, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTVideoFeaturePlayerFactory;
+@protocol SPTAudioPlayerMediaClockService, SPTContainerService, SPTCoreService, SPTEventSenderService, SPTNetworkService, SPTRemoteConfigurationService, SPTSessionService, SPTVideoFeaturePlayerFactory;
 
 @interface SPTVideoFeatureImplementation : NSObject <SPTService, SPTVideoFeature>
 {
-    id <SPTAbbaService> _abbaService;
     id <SPTSessionService> _clientSessionService;
     id <SPTContainerService> _containerService;
     id <SPTCoreService> _coreService;
@@ -39,7 +38,6 @@
 @property(nonatomic) __weak id <SPTCoreService> coreService; // @synthesize coreService=_coreService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 @property(nonatomic) __weak id <SPTSessionService> clientSessionService; // @synthesize clientSessionService=_clientSessionService;
-@property(nonatomic) __weak id <SPTAbbaService> abbaService; // @synthesize abbaService=_abbaService;
 - (id)providePlaybackRequestFactory;
 - (id)providePlayerFactory;
 - (id)provideVideoCacheOptionsFactory;

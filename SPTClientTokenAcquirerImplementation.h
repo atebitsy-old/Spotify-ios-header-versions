@@ -17,9 +17,9 @@
 
 - (id).cxx_construct;
 - (void).cxx_destruct;
-- (id)observeEncryptedClientToken;
+- (id)createEncryptedClientTokenObserver;
 - (id)getToken;
-- (_Bool)isEnabled;
+@property(readonly, nonatomic, getter=isEnabled) _Bool enabled;
 - (void)enable;
 - (void)disable;
 - (void)clearToken;

@@ -6,9 +6,11 @@
 
 #import <objc/NSObject.h>
 
+#import "SPTPodcastEpisode-Protocol.h"
+
 @class NSArray, NSDate, NSString, NSURL;
 
-@interface _TtC21PodcastDALFeatureImpl28PodcastEpisodeImplementation : NSObject
+@interface _TtC21PodcastDALFeatureImpl28PodcastEpisodeImplementation : NSObject <SPTPodcastEpisode>
 {
     // Error parsing type: , name: title
     // Error parsing type: , name: longDescription
@@ -30,6 +32,7 @@
     // Error parsing type: , name: isPlayable
     // Error parsing type: , name: isAvailable
     // Error parsing type: , name: isPlayed
+    // Error parsing type: , name: isMusicAndTalk
     // Error parsing type: , name: lastPlayedAt
     // Error parsing type: , name: isExplicit
     // Error parsing type: , name: isFollowingPodcast
@@ -66,6 +69,8 @@
 @property(nonatomic) _Bool explicit; // @synthesize explicit=isExplicit;
 - (_Bool)isExplicit;
 @property(nonatomic) double lastPlayedAt; // @synthesize lastPlayedAt;
+@property(nonatomic) _Bool musicAndTalk; // @synthesize musicAndTalk=isMusicAndTalk;
+- (_Bool)isMusicAndTalk;
 @property(nonatomic) _Bool played; // @synthesize played=isPlayed;
 - (_Bool)isPlayed;
 @property(nonatomic) _Bool available; // @synthesize available=isAvailable;

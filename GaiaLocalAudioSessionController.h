@@ -10,12 +10,12 @@
 #import "SPTGaiaConnectManagerObserver-Protocol.h"
 #import "SPTGaiaLockScreenControlsStateObserver-Protocol.h"
 #import "SPTPlayerObserver-Protocol.h"
-#import "SpotifyApplicationRemoteControlObserver-Protocol.h"
+#import "SPTRemoteControlObserver-Protocol.h"
 
 @class NSNotificationCenter, NSString, SPTAudioSessionActivator;
-@protocol SPTAudioSessionController, SPTGaiaConnectManager, SPTGaiaLockScreenControlsStateProvider, SPTGaiaSilentAudioObserveProtocol, SPTGaiaSilentAudioPlayer, SPTGaiaSilentAudioPlayerProvider, SPTPlayer;
+@protocol SPTAudioSessionController, SPTGaiaConnectManager, SPTGaiaLockScreenControlsStateProvider, SPTGaiaSilentAudioObserveProtocol, SPTGaiaSilentAudioPlayer, SPTGaiaSilentAudioPlayerProvider, SPTPlayer, SPTRemoteControl;
 
-@interface GaiaLocalAudioSessionController : NSObject <SPTPlayerObserver, SpotifyApplicationRemoteControlObserver, SPTGaiaLockScreenControlsStateObserver, SPTAudioSessionControllerObserver, SPTGaiaConnectManagerObserver>
+@interface GaiaLocalAudioSessionController : NSObject <SPTPlayerObserver, SPTRemoteControlObserver, SPTGaiaLockScreenControlsStateObserver, SPTAudioSessionControllerObserver, SPTGaiaConnectManagerObserver>
 {
     _Bool _remoteDisabled;
     _Bool _lockScreenControlTakenOver;
@@ -28,11 +28,13 @@
     id <SPTGaiaSilentAudioPlayerProvider> _silentAudioPlayerProvider;
     SPTAudioSessionActivator *_audioSessionActivator;
     id <SPTGaiaSilentAudioPlayer> _silentAudioPlayer;
+    id <SPTRemoteControl> _remoteControl;
 }
 
 - (void).cxx_destruct;
 @property(nonatomic) _Bool lockScreenControlTakenOver; // @synthesize lockScreenControlTakenOver=_lockScreenControlTakenOver;
 @property(nonatomic) _Bool remoteDisabled; // @synthesize remoteDisabled=_remoteDisabled;
+@property(retain, nonatomic) id <SPTRemoteControl> remoteControl; // @synthesize remoteControl=_remoteControl;
 @property(retain, nonatomic) id <SPTGaiaSilentAudioPlayer> silentAudioPlayer; // @synthesize silentAudioPlayer=_silentAudioPlayer;
 @property(retain, nonatomic) SPTAudioSessionActivator *audioSessionActivator; // @synthesize audioSessionActivator=_audioSessionActivator;
 @property(retain, nonatomic) id <SPTGaiaSilentAudioPlayerProvider> silentAudioPlayerProvider; // @synthesize silentAudioPlayerProvider=_silentAudioPlayerProvider;
@@ -59,7 +61,7 @@
 - (void)updateCurrentDeviceAndPlayerState;
 - (void)player:(id)arg1 stateDidChange:(id)arg2 fromState:(id)arg3;
 - (void)dealloc;
-- (id)initWithAudioSessionController:(id)arg1 connectManager:(id)arg2 player:(id)arg3 lockScreenControlsStateProvider:(id)arg4 notificationCenter:(id)arg5 silentAudioPlayerProvider:(id)arg6;
+- (id)initWithAudioSessionController:(id)arg1 connectManager:(id)arg2 player:(id)arg3 lockScreenControlsStateProvider:(id)arg4 notificationCenter:(id)arg5 silentAudioPlayerProvider:(id)arg6 remoteControl:(id)arg7;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

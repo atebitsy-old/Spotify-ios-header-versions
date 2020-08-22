@@ -6,13 +6,14 @@
 
 #import <objc/NSObject.h>
 
+#import "ASWebAuthenticationPresentationContextProviding-Protocol.h"
 #import "FBSDKApplicationObserving-Protocol.h"
 #import "FBSDKContainerViewControllerDelegate-Protocol.h"
 
 @class FBSDKBridgeAPIRequest, NSString, UIViewController;
 @protocol FBSDKAuthenticationSession, FBSDKURLOpening;
 
-@interface FBSDKBridgeAPI : NSObject <FBSDKApplicationObserving, FBSDKContainerViewControllerDelegate>
+@interface FBSDKBridgeAPI : NSObject <FBSDKApplicationObserving, FBSDKContainerViewControllerDelegate, ASWebAuthenticationPresentationContextProviding>
 {
     FBSDKBridgeAPIRequest *_pendingRequest;
     CDUnknownBlockType _pendingRequestCompletionBlock;
@@ -29,8 +30,8 @@
 
 + (id)sharedInstance;
 + (void)load;
-@property(readonly, nonatomic, getter=isActive) _Bool active; // @synthesize active=_active;
 - (void).cxx_destruct;
+@property(readonly, nonatomic, getter=isActive) _Bool active; // @synthesize active=_active;
 - (id)presentationAnchorForWebAuthenticationSession:(id)arg1;
 - (void)_cancelBridgeRequest;
 - (_Bool)_handleBridgeAPIResponseURL:(id)arg1 sourceApplication:(id)arg2;

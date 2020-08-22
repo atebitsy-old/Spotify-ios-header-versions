@@ -22,10 +22,16 @@
     // Error parsing type: , name: ubiService
     // Error parsing type: , name: sortingFilteringService
     // Error parsing type: , name: uiPresentationService
+    // Error parsing type: , name: quickScrollService
+    // Error parsing type: , name: yourLibraryBetaService
+    // Error parsing type: , name: uriDispatchService
+    // Error parsing type: , name: performanceMetricsService
     // Error parsing type: , name: yourLibraryXPageToken
+    // Error parsing type: , name: yourLibraryXSearchPageToken
     // Error parsing type: , name: testManager
     // Error parsing type: , name: contentFilterItemLoader
     // Error parsing type: , name: $__lazy_storage_$_localSettings
+    // Error parsing type: , name: $__lazy_storage_$_logger
     // Error parsing type: , name: $__lazy_storage_$_instrumentation
     // Error parsing type: , name: $__lazy_storage_$_theme
 }
@@ -33,6 +39,7 @@
 + (id)serviceIdentifier;
 - (void).cxx_destruct;
 - (id)init;
+- (id)provideYourLibrarySearchViewController;
 - (id)provideYourLibraryViewController;
 - (void)unload;
 - (void)load;

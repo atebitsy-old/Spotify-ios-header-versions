@@ -8,7 +8,7 @@
 
 #import "SPTSignupDataLoaderDelegate-Protocol.h"
 
-@class NSString, SPTAuthenticationHandler, SPTLoginDialogController, SPTLoginEmailAlreadyExistsDialogLogger, SPTSignupCreateUserDataLoader, SPTSignupFacebookConfirmationLogger, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
+@class NSString, SPTAuthenticationHandler, SPTLoginDialogController, SPTLoginEmailValidationDialogLogger, SPTSignupCreateUserDataLoader, SPTSignupFacebookConfirmationLogger, SPTSignupTermsAndPolicyViewModel, SPTSignupUserInfoModel;
 @protocol GLUEImageLoader, SPTLoginNavigationCoordinator, SPTSignupFacebookConfirmationViewModelDelegate;
 
 @interface SPTSignupFacebookConfirmationViewModel : NSObject <SPTSignupDataLoaderDelegate>
@@ -22,11 +22,11 @@
     SPTSignupCreateUserDataLoader *_createUserDataLoader;
     SPTAuthenticationHandler *_authenticationHandler;
     SPTLoginDialogController *_dialogController;
-    SPTLoginEmailAlreadyExistsDialogLogger *_emailExistDialogLogger;
+    SPTLoginEmailValidationDialogLogger *_emailExistDialogLogger;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTLoginEmailAlreadyExistsDialogLogger *emailExistDialogLogger; // @synthesize emailExistDialogLogger=_emailExistDialogLogger;
+@property(retain, nonatomic) SPTLoginEmailValidationDialogLogger *emailExistDialogLogger; // @synthesize emailExistDialogLogger=_emailExistDialogLogger;
 @property(retain, nonatomic) SPTLoginDialogController *dialogController; // @synthesize dialogController=_dialogController;
 @property(retain, nonatomic) SPTAuthenticationHandler *authenticationHandler; // @synthesize authenticationHandler=_authenticationHandler;
 @property(retain, nonatomic) SPTSignupCreateUserDataLoader *createUserDataLoader; // @synthesize createUserDataLoader=_createUserDataLoader;

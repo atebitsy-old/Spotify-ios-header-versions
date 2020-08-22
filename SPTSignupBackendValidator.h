@@ -6,11 +6,11 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTSignupFieldValidator-Protocol.h"
+#import "SPTSignupFieldRemoteValidator-Protocol.h"
 
 @class NSString, SPTDataLoader, SPTSignupRequestProvider, SPTSignupResponseProcessor;
 
-@interface SPTSignupBackendValidator : NSObject <SPTSignupFieldValidator>
+@interface SPTSignupBackendValidator : NSObject <SPTSignupFieldRemoteValidator>
 {
     SPTDataLoader *_dataLoader;
     SPTSignupResponseProcessor *_responseProcessor;

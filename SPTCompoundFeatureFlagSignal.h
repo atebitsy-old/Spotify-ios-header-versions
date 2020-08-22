@@ -17,7 +17,6 @@
 
 - (void).cxx_destruct;
 @property(readonly, nonatomic) NSMapTable *signals; // @synthesize signals=_signals;
-- (void)logExposure;
 - (void)featureFlagSignal:(id)arg1 hasAssumedState:(long long)arg2;
 - (long long)compoundStateForStates:(id)arg1;
 - (id)initWithObservedSignals:(id)arg1;

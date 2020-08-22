@@ -13,6 +13,7 @@
     // Error parsing type: , name: containerService
     // Error parsing type: , name: glueService
     // Error parsing type: , name: featureFlaggingService
+    // Error parsing type: , name: imageLoaderWrapper
 }
 
 + (id)serviceIdentifier;

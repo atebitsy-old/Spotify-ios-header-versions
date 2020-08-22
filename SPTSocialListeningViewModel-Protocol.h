@@ -21,7 +21,6 @@
 @property(readonly, nonatomic) unsigned long long bottomBannerType;
 @property(readonly, nonatomic) _Bool scanCodeButtonHidden;
 @property(readonly, nonatomic) _Bool sessionButtonHidden;
-@property(readonly, nonatomic) _Bool shareLinkButtonHidden;
 @property(readonly, nonatomic) _Bool seeListenersButtonHidden;
 @property(readonly, nonatomic) _Bool leaveButtonHidden;
 @property(readonly, nonatomic) _Bool privacyDisclaimerLabelHidden;

@@ -25,7 +25,6 @@
 - (id)trackCloudFactory;
 - (id)trackListFactory;
 - (id)offlineSwitchFactory;
-- (id)shufflePlayButtonFactory;
 - (id)topContainerFactory;
 - (id)headerFactory;
 - (id)_location;

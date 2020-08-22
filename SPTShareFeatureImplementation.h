@@ -10,7 +10,7 @@
 #import "SPTShareFeature-Protocol.h"
 
 @class NSString, SPTAllocationContext, SPTDataLoaderFactory, SPTShareDestinationUtility, SPTShareFeatureProperties, SPTShareLogger, SPTSharePlaylistHelper, SPTSharePresenter, SPTShareTrackHelper, SPTShareTransition;
-@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareDeeplinkHandler, SPTShareEntityDataFactory, SPTShareEventSenderLogger, SPTShareUBILogger, SPTShareVideoDataProviderRegistry, SPTUBIService, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
+@protocol SPContextMenuFeature, SPTContainerService, SPTContainerUIService, SPTCoreService, SPTEventSenderService, SPTFeatureFlaggingService, SPTNetworkService, SPTPlayer, SPTPlayerFeature, SPTPlaylistPlatformService, SPTRemoteConfigurationService, SPTShareEntityDataFactory, SPTShareEventSenderLogger, SPTShareUBILogger, SPTShareVideoDataProviderRegistry, SPTSharingSDKDeeplinkHandler, SPTUBIService, _TtP21SocialOnDemandFeature24SPTSocialOnDemandService_;
 
 @interface SPTShareFeatureImplementation : NSObject <SPTShareContainerViewControllerProtocol, SPTShareFeature>
 {
@@ -32,7 +32,7 @@
     id <SPTPlayer> _player;
     SPTShareTransition *_shareTransition;
     SPTDataLoaderFactory *_dataloaderFactory;
-    id <SPTShareDeeplinkHandler> _deeplinkHandler;
+    id <SPTSharingSDKDeeplinkHandler> _deeplinkHandler;
     id <SPTShareEntityDataFactory> _shareEntityDataFactory;
     SPTSharePresenter *_sharePresenter;
     SPTShareDestinationUtility *_shareDestinationUtility;
@@ -53,7 +53,7 @@
 @property(retain, nonatomic) SPTShareDestinationUtility *shareDestinationUtility; // @synthesize shareDestinationUtility=_shareDestinationUtility;
 @property(retain, nonatomic) SPTSharePresenter *sharePresenter; // @synthesize sharePresenter=_sharePresenter;
 @property(retain, nonatomic) id <SPTShareEntityDataFactory> shareEntityDataFactory; // @synthesize shareEntityDataFactory=_shareEntityDataFactory;
-@property(retain, nonatomic) id <SPTShareDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
+@property(retain, nonatomic) id <SPTSharingSDKDeeplinkHandler> deeplinkHandler; // @synthesize deeplinkHandler=_deeplinkHandler;
 @property(retain, nonatomic) SPTDataLoaderFactory *dataloaderFactory; // @synthesize dataloaderFactory=_dataloaderFactory;
 @property(retain, nonatomic) SPTShareTransition *shareTransition; // @synthesize shareTransition=_shareTransition;
 @property(retain, nonatomic) id <SPTPlayer> player; // @synthesize player=_player;
@@ -73,7 +73,7 @@
 @property(nonatomic) __weak id <SPTContainerUIService> containerUIService; // @synthesize containerUIService=_containerUIService;
 @property(nonatomic) __weak id <SPTContainerService> containerService; // @synthesize containerService=_containerService;
 - (id)provideShareDemoViewControllerWithURI:(id)arg1 context:(id)arg2;
-- (id)makeShareDialogPresenterWithShareViewController:(id)arg1;
+- (id)makeShareFacebookDialogPresenterWithShareViewController:(id)arg1;
 - (id)makeSharingSDKWithShareViewController:(id)arg1;
 - (id)provideShareHandlerFactoryWithSharingSDK:(id)arg1;
 - (id)retrieveTopLevelNavigationPageController;

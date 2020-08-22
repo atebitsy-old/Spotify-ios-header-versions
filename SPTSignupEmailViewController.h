@@ -25,7 +25,8 @@
 @property(retain, nonatomic) SPTSignupEmailViewModel *viewModel; // @synthesize viewModel=_viewModel;
 - (void)viewModel:(id)arg1 didEndFullValidationWithError:(id)arg2;
 - (void)viewModelDidBeginFullValidation:(id)arg1;
-- (void)viewModel:(id)arg1 didValidateLocalyWithResult:(_Bool)arg2;
+- (void)viewModelDidValidateLocaly:(id)arg1;
+- (void)updateNextButton;
 - (void)textFieldDidChange:(id)arg1;
 - (_Bool)textFieldShouldReturn:(id)arg1;
 - (void)textFieldDidBeginEditing:(id)arg1;

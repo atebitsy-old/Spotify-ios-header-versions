@@ -6,17 +6,25 @@
 
 #import <UIKit/UIView.h>
 
+@protocol SPTPodcastQuoteUIComponentDismissDelegate;
+
 @interface _TtC25PodcastQuoteUIFeatureImpl13ContainerView : UIView
 {
+    // Error parsing type: , name: allowsDismiss
+    // Error parsing type: , name: onDismiss
+    // Error parsing type: , name: dismissDelegate
     // Error parsing type: , name: collectionView
+    // Error parsing type: , name: closeButton
     // Error parsing type: , name: titleLabel
 }
 
 - (void).cxx_destruct;
 - (id)initWithFrame:(struct CGRect)arg1;
+- (void)tappedCloseButton:(id)arg1;
 - (void)layoutSubviews;
 - (_Bool)isEqual:(id)arg1;
 - (id)initWithCoder:(id)arg1;
+@property(nonatomic) __weak id <SPTPodcastQuoteUIComponentDismissDelegate> dismissDelegate; // @synthesize dismissDelegate;
 
 @end
 

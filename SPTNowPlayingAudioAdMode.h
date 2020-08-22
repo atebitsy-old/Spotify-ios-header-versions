@@ -8,7 +8,7 @@
 
 #import "SPTNowPlayingMode-Protocol.h"
 
-@class NSString, SPTAdFeatureFlagChecks, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdPlayerObservable, SPTAdsFeatureProperties, SPTAdsRemindersManager, SPTTheme, UIView, UIViewController;
+@class NSString, SPTAdNowPlayingAuxiliaryActionsHandler, SPTAdNowPlayingManager, SPTAdPlayerObservable, SPTAdsFeatureProperties, SPTAdsRemindersManager, SPTTheme, UIView, UIViewController;
 @protocol SPTAdsBaseCosmosBridge, SPTAdsManager, SPTLinkDispatcher, SPTLogCenter, SPTNowPlayingContainedViewController, SPTNowPlayingModeLayoutDelegate, SPTSnackbarConditionalPresenter;
 
 @interface SPTNowPlayingAudioAdMode : NSObject <SPTNowPlayingMode>
@@ -18,7 +18,6 @@
     id <SPTAdsManager> _adsManager;
     SPTAdPlayerObservable *_playerObserver;
     SPTAdNowPlayingAuxiliaryActionsHandler *_actionsHandler;
-    SPTAdFeatureFlagChecks *_featureChecker;
     SPTAdsFeatureProperties *_featureProperties;
     UIView *_animationView;
     SPTTheme *_theme;
@@ -52,7 +51,6 @@
 @property(retain, nonatomic) SPTTheme *theme; // @synthesize theme=_theme;
 @property(retain, nonatomic) UIView *animationView; // @synthesize animationView=_animationView;
 @property(retain, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
-@property(retain, nonatomic) SPTAdFeatureFlagChecks *featureChecker; // @synthesize featureChecker=_featureChecker;
 @property(retain, nonatomic) SPTAdNowPlayingAuxiliaryActionsHandler *actionsHandler; // @synthesize actionsHandler=_actionsHandler;
 @property(retain, nonatomic) SPTAdPlayerObservable *playerObserver; // @synthesize playerObserver=_playerObserver;
 @property(retain, nonatomic) id <SPTAdsManager> adsManager; // @synthesize adsManager=_adsManager;
@@ -66,7 +64,7 @@
 - (id)informationUnitViewController;
 - (id)navigationBarUnitViewController;
 - (id)identifier;
-- (id)initWithNowPlayingManager:(id)arg1 adManager:(id)arg2 playerObserver:(id)arg3 actionsHandler:(id)arg4 featureChecker:(id)arg5 animationView:(id)arg6 theme:(id)arg7 linkDispatcher:(id)arg8 cosmosBridge:(id)arg9 featureProperties:(id)arg10 snackbarPresenter:(id)arg11 reminderManager:(id)arg12 logCenter:(id)arg13;
+- (id)initWithNowPlayingManager:(id)arg1 adManager:(id)arg2 playerObserver:(id)arg3 actionsHandler:(id)arg4 animationView:(id)arg5 theme:(id)arg6 linkDispatcher:(id)arg7 cosmosBridge:(id)arg8 featureProperties:(id)arg9 snackbarPresenter:(id)arg10 reminderManager:(id)arg11 logCenter:(id)arg12;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

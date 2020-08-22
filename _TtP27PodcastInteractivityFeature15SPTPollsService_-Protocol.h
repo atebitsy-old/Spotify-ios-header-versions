@@ -6,6 +6,9 @@
 
 #import "SPTService-Protocol.h"
 
+@protocol _TtP27PodcastInteractivityFeature30SPTPollsViewControllerProvider_;
+
 @protocol _TtP27PodcastInteractivityFeature15SPTPollsService_ <SPTService>
+@property(nonatomic, readonly) id <_TtP27PodcastInteractivityFeature30SPTPollsViewControllerProvider_> viewControllerProvider;
 @end
 

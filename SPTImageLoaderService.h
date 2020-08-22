@@ -40,6 +40,7 @@
 - (void)wipeCachedContent;
 - (void)wipeOfflineContent;
 - (unsigned long long)offlineContentSizeInBytes;
+- (unsigned long long)totalUsedSizeInBytes;
 - (void)wipeAllContent;
 - (id)createImageLoaderFactory:(id)arg1 username:(id)arg2;
 - (id)initWithPersistentKeyBlock:(CDUnknownBlockType)arg1 maximumImageSize:(struct CGSize)arg2 cacheSizeConstraint:(unsigned long long)arg3 cachePath:(id)arg4;

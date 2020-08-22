@@ -8,12 +8,8 @@
 
 @interface _TtC28NowPlayingEpisodeFeatureImpl33NowPlayingEpisodeContentLayerCell : UICollectionViewCell
 {
-    // Error parsing type: , name: episodePlayer
-    // Error parsing type: , name: imageLoader
-    // Error parsing type: , name: gradientView
 }
 
-- (void).cxx_destruct;
 - (id)initWithCoder:(id)arg1;
 - (id)initWithFrame:(struct CGRect)arg1;
 

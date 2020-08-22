@@ -14,7 +14,7 @@
 #import "SPTSlateDelegate-Protocol.h"
 #import "SPTSlateWireframeCustomPresentationDelegate-Protocol.h"
 
-@class NSString, NSTimer, SPTAdOverlayImageContentViewController, SPTAdsFeatureProperties, SPTNavigationManager, SPTTheme;
+@class NSString, NSTimer, SPTAdFocusManager, SPTAdOverlayImageContentViewController, SPTAdsFeatureProperties, SPTNavigationManager, SPTTheme;
 @protocol GLUEImageLoader, GLUETheme, SPTAdOverlayImageContentViewDataSource, SPTAdsBaseCosmosBridge, SPTAdsBaseImageEntity, SPTAdsBaseRegistry, SPTAdsManager, SPTBannerPresentationManager, SPTBannerPresentationManagerTicket, SPTPlayer, SPTSlate, SPTSlateBuilderProvider, SPTSlateManager, SPTUIPresentationService;
 
 @interface SPTAdMobileOverlayController : NSObject <SPTAdOverlayContentUnitDelegate, SPTAdsBaseRegistryObserver, SPTSlateDataSource, SPTSlateDelegate, SPTSlateWireframeCustomPresentationDelegate, SPTBannerViewDelegate, SPTNavigationManagerDelegate>
@@ -35,6 +35,7 @@
     id <GLUEImageLoader> _imageLoader;
     SPTAdsFeatureProperties *_featureProperties;
     SPTNavigationManager *_navigationManagager;
+    SPTAdFocusManager *_adFocusManager;
     id <SPTSlate> _slate;
     id <SPTAdOverlayImageContentViewDataSource> _contentViewDataSource;
     NSTimer *_fetchTimer;
@@ -57,6 +58,7 @@
 @property(retain, nonatomic) NSTimer *fetchTimer; // @synthesize fetchTimer=_fetchTimer;
 @property(retain, nonatomic) id <SPTAdOverlayImageContentViewDataSource> contentViewDataSource; // @synthesize contentViewDataSource=_contentViewDataSource;
 @property(retain, nonatomic) id <SPTSlate> slate; // @synthesize slate=_slate;
+@property(readonly, nonatomic) SPTAdFocusManager *adFocusManager; // @synthesize adFocusManager=_adFocusManager;
 @property(readonly, nonatomic) SPTNavigationManager *navigationManagager; // @synthesize navigationManagager=_navigationManagager;
 @property(readonly, nonatomic) SPTAdsFeatureProperties *featureProperties; // @synthesize featureProperties=_featureProperties;
 @property(readonly, nonatomic) id <GLUEImageLoader> imageLoader; // @synthesize imageLoader=_imageLoader;
@@ -105,7 +107,7 @@
 - (void)invalidateFetchTimer;
 - (void)startAudioPlusTimerIfNeeded;
 - (void)startFetchTimer;
-- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 theme:(id)arg3 glueTheme:(id)arg4 player:(id)arg5 slateBuilderProvider:(id)arg6 slateManager:(id)arg7 manager:(id)arg8 imageLoader:(id)arg9 presentationService:(id)arg10 featureProperties:(id)arg11 bannerPresentationManager:(id)arg12 navigationManager:(id)arg13;
+- (id)initWithRegistry:(id)arg1 cosmosBridge:(id)arg2 theme:(id)arg3 glueTheme:(id)arg4 player:(id)arg5 slateBuilderProvider:(id)arg6 slateManager:(id)arg7 manager:(id)arg8 imageLoader:(id)arg9 presentationService:(id)arg10 featureProperties:(id)arg11 bannerPresentationManager:(id)arg12 navigationManager:(id)arg13 adFocusManager:(id)arg14;
 
 // Remaining properties
 @property(readonly, copy) NSString *debugDescription;

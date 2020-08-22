@@ -6,7 +6,9 @@
 
 #import <objc/NSObject.h>
 
-@interface _TtC20HomeThingFeatureImpl35HomeThingLocationPermissionHandlder : NSObject
+#import "CLLocationManagerDelegate-Protocol.h"
+
+@interface _TtC20HomeThingFeatureImpl35HomeThingLocationPermissionHandlder : NSObject <CLLocationManagerDelegate>
 {
     // Error parsing type: , name: manager
     // Error parsing type: , name: onPermissionChanged

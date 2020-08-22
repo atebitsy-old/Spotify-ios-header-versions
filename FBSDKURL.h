@@ -20,10 +20,10 @@
 }
 
 + (id)queryParametersForURL:(id)arg1;
-+ (id)decodeURLString:(id)arg1;
 + (id)URLForRenderBackToReferrerBarURL:(id)arg1;
 + (id)URLWithInboundURL:(id)arg1 sourceApplication:(id)arg2;
 + (id)URLWithURL:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDictionary *inputQueryParameters; // @synthesize inputQueryParameters=_inputQueryParameters;
 @property(readonly, nonatomic) NSURL *inputURL; // @synthesize inputURL=_inputURL;
 @property(readonly, nonatomic) FBSDKAppLink *appLinkReferer; // @synthesize appLinkReferer=_appLinkReferer;
@@ -31,7 +31,7 @@
 @property(readonly, nonatomic) NSDictionary *appLinkData; // @synthesize appLinkData=_appLinkData;
 @property(readonly, nonatomic) NSDictionary *targetQueryParameters; // @synthesize targetQueryParameters=_targetQueryParameters;
 @property(readonly, nonatomic) NSURL *targetURL; // @synthesize targetURL=_targetURL;
-- (void).cxx_destruct;
+@property(readonly, nonatomic, getter=isAutoAppLink) _Bool isAutoAppLink;
 - (id)initWithURL:(id)arg1 forOpenInboundURL:(_Bool)arg2 sourceApplication:(id)arg3 forRenderBackToReferrerBar:(_Bool)arg4;
 
 @end

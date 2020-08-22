@@ -7,7 +7,7 @@
 #import "NSObject-Protocol.h"
 
 @class NSError, NSString, SPTShareAlertModel, SPTShareData, SPTSharePresenter;
-@protocol SPTShareDeeplinkHandler, SPTShareDestination;
+@protocol SPTShareDestination, SPTSharingSDKDeeplinkHandler;
 
 @protocol SPTShareHandler <NSObject>
 @property(readonly, nonatomic) NSString *utmContent;
@@ -16,6 +16,6 @@
 @property(readonly, nonatomic) NSString *utmMedium;
 @property(readonly, copy, nonatomic) NSString *utmSource;
 - (SPTShareAlertModel *)provideShareAlertModelForError:(NSError *)arg1;
-- (void)shareWithData:(SPTShareData *)arg1 shareDestination:(id <SPTShareDestination>)arg2 sharePresenter:(SPTSharePresenter *)arg3 deeplinkHandler:(id <SPTShareDeeplinkHandler>)arg4 completion:(void (^)(NSError *, id <SPTShareHandlerCompletionData>))arg5;
+- (void)shareWithData:(SPTShareData *)arg1 shareDestination:(id <SPTShareDestination>)arg2 sharePresenter:(SPTSharePresenter *)arg3 deeplinkHandler:(id <SPTSharingSDKDeeplinkHandler>)arg4 completion:(void (^)(NSError *, id <SPTShareHandlerCompletionData>))arg5;
 @end
 

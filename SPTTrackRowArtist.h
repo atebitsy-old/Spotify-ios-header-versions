@@ -7,17 +7,19 @@
 #import <objc/NSObject.h>
 
 @class UIView;
+@protocol SPTTrackRowArtistDelegate;
 
 @interface SPTTrackRowArtist : NSObject
 {
     // Error parsing type: , name: component
+    // Error parsing type: , name: delegate
 }
 
 - (void).cxx_destruct;
 - (id)init;
 @property(nonatomic, readonly) UIView *uiView;
-- (void)setDelegate:(id)arg1;
 - (void)update:(id)arg1;
+@property(nonatomic) __weak id <SPTTrackRowArtistDelegate> delegate; // @synthesize delegate;
 
 @end
 

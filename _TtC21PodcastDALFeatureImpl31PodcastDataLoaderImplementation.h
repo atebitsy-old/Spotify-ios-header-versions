@@ -6,9 +6,7 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastDataLoader-Protocol.h"
-
-@interface _TtC21PodcastDALFeatureImpl31PodcastDataLoaderImplementation : NSObject <SPTPodcastDataLoader>
+@interface _TtC21PodcastDALFeatureImpl31PodcastDataLoaderImplementation : NSObject
 {
     // Error parsing type: , name: resolver
     // Error parsing type: , name: dispatcher

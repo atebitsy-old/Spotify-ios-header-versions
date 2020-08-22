@@ -9,9 +9,10 @@
 @class NSError, UIColor, UIImage;
 
 @protocol SPTSocialListeningListenTogetherStateObserver <NSObject>
-- (void)listenTogetherStateUpdated:(long long)arg1;
+- (void)listenTogetherJoinFlowStateUpdated:(long long)arg1;
 
 @optional
 - (void)didFinishLoadingScannable:(UIImage *)arg1 sessionColor:(UIColor *)arg2 error:(NSError *)arg3;
+- (void)listenTogetherSessionStateUpdated:(long long)arg1 error:(NSError *)arg2;
 @end
 

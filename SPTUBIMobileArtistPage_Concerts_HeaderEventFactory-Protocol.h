@@ -6,9 +6,10 @@
 
 #import "NSObject-Protocol.h"
 
-@protocol SPTUBIEventLocation;
+@protocol SPTUBIEventLocation, SPTUBIImpressionEvent;
 
 @protocol SPTUBIMobileArtistPage_Concerts_HeaderEventFactory <NSObject>
+- (id <SPTUBIImpressionEvent>)impression;
 - (id <SPTUBIEventLocation>)_location;
 @end
 

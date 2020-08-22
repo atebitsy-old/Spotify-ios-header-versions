@@ -18,8 +18,7 @@
 + (id)factoryWithComponents:(id)arg1;
 - (void).cxx_destruct;
 @property(copy, nonatomic) NSArray *components; // @synthesize components=_components;
-- (id)impression;
-- (id)trackRowFactoryWithIdentifier:(id)arg1 position:(long long)arg2 uri:(id)arg3;
+- (id)trackRowFactoryWithPosition:(long long)arg1 uri:(id)arg2;
 - (id)_location;
 - (id)initWithComponents:(id)arg1;
 

@@ -31,6 +31,7 @@
 + (id)currentProfile;
 + (id)fetchCachedProfile;
 + (void)cacheProfile:(id)arg1;
+- (void).cxx_destruct;
 @property(readonly, nonatomic) NSDate *refreshDate; // @synthesize refreshDate=_refreshDate;
 @property(readonly, nonatomic) NSURL *linkURL; // @synthesize linkURL=_linkURL;
 @property(readonly, copy, nonatomic) NSString *name; // @synthesize name=_name;
@@ -38,7 +39,6 @@
 @property(readonly, copy, nonatomic) NSString *middleName; // @synthesize middleName=_middleName;
 @property(readonly, copy, nonatomic) NSString *firstName; // @synthesize firstName=_firstName;
 @property(readonly, copy, nonatomic) NSString *userID; // @synthesize userID=_userID;
-- (void).cxx_destruct;
 - (void)encodeWithCoder:(id)arg1;
 - (id)initWithCoder:(id)arg1;
 - (_Bool)isEqualToProfile:(id)arg1;

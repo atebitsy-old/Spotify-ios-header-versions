@@ -22,7 +22,6 @@
     // Error parsing type: , name: clientSessionService
     // Error parsing type: , name: containerService
     // Error parsing type: , name: carModeEngineService
-    // Error parsing type: , name: onDemandService
     // Error parsing type: , name: superbirdService
     // Error parsing type: , name: $__lazy_storage_$_player
     // Error parsing type: , name: $__lazy_storage_$_linkDispatcher
@@ -36,7 +35,6 @@
     // Error parsing type: , name: $__lazy_storage_$_voiceController
     // Error parsing type: , name: $__lazy_storage_$_voicePresenter
     // Error parsing type: , name: $__lazy_storage_$_wakewordController
-    // Error parsing type: , name: $__lazy_storage_$_searchResultsController
     // Error parsing type: , name: tabBarViewManager
     // Error parsing type: , name: testManager
     // Error parsing type: , name: voiceInteractionSettingsManager

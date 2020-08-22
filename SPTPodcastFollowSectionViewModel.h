@@ -8,19 +8,19 @@
 
 #import "SPTPodcastViewModelSection-Protocol.h"
 
-@class NSString, SPTPodcast;
-@protocol SPTPodcastFollowSectionViewModelDelegate;
+@class NSString;
+@protocol SPTPodcast, SPTPodcastFollowSectionViewModelDelegate;
 
 @interface SPTPodcastFollowSectionViewModel : NSObject <SPTPodcastViewModelSection>
 {
     _Bool _playing;
     double _headerHeight;
     id <SPTPodcastFollowSectionViewModelDelegate> _delegate;
-    SPTPodcast *_podcast;
+    id <SPTPodcast> _podcast;
 }
 
 - (void).cxx_destruct;
-@property(retain, nonatomic) SPTPodcast *podcast; // @synthesize podcast=_podcast;
+@property(retain, nonatomic) id <SPTPodcast> podcast; // @synthesize podcast=_podcast;
 @property(nonatomic, getter=isPlaying) _Bool playing; // @synthesize playing=_playing;
 @property(nonatomic) __weak id <SPTPodcastFollowSectionViewModelDelegate> delegate; // @synthesize delegate=_delegate;
 @property(readonly, nonatomic) double headerHeight; // @synthesize headerHeight=_headerHeight;
@@ -30,7 +30,6 @@
 - (void)updateWithPodcastPlayer:(id)arg1;
 - (void)contextMenuButtonSelected:(id)arg1;
 - (void)playbackButtonSelected;
-- (void)followButtonSelected;
 - (id)header;
 - (unsigned long long)numberOfRows;
 - (id)init;

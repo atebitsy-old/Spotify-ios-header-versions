@@ -6,14 +6,13 @@
 
 #import <objc/NSObject.h>
 
-#import "SPTPodcastRequest-Protocol.h"
-
 @class SPTRequest;
 
-@interface _TtC21PodcastDALFeatureImpl28PodcastRequestImplementation : NSObject <SPTPodcastRequest>
+@interface _TtC21PodcastDALFeatureImpl28PodcastRequestImplementation : NSObject
 {
     // Error parsing type: , name: request
     // Error parsing type: , name: requestData
+    // Error parsing type: , name: shouldRequestProtobuf
 }
 
 - (void).cxx_destruct;

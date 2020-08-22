@@ -9,12 +9,18 @@
 @interface _TtC23YourLibraryXFeatureImpl28YourLibraryContentViewBinder : NSObject
 {
     // Error parsing type: , name: contentView
-    // Error parsing type: , name: theme
+    // Error parsing type: , name: style
     // Error parsing type: , name: eventConsumer
     // Error parsing type: , name: collectionView
     // Error parsing type: , name: listItemBinder
     // Error parsing type: , name: contentHeaderBinder
+    // Error parsing type: , name: quickScrollBinder
     // Error parsing type: , name: model
+    // Error parsing type: , name: $__lazy_storage_$_estimatedCellHeight
+    // Error parsing type: , name: $__lazy_storage_$_empty
+    // Error parsing type: , name: scrollObserverManager
+    // Error parsing type: , name: lastScrollData
+    // Error parsing type: , name: $__lazy_storage_$_cardSizeData
 }
 
 - (void).cxx_destruct;
